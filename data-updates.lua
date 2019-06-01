@@ -16,6 +16,10 @@ if mods["pyrawores"] then
     require("prototypes/updates/pyrawores-updates")
 end
 
+if mods["pypetroleumhandling"] then
+    require("prototypes/updates/pypetroleumhandling-updates")
+end
+
 --ADAPTATIONS
 
 
