@@ -4,10 +4,13 @@ require("prototypes/item-groups")
 require("prototypes/recipe-categories")
 
 --(( Technology ))--
---require("prototypes/technologies/basic-lectronics")
+require("prototypes/technologies/xenobiology")
+require("prototypes/technologies/mycology")
+require("prototypes/technologies/microbiology")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
+require("prototypes/buildings/moss-farm-mk02")
 
 --(( RECIPES ))--
 require('prototypes/recipes/recipes')
