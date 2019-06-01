@@ -7,13 +7,13 @@ RECIPE {
     name = 'biomass-1-a',
     category = 'evaporator',
     enabled = false,
-    energy_required = 5,
+    energy_required = 10,
     ingredients = {
         {type = 'fluid', name = 'phytoplankton', amount = 20},
         {type = 'fluid', name = 'hot-air', amount = 100},
     },
     results = {
-        {type = 'item', name = 'biomass', amount = 7},
+        {type = 'item', name = 'biomass', amount = 10},
     },
     --main_product = "silicon-wafer",
     icon = '__pyalienlife__/graphics/icons/biomass.png',
