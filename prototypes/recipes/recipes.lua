@@ -89,3 +89,16 @@ RECIPE {
         {type = 'item', name = 'fungal-substrate', amount = 5},
     },
 }:add_unlock("mycology-mk01")
+
+RECIPE {
+    type = 'recipe',
+    name = 'fawogae-spore',
+    category = 'spore',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+    },
+    results = {
+        {type = 'item', name = 'fawogae-spore', amount = 1, probability = 0.3},
+    },
+}:add_unlock("mycology-mk01")

@@ -11,6 +11,8 @@ require("prototypes/technologies/microbiology")
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
 require("prototypes/buildings/moss-farm-mk02")
+require("prototypes/buildings/spore-collector-mk01")
+require("prototypes/buildings/fwf-mk01")
 
 --(( RECIPES ))--
 require('prototypes/recipes/recipes')
