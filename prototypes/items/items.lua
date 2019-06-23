@@ -63,3 +63,14 @@ ITEM {
     order = "a",
     stack_size = 500
 }
+
+ITEM {
+    type = "item",
+    name = "wood-seeds",
+    icon = "__pyalienlife__/graphics/icons/wood-seeds.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 500
+}

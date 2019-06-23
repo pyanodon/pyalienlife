@@ -102,3 +102,31 @@ RECIPE {
         {type = 'item', name = 'fawogae-spore', amount = 1, probability = 0.3},
     },
 }:add_unlock("mycology-mk01")
+
+RECIPE {
+    type = 'recipe',
+    name = 'wood-seedling',
+    category = 'nursery',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'wood-seeds', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'wood-seedling', amount = 3},
+    },
+}:add_unlock("botany-mk01")
+
+RECIPE {
+    type = 'recipe',
+    name = 'wood-seeds',
+    category = 'crafting',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'wood', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'wood-seeds', amount = 3},
+    },
+}:add_unlock("botany-mk01")
