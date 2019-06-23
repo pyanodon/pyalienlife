@@ -21,7 +21,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/fwf-mk01.png",
     icon_size = 32,
     flags = {},
-    subgroup = "py-alienlife-buildings",
+    subgroup = "py-alienlife-buildings-mk01",
     order = "c",
     place_result = "fwf-mk01",
     stack_size = 10
@@ -132,18 +132,26 @@ ENTITY {
             pipe_connections = {{type = "input", position = {1.0, 6.0}}}
         },
         {
+            production_type = "input",
+            pipe_covers = DATA.Pipes.covers(false, true, true, true),
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            base_area = 10,
+            base_level = -1,
+            pipe_connections = {{type = "input", position = {-1.0, 6.0}}}
+        },
+        {
             production_type = "output",
             pipe_covers = DATA.Pipes.covers(false, true, true, true),
             pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             base_level = 1,
-            pipe_connections = {{type = "output", position = {-1.0, 6.0}}}
+            pipe_connections = {{type = "output", position = {1.0, -6.0}}}
         },
         off_when_no_fluid_recipe = true
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/fwf.ogg", volume = 1.0},
-        idle_sound = {filename = "__pyalienlife__/sounds/fwf.ogg", volume = 0.8},
+        sound = {filename = "__pyalienlife__/sounds/fwf.ogg", volume = 0.80},
+        idle_sound = {filename = "__pyalienlife__/sounds/fwf.ogg", volume = 0.55},
         apparent_volume = 2.5
     }
 }

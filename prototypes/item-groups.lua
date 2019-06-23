@@ -9,9 +9,33 @@ data:extend {
     },
     {
         type = "item-subgroup",
-        name = "py-alienlife-buildings",
+        name = "py-alienlife-buildings-mk01",
         group = "py-alienlife",
-        order = "a"
+        order = "a-a"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-buildings-mk02",
+        group = "py-alienlife",
+        order = "a-b"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-buildings-mk03",
+        group = "py-alienlife",
+        order = "a-c"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-buildings-mk04",
+        group = "py-alienlife",
+        order = "a-d"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-buildings-others",
+        group = "py-alienlife",
+        order = "a-e"
     },
     {
         type = "item-subgroup",

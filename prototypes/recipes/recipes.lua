@@ -111,6 +111,8 @@ RECIPE {
     energy_required = 20,
     ingredients = {
         {type = 'item', name = 'wood-seeds', amount = 1},
+        {type = 'item', name = 'moss', amount = 5},
+        {type = 'fluid', name = 'water', amount = 100},
     },
     results = {
         {type = 'item', name = 'wood-seedling', amount = 3},
@@ -127,6 +129,6 @@ RECIPE {
         {type = 'item', name = 'wood', amount = 5},
     },
     results = {
-        {type = 'item', name = 'wood-seeds', amount = 3},
+        {type = 'item', name = 'wood-seeds', amount = 2},
     },
 }:add_unlock("botany-mk01")
