@@ -7,6 +7,7 @@ require("prototypes/recipe-categories")
 require("prototypes/technologies/xenobiology")
 require("prototypes/technologies/mycology")
 require("prototypes/technologies/microbiology")
+require("prototypes/technologies/botany")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")

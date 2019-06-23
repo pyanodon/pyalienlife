@@ -13,7 +13,7 @@ RECIPE {
     results = {
         {"fwf-mk01", 1}
     }
-}:add_unlock("mycology-mk01")
+}:add_unlock("botany-mk01")
 
 ITEM {
     type = "item",
