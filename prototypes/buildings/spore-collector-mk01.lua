@@ -23,7 +23,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/spore-collector-mk01.png",
     icon_size = 32,
     flags = {},
-    subgroup = "py-alienlife-buildings",
+    subgroup = "py-alienlife-buildings-mk01",
     order = "c",
     place_result = "spore-collector-mk01",
     stack_size = 10
