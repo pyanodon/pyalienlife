@@ -34,7 +34,7 @@ ENTITY {
 	icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "moss-farm-mk02"},
-    fast_replaceable_group = "moss-farm-mk02",
+    fast_replaceable_group = "moss-farm",
     max_health = 100,
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
@@ -167,7 +167,7 @@ ENTITY {
             base_level = 1,
             pipe_connections = {{type = "output", position = {-1.5, 3.5}}}
         },
-        off_when_no_fluid_recipe = false
+        off_when_no_fluid_recipe = true
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
