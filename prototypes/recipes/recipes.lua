@@ -3,7 +3,7 @@ RECIPE {
     name = 'moss-1',
     category = 'moss',
     enabled = true,
-    energy_required = 5,
+    energy_required = 10,
     ingredients = {
         {type = 'fluid', name = 'water', amount = 100},
         {type = 'fluid', name = 'carbon-dioxide', amount = 100},
@@ -132,3 +132,151 @@ RECIPE {
         {type = 'item', name = 'wood-seeds', amount = 2},
     },
 }:add_unlock("botany-mk01")
+
+RECIPE {
+    type = 'recipe',
+    name = 'empty-petri-dish',
+    category = 'crafting',
+    enabled = true,
+    energy_required = 3,
+    ingredients = {
+        {type = 'item', name = 'glass', amount = 3},
+    },
+    results = {
+        {type = 'item', name = 'empty-petri-dish', amount = 1},
+    },
+}
+
+RECIPE {
+    type = 'recipe',
+    name = 'petri-dish-bacteria',
+    category = 'micro-mine',
+    enabled = true,
+    hidden = true,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'petri-dish', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'petri-dish-bacteria', amount = 1},
+    },
+}
+
+RECIPE {
+    type = 'recipe',
+    name = 'seaweed',
+    category = 'seaweed',
+    enabled = true,
+    energy_required = 25,
+    ingredients = {
+        {type = 'fluid', name = 'water', amount = 150},
+    },
+    results = {
+        {type = 'item', name = 'seaweed', amount = 5},
+    },
+}
+
+RECIPE {
+    type = 'recipe',
+    name = 'seaweed-2',
+    category = 'seaweed',
+    enabled = false,
+    energy_required = 25,
+    ingredients = {
+        {type = 'fluid', name = 'water', amount = 150},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'seaweed', amount = 8},
+    },
+}:add_unlock("botany-mk01")
+
+RECIPE {
+    type = 'recipe',
+    name = 'seaweed-3',
+    category = 'seaweed',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'fluid', name = 'water-saline', amount = 100},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'seaweed', amount = 8},
+    },
+}:add_unlock("botany-mk01")
+
+RECIPE {
+    type = 'recipe',
+    name = 'seaweed-4',
+    category = 'seaweed',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'fluid', name = 'water', amount = 150},
+        {type = 'fluid', name = 'slacked-lime', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'seaweed', amount = 10},
+    },
+}:add_unlock("botany-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'seaweed-5',
+    category = 'seaweed',
+    enabled = false,
+    energy_required = 12,
+    ingredients = {
+        {type = 'fluid', name = 'water-saline', amount = 100},
+        {type = 'fluid', name = 'slacked-lime', amount = 100},
+        {type = 'item', name = 'iron-ore-dust', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'seaweed', amount = 20},
+    },
+}:add_unlock("botany-mk03")
+
+RECIPE {
+    type = 'recipe',
+    name = 'coke-co2',
+    category = 'hpf',
+    enabled = true,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'coke', amount = 2},
+    },
+    results = {
+        {type = 'fluid', name = 'carbon-dioxide', amount = 80},
+    },
+}
+
+RECIPE {
+    type = 'recipe',
+    name = 'agar',
+    category = 'hpf',
+    enabled = true,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'seaweed', amount = 5},
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 165},
+    },
+    results = {
+        {type = 'item', name = 'agar', amount = 1},
+    },
+}
+
+RECIPE {
+    type = 'recipe',
+    name = 'petri-dish',
+    category = 'crafting',
+    enabled = true,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'agar', amount = 1},
+        {type = 'item', name = 'empty-petri-dish', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'petri-dish', amount = 1},
+    },
+}
