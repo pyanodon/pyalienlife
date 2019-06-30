@@ -74,3 +74,58 @@ ITEM {
     order = "a",
     stack_size = 500
 }
+
+ITEM {
+    type = "item",
+    name = "empty-petri-dish",
+    icon = "__pyalienlife__/graphics/icons/empty-petri-dish.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "petri-dish",
+    icon = "__pyalienlife__/graphics/icons/petri-dish.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "petri-dish-bacteria",
+    icon = "__pyalienlife__/graphics/icons/petri-dish-bacteria.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "seaweed",
+    icon = "__pyalienlife__/graphics/icons/seaweed.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-plants",
+    order = "b",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "agar",
+    icon = "__pyalienlife__/graphics/icons/agar.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "b",
+    stack_size = 500
+}
