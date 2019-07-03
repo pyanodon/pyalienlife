@@ -19,4 +19,8 @@ data:extend {
         type = "recipe-category",
         name = "seaweed"
     },
+    {
+        type = "recipe-category",
+        name = "biofactory"
+    },
 }
