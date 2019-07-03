@@ -129,3 +129,14 @@ ITEM {
     order = "b",
     stack_size = 500
 }
+
+ITEM {
+    type = "item",
+    name = "moss-gen",
+    icon = "__pyalienlife__/graphics/icons/moss-gen.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "b",
+    stack_size = 200
+}

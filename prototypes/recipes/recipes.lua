@@ -280,3 +280,18 @@ RECIPE {
         {type = 'item', name = 'petri-dish', amount = 1},
     },
 }
+
+RECIPE {
+    type = 'recipe',
+    name = 'moss-gen',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'glass', amount = 1},
+        {type = 'item', name = 'moss', amount = 20},
+    },
+    results = {
+        {type = 'item', name = 'moss-gen', amount = 1},
+    },
+}:add_unlock("biotech-mk01")
