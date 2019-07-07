@@ -23,4 +23,8 @@ data:extend {
         type = "recipe-category",
         name = "biofactory"
     },
+    {
+        type = "recipe-category",
+        name = "incubator"
+    },
 }

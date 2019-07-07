@@ -9,6 +9,7 @@ require("prototypes/technologies/mycology")
 require("prototypes/technologies/microbiology")
 require("prototypes/technologies/botany")
 require("prototypes/technologies/biotech")
+require("prototypes/technologies/genetics")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -18,6 +19,8 @@ require("prototypes/buildings/spore-collector-mk01")
 require("prototypes/buildings/fwf-mk01")
 require("prototypes/buildings/micro-mine-mk01")
 require("prototypes/buildings/biofactory-mk01")
+require("prototypes/buildings/genlab-mk01")
+require("prototypes/buildings/incubator-mk01")
 
 --(( RECIPES ))--
 require('prototypes/recipes/recipes')

@@ -5,7 +5,7 @@ RECIPE {
     enabled = true,
     ingredients = {
         {"stone-brick", 30},
-        {"stone", 25},
+        {"limestone", 25},
         {"pipe", 15},
         {"electronic-circuit", 10},
         {"tin-plate", 50},
@@ -31,7 +31,7 @@ ENTITY {
     type = "assembling-machine",
     name = "seaweed-crop-mk01",
     icon = "__pyalienlife__/graphics/icons/seaweed-crop-mk01.png",
-	icon_size = 32,
+	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "seaweed-crop-mk01"},
     fast_replaceable_group = "seaweed-crop",
