@@ -27,4 +27,8 @@ data:extend {
         type = "recipe-category",
         name = "incubator"
     },
+    {
+        type = "recipe-category",
+        name = "creature-chamber"
+    },
 }

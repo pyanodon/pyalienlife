@@ -213,7 +213,7 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = 'fluid', name = 'water', amount = 150},
+        {type = 'fluid', name = 'water-saline', amount = 100},
         {type = 'fluid', name = 'slacked-lime', amount = 100},
     },
     results = {
@@ -230,12 +230,44 @@ RECIPE {
     ingredients = {
         {type = 'fluid', name = 'water-saline', amount = 100},
         {type = 'fluid', name = 'slacked-lime', amount = 100},
-        {type = 'item', name = 'iron-ore-dust', amount = 2},
+        {type = 'item', name = 'iron-ore-dust', amount = 1},
     },
     results = {
         {type = 'item', name = 'seaweed', amount = 20},
     },
 }:add_unlock("botany-mk03")
+
+RECIPE {
+    type = 'recipe',
+    name = 'seaweed-7',
+    category = 'seaweed',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'fluid', name = 'water-saline', amount = 100},
+        {type = 'fluid', name = 'slacked-lime', amount = 100},
+        {type = 'item', name = 'iron-ore-dust', amount = 1},
+        {type = 'item', name = 'limestone', amount = 3},
+    },
+    results = {
+        {type = 'item', name = 'seaweed', amount = 25},
+    },
+}:add_unlock("botany-mk04")
+
+RECIPE {
+    type = 'recipe',
+    name = 'seaweed-6',
+    category = 'seaweed',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'fluid', name = 'water', amount = 150},
+        {type = 'item', name = 'limestone', amount = 3},
+    },
+    results = {
+        {type = 'item', name = 'seaweed', amount = 8},
+    },
+}:add_unlock("botany-mk01")
 
 RECIPE {
     type = 'recipe',
@@ -290,6 +322,22 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'glass', amount = 1},
         {type = 'item', name = 'moss', amount = 20},
+    },
+    results = {
+        {type = 'item', name = 'moss-gen', amount = 1},
+    },
+}:add_unlock("biotech-mk01")
+
+--APAGAR
+
+RECIPE {
+    type = 'recipe',
+    name = 'test-1',
+    category = 'creature-chamber',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'iron-plate', amount = 1},
     },
     results = {
         {type = 'item', name = 'moss-gen', amount = 1},
