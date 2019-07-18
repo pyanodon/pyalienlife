@@ -31,4 +31,8 @@ data:extend {
         type = "recipe-category",
         name = "creature-chamber"
     },
+    {
+        type = "recipe-category",
+        name = "vrauks"
+    },
 }

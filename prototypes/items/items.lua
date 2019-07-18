@@ -140,3 +140,47 @@ ITEM {
     order = "b",
     stack_size = 200
 }
+
+ITEM {
+    type = "item",
+    name = "cocoon",
+    icon = "__pyalienlife__/graphics/icons/cocoon.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "b",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "plasmids",
+    icon = "__pyalienlife__/graphics/icons/plasmids.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "b",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "retrovirus",
+    icon = "__pyalienlife__/graphics/icons/retrovirus.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "b",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "cdna",
+    icon = "__pyalienlife__/graphics/icons/cdna.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "b",
+    stack_size = 50
+}
