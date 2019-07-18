@@ -140,7 +140,7 @@ RECIPE {
     enabled = true,
     energy_required = 3,
     ingredients = {
-        {type = 'item', name = 'glass', amount = 3},
+        {type = 'item', name = 'glass', amount = 2},
     },
     results = {
         {type = 'item', name = 'empty-petri-dish', amount = 1},
@@ -328,18 +328,70 @@ RECIPE {
     },
 }:add_unlock("biotech-mk01")
 
---APAGAR
+RECIPE {
+    type = 'recipe',
+    name = 'cocoon-1',
+    category = 'vrauks',
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'water-barrel', amount = 2},
+        {type = 'item', name = 'fawogae', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'cocoon', amount = 1},
+        {type = 'item', name = 'empty-barrel', amount = 2},
+    },
+    main_product = "cocoon",
+}:add_unlock("zoology")
 
 RECIPE {
     type = 'recipe',
-    name = 'test-1',
-    category = 'creature-chamber',
+    name = 'plasmids',
+    category = 'biofactory',
     enabled = false,
-    energy_required = 30,
+    energy_required = 5,
     ingredients = {
-        {type = 'item', name = 'iron-plate', amount = 1},
+        {type = 'fluid', name = 'zogna-bacteria', amount = 20},
+        {type = 'item', name = 'petri-dish-bacteria', amount = 1},
     },
     results = {
+        {type = 'item', name = 'plasmids', amount = 1},
+    },
+    --main_product = "cocoon",
+}:add_unlock("genetics-mk01")
+
+RECIPE {
+    type = 'recipe',
+    name = 'retrovirus',
+    category = 'incubator',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'cocoon', amount = 1},
+        {type = 'item', name = 'steel-plate', amount = 1},
+        {type = 'item', name = 'petri-dish', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'retrovirus', amount = 1},
+    },
+    --main_product = "cocoon",
+}:add_unlock("genetics-mk01")
+
+RECIPE {
+    type = 'recipe',
+    name = 'cdna',
+    category = 'genlab',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'retrovirus', amount = 1},
+        {type = 'item', name = 'petri-dish-bacteria', amount = 1},
+        {type = 'item', name = 'plasmids', amount = 1},
         {type = 'item', name = 'moss-gen', amount = 1},
     },
+    results = {
+        {type = 'item', name = 'cdna', amount = 1},
+    },
+    --main_product = "cocoon",
 }:add_unlock("biotech-mk01")

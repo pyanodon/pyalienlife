@@ -10,6 +10,7 @@ require("prototypes/technologies/microbiology")
 require("prototypes/technologies/botany")
 require("prototypes/technologies/biotech")
 require("prototypes/technologies/genetics")
+require("prototypes/technologies/zoology")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -22,10 +23,11 @@ require("prototypes/buildings/biofactory-mk01")
 require("prototypes/buildings/genlab-mk01")
 require("prototypes/buildings/incubator-mk01")
 require("prototypes/buildings/creature-chamber-mk01")
+require("prototypes/buildings/vrauks-paddock-mk01")
 
 --(( RECIPES ))--
 require('prototypes/recipes/recipes')
 require('prototypes/items/items')
 
 --(( FLUIDs ))--
---require("prototypes/fluids/methane")
+require("prototypes/fluids/zogna-bacteria")
