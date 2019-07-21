@@ -23,7 +23,6 @@ RECIPE('log3'):change_category('fwf'):add_ingredient({type = "item", name = "woo
 RECIPE('log4'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3})
 RECIPE('log5'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3})
 RECIPE('log6'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3})
-RECIPE('log7-2'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3})
 RECIPE('fawogae-substrate'):remove_ingredient("fawogae"):add_ingredient({type = "item", name = "petri-dish-bacteria", amount = 1}):replace_ingredient("coke","moss")
 RECIPE('ralesia'):remove_unlock('coal-processing-1'):add_unlock('botany-mk01')
 RECIPE('ralesia-seed'):change_category('solid-separator')
