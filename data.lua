@@ -24,6 +24,7 @@ require("prototypes/buildings/genlab-mk01")
 require("prototypes/buildings/incubator-mk01")
 require("prototypes/buildings/creature-chamber-mk01")
 require("prototypes/buildings/vrauks-paddock-mk01")
+require("prototypes/buildings/test-building")
 
 --(( RECIPES ))--
 require('prototypes/recipes/recipes')
