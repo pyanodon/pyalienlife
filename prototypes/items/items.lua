@@ -202,7 +202,7 @@ ITEM {
     subgroup = "py-alienlife-items",
     order = "b",
     stack_size = 50,
-	effect = { speed = {bonus = 999}},
+	effect = { speed = {bonus = 250}},
 	limitation = alien_life_limitations,
 	limitation_message_key = "Dont stick that in there"
 }

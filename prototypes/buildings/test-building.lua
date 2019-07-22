@@ -45,7 +45,7 @@ ENTITY {
     },
     allowed_effects = {"speed"},
     crafting_categories = {"vrauks"},
-    crafting_speed = 0.001,
+    crafting_speed = 0.01,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
