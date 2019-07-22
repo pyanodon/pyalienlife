@@ -12,6 +12,7 @@ RECIPE('ralesia-plantation'):remove_unlock('coal-processing-1'):add_unlock('bota
 RECIPE('ralesia-plantation-mk02'):add_unlock('botany-mk02'):subgroup_order("py-alienlife-buildings-mk02", "a")
 RECIPE('ralesia-plantation-mk03'):add_unlock('botany-mk03'):subgroup_order("py-alienlife-buildings-mk03", "a")
 RECIPE('ralesia-plantation-mk04'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk04", "a")
+ITEM('ralesia-seeds'):subgroup_order("py-alienlife-plants", "a")
 
 
 -----RECIPES-----
@@ -24,7 +25,8 @@ RECIPE('log4'):change_category('fwf'):add_ingredient({type = "item", name = "woo
 RECIPE('log5'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3})
 RECIPE('log6'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3})
 RECIPE('fawogae-substrate'):remove_ingredient("fawogae"):add_ingredient({type = "item", name = "petri-dish-bacteria", amount = 1}):replace_ingredient("coke","moss")
-RECIPE('ralesia'):remove_unlock('coal-processing-1'):add_unlock('botany-mk01')
-RECIPE('ralesia-seed'):change_category('solid-separator')
+RECIPE('bio-sample01'):add_ingredient({type = "item", name = "empty-petri-dish", amount = 1})
+RECIPE('ralesia'):remove_unlock('coal-processing-1'):add_unlock('botany-mk01'):subgroup_order("py-alienlife-plants", "a")
+RECIPE('ralesia-seeds'):remove_unlock('coal-processing-1'):add_unlock('botany-mk01'):subgroup_order("py-alienlife-plants", "a"):change_category('solid-separator')
 
 ----EXCLUSIVE RECIPES----

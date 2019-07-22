@@ -61,7 +61,7 @@ TECHNOLOGY {
     prerequisites = {"biotech-mk03"},
     effects = {},
     unit = {
-        count = 130,
+        count = 200,
         ingredients = {
             {'automation-science-pack', 3},
             {'logistic-science-pack', 2},

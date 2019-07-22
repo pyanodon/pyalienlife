@@ -35,4 +35,8 @@ data:extend {
         type = "recipe-category",
         name = "vrauks"
     },
+    {
+        type = "recipe-category",
+        name = "slaughterhouse"
+    },
 }

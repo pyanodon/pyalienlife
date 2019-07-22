@@ -11,6 +11,7 @@ require("prototypes/technologies/botany")
 require("prototypes/technologies/biotech")
 require("prototypes/technologies/genetics")
 require("prototypes/technologies/zoology")
+require("prototypes/technologies/land-animals")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -24,9 +25,12 @@ require("prototypes/buildings/genlab-mk01")
 require("prototypes/buildings/incubator-mk01")
 require("prototypes/buildings/creature-chamber-mk01")
 require("prototypes/buildings/vrauks-paddock-mk01")
+require("prototypes/buildings/slaughterhouse-mk01")
 
 --(( RECIPES ))--
 require('prototypes/recipes/recipes')
+require('prototypes/recipes/recipes-crops')
+require('prototypes/recipes/recipes-animals')
 require('prototypes/items/items')
 
 --(( FLUIDs ))--
