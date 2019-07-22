@@ -185,23 +185,6 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'cocoon-1',
-    category = 'vrauks',
-    enabled = false,
-    energy_required = 40,
-    ingredients = {
-        {type = 'item', name = 'water-barrel', amount = 2},
-        {type = 'item', name = 'fawogae', amount = 5},
-    },
-    results = {
-        {type = 'item', name = 'cocoon', amount = 1},
-        {type = 'item', name = 'empty-barrel', amount = 2},
-    },
-    main_product = "cocoon",
-}:add_unlock("zoology")
-
-RECIPE {
-    type = 'recipe',
     name = 'plasmids',
     category = 'biofactory',
     enabled = false,
@@ -209,6 +192,7 @@ RECIPE {
     ingredients = {
         {type = 'fluid', name = 'zogna-bacteria', amount = 20},
         {type = 'item', name = 'petri-dish-bacteria', amount = 1},
+        {type = 'item', name = 'lab-instrument', amount = 1},
     },
     results = {
         {type = 'item', name = 'plasmids', amount = 1},
@@ -226,6 +210,7 @@ RECIPE {
         {type = 'item', name = 'cocoon', amount = 1},
         {type = 'item', name = 'steel-plate', amount = 1},
         {type = 'item', name = 'petri-dish', amount = 1},
+        {type = 'item', name = 'flask', amount = 1},
     },
     results = {
         {type = 'item', name = 'retrovirus', amount = 1},
@@ -244,6 +229,7 @@ RECIPE {
         {type = 'item', name = 'petri-dish-bacteria', amount = 1},
         {type = 'item', name = 'plasmids', amount = 1},
         {type = 'item', name = 'moss-gen', amount = 1},
+        {type = 'item', name = 'fawogae-substrate', amount = 4},
     },
     results = {
         {type = 'item', name = 'cdna', amount = 1},

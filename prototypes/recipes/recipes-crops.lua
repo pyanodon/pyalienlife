@@ -205,3 +205,60 @@ RECIPE {
         {type = 'item', name = 'seaweed', amount = 25},
     },
 }:add_unlock("botany-mk04")
+
+--RALESIAS--
+
+RECIPE {
+    type = "recipe",
+    name = "ralesia-1",
+    category = "ralesia",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "fluid", name = "hydrogen", amount = 200},
+        {type = "item", name = "soil", amount = 20},
+        {type = "item", name = "coarse", amount = 10},
+    },
+    results = {
+        {type = "item", name = "ralesia", amount = 10}
+    },
+    subgroup = "py-alienlife-plants",
+    order = "a"
+}:add_unlock("botany-mk02")
+
+RECIPE {
+    type = "recipe",
+    name = "ralesia-2",
+    category = "ralesia",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "fluid", name = "hydrogen", amount = 200},
+        {type = "item", name = "soil", amount = 20},
+        {type = "item", name = "coarse", amount = 10},
+        {type = "fluid", name = "carbon-dioxide", amount = 200},
+    },
+    results = {
+        {type = "item", name = "ralesia", amount = 15}
+    },
+    subgroup = "py-alienlife-plants",
+    order = "a"
+}:add_unlock("botany-mk02")
+
+RECIPE {
+    type = "recipe",
+    name = "ralesia-3",
+    category = "ralesia",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "fluid", name = "syngas", amount = 200},
+        {type = "item", name = "soil", amount = 20},
+        {type = "item", name = "coarse", amount = 10},
+    },
+    results = {
+        {type = "item", name = "ralesia", amount = 20}
+    },
+    subgroup = "py-alienlife-plants",
+    order = "a"
+}:add_unlock("botany-mk03")
