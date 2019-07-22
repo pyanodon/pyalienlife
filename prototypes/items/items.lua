@@ -184,3 +184,34 @@ ITEM {
     order = "b",
     stack_size = 50
 }
+
+local alien_life_limitations =
+	{
+	"cocoon-1"
+	}
+
+--Test ITEM
+ITEM {
+    type = "module",
+    name = "test",
+    icon = "__pyalienlife__/graphics/icons/cdna.png",
+    icon_size = 64,
+	category = "food",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "b",
+    stack_size = 50,
+	effect = { speed = {bonus = 250}},
+	limitation = alien_life_limitations,
+	limitation_message_key = "Dont stick that in there"
+}
+
+data:extend(
+{
+  {
+    type = "module-category",
+    name = "food"
+  },
+}
+)
