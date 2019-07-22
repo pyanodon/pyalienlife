@@ -185,7 +185,7 @@ ITEM {
     stack_size = 50
 }
 
-alien_life_limitations =
+local alien_life_limitations =
 	{
 	"cocoon-1"
 	}
