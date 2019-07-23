@@ -16,19 +16,3 @@ RECIPE {
     },
     main_product = "cocoon",
 }:add_unlock("zoology")
-
---APAGAR
-RECIPE {
-    type = 'recipe',
-    name = 'apagar-1',
-    category = 'slaughterhouse',
-    enabled = false,
-    energy_required = 40,
-    ingredients = {
-        {type = 'item', name = 'coal', amount = 2},
-    },
-    results = {
-        {type = 'item', name = 'iron-plate', amount = 1},
-    },
-    --main_product = "cocoon",
-}:add_unlock("zoology")

@@ -201,8 +201,8 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "b",
-    stack_size = 50,
-	effect = { speed = {bonus = 250}},
+    stack_size = 10,
+	effect = { speed = {bonus = 50}},
 	limitation = alien_life_limitations,
 	limitation_message_key = "Dont stick that in there"
 }

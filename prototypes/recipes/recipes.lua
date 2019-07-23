@@ -215,7 +215,6 @@ RECIPE {
     results = {
         {type = 'item', name = 'retrovirus', amount = 1},
     },
-    --main_product = "cocoon",
 }:add_unlock("genetics-mk01")
 
 RECIPE {
@@ -234,5 +233,4 @@ RECIPE {
     results = {
         {type = 'item', name = 'cdna', amount = 1},
     },
-    --main_product = "cocoon",
 }:add_unlock("biotech-mk01")
