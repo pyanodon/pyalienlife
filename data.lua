@@ -12,6 +12,8 @@ require("prototypes/technologies/biotech")
 require("prototypes/technologies/genetics")
 require("prototypes/technologies/zoology")
 require("prototypes/technologies/land-animals")
+require("prototypes/technologies/water-animals")
+require("prototypes/technologies/organic-breeding")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
