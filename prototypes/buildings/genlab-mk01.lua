@@ -7,6 +7,7 @@ RECIPE {
         {"electrolyzer-mk01", 1},
         {"plastic-bar", 20},
         {"py-tank-3000", 2},
+        {"nexelit-plate", 15},
         {"electronic-circuit", 15},
         {"glass", 50},
         {"titanium-plate", 40},

@@ -7,6 +7,7 @@ RECIPE {
         {"steel-plate", 15},
         {"glass", 50},
         {"titanium-plate", 15},
+        {"nexelit-plate", 15},
         {"electronic-circuit", 15},
         {"iron-gear-wheel", 20},
     },
