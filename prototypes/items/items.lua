@@ -147,7 +147,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/cocoon.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-creatures",
     order = "b",
     stack_size = 50
 }
@@ -182,6 +182,17 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "b",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "sea-sponge",
+    icon = "__pyalienlife__/graphics/icons/sea-sponge.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-creatures",
+    order = "a",
     stack_size = 50
 }
 

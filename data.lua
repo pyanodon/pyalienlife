@@ -13,6 +13,7 @@ require("prototypes/technologies/genetics")
 require("prototypes/technologies/zoology")
 require("prototypes/technologies/land-animals")
 require("prototypes/technologies/water-animals")
+require("prototypes/technologies/water-gmo-animals")
 require("prototypes/technologies/organic-breeding")
 
 --(( BUILDINGS ))--
@@ -28,6 +29,7 @@ require("prototypes/buildings/incubator-mk01")
 require("prototypes/buildings/creature-chamber-mk01")
 require("prototypes/buildings/vrauks-paddock-mk01")
 require("prototypes/buildings/slaughterhouse-mk01")
+require("prototypes/buildings/sponge-culture-mk01")
 require("prototypes/buildings/test-building")
 
 --(( RECIPES ))--

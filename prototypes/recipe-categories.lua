@@ -39,4 +39,8 @@ data:extend {
         type = "recipe-category",
         name = "slaughterhouse"
     },
+    {
+        type = "recipe-category",
+        name = "sponge"
+    },
 }
