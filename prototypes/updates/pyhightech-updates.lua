@@ -6,6 +6,10 @@ RECIPE('auog-paddock'):subgroup_order("py-alienlife-buildings-others", "a")
 RECIPE('fungal-substrate'):add_ingredient({type = "item", name = "urea", amount = 3})
 RECIPE('log7-2'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3})
 RECIPE('urea'):replace_ingredient("fawogae", "seaweed")
+RECIPE('bonemeal2'):remove_unlock('advanced-electronics')
+RECIPE('bonemeal3'):remove_unlock('advanced-electronics')
+RECIPE('bonemeal4'):remove_unlock('advanced-electronics')
+RECIPE('neuroprocessor'):replace_ingredient("electronic-circuit", "pcb2")
 
 ----EXCLUSIVE RECIPES----
 

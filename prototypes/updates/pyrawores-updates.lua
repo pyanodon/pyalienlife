@@ -4,5 +4,5 @@ RECIPE('ralesia-plantation-mk02'):add_ingredient({type = "item", name = "duralum
 RECIPE('ralesia-plantation-mk03'):add_ingredient({type = "item", name = "stainless-steel", amount = 25}):add_ingredient({type = "item", name = "aluminium-plate", amount = 40})
 RECIPE('ralesia-plantation-mk04'):add_ingredient({type = "item", name = "super-steel", amount = 25})
 --RECIPES--
-
+RECIPE('bonemeal-salt'):remove_unlock('machines-mk02')
 ----EXCLUSIVE RECIPES----
