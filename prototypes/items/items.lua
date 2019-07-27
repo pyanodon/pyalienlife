@@ -196,33 +196,143 @@ ITEM {
     stack_size = 50
 }
 
-local alien_life_limitations =
+ITEM {
+    type = "item",
+    name = "caged-mukmoux",
+    icon = "__pyalienlife__/graphics/icons/caged-mukmoux.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-creatures",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "cage",
+    icon = "__pyalienlife__/graphics/icons/cage.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 50
+}
+
+{
+    type = "tool",
+    name = "py-science-pack",
+    localised_description = {"item-description.science-pack"},
+    icon = "__pyalienlife__/graphics/icons/py-science-pack.png",
+    icon_size = 64,
+    subgroup = "science-pack",
+    order = "d[py-science-pack]",
+    stack_size = 200,
+    durability = 1,
+    durability_description_key = "description.science-pack-remaining-amount-key",
+    durability_description_value = "description.science-pack-remaining-amount-value"
+}
+
+ITEM {
+    type = "item",
+    name = "guts",
+    icon = "__pyalienlife__/graphics/icons/mip/guts-05.png",
+    icon_size = 64,
+    icon_mipmaps = 6,
+    pictures =
+    {
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/guts-01.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/guts-02.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/guts-03.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/guts-04.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/guts-05.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/guts-06.png", scale = 0.25, mipmap_count = 1 },
+    },
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "brain",
+    icon = "__pyalienlife__/graphics/icons/brain.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "bones",
+    icon = "__pyalienlife__/graphics/icons/bone.png",
+	icon_size = 32,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 500
+}
+ITEM {
+    type = "item",
+    name = "meat",
+    icon = "__pyalienlife__/graphics/icons/meat.png",
+	icon_size = 32,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 500
+}
+ITEM {
+    type = "item",
+    name = "skin",
+    icon = "__pyalienlife__/graphics/icons/skin.png",
+	icon_size = 32,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 500
+}
+ITEM {
+    type = "item",
+    name = "neuroprocessor",
+    icon = "__pyalienlife__/graphics/icons/neuroprocessor.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 500
+}
+
+
+local alien_life_limitations_ulric =
 	{
-	"cocoon-1"
+	"ulric-sex-01"
 	}
 
 --Test ITEM
 ITEM {
     type = "module",
-    name = "test",
-    icon = "__pyalienlife__/graphics/icons/cdna.png",
+    name = "caged-ulric",
+    icon = "__pyalienlife__/graphics/icons/caged-ulric.png",
     icon_size = 64,
-	category = "food",
+	category = "caged-ulric",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-items",
     order = "b",
     stack_size = 10,
-	effect = { speed = {bonus = 50}},
-	limitation = alien_life_limitations,
-	limitation_message_key = "Dont stick that in there"
+	effect = { speed = {bonus = 30}},
+	limitation = alien_life_limitations_ulric,
+	limitation_message_key = "Its full"
 }
 
 data:extend(
 {
   {
     type = "module-category",
-    name = "food"
+    name = "caged-ulric"
   },
 }
 )

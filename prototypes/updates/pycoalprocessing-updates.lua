@@ -12,7 +12,9 @@ RECIPE('ralesia-plantation'):remove_unlock('coal-processing-1'):add_unlock('bota
 RECIPE('ralesia-plantation-mk02'):add_unlock('botany-mk02'):subgroup_order("py-alienlife-buildings-mk02", "a")
 RECIPE('ralesia-plantation-mk03'):add_unlock('botany-mk03'):subgroup_order("py-alienlife-buildings-mk03", "a")
 RECIPE('ralesia-plantation-mk04'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk04", "a")
+RECIPE('ulric-corral'):remove_unlock('coal-processing-1')
 ITEM('ralesia-seeds'):subgroup_order("py-alienlife-plants", "a")
+ITEM('bonemeal'):subgroup_order("py-alienlife-recipes", "a")
 
 
 -----RECIPES-----
@@ -28,5 +30,7 @@ RECIPE('fawogae-substrate'):remove_ingredient("fawogae"):add_ingredient({type = 
 RECIPE('bio-sample01'):add_ingredient({type = "item", name = "empty-petri-dish", amount = 1})
 RECIPE('ralesia'):remove_unlock('coal-processing-1'):add_unlock('botany-mk01'):subgroup_order("py-alienlife-plants", "a")
 RECIPE('ralesia-seeds'):remove_unlock('coal-processing-1'):add_unlock('botany-mk01'):subgroup_order("py-alienlife-plants", "a"):change_category('solid-separator')
+RECIPE('bonemeal'):remove_unlock('coal-processing-1')
+RECIPE('chemical-science-pack'):replace_ingredient("advanced-circuit","neuroprocessor")
 
 ----EXCLUSIVE RECIPES----

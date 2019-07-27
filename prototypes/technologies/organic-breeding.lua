@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlife__/graphics/technology/organic-breeding.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"water-animals-mk01","land-animals-mk01"},
+    prerequisites = {"water-animals-mk01","biotech-mk02","land-animals-mk01"},
     effects = {},
     unit = {
         count = 200,
@@ -22,7 +22,7 @@ TECHNOLOGY {
     icon = "__pyalienlife__/graphics/technology/selective-breeding.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"organic-breeding","biotech-mk02"},
+    prerequisites = {"organic-breeding","biotech-mk03"},
     effects = {},
     unit = {
         count = 200,

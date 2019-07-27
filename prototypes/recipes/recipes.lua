@@ -219,6 +219,24 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
+    name = 'retrovirus-2',
+    category = 'incubator',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'cocoon', amount = 1},
+        {type = 'item', name = 'steel-plate', amount = 1},
+        {type = 'item', name = 'petri-dish', amount = 1},
+        {type = 'item', name = 'flask', amount = 1},
+        {type = 'fluid', name = 'liquid-nitrogen', amount = 20},
+    },
+    results = {
+        {type = 'item', name = 'retrovirus', amount = 3},
+    },
+}:add_unlock("genetics-mk02")
+
+RECIPE {
+    type = 'recipe',
     name = 'cdna',
     category = 'genlab',
     enabled = false,
@@ -234,3 +252,50 @@ RECIPE {
         {type = 'item', name = 'cdna', amount = 1},
     },
 }:add_unlock("biotech-mk01")
+
+RECIPE {
+    type = 'recipe',
+    name = 'borax-from-sponge',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'sea-sponge', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'raw-borax', amount = 3},
+    },
+}:add_unlock("biotech-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'cage',
+    category = 'crafting',
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+        {type = 'item', name = 'iron-stick', amount = 15},
+        {type = 'item', name = 'solder', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'cage', amount = 1},
+    },
+}:add_unlock("land-animals-mk01")
+
+RECIPE {
+    type = 'recipe',
+    name = 'neuroprocessor',
+    category = 'nmf',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'nexelit-matrix', amount = 5},
+        {type = 'item', name = 'brain', amount = 1},
+        {type = 'item', name = 'agar', amount = 3},
+        {type = 'item', name = 'electronic-circuit', amount = 1},
+        {type = 'fluid', name = 'vacuum', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'neuroprocessor', amount = 1},
+    },
+}:add_unlock("biotech-mk02")

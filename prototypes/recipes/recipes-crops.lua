@@ -262,3 +262,21 @@ RECIPE {
     subgroup = "py-alienlife-plants",
     order = "a"
 }:add_unlock("botany-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "ralesia-4",
+    category = "ralesia",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "fluid", name = "fluegas", amount = 300},
+        {type = "item", name = "soil", amount = 20},
+        {type = "item", name = "coarse", amount = 10},
+    },
+    results = {
+        {type = "item", name = "ralesia", amount = 20}
+    },
+    subgroup = "py-alienlife-plants",
+    order = "a"
+}:add_unlock("botany-mk03")

@@ -30,7 +30,8 @@ require("prototypes/buildings/creature-chamber-mk01")
 require("prototypes/buildings/vrauks-paddock-mk01")
 require("prototypes/buildings/slaughterhouse-mk01")
 require("prototypes/buildings/sponge-culture-mk01")
-require("prototypes/buildings/test-building")
+require("prototypes/buildings/ulric-corral-mk01")
+--require("prototypes/buildings/test-building")
 
 --(( RECIPES ))--
 require('prototypes/recipes/recipes')
@@ -40,3 +41,4 @@ require('prototypes/items/items')
 
 --(( FLUIDs ))--
 require("prototypes/fluids/zogna-bacteria")
+require("prototypes/fluids/blood")

@@ -22,7 +22,7 @@ TECHNOLOGY {
     icon = "__pyalienlife__/graphics/technology/land-animals-mk02.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"land-animals-mk01","botany-mk02"},
+    prerequisites = {"land-animals-mk01","botany-mk02","biotech-mk02"},
     effects = {},
     unit = {
         count = 100,
