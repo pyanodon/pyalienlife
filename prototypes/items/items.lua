@@ -255,6 +255,26 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "manure",
+    icon = "__pyalienlife__/graphics/icons/mip/manure-02.png",
+    icon_size = 64,
+    icon_mipmaps = 5,
+    pictures =
+    {
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/manure-01.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/manure-02.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/manure-03.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/manure-04.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/manure-05.png", scale = 0.25, mipmap_count = 1 },
+    },
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
     name = "brain",
     icon = "__pyalienlife__/graphics/icons/brain.png",
     icon_size = 64,
@@ -305,10 +325,45 @@ ITEM {
     stack_size = 500
 }
 
+ITEM {
+    type = "item",
+    name = "primers",
+    icon = "__pyalienlife__/graphics/icons/primers.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "dna-polymerase",
+    icon = "__pyalienlife__/graphics/icons/dna-polymerase.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "alien-sample-02",
+    icon = "__pyalienlife__/graphics/icons/alien-sample-02.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 500
+}
+
 
 local alien_life_limitations_ulric =
 	{
-	"ulric-sex-01"
+    "ulric-sex-01",
+    "ulric-manure-01",
+    "ulric-manure-02",
 	}
 
 --Test ITEM
@@ -323,7 +378,7 @@ ITEM {
     subgroup = "py-alienlife-items",
     order = "b",
     stack_size = 10,
-	effect = { speed = {bonus = 30}},
+	effect = { speed = {bonus = 32}},
 	limitation = alien_life_limitations_ulric,
 	limitation_message_key = "Its full"
 }

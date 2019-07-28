@@ -35,7 +35,7 @@ RECIPE {
         {type = 'fluid', name = 'water-saline', amount = 100},
     },
     main_product = "sea-sponge",
-}:add_unlock("water-animals-mk01")
+}:add_unlock("water-invertebrates-mk01")
 
 RECIPE {
     type = 'recipe',
@@ -71,6 +71,37 @@ RECIPE {
     },
     --main_product = "cocoon",
 }:add_unlock("organic-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'ulric-manure-01',
+    category = 'ulric',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'item', name = 'fawogae', amount = 5},--food?
+    },
+    results = {
+        {type = 'item', name = 'manure', amount = 3},
+    },
+    --main_product = "cocoon",
+}:add_unlock("land-animals-mk01")
+
+RECIPE {
+    type = 'recipe',
+    name = 'ulric-manure-02',
+    category = 'ulric',
+    enabled = false,
+    energy_required = 80,
+    ingredients = {
+        {type = 'item', name = 'fawogae', amount = 5},--food?
+        {type = 'item', name = 'salt', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'manure', amount = 3},
+    },
+    --main_product = "cocoon",
+}:add_unlock("land-animals-mk01")
 
 
 RECIPE {
