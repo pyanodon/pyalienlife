@@ -17,6 +17,7 @@ require("prototypes/technologies/water-invertebrates")
 require("prototypes/technologies/water-gmo-animals")
 require("prototypes/technologies/organic-breeding")
 require("prototypes/technologies/food")
+require("prototypes/technologies/ulric")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -39,6 +40,7 @@ require('prototypes/recipes/recipes')
 require('prototypes/recipes/recipes-mo')
 require('prototypes/recipes/recipes-crops')
 require('prototypes/recipes/recipes-animals')
+require('prototypes/recipes/recipes-ulric')
 require('prototypes/items/items')
 
 --(( FLUIDs ))--

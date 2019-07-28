@@ -358,6 +358,63 @@ ITEM {
     stack_size = 500
 }
 
+ITEM {
+    type = "item",
+    name = "caged-ulric",
+    icon = "__pyalienlife__/graphics/icons/caged-ulric.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-creatures",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "ulric-food-01",
+    icon = "__pyalienlife__/graphics/icons/ulric-food-01.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "ulric-food-02",
+    icon = "__pyalienlife__/graphics/icons/ulric-food-02.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "ulric-codex",
+    icon = "__pyalienlife__/graphics/icons/ulric-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "earth-horse-sample",
+    icon = "__pyalienlife__/graphics/icons/earth-horse-sample.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "z",
+    stack_size = 10
+}
+
+
+
 
 local alien_life_limitations_ulric =
 	{
@@ -369,16 +426,16 @@ local alien_life_limitations_ulric =
 --Test ITEM
 ITEM {
     type = "module",
-    name = "caged-ulric",
-    icon = "__pyalienlife__/graphics/icons/caged-ulric.png",
+    name = "ulric",
+    icon = "__pyalienlife__/graphics/icons/ulric.png",
     icon_size = 64,
-	category = "caged-ulric",
+	category = "ulric",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-items",
     order = "b",
     stack_size = 10,
-	effect = { speed = {bonus = 32}},
+	effect = { speed = {bonus = 20}},
 	limitation = alien_life_limitations_ulric,
 	limitation_message_key = "Its full"
 }
@@ -387,7 +444,7 @@ data:extend(
 {
   {
     type = "module-category",
-    name = "caged-ulric"
+    name = "ulric"
   },
 }
 )
