@@ -91,3 +91,35 @@ RECIPE {
     subgroup = "py-alienlife-plants",
     order = "a"
 }:add_unlock("botany-mk04")
+
+RECIPE {
+    type = 'recipe',
+    name = 'ulric-manure-03',
+    category = 'ulric',
+    enabled = false,
+    energy_required = 80,
+    ingredients = {
+        {type = 'item', name = 'ulric-food-01', amount = 1},
+        {type = 'item', name = 'salt', amount = 10},
+        {type = 'item', name = 'raw-fiber', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'manure', amount = 10},
+    },
+}:add_unlock("ulric")
+
+RECIPE {
+    type = 'recipe',
+    name = 'ulric-manure-03-food',
+    category = 'ulric',
+    enabled = false,
+    energy_required = 80,
+    ingredients = {
+        {type = 'item', name = 'ulric-food-02', amount = 1},
+        {type = 'item', name = 'salt', amount = 10},
+        {type = 'item', name = 'raw-fiber', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'manure', amount = 12},
+    },
+}:add_unlock("ulric")

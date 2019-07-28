@@ -41,7 +41,7 @@ ENTITY {
     collision_box = {{-3.9, -3.9}, {3.9, 3.9}},
     selection_box = {{-4.0, -4.0}, {4.0, 4.0}},
     module_specification = {
-        module_slots = 5
+        module_slots = 6
     },
     allowed_effects = {"speed"},
     crafting_categories = {"ulric"},
@@ -49,7 +49,7 @@ ENTITY {
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = -25,
+        emissions_per_minute = 2,
     },
     energy_usage = "150kW",
     ingredient_count = 20,

@@ -4,13 +4,12 @@ TECHNOLOGY {
     icon = "__pyalienlife__/graphics/technology/land-animals-mk01.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"coal-processing-2","zoology"},
+    prerequisites = {"coal-processing-1","zoology"},
     effects = {},
     unit = {
         count = 200,
         ingredients = {
             {"automation-science-pack", 1},
-            {'logistic-science-pack', 2}
         },
         time = 45
     }
@@ -29,7 +28,7 @@ TECHNOLOGY {
         ingredients = {
             {"automation-science-pack", 3},
             {'logistic-science-pack', 2},
-            {'chemical-science-pack', 1},
+            {'py-science-pack', 1},
         },
         time = 45
     }
