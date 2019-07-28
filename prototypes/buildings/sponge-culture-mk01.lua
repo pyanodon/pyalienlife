@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"sponge-culture-mk01", 1}
     }
-}:add_unlock("water-animals-mk01")
+}:add_unlock("water-invertebrates-mk01")
 
 ITEM {
     type = "item",

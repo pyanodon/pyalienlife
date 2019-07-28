@@ -13,8 +13,10 @@ require("prototypes/technologies/genetics")
 require("prototypes/technologies/zoology")
 require("prototypes/technologies/land-animals")
 require("prototypes/technologies/water-animals")
+require("prototypes/technologies/water-invertebrates")
 require("prototypes/technologies/water-gmo-animals")
 require("prototypes/technologies/organic-breeding")
+require("prototypes/technologies/food")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -31,10 +33,10 @@ require("prototypes/buildings/vrauks-paddock-mk01")
 require("prototypes/buildings/slaughterhouse-mk01")
 require("prototypes/buildings/sponge-culture-mk01")
 require("prototypes/buildings/ulric-corral-mk01")
---require("prototypes/buildings/test-building")
 
 --(( RECIPES ))--
 require('prototypes/recipes/recipes')
+require('prototypes/recipes/recipes-mo')
 require('prototypes/recipes/recipes-crops')
 require('prototypes/recipes/recipes-animals')
 require('prototypes/items/items')
@@ -42,3 +44,4 @@ require('prototypes/items/items')
 --(( FLUIDs ))--
 require("prototypes/fluids/zogna-bacteria")
 require("prototypes/fluids/blood")
+require("prototypes/fluids/formamide")

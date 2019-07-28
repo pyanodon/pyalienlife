@@ -54,19 +54,6 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'fawogae-spore',
-    category = 'spore',
-    enabled = false,
-    energy_required = 20,
-    ingredients = {
-    },
-    results = {
-        {type = 'item', name = 'fawogae-spore', amount = 1, probability = 0.3},
-    },
-}:add_unlock("mycology-mk01")
-
-RECIPE {
-    type = 'recipe',
     name = 'wood-seedling',
     category = 'nursery',
     enabled = false,
@@ -106,21 +93,6 @@ RECIPE {
     },
     results = {
         {type = 'item', name = 'empty-petri-dish', amount = 1},
-    },
-}
-
-RECIPE {
-    type = 'recipe',
-    name = 'petri-dish-bacteria',
-    category = 'micro-mine',
-    enabled = true,
-    hidden = true,
-    energy_required = 10,
-    ingredients = {
-        {type = 'item', name = 'petri-dish', amount = 1},
-    },
-    results = {
-        {type = 'item', name = 'petri-dish-bacteria', amount = 1},
     },
 }
 
@@ -185,76 +157,6 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'plasmids',
-    category = 'biofactory',
-    enabled = false,
-    energy_required = 5,
-    ingredients = {
-        {type = 'fluid', name = 'zogna-bacteria', amount = 20},
-        {type = 'item', name = 'petri-dish-bacteria', amount = 1},
-        {type = 'item', name = 'lab-instrument', amount = 1},
-    },
-    results = {
-        {type = 'item', name = 'plasmids', amount = 1},
-    },
-    --main_product = "cocoon",
-}:add_unlock("genetics-mk01")
-
-RECIPE {
-    type = 'recipe',
-    name = 'retrovirus',
-    category = 'incubator',
-    enabled = false,
-    energy_required = 5,
-    ingredients = {
-        {type = 'item', name = 'cocoon', amount = 1},
-        {type = 'item', name = 'steel-plate', amount = 1},
-        {type = 'item', name = 'petri-dish', amount = 1},
-        {type = 'item', name = 'flask', amount = 1},
-    },
-    results = {
-        {type = 'item', name = 'retrovirus', amount = 1},
-    },
-}:add_unlock("genetics-mk01")
-
-RECIPE {
-    type = 'recipe',
-    name = 'retrovirus-2',
-    category = 'incubator',
-    enabled = false,
-    energy_required = 5,
-    ingredients = {
-        {type = 'item', name = 'cocoon', amount = 1},
-        {type = 'item', name = 'steel-plate', amount = 1},
-        {type = 'item', name = 'petri-dish', amount = 1},
-        {type = 'item', name = 'flask', amount = 1},
-        {type = 'fluid', name = 'liquid-nitrogen', amount = 20},
-    },
-    results = {
-        {type = 'item', name = 'retrovirus', amount = 3},
-    },
-}:add_unlock("genetics-mk02")
-
-RECIPE {
-    type = 'recipe',
-    name = 'cdna',
-    category = 'genlab',
-    enabled = false,
-    energy_required = 10,
-    ingredients = {
-        {type = 'item', name = 'retrovirus', amount = 1},
-        {type = 'item', name = 'petri-dish-bacteria', amount = 1},
-        {type = 'item', name = 'plasmids', amount = 1},
-        {type = 'item', name = 'moss-gen', amount = 1},
-        {type = 'item', name = 'fawogae-substrate', amount = 4},
-    },
-    results = {
-        {type = 'item', name = 'cdna', amount = 1},
-    },
-}:add_unlock("biotech-mk01")
-
-RECIPE {
-    type = 'recipe',
     name = 'borax-from-sponge',
     category = 'biofactory',
     enabled = false,
@@ -292,10 +194,30 @@ RECIPE {
         {type = 'item', name = 'nexelit-matrix', amount = 5},
         {type = 'item', name = 'brain', amount = 1},
         {type = 'item', name = 'agar', amount = 3},
+        {type = 'item', name = 'nickel-plate', amount = 4},
         {type = 'item', name = 'electronic-circuit', amount = 1},
         {type = 'fluid', name = 'vacuum', amount = 50},
     },
     results = {
         {type = 'item', name = 'neuroprocessor', amount = 1},
+    },
+}:add_unlock("biotech-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'py-science-pack',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'moss', amount = 10},
+        {type = 'item', name = 'alien-sample01', amount = 1},
+        {type = 'item', name = 'alien-sample-02', amount = 1},
+        {type = 'item', name = 'plastic-bar', amount = 5},
+        {type = 'item', name = 'neuroprocessor', amount = 2},
+        {type = 'item', name = 'flask', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'py-science-pack', amount = 2},
     },
 }:add_unlock("biotech-mk02")

@@ -10,6 +10,7 @@ RECIPE('bonemeal2'):remove_unlock('advanced-electronics')
 RECIPE('bonemeal3'):remove_unlock('advanced-electronics')
 RECIPE('bonemeal4'):remove_unlock('advanced-electronics')
 RECIPE('neuroprocessor'):replace_ingredient("electronic-circuit", "pcb2")
+RECIPE('formamide'):replace_ingredient("nitrogen", "ammonia"):change_category('fbreactor')
 
 ----EXCLUSIVE RECIPES----
 
