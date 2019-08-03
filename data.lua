@@ -34,6 +34,7 @@ require("prototypes/buildings/vrauks-paddock-mk01")
 require("prototypes/buildings/slaughterhouse-mk01")
 require("prototypes/buildings/sponge-culture-mk01")
 require("prototypes/buildings/ulric-corral-mk01")
+require("prototypes/buildings/data-array")
 
 --(( RECIPES ))--
 require('prototypes/recipes/recipes')

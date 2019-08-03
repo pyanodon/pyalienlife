@@ -40,9 +40,9 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'earth-horse-sample',
-    category = 'crafting',
+    category = 'data-array',
     enabled = false,
-    energy_required = 10,
+    energy_required = 300,
     ingredients = {
         {type = 'item', name = 'steel-chest', amount = 1},
         {type = 'item', name = 'automation-science-pack', amount = 100},
@@ -51,7 +51,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'earth-horse-sample', amount = 1},
     },
-}:add_unlock("genetics-mk01")
+}:add_unlock("ulric")
 
 ----food----
 RECIPE {
