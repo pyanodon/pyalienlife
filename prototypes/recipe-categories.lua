@@ -43,4 +43,8 @@ data:extend {
         type = "recipe-category",
         name = "sponge"
     },
+    {
+        type = "recipe-category",
+        name = "data-array"
+    },
 }
