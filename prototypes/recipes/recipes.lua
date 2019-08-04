@@ -1,3 +1,5 @@
+local fun = require("prototypes/functions/functions")
+
 RECIPE {
     type = 'recipe',
     name = 'biomass-1',
@@ -16,6 +18,16 @@ RECIPE {
     subgroup = 'py-alienlife-plants',
     order = 'a'
 }:add_unlock("microbiology-mk01")
+
+--Example result replacer
+--results_replacer(recipe name*, old item*, new item*, new_amount**)
+--to use copy the local at top to the given file and then add the following line with the required variables
+fun.results_replacer("biomass-1", "biomass", "iron-plate", 3)
+
+--*required
+--**optional. whole numbers only
+
+log(serpent.block(data.raw.recipe["biomass-1"]))
 
 RECIPE {
     type = 'recipe',
