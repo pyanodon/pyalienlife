@@ -39,6 +39,7 @@ require("prototypes/buildings/ralesia-plantation-mk01")
 require("prototypes/buildings/data-array")
 
 --(( RECIPES ))--
+require('prototypes/items/items')
 require('prototypes/recipes/recipes')
 require('prototypes/recipes/recipes-mo')
 require('prototypes/recipes/recipes-crops')
@@ -46,7 +47,6 @@ require('prototypes/recipes/recipes-animals')
 require('prototypes/recipes/recipes-ulric')
 require('prototypes/recipes/recipes-sea-sponge')
 require('prototypes/recipes/recipes-ralesia')
-require('prototypes/items/items')
 
 --(( FLUIDs ))--
 require("prototypes/fluids/zogna-bacteria")
