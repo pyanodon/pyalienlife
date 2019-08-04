@@ -63,7 +63,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'tin-plate', amount = 2},
         {type = 'item', name = 'fawogae', amount = 5},
-        {type = 'item', name = 'ralesia', amount = 5},
+        {type = 'item', name = 'ralesias', amount = 5},
         {type = 'item', name = 'wood-seeds', amount = 1},
         {type = 'item', name = 'ash', amount = 10},
         {type = 'fluid', name = 'steam', amount = 100},
@@ -82,7 +82,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'tin-plate', amount = 2},
         {type = 'item', name = 'fawogae', amount = 5},
-        {type = 'item', name = 'ralesia', amount = 5},
+        {type = 'item', name = 'ralesias', amount = 5},
         {type = 'item', name = 'wood-seeds', amount = 1},
         {type = 'item', name = 'ash', amount = 10},
         {type = 'item', name = 'moss', amount = 10},
@@ -361,5 +361,3 @@ RECIPE {
     },
     main_product = "ulric",
 }:add_unlock("biotech-mk02")
-
---initial caged ulric fazer na creature chamber.

@@ -7,7 +7,8 @@ RECIPE {
         {"steel-plate", 15},
         {"glass", 50},
         {"titanium-plate", 15},
-        {"nexelit-plate", 15},
+        {"iron-plate", 15},
+        {"pipe", 15},
         {"electronic-circuit", 15},
         {"iron-gear-wheel", 20},
     },
@@ -42,11 +43,11 @@ ENTITY {
     collision_box = {{-5.2, -5.2}, {5.2, 5.2}},
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
     module_specification = {
-        module_slots = 0
+        module_slots = 4
     },
-    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    allowed_effects = {"speed"},
     crafting_categories = {"sponge"},
-    crafting_speed = 1,
+    crafting_speed = 0.01,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
