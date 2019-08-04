@@ -1,9 +1,32 @@
 --BUILDINDS--
 
-----EXCLUSIVE RECIPES----
+
+----RECIPES----
 
 RECIPE('retrovirus'):add_ingredient({type = "fluid", name = "hot-air", amount = 50})
 
+RECIPE('guar-separation'):remove_unlock('oil-machines-mk01')
+
+----EXCLUSIVE RECIPES----
+
+
+RECIPE {
+    type = "recipe",
+    name = "guar-separation-b",
+    category = "solid-separator",
+    enabled = false,
+    energy_required = 3,
+    ingredients = {
+        {type = "item", name = "guar", amount = 10},
+        },
+    results = {
+        {type = "item", name = "guar-seeds", amount = 50},
+        {type = "item", name = "biomass", amount = 10},
+    },
+    main_product = "guar-seeds",
+    subgroup = "py-petroleum-handling-recipes",
+    order = "a"
+}:add_unlock("oil-machines-mk01")
 
 RECIPE {
     type = 'recipe',

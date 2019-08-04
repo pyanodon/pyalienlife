@@ -72,5 +72,23 @@ data:extend {
         name = "py-alienlife-plants",
         group = "py-alienlife",
         order = "f"
-    }
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-codex",
+        group = "py-alienlife",
+        order = "g"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-genetics",
+        group = "py-alienlife",
+        order = "h"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-modules",
+        group = "py-alienlife",
+        order = "z"
+    },
 }

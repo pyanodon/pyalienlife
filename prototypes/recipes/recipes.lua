@@ -157,20 +157,6 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'borax-from-sponge',
-    category = 'biofactory',
-    enabled = false,
-    energy_required = 5,
-    ingredients = {
-        {type = 'item', name = 'sea-sponge', amount = 1},
-    },
-    results = {
-        {type = 'item', name = 'raw-borax', amount = 3},
-    },
-}:add_unlock("biotech-mk02")
-
-RECIPE {
-    type = 'recipe',
     name = 'cage',
     category = 'crafting',
     enabled = false,

@@ -70,7 +70,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/wood-seeds.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-plants",
     order = "a",
     stack_size = 500
 }
@@ -136,7 +136,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/moss-gen.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-genetics",
     order = "b",
     stack_size = 200
 }
@@ -147,7 +147,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/cocoon.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-creatures",
+    subgroup = "py-alienlife-recipes",
     order = "b",
     stack_size = 50
 }
@@ -158,7 +158,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/plasmids.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-genetics",
     order = "b",
     stack_size = 50
 }
@@ -169,7 +169,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/retrovirus.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-genetics",
     order = "b",
     stack_size = 50
 }
@@ -180,19 +180,8 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/cdna.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-genetics",
     order = "b",
-    stack_size = 50
-}
-
-ITEM {
-    type = "item",
-    name = "sea-sponge",
-    icon = "__pyalienlife__/graphics/icons/sea-sponge.png",
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-creatures",
-    order = "a",
     stack_size = 50
 }
 
@@ -331,7 +320,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/primers.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-genetics",
     order = "h",
     stack_size = 500
 }
@@ -342,7 +331,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/dna-polymerase.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-genetics",
     order = "h",
     stack_size = 500
 }
@@ -353,7 +342,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/alien-sample-02.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-genetics",
     order = "h",
     stack_size = 500
 }
@@ -397,7 +386,40 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/ulric-codex.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "sea-sponge-codex",
+    icon = "__pyalienlife__/graphics/icons/sea-sponge-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "ralesia-codex",
+    icon = "__pyalienlife__/graphics/icons/ralesia-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "zipir-codex",
+    icon = "__pyalienlife__/graphics/icons/zipir-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
     order = "x",
     stack_size = 10
 }
@@ -413,8 +435,51 @@ ITEM {
     stack_size = 10
 }
 
+ITEM {
+    type = "item",
+    name = "earth-flower-sample",
+    icon = "__pyalienlife__/graphics/icons/earth-flower-sample.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "z",
+    stack_size = 10
+}
 
+ITEM {
+    type = "item",
+    name = "earth-crustacean-sample",
+    icon = "__pyalienlife__/graphics/icons/earth-crustacean-sample.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "z",
+    stack_size = 10
+}
 
+ITEM {
+    type = "item",
+    name = "earth-sea-sponge-sample",
+    icon = "__pyalienlife__/graphics/icons/earth-sea-sponge-sample.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "z",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "sea-sponge-sprouts",
+    icon = "__pyalienlife__/graphics/icons/sea-sponge-sprouts.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-creatures",
+    order = "a",
+    stack_size = 50
+}
+
+------RULES-----
 
 local alien_life_limitations_ulric =
 	{
@@ -423,7 +488,23 @@ local alien_life_limitations_ulric =
     "ulric-manure-02",
 	}
 
---Test ITEM
+    local alien_life_limitations_sponge =
+	{
+    "sea-sponge-1",
+    "sea-sponge-2",
+    }
+    
+    local alien_life_limitations_ralesia =
+	{
+    "ralesia-1",
+    "ralesia-2",
+    "ralesia-3",
+    "ralesia-4",
+    "ralesia-5",
+    }
+
+----MODULES----
+
 ITEM {
     type = "module",
     name = "ulric",
@@ -432,11 +513,42 @@ ITEM {
 	category = "ulric",
 	tier = 1,
     flags = {},
-    subgroup = "py-alienlife-items",
-    order = "b",
+    subgroup = "py-alienlife-modules",
+    order = "a",
     stack_size = 10,
 	effect = { speed = {bonus = 20}},
 	limitation = alien_life_limitations_ulric,
+	limitation_message_key = "Its full"
+}
+ITEM {
+    type = "module",
+    name = "sea-sponge",
+    icon = "__pyalienlife__/graphics/icons/sea-sponge.png",
+    icon_size = 64,
+    category = "sea-sponge",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "a",
+    stack_size = 10,
+	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_sponge,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "ralesias",
+    icon = "__pycoalprocessing__/graphics/icons/ralesia.png",
+    icon_size = 32,
+    category = "ralesia-flower",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "a",
+    stack_size = 10,
+	effect = { speed = {bonus = 15}},
+	limitation = alien_life_limitations_ralesia,
 	limitation_message_key = "Its full"
 }
 
@@ -445,6 +557,14 @@ data:extend(
   {
     type = "module-category",
     name = "ulric"
+  },
+  {
+    type = "module-category",
+    name = "sea-sponge"
+  },
+  {
+    type = "module-category",
+    name = "ralesia-flower"
   },
 }
 )

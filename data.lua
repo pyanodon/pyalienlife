@@ -18,6 +18,7 @@ require("prototypes/technologies/water-gmo-animals")
 require("prototypes/technologies/organic-breeding")
 require("prototypes/technologies/food")
 require("prototypes/technologies/ulric")
+require("prototypes/technologies/ralesia")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -34,6 +35,7 @@ require("prototypes/buildings/vrauks-paddock-mk01")
 require("prototypes/buildings/slaughterhouse-mk01")
 require("prototypes/buildings/sponge-culture-mk01")
 require("prototypes/buildings/ulric-corral-mk01")
+require("prototypes/buildings/ralesia-plantation-mk01")
 require("prototypes/buildings/data-array")
 
 --(( RECIPES ))--
@@ -42,6 +44,8 @@ require('prototypes/recipes/recipes-mo')
 require('prototypes/recipes/recipes-crops')
 require('prototypes/recipes/recipes-animals')
 require('prototypes/recipes/recipes-ulric')
+require('prototypes/recipes/recipes-sea-sponge')
+require('prototypes/recipes/recipes-ralesia')
 require('prototypes/items/items')
 
 --(( FLUIDs ))--
