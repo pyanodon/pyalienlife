@@ -191,7 +191,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/caged-mukmoux.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-creatures",
+    subgroup = "py-alienlife-mukmoux",
     order = "a",
     stack_size = 50
 }
@@ -213,8 +213,8 @@ ITEM {
     localised_description = {"item-description.science-pack"},
     icon = "__pyalienlife__/graphics/icons/py-science-pack.png",
     icon_size = 64,
-    subgroup = "science-pack",
-    order = "d[py-science-pack]",
+    subgroup = "py-alienlife-items",
+    order = "a-a",
     stack_size = 200,
     durability = 1,
     durability_description_key = "description.science-pack-remaining-amount-key",
@@ -344,7 +344,18 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 500
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "alien-sample-03",
+    icon = "__pyalienlife__/graphics/icons/alien-sample-03.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "h",
+    stack_size = 100
 }
 
 ITEM {
@@ -353,8 +364,8 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/caged-ulric.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-creatures",
-    order = "h",
+    subgroup = "py-alienlife-ulric",
+    order = "a",
     stack_size = 500
 }
 
@@ -387,7 +398,7 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-codex",
-    order = "x",
+    order = "b",
     stack_size = 10
 }
 
@@ -415,6 +426,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "mukmoux-codex",
+    icon = "__pyalienlife__/graphics/icons/mukmoux-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
     name = "zipir-codex",
     icon = "__pyalienlife__/graphics/icons/zipir-codex.png",
 	icon_size = 64,
@@ -430,8 +452,8 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/earth-horse-sample.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
-    order = "z",
+    subgroup = "py-alienlife-samples",
+    order = "a",
     stack_size = 10
 }
 
@@ -441,8 +463,8 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/earth-flower-sample.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
-    order = "z",
+    subgroup = "py-alienlife-samples",
+    order = "a",
     stack_size = 10
 }
 
@@ -452,8 +474,8 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/earth-crustacean-sample.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
-    order = "z",
+    subgroup = "py-alienlife-samples",
+    order = "a",
     stack_size = 10
 }
 
@@ -463,8 +485,19 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/earth-sea-sponge-sample.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
-    order = "z",
+    subgroup = "py-alienlife-samples",
+    order = "a",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "earth-cow-sample",
+    icon = "__pyalienlife__/graphics/icons/earth-cow-sample.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-samples",
+    order = "a",
     stack_size = 10
 }
 
@@ -479,6 +512,28 @@ ITEM {
     stack_size = 50
 }
 
+ITEM {
+    type = "item",
+    name = "mukmoux-food-01",
+    icon = "__pyalienlife__/graphics/icons/mukmoux-food-01.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "mukmoux-food-02",
+    icon = "__pyalienlife__/graphics/icons/mukmoux-food-02.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 500
+}
+
 ------RULES-----
 
 local alien_life_limitations_ulric =
@@ -486,6 +541,8 @@ local alien_life_limitations_ulric =
     "ulric-sex-01",
     "ulric-manure-01",
     "ulric-manure-02",
+    "ulric-manure-01-food",
+    "ulric-manure-02-food",
 	}
 
     local alien_life_limitations_sponge =
@@ -502,6 +559,15 @@ local alien_life_limitations_ulric =
     "ralesia-4",
     "ralesia-5",
     }
+
+    local alien_life_limitations_mukmoux =
+	{
+    "mukmoux-sex-01",
+    "mukmoux-manure-01",
+    "mukmoux-manure-02",
+    "mukmoux-manure-01-food",
+    "mukmoux-manure-02-food",
+	}
 
 ----MODULES----
 
@@ -520,6 +586,7 @@ ITEM {
 	limitation = alien_life_limitations_ulric,
 	limitation_message_key = "Its full"
 }
+
 ITEM {
     type = "module",
     name = "sea-sponge",
@@ -552,6 +619,22 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+ITEM {
+    type = "module",
+    name = "mukmoux",
+    icon = "__pyalienlife__/graphics/icons/mukmoux.png",
+    icon_size = 64,
+	category = "mukmoux",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "a",
+    stack_size = 10,
+	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_mukmoux,
+	limitation_message_key = "Its full"
+}
+
 data:extend(
 {
   {
@@ -565,6 +648,10 @@ data:extend(
   {
     type = "module-category",
     name = "ralesia-flower"
+  },
+  {
+    type = "module-category",
+    name = "mukmoux"
   },
 }
 )

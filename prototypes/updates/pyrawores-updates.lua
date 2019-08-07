@@ -7,6 +7,7 @@ RECIPE('ralesia-plantation-mk04'):add_ingredient({type = "item", name = "super-s
 
 --RECIPES--
 
+RECIPE('mukmoux-fat-salt'):remove_unlock('machines-mk02')
 RECIPE('bonemeal-salt'):remove_unlock('machines-mk02')
 RECIPE('starch'):remove_unlock('machines-mk02')
 RECIPE('starch-2'):remove_unlock('machines-mk02')
