@@ -69,6 +69,18 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-ulric",
+        group = "py-alienlife",
+        order = "e-a"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-mukmoux",
+        group = "py-alienlife",
+        order = "e-b"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-plants",
         group = "py-alienlife",
         order = "f"
@@ -81,9 +93,15 @@ data:extend {
     },
     {
         type = "item-subgroup",
-        name = "py-alienlife-genetics",
+        name = "py-alienlife-samples",
         group = "py-alienlife",
         order = "h"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-genetics",
+        group = "py-alienlife",
+        order = "i"
     },
     {
         type = "item-subgroup",

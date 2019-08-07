@@ -22,12 +22,12 @@ RECIPE {
 --Example result replacer
 --results_replacer(recipe name*, old item*, new item*, new_amount**)
 --to use copy the local at top to the given file and then add the following line with the required variables
-fun.results_replacer("biomass-1", "biomass", "iron-plate", 3)
+--fun.results_replacer("biomass-1", "biomass", "iron-plate", 3)
 
 --*required
 --**optional. whole numbers only
 
-log(serpent.block(data.raw.recipe["biomass-1"]))
+--log(serpent.block(data.raw.recipe["biomass-1"]))
 
 RECIPE {
     type = 'recipe',
@@ -90,7 +90,7 @@ RECIPE {
         {type = 'item', name = 'wood', amount = 5},
     },
     results = {
-        {type = 'item', name = 'wood-seeds', amount = 2},
+        {type = 'item', name = 'wood-seeds', amount = 4},
     },
 }:add_unlock("botany-mk01")
 
@@ -219,3 +219,17 @@ RECIPE {
         {type = 'item', name = 'py-science-pack', amount = 2},
     },
 }:add_unlock("biotech-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'test',
+    category = 'tuuphra',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'moss', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'py-science-pack', amount = 2},
+    },
+}:add_unlock("tuuphra")

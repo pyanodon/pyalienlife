@@ -52,6 +52,8 @@ RECIPE('urea'):set_fields {enabled = false}  --TODAS RECIPES DE UREA para a reci
 RECIPE('waste-water-urea'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('basic-electronics'):add_unlock('auog')
 RECIPE('ammonia-urea'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('oil-processing'):add_unlock('auog')
 RECIPE('urea2'):remove_unlock('coal-processing-1')
+RECIPE('mukmoux-fat2'):remove_unlock('advanced-electronics')
+RECIPE('mukmoux-fat3'):remove_unlock('advanced-electronics')
 
 
 ----EXCLUSIVE RECIPES----
@@ -180,3 +182,35 @@ RECIPE {
         {type = 'item', name = 'manure', amount = 12},
     },
 }:add_unlock("ulric")
+
+RECIPE {
+    type = 'recipe',
+    name = 'mukmoux-manure-03',
+    category = 'mukmoux',
+    enabled = false,
+    energy_required = 80,
+    ingredients = {
+        {type = 'item', name = 'mukmoux-food-01', amount = 1},
+        {type = 'item', name = 'salt', amount = 10},
+        {type = 'item', name = 'raw-fiber', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'manure', amount = 8},
+    },
+}:add_unlock("ulric")
+
+RECIPE {
+    type = 'recipe',
+    name = 'mukmoux-manure-03-food',
+    category = 'mukmoux',
+    enabled = false,
+    energy_required = 80,
+    ingredients = {
+        {type = 'item', name = 'mukmoux-food-02', amount = 1},
+        {type = 'item', name = 'salt', amount = 10},
+        {type = 'item', name = 'raw-fiber', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'manure', amount = 10},
+    },
+}:add_unlock("mukmoux")
