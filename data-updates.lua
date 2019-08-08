@@ -1,4 +1,5 @@
 require("__stdlib__/stdlib/data/data").Util.create_data_globals()
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 if mods["pyfusionenergy"] then
     require("prototypes/updates/pyfusionenergy-updates")
@@ -22,5 +23,9 @@ end
 
 --ADAPTATIONS
 
+for _, recipe in pairs(data.raw.recipe) do
+    local r = RECIPE(recipe)
+    r:replace_ingredient('py-fertilizer', 'fertilizer')
+end
 
 --RECIPES UPDATES

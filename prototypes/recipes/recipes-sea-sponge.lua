@@ -106,6 +106,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'raw-borax', amount = 8},
     },
+    subgroup = 'py-alienlife-items',
+    order = 'c',
 }:add_unlock("water-invertebrates-mk01")
 
 RECIPE {
@@ -120,6 +122,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'raw-borax', amount = 3},
     },
+    subgroup = 'py-alienlife-items',
+    order = 'c',
 }:add_unlock("water-invertebrates-mk01")
 
 

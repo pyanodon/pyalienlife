@@ -448,6 +448,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "tuuphra-codex",
+    icon = "__pyalienlife__/graphics/icons/tuuphra-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
     name = "earth-horse-sample",
     icon = "__pyalienlife__/graphics/icons/earth-horse-sample.png",
 	icon_size = 64,
@@ -503,6 +514,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "earth-potato-sample",
+    icon = "__pyalienlife__/graphics/icons/earth-potato-sample.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-samples",
+    order = "a",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
     name = "sea-sponge-sprouts",
     icon = "__pyalienlife__/graphics/icons/sea-sponge-sprouts.png",
 	icon_size = 64,
@@ -530,6 +552,28 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "fertilizer",
+    icon = "__pyalienlife__/graphics/icons/fertilizer.png",
+	icon_size = 32,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "tuuphra-seeds",
+    icon = "__pyalienlife__/graphics/icons/tuuphra-seeds.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-plants",
     order = "h",
     stack_size = 500
 }
@@ -567,6 +611,14 @@ local alien_life_limitations_ulric =
     "mukmoux-manure-02",
     "mukmoux-manure-01-food",
     "mukmoux-manure-02-food",
+    }
+    
+    local alien_life_limitations_tuuphra =
+	{
+    "tuuphra-0",
+    "tuuphra-1",
+    "tuuphra-2",
+    "tuuphra-3",
 	}
 
 ----MODULES----
@@ -635,6 +687,22 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+ITEM {
+    type = "module",
+    name = "tuuphra",
+    icon = "__pyalienlife__/graphics/icons/tuuphra.png",
+    icon_size = 64,
+	category = "tuuphra",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "a",
+    stack_size = 10,
+	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_tuuphra,
+	limitation_message_key = "Its full"
+}
+
 data:extend(
 {
   {
@@ -652,6 +720,10 @@ data:extend(
   {
     type = "module-category",
     name = "mukmoux"
+  },
+  {
+    type = "module-category",
+    name = "tuuphra"
   },
 }
 )

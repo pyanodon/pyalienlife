@@ -139,3 +139,20 @@ RECIPE {
         {type = "item", name = "ralesias", amount = 20}
     },
 }:add_unlock("botany-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "ralesia-6",
+    category = "ralesia",
+    enabled = false,
+    energy_required = 60,
+    ingredients = {
+        {type = "fluid", name = "syngas", amount = 200},
+        {type = "item", name = "ralesia-seeds", amount = 5},
+        {type = "item", name = "fertilizer", amount = 7},
+        {type = "item", name = "coarse", amount = 10},
+    },
+    results = {
+        {type = "item", name = "ralesias", amount = 25}
+    },
+}:add_unlock("botany-mk02")

@@ -61,6 +61,22 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
+    name = 'seaweed-9',
+    category = 'seaweed',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'fluid', name = 'water-saline', amount = 100},
+        {type = 'fluid', name = 'slacked-lime', amount = 50},
+        {type = 'item', name = 'fertilizer', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'seaweed', amount = 12},
+    },
+}:add_unlock("botany-mk02")
+
+RECIPE {
+    type = 'recipe',
     name = 'seaweed-5',
     category = 'seaweed',
     enabled = false,

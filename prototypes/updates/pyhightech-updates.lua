@@ -54,6 +54,7 @@ RECIPE('ammonia-urea'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock
 RECIPE('urea2'):remove_unlock('coal-processing-1')
 RECIPE('mukmoux-fat2'):remove_unlock('advanced-electronics')
 RECIPE('mukmoux-fat3'):remove_unlock('advanced-electronics')
+RECIPE('fertilizer'):remove_unlock('basic-electronics')
 
 
 ----EXCLUSIVE RECIPES----
@@ -97,11 +98,11 @@ RECIPE {
     name = "phytoplankton-2",
     category = "plankton",
     enabled = false,
-    energy_required = 15,
+    energy_required = 5,
     ingredients = {
         {type = "fluid", name = "flue-gas", amount = 100},
         {type = "fluid", name = "water", amount = 500},
-        {type = 'item', name = 'py-fertilizer', amount = 3},
+        {type = 'item', name = 'fertilizer', amount = 3},
     },
     results = {
         {type = "fluid", name = "phytoplankton", amount = 20}
@@ -109,7 +110,7 @@ RECIPE {
     main_product = "phytoplankton",
     subgroup = 'py-alienlife-plants',
     order = 'b'
-}:add_unlock("botany-mk04")
+}:add_unlock("microbiology-mk03")
 
 RECIPE {
     type = 'recipe',

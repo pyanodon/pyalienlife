@@ -11,6 +11,7 @@ RECIPE('mukmoux-fat-salt'):remove_unlock('machines-mk02')
 RECIPE('bonemeal-salt'):remove_unlock('machines-mk02')
 RECIPE('starch'):remove_unlock('machines-mk02')
 RECIPE('starch-2'):remove_unlock('machines-mk02')
+RECIPE('fertilizer-2'):remove_unlock('basic-electronics')
 
 ----EXCLUSIVE RECIPES----
 
@@ -54,3 +55,21 @@ RECIPE {
     subgroup = "py-rawores-recipes",
     order = "j"
 }:add_unlock("machines-mk02"):add_ingredient({type = 'item', name = 'fiberboard', amount = 1})
+
+RECIPE {
+    type = "recipe",
+    name = "fertilizer-3",
+    category = "biofactory",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "bones", amount = 6},
+        {type = "item", name = "urea", amount = 5},
+        {type = "item", name = "manure", amount = 10},
+        {type = "item", name = "ammonium-chloride", amount = 20},
+        {type = 'fluid', name = 'zogna-bacteria', amount = 20},
+    },
+    results = {
+        {type = "item", name = "fertilizer", amount = 15}
+    }
+}:add_unlock("biotech-mk02")
