@@ -63,6 +63,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'tin-plate', amount = 2},
         {type = 'item', name = 'moss', amount = 5},
+        {type = 'item', name = 'tuuphra-seeds', amount = 5},
         {type = 'item', name = 'seaweed', amount = 5},
         {type = 'item', name = 'salt', amount = 10},
         {type = 'fluid', name = 'steam', amount = 100},
@@ -84,7 +85,7 @@ RECIPE {
         {type = 'item', name = 'seaweed', amount = 5},
         {type = 'item', name = 'salt', amount = 10},
         {type = 'item', name = 'biomass', amount = 5},
-        {type = 'item', name = 'ralesia-seeds', amount = 5},
+        {type = 'item', name = 'tuuphra-seeds', amount = 10},
         {type = 'fluid', name = 'steam', amount = 100},
     },
     results = {

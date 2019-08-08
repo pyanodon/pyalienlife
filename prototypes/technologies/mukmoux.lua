@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlife__/graphics/technology/mukmoux.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"land-animals-mk02","biotech-mk02","organic-breeding"},
+    prerequisites = {"land-animals-mk02","biotech-mk02","organic-breeding","tuuphra"},
     effects = {},
     unit = {
         count = 200,

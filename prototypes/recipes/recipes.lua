@@ -222,14 +222,34 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'test',
-    category = 'tuuphra',
+    name = 'fertilizer-1',
+    category = 'biofactory',
     enabled = false,
-    energy_required = 10,
+    energy_required = 5,
     ingredients = {
-        {type = 'item', name = 'moss', amount = 10},
+        {type = 'fluid', name = 'blood', amount = 30},
+        {type = 'item', name = 'bones', amount = 6},
+        {type = 'item', name = 'urea', amount = 5},
+        {type = 'item', name = 'ash', amount = 10},
+        {type = 'item', name = 'organics', amount = 20}
     },
     results = {
-        {type = 'item', name = 'py-science-pack', amount = 2},
+        {type = 'item', name = 'fertilizer', amount = 10}
+    }
+}:add_unlock('biotech-mk02')
+
+RECIPE {
+    type = 'recipe',
+    name = 'fertilizer-4',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'manure', amount = 10},
+        {type = 'item', name = 'biomass', amount = 10},
+        {type = 'fluid', name = 'zogna-bacteria', amount = 20},
     },
-}:add_unlock("tuuphra")
+    results = {
+        {type = 'item', name = 'fertilizer', amount = 5}
+    }
+}:add_unlock('biotech-mk01')
