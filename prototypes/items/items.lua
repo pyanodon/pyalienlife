@@ -198,6 +198,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "caged-arthurian",
+    icon = "__pyalienlife__/graphics/icons/caged-arthurian.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arthurian",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "cage",
     icon = "__pyalienlife__/graphics/icons/cage.png",
     icon_size = 64,
@@ -437,6 +448,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "arthurian-codex",
+    icon = "__pyalienlife__/graphics/icons/arthurian-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
     name = "zipir-codex",
     icon = "__pyalienlife__/graphics/icons/zipir-codex.png",
 	icon_size = 64,
@@ -525,6 +547,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "earth-lizard-sample",
+    icon = "__pyalienlife__/graphics/icons/earth-lizard-sample.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-samples",
+    order = "a",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
     name = "sea-sponge-sprouts",
     icon = "__pyalienlife__/graphics/icons/sea-sponge-sprouts.png",
 	icon_size = 64,
@@ -578,6 +611,17 @@ ITEM {
     stack_size = 500
 }
 
+ITEM {
+    type = "item",
+    name = "arthurian-egg",
+    icon = "__pyalienlife__/graphics/icons/arthurian-egg.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arthurian",
+    order = "h",
+    stack_size = 500
+}
+
 ------RULES-----
 
 local alien_life_limitations_ulric =
@@ -619,7 +663,17 @@ local alien_life_limitations_ulric =
     "tuuphra-1",
     "tuuphra-2",
     "tuuphra-3",
-	}
+    }
+    
+    local alien_life_limitations_arthurian =
+	{
+    "arthurian-sex-01",
+    "arthurian-sex-01-mukmoux",
+    "arthurian-egg-01",
+    "arthurian-egg-02",
+    "arthurian-egg-01-mukmoux",
+    "arthurian-egg-02-mukmoux",
+    }
 
 ----MODULES----
 
@@ -689,6 +743,22 @@ ITEM {
 
 ITEM {
     type = "module",
+    name = "arthurian",
+    icon = "__pyalienlife__/graphics/icons/arthurian.png",
+    icon_size = 64,
+	category = "arthurian",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "a",
+    stack_size = 10,
+	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_arthurian,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
     name = "tuuphra",
     icon = "__pyalienlife__/graphics/icons/tuuphra.png",
     icon_size = 64,
@@ -724,6 +794,10 @@ data:extend(
   {
     type = "module-category",
     name = "tuuphra"
+  },
+  {
+    type = "module-category",
+    name = "arthurian"
   },
 }
 )

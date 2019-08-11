@@ -21,6 +21,7 @@ require("prototypes/technologies/ulric")
 require("prototypes/technologies/ralesia")
 require("prototypes/technologies/mukmoux")
 require("prototypes/technologies/tuuphra")
+require("prototypes/technologies/arthurian")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -40,6 +41,7 @@ require("prototypes/buildings/ulric-corral-mk01")
 require("prototypes/buildings/ralesia-plantation-mk01")
 require("prototypes/buildings/tuuphra-plantation-mk01")
 require("prototypes/buildings/mukmoux-pasture-mk01")
+require("prototypes/buildings/arthurian-pen-mk01")
 require("prototypes/buildings/data-array")
 
 --(( RECIPES ))--
@@ -54,6 +56,7 @@ require('prototypes/recipes/recipes-sea-sponge')
 require('prototypes/recipes/recipes-ralesia')
 require('prototypes/recipes/recipes-mukmoux')
 require('prototypes/recipes/recipes-tuuphra')
+require('prototypes/recipes/recipes-arthurian')
 
 
 --(( FLUIDs ))--
@@ -61,3 +64,4 @@ require("prototypes/fluids/zogna-bacteria")
 require("prototypes/fluids/blood")
 require("prototypes/fluids/formamide")
 require("prototypes/fluids/fetal-serum")
+require("prototypes/fluids/artificial-blood")

@@ -28,4 +28,6 @@ for _, recipe in pairs(data.raw.recipe) do
     r:replace_ingredient('py-fertilizer', 'fertilizer')
 end
 
+TECHNOLOGY('fluid-handling'):remove_pack('logistic-science-pack')
+
 --RECIPES UPDATES

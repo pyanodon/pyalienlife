@@ -2,7 +2,7 @@ RECIPE {
     type = "recipe",
     name = "tuuphra-plantation-mk01",
     energy_required = 1,
-    enabled = true,
+    enabled = false,
     ingredients = {
         {"stone-brick", 30},
         {"limestone", 25},
@@ -13,7 +13,7 @@ RECIPE {
     results = {
         {"tuuphra-plantation-mk01", 1}
     }
-}
+}:add_unlock("tuuphra")
 
 ITEM {
     type = "item",
