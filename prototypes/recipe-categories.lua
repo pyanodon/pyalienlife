@@ -51,4 +51,8 @@ data:extend {
         type = "recipe-category",
         name = "tuuphra"
     },
+    {
+        type = "recipe-category",
+        name = "arthurian"
+    },
 }

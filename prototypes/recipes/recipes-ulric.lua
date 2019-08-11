@@ -105,10 +105,13 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'cage', amount = 1},
         {type = 'item', name = 'ulric-food-01', amount = 1},
+        {type = 'item', name = 'water-barrel', amount = 3},
     },
     results = {
         {type = 'item', name = 'caged-ulric', amount = 1, probability = 0.5},
+        {type = 'item', name = 'empty-barrel', amount = 3},
     },
+    main_product = "caged-ulric",
     subgroup = 'py-alienlife-ulric',
     order = 'a',
 }:add_unlock("organic-breeding")
@@ -123,10 +126,13 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'cage', amount = 1},
         {type = 'item', name = 'ulric-food-02', amount = 1},
+        {type = 'item', name = 'water-barrel', amount = 3},
     },
     results = {
         {type = 'item', name = 'caged-ulric', amount = 1, probability = 0.5},
+        {type = 'item', name = 'empty-barrel', amount = 3},
     },
+    main_product = "caged-ulric",
     subgroup = 'py-alienlife-ulric',
     order = 'a',
 }:add_unlock("organic-breeding")
@@ -141,10 +147,13 @@ RECIPE {
     energy_required = 100,
     ingredients = {
         {type = 'item', name = 'ulric-food-01', amount = 1},
+        {type = 'item', name = 'water-barrel', amount = 3},
     },
     results = {
         {type = 'item', name = 'manure', amount = 5},
+        {type = 'item', name = 'empty-barrel', amount = 3},
     },
+    main_product = "manure",
 }:add_unlock("ulric")
 
 RECIPE {
@@ -156,10 +165,13 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'ulric-food-01', amount = 1},
         {type = 'item', name = 'salt', amount = 10},
+        {type = 'item', name = 'water-barrel', amount = 5},
     },
     results = {
         {type = 'item', name = 'manure', amount = 5},
+        {type = 'item', name = 'empty-barrel', amount = 5},
     },
+    main_product = "manure",
 }:add_unlock("ulric")
 
 RECIPE {
@@ -170,10 +182,13 @@ RECIPE {
     energy_required = 60,
     ingredients = {
         {type = 'item', name = 'ulric-food-02', amount = 1},
+        {type = 'item', name = 'water-barrel', amount = 3},
     },
     results = {
         {type = 'item', name = 'manure', amount = 8},
+        {type = 'item', name = 'empty-barrel', amount = 3},
     },
+    main_product = "manure",
 }:add_unlock("ulric")
 
 RECIPE {
@@ -185,10 +200,13 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'ulric-food-02', amount = 1},
         {type = 'item', name = 'salt', amount = 10},
+        {type = 'item', name = 'water-barrel', amount = 5},
     },
     results = {
         {type = 'item', name = 'manure', amount = 10},
+        {type = 'item', name = 'empty-barrel', amount = 5},
     },
+    main_product = "manure",
 }:add_unlock("ulric")
 
 

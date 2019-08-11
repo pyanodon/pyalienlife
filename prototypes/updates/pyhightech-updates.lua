@@ -162,10 +162,13 @@ RECIPE {
         {type = 'item', name = 'ulric-food-01', amount = 1},
         {type = 'item', name = 'salt', amount = 10},
         {type = 'item', name = 'raw-fiber', amount = 5},
+        {type = 'item', name = 'water-barrel', amount = 5},
     },
     results = {
         {type = 'item', name = 'manure', amount = 10},
+        {type = 'item', name = 'empty-barrel', amount = 5},
     },
+    main_product = "manure",
 }:add_unlock("ulric")
 
 RECIPE {
@@ -178,10 +181,13 @@ RECIPE {
         {type = 'item', name = 'ulric-food-02', amount = 1},
         {type = 'item', name = 'salt', amount = 10},
         {type = 'item', name = 'raw-fiber', amount = 5},
+        {type = 'item', name = 'water-barrel', amount = 5},
     },
     results = {
         {type = 'item', name = 'manure', amount = 12},
+        {type = 'item', name = 'empty-barrel', amount = 5},
     },
+    main_product = "manure",
 }:add_unlock("ulric")
 
 RECIPE {
@@ -194,11 +200,14 @@ RECIPE {
         {type = 'item', name = 'mukmoux-food-01', amount = 1},
         {type = 'item', name = 'salt', amount = 10},
         {type = 'item', name = 'raw-fiber', amount = 5},
+        {type = 'item', name = 'water-barrel', amount = 10},
     },
     results = {
         {type = 'item', name = 'manure', amount = 8},
+        {type = 'item', name = 'empty-barrel', amount = 10},
     },
-}:add_unlock("ulric")
+    main_product = "manure",
+}:add_unlock("mukmoux")
 
 RECIPE {
     type = 'recipe',
@@ -210,8 +219,11 @@ RECIPE {
         {type = 'item', name = 'mukmoux-food-02', amount = 1},
         {type = 'item', name = 'salt', amount = 10},
         {type = 'item', name = 'raw-fiber', amount = 5},
+        {type = 'item', name = 'water-barrel', amount = 10},
     },
     results = {
         {type = 'item', name = 'manure', amount = 10},
+        {type = 'item', name = 'empty-barrel', amount = 10},
     },
+    main_product = "manure",
 }:add_unlock("mukmoux")

@@ -17,8 +17,8 @@ RECIPE {
 ITEM {
     type = "item",
     name = "mukmoux-pasture-mk01",
-    icon = "__pycoalprocessing__/graphics/icons/mukmoux-pasture.png",
-    icon_size = 32,
+    icon = "__pyalienlife__/graphics/icons/mukmoux-pasture-mk01.png",
+    icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk01",
     order = "d",
@@ -29,8 +29,8 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "mukmoux-pasture-mk01",
-    icon = "__pycoalprocessing__/graphics/icons/mukmoux-pasture.png",
-    icon_size = 32,
+    icon = "__pyalienlife__/graphics/icons/mukmoux-pasture-mk01.png",
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "mukmoux-pasture-mk01"},
     fast_replaceable_group = "mukmoux-pasture",

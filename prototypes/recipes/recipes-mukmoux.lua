@@ -12,8 +12,9 @@ RECIPE {
         {type = 'item', name = 'alien-sample-03', amount = 2},
         {type = 'item', name = 'cdna', amount = 5},
         {type = 'item', name = 'mukmoux-codex', amount = 1},
-        {type = 'item', name = 'earth-cow-sample', amount = 1},
-        {type = 'fluid', name = 'fetal-serum', amount = 100}, --add alien sample from pyALiens mod here.
+        {type = 'item', name = 'earth-cow-sample', amount = 1}, --add alien sample from pyALiens mod here.
+        {type = 'fluid', name = 'fetal-serum', amount = 100},
+        {type = 'fluid', name = 'artificial-blood', amount = 100},
     },
     results = {
         {type = 'item', name = 'mukmoux', amount = 1},
@@ -63,7 +64,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'tin-plate', amount = 2},
         {type = 'item', name = 'moss', amount = 5},
-        {type = 'item', name = 'tuuphra-seeds', amount = 5},
+        {type = 'item', name = 'tuuphra', amount = 5},
         {type = 'item', name = 'seaweed', amount = 5},
         {type = 'item', name = 'salt', amount = 10},
         {type = 'fluid', name = 'steam', amount = 100},
@@ -85,7 +86,7 @@ RECIPE {
         {type = 'item', name = 'seaweed', amount = 5},
         {type = 'item', name = 'salt', amount = 10},
         {type = 'item', name = 'biomass', amount = 5},
-        {type = 'item', name = 'tuuphra-seeds', amount = 10},
+        {type = 'item', name = 'tuuphra', amount = 10},
         {type = 'fluid', name = 'steam', amount = 100},
     },
     results = {
@@ -104,10 +105,13 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'cage', amount = 1},
         {type = 'item', name = 'mukmoux-food-01', amount = 1},
+        {type = 'item', name = 'water-barrel', amount = 4},
     },
     results = {
         {type = 'item', name = 'caged-mukmoux', amount = 1, probability = 0.5},
+        {type = 'item', name = 'empty-barrel', amount = 4},
     },
+    main_product = "caged-mukmoux",
     subgroup = 'py-alienlife-mukmoux',
     order = 'a',
 }:add_unlock("organic-breeding")
@@ -121,10 +125,13 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'cage', amount = 1},
         {type = 'item', name = 'mukmoux-food-02', amount = 1},
+        {type = 'item', name = 'water-barrel', amount = 4},
     },
     results = {
         {type = 'item', name = 'caged-mukmoux', amount = 1, probability = 0.5},
+        {type = 'item', name = 'empty-barrel', amount = 4},
     },
+    main_product = "caged-mukmoux",
     subgroup = 'py-alienlife-mukmoux',
     order = 'a',
 }:add_unlock("organic-breeding")
@@ -139,10 +146,13 @@ RECIPE {
     energy_required = 100,
     ingredients = {
         {type = 'item', name = 'mukmoux-food-01', amount = 1},
+        {type = 'item', name = 'water-barrel', amount = 3},
     },
     results = {
         {type = 'item', name = 'manure', amount = 6},
+        {type = 'item', name = 'empty-barrel', amount = 3},
     },
+    main_product = "manure",
 }:add_unlock("mukmoux")
 
 RECIPE {
@@ -154,10 +164,13 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'mukmoux-food-01', amount = 1},
         {type = 'item', name = 'salt', amount = 10},
+        {type = 'item', name = 'water-barrel', amount = 5},
     },
     results = {
         {type = 'item', name = 'manure', amount = 6},
+        {type = 'item', name = 'empty-barrel', amount = 5},
     },
+    main_product = "manure",
 }:add_unlock("mukmoux")
 
 RECIPE {
@@ -168,10 +181,13 @@ RECIPE {
     energy_required = 60,
     ingredients = {
         {type = 'item', name = 'mukmoux-food-02', amount = 1},
+        {type = 'item', name = 'water-barrel', amount = 3},
     },
     results = {
         {type = 'item', name = 'manure', amount = 10},
+        {type = 'item', name = 'empty-barrel', amount = 3},
     },
+    main_product = "manure",
 }:add_unlock("mukmoux")
 
 RECIPE {
@@ -183,10 +199,13 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'mukmoux-food-02', amount = 1},
         {type = 'item', name = 'salt', amount = 10},
+        {type = 'item', name = 'water-barrel', amount = 5},
     },
     results = {
         {type = 'item', name = 'manure', amount = 10},
+        {type = 'item', name = 'empty-barrel', amount = 5},
     },
+    main_product = "manure",
 }:add_unlock("mukmoux")
 
 
