@@ -7,9 +7,22 @@ RECIPE {
     ingredients = {
     },
     results = {
-        {type = 'item', name = 'fawogae-spore', amount = 1, probability = 0.3},
+        {type = 'item', name = 'fawogae-spore', amount = 1, probability = 0.4},
     },
 }:add_unlock("mycology-mk01")
+
+RECIPE {
+    type = 'recipe',
+    name = 'navens-spore',
+    category = 'spore',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+    },
+    results = {
+        {type = 'item', name = 'navens-spore', amount = 1, probability = 0.4},
+    },
+}:add_unlock("mycology-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -119,12 +132,29 @@ RECIPE {
     energy_required = 8,
     ingredients = {
         {type = 'item', name = 'retrovirus', amount = 1},
-        {type = 'item', name = 'glass', amount = 2},
+        {type = 'item', name = 'flask', amount = 2},
+        {type = 'item', name = 'cocoon', amount = 1},
     },
     results = {
         {type = 'item', name = 'dna-polymerase', amount = 1},
     },
 }:add_unlock("genetics-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'dna-polymerase-2',
+    category = 'genlab',
+    enabled = false,
+    energy_required = 6,
+    ingredients = {
+        {type = 'item', name = 'retrovirus', amount = 1},
+        {type = 'item', name = 'flask', amount = 2},
+        {type = 'item', name = 'arthurian-egg', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'dna-polymerase', amount = 2},
+    },
+}:add_unlock("genetics-mk03")
 
 RECIPE {
     type = 'recipe',

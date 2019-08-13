@@ -48,6 +48,28 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "navens-spore",
+    icon = "__pyalienlife__/graphics/icons/navens-spore.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "navens",
+    icon = "__pyalienlife__/graphics/icons/navens.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
     name = "wood-seedling",
     icon = "__pyalienlife__/graphics/icons/mip/seedling-1.png",
     icon_size = 64,
@@ -618,6 +640,28 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-arthurian",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "cobalt-fluoride",
+    icon = "__pyalienlife__/graphics/icons/cobalt-fluoride.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "cytostatics",
+    icon = "__pyalienlife__/graphics/icons/cytostatics.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
     order = "h",
     stack_size = 500
 }

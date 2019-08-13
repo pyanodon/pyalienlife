@@ -44,6 +44,7 @@ RECIPE('raw-fiber3'):subgroup_order("py-alienlife-plants", "a"):remove_unlock('b
 RECIPE('raw-fiber2'):subgroup_order("py-alienlife-plants", "a"):add_unlock('botany-mk01'):set_fields {enabled = false}--SUBSTITUIR POR TECH DELA
 RECIPE('raw-fiber4'):subgroup_order("py-alienlife-plants", "a"):add_unlock('botany-mk01'):set_fields {enabled = false}--SUBSTITUIR POR TECH DELA
 RECIPE('dms'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('basic-electronics'):add_unlock('botany-mk03')--SUBSTITUIR POR TECH DELA
+RECIPE('cobalt-fluoride'):replace_ingredient("chromium", "reo")
 
 
 RECIPE('zipir-carcass'):remove_unlock('basic-electronics')
