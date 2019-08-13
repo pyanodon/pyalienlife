@@ -253,3 +253,84 @@ RECIPE {
         {type = 'item', name = 'fertilizer', amount = 5}
     }
 }:add_unlock('biotech-mk01')
+
+RECIPE {
+    type = 'recipe',
+    name = 'flutec-pp6',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'fluid', name = 'decalin', amount = 100},
+        {type = 'item', name = 'cobalt-fluoride', amount = 5},
+    },
+    results = {
+        {type = 'fluid', name = 'flutec-pp6', amount = 100}
+    }
+}:add_unlock('biotech-mk02')
+
+RECIPE {
+    type = 'recipe',
+    name = 'cobalt-fluoride',
+    category = 'mixer',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'fluid', name = 'acidgas', amount = 100},
+        {type = 'fluid', name = 'steam', amount = 200, temperature = 165},
+        {type = 'item', name = 'nexelit-plate', amount = 3},
+        {type = 'item', name = 'chromium', amount = 3},
+    },
+    results = {
+        {type = 'item', name = 'cobalt-fluoride', amount = 3}
+    }
+}:add_unlock('biotech-mk02')
+
+RECIPE {
+    type = 'recipe',
+    name = 'decalin',
+    category = 'chemistry',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'fluid', name = 'aromatics', amount = 100},
+        {type = 'fluid', name = 'hydrogen', amount = 200},
+        {type = 'item', name = 'nexelit-plate', amount = 2},
+        {type = 'item', name = 'titanium-plate', amount = 2},
+    },
+    results = {
+        {type = 'fluid', name = 'decalin', amount = 50}
+    }
+}:add_unlock('biotech-mk02')
+
+RECIPE {
+    type = 'recipe',
+    name = 'flavonoids',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'seaweed', amount = 10},
+        {type = 'item', name = 'navens', amount = 5},
+    },
+    results = {
+        {type = 'fluid', name = 'flavonoids', amount = 30}
+    }
+}:add_unlock('mycology-mk02')
+
+RECIPE {
+    type = 'recipe',
+    name = 'cytostatics',
+    category = 'genlab',
+    enabled = false,
+    energy_required = 6,
+    ingredients = {
+        {type = 'item', name = 'sea-sponge', amount = 1},
+        {type = 'item', name = 'plasmids', amount = 2},
+        {type = 'item', name = 'flask', amount = 3},
+        {type = 'item', name = 'plastic-bar', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'cytostatics', amount = 1}
+    }
+}:add_unlock('genetics-mk02')
