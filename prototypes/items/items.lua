@@ -59,17 +59,6 @@ ITEM {
 
 ITEM {
     type = "item",
-    name = "navens",
-    icon = "__pyalienlife__/graphics/icons/navens.png",
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-items",
-    order = "a",
-    stack_size = 500
-}
-
-ITEM {
-    type = "item",
     name = "wood-seedling",
     icon = "__pyalienlife__/graphics/icons/mip/seedling-1.png",
     icon_size = 64,
@@ -431,7 +420,18 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-codex",
-    order = "b",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "navens-codex",
+    icon = "__pyalienlife__/graphics/icons/navens-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
     stack_size = 10
 }
 
@@ -652,7 +652,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "h",
-    stack_size = 500
+    stack_size = 200
 }
 
 ITEM {
@@ -663,7 +663,18 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 500
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "microcin-j25",
+    icon = "__pyalienlife__/graphics/icons/microcin-j25.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "h",
+    stack_size = 200
 }
 
 ------RULES-----
@@ -671,6 +682,7 @@ ITEM {
 local alien_life_limitations_ulric =
 	{
     "ulric-sex-01",
+    "ulric-sex-01-food",
     "ulric-manure-01",
     "ulric-manure-02",
     "ulric-manure-01-food",
@@ -717,6 +729,14 @@ local alien_life_limitations_ulric =
     "arthurian-egg-02",
     "arthurian-egg-01-mukmoux",
     "arthurian-egg-02-mukmoux",
+    }
+
+    local alien_life_limitations_navens =
+	{
+    "navens-0",
+    "navens-1",
+    "navens-2",
+    "navens-3",
     }
 
 ----MODULES----
@@ -817,6 +837,22 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+ITEM {
+    type = "module",
+    name = "navens",
+    icon = "__pyalienlife__/graphics/icons/navens.png",
+    icon_size = 64,
+	category = "navens",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "a",
+    stack_size = 10,
+	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_navens,
+	limitation_message_key = "Its full"
+}
+
 data:extend(
 {
   {
@@ -842,6 +878,10 @@ data:extend(
   {
     type = "module-category",
     name = "arthurian"
+  },
+  {
+    type = "module-category",
+    name = "navens"
   },
 }
 )

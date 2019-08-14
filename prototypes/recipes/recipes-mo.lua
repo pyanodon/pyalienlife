@@ -3,7 +3,7 @@ RECIPE {
     name = 'fawogae-spore',
     category = 'spore',
     enabled = false,
-    energy_required = 20,
+    energy_required = 15,
     ingredients = {
     },
     results = {
@@ -13,24 +13,11 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'navens-spore',
-    category = 'spore',
-    enabled = false,
-    energy_required = 20,
-    ingredients = {
-    },
-    results = {
-        {type = 'item', name = 'navens-spore', amount = 1, probability = 0.4},
-    },
-}:add_unlock("mycology-mk02")
-
-RECIPE {
-    type = 'recipe',
     name = 'petri-dish-bacteria',
     category = 'micro-mine',
     enabled = true,
     hidden = true,
-    energy_required = 10,
+    energy_required = 15,
     ingredients = {
         {type = 'item', name = 'petri-dish', amount = 1},
     },
@@ -166,7 +153,7 @@ RECIPE {
         {type = 'item', name = 'primers', amount = 1},
         {type = 'item', name = 'dna-polymerase', amount = 1},
         {type = 'item', name = 'plastic-bar', amount = 1},
-        {type = 'fluid', name = 'formamide', amount = 50},
+        {type = 'fluid', name = 'formamide', amount = 150},
     },
     results = {
         {type = 'item', name = 'alien-sample-02', amount = 1},
