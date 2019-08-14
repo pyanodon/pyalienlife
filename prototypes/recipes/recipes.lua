@@ -57,7 +57,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'fluid', name = 'water', amount = 50},
-        {type = 'item', name = 'log', amount = 1},
+        {type = 'item', name = 'log', amount = 2},
     },
     results = {
         {type = 'item', name = 'fungal-substrate', amount = 5},
@@ -332,5 +332,24 @@ RECIPE {
     },
     results = {
         {type = 'item', name = 'cytostatics', amount = 1}
+    }
+}:add_unlock('genetics-mk02')
+
+RECIPE {
+    type = 'recipe',
+    name = 'microcin-j25',
+    category = 'genlab',
+    enabled = false,
+    energy_required = 6,
+    ingredients = {
+        {type = 'item', name = 'sea-sponge', amount = 1},
+        {type = 'item', name = 'cytostatics', amount = 2},
+        {type = 'item', name = 'flask', amount = 3},
+        {type = 'item', name = 'lab-instrument', amount = 2},
+        {type = 'item', name = 'arthurian-egg', amount = 5},
+        {type = 'fluid', name = 'flavonoids', amount = 30}
+    },
+    results = {
+        {type = 'item', name = 'microcin-j25', amount = 1}
     }
 }:add_unlock('genetics-mk02')

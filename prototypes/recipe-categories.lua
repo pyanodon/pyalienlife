@@ -53,6 +53,10 @@ data:extend {
     },
     {
         type = "recipe-category",
+        name = "navens"
+    },
+    {
+        type = "recipe-category",
         name = "arthurian"
     },
 }

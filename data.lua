@@ -22,6 +22,7 @@ require("prototypes/technologies/ralesia")
 require("prototypes/technologies/mukmoux")
 require("prototypes/technologies/tuuphra")
 require("prototypes/technologies/arthurian")
+require("prototypes/technologies/navens")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -43,6 +44,7 @@ require("prototypes/buildings/tuuphra-plantation-mk01")
 require("prototypes/buildings/mukmoux-pasture-mk01")
 require("prototypes/buildings/arthurian-pen-mk01")
 require("prototypes/buildings/data-array")
+require("prototypes/buildings/navens-culture-mk01")
 
 --(( RECIPES ))--
 require('prototypes/items/items')
@@ -57,9 +59,10 @@ require('prototypes/recipes/recipes-ralesia')
 require('prototypes/recipes/recipes-mukmoux')
 require('prototypes/recipes/recipes-tuuphra')
 require('prototypes/recipes/recipes-arthurian')
+require('prototypes/recipes/recipes-navens')
 
 
---(( FLUIDs ))--
+--(( FLUIDS ))--
 require("prototypes/fluids/zogna-bacteria")
 require("prototypes/fluids/blood")
 require("prototypes/fluids/formamide")
