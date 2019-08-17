@@ -36,6 +36,7 @@ RECIPE('bio-sample01'):add_ingredient({type = "item", name = "empty-petri-dish",
 RECIPE('ralesia'):remove_unlock('coal-processing-1')
 RECIPE('ralesia-seeds'):remove_unlock('coal-processing-1'):add_unlock('ralesia'):subgroup_order("py-alienlife-plants", "a"):change_category('solid-separator'):replace_ingredient("ralesia","ralesias")
 RECIPE('chemical-science-pack'):replace_ingredient("advanced-circuit","neuroprocessor")
+RECIPE('filtration-media'):add_ingredient({type = "item", name = "micro-fiber", amount = 2})
 
 
 RECIPE('mukmoux-fat'):remove_unlock('coal-processing-2')

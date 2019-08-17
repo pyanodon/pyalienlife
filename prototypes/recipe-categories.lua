@@ -57,6 +57,10 @@ data:extend {
     },
     {
         type = "recipe-category",
+        name = "yotoi"
+    },
+    {
+        type = "recipe-category",
         name = "arthurian"
     },
 }
