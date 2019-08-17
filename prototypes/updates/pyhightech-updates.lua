@@ -35,7 +35,7 @@ RECIPE('urea'):replace_ingredient("fawogae", "seaweed"):subgroup_order("py-alien
 RECIPE('bonemeal2'):remove_unlock('advanced-electronics'):subgroup_order("py-alienlife-items", "a")
 RECIPE('bonemeal3'):remove_unlock('advanced-electronics'):subgroup_order("py-alienlife-items", "a")
 RECIPE('bonemeal4'):remove_unlock('advanced-electronics'):subgroup_order("py-alienlife-items", "a")
-RECIPE('neuroprocessor'):replace_ingredient("electronic-circuit", "pcb2")
+RECIPE('neuroprocessor'):replace_ingredient("electronic-circuit", "pcb2"):add_ingredient({type = "item", name = "resistor1", amount = 4}):add_ingredient({type = "item", name = "resistor2", amount = 2}):add_ingredient({type = "item", name = "capacitor1", amount = 3}):add_ingredient({type = "item", name = "inductor1", amount = 5}):add_ingredient({type = "item", name = "transistor", amount = 5})
 RECIPE('formamide'):replace_ingredient("nitrogen", "ammonia"):change_category('fbreactor')
 RECIPE('bacteria-2'):subgroup_order("py-alienlife-genetics", "a"):remove_unlock('nano-tech'):add_unlock('microbiology-mk03')
 RECIPE('rendering'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('basic-electronics'):add_unlock('zipir'):change_category('slaughterhouse')
@@ -45,6 +45,12 @@ RECIPE('raw-fiber2'):subgroup_order("py-alienlife-plants", "a"):add_unlock('bota
 RECIPE('raw-fiber4'):subgroup_order("py-alienlife-plants", "a"):add_unlock('botany-mk01'):set_fields {enabled = false}--SUBSTITUIR POR TECH DELA
 RECIPE('dms'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('basic-electronics'):add_unlock('botany-mk03')--SUBSTITUIR POR TECH DELA
 RECIPE('cobalt-fluoride'):replace_ingredient("chromium", "reo")
+RECIPE('micro-fiber'):remove_unlock('nano-tech'):add_unlock('botany-mk02')
+RECIPE('epoxy'):remove_unlock('advanced-electronics'):add_unlock('basic-electronics')
+RECIPE('bisphenol-a'):remove_unlock('advanced-electronics'):add_unlock('basic-electronics')
+RECIPE('ech'):remove_unlock('advanced-electronics'):add_unlock('basic-electronics')
+RECIPE('alien-sample-02'):add_ingredient({type = "item", name = "micro-fiber", amount = 5})
+RECIPE('resveratrol'):change_category('pulp')
 
 
 RECIPE('zipir-carcass'):remove_unlock('basic-electronics')

@@ -353,3 +353,22 @@ RECIPE {
         {type = 'item', name = 'microcin-j25', amount = 1}
     }
 }:add_unlock('genetics-mk02')
+
+RECIPE {
+    type = 'recipe',
+    name = 'resveratrol',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'yotoi-fruit', amount = 10},
+        {type = 'item', name = 'nexelit-plate', amount = 2},
+        {type = 'item', name = 'chromium', amount = 1},
+        {type = 'item', name = 'flask', amount = 1},
+        {type = 'item', name = 'moss', amount = 15},
+        {type = 'fluid', name = 'organic-solvent', amount = 70}
+    },
+    results = {
+        {type = 'item', name = 'resveratrol', amount = 1}
+    }
+}:add_unlock('genetics-mk02')

@@ -151,6 +151,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'primers', amount = 1},
+        {type = 'item', name = 'alien-sample01', amount = 1},
         {type = 'item', name = 'dna-polymerase', amount = 1},
         {type = 'item', name = 'plastic-bar', amount = 1},
         {type = 'fluid', name = 'formamide', amount = 150},

@@ -437,6 +437,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "yotoi-codex",
+    icon = "__pyalienlife__/graphics/icons/yotoi-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
     name = "sea-sponge-codex",
     icon = "__pyalienlife__/graphics/icons/sea-sponge-codex.png",
 	icon_size = 64,
@@ -516,6 +527,17 @@ ITEM {
     type = "item",
     name = "earth-flower-sample",
     icon = "__pyalienlife__/graphics/icons/earth-flower-sample.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-samples",
+    order = "a",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "earth-tropical-tree-sample",
+    icon = "__pyalienlife__/graphics/icons/earth-tropical-tree-sample.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-samples",
@@ -677,6 +699,39 @@ ITEM {
     stack_size = 200
 }
 
+ITEM {
+    type = "item",
+    name = "resveratrol",
+    icon = "__pyalienlife__/graphics/icons/resveratrol.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "h",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "yotoi-fruit",
+    icon = "__pyalienlife__/graphics/icons/yotoi-fruit.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "h",
+    stack_size = 400
+}
+
+ITEM {
+    type = "item",
+    name = "yotoi-seeds",
+    icon = "__pyalienlife__/graphics/icons/yotoi-seeds.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "h",
+    stack_size = 100
+}
+
 ------RULES-----
 
 local alien_life_limitations_ulric =
@@ -737,6 +792,15 @@ local alien_life_limitations_ulric =
     "navens-1",
     "navens-2",
     "navens-3",
+    }
+
+    local alien_life_limitations_yotoi =
+	{
+    "yotoi-0",
+    "yotoi-1",
+    "yotoi-fruit-0",
+    "yotoi-fruit-1",
+    "yotoi-fruit-2",
     }
 
 ----MODULES----
@@ -853,6 +917,22 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+ITEM {
+    type = "module",
+    name = "yotoi",
+    icon = "__pyalienlife__/graphics/icons/yotoi.png",
+    icon_size = 64,
+	category = "yotoi",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "a",
+    stack_size = 10,
+	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_yotoi,
+	limitation_message_key = "Its full"
+}
+
 data:extend(
 {
   {
@@ -882,6 +962,10 @@ data:extend(
   {
     type = "module-category",
     name = "navens"
+  },
+  {
+    type = "module-category",
+    name = "yotoi"
   },
 }
 )
