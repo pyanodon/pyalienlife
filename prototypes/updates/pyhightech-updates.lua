@@ -1,3 +1,5 @@
+local fun = require("prototypes/functions/functions")
+
 --TECHNOLOGY--
 TECHNOLOGY('nano-tech'):add_prereq('microbiology-mk03')
 
@@ -51,6 +53,8 @@ RECIPE('bisphenol-a'):remove_unlock('advanced-electronics'):add_unlock('basic-el
 RECIPE('ech'):remove_unlock('advanced-electronics'):add_unlock('basic-electronics')
 RECIPE('alien-sample-02'):add_ingredient({type = "item", name = "micro-fiber", amount = 5})
 RECIPE('resveratrol'):change_category('pulp')
+RECIPE('dhilmos-pool-mk01'):replace_ingredient("glass", "phosphate-glass"):replace_ingredient("plastic-bar", "biopolymer"):add_ingredient({type = "item", name = "aerogel", amount = 5})
+RECIPE('dhilmos-codex'):replace_ingredient("glass", "phosphate-glass")
 
 
 RECIPE('zipir-carcass'):remove_unlock('basic-electronics')
@@ -63,6 +67,8 @@ RECIPE('mukmoux-fat2'):remove_unlock('advanced-electronics')
 RECIPE('mukmoux-fat3'):remove_unlock('advanced-electronics')
 RECIPE('fertilizer'):remove_unlock('basic-electronics')
 
+
+fun.results_replacer("dhilmos-sex-01", "dirty-water", "waste-water")
 
 ----EXCLUSIVE RECIPES----
 

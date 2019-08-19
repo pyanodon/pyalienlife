@@ -87,6 +87,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-dhilmos",
+        group = "py-alienlife",
+        order = "e-d"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-plants",
         group = "py-alienlife",
         order = "f"

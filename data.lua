@@ -24,6 +24,8 @@ require("prototypes/technologies/tuuphra")
 require("prototypes/technologies/arthurian")
 require("prototypes/technologies/navens")
 require("prototypes/technologies/yotoi")
+require("prototypes/technologies/genetic-design")
+require("prototypes/technologies/dhilmos")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -47,6 +49,7 @@ require("prototypes/buildings/arthurian-pen-mk01")
 require("prototypes/buildings/data-array")
 require("prototypes/buildings/navens-culture-mk01")
 require("prototypes/buildings/yotoi-aloe-orchard-mk01")
+require("prototypes/buildings/dhilmos-pool-mk01")
 
 --(( RECIPES ))--
 require('prototypes/items/items')
@@ -63,6 +66,7 @@ require('prototypes/recipes/recipes-tuuphra')
 require('prototypes/recipes/recipes-arthurian')
 require('prototypes/recipes/recipes-navens')
 require('prototypes/recipes/recipes-yotoi')
+require('prototypes/recipes/recipes-dhilmos')
 
 
 --(( FLUIDS ))--
@@ -74,3 +78,4 @@ require("prototypes/fluids/artificial-blood")
 require("prototypes/fluids/flutec-pp6")
 require("prototypes/fluids/decalin")
 require("prototypes/fluids/flavonoids")
+require("prototypes/fluids/arthropod-blood")
