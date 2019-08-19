@@ -46,7 +46,7 @@ TECHNOLOGY {
         ingredients = {
             {'automation-science-pack', 4},
             {'logistic-science-pack', 3},
-            {'utility-science-pack', 2},
+            {'chemical-science-pack', 2},
             {'py-science-pack', 1},
             
         },

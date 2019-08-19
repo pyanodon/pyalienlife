@@ -41,8 +41,10 @@ ENTITY {
     collision_box = {{-3.9, -3.9}, {3.9, 3.9}},
     selection_box = {{-4.0, -4.0}, {4.0, 4.0}},
     module_specification = {
-        module_slots = 6
+        module_slots = 6,
     },
+    draw_entity_info_icon_background = false,
+    match_animation_speed_to_activity = false,
     allowed_effects = {"speed"},
     crafting_categories = {"ulric"},
     crafting_speed = 0.01,

@@ -61,6 +61,10 @@ data:extend {
     },
     {
         type = "recipe-category",
+        name = "dhilmos"
+    },
+    {
+        type = "recipe-category",
         name = "arthurian"
     },
 }

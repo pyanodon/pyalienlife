@@ -297,6 +297,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "chitin",
+    icon = "__pyalienlife__/graphics/icons/chitin.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
     name = "bones",
     icon = "__pyalienlife__/graphics/icons/bone.png",
 	icon_size = 32,
@@ -439,6 +450,17 @@ ITEM {
     type = "item",
     name = "yotoi-codex",
     icon = "__pyalienlife__/graphics/icons/yotoi-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "dhilmos-codex",
+    icon = "__pyalienlife__/graphics/icons/dhilmos-codex.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-codex",
@@ -803,6 +825,11 @@ local alien_life_limitations_ulric =
     "yotoi-fruit-2",
     }
 
+    local alien_life_limitations_dhilmos =
+	{
+    "dhilmos-sex-01",
+    }
+
 ----MODULES----
 
 ITEM {
@@ -933,6 +960,23 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+ITEM {
+    type = "module",
+    name = "dhilmos",
+    icon = "__pyalienlife__/graphics/icons/dhilmo.png",
+    icon_size = 64,
+	category = "dhilmos",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "a",
+    stack_size = 10,
+	effect = { speed = {bonus = 15}},
+	limitation = alien_life_limitations_dhilmos,
+	limitation_message_key = "Its full"
+}
+
+
 data:extend(
 {
   {
@@ -966,6 +1010,10 @@ data:extend(
   {
     type = "module-category",
     name = "yotoi"
+  },
+  {
+    type = "module-category",
+    name = "dhilmos"
   },
 }
 )

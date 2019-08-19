@@ -160,3 +160,24 @@ RECIPE {
         {type = 'item', name = 'alien-sample-02', amount = 1},
     },
 }:add_unlock("genetics-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'alien-sample-03',
+    category = 'genlab',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'primers', amount = 2},
+        {type = 'item', name = 'alien-sample01', amount = 2},
+        {type = 'item', name = 'alien-sample-02', amount = 1},
+        {type = 'item', name = 'dna-polymerase', amount = 2},
+        {type = 'item', name = 'plastic-bar', amount = 5},
+        {type = 'item', name = 'flask', amount = 2},
+        {type = 'fluid', name = 'formamide', amount = 200},
+        {type = 'item', name = 'arthurian-egg', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'alien-sample-03', amount = 1},
+    },
+}:add_unlock("genetics-mk03")
