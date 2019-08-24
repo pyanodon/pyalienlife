@@ -404,6 +404,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "gh",
+    icon = "__pyalienlife__/graphics/icons/gh.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "caged-ulric",
     icon = "__pyalienlife__/graphics/icons/caged-ulric.png",
 	icon_size = 64,
@@ -664,6 +675,28 @@ ITEM {
     subgroup = "py-alienlife-items",
     order = "h",
     stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "dhilmos-food-01",
+    icon = "__pyalienlife__/graphics/icons/dhilmos-food-01.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "dhilmos-food-02",
+    icon = "__pyalienlife__/graphics/icons/dhilmos-food-02.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 100
 }
 
 ITEM {
@@ -930,7 +963,11 @@ local alien_life_limitations_ulric =
     local alien_life_limitations_dhilmos =
 	{
     "dhilmos-sex-01",
+    "dhilmos-sex-food-01",
+    "dhilmos-sex-food-02",
     "dhilmos-sex-assisted-01",
+    "dhilmos-sex-assisted-02",
+    "dhilmos-sex-assisted-03",
     }
 
     local alien_life_limitations_scrondrix =

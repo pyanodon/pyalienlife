@@ -39,7 +39,7 @@ RECIPE('bonemeal3'):remove_unlock('advanced-electronics'):subgroup_order("py-ali
 RECIPE('bonemeal4'):remove_unlock('advanced-electronics'):subgroup_order("py-alienlife-items", "a")
 RECIPE('neuroprocessor'):replace_ingredient("electronic-circuit", "pcb2"):add_ingredient({type = "item", name = "resistor1", amount = 4}):add_ingredient({type = "item", name = "resistor2", amount = 2}):add_ingredient({type = "item", name = "capacitor1", amount = 3}):add_ingredient({type = "item", name = "inductor1", amount = 5}):add_ingredient({type = "item", name = "transistor", amount = 5})
 RECIPE('formamide'):replace_ingredient("nitrogen", "ammonia"):change_category('fbreactor')
-RECIPE('bacteria-2'):subgroup_order("py-alienlife-genetics", "a"):remove_unlock('nano-tech'):add_unlock('microbiology-mk03')
+RECIPE('bacteria-2'):subgroup_order("py-alienlife-genetics", "a"):remove_unlock('nano-tech'):add_unlock('microbiology-mk03'):add_ingredient({type = "item", name = "petri-dish", amount = 3}):add_ingredient({type = "item", name = "nexelit-plate", amount = 2}):add_ingredient({type = "item", name = "flask", amount = 5}):add_ingredient({type = "item", name = "chitin", amount = 5})
 RECIPE('rendering'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('basic-electronics'):add_unlock('zipir'):change_category('slaughterhouse')
 RECIPE('raw-fiber'):subgroup_order("py-alienlife-plants", "a"):remove_unlock('basic-electronics'):add_unlock('botany-mk01') --SUBSTITUIR POR TECH DELA
 RECIPE('raw-fiber3'):subgroup_order("py-alienlife-plants", "a"):remove_unlock('basic-electronics'):add_unlock('botany-mk02')--SUBSTITUIR POR TECH DELA
@@ -55,6 +55,9 @@ RECIPE('alien-sample-02'):add_ingredient({type = "item", name = "micro-fiber", a
 RECIPE('resveratrol'):change_category('pulp')
 RECIPE('dhilmos-pool-mk01'):replace_ingredient("glass", "phosphate-glass"):replace_ingredient("plastic-bar", "biopolymer"):add_ingredient({type = "item", name = "aerogel", amount = 5})
 RECIPE('dhilmos-codex'):replace_ingredient("glass", "phosphate-glass")
+RECIPE('fertilizer-1'):change_category('fbreator')
+RECIPE('fertilizer-3'):change_category('fbreator')
+RECIPE('fertilizer-4'):change_category('fbreator')
 
 
 RECIPE('zipir-carcass'):remove_unlock('basic-electronics')

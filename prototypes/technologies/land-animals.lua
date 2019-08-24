@@ -43,12 +43,11 @@ TECHNOLOGY {
     prerequisites = {"land-animals-mk02","botany-mk03"},
     effects = {},
     unit = {
-        count = 100,
+        count = 200,
         ingredients = {
             {'automation-science-pack', 4},
             {'logistic-science-pack', 3},
             {'chemical-science-pack', 2},
-            {'production-science-pack', 1},
             {'py-science-pack', 4},
         },
         time = 45

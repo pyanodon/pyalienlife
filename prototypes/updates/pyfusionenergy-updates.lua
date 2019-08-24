@@ -13,8 +13,12 @@ RECIPE('phytoplankton'):remove_unlock('vanadium-processing'):add_unlock('microbi
 RECIPE('log8'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a"):remove_unlock('vanadium-processing'):add_unlock('botany-mk02')
 RECIPE('log7'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a"):remove_unlock('vanadium-processing'):add_unlock('botany-mk02')
 RECIPE('zogna-bacteria'):add_ingredient({type = "fluid", name = "pressured-air", amount = 50})
-RECIPE('bacteria-1'):remove_unlock('helium-processing'):add_unlock('microbiology-mk02'):subgroup_order('py-alienlife-genetics', 'b')
+RECIPE('bacteria-1'):remove_unlock('helium-processing'):add_unlock('microbiology-mk02'):subgroup_order('py-alienlife-genetics', 'b'):add_ingredient({type = "item", name = "petri-dish", amount = 3})
+RECIPE('serine'):remove_unlock('helium-processing'):add_unlock('land-animals-mk03'):subgroup_order('py-alienlife-items', 'b'):change_category('bio-reactor')
+
 
 RECIPE('xyhiphoe-blood'):remove_unlock('vanadium-processing')
+RECIPE('kmauts-enclosure'):remove_unlock('vanadium-processing') --substituir por versao pyal
+RECIPE('kmauts-ration'):remove_unlock('vanadium-processing')  -- unlock na food 3
 
 ----EXCLUSIVE RECIPES----
