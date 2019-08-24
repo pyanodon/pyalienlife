@@ -26,6 +26,8 @@ require("prototypes/technologies/navens")
 require("prototypes/technologies/yotoi")
 require("prototypes/technologies/genetic-design")
 require("prototypes/technologies/dhilmos")
+require("prototypes/technologies/assisted-embryology")
+require("prototypes/technologies/scrondrix")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -50,6 +52,7 @@ require("prototypes/buildings/data-array")
 require("prototypes/buildings/navens-culture-mk01")
 require("prototypes/buildings/yotoi-aloe-orchard-mk01")
 require("prototypes/buildings/dhilmos-pool-mk01")
+require("prototypes/buildings/scrondrix-pen-mk01")
 
 --(( RECIPES ))--
 require('prototypes/items/items')
@@ -67,6 +70,7 @@ require('prototypes/recipes/recipes-arthurian')
 require('prototypes/recipes/recipes-navens')
 require('prototypes/recipes/recipes-yotoi')
 require('prototypes/recipes/recipes-dhilmos')
+require('prototypes/recipes/recipes-scrondrix')
 
 
 --(( FLUIDS ))--

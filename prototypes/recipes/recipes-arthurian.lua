@@ -29,9 +29,9 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'glass', amount = 4},
-        {type = 'item', name = 'small-lamp', amount = 5},
-        {type = 'item', name = 'electronic-circuit', amount = 50},
-        {type = 'item', name = 'tinned-cable', amount = 20},
+        {type = 'item', name = 'small-lamp', amount = 4},
+        {type = 'item', name = 'electronic-circuit', amount = 10},
+        {type = 'item', name = 'tinned-cable', amount = 10},
     },
     results = {
         {type = 'item', name = 'arthurian-codex', amount = 1},
@@ -43,10 +43,10 @@ RECIPE {
     name = 'earth-lizard-sample',
     category = 'data-array',
     enabled = false,
-    energy_required = 350,
+    energy_required = 30,
     ingredients = {
         {type = 'item', name = 'steel-chest', amount = 1},
-        {type = 'item', name = 'py-science-pack', amount = 100},
+        {type = 'item', name = 'py-science-pack', amount = 5},
         {type = 'item', name = 'arthurian-codex', amount = 1},
     },
     results = {
@@ -128,7 +128,7 @@ RECIPE {
         {type = 'item', name = 'water-barrel', amount = 5},
     },
     results = {
-        {type = 'item', name = 'arthurian-egg', amount = 6},
+        {type = 'item', name = 'arthurian-egg', amount = 4},
         {type = 'item', name = 'empty-barrel', amount = 5},
     },
     main_product = "arthurian-egg",
@@ -147,7 +147,7 @@ RECIPE {
         {type = 'item', name = 'water-barrel', amount = 3},
     },
     results = {
-        {type = 'item', name = 'arthurian-egg', amount = 10},
+        {type = 'item', name = 'arthurian-egg', amount = 4},
         {type = 'item', name = 'empty-barrel', amount = 3},
     },
     main_product = "arthurian-egg",
@@ -158,7 +158,7 @@ RECIPE {
     name = 'arthurian-egg-02-mukmoux',
     category = 'arthurian',
     enabled = false,
-    energy_required = 50,
+    energy_required = 40,
     ingredients = {
         {type = 'item', name = 'caged-mukmoux', amount = 1},
         {type = 'item', name = 'cocoon', amount = 1},
@@ -167,11 +167,55 @@ RECIPE {
         {type = 'item', name = 'water-barrel', amount = 5},
     },
     results = {
-        {type = 'item', name = 'arthurian-egg', amount = 10},
+        {type = 'item', name = 'arthurian-egg', amount = 4},
         {type = 'item', name = 'empty-barrel', amount = 5},
     },
     main_product = "arthurian-egg",
 }:add_unlock("arthurian")
+
+---growing---
+
+RECIPE {
+    type = 'recipe',
+    name = 'arthurian-grow-01',
+    category = 'incubator',
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'arthurian-egg', amount = 1},
+        {type = 'item', name = 'meat', amount = 4},
+        {type = 'fluid', name = 'water', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'arthurian-pup', amount = 1},
+    },
+    main_product = "arthurian-pup",
+    subgroup = 'py-alienlife-arthurian',
+    order = 'a',
+}:add_unlock("assisted-embryology")
+
+---maturing---
+
+RECIPE {
+    type = 'recipe',
+    name = 'arthurian-mature-01',
+    category = 'creature-chamber',
+    enabled = false,
+    energy_required = 70,
+    ingredients = {
+        {type = 'item', name = 'arthurian-pup', amount = 1},
+        {type = 'item', name = 'arthurian-codex', amount = 1},
+        {type = 'item', name = 'earth-lizard-sample', amount = 1},
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'arthurian', amount = 1},
+    },
+    main_product = "arthurian",
+    subgroup = 'py-alienlife-arthurian',
+    order = 'a',
+}:add_unlock("assisted-embryology")
+
 
 
 ----PROCESSING----

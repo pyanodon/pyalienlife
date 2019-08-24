@@ -1,10 +1,10 @@
 TECHNOLOGY {
     type = "technology",
-    name = "dhilmos",
-    icon = "__pyalienlife__/graphics/technology/dhilmos.png",
+    name = "scrondrix",
+    icon = "__pyalienlife__/graphics/technology/scrondrix.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"water-invertebrates-mk03","genetics-mk03","genetic-design"},
+    prerequisites = {"land-animals-mk03","genetics-mk03","genetic-design"},
     effects = {},
     unit = {
         count = 100,
