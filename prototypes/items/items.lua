@@ -209,6 +209,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "mukmoux-calf",
+    icon = "__pyalienlife__/graphics/icons/mukmoux-calf.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-mukmoux",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "caged-arthurian",
     icon = "__pyalienlife__/graphics/icons/caged-arthurian.png",
     icon_size = 64,
@@ -690,6 +701,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "arthurian-pup",
+    icon = "__pyalienlife__/graphics/icons/arthurian-pup.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arthurian",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
     name = "cobalt-fluoride",
     icon = "__pyalienlife__/graphics/icons/cobalt-fluoride.png",
 	icon_size = 64,
@@ -754,6 +776,83 @@ ITEM {
     stack_size = 100
 }
 
+ITEM {
+    type = "item",
+    name = "dhilmos-egg",
+    icon = "__pyalienlife__/graphics/icons/dhilmos-egg.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-dhilmos",
+    order = "h",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "dhilmos-pup",
+    icon = "__pyalienlife__/graphics/icons/dhilmo-pup.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-dhilmos",
+    order = "h",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "scrondrix-pup",
+    icon = "__pyalienlife__/graphics/icons/scrondrix-pup.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-scrondrix",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "caged-scrondrix",
+    icon = "__pyalienlife__/graphics/icons/caged-scrondrix.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-scrondrix",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "pineal-gland",
+    icon = "__pyalienlife__/graphics/icons/pineal-gland.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-scrondrix",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "scrondrix-codex",
+    icon = "__pyalienlife__/graphics/icons/scrondrix-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "earth-roadrunner-sample",
+    icon = "__pyalienlife__/graphics/icons/earth-roadrunner-sample.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-samples",
+    order = "a",
+    stack_size = 10
+}
+
 ------RULES-----
 
 local alien_life_limitations_ulric =
@@ -784,6 +883,9 @@ local alien_life_limitations_ulric =
     local alien_life_limitations_mukmoux =
 	{
     "mukmoux-sex-01",
+    "mukmoux-sex-01-food",
+    "mukmoux-sex-calf-01",
+    "mukmoux-sex-calf-02",
     "mukmoux-manure-01",
     "mukmoux-manure-02",
     "mukmoux-manure-01-food",
@@ -828,6 +930,22 @@ local alien_life_limitations_ulric =
     local alien_life_limitations_dhilmos =
 	{
     "dhilmos-sex-01",
+    "dhilmos-sex-assisted-01",
+    }
+
+    local alien_life_limitations_scrondrix =
+	{
+    "scrondrix-sex-01",
+    "scrondrix-sex-01-mukmoux",
+    "scrondrix-sex-pup-01",
+    "scrondrix-sex-pup-02",
+    "scrondrix-manure-00",
+    "scrondrix-manure-01",
+    "scrondrix-manure-02",
+    "scrondrix-manure-01-food",
+    "scrondrix-manure-02-food",
+    "scrondrix-manure-03",
+    "scrondrix-manure-03-food",
     }
 
 ----MODULES----
@@ -976,6 +1094,21 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+ITEM {
+    type = "module",
+    name = "scrondrix",
+    icon = "__pyalienlife__/graphics/icons/scrondrix.png",
+    icon_size = 64,
+	category = "scrondrix",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "a",
+    stack_size = 10,
+	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_scrondrix,
+	limitation_message_key = "Its full"
+}
 
 data:extend(
 {
@@ -1014,6 +1147,10 @@ data:extend(
   {
     type = "module-category",
     name = "dhilmos"
+  },
+  {
+    type = "module-category",
+    name = "scrondrix"
   },
 }
 )

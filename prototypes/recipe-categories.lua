@@ -67,4 +67,8 @@ data:extend {
         type = "recipe-category",
         name = "arthurian"
     },
+    {
+        type = "recipe-category",
+        name = "scrondrix"
+    },
 }

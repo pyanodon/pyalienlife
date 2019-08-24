@@ -159,9 +159,9 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "item", name = "yotoi", amount = 2},
+        {type = "item", name = "yotoi-fruit", amount = 2},
     },
     results = {
-        {type = "item", name = "yotoi-seeds", amount = 8}
+        {type = "item", name = "yotoi-seeds", amount = 5}
     },
 }:add_unlock("yotoi")

@@ -29,9 +29,9 @@ RECIPE {
     energy_required = 5,
     ingredients = {
         {type = 'item', name = 'glass', amount = 2},
-        {type = 'item', name = 'small-lamp', amount = 5},
-        {type = 'item', name = 'electronic-circuit', amount = 50},
-        {type = 'item', name = 'tinned-cable', amount = 20},
+        {type = 'item', name = 'small-lamp', amount = 2},
+        {type = 'item', name = 'electronic-circuit', amount = 10},
+        {type = 'item', name = 'tinned-cable', amount = 10},
     },
     results = {
         {type = 'item', name = 'mukmoux-codex', amount = 1},
@@ -43,10 +43,10 @@ RECIPE {
     name = 'earth-cow-sample',
     category = 'data-array',
     enabled = false,
-    energy_required = 300,
+    energy_required = 25,
     ingredients = {
         {type = 'item', name = 'steel-chest', amount = 1},
-        {type = 'item', name = 'logistic-science-pack', amount = 100},
+        {type = 'item', name = 'logistic-science-pack', amount = 5},
         {type = 'item', name = 'mukmoux-codex', amount = 1},
     },
     results = {
@@ -135,6 +135,69 @@ RECIPE {
     subgroup = 'py-alienlife-mukmoux',
     order = 'a',
 }:add_unlock("organic-breeding")
+
+---calf maker---
+
+RECIPE {
+    type = 'recipe',
+    name = 'mukmoux-sex-calf-01',
+    category = 'mukmoux',
+    enabled = false,
+    energy_required = 70,
+    ingredients = {
+        {type = 'item', name = 'mukmoux-food-01', amount = 1},
+        {type = 'item', name = 'water-barrel', amount = 4},
+    },
+    results = {
+        {type = 'item', name = 'mukmoux-calf', amount = 1},
+        {type = 'item', name = 'empty-barrel', amount = 4},
+    },
+    main_product = "mukmoux-calf",
+    subgroup = 'py-alienlife-mukmoux',
+    order = 'a',
+}:add_unlock("assisted-embryology")
+
+RECIPE {
+    type = 'recipe',
+    name = 'mukmoux-sex-calf-02',
+    category = 'mukmoux',
+    enabled = false,
+    energy_required = 60,
+    ingredients = {
+        {type = 'item', name = 'mukmoux-food-02', amount = 1},
+        {type = 'item', name = 'water-barrel', amount = 4},
+    },
+    results = {
+        {type = 'item', name = 'mukmoux-calf', amount = 2},
+        {type = 'item', name = 'empty-barrel', amount = 4},
+    },
+    main_product = "mukmoux-calf",
+    subgroup = 'py-alienlife-mukmoux',
+    order = 'a',
+}:add_unlock("assisted-embryology")
+
+---maturing---
+
+RECIPE {
+    type = 'recipe',
+    name = 'mukmoux-mature-01',
+    category = 'creature-chamber',
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'mukmoux-calf', amount = 1},
+        {type = 'item', name = 'cage', amount = 1},
+        {type = 'item', name = 'mukmoux-codex', amount = 1},
+        {type = 'item', name = 'earth-cow-sample', amount = 1},
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'caged-mukmoux', amount = 1},
+    },
+    main_product = "caged-mukmoux",
+    subgroup = 'py-alienlife-mukmoux',
+    order = 'a',
+}:add_unlock("assisted-embryology")
 
 ----adverse products----
 
