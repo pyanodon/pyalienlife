@@ -338,7 +338,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'microcin-j25',
-    category = 'genlab',
+    category = 'bio-reactor',
     enabled = false,
     energy_required = 6,
     ingredients = {
@@ -372,3 +372,23 @@ RECIPE {
         {type = 'item', name = 'resveratrol', amount = 1}
     }
 }:add_unlock('genetics-mk02')
+
+RECIPE {
+    type = 'recipe',
+    name = 'gh',
+    category = 'bio-reactor',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'plasmids', amount = 2},
+        {type = 'item', name = 'cdna', amount = 1},
+        {type = 'item', name = 'petri-dish', amount = 5},
+        {type = 'item', name = 'flask', amount = 3},
+        {type = 'item', name = 'lab-instrument', amount = 1},
+        {type = 'fluid', name = 'bacteria-1', amount = 50},
+        {type = 'item', name = 'pineal-gland', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'gh', amount = 1}
+    }
+}:add_unlock('growth-hormone')

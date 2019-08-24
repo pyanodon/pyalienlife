@@ -28,6 +28,8 @@ require("prototypes/technologies/genetic-design")
 require("prototypes/technologies/dhilmos")
 require("prototypes/technologies/assisted-embryology")
 require("prototypes/technologies/scrondrix")
+require("prototypes/technologies/pharmagenomics")
+require("prototypes/technologies/growth-hormone")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
