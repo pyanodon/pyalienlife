@@ -56,6 +56,9 @@ require("prototypes/buildings/yotoi-aloe-orchard-mk01")
 require("prototypes/buildings/dhilmos-pool-mk01")
 require("prototypes/buildings/scrondrix-pen-mk01")
 
+--test chest--
+require("prototypes/buildings/test-filtered-chest-mk01")
+
 --(( RECIPES ))--
 require('prototypes/items/items')
 require('prototypes/recipes/recipes')
@@ -73,6 +76,7 @@ require('prototypes/recipes/recipes-navens')
 require('prototypes/recipes/recipes-yotoi')
 require('prototypes/recipes/recipes-dhilmos')
 require('prototypes/recipes/recipes-scrondrix')
+require('prototypes/recipes/recipes-auto-render')
 
 
 --(( FLUIDS ))--
