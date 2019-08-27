@@ -71,4 +71,8 @@ data:extend {
         type = "recipe-category",
         name = "scrondrix"
     },
+    {
+        type = "recipe-category",
+        name = "rennea"
+    },
 }

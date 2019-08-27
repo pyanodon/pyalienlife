@@ -481,6 +481,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "rennea-codex",
+    icon = "__pyalienlife__/graphics/icons/rennea-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
     name = "dhilmos-codex",
     icon = "__pyalienlife__/graphics/icons/dhilmos-codex.png",
 	icon_size = 64,
@@ -560,6 +571,17 @@ ITEM {
     type = "item",
     name = "earth-horse-sample",
     icon = "__pyalienlife__/graphics/icons/earth-horse-sample.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-samples",
+    order = "a",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "earth-sunflower-sample",
+    icon = "__pyalienlife__/graphics/icons/earth-sunflower-sample.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-samples",
@@ -886,6 +908,17 @@ ITEM {
     stack_size = 10
 }
 
+ITEM {
+    type = "item",
+    name = "rennea-seeds",
+    icon = "__pyalienlife__/graphics/icons/rennea-seeds.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "h",
+    stack_size = 400
+}
+
 ------RULES-----
 
 local alien_life_limitations_ulric =
@@ -983,6 +1016,14 @@ local alien_life_limitations_ulric =
     "scrondrix-manure-02-food",
     "scrondrix-manure-03",
     "scrondrix-manure-03-food",
+    }
+
+    local alien_life_limitations_rennea =
+	{
+    "rennea-0",
+    "rennea-1",
+    "rennea-2",
+    "rennea-3",
     }
 
 ----MODULES----
@@ -1147,6 +1188,22 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+ITEM {
+    type = "module",
+    name = "rennea",
+    icon = "__pyalienlife__/graphics/icons/rennea.png",
+    icon_size = 64,
+	category = "rennea",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "a",
+    stack_size = 10,
+	effect = { speed = {bonus = 0.3}},
+	limitation = alien_life_limitations_rennea,
+	limitation_message_key = "Its full"
+}
+
 data:extend(
 {
   {
@@ -1180,6 +1237,10 @@ data:extend(
   {
     type = "module-category",
     name = "yotoi"
+  },
+  {
+    type = "module-category",
+    name = "rennea"
   },
   {
     type = "module-category",
