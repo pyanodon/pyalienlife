@@ -192,7 +192,7 @@ RECIPE {
         {type = 'item', name = 'nexelit-matrix', amount = 5},
         {type = 'item', name = 'brain', amount = 1},
         {type = 'item', name = 'agar', amount = 3},
-        {type = 'item', name = 'nickel-plate', amount = 4},
+        {type = 'item', name = 'nickel-plate', amount = 5},
         {type = 'item', name = 'electronic-circuit', amount = 1},
         {type = 'fluid', name = 'vacuum', amount = 50},
     },

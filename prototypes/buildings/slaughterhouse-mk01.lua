@@ -31,7 +31,7 @@ ITEM {
 }
 
 ENTITY {
-    type = "assembling-machine",
+    type = "furnace",
     name = "slaughterhouse-mk01",
     icon = "__pyalienlife__/graphics/icons/slaughterhouse-mk01.png",
 	icon_size = 32,
@@ -50,6 +50,8 @@ ENTITY {
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"slaughterhouse"},
+    source_inventory_size = 1,
+    result_inventory_size = 6,
     crafting_speed = 1,
     energy_source = {
         type = "electric",
@@ -165,14 +167,6 @@ ENTITY {
             pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             base_area = 10,
             base_level = -1,
-            pipe_connections = {{type = "input", position = {2.0, 6.0}}}
-        },
-        {
-            production_type = "input",
-            pipe_covers = DATA.Pipes.covers(false, true, true, true),
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            base_area = 10,
-            base_level = -1,
             pipe_connections = {{type = "input", position = {-2.0, 6.0}}}
         },
         {
@@ -182,7 +176,7 @@ ENTITY {
             base_level = 1,
             pipe_connections = {{type = "output", position = {0.0, -6.0}}}
         },
-        off_when_no_fluid_recipe = true
+        off_when_no_fluid_recipe = false
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {

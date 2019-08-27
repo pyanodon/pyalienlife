@@ -60,7 +60,7 @@ RECIPE {
     name = "ralesia-0",
     category = "ralesia",
     enabled = false,
-    energy_required = 80,
+    energy_required = 100,
     ingredients = {
         {type = "item", name = "ralesia-seeds", amount = 5},
         {type = "fluid", name = "water", amount = 300},

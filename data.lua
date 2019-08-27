@@ -30,6 +30,7 @@ require("prototypes/technologies/assisted-embryology")
 require("prototypes/technologies/scrondrix")
 require("prototypes/technologies/pharmagenomics")
 require("prototypes/technologies/growth-hormone")
+require("prototypes/technologies/rennea")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -55,6 +56,7 @@ require("prototypes/buildings/navens-culture-mk01")
 require("prototypes/buildings/yotoi-aloe-orchard-mk01")
 require("prototypes/buildings/dhilmos-pool-mk01")
 require("prototypes/buildings/scrondrix-pen-mk01")
+require("prototypes/buildings/rennea-plantation-mk01")
 
 --test chest--
 require("prototypes/buildings/test-filtered-chest-mk01")
@@ -76,6 +78,7 @@ require('prototypes/recipes/recipes-navens')
 require('prototypes/recipes/recipes-yotoi')
 require('prototypes/recipes/recipes-dhilmos')
 require('prototypes/recipes/recipes-scrondrix')
+require('prototypes/recipes/recipes-rennea')
 require('prototypes/recipes/recipes-auto-render')
 
 
