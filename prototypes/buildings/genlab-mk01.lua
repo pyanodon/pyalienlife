@@ -10,6 +10,7 @@ RECIPE {
         {"nexelit-plate", 15},
         {"electronic-circuit", 15},
         {"glass", 50},
+        {"duralumin", 20},
         {"titanium-plate", 40},
     },
     results = {

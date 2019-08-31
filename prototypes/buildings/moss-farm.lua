@@ -7,6 +7,7 @@ RECIPE {
         {"stone-brick", 50},
         {"soil", 50},
         {"iron-plate", 20},
+        {"duralumin", 10},
         {"electronic-circuit", 10},
         {"iron-gear-wheel", 10},
     },

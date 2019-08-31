@@ -7,6 +7,7 @@ RECIPE {
         {"moss-farm-mk01", 1},
         {"assembling-machine-2", 1},
         {"plastic-bar", 20},
+        {"duralumin", 50},
         {"engine-unit", 10},
         {"advanced-circuit", 15}
     },

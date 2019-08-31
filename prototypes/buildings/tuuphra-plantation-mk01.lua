@@ -8,6 +8,7 @@ RECIPE {
         {"limestone", 25},
         {"pipe", 15},
         {"electronic-circuit", 10},
+        {"duralumin", 100},
         {"tin-plate", 50},
     },
     results = {

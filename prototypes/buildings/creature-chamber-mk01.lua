@@ -6,6 +6,7 @@ RECIPE {
     ingredients = {
         {"genlab-mk01", 1},
         {"plastic-bar", 20},
+        {"duralumin", 30},
         {"steel-plate", 40},
         {"nexelit-plate", 15},
         {"electronic-circuit", 30},
