@@ -75,6 +75,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-auog",
+        group = "py-alienlife",
+        order = "e-aa"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-mukmoux",
         group = "py-alienlife",
         order = "e-b"

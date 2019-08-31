@@ -79,4 +79,8 @@ data:extend {
         type = "recipe-category",
         name = "phadai"
     },
+    {
+        type = "recipe-category",
+        name = "auog"
+    },
 }

@@ -25,7 +25,7 @@ TECHNOLOGY {
 ----BUILDINDS----
 RECIPE('ralesia-plantation-mk03'):add_ingredient({type = "item", name = "biopolymer", amount = 15}):add_ingredient({type = "item", name = "carbon-aerogel", amount = 20})
 RECIPE('ralesia-plantation-mk04'):replace_ingredient("control-unit", "intelligent-unit"):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 5}):add_ingredient({type = "item", name = "nv-center", amount = 2})
-RECIPE('auog-paddock'):subgroup_order("py-alienlife-buildings-others", "a"):set_fields {enabled = false}:add_unlock('auog') --SUBSTITUIR POR TECH DELA
+RECIPE('auog-paddock'):set_fields {enabled = false}
 RECIPE('zipir'):subgroup_order("py-alienlife-buildings-others", "a"):remove_unlock('basic-electronics'):add_unlock('zipir')
 RECIPE('kicalk-plantation'):subgroup_order("py-alienlife-buildings-others", "a"):remove_unlock('coal-processing-1'):add_unlock('botany-mk01') --SUBSTITUIR POR TECH DELA
 RECIPE('cadaveric-arum'):subgroup_order("py-alienlife-buildings-others", "a"):remove_unlock('basic-electronics'):add_unlock('botany-mk03') --SUBSTITUIR POR TECH DELA
@@ -62,16 +62,18 @@ RECIPE('fertilizer-4'):change_category('fbreator')
 
 RECIPE('zipir-carcass'):remove_unlock('basic-electronics')
 RECIPE('fiber'):remove_unlock('basic-electronics')
-RECIPE('urea'):set_fields {enabled = false}  --TODAS RECIPES DE UREA para a recipe de auog
-RECIPE('waste-water-urea'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('basic-electronics'):add_unlock('auog')
+RECIPE('urea'):change_category('vrauks'):subgroup_order("py-alienlife-auog", "a")
+ITEM('urea'):subgroup_order("py-alienlife-auog", "a")
+RECIPE('waste-water-urea'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('basic-electronics'):add_unlock('dhilmos')
 RECIPE('ammonia-urea'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('oil-processing'):add_unlock('auog')
-RECIPE('urea2'):remove_unlock('coal-processing-1')
+RECIPE('urea2'):remove_unlock('coal-processing-1'):add_unlock('auog')
 RECIPE('mukmoux-fat2'):remove_unlock('advanced-electronics')
 RECIPE('mukmoux-fat3'):remove_unlock('advanced-electronics')
 RECIPE('fertilizer'):remove_unlock('basic-electronics')
 
 
 fun.results_replacer("dhilmos-sex-01", "dirty-water", "waste-water")
+fun.results_replacer("urea", "urea", "urea",5)
 
 ----EXCLUSIVE RECIPES----
 
@@ -281,3 +283,18 @@ RECIPE {
     },
     main_product = "manure",
 }:add_unlock("scrondrix")
+
+RECIPE {
+    type = 'recipe',
+    name = 'urea-00',
+    category = 'auog',
+    enabled = false,
+    energy_required = 25,
+    ingredients = {
+        {type = 'item', name = 'fawogae', amount = 5}
+    },
+    results = {
+        {type = 'item', name = 'urea', amount = 15}
+    },
+    main_product = 'urea'
+}:add_unlock('auog')
