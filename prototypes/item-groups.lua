@@ -99,6 +99,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-phadai",
+        group = "py-alienlife",
+        order = "e-f"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-plants",
         group = "py-alienlife",
         order = "f"

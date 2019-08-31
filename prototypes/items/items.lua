@@ -319,6 +319,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "carapace",
+    icon = "__pyalienlife__/graphics/icons/carapace.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
     name = "bones",
     icon = "__pyalienlife__/graphics/icons/bone.png",
 	icon_size = 32,
@@ -919,6 +930,72 @@ ITEM {
     stack_size = 400
 }
 
+ITEM {
+    type = "item",
+    name = "caged-phadai",
+    icon = "__pyalienlife__/graphics/icons/caged-phadai.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-phadai",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "earth-tiger-sample",
+    icon = "__pyalienlife__/graphics/icons/earth-tiger-sample.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-samples",
+    order = "a",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "phadai-pup",
+    icon = "__pyalienlife__/graphics/icons/phadai-pup.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-phadai",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "phadai-food-01",
+    icon = "__pyalienlife__/graphics/icons/phadai-food-01.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "phadai-food-02",
+    icon = "__pyalienlife__/graphics/icons/phadai-food-02.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "phadai-codex",
+    icon = "__pyalienlife__/graphics/icons/yotoi-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
 ------RULES-----
 
 local alien_life_limitations_ulric =
@@ -1024,6 +1101,23 @@ local alien_life_limitations_ulric =
     "rennea-1",
     "rennea-2",
     "rennea-3",
+    }
+
+    local alien_life_limitations_phadai =
+	{
+    "phadai-sex-01",
+    "phadai-sex-food-01",
+    "phadai-sex-01-mukmoux",
+    "phadai-sex-food-02",
+    "phadai-sex-01-scrondrix",
+    "phadai-sex-scrondrix-food-01",
+    "phadai-sex-scrondrix-food-02",
+    "phadai-sex-pup-01",
+    "phadai-sex-pup-02",
+    "phadai-carapace-00",
+    "phadai-carapace-01",
+    "phadai-carapace-02",
+    "phadai-carapace-01-food",
     }
 
 ----MODULES----
@@ -1204,6 +1298,22 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+ITEM {
+    type = "module",
+    name = "phadai",
+    icon = "__pyalienlife__/graphics/icons/phadai.png",
+    icon_size = 64,
+	category = "phadai",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "a",
+    stack_size = 10,
+	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_phadai,
+	limitation_message_key = "Its full"
+}
+
 data:extend(
 {
   {
@@ -1249,6 +1359,10 @@ data:extend(
   {
     type = "module-category",
     name = "scrondrix"
+  },
+  {
+    type = "module-category",
+    name = "phadai"
   },
 }
 )
