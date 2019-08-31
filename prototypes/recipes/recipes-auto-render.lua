@@ -107,7 +107,7 @@ local function autorecipes(recipe)
         energy_required = 300,
         ingredients = {{type = 'item', name = baseitem .. number, amount = 1}},
         results = results,
-        icon = data.raw.item[baseitem].icon,
+        icon = data.raw.item[baseitem].icon or data.raw.module[baseitem].icon,
         icon_size = 32,
         main_product = results[1].name
     }
