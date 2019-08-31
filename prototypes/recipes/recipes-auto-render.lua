@@ -91,7 +91,7 @@ local function autorecipes(recipe)
     ITEM {
         type = 'item',
         name = baseitem .. number,
-        icon = data.raw.item[baseitem].icon,
+        icon = data.raw.item[baseitem].icon or data.raw.module[baseitem].icon,
         icon_size = 32,
         flags = {},
         subgroup = 'py-alienlife-plants',
@@ -121,7 +121,7 @@ autorecipes {
     category = 'zipir',
     ingredients = {'a+1', 'b-3', 'c*5'}
 }
-
+--[[
 autorecipes {
     baseitem = 'zipir',
     category = 'zipir',
@@ -145,3 +145,4 @@ autorecipes {
     category = 'zipir',
     ingredients = {'d+1', 'c/3', 'b/5'}
 }
+]]--
