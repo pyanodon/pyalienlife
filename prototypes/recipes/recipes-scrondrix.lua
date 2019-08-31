@@ -261,7 +261,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'scrondrix', amount = 1},
+        {type = 'item', name = 'caged-scrondrix', amount = 1},
     },
     results = {
         {type = 'item', name = 'meat', amount = 4, probability = 0.3},
@@ -284,7 +284,7 @@ RECIPE {
     enabled = false,
     energy_required = 15,
     ingredients = {
-        {type = 'item', name = 'scrondrix', amount = 1},
+        {type = 'item', name = 'caged-scrondrix', amount = 1},
     },
     results = {
         {type = 'item', name = 'pineal-gland', amount = 1},
@@ -300,7 +300,7 @@ RECIPE {
     enabled = false,
     energy_required = 15,
     ingredients = {
-        {type = 'item', name = 'scrondrix', amount = 1},
+        {type = 'item', name = 'caged-scrondrix', amount = 1},
     },
     results = {
         {type = 'item', name = 'meat', amount = 4},
@@ -316,7 +316,7 @@ RECIPE {
     enabled = false,
     energy_required = 15,
     ingredients = {
-        {type = 'item', name = 'scrondrix', amount = 1},
+        {type = 'item', name = 'caged-scrondrix', amount = 1},
     },
     results = {
         {type = 'item', name = 'guts', amount = 3},
@@ -332,7 +332,7 @@ RECIPE {
     enabled = false,
     energy_required = 15,
     ingredients = {
-        {type = 'item', name = 'scrondrix', amount = 1},
+        {type = 'item', name = 'caged-scrondrix', amount = 1},
     },
     results = {
         {type = 'fluid', name = 'blood', amount = 50},
@@ -348,7 +348,7 @@ RECIPE {
     enabled = false,
     energy_required = 15,
     ingredients = {
-        {type = 'item', name = 'scrondrix', amount = 1},
+        {type = 'item', name = 'caged-scrondrix', amount = 1},
     },
     results = {
         {type = 'item', name = 'mukmoux-fat', amount = 2},
@@ -364,11 +364,43 @@ RECIPE {
     enabled = false,
     energy_required = 15,
     ingredients = {
-        {type = 'item', name = 'scrondrix', amount = 1},
+        {type = 'item', name = 'caged-scrondrix', amount = 1},
     },
     results = {
         {type = 'item', name = 'brain', amount = 1},
     },
     subgroup = 'py-alienlife-scrondrix',
     order = 'c',
+}:add_unlock("scrondrix")
+
+---caged---
+RECIPE {
+    type = 'recipe',
+    name = 'caged-scrondrix',
+    category = 'crafting',
+    enabled = false,
+    energy_required = 2,
+    ingredients = {
+        {type = 'item', name = 'scrondrix', amount = 1},
+        {type = 'item', name = 'cage', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'caged-scrondrix', amount = 1},
+    },
+}:add_unlock("scrondrix")
+
+RECIPE {
+    type = 'recipe',
+    name = 'uncaged-scrondrix',
+    category = 'crafting',
+    enabled = false,
+    energy_required = 2,
+    ingredients = {
+        {type = 'item', name = 'caged-scrondrix', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'scrondrix', amount = 1},
+        {type = 'item', name = 'cage', amount = 1},
+    },
+    main_product = "scrondrix",
 }:add_unlock("scrondrix")

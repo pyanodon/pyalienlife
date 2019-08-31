@@ -75,4 +75,8 @@ data:extend {
         type = "recipe-category",
         name = "rennea"
     },
+    {
+        type = "recipe-category",
+        name = "phadai"
+    },
 }
