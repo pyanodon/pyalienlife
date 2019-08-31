@@ -988,7 +988,73 @@ ITEM {
 ITEM {
     type = "item",
     name = "phadai-codex",
-    icon = "__pyalienlife__/graphics/icons/yotoi-codex.png",
+    icon = "__pyalienlife__/graphics/icons/phadai-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "caged-auog",
+    icon = "__pyalienlife__/graphics/icons/caged-auog.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-auog",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "earth-bear-sample",
+    icon = "__pyalienlife__/graphics/icons/earth-bear-sample.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-samples",
+    order = "a",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "auog-pup",
+    icon = "__pyalienlife__/graphics/icons/auog-pup.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-auog",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "auog-food-01",
+    icon = "__pyalienlife__/graphics/icons/auog-food-01.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "auog-food-02",
+    icon = "__pyalienlife__/graphics/icons/auog-food-02.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "auog-codex",
+    icon = "__pyalienlife__/graphics/icons/auog-codex.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-codex",
@@ -1118,6 +1184,20 @@ local alien_life_limitations_ulric =
     "phadai-carapace-01",
     "phadai-carapace-02",
     "phadai-carapace-01-food",
+    }
+
+    local alien_life_limitations_auog =
+	{
+    "auog-sex-00",
+    "auog-sex-food-01",
+    "auog-sex-food-02",
+    "auog-sex-pup-01",
+    "auog-sex-pup-02",
+    "auog-manure-00",
+    "auog-manure-01",
+    "auog-manure-02",
+    "auog-manure-01-food",
+    "auog-manure-02-food",
     }
 
 ----MODULES----
@@ -1314,6 +1394,22 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+ITEM {
+    type = "module",
+    name = "auog",
+    icon = "__pyalienlife__/graphics/icons/auog.png",
+    icon_size = 64,
+	category = "auog",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "a",
+    stack_size = 10,
+	effect = { speed = {bonus = 50}},
+	limitation = alien_life_limitations_auog,
+	limitation_message_key = "Its full"
+}
+
 data:extend(
 {
   {
@@ -1363,6 +1459,10 @@ data:extend(
   {
     type = "module-category",
     name = "phadai"
+  },
+  {
+    type = "module-category",
+    name = "auog"
   },
 }
 )
