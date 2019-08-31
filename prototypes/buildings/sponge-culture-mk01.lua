@@ -5,8 +5,9 @@ RECIPE {
     enabled = false,
     ingredients = {
         {"steel-plate", 15},
-        {"glass", 50},
+        {"glass", 100},
         {"titanium-plate", 15},
+        {"duralumin", 50},
         {"iron-plate", 15},
         {"pipe", 15},
         {"electronic-circuit", 15},

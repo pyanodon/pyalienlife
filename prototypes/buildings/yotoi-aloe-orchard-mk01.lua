@@ -6,6 +6,7 @@ RECIPE {
     ingredients = {
         {"glass", 35},
         {"stainless-steel", 50},
+        {"duralumin", 50},
         {"niobium-pipe", 15},
         {"advanced-circuit", 20},
         {"plastic-bar", 40},

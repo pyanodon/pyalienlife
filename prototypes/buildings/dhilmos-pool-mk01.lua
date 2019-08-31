@@ -7,6 +7,7 @@ RECIPE {
         {"nbti-alloy", 40},
         {"glass", 35},
         {"nexelit-plate", 20},
+        {"duralumin", 50},
         {"plastic-bar", 25},
         {"stainless-steel", 50},
         {"advanced-circuit", 50},

@@ -5,7 +5,7 @@ RECIPE {
     enabled = false,
     ingredients = {
         {"concrete", 20},
-        {"titanium-plate", 40},
+        {"nbti-alloy", 40},
         {"iron-stick", 500},
         {"nenbit-matrix", 30},
         {"processing-unit", 50},

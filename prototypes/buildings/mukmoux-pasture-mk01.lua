@@ -6,6 +6,7 @@ RECIPE {
     ingredients = {
         {"soil", 500},
         {"steel-plate", 100},
+        {"duralumin", 30},
         {"storage-tank", 5},
         {"advanced-circuit", 10} --bob electronic-logic-board
     },

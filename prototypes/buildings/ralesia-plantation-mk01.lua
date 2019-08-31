@@ -36,6 +36,7 @@ RECIPE {
         {"electronic-circuit", 25}, --bob basic-electronic-circuit-board
         {"stone", 100}, --bob glass
         {"iron-plate", 30},
+        {"duralumin", 10},
         {"treated-wood", 50},
         {"small-lamp", 20}
     },
