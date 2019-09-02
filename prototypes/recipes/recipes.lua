@@ -392,3 +392,46 @@ RECIPE {
         {type = 'item', name = 'gh', amount = 1}
     }
 }:add_unlock('growth-hormone')
+
+RECIPE {
+    type = 'recipe',
+    name = 'lard-from-brains',
+    category = 'bio-reactor',
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = 'item', name = 'brain', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'mukmoux-fat', amount = 10}
+    }
+}:add_unlock('biotech-mk02')
+
+RECIPE {
+    type = 'recipe',
+    name = 'hcl-from-guts',
+    category = 'bio-reactor',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'guts', amount = 10},
+    },
+    results = {
+        {type = 'fluid', name = 'hydrogen-chloride', amount = 50}
+    }
+}:add_unlock('biotech-mk02')
+
+RECIPE {
+    type = 'recipe',
+    name = 'olechemicals-from-skin',
+    category = 'bio-reactor',
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = 'item', name = 'skin', amount = 20},
+        {type = 'fluid', name = 'bacteria-1', amount = 10},
+    },
+    results = {
+        {type = 'fluid', name = 'oleochemicals', amount = 30}
+    }
+}:add_unlock('biotech-mk02')

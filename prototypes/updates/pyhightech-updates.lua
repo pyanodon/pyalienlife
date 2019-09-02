@@ -298,3 +298,47 @@ RECIPE {
     },
     main_product = 'urea'
 }:add_unlock('auog')
+
+RECIPE {
+    type = 'recipe',
+    name = 'bones-to-phosphate',
+    category = 'atomizer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'bones', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'phosphate-rock', amount = 5},
+    },
+    --main_product = "cocoon",
+}:add_unlock("molecular-decohesion")
+
+RECIPE {
+    type = 'recipe',
+    name = 'carapace-to-re',
+    category = 'atomizer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'carapace', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'rare-earth-ore', amount = 5},
+    },
+    --main_product = "cocoon",
+}:add_unlock("molecular-decohesion")
+
+RECIPE {
+    type = 'recipe',
+    name = 'ethylene-from-fruit',
+    category = 'bio-reactor',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'yotoi-fruit', amount = 10},
+    },
+    results = {
+        {type = 'fluid', name = 'ethylene', amount = 50}
+    }
+}:add_unlock('biotech-mk02')
