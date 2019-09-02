@@ -129,7 +129,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tuuphra-seeds",
-    category = "crafting",
+    category = "nursery",
     enabled = false,
     energy_required = 5,
     ingredients = {
