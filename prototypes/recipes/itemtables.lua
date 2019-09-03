@@ -3,11 +3,29 @@ items.inputs = {}
 items.outputs = {}
 --table.itemkey = {item, default item amount}
 
-items.inputs.a = {'soil', 2}
-items.inputs.b = {'water', 25}
-items.inputs.c = {'ash', 5}
-items.inputs.d = {'wood', 4}
-items.inputs.e = {'solid-fuel', 2}
+items.inputs.a = {'water', 100}
+items.inputs.b = {'soil', 10}
+items.inputs.c = {'hydrogen', 10}
+items.inputs.d = {'coarse', 10}
+items.inputs.e = {'carbon-dioxide', 10}
+items.inputs.f = {'syngas', 10}
+items.inputs.g = {'flue-gas', 100}
+items.inputs.h = {'fertilizer', 1}
+items.inputs.i = {'ash', 10}
+items.inputs.j = {'limestone', 1}
+items.inputs.k = {'stone', 1}
+items.inputs.l = {'biomass', 1}
+items.inputs.m = {'manure', 1}
+items.inputs.n = {'fungal-substrate', 1}
+items.inputs.o = {'nitrogen', 10}
+items.inputs.p = {'small-lamp', 1}
+items.inputs.q = {'slacked-lime', 10}
+items.inputs.r = {'water-saline', 10}
+--items.inputs.s = {'iron-ore-dust', 1}
+items.inputs.t = {'sand', 10}
+items.inputs.u = {'clay', 10}
+
+items.inputs.s1 = {'ralesia-seeds', 5}
 
 items.outputs.a = {'ralesia', 1}
 items.outputs.b = {'zipir',2}
