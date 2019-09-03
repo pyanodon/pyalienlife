@@ -31,6 +31,7 @@ end
 for _, recipe in pairs(data.raw.recipe) do
     local r = RECIPE(recipe)
     r:replace_ingredient('organics', 'biomass')
+    r:replace_ingredient('raw-fish', 'fish')
 end
 
 for _, recipe in pairs(data.raw.recipe) do
@@ -39,5 +40,6 @@ for _, recipe in pairs(data.raw.recipe) do
 end
 
 TECHNOLOGY('fluid-handling'):remove_pack('logistic-science-pack')
+ITEM("raw-fish", "capsule"):set("icon", "__pyalienlife__/graphics/icons/fish.png")
 
 --RECIPES UPDATES

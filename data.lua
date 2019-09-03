@@ -63,6 +63,7 @@ require("prototypes/buildings/rennea-plantation-mk01")
 require("prototypes/buildings/phadai-enclosure-mk01")
 require("prototypes/buildings/auog-paddock-mk01")
 require("prototypes/buildings/atomizer-mk01")
+require("prototypes/buildings/fish-farm-mk01")
 
 --test chest--
 require("prototypes/buildings/test-filtered-chest-mk01")

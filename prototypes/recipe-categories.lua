@@ -87,4 +87,8 @@ data:extend {
         type = "recipe-category",
         name = "atomizer"
     },
+    {
+        type = "recipe-category",
+        name = "fish-farm"
+    },
 }

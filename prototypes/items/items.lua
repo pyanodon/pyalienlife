@@ -1062,6 +1062,17 @@ ITEM {
     stack_size = 10
 }
 
+ITEM {
+    type = "item",
+    name = "fish-egg",
+    icon = "__pyalienlife__/graphics/icons/fish-egg.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "x",
+    stack_size = 10
+}
+
 ------RULES-----
 
 local alien_life_limitations_ulric =
@@ -1410,6 +1421,31 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+ITEM {
+    type = "module",
+    name = "fish",
+    icon = "__pyalienlife__/graphics/icons/mip/fish-03.png",
+    icon_size = 64,
+    icon_mipmaps = 5,
+    pictures =
+    {
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/fish-01.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/fish-02.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/fish-03.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/fish-04.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/fish-05.png", scale = 0.25, mipmap_count = 1 },
+    },
+	category = "fish",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "a",
+    stack_size = 10,
+	effect = { speed = {bonus = 15}},
+	limitation = alien_life_limitations_fish,
+	limitation_message_key = "Its full"
+}
+
 data:extend(
 {
   {
@@ -1463,6 +1499,10 @@ data:extend(
   {
     type = "module-category",
     name = "auog"
+  },
+  {
+    type = "module-category",
+    name = "fish"
   },
 }
 )

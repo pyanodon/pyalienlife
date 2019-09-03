@@ -435,3 +435,17 @@ RECIPE {
         {type = 'fluid', name = 'oleochemicals', amount = 30}
     }
 }:add_unlock('biotech-mk02')
+
+RECIPE {
+    type = 'recipe',
+    name = 'fish-test',
+    category = 'fish-farm',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'item', name = 'raw-fish', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'fish', amount = 6}
+    }
+}:add_unlock('water-animals-mk01')

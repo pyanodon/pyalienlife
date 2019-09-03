@@ -2,7 +2,7 @@ FLUID {
     type = "fluid",
     name = "fish-oil",
     icon = "__pyalienlife__/graphics/icons/fish-oil.png",
-	icon_size = 32,
+	icon_size = 64,
     default_temperature = 10,
     base_color = {r = 0.964, g = 0.803, b = 0.117},
     flow_color = {r = 0.964, g = 0.803, b = 0.117},
