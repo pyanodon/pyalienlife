@@ -83,4 +83,8 @@ data:extend {
         type = "recipe-category",
         name = "auog"
     },
+    {
+        type = "recipe-category",
+        name = "atomizer"
+    },
 }

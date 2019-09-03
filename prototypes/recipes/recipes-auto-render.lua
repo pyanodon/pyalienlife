@@ -5,7 +5,7 @@ fun.autorecipes {
     name = 'ralesia',
 	--baseitem = 'ralesia',
     category = 'ralesia',
-    mats = 
+    mats =
 	{
 		{
 			ingredients =
@@ -22,17 +22,17 @@ fun.autorecipes {
 				{
 					{'b'},
 				},
-			results = 
+			results =
 				{
 					{'a','+2'}
 				},
 		},
 		{
-			ingredients = 
+			ingredients =
 				{
 					{'c'},
 				},
-			results = 
+			results =
 				{
 					{'a','+2'},
 					{'b'}
@@ -41,14 +41,14 @@ fun.autorecipes {
 	}
 }
 
---[[
+
 fun.autorecipes {
-    name = '',
-	baseitem = '',
-    category = '',
-	outcategory = '',
+    name = 'dual-example',
+	baseitem = 'zipir',
+    category = 'zipir',
+	outcategory = 'crafting-with-fluid',
 	singlerecipe = false,
-    mats = 
+    mats =
 	{
 		{
 			ingredients =
@@ -57,29 +57,32 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{'a'}
+					{'f'}
 				},
 		},
 		{
 			ingredients =
 				{
-					{'b'},
+                    {'b'},
+                    {'c','+4'}
 				},
-			results = 
+			results =
 				{
-					{'a','+2'}
+                    {'f','+1'},
+                    {'e','*2'}
 				},
 		},
 		{
-			ingredients = 
+			ingredients =
 				{
-					{'c'},
+                    {'c','R'},
+                    {'e'}
 				},
-			results = 
+			results =
 				{
-					{'a','+2'}
+                    {'f','+2'},
+                    {'a','+2'}
 				},
 		}
 	}
 }
-]]--
