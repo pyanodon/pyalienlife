@@ -11,5 +11,9 @@ items.inputs.e = {'solid-fuel', 2}
 
 items.outputs.a = {'ralesia', 1}
 items.outputs.b = {'zipir',2}
+items.outputs.c = {'iron-ore', 5}
+items.outputs.d = {'wood',3}
+items.outputs.e = {'water', 50}
+items.outputs.f = {'iron-plate',1}
 
 return items
