@@ -91,7 +91,7 @@ require('prototypes/recipes/recipes-phadai')
 require('prototypes/recipes/recipes-auog')
 require('prototypes/recipes/recipes-fish')
 require('prototypes/recipes/recipes-auto-ralesia')
-require('prototypes/recipes/recipes-auto-render')
+require('prototypes/recipes/recipes-auto-ulric')
 
 
 --(( FLUIDS ))--
