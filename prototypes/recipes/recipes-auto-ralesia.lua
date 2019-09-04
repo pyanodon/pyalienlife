@@ -4,7 +4,8 @@ local fun = require("prototypes/functions/functions")
 fun.autorecipes {
     name = 'ralesias',
 	--baseitem = 'ralesia',
-    category = 'ralesia',
+	category = 'ralesia',
+	module_limitations = 'ralesias',
     mats =
 	{
 		{
