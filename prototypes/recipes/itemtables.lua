@@ -26,6 +26,8 @@ items.inputs.t = {'sand', 10}
 items.inputs.u = {'clay', 10}
 
 items.inputs.s1 = {'ralesia-seeds', 5}
+--items.inputs.s10 = {'ralesia-seeds', 5}
+--items.inputs.agrsshdhsddgjfdhsfnfkjfhe75462346344267436846 = {'ralesia-seeds', 5}
 
 items.outputs.a = {'ralesia', 1}
 items.outputs.b = {'zipir',2}
