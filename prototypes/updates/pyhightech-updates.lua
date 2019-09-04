@@ -153,24 +153,6 @@ RECIPE {
 }:add_unlock("botany-mk04")
 
 RECIPE {
-    type = "recipe",
-    name = "ralesia-4",
-    category = "ralesia",
-    enabled = false,
-    energy_required = 5,
-    ingredients = {
-        {type = "fluid", name = "syngas", amount = 200},
-        {type = "item", name = "ralesia-seeds", amount = 5},
-        {type = "item", name = "soil", amount = 20},
-        {type = "item", name = "coarse", amount = 10},
-        {type = 'item', name = 'py-fertilizer', amount = 3}
-    },
-    results = {
-        {type = "item", name = "ralesias", amount = 25}
-    },
-}:add_unlock("botany-mk04")
-
-RECIPE {
     type = 'recipe',
     name = 'ulric-manure-03',
     category = 'ulric',
