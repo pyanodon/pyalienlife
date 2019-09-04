@@ -111,6 +111,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-fish",
+        group = "py-alienlife",
+        order = "e-g"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-plants",
         group = "py-alienlife",
         order = "f"
@@ -132,6 +138,12 @@ data:extend {
         name = "py-alienlife-genetics",
         group = "py-alienlife",
         order = "i"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-food",
+        group = "py-alienlife",
+        order = "j"
     },
     {
         type = "item-subgroup",

@@ -89,8 +89,9 @@ require('prototypes/recipes/recipes-scrondrix')
 require('prototypes/recipes/recipes-rennea')
 require('prototypes/recipes/recipes-phadai')
 require('prototypes/recipes/recipes-auog')
+require('prototypes/recipes/recipes-fish')
 require('prototypes/recipes/recipes-auto-ralesia')
---require('prototypes/recipes/recipes-auto-render')
+require('prototypes/recipes/recipes-auto-render')
 
 
 --(( FLUIDS ))--
