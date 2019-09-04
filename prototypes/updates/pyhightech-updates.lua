@@ -58,6 +58,7 @@ RECIPE('dhilmos-codex'):replace_ingredient("glass", "phosphate-glass")
 RECIPE('fertilizer-1'):change_category('fbreator')
 RECIPE('fertilizer-3'):change_category('fbreator')
 RECIPE('fertilizer-4'):change_category('fbreator')
+RECIPE('fish-food-02'):remove_ingredient("blood"):add_ingredient({type = "item", name = "blood-meal", amount = 5})
 
 
 RECIPE('zipir-carcass'):remove_unlock('basic-electronics')
@@ -73,6 +74,8 @@ RECIPE('fertilizer'):remove_unlock('basic-electronics')
 
 
 fun.results_replacer("dhilmos-sex-01", "dirty-water", "waste-water")
+fun.results_replacer("fish-sex-pup-01", "dirty-water", "waste-water")
+fun.results_replacer("fish-sex-pup-02", "dirty-water", "waste-water")
 fun.results_replacer("urea", "urea", "urea",5)
 
 ----EXCLUSIVE RECIPES----

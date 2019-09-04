@@ -441,7 +441,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/ulric-food-01.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-food",
     order = "h",
     stack_size = 500
 }
@@ -452,7 +452,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/ulric-food-02.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-food",
     order = "h",
     stack_size = 500
 }
@@ -694,7 +694,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/mukmoux-food-01.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-food",
     order = "h",
     stack_size = 500
 }
@@ -705,7 +705,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/mukmoux-food-02.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-food",
     order = "h",
     stack_size = 500
 }
@@ -716,7 +716,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/dhilmos-food-01.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-food",
     order = "h",
     stack_size = 100
 }
@@ -727,7 +727,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/dhilmos-food-02.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-food",
     order = "h",
     stack_size = 100
 }
@@ -969,7 +969,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/phadai-food-01.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-food",
     order = "h",
     stack_size = 50
 }
@@ -980,7 +980,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/phadai-food-02.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-food",
     order = "h",
     stack_size = 50
 }
@@ -1035,7 +1035,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/auog-food-01.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-food",
     order = "h",
     stack_size = 50
 }
@@ -1046,7 +1046,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/auog-food-02.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-food",
     order = "h",
     stack_size = 50
 }
@@ -1073,6 +1073,28 @@ ITEM {
     stack_size = 10
 }
 
+ITEM {
+    type = "item",
+    name = "fish-food-01",
+    icon = "__pyalienlife__/graphics/icons/fish-food-01.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-food",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "fish-food-02",
+    icon = "__pyalienlife__/graphics/icons/fish-food-02.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-food",
+    order = "x",
+    stack_size = 10
+}
+
 ------RULES-----
 
 local alien_life_limitations_ulric =
@@ -1090,7 +1112,7 @@ local alien_life_limitations_ulric =
     "sea-sponge-1",
     "sea-sponge-2",
     }
-
+    
     local alien_life_limitations_ralesia =
 	{
     --"ralesias1",
@@ -1107,7 +1129,7 @@ local alien_life_limitations_ulric =
     "mukmoux-manure-01-food",
     "mukmoux-manure-02-food",
     }
-
+    
     local alien_life_limitations_tuuphra =
 	{
     "tuuphra-0",
@@ -1115,7 +1137,7 @@ local alien_life_limitations_ulric =
     "tuuphra-2",
     "tuuphra-3",
     }
-
+    
     local alien_life_limitations_arthurian =
 	{
     "arthurian-sex-01",
@@ -1205,6 +1227,12 @@ local alien_life_limitations_ulric =
     "auog-manure-02",
     "auog-manure-01-food",
     "auog-manure-02-food",
+    }
+
+    local alien_life_limitations_fish =
+	{
+    "fish-sex-pup-01",
+    "fish-sex-pup-02",
     }
 
 ----MODULES----

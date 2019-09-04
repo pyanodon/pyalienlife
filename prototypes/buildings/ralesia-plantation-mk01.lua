@@ -114,6 +114,7 @@ ENTITY {
             pipe_connections = {{type = "input", position = {0.0, -4.0}}}
         },
     },
+    off_when_no_fluid_recipe = true,
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
         sound = {filename = "__pycoalprocessing__/sounds/ralesia-plantation.ogg", volume = 1.2},

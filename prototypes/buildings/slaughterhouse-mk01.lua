@@ -31,7 +31,7 @@ ITEM {
 }
 
 ENTITY {
-    type = "assembling-machine",
+    type = "furnace",
     name = "slaughterhouse-mk01",
     icon = "__pyalienlife__/graphics/icons/slaughterhouse-mk01.png",
 	icon_size = 32,
@@ -50,8 +50,8 @@ ENTITY {
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"slaughterhouse"},
-    --source_inventory_size = 1,
-    --result_inventory_size = 6,
+    source_inventory_size = 1,
+    result_inventory_size = 6,
     crafting_speed = 1,
     energy_source = {
         type = "electric",

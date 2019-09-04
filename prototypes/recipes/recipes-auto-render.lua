@@ -1,88 +1,26 @@
 local fun = require("prototypes/functions/functions")
 
-
-fun.autorecipes {
-    name = 'ralesia',
-	--baseitem = 'ralesia',
-    category = 'ralesia',
-    mats =
-	{
-		{
-			ingredients =
-				{
-					{'a'},
-				},
-			results =
-				{
-					{'a'}
-				},
-		},
-		{
-			ingredients =
-				{
-					{'b'},
-				},
-			results =
-				{
-					{'a','+2'}
-				},
-		},
-		{
-			ingredients =
-				{
-					{'c'},
-				},
-			results =
-				{
-					{'a','+2'},
-					{'b'}
-				},
-		}
-	}
-}
-
-
 fun.autorecipes {
     name = 'dual-example',
-	baseitem = 'zipir',
-    category = 'zipir',
-	outcategory = 'crafting-with-fluid',
+	baseitem = 'caged-ulric',
+    category = 'ulric',
+	outcategory = 'slaughterhouse',
+	--module_limitations = 'ulric',
 	singlerecipe = false,
     mats =
 	{
 		{
 			ingredients =
 				{
-					{'a'},
+					{'b'},
+					{'i'},
 				},
 			results =
 				{
-					{'f'}
+					{'b','10'}
 				},
+				crafting_speed = 10,
+				tech = 'organic-breeding'
 		},
-		{
-			ingredients =
-				{
-                    {'b'},
-                    {'c','+4'}
-				},
-			results =
-				{
-                    {'f','+1'},
-                    {'e','*2'}
-				},
-		},
-		{
-			ingredients =
-				{
-                    {'c','R'},
-                    {'e'}
-				},
-			results =
-				{
-                    {'f','+2'},
-                    {'a','+2'}
-				},
-		}
 	}
 }
