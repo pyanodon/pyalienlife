@@ -11,11 +11,11 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{'s1'},
+					{'ralesiaseeds'},
 				},
 			results =
 				{
-					{'a','*4'}
+					{'ralesias','*4'}
 				},
 			crafting_speed = 130,
 			tech = 'ralesia'
@@ -24,12 +24,12 @@ fun.autorecipes {
 			ingredients =
 				{
                     --{'s1'},
-                    {'a'},
+                    {'water'},
 				},
 			results =
 				{
 					--{'a','*5'}
-					{'a','+1'}
+					{'ralesias','+1'}
 				},
 				crafting_speed = 120,
 				tech = 'ralesia'
@@ -39,12 +39,12 @@ fun.autorecipes {
 				{
                     --{'s1'},
                     --{'a'},
-                    {'b','+15'},
+                    {'soil','+15'},
 				},
 			results =
 				{
 					--{'a','*7'},
-					{'a','+2'}
+					{'ralesias','+2'}
 				},
 				crafting_speed = 120,
 				tech = 'ralesia'
@@ -55,12 +55,12 @@ fun.autorecipes {
                     --{'s1'},
                     --{'a'},
                     --{'b','+15'},
-                    {'c','*10'},
+                    {'hydrogen','*10'},
 				},
 			results =
 				{
 					--{'a','*10'},
-					{'a','+3'}
+					{'ralesias','+3'}
 				},
 				crafting_speed = 120,
 				tech = 'botany-mk02'
@@ -72,12 +72,12 @@ fun.autorecipes {
                     --{'a'},
                     --{'b','+15'},
                     --{'c','*10'},
-                    {'d'},
+                    {'coarse'},
 				},
 			results =
 				{
 					--{'a','*12'},
-					{'a','+3'}
+					{'ralesias','+3'}
 				},
 				crafting_speed = 120,
 				tech = 'botany-mk02'
@@ -88,14 +88,14 @@ fun.autorecipes {
                     --{'s1'},
                     --{'a'},
 					--{'b','+15'},
-					{'c','R'},
-                    {'e','*10'},
+					{'hydrogen','R'},
+                    {'carbondioxide','*10'},
                     --{'d'},
 				},
 			results =
 				{
 					--{'a','*15'},
-					{'a','+3'}
+					{'ralesias','+3'}
 				},
 				crafting_speed = 120,
 				tech = 'botany-mk02'
@@ -106,14 +106,14 @@ fun.autorecipes {
                     --{'s1'},
                     --{'a'},
 					--{'b','+15'},
-					{'e','R'},
-                    {'f','*3'},
+					{'carbondioxide','R'},
+                    {'syngas','*3'},
                     --{'d'},
 				},
 			results =
 				{
 					--{'a','*17'},
-					{'a','+2'}
+					{'ralesias','+2'}
 				},
 				crafting_speed = 120,
 				tech = 'botany-mk03'
@@ -124,15 +124,15 @@ fun.autorecipes {
                     --{'s1'},
                     --{'a'},
 				   --{'b','+15'},
-				   {'e','R'},
-				   {'f','R'},
-                    {'g','*2'},
+				   {'carbondioxide','R'},
+				   {'syngas','R'},
+                    {'fluegas','*2'},
                     --{'d'},
                 },
 			results =
 				{
 					--{'a','*20'},
-					{'a','+3'}
+					{'ralesias','+3'}
 				},
 				crafting_speed = 120,
 				tech = 'botany-mk03'
@@ -144,13 +144,13 @@ fun.autorecipes {
                     --{'a'},
                     --{'b','+15'},
                     --{'g','*2'},
-                    {'d','R'},
-                    {'m'},
+                    {'coarse','R'},
+                    {'manure'},
 				},
 			results =
 				{
 					--{'a','*22'},
-					{'a','+2'}
+					{'ralesias','+2'}
 				},
 				crafting_speed = 120,
 				tech = 'botany-mk03'
@@ -163,14 +163,14 @@ fun.autorecipes {
                     --{'b','+15'},
                     --{'g','*2'},
 					--{'d'},
-					{'m','R'},
-                    {'h','+6'},
+					{'manure','R'},
+                    {'fertilizer','+6'},
 				},
 			results =
 				{
 					--{'a','*25'},
 					--{'a','+3'}
-					{'a',25}
+					{'ralesias',25}
 				},
 				crafting_speed = 120,
 				tech = 'botany-mk04'
@@ -183,14 +183,14 @@ fun.autorecipes {
                     --{'b','+15'},
                     --{'g','*2'},
 					--{'d'},
-					{'g','R'},
-                    {'f','*10'},
+					{'fluegas','R'},
+                    {'syngas','*10'},
 				},
 			results =
 				{
 					--{'a','*25'},
 					--{'a','+3'}
-					{'a',25}
+					{'ralesias',25}
 				},
 				crafting_speed = 120,
 				tech = 'botany-mk04'
