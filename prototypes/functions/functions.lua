@@ -1337,8 +1337,9 @@ recipe =
             ITEM {
                 type = 'item',
                 name = baseitem .. number,
+                category = data.raw.item[baseitem].category,
                 icon = data.raw.item[baseitem].icon or data.raw.module[baseitem].icon,
-                icon_size = 32,
+                icon_size = 64,
                 flags = {},
                 subgroup = recipe.subgroup,
                 order = recipe.order,
@@ -1372,8 +1373,8 @@ recipe =
             end
 
             --log(serpent.block(data.raw.item[baseitem..number]))
-            --log(serpent.block(data.raw.recipe[baseitem .. number]))
-            --log(serpent.block(data.raw.recipe['output-' .. baseitem .. '-' .. number]))
+            log(serpent.block(data.raw.recipe[baseitem .. number]))
+            log(serpent.block(data.raw.recipe['output-' .. baseitem .. '-' .. number]))
 
             number = number + 1
         end

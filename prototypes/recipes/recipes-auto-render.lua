@@ -7,6 +7,9 @@ fun.autorecipes {
 	outcategory = 'slaughterhouse',
 	--module_limitations = 'ulric',
 	singlerecipe = false,
+	module_limitations = "ulric",
+	subgroup = 'py-alienlife-ulric',
+    order = 'a',
     mats =
 	{
 		{
