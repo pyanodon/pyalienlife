@@ -21,15 +21,18 @@ items.inputs.o = {'nitrogen', 10}
 items.inputs.p = {'small-lamp', 1}
 items.inputs.q = {'slacked-lime', 10}
 items.inputs.r = {'water-saline', 10}
---items.inputs.s = {'iron-ore-dust', 1}
+items.inputs.s = {'iron-ore-dust', 1}
 items.inputs.t = {'sand', 10}
 items.inputs.u = {'clay', 10}
 
 items.inputs.s1 = {'ralesia-seeds', 5}
+items.inputs.s2 = {'thuupra-seeds', 5}
+items.inputs.s3 = {'yotoi-seeds', 5}
+items.inputs.s4 = {'rennea-seeds', 5}
 --items.inputs.s10 = {'ralesia-seeds', 5}
 --items.inputs.agrsshdhsddgjfdhsfnfkjfhe75462346344267436846 = {'ralesia-seeds', 5}
 
-items.outputs.a = {'ralesia', 1}
+items.outputs.a = {'ralesias', 1}
 items.outputs.b = {'zipir',2}
 items.outputs.c = {'iron-ore', 5}
 items.outputs.d = {'wood',3}

@@ -2,7 +2,7 @@ local fun = require("prototypes/functions/functions")
 
 
 fun.autorecipes {
-    name = 'ralesia',
+    name = 'ralesias',
 	--baseitem = 'ralesia',
     category = 'ralesia',
     mats =
@@ -16,7 +16,8 @@ fun.autorecipes {
 				{
 					{'a','*4'}
 				},
-			crafting_speed = 1,
+			crafting_speed = 130,
+			tech = 'ralesia'
 		},
 		{
 			ingredients =
@@ -29,8 +30,8 @@ fun.autorecipes {
 					--{'a','*5'}
 					{'a','+1'}
 				},
-				crafting_speed = 5,
-				tech = 'coal-processing-1'
+				crafting_speed = 120,
+				tech = 'ralesia'
 		},
 		{
 			ingredients =
@@ -44,6 +45,8 @@ fun.autorecipes {
 					--{'a','*7'},
 					{'a','+2'}
 				},
+				crafting_speed = 120,
+				tech = 'ralesia'
         },
         {
 			ingredients =
@@ -58,6 +61,8 @@ fun.autorecipes {
 					--{'a','*10'},
 					{'a','+3'}
 				},
+				crafting_speed = 120,
+				tech = 'botany-mk02'
         },
         {
 			ingredients =
@@ -71,8 +76,10 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*12'},
-					{'a','+2'}
+					{'a','+3'}
 				},
+				crafting_speed = 120,
+				tech = 'botany-mk02'
         },
         {
 			ingredients =
@@ -89,6 +96,8 @@ fun.autorecipes {
 					--{'a','*15'},
 					{'a','+3'}
 				},
+				crafting_speed = 120,
+				tech = 'botany-mk02'
         },
         {
 			ingredients =
@@ -105,6 +114,8 @@ fun.autorecipes {
 					--{'a','*17'},
 					{'a','+2'}
 				},
+				crafting_speed = 120,
+				tech = 'botany-mk03'
         },
         {
 			ingredients =
@@ -113,6 +124,7 @@ fun.autorecipes {
                     --{'a'},
 				   --{'b','+15'},
 				   {'e','R'},
+				   {'f','R'},
                     {'g','*2'},
                     --{'d'},
                 },
@@ -121,6 +133,8 @@ fun.autorecipes {
 					--{'a','*20'},
 					{'a','+3'}
 				},
+				crafting_speed = 120,
+				tech = 'botany-mk03'
         },
         {
 			ingredients =
@@ -129,7 +143,7 @@ fun.autorecipes {
                     --{'a'},
                     --{'b','+15'},
                     --{'g','*2'},
-                    --{'d'},
+                    {'d','R'},
                     {'m'},
 				},
 			results =
@@ -137,6 +151,8 @@ fun.autorecipes {
 					--{'a','*22'},
 					{'a','+2'}
 				},
+				crafting_speed = 120,
+				tech = 'botany-mk03'
         },
         {
 			ingredients =
@@ -155,6 +171,28 @@ fun.autorecipes {
 					--{'a','+3'}
 					{'a',25}
 				},
+				crafting_speed = 120,
+				tech = 'botany-mk04'
+		},
+		{
+			ingredients =
+				{
+                    --{'s1'},
+                    --{'a'},
+                    --{'b','+15'},
+                    --{'g','*2'},
+					--{'d'},
+					{'g','R'},
+                    {'f','*10'},
+				},
+			results =
+				{
+					--{'a','*25'},
+					--{'a','+3'}
+					{'a',25}
+				},
+				crafting_speed = 120,
+				tech = 'botany-mk04'
 		},
 	}
 }

@@ -1065,7 +1065,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "fish-egg",
-    icon = "__pyalienlife__/graphics/icons/fish-egg.png",
+    icon = "__pyalienlife__/graphics/icons/fish-eggs.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-items",
@@ -1093,11 +1093,7 @@ local alien_life_limitations_ulric =
     
     local alien_life_limitations_ralesia =
 	{
-    "ralesia-1",
-    "ralesia-2",
-    "ralesia-3",
-    "ralesia-4",
-    "ralesia-5",
+    "ralesias",
     }
 
     local alien_life_limitations_mukmoux =
