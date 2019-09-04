@@ -1090,10 +1090,10 @@ local alien_life_limitations_ulric =
     "sea-sponge-1",
     "sea-sponge-2",
     }
-    
+
     local alien_life_limitations_ralesia =
 	{
-    "ralesias",
+    "ralesias1",
     }
 
     local alien_life_limitations_mukmoux =
@@ -1107,7 +1107,7 @@ local alien_life_limitations_ulric =
     "mukmoux-manure-01-food",
     "mukmoux-manure-02-food",
     }
-    
+
     local alien_life_limitations_tuuphra =
 	{
     "tuuphra-0",
@@ -1115,7 +1115,7 @@ local alien_life_limitations_ulric =
     "tuuphra-2",
     "tuuphra-3",
     }
-    
+
     local alien_life_limitations_arthurian =
 	{
     "arthurian-sex-01",

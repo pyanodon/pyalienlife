@@ -1049,8 +1049,10 @@ recipe =
 
                 if data.raw.item[ing[1]] ~= nil then
                     type1 = 'item'
-                else
+                elseif data.raw.fluid[ing[1]] ~= nil then
                     type1 = 'fluid'
+                else
+                    type1 = 'module'
                 end
 
                 ingredients = lastings
@@ -1173,9 +1175,15 @@ recipe =
 
                 if data.raw.item[ing[1]] ~= nil then
                     type1 = 'item'
-                else
+                elseif data.raw.fluid[ing[1]] ~= nil then
                     type1 = 'fluid'
+                elseif data.raw.module[ing[1]] ~= nil then
+                    type1 = 'item'
                 end
+
+                --if ing[1] == 'ralesias' then
+                   -- type1='item'
+               -- end
 
                 results = lastresults
 
@@ -1292,6 +1300,7 @@ recipe =
                 order = recipe.order,
                 main_product = results[1].name
             }
+
 
             --log(serpent.block(name..number))
             if tech_unlock ~= nil then
