@@ -976,7 +976,10 @@ recipe =
 		tech = string
 		},
 	category = string,
-	outcategory = string,*
+    outcategory = string,*
+    subgroup = string,
+    order = string
+    module_limitations = string*
 ]] --*: optional, defaults to true
     --**: required if using dual recipe mode as itermidate items will be made from this
     --***:needs at least a single mats table with an input item and a output item. following tables will add or remove items and make a new recipe
@@ -1301,6 +1304,10 @@ recipe =
                 main_product = results[1].name
             }
 
+            if recipe.module_limitations ~= nil then
+                table.insert(data.raw.module[recipe.module_limitations].limitation, name..number)
+            end
+
 
             --log(serpent.block(name..number))
             if tech_unlock ~= nil then
@@ -1357,6 +1364,11 @@ recipe =
             if tech_unlock ~= nil then
                 RECIPE(baseitem .. number):add_unlock(tech_unlock)
                 RECIPE('output-' .. baseitem .. '-' .. number):add_unlock(tech_unlock)
+            end
+
+            if recipe.module_limitations ~= nil then
+                table.insert(data.raw.module[recipe.module_limitations].limitation, baseitem..number)
+                table.insert(data.raw.module[recipe.module_limitations].limitation, 'output-' .. baseitem .. '-' .. number)
             end
 
             --log(serpent.block(data.raw.item[baseitem..number]))

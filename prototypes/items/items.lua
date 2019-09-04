@@ -1093,7 +1093,7 @@ local alien_life_limitations_ulric =
 
     local alien_life_limitations_ralesia =
 	{
-    "ralesias1",
+    --"ralesias1",
     }
 
     local alien_life_limitations_mukmoux =
