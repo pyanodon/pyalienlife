@@ -1288,8 +1288,8 @@ recipe =
                 energy_required = crafting_speed,
                 ingredients = ingredients,
                 results = results,
-                subgroup = 'py-alienlife-recipes',
-                order = 'a',
+                subgroup = recipe.subgroup,
+                order = recipe.order,
                 main_product = results[1].name
             }
 
@@ -1313,8 +1313,8 @@ recipe =
                 energy_required = 1,
                 ingredients = ingredients,
                 results = {{type = 'item', name = baseitem .. number, amount = 1}},
-                subgroup = 'py-alienlife-recipes',
-                order = 'a',
+                subgroup = recipe.subgroup,
+                order = recipe.order,
                 main_product = baseitem .. number
             }
 
@@ -1324,8 +1324,8 @@ recipe =
                 icon = data.raw.item[baseitem].icon or data.raw.module[baseitem].icon,
                 icon_size = 32,
                 flags = {},
-                subgroup = 'py-alienlife-plants',
-                order = 'a',
+                subgroup = recipe.subgroup,
+                order = recipe.order,
                 stack_size = 500,
                 localised_name = baseitem
             }
@@ -1338,6 +1338,8 @@ recipe =
                 energy_required = 1,
                 ingredients = {{type = 'item', name = baseitem .. number, amount = 1}},
                 results = results,
+                subgroup = recipe.subgroup,
+                order = recipe.order,
                 --icon = data.raw.item[baseitem].icon or data.raw.module[baseitem].icon,
                 --icon_size = 32,
                 main_product = results[1].name
