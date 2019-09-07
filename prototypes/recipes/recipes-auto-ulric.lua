@@ -21,8 +21,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {'bones','3/4'},
-                    {'meat','3/4'},
+                    {'bones',3/4},
+                    {'meat',3/4},
                     {'blood',50},
                     {'brain'},
                     {'guts'},
