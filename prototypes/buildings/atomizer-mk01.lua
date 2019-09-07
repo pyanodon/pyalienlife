@@ -137,8 +137,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/atomizer.ogg", volume = 0.9},
-        idle_sound = {filename = "__pyalienlife__/sounds/atomizer.ogg", volume = 0.65},
+        sound = {filename = "__pyalienlife__/sounds/atomizer.ogg", volume = 0.7},
+        idle_sound = {filename = "__pyalienlife__/sounds/atomizer.ogg", volume = 0.50},
         apparent_volume = 2.5
     }
 }
