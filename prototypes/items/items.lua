@@ -257,9 +257,9 @@ ITEM {
 ITEM {
     type = "item",
     name = "guts",
-    icon = "__pyalienlife__/graphics/icons/mip/guts-05.png",
+    icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
     icon_size = 64,
-    icon_mipmaps = 6,
+    icon_mipmaps = 7,
     pictures =
     {
       { size = 64, filename = "__pyalienlife__/graphics/icons/mip/guts-01.png", scale = 0.25, mipmap_count = 1 },
@@ -268,6 +268,7 @@ ITEM {
       { size = 64, filename = "__pyalienlife__/graphics/icons/mip/guts-04.png", scale = 0.25, mipmap_count = 1 },
       { size = 64, filename = "__pyalienlife__/graphics/icons/mip/guts-05.png", scale = 0.25, mipmap_count = 1 },
       { size = 64, filename = "__pyalienlife__/graphics/icons/mip/guts-06.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/guts-07.png", scale = 0.25, mipmap_count = 1 },
     },
     flags = {},
     subgroup = "py-alienlife-items",
@@ -298,12 +299,65 @@ ITEM {
 ITEM {
     type = "item",
     name = "brain",
-    icon = "__pyalienlife__/graphics/icons/brain.png",
+    icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
     icon_size = 64,
+    icon_mipmaps = 6,
+    pictures =
+    {
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/brain-01.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/brain-02.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/brain-03.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/brain-04.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/brain-05.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/brain-06.png", scale = 0.25, mipmap_count = 1 },
+    },
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
     stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "meat",
+    icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+    icon_size = 64,
+    icon_mipmaps = 6,
+    pictures =
+    {
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/meat-01.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/meat-02.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/meat-03.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/meat-04.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/meat-05.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/meat-06.png", scale = 0.25, mipmap_count = 1 },
+    },
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "bones",
+    icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+    icon_size = 64,
+    icon_mipmaps = 7,
+    pictures =
+    {
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/bones-01.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/bones-02.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/bones-03.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/bones-04.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/bones-05.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/bones-06.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/bones-07.png", scale = 0.25, mipmap_count = 1 },
+    },
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 200
 }
 
 ITEM {
@@ -328,26 +382,6 @@ ITEM {
     stack_size = 100
 }
 
-ITEM {
-    type = "item",
-    name = "bones",
-    icon = "__pyalienlife__/graphics/icons/bone.png",
-	icon_size = 32,
-    flags = {},
-    subgroup = "py-alienlife-items",
-    order = "h",
-    stack_size = 500
-}
-ITEM {
-    type = "item",
-    name = "meat",
-    icon = "__pyalienlife__/graphics/icons/meat.png",
-	icon_size = 32,
-    flags = {},
-    subgroup = "py-alienlife-items",
-    order = "h",
-    stack_size = 500
-}
 ITEM {
     type = "item",
     name = "skin",
@@ -1099,12 +1133,7 @@ ITEM {
 
 local alien_life_limitations_ulric =
 	{
-    "ulric-sex-01",
-    "ulric-sex-01-food",
-    "ulric-manure-01",
-    "ulric-manure-02",
-    "ulric-manure-01-food",
-    "ulric-manure-02-food",
+
 	}
 
     local alien_life_limitations_sponge =

@@ -17,18 +17,19 @@ fun.autorecipes {
 					{'cage'},
                     {'ulricfood01'},
                     {'waterbarrel',3},
-                    {'gh'},
 				},
 			results =
 				{
-                    {'bones',3/4},
-                    {'meat',3/4},
+					{'bones',4/10,a_min=1,a_max=3},
+					{'meat',4/10,a_min=1,a_max=3},
+					{'mukmoux-fat',3/10,a_min=1,a_max=1},
+					{'brain',4/10,a_min=1,a_max=1},
+					{'guts',4/10,a_min=1,a_max=1},
+					{'bonemeal',1},
                     {'blood',50},
-                    {'brain'},
-                    {'guts'},
 				},
-				crafting_speed = 100,
-				tech = 'growth-hormone'
+				crafting_speed = 130,
+				tech = 'ulric'
         },
         {
 			ingredients =
@@ -37,15 +38,16 @@ fun.autorecipes {
                     {'ulricfood01','R'},
                     {'ulricfood02'},
                     --{'waterbarrel',3},
-                    --{'gh'},
 				},
 			results =
 				{
-                    {'meat','R'},
-                    {'meat','4'},
+					{'bones','+1/10'},
+					{'meat','+1/10'},
+					{'brain','+1/10'},
+					{'bonemeal','+1'},
 				},
-				crafting_speed = 100,
-				tech = 'growth-hormone'
+				crafting_speed = 110,
+				tech = 'ulric'
 		},
-	}
+	},
 }

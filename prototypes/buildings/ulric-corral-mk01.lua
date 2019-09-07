@@ -108,20 +108,6 @@ ENTITY {
             }
         },
         {
-            north_position = {1.87, 0.46},
-            west_position = {1.87, 0.46},
-            south_position = {1.87, 0.46},
-            east_position = {1.87, 0.46},
-            animation = {
-                filename = "__pycoalprocessing__/graphics/entity/ulric-corral/ulric-right-pastando-2.png",
-                frame_count = 50,
-                line_length = 10,
-                width = 64,
-                height = 64,
-                animation_speed = 0.2
-            }
-        },
-		{
             north_position = {2.5, 2.81},
             west_position = {2.5, 2.81},
             south_position = {2.5, 2.81},
@@ -133,6 +119,20 @@ ENTITY {
                 width = 32,
                 height = 32,
                 animation_speed = 0.6
+            }
+        },
+        {
+            north_position = {1.87, 0.46},
+            west_position = {1.87, 0.46},
+            south_position = {1.87, 0.46},
+            east_position = {1.87, 0.46},
+            animation = {
+                filename = "__pycoalprocessing__/graphics/entity/ulric-corral/ulric-right-pastando-2.png",
+                frame_count = 50,
+                line_length = 10,
+                width = 64,
+                height = 64,
+                animation_speed = 0.2
             }
         },
         {
