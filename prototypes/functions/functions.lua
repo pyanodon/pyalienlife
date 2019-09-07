@@ -1017,6 +1017,7 @@ recipe =
         for i, item in pairs(mat.ingredients) do
             --log(serpent.block(ingredients))
 
+			log(serpent.block(item[1]))
             --log(serpent.block(item))
             --log(serpent.block(items))
             --log(serpent.block(items.inputs))
@@ -1044,7 +1045,7 @@ recipe =
                     mod = nil
                 end
 
-                --log(serpent.block(ing))
+                log(serpent.block(ing))
                 --log(sign)
                 --log(mod)
 
@@ -1061,23 +1062,33 @@ recipe =
                 ingredients = lastings
 
                 if sign == nil then
-                    --log("here")
+                    log("here")
                     if next(ingredients) ~= nil then
-                        --log("here")
+                        log("here")
                         for _, res in pairs(ingredients) do
-                            --log("here")
+                            log("here")
                             if res.name == ing[1] then
-                                --log("here")
+                                log("here")
                                 res.amount = res.amount + ing[2]
                             else
-                                --log("here")
-                                table.insert(ingredients, {type = type1, name = ing[1], amount = ing[2]})
-                                break
+                                log("here")
+								log(mod)
+                                if mod == nil then
+									table.insert(ingredients, {type = type1, name = ing[1], amount = ing[2]})
+									break
+								else
+									table.insert(ingredients, {type = type1, name = ing[1], amount = mod})
+									break
+								end
                             end
                         end
                     else
-                        --log("here")
-                        table.insert(ingredients, {type = type1, name = ing[1], amount = ing[2]})
+                        log("here")
+                         if mod == nil then
+							table.insert(ingredients, {type = type1, name = ing[1], amount = ing[2]})
+						else
+							table.insert(ingredients, {type = type1, name = ing[1], amount = mod})
+						end
                     end
                 elseif sign == '+' then
                     --log("here")
@@ -1147,7 +1158,7 @@ recipe =
         end
 
         for i, item in pairs(mat.results) do
-            --log(serpent.block(item[1]))
+			--log(serpent.block(item[1]))
             --log(serpent.block(items))
             --log(serpent.block(items.inputs))
 
@@ -1155,16 +1166,37 @@ recipe =
             local ing = items.outputs[item[1]]
             local sign
             local mod
+			local prod = false
+			local prodvalue
+			local a_min
+			local a_max
 
             if data.raw.item[ing[1]] ~= nil or data.raw.fluid[ing[1]] ~= nil or data.raw.module[ing[1]] ~= nil then
                 --log(serpent.block(item[2]))
                 if item[2] ~= nil then
-                    sign = string.sub(item[2], 1, 1)
-                    mod = string.sub(item[2], 2, 10)
-                    if sign ~= '+' and sign ~= '-' and sign ~= '*' and sign ~= '/' and sign ~= 'R' then
-                        sign = nil
-                        mod = item[2]
-                    end
+					if tonumber(item[2]) ~= nil and tonumber(item[2]) < 1 then
+						--log("hit")
+						sign = nil
+						prod = true
+						prodvalue = item[2]
+							if item.a_min ~= nil then
+								a_min = item.a_min
+							else
+								a_min = 1
+							end
+							if item.a_max ~= nil then
+								a_max = item.a_max
+							else
+								a_max = 1
+							end
+					else
+						sign = string.sub(item[2], 1, 1)
+						mod = string.sub(item[2], 2, 10)
+						if sign ~= '+' and sign ~= '-' and sign ~= '*' and sign ~= '/' and sign ~= 'R' then
+							sign = nil
+							mod = item[2]
+						end
+					end
                 else
                     sign = nil
                     mod = nil
@@ -1184,26 +1216,37 @@ recipe =
                     type1 = 'item'
                 end
 
-                --if ing[1] == 'ralesias' then
-                   -- type1='item'
-               -- end
-
                 results = lastresults
 
                 if sign == nil then
                     if next(results) ~= nil then
+					--log("hit")
                         for _, res in pairs(results) do
                             if res.name == ing[1] then
                                 --log(res.name)
                                 --log(ing[1])
                                 --res.amount = res.amount + ing[2]
                                 res.amount = mod
-                            else
-                                table.insert(results, {type = type1, name = ing[1], amount = mod})
-                                break
+                            elseif prod == true then
+								--log("hit")
+								table.insert(results, {type = type1, name = ing[1], amount_min = a_min, amount_max = a_max, probability = prodvalue})
+							else
+							--log("hit")
+							--log(mod)
+								if mod ~= nil then
+									table.insert(results, {type = type1, name = ing[1], amount = mod})
+									break
+								else
+									table.insert(results, {type = type1, name = ing[1], amount = ing[2]})
+									break
+								end
                             end
                         end
-                    else
+                    elseif prod == true then
+					--log("hit")
+						table.insert(results, {type = type1, name = ing[1], amount_min = a_min, amount_max = a_max, probability = prodvalue})
+					else
+					--log("hit")
                         table.insert(results, {type = type1, name = ing[1], amount = ing[2]})
                     end
                 elseif sign == '+' then
