@@ -33,7 +33,7 @@ ENTITY {
     icon = "__pyalienlife__/graphics/icons/ulric-corral-mk01.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 1, result = "ulric-corral-mk01"},
+    minable = {mining_time = 0.5, result = "ulric-corral-mk01"},
     fast_replaceable_group = "ulric-corral",
     max_health = 100,
     corpse = "big-remnants",

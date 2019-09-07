@@ -44,7 +44,7 @@ ENTITY {
     icon = "__pyalienlife__/graphics/icons/incubator-mk01.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 1, result = "incubator-mk01"},
+    minable = {mining_time = 0.5, result = "incubator-mk01"},
     fast_replaceable_group = "incubator",
     max_health = 400,
     corpse = "big-remnants",

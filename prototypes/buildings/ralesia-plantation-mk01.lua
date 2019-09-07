@@ -63,7 +63,7 @@ ENTITY {
     icon = "__pycoalprocessing__/graphics/icons/ralesia-plantation-icon.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 1, result = "ralesia-plantation-mk01"},
+    minable = {mining_time = 0.5, result = "ralesia-plantation-mk01"},
     fast_replaceable_group = "ralesia-plantation",
     max_health = 60,
     corpse = "big-remnants",

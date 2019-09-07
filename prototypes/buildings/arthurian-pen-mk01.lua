@@ -34,7 +34,7 @@ ENTITY {
     icon = "__pyalienlife__/graphics/icons/arthurian-pen-mk01.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 1, result = "arthurian-pen-mk01"},
+    minable = {mining_time = 0.5, result = "arthurian-pen-mk01"},
     fast_replaceable_group = "arthurian-pen",
     max_health = 100,
     corpse = "big-remnants",
