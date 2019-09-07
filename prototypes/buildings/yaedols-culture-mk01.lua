@@ -82,9 +82,9 @@ ENTITY {
     working_visualisations = {
         {
             north_position = util.by_pixel(-144, -16),
-            west_position = {-2.5, -3.5},
-            south_position = {-2.5, -3.5},
-            east_position = {-2.5, -3.5},
+            west_position = util.by_pixel(-144, -16),
+            south_position = util.by_pixel(-144, -16),
+            east_position = util.by_pixel(-144, -16),
             animation = {
                 filename = "__pyalienlife__/graphics/entity/yaedols-culture/a1.png",
                 frame_count = 150,
@@ -96,9 +96,9 @@ ENTITY {
         },
         {
             north_position = util.by_pixel(-80, -16),
-            west_position = {-2.5, -3.5},
-            south_position = {-2.5, -3.5},
-            east_position = {-2.5, -3.5},
+            west_position = util.by_pixel(-80, -16),
+            south_position = util.by_pixel(-80, -16),
+            east_position = util.by_pixel(-80, -16),
             animation = {
                 filename = "__pyalienlife__/graphics/entity/yaedols-culture/a2.png",
                 frame_count = 150,
@@ -110,9 +110,9 @@ ENTITY {
         },
         {
             north_position = util.by_pixel(-16, -16),
-            west_position = {-2.5, -3.5},
-            south_position = {-2.5, -3.5},
-            east_position = {-2.5, -3.5},
+            west_position = util.by_pixel(-16, -16),
+            south_position = util.by_pixel(-16, -16),
+            east_position = util.by_pixel(-16, -16),
             animation = {
                 filename = "__pyalienlife__/graphics/entity/yaedols-culture/a3.png",
                 frame_count = 150,
@@ -124,9 +124,9 @@ ENTITY {
         },
         {
             north_position = util.by_pixel(48, -16),
-            west_position = {-2.5, -3.5},
-            south_position = {-2.5, -3.5},
-            east_position = {-2.5, -3.5},
+            west_position = util.by_pixel(48, -16),
+            south_position = util.by_pixel(48, -16),
+            east_position = util.by_pixel(48, -16),
             animation = {
                 filename = "__pyalienlife__/graphics/entity/yaedols-culture/a4.png",
                 frame_count = 150,
@@ -138,9 +138,9 @@ ENTITY {
         },
         {
             north_position = util.by_pixel(112, -16),
-            west_position = {-2.5, -3.5},
-            south_position = {-2.5, -3.5},
-            east_position = {-2.5, -3.5},
+            west_position = util.by_pixel(112, -16),
+            south_position = util.by_pixel(112, -16),
+            east_position = util.by_pixel(112, -16),
             animation = {
                 filename = "__pyalienlife__/graphics/entity/yaedols-culture/a5.png",
                 frame_count = 150,
@@ -152,9 +152,9 @@ ENTITY {
         },
         {
             north_position = util.by_pixel(160, -16),
-            west_position = {-2.5, -3.5},
-            south_position = {-2.5, -3.5},
-            east_position = {-2.5, -3.5},
+            west_position = util.by_pixel(160, -16),
+            south_position = util.by_pixel(160, -16),
+            east_position = util.by_pixel(160, -16),
             animation = {
                 filename = "__pyalienlife__/graphics/entity/yaedols-culture/a6.png",
                 frame_count = 150,
