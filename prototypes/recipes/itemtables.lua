@@ -40,16 +40,18 @@ items.inputs.ulricfood02 = {'ulric-food-02', 1}
 --items.inputs.s10 = {'ralesia-seeds', 5}
 --items.inputs.agrsshdhsddgjfdhsfnfkjfhe75462346344267436846 = {'ralesia-seeds', 5}
 
-items.outputs.ralesias = {'ralesias', 1}
-items.outputs.meat = {'meat',1}
-items.outputs.bones = {'bones', 1}
-items.outputs.blood = {'blood',10}
-items.outputs.skin = {'skin', 1}
-items.outputs.brain = {'brain',1}
-items.outputs.guts = {'guts',1}
-items.outputs.fat = {'mukmoux-fat',1}
-items.outputs.bonemeal = {'bonemeal',1}
-items.outputs.emptybarrel = {'empty-barrel',1}
+items.inputs.ralesias = {'ralesias', 1}
+items.inputs.meat = {'meat',1}
+items.inputs.bones = {'bones', 1}
+items.inputs.blood = {'blood',10}
+items.inputs.skin = {'skin', 1}
+items.inputs.brain = {'brain',1}
+items.inputs.guts = {'guts',1}
+items.inputs.fat = {'mukmoux-fat',1}
+items.inputs.bonemeal = {'bonemeal',1}
+items.inputs.emptybarrel = {'empty-barrel',1}
 
+items.outputs = items.inputs
+--can put output replacements below here
 
 return items
