@@ -17,13 +17,13 @@ RECIPE('mukmoux-pasture'):remove_unlock('coal-processing-2')
 
 
 -----RECIPES-----
+FLUID('carbon-dioxide'):subgroup_order("py-alienlife-items", "a")
 ITEM('ralesia-seeds'):subgroup_order("py-alienlife-plants", "a")
 ITEM('bonemeal'):subgroup_order("py-alienlife-items", "a")
 ITEM('organics'):subgroup_order("py-alienlife-items", "a")
 ITEM('mukmoux-fat'):subgroup_order("py-alienlife-items", "a")
 ITEM('fawogae-substrate'):subgroup_order("py-alienlife-items", "a")
-RECIPE('fawogae'):set_fields {enabled = false}:add_unlock('mycology-mk01'):add_ingredient({type = "item", name = "fungal-substrate", amount = 1}):add_ingredient({type = "item", name = "fawogae-spore", amount = 1}):subgroup_order("py-alienlife-plants", "a")
-RECIPE('fawogae2'):add_unlock('mycology-mk02'):add_ingredient({type = "item", name = "fungal-substrate", amount = 1}):add_ingredient({type = "item", name = "fawogae-spore", amount = 1}):subgroup_order("py-alienlife-plants", "a")
+RECIPE('fawogae'):set_fields {enabled = false}
 RECIPE('log1'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a"):remove_unlock('coal-processing-1'):add_unlock('botany-mk01')
 RECIPE('log2'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a"):remove_unlock('coal-processing-1'):add_unlock('botany-mk01')
 RECIPE('log3'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a"):remove_unlock('coal-processing-1'):add_unlock('botany-mk01')

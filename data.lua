@@ -94,6 +94,7 @@ require('prototypes/recipes/recipes-auog')
 require('prototypes/recipes/recipes-fish')
 require('prototypes/recipes/recipes-yaedols')
 require('prototypes/recipes/recipes-auto-ralesia')
+require('prototypes/recipes/recipes-auto-fawogae')
 require('prototypes/recipes/recipes-auto-ulric')
 require('prototypes/recipes/recipes-ulric-products')
 

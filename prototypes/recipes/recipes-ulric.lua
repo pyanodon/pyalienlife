@@ -99,58 +99,7 @@ RECIPE {
 
 ----adverse products----
 
-RECIPE {
-    type = 'recipe',
-    name = 'ulric-manure-02',
-    category = 'ulric',
-    enabled = false,
-    energy_required = 80,
-    ingredients = {
-        {type = 'item', name = 'ulric-food-01', amount = 1},
-        {type = 'item', name = 'salt', amount = 10},
-        {type = 'item', name = 'water-barrel', amount = 5},
-    },
-    results = {
-        {type = 'item', name = 'manure', amount = 5},
-        {type = 'item', name = 'empty-barrel', amount = 5},
-    },
-    main_product = "manure",
-}:add_unlock("ulric")
 
-RECIPE {
-    type = 'recipe',
-    name = 'ulric-manure-01-food',
-    category = 'ulric',
-    enabled = false,
-    energy_required = 60,
-    ingredients = {
-        {type = 'item', name = 'ulric-food-02', amount = 1},
-        {type = 'item', name = 'water-barrel', amount = 3},
-    },
-    results = {
-        {type = 'item', name = 'manure', amount = 8},
-        {type = 'item', name = 'empty-barrel', amount = 3},
-    },
-    main_product = "manure",
-}:add_unlock("ulric")
-
-RECIPE {
-    type = 'recipe',
-    name = 'ulric-manure-02-food',
-    category = 'ulric',
-    enabled = false,
-    energy_required = 60,
-    ingredients = {
-        {type = 'item', name = 'ulric-food-02', amount = 1},
-        {type = 'item', name = 'salt', amount = 10},
-        {type = 'item', name = 'water-barrel', amount = 5},
-    },
-    results = {
-        {type = 'item', name = 'manure', amount = 10},
-        {type = 'item', name = 'empty-barrel', amount = 5},
-    },
-    main_product = "manure",
-}:add_unlock("ulric")
 
 
 ----PROCESSING----
