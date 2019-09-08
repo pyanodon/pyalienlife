@@ -91,4 +91,8 @@ data:extend {
         type = "recipe-category",
         name = "fish-farm"
     },
+    {
+        type = "recipe-category",
+        name = "yaedols"
+    },
 }

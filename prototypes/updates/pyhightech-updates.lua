@@ -59,6 +59,7 @@ RECIPE('fertilizer-1'):change_category('fbreator')
 RECIPE('fertilizer-3'):change_category('fbreator')
 RECIPE('fertilizer-4'):change_category('fbreator')
 RECIPE('fish-food-02'):remove_ingredient("blood"):add_ingredient({type = "item", name = "blood-meal", amount = 5})
+RECIPE('yaedols-codex'):replace_ingredient("glass", "phosphate-glass")
 
 
 RECIPE('zipir-carcass'):remove_unlock('basic-electronics')

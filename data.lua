@@ -34,6 +34,7 @@ require("prototypes/technologies/growth-hormone")
 require("prototypes/technologies/rennea")
 require("prototypes/technologies/phadai")
 require("prototypes/technologies/auog")
+require("prototypes/technologies/yaedols")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -64,6 +65,7 @@ require("prototypes/buildings/phadai-enclosure-mk01")
 require("prototypes/buildings/auog-paddock-mk01")
 require("prototypes/buildings/atomizer-mk01")
 require("prototypes/buildings/fish-farm-mk01")
+require("prototypes/buildings/yaedols-culture-mk01")
 
 --test chest--
 require("prototypes/buildings/test-filtered-chest-mk01")
@@ -90,8 +92,9 @@ require('prototypes/recipes/recipes-rennea')
 require('prototypes/recipes/recipes-phadai')
 require('prototypes/recipes/recipes-auog')
 require('prototypes/recipes/recipes-fish')
+require('prototypes/recipes/recipes-yaedols')
 require('prototypes/recipes/recipes-auto-ralesia')
-require('prototypes/recipes/recipes-auto-ulric')
+--require('prototypes/recipes/recipes-auto-ulric')
 --require('prototypes/recipes/recipes-ulric-products')
 
 
