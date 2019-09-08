@@ -1017,7 +1017,7 @@ recipe =
         for i, item in pairs(mat.ingredients) do
             --log(serpent.block(ingredients))
 
-			log(serpent.block(item[1]))
+			--log(serpent.block(item[1]))
             --log(serpent.block(item))
             --log(serpent.block(items))
             --log(serpent.block(items.inputs))
@@ -1045,7 +1045,7 @@ recipe =
                     mod = nil
                 end
 
-                log(serpent.block(ing))
+                --log(serpent.block(ing))
                 --log(sign)
                 --log(mod)
 
@@ -1062,17 +1062,17 @@ recipe =
                 ingredients = lastings
 
                 if sign == nil then
-                    log("here")
+                    --log("here")
                     if next(ingredients) ~= nil then
-                        log("here")
+                        --log("here")
                         for _, res in pairs(ingredients) do
-                            log("here")
+                            --log("here")
                             if res.name == ing[1] then
-                                log("here")
+                               --log("here")
                                 res.amount = res.amount + ing[2]
                             else
-                                log("here")
-								log(mod)
+                                --log("here")
+								--log(mod)
                                 if mod == nil then
 									table.insert(ingredients, {type = type1, name = ing[1], amount = ing[2]})
 									break
@@ -1083,7 +1083,7 @@ recipe =
                             end
                         end
                     else
-                        log("here")
+                        --log("here")
                          if mod == nil then
 							table.insert(ingredients, {type = type1, name = ing[1], amount = ing[2]})
 						else
@@ -1158,6 +1158,8 @@ recipe =
         end
 
         for i, item in pairs(mat.results) do
+			log(serpent.block(mat.results))
+			log(serpent.block(item))
 			--log(serpent.block(item[1]))
             --log(serpent.block(items))
             --log(serpent.block(items.inputs))
@@ -1171,6 +1173,7 @@ recipe =
 			local a_min
 			local a_max
 
+			--log(serpent.block(ing))
             if data.raw.item[ing[1]] ~= nil or data.raw.fluid[ing[1]] ~= nil or data.raw.module[ing[1]] ~= nil then
                 --log(serpent.block(item[2]))
                 if item[2] ~= nil then
@@ -1220,45 +1223,92 @@ recipe =
 
                 if sign == nil then
                     if next(results) ~= nil then
-					--log("hit")
-                        for _, res in pairs(results) do
-                            if res.name == ing[1] then
-                                --log(res.name)
-                                --log(ing[1])
-                                --res.amount = res.amount + ing[2]
-                                res.amount = mod
-                            elseif prod == true then
-								--log("hit")
+					log("hit")
+						local rl = {}
+						for _, res in pairs(results) do
+							rl[res.name] = true
+						end
+						if rl[ing[1]] then
+							for _, res in pairs(results) do
+								if res.name == ing[1] then
+									--log(res.name)
+									--log(ing[1])
+									--res.amount = res.amount + ing[2]
+									if prod == false then
+										res.amount = mod
+									elseif prod == true then
+										--log("hit")
+										table.insert(results, {type = type1, name = ing[1], amount_min = a_min, amount_max = a_max, probability = prodvalue})
+									end
+								end
+							end
+						else
+							log("hit")
+							log(mod)
+							if mod ~= nil then
+								table.insert(results, {type = type1, name = ing[1], amount = mod})
+							elseif prod == true then
+								log("hit")
 								table.insert(results, {type = type1, name = ing[1], amount_min = a_min, amount_max = a_max, probability = prodvalue})
 							else
-							--log("hit")
-							--log(mod)
-								if mod ~= nil then
-									table.insert(results, {type = type1, name = ing[1], amount = mod})
-									break
-								else
-									table.insert(results, {type = type1, name = ing[1], amount = ing[2]})
-									break
-								end
-                            end
+								log("hit")
+								table.insert(results, {type = type1, name = ing[1], amount = ing[2]})
+							end
                         end
                     elseif prod == true then
-					--log("hit")
+					log("hit")
 						table.insert(results, {type = type1, name = ing[1], amount_min = a_min, amount_max = a_max, probability = prodvalue})
 					else
-					--log("hit")
+					log("hit")
                         table.insert(results, {type = type1, name = ing[1], amount = ing[2]})
                     end
                 elseif sign == '+' then
                     if next(results) ~= nil then
-                        for _, res in pairs(results) do
-                            if res.name == ing[1] then
-                                res.amount = res.amount + mod
-                            else
-                                table.insert(results, {type = type1, name = ing[1], amount = ing[2] + mod})
-                                break
-                            end
-                        end
+						local rl = {}
+						for _, res in pairs(results) do
+							rl[res.name] = true
+						end
+						if rl[ing[1]] then
+							for _, res in pairs(results) do
+								log('hit')
+								log(serpent.block(res))
+								if res.name == ing[1] then
+									log(serpent.block(res))
+									if res.amount ~= nil then
+										res.amount = res.amount + mod
+									elseif res.probability ~= nil then
+										log(serpent.block(ing))
+										log(mod)
+										local num1,num2 = string.match(mod, '(%d+)/(%d+)')
+										log(num1)
+										log(num2)
+										if not tonumber(mod) then
+											mod = num1/num2
+										end
+										log(mod)
+										res.probability = res.probability + mod
+										--break
+									end
+								end
+							end
+						else
+							--log(ing[1])
+							--log(mod)
+							if res.amount ~= nil then
+								table.insert(results, {type = type1, name = ing[1], amount = ing[2] + mod})
+								break
+							elseif res.probability ~= nil then
+								--log(mod)
+								local num1,num2 = string.match(mod, '(%d+)/(%d+)')
+								--log(num1)
+								--log(num2)
+								mod = num1/num2
+								--log(mod)
+								res.probability = res.probability + mod
+								break
+							end
+						end
+						
                     else
                         table.insert(results, {type = type1, name = ing[1], amount = ing[2] + mod})
                     end
