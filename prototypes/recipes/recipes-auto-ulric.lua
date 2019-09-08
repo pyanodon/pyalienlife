@@ -22,7 +22,7 @@ fun.autorecipes {
 				{
 					{'bones',4/10,a_min=1,a_max=3},
 					{'meat',4/10,a_min=1,a_max=3},
-					{'mukmoux-fat',3/10,a_min=1,a_max=1},
+					{'fat',3/10,a_min=1,a_max=1},
 					{'brain',4/10,a_min=1,a_max=1},
 					{'guts',4/10,a_min=1,a_max=1},
 					{'bonemeal',1},
@@ -31,7 +31,7 @@ fun.autorecipes {
 				crafting_speed = 130,
 				tech = 'ulric'
         },
-        {
+		{
 			ingredients =
 				{
 					--{'cage'},
