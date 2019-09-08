@@ -96,46 +96,6 @@ RECIPE {
 
 ---breeding---
 
-RECIPE {
-    type = 'recipe',
-    name = 'ulric-sex-01',
-    category = 'ulric',
-    enabled = false,
-    energy_required = 130,
-    ingredients = {
-        {type = 'item', name = 'cage', amount = 1},
-        {type = 'item', name = 'ulric-food-01', amount = 1},
-        {type = 'item', name = 'water-barrel', amount = 3},
-    },
-    results = {
-        {type = 'item', name = 'caged-ulric', amount = 1, probability = 0.5},
-        {type = 'item', name = 'empty-barrel', amount = 3},
-    },
-    main_product = "caged-ulric",
-    subgroup = 'py-alienlife-ulric',
-    order = 'a',
-}:add_unlock("organic-breeding")
-
-
-RECIPE {
-    type = 'recipe',
-    name = 'ulric-sex-01-food',
-    category = 'ulric',
-    enabled = false,
-    energy_required = 110,
-    ingredients = {
-        {type = 'item', name = 'cage', amount = 1},
-        {type = 'item', name = 'ulric-food-02', amount = 1},
-        {type = 'item', name = 'water-barrel', amount = 3},
-    },
-    results = {
-        {type = 'item', name = 'caged-ulric', amount = 1, probability = 0.5},
-        {type = 'item', name = 'empty-barrel', amount = 3},
-    },
-    main_product = "caged-ulric",
-    subgroup = 'py-alienlife-ulric',
-    order = 'a',
-}:add_unlock("organic-breeding")
 
 ----adverse products----
 
