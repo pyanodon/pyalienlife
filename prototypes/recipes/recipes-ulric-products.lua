@@ -1,9 +1,8 @@
-local fun = require("prototypes/functions/functions")
 
+local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
     name = 'manure',
-	--baseitem = 'ralesia',
 	category = 'ulric',
 	module_limitations = 'ulric',
     mats =
@@ -11,16 +10,29 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{'ulricfood01'},
-					{'waterbarrel',3},
+					{'ralesiaseeds'},
 				},
 			results =
 				{
-					{'manure',5},
-					{'emptybarrel',3},
+					{'stone','*4'}
 				},
-			crafting_speed = 100,
+			crafting_speed = 130,
 			tech = 'ulric'
 		},
-	},
+		{
+			ingredients =
+				{
+                    --{'s1'},
+                    {'water'},
+				},
+			results =
+				{
+					--{'a','*5'}
+					{'stone','+1'}
+				},
+				crafting_speed = 120,
+				tech = 'ulric'
+		},
+
+	}
 }
