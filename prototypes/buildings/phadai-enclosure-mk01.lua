@@ -198,7 +198,7 @@ ENTITY {
 
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/phadai-enclosure.ogg", volume = 0.65},
+        sound = {filename = "__pyalienlife__/sounds/phadai-enclosure.ogg", volume = 0.55},
         idle_sound = {filename = "__pyalienlife__/sounds/phadai-out.ogg", volume = 0.9},
         apparent_volume = 1.2
     }

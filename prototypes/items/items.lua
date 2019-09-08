@@ -59,6 +59,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "yaedols-spores",
+    icon = "__pyalienlife__/graphics/icons/yaedols-spores.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
     name = "wood-seedling",
     icon = "__pyalienlife__/graphics/icons/mip/seedling-1.png",
     icon_size = 64,
@@ -1129,6 +1140,17 @@ ITEM {
     stack_size = 10
 }
 
+ITEM {
+    type = "item",
+    name = "yaedols-codex",
+    icon = "__pyalienlife__/graphics/icons/yaedols-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
 ------RULES-----
 
 local alien_life_limitations_ulric =
@@ -1499,6 +1521,22 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+ITEM {
+    type = "module",
+    name = "yaedols",
+    icon = "__pyalienlife__/graphics/icons/yaedols.png",
+    icon_size = 64,
+	category = "yaedols",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "a",
+    stack_size = 10,
+	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_yaedols,
+	limitation_message_key = "Its full"
+}
+
 data:extend(
 {
   {
@@ -1556,6 +1594,10 @@ data:extend(
   {
     type = "module-category",
     name = "fish"
+  },
+  {
+    type = "module-category",
+    name = "yaedols"
   },
 }
 )
