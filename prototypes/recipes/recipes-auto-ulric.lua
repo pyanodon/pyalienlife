@@ -16,7 +16,7 @@ fun.autorecipes {
 				{
 					{'cage'},
                     {'ulricfood01'},
-                    {'waterbarrel',3},
+                    {'waterbarrel',3,return_item={'empty-barrel'}},
 				},
 			results =
 				{
