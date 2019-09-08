@@ -63,6 +63,7 @@ RECIPE('yaedols-codex'):replace_ingredient("glass", "phosphate-glass")
 
 
 RECIPE('zipir-carcass'):remove_unlock('basic-electronics')
+RECIPE('fawogae2'):remove_unlock('advanced-electronics')
 RECIPE('fiber'):remove_unlock('basic-electronics')
 RECIPE('urea'):change_category('vrauks'):subgroup_order("py-alienlife-auog", "a")
 ITEM('urea'):subgroup_order("py-alienlife-auog", "a")
@@ -158,44 +159,6 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'ulric-manure-03',
-    category = 'ulric',
-    enabled = false,
-    energy_required = 80,
-    ingredients = {
-        {type = 'item', name = 'ulric-food-01', amount = 1},
-        {type = 'item', name = 'salt', amount = 10},
-        {type = 'item', name = 'raw-fiber', amount = 5},
-        {type = 'item', name = 'water-barrel', amount = 5},
-    },
-    results = {
-        {type = 'item', name = 'manure', amount = 10},
-        {type = 'item', name = 'empty-barrel', amount = 5},
-    },
-    main_product = "manure",
-}:add_unlock("ulric")
-
-RECIPE {
-    type = 'recipe',
-    name = 'ulric-manure-03-food',
-    category = 'ulric',
-    enabled = false,
-    energy_required = 80,
-    ingredients = {
-        {type = 'item', name = 'ulric-food-02', amount = 1},
-        {type = 'item', name = 'salt', amount = 10},
-        {type = 'item', name = 'raw-fiber', amount = 5},
-        {type = 'item', name = 'water-barrel', amount = 5},
-    },
-    results = {
-        {type = 'item', name = 'manure', amount = 12},
-        {type = 'item', name = 'empty-barrel', amount = 5},
-    },
-    main_product = "manure",
-}:add_unlock("ulric")
-
-RECIPE {
-    type = 'recipe',
     name = 'mukmoux-manure-03',
     category = 'mukmoux',
     enabled = false,
@@ -269,21 +232,6 @@ RECIPE {
     },
     main_product = "manure",
 }:add_unlock("scrondrix")
-
-RECIPE {
-    type = 'recipe',
-    name = 'urea-00',
-    category = 'auog',
-    enabled = false,
-    energy_required = 25,
-    ingredients = {
-        {type = 'item', name = 'fawogae', amount = 5}
-    },
-    results = {
-        {type = 'item', name = 'urea', amount = 15}
-    },
-    main_product = 'urea'
-}:add_unlock('auog')
 
 RECIPE {
     type = 'recipe',

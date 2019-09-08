@@ -12,6 +12,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{'ralesiaseeds'},
+					{'water'},
 				},
 			results =
 				{
@@ -24,7 +25,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     --{'s1'},
-                    {'water'},
+					{'hydrogen','*10'},
 				},
 			results =
 				{
@@ -55,14 +56,14 @@ fun.autorecipes {
                     --{'s1'},
                     --{'a'},
                     --{'b','+15'},
-                    {'hydrogen','*10'},
+                    {'manure',5},
 				},
 			results =
 				{
 					--{'a','*10'},
 					{'ralesias','+3'}
 				},
-				crafting_speed = 120,
+				crafting_speed = 100,
 				tech = 'botany-mk02'
         },
         {
@@ -72,14 +73,32 @@ fun.autorecipes {
                     --{'a'},
                     --{'b','+15'},
                     --{'c','*10'},
-                    {'coarse'},
+                    {'ash',10},
 				},
 			results =
 				{
 					--{'a','*12'},
+					{'ralesias','+2'}
+				},
+				crafting_speed = 100,
+				tech = 'botany-mk02'
+        },
+        {
+			ingredients =
+				{
+                    --{'s1'},
+                    --{'a'},
+					--{'b','+15'},
+					{'ash','R'},
+                    {'biomass','*5'},
+                    --{'d'},
+				},
+			results =
+				{
+					--{'a','*15'},
 					{'ralesias','+3'}
 				},
-				crafting_speed = 120,
+				crafting_speed = 100,
 				tech = 'botany-mk02'
         },
         {
@@ -89,24 +108,6 @@ fun.autorecipes {
                     --{'a'},
 					--{'b','+15'},
 					{'hydrogen','R'},
-                    {'carbondioxide','*10'},
-                    --{'d'},
-				},
-			results =
-				{
-					--{'a','*15'},
-					{'ralesias','+3'}
-				},
-				crafting_speed = 120,
-				tech = 'botany-mk02'
-        },
-        {
-			ingredients =
-				{
-                    --{'s1'},
-                    --{'a'},
-					--{'b','+15'},
-					{'carbondioxide','R'},
                     {'syngas','*3'},
                     --{'d'},
 				},
@@ -115,7 +116,7 @@ fun.autorecipes {
 					--{'a','*17'},
 					{'ralesias','+2'}
 				},
-				crafting_speed = 120,
+				crafting_speed = 100,
 				tech = 'botany-mk03'
         },
         {
@@ -124,9 +125,9 @@ fun.autorecipes {
                     --{'s1'},
                     --{'a'},
 				   --{'b','+15'},
-				   {'carbondioxide','R'},
+				   --{'carbondioxide','R'},
 				   {'syngas','R'},
-                    {'fluegas','*2'},
+                	{'fluegas','*2'},
                     --{'d'},
                 },
 			results =
@@ -134,25 +135,7 @@ fun.autorecipes {
 					--{'a','*20'},
 					{'ralesias','+3'}
 				},
-				crafting_speed = 120,
-				tech = 'botany-mk03'
-        },
-        {
-			ingredients =
-				{
-                    --{'s1'},
-                    --{'a'},
-                    --{'b','+15'},
-                    --{'g','*2'},
-                    {'coarse','R'},
-                    {'manure'},
-				},
-			results =
-				{
-					--{'a','*22'},
-					{'ralesias','+2'}
-				},
-				crafting_speed = 120,
+				crafting_speed = 100,
 				tech = 'botany-mk03'
         },
         {
@@ -164,7 +147,7 @@ fun.autorecipes {
                     --{'g','*2'},
 					--{'d'},
 					{'manure','R'},
-                    {'fertilizer','+6'},
+                    {'fertilizer','+4'},
 				},
 			results =
 				{
@@ -172,7 +155,7 @@ fun.autorecipes {
 					--{'a','+3'}
 					{'ralesias',25}
 				},
-				crafting_speed = 120,
+				crafting_speed = 100,
 				tech = 'botany-mk04'
 		},
 		{
@@ -192,7 +175,7 @@ fun.autorecipes {
 					--{'a','+3'}
 					{'ralesias',25}
 				},
-				crafting_speed = 120,
+				crafting_speed = 100,
 				tech = 'botany-mk04'
 		},
 	}

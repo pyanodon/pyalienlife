@@ -27,12 +27,32 @@ ITEM {
     name = "fungal-substrate",
     icon = "__pyalienlife__/graphics/icons/fungal-substrate.png",
     icon_size = 32,
-    fuel_category = "chemical",
-    fuel_value = "4MJ",
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 500
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "fungal-substrate-02",
+    icon = "__pyalienlife__/graphics/icons/fungal-substrate-02.png",
+    icon_size = 32,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "fungal-substrate-03",
+    icon = "__pyalienlife__/graphics/icons/fungal-substrate-03.png",
+    icon_size = 32,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 100
 }
 
 ITEM {

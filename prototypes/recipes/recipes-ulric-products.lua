@@ -10,11 +10,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{'ralesiaseeds'},
+					{'ralesiaseeds',5},
+					{'waterbarrel',5},
 				},
 			results =
 				{
-					{'stone','*4'}
+					{'manure','*3'},
+					{'emptybarrel',5},
 				},
 			crafting_speed = 130,
 			tech = 'ulric'
@@ -22,17 +24,84 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    --{'s1'},
-                    {'water'},
+					{'ralesiaseeds','R'},
+					{'ulricfood01'},
 				},
 			results =
 				{
 					--{'a','*5'}
-					{'stone','+1'}
+					{'manure','+2'}
 				},
 				crafting_speed = 120,
 				tech = 'ulric'
 		},
-
+		{
+			ingredients =
+				{
+					{'salt',4},
+				},
+			results =
+				{
+					--{'a','*5'}
+					{'manure','+1'}
+				},
+				crafting_speed = 120,
+				tech = 'ulric'
+		},
+		{
+			ingredients =
+				{
+					{'rawfiber',5},
+				},
+			results =
+				{
+					--{'a','*5'}
+					{'manure','+2'}
+				},
+				crafting_speed = 120,
+				tech = 'ulric'
+		},
+		{
+			ingredients =
+				{
+					{'salt','R'},
+					{'rawfiber','R'},
+					{'ulricfood01','R'},
+					{'ulricfood02'},
+				},
+			results =
+				{
+					--{'a','*5'}
+					{'manure',8}
+				},
+				crafting_speed = 100,
+				tech = 'ulric'
+		},
+		{
+			ingredients =
+				{
+					{'salt',4},
+				},
+			results =
+				{
+					--{'a','*5'}
+					{'manure','+2'}
+				},
+				crafting_speed = 100,
+				tech = 'ulric'
+		},
+		{
+			ingredients =
+				{
+					{'rawfiber',5},
+				},
+			results =
+				{
+					--{'a','*5'}
+					{'manure','+2'}
+				},
+				crafting_speed = 100,
+				tech = 'ulric'
+		},
 	}
 }
