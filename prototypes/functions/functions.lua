@@ -1217,7 +1217,7 @@ recipe =
             local prodvalue
             local a_min
             local a_max
-			
+
             --log(serpent.block(ing))
             if data.raw.item[ing[1]] ~= nil or data.raw.fluid[ing[1]] ~= nil or data.raw.module[ing[1]] ~= nil then
                 --log(serpent.block(item[2]))
@@ -1487,19 +1487,19 @@ recipe =
             local name1 = baseitem .. number
             local name2 = 'output-' .. baseitem .. '-' .. number
 			local itemresult
-			
+
 			if mat.newitem == true then
-				
+
 				reuseitem = false
-				
+
 			else
-			
+
 				reuseitem = true
-				
+
 			end
-			
+
 			local mp
-			
+
 			if reuseitem == true then
 				log("hit")
 				itemresult = {{type = 'item', name = lastitem, amount = 1}}
@@ -1509,9 +1509,9 @@ recipe =
 				itemresult = {{type = 'item', name = name1, amount = 1}}
 				mp = name1
 			end
-				
+
 				log(mp)
-				
+
             RECIPE {
                 type = 'recipe',
                 name = name1,
@@ -1519,11 +1519,13 @@ recipe =
                 enabled = enabled,
                 energy_required = crafting_speed,
                 ingredients = ingredients,
-                results = itemresult,
+                results = table.deepcopy(itemresult),
                 subgroup = recipe.subgroup,
                 order = recipe.order,
                 main_product = mp
             }
+
+            log(serpent.block(itemresult))
 
             log(return_item)
             log(return_item_name)
@@ -1531,32 +1533,41 @@ recipe =
                 overrides.add_result(name1, {name = return_item_name, amount = return_amount})
             end
 
-			if reuseitem == false then
-			
-			local icons
-			
+            local itemicon
+            local recipeicon
+
 			if icon ~= nil then
-			
-				icons =
+
+				itemicon =
 					{
 						{icon = data.raw.item[baseitem].icon or data.raw.module[baseitem].icon, icon_size = 64},
 						{icon = icon, icon_size = 64, scale = 0.25, shift = {5,-5}}
-					}
-			
+                    }
+
+                recipeicon =
+                    {
+                        {icon = icon, icon_size = 64},
+						{icon = data.raw.item[baseitem].icon or data.raw.module[baseitem].icon, icon_size = 64, scale = 0.25, shift = {5,-5}}
+                    }
+
 			else
-			
-				icons =
+
+				itemicon =
 					{
 						{icon = data.raw.item[baseitem].icon or data.raw.module[baseitem].icon, icon_size = 64}
 					}
-					
+
 			end
-			
+
+			if reuseitem == false then
+
+
+
             ITEM {
                 type = 'item',
                 name = name1,
                 category = data.raw.item[baseitem].category,
-                icons = icons,
+                icons = itemicon,
                 --icon_size = 64,
                 flags = {},
                 subgroup = recipe.subgroup,
@@ -1564,10 +1575,12 @@ recipe =
                 stack_size = 500,
                 localised_name = baseitem
             }
-			
+
 			lastitem = table.deepcopy(name1)
 			log(lastitem)
 			end
+
+log(serpent.block(itemresult))
 
             RECIPE {
                 type = 'recipe',
@@ -1579,15 +1592,16 @@ recipe =
                 results = results,
                 subgroup = recipe.subgroup,
                 order = recipe.order,
-                --icon = data.raw.item[baseitem].icon or data.raw.module[baseitem].icon,
-                --icon_size = 32,
-                main_product = results[1].name
+                icons = recipeicon,
+                --icon_size = 64,
+                --main_product = results[1].name
+                localised_name = mat.name,
             }
 
-            if require_item and require_item_name ~= nil then
+            --if require_item and require_item_name ~= nil then
                 --doesnt work needs replaced if we use this for something
                 --RECIPE(name2):add_ingredient({type = t1, name = require_item_name, amount = require_amount})
-            end
+            --end
 
             if tech_unlock ~= nil then
                 RECIPE(name1):add_unlock(tech_unlock)
