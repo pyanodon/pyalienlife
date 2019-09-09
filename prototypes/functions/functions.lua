@@ -19,8 +19,8 @@ end
 
 --add item/fluid to recipe results
 function overrides.add_result(recipe, result)
-    log(serpent.block(recipe))
-    log(serpent.block(result))
+    --log(serpent.block(recipe))
+	--log(serpent.block(result))
     --check that recipe exists before doing anything else
     if data.raw.recipe[recipe] ~= nil then
         --check if result is item or fluid and that it exists
@@ -989,10 +989,12 @@ recipe =
 					item,
 					amount*, -- defaults to 1:1 of output item
 					},
+				icon - is trigger to use item as secondary icon
 				}
 			},
 		crafting_speed = num,
-		tech = string
+		tech = string,
+		newitem = bool
 		},
 	category = string,
     outcategory = string,*
@@ -1019,11 +1021,14 @@ recipe =
     local require_amount
     local crafting_speed
     local tech_unlock
+	local icon
 
     local lastings = {}
     local lastresults = {}
     --log(serpent.block(recipe))
     local number = 1
+	local reuseitem = false
+		local lastitem
 
     if recipe.singlerecipe == nil or not recipe.singlerecipe == false then
         singlerecipe = true
@@ -1199,7 +1204,7 @@ recipe =
 
         for i, item in pairs(mat.results) do
             --log(serpent.block(mat.results))
-            --log(serpent.block(item))
+            log(serpent.block(item))
             --log(serpent.block(item[1]))
             --log(serpent.block(items))
             --log(serpent.block(items.inputs))
@@ -1212,7 +1217,7 @@ recipe =
             local prodvalue
             local a_min
             local a_max
-
+			
             --log(serpent.block(ing))
             if data.raw.item[ing[1]] ~= nil or data.raw.fluid[ing[1]] ~= nil or data.raw.module[ing[1]] ~= nil then
                 --log(serpent.block(item[2]))
@@ -1253,10 +1258,19 @@ recipe =
 
                 if data.raw.item[ing[1]] ~= nil then
                     type1 = 'item'
+					if item.icon ~= nil then
+						icon = data.raw.item[ing[1]].icon
+					end
                 elseif data.raw.fluid[ing[1]] ~= nil then
                     type1 = 'fluid'
+					if item.icon ~= nil then
+						icon = data.raw.fluid[ing[1]].icon
+					end
                 elseif data.raw.module[ing[1]] ~= nil then
                     type1 = 'item'
+					if item.icon ~= nil then
+						icon = data.raw.module[ing[1]].icon
+					end
                 else
                     type1 = 'item'
                 end
@@ -1472,7 +1486,32 @@ recipe =
 
             local name1 = baseitem .. number
             local name2 = 'output-' .. baseitem .. '-' .. number
-
+			local itemresult
+			
+			if mat.newitem == true then
+				
+				reuseitem = false
+				
+			else
+			
+				reuseitem = true
+				
+			end
+			
+			local mp
+			
+			if reuseitem == true then
+				log("hit")
+				itemresult = {{type = 'item', name = lastitem, amount = 1}}
+				mp = lastitem
+			else
+				log("hit")
+				itemresult = {{type = 'item', name = name1, amount = 1}}
+				mp = name1
+			end
+				
+				log(mp)
+				
             RECIPE {
                 type = 'recipe',
                 name = name1,
@@ -1480,42 +1519,55 @@ recipe =
                 enabled = enabled,
                 energy_required = crafting_speed,
                 ingredients = ingredients,
-                results = {{type = 'item', name = name1, amount = 1}},
+                results = itemresult,
                 subgroup = recipe.subgroup,
                 order = recipe.order,
-                main_product = baseitem .. number
+                main_product = mp
             }
 
             log(return_item)
             log(return_item_name)
             if return_item and return_item_name ~= nil then
-                --[[
-                local t1
-
-                if data.raw.item[return_item_name] ~= nil then
-                    t1 = 'item'
-                elseif data.raw.fluid[return_item_name] ~= nil then
-                    t1 = 'fluid'
-                elseif data.raw.module[return_item_name] ~= nil then
-                    t1 = 'item'
-                end
-]]--
-                --RECIPE(name1):add_result({type = t1, name = return_item_name, amount = return_amount})
                 overrides.add_result(name1, {name = return_item_name, amount = return_amount})
             end
 
+			if reuseitem == false then
+			
+			local icons
+			
+			if icon ~= nil then
+			
+				icons =
+					{
+						{icon = data.raw.item[baseitem].icon or data.raw.module[baseitem].icon, icon_size = 64},
+						{icon = icon, icon_size = 64, scale = 0.25, shift = {5,-5}}
+					}
+			
+			else
+			
+				icons =
+					{
+						{icon = data.raw.item[baseitem].icon or data.raw.module[baseitem].icon, icon_size = 64}
+					}
+					
+			end
+			
             ITEM {
                 type = 'item',
                 name = name1,
                 category = data.raw.item[baseitem].category,
-                icon = data.raw.item[baseitem].icon or data.raw.module[baseitem].icon,
-                icon_size = 64,
+                icons = icons,
+                --icon_size = 64,
                 flags = {},
                 subgroup = recipe.subgroup,
                 order = recipe.order,
                 stack_size = 500,
                 localised_name = baseitem
             }
+			
+			lastitem = table.deepcopy(name1)
+			log(lastitem)
+			end
 
             RECIPE {
                 type = 'recipe',
@@ -1523,7 +1575,7 @@ recipe =
                 category = outcategory,
                 enabled = enabled,
                 energy_required = crafting_speed,
-                ingredients = {{type = 'item', name = name1, amount = 1}},
+                ingredients = itemresult,
                 results = results,
                 subgroup = recipe.subgroup,
                 order = recipe.order,
@@ -1533,17 +1585,8 @@ recipe =
             }
 
             if require_item and require_item_name ~= nil then
-                local t1
-
-                if data.raw.item[require_item_name] ~= nil then
-                    t1 = 'item'
-                elseif data.raw.fluid[require_item_name] ~= nil then
-                    t1 = 'fluid'
-                elseif data.raw.module[require_item_name] ~= nil then
-                    t1 = 'item'
-                end
-
-                RECIPE(name2):add_ingredient({type = t1, name = require_item_name, amount = require_amount})
+                --doesnt work needs replaced if we use this for something
+                --RECIPE(name2):add_ingredient({type = t1, name = require_item_name, amount = require_amount})
             end
 
             if tech_unlock ~= nil then
@@ -1558,6 +1601,7 @@ recipe =
 
             --log(serpent.block(data.raw.item[baseitem..number]))
             log(serpent.block(data.raw.recipe[name1]))
+			log(serpent.block(data.raw.item[mp]))
             log(serpent.block(data.raw.recipe[name2]))
 
             number = number + 1
