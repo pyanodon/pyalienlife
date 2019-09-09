@@ -30,7 +30,8 @@ fun.autorecipes {
 				},
 				crafting_speed = 130,
 				tech = 'ulric',
-				newitem = true
+				newitem = true,
+				name = 'meaty ulric'
         },
 		{
 			ingredients =
@@ -39,13 +40,14 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{'bones','+1/10'},
+					{'bones','+1/10',icon=true},
 					{'meat','+1/10'},
 					{'brain','+1/10'},
 					{'bonemeal','+1'},
 				},
 				crafting_speed = 110,
-				tech = 'ulric'
+				tech = 'ulric',
+				name='boney ulric'
 		},
 		{
 			ingredients =
@@ -55,12 +57,13 @@ fun.autorecipes {
 			results =
 				{
 					{'bones','+1/10'},
-					{'meat','+1/10'},
+					{'meat','+1/10',icon=true},
 					{'brain','+1/10'},
 					{'bonemeal','+1'},
 				},
 				crafting_speed = 110,
-				tech = 'ulric'
+				tech = 'ulric',
+				name = 'Mealy Ulric'
 		},
 		{
 			ingredients =
@@ -76,7 +79,8 @@ fun.autorecipes {
 				},
 				crafting_speed = 110,
 				tech = 'ulric',
-				newitem = true
+				newitem = true,
+				name = 'brainy Ulric'
 		},
 		{
 			ingredients =
