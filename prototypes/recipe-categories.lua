@@ -99,4 +99,8 @@ data:extend {
         type = "recipe-category",
         name = "dingrits"
     },
+    {
+        type = "recipe-category",
+        name = "kmauts"
+    },
 }

@@ -5,6 +5,7 @@ require("prototypes/recipe-categories")
 
 --(( Technology ))--
 require("prototypes/technologies/xenobiology")
+require("prototypes/technologies/kmauts")
 require("prototypes/technologies/mycology")
 require("prototypes/technologies/microbiology")
 require("prototypes/technologies/botany")
@@ -68,6 +69,7 @@ require("prototypes/buildings/atomizer-mk01")
 require("prototypes/buildings/fish-farm-mk01")
 require("prototypes/buildings/yaedols-culture-mk01")
 require("prototypes/buildings/dingrits-pack-mk01")
+require("prototypes/buildings/kmauts-enclosure-mk01")
 
 --test chest--
 require("prototypes/buildings/test-filtered-chest-mk01")
@@ -98,10 +100,12 @@ require('prototypes/recipes/recipes-yaedols')
 require('prototypes/recipes/recipes-auto-ralesia')
 require('prototypes/recipes/recipes-auto-fawogae')
 require('prototypes/recipes/recipes-auto-navens')
+require('prototypes/recipes/recipes-auto-yaedols')
 --require('prototypes/recipes/recipes-auto-ulric')
 require('prototypes/recipes/recipes-auto-ulric-testing')
 require('prototypes/recipes/recipes-ulric-products')
 require('prototypes/recipes/recipes-dingrits')
+require('prototypes/recipes/recipes-kmauts')
 
 --(( FLUIDS ))--
 require("prototypes/fluids/zogna-bacteria")

@@ -54,6 +54,9 @@ items.inputs.navensspore = {'navens-spore',1}
 items.inputs.navens = {'navens',1}
 items.inputs.urea = {'urea',1}
 items.inputs.bacteria2 = {'bacteria-2',1} --pyht
+items.inputs.yaedolsspore = {'yaedols-spores',1}
+items.inputs.yaedols = {'yaedols',1}
+items.inputs.wood = {'wood',1}
 
 items.outputs = items.inputs
 --can put output replacements below here

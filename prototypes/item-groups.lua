@@ -123,6 +123,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-kmauts",
+        group = "py-alienlife",
+        order = "e-i"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-plants",
         group = "py-alienlife",
         order = "f"

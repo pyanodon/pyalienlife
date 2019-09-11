@@ -1210,7 +1210,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/pelt.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-dingrits",
     order = "x",
     stack_size = 10
 }
@@ -1221,7 +1221,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/dingrit-spike.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-dingrits",
     order = "x",
     stack_size = 10
 }
@@ -1244,6 +1244,39 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-food",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "caged-kmauts",
+    icon = "__pyalienlife__/graphics/icons/caged-kmauts.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-kmauts",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "kmauts-codex",
+    icon = "__pyalienlife__/graphics/icons/kmauts-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "tendon",
+    icon = "__pyalienlife__/graphics/icons/tendon.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-kmauts",
     order = "x",
     stack_size = 10
 }
@@ -1646,6 +1679,22 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+ITEM {
+    type = "module",
+    name = "kmauts",
+    icon = "__pyalienlife__/graphics/icons/kmauts.png",
+    icon_size = 64,
+	category = "kmauts",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "a",
+    stack_size = 10,
+	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_kmauts,
+	limitation_message_key = "Its full"
+}
+
 data:extend(
 {
   {
@@ -1711,6 +1760,10 @@ data:extend(
   {
     type = "module-category",
     name = "dingrits"
+  },
+  {
+    type = "module-category",
+    name = "kmauts"
   },
 }
 )
