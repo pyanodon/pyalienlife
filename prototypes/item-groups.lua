@@ -117,6 +117,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-dingrits",
+        group = "py-alienlife",
+        order = "e-h"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-plants",
         group = "py-alienlife",
         order = "f"

@@ -178,5 +178,68 @@ fun.autorecipes {
 				crafting_speed = 100,
 				tech = 'botany-mk04'
 		},
+    --GH
+		{
+			ingredients =
+				{
+					{'biomass','R'},
+					{'syngas','R'},
+					{'manure','R'},
+					{'fertilizer','R'},
+					{'gh',1},
+				},
+			results =
+				{
+					{'ralesias',25}
+				},
+			crafting_speed = 70,
+			tech = 'botany-mk04'
+		},
+		{
+			ingredients =
+				{
+					{'biomass','10'},
+					--{'nitrogen','R'},
+					--{'manure','R'},
+					--{'biomass','R'},
+					--{'gh',1},
+				},
+			results =
+				{
+					{'ralesias',27}
+				},
+			crafting_speed = 70,
+			tech = 'botany-mk04'
+		},
+		{
+			ingredients =
+				{
+					{'syngas','*10'},
+					{'manure',10},
+					--{'biomass','R'},
+					--{'gh',1},
+				},
+			results =
+				{
+					{'ralesias',29}
+				},
+			crafting_speed = 70,
+			tech = 'botany-mk04'
+		},
+		{
+			ingredients =
+				{
+					{'manure','R'},
+					{'fertilizer',5},
+					{'urea',15},
+					--{'gh',1},
+				},
+			results =
+				{
+					{'ralesias',35}
+				},
+			crafting_speed = 70,
+			tech = 'botany-mk04'
+		},
 	}
 }
