@@ -7,15 +7,15 @@ RECIPE {
     name = 'dingrits',
     category = 'creature-chamber',
     enabled = false,
-    energy_required = 300,
+    energy_required = 90,
     ingredients = {
         {type = 'item', name = 'alien-sample-03', amount = 2},
         {type = 'item', name = 'cdna', amount = 3},
         {type = 'item', name = 'dingrits-codex', amount = 2},
         {type = 'item', name = 'arthurian-egg', amount = 10},
         {type = 'item', name = 'earth-wolf-sample', amount = 1},
-        {type = 'fluid', name = 'fetal-serum', amount = 100},
-        {type = 'fluid', name = 'artificial-blood', amount = 100},
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
+        {type = 'fluid', name = 'artificial-blood', amount = 50},
     },
     results = {
         {type = 'item', name = 'dingrits', amount = 1},
@@ -44,7 +44,7 @@ RECIPE {
     name = 'earth-wolf-sample',
     category = 'data-array',
     enabled = false,
-    energy_required = 300,
+    energy_required = 30,
     ingredients = {
         {type = 'item', name = 'steel-chest', amount = 1},
         {type = 'item', name = 'production-science-pack', amount = 50},
