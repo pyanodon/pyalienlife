@@ -73,6 +73,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'fluid', name = 'water', amount = 50},
+        {type = 'item', name = 'fungal-substrate', amount = 2},
         {type = 'item', name = 'wood', amount = 4},
         {type = 'item', name = 'biomass', amount = 5},
         {type = 'item', name = 'petri-dish-bacteria', amount = 1},
@@ -92,6 +93,7 @@ RECIPE {
     ingredients = {
         {type = 'fluid', name = 'phytoplankton', amount = 50},
         {type = 'item', name = 'tuuphra', amount = 3},
+        {type = 'item', name = 'fungal-substrate-02', amount = 3},
         {type = 'item', name = 'biomass', amount = 4},
         {type = 'item', name = 'ash', amount = 10},
         {type = 'item', name = 'petri-dish-bacteria', amount = 1},

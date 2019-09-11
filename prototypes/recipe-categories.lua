@@ -95,4 +95,8 @@ data:extend {
         type = "recipe-category",
         name = "yaedols"
     },
+    {
+        type = "recipe-category",
+        name = "dingrits"
+    },
 }

@@ -54,6 +54,7 @@ RECIPE {
         {type = 'item', name = 'steel-plate', amount = 1},
         {type = 'item', name = 'petri-dish', amount = 1},
         {type = 'item', name = 'flask', amount = 1},
+        {type = 'item', name = 'lab-instrument', amount = 1},
     },
     results = {
         {type = 'item', name = 'retrovirus', amount = 1},
@@ -71,6 +72,7 @@ RECIPE {
         {type = 'item', name = 'steel-plate', amount = 1},
         {type = 'item', name = 'petri-dish', amount = 1},
         {type = 'item', name = 'flask', amount = 1},
+        {type = 'item', name = 'lab-instrument', amount = 1},
         {type = 'fluid', name = 'liquid-nitrogen', amount = 20},
     },
     results = {
@@ -86,9 +88,11 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'retrovirus', amount = 1},
+        {type = 'item', name = 'flask', amount = 3},
         {type = 'item', name = 'petri-dish-bacteria', amount = 1},
         {type = 'item', name = 'plasmids', amount = 1},
         {type = 'item', name = 'moss-gen', amount = 1},
+        {type = 'item', name = 'lab-instrument', amount = 1},
         {type = 'item', name = 'fawogae-substrate', amount = 4},
     },
     results = {
@@ -105,6 +109,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'petri-dish-bacteria', amount = 1},
         {type = 'item', name = 'fawogae', amount = 5},
+        {type = 'item', name = 'lab-instrument', amount = 1},
     },
     results = {
         {type = 'item', name = 'primers', amount = 1, probability = 0.7},
@@ -121,6 +126,7 @@ RECIPE {
         {type = 'item', name = 'retrovirus', amount = 1},
         {type = 'item', name = 'flask', amount = 2},
         {type = 'item', name = 'cocoon', amount = 1},
+        {type = 'item', name = 'lab-instrument', amount = 1},
     },
     results = {
         {type = 'item', name = 'dna-polymerase', amount = 1},
@@ -136,6 +142,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'retrovirus', amount = 1},
         {type = 'item', name = 'flask', amount = 2},
+        {type = 'item', name = 'lab-instrument', amount = 1},
         {type = 'item', name = 'arthurian-egg', amount = 10},
     },
     results = {
@@ -155,6 +162,7 @@ RECIPE {
         {type = 'item', name = 'dna-polymerase', amount = 1},
         {type = 'item', name = 'plastic-bar', amount = 1},
         {type = 'fluid', name = 'formamide', amount = 150},
+        {type = 'item', name = 'flask', amount = 2},
     },
     results = {
         {type = 'item', name = 'alien-sample-02', amount = 1},

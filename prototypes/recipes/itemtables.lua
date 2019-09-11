@@ -36,7 +36,6 @@ items.inputs.cagedulric = {'caged-ulric', 1}
 items.inputs.cage = {'cage', 1}
 items.inputs.ulricfood01 = {'ulric-food-01', 1}
 items.inputs.ulricfood02 = {'ulric-food-02', 1}
---items.inputs.agrsshdhsddgjfdhsfnfkjfhe75462346344267436846 = {'ralesia-seeds', 5}
 items.inputs.ralesias = {'ralesias', 1}
 items.inputs.meat = {'meat',1}
 items.inputs.bones = {'bones', 1}
@@ -51,6 +50,10 @@ items.inputs.salt = {'salt',1}
 items.inputs.rawfiber = {'raw-fiber',1}
 items.inputs.fawogaespore = {'fawogae-spore',1}
 items.inputs.fawogae = {'fawogae',1}
+items.inputs.navensspore = {'navens-spore',1}
+items.inputs.navens = {'navens',1}
+items.inputs.urea = {'urea',1}
+items.inputs.bacteria2 = {'bacteria-2',1} --pyht
 
 items.outputs = items.inputs
 --can put output replacements below here

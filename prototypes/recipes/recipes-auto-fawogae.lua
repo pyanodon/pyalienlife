@@ -17,7 +17,7 @@ fun.autorecipes {
 				{
 					{'fawogae','*4'}
 				},
-			crafting_speed = 12,
+			crafting_speed = 25,
 			tech = 'mycology-mk01'
         },
         {
@@ -29,7 +29,7 @@ fun.autorecipes {
 				{
 					{'fawogae','+2'}
 				},
-			crafting_speed = 12,
+			crafting_speed = 25,
 			tech = 'mycology-mk01'
         },
         {
@@ -41,7 +41,7 @@ fun.autorecipes {
 				{
 					{'fawogae','+2'}
 				},
-			crafting_speed = 12,
+			crafting_speed = 25,
 			tech = 'mycology-mk01'
         },
         {
@@ -51,9 +51,9 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{'fawogae',10}
+					{'fawogae',9}
 				},
-			crafting_speed = 12,
+			crafting_speed = 25,
 			tech = 'mycology-mk01'
         },
         --green
@@ -68,7 +68,7 @@ fun.autorecipes {
 				{
 					{'fawogae',10}
 				},
-			crafting_speed = 10,
+			crafting_speed = 20,
 			tech = 'mycology-mk02'
         },
         {
@@ -78,9 +78,9 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{'fawogae',12}
+					{'fawogae',11}
 				},
-			crafting_speed = 10,
+			crafting_speed = 20,
 			tech = 'mycology-mk02'
         },
         {
@@ -90,9 +90,9 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{'fawogae',14}
+					{'fawogae',12}
 				},
-			crafting_speed = 10,
+			crafting_speed = 20,
 			tech = 'mycology-mk02'
         },
     --blue
@@ -108,7 +108,7 @@ fun.autorecipes {
 				{
 					{'fawogae',14}
 				},
-			crafting_speed = 8,
+			crafting_speed = 18,
 			tech = 'mycology-mk03'
         },
         {
@@ -118,9 +118,9 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{'fawogae',16}
+					{'fawogae',15}
 				},
-			crafting_speed = 10,
+			crafting_speed = 18,
 			tech = 'mycology-mk03'
         },
         {
@@ -130,10 +130,68 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{'fawogae',18}
+					{'fawogae',16}
 				},
-			crafting_speed = 10,
+			crafting_speed = 18,
 			tech = 'mycology-mk03'
-        },
+		},
+    --GH
+    {
+        ingredients =
+            {
+                {'manure','R'},
+                {'biomass','R'},
+                {'gh',1},
+            },
+        results =
+            {
+                {'fawogae',16}
+            },
+        crafting_speed = 15,
+        tech = 'mycology-mk04'
+    },
+    {
+        ingredients =
+            {
+                {'urea','10'},
+                --{'nitrogen','R'},
+                --{'manure','R'},
+                --{'biomass','R'},
+                --{'gh',1},
+            },
+        results =
+            {
+                {'fawogae',17}
+            },
+        crafting_speed = 15,
+        tech = 'mycology-mk04'
+    },
+    {
+        ingredients =
+            {
+                {'manure','*10'},
+				{'biomass',15},
+                --{'gh',1},
+            },
+        results =
+            {
+                {'fawogae',18}
+            },
+        crafting_speed = 15,
+        tech = 'mycology-mk04'
+    },
+    {
+        ingredients =
+            {
+                {'fertilizer',5},
+                --{'gh',1},
+            },
+        results =
+            {
+                {'fawogae',20}
+            },
+        crafting_speed = 15,
+        tech = 'mycology-mk04'
+    },
 	}
 }
