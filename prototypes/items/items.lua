@@ -1226,6 +1226,28 @@ ITEM {
     stack_size = 10
 }
 
+ITEM {
+    type = "item",
+    name = "dingrits-food-01",
+    icon = "__pyalienlife__/graphics/icons/dingrits-food-01.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-food",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "dingrits-food-02",
+    icon = "__pyalienlife__/graphics/icons/dingrits-food-02.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-food",
+    order = "x",
+    stack_size = 10
+}
+
 ------RULES-----
 
 local alien_life_limitations_ulric =

@@ -475,3 +475,17 @@ RECIPE {
         {type = 'fluid', name = 'oleochemicals', amount = 30}
     }
 }:add_unlock('biotech-mk02')
+
+RECIPE {
+    type = 'recipe',
+    name = 'testn',
+    category = 'dingrits',
+    enabled = false,
+    energy_required = 150,
+    ingredients = {
+        {type = 'item', name = 'skin', amount = 20},
+    },
+    results = {
+        {type = 'item', name = 'iron-plate', amount = 10}
+    }
+}:add_unlock('dingrits')
