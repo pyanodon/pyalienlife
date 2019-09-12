@@ -993,6 +993,7 @@ recipe =
 				}
 			},
 		crafting_speed = num,
+out_crafting_speed = num,
 		tech = string,
 		newitem = bool
 		},
@@ -1582,12 +1583,25 @@ recipe =
 
 log(serpent.block(itemresult))
 
+Local c_speed
+
+If mat.out_crafting_speed ~= nil then
+
+c_speed = mat.out_crafting_speed
+
+else
+
+c_speed = mat.crafting_speed
+
+end
+
+
             RECIPE {
                 type = 'recipe',
                 name = name2,
                 category = outcategory,
                 enabled = enabled,
-                energy_required = crafting_speed,
+                energy_required = c_speed,
                 ingredients = itemresult,
                 results = results,
                 subgroup = recipe.subgroup,
