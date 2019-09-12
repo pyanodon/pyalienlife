@@ -503,7 +503,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'zinc-plate', amount = 10},
-        {type = 'item', name = 'serine', amount = 5},
+        {type = 'item', name = 'serine', amount = 30},
         {type = 'item', name = 'cysteine', amount = 1},
         {type = 'item', name = 'meat', amount = 10},
     },
