@@ -121,7 +121,7 @@ RECIPE {
     name = 'dna-polymerase',
     category = 'genlab',
     enabled = false,
-    energy_required = 8,
+    energy_required = 10,
     ingredients = {
         {type = 'item', name = 'retrovirus', amount = 1},
         {type = 'item', name = 'flask', amount = 2},
@@ -138,7 +138,7 @@ RECIPE {
     name = 'dna-polymerase-2',
     category = 'genlab',
     enabled = false,
-    energy_required = 6,
+    energy_required = 10,
     ingredients = {
         {type = 'item', name = 'retrovirus', amount = 1},
         {type = 'item', name = 'flask', amount = 2},
@@ -155,7 +155,7 @@ RECIPE {
     name = 'alien-sample-02',
     category = 'genlab',
     enabled = false,
-    energy_required = 10,
+    energy_required = 15,
     ingredients = {
         {type = 'item', name = 'primers', amount = 1},
         {type = 'item', name = 'alien-sample01', amount = 1},
@@ -174,7 +174,7 @@ RECIPE {
     name = 'alien-sample-03',
     category = 'genlab',
     enabled = false,
-    energy_required = 10,
+    energy_required = 15,
     ingredients = {
         {type = 'item', name = 'primers', amount = 2},
         {type = 'item', name = 'alien-sample01', amount = 2},
@@ -189,3 +189,58 @@ RECIPE {
         {type = 'item', name = 'alien-sample-03', amount = 1},
     },
 }:add_unlock("genetics-mk03")
+
+RECIPE {
+    type = 'recipe',
+    name = 'gta',
+    category = 'bio-reactor',
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = 'fluid', name = 'flutec-pp6', amount = 50},
+        {type = 'item', name = 'yaedols', amount = 2},
+        {type = 'item', name = 'retrovirus', amount = 5},
+        {type = 'fluid', name = 'ethanolamine', amount = 50},
+        {type = 'item', name = 'flask', amount = 2},
+        {type = 'item', name = 'dhilmos-egg', amount = 5},
+    },
+    results = {
+        {type = 'fluid', name = 'gta', amount = 50},
+    },
+    --main_product = "cocoon",
+}:add_unlock("genetics-mk04")
+
+RECIPE {
+    type = 'recipe',
+    name = 'cysteine',
+    category = 'genlab',
+    enabled = false,
+    energy_required = 25,
+    ingredients = {
+        {type = 'item', name = 'fur', amount = 20},
+        {type = 'item', name = 'bacteria-1', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'cysteine', amount = 1},
+    },
+}:add_unlock("genetics-mk04"):replace_ingredient("bacteria-1", "bacteria-2")
+
+RECIPE {
+    type = 'recipe',
+    name = 'adam42',
+    category = 'genlab',
+    enabled = false,
+    energy_required = 25,
+    ingredients = {
+        {type = 'item', name = 'dna-polymerase', amount = 2},
+        {type = 'item', name = 'plastic-bar', amount = 5},
+        {type = 'item', name = 'flask', amount = 5},
+        {type = 'item', name = 'lab-instrument', amount = 5},
+        {type = 'fluid', name = 'gta', amount = 50},
+        {type = 'item', name = 'primers', amount = 8},
+        {type = 'item', name = 'cdna', amount = 8},
+    },
+    results = {
+        {type = 'item', name = 'adam42', amount = 1},
+    },
+}:add_unlock("genetics-mk04")
