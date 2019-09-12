@@ -946,7 +946,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/yotoi-seeds.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-genetics",
+    subgroup = "py-alienlife-plants",
     order = "h",
     stack_size = 100
 }
@@ -1034,7 +1034,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/rennea-seeds.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-genetics",
+    subgroup = "py-alienlife-plants",
     order = "h",
     stack_size = 400
 }
