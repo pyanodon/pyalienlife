@@ -898,6 +898,50 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "zinc-finger-proteins",
+    icon = "__pyalienlife__/graphics/icons/zinc-finger-proteins.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "reca",
+    icon = "__pyalienlife__/graphics/icons/reca.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "adam42-gen",
+    icon = "__pyalienlife__/graphics/icons/adam42-gen.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "cysteine",
+    icon = "__pyalienlife__/graphics/icons/cysteine.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "yotoi-seeds",
     icon = "__pyalienlife__/graphics/icons/yotoi-seeds.png",
 	icon_size = 64,
@@ -1213,6 +1257,17 @@ ITEM {
     subgroup = "py-alienlife-dingrits",
     order = "x",
     stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "fur",
+    icon = "__pyalienlife__/graphics/icons/fur.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-dingrits",
+    order = "x",
+    stack_size = 50
 }
 
 ITEM {

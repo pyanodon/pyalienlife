@@ -466,7 +466,7 @@ RECIPE {
     name = 'olechemicals-from-skin',
     category = 'bio-reactor',
     enabled = false,
-    energy_required = 15,
+    energy_required = 10,
     ingredients = {
         {type = 'item', name = 'skin', amount = 20},
         {type = 'fluid', name = 'bacteria-1', amount = 10},
@@ -475,3 +475,57 @@ RECIPE {
         {type = 'fluid', name = 'oleochemicals', amount = 50}
     }
 }:add_unlock('biotech-mk03')
+
+RECIPE {
+    type = 'recipe',
+    name = 'pelt-processing',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'pelt', amount = 1},
+        {type = 'fluid', name = 'soda-ash', amount = 100},
+        {type = 'item', name = 'sodium-aluminate', amount = 1},
+        {type = 'item', name = 'salt', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'skin', amount = 1},
+        {type = 'item', name = 'fur', amount = 10},
+    },
+    main_product = "fur",
+}:add_unlock('biotech-mk04')
+
+RECIPE {
+    type = 'recipe',
+    name = 'zinc-finger-proteins',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'zinc-plate', amount = 10},
+        {type = 'item', name = 'serine', amount = 5},
+        {type = 'item', name = 'cysteine', amount = 1},
+        {type = 'item', name = 'meat', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'zinc-finger-proteins', amount = 1},
+    },
+    --main_product = "fur",
+}:add_unlock('biotech-mk04')
+
+RECIPE {
+    type = 'recipe',
+    name = 'reca',
+    category = 'bio-reactor',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'alien-sample-03', amount = 1},
+        {type = 'fluid', name = 'fetal-serum', amount = 100},
+        {type = 'item', name = 'bones', amount = 20},
+        {type = 'item', name = 'navens', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'reca', amount = 1}
+    }
+}:add_unlock('biotech-mk04')
