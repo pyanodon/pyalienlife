@@ -1583,9 +1583,9 @@ out_crafting_speed = num,
 
 log(serpent.block(itemresult))
 
-Local c_speed
+local c_speed
 
-If mat.out_crafting_speed ~= nil then
+if mat.out_crafting_speed ~= nil then
 
 c_speed = mat.out_crafting_speed
 

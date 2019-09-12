@@ -50,7 +50,7 @@ ENTITY {
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"slaughterhouse"},
-    source_inventory_size = 1,
+    source_inventory_size = 0,
     result_inventory_size = 6,
     crafting_speed = 1,
     energy_source = {
