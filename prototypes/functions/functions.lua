@@ -1030,6 +1030,8 @@ out_crafting_speed = num,
     local number = 1
 	local reuseitem = false
 		local lastitem
+		
+	local firstitem = true
 
     if recipe.singlerecipe == nil or not recipe.singlerecipe == false then
         singlerecipe = true
@@ -1489,9 +1491,10 @@ out_crafting_speed = num,
             local name2 = 'output-' .. baseitem .. '-' .. number
 			local itemresult
 
-			if mat.newitem == true then
+			if mat.newitem == true or firstitem == true then
 
 				reuseitem = false
+				firstitem = false
 
 			else
 
@@ -1558,6 +1561,10 @@ out_crafting_speed = num,
 						{icon = data.raw.item[baseitem].icon or data.raw.module[baseitem].icon, icon_size = 64}
 					}
 
+				recipeicon =
+					{
+						{icon = data.raw.item[baseitem].icon or data.raw.module[baseitem].icon, icon_size = 64}
+					}
 			end
 
 			if reuseitem == false then
