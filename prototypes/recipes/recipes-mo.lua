@@ -227,7 +227,7 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'adam42',
+    name = 'adam42-gen',
     category = 'genlab',
     enabled = false,
     energy_required = 25,
@@ -241,6 +241,6 @@ RECIPE {
         {type = 'item', name = 'cdna', amount = 8},
     },
     results = {
-        {type = 'item', name = 'adam42', amount = 1},
+        {type = 'item', name = 'adam42-gen', amount = 1},
     },
 }:add_unlock("genetics-mk04")
