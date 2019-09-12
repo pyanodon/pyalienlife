@@ -218,7 +218,7 @@ RECIPE {
     energy_required = 25,
     ingredients = {
         {type = 'item', name = 'fur', amount = 20},
-        {type = 'item', name = 'bacteria-1', amount = 50},
+        {type = 'item', name = 'bacteria-1', amount = 100},
     },
     results = {
         {type = 'item', name = 'cysteine', amount = 1},
