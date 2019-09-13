@@ -26,92 +26,96 @@ fun.autorecipes {
 					{'brain',4/10,a_min=1,a_max=1},
 					{'guts',4/10,a_min=1,a_max=1},
 					{'bonemeal',1},
+					{'cage',1},
                     {'blood',50},
 				},
 				crafting_speed = 130,
 				out_crafting_speed = 30,
 				tech = 'ulric',
-				newitem = false,
-				name = 'full rendering ulric'
-        },
-		{
-			ingredients =
-				{
-					{'renneaseeds',25},
-				},
-			results =
-				{
-					{'bones','+1/10',icon=true},
-					{'meat','+1/10'},
-					{'brain','+1/10'},
-					{'bonemeal','+1'},
-				},
-				crafting_speed = 110,
-				tech = 'ulric',
-				name='boney ulric'
+				newitem = false, --generates the same name in all recipes (in this case "ulric"), so we cant pick the recipe in the ulric corral because its appears as the same as the one bellow
+				name = 'full rendering ulric' --gives the correct name in rendering, loved it.
 		},
+		--bonemeal
 		{
 			ingredients =
 				{
-					{'fungalsubstrate'},
+					{'cage','R'},
+					{'cage'},
+					{'ulricfood01','R'},
+					{'ulricfood01'},
+					{'waterbarrel','R'},
+					{'waterbarrel',3,return_item={'empty-barrel'}},
 				},
 			results =
 				{
-					{'bones','+1/10'},
-					{'meat','+1/10',icon=true},
-					{'brain','+1/10'},
-					{'bonemeal','+1'},
+					{'bones','R'},
+					{'meat','R'},
+					{'fat','R'},
+					{'brain','R'},
+					{'guts','R'},
+					{'bonemeal',6,icon=true},
+					{'cage',1},
+                    {'blood','R'},
 				},
-				crafting_speed = 110,
-				tech = 'ulric',
-				name = 'Mealy Ulric'
-		},
-		{
-			ingredients =
-				{
-					{'slackedlime'}
-				},
-			results =
-				{
-					{'bones','+1/10'},
-					{'meat','+1/10'},
-					{'brain','+1/10',icon=true},
-					{'bonemeal','+1'},
-				},
-				crafting_speed = 110,
+				crafting_speed = 130,
+				out_crafting_speed = 15,
 				tech = 'ulric',
 				newitem = true,
-				name = 'brainy Ulric'
+				name = 'ulric to bonemeal' --gives the correct name in rendering, loved it.
+		},
+		--food 02
+		{
+			ingredients =
+				{
+					{'ulricfood01','R'},
+					{'ulricfood02',1},
+				},
+			results =
+				{
+					{'bonemeal','R'},
+					{'bonemeal',5/10,a_min=2,a_max=3},
+				},
+				crafting_speed = 110,
+				out_crafting_speed = 30,
+				tech = 'ulric',
+				newitem = false,
+				name = 'full rendering ulric 2'
+		},
+		--GH
+		{
+			ingredients =
+				{
+					{'ulricfood02','R'},
+					{'ulricfood01',1},
+					{'gh',1},
+				},
+			results =
+				{
+					{'bonemeal','R'},
+					{'bonemeal',1},
+				},
+				crafting_speed = 60,
+				out_crafting_speed = 30,
+				tech = 'growth-hormone',
+				newitem = false,
+				name = 'full rendering ulric with gh'
 		},
 		{
 			ingredients =
 				{
-					{'fertilizer'}
+					{'ulricfood01','R'},
+					{'ulricfood02',1},
 				},
 			results =
 				{
-					{'bones','+1/10'},
-					{'meat','+1/10'},
-					{'brain','+1/10'},
-					{'bonemeal','+1'},
+					{'bonemeal','R'},
+					{'bonemeal',5/10,a_min=2,a_max=3},
 				},
-				crafting_speed = 110,
-				tech = 'ulric'
-		},
-		{
-			ingredients =
-				{
-					{'rawfiber',30}
-				},
-			results =
-				{
-					{'bones','+1/10'},
-					{'meat','+1/10'},
-					{'brain','+1/10'},
-					{'bonemeal','+1'},
-				},
-				crafting_speed = 110,
-				tech = 'ulric'
+				crafting_speed = 60,
+				out_crafting_speed = 30,
+				tech = 'growth-hormone',
+				newitem = false,
+				name = 'full rendering ulric with gh 2'
 		},
 	},
 }
