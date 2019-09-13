@@ -393,6 +393,28 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "bonemeal",
+    icon = "__pyalienlife__/graphics/icons/bonemeal.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "mukmoux-fat",
+    icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
     name = "chitin",
     icon = "__pyalienlife__/graphics/icons/chitin.png",
     icon_size = 64,
