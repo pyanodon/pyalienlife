@@ -39,12 +39,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{'cage','R'},
-					{'cage'},
-					{'ulricfood01','R'},
-					{'ulricfood01'},
-					{'waterbarrel','R'},
-					{'waterbarrel',3,return_item={'empty-barrel'}},
+					--{'cage','R'},
+					--{'cage'},
+					--{'ulricfood01','R'},
+					--{'ulricfood01'},
+					--{'waterbarrel','R'},
+					--{'waterbarrel',3,return_item={'empty-barrel'}},
 				},
 			results =
 				{
