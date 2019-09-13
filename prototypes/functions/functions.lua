@@ -1045,6 +1045,12 @@ out_crafting_speed = num,
 
         ingredients = {}
         results = {}
+		
+		
+        ingredients = table.deepcopy(lastings)
+				
+		--log(serpent.block(lastings))
+		--log(serpent.block(ingredients))
 
         for i, item in pairs(mat.ingredients) do
             --log(serpent.block(ingredients))
@@ -1053,8 +1059,7 @@ out_crafting_speed = num,
             --log(serpent.block(item))
             --log(serpent.block(items))
             --log(serpent.block(items.inputs))
-
-            --local ing = items.inputs[string.sub(item[1], 1, 1)]
+			
             local ing = items.inputs[item[1]]
             local sign
             local mod
@@ -1092,8 +1097,6 @@ out_crafting_speed = num,
                 else
                     type1 = 'item'
                 end
-
-                ingredients = lastings
 
                 if sign == nil then
                     --log("here")
@@ -1203,11 +1206,17 @@ out_crafting_speed = num,
                     end
                 end
             end
+			
         end
+
+		--log(serpent.block(ingredients))
+		
+        results = lastresults
+        --log(serpent.block(results))
 
         for i, item in pairs(mat.results) do
             --log(serpent.block(mat.results))
-            log(serpent.block(item))
+            --log(serpent.block(item))
             --log(serpent.block(item[1]))
             --log(serpent.block(items))
             --log(serpent.block(items.inputs))
@@ -1277,10 +1286,6 @@ out_crafting_speed = num,
                 else
                     type1 = 'item'
                 end
-
-                results = lastresults
-
-                --log(serpent.block(results))
 
                 if sign == nil then
                     if next(results) ~= nil then
@@ -1453,10 +1458,13 @@ out_crafting_speed = num,
         else
             enabled = false
         end
+		
+		lastings = table.deepcopy(ingredients)
+        lastresults = table.deepcopy(results)
+		
+		--log(serpent.block(lastings))
 
         if singlerecipe then
-            lastings = table.deepcopy(ingredients)
-            lastresults = table.deepcopy(results)
 
             RECIPE {
                 type = 'recipe',
@@ -1484,8 +1492,6 @@ out_crafting_speed = num,
 
             number = number + 1
         else
-            lastings = table.deepcopy(ingredients)
-            lastresults = table.deepcopy(results)
 
             local name1 = baseitem .. number
             local name2 = 'output-' .. baseitem .. '-' .. number
@@ -1505,16 +1511,16 @@ out_crafting_speed = num,
 			local mp
 
 			if reuseitem == true then
-				log("hit")
+				--log("hit")
 				itemresult = {{type = 'item', name = lastitem, amount = 1}}
 				mp = lastitem
 			else
-				log("hit")
+				--log("hit")
 				itemresult = {{type = 'item', name = name1, amount = 1}}
 				mp = name1
 			end
 
-				log(mp)
+				--log(mp)
 
             RECIPE {
                 type = 'recipe',
@@ -1529,10 +1535,10 @@ out_crafting_speed = num,
                 main_product = mp
             }
 
-            log(serpent.block(itemresult))
+            --log(serpent.block(itemresult))
 
-            log(return_item)
-            log(return_item_name)
+            --log(return_item)
+            --log(return_item_name)
             if return_item and return_item_name ~= nil then
                 overrides.add_result(name1, {name = return_item_name, amount = return_amount})
             end
@@ -1585,10 +1591,10 @@ out_crafting_speed = num,
             }
 
 			lastitem = table.deepcopy(name1)
-			log(lastitem)
+			--log(lastitem)
 			end
 
-log(serpent.block(itemresult))
+--log(serpent.block(itemresult))
 
 local c_speed
 
@@ -1636,7 +1642,7 @@ end
 
             --log(serpent.block(data.raw.item[baseitem..number]))
             log(serpent.block(data.raw.recipe[name1]))
-			log(serpent.block(data.raw.item[mp]))
+			--log(serpent.block(data.raw.item[mp]))
             log(serpent.block(data.raw.recipe[name2]))
 
             number = number + 1
