@@ -191,6 +191,6 @@ ENTITY {
 }
 
 if settings.startup['suicide-booth'].value then
-	source_inventory_size = 1,
-    result_inventory_size = 6,
+	data.raw.furnace['slaughterhouse-mk01'].source_inventory_size = 1
+    data.raw.furnace['slaughterhouse-mk01'].result_inventory_size = 6
 end
