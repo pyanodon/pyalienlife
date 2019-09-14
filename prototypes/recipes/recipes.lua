@@ -314,11 +314,11 @@ RECIPE {
     name = 'cobalt-fluoride',
     category = 'mixer',
     enabled = false,
-    energy_required = 5,
+    energy_required = 7,
     ingredients = {
         {type = 'fluid', name = 'acidgas', amount = 100},
         {type = 'fluid', name = 'steam', amount = 200, temperature = 165},
-        {type = 'item', name = 'nexelit-plate', amount = 3},
+        {type = 'item', name = 'cobalt-extract', amount = 3},
         {type = 'item', name = 'chromium', amount = 3},
     },
     results = {
@@ -529,3 +529,101 @@ RECIPE {
         {type = 'item', name = 'reca', amount = 1}
     }
 }:add_unlock('biotech-mk04')
+
+RECIPE {
+    type = 'recipe',
+    name = 'mixed-ores',
+    category = 'ball-mill',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'copper-ore', amount = 10},
+        {type = 'item', name = 'ore-nickel', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'mixed-ores', amount = 2},
+        {type = 'item', name = 'stone', amount = 1, probability = 0.5},
+    },
+    main_product = "mixed-ores",
+}:add_unlock('biotech-mk02')
+
+RECIPE {
+    type = 'recipe',
+    name = 'cobalt-extract',
+    category = 'flotation',
+    enabled = false,
+    energy_required = 6,
+    ingredients = {
+        {type = 'fluid', name = 'pressured-air', amount = 150},
+        {type = 'fluid', name = 'cyanic-acid', amount = 50},
+        {type = 'item', name = 'mixed-ores', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'cobalt-extract', amount = 1},
+        {type = 'fluid', name = 'dirty-water', amount = 50},
+    },
+    main_product = "cobalt-extract",
+}:add_unlock('biotech-mk02')
+
+RECIPE {
+    type = 'recipe',
+    name = 'cobalt-sulfate',
+    category = 'drp',
+    enabled = false,
+    energy_required = 12,
+    ingredients = {
+        {type = 'fluid', name = 'syngas', amount = 150},
+        {type = 'item', name = 'lime', amount = 3},
+        {type = 'item', name = 'cobalt-extract', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'cobalt-sulfate', amount = 1},
+    },
+}:add_unlock('biotech-mk03')
+
+RECIPE {
+    type = 'recipe',
+    name = 'cobalt-sulfate-02',
+    category = 'leaching',
+    enabled = false,
+    energy_required = 12,
+    ingredients = {
+        {type = 'fluid', name = 'sulfuric-acid', amount = 100},
+        {type = 'item', name = 'cobalt-sulfate', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'cobalt-sulfate-02', amount = 1},
+    },
+}:add_unlock('biotech-mk03')
+
+RECIPE {
+    type = 'recipe',
+    name = 'cobalt-oxide',
+    category = 'leaching',
+    enabled = false,
+    energy_required = 6,
+    ingredients = {
+        {type = 'fluid', name = 'water', amount = 500},
+        {type = 'item', name = 'cobalt-sulfate-02', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'cobalt-oxide', amount = 1},
+        {type = 'fluid', name = 'dirty-water', amount = 50},
+    },
+    main_product = "cobalt-oxide",
+}:add_unlock('biotech-mk03')
+
+RECIPE {
+    type = 'recipe',
+    name = 'cobalt-nx',
+    category = 'nmf',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'nexelit-plate', amount = 10},
+        {type = 'item', name = 'cobalt-oxide', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'cobalt-nx', amount = 1},
+    },
+}:add_unlock('biotech-mk03'):add_ingredient({type = "item", name = "ceramic", amount = 5})
