@@ -989,11 +989,11 @@ recipe =
 					item,
 					amount*, -- defaults to 1:1 of output item
 					},
-				icon - is trigger to use item as secondary icon
 				}
 			},
+		icon - is trigger to use item as secondary icon
 		crafting_speed = num,
-out_crafting_speed = num,
+		out_crafting_speed = num,
 		tech = string,
 		newitem = bool
 		},
@@ -1054,28 +1054,27 @@ out_crafting_speed = num,
 
         for i, item in pairs(mat.ingredients) do
             --log(serpent.block(ingredients))
-
-            --log(serpent.block(item[1]))
-            --log(serpent.block(item))
+			--log(serpent.block(item))
+			--log(serpent.block(item[1]))
             --log(serpent.block(items))
             --log(serpent.block(items.inputs))
 			
-            local ing = items.inputs[item[1]]
+            local ing = items.inputs[item.name]
             local sign
             local mod
             --log(serpent.block(ing))
 
             if data.raw.item[ing[1]] ~= nil or data.raw.fluid[ing[1]] ~= nil or data.raw.module[ing[1]] ~= nil or string.find(ing[1], 'barrel') ~= nil then
-                --log(item[2])
-                if item[2] ~= nil then
-                    sign = string.sub(item[2], 1, 1)
-                    mod = string.sub(item[2], 2, 10)
+                --log(item.amount)
+                if item.amount ~= nil then
+                    sign = string.sub(item.amount, 1, 1)
+                    mod = string.match(item.amount, '%d+')
                     --log(sign)
                     if sign ~= '+' and sign ~= '-' and sign ~= '*' and sign ~= '/' and sign ~= 'R' then
                         --log(sign)
                         --log("hit")
                         sign = nil
-                        mod = item[2]
+                        mod = item.amount
                     end
                 else
                     sign = nil
@@ -1195,9 +1194,9 @@ out_crafting_speed = num,
 
             if item.return_item ~= nil then
                 return_item = true
-                return_item_name = item.return_item[1]
-                if item.return_item[2] ~= nil then
-                    return_amount = item.return_item[2]
+                return_item_name = item.return_item.name
+                if item.return_item.amount ~= nil then
+                    return_amount = item.return_item.amount
                 else
                     for _, ingred in pairs(ingredients) do
                         if ingred.name == ing[1] then
@@ -1222,7 +1221,7 @@ out_crafting_speed = num,
             --log(serpent.block(items.inputs))
 
             --local ing = items.outputs[string.sub(item[1], 1, 1)]
-            local ing = items.outputs[item[1]]
+            local ing = items.outputs[item.name]
             local sign
             local mod
             local prod = false
@@ -1232,32 +1231,32 @@ out_crafting_speed = num,
 
             --log(serpent.block(ing))
             if data.raw.item[ing[1]] ~= nil or data.raw.fluid[ing[1]] ~= nil or data.raw.module[ing[1]] ~= nil then
-                --log(serpent.block(item[2]))
-                if item[2] ~= nil then
-                    if tonumber(item[2]) ~= nil and tonumber(item[2]) < 1 then
-                        --log("hit")
+                --log(serpent.block(item.amount))
+                if item.amount ~= nil then
+					log("hit")
+					sign = string.sub(item.amount, 1, 1)
+					mod = string.sub(item.amount, 2, 10)
+                    if sign ~= '+' and sign ~= '-' and sign ~= '*' and sign ~= '/' and sign ~= 'R' then
+                        sign = nil
+                        mod = item.amount
+                    end
+                elseif item.probability ~= nil then
+                        log("hit")
                         sign = nil
                         prod = true
-                        prodvalue = item[2]
-                        if item.a_min ~= nil then
-                            a_min = item.a_min
+                        prodvalue = item.probability
+                        if item.amount_min ~= nil then
+                            a_min = item.amount_min
                         else
                             a_min = 1
                         end
-                        if item.a_max ~= nil then
-                            a_max = item.a_max
+                        if item.amount_max ~= nil then
+                            a_max = item.amount_max
                         else
                             a_max = 1
                         end
-                    else
-                        sign = string.sub(item[2], 1, 1)
-                        mod = string.sub(item[2], 2, 10)
-                        if sign ~= '+' and sign ~= '-' and sign ~= '*' and sign ~= '/' and sign ~= 'R' then
-                            sign = nil
-                            mod = item[2]
-                        end
-                    end
                 else
+					log("hit")
                     sign = nil
                     mod = nil
                 end
@@ -1270,26 +1269,29 @@ out_crafting_speed = num,
 
                 if data.raw.item[ing[1]] ~= nil then
                     type1 = 'item'
-					if item.icon ~= nil then
-						icon = data.raw.item[ing[1]].icon
-					end
                 elseif data.raw.fluid[ing[1]] ~= nil then
                     type1 = 'fluid'
-					if item.icon ~= nil then
-						icon = data.raw.fluid[ing[1]].icon
-					end
                 elseif data.raw.module[ing[1]] ~= nil then
                     type1 = 'item'
-					if item.icon ~= nil then
-						icon = data.raw.module[ing[1]].icon
-					end
                 else
                     type1 = 'item'
                 end
 
+				if prod == true then
+					for r, result in pairs(results) do
+						if result.name == item.name then
+							if result.amount ~= nil then
+								log("hit")
+								table.remove(results, r)
+							end
+						end
+					end
+				end
+						
+
                 if sign == nil then
                     if next(results) ~= nil then
-                        --log("hit")
+                        log("hit")
                         local rl = {}
                         for _, res in pairs(results) do
                             rl[res.name] = true
@@ -1301,31 +1303,32 @@ out_crafting_speed = num,
                                     --log(ing[1])
                                     --res.amount = res.amount + ing[2]
                                     if prod == false then
+										log("hit")
                                         res.amount = mod
                                     elseif prod == true then
-                                        --log("hit")
+                                        log("hit")
                                         table.insert(results, {type = type1, name = ing[1], amount_min = a_min, amount_max = a_max, probability = prodvalue})
                                     end
                                 end
                             end
                         else
-                            --log("hit")
+                            log("hit")
                             --log(mod)
                             if mod ~= nil then
                                 table.insert(results, {type = type1, name = ing[1], amount = mod})
                             elseif prod == true then
-                                --log("hit")
+                                log("hit")
                                 table.insert(results, {type = type1, name = ing[1], amount_min = a_min, amount_max = a_max, probability = prodvalue})
                             else
-                                --log("hit")
+                                log("hit")
                                 table.insert(results, {type = type1, name = ing[1], amount = ing[2]})
                             end
                         end
                     elseif prod == true then
-                        --log("hit")
+                        log("hit")
                         table.insert(results, {type = type1, name = ing[1], amount_min = a_min, amount_max = a_max, probability = prodvalue})
                     else
-                        --log("hit")
+                        log("hit")
                         table.insert(results, {type = type1, name = ing[1], amount = ing[2]})
                     end
                 elseif sign == '+' then
@@ -1431,8 +1434,8 @@ out_crafting_speed = num,
             if item.require_item ~= nil then
                 require_item = true
                 require_item_name = item.require_item[1]
-                if item.require_item[2] ~= nil then
-                    require_amount = item.require_item[2]
+                if item.require_item.amount ~= nil then
+                    require_amount = item.require_item.amount
                 else
                     for _, r in pairs(results) do
                         if r.name == ing[1] then
@@ -1546,17 +1549,17 @@ out_crafting_speed = num,
             local itemicon
             local recipeicon
 
-			if icon ~= nil then
+			if mat.icon ~= nil then
 
 				itemicon =
 					{
 						{icon = data.raw.item[baseitem].icon or data.raw.module[baseitem].icon, icon_size = 64},
-						{icon = icon, icon_size = 64, scale = 0.25, shift = {5,-5}}
+						{icon = mat.icon, icon_size = 64, scale = 0.25, shift = {5,-5}}
                     }
 
                 recipeicon =
                     {
-                        {icon = icon, icon_size = 64},
+                        {icon = mat.icon, icon_size = 64},
 						{icon = data.raw.item[baseitem].icon or data.raw.module[baseitem].icon, icon_size = 64, scale = 0.25, shift = {5,-5}}
                     }
 
@@ -1587,7 +1590,7 @@ out_crafting_speed = num,
                 subgroup = recipe.subgroup,
                 order = recipe.order,
                 stack_size = 500,
-                localised_name = baseitem
+                localised_name = baseitem or mat.newitemname
             }
 
 			lastitem = table.deepcopy(name1)
@@ -1641,7 +1644,7 @@ end
             end
 
             --log(serpent.block(data.raw.item[baseitem..number]))
-            log(serpent.block(data.raw.recipe[name1]))
+            --log(serpent.block(data.raw.recipe[name1]))
 			--log(serpent.block(data.raw.item[mp]))
             log(serpent.block(data.raw.recipe[name2]))
 
