@@ -1590,7 +1590,7 @@ recipe =
                 subgroup = recipe.subgroup,
                 order = recipe.order,
                 stack_size = 500,
-                localised_name = baseitem or mat.newitemname
+                localised_name = mat.newitemname or baseitem
             }
 
 			lastitem = table.deepcopy(name1)
