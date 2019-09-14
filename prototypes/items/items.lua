@@ -24,6 +24,72 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "cobalt-oxide",
+    icon = "__pyalienlife__/graphics/icons/cobalt-oxide.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "cobalt-extract",
+    icon = "__pyalienlife__/graphics/icons/cobalt-extract.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "cobalt-sulfate",
+    icon = "__pyalienlife__/graphics/icons/co-sulfate.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "cobalt-sulfate-02",
+    icon = "__pyalienlife__/graphics/icons/co-sulfate-02.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "cobalt-nx",
+    icon = "__pyalienlife__/graphics/icons/cobalt-nx.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "mixed-ores",
+    icon = "__pyalienlife__/graphics/icons/mixed-ores.png",
+    icon_size = 32,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
     name = "fungal-substrate",
     icon = "__pyalienlife__/graphics/icons/fungal-substrate.png",
     icon_size = 32,

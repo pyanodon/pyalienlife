@@ -60,7 +60,7 @@ fun.autorecipes {
 				crafting_speed = 130,
 				out_crafting_speed = 15,
 				tech = 'ulric',
-				newitem = true,
+				newitem = false,
 				name = 'ulric to bonemeal' --gives the correct name in rendering, loved it.
 		},
 		--food 02
