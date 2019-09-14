@@ -396,7 +396,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "brain",
-    icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+    icon = "__pyalienlife__/graphics/icons/mip/brain-03.png",
     icon_size = 64,
     icon_mipmaps = 6,
     pictures =

@@ -20,22 +20,52 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bones',probability=0.4,amount_min=3,amount_max=3},
+					{name='bones',probability=0.4,amount_min=1,amount_max=3},
 					{name='meat',probability=0.4,amount_min=1,amount_max=1},
 					{name='fat',probability=0.3,amount_min=1,amount_max=1},
-					{name='brain',probability=0.6,amount_min=1,amount_max=1},
+					{name='brain',probability=0.4,amount_min=1,amount_max=1},
 					{name='guts',probability=0.4,amount_min=1,amount_max=1},
 					{name='bonemeal',amount=1},
 					{name='cage',amount=1},
                     {name='blood',amount=50},
 				},
-				icon = "__pyalienlife__/graphics/icons/ulric-food-01.png",
+				icon = "__pyalienlife__/graphics/icons/data-array.png",
 				crafting_speed = 130,
 				out_crafting_speed = 30,
 				tech = 'ulric',
-				newitem = true, 
-				newitemname = 'caged-ulric',
-				name = 'full rendering default ulric'
+				newitem = true, --generates the same name in all recipes (in this case "ulric"), so we cant pick the recipe in the ulric corral because its appears as the same as the one bellow
+				newitemname = 'banana',
+				name = 'full rendering ulric' --gives the correct name in rendering, loved it.
+		},
+		--bonemeal
+		{
+			ingredients =
+				{
+					--{name='cage',amount='R'},
+					--{name='cage'},
+					--{name='ulricfood01',amount='R'},
+					--{name='ulricfood01'},
+					--{name='waterbarrel',amount='R'},
+					--{name='waterbarrel',3,return_item={name='empty-barrel'}},
+				},
+			results =
+				{
+					{name='bones',amount='R'},
+					{name='meat',amount='R'},
+					{name='fat',amount='R'},
+					{name='brain',amount='R'},
+					{name='guts',amount='R'},
+					{name='bonemeal',amount=6},
+					{name='cage',amount=1},
+                    {name='blood',amount='R'},
+				},
+				icon = "__pyalienlife__/graphics/icons/arthurian.png",
+				crafting_speed = 130,
+				out_crafting_speed = 15,
+				tech = 'ulric',
+				newitem = true,
+				newitemname = 'steve',
+				name = 'ulric to bonemeal' --gives the correct name in rendering, loved it.
 		},
 		--food 02
 		{
@@ -47,17 +77,16 @@ fun.autorecipes {
 			results =
 				{
 					--{name='bonemeal',amount='R'},
-					--{name='bonemeal',probability=0.5,amount_min=2,amount_max=3},
+					{name='bonemeal',probability=0.5,amount_min=2,amount_max=3},
 				},
-				--icon = "__pyalienlife__/graphics/icons/ulric-food-02.png",
-				crafting_speed = 100,
+				icon = "__pyalienlife__/graphics/icons/atomizer-mk01.png",
+				crafting_speed = 110,
 				out_crafting_speed = 30,
 				tech = 'ulric',
-				newitem = false,
-				--newitemname = 'caged ulric made with happy meal',
-				--name = 'full rendering ulric made with happy meal'
+				newitem = true,
+				newitemname = 'bentham',
+				name = 'full rendering ulric 2'
 		},
-
 		--GH
 		{
 			ingredients =
@@ -98,33 +127,5 @@ fun.autorecipes {
 				newitemname = 'alf',
 				name = 'full rendering ulric with gh 2'
 		},
-	},
-}
-
-fun.autorecipes {
-	name = 'single-example',
-	--baseitem = 'caged-ulric',
-    category = 'slaughterhouse',
-	--outcategory = 'slaughterhouse',
-	singlerecipe = true,
-	module_limitations = "ulric",
-	subgroup = 'py-alienlife-ulric',
-    order = 'z',
-    mats =
-	{
-		{
-			ingredients =
-				{
-					{name='cagedulric'},
-				},
-			results =
-				{
-					{name='bonemeal',amount=1},
-				},
-				--icon = "__pyalienlife__/graphics/icons/ulric-food-01.png",
-				crafting_speed = 30,
-				tech = 'ulric',
-		},
-		--food 02
 	},
 }
