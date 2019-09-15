@@ -1007,10 +1007,8 @@ recipe =
     --*__*:amount includes math keys +,-,*,/,R. will do math based on symbol with number. R will clear item from mats
 
     local name = recipe.name
-    local baseitem = recipe.baseitem
     local singlerecipe
     local category = recipe.category
-    local outcategory = recipe.outcategory
     local mats = recipe.mats
     local ingredients
     local return_item = false
@@ -1033,11 +1031,9 @@ recipe =
 		
 	local firstitem = true
 
-    if recipe.singlerecipe == nil or not recipe.singlerecipe == false then
-        singlerecipe = true
-    elseif recipe.singlerecipe ~= nil and recipe.singlerecipe == false then
-        singlerecipe = false
-    end
+    
+    singlerecipe = true
+    
 
     for _, mat in pairs(mats) do
         --log(number)
@@ -1492,161 +1488,6 @@ recipe =
             end
 
             --log(serpent.block(data.raw.recipe[name .. number]))
-
-            number = number + 1
-        else
-
-            local name1 = baseitem .. number
-            local name2 = 'output-' .. baseitem .. '-' .. number
-			local itemresult
-
-			if mat.newitem == true or firstitem == true then
-
-				reuseitem = false
-				firstitem = false
-
-			else
-
-				reuseitem = true
-
-			end
-
-			local mp
-
-			if reuseitem == true then
-				--log("hit")
-				itemresult = {{type = 'item', name = lastitem, amount = 1}}
-				mp = lastitem
-			else
-				--log("hit")
-				itemresult = {{type = 'item', name = name1, amount = 1}}
-				mp = name1
-			end
-
-				--log(mp)
-
-            RECIPE {
-                type = 'recipe',
-                name = name1,
-                category = category,
-                enabled = enabled,
-                energy_required = crafting_speed,
-                ingredients = ingredients,
-                results = table.deepcopy(itemresult),
-                subgroup = recipe.subgroup,
-                order = recipe.order,
-                main_product = mp
-            }
-
-            --log(serpent.block(itemresult))
-
-            --log(return_item)
-            --log(return_item_name)
-            if return_item and return_item_name ~= nil then
-                overrides.add_result(name1, {name = return_item_name, amount = return_amount})
-            end
-
-            local itemicon
-            local recipeicon
-
-			if mat.icon ~= nil then
-
-				itemicon =
-					{
-						{icon = data.raw.item[baseitem].icon or data.raw.module[baseitem].icon, icon_size = 64},
-						{icon = mat.icon, icon_size = 64, scale = 0.25, shift = {5,-5}}
-                    }
-
-                recipeicon =
-                    {
-                        {icon = mat.icon, icon_size = 64},
-						{icon = data.raw.item[baseitem].icon or data.raw.module[baseitem].icon, icon_size = 64, scale = 0.25, shift = {5,-5}}
-                    }
-
-			else
-
-				itemicon =
-					{
-						{icon = data.raw.item[baseitem].icon or data.raw.module[baseitem].icon, icon_size = 64}
-					}
-
-				recipeicon =
-					{
-						{icon = data.raw.item[baseitem].icon or data.raw.module[baseitem].icon, icon_size = 64}
-					}
-			end
-
-			if reuseitem == false then
-
-
-
-            ITEM {
-                type = 'item',
-                name = name1,
-                category = data.raw.item[baseitem].category,
-                icons = itemicon,
-                --icon_size = 64,
-                flags = {},
-                subgroup = recipe.subgroup,
-                order = recipe.order,
-                stack_size = 500,
-                localised_name = mat.newitemname or baseitem
-            }
-
-			lastitem = table.deepcopy(name1)
-			--log(lastitem)
-			end
-
---log(serpent.block(itemresult))
-
-local c_speed
-
-if mat.out_crafting_speed ~= nil then
-
-c_speed = mat.out_crafting_speed
-
-else
-
-c_speed = mat.crafting_speed
-
-end
-
-
-            RECIPE {
-                type = 'recipe',
-                name = name2,
-                category = outcategory,
-                enabled = enabled,
-                energy_required = c_speed,
-                ingredients = itemresult,
-                results = results,
-                subgroup = recipe.subgroup,
-                order = recipe.order,
-                icons = recipeicon,
-                --icon_size = 64,
-                --main_product = results[1].name
-                localised_name = mat.name,
-            }
-
-            --if require_item and require_item_name ~= nil then
-                --doesnt work needs replaced if we use this for something
-                --RECIPE(name2):add_ingredient({type = t1, name = require_item_name, amount = require_amount})
-            --end
-
-            if tech_unlock ~= nil then
-                RECIPE(name1):add_unlock(tech_unlock)
-                RECIPE(name2):add_unlock(tech_unlock)
-            end
-
-            if recipe.module_limitations ~= nil then
-                table.insert(data.raw.module[recipe.module_limitations].limitation, name1)
-                table.insert(data.raw.module[recipe.module_limitations].limitation, name2)
-            end
-
-            --log(serpent.block(data.raw.item[baseitem..number]))
-            --log(serpent.block(data.raw.recipe[name1]))
-			--log(serpent.block(data.raw.item[mp]))
-            log(serpent.block(data.raw.recipe[name2]))
 
             number = number + 1
         end
