@@ -20,8 +20,8 @@ fun.autorecipes {
 				},
 			crafting_speed = 130,
 			tech = 'ulric',
-			name = 'cheeses',
-			icon = "__pyalienlife__/graphics/icons/atomizer-mk01.png"
+			--name = 'cheeses',
+			--icon = "__pyalienlife__/graphics/icons/atomizer-mk01.png"
 		},
 		{
 			ingredients =
@@ -36,8 +36,8 @@ fun.autorecipes {
 				},
 			crafting_speed = 120,
 			tech = 'ulric',
-			name = 'jesus',
-			icon = "__pyalienlife__/graphics/icons/navens-culture-mk01.png"
+			--name = 'jesus',
+			--icon = "__pyalienlife__/graphics/icons/navens-culture-mk01.png"
 		},
 		{
 			ingredients =

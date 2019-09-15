@@ -57,3 +57,4 @@ fun.autorecipes { -- is a function call can be many per file is the same as RECI
 R: will clear this entry from the ingredients/results table it is in
 numbers: sets amount to this value no matter what it was before
 ]]--
+--if you use the icon part its set to want a size 64 icon right now. if you want to use the size 32 ones ill need to add icon size in because i cant detect the icons size in the code
