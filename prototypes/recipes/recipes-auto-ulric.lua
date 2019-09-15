@@ -29,7 +29,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 140,
 			tech = 'ulric'
@@ -42,7 +42,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 130,
 			tech = 'ulric'
@@ -55,11 +55,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 120,
 			tech = 'ulric'
-		},		
+		},
 		--food 2
 		{
 			ingredients =
@@ -72,7 +72,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 110,
 			tech = 'ulric'
@@ -85,7 +85,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 100,
 			tech = 'ulric'
@@ -98,11 +98,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 90,
 			tech = 'ulric'
-		},	
+		},
 		--gh
 		{
 			ingredients =
@@ -112,7 +112,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 30,
 			tech = 'growth-hormone'
@@ -209,7 +209,7 @@ fun.autorecipes {
 			name = 'Extract Ulric brains',
 			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 		--skin
 		{
 			ingredients =
@@ -294,6 +294,6 @@ fun.autorecipes {
 			name = 'Extract Ulric lard',
 			icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
 			icon_size = 64,
-		},	
+		},
 	}
 }

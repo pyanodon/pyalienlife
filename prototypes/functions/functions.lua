@@ -1208,6 +1208,7 @@ recipe =
 
         results = lastresults
         --log(serpent.block(results))
+        --log(serpent.block(mat.results))
 
         for i, item in pairs(mat.results) do
             --log(serpent.block(mat.results))
@@ -1229,7 +1230,7 @@ recipe =
             if data.raw.item[ing[1]] ~= nil or data.raw.fluid[ing[1]] ~= nil or data.raw.module[ing[1]] ~= nil then
                 --log(serpent.block(item.amount))
                 if item.amount ~= nil then
-					log("hit")
+					--log("hit")
 					sign = string.sub(item.amount, 1, 1)
 					mod = string.sub(item.amount, 2, 10)
                     if sign ~= '+' and sign ~= '-' and sign ~= '*' and sign ~= '/' and sign ~= 'R' then
@@ -1237,7 +1238,7 @@ recipe =
                         mod = item.amount
                     end
                 elseif item.probability ~= nil then
-                        log("hit")
+                        --log("hit")
                         sign = nil
                         prod = true
                         prodvalue = item.probability
@@ -1252,7 +1253,7 @@ recipe =
                             a_max = 1
                         end
                 else
-					log("hit")
+					--log("hit")
                     sign = nil
                     mod = nil
                 end
@@ -1277,7 +1278,7 @@ recipe =
 					for r, result in pairs(results) do
 						if result.name == item.name then
 							if result.amount ~= nil then
-								log("hit")
+								--log("hit")
 								table.remove(results, r)
 							end
 						end
@@ -1287,7 +1288,7 @@ recipe =
 
                 if sign == nil then
                     if next(results) ~= nil then
-                        log("hit")
+                        --log("hit")
                         local rl = {}
                         for _, res in pairs(results) do
                             rl[res.name] = true
@@ -1299,32 +1300,34 @@ recipe =
                                     --log(ing[1])
                                     --res.amount = res.amount + ing[2]
                                     if prod == false then
-										log("hit")
+										--log("hit")
                                         res.amount = mod
                                     elseif prod == true then
-                                        log("hit")
+                                        --log("hit")
                                         table.insert(results, {type = type1, name = ing[1], amount_min = a_min, amount_max = a_max, probability = prodvalue})
                                     end
                                 end
                             end
                         else
-                            log("hit")
+                            --log("hit")
                             --log(mod)
                             if mod ~= nil then
                                 table.insert(results, {type = type1, name = ing[1], amount = mod})
                             elseif prod == true then
-                                log("hit")
+                                --log("hit")
                                 table.insert(results, {type = type1, name = ing[1], amount_min = a_min, amount_max = a_max, probability = prodvalue})
                             else
-                                log("hit")
+                                --log("hit")
                                 table.insert(results, {type = type1, name = ing[1], amount = ing[2]})
                             end
                         end
                     elseif prod == true then
-                        log("hit")
+                        --log("hit")
                         table.insert(results, {type = type1, name = ing[1], amount_min = a_min, amount_max = a_max, probability = prodvalue})
+                    elseif mod~= nil then
+                        table.insert(results, {type = type1, name = ing[1], amount = mod})
                     else
-                        log("hit")
+                        --log("hit")
                         table.insert(results, {type = type1, name = ing[1], amount = ing[2]})
                     end
                 elseif sign == '+' then
