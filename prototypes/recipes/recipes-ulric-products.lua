@@ -10,13 +10,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{'ralesiaseeds',5},
-					{'waterbarrel',5},
+					{name='ralesiaseeds',amount =5},
+					{name='waterbarrel',amount=5,return_item={name='empty-barrel'}},
 				},
 			results =
 				{
-					{'manure','*3'},
-					{'emptybarrel',5},
+					{name='manure',amount ='*3'},
 				},
 			crafting_speed = 130,
 			tech = 'ulric'
@@ -24,13 +23,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{'ralesiaseeds','R'},
-					{'ulricfood01'},
+					{name='ralesiaseeds',amount ='R'},
+					{name='ulricfood01'},
 				},
 			results =
 				{
 					--{'a','*5'}
-					{'manure','+2'}
+					{name='manure',amount ='+2'}
 				},
 				crafting_speed = 120,
 				tech = 'ulric'
@@ -38,12 +37,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{'salt',4},
+					{name='salt',amount =4},
 				},
 			results =
 				{
 					--{'a','*5'}
-					{'manure','+1'}
+					{name='manure',amount ='+1'}
 				},
 				crafting_speed = 120,
 				tech = 'ulric'
@@ -51,12 +50,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{'rawfiber',5},
+					{name='rawfiber',amount =5},
 				},
 			results =
 				{
 					--{'a','*5'}
-					{'manure','+2'}
+					{name='manure',amount ='+2'}
 				},
 				crafting_speed = 120,
 				tech = 'ulric'
@@ -64,15 +63,15 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{'salt','R'},
-					{'rawfiber','R'},
-					{'ulricfood01','R'},
-					{'ulricfood02'},
+					{name='salt',amount ='R'},
+					{name='rawfiber',amount ='R'},
+					{name='ulricfood01',amount ='R'},
+					{name='ulricfood02'},
 				},
 			results =
 				{
 					--{'a','*5'}
-					{'manure',8}
+					{name='manure',amount =8}
 				},
 				crafting_speed = 100,
 				tech = 'ulric'
@@ -80,12 +79,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{'salt',4},
+					{name='salt',amount =4},
 				},
 			results =
 				{
 					--{'a','*5'}
-					{'manure','+2'}
+					{name='manure',amount ='+2'}
 				},
 				crafting_speed = 100,
 				tech = 'ulric'
@@ -93,12 +92,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{'rawfiber',5},
+					{name='rawfiber',amount =5},
 				},
 			results =
 				{
 					--{'a','*5'}
-					{'manure','+2'}
+					{name='manure',amount ='+2'}
 				},
 				crafting_speed = 100,
 				tech = 'ulric'

@@ -59,7 +59,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-0",
-    category = "yotoi",
+    category = "nursery",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -77,7 +77,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-1",
-    category = "yotoi",
+    category = "nursery",
     enabled = false,
     energy_required = 80,
     ingredients = {

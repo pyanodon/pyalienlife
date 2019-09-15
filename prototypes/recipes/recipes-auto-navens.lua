@@ -12,13 +12,13 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {'navensspore',2},
-                {'guts',5},
-                {'water','*10'},
+                {name='navensspore',amount =2},
+                {name='guts',amount =5},
+                {name='water',amount ='*10'},
             },
         results =
             {
-                {'navens'}
+                {name='navens'}
             },
         crafting_speed = 100,
         tech = 'navens'
@@ -26,11 +26,11 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {'fungalsubstrate02',2},
+                {name='fungalsubstrate02',amount =2},
             },
         results =
             {
-                {'navens','+1'}
+                {name='navens',amount ='+1'}
             },
         crafting_speed = 100,
         tech = 'navens'
@@ -38,11 +38,11 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {'manure',5},
+                {name='manure',amount =5},
             },
         results =
             {
-                {'navens','+2'}
+                {name='navens',amount ='+2'}
             },
         crafting_speed = 90,
         tech = 'navens'
@@ -51,13 +51,13 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {'fungalsubstrate02','R'},
-                {'manure','R'},
-                {'fungalsubstrate03',2},
+                {name='fungalsubstrate02',amount ='R'},
+                {name='manure',amount ='R'},
+                {name='fungalsubstrate03',amount =2},
             },
         results =
             {
-                {'navens',5}
+                {name='navens',amount =5}
             },
         crafting_speed = 90,
         tech = 'navens'
@@ -65,11 +65,11 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {'manure',5},
+                {name='manure',amount =5},
             },
         results =
             {
-                {'navens',6}
+                {name='navens',amount =6}
             },
         crafting_speed = 90,
         tech = 'navens'
@@ -77,11 +77,11 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {'biomass',10},
+                {name='biomass',amount =10},
             },
         results =
             {
-                {'navens',7}
+                {name='navens',amount =7}
             },
         crafting_speed = 90,
         tech = 'navens'
@@ -89,11 +89,11 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {'nitrogen','*10'},
+                {name='nitrogen',amount ='*10'},
             },
         results =
             {
-                {'navens',8}
+                {name='navens',amount =8}
             },
         crafting_speed = 90,
         tech = 'mycology-mk03'
@@ -101,12 +101,12 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {'biomass','R'},
-                {'urea',10},
+                {name='biomass',amount ='R'},
+                {name='urea',amount =10},
             },
         results =
             {
-                {'navens',9}
+                {name='navens',amount =9}
             },
         crafting_speed = 90,
         tech = 'mycology-mk03'
@@ -115,15 +115,15 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {'urea','R'},
-                {'nitrogen','R'},
-                {'manure','R'},
-                {'biomass','R'},
-                {'gh',1},
+                {name='urea',amount ='R'},
+                {name='nitrogen',amount ='R'},
+                {name='manure',amount ='R'},
+                {name='biomass',amount ='R'},
+                {name='gh',amount =1},
             },
         results =
             {
-                {'navens',9}
+                {name='navens',amount =9}
             },
         crafting_speed = 70,
         tech = 'mycology-mk04'
@@ -131,7 +131,7 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {'urea','10'},
+                {name='urea',amount ='10'},
                 --{'nitrogen','R'},
                 --{'manure','R'},
                 --{'biomass','R'},
@@ -139,7 +139,7 @@ fun.autorecipes {
             },
         results =
             {
-                {'navens',10}
+                {name='navens',amount =10}
             },
         crafting_speed = 70,
         tech = 'mycology-mk04'
@@ -147,14 +147,14 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {'bacteria2','*20'},
+                {name='bacteria2',amount ='*20'},
                 --{'manure','R'},
                 --{'biomass','R'},
                 --{'gh',1},
             },
         results =
             {
-                {'navens',14}
+                {name='navens',amount =14}
             },
         crafting_speed = 70,
         tech = 'mycology-mk04'
@@ -162,13 +162,13 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {'manure',10},
-                {'biomass',15},
+                {name='manure',amount =10},
+                {name='biomass',amount =15},
                 --{'gh',1},
             },
         results =
             {
-                {'navens',15}
+                {name='navens',amount =15}
             },
         crafting_speed = 70,
         tech = 'mycology-mk04'

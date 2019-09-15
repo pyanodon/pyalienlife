@@ -246,7 +246,7 @@ RECIPE {
     name = 'py-science-pack',
     category = 'biofactory',
     enabled = false,
-    energy_required = 10,
+    energy_required = 15,
     ingredients = {
         {type = 'item', name = 'moss', amount = 10},
         {type = 'item', name = 'alien-sample01', amount = 1},
@@ -299,7 +299,7 @@ RECIPE {
     name = 'flutec-pp6',
     category = 'biofactory',
     enabled = false,
-    energy_required = 5,
+    energy_required = 15,
     ingredients = {
         {type = 'fluid', name = 'decalin', amount = 100},
         {type = 'item', name = 'cobalt-fluoride', amount = 5},
@@ -314,7 +314,7 @@ RECIPE {
     name = 'cobalt-fluoride',
     category = 'mixer',
     enabled = false,
-    energy_required = 7,
+    energy_required = 10,
     ingredients = {
         {type = 'fluid', name = 'acidgas', amount = 100},
         {type = 'fluid', name = 'steam', amount = 200, temperature = 165},
@@ -348,7 +348,7 @@ RECIPE {
     name = 'flavonoids',
     category = 'biofactory',
     enabled = false,
-    energy_required = 10,
+    energy_required = 15,
     ingredients = {
         {type = 'item', name = 'seaweed', amount = 10},
         {type = 'item', name = 'navens', amount = 5},
@@ -363,7 +363,7 @@ RECIPE {
     name = 'cytostatics',
     category = 'genlab',
     enabled = false,
-    energy_required = 6,
+    energy_required = 15,
     ingredients = {
         {type = 'item', name = 'sea-sponge', amount = 1},
         {type = 'item', name = 'plasmids', amount = 2},
@@ -380,7 +380,7 @@ RECIPE {
     name = 'microcin-j25',
     category = 'bio-reactor',
     enabled = false,
-    energy_required = 6,
+    energy_required = 15,
     ingredients = {
         {type = 'item', name = 'sea-sponge', amount = 1},
         {type = 'item', name = 'cytostatics', amount = 2},
@@ -399,7 +399,7 @@ RECIPE {
     name = 'resveratrol',
     category = 'biofactory',
     enabled = false,
-    energy_required = 10,
+    energy_required = 20,
     ingredients = {
         {type = 'item', name = 'yotoi-fruit', amount = 10},
         {type = 'item', name = 'nexelit-plate', amount = 2},
