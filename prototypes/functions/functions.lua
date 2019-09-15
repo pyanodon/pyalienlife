@@ -1493,7 +1493,11 @@ recipe =
                 {
                     {icon = mat.icon}
                 }
+                if mat.icon_size == 64 then
                 data.raw.recipe[na].icon_size = 64
+                elseif mat.icon_size == 32 then
+                    data.raw.recipe[na].icon_size = 32
+                end
             end
 
             if recipe.module_limitations ~= nil then
