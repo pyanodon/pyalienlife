@@ -317,6 +317,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "ulric-cub",
+    icon = "__pyalienlife__/graphics/icons/ulric-cub.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-ulric",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "caged-arthurian",
     icon = "__pyalienlife__/graphics/icons/caged-arthurian.png",
     icon_size = 64,
@@ -1477,14 +1488,7 @@ local alien_life_limitations_ulric =
 
     local alien_life_limitations_mukmoux =
 	{
-    "mukmoux-sex-01",
-    "mukmoux-sex-01-food",
-    "mukmoux-sex-calf-01",
-    "mukmoux-sex-calf-02",
-    "mukmoux-manure-01",
-    "mukmoux-manure-02",
-    "mukmoux-manure-01-food",
-    "mukmoux-manure-02-food",
+
     }
     
     local alien_life_limitations_tuuphra =
