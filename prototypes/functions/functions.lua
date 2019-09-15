@@ -1028,12 +1028,12 @@ recipe =
     local number = 1
 	local reuseitem = false
 		local lastitem
-		
+
 	local firstitem = true
 
-    
+
     singlerecipe = true
-    
+
 
     for _, mat in pairs(mats) do
         --log(number)
@@ -1041,10 +1041,10 @@ recipe =
 
         ingredients = {}
         results = {}
-		
-		
+
+
         ingredients = table.deepcopy(lastings)
-				
+
 		--log(serpent.block(lastings))
 		--log(serpent.block(ingredients))
 
@@ -1054,7 +1054,7 @@ recipe =
 			--log(serpent.block(item[1]))
             --log(serpent.block(items))
             --log(serpent.block(items.inputs))
-			
+
             local ing = items.inputs[item.name]
             local sign
             local mod
@@ -1201,11 +1201,11 @@ recipe =
                     end
                 end
             end
-			
+
         end
 
 		--log(serpent.block(ingredients))
-		
+
         results = lastresults
         --log(serpent.block(results))
 
@@ -1283,7 +1283,7 @@ recipe =
 						end
 					end
 				end
-						
+
 
                 if sign == nil then
                     if next(results) ~= nil then
@@ -1424,9 +1424,6 @@ recipe =
                 end
             end
 
-            crafting_speed = mat.crafting_speed
-            tech_unlock = mat.tech
-
             if item.require_item ~= nil then
                 require_item = true
                 require_item_name = item.require_item[1]
@@ -1441,6 +1438,9 @@ recipe =
                 end
             end
         end
+
+        crafting_speed = mat.crafting_speed
+        tech_unlock = mat.tech
 
         --log(serpent.block(ingredients))
         --log(serpent.block(results))
@@ -1457,17 +1457,19 @@ recipe =
         else
             enabled = false
         end
-		
+
 		lastings = table.deepcopy(ingredients)
         lastresults = table.deepcopy(results)
-		
+
 		--log(serpent.block(lastings))
 
         if singlerecipe then
 
+            local na = name .. number
+
             RECIPE {
                 type = 'recipe',
-                name = name .. number,
+                name = na,
                 category = category,
                 enabled = enabled,
                 energy_required = crafting_speed,
@@ -1475,11 +1477,27 @@ recipe =
                 results = results,
                 subgroup = recipe.subgroup,
                 order = recipe.order,
-                main_product = results[1].name
+                --main_product = results[1].name,
+                --icon = mat.icon
+                localised_name = mat.name
             }
 
+            if return_item and return_item_name ~= nil then
+                overrides.add_result(na, {name = return_item_name, amount = return_amount})
+            end
+
+            if mat.icon == nil then
+                data.raw.recipe[na].main_product = results[1].name
+            else
+                data.raw.recipe[na].icons =
+                {
+                    {icon = mat.icon}
+                }
+                data.raw.recipe[na].icon_size = 64
+            end
+
             if recipe.module_limitations ~= nil then
-                table.insert(data.raw.module[recipe.module_limitations].limitation, name .. number)
+                table.insert(data.raw.module[recipe.module_limitations].limitation, na)
             end
 
             --log(serpent.block(name..number))

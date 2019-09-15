@@ -1,29 +1,67 @@
 local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
-	name = 'single-example',
-	--baseitem = 'caged-ulric',
-    category = 'slaughterhouse',
-	--outcategory = 'slaughterhouse',
-	singlerecipe = true,
-	module_limitations = "ulric",
-	subgroup = 'py-alienlife-ulric',
-    order = 'z',
+    name = 'caged-ulric',
+	category = 'ulric',
+	module_limitations = 'ulric',
     mats =
 	{
 		{
 			ingredients =
 				{
-					{name='cagedulric'},
+					{name='ralesiaseeds',amount =15},
+					{name='waterbarrel',amount=5,return_item={name='empty-barrel',amount=5}},
+					{name='cage',amount=1},
 				},
 			results =
 				{
-					{name='bonemeal',amount=1},
+					{name='cagedulric', probability = 0.5,amount_min =1,amount_max =1},
 				},
-				--icon = "__pyalienlife__/graphics/icons/ulric-food-01.png",
-				crafting_speed = 30,
-				tech = 'ulric',
+			crafting_speed = 130,
+			tech = 'ulric'
 		},
-		--food 02
-	},
+		--food 1
+		{
+			ingredients =
+				{
+					{name='ralesiaseeds',amount ='R'},
+					{name='ulricfood01',amount =1},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 110,
+			tech = 'ulric'
+		},
+		--food 2
+		{
+			ingredients =
+				{
+					{name='ulricfood01',amount ='R'},
+					{name='ulricfood02',amount =1},
+
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 80,
+			tech = 'ulric'
+		},
+		--gh
+		{
+			ingredients =
+				{
+					{name='gh',amount =1},
+
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'growth-hormone'
+		},
+	}
 }
