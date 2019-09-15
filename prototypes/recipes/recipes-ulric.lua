@@ -42,10 +42,10 @@ RECIPE {
     name = 'earth-horse-sample',
     category = 'data-array',
     enabled = false,
-    energy_required = 300,
+    energy_required = 25,
     ingredients = {
         {type = 'item', name = 'steel-chest', amount = 1},
-        {type = 'item', name = 'automation-science-pack', amount = 100},
+        {type = 'item', name = 'automation-science-pack', amount = 15},
         {type = 'item', name = 'ulric-codex', amount = 1},
     },
     results = {
@@ -94,8 +94,50 @@ RECIPE {
     },
 }:add_unlock("food-mk02")
 
----breeding---
+---maturing---
 
+RECIPE {
+    type = 'recipe',
+    name = 'ulric-mature-01',
+    category = 'creature-chamber',
+    enabled = false,
+    energy_required = 45,
+    ingredients = {
+        {type = 'item', name = 'ulric-cub', amount = 1},
+        {type = 'item', name = 'cage', amount = 1},
+        {type = 'item', name = 'ulric-codex', amount = 1},
+        {type = 'item', name = 'earth-horse-sample', amount = 1},
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'caged-ulric', amount = 1},
+    },
+    main_product = "caged-ulric",
+    subgroup = 'py-alienlife-ulric',
+    order = 'a',
+}:add_unlock("assisted-embryology")
+
+RECIPE {
+    type = 'recipe',
+    name = 'ulric-mature-02',
+    category = 'creature-chamber',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'ulric-cub', amount = 1},
+        {type = 'item', name = 'gh', amount = 1},
+        {type = 'item', name = 'cage', amount = 1},
+        {type = 'item', name = 'ulric-codex', amount = 1},
+        {type = 'item', name = 'earth-horse-sample', amount = 1},
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'caged-ulric', amount = 1},
+    },
+    main_product = "caged-ulric",
+    subgroup = 'py-alienlife-ulric',
+    order = 'a',
+}:add_unlock("growth-hormone")
 
 ----adverse products----
 

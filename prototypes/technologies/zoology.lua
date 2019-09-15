@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlife__/graphics/technology/zoology.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"xenobiology"},
+    prerequisites = {"xenobiology","fluid-handling"},
     effects = {},
     unit = {
         count = 200,
