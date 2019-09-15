@@ -103,4 +103,8 @@ data:extend {
         type = "recipe-category",
         name = "kmauts"
     },
+    {
+        type = "recipe-category",
+        name = "vonix"
+      },
 }
