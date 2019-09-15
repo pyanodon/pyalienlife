@@ -11,11 +11,11 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{'fawogaespore',3},
+					{name='fawogaespore',amount =3},
 				},
 			results =
 				{
-					{'fawogae','*4'}
+					{name='fawogae',amount ='*4'}
 				},
 			crafting_speed = 25,
 			tech = 'mycology-mk01'
@@ -23,11 +23,11 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-					{'water'},
+					{name='water'},
 				},
 			results =
 				{
-					{'fawogae','+2'}
+					{name='fawogae',amount ='+2'}
 				},
 			crafting_speed = 25,
 			tech = 'mycology-mk01'
@@ -35,11 +35,11 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-					{'manure',3},
+					{name='manure',amount =3},
 				},
 			results =
 				{
-					{'fawogae','+2'}
+					{name='fawogae',amount ='+2'}
 				},
 			crafting_speed = 25,
 			tech = 'mycology-mk01'
@@ -47,11 +47,11 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-					{'fungalsubstrate',2},
+					{name='fungalsubstrate',amount =2},
 				},
 			results =
 				{
-					{'fawogae',9}
+					{name='fawogae',amount =9}
 				},
 			crafting_speed = 25,
 			tech = 'mycology-mk01'
@@ -60,13 +60,13 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    {'fungalsubstrate','R'},
-                    {'manure','R'},
-                    {'fungalsubstrate02',2},
+                    {name='fungalsubstrate',amount ='R'},
+                    {name='manure',amount ='R'},
+                    {name='fungalsubstrate02',amount =2},
 				},
 			results =
 				{
-					{'fawogae',10}
+					{name='fawogae',amount =10}
 				},
 			crafting_speed = 20,
 			tech = 'mycology-mk02'
@@ -74,11 +74,11 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    {'manure',3},
+                    {name='manure',amount =3},
 				},
 			results =
 				{
-					{'fawogae',11}
+					{name='fawogae',amount =11}
 				},
 			crafting_speed = 20,
 			tech = 'mycology-mk02'
@@ -86,11 +86,11 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    {'biomass',3},
+                    {name='biomass',amount =3},
 				},
 			results =
 				{
-					{'fawogae',12}
+					{name='fawogae',amount =12}
 				},
 			crafting_speed = 20,
 			tech = 'mycology-mk02'
@@ -99,14 +99,14 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    {'fungalsubstrate02','R'},
-                    {'manure','R'},
-                    {'biomass','R'},
-                    {'fungalsubstrate03',2},
+                    {name='fungalsubstrate02',amount ='R'},
+                    {name='manure',amount ='R'},
+                    {name='biomass',amount ='R'},
+                    {name='fungalsubstrate03',amount =2},
 				},
 			results =
 				{
-					{'fawogae',14}
+					{name='fawogae',amount =14}
 				},
 			crafting_speed = 18,
 			tech = 'mycology-mk03'
@@ -114,11 +114,11 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    {'manure',3},
+                    {name='manure',amount =3},
 				},
 			results =
 				{
-					{'fawogae',15}
+					{name='fawogae',amount =15}
 				},
 			crafting_speed = 18,
 			tech = 'mycology-mk03'
@@ -126,11 +126,11 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    {'biomass',3},
+                    {name='biomass',amount =3},
 				},
 			results =
 				{
-					{'fawogae',16}
+					{name='fawogae',amount =16}
 				},
 			crafting_speed = 18,
 			tech = 'mycology-mk03'
@@ -139,13 +139,13 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {'manure','R'},
-                {'biomass','R'},
-                {'gh',1},
+                {name='manure',amount ='R'},
+                {name='biomass',amount ='R'},
+                {name='gh',amount =1},
             },
         results =
             {
-                {'fawogae',16}
+                {name='fawogae',amount =16}
             },
         crafting_speed = 15,
         tech = 'mycology-mk04'
@@ -153,7 +153,7 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {'urea','10'},
+                {name='urea',amount ='10'},
                 --{'nitrogen','R'},
                 --{'manure','R'},
                 --{'biomass','R'},
@@ -161,7 +161,7 @@ fun.autorecipes {
             },
         results =
             {
-                {'fawogae',17}
+                {name='fawogae',amount =17}
             },
         crafting_speed = 15,
         tech = 'mycology-mk04'
@@ -169,13 +169,13 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {'manure','*10'},
-				{'biomass',15},
+                {name='manure',amount ='*10'},
+				{name='biomass',amount =15},
                 --{'gh',1},
             },
         results =
             {
-                {'fawogae',18}
+                {name='fawogae',amount =18}
             },
         crafting_speed = 15,
         tech = 'mycology-mk04'
@@ -183,12 +183,12 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {'fertilizer',5},
+                {name='fertilizer',amount =5},
                 --{'gh',1},
             },
         results =
             {
-                {'fawogae',20}
+                {name='fawogae',amount =20}
             },
         crafting_speed = 15,
         tech = 'mycology-mk04'
