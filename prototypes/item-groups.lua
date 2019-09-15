@@ -129,6 +129,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-vonix",
+        group = "py-alienlife",
+        order = "e-j"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-plants",
         group = "py-alienlife",
         order = "f"

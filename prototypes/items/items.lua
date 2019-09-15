@@ -1424,6 +1424,39 @@ ITEM {
     stack_size = 10
 }
 
+ITEM {
+    type = "item",
+    name = "vonix-codex",
+    icon = "__pyalienlife__/graphics/icons/vonix-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "venon-gland",
+    icon = "__pyalienlife__/graphics/icons/venon-gland.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-vonix",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "vonix-eggs",
+    icon = "__pyalienlife__/graphics/icons/vonix-eggs.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-vonix",
+    order = "x",
+    stack_size = 10
+}
+
 ------RULES-----
 
 local alien_life_limitations_ulric =
@@ -1838,6 +1871,22 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+ITEM {
+    type = "module",
+    name = "vonix",
+    icon = "__pyalienlife__/graphics/icons/vonix.png",
+    icon_size = 64,
+	category = "vonix",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "a",
+    stack_size = 10,
+	effect = { speed = {bonus = 100}},
+	limitation = alien_life_limitations_vonix,
+	limitation_message_key = "Its full"
+}
+
 data:extend(
 {
   {
@@ -1907,6 +1956,10 @@ data:extend(
   {
     type = "module-category",
     name = "kmauts"
+  },
+  {
+    type = "module-category",
+    name = "vonix"
   },
 }
 )
