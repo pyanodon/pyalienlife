@@ -4,6 +4,7 @@ local fun = require("prototypes/functions/functions")
 fun.autorecipes {
     name = 'manure',
 	category = 'ulric',
+	subgroup = 'py-alienlife-ulric',
 	module_limitations = 'ulric',
     mats =
 	{
@@ -18,7 +19,9 @@ fun.autorecipes {
 					{name='manure',amount ='*3'},
 				},
 			crafting_speed = 130,
-			tech = 'ulric'
+			tech = 'ulric',
+			name = 'cheeses',
+			icon = "__pyalienlife__/graphics/icons/atomizer-mk01.png"
 		},
 		{
 			ingredients =
@@ -31,8 +34,10 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+2'}
 				},
-				crafting_speed = 120,
-				tech = 'ulric'
+			crafting_speed = 120,
+			tech = 'ulric',
+			name = 'jesus',
+			icon = "__pyalienlife__/graphics/icons/navens-culture-mk01.png"
 		},
 		{
 			ingredients =
