@@ -2,68 +2,81 @@ local fun = require("prototypes/functions/functions")
 
 
 fun.autorecipes {
-    name = 'ralesias',
-	--baseitem = 'ralesia',
-	category = 'ralesia',
-	module_limitations = 'ralesias',
-	subgroup = 'py-alienlife-ralesia',
+    name = 'grod',
+	--baseitem = 'grod',
+	category = 'grod',
+	module_limitations = 'grod',
+	subgroup = 'py-alienlife-grod',
     order = 'a',
     mats =
 	{
-		{
+        {
 			ingredients =
 				{
-					{name='ralesiaseeds'},
-					{name='water'},
+                    {name='grodseeds'},
+                    {name='urea',amount = 5},
 				},
 			results =
 				{
-					{name='ralesias',amount = 4},
+					{name='grod',amount = 4},
+				},
+			crafting_speed = 150,
+			tech = 'grod'
+		},
+		{
+			ingredients =
+				{
+					--{name='grodseeds'},
+					{name='water',amount = 500},
+				},
+			results =
+				{
+					{name='grod',amount = 4},
 				},
 			crafting_speed = 130,
-			tech = 'ralesia'
+			tech = 'grod'
 		},
 		{
 			ingredients =
 				{
                     --{'s1'},
-					{name='hydrogen',amount ='*10'},
+					{name='limestone',amount = 5},
 				},
 			results =
 				{
 					--{'a','*5'}
-					{name='ralesias',amount ='+1'}
+					{name='grod',amount ='+1'}
 				},
 				crafting_speed = 120,
-				tech = 'ralesia'
+				tech = 'grod'
 		},
 		{
 			ingredients =
 				{
                     --{'s1'},
                     --{'a'},
-                    {name='soil',amount ='+15'},
+                    {name='soil'},
 				},
 			results =
 				{
 					--{'a','*7'},
-					{name='ralesias',amount ='+2'}
+					{name='grod',amount ='+2'}
 				},
 				crafting_speed = 120,
-				tech = 'ralesia'
+				tech = 'grod'
         },
         {
 			ingredients =
 				{
                     --{'s1'},
                     --{'a'},
-                    --{'b','+15'},
+                    {name='urea',amount ='R'},
                     {name='manure',amount =5},
 				},
 			results =
 				{
 					--{'a','*10'},
-					{name='ralesias',amount ='+3'}
+					{name='grod',amount ='+3'}
 				},
 				crafting_speed = 100,
 				tech = 'botany-mk02'
@@ -80,7 +93,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*12'},
-					{name='ralesias',amount ='+2'}
+					{name='grod',amount ='+2'}
 				},
 				crafting_speed = 100,
 				tech = 'botany-mk02'
@@ -91,14 +104,14 @@ fun.autorecipes {
                     --{'s1'},
                     --{'a'},
 					--{'b','+15'},
-					{name='ash',amount ='R'},
+					{name='urea',amount ='R'},
                     {name='biomass',amount ='*5'},
                     --{'d'},
 				},
 			results =
 				{
 					--{'a','*15'},
-					{name='ralesias',amount ='+3'}
+					{name='grod',amount ='+3'}
 				},
 				crafting_speed = 100,
 				tech = 'botany-mk02'
@@ -108,15 +121,13 @@ fun.autorecipes {
 				{
                     --{'s1'},
                     --{'a'},
-					--{'b','+15'},
-					{name='hydrogen',amount ='R'},
-                    {name='syngas',amount ='*3'},
+                    {name='coarse',amount =6},
                     --{'d'},
 				},
 			results =
 				{
 					--{'a','*17'},
-					{name='ralesias',amount ='+2'}
+					{name='grod',amount ='+2'}
 				},
 				crafting_speed = 100,
 				tech = 'botany-mk03'
@@ -128,14 +139,14 @@ fun.autorecipes {
                     --{'a'},
 				   --{'b','+15'},
 				   --{'carbondioxide','R'},
-				   {name='syngas',amount ='R'},
-                	{name='fluegas',amount ='*2'},
+				   {name='coarse',amount ='R'},
+                	{name='slackedlime',amount ='*2'},
                     --{'d'},
                 },
 			results =
 				{
 					--{'a','*20'},
-					{name='ralesias',amount ='+3'}
+					{name='grod',amount ='+3'}
 				},
 				crafting_speed = 100,
 				tech = 'botany-mk03'
@@ -155,7 +166,7 @@ fun.autorecipes {
 				{
 					--{'a','*25'},
 					--{'a','+3'}
-					{name='ralesias',amount =25}
+					{name='grod',amount ='+2'}
 				},
 				crafting_speed = 100,
 				tech = 'botany-mk04'
@@ -168,14 +179,14 @@ fun.autorecipes {
                     --{'b','+15'},
                     --{'g','*2'},
 					--{'d'},
-					{name='fluegas',amount ='R'},
-                    {name='syngas',amount ='*10'},
+					{name='slackedlime',amount ='R'},
+                    {name='fluegas',amount ='*2'},
 				},
 			results =
 				{
 					--{'a','*25'},
 					--{'a','+3'}
-					{name='ralesias',amount =25}
+					{name='grod',amount =25}
 				},
 				crafting_speed = 100,
 				tech = 'botany-mk04'
@@ -185,14 +196,15 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='biomass',amount ='R'},
-					{name='syngas',amount ='R'},
+					{name='slackedlime',amount ='R'},
 					{name='manure',amount ='R'},
-					{name='fertilizer',amount ='R'},
+                    {name='fertilizer',amount ='R'},
+                    {name='urea',amount ='R'},
 					{name='gh',1},
 				},
 			results =
 				{
-					{name='ralesias',amount =25}
+					{name='grod',amount =25}
 				},
 			crafting_speed = 70,
 			tech = 'botany-mk04'
@@ -208,7 +220,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='ralesias',amount =27}
+					{name='grod',amount =27}
 				},
 			crafting_speed = 70,
 			tech = 'botany-mk04'
@@ -216,14 +228,15 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='syngas',amount ='*10'},
+                    {name='slackedlime',amount ='*10'},
+                    {name='fluegas',amount ='R'},
 					{name='manure',amount =10},
 					--{'biomass','R'},
 					--{'gh',1},
 				},
 			results =
 				{
-					{name='ralesias',amount =29}
+					{name='grod',amount =29}
 				},
 			crafting_speed = 70,
 			tech = 'botany-mk04'
@@ -231,14 +244,14 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='manure',amount ='R'},
+                    {name='manure',amount ='R'},
 					{name='fertilizer',amount =5},
 					{name='urea',amount =15},
 					--{'gh',1},
 				},
 			results =
 				{
-					{name='ralesias',amount =35}
+					{name='grod',amount =35}
 				},
 			crafting_speed = 70,
 			tech = 'botany-mk04'

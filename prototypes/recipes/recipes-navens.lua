@@ -57,7 +57,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "navens-spore",
-    category = "nursery",
+    category = "spore",
     enabled = false,
     energy_required = 15,
     ingredients = {

@@ -4,6 +4,8 @@ fun.autorecipes {
     name = 'caged-ulric',
 	category = 'ulric',
 	module_limitations = 'ulric',
+	subgroup = 'py-alienlife-ulric',
+	order = 'b',
     mats =
 	{
 		{
@@ -39,6 +41,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='salt',amount = 5},
+					{name='bedding',amount = 1},
 				},
 			results =
 				{
@@ -102,7 +105,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 90,
 			tech = 'organic-breeding'
-		},	
+		},
 		--gh
 		{
 			ingredients =
@@ -137,6 +140,7 @@ fun.autorecipes {
                     {name='ralesiaseeds',amount =15},
 					{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
 					{name='cage',amount=1},
+					{name='bedding',amount = 1},
 				},
 			results =
 				{

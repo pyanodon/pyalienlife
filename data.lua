@@ -39,6 +39,7 @@ require("prototypes/technologies/auog")
 require("prototypes/technologies/yaedols")
 require("prototypes/technologies/dingrits")
 require("prototypes/technologies/vonix")
+require("prototypes/technologies/grod")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -73,6 +74,7 @@ require("prototypes/buildings/yaedols-culture-mk01")
 require("prototypes/buildings/dingrits-pack-mk01")
 require("prototypes/buildings/kmauts-enclosure-mk01")
 require("prototypes/buildings/vonix-den-mk01")
+require("prototypes/buildings/grod-swamp-mk01")
 
 --test chest--
 require("prototypes/buildings/test-filtered-chest-mk01")
@@ -111,6 +113,8 @@ require('prototypes/recipes/recipes-mukmoux-products')
 require('prototypes/recipes/recipes-dingrits')
 require('prototypes/recipes/recipes-kmauts')
 require('prototypes/recipes/recipes-vonix')
+require('prototypes/recipes/recipes-grod')
+require('prototypes/recipes/recipes-auto-grod')
 
 --(( FLUIDS ))--
 require("prototypes/fluids/zogna-bacteria")

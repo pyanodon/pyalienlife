@@ -141,6 +141,36 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-ralesia",
+        group = "py-alienlife",
+        order = "f-a"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-rennea",
+        group = "py-alienlife",
+        order = "f-b"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-yotoi",
+        group = "py-alienlife",
+        order = "f-c"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-tuuphra",
+        group = "py-alienlife",
+        order = "f-d"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-grod",
+        group = "py-alienlife",
+        order = "f-e"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-codex",
         group = "py-alienlife",
         order = "g"

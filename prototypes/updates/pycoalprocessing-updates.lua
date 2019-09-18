@@ -18,7 +18,7 @@ RECIPE('mukmoux-pasture'):remove_unlock('coal-processing-2')
 
 -----RECIPES-----
 FLUID('carbon-dioxide'):subgroup_order("py-alienlife-items", "a")
-ITEM('ralesia-seeds'):subgroup_order("py-alienlife-plants", "a")
+ITEM('ralesia-seeds'):subgroup_order("py-alienlife-ralesia", "a")
 ITEM('bonemeal'):subgroup_order("py-alienlife-items", "a")
 ITEM('organics'):subgroup_order("py-alienlife-items", "a")
 ITEM('mukmoux-fat'):subgroup_order("py-alienlife-items", "a")
@@ -34,7 +34,7 @@ RECIPE('log-wood'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('co
 RECIPE('fawogae-substrate'):remove_ingredient("fawogae"):add_ingredient({type = "item", name = "petri-dish-bacteria", amount = 1}):replace_ingredient("coke","moss"):subgroup_order("py-alienlife-recipes", "a")
 RECIPE('bio-sample01'):add_ingredient({type = "item", name = "empty-petri-dish", amount = 1})
 RECIPE('ralesia'):remove_unlock('coal-processing-1')
-RECIPE('ralesia-seeds'):remove_unlock('coal-processing-1'):add_unlock('ralesia'):subgroup_order("py-alienlife-plants", "a"):change_category('nursery'):replace_ingredient("ralesia","ralesias")
+RECIPE('ralesia-seeds'):remove_unlock('coal-processing-1'):add_unlock('ralesia'):subgroup_order("py-alienlife-ralesia", "a"):change_category('nursery'):replace_ingredient("ralesia","ralesias")
 RECIPE('chemical-science-pack'):replace_ingredient("advanced-circuit","neuroprocessor")
 RECIPE('filtration-media'):add_ingredient({type = "item", name = "micro-fiber", amount = 2})
 

@@ -106,5 +106,9 @@ data:extend {
     {
         type = "recipe-category",
         name = "vonix"
-      },
+    },
+    {
+        type = "recipe-category",
+        name = "grod"
+    },
 }

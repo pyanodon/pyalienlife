@@ -7,7 +7,7 @@ fun.autorecipes {
 	subgroup = 'py-alienlife-mukmoux',
 	module_limitations = 'mukmoux',
 	subgroup = 'py-alienlife-mukmoux',
-	order = 'b',
+	order = 'z',
     mats =
 	{
 		{

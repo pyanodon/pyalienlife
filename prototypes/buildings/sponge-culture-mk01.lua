@@ -96,7 +96,7 @@ ENTITY {
             pipe_connections = {{type = "output", position = {-6.0, 0.0}}},
             secondary_draw_orders = { north = -1 }
         },
-        off_when_no_fluid_recipe = false
+        off_when_no_fluid_recipe = true
     },
     animation = {
         layers = {

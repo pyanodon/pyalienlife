@@ -627,3 +627,32 @@ RECIPE {
         {type = 'item', name = 'cobalt-nx', amount = 1},
     },
 }:add_unlock('biotech-mk03'):add_ingredient({type = "item", name = "ceramic", amount = 5})
+
+RECIPE {
+    type = 'recipe',
+    name = 'dried-grods',
+    category = 'evaporator',
+    enabled = false,
+    energy_required = 8,
+    ingredients = {
+        {type = 'item', name = 'grod', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'dried-grods', amount = 1},
+    },
+}:add_unlock('grod')
+
+RECIPE {
+    type = 'recipe',
+    name = 'bedding',
+    category = 'wpu',
+    enabled = false,
+    energy_required = 7,
+    ingredients = {
+        {type = 'item', name = 'wood', amount = 5},
+        {type = 'item', name = 'dried-grods', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'bedding', amount = 1},
+    },
+}:add_unlock('grod'):add_ingredient({type = "item", name = "raw-fiber", amount = 5})

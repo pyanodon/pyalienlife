@@ -48,3 +48,18 @@ RECIPE {
     subgroup = 'py-alienlife-plants',
     order = 'a'
 }:add_unlock("microbiology-mk01")
+
+RECIPE {
+    type = 'recipe',
+    name = 'dried-grods-02',
+    category = 'evaporator',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'grod', amount = 5},
+        {type = 'fluid', name = 'hot-air', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'dried-grods', amount = 1},
+    },
+}:add_unlock('grod')
