@@ -43,7 +43,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'yaedols-spores',
-    category = 'nursery',
+    category = 'spore',
     enabled = false,
     energy_required = 15,
     ingredients = {

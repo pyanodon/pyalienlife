@@ -62,6 +62,9 @@ items.inputs.bacteria2 = {'bacteria-2',1} --pyht
 items.inputs.yaedolsspore = {'yaedols-spores',1}
 items.inputs.yaedols = {'yaedols',1}
 items.inputs.wood = {'wood',1}
+items.inputs.grod = {'grod',1}
+items.inputs.grodseeds = {'grod-seeds',3}
+items.inputs.bedding = {'bedding',1}
 
 items.outputs = items.inputs
 --can put output replacements below here

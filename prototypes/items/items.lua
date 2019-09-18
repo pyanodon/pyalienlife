@@ -400,7 +400,7 @@ ITEM {
     },
     flags = {},
     subgroup = "py-alienlife-items",
-    order = "a",
+    order = "f",
     stack_size = 500
 }
 
@@ -581,6 +581,17 @@ ITEM {
     type = "item",
     name = "gh",
     icon = "__pyalienlife__/graphics/icons/gh.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "anabolic-rna",
+    icon = "__pyalienlife__/graphics/icons/anabolic-rna.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-genetics",
@@ -913,7 +924,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/tuuphra-seeds.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-plants",
+    subgroup = "py-alienlife-tuuphra",
     order = "h",
     stack_size = 500
 }
@@ -990,7 +1001,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/yotoi-fruit.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-genetics",
+    subgroup = "py-alienlife-yotoi",
     order = "h",
     stack_size = 400
 }
@@ -1045,7 +1056,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/yotoi-seeds.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-plants",
+    subgroup = "py-alienlife-yotoi",
     order = "h",
     stack_size = 100
 }
@@ -1133,7 +1144,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/rennea-seeds.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-plants",
+    subgroup = "py-alienlife-rennea",
     order = "h",
     stack_size = 400
 }
@@ -1371,6 +1382,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "bedding",
+    icon = "__pyalienlife__/graphics/icons/bedding.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "d",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "dingrit-spike",
     icon = "__pyalienlife__/graphics/icons/dingrit-spike.png",
 	icon_size = 64,
@@ -1466,6 +1488,50 @@ ITEM {
     subgroup = "py-alienlife-vonix",
     order = "x",
     stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "grod-codex",
+    icon = "__pyalienlife__/graphics/icons/grod-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "grod-seeds",
+    icon = "__pyalienlife__/graphics/icons/grod-seeds.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-grod",
+    order = "x",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "earth-jute-sample",
+    icon = "__pyalienlife__/graphics/icons/earth-jute-sample.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-samples",
+    order = "a",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "dried-grods",
+    icon = "__pyalienlife__/graphics/icons/dried-grods.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-grod",
+    order = "a",
+    stack_size = 20
 }
 
 ------RULES-----
@@ -1592,6 +1658,10 @@ local alien_life_limitations_ulric =
     "fish-sex-pup-02",
     }
 
+    local alien_life_limitations_grod =
+	{
+    }
+
 ----MODULES----
 
 ITEM {
@@ -1634,7 +1704,7 @@ ITEM {
     category = "ralesia-flower",
 	tier = 1,
     flags = {},
-    subgroup = "py-alienlife-modules",
+    subgroup = "py-alienlife-ralesia",
     order = "a",
     stack_size = 10,
 	effect = { speed = {bonus = 15}},
@@ -1682,7 +1752,7 @@ ITEM {
 	category = "tuuphra",
 	tier = 1,
     flags = {},
-    subgroup = "py-alienlife-modules",
+    subgroup = "py-alienlife-tuuphra",
     order = "a",
     stack_size = 10,
 	effect = { speed = {bonus = 20}},
@@ -1714,7 +1784,7 @@ ITEM {
 	category = "yotoi",
 	tier = 1,
     flags = {},
-    subgroup = "py-alienlife-modules",
+    subgroup = "py-alienlife-yotoi",
     order = "a",
     stack_size = 10,
 	effect = { speed = {bonus = 20}},
@@ -1762,7 +1832,7 @@ ITEM {
 	category = "rennea",
 	tier = 1,
     flags = {},
-    subgroup = "py-alienlife-modules",
+    subgroup = "py-alienlife-rennea",
     order = "a",
     stack_size = 10,
 	effect = { speed = {bonus = 0.3}},
@@ -1891,6 +1961,22 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+ITEM {
+    type = "module",
+    name = "grod",
+    icon = "__pyalienlife__/graphics/icons/grod.png",
+    icon_size = 64,
+	category = "grod",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-grod",
+    order = "a",
+    stack_size = 10,
+	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_grod,
+	limitation_message_key = "Its full"
+}
+
 data:extend(
 {
   {
@@ -1964,6 +2050,10 @@ data:extend(
   {
     type = "module-category",
     name = "vonix"
+  },
+  {
+    type = "module-category",
+    name = "grod"
   },
 }
 )

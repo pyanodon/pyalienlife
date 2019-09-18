@@ -6,6 +6,8 @@ fun.autorecipes {
 	--baseitem = 'ralesia',
 	category = 'ralesia',
 	module_limitations = 'ralesias',
+	subgroup = 'py-alienlife-ralesia',
+    order = 'a',
     mats =
 	{
 		{

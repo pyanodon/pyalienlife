@@ -35,6 +35,7 @@ RECIPE {
     ingredients = {
         {type = 'fluid', name = 'zogna-bacteria', amount = 20},
         {type = 'item', name = 'petri-dish-bacteria', amount = 1},
+        {type = 'item', name = 'flask', amount = 1},
         {type = 'item', name = 'lab-instrument', amount = 1},
     },
     results = {
@@ -110,6 +111,7 @@ RECIPE {
         {type = 'item', name = 'petri-dish-bacteria', amount = 1},
         {type = 'item', name = 'fawogae', amount = 5},
         {type = 'item', name = 'lab-instrument', amount = 1},
+        {type = 'fluid', name = 'phytoplankton', amount = 20},
     },
     results = {
         {type = 'item', name = 'primers', amount = 1, probability = 0.7},
@@ -244,3 +246,44 @@ RECIPE {
         {type = 'item', name = 'adam42-gen', amount = 1},
     },
 }:add_unlock("genetics-mk04")
+
+RECIPE {
+    type = 'recipe',
+    name = 'zinc-finger-proteins',
+    category = 'genlab',
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = 'item', name = 'adam42-gen', amount = 1},
+        {type = 'item', name = 'cysteine', amount = 1},
+        {type = 'item', name = 'meat', amount = 5},
+        {type = 'item', name = 'lab-instrument', amount = 5},
+        {type = 'fluid', name = 'gta', amount = 50},
+        {type = 'item', name = 'zinc-plate', amount = 4},
+        {type = 'item', name = 'flask', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'zinc-finger-proteins', amount = 1},
+    },
+}:add_unlock("genetics-mk04")
+
+RECIPE {
+    type = 'recipe',
+    name = 'anabolic-rna',
+    category = 'incubator',
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = 'item', name = 'adam42-gen', amount = 1},
+        {type = 'item', name = 'cysteine', amount = 1},
+        {type = 'item', name = 'meat', amount = 5},
+        {type = 'item', name = 'lab-instrument', amount = 5},
+        {type = 'fluid', name = 'gta', amount = 50},
+        {type = 'item', name = 'zinc-plate', amount = 4},
+        {type = 'item', name = 'flask', amount = 5},
+        {type = 'item', name = 'arthurian-egg', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'anabolic-rna', amount = 1},
+    },
+}:add_unlock("anabolic-rna")

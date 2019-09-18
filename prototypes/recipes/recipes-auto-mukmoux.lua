@@ -5,7 +5,7 @@ fun.autorecipes {
 	category = 'mukmoux',
 	module_limitations = 'mukmoux',
 	subgroup = 'py-alienlife-mukmoux',
-	order = 'a',
+	order = 'b',
     mats =
 	{
 		{
@@ -43,6 +43,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='salt',amount = 10},
+					{name='bedding',amount = 2},
 				},
 			results =
 				{
@@ -141,6 +142,7 @@ fun.autorecipes {
                     {name='ralesiaseeds',amount =15},
 					{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
 					{name='cage',amount=1},
+					{name='bedding',amount = 2},
 				},
 			results =
 				{
