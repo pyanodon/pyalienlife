@@ -1534,6 +1534,61 @@ ITEM {
     stack_size = 20
 }
 
+ITEM {
+    type = "item",
+    name = "earth-giraffe-sample",
+    icon = "__pyalienlife__/graphics/icons/earth-giraffe-sample.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-samples",
+    order = "a",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "phagnot-codex",
+    icon = "__pyalienlife__/graphics/icons/phagnot-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "phagnot-food-01",
+    icon = "__pyalienlife__/graphics/icons/phagnot-food-01.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-food",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "phagnot-food-02",
+    icon = "__pyalienlife__/graphics/icons/phagnot-food-02.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-food",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "caged-phagnot",
+    icon = "__pyalienlife__/graphics/icons/caged-phagnot.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-phagnot",
+    order = "a",
+    stack_size = 50
+}
+
 ------RULES-----
 
 local alien_life_limitations_ulric =
@@ -1977,6 +2032,22 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+ITEM {
+    type = "module",
+    name = "phagnot",
+    icon = "__pyalienlife__/graphics/icons/phagnot.png",
+    icon_size = 64,
+	category = "grod",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-phagnot",
+    order = "a",
+    stack_size = 10,
+	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_phagnot,
+	limitation_message_key = "Its full"
+}
+
 data:extend(
 {
   {
@@ -2054,6 +2125,10 @@ data:extend(
   {
     type = "module-category",
     name = "grod"
+  },
+  {
+    type = "module-category",
+    name = "phagnot"
   },
 }
 )

@@ -111,4 +111,8 @@ data:extend {
         type = "recipe-category",
         name = "grod"
     },
+    {
+        type = "recipe-category",
+        name = "phagnot"
+    },
 }

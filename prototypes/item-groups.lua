@@ -135,6 +135,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-phagnot",
+        group = "py-alienlife",
+        order = "e-k"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-plants",
         group = "py-alienlife",
         order = "f"
