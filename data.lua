@@ -40,6 +40,7 @@ require("prototypes/technologies/yaedols")
 require("prototypes/technologies/dingrits")
 require("prototypes/technologies/vonix")
 require("prototypes/technologies/grod")
+require("prototypes/technologies/phagnot")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
