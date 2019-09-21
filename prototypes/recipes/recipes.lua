@@ -656,3 +656,18 @@ RECIPE {
         {type = 'item', name = 'bedding', amount = 1},
     },
 }:add_unlock('grod'):add_ingredient({type = "item", name = "raw-fiber", amount = 5})
+
+RECIPE {
+    type = 'recipe',
+    name = 'geg',
+    category = 'phagnot',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'wood', amount = 5},
+        {type = 'item', name = 'dried-grods', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'bedding', amount = 1},
+    },
+}:add_unlock('grod')

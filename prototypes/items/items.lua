@@ -1589,6 +1589,28 @@ ITEM {
     stack_size = 50
 }
 
+ITEM {
+    type = "item",
+    name = "phagnot-cub",
+    icon = "__pyalienlife__/graphics/icons/phagnot-pup.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-phagnot",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "gas-bladder",
+    icon = "__pyalienlife__/graphics/icons/gas-bladder.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-phagnot",
+    order = "a",
+    stack_size = 50
+}
+
 ------RULES-----
 
 local alien_life_limitations_ulric =

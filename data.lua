@@ -76,6 +76,7 @@ require("prototypes/buildings/dingrits-pack-mk01")
 require("prototypes/buildings/kmauts-enclosure-mk01")
 require("prototypes/buildings/vonix-den-mk01")
 require("prototypes/buildings/grod-swamp-mk01")
+require("prototypes/buildings/phagnot-corral-mk01")
 
 --test chest--
 require("prototypes/buildings/test-filtered-chest-mk01")
@@ -116,6 +117,7 @@ require('prototypes/recipes/recipes-kmauts')
 require('prototypes/recipes/recipes-vonix')
 require('prototypes/recipes/recipes-grod')
 require('prototypes/recipes/recipes-auto-grod')
+require('prototypes/recipes/recipes-phagnot')
 
 --(( FLUIDS ))--
 require("prototypes/fluids/zogna-bacteria")
