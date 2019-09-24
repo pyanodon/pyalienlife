@@ -112,7 +112,7 @@ RECIPE {
         {type = 'item', name = 'skin', amount = 4, probability = 0.4},
         {type = 'item', name = 'brain', amount = 1},
         {type = 'item', name = 'guts', amount = 6, probability = 0.4},
-        {type = 'item', name = 'venon-gland', amount = 1, probability = 0.3},
+        {type = 'item', name = 'venon-gland', amount = 1, probability = 0.2},
     },
     icon = '__pyalienlife__/graphics/icons/rendering-vonix.png',
     icon_size = 64,

@@ -80,6 +80,17 @@ ENTITY {
                 priority = "low"
                 --animation_speed = 0.75,
             },
+			{
+                filename = "__pyfusionenergy__/graphics/entity/kmauts-enclosure/layer-2-mask.png",
+                width = 338,
+                height = 357,
+                --line_length = 9,
+                frame_count = 1,
+                shift = {0.248, -0.591},
+                priority = "low",
+                --animation_speed = 0.75,
+				tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+            },
             --TREE
             {
                 filename = "__pyfusionenergy__/graphics/entity/kmauts-enclosure/layer-3.png",
