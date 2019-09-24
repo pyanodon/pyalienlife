@@ -115,8 +115,4 @@ data:extend {
         type = "recipe-category",
         name = "phagnot"
     },
-    {
-        type = "recipe-category",
-        name = "bhoddos"
-    },
 }

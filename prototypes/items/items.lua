@@ -601,17 +601,6 @@ ITEM {
 
 ITEM {
     type = "item",
-    name = "alien-enzymes",
-    icon = "__pyalienlife__/graphics/icons/alien-enzymes.png",
-	icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-genetics",
-    order = "h",
-    stack_size = 50
-}
-
-ITEM {
-    type = "item",
     name = "caged-ulric",
     icon = "__pyalienlife__/graphics/icons/caged-ulric.png",
 	icon_size = 64,
@@ -997,50 +986,6 @@ ITEM {
 
 ITEM {
     type = "item",
-    name = "zymogens",
-    icon = "__pyalienlife__/graphics/icons/zymogens.png",
-	icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-genetics",
-    order = "h",
-    stack_size = 200
-}
-
-ITEM {
-    type = "item",
-    name = "mmp",
-    icon = "__pyalienlife__/graphics/icons/matrix-metallopeptidases.png",
-	icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-genetics",
-    order = "h",
-    stack_size = 200
-}
-
-ITEM {
-    type = "item",
-    name = "peptidase-m58",
-    icon = "__pyalienlife__/graphics/icons/peptidase-m58.png",
-	icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-genetics",
-    order = "h",
-    stack_size = 200
-}
-
-ITEM {
-    type = "item",
-    name = "antiviral",
-    icon = "__pyalienlife__/graphics/icons/antiviral.png",
-	icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-genetics",
-    order = "h",
-    stack_size = 200
-}
-
-ITEM {
-    type = "item",
     name = "resveratrol",
     icon = "__pyalienlife__/graphics/icons/resveratrol.png",
 	icon_size = 64,
@@ -1059,17 +1004,6 @@ ITEM {
     subgroup = "py-alienlife-yotoi",
     order = "h",
     stack_size = 400
-}
-
-ITEM {
-    type = "item",
-    name = "yotoi-leaves",
-    icon = "__pyalienlife__/graphics/icons/yotoi-leaves.png",
-	icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-yotoi",
-    order = "h",
-    stack_size = 200
 }
 
 ITEM {
@@ -1677,28 +1611,6 @@ ITEM {
     stack_size = 50
 }
 
-ITEM {
-    type = "item",
-    name = "bhoddos-codex",
-    icon = "__pyalienlife__/graphics/icons/bhoddos-codex.png",
-	icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-codex",
-    order = "x",
-    stack_size = 10
-}
-
-ITEM {
-    type = "item",
-    name = "bhoddos-spore",
-    icon = "__pyalienlife__/graphics/icons/bhoddos-spore.png",
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-bhoddos",
-    order = "a",
-    stack_size = 50
-}
-
 ------RULES-----
 
 local alien_life_limitations_ulric =
@@ -1827,13 +1739,6 @@ local alien_life_limitations_ulric =
 	{
     }
 
-    local alien_life_limitations_phagnot =
-	{
-    }
-
-    local alien_life_limitations_bhoddos =
-	{
-    }
 ----MODULES----
 
 ITEM {
@@ -2165,22 +2070,6 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
-ITEM {
-    type = "module",
-    name = "bhoddos",
-    icon = "__pyalienlife__/graphics/icons/bhoddos.png",
-    icon_size = 64,
-	category = "bhoddos",
-	tier = 1,
-    flags = {},
-    subgroup = "py-alienlife-bhoddos",
-    order = "a",
-    stack_size = 10,
-	effect = { speed = {bonus = 100}},
-	limitation = alien_life_limitations_bhoddos,
-	limitation_message_key = "Its full"
-}
-
 data:extend(
 {
   {
@@ -2262,10 +2151,6 @@ data:extend(
   {
     type = "module-category",
     name = "phagnot"
-  },
-  {
-    type = "module-category",
-    name = "bhoddos"
   },
 }
 )

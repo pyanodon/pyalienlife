@@ -84,7 +84,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='salt',amount =5},
+					{name='salt',amount ='R'},
 				},
 			results =
 				{
@@ -120,34 +120,6 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'growth-hormone'
 		},
-		--antiviral and gh
-		{
-			ingredients =
-				{
-					{name='antiviral',amount =1},
-				},
-			results =
-				{
-					{name='cagedulric', amount ='R'},
-					{name='cagedulric', probability = 0.6,amount_min =1,amount_max =1},
-				},
-			crafting_speed = 30,
-			tech = 'antiviral'
-		},
-		--antiviral
-		{
-			ingredients =
-				{
-					--{name='antiviral',amount =1},
-					{name='gh',amount ='R'},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 90,
-			tech = 'antiviral'
-		},
 	}
 }
 
@@ -167,7 +139,7 @@ fun.autorecipes {
                     {name='fawogae',amount =15},
                     {name='ralesiaseeds',amount =15},
 					{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
-					--{name='cage',amount=1},
+					{name='cage',amount=1},
 					{name='bedding',amount = 1},
 				},
 			results =
