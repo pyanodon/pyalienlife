@@ -55,9 +55,9 @@ RECIPE('alien-sample-02'):add_ingredient({type = "item", name = "micro-fiber", a
 RECIPE('resveratrol'):change_category('pulp')
 RECIPE('dhilmos-pool-mk01'):replace_ingredient("glass", "phosphate-glass"):replace_ingredient("plastic-bar", "biopolymer"):add_ingredient({type = "item", name = "aerogel", amount = 5})
 RECIPE('dhilmos-codex'):replace_ingredient("glass", "phosphate-glass")
-RECIPE('fertilizer-1'):change_category('fbreactor')
-RECIPE('fertilizer-3'):change_category('fbreactor')
-RECIPE('fertilizer-4'):change_category('fbreactor')
+RECIPE('fertilizer-1'):change_category('fbreator')
+RECIPE('fertilizer-3'):change_category('fbreator')
+RECIPE('fertilizer-4'):change_category('fbreator')
 RECIPE('fish-food-02'):remove_ingredient("blood"):add_ingredient({type = "item", name = "blood-meal", amount = 5})
 RECIPE('yaedols-codex'):replace_ingredient("glass", "phosphate-glass")
 RECIPE('dingrits-codex'):replace_ingredient("glass", "phosphate-glass")
@@ -261,6 +261,21 @@ RECIPE {
     },
     results = {
         {type = 'item', name = 'rare-earth-ore', amount = 5},
+    },
+    --main_product = "cocoon",
+}:add_unlock("molecular-decohesion")
+
+RECIPE {
+    type = 'recipe',
+    name = 'meat-to-cyanic',
+    category = 'atomizer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'meat', amount = 10},
+    },
+    results = {
+        {type = 'fluid', name = 'cyanic-acid', amount = 30},
     },
     --main_product = "cocoon",
 }:add_unlock("molecular-decohesion")

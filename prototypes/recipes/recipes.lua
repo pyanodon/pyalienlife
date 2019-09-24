@@ -215,6 +215,7 @@ RECIPE {
     energy_required = 4,
     ingredients = {
         {type = 'item', name = 'iron-stick', amount = 15},
+        {type = 'item', name = 'titanium-plate', amount = 10},
         {type = 'item', name = 'solder', amount = 2},
     },
     results = {
@@ -659,15 +660,94 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'geg',
-    category = 'phagnot',
+    name = 'zymogens',
+    category = 'genlab',
     enabled = false,
-    energy_required = 10,
+    energy_required = 20,
     ingredients = {
-        {type = 'item', name = 'wood', amount = 5},
-        {type = 'item', name = 'dried-grods', amount = 2},
+        {type = 'item', name = 'bhoddos', amount = 1},
+        {type = 'item', name = 'flask', amount = 3},
+        {type = 'item', name = 'lab-instrument', amount = 1},
+        {type = 'item', name = 'retrovirus', amount = 2},
+        {type = 'item', name = 'guts', amount = 5},
+        {type = 'item', name = 'plastic-bar', amount = 1},
+        {type = 'fluid', name = 'water', amount = 300}
     },
     results = {
-        {type = 'item', name = 'bedding', amount = 1},
+        {type = 'item', name = 'zymogens', amount = 1}
+    }
+}:add_unlock('pharmagenomics')
+
+RECIPE {
+    type = 'recipe',
+    name = 'mmp',
+    category = 'bio-reactor',
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = 'item', name = 'zymogens', amount = 1},
+        {type = 'item', name = 'flask', amount = 3},
+        {type = 'item', name = 'lab-instrument', amount = 1},
+        {type = 'item', name = 'agar', amount = 10},
+        {type = 'item', name = 'nexelit-matrix', amount = 4},
+        {type = 'item', name = 'super-steel', amount = 1},
+        {type = 'fluid', name = 'bacteria-1', amount = 50},
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
     },
-}:add_unlock('grod')
+    results = {
+        {type = 'item', name = 'mmp', amount = 1}
+    }
+}:add_unlock('pharmagenomics'):replace_ingredient("fetal-serum","dms")
+
+RECIPE {
+    type = 'recipe',
+    name = 'peptidase-m58',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'mmp', amount = 1},
+        {type = 'item', name = 'nickel-plate', amount = 3},
+    },
+    results = {
+        {type = 'item', name = 'peptidase-m58', amount = 1}
+    }
+}:add_unlock('pharmagenomics')
+
+RECIPE {
+    type = 'recipe',
+    name = 'alien-enzymes',
+    category = 'incubator',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'peptidase-m58', amount = 1},
+        {type = 'item', name = 'guts', amount = 5},
+        {type = 'item', name = 'cobalt-nx', amount = 4},
+        {type = 'item', name = 'retrovirus', amount = 1},
+        {type = 'item', name = 'venon-gland', amount = 4},
+    },
+    results = {
+        {type = 'item', name = 'alien-enzymes', amount = 1}
+    }
+}:add_unlock('pharmagenomics')
+
+RECIPE {
+    type = 'recipe',
+    name = 'antiviral',
+    category = 'bio-reactor',
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = 'item', name = 'alien-enzymes', amount = 1},
+        {type = 'item', name = 'brain', amount = 2},
+        {type = 'item', name = 'cysteine', amount = 1},
+        {type = 'item', name = 'mmp', amount = 1},
+        {type = 'item', name = 'yotoi-leaves', amount = 50},
+        {type = 'item', name = 'chitin', amount = 4},
+        {type = 'fluid', name = 'zogna-bacteria', amount = 40},
+    },
+    results = {
+        {type = 'item', name = 'antiviral', amount = 1}
+    }
+}:add_unlock('antiviral')

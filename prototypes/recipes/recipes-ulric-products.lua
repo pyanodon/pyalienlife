@@ -43,6 +43,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='salt',amount =4},
+					{name='bedding',amount =2},
 				},
 			results =
 				{
@@ -71,6 +72,7 @@ fun.autorecipes {
 					{name='salt',amount ='R'},
 					{name='rawfiber',amount ='R'},
 					{name='ulricfood01',amount ='R'},
+					{name='bedding',amount ='R'},
 					{name='ulricfood02'},
 				},
 			results =
@@ -85,6 +87,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='salt',amount =4},
+					{name='bedding',amount =2},
 				},
 			results =
 				{

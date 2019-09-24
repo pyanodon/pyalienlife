@@ -276,6 +276,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'adam42-gen', amount = 1},
         {type = 'item', name = 'cysteine', amount = 1},
+        {type = 'item', name = 'alien-enzymes', amount = 1},
         {type = 'item', name = 'meat', amount = 5},
         {type = 'item', name = 'lab-instrument', amount = 5},
         {type = 'fluid', name = 'gta', amount = 50},
