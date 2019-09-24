@@ -267,6 +267,21 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
+    name = 'meat-to-cyanic',
+    category = 'atomizer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'meat', amount = 10},
+    },
+    results = {
+        {type = 'fluid', name = 'cyanic-acid', amount = 30},
+    },
+    --main_product = "cocoon",
+}:add_unlock("molecular-decohesion")
+
+RECIPE {
+    type = 'recipe',
     name = 'ethylene-from-fruit',
     category = 'bio-reactor',
     enabled = false,
