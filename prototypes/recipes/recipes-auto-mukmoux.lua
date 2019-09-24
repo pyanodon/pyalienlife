@@ -141,7 +141,7 @@ fun.autorecipes {
                     {name='fawogae',amount =15},
                     {name='ralesiaseeds',amount =15},
 					{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
-					--{name='cage',amount=1},
+					{name='cage',amount=1},
 					{name='bedding',amount = 2},
 				},
 			results =
@@ -263,7 +263,6 @@ fun.autorecipes {
 					{name='fat', probability = 0.8,amount_min =1,amount_max =5},
 					{name='guts', probability = 0.4,amount_min =1,amount_max =4},
 					{name='blood', amount =50},
-					{name='cage',amount=1},
 					{name='brain', probability = 0.4,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 30,

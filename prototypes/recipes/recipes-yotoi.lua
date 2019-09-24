@@ -165,19 +165,3 @@ RECIPE {
         {type = "item", name = "yotoi-seeds", amount = 5}
     },
 }:add_unlock("yotoi")
-
------LEAVES----
-
-RECIPE {
-    type = "recipe",
-    name = "yotoi-leaves",
-    category = "crafting",
-    enabled = false,
-    energy_required = 5,
-    ingredients = {
-        {type = "item", name = "yotoi", amount = 1},
-    },
-    results = {
-        {type = "item", name = "yotoi-leaves", amount = 5}
-    },
-}:add_unlock("yotoi")

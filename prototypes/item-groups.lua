@@ -177,39 +177,27 @@ data:extend {
     },
     {
         type = "item-subgroup",
-        name = "py-alienlife-fungi",
+        name = "py-alienlife-codex",
         group = "py-alienlife",
         order = "g"
     },
     {
         type = "item-subgroup",
-        name = "py-alienlife-bhoddos",
-        group = "py-alienlife",
-        order = "g-a"
-    },
-    {
-        type = "item-subgroup",
-        name = "py-alienlife-codex",
+        name = "py-alienlife-samples",
         group = "py-alienlife",
         order = "h"
     },
     {
         type = "item-subgroup",
-        name = "py-alienlife-samples",
+        name = "py-alienlife-genetics",
         group = "py-alienlife",
         order = "i"
     },
     {
         type = "item-subgroup",
-        name = "py-alienlife-genetics",
-        group = "py-alienlife",
-        order = "j"
-    },
-    {
-        type = "item-subgroup",
         name = "py-alienlife-food",
         group = "py-alienlife",
-        order = "k"
+        order = "j"
     },
     {
         type = "item-subgroup",
