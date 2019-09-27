@@ -148,6 +148,35 @@ fun.autorecipes {
 			crafting_speed = 90,
 			tech = 'antiviral'
 		},
+		--nanochondria
+		{
+			ingredients =
+				{
+					{name='nanochondria',amount =1},
+					--{name='antiviral',amount ='R'},
+				},
+			results =
+				{
+					{name='cagedulric', amount ='R'},
+					{name='braincagedulric', probability = 0.6,amount_min =1,amount_max =1},
+				},
+			crafting_speed = 90,
+			tech = 'nanochondria'
+		},
+		--nanochondria and gh
+		{
+			ingredients =
+				{
+					--{name='nanochondria',amount =1},
+					{name='gh',amount =1},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'nanochondria'
+		},
 	}
 }
 
@@ -439,6 +468,24 @@ fun.autorecipes {
 			name = 'Extract Ulric lard',
 			icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
 			icon_size = 64,
-		},	
+		},
+		--brain ulric rendering
+		{
+			ingredients =
+				{
+					{name='cagedulric',amount='R'},
+					{name='braincagedulric',amount=1},
+				},
+			results =
+				{
+					{name='fat', amount ='R'},
+					{name='brain', amount =2},
+				},
+			crafting_speed = 15,
+			tech = 'ulric',
+			name = 'Extract brains from Improved Ulrics',
+			icon = "__pyalienlife__/graphics/icons/brain-caged-ulric.png",
+			icon_size = 64,
+		},
 	}
 }

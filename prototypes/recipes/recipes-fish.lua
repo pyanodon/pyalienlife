@@ -103,7 +103,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'fish-egg', amount = 1},
+        {type = 'item', name = 'fish-egg', amount = 3},
         {type = 'item', name = 'filtration-media', amount = 1},
         {type = 'item', name = 'resveratrol', amount = 1},
         {type = 'item', name = 'moss-gen', amount = 1},

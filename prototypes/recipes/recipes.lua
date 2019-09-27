@@ -195,11 +195,11 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'moss-gen',
-    category = 'biofactory',
+    category = 'genlab',
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'glass', amount = 1},
+        {type = 'item', name = 'flask', amount = 2},
         {type = 'item', name = 'moss', amount = 20},
     },
     results = {
@@ -651,6 +651,7 @@ RECIPE {
     energy_required = 7,
     ingredients = {
         {type = 'item', name = 'wood', amount = 5},
+        {type = 'item', name = 'yotoi-leaves', amount = 5},
         {type = 'item', name = 'dried-grods', amount = 2},
     },
     results = {
@@ -690,7 +691,7 @@ RECIPE {
         {type = 'item', name = 'lab-instrument', amount = 1},
         {type = 'item', name = 'agar', amount = 10},
         {type = 'item', name = 'nexelit-matrix', amount = 4},
-        {type = 'item', name = 'super-steel', amount = 1},
+        {type = 'item', name = 'coated-container', amount = 1},
         {type = 'fluid', name = 'bacteria-1', amount = 50},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
     },
@@ -751,3 +752,90 @@ RECIPE {
         {type = 'item', name = 'antiviral', amount = 1}
     }
 }:add_unlock('antiviral')
+
+RECIPE {
+    type = 'recipe',
+    name = 'nitrogen-mustard',
+    category = 'wet-scrubber',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'fluid', name = 'hydrogen-chloride', amount = 50},
+        {type = 'fluid', name = 'nitrogen', amount = 200},
+        {type = 'fluid', name = 'anthraquinone', amount = 50},
+    },
+    results = {
+        {type = 'fluid', name = 'nitrogen-mustard', amount = 100}
+    }
+}:add_unlock('immunosupressants')
+
+RECIPE {
+    type = 'recipe',
+    name = 'pacifastin',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'fluid', name = 'arthropod-blood', amount = 50},
+        {type = 'item', name = 'iron-plate', amount = 10},
+        {type = 'item', name = 'moss-gen', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'pacifastin', amount = 1}
+    }
+}:add_unlock('immunosupressants'):add_ingredient({type = "item", name = "bolts", amount = 15})
+
+RECIPE {
+    type = 'recipe',
+    name = 'metallic-glass',
+    category = 'nmf',
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = 'item', name = 'aluminium-plate', amount = 5},
+        {type = 'item', name = 'boron', amount = 3},
+        {type = 'item', name = 'nickel-plate', amount = 6},
+        {type = 'fluid', name = 'vacuum', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'metallic-glass', amount = 1}
+    }
+}:add_unlock('bio-implants'):add_ingredient({type = "item", name = "silicon", amount = 5}):replace_ingredient("nickel-plate", "powdered-phosphate-rock"):change_category('nano')
+
+RECIPE {
+    type = 'recipe',
+    name = 'ticocr-alloy',
+    category = 'nmf',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'titanium-plate', amount = 4},
+        {type = 'item', name = 'cobalt-nx', amount = 1},
+        {type = 'item', name = 'chromium', amount = 3},
+        {type = 'fluid', name = 'vacuum', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'ticocr-alloy', amount = 1}
+    }
+}:add_unlock('bio-implants')
+
+RECIPE {
+    type = 'recipe',
+    name = 'nanochondria',
+    category = 'nmf',
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = 'item', name = 'ticocr-alloy', amount = 1},
+        {type = 'item', name = 'collagen', amount = 4},
+        {type = 'item', name = 'metallic-glass', amount = 2},
+        {type = 'item', name = 'propeptides', amount = 1},
+        {type = 'item', name = 'chitin', amount = 4},
+        {type = 'item', name = 'alien-enzymes', amount = 1},
+        {type = 'item', name = 'pineal-gland', amount = 1},
+        {type = 'fluid', name = 'bacteria-1', amount = 40},
+    },
+    results = {
+        {type = 'item', name = 'nanochondria', amount = 1}
+    }
+}:add_unlock('nanochondria'):change_category('nano'):add_ingredient({type = "item", name = "resilin", amount = 1}):replace_ingredient("bacteria-1", "bacteria-2")

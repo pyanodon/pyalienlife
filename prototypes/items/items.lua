@@ -623,6 +623,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "brain-caged-ulric",
+    icon = "__pyalienlife__/graphics/icons/brain-caged-ulric.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-ulric",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
     name = "ulric-food-01",
     icon = "__pyalienlife__/graphics/icons/ulric-food-01.png",
 	icon_size = 64,
@@ -1695,6 +1706,83 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-bhoddos",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "immunosupressants",
+    icon = "__pyalienlife__/graphics/icons/immunosuppressants.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "propeptides",
+    icon = "__pyalienlife__/graphics/icons/propeptides.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "purine-analogues",
+    icon = "__pyalienlife__/graphics/icons/purine-analogues.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "pacifastin",
+    icon = "__pyalienlife__/graphics/icons/pacifastin.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "metallic-glass",
+    icon = "__pyalienlife__/graphics/icons/metallic-glass.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "ticocr-alloy",
+    icon = "__pyalienlife__/graphics/icons/ticocr-alloy.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "nanochondria",
+    icon = "__pyalienlife__/graphics/icons/nanochondria.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
     order = "a",
     stack_size = 50
 }
