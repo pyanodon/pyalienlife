@@ -43,6 +43,9 @@ require("prototypes/technologies/vonix")
 require("prototypes/technologies/grod")
 require("prototypes/technologies/phagnot")
 require("prototypes/technologies/bhoddos")
+require("prototypes/technologies/immunosupressants")
+require("prototypes/technologies/bio-implants")
+require("prototypes/technologies/nanochondria")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -138,3 +141,7 @@ require("prototypes/fluids/flavonoids")
 require("prototypes/fluids/arthropod-blood")
 require("prototypes/fluids/fish-oil")
 require("prototypes/fluids/gta")
+require("prototypes/fluids/nitrogen-mustard")
+
+
+data.raw["utility-constants"].default.recipe_step_limit = 2000;

@@ -288,3 +288,57 @@ RECIPE {
         {type = 'item', name = 'anabolic-rna', amount = 1},
     },
 }:add_unlock("anabolic-rna")
+
+RECIPE {
+    type = 'recipe',
+    name = 'propeptides',
+    category = 'genlab',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'sea-sponge', amount = 2},
+        {type = 'item', name = 'chromium', amount = 2},
+        {type = 'item', name = 'bonemeal', amount = 5},
+        {type = 'item', name = 'plastic-bar', amount = 1},
+        {type = 'item', name = 'flask', amount = 5},
+        {type = 'item', name = 'lab-instrument', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'propeptides', amount = 1}
+    }
+}:add_unlock('immunosupressants')
+
+RECIPE {
+    type = 'recipe',
+    name = 'purine-analogues',
+    category = 'hpf',
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = 'item', name = 'fish', amount = 5},
+        {type = 'fluid', name = 'formamide', amount = 50},
+        {type = 'item', name = 'coke', amount = 5},
+        {type = 'item', name = 'serine', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'purine-analogues', amount = 1}
+    }
+}:add_unlock('immunosupressants')
+
+RECIPE {
+    type = 'recipe',
+    name = 'immunosupressants',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'cytostatics', amount = 1},
+        {type = 'item', name = 'propeptides', amount = 1},
+        {type = 'item', name = 'pacifastin', amount = 1},
+        {type = 'item', name = 'purine-analogues', amount = 1},
+        {type = 'fluid', name = 'nitrogen-mustard', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'immunosupressants', amount = 1}
+    }
+}:add_unlock('immunosupressants')

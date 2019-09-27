@@ -5,6 +5,7 @@
 
 RECIPE('retrovirus'):add_ingredient({type = "fluid", name = "hot-air", amount = 50})
 RECIPE('cobalt-fluoride'):remove_ingredient("steam"):add_ingredient({type = "fluid", name = "hot-air", amount = 100})
+RECIPE('nitrogen-mustard'):remove_ingredient("anthraquinone"):add_ingredient({type = "fluid", name = "chloroethanol", amount = 100})
 
 RECIPE('guar-separation'):remove_unlock('oil-machines-mk01')
 

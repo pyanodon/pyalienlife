@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlife__/graphics/technology/grod.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"botany-mk02"},
+    prerequisites = {"botany-mk02","yotoi"},
     effects = {},
     unit = {
         count = 150,
