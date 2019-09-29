@@ -62,58 +62,58 @@ ENTITY {
             {
                 filename = "__pyalienlife__/graphics/entity/micro-mine/a1.png",
                 width = 96,
-                height = 304,
+                height = 320,
                 line_length = 21,
                 frame_count = 125,
                 animation_speed = 0.4,
-                shift = util.by_pixel(-64, -40)
+                shift = util.by_pixel(-64, -46)
             },
             {
                 filename = "__pyalienlife__/graphics/entity/micro-mine/a1-mask.png",
                 width = 96,
-                height = 304,
+                height = 320,
                 line_length = 21,
                 frame_count = 125,
                 animation_speed = 0.4,
-                shift = util.by_pixel(-64, -40),
+                shift = util.by_pixel(-64, -46),
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },
             {
                 filename = "__pyalienlife__/graphics/entity/micro-mine/a2.png",
                 width = 96,
-                height = 304,
+                height = 320,
                 line_length = 21,
                 frame_count = 125,
                 animation_speed = 0.4,
-                shift = util.by_pixel(32, -40)
+                shift = util.by_pixel(32, -46)
             },
             {
                 filename = "__pyalienlife__/graphics/entity/micro-mine/a2-mask.png",
                 width = 96,
-                height = 304,
+                height = 320,
                 line_length = 21,
                 frame_count = 125,
                 animation_speed = 0.4,
-                shift = util.by_pixel(32, -40),
+                shift = util.by_pixel(32, -46),
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },
             {
                 filename = "__pyalienlife__/graphics/entity/micro-mine/a3.png",
-                width = 46,
-                height = 304,
+                width = 64,
+                height = 320,
                 line_length = 21,
                 frame_count = 125,
                 animation_speed = 0.4,
-                shift = util.by_pixel(103, -41)
+                shift = util.by_pixel(112, -46)
             },
             {
                 filename = "__pyalienlife__/graphics/entity/micro-mine/a3-mask.png",
-                width = 46,
-                height = 304,
+                width = 64,
+                height = 320,
                 line_length = 21,
                 frame_count = 125,
                 animation_speed = 0.4,
-                shift = util.by_pixel(103, -41),
+                shift = util.by_pixel(112, -46),
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },
         }

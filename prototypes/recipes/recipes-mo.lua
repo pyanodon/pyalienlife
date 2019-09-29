@@ -17,7 +17,7 @@ RECIPE {
     category = 'micro-mine',
     enabled = true,
     hidden = true,
-    energy_required = 15,
+    energy_required = 20,
     ingredients = {
         {type = 'item', name = 'petri-dish', amount = 1},
     },
@@ -31,7 +31,7 @@ RECIPE {
     name = 'plasmids',
     category = 'biofactory',
     enabled = false,
-    energy_required = 5,
+    energy_required = 6,
     ingredients = {
         {type = 'fluid', name = 'zogna-bacteria', amount = 20},
         {type = 'item', name = 'petri-dish-bacteria', amount = 1},

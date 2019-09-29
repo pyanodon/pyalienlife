@@ -119,4 +119,8 @@ data:extend {
         type = "recipe-category",
         name = "bhoddos"
     },
+    {
+        type = "recipe-category",
+        name = "xeno"
+    },
 }

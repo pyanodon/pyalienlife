@@ -612,6 +612,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "albumin",
+    icon = "__pyalienlife__/graphics/icons/albumin.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "caged-ulric",
     icon = "__pyalienlife__/graphics/icons/caged-ulric.png",
 	icon_size = 64,
@@ -1787,6 +1798,39 @@ ITEM {
     stack_size = 50
 }
 
+ITEM {
+    type = "item",
+    name = "xeno-egg",
+    icon = "__pyalienlife__/graphics/icons/xeno-egg.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-xeno",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "caged-xeno",
+    icon = "__pyalienlife__/graphics/icons/caged-xeno.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-xeno",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "xeno-codex",
+    icon = "__pyalienlife__/graphics/icons/xeno-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
 ------RULES-----
 
 local alien_life_limitations_ulric =
@@ -1920,6 +1964,10 @@ local alien_life_limitations_ulric =
     }
 
     local alien_life_limitations_bhoddos =
+	{
+    }
+
+    local alien_life_limitations_xeno =
 	{
     }
 ----MODULES----
@@ -2269,6 +2317,22 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+ITEM {
+    type = "module",
+    name = "xeno",
+    icon = "__pyalienlife__/graphics/icons/xeno.png",
+    icon_size = 64,
+	category = "xeno",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-xeno",
+    order = "a",
+    stack_size = 10,
+	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_xeno,
+	limitation_message_key = "Its full"
+}
+
 data:extend(
 {
   {
@@ -2354,6 +2418,10 @@ data:extend(
   {
     type = "module-category",
     name = "bhoddos"
+  },
+  {
+    type = "module-category",
+    name = "xeno"
   },
 }
 )

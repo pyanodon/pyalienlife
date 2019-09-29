@@ -10,7 +10,7 @@ TECHNOLOGY {
     icon = "__pyalienlife__/graphics/technology/zipir.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"water-gmo-mk01","food-mk01"},
+    prerequisites = {"water-animals-mk01","food-mk01"},
     effects = {},
     unit = {
         count = 200,
