@@ -1,3 +1,19 @@
+RECIPE {
+    type = 'recipe',
+    name = 'artificial-blood',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'fluid', name = 'flutec-pp6', amount = 100},
+        {type = 'item', name = 'albumin', amount = 10},
+    },
+    results = {
+        {type = 'fluid', name = 'artificial-blood', amount = 100},
+    },
+    --main_product = "cocoon",
+}:add_unlock("biotech-mk02")
+
 FLUID {
     type = "fluid",
     name = "artificial-blood",

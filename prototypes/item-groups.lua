@@ -141,6 +141,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-xeno",
+        group = "py-alienlife",
+        order = "e-i"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-plants",
         group = "py-alienlife",
         order = "f"

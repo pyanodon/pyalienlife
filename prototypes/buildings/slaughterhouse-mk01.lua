@@ -16,7 +16,7 @@ RECIPE {
     results = {
         {"slaughterhouse-mk01", 1}
     }
-}:add_unlock("biotech-mk01")
+}:add_unlock("rendering")
 
 ITEM {
     type = "item",
