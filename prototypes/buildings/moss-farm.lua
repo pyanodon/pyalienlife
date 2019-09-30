@@ -23,7 +23,7 @@ ITEM {
     icon_size = 32,
     flags = {},
     subgroup = "py-alienlife-buildings-mk01",
-    order = "c",
+    order = "e",
     place_result = "moss-farm-mk01",
     stack_size = 10
 }

@@ -24,7 +24,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk01",
-    order = "c",
+    order = "e",
     place_result = "yotoi-aloe-orchard-mk01",
     stack_size = 10
 }

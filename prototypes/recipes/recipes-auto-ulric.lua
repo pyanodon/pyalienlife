@@ -129,7 +129,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='cagedulric', amount ='R'},
-					{name='cagedulric', probability = 0.6,amount_min =1,amount_max =1},
+					{name='cagedulric', probability = 0.7,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -158,7 +158,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='cagedulric', amount ='R'},
-					{name='braincagedulric', probability = 0.6,amount_min =1,amount_max =1},
+					{name='braincagedulric',1},
 				},
 			crafting_speed = 90,
 			tech = 'nanochondria'
@@ -176,6 +176,67 @@ fun.autorecipes {
 				},
 			crafting_speed = 30,
 			tech = 'nanochondria'
+		},
+		--bmp
+		{
+			ingredients =
+				{
+					{name='gh',amount ='R'},
+					{name='nanochondria',amount ='R'},
+					{name='bmp',amount =1},
+				},
+			results =
+				{
+					{name='braincagedulric', amount ='R'},
+					{name='bonecagedulric', 1},
+				},
+			crafting_speed = 90,
+			tech = 'bmp'
+		},
+
+		--bmp and gh
+		{
+			ingredients =
+				{
+					--{name='nanochondria',amount =1},
+					{name='gh',amount =1},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'bmp'
+		},
+		--rna anabolic
+		{
+			ingredients =
+				{
+					{name='gh',amount ='R'},
+					{name='bmp',amount ='R'},
+					{name='anabolicrna',amount =1},
+				},
+			results =
+				{
+					{name='bonecagedulric', amount ='R'},
+					{name='meatcagedulric', 1},
+				},
+			crafting_speed = 90,
+			tech = 'anabolic-rna'
+		},
+		--rna anabolic and gh
+		{
+			ingredients =
+				{
+					--{name='nanochondria',amount =1},
+					{name='gh',amount =1},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'anabolic-rna'
 		},
 	}
 }
@@ -482,9 +543,44 @@ fun.autorecipes {
 					{name='brain', amount =2},
 				},
 			crafting_speed = 15,
-			tech = 'antiviral',
+			tech = 'nanochondria',
 			name = 'Extract brains from Improved Ulrics',
 			icon = "__pyalienlife__/graphics/icons/brain-caged-ulric.png",
+			icon_size = 64,
+		},
+		--bone ulric rendering
+		{
+			ingredients =
+				{
+					{name='braincagedulric',amount='R'},
+					{name='bonecagedulric',amount=1},
+				},
+			results =
+				{
+					{name='brain', amount ='R'},
+					{name='bones', amount =10},
+				},
+			crafting_speed = 15,
+			tech = 'bmp',
+			name = 'Extract bones from Improved Ulrics',
+			icon = "__pyalienlife__/graphics/icons/bone-caged-ulric.png",
+			icon_size = 64,
+		},
+		--bonemeal ulric rendering
+		{
+			ingredients =
+				{
+
+				},
+			results =
+				{
+					{name='bones', amount ='R'},
+					{name='bonemeal', amount =12},
+				},
+			crafting_speed = 15,
+			tech = 'bmp',
+			name = 'Extract bonemeal from Improved Ulrics',
+			icon = "__pyalienlife__/graphics/icons/bone-caged-ulric.png",
 			icon_size = 64,
 		},
 	}

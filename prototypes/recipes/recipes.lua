@@ -839,3 +839,40 @@ RECIPE {
         {type = 'item', name = 'nanochondria', amount = 1}
     }
 }:add_unlock('nanochondria'):change_category('nano'):add_ingredient({type = "item", name = "resilin", amount = 1}):replace_ingredient("bacteria-1", "bacteria-2")
+
+RECIPE {
+    type = 'recipe',
+    name = 'bmp',
+    category = 'bio-reactor',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'hyaline', amount = 1},
+        {type = 'item', name = 'collagen', amount = 2},
+        {type = 'item', name = 'chitin', amount = 4},
+        {type = 'item', name = 'alien-enzymes', amount = 1},
+        {type = 'item', name = 'pineal-gland', amount = 1},
+        {type = 'item', name = 'flask', amount = 3},
+        {type = 'item', name = 'lab-instrument', amount = 1},
+        {type = 'fluid', name = 'bacteria-1', amount = 40},
+    },
+    results = {
+        {type = 'item', name = 'bmp', amount = 1}
+    }
+}:add_unlock('bmp'):replace_ingredient("bacteria-1", "bacteria-2")
+
+RECIPE {
+    type = 'recipe',
+    name = 'hyaline',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'bones', amount = 1},
+        {type = 'item', name = 'tendon', amount = 2},
+        {type = 'item', name = 'chitin', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'hyaline', amount = 1}
+    }
+}:add_unlock('bmp')

@@ -44,5 +44,6 @@ TECHNOLOGY('exoskeleton-equipment'):remove_prereq('electric-engine'):remove_prer
 TECHNOLOGY('exoskeleton-equipment'):add_pack('production-science-pack')
 ITEM("raw-fish", "capsule"):set("icon", "__pyalienlife__/graphics/icons/fish.png")
 
+
 --RECIPES UPDATES
 

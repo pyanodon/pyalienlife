@@ -640,7 +640,29 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-ulric",
     order = "a",
-    stack_size = 500
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "bone-caged-ulric",
+    icon = "__pyalienlife__/graphics/icons/bone-caged-ulric.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-ulric",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "meat-caged-ulric",
+    icon = "__pyalienlife__/graphics/icons/meat-caged-ulric.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-ulric",
+    order = "a",
+    stack_size = 50
 }
 
 ITEM {
@@ -1109,6 +1131,28 @@ ITEM {
     type = "item",
     name = "reca",
     icon = "__pyalienlife__/graphics/icons/reca.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "hyaline",
+    icon = "__pyalienlife__/graphics/icons/hyaline.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "bmp",
+    icon = "__pyalienlife__/graphics/icons/bmp.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-genetics",

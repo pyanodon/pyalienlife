@@ -48,6 +48,7 @@ require("prototypes/technologies/bio-implants")
 require("prototypes/technologies/nanochondria")
 require("prototypes/technologies/rendering")
 require("prototypes/technologies/advanced-rendering")
+require("prototypes/technologies/bmp")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -86,6 +87,7 @@ require("prototypes/buildings/grod-swamp-mk01")
 require("prototypes/buildings/phagnot-corral-mk01")
 require("prototypes/buildings/bhoddos-culture-mk01")
 require("prototypes/buildings/xenopen-mk01")
+require("prototypes/buildings/bioreactor-mk01")
 
 --test chest--
 require("prototypes/buildings/test-filtered-chest-mk01")
