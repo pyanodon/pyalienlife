@@ -52,7 +52,7 @@ ITEM {
     icon_size = 32,
     flags = {},
     subgroup = "py-alienlife-buildings-mk01",
-    order = "a",
+    order = "e",
     place_result = "ralesia-plantation-mk01",
     stack_size = 10
 }

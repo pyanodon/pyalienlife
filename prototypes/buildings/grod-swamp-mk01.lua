@@ -27,7 +27,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk01",
-    order = "c",
+    order = "e",
     place_result = "grods-swamp-mk01",
     stack_size = 10
 }

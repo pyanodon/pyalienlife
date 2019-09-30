@@ -22,7 +22,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk01",
-    order = "a",
+    order = "d",
     place_result = "ulric-corral-mk01",
     stack_size = 10
 }

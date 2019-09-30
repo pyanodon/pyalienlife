@@ -46,7 +46,7 @@ RECIPE {
     name = 'xeno-mature-01',
     category = 'creature-chamber',
     enabled = false,
-    energy_required = 45,
+    energy_required = 80,
     ingredients = {
         {type = 'item', name = 'xeno-egg', amount = 1},
         {type = 'item', name = 'cage', amount = 1},
