@@ -876,3 +876,81 @@ RECIPE {
         {type = 'item', name = 'hyaline', amount = 1}
     }
 }:add_unlock('bmp')
+
+if mods["pyhightech"] then
+    RECIPE {
+        type = "recipe",
+        name = "cellulose-01",
+        category = "pulp",
+        enabled = false,
+        energy_required = 5,
+        ingredients = {
+            {type = 'item', name = 'raw-fiber', amount = 8},
+            {type = 'item', name = 'sodium-hydroxide', amount = 3},
+        },
+        results = {
+            {type = 'item', name = 'cellulose', amount = 5}
+        },
+    }:add_unlock("kicalk")
+    else 
+        RECIPE {
+            type = "recipe",
+            name = "cellulose-02",
+            category = "bio-factory",
+            enabled = false,
+            energy_required = 10,
+            ingredients = {
+                {type = 'item', name = 'wood', amount = 10},
+                {type = 'item', name = 'sodium-hydroxide', amount = 3},
+            },
+            results = {
+                {type = 'item', name = 'cellulose', amount = 2}
+            }
+        }:add_unlock("biotech-mk01")
+end
+
+RECIPE {
+    type = 'recipe',
+    name = 'gasoline-from-cellulose',
+    category = 'bio-reactor',
+    enabled = false,
+    energy_required = 8,
+    ingredients = {
+        {type = 'item', name = 'cellulose', amount = 2},
+        {type = 'fluid', name = 'manure-bacteria', amount = 30},
+    },
+    results = {
+        {type = 'fluid', name = 'gasoline', amount = 40},
+    },
+    --main_product = "cocoon",
+}:add_unlock("microbiology-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'lignin',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 8,
+    ingredients = {
+        {type = 'item', name = 'cellulose', amount = 4},
+        {type = 'item', name = 'sodium-hydroxide', amount = 2},
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 165},
+    },
+    results = {
+        {type = 'item', name = 'lignin', amount = 8},
+    },
+}:add_unlock("microbiology-mk02"):change_category('cracker')
+
+RECIPE {
+    type = 'recipe',
+    name = 'lignin-to-aromatics',
+    category = 'distilator',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'lignin', amount = 5},
+    },
+    results = {
+        {type = 'fluid', name = 'aromatics', amount = 50},
+    },
+}:add_unlock("biotech-mk02")

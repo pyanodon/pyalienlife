@@ -3,6 +3,7 @@ local fun = require("prototypes/functions/functions")
 --TECHNOLOGY--
 TECHNOLOGY('nano-tech'):add_prereq('microbiology-mk03')
 TECHNOLOGY('bio-implants'):add_prereq('nano-tech')
+RECIPE('kicalk-plantation'):remove_unlock('coal-processing-1')
 
 TECHNOLOGY {
     type = "technology",
@@ -22,13 +23,30 @@ TECHNOLOGY {
     }
 }
 
+TECHNOLOGY {
+    type = "technology",
+    name = "kicalk",
+    icon = "__pyalienlife__/graphics/technology/kicalk.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {"botany-mk01"},
+    effects = {},
+    unit = {
+        count = 100,
+        ingredients = {
+            {"automation-science-pack", 1},
+        },
+        time = 50
+    }
+}
+
 
 ----BUILDINDS----
 RECIPE('ralesia-plantation-mk03'):add_ingredient({type = "item", name = "biopolymer", amount = 15}):add_ingredient({type = "item", name = "carbon-aerogel", amount = 20})
 RECIPE('ralesia-plantation-mk04'):replace_ingredient("control-unit", "intelligent-unit"):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 5}):add_ingredient({type = "item", name = "nv-center", amount = 2})
 RECIPE('auog-paddock'):set_fields {enabled = false}
 RECIPE('zipir'):subgroup_order("py-alienlife-buildings-others", "a"):remove_unlock('basic-electronics'):add_unlock('zipir')
-RECIPE('kicalk-plantation'):subgroup_order("py-alienlife-buildings-others", "a"):remove_unlock('coal-processing-1'):add_unlock('botany-mk01') --SUBSTITUIR POR TECH DELA
+RECIPE('kicalk-plantation-mk01'):add_unlock('kicalk')
 RECIPE('cadaveric-arum'):subgroup_order("py-alienlife-buildings-others", "a"):remove_unlock('basic-electronics'):add_unlock('botany-mk03') --SUBSTITUIR POR TECH DELA
 
 ----RECIPES----
@@ -42,10 +60,10 @@ RECIPE('neuroprocessor'):replace_ingredient("electronic-circuit", "pcb2"):add_in
 RECIPE('formamide'):replace_ingredient("nitrogen", "ammonia"):change_category('fbreactor')
 RECIPE('bacteria-2'):subgroup_order("py-alienlife-genetics", "a"):remove_unlock('nano-tech'):add_unlock('microbiology-mk03'):add_ingredient({type = "item", name = "petri-dish", amount = 3}):add_ingredient({type = "item", name = "nexelit-plate", amount = 2}):add_ingredient({type = "item", name = "flask", amount = 5}):add_ingredient({type = "item", name = "chitin", amount = 5})
 RECIPE('rendering'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('basic-electronics'):add_unlock('zipir'):change_category('slaughterhouse')
-RECIPE('raw-fiber'):subgroup_order("py-alienlife-plants", "a"):remove_unlock('basic-electronics'):add_unlock('botany-mk01') --SUBSTITUIR POR TECH DELA
-RECIPE('raw-fiber3'):subgroup_order("py-alienlife-plants", "a"):remove_unlock('basic-electronics'):add_unlock('botany-mk02')--SUBSTITUIR POR TECH DELA
-RECIPE('raw-fiber2'):subgroup_order("py-alienlife-plants", "a"):add_unlock('botany-mk01'):set_fields {enabled = false}--SUBSTITUIR POR TECH DELA
-RECIPE('raw-fiber4'):subgroup_order("py-alienlife-plants", "a"):add_unlock('botany-mk01'):set_fields {enabled = false}--SUBSTITUIR POR TECH DELA
+RECIPE('raw-fiber'):remove_unlock('basic-electronics')
+RECIPE('raw-fiber3'):remove_unlock('basic-electronics')
+RECIPE('raw-fiber2'):remove_unlock('basic-electronics'):set_fields {enabled = false}
+RECIPE('raw-fiber4'):remove_unlock('basic-electronics'):set_fields {enabled = false}
 RECIPE('dms'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('basic-electronics'):add_unlock('botany-mk03')--SUBSTITUIR POR TECH DELA
 RECIPE('cobalt-fluoride'):replace_ingredient("chromium", "reo")
 RECIPE('micro-fiber'):remove_unlock('nano-tech'):add_unlock('botany-mk02')
@@ -294,3 +312,31 @@ RECIPE {
         {type = 'fluid', name = 'ethylene', amount = 50}
     }
 }:add_unlock('biotech-mk02')
+
+RECIPE {
+    type = 'recipe',
+    name = 'fiber-01',
+    category = 'wpu',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'wood', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'raw-fiber', amount = 2}
+    }
+}:add_unlock('kicalk')
+
+RECIPE {
+    type = 'recipe',
+    name = 'phenol-02',
+    category = 'distilator',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'lignin', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'phenol', amount = 5},
+    },
+}:add_unlock("biotech-mk02")
