@@ -88,6 +88,7 @@ require("prototypes/buildings/phagnot-corral-mk01")
 require("prototypes/buildings/bhoddos-culture-mk01")
 require("prototypes/buildings/xenopen-mk01")
 require("prototypes/buildings/bioreactor-mk01")
+require("prototypes/buildings/kicalk-plantation-mk01")
 
 --test chest--
 require("prototypes/buildings/test-filtered-chest-mk01")
@@ -148,6 +149,7 @@ require("prototypes/fluids/arthropod-blood")
 require("prototypes/fluids/fish-oil")
 require("prototypes/fluids/gta")
 require("prototypes/fluids/nitrogen-mustard")
+require("prototypes/fluids/manure-bacteria")
 
 
 data.raw["utility-constants"].default.recipe_step_limit = 2000;

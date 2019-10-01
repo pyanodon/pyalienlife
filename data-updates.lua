@@ -44,6 +44,22 @@ TECHNOLOGY('exoskeleton-equipment'):remove_prereq('electric-engine'):remove_prer
 TECHNOLOGY('exoskeleton-equipment'):add_pack('production-science-pack')
 ITEM("raw-fish", "capsule"):set("icon", "__pyalienlife__/graphics/icons/fish.png")
 
-
 --RECIPES UPDATES
 
+RECIPE {
+    type = 'recipe',
+    name = 'concrete-02',
+    category = 'advanced-crafting',
+    enabled = false,
+    energy_required = 8,
+    ingredients = {
+        {type = 'item', name = 'stone-brick', amount = 5},
+        {type = 'fluid', name = 'water', amount = 100},
+        {type = 'fluid', name = 'boric-acid', amount = 50},
+        {type = 'item', name = 'cellulose', amount = 4},
+    },
+    results = {
+        {type = 'item', name = 'concrete', amount = 20},
+    },
+    --main_product = "cocoon",
+}:add_unlock("biotech-mk02")
