@@ -723,7 +723,7 @@ RECIPE {
     energy_required = 20,
     ingredients = {
         {type = 'item', name = 'peptidase-m58', amount = 1},
-        {type = 'item', name = 'guts', amount = 5},
+        {type = 'item', name = 'guts', amount = 8},
         {type = 'item', name = 'cobalt-nx', amount = 4},
         {type = 'item', name = 'retrovirus', amount = 1},
         {type = 'item', name = 'venon-gland', amount = 4},
@@ -954,3 +954,21 @@ RECIPE {
         {type = 'fluid', name = 'aromatics', amount = 50},
     },
 }:add_unlock("biotech-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'pheromones',
+    category = 'bio-reactor',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'lignin', amount = 20},
+        {type = 'item', name = 'gas-bladder', amount = 3},
+        {type = 'item', name = 'alien-enzymes', amount = 1},
+        {type = 'fluid', name = 'creosote', amount = 200},
+        {type = 'fluid', name = 'bacteria-1', amount = 40},
+    },
+    results = {
+        {type = 'item', name = 'pheromones', amount = 1}
+    }
+}:add_unlock('pheromones'):add_ingredient({type = "item", name = "biopolymer", amount = 3})
