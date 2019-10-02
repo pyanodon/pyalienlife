@@ -60,6 +60,7 @@ RECIPE('neuroprocessor'):replace_ingredient("electronic-circuit", "pcb2"):add_in
 RECIPE('formamide'):replace_ingredient("nitrogen", "ammonia"):change_category('fbreactor')
 RECIPE('bacteria-2'):subgroup_order("py-alienlife-genetics", "a"):remove_unlock('nano-tech'):add_unlock('microbiology-mk03'):add_ingredient({type = "item", name = "petri-dish", amount = 3}):add_ingredient({type = "item", name = "nexelit-plate", amount = 2}):add_ingredient({type = "item", name = "flask", amount = 5}):add_ingredient({type = "item", name = "chitin", amount = 5})
 RECIPE('rendering'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('basic-electronics'):add_unlock('zipir'):change_category('slaughterhouse')
+RECIPE('crco-alloy'):remove_ingredient("tailings-dust"):add_ingredient({type = "item", name = "cobalt-nx", amount = 2})
 RECIPE('raw-fiber'):remove_unlock('basic-electronics')
 RECIPE('raw-fiber3'):remove_unlock('basic-electronics')
 RECIPE('raw-fiber2'):remove_unlock('basic-electronics'):set_fields {enabled = false}

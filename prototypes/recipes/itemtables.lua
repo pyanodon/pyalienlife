@@ -32,6 +32,7 @@ items.inputs.antiviral = {'antiviral', 1}
 items.inputs.nanochondria = {'nanochondria', 1}
 items.inputs.anabolicrna = {'anabolic-rna', 1}
 items.inputs.bmp = {'bmp', 1}
+items.inputs.pheromones = {'pheromones', 1}
 items.inputs.ralesiaseeds = {'ralesia-seeds', 5}
 items.inputs.thuupraseeds = {'thuupra-seeds', 5}
 items.inputs.yotoiseeds = {'yotoi-seeds', 5}

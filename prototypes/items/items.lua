@@ -565,7 +565,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 500
+    stack_size = 200
 }
 
 ITEM {
@@ -576,7 +576,18 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 500
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "pheromones",
+    icon = "__pyalienlife__/graphics/icons/pheromones.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "h",
+    stack_size = 100
 }
 
 ITEM {

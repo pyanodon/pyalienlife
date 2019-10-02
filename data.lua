@@ -49,6 +49,7 @@ require("prototypes/technologies/nanochondria")
 require("prototypes/technologies/rendering")
 require("prototypes/technologies/advanced-rendering")
 require("prototypes/technologies/bmp")
+require("prototypes/technologies/pheromones")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
