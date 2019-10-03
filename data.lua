@@ -94,6 +94,9 @@ require("prototypes/buildings/kicalk-plantation-mk01")
 --test chest--
 require("prototypes/buildings/test-filtered-chest-mk01")
 
+--Loco--
+require('prototypes/loco/pyloco')
+
 --(( RECIPES ))--
 require('prototypes/items/items')
 require('prototypes/recipes/recipes')
