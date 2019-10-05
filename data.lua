@@ -157,3 +157,5 @@ require("prototypes/fluids/manure-bacteria")
 
 
 data.raw["utility-constants"].default.recipe_step_limit = 2000;
+
+require('prototypes/not-a-tank/not-a-tank')
