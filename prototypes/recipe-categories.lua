@@ -123,4 +123,8 @@ data:extend {
         type = "recipe-category",
         name = "xeno"
     },
+    {
+        type = "recipe-category",
+        name = "cridren"
+      },
 }

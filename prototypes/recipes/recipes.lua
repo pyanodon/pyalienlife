@@ -963,6 +963,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'lignin', amount = 20},
+        {type = 'item', name = 'cridren-seeds', amount = 20},
         {type = 'item', name = 'gas-bladder', amount = 3},
         {type = 'item', name = 'alien-enzymes', amount = 1},
         {type = 'fluid', name = 'creosote', amount = 200},

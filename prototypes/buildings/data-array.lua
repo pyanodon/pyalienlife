@@ -39,8 +39,8 @@ ENTITY {
     max_health = 100,
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-5.1, -5.1}, {5.1, 5.1}},
-    selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
+    collision_box = {{-4.8, -4.8}, {4.8, 4.8}},
+    selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
     --draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
@@ -65,7 +65,7 @@ ENTITY {
                 line_length = 32,
                 frame_count = 110,
                 animation_speed = 0.3,
-                shift = util.by_pixel(-144, -22)
+                shift = util.by_pixel(-128, -37)
             },
             {
                 filename = "__pyalienlife__/graphics/entity/data-array/a2.png",
@@ -74,7 +74,7 @@ ENTITY {
                 line_length = 32,
                 frame_count = 110,
                 animation_speed = 0.3,
-                shift = util.by_pixel(-80, -22)
+                shift = util.by_pixel(-64, -37)
             },
             {
                 filename = "__pyalienlife__/graphics/entity/data-array/a3.png",
@@ -83,7 +83,7 @@ ENTITY {
                 line_length = 32,
                 frame_count = 110,
                 animation_speed = 0.3,
-                shift = util.by_pixel(-16, -22)
+                shift = util.by_pixel(-0, -37)
             },
             {
                 filename = "__pyalienlife__/graphics/entity/data-array/a4.png",
@@ -92,7 +92,7 @@ ENTITY {
                 line_length = 32,
                 frame_count = 110,
                 animation_speed = 0.3,
-                shift = util.by_pixel(48, -22)
+                shift = util.by_pixel(64, -37)
             },
             {
                 filename = "__pyalienlife__/graphics/entity/data-array/a5.png",
@@ -101,7 +101,7 @@ ENTITY {
                 line_length = 32,
                 frame_count = 110,
                 animation_speed = 0.3,
-                shift = util.by_pixel(112, -22)
+                shift = util.by_pixel(128, -37)
             },
             {
                 filename = "__pyalienlife__/graphics/entity/data-array/a6.png",
@@ -110,7 +110,7 @@ ENTITY {
                 line_length = 32,
                 frame_count = 110,
                 animation_speed = 0.3,
-                shift = util.by_pixel(160, -22)
+                shift = util.by_pixel(176, -37)
             },
         }
     },
