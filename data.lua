@@ -50,6 +50,7 @@ require("prototypes/technologies/rendering")
 require("prototypes/technologies/advanced-rendering")
 require("prototypes/technologies/bmp")
 require("prototypes/technologies/pheromones")
+require("prototypes/technologies/cridren")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -90,6 +91,7 @@ require("prototypes/buildings/bhoddos-culture-mk01")
 require("prototypes/buildings/xenopen-mk01")
 require("prototypes/buildings/bioreactor-mk01")
 require("prototypes/buildings/kicalk-plantation-mk01")
+require("prototypes/buildings/cridren-enclosure-mk01")
 
 --test chest--
 require("prototypes/buildings/test-filtered-chest-mk01")
@@ -139,6 +141,7 @@ require('prototypes/recipes/recipes-phagnot-products')
 require('prototypes/recipes/recipes-bhoddos')
 require('prototypes/recipes/recipes-auto-bhoddos')
 require('prototypes/recipes/recipes-xeno')
+require('prototypes/recipes/recipes-cridren')
 
 --(( FLUIDS ))--
 require("prototypes/fluids/zogna-bacteria")

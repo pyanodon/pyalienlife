@@ -1910,6 +1910,38 @@ ITEM {
     stack_size = 10
 }
 
+ITEM {
+    type = "item",
+    name = "cridren-codex",
+    icon = "__pyalienlife__/graphics/icons/cridren-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "cridren-seeds",
+    icon = "__pyalienlife__/graphics/icons/cridren-seeds.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cridren",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "earth-venus-fly-sample",
+    icon = "__pyalienlife__/graphics/icons/earth-venus-fly-sample.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-samples",
+    order = "a",
+    stack_size = 10
+}
 ------RULES-----
 
 local alien_life_limitations_ulric =
@@ -2047,6 +2079,10 @@ local alien_life_limitations_ulric =
     }
 
     local alien_life_limitations_xeno =
+	{
+    }
+
+    local alien_life_limitations_cridren =
 	{
     }
 ----MODULES----
@@ -2412,6 +2448,22 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+ITEM {
+    type = "module",
+    name = "cridren",
+    icon = "__pyalienlife__/graphics/icons/cridren.png",
+    icon_size = 64,
+	category = "cridren",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-cridren",
+    order = "a",
+    stack_size = 10,
+	effect = { speed = {bonus = 70}},
+	limitation = alien_life_limitations_cridren,
+	limitation_message_key = "Its full"
+}
+
 data:extend(
 {
   {
@@ -2501,6 +2553,10 @@ data:extend(
   {
     type = "module-category",
     name = "xeno"
+  },
+  {
+    type = "module-category",
+    name = "cridren"
   },
 }
 )

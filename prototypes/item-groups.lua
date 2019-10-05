@@ -183,6 +183,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-cridren",
+        group = "py-alienlife",
+        order = "f-f"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-fungi",
         group = "py-alienlife",
         order = "g"
