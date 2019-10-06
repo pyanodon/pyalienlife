@@ -22,7 +22,7 @@ TECHNOLOGY {
     icon = "__pyalienlife__/graphics/technology/selective-breeding.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"organic-breeding","biotech-mk02"},
+    prerequisites = {"organic-breeding","biotech-mk02","domestication"},
     effects = {},
     unit = {
         count = 200,
