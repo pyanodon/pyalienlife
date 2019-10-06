@@ -51,6 +51,7 @@ require("prototypes/technologies/advanced-rendering")
 require("prototypes/technologies/bmp")
 require("prototypes/technologies/pheromones")
 require("prototypes/technologies/cridren")
+require("prototypes/technologies/domestication")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
