@@ -1,3 +1,6 @@
+
+require('scripts/caravan')
+
 script.on_init(function()
 
 end)

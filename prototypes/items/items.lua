@@ -440,6 +440,8 @@ ITEM {
       { size = 64, filename = "__pyalienlife__/graphics/icons/mip/meat-05.png", scale = 0.25, mipmap_count = 1 },
       { size = 64, filename = "__pyalienlife__/graphics/icons/mip/meat-06.png", scale = 0.25, mipmap_count = 1 },
     },
+	fuel_category = 'food',
+	fuel_value = '1MJ',
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
@@ -2311,6 +2313,8 @@ ITEM {
     },
 	category = "fish",
 	tier = 1,
+	fuel_category = 'food',
+	fuel_value = '1MJ',
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "a",
@@ -2558,5 +2562,23 @@ data:extend(
     type = "module-category",
     name = "cridren"
   },
+  --item used to select the ceature and start and end points of the route
+	{
+		type = 'selection-tool',
+		name = 'carrot-on-stick',
+		icon = '__pyalienlife__/graphics/icons/carrot_on_a_stick.png',
+		icon_size = 64,
+		flags = {},
+		subgroup = "tool",
+		order = "a",
+		stack_size = 1,
+		stackable = false,
+		selection_color = {r = 0.3, g = 0.9, b = 0.3},
+		alt_selection_color = {r = 0.9, g = 0.9, b = 0.3},
+		selection_mode = {"any-entity"},
+		alt_selection_mode = {"same-force"},
+		selection_cursor_box_type = "copy",
+		alt_selection_cursor_box_type = "entity"
+	} 
 }
 )

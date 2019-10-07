@@ -2,6 +2,7 @@ require("__stdlib__/stdlib/data/data").Util.create_data_globals()
 
 require("prototypes/item-groups")
 require("prototypes/recipe-categories")
+require("prototypes/fuel-categories")
 
 --(( Technology ))--
 require("prototypes/technologies/xenobiology")
@@ -93,6 +94,10 @@ require("prototypes/buildings/xenopen-mk01")
 require("prototypes/buildings/bioreactor-mk01")
 require("prototypes/buildings/kicalk-plantation-mk01")
 require("prototypes/buildings/cridren-enclosure-mk01")
+require('prototypes/buildings/outpost')
+
+--Caravan ceature
+require('prototypes/ceatures/caravan')
 
 --test chest--
 require("prototypes/buildings/test-filtered-chest-mk01")
@@ -161,5 +166,3 @@ require("prototypes/fluids/manure-bacteria")
 
 
 data.raw["utility-constants"].default.recipe_step_limit = 2000;
-
-require('prototypes/not-a-tank/not-a-tank')
