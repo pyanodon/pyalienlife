@@ -83,6 +83,7 @@ RECIPE('yaedols-codex'):replace_ingredient("glass", "phosphate-glass")
 RECIPE('dingrits-codex'):replace_ingredient("glass", "phosphate-glass")
 RECIPE('yeadols-codex'):replace_ingredient("glass", "phosphate-glass")
 RECIPE('scrondrix-codex'):replace_ingredient("glass", "phosphate-glass")
+RECIPE('nanochondria'):add_ingredient({type = "item", name = "paramagnetic-material", amount = 1}):add_ingredient({type = "item", name = "diamagnetic-material", amount = 1})
 
 RECIPE('zipir-carcass'):remove_unlock('basic-electronics')
 RECIPE('fawogae2'):remove_unlock('advanced-electronics')

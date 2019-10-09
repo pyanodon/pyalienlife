@@ -726,12 +726,13 @@ RECIPE {
         {type = 'item', name = 'guts', amount = 8},
         {type = 'item', name = 'cobalt-nx', amount = 4},
         {type = 'item', name = 'retrovirus', amount = 1},
+        {type = 'item', name = 'nexelit-matrix', amount = 3},
         {type = 'item', name = 'venon-gland', amount = 4},
     },
     results = {
         {type = 'item', name = 'alien-enzymes', amount = 1}
     }
-}:add_unlock('pharmagenomics')
+}:add_unlock('pharmagenomics'):add_ingredient({type = "item", name = "paramagnetic-material", amount = 1}):add_ingredient({type = "item", name = "diamagnetic-material", amount = 1})
 
 RECIPE {
     type = 'recipe',
@@ -800,7 +801,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'metallic-glass', amount = 1}
     }
-}:add_unlock('bio-implants'):add_ingredient({type = "item", name = "silicon", amount = 5}):replace_ingredient("nickel-plate", "powdered-phosphate-rock"):change_category('nano')
+}:add_unlock('bio-implants'):add_ingredient({type = "item", name = "paramagnetic-material", amount = 2}):replace_ingredient("nickel-plate", "powdered-phosphate-rock"):change_category('nano')
 
 RECIPE {
     type = 'recipe',
