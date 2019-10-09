@@ -238,9 +238,9 @@ RECIPE {
         {type = 'fluid', name = 'vacuum', amount = 50},
     },
     results = {
-        {type = 'item', name = 'neuroprocessor', amount = 1},
+        {type = 'item', name = 'neuroprocessor', amount = 2},
     },
-}:add_unlock("biotech-mk02")
+}:add_unlock("biotech-mk02"):change_category('nano')
 
 RECIPE {
     type = 'recipe',
@@ -912,22 +912,6 @@ end
 
 RECIPE {
     type = 'recipe',
-    name = 'gasoline-from-cellulose',
-    category = 'bio-reactor',
-    enabled = false,
-    energy_required = 8,
-    ingredients = {
-        {type = 'item', name = 'cellulose', amount = 2},
-        {type = 'fluid', name = 'manure-bacteria', amount = 30},
-    },
-    results = {
-        {type = 'fluid', name = 'gasoline', amount = 40},
-    },
-    --main_product = "cocoon",
-}:add_unlock("microbiology-mk02")
-
-RECIPE {
-    type = 'recipe',
     name = 'lignin',
     category = 'biofactory',
     enabled = false,
@@ -974,3 +958,88 @@ RECIPE {
         {type = 'item', name = 'pheromones', amount = 1}
     }
 }:add_unlock('pheromones'):add_ingredient({type = "item", name = "biopolymer", amount = 3})
+
+RECIPE {
+    type = 'recipe',
+    name = 'neuromorphic-chip',
+    category = 'nmf',
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = 'item', name = 'neuroprocessor', amount = 3},
+        {type = 'item', name = 'biofilm', amount = 1},
+        {type = 'item', name = 'optical-fiber', amount = 5},
+        {type = 'item', name = 'nano-cellulose', amount = 5},
+        {type = 'item', name = 'nexelit-matrix', amount = 3},
+        {type = 'fluid', name = 'vacuum', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'neuromorphic-chip', amount = 1},
+    },
+}:add_unlock("biotech-mk03"):change_category('nano')
+
+RECIPE {
+    type = 'recipe',
+    name = 'nano-cellulose',
+    category = 'nmf',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'cellulose', amount = 5},
+        {type = 'item', name = 'filtration-media', amount = 1},
+        {type = 'fluid', name = 'boric-acid', amount = 100},
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 500},
+    },
+    results = {
+        {type = 'item', name = 'nano-cellulose', amount = 1},
+    },
+}:add_unlock("biotech-mk03")
+
+RECIPE {
+    type = 'recipe',
+    name = 'gasoline-cellulose',
+    category = 'bio-reactor',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'cellulose', amount = 5},
+        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'fluid', name = 'manure-bacteria', amount = 50},
+    },
+    results = {
+        {type = 'fluid', name = 'gasoline', amount = 100},
+    },
+}:add_unlock("microbiology-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'filtration-media-3',
+    category = 'crafting',
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+        {type = "item", name = "pure-sand", amount = 30},
+        {type = "item", name = "active-carbon", amount = 3},
+        {type = "item", name = "gravel", amount = 25},
+        {type = 'item', name = 'cellulose', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'filtration-media', amount = 3},
+    },
+}:add_unlock("biotech-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'cellulose-gasification',
+    category = 'gasifier',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "fluid", name = "water", amount = 300},
+        {type = 'item', name = 'cellulose', amount = 5},
+        {type = 'fluid', name = 'oxygen', amount = 30},
+    },
+    results = {
+        {type = 'fluid', name = 'syngas', amount = 80},
+    },
+}:add_unlock("biotech-mk01")

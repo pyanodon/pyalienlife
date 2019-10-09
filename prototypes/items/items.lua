@@ -497,6 +497,8 @@ ITEM {
     name = "cellulose",
     icon = "__pyalienlife__/graphics/icons/cellulose.png",
     icon_size = 64,
+    fuel_category = "chemical",
+    fuel_value = "5MJ",
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
@@ -1944,6 +1946,29 @@ ITEM {
     order = "a",
     stack_size = 10
 }
+
+ITEM {
+    type = "item",
+    name = "nano-cellulose",
+    icon = "__pyalienlife__/graphics/icons/nano-cellulose.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "neuromorphic-chip",
+    icon = "__pyalienlife__/graphics/icons/neuromorphic-chip.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 100
+}
+
 ------RULES-----
 
 local alien_life_limitations_ulric =
