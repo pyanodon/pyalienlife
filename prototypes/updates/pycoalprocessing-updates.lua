@@ -14,7 +14,10 @@ RECIPE('ralesia-plantation-mk03'):add_unlock('botany-mk03'):subgroup_order("py-a
 RECIPE('ralesia-plantation-mk04'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk04", "e")
 RECIPE('ulric-corral'):remove_unlock('coal-processing-1')
 RECIPE('mukmoux-pasture'):remove_unlock('coal-processing-2')
-
+ITEM("botanical-nursery"):set("icon", "__pyalienlife__/graphics/icons/botanical-nursery-mk01.png"):set_fields {icon_size = 64,}
+ITEM("botanical-nursery-mk02"):set("icon", "__pyalienlife__/graphics/icons/botanical-nursery-mk02.png"):set_fields {icon_size = 64,}
+ITEM("botanical-nursery-mk03"):set("icon", "__pyalienlife__/graphics/icons/botanical-nursery-mk03.png"):set_fields {icon_size = 64,}
+ITEM("botanical-nursery-mk04"):set("icon", "__pyalienlife__/graphics/icons/botanical-nursery-mk04.png"):set_fields {icon_size = 64,}
 
 -----RECIPES-----
 FLUID('carbon-dioxide'):subgroup_order("py-alienlife-items", "a")
@@ -96,3 +99,12 @@ RECIPE {
     subgroup = "py-items-class",
     order = "e"
 }:add_unlock("separation")
+
+if mods["pyhightech"] then
+
+    RECIPE('processing-unit'):remove_ingredient("microchip"):add_ingredient({type = "item", name = "neuromorphic-chip", amount = 1})
+
+    else 
+
+    RECIPE('processing-unit'):add_ingredient({type = "item", name = "neuromorphic-chip", amount = 1})
+end
