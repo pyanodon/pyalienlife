@@ -95,6 +95,7 @@ require("prototypes/buildings/bioreactor-mk01")
 require("prototypes/buildings/kicalk-plantation-mk01")
 require("prototypes/buildings/cridren-enclosure-mk01")
 require('prototypes/buildings/outpost')
+require('prototypes/buildings/foodbowl')
 
 --Caravan ceature
 require('prototypes/ceatures/caravan')
