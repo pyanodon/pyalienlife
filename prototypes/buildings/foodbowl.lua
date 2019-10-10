@@ -1,35 +1,35 @@
 	RECIPE {
         type = "recipe",
-        name = 'outpost',
+        name = 'food-bowl',
         enabled = false,
         ingredients = 
 			{
 			{'iron-plate', 5}
 			},
         results = {
-            {'outpost', 1}
+            {'food-bowl', 1}
         }
     }:add_unlock("domestication")
 
     ITEM {
         type = "item",
-        name = 'outpost',
-        icon = "__pyalienlife__/graphics/icons/outpost.png",
+        name = 'food-bowl',
+        icon = "__pyalienlife__/graphics/icons/food-bowl.png",
         icon_size = 64,
         flags = {},
         subgroup = "py-containers-warehouse",
         order = a,
-        place_result = 'outpost',
+        place_result = 'food-bowl',
         stack_size = 15
     }
 
 	ENTITY {
         type = "container",
-        name = 'outpost',
-        icon = "__pyalienlife__/graphics/icons/outpost.png",
+        name = 'food-bowl',
+        icon = "__pyalienlife__/graphics/icons/food-bowl.png",
         icon_size = 64,
         flags = {"placeable-neutral", "placeable-player", "player-creation"},
-        minable = {mining_time = 2, result = 'outpost'},
+        minable = {mining_time = 2, result = 'food-bowl'},
         max_health = 350,
         corpse = "big-remnants",
         dying_explosion = "medium-explosion",
@@ -47,12 +47,11 @@
         drawing_box = {{-3.0, -3.0}, {3.0, 3.0}},
         inventory_size = 800,
         scale_info_icons = true,
-        
 		picture = {
-            filename = "__pyalienlife__/graphics/entity/outpost/off.png",
+            filename = "__pyalienlife__/graphics/entity/outpost/hr-food-bowl.png",
             priority = "high",
-            width = 224,
-            height = 224,
+            width = 136,
+            height = 128,
             shift = {0, 0},
-        },
+        }
     }
