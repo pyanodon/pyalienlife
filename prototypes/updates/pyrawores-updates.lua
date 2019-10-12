@@ -64,7 +64,7 @@ RECIPE {
     energy_required = 5,
     ingredients = {
         {type = "item", name = "bones", amount = 6},
-        {type = "item", name = "urea", amount = 5},
+        {type = "item", name = "manure", amount = 5},
         {type = "item", name = "manure", amount = 10},
         {type = "item", name = "ammonium-chloride", amount = 20},
         {type = 'fluid', name = 'zogna-bacteria', amount = 20},
@@ -72,4 +72,4 @@ RECIPE {
     results = {
         {type = "item", name = "fertilizer", amount = 15}
     }
-}:add_unlock("biotech-mk02")
+}:add_unlock("biotech-mk02"):replace_ingredient("manure", "urea")

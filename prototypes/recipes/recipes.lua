@@ -270,14 +270,14 @@ RECIPE {
     ingredients = {
         {type = 'fluid', name = 'blood', amount = 30},
         {type = 'item', name = 'bones', amount = 6},
-        {type = 'item', name = 'urea', amount = 5},
+        {type = 'item', name = 'manure', amount = 5},
         {type = 'item', name = 'ash', amount = 10},
         {type = 'item', name = 'organics', amount = 20}
     },
     results = {
         {type = 'item', name = 'fertilizer', amount = 10}
     }
-}:add_unlock('biotech-mk02')
+}:add_unlock('biotech-mk02'):replace_ingredient("manure", "urea")
 
 RECIPE {
     type = 'recipe',
@@ -878,37 +878,20 @@ RECIPE {
     }
 }:add_unlock('bmp')
 
-if mods["pyhightech"] then
-    RECIPE {
-        type = "recipe",
-        name = "cellulose-01",
-        category = "pulp",
-        enabled = false,
-        energy_required = 5,
-        ingredients = {
-            {type = 'item', name = 'raw-fiber', amount = 8},
-            {type = 'item', name = 'sodium-hydroxide', amount = 3},
-        },
-        results = {
-            {type = 'item', name = 'cellulose', amount = 5}
-        },
-    }:add_unlock("kicalk")
-    else 
-        RECIPE {
-            type = "recipe",
-            name = "cellulose-02",
-            category = "bio-factory",
-            enabled = false,
-            energy_required = 10,
-            ingredients = {
-                {type = 'item', name = 'wood', amount = 10},
-                {type = 'item', name = 'sodium-hydroxide', amount = 3},
-            },
-            results = {
-                {type = 'item', name = 'cellulose', amount = 2}
-            }
-        }:add_unlock("biotech-mk01")
-end
+RECIPE {
+    type = "recipe",
+    name = "cellulose-02",
+    category = "biofactory",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'wood', amount = 10},
+        {type = 'item', name = 'sodium-hydroxide', amount = 3},
+    },
+    results = {
+        {type = 'item', name = 'cellulose', amount = 2}
+    }
+}:add_unlock("biotech-mk01")
 
 RECIPE {
     type = 'recipe',
@@ -1043,3 +1026,70 @@ RECIPE {
         {type = 'fluid', name = 'syngas', amount = 80},
     },
 }:add_unlock("biotech-mk01")
+
+RECIPE {
+    type = 'recipe',
+    name = 'yotoi-cellulose',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 6,
+    ingredients = {
+        {type = 'item', name = 'yotoi-leaves', amount = 10},
+        {type = 'item', name = 'sodium-hydroxide', amount = 4},
+     },
+    results = {
+        {type = 'item', name = 'cellulose', amount = 3},
+    },
+}:add_unlock("yotoi")
+
+RECIPE {
+    type = 'recipe',
+    name = 'biofilm-3',
+    category = 'crafting',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "fawogae-substrate", amount = 15},
+        {type = "item", name = "lime", amount = 5},
+        {type = "item", name = "biomass", amount = 10},
+        {type = 'item', name = 'cellulose', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'biofilm', amount = 4},
+    },
+}:add_unlock("biotech-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'manure-to-biomass',
+    category = 'evaporator',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "manure", amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'biomass', amount = 10},
+    },
+}:add_unlock("biotech-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'manure-to-crude',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "manure", amount = 10},
+        {type = "item", name = "coke", amount = 5},
+        {type = "fluid", name = "pressured-water", amount = 100},
+        {type = "fluid", name = "pressured-air", amount = 100},
+    },
+    results = {
+        {type = 'fluid', name = 'crude-oil', amount = 50},
+        {type = 'fluid', name = 'syngas', amount = 50},
+    },
+    main_product = "crude-oil",
+    subgroup = 'py-alienlife-recipes',
+    order = 'a'
+}:add_unlock("biotech-mk03")

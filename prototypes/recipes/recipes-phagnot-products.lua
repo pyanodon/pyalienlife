@@ -17,7 +17,6 @@ fun.autorecipes {
 			results =
 				{
                     {name='manure',amount ='*2'},
-                    {name='urea',amount ='*2'},
 				},
 			crafting_speed = 130,
 			tech = 'phagnot',
@@ -34,7 +33,6 @@ fun.autorecipes {
 				{
 					--{'a','*5'}
                     {name='manure',amount ='+1'},
-                    {name='urea',amount ='+1'},
 				},
 			crafting_speed = 120,
 			tech = 'phagnot',
@@ -51,7 +49,6 @@ fun.autorecipes {
 				{
 					--{'a','*5'}
                     {name='manure',amount ='+1'},
-                    {name='urea',amount ='+1'},
 				},
 				crafting_speed = 120,
 				tech = 'phagnot'
@@ -65,7 +62,6 @@ fun.autorecipes {
 				{
 					--{'a','*5'}
                     {name='manure',amount ='+1'},
-                    {name='urea',amount ='+1'},
 				},
 				crafting_speed = 120,
 				tech = 'phagnot'
@@ -83,7 +79,6 @@ fun.autorecipes {
 				{
 					--{'a','*5'}
                     {name='manure',amount =5},
-                    {name='urea',amount =5},
 				},
 				crafting_speed = 100,
 				tech = 'phagnot'
@@ -98,7 +93,6 @@ fun.autorecipes {
 				{
 					--{'a','*5'}
                     {name='manure',amount ='+1'},
-                    {name='urea',amount ='+1'},
 				},
 				crafting_speed = 100,
 				tech = 'phagnot'
@@ -112,7 +106,6 @@ fun.autorecipes {
 				{
 					--{'a','*5'}
                     {name='manure',amount ='+1'},
-                    {name='urea',amount ='+1'},
 				},
 				crafting_speed = 100,
 				tech = 'phagnot'

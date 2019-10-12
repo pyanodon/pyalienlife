@@ -167,6 +167,6 @@ require("prototypes/fluids/fish-oil")
 require("prototypes/fluids/gta")
 require("prototypes/fluids/nitrogen-mustard")
 require("prototypes/fluids/manure-bacteria")
-
+require("prototypes/fluids/liquid-manure")
 
 data.raw["utility-constants"].default.recipe_step_limit = 2000;

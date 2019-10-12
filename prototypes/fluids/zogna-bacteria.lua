@@ -5,8 +5,9 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = 'item', name = 'petri-dish', amount = 1},
+        {type = 'item', name = 'empty-petri-dish', amount = 1},
         {type = 'item', name = 'agar', amount = 1},
+        {type = 'item', name = 'wood', amount = 5},
     },
     results = {
         {type = 'fluid', name = 'zogna-bacteria', amount = 20},
