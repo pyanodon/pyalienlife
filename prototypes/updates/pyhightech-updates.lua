@@ -52,7 +52,7 @@ RECIPE('cadaveric-arum'):subgroup_order("py-alienlife-buildings-others", "a"):re
 ----RECIPES----
 RECIPE('fungal-substrate'):add_ingredient({type = "item", name = "urea", amount = 3})
 RECIPE('log7-2'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a"):remove_unlock('basic-electronics'):add_unlock('botany-mk02')
-RECIPE('urea'):replace_ingredient("fawogae", "seaweed"):subgroup_order("py-alienlife-items", "a")
+--RECIPE('urea'):replace_ingredient("fawogae", "seaweed"):subgroup_order("py-alienlife-items", "a")
 RECIPE('bonemeal2'):remove_unlock('advanced-electronics'):subgroup_order("py-alienlife-items", "a")
 RECIPE('bonemeal3'):remove_unlock('advanced-electronics'):subgroup_order("py-alienlife-items", "a")
 RECIPE('bonemeal4'):remove_unlock('advanced-electronics'):subgroup_order("py-alienlife-items", "a")
@@ -89,7 +89,7 @@ RECIPE('nanochondria'):add_ingredient({type = "item", name = "paramagnetic-mater
 RECIPE('zipir-carcass'):remove_unlock('basic-electronics')
 RECIPE('fawogae2'):remove_unlock('advanced-electronics')
 RECIPE('fiber'):remove_unlock('basic-electronics')
-RECIPE('urea'):change_category('vrauks'):subgroup_order("py-alienlife-auog", "a")
+--RECIPE('urea'):change_category('vrauks'):subgroup_order("py-alienlife-auog", "a")
 ITEM('urea'):subgroup_order("py-alienlife-auog", "a")
 RECIPE('waste-water-urea'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('basic-electronics'):add_unlock('dhilmos')
 RECIPE('ammonia-urea'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('oil-processing'):add_unlock('auog')
@@ -97,12 +97,13 @@ RECIPE('urea2'):remove_unlock('coal-processing-1'):add_unlock('auog')
 RECIPE('mukmoux-fat2'):remove_unlock('advanced-electronics')
 RECIPE('mukmoux-fat3'):remove_unlock('advanced-electronics')
 RECIPE('fertilizer'):remove_unlock('basic-electronics')
+--RECIPE('cellulose-02'):remove_unlock('biotech-mk01')
 
 
 fun.results_replacer("dhilmos-sex-01", "dirty-water", "waste-water")
 fun.results_replacer("fish-sex-pup-01", "dirty-water", "waste-water")
 fun.results_replacer("fish-sex-pup-02", "dirty-water", "waste-water")
-fun.results_replacer("urea", "urea", "urea",5)
+--fun.results_replacer("urea", "urea", "urea",5)
 
 ----EXCLUSIVE RECIPES----
 
@@ -361,3 +362,64 @@ RECIPE {
         {type = 'item', name = 'filtration-media', amount = 6},
     },
 }:add_unlock("nano-tech")
+
+RECIPE {
+    type = 'recipe',
+    name = 'urea-from-liquid-manure',
+    category = 'bio-reactor',
+    enabled = false,
+    energy_required = 8,
+    ingredients = {
+        {type = 'fluid', name = 'liquid-manure', amount = 100},
+        {type = 'fluid', name = 'zogna-bacteria', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'urea', amount = 20},
+    },
+    --main_product = "cocoon",
+}:add_unlock("biotech-mk01")
+
+RECIPE {
+    type = 'recipe',
+    name = 'yotoi-fiber',
+    category = 'pulp',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'yotoi-leaves', amount = 5},
+     },
+    results = {
+        {type = 'item', name = 'raw-fiber', amount = 4},
+    },
+}:add_unlock("yotoi")
+
+RECIPE {
+    type = "recipe",
+    name = "cellulose-01",
+    category = "pulp",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'raw-fiber', amount = 8},
+        {type = 'item', name = 'sodium-hydroxide', amount = 3},
+    },
+    results = {
+        {type = 'item', name = 'cellulose', amount = 5}
+    },
+}:add_unlock("kicalk")
+
+RECIPE {
+    type = 'recipe',
+    name = 'methane-from-liquid-manure',
+    category = 'bio-reactor',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'fluid', name = 'liquid-manure', amount = 100},
+        {type = 'fluid', name = 'bacteria-1', amount = 10},
+    },
+    results = {
+        {type = 'fluid', name = 'methane', amount = 80},
+    },
+    --main_product = "cocoon",
+}:add_unlock("kmauts")
