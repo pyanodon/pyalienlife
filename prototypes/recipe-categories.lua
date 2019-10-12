@@ -126,5 +126,9 @@ data:extend {
     {
         type = "recipe-category",
         name = "cridren"
-      },
+    },
+    {
+        type = "recipe-category",
+        name = "antelope"
+    },
 }
