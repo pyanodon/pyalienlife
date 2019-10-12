@@ -147,6 +147,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-antelope",
+        group = "py-alienlife",
+        order = "e-j"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-plants",
         group = "py-alienlife",
         order = "f"
