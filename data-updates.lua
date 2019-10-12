@@ -10,6 +10,8 @@ if mods["pyrawores"] then
 end
 
 if mods["pyhightech"] then
+    require("prototypes/technologies/schrodinger-antelope")
+    require("prototypes/buildings/antelope-enclosure-mk01")
     require("prototypes/updates/pyhightech-updates")
 end
 

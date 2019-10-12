@@ -1969,6 +1969,39 @@ ITEM {
     stack_size = 100
 }
 
+ITEM {
+    type = "item",
+    name = "earth-antelope-sample",
+    icon = "__pyalienlife__/graphics/icons/earth-antelope-sample.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-samples",
+    order = "a",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "caged-antelope",
+    icon = "__pyalienlife__/graphics/icons/caged-antelope.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-antelope",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "antelope-codex",
+    icon = "__pyalienlife__/graphics/icons/antelope-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
 ------RULES-----
 
 local alien_life_limitations_ulric =
@@ -2110,6 +2143,10 @@ local alien_life_limitations_ulric =
     }
 
     local alien_life_limitations_cridren =
+	{
+    }
+
+    local alien_life_limitations_antelope =
 	{
     }
 ----MODULES----
@@ -2493,6 +2530,22 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+ITEM {
+    type = "module",
+    name = "antelope",
+    icon = "__pyalienlife__/graphics/icons/antelope.png",
+    icon_size = 64,
+	category = "antelope",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-antelope",
+    order = "a",
+    stack_size = 10,
+	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_antelope,
+	limitation_message_key = "Its full"
+}
+
 data:extend(
 {
   {
@@ -2586,6 +2639,10 @@ data:extend(
   {
     type = "module-category",
     name = "cridren"
+  },
+  {
+    type = "module-category",
+    name = "antelope"
   },
   --item used to select the ceature and start and end points of the route
 	{
