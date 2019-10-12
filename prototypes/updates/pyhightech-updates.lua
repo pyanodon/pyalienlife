@@ -423,3 +423,18 @@ RECIPE {
     },
     --main_product = "cocoon",
 }:add_unlock("kmauts")
+
+RECIPE {
+    type = 'recipe',
+    name = 'tester',
+    category = 'antelope',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'item', name = 'coke', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'coke', amount = 80},
+    },
+    --main_product = "cocoon",
+}:add_unlock("schrodinger-antelope")

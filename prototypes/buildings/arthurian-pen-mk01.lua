@@ -32,7 +32,7 @@ ENTITY {
     type = "assembling-machine",
     name = "arthurian-pen-mk01",
     icon = "__pyalienlife__/graphics/icons/arthurian-pen-mk01.png",
-    icon_size = 32,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "arthurian-pen-mk01"},
     fast_replaceable_group = "arthurian-pen",
