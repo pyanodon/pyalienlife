@@ -1,7 +1,7 @@
 local TRlist = {
-    {tech = 'bigger-colon', oldrecipe = 'manure1', newrecipe = 'manure-a1'},
-    {tech = 'bigger-colon', oldrecipe = 'manure2', newrecipe = 'manure-a2'},
-    {tech = 'bigger-colon', oldrecipe = 'manure3', newrecipe = 'manure-a3'},
+    {tech = 'bigger-colon', oldrecipe = 'manure-1', newrecipe = 'manure-1a'},
+    {tech = 'bigger-colon', oldrecipe = 'manure-2', newrecipe = 'manure-2a'},
+    {tech = 'bigger-colon', oldrecipe = 'manure-3', newrecipe = 'manure-3a'},
 }
 --tech: the tech that is required to be researched for the new recipe
 --oldrecipe: the recipe that is currently being used
