@@ -1468,7 +1468,7 @@ recipe =
 
         if singlerecipe then
 
-            local na = name .. number
+            local na = mat.name or name .. number
 
             RECIPE {
                 type = 'recipe',
