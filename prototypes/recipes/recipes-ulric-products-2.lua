@@ -20,6 +20,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 130,
 			tech = 'bigger-colon',
+			name = 'manure-1a',
 			--name = 'cheeses',
 			--icon = "__pyalienlife__/graphics/icons/atomizer-mk01.png"
 		},
@@ -35,7 +36,8 @@ fun.autorecipes {
 					{name='manure',amount ='+2'}
 				},
 			crafting_speed = 120,
-			tech = '',
+			tech = 'bigger-colon',
+			name = 'manure-2a',
 			--name = 'jesus',
 			--icon = "__pyalienlife__/graphics/icons/navens-culture-mk01.png"
 		},
@@ -51,7 +53,8 @@ fun.autorecipes {
 					{name='manure',amount ='+1'}
 				},
 				crafting_speed = 120,
-				tech = '',
+				tech = 'bigger-colon',
+				name = 'manure-3a',
 		},
 		{
 			ingredients =
@@ -64,7 +67,8 @@ fun.autorecipes {
 					{name='manure',amount ='+2'}
 				},
 				crafting_speed = 120,
-				tech = '',
+				tech = 'bigger-colon',
+				name = 'manure-4a',
 		},
 		{
 			ingredients =
@@ -81,7 +85,8 @@ fun.autorecipes {
 					{name='manure',amount =9}
 				},
 				crafting_speed = 100,
-				tech = '',
+				tech = 'bigger-colon',
+				name = 'manure-5a',
 		},
 		{
 			ingredients =
@@ -95,7 +100,8 @@ fun.autorecipes {
 					{name='manure',amount ='+2'}
 				},
 				crafting_speed = 100,
-				tech = '',
+				tech = 'bigger-colon',
+				name = 'manure-6a',
 		},
 		{
 			ingredients =
@@ -108,7 +114,8 @@ fun.autorecipes {
 					{name='manure',amount ='+2'}
 				},
 				crafting_speed = 100,
-				tech = '',
+				tech = 'bigger-colon',
+				name = 'manure-7a',
 		},
 	}
 }
