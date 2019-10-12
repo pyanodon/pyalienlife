@@ -19,7 +19,7 @@ fun.autorecipes {
 					{name='manure',amount ='*4'},
 				},
 			crafting_speed = 130,
-			tech = '',
+			tech = 'bigger-colon',
 			--name = 'cheeses',
 			--icon = "__pyalienlife__/graphics/icons/atomizer-mk01.png"
 		},
