@@ -1509,10 +1509,10 @@ recipe =
 
             --log(serpent.block(name..number))
             if tech_unlock ~= nil then
-                RECIPE(name .. number):add_unlock(tech_unlock)
+                RECIPE(na):add_unlock(tech_unlock)
             end
 
-            --log(serpent.block(data.raw.recipe[name .. number]))
+            --log(serpent.block(data.raw.recipe[na]))
 
             number = number + 1
         end
