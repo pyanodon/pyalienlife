@@ -20,7 +20,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 130,
 			tech = 'ulric',
-			name = 'cheeses',
+			name = 'manure-1',
 			--icon = "__pyalienlife__/graphics/icons/atomizer-mk01.png"
 		},
 		{
@@ -36,7 +36,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 120,
 			tech = 'ulric',
-			name = 'jesus',
+			name = 'manure-2',
 			--icon = "__pyalienlife__/graphics/icons/navens-culture-mk01.png"
 		},
 		{
@@ -51,7 +51,8 @@ fun.autorecipes {
 					{name='manure',amount ='+1'}
 				},
 				crafting_speed = 120,
-				tech = 'ulric'
+				tech = 'ulric',
+				name = 'manure-3',
 		},
 		{
 			ingredients =
@@ -64,7 +65,8 @@ fun.autorecipes {
 					{name='manure',amount ='+2'}
 				},
 				crafting_speed = 120,
-				tech = 'ulric'
+				tech = 'ulric',
+				name = 'manure-4',
 		},
 		{
 			ingredients =
@@ -81,7 +83,8 @@ fun.autorecipes {
 					{name='manure',amount =8}
 				},
 				crafting_speed = 100,
-				tech = 'ulric'
+				tech = 'ulric',
+				name = 'manure-5',
 		},
 		{
 			ingredients =
@@ -95,7 +98,8 @@ fun.autorecipes {
 					{name='manure',amount ='+2'}
 				},
 				crafting_speed = 100,
-				tech = 'ulric'
+				tech = 'ulric',
+				name = 'manure-6',
 		},
 		{
 			ingredients =
@@ -108,7 +112,8 @@ fun.autorecipes {
 					{name='manure',amount ='+2'}
 				},
 				crafting_speed = 100,
-				tech = 'ulric'
+				tech = 'ulric',
+				name = 'manure-7',
 		},
 	}
 }
