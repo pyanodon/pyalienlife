@@ -2002,6 +2002,18 @@ ITEM {
     stack_size = 10
 }
 
+ITEM {
+    type = "item",
+    name = "bovine-adrenal-cortex",
+    icon = "__pyalienlife__/graphics/icons/bovine-adrenal-cortex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-mukmoux",
+    order = "x",
+    stack_size = 10
+}
+
+
 ------RULES-----
 
 local alien_life_limitations_ulric =

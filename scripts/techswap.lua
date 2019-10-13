@@ -2,6 +2,20 @@ local TRlist = {
     {tech = 'bigger-colon', oldrecipe = 'manure-1', newrecipe = 'manure-1a'},
     {tech = 'bigger-colon', oldrecipe = 'manure-2', newrecipe = 'manure-2a'},
     {tech = 'bigger-colon', oldrecipe = 'manure-3', newrecipe = 'manure-3a'},
+    {tech = 'bigger-colon', oldrecipe = 'manure-4', newrecipe = 'manure-4a'},
+    {tech = 'bigger-colon', oldrecipe = 'manure-5', newrecipe = 'manure-5a'},
+    {tech = 'bigger-colon', oldrecipe = 'manure-6', newrecipe = 'manure-6a'},
+    {tech = 'bigger-colon', oldrecipe = 'manure-7', newrecipe = 'manure-7a'},
+}
+
+local TRlist = {
+    {tech = 'explosive-diarrhea', oldrecipe = 'manure-1a', newrecipe = 'manure-1b'},
+    {tech = 'explosive-diarrhea', oldrecipe = 'manure-2a', newrecipe = 'manure-2b'},
+    {tech = 'explosive-diarrhea', oldrecipe = 'manure-3a', newrecipe = 'manure-3b'},
+    {tech = 'explosive-diarrhea', oldrecipe = 'manure-4a', newrecipe = 'manure-4b'},
+    {tech = 'explosive-diarrhea', oldrecipe = 'manure-5a', newrecipe = 'manure-5b'},
+    {tech = 'explosive-diarrhea', oldrecipe = 'manure-6a', newrecipe = 'manure-6b'},
+    {tech = 'explosive-diarrhea', oldrecipe = 'manure-7a', newrecipe = 'manure-7b'},
 }
 --tech: the tech that is required to be researched for the new recipe
 --oldrecipe: the recipe that is currently being used
