@@ -213,6 +213,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-fawogae",
+        group = "py-alienlife",
+        order = "g-b"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-codex",
         group = "py-alienlife",
         order = "h"

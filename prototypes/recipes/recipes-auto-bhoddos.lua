@@ -5,7 +5,8 @@ fun.autorecipes {
     name = 'bhoddos',
 	--baseitem = 'ralesia',
 	category = 'bhoddos',
-	--module_limitations = 'fawogae',
+	subgroup = 'py-alienlife-bhoddos',
+	order = 'b',
     mats =
 	{
     --red
