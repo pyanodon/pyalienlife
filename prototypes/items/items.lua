@@ -2013,6 +2013,27 @@ ITEM {
     stack_size = 10
 }
 
+ITEM {
+    type = "item",
+    name = "zipir-food-01",
+    icon = "__pyalienlife__/graphics/icons/zipir-food-01.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-food",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "zipir-food-02",
+    icon = "__pyalienlife__/graphics/icons/zipir-food-02.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-food",
+    order = "x",
+    stack_size = 10
+}
 
 ------RULES-----
 
@@ -2159,6 +2180,9 @@ local alien_life_limitations_ulric =
     }
 
     local alien_life_limitations_antelope =
+	{
+    }
+    local alien_life_limitations_zipir =
 	{
     }
 ----MODULES----
@@ -2558,6 +2582,22 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+ITEM {
+    type = "module",
+    name = "zipir1",
+    icon = "__pyalienlife__/graphics/icons/zipir.png",
+    icon_size = 64,
+	category = "zipir",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-zipir",
+    order = "a",
+    stack_size = 10,
+	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_zipir,
+	limitation_message_key = "Its full"
+}
+
 data:extend(
 {
   {
@@ -2655,6 +2695,10 @@ data:extend(
   {
     type = "module-category",
     name = "antelope"
+  },
+  {
+    type = "module-category",
+    name = "zipir"
   },
   --item used to select the ceature and start and end points of the route
 	{

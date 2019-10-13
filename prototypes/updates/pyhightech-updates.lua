@@ -7,24 +7,6 @@ RECIPE('kicalk-plantation'):remove_unlock('coal-processing-1')
 
 TECHNOLOGY {
     type = "technology",
-    name = "zipir",
-    icon = "__pyalienlife__/graphics/technology/zipir.png",
-    icon_size = 128,
-    order = "c-a",
-    prerequisites = {"water-animals-mk01","food-mk01"},
-    effects = {},
-    unit = {
-        count = 200,
-        ingredients = {
-            {"automation-science-pack", 1},
-            {"logistic-science-pack", 1},
-        },
-        time = 50
-    }
-}
-
-TECHNOLOGY {
-    type = "technology",
     name = "kicalk",
     icon = "__pyalienlife__/graphics/technology/kicalk.png",
     icon_size = 128,
@@ -45,7 +27,7 @@ TECHNOLOGY {
 RECIPE('ralesia-plantation-mk03'):add_ingredient({type = "item", name = "biopolymer", amount = 15}):add_ingredient({type = "item", name = "carbon-aerogel", amount = 20})
 RECIPE('ralesia-plantation-mk04'):replace_ingredient("control-unit", "intelligent-unit"):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 5}):add_ingredient({type = "item", name = "nv-center", amount = 2})
 RECIPE('auog-paddock'):set_fields {enabled = false}
-RECIPE('zipir'):subgroup_order("py-alienlife-buildings-others", "a"):remove_unlock('basic-electronics'):add_unlock('zipir')
+RECIPE('zipir'):remove_unlock('basic-electronics')
 RECIPE('kicalk-plantation-mk01'):add_unlock('kicalk')
 RECIPE('cadaveric-arum'):subgroup_order("py-alienlife-buildings-others", "a"):remove_unlock('basic-electronics'):add_unlock('botany-mk03') --SUBSTITUIR POR TECH DELA
 
@@ -60,7 +42,7 @@ RECIPE('neuroprocessor'):replace_ingredient("electronic-circuit", "pcb2"):add_in
 RECIPE('neuromorphic-chip'):add_ingredient({type = "item", name = "bakelite", amount = 5}):add_ingredient({type = "item", name = "micro-fiber", amount = 4}):add_ingredient({type = "item", name = "capacitor2", amount = 5}):add_ingredient({type = "item", name = "melamine", amount = 10})
 RECIPE('formamide'):replace_ingredient("nitrogen", "ammonia"):change_category('fbreactor')
 RECIPE('bacteria-2'):subgroup_order("py-alienlife-genetics", "a"):remove_unlock('nano-tech'):add_unlock('microbiology-mk03'):add_ingredient({type = "item", name = "petri-dish", amount = 3}):add_ingredient({type = "item", name = "nexelit-plate", amount = 2}):add_ingredient({type = "item", name = "flask", amount = 5}):add_ingredient({type = "item", name = "chitin", amount = 5})
-RECIPE('rendering'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('basic-electronics'):add_unlock('zipir'):change_category('slaughterhouse')
+RECIPE('rendering'):remove_unlock('basic-electronics')
 RECIPE('crco-alloy'):remove_ingredient("tailings-dust"):add_ingredient({type = "item", name = "cobalt-nx", amount = 2})
 RECIPE('raw-fiber'):remove_unlock('basic-electronics')
 RECIPE('raw-fiber3'):remove_unlock('basic-electronics')
