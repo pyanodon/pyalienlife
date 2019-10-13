@@ -3,6 +3,7 @@ local fun = require("prototypes/functions/functions")
 --TECHNOLOGY--
 TECHNOLOGY('nano-tech'):add_prereq('microbiology-mk03')
 TECHNOLOGY('bio-implants'):add_prereq('nano-tech')
+TECHNOLOGY('antitumor'):add_prereq('earnshaw-theorem')
 RECIPE('kicalk-plantation'):remove_unlock('coal-processing-1')
 
 TECHNOLOGY {

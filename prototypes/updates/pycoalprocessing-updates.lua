@@ -1,6 +1,9 @@
 --BUILDINDS--
-RECIPE('fawogae-plantation'):set_fields {enabled = false}:add_unlock('mycology-mk01'):subgroup_order("py-alienlife-buildings-mk01", "b")
-RECIPE('fawogae-plantation-mk02'):add_unlock('mycology-mk02'):subgroup_order("py-alienlife-buildings-mk02", "b")
+ITEM("fawogae-plantation-mk02"):set("icon", "__pyalienlife__/graphics/icons/fawogae-plantation-mk02.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-buildings-mk02", "d")
+ITEM("fawogae-plantation-mk03"):set("icon", "__pyalienlife__/graphics/icons/fawogae-plantation-mk03.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-buildings-mk03", "d")
+ITEM("fawogae-plantation-mk04"):set("icon", "__pyalienlife__/graphics/icons/fawogae-plantation-mk04.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-buildings-mk04", "d")
+RECIPE('fawogae-plantation'):set_fields {enabled = false}
+RECIPE('fawogae-plantation-mk02'):add_unlock('mycology-mk02'):subgroup_order("py-alienlife-buildings-mk02", "b"):replace_ingredient("fawogae-plantation","fawogae-plantation-mk01")
 RECIPE('fawogae-plantation-mk03'):add_unlock('mycology-mk03'):subgroup_order("py-alienlife-buildings-mk03", "b")
 RECIPE('fawogae-plantation-mk04'):add_unlock('mycology-mk04'):subgroup_order("py-alienlife-buildings-mk04", "b")
 RECIPE('botanical-nursery'):remove_unlock('coal-processing-1'):add_unlock('botany-mk01'):subgroup_order("py-alienlife-buildings-mk01", "b")

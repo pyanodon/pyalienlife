@@ -640,6 +640,39 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "antitumor",
+    icon = "__pyalienlife__/graphics/icons/antitumor.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "enediyne",
+    icon = "__pyalienlife__/graphics/icons/enediyne.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "dynemicin",
+    icon = "__pyalienlife__/graphics/icons/dynemicin.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "alien-enzymes",
     icon = "__pyalienlife__/graphics/icons/alien-enzymes.png",
 	icon_size = 64,

@@ -5,6 +5,8 @@ fun.autorecipes {
     name = 'fawogae',
 	--baseitem = 'ralesia',
 	category = 'fawogae',
+	subgroup = 'py-alienlife-fawogae',
+	order = 'b',
 	--module_limitations = 'fawogae',
     mats =
 	{
@@ -18,7 +20,7 @@ fun.autorecipes {
 					{name='fawogae',amount ='*4'}
 				},
 			crafting_speed = 25,
-			tech = 'mycology-mk01'
+			tech = 'fawogae'
         },
         {
 			ingredients =
@@ -30,7 +32,7 @@ fun.autorecipes {
 					{name='fawogae',amount ='+2'}
 				},
 			crafting_speed = 25,
-			tech = 'mycology-mk01'
+			tech = 'fawogae'
         },
         {
 			ingredients =
@@ -42,7 +44,7 @@ fun.autorecipes {
 					{name='fawogae',amount ='+2'}
 				},
 			crafting_speed = 25,
-			tech = 'mycology-mk01'
+			tech = 'fawogae'
         },
         {
 			ingredients =
@@ -54,7 +56,7 @@ fun.autorecipes {
 					{name='fawogae',amount =9}
 				},
 			crafting_speed = 25,
-			tech = 'mycology-mk01'
+			tech = 'fawogae'
         },
         --green
         {

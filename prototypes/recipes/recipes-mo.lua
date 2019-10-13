@@ -295,7 +295,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'sea-sponge', amount = 2},
+        {type = 'item', name = 'sea-sponge', amount = 4},
         {type = 'item', name = 'chromium', amount = 2},
         {type = 'item', name = 'bonemeal', amount = 5},
         {type = 'item', name = 'plastic-bar', amount = 1},
@@ -341,3 +341,28 @@ RECIPE {
         {type = 'item', name = 'immunosupressants', amount = 1}
     }
 }:add_unlock('immunosupressants')
+
+RECIPE {
+    type = 'recipe',
+    name = 'antitumor',
+    category = 'nmf',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'cytostatics', amount = 1},
+        {type = 'item', name = 'propeptides', amount = 1},
+        {type = 'item', name = 'alien-enzymes', amount = 1},
+        {type = 'item', name = 'dynemicin', amount = 1},
+        {type = 'item', name = 'enediyne', amount = 1},
+        {type = 'item', name = 'lab-instrument', amount = 5},
+        {type = 'fluid', name = 'gta', amount = 50},
+        {type = 'fluid', name = 'arthropod-blood', amount = 50},
+        {type = 'item', name = 'flask', amount = 5},
+        {type = 'item', name = 'chitin', amount = 20},
+    },
+    results = {
+        {type = 'item', name = 'antitumor', amount = 1},
+    },
+}:add_unlock("antitumor"):change_category('nano'):replace_ingredient("cytostatics", "superconductor-servomechanims")
+
+--FAZER DYNEMICIN e ENEDIYNE

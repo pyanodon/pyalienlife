@@ -56,6 +56,8 @@ require("prototypes/technologies/domestication")
 require("prototypes/technologies/bigger-colon")
 require("prototypes/technologies/explosive-diarrhea")
 require("prototypes/technologies/zipir")
+require("prototypes/technologies/fawogae")
+require("prototypes/technologies/antitumor")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -98,6 +100,7 @@ require("prototypes/buildings/bioreactor-mk01")
 require("prototypes/buildings/kicalk-plantation-mk01")
 require("prototypes/buildings/cridren-enclosure-mk01")
 require("prototypes/buildings/zipir-reef-mk01")
+require("prototypes/buildings/fawogae-plantation-mk01")
 require('prototypes/buildings/outpost')
 require('prototypes/buildings/foodbowl')
 
