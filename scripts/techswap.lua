@@ -6,9 +6,6 @@ local TRlist = {
     {tech = 'bigger-colon', oldrecipe = 'manure-5', newrecipe = 'manure-5a'},
     {tech = 'bigger-colon', oldrecipe = 'manure-6', newrecipe = 'manure-6a'},
     {tech = 'bigger-colon', oldrecipe = 'manure-7', newrecipe = 'manure-7a'},
-}
-
-local TRlist = {
     {tech = 'explosive-diarrhea', oldrecipe = 'manure-1a', newrecipe = 'manure-1b'},
     {tech = 'explosive-diarrhea', oldrecipe = 'manure-2a', newrecipe = 'manure-2b'},
     {tech = 'explosive-diarrhea', oldrecipe = 'manure-3a', newrecipe = 'manure-3b'},
@@ -17,6 +14,7 @@ local TRlist = {
     {tech = 'explosive-diarrhea', oldrecipe = 'manure-6a', newrecipe = 'manure-6b'},
     {tech = 'explosive-diarrhea', oldrecipe = 'manure-7a', newrecipe = 'manure-7b'},
 }
+
 --tech: the tech that is required to be researched for the new recipe
 --oldrecipe: the recipe that is currently being used
 --newrecipe: the recipe that you want set on the machines using the old recipe
@@ -55,12 +53,12 @@ script.on_event(
                                 --log(tech.oldrecipe)
                                 --log('hit')
                                 ent.set_recipe(tech.newrecipe)
-                                event.research.force.recipes[tech.oldrecipe].enabled = false
                             end
                         end
                     --end
                     end
                 end
+                event.research.force.recipes[tech.oldrecipe].enabled = false
             end
         end
     end
