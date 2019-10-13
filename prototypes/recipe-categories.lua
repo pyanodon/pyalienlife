@@ -131,4 +131,8 @@ data:extend {
         type = "recipe-category",
         name = "antelope"
     },
+    {
+        type = "recipe-category",
+        name = "zipir"
+    },
 }

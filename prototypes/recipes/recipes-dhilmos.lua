@@ -11,7 +11,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'alien-sample-03', amount = 5},
         {type = 'item', name = 'cdna', amount = 5},
-        {type = 'item', name = 'raw-fish', amount = 1},
+        {type = 'item', name = 'raw-fish', amount = 15},
         {type = 'item', name = 'dhilmos-codex', amount = 2},
         {type = 'item', name = 'earth-crustacean-sample', amount = 1}, --add alien sample from pyALiens mod here.
         {type = 'fluid', name = 'fetal-serum', amount = 100},
@@ -36,22 +36,6 @@ RECIPE {
     },
     results = {
         {type = 'item', name = 'dhilmos-codex', amount = 2},
-    },
-}:add_unlock("dhilmos")
-
-RECIPE {
-    type = 'recipe',
-    name = 'earth-crustacean-sample',
-    category = 'data-array',
-    enabled = false,
-    energy_required = 25,
-    ingredients = {
-        {type = 'item', name = 'steel-chest', amount = 1},
-        {type = 'item', name = 'chemical-science-pack', amount = 5},
-        {type = 'item', name = 'dhilmos-codex', amount = 1},
-    },
-    results = {
-        {type = 'item', name = 'earth-crustacean-sample', amount = 1},
     },
 }:add_unlock("dhilmos")
 
