@@ -2037,6 +2037,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "trits-codex",
+    icon = "__pyalienlife__/graphics/icons/trits-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
     name = "bovine-adrenal-cortex",
     icon = "__pyalienlife__/graphics/icons/bovine-adrenal-cortex.png",
 	icon_size = 64,
@@ -2216,6 +2227,9 @@ local alien_life_limitations_ulric =
 	{
     }
     local alien_life_limitations_zipir =
+	{
+    }
+    local alien_life_limitations_trits =
 	{
     }
 ----MODULES----
@@ -2631,6 +2645,22 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+ITEM {
+    type = "module",
+    name = "trits",
+    icon = "__pyalienlife__/graphics/icons/trits.png",
+    icon_size = 64,
+	category = "trits",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-trits",
+    order = "a",
+    stack_size = 10,
+	effect = { speed = {bonus = 100}},
+	limitation = alien_life_limitations_trits,
+	limitation_message_key = "Its full"
+}
+
 data:extend(
 {
   {
@@ -2732,6 +2762,10 @@ data:extend(
   {
     type = "module-category",
     name = "zipir"
+  },
+  {
+    type = "module-category",
+    name = "trits"
   },
   --item used to select the ceature and start and end points of the route
 	{

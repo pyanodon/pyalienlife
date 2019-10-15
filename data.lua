@@ -58,6 +58,7 @@ require("prototypes/technologies/explosive-diarrhea")
 require("prototypes/technologies/zipir")
 require("prototypes/technologies/fawogae")
 require("prototypes/technologies/antitumor")
+require("prototypes/technologies/trits")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -101,6 +102,7 @@ require("prototypes/buildings/kicalk-plantation-mk01")
 require("prototypes/buildings/cridren-enclosure-mk01")
 require("prototypes/buildings/zipir-reef-mk01")
 require("prototypes/buildings/fawogae-plantation-mk01")
+require("prototypes/buildings/trits-reef-mk01")
 require('prototypes/buildings/outpost')
 require('prototypes/buildings/foodbowl')
 
@@ -159,6 +161,7 @@ require('prototypes/recipes/recipes-auto-bhoddos')
 require('prototypes/recipes/recipes-xeno')
 require('prototypes/recipes/recipes-cridren')
 require('prototypes/recipes/recipes-zipir')
+require('prototypes/recipes/recipes-trits')
 
 --(( FLUIDS ))--
 require("prototypes/fluids/zogna-bacteria")
