@@ -365,4 +365,23 @@ RECIPE {
     },
 }:add_unlock("antitumor"):change_category('nano'):replace_ingredient("cytostatics", "superconductor-servomechanims")
 
---FAZER DYNEMICIN e ENEDIYNE
+RECIPE {
+    type = 'recipe',
+    name = 'dynemicin',
+    category = 'genlab',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'fluid', name = 'bacteria-1', amount = 1},
+        {type = 'item', name = 'zinc-finger-proteins', amount = 1},
+        {type = 'fluid', name = 'anthraquinone', amount = 100},
+        {type = 'item', name = 'flask', amount = 5},
+        {type = 'item', name = 'cdna', amount = 4},
+        --{type = 'item', name = 'photophores', amount = 8},
+    },
+    results = {
+        {type = 'item', name = 'dynemicin', amount = 1},
+    },
+}:add_unlock("antitumor"):replace_ingredient("bacteria-1", "bacteria-2")
+
+--FAZER ENEDIYNE

@@ -159,6 +159,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-trits",
+        group = "py-alienlife",
+        order = "e-l"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-plants",
         group = "py-alienlife",
         order = "f"
