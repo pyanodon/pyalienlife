@@ -377,11 +377,48 @@ RECIPE {
         {type = 'fluid', name = 'anthraquinone', amount = 100},
         {type = 'item', name = 'flask', amount = 5},
         {type = 'item', name = 'cdna', amount = 4},
-        --{type = 'item', name = 'photophores', amount = 8},
+        {type = 'item', name = 'photophore', amount = 8},
     },
     results = {
         {type = 'item', name = 'dynemicin', amount = 1},
     },
 }:add_unlock("antitumor"):replace_ingredient("bacteria-1", "bacteria-2")
 
---FAZER ENEDIYNE
+RECIPE {
+    type = 'recipe',
+    name = 'enediyne',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'fluid', name = 'zogna-bacteria', amount = 100},
+        {type = 'item', name = 'zinc-finger-proteins', amount = 1},
+        {type = 'item', name = 'plastic-bar', amount = 5},
+        {type = 'item', name = 'flask', amount = 5},
+        {type = 'item', name = 'cdna', amount = 4},
+        {type = 'item', name = 'lab-instrument', amount = 2},
+        {type = 'item', name = 'enzyme-pks', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'enediyne', amount = 1},
+    },
+}:add_unlock("antitumor")
+
+RECIPE {
+    type = 'recipe',
+    name = 'enzyme-pks',
+    category = 'genlab',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'bhoddos', amount = 5},
+        {type = 'item', name = 'fawogae', amount = 15},
+        {type = 'item', name = 'yaedols', amount = 6},
+        {type = 'item', name = 'flask', amount = 5},
+        {type = 'item', name = 'retrovirus', amount = 4},
+        {type = 'item', name = 'resveratrol', amount = 3},
+    },
+    results = {
+        {type = 'item', name = 'enzyme-pks', amount = 1},
+    },
+}:add_unlock("antitumor")

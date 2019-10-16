@@ -238,6 +238,36 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'anabolic-rna'
 		},
+		--antitumor
+		{
+			ingredients =
+				{
+					{name='gh',amount ='R'},
+					{name='anabolicrna',amount ='R'},
+					{name='antitumor',amount =1},
+				},
+			results =
+				{
+					{name='meatcagedulric', amount ='R'},
+					{name='gutscagedulric', 1},
+				},
+			crafting_speed = 90,
+			tech = 'antitumor'
+		},
+		--antitumor and gh
+		{
+			ingredients =
+				{
+					--{name='nanochondria',amount =1},
+					{name='gh',amount =1},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'antitumor'
+		},
 	}
 }
 
@@ -683,6 +713,24 @@ fun.autorecipes {
 			tech = 'bmp',
 			name = 'Extract bonemeal from Improved Ulrics',
 			icon = "__pyalienlife__/graphics/icons/bone-caged-ulric.png",
+			icon_size = 64,
+		},
+		--guts ulric rendering
+		{
+			ingredients =
+				{
+					{name='bonecagedulric',amount='R'},
+					{name='gutscagedulric',amount=1},
+				},
+			results =
+				{
+					{name='bonemeal', amount ='R'},
+					{name='guts', amount =5},
+				},
+			crafting_speed = 15,
+			tech = 'antitumor',
+			name = 'Extract guts from Improved Ulrics',
+			icon = "__pyalienlife__/graphics/icons/guts-caged-ulric.png",
 			icon_size = 64,
 		},
 	}
