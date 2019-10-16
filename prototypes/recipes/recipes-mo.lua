@@ -415,6 +415,7 @@ RECIPE {
         {type = 'item', name = 'fawogae', amount = 15},
         {type = 'item', name = 'yaedols', amount = 6},
         {type = 'item', name = 'flask', amount = 5},
+        {type = 'item', name = 'empty-petri-dish', amount = 5},
         {type = 'item', name = 'retrovirus', amount = 4},
         {type = 'item', name = 'resveratrol', amount = 3},
     },
