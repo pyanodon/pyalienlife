@@ -168,7 +168,7 @@ RECIPE {
     name = 'dhilmos-grow-01',
     category = 'incubator',
     enabled = false,
-    energy_required = 40,
+    energy_required = 25,
     ingredients = {
         {type = 'item', name = 'dhilmos-egg', amount = 1},
         {type = 'item', name = 'yotoi-seeds', amount = 4},
@@ -189,7 +189,7 @@ RECIPE {
     name = 'dhilmos-mature-01',
     category = 'creature-chamber',
     enabled = false,
-    energy_required = 60,
+    energy_required = 20,
     ingredients = {
         {type = 'item', name = 'dhilmos-pup', amount = 1},
         {type = 'item', name = 'dhilmos-codex', amount = 1},

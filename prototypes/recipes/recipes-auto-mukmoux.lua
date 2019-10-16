@@ -122,6 +122,124 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'growth-hormone'
 		},
+		--antiviral and gh
+		{
+			ingredients =
+				{
+					{name='antiviral',amount =1},
+				},
+			results =
+				{
+					{name='cagedmukmoux', amount ='R'},
+					{name='cagedmukmoux', probability = 0.7,amount_min =1,amount_max =1},
+				},
+			crafting_speed = 30,
+			tech = 'antiviral'
+		},
+		--antiviral
+		{
+			ingredients =
+				{
+					--{name='antiviral',amount =1},
+					{name='gh',amount ='R'},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 90,
+			tech = 'antiviral'
+		},
+		--nanochondria
+		{
+			ingredients =
+				{
+					{name='nanochondria',amount =1},
+					--{name='antiviral',amount ='R'},
+				},
+			results =
+				{
+					{name='cagedmukmoux', amount ='R'},
+					{name='braincagedmukmoux',1},
+				},
+			crafting_speed = 90,
+			tech = 'nanochondria'
+		},
+		--nanochondria and gh
+		{
+			ingredients =
+				{
+					--{name='nanochondria',amount =1},
+					{name='gh',amount =1},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'nanochondria'
+		},
+		--bmp
+		{
+			ingredients =
+				{
+					{name='gh',amount ='R'},
+					{name='nanochondria',amount ='R'},
+					{name='bmp',amount =1},
+				},
+			results =
+				{
+					{name='braincagedmukmoux', amount ='R'},
+					{name='bonecagedmukmoux', 1},
+				},
+			crafting_speed = 90,
+			tech = 'bmp'
+		},
+
+		--bmp and gh
+		{
+			ingredients =
+				{
+					--{name='nanochondria',amount =1},
+					{name='gh',amount =1},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'bmp'
+		},
+		--rna anabolic
+		{
+			ingredients =
+				{
+					{name='gh',amount ='R'},
+					{name='bmp',amount ='R'},
+					{name='anabolicrna',amount =1},
+				},
+			results =
+				{
+					{name='bonecagedmukmoux', amount ='R'},
+					{name='meatcagedmukmoux', 1},
+				},
+			crafting_speed = 90,
+			tech = 'anabolic-rna'
+		},
+		--rna anabolic and gh
+		{
+			ingredients =
+				{
+					--{name='nanochondria',amount =1},
+					{name='gh',amount =1},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'anabolic-rna'
+		},
 	}
 }
 

@@ -306,6 +306,83 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "brain-caged-mukmoux",
+    icon = "__pyalienlife__/graphics/icons/brain-caged-mukmoux.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-mukmoux",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "bone-caged-mukmoux",
+    icon = "__pyalienlife__/graphics/icons/bone-caged-mukmoux.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-mukmoux",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "meat-caged-mukmoux",
+    icon = "__pyalienlife__/graphics/icons/meat-caged-mukmoux.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-mukmoux",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "skin-caged-mukmoux",
+    icon = "__pyalienlife__/graphics/icons/skin-caged-mukmoux.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-mukmoux",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "blood-caged-mukmoux",
+    icon = "__pyalienlife__/graphics/icons/blood-caged-mukmoux.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-mukmoux",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "guts-caged-mukmoux",
+    icon = "__pyalienlife__/graphics/icons/guts-caged-mukmoux.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-mukmoux",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "fat-caged-mukmoux",
+    icon = "__pyalienlife__/graphics/icons/fat-caged-mukmoux.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-mukmoux",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "mukmoux-calf",
     icon = "__pyalienlife__/graphics/icons/mukmoux-calf.png",
     icon_size = 64,
@@ -730,6 +807,50 @@ ITEM {
     type = "item",
     name = "meat-caged-ulric",
     icon = "__pyalienlife__/graphics/icons/meat-caged-ulric.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-ulric",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "skin-caged-ulric",
+    icon = "__pyalienlife__/graphics/icons/skin-caged-ulric.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-ulric",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "blood-caged-ulric",
+    icon = "__pyalienlife__/graphics/icons/blood-caged-ulric.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-ulric",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "guts-caged-ulric",
+    icon = "__pyalienlife__/graphics/icons/guts-caged-ulric.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-ulric",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "fat-caged-ulric",
+    icon = "__pyalienlife__/graphics/icons/fat-caged-ulric.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-ulric",
@@ -1916,6 +2037,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "enzyme-pks",
+    icon = "__pyalienlife__/graphics/icons/enzyme-pks.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "xeno-egg",
     icon = "__pyalienlife__/graphics/icons/xeno-egg.png",
     icon_size = 64,
@@ -2075,6 +2207,17 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-food",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "photophore",
+    icon = "__pyalienlife__/graphics/icons/photophore.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-trits",
     order = "x",
     stack_size = 10
 }

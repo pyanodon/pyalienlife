@@ -44,7 +44,7 @@ RECIPE {
     name = 'earth-crustacean-sample',
     category = 'data-array',
     enabled = false,
-    energy_required = 250,
+    energy_required = 25,
     ingredients = {
         {type = 'item', name = 'steel-chest', amount = 1},
         {type = 'item', name = 'chemical-science-pack', amount = 5},
