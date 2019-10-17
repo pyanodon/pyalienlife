@@ -369,6 +369,7 @@ RECIPE {
         {type = 'item', name = 'sea-sponge', amount = 1},
         {type = 'item', name = 'plasmids', amount = 2},
         {type = 'item', name = 'flask', amount = 3},
+        {type = 'item', name = 'microcin-j25', amount = 1},
         {type = 'item', name = 'plastic-bar', amount = 1},
     },
     results = {
@@ -498,39 +499,26 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'zinc-finger-proteins',
-    category = 'biofactory',
-    enabled = false,
-    energy_required = 30,
-    ingredients = {
-        {type = 'item', name = 'zinc-plate', amount = 10},
-        {type = 'item', name = 'serine', amount = 30},
-        {type = 'item', name = 'cysteine', amount = 1},
-        {type = 'item', name = 'meat', amount = 10},
-    },
-    results = {
-        {type = 'item', name = 'zinc-finger-proteins', amount = 1},
-    },
-    --main_product = "fur",
-}:add_unlock('biotech-mk04')
-
-RECIPE {
-    type = 'recipe',
     name = 'reca',
     category = 'bio-reactor',
     enabled = false,
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'alien-sample-03', amount = 1},
+        {type = 'item', name = 'alien-enzymes', amount = 1},
         {type = 'fluid', name = 'fetal-serum', amount = 100},
         {type = 'item', name = 'bovine-adrenal-cortex', amount = 3},
         {type = 'item', name = 'bones', amount = 20},
-        {type = 'item', name = 'navens', amount = 5},
+        {type = 'item', name = 'navens', amount = 20},
+        {type = 'item', name = 'cysteine', amount = 5},
+        {type = 'item', name = 'lab-instrument', amount = 5},
+        {type = 'fluid', name = 'gta', amount = 50},
+        {type = 'item', name = 'flask', amount = 5},
     },
     results = {
         {type = 'item', name = 'reca', amount = 1}
     }
-}:add_unlock('biotech-mk04')
+}:add_unlock('reca')
 
 RECIPE {
     type = 'recipe',
@@ -669,6 +657,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'bhoddos', amount = 1},
         {type = 'item', name = 'flask', amount = 3},
+        {type = 'item', name = 'microcin-j25', amount = 1},
         {type = 'item', name = 'lab-instrument', amount = 1},
         {type = 'item', name = 'retrovirus', amount = 2},
         {type = 'item', name = 'guts', amount = 5},
@@ -729,6 +718,7 @@ RECIPE {
         {type = 'item', name = 'retrovirus', amount = 1},
         {type = 'item', name = 'nexelit-matrix', amount = 3},
         {type = 'item', name = 'venon-gland', amount = 4},
+        {type = 'item', name = 'microcin-j25', amount = 1},
     },
     results = {
         {type = 'item', name = 'alien-enzymes', amount = 1}

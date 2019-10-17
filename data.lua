@@ -59,6 +59,9 @@ require("prototypes/technologies/zipir")
 require("prototypes/technologies/fawogae")
 require("prototypes/technologies/antitumor")
 require("prototypes/technologies/trits")
+require('prototypes/technologies/recombinant-ery')
+require('prototypes/technologies/reca')
+require('prototypes/technologies/orexigenic')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
