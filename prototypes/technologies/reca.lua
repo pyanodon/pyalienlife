@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
-    name = "nanochondria",
-    icon = "__pyalienlife__/graphics/technology/nanochondria.png",
+    name = "reca",
+    icon = "__pyalienlife__/graphics/technology/reca.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"bio-implants"},

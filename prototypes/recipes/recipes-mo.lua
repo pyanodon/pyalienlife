@@ -184,6 +184,7 @@ RECIPE {
         {type = 'item', name = 'dna-polymerase', amount = 2},
         {type = 'item', name = 'plastic-bar', amount = 5},
         {type = 'item', name = 'flask', amount = 2},
+        {type = 'item', name = 'chitin', amount = 5},
         {type = 'fluid', name = 'formamide', amount = 200},
         {type = 'item', name = 'arthurian-egg', amount = 10},
     },
@@ -220,6 +221,7 @@ RECIPE {
     energy_required = 25,
     ingredients = {
         {type = 'item', name = 'fur', amount = 20},
+        {type = 'item', name = 'chitin', amount = 5},
         {type = 'item', name = 'bacteria-1', amount = 100},
     },
     results = {
@@ -237,6 +239,7 @@ RECIPE {
         {type = 'item', name = 'dna-polymerase', amount = 2},
         {type = 'item', name = 'plastic-bar', amount = 5},
         {type = 'item', name = 'flask', amount = 5},
+        {type = 'item', name = 'yaedols', amount = 12},
         {type = 'item', name = 'lab-instrument', amount = 5},
         {type = 'fluid', name = 'gta', amount = 50},
         {type = 'item', name = 'primers', amount = 8},
@@ -257,6 +260,8 @@ RECIPE {
         {type = 'item', name = 'adam42-gen', amount = 1},
         {type = 'item', name = 'cysteine', amount = 1},
         {type = 'item', name = 'meat', amount = 5},
+        {type = 'item', name = 'carapace', amount = 5},
+        {type = 'item', name = 'serine', amount = 30},
         {type = 'item', name = 'lab-instrument', amount = 5},
         {type = 'fluid', name = 'gta', amount = 50},
         {type = 'item', name = 'zinc-plate', amount = 4},
@@ -278,6 +283,7 @@ RECIPE {
         {type = 'item', name = 'cysteine', amount = 1},
         {type = 'item', name = 'alien-enzymes', amount = 1},
         {type = 'item', name = 'meat', amount = 10},
+        {type = 'item', name = 'bovine-adrenal-cortex', amount = 5},
         {type = 'item', name = 'lab-instrument', amount = 5},
         {type = 'fluid', name = 'gta', amount = 50},
         {type = 'item', name = 'flask', amount = 5},
@@ -376,6 +382,7 @@ RECIPE {
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},
         {type = 'fluid', name = 'anthraquinone', amount = 100},
         {type = 'item', name = 'flask', amount = 5},
+        {type = 'item', name = 'carapace', amount = 5},
         {type = 'item', name = 'cdna', amount = 4},
         {type = 'item', name = 'photophore', amount = 8},
     },
@@ -422,4 +429,50 @@ RECIPE {
     results = {
         {type = 'item', name = 'enzyme-pks', amount = 1},
     },
-}:add_unlock("antitumor")
+}:add_unlock("biotech-mk04")
+
+RECIPE {
+    type = 'recipe',
+    name = 'recombinant-ery',
+    category = 'genlab',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'adam42-gen', amount = 1},
+        {type = 'item', name = 'cysteine', amount = 1},
+        {type = 'item', name = 'alien-enzymes', amount = 1},
+        {type = 'item', name = 'guts', amount = 15},
+        {type = 'item', name = 'mukmoux-fat', amount = 15},
+        {type = 'item', name = 'lab-instrument', amount = 5},
+        {type = 'fluid', name = 'gta', amount = 50},
+        {type = 'item', name = 'flask', amount = 5},
+        {type = 'item', name = 'mmp', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'recombinant-ery', amount = 1},
+    },
+}:add_unlock("recombinant-ery")
+
+RECIPE {
+    type = 'recipe',
+    name = 'orexigenic',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'alien-enzymes', amount = 1},
+        {type = 'item', name = 'guts', amount = 20},
+        {type = 'fluid', name = 'fish-oil', amount = 100},
+        {type = 'item', name = 'lab-instrument', amount = 5},
+        {type = 'item', name = 'flask', amount = 5},
+        {type = 'item', name = 'zinc-plate', amount = 5},
+        {type = 'item', name = 'cridren', amount = 1},
+        {type = 'item', name = 'carapace', amount = 5},
+        {type = 'item', name = 'yotoi', amount = 5},
+        {type = 'item', name = 'grod', amount = 15},
+        {type = 'item', name = 'vonix-eggs', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'orexigenic', amount = 1},
+    },
+}:add_unlock("orexigenic")

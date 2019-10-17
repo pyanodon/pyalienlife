@@ -59,7 +59,7 @@ TECHNOLOGY {
     icon = "__pyalienlife__/graphics/technology/biotech-mk04.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"biotech-mk03"},
+    prerequisites = {"biotech-mk03","dingrits"},
     effects = {},
     unit = {
         count = 200,

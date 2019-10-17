@@ -196,8 +196,8 @@ ENTITY {
 
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/scrondrix-pen.ogg", volume = 0.68},
-        idle_sound = {filename = "__pyalienlife__/sounds/scrondrix-pen.ogg", volume = 0.42},
+        sound = {filename = "__pyalienlife__/sounds/scrondrix-pen.ogg", volume = 0.75},
+        idle_sound = {filename = "__pyalienlife__/sounds/scrondrix-pen.ogg", volume = 0.55},
         apparent_volume = 2.5
     }
 }

@@ -1333,6 +1333,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "orexigenic",
+    icon = "__pyalienlife__/graphics/icons/orexigenic.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "hyaline",
     icon = "__pyalienlife__/graphics/icons/hyaline.png",
 	icon_size = 64,
@@ -2039,6 +2050,17 @@ ITEM {
     type = "item",
     name = "enzyme-pks",
     icon = "__pyalienlife__/graphics/icons/enzyme-pks.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "recombinant-ery",
+    icon = "__pyalienlife__/graphics/icons/recombinant-ery.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-genetics",
