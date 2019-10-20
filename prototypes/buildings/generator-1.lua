@@ -37,8 +37,6 @@ ENTITY {
     max_health = 100,
     corpse = "big-remnants",
     effectivity = 0.42,
-    fluid_usage_per_tick = 1,
-    maximum_temperature = 1000,
     resistances = {
         {
             type = "fire",
@@ -47,28 +45,21 @@ ENTITY {
     },
     collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-    fluid_input = {
-        name = "combustion-mixture1",
-        amount = 0.0,
-        minimum_temperature = 500.0
-    },
-    fluid_box = {
-        base_area = 1,
-        base_level = -1,
-        pipe_covers = DATA.Pipes.covers(false, true, true, true),
-        production_type = "input-output",
-        filter = "combustion-mixture1",
-        minimum_temperature = 500.0,
-        pipe_connections = {
-            {type = "input-output", position = {0.00, 4.00}},
-            {type = "input-output", position = {0.00, -4.00}}
-        }
-    },
-    energy_source = {
-        type = "electric",
-        usage_priority = "secondary-output",
-        emissions_per_minute = 0.06,
-    },
+    energy_source =
+		{
+				type = "electric",
+				usage_priority = "primary-output",
+		},
+	burner =
+		{
+			type = "burner",
+			fuel_category = "auog",
+			effectivity = 1,
+			fuel_inventory_size =1,
+			emissions_per_minute = 0,
+		},
+	effectivity = 1,
+	max_power_output = "15MW",
     horizontal_animation = {
         layers = {
             {
