@@ -36,7 +36,6 @@ ENTITY {
     minable = {mining_time = 1, result = "generator-1"},
     max_health = 100,
     corpse = "big-remnants",
-    effectivity = 0.42,
     resistances = {
         {
             type = "fire",
@@ -54,8 +53,9 @@ ENTITY {
 		{
 			type = "burner",
 			fuel_category = "auog",
-			effectivity = 1,
-			fuel_inventory_size =1,
+			effectivity = 0.42,
+            fuel_inventory_size = 1,
+            burnt_inventory_size = 1,
 			emissions_per_minute = 0,
 		},
 	effectivity = 1,
