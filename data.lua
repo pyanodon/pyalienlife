@@ -108,6 +108,7 @@ require("prototypes/buildings/fawogae-plantation-mk01")
 require("prototypes/buildings/trits-reef-mk01")
 require('prototypes/buildings/outpost')
 require('prototypes/buildings/foodbowl')
+require('prototypes/buildings/generator-1')
 
 --Caravan ceature
 require('prototypes/ceatures/caravan')
