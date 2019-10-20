@@ -2256,7 +2256,7 @@ local alien_life_limitations_ulric =
     "sea-sponge-1",
     "sea-sponge-2",
     }
-    
+
     local alien_life_limitations_ralesia =
 	{
     --"ralesias1",
@@ -2266,7 +2266,7 @@ local alien_life_limitations_ulric =
 	{
 
     }
-    
+
     local alien_life_limitations_tuuphra =
 	{
     "tuuphra-0",
@@ -2274,7 +2274,7 @@ local alien_life_limitations_ulric =
     "tuuphra-2",
     "tuuphra-3",
     }
-    
+
     local alien_life_limitations_arthurian =
 	{
     "arthurian-sex-01",
@@ -2604,7 +2604,21 @@ ITEM {
     stack_size = 10,
 	effect = { speed = {bonus = 50}},
 	limitation = alien_life_limitations_auog,
-	limitation_message_key = "Its full"
+    limitation_message_key = "Its full",
+    fuel_category = 'auog',
+    fuel_value = '50MJ',
+    burnt_result = 'used-auog'
+}
+
+ITEM {
+    type = "item",
+    name = "used-auog",
+    icon = "__pyalienlife__/graphics/icons/dummy.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-plants",
+    order = "a",
+    stack_size = 1
 }
 
 ITEM {
@@ -2949,6 +2963,6 @@ data:extend(
 		alt_selection_mode = {"same-force"},
 		selection_cursor_box_type = "copy",
 		alt_selection_cursor_box_type = "entity"
-	} 
+	}
 }
 )
