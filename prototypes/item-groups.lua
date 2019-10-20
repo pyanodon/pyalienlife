@@ -39,6 +39,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-generators",
+        group = "py-alienlife",
+        order = "a-f"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-items",
         group = "py-alienlife",
         order = "d"
