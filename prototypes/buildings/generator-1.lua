@@ -53,13 +53,13 @@ ENTITY {
 		{
 			type = "burner",
 			fuel_category = "auog",
-			effectivity = 0.42,
+			effectivity = 1,
             fuel_inventory_size = 1,
             burnt_inventory_size = 1,
 			emissions_per_minute = 0,
 		},
 	effectivity = 1,
-	max_power_output = "15MW",
+	max_power_output = "1.2MW",
     horizontal_animation = {
         layers = {
             {
@@ -68,7 +68,7 @@ ENTITY {
                 height = 288,
                 line_length = 64,
                 frame_count = 250,
-                animation_speed = 0.4,
+                animation_speed = 0.2,
                 shift = util.by_pixel(-96, -32)
             },
             {
@@ -77,7 +77,7 @@ ENTITY {
                 height = 288,
                 line_length = 64,
                 frame_count = 250,
-                animation_speed = 0.4,
+                animation_speed = 0.2,
                 shift = util.by_pixel(-64, -32)
             },
             {
@@ -86,7 +86,7 @@ ENTITY {
                 height = 288,
                 line_length = 64,
                 frame_count = 250,
-                animation_speed = 0.4,
+                animation_speed = 0.2,
                 shift = util.by_pixel(-32, -32)
             },
             {
@@ -95,7 +95,7 @@ ENTITY {
                 height = 288,
                 line_length = 64,
                 frame_count = 250,
-                animation_speed = 0.4,
+                animation_speed = 0.2,
                 shift = util.by_pixel(-0, -32)
             },
             {
@@ -104,7 +104,7 @@ ENTITY {
                 height = 288,
                 line_length = 64,
                 frame_count = 250,
-                animation_speed = 0.4,
+                animation_speed = 0.2,
                 shift = util.by_pixel(32, -32)
             },
             {
@@ -113,7 +113,7 @@ ENTITY {
                 height = 288,
                 line_length = 64,
                 frame_count = 250,
-                animation_speed = 0.4,
+                animation_speed = 0.2,
                 shift = util.by_pixel(64, -32)
             },
             {
@@ -122,7 +122,7 @@ ENTITY {
                 height = 288,
                 line_length = 64,
                 frame_count = 250,
-                animation_speed = 0.4,
+                animation_speed = 0.2,
                 shift = util.by_pixel(96, -32)
             },
             {
@@ -131,7 +131,7 @@ ENTITY {
                 height = 288,
                 line_length = 64,
                 frame_count = 250,
-                animation_speed = 0.4,
+                animation_speed = 0.2,
                 shift = util.by_pixel(128, -32)
             },
     },
@@ -144,7 +144,7 @@ ENTITY {
                 height = 288,
                 line_length = 64,
                 frame_count = 250,
-                animation_speed = 0.4,
+                animation_speed = 0.2,
                 shift = util.by_pixel(-96, -32)
             },
             {
@@ -153,7 +153,7 @@ ENTITY {
                 height = 288,
                 line_length = 64,
                 frame_count = 250,
-                animation_speed = 0.4,
+                animation_speed = 0.2,
                 shift = util.by_pixel(-64, -32)
             },
             {
@@ -162,7 +162,7 @@ ENTITY {
                 height = 288,
                 line_length = 64,
                 frame_count = 250,
-                animation_speed = 0.4,
+                animation_speed = 0.2,
                 shift = util.by_pixel(-32, -32)
             },
             {
@@ -171,7 +171,7 @@ ENTITY {
                 height = 288,
                 line_length = 64,
                 frame_count = 250,
-                animation_speed = 0.4,
+                animation_speed = 0.2,
                 shift = util.by_pixel(-0, -32)
             },
             {
@@ -180,7 +180,7 @@ ENTITY {
                 height = 288,
                 line_length = 64,
                 frame_count = 250,
-                animation_speed = 0.4,
+                animation_speed = 0.2,
                 shift = util.by_pixel(32, -32)
             },
             {
@@ -189,7 +189,7 @@ ENTITY {
                 height = 288,
                 line_length = 64,
                 frame_count = 250,
-                animation_speed = 0.4,
+                animation_speed = 0.2,
                 shift = util.by_pixel(64, -32)
             },
             {
@@ -198,7 +198,7 @@ ENTITY {
                 height = 288,
                 line_length = 64,
                 frame_count = 250,
-                animation_speed = 0.4,
+                animation_speed = 0.2,
                 shift = util.by_pixel(96, -32)
             },
             {
@@ -207,14 +207,14 @@ ENTITY {
                 height = 288,
                 line_length = 64,
                 frame_count = 250,
-                animation_speed = 0.4,
+                animation_speed = 0.2,
                 shift = util.by_pixel(128, -32)
             },
     },
 },
 
     min_perceived_performance = 0.1,
-    performance_to_sound_speedup = 0.3,
+    performance_to_sound_speedup = 0.0,
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
         sound = {filename = "__pyalienlife__/sounds/generator-1.ogg"},

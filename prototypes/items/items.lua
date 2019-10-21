@@ -2606,14 +2606,14 @@ ITEM {
 	limitation = alien_life_limitations_auog,
     limitation_message_key = "Its full",
     fuel_category = 'auog',
-    fuel_value = '50MJ',
+    fuel_value = '100MJ',
     burnt_result = 'used-auog'
 }
 
 ITEM {
     type = "item",
     name = "used-auog",
-    icon = "__pyalienlife__/graphics/icons/dummy.png",
+    icon = "__pyalienlife__/graphics/icons/used-auog.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-plants",
