@@ -53,6 +53,6 @@
             priority = "high",
             width = 224,
             height = 224,
-            shift = {0, 0},
+            shift = util.by_pixel(16, -16),
         },
     }
