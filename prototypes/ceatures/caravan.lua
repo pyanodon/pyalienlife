@@ -91,7 +91,6 @@ data:extend(
 			  "__pyalienlife__/graphics/entity/caravan/sh-caravan-walk-03.png",
 			  "__pyalienlife__/graphics/entity/caravan/sh-caravan-walk-04.png",
 			  "__pyalienlife__/graphics/entity/caravan/sh-caravan-walk-05.png",
-			  "__pyalienlife__/graphics/entity/caravan/sh-caravan-walk-05.png",
 			  "__pyalienlife__/graphics/entity/caravan/sh-caravan-walk-06.png",
 			  "__pyalienlife__/graphics/entity/caravan/sh-caravan-walk-07.png",
 			  "__pyalienlife__/graphics/entity/caravan/sh-caravan-walk-08.png",
