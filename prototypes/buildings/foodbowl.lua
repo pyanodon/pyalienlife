@@ -42,8 +42,8 @@
                 percent = 90
             }
         },
-        collision_box = {{-2.7, -2.7}, {2.7, 2.7}},
-        selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
+        collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
+        selection_box = {{-1.0, -1.0}, {1.0, 1.0}},
         drawing_box = {{-3.0, -3.0}, {3.0, 3.0}},
         inventory_size = 800,
         scale_info_icons = true,
@@ -52,6 +52,7 @@
             priority = "high",
             width = 136,
             height = 128,
+            scale = 0.5,
             shift = {0, 0},
         }
     }
