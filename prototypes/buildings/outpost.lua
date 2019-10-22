@@ -2,7 +2,7 @@
         type = "recipe",
         name = 'outpost',
         enabled = false,
-        ingredients = 
+        ingredients =
 			{
 			{'iron-plate', 5}
 			},
@@ -47,7 +47,7 @@
         drawing_box = {{-3.0, -3.0}, {3.0, 3.0}},
         inventory_size = 800,
         scale_info_icons = true,
-        
+
 		picture = {
             filename = "__pyalienlife__/graphics/entity/outpost/off.png",
             priority = "high",
