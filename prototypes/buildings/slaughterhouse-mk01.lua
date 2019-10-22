@@ -5,7 +5,6 @@ RECIPE {
     enabled = false,
     ingredients = {
         {"stone-brick", 100},
-        {"plastic-bar", 40},
         {"pipe", 20},
         {"titanium-plate", 40},
         {"engine-unit", 10},
@@ -40,7 +39,7 @@ ENTITY {
     type = machinetype,
     name = "slaughterhouse-mk01",
     icon = "__pyalienlife__/graphics/icons/slaughterhouse-mk01.png",
-	icon_size = 32,
+	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "slaughterhouse-mk01"},
     fast_replaceable_group = "slaughterhouse",
