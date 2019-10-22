@@ -268,6 +268,93 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'antitumor'
 		},
+		--Recombinant Ery
+		{
+			ingredients =
+				{
+					{name='gh',amount ='R'},
+					{name='antitumor',amount ='R'},
+					{name='recombinantery',amount =1},
+				},
+			results =
+				{
+					{name='gutscagedulric', amount ='R'},
+					{name='bloodcagedulric', 1},
+				},
+			crafting_speed = 90,
+			tech = 'recombinant-ery'
+		},
+		--Recombinant Ery and gh
+		{
+			ingredients =
+				{
+					{name='gh',amount =1},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'recombinant-ery'
+		},
+		--reca
+		{
+			ingredients =
+				{
+					{name='gh',amount ='R'},
+					{name='recombinantery',amount ='R'},
+					{name='reca',amount =1},
+				},
+			results =
+				{
+					{name='bloodcagedulric', amount ='R'},
+					{name='skincagedulric', 1},
+				},
+			crafting_speed = 90,
+			tech = 'reca'
+		},
+		--reca and gh
+		{
+			ingredients =
+				{
+					{name='gh',amount =1},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'reca'
+		},
+		--orexigenic
+		{
+			ingredients =
+				{
+					{name='gh',amount ='R'},
+					{name='reca',amount ='R'},
+					{name='orexigenic',amount =1},
+				},
+			results =
+				{
+					{name='skincagedulric', amount ='R'},
+					{name='fatcagedulric', 1},
+				},
+			crafting_speed = 90,
+			tech = 'orexigenic'
+		},
+		--orexigenic and gh
+		{
+			ingredients =
+				{
+					{name='gh',amount =1},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'orexigenic'
+		},
 	}
 }
 
@@ -603,7 +690,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='bones', amount =5},
+					{name='bones', amount =4},
 				},
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
@@ -690,7 +777,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='bones', amount =10},
+					{name='bones', amount =6},
 				},
 			crafting_speed = 15,
 			tech = 'bmp',
@@ -712,7 +799,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'bmp',
 			name = 'Extract bonemeal from Improved Ulrics',
-			icon = "__pyalienlife__/graphics/icons/bone-caged-ulric.png",
+			icon = "__pyalienlife__/graphics/icons/bonemeal-caged-ulric.png",
 			icon_size = 64,
 		},
 		--guts ulric rendering
@@ -731,6 +818,60 @@ fun.autorecipes {
 			tech = 'antitumor',
 			name = 'Extract guts from Improved Ulrics',
 			icon = "__pyalienlife__/graphics/icons/guts-caged-ulric.png",
+			icon_size = 64,
+		},
+		--blood ulric rendering
+		{
+			ingredients =
+				{
+					{name='gutscagedulric',amount='R'},
+					{name='bloodcagedulric',amount=1},
+				},
+			results =
+				{
+					{name='guts', amount ='R'},
+					{name='blood', amount =100},
+				},
+			crafting_speed = 15,
+			tech = 'recombinant-ery',
+			name = 'Extract blood from Improved Ulrics',
+			icon = "__pyalienlife__/graphics/icons/blood-caged-ulric.png",
+			icon_size = 64,
+		},
+		--skin ulric rendering
+		{
+			ingredients =
+				{
+					{name='bloodcagedulric',amount='R'},
+					{name='skincagedulric',amount=1},
+				},
+			results =
+				{
+					{name='blood', amount ='R'},
+					{name='skin', amount =4},
+				},
+			crafting_speed = 15,
+			tech = 'reca',
+			name = 'Extract skin from Improved Ulrics',
+			icon = "__pyalienlife__/graphics/icons/skin-caged-ulric.png",
+			icon_size = 64,
+		},
+		--fat ulric rendering
+		{
+			ingredients =
+				{
+					{name='skincagedulric',amount='R'},
+					{name='fatcagedulric',amount=1},
+				},
+			results =
+				{
+					{name='skin', amount ='R'},
+					{name='fat', amount =4},
+				},
+			crafting_speed = 15,
+			tech = 'orexigenic',
+			name = 'Extract fat from Improved Ulrics',
+			icon = "__pyalienlife__/graphics/icons/fat-caged-ulric.png",
 			icon_size = 64,
 		},
 	}
