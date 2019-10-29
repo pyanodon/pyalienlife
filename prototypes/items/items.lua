@@ -416,6 +416,105 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "brain-caged-arthurian",
+    icon = "__pyalienlife__/graphics/icons/brain-caged-arthurian.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arthurian",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "bone-caged-arthurian",
+    icon = "__pyalienlife__/graphics/icons/bone-caged-arthurian.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arthurian",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "meat-caged-arthurian",
+    icon = "__pyalienlife__/graphics/icons/meat-caged-arthurian.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arthurian",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "skin-caged-arthurian",
+    icon = "__pyalienlife__/graphics/icons/skin-caged-arthurian.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arthurian",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "blood-caged-arthurian",
+    icon = "__pyalienlife__/graphics/icons/blood-caged-arthurian.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arthurian",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "guts-caged-arthurian",
+    icon = "__pyalienlife__/graphics/icons/guts-caged-arthurian.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arthurian",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "fat-caged-arthurian",
+    icon = "__pyalienlife__/graphics/icons/fat-caged-arthurian.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arthurian",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "arthurian-food-01",
+    icon = "__pyalienlife__/graphics/icons/arthurian-food-01.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-food",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "arthurian-food-02",
+    icon = "__pyalienlife__/graphics/icons/arthurian-food-02.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-food",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
     name = "cage",
     icon = "__pyalienlife__/graphics/icons/cage.png",
     icon_size = 64,
@@ -2277,12 +2376,6 @@ local alien_life_limitations_ulric =
 
     local alien_life_limitations_arthurian =
 	{
-    "arthurian-sex-01",
-    "arthurian-sex-01-mukmoux",
-    "arthurian-egg-01",
-    "arthurian-egg-02",
-    "arthurian-egg-01-mukmoux",
-    "arthurian-egg-02-mukmoux",
     }
 
     local alien_life_limitations_navens =
