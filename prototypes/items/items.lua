@@ -1663,6 +1663,83 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "brain-caged-auog",
+    icon = "__pyalienlife__/graphics/icons/brain-caged-auog.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-auog",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "bone-caged-auog",
+    icon = "__pyalienlife__/graphics/icons/bone-caged-auog.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-auog",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "meat-caged-auog",
+    icon = "__pyalienlife__/graphics/icons/meat-caged-auog.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-auog",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "skin-caged-auog",
+    icon = "__pyalienlife__/graphics/icons/skin-caged-auog.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-auog",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "blood-caged-auog",
+    icon = "__pyalienlife__/graphics/icons/blood-caged-auog.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-auog",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "guts-caged-auog",
+    icon = "__pyalienlife__/graphics/icons/guts-caged-auog.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-auog",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "fat-caged-auog",
+    icon = "__pyalienlife__/graphics/icons/fat-caged-auog.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-auog",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "earth-bear-sample",
     icon = "__pyalienlife__/graphics/icons/earth-bear-sample.png",
 	icon_size = 64,
@@ -2443,16 +2520,6 @@ local alien_life_limitations_ulric =
 
     local alien_life_limitations_auog =
 	{
-    "auog-sex-00",
-    "auog-sex-food-01",
-    "auog-sex-food-02",
-    "auog-sex-pup-01",
-    "auog-sex-pup-02",
-    "auog-manure-00",
-    "auog-manure-01",
-    "auog-manure-02",
-    "auog-manure-01-food",
-    "auog-manure-02-food",
     }
 
     local alien_life_limitations_fish =
