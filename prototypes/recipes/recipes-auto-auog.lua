@@ -1,55 +1,54 @@
 local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
-    name = 'caged-mukmoux',
-	category = 'mukmoux',
-	module_limitations = 'mukmoux',
-	subgroup = 'py-alienlife-mukmoux',
+    name = 'caged-auog',
+	category = 'auog',
+	module_limitations = 'auog',
+	subgroup = 'py-alienlife-auog',
 	order = 'b',
     mats =
 	{
 		{
 			ingredients =
 				{
-                    {name='fawogae',amount =15},
-                    {name='ralesiaseeds',amount =15},
-					{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
+                    {name='biomass',amount =15},
+                    {name='moss',amount =5},
+					{name='waterbarrel',amount=3,return_item={name='empty-barrel',amount=3}},
 					{name='cage',amount=1},
 				},
 			results =
 				{
-					{name='cagedmukmoux', probability = 0.5,amount_min =1,amount_max =1},
+					{name='cagedauog', probability = 0.5,amount_min =1,amount_max =1},
 				},
-			crafting_speed = 150,
-			tech = 'mukmoux'
+			crafting_speed = 160,
+			tech = 'auog'
 		},
 		--food 1
 		{
 			ingredients =
 				{
-                    {name='ralesiaseeds',amount ='R'},
-                    {name='fawogae',amount ='R'},
-					{name='mukmouxfood01',amount =1},
+					{name='biomass',amount ='R'},
+					{name='auogfood01',amount =1},
 				},
 			results =
 				{
 				
 				},
-			crafting_speed = 140,
+			crafting_speed = 150,
 			tech = 'food-mk01'
 		},
 		--salt
 		{
 			ingredients =
 				{
-					{name='salt',amount = 10},
-					{name='bedding',amount = 2},
+					{name='salt',amount = 5},
+					{name='bedding',amount = 1},
 				},
 			results =
 				{
 				
 				},
-			crafting_speed = 130,
+			crafting_speed = 140,
 			tech = 'organic-breeding'
 		},
 		--fiber
@@ -62,37 +61,37 @@ fun.autorecipes {
 				{
 				
 				},
-			crafting_speed = 120,
+			crafting_speed = 130,
 			tech = 'organic-breeding'
 		},		
 		--food 2
 		{
 			ingredients =
 				{
-					{name='mukmouxfood01',amount ='R'},
+					{name='auogfood01',amount ='R'},
 					{name='salt',amount ='R'},
 					{name='rawfiber',amount ='R'},
-					{name='mukmouxfood02',amount =1},
+					{name='auogfood02',amount =1},
 
 				},
 			results =
 				{
 				
 				},
-			crafting_speed = 110,
+			crafting_speed = 120,
 			tech = 'food-mk02'
 		},
 		--food 2 salt
 		{
 			ingredients =
 				{
-					{name='salt',amount =10},
+					{name='salt',amount =5},
 				},
 			results =
 				{
 				
 				},
-			crafting_speed = 100,
+			crafting_speed = 110,
 			tech = 'organic-breeding'
 		},
 		--food 2 salt fiber
@@ -105,9 +104,9 @@ fun.autorecipes {
 				{
 				
 				},
-			crafting_speed = 90,
+			crafting_speed = 100,
 			tech = 'organic-breeding'
-		},	
+		},
 		--gh
 		{
 			ingredients =
@@ -130,8 +129,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cagedmukmoux', amount ='R'},
-					{name='cagedmukmoux', probability = 0.7,amount_min =1,amount_max =1},
+					{name='cagedauog', amount ='R'},
+					{name='cagedauog', probability = 0.7,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -159,8 +158,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cagedmukmoux', amount ='R'},
-					{name='braincagedmukmoux',1},
+					{name='cagedauog', amount ='R'},
+					{name='braincagedauog',1},
 				},
 			crafting_speed = 90,
 			tech = 'nanochondria'
@@ -189,8 +188,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='braincagedmukmoux', amount ='R'},
-					{name='bonecagedmukmoux', 1},
+					{name='braincagedauog', amount ='R'},
+					{name='bonecagedauog', 1},
 				},
 			crafting_speed = 90,
 			tech = 'bmp'
@@ -220,8 +219,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bonecagedmukmoux', amount ='R'},
-					{name='meatcagedmukmoux', 1},
+					{name='bonecagedauog', amount ='R'},
+					{name='meatcagedauog', 1},
 				},
 			crafting_speed = 90,
 			tech = 'anabolic-rna'
@@ -250,8 +249,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meatcagedmukmoux', amount ='R'},
-					{name='gutscagedmukmoux', 1},
+					{name='meatcagedauog', amount ='R'},
+					{name='gutscagedauog', 1},
 				},
 			crafting_speed = 90,
 			tech = 'antitumor'
@@ -280,8 +279,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='gutscagedmukmoux', amount ='R'},
-					{name='bloodcagedmukmoux', 1},
+					{name='gutscagedauog', amount ='R'},
+					{name='bloodcagedauog', 1},
 				},
 			crafting_speed = 90,
 			tech = 'recombinant-ery'
@@ -309,8 +308,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bloodcagedmukmoux', amount ='R'},
-					{name='skincagedmukmoux', 1},
+					{name='bloodcagedauog', amount ='R'},
+					{name='skincagedauog', 1},
 				},
 			crafting_speed = 90,
 			tech = 'reca'
@@ -338,8 +337,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='skincagedmukmoux', amount ='R'},
-					{name='fatcagedmukmoux', 1},
+					{name='skincagedauog', amount ='R'},
+					{name='fatcagedauog', 1},
 				},
 			crafting_speed = 90,
 			tech = 'orexigenic'
@@ -360,45 +359,43 @@ fun.autorecipes {
 	}
 }
 
-------------------CALF MAKER------------------
+------------------CUB MAKER------------------
 
 fun.autorecipes {
-    name = 'mukmoux-calf',
-	category = 'mukmoux',
-	module_limitations = 'mukmoux',
-	subgroup = 'py-alienlife-mukmoux',
+    name = 'auog-cub',
+	category = 'auog',
+	module_limitations = 'auog',
+	subgroup = 'py-alienlife-auog',
 	order = 'c',
     mats =
 	{
 		{
 			ingredients =
 				{
-                    {name='fawogae',amount =15},
-                    {name='ralesiaseeds',amount =15},
-					{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
-					--{name='cage',amount=1},
-					{name='bedding',amount = 2},
+                    {name='biomass',amount =15},
+                    {name='moss',amount =10},
+					{name='waterbarrel',amount=4,return_item={name='empty-barrel',amount=4}},
+					{name='bedding',amount = 3},
 				},
 			results =
 				{
-					{name='mukmouxcalf', amount =1},
+					{name='auogpup', probability = 0.7,amount_min =1,amount_max =1},
 				},
-			crafting_speed = 80,
+			crafting_speed = 70,
 			tech = 'assisted-embryology'
 		},
 		--food 1
 		{
 			ingredients =
 				{
-                    {name='ralesiaseeds',amount ='R'},
-                    {name='fawogae',amount ='R'},
-					{name='mukmouxfood01',amount =1},
+                    {name='biomass',amount ='R'},
+					{name='auogfood01',amount =1},
 				},
 			results =
 				{
 				
 				},
-			crafting_speed = 70,
+			crafting_speed = 60,
 			tech = 'assisted-embryology'
 		},
 		--salt
@@ -411,7 +408,7 @@ fun.autorecipes {
 				{
 				
 				},
-			crafting_speed = 65,
+			crafting_speed = 55,
 			tech = 'assisted-embryology'
 		},
 		--fiber
@@ -424,24 +421,24 @@ fun.autorecipes {
 				{
 				
 				},
-			crafting_speed = 60,
+			crafting_speed = 50,
 			tech = 'assisted-embryology'
 		},		
 		--food 2
 		{
 			ingredients =
 				{
-					{name='mukmouxfood01',amount ='R'},
+					{name='auogfood01',amount ='R'},
 					{name='salt',amount ='R'},
 					{name='rawfiber',amount ='R'},
-					{name='mukmouxfood02',amount =1},
+					{name='auogfood02',amount =1},
 
 				},
 			results =
 				{
 				
 				},
-			crafting_speed = 65,
+			crafting_speed = 50,
 			tech = 'assisted-embryology'
 		},
 		--food 2 salt
@@ -454,7 +451,7 @@ fun.autorecipes {
 				{
 				
 				},
-			crafting_speed = 60,
+			crafting_speed = 45,
 			tech = 'assisted-embryology'
 		},
 		--food 2 salt fiber
@@ -467,7 +464,7 @@ fun.autorecipes {
 				{
 				
 				},
-			crafting_speed = 55,
+			crafting_speed = 40,
 			tech = 'assisted-embryology'
 		},	
 		-----------------------PHEROMONES-----------------------------
@@ -476,17 +473,16 @@ fun.autorecipes {
 				{
 					{name='rawfiber',amount = 'R'},
 					{name='salt',amount = 'R'},
-					{name='mukmouxfood02',amount = 'R'},
-					{name='fawogae',amount =15},
+					{name='auogfood02',amount = 'R'},
+					{name='biomass',amount =15},
 					{name='pheromones',amount =1},
-                    {name='ralesiaseeds',amount =15},
 					--{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
 					--{name='bedding',amount = 1},
 				},
 			results =
 				{
-					{name='mukmouxcalf',amount = 'R'},
-					{name='mukmouxcalf', amount =1},
+					{name='auogpup',amount = 'R'},
+					{name='auogpup', amount =1},
 				},
 			crafting_speed = 70,
 			tech = 'pheromones'
@@ -495,9 +491,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='ralesiaseeds',amount ='R'},
-                    {name='fawogae',amount ='R'},
-					{name='mukmouxfood01',amount =1},
+
+                    {name='biomass',amount ='R'},
+					{name='auogfood01',amount =1},
 				},
 			results =
 				{
@@ -536,10 +532,10 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='mukmouxfood01',amount ='R'},
+					{name='auogfood01',amount ='R'},
 					{name='salt',amount ='R'},
 					{name='rawfiber',amount ='R'},
-					{name='mukmouxfood02',amount =1},
+					{name='auogfood02',amount =1},
 
 				},
 			results =
@@ -575,7 +571,6 @@ fun.autorecipes {
 			crafting_speed = 40,
 			tech = 'pheromones'
 		},	
-
 	}
 }
 
@@ -584,38 +579,38 @@ fun.autorecipes {
 fun.autorecipes {
     name = 'rendering',
 	category = 'slaughterhouse',
-	--module_limitations = 'mukmoux',
-	subgroup = 'py-alienlife-mukmoux',
+	--module_limitations = 'auog',
+	subgroup = 'py-alienlife-auog',
 	order = 'b',
     mats =
 	{
 		{
 			ingredients =
 				{
-					{name='cagedmukmoux',amount=1},
+					{name='cagedauog',amount=1},
 				},
 			results =
 				{
-					{name='bones', probability = 0.4,amount_min =1,amount_max =2},
-					{name='meat', probability = 0.4,amount_min =1,amount_max =4},
-					{name='skin', probability = 0.4,amount_min =1,amount_max =4},
-					{name='fat', probability = 0.4,amount_min =1,amount_max =3},
-					{name='guts', probability = 0.4,amount_min =1,amount_max =4},
+					{name='bones', probability = 0.3,amount_min =1,amount_max =4},
+					{name='meat', probability = 0.4,amount_min =2,amount_max =5},
+					{name='skin', probability = 0.3,amount_min =1,amount_max =2},
+					{name='fat', probability = 0.3,amount_min =1,amount_max =1},
+					{name='guts', probability = 0.4,amount_min =1,amount_max =1},
 					{name='blood', amount =50},
 					{name='cage',amount=1},
 					{name='brain', probability = 0.4,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 30,
-			tech = 'mukmoux',
-			name = 'Full Render Mukmouxs',
-			icon = "__pyalienlife__/graphics/icons/rendering-mukmoux.png",
+			tech = 'rendering',
+			name = 'Full Render auogs',
+			icon = "__pyalienlife__/graphics/icons/rendering-auog.png",
 			icon_size = 64,
 		},
 		--bonemeal
 		{
 			ingredients =
 				{
-					--{name='cagedmukmoux',amount=1},
+					--{name='cagedauog',amount=1},
 				},
 			results =
 				{
@@ -629,8 +624,8 @@ fun.autorecipes {
 					{name='bonemeal', amount = 4},
 				},
 			crafting_speed = 15,
-			tech = 'mukmoux',
-			name = 'Mukmouxs to Bonemeal',
+			tech = 'advanced-rendering',
+			name = 'auogs to Bonemeal',
 			icon = "__pyalienlife__/graphics/icons/bonemeal.png",
 			icon_size = 64,
 		},
@@ -638,16 +633,16 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedmukmoux',amount=1},
+					--{name='cagedauog',amount=1},
 				},
 			results =
 				{
 					{name='bonemeal', amount ='R'},
-					{name='meat', amount =5},
+					{name='meat', amount =8},
 				},
 			crafting_speed = 15,
-			tech = 'mukmoux',
-			name = 'Extract Mukmoux Meat',
+			tech = 'advanced-rendering',
+			name = 'Extract auog Meat',
 			icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
 			icon_size = 64,
 		},
@@ -655,7 +650,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedmukmoux',amount=1},
+					--{name='cagedauog',amount=1},
 				},
 			results =
 				{
@@ -663,8 +658,8 @@ fun.autorecipes {
 					{name='brain', amount =1},
 				},
 			crafting_speed = 15,
-			tech = 'mukmoux',
-			name = 'Extract Mukmoux brains',
+			tech = 'advanced-rendering',
+			name = 'Extract auog brains',
 			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},	
@@ -672,16 +667,16 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedmukmoux',amount=1},
+					--{name='cagedauog',amount=1},
 				},
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='skin', amount =4},
+					{name='skin', amount =2},
 				},
 			crafting_speed = 15,
-			tech = 'mukmoux',
-			name = 'Extract Mukmoux skin',
+			tech = 'advanced-rendering',
+			name = 'Extract auog skin',
 			icon = "__pyalienlife__/graphics/icons/skin.png",
 			icon_size = 32,
 		},
@@ -689,7 +684,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedmukmoux',amount=1},
+					--{name='cagedauog',amount=1},
 				},
 			results =
 				{
@@ -697,8 +692,8 @@ fun.autorecipes {
 					{name='bones', amount =3},
 				},
 			crafting_speed = 15,
-			tech = 'mukmoux',
-			name = 'Extract Mukmoux bones',
+			tech = 'advanced-rendering',
+			name = 'Extract auog bones',
 			icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
 			icon_size = 64,
 		},
@@ -706,16 +701,16 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedmukmoux',amount=1},
+					--{name='cagedauog',amount=1},
 				},
 			results =
 				{
 					{name='bones', amount ='R'},
-					{name='guts', amount =8},
+					{name='guts', amount =3},
 				},
 			crafting_speed = 15,
-			tech = 'mukmoux',
-			name = 'Extract Mukmoux guts',
+			tech = 'advanced-rendering',
+			name = 'Extract auog guts',
 			icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
 		},
@@ -723,16 +718,16 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedmukmoux',amount=1},
+					--{name='cagedauog',amount=1},
 				},
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='blood', amount =130},
+					{name='blood', amount =100},
 				},
 			crafting_speed = 15,
-			tech = 'mukmoux',
-			name = 'Extract Mukmoux blood',
+			tech = 'advanced-rendering',
+			name = 'Extract auog blood',
 			icon = "__pyalienlife__/graphics/icons/blood.png",
 			icon_size = 64,
 		},
@@ -740,25 +735,25 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedmukmoux',amount=1},
+					--{name='cagedauog',amount=1},
 				},
 			results =
 				{
 					{name='blood', amount ='R'},
-					{name='fat', amount =5},
+					{name='fat', amount =2},
 				},
 			crafting_speed = 15,
-			tech = 'mukmoux',
-			name = 'Extract Mukmoux lard',
+			tech = 'advanced-rendering',
+			name = 'Extract auog lard',
 			icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
 			icon_size = 64,
-		},	
-		--brain mukmoux rendering
+		},
+		--brain auog rendering
 		{
 			ingredients =
 				{
-					{name='cagedmukmoux',amount='R'},
-					{name='braincagedmukmoux',amount=1},
+					{name='cagedauog',amount='R'},
+					{name='braincagedauog',amount=1},
 				},
 			results =
 				{
@@ -767,116 +762,133 @@ fun.autorecipes {
 				},
 			crafting_speed = 15,
 			tech = 'nanochondria',
-			name = 'Extract brains from Improved Mukmouxs',
-			icon = "__pyalienlife__/graphics/icons/brain-caged-mukmoux.png",
+			name = 'Extract brains from Improved auogs',
+			icon = "__pyalienlife__/graphics/icons/brain-caged-auog.png",
 			icon_size = 64,
 		},
-		--bone mukmoux rendering
+		--bone auog rendering
 		{
 			ingredients =
 				{
-					{name='braincagedmukmoux',amount='R'},
-					{name='bonecagedmukmoux',amount=1},
+					{name='braincagedauog',amount='R'},
+					{name='bonecagedauog',amount=1},
 				},
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='bones', amount =6},
+					{name='bones', amount =5},
 				},
 			crafting_speed = 15,
 			tech = 'bmp',
-			name = 'Extract bones from Improved Mukmouxs',
-			icon = "__pyalienlife__/graphics/icons/bone-caged-mukmoux.png",
+			name = 'Extract bones from Improved auogs',
+			icon = "__pyalienlife__/graphics/icons/bone-caged-auog.png",
 			icon_size = 64,
 		},
-		--meat mukmoux rendering
+		--bonemeal auog rendering
 		{
 			ingredients =
 				{
-					{name='bonecagedmukmoux',amount='R'},
-					{name='meatcagedmukmoux',amount=1},
+
+				},
+			results =
+				{
+					{name='bones', amount ='R'},
+					{name='bonemeal', amount =5},
+				},
+			crafting_speed = 15,
+			tech = 'bmp',
+			name = 'Extract bonemeal from Improved auogs',
+			icon = "__pyalienlife__/graphics/icons/bonemeal-caged-auog.png",
+			icon_size = 64,
+        },
+		--meat auog rendering
+		{
+			ingredients =
+				{
+					{name='bonecagedauog',amount='R'},
+					{name='meatcagedauog',amount=1},
 				},
 			results =
 				{
 					{name='bonemeal', amount ='R'},
-					{name='meat', amount =8},
+					{name='meat', amount =12},
 				},
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
-			name = 'Extract meat from Improved Mukmouxs',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-mukmoux.png",
+			name = 'Extract meat from Improved auogs',
+			icon = "__pyalienlife__/graphics/icons/meat-caged-auog.png",
 			icon_size = 64,
 		},
-		--guts mukmoux rendering
+		--guts auog rendering
 		{
 			ingredients =
 				{
-					{name='meatcagedmukmoux',amount='R'},
-					{name='gutscagedmukmoux',amount=1},
+					{name='meatcagedauog',amount='R'},
+					{name='gutscagedauog',amount=1},
 				},
 			results =
 				{
 					{name='bonemeal', amount ='R'},
-					{name='guts', amount =10},
+					{name='guts', amount =5},
 				},
 			crafting_speed = 15,
 			tech = 'antitumor',
-			name = 'Extract guts from Improved Mukmouxs',
-			icon = "__pyalienlife__/graphics/icons/guts-caged-mukmoux.png",
+			name = 'Extract guts from Improved auogs',
+			icon = "__pyalienlife__/graphics/icons/guts-caged-auog.png",
 			icon_size = 64,
 		},
-		--blood mukmoux rendering
+		--blood auog rendering
 		{
 			ingredients =
 				{
-					{name='gutscagedmukmoux',amount='R'},
-					{name='bloodcagedmukmoux',amount=1},
+					{name='gutscagedauog',amount='R'},
+					{name='bloodcagedauog',amount=1},
 				},
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='blood', amount =180},
+					{name='blood', amount =120},
 				},
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
-			name = 'Extract blood from Improved Mukmouxs',
-			icon = "__pyalienlife__/graphics/icons/blood-caged-mukmoux.png",
+			name = 'Extract blood from Improved auogs',
+			icon = "__pyalienlife__/graphics/icons/blood-caged-auog.png",
 			icon_size = 64,
 		},
-		--skin mukmoux rendering
+		--skin auog rendering
 		{
 			ingredients =
 				{
-					{name='bloodcagedmukmoux',amount='R'},
-					{name='skincagedmukmoux',amount=1},
+					{name='bloodcagedauog',amount='R'},
+					{name='skincagedauog',amount=1},
 				},
 			results =
 				{
 					{name='blood', amount ='R'},
-					{name='skin', amount =5},
+					{name='skin', amount =4},
 				},
 			crafting_speed = 15,
 			tech = 'reca',
-			name = 'Extract skin from Improved Mukmouxs',
-			icon = "__pyalienlife__/graphics/icons/skin-caged-mukmoux.png",
+			name = 'Extract skin from Improved auogs',
+			icon = "__pyalienlife__/graphics/icons/skin-caged-auog.png",
 			icon_size = 64,
 		},
-		--fat mukmoux rendering
+		--fat auog rendering
 		{
 			ingredients =
 				{
-					{name='skincagedmukmoux',amount='R'},
-					{name='fatcagedmukmoux',amount=1},
+					{name='skincagedauog',amount='R'},
+					{name='fatcagedauog',amount=1},
 				},
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='fat', amount =6},
+					{name='fat', amount =4},
 				},
 			crafting_speed = 15,
 			tech = 'orexigenic',
-			name = 'Extract fat from Improved Mukmouxs',
-			icon = "__pyalienlife__/graphics/icons/fat-caged-mukmoux.png",
+			name = 'Extract fat from Improved auogs',
+			icon = "__pyalienlife__/graphics/icons/fat-caged-auog.png",
 			icon_size = 64,
 		},
 	}

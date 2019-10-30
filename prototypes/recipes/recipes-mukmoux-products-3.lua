@@ -2,7 +2,7 @@
 local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
-    name = 'manure',
+    name = 'manure-b',
 	category = 'mukmoux',
 	subgroup = 'py-alienlife-mukmoux',
 	module_limitations = 'mukmoux',
@@ -19,11 +19,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='manure',amount =6},
+					{name='manure',amount =8},
 				},
 			crafting_speed = 100,
-			tech = 'mukmoux',
-			name = 'muk-manure-1',
+			tech = 'explosive-diarrhea',
+			name = 'muk-manure-1b',
 			--icon = "__pyalienlife__/graphics/icons/atomizer-mk01.png"
 		},
 		--food 1
@@ -40,8 +40,8 @@ fun.autorecipes {
 					--{name='manure',amount ='+2'}
 				},
 			crafting_speed = 80,
-			tech = 'food-mk01',
-			name = 'muk-manure-2',
+			tech = 'explosive-diarrhea',
+			name = 'muk-manure-2b',
 			--icon = "__pyalienlife__/graphics/icons/navens-culture-mk01.png"
 		},
 		--salt
@@ -56,8 +56,8 @@ fun.autorecipes {
 					{name='manure',amount ='+1'}
 				},
 				crafting_speed = 80,
-				tech = 'mukmoux',
-				name = 'muk-manure-3',
+                tech = 'explosive-diarrhea',
+                name = 'muk-manure-3b',
 		},
 		--fiber
 		{
@@ -71,8 +71,8 @@ fun.autorecipes {
 					{name='manure',amount ='+2'}
 				},
 				crafting_speed = 80,
-				tech = 'mukmoux',
-				name = 'muk-manure-4',
+                tech = 'explosive-diarrhea',
+                name = 'muk-manure-4b',
 		},
 		--food 02
 		{
@@ -86,11 +86,11 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='manure',amount =10}
+					{name='manure',amount =12}
 				},
 				crafting_speed = 60,
-				tech = 'food-mk02',
-				name = 'muk-manure-5',
+                tech = 'explosive-diarrhea',
+                name = 'muk-manure-5b',
 		},
 		--salt
 		{
@@ -104,8 +104,8 @@ fun.autorecipes {
 					{name='manure',amount ='+2'}
 				},
 				crafting_speed = 60,
-				tech = 'mukmoux',
-				name = 'muk-manure-6',
+                tech = 'explosive-diarrhea',
+                name = 'muk-manure-6b',
 		},
 		--fiber
 		{
@@ -119,8 +119,8 @@ fun.autorecipes {
 					{name='manure',amount ='+2'}
 				},
 				crafting_speed = 60,
-				tech = 'mukmoux',
-				name = 'muk-manure-7',
+                tech = 'explosive-diarrhea',
+                name = 'muk-manure-7b',
 		},
 	}
 }
