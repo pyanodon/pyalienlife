@@ -2776,8 +2776,8 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/used-auog.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-plants",
-    order = "a",
+    subgroup = "py-alienlife-used",
+    order = "x",
     stack_size = 1
 }
 

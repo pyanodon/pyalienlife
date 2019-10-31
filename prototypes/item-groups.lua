@@ -255,6 +255,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-used",
+        group = "py-alienlife",
+        order = "x"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-modules",
         group = "py-alienlife",
         order = "z"
