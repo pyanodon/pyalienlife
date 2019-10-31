@@ -139,4 +139,8 @@ data:extend {
         type = "recipe-category",
         name = "trits"
     },
+    {
+        type = "recipe-category",
+        name = "bay"
+    },
 }

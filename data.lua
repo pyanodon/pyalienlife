@@ -109,6 +109,7 @@ require("prototypes/buildings/trits-reef-mk01")
 require('prototypes/buildings/outpost')
 require('prototypes/buildings/foodbowl')
 require('prototypes/buildings/generator-1')
+require('prototypes/buildings/pyphoon-bay')
 
 --Caravan ceature
 require('prototypes/ceatures/caravan')
@@ -173,6 +174,7 @@ require('prototypes/recipes/recipes-xeno')
 require('prototypes/recipes/recipes-cridren')
 require('prototypes/recipes/recipes-zipir')
 require('prototypes/recipes/recipes-trits')
+require('prototypes/recipes/recipes-recharge')
 
 --(( FLUIDS ))--
 require("prototypes/fluids/zogna-bacteria")
