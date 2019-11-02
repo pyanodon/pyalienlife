@@ -874,5 +874,23 @@ fun.autorecipes {
 			icon = "__pyalienlife__/graphics/icons/fat-caged-ulric.png",
 			icon_size = 64,
 		},
+		--meat ulric rendering
+		{
+			ingredients =
+				{
+					{name='skincagedulric',amount='R'},
+					{name='meatcagedulric',amount=1},
+				},
+			results =
+				{
+					{name='skin', amount ='R'},
+					{name='meat', amount =5},
+				},
+			crafting_speed = 15,
+			tech = 'anabolic-rna',
+			name = 'Extract meat from Improved Ulrics',
+			icon = "__pyalienlife__/graphics/icons/meat-caged-ulric.png",
+			icon_size = 64,
+		},
 	}
 }

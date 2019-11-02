@@ -2103,6 +2103,72 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "brain-caged-phagnot",
+    icon = "__pyalienlife__/graphics/icons/brain-caged-phagnot.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-phagnot",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "bone-caged-phagnot",
+    icon = "__pyalienlife__/graphics/icons/bone-caged-phagnot.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-phagnot",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "meat-caged-phagnot",
+    icon = "__pyalienlife__/graphics/icons/meat-caged-phagnot.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-phagnot",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "skin-caged-phagnot",
+    icon = "__pyalienlife__/graphics/icons/skin-caged-phagnot.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-phagnot",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "blood-caged-phagnot",
+    icon = "__pyalienlife__/graphics/icons/blood-caged-phagnot.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-phagnot",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "guts-caged-phagnot",
+    icon = "__pyalienlife__/graphics/icons/guts-caged-phagnot.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-phagnot",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "phagnot-cub",
     icon = "__pyalienlife__/graphics/icons/phagnot-pup.png",
     icon_size = 64,
