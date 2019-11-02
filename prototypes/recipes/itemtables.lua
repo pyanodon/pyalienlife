@@ -120,6 +120,12 @@ items.inputs.phagnotcub = {'phagnot-cub', 1}
 items.inputs.gasbladder = {'gas-bladder', 1}
 items.inputs.phagnotfood01 = {'phagnot-food-01', 1}
 items.inputs.phagnotfood02 = {'phagnot-food-02', 1}
+items.inputs.braincagedphagnot = {'brain-caged-phagnot', 1}
+items.inputs.bonecagedphagnot = {'bone-caged-phagnot', 1}
+items.inputs.meatcagedphagnot = {'meat-caged-phagnot', 1}
+items.inputs.bloodcagedphagnot = {'blood-caged-phagnot', 1}
+items.inputs.skincagedphagnot = {'skin-caged-phagnot', 1}
+items.inputs.gutscagedphagnot = {'guts-caged-phagnot', 1}
 
 items.outputs = items.inputs
 --can put output replacements below here
