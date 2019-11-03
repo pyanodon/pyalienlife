@@ -4,8 +4,8 @@ RECIPE {
     energy_required = 2,
     enabled = false,
     ingredients = {
-        {"clay-pit", 1},
-        {"fbreactor", 2},
+        {"clay-pit-mk01", 1},
+        {"fbreactor-mk01", 2},
         {"steel-plate", 100},
         {"electronic-circuit", 20},
         {"pipe", 15}
