@@ -1,6 +1,6 @@
 local pipe = {
     south = {
-        filename = "__pyhightech__/graphics/entity/kicalk-plantation/bottom.png",
+        filename = "__pyalienlife__/graphics/entity/kicalk-plantation/bottom.png",
         priority = "extra-high",
         width = 229,
         height = 235,
@@ -10,7 +10,7 @@ local pipe = {
 RECIPE {
     type = "recipe",
     name = "kicalk-plantation-mk01",
-    energy_required = 2,
+    energy_required = 0.5,
     enabled = false,
     ingredients = {
         {"botanical-nursery", 1},
@@ -41,7 +41,7 @@ ENTITY {
     icon = "__pyalienlife__/graphics/icons/kicalk-plantation-mk01.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 1, result = "kicalk-plantation-mk01"},
+    minable = {mining_time = 0.5, result = "kicalk-plantation-mk01"},
     fast_replaceable_group = "kicalk-plantation",
     max_health = 100,
     corpse = "big-remnants",
@@ -133,8 +133,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyhightech__/sounds/kicalk-plantation.ogg", volume = 1.5},
-        idle_sound = {filename = "__pyhightech__/sounds/kicalk-plantation.ogg", volume = 0.9},
+        sound = {filename = "__pyalienlife__/sounds/kicalk-plantation.ogg", volume = 1.5},
+        idle_sound = {filename = "__pyalienlife__/sounds/kicalk-plantation.ogg", volume = 0.9},
         apparent_volume = 2.5
     }
 }

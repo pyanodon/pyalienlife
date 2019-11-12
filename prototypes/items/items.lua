@@ -2546,17 +2546,7 @@ local alien_life_limitations_ulric =
 
     local alien_life_limitations_scrondrix =
 	{
-    "scrondrix-sex-01",
-    "scrondrix-sex-01-mukmoux",
-    "scrondrix-sex-pup-01",
-    "scrondrix-sex-pup-02",
-    "scrondrix-manure-00",
-    "scrondrix-manure-01",
-    "scrondrix-manure-02",
-    "scrondrix-manure-01-food",
-    "scrondrix-manure-02-food",
-    "scrondrix-manure-03",
-    "scrondrix-manure-03-food",
+
     }
 
     local alien_life_limitations_rennea =
@@ -2903,7 +2893,21 @@ ITEM {
     stack_size = 10,
 	effect = { speed = {bonus = 20}},
 	limitation = alien_life_limitations_dingrits,
-	limitation_message_key = "Its full"
+    limitation_message_key = "Its full",
+    fuel_category = 'dingrits',
+    fuel_value = '80MJ',
+    burnt_result = 'used-dingrit'
+}
+
+ITEM {
+    type = "item",
+    name = "used-dingrit",
+    icon = "__pyalienlife__/graphics/icons/used-dingrit.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 1
 }
 
 ITEM {

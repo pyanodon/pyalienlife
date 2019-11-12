@@ -97,7 +97,7 @@ RECIPE {
     name = 'caged-xeno',
     category = 'crafting',
     enabled = false,
-    energy_required = 2,
+    energy_required = 0.5,
     ingredients = {
         {type = 'item', name = 'xeno', amount = 1},
         {type = 'item', name = 'cage', amount = 1},
@@ -112,7 +112,7 @@ RECIPE {
     name = 'uncaged-xeno',
     category = 'crafting',
     enabled = false,
-    energy_required = 2,
+    energy_required = 0.5,
     ingredients = {
         {type = 'item', name = 'caged-xeno', amount = 1},
     },

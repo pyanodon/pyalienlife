@@ -56,7 +56,7 @@ RECIPE {
     name = 'caged-kmauts',
     category = 'crafting',
     enabled = false,
-    energy_required = 2,
+    energy_required = 0.5,
     ingredients = {
         {type = 'item', name = 'kmauts', amount = 1},
         {type = 'item', name = 'cage', amount = 1},
@@ -71,7 +71,7 @@ RECIPE {
     name = 'uncaged-kmauts',
     category = 'crafting',
     enabled = false,
-    energy_required = 2,
+    energy_required = 0.5,
     ingredients = {
         {type = 'item', name = 'caged-kmauts', amount = 1},
     },

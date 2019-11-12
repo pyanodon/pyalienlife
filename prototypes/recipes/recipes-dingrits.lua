@@ -9,7 +9,7 @@ RECIPE {
     enabled = false,
     energy_required = 90,
     ingredients = {
-        {type = 'item', name = 'alien-sample-03', amount = 2},
+        {type = 'item', name = 'alien-sample-02', amount = 2},
         {type = 'item', name = 'cdna', amount = 3},
         {type = 'item', name = 'dingrits-codex', amount = 2},
         {type = 'item', name = 'arthurian-egg', amount = 10},
@@ -117,7 +117,7 @@ RECIPE {
     name = 'caged-dingrits',
     category = 'crafting',
     enabled = false,
-    energy_required = 2,
+    energy_required = 0.5,
     ingredients = {
         {type = 'item', name = 'dingrits', amount = 1},
         {type = 'item', name = 'cage', amount = 1},
@@ -132,7 +132,7 @@ RECIPE {
     name = 'uncaged-dingrits',
     category = 'crafting',
     enabled = false,
-    energy_required = 2,
+    energy_required = 0.5,
     ingredients = {
         {type = 'item', name = 'caged-dingrits', amount = 1},
     },

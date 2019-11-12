@@ -4,7 +4,6 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"control-unit", 10},
         {"nbti-alloy", 40},
         {"concrete", 200},
         {"concrete-wall", 50},

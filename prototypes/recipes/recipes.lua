@@ -545,7 +545,7 @@ RECIPE {
     energy_required = 6,
     ingredients = {
         {type = 'fluid', name = 'pressured-air', amount = 150},
-        {type = 'fluid', name = 'cyanic-acid', amount = 50},
+        {type = 'fluid', name = 'sulfuric-acid', amount = 50},
         {type = 'item', name = 'mixed-ores', amount = 5},
     },
     results = {
@@ -819,7 +819,7 @@ RECIPE {
     energy_required = 15,
     ingredients = {
         {type = 'item', name = 'ticocr-alloy', amount = 1},
-        {type = 'item', name = 'collagen', amount = 4},
+        {type = 'item', name = 'pelt', amount = 4},
         {type = 'item', name = 'metallic-glass', amount = 2},
         {type = 'item', name = 'propeptides', amount = 1},
         {type = 'item', name = 'chitin', amount = 4},
@@ -831,7 +831,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'nanochondria', amount = 1}
     }
-}:add_unlock('nanochondria'):change_category('nano'):add_ingredient({type = "item", name = "resilin", amount = 1}):replace_ingredient("bacteria-1", "bacteria-2")
+}:add_unlock('nanochondria'):change_category('nano'):add_ingredient({type = "item", name = "resilin", amount = 1}):replace_ingredient("pelt", "collagen"):replace_ingredient("bacteria-1", "bacteria-2")
+
 
 RECIPE {
     type = 'recipe',
@@ -841,7 +842,7 @@ RECIPE {
     energy_required = 20,
     ingredients = {
         {type = 'item', name = 'hyaline', amount = 1},
-        {type = 'item', name = 'collagen', amount = 2},
+        {type = 'item', name = 'sea-sponge', amount = 2},
         {type = 'item', name = 'chitin', amount = 4},
         {type = 'item', name = 'alien-enzymes', amount = 1},
         {type = 'item', name = 'pineal-gland', amount = 1},
@@ -852,7 +853,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'bmp', amount = 1}
     }
-}:add_unlock('bmp'):replace_ingredient("bacteria-1", "bacteria-2")
+}:add_unlock('bmp'):replace_ingredient("bacteria-1", "bacteria-2"):replace_ingredient("sea-sponge", "collagen")
 
 RECIPE {
     type = 'recipe',

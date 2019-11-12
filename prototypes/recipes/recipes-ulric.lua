@@ -173,7 +173,7 @@ RECIPE {
     name = 'caged-ulric',
     category = 'crafting',
     enabled = false,
-    energy_required = 2,
+    energy_required = 0.5,
     ingredients = {
         {type = 'item', name = 'ulric', amount = 1},
         {type = 'item', name = 'cage', amount = 1},
@@ -188,7 +188,7 @@ RECIPE {
     name = 'uncaged-ulric',
     category = 'crafting',
     enabled = false,
-    energy_required = 2,
+    energy_required = 0.5,
     ingredients = {
         {type = 'item', name = 'caged-ulric', amount = 1},
     },

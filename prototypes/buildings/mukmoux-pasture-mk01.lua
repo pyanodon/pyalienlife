@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "mukmoux-pasture-mk01",
-    energy_required = 2,
+    energy_required = 0.5,
     enabled = false,
     ingredients = {
         {"soil", 500},
