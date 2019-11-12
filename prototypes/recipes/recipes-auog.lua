@@ -131,7 +131,7 @@ RECIPE {
     name = 'caged-auog',
     category = 'crafting',
     enabled = false,
-    energy_required = 2,
+    energy_required = 0.5,
     ingredients = {
         {type = 'item', name = 'auog', amount = 1},
         {type = 'item', name = 'cage', amount = 1},
@@ -146,7 +146,7 @@ RECIPE {
     name = 'uncaged-auog',
     category = 'crafting',
     enabled = false,
-    energy_required = 2,
+    energy_required = 0.5,
     ingredients = {
         {type = 'item', name = 'caged-auog', amount = 1},
     },

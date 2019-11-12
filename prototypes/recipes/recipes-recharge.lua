@@ -29,3 +29,35 @@ RECIPE {
         {type = 'item', name = 'auog', amount = 1},
     },
 }:add_unlock("domestication")
+
+RECIPE {
+    type = 'recipe',
+    name = 'dingrit-recharge',
+    category = 'bay',
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'used-dingrit', amount = 1},
+        {type = 'item', name = 'bedding', amount = 2},
+        {type = 'item', name = 'dingrits-food-01', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'dingrits', amount = 1},
+    },
+}:add_unlock("domestication-2")
+
+RECIPE {
+    type = 'recipe',
+    name = 'dingrit-recharge-2',
+    category = 'bay',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'used-dingrit', amount = 1},
+        {type = 'item', name = 'bedding', amount = 2},
+        {type = 'item', name = 'dingrits-food-02', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'dingrits', amount = 1},
+    },
+}:add_unlock("domestication-2")

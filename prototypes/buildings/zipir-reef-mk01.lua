@@ -1,11 +1,11 @@
 RECIPE {
     type = "recipe",
     name = "zipir-reef-mk01",
-    energy_required = 2,
+    energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"clay-pit-mk01", 1},
-        {"fbreactor-mk01", 2},
+        {"spore-collector-mk01", 1},
+        {"automated-factory-mk01", 2},
         {"steel-plate", 100},
         {"electronic-circuit", 20},
         {"pipe", 15}

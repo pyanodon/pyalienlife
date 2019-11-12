@@ -154,7 +154,7 @@ RECIPE {
     name = 'caged-phagnot',
     category = 'crafting',
     enabled = false,
-    energy_required = 2,
+    energy_required = 0.5,
     ingredients = {
         {type = 'item', name = 'phagnot', amount = 1},
         {type = 'item', name = 'cage', amount = 1},
@@ -169,7 +169,7 @@ RECIPE {
     name = 'uncaged-phagnot',
     category = 'crafting',
     enabled = false,
-    energy_required = 2,
+    energy_required = 0.5,
     ingredients = {
         {type = 'item', name = 'caged-phagnot', amount = 1},
     },

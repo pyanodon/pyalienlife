@@ -222,7 +222,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'fur', amount = 20},
         {type = 'item', name = 'chitin', amount = 5},
-        {type = 'item', name = 'bacteria-1', amount = 100},
+        {type = 'fluid', name = 'bacteria-1', amount = 100},
     },
     results = {
         {type = 'item', name = 'cysteine', amount = 1},

@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "generator-1",
-    energy_required = 2,
+    energy_required = 0.5,
     enabled = false,
     ingredients = {
         {"steel-plate", 15},
@@ -33,7 +33,7 @@ ENTITY {
     icon = "__pyalienlife__/graphics/icons/generator-1.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 1, result = "generator-1"},
+    minable = {mining_time = 0.5, result = "generator-1"},
     max_health = 100,
     corpse = "big-remnants",
     resistances = {

@@ -5,6 +5,7 @@ TECHNOLOGY('nano-tech'):add_prereq('microbiology-mk03')
 TECHNOLOGY('bio-implants'):add_prereq('nano-tech')
 TECHNOLOGY('antitumor'):add_prereq('earnshaw-theorem')
 RECIPE('kicalk-plantation'):remove_unlock('coal-processing-1')
+RECIPE('cadaveric-arum-mk01'):remove_unlock('basic-electronics')
 
 TECHNOLOGY {
     type = "technology",
@@ -23,6 +24,24 @@ TECHNOLOGY {
     }
 }
 
+TECHNOLOGY {
+    type = "technology",
+    name = "arum",
+    icon = "__pyalienlife__/graphics/technology/arum.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {"botany-mk02"},
+    effects = {},
+    unit = {
+        count = 100,
+        ingredients = {
+            {"automation-science-pack", 2},
+            {"logistic-science-pack", 2},
+        },
+        time = 50
+    }
+}
+
 
 ----BUILDINDS----
 RECIPE('ralesia-plantation-mk03'):add_ingredient({type = "item", name = "biopolymer", amount = 15}):add_ingredient({type = "item", name = "carbon-aerogel", amount = 20})
@@ -30,15 +49,23 @@ RECIPE('ralesia-plantation-mk04'):replace_ingredient("control-unit", "intelligen
 RECIPE('auog-paddock'):set_fields {enabled = false}
 RECIPE('zipir'):remove_unlock('basic-electronics')
 RECIPE('kicalk-plantation-mk01'):add_unlock('kicalk')
-RECIPE('cadaveric-arum'):subgroup_order("py-alienlife-buildings-others", "a"):remove_unlock('basic-electronics'):add_unlock('botany-mk03') --SUBSTITUIR POR TECH DELA
+RECIPE('cadaveric-arum-mk01'):add_unlock('arum'):subgroup_order("py-alienlife-buildings-mk01", "b")
+RECIPE('cadaveric-arum-mk02'):add_unlock('botany-mk03'):subgroup_order("py-alienlife-buildings-mk02", "b")
+RECIPE('cadaveric-arum-mk03'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk03", "b")
+RECIPE('cadaveric-arum-mk04'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk04", "b")
+RECIPE('moondrop-greenhouse-mk02'):add_unlock('botany-mk03'):subgroup_order("py-alienlife-buildings-mk02", "b")
+RECIPE('moondrop-greenhouse-mk03'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk03", "b")
+RECIPE('moondrop-greenhouse-mk04'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk04", "b")
 
 ----RECIPES----
+RECIPE('dms'):remove_unlock('basic-electronics')
 RECIPE('fungal-substrate'):add_ingredient({type = "item", name = "urea", amount = 3})
 RECIPE('log7-2'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a"):remove_unlock('basic-electronics'):add_unlock('botany-mk02')
 --RECIPE('urea'):replace_ingredient("fawogae", "seaweed"):subgroup_order("py-alienlife-items", "a")
 RECIPE('bonemeal2'):remove_unlock('advanced-electronics'):subgroup_order("py-alienlife-items", "a")
 RECIPE('bonemeal3'):remove_unlock('advanced-electronics'):subgroup_order("py-alienlife-items", "a")
 RECIPE('bonemeal4'):remove_unlock('advanced-electronics'):subgroup_order("py-alienlife-items", "a")
+RECIPE('cobalt-extract'):replace_ingredient("sulfuric-acid", "cyanic-acid")
 RECIPE('neuroprocessor'):replace_ingredient("electronic-circuit", "pcb2"):add_ingredient({type = "item", name = "resistor1", amount = 4}):add_ingredient({type = "item", name = "capacitor1", amount = 3}):add_ingredient({type = "item", name = "inductor1", amount = 5}):add_ingredient({type = "item", name = "transistor", amount = 5})
 RECIPE('neuromorphic-chip'):add_ingredient({type = "item", name = "bakelite", amount = 5}):add_ingredient({type = "item", name = "micro-fiber", amount = 4}):add_ingredient({type = "item", name = "capacitor2", amount = 5}):add_ingredient({type = "item", name = "melamine", amount = 10}):add_ingredient({type = "fluid", name = "etching", amount = 40})
 RECIPE('formamide'):replace_ingredient("nitrogen", "ammonia"):change_category('fbreactor')

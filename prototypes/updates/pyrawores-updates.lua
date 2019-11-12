@@ -4,6 +4,10 @@ RECIPE('ralesia-plantation-mk02'):add_ingredient({type = "item", name = "duralum
 RECIPE('ralesia-plantation-mk03'):add_ingredient({type = "item", name = "stainless-steel", amount = 25}):add_ingredient({type = "item", name = "aluminium-plate", amount = 40})
 RECIPE('ralesia-plantation-mk04'):add_ingredient({type = "item", name = "super-steel", amount = 25})
 
+RECIPE('cadaveric-arum-mk02'):add_ingredient({type = "item", name = "duralumin", amount = 40}):add_ingredient({type = "item", name = "titanium-plate", amount = 50})
+RECIPE('cadaveric-arum-mk03'):add_ingredient({type = "item", name = "stainless-steel", amount = 25}):add_ingredient({type = "item", name = "aluminium-plate", amount = 40})
+RECIPE('cadaveric-arum-mk04'):add_ingredient({type = "item", name = "super-steel", amount = 25})
+
 
 --RECIPES--
 
@@ -64,7 +68,7 @@ RECIPE {
     energy_required = 5,
     ingredients = {
         {type = "item", name = "bones", amount = 6},
-        {type = "item", name = "manure", amount = 5},
+        --{type = "item", name = "manure", amount = 5},
         {type = "item", name = "manure", amount = 10},
         {type = "item", name = "ammonium-chloride", amount = 20},
         {type = 'fluid', name = 'zogna-bacteria', amount = 20},

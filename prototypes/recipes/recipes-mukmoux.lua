@@ -159,7 +159,7 @@ RECIPE {
     name = 'caged-mukmoux',
     category = 'crafting',
     enabled = false,
-    energy_required = 2,
+    energy_required = 0.5,
     ingredients = {
         {type = 'item', name = 'mukmoux', amount = 1},
         {type = 'item', name = 'cage', amount = 1},
@@ -174,7 +174,7 @@ RECIPE {
     name = 'uncaged-mukmoux',
     category = 'crafting',
     enabled = false,
-    energy_required = 2,
+    energy_required = 0.5,
     ingredients = {
         {type = 'item', name = 'caged-mukmoux', amount = 1},
     },

@@ -143,4 +143,8 @@ data:extend {
         type = "recipe-category",
         name = "bay"
     },
+    {
+        type = "recipe-category",
+        name = "kicalk"
+    },
 }

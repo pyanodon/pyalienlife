@@ -7,6 +7,10 @@ data:extend(
   {
     type = "fuel-category",
     name = "auog"
+  },
+  {
+    type = "fuel-category",
+    name = "dingrits"
   }
 }
 )
