@@ -1520,6 +1520,50 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "meat-dhilmos",
+    icon = "__pyalienlife__/graphics/icons/meat-dhilmos.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-dhilmos",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "blood-dhilmos",
+    icon = "__pyalienlife__/graphics/icons/blood-dhilmos.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-dhilmos",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "guts-dhilmos",
+    icon = "__pyalienlife__/graphics/icons/guts-dhilmos.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-dhilmos",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "fat-dhilmos",
+    icon = "__pyalienlife__/graphics/icons/fat-dhilmos.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-dhilmos",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "scrondrix-pup",
     icon = "__pyalienlife__/graphics/icons/scrondrix-pup.png",
 	icon_size = 64,
@@ -2536,12 +2580,6 @@ local alien_life_limitations_ulric =
 
     local alien_life_limitations_dhilmos =
 	{
-    "dhilmos-sex-01",
-    "dhilmos-sex-food-01",
-    "dhilmos-sex-food-02",
-    "dhilmos-sex-assisted-01",
-    "dhilmos-sex-assisted-02",
-    "dhilmos-sex-assisted-03",
     }
 
     local alien_life_limitations_scrondrix =

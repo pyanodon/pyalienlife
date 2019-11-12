@@ -813,5 +813,23 @@ fun.autorecipes {
 			icon = "__pyalienlife__/graphics/icons/fat-caged-arthurian.png",
 			icon_size = 64,
 		},
+		--meat arthurian rendering
+		{
+			ingredients =
+				{
+					{name='fatcagedarthurian',amount='R'},
+					{name='meatcagedarthurian',amount=1},
+				},
+			results =
+				{
+					{name='fat', amount ='R'},
+					{name='meat', amount =6},
+				},
+			crafting_speed = 15,
+			tech = 'anabolic-rna',
+			name = 'Extract meat from Improved arthurians',
+			icon = "__pyalienlife__/graphics/icons/meat-caged-arthurian.png",
+			icon_size = 64,
+		},
 	}
 }

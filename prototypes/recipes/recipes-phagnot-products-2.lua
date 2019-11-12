@@ -2,10 +2,11 @@
 local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
-    name = 'manure',
+    name = 'manure-a',
 	category = 'phagnot',
 	subgroup = 'py-alienlife-phagnot',
-	module_limitations = 'phagnot',
+    module_limitations = 'phagnot',
+	order = 'z',
     mats =
 	{
 		{
@@ -16,11 +17,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='manure',amount ='*2'},
+                    {name='manure',amount ='*3'},
 				},
 			crafting_speed = 130,
-			tech = 'phagnot',
-			name = 'phag-manure-1',
+			tech = 'bigger-colon',
+			name = 'phag-manure-1a',
 			--icon = "__pyalienlife__/graphics/icons/atomizer-mk01.png"
 		},
 		{
@@ -35,8 +36,8 @@ fun.autorecipes {
                     {name='manure',amount ='+1'},
 				},
 			crafting_speed = 120,
-			tech = 'phagnot',
-			name = 'phag-manure-2',
+			tech = 'bigger-colon',
+			name = 'phag-manure-2a',
 			--icon = "__pyalienlife__/graphics/icons/navens-culture-mk01.png"
 		},
 		{
@@ -51,8 +52,8 @@ fun.autorecipes {
                     {name='manure',amount ='+1'},
 				},
 				crafting_speed = 120,
-				tech = 'phagnot',
-				name = 'phag-manure-3',
+                tech = 'bigger-colon',
+                name = 'phag-manure-3a',
 		},
 		{
 			ingredients =
@@ -65,8 +66,8 @@ fun.autorecipes {
                     {name='manure',amount ='+1'},
 				},
 				crafting_speed = 120,
-				tech = 'phagnot',
-				name = 'phag-manure-4',
+                tech = 'bigger-colon',
+                name = 'phag-manure-4a',
 		},
 		{
 			ingredients =
@@ -83,8 +84,8 @@ fun.autorecipes {
                     {name='manure',amount =5},
 				},
 				crafting_speed = 100,
-				tech = 'phagnot',
-				name = 'phag-manure-5',
+                tech = 'bigger-colon',
+                name = 'phag-manure-5a',
 		},
 		{
 			ingredients =
@@ -98,8 +99,8 @@ fun.autorecipes {
                     {name='manure',amount ='+1'},
 				},
 				crafting_speed = 100,
-				tech = 'phagnot',
-				name = 'phag-manure-6',
+                tech = 'bigger-colon',
+                name = 'phag-manure-6a',
 		},
 		{
 			ingredients =
@@ -112,8 +113,8 @@ fun.autorecipes {
                     {name='manure',amount ='+1'},
 				},
 				crafting_speed = 100,
-				tech = 'phagnot',
-				name = 'phag-manure-7',
+                tech = 'bigger-colon',
+                name = 'phag-manure-7a',
 		},
 	}
 }

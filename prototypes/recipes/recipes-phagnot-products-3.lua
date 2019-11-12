@@ -2,10 +2,11 @@
 local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
-    name = 'manure',
+    name = 'manure-b',
 	category = 'phagnot',
 	subgroup = 'py-alienlife-phagnot',
-	module_limitations = 'phagnot',
+    module_limitations = 'phagnot',
+	order = 'z',
     mats =
 	{
 		{
@@ -16,11 +17,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='manure',amount ='*2'},
+                    {name='manure',amount ='*4'},
 				},
 			crafting_speed = 130,
-			tech = 'phagnot',
-			name = 'phag-manure-1',
+			tech = 'explosive-diarrhea',
+			name = 'phag-manure-1b',
 			--icon = "__pyalienlife__/graphics/icons/atomizer-mk01.png"
 		},
 		{
@@ -35,8 +36,8 @@ fun.autorecipes {
                     {name='manure',amount ='+1'},
 				},
 			crafting_speed = 120,
-			tech = 'phagnot',
-			name = 'phag-manure-2',
+			tech = 'explosive-diarrhea',
+			name = 'phag-manure-2b',
 			--icon = "__pyalienlife__/graphics/icons/navens-culture-mk01.png"
 		},
 		{
@@ -51,8 +52,8 @@ fun.autorecipes {
                     {name='manure',amount ='+1'},
 				},
 				crafting_speed = 120,
-				tech = 'phagnot',
-				name = 'phag-manure-3',
+                tech = 'explosive-diarrhea',
+                name = 'phag-manure-3b',
 		},
 		{
 			ingredients =
@@ -65,8 +66,8 @@ fun.autorecipes {
                     {name='manure',amount ='+1'},
 				},
 				crafting_speed = 120,
-				tech = 'phagnot',
-				name = 'phag-manure-4',
+                tech = 'explosive-diarrhea',
+                name = 'phag-manure-4b',
 		},
 		{
 			ingredients =
@@ -83,8 +84,8 @@ fun.autorecipes {
                     {name='manure',amount =5},
 				},
 				crafting_speed = 100,
-				tech = 'phagnot',
-				name = 'phag-manure-5',
+                tech = 'explosive-diarrhea',
+                name = 'phag-manure-5b',
 		},
 		{
 			ingredients =
@@ -98,8 +99,8 @@ fun.autorecipes {
                     {name='manure',amount ='+1'},
 				},
 				crafting_speed = 100,
-				tech = 'phagnot',
-				name = 'phag-manure-6',
+                tech = 'explosive-diarrhea',
+                name = 'phag-manure-6b',
 		},
 		{
 			ingredients =
@@ -112,8 +113,8 @@ fun.autorecipes {
                     {name='manure',amount ='+1'},
 				},
 				crafting_speed = 100,
-				tech = 'phagnot',
-				name = 'phag-manure-7',
+                tech = 'explosive-diarrhea',
+                name = 'phag-manure-7b',
 		},
 	}
 }

@@ -7,7 +7,7 @@ TECHNOLOGY {
     prerequisites = {"genetic-design"},
     effects = {},
     unit = {
-        count = 350,
+        count = 400,
         ingredients = {
             {"automation-science-pack", 4},
             {"logistic-science-pack", 2},

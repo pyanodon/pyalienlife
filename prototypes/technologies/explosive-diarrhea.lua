@@ -7,7 +7,7 @@ TECHNOLOGY {
     prerequisites = {"bigger-colon"},
     effects = {},
     unit = {
-        count = 300,
+        count = 400,
         ingredients = {
             {"automation-science-pack", 3},
             {"logistic-science-pack", 3},
