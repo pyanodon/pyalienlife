@@ -29,7 +29,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 130,
 			tech = 'food-mk01'
@@ -42,7 +42,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 120,
 			tech = 'organic-breeding'
@@ -55,11 +55,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 110,
 			tech = 'organic-breeding'
-		},		
+		},
 		--food 2
 		{
 			ingredients =
@@ -72,7 +72,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 110,
 			tech = 'food-mk02'
@@ -85,7 +85,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 85,
 			tech = 'organic-breeding'
@@ -98,11 +98,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 80,
 			tech = 'organic-breeding'
-		},	
+		},
 		--gh
 		{
 			ingredients =
@@ -112,7 +112,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 30,
 			tech = 'growth-hormone'
@@ -316,7 +316,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 60,
 			tech = 'assisted-embryology'
-		},		
+		},
 		--food 2
 		{
 			ingredients =
@@ -345,7 +345,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 50,
 			tech = 'assisted-embryology'
-		},	
+		},
 		-----------------------PHEROMONES-----------------------------
 		{
 			ingredients =
@@ -388,7 +388,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 30,
 			tech = 'pheromones'
-		},		
+		},
 		--food 2
 		{
 			ingredients =
@@ -417,7 +417,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 15,
 			tech = 'pheromones'
-		},	
+		},
 
 	}
 }
@@ -496,13 +496,13 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='arthropodblood', amount =30},
+					{name='arthropodblood', amount =30}
 				},
 			crafting_speed = 15,
 			tech = 'dhilmos',
 			name = 'Extract dhilmos blood',
 			icon = "__pyalienlife__/graphics/icons/arthropod-blood.png",
-			icon_size = 64,
+			icon_size = 32,
 		},
 		--fat
 		{
@@ -537,7 +537,7 @@ fun.autorecipes {
 			name = 'Extract dhilmos chitin',
 			icon = "__pyalienlife__/graphics/icons/chitin.png",
 			icon_size = 64,
-		},	
+		},
 		--meat dhilmos rendering
 		{
 			ingredients =

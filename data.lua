@@ -121,6 +121,22 @@ require("prototypes/buildings/test-filtered-chest-mk01")
 --Loco--
 require('prototypes/loco/pyloco')
 
+--(( FLUIDS ))--
+require("prototypes/fluids/zogna-bacteria")
+require("prototypes/fluids/blood")
+require("prototypes/fluids/formamide")
+require("prototypes/fluids/fetal-serum")
+require("prototypes/fluids/artificial-blood")
+require("prototypes/fluids/flutec-pp6")
+require("prototypes/fluids/decalin")
+require("prototypes/fluids/flavonoids")
+require("prototypes/fluids/arthropod-blood")
+require("prototypes/fluids/fish-oil")
+require("prototypes/fluids/gta")
+require("prototypes/fluids/nitrogen-mustard")
+require("prototypes/fluids/manure-bacteria")
+require("prototypes/fluids/liquid-manure")
+
 --(( RECIPES ))--
 require('prototypes/items/items')
 require('prototypes/recipes/recipes')
@@ -179,21 +195,5 @@ require('prototypes/recipes/recipes-cridren')
 require('prototypes/recipes/recipes-zipir')
 require('prototypes/recipes/recipes-trits')
 require('prototypes/recipes/recipes-recharge')
-
---(( FLUIDS ))--
-require("prototypes/fluids/zogna-bacteria")
-require("prototypes/fluids/blood")
-require("prototypes/fluids/formamide")
-require("prototypes/fluids/fetal-serum")
-require("prototypes/fluids/artificial-blood")
-require("prototypes/fluids/flutec-pp6")
-require("prototypes/fluids/decalin")
-require("prototypes/fluids/flavonoids")
-require("prototypes/fluids/arthropod-blood")
-require("prototypes/fluids/fish-oil")
-require("prototypes/fluids/gta")
-require("prototypes/fluids/nitrogen-mustard")
-require("prototypes/fluids/manure-bacteria")
-require("prototypes/fluids/liquid-manure")
 
 data.raw["utility-constants"].default.recipe_step_limit = 2000;
