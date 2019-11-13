@@ -141,6 +141,21 @@ items.inputs.meatcagedphagnot = {'meat-caged-phagnot', 1}
 items.inputs.bloodcagedphagnot = {'blood-caged-phagnot', 1}
 items.inputs.skincagedphagnot = {'skin-caged-phagnot', 1}
 items.inputs.gutscagedphagnot = {'guts-caged-phagnot', 1}
+items.inputs.braincageddingrits = {'brain-caged-dingrits', 1}
+items.inputs.bonecageddingrits = {'bone-caged-dingrits', 1}
+items.inputs.meatcageddingrits = {'meat-caged-dingrits', 1}
+items.inputs.bloodcageddingrits = {'blood-caged-dingrits', 1}
+items.inputs.gutscageddingrits = {'guts-caged-dingrits', 1}
+items.inputs.fatcageddingrits = {'fat-caged-dingrits', 1}
+items.inputs.cageddingrits = {'caged-dingrits', 1}
+items.inputs.dingritscub = {'dingrits-cub', 1}
+items.inputs.cagedscondrix = {'caged-scondrix', 1}
+items.inputs.pelt = {'pelt', 1}
+items.inputs.dingritspike = {'dingrit-spike', 1}
+items.inputs.dingritsfood01 = {'dingrits-food-01', 1}
+items.inputs.dingritsfood02 = {'dingrits-food-02', 1}
+items.inputs.yotoileaves = {'yotoi-leaves', 1}
+items.inputs.yeadols = {'yeadols', 1}
 
 items.outputs = items.inputs
 --can put output replacements below here

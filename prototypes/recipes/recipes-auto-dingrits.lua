@@ -1,46 +1,46 @@
 local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
-    name = 'caged-phagnot',
-	category = 'phagnot',
-	module_limitations = 'phagnot',
-	subgroup = 'py-alienlife-phagnot',
+    name = 'caged-dingrits',
+	category = 'dingrits',
+	module_limitations = 'dingrits',
+	subgroup = 'py-alienlife-dingrits',
 	order = 'b',
     mats =
 	{
 		{
 			ingredients =
 				{
-					{name='bhoddos',amount =10},
-					{name='waterbarrel',amount=3,return_item={name='empty-barrel',amount=3}},
+					{name='cagedscondrix',amount =1},
+					{name='waterbarrel',amount=5,return_item={name='empty-barrel',amount=5}},
 					{name='cage',amount=1},
 				},
 			results =
 				{
-					{name='cagedphagnot', probability = 0.5,amount_min =1,amount_max =1},
+					{name='cageddingrits', probability = 0.6,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 150,
-			tech = 'phagnot'
+			tech = 'dingrits'
 		},
 		--food 1
 		{
 			ingredients =
 				{
-					{name='bhoddos',amount ='R'},
-					{name='phagnotfood01',amount =1},
+					{name='cagedscondrix',amount ='R'},
+					{name='dingritsfood01',amount =1},
 				},
 			results =
 				{
 				
 				},
 			crafting_speed = 140,
-			tech = 'food-mk01'
+			tech = 'food-mk02'
 		},
-		--salt
+		--yeadols
 		{
 			ingredients =
 				{
-					{name='salt',amount = 3},
+					{name='yeadols',amount = 3},
 					{name='bedding',amount = 1},
 				},
 			results =
@@ -50,11 +50,11 @@ fun.autorecipes {
 			crafting_speed = 130,
 			tech = 'organic-breeding'
 		},
-		--fiber
+		--yotoileaves
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 10},
+					{name='yotoileaves',amount = 10},
 				},
 			results =
 				{
@@ -67,10 +67,10 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='phagnotfood01',amount ='R'},
-					{name='salt',amount ='R'},
-					{name='rawfiber',amount ='R'},
-					{name='phagnotfood02',amount =1},
+					{name='dingritsfood01',amount ='R'},
+					{name='yeadols',amount ='R'},
+					{name='yotoileaves',amount ='R'},
+					{name='dingritsfood02',amount =1},
 
 				},
 			results =
@@ -78,13 +78,13 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 110,
-			tech = 'food-mk02'
+			tech = 'food-mk03'
 		},
-		--food 2 salt
+		--food 2 yeadols
 		{
 			ingredients =
 				{
-					{name='salt',amount =3},
+					{name='yeadols',amount =3},
 				},
 			results =
 				{
@@ -93,11 +93,11 @@ fun.autorecipes {
 			crafting_speed = 100,
 			tech = 'organic-breeding'
 		},
-		--food 2 salt fiber
+		--food 2 yeadols yotoileaves
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 10},
+					{name='yotoileaves',amount = 10},
 				},
 			results =
 				{
@@ -128,8 +128,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cagedphagnot', amount ='R'},
-					{name='cagedphagnot', probability = 0.7,amount_min =1,amount_max =1},
+					{name='cageddingrits', amount ='R'},
+					{name='cageddingrits', probability = 0.7,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -157,8 +157,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cagedphagnot', amount ='R'},
-					{name='braincagedphagnot',1},
+					{name='cageddingrits', amount ='R'},
+					{name='braincageddingrits',1},
 				},
 			crafting_speed = 90,
 			tech = 'nanochondria'
@@ -187,8 +187,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='braincagedphagnot', amount ='R'},
-					{name='bonecagedphagnot', 1},
+					{name='braincageddingrits', amount ='R'},
+					{name='bonecageddingrits', 1},
 				},
 			crafting_speed = 90,
 			tech = 'bmp'
@@ -218,8 +218,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bonecagedphagnot', amount ='R'},
-					{name='meatcagedphagnot', 1},
+					{name='bonecageddingrits', amount ='R'},
+					{name='meatcageddingrits', 1},
 				},
 			crafting_speed = 90,
 			tech = 'anabolic-rna'
@@ -248,8 +248,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meatcagedphagnot', amount ='R'},
-					{name='gutscagedphagnot', 1},
+					{name='meatcageddingrits', amount ='R'},
+					{name='gutscageddingrits', 1},
 				},
 			crafting_speed = 90,
 			tech = 'antitumor'
@@ -278,8 +278,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='gutscagedphagnot', amount ='R'},
-					{name='bloodcagedphagnot', 1},
+					{name='gutscageddingrits', amount ='R'},
+					{name='bloodcageddingrits', 1},
 				},
 			crafting_speed = 90,
 			tech = 'recombinant-ery'
@@ -297,60 +297,31 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'recombinant-ery'
 		},
-		--reca
-		{
-			ingredients =
-				{
-					{name='gh',amount ='R'},
-					{name='recombinantery',amount ='R'},
-					{name='reca',amount =1},
-				},
-			results =
-				{
-					{name='bloodcagedphagnot', amount ='R'},
-					{name='skincagedphagnot', 1},
-				},
-			crafting_speed = 90,
-			tech = 'reca'
-		},
-		--reca and gh
-		{
-			ingredients =
-				{
-					{name='gh',amount =1},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 30,
-			tech = 'reca'
-		},
 	}
 }
 
 ------------------CUB MAKER------------------
 
 fun.autorecipes {
-    name = 'phagnot-cub',
-	category = 'phagnot',
-	module_limitations = 'phagnot',
-	subgroup = 'py-alienlife-phagnot',
+    name = 'dingrits-cub',
+	category = 'dingrits',
+	module_limitations = 'dingrits',
+	subgroup = 'py-alienlife-dingrits',
 	order = 'c',
     mats =
 	{
 		{
 			ingredients =
 				{
-                    {name='bhoddos',amount =10},
+                    {name='cagedscondrix',amount =10},
                     {name='yotoiseeds',amount =15},
-					{name='waterbarrel',amount=3,return_item={name='empty-barrel',amount=3}},
+					{name='waterbarrel',amount=5,return_item={name='empty-barrel',amount=5}},
 					--{name='cage',amount=1},
 					{name='bedding',amount = 1},
 				},
 			results =
 				{
-					{name='phagnotcub', amount =1},
+					{name='dingritscub', amount =1},
 				},
 			crafting_speed = 70,
 			tech = 'assisted-embryology'
@@ -360,8 +331,8 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='yotoiseeds',amount ='R'},
-                    {name='bhoddos',amount ='R'},
-					{name='phagnotfood01',amount =1},
+                    {name='cagedscondrix',amount ='R'},
+					{name='dingritsfood01',amount =1},
 				},
 			results =
 				{
@@ -370,11 +341,11 @@ fun.autorecipes {
 			crafting_speed = 60,
 			tech = 'assisted-embryology'
 		},
-		--salt
+		--yeadols
 		{
 			ingredients =
 				{
-					{name='salt',amount = 5},
+					{name='yeadols',amount = 5},
 				},
 			results =
 				{
@@ -383,11 +354,11 @@ fun.autorecipes {
 			crafting_speed = 55,
 			tech = 'assisted-embryology'
 		},
-		--fiber
+		--yotoileaves
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 10},
+					{name='yotoileaves',amount = 10},
 				},
 			results =
 				{
@@ -400,10 +371,10 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='phagnotfood01',amount ='R'},
-					{name='salt',amount ='R'},
-					{name='rawfiber',amount ='R'},
-					{name='phagnotfood02',amount =1},
+					{name='dingritsfood01',amount ='R'},
+					{name='yeadols',amount ='R'},
+					{name='yotoileaves',amount ='R'},
+					{name='dingritsfood02',amount =1},
 
 				},
 			results =
@@ -413,11 +384,11 @@ fun.autorecipes {
 			crafting_speed = 50,
 			tech = 'assisted-embryology'
 		},
-		--food 2 salt
+		--food 2 yeadols
 		{
 			ingredients =
 				{
-					{name='salt',amount =5},
+					{name='yeadols',amount =5},
 				},
 			results =
 				{
@@ -426,11 +397,11 @@ fun.autorecipes {
 			crafting_speed = 45,
 			tech = 'assisted-embryology'
 		},
-		--food 2 salt fiber
+		--food 2 yeadols yotoileaves
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 10},
+					{name='yotoileaves',amount = 10},
 				},
 			results =
 				{
@@ -443,10 +414,10 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 'R'},
-					{name='salt',amount = 'R'},
-					{name='phagnotfood02',amount = 'R'},
-					{name='bhoddos',amount =15},
+					{name='yotoileaves',amount = 'R'},
+					{name='yeadols',amount = 'R'},
+					{name='dingritsfood02',amount = 'R'},
+					{name='cagedscondrix',amount =15},
 					{name='pheromones',amount =1},
                     {name='yotoiseeds',amount =15},
 					--{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
@@ -454,8 +425,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='phagnotcub',amount = 'R'},
-					{name='phagnotcub', amount =1},
+					{name='dingritscub',amount = 'R'},
+					{name='dingritscub', amount =1},
 				},
 			crafting_speed = 70,
 			tech = 'pheromones'
@@ -465,8 +436,8 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='yotoiseeds',amount ='R'},
-                    {name='bhoddos',amount ='R'},
-					{name='phagnotfood01',amount =1},
+                    {name='cagedscondrix',amount ='R'},
+					{name='dingritsfood01',amount =1},
 				},
 			results =
 				{
@@ -475,11 +446,11 @@ fun.autorecipes {
 			crafting_speed = 60,
 			tech = 'pheromones'
 		},
-		--salt
+		--yeadols
 		{
 			ingredients =
 				{
-					{name='salt',amount = 10},
+					{name='yeadols',amount = 10},
 				},
 			results =
 				{
@@ -488,11 +459,11 @@ fun.autorecipes {
 			crafting_speed = 55,
 			tech = 'pheromones'
 		},
-		--fiber
+		--yotoileaves
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 5},
+					{name='yotoileaves',amount = 5},
 				},
 			results =
 				{
@@ -505,10 +476,10 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='phagnotfood01',amount ='R'},
-					{name='salt',amount ='R'},
-					{name='rawfiber',amount ='R'},
-					{name='phagnotfood02',amount =1},
+					{name='dingritsfood01',amount ='R'},
+					{name='yeadols',amount ='R'},
+					{name='yotoileaves',amount ='R'},
+					{name='dingritsfood02',amount =1},
 
 				},
 			results =
@@ -518,11 +489,11 @@ fun.autorecipes {
 			crafting_speed = 50,
 			tech = 'pheromones'
 		},
-		--food 2 salt
+		--food 2 yeadols
 		{
 			ingredients =
 				{
-					{name='salt',amount ='*10'},
+					{name='yeadols',amount ='*3'},
 				},
 			results =
 				{
@@ -531,11 +502,11 @@ fun.autorecipes {
 			crafting_speed = 45,
 			tech = 'pheromones'
 		},
-		--food 2 salt fiber
+		--food 2 yeadols yotoileaves
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 5},
+					{name='yotoileaves',amount = 5},
 				},
 			results =
 				{
@@ -551,53 +522,53 @@ fun.autorecipes {
 fun.autorecipes {
     name = 'rendering',
 	category = 'slaughterhouse',
-	--module_limitations = 'phagnot',
-	subgroup = 'py-alienlife-phagnot',
+	--module_limitations = 'dingrits',
+	subgroup = 'py-alienlife-dingrits',
 	order = 'b',
     mats =
 	{
 		{
 			ingredients =
 				{
-					{name='cagedphagnot',amount=1},
+					{name='cageddingrits',amount=1},
 				},
 			results =
 				{
-					{name='bones', probability = 0.5,amount_min =1,amount_max =6},
-					{name='meat', probability = 0.1,amount_min =1,amount_max =2},
-					{name='skin', probability = 0.2,amount_min =1,amount_max =1},
-                    {name='guts', probability = 0.3,amount_min =1,amount_max =1},
-                    {name='gasbladder', probability = 0.4,amount_min =1,amount_max =1},
+					{name='bones', probability = 0.3,amount_min =1,amount_max =2},
+					{name='meat', probability = 0.3,amount_min =1,amount_max =3},
+                    {name='guts', probability = 0.3,amount_min =1,amount_max =3},
+					{name='pelt', probability = 0.1,amount_min =1,amount_max =1},
+					{name='dingritspike', probability = 0.1,amount_min =1,amount_max =1},
 					{name='blood', amount =20},
 					{name='cage',amount=1},
-					{name='brain', probability = 0.4,amount_min =1,amount_max =1},
+					{name='brain', probability = 0.3,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 30,
-			tech = 'phagnot',
-			name = 'Full Render phagnots',
-			icon = "__pyalienlife__/graphics/icons/rendering-phagnot.png",
+			tech = 'dingrits',
+			name = 'Full Render dingritss',
+			icon = "__pyalienlife__/graphics/icons/rendering-dingrits.png",
 			icon_size = 64,
 		},
 		--meat
 		{
 			ingredients =
 				{
-					--{name='cagedphagnot',amount=1},
+					--{name='cageddingrits',amount=1},
 				},
 			results =
 				{
 					{name='bones', amount ='R'},
 					{name='meat', amount ='R'},
-					{name='skin', amount ='R'},
-					{name='gasbladder', amount ='R'},
 					{name='guts', amount ='R'},
+					{name='pelt', amount ='R'},
+					{name='dingritspike', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='meat', amount =2},
+					{name='meat', amount =4},
 				},
 			crafting_speed = 15,
-			tech = 'phagnot',
-			name = 'Extract phagnot Meat',
+			tech = 'dingrits',
+			name = 'Extract dingrits Meat',
 			icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
 			icon_size = 64,
 		},
@@ -605,7 +576,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedphagnot',amount=1},
+					--{name='cageddingrits',amount=1},
 				},
 			results =
 				{
@@ -613,42 +584,25 @@ fun.autorecipes {
 					{name='brain', amount =1},
 				},
 			crafting_speed = 15,
-			tech = 'phagnot',
-			name = 'Extract phagnot brains',
+			tech = 'dingrits',
+			name = 'Extract dingrits brains',
 			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},	
-		--skin
-		{
-			ingredients =
-				{
-					--{name='cagedphagnot',amount=1},
-				},
-			results =
-				{
-					{name='brain', amount ='R'},
-					{name='skin', amount =1},
-				},
-			crafting_speed = 15,
-			tech = 'phagnot',
-			name = 'Extract phagnot skin',
-			icon = "__pyalienlife__/graphics/icons/skin.png",
-			icon_size = 32,
-		},
 		--bones
 		{
 			ingredients =
 				{
-					--{name='cagedphagnot',amount=1},
+					--{name='cageddingrits',amount=1},
 				},
 			results =
 				{
-					{name='skin', amount ='R'},
-					{name='bones', amount =6},
+					{name='brain', amount ='R'},
+					{name='bones', amount =2},
 				},
 			crafting_speed = 15,
-			tech = 'phagnot',
-			name = 'Extract phagnot bones',
+			tech = 'dingrits',
+			name = 'Extract dingrits bones',
 			icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
 			icon_size = 64,
 		},
@@ -656,16 +610,16 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedphagnot',amount=1},
+					--{name='cageddingrits',amount=1},
 				},
 			results =
 				{
 					{name='bones', amount ='R'},
-					{name='guts', amount =1},
+					{name='guts', amount =4},
 				},
 			crafting_speed = 15,
-			tech = 'phagnot',
-			name = 'Extract phagnot guts',
+			tech = 'dingrits',
+			name = 'Extract dingrits guts',
 			icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
 		},
@@ -673,7 +627,113 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedphagnot',amount=1},
+					--{name='cageddingrits',amount=1},
+				},
+			results =
+				{
+					{name='guts', amount ='R'},
+					{name='blood', amount =30},
+				},
+			crafting_speed = 15,
+			tech = 'dingrits',
+			name = 'Extract dingrits blood',
+			icon = "__pyalienlife__/graphics/icons/blood.png",
+			icon_size = 64,
+		},
+		--Pelt
+		{
+			ingredients =
+				{
+					--{name='cageddingrits',amount=1},
+				},
+			results =
+				{
+					{name='blood', amount ='R'},
+					{name='pelt', amount =1},
+				},
+			crafting_speed = 15,
+			tech = 'dingrits',
+			name = 'Extract dingrits Pelt',
+			icon = "__pyalienlife__/graphics/icons/pelt.png",
+			icon_size = 64,
+		},
+		--Dingrit Spike
+		{
+			ingredients =
+				{
+					--{name='cageddingrits',amount=1},
+				},
+			results =
+				{
+					{name='pelt', amount ='R'},
+					{name='dingritspike', amount ='*1'},
+				},
+			crafting_speed = 15,
+			tech = 'dingrits',
+			name = 'Extract dingrits Spikes',
+			icon = "__pyalienlife__/graphics/icons/dingrit-spike.png",
+			icon_size = 64,
+		},
+		--brain dingrits rendering
+		{
+			ingredients =
+				{
+					{name='cageddingrits',amount='R'},
+					{name='braincageddingrits',amount=1},
+				},
+			results =
+				{
+					{name='dingritspike', amount ='R'},
+					{name='brain', amount =2},
+				},
+			crafting_speed = 15,
+			tech = 'nanochondria',
+			name = 'Extract brains from Improved dingritss',
+			icon = "__pyalienlife__/graphics/icons/brain-caged-dingrits.png",
+			icon_size = 64,
+		},
+		--bone dingrits rendering
+		{
+			ingredients =
+				{
+					{name='braincageddingrits',amount='R'},
+					{name='bonecageddingrits',amount=1},
+				},
+			results =
+				{
+					{name='brain', amount ='R'},
+					{name='bones', amount =3},
+				},
+			crafting_speed = 15,
+			tech = 'bmp',
+			name = 'Extract bones from Improved dingritss',
+			icon = "__pyalienlife__/graphics/icons/bone-caged-dingrits.png",
+			icon_size = 64,
+		},
+		--guts dingrits rendering
+		{
+			ingredients =
+				{
+					{name='bonecageddingrits',amount='R'},
+					{name='gutscageddingrits',amount=1},
+				},
+			results =
+				{
+					{name='bones', amount ='R'},
+					{name='guts', amount =5},
+				},
+			crafting_speed = 15,
+			tech = 'antitumor',
+			name = 'Extract guts from Improved dingritss',
+			icon = "__pyalienlife__/graphics/icons/guts-caged-dingrits.png",
+			icon_size = 64,
+		},
+		--blood dingrits rendering
+		{
+			ingredients =
+				{
+					{name='gutscageddingrits',amount='R'},
+					{name='bloodcageddingrits',amount=1},
 				},
 			results =
 				{
@@ -681,135 +741,27 @@ fun.autorecipes {
 					{name='blood', amount =40},
 				},
 			crafting_speed = 15,
-			tech = 'phagnot',
-			name = 'Extract phagnot blood',
-			icon = "__pyalienlife__/graphics/icons/blood.png",
-			icon_size = 64,
-		},
-		--Gas Bladder
-		{
-			ingredients =
-				{
-					--{name='cagedphagnot',amount=1},
-				},
-			results =
-				{
-					{name='blood', amount ='R'},
-					{name='gasbladder', amount =1},
-				},
-			crafting_speed = 15,
-			tech = 'phagnot',
-			name = 'Extract phagnot Gas bladder',
-			icon = "__pyalienlife__/graphics/icons/gas-bladder.png",
-			icon_size = 64,
-		},
-		--brain phagnot rendering
-		{
-			ingredients =
-				{
-					{name='cagedphagnot',amount='R'},
-					{name='braincagedphagnot',amount=1},
-				},
-			results =
-				{
-					{name='blood', amount ='R'},
-					{name='gasbladder', amount ='R'},
-					{name='brain', amount =2},
-				},
-			crafting_speed = 15,
-			tech = 'nanochondria',
-			name = 'Extract brains from Improved phagnots',
-			icon = "__pyalienlife__/graphics/icons/brain-caged-phagnot.png",
-			icon_size = 64,
-		},
-		--bone phagnot rendering
-		{
-			ingredients =
-				{
-					{name='braincagedphagnot',amount='R'},
-					{name='bonecagedphagnot',amount=1},
-				},
-			results =
-				{
-					{name='brain', amount ='R'},
-					{name='bones', amount =10},
-				},
-			crafting_speed = 15,
-			tech = 'bmp',
-			name = 'Extract bones from Improved phagnots',
-			icon = "__pyalienlife__/graphics/icons/bone-caged-phagnot.png",
-			icon_size = 64,
-		},
-		--guts phagnot rendering
-		{
-			ingredients =
-				{
-					{name='bonecagedphagnot',amount='R'},
-					{name='gutscagedphagnot',amount=1},
-				},
-			results =
-				{
-					{name='bones', amount ='R'},
-					{name='guts', amount =2},
-				},
-			crafting_speed = 15,
-			tech = 'antitumor',
-			name = 'Extract guts from Improved phagnots',
-			icon = "__pyalienlife__/graphics/icons/guts-caged-phagnot.png",
-			icon_size = 64,
-		},
-		--blood phagnot rendering
-		{
-			ingredients =
-				{
-					{name='gutscagedphagnot',amount='R'},
-					{name='bloodcagedphagnot',amount=1},
-				},
-			results =
-				{
-					{name='guts', amount ='R'},
-					{name='blood', amount =50},
-				},
-			crafting_speed = 15,
 			tech = 'recombinant-ery',
-			name = 'Extract blood from Improved phagnots',
-			icon = "__pyalienlife__/graphics/icons/blood-caged-phagnot.png",
+			name = 'Extract blood from Improved dingritss',
+			icon = "__pyalienlife__/graphics/icons/blood-caged-dingrits.png",
 			icon_size = 64,
 		},
-		--skin phagnot rendering
+		--meat dingrits rendering
 		{
 			ingredients =
 				{
-					{name='bloodcagedphagnot',amount='R'},
-					{name='skincagedphagnot',amount=1},
+					{name='bloodcageddingrits',amount='R'},
+					{name='meatcageddingrits',amount=1},
 				},
 			results =
 				{
 					{name='blood', amount ='R'},
-					{name='skin', amount =2},
-				},
-			crafting_speed = 15,
-			tech = 'reca',
-			name = 'Extract skin from Improved phagnots',
-			icon = "__pyalienlife__/graphics/icons/skin-caged-phagnot.png",
-			icon_size = 64,
-		},
-		--meat phagnot rendering
-		{
-			ingredients =
-				{
-					{name='skincagedphagnot',amount='R'},
-					{name='meatcagedphagnot',amount=1},
-				},
-			results =
-				{
-					{name='skin', amount ='R'},
-					{name='meat', amount =5},
+					{name='meat', amount =3},
 				},
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
-			name = 'Extract meat from Improved phagnots',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-phagnot.png",
+			name = 'Extract meat from Improved dingritss',
+			icon = "__pyalienlife__/graphics/icons/meat-caged-dingrits.png",
 			icon_size = 64,
 		},
 	}

@@ -223,8 +223,8 @@ ENTITY {
 
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/dingrits-pack.ogg", volume = 0.60},
-        idle_sound = {filename = "__pyalienlife__/sounds/dingrits-pack.ogg", volume = 0.5},
+        sound = {filename = "__pyalienlife__/sounds/dingrits-pack.ogg", volume = 0.62},
+        idle_sound = {filename = "__pyalienlife__/sounds/dingrits-pack.ogg", volume = 0.55},
         apparent_volume = 1.2
     }
 }
