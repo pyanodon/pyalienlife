@@ -1916,6 +1916,83 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "fat-caged-dingrits",
+    icon = "__pyalienlife__/graphics/icons/fat-caged-dingrits.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-dingrits",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "guts-caged-dingrits",
+    icon = "__pyalienlife__/graphics/icons/guts-caged-dingrits.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-dingrits",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "blood-caged-dingrits",
+    icon = "__pyalienlife__/graphics/icons/blood-caged-dingrits.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-dingrits",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "meat-caged-dingrits",
+    icon = "__pyalienlife__/graphics/icons/meat-caged-dingrits.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-dingrits",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "bone-caged-dingrits",
+    icon = "__pyalienlife__/graphics/icons/bone-caged-dingrits.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-dingrits",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "brain-caged-dingrits",
+    icon = "__pyalienlife__/graphics/icons/brain-caged-dingrits.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-dingrits",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "dingrits-cub",
+    icon = "__pyalienlife__/graphics/icons/dingrits-cub.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-dingrits",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "pelt",
     icon = "__pyalienlife__/graphics/icons/pelt.png",
 	icon_size = 64,
@@ -2597,19 +2674,6 @@ local alien_life_limitations_ulric =
 
     local alien_life_limitations_phadai =
 	{
-    "phadai-sex-01",
-    "phadai-sex-food-01",
-    "phadai-sex-01-mukmoux",
-    "phadai-sex-food-02",
-    "phadai-sex-01-scrondrix",
-    "phadai-sex-scrondrix-food-01",
-    "phadai-sex-scrondrix-food-02",
-    "phadai-sex-pup-01",
-    "phadai-sex-pup-02",
-    "phadai-carapace-00",
-    "phadai-carapace-01",
-    "phadai-carapace-02",
-    "phadai-carapace-01-food",
     }
 
     local alien_life_limitations_auog =
@@ -2631,6 +2695,10 @@ local alien_life_limitations_ulric =
     }
 
     local alien_life_limitations_bhoddos =
+	{
+    }
+
+    local alien_life_limitations_dingrits =
 	{
     }
 

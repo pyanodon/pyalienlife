@@ -103,7 +103,50 @@ RECIPE {
 ---breeding---
 
 
-----adverse products----
+---maturing---
+
+RECIPE {
+    type = 'recipe',
+    name = 'dingrits-mature-01',
+    category = 'creature-chamber',
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'dingrits-cub', amount = 1},
+        {type = 'item', name = 'cage', amount = 1},
+        {type = 'item', name = 'dingrits-codex', amount = 1},
+        {type = 'item', name = 'earth-wolf-sample', amount = 1},
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'caged-dingrits', amount = 1},
+    },
+    main_product = "caged-dingrits",
+    subgroup = 'py-alienlife-dingrits',
+    order = 'a',
+}:add_unlock("assisted-embryology")
+
+RECIPE {
+    type = 'recipe',
+    name = 'dingrits-mature-02',
+    category = 'creature-chamber',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'dingrits-cub', amount = 1},
+        {type = 'item', name = 'gh', amount = 1},
+        {type = 'item', name = 'cage', amount = 1},
+        {type = 'item', name = 'dingrits-codex', amount = 1},
+        {type = 'item', name = 'earth-wolf-sample', amount = 1},
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'caged-dingrits', amount = 1},
+    },
+    main_product = "caged-dingrits",
+    subgroup = 'py-alienlife-dingrits',
+    order = 'a',
+}:add_unlock("growth-hormone")
 
 
 
