@@ -166,6 +166,10 @@ items.inputs.cagedkmauts = {'caged-kmauts', 1}
 items.inputs.kmautscub = {'kmauts-cub', 1}
 items.inputs.tendon = {'tendon', 1}
 items.inputs.kmautsration = {'kmauts-ration', 1}
+items.inputs.cridren = {'cridren', 1}
+items.inputs.cridrenseeds = {'cridren-seeds', 1}
+items.inputs.chalkysoil = {'chalky-soil', 1}
+items.inputs.fish = {'fish', 1}
 
 items.outputs = items.inputs
 --can put output replacements below here

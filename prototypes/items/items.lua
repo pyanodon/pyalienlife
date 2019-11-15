@@ -2631,11 +2631,11 @@ ITEM {
 
 ITEM {
     type = "item",
-    name = "bovine-adrenal-cortex",
+    name = "adrenal-cortex",
     icon = "__pyalienlife__/graphics/icons/bovine-adrenal-cortex.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-mukmoux",
+    subgroup = "py-alienlife-cridren",
     order = "x",
     stack_size = 10
 }

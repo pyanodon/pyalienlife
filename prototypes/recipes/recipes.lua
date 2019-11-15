@@ -507,7 +507,7 @@ RECIPE {
         {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'alien-enzymes', amount = 1},
         {type = 'fluid', name = 'fetal-serum', amount = 100},
-        {type = 'item', name = 'bovine-adrenal-cortex', amount = 3},
+        {type = 'item', name = 'adrenal-cortex', amount = 3},
         {type = 'item', name = 'bones', amount = 20},
         {type = 'item', name = 'navens', amount = 20},
         {type = 'item', name = 'cysteine', amount = 5},
@@ -825,7 +825,7 @@ RECIPE {
         {type = 'item', name = 'chitin', amount = 4},
         {type = 'item', name = 'alien-enzymes', amount = 1},
         {type = 'item', name = 'pineal-gland', amount = 1},
-        {type = 'item', name = 'bovine-adrenal-cortex', amount = 10},
+        {type = 'item', name = 'adrenal-cortex', amount = 10},
         {type = 'fluid', name = 'bacteria-1', amount = 40},
     },
     results = {
@@ -1178,3 +1178,18 @@ RECIPE {
         {type = 'item', name = 'saps', amount = 1}
     }
 }
+
+RECIPE {
+    type = "recipe",
+    name = "adrenal-cortex",
+    category = "slaughterhouse",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = 'item', name = 'cridren', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'adrenal-cortex', amount = 1}
+    },
+    main_product = "adrenal-cortex",
+}:add_unlock("biotech-mk03")
