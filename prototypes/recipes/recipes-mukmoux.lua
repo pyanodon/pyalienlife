@@ -72,7 +72,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'mukmoux-food-01', amount = 1},
     },
-}:add_unlock("food-mk01")
+}:add_unlock("food-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -84,6 +84,7 @@ RECIPE {
         {type = 'item', name = 'tin-plate', amount = 2},
         {type = 'item', name = 'moss', amount = 5},
         {type = 'item', name = 'seaweed', amount = 5},
+        {type = 'item', name = 'rennea', amount = 8},
         {type = 'item', name = 'salt', amount = 10},
         {type = 'item', name = 'biomass', amount = 5},
         {type = 'item', name = 'tuuphra', amount = 10},
@@ -92,7 +93,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'mukmoux-food-02', amount = 1},
     },
-}:add_unlock("food-mk02")
+}:add_unlock("food-mk03")
 
 ---breeding---
 

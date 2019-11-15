@@ -863,7 +863,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'bones', amount = 1},
-        {type = 'item', name = 'tendon', amount = 2},
+        {type = 'item', name = 'tendon', amount = 5},
         {type = 'item', name = 'chitin', amount = 2},
     },
     results = {

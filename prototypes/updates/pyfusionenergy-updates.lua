@@ -17,7 +17,7 @@ RECIPE('log8'):change_category('fwf'):add_ingredient({type = "item", name = "woo
 RECIPE('log7'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a"):remove_unlock('vanadium-processing'):add_unlock('botany-mk02')
 RECIPE('zogna-bacteria'):add_ingredient({type = "fluid", name = "pressured-air", amount = 50})
 RECIPE('bacteria-1'):remove_unlock('helium-processing'):add_unlock('microbiology-mk02'):subgroup_order('py-alienlife-genetics', 'b'):add_ingredient({type = "item", name = "petri-dish", amount = 3})
-RECIPE('serine'):remove_unlock('helium-processing'):add_unlock('kmauts'):subgroup_order('py-alienlife-kmauts', 'b'):change_category('bio-reactor'):remove_ingredient("kmauts-ration"):add_ingredient({type = "item", name = "tendon", amount = 3}):add_ingredient({type = "fluid", name = "zogna-bacteria", amount = 40})
+RECIPE('serine'):remove_unlock('helium-processing'):add_unlock('kmauts'):subgroup_order('py-alienlife-kmauts', 'b'):change_category('bio-reactor'):remove_ingredient("kmauts-ration"):add_ingredient({type = "item", name = "tendon", amount = 5}):add_ingredient({type = "fluid", name = "zogna-bacteria", amount = 40})
 ITEM('serine'):subgroup_order('py-alienlife-kmauts', 'b')
 ITEM('kmauts-ration'):subgroup_order('py-alienlife-food', 'b')
 

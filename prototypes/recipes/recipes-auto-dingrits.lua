@@ -313,7 +313,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='cagedscondrix',amount =10},
+                    {name='cagedscondrix',amount =1},
                     {name='yotoiseeds',amount =15},
 					{name='waterbarrel',amount=5,return_item={name='empty-barrel',amount=5}},
 					--{name='cage',amount=1},
@@ -417,7 +417,7 @@ fun.autorecipes {
 					{name='yotoileaves',amount = 'R'},
 					{name='yeadols',amount = 'R'},
 					{name='dingritsfood02',amount = 'R'},
-					{name='cagedscondrix',amount =15},
+					{name='cagedscondrix',amount =1},
 					{name='pheromones',amount =1},
                     {name='yotoiseeds',amount =15},
 					--{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
@@ -426,7 +426,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='dingritscub',amount = 'R'},
-					{name='dingritscub', amount =1},
+					{name='dingritscub', amount =2},
 				},
 			crafting_speed = 70,
 			tech = 'pheromones'

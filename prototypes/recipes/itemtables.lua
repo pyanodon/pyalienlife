@@ -42,6 +42,7 @@ items.inputs.ralesiaseeds = {'ralesia-seeds', 5}
 items.inputs.thuupraseeds = {'thuupra-seeds', 5}
 items.inputs.yotoiseeds = {'yotoi-seeds', 5}
 items.inputs.renneaseeds = {'rennea-seeds', 5}
+items.inputs.rennea = {'rennea', 1}
 items.inputs.cagedulric = {'caged-ulric', 1}
 items.inputs.braincagedulric = {'brain-caged-ulric', 1}
 items.inputs.bonecagedulric = {'bone-caged-ulric', 1}
@@ -86,7 +87,6 @@ items.inputs.gutsdhilmos = {'guts-dhilmos', 1}
 items.inputs.fatdhilmos = {'fat-dhilmos', 1}
 items.inputs.dhilmosfood01 = {'dhilmos-food-01', 1}
 items.inputs.dhilmosfood02 = {'dhilmos-food-02', 1}
-
 items.inputs.arthurianfood01 = {'arthurian-food-01', 1}
 items.inputs.arthurianfood02 = {'arthurian-food-02', 1}
 items.inputs.cage = {'cage', 1}
@@ -156,6 +156,16 @@ items.inputs.dingritsfood01 = {'dingrits-food-01', 1}
 items.inputs.dingritsfood02 = {'dingrits-food-02', 1}
 items.inputs.yotoileaves = {'yotoi-leaves', 1}
 items.inputs.yeadols = {'yeadols', 1}
+items.inputs.tuuphra = {'tuuphra', 1}
+items.inputs.meatcagedkmauts = {'meat-caged-kmauts', 1}
+items.inputs.bloodcagedkmauts = {'blood-caged-kmauts', 1}
+items.inputs.gutscagedkmauts = {'guts-caged-kmauts', 1}
+items.inputs.fatcagedkmauts = {'fat-caged-kmauts', 1}
+items.inputs.braincagedkmauts = {'brain-caged-kmauts', 1}
+items.inputs.cagedkmauts = {'caged-kmauts', 1}
+items.inputs.kmautscub = {'kmauts-cub', 1}
+items.inputs.tendon = {'tendon', 1}
+items.inputs.kmautsration = {'kmauts-ration', 1}
 
 items.outputs = items.inputs
 --can put output replacements below here
