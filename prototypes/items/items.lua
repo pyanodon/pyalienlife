@@ -2673,6 +2673,73 @@ ITEM {
     stack_size = 10
 }
 
+ITEM {
+    type = "item",
+    name = "saps",
+    icon = "__pyalienlife__/graphics/icons/sap.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-latex",
+    order = "a",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "sodium-alginate",
+    icon = "__pyalienlife__/graphics/icons/sodium-alginate.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-latex",
+    order = "d",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "latex-slab",
+    icon = "__pyalienlife__/graphics/icons/latex-slab.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-latex",
+    order = "e",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "latex",
+    icon = "__pyalienlife__/graphics/icons/latex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-latex",
+    order = "f",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "stopper",
+    icon = "__pyalienlife__/graphics/icons/mip/stopper-02.png",
+    icon_size = 64,
+    icon_mipmaps = 8,
+    pictures =
+    {
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/stopper-01.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/stopper-02.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/stopper-03.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/stopper-04.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/stopper-05.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/stopper-06.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/stopper-07.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlife__/graphics/icons/mip/stopper-08.png", scale = 0.25, mipmap_count = 1 },
+    },
+    flags = {},
+    subgroup = "py-alienlife-latex",
+    order = "g",
+    stack_size = 200
+}
+
 ------RULES-----
 
 local alien_life_limitations_ulric =

@@ -873,6 +873,21 @@ RECIPE {
 
 RECIPE {
     type = "recipe",
+    name = "cellulose-00",
+    category = "hpf",
+    enabled = true,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'wood', amount = 7},
+        {type = 'item', name = 'limestone', amount = 4},
+    },
+    results = {
+        {type = 'item', name = 'cellulose', amount = 1}
+    }
+}
+
+RECIPE {
+    type = "recipe",
     name = "cellulose-02",
     category = "biofactory",
     enabled = false,
@@ -1087,3 +1102,79 @@ RECIPE {
     order = 'a'
 }:add_unlock("biotech-mk03")
 
+RECIPE {
+    type = "recipe",
+    name = "sodium-alginate",
+    category = "hpf",
+    enabled = true,
+    energy_required = 15,
+    ingredients = {
+        {type = 'item', name = 'seaweed', amount = 4},
+        {type = 'item', name = 'stone', amount = 5},
+        {type = 'fluid', name = 'water', amount = 100},
+        {type = 'item', name = 'limestone', amount = 4},
+    },
+    results = {
+        {type = 'item', name = 'sodium-alginate', amount = 1}
+    }
+}
+
+RECIPE {
+    type = "recipe",
+    name = "latex-slab",
+    category = "distilator",
+    enabled = true,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'sodium-alginate', amount = 1},
+        {type = 'fluid', name = 'creamy-latex', amount = 100},
+        {type = 'fluid', name = 'formic-acid', amount = 400},
+    },
+    results = {
+        {type = 'item', name = 'latex-slab', amount = 1}
+    }
+}
+
+RECIPE {
+    type = "recipe",
+    name = "latex",
+    category = "tar",
+    enabled = true,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'latex-slab', amount = 1},
+        {type = 'fluid', name = 'steam', amount = 150, temperature = 165},
+    },
+    results = {
+        {type = 'item', name = 'latex', amount = 1}
+    }
+}
+
+RECIPE {
+    type = "recipe",
+    name = "stopper",
+    category = "crafting",
+    enabled = true,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'latex', amount = 2},
+        {type = 'item', name = 'coal', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'stopper', amount = 4}
+    }
+}
+
+RECIPE {
+    type = "recipe",
+    name = "sap-01",
+    category = "sap",
+    hidden = true,
+    enabled = true,
+    energy_required = 20,
+    ingredients = {
+    },
+    results = {
+        {type = 'item', name = 'saps', amount = 1}
+    }
+}

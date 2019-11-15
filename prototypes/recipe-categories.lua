@@ -147,4 +147,8 @@ data:extend {
         type = "recipe-category",
         name = "kicalk"
     },
+    {
+        type = "recipe-category",
+        name = "sap"
+    },
 }
