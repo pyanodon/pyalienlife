@@ -177,6 +177,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-latex",
+        group = "py-alienlife",
+        order = "f-aa"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-ralesia",
         group = "py-alienlife",
         order = "f-a"

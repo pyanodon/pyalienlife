@@ -110,6 +110,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'petri-dish-bacteria', amount = 1},
         {type = 'item', name = 'fawogae', amount = 5},
+        {type = 'item', name = 'saps', amount = 5},
         {type = 'item', name = 'lab-instrument', amount = 1},
         {type = 'fluid', name = 'phytoplankton', amount = 20},
     },

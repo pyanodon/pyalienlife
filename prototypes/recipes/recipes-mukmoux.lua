@@ -67,6 +67,7 @@ RECIPE {
         {type = 'item', name = 'tuuphra', amount = 5},
         {type = 'item', name = 'seaweed', amount = 5},
         {type = 'item', name = 'salt', amount = 10},
+        {type = 'item', name = 'saps', amount = 5},
         {type = 'fluid', name = 'steam', amount = 100},
     },
     results = {
@@ -87,6 +88,7 @@ RECIPE {
         {type = 'item', name = 'rennea', amount = 8},
         {type = 'item', name = 'salt', amount = 10},
         {type = 'item', name = 'biomass', amount = 5},
+        {type = 'item', name = 'saps', amount = 5},
         {type = 'item', name = 'tuuphra', amount = 10},
         {type = 'fluid', name = 'steam', amount = 100},
     },
