@@ -2070,6 +2070,72 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "meat-caged-kmauts",
+    icon = "__pyalienlife__/graphics/icons/meat-caged-kmauts.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-kmauts",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "blood-caged-kmauts",
+    icon = "__pyalienlife__/graphics/icons/blood-caged-kmauts.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-kmauts",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "guts-caged-kmauts",
+    icon = "__pyalienlife__/graphics/icons/guts-caged-kmauts.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-kmauts",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "fat-caged-kmauts",
+    icon = "__pyalienlife__/graphics/icons/fat-caged-kmauts.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-kmauts",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "brain-caged-kmauts",
+    icon = "__pyalienlife__/graphics/icons/brain-caged-kmauts.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-kmauts",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "kmauts-cub",
+    icon = "__pyalienlife__/graphics/icons/kmauts-cub.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-kmauts",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "kmauts-codex",
     icon = "__pyalienlife__/graphics/icons/kmauts-codex.png",
 	icon_size = 64,
@@ -2666,10 +2732,6 @@ local alien_life_limitations_ulric =
 
     local alien_life_limitations_rennea =
 	{
-    "rennea-0",
-    "rennea-1",
-    "rennea-2",
-    "rennea-3",
     }
 
     local alien_life_limitations_phadai =
@@ -2695,6 +2757,10 @@ local alien_life_limitations_ulric =
     }
 
     local alien_life_limitations_bhoddos =
+	{
+    }
+
+    local alien_life_limitations_kmauts =
 	{
     }
 
@@ -2892,7 +2958,7 @@ ITEM {
     subgroup = "py-alienlife-rennea",
     order = "a",
     stack_size = 10,
-	effect = { speed = {bonus = 0.3}},
+	effect = { speed = {bonus = 10}},
 	limitation = alien_life_limitations_rennea,
 	limitation_message_key = "Its full"
 }
