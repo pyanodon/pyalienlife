@@ -141,3 +141,45 @@ RECIPE {
         {type = 'item', name = 'sea-sponge-sprouts', amount = 2},
     },
 }:add_unlock("water-invertebrates-mk01")
+
+RECIPE {
+    type = 'recipe',
+    name = 'sea-sponge-sprouts-2',
+    category = 'bio-reactor',
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = 'item', name = 'sea-sponge-mk02', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'sea-sponge-sprouts', amount = 2},
+    },
+}:add_unlock("water-invertebrates-mk01")
+
+RECIPE {
+    type = 'recipe',
+    name = 'sea-sponge-sprouts-3',
+    category = 'bio-reactor',
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = 'item', name = 'sea-sponge-mk03', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'sea-sponge-sprouts', amount = 2},
+    },
+}:add_unlock("water-invertebrates-mk03")
+
+RECIPE {
+    type = 'recipe',
+    name = 'sea-sponge-sprouts-4',
+    category = 'bio-reactor',
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = 'item', name = 'sea-sponge-mk04', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'sea-sponge-sprouts', amount = 2},
+    },
+}:add_unlock("water-invertebrates-mk04")

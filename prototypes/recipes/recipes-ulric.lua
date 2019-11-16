@@ -185,6 +185,51 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
+    name = 'caged-ulric-mk02',
+    category = 'crafting',
+    enabled = false,
+    energy_required = 0.5,
+    ingredients = {
+        {type = 'item', name = 'ulric-mk02', amount = 1},
+        {type = 'item', name = 'cage', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'caged-ulric', amount = 1},
+    },
+}:add_unlock("selective-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'caged-ulric-mk03',
+    category = 'crafting',
+    enabled = false,
+    energy_required = 0.5,
+    ingredients = {
+        {type = 'item', name = 'ulric-mk03', amount = 1},
+        {type = 'item', name = 'cage', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'caged-ulric', amount = 1},
+    },
+}:add_unlock("artificial-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'caged-ulric-mk04',
+    category = 'crafting',
+    enabled = false,
+    energy_required = 0.5,
+    ingredients = {
+        {type = 'item', name = 'ulric-mk04', amount = 1},
+        {type = 'item', name = 'cage', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'caged-ulric', amount = 1},
+    },
+}:add_unlock("biased-mutation")
+
+RECIPE {
+    type = 'recipe',
     name = 'uncaged-ulric',
     category = 'crafting',
     enabled = false,

@@ -236,6 +236,7 @@ RECIPE {
         {type = 'item', name = 'nickel-plate', amount = 5},
         {type = 'item', name = 'electronic-circuit', amount = 1},
         {type = 'fluid', name = 'vacuum', amount = 50},
+        {type = 'item', name = 'optical-fiber', amount = 5},
     },
     results = {
         {type = 'item', name = 'neuroprocessor', amount = 2},
