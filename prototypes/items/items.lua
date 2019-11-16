@@ -2749,8 +2749,6 @@ local alien_life_limitations_ulric =
 
     local alien_life_limitations_sponge =
 	{
-    "sea-sponge-1",
-    "sea-sponge-2",
     }
 
     local alien_life_limitations_ralesia =
@@ -2858,12 +2856,17 @@ ITEM {
     type = "module",
     name = "ulric",
     icon = "__pyalienlife__/graphics/icons/ulric.png",
+    icons =
+    {
+        {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
+        {icon = "__pyalienlife__/graphics/icons/ulric.png"}
+    },
     icon_size = 64,
 	category = "ulric",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-modules",
-    order = "a",
+    order = "u-a",
     stack_size = 10,
 	effect = { speed = {bonus = 20}},
 	limitation = alien_life_limitations_ulric,
@@ -2872,14 +2875,74 @@ ITEM {
 
 ITEM {
     type = "module",
+    name = "ulric-mk02",
+    {
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+        {icon = "__pyalienlife__/graphics/icons/ulric.png"}
+    },
+    icon_size = 64,
+	category = "ulric",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "u-b",
+    stack_size = 10,
+	effect = { speed = {bonus = 25}},
+	limitation = alien_life_limitations_ulric,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "ulric-mk03",
+    {
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+        {icon = "__pyalienlife__/graphics/icons/ulric.png"}
+    },
+    icon_size = 64,
+	category = "ulric",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "u-c",
+    stack_size = 10,
+	effect = { speed = {bonus = 30}},
+	limitation = alien_life_limitations_ulric,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "ulric-mk04",
+    {
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlife__/graphics/icons/ulric.png"}
+    },
+    icon_size = 64,
+	category = "ulric",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "u-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 35}},
+	limitation = alien_life_limitations_ulric,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
     name = "sea-sponge",
-    icon = "__pyalienlife__/graphics/icons/sea-sponge.png",
+    {
+        {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
+        {icon = "__pyalienlife__/graphics/icons/sea-sponge.png"}
+    },
     icon_size = 64,
     category = "sea-sponge",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-modules",
-    order = "a",
+    order = "sa",
     stack_size = 10,
 	effect = { speed = {bonus = 20}},
 	limitation = alien_life_limitations_sponge,
@@ -2888,14 +2951,74 @@ ITEM {
 
 ITEM {
     type = "module",
+    name = "sea-sponge-mk02",
+    {
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+        {icon = "__pyalienlife__/graphics/icons/sea-sponge.png"}
+    },
+    icon_size = 64,
+    category = "sea-sponge",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "sb",
+    stack_size = 10,
+	effect = { speed = {bonus = 25}},
+	limitation = alien_life_limitations_sponge,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "sea-sponge-mk03",
+    {
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+        {icon = "__pyalienlife__/graphics/icons/sea-sponge.png"}
+    },
+    icon_size = 64,
+    category = "sea-sponge",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "sc",
+    stack_size = 10,
+	effect = { speed = {bonus = 30}},
+	limitation = alien_life_limitations_sponge,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "sea-sponge-mk04",
+    {
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlife__/graphics/icons/sea-sponge.png"}
+    },
+    icon_size = 64,
+    category = "sea-sponge",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "sd",
+    stack_size = 10,
+	effect = { speed = {bonus = 35}},
+	limitation = alien_life_limitations_sponge,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
     name = "ralesias",
-    icon = "__pycoalprocessing__/graphics/icons/ralesia.png",
+    {
+        {icon = "__pyalienlife__/graphics/icons/over-mk01.png", scale = 0.5},
+        {icon = "__pycoalprocessing__/graphics/icons/ralesia.png"}
+    },
     icon_size = 32,
     category = "ralesia-flower",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-ralesia",
-    order = "a",
+    order = "ra",
     stack_size = 10,
 	effect = { speed = {bonus = 15}},
 	limitation = alien_life_limitations_ralesia,
