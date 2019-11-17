@@ -112,9 +112,15 @@ require('prototypes/buildings/foodbowl')
 require('prototypes/buildings/generator-1')
 require('prototypes/buildings/generator-2')
 require('prototypes/buildings/pyphoon-bay')
+require('prototypes/buildings/land-bot-control-tower')
+require('prototypes/buildings/land-bot-roboport')
+require('prototypes/buildings/land-bot-chest')
 
 --Caravan ceature
 require('prototypes/ceatures/caravan')
+
+--Land bot
+require('prototypes/robots/land-bot')
 
 --test chest--
 require("prototypes/buildings/test-filtered-chest-mk01")

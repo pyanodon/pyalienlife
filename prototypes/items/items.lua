@@ -2876,7 +2876,8 @@ ITEM {
 ITEM {
     type = "module",
     name = "ulric-mk02",
-    {
+    icons =
+	{
         {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
         {icon = "__pyalienlife__/graphics/icons/ulric.png"}
     },
@@ -2895,7 +2896,8 @@ ITEM {
 ITEM {
     type = "module",
     name = "ulric-mk03",
-    {
+    icons =
+	{
         {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
         {icon = "__pyalienlife__/graphics/icons/ulric.png"}
     },
@@ -2914,7 +2916,8 @@ ITEM {
 ITEM {
     type = "module",
     name = "ulric-mk04",
-    {
+    icons =
+	{
         {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
         {icon = "__pyalienlife__/graphics/icons/ulric.png"}
     },
@@ -2933,7 +2936,8 @@ ITEM {
 ITEM {
     type = "module",
     name = "sea-sponge",
-    {
+    icons =
+	{
         {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
         {icon = "__pyalienlife__/graphics/icons/sea-sponge.png"}
     },
@@ -2952,7 +2956,8 @@ ITEM {
 ITEM {
     type = "module",
     name = "sea-sponge-mk02",
-    {
+    icons =
+	{
         {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
         {icon = "__pyalienlife__/graphics/icons/sea-sponge.png"}
     },
@@ -2971,7 +2976,8 @@ ITEM {
 ITEM {
     type = "module",
     name = "sea-sponge-mk03",
-    {
+    icons =
+	{
         {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
         {icon = "__pyalienlife__/graphics/icons/sea-sponge.png"}
     },
@@ -2990,7 +2996,8 @@ ITEM {
 ITEM {
     type = "module",
     name = "sea-sponge-mk04",
-    {
+    icons =
+	{
         {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
         {icon = "__pyalienlife__/graphics/icons/sea-sponge.png"}
     },
@@ -3009,7 +3016,8 @@ ITEM {
 ITEM {
     type = "module",
     name = "ralesias",
-    {
+    icons =
+	{
         {icon = "__pyalienlife__/graphics/icons/over-mk01.png", scale = 0.5},
         {icon = "__pycoalprocessing__/graphics/icons/ralesia.png"}
     },
