@@ -1218,8 +1218,8 @@ recipe =
         --log(serpent.block(mat.results))
 
         for i, item in pairs(mat.results) do
-            log(serpent.block(mat.results))
-            log(serpent.block(item))
+            --log(serpent.block(mat.results))
+            --log(serpent.block(item))
             --log(serpent.block(item[1]))
             --log(serpent.block(items))
             --log(serpent.block(items.inputs))
@@ -1233,11 +1233,11 @@ recipe =
             local a_min
             local a_max
 
-            log(serpent.block(ing))
+            --log(serpent.block(ing))
             if data.raw.item[ing[1]] ~= nil or data.raw.fluid[ing[1]] ~= nil or data.raw.module[ing[1]] ~= nil then
                 --log(serpent.block(item.amount))
                 if item.amount ~= nil then
-                    log("hit")
+                    --log("hit")
                     sign = string.sub(item.amount, 1, 1)
                     mod = string.sub(item.amount, 2, 10)
                     if sign ~= '+' and sign ~= '-' and sign ~= '*' and sign ~= '/' and sign ~= 'R' then
@@ -1294,8 +1294,8 @@ recipe =
 
                 if sign == nil then
                     if next(results) ~= nil then
-                        log("hit")
-                        log(serpent.block(results))
+                        --log("hit")
+                        --log(serpent.block(results))
                         local rl = {}
                         for _, res in pairs(results) do
                             rl[res.name] = true
@@ -1303,28 +1303,28 @@ recipe =
                         if rl[ing[1]] then
                             for _, res in pairs(results) do
                                 if res.name == ing[1] then
-                                    log(res.name)
+                                    --log(res.name)
                                     --log(ing[1])
                                     --res.amount = res.amount + ing[2]
                                     if prod == false then
-                                        log("hit")
+                                        --log("hit")
                                         res.amount = mod
                                     elseif prod == true then
-                                        log("hit")
+                                        --log("hit")
                                         table.insert(results, {type = type1, name = ing[1], amount_min = a_min, amount_max = a_max, probability = prodvalue})
                                     end
                                 end
                             end
                         else
-                            log("hit")
+                            --log("hit")
                             --log(mod)
                             if mod ~= nil then
                                 table.insert(results, {type = type1, name = ing[1], amount = mod})
                             elseif prod == true then
-                                log("hit")
+                                --log("hit")
                                 table.insert(results, {type = type1, name = ing[1], amount_min = a_min, amount_max = a_max, probability = prodvalue})
                             else
-                                log("hit")
+                                --log("hit")
                                 table.insert(results, {type = type1, name = ing[1], amount = ing[2]})
                             end
                         end
@@ -1332,10 +1332,10 @@ recipe =
                         --log("hit")
                         table.insert(results, {type = type1, name = ing[1], amount_min = a_min, amount_max = a_max, probability = prodvalue})
                     elseif mod ~= nil then
-                        log('hit')
+                        --log('hit')
                         table.insert(results, {type = type1, name = ing[1], amount = mod})
                     else
-                        log("hit")
+                        --log("hit")
                         table.insert(results, {type = type1, name = ing[1], amount = ing[2]})
                     end
                 elseif sign == '+' then
@@ -1518,7 +1518,7 @@ recipe =
                 RECIPE(na):add_unlock(tech_unlock)
             end
 
-            log(serpent.block(data.raw.recipe[na]))
+            --log(serpent.block(data.raw.recipe[na]))
 
             number = number + 1
         end

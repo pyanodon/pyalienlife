@@ -115,6 +115,7 @@ require('prototypes/buildings/pyphoon-bay')
 require('prototypes/buildings/land-bot-control-tower')
 require('prototypes/buildings/land-bot-roboport')
 require('prototypes/buildings/land-bot-chest')
+require('prototypes/buildings/ralesia-plantation-test')
 
 --Caravan ceature
 require('prototypes/ceatures/caravan')
@@ -207,5 +208,8 @@ require('prototypes/recipes/recipes-cridren')
 require('prototypes/recipes/recipes-zipir')
 require('prototypes/recipes/recipes-trits')
 require('prototypes/recipes/recipes-recharge')
+
+--(( ORES ))--
+require('prototypes/ores/ralesia')
 
 data.raw["utility-constants"].default.recipe_step_limit = 2000;
