@@ -151,4 +151,8 @@ data:extend {
         type = "recipe-category",
         name = "sap"
     },
+    {
+        type = "recipe-category",
+        name = "ralesia-farm"
+    },
 }
