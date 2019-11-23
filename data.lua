@@ -116,6 +116,7 @@ require('prototypes/buildings/land-bot-control-tower')
 require('prototypes/buildings/land-bot-roboport')
 require('prototypes/buildings/land-bot-chest')
 require('prototypes/buildings/ralesia-plantation-test')
+require('prototypes/buildings/vat-brain')
 
 --Caravan ceature
 require('prototypes/ceatures/caravan')
@@ -208,6 +209,7 @@ require('prototypes/recipes/recipes-cridren')
 require('prototypes/recipes/recipes-zipir')
 require('prototypes/recipes/recipes-trits')
 require('prototypes/recipes/recipes-recharge')
+require('prototypes/recipes/recipes-vat')
 
 require('prototypes/recipes/recipes-auto-ralesia-farm-test')
 
