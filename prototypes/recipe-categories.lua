@@ -155,4 +155,8 @@ data:extend {
         type = "recipe-category",
         name = "ralesia-farm"
     },
+    {
+        type = "recipe-category",
+        name = "vat"
+    },
 }
