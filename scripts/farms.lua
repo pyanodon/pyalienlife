@@ -1,8 +1,15 @@
-script.on_event(
-    defines.events.on_tick,
-    function(event)
-    end
-)
+
+script.on_init( function(event)
+
+
+
+end)
+
+script.on_nth_tick(30, function(event)
+
+
+
+end)
 
 script.on_event(
     defines.events.on_rocket_launched,
