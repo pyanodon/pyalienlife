@@ -10,6 +10,9 @@ RECIPE('rubber-01'):add_ingredient({type = "item", name = "latex", amount = 1})
 RECIPE('rubber-02'):add_ingredient({type = "item", name = "latex", amount = 1})
 RECIPE('rubber-03'):add_ingredient({type = "item", name = "latex", amount = 1})
 RECIPE('rubber-04'):add_ingredient({type = "item", name = "latex", amount = 1})
+RECIPE('logistic-science-01'):replace_ingredient("water","crude-oil")
+RECIPE('chemical-science-01'):replace_ingredient("water","crude-oil")
+RECIPE('production-science-01'):replace_ingredient("water","crude-oil")
 
 
 RECIPE('guar-separation'):remove_unlock('oil-machines-mk01')
