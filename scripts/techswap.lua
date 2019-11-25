@@ -58,6 +58,21 @@ local TRlist = {
     {tech = 'explosive-diarrhea', oldrecipe = 'phag-manure-5a', newrecipe = 'phag-manure-5b'},
     {tech = 'explosive-diarrhea', oldrecipe = 'phag-manure-6a', newrecipe = 'phag-manure-6b'},
     {tech = 'explosive-diarrhea', oldrecipe = 'phag-manure-7a', newrecipe = 'phag-manure-7b'},
+
+    {tech = 'bigger-colon', oldrecipe = 'scrondrix-manure-1', newrecipe = 'scrondrix-manure-1a'},
+    {tech = 'bigger-colon', oldrecipe = 'scrondrix-manure-2', newrecipe = 'scrondrix-manure-2a'},
+    {tech = 'bigger-colon', oldrecipe = 'scrondrix-manure-3', newrecipe = 'scrondrix-manure-3a'},
+    {tech = 'bigger-colon', oldrecipe = 'scrondrix-manure-4', newrecipe = 'scrondrix-manure-4a'},
+    {tech = 'bigger-colon', oldrecipe = 'scrondrix-manure-5', newrecipe = 'scrondrix-manure-5a'},
+    {tech = 'bigger-colon', oldrecipe = 'scrondrix-manure-6', newrecipe = 'scrondrix-manure-6a'},
+    {tech = 'bigger-colon', oldrecipe = 'scrondrix-manure-7', newrecipe = 'scrondrix-manure-7a'},
+    {tech = 'explosive-diarrhea', oldrecipe = 'scrondrix-manure-1a', newrecipe = 'scrondrix-manure-1b'},
+    {tech = 'explosive-diarrhea', oldrecipe = 'scrondrix-manure-2a', newrecipe = 'scrondrix-manure-2b'},
+    {tech = 'explosive-diarrhea', oldrecipe = 'scrondrix-manure-3a', newrecipe = 'scrondrix-manure-3b'},
+    {tech = 'explosive-diarrhea', oldrecipe = 'scrondrix-manure-4a', newrecipe = 'scrondrix-manure-4b'},
+    {tech = 'explosive-diarrhea', oldrecipe = 'scrondrix-manure-5a', newrecipe = 'scrondrix-manure-5b'},
+    {tech = 'explosive-diarrhea', oldrecipe = 'scrondrix-manure-6a', newrecipe = 'scrondrix-manure-6b'},
+    {tech = 'explosive-diarrhea', oldrecipe = 'scrondrix-manure-7a', newrecipe = 'scrondrix-manure-7b'},
 }
 
 --tech: the tech that is required to be researched for the new recipe

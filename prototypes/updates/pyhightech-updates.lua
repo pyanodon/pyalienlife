@@ -235,42 +235,6 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'scrondrix-manure-03',
-    category = 'scrondrix',
-    enabled = false,
-    energy_required = 80,
-    ingredients = {
-        --{type = 'item', name = 'scrondrix-food-01', amount = 1},
-        {type = 'item', name = 'fiber', amount = 5},
-        {type = 'item', name = 'water-barrel', amount = 10},
-    },
-    results = {
-        {type = 'item', name = 'manure', amount = 6},
-        {type = 'item', name = 'empty-barrel', amount = 10},
-    },
-    main_product = "manure",
-}:add_unlock("scrondrix")
-
-RECIPE {
-    type = 'recipe',
-    name = 'scrondrix-manure-03-food',
-    category = 'scrondrix',
-    enabled = false,
-    energy_required = 80,
-    ingredients = {
-        --{type = 'item', name = 'scrondrix-food-02', amount = 1},
-        {type = 'item', name = 'fiber', amount = 5},
-        {type = 'item', name = 'water-barrel', amount = 10},
-    },
-    results = {
-        {type = 'item', name = 'manure', amount = 8},
-        {type = 'item', name = 'empty-barrel', amount = 10},
-    },
-    main_product = "manure",
-}:add_unlock("scrondrix")
-
-RECIPE {
-    type = 'recipe',
     name = 'bones-to-phosphate',
     category = 'atomizer',
     enabled = false,

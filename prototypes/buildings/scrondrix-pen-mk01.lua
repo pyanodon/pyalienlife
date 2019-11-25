@@ -55,7 +55,7 @@ ENTITY {
         emissions_per_minute = 3,
     },
     energy_usage = "300kW",
-    ingredient_count = 10,
+    ingredient_count = 15,
     animation = {
         filename = "__pyalienlife__/graphics/entity/scrondrix-pen/raw.png",
         width = 384,

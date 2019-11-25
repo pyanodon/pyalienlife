@@ -181,3 +181,18 @@ RECIPE {
     },
     --main_product = "cocoon",
 }:add_unlock("molecular-decohesion")
+
+RECIPE {
+    type = 'recipe',
+    name = 'spikes-to-mo',
+    category = 'atomizer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'dingrit-spike', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'molybdenum-ore', amount = 5},
+    },
+    --main_product = "cocoon",
+}:add_unlock("molecular-decohesion")
