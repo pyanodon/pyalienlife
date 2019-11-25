@@ -1586,6 +1586,84 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "brain-caged-scrondrix",
+    icon = "__pyalienlife__/graphics/icons/brain-caged-scrondrix.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-scrondrix",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "bone-caged-scrondrix",
+    icon = "__pyalienlife__/graphics/icons/bone-caged-scrondrix.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-scrondrix",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "meat-caged-scrondrix",
+    icon = "__pyalienlife__/graphics/icons/meat-caged-scrondrix.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-scrondrix",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "skin-caged-scrondrix",
+    icon = "__pyalienlife__/graphics/icons/skin-caged-scrondrix.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-scrondrix",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "blood-caged-scrondrix",
+    icon = "__pyalienlife__/graphics/icons/blood-caged-scrondrix.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-scrondrix",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "guts-caged-scrondrix",
+    icon = "__pyalienlife__/graphics/icons/guts-caged-scrondrix.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-scrondrix",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "fat-caged-scrondrix",
+    icon = "__pyalienlife__/graphics/icons/fat-caged-scrondrix.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-scrondrix",
+    order = "a",
+    stack_size = 50
+}
+
+
+ITEM {
+    type = "item",
     name = "pineal-gland",
     icon = "__pyalienlife__/graphics/icons/pineal-gland.png",
 	icon_size = 64,

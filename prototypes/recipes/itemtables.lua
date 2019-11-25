@@ -124,6 +124,7 @@ items.inputs.bacteria2 = {'bacteria-2',1} --pyht
 items.inputs.yaedolsspore = {'yaedols-spores',1}
 items.inputs.yaedols = {'yaedols',1}
 items.inputs.wood = {'wood',1}
+items.inputs.woodseeds = {'wood-seeds',1}
 items.inputs.moss = {'moss',1}
 items.inputs.ammonia = {'ammonia',2}
 items.inputs.grod = {'grod',1}
@@ -170,6 +171,17 @@ items.inputs.cridren = {'cridren', 1}
 items.inputs.cridrenseeds = {'cridren-seeds', 1}
 items.inputs.chalkysoil = {'chalky-soil', 1}
 items.inputs.fish = {'fish', 1}
+
+items.inputs.cagedscrondrix = {'caged-scrondrix', 1}
+items.inputs.braincagedscrondrix = {'brain-caged-scrondrix', 1}
+items.inputs.bonecagedscrondrix = {'bone-caged-scrondrix', 1}
+items.inputs.meatcagedscrondrix = {'meat-caged-scrondrix', 1}
+items.inputs.bloodcagedscrondrix = {'blood-caged-scrondrix', 1}
+items.inputs.skincagedscrondrix = {'skin-caged-scrondrix', 1}
+items.inputs.gutscagedscrondrix = {'guts-caged-scrondrix', 1}
+items.inputs.fatcagedscrondrix = {'fat-caged-scrondrix', 1}
+items.inputs.scrondrixcub = {'scrondrix-pup', 1}
+items.inputs.pinealgland = {'pineal-gland', 1}
 
 items.outputs = items.inputs
 --can put output replacements below here
