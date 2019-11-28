@@ -1,6 +1,6 @@
 RECIPE {
     type = "recipe",
-    name = "lb-chest",
+    name = "lb-requester-chest",
     energy_required = 1,
     enabled = true,
     ingredients = {
@@ -12,29 +12,29 @@ RECIPE {
         {"iron-gear-wheel", 50},
     },
     results = {
-        {"lb-chest", 1}
+        {"lb-requester-chest", 1}
     }
 }--:add_unlock("xenobiology")
 
 ITEM {
     type = "item",
-    name = "lb-chest",
+    name = "lb-requester-chest",
     icon = "__pyalienlife__/graphics/icons/data-array.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-others",
     order = "c",
-    place_result = "lb-chest",
+    place_result = "lb-requester-chest",
     stack_size = 10
 }
 
 ENTITY {
     type = "container",
-    name = "lb-chest",
+    name = "lb-requester-chest",
     icon = "__base__/graphics/icons/wooden-chest.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "lb-chest"},
+    minable = {mining_time = 0.1, result = "lb-requester-chest"},
     max_health = 100,
     corpse = "wooden-chest-remnants",
     collision_box = {{-0.35, -0.35}, {0.35, 0.35}},
@@ -253,13 +253,13 @@ end
 
 ITEM {
     type = "item",
-    name = "land-bot-requestor-controls",
+    name = "lb-requester-controls",
     icon = "__pyalienlife__/graphics/icons/data-array.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-others",
     order = "c",
-    place_result = "land-bot-requestor-controls",
+    place_result = "lb-requester-controls",
     stack_size = 10
 }
 
@@ -267,15 +267,15 @@ data:extend({
 
 generate_constant_combinator {
     type = "constant-combinator",
-    name = "land-bot-requestor-controls",
+    name = "lb-requester-controls",
     icon = "__base__/graphics/icons/constant-combinator.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {minable = false, mining_time = 0.1}, --result = "land-bot-requestor-controls"},
+    minable = {minable = false, mining_time = 0.1}, --result = "land-bot-requester-controls"},
     max_health = 120,
     corpse = "constant-combinator-remnants",
     collision_box = {{-0.0, -0.0}, {0.0, 0.0}},
-    selection_box = {{-0.0, -0.0}, {0.0, 0.0}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     item_slot_count = 18,
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     activity_led_light =
@@ -291,7 +291,7 @@ generate_constant_combinator {
       {-0.296875, -0.078125},
       {-0.21875, -0.46875}
     },
-    circuit_wire_max_distance = 0
+    circuit_wire_max_distance = 10
   }
-  
+
 })
