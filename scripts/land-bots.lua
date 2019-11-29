@@ -14,8 +14,21 @@ global.landbots =
 
 							},
 						botstorage,
-						totalbots,
-						maxcontrolablebots,
+						totalbotcount = #,
+						currentlyactivebotcount = #,
+						maxcontrolablebotcount = #,
+						botids =
+							{
+							
+							},
+						activebots =
+							{
+							
+							},
+						inactivebots =
+							{
+							
+							},
 						position,
 					}
 			}
@@ -46,15 +59,16 @@ script.on_event(
             E.destroy()
 
             towercounter = towercounter+1
-            landbots.towers[towercounter] = {position = tower.position, totalbots = 0, maxcontrolablebots = 50,botids = {},requestorchests = {}, providerchests = {}}
+            landbots.towers[towercounter] = {position = tower.position, totalbotcount = 0, currentlyactivebotcount = 0, maxcontrolablebotcount = 50,botids = {},activebots = {}, inactivebots = {}, requestorchests = {}, providerchests = {}}
         elseif E.name == 'land-bot' then
             for t,tower in pairs(landbots.towers) do
                 --log(serpent.block(t))
                 --log(serpent.block(tower))
                 if E.position.x * tower.position.x + E.position.y * tower.position.y <= 30 * 30 then
-                    if tower.totalbots < tower.maxcontrolablebots then
-                        tower.totalbots = tower.totalbots + 1
+                    if tower.totalbotcount < tower.maxcontrolablebotcount then
+                        tower.totalbotcount = tower.totalbotcount + 1
                         table.insert(tower.botids, E.unit_number)
+						tower.inactivebots[E.unit_number] = E
                     end
                 end
             end
@@ -73,7 +87,7 @@ script.on_event(
                 --log(serpent.block(t))
                 --log(serpent.block(tower))
                 if E.position.x * tower.position.x + E.position.y * tower.position.y <= 30 * 30 then
-                    table.insert(tower.providerchests, {chest = E.unit_number})
+                    tower.providerchests[E.unit_number] = {chest = E}
                 end
             end
         end
@@ -102,21 +116,51 @@ script.on_event(
 script.on_nth_tick(5, function(event)
 --log('hit')
 for t, tower in pairs(landbots.towers) do
-    --log('hit')
-    for r,req in pairs(tower.requestorchests) do
-        --log('hit')
-        --log(serpent.block(req))
-        if req.controls ~= nil then
-            --log('hit')
-            local signals = req.controls.get_merged_signals(defines.circuit_connector_id.constant_combinator)
-            log(serpent.block(signals))
-            if signals ~= nil then
-                for s, sig in pairs(signals) do
-                    log(serpent.block(sig))
-                end
-            end
-        end
-    end
+	if tower.currentlyactivebotcount < tower.totalbotcount then
+		--log('hit')
+		for r,req in pairs(tower.requestorchests) do
+			--log('hit')
+			--log(serpent.block(req))
+			if req.controls ~= nil then
+				--log('hit')
+				local signals = req.controls.get_merged_signals(defines.circuit_connector_id.constant_combinator)
+				--log(serpent.block(signals))
+				if signals ~= nil then
+					for s, sig in pairs(signals) do
+						--log(serpent.block(sig))
+						local inventory = req.chest.get_inventory(defines.inventory.chest).get_contents()
+						local set = {}
+						for i, inv in pairs(inventory) do
+							log(serpent.block(inv))
+							set[i] = true
+						end
+						if (set[sig.signal.name] ~= nil and inventory[sig.signal.name] < sig.count) or (set[sig.signal.name] == nil) then
+							log('box isnt full of the stuff we set. send more please')
+							--need to check the providers to see if any of them have what we need
+							for p, prov in pairs(tower.providerchests) do
+								log(serpent.block(prov))
+								local pinventory = prov.chest.get_inventory(defines.inventory.chest).get_contents()
+								local pset = {}
+								for i, inv in pairs(pinventory) do
+									log(serpent.block(i))
+									log(serpent.block(inv))
+									pset[i] = true
+								end
+								if pset[sig.signal.name] ~= nil then
+								--send landbot to get stuff from this provider box
+									for i, inact in pairs(tower.inactivebots) do
+										inact.set_command{type = defines.command.go_to_location, destination = prov.chest.position, radius = 2}
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	--elseif then
+	
+	end
 end
 
 end)
