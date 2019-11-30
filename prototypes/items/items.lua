@@ -3096,14 +3096,14 @@ ITEM {
     name = "ralesias",
     icons =
 	{
-        {icon = "__pyalienlife__/graphics/icons/over-mk01.png", scale = 0.5},
-        {icon = "__pycoalprocessing__/graphics/icons/ralesia.png"}
+        {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
+        {icon = "__pyalienlife__/graphics/icons/ralesia.png"}
     },
-    icon_size = 32,
+    icon_size = 64,
     category = "ralesia-flower",
 	tier = 1,
     flags = {},
-    subgroup = "py-alienlife-ralesia",
+    subgroup = "py-alienlife-modules",
     order = "ra",
     stack_size = 10,
 	effect = { speed = {bonus = 15}},
@@ -3113,14 +3113,78 @@ ITEM {
 
 ITEM {
     type = "module",
+    name = "ralesias-mk02",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+        {icon = "__pyalienlife__/graphics/icons/ralesia.png"}
+    },
+    icon_size = 64,
+    category = "ralesia-flower",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "rb",
+    stack_size = 10,
+	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_ralesia,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "ralesias-mk03",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+        {icon = "__pyalienlife__/graphics/icons/ralesia.png"}
+    },
+    icon_size = 64,
+    category = "ralesia-flower",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "rc",
+    stack_size = 10,
+	effect = { speed = {bonus = 25}},
+	limitation = alien_life_limitations_ralesia,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "ralesias-mk04",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlife__/graphics/icons/ralesia.png"}
+    },
+    icon_size = 64,
+    category = "ralesia-flower",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "rd",
+    stack_size = 10,
+	effect = { speed = {bonus = 30}},
+	limitation = alien_life_limitations_ralesia,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
     name = "mukmoux",
-    icon = "__pyalienlife__/graphics/icons/mukmoux.png",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
+        {icon = "__pyalienlife__/graphics/icons/mukmoux.png"}
+    },
     icon_size = 64,
 	category = "mukmoux",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-modules",
-    order = "a",
+    order = "m-a",
     stack_size = 10,
 	effect = { speed = {bonus = 20}},
 	limitation = alien_life_limitations_mukmoux,
@@ -3129,14 +3193,78 @@ ITEM {
 
 ITEM {
     type = "module",
+    name = "mukmoux-mk02",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+        {icon = "__pyalienlife__/graphics/icons/mukmoux.png"}
+    },
+    icon_size = 64,
+	category = "mukmoux",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "m-b",
+    stack_size = 10,
+	effect = { speed = {bonus = 25}},
+	limitation = alien_life_limitations_mukmoux,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "mukmoux-mk03",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+        {icon = "__pyalienlife__/graphics/icons/mukmoux.png"}
+    },
+    icon_size = 64,
+	category = "mukmoux",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "m-c",
+    stack_size = 10,
+	effect = { speed = {bonus = 30}},
+	limitation = alien_life_limitations_mukmoux,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "mukmoux-mk04",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlife__/graphics/icons/mukmoux.png"}
+    },
+    icon_size = 64,
+	category = "mukmoux",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "m-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 35}},
+	limitation = alien_life_limitations_mukmoux,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
     name = "arthurian",
-    icon = "__pyalienlife__/graphics/icons/arthurian.png",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
+        {icon = "__pyalienlife__/graphics/icons/arthurian.png"}
+    },
     icon_size = 64,
 	category = "arthurian",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-modules",
-    order = "a",
+    order = "aa",
     stack_size = 10,
 	effect = { speed = {bonus = 20}},
 	limitation = alien_life_limitations_arthurian,
@@ -3145,14 +3273,78 @@ ITEM {
 
 ITEM {
     type = "module",
+    name = "arthurian-mk02",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+        {icon = "__pyalienlife__/graphics/icons/arthurian.png"}
+    },
+    icon_size = 64,
+	category = "arthurian",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "ab",
+    stack_size = 10,
+	effect = { speed = {bonus = 25}},
+	limitation = alien_life_limitations_arthurian,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "arthurian-mk03",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+        {icon = "__pyalienlife__/graphics/icons/arthurian.png"}
+    },
+    icon_size = 64,
+	category = "arthurian",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "ac",
+    stack_size = 10,
+	effect = { speed = {bonus = 30}},
+	limitation = alien_life_limitations_arthurian,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "arthurian-mk04",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlife__/graphics/icons/arthurian.png"}
+    },
+    icon_size = 64,
+	category = "arthurian",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "ad",
+    stack_size = 10,
+	effect = { speed = {bonus = 35}},
+	limitation = alien_life_limitations_arthurian,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
     name = "tuuphra",
-    icon = "__pyalienlife__/graphics/icons/tuuphra.png",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
+        {icon = "__pyalienlife__/graphics/icons/tuuphra.png"}
+    },
     icon_size = 64,
 	category = "tuuphra",
 	tier = 1,
     flags = {},
-    subgroup = "py-alienlife-tuuphra",
-    order = "a",
+    subgroup = "py-alienlife-modules",
+    order = "ta",
     stack_size = 10,
 	effect = { speed = {bonus = 20}},
 	limitation = alien_life_limitations_tuuphra,
@@ -3161,14 +3353,98 @@ ITEM {
 
 ITEM {
     type = "module",
+    name = "tuuphra-mk02",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+        {icon = "__pyalienlife__/graphics/icons/tuuphra.png"}
+    },
+    icon_size = 64,
+	category = "tuuphra",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "tb",
+    stack_size = 10,
+	effect = { speed = {bonus = 25}},
+	limitation = alien_life_limitations_tuuphra,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "tuuphra-mk03",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+        {icon = "__pyalienlife__/graphics/icons/tuuphra.png"}
+    },
+    icon_size = 64,
+	category = "tuuphra",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "tc",
+    stack_size = 10,
+	effect = { speed = {bonus = 30}},
+	limitation = alien_life_limitations_tuuphra,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "tuuphra-mk04",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlife__/graphics/icons/tuuphra.png"}
+    },
+    icon_size = 64,
+	category = "tuuphra",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "td",
+    stack_size = 10,
+	effect = { speed = {bonus = 35}},
+	limitation = alien_life_limitations_tuuphra,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
     name = "navens",
-    icon = "__pyalienlife__/graphics/icons/navens.png",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
+        {icon = "__pyalienlife__/graphics/icons/navens.png"}
+    },
     icon_size = 64,
 	category = "navens",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-modules",
-    order = "a",
+    order = "na",
+    stack_size = 10,
+	effect = { speed = {bonus = 15}},
+	limitation = alien_life_limitations_navens,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "navens-mk02",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+        {icon = "__pyalienlife__/graphics/icons/navens.png"}
+    },
+    icon_size = 64,
+	category = "navens",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "nb",
     stack_size = 10,
 	effect = { speed = {bonus = 20}},
 	limitation = alien_life_limitations_navens,
@@ -3177,14 +3453,58 @@ ITEM {
 
 ITEM {
     type = "module",
+    name = "navens-mk03",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+        {icon = "__pyalienlife__/graphics/icons/navens.png"}
+    },
+    icon_size = 64,
+	category = "navens",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "nc",
+    stack_size = 10,
+	effect = { speed = {bonus = 25}},
+	limitation = alien_life_limitations_navens,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "navens-mk04",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlife__/graphics/icons/navens.png"}
+    },
+    icon_size = 64,
+	category = "navens",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "nd",
+    stack_size = 10,
+	effect = { speed = {bonus = 30}},
+	limitation = alien_life_limitations_navens,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
     name = "yotoi",
-    icon = "__pyalienlife__/graphics/icons/yotoi.png",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
+        {icon = "__pyalienlife__/graphics/icons/yotoi.png"}
+    },
     icon_size = 64,
 	category = "yotoi",
 	tier = 1,
     flags = {},
-    subgroup = "py-alienlife-yotoi",
-    order = "a",
+    subgroup = "py-alienlife-modules",
+    order = "ya",
     stack_size = 10,
 	effect = { speed = {bonus = 20}},
 	limitation = alien_life_limitations_yotoi,
@@ -3193,14 +3513,78 @@ ITEM {
 
 ITEM {
     type = "module",
+    name = "yotoi-mk02",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+        {icon = "__pyalienlife__/graphics/icons/yotoi.png"}
+    },
+    icon_size = 64,
+	category = "yotoi",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "yb",
+    stack_size = 10,
+	effect = { speed = {bonus = 25}},
+	limitation = alien_life_limitations_yotoi,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "yotoi-mk03",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+        {icon = "__pyalienlife__/graphics/icons/yotoi.png"}
+    },
+    icon_size = 64,
+	category = "yotoi",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "yc",
+    stack_size = 10,
+	effect = { speed = {bonus = 30}},
+	limitation = alien_life_limitations_yotoi,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "yotoi-mk04",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlife__/graphics/icons/yotoi.png"}
+    },
+    icon_size = 64,
+	category = "yotoi",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "yd",
+    stack_size = 10,
+	effect = { speed = {bonus = 35}},
+	limitation = alien_life_limitations_yotoi,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
     name = "dhilmos",
-    icon = "__pyalienlife__/graphics/icons/dhilmo.png",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
+        {icon = "__pyalienlife__/graphics/icons/dhilmo.png"}
+    },
     icon_size = 64,
 	category = "dhilmos",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-modules",
-    order = "a",
+    order = "da",
     stack_size = 10,
 	effect = { speed = {bonus = 15}},
 	limitation = alien_life_limitations_dhilmos,
@@ -3209,16 +3593,140 @@ ITEM {
 
 ITEM {
     type = "module",
+    name = "dhilmos-mk02",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+        {icon = "__pyalienlife__/graphics/icons/dhilmo.png"}
+    },
+    icon_size = 64,
+	category = "dhilmos",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "db",
+    stack_size = 10,
+	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_dhilmos,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "dhilmos-mk03",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+        {icon = "__pyalienlife__/graphics/icons/dhilmo.png"}
+    },
+    icon_size = 64,
+	category = "dhilmos",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "dc",
+    stack_size = 10,
+	effect = { speed = {bonus = 25}},
+	limitation = alien_life_limitations_dhilmos,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "dhilmos-mk04",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlife__/graphics/icons/dhilmo.png"}
+    },
+    icon_size = 64,
+	category = "dhilmos",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "dd",
+    stack_size = 10,
+	effect = { speed = {bonus = 30}},
+	limitation = alien_life_limitations_dhilmos,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
     name = "scrondrix",
-    icon = "__pyalienlife__/graphics/icons/scrondrix.png",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
+        {icon = "__pyalienlife__/graphics/icons/scrondrix.png"}
+    },
     icon_size = 64,
 	category = "scrondrix",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-modules",
-    order = "a",
+    order = "sr-a",
     stack_size = 10,
 	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_scrondrix,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "scrondrix-mk02",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+        {icon = "__pyalienlife__/graphics/icons/scrondrix.png"}
+    },
+    icon_size = 64,
+	category = "scrondrix",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "sr-b",
+    stack_size = 10,
+	effect = { speed = {bonus = 25}},
+	limitation = alien_life_limitations_scrondrix,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "scrondrix-mk03",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+        {icon = "__pyalienlife__/graphics/icons/scrondrix.png"}
+    },
+    icon_size = 64,
+	category = "scrondrix",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "sr-c",
+    stack_size = 10,
+	effect = { speed = {bonus = 30}},
+	limitation = alien_life_limitations_scrondrix,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "scrondrix-mk04",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlife__/graphics/icons/scrondrix.png"}
+    },
+    icon_size = 64,
+	category = "scrondrix",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "sr-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 35}},
 	limitation = alien_life_limitations_scrondrix,
 	limitation_message_key = "Its full"
 }
