@@ -3734,13 +3734,17 @@ ITEM {
 ITEM {
     type = "module",
     name = "rennea",
-    icon = "__pyalienlife__/graphics/icons/rennea.png",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
+        {icon = "__pyalienlife__/graphics/icons/rennea.png"}
+    },
     icon_size = 64,
 	category = "rennea",
 	tier = 1,
     flags = {},
-    subgroup = "py-alienlife-rennea",
-    order = "a",
+    subgroup = "py-alienlife-modules",
+    order = "ren-a",
     stack_size = 10,
 	effect = { speed = {bonus = 10}},
 	limitation = alien_life_limitations_rennea,
@@ -3749,14 +3753,78 @@ ITEM {
 
 ITEM {
     type = "module",
+    name = "rennea-mk02",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+        {icon = "__pyalienlife__/graphics/icons/rennea.png"}
+    },
+    icon_size = 64,
+	category = "rennea",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "ren-b",
+    stack_size = 10,
+	effect = { speed = {bonus = 15}},
+	limitation = alien_life_limitations_rennea,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "rennea-mk03",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+        {icon = "__pyalienlife__/graphics/icons/rennea.png"}
+    },
+    icon_size = 64,
+	category = "rennea",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "ren-c",
+    stack_size = 10,
+	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_rennea,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "rennea-mk04",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlife__/graphics/icons/rennea.png"}
+    },
+    icon_size = 64,
+	category = "rennea",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "ren-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 25}},
+	limitation = alien_life_limitations_rennea,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
     name = "phadai",
-    icon = "__pyalienlife__/graphics/icons/phadai.png",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
+        {icon = "__pyalienlife__/graphics/icons/phadai.png"}
+    },
     icon_size = 64,
 	category = "phadai",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-modules",
-    order = "a",
+    order = "ph-a",
     stack_size = 10,
 	effect = { speed = {bonus = 20}},
 	limitation = alien_life_limitations_phadai,
@@ -3765,8 +3833,72 @@ ITEM {
 
 ITEM {
     type = "module",
+    name = "phadai-mk02",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+        {icon = "__pyalienlife__/graphics/icons/phadai.png"}
+    },
+    icon_size = 64,
+	category = "phadai",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "ph-b",
+    stack_size = 10,
+	effect = { speed = {bonus = 25}},
+	limitation = alien_life_limitations_phadai,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "phadai-mk03",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+        {icon = "__pyalienlife__/graphics/icons/phadai.png"}
+    },
+    icon_size = 64,
+	category = "phadai",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "ph-c",
+    stack_size = 10,
+	effect = { speed = {bonus = 30}},
+	limitation = alien_life_limitations_phadai,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "phadai-mk04",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlife__/graphics/icons/phadai.png"}
+    },
+    icon_size = 64,
+	category = "phadai",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "ph-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 35}},
+	limitation = alien_life_limitations_phadai,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
     name = "auog",
-    icon = "__pyalienlife__/graphics/icons/auog.png",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
+        {icon = "__pyalienlife__/graphics/icons/auog.png"}
+    },
     icon_size = 64,
 	category = "auog",
 	tier = 1,
@@ -3783,9 +3915,131 @@ ITEM {
 }
 
 ITEM {
+    type = "module",
+    name = "auog-mk02",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+        {icon = "__pyalienlife__/graphics/icons/auog.png"}
+    },
+    icon_size = 64,
+	category = "auog",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "a-b",
+    stack_size = 10,
+	effect = { speed = {bonus = 55}},
+	limitation = alien_life_limitations_auog,
+    limitation_message_key = "Its full",
+    fuel_category = 'auog',
+    fuel_value = '150MJ',
+    burnt_result = 'used-auog-mk02'
+}
+
+ITEM {
+    type = "module",
+    name = "auog-mk03",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+        {icon = "__pyalienlife__/graphics/icons/auog.png"}
+    },
+    icon_size = 64,
+	category = "auog",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "a-c",
+    stack_size = 10,
+	effect = { speed = {bonus = 60}},
+	limitation = alien_life_limitations_auog,
+    limitation_message_key = "Its full",
+    fuel_category = 'auog',
+    fuel_value = '200MJ',
+    burnt_result = 'used-auog-mk03'
+}
+
+ITEM {
+    type = "module",
+    name = "auog-mk04",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlife__/graphics/icons/auog.png"}
+    },
+    icon_size = 64,
+	category = "auog",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "a-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 65}},
+	limitation = alien_life_limitations_auog,
+    limitation_message_key = "Its full",
+    fuel_category = 'auog',
+    fuel_value = '250MJ',
+    burnt_result = 'used-auog-mk04'
+}
+
+ITEM {
     type = "item",
     name = "used-auog",
-    icon = "__pyalienlife__/graphics/icons/used-auog.png",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/auog.png"},
+        {icon = "__pyalienlife__/graphics/icons/tired.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 1
+}
+
+ITEM {
+    type = "item",
+    name = "used-auog-mk02",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/auog.png"},
+        {icon = "__pyalienlife__/graphics/icons/tired.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 1
+}
+
+ITEM {
+    type = "item",
+    name = "used-auog-mk03",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/auog.png"},
+        {icon = "__pyalienlife__/graphics/icons/tired.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 1
+}
+
+ITEM {
+    type = "item",
+    name = "used-auog-mk04",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/auog.png"},
+        {icon = "__pyalienlife__/graphics/icons/tired.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+    },
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-used",
@@ -3823,13 +4077,17 @@ ITEM {
 ITEM {
     type = "module",
     name = "yaedols",
-    icon = "__pyalienlife__/graphics/icons/yaedols.png",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/yaedols.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
+    },
     icon_size = 64,
 	category = "yaedols",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-modules",
-    order = "a",
+    order = "yaed-a",
     stack_size = 10,
 	effect = { speed = {bonus = 20}},
 	limitation = alien_life_limitations_yaedols,
@@ -3838,14 +4096,78 @@ ITEM {
 
 ITEM {
     type = "module",
+    name = "yaedols-mk02",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/yaedols.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "yaedols",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "yaed-b",
+    stack_size = 10,
+	effect = { speed = {bonus = 25}},
+	limitation = alien_life_limitations_yaedols,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "yaedols-mk03",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/yaedols.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "yaedols",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "yaed-c",
+    stack_size = 10,
+	effect = { speed = {bonus = 30}},
+	limitation = alien_life_limitations_yaedols,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "yaedols-mk04",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/yaedols.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "yaedols",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "yaed-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 35}},
+	limitation = alien_life_limitations_yaedols,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
     name = "dingrits",
-    icon = "__pyalienlife__/graphics/icons/dingrits.png",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/dingrits.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
+    },
     icon_size = 64,
 	category = "dingrits",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-modules",
-    order = "a",
+    order = "d-a",
     stack_size = 10,
 	effect = { speed = {bonus = 20}},
 	limitation = alien_life_limitations_dingrits,
@@ -3856,10 +4178,132 @@ ITEM {
 }
 
 ITEM {
+    type = "module",
+    name = "dingrits-mk02",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/dingrits.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "dingrits",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "d-b",
+    stack_size = 10,
+	effect = { speed = {bonus = 25}},
+	limitation = alien_life_limitations_dingrits,
+    limitation_message_key = "Its full",
+    fuel_category = 'dingrits',
+    fuel_value = '100MJ',
+    burnt_result = 'used-dingrit-mk02'
+}
+
+ITEM {
+    type = "module",
+    name = "dingrits-mk03",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/dingrits.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "dingrits",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "d-c",
+    stack_size = 10,
+	effect = { speed = {bonus = 25}},
+	limitation = alien_life_limitations_dingrits,
+    limitation_message_key = "Its full",
+    fuel_category = 'dingrits',
+    fuel_value = '130MJ',
+    burnt_result = 'used-dingrit-mk03'
+}
+
+ITEM {
+    type = "module",
+    name = "dingrits-mk04",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/dingrits.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "dingrits",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "d-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 30}},
+	limitation = alien_life_limitations_dingrits,
+    limitation_message_key = "Its full",
+    fuel_category = 'dingrits',
+    fuel_value = '170MJ',
+    burnt_result = 'used-dingrit-mk04'
+}
+
+ITEM {
     type = "item",
     name = "used-dingrit",
-    icon = "__pyalienlife__/graphics/icons/used-dingrit.png",
-	icon_size = 64,
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/dingrits.png"},
+        {icon = "__pyalienlife__/graphics/icons/tired.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 1
+}
+
+ITEM {
+    type = "item",
+    name = "used-dingrit-mk02",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/dingrits.png"},
+        {icon = "__pyalienlife__/graphics/icons/tired.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 1
+}
+
+ITEM {
+    type = "item",
+    name = "used-dingrit-mk03",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/dingrits.png"},
+        {icon = "__pyalienlife__/graphics/icons/tired.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 1
+}
+
+ITEM {
+    type = "item",
+    name = "used-dingrit-mk04",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/dingrits.png"},
+        {icon = "__pyalienlife__/graphics/icons/tired.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-used",
     order = "x",
@@ -3869,13 +4313,17 @@ ITEM {
 ITEM {
     type = "module",
     name = "kmauts",
-    icon = "__pyalienlife__/graphics/icons/kmauts.png",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/kmauts.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
+    },
     icon_size = 64,
 	category = "kmauts",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-modules",
-    order = "a",
+    order = "k-a",
     stack_size = 10,
 	effect = { speed = {bonus = 20}},
 	limitation = alien_life_limitations_kmauts,
@@ -3884,16 +4332,140 @@ ITEM {
 
 ITEM {
     type = "module",
+    name = "kmauts-mk02",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/kmauts.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "kmauts",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-b",
+    stack_size = 10,
+	effect = { speed = {bonus = 25}},
+	limitation = alien_life_limitations_kmauts,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "kmauts-mk03",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/kmauts.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "kmauts",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-c",
+    stack_size = 10,
+	effect = { speed = {bonus = 30}},
+	limitation = alien_life_limitations_kmauts,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "kmauts-mk04",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/kmauts.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "kmauts",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 35}},
+	limitation = alien_life_limitations_kmauts,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
     name = "vonix",
-    icon = "__pyalienlife__/graphics/icons/vonix.png",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/vonix.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
+    },
     icon_size = 64,
 	category = "vonix",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-modules",
-    order = "a",
+    order = "v-a",
     stack_size = 10,
 	effect = { speed = {bonus = 100}},
+	limitation = alien_life_limitations_vonix,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "vonix-mk02",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/vonix.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "vonix",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "v-b",
+    stack_size = 10,
+	effect = { speed = {bonus = 105}},
+	limitation = alien_life_limitations_vonix,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "vonix-mk03",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/vonix.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "vonix",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "v-c",
+    stack_size = 10,
+	effect = { speed = {bonus = 110}},
+	limitation = alien_life_limitations_vonix,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "vonix-mk04",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/vonix.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "vonix",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "v-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 115}},
 	limitation = alien_life_limitations_vonix,
 	limitation_message_key = "Its full"
 }
