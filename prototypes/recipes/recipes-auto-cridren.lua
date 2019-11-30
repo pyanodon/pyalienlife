@@ -14,7 +14,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='cridrenseeds'},
-					{name='meat',amount = '*10'},
+					{name='cagedarthurian',amount = '*1'},
 				},
 			results =
 				{
