@@ -7,7 +7,15 @@ global.landbots =
 					{
 						requestors =
 							{
-
+								#id =
+									{
+									chest = entity,
+									controls = entity,
+									requestsinroute =
+										{
+										itemname = amount
+										}
+									}
 							},
 						providers =
 							{
@@ -31,11 +39,26 @@ global.landbots =
 							},
 						position,
 					}
+			},
+		bots =
+			{
+				botid =
+					{
+					unit = unit,
+					carryamount = #,
+					hasitem = bool,
+					isgettingitem = bool,
+					destinationchest =
+						{
+						
+						},
+					
+					}
 			}
 	}
 ]] --
 
-local landbots = {towers = {}}
+local landbots = {towers = {}, bots = {}}
 local towercounter = 0
 --local requesterchests = {}
 
@@ -68,7 +91,8 @@ script.on_event(
                     if tower.totalbotcount < tower.maxcontrolablebotcount then
                         tower.totalbotcount = tower.totalbotcount + 1
                         table.insert(tower.botids, E.unit_number)
-						tower.inactivebots[E.unit_number] = E
+						table.insert(tower.inactivebots, E.unit_number)
+						landbots.bots[E.unit_number] = {unit = E, carryamount = 5, hasitem = false, isgettingitem = false, destinationchest = {}}
                     end
                 end
             end
@@ -78,7 +102,7 @@ script.on_event(
                 --log(serpent.block(t))
                 --log(serpent.block(tower))
                 if E.position.x * tower.position.x + E.position.y * tower.position.y <= 30 * 30 then
-                    tower.requestorchests[E.unit_number] = {chest = E,controls = chestcontrols}
+                    tower.requestorchests[E.unit_number] = {chest = E, controls = chestcontrols, requestsinroute = {}}
                     --requesterchests['chest'..E.unit_number] = chestcontrols
                 end
             end
@@ -110,6 +134,30 @@ script.on_event(
 script.on_event(
     defines.events.on_ai_command_completed,
     function(event)
+	--need to check if is on the way to get an item or drop off items.
+	--need to check if there are requests to fill that are not already in route by another bot
+		log(event.result)
+		if event.result == defines.behavior_result.success then
+			if landbots.bots[event.unit_number].isgettingitem == true then
+				log('it worked')
+				--get stuff from box and set destination to the requester chest that asked for it
+			end
+		end
+		if event.result == defines.behavior_result.in_progress then
+			if landbots.bots[event.unit_number].isgettingitem == true then
+				log('it worked')
+			end
+		end
+		if event.result == defines.behavior_result.fail	then
+			if landbots.bots[event.unit_number].isgettingitem == true then
+				log('it worked')
+			end
+		end
+		if event.result == defines.behavior_result.deleted then
+			if landbots.bots[event.unit_number].isgettingitem == true then
+				log('it worked')
+			end
+		end
     end
 )
 
@@ -149,7 +197,20 @@ for t, tower in pairs(landbots.towers) do
 								if pset[sig.signal.name] ~= nil then
 								--send landbot to get stuff from this provider box
 									for i, inact in pairs(tower.inactivebots) do
-										inact.set_command{type = defines.command.go_to_location, destination = prov.chest.position, radius = 2}
+										local bots = landbots.bots
+										bots[inact].unit.set_command{type = defines.command.go_to_location, destination = prov.chest.position, radius = 4}
+										bots[inact].destinationchest = prov.chest
+										bots[inact].isgettingitem = true
+										table.insert(tower.activebots, inact)
+										table.remove(tower.inactivebots, i)
+										tower.currentlyactivebotcount = tower.currentlyactivebotcount + 1
+										if req.requestsinroute[sig.signal.name] == nil then
+											req.requestsinroute[sig.signal.name] = bots[inact].carryamount
+										else
+											req.requestsinroute[sig.signal.name] = req.requestsinroute[sig.signal.name] + bots[inact].carryamount
+										end
+										log(serpent.block(landbots))
+										break
 									end
 								end
 							end
