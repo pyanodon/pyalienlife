@@ -59,13 +59,13 @@ global.landbots =
 ]] --
 
 local landbots = {towers = {}, bots = {}}
-local towercounter = 0
+--local towercounter = 0
 --local requesterchests = {}
 
 script.on_init(
     function()
         global.landbots = {}
-        global.towercounter = 0
+        --global.towercounter = 0
     end
 )
 
@@ -81,8 +81,20 @@ script.on_event(
             local tower = game.surfaces['nauvis'].create_entity {name = 'lb-control-tower', position = {E.position.x, E.position.y}, force = E.force}
             E.destroy()
 
-            towercounter = towercounter+1
-            landbots.towers[towercounter] = {position = tower.position, totalbotcount = 0, currentlyactivebotcount = 0, maxcontrolablebotcount = 50,botids = {},activebots = {}, inactivebots = {}, requestorchests = {}, providerchests = {}}
+            --towercounter = towercounter+1
+            landbots.towers[tower.unit_number] = {position = tower.position, totalbotcount = 0, currentlyactivebotcount = 0, maxcontrolablebotcount = 50,botids = {},activebots = {}, inactivebots = {}, requestorchests = {}, providerchests = {}}
+			
+			--scan for pre constructed chests and add them if they are not marked as part of another network. 
+			-- find a way to display existing network areas when placing bots, chests, and towers
+			local existingitems = game.surfaces["nauvis"].find_entities({{tower.position.x-25, tower.position.y-25}, {tower.position.x+25, tower.position.y+25}})
+			for e, entity in pairs(existingitems) do
+				if entity.name == 'land-bot' then
+					
+				elseif entity.name == 'lb-requester-chest' then
+					local chestcontrols = game.surfaces['nauvis'].find_entity('lb-requester-controls', entity.position)
+					landbots.towers[tower.unit_number].requestorchests[entity.unit_number] = {chest = entity, controls = chestcontrols, requestsinroute = {}}
+				end
+			end
         elseif E.name == 'land-bot' then
             for t,tower in pairs(landbots.towers) do
                 --log(serpent.block(t))
@@ -101,7 +113,7 @@ script.on_event(
             for t,tower in pairs(landbots.towers) do
                 --log(serpent.block(t))
                 --log(serpent.block(tower))
-                if E.position.x * tower.position.x + E.position.y * tower.position.y <= 30 * 30 then
+                if ((E.position.x - tower.position.x) * (E.position.x - tower.position.x)) + ((E.position.y - tower.position.y) * (E.position.y - tower.position.y)) <= 30 * 30 then
                     tower.requestorchests[E.unit_number] = {chest = E, controls = chestcontrols, requestsinroute = {}}
                     --requesterchests['chest'..E.unit_number] = chestcontrols
                 end
@@ -118,6 +130,16 @@ script.on_event(
         log(serpent.block(landbots))
     end
 )
+
+script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity}, function(event)
+	if event.entity.name == 'lb-control-tower' then
+		for t, tower in pairs(landbots.towers) do
+			if t == event.entity.unit_number then
+				landbots.towers[t] = nil
+			end
+		end
+	end
+end)
 
 script.on_event(
     defines.events.on_put_item,
