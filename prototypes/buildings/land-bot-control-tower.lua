@@ -32,8 +32,8 @@ ENTITY {
     type = "simple-entity-with-owner",
 	name = "lb-control-tower",
     flags = {"placeable-neutral", "placeable-off-grid", "not-on-map"},
-    icon = "__base__/graphics/icons/rock-huge-icon.png",
-    icon_size = 32,
+    icon = "__pyalienlife__/graphics/icons/data-array.png",
+    icon_size = 64,
     subgroup = "grass",
     order = "b[decorative]-l[rock]-a[huge]",
     collision_box = {{-1, -1}, {1, 1}},
@@ -48,6 +48,13 @@ ENTITY {
     count_as_rock_for_filtered_deconstruction = false,
     mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
     vehicle_impact_sound =  { filename = "__base__/sound/car-stone-impact.ogg", volume = 1.0 },
+	working_sound =
+    {
+      sound = { filename = "__pyalienlife__/sounds/tower.ogg", volume = 0.6 },
+      max_sounds_per_type = 3,
+      audible_distance_modifier = 0.5,
+      probability = 1 / (5 * 60) -- average pause between the sound is 5 seconds
+    },
     render_layer = "object",
     max_health = 2000,
     resistances =
@@ -60,18 +67,10 @@ ENTITY {
     pictures =
     {
       {
-        filename = "__base__/graphics/decorative/rock-huge/rock-huge-05.png",
-        width = 101,
-        height = 90,
+        filename = "__pyalienlife__/graphics/entity/tower/tower.png",
+        width = 192,
+        height = 352,
         shift = {0.25, 0.0625},
-        hr_version =
-        {
-          filename = "__base__/graphics/decorative/rock-huge/hr-rock-huge-05.png",
-          width = 201,
-          height = 179,
-          scale = 0.5,
-          shift = {0.25, 0.0625}
-        }
       }
     }
   }

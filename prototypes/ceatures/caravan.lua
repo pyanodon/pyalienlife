@@ -31,6 +31,7 @@ data:extend(
     icon = "__pyalienlife__/graphics/icons/caravan.png",
     icon_size = 64,
     flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "not-repairable", "breaths-air"},
+	minable = {mining_time = 0.1, result = 'caravan'},
     max_health = 25,
     order = "b-b-a",
     subgroup="enemies",

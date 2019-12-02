@@ -58,6 +58,17 @@ global.landbots =
 	}
 ]] --
 
+local botdata =
+	{
+	unit = {},
+	carryamount = 5,
+	hasitem = false,
+	isgettingitem = false,
+	destinationchest = {},
+	inventorycount = 0,
+	itemname = ''
+	}
+
 local landbots = {towers = {}, bots = {}}
 --local towercounter = 0
 --local requesterchests = {}
@@ -93,6 +104,8 @@ script.on_event(
 				elseif entity.name == 'lb-requester-chest' then
 					local chestcontrols = game.surfaces['nauvis'].find_entity('lb-requester-controls', entity.position)
 					landbots.towers[tower.unit_number].requestorchests[entity.unit_number] = {chest = entity, controls = chestcontrols, requestsinroute = {}}
+				elseif entity.name == 'lb-provider-chest' then
+					landbots.towers[tower.unit_number].providerchests[entity.unit_number] = {chest = entity}
 				end
 			end
         elseif E.name == 'land-bot' then
@@ -104,7 +117,9 @@ script.on_event(
                         tower.totalbotcount = tower.totalbotcount + 1
                         table.insert(tower.botids, E.unit_number)
 						table.insert(tower.inactivebots, E.unit_number)
-						landbots.bots[E.unit_number] = {unit = E, carryamount = 5, hasitem = false, isgettingitem = false, destinationchest = {}}
+						landbots.bots[E.unit_number] = botdata
+						landbots.bots[E.unit_number].unit = E
+						--{unit = E, carryamount = 5, hasitem = false, isgettingitem = false, destinationchest = {}}
                     end
                 end
             end
@@ -122,7 +137,7 @@ script.on_event(
             for t,tower in pairs(landbots.towers) do
                 --log(serpent.block(t))
                 --log(serpent.block(tower))
-                if E.position.x * tower.position.x + E.position.y * tower.position.y <= 30 * 30 then
+                if ((E.position.x - tower.position.x) * (E.position.x - tower.position.x)) + ((E.position.y - tower.position.y) * (E.position.y - tower.position.y)) <= 30 * 30 then
                     tower.providerchests[E.unit_number] = {chest = E}
                 end
             end
@@ -158,26 +173,52 @@ script.on_event(
     function(event)
 	--need to check if is on the way to get an item or drop off items.
 	--need to check if there are requests to fill that are not already in route by another bot
+		local lb
 		log(event.result)
+		if landbots.bots[event.unit_number] ~= nil then
+			lb = landbots.bots[event.unit_number]
+		end
 		if event.result == defines.behavior_result.success then
-			if landbots.bots[event.unit_number].isgettingitem == true then
-				log('it worked')
-				--get stuff from box and set destination to the requester chest that asked for it
+			if lb ~= nil then
+				if lb.isgettingitem == true then
+					log('it worked')
+					--get stuff from box and set destination to the requester chest that asked for it
+					local pinventory = lb.destinationchest.get_inventory(defines.inventory.chest).get_contents()
+					local pset = {}
+					for i, inv in pairs(pinventory) do
+						log(serpent.block(i))
+						log(serpent.block(inv))
+						pset[i] = true
+					end
+					if pset[lb.itemname] ~= nil then
+						for i, inv in pairs(pinventory) do
+							if i == lb.itemname then
+								if inv >= lb.carryamount then
+									lb.inventorycount = 5
+									lb.destinationchest.get_inventory(defines.inventory.chest).remove({name=lb.itemname,count=lb.carryamount})
+								elseif inv < lb.carryamount then
+									lb.inventorycount = inv
+									lb.destinationchest.get_inventory(defines.inventory.chest).remove({lb.itemname,count=inv})
+								end
+							end
+						end
+					end
+				end
 			end
 		end
 		if event.result == defines.behavior_result.in_progress then
-			if landbots.bots[event.unit_number].isgettingitem == true then
-				log('it worked')
+			if lb[event.unit_number] ~= nil then
+			
 			end
 		end
 		if event.result == defines.behavior_result.fail	then
-			if landbots.bots[event.unit_number].isgettingitem == true then
-				log('it worked')
+			if lb[event.unit_number] ~= nil then
+			
 			end
 		end
 		if event.result == defines.behavior_result.deleted then
-			if landbots.bots[event.unit_number].isgettingitem == true then
-				log('it worked')
+			if lb[event.unit_number] ~= nil then
+			
 			end
 		end
     end
@@ -204,7 +245,13 @@ for t, tower in pairs(landbots.towers) do
 							log(serpent.block(inv))
 							set[i] = true
 						end
-						if (set[sig.signal.name] ~= nil and inventory[sig.signal.name] < sig.count) or (set[sig.signal.name] == nil) then
+						local requestamount = 0
+						if req.requestsinroute[sig.signal.name] ~= nil then
+							requestamount = sig.count - req.requestsinroute[sig.signal.name] 
+						else
+							requestamount = sig.count
+						end
+						if (set[sig.signal.name] ~= nil and inventory[sig.signal.name] < requestamount) or (set[sig.signal.name] == nil) then
 							log('box isnt full of the stuff we set. send more please')
 							--need to check the providers to see if any of them have what we need
 							for p, prov in pairs(tower.providerchests) do
@@ -223,6 +270,7 @@ for t, tower in pairs(landbots.towers) do
 										bots[inact].unit.set_command{type = defines.command.go_to_location, destination = prov.chest.position, radius = 4}
 										bots[inact].destinationchest = prov.chest
 										bots[inact].isgettingitem = true
+										bots[inact].itemname = sig.signal.name
 										table.insert(tower.activebots, inact)
 										table.remove(tower.inactivebots, i)
 										tower.currentlyactivebotcount = tower.currentlyactivebotcount + 1
