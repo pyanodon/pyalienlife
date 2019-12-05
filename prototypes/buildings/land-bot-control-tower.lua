@@ -4,12 +4,12 @@ RECIPE {
     energy_required = 1,
     enabled = true,
     ingredients = {
-        {"steel-plate", 50},
+        {"iron-plate", 50},
         {"glass", 40},
-        {"titanium-plate", 100},
-        {"duralumin", 50},
-        {"electronic-circuit", 30},
-        {"iron-gear-wheel", 50},
+        {"titanium-plate", 15},
+        {"duralumin", 10},
+        {"electronic-circuit", 20},
+        {"iron-gear-wheel", 40},
     },
     results = {
         {"lb-control-tower", 1}
@@ -19,7 +19,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "lb-control-tower",
-    icon = "__pyalienlife__/graphics/icons/data-array.png",
+    icon = "__pyalienlife__/graphics/icons/control-tower.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-others",
@@ -32,7 +32,7 @@ ENTITY {
     type = "simple-entity-with-owner",
 	name = "lb-control-tower",
     flags = {"placeable-neutral", "placeable-off-grid", "not-on-map"},
-    icon = "__pyalienlife__/graphics/icons/data-array.png",
+    icon = "__pyalienlife__/graphics/icons/control-tower.png",
     icon_size = 64,
     subgroup = "grass",
     order = "b[decorative]-l[rock]-a[huge]",
@@ -50,7 +50,7 @@ ENTITY {
     vehicle_impact_sound =  { filename = "__base__/sound/car-stone-impact.ogg", volume = 1.0 },
 	working_sound =
     {
-      sound = { filename = "__pyalienlife__/sounds/tower.ogg", volume = 0.6 },
+      sound = { filename = "__pyalienlife__/sounds/tower.ogg", volume = 0.65 },
       max_sounds_per_type = 3,
       audible_distance_modifier = 0.5,
       probability = 1 / (5 * 60) -- average pause between the sound is 5 seconds
@@ -70,7 +70,7 @@ ENTITY {
         filename = "__pyalienlife__/graphics/entity/tower/tower.png",
         width = 192,
         height = 352,
-        shift = {0.25, 0.0625},
+        shift = util.by_pixel(32, -112),
       }
     }
   }
