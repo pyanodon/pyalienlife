@@ -19,11 +19,11 @@ ENTITY {
     type = "resource",
     name = "ralesia-flowers",
     --category = "ore-aluminium",
-    icon = "__pyalienlife__/graphics/icons/ralesia-plantation-mk01.png",
-    icon_size = 32,
+    icon = "__pyalienlife__/graphics/icons/ralesia-ore.png",
+    icon_size = 64,
     flags = {"placeable-neutral"},
     order = "a-b-a",
-    map_color = {r = 1, g = 0.709, b = 0.286},
+    map_color = {r = 0.960, g = 0.666, b = 0.0},
     minable = {
         hardness = 1,
         -- mining_particle = "aluminium-ore-particle",
@@ -54,15 +54,24 @@ ENTITY {
         }
     },
 	]]--
-    stage_counts = {2000},--, 1600, 1400, 1200, 800, 400, 200, 10},
+    stage_counts = {800, 400, 200},
     stages = {
         sheet = {
-            filename = "__pyalienlife__/graphics/icons/ores/ralesia.png",
+            filename = "__pyalienlife__/graphics/entity/crops/ralesia/ralesia.png",
             priority = "extra-high",
-            width = 32,
-            height = 32,
-            frame_count = 1,
-            variation_count = 1,
+            width = 64,
+            height = 64,
+            frame_count = 8,
+            variation_count = 3,
+            hr_version = {
+                filename = "__pyalienlife__/graphics/entity/crops/ralesia/hr-ralesia.png",
+                priority = "extra-high",
+                width = 128,
+                height = 128,
+                frame_count = 8,
+                variation_count = 3,
+                scale = 0.5
+            }
         }
     }
 }
