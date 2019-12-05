@@ -45,6 +45,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-farms",
+        group = "py-alienlife",
+        order = "a-g"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-items",
         group = "py-alienlife",
         order = "d"
