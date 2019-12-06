@@ -18,7 +18,7 @@ DATA {
 ENTITY {
     type = "resource",
     name = "ralesia-flowers",
-    --category = "ore-aluminium",
+    category = "ralesia-flowers",
     icon = "__pyalienlife__/graphics/icons/ralesia-ore.png",
     icon_size = 64,
     flags = {"placeable-neutral"},
