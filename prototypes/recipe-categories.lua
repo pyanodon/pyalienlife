@@ -159,4 +159,8 @@ data:extend {
         type = "recipe-category",
         name = "vat"
     },
+	{
+        type = "resource-category",
+        name = "ralesia-flowers"
+    },
 }
