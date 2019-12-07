@@ -1,28 +1,29 @@
 RECIPE {
     type = "recipe",
     name = "harvester",
-    energy_required = 2,
-    enabled = true,
+    energy_required = 0.5,
+    enabled = false,
     ingredients = {
-        {"electric-mining-drill", 1},
-        {"soil-extractormk01", 1},
-        {"electronic-circuit", 20}, --bob basic-electronic-circuit-board
-        {"iron-gear-wheel", 15}, --bob steel-bearing
-        {"transport-belt", 20}
+        {"botanical-nursery-mk03", 2},
+        {"soil-extractormk03", 1},
+        {"processing-unit", 20},
+        {"iron-gear-wheel", 100},
+        {"plastic-bar", 80},
+        {"control-unit", 5},
     },
     results = {
         {"harvester", 1}
     }
-}
+}:add_unlock("mega-farm")
 
 ITEM {
     type = "item",
     name = "harvester",
-    icon = "__pyalienlife__/graphics/icons/mega-farm-ralesia.png",
+    icon = "__pyalienlife__/graphics/icons/harvester.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-extraction",
-    order = "a",
+    subgroup = "py-alienlife-farms",
+    order = "z",
     place_result = "harvester",
     stack_size = 10
 }
@@ -30,10 +31,10 @@ ITEM {
 ENTITY {
     type = "mining-drill",
     name = "harvester",
-    icon = "__pyalienlife__/graphics/icons/mega-farm-ralesia.png",
+    icon = "__pyalienlife__/graphics/icons/harvester.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 1, result = "harvester"},
+    minable = {mining_time = 0.5, result = "harvester"},
     fast_replaceable_group = "harvester",
     max_health = 700,
     resource_categories = {"ralesia-flowers"},
@@ -59,14 +60,14 @@ ENTITY {
     module_specification = {
         module_slots = 1
     },
-    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    allowed_effects = {"consumption", "speed"},
     mining_speed = 2,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
         emissions_per_minute = 0.06,
     },
-    energy_usage = "420kW",
+    energy_usage = "600kW",
     mining_power = 2,
     resource_searching_radius = 3.5,
     vector_to_place_result = {0, -3.65},
@@ -83,7 +84,7 @@ ENTITY {
                 height = 256,
                 line_length = 16,
                 frame_count = 100,
-                animation_speed = 0.1,
+                animation_speed = 0.3,
                 shift = {-1.5, -0.5}
             },
             {
@@ -92,7 +93,7 @@ ENTITY {
                 height = 256,
                 line_length = 16,
                 frame_count = 100,
-                animation_speed = 0.1,
+                animation_speed = 0.3,
                 shift = {2.5, -0.5}
             }
         }
@@ -143,8 +144,8 @@ ENTITY {
 	]]--
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pycoalprocessing__/sounds/borax-mine.ogg"},
-        idle_sound = {filename = "__pycoalprocessing__/sounds/borax-mine.ogg", volume = 1.25},
+        sound = {filename = "__pyalienlife__/sounds/harvester.ogg", volume = 0.9},
+        idle_sound = {filename = "__pyalienlife__/sounds/harvester.ogg", volume = 0.75},
         apparent_volume = 2.5
     }
 }
