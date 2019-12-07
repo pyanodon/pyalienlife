@@ -56,6 +56,7 @@ RECIPE('cadaveric-arum-mk04'):add_unlock('botany-mk04'):subgroup_order("py-alien
 RECIPE('moondrop-greenhouse-mk02'):add_unlock('botany-mk03'):subgroup_order("py-alienlife-buildings-mk02", "b")
 RECIPE('moondrop-greenhouse-mk03'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk03", "b")
 RECIPE('moondrop-greenhouse-mk04'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk04", "b")
+RECIPE('harvester'):replace_ingredient("plastic-bar", "biopolymer"):add_ingredient({type = "item", name = "aerogel", amount = 20})
 
 ----RECIPES----
 RECIPE('dms'):remove_unlock('basic-electronics')

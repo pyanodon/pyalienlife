@@ -70,6 +70,7 @@ ENTITY {
         filename = "__pyalienlife__/graphics/entity/tower/tower.png",
         width = 192,
         height = 352,
+        scale = 0.5,
         shift = util.by_pixel(32, -112),
       }
     }

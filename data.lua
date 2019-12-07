@@ -62,6 +62,7 @@ require("prototypes/technologies/trits")
 require('prototypes/technologies/recombinant-ery')
 require('prototypes/technologies/reca')
 require('prototypes/technologies/orexigenic')
+require('prototypes/technologies/mega-farm')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
