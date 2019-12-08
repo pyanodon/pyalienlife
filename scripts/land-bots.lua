@@ -54,6 +54,20 @@ global.landbots =
 						},
 
 					}
+			},
+		requestorchests =
+			{
+				chestid =
+					{
+						tower = unit_number
+					}
+			},
+		providerchests =
+			{
+				chestid =
+					{
+						tower = unit_number
+					}
 			}
 	}
 ]] --
@@ -71,7 +85,13 @@ local botdata =
 	itemname = ''
 	}
 
-local landbots = {towers = {}, bots = {}}
+local landbots =
+	{
+		towers = {},
+		bots = {},
+		requesterchests = {},
+		providerchests = {}
+	}
 --local towercounter = 0
 --local requesterchests = {}
 
@@ -144,6 +164,7 @@ script.on_event(
                 --log(serpent.block(tower))
                 if ((E.position.x - tower.position.x) * (E.position.x - tower.position.x)) + ((E.position.y - tower.position.y) * (E.position.y - tower.position.y)) <= 30 * 30 then
                     tower.requestorchests[E.unit_number] = {chest = E, controls = chestcontrols, requestsinroute = {}}
+					landbots.requesterchests[E.unit_number] = {tower = t}
                     --requesterchests['chest'..E.unit_number] = chestcontrols
                 end
             end
@@ -153,6 +174,7 @@ script.on_event(
                 --log(serpent.block(tower))
                 if ((E.position.x - tower.position.x) * (E.position.x - tower.position.x)) + ((E.position.y - tower.position.y) * (E.position.y - tower.position.y)) <= 30 * 30 then
                     tower.providerchests[E.unit_number] = {chest = E}
+					landbots.providerchests[E.unit_number] = {tower = t}
                 end
             end
         end
@@ -268,7 +290,7 @@ for t, tower in pairs(landbots.towers) do
 						local inventory = req.chest.get_inventory(defines.inventory.chest).get_contents()
 						local set = {}
 						for i, inv in pairs(inventory) do
-							log(serpent.block(inv))
+							--log(serpent.block(inv))
 							set[i] = true
 						end
 						local requestamount = 0
@@ -321,6 +343,46 @@ for t, tower in pairs(landbots.towers) do
 
 	end
 end
+
+end)
+
+script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity},function(event)
+
+	if event.entity.name == 'land-bot' then
+		local bot = event.entity
+		local t_b_ref = landbots.towers[landbots.bots[bot.unit_number].tower]
+		--remove bot from towers active bots table
+		for ab, active_bot in pairs(t_b_ref.activebots) do
+			if active_bot == bot.unit_number then
+				table.remove(t_b_ref.activebots, ab)
+			end
+		end
+		--remove bot from towers bot id table
+		for id, botid in pairs(t_b_ref.botids) do
+			if botid == bot.unit_number then
+				table.remove(t_b_ref.botids, id)
+			end
+		end
+		--remove bot from towers inactive bots table
+		for iab, inact in pairs(t_b_ref.inactivebots) do
+			if inact == bot.unit_number then
+				table.remove(t_b_ref.inactivebots, iab)
+			end
+		end
+		if event.player_index ~= nil then
+			game.players[event.player_index].insert({name=landbots.bots[bot.unit_number].itemname,count=landbots.bots[bot.unit_number].inventorycount})
+		end
+		
+		--remove bot from bots table 
+		landbots.bots[bot.unit_number] = nil
+	elseif event.entity.name == 'lb-provider-chest' then
+		--remove all refernces to this chest
+		
+	elseif event.entity.name == 'lb-requester-chest' then
+		--remove all refernces to this chest
+		
+	end
+	
 
 end)
 --[[

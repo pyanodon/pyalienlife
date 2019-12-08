@@ -22,8 +22,8 @@ RECIPE {
 ITEM {
     type = "item",
     name = "ralesia-plantation-test",
-    icon = "__pyalienlife__/graphics/icons/ralesia-plantation-mk01.png",
-    icon_size = 32,
+    icon = "__pyalienlife__/graphics/icons/mega-farm-ralesia.png",
+    icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk01",
     order = "e",
@@ -35,8 +35,8 @@ data:extend({
 {
     type = "rocket-silo",
     name = "ralesia-plantation-test",
-    icon = "__pyalienlife__/graphics/icons/ralesia-plantation-mk01.png",
-    icon_size = 32,
+    icon = "__pyalienlife__/graphics/icons/mega-farm-ralesia.png",
+    icon_size = 64,
     flags = {"placeable-player", "player-creation"},
     crafting_categories = {"ralesia-farm"},
     rocket_parts_required = 1,
