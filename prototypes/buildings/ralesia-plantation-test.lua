@@ -2,11 +2,11 @@
 RECIPE {
     type = "recipe",
     name = "ralesia-plantation-test",
-    energy_required = 1,
+    energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"soil", 300},
-        {"pipe", 15}, --bob steel pipe
+        {"concrete", 200},
+        {"niobium-pipe", 35}, --bob steel pipe
         {"electronic-circuit", 25}, --bob basic-electronic-circuit-board
         {"stone", 100}, --bob glass
         {"iron-plate", 30},
@@ -17,7 +17,7 @@ RECIPE {
     results = {
         {"ralesia-plantation-test", 1}
     }
-}:add_unlock("ralesia")
+}:add_unlock("mega-farm")
 
 ITEM {
     type = "item",
@@ -25,8 +25,8 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/mega-farm-ralesia.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
-    order = "e",
+    subgroup = "py-alienlife-farms",
+    order = "a",
     place_result = "ralesia-plantation-test",
     stack_size = 10
 }
@@ -49,14 +49,14 @@ data:extend({
     },
     --fixed_recipe = "rocket-part",
     show_recipe_icon = true,
-    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    allowed_effects = {"consumption", "speed"},
     minable = {mining_time = 1, result = "ralesia-plantation-test"},
     max_health = 5000,
     dying_explosion = "medium-explosion",
     corpse = "rocket-silo-generic-remnants",
-    collision_box = {{-4.40, -4.40}, {4.40, 4.40}},
-    selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
-    hole_clipping_box = { {-2.75, -1.15}, {2.75, 2.25} },
+    collision_box = {{-3.5, -3.5}, {3.5, 3.5}},
+    selection_box = {{-12, -12}, {12, 12}},
+    hole_clipping_box = { {-0.5, -0.5}, {0.5, 0.5} },
     resistances =
     {
       {
@@ -72,29 +72,31 @@ data:extend({
 	fluid_boxes = {
         --1
         {
-            production_type = "input",
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", {-0.0, 3.837}, {-0.0, -3.837}, {4.0, 0.0}, {-4.0, 0.0}, pipes),
-            pipe_covers = DATA.Pipes.covers(true, true, true, true),
-            base_area = 10,
-            base_level = -1,
-            pipe_connections = {{type = "input", position = {0.0, 4.5}}}
-        },
-        {
-            production_type = "input",
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", {-0.0, 3.837}, {-0.0, -3.837}, {4.0, 0.0}, {-4.0, 0.0}, pipes),
-            pipe_covers = DATA.Pipes.covers(true, true, true, true),
-            base_area = 10,
-            base_level = -1,
-            pipe_connections = {{type = "input", position = {0.0, -4.5}}}
-        },
+          production_type = "input",
+          pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {-0.00, -0.95}, nil, nil),
+          pipe_covers = DATA.Pipes.covers(true, true, true, true),
+          base_area = 10,
+          base_level = -1,
+          pipe_connections = {{type = "input", position = {0.0, 4.0}}},
+          priority = "extra-high"
+      },
+      {
+        production_type = "input",
+        pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {-0.00, -0.95}, nil, nil),
+        pipe_covers = DATA.Pipes.covers(true, true, true, true),
+        base_area = 10,
+        base_level = -1,
+        pipe_connections = {{type = "input", position = {0.0, -4.0}}},
+        priority = "extra-high"
+    },
     },
     energy_source =
     {
       type = "electric",
       usage_priority = "primary-input"
     },
-    energy_usage = "250kW", --energy usage used when crafting the rocket
-    idle_energy_usage = "10KW",
+    energy_usage = "650kW", --energy usage used when crafting the rocket
+    idle_energy_usage = "150KW",
     lamp_energy_usage = "10KW",
     active_energy_usage = "3990KW",
     rocket_entity = "rocket-silo-rocket",
@@ -149,24 +151,11 @@ data:extend({
 
     shadow_sprite =
     {
-      filename = "__base__/graphics/entity/rocket-silo/00-rocket-silo-shadow.png",
-      priority = "medium",
-      width = 304,
-      height = 290,
-      draw_as_shadow = true,
-      slice = 2,
-      shift = util.by_pixel(8, 2),
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/rocket-silo/hr-00-rocket-silo-shadow.png",
-        priority = "medium",
-        width = 612,
-        height = 578,
-        draw_as_shadow = true,
-        slice = 2,
-        shift = util.by_pixel(7, 2),
-        scale = 0.5
-      },
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      width = 32,
+      height = 32,
+      --slice = 2,
+      shift = util.by_pixel(0, 0),
     },
     --satellite_shadow_animation =
     --{
@@ -196,99 +185,55 @@ data:extend({
 
     hole_sprite =
     {
-      filename = "__base__/graphics/entity/rocket-silo/01-rocket-silo-hole.png",
-      width = 202,
-      height = 136,
-      shift = util.by_pixel(-6, 16),
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/rocket-silo/hr-01-rocket-silo-hole.png",
-        width = 400,
-        height = 270,
-        shift = util.by_pixel(-5, 16),
-        scale = 0.5
-      }
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      width = 32,
+      height = 32,
+      --slice = 2,
+      shift = util.by_pixel(0, 0),
     },
     hole_light_sprite =
     {
-      filename = "__base__/graphics/entity/rocket-silo/01-rocket-silo-hole-light.png",
-      width = 202,
-      height = 136,
-      shift = util.by_pixel(-6, 16),
-      tint = {1,1,1,0},
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/rocket-silo/hr-01-rocket-silo-hole-light.png",
-        width = 400,
-        height = 270,
-        shift = util.by_pixel(-5, 16),
-        tint = {1,1,1,0},
-        scale = 0.5
-      }
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      width = 32,
+      height = 32,
+      --slice = 2,
+      shift = util.by_pixel(0, 0),
     },
 
     rocket_shadow_overlay_sprite =
     {
-      filename = "__base__/graphics/entity/rocket-silo/03-rocket-over-shadow-over-rocket.png",
-      width = 212,
-      height = 142,
-      shift = util.by_pixel(-2, 22),
-      hr_version = {
-        filename = "__base__/graphics/entity/rocket-silo/hr-03-rocket-over-shadow-over-rocket.png",
-        width = 426,
-        height = 288,
-        shift = util.by_pixel(-2, 21),
-        scale = 0.5
-      }
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      width = 32,
+      height = 32,
+      --slice = 2,
+      shift = util.by_pixel(0, 0),
     },
     rocket_glow_overlay_sprite =
     {
-      filename = "__base__/graphics/entity/rocket-silo/03-rocket-over-glow.png",
-      blend_mode = "additive",
-      width = 218,
-      height = 222,
-      shift = util.by_pixel(-4, 36),
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/rocket-silo/hr-03-rocket-over-glow.png",
-        blend_mode = "additive",
-        width = 434,
-        height = 446,
-        shift = util.by_pixel(-3, 36),
-        scale = 0.5
-      }
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      width = 32,
+      height = 32,
+      --slice = 2,
+      shift = util.by_pixel(0, 0),
     },
 
 
     door_back_sprite =
     {
-      filename = "__base__/graphics/entity/rocket-silo/04-door-back.png",
-      width = 158,
-      height = 144,
-      shift = util.by_pixel(36, 12),
-      hr_version = {
-        filename = "__base__/graphics/entity/rocket-silo/hr-04-door-back.png",
-        width = 312,
-        height = 286,
-        shift = util.by_pixel(37, 12),
-        scale = 0.5
-      }
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      width = 32,
+      height = 32,
+      --slice = 2,
+      shift = util.by_pixel(0, 0),
     },
     door_back_open_offset = {1.8, -1.8 * 0.43299225},
     door_front_sprite =
     {
-      filename = "__base__/graphics/entity/rocket-silo/05-door-front.png",
-      width = 166,
-      height = 152,
-      shift = util.by_pixel(-28, 32),
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/rocket-silo/hr-05-door-front.png",
-        width = 332,
-        height = 300,
-        shift = util.by_pixel(-28, 33),
-        scale = 0.5
-      }
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      width = 32,
+      height = 32,
+      --slice = 2,
+      shift = util.by_pixel(0, 0),
     },
     door_front_open_offset = {-1.8, 1.8 * 0.43299225},
 
@@ -298,14 +243,6 @@ data:extend({
       width = 300,
       height = 300,
       shift = util.by_pixel(2, -2),
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/rocket-silo/hr-06-rocket-silo.png",
-        width = 608,
-        height = 596,
-        shift = util.by_pixel(3, -1),
-        scale = 0.5
-      }
     },
     --base_night_sprite =
     --{
@@ -327,104 +264,11 @@ data:extend({
     {
       layers =
       {
-        {
-          filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
-          width = 32,
-          height = 32,
-          shift = {1.34375, 0.28125-1.375},
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/hr-red-light.png",
-            width = 32,
-            height = 32,
-            shift = {1.34375, 0.28125-1.375},
-            scale = 0.5
-          }
-        },
-        {
-          filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
-          width = 32,
-          height = 32,
-          shift = {2.3125, 0.9375-1.375},
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/hr-red-light.png",
-            width = 32,
-            height = 32,
-            shift = {2.3125, 0.9375-1.375},
-            scale = 0.5
-          }
-        },
-        {
-          filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
-          width = 32,
-          height = 32,
-          shift = {2.65625, 1.90625-1.375},
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/hr-red-light.png",
-            width = 32,
-            height = 32,
-            shift = {2.65625, 1.90625-1.375},
-            scale = 0.5
-          }
-        },
-        {
-          filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
-          width = 32,
-          height = 32,
-          shift = {-2.65625, 1.90625-1.375},
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/hr-red-light.png",
-            width = 32,
-            height = 32,
-            shift = {-2.65625, 1.90625-1.375},
-            scale = 0.5
-          }
-        },
-        {
-          filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
-          width = 32,
-          height = 32,
-          shift = {-2.3125, 0.9375-1.375},
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/hr-red-light.png",
-            width = 32,
-            height = 32,
-            shift = {-2.3125, 0.9375-1.375},
-            scale = 0.5
-          }
-        },
-        {
-          filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
-          width = 32,
-          height = 32,
-          shift = {-1.34375, 0.28125-1.375},
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/hr-red-light.png",
-            width = 32,
-            height = 32,
-            shift = {-1.34375, 0.28125-1.375},
-            scale = 0.5
-          }
-        },
-        {
-          filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
-          width = 32,
-          height = 32,
-          shift = {0, 0-1.375},
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/hr-red-light.png",
-            width = 32,
-            height = 32,
-            shift = {0, 0-1.375},
-            scale = 0.5
-          }
-        }
+        filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+        width = 32,
+        height = 32,
+        --slice = 2,
+        shift = util.by_pixel(0, 0),
       }
     },
 
@@ -433,186 +277,72 @@ data:extend({
       layers =
       {
         {
-          filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
+          filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
           width = 32,
           height = 32,
-          shift = {2.3125, 2.8125-1.375},
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/hr-red-light.png",
-            width = 32,
-            height = 32,
-            shift = {2.3125, 2.8125-1.375},
-            scale = 0.5
-          }
+          --slice = 2,
+          shift = util.by_pixel(0, 0),
         },
-        {
-          filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
-          width = 32,
-          height = 32,
-          shift = {1.34375, 3.40625-1.375},
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/hr-red-light.png",
-            width = 32,
-            height = 32,
-            shift = {1.34375, 3.40625-1.375},
-            scale = 0.5
-          }
-        },
-        {
-          filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
-          width = 32,
-          height = 32,
-          shift = {0, 3.75-1.375},
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/hr-red-light.png",
-            width = 32,
-            height = 32,
-            shift = {0, 3.75-1.375},
-            scale = 0.5
-          }
-        },
-        {
-          filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
-          width = 32,
-          height = 32,
-          shift = {-1.34375, 3.40625-1.375},
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/hr-red-light.png",
-            width = 32,
-            height = 32,
-            shift = {0, 3.75-1.375},
-            scale = 0.5
-          }
-        },
-        {
-          filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
-          width = 32,
-          height = 32,
-          shift = {-2.3125, 2.8125-1.375},
-          hr_version = {
-            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/hr-red-light.png",
-            width = 32,
-            height = 32,
-            shift = {-2.3125, 2.8125-1.375},
-            scale = 0.5
-          }
-        }
       }
     },
     satellite_animation =
     {
-      filename = "__base__/graphics/entity/rocket-silo/15-rocket-silo-turbine.png",
-      priority = "medium",
-      width = 28,
-      height = 46,
-      frame_count = 32,
-      line_length = 8,
-      animation_speed = 0.4,
-      shift = util.by_pixel(-100, 110),
-      hr_version = {
-        filename = "__base__/graphics/entity/rocket-silo/hr-15-rocket-silo-turbine.png",
-        priority = "medium",
-        width = 54,
-        height = 88,
-        frame_count = 32,
-        line_length = 8,
-        animation_speed = 0.4,
-        shift = util.by_pixel(-100, 111),
-        scale = 0.5
-      }
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      width = 32,
+      height = 32,
+      frame_count = 1,
+      line_length = 1,
+      animation_speed = 0.3,
+      shift = util.by_pixel(0, 0),
     },
 
     arm_01_back_animation =
     {
-      filename = "__base__/graphics/entity/rocket-silo/08-rocket-silo-arms-back.png",
-      priority = "medium",
-      width = 66,
-      height = 76,
-      frame_count = 32,
-      line_length = 32,
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      width = 32,
+      height = 32,
+      frame_count = 1,
+      line_length = 1,
       animation_speed = 0.3,
-      shift = util.by_pixel(-54, -84),
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/rocket-silo/hr-08-rocket-silo-arms-back.png",
-        priority = "medium",
-        width = 128,
-        height = 150,
-        frame_count = 32,
-        line_length = 32,
-        animation_speed = 0.3,
-        shift = util.by_pixel(-53, -84),
-        scale = 0.5
-      }
+      shift = util.by_pixel(0, 0),
     },
 
     arm_02_right_animation =
     {
-      filename = "__base__/graphics/entity/rocket-silo/08-rocket-silo-arms-right.png",
-      priority = "medium",
-      width = 94,
-      height = 94,
-      frame_count = 32,
-      line_length = 32,
-      animation_speed = 0.3,
-      shift = util.by_pixel(100, -38),
-      hr_version =
       {
-        filename = "__base__/graphics/entity/rocket-silo/hr-08-rocket-silo-arms-right.png",
-        priority = "medium",
-        width = 182,
-        height = 188,
-        frame_count = 32,
-        line_length = 32,
+        filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+        width = 32,
+        height = 32,
+        frame_count = 1,
+        line_length = 1,
         animation_speed = 0.3,
-        shift = util.by_pixel(101, -38),
-        scale = 0.5
-      }
+        shift = util.by_pixel(0, 0),
+      },
     },
 
     arm_03_front_animation =
     {
-      filename = "__base__/graphics/entity/rocket-silo/13-rocket-silo-arms-front.png",
-      priority = "medium",
-      width = 66,
-      height = 114,
-      frame_count = 32,
-      line_length = 32,
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      width = 32,
+      height = 32,
+      frame_count = 1,
+      line_length = 1,
       animation_speed = 0.3,
-      shift = util.by_pixel(-52, 16),
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/rocket-silo/hr-13-rocket-silo-arms-front.png",
-        priority = "medium",
-        width = 126,
-        height = 228,
-        frame_count = 32,
-        line_length = 32,
-        animation_speed = 0.3,
-        shift = util.by_pixel(-51, 16),
-        scale = 0.5
-      }
+      shift = util.by_pixel(0, 0),
     },
 
     base_front_sprite =
     {
-      filename = "__base__/graphics/entity/rocket-silo/14-rocket-silo-front.png",
-      width = 292,
-      height = 132,
-      shift = util.by_pixel(-2, 78),
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/rocket-silo/hr-14-rocket-silo-front.png",
-        width = 580,
-        height = 262,
-        shift = util.by_pixel(-1, 78),
-        scale = 0.5
-      }
+      filename = "__pyalienlife__/graphics/entity/mega-farm/farm/a1.png",
+      width = 128,
+      height = 288,
+      frame_count = 100,
+      line_length = 16,
+      animation_speed = 0.3,
+      shift = util.by_pixel(-0, 0),
     },
+
+
     silo_fade_out_start_distance = 8,
     silo_fade_out_end_distance = 15,
 
