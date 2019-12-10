@@ -1719,6 +1719,83 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "brain-caged-phadai",
+    icon = "__pyalienlife__/graphics/icons/brain-caged-phadai.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-phadai",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "bone-caged-phadai",
+    icon = "__pyalienlife__/graphics/icons/bone-caged-phadai.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-phadai",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "meat-caged-phadai",
+    icon = "__pyalienlife__/graphics/icons/meat-caged-phadai.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-phadai",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "blood-caged-phadai",
+    icon = "__pyalienlife__/graphics/icons/blood-caged-phadai.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-phadai",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "skin-caged-phadai",
+    icon = "__pyalienlife__/graphics/icons/skin-caged-phadai.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-phadai",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "guts-caged-phadai",
+    icon = "__pyalienlife__/graphics/icons/guts-caged-phadai.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-phadai",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "fat-caged-phadai",
+    icon = "__pyalienlife__/graphics/icons/fat-caged-phadai.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-phadai",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "earth-tiger-sample",
     icon = "__pyalienlife__/graphics/icons/earth-tiger-sample.png",
 	icon_size = 64,
@@ -2791,6 +2868,17 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-latex",
+    order = "f",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "energy-drink",
+    icon = "__pyalienlife__/graphics/icons/energy-drink.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
     order = "f",
     stack_size = 10
 }
