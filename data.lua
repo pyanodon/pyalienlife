@@ -217,6 +217,7 @@ require('prototypes/recipes/recipes-zipir')
 require('prototypes/recipes/recipes-trits')
 require('prototypes/recipes/recipes-recharge')
 require('prototypes/recipes/recipes-vat')
+require('prototypes/recipes/recipes-auto-ralesia-farm-test')
 
 --(( ORES ))--
 require('prototypes/ores/ralesia')

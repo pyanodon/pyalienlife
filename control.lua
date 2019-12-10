@@ -5,8 +5,6 @@ require('scripts/techswap')
 
 require('scripts/land-bots')
 
-require('scripts/farms')
+require('scripts/farm-script')
 
-script.on_init(function()
-
-end)
+require('scripts/farm-ralesia')

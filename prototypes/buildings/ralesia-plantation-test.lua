@@ -239,11 +239,26 @@ data:extend({
 
     base_day_sprite =
     {
-      filename = "__base__/graphics/entity/rocket-silo/06-rocket-silo.png",
-      width = 300,
-      height = 300,
-      shift = util.by_pixel(2, -2),
+        filename = "__pyalienlife__/graphics/entity/mega-farm/farm/a2.png",
+		width = 128,
+		height = 288,
+		frame_count = 100,
+		line_length = 16,
+		animation_speed = 0.3,
+		shift = {2, 0},
     },
+	
+    base_front_sprite =
+    {
+                filename = "__pyalienlife__/graphics/entity/mega-farm/farm/a1.png",
+				width = 128,
+				height = 288,
+				frame_count = 100,
+				line_length = 16,
+				animation_speed = 0.3,
+				shift = {-2, 0},
+    },
+
     --base_night_sprite =
     --{
     --  filename = "__base__/graphics/entity/rocket-silo/06-silo-base/06-silo-base-night.png",
@@ -262,14 +277,11 @@ data:extend({
 
     red_lights_back_sprites =
     {
-      layers =
-      {
         filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
         width = 32,
         height = 32,
         --slice = 2,
         shift = util.by_pixel(0, 0),
-      }
     },
 
     red_lights_front_sprites =
@@ -309,7 +321,6 @@ data:extend({
 
     arm_02_right_animation =
     {
-      {
         filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
         width = 32,
         height = 32,
@@ -317,7 +328,6 @@ data:extend({
         line_length = 1,
         animation_speed = 0.3,
         shift = util.by_pixel(0, 0),
-      },
     },
 
     arm_03_front_animation =
@@ -330,18 +340,6 @@ data:extend({
       animation_speed = 0.3,
       shift = util.by_pixel(0, 0),
     },
-
-    base_front_sprite =
-    {
-      filename = "__pyalienlife__/graphics/entity/mega-farm/farm/a1.png",
-      width = 128,
-      height = 288,
-      frame_count = 100,
-      line_length = 16,
-      animation_speed = 0.3,
-      shift = util.by_pixel(-0, 0),
-    },
-
 
     silo_fade_out_start_distance = 8,
     silo_fade_out_end_distance = 15,
