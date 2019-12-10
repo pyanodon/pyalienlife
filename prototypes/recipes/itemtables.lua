@@ -183,6 +183,21 @@ items.inputs.fatcagedscrondrix = {'fat-caged-scrondrix', 1}
 items.inputs.scrondrixcub = {'scrondrix-pup', 1}
 items.inputs.pinealgland = {'pineal-gland', 1}
 
+items.inputs.cagedphadai = {'caged-phadai', 1}
+items.inputs.braincagedphadai = {'brain-caged-phadai', 1}
+items.inputs.bonecagedphadai = {'bone-caged-phadai', 1}
+items.inputs.meatcagedphadai = {'meat-caged-phadai', 1}
+items.inputs.bloodcagedphadai = {'blood-caged-phadai', 1}
+items.inputs.skincagedphadai = {'skin-caged-phadai', 1}
+items.inputs.gutscagedphadai = {'guts-caged-phadai', 1}
+items.inputs.fatcagedphadai = {'fat-caged-phadai', 1}
+items.inputs.phadaipup = {'phadai-pup', 1}
+items.inputs.carapace = {'carapace', 1}
+items.inputs.energydrink = {'energy-drink', 1}
+items.inputs.speaker = {'programmable-speaker', 1}
+items.inputs.phadaifood01 = {'phadai-food-01', 1}
+items.inputs.phadaifood02 = {'phadai-food-02', 1}
+
 items.outputs = items.inputs
 --can put output replacements below here
 
