@@ -144,7 +144,7 @@ data:extend({
     --},
     base_engine_light =
     {
-      intensity = 1,
+      intensity = 0,
       size = 25,
       shift = {0, 1.5}
     },
@@ -254,26 +254,11 @@ data:extend({
 	
     base_front_sprite =
     {
-      layers = {
-        {
-        filename = "__pyalienlife__/graphics/entity/mega-farm/farm/a1.png",
-				width = 128,
-				height = 288,
-				frame_count = 100,
-				line_length = 16,
-				animation_speed = 0.3,
-        shift = util.by_pixel(-48, -64),
-        },
-        {
-          filename = "__pyalienlife__/graphics/entity/mega-farm/farm/a2.png",
-          width = 128,
-          height = 288,
-          frame_count = 100,
-          line_length = 16,
-          animation_speed = 0.3,
-          shift = util.by_pixel(80, -64),
-          },
-      }
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      width = 32,
+      height = 32,
+      --slice = 2,
+      shift = util.by_pixel(0, 0),
     },
 
     --base_night_sprite =
@@ -316,14 +301,36 @@ data:extend({
     },
     satellite_animation =
     {
-      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
-      width = 32,
-      height = 32,
-      frame_count = 1,
-      line_length = 1,
-      animation_speed = 0.3,
-      shift = util.by_pixel(0, 0),
-    },
+    layers = {
+            {
+            filename = "__pyalienlife__/graphics/entity/mega-farm/farm/a1.png",
+            width = 128,
+            height = 288,
+            frame_count = 100,
+            line_length = 16,
+            animation_speed = 0.15,
+            shift = util.by_pixel(-48, -64),
+            },
+            {
+              filename = "__pyalienlife__/graphics/entity/mega-farm/farm/a2.png",
+              width = 128,
+              height = 288,
+              frame_count = 100,
+              line_length = 16,
+              animation_speed = 0.15,
+              shift = util.by_pixel(80, -64),
+              },
+              {
+                filename = "__pyalienlife__/graphics/entity/mega-farm/farm/a3.png",
+                width = 32,
+                height = 288,
+                frame_count = 100,
+                line_length = 16,
+                animation_speed = 0.15,
+                shift = util.by_pixel(160, -64),
+                },  
+    }
+  },
 
     arm_01_back_animation =
     {
