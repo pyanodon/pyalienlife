@@ -55,7 +55,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     corpse = "rocket-silo-generic-remnants",
     collision_box = {{-3.5, -3.5}, {3.5, 3.5}},
-    selection_box = {{-12, -12}, {12, 12}},
+    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     hole_clipping_box = { {-0.5, -0.5}, {0.5, 0.5} },
     resistances =
     {
@@ -73,8 +73,8 @@ data:extend({
         --1
         {
           production_type = "input",
+          pipe_covers = DATA.Pipes.covers(false, true, true, true),
           pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {-0.00, -0.95}, nil, nil),
-          pipe_covers = DATA.Pipes.covers(true, true, true, true),
           base_area = 10,
           base_level = -1,
           pipe_connections = {{type = "input", position = {0.0, 4.0}}},
@@ -82,8 +82,8 @@ data:extend({
       },
       {
         production_type = "input",
+        pipe_covers = DATA.Pipes.covers(false, true, true, true),
         pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {-0.00, -0.95}, nil, nil),
-        pipe_covers = DATA.Pipes.covers(true, true, true, true),
         base_area = 10,
         base_level = -1,
         pipe_connections = {{type = "input", position = {0.0, -4.0}}},
@@ -155,7 +155,7 @@ data:extend({
       width = 32,
       height = 32,
       --slice = 2,
-      shift = util.by_pixel(0, 0),
+      shift = util.by_pixel(0, -0),
     },
     --satellite_shadow_animation =
     --{
@@ -239,24 +239,41 @@ data:extend({
 
     base_day_sprite =
     {
-        filename = "__pyalienlife__/graphics/entity/mega-farm/farm/a2.png",
-		width = 128,
-		height = 288,
-		frame_count = 100,
-		line_length = 16,
-		animation_speed = 0.3,
-		shift = {2, 0},
-    },
+      layers = {
+        {
+        filename = "__pyalienlife__/graphics/entity/mega-farm/farm/bot.png",
+        width = 288,
+        height = 64,
+        frame_count = 100,
+        line_length = 7,
+        animation_speed = 0.3,
+        shift = util.by_pixel(32, 112),
+        },
+      }
+  },
 	
     base_front_sprite =
     {
-                filename = "__pyalienlife__/graphics/entity/mega-farm/farm/a1.png",
+      layers = {
+        {
+        filename = "__pyalienlife__/graphics/entity/mega-farm/farm/a1.png",
 				width = 128,
 				height = 288,
 				frame_count = 100,
 				line_length = 16,
 				animation_speed = 0.3,
-				shift = {-2, 0},
+        shift = util.by_pixel(-48, -64),
+        },
+        {
+          filename = "__pyalienlife__/graphics/entity/mega-farm/farm/a2.png",
+          width = 128,
+          height = 288,
+          frame_count = 100,
+          line_length = 16,
+          animation_speed = 0.3,
+          shift = util.by_pixel(80, -64),
+          },
+      }
     },
 
     --base_night_sprite =

@@ -117,7 +117,7 @@ require('prototypes/buildings/land-bot-control-tower')
 require('prototypes/buildings/land-bot-roboport')
 require('prototypes/buildings/land-bot-requester-chest')
 require('prototypes/buildings/land-bot-provider-chest')
---require('prototypes/buildings/ralesia-plantation-test')
+require('prototypes/buildings/ralesia-plantation-test')
 require('prototypes/buildings/vat-brain')
 require("prototypes/buildings/harvester")
 
