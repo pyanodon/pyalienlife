@@ -69,7 +69,7 @@ ENTITY {
     },
     energy_usage = "600kW",
     mining_power = 2,
-    resource_searching_radius = 4,
+    resource_searching_radius = 4.5,
     vector_to_place_result = {0, -4.05},
     radius_visualisation_picture = {
         filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-radius-visualization.png",
