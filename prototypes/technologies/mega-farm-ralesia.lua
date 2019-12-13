@@ -1,13 +1,13 @@
 TECHNOLOGY {
     type = "technology",
-    name = "mega-farm",
-    icon = "__pyalienlife__/graphics/technology/mega-farm.png",
+    name = "mega-farm-ralesia",
+    icon = "__pyalienlife__/graphics/technology/mega-farm-ralesia.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"botany-mk04","fusion-mk01"},
+    prerequisites = {"mega-farm"},
     effects = {},
     unit = {
-        count = 300,
+        count = 100,
         ingredients = {
             {'automation-science-pack', 4},
             {'logistic-science-pack', 3},

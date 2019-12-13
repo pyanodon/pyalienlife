@@ -786,6 +786,8 @@ RECIPE {
     energy_required = 15,
     ingredients = {
         {type = 'item', name = 'aluminium-plate', amount = 5},
+        {type = 'item', name = 'nexelit-plate', amount = 5},
+        {type = 'item', name = 'titanium-plate', amount = 2},
         {type = 'item', name = 'boron', amount = 3},
         {type = 'item', name = 'nickel-plate', amount = 6},
         {type = 'fluid', name = 'vacuum', amount = 50},

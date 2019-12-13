@@ -63,6 +63,7 @@ require('prototypes/technologies/recombinant-ery')
 require('prototypes/technologies/reca')
 require('prototypes/technologies/orexigenic')
 require('prototypes/technologies/mega-farm')
+require('prototypes/technologies/mega-farm-ralesia')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -219,7 +220,8 @@ require('prototypes/recipes/recipes-trits')
 require('prototypes/recipes/recipes-recharge')
 require('prototypes/recipes/recipes-vat')
 require('prototypes/recipes/recipes-phadai-products')
-require('prototypes/recipes/recipes-auto-ralesia-farm-test')
+--require('prototypes/recipes/recipes-auto-ralesia-farm-test')
+require('prototypes/recipes/recipes-ralesia-megafarm')
 
 --(( ORES ))--
 require('prototypes/ores/ralesia')
