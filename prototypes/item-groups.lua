@@ -267,6 +267,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-replicators",
+        group = "py-alienlife",
+        order = "l"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-used",
         group = "py-alienlife",
         order = "x"

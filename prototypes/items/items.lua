@@ -4686,6 +4686,24 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+---replicators----
+
+ITEM {
+    type = "item",
+    name = "replicator-ralesia",
+    icon = "__pyalienlife__/graphics/icons/replicator-ralesia.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-replicators",
+    order = "x",
+    stack_size = 10
+}
+
+
+
+
+
+------------------------------
 data:extend(
 {
   {
