@@ -1,40 +1,40 @@
 
 RECIPE {
     type = "recipe",
-    name = "ralesia-plantation-test",
+    name = "mega-farm",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
         {"concrete", 200},
-        {"niobium-pipe", 35}, --bob steel pipe
-        {"electronic-circuit", 25}, --bob basic-electronic-circuit-board
-        {"stone", 100}, --bob glass
+        {"niobium-pipe", 35},
+        {"electronic-circuit", 25},
+        {"stone", 100},
         {"iron-plate", 30},
         {"duralumin", 10},
         {"treated-wood", 50},
         {"small-lamp", 20}
     },
     results = {
-        {"ralesia-plantation-test", 1}
+        {"mega-farm", 1}
     }
 }:add_unlock("mega-farm")
 
 ITEM {
     type = "item",
-    name = "ralesia-plantation-test",
+    name = "mega-farm",
     icon = "__pyalienlife__/graphics/icons/mega-farm-ralesia.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-farms",
     order = "a",
-    place_result = "ralesia-plantation-test",
+    place_result = "mega-farm",
     stack_size = 10
 }
 
 data:extend({
 {
     type = "rocket-silo",
-    name = "ralesia-plantation-test",
+    name = "mega-farm",
     icon = "__pyalienlife__/graphics/icons/mega-farm-ralesia.png",
     icon_size = 64,
     flags = {"placeable-player", "player-creation"},
@@ -50,7 +50,7 @@ data:extend({
     --fixed_recipe = "rocket-part",
     show_recipe_icon = true,
     allowed_effects = {"consumption", "speed"},
-    minable = {mining_time = 1, result = "ralesia-plantation-test"},
+    minable = {mining_time = 1, result = "mega-farm"},
     max_health = 5000,
     dying_explosion = "medium-explosion",
     corpse = "rocket-silo-generic-remnants",
