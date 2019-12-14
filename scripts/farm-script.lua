@@ -25,7 +25,7 @@ end)
 script.on_event(
     defines.events.on_rocket_launched,
     function(event)
-        if event.rocket_silo.name == 'ralesia-plantation-test' then
+        if event.rocket_silo.name == 'mega-farm' then
             --log(serpent.block(event))
             log(serpent.block(event.rocket.get_inventory(defines.inventory.rocket).get_contents()))
 

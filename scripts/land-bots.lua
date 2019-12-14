@@ -381,6 +381,8 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 	elseif event.entity.name == 'lb-requester-chest' then
 		--remove all refernces to this chest
 		
+	elseif event.entity.name == 'lb-control-tower' then
+	
 	end
 	
 
