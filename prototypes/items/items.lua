@@ -3824,7 +3824,7 @@ ITEM {
     name = "rennea",
     icons =
 	{
-        {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
+        --{icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
         {icon = "__pyalienlife__/graphics/icons/rennea.png"}
     },
     icon_size = 64,
@@ -4699,7 +4699,16 @@ ITEM {
     stack_size = 10
 }
 
-
+ITEM {
+    type = "item",
+    name = "replicator-rennea",
+    icon = "__pyalienlife__/graphics/icons/replicator-rennea.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-replicators",
+    order = "x",
+    stack_size = 10
+}
 
 
 
