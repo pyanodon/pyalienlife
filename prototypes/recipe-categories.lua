@@ -157,10 +157,18 @@ data:extend {
     },
     {
         type = "recipe-category",
+        name = "rennea-farm"
+    },
+    {
+        type = "recipe-category",
         name = "vat"
     },
 	{
         type = "resource-category",
         name = "ralesia-flowers"
+    },
+    {
+        type = "resource-category",
+        name = "rennea-flowers"
     },
 }

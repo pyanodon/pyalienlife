@@ -63,7 +63,6 @@ require('prototypes/technologies/recombinant-ery')
 require('prototypes/technologies/reca')
 require('prototypes/technologies/orexigenic')
 require('prototypes/technologies/mega-farm')
-require('prototypes/technologies/mega-farm-ralesia')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -222,8 +221,10 @@ require('prototypes/recipes/recipes-vat')
 require('prototypes/recipes/recipes-phadai-products')
 --require('prototypes/recipes/recipes-auto-ralesia-farm-test')
 require('prototypes/recipes/recipes-ralesia-megafarm')
+require('prototypes/recipes/recipes-rennea-megafarm')
 
 --(( ORES ))--
 require('prototypes/ores/ralesia')
+require('prototypes/ores/rennea')
 
 data.raw["utility-constants"].default.recipe_step_limit = 2000;

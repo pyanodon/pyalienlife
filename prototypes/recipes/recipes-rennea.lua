@@ -141,3 +141,23 @@ RECIPE {
         {type = "item", name = "rennea-seeds", amount = 10}
     },
 }:add_unlock("rennea")
+
+
+RECIPE {
+    type = 'recipe',
+    name = 'replicator-rennea',
+    category = 'advanced-crafting',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'rennea-codex', amount = 1},
+        {type = 'item', name = 'rennea-seeds', amount = 200},
+        {type = 'item', name = 'titanium-plate', amount = 50},
+        {type = 'item', name = 'metallic-glass', amount = 2},
+        {type = 'item', name = 'biofilm', amount = 20},
+        {type = 'item', name = 'blanket-chassi', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'replicator-rennea', amount = 1},
+    },
+}:add_unlock("mega-farm-rennea"):add_ingredient({type = "item", name = "py-fertilizer", amount = 20}):add_ingredient({type = "item", name = "biopolymer", amount = 10}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10})

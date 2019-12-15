@@ -414,3 +414,117 @@ RECIPE {
     },
     --main_product = "cocoon",
 }:add_unlock("schrodinger-antelope")
+
+
+--------------------------ralesia mega farm----------------
+
+RECIPE {
+    type = 'recipe',
+    name = 'ralesia-super-7',
+    category = 'ralesia-farm',
+    enabled = false,
+    energy_required = 80,
+    ingredients = {
+        {type = 'item', name = 'soil', amount = 1000},
+        {type = 'item', name = 'py-fertilizer', amount = 100},
+        {type = 'fluid', name = 'water', amount = 3000},
+        {type = 'fluid', name = 'syngas', amount = 1500},
+    },
+    results = {
+        {type = 'item', name = 'ralesias', amount = 1},
+    },
+}:add_unlock("mega-farm-ralesia")
+
+RECIPE {
+    type = 'recipe',
+    name = 'ralesia-super-8',
+    category = 'ralesia-farm',
+    enabled = false,
+    energy_required = 80,
+    ingredients = {
+        {type = 'item', name = 'soil', amount = 1000},
+        {type = 'item', name = 'urea', amount = 300},
+        {type = 'item', name = 'py-fertilizer', amount = 100},
+        {type = 'fluid', name = 'water', amount = 3000},
+        {type = 'fluid', name = 'syngas', amount = 1500},
+    },
+    results = {
+        {type = 'item', name = 'ralesias', amount = 1},
+    },
+}:add_unlock("mega-farm-ralesia")
+
+RECIPE {
+    type = 'recipe',
+    name = 'ralesia-super-9',
+    category = 'ralesia-farm',
+    enabled = false,
+    energy_required = 80,
+    ingredients = {
+        {type = 'item', name = 'soil', amount = 1000},
+        {type = 'item', name = 'urea', amount = 300},
+        {type = 'item', name = 'blood-meal', amount = 100},
+        {type = 'item', name = 'py-fertilizer', amount = 100},
+        {type = 'fluid', name = 'water', amount = 3000},
+        {type = 'fluid', name = 'syngas', amount = 1500},
+    },
+    results = {
+        {type = 'item', name = 'ralesias', amount = 1},
+    },
+}:add_unlock("mega-farm-ralesia")
+
+--------------------------rennea mega farm----------------
+
+RECIPE {
+    type = 'recipe',
+    name = 'rennea-super-7',
+    category = 'rennea-farm',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'item', name = 'soil', amount = 1000},
+        {type = 'fluid', name = 'water', amount = 3000},
+        {type = 'item', name = 'biomass', amount = 150},
+        {type = 'item', name = 'coarse', amount = 100},
+        {type = 'item', name = 'py-fertilizer', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'rennea', amount = 1},
+    },
+}:add_unlock("mega-farm-rennea")
+
+RECIPE {
+    type = 'recipe',
+    name = 'rennea-super-8',
+    category = 'rennea-farm',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'item', name = 'soil', amount = 1000},
+        {type = 'fluid', name = 'water', amount = 3000},
+        {type = 'item', name = 'coarse', amount = 100},
+        {type = 'item', name = 'urea', amount = 300},
+        {type = 'item', name = 'py-fertilizer', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'rennea', amount = 1},
+    },
+}:add_unlock("mega-farm-rennea")
+
+RECIPE {
+    type = 'recipe',
+    name = 'rennea-super-9',
+    category = 'rennea-farm',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'item', name = 'soil', amount = 1000},
+        {type = 'fluid', name = 'water', amount = 3000},
+        {type = 'item', name = 'coarse', amount = 100},
+        {type = 'item', name = 'urea', amount = 300},
+        {type = 'item', name = 'blood-meal', amount = 100},
+        {type = 'item', name = 'py-fertilizer', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'rennea', amount = 1},
+    },
+}:add_unlock("mega-farm-rennea")
