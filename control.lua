@@ -9,3 +9,4 @@ require('scripts/farm-script')
 
 require('scripts/farm-ralesia')
 require('scripts/farm-rennea')
+require('scripts/farm-tuuphra')

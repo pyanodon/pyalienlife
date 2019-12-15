@@ -38,7 +38,7 @@ data:extend({
     icon = "__pyalienlife__/graphics/icons/mega-farm-ralesia.png",
     icon_size = 64,
     flags = {"placeable-player", "player-creation"},
-    crafting_categories = {"ralesia-farm","rennea-farm"},
+    crafting_categories = {"ralesia-farm","rennea-farm","tuuphra-farm"},
     rocket_parts_required = 1,
     crafting_speed = 1,
     rocket_result_inventory_size = 1,

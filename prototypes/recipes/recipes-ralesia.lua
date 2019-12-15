@@ -62,9 +62,10 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'ralesia-codex', amount = 1},
         {type = 'item', name = 'ralesia-seeds', amount = 100},
-        {type = 'item', name = 'titanium-plate', amount = 50},
+        {type = 'item', name = 'titanium-plate', amount = 100},
         {type = 'item', name = 'metallic-glass', amount = 2},
         {type = 'item', name = 'biofilm', amount = 20},
+        {type = 'item', name = 'plastic-bar', amount = 100},
         {type = 'item', name = 'blanket-chassi', amount = 1},
     },
     results = {

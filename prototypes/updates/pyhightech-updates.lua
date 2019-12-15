@@ -528,3 +528,63 @@ RECIPE {
         {type = 'item', name = 'rennea', amount = 1},
     },
 }:add_unlock("mega-farm-rennea")
+
+--------------------------tuuphra mega farm----------------
+
+RECIPE {
+    type = 'recipe',
+    name = 'tuuphra-super-7',
+    category = 'tuuphra-farm',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'item', name = 'soil', amount = 1000},
+        {type = 'fluid', name = 'water', amount = 3000},
+        {type = 'fluid', name = 'nitrogen', amount = 1500},
+        {type = 'item', name = 'biomass', amount = 150},
+        {type = 'item', name = 'coarse', amount = 100},
+        {type = 'item', name = 'py-fertilizer', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'tuuphra', amount = 1},
+    },
+}:add_unlock("mega-farm-tuuphra")
+
+RECIPE {
+    type = 'recipe',
+    name = 'tuuphra-super-8',
+    category = 'tuuphra-farm',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'item', name = 'soil', amount = 1000},
+        {type = 'fluid', name = 'water', amount = 3000},
+        {type = 'fluid', name = 'nitrogen', amount = 1500},
+        {type = 'item', name = 'coarse', amount = 100},
+        {type = 'item', name = 'urea', amount = 300},
+        {type = 'item', name = 'py-fertilizer', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'tuuphra', amount = 1},
+    },
+}:add_unlock("mega-farm-tuuphra")
+
+RECIPE {
+    type = 'recipe',
+    name = 'tuuphra-super-9',
+    category = 'tuuphra-farm',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'item', name = 'soil', amount = 1000},
+        {type = 'fluid', name = 'water', amount = 3000},
+        {type = 'fluid', name = 'nitrogen', amount = 1500},
+        {type = 'item', name = 'coarse', amount = 100},
+        {type = 'item', name = 'urea', amount = 300},
+        {type = 'item', name = 'blood-meal', amount = 100},
+        {type = 'item', name = 'py-fertilizer', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'tuuphra', amount = 1},
+    },
+}:add_unlock("mega-farm-tuuphra")
