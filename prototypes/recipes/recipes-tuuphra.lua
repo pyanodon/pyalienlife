@@ -139,3 +139,23 @@ RECIPE {
         {type = "item", name = "tuuphra-seeds", amount = 10}
     },
 }:add_unlock("tuuphra")
+
+RECIPE {
+    type = 'recipe',
+    name = 'replicator-tuuphra',
+    category = 'advanced-crafting',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'tuuphra-codex', amount = 1},
+        {type = 'item', name = 'tuuphra-seeds', amount = 200},
+        {type = 'item', name = 'titanium-plate', amount = 100},
+        {type = 'item', name = 'metallic-glass', amount = 2},
+        {type = 'item', name = 'biofilm', amount = 20},
+        {type = 'item', name = 'plastic-bar', amount = 100},
+        {type = 'item', name = 'blanket-chassi', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'replicator-tuuphra', amount = 1},
+    },
+}:add_unlock("mega-farm-tuuphra"):add_ingredient({type = "item", name = "py-fertilizer", amount = 20}):add_ingredient({type = "item", name = "biopolymer", amount = 10}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10})

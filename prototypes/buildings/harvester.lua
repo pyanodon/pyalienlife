@@ -37,7 +37,7 @@ ENTITY {
     minable = {mining_time = 0.5, result = "harvester"},
     fast_replaceable_group = "harvester",
     max_health = 700,
-    resource_categories = {"ralesia-flowers","rennea-flowers"},
+    resource_categories = {"ralesia-flowers","rennea-flowers","tuuphra-tuber"},
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
     collision_box = {{-3.4, -3.4}, {3.4, 3.4}},

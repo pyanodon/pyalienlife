@@ -3424,7 +3424,7 @@ ITEM {
     name = "tuuphra",
     icons =
 	{
-        {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
+        --{icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
         {icon = "__pyalienlife__/graphics/icons/tuuphra.png"}
     },
     icon_size = 64,
@@ -4710,6 +4710,16 @@ ITEM {
     stack_size = 10
 }
 
+ITEM {
+    type = "item",
+    name = "replicator-tuuphra",
+    icon = "__pyalienlife__/graphics/icons/replicator-tuuphra.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-replicators",
+    order = "x",
+    stack_size = 10
+}
 
 
 ------------------------------
