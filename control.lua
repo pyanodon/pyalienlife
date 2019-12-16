@@ -7,6 +7,6 @@ require('scripts/land-bots')
 
 require('scripts/farm-script')
 
-require('scripts/farm-ralesia')
-require('scripts/farm-rennea')
-require('scripts/farm-tuuphra')
+require('scripts/crops/farm-ralesia')
+require('scripts/crops/farm-rennea')
+require('scripts/crops/farm-tuuphra')
