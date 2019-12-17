@@ -222,10 +222,12 @@ require('prototypes/recipes/recipes-phadai-products')
 require('prototypes/recipes/recipes-ralesia-megafarm')
 require('prototypes/recipes/recipes-rennea-megafarm')
 require('prototypes/recipes/recipes-tuuphra-megafarm')
+require('prototypes/recipes/recipes-grod-megafarm')
 
 --(( ORES ))--
 require('prototypes/ores/ralesia')
 require('prototypes/ores/rennea')
 require('prototypes/ores/tuuphra')
+require('prototypes/ores/grod')
 
 data.raw["utility-constants"].default.recipe_step_limit = 2000;

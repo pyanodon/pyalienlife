@@ -106,6 +106,23 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
+    name = 'ralesia-super-7',
+    category = 'ralesia-farm',
+    enabled = false,
+    energy_required = 80,
+    ingredients = {
+        {type = 'item', name = 'soil', amount = 1000},
+        {type = 'item', name = 'fertilizer', amount = 100},
+        {type = 'fluid', name = 'water', amount = 3000},
+        {type = 'fluid', name = 'syngas', amount = 1500},
+    },
+    results = {
+        {type = 'item', name = 'ralesias', amount = 1},
+    },
+}:add_unlock("mega-farm-ralesia")
+
+RECIPE {
+    type = 'recipe',
     name = 'ralesia-super-10',
     category = 'ralesia-farm',
     enabled = false,
@@ -114,6 +131,7 @@ RECIPE {
         {type = 'item', name = 'soil', amount = 1000},
         {type = 'item', name = 'ash', amount = 150},
         {type = 'item', name = 'manure', amount = 150},
+        {type = 'item', name = 'fertilizer', amount = 100},
         {type = 'fluid', name = 'water', amount = 3000},
         {type = 'fluid', name = 'syngas', amount = 1500},
         {type = 'item', name = 'gh', amount = 3},
@@ -121,4 +139,4 @@ RECIPE {
     results = {
         {type = 'item', name = 'ralesias', amount = 1},
     },
-}:add_unlock("mega-farm-ralesia"):add_ingredient({type = "item", name = "py-fertilizer", amount = 100})
+}:add_unlock("mega-farm-ralesia")

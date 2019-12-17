@@ -109,6 +109,25 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
+    name = 'tuuphra-super-7',
+    category = 'tuuphra-farm',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'item', name = 'soil', amount = 1000},
+        {type = 'fluid', name = 'water', amount = 3000},
+        {type = 'fluid', name = 'nitrogen', amount = 1500},
+        {type = 'item', name = 'biomass', amount = 150},
+        {type = 'item', name = 'coarse', amount = 100},
+        {type = 'item', name = 'fertilizer', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'tuuphra', amount = 1},
+    },
+}:add_unlock("mega-farm-tuuphra")
+
+RECIPE {
+    type = 'recipe',
     name = 'tuuphra-super-10',
     category = 'tuuphra-farm',
     enabled = false,
@@ -118,11 +137,11 @@ RECIPE {
         {type = 'fluid', name = 'water', amount = 3000},
         {type = 'fluid', name = 'nitrogen', amount = 1500},
         {type = 'item', name = 'ash', amount = 200},
-        {type = 'item', name = 'manure', amount = 150},
+        {type = 'item', name = 'fertilizer', amount = 150},
         {type = 'item', name = 'coarse', amount = 100},
         {type = 'item', name = 'gh', amount = 3},
     },
     results = {
         {type = 'item', name = 'tuuphra', amount = 1},
     },
-}:add_unlock("mega-farm-tuuphra"):replace_ingredient("manure", "py-fertilizer")
+}:add_unlock("mega-farm-tuuphra")

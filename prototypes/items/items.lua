@@ -4721,6 +4721,16 @@ ITEM {
     stack_size = 10
 }
 
+ITEM {
+    type = "item",
+    name = "replicator-grod",
+    icon = "__pyalienlife__/graphics/icons/replicator-grod.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-replicators",
+    order = "x",
+    stack_size = 10
+}
 
 ------------------------------
 data:extend(

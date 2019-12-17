@@ -71,4 +71,4 @@ RECIPE {
     results = {
         {type = 'item', name = 'replicator-ralesia', amount = 1},
     },
-}:add_unlock("mega-farm-ralesia"):add_ingredient({type = "item", name = "py-fertilizer", amount = 20}):add_ingredient({type = "item", name = "biopolymer", amount = 10}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10})
+}:add_unlock("mega-farm-ralesia"):add_ingredient({type = "item", name = "nems", amount = 10}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10})
