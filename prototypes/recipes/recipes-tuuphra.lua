@@ -154,8 +154,9 @@ RECIPE {
         {type = 'item', name = 'biofilm', amount = 20},
         {type = 'item', name = 'plastic-bar', amount = 100},
         {type = 'item', name = 'blanket-chassi', amount = 1},
+        {type = 'item', name = 'fertilizer', amount = 20},
     },
     results = {
         {type = 'item', name = 'replicator-tuuphra', amount = 1},
     },
-}:add_unlock("mega-farm-tuuphra"):add_ingredient({type = "item", name = "py-fertilizer", amount = 20}):add_ingredient({type = "item", name = "biopolymer", amount = 10}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10})
+}:add_unlock("mega-farm-tuuphra"):add_ingredient({type = "item", name = "nems", amount = 10}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10})

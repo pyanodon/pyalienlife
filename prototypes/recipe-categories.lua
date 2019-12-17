@@ -165,6 +165,10 @@ data:extend {
     },
     {
         type = "recipe-category",
+        name = "grod-farm"
+    },
+    {
+        type = "recipe-category",
         name = "vat"
     },
 	{
@@ -178,5 +182,9 @@ data:extend {
     {
         type = "resource-category",
         name = "rennea-flowers"
+    },
+    {
+        type = "resource-category",
+        name = "grod-flower"
     },
 }

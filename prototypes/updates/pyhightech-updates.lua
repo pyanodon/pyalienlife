@@ -109,12 +109,13 @@ RECIPE('urea'):set_fields {enabled = false}
 RECIPE('mukmoux-fat2'):remove_unlock('advanced-electronics')
 RECIPE('mukmoux-fat3'):remove_unlock('advanced-electronics')
 RECIPE('fertilizer'):remove_unlock('basic-electronics')
---RECIPE('cellulose-02'):remove_unlock('biotech-mk01')
 
 
 fun.results_replacer("dhilmos-sex-01", "dirty-water", "waste-water")
 fun.results_replacer("fish-sex-pup-01", "dirty-water", "waste-water")
 fun.results_replacer("fish-sex-pup-02", "dirty-water", "waste-water")
+
+fun.results_replacer("fertilizer", "py-fertilizer", "fertilizer")
 --fun.results_replacer("urea", "urea", "urea",5)
 
 ----EXCLUSIVE RECIPES----
@@ -146,7 +147,7 @@ RECIPE {
         {type = 'fluid', name = 'water-saline', amount = 100},
         {type = 'fluid', name = 'slacked-lime', amount = 100},
         {type = 'item', name = 'iron-ore-dust', amount = 1},
-        {type = 'item', name = 'py-fertilizer', amount = 3},
+        {type = 'item', name = 'fertilizer', amount = 3},
     },
     results = {
         {type = 'item', name = 'seaweed', amount = 30},
@@ -183,7 +184,7 @@ RECIPE {
         {type = 'fluid', name = 'carbon-dioxide', amount = 100},
         {type = 'item', name = 'limestone', amount = 3},
         {type = 'item', name = 'coarse', amount = 5},
-        {type = 'item', name = 'py-fertilizer', amount = 3},
+        {type = 'item', name = 'fertilizer', amount = 3},
     },
     results = {
         {type = 'item', name = 'moss', amount = 25},
@@ -420,23 +421,6 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'ralesia-super-7',
-    category = 'ralesia-farm',
-    enabled = false,
-    energy_required = 80,
-    ingredients = {
-        {type = 'item', name = 'soil', amount = 1000},
-        {type = 'item', name = 'py-fertilizer', amount = 100},
-        {type = 'fluid', name = 'water', amount = 3000},
-        {type = 'fluid', name = 'syngas', amount = 1500},
-    },
-    results = {
-        {type = 'item', name = 'ralesias', amount = 1},
-    },
-}:add_unlock("mega-farm-ralesia")
-
-RECIPE {
-    type = 'recipe',
     name = 'ralesia-super-8',
     category = 'ralesia-farm',
     enabled = false,
@@ -444,7 +428,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'soil', amount = 1000},
         {type = 'item', name = 'urea', amount = 300},
-        {type = 'item', name = 'py-fertilizer', amount = 100},
+        {type = 'item', name = 'fertilizer', amount = 100},
         {type = 'fluid', name = 'water', amount = 3000},
         {type = 'fluid', name = 'syngas', amount = 1500},
     },
@@ -463,7 +447,7 @@ RECIPE {
         {type = 'item', name = 'soil', amount = 1000},
         {type = 'item', name = 'urea', amount = 300},
         {type = 'item', name = 'blood-meal', amount = 100},
-        {type = 'item', name = 'py-fertilizer', amount = 100},
+        {type = 'item', name = 'fertilizer', amount = 100},
         {type = 'fluid', name = 'water', amount = 3000},
         {type = 'fluid', name = 'syngas', amount = 1500},
     },
@@ -476,24 +460,6 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'rennea-super-7',
-    category = 'rennea-farm',
-    enabled = false,
-    energy_required = 100,
-    ingredients = {
-        {type = 'item', name = 'soil', amount = 1000},
-        {type = 'fluid', name = 'water', amount = 3000},
-        {type = 'item', name = 'biomass', amount = 150},
-        {type = 'item', name = 'coarse', amount = 100},
-        {type = 'item', name = 'py-fertilizer', amount = 100},
-    },
-    results = {
-        {type = 'item', name = 'rennea', amount = 1},
-    },
-}:add_unlock("mega-farm-rennea")
-
-RECIPE {
-    type = 'recipe',
     name = 'rennea-super-8',
     category = 'rennea-farm',
     enabled = false,
@@ -503,7 +469,7 @@ RECIPE {
         {type = 'fluid', name = 'water', amount = 3000},
         {type = 'item', name = 'coarse', amount = 100},
         {type = 'item', name = 'urea', amount = 300},
-        {type = 'item', name = 'py-fertilizer', amount = 100},
+        {type = 'item', name = 'fertilizer', amount = 100},
     },
     results = {
         {type = 'item', name = 'rennea', amount = 1},
@@ -522,7 +488,7 @@ RECIPE {
         {type = 'item', name = 'coarse', amount = 100},
         {type = 'item', name = 'urea', amount = 300},
         {type = 'item', name = 'blood-meal', amount = 100},
-        {type = 'item', name = 'py-fertilizer', amount = 100},
+        {type = 'item', name = 'fertilizer', amount = 100},
     },
     results = {
         {type = 'item', name = 'rennea', amount = 1},
@@ -530,25 +496,6 @@ RECIPE {
 }:add_unlock("mega-farm-rennea")
 
 --------------------------tuuphra mega farm----------------
-
-RECIPE {
-    type = 'recipe',
-    name = 'tuuphra-super-7',
-    category = 'tuuphra-farm',
-    enabled = false,
-    energy_required = 100,
-    ingredients = {
-        {type = 'item', name = 'soil', amount = 1000},
-        {type = 'fluid', name = 'water', amount = 3000},
-        {type = 'fluid', name = 'nitrogen', amount = 1500},
-        {type = 'item', name = 'biomass', amount = 150},
-        {type = 'item', name = 'coarse', amount = 100},
-        {type = 'item', name = 'py-fertilizer', amount = 100},
-    },
-    results = {
-        {type = 'item', name = 'tuuphra', amount = 1},
-    },
-}:add_unlock("mega-farm-tuuphra")
 
 RECIPE {
     type = 'recipe',
@@ -562,7 +509,7 @@ RECIPE {
         {type = 'fluid', name = 'nitrogen', amount = 1500},
         {type = 'item', name = 'coarse', amount = 100},
         {type = 'item', name = 'urea', amount = 300},
-        {type = 'item', name = 'py-fertilizer', amount = 100},
+        {type = 'item', name = 'fertilizer', amount = 100},
     },
     results = {
         {type = 'item', name = 'tuuphra', amount = 1},
@@ -582,9 +529,31 @@ RECIPE {
         {type = 'item', name = 'coarse', amount = 100},
         {type = 'item', name = 'urea', amount = 300},
         {type = 'item', name = 'blood-meal', amount = 100},
-        {type = 'item', name = 'py-fertilizer', amount = 100},
+        {type = 'item', name = 'fertilizer', amount = 100},
     },
     results = {
         {type = 'item', name = 'tuuphra', amount = 1},
     },
 }:add_unlock("mega-farm-tuuphra")
+
+--------------------------grod mega farm----------------
+
+RECIPE {
+    type = 'recipe',
+    name = 'grod-super-9',
+    category = 'grod-farm',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'item', name = 'soil', amount = 1000},
+        {type = 'fluid', name = 'water', amount = 10000},
+        {type = 'fluid', name = 'slacked-lime', amount = 1000},
+        {type = 'item', name = 'limestone', amount = 150},
+        {type = 'item', name = 'urea', amount = 300},
+        {type = 'item', name = 'blood-meal', amount = 100},
+        {type = 'item', name = 'fertilizer', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'grod', amount = 1},
+    },
+}:add_unlock("mega-farm-grod")

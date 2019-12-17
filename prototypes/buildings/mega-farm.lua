@@ -38,7 +38,7 @@ data:extend({
     icon = "__pyalienlife__/graphics/icons/mega-farm-ralesia.png",
     icon_size = 64,
     flags = {"placeable-player", "player-creation"},
-    crafting_categories = {"ralesia-farm","rennea-farm","tuuphra-farm"},
+    crafting_categories = {"ralesia-farm","rennea-farm","tuuphra-farm","grod-farm"},
     rocket_parts_required = 1,
     crafting_speed = 1,
     rocket_result_inventory_size = 1,
@@ -77,7 +77,7 @@ data:extend({
           pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {-0.00, -0.95}, nil, nil),
           base_area = 10,
           base_level = -1,
-          pipe_connections = {{type = "input", position = {0.0, 4.0}}},
+          pipe_connections = {{type = "input", position = {4.0, 0.0}}},
           priority = "extra-high"
       },
       {
@@ -86,7 +86,7 @@ data:extend({
         pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {-0.00, -0.95}, nil, nil),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{type = "input", position = {0.0, -4.0}}},
+        pipe_connections = {{type = "input", position = {-4.0, 0.0}}},
         priority = "extra-high"
     },
     },
