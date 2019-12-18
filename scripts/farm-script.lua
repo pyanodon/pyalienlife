@@ -56,9 +56,6 @@ script.on_event(
                         local rpos = event.rocket_silo.position
                         repeat
                             game.surfaces['nauvis'].create_entity {name = farm.crop, position = {rpos.x + posx, (rpos.y - 15) + posy}, amount = output[rs.get_recipe().name]}
-                            --create landfill
-                            game.surfaces['nauvis'].set_tiles {{name = 'landfill', position = {rpos.x + posx, (rpos.y - 15) + posy}}}
-
                             posx = posx + 1
                             if posx == 12 then
                                 posx = -11
@@ -92,9 +89,9 @@ script.on_event(
                 log(posy)
                 if posx == -13 or posy == -13 or posx == 13 or posy == 13 then
                     game.surfaces['nauvis'].create_entity {name = 'wood-fence', position = {rpos.x + posx, (rpos.y - 15) + posy}, force = E.force}
-                    --create landfill
-                    game.surfaces['nauvis'].set_tiles {{name = 'landfill', position = {rpos.x + posx, (rpos.y - 15) + posy}}}
                 end
+                --create landfill
+                game.surfaces['nauvis'].set_tiles {{name = 'landfill', position = {rpos.x + posx, (rpos.y - 15) + posy}}}
 
                 posx = posx + 1
                 if posx == 14 then
