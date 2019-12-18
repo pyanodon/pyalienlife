@@ -175,9 +175,31 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "item", name = "yotoi", amount = 1},
+        {type = "item", name = "yotoi", amount = 2},
     },
     results = {
         {type = "item", name = "yotoi-leaves", amount = 5}
     },
 }:add_unlock("yotoi")
+
+
+RECIPE {
+    type = 'recipe',
+    name = 'replicator-yotoi',
+    category = 'advanced-crafting',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'yotoi-codex', amount = 1},
+        {type = 'item', name = 'yotoi-seeds', amount = 200},
+        {type = 'item', name = 'titanium-plate', amount = 100},
+        {type = 'item', name = 'metallic-glass', amount = 2},
+        {type = 'item', name = 'biofilm', amount = 20},
+        {type = 'item', name = 'plastic-bar', amount = 100},
+        {type = 'item', name = 'blanket-chassi', amount = 1},
+        {type = 'item', name = 'fertilizer', amount = 40},
+    },
+    results = {
+        {type = 'item', name = 'replicator-yotoi', amount = 1},
+    },
+}:add_unlock("mega-farm-yotoi"):add_ingredient({type = "item", name = "nems", amount = 10}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10})
