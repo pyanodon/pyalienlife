@@ -169,6 +169,10 @@ data:extend {
     },
     {
         type = "recipe-category",
+        name = "yotoi-farm"
+    },
+    {
+        type = "recipe-category",
         name = "vat"
     },
 	{
@@ -186,5 +190,9 @@ data:extend {
     {
         type = "resource-category",
         name = "grod-flower"
+    },
+    {
+        type = "resource-category",
+        name = "yotoi-tree"
     },
 }

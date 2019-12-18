@@ -3184,7 +3184,7 @@ ITEM {
     name = "ralesias",
     icons =
 	{
-        {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
+     --   {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
         {icon = "__pyalienlife__/graphics/icons/ralesia.png"}
     },
     icon_size = 64,
@@ -3584,7 +3584,7 @@ ITEM {
     name = "yotoi",
     icons =
 	{
-        {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
+  --      {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
         {icon = "__pyalienlife__/graphics/icons/yotoi.png"}
     },
     icon_size = 64,
@@ -4484,7 +4484,7 @@ ITEM {
     icons =
 	{
         {icon = "__pyalienlife__/graphics/icons/vonix.png"},
-        {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
+       -- {icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
     },
     icon_size = 64,
 	category = "vonix",
@@ -4561,13 +4561,77 @@ ITEM {
 ITEM {
     type = "module",
     name = "grod",
-    icon = "__pyalienlife__/graphics/icons/grod.png",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/grod.png"},
+        --{icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+    },
     icon_size = 64,
 	category = "grod",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-grod",
-    order = "a",
+    order = "ga",
+    stack_size = 10,
+	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_grod,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "grod-mk02",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/grod.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "grod",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-grod",
+    order = "gb",
+    stack_size = 10,
+	effect = { speed = {bonus = 25}},
+	limitation = alien_life_limitations_grod,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "grod-mk03",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/grod.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "grod",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-grod",
+    order = "gc",
+    stack_size = 10,
+	effect = { speed = {bonus = 30}},
+	limitation = alien_life_limitations_grod,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "grod-mk04",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/grod.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "grod",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-grod",
+    order = "gd",
     stack_size = 10,
 	effect = { speed = {bonus = 20}},
 	limitation = alien_life_limitations_grod,
@@ -4725,6 +4789,17 @@ ITEM {
     type = "item",
     name = "replicator-grod",
     icon = "__pyalienlife__/graphics/icons/replicator-grod.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-replicators",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "replicator-yotoi",
+    icon = "__pyalienlife__/graphics/icons/replicator-yotoi.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-replicators",
