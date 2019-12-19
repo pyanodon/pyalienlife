@@ -175,6 +175,7 @@ data:extend {
         type = "recipe-category",
         name = "vat"
     },
+    ------crops------
 	{
         type = "resource-category",
         name = "ralesia-flowers"
@@ -194,5 +195,9 @@ data:extend {
     {
         type = "resource-category",
         name = "yotoi-tree"
+    },
+    {
+        type = "resource-category",
+        name = "yotoi-tree-fruit"
     },
 }

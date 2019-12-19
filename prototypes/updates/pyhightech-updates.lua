@@ -557,3 +557,51 @@ RECIPE {
         {type = 'item', name = 'grod', amount = 1},
     },
 }:add_unlock("mega-farm-grod")
+
+--------------------------yotoi mega farm----------------
+
+RECIPE {
+    type = 'recipe',
+    name = 'yotoi-super-9',
+    category = 'yotoi-farm',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'item', name = 'sand', amount = 1000},
+        {type = 'fluid', name = 'water', amount = 10000},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 6000},
+        {type = 'item', name = 'limestone', amount = 150},
+        {type = 'item', name = 'lignin', amount = 200},
+        {type = 'item', name = 'biomass', amount = 300},
+        {type = 'item', name = 'urea', amount = 300},
+        {type = 'item', name = 'blood-meal', amount = 100},
+        {type = 'item', name = 'fertilizer', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'yotoi', amount = 1},
+    },
+}:add_unlock("mega-farm-yotoi")
+
+--------------------------yotoi fruit mega farm----------------
+
+RECIPE {
+    type = 'recipe',
+    name = 'yotoi-fruit-super-9',
+    category = 'yotoi-farm',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'item', name = 'sand', amount = 1000},
+        {type = 'fluid', name = 'water', amount = 10000},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 6000},
+        {type = 'item', name = 'limestone', amount = 150},
+        {type = 'item', name = 'lignin', amount = 200},
+        {type = 'item', name = 'biomass', amount = 300},
+        {type = 'item', name = 'urea', amount = 300},
+        {type = 'item', name = 'blood-meal', amount = 100},
+        {type = 'item', name = 'fertilizer', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'yotoi-fruit', amount = 1},
+    },
+}:add_unlock("mega-farm-yotoi")
