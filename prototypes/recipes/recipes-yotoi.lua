@@ -56,99 +56,7 @@ RECIPE {
 
 ---breeding---
 
-RECIPE {
-    type = "recipe",
-    name = "yotoi-0",
-    category = "nursery",
-    enabled = false,
-    energy_required = 80,
-    ingredients = {
-        {type = "item", name = "yotoi-seeds", amount = 5},
-        {type = "fluid", name = "water", amount = 300},
-        {type = "item", name = "sand", amount = 35},
-        {type = "item", name = "limestone", amount = 5},
-        {type = "item", name = "fertilizer", amount = 8},
-    },
-    results = {
-        {type = "item", name = "yotoi", amount = 2}
-    },
-}:add_unlock("yotoi")
-
-RECIPE {
-    type = "recipe",
-    name = "yotoi-1",
-    category = "nursery",
-    enabled = false,
-    energy_required = 80,
-    ingredients = {
-        {type = "item", name = "yotoi-seeds", amount = 5},
-        {type = "fluid", name = "water", amount = 300},
-        {type = "fluid", name = "carbon-dioxide", amount = 150},
-        {type = "item", name = "sand", amount = 35},
-        {type = "item", name = "limestone", amount = 5},
-        {type = "item", name = "fertilizer", amount = 8},
-    },
-    results = {
-        {type = "item", name = "yotoi", amount = 3}
-    },
-}:add_unlock("yotoi")
-
 ---fruits---
-
-RECIPE {
-    type = "recipe",
-    name = "yotoi-fruit-0",
-    category = "yotoi",
-    enabled = false,
-    energy_required = 60,
-    ingredients = {
-        {type = "fluid", name = "water", amount = 300},
-        {type = "item", name = "soil", amount = 20},
-        {type = "item", name = "limestone", amount = 5},
-        {type = "item", name = "manure", amount = 8},
-    },
-    results = {
-        {type = "item", name = "yotoi-fruit", amount = 4}
-    },
-}:add_unlock("yotoi")
-
-RECIPE {
-    type = "recipe",
-    name = "yotoi-fruit-1",
-    category = "yotoi",
-    enabled = false,
-    energy_required = 60,
-    ingredients = {
-        {type = "fluid", name = "water", amount = 300},
-        {type = "fluid", name = "carbon-dioxide", amount = 150},
-        {type = "item", name = "soil", amount = 20},
-        {type = "item", name = "limestone", amount = 5},
-        {type = "item", name = "fertilizer", amount = 8},
-    },
-    results = {
-        {type = "item", name = "yotoi-fruit", amount = 6}
-    },
-}:add_unlock("yotoi")
-
-RECIPE {
-    type = "recipe",
-    name = "yotoi-fruit-2",
-    category = "yotoi",
-    enabled = false,
-    energy_required = 60,
-    ingredients = {
-        {type = "fluid", name = "water", amount = 300},
-        {type = "fluid", name = "carbon-dioxide", amount = 150},
-        {type = "item", name = "sand", amount = 35},
-        {type = "item", name = "ash", amount = 20},
-        {type = "item", name = "limestone", amount = 5},
-        {type = "item", name = "fertilizer", amount = 8},
-    },
-    results = {
-        {type = "item", name = "yotoi-fruit", amount = 8}
-    },
-}:add_unlock("yotoi")
-
 
 -----SEEDS----
 
@@ -159,10 +67,10 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "item", name = "yotoi-fruit", amount = 2},
+        {type = "item", name = "yotoi-fruit", amount = 8},
     },
     results = {
-        {type = "item", name = "yotoi-seeds", amount = 5}
+        {type = "item", name = "yotoi-seeds", amount = 3}
     },
 }:add_unlock("yotoi")
 
@@ -182,6 +90,7 @@ RECIPE {
     },
 }:add_unlock("yotoi")
 
+-----REPLICATOR----
 
 RECIPE {
     type = 'recipe',
@@ -201,5 +110,26 @@ RECIPE {
     },
     results = {
         {type = 'item', name = 'replicator-yotoi', amount = 1},
+    },
+}:add_unlock("mega-farm-yotoi"):add_ingredient({type = "item", name = "nems", amount = 10}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10})
+
+RECIPE {
+    type = 'recipe',
+    name = 'replicator-yotoi-fruit',
+    category = 'advanced-crafting',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'yotoi-codex', amount = 1},
+        {type = 'item', name = 'yotoi', amount = 50},
+        {type = 'item', name = 'titanium-plate', amount = 100},
+        {type = 'item', name = 'metallic-glass', amount = 2},
+        {type = 'item', name = 'biofilm', amount = 20},
+        {type = 'item', name = 'plastic-bar', amount = 100},
+        {type = 'item', name = 'blanket-chassi', amount = 1},
+        {type = 'item', name = 'fertilizer', amount = 40},
+    },
+    results = {
+        {type = 'item', name = 'replicator-yotoi-fruit', amount = 1},
     },
 }:add_unlock("mega-farm-yotoi"):add_ingredient({type = "item", name = "nems", amount = 10}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10})

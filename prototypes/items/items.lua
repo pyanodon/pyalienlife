@@ -2945,11 +2945,6 @@ local alien_life_limitations_ulric =
 
     local alien_life_limitations_yotoi =
 	{
-    "yotoi-0",
-    "yotoi-1",
-    "yotoi-fruit-0",
-    "yotoi-fruit-1",
-    "yotoi-fruit-2",
     }
 
     local alien_life_limitations_dhilmos =
@@ -4800,6 +4795,17 @@ ITEM {
     type = "item",
     name = "replicator-yotoi",
     icon = "__pyalienlife__/graphics/icons/replicator-yotoi.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-replicators",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "replicator-yotoi-fruit",
+    icon = "__pyalienlife__/graphics/icons/replicator-yotoi-fruit.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-replicators",

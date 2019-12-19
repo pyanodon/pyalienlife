@@ -184,6 +184,8 @@ require('prototypes/recipes/recipes-auto-bhoddos')
 require('prototypes/recipes/recipes-auto-phagnot')
 require('prototypes/recipes/recipes-auto-cridren')
 require('prototypes/recipes/recipes-auto-grod')
+require('prototypes/recipes/recipes-auto-yotoi')
+require('prototypes/recipes/recipes-auto-yotoi-fruit')
 require('prototypes/recipes/recipes-auto-arthurian')
 require('prototypes/recipes/recipes-auto-auog')
 require('prototypes/recipes/recipes-auto-dingrits')
@@ -224,6 +226,7 @@ require('prototypes/recipes/recipes-rennea-megafarm')
 require('prototypes/recipes/recipes-tuuphra-megafarm')
 require('prototypes/recipes/recipes-grod-megafarm')
 require('prototypes/recipes/recipes-yotoi-megafarm')
+require('prototypes/recipes/recipes-yotoi-fruit-megafarm')
 
 --(( ORES ))--
 require('prototypes/ores/ralesia')
@@ -231,5 +234,6 @@ require('prototypes/ores/rennea')
 require('prototypes/ores/tuuphra')
 require('prototypes/ores/grod')
 require('prototypes/ores/yotoi')
+require('prototypes/ores/yotoi-fruit')
 
 data.raw["utility-constants"].default.recipe_step_limit = 2000;
