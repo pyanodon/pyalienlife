@@ -1141,7 +1141,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "latex",
-    category = "tar",
+    category = "hpf",
     enabled = true,
     energy_required = 10,
     ingredients = {
@@ -1151,7 +1151,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'latex', amount = 1}
     }
-}
+}:change_category('pulp')
 
 RECIPE {
     type = "recipe",
