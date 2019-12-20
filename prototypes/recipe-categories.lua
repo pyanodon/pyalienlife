@@ -169,6 +169,10 @@ data:extend {
     },
     {
         type = "recipe-category",
+        name = "kicalk-farm"
+    },
+    {
+        type = "recipe-category",
         name = "yotoi-farm"
     },
     {
@@ -199,5 +203,9 @@ data:extend {
     {
         type = "resource-category",
         name = "yotoi-tree-fruit"
+    },
+    {
+        type = "resource-category",
+        name = "kicalk-tree"
     },
 }

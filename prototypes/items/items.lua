@@ -2852,6 +2852,39 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "kicalk-seeds",
+    icon = "__pyalienlife__/graphics/icons/kicalk-seeds.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-kicalk",
+    order = "a",
+    stack_size = 300
+}
+
+ITEM {
+    type = "item",
+    name = "kicalk-codex",
+    icon = "__pyalienlife__/graphics/icons/kicalk-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "earth-palmtree-sample",
+    icon = "__pyalienlife__/graphics/icons/earth-palmtree-sample.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-samples",
+    order = "a",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
     name = "latex-slab",
     icon = "__pyalienlife__/graphics/icons/latex-slab.png",
 	icon_size = 64,
@@ -2925,6 +2958,10 @@ local alien_life_limitations_ulric =
     local alien_life_limitations_mukmoux =
 	{
 
+    }
+
+    local alien_life_limitations_kicalk =
+    {
     }
 
     local alien_life_limitations_tuuphra =
@@ -4638,13 +4675,73 @@ ITEM {
     name = "phagnot",
     icon = "__pyalienlife__/graphics/icons/phagnot.png",
     icon_size = 64,
-	category = "grod",
+	category = "phagnot",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-phagnot",
-    order = "a",
+    order = "p-a",
     stack_size = 10,
 	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_phagnot,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "phagnot-mk02",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/phagnot.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "phagnot",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-phagnot",
+    order = "p-b",
+    stack_size = 10,
+	effect = { speed = {bonus = 25}},
+	limitation = alien_life_limitations_phagnot,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "phagnot-mk03",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/phagnot.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "phagnot",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-phagnot",
+    order = "p-c",
+    stack_size = 10,
+	effect = { speed = {bonus = 30}},
+	limitation = alien_life_limitations_phagnot,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "phagnot-mk04",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/phagnot.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "phagnot",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-phagnot",
+    order = "p-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 35}},
 	limitation = alien_life_limitations_phagnot,
 	limitation_message_key = "Its full"
 }
@@ -4742,6 +4839,86 @@ ITEM {
     stack_size = 10,
 	effect = { speed = {bonus = 100}},
 	limitation = alien_life_limitations_trits,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "kicalk",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/kicalk.png"},
+        --{icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "kicalk",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-kicalk",
+    order = "k-a",
+    stack_size = 10,
+	effect = { speed = {bonus = 15}},
+	limitation = alien_life_limitations_kicalk,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "kicalk-mk02",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/kicalk.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "kicalk",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-kicalk",
+    order = "k-b",
+    stack_size = 10,
+	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_kicalk,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "kicalk-mk03",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/kicalk.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "kicalk",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-kicalk",
+    order = "k-c",
+    stack_size = 10,
+	effect = { speed = {bonus = 25}},
+	limitation = alien_life_limitations_kicalk,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "kicalk-mk04",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/kicalk.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "kicalk",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-kicalk",
+    order = "k-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 30}},
+	limitation = alien_life_limitations_kicalk,
 	limitation_message_key = "Its full"
 }
 
@@ -4903,6 +5080,10 @@ data:extend(
   {
     type = "module-category",
     name = "xeno"
+  },
+  {
+    type = "module-category",
+    name = "kicalk"
   },
   {
     type = "module-category",

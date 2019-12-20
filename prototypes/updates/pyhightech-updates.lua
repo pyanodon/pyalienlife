@@ -1,28 +1,17 @@
 local fun = require("prototypes/functions/functions")
 
+require('prototypes/ores/kicalk')
+require('prototypes/technologies/mega-farm-kicalk')
+require('prototypes/recipes/recipes-kicalk-megafarm')
+require('prototypes/recipes/recipes-kicalk')
+require('prototypes/recipes/recipes-auto-kicalk')
+
 --TECHNOLOGY--
 TECHNOLOGY('nano-tech'):add_prereq('microbiology-mk03')
 TECHNOLOGY('bio-implants'):add_prereq('nano-tech')
 TECHNOLOGY('antitumor'):add_prereq('earnshaw-theorem')
 RECIPE('kicalk-plantation'):remove_unlock('coal-processing-1')
 RECIPE('cadaveric-arum-mk01'):remove_unlock('basic-electronics')
-
-TECHNOLOGY {
-    type = "technology",
-    name = "kicalk",
-    icon = "__pyalienlife__/graphics/technology/kicalk.png",
-    icon_size = 128,
-    order = "c-a",
-    prerequisites = {"botany-mk01"},
-    effects = {},
-    unit = {
-        count = 100,
-        ingredients = {
-            {"automation-science-pack", 1},
-        },
-        time = 50
-    }
-}
 
 TECHNOLOGY {
     type = "technology",
@@ -42,6 +31,18 @@ TECHNOLOGY {
     }
 }
 
+----KICALK-----
+
+ITEM {
+    type = "item",
+    name = "replicator-kicalk",
+    icon = "__pyalienlife__/graphics/icons/replicator-kicalk.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-replicators",
+    order = "x",
+    stack_size = 10
+}
 
 ----BUILDINDS----
 RECIPE('ralesia-plantation-mk03'):add_ingredient({type = "item", name = "biopolymer", amount = 15}):add_ingredient({type = "item", name = "carbon-aerogel", amount = 20})
@@ -366,9 +367,23 @@ RECIPE {
         {type = 'item', name = 'yotoi-leaves', amount = 5},
      },
     results = {
-        {type = 'item', name = 'raw-fiber', amount = 4},
+        {type = 'item', name = 'raw-fiber', amount = 3},
     },
 }:add_unlock("yotoi")
+
+RECIPE {
+    type = 'recipe',
+    name = 'kicalk-fiber',
+    category = 'wpu',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'kicalk', amount = 1},
+     },
+    results = {
+        {type = 'item', name = 'raw-fiber', amount = 5},
+    },
+}:add_unlock("kicalk")
 
 RECIPE {
     type = "recipe",
