@@ -1,19 +1,3 @@
---[[
-DATA {
-    type = "autoplace-control",
-    category = "resource",
-    name = "ore-aluminium",
-    richness = true,
-    order = "b-e"
-}
-]]--
-
---[[
-DATA {
-    type = "noise-layer",
-    name = "ore-aluminium"
-}
-]]--
 
 ENTITY {
     type = "resource",
@@ -37,23 +21,6 @@ ENTITY {
     starting_area = false,
     collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
-    --[[
-	autoplace = {
-        control = "ore-aluminium",
-        sharpness = 15/16,
-        richness_multiplier = 1500,
-        richness_multiplier_distance_bonus = 20,
-        richness_base = 10,
-        coverage = 0.0003,
-        peaks = {
-            {
-                noise_layer = "ore-aluminium",
-                noise_octaves_difference = -0.85,
-                noise_persistence = 0.4
-            }
-        }
-    },
-	]]--
     stage_counts = {800},
     stages = {
         sheet = {
@@ -77,3 +44,43 @@ ENTITY {
         }
     }
 }
+
+
+data:extend({
+    {
+        type = "tree",
+        name = "kicalk-tree-fake",
+        icon = "__pyalienlife__/graphics/icons/kicalk.png",
+        icon_size = 64,
+        flags = {"placeable-neutral", "placeable-off-grid", "breaths-air"},
+        minable =
+        {
+          count = 4,
+          mining_particle = "wooden-particle",
+          mining_time = 0.5,
+          result = "wood"
+        },
+        emissions_per_second = -0.001,
+        max_health = 20,
+        collision_box = {{0,0}, {0,0}},
+        selection_box = {{0,0}, {0,0}},
+        drawing_box = {{-0.6, -1.8}, {0.6, 0.3}},
+        subgroup = "trees",
+        order = "a[tree]-c[dry-tree]",
+        vehicle_impact_sound =  { filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0 },
+        --autoplace = dead_trees_autoplace(0.5),
+        pictures =
+        {
+          --dry-tree
+          {
+            filename = "__pyalienlife__/graphics/entity/crops/kicalk/kicalk.png",
+            priority = "extra-high",
+            width = 64,
+            height = 80,
+            frame_count = 8,
+            variation_count = 1,
+            shift = util.by_pixel(0, -16),
+          }
+        }
+      }
+})
