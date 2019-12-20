@@ -225,6 +225,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-kicalk",
+        group = "py-alienlife",
+        order = "f-g"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-fungi",
         group = "py-alienlife",
         order = "g"

@@ -201,6 +201,9 @@ items.inputs.speaker = {'programmable-speaker', 1}
 items.inputs.phadaifood01 = {'phadai-food-01', 1}
 items.inputs.phadaifood02 = {'phadai-food-02', 1}
 
+items.inputs.kicalk = {'kicalk', 1}
+items.inputs.kicalkseeds = {'kicalk-seeds', 1}
+
 items.outputs = items.inputs
 --can put output replacements below here
 

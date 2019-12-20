@@ -35,7 +35,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 140,
-			tech = 'botany-mk02'
+			tech = 'scrondrix'
 		},
 		--salt
 		{
