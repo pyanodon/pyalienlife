@@ -208,4 +208,9 @@ data:extend {
         type = "resource-category",
         name = "kicalk-tree"
     },
+    ------ores------
+	{
+        type = "resource-category",
+        name = "ore-bioreserve"
+    },
 }

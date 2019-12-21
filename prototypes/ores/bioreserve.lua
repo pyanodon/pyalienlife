@@ -1,79 +1,70 @@
---[[
 DATA {
     type = "autoplace-control",
     category = "resource",
-    name = "ore-aluminium",
+    name = "ore-bioreserve",
     richness = true,
     order = "b-e"
 }
-]]--
 
---[[
 DATA {
     type = "noise-layer",
-    name = "ore-aluminium"
+    name = "ore-bioreserve"
 }
-]]--
 
 ENTITY {
     type = "resource",
-    name = "tuuphra-tuber",
-    category = "tuuphra-tuber",
-    icon = "__pyalienlife__/graphics/icons/tuuphra.png",
+    name = "ore-bioreserve",
+    --category = "ore-bioreserve",
+    icon = "__pyalienlife__/graphics/icons/agar.png",
     icon_size = 64,
     flags = {"placeable-neutral"},
     order = "a-b-a",
-    map_color = {r = 0.4, g = 0.4, b = 0.4},
+    map_color = {r = 1, g = 1, b = 1},
     minable = {
         hardness = 1,
-        -- mining_particle = "aluminium-ore-particle",
         mining_time = 2,
         results = {
-            {type = 'item', name = "tuuphra", amount = 1}
+            {"agar", 1}
         },
-        --fluid_amount = 100,
-        --required_fluid = "coal-gas"
     },
-    starting_area = false,
+    --starting_area = true,
     collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
-    --[[
-	autoplace = {
-        control = "ore-aluminium",
+    autoplace = {
+        control = "ore-bioreserve",
         sharpness = 15/16,
         richness_multiplier = 1500,
         richness_multiplier_distance_bonus = 20,
         richness_base = 10,
-        coverage = 0.0003,
+        coverage = 0.0006,
         peaks = {
             {
-                noise_layer = "ore-aluminium",
+                noise_layer = "ore-bioreserve",
                 noise_octaves_difference = -0.85,
                 noise_persistence = 0.4
             }
         }
     },
-	]]--
-    stage_counts = {800},
+    stage_counts = {200, 100, 50},
     stages = {
         sheet = {
-            filename = "__pyalienlife__/graphics/entity/crops/tuuphra/tuuphra.png",
+            filename = "__pyalienlife__/graphics/entity/bioreserve/rich-2-test.png",
             priority = "extra-high",
             width = 64,
             height = 80,
-            frame_count = 8,
-            variation_count = 1,
+            frame_count = 40,
+            variation_count = 3,
             shift = util.by_pixel(0, -16),
             hr_version = {
-                filename = "__pyalienlife__/graphics/entity/crops/tuuphra/hr-tuuphra.png",
+                filename = "__pyalienlife__/graphics/entity/bioreserve/hr-rich-2-test.png",
                 priority = "extra-high",
                 width = 128,
                 height = 160,
-                frame_count = 8,
-                variation_count = 1,
-                scale = 0.5,
+                frame_count = 40,
+                variation_count = 3,
                 shift = util.by_pixel(0, -16),
-            }
-        },
+                scale = 0.5
+                }
+            },
     }
 }
