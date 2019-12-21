@@ -235,5 +235,6 @@ require('prototypes/ores/tuuphra')
 require('prototypes/ores/grod')
 require('prototypes/ores/yotoi')
 require('prototypes/ores/yotoi-fruit')
+require('prototypes/ores/bioreserve')
 
 data.raw["utility-constants"].default.recipe_step_limit = 2000;
