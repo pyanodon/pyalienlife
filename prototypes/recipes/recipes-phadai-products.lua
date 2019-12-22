@@ -28,7 +28,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fawogae',amount ='4'},
+					{name='fawogae',amount =4},
 					{name='phadaifood01'},
 				},
 			results =

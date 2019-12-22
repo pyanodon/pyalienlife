@@ -236,6 +236,7 @@ script.on_event(
 									lb.inventorycount = inv
 									landbots.towers[lb.tower].providerchests[lb.destinationchest].chest.get_inventory(defines.inventory.chest).remove({lb.itemname,count=inv})
 								end
+								--swap over to the carrying graphic version of the land bug
 								lb.unit.set_command{type = defines.command.go_to_location, destination = landbots.towers[lb.tower].requestorchests[lb.requestorchest].chest.position, radius = 2}
 								lb.hasitem = true
 								lb.isgettingitem = false
@@ -248,6 +249,7 @@ script.on_event(
 					lb.inventory = ''
 					lb.itemname = ''
 					lb.hasitem = false
+					--swap back to the none load carring land bug
 					table.remove(landbots.towers[lb.tower].activebots, event.unit_number)
 					table.insert(landbots.towers[lb.tower].inactivebots, event.unit_number)
 					landbots.towers[lb.tower].currentlyactivebotcount = landbots.towers[lb.tower].currentlyactivebotcount - 1
