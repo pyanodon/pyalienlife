@@ -27,10 +27,11 @@ ENTITY {
             {"agar", 1}
         },
     },
-    --starting_area = true,
+    starting_area = true,
     collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     autoplace = {
+		order = 'b',
         control = "ore-bioreserve",
         sharpness = 15/16,
         richness_multiplier = 1500,
@@ -43,7 +44,9 @@ ENTITY {
                 noise_octaves_difference = -0.85,
                 noise_persistence = 0.4
             }
-        }
+        },
+		starting_area_size = 5500 * 0.002,
+		starting_area_amount = 1600
     },
     stage_counts = {450, 400, 350, 300, 250, 200, 150, 100, 60, 45, 25},
     stages = {

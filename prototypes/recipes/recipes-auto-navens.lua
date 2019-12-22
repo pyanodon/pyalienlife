@@ -131,7 +131,7 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {name='urea',amount ='10'},
+                {name='urea',amount =10},
                 --{'nitrogen','R'},
                 --{'manure','R'},
                 --{'biomass','R'},

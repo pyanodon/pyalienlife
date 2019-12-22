@@ -29,7 +29,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='meat',amount ='R'},
-                    {name='meat',amount ='10'},
+                    {name='meat',amount =10},
 					{name='phadaifood01',amount =1},
 				},
 			results =
@@ -395,7 +395,7 @@ fun.autorecipes {
 				{
                     {name='fawogae',amount ='R'},
                     {name='meat',amount ='R'},
-                    {name='meat',amount ='10'},
+                    {name='meat',amount =10},
 					{name='phadaifood01',amount =1},
 				},
 			results =

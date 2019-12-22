@@ -31,8 +31,7 @@ ITEM {
     stack_size = 10
 }
 
-data:extend({
-{
+ENTITY {
     type = "rocket-silo",
     name = "mega-farm",
     icon = "__pyalienlife__/graphics/icons/mega-farm-ralesia.png",
@@ -99,7 +98,7 @@ data:extend({
     idle_energy_usage = "150KW",
     lamp_energy_usage = "10KW",
     active_energy_usage = "3990KW",
-    rocket_entity = "rocket-silo-rocket",
+    rocket_entity = "mega-farm-invisa-rocket",
 
     times_to_blink = 3,
     light_blinking_speed = 1 / (3 * 60),
@@ -154,35 +153,9 @@ data:extend({
       filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
       width = 32,
       height = 32,
-      --slice = 2,
       shift = util.by_pixel(0, -0),
     },
-    --satellite_shadow_animation =
-    --{
-    --  filename = "__base__/graphics/entity/rocket-silo/00-shadow/00-satellite-shadow.png",
-    --  priority = "medium",
-    --  width = 44,
-    --  height = 22,
-    --  frame_count = 12,
-    --  line_length = 4,
-    --  animation_speed = 0.25,
-    --  draw_as_shadow = true,
-    --  shift = {7.875, -2.1875},
-    --  hr_version =
-    --  {
-    --    filename = "__base__/graphics/entity/rocket-silo/00-shadow/hr-00-satellite-shadow.png",
-    --    priority = "medium",
-    --    width = 44,
-    --    height = 22,
-    --    frame_count = 12,
-    --    line_length = 4,
-    --    animation_speed = 0.25,
-    --    draw_as_shadow = true,
-    --    shift = {7.875, -2.1875},
-    --    scale = 0.5
-    --  }
-    --},
-
+    
     hole_sprite =
     {
       filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
@@ -400,4 +373,171 @@ data:extend({
     }
 
   }
-})
+
+ENTITY {
+    type = "rocket-silo-rocket",
+    name = "mega-farm-invisa-rocket",
+    flags = {"not-on-map"},
+    collision_mask = {"not-colliding-with-itself"},
+    collision_box = {{-2, -7}, {2, 4}},
+    selection_box = {{0, 0}, {0, 0}},
+    dying_explosion = "massive-explosion",
+    shadow_slave_entity = "rocket-silo-rocket-shadow",
+    inventory_size = 1,
+    rising_speed = 1 / (7 * 60),
+    engine_starting_speed = 1 / (5.5 * 60),
+    flying_speed = 1 / (2000 * 60),
+    flying_acceleration = 0.01,
+
+    glow_light =
+    {
+      intensity = 1,
+      size = 30,
+      shift = {0, 1.5},
+      color = {r = 1.0, g = 1.0, b = 1.0}
+    },
+
+    rocket_sprite = util.add_shift_offset(util.by_pixel(0, 32*3.5), --util.mul_shift(rocket_rise_offset, -1),
+    {
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      width = 32,
+      height = 32,
+      shift = util.by_pixel(0, -0),
+    }),
+
+    rocket_shadow_sprite = util.add_shift_offset(util.by_pixel(-146, -120),
+    {
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      priority = "medium",
+      width = 32,
+      height = 32,
+      draw_as_shadow = true,
+    }),
+
+    rocket_glare_overlay_sprite = util.add_shift_offset(util.by_pixel(0, 112+112),
+    {
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      blend_mode = "additive",
+      width = 32,
+      height = 32,
+    }),
+    rocket_smoke_top1_animation = util.add_shift_offset(util.by_pixel(0-66, -112+28+232+32),
+    {
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      priority = "medium",
+      tint = { r = 0.8, g = 0.8, b = 1, a = 0.8 },
+      --tint = { r = 1, g = 0, b = 0, a = 0.8 },
+      width = 32,
+      height = 32,
+      frame_count = 1,
+      line_length = 1,
+      animation_speed = 1,
+      scale = 1.5*1.3,
+    }),
+    rocket_smoke_top2_animation = util.add_shift_offset(util.by_pixel(0+17, -112+28+265+32),
+    {
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      priority = "medium",
+      tint = { r = 0.8, g = 0.8, b = 1, a = 0.8 },
+      --tint = { r = 1, g = 0, b = 0, a = 0.8 },
+      width = 32,
+      height = 32,
+      frame_count = 1,
+      line_length = 1,
+      animation_speed = 1,
+      scale = 1.5*1.3,
+    }),
+    rocket_smoke_top3_animation = util.add_shift_offset(util.by_pixel(0+48, -112+28+252+32),
+    {
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      priority = "medium",
+      tint = { r = 0.8, g = 0.8, b = 1, a = 0.8 },
+      --tint = { r = 1, g = 0, b = 0, a = 0.8 },
+      width = 32,
+      height = 32,
+      frame_count = 1,
+      line_length = 1,
+      animation_speed = 1,
+      scale = 1.5*1.3,
+    }),
+
+    rocket_smoke_bottom1_animation = util.add_shift_offset(util.by_pixel(0-69, -112+28+205+32),
+    {
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      priority = "medium",
+      tint = { r = 0.8, g = 0.8, b = 1, a = 0.8 },
+      --tint = { r = 1, g = 0, b = 0, a = 0.8 },
+      width = 32,
+      height = 32,
+      frame_count = 1,
+      line_length = 1,
+      animation_speed = 1,
+      scale = 1.5*1.3,
+    }),
+    rocket_smoke_bottom2_animation = util.add_shift_offset(util.by_pixel(0+62, -112+28+207+32),
+    {
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      priority = "medium",
+      tint = { r = 0.8, g = 0.8, b = 1, a = 0.8 },
+      --tint = { r = 1, g = 0, b = 0, a = 0.8 },
+      width = 32,
+      height = 32,
+      frame_count = 1,
+      line_length = 1,
+      animation_speed = 1,
+      scale = 1.5*1.3,
+    }),
+    rocket_flame_animation = util.add_shift_offset(util.by_pixel(-1, 280-16),
+    {
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      priority = "medium",
+      tint = { r = 0.8, g = 0.8, b = 1, a = 0.8 },
+      --tint = { r = 1, g = 0, b = 0, a = 0.8 },
+      width = 32,
+      height = 32,
+      frame_count = 1,
+      line_length = 1,
+      animation_speed = 1,
+      scale = 1.5*1.3,
+    }),
+    rocket_flame_left_animation = util.add_shift_offset(util.by_pixel(-32-28+3, 280-68+1),
+    {
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      priority = "medium",
+      tint = { r = 0.8, g = 0.8, b = 1, a = 0.8 },
+      --tint = { r = 1, g = 0, b = 0, a = 0.8 },
+      width = 32,
+      height = 32,
+      frame_count = 1,
+      line_length = 1,
+      animation_speed = 1,
+      scale = 1.5*1.3,
+    }),
+    rocket_flame_left_rotation = 0,
+
+    rocket_flame_right_animation = util.add_shift_offset(util.by_pixel(32+16, 280-50),
+    {
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      priority = "medium",
+      tint = { r = 0.8, g = 0.8, b = 1, a = 0.8 },
+      --tint = { r = 1, g = 0, b = 0, a = 0.8 },
+      width = 32,
+      height = 32,
+      frame_count = 1,
+      line_length = 1,
+      animation_speed = 1,
+      scale = 1.5*1.3,
+    }),
+    rocket_flame_right_rotation = 0,
+
+    rocket_initial_offset = {0, 0},
+    rocket_rise_offset = {0, 0},
+    rocket_launch_offset = {0, 0},
+    rocket_render_layer_switch_distance = 0,
+    full_render_layer_switch_distance = 0,
+    effects_fade_in_start_distance = 0,
+    effects_fade_in_end_distance = 0,
+    shadow_fade_out_start_ratio = 0,
+    shadow_fade_out_end_ratio = 0,
+    rocket_visible_distance_from_center = 0,
+  }

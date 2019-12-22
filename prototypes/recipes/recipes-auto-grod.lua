@@ -212,7 +212,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='biomass',amount ='10'},
+					{name='biomass',amount =10},
 					--{'nitrogen','R'},
 					--{'manure','R'},
 					--{'biomass','R'},
