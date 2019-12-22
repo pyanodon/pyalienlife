@@ -19,7 +19,7 @@ ENTITY {
     icon_size = 64,
     flags = {"placeable-neutral"},
     order = "a-b-a",
-    map_color = {r = 1, g = 1, b = 1},
+    map_color = {r = 0.9, g = 0.9, b = 0.9},
     minable = {
         hardness = 1,
         mining_time = 2,
@@ -45,25 +45,27 @@ ENTITY {
             }
         }
     },
-    stage_counts = {200, 100, 50},
+    stage_counts = {450, 400, 350, 300, 250, 200, 150, 100, 60, 45, 25},
     stages = {
         sheet = {
-            filename = "__pyalienlife__/graphics/entity/bioreserve/rich-2-test.png",
+            filename = "__pyalienlife__/graphics/entity/bioreserve/rich-1.png",
             priority = "extra-high",
             width = 64,
             height = 80,
-            frame_count = 40,
-            variation_count = 3,
+            frame_count = 64,
+            randomize_visual_position = true,
+            variation_count = 11,
             shift = util.by_pixel(0, -16),
             hr_version = {
-                filename = "__pyalienlife__/graphics/entity/bioreserve/hr-rich-2-test.png",
+                filename = "__pyalienlife__/graphics/entity/bioreserve/hr-rich-1.png",
                 priority = "extra-high",
                 width = 128,
                 height = 160,
-                frame_count = 40,
-                variation_count = 3,
+                frame_count = 64,
+                randomize_visual_position = true,
+                variation_count = 11,
                 shift = util.by_pixel(0, -16),
-                scale = 0.5
+                scale = 0.65
                 }
             },
     }
