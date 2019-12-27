@@ -424,6 +424,7 @@ RECIPE {
     energy_required = 20,
     ingredients = {
         {type = 'item', name = 'plasmids', amount = 2},
+        {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'cdna', amount = 1},
         {type = 'item', name = 'petri-dish', amount = 5},
         {type = 'item', name = 'flask', amount = 3},
@@ -942,6 +943,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'lignin', amount = 20},
+        {type = 'item', name = 'bio-sample', amount = 15},
         {type = 'item', name = 'cridren-seeds', amount = 20},
         {type = 'item', name = 'gas-bladder', amount = 3},
         {type = 'item', name = 'alien-enzymes', amount = 1},
@@ -1196,3 +1198,20 @@ RECIPE {
     },
     main_product = "adrenal-cortex",
 }:add_unlock("biotech-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "bio-container",
+    category = "crafting",
+    enabled = true,
+    energy_required = 1,
+    ingredients = {
+        {type = 'item', name = 'steel-plate', amount = 1},
+        {type = 'item', name = 'glass', amount = 1},
+        {type = 'item', name = 'titanium-plate', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'bio-container', amount = 1}
+    },
+    --main_product = "adrenal-cortex",
+}

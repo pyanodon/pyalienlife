@@ -90,6 +90,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'retrovirus', amount = 1},
         {type = 'item', name = 'flask', amount = 3},
+        {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'petri-dish-bacteria', amount = 1},
         {type = 'item', name = 'plasmids', amount = 1},
         {type = 'item', name = 'moss-gen', amount = 1},
@@ -162,6 +163,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'primers', amount = 1},
         {type = 'item', name = 'alien-sample01', amount = 1},
+        {type = 'item', name = 'bio-sample', amount = 10},
         {type = 'item', name = 'dna-polymerase', amount = 1},
         {type = 'item', name = 'plastic-bar', amount = 1},
         {type = 'fluid', name = 'formamide', amount = 150},
@@ -182,6 +184,7 @@ RECIPE {
         {type = 'item', name = 'primers', amount = 2},
         {type = 'item', name = 'alien-sample01', amount = 2},
         {type = 'item', name = 'alien-sample-02', amount = 1},
+        {type = 'item', name = 'bio-sample', amount = 20},
         {type = 'item', name = 'dna-polymerase', amount = 2},
         {type = 'item', name = 'plastic-bar', amount = 5},
         {type = 'item', name = 'flask', amount = 5},

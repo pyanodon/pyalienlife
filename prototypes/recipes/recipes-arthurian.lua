@@ -10,6 +10,7 @@ RECIPE {
     energy_required = 350,
     ingredients = {
         {type = 'item', name = 'alien-sample-02', amount = 3},
+        {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'cdna', amount = 5},
         {type = 'item', name = 'arthurian-codex', amount = 2},
         {type = 'item', name = 'earth-lizard-sample', amount = 1}, --add alien sample from pyALiens mod here.

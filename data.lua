@@ -120,6 +120,7 @@ require('prototypes/buildings/land-bot-provider-chest')
 require('prototypes/buildings/mega-farm')
 require('prototypes/buildings/vat-brain')
 require("prototypes/buildings/harvester")
+require("prototypes/buildings/collector")
 
 --Caravan ceature
 require('prototypes/ceatures/caravan')

@@ -14,17 +14,17 @@ DATA {
 ENTITY {
     type = "resource",
     name = "ore-bioreserve",
-    --category = "ore-bioreserve",
-    icon = "__pyalienlife__/graphics/icons/agar.png",
+    category = "ore-bioreserve",
+    icon = "__pyalienlife__/graphics/icons/biosample.png",
     icon_size = 64,
     flags = {"placeable-neutral"},
     order = "a-b-a",
-    map_color = {r = 0.9, g = 0.9, b = 0.9},
+    map_color = {r = 0.647, g = 0.0, b = 0.415},
     minable = {
         hardness = 1,
-        mining_time = 2,
+        mining_time = 1,
         results = {
-            {"agar", 1}
+            {"bio-sample", 1}
         },
     },
     starting_area = true,
@@ -34,9 +34,9 @@ ENTITY {
 		order = 'b',
         control = "ore-bioreserve",
         sharpness = 15/16,
-        richness_multiplier = 1500,
-        richness_multiplier_distance_bonus = 20,
-        richness_base = 10,
+        richness_multiplier = 100,
+        richness_multiplier_distance_bonus = 10,
+        richness_base = 5,
         coverage = 0.0006,
         peaks = {
             {
@@ -46,9 +46,9 @@ ENTITY {
             }
         },
 		starting_area_size = 5500 * 0.002,
-		starting_area_amount = 1600
+		starting_area_amount = 300
     },
-    stage_counts = {450, 400, 350, 300, 250, 200, 150, 100, 60, 45, 25},
+    stage_counts = {900, 600, 450, 350, 250, 200, 110, 90, 40, 35, 15},
     stages = {
         sheet = {
             filename = "__pyalienlife__/graphics/entity/bioreserve/rich-1.png",

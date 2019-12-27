@@ -11,6 +11,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'alien-sample-02', amount = 2},
         {type = 'item', name = 'cdna', amount = 3},
+        {type = 'item', name = 'bio-sample', amount = 15},
         {type = 'item', name = 'trits-codex', amount = 1},
         {type = 'item', name = 'cocoon', amount = 5},
         {type = 'item', name = 'arthurian-egg', amount = 10},

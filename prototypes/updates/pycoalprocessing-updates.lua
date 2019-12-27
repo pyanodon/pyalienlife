@@ -43,6 +43,7 @@ RECIPE('ralesia'):remove_unlock('coal-processing-1')
 RECIPE('ralesia-seeds'):remove_unlock('coal-processing-1'):add_unlock('ralesia'):subgroup_order("py-alienlife-ralesia", "a"):change_category('nursery'):replace_ingredient("ralesia","ralesias")
 RECIPE('chemical-science-pack'):replace_ingredient("advanced-circuit","neuroprocessor")
 RECIPE('filtration-media'):add_ingredient({type = "item", name = "micro-fiber", amount = 2})
+RECIPE('alien-sample01'):add_ingredient({type = "item", name = "bio-sample", amount = 12})
 RECIPE('flask'):replace_ingredient("wood","stopper")
 
 RECIPE('mukmoux-fat'):remove_unlock('coal-processing-2')
