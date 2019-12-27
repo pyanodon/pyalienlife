@@ -10,6 +10,7 @@ RECIPE {
     energy_required = 250,
     ingredients = {
         {type = 'item', name = 'alien-sample01', amount = 4},
+        {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'cdna', amount = 3},
         {type = 'item', name = 'kicalk-codex', amount = 1},
         {type = 'item', name = 'earth-flower-sample', amount = 1},

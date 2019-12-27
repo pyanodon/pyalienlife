@@ -11,6 +11,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'alien-sample-03', amount = 10},
         {type = 'item', name = 'cdna', amount = 10},
+        {type = 'item', name = 'bio-sample', amount = 10},
         {type = 'item', name = 'fertilizer', amount = 30},
         {type = 'item', name = 'rennea-codex', amount = 1},
         {type = 'item', name = 'earth-sunflower-sample', amount = 1},

@@ -251,6 +251,30 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "bio-container",
+    icon = "__pyalienlife__/graphics/icons/bio-container.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "b",
+    stack_size = 100,
+    fuel_value = '1MJ',
+    fuel_category = 'bio-container'
+}
+
+ITEM {
+    type = "item",
+    name = "bio-sample",
+    icon = "__pyalienlife__/graphics/icons/biosample.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "b",
+    stack_size = 100,
+}
+
+ITEM {
+    type = "item",
     name = "cocoon",
     icon = "__pyalienlife__/graphics/icons/cocoon.png",
     icon_size = 64,

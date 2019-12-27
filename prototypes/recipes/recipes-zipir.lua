@@ -12,6 +12,7 @@ RECIPE {
         {type = 'item', name = 'alien-sample01', amount = 5},
         {type = 'item', name = 'cdna', amount = 5},
         {type = 'item', name = 'fish', amount = 10},
+        {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'zipir-codex', amount = 2},
         {type = 'item', name = 'earth-crustacean-sample', amount = 1}, --add alien sample from pyALiens mod here.
         {type = 'fluid', name = 'fetal-serum', amount = 100},

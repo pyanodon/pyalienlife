@@ -10,6 +10,7 @@ RECIPE {
     energy_required = 35,
     ingredients = {
         {type = 'item', name = 'alien-sample-03', amount = 1},
+        {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'cdna', amount = 3},
         {type = 'item', name = 'moss-gen', amount = 5},
         {type = 'item', name = 'bhoddos-codex', amount = 1},

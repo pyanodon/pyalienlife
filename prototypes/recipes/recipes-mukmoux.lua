@@ -11,6 +11,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'alien-sample-02', amount = 2},
         {type = 'item', name = 'cdna', amount = 5},
+        {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'mukmoux-codex', amount = 1},
         {type = 'item', name = 'earth-cow-sample', amount = 1}, --add alien sample from pyALiens mod here.
         {type = 'fluid', name = 'fetal-serum', amount = 100},

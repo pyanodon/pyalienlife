@@ -11,6 +11,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'alien-sample-02', amount = 5},
         {type = 'item', name = 'cdna', amount = 5},
+        {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'phagnot-codex', amount = 2},
         {type = 'item', name = 'earth-giraffe-sample', amount = 1},
         {type = 'fluid', name = 'water', amount = 1000}, --add alien sample from pyALiens mod here.
