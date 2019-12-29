@@ -44,3 +44,43 @@ ENTITY {
         }
     }
 }
+
+
+data:extend({
+    {
+        type = "tree",
+        name = "kicalk-tree-fake",
+        icon = "__pyalienlife__/graphics/icons/kicalk.png",
+        icon_size = 64,
+        flags = {"placeable-neutral", "placeable-off-grid", "breaths-air"},
+        minable =
+        {
+          count = 4,
+          mining_particle = "wooden-particle",
+          mining_time = 0.5,
+          result = "wood"
+        },
+        emissions_per_second = -0.001,
+        max_health = 20,
+        collision_box = {{0,0}, {0,0}},
+        selection_box = {{0,0}, {0,0}},
+        drawing_box = {{-0.6, -1.8}, {0.6, 0.3}},
+        subgroup = "trees",
+        order = "a[tree]-c[dry-tree]",
+        vehicle_impact_sound =  { filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0 },
+        --autoplace = dead_trees_autoplace(0.5),
+        pictures =
+        {
+          --dry-tree
+          {
+            filename = "__pyalienlife__/graphics/entity/crops/kicalk/kicalk.png",
+            priority = "extra-high",
+            width = 64,
+            height = 80,
+            frame_count = 8,
+            variation_count = 1,
+            shift = util.by_pixel(0, -16),
+          }
+        }
+      }
+})

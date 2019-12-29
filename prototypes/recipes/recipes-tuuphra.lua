@@ -56,75 +56,6 @@ RECIPE {
 
 ---breeding---
 
-RECIPE {
-    type = "recipe",
-    name = "tuuphra-0",
-    category = "tuuphra",
-    enabled = false,
-    energy_required = 80,
-    ingredients = {
-        {type = "item", name = "tuuphra-seeds", amount = 5},
-        {type = "fluid", name = "water", amount = 300},
-        {type = "item", name = "soil", amount = 35}
-    },
-    results = {
-        {type = "item", name = "tuuphra", amount = 3}
-    },
-}:add_unlock("tuuphra")
-
-RECIPE {
-    type = "recipe",
-    name = "tuuphra-1",
-    category = "tuuphra",
-    enabled = false,
-    energy_required = 80,
-    ingredients = {
-        {type = "item", name = "tuuphra-seeds", amount = 5},
-        {type = "fluid", name = "water", amount = 300},
-        {type = "item", name = "coarse", amount = 15},
-    },
-    results = {
-        {type = "item", name = "tuuphra", amount = 5}
-    },
-}:add_unlock("tuuphra")
-
-RECIPE {
-    type = "recipe",
-    name = "tuuphra-2",
-    category = "tuuphra",
-    enabled = false,
-    energy_required = 80,
-    ingredients = {
-        {type = "item", name = "tuuphra-seeds", amount = 5},
-        {type = "fluid", name = "water", amount = 300},
-        {type = "item", name = "coarse", amount = 35},
-        {type = "item", name = "fertilizer", amount = 5},
-    },
-    results = {
-        {type = "item", name = "tuuphra", amount = 7}
-    },
-}:add_unlock("tuuphra")
-
-RECIPE {
-    type = "recipe",
-    name = "tuuphra-3",
-    category = "tuuphra",
-    enabled = false,
-    energy_required = 80,
-    ingredients = {
-        {type = "item", name = "tuuphra-seeds", amount = 5},
-        {type = "fluid", name = "water", amount = 300},
-        {type = "fluid", name = "nitrogen", amount = 200},
-        {type = "item", name = "coarse", amount = 35},
-        {type = "item", name = "fertilizer", amount = 5},
-    },
-    results = {
-        {type = "item", name = "tuuphra", amount = 10}
-    },
-}:add_unlock("tuuphra")
-
-
-
 -----SEEDS----
 
 RECIPE {
@@ -137,7 +68,7 @@ RECIPE {
         {type = "item", name = "tuuphra", amount = 2},
     },
     results = {
-        {type = "item", name = "tuuphra-seeds", amount = 10}
+        {type = "item", name = "tuuphra-seeds", amount = 8}
     },
 }:add_unlock("tuuphra")
 

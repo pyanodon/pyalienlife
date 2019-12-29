@@ -1215,3 +1215,18 @@ RECIPE {
     },
     --main_product = "adrenal-cortex",
 }
+
+RECIPE {
+    type = "recipe",
+    name = "naven-coal",
+    category = "hpf",
+    enabled = false,
+    energy_required = 2,
+    ingredients = {
+        {type = 'item', name = 'navens', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'coal', amount = 8}
+    },
+    --main_product = "adrenal-cortex",
+}:add_unlock("navens")
