@@ -48,7 +48,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 130,
-			tech = 'organic-breeding'
+			tech = 'dingrits'
 		},
 		--yotoileaves
 		{
@@ -61,7 +61,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 120,
-			tech = 'organic-breeding'
+			tech = 'dingrits'
 		},		
 		--food 2
 		{
@@ -78,7 +78,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 110,
-			tech = 'food-mk03'
+			tech = 'dingrits'
 		},
 		--food 2 yeadols
 		{
@@ -91,7 +91,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 100,
-			tech = 'organic-breeding'
+			tech = 'dingrits'
 		},
 		--food 2 yeadols yotoileaves
 		{
@@ -104,7 +104,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 90,
-			tech = 'organic-breeding'
+			tech = 'dingrits'
 		},
 		--gh
 		{

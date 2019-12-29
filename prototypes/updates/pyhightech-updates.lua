@@ -13,6 +13,9 @@ TECHNOLOGY('antitumor'):add_prereq('earnshaw-theorem')
 RECIPE('kicalk-plantation'):remove_unlock('coal-processing-1')
 RECIPE('cadaveric-arum-mk01'):remove_unlock('basic-electronics')
 
+require('prototypes/recipes/recipes-antelope')
+require('prototypes/recipes/recipes-auto-antelope')
+
 TECHNOLOGY {
     type = "technology",
     name = "arum",
@@ -96,7 +99,11 @@ RECIPE('yaedols-codex'):replace_ingredient("glass", "phosphate-glass")
 RECIPE('dingrits-codex'):replace_ingredient("glass", "phosphate-glass")
 RECIPE('yeadols-codex'):replace_ingredient("glass", "phosphate-glass")
 RECIPE('scrondrix-codex'):replace_ingredient("glass", "phosphate-glass")
+RECIPE('antelope-codex'):replace_ingredient("glass", "phosphate-glass")
 RECIPE('nanochondria'):add_ingredient({type = "item", name = "paramagnetic-material", amount = 1}):add_ingredient({type = "item", name = "diamagnetic-material", amount = 1})
+RECIPE('quantum-vortex-storage-system'):add_ingredient({type = "item", name = "strangelets", amount = 2})
+RECIPE('nv-center'):add_ingredient({type = "item", name = "strangelets", amount = 2})
+RECIPE('space-science-pack'):add_ingredient({type = "item", name = "strangelets", amount = 5})
 
 RECIPE('zipir-carcass'):remove_unlock('basic-electronics')
 RECIPE('fawogae2'):remove_unlock('advanced-electronics')
@@ -415,21 +422,6 @@ RECIPE {
     },
     --main_product = "cocoon",
 }:add_unlock("kmauts")
-
-RECIPE {
-    type = 'recipe',
-    name = 'tester',
-    category = 'antelope',
-    enabled = false,
-    energy_required = 100,
-    ingredients = {
-        {type = 'item', name = 'coke', amount = 10},
-    },
-    results = {
-        {type = 'item', name = 'coke', amount = 80},
-    },
-    --main_product = "cocoon",
-}:add_unlock("schrodinger-antelope")
 
 
 --------------------------ralesia mega farm----------------

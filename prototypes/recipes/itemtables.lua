@@ -161,6 +161,7 @@ items.inputs.dingritsfood02 = {'dingrits-food-02', 1}
 items.inputs.yotoileaves = {'yotoi-leaves', 1}
 items.inputs.yeadols = {'yeadols', 1}
 items.inputs.tuuphra = {'tuuphra', 1}
+items.inputs.tuuphraseeds = {'tuuphra-seeds', 1}
 items.inputs.meatcagedkmauts = {'meat-caged-kmauts', 1}
 items.inputs.bloodcagedkmauts = {'blood-caged-kmauts', 1}
 items.inputs.gutscagedkmauts = {'guts-caged-kmauts', 1}
@@ -174,6 +175,8 @@ items.inputs.cridren = {'cridren', 1}
 items.inputs.cridrenseeds = {'cridren-seeds', 1}
 items.inputs.chalkysoil = {'chalky-soil', 1}
 items.inputs.fish = {'fish', 1}
+items.inputs.sponge = {'sponge', 1}
+items.inputs.finenexelit = {'fine-nexelit-powder', 1}
 
 items.inputs.cagedscrondrix = {'caged-scrondrix', 1}
 items.inputs.braincagedscrondrix = {'brain-caged-scrondrix', 1}
@@ -203,6 +206,11 @@ items.inputs.phadaifood02 = {'phadai-food-02', 1}
 
 items.inputs.kicalk = {'kicalk', 1}
 items.inputs.kicalkseeds = {'kicalk-seeds', 1}
+
+items.inputs.cagedantelope = {'caged-antelope', 1}
+items.inputs.antelopecage = {'cage-antelope', 1}
+items.inputs.nanocellulose = {'nano-cellulose', 1}
+items.inputs.strangelets = {'strangelets', 1}
 
 items.outputs = items.inputs
 --can put output replacements below here
