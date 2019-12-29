@@ -56,7 +56,7 @@ script.on_event(
                         local rpos = event.rocket_silo.position
                         repeat
                             game.surfaces['nauvis'].create_entity {name = farm.crop, position = {rpos.x + posx, (rpos.y - 15) + posy}, amount = output[rs.get_recipe().name]}
-                            game.surfaces['nauvis'].create_entity {name = 'kicalk-tree-fake', position = {rpos.x + posx, (rpos.y - 15) + posy}}
+                            game.surfaces['nauvis'].create_entity {name = farm.crop .. '-fake', position = {rpos.x + posx, (rpos.y - 15) + posy}}
                             posx = posx + 1
                             if posx == 12 then
                                 posx = -11
