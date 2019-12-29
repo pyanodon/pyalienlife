@@ -238,4 +238,6 @@ require('prototypes/ores/yotoi')
 require('prototypes/ores/yotoi-fruit')
 require('prototypes/ores/bioreserve')
 
+require('prototypes/ores/fake-plants')
+
 data.raw["utility-constants"].default.recipe_step_limit = 2000;
