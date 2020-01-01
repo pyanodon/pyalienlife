@@ -55,6 +55,68 @@ RECIPE {
     },
 }:add_unlock("cadaveric-arum")
 
+------RECIPES------
+
+RECIPE {
+    type = "recipe",
+    name = "cadaveric-processing-01",
+    category = "nursery",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "cadaveric-arum", amount = 2},
+    },
+    results = {
+        {type = "fluid", name = "dms", amount = 25},
+    },
+}:add_unlock("cadaveric-arum")
+
+RECIPE {
+    type = "recipe",
+    name = "cadaveric-processing-02",
+    category = "nursery",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "cadaveric-arum", amount = 2},
+        {type = "fluid", name = "acidgas", amount = 100},
+    },
+    results = {
+        {type = "fluid", name = "dms", amount = 50}
+    },
+}:add_unlock("cadaveric-arum")
+
+RECIPE {
+    type = "recipe",
+    name = "cadaveric-processing-03",
+    category = "nursery",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "cadaveric-arum", amount = 2},
+    },
+    results = {
+        {type = "fluid", name = "dms", amount = 25},
+        {type = "item", name = "biomass", amount = 3},
+    },
+    main_product = "dms",
+}:add_unlock("cadaveric-arum")
+
+RECIPE {
+    type = "recipe",
+    name = "cadaveric-acidgas-01",
+    category = "nursery",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "cadaveric-arum", amount = 2},
+    },
+    results = {
+        {type = "fluid", name = "acidgas", amount = 50}
+    },
+}:add_unlock("cadaveric-arum")
+
+
 RECIPE {
     type = 'recipe',
     name = 'replicator-cadaveric-arum',

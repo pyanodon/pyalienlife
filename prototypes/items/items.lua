@@ -1685,6 +1685,16 @@ ITEM {
     stack_size = 50
 }
 
+ITEM {
+    type = "item",
+    name = "cadaveric-arum-seeds",
+    icon = "__pyalienlife__/graphics/icons/cadaveric-arum-seeds.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cadaveric",
+    order = "x",
+    stack_size = 10
+}
 
 ITEM {
     type = "item",
@@ -3088,6 +3098,9 @@ local alien_life_limitations_ulric =
 	{
     }
     local alien_life_limitations_trits =
+	{
+    }
+    local alien_life_limitations_cadaveric =
 	{
     }
 ----MODULES----
@@ -4964,6 +4977,86 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+ITEM {
+    type = "module",
+    name = "cadaveric-arum",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/cadaveric-arum.png"},
+        --{icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "arum",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-cadaveric",
+    order = "cad-a",
+    stack_size = 10,
+	effect = { speed = {bonus = 15}},
+	limitation = alien_life_limitations_cadaveric,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "cadaveric-arum-mk02-a",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/cadaveric-arum.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "arum",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-cadaveric",
+    order = "cad-b",
+    stack_size = 10,
+	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_cadaveric,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "cadaveric-arum-mk03-a",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/cadaveric-arum.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "arum",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-cadaveric",
+    order = "cad-c",
+    stack_size = 10,
+	effect = { speed = {bonus = 25}},
+	limitation = alien_life_limitations_cadaveric,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "cadaveric-arum-mk04-a",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/cadaveric-arum.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "arum",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-cadaveric",
+    order = "cad-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 30}},
+	limitation = alien_life_limitations_cadaveric,
+	limitation_message_key = "Its full"
+}
+
 ---replicators----
 
 ITEM {
@@ -5142,6 +5235,10 @@ data:extend(
   {
     type = "module-category",
     name = "trits"
+  },
+  {
+    type = "module-category",
+    name = "arum"
   },
   --item used to select the ceature and start and end points of the route
 	{
