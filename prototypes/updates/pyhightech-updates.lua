@@ -5,6 +5,9 @@ require('prototypes/technologies/mega-farm-kicalk')
 require('prototypes/recipes/recipes-kicalk-megafarm')
 require('prototypes/recipes/recipes-kicalk')
 require('prototypes/recipes/recipes-auto-kicalk')
+require('prototypes/technologies/mega-farm-cadaveric-arum')
+require('prototypes/technologies/cadaveric-arum')
+require('prototypes/recipes/recipes-cadaveric')
 
 --TECHNOLOGY--
 TECHNOLOGY('nano-tech'):add_prereq('microbiology-mk03')
@@ -15,24 +18,6 @@ RECIPE('cadaveric-arum-mk01'):remove_unlock('basic-electronics')
 
 require('prototypes/recipes/recipes-antelope')
 require('prototypes/recipes/recipes-auto-antelope')
-
-TECHNOLOGY {
-    type = "technology",
-    name = "arum",
-    icon = "__pyalienlife__/graphics/technology/arum.png",
-    icon_size = 128,
-    order = "c-a",
-    prerequisites = {"botany-mk02"},
-    effects = {},
-    unit = {
-        count = 100,
-        ingredients = {
-            {"automation-science-pack", 2},
-            {"logistic-science-pack", 2},
-        },
-        time = 50
-    }
-}
 
 ----KICALK-----
 
@@ -47,13 +32,59 @@ ITEM {
     stack_size = 10
 }
 
+----CADAVERIC ARUM-----
+
+ITEM {
+    type = "item",
+    name = "cadaveric-arum",
+    icon = "__pyalienlife__/graphics/icons/cadaveric-arum.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cadaveric",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "replicator-cadaveric-arum",
+    icon = "__pyalienlife__/graphics/icons/replicator-cadaveric-arum.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-replicators",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "cadaveric-arum-codex",
+    icon = "__pyalienlife__/graphics/icons/cadaveric-arum-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cadaveric",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "cadaveric-arum-seeds",
+    icon = "__pyalienlife__/graphics/icons/cadaveric-arum-seeds.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cadaveric",
+    order = "x",
+    stack_size = 10
+}
+
 ----BUILDINDS----
 RECIPE('ralesia-plantation-mk03'):add_ingredient({type = "item", name = "biopolymer", amount = 15}):add_ingredient({type = "item", name = "carbon-aerogel", amount = 20})
 RECIPE('ralesia-plantation-mk04'):replace_ingredient("control-unit", "intelligent-unit"):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 5}):add_ingredient({type = "item", name = "nv-center", amount = 2})
 RECIPE('auog-paddock'):set_fields {enabled = false}
 RECIPE('zipir'):remove_unlock('basic-electronics')
 RECIPE('kicalk-plantation-mk01'):add_unlock('kicalk')
-RECIPE('cadaveric-arum-mk01'):add_unlock('arum'):subgroup_order("py-alienlife-buildings-mk01", "b")
+RECIPE('cadaveric-arum-mk01'):add_unlock('cadaveric-arum'):subgroup_order("py-alienlife-buildings-mk01", "b")
 RECIPE('cadaveric-arum-mk02'):add_unlock('botany-mk03'):subgroup_order("py-alienlife-buildings-mk02", "b")
 RECIPE('cadaveric-arum-mk03'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk03", "b")
 RECIPE('cadaveric-arum-mk04'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk04", "b")
@@ -81,7 +112,7 @@ RECIPE('raw-fiber'):remove_unlock('basic-electronics')
 RECIPE('raw-fiber3'):remove_unlock('basic-electronics')
 RECIPE('raw-fiber2'):remove_unlock('basic-electronics'):set_fields {enabled = false}
 RECIPE('raw-fiber4'):remove_unlock('basic-electronics'):set_fields {enabled = false}
-RECIPE('dms'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('basic-electronics'):add_unlock('botany-mk03')--SUBSTITUIR POR TECH DELA
+RECIPE('dms'):subgroup_order("py-alienlife-cadaveric", "a"):remove_unlock('basic-electronics'):add_unlock('cadaveric-arum')
 RECIPE('cobalt-fluoride'):replace_ingredient("chromium", "reo")
 RECIPE('micro-fiber'):remove_unlock('nano-tech'):add_unlock('botany-mk02')
 RECIPE('epoxy'):remove_unlock('advanced-electronics'):add_unlock('basic-electronics')

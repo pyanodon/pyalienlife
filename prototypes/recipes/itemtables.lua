@@ -5,6 +5,7 @@ items.outputs = {}
 
 items.inputs.water = {'water', 100}
 items.inputs.soil = {'soil', 10}
+items.inputs.saps = {'saps', 1}
 items.inputs.hydrogen = {'hydrogen', 10}
 items.inputs.coarse = {'coarse', 10}
 items.inputs.carbondioxide = {'carbon-dioxide', 10}

@@ -231,6 +231,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-cadaveric",
+        group = "py-alienlife",
+        order = "f-h"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-fungi",
         group = "py-alienlife",
         order = "g"

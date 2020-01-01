@@ -35,8 +35,8 @@ ENTITY {
         control = "ore-bioreserve",
         sharpness = 15/16,
         richness_multiplier = 100,
-        richness_multiplier_distance_bonus = 10,
-        richness_base = 5,
+        richness_multiplier_distance_bonus = 1.5,
+        richness_base = 2,
         coverage = 0.0006,
         peaks = {
             {
@@ -46,9 +46,9 @@ ENTITY {
             }
         },
 		starting_area_size = 5500 * 0.002,
-		starting_area_amount = 300
+		starting_area_amount = 100
     },
-    stage_counts = {900, 600, 450, 350, 250, 200, 110, 90, 40, 35, 15},
+    stage_counts = {300, 200, 170, 150, 120, 100, 80, 60, 40, 35, 15},
     stages = {
         sheet = {
             filename = "__pyalienlife__/graphics/entity/bioreserve/rich-1.png",

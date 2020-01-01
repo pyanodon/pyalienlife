@@ -11,7 +11,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='moss',amount =5},
+                    {name='moss',amount =10},
                     {name='biomass',amount =10},
 					{name='waterbarrel',amount=3,return_item={name='empty-barrel',amount=3}},
 				},
