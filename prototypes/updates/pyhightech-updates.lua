@@ -8,6 +8,8 @@ require('prototypes/recipes/recipes-auto-kicalk')
 require('prototypes/technologies/mega-farm-cadaveric-arum')
 require('prototypes/technologies/cadaveric-arum')
 require('prototypes/recipes/recipes-cadaveric')
+require('prototypes/recipes/recipes-auto-cadaveric')
+require("prototypes/buildings/cadavericarum-mk01")
 
 --TECHNOLOGY--
 TECHNOLOGY('nano-tech'):add_prereq('microbiology-mk03')
@@ -36,17 +38,6 @@ ITEM {
 
 ITEM {
     type = "item",
-    name = "cadaveric-arum",
-    icon = "__pyalienlife__/graphics/icons/cadaveric-arum.png",
-	icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-cadaveric",
-    order = "x",
-    stack_size = 10
-}
-
-ITEM {
-    type = "item",
     name = "replicator-cadaveric-arum",
     icon = "__pyalienlife__/graphics/icons/replicator-cadaveric-arum.png",
 	icon_size = 64,
@@ -67,34 +58,24 @@ ITEM {
     stack_size = 10
 }
 
-ITEM {
-    type = "item",
-    name = "cadaveric-arum-seeds",
-    icon = "__pyalienlife__/graphics/icons/cadaveric-arum-seeds.png",
-	icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-cadaveric",
-    order = "x",
-    stack_size = 10
-}
-
+ITEM('dms'):subgroup_order("py-alienlife-gases", "b")
+ITEM('acidgas'):subgroup_order("py-alienlife-gases", "a")
 ----BUILDINDS----
 RECIPE('ralesia-plantation-mk03'):add_ingredient({type = "item", name = "biopolymer", amount = 15}):add_ingredient({type = "item", name = "carbon-aerogel", amount = 20})
 RECIPE('ralesia-plantation-mk04'):replace_ingredient("control-unit", "intelligent-unit"):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 5}):add_ingredient({type = "item", name = "nv-center", amount = 2})
 RECIPE('auog-paddock'):set_fields {enabled = false}
 RECIPE('zipir'):remove_unlock('basic-electronics')
 RECIPE('kicalk-plantation-mk01'):add_unlock('kicalk')
-RECIPE('cadaveric-arum-mk01'):add_unlock('cadaveric-arum'):subgroup_order("py-alienlife-buildings-mk01", "b")
-RECIPE('cadaveric-arum-mk02'):add_unlock('botany-mk03'):subgroup_order("py-alienlife-buildings-mk02", "b")
-RECIPE('cadaveric-arum-mk03'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk03", "b")
-RECIPE('cadaveric-arum-mk04'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk04", "b")
+RECIPE('cadaveric-arum-mk01'):remove_unlock('basic-electronics')
+RECIPE('cadaveric-arum-mk02'):remove_unlock('basic-electronics')
+RECIPE('cadaveric-arum-mk03'):remove_unlock('basic-electronics')
+RECIPE('cadaveric-arum-mk04'):remove_unlock('basic-electronics')
 RECIPE('moondrop-greenhouse-mk02'):add_unlock('botany-mk03'):subgroup_order("py-alienlife-buildings-mk02", "b")
 RECIPE('moondrop-greenhouse-mk03'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk03", "b")
 RECIPE('moondrop-greenhouse-mk04'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk04", "b")
 RECIPE('harvester'):replace_ingredient("plastic-bar", "biopolymer"):add_ingredient({type = "item", name = "aerogel", amount = 20})
 
 ----RECIPES----
-RECIPE('dms'):remove_unlock('basic-electronics')
 RECIPE('fungal-substrate'):add_ingredient({type = "item", name = "urea", amount = 3})
 RECIPE('log7-2'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a"):remove_unlock('basic-electronics'):add_unlock('botany-mk02')
 --RECIPE('urea'):replace_ingredient("fawogae", "seaweed"):subgroup_order("py-alienlife-items", "a")
@@ -112,7 +93,7 @@ RECIPE('raw-fiber'):remove_unlock('basic-electronics')
 RECIPE('raw-fiber3'):remove_unlock('basic-electronics')
 RECIPE('raw-fiber2'):remove_unlock('basic-electronics'):set_fields {enabled = false}
 RECIPE('raw-fiber4'):remove_unlock('basic-electronics'):set_fields {enabled = false}
-RECIPE('dms'):subgroup_order("py-alienlife-cadaveric", "a"):remove_unlock('basic-electronics'):add_unlock('cadaveric-arum')
+RECIPE('dms'):subgroup_order("py-alienlife-cadaveric", "a"):remove_unlock('basic-electronics')
 RECIPE('cobalt-fluoride'):replace_ingredient("chromium", "reo")
 RECIPE('micro-fiber'):remove_unlock('nano-tech'):add_unlock('botany-mk02')
 RECIPE('epoxy'):remove_unlock('advanced-electronics'):add_unlock('basic-electronics')

@@ -836,7 +836,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'nanochondria', amount = 1}
     }
-}:add_unlock('nanochondria'):change_category('nano'):add_ingredient({type = "item", name = "resilin", amount = 1}):replace_ingredient("pelt", "collagen"):replace_ingredient("bacteria-1", "bacteria-2")
+}:add_unlock('nanochondria'):change_category('nano'):add_ingredient({type = "item", name = "resilin", amount = 1}):add_ingredient({type = "item", name = "collagen", amount = 5}):replace_ingredient("bacteria-1", "bacteria-2")
 
 
 RECIPE {
@@ -858,7 +858,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'bmp', amount = 1}
     }
-}:add_unlock('bmp'):replace_ingredient("bacteria-1", "bacteria-2"):replace_ingredient("sea-sponge", "collagen")
+}:add_unlock('bmp'):replace_ingredient("bacteria-1", "bacteria-2"):replace_ingredient("sea-sponge", "collagen"):add_ingredient({type = "fluid", name = "dms", amount = 100})
 
 RECIPE {
     type = 'recipe',

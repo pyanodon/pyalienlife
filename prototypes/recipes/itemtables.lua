@@ -213,6 +213,12 @@ items.inputs.antelopecage = {'cage-antelope', 1}
 items.inputs.nanocellulose = {'nano-cellulose', 1}
 items.inputs.strangelets = {'strangelets', 1}
 
+items.inputs.cadavericarumseeds = {'cadaveric-arum-seeds', 1}
+items.inputs.cadavericarum = {'cadaveric-arum', 1}
+items.inputs.coalgas = {'coal-gas', 10}
+items.inputs.stonewool = {'stone-wool', 1}
+items.inputs.acidgas = {'acidgas', 10}
+
 items.outputs = items.inputs
 --can put output replacements below here
 
