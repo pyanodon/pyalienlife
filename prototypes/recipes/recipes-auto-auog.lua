@@ -37,11 +37,11 @@ fun.autorecipes {
 			crafting_speed = 150,
 			tech = 'food-mk01'
 		},
-		--salt
+		--saps
 		{
 			ingredients =
 				{
-					{name='salt',amount = 5},
+					{name='saps',amount = 5},
 					{name='bedding',amount = 1},
 				},
 			results =
@@ -69,7 +69,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='auogfood01',amount ='R'},
-					{name='salt',amount ='R'},
+					{name='saps',amount ='R'},
 					{name='rawfiber',amount ='R'},
 					{name='auogfood02',amount =1},
 
@@ -81,11 +81,11 @@ fun.autorecipes {
 			crafting_speed = 120,
 			tech = 'food-mk02'
 		},
-		--food 2 salt
+		--food 2 saps
 		{
 			ingredients =
 				{
-					{name='salt',amount =5},
+					{name='saps',amount =5},
 				},
 			results =
 				{
@@ -94,7 +94,7 @@ fun.autorecipes {
 			crafting_speed = 110,
 			tech = 'organic-breeding'
 		},
-		--food 2 salt fiber
+		--food 2 saps fiber
 		{
 			ingredients =
 				{
@@ -398,11 +398,11 @@ fun.autorecipes {
 			crafting_speed = 60,
 			tech = 'assisted-embryology'
 		},
-		--salt
+		--saps
 		{
 			ingredients =
 				{
-					{name='salt',amount = 10},
+					{name='saps',amount = 10},
 				},
 			results =
 				{
@@ -429,7 +429,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='auogfood01',amount ='R'},
-					{name='salt',amount ='R'},
+					{name='saps',amount ='R'},
 					{name='rawfiber',amount ='R'},
 					{name='auogfood02',amount =1},
 
@@ -441,11 +441,11 @@ fun.autorecipes {
 			crafting_speed = 50,
 			tech = 'assisted-embryology'
 		},
-		--food 2 salt
+		--food 2 saps
 		{
 			ingredients =
 				{
-					{name='salt',amount ='R'},
+					{name='saps',amount ='R'},
 				},
 			results =
 				{
@@ -454,7 +454,7 @@ fun.autorecipes {
 			crafting_speed = 45,
 			tech = 'assisted-embryology'
 		},
-		--food 2 salt fiber
+		--food 2 saps fiber
 		{
 			ingredients =
 				{
@@ -472,7 +472,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='rawfiber',amount = 'R'},
-					{name='salt',amount = 'R'},
+					{name='saps',amount = 'R'},
 					{name='auogfood02',amount = 'R'},
 					{name='biomass',amount =15},
 					{name='pheromones',amount =1},
@@ -502,11 +502,11 @@ fun.autorecipes {
 			crafting_speed = 60,
 			tech = 'pheromones'
 		},
-		--salt
+		--saps
 		{
 			ingredients =
 				{
-					{name='salt',amount = 10},
+					{name='saps',amount = 10},
 				},
 			results =
 				{
@@ -533,7 +533,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='auogfood01',amount ='R'},
-					{name='salt',amount ='R'},
+					{name='saps',amount ='R'},
 					{name='rawfiber',amount ='R'},
 					{name='auogfood02',amount =1},
 
@@ -545,11 +545,11 @@ fun.autorecipes {
 			crafting_speed = 50,
 			tech = 'pheromones'
 		},
-		--food 2 salt
+		--food 2 saps
 		{
 			ingredients =
 				{
-					{name='salt',amount ='R'},
+					{name='saps',amount ='R'},
 				},
 			results =
 				{
@@ -558,7 +558,7 @@ fun.autorecipes {
 			crafting_speed = 45,
 			tech = 'pheromones'
 		},
-		--food 2 salt fiber
+		--food 2 saps fiber
 		{
 			ingredients =
 				{

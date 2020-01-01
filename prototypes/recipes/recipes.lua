@@ -233,6 +233,7 @@ RECIPE {
         {type = 'item', name = 'nexelit-matrix', amount = 5},
         {type = 'item', name = 'brain', amount = 1},
         {type = 'item', name = 'agar', amount = 3},
+        {type = 'item', name = 'bio-sample', amount = 2},
         {type = 'item', name = 'nickel-plate', amount = 5},
         {type = 'item', name = 'electronic-circuit', amount = 1},
         {type = 'fluid', name = 'vacuum', amount = 50},
@@ -269,7 +270,7 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = 'fluid', name = 'blood', amount = 30},
+        {type = 'fluid', name = 'blood', amount = 50},
         {type = 'item', name = 'bones', amount = 6},
         {type = 'item', name = 'manure', amount = 5},
         {type = 'item', name = 'ash', amount = 10},
