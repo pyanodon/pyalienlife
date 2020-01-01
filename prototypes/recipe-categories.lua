@@ -177,6 +177,10 @@ data:extend {
     },
     {
         type = "recipe-category",
+        name = "arum-farm"
+    },
+    {
+        type = "recipe-category",
         name = "vat"
     },
     ------crops------
@@ -207,6 +211,10 @@ data:extend {
     {
         type = "resource-category",
         name = "kicalk-tree"
+    },
+    {
+        type = "resource-category",
+        name = "arum"
     },
 
     {
