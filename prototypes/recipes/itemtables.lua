@@ -230,6 +230,20 @@ items.inputs.skinvonix = {'skin-vonix', 1}
 items.inputs.gutsvonix = {'guts-vonix', 1}
 items.inputs.fatvonix = {'fat-vonix', 1}
 
+items.inputs.zipir = {'zipir1', 1}
+items.inputs.zipiregg = {'zipir-eggs', 1}
+items.inputs.brainzipir = {'brain-zipir', 1}
+items.inputs.meatzipir = {'meat-zipir', 1}
+items.inputs.bloodzipir = {'blood-zipir', 1}
+items.inputs.skinzipir = {'skin-zipir', 1}
+items.inputs.gutszipir = {'guts-zipir', 1}
+items.inputs.fatzipir = {'fat-zipir', 1}
+items.inputs.zipirfood01 = {'zipir-food-01', 1}
+items.inputs.zipirfood02 = {'zipir-food-02', 1}
+items.inputs.wastewater = {'waste-water', 10}
+items.inputs.pressuredwater = {'pressured-water', 10}
+items.inputs.fawogaesubstrate = {'fawogae-substrate', 1}
+
 items.outputs = items.inputs
 --can put output replacements below here
 

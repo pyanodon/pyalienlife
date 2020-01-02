@@ -2380,6 +2380,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "zipir-eggs",
+    icon = "__pyalienlife__/graphics/icons/zipir-egg.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-zipir",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
     name = "grod-codex",
     icon = "__pyalienlife__/graphics/icons/grod-codex.png",
 	icon_size = 64,
@@ -3057,6 +3068,72 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-vonix",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "meat-zipir",
+    icon = "__pyalienlife__/graphics/icons/meat-zipir.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-zipir",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "blood-zipir",
+    icon = "__pyalienlife__/graphics/icons/blood-zipir.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-zipir",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "fat-zipir",
+    icon = "__pyalienlife__/graphics/icons/fat-zipir.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-zipir",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "skin-zipir",
+    icon = "__pyalienlife__/graphics/icons/skin-zipir.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-zipir",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "brain-zipir",
+    icon = "__pyalienlife__/graphics/icons/brain-zipir.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-zipir",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "guts-zipir",
+    icon = "__pyalienlife__/graphics/icons/guts-zipir.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-zipir",
     order = "a",
     stack_size = 50
 }
@@ -4937,15 +5014,79 @@ ITEM {
 ITEM {
     type = "module",
     name = "zipir1",
-    icon = "__pyalienlife__/graphics/icons/zipir.png",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/zipir.png"},
+        --{icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+    },
     icon_size = 64,
 	category = "zipir",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-zipir",
-    order = "a",
+    order = "za",
     stack_size = 10,
-	effect = { speed = {bonus = 20}},
+	effect = { speed = {bonus = 25}},
+	limitation = alien_life_limitations_zipir,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "zipir2",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/zipir.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "zipir",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-zipir",
+    order = "zb",
+    stack_size = 10,
+	effect = { speed = {bonus = 30}},
+	limitation = alien_life_limitations_zipir,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "zipir3",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/zipir.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "zipir",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-zipir",
+    order = "zc",
+    stack_size = 10,
+	effect = { speed = {bonus = 35}},
+	limitation = alien_life_limitations_zipir,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "zipir4",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/zipir.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "zipir",
+	tier = 41,
+    flags = {},
+    subgroup = "py-alienlife-zipir",
+    order = "zd",
+    stack_size = 10,
+	effect = { speed = {bonus = 40}},
 	limitation = alien_life_limitations_zipir,
 	limitation_message_key = "Its full"
 }

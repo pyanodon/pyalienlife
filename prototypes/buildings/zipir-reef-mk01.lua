@@ -42,7 +42,7 @@ ENTITY {
     selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 4
+        module_slots = 3
     },
     allowed_effects = {"speed"},
     crafting_categories = {"zipir"},

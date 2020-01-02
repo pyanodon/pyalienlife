@@ -12,7 +12,7 @@ RECIPE {
         {type = 'item', name = 'alien-sample01', amount = 5},
         {type = 'item', name = 'cdna', amount = 5},
         {type = 'item', name = 'fish', amount = 10},
-        {type = 'item', name = 'bio-sample', amount = 5},
+        {type = 'item', name = 'bio-sample', amount = 10},
         {type = 'item', name = 'zipir-codex', amount = 2},
         {type = 'item', name = 'earth-crustacean-sample', amount = 1}, --add alien sample from pyALiens mod here.
         {type = 'fluid', name = 'fetal-serum', amount = 100},
@@ -45,7 +45,7 @@ RECIPE {
     name = 'earth-crustacean-sample',
     category = 'data-array',
     enabled = false,
-    energy_required = 25,
+    energy_required = 300,
     ingredients = {
         {type = 'item', name = 'steel-chest', amount = 1},
         {type = 'item', name = 'chemical-science-pack', amount = 5},
@@ -89,7 +89,7 @@ RECIPE {
         {type = 'item', name = 'navens', amount = 1},
         {type = 'item', name = 'seaweed', amount = 5},
         {type = 'item', name = 'fish', amount = 8},
-        {type = 'item', name = 'yotoi-seeds', amount = 10},
+        {type = 'item', name = 'rennea', amount = 15},
         {type = 'item', name = 'fawogae', amount = 10},
         {type = 'item', name = 'tuuphra', amount = 3},
         {type = 'fluid', name = 'steam', amount = 100},

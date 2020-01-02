@@ -231,6 +231,7 @@ require('prototypes/recipes/recipes-tuuphra-megafarm')
 require('prototypes/recipes/recipes-grod-megafarm')
 require('prototypes/recipes/recipes-yotoi-megafarm')
 require('prototypes/recipes/recipes-yotoi-fruit-megafarm')
+require('prototypes/recipes/recipes-auto-zipir')
 
 --(( ORES ))--
 require('prototypes/ores/ralesia')
