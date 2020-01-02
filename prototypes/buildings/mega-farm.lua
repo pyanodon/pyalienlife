@@ -100,7 +100,7 @@ ENTITY {
     active_energy_usage = "3990KW",
     rocket_entity = "mega-farm-invisa-rocket",
 
-    times_to_blink = 3,
+    times_to_blink = 1,
     light_blinking_speed = 1 / (3 * 60),
     door_opening_speed = 1 / (4.25 * 60),
 

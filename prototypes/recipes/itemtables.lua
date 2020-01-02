@@ -27,6 +27,7 @@ items.inputs.slackedlime = {'slacked-lime', 10}
 items.inputs.watersaline = {'water-saline', 10}
 items.inputs.irondust = {'iron-ore-dust', 1}
 items.inputs.sand = {'sand', 10}
+items.inputs.lignin = {'lignin', 1}
 items.inputs.clay = {'clay', 10}
 items.inputs.waterbarrel = {'water-barrel', 1}
 items.inputs.gh = {'gh', 1}
@@ -218,6 +219,16 @@ items.inputs.cadavericarum = {'cadaveric-arum', 1}
 items.inputs.coalgas = {'coal-gas', 10}
 items.inputs.stonewool = {'stone-wool', 1}
 items.inputs.acidgas = {'acidgas', 10}
+
+items.inputs.vonix = {'vonix', 1}
+items.inputs.vonixegg = {'vonix-eggs', 1}
+items.inputs.venongland = {'venon-gland', 1}
+items.inputs.brainvonix = {'brain-vonix', 1}
+items.inputs.meatvonix = {'meat-vonix', 1}
+items.inputs.bloodvonix = {'blood-vonix', 1}
+items.inputs.skinvonix = {'skin-vonix', 1}
+items.inputs.gutsvonix = {'guts-vonix', 1}
+items.inputs.fatvonix = {'fat-vonix', 1}
 
 items.outputs = items.inputs
 --can put output replacements below here

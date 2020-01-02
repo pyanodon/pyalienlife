@@ -11,7 +11,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='phytoplankton',amount =50},
+					{name='phytoplankton',amount =50},
+					{name='dhilmosegg',amount =1},
 					{name='watersaline',amount=100,return_item={name='dirty-water',amount=100}},
 				},
 			results =

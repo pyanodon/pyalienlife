@@ -57,76 +57,6 @@ RECIPE {
 
 ---breeding---
 
-RECIPE {
-    type = "recipe",
-    name = "rennea-0",
-    category = "rennea",
-    enabled = false,
-    energy_required = 100,
-    ingredients = {
-        {type = "item", name = "rennea-seeds", amount = 5},
-        {type = "fluid", name = "water", amount = 300},
-        {type = "item", name = "soil", amount = 35}
-    },
-    results = {
-        {type = "item", name = "rennea", amount = 10}
-    },
-}:add_unlock("rennea")
-
-RECIPE {
-    type = "recipe",
-    name = "rennea-1",
-    category = "rennea",
-    enabled = false,
-    energy_required = 80,
-    ingredients = {
-        {type = "fluid", name = "water", amount = 200},
-        {type = "item", name = "soil", amount = 20},
-        {type = "item", name = "rennea-seeds", amount = 5},
-        {type = "item", name = "coarse", amount = 10},
-    },
-    results = {
-        {type = "item", name = "rennea", amount = 10}
-    },
-}:add_unlock("rennea")
-
-RECIPE {
-    type = "recipe",
-    name = "rennea-2",
-    category = "rennea",
-    enabled = false,
-    energy_required = 80,
-    ingredients = {
-        {type = "fluid", name = "water", amount = 200},
-        {type = "item", name = "soil", amount = 20},
-        {type = "item", name = "rennea-seeds", amount = 5},
-        {type = "item", name = "coarse", amount = 10},
-        {type = "item", name = "fertilizer", amount = 10},
-    },
-    results = {
-        {type = "item", name = "rennea", amount = 15}
-    },
-}:add_unlock("rennea")
-
-RECIPE {
-    type = "recipe",
-    name = "rennea-3",
-    category = "rennea",
-    enabled = false,
-    energy_required = 80,
-    ingredients = {
-        {type = "fluid", name = "water", amount = 200},
-        {type = "item", name = "rennea-seeds", amount = 5},
-        {type = "item", name = "soil", amount = 20},
-        {type = "item", name = "fertilizer", amount = 10},
-        {type = "item", name = "coarse", amount = 10},
-        {type = "item", name = "small-lamp", amount = 2},
-    },
-    results = {
-        {type = "item", name = "rennea", amount = 20}
-    },
-}:add_unlock("rennea")
-
 -----SEEDS----
 
 RECIPE {
@@ -139,7 +69,7 @@ RECIPE {
         {type = "item", name = "rennea", amount = 5},
     },
     results = {
-        {type = "item", name = "rennea-seeds", amount = 10}
+        {type = "item", name = "rennea-seeds", amount = 7}
     },
 }:add_unlock("rennea")
 
