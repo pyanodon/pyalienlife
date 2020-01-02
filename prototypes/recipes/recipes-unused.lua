@@ -785,3 +785,22 @@ RECIPE {
     },
     main_product = "manure",
 }:add_unlock("mukmoux")
+
+RECIPE {
+    type = 'recipe',
+    name = 'vonix-',
+    category = 'vonix',
+    enabled = false,
+    energy_required = 200,
+    ingredients = {
+        {type = 'item', name = 'caged-mukmoux', amount = 1},
+        {type = 'item', name = 'water-barrel', amount = 15},
+    },
+    results = {
+        {type = 'item', name = 'vonix-eggs', amount = 1},
+        {type = 'item', name = 'empty-barrel', amount = 15},
+    },
+    main_product = "vonix-eggs",
+    subgroup = 'py-alienlife-vonix',
+    order = 'a',
+}:add_unlock("vonix")

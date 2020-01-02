@@ -2995,6 +2995,72 @@ ITEM {
     stack_size = 200
 }
 
+ITEM {
+    type = "item",
+    name = "meat-vonix",
+    icon = "__pyalienlife__/graphics/icons/meat-vonix.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-vonix",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "blood-vonix",
+    icon = "__pyalienlife__/graphics/icons/blood-vonix.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-vonix",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "fat-vonix",
+    icon = "__pyalienlife__/graphics/icons/fat-vonix.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-vonix",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "skin-vonix",
+    icon = "__pyalienlife__/graphics/icons/skin-vonix.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-vonix",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "brain-vonix",
+    icon = "__pyalienlife__/graphics/icons/brain-vonix.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-vonix",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "guts-vonix",
+    icon = "__pyalienlife__/graphics/icons/guts-vonix.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-vonix",
+    order = "a",
+    stack_size = 50
+}
+
 ------RULES-----
 
 local alien_life_limitations_ulric =
@@ -3101,6 +3167,9 @@ local alien_life_limitations_ulric =
 	{
     }
     local alien_life_limitations_cadaveric =
+	{
+    }
+    local alien_life_limitations_vonix =
 	{
     }
 ----MODULES----

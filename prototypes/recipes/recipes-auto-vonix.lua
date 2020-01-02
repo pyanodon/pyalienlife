@@ -1,68 +1,68 @@
 local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
-    name = 'caged-scrondrix',
-	category = 'scrondrix',
-	module_limitations = 'scrondrix',
-	subgroup = 'py-alienlife-scrondrix',
+    name = 'vonix',
+	category = 'vonix',
+	module_limitations = 'vonix',
+	subgroup = 'py-alienlife-vonix',
 	order = 'b',
     mats =
 	{
 		{
 			ingredients =
 				{
-					{name='woodseeds',amount =15},
-					{name='meat',amount =5},
-					{name='waterbarrel',amount=5,return_item={name='empty-barrel',amount=5}},
-					{name='cage',amount=1},
+                    {name='cagedmukmoux',amount =1},
+                    {name='vonixegg',amount =1},
+					{name='guts',amount =10},
+					{name='waterbarrel',amount=15,return_item={name='empty-barrel',amount=15}},
 				},
 			results =
 				{
-					{name='cagedscrondrix', probability = 0.5,amount_min =1,amount_max =1},
+					{name='vonix', probability = 0.5,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 150,
-			tech = 'scrondrix'
+			tech = 'vonix'
 		},
-		--yotoi leaves
+--yotoi leaves
 		{
 			ingredients =
 				{
 					--{name='woodseeds',amount ='R'},
-					{name='yotoileaves',amount =10},
+					{name='meat',amount =10},
 				},
 			results =
 				{
 				
 				},
 			crafting_speed = 140,
-			tech = 'scrondrix'
+			tech = 'vonix'
 		},
-		--salt
+		--bedding
 		{
 			ingredients =
 				{
-					{name='salt',amount = 5},
-					{name='bedding',amount = 1},
+					{name='bedding',amount = 5},
+					{name='cagedauog',amount = 1},
 				},
 			results =
 				{
 				
 				},
 			crafting_speed = 130,
-			tech = 'scrondrix'
+			tech = 'vonix'
 		},
 		--fiber
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 5},
+					{name='arthurianegg',amount = 5},
 				},
 			results =
 				{
 				
 				},
 			crafting_speed = 120,
-			tech = 'scrondrix'
+			tech = 'vonix'
 		},		
 		--navens
 		{
@@ -76,7 +76,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 110,
-			tech = 'scrondrix'
+			tech = 'vonix'
 		},
 		--gh
 		{
@@ -100,8 +100,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cagedscrondrix', amount ='R'},
-					{name='cagedscrondrix', probability = 0.7,amount_min =1,amount_max =1},
+					{name='vonix', amount ='R'},
+					{name='vonix', probability = 0.7,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -129,8 +129,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cagedscrondrix', amount ='R'},
-					{name='braincagedscrondrix',1},
+					{name='vonix', amount ='R'},
+					{name='brainvonix',1},
 				},
 			crafting_speed = 90,
 			tech = 'nanochondria'
@@ -149,49 +149,18 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'nanochondria'
 		},
-		--bmp
-		{
-			ingredients =
-				{
-					{name='gh',amount ='R'},
-					{name='nanochondria',amount ='R'},
-					{name='bmp',amount =1},
-				},
-			results =
-				{
-					{name='braincagedscrondrix', amount ='R'},
-					{name='bonecagedscrondrix', 1},
-				},
-			crafting_speed = 90,
-			tech = 'bmp'
-		},
-
-		--bmp and gh
-		{
-			ingredients =
-				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 30,
-			tech = 'bmp'
-		},
 		--rna anabolic
 		{
 			ingredients =
 				{
 					{name='gh',amount ='R'},
-					{name='bmp',amount ='R'},
+					{name='nanochondria',amount ='R'},
 					{name='anabolicrna',amount =1},
 				},
 			results =
 				{
-					{name='bonecagedscrondrix', amount ='R'},
-					{name='meatcagedscrondrix', 1},
+					{name='brainvonix', amount ='R'},
+					{name='meatvonix', 1},
 				},
 			crafting_speed = 90,
 			tech = 'anabolic-rna'
@@ -220,8 +189,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meatcagedscrondrix', amount ='R'},
-					{name='gutscagedscrondrix', 1},
+					{name='meatvonix', amount ='R'},
+					{name='gutsvonix', 1},
 				},
 			crafting_speed = 90,
 			tech = 'antitumor'
@@ -250,8 +219,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='gutscagedscrondrix', amount ='R'},
-					{name='bloodcagedscrondrix', 1},
+					{name='gutsvonix', amount ='R'},
+					{name='bloodvonix', 1},
 				},
 			crafting_speed = 90,
 			tech = 'recombinant-ery'
@@ -279,8 +248,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bloodcagedscrondrix', amount ='R'},
-					{name='skincagedscrondrix', 1},
+					{name='bloodvonix', amount ='R'},
+					{name='skinvonix', 1},
 				},
 			crafting_speed = 90,
 			tech = 'reca'
@@ -308,8 +277,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='skincagedscrondrix', amount ='R'},
-					{name='fatcagedscrondrix', 1},
+					{name='skinvonix', amount ='R'},
+					{name='fatvonix', 1},
 				},
 			crafting_speed = 90,
 			tech = 'orexigenic'
@@ -333,69 +302,68 @@ fun.autorecipes {
 ------------------CUB MAKER------------------
 
 fun.autorecipes {
-    name = 'scrondrix-cub',
-	category = 'scrondrix',
-	module_limitations = 'scrondrix',
-	subgroup = 'py-alienlife-scrondrix',
+    name = 'vonix-cub',
+	category = 'vonix',
+	module_limitations = 'vonix',
+	subgroup = 'py-alienlife-vonix',
 	order = 'c',
     mats =
 	{
 		{
 			ingredients =
 				{
-                    {name='fawogae',amount =15},
-					{name='woodseeds',amount =15},
+                    {name='cagedmukmoux',amount =1},
+					{name='cagedauog',amount =1},
 					{name='meat',amount =5},
-					{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
-					{name='bedding',amount = 1},
+					{name='waterbarrel',amount=20,return_item={name='empty-barrel',amount=20}},
 				},
 			results =
 				{
-					{name='scrondrixcub', probability = 0.7,amount_min =1,amount_max =1},
+					{name='vonixegg', probability = 0.7,amount_min =1,amount_max =3},
 				},
 			crafting_speed = 70,
-			tech = 'assisted-embryology'
+			tech = 'vonix'
 		},
-		--yotoi leaves
+		--guts
 		{
 			ingredients =
 				{
                     --{name='woodseeds',amount ='R'},
-                    --{name='fawogae',amount ='R'},
-					{name='yotoileaves',amount =10},
+                    --{name='cagedmukmoux',amount ='R'},
+					{name='guts',amount =10},
 				},
 			results =
 				{
 				
 				},
 			crafting_speed = 60,
-			tech = 'assisted-embryology'
+			tech = 'vonix'
 		},
-		--salt
+		--bedding
 		{
 			ingredients =
 				{
-					{name='salt',amount = 10},
+					{name='bedding',amount = 10},
 				},
 			results =
 				{
 				
 				},
 			crafting_speed = 55,
-			tech = 'selective-breeding'
+			tech = 'vonix'
 		},
 		--fiber
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 10},
+					{name='arthurianegg',amount = 5},
 				},
 			results =
 				{
 				
 				},
 			crafting_speed = 50,
-			tech = 'artificial-breeding'
+			tech = 'vonix'
 		},		
 		--navens
 		{
@@ -408,27 +376,27 @@ fun.autorecipes {
 				{
 				
 				},
-			crafting_speed = 50,
-			tech = 'biased-mutation'
+			crafting_speed = 40,
+			tech = 'vonix'
 		},
 
 		-----------------------PHEROMONES-----------------------------
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 'R'},
-					{name='salt',amount = 'R'},
+					{name='arthurianegg',amount = 'R'},
+					{name='bedding',amount = 'R'},
 					{name='navens',amount = 'R'},
-					{name='yotoileaves',amount ='R'},
+					{name='meat',amount ='R'},
 					{name='pheromones',amount =1},
-                    --{name='bedding',amount =4},
+                    --{name='cagedauog',amount =4},
 					--{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
-					--{name='bedding',amount = 1},
+					--{name='cagedauog',amount = 1},
 				},
 			results =
 				{
-					{name='scrondrixcub',amount = 'R'},
-					{name='scrondrixcub', amount =1},
+					{name='vonixegg',amount = 'R'},
+					{name='vonixegg', amount =2},
 				},
 			crafting_speed = 70,
 			tech = 'pheromones'
@@ -438,8 +406,8 @@ fun.autorecipes {
 			ingredients =
 				{
                     --{name='woodseeds',amount ='R'},
-                    --{name='fawogae',amount ='15'},
-					{name='yotoileaves',amount =10},
+                    --{name='cagedmukmoux',amount ='15'},
+					{name='meat',amount =10},
 				},
 			results =
 				{
@@ -448,11 +416,11 @@ fun.autorecipes {
 			crafting_speed = 60,
 			tech = 'pheromones'
 		},
-		--salt
+		--bedding
 		{
 			ingredients =
 				{
-					{name='salt',amount = 10},
+					{name='bedding',amount = 10},
 				},
 			results =
 				{
@@ -465,7 +433,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 5},
+					{name='arthurianegg',amount = 5},
 				},
 			results =
 				{
@@ -485,7 +453,7 @@ fun.autorecipes {
 				{
 				
 				},
-			crafting_speed = 50,
+			crafting_speed = 40,
 			tech = 'pheromones'
 		},
 	}
@@ -496,32 +464,31 @@ fun.autorecipes {
 fun.autorecipes {
     name = 'rendering',
 	category = 'slaughterhouse',
-	--module_limitations = 'scrondrix',
-	subgroup = 'py-alienlife-scrondrix',
+	--module_limitations = 'vonix',
+	subgroup = 'py-alienlife-vonix',
 	order = 'b',
     mats =
 	{
 		{
 			ingredients =
 				{
-					{name='cagedscrondrix',amount=1},
+					{name='vonix',amount=1},
 				},
 			results =
 				{
-					{name='bones', probability = 0.5,amount_min =1,amount_max =2},
-					{name='meat', probability = 0.5,amount_min =1,amount_max =3},
-					{name='skin', probability = 0.4,amount_min =1,amount_max =1},
-					{name='fat', probability = 0.4,amount_min =1,amount_max =2},
-					{name='guts', probability = 0.5,amount_min =1,amount_max =2},
-					{name='blood', amount =60},
-					{name='pinealgland', probability = 0.4,amount_min =1,amount_max =1},
-					{name='cage',amount=1},
-					{name='brain', probability = 0.5,amount_min =1,amount_max =1},
+					--{name='bones', probability = 0.5,amount_min =1,amount_max =2},
+					{name='meat', probability = 0.5,amount_min =1,amount_max =6},
+					{name='skin', probability = 0.4,amount_min =1,amount_max =4},
+					{name='fat', probability = 0.5,amount_min =1,amount_max =5},
+					{name='guts', probability = 0.4,amount_min =1,amount_max =6},
+					{name='arthropodblood', amount =80},
+					{name='venongland', probability = 0.2,amount_min =1,amount_max =1},
+					{name='brain', probability = 0.3,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 30,
 			tech = 'rendering',
-			name = 'Full Render scrondrixs',
-			icon = "__pyalienlife__/graphics/icons/rendering-scrondrix.png",
+			name = 'Full Render Vonix',
+			icon = "__pyalienlife__/graphics/icons/rendering-vonix.png",
 			icon_size = 64,
 		},
 		--meat
@@ -532,18 +499,18 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat', amount =5},
-					{name='bones', amount ='R'},
-					--{name='meat', amount ='R'},
+					--{name='bones', amount ='R'},
+                    {name='meat', amount ='R'},
+                    {name='meat', amount =6},
 					{name='skin', amount ='R'},
 					{name='fat', amount ='R'},
 					{name='guts', amount ='R'},
-					{name='blood', amount ='R'},
+					{name='arthropodblood', amount ='R'},
 					{name='brain', amount ='R'},
 				},
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
-			name = 'Extract scrondrix Meat',
+			name = 'Extract Vonix Meat',
 			icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
 			icon_size = 64,
 		},
@@ -551,7 +518,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedscrondrix',amount=1},
+					--{name='vonix',amount=1},
 				},
 			results =
 				{
@@ -560,75 +527,58 @@ fun.autorecipes {
 				},
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
-			name = 'Extract scrondrix brains',
+			name = 'Extract Vonix brain',
 			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},
-		--pineal
+		--venon
 		{
 			ingredients =
 				{
-					--{name='cagedscrondrix',amount=1},
+					--{name='vonix',amount=1},
 				},
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='pinealgland', amount =1},
+					{name='venongland', amount =1},
 				},
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
-			name = 'Extract scrondrix Pineal Gland',
-			icon = "__pyalienlife__/graphics/icons/pineal-gland.png",
+			name = 'Extract Vonix´s Venon Gland',
+			icon = "__pyalienlife__/graphics/icons/venon-gland.png",
 			icon_size = 64,
 		},	
 		--skin
 		{
 			ingredients =
 				{
-					--{name='cagedscrondrix',amount=1},
+					--{name='vonix',amount=1},
 				},
 			results =
 				{
-					{name='pinealgland', amount ='R'},
-					{name='skin', amount =3},
+					{name='venongland', amount ='R'},
+					{name='skin', amount =4},
 				},
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
-			name = 'Extract scrondrix skin',
+			name = 'Extract Vonix skin',
 			icon = "__pyalienlife__/graphics/icons/skin.png",
 			icon_size = 32,
-		},
-		--bones
-		{
-			ingredients =
-				{
-					--{name='cagedscrondrix',amount=1},
-				},
-			results =
-				{
-					{name='skin', amount ='R'},
-					{name='bones', amount =4},
-				},
-			crafting_speed = 15,
-			tech = 'advanced-rendering',
-			name = 'Extract scrondrix bones',
-			icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
-			icon_size = 64,
 		},
 		--guts
 		{
 			ingredients =
 				{
-					--{name='cagedscrondrix',amount=1},
+					--{name='vonix',amount=1},
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
-					{name='guts', amount =4},
+					{name='skin', amount ='R'},
+					{name='guts', amount =6},
 				},
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
-			name = 'Extract scrondrix guts',
+			name = 'Extract Vonix guts',
 			icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
 		},
@@ -636,42 +586,42 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedscrondrix',amount=1},
+					--{name='vonix',amount=1},
 				},
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='blood', amount =70},
+					{name='arthropodblood', amount =100},
 				},
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
-			name = 'Extract scrondrix blood',
-			icon = "__pyalienlife__/graphics/icons/blood.png",
-			icon_size = 64,
+			name = 'Extract Vonix blood',
+			icon = "__pyalienlife__/graphics/icons/arthropod-blood.png",
+			icon_size = 32,
 		},
 		--fat
 		{
 			ingredients =
 				{
-					--{name='cagedscrondrix',amount=1},
+					--{name='vonix',amount=1},
 				},
 			results =
 				{
-					{name='blood', amount ='R'},
-					{name='fat', amount =3},
+					{name='arthropodblood', amount ='R'},
+					{name='fat', amount =5},
 				},
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
-			name = 'Extract scrondrix lard',
+			name = 'Extract Vonix lard',
 			icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
 			icon_size = 64,
 		},
-		--brain scrondrix rendering
+		--brain vonix rendering
 		{
 			ingredients =
 				{
-					{name='cagedscrondrix',amount='R'},
-					{name='braincagedscrondrix',amount=1},
+					{name='vonix',amount='R'},
+					{name='brainvonix',amount=1},
 				},
 			results =
 				{
@@ -680,116 +630,98 @@ fun.autorecipes {
 				},
 			crafting_speed = 15,
 			tech = 'nanochondria',
-			name = 'Extract brains from Improved scrondrixs',
-			icon = "__pyalienlife__/graphics/icons/brain-caged-scrondrix.png",
+			name = 'Extract brains from Improved Vonixes',
+			icon = "__pyalienlife__/graphics/icons/brain-vonix.png",
 			icon_size = 64,
 		},
-		--bone scrondrix rendering
+		--guts vonix rendering
 		{
 			ingredients =
 				{
-					{name='braincagedscrondrix',amount='R'},
-					{name='bonecagedscrondrix',amount=1},
+					{name='brainvonix',amount='R'},
+					{name='gutsvonix',amount=1},
 				},
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='bones', amount =7},
-				},
-			crafting_speed = 15,
-			tech = 'bmp',
-			name = 'Extract bones from Improved scrondrixs',
-			icon = "__pyalienlife__/graphics/icons/bone-caged-scrondrix.png",
-			icon_size = 64,
-		},
-		--guts scrondrix rendering
-		{
-			ingredients =
-				{
-					{name='bonecagedscrondrix',amount='R'},
-					{name='gutscagedscrondrix',amount=1},
-				},
-			results =
-				{
-					{name='bones', amount ='R'},
-					{name='guts', amount =6},
+					{name='guts', amount =12},
 				},
 			crafting_speed = 15,
 			tech = 'antitumor',
-			name = 'Extract guts from Improved scrondrixs',
-			icon = "__pyalienlife__/graphics/icons/guts-caged-scrondrix.png",
+			name = 'Extract guts from Improved Vonixes',
+			icon = "__pyalienlife__/graphics/icons/guts-vonix.png",
 			icon_size = 64,
 		},
-		--blood scrondrix rendering
+		--blood vonix rendering
 		{
 			ingredients =
 				{
-					{name='gutscagedscrondrix',amount='R'},
-					{name='bloodcagedscrondrix',amount=1},
+					{name='gutsvonix',amount='R'},
+					{name='bloodvonix',amount=1},
 				},
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='blood', amount =110},
+					{name='arthropodblood', amount =150},
 				},
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
-			name = 'Extract blood from Improved scrondrixs',
-			icon = "__pyalienlife__/graphics/icons/blood-caged-scrondrix.png",
+			name = 'Extract Arthropod blood from Improved Vonixes',
+			icon = "__pyalienlife__/graphics/icons/blood-vonix.png",
 			icon_size = 64,
 		},
-		--skin scrondrix rendering
+		--skin vonix rendering
 		{
 			ingredients =
 				{
-					{name='bloodcagedscrondrix',amount='R'},
-					{name='skincagedscrondrix',amount=1},
+					{name='bloodvonix',amount='R'},
+					{name='skinvonix',amount=1},
 				},
 			results =
 				{
-					{name='blood', amount ='R'},
-					{name='skin', amount =5},
+					{name='arthropodblood', amount ='R'},
+					{name='skin', amount =6},
 				},
 			crafting_speed = 15,
 			tech = 'reca',
-			name = 'Extract skin from Improved scrondrixs',
-			icon = "__pyalienlife__/graphics/icons/skin-caged-scrondrix.png",
+			name = 'Extract skin from Improved Vonixes',
+			icon = "__pyalienlife__/graphics/icons/skin-vonix.png",
 			icon_size = 64,
 		},
-		--fat scrondrix rendering
+		--fat vonix rendering
 		{
 			ingredients =
 				{
-					{name='skincagedscrondrix',amount='R'},
-					{name='fatcagedscrondrix',amount=1},
+					{name='skinvonix',amount='R'},
+					{name='fatvonix',amount=1},
 				},
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='fat', amount =5},
+					{name='fat', amount =13},
 				},
 			crafting_speed = 15,
 			tech = 'orexigenic',
-			name = 'Extract fat from Improved scrondrixs',
-			icon = "__pyalienlife__/graphics/icons/fat-caged-scrondrix.png",
+			name = 'Extract fat from Improved Vonixes',
+			icon = "__pyalienlife__/graphics/icons/fat-vonix.png",
 			icon_size = 64,
 		},
-		--meat scrondrix rendering
+		--meat vonix rendering
 		{
 			ingredients =
 				{
-					{name='fatcagedscrondrix',amount='R'},
-					{name='meatcagedscrondrix',amount=1},
+					{name='fatvonix',amount='R'},
+					{name='meatvonix',amount=1},
 				},
 			results =
 				{
 					{name='fat', amount ='R'},
-					{name='meat', amount =6},
+					{name='meat', amount =10},
 				},
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
-			name = 'Extract meat from Improved scrondrixs',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-scrondrix.png",
+			name = 'Extract meat from Improved Vonixes',
+			icon = "__pyalienlife__/graphics/icons/meat-vonix.png",
 			icon_size = 64,
 		},
 	}

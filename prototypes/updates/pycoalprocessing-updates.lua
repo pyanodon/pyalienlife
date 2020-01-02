@@ -12,9 +12,9 @@ RECIPE('botanical-nursery-mk03'):remove_unlock('machines-mk03'):add_unlock('bota
 RECIPE('botanical-nursery-mk04'):remove_unlock('machines-mk04'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk04", "b")
 RECIPE('hpf'):remove_unlock('coal-processing-1'):set_fields {enabled = true}
 RECIPE('ralesia-plantation'):remove_unlock('coal-processing-1')
-RECIPE('ralesia-plantation-mk02'):add_unlock('botany-mk02'):subgroup_order("py-alienlife-buildings-mk02", "e")
-RECIPE('ralesia-plantation-mk03'):add_unlock('botany-mk03'):subgroup_order("py-alienlife-buildings-mk03", "e")
-RECIPE('ralesia-plantation-mk04'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk04", "e")
+--RECIPE('ralesia-plantation-mk02'):add_unlock('botany-mk02'):subgroup_order("py-alienlife-buildings-mk02", "e")
+--RECIPE('ralesia-plantation-mk03'):add_unlock('botany-mk03'):subgroup_order("py-alienlife-buildings-mk03", "e")
+--RECIPE('ralesia-plantation-mk04'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk04", "e")
 RECIPE('ulric-corral'):remove_unlock('coal-processing-1')
 RECIPE('mukmoux-pasture'):remove_unlock('coal-processing-2')
 ITEM("botanical-nursery"):set("icon", "__pyalienlife__/graphics/icons/botanical-nursery-mk01.png"):set_fields {icon_size = 64,}
