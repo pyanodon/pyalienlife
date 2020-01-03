@@ -37,51 +37,40 @@ ENTITY {
     minable = {mining_time = 0.1, result = "lb-provider-chest"},
     max_health = 100,
     corpse = "wooden-chest-remnants",
-    collision_box = {{-0.35, -0.35}, {0.35, 0.35}},
+    collision_box = {{-1, -1}, {1, 1}},
     fast_replaceable_group = "container",
-    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    selection_box = {{-1, -1}, {1, 1}},
     inventory_size = 16,
     open_sound = { filename = "__base__/sound/wooden-chest-open.ogg" },
     close_sound = { filename = "__base__/sound/wooden-chest-close.ogg" },
     vehicle_impact_sound =  { filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0 },
     picture =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/wooden-chest/wooden-chest.png",
-          priority = "extra-high",
-          width = 32,
-          height = 36,
-          shift = util.by_pixel(0.5, -2),
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/wooden-chest/hr-wooden-chest.png",
-            priority = "extra-high",
-            width = 62,
-            height = 72,
-            shift = util.by_pixel(0.5, -2),
-            scale = 0.5
-          }
-        },
-        {
-          filename = "__base__/graphics/entity/wooden-chest/wooden-chest-shadow.png",
-          priority = "extra-high",
-          width = 52,
-          height = 20,
-          shift = util.by_pixel(10, 6.5),
-          draw_as_shadow = true,
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/wooden-chest/hr-wooden-chest-shadow.png",
-            priority = "extra-high",
-            width = 104,
-            height = 40,
-            shift = util.by_pixel(10, 6.5),
-            draw_as_shadow = true,
-            scale = 0.5
-          }
-        }
-      }
-    }
+		{
+			layers =
+				{
+					{
+						filename = "__pyindustry__/graphics/entity/shed/shed-provider.png",
+						priority = "high",
+						width = 68,
+						height = 75,
+						shift = {0, 0},
+						hr_version =
+							{
+								filename = "__pyindustry__/graphics/entity/shed/hr-shed-provider.png",
+								priority = "extra-high",
+								width = 136,
+								height = 150,
+								shift = {0, 0},
+								scale = 0.5
+							}
+					},
+					{
+						filename = "__base__/graphics/entity/transport-belt/connector/hr-ccm-belt-04a-sequence.png",
+						priority = "high",
+						width = 80,
+						height = 94,
+						shift = {0.25, -0.25},
+					}
+				}
+		},
   }

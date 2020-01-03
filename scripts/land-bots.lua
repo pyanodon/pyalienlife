@@ -99,18 +99,16 @@ script.on_init(
     function()
         global.landbots = {}
         --global.towercounter = 0
-    end
-)
+    end)
 
-script.on_event(
-    {defines.events.on_built_entity, defines.events.on_robot_built_entity},
-    function(event)
+script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity}, function(event)
         local E = event.created_entity
         log(E.name)
 		--log(serpent.block(landbots))
 
         --swap the roboport for the control tower entity
         if E.name == 'hidden-roboport-for-logistics-radius' then
+			log(E.name)
             local tower = game.surfaces['nauvis'].create_entity {name = 'lb-control-tower', position = {E.position.x, E.position.y}, force = E.force}
             E.destroy()
 
@@ -164,8 +162,20 @@ script.on_event(
                 --log(serpent.block(tower))
                 if ((E.position.x - tower.position.x) * (E.position.x - tower.position.x)) + ((E.position.y - tower.position.y) * (E.position.y - tower.position.y)) <= 30 * 30 then
                     tower.requestorchests[E.unit_number] = {chest = E, controls = chestcontrols, requestsinroute = {}}
-					landbots.requesterchests[E.unit_number] = {tower = t}
-                    --requesterchests['chest'..E.unit_number] = chestcontrols
+					local slots =
+								{
+									{item = 'a', amount = 0},
+									{item = 'a', amount = 0},
+									{item = 'a', amount = 0},
+									{item = 'a', amount = 0},
+									{item = 'a', amount = 0}
+								}
+					landbots.requesterchests[E.unit_number] =
+						{
+							tower = t, 
+							request_slots = slots
+						}
+					log(serpent.block(landbots.requesterchests[E.unit_number]))
                 end
             end
         elseif E.name == 'lb-provider-chest' then
@@ -389,17 +399,53 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 	
 
 end)
---[[
+
+local request_gui
+
 script.on_event(defines.events.on_gui_opened,function(event)
 
     if event.entity ~= nil then
-        log(event.entity.name)
+        --log(event.entity.name)
+		--log(event.gui_type)
         if event.entity.name == 'lb-requester-chest' then
-            event.entity.opened(requesterchests['chest'..event.entity.unit_number])
+			local player = game.players[event.player_index]
+			request_gui = player.gui.left.add({type = 'frame', name = 'test', direction = 'vertical'})
+			
+			request_gui.add({type = 'table', name = 'table', column_count = 1})
+			--request_gui.table.add({type = 'list-box', name = 'list-box', items = {'iron-plate','copper-plate'}})
+			request_gui.table.add({type = 'choose-elem-button', name = 'elem', elem_type = 'item'})
+			request_gui.table.add({type = 'table', name = 'tablejr', column_count = 2})
+			request_gui.table.tablejr.add({type = 'slider', name = 'request-slider', value = 0, maximum_value = 10000})
+			request_gui.table.tablejr.add({type = 'textfield', name = 'numfield', text = '0', numeric = true, lose_focus_on_confirm = true})
         end
     end
 
+end)
 
+script.on_event(defines.events.on_gui_value_changed, function(event)
+
+	log(event.element.name)
+	
+	if event.element.name == 'request-slider' then
+		log(serpent.block(event.element.parent.children))
+		event.element.parent['numfield'].text = event.element.slider_value
+	end
 
 end)
-]]--
+
+script.on_event(defines.events.on_gui_elem_changed, function(event)
+
+	log(event.element.name)
+
+end)
+
+script.on_event(defines.events.on_gui_closed, function(event)
+
+	if event.entity ~= nil then
+        if event.entity.name == 'lb-requester-chest' then
+			request_gui.destroy()
+			
+        end
+    end
+
+end)

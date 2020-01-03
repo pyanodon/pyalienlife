@@ -3,9 +3,9 @@ local farm_table = {}
 local farms = {}
 
 function farm_table.add(farm)
-    log(serpent.block(farms))
+    --log(serpent.block(farms))
     table.insert(farms, farm)
-    log(serpent.block(farms))
+    --log(serpent.block(farms))
 end
 
 script.on_init(
