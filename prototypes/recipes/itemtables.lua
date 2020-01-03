@@ -177,6 +177,7 @@ items.inputs.cridren = {'cridren', 1}
 items.inputs.cridrenseeds = {'cridren-seeds', 1}
 items.inputs.chalkysoil = {'chalky-soil', 1}
 items.inputs.fish = {'fish', 1}
+items.inputs.fishegg = {'fish-egg', 1}
 items.inputs.sponge = {'sponge', 1}
 items.inputs.finenexelit = {'fine-nexelit-powder', 1}
 
@@ -243,6 +244,18 @@ items.inputs.zipirfood02 = {'zipir-food-02', 1}
 items.inputs.wastewater = {'waste-water', 10}
 items.inputs.pressuredwater = {'pressured-water', 10}
 items.inputs.fawogaesubstrate = {'fawogae-substrate', 1}
+
+items.inputs.trits = {'trits', 1}
+items.inputs.tritscub = {'trits-pup', 1}
+items.inputs.braintrits = {'brain-trits', 1}
+items.inputs.bonetrits = {'bone-trits', 1}
+items.inputs.meattrits = {'meat-trits', 1}
+items.inputs.bloodtrits = {'blood-trits', 1}
+items.inputs.skintrits = {'skin-trits', 1}
+items.inputs.gutstrits = {'guts-trits', 1}
+items.inputs.fattrits = {'fat-trits', 1}
+items.inputs.albumin = {'albumin', 1}
+items.inputs.sodiumalginate = {'sodium-alginate', 1}
 
 items.outputs = items.inputs
 --can put output replacements below here
