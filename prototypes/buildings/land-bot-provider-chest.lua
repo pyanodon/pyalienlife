@@ -49,14 +49,14 @@ ENTITY {
 			layers =
 				{
 					{
-						filename = "__pyindustry__/graphics/entity/shed/shed-provider.png",
+						filename = "__pyindustry__/graphics/entity/shed/shed-passive-provider.png",
 						priority = "high",
 						width = 68,
 						height = 75,
 						shift = {0, 0},
 						hr_version =
 							{
-								filename = "__pyindustry__/graphics/entity/shed/hr-shed-provider.png",
+								filename = "__pyindustry__/graphics/entity/shed/hr-shed-passive-provider.png",
 								priority = "extra-high",
 								width = 136,
 								height = 150,

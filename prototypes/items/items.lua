@@ -1324,6 +1324,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "trits-pup",
+    icon = "__pyalienlife__/graphics/icons/trits-pup.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-trits",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
     name = "cobalt-fluoride",
     icon = "__pyalienlife__/graphics/icons/cobalt-fluoride.png",
 	icon_size = 64,
@@ -3134,6 +3145,83 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-zipir",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "brain-trits",
+    icon = "__pyalienlife__/graphics/icons/brain-trits.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-trits",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "bone-trits",
+    icon = "__pyalienlife__/graphics/icons/bone-trits.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-trits",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "meat-trits",
+    icon = "__pyalienlife__/graphics/icons/meat-trits.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-trits",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "blood-trits",
+    icon = "__pyalienlife__/graphics/icons/blood-trits.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-trits",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "guts-trits",
+    icon = "__pyalienlife__/graphics/icons/guts-trits.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-trits",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "fat-trits",
+    icon = "__pyalienlife__/graphics/icons/fat-trits.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-trits",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "skin-trits",
+    icon = "__pyalienlife__/graphics/icons/skin-trits.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-trits",
     order = "a",
     stack_size = 50
 }
@@ -5094,15 +5182,79 @@ ITEM {
 ITEM {
     type = "module",
     name = "trits",
-    icon = "__pyalienlife__/graphics/icons/trits.png",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/trits.png"},
+        --{icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+    },
     icon_size = 64,
 	category = "trits",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-trits",
-    order = "a",
+    order = "tr-a",
+    stack_size = 10,
+	effect = { speed = {bonus = 80}},
+	limitation = alien_life_limitations_trits,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "trits-mk02",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/trits.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "trits",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-trits",
+    order = "tr-b",
+    stack_size = 10,
+	effect = { speed = {bonus = 90}},
+	limitation = alien_life_limitations_trits,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "trits-mk03",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/trits.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "trits",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-trits",
+    order = "tr-c",
     stack_size = 10,
 	effect = { speed = {bonus = 100}},
+	limitation = alien_life_limitations_trits,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "trits-mk04",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/trits.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "trits",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-trits",
+    order = "tr-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 110}},
 	limitation = alien_life_limitations_trits,
 	limitation_message_key = "Its full"
 }
