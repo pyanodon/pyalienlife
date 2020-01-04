@@ -1,0 +1,8 @@
+need to make gui for the caravan 
+make a table of all built outposts and display the list to the player when caravan is clicked on
+current inventory
+current food type and level
+
+--TODO: LATER STUFF
+
+caravan menu with pip windows to show the current location like the train menu

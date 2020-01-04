@@ -5605,7 +5605,7 @@ data:extend(
   --item used to select the ceature and start and end points of the route
 	{
 		type = 'selection-tool',
-		name = 'carrot-on-stick',
+		name = 'unit-controller',
 		icon = '__pyalienlife__/graphics/icons/carrot_on_a_stick.png',
 		icon_size = 64,
 		flags = {},
