@@ -1,5 +1,3 @@
-local farm_table = require('__pyalienlife__/scripts/farm-script')
-
 local farm =
 			{
 				seed = 'replicator-yotoi-fruit', --the seed being planted
@@ -41,4 +39,4 @@ local farm =
 					}
 			}
 
-farm_table.add(farm)
+return farm
