@@ -14,12 +14,12 @@ RECIPE {
     results = {
         {"lb-provider-chest", 1}
     }
-}--:add_unlock("xenobiology")
+}
 
 ITEM {
     type = "item",
     name = "lb-provider-chest",
-    icon = "__pyalienlife__/graphics/icons/data-array.png",
+    icon = "__pyalienlife__/graphics/icons/chest-provider.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-others",
@@ -31,7 +31,7 @@ ITEM {
 ENTITY {
     type = "container",
     name = "lb-provider-chest",
-    icon = "__base__/graphics/icons/wooden-chest.png",
+    icon = "__pyalienlife__/graphics/icons/chest-provider.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "lb-provider-chest"},
@@ -49,28 +49,12 @@ ENTITY {
 			layers =
 				{
 					{
-						filename = "__pyindustry__/graphics/entity/shed/shed-passive-provider.png",
+						filename = "__pyalienlife__/graphics/entity/land-beetle/chest-provider.png",
 						priority = "high",
-						width = 68,
-						height = 75,
+						width = 69,
+						height = 67,
 						shift = {0, 0},
-						hr_version =
-							{
-								filename = "__pyindustry__/graphics/entity/shed/hr-shed-passive-provider.png",
-								priority = "extra-high",
-								width = 136,
-								height = 150,
-								shift = {0, 0},
-								scale = 0.5
-							}
 					},
-					{
-						filename = "__base__/graphics/entity/transport-belt/connector/hr-ccm-belt-04a-sequence.png",
-						priority = "high",
-						width = 80,
-						height = 94,
-						shift = {0.25, -0.25},
-					}
 				}
 		},
   }
