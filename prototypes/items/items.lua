@@ -2743,6 +2743,61 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "brain-xeno",
+    icon = "__pyalienlife__/graphics/icons/brain-xeno.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-xeno",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "bone-xeno",
+    icon = "__pyalienlife__/graphics/icons/bone-xeno.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-xeno",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "meat-xeno",
+    icon = "__pyalienlife__/graphics/icons/meat-xeno.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-xeno",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "sulfuric-xeno",
+    icon = "__pyalienlife__/graphics/icons/sulfuric-xeno.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-xeno",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "chitin-xeno",
+    icon = "__pyalienlife__/graphics/icons/chitin-xeno.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-xeno",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "xeno-codex",
     icon = "__pyalienlife__/graphics/icons/xeno-codex.png",
 	icon_size = 64,
@@ -5038,13 +5093,37 @@ ITEM {
 ITEM {
     type = "module",
     name = "bhoddos",
-    icon = "__pyalienlife__/graphics/icons/bhoddos.png",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/bhoddos.png"},
+        --{icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+    },
     icon_size = 64,
 	category = "bhoddos",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-bhoddos",
-    order = "a",
+    order = "b-a",
+    stack_size = 10,
+	effect = { speed = {bonus = 90}},
+	limitation = alien_life_limitations_bhoddos,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "bhoddos-mk02",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/bhoddos.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "bhoddos",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-bhoddos",
+    order = "b-b",
     stack_size = 10,
 	effect = { speed = {bonus = 100}},
 	limitation = alien_life_limitations_bhoddos,
@@ -5053,16 +5132,120 @@ ITEM {
 
 ITEM {
     type = "module",
+    name = "bhoddos-mk03",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/bhoddos.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "bhoddos",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-bhoddos",
+    order = "b-c",
+    stack_size = 10,
+	effect = { speed = {bonus = 110}},
+	limitation = alien_life_limitations_bhoddos,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "bhoddos-mk04",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/bhoddos.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "bhoddos",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-bhoddos",
+    order = "b-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 120}},
+	limitation = alien_life_limitations_bhoddos,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
     name = "xeno",
-    icon = "__pyalienlife__/graphics/icons/xeno.png",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/xeno.png"},
+        --{icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+    },
     icon_size = 64,
 	category = "xeno",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-xeno",
-    order = "a",
+    order = "x-a",
+    stack_size = 10,
+	effect = { speed = {bonus = 15}},
+	limitation = alien_life_limitations_xeno,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "xeno-mk02",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/xeno.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "xeno",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-xeno",
+    order = "x-b",
     stack_size = 10,
 	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_xeno,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "xeno-mk03",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/xeno.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "xeno",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-xeno",
+    order = "x-c",
+    stack_size = 10,
+	effect = { speed = {bonus = 25}},
+	limitation = alien_life_limitations_xeno,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "xeno-mk04",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/xeno.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "xeno",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-xeno",
+    order = "x-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 30}},
 	limitation = alien_life_limitations_xeno,
 	limitation_message_key = "Its full"
 }

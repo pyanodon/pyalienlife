@@ -257,6 +257,16 @@ items.inputs.fattrits = {'fat-trits', 1}
 items.inputs.albumin = {'albumin', 1}
 items.inputs.sodiumalginate = {'sodium-alginate', 1}
 
+items.inputs.xeno = {'xeno', 1}
+items.inputs.cagedxeno = {'caged-xeno', 1}
+items.inputs.xenoegg = {'xeno-egg', 1}
+items.inputs.brainxeno = {'brain-xeno', 1}
+items.inputs.bonexeno = {'bone-xeno', 1}
+items.inputs.meatxeno = {'meat-xeno', 1}
+items.inputs.bloodxeno = {'sulfuric-xeno', 1}
+items.inputs.chitinxeno = {'chitin-xeno', 1}
+items.inputs.sulfuricacid = {'sulfuric-acid', 1}
+
 items.outputs = items.inputs
 --can put output replacements below here
 
