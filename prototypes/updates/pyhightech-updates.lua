@@ -626,3 +626,19 @@ RECIPE {
         {type = 'item', name = 'yotoi-fruit', amount = 1},
     },
 }:add_unlock("mega-farm-yotoi")
+
+
+RECIPE {
+    type = 'recipe',
+    name = 'chithin-to-phosphate',
+    category = 'atomizer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'chitin', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'phosphate-rock', amount = 4},
+    },
+    --main_product = "cocoon",
+}:add_unlock("molecular-decohesion")

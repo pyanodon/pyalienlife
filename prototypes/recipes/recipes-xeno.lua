@@ -50,8 +50,8 @@ RECIPE {
     energy_required = 80,
     ingredients = {
         {type = 'item', name = 'xeno-egg', amount = 1},
-        {type = 'item', name = 'cage', amount = 1},
         {type = 'item', name = 'xeno-codex', amount = 1},
+        {type = 'item', name = 'caged-mukmoux', amount = 1},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
     },
     results = {
@@ -60,7 +60,7 @@ RECIPE {
     main_product = "caged-xeno",
     subgroup = 'py-alienlife-xeno',
     order = 'a',
-}:add_unlock("assisted-embryology")
+}:add_unlock("xeno")
 
 RECIPE {
     type = 'recipe',
@@ -70,8 +70,8 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'xeno-egg', amount = 1},
+        {type = 'item', name = 'caged-mukmoux', amount = 1},
         {type = 'item', name = 'gh', amount = 1},
-        {type = 'item', name = 'cage', amount = 1},
         {type = 'item', name = 'xeno-codex', amount = 1},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
     },
