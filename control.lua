@@ -77,6 +77,7 @@ local landbots =
 
 --gui
 local request_gui
+local current_elem_button
 
 --[[
 global.landbots =
@@ -202,8 +203,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 				if entity.name == 'land-bot' then
 
 				elseif entity.name == 'lb-requester-chest' then
-					local chestcontrols = game.surfaces['nauvis'].find_entity('lb-requester-controls', entity.position)
-					landbots.towers[tower.unit_number].requestorchests[entity.unit_number] = {chest = entity, controls = chestcontrols, requestsinroute = {}}
+					landbots.towers[tower.unit_number].requestorchests[entity.unit_number] = {chest = entity, requestsinroute = {}}
 				elseif entity.name == 'lb-provider-chest' then
 					landbots.towers[tower.unit_number].providerchests[entity.unit_number] = {chest = entity}
 				end
@@ -243,21 +243,21 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
                 if ((E.position.x - tower.position.x) * (E.position.x - tower.position.x)) + ((E.position.y - tower.position.y) * (E.position.y - tower.position.y)) <= 30 * 30 then
                     --tower.requestorchests[E.unit_number] = {chest = E, controls = chestcontrols, requestsinroute = {}}
 					tower.requestorchests[E.unit_number] = {chest = E, requestsinroute = {}}
+                end
 					local slots =
-								{
-									{item = 'a', amount = 0},
-									{item = 'a', amount = 0},
-									{item = 'a', amount = 0},
-									{item = 'a', amount = 0},
-									{item = 'a', amount = 0}
-								}
+						{
+							{item = 'a', amount = 0},
+							{item = 'a', amount = 0},
+							{item = 'a', amount = 0},
+							{item = 'a', amount = 0},
+							{item = 'a', amount = 0}
+						}
 					landbots.requesterchests[E.unit_number] =
 						{
 							tower = t, 
 							request_slots = slots
 						}
 					log(serpent.block(landbots.requesterchests[E.unit_number]))
-                end
             end
         elseif E.name == 'lb-provider-chest' then
             for t,tower in pairs(landbots.towers) do
@@ -289,10 +289,6 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 end)
 
 script.on_event(defines.events.on_put_item, function(event)
-    
-	end)
-
-script.on_event(defines.events.on_player_selected_area, function(event)
     
 	end)
 
@@ -567,12 +563,16 @@ script.on_event(defines.events.on_gui_opened,function(event)
 			local player = game.players[event.player_index]
 			request_gui = player.gui.left.add({type = 'frame', name = 'test', direction = 'vertical'})
 			
-			request_gui.add({type = 'table', name = 'table', column_count = 1})
+			request_gui.add({type = 'table', name = 'table', column_count = 5})
 			--request_gui.table.add({type = 'list-box', name = 'list-box', items = {'iron-plate','copper-plate'}})
-			request_gui.table.add({type = 'choose-elem-button', name = 'elem', elem_type = 'item'})
-			request_gui.table.add({type = 'table', name = 'tablejr', column_count = 2})
-			request_gui.table.tablejr.add({type = 'slider', name = 'request-slider', value = 0, maximum_value = 10000})
-			request_gui.table.tablejr.add({type = 'textfield', name = 'numfield', text = '0', numeric = true, lose_focus_on_confirm = true})
+			request_gui.table.add({type = 'choose-elem-button', name = 'request_elem_1', elem_type = 'item'})
+			request_gui.table.add({type = 'choose-elem-button', name = 'request_elem_2', elem_type = 'item'})
+			request_gui.table.add({type = 'choose-elem-button', name = 'request_elem_3', elem_type = 'item'})
+			request_gui.table.add({type = 'choose-elem-button', name = 'request_elem_4', elem_type = 'item'})
+			request_gui.table.add({type = 'choose-elem-button', name = 'request_elem_5', elem_type = 'item'})
+			request_gui.add({type = 'table', name = 'tablejr', column_count = 2})
+			request_gui.tablejr.add({type = 'slider', name = 'request-slider', value = 0, maximum_value = 10000})
+			request_gui.tablejr.add({type = 'textfield', name = 'numfield', text = '0', numeric = true, lose_focus_on_confirm = true})
         end
     end
 
@@ -629,6 +629,17 @@ end)
 script.on_event(defines.events.on_gui_elem_changed, function(event)
 
 	log(event.element.name)
+	
+	current_elem_button = event.element.name
+	
+
+end)
+
+script.on_event(defines.events.on_gui_click, function(event)
+
+	if event.element.name == 'caravan_close' then
+		caravangui.destroy()
+	end
 
 end)
 
@@ -643,9 +654,7 @@ script.on_event(defines.events.on_gui_closed, function(event)
 
 end)
 
-script.on_event(
-    defines.events.on_rocket_launched,
-    function(event)
+script.on_event(defines.events.on_rocket_launched, function(event)
         if event.rocket_silo.name == 'mega-farm' then
             --log(serpent.block(event))
             log(serpent.block(event.rocket.get_inventory(defines.inventory.rocket).get_contents()))
@@ -697,7 +706,7 @@ script.on_event(
             end
         end
     end)
-	
+
 function create_caravan_gui(event, entity)
 	log('did a thing')
 	log(serpent.block(outpost_table))
@@ -718,14 +727,13 @@ function create_caravan_gui(event, entity)
 	
 	caravangui.add({type = 'frame', name = 'caravan_frame_right', direction = 'vertical', caption = 'Location'})
 	caravangui.caravan_frame_right.add({type = 'minimap', name = 'minimap', position = entity.position})
+	caravangui.add({type = 'sprite-button', name = 'caravan_close', sprite = 'utility/close_fat'})
 	
 end
-	
-	
+
 script.on_event(defines.events.on_player_selected_area, function(event)
 
-	if event.item == 'unit-controller' or event.item == 'carrot-on-stick' then
-	
+	if event.item == 'unit-controller' then
 		for e, ent in pairs(event.entities) do
 			--log(serpent.block(ent.name))
 			log('did a thing here')

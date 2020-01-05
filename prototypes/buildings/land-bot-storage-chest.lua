@@ -1,6 +1,6 @@
 RECIPE {
     type = "recipe",
-    name = "lb-requester-chest",
+    name = "lb-storage-chest",
     energy_required = 1,
     enabled = true,
     ingredients = {
@@ -12,29 +12,29 @@ RECIPE {
         {"iron-gear-wheel", 50},
     },
     results = {
-        {"lb-requester-chest", 1}
+        {"lb-storage-chest", 1}
     }
 }
 
 ITEM {
     type = "item",
-    name = "lb-requester-chest",
-    icon = "__pyalienlife__/graphics/icons/chest-request.png",
+    name = "lb-storage-chest",
+    icon = "__pyalienlife__/graphics/icons/chest-storage.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-others",
     order = "c",
-    place_result = "lb-requester-chest",
+    place_result = "lb-storage-chest",
     stack_size = 10
 }
 
 ENTITY {
     type = "container",
-    name = "lb-requester-chest",
-    icon = "__pyalienlife__/graphics/icons/chest-request.png",
+    name = "lb-storage-chest",
+    icon = "__pyalienlife__/graphics/icons/chest-storage.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "lb-requester-chest"},
+    minable = {mining_time = 0.1, result = "lb-storage-chest"},
     max_health = 100,
     corpse = "wooden-chest-remnants",
     collision_box = {{-1, -1}, {1, 1}},
@@ -49,7 +49,7 @@ ENTITY {
 			layers =
 				{
 					{
-						filename = "__pyalienlife__/graphics/entity/land-beetle/chest-request.png",
+						filename = "__pyalienlife__/graphics/entity/land-beetle/chest-storage.png",
 						priority = "high",
 						width = 69,
 						height = 67,
