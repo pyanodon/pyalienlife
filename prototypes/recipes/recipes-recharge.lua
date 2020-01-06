@@ -151,7 +151,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'dingrits', amount = 1},
     },
-}:add_unlock("domestication-2")
+}:add_unlock("domestication-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -167,4 +167,4 @@ RECIPE {
     results = {
         {type = 'item', name = 'dingrits', amount = 1},
     },
-}:add_unlock("domestication-2")
+}:add_unlock("domestication-mk02")

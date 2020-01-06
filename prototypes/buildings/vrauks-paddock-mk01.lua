@@ -13,7 +13,7 @@ RECIPE {
     results = {
         {"vrauks-paddock-mk01", 1}
     }
-}:add_unlock("zoology")
+}:add_unlock("vrauks")
 
 ITEM {
     type = "item",

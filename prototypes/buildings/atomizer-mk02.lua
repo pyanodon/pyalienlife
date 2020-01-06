@@ -1,40 +1,39 @@
 RECIPE {
     type = "recipe",
-    name = "atomizer-mk01",
+    name = "atomizer-mk02",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"duralumin", 10},
-        {"washer", 1},
-        {"titanium-plate", 35},
-        {"electronic-circuit", 10},
-        {"glass", 50},
-        {"nickel-plate", 25},
+        {"atomizer-mk01", 1},
+        {"advanced-circuit", 10},
+        {"lead-plate", 20},
+        {"latex", 30},
+        {"neuroprocessor", 20},
     },
     results = {
-        {"atomizer-mk01", 1}
+        {"atomizer-mk02", 1}
     }
-}:add_unlock("molecular-decohesion")
+}:add_unlock("molecular-decohesion-mk02")
 
 ITEM {
     type = "item",
-    name = "atomizer-mk01",
-    icon = "__pyalienlife__/graphics/icons/atomizer-mk01.png",
+    name = "atomizer-mk02",
+    icon = "__pyalienlife__/graphics/icons/atomizer-mk02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-buildings-mk02",
     order = "a",
-    place_result = "atomizer-mk01",
+    place_result = "atomizer-mk02",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "atomizer-mk01",
-    icon = "__pyalienlife__/graphics/icons/atomizer-mk01.png",
+    name = "atomizer-mk02",
+    icon = "__pyalienlife__/graphics/icons/atomizer-mk02.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "atomizer-mk01"},
+    minable = {mining_time = 0.5, result = "atomizer-mk02"},
     fast_replaceable_group = "atomizer",
     max_health = 100,
     corpse = "medium-remnants",
@@ -43,11 +42,11 @@ ENTITY {
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 1
+        module_slots = 2
     },
     allowed_effects = {"speed","pollution"},
     crafting_categories = {"atomizer"},
-    crafting_speed = 1,
+    crafting_speed = 2,
     energy_source =
     {
       type = "burner",
@@ -56,7 +55,7 @@ ENTITY {
       fuel_inventory_size = 1,
       emissions_per_minute = 0.06,
     },
-    energy_usage = "800kW",
+    energy_usage = "900kW",
     ingredient_count = 10,
     animation = {
         layers = {
@@ -79,7 +78,7 @@ ENTITY {
                 frame_count = 1,
                 --animation_speed = 2,
                 shift = util.by_pixel(16, -16),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
         }
     },
