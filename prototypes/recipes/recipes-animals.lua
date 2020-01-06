@@ -1,22 +1,5 @@
 RECIPE {
     type = 'recipe',
-    name = 'cocoon-1',
-    category = 'vrauks',
-    enabled = false,
-    energy_required = 40,
-    ingredients = {
-        {type = 'item', name = 'water-barrel', amount = 2},
-        {type = 'item', name = 'fawogae', amount = 5},
-    },
-    results = {
-        {type = 'item', name = 'cocoon', amount = 1},
-        {type = 'item', name = 'empty-barrel', amount = 2},
-    },
-    main_product = "cocoon",
-}:add_unlock("zoology")
-
-RECIPE {
-    type = 'recipe',
     name = 'fetal-serum-01',
     category = 'biofactory',
     enabled = false,
@@ -31,3 +14,129 @@ RECIPE {
     },
     --main_product = "cocoon",
 }:add_unlock("biotech-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'vrauks',
+    category = 'creature-chamber',
+    enabled = false,
+    energy_required = 300,
+    ingredients = {
+        {type = 'item', name = 'bio-sample', amount = 30},
+        {type = 'item', name = 'moss-gen', amount = 3},
+        {type = 'item', name = 'vrauks-codex', amount = 1},
+        {type = 'item', name = 'earth-generic-sample', amount = 2},
+        {type = 'item', name = 'petri-dish', amount = 5},
+        {type = 'item', name = 'flask', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'vrauks', amount = 1},
+    },
+}:add_unlock("vrauks")
+
+RECIPE {
+    type = 'recipe',
+    name = 'vrauks-codex',
+    category = 'crafting',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'glass', amount = 10},
+        {type = 'item', name = 'small-lamp', amount = 4},
+        {type = 'item', name = 'electronic-circuit', amount = 20},
+        {type = 'item', name = 'tinned-cable', amount = 20},
+    },
+    results = {
+        {type = 'item', name = 'vrauks-codex', amount = 1},
+    },
+}:add_unlock("xenobiology")
+
+RECIPE {
+    type = 'recipe',
+    name = 'earth-generic-sample',
+    category = 'data-array',
+    enabled = false,
+    energy_required = 25,
+    ingredients = {
+        {type = 'item', name = 'steel-chest', amount = 1},
+        {type = 'item', name = 'automation-science-pack', amount = 15},
+        {type = 'item', name = 'bio-sample', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'earth-generic-sample', amount = 1},
+    },
+}:add_unlock("xenobiology")
+
+----food----
+RECIPE {
+    type = 'recipe',
+    name = 'vrauks-food-01',
+    category = 'crafting-with-fluid',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'fawogae', amount = 5},
+        {type = 'item', name = 'moss', amount = 10},
+        {type = 'item', name = 'wood-seeds', amount = 10},
+        {type = 'item', name = 'agar', amount = 10},
+        {type = 'fluid', name = 'fish-oil', amount = 50},
+        {type = 'fluid', name = 'steam', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'vrauks-food-01', amount = 2},
+    },
+}:add_unlock("food-mk01"):add_ingredient({type = "item", name = "fiberboard", amount = 1})
+
+RECIPE {
+    type = 'recipe',
+    name = 'vrauks-food-02',
+    category = 'crafting-with-fluid',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'grod', amount = 4},
+        {type = 'item', name = 'tuuphra-seeds', amount = 1},
+        {type = 'item', name = 'ralesia', amount = 6},
+        {type = 'item', name = 'wood-seeds', amount = 10},
+        {type = 'item', name = 'agar', amount = 10},
+        {type = 'item', name = 'moss', amount = 10},
+        {type = 'item', name = 'guts', amount = 5},
+        {type = 'fluid', name = 'fish-oil', amount = 50},
+        {type = 'fluid', name = 'steam', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'vrauks-food-02', amount = 5},
+    },
+}:add_unlock("food-mk02"):add_ingredient({type = "item", name = "fiberboard", amount = 2})
+
+---caged---
+RECIPE {
+    type = 'recipe',
+    name = 'caged-vrauks',
+    category = 'crafting',
+    enabled = false,
+    energy_required = 0.5,
+    ingredients = {
+        {type = 'item', name = 'vrauks', amount = 1},
+        {type = 'item', name = 'cage', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'caged-vrauks', amount = 1},
+    },
+}:add_unlock("vrauks")
+
+RECIPE {
+    type = 'recipe',
+    name = 'uncaged-vrauks',
+    category = 'crafting',
+    enabled = false,
+    energy_required = 0.5,
+    ingredients = {
+        {type = 'item', name = 'caged-vrauks', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'vrauks', amount = 1},
+        {type = 'item', name = 'cage', amount = 1},
+    },
+    main_product = "vrauks",
+}:add_unlock("vrauks")

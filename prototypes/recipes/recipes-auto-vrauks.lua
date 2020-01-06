@@ -1,10 +1,10 @@
 local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
-    name = 'caged-auog',
-	category = 'auog',
-	module_limitations = 'auog',
-	subgroup = 'py-alienlife-auog',
+    name = 'vrauks',
+	category = 'vrauks',
+	module_limitations = 'vrauks',
+	subgroup = 'py-alienlife-vrauks',
 	order = 'b',
     mats =
 	{
@@ -18,17 +18,17 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cagedauog', probability = 0.5,amount_min =1,amount_max =1},
+					{name='cagedvrauks', probability = 0.5,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 160,
-			tech = 'auog'
+			tech = 'vrauks'
 		},
 		--food 1
 		{
 			ingredients =
 				{
 					{name='biomass',amount ='R'},
-					{name='auogfood01',amount =1},
+					{name='vrauksfood01',amount =1},
 				},
 			results =
 				{
@@ -49,29 +49,29 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 140,
-			tech = 'organic-breeding'
+			tech = 'vrauks'
 		},
 		--fiber
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 5},
+					{name='fawogae',amount = 5},
 				},
 			results =
 				{
 				
 				},
 			crafting_speed = 130,
-			tech = 'organic-breeding'
+			tech = 'vrauks'
 		},		
 		--food 2
 		{
 			ingredients =
 				{
-					{name='auogfood01',amount ='R'},
+					{name='vrauksfood01',amount ='R'},
 					{name='saps',amount ='R'},
-					{name='rawfiber',amount ='R'},
-					{name='auogfood02',amount =1},
+					{name='fawogae',amount ='R'},
+					{name='vrauksfood02',amount =1},
 
 				},
 			results =
@@ -98,7 +98,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 5},
+					{name='fawogae',amount = 5},
 				},
 			results =
 				{
@@ -129,8 +129,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cagedauog', amount ='R'},
-					{name='cagedauog', probability = 0.7,amount_min =1,amount_max =1},
+					{name='cagedvrauks', amount ='R'},
+					{name='cagedvrauks', probability = 0.7,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -158,8 +158,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cagedauog', amount ='R'},
-					{name='braincagedauog',1},
+					{name='cagedvrauks', amount ='R'},
+					{name='braincagedvrauks',1},
 				},
 			crafting_speed = 90,
 			tech = 'nanochondria'
@@ -178,49 +178,18 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'nanochondria'
 		},
-		--bmp
-		{
-			ingredients =
-				{
-					{name='gh',amount ='R'},
-					{name='nanochondria',amount ='R'},
-					{name='bmp',amount =1},
-				},
-			results =
-				{
-					{name='braincagedauog', amount ='R'},
-					{name='bonecagedauog', 1},
-				},
-			crafting_speed = 90,
-			tech = 'bmp'
-		},
-
-		--bmp and gh
-		{
-			ingredients =
-				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 30,
-			tech = 'bmp'
-		},
 		--rna anabolic
 		{
 			ingredients =
 				{
 					{name='gh',amount ='R'},
-					{name='bmp',amount ='R'},
+					{name='nanochondria',amount ='R'},
 					{name='anabolicrna',amount =1},
 				},
 			results =
 				{
-					{name='bonecagedauog', amount ='R'},
-					{name='meatcagedauog', 1},
+					{name='braincagedvrauks', amount ='R'},
+					{name='meatcagedvrauks', 1},
 				},
 			crafting_speed = 90,
 			tech = 'anabolic-rna'
@@ -249,8 +218,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meatcagedauog', amount ='R'},
-					{name='gutscagedauog', 1},
+					{name='meatcagedvrauks', amount ='R'},
+					{name='gutscagedvrauks', 1},
 				},
 			crafting_speed = 90,
 			tech = 'antitumor'
@@ -279,8 +248,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='gutscagedauog', amount ='R'},
-					{name='bloodcagedauog', 1},
+					{name='gutscagedvrauks', amount ='R'},
+					{name='bloodcagedvrauks', 1},
 				},
 			crafting_speed = 90,
 			tech = 'recombinant-ery'
@@ -308,8 +277,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bloodcagedauog', amount ='R'},
-					{name='skincagedauog', 1},
+					{name='bloodcagedvrauks', amount ='R'},
+					{name='skincagedvrauks', 1},
 				},
 			crafting_speed = 90,
 			tech = 'reca'
@@ -327,45 +296,16 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'reca'
 		},
-		--orexigenic
-		{
-			ingredients =
-				{
-					{name='gh',amount ='R'},
-					{name='reca',amount ='R'},
-					{name='orexigenic',amount =1},
-				},
-			results =
-				{
-					{name='skincagedauog', amount ='R'},
-					{name='fatcagedauog', 1},
-				},
-			crafting_speed = 90,
-			tech = 'orexigenic'
-		},
-		--orexigenic and gh
-		{
-			ingredients =
-				{
-					{name='gh',amount =1},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 30,
-			tech = 'orexigenic'
-		},
 	}
 }
 
 ------------------CUB MAKER------------------
 
 fun.autorecipes {
-    name = 'auog-cub',
-	category = 'auog',
-	module_limitations = 'auog',
-	subgroup = 'py-alienlife-auog',
+    name = 'vrauks-coccon',
+	category = 'vrauks',
+	module_limitations = 'vrauks',
+	subgroup = 'py-alienlife-vrauks',
 	order = 'c',
     mats =
 	{
@@ -379,24 +319,24 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='auogpup', probability = 0.7,amount_min =1,amount_max =1},
+					{name='cocoon', probability = 0.7,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 70,
-			tech = 'assisted-embryology'
+			tech = 'vrauks'
 		},
 		--food 1
 		{
 			ingredients =
 				{
                     {name='biomass',amount ='R'},
-					{name='auogfood01',amount =1},
+					{name='vrauksfood01',amount =1},
 				},
 			results =
 				{
 				
 				},
 			crafting_speed = 60,
-			tech = 'assisted-embryology'
+			tech = 'vrauks'
 		},
 		--saps
 		{
@@ -409,13 +349,13 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 55,
-			tech = 'assisted-embryology'
+			tech = 'vrauks'
 		},
 		--fiber
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 5},
+					{name='fawogae',amount = 5},
 				},
 			results =
 				{
@@ -428,10 +368,10 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='auogfood01',amount ='R'},
+					{name='vrauksfood01',amount ='R'},
 					{name='saps',amount ='R'},
-					{name='rawfiber',amount ='R'},
-					{name='auogfood02',amount =1},
+					{name='fawogae',amount ='R'},
+					{name='vrauksfood02',amount =1},
 
 				},
 			results =
@@ -458,7 +398,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 5},
+					{name='fawogae',amount = 5},
 				},
 			results =
 				{
@@ -471,9 +411,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 'R'},
+					{name='fawogae',amount = 'R'},
 					{name='saps',amount = 'R'},
-					{name='auogfood02',amount = 'R'},
+					{name='vrauksfood02',amount = 'R'},
 					{name='biomass',amount =15},
 					{name='pheromones',amount =1},
 					--{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
@@ -481,8 +421,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='auogpup',amount = 'R'},
-					{name='auogpup', amount =1},
+					{name='cocoon',amount = 'R'},
+					{name='cocoon', amount =1},
 				},
 			crafting_speed = 70,
 			tech = 'pheromones'
@@ -493,7 +433,7 @@ fun.autorecipes {
 				{
 
                     {name='biomass',amount ='R'},
-					{name='auogfood01',amount =1},
+					{name='vrauksfood01',amount =1},
 				},
 			results =
 				{
@@ -519,7 +459,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 5},
+					{name='fawogae',amount = 5},
 				},
 			results =
 				{
@@ -532,10 +472,10 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='auogfood01',amount ='R'},
+					{name='vrauksfood01',amount ='R'},
 					{name='saps',amount ='R'},
-					{name='rawfiber',amount ='R'},
-					{name='auogfood02',amount =1},
+					{name='fawogae',amount ='R'},
+					{name='vrauksfood02',amount =1},
 
 				},
 			results =
@@ -562,7 +502,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 5},
+					{name='fawogae',amount = 5},
 				},
 			results =
 				{
@@ -579,70 +519,53 @@ fun.autorecipes {
 fun.autorecipes {
     name = 'rendering',
 	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-auog',
+	--module_limitations = 'vrauks',
+	subgroup = 'py-alienlife-vrauks',
 	order = 'b',
     mats =
 	{
 		{
 			ingredients =
 				{
-					{name='cagedauog',amount=1},
+					{name='cagedvrauks',amount=1},
 				},
 			results =
 				{
-					{name='bones', probability = 0.3,amount_min =1,amount_max =4},
-					{name='meat', probability = 0.4,amount_min =2,amount_max =5},
-					{name='skin', probability = 0.3,amount_min =1,amount_max =2},
-					{name='fat', probability = 0.3,amount_min =1,amount_max =1},
-					{name='guts', probability = 0.4,amount_min =1,amount_max =1},
-					{name='blood', amount =50},
+					--{name='bones', probability = 0.3,amount_min =1,amount_max =4},
+					{name='meat', probability = 0.4,amount_min =1,amount_max =2},
+					{name='chitin', probability = 0.3,amount_min =1,amount_max =1},
+					--{name='fat', probability = 0.3,amount_min =1,amount_max =1},
+					{name='guts', probability = 0.4,amount_min =1,amount_max =2},
+					{name='arthropodblood', amount =20},
 					{name='cage',amount=1},
 					{name='brain', probability = 0.4,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 30,
 			tech = 'rendering',
-			name = 'Full Render auogs',
-			icon = "__pyalienlife__/graphics/icons/rendering-auog.png",
-			icon_size = 64,
-		},
-		--bonemeal
-		{
-			ingredients =
-				{
-					--{name='cagedauog',amount=1},
-				},
-			results =
-				{
-					{name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='skin', amount ='R'},
-					{name='fat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='blood', amount ='R'},
-					{name='brain', amount ='R'},
-					{name='bonemeal', amount = 4},
-				},
-			crafting_speed = 15,
-			tech = 'advanced-rendering',
-			name = 'auogs to Bonemeal',
-			icon = "__pyalienlife__/graphics/icons/bonemeal.png",
+			name = 'Full Render Vraukss',
+			icon = "__pyalienlife__/graphics/icons/rendering-vrauks.png",
 			icon_size = 64,
 		},
 		--meat
 		{
 			ingredients =
 				{
-					--{name='cagedauog',amount=1},
+					--{name='cagedvrauks',amount=1},
 				},
 			results =
 				{
-					{name='bonemeal', amount ='R'},
-					{name='meat', amount =8},
+                    --{name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='chitin', amount ='R'},
+					--{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='arthropodblood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='meat', amount =2},
 				},
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
-			name = 'Extract auog Meat',
+			name = 'Extract Vrauks Meat',
 			icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
 			icon_size = 64,
 		},
@@ -650,7 +573,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedauog',amount=1},
+					--{name='cagedvrauks',amount=1},
 				},
 			results =
 				{
@@ -659,7 +582,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
-			name = 'Extract auog brains',
+			name = 'Extract Vrauks brains',
 			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},	
@@ -667,50 +590,33 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedauog',amount=1},
+					--{name='cagedvrauks',amount=1},
 				},
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='skin', amount =2},
+					{name='chitin', amount =1},
 				},
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
-			name = 'Extract auog skin',
-			icon = "__pyalienlife__/graphics/icons/skin.png",
-			icon_size = 32,
-		},
-		--bones
-		{
-			ingredients =
-				{
-					--{name='cagedauog',amount=1},
-				},
-			results =
-				{
-					{name='skin', amount ='R'},
-					{name='bones', amount =3},
-				},
-			crafting_speed = 15,
-			tech = 'advanced-rendering',
-			name = 'Extract auog bones',
-			icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+			name = 'Extract Vrauks chithin',
+			icon = "__pyalienlife__/graphics/icons/chitin.png",
 			icon_size = 64,
 		},
 		--guts
 		{
 			ingredients =
 				{
-					--{name='cagedauog',amount=1},
+					--{name='cagedvrauks',amount=1},
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
-					{name='guts', amount =3},
+					{name='chitin', amount ='R'},
+					{name='guts', amount =2},
 				},
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
-			name = 'Extract auog guts',
+			name = 'Extract Vrauks guts',
 			icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
 		},
@@ -718,177 +624,107 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedauog',amount=1},
+					--{name='cagedvrauks',amount=1},
 				},
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='blood', amount =100},
+					{name='arthropodblood', amount =35},
 				},
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
-			name = 'Extract auog blood',
-			icon = "__pyalienlife__/graphics/icons/blood.png",
-			icon_size = 64,
+			name = 'Extract Vrauks blood',
+			icon = "__pyalienlife__/graphics/icons/arthropod-blood.png",
+			icon_size = 32,
 		},
-		--fat
+		--brain vrauks rendering
 		{
 			ingredients =
 				{
-					--{name='cagedauog',amount=1},
+					{name='cagedvrauks',amount='R'},
+					{name='braincagedvrauks',amount=1},
 				},
 			results =
 				{
-					{name='blood', amount ='R'},
-					{name='fat', amount =2},
-				},
-			crafting_speed = 15,
-			tech = 'advanced-rendering',
-			name = 'Extract auog lard',
-			icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
-			icon_size = 64,
-		},
-		--brain auog rendering
-		{
-			ingredients =
-				{
-					{name='cagedauog',amount='R'},
-					{name='braincagedauog',amount=1},
-				},
-			results =
-				{
-					{name='fat', amount ='R'},
+					{name='arthropodblood', amount ='R'},
 					{name='brain', amount =2},
 				},
 			crafting_speed = 15,
 			tech = 'nanochondria',
-			name = 'Extract brains from Improved auogs',
-			icon = "__pyalienlife__/graphics/icons/brain-caged-auog.png",
+			name = 'Extract brains from Improved Vraukss',
+			icon = "__pyalienlife__/graphics/icons/brain-caged-vrauks.png",
 			icon_size = 64,
 		},
-		--bone auog rendering
+		--meat vrauks rendering
 		{
 			ingredients =
 				{
-					{name='braincagedauog',amount='R'},
-					{name='bonecagedauog',amount=1},
-				},
-			results =
-				{
-					{name='brain', amount ='R'},
-					{name='bones', amount =5},
-				},
-			crafting_speed = 15,
-			tech = 'bmp',
-			name = 'Extract bones from Improved auogs',
-			icon = "__pyalienlife__/graphics/icons/bone-caged-auog.png",
-			icon_size = 64,
-		},
-		--bonemeal auog rendering
-		{
-			ingredients =
-				{
-
-				},
-			results =
-				{
-					{name='bones', amount ='R'},
-					{name='bonemeal', amount =5},
-				},
-			crafting_speed = 15,
-			tech = 'bmp',
-			name = 'Extract bonemeal from Improved auogs',
-			icon = "__pyalienlife__/graphics/icons/bonemeal-caged-auog.png",
-			icon_size = 64,
-        },
-		--meat auog rendering
-		{
-			ingredients =
-				{
-					{name='bonecagedauog',amount='R'},
-					{name='meatcagedauog',amount=1},
+					{name='braincagedvrauks',amount='R'},
+					{name='meatcagedvrauks',amount=1},
 				},
 			results =
 				{
 					{name='bonemeal', amount ='R'},
-					{name='meat', amount =12},
+					{name='meat', amount =4},
 				},
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
-			name = 'Extract meat from Improved auogs',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-auog.png",
+			name = 'Extract meat from Improved Vraukss',
+			icon = "__pyalienlife__/graphics/icons/meat-caged-vrauks.png",
 			icon_size = 64,
 		},
-		--guts auog rendering
+		--guts vrauks rendering
 		{
 			ingredients =
 				{
-					{name='meatcagedauog',amount='R'},
-					{name='gutscagedauog',amount=1},
+					{name='meatcagedvrauks',amount='R'},
+					{name='gutscagedvrauks',amount=1},
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='bonemeal', amount ='R'},
 					{name='guts', amount =5},
 				},
 			crafting_speed = 15,
 			tech = 'antitumor',
-			name = 'Extract guts from Improved auogs',
-			icon = "__pyalienlife__/graphics/icons/guts-caged-auog.png",
+			name = 'Extract guts from Improved Vraukss',
+			icon = "__pyalienlife__/graphics/icons/guts-caged-vrauks.png",
 			icon_size = 64,
 		},
-		--blood auog rendering
+		--blood vrauks rendering
 		{
 			ingredients =
 				{
-					{name='gutscagedauog',amount='R'},
-					{name='bloodcagedauog',amount=1},
+					{name='gutscagedvrauks',amount='R'},
+					{name='bloodcagedvrauks',amount=1},
 				},
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='blood', amount =120},
+					{name='arthropodblood', amount =100},
 				},
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
-			name = 'Extract blood from Improved auogs',
-			icon = "__pyalienlife__/graphics/icons/blood-caged-auog.png",
+			name = 'Extract blood from Improved Vraukss',
+			icon = "__pyalienlife__/graphics/icons/blood-caged-vrauks.png",
 			icon_size = 64,
 		},
-		--skin auog rendering
+		--skin vrauks rendering
 		{
 			ingredients =
 				{
-					{name='bloodcagedauog',amount='R'},
-					{name='skincagedauog',amount=1},
+					{name='bloodcagedvrauks',amount='R'},
+					{name='skincagedvrauks',amount=1},
 				},
 			results =
 				{
-					{name='blood', amount ='R'},
-					{name='skin', amount =4},
+					{name='arthropodblood', amount ='R'},
+					{name='chitin', amount =4},
 				},
 			crafting_speed = 15,
 			tech = 'reca',
-			name = 'Extract skin from Improved auogs',
-			icon = "__pyalienlife__/graphics/icons/skin-caged-auog.png",
-			icon_size = 64,
-		},
-		--fat auog rendering
-		{
-			ingredients =
-				{
-					{name='skincagedauog',amount='R'},
-					{name='fatcagedauog',amount=1},
-				},
-			results =
-				{
-					{name='skin', amount ='R'},
-					{name='fat', amount =4},
-				},
-			crafting_speed = 15,
-			tech = 'orexigenic',
-			name = 'Extract fat from Improved auogs',
-			icon = "__pyalienlife__/graphics/icons/fat-caged-auog.png",
+			name = 'Extract skin from Improved Vraukss',
+			icon = "__pyalienlife__/graphics/icons/chitin-caged-vrauks.png",
 			icon_size = 64,
 		},
 	}

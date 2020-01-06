@@ -37,7 +37,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 140,
-			tech = 'food-mk02'
+			tech = 'phadai'
 		},
 		--fawogae
 		{
@@ -81,7 +81,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 110,
-			tech = 'food-mk03'
+			tech = 'phadai'
 		},
 		--food 2 fawogae
 		{
@@ -622,6 +622,8 @@ fun.autorecipes {
 			results =
 				{
 					{name='bones', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
 					{name='meat', amount ='R'},
 					{name='guts', amount ='R'},
 					{name='pelt', amount ='R'},

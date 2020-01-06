@@ -878,7 +878,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='skincagedulric',amount='R'},
+					{name='fatcagedulric',amount='R'},
 					{name='meatcagedulric',amount=1},
 				},
 			results =

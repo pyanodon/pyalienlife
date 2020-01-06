@@ -161,7 +161,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='bones', amount ='R'},
+					{name='bones', amount ='R'},
+					{name='strangelets', amount ='R'},
 					{name='meat', amount ='R'},
 					{name='skin', amount ='R'},
 					{name='fat', amount ='R'},
