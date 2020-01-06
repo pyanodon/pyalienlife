@@ -12,6 +12,7 @@ require('prototypes/recipes/recipes-arum-megafarm')
 require('prototypes/recipes/recipes-cadaveric')
 require('prototypes/recipes/recipes-auto-cadaveric')
 require("prototypes/buildings/cadavericarum-mk01")
+require("prototypes/buildings/cadavericarum-mk02")
 
 --TECHNOLOGY--
 TECHNOLOGY('nano-tech'):add_prereq('microbiology-mk03')
@@ -72,8 +73,9 @@ RECIPE('cadaveric-arum-mk01'):remove_unlock('basic-electronics')
 RECIPE('cadaveric-arum-mk02'):remove_unlock('basic-electronics')
 RECIPE('cadaveric-arum-mk03'):remove_unlock('basic-electronics')
 RECIPE('cadaveric-arum-mk04'):remove_unlock('basic-electronics')
-RECIPE('moondrop-greenhouse-mk02'):add_unlock('botany-mk03'):subgroup_order("py-alienlife-buildings-mk02", "b")
-RECIPE('moondrop-greenhouse-mk03'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk03", "b")
+RECIPE('moondrop-greenhouse-mk01'):add_unlock('botany-mk01'):subgroup_order("py-alienlife-buildings-mk01", "b")
+RECIPE('moondrop-greenhouse-mk02'):add_unlock('botany-mk02'):subgroup_order("py-alienlife-buildings-mk02", "b")
+RECIPE('moondrop-greenhouse-mk03'):add_unlock('botany-mk03'):subgroup_order("py-alienlife-buildings-mk03", "b")
 RECIPE('moondrop-greenhouse-mk04'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk04", "b")
 RECIPE('harvester'):replace_ingredient("plastic-bar", "biopolymer"):add_ingredient({type = "item", name = "aerogel", amount = 20})
 
@@ -125,7 +127,7 @@ RECIPE('fiber'):remove_unlock('basic-electronics')
 --RECIPE('urea'):change_category('vrauks'):subgroup_order("py-alienlife-auog", "a")
 ITEM('urea'):subgroup_order("py-alienlife-auog", "a")
 RECIPE('waste-water-urea'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('basic-electronics'):add_unlock('dhilmos')
-RECIPE('ammonia-urea'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('oil-processing'):add_unlock('auog')
+RECIPE('ammonia-urea'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('oil-processing'):add_unlock('biotech-mk02')
 RECIPE('urea2'):remove_unlock('coal-processing-1')
 RECIPE('urea'):set_fields {enabled = false}
 RECIPE('mukmoux-fat2'):remove_unlock('advanced-electronics')
@@ -270,7 +272,7 @@ RECIPE {
         {type = 'item', name = 'phosphate-rock', amount = 5},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion")
+}:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -285,7 +287,7 @@ RECIPE {
         {type = 'item', name = 'rare-earth-ore', amount = 5},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion")
+}:add_unlock("molecular-decohesion-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -300,7 +302,7 @@ RECIPE {
         {type = 'fluid', name = 'cyanic-acid', amount = 30},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion")
+}:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -641,4 +643,4 @@ RECIPE {
         {type = 'item', name = 'phosphate-rock', amount = 4},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion")
+}:add_unlock("molecular-decohesion-mk02")

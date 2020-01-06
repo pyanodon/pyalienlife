@@ -24,7 +24,7 @@ TECHNOLOGY {
     prerequisites = {"mycology-mk01","separation"},
     effects = {},
     unit = {
-        count = 100,
+        count = 150,
         ingredients = {
             {"automation-science-pack", 1},
             {'logistic-science-pack', 2}
@@ -42,7 +42,7 @@ TECHNOLOGY {
     prerequisites = {"mycology-mk02"},
     effects = {},
     unit = {
-        count = 100,
+        count = 200,
         ingredients = {
             {'automation-science-pack', 3},
             {'logistic-science-pack', 2},
@@ -62,7 +62,7 @@ TECHNOLOGY {
     prerequisites = {"mycology-mk03"},
     effects = {},
     unit = {
-        count = 100,
+        count = 250,
         ingredients = {
             {'automation-science-pack', 3},
             {'logistic-science-pack', 2},

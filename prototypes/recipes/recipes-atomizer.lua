@@ -28,7 +28,7 @@ RECIPE {
         {type = 'item', name = 'iron-ore', amount = 7},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion")
+}:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -44,7 +44,7 @@ RECIPE {
         {type = 'item', name = 'copper-ore', amount = 5},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion")
+}:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -74,7 +74,7 @@ RECIPE {
         {type = 'item', name = 'copper-ore', amount = 4},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion")
+}:add_unlock("molecular-decohesion-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -89,7 +89,7 @@ RECIPE {
         {type = 'item', name = 'copper-ore', amount = 4},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion")
+}:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -104,7 +104,7 @@ RECIPE {
         {type = 'fluid', name = 'nitrogen', amount = 40},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion")
+}:add_unlock("molecular-decohesion-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -135,7 +135,7 @@ RECIPE {
         {type = 'item', name = 'ore-zinc', amount = 20},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion")
+}:add_unlock("molecular-decohesion-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -150,7 +150,7 @@ RECIPE {
         {type = 'item', name = 'ore-zinc', amount = 5},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion")
+}:add_unlock("molecular-decohesion-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -165,7 +165,7 @@ RECIPE {
         {type = 'item', name = 'ore-zinc', amount = 10},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion")
+}:add_unlock("molecular-decohesion-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -180,7 +180,7 @@ RECIPE {
         {type = 'item', name = 'ore-aluminium', amount = 5},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion")
+}:add_unlock("molecular-decohesion-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -195,4 +195,4 @@ RECIPE {
         {type = 'item', name = 'molybdenum-ore', amount = 5},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion")
+}:add_unlock("molecular-decohesion-mk04")

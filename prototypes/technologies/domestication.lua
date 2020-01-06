@@ -18,7 +18,7 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = "technology",
-    name = "domestication-2",
+    name = "domestication-mk02",
     icon = "__pyalienlife__/graphics/technology/domestication-2.png",
     icon_size = 128,
     order = "c-a",
