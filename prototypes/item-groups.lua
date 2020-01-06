@@ -99,6 +99,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-vrauks",
+        group = "py-alienlife",
+        order = "e-ba"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-arthurian",
         group = "py-alienlife",
         order = "e-c"

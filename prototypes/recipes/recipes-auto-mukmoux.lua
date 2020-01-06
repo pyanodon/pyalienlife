@@ -798,7 +798,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bonemeal', amount ='R'},
+					{name='bones', amount ='R'},
 					{name='meat', amount =8},
 				},
 			crafting_speed = 15,
@@ -816,7 +816,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bonemeal', amount ='R'},
+					{name='meat', amount ='R'},
 					{name='guts', amount =10},
 				},
 			crafting_speed = 15,

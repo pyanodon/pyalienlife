@@ -1,16 +1,16 @@
 TECHNOLOGY {
     type = "technology",
-    name = "xenobiology",
-    icon = "__pyalienlife__/graphics/technology/xenobiology.png",
+    name = "vrauks",
+    icon = "__pyalienlife__/graphics/technology/vrauks.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"steel-processing"},
+    prerequisites = {"zoology"},
     effects = {},
     unit = {
-        count = 100,
+        count = 30,
         ingredients = {
             {"automation-science-pack", 1},
         },
-        time = 45
+        time = 50
     }
 }

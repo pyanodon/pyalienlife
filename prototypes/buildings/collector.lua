@@ -5,7 +5,7 @@ RECIPE {
     enabled = true,
     ingredients = {
         {"electric-mining-drill", 2},
-        {"soil-extractormk03", 1},
+        {"soil-extractormk01", 1},
         {"electronic-circuit", 5},
         {"iron-gear-wheel", 60},
         {"iron-plate", 40},

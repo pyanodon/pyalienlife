@@ -63,6 +63,7 @@ require('prototypes/technologies/recombinant-ery')
 require('prototypes/technologies/reca')
 require('prototypes/technologies/orexigenic')
 require('prototypes/technologies/mega-farm')
+require('prototypes/technologies/vrauks')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -235,6 +236,7 @@ require('prototypes/recipes/recipes-yotoi-fruit-megafarm')
 require('prototypes/recipes/recipes-auto-zipir')
 require('prototypes/recipes/recipes-auto-trits')
 require('prototypes/recipes/recipes-auto-xeno')
+require('prototypes/recipes/recipes-auto-vrauks')
 
 --(( ORES ))--
 require('prototypes/ores/ralesia')

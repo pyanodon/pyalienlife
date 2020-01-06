@@ -382,7 +382,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 55,
-			tech = 'selective-breeding'
+			tech = 'assisted-embryology'
 		},
 		--fiber
 		{
@@ -395,7 +395,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 50,
-			tech = 'artificial-breeding'
+			tech = 'assisted-embryology'
 		},		
 		--navens
 		{
@@ -409,7 +409,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 50,
-			tech = 'biased-mutation'
+			tech = 'assisted-embryology'
 		},
 
 		-----------------------PHEROMONES-----------------------------

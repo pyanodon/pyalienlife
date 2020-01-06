@@ -228,6 +228,7 @@ RECIPE {
         {type = 'item', name = 'fur', amount = 20},
         {type = 'item', name = 'chitin', amount = 5},
         {type = 'fluid', name = 'bacteria-1', amount = 100},
+        {type = 'fluid', name = 'oleochemicals', amount = 100},
     },
     results = {
         {type = 'item', name = 'cysteine', amount = 1},
@@ -247,6 +248,7 @@ RECIPE {
         {type = 'item', name = 'yaedols', amount = 12},
         {type = 'item', name = 'lab-instrument', amount = 5},
         {type = 'fluid', name = 'gta', amount = 50},
+        {type = 'fluid', name = 'oleochemicals', amount = 100},
         {type = 'item', name = 'primers', amount = 8},
         {type = 'item', name = 'cdna', amount = 8},
     },

@@ -43,11 +43,11 @@ ENTITY {
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 5
+        module_slots = 4
     },
     allowed_effects = {"speed"},
     crafting_categories = {"vrauks"},
-    crafting_speed = 1,
+    crafting_speed = 0.01,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

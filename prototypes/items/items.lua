@@ -1016,6 +1016,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "vrauks-codex",
+    icon = "__pyalienlife__/graphics/icons/vrauks-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
     name = "navens-codex",
     icon = "__pyalienlife__/graphics/icons/navens-codex.png",
 	icon_size = 64,
@@ -1121,6 +1132,17 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "earth-generic-sample",
+    icon = "__pyalienlife__/graphics/icons/earth-generic-sample.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-samples",
+    order = "a",
     stack_size = 10
 }
 
@@ -2952,6 +2974,28 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "vrauks-food-01",
+    icon = "__pyalienlife__/graphics/icons/vrauks-food-01.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-food",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "vrauks-food-02",
+    icon = "__pyalienlife__/graphics/icons/vrauks-food-02.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-food",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
     name = "photophore",
     icon = "__pyalienlife__/graphics/icons/photophore.png",
 	icon_size = 64,
@@ -3281,6 +3325,72 @@ ITEM {
     stack_size = 50
 }
 
+ITEM {
+    type = "item",
+    name = "caged-vrauks",
+    icon = "__pyalienlife__/graphics/icons/caged-vrauks.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-vrauks",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "brain-caged-vrauks",
+    icon = "__pyalienlife__/graphics/icons/brain-caged-vrauks.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-vrauks",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "meat-caged-vrauks",
+    icon = "__pyalienlife__/graphics/icons/meat-caged-vrauks.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-vrauks",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "blood-caged-vrauks",
+    icon = "__pyalienlife__/graphics/icons/blood-caged-vrauks.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-vrauks",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "chitin-caged-vrauks",
+    icon = "__pyalienlife__/graphics/icons/chitin-caged-vrauks.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-vrauks",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "guts-caged-vrauks",
+    icon = "__pyalienlife__/graphics/icons/guts-caged-vrauks.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-vrauks",
+    order = "a",
+    stack_size = 50
+}
+
 ------RULES-----
 
 local alien_life_limitations_ulric =
@@ -3390,6 +3500,9 @@ local alien_life_limitations_ulric =
 	{
     }
     local alien_life_limitations_vonix =
+	{
+    }
+    local alien_life_limitations_vrauks =
 	{
     }
 ----MODULES----
@@ -5602,6 +5715,85 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+ITEM {
+    type = "module",
+    name = "vrauks",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/vrauks.png"},
+        --{icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "vrauks",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-vrauks",
+    order = "v-a",
+    stack_size = 10,
+	effect = { speed = {bonus = 15}},
+	limitation = alien_life_limitations_vrauks,
+	limitation_message_key = "Its full"
+}
+ITEM {
+    type = "module",
+    name = "vrauks-mk02",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/vrauks.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "vrauks",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-vrauks",
+    order = "v-b",
+    stack_size = 10,
+	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_vrauks,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "vrauks-mk03",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/vrauks.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "vrauks",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-vrauks",
+    order = "v-c",
+    stack_size = 10,
+	effect = { speed = {bonus = 25}},
+	limitation = alien_life_limitations_vrauks,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "vrauks-mk04",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/vrauks.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "vrauks",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-vrauks",
+    order = "v-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 30}},
+	limitation = alien_life_limitations_vrauks,
+	limitation_message_key = "Its full"
+}
+
 ---replicators----
 
 ITEM {
@@ -5784,6 +5976,11 @@ data:extend(
   {
     type = "module-category",
     name = "arum"
+  },
+
+  {
+    type = "module-category",
+    name = "vrauks"
   },
   --item used to select the ceature and start and end points of the route
 	{

@@ -2,7 +2,7 @@ RECIPE {
     type = "recipe",
     name = "lb-provider-chest",
     energy_required = 1,
-    enabled = true,
+    enabled = false,
     ingredients = {
         {"steel-plate", 50},
         {"glass", 40},
@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"lb-provider-chest", 1}
     }
-}
+}:add_unlock("domestication")
 
 ITEM {
     type = "item",
@@ -53,7 +53,7 @@ ENTITY {
 						priority = "high",
 						width = 69,
 						height = 67,
-						shift = {0, 0},
+						shift = util.by_pixel(3, 1)
 					},
 				}
 		},

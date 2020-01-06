@@ -1209,7 +1209,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'steel-plate', amount = 1},
         {type = 'item', name = 'glass', amount = 1},
-        {type = 'item', name = 'titanium-plate', amount = 1},
+        {type = 'item', name = 'titanium-plate', amount = 2},
     },
     results = {
         {type = 'item', name = 'bio-container', amount = 1}
@@ -1231,3 +1231,26 @@ RECIPE {
     },
     --main_product = "adrenal-cortex",
 }:add_unlock("navens")
+
+--oleochemicals to CM1
+RECIPE {
+    type = "recipe",
+    name = "oleochemical-combustion",
+    category = "combustion",
+    enabled = false,
+    energy_required = 3,
+    ingredients = {
+        {type = "fluid", name = "oleochemicals", amount = 100},
+        {type = "fluid", name = "water", amount = 500},
+        {type = "item", name = "coke", amount = 3}
+    },
+    results = {
+        {type = "fluid", name = "combustion-mixture1", amount = 150, temperature = 600},
+        {type = "fluid", name = "steam", amount = 500, temperature = 60}
+    },
+    icon = "__pyalienlife__/graphics/icons/combustion-oleochemical.png",
+    icon_size = 32,
+    --main_product = "combustion-mixture1",
+    subgroup = "py-combustion",
+    order = "a"
+}:add_unlock("energy-2")

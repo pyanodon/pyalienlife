@@ -656,7 +656,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='blood', amount ='R'},
+					{name='sulfuricacid', amount ='R'},
 					{name='chitin', amount =7},
 				},
 			crafting_speed = 15,
