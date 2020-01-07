@@ -79,7 +79,7 @@ fun.autorecipes {
 					{name='cadavericarum',amount ='+1'}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk02'
+				tech = 'cadaveric-arum-mk02'
         },
         {
 			ingredients =
@@ -96,7 +96,7 @@ fun.autorecipes {
 					{name='cadavericarum',amount ='+1'}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk02'
+				tech = 'cadaveric-arum-mk02'
         },
         {
 			ingredients =
@@ -114,7 +114,7 @@ fun.autorecipes {
 					{name='cadavericarum',amount ='+1'}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk02'
+				tech = 'cadaveric-arum-mk02'
         },
         {
 			ingredients =
@@ -130,7 +130,7 @@ fun.autorecipes {
 					{name='cadavericarum',amount ='+1'}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk03'
+				tech = 'cadaveric-arum-mk03'
         },
         {
 			ingredients =
@@ -150,7 +150,7 @@ fun.autorecipes {
 					{name='cadavericarum',amount ='+1'}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk04'
+				tech = 'cadaveric-arum-mk04'
 		},
     --GH
 		{
@@ -169,7 +169,7 @@ fun.autorecipes {
 					{name='cadavericarum',amount ="+1"}
 				},
 			crafting_speed = 70,
-			tech = 'botany-mk04'
+			tech = 'cadaveric-arum-mk04'
 		},
 		{
 			ingredients =
@@ -185,7 +185,7 @@ fun.autorecipes {
 					{name='cadavericarum',amount ="+1"}
 				},
 			crafting_speed = 70,
-			tech = 'botany-mk04'
+			tech = 'cadaveric-arum-mk04'
 		},
 		{
 			ingredients =
@@ -199,7 +199,7 @@ fun.autorecipes {
 					{name='cadavericarum',amount ="+1"}
 				},
 			crafting_speed = 70,
-			tech = 'botany-mk04'
+			tech = 'cadaveric-arum-mk04'
 		},
 		{
 			ingredients =
@@ -214,7 +214,7 @@ fun.autorecipes {
 					{name='cadavericarum',amount ="+1"}
 				},
 			crafting_speed = 70,
-			tech = 'botany-mk04'
+			tech = 'cadaveric-arum-mk04'
 		},
 	}
 }

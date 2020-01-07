@@ -79,7 +79,7 @@ fun.autorecipes {
 					{name='grod',amount ='+3'}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk02'
+				tech = 'grod-mk02'
         },
         {
 			ingredients =
@@ -96,7 +96,7 @@ fun.autorecipes {
 					{name='grod',amount ='+2'}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk02'
+				tech = 'grod-mk02'
         },
         {
 			ingredients =
@@ -114,7 +114,7 @@ fun.autorecipes {
 					{name='grod',amount ='+3'}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk02'
+				tech = 'grod-mk02'
         },
         {
 			ingredients =
@@ -130,7 +130,7 @@ fun.autorecipes {
 					{name='grod',amount ='+2'}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk03'
+				tech = 'grod-mk03'
         },
         {
 			ingredients =
@@ -149,7 +149,7 @@ fun.autorecipes {
 					{name='grod',amount ='+3'}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk03'
+				tech = 'grod-mk03'
         },
         {
 			ingredients =
@@ -169,7 +169,7 @@ fun.autorecipes {
 					{name='grod',amount ='+2'}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk04'
+				tech = 'grod-mk04'
 		},
 		{
 			ingredients =
@@ -189,7 +189,7 @@ fun.autorecipes {
 					{name='grod',amount =25}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk04'
+				tech = 'grod-mk04'
 		},
     --GH
 		{
@@ -207,7 +207,7 @@ fun.autorecipes {
 					{name='grod',amount =25}
 				},
 			crafting_speed = 70,
-			tech = 'botany-mk04'
+			tech = 'grod-mk04'
 		},
 		{
 			ingredients =
@@ -223,7 +223,7 @@ fun.autorecipes {
 					{name='grod',amount =27}
 				},
 			crafting_speed = 70,
-			tech = 'botany-mk04'
+			tech = 'grod-mk04'
 		},
 		{
 			ingredients =
@@ -239,7 +239,7 @@ fun.autorecipes {
 					{name='grod',amount =29}
 				},
 			crafting_speed = 70,
-			tech = 'botany-mk04'
+			tech = 'grod-mk04'
 		},
 		{
 			ingredients =
@@ -254,7 +254,7 @@ fun.autorecipes {
 					{name='grod',amount =35}
 				},
 			crafting_speed = 70,
-			tech = 'botany-mk04'
+			tech = 'grod-mk04'
 		},
 	}
 }

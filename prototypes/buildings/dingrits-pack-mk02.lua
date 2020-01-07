@@ -1,40 +1,40 @@
 RECIPE {
     type = "recipe",
-    name = "dingrits-pack-mk01",
+    name = "dingrits-pack-mk02",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"nbti-alloy", 40},
-        {"small-lamp", 20},
-        {"concrete", 200},
-        {"concrete-wall", 50},
-        {"electronic-circuit", 50},
-        {"steel-plate", 50},
+        {"dingrits-pack-mk01", 1},
+        {"duralumin", 50},
+        {"lead-plate", 50},
+        {"latex", 40},
+        {"neuroprocessor", 20},
+        {"advanced-circuit", 15},
     },
     results = {
-        {"dingrits-pack-mk01", 1}
+        {"dingrits-pack-mk02", 1}
     }
-}:add_unlock("dingrits")
+}:add_unlock("dingrits-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 
 ITEM {
     type = "item",
-    name = "dingrits-pack-mk01",
-    icon = "__pyalienlife__/graphics/icons/dingrits-pack-mk01.png",
+    name = "dingrits-pack-mk02",
+    icon = "__pyalienlife__/graphics/icons/dingrits-pack-mk02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-buildings-mk02",
     order = "d",
-    place_result = "dingrits-pack-mk01",
+    place_result = "dingrits-pack-mk02",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "dingrits-pack-mk01",
-    icon = "__pyalienlife__/graphics/icons/dingrits-pack-mk01.png",
+    name = "dingrits-pack-mk02",
+    icon = "__pyalienlife__/graphics/icons/dingrits-pack-mk02.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "dingrits-pack-mk01"},
+    minable = {mining_time = 0.5, result = "dingrits-pack-mk02"},
     fast_replaceable_group = "dingrits-pack",
     max_health = 100,
     corpse = "medium-remnants",
@@ -44,7 +44,7 @@ ENTITY {
     --draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 6
+        module_slots = 7
     },
     allowed_effects = {"speed"},
     crafting_categories = {"dingrits"},
@@ -54,7 +54,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = 1.5,
     },
-    energy_usage = "500kW",
+    energy_usage = "700kW",
     ingredient_count = 10,
     animation = {
         layers = {
@@ -73,7 +73,7 @@ ENTITY {
             frame_count = 1,
             line_length = 1,
             shift = util.by_pixel(16, -16),
-            tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+            tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
       },
     },

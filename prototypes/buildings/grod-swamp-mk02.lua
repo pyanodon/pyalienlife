@@ -1,43 +1,42 @@
 RECIPE {
     type = "recipe",
-    name = "grods-swamp-mk01",
+    name = "grods-swamp-mk02",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"stone-brick", 900},
-        {"pump", 5},
-        {"engine-unit", 5},
+        {"grods-swamp-mk01", 1},
+        {"latex", 15},
+        {"electric-engine-unit", 20},
         {"treated-wood", 50},
-        {"pipe", 40},
-        {"electronic-circuit", 20},
-        {"titanium-plate", 50},
-        {"steel-plate", 50},
+        {"niobium-pipe", 20},
+        {"advanced-circuit", 20},
         {"glass", 40},
+        {"plastic-bar", 30},
     },
     results = {
-        {"grods-swamp-mk01", 1}
+        {"grods-swamp-mk02", 1}
     }
-}:add_unlock("grod")
+}:add_unlock("grod-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 
 ITEM {
     type = "item",
-    name = "grods-swamp-mk01",
-    icon = "__pyalienlife__/graphics/icons/grods-swamp-mk01.png",
+    name = "grods-swamp-mk02",
+    icon = "__pyalienlife__/graphics/icons/grods-swamp-mk02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-buildings-mk02",
     order = "e",
-    place_result = "grods-swamp-mk01",
+    place_result = "grods-swamp-mk02",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "grods-swamp-mk01",
-    icon = "__pyalienlife__/graphics/icons/grods-swamp-mk01.png",
+    name = "grods-swamp-mk02",
+    icon = "__pyalienlife__/graphics/icons/grods-swamp-mk02.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "grods-swamp-mk01"},
+    minable = {mining_time = 0.5, result = "grods-swamp-mk02"},
     fast_replaceable_group = "grods-swamp",
     max_health = 100,
     corpse = "medium-remnants",
@@ -47,7 +46,7 @@ ENTITY {
     --draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 6
+        module_slots = 7
     },
     allowed_effects = {"speed"},
     crafting_categories = {"grod"},
@@ -57,7 +56,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = -5,
     },
-    energy_usage = "400kW",
+    energy_usage = "600kW",
     ingredient_count = 10,
     animation = {
         layers = {
@@ -78,7 +77,7 @@ ENTITY {
                 frame_count = 1,
                 --animation_speed = 0.35,
                 shift = util.by_pixel(16, -16),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
         }
     },
