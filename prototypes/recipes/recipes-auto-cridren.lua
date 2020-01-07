@@ -66,7 +66,7 @@ fun.autorecipes {
 					--{name='cridren',amount ='+1'}
 				},
 				crafting_speed = 120,
-				tech = 'botany-mk02'
+				tech = 'cridren-mk02'
         },
         {
 			ingredients =
@@ -83,7 +83,7 @@ fun.autorecipes {
 					--{name='cridren',amount ='+2'}
 				},
 				crafting_speed = 110,
-				tech = 'botany-mk02'
+				tech = 'cridren-mk02'
         },
         {
 			ingredients =
@@ -101,7 +101,7 @@ fun.autorecipes {
 					--{name='cridren',amount ='+1'}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk02'
+				tech = 'cridren-mk02'
         },
         {
 			ingredients =
@@ -119,7 +119,7 @@ fun.autorecipes {
 					--{name='cridren',amount ='+2'}
 				},
 				crafting_speed = 90,
-				tech = 'botany-mk03'
+				tech = 'cridren-mk03'
         },
         {
 			ingredients =
@@ -138,7 +138,7 @@ fun.autorecipes {
 					--{name='cridren',amount ='+3'}
 				},
 				crafting_speed = 80,
-				tech = 'botany-mk03'
+				tech = 'cridren-mk03'
         },
         {
 			ingredients =
@@ -158,7 +158,7 @@ fun.autorecipes {
 					--{name='cridren',amount =25}
 				},
 				crafting_speed = 70,
-				tech = 'botany-mk04'
+				tech = 'cridren-mk04'
 		},
 		{
 			ingredients =
@@ -178,7 +178,7 @@ fun.autorecipes {
 					--{name='cridren',amount =25}
 				},
 				crafting_speed = 60,
-				tech = 'botany-mk04'
+				tech = 'cridren-mk04'
 		},
     --GH
 		{
@@ -195,7 +195,7 @@ fun.autorecipes {
 					--{name='cridren',amount =25}
 				},
 			crafting_speed = 40,
-			tech = 'botany-mk04'
+			tech = 'cridren-mk04'
 		},
 		{
 			ingredients =
@@ -211,7 +211,7 @@ fun.autorecipes {
 					{name='cridren',amount ='+1'}
 				},
 			crafting_speed = 30,
-			tech = 'botany-mk04'
+			tech = 'cridren-mk04'
 		},
 		{
 			ingredients =
@@ -226,7 +226,7 @@ fun.autorecipes {
 					{name='cridren',amount ='+1'}
 				},
 			crafting_speed = 30,
-			tech = 'botany-mk04'
+			tech = 'cridren-mk04'
 		},
 		{
 			ingredients =
@@ -240,7 +240,7 @@ fun.autorecipes {
 					{name='cridren',amount ='+1'}
 				},
 			crafting_speed = 30,
-			tech = 'botany-mk04'
+			tech = 'cridren-mk04'
 		},
 	}
 }

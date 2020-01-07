@@ -5,10 +5,11 @@ RECIPE {
     enabled = false,
     ingredients = {
         {"nbti-alloy", 40},
+        {"small-lamp", 20},
         {"concrete", 200},
         {"concrete-wall", 50},
-        {"processing-unit", 10},
-        {"super-steel", 50},
+        {"electronic-circuit", 50},
+        {"steel-plate", 50},
     },
     results = {
         {"dingrits-pack-mk01", 1}

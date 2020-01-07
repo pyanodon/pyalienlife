@@ -8,12 +8,11 @@ RECIPE {
         {"pump", 5},
         {"engine-unit", 5},
         {"treated-wood", 50},
-        {"niobium-pipe", 20},
-        {"advanced-circuit", 20},
+        {"pipe", 40},
+        {"electronic-circuit", 20},
         {"titanium-plate", 50},
         {"steel-plate", 50},
         {"glass", 40},
-        {"plastic-bar", 45},
     },
     results = {
         {"grods-swamp-mk01", 1}

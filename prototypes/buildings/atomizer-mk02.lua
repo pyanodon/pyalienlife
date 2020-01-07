@@ -13,7 +13,7 @@ RECIPE {
     results = {
         {"atomizer-mk02", 1}
     }
-}:add_unlock("molecular-decohesion-mk02")
+}:add_unlock("molecular-decohesion-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 
 ITEM {
     type = "item",
