@@ -78,6 +78,7 @@ local landbots =
 --gui
 local request_gui
 local current_elem_button
+local active_chest
 
 --[[
 global.landbots =
@@ -164,7 +165,7 @@ script.on_init(
 
 script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity}, function(event)
         local E = event.created_entity
-        log(E.name)
+        --log(E.name)
 		--log(serpent.block(landbots))
 
         if E.name == 'mega-farm' then
@@ -173,8 +174,8 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
             local posy = -13
             local rpos = E.position
             repeat
-                log(posx)
-                log(posy)
+                --log(posx)
+                --log(posy)
                 if posx == -13 or posy == -13 or posx == 13 or posy == 13 then
                     game.surfaces['nauvis'].create_entity {name = 'wood-fence', position = {rpos.x + posx, (rpos.y - 15) + posy}, force = E.force}
                 end
@@ -189,7 +190,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
             until posy == 14
         elseif E.name == 'hidden-roboport-for-logistics-radius' then
 			--swap the roboport for the control tower entity
-			log(E.name)
+			--log(E.name)
             local tower = game.surfaces['nauvis'].create_entity {name = 'lb-control-tower', position = {E.position.x, E.position.y}, force = E.force}
             E.destroy()
 
@@ -204,6 +205,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 
 				elseif entity.name == 'lb-requester-chest' then
 					landbots.towers[tower.unit_number].requestorchests[entity.unit_number] = {chest = entity, requestsinroute = {}}
+					landbots.requesterchests[entity.unit_number].tower = tower
 				elseif entity.name == 'lb-provider-chest' then
 					landbots.towers[tower.unit_number].providerchests[entity.unit_number] = {chest = entity}
 				end
@@ -231,20 +233,11 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 						}
 						landbots.bots[E.unit_number].unit = E
 						landbots.bots[E.unit_number].tower = t
-						--{unit = E, carryamount = 5, hasitem = false, isgettingitem = false, destinationchest = {}}
                     end
                 end
             end
         elseif E.name == 'lb-requester-chest' then
-            --local chestcontrols = game.surfaces['nauvis'].create_entity {name = 'lb-requester-controls', position = {E.position.x, E.position.y}, force = E.force}
-            for t,tower in pairs(landbots.towers) do
-                --log(serpent.block(t))
-                --log(serpent.block(tower))
-                if ((E.position.x - tower.position.x) * (E.position.x - tower.position.x)) + ((E.position.y - tower.position.y) * (E.position.y - tower.position.y)) <= 30 * 30 then
-                    --tower.requestorchests[E.unit_number] = {chest = E, controls = chestcontrols, requestsinroute = {}}
-					tower.requestorchests[E.unit_number] = {chest = E, requestsinroute = {}}
-                end
-					local slots =
+				local slots =
 						{
 							{item = 'a', amount = 0},
 							{item = 'a', amount = 0},
@@ -252,12 +245,22 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 							{item = 'a', amount = 0},
 							{item = 'a', amount = 0}
 						}
-					landbots.requesterchests[E.unit_number] =
+				landbots.requesterchests[E.unit_number] =
 						{
-							tower = t, 
+							tower = {},
 							request_slots = slots
 						}
-					log(serpent.block(landbots.requesterchests[E.unit_number]))
+				--log(serpent.block(landbots.requesterchests[E.unit_number]))
+            for t,tower in pairs(landbots.towers) do
+                --log(serpent.block(t))
+                --log(serpent.block(tower))
+                if ((E.position.x - tower.position.x) * (E.position.x - tower.position.x)) + ((E.position.y - tower.position.y) * (E.position.y - tower.position.y)) <= 30 * 30 then
+                    --tower.requestorchests[E.unit_number] = {chest = E, controls = chestcontrols, requestsinroute = {}}
+					tower.requestorchests[E.unit_number] = {chest = E, requestsinroute = {}}
+					--local tow = t
+					landbots.requesterchests[E.unit_number].tower = t
+					--landbots.requesterchests[E.unit_number].tower = tow
+                end
             end
         elseif E.name == 'lb-provider-chest' then
             for t,tower in pairs(landbots.towers) do
@@ -274,7 +277,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 		elseif E.name == 'caravan' then
 			global.caravan_unit_numbers[E.unit_number] = true
 		end
-        log(serpent.block(landbots))
+        --log(serpent.block(landbots))
     end
 )
 
@@ -292,24 +295,105 @@ script.on_event(defines.events.on_put_item, function(event)
     
 	end)
 
+function ai(event)
+
+for t, tower in pairs(landbots.towers) do
+	if tower.currentlyactivebotcount < tower.totalbotcount then
+		--log('hit')
+		for r,req in pairs(tower.requestorchests) do
+			--log('hit')
+			--log(serpent.block(req))
+			local req_chest = landbots.requesterchests[r]
+			--log(serpent.block(req_chest))
+			if req_chest.request_slots ~= nil then
+				--log('hit')
+					for re, requests in pairs(req_chest.request_slots) do
+						--log(serpent.block(sig))
+						local inventory = req.chest.get_inventory(defines.inventory.chest).get_contents()
+						local set = {}
+						for i, inv in pairs(inventory) do
+							--log(serpent.block(inv))
+							set[i] = true
+						end
+						local requestamount = 0
+						if req.requestsinroute[requests.item] ~= nil then
+							requestamount = requests.amount - req.requestsinroute[requests.item]
+						else
+							requestamount = requests.amount
+						end
+						if (set[requests.item] ~= nil and inventory[requests.item] < requestamount) or (set[requests.item] == nil) then
+							--log('box isnt full of the stuff we set. send more please')
+							--need to check the providers to see if any of them have what we need
+							for p, prov in pairs(tower.providerchests) do
+								--log(serpent.block(p))
+								--log(serpent.block(prov))
+								local pinventory = prov.chest.get_inventory(defines.inventory.chest).get_contents()
+								local pset = {}
+								for i, inv in pairs(pinventory) do
+									--log(serpent.block(i))
+									--log(requests.item)
+									--log(serpent.block(inv))
+									pset[i] = true
+								end
+								if pset[requests.item] ~= nil then
+									--log('hit')
+								--send landbot to get stuff from this provider box
+									for i, inact in pairs(tower.inactivebots) do
+										--log('hit')
+										local bots = landbots.bots
+										--log(serpent.block(bots))
+										--log(serpent.block(inact))
+										--log(serpent.block(bots[inact].unit.position))
+										--log(serpent.block(prov.chest.position))
+										bots[inact].unit.set_command{type = defines.command.go_to_location, destination_entity = prov.chest, radius = 2}
+										bots[inact].destinationchest = p
+										bots[inact].requestorchest = r
+										bots[inact].isgettingitem = true
+										bots[inact].itemname = requests.item
+										table.insert(tower.activebots, inact)
+										table.remove(tower.inactivebots, i)
+										tower.currentlyactivebotcount = tower.currentlyactivebotcount + 1
+										if req.requestsinroute[requests.item] == nil then
+											req.requestsinroute[requests.item] = bots[inact].carryamount
+										else
+											req.requestsinroute[requests.item] = req.requestsinroute[requests.item] + bots[inact].carryamount
+										end
+										--log(serpent.block(landbots))
+										return
+									end
+								end
+							end
+						end
+					end
+			end
+		end
+	--elseif then
+	end
+end
+
+end
+
 script.on_event(defines.events.on_ai_command_completed, function(event)
-	
+	--log('hit')
 		--log(event.result)
 		if landbots.bots[event.unit_number] ~= nil then
 			--need to check if is on the way to get an item or drop off items.
 			--need to check if there are requests to fill that are not already in route by another bot
+			--log('hit')
 			local lb
 			lb = landbots.bots[event.unit_number]
+			--log(serpent.block(lb))
 			if event.result == defines.behavior_result.success then
+			--log('hit')
 				if lb ~= nil then
 					if lb.isgettingitem == true then
-						log('it worked')
+						--log('it worked')
 						--get stuff from box and set destination to the requester chest that asked for it
 						local pinventory = landbots.towers[lb.tower].providerchests[lb.destinationchest].chest.get_inventory(defines.inventory.chest).get_contents()
 						local pset = {}
 						for i, inv in pairs(pinventory) do
-							log(serpent.block(i))
-							log(serpent.block(inv))
+							--log(serpent.block(i))
+							--log(serpent.block(inv))
 							pset[i] = true
 						end
 						if pset[lb.itemname] ~= nil then
@@ -323,13 +407,14 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 										landbots.towers[lb.tower].providerchests[lb.destinationchest].chest.get_inventory(defines.inventory.chest).remove({lb.itemname,count=inv})
 									end
 									--swap over to the carrying graphic version of the land bug
-									lb.unit.set_command{type = defines.command.go_to_location, destination = landbots.towers[lb.tower].requestorchests[lb.requestorchest].chest.position, radius = 2}
+									lb.unit.set_command{type = defines.command.go_to_location, destination_entity = landbots.towers[lb.tower].requestorchests[lb.requestorchest].chest, radius = 2}
 									lb.hasitem = true
 									lb.isgettingitem = false
 								end
 							end
 						end
 					elseif lb.hasitem == true then
+					--log('hit')
 						landbots.towers[lb.tower].requestorchests[lb.requestorchest].chest.get_inventory(defines.inventory.chest).insert({name=lb.itemname,count=lb.inventorycount})
 						landbots.towers[lb.tower].requestorchests[lb.requestorchest].requestsinroute[lb.itemname] = landbots.towers[lb.tower].requestorchests[lb.requestorchest].requestsinroute[lb.itemname] - lb.inventorycount
 						lb.inventory = ''
@@ -343,18 +428,17 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 				end
 			end
 			if event.result == defines.behavior_result.in_progress then
+				--log('hit')
 				if lb[event.unit_number] ~= nil then
 
 				end
 			end
 			if event.result == defines.behavior_result.fail	then
-				if lb[event.unit_number] ~= nil then
-
-				end
+				--log('hit')
 			end
 			if event.result == defines.behavior_result.deleted then
+				--log('hit')
 				if lb[event.unit_number] ~= nil then
-
 				end
 			end
 		elseif global.caravan_unit_numbers[event.unit_number] ~= nil then
@@ -389,7 +473,7 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 							break
 						end
 					end
-				--log(serpent.block(caravanroutes[car].inventory))
+				log(serpent.block(caravanroutes[car]))
 				end
 				--caravanroutes[car].inventory.item = outpostinventory
 				caravanroutes[car].unit.set_command {
@@ -426,7 +510,7 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 							break
 						end
 					end
-				--log(serpent.block(caravanroutes[car].inventory))
+				log(serpent.block(caravanroutes[car]))
 				end
 				caravanroutes[car].unit.set_command {
 					type = defines.command.go_to_location,
@@ -440,75 +524,8 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 
 script.on_nth_tick(5, function(event)
 --log('hit')
-for t, tower in pairs(landbots.towers) do
-	if tower.currentlyactivebotcount < tower.totalbotcount then
-		--log('hit')
-		for r,req in pairs(tower.requestorchests) do
-			--log('hit')
-			--log(serpent.block(req))
-			if req.controls ~= nil then
-				--log('hit')
-				local signals = req.controls.get_merged_signals(defines.circuit_connector_id.constant_combinator)
-				--log(serpent.block(signals))
-				if signals ~= nil then
-					for s, sig in pairs(signals) do
-						--log(serpent.block(sig))
-						local inventory = req.chest.get_inventory(defines.inventory.chest).get_contents()
-						local set = {}
-						for i, inv in pairs(inventory) do
-							--log(serpent.block(inv))
-							set[i] = true
-						end
-						local requestamount = 0
-						if req.requestsinroute[sig.signal.name] ~= nil then
-							requestamount = sig.count - req.requestsinroute[sig.signal.name]
-						else
-							requestamount = sig.count
-						end
-						if (set[sig.signal.name] ~= nil and inventory[sig.signal.name] < requestamount) or (set[sig.signal.name] == nil) then
-							log('box isnt full of the stuff we set. send more please')
-							--need to check the providers to see if any of them have what we need
-							for p, prov in pairs(tower.providerchests) do
-								log(serpent.block(p))
-								log(serpent.block(prov))
-								local pinventory = prov.chest.get_inventory(defines.inventory.chest).get_contents()
-								local pset = {}
-								for i, inv in pairs(pinventory) do
-									log(serpent.block(i))
-									log(serpent.block(inv))
-									pset[i] = true
-								end
-								if pset[sig.signal.name] ~= nil then
-								--send landbot to get stuff from this provider box
-									for i, inact in pairs(tower.inactivebots) do
-										local bots = landbots.bots
-										bots[inact].unit.set_command{type = defines.command.go_to_location, destination = prov.chest.position, radius = 2}
-										bots[inact].destinationchest = p
-										bots[inact].requestorchest = r
-										bots[inact].isgettingitem = true
-										bots[inact].itemname = sig.signal.name
-										table.insert(tower.activebots, inact)
-										table.remove(tower.inactivebots, i)
-										tower.currentlyactivebotcount = tower.currentlyactivebotcount + 1
-										if req.requestsinroute[sig.signal.name] == nil then
-											req.requestsinroute[sig.signal.name] = bots[inact].carryamount
-										else
-											req.requestsinroute[sig.signal.name] = req.requestsinroute[sig.signal.name] + bots[inact].carryamount
-										end
-										log(serpent.block(landbots))
-										break
-									end
-								end
-							end
-						end
-					end
-				end
-			end
-		end
-	--elseif then
 
-	end
-end
+	ai(event)
 
 end)
 
@@ -573,6 +590,7 @@ script.on_event(defines.events.on_gui_opened,function(event)
 			request_gui.add({type = 'table', name = 'tablejr', column_count = 2})
 			request_gui.tablejr.add({type = 'slider', name = 'request-slider', value = 0, maximum_value = 10000})
 			request_gui.tablejr.add({type = 'textfield', name = 'numfield', text = '0', numeric = true, lose_focus_on_confirm = true})
+			active_chest = event.entity.unit_number
         end
     end
 
@@ -580,7 +598,7 @@ end)
 
 script.on_event(defines.events.on_gui_selection_state_changed, function(event)
 
-	log(serpent.block(caravanroutes))
+	--log(serpent.block(caravanroutes))
 	--log(event.element.selected_index)
 	--log(serpent.block(next(lastclickedunit)))
 	--log(serpent.block(lastclickedunit[next(lastclickedunit)].unit_number))
@@ -590,9 +608,9 @@ script.on_event(defines.events.on_gui_selection_state_changed, function(event)
 	if event.element.name == 'outpost-list' then
 		
 		local value = event.element.get_item(event.element.selected_index)
-		log(value)
-		log(serpent.block(outpost_table))
-		log(serpent.block(outpost_table[value]))
+		--log(value)
+		--log(serpent.block(outpost_table))
+		--log(serpent.block(outpost_table[value]))
 		
 		caravanroutes[id_num].startpoint.id = outpost_table[value].entity.unit_number
 		caravanroutes[id_num].startpoint.pos = outpost_table[value].entity.position
@@ -602,36 +620,66 @@ script.on_event(defines.events.on_gui_selection_state_changed, function(event)
 	elseif event.element.name == 'outpost-list-2' then
 		
 		local value = event.element.get_item(event.element.selected_index)
-		log(value)
-		log(serpent.block(outpost_table))
-		log(serpent.block(outpost_table[value]))
+		--log(value)
+		--log(serpent.block(outpost_table))
+		--log(serpent.block(outpost_table[value]))
 		
 		caravanroutes[id_num].endpoint.id = outpost_table[value].entity.unit_number
 		caravanroutes[id_num].endpoint.pos = outpost_table[value].entity.position
 		
 	end
 
-	log(serpent.block(caravanroutes))
+	--log(serpent.block(caravanroutes))
 
 end)
 
 script.on_event(defines.events.on_gui_value_changed, function(event)
 
-	log(event.element.name)
+	--log(event.element.name)
+	local s_amount = event.element.slider_value
 	
 	if event.element.name == 'request-slider' then
-		log(serpent.block(event.element.parent.children))
-		event.element.parent['numfield'].text = event.element.slider_value
+		--log(serpent.block(event.element.parent.children))
+		event.element.parent['numfield'].text = s_amount
+		if current_elem_button == 'request_elem_1' then
+			landbots.requesterchests[active_chest].request_slots[1].amount = s_amount
+		elseif current_elem_button == 'request_elem_2' then
+			landbots.requesterchests[active_chest].request_slots[2].amount = s_amount
+		elseif current_elem_button == 'request_elem_3' then
+			landbots.requesterchests[active_chest].request_slots[3].amount = s_amount
+		elseif current_elem_button == 'request_elem_4' then
+			landbots.requesterchests[active_chest].request_slots[4].amount = s_amount
+		elseif current_elem_button == 'request_elem_5' then
+			landbots.requesterchests[active_chest].request_slots[5].amount = s_amount
+		end
 	end
 
 end)
 
 script.on_event(defines.events.on_gui_elem_changed, function(event)
 
-	log(event.element.name)
+	--log(event.element.name)
 	
-	current_elem_button = event.element.name
-	
+	if event.element.parent.parent.name == 'test' then
+		--log('request gui')
+		--log(active_chest)
+		--log(serpent.block(landbots.requesterchests))
+		current_elem_button = event.element.name
+		if current_elem_button == 'request_elem_1' then
+			--log(serpent.block(landbots.requesterchests[active_chest]))
+			landbots.requesterchests[active_chest].request_slots[1].item = event.element.elem_value
+			--log(serpent.block(landbots.requesterchests[active_chest]))
+		elseif current_elem_button == 'request_elem_2' then
+			landbots.requesterchests[active_chest].request_slots[2].item = event.element.elem_value
+		elseif current_elem_button == 'request_elem_3' then
+			landbots.requesterchests[active_chest].request_slots[3].item = event.element.elem_value
+		elseif current_elem_button == 'request_elem_4' then
+			landbots.requesterchests[active_chest].request_slots[4].item = event.element.elem_value
+		elseif current_elem_button == 'request_elem_5' then
+			landbots.requesterchests[active_chest].request_slots[5].item = event.element.elem_value
+		end
+		--log(serpent.block(landbots.requesterchests[active_chest]))
+	end
 
 end)
 
@@ -657,7 +705,7 @@ end)
 script.on_event(defines.events.on_rocket_launched, function(event)
         if event.rocket_silo.name == 'mega-farm' then
             --log(serpent.block(event))
-            log(serpent.block(event.rocket.get_inventory(defines.inventory.rocket).get_contents()))
+           --log(serpent.block(event.rocket.get_inventory(defines.inventory.rocket).get_contents()))
 
             local item = event.rocket.get_inventory(defines.inventory.rocket).get_contents()
             local items = {}
@@ -665,25 +713,25 @@ script.on_event(defines.events.on_rocket_launched, function(event)
             for k, v in pairs(item) do
                 items['item1'] = k
             end
-            log(items['item1'])
+            --log(items['item1'])
             --log(serpent.block(item))
 
             local rs = event.rocket_silo
 
             for f, farm in pairs(farms) do
-                log(serpent.block(farm))
+                --log(serpent.block(farm))
                 if items['item1'] == farm.seed then
-                    log('hits')
+                    --log('hits')
                     local recipes = {}
                     local output = {}
                     for r, recipe in pairs(farm.recipes) do
-                        log(serpent.block(recipe))
+                        --log(serpent.block(recipe))
                         recipes[recipe.recipe_name] = true
                         output[recipe.recipe_name] = recipe.crop_output
                     end
-                    log(serpent.block(rs.get_recipe().name))
+                    --log(serpent.block(rs.get_recipe().name))
                     if recipes[rs.get_recipe().name] == true then
-                        log('it did a thing')
+                        --log('it did a thing')
                         local posx = -11
                         local posy = -11
                         local rpos = event.rocket_silo.position
@@ -708,8 +756,8 @@ script.on_event(defines.events.on_rocket_launched, function(event)
     end)
 
 function create_caravan_gui(event, entity)
-	log('did a thing')
-	log(serpent.block(outpost_table))
+	--log('did a thing')
+	--log(serpent.block(outpost_table))
 	local player = game.players[event.player_index]
 	caravangui = player.gui.center.add({type = 'frame', name = 'caravan_frame_left', direction = 'horizontal'})
 	caravangui.add({type = 'table', name = 'ctable', column_count = 1})
@@ -723,8 +771,11 @@ function create_caravan_gui(event, entity)
 	caravangui.ctable.route_frame_2.add({type = 'drop-down', name = 'outpost-list-2', items = names })
 	
 	caravangui.add({type = 'frame', name = 'caravan_frame_center', direction = 'vertical', caption = 'current inventory'})
-	caravangui.caravan_frame_center.add({type = 'sprite-button', name = 'inventory', sprite = 'item/iron-plate', number = 5})
-	
+	if caravanroutes[entity.unit_number] ~= nil and caravanroutes[entity.unit_number].inventory.hasitem == true then
+		caravangui.caravan_frame_center.add({type = 'sprite-button', name = 'inventory', sprite = 'item/'..caravanroutes[entity.unit_number].inventory.item, number = caravanroutes[entity.unit_number].inventory.stackamount})
+	else
+	caravangui.caravan_frame_center.add({type = 'sprite-button', name = 'inventory'})
+	end
 	caravangui.add({type = 'frame', name = 'caravan_frame_right', direction = 'vertical', caption = 'Location'})
 	caravangui.caravan_frame_right.add({type = 'minimap', name = 'minimap', position = entity.position})
 	caravangui.add({type = 'sprite-button', name = 'caravan_close', sprite = 'utility/close_fat'})
@@ -736,7 +787,7 @@ script.on_event(defines.events.on_player_selected_area, function(event)
 	if event.item == 'unit-controller' then
 		for e, ent in pairs(event.entities) do
 			--log(serpent.block(ent.name))
-			log('did a thing here')
+			--log('did a thing here')
 			if ent.name == 'caravan' then
 				create_caravan_gui(event, ent)
 				lastclickedunit[ent.unit_number] = ent
@@ -758,7 +809,7 @@ script.on_event(defines.events.on_player_selected_area, function(event)
                 }
                 caravanroutes[next(lastclickedunit)] = newroute
                 --lastclickedunit = {}
-				log(serpent.block(lastclickedunit))
+				--log(serpent.block(lastclickedunit))
 			end
 		end
 	
