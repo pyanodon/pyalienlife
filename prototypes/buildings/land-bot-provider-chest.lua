@@ -37,7 +37,7 @@ ENTITY {
     minable = {mining_time = 0.1, result = "lb-provider-chest"},
     max_health = 100,
     corpse = "wooden-chest-remnants",
-    collision_box = {{-1, -1}, {1, 1}},
+    collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
     fast_replaceable_group = "container",
     selection_box = {{-1, -1}, {1, 1}},
     inventory_size = 16,
