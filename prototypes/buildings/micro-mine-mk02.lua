@@ -1,40 +1,39 @@
 RECIPE {
     type = "recipe",
-    name = "micro-mine-mk01",
+    name = "micro-mine-mk02",
     energy_required = 0.5,
-    enabled = true,
+    enabled = false,
     ingredients = {
-        {"stone-brick", 50},
-        {"electric-mining-drill", 1},
-        {"glass", 12},
-        {"inserter", 5},
-        {"electronic-circuit", 10},
-        {"iron-gear-wheel", 20},
+        {"micro-mine-mk01", 1},
+        {"duralumin", 20},
+        {"advanced-circuit", 15},
+        {"engine-unit", 10},
+        {"latex", 30},
     },
     results = {
-        {"micro-mine-mk01", 1}
+        {"micro-mine-mk02", 1}
     }
-}
+}:add_unlock("microbiology-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 
 ITEM {
     type = "item",
-    name = "micro-mine-mk01",
-    icon = "__pyalienlife__/graphics/icons/micro-mine-mk01.png",
+    name = "micro-mine-mk02",
+    icon = "__pyalienlife__/graphics/icons/micro-mine-mk02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-buildings-mk02",
     order = "a",
-    place_result = "micro-mine-mk01",
+    place_result = "micro-mine-mk02",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "micro-mine-mk01",
-    icon = "__pyalienlife__/graphics/icons/micro-mine-mk01.png",
+    name = "micro-mine-mk02",
+    icon = "__pyalienlife__/graphics/icons/micro-mine-mk02.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "micro-mine-mk01"},
+    minable = {mining_time = 0.5, result = "micro-mine-mk02"},
     fast_replaceable_group = "micro-mine",
     max_health = 100,
     fixed_recipe = "petri-dish-bacteria",
@@ -45,17 +44,17 @@ ENTITY {
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 1
+        module_slots = 2
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"micro-mine"},
-    crafting_speed = 1,
+    crafting_speed = 2,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
         emissions_per_minute = 2,
     },
-    energy_usage = "150kW",
+    energy_usage = "350kW",
     ingredient_count = 10,
     animation = {
         layers = {
@@ -76,7 +75,7 @@ ENTITY {
                 frame_count = 125,
                 animation_speed = 0.4,
                 shift = util.by_pixel(-64, -46),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
                 filename = "__pyalienlife__/graphics/entity/micro-mine/a2.png",
@@ -95,7 +94,7 @@ ENTITY {
                 frame_count = 125,
                 animation_speed = 0.4,
                 shift = util.by_pixel(32, -46),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
                 filename = "__pyalienlife__/graphics/entity/micro-mine/a3.png",
@@ -114,7 +113,7 @@ ENTITY {
                 frame_count = 125,
                 animation_speed = 0.4,
                 shift = util.by_pixel(112, -46),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
         }
     },

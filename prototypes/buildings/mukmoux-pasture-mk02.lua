@@ -1,39 +1,39 @@
 RECIPE {
     type = "recipe",
-    name = "mukmoux-pasture-mk01",
+    name = "mukmoux-pasture-mk02",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"soil", 500},
-        {"steel-plate", 100},
-        {"duralumin", 30},
-        {"storage-tank", 5},
+        {"mukmoux-pasture-mk01", 1},
+        {"lead-plate", 10},
+        {"latex", 20},
+        {"neuroprocessor", 30},
         {"advanced-circuit", 10} --bob electronic-logic-board
     },
     results = {
-        {"mukmoux-pasture-mk01", 1}
+        {"mukmoux-pasture-mk02", 1}
     }
-}:add_unlock("mukmoux")
+}:add_unlock("mukmoux-mk02")
 
 ITEM {
     type = "item",
-    name = "mukmoux-pasture-mk01",
-    icon = "__pyalienlife__/graphics/icons/mukmoux-pasture-mk01.png",
+    name = "mukmoux-pasture-mk02",
+    icon = "__pyalienlife__/graphics/icons/mukmoux-pasture-mk02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-buildings-mk02",
     order = "d",
-    place_result = "mukmoux-pasture-mk01",
+    place_result = "mukmoux-pasture-mk02",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "mukmoux-pasture-mk01",
-    icon = "__pyalienlife__/graphics/icons/mukmoux-pasture-mk01.png",
+    name = "mukmoux-pasture-mk02",
+    icon = "__pyalienlife__/graphics/icons/mukmoux-pasture-mk02.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "mukmoux-pasture-mk01"},
+    minable = {mining_time = 0.5, result = "mukmoux-pasture-mk02"},
     fast_replaceable_group = "mukmoux-pasture",
     max_health = 100,
     corpse = "big-remnants",
@@ -43,7 +43,7 @@ ENTITY {
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 6
+        module_slots = 7
     },
     allowed_effects = {"speed"},
     crafting_categories = {"mukmoux"},
@@ -53,7 +53,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = 3,
     },
-    energy_usage = "190kW",
+    energy_usage = "390kW",
     ingredient_count = 20,
     animation = {
         layers = {
@@ -72,7 +72,7 @@ ENTITY {
                 frame_count = 1,
                 line_length = 1,
                 shift = {0.0, -0.5},
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
         },
     },
