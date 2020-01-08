@@ -51,7 +51,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 130,
-			tech = 'organic-breeding'
+			tech = 'phadai-mk02'
 		},
 		--energy drink
 		{
@@ -64,7 +64,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 120,
-			tech = 'organic-breeding'
+			tech = 'phadai-mk02'
 		},		
 		--food 2
 		{
@@ -81,7 +81,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 110,
-			tech = 'phadai'
+			tech = 'phadai-mk03'
 		},
 		--food 2 fawogae
 		{
@@ -94,7 +94,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 100,
-			tech = 'organic-breeding'
+			tech = 'phadai-mk03'
 		},
 		--food 2 fawogae energydrink
 		{
@@ -107,7 +107,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 90,
-			tech = 'organic-breeding'
+			tech = 'phadai-mk04'
 		},
 		--gh
 		{

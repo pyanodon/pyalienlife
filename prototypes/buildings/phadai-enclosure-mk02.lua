@@ -1,40 +1,40 @@
 RECIPE {
     type = "recipe",
-    name = "phadai-enclosure-mk01",
-    energy_required = 1,
+    name = "phadai-enclosure-mk02",
+    energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"concrete", 20},
+        {"phadai-enclosure-mk01", 1},
         {"nbti-alloy", 40},
-        {"iron-stick", 500},
-        {"latex", 30},
-        {"advanced-circuit", 50},
+        {"neuromorphic-chip", 35},
+        {"nenbit-matrix", 30},
+        {"processing-unit", 50},
         {"super-steel", 50},
     },
     results = {
-        {"phadai-enclosure-mk01", 1}
+        {"phadai-enclosure-mk02", 1}
     }
-}:add_unlock("phadai")
+}:add_unlock("phadai-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 
 ITEM {
     type = "item",
-    name = "phadai-enclosure-mk01",
-    icon = "__pyalienlife__/graphics/icons/phadai-enclosure-mk01.png",
+    name = "phadai-enclosure-mk02",
+    icon = "__pyalienlife__/graphics/icons/phadai-enclosure-mk02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-buildings-mk02",
     order = "d",
-    place_result = "phadai-enclosure-mk01",
+    place_result = "phadai-enclosure-mk02",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "phadai-enclosure-mk01",
-    icon = "__pyalienlife__/graphics/icons/phadai-enclosure-mk01.png",
+    name = "phadai-enclosure-mk02",
+    icon = "__pyalienlife__/graphics/icons/phadai-enclosure-mk02.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "phadai-enclosure-mk01"},
+    minable = {mining_time = 0.5, result = "phadai-enclosure-mk02"},
     fast_replaceable_group = "phadai-enclosure",
     max_health = 100,
     corpse = "medium-remnants",
@@ -44,7 +44,7 @@ ENTITY {
     --draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 5
+        module_slots = 6
     },
     allowed_effects = {"speed"},
     crafting_categories = {"phadai"},
@@ -54,7 +54,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = 1,
     },
-    energy_usage = "450kW",
+    energy_usage = "650kW",
     ingredient_count = 30,
     animation = {
         layers = {
@@ -73,7 +73,7 @@ ENTITY {
             frame_count = 1,
             line_length = 1,
             shift = util.by_pixel(16, -32),
-            tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+            tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
         }
     },
