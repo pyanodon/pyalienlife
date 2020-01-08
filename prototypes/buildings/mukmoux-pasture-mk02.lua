@@ -13,7 +13,7 @@ RECIPE {
     results = {
         {"mukmoux-pasture-mk02", 1}
     }
-}:add_unlock("mukmoux-mk02")
+}:add_unlock("mukmoux-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 
 ITEM {
     type = "item",
