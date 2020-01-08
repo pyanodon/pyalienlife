@@ -9,39 +9,39 @@ local pipe = {
 
 RECIPE {
     type = "recipe",
-    name = "kicalk-plantation-mk01",
+    name = "kicalk-plantation-mk02",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"botanical-nursery", 1},
-        {"duralumin", 40},
-        {"glass", 30},
-        {"steel-plate", 25},
+        {"kicalk-plantation-mk01", 1},
+        {"advanced-circuit", 40},
+        {"latex", 30},
+        {"titanium-plate", 35},
     },
     results = {
-        {"kicalk-plantation-mk01", 1}
+        {"kicalk-plantation-mk02", 1}
     }
-}:add_unlock('kicalk')
+}:add_unlock('kicalk-mk02')
 
 ITEM {
     type = "item",
-    name = "kicalk-plantation-mk01",
-    icon = "__pyalienlife__/graphics/icons/kicalk-plantation-mk01.png",
+    name = "kicalk-plantation-mk02",
+    icon = "__pyalienlife__/graphics/icons/kicalk-plantation-mk02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-buildings-mk02",
     order = "e",
-    place_result = "kicalk-plantation-mk01",
+    place_result = "kicalk-plantation-mk02",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "kicalk-plantation-mk01",
-    icon = "__pyalienlife__/graphics/icons/kicalk-plantation-mk01.png",
+    name = "kicalk-plantation-mk02",
+    icon = "__pyalienlife__/graphics/icons/kicalk-plantation-mk02.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "kicalk-plantation-mk01"},
+    minable = {mining_time = 0.5, result = "kicalk-plantation-mk02"},
     fast_replaceable_group = "kicalk-plantation",
     max_health = 100,
     corpse = "big-remnants",
@@ -50,7 +50,7 @@ ENTITY {
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 7
+        module_slots = 8
     },
     allowed_effects = {"consumption", "speed"},
     crafting_categories = {"kicalk"},
@@ -60,7 +60,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = -25,
     },
-    energy_usage = "450kW",
+    energy_usage = "650kW",
     ingredient_count = 20,
     animation = {
         layers = {
@@ -83,7 +83,7 @@ ENTITY {
                 frame_count = 50,
                 animation_speed = 0.4,
                 shift = util.by_pixel(0, -5),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
                 filename = "__pyalienlife__/graphics/entity/kicalk-plantation/shadow.png",

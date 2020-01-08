@@ -1,41 +1,40 @@
 RECIPE {
     type = "recipe",
-    name = "kmauts-enclosure-mk01",
+    name = "kmauts-enclosure-mk02",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"pipe", 10},
-        {"automated-factory-mk02", 2},
-        {"gasifier", 2},
+        {"kmauts-enclosure-mk01", 1},
+        {"gasifier", 1},
         {"nexelit-plate", 30},
-        {"super-steel", 40},
-        {"iron-gear-wheel", 30},
-        {"glass", 50},
+        {"lead-plate", 20},
+        {"latex", 30},
+        {"neuroprocessor", 20},
     },
     results = {
-        {"kmauts-enclosure-mk01", 1}
+        {"kmauts-enclosure-mk02", 1}
     }
-}:add_unlock("kmauts")
+}:add_unlock("kmauts-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 
 ITEM {
     type = "item",
-    name = "kmauts-enclosure-mk01",
-    icon = "__pyalienlife__/graphics/icons/kmauts-enclosure-mk01.png",
+    name = "kmauts-enclosure-mk02",
+    icon = "__pyalienlife__/graphics/icons/kmauts-enclosure-mk02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-buildings-mk02",
     order = "d",
-    place_result = "kmauts-enclosure-mk01",
+    place_result = "kmauts-enclosure-mk02",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "kmauts-enclosure-mk01",
-    icon = "__pyalienlife__/graphics/icons/kmauts-enclosure-mk01.png",
+    name = "kmauts-enclosure-mk02",
+    icon = "__pyalienlife__/graphics/icons/kmauts-enclosure-mk02.png",
 	icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "kmauts-enclosure-mk01"},
+    minable = {mining_time = 0.5, result = "kmauts-enclosure-mk02"},
     fast_replaceable_group = "kmauts-enclosure",
     max_health = 400,
     corpse = "big-remnants",
@@ -44,7 +43,7 @@ ENTITY {
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 6
+        module_slots = 7
     },
     allowed_effects = {"speed"},
     crafting_categories = {"kmauts"},
@@ -54,7 +53,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = 2,
     },
-    energy_usage = "300kW",
+    energy_usage = "500kW",
     ingredient_count = 10,
     animation = {
         layers = {
@@ -89,7 +88,7 @@ ENTITY {
                 shift = {0.248, -0.591},
                 priority = "low",
                 --animation_speed = 0.75,
-				tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+				tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             --TREE
             {

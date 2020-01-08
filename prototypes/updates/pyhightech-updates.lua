@@ -13,6 +13,8 @@ require('prototypes/recipes/recipes-cadaveric')
 require('prototypes/recipes/recipes-auto-cadaveric')
 require("prototypes/buildings/cadavericarum-mk01")
 require("prototypes/buildings/cadavericarum-mk02")
+require("prototypes/buildings/kicalk-plantation-mk01")
+require("prototypes/buildings/kicalk-plantation-mk02")
 
 --TECHNOLOGY--
 TECHNOLOGY('nano-tech'):add_prereq('microbiology-mk03')
@@ -68,7 +70,6 @@ RECIPE('ralesia-plantation-mk03'):add_ingredient({type = "item", name = "biopoly
 RECIPE('ralesia-plantation-mk04'):replace_ingredient("control-unit", "intelligent-unit"):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 5}):add_ingredient({type = "item", name = "nv-center", amount = 2})
 RECIPE('auog-paddock'):set_fields {enabled = false}
 RECIPE('zipir'):remove_unlock('basic-electronics')
-RECIPE('kicalk-plantation-mk01'):add_unlock('kicalk')
 RECIPE('cadaveric-arum-mk01'):remove_unlock('basic-electronics')
 RECIPE('cadaveric-arum-mk02'):remove_unlock('basic-electronics')
 RECIPE('cadaveric-arum-mk03'):remove_unlock('basic-electronics')

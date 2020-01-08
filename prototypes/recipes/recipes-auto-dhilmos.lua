@@ -33,7 +33,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 130,
-			tech = 'food-mk01'
+			tech = 'dhilmos-mk02'
 		},
 		--filtration-media
 		{
@@ -46,7 +46,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 120,
-			tech = 'organic-breeding'
+			tech = 'dhilmos-mk02'
 		},
 		--sea weed
 		{
@@ -59,7 +59,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 110,
-			tech = 'organic-breeding'
+			tech = 'dhilmos-mk03'
 		},
 		--food 2
 		{
@@ -76,7 +76,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 110,
-			tech = 'food-mk02'
+			tech = 'dhilmos-mk03'
 		},
 		--food 2 filtrationmedia
 		{
@@ -89,7 +89,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 85,
-			tech = 'organic-breeding'
+			tech = 'dhilmos-mk04'
 		},
 		--food 2 seaweed
 		{
@@ -102,7 +102,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 80,
-			tech = 'organic-breeding'
+			tech = 'dhilmos-mk04'
 		},
 		--gh
 		{
