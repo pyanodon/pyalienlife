@@ -66,7 +66,7 @@ fun.autorecipes {
 					{name='tuuphra',amount ='+1'}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk02'
+				tech = 'tuuphra-mk02'
         },
         {
 			ingredients =
@@ -83,7 +83,7 @@ fun.autorecipes {
 					{name='tuuphra',amount ='+1'}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk02'
+				tech = 'tuuphra-mk02'
         },
         {
 			ingredients =
@@ -101,7 +101,7 @@ fun.autorecipes {
 					{name='tuuphra',amount ='+1'}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk02'
+				tech = 'tuuphra-mk02'
         },
         {
 			ingredients =
@@ -119,7 +119,7 @@ fun.autorecipes {
 					{name='tuuphra',amount ='+1'}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk03'
+				tech = 'tuuphra-mk03'
         },
         {
 			ingredients =
@@ -138,7 +138,7 @@ fun.autorecipes {
 					{name='tuuphra',amount ='+1'}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk03'
+				tech = 'tuuphra-mk03'
         },
         {
 			ingredients =
@@ -158,7 +158,7 @@ fun.autorecipes {
 					{name='tuuphra',amount ="+1"}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk04'
+				tech = 'tuuphra-mk04'
 		},
 		{
 			ingredients =
@@ -178,7 +178,7 @@ fun.autorecipes {
 					{name='tuuphra',amount ="+1"}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk04'
+				tech = 'tuuphra-mk04'
 		},
     --GH
 		{
@@ -195,7 +195,7 @@ fun.autorecipes {
 					{name='tuuphra',amount ="+1"}
 				},
 			crafting_speed = 70,
-			tech = 'botany-mk04'
+			tech = 'growth-hormone'
 		},
 		{
 			ingredients =
@@ -211,7 +211,7 @@ fun.autorecipes {
 					{name='tuuphra',amount ="+1"}
 				},
 			crafting_speed = 70,
-			tech = 'botany-mk04'
+			tech = 'growth-hormone'
 		},
 		{
 			ingredients =
@@ -226,7 +226,7 @@ fun.autorecipes {
 					{name='tuuphra',amount ="+1"}
 				},
 			crafting_speed = 70,
-			tech = 'botany-mk04'
+			tech = 'growth-hormone'
 		},
 		{
 			ingredients =
@@ -241,7 +241,7 @@ fun.autorecipes {
 					{name='tuuphra',amount ="+2"}
 				},
 			crafting_speed = 70,
-			tech = 'botany-mk04'
+			tech = 'growth-hormone'
 		},
 	}
 }

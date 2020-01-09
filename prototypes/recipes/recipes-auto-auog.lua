@@ -35,7 +35,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 150,
-			tech = 'food-mk01'
+			tech = 'auog'
 		},
 		--saps
 		{
@@ -49,7 +49,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 140,
-			tech = 'organic-breeding'
+			tech = 'auog-mk02'
 		},
 		--fiber
 		{
@@ -62,7 +62,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 130,
-			tech = 'organic-breeding'
+			tech = 'auog-mk02'
 		},		
 		--food 2
 		{
@@ -79,7 +79,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 120,
-			tech = 'food-mk02'
+			tech = 'auog-mk03'
 		},
 		--food 2 saps
 		{
@@ -92,7 +92,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 110,
-			tech = 'organic-breeding'
+			tech = 'auog-mk04'
 		},
 		--food 2 saps fiber
 		{
@@ -105,7 +105,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 100,
-			tech = 'organic-breeding'
+			tech = 'auog-mk04'
 		},
 		--gh
 		{

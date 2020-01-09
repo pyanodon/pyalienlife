@@ -1,39 +1,40 @@
 RECIPE {
     type = "recipe",
-    name = "ulric-corral-mk01",
+    name = "ulric-corral-mk02",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"steel-plate", 20},
+        {"latex", 25},
         {"titanium-plate", 20},
-        {"iron-gear-wheel", 20}, --bob steel-bearing
-        {"iron-plate", 10},
-        {"electronic-circuit", 10} --bob basic-circuit-board
+        {"ulric-corral-mk01", 1},
+        {"duralumin", 15},
+        {"advanced-circuit", 15},
+        {"neuroprocessor", 15},
     },
     results = {
-        {"ulric-corral-mk01", 1}
+        {"ulric-corral-mk02", 1}
     }
-}:add_unlock("ulric")
+}:add_unlock("ulric-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 25})
 
 ITEM {
     type = "item",
-    name = "ulric-corral-mk01",
-    icon = "__pyalienlife__/graphics/icons/ulric-corral-mk01.png",
+    name = "ulric-corral-mk02",
+    icon = "__pyalienlife__/graphics/icons/ulric-corral-mk02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-buildings-mk02",
     order = "d",
-    place_result = "ulric-corral-mk01",
+    place_result = "ulric-corral-mk02",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "ulric-corral-mk01",
-    icon = "__pyalienlife__/graphics/icons/ulric-corral-mk01.png",
+    name = "ulric-corral-mk02",
+    icon = "__pyalienlife__/graphics/icons/ulric-corral-mk02.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "ulric-corral-mk01"},
+    minable = {mining_time = 0.5, result = "ulric-corral-mk02"},
     fast_replaceable_group = "ulric-corral",
     max_health = 100,
     corpse = "big-remnants",
@@ -41,7 +42,7 @@ ENTITY {
     collision_box = {{-3.9, -3.9}, {3.9, 3.9}},
     selection_box = {{-4.0, -4.0}, {4.0, 4.0}},
     module_specification = {
-        module_slots = 6,
+        module_slots = 7,
     },
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
@@ -53,7 +54,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = 2,
     },
-    energy_usage = "150kW",
+    energy_usage = "350kW",
     ingredient_count = 20,
     animation = {
         layers = {
@@ -74,7 +75,7 @@ ENTITY {
                 line_length = 8,
                 shift = {0.0, 0.0},
                 animation_speed = 0.6,
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
                 filename = "__pycoalprocessing__/graphics/entity/ulric-corral/ulric-corral-top.png",
