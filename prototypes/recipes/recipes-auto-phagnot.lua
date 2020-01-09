@@ -34,7 +34,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 140,
-			tech = 'food-mk01'
+			tech = 'phagnot'
 		},
 		--salt
 		{
@@ -48,7 +48,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 130,
-			tech = 'organic-breeding'
+			tech = 'phagnot-mk02'
 		},
 		--fiber
 		{
@@ -61,7 +61,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 120,
-			tech = 'organic-breeding'
+			tech = 'phagnot-mk02'
 		},		
 		--food 2
 		{
@@ -78,7 +78,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 110,
-			tech = 'food-mk02'
+			tech = 'phagnot-mk03'
 		},
 		--food 2 salt
 		{
@@ -91,7 +91,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 100,
-			tech = 'organic-breeding'
+			tech = 'phagnot-mk03'
 		},
 		--food 2 salt fiber
 		{
@@ -104,7 +104,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 90,
-			tech = 'organic-breeding'
+			tech = 'phagnot-mk04'
 		},
 		--gh
 		{

@@ -48,7 +48,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 130,
-			tech = 'trits'
+			tech = 'trits-mk02'
 		},
 		--sponge
 		{
@@ -61,7 +61,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 120,
-			tech = 'trits'
+			tech = 'trits-mk02'
 		},		
 		--fish egg
 		{
@@ -77,7 +77,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 110,
-			tech = 'trits'
+			tech = 'trits-mk03'
 		},
 		--food 2 sodiumalginate
 		{
@@ -90,7 +90,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 100,
-			tech = 'trits'
+			tech = 'trits-mk04'
 		},
 		--food 2 sodiumalginate fiber
 		{
@@ -103,7 +103,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 90,
-			tech = 'trits'
+			tech = 'trits-mk04'
 		},	
 		--gh
 		{
@@ -381,7 +381,7 @@ fun.autorecipes {
 					{name='tritscub', amount =1},
 				},
 			crafting_speed = 80,
-			tech = 'trits'
+			tech = 'assisted-embryology'
 		},
 		--food 1
 		{
@@ -396,7 +396,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 70,
-			tech = 'trits'
+			tech = 'assisted-embryology'
 		},
 		--sodiumalginate
 		{
@@ -409,7 +409,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 65,
-			tech = 'trits'
+			tech = 'assisted-embryology'
 		},
 		--albumin
 		{
@@ -422,7 +422,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 60,
-			tech = 'trits'
+			tech = 'assisted-embryology'
 		},		
 		--food 2
 		{
@@ -439,7 +439,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 65,
-			tech = 'trits'
+			tech = 'assisted-embryology'
 		},
 		--food 2 sodiumalginate
 		{
@@ -465,7 +465,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 55,
-			tech = 'trits'
+			tech = 'assisted-embryology'
 		},	
 		-----------------------PHEROMONES-----------------------------
 		{

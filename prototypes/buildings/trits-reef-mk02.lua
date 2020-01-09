@@ -1,40 +1,41 @@
 RECIPE {
     type = "recipe",
-    name = "trits-reef-mk01",
+    name = "trits-reef-mk02",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"titanium-plate", 100},
-        {"iron-plate", 150},
-        {"aluminium-plate", 50},
-        {"pump", 3},
-        {"glass", 200},
-        {"electronic-circuit", 50},
+        {"concrete", 100},
+        {"lead-plate", 50},
+        {"steel-plate", 100},
+        {"latex", 50},
+        {"trits-reef-mk01", 1},
+        {"neuroprocessor", 30},
+        {"advanced-circuit", 35},
     },
     results = {
-        {"trits-reef-mk01", 1}
+        {"trits-reef-mk02", 1}
     }
-}:add_unlock("trits")
+}:add_unlock("trits-mk02")
 
 ITEM {
     type = "item",
-    name = "trits-reef-mk01",
-    icon = "__pyalienlife__/graphics/icons/trits-reef-mk01.png",
+    name = "trits-reef-mk02",
+    icon = "__pyalienlife__/graphics/icons/trits-reef-mk02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-buildings-mk02",
     order = "d",
-    place_result = "trits-reef-mk01",
+    place_result = "trits-reef-mk02",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "trits-reef-mk01",
-    icon = "__pyalienlife__/graphics/icons/trits-reef-mk01.png",
+    name = "trits-reef-mk02",
+    icon = "__pyalienlife__/graphics/icons/trits-reef-mk02.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "trits-reef-mk01"},
+    minable = {mining_time = 0.5, result = "trits-reef-mk02"},
     fast_replaceable_group = "trits-reef",
     max_health = 100,
     corpse = "big-remnants",
@@ -44,7 +45,7 @@ ENTITY {
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 1
+        module_slots = 2
     },
     allowed_effects = {"speed"},
     crafting_categories = {"trits"},
@@ -54,7 +55,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = 1,
     },
-    energy_usage = "500kW",
+    energy_usage = "700kW",
     ingredient_count = 20,
     animation = {
         layers = {
@@ -73,7 +74,7 @@ ENTITY {
             frame_count = 1,
             line_length = 1,
             shift = util.by_pixel(32, -96),
-            tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+            tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
         },
         {
             filename = "__pyalienlife__/graphics/entity/trits-reef/over.png",

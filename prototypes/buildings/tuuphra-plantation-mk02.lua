@@ -1,40 +1,40 @@
 RECIPE {
     type = "recipe",
-    name = "tuuphra-plantation-mk01",
+    name = "tuuphra-plantation-mk02",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"stone-brick", 30},
-        {"limestone", 25},
-        {"pipe", 15},
-        {"electronic-circuit", 10},
-        {"duralumin", 100},
-        {"tin-plate", 50},
+        {"tuuphra-plantation-mk01", 1},
+        {"titanium-plate", 15},
+        {"duralumin", 50},
+        {"latex", 30},
+        {"neuroprocessor", 20},
+        {"advanced-circuit", 30},
     },
     results = {
-        {"tuuphra-plantation-mk01", 1}
+        {"tuuphra-plantation-mk02", 1}
     }
-}:add_unlock("tuuphra")
+}:add_unlock("tuuphra-mk02")
 
 ITEM {
     type = "item",
-    name = "tuuphra-plantation-mk01",
-    icon = "__pyalienlife__/graphics/icons/tuuphra-plantation-mk01.png",
+    name = "tuuphra-plantation-mk02",
+    icon = "__pyalienlife__/graphics/icons/tuuphra-plantation-mk02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-buildings-mk02",
     order = "e",
-    place_result = "tuuphra-plantation-mk01",
+    place_result = "tuuphra-plantation-mk02",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "tuuphra-plantation-mk01",
-    icon = "__pyalienlife__/graphics/icons/tuuphra-plantation-mk01.png",
+    name = "tuuphra-plantation-mk02",
+    icon = "__pyalienlife__/graphics/icons/tuuphra-plantation-mk02.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "tuuphra-plantation-mk01"},
+    minable = {mining_time = 0.5, result = "tuuphra-plantation-mk02"},
     fast_replaceable_group = "tuuphra-plantation",
     max_health = 100,
     corpse = "medium-remnants",
@@ -44,7 +44,7 @@ ENTITY {
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 5
+        module_slots = 6
     },
     allowed_effects = {"speed"},
     crafting_categories = {"tuuphra"},
@@ -54,7 +54,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = -3,
     },
-    energy_usage = "250kW",
+    energy_usage = "450kW",
     ingredient_count = 10,
     animation = {
         layers = {
@@ -75,7 +75,7 @@ ENTITY {
                 frame_count = 150,
                 animation_speed = 0.4,
                 shift = util.by_pixel(6, 112),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
                 filename = "__pyalienlife__/graphics/entity/tuuphra-plantation/a2.png",
@@ -94,7 +94,7 @@ ENTITY {
                 frame_count = 150,
                 animation_speed = 0.4,
                 shift = util.by_pixel(6, 48),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
                 filename = "__pyalienlife__/graphics/entity/tuuphra-plantation/a3.png",
@@ -113,7 +113,7 @@ ENTITY {
                 frame_count = 150,
                 animation_speed = 0.4,
                 shift = util.by_pixel(6, -16),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
                 filename = "__pyalienlife__/graphics/entity/tuuphra-plantation/a4.png",
@@ -132,7 +132,7 @@ ENTITY {
                 frame_count = 150,
                 animation_speed = 0.4,
                 shift = util.by_pixel(6, -80),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
                 filename = "__pyalienlife__/graphics/entity/tuuphra-plantation/a5.png",
@@ -151,7 +151,7 @@ ENTITY {
                 frame_count = 150,
                 animation_speed = 0.4,
                 shift = util.by_pixel(6, -144),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
                 filename = "__pyalienlife__/graphics/entity/tuuphra-plantation/a6.png",

@@ -49,7 +49,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 130,
-			tech = 'scrondrix'
+			tech = 'scrondrix-mk02'
 		},
 		--fiber
 		{
@@ -62,7 +62,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 120,
-			tech = 'scrondrix'
+			tech = 'scrondrix-mk03'
 		},		
 		--navens
 		{
@@ -76,7 +76,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 110,
-			tech = 'scrondrix'
+			tech = 'scrondrix-mk04'
 		},
 		--gh
 		{

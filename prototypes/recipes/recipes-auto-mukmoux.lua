@@ -36,7 +36,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 140,
-			tech = 'food-mk01'
+			tech = 'mukmoux'
 		},
 		--salt
 		{
@@ -50,7 +50,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 130,
-			tech = 'organic-breeding'
+			tech = 'mukmoux-mk02'
 		},
 		--fiber
 		{
@@ -63,7 +63,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 120,
-			tech = 'organic-breeding'
+			tech = 'mukmoux-mk02'
 		},		
 		--food 2
 		{
@@ -80,7 +80,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 110,
-			tech = 'food-mk02'
+			tech = 'mukmoux-mk03'
 		},
 		--food 2 salt
 		{
@@ -93,7 +93,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 100,
-			tech = 'organic-breeding'
+			tech = 'mukmoux-mk03'
 		},
 		--food 2 salt fiber
 		{
@@ -106,7 +106,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 90,
-			tech = 'organic-breeding'
+			tech = 'mukmoux-mk04'
 		},	
 		--gh
 		{
