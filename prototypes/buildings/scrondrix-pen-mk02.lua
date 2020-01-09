@@ -1,40 +1,40 @@
 RECIPE {
     type = "recipe",
-    name = "scrondrix-pen-mk01",
-    energy_required = 1,
+    name = "scrondrix-pen-mk02",
+    energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"steel-plate", 100},
-        {"niobium-plate", 50},
+        {"duralumin", 100},
+        {"scrondrix-pen-mk01", 1},
         {"niobium-pipe", 20},
-        {"electronic-circuit", 100},
-        {"plastic-bar", 60},
-        {"iron-plate", 4},
+        {"advanced-circuit", 30},
+        {"plastic-bar", 50},
+        {"nexelit-plate", 40},
     },
     results = {
-        {"scrondrix-pen-mk01", 1}
+        {"scrondrix-pen-mk02", 1}
     }
-}:add_unlock("scrondrix")
+}:add_unlock("scrondrix-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 
 ITEM {
     type = "item",
-    name = "scrondrix-pen-mk01",
-    icon = "__pyalienlife__/graphics/icons/scrondrix-pen-mk01.png",
+    name = "scrondrix-pen-mk02",
+    icon = "__pyalienlife__/graphics/icons/scrondrix-pen-mk02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-buildings-mk02",
     order = "d",
-    place_result = "scrondrix-pen-mk01",
+    place_result = "scrondrix-pen-mk02",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "scrondrix-pen-mk01",
-    icon = "__pyalienlife__/graphics/icons/scrondrix-pen-mk01.png",
+    name = "scrondrix-pen-mk02",
+    icon = "__pyalienlife__/graphics/icons/scrondrix-pen-mk02.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "scrondrix-pen-mk01"},
+    minable = {mining_time = 0.5, result = "scrondrix-pen-mk02"},
     fast_replaceable_group = "scrondrix-pen",
     max_health = 50,
     corpse = "medium-remnants",
@@ -44,7 +44,7 @@ ENTITY {
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 6
+        module_slots = 7
     },
     allowed_effects = {"speed"},
     crafting_categories = {"scrondrix"},
@@ -54,7 +54,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = 3,
     },
-    energy_usage = "300kW",
+    energy_usage = "500kW",
     ingredient_count = 15,
     animation = {
         layers = {
@@ -73,7 +73,7 @@ ENTITY {
                 frame_count = 1,
                 line_length = 1,
                 shift = util.by_pixel(16, -34),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
                 },
         }
     },
