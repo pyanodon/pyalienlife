@@ -58,7 +58,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/cadaveric-arum-codex.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-cadaveric",
+    subgroup = "py-alienlife-codex",
     order = "x",
     stack_size = 10
 }

@@ -1,40 +1,40 @@
 RECIPE {
     type = "recipe",
-    name = "yotoi-aloe-orchard-mk01",
+    name = "yotoi-aloe-orchard-mk02",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"glass", 35},
-        {"steel-plate", 50},
-        {"duralumin", 50},
-        {"pipe", 15},
-        {"electronic-circuit", 20},
+        {"yotoi-aloe-orchard-mk01", 1},
+        {"stainless-steel", 50},
+        {"niobium-pipe", 15},
+        {"advanced-circuit", 20},
         {"plastic-bar", 40},
+        {"concrete", 100},
     },
     results = {
-        {"yotoi-aloe-orchard-mk01", 1}
+        {"yotoi-aloe-orchard-mk02", 1}
     }
-}:add_unlock("yotoi")
+}:add_unlock("yotoi-mk02")
 
 ITEM {
     type = "item",
-    name = "yotoi-aloe-orchard-mk01",
-    icon = "__pyalienlife__/graphics/icons/yotoi-aloe-orchard-mk01.png",
+    name = "yotoi-aloe-orchard-mk02",
+    icon = "__pyalienlife__/graphics/icons/yotoi-aloe-orchard-mk02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-buildings-mk02",
     order = "e",
-    place_result = "yotoi-aloe-orchard-mk01",
+    place_result = "yotoi-aloe-orchard-mk02",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "yotoi-aloe-orchard-mk01",
-    icon = "__pyalienlife__/graphics/icons/yotoi-aloe-orchard-mk01.png",
+    name = "yotoi-aloe-orchard-mk02",
+    icon = "__pyalienlife__/graphics/icons/yotoi-aloe-orchard-mk02.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "yotoi-aloe-orchard-mk01"},
+    minable = {mining_time = 0.5, result = "yotoi-aloe-orchard-mk02"},
     fast_replaceable_group = "yotoi-aloe-orchard",
     max_health = 50,
     corpse = "medium-remnants",
@@ -44,7 +44,7 @@ ENTITY {
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 5
+        module_slots = 6
     },
     allowed_effects = {"speed"},
     crafting_categories = {"yotoi"},
@@ -54,7 +54,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = -3,
     },
-    energy_usage = "300kW",
+    energy_usage = "500kW",
     ingredient_count = 10,
     animation = {
         layers = {
@@ -75,7 +75,7 @@ ENTITY {
                 frame_count = 100,
                 animation_speed = 0.4,
                 shift = util.by_pixel(16, 128),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
                 filename = "__pyalienlife__/graphics/entity/yotoi-aloe-orchard/a2.png",
@@ -94,7 +94,7 @@ ENTITY {
                 frame_count = 100,
                 animation_speed = 0.4,
                 shift = util.by_pixel(16, 32),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
                 filename = "__pyalienlife__/graphics/entity/yotoi-aloe-orchard/a3.png",
@@ -113,7 +113,7 @@ ENTITY {
                 frame_count = 100,
                 animation_speed = 0.4,
                 shift = util.by_pixel(16, -64),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
                 filename = "__pyalienlife__/graphics/entity/yotoi-aloe-orchard/a4.png",
@@ -132,7 +132,7 @@ ENTITY {
                 frame_count = 100,
                 animation_speed = 0.4,
                 shift = util.by_pixel(16, -160),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
         }
     },

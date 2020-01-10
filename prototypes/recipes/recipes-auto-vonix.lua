@@ -49,7 +49,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 130,
-			tech = 'vonix'
+			tech = 'vonix-mk02'
 		},
 		--fiber
 		{
@@ -62,7 +62,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 120,
-			tech = 'vonix'
+			tech = 'vonix-mk03'
 		},		
 		--navens
 		{
@@ -76,7 +76,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 110,
-			tech = 'vonix'
+			tech = 'vonix-mk04'
 		},
 		--gh
 		{
@@ -350,7 +350,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 55,
-			tech = 'vonix'
+			tech = 'vonix-mk02'
 		},
 		--fiber
 		{
@@ -363,7 +363,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 50,
-			tech = 'vonix'
+			tech = 'vonix-mk03'
 		},		
 		--navens
 		{
@@ -377,7 +377,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 40,
-			tech = 'vonix'
+			tech = 'vonix-mk04'
 		},
 
 		-----------------------PHEROMONES-----------------------------

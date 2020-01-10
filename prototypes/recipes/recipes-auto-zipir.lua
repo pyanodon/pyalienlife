@@ -49,7 +49,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 130,
-			tech = 'zipir'
+			tech = 'zipir-mk02'
 		},
 		--food 1
 		{
@@ -62,7 +62,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 120,
-			tech = 'zipir'
+			tech = 'zipir-mk03'
 		},		
 		--phyto
 		{
@@ -77,7 +77,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 110,
-			tech = 'zipir'
+			tech = 'zipir-mk03'
         },
         --food 2
 		{
@@ -92,7 +92,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 90,
-			tech = 'zipir'
+			tech = 'zipir-mk04'
 		},
         
 		--gh
@@ -355,7 +355,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 60,
-			tech = 'zipir'
+			tech = 'zipir-mk02'
 		},
 		--water saline
 		{
@@ -369,7 +369,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 55,
-			tech = 'zipir'
+			tech = 'zipir-mk03'
 		},
 		--food1
 		{
@@ -382,7 +382,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 50,
-			tech = 'zipir'
+			tech = 'zipir-mk03'
 		},		
 		--food 2
 		{
@@ -397,7 +397,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 40,
-			tech = 'zipir'
+			tech = 'zipir-mk04'
 		},
 
 		-----------------------PHEROMONES-----------------------------

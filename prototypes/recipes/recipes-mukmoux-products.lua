@@ -40,7 +40,7 @@ fun.autorecipes {
 					--{name='manure',amount ='+2'}
 				},
 			crafting_speed = 80,
-			tech = 'food-mk01',
+			tech = 'mukmoux',
 			name = 'muk-manure-2',
 			--icon = "__pyalienlife__/graphics/icons/navens-culture-mk01.png"
 		},
@@ -89,7 +89,7 @@ fun.autorecipes {
 					{name='manure',amount =10}
 				},
 				crafting_speed = 60,
-				tech = 'food-mk02',
+				tech = 'mukmoux',
 				name = 'muk-manure-5',
 		},
 		--salt

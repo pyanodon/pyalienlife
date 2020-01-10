@@ -30,5 +30,6 @@ RECIPE('kmauts-enclosure-mk04'):remove_unlock('machines-mk04')
 RECIPE('kmauts-ration'):subgroup_order('py-alienlife-food', 'b'):remove_unlock('helium-processing'):add_unlock('food-mk03'):add_ingredient({type = "item", name = "seaweed", amount = 10}):add_ingredient({type = "item", name = "meat", amount = 20}):add_ingredient({type = "item", name = "moss", amount = 20})
 :add_ingredient({type = "item", name = "yotoi-seeds", amount = 10})
 RECIPE('control-unit'):add_ingredient({type = "item", name = "neuromorphic-chip", amount = 1})
+RECIPE('production-science-pack'):add_ingredient({type = "item", name = "alien-enzymes", amount = 1})
 
 ----EXCLUSIVE RECIPES----

@@ -846,7 +846,7 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = 'item', name = 'hyaline', amount = 1},
+        {type = 'item', name = 'hyaline', amount = 3},
         {type = 'item', name = 'sea-sponge', amount = 2},
         {type = 'item', name = 'chitin', amount = 4},
         {type = 'item', name = 'alien-enzymes', amount = 1},
@@ -854,6 +854,7 @@ RECIPE {
         {type = 'item', name = 'flask', amount = 3},
         {type = 'item', name = 'lab-instrument', amount = 1},
         {type = 'fluid', name = 'bacteria-1', amount = 40},
+        {type = 'item', name = 'purine-analogues', amount = 1},
     },
     results = {
         {type = 'item', name = 'bmp', amount = 1}

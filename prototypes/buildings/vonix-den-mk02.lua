@@ -1,41 +1,41 @@
 RECIPE {
     type = "recipe",
-    name = "vonix-den-mk01",
+    name = "vonix-den-mk02",
     energy_required = 1,
     enabled = false,
     ingredients = {
         {"concrete", 100},
-        {"nbti-alloy", 100},
-        {"super-steel", 100},
-        {"aluminium-mine", 1},
-        {"glass", 120},
-        {"neuromorphic-chip", 50},
+        {"ticocr-alloy", 50},
+        {"super-alloy", 50},
+        {"vonix-den-mk01", 1},
+        {"metallic-glass", 100},
         {"processing-unit", 20},
+        {"control-unit", 20},
     },
     results = {
-        {"vonix-den-mk01", 1}
+        {"vonix-den-mk02", 1}
     }
-}:add_unlock("vonix"):add_ingredient({type = "item", name = "small-parts-01", amount = 500})
+}:add_unlock("vonix-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 100}):replace_ingredient("processing-unit", "intelligent-unit")
 
 ITEM {
     type = "item",
-    name = "vonix-den-mk01",
-    icon = "__pyalienlife__/graphics/icons/vonix-den-mk01.png",
+    name = "vonix-den-mk02",
+    icon = "__pyalienlife__/graphics/icons/vonix-den-mk02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-buildings-mk02",
     order = "d",
-    place_result = "vonix-den-mk01",
+    place_result = "vonix-den-mk02",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "vonix-den-mk01",
-    icon = "__pyalienlife__/graphics/icons/vonix-den-mk01.png",
+    name = "vonix-den-mk02",
+    icon = "__pyalienlife__/graphics/icons/vonix-den-mk02.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "vonix-den-mk01"},
+    minable = {mining_time = 0.5, result = "vonix-den-mk02"},
     fast_replaceable_group = "vonix-den",
     max_health = 100,
     corpse = "big-remnants",
@@ -45,7 +45,7 @@ ENTITY {
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 1
+        module_slots = 2
     },
     allowed_effects = {"speed"},
     crafting_categories = {"vonix"},
@@ -55,7 +55,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = 3,
     },
-    energy_usage = "500kW",
+    energy_usage = "700kW",
     ingredient_count = 20,
     animation = {
         layers = {
@@ -74,7 +74,7 @@ ENTITY {
             frame_count = 1,
             line_length = 1,
             shift = util.by_pixel(16, -16),
-            tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+            tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
       },
     },
