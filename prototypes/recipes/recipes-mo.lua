@@ -91,7 +91,7 @@ RECIPE {
         {type = 'item', name = 'retrovirus', amount = 1},
         {type = 'item', name = 'flask', amount = 3},
         {type = 'item', name = 'bio-sample', amount = 5},
-        {type = 'item', name = 'petri-dish-bacteria', amount = 1},
+        {type = 'item', name = 'petri-dish-bacteria', amount = 5},
         {type = 'item', name = 'plasmids', amount = 1},
         {type = 'item', name = 'moss-gen', amount = 1},
         {type = 'item', name = 'lab-instrument', amount = 1},
@@ -109,7 +109,7 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = 'item', name = 'petri-dish-bacteria', amount = 1},
+        {type = 'item', name = 'petri-dish-bacteria', amount = 10},
         {type = 'item', name = 'fawogae', amount = 5},
         {type = 'item', name = 'saps', amount = 5},
         {type = 'item', name = 'lab-instrument', amount = 1},
@@ -294,7 +294,7 @@ RECIPE {
         {type = 'item', name = 'lab-instrument', amount = 5},
         {type = 'fluid', name = 'gta', amount = 50},
         {type = 'item', name = 'flask', amount = 5},
-        {type = 'item', name = 'arthurian-egg', amount = 5},
+        {type = 'item', name = 'purine-analogues', amount = 1},
     },
     results = {
         {type = 'item', name = 'anabolic-rna', amount = 1},
@@ -310,8 +310,10 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'sea-sponge', amount = 4},
         {type = 'item', name = 'chromium', amount = 2},
-        {type = 'item', name = 'bonemeal', amount = 5},
+        {type = 'item', name = 'dingrit-spike', amount = 1},
+        {type = 'item', name = 'bonemeal', amount = 10},
         {type = 'item', name = 'plastic-bar', amount = 1},
+        {type = 'item', name = 'bio-sample', amount = 2},
         {type = 'item', name = 'flask', amount = 5},
         {type = 'item', name = 'lab-instrument', amount = 1},
     },

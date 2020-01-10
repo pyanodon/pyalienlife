@@ -1,40 +1,40 @@
 RECIPE {
     type = "recipe",
-    name = "xenopen-mk01",
+    name = "xenopen-mk02",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"electronic-circuit", 25},
-        {"titanium-plate", 40},
-        {"concrete", 100},
-        {"concrete-wall", 100},
-        {"steel-plate", 30},
+        {"advanced-circuit", 40},
+        {"latex", 35},
+        {"neuroprocessor", 20},
+        {"xenopen-mk01", 1},
+        {"duralumin", 30},
         {"plastic-bar", 50},
     },
     results = {
-        {"xenopen-mk01", 1}
+        {"xenopen-mk02", 1}
     }
-}:add_unlock("xeno")
+}:add_unlock("xeno-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 
 ITEM {
     type = "item",
-    name = "xenopen-mk01",
-    icon = "__pyalienlife__/graphics/icons/xenopen-mk01.png",
+    name = "xenopen-mk02",
+    icon = "__pyalienlife__/graphics/icons/xenopen-mk02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-buildings-mk02",
     order = "d",
-    place_result = "xenopen-mk01",
+    place_result = "xenopen-mk02",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "xenopen-mk01",
-    icon = "__pyalienlife__/graphics/icons/xenopen-mk01.png",
+    name = "xenopen-mk02",
+    icon = "__pyalienlife__/graphics/icons/xenopen-mk02.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "xenopen-mk01"},
+    minable = {mining_time = 0.5, result = "xenopen-mk02"},
     fast_replaceable_group = "xenopen",
     max_health = 60,
     corpse = "medium-remnants",
@@ -44,7 +44,7 @@ ENTITY {
     --draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 5
+        module_slots = 6
     },
     allowed_effects = {"speed"},
     crafting_categories = {"xeno"},
@@ -54,7 +54,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = 1.0,
     },
-    energy_usage = "500kW",
+    energy_usage = "700kW",
     ingredient_count = 10,
     animation = {
         layers = {
@@ -73,7 +73,7 @@ ENTITY {
             frame_count = 1,
             line_length = 1,
             shift = util.by_pixel(16, -32),
-            tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+            tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
       },
     },

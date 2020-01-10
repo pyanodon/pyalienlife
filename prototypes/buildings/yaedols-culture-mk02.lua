@@ -1,41 +1,41 @@
 RECIPE {
     type = "recipe",
-    name = "yaedols-culture-mk01",
+    name = "yaedols-culture-mk02",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"concrete", 200},
-        {"titanium-plate", 100},
-        {"storage-tank", 1},
+        {"concrete", 50},
         {"duralumin", 50},
         {"glass", 20},
-        {"electronic-circuit", 100},
-        {"pump", 5},
+        {"advanced-circuit", 50},
+        {"yaedols-culture-mk01", 1},
+        {"latex", 50},
+        {"neuroprocessor", 50},
     },
     results = {
-        {"yaedols-culture-mk01", 1}
+        {"yaedols-culture-mk02", 1}
     }
-}:add_unlock("yaedols")
+}:add_unlock("yaedols-mk02")
 
 ITEM {
     type = "item",
-    name = "yaedols-culture-mk01",
-    icon = "__pyalienlife__/graphics/icons/yaedols-culture-mk01.png",
+    name = "yaedols-culture-mk02",
+    icon = "__pyalienlife__/graphics/icons/yaedols-culture-mk02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-buildings-mk02",
     order = "b",
-    place_result = "yaedols-culture-mk01",
+    place_result = "yaedols-culture-mk02",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "yaedols-culture-mk01",
-    icon = "__pyalienlife__/graphics/icons/yaedols-culture-mk01.png",
+    name = "yaedols-culture-mk02",
+    icon = "__pyalienlife__/graphics/icons/yaedols-culture-mk02.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "yaedols-culture-mk01"},
+    minable = {mining_time = 0.5, result = "yaedols-culture-mk02"},
     fast_replaceable_group = "yaedols-culture",
     max_health = 100,
     corpse = "big-remnants",
@@ -45,7 +45,7 @@ ENTITY {
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 4
+        module_slots = 5
     },
     allowed_effects = {"speed"},
     crafting_categories = {"yaedols"},
@@ -55,7 +55,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = 3,
     },
-    energy_usage = "400kW",
+    energy_usage = "600kW",
     ingredient_count = 20,
     animation = {
         layers = {
@@ -74,7 +74,7 @@ ENTITY {
             frame_count = 1,
             line_length = 1,
             shift = util.by_pixel(0, -16),
-            tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+            tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
       },
     },
