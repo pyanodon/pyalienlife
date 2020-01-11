@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "bio-reactor-mk02",
-    energy_required = 10,
+    energy_required = 0.5,
     enabled = false,
     ingredients = {
         {"bio-reactor-mk01", 1},

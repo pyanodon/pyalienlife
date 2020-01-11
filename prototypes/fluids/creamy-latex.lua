@@ -21,8 +21,8 @@ RECIPE {
     enabled = true,
     energy_required = 8,
     ingredients = {
-        {type = "item", name = "saps", amount = 5},
-        {type = "item", name = "limestone", amount = 4},
+        {type = "item", name = "saps", amount = 2},
+        {type = "item", name = "limestone", amount = 2},
         {type = 'fluid', name = 'water', amount = 100},
     },
     results = {

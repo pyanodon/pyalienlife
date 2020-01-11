@@ -1,40 +1,40 @@
 RECIPE {
     type = "recipe",
-    name = "sap-extractor-mk02",
+    name = "sap-extractor-mk03",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"sap-extractor-mk01", 1},
-        {"treated-wood", 100},
-        {"duralumin", 12},
-        {"fast-inserter", 2},
-        {"advanced-circuit", 15},
-        {"steel-plate", 40},
+        {"sap-extractor-mk02", 1},
+        {"nexelit-plate", 100},
+        {"molybdenum-plate", 20},
+        {"stainless-steel", 50},
+        {"processing-unit", 30},
+        {"nichrome", 40},
     },
     results = {
-        {"sap-extractor-mk02", 1}
+        {"sap-extractor-mk03", 1}
     }
-}:add_unlock("botany-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 15})
+}:add_unlock("botany-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
 
 ITEM {
     type = "item",
-    name = "sap-extractor-mk02",
-    icon = "__pyalienlife__/graphics/icons/sap-extractor-mk02.png",
+    name = "sap-extractor-mk03",
+    icon = "__pyalienlife__/graphics/icons/sap-extractor-mk03.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk02",
+    subgroup = "py-alienlife-buildings-mk03",
     order = "e",
-    place_result = "sap-extractor-mk02",
+    place_result = "sap-extractor-mk03",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "sap-extractor-mk02",
-    icon = "__pyalienlife__/graphics/icons/sap-extractor-mk02.png",
+    name = "sap-extractor-mk03",
+    icon = "__pyalienlife__/graphics/icons/sap-extractor-mk03.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "sap-extractor-mk02"},
+    minable = {mining_time = 0.5, result = "sap-extractor-mk03"},
     fast_replaceable_group = "sap-extractor",
     max_health = 100,
     corpse = "medium-remnants",
@@ -45,17 +45,17 @@ ENTITY {
     match_animation_speed_to_activity = false,
     fixed_recipe = "sap-01",
     module_specification = {
-        module_slots = 2
+        module_slots = 3
     },
     allowed_effects = {"consumption", "speed"},
     crafting_categories = {"sap"},
-    crafting_speed = 2,
+    crafting_speed = 3,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
         emissions_per_minute = -15,
     },
-    energy_usage = "350kW",
+    energy_usage = "550kW",
     ingredient_count = 10,
     animation = {
         layers = {
@@ -76,7 +76,7 @@ ENTITY {
                 frame_count = 100,
                 animation_speed = 0.3,
                 shift = util.by_pixel(0, -10),
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
             },
             {
                 filename = "__pyalienlife__/graphics/entity/sap-extractor/shadow.png",
