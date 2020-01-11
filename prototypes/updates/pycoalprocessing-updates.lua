@@ -98,7 +98,7 @@ RECIPE {
         {type = "item", name = "biomass", amount = 3}
     },
     main_product = "sand",
-    icon = "__pycoalprocessing__/graphics/icons/soil-separation.png",
+    icon = "__pycoalprocessinggraphics__/graphics/icons/soil-separation.png",
     icon_size = 32,
     subgroup = "py-items-class",
     order = "e"

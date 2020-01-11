@@ -33,7 +33,7 @@ RECIPE {
         {type = "item", name = "biomass", amount = 5},
     },
     main_product= "starch",
-    icon = "__pyrawores__/graphics/icons/starch.png",
+    icon = "__pyraworesgraphics__/graphics/icons/starch.png",
     icon_size = 32,
     subgroup = "py-rawores-recipes",
     order = "j"
@@ -54,7 +54,7 @@ RECIPE {
         {type = "item", name = "biomass", amount = 5},
     },
     main_product= "starch",
-    icon = "__pyrawores__/graphics/icons/starch.png",
+    icon = "__pyraworesgraphics__/graphics/icons/starch.png",
     icon_size = 32,
     subgroup = "py-rawores-recipes",
     order = "j"
