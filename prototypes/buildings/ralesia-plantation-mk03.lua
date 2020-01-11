@@ -1,0 +1,120 @@
+local pipes = {
+    north = {
+        filename = "__pycoalprocessing__/graphics/entity/ralesia-plantation/top.png",
+        priority = "low",
+        width = 224,
+        height = 230
+    },
+    south = {
+        filename = "__pycoalprocessing__/graphics/entity/ralesia-plantation/bottom.png",
+        priority = "extra-high",
+        width = 224,
+        height = 230
+    },
+    west = {
+        filename = "__pycoalprocessing__/graphics/entity/ralesia-plantation/left.png",
+        priority = "extra-high",
+        width = 224,
+        height = 230
+    },
+    east = {
+        filename = "__pycoalprocessing__/graphics/entity/ralesia-plantation/right.png",
+        priority = "extra-high",
+        width = 224,
+        height = 230
+    }
+}
+
+RECIPE {
+    type = "recipe",
+    name = "ralesia-plantation-mk03",
+    energy_required = 1,
+    enabled = false,
+    ingredients = {
+        {"ralesia-plantation-mk02", 1},
+        {"molybdenum-plate", 40},
+        {"processing-unit", 15},
+        {"neuromorphic-chip", 10},
+    },
+    results = {
+        {"ralesia-plantation-mk03", 1}
+    }
+}:add_unlock("botany-mk03")
+
+ITEM {
+    type = "item",
+    name = "ralesia-plantation-mk03",
+    icon = "__pyalienlife__/graphics/icons/ralesia-plantation-mk03.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-buildings-mk03",
+    order = "e",
+    place_result = "ralesia-plantation-mk03",
+    stack_size = 10
+}
+
+ENTITY {
+    type = "assembling-machine",
+    name = "ralesia-plantation-mk03",
+    icon = "__pyalienlife__/graphics/icons/ralesia-plantation-mk03.png",
+    icon_size = 64,
+    flags = {"placeable-neutral", "player-creation"},
+    minable = {mining_time = 0.5, result = "ralesia-plantation-mk03"},
+    fast_replaceable_group = "ralesia-plantation",
+    max_health = 60,
+    corpse = "big-remnants",
+    dying_explosion = "medium-explosion",
+    collision_box = {{-3.2, -3.2}, {3.2, 3.2}},
+    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+    draw_entity_info_icon_background = false,
+    match_animation_speed_to_activity = false,
+    module_specification = {
+        module_slots = 6
+    },
+    allowed_effects = {"speed"},
+    crafting_categories = {"ralesia"},
+    crafting_speed = 0.01,
+    energy_source = {
+        type = "electric",
+        usage_priority = "secondary-input",
+        emissions_per_minute = -4,
+    },
+    energy_usage = "600kW",
+    ingredient_count = 20,
+    animation = {
+        filename = "__pycoalprocessing__/graphics/entity/ralesia-plantation/ralesia-plantation-mk03.png",
+        width = 224,
+        height = 230,
+        frame_count = 50,
+        line_length = 8,
+        animation_speed = 0.5,
+        run_mode = "forward-then-backward",
+        shift = {0.0, -0.163}
+    },
+    fluid_boxes = {
+        --1
+        {
+            production_type = "input",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", {-0.0, 3.837}, {-0.0, -3.837}, {4.0, 0.0}, {-4.0, 0.0}, pipes),
+            pipe_covers = DATA.Pipes.covers(true, true, true, true),
+            base_area = 10,
+            base_level = -1,
+            pipe_connections = {{type = "input", position = {0.0, 4.0}}}
+        },
+        {
+            production_type = "input",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", {-0.0, 3.837}, {-0.0, -3.837}, {4.0, 0.0}, {-4.0, 0.0}, pipes),
+            pipe_covers = DATA.Pipes.covers(true, true, true, true),
+            base_area = 10,
+            base_level = -1,
+            pipe_connections = {{type = "input", position = {0.0, -4.0}}}
+        },
+    },
+    off_when_no_fluid_recipe = true,
+    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    working_sound = {
+        sound = {filename = "__pycoalprocessing__/sounds/ralesia-plantation.ogg", volume = 1.2},
+        idle_sound = {filename = "__pycoalprocessing__/sounds/ralesia-plantation.ogg", volume = 0.70},
+        apparent_volume = 2.5
+    }
+}

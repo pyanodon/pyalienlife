@@ -1,41 +1,39 @@
 RECIPE {
     type = "recipe",
-    name = "creature-chamber-mk02",
+    name = "creature-chamber-mk03",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"creature-chamber-mk01", 1},
-        {"plastic-bar", 50},
-        {"lead-plate", 50},
-        {"nexelit-plate", 15},
-        {"advanced-circuit", 20},
-        {"latex", 50},
-        {"neuroprocessor", 10},
+        {"creature-chamber-mk02", 1},
+        {"ticocr-alloy", 30},
+        {"nbti-alloy", 50},
+        {"nexelit-plate", 50},
+        {"processing-unit", 40},
     },
     results = {
-        {"creature-chamber-mk02", 1}
+        {"creature-chamber-mk03", 1}
     }
-}:add_unlock("biotech-mk02")
+}:add_unlock("biotech-mk03")
 
 ITEM {
     type = "item",
-    name = "creature-chamber-mk02",
-    icon = "__pyalienlife__/graphics/icons/creature-chamber-mk02.png",
+    name = "creature-chamber-mk03",
+    icon = "__pyalienlife__/graphics/icons/creature-chamber-mk03.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk02",
+    subgroup = "py-alienlife-buildings-mk03",
     order = "a",
-    place_result = "creature-chamber-mk02",
+    place_result = "creature-chamber-mk03",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "creature-chamber-mk02",
-    icon = "__pyalienlife__/graphics/icons/creature-chamber-mk02.png",
+    name = "creature-chamber-mk03",
+    icon = "__pyalienlife__/graphics/icons/creature-chamber-mk03.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "creature-chamber-mk02"},
+    minable = {mining_time = 0.5, result = "creature-chamber-mk03"},
     fast_replaceable_group = "creature-chamber",
     max_health = 100,
     corpse = "medium-remnants",
@@ -45,17 +43,17 @@ ENTITY {
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 2
+        module_slots = 3
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"creature-chamber"},
-    crafting_speed = 2,
+    crafting_speed = 3,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
         emissions_per_minute = 1,
     },
-    energy_usage = "600kW",
+    energy_usage = "800kW",
     ingredient_count = 10,
     animation = {
         layers = {
@@ -85,7 +83,7 @@ ENTITY {
                 frame_count = 80,
                 animation_speed = 0.3,
                 shift = util.by_pixel(-112, -16),
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
             },
             {
                 filename = "__pyalienlife__/graphics/entity/creature-chamber/a2.png",
@@ -104,7 +102,7 @@ ENTITY {
                 frame_count = 80,
                 animation_speed = 0.3,
                 shift = util.by_pixel(16, -16),
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
             },
             {
                 filename = "__pyalienlife__/graphics/entity/creature-chamber/a3.png",
@@ -123,7 +121,7 @@ ENTITY {
                 frame_count = 80,
                 animation_speed = 0.3,
                 shift = util.by_pixel(144, -16),
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
             },
         }
     },
