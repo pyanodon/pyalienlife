@@ -102,7 +102,7 @@ ENTITY {
     input_fluid_patch_sprites = {
         north = {
             priority = "extra-high",
-            filename = "__pycoalprocessing__/graphics/entity/borax-mine/N.png",
+            filename = "__pycoalprocessinggraphics__/graphics/entity/borax-mine/N.png",
             line_length = 1,
             width = 288,
             height = 288,
@@ -112,7 +112,7 @@ ENTITY {
         },
         east = {
             priority = "extra-high",
-            filename = "__pycoalprocessing__/graphics/entity/borax-mine/E.png",
+            filename = "__pycoalprocessinggraphics__/graphics/entity/borax-mine/E.png",
             line_length = 1,
             width = 288,
             height = 288,
@@ -122,7 +122,7 @@ ENTITY {
         },
         south = {
             priority = "extra-high",
-            filename = "__pycoalprocessing__/graphics/entity/borax-mine/S.png",
+            filename = "__pycoalprocessinggraphics__/graphics/entity/borax-mine/S.png",
             line_length = 1,
             width = 288,
             height = 288,
@@ -132,7 +132,7 @@ ENTITY {
         },
         west = {
             priority = "extra-high",
-            filename = "__pycoalprocessing__/graphics/entity/borax-mine/W.png",
+            filename = "__pycoalprocessinggraphics__/graphics/entity/borax-mine/W.png",
             line_length = 1,
             width = 288,
             height = 288,

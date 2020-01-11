@@ -1,6 +1,6 @@
 local pipe = {
     south = {
-        filename = "__pyhightech__/graphics/entity/cadaveric-arum/bottom.png",
+        filename = "__pyhightechgraphics__/graphics/entity/cadaveric-arum/bottom.png",
         priority = "extra-high",
         width = 288,
         height = 295
@@ -27,7 +27,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "cadavericarum-mk01",
-    icon = "__pyhightech__/graphics/icons/cadaveric-arum-mk01.png",
+    icon = "__pyhightechgraphics__/graphics/icons/cadaveric-arum-mk01.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk01",
@@ -39,7 +39,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "cadavericarum-mk01",
-    icon = "__pyhightech__/graphics/icons/cadaveric-arum-mk01.png",
+    icon = "__pyhightechgraphics__/graphics/icons/cadaveric-arum-mk01.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "cadavericarum-mk01"},
@@ -66,7 +66,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyhightech__/graphics/entity/cadaveric-arum/cadaveric-arum.png",
+                filename = "__pyhightechgraphics__/graphics/entity/cadaveric-arum/cadaveric-arum.png",
 				priority = "extra-high",
                 width = 288,
                 height = 295,
@@ -76,7 +76,7 @@ ENTITY {
                 shift = util.by_pixel(0, -4),
             },
             {
-                filename = "__pyhightech__/graphics/entity/cadaveric-arum/cadaveric-arum-mask.png",
+                filename = "__pyhightechgraphics__/graphics/entity/cadaveric-arum/cadaveric-arum-mask.png",
 				priority = "extra-high",
                 width = 288,
                 height = 295,
@@ -87,7 +87,7 @@ ENTITY {
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyhightech__/graphics/entity/cadaveric-arum/shadow.png",
+                filename = "__pyhightechgraphics__/graphics/entity/cadaveric-arum/shadow.png",
 				priority = "extra-high",
                 width = 298,
                 height = 295,
@@ -136,8 +136,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyhightech__/sounds/cadaveric-arum.ogg", volume = 1.5},
-        idle_sound = {filename = "__pyhightech__/sounds/cadaveric-arum.ogg", volume = 0.9},
+        sound = {filename = "__pyhightechgraphics__/sounds/cadaveric-arum.ogg", volume = 1.5},
+        idle_sound = {filename = "__pyhightechgraphics__/sounds/cadaveric-arum.ogg", volume = 0.9},
         apparent_volume = 2.5
     }
 }
