@@ -1208,6 +1208,7 @@ RECIPE {
     enabled = true,
     energy_required = 1,
     ingredients = {
+        {type = 'item', name = 'lead-plate', amount = 1},
         {type = 'item', name = 'steel-plate', amount = 1},
         {type = 'item', name = 'glass', amount = 1},
         {type = 'item', name = 'titanium-plate', amount = 2},
@@ -1255,3 +1256,165 @@ RECIPE {
     subgroup = "py-combustion",
     order = "a"
 }:add_unlock("energy-2")
+
+
+-----ethanol to CM1---
+
+RECIPE {
+    type = "recipe",
+    name = "ethanol-combustion",
+    category = "combustion",
+    enabled = false,
+    energy_required = 3,
+    ingredients = {
+        {type = "fluid", name = "ethanol", amount = 100},
+        {type = "fluid", name = "water", amount = 500},
+        {type = "item", name = "coke", amount = 3}
+    },
+    results = {
+        {type = "fluid", name = "combustion-mixture1", amount = 200, temperature = 600},
+        {type = "fluid", name = "steam", amount = 500, temperature = 60}
+    },
+    icon = "__pyalienlife__/graphics/icons/combustion-ethanol.png",
+    icon_size = 32,
+    --main_product = "combustion-mixture1",
+    subgroup = "py-combustion",
+    order = "a"
+}:add_unlock("energy-3")
+
+
+----energy drink----
+
+RECIPE {
+    type = "recipe",
+    name = "seeds-extract-01",
+    category = "crafting",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'rennea-seeds', amount = 10},
+        {type = 'item', name = 'grod-seeds', amount = 10},
+        {type = 'item', name = 'wood-seeds', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'seeds-extract-01', amount = 1}
+    },
+    --main_product = "adrenal-cortex",
+}:add_unlock("energy-drink"):change_category('pulp')
+
+RECIPE {
+    type = "recipe",
+    name = "syrup-01",
+    category = "scrubber",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'seeds-extract-01', amount = 1},
+        {type = 'item', name = 'sugar', amount = 5},
+        {type = 'fluid', name = 'water', amount = 1000},
+    },
+    results = {
+        {type = 'fluid', name = 'syrup-01', amount = 50}
+    },
+    --main_product = "adrenal-cortex",
+}:add_unlock("energy-drink")
+
+RECIPE {
+    type = "recipe",
+    name = "energy-drink",
+    category = "mixer",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'aluminium-plate', amount = 1},
+        {type = 'fluid', name = 'water', amount = 500},
+        {type = 'fluid', name = 'syrup-01', amount = 25},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'energy-drink', amount = 1}
+    },
+    --main_product = "adrenal-cortex",
+}:add_unlock("energy-drink")
+
+RECIPE {
+    type = "recipe",
+    name = "a-molasse",
+    category = "biofactory",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'tuuphra', amount = 10},
+    },
+    results = {
+        {type = 'fluid', name = 'a-molasse', amount = 100},
+        {type = 'item', name = 'biomass', amount = 8}
+    },
+    main_product = "a-molasse",
+}:add_unlock("energy-drink"):change_category('pulp')
+
+RECIPE {
+    type = "recipe",
+    name = "sweet-syrup",
+    category = "mixer",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'lime', amount = 5},
+        {type = 'fluid', name = 'a-molasse', amount = 100},
+    },
+    results = {
+        {type = 'fluid', name = 'sweet-syrup', amount = 50},
+    },
+    --main_product = "a-molasse",
+}:add_unlock("energy-drink")
+
+RECIPE {
+    type = "recipe",
+    name = "sugar",
+    category = "evaporator",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'bones', amount = 5},
+        {type = 'fluid', name = 'sweet-syrup', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'sugar', amount = 10},
+    },
+    --main_product = "a-molasse",
+}:add_unlock("energy-drink")
+
+RECIPE {
+    type = "recipe",
+    name = "b-molasse",
+    category = "carbonfilter",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'fluid', name = 'a-molasse', amount = 50},
+        {type = 'fluid', name = 'vacuum', amount = 150},
+        {type = 'item', name = 'filtration-media', amount = 1},
+    },
+    results = {
+        {type = 'fluid', name = 'b-molasse', amount = 100},
+    },
+    --main_product = "b-molasse",
+}:add_unlock("energy-drink")
+
+RECIPE {
+    type = "recipe",
+    name = "ethanol",
+    category = "bio-reactor",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'fluid', name = 'b-molasse', amount = 50},
+        {type = 'fluid', name = 'bacteria-1', amount = 20},
+        {type = 'item', name = 'fawogae', amount = 5},
+    },
+    results = {
+        {type = 'fluid', name = 'ethanol', amount = 100},
+    },
+    --main_product = "b-molasse",
+}:add_unlock("energy-drink")

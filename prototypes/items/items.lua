@@ -240,6 +240,28 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "seeds-extract-01",
+    icon = "__pyalienlife__/graphics/icons/seeds-extract-01.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "b",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "sugar",
+    icon = "__pyalienlife__/graphics/icons/sugar.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "b",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
     name = "moss-gen",
     icon = "__pyalienlife__/graphics/icons/moss-gen.png",
     icon_size = 64,

@@ -8,7 +8,7 @@ RECIPE {
         {"sc-unit", 10},
         {"neuromorphic-chip", 15},
         {"processing-unit", 30},
-        {"rubber", 100},
+        {"latex", 100},
     },
     results = {
         {"yotoi-aloe-orchard-mk03", 1}

@@ -9,7 +9,7 @@ RECIPE {
         {"sc-unit", 10},
         {"processing-unit", 50},
         {"yaedols-culture-mk02", 1},
-        {"rubber", 50},
+        {"latex", 50},
         {"neuromorphic-chip", 20},
     },
     results = {
