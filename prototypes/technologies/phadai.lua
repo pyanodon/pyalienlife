@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlife__/graphics/technology/phadai.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"land-animals-mk03"},
+    prerequisites = {"land-animals-mk03","energy-drink"},
     effects = {},
     unit = {
         count = 150,

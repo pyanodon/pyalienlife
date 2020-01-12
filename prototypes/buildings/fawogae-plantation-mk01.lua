@@ -59,11 +59,11 @@ ENTITY {
     selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 5
+        module_slots = 0
     },
-    allowed_effects = {"speed"},
+    allowed_effects = {"consumption","speed"},
     crafting_categories = {"fawogae"},
-    crafting_speed = 0.01,
+    crafting_speed = 0.3,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
