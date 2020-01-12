@@ -14,9 +14,11 @@ require('prototypes/recipes/recipes-auto-cadaveric')
 require("prototypes/buildings/cadavericarum-mk01")
 require("prototypes/buildings/cadavericarum-mk02")
 require("prototypes/buildings/cadavericarum-mk03")
+require("prototypes/buildings/cadavericarum-mk04")
 require("prototypes/buildings/kicalk-plantation-mk01")
 require("prototypes/buildings/kicalk-plantation-mk02")
 require("prototypes/buildings/kicalk-plantation-mk03")
+require("prototypes/buildings/kicalk-plantation-mk04")
 
 --TECHNOLOGY--
 TECHNOLOGY('nano-tech'):add_prereq('microbiology-mk03')
@@ -118,6 +120,51 @@ RECIPE('xenopen-mk03'):add_ingredient({type = "item", name = "superconductor", a
 RECIPE('yaedols-culture-mk03'):add_ingredient({type = "item", name = "graphene-roll", amount = 50}):add_ingredient({type = "item", name = "superconductor", amount = 10})
 RECIPE('yotoi-aloe-orchard-mk03'):add_ingredient({type = "item", name = "graphene-roll", amount = 20}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 15})
 RECIPE('zipir-reef-mk03'):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10}):add_ingredient({type = "item", name = "diamagnetic-material", amount = 20})
+
+--mk04--
+RECIPE('arthurian-pen-mk04'):add_ingredient({type = "item", name = "intelligent-unit", amount = 5}):add_ingredient({type = "item", name = "aerogel", amount = 20}):add_ingredient({type = "item", name = "carbon-aerogel", amount = 10}):add_ingredient({type = "item", name = "quantum-dots", amount = 10})
+RECIPE('atomizer-mk04'):add_ingredient({type = "item", name = "nems", amount = 10}):add_ingredient({type = "item", name = "phosphate-glass", amount = 100}):add_ingredient({type = "item", name = "quantum-vortex-storage-system", amount = 10}):replace_ingredient("control-unit", "intelligent-unit")
+RECIPE('auog-paddock-mk04'):add_ingredient({type = "item", name = "nems", amount = 10}):add_ingredient({type = "item", name = "re-magnet", amount = 50}):add_ingredient({type = "item", name = "sub-denier-microfiber", amount = 30})
+RECIPE('bhoddos-culture-mk04'):add_ingredient({type = "item", name = "hyperelastic-material", amount = 30}):add_ingredient({type = "item", name = "quantum-vortex-storage-system", amount = 10}):add_ingredient({type = "item", name = "intelligent-unit", amount = 10})
+RECIPE('biofactory-mk04'):add_ingredient({type = "item", name = "harmonic-absorber", amount = 15}):add_ingredient({type = "item", name = "intelligent-unit", amount = 15}):add_ingredient({type = "item", name = "sub-denier-microfiber", amount = 20})
+RECIPE('bio-reactor-mk04'):add_ingredient({type = "item", name = "hyperelastic-material", amount = 30}):add_ingredient({type = "item", name = "nc-center", amount = 10})
+RECIPE('cadavericarum-mk04'):add_ingredient({type = "item", name = "hyperelastic-material", amount = 15}):add_ingredient({type = "item", name = "quantum-dots", amount = 5})
+RECIPE('creature-chamber-mk04'):add_ingredient({type = "item", name = "re-magnet", amount = 100}):add_ingredient({type = "item", name = "phosphate-glass", amount = 100}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 30})
+RECIPE('cridren-enclosure-mk04'):add_ingredient({type = "item", name = "intelligent-unit", amount = 30}):add_ingredient({type = "item", name = "nems", amount = 10}):add_ingredient({type = "item", name = "phosphate-glass", amount = 100})
+RECIPE('dhilmos-pool-mk04'):add_ingredient({type = "item", name = "phosphate-glass", amount = 100}):add_ingredient({type = "item", name = "carbon-aerogel", amount = 20}):add_ingredient({type = "item", name = "aerogel", amount = 30})
+RECIPE('dingrits-pack-mk04'):add_ingredient({type = "item", name = "intelligent-unit", amount = 10}):add_ingredient({type = "item", name = "re-magnet", amount = 100}):add_ingredient({type = "item", name = "phosphate-glass", amount = 100})
+RECIPE('fish-farm-mk04'):add_ingredient({type = "item", name = "phosphate-glass", amount = 100})
+RECIPE('fwf-mk04'):add_ingredient({type = "item", name = "intelligent-unit", amount = 30}):add_ingredient({type = "item", name = "quantum-vortex-storage-system", amount = 10}):add_ingredient({type = "item", name = "phosphate-glass", amount = 100})
+RECIPE('genlab-mk04'):add_ingredient({type = "item", name = "nv-center", amount = 10})
+RECIPE('grods-swamp-mk04'):add_ingredient({type = "item", name = "quantum-vortex-storage-system", amount = 10}):add_ingredient({type = "item", name = "aerogel", amount = 100})
+RECIPE('incubator-mk04'):add_ingredient({type = "item", name = "re-magnet", amount = 80})
+RECIPE('kicalk-plantation-mk04'):add_ingredient({type = "item", name = "aerogel", amount = 15}):add_ingredient({type = "item", name = "quantum-dots", amount = 10})
+RECIPE('kmauts-enclosure-mk04'):add_ingredient({type = "item", name = "sub-denier-microfiber", amount = 50})
+RECIPE('micro-mine-mk04'):add_ingredient({type = "item", name = "hyperelastic-material", amount = 30}):add_ingredient({type = "item", name = "phosphate-glass", amount = 100})
+RECIPE('moss-farm-mk04'):add_ingredient({type = "item", name = "aerogel", amount = 40}):add_ingredient({type = "item", name = "quantum-vortex-storage-system", amount = 10})
+RECIPE('mukmoux-pasture-mk04'):add_ingredient({type = "item", name = "carbon-aerogel", amount = 30}):add_ingredient({type = "item", name = "phosphate-glass", amount = 100})
+RECIPE('navens-culture-mk04'):add_ingredient({type = "item", name = "quantum-dots", amount = 10}):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 15})
+RECIPE('phadai-enclosure-mk04'):add_ingredient({type = "item", name = "nems", amount = 20})
+RECIPE('phagnot-corral-mk04'):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 10}):add_ingredient({type = "item", name = "harmonic-absorber", amount = 15})
+RECIPE('rennea-plantation-mk04'):add_ingredient({type = "item", name = "sub-denier-microfiber", amount = 30}):add_ingredient({type = "item", name = "re-magnet", amount = 100}):add_ingredient({type = "item", name = "nems", amount = 10})
+RECIPE('sap-extractor-mk04'):add_ingredient({type = "item", name = "re-magnet", amount = 100}):add_ingredient({type = "item", name = "aerogel", amount = 70})
+RECIPE('scrondrix-pen-mk04'):add_ingredient({type = "item", name = "harmonic-absorber", amount = 30}):add_ingredient({type = "item", name = "sub-denier-microfiber", amount = 50})
+RECIPE('seaweed-crop-mk04'):add_ingredient({type = "item", name = "carbon-aerogel", amount = 50}):add_ingredient({type = "item", name = "re-magnet", amount = 100})
+RECIPE('slaughterhouse-mk04'):add_ingredient({type = "item", name = "nems", amount = 20}):add_ingredient({type = "item", name = "sub-denier-microfiber", amount = 60})
+RECIPE('sponge-culture-mk04'):add_ingredient({type = "item", name = "intelligent-unit", amount = 50}):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 20})
+RECIPE('spore-collector-mk04'):add_ingredient({type = "item", name = "harmonic-absorber", amount = 20})
+RECIPE('trits-reef-mk04'):add_ingredient({type = "item", name = "re-magnet", amount = 100}):add_ingredient({type = "item", name = "phosphate-glass", amount = 100}):add_ingredient({type = "item", name = "harmonic-absorber", amount = 30})
+RECIPE('tuuphra-plantation-mk04'):add_ingredient({type = "item", name = "aerogel", amount = 100}):add_ingredient({type = "item", name = "nems", amount = 10}):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 5})
+RECIPE('ulric-corral-mk04'):add_ingredient({type = "item", name = "carbon-aerogel", amount = 30})
+RECIPE('vrauks-paddock-mk04'):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 20})
+RECIPE('xenopen-mk04'):add_ingredient({type = "item", name = "carbon-aerogel", amount = 50}):add_ingredient({type = "item", name = "intelligent-unit", amount = 30})
+RECIPE('yaedols-culture-mk04'):add_ingredient({type = "item", name = "phosphate-glass", amount = 100}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 30})
+RECIPE('yotoi-aloe-orchard-mk04'):add_ingredient({type = "item", name = "aerogel", amount = 40}):add_ingredient({type = "item", name = "harmonic-absorber", amount = 30})
+RECIPE('zipir-reef-mk04'):add_ingredient({type = "item", name = "hyperelastic-material", amount = 50})
+
+
+
+
 
 
 ----RECIPES----
@@ -330,7 +377,7 @@ RECIPE {
         {type = 'item', name = 'rare-earth-ore', amount = 5},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk04")
+}:add_unlock("molecular-decohesion-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -394,7 +441,7 @@ RECIPE {
     name = 'filtration-media-4',
     category = 'crafting',
     enabled = false,
-    energy_required = 4,
+    energy_required = 5,
     ingredients = {
         {type = "item", name = "pure-sand", amount = 30},
         {type = "item", name = "active-carbon", amount = 3},
@@ -403,7 +450,7 @@ RECIPE {
         {type = 'item', name = 'sub-denier-microfiber', amount = 1},
     },
     results = {
-        {type = 'item', name = 'filtration-media', amount = 6},
+        {type = 'item', name = 'filtration-media', amount = 10},
     },
 }:add_unlock("nano-tech")
 

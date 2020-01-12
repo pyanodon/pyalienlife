@@ -195,4 +195,4 @@ RECIPE {
         {type = 'item', name = 'molybdenum-ore', amount = 5},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk04")
+}:add_unlock("molecular-decohesion-mk03")
