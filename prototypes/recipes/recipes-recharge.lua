@@ -168,3 +168,105 @@ RECIPE {
         {type = 'item', name = 'dingrits', amount = 1},
     },
 }:add_unlock("domestication-mk02")
+
+--mk02
+
+RECIPE {
+    type = 'recipe',
+    name = 'dingrit-mk02-recharge',
+    category = 'bay',
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'used-dingrit-mk02', amount = 1},
+        {type = 'item', name = 'bedding', amount = 2},
+        {type = 'item', name = 'dingrits-food-01', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'dingrits-mk02', amount = 1},
+    },
+}:add_unlock("domestication")
+
+RECIPE {
+    type = 'recipe',
+    name = 'dingrit-mk02-recharge-2',
+    category = 'bay',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'used-dingrit-mk02', amount = 1},
+        {type = 'item', name = 'bedding', amount = 2},
+        {type = 'item', name = 'dingrits-food-02', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'dingrits-mk02', amount = 1},
+    },
+}:add_unlock("domestication")
+
+--mk03
+
+RECIPE {
+    type = 'recipe',
+    name = 'dingrit-mk03-recharge',
+    category = 'bay',
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'used-dingrit-mk03', amount = 1},
+        {type = 'item', name = 'bedding', amount = 2},
+        {type = 'item', name = 'dingrits-food-01', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'dingrits-mk03', amount = 1},
+    },
+}:add_unlock("domestication")
+
+RECIPE {
+    type = 'recipe',
+    name = 'dingrit-mk03-recharge-2',
+    category = 'bay',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'used-dingrit-mk03', amount = 1},
+        {type = 'item', name = 'bedding', amount = 2},
+        {type = 'item', name = 'dingrits-food-02', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'dingrits-mk03', amount = 1},
+    },
+}:add_unlock("domestication")
+
+--mk04
+
+RECIPE {
+    type = 'recipe',
+    name = 'dingrit-mk04-recharge',
+    category = 'bay',
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'used-dingrit-mk04', amount = 1},
+        {type = 'item', name = 'bedding', amount = 2},
+        {type = 'item', name = 'dingrits-food-01', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'dingrits-mk04', amount = 1},
+    },
+}:add_unlock("domestication")
+
+RECIPE {
+    type = 'recipe',
+    name = 'dingrit-mk04-recharge-2',
+    category = 'bay',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'used-dingrit-mk04', amount = 1},
+        {type = 'item', name = 'bedding', amount = 2},
+        {type = 'item', name = 'dingrits-food-02', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'dingrits-mk04', amount = 1},
+    },
+}:add_unlock("domestication")

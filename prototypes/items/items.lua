@@ -11,6 +11,47 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "charged-auog",
+    icons =
+	{
+        --{icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
+        {icon = "__pyalienlife__/graphics/icons/charged-auog.png"}
+    },
+    icon_size = 64,
+	--category = "auog",
+	--tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-auog",
+    order = "a",
+    stack_size = 10,
+    fuel_category = 'auog',
+    fuel_value = '200MJ',
+    burnt_result = 'used-auog'
+}
+
+ITEM {
+    type = "item",
+    name = "charged-dingrit",
+    icons =
+	{
+        --{icon = "__pyalienlife__/graphics/icons/over-mk01.png"},
+        {icon = "__pyalienlife__/graphics/icons/charged-dingrit.png"}
+    },
+    icon_size = 64,
+	--category = "dingrit",
+	--tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-dingrits",
+    order = "a",
+    stack_size = 10,
+    fuel_category = 'dingrits',
+    fuel_value = '120MJ',
+    burnt_result = 'used-dingrit'
+}
+
+
+ITEM {
+    type = "item",
     name = "biomass",
     icon = "__pyalienlife__/graphics/icons/biomass.png",
     icon_size = 32,
