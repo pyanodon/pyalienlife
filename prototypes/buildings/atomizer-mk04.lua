@@ -1,39 +1,38 @@
 RECIPE {
     type = "recipe",
-    name = "atomizer-mk03",
+    name = "atomizer-mk04",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"atomizer-mk02", 1},
-        {"processing-unit", 30},
-        {"stainless-steel", 30},
-        {"molybdenum-plate", 30},
-        {"ticocr-alloy", 20},
+        {"atomizer-mk03", 1},
+        {"control-unit", 10},
+        {"super-steel", 40},
+        {"super-alloy", 30},
     },
     results = {
-        {"atomizer-mk03", 1}
+        {"atomizer-mk04", 1}
     }
-}:add_unlock("molecular-decohesion-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
+}:add_unlock("molecular-decohesion-mk04"):replace_ingredient("control-unit", "intelligent-unit")
 
 ITEM {
     type = "item",
-    name = "atomizer-mk03",
-    icon = "__pyalienlife__/graphics/icons/atomizer-mk03.png",
+    name = "atomizer-mk04",
+    icon = "__pyalienlife__/graphics/icons/atomizer-mk04.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk03",
+    subgroup = "py-alienlife-buildings-mk04",
     order = "a",
-    place_result = "atomizer-mk03",
+    place_result = "atomizer-mk04",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "atomizer-mk03",
-    icon = "__pyalienlife__/graphics/icons/atomizer-mk03.png",
+    name = "atomizer-mk04",
+    icon = "__pyalienlife__/graphics/icons/atomizer-mk04.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "atomizer-mk03"},
+    minable = {mining_time = 0.5, result = "atomizer-mk04"},
     fast_replaceable_group = "atomizer",
     max_health = 100,
     corpse = "medium-remnants",
@@ -42,11 +41,11 @@ ENTITY {
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 3
+        module_slots = 4
     },
     allowed_effects = {"speed","pollution"},
     crafting_categories = {"atomizer"},
-    crafting_speed = 3,
+    crafting_speed = 4,
     energy_source =
     {
       type = "burner",
@@ -55,7 +54,7 @@ ENTITY {
       fuel_inventory_size = 1,
       emissions_per_minute = 0.06,
     },
-    energy_usage = "1100kW",
+    energy_usage = "1300kW",
     ingredient_count = 10,
     animation = {
         layers = {
@@ -78,7 +77,7 @@ ENTITY {
                 frame_count = 1,
                 --animation_speed = 2,
                 shift = util.by_pixel(16, -16),
-                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
             },
         }
     },

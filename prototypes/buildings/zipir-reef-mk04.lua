@@ -1,39 +1,39 @@
 RECIPE {
     type = "recipe",
-    name = "zipir-reef-mk03",
+    name = "zipir-reef-mk04",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"zipir-reef-mk02", 1},
-        {"py-heat-exchanger", 1},
+        {"zipir-reef-mk03", 1},
+        {"blanket", 5},
         {"processing-unit", 40},
-        {"nbti-alloy", 35},
-        {"nichrome", 30},
+        {"science-coating", 15},
+        {"nenbit-matrix", 30},
     },
     results = {
-        {"zipir-reef-mk03", 1}
+        {"zipir-reef-mk04", 1}
     }
-}:add_unlock("zipir-mk03")
+}:add_unlock("zipir-mk04")
 
 ITEM {
     type = "item",
-    name = "zipir-reef-mk03",
-    icon = "__pyalienlife__/graphics/icons/zipir-reef-mk03.png",
+    name = "zipir-reef-mk04",
+    icon = "__pyalienlife__/graphics/icons/zipir-reef-mk04.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk03",
+    subgroup = "py-alienlife-buildings-mk04",
     order = "d",
-    place_result = "zipir-reef-mk03",
+    place_result = "zipir-reef-mk04",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "zipir-reef-mk03",
-    icon = "__pyalienlife__/graphics/icons/zipir-reef-mk03.png",
+    name = "zipir-reef-mk04",
+    icon = "__pyalienlife__/graphics/icons/zipir-reef-mk04.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "zipir-reef-mk03"},
+    minable = {mining_time = 0.5, result = "zipir-reef-mk04"},
     fast_replaceable_group = "zipir-reef",
     max_health = 100,
     corpse = "big-remnants",
@@ -42,7 +42,7 @@ ENTITY {
     selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 5
+        module_slots = 6
     },
     allowed_effects = {"speed"},
     crafting_categories = {"zipir"},
@@ -52,7 +52,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = 2,
     },
-    energy_usage = "1000kW",
+    energy_usage = "1100kW",
     ingredient_count = 20,
     animation = {
         layers = {
@@ -71,7 +71,7 @@ ENTITY {
             frame_count = 1,
             line_length = 1,
             shift = util.by_pixel(8,-1),
-            tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+            tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
             },
     }
     },

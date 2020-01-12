@@ -1,30 +1,30 @@
 RECIPE {
     type = "recipe",
-    name = "slaughterhouse-mk03",
+    name = "slaughterhouse-mk04",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"nexelit-plate", 50},
-        {"stainless-steel", 30},
-        {"super-alloy", 40},
-        {"electric-engine-unit", 20},
-        {"processing-unit", 30},
-        {"slaughterhouse-mk02", 1},
+        {"blanket", 5},
+        {"wall-shield", 20},
+        {"nbfe-alloy", 40},
+        {"super-steel", 100},
+        {"control-unit", 10},
+        {"slaughterhouse-mk03", 1},
     },
     results = {
-        {"slaughterhouse-mk03", 1}
+        {"slaughterhouse-mk04", 1}
     }
-}:add_unlock("biotech-mk03")
+}:add_unlock("biotech-mk04")
 
 ITEM {
     type = "item",
-    name = "slaughterhouse-mk03",
-    icon = "__pyalienlife__/graphics/icons/slaughterhouse-mk03.png",
+    name = "slaughterhouse-mk04",
+    icon = "__pyalienlife__/graphics/icons/slaughterhouse-mk04.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk03",
+    subgroup = "py-alienlife-buildings-mk04",
     order = "a",
-    place_result = "slaughterhouse-mk03",
+    place_result = "slaughterhouse-mk04",
     stack_size = 10
 }
 
@@ -36,11 +36,11 @@ end
 
 ENTITY {
     type = machinetype,
-    name = "slaughterhouse-mk03",
-    icon = "__pyalienlife__/graphics/icons/slaughterhouse-mk03.png",
+    name = "slaughterhouse-mk04",
+    icon = "__pyalienlife__/graphics/icons/slaughterhouse-mk04.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "slaughterhouse-mk03"},
+    minable = {mining_time = 0.5, result = "slaughterhouse-mk04"},
     fast_replaceable_group = "slaughterhouse",
     max_health = 100,
     corpse = "medium-remnants",
@@ -50,17 +50,17 @@ ENTITY {
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 3
+        module_slots = 4
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"slaughterhouse"},
-    crafting_speed = 3,
+    crafting_speed = 4,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
         emissions_per_minute = 10,
     },
-    energy_usage = "700kW",
+    energy_usage = "900kW",
     ingredient_count = 10,
     animation = {
         layers = {
@@ -93,7 +93,7 @@ ENTITY {
                 animation_speed = 0.3,
                 run_mode = "backward",
                 shift = util.by_pixel(-128, -18),
-                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
             },
             {
                 filename = "__pyalienlife__/graphics/entity/slaughterhouse/a2.png",
@@ -114,7 +114,7 @@ ENTITY {
                 animation_speed = 0.3,
                 run_mode = "backward",
                 shift = util.by_pixel(-32, -18),
-                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
             },
             {
                 filename = "__pyalienlife__/graphics/entity/slaughterhouse/a3.png",
@@ -135,7 +135,7 @@ ENTITY {
                 animation_speed = 0.3,
                 --run_mode = "backward",
                 shift = util.by_pixel(64, -18),
-                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
             },
             {
                 filename = "__pyalienlife__/graphics/entity/slaughterhouse/a4.png",
@@ -156,7 +156,7 @@ ENTITY {
                 --run_mode = "backward",
                 animation_speed = 0.3,
                 shift = util.by_pixel(160, -18),
-                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
             },
         }
     },
@@ -189,6 +189,6 @@ ENTITY {
 }
 
 if settings.startup['suicide-booth'].value then
-	data.raw.furnace['slaughterhouse-mk03'].source_inventory_size = 1
-    data.raw.furnace['slaughterhouse-mk03'].result_inventory_size = 6
+	data.raw.furnace['slaughterhouse-mk04'].source_inventory_size = 1
+    data.raw.furnace['slaughterhouse-mk04'].result_inventory_size = 6
 end

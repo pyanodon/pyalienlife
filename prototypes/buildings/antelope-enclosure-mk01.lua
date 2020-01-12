@@ -22,7 +22,7 @@ ITEM {
     icon = "__pyalienlife__/graphics/icons/antelope-enclosure-mk01.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-buildings-others",
     order = "d",
     place_result = "antelope-enclosure-mk01",
     stack_size = 10
