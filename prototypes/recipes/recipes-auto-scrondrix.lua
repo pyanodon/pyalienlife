@@ -532,6 +532,8 @@ fun.autorecipes {
 				},
 			results =
 				{
+					{name='meat', amount ='R'},
+					{name='pinealgland', amount ='R'},
 					{name='meat', amount =5},
 					{name='bones', amount ='R'},
 					--{name='meat', amount ='R'},

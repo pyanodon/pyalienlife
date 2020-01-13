@@ -67,7 +67,14 @@ local TRlist = {
     {tech = 'explosive-diarrhea', oldrecipe = 'scrondrix-manure-3a', newrecipe = 'scrondrix-manure-3b'},
     {tech = 'explosive-diarrhea', oldrecipe = 'scrondrix-manure-4a', newrecipe = 'scrondrix-manure-4b'},
     {tech = 'explosive-diarrhea', oldrecipe = 'scrondrix-manure-5a', newrecipe = 'scrondrix-manure-5b'},
-    {tech = 'explosive-diarrhea', oldrecipe = 'scrondrix-manure-6a', newrecipe = 'scrondrix-manure-6b'}
+    {tech = 'explosive-diarrhea', oldrecipe = 'scrondrix-manure-6a', newrecipe = 'scrondrix-manure-6b'},
+
+    {tech = 'interactive-cognition', oldrecipe = 'Full Render Xenos', newrecipe = 'Full Render Xenosb'},
+    {tech = 'interactive-cognition', oldrecipe = 'Extract Xeno brains', newrecipe = 'Extract Xeno brainsb'},
+    {tech = 'interactive-cognition', oldrecipe = 'Extract brains from Improved Xenos', newrecipe = 'Extract brains from Improved Xenosb'},
+    {tech = 'interactive-cognition', oldrecipe = 'Full Render scrondrixs', newrecipe = 'Full Render scrondrixsb'},
+    {tech = 'interactive-cognition', oldrecipe = 'Extract scrondrix brains', newrecipe = 'Extract scrondrix brainsb'},
+    {tech = 'interactive-cognition', oldrecipe = 'Extract brains from Improved scrondrixs', newrecipe = 'Extract brains from Improved scrondrixsb'},
 }
 
 --tech: the tech that is required to be researched for the new recipe

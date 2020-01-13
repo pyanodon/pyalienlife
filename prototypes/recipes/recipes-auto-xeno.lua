@@ -500,6 +500,7 @@ fun.autorecipes {
 					{name='chitin', amount ='R'},
 					{name='sulfuricacid', amount ='R'},
 					{name='brain', amount ='R'},
+					{name='meat', amount ='R'},
 					{name='meat', amount =4},
 				},
 			crafting_speed = 15,
@@ -585,7 +586,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='fat', amount ='R'},
+					{name='sulfuricacid', amount ='R'},
 					{name='brain', amount =2},
 				},
 			crafting_speed = 15,

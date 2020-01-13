@@ -65,6 +65,7 @@ require('prototypes/technologies/orexigenic')
 require('prototypes/technologies/mega-farm')
 require('prototypes/technologies/vrauks')
 require('prototypes/technologies/energy-drink')
+require('prototypes/technologies/interactive-cognition')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -357,6 +358,7 @@ require('prototypes/recipes/recipes-auto-zipir')
 require('prototypes/recipes/recipes-auto-trits')
 require('prototypes/recipes/recipes-auto-xeno')
 require('prototypes/recipes/recipes-auto-vrauks')
+require('prototypes/recipes/recipes-auto-brains')
 
 --(( ORES ))--
 require('prototypes/ores/ralesia')
