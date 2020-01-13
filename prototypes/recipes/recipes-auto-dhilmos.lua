@@ -456,13 +456,15 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
+
+				},
+			results =
+				{
 					{name='meat', amount ='R'},
 					{name='fat', amount ='R'},
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
-				},
-			results =
-				{
+					{name='chitin', amount ='R'},
 					{name='meat', amount =1},
 				},
 			crafting_speed = 15,

@@ -169,6 +169,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
+					{name='meat', amount ='R'},
 					{name='meat', amount =4},
 				},
 			crafting_speed = 15,
