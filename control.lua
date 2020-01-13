@@ -211,6 +211,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 				end
 			end
         elseif E.name == 'land-bot' then
+				log(E.force)
             for t,tower in pairs(landbots.towers) do
                 --log(serpent.block(t))
                 --log(serpent.block(tower))
@@ -376,6 +377,7 @@ end
 script.on_event(defines.events.on_ai_command_completed, function(event)
 	--log('hit')
 		--log(event.result)
+		--log(serpent.block(landbots))
 		if landbots.bots[event.unit_number] ~= nil then
 			--need to check if is on the way to get an item or drop off items.
 			--need to check if there are requests to fill that are not already in route by another bot
@@ -384,7 +386,7 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 			lb = landbots.bots[event.unit_number]
 			--log(serpent.block(lb))
 			if event.result == defines.behavior_result.success then
-			--log('hit')
+			log('hit')
 				if lb ~= nil then
 					if lb.isgettingitem == true then
 						--log('it worked')
@@ -392,8 +394,8 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 						local pinventory = landbots.towers[lb.tower].providerchests[lb.destinationchest].chest.get_inventory(defines.inventory.chest).get_contents()
 						local pset = {}
 						for i, inv in pairs(pinventory) do
-							--log(serpent.block(i))
-							--log(serpent.block(inv))
+							log(serpent.block(i))
+							log(serpent.block(inv))
 							pset[i] = true
 						end
 						if pset[lb.itemname] ~= nil then
@@ -404,14 +406,15 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 										landbots.towers[lb.tower].providerchests[lb.destinationchest].chest.get_inventory(defines.inventory.chest).remove({name=lb.itemname,count=lb.carryamount})
 									elseif inv < lb.carryamount then
 										lb.inventorycount = inv
-										landbots.towers[lb.tower].providerchests[lb.destinationchest].chest.get_inventory(defines.inventory.chest).remove({lb.itemname,count=inv})
+										landbots.towers[lb.tower].providerchests[lb.destinationchest].chest.get_inventory(defines.inventory.chest).remove({name=lb.itemname,count=inv})
 									end
-									--swap over to the carrying graphic version of the land bug
-									lb.unit.set_command{type = defines.command.go_to_location, destination_entity = landbots.towers[lb.tower].requestorchests[lb.requestorchest].chest, radius = 2}
-									lb.hasitem = true
-									lb.isgettingitem = false
 								end
 							end
+							--swap over to the carrying graphic version of the land bug
+								lb.destinationchest = lb.requestorchest
+								lb.unit.set_command{type = defines.command.go_to_location, destination_entity = landbots.towers[lb.tower].requestorchests[lb.destinationchest].chest, radius = 2}
+								lb.hasitem = true
+								lb.isgettingitem = false
 						end
 					elseif lb.hasitem == true then
 					--log('hit')
@@ -435,6 +438,7 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 			end
 			if event.result == defines.behavior_result.fail	then
 				--log('hit')
+				log(serpent.block(lb))
 			end
 			if event.result == defines.behavior_result.deleted then
 				--log('hit')
@@ -442,9 +446,12 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 				end
 			end
 		elseif global.caravan_unit_numbers[event.unit_number] ~= nil then
+			log(serpent.block(caravanroutes))
 			local car = event.unit_number
-			--log(event.unit_number)
-			if math.sqrt(((math.abs(caravanroutes[car].unit.position.x) - math.abs(caravanroutes[car].startpoint.pos.x)) ^ 2) + ((math.abs(caravanroutes[car].unit.position.y) - math.abs(caravanroutes[car].startpoint.pos.y)) ^ 2)) <= 10 then
+			log(event.unit_number)
+			log(caravanroutes[car].unit.position)
+			log(caravanroutes[car].startpoint.pos)
+			if math.sqrt((caravanroutes[car].unit.position.x - caravanroutes[car].startpoint.pos.x) ^ 2 + (caravanroutes[car].unit.position.y - caravanroutes[car].startpoint.pos.y) ^ 2) <= 10 then
 				local outpostinventory = game.surfaces[caravanroutes[car].unit.surface.name].find_entity('outpost', caravanroutes[car].startpoint.pos).get_inventory(defines.inventory.chest)
 				if outpostinventory ~= nil then
 					if caravanroutes[car].inventory.hasitem then
@@ -530,8 +537,14 @@ script.on_nth_tick(5, function(event)
 end)
 
 script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity},function(event)
-
-	if event.entity.name == 'land-bot' then
+	
+	if event.entity.name == 'lb-control-tower' then
+		for t, tower in pairs(landbots.towers) do
+			if t == event.entity.unit_number then
+				landbots.towers[t] = nil
+			end
+		end
+	elseif event.entity.name == 'land-bot' then
 		local bot = event.entity
 		local t_b_ref = landbots.towers[landbots.bots[bot.unit_number].tower]
 		--remove bot from towers active bots table
@@ -553,19 +566,21 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 			end
 		end
 		if event.player_index ~= nil then
-			game.players[event.player_index].insert({name=landbots.bots[bot.unit_number].itemname,count=landbots.bots[bot.unit_number].inventorycount})
+			if landbots.bots[bot.unit_number].inventorycount ~= nil and landbots.bots[bot.unit_number].inventorycount > 0 then
+				game.players[event.player_index].insert({name=landbots.bots[bot.unit_number].itemname,count=landbots.bots[bot.unit_number].inventorycount})
+			end
 		end
 		
 		--remove bot from bots table 
 		landbots.bots[bot.unit_number] = nil
 	elseif event.entity.name == 'lb-provider-chest' then
 		--remove all refernces to this chest
-		
+		landbots.towers[landbots.providerchests[event.entity.unit_number].tower].providerchests[event.entity.unit_number] = nil
+		landbots.providerchests[event.entity.unit_number] = nil
 	elseif event.entity.name == 'lb-requester-chest' then
 		--remove all refernces to this chest
-		
-	elseif event.entity.name == 'lb-control-tower' then
-	
+		landbots.towers[landbots.requesterchests[event.entity.unit_number].tower].requestorchests[event.entity.unit_number] = nil
+		landbots.requesterchests[event.entity.unit_number] = nil
 	end
 	
 
@@ -602,33 +617,28 @@ script.on_event(defines.events.on_gui_selection_state_changed, function(event)
 	--log(event.element.selected_index)
 	--log(serpent.block(next(lastclickedunit)))
 	--log(serpent.block(lastclickedunit[next(lastclickedunit)].unit_number))
-	
-	local id_num = next(lastclickedunit)
-
-	if event.element.name == 'outpost-list' then
-		
-		local value = event.element.get_item(event.element.selected_index)
-		--log(value)
-		--log(serpent.block(outpost_table))
-		--log(serpent.block(outpost_table[value]))
-		
-		caravanroutes[id_num].startpoint.id = outpost_table[value].entity.unit_number
-		caravanroutes[id_num].startpoint.pos = outpost_table[value].entity.position
-		
-		caravanroutes[id_num].unit.set_command {type = defines.command.go_to_location, destination = caravanroutes[id_num].startpoint.pos, radius = 4}
-		
-	elseif event.element.name == 'outpost-list-2' then
-		
-		local value = event.element.get_item(event.element.selected_index)
-		--log(value)
-		--log(serpent.block(outpost_table))
-		--log(serpent.block(outpost_table[value]))
-		
-		caravanroutes[id_num].endpoint.id = outpost_table[value].entity.unit_number
-		caravanroutes[id_num].endpoint.pos = outpost_table[value].entity.position
-		
+	if next(lastclickedunit) ~= nil then
+		local id_num = next(lastclickedunit)
+		if event.element.name == 'outpost-list' then
+			
+			local value = event.element.get_item(event.element.selected_index)
+			--log(value)
+			--log(serpent.block(outpost_table))
+			--log(serpent.block(outpost_table[value]))
+			
+			caravanroutes[id_num].startpoint.id = outpost_table[value].entity.unit_number
+			caravanroutes[id_num].startpoint.pos = outpost_table[value].entity.position
+			
+			caravanroutes[id_num].unit.set_command {type = defines.command.go_to_location, destination = caravanroutes[id_num].startpoint.pos, radius = 4}
+		elseif event.element.name == 'outpost-list-2' then
+			local value = event.element.get_item(event.element.selected_index)
+			--log(value)
+			--log(serpent.block(outpost_table))
+			--log(serpent.block(outpost_table[value]))
+			caravanroutes[id_num].endpoint.id = outpost_table[value].entity.unit_number
+			caravanroutes[id_num].endpoint.pos = outpost_table[value].entity.position
+		end
 	end
-
 	--log(serpent.block(caravanroutes))
 
 end)
@@ -687,6 +697,7 @@ script.on_event(defines.events.on_gui_click, function(event)
 
 	if event.element.name == 'caravan_close' then
 		caravangui.destroy()
+		lastclickedunit = {}
 	end
 
 end)
@@ -792,6 +803,7 @@ script.on_event(defines.events.on_player_selected_area, function(event)
 				create_caravan_gui(event, ent)
 				lastclickedunit[ent.unit_number] = ent
 				local newroute = {
+					hasroute = true,
                     startpoint = {
                         id = 0,
                         pos = {}
@@ -807,9 +819,11 @@ script.on_event(defines.events.on_player_selected_area, function(event)
                         hasitem = false
                     }
                 }
-                caravanroutes[next(lastclickedunit)] = newroute
+				if caravanroutes[next(lastclickedunit)] == nil or caravanroutes[next(lastclickedunit)].hasroute ~= true then
+					caravanroutes[next(lastclickedunit)] = newroute
+				end
                 --lastclickedunit = {}
-				--log(serpent.block(lastclickedunit))
+				log(serpent.block(lastclickedunit))
 			end
 		end
 	
