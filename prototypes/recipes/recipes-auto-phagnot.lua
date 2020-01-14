@@ -714,7 +714,7 @@ fun.autorecipes {
 				{
 					{name='blood', amount ='R'},
 					{name='gasbladder', amount ='R'},
-					{name='brain', amount =2},
+					{name='brain', amount =3},
 				},
 			crafting_speed = 15,
 			tech = 'nanochondria',

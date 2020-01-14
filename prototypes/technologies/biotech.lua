@@ -7,7 +7,7 @@ TECHNOLOGY {
     prerequisites = {"xenobiology","machines-mk01"},
     effects = {},
     unit = {
-        count = 130,
+        count = 150,
         ingredients = {
             {"automation-science-pack", 1},
         },
@@ -24,7 +24,7 @@ TECHNOLOGY {
     prerequisites = {'biotech-mk01',"land-animals-mk01","water-animals-mk01","lead-mk02"},
     effects = {},
     unit = {
-        count = 130,
+        count = 200,
         ingredients = {
             {'automation-science-pack', 1},
             {'logistic-science-pack', 1}
@@ -42,7 +42,7 @@ TECHNOLOGY {
     prerequisites = {'biotech-mk02',"land-animals-mk02","water-animals-mk02"},
     effects = {},
     unit = {
-        count = 130,
+        count = 250,
         ingredients = {
             {'automation-science-pack', 1},
             {'logistic-science-pack', 1},
@@ -62,12 +62,12 @@ TECHNOLOGY {
     prerequisites = {"biotech-mk03","dingrits"},
     effects = {},
     unit = {
-        count = 200,
+        count = 300,
         ingredients = {
-            {'automation-science-pack', 3},
-            {'logistic-science-pack', 2},
+            {'automation-science-pack', 1},
+            {'logistic-science-pack', 1},
             {'chemical-science-pack', 1},
-            {'utility-science-pack', 1},
+            {'production-science-pack', 1},
             {'py-science-pack', 1},
         },
         time = 45

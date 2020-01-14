@@ -187,7 +187,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', amount ='R'},
-					{name='brain', amount =1},
+					{name='brain', amount =2},
 				},
 			crafting_speed = 15,
 			tech = 'schrodinger-antelope',
