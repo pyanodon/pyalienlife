@@ -720,7 +720,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'phadai',
 			name = 'Extract phadai Fat',
-			icon = "__pyalienlife__/graphics/icons/fat-caged-mukmoux.png",
+			icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
 			icon_size = 64,
 		},
 		--Carapace
@@ -750,7 +750,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='carapace', amount ='R'},
-					{name='brain', amount =2},
+					{name='brain', amount =3},
 				},
 			crafting_speed = 15,
 			tech = 'nanochondria',

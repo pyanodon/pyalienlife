@@ -587,7 +587,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='sulfuricacid', amount ='R'},
-					{name='brain', amount =2},
+					{name='brain', amount =3},
 				},
 			crafting_speed = 15,
 			tech = 'nanochondria',

@@ -101,24 +101,6 @@ fun.autorecipes {
 					--{name='cridren',amount ='+1'}
 				},
 				crafting_speed = 100,
-				tech = 'cridren-mk02'
-        },
-        {
-			ingredients =
-				{
-                    --{'s1'},
-                    --{'a'},
-					--{'b','+15'},
-					--{name='fish',amount ='R'},
-                    {name='chalkysoil',amount ='*15'},
-                    --{'d'},
-				},
-			results =
-				{
-					--{'a','*17'},
-					--{name='cridren',amount ='+2'}
-				},
-				crafting_speed = 90,
 				tech = 'cridren-mk03'
         },
         {
@@ -128,7 +110,7 @@ fun.autorecipes {
                     --{'a'},
 				   --{'b','+15'},
 				   --{'carbondioxide','R'},
-				   {name='chalkysoil',amount ='R'},
+				   {name='soil',amount ='R'},
                 	{name='bones',amount ='*10'},
                     --{'d'},
                 },
@@ -169,7 +151,7 @@ fun.autorecipes {
                     --{'g','*2'},
 					--{'d'},
 					{name='bones',amount ='R'},
-                    {name='chalkysoil',amount ='*20'},
+                    {name='soil',amount ='*20'},
 				},
 			results =
 				{
@@ -185,7 +167,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					--{name='biomass',amount ='R'},
-					--{name='chalkysoil',amount ='R'},
+					--{name='soil',amount ='R'},
 					--{name='manure',amount ='R'},
 					--{name='fertilizer',amount ='R'},
 					{name='gh',1},
@@ -216,7 +198,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='chalkysoil',amount ='*10'},
+					--{name='soil',amount ='*10'},
 					{name='pheromones',amount ='*1'},
 					--{'biomass','R'},
 					--{'gh',1},

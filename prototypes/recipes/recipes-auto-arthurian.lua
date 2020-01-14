@@ -699,7 +699,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='fat', amount ='R'},
-					{name='brain', amount =3},
+					{name='brain', amount =4},
 				},
 			crafting_speed = 15,
 			tech = 'nanochondria',

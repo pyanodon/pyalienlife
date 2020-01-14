@@ -359,6 +359,7 @@ require('prototypes/recipes/recipes-auto-trits')
 require('prototypes/recipes/recipes-auto-xeno')
 require('prototypes/recipes/recipes-auto-vrauks')
 require('prototypes/recipes/recipes-auto-brains')
+require('prototypes/recipes/recipes-auto-brains-2')
 
 --(( ORES ))--
 require('prototypes/ores/ralesia')
