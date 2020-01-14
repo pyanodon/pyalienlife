@@ -126,6 +126,15 @@ local TRlist = {
     {tech = 'metamide5', oldrecipe = 'Extract brains from Improved Xenos', newrecipe = 'Extract brains from Improved Xenos-2'},
     {tech = 'metamide5', oldrecipe = 'Extract zipir brainb', newrecipe = 'Extract zipir brain-2'},
     {tech = 'metamide5', oldrecipe = 'Extract brains from Improved Zipir', newrecipe = 'Extract brains from Improved Zipir-2'},
+--meat 1--
+    {tech = 'exercises', oldrecipe = 'Extract arthurian Meat', newrecipe = 'Extract arthurian Meat-1'},
+    {tech = 'exercises', oldrecipe = 'Extract auog Meat', newrecipe = 'Extract auog Meat-1'},
+--meat 2--
+    {tech = 'myostatin', oldrecipe = 'Extract arthurian Meat-1', newrecipe = 'Extract arthurian Meat-2'},
+    {tech = 'myostatin', oldrecipe = 'Extract auog Meat-1', newrecipe = 'Extract auog Meat-2'},
+    {tech = 'myostatin', oldrecipe = 'Extract meat from Improved arthurians', newrecipe = 'Extract meat from Improved arthurians-2'},
+    {tech = 'myostatin', oldrecipe = 'Extract meat from Improved auogs', newrecipe = 'Extract meat from Improved auogs-2'},
+
 }
 
 --substituir a segunda do brains 1 pela brains 2

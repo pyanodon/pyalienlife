@@ -824,7 +824,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='fat', amount ='R'},
-					{name='meat', amount =6},
+					{name='meat', amount =7},
 				},
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
