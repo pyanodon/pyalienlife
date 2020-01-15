@@ -48,6 +48,26 @@ RECIPE {
 
 ---breeding---
 
+---growing---
+
+RECIPE {
+    type = 'recipe',
+    name = 'vonix-grow-01',
+    category = 'incubator',
+    enabled = false,
+    energy_required = 25,
+    ingredients = {
+        {type = 'item', name = 'vonix-eggs', amount = 1},
+        {type = 'item', name = 'meat', amount = 4},
+        {type = 'fluid', name = 'water', amount = 500},
+    },
+    results = {
+        {type = 'item', name = 'vonix-cub', amount = 1},
+    },
+    --main_product = "vonix-pup",
+    subgroup = 'py-alienlife-vonix',
+    order = 'a',
+}:add_unlock("assisted-embryology")
 
 ---maturing---
 
@@ -56,21 +76,44 @@ RECIPE {
     name = 'vonix-mature-01',
     category = 'creature-chamber',
     enabled = false,
-    energy_required = 30,
+    energy_required = 40,
     ingredients = {
-        {type = 'item', name = 'vonix-eggs', amount = 1},
+        {type = 'item', name = 'vonix-cub', amount = 1},
         {type = 'item', name = 'vonix-codex', amount = 1},
         {type = 'item', name = 'earth-sunflower-sample', amount = 2},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
     },
     results = {
         {type = 'item', name = 'vonix', amount = 1},
-        {type = 'item', name = 'cage', amount = 1},
     },
     main_product = "vonix",
     subgroup = 'py-alienlife-vonix',
     order = 'a',
 }:add_unlock("vonix"):add_ingredient({type = "item", name = "biopolymer", amount = 10})
+
+RECIPE {
+    type = 'recipe',
+    name = 'vonix-mature-02',
+    category = 'creature-chamber',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'vonix-cub', amount = 1},
+        {type = 'item', name = 'gh', amount = 1},
+        {type = 'item', name = 'resveratrol', amount = 1},
+        {type = 'item', name = 'cage', amount = 1},
+        {type = 'item', name = 'vonix-codex', amount = 1},
+        {type = 'item', name = 'earth-sunflower-sample', amount = 1},
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'vonix', amount = 2},
+    },
+    --main_product = "caged-vonix",
+    subgroup = 'py-alienlife-vonix',
+    order = 'a',
+}:add_unlock("growth-hormone"):add_ingredient({type = "item", name = "biopolymer", amount = 5})
+
 
 ----adverse products----
 

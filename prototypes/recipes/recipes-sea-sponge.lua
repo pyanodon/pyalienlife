@@ -98,7 +98,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'sea-sponge-processing-01',
-    category = 'biofactory',
+    category = 'atomizer',
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -114,7 +114,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'sea-sponge-sprouts-processing-01',
-    category = 'biofactory',
+    category = 'atomizer',
     enabled = false,
     energy_required = 8,
     ingredients = {

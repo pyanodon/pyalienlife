@@ -140,3 +140,49 @@ RECIPE {
     },
     main_product = "vrauks",
 }:add_unlock("vrauks")
+
+---maturing---
+
+RECIPE {
+    type = 'recipe',
+    name = 'vrauks-mature-01',
+    category = 'creature-chamber',
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'cocoon', amount = 1},
+        {type = 'item', name = 'cage', amount = 1},
+        {type = 'item', name = 'vrauks-codex', amount = 1},
+        {type = 'item', name = 'earth-generic-sample', amount = 1},
+        {type = 'fluid', name = 'water', amount = 500},
+    },
+    results = {
+        {type = 'item', name = 'caged-vrauks', amount = 1},
+    },
+    main_product = "caged-vrauks",
+    subgroup = 'py-alienlife-vrauks',
+    order = 'a',
+}:add_unlock("assisted-embryology")
+
+RECIPE {
+    type = 'recipe',
+    name = 'vrauks-mature-02',
+    category = 'creature-chamber',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'cocoon', amount = 1},
+        {type = 'item', name = 'gh', amount = 1},
+        {type = 'item', name = 'cage', amount = 1},
+        {type = 'item', name = 'resveratrol', amount = 1},
+        {type = 'item', name = 'vrauks-codex', amount = 1},
+        {type = 'item', name = 'earth-generic-sample', amount = 1},
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'caged-vrauks', amount = 3},
+    },
+    main_product = "caged-vrauks",
+    subgroup = 'py-alienlife-vrauks',
+    order = 'a',
+}:add_unlock("growth-hormone")

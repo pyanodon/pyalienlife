@@ -121,16 +121,41 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'phadai-pup', amount = 1},
         {type = 'item', name = 'phadai-codex', amount = 1},
+        {type = 'item', name = 'cage', amount = 1},
         {type = 'item', name = 'earth-tiger-sample', amount = 1},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
     },
     results = {
-        {type = 'item', name = 'phadai', amount = 1},
+        {type = 'item', name = 'caged-phadai', amount = 1},
     },
-    main_product = "phadai",
+    --main_product = "phadai",
     subgroup = 'py-alienlife-phadai',
     order = 'a',
 }:add_unlock("assisted-embryology")
+
+RECIPE {
+    type = 'recipe',
+    name = 'phadai-mature-02',
+    category = 'creature-chamber',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'phadai-pup', amount = 1},
+        {type = 'item', name = 'gh', amount = 1},
+        {type = 'item', name = 'cage', amount = 1},
+        {type = 'item', name = 'phadai-codex', amount = 1},
+        {type = 'item', name = 'resveratrol', amount = 1},
+        {type = 'item', name = 'earth-tiger-sample', amount = 1},
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'caged-phadai', amount = 2},
+    },
+    --main_product = "caged-phadai",
+    subgroup = 'py-alienlife-phadai',
+    order = 'a',
+}:add_unlock("growth-hormone")
+
 
 ----adverse products----
 

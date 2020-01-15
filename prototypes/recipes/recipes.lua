@@ -1257,6 +1257,51 @@ RECIPE {
     order = "a"
 }:add_unlock("energy-2")
 
+--fish oil to CM1
+RECIPE {
+    type = "recipe",
+    name = "fish-oil-combustion",
+    category = "combustion",
+    enabled = false,
+    energy_required = 3,
+    ingredients = {
+        {type = "fluid", name = "fish-oil", amount = 50},
+        {type = "fluid", name = "water", amount = 500},
+        {type = "item", name = "coke", amount = 3}
+    },
+    results = {
+        {type = "fluid", name = "combustion-mixture1", amount = 150, temperature = 650},
+        {type = "fluid", name = "steam", amount = 500, temperature = 60}
+    },
+    icon = "__pyalienlife__/graphics/icons/combustion-fish-oil.png",
+    icon_size = 32,
+    --main_product = "combustion-mixture1",
+    subgroup = "py-combustion",
+    order = "a"
+}:add_unlock("energy-2")
+
+--mukmoux-fat to CM1
+RECIPE {
+    type = "recipe",
+    name = "lard-combustion",
+    category = "combustion",
+    enabled = false,
+    energy_required = 3,
+    ingredients = {
+        {type = "item", name = "mukmoux-fat", amount = 10},
+        {type = "fluid", name = "water", amount = 500},
+        {type = "item", name = "coke", amount = 3}
+    },
+    results = {
+        {type = "fluid", name = "combustion-mixture1", amount = 200, temperature = 600},
+        {type = "fluid", name = "steam", amount = 500, temperature = 60}
+    },
+    icon = "__pyalienlife__/graphics/icons/combustion-lard.png",
+    icon_size = 32,
+    --main_product = "combustion-mixture1",
+    subgroup = "py-combustion",
+    order = "a"
+}:add_unlock("energy-1")
 
 -----ethanol to CM1---
 

@@ -76,16 +76,42 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'scrondrix-pup', amount = 1},
         {type = 'item', name = 'scrondrix-codex', amount = 1},
+        {type = 'item', name = 'cage', amount = 1},
         {type = 'item', name = 'earth-roadrunner-sample', amount = 1},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
     },
     results = {
-        {type = 'item', name = 'scrondrix', amount = 1},
+        {type = 'item', name = 'caged-scrondrix', amount = 1},
     },
-    main_product = "scrondrix",
+    --main_product = "scrondrix",
     subgroup = 'py-alienlife-scrondrix',
     order = 'a',
 }:add_unlock("assisted-embryology")
+
+
+RECIPE {
+    type = 'recipe',
+    name = 'scrondrix-mature-02',
+    category = 'creature-chamber',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'scrondrix-pup', amount = 1},
+        {type = 'item', name = 'gh', amount = 1},
+        {type = 'item', name = 'resveratrol', amount = 1},
+        {type = 'item', name = 'cage', amount = 1},
+        {type = 'item', name = 'scrondrix-codex', amount = 1},
+        {type = 'item', name = 'earth-roadrunner-sample', amount = 1},
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'caged-scrondrix', amount = 2},
+    },
+    --main_product = "caged-scrondrix",
+    subgroup = 'py-alienlife-scrondrix',
+    order = 'a',
+}:add_unlock("growth-hormone")
+
 
 ----adverse products----
 

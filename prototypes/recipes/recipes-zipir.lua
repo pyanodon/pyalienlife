@@ -99,3 +99,68 @@ RECIPE {
         {type = 'item', name = 'zipir-food-02', amount = 1},
     },
 }:add_unlock("food-mk02")
+
+---growing---
+
+RECIPE {
+    type = 'recipe',
+    name = 'zipir-grow-01',
+    category = 'incubator',
+    enabled = false,
+    energy_required = 25,
+    ingredients = {
+        {type = 'item', name = 'zipir-eggs', amount = 1},
+        {type = 'item', name = 'rennea-seeds', amount = 4},
+        {type = 'fluid', name = 'phytoplankton', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'zipir-pup', amount = 1},
+    },
+    main_product = "zipir-pup",
+    subgroup = 'py-alienlife-zipir',
+    order = 'a',
+}:add_unlock("assisted-embryology")
+
+---maturing---
+
+RECIPE {
+    type = 'recipe',
+    name = 'zipir-mature-01',
+    category = 'creature-chamber',
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'zipir-pup', amount = 1},
+        {type = 'item', name = 'zipir-codex', amount = 1},
+        {type = 'item', name = 'earth-crustacean-sample', amount = 2},
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'zipir1', amount = 1},
+    },
+    --main_product = "zipir",
+    subgroup = 'py-alienlife-zipir',
+    order = 'a',
+}:add_unlock("assisted-embryology")
+
+RECIPE {
+    type = 'recipe',
+    name = 'zipir-mature-02',
+    category = 'creature-chamber',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'zipir-pup', amount = 1},
+        {type = 'item', name = 'resveratrol', amount = 1},
+        {type = 'item', name = 'gh', amount = 1},
+        {type = 'item', name = 'zipir-codex', amount = 1},
+        {type = 'item', name = 'earth-crustacean-sample', amount = 1},
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'zipir1', amount = 2},
+    },
+    --main_product = "caged-zipir",
+    subgroup = 'py-alienlife-zipir',
+    order = 'a',
+}:add_unlock("growth-hormone")

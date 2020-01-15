@@ -1409,6 +1409,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "zipir-pup",
+    icon = "__pyalienlife__/graphics/icons/zipir-pup.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-zipir",
+    order = "h",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
     name = "trits-pup",
     icon = "__pyalienlife__/graphics/icons/trits-pup.png",
 	icon_size = 64,
@@ -2454,6 +2465,72 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "xyhiphoe-codex",
+    icon = "__pyalienlife__/graphics/icons/xyhiphoe-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "xyhiphoe-cub",
+    icon = "__pyalienlife__/graphics/icons/xyhiphoe-cub.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-xyhiphoe",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "blood-xyhiphoe",
+    icon = "__pyalienlife__/graphics/icons/blood-xyhiphoe.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-xyhiphoe",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "guts-xyhiphoe",
+    icon = "__pyalienlife__/graphics/icons/guts-xyhiphoe.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-xyhiphoe",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "shell-xyhiphoe",
+    icon = "__pyalienlife__/graphics/icons/shell-xyhiphoe.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-xyhiphoe",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "meat-xyhiphoe",
+    icon = "__pyalienlife__/graphics/icons/meat-xyhiphoe.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-xyhiphoe",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "venon-gland",
     icon = "__pyalienlife__/graphics/icons/venon-gland.png",
 	icon_size = 64,
@@ -2467,6 +2544,17 @@ ITEM {
     type = "item",
     name = "vonix-eggs",
     icon = "__pyalienlife__/graphics/icons/vonix-eggs.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-vonix",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "vonix-cub",
+    icon = "__pyalienlife__/graphics/icons/vonix-cub.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-vonix",
@@ -3566,6 +3654,9 @@ local alien_life_limitations_ulric =
 	{
     }
     local alien_life_limitations_vrauks =
+	{
+    }
+    local alien_life_limitations_xyhiphoe =
 	{
     }
 ----MODULES----
@@ -5857,6 +5948,87 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+
+ITEM {
+    type = "module",
+    name = "xyhiphoe",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/xyhiphoe.png"},
+        --{icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "xyhiphoe",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-xyhiphoe",
+    order = "v-a",
+    stack_size = 10,
+	effect = { speed = {bonus = 100}},
+	limitation = alien_life_limitations_xyhiphoe,
+	limitation_message_key = "Its full"
+}
+ITEM {
+    type = "module",
+    name = "xyhiphoe-mk02",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/xyhiphoe.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "xyhiphoe",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-xyhiphoe",
+    order = "v-b",
+    stack_size = 10,
+	effect = { speed = {bonus = 105}},
+	limitation = alien_life_limitations_xyhiphoe,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "xyhiphoe-mk03",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/xyhiphoe.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "xyhiphoe",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-xyhiphoe",
+    order = "v-c",
+    stack_size = 10,
+	effect = { speed = {bonus = 110}},
+	limitation = alien_life_limitations_xyhiphoe,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "xyhiphoe-mk04",
+    icons =
+	{
+        {icon = "__pyalienlife__/graphics/icons/xyhiphoe.png"},
+        {icon = "__pyalienlife__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "xyhiphoe",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-xyhiphoe",
+    order = "v-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 115}},
+	limitation = alien_life_limitations_xyhiphoe,
+	limitation_message_key = "Its full"
+}
+
+
 ---replicators----
 
 ITEM {
@@ -6044,6 +6216,11 @@ data:extend(
   {
     type = "module-category",
     name = "vrauks"
+  },
+
+  {
+    type = "module-category",
+    name = "xyhiphoe"
   },
   --item used to select the ceature and start and end points of the route
 	{

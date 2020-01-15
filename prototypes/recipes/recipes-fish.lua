@@ -100,7 +100,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'fish-mature-01',
-    category = 'creature-chamber',
+    category = 'incubator',
     enabled = false,
     energy_required = 30,
     ingredients = {
