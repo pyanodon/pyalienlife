@@ -36,11 +36,11 @@ fun.autorecipes {
 			crafting_speed = 140,
 			tech = 'food-mk02'
 		},
-		--yeadols
+		--yaedols
 		{
 			ingredients =
 				{
-					{name='yeadols',amount = 3},
+					{name='yaedols',amount = 3},
 					{name='bedding',amount = 1},
 				},
 			results =
@@ -68,7 +68,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='dingritsfood01',amount ='R'},
-					{name='yeadols',amount ='R'},
+					{name='yaedols',amount ='R'},
 					{name='yotoileaves',amount ='R'},
 					{name='dingritsfood02',amount =1},
 
@@ -80,11 +80,11 @@ fun.autorecipes {
 			crafting_speed = 110,
 			tech = 'dingrits'
 		},
-		--food 2 yeadols
+		--food 2 yaedols
 		{
 			ingredients =
 				{
-					{name='yeadols',amount =3},
+					{name='yaedols',amount =3},
 				},
 			results =
 				{
@@ -93,7 +93,7 @@ fun.autorecipes {
 			crafting_speed = 100,
 			tech = 'dingrits'
 		},
-		--food 2 yeadols yotoileaves
+		--food 2 yaedols yotoileaves
 		{
 			ingredients =
 				{
@@ -341,11 +341,11 @@ fun.autorecipes {
 			crafting_speed = 60,
 			tech = 'assisted-embryology'
 		},
-		--yeadols
+		--yaedols
 		{
 			ingredients =
 				{
-					{name='yeadols',amount = 5},
+					{name='yaedols',amount = 5},
 				},
 			results =
 				{
@@ -372,7 +372,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='dingritsfood01',amount ='R'},
-					{name='yeadols',amount ='R'},
+					{name='yaedols',amount ='R'},
 					{name='yotoileaves',amount ='R'},
 					{name='dingritsfood02',amount =1},
 
@@ -384,11 +384,11 @@ fun.autorecipes {
 			crafting_speed = 50,
 			tech = 'assisted-embryology'
 		},
-		--food 2 yeadols
+		--food 2 yaedols
 		{
 			ingredients =
 				{
-					{name='yeadols',amount =5},
+					{name='yaedols',amount =5},
 				},
 			results =
 				{
@@ -397,7 +397,7 @@ fun.autorecipes {
 			crafting_speed = 45,
 			tech = 'assisted-embryology'
 		},
-		--food 2 yeadols yotoileaves
+		--food 2 yaedols yotoileaves
 		{
 			ingredients =
 				{
@@ -415,7 +415,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='yotoileaves',amount = 'R'},
-					{name='yeadols',amount = 'R'},
+					{name='yaedols',amount = 'R'},
 					{name='dingritsfood02',amount = 'R'},
 					{name='cagedscondrix',amount =1},
 					{name='pheromones',amount =1},
@@ -446,11 +446,11 @@ fun.autorecipes {
 			crafting_speed = 60,
 			tech = 'pheromones'
 		},
-		--yeadols
+		--yaedols
 		{
 			ingredients =
 				{
-					{name='yeadols',amount = 10},
+					{name='yaedols',amount = 10},
 				},
 			results =
 				{
@@ -477,7 +477,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='dingritsfood01',amount ='R'},
-					{name='yeadols',amount ='R'},
+					{name='yaedols',amount ='R'},
 					{name='yotoileaves',amount ='R'},
 					{name='dingritsfood02',amount =1},
 
@@ -489,11 +489,11 @@ fun.autorecipes {
 			crafting_speed = 50,
 			tech = 'pheromones'
 		},
-		--food 2 yeadols
+		--food 2 yaedols
 		{
 			ingredients =
 				{
-					{name='yeadols',amount ='*3'},
+					{name='yaedols',amount ='*3'},
 				},
 			results =
 				{
@@ -502,7 +502,7 @@ fun.autorecipes {
 			crafting_speed = 45,
 			tech = 'pheromones'
 		},
-		--food 2 yeadols yotoileaves
+		--food 2 yaedols yotoileaves
 		{
 			ingredients =
 				{

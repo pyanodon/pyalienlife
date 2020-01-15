@@ -20,7 +20,8 @@ farms =
 	farm5 = require('scripts/crops/farm-yotoi'),
 	farm6 = require('scripts/crops/farm-kicalk'),
 	farm7 = require('scripts/crops/farm-arum'),
-	farm8 = require('scripts/crops/farm-yotoi-fruit')
+	farm8 = require('scripts/crops/farm-yotoi-fruit'),
+	farm9 = require('scripts/crops/farm-bioreserve')
 	}
 
 --log(serpent.block(farms))

@@ -1463,3 +1463,38 @@ RECIPE {
     },
     --main_product = "b-molasse",
 }:add_unlock("energy-drink")
+
+RECIPE {
+    type = "recipe",
+    name = "lime-from-shell",
+    category = "ball-mill",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'shell', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'lime', amount = 10},
+    },
+    --main_product = "b-molasse",
+}:add_unlock("water-invertebrates-mk01")
+
+RECIPE {
+    type = 'recipe',
+    name = 'replicator-bioreserve',
+    category = 'advanced-crafting',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'earth-generic-sample', amount = 5},
+        {type = 'item', name = 'titanium-plate', amount = 100},
+        {type = 'item', name = 'metallic-glass', amount = 2},
+        {type = 'item', name = 'biofilm', amount = 20},
+        {type = 'item', name = 'plastic-bar', amount = 100},
+        {type = 'item', name = 'blanket-chassi', amount = 1},
+        {type = 'item', name = 'fertilizer', amount = 40},
+    },
+    results = {
+        {type = 'item', name = 'replicator-bioreserve', amount = 1},
+    },
+}:add_unlock("mega-farm-bioreserve"):add_ingredient({type = "item", name = "nems", amount = 10}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10})

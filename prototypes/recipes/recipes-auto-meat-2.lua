@@ -784,6 +784,57 @@ fun.autorecipes {
 	}
 }
 
+------------------XYHIPHOE------------------
+
+fun.autorecipes {
+    name = 'rendering-meats-xyhiphoe-2',
+	category = 'slaughterhouse',
+	--module_limitations = 'auog',
+	subgroup = 'py-alienlife-xyhiphoe',
+	order = 'b',
+    mats =
+	{
+		--meat
+		{
+			ingredients =
+				{
+					{name='xyhiphoe',amount=1},
+				},
+			results =
+				{
+					{name='meat', amount ='R'},
+					{name='shell', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='arthropodblood', amount ='R'},
+					{name='meat', amount =4},
+				},
+			crafting_speed = 15,
+			tech = 'myostatin',
+			name = 'Extract xyhiphoe Meat-2',
+			icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+			icon_size = 64,
+		},
+		--meat xyhiphoe rendering
+		{
+			ingredients =
+				{
+					{name='xyhiphoe',amount='R'},
+					{name='meatxyhiphoe',amount=1},
+				},
+			results =
+				{
+					{name='arthropodblood', amount ='R'},
+					{name='meat', amount =7},
+				},
+			crafting_speed = 15,
+			tech = 'myostatin',
+			name = 'Extract meat from Improved xyhiphoe-2',
+			icon = "__pyalienlife__/graphics/icons/meat-xyhiphoe.png",
+			icon_size = 64,
+		},
+	}
+}
+
 ------------------ZIPIR------------------
 
 fun.autorecipes {

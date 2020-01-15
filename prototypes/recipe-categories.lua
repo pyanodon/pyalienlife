@@ -181,6 +181,10 @@ data:extend {
     },
     {
         type = "recipe-category",
+        name = "bioreserve-farm"
+    },
+    {
+        type = "recipe-category",
         name = "vat"
     },
     ------crops------

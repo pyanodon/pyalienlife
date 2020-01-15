@@ -141,6 +141,7 @@ local TRlist = {
     {tech = 'exercises', oldrecipe = 'Extract Vonix Meat', newrecipe = 'Extract Vonix Meat-1'},
     {tech = 'exercises', oldrecipe = 'Extract Vrauks Meat', newrecipe = 'Extract Vrauks Meat-1'},
     {tech = 'exercises', oldrecipe = 'Extract Xeno Meat', newrecipe = 'Extract Xeno Meat-1'},
+    {tech = 'exercises', oldrecipe = 'Extract xyhiphoe Meat', newrecipe = 'Extract xyhiphoe Meat-1'},
     {tech = 'exercises', oldrecipe = 'Extract zipir Meat', newrecipe = 'Extract zipir Meat-1'},
 --meat 2--
     {tech = 'myostatin', oldrecipe = 'Extract arthurian Meat-1', newrecipe = 'Extract arthurian Meat-2'},
@@ -171,6 +172,8 @@ local TRlist = {
     {tech = 'myostatin', oldrecipe = 'Extract meat from Improved Vrauks', newrecipe = 'Extract meat from Improved Vrauks-2'},
     {tech = 'myostatin', oldrecipe = 'Extract Xeno Meat-1', newrecipe = 'Extract Xeno Meat-2'},
     {tech = 'myostatin', oldrecipe = 'Extract meat from Improved Xenos', newrecipe = 'Extract meat from Improved Xenos-2'},
+    {tech = 'myostatin', oldrecipe = 'Extract xyhiphoe Meat-1', newrecipe = 'Extract xyhiphoe Meat-2'},
+    {tech = 'myostatin', oldrecipe = 'Extract meat from Improved xyhiphoe', newrecipe = 'Extract meat from Improved xyhiphoe-2'},
     {tech = 'myostatin', oldrecipe = 'Extract zipir Meat-1', newrecipe = 'Extract zipir Meat-2'},
     {tech = 'myostatin', oldrecipe = 'Extract meat from Improved Zipir', newrecipe = 'Extract meat from Improved Zipir-2'},
 

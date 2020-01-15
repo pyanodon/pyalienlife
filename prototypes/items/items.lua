@@ -2487,6 +2487,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "shell",
+    icon = "__pyalienlife__/graphics/icons/shell.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-xyhiphoe",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
     name = "blood-xyhiphoe",
     icon = "__pyalienlife__/graphics/icons/blood-xyhiphoe.png",
 	icon_size = 64,
@@ -6093,6 +6104,28 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-replicators",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "replicator-bioreserve",
+    icon = "__pyalienlife__/graphics/icons/replicator-bioreserve.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-replicators",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "bioreserve",
+    icon = "__pyalienlife__/graphics/icons/replicator-bioreserve.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
     order = "x",
     stack_size = 10
 }

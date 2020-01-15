@@ -161,7 +161,6 @@ items.inputs.dingritspike = {'dingrit-spike', 1}
 items.inputs.dingritsfood01 = {'dingrits-food-01', 1}
 items.inputs.dingritsfood02 = {'dingrits-food-02', 1}
 items.inputs.yotoileaves = {'yotoi-leaves', 1}
-items.inputs.yeadols = {'yeadols', 1}
 items.inputs.tuuphra = {'tuuphra', 1}
 items.inputs.tuuphraseeds = {'tuuphra-seeds', 1}
 items.inputs.meatcagedkmauts = {'meat-caged-kmauts', 1}
@@ -177,6 +176,8 @@ items.inputs.cridren = {'cridren', 1}
 items.inputs.cridrenseeds = {'cridren-seeds', 1}
 items.inputs.chalkysoil = {'chalky-soil', 1}
 items.inputs.fish = {'fish', 1}
+items.inputs.fishfood1 = {'fish-food-01', 1}
+items.inputs.fishfood2 = {'fish-food-02', 1}
 items.inputs.fishegg = {'fish-egg', 1}
 items.inputs.sponge = {'sponge', 1}
 items.inputs.finenexelit = {'fine-nexelit-powder', 1}
@@ -275,6 +276,14 @@ items.inputs.skincagedvrauks = {'chitin-caged-vrauks', 1}
 items.inputs.gutscagedvrauks = {'guts-caged-vrauks', 1}
 items.inputs.vrauksfood01 = {'vrauks-food-01', 1}
 items.inputs.vrauksfood02 = {'vrauks-food-02', 1}
+
+items.inputs.meatxyhiphoe = {'meat-xyhiphoe', 1}
+items.inputs.bloodxyhiphoe = {'blood-xyhiphoe', 1}
+items.inputs.gutsxyhiphoe = {'guts-xyhiphoe', 1}
+items.inputs.shellxyhiphoe = {'shell-xyhiphoe', 1}
+items.inputs.xyhiphoecub = {'xyhiphoe-cub', 1}
+items.inputs.shell = {'shell', 1}
+items.inputs.xyhiphoe = {'xyhiphoe', 1}
 
 items.outputs = items.inputs
 --can put output replacements below here

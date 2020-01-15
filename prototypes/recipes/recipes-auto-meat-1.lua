@@ -528,6 +528,38 @@ fun.autorecipes {
 	}
 }
 
+------------------XYHIPHOE------------------
+
+fun.autorecipes {
+    name = 'rendering-meats-xyhiphoe',
+	category = 'slaughterhouse',
+	--module_limitations = 'auog',
+	subgroup = 'py-alienlife-xyhiphoe',
+	order = 'b',
+    mats =
+	{
+		--meat
+		{
+			ingredients =
+				{
+					{name='xyhiphoe',amount=1},
+				},
+			results =
+				{
+					{name='meat', amount ='R'},
+					{name='shell', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='arthropodblood', amount ='R'},
+					{name='meat', amount =3},
+				},
+			crafting_speed = 15,
+			tech = 'exercises',
+			name = 'Extract xyhiphoe Meat-1',
+			icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+			icon_size = 64,
+		},
+	}
+}
 ------------------ZIPIR------------------
 
 fun.autorecipes {
