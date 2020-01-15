@@ -75,7 +75,7 @@ fun.autorecipes {
                     --{'a'},
                     --{'b','+15'},
                     --{'c','*10'},
-                    {name='yeadols',amount =5},
+                    {name='yaedols',amount =5},
 				},
 			results =
 				{
@@ -91,7 +91,7 @@ fun.autorecipes {
                     --{'s1'},
                     --{'a'},
 					--{'b','+15'},
-					--{name='yeadols',amount ='R'},
+					--{name='yaedols',amount ='R'},
                     {name='lignin',amount ='*5'},
                     --{'d'},
 				},
