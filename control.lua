@@ -22,7 +22,7 @@ farms =
 	farm7 = require('scripts/crops/farm-arum'),
 	farm8 = require('scripts/crops/farm-yotoi-fruit')
 	}
-	
+
 --log(serpent.block(farms))
 
 --END--
@@ -278,7 +278,8 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 		elseif E.name == 'caravan' then
 			global.caravan_unit_numbers[E.unit_number] = true
 		end
-        --log(serpent.block(landbots))
+		--log(serpent.block(landbots))
+		global.landbots = landbots
     end
 )
 
@@ -290,13 +291,14 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 			end
 		end
 	end
+	global.landbots = landbots
 end)
 
 script.on_event(defines.events.on_put_item, function(event)
-    
+
 	end)
 
-function ai(event)
+local function ai(event)
 
 for t, tower in pairs(landbots.towers) do
 	if tower.currentlyactivebotcount < tower.totalbotcount then
@@ -526,7 +528,7 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 				}
 			end
 		end
-
+		global.landbots = landbots
     end)
 
 script.on_nth_tick(5, function(event)
@@ -534,10 +536,11 @@ script.on_nth_tick(5, function(event)
 
 	ai(event)
 
+	global.landbots = landbots
 end)
 
 script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity},function(event)
-	
+
 	if event.entity.name == 'lb-control-tower' then
 		for t, tower in pairs(landbots.towers) do
 			if t == event.entity.unit_number then
@@ -570,8 +573,8 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 				game.players[event.player_index].insert({name=landbots.bots[bot.unit_number].itemname,count=landbots.bots[bot.unit_number].inventorycount})
 			end
 		end
-		
-		--remove bot from bots table 
+
+		--remove bot from bots table
 		landbots.bots[bot.unit_number] = nil
 	elseif event.entity.name == 'lb-provider-chest' then
 		--remove all refernces to this chest
@@ -582,8 +585,8 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 		landbots.towers[landbots.requesterchests[event.entity.unit_number].tower].requestorchests[event.entity.unit_number] = nil
 		landbots.requesterchests[event.entity.unit_number] = nil
 	end
-	
 
+	global.landbots = landbots
 end)
 
 script.on_event(defines.events.on_gui_opened,function(event)
@@ -594,7 +597,7 @@ script.on_event(defines.events.on_gui_opened,function(event)
         if event.entity.name == 'lb-requester-chest' then
 			local player = game.players[event.player_index]
 			request_gui = player.gui.left.add({type = 'frame', name = 'test', direction = 'vertical'})
-			
+
 			request_gui.add({type = 'table', name = 'table', column_count = 5})
 			--request_gui.table.add({type = 'list-box', name = 'list-box', items = {'iron-plate','copper-plate'}})
 			request_gui.table.add({type = 'choose-elem-button', name = 'request_elem_1', elem_type = 'item'})
@@ -620,15 +623,15 @@ script.on_event(defines.events.on_gui_selection_state_changed, function(event)
 	if next(lastclickedunit) ~= nil then
 		local id_num = next(lastclickedunit)
 		if event.element.name == 'outpost-list' then
-			
+
 			local value = event.element.get_item(event.element.selected_index)
 			--log(value)
 			--log(serpent.block(outpost_table))
 			--log(serpent.block(outpost_table[value]))
-			
+
 			caravanroutes[id_num].startpoint.id = outpost_table[value].entity.unit_number
 			caravanroutes[id_num].startpoint.pos = outpost_table[value].entity.position
-			
+
 			caravanroutes[id_num].unit.set_command {type = defines.command.go_to_location, destination = caravanroutes[id_num].startpoint.pos, radius = 4}
 		elseif event.element.name == 'outpost-list-2' then
 			local value = event.element.get_item(event.element.selected_index)
@@ -647,7 +650,7 @@ script.on_event(defines.events.on_gui_value_changed, function(event)
 
 	--log(event.element.name)
 	local s_amount = event.element.slider_value
-	
+
 	if event.element.name == 'request-slider' then
 		--log(serpent.block(event.element.parent.children))
 		event.element.parent['numfield'].text = s_amount
@@ -669,7 +672,7 @@ end)
 script.on_event(defines.events.on_gui_elem_changed, function(event)
 
 	--log(event.element.name)
-	
+
 	if event.element.parent.parent.name == 'test' then
 		--log('request gui')
 		--log(active_chest)
@@ -707,7 +710,7 @@ script.on_event(defines.events.on_gui_closed, function(event)
 	if event.entity ~= nil then
         if event.entity.name == 'lb-requester-chest' then
 			request_gui.destroy()
-			
+
         end
     end
 
@@ -766,7 +769,7 @@ script.on_event(defines.events.on_rocket_launched, function(event)
         end
     end)
 
-function create_caravan_gui(event, entity)
+local function create_caravan_gui(event, entity)
 	--log('did a thing')
 	--log(serpent.block(outpost_table))
 	local player = game.players[event.player_index]
@@ -780,7 +783,7 @@ function create_caravan_gui(event, entity)
 	caravangui.ctable.route_frame.add({type = 'drop-down', name = 'outpost-list', items = names })
 	caravangui.ctable.add({type = 'frame', name = 'route_frame_2', direction = 'vertical',  caption = 'Route End'})
 	caravangui.ctable.route_frame_2.add({type = 'drop-down', name = 'outpost-list-2', items = names })
-	
+
 	caravangui.add({type = 'frame', name = 'caravan_frame_center', direction = 'vertical', caption = 'current inventory'})
 	if caravanroutes[entity.unit_number] ~= nil and caravanroutes[entity.unit_number].inventory.hasitem == true then
 		caravangui.caravan_frame_center.add({type = 'sprite-button', name = 'inventory', sprite = 'item/'..caravanroutes[entity.unit_number].inventory.item, number = caravanroutes[entity.unit_number].inventory.stackamount})
@@ -790,7 +793,7 @@ function create_caravan_gui(event, entity)
 	caravangui.add({type = 'frame', name = 'caravan_frame_right', direction = 'vertical', caption = 'Location'})
 	caravangui.caravan_frame_right.add({type = 'minimap', name = 'minimap', position = entity.position})
 	caravangui.add({type = 'sprite-button', name = 'caravan_close', sprite = 'utility/close_fat'})
-	
+
 end
 
 script.on_event(defines.events.on_player_selected_area, function(event)
@@ -826,7 +829,7 @@ script.on_event(defines.events.on_player_selected_area, function(event)
 				log(serpent.block(lastclickedunit))
 			end
 		end
-	
+
 	end
 
 end)
