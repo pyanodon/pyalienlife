@@ -71,13 +71,14 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'xeno-egg', amount = 1},
+        {type = 'item', name = 'resveratrol', amount = 1},
         {type = 'item', name = 'caged-mukmoux', amount = 1},
         {type = 'item', name = 'gh', amount = 1},
         {type = 'item', name = 'xeno-codex', amount = 1},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
     },
     results = {
-        {type = 'item', name = 'caged-xeno', amount = 1},
+        {type = 'item', name = 'caged-xeno', amount = 2},
     },
     main_product = "caged-xeno",
     subgroup = 'py-alienlife-xeno',

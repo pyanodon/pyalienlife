@@ -183,6 +183,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-xyhiphoe",
+        group = "py-alienlife",
+        order = "e-m"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-plants",
         group = "py-alienlife",
         order = "f"

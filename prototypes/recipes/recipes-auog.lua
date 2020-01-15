@@ -105,7 +105,7 @@ RECIPE {
     name = 'auog-mature-01',
     category = 'creature-chamber',
     enabled = false,
-    energy_required = 70,
+    energy_required = 60,
     ingredients = {
         {type = 'item', name = 'auog-pup', amount = 1},
         {type = 'item', name = 'auog-codex', amount = 1},
@@ -119,6 +119,28 @@ RECIPE {
     subgroup = 'py-alienlife-auog',
     order = 'a',
 }:add_unlock("assisted-embryology")
+
+RECIPE {
+    type = 'recipe',
+    name = 'auog-mature-02',
+    category = 'creature-chamber',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'auog-pup', amount = 1},
+        {type = 'item', name = 'gh', amount = 1},
+        {type = 'item', name = 'auog-codex', amount = 1},
+        {type = 'item', name = 'resveratrol', amount = 1},
+        {type = 'item', name = 'earth-bear-sample', amount = 1},
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'auog', amount = 2},
+    },
+    --main_product = "caged-auog",
+    subgroup = 'py-alienlife-auog',
+    order = 'a',
+}:add_unlock("growth-hormone")
 
 ----adverse products----
 
