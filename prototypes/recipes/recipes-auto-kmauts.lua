@@ -572,7 +572,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='arthropodblood', amount ='R'},
-					{name='meat', amount =3},
+					{name='meat', amount =5},
 				},
 			crafting_speed = 15,
 			tech = 'anabolic-rna',

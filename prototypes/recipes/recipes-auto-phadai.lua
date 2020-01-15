@@ -822,7 +822,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', amount ='R'},
-					{name='meat', amount =6},
+					{name='meat', amount =8},
 				},
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
