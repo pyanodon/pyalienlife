@@ -551,7 +551,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='chitin', amount ='R'},
-					{name='meat', amount =2},
+					{name='meat', amount =4},
 				},
 			crafting_speed = 15,
 			tech = 'anabolic-rna',

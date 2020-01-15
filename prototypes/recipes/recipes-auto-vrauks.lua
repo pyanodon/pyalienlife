@@ -665,7 +665,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bonemeal', amount ='R'},
-					{name='meat', amount =4},
+					{name='meat', amount =6},
 				},
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
