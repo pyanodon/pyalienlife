@@ -17,7 +17,7 @@ ITEM{
     name = "caravan",
     icon = "__pyalienlife__/graphics/icons/caravan.png",
     icon_size = 64,
-    subgroup = "transport",
+    subgroup = "py-containers-warehouse",
     order = "a",
     place_result = "caravan",
     stack_size = 5
