@@ -195,3 +195,80 @@ RECIPE {
         {type = 'item', name = 'charged-auog', amount = 1},
     },
 }:add_unlock("energy-drink")
+
+---UPDATES---
+RECIPE {
+    type = 'recipe',
+    name = 'auog-mk02',
+    category = 'auog',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'auog', amount = 2},
+        {type = 'item', name = 'auog-food-02', amount = 2},
+        {type = 'item', name = 'bedding', amount = 4},
+        {type = 'item', name = 'moss', amount = 10},
+        {type = 'item', name = 'saps', amount = 10},
+        {type = 'item', name = 'water-barrel', amount = 3},
+        },
+    results = {
+        {type = 'item', name = 'auog-mk02', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 3},
+    },
+    --main_product = "auog-mk02",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk02.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-auog',
+    order = 'za'
+}:add_unlock("selective-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'auog-mk03',
+    category = 'auog',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'auog-mk02', amount = 2},
+        {type = 'item', name = 'auog-food-02', amount = 3},
+        {type = 'item', name = 'alien-sample-03', amount = 1},
+        {type = 'item', name = 'bedding', amount = 4},
+        {type = 'item', name = 'moss', amount = 10},
+        {type = 'item', name = 'saps', amount = 10},
+        {type = 'item', name = 'water-barrel', amount = 3},
+        },
+    results = {
+        {type = 'item', name = 'auog-mk03', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 3},
+    },
+    --main_product = "auog-mk03",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk03.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-auog',
+    order = 'zb'
+}:add_unlock("artificial-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'auog-mk04',
+    category = 'auog',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'auog-mk03', amount = 2},
+        {type = 'item', name = 'auog-food-02', amount = 3},
+        {type = 'item', name = 'zinc-finger-proteins', amount = 1},
+        {type = 'item', name = 'moss', amount = 10},
+        {type = 'item', name = 'saps', amount = 10},
+        {type = 'item', name = 'water-barrel', amount = 3},
+        },
+    results = {
+        {type = 'item', name = 'auog-mk04', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 3},
+    },
+    --main_product = "auog-mk04",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk04.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-auog',
+    order = 'zc'
+}:add_unlock("biased-mutation")

@@ -120,7 +120,77 @@ RECIPE {
 
 
 
-----PROCESSING----
+---UPDATES---
+RECIPE {
+    type = 'recipe',
+    name = 'vonix-mk02',
+    category = 'vonix',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'vonix', amount = 2},
+        {type = 'item', name = 'caged-mukmoux', amount = 1},
+        {type = 'item', name = 'guts', amount = 5},
+        {type = 'item', name = 'bedding', amount = 10},
+        {type = 'item', name = 'water-barrel', amount = 15},
+        },
+    results = {
+        {type = 'item', name = 'vonix-mk02', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 15},
+    },
+    --main_product = "vonix-mk02",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk02.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-vonix',
+    order = 'za'
+}:add_unlock("selective-breeding")
 
+RECIPE {
+    type = 'recipe',
+    name = 'vonix-mk03',
+    category = 'vonix',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'vonix-mk02', amount = 2},
+        {type = 'item', name = 'alien-sample-03', amount = 1},
+        {type = 'item', name = 'caged-mukmoux', amount = 1},
+        {type = 'item', name = 'guts', amount = 5},
+        {type = 'item', name = 'bedding', amount = 10},
+        {type = 'item', name = 'water-barrel', amount = 15},
+        },
+    results = {
+        {type = 'item', name = 'vonix-mk03', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 15},
+    },
+    --main_product = "vonix-mk03",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk03.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-vonix',
+    order = 'zb'
+}:add_unlock("artificial-breeding")
 
----caged---
+RECIPE {
+    type = 'recipe',
+    name = 'vonix-mk04',
+    category = 'vonix',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'vonix-mk03', amount = 2},
+        {type = 'item', name = 'zinc-finger-proteins', amount = 1},
+        {type = 'item', name = 'caged-mukmoux', amount = 1},
+        {type = 'item', name = 'guts', amount = 5},
+        {type = 'item', name = 'bedding', amount = 10},
+        {type = 'item', name = 'water-barrel', amount = 15},
+        },
+    results = {
+        {type = 'item', name = 'vonix-mk04', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 15},
+    },
+    --main_product = "vonix-mk04",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk04.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-vonix',
+    order = 'zc'
+}:add_unlock("biased-mutation")

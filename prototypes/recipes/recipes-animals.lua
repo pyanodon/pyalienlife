@@ -186,3 +186,81 @@ RECIPE {
     subgroup = 'py-alienlife-vrauks',
     order = 'a',
 }:add_unlock("growth-hormone")
+
+---UPDATES---
+RECIPE {
+    type = 'recipe',
+    name = 'vrauks-mk02',
+    category = 'vrauks',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'vrauks', amount = 2},
+        {type = 'item', name = 'vrauks-food-01', amount = 2},
+        {type = 'item', name = 'bedding', amount = 4},
+        {type = 'item', name = 'saps', amount = 8},
+        {type = 'item', name = 'biomass', amount = 15},
+        {type = 'item', name = 'water-barrel', amount = 5},
+        },
+    results = {
+        {type = 'item', name = 'vrauks-mk02', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 5},
+    },
+    --main_product = "vrauks-mk02",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk02.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-vrauks',
+    order = 'za'
+}:add_unlock("selective-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'vrauks-mk03',
+    category = 'vrauks',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'vrauks-mk02', amount = 2},
+        {type = 'item', name = 'vrauks-food-02', amount = 3},
+        {type = 'item', name = 'alien-sample-03', amount = 1},
+        {type = 'item', name = 'bedding', amount = 4},
+        {type = 'item', name = 'saps', amount = 8},
+        {type = 'item', name = 'biomass', amount = 15},
+        {type = 'item', name = 'water-barrel', amount = 5},
+        },
+    results = {
+        {type = 'item', name = 'vrauks-mk03', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 5},
+    },
+    --main_product = "vrauks-mk03",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk03.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-vrauks',
+    order = 'zb'
+}:add_unlock("artificial-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'vrauks-mk04',
+    category = 'vrauks',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'vrauks-mk03', amount = 2},
+        {type = 'item', name = 'vrauks-food-02', amount = 3},
+        {type = 'item', name = 'zinc-finger-proteins', amount = 1},
+        {type = 'item', name = 'bedding', amount = 4},
+        {type = 'item', name = 'saps', amount = 8},
+        {type = 'item', name = 'biomass', amount = 15},
+        {type = 'item', name = 'water-barrel', amount = 5},
+        },
+    results = {
+        {type = 'item', name = 'vrauks-mk04', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 5},
+    },
+    --main_product = "vrauks-mk04",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk04.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-vrauks',
+    order = 'zc'
+}:add_unlock("biased-mutation")

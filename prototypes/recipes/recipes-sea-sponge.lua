@@ -80,7 +80,7 @@ RECIPE {
     name = 'sea-sponge-2',
     category = 'sponge',
     enabled = false,
-    energy_required = 70,
+    energy_required = 40,
     ingredients = {
         {type = 'item', name = 'sea-sponge-sprouts', amount = 1},
         {type = 'fluid', name = 'phytoplankton', amount = 40},
@@ -153,7 +153,7 @@ RECIPE {
         {type = 'item', name = 'sea-sponge-mk02', amount = 1},
     },
     results = {
-        {type = 'item', name = 'sea-sponge-sprouts', amount = 2},
+        {type = 'item', name = 'sea-sponge-sprouts', amount = 4},
     },
 }:add_unlock("water-invertebrates-mk01")
 
@@ -167,7 +167,7 @@ RECIPE {
         {type = 'item', name = 'sea-sponge-mk03', amount = 1},
     },
     results = {
-        {type = 'item', name = 'sea-sponge-sprouts', amount = 2},
+        {type = 'item', name = 'sea-sponge-sprouts', amount = 6},
     },
 }:add_unlock("water-invertebrates-mk03")
 
@@ -181,6 +181,75 @@ RECIPE {
         {type = 'item', name = 'sea-sponge-mk04', amount = 1},
     },
     results = {
-        {type = 'item', name = 'sea-sponge-sprouts', amount = 2},
+        {type = 'item', name = 'sea-sponge-sprouts', amount = 8},
     },
 }:add_unlock("water-invertebrates-mk04")
+
+---UPDATES---
+RECIPE {
+    type = 'recipe',
+    name = 'sea-sponge-mk02',
+    category = 'sponge',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'sea-sponge', amount = 2},
+        {type = 'fluid', name = 'phytoplankton', amount = 50},
+        {type = 'fluid', name = 'zogna-bacteria', amount = 100},
+        },
+    results = {
+        {type = 'item', name = 'sea-sponge-mk02', amount = 1, probability = 0.005},
+        {type = 'fluid', name = 'water-saline', amount = 50},
+    },
+    --main_product = "sea-sponge-mk02",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk02.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-sponge',
+    order = 'za'
+}:add_unlock("selective-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'sea-sponge-mk03',
+    category = 'sponge',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'sea-sponge-mk02', amount = 2},
+        {type = 'item', name = 'alien-sample-03', amount = 1},
+        {type = 'fluid', name = 'phytoplankton', amount = 50},
+        {type = 'fluid', name = 'zogna-bacteria', amount = 100},
+        },
+    results = {
+        {type = 'item', name = 'sea-sponge-mk03', amount = 1, probability = 0.005},
+        {type = 'fluid', name = 'water-saline', amount = 50},
+    },
+    --main_product = "sea-sponge-mk03",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk03.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-sponge',
+    order = 'zb'
+}:add_unlock("artificial-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'sea-sponge-mk04',
+    category = 'sponge',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'sea-sponge-mk03', amount = 2},
+        {type = 'item', name = 'zinc-finger-proteins', amount = 1},
+        {type = 'fluid', name = 'phytoplankton', amount = 50},
+        {type = 'fluid', name = 'zogna-bacteria', amount = 100},
+        },
+    results = {
+        {type = 'item', name = 'sea-sponge-mk04', amount = 1, probability = 0.005},
+        {type = 'fluid', name = 'water-saline', amount = 50},
+    },
+    --main_product = "sea-sponge-mk04",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk04.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-sponge',
+    order = 'zc'
+}:add_unlock("biased-mutation")

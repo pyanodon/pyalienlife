@@ -5,7 +5,8 @@ fun.autorecipes {
     name = 'navens',
 	--baseitem = 'ralesia',
 	category = 'navens',
-	--module_limitations = 'fawogae',
+	subgroup = 'py-alienlife-navens',
+	order = 'b',
     mats =
 	{
     --green

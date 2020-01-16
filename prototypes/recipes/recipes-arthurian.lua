@@ -206,3 +206,78 @@ RECIPE {
     },
     main_product = "arthurian",
 }:add_unlock("arthurian")
+
+---UPDATES---
+RECIPE {
+    type = 'recipe',
+    name = 'arthurian-mk02',
+    category = 'arthurian',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'arthurian', amount = 2},
+        {type = 'item', name = 'caged-ulric', amount = 1},
+        {type = 'item', name = 'bedding', amount = 3},
+        {type = 'item', name = 'cocoon', amount = 2},
+        {type = 'item', name = 'water-barrel', amount = 4},
+        },
+    results = {
+        {type = 'item', name = 'arthurian-mk02', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 4},
+    },
+    --main_product = "arthurian-mk02",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk02.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-arthurian',
+    order = 'za'
+}:add_unlock("selective-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'arthurian-mk03',
+    category = 'arthurian',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'arthurian-mk02', amount = 2},
+        {type = 'item', name = 'alien-sample-03', amount = 1},
+        {type = 'item', name = 'caged-ulric', amount = 1},
+        {type = 'item', name = 'bedding', amount = 3},
+        {type = 'item', name = 'cocoon', amount = 2},
+        {type = 'item', name = 'water-barrel', amount = 4},
+        },
+    results = {
+        {type = 'item', name = 'arthurian-mk03', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 4},
+    },
+    --main_product = "arthurian-mk03",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk03.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-arthurian',
+    order = 'zb'
+}:add_unlock("artificial-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'arthurian-mk04',
+    category = 'arthurian',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'arthurian-mk03', amount = 2},
+        {type = 'item', name = 'zinc-finger-proteins', amount = 1},
+        {type = 'item', name = 'caged-ulric', amount = 1},
+        {type = 'item', name = 'bedding', amount = 3},
+        {type = 'item', name = 'cocoon', amount = 2},
+        {type = 'item', name = 'water-barrel', amount = 4},
+        },
+    results = {
+        {type = 'item', name = 'arthurian-mk04', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 4},
+    },
+    --main_product = "arthurian-mk04",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk04.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-arthurian',
+    order = 'zc'
+}:add_unlock("biased-mutation")

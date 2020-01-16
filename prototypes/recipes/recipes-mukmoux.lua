@@ -189,3 +189,82 @@ RECIPE {
     },
     main_product = "mukmoux",
 }:add_unlock("mukmoux")
+
+
+---UPDATES---
+RECIPE {
+    type = 'recipe',
+    name = 'mukmoux-mk02',
+    category = 'mukmoux',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'mukmoux', amount = 2},
+        {type = 'item', name = 'mukmoux-food-02', amount = 2},
+        {type = 'item', name = 'bedding', amount = 4},
+        {type = 'item', name = 'salt', amount = 10},
+        {type = 'item', name = 'fawogae', amount = 10},
+        {type = 'item', name = 'water-barrel', amount = 6},
+        },
+    results = {
+        {type = 'item', name = 'mukmoux-mk02', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 6},
+    },
+    --main_product = "mukmoux-mk02",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk02.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-mukmoux',
+    order = 'za'
+}:add_unlock("selective-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'mukmoux-mk03',
+    category = 'mukmoux',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'mukmoux-mk02', amount = 2},
+        {type = 'item', name = 'alien-sample-03', amount = 1},
+        {type = 'item', name = 'mukmoux-food-02', amount = 3},
+        {type = 'item', name = 'bedding', amount = 4},
+        {type = 'item', name = 'salt', amount = 10},
+        {type = 'item', name = 'fawogae', amount = 10},
+        {type = 'item', name = 'water-barrel', amount = 6},
+        },
+    results = {
+        {type = 'item', name = 'mukmoux-mk03', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 6},
+    },
+    --main_product = "mukmoux-mk03",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk03.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-mukmoux',
+    order = 'zb'
+}:add_unlock("artificial-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'mukmoux-mk04',
+    category = 'mukmoux',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'mukmoux-mk03', amount = 2},
+        {type = 'item', name = 'zinc-finger-proteins', amount = 1},
+        {type = 'item', name = 'mukmoux-food-02', amount = 3},
+        {type = 'item', name = 'bedding', amount = 4},
+        {type = 'item', name = 'salt', amount = 10},
+        {type = 'item', name = 'fawogae', amount = 10},
+        {type = 'item', name = 'water-barrel', amount = 6},
+        },
+    results = {
+        {type = 'item', name = 'mukmoux-mk04', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 6},
+    },
+    --main_product = "mukmoux-mk04",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk04.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-mukmoux',
+    order = 'zc'
+}:add_unlock("biased-mutation")

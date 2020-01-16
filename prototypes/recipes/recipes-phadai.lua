@@ -196,3 +196,84 @@ RECIPE {
     },
     main_product = "phadai",
 }:add_unlock("phadai")
+
+---UPDATES---
+RECIPE {
+    type = 'recipe',
+    name = 'phadai-mk02',
+    category = 'phadai',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'phadai', amount = 2},
+        {type = 'item', name = 'phadai-food-02', amount = 1},
+        {type = 'item', name = 'programmable-speaker', amount = 3},
+        {type = 'item', name = 'energy-drink', amount = 2},
+        {type = 'item', name = 'small-lamp', amount = 5},
+        {type = 'item', name = 'water-barrel', amount = 7},
+        {type = 'item', name = 'meat', amount = 5},
+        },
+    results = {
+        {type = 'item', name = 'phadai-mk02', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 7},
+    },
+    --main_product = "phadai-mk02",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk02.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-phadai',
+    order = 'za'
+}:add_unlock("selective-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'phadai-mk03',
+    category = 'phadai',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'phadai-mk02', amount = 2},
+        {type = 'item', name = 'alien-sample-03', amount = 1},
+        {type = 'item', name = 'phadai-food-02', amount = 1},
+        {type = 'item', name = 'programmable-speaker', amount = 3},
+        {type = 'item', name = 'energy-drink', amount = 2},
+        {type = 'item', name = 'small-lamp', amount = 5},
+        {type = 'item', name = 'water-barrel', amount = 7},
+        {type = 'item', name = 'meat', amount = 5},
+        },
+    results = {
+        {type = 'item', name = 'phadai-mk03', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 7},
+    },
+    --main_product = "phadai-mk03",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk03.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-phadai',
+    order = 'zb'
+}:add_unlock("artificial-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'phadai-mk04',
+    category = 'phadai',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'phadai-mk03', amount = 2},
+        {type = 'item', name = 'zinc-finger-proteins', amount = 1},
+        {type = 'item', name = 'phadai-food-02', amount = 1},
+        {type = 'item', name = 'programmable-speaker', amount = 3},
+        {type = 'item', name = 'energy-drink', amount = 2},
+        {type = 'item', name = 'small-lamp', amount = 5},
+        {type = 'item', name = 'water-barrel', amount = 7},
+        {type = 'item', name = 'meat', amount = 5},
+        },
+    results = {
+        {type = 'item', name = 'phadai-mk04', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 7},
+    },
+    --main_product = "phadai-mk04",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk04.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-phadai',
+    order = 'zc'
+}:add_unlock("biased-mutation")

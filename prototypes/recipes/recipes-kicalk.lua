@@ -94,3 +94,81 @@ RECIPE {
         {type = 'item', name = 'replicator-kicalk', amount = 1},
     },
 }:add_unlock("mega-farm-kicalk"):add_ingredient({type = "item", name = "nems", amount = 10}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10})
+
+---UPDATES---
+RECIPE {
+    type = 'recipe',
+    name = 'kicalk-mk02',
+    category = 'kicalk',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'kicalk', amount = 2},
+        {type = 'item', name = 'kicalk-seeds', amount = 10},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 300},
+        {type = 'item', name = 'clay', amount = 10},
+        {type = 'item', name = 'small-lamp', amount = 5},
+        {type = 'fluid', name = 'water', amount = 1000},
+        },
+    results = {
+        {type = 'item', name = 'kicalk-mk02', amount = 1, probability = 0.005},
+        --{type = 'item', name = 'empty-barrel', amount = 7},
+    },
+    main_product = "kicalk-mk02",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk02.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-kicalk',
+    order = 'za'
+}:add_unlock("selective-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'kicalk-mk03',
+    category = 'kicalk',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'kicalk-mk02', amount = 2},
+        {type = 'item', name = 'alien-sample-03', amount = 1},
+        {type = 'item', name = 'kicalk-seeds', amount = 10},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 300},
+        {type = 'item', name = 'clay', amount = 10},
+        {type = 'item', name = 'small-lamp', amount = 5},
+        {type = 'fluid', name = 'water', amount = 1000},
+        },
+    results = {
+        {type = 'item', name = 'kicalk-mk03', amount = 1, probability = 0.005},
+        --{type = 'item', name = 'empty-barrel', amount = 7},
+    },
+    --main_product = "kicalk-mk03",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk03.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-kicalk',
+    order = 'zb'
+}:add_unlock("artificial-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'kicalk-mk04',
+    category = 'kicalk',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'kicalk-mk03', amount = 2},
+        {type = 'item', name = 'zinc-finger-proteins', amount = 1},
+        {type = 'item', name = 'kicalk-seeds', amount = 10},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 300},
+        {type = 'item', name = 'clay', amount = 10},
+        {type = 'item', name = 'small-lamp', amount = 5},
+        {type = 'fluid', name = 'water', amount = 1000},
+        },
+    results = {
+        {type = 'item', name = 'kicalk-mk04', amount = 1, probability = 0.005},
+        --{type = 'item', name = 'empty-barrel', amount = 7},
+    },
+    --main_product = "kicalk-mk04",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk04.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-kicalk',
+    order = 'zc'
+}:add_unlock("biased-mutation")

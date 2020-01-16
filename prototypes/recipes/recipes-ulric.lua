@@ -187,51 +187,6 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'caged-ulric-mk02',
-    category = 'crafting',
-    enabled = false,
-    energy_required = 0.5,
-    ingredients = {
-        {type = 'item', name = 'ulric-mk02', amount = 1},
-        {type = 'item', name = 'cage', amount = 1},
-    },
-    results = {
-        {type = 'item', name = 'caged-ulric', amount = 1},
-    },
-}:add_unlock("selective-breeding")
-
-RECIPE {
-    type = 'recipe',
-    name = 'caged-ulric-mk03',
-    category = 'crafting',
-    enabled = false,
-    energy_required = 0.5,
-    ingredients = {
-        {type = 'item', name = 'ulric-mk03', amount = 1},
-        {type = 'item', name = 'cage', amount = 1},
-    },
-    results = {
-        {type = 'item', name = 'caged-ulric', amount = 1},
-    },
-}:add_unlock("artificial-breeding")
-
-RECIPE {
-    type = 'recipe',
-    name = 'caged-ulric-mk04',
-    category = 'crafting',
-    enabled = false,
-    energy_required = 0.5,
-    ingredients = {
-        {type = 'item', name = 'ulric-mk04', amount = 1},
-        {type = 'item', name = 'cage', amount = 1},
-    },
-    results = {
-        {type = 'item', name = 'caged-ulric', amount = 1},
-    },
-}:add_unlock("biased-mutation")
-
-RECIPE {
-    type = 'recipe',
     name = 'uncaged-ulric',
     category = 'crafting',
     enabled = false,
@@ -245,3 +200,80 @@ RECIPE {
     },
     main_product = "ulric",
 }:add_unlock("ulric")
+
+
+---UPDATES---
+RECIPE {
+    type = 'recipe',
+    name = 'ulric-mk02',
+    category = 'ulric',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'ulric', amount = 2},
+        {type = 'item', name = 'ulric-food-02', amount = 2},
+        {type = 'item', name = 'bedding', amount = 4},
+        {type = 'item', name = 'raw-fiber', amount = 6},
+        {type = 'item', name = 'water-barrel', amount = 7},
+        },
+    results = {
+        {type = 'item', name = 'ulric-mk02', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 7},
+    },
+    --main_product = "ulric-mk02",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk02.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-ulric',
+    order = 'za'
+}:add_unlock("selective-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'ulric-mk03',
+    category = 'ulric',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'ulric-mk02', amount = 2},
+        {type = 'item', name = 'alien-sample-03', amount = 1},
+        {type = 'item', name = 'ulric-food-02', amount = 3},
+        {type = 'item', name = 'bedding', amount = 4},
+        {type = 'item', name = 'raw-fiber', amount = 6},
+        {type = 'item', name = 'water-barrel', amount = 7},
+        },
+    results = {
+        {type = 'item', name = 'ulric-mk03', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 7},
+    },
+    --main_product = "ulric-mk03",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk03.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-ulric',
+    order = 'zb'
+}:add_unlock("artificial-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'ulric-mk04',
+    category = 'ulric',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'ulric-mk03', amount = 2},
+        {type = 'item', name = 'zinc-finger-proteins', amount = 1},
+        {type = 'item', name = 'ulric-food-02', amount = 3},
+        {type = 'item', name = 'bedding', amount = 4},
+        {type = 'item', name = 'raw-fiber', amount = 6},
+        {type = 'item', name = 'water-barrel', amount = 7},
+        },
+    results = {
+        {type = 'item', name = 'ulric-mk04', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 7},
+    },
+    --main_product = "ulric-mk04",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk04.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-ulric',
+    order = 'zc'
+}:add_unlock("biased-mutation")
+
