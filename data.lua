@@ -67,6 +67,7 @@ require('prototypes/technologies/vrauks')
 require('prototypes/technologies/energy-drink')
 require('prototypes/technologies/interactive-cognition')
 require('prototypes/technologies/exercises')
+require('prototypes/technologies/osteocyte')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -370,6 +371,8 @@ require('prototypes/recipes/recipes-auto-brains')
 require('prototypes/recipes/recipes-auto-brains-2')
 require('prototypes/recipes/recipes-auto-meat-1')
 require('prototypes/recipes/recipes-auto-meat-2')
+require('prototypes/recipes/recipes-auto-bone-1')
+require('prototypes/recipes/recipes-auto-bone-2')
 
 --(( ORES ))--
 require('prototypes/ores/ralesia')

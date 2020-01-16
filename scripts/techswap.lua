@@ -177,12 +177,40 @@ local TRlist = {
     {tech = 'myostatin', oldrecipe = 'Extract zipir Meat-1', newrecipe = 'Extract zipir Meat-2'},
     {tech = 'myostatin', oldrecipe = 'Extract meat from Improved Zipir', newrecipe = 'Extract meat from Improved Zipir-2'},
 
+--bone 1--
+    {tech = 'osteocyte', oldrecipe = 'Extract arthurian bones', newrecipe = 'Extract arthurian bones-1'},
+    {tech = 'osteocyte', oldrecipe = 'Extract auog bones', newrecipe = 'Extract auog bones-1'},
+    {tech = 'osteocyte', oldrecipe = 'Extract dingrits bones', newrecipe = 'Extract dingrits bones-1'},
+    {tech = 'osteocyte', oldrecipe = 'Extract Mukmoux bones', newrecipe = 'Extract Mukmoux bones-1'},
+    {tech = 'osteocyte', oldrecipe = 'Extract phadai bones', newrecipe = 'Extract phadai bones-1'},
+    {tech = 'osteocyte', oldrecipe = 'Extract phagnot bones', newrecipe = 'Extract phagnot bones-1'},
+    {tech = 'osteocyte', oldrecipe = 'Extract scrondrix bones', newrecipe = 'Extract scrondrix bones-1'},
+    {tech = 'osteocyte', oldrecipe = 'Extract Trits bones', newrecipe = 'Extract Trits bones-1'},
+    {tech = 'osteocyte', oldrecipe = 'Extract Ulric bones', newrecipe = 'Extract Ulric bones-1'},
+    {tech = 'osteocyte', oldrecipe = 'Extract Xeno bones', newrecipe = 'Extract Xeno bones-1'},
+
+--bone 2--
+    {tech = 'hardened-bone', oldrecipe = 'Extract arthurian bones-1', newrecipe = 'Extract arthurian bones-2'},
+    {tech = 'hardened-bone', oldrecipe = 'Extract bones from Improved arthurians', newrecipe = 'Extract bones from Improved arthurians-2'},
+    {tech = 'hardened-bone', oldrecipe = 'Extract auog bones-1', newrecipe = 'Extract auog bones-2'},
+    {tech = 'hardened-bone', oldrecipe = 'Extract bones from Improved auogs', newrecipe = 'Extract bones from Improved auogs-2'},
+    {tech = 'hardened-bone', oldrecipe = 'Extract dingrits bones-1', newrecipe = 'Extract dingrits bones-2'},
+    {tech = 'hardened-bone', oldrecipe = 'Extract bones from Improved dingrits', newrecipe = 'Extract bones from Improved dingrits-2'},
+    {tech = 'hardened-bone', oldrecipe = 'Extract Mukmoux bones-1', newrecipe = 'Extract Mukmoux bones-2'},
+    {tech = 'hardened-bone', oldrecipe = 'Extract bones from Improved Mukmouxs', newrecipe = 'Extract bones from Improved Mukmouxs-2'},
+    {tech = 'hardened-bone', oldrecipe = 'Extract phadai bones-1', newrecipe = 'Extract phadai bones-2'},
+    {tech = 'hardened-bone', oldrecipe = 'Extract bones from Improved phadais', newrecipe = 'Extract bones from Improved phadais-2'},
+    {tech = 'hardened-bone', oldrecipe = 'Extract phagnot bones-1', newrecipe = 'Extract phagnot bones-2'},
+    {tech = 'hardened-bone', oldrecipe = 'Extract bones from Improved phagnots', newrecipe = 'Extract bones from Improved phagnots-2'},
+    {tech = 'hardened-bone', oldrecipe = 'Extract scrondrix bones-1', newrecipe = 'Extract scrondrix bones-2'},
+    {tech = 'hardened-bone', oldrecipe = 'Extract bones from Improved scrondrixs', newrecipe = 'Extract bones from Improved scrondrixs-2'},
+    {tech = 'hardened-bone', oldrecipe = 'Extract Trits bones-1', newrecipe = 'Extract Trits bones-2'},
+    {tech = 'hardened-bone', oldrecipe = 'Extract bones from Improved Trits', newrecipe = 'Extract bones from Improved Trits-2'},
+    {tech = 'hardened-bone', oldrecipe = 'Extract Ulric bones-1', newrecipe = 'Extract Ulric bones-2'},
+    {tech = 'hardened-bone', oldrecipe = 'Extract bones from Improved Ulrics', newrecipe = 'Extract bones from Improved Ulrics-2'},
+    {tech = 'hardened-bone', oldrecipe = 'Extract Xeno bones-1', newrecipe = 'Extract Xeno bones-2'},
+    {tech = 'hardened-bone', oldrecipe = 'Extract bones from Improved xenos', newrecipe = 'Extract bones from Improved xenos-2'},
 }
-
---substituir a segunda do brains 1 pela brains 2
---Remover nanochondria do brains 1
---Corrigir nomes de alguns..checar um por um... :/
-
 
 
 --tech: the tech that is required to be researched for the new recipe

@@ -702,7 +702,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='bones', amount =3},
+					{name='bones', amount =5},
 				},
 			crafting_speed = 15,
 			tech = 'bmp',
