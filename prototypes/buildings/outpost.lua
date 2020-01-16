@@ -18,7 +18,7 @@
         icon_size = 64,
         flags = {},
         subgroup = "py-containers-warehouse",
-        order = a,
+        order = "a",
         place_result = 'outpost',
         stack_size = 15
     }

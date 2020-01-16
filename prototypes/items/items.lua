@@ -6272,6 +6272,35 @@ data:extend(
 		alt_selection_mode = {"same-force"},
 		selection_cursor_box_type = "copy",
 		alt_selection_cursor_box_type = "entity"
-	}
+	},
+	{
+        type = 'shortcut',
+        name = 'auog-selector',
+        order = "a[yarm]",
+        action = 'create-blueprint-item',
+        item_to_create = 'unit-controller',
+        style = 'green',
+        icon = {
+            filename = '__pyalienlife__/graphics/icons/carrot_on_a_stick.png',
+            priority = 'extra-high-no-scale',
+            size = 64,
+            scale = 1,
+            flags = {'icon'},
+        },
+        small_icon = {
+            filename = '__pyalienlife__/graphics/icons/carrot_on_a_stick.png',
+            priority = 'extra-high-no-scale',
+            size = 64,
+            scale = 1,
+            flags = {'icon'},
+        },
+        disabled_small_icon = {
+            filename = '__pyalienlife__/graphics/icons/carrot_on_a_stick.png',
+            priority = 'extra-high-no-scale',
+            size = 64,
+            scale = 1,
+            flags = {'icon'},
+        },
+    },
 }
 )

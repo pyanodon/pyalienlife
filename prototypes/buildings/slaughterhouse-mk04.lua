@@ -28,14 +28,8 @@ ITEM {
     stack_size = 10
 }
 
-local machinetype = 'assembling-machine'
-
-if settings.startup['suicide-booth'].value then
-	machinetype = 'furnace'
-end
-
 ENTITY {
-    type = machinetype,
+    type = 'assembling-machine',
     name = "slaughterhouse-mk04",
     icon = "__pyalienlife__/graphics/icons/slaughterhouse-mk04.png",
 	icon_size = 64,
@@ -187,8 +181,3 @@ ENTITY {
         apparent_volume = 2.5
     }
 }
-
-if settings.startup['suicide-booth'].value then
-	data.raw.furnace['slaughterhouse-mk04'].source_inventory_size = 1
-    data.raw.furnace['slaughterhouse-mk04'].result_inventory_size = 6
-end

@@ -39,6 +39,7 @@ local outpost_table = {}
 
 --gui
 local caravangui
+local hascarguiopen = false
 
 --[[
 caravan routes table =
@@ -159,12 +160,21 @@ global.landbots =
 
 script.on_init(
     function()
-        global.landbots = {}
-        global.caravanroutes = {}
+        global.landbots = landbots
+        global.caravanroutes = caravanroutes
 		global.caravan_unit_numbers = {}
+		remote.call("silo_script","set_no_victory", true)
     end)
+	
+script.on_load(function(event)
+
+landbots = global.landbots
+caravanroutes = global.caravanroutes
+
+end)
 
 script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity}, function(event)
+		landbots = global.landbots
         local E = event.created_entity
         --log(E.name)
 		--log(serpent.block(landbots))
@@ -378,6 +388,8 @@ end
 end
 
 script.on_event(defines.events.on_ai_command_completed, function(event)
+	caravanroutes = global.caravanroutes
+	landbots = global.landbots
 	--log('hit')
 		--log(event.result)
 		--log(serpent.block(landbots))
@@ -529,18 +541,25 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 				}
 			end
 		end
+		global.caravanroutes = caravanroutes
 		global.landbots = landbots
     end)
 
 script.on_nth_tick(5, function(event)
 --log('hit')
+	caravanroutes = global.caravanroutes
+	landbots = global.landbots
 
 	ai(event)
 
+	global.caravanroutes = caravanroutes
 	global.landbots = landbots
 end)
 
 script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity},function(event)
+
+	landbots = global.landbots
+	caravanroutes = global.caravanroutes
 
 	if event.entity.name == 'lb-control-tower' then
 		for t, tower in pairs(landbots.towers) do
@@ -588,6 +607,7 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 	end
 
 	global.landbots = landbots
+	global.caravanroutes = caravanroutes
 end)
 
 script.on_event(defines.events.on_gui_opened,function(event)
@@ -617,6 +637,7 @@ end)
 
 script.on_event(defines.events.on_gui_selection_state_changed, function(event)
 
+	caravanroutes = global.caravanroutes
 	--log(serpent.block(caravanroutes))
 	--log(event.element.selected_index)
 	--log(serpent.block(next(lastclickedunit)))
@@ -644,10 +665,13 @@ script.on_event(defines.events.on_gui_selection_state_changed, function(event)
 		end
 	end
 	--log(serpent.block(caravanroutes))
+	global.caravanroutes = caravanroutes
 
 end)
 
 script.on_event(defines.events.on_gui_value_changed, function(event)
+	
+	landbots = global.landbots
 
 	--log(event.element.name)
 	local s_amount = event.element.slider_value
@@ -667,11 +691,13 @@ script.on_event(defines.events.on_gui_value_changed, function(event)
 			landbots.requesterchests[active_chest].request_slots[5].amount = s_amount
 		end
 	end
-
+	
+	global.landbots = landbots
 end)
 
 script.on_event(defines.events.on_gui_elem_changed, function(event)
 
+	landbots = global.landbots
 	--log(event.element.name)
 
 	if event.element.parent.parent.name == 'test' then
@@ -694,13 +720,14 @@ script.on_event(defines.events.on_gui_elem_changed, function(event)
 		end
 		--log(serpent.block(landbots.requesterchests[active_chest]))
 	end
-
+	global.landbots = landbots
 end)
 
 script.on_event(defines.events.on_gui_click, function(event)
 
 	if event.element.name == 'caravan_close' then
 		caravangui.destroy()
+		hascarguiopen = false
 		lastclickedunit = {}
 	end
 
@@ -794,16 +821,18 @@ local function create_caravan_gui(event, entity)
 	caravangui.add({type = 'frame', name = 'caravan_frame_right', direction = 'vertical', caption = 'Location'})
 	caravangui.caravan_frame_right.add({type = 'minimap', name = 'minimap', position = entity.position})
 	caravangui.add({type = 'sprite-button', name = 'caravan_close', sprite = 'utility/close_fat'})
-
+	hascarguiopen = true
 end
 
 script.on_event(defines.events.on_player_selected_area, function(event)
+
+	caravanroutes = global.caravanroutes
 
 	if event.item == 'unit-controller' then
 		for e, ent in pairs(event.entities) do
 			--log(serpent.block(ent.name))
 			--log('did a thing here')
-			if ent.name == 'caravan' then
+			if ent.name == 'caravan' and hascarguiopen == false then
 				create_caravan_gui(event, ent)
 				lastclickedunit[ent.unit_number] = ent
 				local newroute = {
@@ -832,5 +861,14 @@ script.on_event(defines.events.on_player_selected_area, function(event)
 		end
 
 	end
+	
+	global.caravanroutes = caravanroutes
+
+end)
+
+--added 3d trees to bio reserve and remove depleted resource trees
+script.on_event(defines.events.on_resource_depleted, function(event)
+
+	local resourcetrees = game.surfaces['nauvis'].find_entities_filtered{position = event.entity.position, name = event.entity.name
 
 end)
