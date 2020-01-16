@@ -148,3 +148,81 @@ RECIPE {
     },
     main_product = "scrondrix",
 }:add_unlock("scrondrix")
+
+---UPDATES---
+RECIPE {
+    type = 'recipe',
+    name = 'scrondrix-mk02',
+    category = 'scrondrix',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'scrondrix', amount = 2},
+        {type = 'item', name = 'meat', amount = 5},
+        {type = 'item', name = 'bedding', amount = 4},
+        {type = 'item', name = 'salt', amount = 10},
+        {type = 'item', name = 'wood-seeds', amount = 10},
+        {type = 'item', name = 'water-barrel', amount = 8},
+        },
+    results = {
+        {type = 'item', name = 'scrondrix-mk02', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 8},
+    },
+    --main_product = "scrondrix-mk02",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk02.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-scrondrix',
+    order = 'za'
+}:add_unlock("selective-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'scrondrix-mk03',
+    category = 'scrondrix',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'scrondrix-mk02', amount = 2},
+        {type = 'item', name = 'alien-sample-03', amount = 1},
+        {type = 'item', name = 'meat', amount = 5},
+        {type = 'item', name = 'bedding', amount = 4},
+        {type = 'item', name = 'salt', amount = 10},
+        {type = 'item', name = 'wood-seeds', amount = 10},
+        {type = 'item', name = 'water-barrel', amount = 8},
+        },
+    results = {
+        {type = 'item', name = 'scrondrix-mk03', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 8},
+    },
+    --main_product = "scrondrix-mk03",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk03.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-scrondrix',
+    order = 'zb'
+}:add_unlock("artificial-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'scrondrix-mk04',
+    category = 'scrondrix',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'scrondrix-mk03', amount = 2},
+        {type = 'item', name = 'zinc-finger-proteins', amount = 1},
+        {type = 'item', name = 'meat', amount = 5},
+        {type = 'item', name = 'bedding', amount = 4},
+        {type = 'item', name = 'salt', amount = 10},
+        {type = 'item', name = 'wood-seeds', amount = 10},
+        {type = 'item', name = 'water-barrel', amount = 8},
+        },
+    results = {
+        {type = 'item', name = 'scrondrix-mk04', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 8},
+    },
+    --main_product = "scrondrix-mk04",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk04.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-scrondrix',
+    order = 'zc'
+}:add_unlock("biased-mutation")

@@ -125,3 +125,82 @@ RECIPE {
     },
     main_product = "xeno",
 }:add_unlock("xeno")
+
+
+---UPDATES---
+RECIPE {
+    type = 'recipe',
+    name = 'xeno-mk02',
+    category = 'xeno',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'xeno', amount = 2},
+        {type = 'item', name = 'caged-mukmoux', amount = 1},
+        {type = 'item', name = 'bedding', amount = 4},
+        {type = 'item', name = 'bones', amount = 10},
+        {type = 'item', name = 'fish', amount = 10},
+        {type = 'item', name = 'water-barrel', amount = 6},
+        },
+    results = {
+        {type = 'item', name = 'xeno-mk02', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 6},
+    },
+    --main_product = "xeno-mk02",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk02.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-xeno',
+    order = 'za'
+}:add_unlock("selective-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'xeno-mk03',
+    category = 'xeno',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'xeno-mk02', amount = 2},
+        {type = 'item', name = 'alien-sample-03', amount = 1},
+        {type = 'item', name = 'caged-mukmoux', amount = 1},
+        {type = 'item', name = 'bedding', amount = 4},
+        {type = 'item', name = 'bones', amount = 10},
+        {type = 'item', name = 'fish', amount = 10},
+        {type = 'item', name = 'water-barrel', amount = 6},
+        },
+    results = {
+        {type = 'item', name = 'xeno-mk03', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 6},
+    },
+    --main_product = "xeno-mk03",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk03.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-xeno',
+    order = 'zb'
+}:add_unlock("artificial-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'xeno-mk04',
+    category = 'xeno',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'xeno-mk03', amount = 2},
+        {type = 'item', name = 'zinc-finger-proteins', amount = 1},
+        {type = 'item', name = 'caged-mukmoux', amount = 1},
+        {type = 'item', name = 'bedding', amount = 4},
+        {type = 'item', name = 'bones', amount = 10},
+        {type = 'item', name = 'fish', amount = 10},
+        {type = 'item', name = 'water-barrel', amount = 6},
+        },
+    results = {
+        {type = 'item', name = 'xeno-mk04', amount = 1, probability = 0.005},
+        {type = 'item', name = 'empty-barrel', amount = 6},
+    },
+    --main_product = "xeno-mk04",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk04.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-xeno',
+    order = 'zc'
+}:add_unlock("biased-mutation")

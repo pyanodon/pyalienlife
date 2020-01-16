@@ -137,3 +137,81 @@ RECIPE {
         {type = 'item', name = 'replicator-cadaveric-arum', amount = 1},
     },
 }:add_unlock("mega-farm-cadaveric-arum"):add_ingredient({type = "item", name = "nems", amount = 10}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10})
+
+---UPDATES---
+RECIPE {
+    type = 'recipe',
+    name = 'cadaveric-arum-mk02',
+    category = 'arum',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'cadaveric-arum', amount = 2},
+        {type = 'item', name = 'cadaveric-arum-seeds', amount = 10},
+        {type = 'fluid', name = 'coal-gas', amount = 500},
+        {type = 'item', name = 'fertilizer', amount = 10},
+        {type = 'item', name = 'ash', amount = 20},
+        {type = 'fluid', name = 'water', amount = 1000},
+        },
+    results = {
+        {type = 'item', name = 'cadaveric-arum-mk02-a', amount = 1, probability = 0.005},
+        --{type = 'item', name = 'empty-barrel', amount = 7},
+    },
+    --main_product = "cadaveric-arum-mk02",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk02.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-cadaveric',
+    order = 'za'
+}:add_unlock("selective-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'cadaveric-arum-mk03',
+    category = 'arum',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'cadaveric-arum-mk02', amount = 2},
+        {type = 'item', name = 'alien-sample-03', amount = 1},
+        {type = 'item', name = 'cadaveric-arum-seeds', amount = 10},
+        {type = 'fluid', name = 'coal-gas', amount = 500},
+        {type = 'item', name = 'fertilizer', amount = 10},
+        {type = 'item', name = 'ash', amount = 20},
+        {type = 'fluid', name = 'water', amount = 1000},
+        },
+    results = {
+        {type = 'item', name = 'cadaveric-arum-mk03-a', amount = 1, probability = 0.005},
+        --{type = 'item', name = 'empty-barrel', amount = 7},
+    },
+    --main_product = "cadaveric-arum-mk03",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk03.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-cadaveric',
+    order = 'zb'
+}:add_unlock("artificial-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'cadaveric-arum-mk04',
+    category = 'arum',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'cadaveric-arum-mk03', amount = 2},
+        {type = 'item', name = 'zinc-finger-proteins', amount = 1},
+        {type = 'item', name = 'cadaveric-arum-seeds', amount = 10},
+        {type = 'fluid', name = 'coal-gas', amount = 500},
+        {type = 'item', name = 'fertilizer', amount = 10},
+        {type = 'item', name = 'ash', amount = 20},
+        {type = 'fluid', name = 'water', amount = 1000},
+        },
+    results = {
+        {type = 'item', name = 'cadaveric-arum-mk04-a', amount = 1, probability = 0.005},
+        --{type = 'item', name = 'empty-barrel', amount = 7},
+    },
+    --main_product = "cadaveric-arum-mk04",
+    icon = '__pyalienlife__/graphics/icons/evolution-mk04.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-cadaveric',
+    order = 'zc'
+}:add_unlock("biased-mutation")

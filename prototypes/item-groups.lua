@@ -189,6 +189,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-sponge",
+        group = "py-alienlife",
+        order = "e-n"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-plants",
         group = "py-alienlife",
         order = "f"
@@ -264,6 +270,18 @@ data:extend {
         name = "py-alienlife-fawogae",
         group = "py-alienlife",
         order = "g-b"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-navens",
+        group = "py-alienlife",
+        order = "g-c"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-yaedols",
+        group = "py-alienlife",
+        order = "g-d"
     },
     {
         type = "item-subgroup",
