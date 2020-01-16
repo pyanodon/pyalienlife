@@ -165,7 +165,7 @@ script.on_init(
 		global.caravan_unit_numbers = {}
 		remote.call("silo_script","set_no_victory", true)
     end)
-	
+
 script.on_load(function(event)
 
 landbots = global.landbots
@@ -670,7 +670,7 @@ script.on_event(defines.events.on_gui_selection_state_changed, function(event)
 end)
 
 script.on_event(defines.events.on_gui_value_changed, function(event)
-	
+
 	landbots = global.landbots
 
 	--log(event.element.name)
@@ -691,7 +691,7 @@ script.on_event(defines.events.on_gui_value_changed, function(event)
 			landbots.requesterchests[active_chest].request_slots[5].amount = s_amount
 		end
 	end
-	
+
 	global.landbots = landbots
 end)
 
@@ -861,7 +861,7 @@ script.on_event(defines.events.on_player_selected_area, function(event)
 		end
 
 	end
-	
+
 	global.caravanroutes = caravanroutes
 
 end)
@@ -869,6 +869,6 @@ end)
 --added 3d trees to bio reserve and remove depleted resource trees
 script.on_event(defines.events.on_resource_depleted, function(event)
 
-	local resourcetrees = game.surfaces['nauvis'].find_entities_filtered{position = event.entity.position, name = event.entity.name
+	local resourcetrees = game.surfaces['nauvis'].find_entities_filtered{position = event.entity.position, name = event.entity.name}
 
 end)
