@@ -720,7 +720,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bones', amount ='R'},
-					{name='guts', amount =5},
+					{name='guts', amount =7},
 				},
 			crafting_speed = 15,
 			tech = 'antitumor',
