@@ -103,44 +103,6 @@ ENTITY {
     times_to_blink = 1,
     light_blinking_speed = 1 / (3 * 60),
     door_opening_speed = 1 / (4.25 * 60),
-
-    --base_light =
-    --{
-    --  {
-    --    type = "oriented",
-    --    picture =
-    --    {
-    --      filename = "__core__/graphics/light-cone.png",
-    --      priority = "extra-high",
-    --      flags = { "light" },
-    --      scale = 2,
-    --      width = 200,
-    --      height = 200
-    --    },
-    --    shift = {0.25, 1.25},
-    --    size = 1,
-    --    intensity = 1,
-    --    rotation_shift = 0.6,
-    --    color = {r = 0.7, g = 0.9, b = 1.0}
-    --  },
-    --  {
-    --    type = "oriented",
-    --    picture =
-    --    {
-    --      filename = "__core__/graphics/light-cone.png",
-    --      priority = "extra-high",
-    --      flags = { "light" },
-    --      scale = 2,
-    --      width = 200,
-    --      height = 200
-    --    },
-    --    shift = {-0.25, 1},
-    --    size = 1,
-    --    intensity = 1,
-    --    rotation_shift = 0.5,
-    --    color = {r = 0.7, g = 0.9, b = 1.0}
-    --  }
-    --},
     base_engine_light =
     {
       intensity = 0,
@@ -233,23 +195,6 @@ ENTITY {
       --slice = 2,
       shift = util.by_pixel(0, 0),
     },
-
-    --base_night_sprite =
-    --{
-    --  filename = "__base__/graphics/entity/rocket-silo/06-silo-base/06-silo-base-night.png",
-    --  width = 352,
-    --  height = 384,
-    --  shift = {0, 0},
-    --  hr_version = {
-    --    filename = "__base__/graphics/entity/rocket-silo/06-silo-base/hr-06-silo-base-night.png",
-    --    width = 352,
-    --    height = 384,
-    --    shift = {0, 0},
-    --    scale = 0.5
-    --  }
-    --},
-
-
     red_lights_back_sprites =
     {
         filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
@@ -312,7 +257,7 @@ ENTITY {
       height = 32,
       frame_count = 1,
       line_length = 1,
-      animation_speed = 0.3,
+      animation_speed = 1,
       shift = util.by_pixel(0, 0),
     },
 
@@ -323,7 +268,7 @@ ENTITY {
         height = 32,
         frame_count = 1,
         line_length = 1,
-        animation_speed = 0.3,
+        animation_speed = 1,
         shift = util.by_pixel(0, 0),
     },
 
@@ -334,7 +279,7 @@ ENTITY {
       height = 32,
       frame_count = 1,
       line_length = 1,
-      animation_speed = 0.3,
+      animation_speed = 1,
       shift = util.by_pixel(0, 0),
     },
 
@@ -384,10 +329,10 @@ ENTITY {
     dying_explosion = "massive-explosion",
     shadow_slave_entity = "rocket-silo-rocket-shadow",
     inventory_size = 1,
-    rising_speed = 1 / (7 * 60),
-    engine_starting_speed = 1 / (5.5 * 60),
-    flying_speed = 1 / (2000 * 60),
-    flying_acceleration = 0.01,
+    rising_speed = 1,
+    engine_starting_speed = 1,
+    flying_speed = 1,
+    flying_acceleration = 1,
 
     glow_light =
     {
