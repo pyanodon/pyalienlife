@@ -41,6 +41,10 @@ local outpost_table = {}
 local caravangui
 local hascarguiopen = false
 
+--gui - outpost
+local outpostgui
+--local current_outpost
+
 --[[
 caravan routes table =
 {
@@ -163,6 +167,9 @@ script.on_init(
         global.landbots = landbots
         global.caravanroutes = caravanroutes
 		global.caravan_unit_numbers = {}
+		global.outpost_names = {}
+		global.current_outpost = {}
+		global.outpost_numbers = {}
 		remote.call("silo_script","set_no_victory", true)
     end)
 
@@ -286,6 +293,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
         elseif E.name == 'outpost' then
 			--local outpost = {entity = E, name = math.random(1,100)}
 			outpost_table['outpost'..E.unit_number] = {entity = E, name = math.random(1,100)}
+			global.outpost_names[E.unit_number] = 'outpost-'..E.unit_number
 		elseif E.name == 'caravan' then
 			global.caravan_unit_numbers[E.unit_number] = true
 		end
@@ -610,6 +618,17 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 	global.caravanroutes = caravanroutes
 end)
 
+local function create_outpost_gui(event)
+	local player = game.players[event.player_index]
+	outpostgui = player.gui.left.add({type = 'frame', name = 'outpost_frame', direction = 'horizontal'})
+	outpostgui.add({type = 'textfield', name = 'outpost_name', text = 'Outpost Name', lose_focus_on_confirm = true})
+	if global.outpost_names[event.entity.unit_number] ~= nil then
+		outpostgui.outpost_name.text = global.outpost_names[event.entity.unit_number]
+	end
+	log(serpent.block(global.outpost_names))
+end
+
+
 script.on_event(defines.events.on_gui_opened,function(event)
 
     if event.entity ~= nil then
@@ -618,9 +637,7 @@ script.on_event(defines.events.on_gui_opened,function(event)
         if event.entity.name == 'lb-requester-chest' then
 			local player = game.players[event.player_index]
 			request_gui = player.gui.left.add({type = 'frame', name = 'test', direction = 'vertical'})
-
 			request_gui.add({type = 'table', name = 'table', column_count = 5})
-			--request_gui.table.add({type = 'list-box', name = 'list-box', items = {'iron-plate','copper-plate'}})
 			request_gui.table.add({type = 'choose-elem-button', name = 'request_elem_1', elem_type = 'item'})
 			request_gui.table.add({type = 'choose-elem-button', name = 'request_elem_2', elem_type = 'item'})
 			request_gui.table.add({type = 'choose-elem-button', name = 'request_elem_3', elem_type = 'item'})
@@ -629,8 +646,10 @@ script.on_event(defines.events.on_gui_opened,function(event)
 			request_gui.add({type = 'table', name = 'tablejr', column_count = 2})
 			request_gui.tablejr.add({type = 'slider', name = 'request-slider', value = 0, maximum_value = 10000})
 			request_gui.tablejr.add({type = 'textfield', name = 'numfield', text = '0', numeric = true, lose_focus_on_confirm = true})
-			active_chest = event.entity.unit_number
-        end
+        elseif event.entity.name == 'outpost' then
+			create_outpost_gui(event)
+			global.current_outpost = event.entity.unit_number
+		end
     end
 
 end)
@@ -650,9 +669,11 @@ script.on_event(defines.events.on_gui_selection_state_changed, function(event)
 			--log(value)
 			--log(serpent.block(outpost_table))
 			--log(serpent.block(outpost_table[value]))
-
-			caravanroutes[id_num].startpoint.id = outpost_table[value].entity.unit_number
-			caravanroutes[id_num].startpoint.pos = outpost_table[value].entity.position
+			
+			local otnum = global.outpost_numbers[value]
+			
+			caravanroutes[id_num].startpoint.id = outpost_table['outpost'..otnum].entity.unit_number
+			caravanroutes[id_num].startpoint.pos = outpost_table['outpost'..otnum].entity.position
 
 			caravanroutes[id_num].unit.set_command {type = defines.command.go_to_location, destination = caravanroutes[id_num].startpoint.pos, radius = 4}
 		elseif event.element.name == 'outpost-list-2' then
@@ -660,8 +681,11 @@ script.on_event(defines.events.on_gui_selection_state_changed, function(event)
 			--log(value)
 			--log(serpent.block(outpost_table))
 			--log(serpent.block(outpost_table[value]))
-			caravanroutes[id_num].endpoint.id = outpost_table[value].entity.unit_number
-			caravanroutes[id_num].endpoint.pos = outpost_table[value].entity.position
+			
+			local otnum = global.outpost_numbers[value]
+			
+			caravanroutes[id_num].endpoint.id = outpost_table['outpost'..otnum].entity.unit_number
+			caravanroutes[id_num].endpoint.pos = outpost_table['outpost'..otnum].entity.position
 		end
 	end
 	--log(serpent.block(caravanroutes))
@@ -695,6 +719,11 @@ script.on_event(defines.events.on_gui_value_changed, function(event)
 	global.landbots = landbots
 end)
 
+script.on_event(defines.events.on_gui_confirmed, function(event)
+
+global.outpost_names[global.current_outpost] = outpostgui.outpost_name.text
+
+end)
 script.on_event(defines.events.on_gui_elem_changed, function(event)
 
 	landbots = global.landbots
@@ -738,8 +767,9 @@ script.on_event(defines.events.on_gui_closed, function(event)
 	if event.entity ~= nil then
         if event.entity.name == 'lb-requester-chest' then
 			request_gui.destroy()
-
-        end
+        elseif event.entity.name == 'outpost' then
+			outpostgui.destroy()
+		end
     end
 
 end)
@@ -805,9 +835,15 @@ local function create_caravan_gui(event, entity)
 	caravangui.add({type = 'table', name = 'ctable', column_count = 1})
 	caravangui.ctable.add({type = 'frame', name = 'route_frame', direction = 'vertical',  caption = 'Route Start'})
 		local names = {}
+		--[[
 		for n, name in pairs(outpost_table) do
 			table.insert(names, n)
 		end
+		]]--
+		for n, name in pairs(global.outpost_names) do
+			table.insert(names, name)
+			global.outpost_numbers[name] = n
+		end 
 	caravangui.ctable.route_frame.add({type = 'drop-down', name = 'outpost-list', items = names })
 	caravangui.ctable.add({type = 'frame', name = 'route_frame_2', direction = 'vertical',  caption = 'Route End'})
 	caravangui.ctable.route_frame_2.add({type = 'drop-down', name = 'outpost-list-2', items = names })
