@@ -17,7 +17,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cagedkmauts', probability = 0.6,amount_min =1,amount_max =1},
+					{name='cagedkmauts', probability = 0.8,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 150,
 			tech = 'kmauts'
@@ -86,7 +86,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='cagedkmauts', amount ='R'},
-					{name='cagedkmauts', probability = 0.7,amount_min =1,amount_max =1},
+					{name='cagedkmauts', amount =1},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -508,6 +508,24 @@ fun.autorecipes {
 			icon_size = 32,
 		},
 
+		--fat
+		{
+			ingredients =
+				{
+					--{name='cagedkmauts',amount=1},
+				},
+			results =
+				{
+					{name='arthropodblood', amount ='R'},
+					{name='fat', amount =2},
+				},
+			crafting_speed = 15,
+			tech = 'kmauts',
+			name = 'Extract kmauts lard',
+			icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
+			icon_size = 64,
+		},
+
 		--brain kmauts rendering
 		{
 			ingredients =
@@ -517,7 +535,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='arthropodblood', amount ='R'},
+					{name='fat', amount ='R'},
 					{name='brain', amount =3},
 				},
 			crafting_speed = 15,
@@ -590,7 +608,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', amount ='R'},
-					{name='fat', amount =3},
+					{name='fat', amount =5},
 				},
 			crafting_speed = 15,
 			tech = 'orexigenic',

@@ -18,7 +18,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='vonix', probability = 0.5,amount_min =1,amount_max =1},
+					{name='vonix', probability = 0.8,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 150,
 			tech = 'vonix'
@@ -101,7 +101,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='vonix', amount ='R'},
-					{name='vonix', probability = 0.7,amount_min =1,amount_max =1},
+					{name='vonix', amount =1},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -681,7 +681,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='arthropodblood', amount ='R'},
-					{name='skin', amount =6},
+					{name='skin', amount =8},
 				},
 			crafting_speed = 15,
 			tech = 'reca',
@@ -699,7 +699,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='fat', amount =13},
+					{name='fat', amount =15},
 				},
 			crafting_speed = 15,
 			tech = 'orexigenic',

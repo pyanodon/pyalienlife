@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "lb-control-tower",
-    energy_required = 1,
+    energy_required = 0.5,
     enabled = true,
     ingredients = {
         {"iron-plate", 50},
@@ -30,7 +30,7 @@ ITEM {
 
 ENTITY {
     type = "simple-entity-with-owner",
-	name = "lb-control-tower",
+	  name = "lb-control-tower",
     flags = {"placeable-neutral", "placeable-off-grid", "not-on-map"},
     icon = "__pyalienlife__/graphics/icons/control-tower.png",
     icon_size = 64,
@@ -71,7 +71,7 @@ ENTITY {
         width = 192,
         height = 352,
         scale = 0.5,
-        shift = util.by_pixel(32, -112),
+        shift = util.by_pixel(16, -60),
       }
     }
   }
@@ -126,7 +126,7 @@ ENTITY {
 		width = 192,
 		height = 352,
 		scale = 0.5,
-		shift = util.by_pixel(32, -112),
+		shift = util.by_pixel(16, -60),
     },
     base_patch =
     {

@@ -19,7 +19,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='zipir', probability = 0.5,amount_min =1,amount_max =1},
+                    {name='zipir', probability = 0.8,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 150,
 			tech = 'zipir'
@@ -119,7 +119,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='zipir', amount ='R'},
-					{name='zipir', probability = 0.7,amount_min =1,amount_max =1},
+					{name='zipir', amount =1},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -339,7 +339,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='zipiregg', probability = 0.7,amount_min =1,amount_max =3},
+                    {name='zipiregg', probability = 1,amount_min =1,amount_max =3},
 				},
 			crafting_speed = 70,
 			tech = 'zipir'
@@ -691,7 +691,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='arthropodblood', amount ='R'},
-					{name='skin', amount =10},
+					{name='skin', amount =12},
 				},
 			crafting_speed = 15,
 			tech = 'reca',
@@ -709,7 +709,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='fat', amount =5},
+					{name='fat', amount =9},
 				},
 			crafting_speed = 15,
 			tech = 'orexigenic',

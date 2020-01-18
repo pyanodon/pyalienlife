@@ -17,7 +17,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='xyhiphoe', probability = 0.5,amount_min =1,amount_max =1},
+					{name='xyhiphoe', probability = 0.8,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 150,
 			tech = 'water-invertebrates-mk01'
@@ -128,7 +128,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='xyhiphoe', amount ='R'},
-					{name='xyhiphoe', probability = 0.8,amount_min =1,amount_max =1},
+					{name='xyhiphoe', amount =1},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'

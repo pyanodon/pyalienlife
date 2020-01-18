@@ -17,7 +17,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cageddingrits', probability = 0.6,amount_min =1,amount_max =1},
+					{name='cageddingrits', probability = 0.8,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 150,
 			tech = 'dingrits'
@@ -129,7 +129,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='cageddingrits', amount ='R'},
-					{name='cageddingrits', probability = 0.7,amount_min =1,amount_max =1},
+					{name='cageddingrits', amount =1},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'

@@ -396,6 +396,66 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
+    name = 'kicalk-to-iron',
+    category = 'atomizer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'kicalk-seeds', amount = 30},
+    },
+    results = {
+        {type = 'item', name = 'iron-ore', amount = 5},
+    },
+    --main_product = "cocoon",
+}:add_unlock("molecular-decohesion-mk03")
+
+RECIPE {
+    type = 'recipe',
+    name = 'cadaveric-to-sulfur',
+    category = 'atomizer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'cadaveric-arum', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'sulfur', amount = 10},
+    },
+    --main_product = "cocoon",
+}:add_unlock("molecular-decohesion-mk03")
+
+RECIPE {
+    type = 'recipe',
+    name = 'cadaveric-to-copper',
+    category = 'atomizer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'cadaveric-arum', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'copper-ore', amount = 10},
+    },
+    --main_product = "cocoon",
+}:add_unlock("molecular-decohesion-mk03")
+
+RECIPE {
+    type = 'recipe',
+    name = 'blood-to-urea',
+    category = 'atomizer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'fluid', name = 'blood', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'urea', amount = 8},
+    },
+    --main_product = "cocoon",
+}:add_unlock("molecular-decohesion-mk02")
+
+RECIPE {
+    type = 'recipe',
     name = 'ethylene-from-fruit',
     category = 'bio-reactor',
     enabled = false,
@@ -727,10 +787,126 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'chitin', amount = 10},
+        {type = 'item', name = 'chitin', amount = 7},
     },
     results = {
         {type = 'item', name = 'phosphate-rock', amount = 4},
     },
     --main_product = "cocoon",
 }:add_unlock("molecular-decohesion-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'meat-to-phosphate',
+    category = 'atomizer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'meat', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'phosphate-rock', amount = 4},
+    },
+    --main_product = "cocoon",
+}:add_unlock("molecular-decohesion")
+
+RECIPE {
+    type = 'recipe',
+    name = 'fish-to-phosphate',
+    category = 'atomizer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'fish', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'phosphate-rock', amount = 6},
+    },
+    --main_product = "cocoon",
+}:add_unlock("molecular-decohesion-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'wood-seeds-to-phosphate',
+    category = 'atomizer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'wood-seeds', amount = 30},
+    },
+    results = {
+        {type = 'item', name = 'phosphate-rock', amount = 7},
+    },
+    --main_product = "cocoon",
+}:add_unlock("molecular-decohesion")
+
+RECIPE {
+    type = 'recipe',
+    name = 'rennea-to-phosphate',
+    category = 'atomizer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'rennea-seeds', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'phosphate-rock', amount = 8},
+    },
+    --main_product = "cocoon",
+}:add_unlock("molecular-decohesion-mk03")
+
+RECIPE {
+    type = 'recipe',
+    name = 'gas-bladder-to-methane',
+    category = 'gas-separator',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'gas-bladder', amount = 1},
+    },
+    results = {
+        {type = 'fluid', name = 'methane', amount = 50}
+    }
+}:add_unlock('phagnot-mk02'):change_category('gas-refinery')
+
+RECIPE {
+    type = 'recipe',
+    name = 'gas-bladder-to-ammonia',
+    category = 'gas-separator',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'gas-bladder', amount = 1},
+    },
+    results = {
+        {type = 'fluid', name = 'ammonia', amount = 40}
+    }
+}:add_unlock('phagnot-mk02'):change_category('gas-refinery')
+
+RECIPE {
+    type = 'recipe',
+    name = 'gas-bladder-to-propene',
+    category = 'gas-separator',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'gas-bladder', amount = 1},
+    },
+    results = {
+        {type = 'fluid', name = 'propene', amount = 35}
+    }
+}:add_unlock('phagnot-mk02'):change_category('gas-refinery')
+
+RECIPE {
+    type = 'recipe',
+    name = 'gas-bladder-to-ethylene',
+    category = 'gas-separator',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'gas-bladder', amount = 1},
+    },
+    results = {
+        {type = 'fluid', name = 'ethylene', amount = 30}
+    }
+}:add_unlock('phagnot-mk02'):change_category('gas-refinery')
