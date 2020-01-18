@@ -170,6 +170,8 @@ script.on_init(
 		global.outpost_names = {}
 		global.current_outpost = {}
 		global.outpost_numbers = {}
+		global.has_drawn_square = false
+		global.logistics_square = ''
 		remote.call("silo_script","set_no_victory", true)
     end)
 
@@ -315,7 +317,9 @@ end)
 
 script.on_event(defines.events.on_put_item, function(event)
 
-	end)
+
+
+end)
 
 local function ai(event)
 
@@ -474,6 +478,7 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 			log(event.unit_number)
 			log(caravanroutes[car].unit.position)
 			log(caravanroutes[car].startpoint.pos)
+			log(caravanroutes[car].endpoint.pos)
 			if math.sqrt((caravanroutes[car].unit.position.x - caravanroutes[car].startpoint.pos.x) ^ 2 + (caravanroutes[car].unit.position.y - caravanroutes[car].startpoint.pos.y) ^ 2) <= 10 then
 				local outpostinventory = game.surfaces[caravanroutes[car].unit.surface.name].find_entity('outpost', caravanroutes[car].startpoint.pos).get_inventory(defines.inventory.chest)
 				if outpostinventory ~= nil then
@@ -568,6 +573,8 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 
 	landbots = global.landbots
 	caravanroutes = global.caravanroutes
+	
+	log(serpent.block(landbots))
 
 	if event.entity.name == 'lb-control-tower' then
 		for t, tower in pairs(landbots.towers) do
@@ -606,7 +613,9 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 		landbots.bots[bot.unit_number] = nil
 	elseif event.entity.name == 'lb-provider-chest' then
 		--remove all refernces to this chest
+		if landbots.towers[landbots.providerchests[event.entity.unit_number].tower] ~= nil then
 		landbots.towers[landbots.providerchests[event.entity.unit_number].tower].providerchests[event.entity.unit_number] = nil
+		end
 		landbots.providerchests[event.entity.unit_number] = nil
 	elseif event.entity.name == 'lb-requester-chest' then
 		--remove all refernces to this chest
@@ -833,7 +842,13 @@ local function create_caravan_gui(event, entity)
 	local player = game.players[event.player_index]
 	caravangui = player.gui.center.add({type = 'frame', name = 'caravan_frame_left', direction = 'horizontal'})
 	caravangui.add({type = 'table', name = 'ctable', column_count = 1})
-	caravangui.ctable.add({type = 'frame', name = 'route_frame', direction = 'vertical',  caption = 'Route Start'})
+	local caption = ''
+	if caravanroutes[entity.unit_number] ~= nil and caravanroutes[entity.unit_number].startpoint.id ~= nil and global.outpost_names[caravanroutes[entity.unit_number].startpoint.id] ~= nil then
+		caption = 'Route Start: '.. global.outpost_names[caravanroutes[entity.unit_number].startpoint.id]
+	else
+		caption = 'Route Start: '
+	end
+	caravangui.ctable.add({type = 'frame', name = 'route_frame', direction = 'vertical',  caption = caption})
 		local names = {}
 		--[[
 		for n, name in pairs(outpost_table) do
@@ -845,7 +860,12 @@ local function create_caravan_gui(event, entity)
 			global.outpost_numbers[name] = n
 		end 
 	caravangui.ctable.route_frame.add({type = 'drop-down', name = 'outpost-list', items = names })
-	caravangui.ctable.add({type = 'frame', name = 'route_frame_2', direction = 'vertical',  caption = 'Route End'})
+	if caravanroutes[entity.unit_number] ~= nil and caravanroutes[entity.unit_number].endpoint.id ~= nil and global.outpost_names[caravanroutes[entity.unit_number].endpoint.id] ~= nil then
+		caption = 'Route End: '.. global.outpost_names[caravanroutes[entity.unit_number].endpoint.id]
+	else
+		caption = 'Route End: '
+	end
+	caravangui.ctable.add({type = 'frame', name = 'route_frame_2', direction = 'vertical',  caption = caption})
 	caravangui.ctable.route_frame_2.add({type = 'drop-down', name = 'outpost-list-2', items = names })
 
 	caravangui.add({type = 'frame', name = 'caravan_frame_center', direction = 'vertical', caption = 'current inventory'})
@@ -904,7 +924,23 @@ end)
 
 --added 3d trees to bio reserve and remove depleted resource trees
 script.on_event(defines.events.on_resource_depleted, function(event)
-
 	local resourcetrees = game.surfaces['nauvis'].find_entities_filtered{position = event.entity.position, name = event.entity.name}
+end)
 
+script.on_event(defines.events.on_player_cursor_stack_changed, function(event)
+
+log('hit')
+	if game.players[event.player_index].cursor_stack ~= nil and game.players[event.player_index].cursor_stack.valid_for_read == true then
+	--log(game.players[event.player_index].cursor_stack)
+	--log(game.players[event.player_index].cursor_stack.valid)
+	--log(game.players[event.player_index].cursor_stack.valid_for_read)
+		local cursor_item = game.players[event.player_index].cursor_stack.name
+		log(cursor_item)
+		if cursor_item == 'lb-requester-chest' or cursor_item == 'lb-provider-chest' then
+			global.logistics_square = rendering.draw_rectangle{color={r = 255, g = 165, b = 0, a = 0.75},filled=true,left_top={-30,-30},right_bottom={30,30},surface='nauvis',draw_on_ground = true}
+			global.has_drawn_square = true
+		end
+	elseif game.players[event.player_index].cursor_stack.valid_for_read == false and global.has_drawn_square == true then
+		rendering.destroy(global.logistics_square)
+	end
 end)

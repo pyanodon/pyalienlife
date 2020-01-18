@@ -122,128 +122,52 @@ ENTITY {
     },
     base =
     {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/roboport/roboport-base.png",
-          width = 143,
-          height = 135,
-          shift = {0.5, 0.25},
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/roboport/hr-roboport-base.png",
-            width = 228,
-            height = 277,
-            shift = util.by_pixel(2, 7.75),
-            scale = 0.5
-          }
-        },
-        {
-          filename = "__base__/graphics/entity/roboport/roboport-shadow.png",
-          width = 147,
-          height = 101,
-          draw_as_shadow = true,
-          shift = util.by_pixel(28.5, 19.25),
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/roboport/hr-roboport-shadow.png",
-            width = 294,
-            height = 201,
-            draw_as_shadow = true,
-            force_hr_shadow = true,
-            shift = util.by_pixel(28.5, 19.25),
-            scale = 0.5
-          }
-        }
-      }
+		filename = "__pyalienlife__/graphics/entity/tower/tower.png",
+		width = 192,
+		height = 352,
+		scale = 0.5,
+		shift = util.by_pixel(32, -112),
     },
     base_patch =
     {
-      filename = "__base__/graphics/entity/roboport/roboport-base-patch.png",
-      priority = "medium",
-      width = 69,
-      height = 50,
-      frame_count = 1,
-      shift = {0.03125, 0.203125},
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/roboport/hr-roboport-base-patch.png",
-        priority = "medium",
-        width = 138,
-        height = 100,
-        frame_count = 1,
-        shift = util.by_pixel(1.5, 5),
-        scale = 0.5
-      }
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      width = 32,
+      height = 32,
+      shift = util.by_pixel(0, -0),
     },
     base_animation =
     {
-      filename = "__base__/graphics/entity/roboport/roboport-base-animation.png",
-      priority = "medium",
-      width = 42,
-      height = 31,
-      frame_count = 8,
-      animation_speed = 0.5,
-      shift = {-0.5315, -1.9375},
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/roboport/hr-roboport-base-animation.png",
-        priority = "medium",
-        width = 83,
-        height = 59,
-        frame_count = 8,
-        animation_speed = 0.5,
-        shift = util.by_pixel(-17.75, -61.25),
-        scale = 0.5
-      }
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      width = 32,
+      height = 32,
+	  frame_count = 1,
+      animation_speed = 1,
+      shift = util.by_pixel(0, -0),
     },
     door_animation_up =
     {
-      filename = "__base__/graphics/entity/roboport/roboport-door-up.png",
-      priority = "medium",
-      width = 52,
-      height = 20,
-      frame_count = 16,
-      shift = {0.015625, -0.890625},
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/roboport/hr-roboport-door-up.png",
-        priority = "medium",
-        width = 97,
-        height = 38,
-        frame_count = 16,
-        shift = util.by_pixel(-0.25, -29.5),
-        scale = 0.5
-      }
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      width = 32,
+      height = 32,
+	  frame_count = 1,
+      shift = util.by_pixel(0, -0),
     },
     door_animation_down =
     {
-      filename = "__base__/graphics/entity/roboport/roboport-door-down.png",
-      priority = "medium",
-      width = 52,
-      height = 22,
-      frame_count = 16,
-      shift = {0.015625, -0.234375},
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/roboport/hr-roboport-door-down.png",
-        priority = "medium",
-        width = 97,
-        height = 41,
-        frame_count = 16,
-        shift = util.by_pixel(-0.25,-9.75),
-        scale = 0.5
-      }
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      width = 32,
+      height = 32,
+	  frame_count = 1,
+      shift = util.by_pixel(0, -0),
     },
     recharging_animation =
     {
-      filename = "__base__/graphics/entity/roboport/roboport-recharging.png",
-      priority = "high",
-      width = 37,
-      height = 35,
-      frame_count = 16,
-      scale = 1.5,
-      animation_speed = 0.5
+      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      width = 32,
+      height = 32,
+	  frame_count = 1,
+      animation_speed = 1,
+      shift = util.by_pixel(0, -0),
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound =

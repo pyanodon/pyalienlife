@@ -285,7 +285,7 @@ ENTITY {
 
     silo_fade_out_start_distance = 8,
     silo_fade_out_end_distance = 15,
-
+	--[[
     alarm_sound =
     {
       filename = "__base__/sound/silo-alarm.ogg",
@@ -316,7 +316,7 @@ ENTITY {
       filename = "__base__/sound/silo-rocket.ogg",
       volume = 1.0
     }
-
+	]]--
   }
 
 ENTITY {
