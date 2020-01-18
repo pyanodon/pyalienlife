@@ -19,7 +19,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cagedphadai', probability = 0.6,amount_min =1,amount_max =1},
+					{name='cagedphadai', probability = 0.8,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 150,
 			tech = 'phadai'
@@ -132,7 +132,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='cagedphadai', amount ='R'},
-					{name='cagedphadai', probability = 0.7,amount_min =1,amount_max =1},
+					{name='cagedphadai', amount =1},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -740,6 +740,23 @@ fun.autorecipes {
 			icon = "__pyalienlife__/graphics/icons/carapace.png",
 			icon_size = 64,
 		},
+		--Skin
+		{
+			ingredients =
+				{
+					--{name='cagedphadai',amount=1},
+				},
+			results =
+				{
+					{name='carapace', amount ='R'},
+					{name='skin', amount =2},
+				},
+			crafting_speed = 15,
+			tech = 'phadai',
+			name = 'Extract phadai Skin',
+			icon = "__pyalienlife__/graphics/icons/skin.png",
+			icon_size = 32,
+		},
 		--brain phadai rendering
 		{
 			ingredients =
@@ -749,7 +766,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='carapace', amount ='R'},
+					{name='skin', amount ='R'},
 					{name='brain', amount =3},
 				},
 			crafting_speed = 15,
@@ -840,7 +857,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', amount ='R'},
-					{name='skin', amount =3},
+					{name='skin', amount =5},
 				},
 			crafting_speed = 15,
 			tech = 'reca',
@@ -858,7 +875,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='fat', amount =3},
+					{name='fat', amount =5},
 				},
 			crafting_speed = 15,
 			tech = 'orexigenic',

@@ -118,6 +118,30 @@ RECIPE {
     order = 'a',
 }:add_unlock("assisted-embryology")
 
+---PROCESSING
+
+RECIPE {
+    type = 'recipe',
+    name = 'fish-full-rendering',
+    category = 'slaughterhouse',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'fish', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'meat', amount = 2, probability = 0.5},
+        {type = 'item', name = 'brain', amount = 1, probability = 0.3},
+        {type = 'item', name = 'skin', amount = 3, probability = 0.5},
+        {type = 'fluid', name = 'blood', amount = 25},
+        {type = 'item', name = 'guts', amount = 5, probability = 0.5},
+    },
+    --main_product = "fish",
+    subgroup = 'py-alienlife-fish',
+    order = 'a',
+    icon = "__pyalienlife__/graphics/icons/rendering-fish.png",
+    icon_size = 64,
+}:add_unlock("water-animals-mk02")
 ----adverse products----
 
 

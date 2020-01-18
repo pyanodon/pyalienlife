@@ -18,7 +18,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cagedauog', probability = 0.5,amount_min =1,amount_max =1},
+					{name='cagedauog', probability = 0.8,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 160,
 			tech = 'auog'
@@ -130,7 +130,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='cagedauog', amount ='R'},
-					{name='cagedauog', probability = 0.7,amount_min =1,amount_max =1},
+					{name='cagedauog', amount =1},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -865,7 +865,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', amount ='R'},
-					{name='skin', amount =4},
+					{name='skin', amount =6},
 				},
 			crafting_speed = 15,
 			tech = 'reca',
@@ -883,7 +883,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='fat', amount =4},
+					{name='fat', amount =6},
 				},
 			crafting_speed = 15,
 			tech = 'orexigenic',

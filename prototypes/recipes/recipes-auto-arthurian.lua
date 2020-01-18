@@ -17,7 +17,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cagedarthurian', probability = 0.5,amount_min =1,amount_max =1},
+					{name='cagedarthurian', probability = 0.8,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 130,
 			tech = 'arthurian'
@@ -127,7 +127,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='cagedarthurian', amount ='R'},
-					{name='cagedarthurian', probability = 0.7,amount_min =1,amount_max =1},
+					{name='cagedarthurian', amount =1},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -788,7 +788,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', amount ='R'},
-					{name='skin', amount =3},
+					{name='skin', amount =5},
 				},
 			crafting_speed = 15,
 			tech = 'reca',
@@ -806,7 +806,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='fat', amount =2},
+					{name='fat', amount =4},
 				},
 			crafting_speed = 15,
 			tech = 'orexigenic',

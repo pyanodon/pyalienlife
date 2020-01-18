@@ -71,3 +71,17 @@ RECIPE {
         {type = 'item', name = 'dried-grods', amount = 1},
     },
 }:add_unlock('grod')
+
+RECIPE {
+    type = 'recipe',
+    name = 'gas-bladder-to-natura-gas',
+    category = 'gas-separator',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'gas-bladder', amount = 1},
+    },
+    results = {
+        {type = 'fluid', name = 'natural-gas', amount = 50}
+    }
+}:add_unlock('phagnot-mk02'):change_category('gas-refinery')

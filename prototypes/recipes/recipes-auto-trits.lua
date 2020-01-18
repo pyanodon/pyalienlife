@@ -17,7 +17,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='trits', probability = 0.5,amount_min =1,amount_max =1},
+					{name='trits', probability = 0.8,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 150,
 			tech = 'trits'
@@ -128,7 +128,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='trits', amount ='R'},
-					{name='trits', probability = 0.7,amount_min =1,amount_max =1},
+					{name='trits', amount =1},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -837,7 +837,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', amount ='R'},
-					{name='skin', amount =7},
+					{name='skin', amount =9},
 				},
 			crafting_speed = 15,
 			tech = 'reca',

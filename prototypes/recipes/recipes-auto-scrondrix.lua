@@ -18,7 +18,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cagedscrondrix', probability = 0.5,amount_min =1,amount_max =1},
+					{name='cagedscrondrix', probability = 0.8,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 150,
 			tech = 'scrondrix'
@@ -101,7 +101,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='cagedscrondrix', amount ='R'},
-					{name='cagedscrondrix', probability = 0.7,amount_min =1,amount_max =1},
+					{name='cagedscrondrix', amount =1},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -351,7 +351,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='scrondrixcub', probability = 0.7,amount_min =1,amount_max =1},
+					{name='scrondrixcub', probability = 0.7,amount_min =1,amount_max =2},
 				},
 			crafting_speed = 70,
 			tech = 'assisted-embryology'
@@ -750,7 +750,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', amount ='R'},
-					{name='skin', amount =5},
+					{name='skin', amount =7},
 				},
 			crafting_speed = 15,
 			tech = 'reca',
@@ -768,7 +768,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='fat', amount =5},
+					{name='fat', amount =7},
 				},
 			crafting_speed = 15,
 			tech = 'orexigenic',
