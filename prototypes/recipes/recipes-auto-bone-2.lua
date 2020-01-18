@@ -540,6 +540,7 @@ fun.autorecipes {
 					{name='chitinxeno',amount='R'},
 					{name='cagedxeno',amount='R'},
 					{name='bonexeno',amount=1},
+					{name='cage', amount ='R'},
 				},
 			results =
 				{

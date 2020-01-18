@@ -4,14 +4,14 @@ local fun = require("prototypes/functions/functions")
 ------------------ARTHURIANS------------------
 
 fun.autorecipes {
-    name = 'rendering-meats-arthurians-2',
+    name = 'rendering-blood-arthurians-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'arthurian',
 	subgroup = 'py-alienlife-arthurian',
 	order = 'b',
     mats =
 	{
-		--meat
+		--blood
 		{
 			ingredients =
 				{
@@ -27,30 +27,30 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='meat', amount =7},
+					{name='blood', amount =70},
 				},
 			crafting_speed = 15,
-			tech = 'myostatin',
-			name = 'Extract arthurian Meat-2',
-			icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+			tech = 'transgenes',
+			name = 'Extract arthurian blood-2',
+			icon = "__pyalienlife__/graphics/icons/blood.png",
 			icon_size = 64,
 		},	
-		--meat arthurian rendering
+		--blood arthurian rendering
 		{
 			ingredients =
 				{
 					{name='cagedarthurian',amount='R'},
-					{name='meatcagedarthurian',amount=1},
+					{name='bloodcagedarthurian',amount=1},
 				},
 			results =
 				{
-					{name='fat', amount ='R'},
-					{name='meat', amount =8},
+					{name='guts', amount ='R'},
+					{name='blood', amount =100},
 				},
 			crafting_speed = 15,
-			tech = 'myostatin',
-			name = 'Extract meat from Improved arthurians-2',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-arthurian.png",
+			tech = 'transgenes',
+			name = 'Extract blood from Improved arthurians-2',
+			icon = "__pyalienlife__/graphics/icons/blood-caged-arthurian.png",
 			icon_size = 64,
 		},
 	}
@@ -59,15 +59,14 @@ fun.autorecipes {
 ------------------AUOGS------------------
 
 fun.autorecipes {
-    name = 'rendering-meats-auog-2',
+    name = 'rendering-blood-auog-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-auog',
 	order = 'b',
     mats =
 	{
-
-		--meat
+		--blood
 		{
 			ingredients =
 				{
@@ -83,30 +82,30 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='meat', amount =12},
+					{name='blood', amount =120},
 				},
                 crafting_speed = 15,
-                tech = 'myostatin',
-                name = 'Extract auog Meat-2',
-                icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+                tech = 'transgenes',
+                name = 'Extract auog blood-2',
+                icon = "__pyalienlife__/graphics/icons/blood.png",
                 icon_size = 64,
 		},	
-		--meat auog rendering
+		--blood auog rendering
 		{
 			ingredients =
 				{
 					{name='cagedauog',amount='R'},
-					{name='meatcagedauog',amount=1},
+					{name='bloodcagedauog',amount=1},
 				},
 			results =
 				{
-					{name='bonemeal', amount ='R'},
-					{name='meat', amount =16},
+					{name='guts', amount ='R'},
+					{name='blood', amount =160},
 				},
 			crafting_speed = 15,
-			tech = 'myostatin',
-			name = 'Extract meat from Improved auogs-2',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-auog.png",
+			tech = 'transgenes',
+			name = 'Extract blood from Improved auogs-2',
+			icon = "__pyalienlife__/graphics/icons/blood-caged-auog.png",
 			icon_size = 64,
 		},
 	}
@@ -115,14 +114,14 @@ fun.autorecipes {
 ------------------DHILMOS------------------
 
 fun.autorecipes {
-    name = 'rendering-meats-dhilmos-2',
+    name = 'rendering-blood-dhilmos-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-dhilmos',
 	order = 'b',
     mats =
 	{
-		--meat
+		--blood
 		{
 			ingredients =
 				{
@@ -133,37 +132,37 @@ fun.autorecipes {
                     {name='bones', amount ='R'},
 					{name='meat', amount ='R'},
 					{name='skin', amount ='R'},
-					{name='fat', amount ='R'},
 					{name='chitin', amount ='R'},
 					{name='arthropodblood', amount ='R'},
 					{name='sulfuricacid', amount ='R'},
+					{name='fat', amount ='R'},
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='meat', amount =3},
+					{name='arthropodblood', amount =50},
 				},
                 crafting_speed = 15,
-                tech = 'myostatin',
-				name = 'Extract dhilmos Meat-2',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
-				icon_size = 64,
+                tech = 'transgenes',
+                name = 'Extract dhilmos blood-2',
+                icon = "__pyalienlife__/graphics/icons/arthropod-blood.png",
+                icon_size = 32,
 		},	
-		--meat dhilmos rendering
+		--blood dhilmos rendering
 		{
 			ingredients =
 				{
 					{name='dhilmos',amount='R'},
-					{name='meatdhilmos',amount=1},
+					{name='blooddhilmos',amount=1},
 				},
 			results =
 				{
-					{name='chitin', amount ='R'},
-					{name='meat', amount =6},
+					{name='guts', amount ='R'},
+					{name='arthropodblood', amount =80},
 				},
 			crafting_speed = 15,
-			tech = 'myostatin',
-			name = 'Extract meat from Improved dhilmoss-2',
-			icon = "__pyalienlife__/graphics/icons/meat-dhilmos.png",
+			tech = 'transgenes',
+			name = 'Extract blood from Improved dhilmoss-2',
+			icon = "__pyalienlife__/graphics/icons/blood-dhilmos.png",
 			icon_size = 64,
 		},
 	}
@@ -172,14 +171,14 @@ fun.autorecipes {
 ------------------DINGRITS------------------
 
 fun.autorecipes {
-    name = 'rendering-meats-dingrits-2',
+    name = 'rendering-blood-dingrits-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-dingrits',
 	order = 'b',
     mats =
 	{
-		--meat
+		--blood
 		{
 			ingredients =
 				{
@@ -195,30 +194,30 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='meat', amount =6},
+					{name='blood', amount =50},
 				},
                 crafting_speed = 15,
-                tech = 'myostatin',
-				name = 'Extract dingrits Meat-2',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
-				icon_size = 64,
+                tech = 'transgenes',
+                name = 'Extract dingrits blood-2',
+                icon = "__pyalienlife__/graphics/icons/blood.png",
+                icon_size = 64,
 		},	
-		--meat dingrits rendering
+		--blood dingrits rendering
 		{
 			ingredients =
 				{
 					{name='cageddingrits',amount='R'},
-					{name='meatcageddingrits',amount=1},
+					{name='bloodcageddingrits',amount=1},
 				},
 			results =
 				{
-					{name='blood', amount ='R'},
-					{name='meat', amount =7},
+					{name='guts', amount ='R'},
+					{name='blood', amount =60},
 				},
 			crafting_speed = 15,
-			tech = 'myostatin',
-			name = 'Extract meat from Improved dingrits-2',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-dingrits.png",
+			tech = 'transgenes',
+			name = 'Extract blood from Improved dingrits-2',
+			icon = "__pyalienlife__/graphics/icons/blood-caged-dingrits.png",
 			icon_size = 64,
 		},
 	}
@@ -227,14 +226,14 @@ fun.autorecipes {
 ------------------KMAUTS------------------
 
 fun.autorecipes {
-    name = 'rendering-meats-kmauts-2',
+    name = 'rendering-blood-kmauts-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-kmauts',
 	order = 'b',
     mats =
 	{
-		--meat
+		--blood
 		{
 			ingredients =
 				{
@@ -250,30 +249,30 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='meat', amount =4},
+					{name='arthropodblood', amount =40},
 				},
                 crafting_speed = 15,
-                tech = 'myostatin',
-				name = 'Extract kmauts Meat-2',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
-				icon_size = 64,
+                tech = 'transgenes',
+                name = 'Extract kmauts blood-2',
+                icon = "__pyalienlife__/graphics/icons/arthropod-blood.png",
+                icon_size = 32,
 		},	
-		--meat kmauts rendering
+		--blood kmauts rendering
 		{
 			ingredients =
 				{
 					{name='cagedkmauts',amount='R'},
-					{name='meatcagedkmauts',amount=1},
+					{name='bloodcagedkmauts',amount=1},
 				},
 			results =
 				{
-					{name='arthropodblood', amount ='R'},
-					{name='meat', amount =7},
+					{name='guts', amount ='R'},
+					{name='arthropodblood', amount =70},
 				},
 			crafting_speed = 15,
-			tech = 'myostatin',
-			name = 'Extract meat from Improved kmauts-2',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-kmauts.png",
+			tech = 'transgenes',
+			name = 'Extract blood from Improved kmauts-2',
+			icon = "__pyalienlife__/graphics/icons/blood-caged-kmauts.png",
 			icon_size = 64,
         },
 	}
@@ -282,14 +281,14 @@ fun.autorecipes {
 ------------------MUKMOUX------------------
 
 fun.autorecipes {
-    name = 'rendering-meats-mukmoux-2',
+    name = 'rendering-blood-mukmoux-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-mukmoux',
 	order = 'b',
     mats =
 	{
-		--meat
+		--blood
 		{
 			ingredients =
 				{
@@ -305,30 +304,30 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='meat', amount =7},
+					{name='blood', amount =150},
 				},
                 crafting_speed = 15,
-                tech = 'myostatin',
-				name = 'Extract Mukmoux Meat-2',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
-				icon_size = 64,
+                tech = 'transgenes',
+                name = 'Extract Mukmoux blood-2',
+                icon = "__pyalienlife__/graphics/icons/blood.png",
+                icon_size = 64,
 		},	
-		--meat mukmoux rendering
+		--blood mukmoux rendering
 		{
 			ingredients =
 				{
 					{name='cagedmukmoux',amount='R'},
-					{name='meatcagedmukmoux',amount=1},
+					{name='bloodcagedmukmoux',amount=1},
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
-					{name='meat', amount =12},
+					{name='guts', amount ='R'},
+					{name='blood', amount =200},
 				},
 			crafting_speed = 15,
-			tech = 'myostatin',
-			name = 'Extract meat from Improved Mukmouxs-2',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-mukmoux.png",
+			tech = 'transgenes',
+			name = 'Extract blood from Improved Mukmouxs-2',
+			icon = "__pyalienlife__/graphics/icons/blood-caged-mukmoux.png",
 			icon_size = 64,
 		},
 	}
@@ -337,14 +336,14 @@ fun.autorecipes {
 ------------------PHADAI------------------
 
 fun.autorecipes {
-    name = 'rendering-meats-phadai-2',
+    name = 'rendering-blood-phadai-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-phadai',
 	order = 'b',
     mats =
 	{
-		--meat
+		--blood
 		{
 			ingredients =
 				{
@@ -360,30 +359,30 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='meat', amount =6},
+					{name='blood', amount =50},
 				},
                 crafting_speed = 15,
-                tech = 'myostatin',
-				name = 'Extract phadai Meat-2',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
-				icon_size = 64,
+                tech = 'transgenes',
+                name = 'Extract phadai blood-2',
+                icon = "__pyalienlife__/graphics/icons/blood.png",
+                icon_size = 64,
 		},	
-		--meat phadai rendering
+		--blood phadai rendering
 		{
 			ingredients =
 				{
 					{name='cagedphadai',amount='R'},
-					{name='meatcagedphadai',amount=1},
+					{name='bloodcagedphadai',amount=1},
 				},
 			results =
 				{
-					{name='blood', amount ='R'},
-					{name='meat', amount =10},
+					{name='guts', amount ='R'},
+					{name='blood', amount =85},
 				},
 			crafting_speed = 15,
-			tech = 'myostatin',
-			name = 'Extract meat from Improved phadais-2',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-phadai.png",
+			tech = 'transgenes',
+			name = 'Extract blood from Improved phadais-2',
+			icon = "__pyalienlife__/graphics/icons/blood-caged-phadai.png",
 			icon_size = 64,
         },
 	}
@@ -392,14 +391,14 @@ fun.autorecipes {
 ------------------PHAGNOT------------------
 
 fun.autorecipes {
-    name = 'rendering-meats-phagnot-2',
+    name = 'rendering-blood-phagnot-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-phagnot',
 	order = 'b',
     mats =
 	{
-		--meat
+		--blood
 		{
 			ingredients =
 				{
@@ -415,30 +414,30 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='meat', amount =4},
+					{name='blood', amount =60},
 				},
                 crafting_speed = 15,
-                tech = 'myostatin',
-				name = 'Extract phagnot Meat-2',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
-				icon_size = 64,
+                tech = 'transgenes',
+                name = 'Extract phagnot blood-2',
+                icon = "__pyalienlife__/graphics/icons/blood.png",
+                icon_size = 64,
 		},	
-		--meat phagnot rendering
+		--blood phagnot rendering
 		{
 			ingredients =
 				{
 					{name='cagedphagnot',amount='R'},
-					{name='meatcagedphagnot',amount=1},
+					{name='bloodcagedphagnot',amount=1},
 				},
 			results =
 				{
-					{name='skin', amount ='R'},
-					{name='meat', amount =9},
+					{name='guts', amount ='R'},
+					{name='blood', amount =90},
 				},
 			crafting_speed = 15,
-			tech = 'myostatin',
-			name = 'Extract meat from Improved phagnots-2',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-phagnot.png",
+			tech = 'transgenes',
+			name = 'Extract blood from Improved phagnots-2',
+			icon = "__pyalienlife__/graphics/icons/blood-caged-phagnot.png",
 			icon_size = 64,
 		},
 	}
@@ -447,14 +446,14 @@ fun.autorecipes {
 ------------------SCRONDRIX------------------
 
 fun.autorecipes {
-    name = 'rendering-meats-scrondrix-2',
+    name = 'rendering-blood-scrondrix-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-scrondrix',
 	order = 'b',
     mats =
 	{
-		--meat
+		--blood
 		{
 			ingredients =
 				{
@@ -470,30 +469,30 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='meat', amount =7},
+					{name='blood', amount =90},
 				},
                 crafting_speed = 15,
-                tech = 'myostatin',
-				name = 'Extract scrondrix Meat-2',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
-				icon_size = 64,
+                tech = 'transgenes',
+                name = 'Extract scrondrix blood-2',
+                icon = "__pyalienlife__/graphics/icons/blood.png",
+                icon_size = 64,
 		},	
-		--meat scrondrix rendering
+		--blood scrondrix rendering
 		{
 			ingredients =
 				{
 					{name='cagedscrondrix',amount='R'},
-					{name='meatcagedscrondrix',amount=1},
+					{name='bloodcagedscrondrix',amount=1},
 				},
 			results =
 				{
-					{name='fat', amount ='R'},
-					{name='meat', amount =10},
+					{name='guts', amount ='R'},
+					{name='blood', amount =150},
 				},
 			crafting_speed = 15,
-			tech = 'myostatin',
-			name = 'Extract meat from Improved scrondrixs-2',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-scrondrix.png",
+			tech = 'transgenes',
+			name = 'Extract blood from Improved scrondrixs-2',
+			icon = "__pyalienlife__/graphics/icons/blood-caged-scrondrix.png",
 			icon_size = 64,
 		},
 	}
@@ -502,14 +501,14 @@ fun.autorecipes {
 ------------------TRITS------------------
 
 fun.autorecipes {
-    name = 'rendering-meats-trits-2',
+    name = 'rendering-blood-trits-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-trits',
 	order = 'b',
     mats =
 	{
-		--meat
+		--blood
 		{
 			ingredients =
 				{
@@ -524,30 +523,30 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='meat', amount =8},
+					{name='blood', amount =100},
 				},
                 crafting_speed = 15,
-                tech = 'myostatin',
-				name = 'Extract Trits Meat-2',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
-				icon_size = 64,
+                tech = 'transgenes',
+                name = 'Extract Trits blood-2',
+                icon = "__pyalienlife__/graphics/icons/blood.png",
+                icon_size = 64,
 		},	
-		--meat trits rendering
+		--blood trits rendering
 		{
 			ingredients =
 				{
 					{name='trits',amount='R'},
-					{name='meattrits',amount=1},
+					{name='bloodtrits',amount=1},
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
-					{name='meat', amount =11},
+					{name='guts', amount ='R'},
+					{name='blood', amount =170},
 				},
 			crafting_speed = 15,
-			tech = 'myostatin',
-			name = 'Extract meat from Improved Trits-2',
-			icon = "__pyalienlife__/graphics/icons/meat-trits.png",
+			tech = 'transgenes',
+			name = 'Extract blood from Improved Trits-1',
+			icon = "__pyalienlife__/graphics/icons/blood-trits.png",
 			icon_size = 64,
 		},
 	}
@@ -556,14 +555,14 @@ fun.autorecipes {
 ------------------ULRIC------------------
 
 fun.autorecipes {
-    name = 'rendering-meats-ulric-2',
+    name = 'rendering-blood-ulric-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-ulric',
 	order = 'b',
     mats =
 	{
-		--meat
+		--blood
 		{
 			ingredients =
 				{
@@ -579,30 +578,30 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='meat', amount =6},
+					{name='blood', amount =100},
 				},
                 crafting_speed = 15,
-                tech = 'myostatin',
-				name = 'Extract Ulric Meat-2',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
-				icon_size = 64,
+                tech = 'transgenes',
+                name = 'Extract Ulric blood-2',
+                icon = "__pyalienlife__/graphics/icons/blood.png",
+                icon_size = 64,
 		},	
-		--meat ulric rendering
+		--blood ulric rendering
 		{
 			ingredients =
 				{
 					{name='cagedulric',amount='R'},
-					{name='meatcagedulric',amount=1},
+					{name='bloodcagedulric',amount=1},
 				},
 			results =
 				{
-					{name='skin', amount ='R'},
-					{name='meat', amount =9},
+					{name='guts', amount ='R'},
+					{name='blood', amount =130},
 				},
 			crafting_speed = 15,
-			tech = 'myostatin',
-			name = 'Extract meat from Improved Ulrics-2',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-ulric.png",
+			tech = 'transgenes',
+			name = 'Extract blood from Improved Ulrics-2',
+			icon = "__pyalienlife__/graphics/icons/blood-caged-ulric.png",
 			icon_size = 64,
 		},
 	}
@@ -611,14 +610,14 @@ fun.autorecipes {
 ------------------VONIX------------------
 
 fun.autorecipes {
-    name = 'rendering-meats-vonix-2',
+    name = 'rendering-blood-vonix-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-vonix',
 	order = 'b',
     mats =
 	{
-		--meat
+		--blood
 		{
 			ingredients =
 				{
@@ -636,31 +635,31 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='meat', amount =8},
+					{name='arthropodblood', amount =120},
 				},
                 crafting_speed = 15,
-                tech = 'myostatin',
-				name = 'Extract Vonix Meat-2',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
-				icon_size = 64,
+                tech = 'transgenes',
+                name = 'Extract Vonix blood-2',
+                icon = "__pyalienlife__/graphics/icons/arthropod-blood.png",
+                icon_size = 32,
 		},	
-		--meat vonix rendering
+		--blood vonix rendering
 		{
 			ingredients =
 				{
 					{name='fatvonix',amount='R'},
 					{name='vonix',amount='R'},
-					{name='meatvonix',amount=1},
+					{name='bloodvonix',amount=1},
 				},
 			results =
 				{
-					{name='fat', amount ='R'},
-					{name='meat', amount =12},
+					{name='guts', amount ='R'},
+					{name='arthropodblood', amount =165},
 				},
 			crafting_speed = 15,
-			tech = 'myostatin',
-			name = 'Extract meat from Improved Vonixes-2',
-			icon = "__pyalienlife__/graphics/icons/meat-vonix.png",
+			tech = 'transgenes',
+			name = 'Extract Arthropod blood from Improved Vonixes-2',
+			icon = "__pyalienlife__/graphics/icons/blood-vonix.png",
 			icon_size = 64,
 		},
 	}
@@ -669,14 +668,14 @@ fun.autorecipes {
 ------------------VRAUkS------------------
 
 fun.autorecipes {
-    name = 'rendering-meats-vrauks-2',
+    name = 'rendering-blood-vrauks-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-vrauks',
 	order = 'b',
     mats =
 	{
-		--meat
+		--blood
 		{
 			ingredients =
 				{
@@ -687,55 +686,55 @@ fun.autorecipes {
                     {name='bones', amount ='R'},
 					{name='meat', amount ='R'},
 					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
 					{name='chitin', amount ='R'},
 					{name='arthropodblood', amount ='R'},
 					{name='sulfuricacid', amount ='R'},
-					{name='fat', amount ='R'},
-					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='meat', amount =4},
+					{name='arthropodblood', amount =55},
 				},
                 crafting_speed = 15,
-                tech = 'myostatin',
-				name = 'Extract Vrauks Meat-2',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
-				icon_size = 64,
-		},		
-		--meat vrauks rendering
+                tech = 'transgenes',
+                name = 'Extract Vrauks blood-2',
+                icon = "__pyalienlife__/graphics/icons/arthropod-blood.png",
+                icon_size = 32,
+		},	
+		--blood vrauks rendering
 		{
 			ingredients =
 				{
 					{name='braincagedvrauks',amount='R'},
 					{name='cagedvrauks',amount='R'},
-					{name='meatcagedvrauks',amount=1},
+					{name='bloodcagedvrauks',amount=1},
 				},
 			results =
 				{
-					{name='bonemeal', amount ='R'},
-					{name='meat', amount =8},
+					{name='guts', amount ='R'},
+					{name='arthropodblood', amount =110},
 				},
 			crafting_speed = 15,
-			tech = 'myostatin',
-			name = 'Extract meat from Improved Vrauks-2',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-vrauks.png",
+			tech = 'transgenes',
+			name = 'Extract blood from Improved Vrauks-2',
+			icon = "__pyalienlife__/graphics/icons/blood-caged-vrauks.png",
 			icon_size = 64,
 		},
 	}
 }
 
-------------------XENOS------------------
+------------------RENDERING XENOS------------------
 
 fun.autorecipes {
-    name = 'rendering-meats-xeno-2',
+    name = 'rendering-blood-xenos-2',
 	category = 'slaughterhouse',
-	--module_limitations = 'auog',
+	--module_limitations = 'xeno',
 	subgroup = 'py-alienlife-xeno',
 	order = 'b',
     mats =
 	{
-		--meat
+		--blood
 		{
 			ingredients =
 				{
@@ -743,59 +742,52 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='skin', amount ='R'},
+					{name='bones', amount ='R'},
 					{name='chitin', amount ='R'},
-					{name='arthropodblood', amount ='R'},
 					{name='sulfuricacid', amount ='R'},
-					{name='fat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='blood', amount ='R'},
-					{name='brain', amount ='R'},
-					{name='cage',amount=1},
-					{name='meat', amount =6},
+                    {name='meat', amount ='R'},
+                    {name='brain', amount ='R'},
+					{name='sulfuricacid', amount =100},
 				},
-                crafting_speed = 15,
-                tech = 'myostatin',
-				name = 'Extract Xeno Meat-2',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
-				icon_size = 64,
-		},		
-		--meat xeno rendering
+			crafting_speed = 15,
+			tech = 'transgenes',
+			name = 'Extract Xeno blood-2',
+			icon = "__base__/graphics/icons/fluid/sulfuric-acid.png",
+			icon_size = 32,
+		},	
+		--blood xeno rendering
 		{
 			ingredients =
 				{
-					{name='chitinxeno',amount='R'},
 					{name='cagedxeno',amount='R'},
-					{name='meatxeno',amount=1},
-					{name='cage', amount ='R'},
+					{name='bloodxeno',amount=1},
 				},
 			results =
 				{
-					{name='chitin', amount ='R'},
-					{name='meat', amount =10},
+					{name='bonemeal', amount ='R'},
+					{name='sulfuricacid', amount =140},
 				},
 			crafting_speed = 15,
-			tech = 'myostatin',
-			name = 'Extract meat from Improved Xenos-2',
-			icon = "__pyalienlife__/graphics/icons/meat-xeno.png",
+			tech = 'transgenes',
+			name = 'Extract blood from Improved Xenos-2',
+			icon = "__pyalienlife__/graphics/icons/sulfuric-xeno.png",
 			icon_size = 64,
 		},
 	}
 }
 
+
 ------------------XYHIPHOE------------------
 
 fun.autorecipes {
-    name = 'rendering-meats-xyhiphoe-2',
+    name = 'rendering-blood-xyhiphoe-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-xyhiphoe',
 	order = 'b',
     mats =
 	{
-		--meat
+		--blood
 		{
 			ingredients =
 				{
@@ -807,30 +799,30 @@ fun.autorecipes {
 					{name='shell', amount ='R'},
 					{name='guts', amount ='R'},
 					{name='arthropodblood', amount ='R'},
-					{name='meat', amount =4},
+					{name='arthropodblood', amount =100},
 				},
 			crafting_speed = 15,
-			tech = 'myostatin',
-			name = 'Extract xyhiphoe Meat-2',
-			icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
-			icon_size = 64,
+			tech = 'transgenes',
+			name = 'Extract xyhiphoe blood-2',
+			icon = "__pyalienlife__/graphics/icons/arthropod-blood.png",
+			icon_size = 32,
 		},
-		--meat xyhiphoe rendering
+		--blood xyhiphoe rendering
 		{
 			ingredients =
 				{
 					{name='xyhiphoe',amount='R'},
-					{name='meatxyhiphoe',amount=1},
+					{name='bloodxyhiphoe',amount=1},
 				},
 			results =
 				{
-					{name='arthropodblood', amount ='R'},
-					{name='meat', amount =7},
+					{name='guts', amount ='R'},
+					{name='arthropodblood', amount =150},
 				},
 			crafting_speed = 15,
-			tech = 'myostatin',
-			name = 'Extract meat from Improved xyhiphoe-2',
-			icon = "__pyalienlife__/graphics/icons/meat-xyhiphoe.png",
+			tech = 'transgenes',
+			name = 'Extract blood from Improved xyhiphoe-2',
+			icon = "__pyalienlife__/graphics/icons/blood-xyhiphoe.png",
 			icon_size = 64,
 		},
 	}
@@ -839,14 +831,14 @@ fun.autorecipes {
 ------------------ZIPIR------------------
 
 fun.autorecipes {
-    name = 'rendering-meats-zipir-2',
+    name = 'rendering-blood-zipir-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-zipir',
 	order = 'b',
     mats =
 	{
-		--meat
+		--blood
 		{
 			ingredients =
 				{
@@ -864,30 +856,30 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='meat', amount =6},
+					{name='arthropodblood', amount =85},
 				},
                 crafting_speed = 15,
-                tech = 'myostatin',
-				name = 'Extract zipir Meat-2',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
-				icon_size = 64,
-		},		
-		--meat zipir rendering
+                tech = 'transgenes',
+                name = 'Extract zipir blood-2',
+                icon = "__pyalienlife__/graphics/icons/arthropod-blood.png",
+                icon_size = 32,
+		},	
+		--blood zipir rendering
 		{
 			ingredients =
 				{
 					{name='zipir',amount='R'},
-					{name='meatzipir',amount=1},
+					{name='bloodzipir',amount=1},
 				},
 			results =
 				{
-					{name='fat', amount ='R'},
-					{name='meat', amount =10},
+					{name='guts', amount ='R'},
+					{name='arthropodblood', amount =110},
 				},
 			crafting_speed = 15,
-			tech = 'myostatin',
-			name = 'Extract meat from Improved Zipir-2',
-			icon = "__pyalienlife__/graphics/icons/meat-zipir.png",
+			tech = 'transgenes',
+			name = 'Extract Arthropod blood from Improved Zipir-2',
+			icon = "__pyalienlife__/graphics/icons/blood-zipir.png",
 			icon_size = 64,
 		},
 	}
