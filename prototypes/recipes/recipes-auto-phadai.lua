@@ -804,7 +804,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='blood', amount =45},
+					{name='blood', amount =65},
 				},
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
