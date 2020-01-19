@@ -538,7 +538,7 @@ RECIPE {
         {type = 'item', name = 'stone', amount = 1, probability = 0.5},
     },
     main_product = "mixed-ores",
-}:add_unlock('biotech-mk02')
+}:add_unlock('biotech-mk02'):add_ingredient({type = "item", name = "rare-earth-ore", amount = 5})
 
 RECIPE {
     type = 'recipe',
