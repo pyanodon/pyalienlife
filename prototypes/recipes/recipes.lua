@@ -371,7 +371,7 @@ RECIPE {
         {type = 'item', name = 'sea-sponge', amount = 1},
         {type = 'item', name = 'plasmids', amount = 2},
         {type = 'item', name = 'flask', amount = 3},
-        {type = 'item', name = 'microcin-j25', amount = 1},
+        {type = 'fluid', name = 'decalin', amount = 30},
         {type = 'item', name = 'plastic-bar', amount = 1},
     },
     results = {
