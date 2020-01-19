@@ -1477,7 +1477,7 @@ RECIPE {
         {type = 'item', name = 'lime', amount = 10},
     },
     --main_product = "b-molasse",
-}:add_unlock("water-invertebrates-mk01")
+}:add_unlock("water-invertebrates-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -1498,3 +1498,21 @@ RECIPE {
         {type = 'item', name = 'replicator-bioreserve', amount = 1},
     },
 }:add_unlock("mega-farm-bioreserve"):add_ingredient({type = "item", name = "nems", amount = 10}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10})
+
+
+RECIPE {
+    type = "recipe",
+    name = "oleochemicals-3",
+    category = "biofactory",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'sporopollenin', amount = 5},
+        {type = 'fluid', name = 'refsyngas', amount = 100},
+        {type = 'item', name = 'lead-plate', amount = 2},
+    },
+    results = {
+        {type = 'fluid', name = 'oleochemicals', amount = 60},
+    },
+    --main_product = "b-molasse",
+}:add_unlock("mycology-mk03")

@@ -20,6 +20,7 @@ RECIPE('bacteria-1'):remove_unlock('helium-processing'):add_unlock('microbiology
 RECIPE('serine'):remove_unlock('helium-processing'):add_unlock('kmauts'):subgroup_order('py-alienlife-kmauts', 'b'):change_category('bio-reactor'):remove_ingredient("kmauts-ration"):add_ingredient({type = "item", name = "tendon", amount = 5}):add_ingredient({type = "fluid", name = "zogna-bacteria", amount = 40})
 ITEM('serine'):subgroup_order('py-alienlife-kmauts', 'b')
 ITEM('kmauts-ration'):subgroup_order('py-alienlife-food', 'b')
+RECIPE('nembit-matrix'):add_ingredient({type = "item", name = "nano-cellulose", amount = 3})
 
 RECIPE('xyhiphoe-blood'):remove_unlock('vanadium-processing')
 RECIPE('vanabins'):remove_ingredient("xyhiphoe-blood"):add_ingredient({type = "fluid", name = "arthropod-blood", amount = 40})
