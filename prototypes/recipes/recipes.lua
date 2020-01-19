@@ -1516,3 +1516,21 @@ RECIPE {
     },
     --main_product = "b-molasse",
 }:add_unlock("mycology-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "sporopollenin",
+    category = "bio-reactor",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'navens-spore', amount = 5},
+        {type = 'item', name = 'navens-spores', amount = 5},
+        {type = 'item', name = 'bhoddos-spore', amount = 3},
+        {type = 'item', name = 'rennea', amount = 8},
+    },
+    results = {
+        {type = 'fluid', name = 'sporopollenin', amount = 5},
+    },
+    --main_product = "b-molasse",
+}:add_unlock("mycology-mk02")
