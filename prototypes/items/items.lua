@@ -131,6 +131,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "sporopollenin",
+    icon = "__pyalienlife__/graphics/icons/sporopollenin.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
     name = "fungal-substrate",
     icon = "__pyalienlife__/graphics/icons/fungal-substrate.png",
     icon_size = 32,

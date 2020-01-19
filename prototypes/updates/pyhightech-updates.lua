@@ -212,6 +212,7 @@ RECIPE('nv-center'):add_ingredient({type = "item", name = "strangelets", amount 
 RECIPE('space-science-pack'):add_ingredient({type = "item", name = "strangelets", amount = 5})
 
 RECIPE('zipir-carcass'):remove_unlock('basic-electronics')
+RECIPE('capacitor-core'):add_ingredient({type = "item", name = "nano-cellulose", amount = 2})
 RECIPE('fawogae2'):remove_unlock('advanced-electronics')
 RECIPE('fiber'):remove_unlock('basic-electronics')
 --RECIPE('urea'):change_category('vrauks'):subgroup_order("py-alienlife-auog", "a")
@@ -910,3 +911,37 @@ RECIPE {
         {type = 'fluid', name = 'ethylene', amount = 30}
     }
 }:add_unlock('phagnot-mk02'):change_category('gas-refinery')
+
+RECIPE {
+    type = 'recipe',
+    name = 'biopolymer-2',
+    category = 'bio-reactor',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'silver-foam', amount = 1},
+        {type = 'item', name = 'urea', amount = 10},
+        {type = 'item', name = 'sporopollenin', amount = 3},
+        {type = 'fluid', name = 'bacteria-2', amount = 25},
+        {type = 'fluid', name = 'fish-oil', amount = 50}
+    },
+    results = {
+        {type = 'item', name = 'biopolymer', amount = 5}
+    }
+}:add_unlock('nano-tech')
+
+RECIPE {
+    type = "recipe",
+    name = "phenol-3",
+    category = "biofactory",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'sporopollenin', amount = 5},
+        {type = 'fluid', name = 'boric-acid', amount = 300},
+    },
+    results = {
+        {type = 'item', name = 'phenol', amount = 6},
+    },
+    --main_product = "b-molasse",
+}:add_unlock("mycology-mk03")
