@@ -1525,7 +1525,6 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'navens-spore', amount = 5},
-        {type = 'item', name = 'navens-spores', amount = 5},
         {type = 'item', name = 'bhoddos-spore', amount = 3},
         {type = 'item', name = 'rennea', amount = 8},
     },
