@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "advanced-rendering",
-    icon = "__pyalienlife__/graphics/technology/adv-rendering.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/adv-rendering.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"biotech-mk02","rendering"},

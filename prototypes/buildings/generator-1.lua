@@ -18,7 +18,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "generator-1",
-    icon = "__pyalienlife__/graphics/icons/generator-1.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/generator-1.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-generators",
@@ -30,7 +30,7 @@ ITEM {
 ENTITY {
     type = "generator",
     name = "generator-1",
-    icon = "__pyalienlife__/graphics/icons/generator-1.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/generator-1.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "generator-1"},
@@ -63,7 +63,7 @@ ENTITY {
     horizontal_animation = {
         layers = {
             {
-                filename = "__pyalienlife__/graphics/entity/generator-1/a1.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a1.png",
                 width = 32,
                 height = 288,
                 line_length = 64,
@@ -72,7 +72,7 @@ ENTITY {
                 shift = util.by_pixel(-96, -32)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/generator-1/a2.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a2.png",
                 width = 32,
                 height = 288,
                 line_length = 64,
@@ -81,7 +81,7 @@ ENTITY {
                 shift = util.by_pixel(-64, -32)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/generator-1/a3.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a3.png",
                 width = 32,
                 height = 288,
                 line_length = 64,
@@ -90,7 +90,7 @@ ENTITY {
                 shift = util.by_pixel(-32, -32)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/generator-1/a4.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a4.png",
                 width = 32,
                 height = 288,
                 line_length = 64,
@@ -99,7 +99,7 @@ ENTITY {
                 shift = util.by_pixel(-0, -32)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/generator-1/a5.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a5.png",
                 width = 32,
                 height = 288,
                 line_length = 64,
@@ -108,7 +108,7 @@ ENTITY {
                 shift = util.by_pixel(32, -32)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/generator-1/a6.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a6.png",
                 width = 32,
                 height = 288,
                 line_length = 64,
@@ -117,7 +117,7 @@ ENTITY {
                 shift = util.by_pixel(64, -32)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/generator-1/a7.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a7.png",
                 width = 32,
                 height = 288,
                 line_length = 64,
@@ -126,7 +126,7 @@ ENTITY {
                 shift = util.by_pixel(96, -32)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/generator-1/a8.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a8.png",
                 width = 32,
                 height = 288,
                 line_length = 64,
@@ -139,7 +139,7 @@ ENTITY {
     vertical_animation = {
         layers = {
             {
-                filename = "__pyalienlife__/graphics/entity/generator-1/a1.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a1.png",
                 width = 32,
                 height = 288,
                 line_length = 64,
@@ -148,7 +148,7 @@ ENTITY {
                 shift = util.by_pixel(-96, -32)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/generator-1/a2.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a2.png",
                 width = 32,
                 height = 288,
                 line_length = 64,
@@ -157,7 +157,7 @@ ENTITY {
                 shift = util.by_pixel(-64, -32)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/generator-1/a3.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a3.png",
                 width = 32,
                 height = 288,
                 line_length = 64,
@@ -166,7 +166,7 @@ ENTITY {
                 shift = util.by_pixel(-32, -32)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/generator-1/a4.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a4.png",
                 width = 32,
                 height = 288,
                 line_length = 64,
@@ -175,7 +175,7 @@ ENTITY {
                 shift = util.by_pixel(-0, -32)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/generator-1/a5.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a5.png",
                 width = 32,
                 height = 288,
                 line_length = 64,
@@ -184,7 +184,7 @@ ENTITY {
                 shift = util.by_pixel(32, -32)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/generator-1/a6.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a6.png",
                 width = 32,
                 height = 288,
                 line_length = 64,
@@ -193,7 +193,7 @@ ENTITY {
                 shift = util.by_pixel(64, -32)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/generator-1/a7.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a7.png",
                 width = 32,
                 height = 288,
                 line_length = 64,
@@ -202,7 +202,7 @@ ENTITY {
                 shift = util.by_pixel(96, -32)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/generator-1/a8.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a8.png",
                 width = 32,
                 height = 288,
                 line_length = 64,
@@ -217,8 +217,8 @@ ENTITY {
     performance_to_sound_speedup = 0.0,
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/generator-1.ogg"},
-        idle_sound = {filename = "__pyalienlife__/sounds/generator-1.ogg", volume = 0.45},
+        sound = {filename = "__pyalienlifegraphics__/sounds/generator-1.ogg"},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/generator-1.ogg", volume = 0.45},
         apparent_volume = 2.5
     }
 }

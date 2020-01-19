@@ -1,7 +1,7 @@
 FLUID {
     type = "fluid",
     name = "creamy-latex",
-    icon = "__pyalienlife__/graphics/icons/creamy-latex.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/creamy-latex.png",
 	icon_size = 64,
     default_temperature = 10,
     base_color = {r = 0.913, g = 0.913, b = 0.913},

@@ -201,7 +201,7 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 5},
     },
     --main_product = "phagnot-mk02",
-    icon = '__pyalienlife__/graphics/icons/evolution-mk02.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
     icon_size = 64,
     subgroup = 'py-alienlife-phagnot',
     order = 'za'
@@ -226,7 +226,7 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 5},
     },
     --main_product = "phagnot-mk03",
-    icon = '__pyalienlife__/graphics/icons/evolution-mk03.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png',
     icon_size = 64,
     subgroup = 'py-alienlife-phagnot',
     order = 'zb'
@@ -251,7 +251,7 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 5},
     },
     --main_product = "phagnot-mk04",
-    icon = '__pyalienlife__/graphics/icons/evolution-mk04.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
     icon_size = 64,
     subgroup = 'py-alienlife-phagnot',
     order = 'zc'

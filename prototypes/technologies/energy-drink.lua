@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "energy-drink",
-    icon = "__pyalienlife__/graphics/technology/energy-drink.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/energy-drink.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"land-animals-mk02","botany-mk02"},

@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "xenobiology",
-    icon = "__pyalienlife__/graphics/technology/xenobiology.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/xenobiology.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"steel-processing"},

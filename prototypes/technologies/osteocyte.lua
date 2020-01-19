@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "osteocyte",
-    icon = "__pyalienlife__/graphics/technology/osteocyte.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/osteocyte.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"genetic-design"},
@@ -22,7 +22,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "hardened-bone",
-    icon = "__pyalienlife__/graphics/technology/hardened-bone.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/hardened-bone.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"osteocyte","bmp"},

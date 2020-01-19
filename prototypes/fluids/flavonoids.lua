@@ -1,7 +1,7 @@
 FLUID {
     type = "fluid",
     name = "flavonoids",
-    icon = "__pyalienlife__/graphics/icons/flavonoids.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/flavonoids.png",
 	icon_size = 64,
     default_temperature = 10,
     base_color = {r = 0.317, g = 0.372, b = 0.121},

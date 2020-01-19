@@ -19,7 +19,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "kmauts-enclosure-mk04",
-    icon = "__pyalienlife__/graphics/icons/kmauts-enclosure-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/kmauts-enclosure-mk04.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk04",
@@ -31,7 +31,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "kmauts-enclosure-mk04",
-    icon = "__pyalienlife__/graphics/icons/kmauts-enclosure-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/kmauts-enclosure-mk04.png",
 	icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "kmauts-enclosure-mk04"},

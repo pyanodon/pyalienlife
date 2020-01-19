@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "dingrits",
-    icon = "__pyalienlife__/graphics/technology/dingrits.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/dingrits.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"land-animals-mk03","biotech-mk03","genetic-design"},
@@ -21,7 +21,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "dingrits-mk02",
-    icon = "__pyalienlife__/graphics/technology/dingrits-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/dingrits-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"dingrits"},
@@ -41,7 +41,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "dingrits-mk03",
-    icon = "__pyalienlife__/graphics/technology/dingrits-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/dingrits-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"dingrits-mk02"},
@@ -62,7 +62,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "dingrits-mk04",
-    icon = "__pyalienlife__/graphics/technology/dingrits-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/dingrits-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"dingrits-mk03"},

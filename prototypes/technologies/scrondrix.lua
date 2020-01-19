@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "scrondrix",
-    icon = "__pyalienlife__/graphics/technology/scrondrix.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/scrondrix.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"land-animals-mk03","genetics-mk03","genetic-design"},
@@ -20,7 +20,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "scrondrix-mk02",
-    icon = "__pyalienlife__/graphics/technology/scrondrix-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/scrondrix-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"scrondrix"},
@@ -40,7 +40,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "scrondrix-mk03",
-    icon = "__pyalienlife__/graphics/technology/scrondrix-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/scrondrix-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"scrondrix-mk02"},
@@ -61,7 +61,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "scrondrix-mk04",
-    icon = "__pyalienlife__/graphics/technology/scrondrix-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/scrondrix-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"scrondrix-mk03"},

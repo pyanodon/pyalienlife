@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "dhilmos",
-    icon = "__pyalienlife__/graphics/technology/dhilmos.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/dhilmos.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"water-invertebrates-mk03","genetics-mk03","genetic-design"},
@@ -20,7 +20,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "dhilmos-mk02",
-    icon = "__pyalienlife__/graphics/technology/dhilmos-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/dhilmos-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"dhilmos"},
@@ -40,7 +40,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "dhilmos-mk03",
-    icon = "__pyalienlife__/graphics/technology/dhilmos-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/dhilmos-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"dhilmos-mk02"},
@@ -61,7 +61,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "dhilmos-mk04",
-    icon = "__pyalienlife__/graphics/technology/dhilmos-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/dhilmos-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"dhilmos-mk03"},

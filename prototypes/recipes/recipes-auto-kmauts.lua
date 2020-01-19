@@ -414,7 +414,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'kmauts',
 			name = 'Full Render kmauts',
-			icon = "__pyalienlife__/graphics/icons/rendering-kmauts.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-kmauts.png",
 			icon_size = 64,
 		},
 		--meat
@@ -436,7 +436,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'kmauts',
 			name = 'Extract kmauts Meat',
-			icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 			icon_size = 64,
 		},
 		--brain
@@ -453,7 +453,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'kmauts',
 			name = 'Extract kmauts brains',
-			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},	
 		--tendon
@@ -470,7 +470,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'kmauts',
 			name = 'Extract kmauts tendons',
-			icon = "__pyalienlife__/graphics/icons/tendon.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/tendon.png",
 			icon_size = 64,
 		},
 		--guts
@@ -487,7 +487,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'kmauts',
 			name = 'Extract kmauts guts',
-			icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
 		},
 		--blood
@@ -504,7 +504,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'kmauts',
 			name = 'Extract kmauts blood',
-			icon = "__pyalienlife__/graphics/icons/arthropod-blood.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
 			icon_size = 32,
 		},
 
@@ -522,7 +522,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'kmauts',
 			name = 'Extract kmauts lard',
-			icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
 			icon_size = 64,
 		},
 
@@ -541,7 +541,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'nanochondria',
 			name = 'Extract brains from Improved kmauts',
-			icon = "__pyalienlife__/graphics/icons/brain-caged-kmauts.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-kmauts.png",
 			icon_size = 64,
 		},
 		--guts kmauts rendering
@@ -559,7 +559,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'antitumor',
 			name = 'Extract guts from Improved kmauts',
-			icon = "__pyalienlife__/graphics/icons/guts-caged-kmauts.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-kmauts.png",
 			icon_size = 64,
 		},
 		--blood kmauts rendering
@@ -577,7 +577,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
 			name = 'Extract blood from Improved kmauts',
-			icon = "__pyalienlife__/graphics/icons/blood-caged-kmauts.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-kmauts.png",
 			icon_size = 64,
 		},
 		--meat kmauts rendering
@@ -595,7 +595,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
 			name = 'Extract meat from Improved kmauts',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-kmauts.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-kmauts.png",
 			icon_size = 64,
         },
 		--fat kmauts rendering
@@ -613,7 +613,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'orexigenic',
 			name = 'Extract fat from Improved kmauts',
-			icon = "__pyalienlife__/graphics/icons/fat-caged-kmauts.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-kmauts.png",
 			icon_size = 64,
 		},
 	}

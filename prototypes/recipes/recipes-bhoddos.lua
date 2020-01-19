@@ -77,7 +77,7 @@ RECIPE {
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "bhoddos-mk02",
-    icon = '__pyalienlife__/graphics/icons/evolution-mk02.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
     icon_size = 64,
     subgroup = 'py-alienlife-bhoddos',
     order = 'za'
@@ -102,7 +102,7 @@ RECIPE {
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "bhoddos-mk03",
-    icon = '__pyalienlife__/graphics/icons/evolution-mk03.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png',
     icon_size = 64,
     subgroup = 'py-alienlife-bhoddos',
     order = 'zb'
@@ -127,7 +127,7 @@ RECIPE {
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "bhoddos-mk04",
-    icon = '__pyalienlife__/graphics/icons/evolution-mk04.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
     icon_size = 64,
     subgroup = 'py-alienlife-bhoddos',
     order = 'zc'

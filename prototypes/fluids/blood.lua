@@ -1,7 +1,7 @@
 FLUID {
     type = "fluid",
     name = "blood",
-    icon = "__pyalienlife__/graphics/icons/blood.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
 	icon_size = 64,
     default_temperature = 10,
     base_color = {r = 0.854, g = 0.219, b = 0.0},

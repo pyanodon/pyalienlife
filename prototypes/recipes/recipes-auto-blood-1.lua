@@ -32,7 +32,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'somatic',
 			name = 'Extract arthurian blood-1',
-			icon = "__pyalienlife__/graphics/icons/blood.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
 			icon_size = 64,
 		},	
 	}
@@ -69,7 +69,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'somatic',
                 name = 'Extract auog blood-1',
-                icon = "__pyalienlife__/graphics/icons/blood.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
 		},	
 	}
@@ -108,7 +108,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'somatic',
                 name = 'Extract dhilmos blood-1',
-                icon = "__pyalienlife__/graphics/icons/arthropod-blood.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
                 icon_size = 32,
 		},	
 	}
@@ -145,7 +145,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'somatic',
                 name = 'Extract dingrits blood-1',
-                icon = "__pyalienlife__/graphics/icons/blood.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
 		},	
 	}
@@ -182,7 +182,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'somatic',
                 name = 'Extract kmauts blood-1',
-                icon = "__pyalienlife__/graphics/icons/arthropod-blood.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
                 icon_size = 32,
 		},	
 	}
@@ -219,7 +219,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'somatic',
                 name = 'Extract Mukmoux blood-1',
-                icon = "__pyalienlife__/graphics/icons/blood.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
 		},	
 	}
@@ -256,7 +256,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'somatic',
                 name = 'Extract phadai blood-1',
-                icon = "__pyalienlife__/graphics/icons/blood.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
 		},	
 	}
@@ -293,7 +293,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'somatic',
                 name = 'Extract phagnot blood-1',
-                icon = "__pyalienlife__/graphics/icons/blood.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
 		},	
 	}
@@ -330,7 +330,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'somatic',
                 name = 'Extract scrondrix blood-1',
-                icon = "__pyalienlife__/graphics/icons/blood.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
 		},	
 	}
@@ -366,7 +366,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'somatic',
                 name = 'Extract Trits blood-1',
-                icon = "__pyalienlife__/graphics/icons/blood.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
 		},	
 	}
@@ -403,7 +403,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'somatic',
                 name = 'Extract Ulric blood-1',
-                icon = "__pyalienlife__/graphics/icons/blood.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
 		},	
 	}
@@ -442,7 +442,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'somatic',
                 name = 'Extract Vonix blood-1',
-                icon = "__pyalienlife__/graphics/icons/arthropod-blood.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
                 icon_size = 32,
 		},	
 	}
@@ -482,7 +482,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'somatic',
                 name = 'Extract Vrauks blood-1',
-                icon = "__pyalienlife__/graphics/icons/arthropod-blood.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
                 icon_size = 32,
 		},	
 	}
@@ -551,7 +551,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'somatic',
 			name = 'Extract xyhiphoe blood-1',
-			icon = "__pyalienlife__/graphics/icons/arthropod-blood.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
 			icon_size = 32,
 		},
 	}
@@ -589,7 +589,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'somatic',
                 name = 'Extract zipir blood-1',
-                icon = "__pyalienlife__/graphics/icons/arthropod-blood.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
                 icon_size = 32,
 		},	
 	}

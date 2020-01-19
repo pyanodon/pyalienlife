@@ -19,7 +19,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "arthurian-pen-mk01",
-    icon = "__pyalienlife__/graphics/icons/arthurian-pen-mk01.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/arthurian-pen-mk01.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk01",
@@ -31,7 +31,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "arthurian-pen-mk01",
-    icon = "__pyalienlife__/graphics/icons/arthurian-pen-mk01.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/arthurian-pen-mk01.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "arthurian-pen-mk01"},
@@ -59,7 +59,7 @@ ENTITY {
     animation = {
         layers = {
         {
-        filename = "__pyalienlife__/graphics/entity/arthurian-pen/a1.png",
+        filename = "__pyalienlifegraphics__/graphics/entity/arthurian-pen/a1.png",
         width = 328,
         height = 346,
         frame_count = 1,
@@ -67,7 +67,7 @@ ENTITY {
         shift = util.by_pixel(4, -12)
         },
         {
-            filename = "__pyalienlife__/graphics/entity/arthurian-pen/a1-mask.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/arthurian-pen/a1-mask.png",
             width = 328,
             height = 346,
             frame_count = 1,
@@ -84,7 +84,7 @@ ENTITY {
             south_position = {-2.5, -3.5},
             east_position = {-2.5, -3.5},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/arthurian-pen/mother.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/arthurian-pen/mother.png",
                 frame_count = 40,
                 scale= 1.2,
                 line_length = 20,
@@ -99,7 +99,7 @@ ENTITY {
             south_position = {3.3, -0.5},
             east_position = {3.3, -0.5},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/arthurian-pen/right.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/arthurian-pen/right.png",
                 frame_count = 40,
                 line_length = 20,
                 width = 64,
@@ -113,7 +113,7 @@ ENTITY {
             south_position = {3.5, 0.5},
             east_position = {3.5, 0.5},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/arthurian-pen/cub.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/arthurian-pen/cub.png",
                 frame_count = 40,
                 line_length = 20,
                 width = 47,
@@ -127,7 +127,7 @@ ENTITY {
             south_position = {-0.8, 1.7},
             east_position = {-0.8, 1.7},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/arthurian-pen/eatside.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/arthurian-pen/eatside.png",
                 frame_count = 200,
                 line_length = 20,
                 width = 96,
@@ -141,7 +141,7 @@ ENTITY {
             south_position = {-2.5, 0.8},
             east_position = {-2.5, 0.8},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/arthurian-pen/eatup.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/arthurian-pen/eatup.png",
                 frame_count = 200,
                 line_length = 20,
                 width = 64,
@@ -155,7 +155,7 @@ ENTITY {
             south_position = {-0.0, -1.0},
             east_position = {-0.0, -1.0},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/arthurian-pen/rot.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/arthurian-pen/rot.png",
                 frame_count = 120,
                 line_length = 20,
                 run_mode = "forward-then-backward",
@@ -167,8 +167,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/arthurian-pen.ogg", volume = 1.0},
-        idle_sound = {filename = "__pyalienlife__/sounds/arthurian-pen.ogg", volume = 0.65},
+        sound = {filename = "__pyalienlifegraphics__/sounds/arthurian-pen.ogg", volume = 1.0},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/arthurian-pen.ogg", volume = 0.65},
         apparent_volume = 0.45
     }
 }

@@ -32,7 +32,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'myostatin',
 			name = 'Extract arthurian Meat-2',
-			icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 			icon_size = 64,
 		},	
 		--meat arthurian rendering
@@ -50,7 +50,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'myostatin',
 			name = 'Extract meat from Improved arthurians-2',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-arthurian.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-arthurian.png",
 			icon_size = 64,
 		},
 	}
@@ -88,7 +88,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'myostatin',
                 name = 'Extract auog Meat-2',
-                icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
                 icon_size = 64,
 		},	
 		--meat auog rendering
@@ -106,7 +106,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'myostatin',
 			name = 'Extract meat from Improved auogs-2',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-auog.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-auog.png",
 			icon_size = 64,
 		},
 	}
@@ -145,7 +145,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'myostatin',
 				name = 'Extract dhilmos Meat-2',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
 		},	
 		--meat dhilmos rendering
@@ -163,7 +163,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'myostatin',
 			name = 'Extract meat from Improved dhilmoss-2',
-			icon = "__pyalienlife__/graphics/icons/meat-dhilmos.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-dhilmos.png",
 			icon_size = 64,
 		},
 	}
@@ -200,7 +200,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'myostatin',
 				name = 'Extract dingrits Meat-2',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
 		},	
 		--meat dingrits rendering
@@ -218,7 +218,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'myostatin',
 			name = 'Extract meat from Improved dingrits-2',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-dingrits.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-dingrits.png",
 			icon_size = 64,
 		},
 	}
@@ -255,7 +255,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'myostatin',
 				name = 'Extract kmauts Meat-2',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
 		},	
 		--meat kmauts rendering
@@ -273,7 +273,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'myostatin',
 			name = 'Extract meat from Improved kmauts-2',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-kmauts.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-kmauts.png",
 			icon_size = 64,
         },
 	}
@@ -310,7 +310,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'myostatin',
 				name = 'Extract Mukmoux Meat-2',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
 		},	
 		--meat mukmoux rendering
@@ -328,7 +328,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'myostatin',
 			name = 'Extract meat from Improved Mukmouxs-2',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-mukmoux.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-mukmoux.png",
 			icon_size = 64,
 		},
 	}
@@ -365,7 +365,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'myostatin',
 				name = 'Extract phadai Meat-2',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
 		},	
 		--meat phadai rendering
@@ -383,7 +383,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'myostatin',
 			name = 'Extract meat from Improved phadais-2',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-phadai.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-phadai.png",
 			icon_size = 64,
         },
 	}
@@ -420,7 +420,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'myostatin',
 				name = 'Extract phagnot Meat-2',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
 		},	
 		--meat phagnot rendering
@@ -438,7 +438,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'myostatin',
 			name = 'Extract meat from Improved phagnots-2',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-phagnot.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-phagnot.png",
 			icon_size = 64,
 		},
 	}
@@ -475,7 +475,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'myostatin',
 				name = 'Extract scrondrix Meat-2',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
 		},	
 		--meat scrondrix rendering
@@ -493,7 +493,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'myostatin',
 			name = 'Extract meat from Improved scrondrixs-2',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-scrondrix.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-scrondrix.png",
 			icon_size = 64,
 		},
 	}
@@ -529,7 +529,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'myostatin',
 				name = 'Extract Trits Meat-2',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
 		},	
 		--meat trits rendering
@@ -547,7 +547,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'myostatin',
 			name = 'Extract meat from Improved Trits-2',
-			icon = "__pyalienlife__/graphics/icons/meat-trits.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-trits.png",
 			icon_size = 64,
 		},
 	}
@@ -584,7 +584,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'myostatin',
 				name = 'Extract Ulric Meat-2',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
 		},	
 		--meat ulric rendering
@@ -602,7 +602,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'myostatin',
 			name = 'Extract meat from Improved Ulrics-2',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-ulric.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-ulric.png",
 			icon_size = 64,
 		},
 	}
@@ -641,7 +641,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'myostatin',
 				name = 'Extract Vonix Meat-2',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
 		},	
 		--meat vonix rendering
@@ -660,7 +660,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'myostatin',
 			name = 'Extract meat from Improved Vonixes-2',
-			icon = "__pyalienlife__/graphics/icons/meat-vonix.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-vonix.png",
 			icon_size = 64,
 		},
 	}
@@ -700,7 +700,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'myostatin',
 				name = 'Extract Vrauks Meat-2',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
 		},		
 		--meat vrauks rendering
@@ -719,7 +719,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'myostatin',
 			name = 'Extract meat from Improved Vrauks-2',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-vrauks.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-vrauks.png",
 			icon_size = 64,
 		},
 	}
@@ -759,7 +759,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'myostatin',
 				name = 'Extract Xeno Meat-2',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
 		},		
 		--meat xeno rendering
@@ -779,7 +779,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'myostatin',
 			name = 'Extract meat from Improved Xenos-2',
-			icon = "__pyalienlife__/graphics/icons/meat-xeno.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-xeno.png",
 			icon_size = 64,
 		},
 	}
@@ -812,7 +812,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'myostatin',
 			name = 'Extract xyhiphoe Meat-2',
-			icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 			icon_size = 64,
 		},
 		--meat xyhiphoe rendering
@@ -830,7 +830,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'myostatin',
 			name = 'Extract meat from Improved xyhiphoe-2',
-			icon = "__pyalienlife__/graphics/icons/meat-xyhiphoe.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-xyhiphoe.png",
 			icon_size = 64,
 		},
 	}
@@ -869,7 +869,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'myostatin',
 				name = 'Extract zipir Meat-2',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
 		},		
 		--meat zipir rendering
@@ -887,7 +887,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'myostatin',
 			name = 'Extract meat from Improved Zipir-2',
-			icon = "__pyalienlife__/graphics/icons/meat-zipir.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-zipir.png",
 			icon_size = 64,
 		},
 	}

@@ -19,7 +19,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "xenopen-mk03",
-    icon = "__pyalienlife__/graphics/icons/xenopen-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/xenopen-mk03.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk03",
@@ -31,7 +31,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "xenopen-mk03",
-    icon = "__pyalienlife__/graphics/icons/xenopen-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/xenopen-mk03.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "xenopen-mk03"},
@@ -59,7 +59,7 @@ ENTITY {
     animation = {
         layers = {
         {
-        filename = "__pyalienlife__/graphics/entity/xenopen/off.png",
+        filename = "__pyalienlifegraphics__/graphics/entity/xenopen/off.png",
         width = 448,
         height = 480,
         frame_count = 1,
@@ -67,7 +67,7 @@ ENTITY {
         shift = util.by_pixel(16, -32)
         },
         {
-            filename = "__pyalienlife__/graphics/entity/xenopen/off-mask.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/xenopen/off-mask.png",
             width = 448,
             height = 480,
             frame_count = 1,
@@ -85,7 +85,7 @@ ENTITY {
             south_position = util.by_pixel(-89, -10),
             east_position = util.by_pixel(-89, -10),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/xenopen/claw.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/xenopen/claw.png",
                 frame_count = 34,
                 line_length = 8,
                 width = 192,
@@ -99,7 +99,7 @@ ENTITY {
             south_position = util.by_pixel(60, -102),
             east_position = util.by_pixel(60, -102),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/xenopen/roar.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/xenopen/roar.png",
                 frame_count = 100,
                 line_length = 10,
                 width = 160,
@@ -113,7 +113,7 @@ ENTITY {
             south_position = util.by_pixel(-24, -20),
             east_position = util.by_pixel(-24, -20),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/xenopen/m-left.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/xenopen/m-left.png",
                 frame_count = 60,
                 line_length = 12,
                 width = 160,
@@ -127,7 +127,7 @@ ENTITY {
             south_position = util.by_pixel(120, -20),
             east_position = util.by_pixel(120, -20),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/xenopen/m-right.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/xenopen/m-right.png",
                 frame_count = 60,
                 line_length = 12,
                 width = 128,
@@ -141,7 +141,7 @@ ENTITY {
             south_position = util.by_pixel(-75, 66),
             east_position = util.by_pixel(-75, 66),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/xenopen/hit.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/xenopen/hit.png",
                 frame_count = 60,
                 line_length = 10,
                 run_mode = "backward",
@@ -154,8 +154,8 @@ ENTITY {
 
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/xenopen.ogg", volume = 0.65},
-        idle_sound = {filename = "__pyalienlife__/sounds/xenopen.ogg", volume = 0.5},
+        sound = {filename = "__pyalienlifegraphics__/sounds/xenopen.ogg", volume = 0.65},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/xenopen.ogg", volume = 0.5},
         apparent_volume = 1.2
     }
 }

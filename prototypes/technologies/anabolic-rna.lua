@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "anabolic-rna",
-    icon = "__pyalienlife__/graphics/technology/anabolic-rna.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/anabolic-rna.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"pharmagenomics"},

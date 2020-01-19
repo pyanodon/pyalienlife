@@ -485,7 +485,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'xeno',
 			name = 'Full Render Xenos',
-			icon = "__pyalienlife__/graphics/icons/rendering-xeno.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-xeno.png",
 			icon_size = 64,
 		},
 		--meat
@@ -506,7 +506,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'xeno',
 			name = 'Extract Xeno Meat',
-			icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 			icon_size = 64,
 		},
 		--brain
@@ -523,7 +523,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'xeno',
 			name = 'Extract Xeno brains',
-			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},	
 		--skin
@@ -540,7 +540,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'xeno',
 			name = 'Extract xeno chitin',
-			icon = "__pyalienlife__/graphics/icons/chitin.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",
 			icon_size = 64,
 		},
 		--bones
@@ -557,7 +557,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'xeno',
 			name = 'Extract Xeno bones',
-			icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
 			icon_size = 64,
 		},
 		--Sulfuric acid
@@ -592,7 +592,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'nanochondria',
 			name = 'Extract brains from Improved Xenos',
-			icon = "__pyalienlife__/graphics/icons/brain-xeno.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/brain-xeno.png",
 			icon_size = 64,
 		},
 		--bone xeno rendering
@@ -610,7 +610,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'bmp',
 			name = 'Extract bones from Improved xenos',
-			icon = "__pyalienlife__/graphics/icons/bone-xeno.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/bone-xeno.png",
 			icon_size = 64,
 		},
 		--bonemeal xeno rendering
@@ -627,7 +627,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'bmp',
 			name = 'Extract bonemeal from Improved Xenos',
-			icon = "__pyalienlife__/graphics/icons/bonemeal.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/bonemeal.png",
 			icon_size = 64,
 		},
 		--sulfuric acid xeno rendering
@@ -645,7 +645,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
 			name = 'Extract blood from Improved Xenos',
-			icon = "__pyalienlife__/graphics/icons/sulfuric-xeno.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/sulfuric-xeno.png",
 			icon_size = 64,
 		},
 		--skin xeno rendering
@@ -663,7 +663,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'reca',
 			name = 'Extract Chitin from Improved xenos',
-			icon = "__pyalienlife__/graphics/icons/chitin-xeno.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/chitin-xeno.png",
 			icon_size = 64,
 		},
 		--meat xeno rendering
@@ -681,7 +681,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
 			name = 'Extract meat from Improved Xenos',
-			icon = "__pyalienlife__/graphics/icons/meat-xeno.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-xeno.png",
 			icon_size = 64,
 		},
 	}

@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "ulric",
-    icon = "__pyalienlife__/graphics/technology/ulric.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/ulric.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"land-animals-mk01","food-mk01","biotech-mk01"},
@@ -18,7 +18,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "ulric-mk02",
-    icon = "__pyalienlife__/graphics/technology/ulric-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/ulric-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"ulric"},
@@ -36,7 +36,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "ulric-mk03",
-    icon = "__pyalienlife__/graphics/technology/ulric-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/ulric-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"ulric-mk02"},
@@ -56,7 +56,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "ulric-mk04",
-    icon = "__pyalienlife__/graphics/technology/ulric-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/ulric-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"ulric-mk03"},

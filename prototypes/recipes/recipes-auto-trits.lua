@@ -609,7 +609,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'trits',
 			name = 'Full Render Trits',
-			icon = "__pyalienlife__/graphics/icons/rendering-trits.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-trits.png",
 			icon_size = 64,
 		},
 		--meat
@@ -632,7 +632,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'trits',
 			name = 'Extract Trits Meat',
-			icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 			icon_size = 64,
 		},
 		--brain
@@ -649,7 +649,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'trits',
 			name = 'Extract Trits brains',
-			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},	
 		--skin
@@ -666,7 +666,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'trits',
 			name = 'Extract Trits skin',
-			icon = "__pyalienlife__/graphics/icons/skin.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
 			icon_size = 32,
 		},
 		--bones
@@ -683,7 +683,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'trits',
 			name = 'Extract Trits bones',
-			icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
 			icon_size = 64,
 		},
 		--guts
@@ -700,7 +700,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'trits',
 			name = 'Extract Trits guts',
-			icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
 		},
 		--blood
@@ -717,7 +717,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'trits',
 			name = 'Extract Trits blood',
-			icon = "__pyalienlife__/graphics/icons/blood.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
 			icon_size = 64,
 		},
 		--fat
@@ -734,7 +734,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'trits',
 			name = 'Extract Trits lard',
-			icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
 			icon_size = 64,
 		},	
 		--brain trits rendering
@@ -752,7 +752,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'nanochondria',
 			name = 'Extract brains from Improved Trits',
-			icon = "__pyalienlife__/graphics/icons/brain-trits.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/brain-trits.png",
 			icon_size = 64,
 		},
 		--bone trits rendering
@@ -770,7 +770,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'bmp',
 			name = 'Extract bones from Improved Trits',
-			icon = "__pyalienlife__/graphics/icons/bone-trits.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/bone-trits.png",
 			icon_size = 64,
 		},
 		--meat trits rendering
@@ -788,7 +788,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
 			name = 'Extract meat from Improved Trits',
-			icon = "__pyalienlife__/graphics/icons/meat-trits.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-trits.png",
 			icon_size = 64,
 		},
 		--guts trits rendering
@@ -806,7 +806,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'antitumor',
 			name = 'Extract guts from Improved Trits',
-			icon = "__pyalienlife__/graphics/icons/guts-trits.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-trits.png",
 			icon_size = 64,
 		},
 		--blood trits rendering
@@ -824,7 +824,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
 			name = 'Extract blood from Improved Trits',
-			icon = "__pyalienlife__/graphics/icons/blood-trits.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-trits.png",
 			icon_size = 64,
 		},
 		--skin trits rendering
@@ -842,7 +842,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'reca',
 			name = 'Extract skin from Improved Trits',
-			icon = "__pyalienlife__/graphics/icons/skin-trits.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/skin-trits.png",
 			icon_size = 64,
 		},
 		--fat trits rendering
@@ -860,7 +860,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'orexigenic',
 			name = 'Extract fat from Improved Trits',
-			icon = "__pyalienlife__/graphics/icons/fat-trits.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/fat-trits.png",
 			icon_size = 64,
 		},
 	}

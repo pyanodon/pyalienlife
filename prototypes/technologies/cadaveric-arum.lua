@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "cadaveric-arum",
-    icon = "__pyalienlife__/graphics/technology/cadaveric-arum.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/cadaveric-arum.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk02"},
@@ -19,7 +19,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "cadaveric-arum-mk02",
-    icon = "__pyalienlife__/graphics/technology/cadaveric-arum-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/cadaveric-arum-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"cadaveric-arum"},
@@ -38,7 +38,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "cadaveric-arum-mk03",
-    icon = "__pyalienlife__/graphics/technology/cadaveric-arum-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/cadaveric-arum-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"cadaveric-arum-mk02"},
@@ -58,7 +58,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "cadaveric-arum-mk04",
-    icon = "__pyalienlife__/graphics/technology/cadaveric-arum-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/cadaveric-arum-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"cadaveric-arum-mk03"},

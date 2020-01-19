@@ -18,7 +18,7 @@ RECIPE {
 FLUID {
     type = "fluid",
     name = "zogna-bacteria",
-    icon = "__pyalienlife__/graphics/icons/zogna-bacteria.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/zogna-bacteria.png",
 	icon_size = 64,
     default_temperature = 10,
     base_color = {r = 0.129, g = 0.109, b = 0.243},

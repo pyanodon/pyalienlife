@@ -147,7 +147,7 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 6},
     },
     --main_product = "xeno-mk02",
-    icon = '__pyalienlife__/graphics/icons/evolution-mk02.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
     icon_size = 64,
     subgroup = 'py-alienlife-xeno',
     order = 'za'
@@ -173,7 +173,7 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 6},
     },
     --main_product = "xeno-mk03",
-    icon = '__pyalienlife__/graphics/icons/evolution-mk03.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png',
     icon_size = 64,
     subgroup = 'py-alienlife-xeno',
     order = 'zb'
@@ -199,7 +199,7 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 6},
     },
     --main_product = "xeno-mk04",
-    icon = '__pyalienlife__/graphics/icons/evolution-mk04.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
     icon_size = 64,
     subgroup = 'py-alienlife-xeno',
     order = 'zc'

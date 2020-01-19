@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "pharmagenomics",
-    icon = "__pyalienlife__/graphics/technology/pharmagenomics.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/pharmagenomics.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"biotech-mk04","genetics-mk04"},

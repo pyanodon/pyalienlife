@@ -19,7 +19,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "phadai-enclosure-mk03",
-    icon = "__pyalienlife__/graphics/icons/phadai-enclosure-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/phadai-enclosure-mk03.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk03",
@@ -31,7 +31,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "phadai-enclosure-mk03",
-    icon = "__pyalienlife__/graphics/icons/phadai-enclosure-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/phadai-enclosure-mk03.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "phadai-enclosure-mk03"},
@@ -59,7 +59,7 @@ ENTITY {
     animation = {
         layers = {
             {
-            filename = "__pyalienlife__/graphics/entity/phadai-enclosure/off.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/phadai-enclosure/off.png",
             width = 448,
             height = 480,
             frame_count = 1,
@@ -67,7 +67,7 @@ ENTITY {
             shift = util.by_pixel(16, -32)
             },
             {
-            filename = "__pyalienlife__/graphics/entity/phadai-enclosure/off-mask.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/phadai-enclosure/off-mask.png",
             width = 448,
             height = 480,
             frame_count = 1,
@@ -85,7 +85,7 @@ ENTITY {
             south_position = {2, -0.0},
             east_position = {2, -0.0},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/phadai-enclosure/dance-floor.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/phadai-enclosure/dance-floor.png",
                 frame_count = 50,
                 line_length = 8,
                 width = 224,
@@ -99,7 +99,7 @@ ENTITY {
             south_position = {3, -0.5},
             east_position = {3, -0.5},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/phadai-enclosure/dance.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/phadai-enclosure/dance.png",
                 frame_count = 45,
                 line_length = 15,
                 width = 128,
@@ -113,7 +113,7 @@ ENTITY {
             south_position = {3.8, 4.0},
             east_position = {3.8, 4.0},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/phadai-enclosure/idle-bot.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/phadai-enclosure/idle-bot.png",
                 frame_count = 50,
                 line_length = 5,
                 width = 128,
@@ -127,7 +127,7 @@ ENTITY {
             south_position = {-3.0, 0.0},
             east_position = {-3.0, 0.0},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/phadai-enclosure/patpat.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/phadai-enclosure/patpat.png",
                 frame_count = 30,
                 line_length = 10,
                 width = 160,
@@ -141,7 +141,7 @@ ENTITY {
             south_position = {-3.0, 3.0},
             east_position = {-3.0, 3.0},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/phadai-enclosure/woo.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/phadai-enclosure/woo.png",
                 frame_count = 50,
                 line_length = 10,
                 width = 160,
@@ -155,7 +155,7 @@ ENTITY {
             south_position = {-1.0, -2.0},
             east_position = {-1.0, -2.0},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/phadai-enclosure/jump.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/phadai-enclosure/jump.png",
                 frame_count = 30,
                 line_length = 10,
                 width = 128,
@@ -169,7 +169,7 @@ ENTITY {
             south_position = {3.5, -4.0},
             east_position = {3.5, -4.0},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/phadai-enclosure/idle-up.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/phadai-enclosure/idle-up.png",
                 frame_count = 50,
                 line_length = 10,
                 width = 64,
@@ -183,7 +183,7 @@ ENTITY {
             south_position = util.by_pixel(0, -144),
             east_position = util.by_pixel(0, -144),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/phadai-enclosure/spot-up.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/phadai-enclosure/spot-up.png",
                 frame_count = 50,
                 blend_mode = "additive",
                 line_length = 5,
@@ -198,7 +198,7 @@ ENTITY {
             south_position = util.by_pixel(0, 48),
             east_position = util.by_pixel(0, 48),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/phadai-enclosure/spot-bot.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/phadai-enclosure/spot-bot.png",
                 frame_count = 50,
                 blend_mode = "additive",
                 line_length = 5,
@@ -211,8 +211,8 @@ ENTITY {
 
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/phadai-enclosure.ogg", volume = 0.55},
-        idle_sound = {filename = "__pyalienlife__/sounds/phadai-out.ogg", volume = 0.9},
+        sound = {filename = "__pyalienlifegraphics__/sounds/phadai-enclosure.ogg", volume = 0.55},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/phadai-out.ogg", volume = 0.9},
         apparent_volume = 1.2
     }
 }

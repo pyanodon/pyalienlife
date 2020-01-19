@@ -22,7 +22,7 @@ fun.autorecipes {
 			tech = 'bigger-colon',
 			name = 'manure-1a',
 			--name = 'cheeses',
-			--icon = "__pyalienlife__/graphics/icons/atomizer-mk01.png"
+			--icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk01.png"
 		},
 		{
 			ingredients =
@@ -39,7 +39,7 @@ fun.autorecipes {
 			tech = 'bigger-colon',
 			name = 'manure-2a',
 			--name = 'jesus',
-			--icon = "__pyalienlife__/graphics/icons/navens-culture-mk01.png"
+			--icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk01.png"
 		},
 		{
 			ingredients =

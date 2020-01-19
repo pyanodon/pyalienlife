@@ -19,7 +19,7 @@ ENTITY {
     type = "resource",
     name = "ralesia-flowers",
     category = "ralesia-flowers",
-    icon = "__pyalienlife__/graphics/icons/ralesia-ore.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/ralesia-ore.png",
     icon_size = 64,
     flags = {"placeable-neutral"},
     order = "a-b-a",
@@ -57,14 +57,14 @@ ENTITY {
     stage_counts = {800, 400, 200},
     stages = {
         sheet = {
-            filename = "__pyalienlife__/graphics/entity/crops/ralesia/ralesia.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/crops/ralesia/ralesia.png",
             priority = "extra-high",
             width = 64,
             height = 64,
             frame_count = 8,
             variation_count = 3,
             hr_version = {
-                filename = "__pyalienlife__/graphics/entity/crops/ralesia/hr-ralesia.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/crops/ralesia/hr-ralesia.png",
                 priority = "extra-high",
                 width = 128,
                 height = 128,

@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "water-animals-mk01",
-    icon = "__pyalienlife__/graphics/technology/water-animals-mk01.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/water-animals-mk01.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"coal-processing-2","zoology"},
@@ -19,7 +19,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "water-animals-mk02",
-    icon = "__pyalienlife__/graphics/technology/water-animals-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/water-animals-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"water-animals-mk01","botany-mk02"},
@@ -38,7 +38,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "water-animals-mk03",
-    icon = "__pyalienlife__/graphics/technology/water-animals-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/water-animals-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"water-animals-mk02","botany-mk03"},
@@ -59,7 +59,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "water-animals-mk04",
-    icon = "__pyalienlife__/graphics/technology/water-animals-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/water-animals-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"water-animals-mk03"},

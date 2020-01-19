@@ -18,7 +18,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "fwf-mk01",
-    icon = "__pyalienlife__/graphics/icons/fwf-mk01.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/fwf-mk01.png",
     icon_size = 32,
     flags = {},
     subgroup = "py-alienlife-buildings-mk01",
@@ -30,7 +30,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "fwf-mk01",
-    icon = "__pyalienlife__/graphics/icons/fwf-mk01.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/fwf-mk01.png",
 	icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "fwf-mk01"},
@@ -58,7 +58,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlife__/graphics/entity/fwf/base.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/fwf/base.png",
                 width = 352,
                 height = 32,
                 line_length = 5,
@@ -67,7 +67,7 @@ ENTITY {
                 shift = util.by_pixel(0, 160)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/fwf/f1.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/fwf/f1.png",
                 width = 64,
                 height = 384,
                 line_length = 32,
@@ -76,7 +76,7 @@ ENTITY {
                 shift = util.by_pixel(-144, -48)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/fwf/f2.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/fwf/f2.png",
                 width = 64,
                 height = 384,
                 line_length = 32,
@@ -85,7 +85,7 @@ ENTITY {
                 shift = util.by_pixel(-80, -48)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/fwf/f3.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/fwf/f3.png",
                 width = 64,
                 height = 384,
                 line_length = 32,
@@ -94,7 +94,7 @@ ENTITY {
                 shift = util.by_pixel(-16, -48)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/fwf/f4.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/fwf/f4.png",
                 width = 64,
                 height = 384,
                 line_length = 32,
@@ -103,7 +103,7 @@ ENTITY {
                 shift = util.by_pixel(48, -48)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/fwf/f5.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/fwf/f5.png",
                 width = 64,
                 height = 384,
                 line_length = 32,
@@ -112,7 +112,7 @@ ENTITY {
                 shift = util.by_pixel(112, -48)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/fwf/f6.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/fwf/f6.png",
                 width = 32,
                 height = 384,
                 line_length = 32,
@@ -152,8 +152,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/fwf.ogg", volume = 0.80},
-        idle_sound = {filename = "__pyalienlife__/sounds/fwf.ogg", volume = 0.55},
+        sound = {filename = "__pyalienlifegraphics__/sounds/fwf.ogg", volume = 0.80},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/fwf.ogg", volume = 0.55},
         apparent_volume = 2.5
     }
 }

@@ -22,7 +22,7 @@ fun.autorecipes {
 			tech = 'explosive-diarrhea',
 			name = 'manure-1b',
 			--name = 'cheeses',
-			--icon = "__pyalienlife__/graphics/icons/atomizer-mk01.png"
+			--icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk01.png"
 		},
 		{
 			ingredients =
@@ -39,7 +39,7 @@ fun.autorecipes {
 			tech = 'explosive-diarrhea',
 			name = 'manure-2b',
 			--name = 'jesus',
-			--icon = "__pyalienlife__/graphics/icons/navens-culture-mk01.png"
+			--icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk01.png"
 		},
 		{
 			ingredients =

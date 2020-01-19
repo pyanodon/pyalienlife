@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "bladder",
-    icon = "__pyalienlife__/graphics/technology/bladder.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/bladder.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"phagnot"},

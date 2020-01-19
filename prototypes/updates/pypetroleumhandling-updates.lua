@@ -51,7 +51,7 @@ RECIPE {
         {type = 'item', name = 'biomass', amount = 10},
     },
     --main_product = "silicon-wafer",
-    icon = '__pyalienlife__/graphics/icons/biomass.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/biomass.png',
     icon_size = 32,
     subgroup = 'py-alienlife-plants',
     order = 'a'

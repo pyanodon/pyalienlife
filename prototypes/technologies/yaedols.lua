@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "yaedols",
-    icon = "__pyalienlife__/graphics/technology/yaedols.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/yaedols.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"mycology-mk03","genetic-design"},
@@ -20,7 +20,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "yaedols-mk02",
-    icon = "__pyalienlife__/graphics/technology/yaedols-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/yaedols-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"yaedols"},
@@ -40,7 +40,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "yaedols-mk03",
-    icon = "__pyalienlife__/graphics/technology/yaedols-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/yaedols-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"yaedols-mk02"},
@@ -61,7 +61,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "yaedols-mk04",
-    icon = "__pyalienlife__/graphics/technology/yaedols-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/yaedols-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"yaedols-mk03"},

@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "bmp",
-    icon = "__pyalienlife__/graphics/technology/bmp.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/bmp.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"pharmagenomics"},

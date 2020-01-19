@@ -1,7 +1,7 @@
 FLUID {
     type = "fluid",
     name = "syrup-01",
-    icon = "__pyalienlife__/graphics/icons/syrup-01.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/syrup-01.png",
 	icon_size = 64,
     default_temperature = 10,
     base_color = {r = 0.662, g = 0.180, b = 0.0},

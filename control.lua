@@ -480,35 +480,37 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 			log(caravanroutes[car].startpoint.pos)
 			log(caravanroutes[car].endpoint.pos)
 			if math.sqrt((caravanroutes[car].unit.position.x - caravanroutes[car].startpoint.pos.x) ^ 2 + (caravanroutes[car].unit.position.y - caravanroutes[car].startpoint.pos.y) ^ 2) <= 10 then
+				if game.surfaces[caravanroutes[car].unit.surface.name].find_entity('outpost', caravanroutes[car].startpoint.pos) ~= nil then
 				local outpostinventory = game.surfaces[caravanroutes[car].unit.surface.name].find_entity('outpost', caravanroutes[car].startpoint.pos).get_inventory(defines.inventory.chest)
-				if outpostinventory ~= nil then
-					if caravanroutes[car].inventory.hasitem then
-						outpostinventory.insert({name=caravanroutes[car].inventory.item, count=caravanroutes[car].inventory.stackamount})
-						caravanroutes[car].inventory.hasitem = false
-						caravanroutes[car].inventory.item = ''
-						caravanroutes[car].inventory.stackamount = 0
-					else
-						local contents = outpostinventory.get_contents()
-						--log(serpent.block(outpostinventory))
-						--log(serpent.block(outpostinventory.get_contents()))
-						for i, item in pairs(contents) do
-							--log(serpent.block(i))
-							--log(serpent.block(item))
-							local stacksize = game.item_prototypes[i].stack_size
-							caravanroutes[car].inventory.item = i
-							if item < stacksize then
-								caravanroutes[car].inventory.stackamount = item
-								caravanroutes[car].inventory.hasitem = true
-								outpostinventory.remove({name = i, count = item})
-							else
-								caravanroutes[car].inventory.stackamount = stacksize
-								caravanroutes[car].inventory.hasitem = true
-								outpostinventory.remove({name = i, count = stacksize})
+					if outpostinventory ~= nil then
+						if caravanroutes[car].inventory.hasitem then
+							outpostinventory.insert({name=caravanroutes[car].inventory.item, count=caravanroutes[car].inventory.stackamount})
+							caravanroutes[car].inventory.hasitem = false
+							caravanroutes[car].inventory.item = ''
+							caravanroutes[car].inventory.stackamount = 0
+						else
+							local contents = outpostinventory.get_contents()
+							--log(serpent.block(outpostinventory))
+							--log(serpent.block(outpostinventory.get_contents()))
+							for i, item in pairs(contents) do
+								--log(serpent.block(i))
+								--log(serpent.block(item))
+								local stacksize = game.item_prototypes[i].stack_size
+								caravanroutes[car].inventory.item = i
+								if item < stacksize then
+									caravanroutes[car].inventory.stackamount = item
+									caravanroutes[car].inventory.hasitem = true
+									outpostinventory.remove({name = i, count = item})
+								else
+									caravanroutes[car].inventory.stackamount = stacksize
+									caravanroutes[car].inventory.hasitem = true
+									outpostinventory.remove({name = i, count = stacksize})
+								end
+								break
 							end
-							break
 						end
+					log(serpent.block(caravanroutes[car]))
 					end
-				log(serpent.block(caravanroutes[car]))
 				end
 				--caravanroutes[car].inventory.item = outpostinventory
 				caravanroutes[car].unit.set_command {
@@ -924,7 +926,14 @@ end)
 
 --added 3d trees to bio reserve and remove depleted resource trees
 script.on_event(defines.events.on_resource_depleted, function(event)
-	local resourcetrees = game.surfaces['nauvis'].find_entities_filtered{position = event.entity.position, name = event.entity.name}
+	local resourcetrees = game.surfaces['nauvis'].find_entities_filtered{position = event.entity.position, name = event.entity.name..'-fake'} --, type='tree'}
+	log(serpent.block(resourcetrees))
+	log(serpent.block(resourcetrees.name))
+	for t, tree in pairs(resourcetrees) do
+		log(serpent.block(resourcetrees))
+		log(serpent.block(resourcetrees.name))
+		tree.destroy()
+	end
 end)
 
 script.on_event(defines.events.on_player_cursor_stack_changed, function(event)
@@ -943,4 +952,14 @@ log('hit')
 	elseif game.players[event.player_index].cursor_stack.valid_for_read == false and global.has_drawn_square == true then
 		rendering.destroy(global.logistics_square)
 	end
+end)
+
+script.on_event(defines.events.on_player_used_capsule, function(event)
+
+if event.item.name == 'energy-drink' then
+
+	game.players[event.player_index].character_running_speed_modifier = 5
+
+end
+
 end)

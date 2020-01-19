@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "phagnot",
-    icon = "__pyalienlife__/graphics/technology/phagnot.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/phagnot.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"land-animals-mk02","food-mk02","biotech-mk02"},
@@ -19,7 +19,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "phagnot-mk02",
-    icon = "__pyalienlife__/graphics/technology/phagnot-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/phagnot-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"phagnot"},
@@ -38,7 +38,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "phagnot-mk03",
-    icon = "__pyalienlife__/graphics/technology/phagnot-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/phagnot-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"phagnot-mk02"},
@@ -58,7 +58,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "phagnot-mk04",
-    icon = "__pyalienlife__/graphics/technology/phagnot-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/phagnot-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"phagnot-mk03"},

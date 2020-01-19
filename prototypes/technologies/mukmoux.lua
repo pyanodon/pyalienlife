@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "mukmoux",
-    icon = "__pyalienlife__/graphics/technology/mukmoux.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/mukmoux.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"land-animals-mk02","biotech-mk02","organic-breeding","tuuphra"},
@@ -19,7 +19,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "mukmoux-mk02",
-    icon = "__pyalienlife__/graphics/technology/mukmoux-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/mukmoux-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"mukmoux"},
@@ -38,7 +38,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "mukmoux-mk03",
-    icon = "__pyalienlife__/graphics/technology/mukmoux-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/mukmoux-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"mukmoux-mk02"},
@@ -58,7 +58,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "mukmoux-mk04",
-    icon = "__pyalienlife__/graphics/technology/mukmoux-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/mukmoux-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"mukmoux-mk03"},

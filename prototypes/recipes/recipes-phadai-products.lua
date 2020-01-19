@@ -23,7 +23,7 @@ fun.autorecipes {
 			crafting_speed = 130,
 			tech = 'phadai',
 			name = 'phag-carapace-1',
-			--icon = "__pyalienlife__/graphics/icons/atomizer-mk01.png"
+			--icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk01.png"
 		},
 		{
 			ingredients =
@@ -39,7 +39,7 @@ fun.autorecipes {
 			crafting_speed = 120,
 			tech = 'phadai',
 			name = 'phag-carapace-2',
-			--icon = "__pyalienlife__/graphics/icons/navens-culture-mk01.png"
+			--icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk01.png"
 		},
 		{
 			ingredients =

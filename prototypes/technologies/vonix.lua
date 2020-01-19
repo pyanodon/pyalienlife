@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "vonix",
-    icon = "__pyalienlife__/graphics/technology/vonix.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/vonix.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"land-animals-mk03","biotech-mk03"},
@@ -21,7 +21,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "vonix-mk02",
-    icon = "__pyalienlife__/graphics/technology/vonix-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/vonix-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"vonix"},
@@ -42,7 +42,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "vonix-mk03",
-    icon = "__pyalienlife__/graphics/technology/vonix-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/vonix-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"vonix-mk02"},

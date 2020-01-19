@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "zoology",
-    icon = "__pyalienlife__/graphics/technology/zoology.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/zoology.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"xenobiology","fluid-handling"},

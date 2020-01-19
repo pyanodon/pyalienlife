@@ -32,7 +32,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'cavity',
 			name = 'Extract arthurian guts-2',
-			icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
 		},		
 		--guts arthurian rendering
@@ -50,7 +50,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'cavity',
 			name = 'Extract guts from Improved arthurians-2',
-			icon = "__pyalienlife__/graphics/icons/guts-caged-arthurian.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-arthurian.png",
 			icon_size = 64,
 		},
 	}
@@ -87,7 +87,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'cavity',
                 name = 'Extract auog guts-5',
-                icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},	
 		--guts auog rendering
@@ -105,7 +105,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'cavity',
 			name = 'Extract guts from Improved auogs-2',
-			icon = "__pyalienlife__/graphics/icons/guts-caged-auog.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-auog.png",
 			icon_size = 64,
 		},
 	}
@@ -144,7 +144,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'cavity',
                 name = 'Extract dhilmos guts-2',
-                icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},	
 		--guts dhilmos rendering
@@ -162,7 +162,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'cavity',
 			name = 'Extract guts from Improved dhilmoss-2',
-			icon = "__pyalienlife__/graphics/icons/guts-dhilmos.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-dhilmos.png",
 			icon_size = 64,
 		},
 	}
@@ -199,7 +199,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'cavity',
                 name = 'Extract dingrits guts-2',
-                icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},	
 		--guts dingrits rendering
@@ -217,7 +217,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'cavity',
 			name = 'Extract guts from Improved dingrits-2',
-			icon = "__pyalienlife__/graphics/icons/guts-caged-dingrits.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-dingrits.png",
 			icon_size = 64,
 		},
 	}
@@ -254,7 +254,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'cavity',
                 name = 'Extract kmauts guts-2',
-                icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},	
 		--guts kmauts rendering
@@ -272,7 +272,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'cavity',
 			name = 'Extract guts from Improved kmauts-2',
-			icon = "__pyalienlife__/graphics/icons/guts-caged-kmauts.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-kmauts.png",
 			icon_size = 64,
         },
 	}
@@ -309,7 +309,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'cavity',
                 name = 'Extract Mukmoux guts-2',
-                icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},	
 		--guts mukmoux rendering
@@ -327,7 +327,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'cavity',
 			name = 'Extract guts from Improved Mukmouxs-2',
-			icon = "__pyalienlife__/graphics/icons/guts-caged-mukmoux.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-mukmoux.png",
 			icon_size = 64,
 		},
 	}
@@ -364,7 +364,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'cavity',
                 name = 'Extract phadai guts-2',
-                icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},	
 		--guts phadai rendering
@@ -382,7 +382,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'cavity',
 			name = 'Extract guts from Improved phadais-2',
-			icon = "__pyalienlife__/graphics/icons/guts-caged-phadai.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-phadai.png",
 			icon_size = 64,
         },
 	}
@@ -419,7 +419,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'cavity',
                 name = 'Extract phagnot guts-2',
-                icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},	
 		--guts phagnot rendering
@@ -437,7 +437,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'cavity',
 			name = 'Extract guts from Improved phagnots-2',
-			icon = "__pyalienlife__/graphics/icons/guts-caged-phagnot.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-phagnot.png",
 			icon_size = 64,
 		},
 	}
@@ -474,7 +474,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'cavity',
                 name = 'Extract scrondrix guts-2',
-                icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},	
 		--guts scrondrix rendering
@@ -492,7 +492,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'cavity',
 			name = 'Extract guts from Improved scrondrixs-2',
-			icon = "__pyalienlife__/graphics/icons/guts-caged-scrondrix.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-scrondrix.png",
 			icon_size = 64,
 		},
 	}
@@ -528,7 +528,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'cavity',
                 name = 'Extract Trits guts-2',
-                icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},	
 		--guts trits rendering
@@ -546,7 +546,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'cavity',
 			name = 'Extract guts from Improved Trits-2',
-			icon = "__pyalienlife__/graphics/icons/guts-trits.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-trits.png",
 			icon_size = 64,
 		},
 	}
@@ -583,7 +583,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'cavity',
                 name = 'Extract Ulric guts-2',
-                icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},
 		--guts ulric rendering
@@ -601,7 +601,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'cavity',
 			name = 'Extract guts from Improved Ulrics-2',
-			icon = "__pyalienlife__/graphics/icons/guts-caged-ulric.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-ulric.png",
 			icon_size = 64,
 		},
 	}
@@ -640,7 +640,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'cavity',
                 name = 'Extract Vonix guts-2',
-                icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},	
 		--guts vonix rendering
@@ -659,7 +659,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'cavity',
 			name = 'Extract guts from Improved Vonixes-2',
-			icon = "__pyalienlife__/graphics/icons/guts-vonix.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-vonix.png",
 			icon_size = 64,
 		},
 	}
@@ -700,7 +700,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'cavity',
                 name = 'Extract Vrauks guts-2',
-                icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},		
 		--guts vrauks rendering
@@ -719,7 +719,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'cavity',
 			name = 'Extract guts from Improved Vrauks-2',
-			icon = "__pyalienlife__/graphics/icons/guts-caged-vrauks.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-vrauks.png",
 			icon_size = 64,
 		},
 	}
@@ -752,7 +752,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'cavity',
 			name = 'Extract xyhiphoe guts-2',
-			icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
 		},
 		--guts xyhiphoe rendering
@@ -770,7 +770,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'cavity',
 			name = 'Extract guts from Improved xyhiphoe-2',
-			icon = "__pyalienlife__/graphics/icons/guts-xyhiphoe.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-xyhiphoe.png",
 			icon_size = 64,
 		},
 	}
@@ -809,7 +809,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'cavity',
                 name = 'Extract zipir guts-2',
-                icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},	
 		--guts zipir rendering
@@ -827,7 +827,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'cavity',
 			name = 'Extract guts from Improved Zipir-2',
-			icon = "__pyalienlife__/graphics/icons/guts-zipir.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-zipir.png",
 			icon_size = 64,
 		},
 	}

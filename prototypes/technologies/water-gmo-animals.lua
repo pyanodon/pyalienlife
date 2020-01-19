@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "water-gmo-mk01",
-    icon = "__pyalienlife__/graphics/technology/water-gmo-mk01.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/water-gmo-mk01.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"water-animals-mk01","genetics-mk01"},
@@ -19,7 +19,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "water-gmo-mk02",
-    icon = "__pyalienlife__/graphics/technology/water-gmo-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/water-gmo-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"water-gmo-mk01","genetics-mk02"},
@@ -38,7 +38,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "water-gmo-mk03",
-    icon = "__pyalienlife__/graphics/technology/water-gmo-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/water-gmo-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"water-gmo-mk02","genetics-mk03"},
@@ -59,7 +59,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "water-gmo-mk04",
-    icon = "__pyalienlife__/graphics/technology/water-gmo-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/water-gmo-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"water-gmo-mk03","genetics-mk04"},

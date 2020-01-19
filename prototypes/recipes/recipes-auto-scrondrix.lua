@@ -521,7 +521,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'scrondrix',
 			name = 'Full Render scrondrixs',
-			icon = "__pyalienlife__/graphics/icons/rendering-scrondrix.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-scrondrix.png",
 			icon_size = 64,
 		},
 		--meat
@@ -546,7 +546,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'scrondrix-mk02',
 			name = 'Extract scrondrix Meat',
-			icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 			icon_size = 64,
 		},
 		--brain
@@ -563,7 +563,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'scrondrix-mk02',
 			name = 'Extract scrondrix brains',
-			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},
 		--pineal
@@ -580,7 +580,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'scrondrix-mk02',
 			name = 'Extract scrondrix Pineal Gland',
-			icon = "__pyalienlife__/graphics/icons/pineal-gland.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/pineal-gland.png",
 			icon_size = 64,
 		},	
 		--skin
@@ -597,7 +597,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'scrondrix-mk02',
 			name = 'Extract scrondrix skin',
-			icon = "__pyalienlife__/graphics/icons/skin.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
 			icon_size = 32,
 		},
 		--bones
@@ -614,7 +614,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'scrondrix-mk02',
 			name = 'Extract scrondrix bones',
-			icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
 			icon_size = 64,
 		},
 		--guts
@@ -631,7 +631,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'scrondrix-mk02',
 			name = 'Extract scrondrix guts',
-			icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
 		},
 		--blood
@@ -648,7 +648,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'scrondrix-mk02',
 			name = 'Extract scrondrix blood',
-			icon = "__pyalienlife__/graphics/icons/blood.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
 			icon_size = 64,
 		},
 		--fat
@@ -665,7 +665,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'scrondrix-mk02',
 			name = 'Extract scrondrix lard',
-			icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
 			icon_size = 64,
 		},
 		--brain scrondrix rendering
@@ -683,7 +683,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'nanochondria',
 			name = 'Extract brains from Improved scrondrixs',
-			icon = "__pyalienlife__/graphics/icons/brain-caged-scrondrix.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-scrondrix.png",
 			icon_size = 64,
 		},
 		--bone scrondrix rendering
@@ -701,7 +701,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'bmp',
 			name = 'Extract bones from Improved scrondrixs',
-			icon = "__pyalienlife__/graphics/icons/bone-caged-scrondrix.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-scrondrix.png",
 			icon_size = 64,
 		},
 		--guts scrondrix rendering
@@ -719,7 +719,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'antitumor',
 			name = 'Extract guts from Improved scrondrixs',
-			icon = "__pyalienlife__/graphics/icons/guts-caged-scrondrix.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-scrondrix.png",
 			icon_size = 64,
 		},
 		--blood scrondrix rendering
@@ -737,7 +737,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
 			name = 'Extract blood from Improved scrondrixs',
-			icon = "__pyalienlife__/graphics/icons/blood-caged-scrondrix.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-scrondrix.png",
 			icon_size = 64,
 		},
 		--skin scrondrix rendering
@@ -755,7 +755,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'reca',
 			name = 'Extract skin from Improved scrondrixs',
-			icon = "__pyalienlife__/graphics/icons/skin-caged-scrondrix.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-scrondrix.png",
 			icon_size = 64,
 		},
 		--fat scrondrix rendering
@@ -773,7 +773,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'orexigenic',
 			name = 'Extract fat from Improved scrondrixs',
-			icon = "__pyalienlife__/graphics/icons/fat-caged-scrondrix.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-scrondrix.png",
 			icon_size = 64,
 		},
 		--meat scrondrix rendering
@@ -791,7 +791,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
 			name = 'Extract meat from Improved scrondrixs',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-scrondrix.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-scrondrix.png",
 			icon_size = 64,
 		},
 	}

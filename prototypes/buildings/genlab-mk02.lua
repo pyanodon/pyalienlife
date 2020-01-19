@@ -20,7 +20,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "genlab-mk02",
-    icon = "__pyalienlife__/graphics/icons/genlab-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/genlab-mk02.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk02",
@@ -32,7 +32,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "genlab-mk02",
-    icon = "__pyalienlife__/graphics/icons/genlab-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/genlab-mk02.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "genlab-mk02"},
@@ -60,7 +60,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlife__/graphics/entity/genlab/base.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/genlab/base.png",
                 width = 256,
                 height = 32,
                 line_length = 8,
@@ -69,7 +69,7 @@ ENTITY {
                 shift = util.by_pixel(16, 96)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/genlab/a1.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/genlab/a1.png",
                 width = 128,
                 height = 288,
                 line_length = 16,
@@ -78,7 +78,7 @@ ENTITY {
                 shift = util.by_pixel(-48, -64)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/genlab/a1-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/genlab/a1-mask.png",
                 width = 128,
                 height = 288,
                 line_length = 16,
@@ -88,7 +88,7 @@ ENTITY {
                 tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/genlab/a2.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/genlab/a2.png",
                 width = 128,
                 height = 288,
                 line_length = 16,
@@ -97,7 +97,7 @@ ENTITY {
                 shift = util.by_pixel(80, -64)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/genlab/a2-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/genlab/a2-mask.png",
                 width = 128,
                 height = 288,
                 line_length = 16,
@@ -169,8 +169,8 @@ ENTITY {
 
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/genlab.ogg", volume = 1.5},
-        idle_sound = {filename = "__pyalienlife__/sounds/genlab.ogg", volume = 1.1},
+        sound = {filename = "__pyalienlifegraphics__/sounds/genlab.ogg", volume = 1.5},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/genlab.ogg", volume = 1.1},
         apparent_volume = 2.5
     }
 }

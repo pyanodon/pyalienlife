@@ -610,7 +610,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'phadai',
 			name = 'Full Render phadais',
-			icon = "__pyalienlife__/graphics/icons/rendering-phadai.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-phadai.png",
 			icon_size = 64,
 		},
 		--meat
@@ -635,7 +635,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'phadai',
 			name = 'Extract phadai Meat',
-			icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 			icon_size = 64,
 		},
 		--brain
@@ -652,7 +652,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'phadai',
 			name = 'Extract phadai brains',
-			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},	
 		--bones
@@ -669,7 +669,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'phadai',
 			name = 'Extract phadai bones',
-			icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
 			icon_size = 64,
 		},
 		--guts
@@ -686,7 +686,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'phadai',
 			name = 'Extract phadai guts',
-			icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
 		},
 		--blood
@@ -703,7 +703,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'phadai',
 			name = 'Extract phadai blood',
-			icon = "__pyalienlife__/graphics/icons/blood.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
 			icon_size = 64,
 		},
 		--fat
@@ -720,7 +720,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'phadai',
 			name = 'Extract phadai Fat',
-			icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
 			icon_size = 64,
 		},
 		--Carapace
@@ -737,7 +737,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'phadai',
 			name = 'Extract phadai Carapace',
-			icon = "__pyalienlife__/graphics/icons/carapace.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/carapace.png",
 			icon_size = 64,
 		},
 		--Skin
@@ -754,7 +754,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'phadai',
 			name = 'Extract phadai Skin',
-			icon = "__pyalienlife__/graphics/icons/skin.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
 			icon_size = 32,
 		},
 		--brain phadai rendering
@@ -772,7 +772,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'nanochondria',
 			name = 'Extract brains from Improved phadais',
-			icon = "__pyalienlife__/graphics/icons/brain-caged-phadai.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-phadai.png",
 			icon_size = 64,
 		},
 		--bone phadai rendering
@@ -790,7 +790,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'bmp',
 			name = 'Extract bones from Improved phadais',
-			icon = "__pyalienlife__/graphics/icons/bone-caged-phadai.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-phadai.png",
 			icon_size = 64,
 		},
 		--guts phadai rendering
@@ -808,7 +808,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'antitumor',
 			name = 'Extract guts from Improved phadais',
-			icon = "__pyalienlife__/graphics/icons/guts-caged-phadai.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-phadai.png",
 			icon_size = 64,
 		},
 		--blood phadai rendering
@@ -826,7 +826,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
 			name = 'Extract blood from Improved phadais',
-			icon = "__pyalienlife__/graphics/icons/blood-caged-phadai.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-phadai.png",
 			icon_size = 64,
 		},
 		--meat phadai rendering
@@ -844,7 +844,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
 			name = 'Extract meat from Improved phadais',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-phadai.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-phadai.png",
 			icon_size = 64,
         },
         --skin phadai rendering
@@ -862,7 +862,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'reca',
 			name = 'Extract skin from Improved phadais',
-			icon = "__pyalienlife__/graphics/icons/skin-caged-phadai.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-phadai.png",
 			icon_size = 64,
         },
         --fat phadai rendering
@@ -880,7 +880,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'orexigenic',
 			name = 'Extract fat from Improved phadais',
-			icon = "__pyalienlife__/graphics/icons/fat-caged-phadai.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-phadai.png",
 			icon_size = 64,
 		},
 	}

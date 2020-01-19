@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "organic-breeding",
-    icon = "__pyalienlife__/graphics/technology/organic-breeding.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/organic-breeding.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"water-animals-mk01","biotech-mk02","land-animals-mk01"},
@@ -19,7 +19,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "selective-breeding",
-    icon = "__pyalienlife__/graphics/technology/selective-breeding.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/selective-breeding.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"organic-breeding","biotech-mk02","domestication"},
@@ -39,7 +39,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "artificial-breeding",
-    icon = "__pyalienlife__/graphics/technology/artificial-breeding.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/artificial-breeding.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"selective-breeding","biotech-mk03","domestication-mk02"},
@@ -60,7 +60,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "biased-mutation",
-    icon = "__pyalienlife__/graphics/technology/biased-mutation.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/biased-mutation.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"artificial-breeding","biotech-mk04"},

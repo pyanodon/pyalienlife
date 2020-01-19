@@ -14,7 +14,7 @@
     ITEM {
         type = "item",
         name = 'food-bowl',
-        icon = "__pyalienlife__/graphics/icons/food-bowl.png",
+        icon = "__pyalienlifegraphics__/graphics/icons/food-bowl.png",
         icon_size = 64,
         flags = {},
         subgroup = "py-containers-warehouse",
@@ -26,7 +26,7 @@
 	ENTITY {
         type = "container",
         name = 'food-bowl',
-        icon = "__pyalienlife__/graphics/icons/food-bowl.png",
+        icon = "__pyalienlifegraphics__/graphics/icons/food-bowl.png",
         icon_size = 64,
         flags = {"placeable-neutral", "placeable-player", "player-creation"},
         minable = {mining_time = 2, result = 'food-bowl'},
@@ -48,7 +48,7 @@
         inventory_size = 800,
         scale_info_icons = true,
 		picture = {
-            filename = "__pyalienlife__/graphics/entity/outpost/hr-food-bowl.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/outpost/hr-food-bowl.png",
             priority = "high",
             width = 136,
             height = 128,

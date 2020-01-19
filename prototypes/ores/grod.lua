@@ -19,7 +19,7 @@ ENTITY {
     type = "resource",
     name = "grod-flower",
     category = "grod-flower",
-    icon = "__pyalienlife__/graphics/icons/grod.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/grod.png",
     icon_size = 64,
     flags = {"placeable-neutral"},
     order = "a-b-a",
@@ -57,7 +57,7 @@ ENTITY {
     stage_counts = {800},
     stages = {
         sheet = {
-            filename = "__pyalienlife__/graphics/entity/crops/grod/grod.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/crops/grod/grod.png",
             priority = "extra-high",
             width = 64,
             height = 80,
@@ -65,7 +65,7 @@ ENTITY {
             variation_count = 1,
             shift = util.by_pixel(0, -16),
             hr_version = {
-                filename = "__pyalienlife__/graphics/entity/crops/grod/hr-grod.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/crops/grod/hr-grod.png",
                 priority = "extra-high",
                 width = 128,
                 height = 160,

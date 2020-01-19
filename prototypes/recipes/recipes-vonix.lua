@@ -139,7 +139,7 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 15},
     },
     --main_product = "vonix-mk02",
-    icon = '__pyalienlife__/graphics/icons/evolution-mk02.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
     icon_size = 64,
     subgroup = 'py-alienlife-vonix',
     order = 'za'
@@ -164,7 +164,7 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 15},
     },
     --main_product = "vonix-mk03",
-    icon = '__pyalienlife__/graphics/icons/evolution-mk03.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png',
     icon_size = 64,
     subgroup = 'py-alienlife-vonix',
     order = 'zb'
@@ -189,7 +189,7 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 15},
     },
     --main_product = "vonix-mk04",
-    icon = '__pyalienlife__/graphics/icons/evolution-mk04.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
     icon_size = 64,
     subgroup = 'py-alienlife-vonix',
     order = 'zc'

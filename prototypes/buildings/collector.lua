@@ -19,7 +19,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "collector",
-    icon = "__pyalienlife__/graphics/icons/collector.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/collector.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-others",
@@ -31,7 +31,7 @@ ITEM {
 ENTITY {
     type = "mining-drill",
     name = "collector",
-    icon = "__pyalienlife__/graphics/icons/collector.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/collector.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "collector"},
@@ -67,7 +67,7 @@ ENTITY {
     animations = {
         layers = {
             {
-                filename = "__pyalienlife__/graphics/entity/collector/f1.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/collector/f1.png",
                 width = 32,
                 height = 288,
                 line_length = 64,
@@ -76,7 +76,7 @@ ENTITY {
                 shift = util.by_pixel(-96, 0)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/collector/f2.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/collector/f2.png",
                 width = 32,
                 height = 288,
                 line_length = 64,
@@ -85,7 +85,7 @@ ENTITY {
                 shift = util.by_pixel(-64, 0)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/collector/f3.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/collector/f3.png",
                 width = 32,
                 height = 288,
                 line_length = 64,
@@ -94,7 +94,7 @@ ENTITY {
                 shift = util.by_pixel(-32, 0)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/collector/f4.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/collector/f4.png",
                 width = 32,
                 height = 288,
                 line_length = 64,
@@ -103,7 +103,7 @@ ENTITY {
                 shift = util.by_pixel(0, 0)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/collector/f5.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/collector/f5.png",
                 width = 32,
                 height = 288,
                 line_length = 64,
@@ -112,7 +112,7 @@ ENTITY {
                 shift = util.by_pixel(32, 0)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/collector/f6.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/collector/f6.png",
                 width = 32,
                 height = 288,
                 line_length = 64,
@@ -121,7 +121,7 @@ ENTITY {
                 shift = util.by_pixel(64, 0)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/collector/f7.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/collector/f7.png",
                 width = 32,
                 height = 288,
                 line_length = 64,
@@ -130,7 +130,7 @@ ENTITY {
                 shift = util.by_pixel(96, 0)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/collector/f8.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/collector/f8.png",
                 width = 32,
                 height = 288,
                 line_length = 64,
@@ -143,8 +143,8 @@ ENTITY {
 
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/collector.ogg", volume = 0.9},
-        idle_sound = {filename = "__pyalienlife__/sounds/collector.ogg", volume = 0.75},
+        sound = {filename = "__pyalienlifegraphics__/sounds/collector.ogg", volume = 0.9},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/collector.ogg", volume = 0.75},
         apparent_volume = 2.5
     }
 }

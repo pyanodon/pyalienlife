@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "navens",
-    icon = "__pyalienlife__/graphics/technology/navens.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/navens.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"mycology-mk02","genetics-mk02"},
@@ -19,7 +19,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "navens-mk02",
-    icon = "__pyalienlife__/graphics/technology/navens-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/navens-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"navens"},
@@ -38,7 +38,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "navens-mk03",
-    icon = "__pyalienlife__/graphics/technology/navens-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/navens-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"navens-mk02"},
@@ -58,7 +58,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "navens-mk04",
-    icon = "__pyalienlife__/graphics/technology/navens-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/navens-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"navens-mk03"},

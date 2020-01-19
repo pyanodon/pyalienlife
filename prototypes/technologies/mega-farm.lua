@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "mega-farm",
-    icon = "__pyalienlife__/graphics/technology/mega-farm.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/mega-farm.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk04","fusion-mk01"},
@@ -25,7 +25,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "mega-farm-ralesia",
-    icon = "__pyalienlife__/graphics/technology/mega-farm-ralesia.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/mega-farm-ralesia.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"mega-farm"},
@@ -47,7 +47,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "mega-farm-rennea",
-    icon = "__pyalienlife__/graphics/technology/mega-farm-rennea.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/mega-farm-rennea.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"mega-farm"},
@@ -69,7 +69,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "mega-farm-tuuphra",
-    icon = "__pyalienlife__/graphics/technology/mega-farm-tuuphra.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/mega-farm-tuuphra.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"mega-farm"},
@@ -91,7 +91,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "mega-farm-grod",
-    icon = "__pyalienlife__/graphics/technology/mega-farm-grod.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/mega-farm-grod.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"mega-farm"},
@@ -113,7 +113,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "mega-farm-yotoi",
-    icon = "__pyalienlife__/graphics/technology/mega-farm-yotoi.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/mega-farm-yotoi.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"mega-farm"},
@@ -135,7 +135,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "mega-farm-bioreserve",
-    icon = "__pyalienlife__/graphics/technology/mega-farm-bioreserve.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/mega-farm-bioreserve.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"mega-farm"},

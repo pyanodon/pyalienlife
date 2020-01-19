@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "kicalk",
-    icon = "__pyalienlife__/graphics/technology/kicalk.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/kicalk.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk01"},
@@ -18,7 +18,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "kicalk-mk02",
-    icon = "__pyalienlife__/graphics/technology/kicalk-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/kicalk-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"kicalk"},
@@ -37,7 +37,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "kicalk-mk03",
-    icon = "__pyalienlife__/graphics/technology/kicalk-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/kicalk-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"kicalk-mk02"},
@@ -57,7 +57,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "kicalk-mk04",
-    icon = "__pyalienlife__/graphics/technology/kicalk-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/kicalk-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"kicalk-mk03"},

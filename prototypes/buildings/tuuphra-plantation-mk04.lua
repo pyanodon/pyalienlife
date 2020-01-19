@@ -18,7 +18,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "tuuphra-plantation-mk04",
-    icon = "__pyalienlife__/graphics/icons/tuuphra-plantation-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/tuuphra-plantation-mk04.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk04",
@@ -30,7 +30,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "tuuphra-plantation-mk04",
-    icon = "__pyalienlife__/graphics/icons/tuuphra-plantation-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/tuuphra-plantation-mk04.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "tuuphra-plantation-mk04"},
@@ -58,7 +58,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlife__/graphics/entity/tuuphra-plantation/a1.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/tuuphra-plantation/a1.png",
                 width = 302,
                 height = 64,
                 line_length = 6,
@@ -67,7 +67,7 @@ ENTITY {
                 shift = util.by_pixel(6, 112)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/tuuphra-plantation/a1-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/tuuphra-plantation/a1-mask.png",
                 width = 302,
                 height = 64,
                 line_length = 6,
@@ -77,7 +77,7 @@ ENTITY {
                 tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/tuuphra-plantation/a2.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/tuuphra-plantation/a2.png",
                 width = 302,
                 height = 64,
                 line_length = 6,
@@ -86,7 +86,7 @@ ENTITY {
                 shift = util.by_pixel(6, 48)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/tuuphra-plantation/a2-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/tuuphra-plantation/a2-mask.png",
                 width = 302,
                 height = 64,
                 line_length = 6,
@@ -96,7 +96,7 @@ ENTITY {
                 tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/tuuphra-plantation/a3.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/tuuphra-plantation/a3.png",
                 width = 302,
                 height = 64,
                 line_length = 6,
@@ -105,7 +105,7 @@ ENTITY {
                 shift = util.by_pixel(6, -16)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/tuuphra-plantation/a3-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/tuuphra-plantation/a3-mask.png",
                 width = 302,
                 height = 64,
                 line_length = 6,
@@ -115,7 +115,7 @@ ENTITY {
                 tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/tuuphra-plantation/a4.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/tuuphra-plantation/a4.png",
                 width = 302,
                 height = 64,
                 line_length = 6,
@@ -124,7 +124,7 @@ ENTITY {
                 shift = util.by_pixel(6, -80)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/tuuphra-plantation/a4-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/tuuphra-plantation/a4-mask.png",
                 width = 302,
                 height = 64,
                 line_length = 6,
@@ -134,7 +134,7 @@ ENTITY {
                 tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/tuuphra-plantation/a5.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/tuuphra-plantation/a5.png",
                 width = 302,
                 height = 64,
                 line_length = 6,
@@ -143,7 +143,7 @@ ENTITY {
                 shift = util.by_pixel(6, -144)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/tuuphra-plantation/a5-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/tuuphra-plantation/a5-mask.png",
                 width = 302,
                 height = 64,
                 line_length = 6,
@@ -153,7 +153,7 @@ ENTITY {
                 tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/tuuphra-plantation/a6.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/tuuphra-plantation/a6.png",
                 width = 302,
                 height = 32,
                 line_length = 6,
@@ -200,8 +200,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/tuuphra-plantation.ogg", volume = 1.5},
-        idle_sound = {filename = "__pyalienlife__/sounds/tuuphra-plantation.ogg", volume = 1.1},
+        sound = {filename = "__pyalienlifegraphics__/sounds/tuuphra-plantation.ogg", volume = 1.5},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/tuuphra-plantation.ogg", volume = 1.1},
         apparent_volume = 2.5
     }
 }

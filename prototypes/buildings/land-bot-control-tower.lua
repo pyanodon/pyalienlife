@@ -19,7 +19,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "lb-control-tower",
-    icon = "__pyalienlife__/graphics/icons/control-tower.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/control-tower.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-others",
@@ -32,7 +32,7 @@ ENTITY {
     type = "simple-entity-with-owner",
 	  name = "lb-control-tower",
     flags = {"placeable-neutral", "placeable-off-grid", "not-on-map"},
-    icon = "__pyalienlife__/graphics/icons/control-tower.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/control-tower.png",
     icon_size = 64,
     subgroup = "grass",
     order = "b[decorative]-l[rock]-a[huge]",
@@ -50,7 +50,7 @@ ENTITY {
     vehicle_impact_sound =  { filename = "__base__/sound/car-stone-impact.ogg", volume = 1.0 },
 	working_sound =
     {
-      sound = { filename = "__pyalienlife__/sounds/tower.ogg", volume = 0.65 },
+      sound = { filename = "__pyalienlifegraphics__/sounds/tower.ogg", volume = 0.65 },
       max_sounds_per_type = 3,
       audible_distance_modifier = 0.5,
       probability = 1 / (5 * 60) -- average pause between the sound is 5 seconds
@@ -67,7 +67,7 @@ ENTITY {
     pictures =
     {
       {
-        filename = "__pyalienlife__/graphics/entity/tower/tower.png",
+        filename = "__pyalienlifegraphics__/graphics/entity/tower/tower.png",
         width = 192,
         height = 352,
         scale = 0.5,
@@ -122,7 +122,7 @@ ENTITY {
     },
     base =
     {
-		filename = "__pyalienlife__/graphics/entity/tower/tower.png",
+		filename = "__pyalienlifegraphics__/graphics/entity/tower/tower.png",
 		width = 192,
 		height = 352,
 		scale = 0.5,
@@ -130,14 +130,14 @@ ENTITY {
     },
     base_patch =
     {
-      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
       width = 32,
       height = 32,
       shift = util.by_pixel(0, -0),
     },
     base_animation =
     {
-      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
       width = 32,
       height = 32,
 	  frame_count = 1,
@@ -146,7 +146,7 @@ ENTITY {
     },
     door_animation_up =
     {
-      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
       width = 32,
       height = 32,
 	  frame_count = 1,
@@ -154,7 +154,7 @@ ENTITY {
     },
     door_animation_down =
     {
-      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
       width = 32,
       height = 32,
 	  frame_count = 1,
@@ -162,7 +162,7 @@ ENTITY {
     },
     recharging_animation =
     {
-      filename = "__pyalienlife__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
       width = 32,
       height = 32,
 	  frame_count = 1,

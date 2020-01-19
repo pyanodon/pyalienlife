@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "kmauts",
-    icon = "__pyalienlife__/graphics/technology/kmauts.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/kmauts.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"land-animals-mk02"},
@@ -19,7 +19,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "kmauts-mk02",
-    icon = "__pyalienlife__/graphics/technology/kmauts-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/kmauts-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"kmauts"},
@@ -38,7 +38,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "kmauts-mk03",
-    icon = "__pyalienlife__/graphics/technology/kmauts-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/kmauts-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"kmauts-mk02"},
@@ -58,7 +58,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "kmauts-mk04",
-    icon = "__pyalienlife__/graphics/technology/kmauts-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/kmauts-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"kmauts-mk03"},

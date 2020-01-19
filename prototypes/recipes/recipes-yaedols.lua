@@ -76,7 +76,7 @@ RECIPE {
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "yaedols-mk02",
-    icon = '__pyalienlife__/graphics/icons/evolution-mk02.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
     icon_size = 64,
     subgroup = 'py-alienlife-yaedols',
     order = 'za'
@@ -101,7 +101,7 @@ RECIPE {
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "yaedols-mk03",
-    icon = '__pyalienlife__/graphics/icons/evolution-mk03.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png',
     icon_size = 64,
     subgroup = 'py-alienlife-yaedols',
     order = 'zb'
@@ -126,7 +126,7 @@ RECIPE {
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "yaedols-mk04",
-    icon = '__pyalienlife__/graphics/icons/evolution-mk04.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
     icon_size = 64,
     subgroup = 'py-alienlife-yaedols',
     order = 'zc'

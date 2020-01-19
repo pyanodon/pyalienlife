@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "auog",
-    icon = "__pyalienlife__/graphics/technology/auog.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/auog.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"land-animals-mk01","biotech-mk01"},
@@ -18,7 +18,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "auog-mk02",
-    icon = "__pyalienlife__/graphics/technology/auog-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/auog-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"auog"},
@@ -36,7 +36,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "auog-mk03",
-    icon = "__pyalienlife__/graphics/technology/auog-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/auog-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"auog-mk02"},
@@ -55,7 +55,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "auog-mk04",
-    icon = "__pyalienlife__/graphics/technology/auog-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/auog-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"auog-mk03"},

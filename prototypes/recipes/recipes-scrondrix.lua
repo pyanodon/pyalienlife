@@ -169,7 +169,7 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 8},
     },
     --main_product = "scrondrix-mk02",
-    icon = '__pyalienlife__/graphics/icons/evolution-mk02.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
     icon_size = 64,
     subgroup = 'py-alienlife-scrondrix',
     order = 'za'
@@ -195,7 +195,7 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 8},
     },
     --main_product = "scrondrix-mk03",
-    icon = '__pyalienlife__/graphics/icons/evolution-mk03.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png',
     icon_size = 64,
     subgroup = 'py-alienlife-scrondrix',
     order = 'zb'
@@ -221,7 +221,7 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 8},
     },
     --main_product = "scrondrix-mk04",
-    icon = '__pyalienlife__/graphics/icons/evolution-mk04.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
     icon_size = 64,
     subgroup = 'py-alienlife-scrondrix',
     order = 'zc'

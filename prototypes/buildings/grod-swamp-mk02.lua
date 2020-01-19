@@ -21,7 +21,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "grods-swamp-mk02",
-    icon = "__pyalienlife__/graphics/icons/grods-swamp-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/grods-swamp-mk02.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk02",
@@ -33,7 +33,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "grods-swamp-mk02",
-    icon = "__pyalienlife__/graphics/icons/grods-swamp-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/grods-swamp-mk02.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "grods-swamp-mk02"},
@@ -61,7 +61,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlife__/graphics/entity/grods-swamp/off.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/grods-swamp/off.png",
                 width = 384,
                 height = 384,
                 line_length = 1,
@@ -70,7 +70,7 @@ ENTITY {
                 shift = util.by_pixel(16, -16)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/grods-swamp/off-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/grods-swamp/off-mask.png",
                 width = 384,
                 height = 384,
                 line_length = 1,
@@ -89,7 +89,7 @@ ENTITY {
             south_position = util.by_pixel(-112, 32),
             east_position = util.by_pixel(-112, 32),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/grods-swamp/a.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/grods-swamp/a.png",
                 frame_count = 100,
                 line_length = 12,
                 width = 128,
@@ -103,7 +103,7 @@ ENTITY {
             south_position = util.by_pixel(16, 32),
             east_position = util.by_pixel(16, 32),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/grods-swamp/b.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/grods-swamp/b.png",
                 frame_count = 100,
                 line_length = 12,
                 width = 128,
@@ -117,7 +117,7 @@ ENTITY {
             south_position = util.by_pixel(128, 32),
             east_position = util.by_pixel(128, 32),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/grods-swamp/c.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/grods-swamp/c.png",
                 frame_count = 100,
                 line_length = 12,
                 width = 96,
@@ -163,8 +163,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/grods-swamp.ogg", volume = 1.55},
-        idle_sound = {filename = "__pyalienlife__/sounds/grods-swamp.ogg", volume = 0.95},
+        sound = {filename = "__pyalienlifegraphics__/sounds/grods-swamp.ogg", volume = 1.55},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/grods-swamp.ogg", volume = 0.95},
         apparent_volume = 1.2
     }
 }

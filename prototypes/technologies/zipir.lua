@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "zipir",
-    icon = "__pyalienlife__/graphics/technology/zipir.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/zipir.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"water-animals-mk01","food-mk01"},
@@ -19,7 +19,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "zipir-mk02",
-    icon = "__pyalienlife__/graphics/technology/zipir-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/zipir-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"zipir"},
@@ -38,7 +38,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "zipir-mk03",
-    icon = "__pyalienlife__/graphics/technology/zipir-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/zipir-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"zipir-mk02"},
@@ -59,7 +59,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "zipir-mk04",
-    icon = "__pyalienlife__/graphics/technology/zipir-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/zipir-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"zipir-mk03"},

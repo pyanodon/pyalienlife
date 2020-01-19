@@ -32,7 +32,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'hardened-bone',
                 name = 'Extract arthurian bones-2',
-                icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
 		},	
 		--bone arthurian rendering
@@ -50,7 +50,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'hardened-bone',
 			name = 'Extract bones from Improved arthurians-2',
-			icon = "__pyalienlife__/graphics/icons/bone-caged-arthurian.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-arthurian.png",
 			icon_size = 64,
 		},
 	}
@@ -88,7 +88,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'hardened-bone',
                 name = 'Extract auog bones-2',
-                icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
 		},	
 		--bone auog rendering
@@ -106,7 +106,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'hardened-bone',
 			name = 'Extract bones from Improved auogs-2',
-			icon = "__pyalienlife__/graphics/icons/bone-caged-auog.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-auog.png",
 			icon_size = 64,
 		},
 	}
@@ -143,7 +143,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'hardened-bone',
                 name = 'Extract dingrits bones-2',
-                icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
 		},	
 		--meat dingrits rendering
@@ -161,7 +161,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'hardened-bone',
 			name = 'Extract bones from Improved dingrits-2',
-			icon = "__pyalienlife__/graphics/icons/bone-caged-dingrits.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-dingrits.png",
 			icon_size = 64,
 		},
 	}
@@ -198,7 +198,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'hardened-bone',
                 name = 'Extract Mukmoux bones-2',
-                icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
 		},	
 		--bone mukmoux rendering
@@ -216,7 +216,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'hardened-bone',
 			name = 'Extract bones from Improved Mukmouxs-2',
-			icon = "__pyalienlife__/graphics/icons/bone-caged-mukmoux.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-mukmoux.png",
 			icon_size = 64,
 		},
 	}
@@ -253,7 +253,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'hardened-bone',
                 name = 'Extract phadai bones-2',
-                icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
 		},	
 		--bone phadai rendering
@@ -271,7 +271,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'hardened-bone',
 			name = 'Extract bones from Improved phadais-2',
-			icon = "__pyalienlife__/graphics/icons/bone-caged-phadai.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-phadai.png",
 			icon_size = 64,
 		},
 	}
@@ -308,7 +308,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'hardened-bone',
                 name = 'Extract phagnot bones-2',
-                icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
 		},	
 		--bone phagnot rendering
@@ -326,7 +326,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'hardened-bone',
 			name = 'Extract bones from Improved phagnots-2',
-			icon = "__pyalienlife__/graphics/icons/bone-caged-phagnot.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-phagnot.png",
 			icon_size = 64,
 		},
 	}
@@ -363,7 +363,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'hardened-bone',
                 name = 'Extract scrondrix bones-2',
-                icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
 		},	
 		--bone scrondrix rendering
@@ -381,7 +381,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'hardened-bone',
 			name = 'Extract bones from Improved scrondrixs-2',
-			icon = "__pyalienlife__/graphics/icons/bone-caged-scrondrix.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-scrondrix.png",
 			icon_size = 64,
 		},
 	}
@@ -417,7 +417,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'hardened-bone',
                 name = 'Extract Trits bones-2',
-                icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
 		},	
 		--bone trits rendering
@@ -435,7 +435,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'hardened-bone',
 			name = 'Extract bones from Improved Trits-2',
-			icon = "__pyalienlife__/graphics/icons/bone-trits.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/bone-trits.png",
 			icon_size = 64,
 		},
 	}
@@ -472,7 +472,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'hardened-bone',
                 name = 'Extract Ulric bones-2',
-                icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
 		},	
 		--bone ulric rendering
@@ -490,7 +490,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'hardened-bone',
 			name = 'Extract bones from Improved Ulrics-2',
-			icon = "__pyalienlife__/graphics/icons/bone-caged-ulric.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-ulric.png",
 			icon_size = 64,
 		},
 	}
@@ -530,7 +530,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'hardened-bone',
                 name = 'Extract Xeno bones-2',
-                icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
 		},	
 		--bone xeno rendering
@@ -550,7 +550,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'hardened-bone',
 			name = 'Extract bones from Improved xenos-2',
-			icon = "__pyalienlife__/graphics/icons/bone-xeno.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/bone-xeno.png",
 			icon_size = 64,
 		},
 	}

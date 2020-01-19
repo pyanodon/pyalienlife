@@ -20,7 +20,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "navens-culture-mk01",
-    icon = "__pyalienlife__/graphics/icons/navens-culture-mk01.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk01.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk01",
@@ -32,7 +32,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "navens-culture-mk01",
-    icon = "__pyalienlife__/graphics/icons/navens-culture-mk01.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk01.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "navens-culture-mk01"},
@@ -60,7 +60,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlife__/graphics/entity/navens-culture/a1.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/navens-culture/a1.png",
                 width = 352,
                 height = 64,
                 line_length = 5,
@@ -69,7 +69,7 @@ ENTITY {
                 shift = util.by_pixel(16, 128)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/navens-culture/a1-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/navens-culture/a1-mask.png",
                 width = 352,
                 height = 64,
                 line_length = 5,
@@ -79,7 +79,7 @@ ENTITY {
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/navens-culture/a2.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/navens-culture/a2.png",
                 width = 352,
                 height = 64,
                 line_length = 5,
@@ -88,7 +88,7 @@ ENTITY {
                 shift = util.by_pixel(16, 64)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/navens-culture/a2-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/navens-culture/a2-mask.png",
                 width = 352,
                 height = 64,
                 line_length = 5,
@@ -98,7 +98,7 @@ ENTITY {
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/navens-culture/a3.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/navens-culture/a3.png",
                 width = 352,
                 height = 64,
                 line_length = 5,
@@ -107,7 +107,7 @@ ENTITY {
                 shift = util.by_pixel(16, 0)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/navens-culture/a3-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/navens-culture/a3-mask.png",
                 width = 352,
                 height = 64,
                 line_length = 5,
@@ -117,7 +117,7 @@ ENTITY {
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/navens-culture/a4.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/navens-culture/a4.png",
                 width = 352,
                 height = 64,
                 line_length = 5,
@@ -126,7 +126,7 @@ ENTITY {
                 shift = util.by_pixel(16, -64)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/navens-culture/a4-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/navens-culture/a4-mask.png",
                 width = 352,
                 height = 64,
                 line_length = 5,
@@ -136,7 +136,7 @@ ENTITY {
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/navens-culture/a5.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/navens-culture/a5.png",
                 width = 352,
                 height = 64,
                 line_length = 5,
@@ -145,7 +145,7 @@ ENTITY {
                 shift = util.by_pixel(16, -128)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/navens-culture/a5-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/navens-culture/a5-mask.png",
                 width = 352,
                 height = 64,
                 line_length = 5,
@@ -155,7 +155,7 @@ ENTITY {
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/navens-culture/a6.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/navens-culture/a6.png",
                 width = 352,
                 height = 32,
                 line_length = 5,
@@ -202,8 +202,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/navens-culture.ogg", volume = 1.8},
-        idle_sound = {filename = "__pyalienlife__/sounds/navens-culture.ogg", volume = 1.3},
+        sound = {filename = "__pyalienlifegraphics__/sounds/navens-culture.ogg", volume = 1.8},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/navens-culture.ogg", volume = 1.3},
         apparent_volume = 2.5
     }
 }

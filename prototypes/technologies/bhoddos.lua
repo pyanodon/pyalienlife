@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "bhoddos",
-    icon = "__pyalienlife__/graphics/technology/bhoddos.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/bhoddos.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"mycology-mk01","genetics-mk01"},

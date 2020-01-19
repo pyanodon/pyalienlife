@@ -48,7 +48,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "ralesia-plantation-mk01",
-    icon = "__pyalienlife__/graphics/icons/ralesia-plantation-mk01.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/ralesia-plantation-mk01.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk01",
@@ -60,7 +60,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "ralesia-plantation-mk01",
-    icon = "__pyalienlife__/graphics/icons/ralesia-plantation-mk01.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/ralesia-plantation-mk01.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "ralesia-plantation-mk01"},

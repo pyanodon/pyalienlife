@@ -516,7 +516,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'rendering',
 			name = 'Full Render xyhiphoe',
-			icon = "__pyalienlife__/graphics/icons/rendering-xyhiphoe.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-xyhiphoe.png",
 			icon_size = 64,
 		},
 		--meat
@@ -536,7 +536,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
 			name = 'Extract xyhiphoe Meat',
-			icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 			icon_size = 64,
 		},
 		--shell
@@ -553,7 +553,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
 			name = 'Extract xyhiphoe shell',
-			icon = "__pyalienlife__/graphics/icons/shell.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/shell.png",
 			icon_size = 64,
 		},
 		--guts
@@ -570,7 +570,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
 			name = 'Extract xyhiphoe guts',
-			icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
 		},
 		--arthropodblood
@@ -587,7 +587,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
 			name = 'Extract xyhiphoe blood',
-			icon = "__pyalienlife__/graphics/icons/arthropod-blood.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
 			icon_size = 32,
 		},
 		--meat xyhiphoe rendering
@@ -605,7 +605,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
 			name = 'Extract meat from Improved xyhiphoe',
-			icon = "__pyalienlife__/graphics/icons/meat-xyhiphoe.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-xyhiphoe.png",
 			icon_size = 64,
 		},
 		--guts xyhiphoe rendering
@@ -623,7 +623,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'antitumor',
 			name = 'Extract guts from Improved xyhiphoe',
-			icon = "__pyalienlife__/graphics/icons/guts-xyhiphoe.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-xyhiphoe.png",
 			icon_size = 64,
 		},
 		--blood xyhiphoe rendering
@@ -641,7 +641,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
 			name = 'Extract blood from Improved xyhiphoe',
-			icon = "__pyalienlife__/graphics/icons/blood-xyhiphoe.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-xyhiphoe.png",
 			icon_size = 64,
 		},
 		--shell xyhiphoe rendering
@@ -659,7 +659,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'reca',
 			name = 'Extract shell from Improved xyhiphoe',
-			icon = "__pyalienlife__/graphics/icons/shell-xyhiphoe.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/shell-xyhiphoe.png",
 			icon_size = 64,
 		},
 	}

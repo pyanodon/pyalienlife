@@ -202,7 +202,7 @@ RECIPE {
         {type = 'fluid', name = 'water-saline', amount = 50},
     },
     --main_product = "sea-sponge-mk02",
-    icon = '__pyalienlife__/graphics/icons/evolution-mk02.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
     icon_size = 64,
     subgroup = 'py-alienlife-sponge',
     order = 'za'
@@ -225,7 +225,7 @@ RECIPE {
         {type = 'fluid', name = 'water-saline', amount = 50},
     },
     --main_product = "sea-sponge-mk03",
-    icon = '__pyalienlife__/graphics/icons/evolution-mk03.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png',
     icon_size = 64,
     subgroup = 'py-alienlife-sponge',
     order = 'zb'
@@ -248,7 +248,7 @@ RECIPE {
         {type = 'fluid', name = 'water-saline', amount = 50},
     },
     --main_product = "sea-sponge-mk04",
-    icon = '__pyalienlife__/graphics/icons/evolution-mk04.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
     icon_size = 64,
     subgroup = 'py-alienlife-sponge',
     order = 'zc'

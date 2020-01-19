@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "exercises",
-    icon = "__pyalienlife__/graphics/technology/exercises.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/exercises.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"genetic-design"},
@@ -22,7 +22,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "myostatin",
-    icon = "__pyalienlife__/graphics/technology/myostatin.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/myostatin.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"exercises","anabolic-rna"},

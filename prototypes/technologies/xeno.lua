@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "xeno",
-    icon = "__pyalienlife__/graphics/technology/xeno.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/xeno.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"biotech-mk02","land-animals-mk02"},
@@ -19,7 +19,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "xeno-mk02",
-    icon = "__pyalienlife__/graphics/technology/xeno-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/xeno-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"xeno"},
@@ -38,7 +38,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "xeno-mk03",
-    icon = "__pyalienlife__/graphics/technology/xeno-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/xeno-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"xeno-mk02"},
@@ -58,7 +58,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "xeno-mk04",
-    icon = "__pyalienlife__/graphics/technology/xeno-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/xeno-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"xeno-mk03"},

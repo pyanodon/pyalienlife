@@ -21,7 +21,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "dhilmos-pool-mk02",
-    icon = "__pyalienlife__/graphics/icons/dhilmos-pool-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/dhilmos-pool-mk02.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk02",
@@ -33,7 +33,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "dhilmos-pool-mk02",
-    icon = "__pyalienlife__/graphics/icons/dhilmos-pool-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/dhilmos-pool-mk02.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "dhilmos-pool-mk02"},
@@ -61,7 +61,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlife__/graphics/entity/dhilmos-pool/off.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/dhilmos-pool/off.png",
                 width = 352,
                 height = 384,
                 --line_length = 5,
@@ -70,7 +70,7 @@ ENTITY {
                 shift = util.by_pixel(0, -16)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/dhilmos-pool/off-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/dhilmos-pool/off-mask.png",
                 width = 352,
                 height = 384,
                 --line_length = 5,
@@ -88,7 +88,7 @@ ENTITY {
             south_position = {-4.5, 0.0},
             east_position = {-4.5, 0.0},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/dhilmos-pool/a1.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/dhilmos-pool/a1.png",
                 frame_count = 150,
                 line_length = 30,
                 width = 64,
@@ -102,7 +102,7 @@ ENTITY {
             south_position = {-2.5, 0.0},
             east_position = {-2.5, 0.0},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/dhilmos-pool/a2.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/dhilmos-pool/a2.png",
                 frame_count = 150,
                 line_length = 30,
                 width = 64,
@@ -116,7 +116,7 @@ ENTITY {
             south_position = {-0.5, 0.0},
             east_position = {-0.5, 0.0},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/dhilmos-pool/a3.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/dhilmos-pool/a3.png",
                 frame_count = 150,
                 line_length = 30,
                 width = 64,
@@ -130,7 +130,7 @@ ENTITY {
             south_position = {1.5, 0.0},
             east_position = {1.5, 0.0},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/dhilmos-pool/a4.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/dhilmos-pool/a4.png",
                 frame_count = 150,
                 line_length = 30,
                 width = 64,
@@ -144,7 +144,7 @@ ENTITY {
             south_position = {3.5, 0.0},
             east_position = {3.5, 0.0},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/dhilmos-pool/a5.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/dhilmos-pool/a5.png",
                 frame_count = 150,
                 line_length = 30,
                 width = 64,
@@ -190,8 +190,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/dhilmos-pool.ogg", volume = 1.2},
-        idle_sound = {filename = "__pyalienlife__/sounds/dhilmos-pool.ogg", volume = 0.85},
+        sound = {filename = "__pyalienlifegraphics__/sounds/dhilmos-pool.ogg", volume = 1.2},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/dhilmos-pool.ogg", volume = 0.85},
         apparent_volume = 2.5
     }
 }

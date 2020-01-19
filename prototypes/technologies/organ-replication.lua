@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "organ-replication",
-    icon = "__pyalienlife__/graphics/technology/organ-replication.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/organ-replication.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"genetic-design"},
@@ -22,7 +22,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "cavity",
-    icon = "__pyalienlife__/graphics/technology/cavity.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/cavity.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"organ-replication","antitumor"},

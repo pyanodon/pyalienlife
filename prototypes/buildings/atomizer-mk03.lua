@@ -18,7 +18,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "atomizer-mk03",
-    icon = "__pyalienlife__/graphics/icons/atomizer-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk03.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk03",
@@ -30,7 +30,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "atomizer-mk03",
-    icon = "__pyalienlife__/graphics/icons/atomizer-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk03.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "atomizer-mk03"},
@@ -60,7 +60,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlife__/graphics/entity/atomizer/off.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/atomizer/off.png",
                 --priority = "high",
                 width = 256,
                 height = 256,
@@ -70,7 +70,7 @@ ENTITY {
                 shift = util.by_pixel(16, -16)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/atomizer/off-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/atomizer/off-mask.png",
                 --priority = "high",
                 width = 256,
                 height = 256,
@@ -89,7 +89,7 @@ ENTITY {
             south_position = util.by_pixel(0, -16),
             east_position = util.by_pixel(0, -16),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/atomizer/on.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/atomizer/on.png",
                 priority = "high",
                 frame_count = 90,
                 line_length = 9,
@@ -135,8 +135,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/atomizer.ogg", volume = 1.0},
-        idle_sound = {filename = "__pyalienlife__/sounds/atomizer.ogg", volume = 0.50},
+        sound = {filename = "__pyalienlifegraphics__/sounds/atomizer.ogg", volume = 1.0},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/atomizer.ogg", volume = 0.50},
         apparent_volume = 2.5
     }
 }

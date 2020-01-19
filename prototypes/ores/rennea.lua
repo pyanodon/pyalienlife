@@ -19,7 +19,7 @@ ENTITY {
     type = "resource",
     name = "rennea-flowers",
     category = "rennea-flowers",
-    icon = "__pyalienlife__/graphics/icons/rennea-ore.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/rennea-ore.png",
     icon_size = 64,
     flags = {"placeable-neutral"},
     order = "a-b-a",
@@ -57,14 +57,14 @@ ENTITY {
     stage_counts = {800},
     stages = {
         sheet = {
-            filename = "__pyalienlife__/graphics/entity/crops/rennea/rennea.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/crops/rennea/rennea.png",
             priority = "extra-high",
             width = 64,
             height = 64,
             frame_count = 8,
             variation_count = 1,
             hr_version = {
-                filename = "__pyalienlife__/graphics/entity/crops/rennea/hr-rennea.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/crops/rennea/hr-rennea.png",
                 priority = "extra-high",
                 width = 128,
                 height = 128,

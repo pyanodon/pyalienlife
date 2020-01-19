@@ -19,7 +19,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "biofactory-mk03",
-    icon = "__pyalienlife__/graphics/icons/biofactory-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/biofactory-mk03.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk03",
@@ -31,7 +31,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "biofactory-mk03",
-    icon = "__pyalienlife__/graphics/icons/biofactory-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/biofactory-mk03.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "biofactory-mk03"},
@@ -117,7 +117,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlife__/graphics/entity/biofactory/base.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/biofactory/base.png",
                 priority = "high",
                 width = 256,
                 height = 32,
@@ -127,7 +127,7 @@ ENTITY {
                 shift = util.by_pixel(16, 96)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/biofactory/a1.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a1.png",
                 priority = "high",
                 width = 128,
                 height = 227,
@@ -137,7 +137,7 @@ ENTITY {
                 shift = util.by_pixel(-48, -31)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/biofactory/a1-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a1-mask.png",
                 priority = "high",
                 width = 128,
                 height = 227,
@@ -148,7 +148,7 @@ ENTITY {
                 tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/biofactory/a2.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a2.png",
                 priority = "high",
                 width = 128,
                 height = 227,
@@ -158,7 +158,7 @@ ENTITY {
                 shift = util.by_pixel(80, -31)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/biofactory/a2-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a2-mask.png",
                 priority = "high",
                 width = 128,
                 height = 227,
@@ -172,8 +172,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/biofactory.ogg", volume = 1.3},
-        idle_sound = {filename = "__pyalienlife__/sounds/biofactory.ogg", volume = 0.9},
+        sound = {filename = "__pyalienlifegraphics__/sounds/biofactory.ogg", volume = 1.3},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/biofactory.ogg", volume = 0.9},
         apparent_volume = 2.5
     }
 }

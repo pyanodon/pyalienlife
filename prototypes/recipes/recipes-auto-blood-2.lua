@@ -32,7 +32,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'transgenes',
 			name = 'Extract arthurian blood-2',
-			icon = "__pyalienlife__/graphics/icons/blood.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
 			icon_size = 64,
 		},	
 		--blood arthurian rendering
@@ -50,7 +50,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'transgenes',
 			name = 'Extract blood from Improved arthurians-2',
-			icon = "__pyalienlife__/graphics/icons/blood-caged-arthurian.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-arthurian.png",
 			icon_size = 64,
 		},
 	}
@@ -87,7 +87,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'transgenes',
                 name = 'Extract auog blood-2',
-                icon = "__pyalienlife__/graphics/icons/blood.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
 		},	
 		--blood auog rendering
@@ -105,7 +105,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'transgenes',
 			name = 'Extract blood from Improved auogs-2',
-			icon = "__pyalienlife__/graphics/icons/blood-caged-auog.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-auog.png",
 			icon_size = 64,
 		},
 	}
@@ -144,7 +144,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'transgenes',
                 name = 'Extract dhilmos blood-2',
-                icon = "__pyalienlife__/graphics/icons/arthropod-blood.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
                 icon_size = 32,
 		},	
 		--blood dhilmos rendering
@@ -162,7 +162,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'transgenes',
 			name = 'Extract blood from Improved dhilmoss-2',
-			icon = "__pyalienlife__/graphics/icons/blood-dhilmos.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-dhilmos.png",
 			icon_size = 64,
 		},
 	}
@@ -199,7 +199,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'transgenes',
                 name = 'Extract dingrits blood-2',
-                icon = "__pyalienlife__/graphics/icons/blood.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
 		},	
 		--blood dingrits rendering
@@ -217,7 +217,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'transgenes',
 			name = 'Extract blood from Improved dingrits-2',
-			icon = "__pyalienlife__/graphics/icons/blood-caged-dingrits.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-dingrits.png",
 			icon_size = 64,
 		},
 	}
@@ -254,7 +254,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'transgenes',
                 name = 'Extract kmauts blood-2',
-                icon = "__pyalienlife__/graphics/icons/arthropod-blood.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
                 icon_size = 32,
 		},	
 		--blood kmauts rendering
@@ -272,7 +272,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'transgenes',
 			name = 'Extract blood from Improved kmauts-2',
-			icon = "__pyalienlife__/graphics/icons/blood-caged-kmauts.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-kmauts.png",
 			icon_size = 64,
         },
 	}
@@ -309,7 +309,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'transgenes',
                 name = 'Extract Mukmoux blood-2',
-                icon = "__pyalienlife__/graphics/icons/blood.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
 		},	
 		--blood mukmoux rendering
@@ -327,7 +327,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'transgenes',
 			name = 'Extract blood from Improved Mukmouxs-2',
-			icon = "__pyalienlife__/graphics/icons/blood-caged-mukmoux.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-mukmoux.png",
 			icon_size = 64,
 		},
 	}
@@ -364,7 +364,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'transgenes',
                 name = 'Extract phadai blood-2',
-                icon = "__pyalienlife__/graphics/icons/blood.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
 		},	
 		--blood phadai rendering
@@ -382,7 +382,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'transgenes',
 			name = 'Extract blood from Improved phadais-2',
-			icon = "__pyalienlife__/graphics/icons/blood-caged-phadai.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-phadai.png",
 			icon_size = 64,
         },
 	}
@@ -419,7 +419,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'transgenes',
                 name = 'Extract phagnot blood-2',
-                icon = "__pyalienlife__/graphics/icons/blood.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
 		},	
 		--blood phagnot rendering
@@ -437,7 +437,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'transgenes',
 			name = 'Extract blood from Improved phagnots-2',
-			icon = "__pyalienlife__/graphics/icons/blood-caged-phagnot.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-phagnot.png",
 			icon_size = 64,
 		},
 	}
@@ -474,7 +474,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'transgenes',
                 name = 'Extract scrondrix blood-2',
-                icon = "__pyalienlife__/graphics/icons/blood.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
 		},	
 		--blood scrondrix rendering
@@ -492,7 +492,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'transgenes',
 			name = 'Extract blood from Improved scrondrixs-2',
-			icon = "__pyalienlife__/graphics/icons/blood-caged-scrondrix.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-scrondrix.png",
 			icon_size = 64,
 		},
 	}
@@ -528,7 +528,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'transgenes',
                 name = 'Extract Trits blood-2',
-                icon = "__pyalienlife__/graphics/icons/blood.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
 		},	
 		--blood trits rendering
@@ -546,7 +546,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'transgenes',
 			name = 'Extract blood from Improved Trits-1',
-			icon = "__pyalienlife__/graphics/icons/blood-trits.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-trits.png",
 			icon_size = 64,
 		},
 	}
@@ -583,7 +583,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'transgenes',
                 name = 'Extract Ulric blood-2',
-                icon = "__pyalienlife__/graphics/icons/blood.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
 		},	
 		--blood ulric rendering
@@ -601,7 +601,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'transgenes',
 			name = 'Extract blood from Improved Ulrics-2',
-			icon = "__pyalienlife__/graphics/icons/blood-caged-ulric.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-ulric.png",
 			icon_size = 64,
 		},
 	}
@@ -640,7 +640,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'transgenes',
                 name = 'Extract Vonix blood-2',
-                icon = "__pyalienlife__/graphics/icons/arthropod-blood.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
                 icon_size = 32,
 		},	
 		--blood vonix rendering
@@ -659,7 +659,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'transgenes',
 			name = 'Extract Arthropod blood from Improved Vonixes-2',
-			icon = "__pyalienlife__/graphics/icons/blood-vonix.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-vonix.png",
 			icon_size = 64,
 		},
 	}
@@ -699,7 +699,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'transgenes',
                 name = 'Extract Vrauks blood-2',
-                icon = "__pyalienlife__/graphics/icons/arthropod-blood.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
                 icon_size = 32,
 		},	
 		--blood vrauks rendering
@@ -718,7 +718,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'transgenes',
 			name = 'Extract blood from Improved Vrauks-2',
-			icon = "__pyalienlife__/graphics/icons/blood-caged-vrauks.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-vrauks.png",
 			icon_size = 64,
 		},
 	}
@@ -770,7 +770,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'transgenes',
 			name = 'Extract blood from Improved Xenos-2',
-			icon = "__pyalienlife__/graphics/icons/sulfuric-xeno.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/sulfuric-xeno.png",
 			icon_size = 64,
 		},
 	}
@@ -804,7 +804,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'transgenes',
 			name = 'Extract xyhiphoe blood-2',
-			icon = "__pyalienlife__/graphics/icons/arthropod-blood.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
 			icon_size = 32,
 		},
 		--blood xyhiphoe rendering
@@ -822,7 +822,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'transgenes',
 			name = 'Extract blood from Improved xyhiphoe-2',
-			icon = "__pyalienlife__/graphics/icons/blood-xyhiphoe.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-xyhiphoe.png",
 			icon_size = 64,
 		},
 	}
@@ -861,7 +861,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'transgenes',
                 name = 'Extract zipir blood-2',
-                icon = "__pyalienlife__/graphics/icons/arthropod-blood.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
                 icon_size = 32,
 		},	
 		--blood zipir rendering
@@ -879,7 +879,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'transgenes',
 			name = 'Extract Arthropod blood from Improved Zipir-2',
-			icon = "__pyalienlife__/graphics/icons/blood-zipir.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-zipir.png",
 			icon_size = 64,
 		},
 	}

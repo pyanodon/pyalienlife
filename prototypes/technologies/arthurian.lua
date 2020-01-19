@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "arthurian",
-    icon = "__pyalienlife__/graphics/technology/arthurian.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/arthurian.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"land-animals-mk02","biotech-mk02","genetics-mk02","organic-breeding"},
@@ -19,7 +19,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "arthurian-mk02",
-    icon = "__pyalienlife__/graphics/technology/arthurian-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/arthurian-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"arthurian"},
@@ -38,7 +38,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "arthurian-mk03",
-    icon = "__pyalienlife__/graphics/technology/arthurian-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/arthurian-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"arthurian-mk02"},
@@ -58,7 +58,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "arthurian-mk04",
-    icon = "__pyalienlife__/graphics/technology/arthurian-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/arthurian-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"arthurian-mk03"},

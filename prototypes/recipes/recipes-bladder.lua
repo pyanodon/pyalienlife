@@ -115,7 +115,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'bladder',
 			name = 'Extract phagnot Gas bladder-2',
-			icon = "__pyalienlife__/graphics/icons/gas-bladder.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/gas-bladder.png",
 			icon_size = 64,
 		},
 	}

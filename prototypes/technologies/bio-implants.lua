@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "bio-implants",
-    icon = "__pyalienlife__/graphics/technology/bio-implants.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/bio-implants.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"pharmagenomics","biotech-mk03"},

@@ -23,7 +23,7 @@ fun.autorecipes {
 			crafting_speed = 100,
 			tech = 'bigger-colon',
 			name = 'muk-manure-1a',
-			--icon = "__pyalienlife__/graphics/icons/atomizer-mk01.png"
+			--icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk01.png"
 		},
 		--food 1
 		{
@@ -41,7 +41,7 @@ fun.autorecipes {
 			crafting_speed = 80,
 			tech = 'bigger-colon',
 			name = 'muk-manure-2a',
-			--icon = "__pyalienlife__/graphics/icons/navens-culture-mk01.png"
+			--icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk01.png"
 		},
 		--salt
 		{

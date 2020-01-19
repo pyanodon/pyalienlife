@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "ralesia",
-    icon = "__pyalienlife__/graphics/technology/ralesia.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/ralesia.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk01"},

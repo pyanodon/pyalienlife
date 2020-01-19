@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "interactive-cognition",
-    icon = "__pyalienlife__/graphics/technology/interactive-cognition.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/interactive-cognition.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"genetic-design"},
@@ -22,7 +22,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "metamide5",
-    icon = "__pyalienlife__/graphics/technology/metamide-5.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/metamide-5.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"interactive-cognition","nanochondria"},

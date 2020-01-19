@@ -19,7 +19,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "antelope-enclosure-mk01",
-    icon = "__pyalienlife__/graphics/icons/antelope-enclosure-mk01.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/antelope-enclosure-mk01.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-others",
@@ -31,7 +31,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "antelope-enclosure-mk01",
-    icon = "__pyalienlife__/graphics/icons/antelope-enclosure-mk01.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/antelope-enclosure-mk01.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "antelope-enclosure-mk01"},
@@ -59,7 +59,7 @@ ENTITY {
     animation = {
         layers = {
         {
-        filename = "__pyalienlife__/graphics/entity/antelope-enclosure/off.png",
+        filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/off.png",
         width = 256,
         height = 320,
         frame_count = 1,
@@ -67,7 +67,7 @@ ENTITY {
         shift = util.by_pixel(0, -32)
         },
         {
-            filename = "__pyalienlife__/graphics/entity/antelope-enclosure/off-mask.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/off-mask.png",
             width = 256,
             height = 320,
             frame_count = 1,
@@ -84,7 +84,7 @@ ENTITY {
             south_position = util.by_pixel(-96, -32),
             east_position = util.by_pixel(-96, -32),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/antelope-enclosure/b1.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/b1.png",
                 frame_count = 120,
                 line_length = 20,
                 width = 64,
@@ -98,7 +98,7 @@ ENTITY {
             south_position = util.by_pixel(-32, -32),
             east_position = util.by_pixel(-32, -32),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/antelope-enclosure/b2.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/b2.png",
                 frame_count = 120,
                 line_length = 20,
                 width = 64,
@@ -112,7 +112,7 @@ ENTITY {
             south_position = util.by_pixel(32, -32),
             east_position = util.by_pixel(32, -32),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/antelope-enclosure/b3.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/b3.png",
                 frame_count = 120,
                 line_length = 20,
                 width = 64,
@@ -126,7 +126,7 @@ ENTITY {
             south_position = util.by_pixel(96, -32),
             east_position = util.by_pixel(96, -32),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/antelope-enclosure/b4.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/b4.png",
                 frame_count = 120,
                 line_length = 20,
                 width = 64,
@@ -137,8 +137,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/antelope-enclosure.ogg", volume = 1.0},
-        idle_sound = {filename = "__pyalienlife__/sounds/antelope-enclosure.ogg", volume = 0.65},
+        sound = {filename = "__pyalienlifegraphics__/sounds/antelope-enclosure.ogg", volume = 1.0},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/antelope-enclosure.ogg", volume = 0.65},
         apparent_volume = 0.45
     }
 }
