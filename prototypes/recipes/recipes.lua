@@ -1529,7 +1529,7 @@ RECIPE {
         {type = 'item', name = 'rennea', amount = 8},
     },
     results = {
-        {type = 'fluid', name = 'sporopollenin', amount = 5},
+        {type = 'item', name = 'sporopollenin', amount = 5},
     },
     --main_product = "b-molasse",
 }:add_unlock("mycology-mk02")
