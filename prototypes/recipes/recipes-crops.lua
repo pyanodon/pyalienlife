@@ -12,7 +12,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'moss', amount = 3},
     },
-    icon = '__pyalienlife__/graphics/icons/moss.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/moss.png',
     icon_size = 32,
     subgroup = 'py-alienlife-plants',
     order = 'a'
@@ -32,7 +32,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'moss', amount = 5},
     },
-    icon = '__pyalienlife__/graphics/icons/moss.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/moss.png',
     icon_size = 32,
     subgroup = 'py-alienlife-plants',
     order = 'a'
@@ -52,7 +52,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'moss', amount = 10},
     },
-    icon = '__pyalienlife__/graphics/icons/moss.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/moss.png',
     icon_size = 32,
     subgroup = 'py-alienlife-plants',
     order = 'a'
@@ -73,7 +73,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'moss', amount = 15},
     },
-    icon = '__pyalienlife__/graphics/icons/moss.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/moss.png',
     icon_size = 32,
     subgroup = 'py-alienlife-plants',
     order = 'a'

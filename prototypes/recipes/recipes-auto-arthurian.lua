@@ -544,7 +544,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'arthurian',
 			name = 'Full Render arthurians',
-			icon = "__pyalienlife__/graphics/icons/rendering-arthurian.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-arthurian.png",
 			icon_size = 64,
 		},
 		--bonemeal
@@ -567,7 +567,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'arthurian',
 			name = 'arthurians to Bonemeal',
-			icon = "__pyalienlife__/graphics/icons/bonemeal.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/bonemeal.png",
 			icon_size = 64,
 		},
 		--meat
@@ -584,7 +584,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'arthurian',
 			name = 'Extract arthurian Meat',
-			icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 			icon_size = 64,
 		},
 		--brain
@@ -601,7 +601,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'arthurian',
 			name = 'Extract arthurian brains',
-			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},	
 		--skin
@@ -618,7 +618,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'arthurian',
 			name = 'Extract arthurian skin',
-			icon = "__pyalienlife__/graphics/icons/skin.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
 			icon_size = 32,
 		},
 		--bones
@@ -635,7 +635,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'arthurian',
 			name = 'Extract arthurian bones',
-			icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
 			icon_size = 64,
 		},
 		--guts
@@ -652,7 +652,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'arthurian',
 			name = 'Extract arthurian guts',
-			icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
 		},
 		--blood
@@ -669,7 +669,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'arthurian',
 			name = 'Extract arthurian blood',
-			icon = "__pyalienlife__/graphics/icons/blood.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
 			icon_size = 64,
 		},
 		--fat
@@ -686,7 +686,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'arthurian',
 			name = 'Extract arthurian lard',
-			icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
 			icon_size = 64,
 		},	
 		--brain arthurian rendering
@@ -704,7 +704,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'nanochondria',
 			name = 'Extract brains from Improved arthurians',
-			icon = "__pyalienlife__/graphics/icons/brain-caged-arthurian.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-arthurian.png",
 			icon_size = 64,
 		},
 		--bone arthurian rendering
@@ -722,7 +722,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'bmp',
 			name = 'Extract bones from Improved arthurians',
-			icon = "__pyalienlife__/graphics/icons/bone-caged-arthurian.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-arthurian.png",
 			icon_size = 64,
 		},
 		--bonemeal arthurian rendering
@@ -739,7 +739,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'bmp',
 			name = 'Extract bonemeal from Improved arthurians',
-			icon = "__pyalienlife__/graphics/icons/bonemeal-caged-arthurian.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/bonemeal-caged-arthurian.png",
 			icon_size = 64,
 		},
 		--guts arthurian rendering
@@ -757,7 +757,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'antitumor',
 			name = 'Extract guts from Improved arthurians',
-			icon = "__pyalienlife__/graphics/icons/guts-caged-arthurian.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-arthurian.png",
 			icon_size = 64,
 		},
 		--blood arthurian rendering
@@ -775,7 +775,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
 			name = 'Extract blood from Improved arthurians',
-			icon = "__pyalienlife__/graphics/icons/blood-caged-arthurian.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-arthurian.png",
 			icon_size = 64,
 		},
 		--skin arthurian rendering
@@ -793,7 +793,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'reca',
 			name = 'Extract skin from Improved arthurians',
-			icon = "__pyalienlife__/graphics/icons/skin-caged-arthurian.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-arthurian.png",
 			icon_size = 64,
 		},
 		--fat arthurian rendering
@@ -811,7 +811,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'orexigenic',
 			name = 'Extract fat from Improved arthurians',
-			icon = "__pyalienlife__/graphics/icons/fat-caged-arthurian.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-arthurian.png",
 			icon_size = 64,
 		},
 		--meat arthurian rendering
@@ -829,7 +829,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
 			name = 'Extract meat from Improved arthurians',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-arthurian.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-arthurian.png",
 			icon_size = 64,
 		},
 	}

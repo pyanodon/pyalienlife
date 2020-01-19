@@ -24,7 +24,7 @@ fun.autorecipes {
 			crafting_speed = 100,
 			tech = 'mukmoux',
 			name = 'muk-manure-1',
-			--icon = "__pyalienlife__/graphics/icons/atomizer-mk01.png"
+			--icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk01.png"
 		},
 		--food 1
 		{
@@ -42,7 +42,7 @@ fun.autorecipes {
 			crafting_speed = 80,
 			tech = 'mukmoux',
 			name = 'muk-manure-2',
-			--icon = "__pyalienlife__/graphics/icons/navens-culture-mk01.png"
+			--icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk01.png"
 		},
 		--salt
 		{

@@ -17,7 +17,7 @@ RECIPE {
 FLUID {
     type = "fluid",
     name = "artificial-blood",
-    icon = "__pyalienlife__/graphics/icons/artificial-blood.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/artificial-blood.png",
 	icon_size = 64,
     default_temperature = 10,
     base_color = {r = 0.658, g = 0.431, b = 0.690},

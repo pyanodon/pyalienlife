@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "orexigenic",
-    icon = "__pyalienlife__/graphics/technology/orexigenic.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/orexigenic.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"pharmagenomics"},

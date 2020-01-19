@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "explosive-diarrhea",
-    icon = "__pyalienlife__/graphics/technology/explosive-diarrhea.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/explosive-diarrhea.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"bigger-colon"},

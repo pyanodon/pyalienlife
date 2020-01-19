@@ -19,7 +19,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "ulric-corral-mk04",
-    icon = "__pyalienlife__/graphics/icons/ulric-corral-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/ulric-corral-mk04.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk04",
@@ -31,7 +31,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "ulric-corral-mk04",
-    icon = "__pyalienlife__/graphics/icons/ulric-corral-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/ulric-corral-mk04.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "ulric-corral-mk04"},

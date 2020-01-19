@@ -14,7 +14,7 @@
     ITEM {
         type = "item",
         name = 'outpost',
-        icon = "__pyalienlife__/graphics/icons/outpost.png",
+        icon = "__pyalienlifegraphics__/graphics/icons/outpost.png",
         icon_size = 64,
         flags = {},
         subgroup = "py-containers-warehouse",
@@ -26,7 +26,7 @@
 	ENTITY {
         type = "container",
         name = 'outpost',
-        icon = "__pyalienlife__/graphics/icons/outpost.png",
+        icon = "__pyalienlifegraphics__/graphics/icons/outpost.png",
         icon_size = 64,
         flags = {"placeable-neutral", "placeable-player", "player-creation"},
         minable = {mining_time = 2, result = 'outpost'},
@@ -49,7 +49,7 @@
         scale_info_icons = true,
 
 		picture = {
-            filename = "__pyalienlife__/graphics/entity/outpost/off.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/outpost/off.png",
             priority = "high",
             width = 224,
             height = 224,

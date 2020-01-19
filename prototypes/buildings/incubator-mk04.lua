@@ -1,6 +1,6 @@
 local pipe = {
     south = {
-        filename = "__pyalienlife__/graphics/entity/incubator/bottom.png",
+        filename = "__pyalienlifegraphics__/graphics/entity/incubator/bottom.png",
         priority = "extra-high",
         width = 224,
         height = 257
@@ -29,7 +29,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "incubator-mk04",
-    icon = "__pyalienlife__/graphics/icons/incubator-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/incubator-mk04.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk04",
@@ -41,7 +41,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "incubator-mk04",
-    icon = "__pyalienlife__/graphics/icons/incubator-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/incubator-mk04.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "incubator-mk04"},
@@ -69,14 +69,14 @@ ENTITY {
     animation = {
         layers ={
             {
-                filename = "__pyalienlife__/graphics/entity/incubator/off.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/incubator/off.png",
                 width = 224,
                 height = 257,
                 frame_count = 1,
                 shift = {-0.00, -0.15}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/incubator/off-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/incubator/off-mask.png",
                 width = 224,
                 height = 257,
                 frame_count = 1,
@@ -92,7 +92,7 @@ ENTITY {
             south_position = {-0.25, -1.624},
             east_position = {-0.25, -1.624},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/incubator/main.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/incubator/main.png",
                 frame_count = 100,
                 width = 140,
                 height = 163,
@@ -108,7 +108,7 @@ ENTITY {
             south_position = {-0.0, -3.156},
             east_position = {-0.0, -3.156},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/incubator/cooler.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/incubator/cooler.png",
                 frame_count = 80,
                 width = 224,
                 height = 64,
@@ -123,7 +123,7 @@ ENTITY {
             south_position = {2.0, -0.556},
             east_position = {2.0, -0.556},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/incubator/smoke.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/incubator/smoke.png",
                 frame_count = 50,
                 width = 96,
                 height = 96,
@@ -155,8 +155,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/incubator.ogg", volume = 0.7},
-        idle_sound = {filename = "__pyalienlife__/sounds/incubator.ogg", volume = 0.45},
+        sound = {filename = "__pyalienlifegraphics__/sounds/incubator.ogg", volume = 0.7},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/incubator.ogg", volume = 0.45},
         apparent_volume = 2.5
     }
 }

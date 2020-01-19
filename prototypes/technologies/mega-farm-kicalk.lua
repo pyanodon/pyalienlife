@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "mega-farm-kicalk",
-    icon = "__pyalienlife__/graphics/technology/mega-farm-kicalk.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/mega-farm-kicalk.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"mega-farm"},

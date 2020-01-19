@@ -32,7 +32,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'osteocyte',
                 name = 'Extract arthurian bones-1',
-                icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
 		},	
 	}
@@ -69,7 +69,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'osteocyte',
                 name = 'Extract auog bones-1',
-                icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
 		},	
 	}
@@ -107,7 +107,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'osteocyte',
                 name = 'Extract dingrits bones-1',
-                icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
 		},	
 	}
@@ -144,7 +144,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'osteocyte',
                 name = 'Extract Mukmoux bones-1',
-                icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
 		},	
 	}
@@ -181,7 +181,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'osteocyte',
                 name = 'Extract phadai bones-1',
-                icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
 		},	
 	}
@@ -218,7 +218,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'osteocyte',
                 name = 'Extract phagnot bones-1',
-                icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
 		},	
 	}
@@ -255,7 +255,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'osteocyte',
                 name = 'Extract scrondrix bones-1',
-                icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
 		},	
 	}
@@ -291,7 +291,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'osteocyte',
                 name = 'Extract Trits bones-1',
-                icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
 		},	
 	}
@@ -328,7 +328,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'osteocyte',
                 name = 'Extract Ulric bones-1',
-                icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
 		},	
 	}
@@ -368,7 +368,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'osteocyte',
                 name = 'Extract Xeno bones-1',
-                icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
 		},	
 	}

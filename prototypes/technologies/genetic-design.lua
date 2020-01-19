@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "genetic-design",
-    icon = "__pyalienlife__/graphics/technology/genetic-design.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/genetic-design.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"biotech-mk02","genetics-mk02"},

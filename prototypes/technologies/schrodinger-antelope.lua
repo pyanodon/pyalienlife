@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "schrodinger-antelope",
-    icon = "__pyalienlife__/graphics/technology/schrodinger-antelope.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/schrodinger-antelope.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"earnshaw-theorem"},

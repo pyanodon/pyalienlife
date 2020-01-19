@@ -20,7 +20,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "bhoddos-culture-mk02",
-    icon = "__pyalienlife__/graphics/icons/bhoddos-culture-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/bhoddos-culture-mk02.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk02",
@@ -32,7 +32,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "bhoddos-culture-mk02",
-    icon = "__pyalienlife__/graphics/icons/bhoddos-culture-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/bhoddos-culture-mk02.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "bhoddos-culture-mk02"},
@@ -60,7 +60,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlife__/graphics/entity/bhoddos-culture/off.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/bhoddos-culture/off.png",
                 width = 384,
                 height = 416,
                 --line_length = 5,
@@ -69,7 +69,7 @@ ENTITY {
                 shift = util.by_pixel(16, -32)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/bhoddos-culture/off-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/bhoddos-culture/off-mask.png",
                 width = 384,
                 height = 416,
                 --line_length = 5,
@@ -88,7 +88,7 @@ ENTITY {
             south_position = util.by_pixel(-128, -48),
             east_position = util.by_pixel(-128, -48),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/bhoddos-culture/a1.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/bhoddos-culture/a1.png",
                 frame_count = 100,
                 line_length = 20,
                 width = 96,
@@ -102,7 +102,7 @@ ENTITY {
             south_position = util.by_pixel(-32, -48),
             east_position = util.by_pixel(-32, -48),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/bhoddos-culture/a2.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/bhoddos-culture/a2.png",
                 frame_count = 100,
                 line_length = 20,
                 width = 96,
@@ -116,7 +116,7 @@ ENTITY {
             south_position = util.by_pixel(64, -48),
             east_position = util.by_pixel(64, -48),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/bhoddos-culture/a3.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/bhoddos-culture/a3.png",
                 frame_count = 100,
                 line_length = 20,
                 width = 96,
@@ -130,7 +130,7 @@ ENTITY {
             south_position = util.by_pixel(160, -48),
             east_position = util.by_pixel(160, -48),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/bhoddos-culture/a4.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/bhoddos-culture/a4.png",
                 frame_count = 100,
                 line_length = 20,
                 width = 96,
@@ -176,8 +176,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/bhoddos-culture.ogg", volume = 2.0},
-        idle_sound = {filename = "__pyalienlife__/sounds/bhoddos-culture.ogg", volume = 1.6},
+        sound = {filename = "__pyalienlifegraphics__/sounds/bhoddos-culture.ogg", volume = 2.0},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/bhoddos-culture.ogg", volume = 1.6},
         apparent_volume = 2.5
     }
 }

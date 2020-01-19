@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "phadai",
-    icon = "__pyalienlife__/graphics/technology/phadai.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/phadai.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"land-animals-mk03","energy-drink"},
@@ -20,7 +20,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "phadai-mk02",
-    icon = "__pyalienlife__/graphics/technology/phadai-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/phadai-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"phadai"},
@@ -40,7 +40,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "phadai-mk03",
-    icon = "__pyalienlife__/graphics/technology/phadai-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/phadai-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"phadai-mk02"},
@@ -61,7 +61,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "phadai-mk04",
-    icon = "__pyalienlife__/graphics/technology/phadai-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/phadai-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"phadai-mk03"},

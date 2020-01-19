@@ -19,7 +19,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "dingrits-pack-mk03",
-    icon = "__pyalienlife__/graphics/icons/dingrits-pack-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/dingrits-pack-mk03.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk03",
@@ -31,7 +31,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "dingrits-pack-mk03",
-    icon = "__pyalienlife__/graphics/icons/dingrits-pack-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/dingrits-pack-mk03.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "dingrits-pack-mk03"},
@@ -59,7 +59,7 @@ ENTITY {
     animation = {
         layers = {
         {
-        filename = "__pyalienlife__/graphics/entity/dingrits-pack/off.png",
+        filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/off.png",
         width = 480,
         height = 480,
         frame_count = 1,
@@ -67,7 +67,7 @@ ENTITY {
         shift = util.by_pixel(16, -16)
         },
         {
-            filename = "__pyalienlife__/graphics/entity/dingrits-pack/off-mask.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/off-mask.png",
             width = 480,
             height = 480,
             frame_count = 1,
@@ -85,7 +85,7 @@ ENTITY {
             south_position = util.by_pixel(-80, -144),
             east_position = util.by_pixel(-80, -144),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/dingrits-pack/waterfall.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/waterfall.png",
                 frame_count = 80,
                 line_length = 20,
                 width = 96,
@@ -99,7 +99,7 @@ ENTITY {
             south_position = util.by_pixel(-128, -176),
             east_position = util.by_pixel(-128, -176),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/dingrits-pack/top.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/top.png",
                 frame_count = 80,
                 line_length = 20,
                 width = 64,
@@ -113,7 +113,7 @@ ENTITY {
             south_position = util.by_pixel(-64, -64),
             east_position = util.by_pixel(-64, -64),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/dingrits-pack/ahhh.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/ahhh.png",
                 frame_count = 40,
                 line_length = 20,
                 width = 64,
@@ -127,7 +127,7 @@ ENTITY {
             south_position = util.by_pixel(-5, -96),
             east_position = util.by_pixel(-5, -96),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/dingrits-pack/yell.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/yell.png",
                 frame_count = 80,
                 line_length = 20,
                 width = 96,
@@ -141,7 +141,7 @@ ENTITY {
             south_position = util.by_pixel(109, 20),
             east_position = util.by_pixel(109, 20),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/dingrits-pack/eat.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/eat.png",
                 frame_count = 80,
                 line_length = 20,
                 width = 64,
@@ -155,7 +155,7 @@ ENTITY {
             south_position = util.by_pixel(144, 19),
             east_position = util.by_pixel(144, 19),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/dingrits-pack/eat-side.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/eat-side.png",
                 frame_count = 80,
                 line_length = 20,
                 width = 64,
@@ -169,7 +169,7 @@ ENTITY {
             south_position = util.by_pixel(51, -9),
             east_position = util.by_pixel(51, -9),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/dingrits-pack/mid.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/mid.png",
                 frame_count = 80,
                 line_length = 20,
                 width = 64,
@@ -183,7 +183,7 @@ ENTITY {
             south_position = util.by_pixel(-18, 80),
             east_position = util.by_pixel(-18, 80),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/dingrits-pack/pup.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/pup.png",
                 frame_count = 80,
                 line_length = 20,
                 width = 64,
@@ -197,7 +197,7 @@ ENTITY {
             south_position = util.by_pixel(14, 104),
             east_position = util.by_pixel(14, 104),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/dingrits-pack/mother.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/mother.png",
                 frame_count = 80,
                 line_length = 20,
                 width = 64,
@@ -211,7 +211,7 @@ ENTITY {
             south_position = util.by_pixel(60, -96),
             east_position = util.by_pixel(60, -96),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/dingrits-pack/sleep.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/sleep.png",
                 frame_count = 40,
                 line_length = 20,
                 width = 64,
@@ -224,8 +224,8 @@ ENTITY {
 
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/dingrits-pack.ogg", volume = 0.62},
-        idle_sound = {filename = "__pyalienlife__/sounds/dingrits-pack.ogg", volume = 0.55},
+        sound = {filename = "__pyalienlifegraphics__/sounds/dingrits-pack.ogg", volume = 0.62},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/dingrits-pack.ogg", volume = 0.55},
         apparent_volume = 1.2
     }
 }

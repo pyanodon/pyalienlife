@@ -150,7 +150,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'schrodinger-antelope',
 			name = 'Full Render Schrodinger antelopes',
-			icon = "__pyalienlife__/graphics/icons/rendering-antelope.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-antelope.png",
 			icon_size = 64,
 		},
 		--meat
@@ -175,7 +175,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'schrodinger-antelope',
 			name = 'Extract antelope Meat',
-			icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 			icon_size = 64,
 		},
 		--brain
@@ -192,7 +192,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'schrodinger-antelope',
 			name = 'Extract antelope brains',
-			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},	
 		--skin
@@ -209,7 +209,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'schrodinger-antelope',
 			name = 'Extract antelope skin',
-			icon = "__pyalienlife__/graphics/icons/skin.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
 			icon_size = 32,
 		},
 		--bones
@@ -226,7 +226,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'schrodinger-antelope',
 			name = 'Extract antelope bones',
-			icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
 			icon_size = 64,
 		},
 		--guts
@@ -243,7 +243,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'schrodinger-antelope',
 			name = 'Extract antelope guts',
-			icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
 		},
 		--fat
@@ -260,7 +260,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'schrodinger-antelope',
 			name = 'Extract antelope lard',
-			icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
 			icon_size = 64,
 		},
 		--strangelets
@@ -277,7 +277,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'schrodinger-antelope',
 			name = 'Extract antelope strangelets',
-			icon = "__pyalienlife__/graphics/icons/strangelets.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/strangelets.png",
 			icon_size = 64,
 		},
 	}

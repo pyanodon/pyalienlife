@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "grod",
-    icon = "__pyalienlife__/graphics/technology/grod.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/grod.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk02","yotoi"},
@@ -19,7 +19,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "grod-mk02",
-    icon = "__pyalienlife__/graphics/technology/grod-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/grod-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"grod"},
@@ -38,7 +38,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "grod-mk03",
-    icon = "__pyalienlife__/graphics/technology/grod-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/grod-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"grod-mk02"},
@@ -58,7 +58,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "grod-mk04",
-    icon = "__pyalienlife__/graphics/technology/grod-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/grod-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"grod-mk03"},

@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "pheromones",
-    icon = "__pyalienlife__/graphics/technology/pheromones.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/pheromones.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"pharmagenomics"},

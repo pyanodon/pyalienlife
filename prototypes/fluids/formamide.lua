@@ -17,7 +17,7 @@ RECIPE {
 FLUID {
     type = "fluid",
     name = "formamide",
-    icon = "__pyalienlife__/graphics/icons/formamide.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/formamide.png",
 	icon_size = 64,
     default_temperature = 10,
     base_color = {r = 0.780, g = 0.509, b = 0.811},

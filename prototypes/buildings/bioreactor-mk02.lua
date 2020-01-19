@@ -21,7 +21,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "bio-reactor-mk02",
-    icon = "__pyalienlife__/graphics/icons/bio-reactor-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/bio-reactor-mk02.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk02",
@@ -33,7 +33,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "bio-reactor-mk02",
-    icon = "__pyalienlife__/graphics/icons/bio-reactor-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/bio-reactor-mk02.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "bio-reactor-mk02"},
@@ -60,7 +60,7 @@ ENTITY {
     animation = {
         layers = {
             {
-            filename = "__pyalienlife__/graphics/entity/bio-reactor/off.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/bio-reactor/off.png",
             width = 246,
             height = 236,
             frame_count = 1,
@@ -68,7 +68,7 @@ ENTITY {
             shift = {0.312, -0.218},
             },
             {
-            filename = "__pyalienlife__/graphics/entity/bio-reactor/off-mask.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/bio-reactor/off-mask.png",
             width = 246,
             height = 236,
             frame_count = 1,
@@ -85,7 +85,7 @@ ENTITY {
             south_position = {0.312, -0.218},
             east_position = {0.312, -0.218},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/bio-reactor/on.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/bio-reactor/on.png",
                 frame_count = 50,
                 width = 246,
                 height = 236,
@@ -100,7 +100,7 @@ ENTITY {
             south_position = {0.312, -0.218},
             east_position = {0.312, -0.218},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/bio-reactor/on-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/bio-reactor/on-mask.png",
                 frame_count = 50,
                 width = 246,
                 height = 236,

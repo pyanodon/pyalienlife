@@ -19,7 +19,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "moss-farm-mk02",
-    icon = "__pyalienlife__/graphics/icons/moss-farm-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/moss-farm-mk02.png",
     icon_size = 32,
     flags = {},
     subgroup = "py-alienlife-buildings-mk02",
@@ -31,7 +31,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "moss-farm-mk02",
-    icon = "__pyalienlife__/graphics/icons/moss-farm-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/moss-farm-mk02.png",
 	icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "moss-farm-mk02"},
@@ -59,7 +59,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlife__/graphics/entity/moss-farm/a-base.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/moss-farm/a-base.png",
                 width = 192,
                 height = 32,
                 line_length = 10,
@@ -68,7 +68,7 @@ ENTITY {
                 shift = util.by_pixel(0, 80)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/moss-farm/a1.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/moss-farm/a1.png",
                 width = 64,
                 height = 256,
                 line_length = 20,
@@ -78,7 +78,7 @@ ENTITY {
             },
 
             {
-                filename = "__pyalienlife__/graphics/entity/moss-farm/mask-1.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/moss-farm/mask-1.png",
                 width = 64,
                 height = 256,
                 line_length = 20,
@@ -88,7 +88,7 @@ ENTITY {
                 tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/moss-farm/a2.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/moss-farm/a2.png",
                 width = 64,
                 height = 256,
                 line_length = 20,
@@ -97,7 +97,7 @@ ENTITY {
                 shift = util.by_pixel(0, -64)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/moss-farm/mask-2.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/moss-farm/mask-2.png",
                 width = 64,
                 height = 256,
                 line_length = 20,
@@ -107,7 +107,7 @@ ENTITY {
                 tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/moss-farm/a3.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/moss-farm/a3.png",
                 width = 64,
                 height = 256,
                 line_length = 20,
@@ -116,7 +116,7 @@ ENTITY {
                 shift = util.by_pixel(64, -64)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/moss-farm/mask-3.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/moss-farm/mask-3.png",
                 width = 64,
                 height = 256,
                 line_length = 20,
@@ -126,7 +126,7 @@ ENTITY {
                 tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/moss-farm/sh.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/moss-farm/sh.png",
                 width = 64,
                 height = 201,
                 line_length = 20,
@@ -174,8 +174,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/moss-farm.ogg", volume = 2.0},
-        idle_sound = {filename = "__pyalienlife__/sounds/moss-farm.ogg", volume = 1.5},
+        sound = {filename = "__pyalienlifegraphics__/sounds/moss-farm.ogg", volume = 2.0},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/moss-farm.ogg", volume = 1.5},
         apparent_volume = 2.5
     }
 }

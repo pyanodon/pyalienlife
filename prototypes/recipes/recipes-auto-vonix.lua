@@ -488,7 +488,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'vonix',
 			name = 'Full Render Vonix',
-			icon = "__pyalienlife__/graphics/icons/rendering-vonix.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-vonix.png",
 			icon_size = 64,
 		},
 		--meat
@@ -512,7 +512,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'vonix-mk02',
 			name = 'Extract Vonix Meat',
-			icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 			icon_size = 64,
 		},
 		--brain
@@ -529,7 +529,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'vonix-mk02',
 			name = 'Extract Vonix brain',
-			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},
 		--venon
@@ -546,7 +546,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'vonix-mk02',
 			name = 'Extract Vonix´s Venon Gland',
-			icon = "__pyalienlife__/graphics/icons/venon-gland.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/venon-gland.png",
 			icon_size = 64,
 		},	
 		--skin
@@ -563,7 +563,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'vonix-mk02',
 			name = 'Extract Vonix skin',
-			icon = "__pyalienlife__/graphics/icons/skin.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
 			icon_size = 32,
 		},
 		--guts
@@ -580,7 +580,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'vonix-mk02',
 			name = 'Extract Vonix guts',
-			icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
 		},
 		--blood
@@ -597,7 +597,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'vonix-mk02',
 			name = 'Extract Vonix blood',
-			icon = "__pyalienlife__/graphics/icons/arthropod-blood.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
 			icon_size = 32,
 		},
 		--fat
@@ -614,7 +614,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'vonix-mk02',
 			name = 'Extract Vonix lard',
-			icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
 			icon_size = 64,
 		},
 		--brain vonix rendering
@@ -632,7 +632,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'nanochondria',
 			name = 'Extract brains from Improved Vonixes',
-			icon = "__pyalienlife__/graphics/icons/brain-vonix.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/brain-vonix.png",
 			icon_size = 64,
 		},
 		--guts vonix rendering
@@ -650,7 +650,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'antitumor',
 			name = 'Extract guts from Improved Vonixes',
-			icon = "__pyalienlife__/graphics/icons/guts-vonix.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-vonix.png",
 			icon_size = 64,
 		},
 		--blood vonix rendering
@@ -668,7 +668,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
 			name = 'Extract Arthropod blood from Improved Vonixes',
-			icon = "__pyalienlife__/graphics/icons/blood-vonix.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-vonix.png",
 			icon_size = 64,
 		},
 		--skin vonix rendering
@@ -686,7 +686,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'reca',
 			name = 'Extract skin from Improved Vonixes',
-			icon = "__pyalienlife__/graphics/icons/skin-vonix.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/skin-vonix.png",
 			icon_size = 64,
 		},
 		--fat vonix rendering
@@ -704,7 +704,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'orexigenic',
 			name = 'Extract fat from Improved Vonixes',
-			icon = "__pyalienlife__/graphics/icons/fat-vonix.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/fat-vonix.png",
 			icon_size = 64,
 		},
 		--meat vonix rendering
@@ -722,7 +722,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
 			name = 'Extract meat from Improved Vonixes',
-			icon = "__pyalienlife__/graphics/icons/meat-vonix.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-vonix.png",
 			icon_size = 64,
 		},
 	}

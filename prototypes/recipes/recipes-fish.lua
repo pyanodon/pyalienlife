@@ -139,7 +139,7 @@ RECIPE {
     --main_product = "fish",
     subgroup = 'py-alienlife-fish',
     order = 'a',
-    icon = "__pyalienlife__/graphics/icons/rendering-fish.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/rendering-fish.png",
     icon_size = 64,
 }:add_unlock("water-animals-mk02")
 ----adverse products----

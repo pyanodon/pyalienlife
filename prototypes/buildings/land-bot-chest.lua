@@ -19,7 +19,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "lb-chest",
-    icon = "__pyalienlife__/graphics/icons/data-array.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/data-array.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-others",
@@ -254,7 +254,7 @@ end
 ITEM {
     type = "item",
     name = "land-bot-requestor-controls",
-    icon = "__pyalienlife__/graphics/icons/data-array.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/data-array.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-others",

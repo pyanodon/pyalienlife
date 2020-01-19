@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "growth-hormone",
-    icon = "__pyalienlife__/graphics/technology/growth-hormone.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/growth-hormone.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"pharmagenomics"},

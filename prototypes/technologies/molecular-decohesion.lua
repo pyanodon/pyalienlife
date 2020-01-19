@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "molecular-decohesion",
-    icon = "__pyalienlife__/graphics/technology/molecular-decohesion.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/molecular-decohesion.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"biotech-mk01"},
@@ -19,7 +19,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "molecular-decohesion-mk02",
-    icon = "__pyalienlife__/graphics/technology/molecular-decohesion-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/molecular-decohesion-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"molecular-decohesion"},
@@ -38,7 +38,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "molecular-decohesion-mk03",
-    icon = "__pyalienlife__/graphics/technology/molecular-decohesion-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/molecular-decohesion-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"molecular-decohesion-mk02"},
@@ -58,7 +58,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "molecular-decohesion-mk04",
-    icon = "__pyalienlife__/graphics/technology/molecular-decohesion-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/molecular-decohesion-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"molecular-decohesion-mk03"},

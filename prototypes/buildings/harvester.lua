@@ -19,7 +19,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "harvester",
-    icon = "__pyalienlife__/graphics/icons/harvester.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/harvester.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-farms",
@@ -31,7 +31,7 @@ ITEM {
 ENTITY {
     type = "mining-drill",
     name = "harvester",
-    icon = "__pyalienlife__/graphics/icons/harvester.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/harvester.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "harvester"},
@@ -79,7 +79,7 @@ ENTITY {
     animations = {
         layers = {
             {
-                filename = "__pyalienlife__/graphics/entity/mega-farm/harvester/left.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/harvester/left.png",
                 width = 128,
                 height = 256,
                 line_length = 16,
@@ -88,7 +88,7 @@ ENTITY {
                 shift = {-1.5, -0.5}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/mega-farm/harvester/right.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/harvester/right.png",
                 width = 128,
                 height = 256,
                 line_length = 16,
@@ -144,8 +144,8 @@ ENTITY {
 	]]--
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/harvester.ogg", volume = 0.9},
-        idle_sound = {filename = "__pyalienlife__/sounds/harvester.ogg", volume = 0.75},
+        sound = {filename = "__pyalienlifegraphics__/sounds/harvester.ogg", volume = 0.9},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/harvester.ogg", volume = 0.75},
         apparent_volume = 2.5
     }
 }

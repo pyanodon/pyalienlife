@@ -18,7 +18,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "auog-paddock-mk03",
-    icon = "__pyalienlife__/graphics/icons/auog-paddock-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/auog-paddock-mk03.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk03",
@@ -30,7 +30,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "auog-paddock-mk03",
-    icon = "__pyalienlife__/graphics/icons/auog-paddock-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/auog-paddock-mk03.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "auog-paddock-mk03"},
@@ -57,7 +57,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlife__/graphics/entity/auog-paddock/left.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/auog-paddock/left.png",
                 width = 128,
                 height = 256,
                 line_length = 16,
@@ -66,7 +66,7 @@ ENTITY {
                 shift = util.by_pixel(-64, 0)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/auog-paddock/left-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/auog-paddock/left-mask.png",
                 width = 128,
                 height = 256,
                 line_length = 16,
@@ -76,7 +76,7 @@ ENTITY {
                 tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/auog-paddock/right.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/auog-paddock/right.png",
                 width = 128,
                 height = 256,
                 line_length = 16,
@@ -85,7 +85,7 @@ ENTITY {
                 shift = util.by_pixel(64, 0)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/auog-paddock/right-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/auog-paddock/right-mask.png",
                 width = 128,
                 height = 256,
                 line_length = 16,
@@ -98,8 +98,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/auog-paddock.ogg", volume = 1.5},
-        idle_sound = {filename = "__pyalienlife__/sounds/auog-paddock.ogg", volume = 1.1},
+        sound = {filename = "__pyalienlifegraphics__/sounds/auog-paddock.ogg", volume = 1.5},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/auog-paddock.ogg", volume = 1.1},
         apparent_volume = 2.5
     }
 }

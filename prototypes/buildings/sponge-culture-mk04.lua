@@ -18,7 +18,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "sponge-culture-mk04",
-    icon = "__pyalienlife__/graphics/icons/sponge-culture-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/sponge-culture-mk04.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk04",
@@ -30,7 +30,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "sponge-culture-mk04",
-    icon = "__pyalienlife__/graphics/icons/sponge-culture-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/sponge-culture-mk04.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "sponge-culture-mk04"},
@@ -98,7 +98,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlife__/graphics/entity/sponge-culture/a1.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/sponge-culture/a1.png",
                 width = 367,
                 height = 96,
                 line_length = 5,
@@ -107,7 +107,7 @@ ENTITY {
                 shift = util.by_pixel(8, 128)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/sponge-culture/a1-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/sponge-culture/a1-mask.png",
                 width = 367,
                 height = 96,
                 line_length = 5,
@@ -117,7 +117,7 @@ ENTITY {
                 tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/sponge-culture/a2.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/sponge-culture/a2.png",
                 width = 367,
                 height = 96,
                 line_length = 5,
@@ -126,7 +126,7 @@ ENTITY {
                 shift = util.by_pixel(8, 32)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/sponge-culture/a2-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/sponge-culture/a2-mask.png",
                 width = 367,
                 height = 96,
                 line_length = 5,
@@ -136,7 +136,7 @@ ENTITY {
                 tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/sponge-culture/a3.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/sponge-culture/a3.png",
                 width = 367,
                 height = 96,
                 line_length = 5,
@@ -145,7 +145,7 @@ ENTITY {
                 shift = util.by_pixel(8, -64)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/sponge-culture/a3-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/sponge-culture/a3-mask.png",
                 width = 367,
                 height = 96,
                 line_length = 5,
@@ -155,7 +155,7 @@ ENTITY {
                 tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/sponge-culture/a4.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/sponge-culture/a4.png",
                 width = 367,
                 height = 96,
                 line_length = 5,
@@ -164,7 +164,7 @@ ENTITY {
                 shift = util.by_pixel(8, -160)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/sponge-culture/a4-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/sponge-culture/a4-mask.png",
                 width = 367,
                 height = 96,
                 line_length = 5,
@@ -174,7 +174,7 @@ ENTITY {
                 tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/sponge-culture/a5.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/sponge-culture/a5.png",
                 width = 367,
                 height = 32,
                 line_length = 5,
@@ -186,8 +186,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/sponge-culture.ogg", volume = 1.4},
-        idle_sound = {filename = "__pyalienlife__/sounds/sponge-culture.ogg", volume = 0.9},
+        sound = {filename = "__pyalienlifegraphics__/sounds/sponge-culture.ogg", volume = 1.4},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/sponge-culture.ogg", volume = 0.9},
         apparent_volume = 2.5
     }
 }

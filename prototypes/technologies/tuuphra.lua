@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "tuuphra",
-    icon = "__pyalienlife__/graphics/technology/tuuphra.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/tuuphra.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk02"},
@@ -19,7 +19,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "tuuphra-mk02",
-    icon = "__pyalienlife__/graphics/technology/tuuphra-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/tuuphra-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"tuuphra"},
@@ -38,7 +38,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "tuuphra-mk03",
-    icon = "__pyalienlife__/graphics/technology/tuuphra-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/tuuphra-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"tuuphra-mk02"},
@@ -59,7 +59,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "tuuphra-mk04",
-    icon = "__pyalienlife__/graphics/technology/tuuphra-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/tuuphra-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"tuuphra-mk03"},

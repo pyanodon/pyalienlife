@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "microbiology-mk01",
-    icon = "__pyalienlife__/graphics/technology/microbiology-mk01.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/microbiology-mk01.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"xenobiology","zoology"},
@@ -18,7 +18,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = 'technology',
     name = 'microbiology-mk02',
-    icon = '__pyalienlife__/graphics/technology/microbiology-mk02.png',
+    icon = '__pyalienlifegraphics__/graphics/technology/microbiology-mk02.png',
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'microbiology-mk01'},
@@ -36,7 +36,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = 'technology',
     name = 'microbiology-mk03',
-    icon = '__pyalienlife__/graphics/technology/microbiology-mk03.png',
+    icon = '__pyalienlifegraphics__/graphics/technology/microbiology-mk03.png',
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'microbiology-mk02'},

@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "antiviral",
-    icon = "__pyalienlife__/graphics/technology/antiviral.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/antiviral.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"pharmagenomics"},

@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "botany-mk01",
-    icon = "__pyalienlife__/graphics/technology/botany-mk01.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/botany-mk01.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"xenobiology"},
@@ -18,7 +18,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = 'technology',
     name = 'botany-mk02',
-    icon = '__pyalienlife__/graphics/technology/botany-mk02.png',
+    icon = '__pyalienlifegraphics__/graphics/technology/botany-mk02.png',
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'botany-mk01'},
@@ -36,7 +36,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = 'technology',
     name = 'botany-mk03',
-    icon = '__pyalienlife__/graphics/technology/botany-mk03.png',
+    icon = '__pyalienlifegraphics__/graphics/technology/botany-mk03.png',
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'botany-mk02'},
@@ -56,7 +56,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "botany-mk04",
-    icon = "__pyalienlife__/graphics/technology/botany-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/botany-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk03"},

@@ -19,7 +19,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "data-array",
-    icon = "__pyalienlife__/graphics/icons/data-array.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/data-array.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-others",
@@ -31,7 +31,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "data-array",
-    icon = "__pyalienlife__/graphics/icons/data-array.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/data-array.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "data-array"},
@@ -59,7 +59,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlife__/graphics/entity/data-array/a1.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/data-array/a1.png",
                 width = 64,
                 height = 416,
                 line_length = 32,
@@ -68,7 +68,7 @@ ENTITY {
                 shift = util.by_pixel(-128, -37)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/data-array/a2.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/data-array/a2.png",
                 width = 64,
                 height = 416,
                 line_length = 32,
@@ -77,7 +77,7 @@ ENTITY {
                 shift = util.by_pixel(-64, -37)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/data-array/a3.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/data-array/a3.png",
                 width = 64,
                 height = 416,
                 line_length = 32,
@@ -86,7 +86,7 @@ ENTITY {
                 shift = util.by_pixel(-0, -37)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/data-array/a4.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/data-array/a4.png",
                 width = 64,
                 height = 416,
                 line_length = 32,
@@ -95,7 +95,7 @@ ENTITY {
                 shift = util.by_pixel(64, -37)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/data-array/a5.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/data-array/a5.png",
                 width = 64,
                 height = 416,
                 line_length = 32,
@@ -104,7 +104,7 @@ ENTITY {
                 shift = util.by_pixel(128, -37)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/data-array/a6.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/data-array/a6.png",
                 width = 32,
                 height = 416,
                 line_length = 32,
@@ -116,8 +116,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/data-array.ogg", volume = 0.9},
-        idle_sound = {filename = "__pyalienlife__/sounds/data-array.ogg", volume = 0.55},
+        sound = {filename = "__pyalienlifegraphics__/sounds/data-array.ogg", volume = 0.9},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/data-array.ogg", volume = 0.55},
         apparent_volume = 2.5
     }
 }

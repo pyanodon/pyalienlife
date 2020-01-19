@@ -1,7 +1,7 @@
 FLUID {
     type = "fluid",
     name = "gta",
-    icon = "__pyalienlife__/graphics/icons/gta.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/gta.png",
 	icon_size = 64,
     default_temperature = 10,
     base_color = {r = 0.560, g = 0.196, b = 0.274},

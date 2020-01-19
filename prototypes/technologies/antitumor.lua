@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "antitumor",
-    icon = "__pyalienlife__/graphics/technology/antitumor.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/antitumor.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"pharmagenomics"},

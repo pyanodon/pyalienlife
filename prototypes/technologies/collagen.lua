@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "defective-collagen",
-    icon = "__pyalienlife__/graphics/technology/collagen.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/collagen.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"genetic-design"},
@@ -22,7 +22,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "double-skin",
-    icon = "__pyalienlife__/graphics/technology/double-skin.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/double-skin.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"defective-collagen","reca"},

@@ -1,7 +1,7 @@
 FLUID {
     type = "fluid",
     name = "formic-acid",
-    icon = "__pyalienlife__/graphics/icons/formic-acid.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/formic-acid.png",
 	icon_size = 64,
     default_temperature = 15,
     base_color = {r = 0.713, g = 0.713, b = 0.713},

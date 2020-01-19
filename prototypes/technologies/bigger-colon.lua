@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "bigger-colon",
-    icon = "__pyalienlife__/graphics/technology/manure-1.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/manure-1.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"genetic-design"},

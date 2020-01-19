@@ -1,7 +1,7 @@
 FLUID {
     type = "fluid",
     name = "b-molasse",
-    icon = "__pyalienlife__/graphics/icons/b-molasse.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/b-molasse.png",
 	icon_size = 64,
     default_temperature = 10,
     base_color = {r = 0.301, g = 0.356, b = 0.176},

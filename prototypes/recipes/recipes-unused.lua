@@ -17,7 +17,7 @@ RECIPE {
         {type = 'item', name = 'brain', amount = 1, probability = 0.4},
         {type = 'item', name = 'guts', amount = 1, probability = 0.4},
     },
-    icon = '__pyalienlife__/graphics/icons/rendering-ulric.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/rendering-ulric.png',
     icon_size = 64,
     subgroup = 'py-alienlife-ulric',
     order = 'b'
@@ -582,7 +582,7 @@ RECIPE {
         {type = 'item', name = 'brain', amount = 1, probability = 0.4},
         {type = 'item', name = 'guts', amount = 4, probability = 0.4},
     },
-    icon = '__pyalienlife__/graphics/icons/rendering-mukmoux.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/rendering-mukmoux.png',
     icon_size = 64,
     subgroup = 'py-alienlife-mukmoux',
     order = 'b',

@@ -449,7 +449,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'dhilmos',
 			name = 'Full Render dhilmoss',
-			icon = "__pyalienlife__/graphics/icons/rendering-dhilmos.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-dhilmos.png",
 			icon_size = 64,
 		},
 		--meat
@@ -470,7 +470,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'dhilmos',
 			name = 'Extract dhilmos Meat',
-			icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 			icon_size = 64,
 		},
 		--guts
@@ -487,7 +487,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'dhilmos',
 			name = 'Extract dhilmos guts',
-			icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
 		},
 		--blood
@@ -504,7 +504,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'dhilmos',
 			name = 'Extract dhilmos blood',
-			icon = "__pyalienlife__/graphics/icons/arthropod-blood.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
 			icon_size = 32,
 		},
 		--fat
@@ -521,7 +521,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'dhilmos',
 			name = 'Extract dhilmos lard',
-			icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
 			icon_size = 64,
         },
 		--chitin
@@ -538,7 +538,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'dhilmos',
 			name = 'Extract dhilmos chitin',
-			icon = "__pyalienlife__/graphics/icons/chitin.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",
 			icon_size = 64,
 		},
 		--meat dhilmos rendering
@@ -556,7 +556,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
 			name = 'Extract meat from Improved dhilmoss',
-			icon = "__pyalienlife__/graphics/icons/meat-dhilmos.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-dhilmos.png",
 			icon_size = 64,
 		},
 		--guts dhilmos rendering
@@ -574,7 +574,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'antitumor',
 			name = 'Extract guts from Improved dhilmoss',
-			icon = "__pyalienlife__/graphics/icons/guts-dhilmos.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-dhilmos.png",
 			icon_size = 64,
 		},
 		--blood dhilmos rendering
@@ -592,7 +592,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
 			name = 'Extract blood from Improved dhilmoss',
-			icon = "__pyalienlife__/graphics/icons/blood-dhilmos.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-dhilmos.png",
 			icon_size = 64,
 		},
 		--fat dhilmos rendering
@@ -610,7 +610,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'orexigenic',
 			name = 'Extract fat from Improved dhilmoss',
-			icon = "__pyalienlife__/graphics/icons/fat-dhilmos.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/fat-dhilmos.png",
 			icon_size = 64,
 		},
 	}

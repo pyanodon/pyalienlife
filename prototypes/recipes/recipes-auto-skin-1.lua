@@ -32,7 +32,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'defective-collagen',
 			name = 'Extract arthurian skin-1',
-			icon = "__pyalienlife__/graphics/icons/skin.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
 			icon_size = 32,
 		},	
 	}
@@ -69,7 +69,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'defective-collagen',
                 name = 'Extract auog skin-1',
-                icon = "__pyalienlife__/graphics/icons/skin.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
 		},	
 	}
@@ -108,7 +108,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'defective-collagen',
                 name = 'Extract dhilmos chitin-1',
-                icon = "__pyalienlife__/graphics/icons/chitin.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",
                 icon_size = 64,
 		},	
 	}
@@ -145,7 +145,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'defective-collagen',
                 name = 'Extract Mukmoux skin-1',
-                icon = "__pyalienlife__/graphics/icons/skin.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
 		},	
 	}
@@ -182,7 +182,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'defective-collagen',
                 name = 'Extract phadai Skin-1',
-                icon = "__pyalienlife__/graphics/icons/skin.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
 		},	
 	}
@@ -219,7 +219,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'defective-collagen',
                 name = 'Extract phagnot skin-1',
-                icon = "__pyalienlife__/graphics/icons/skin.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
 		},	
 	}
@@ -256,7 +256,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'defective-collagen',
                 name = 'Extract scrondrix skin-1',
-                icon = "__pyalienlife__/graphics/icons/skin.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
 		},	
 	}
@@ -292,7 +292,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'defective-collagen',
                 name = 'Extract Trits skin-1',
-                icon = "__pyalienlife__/graphics/icons/skin.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
 		},	
 	}
@@ -329,7 +329,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'defective-collagen',
                 name = 'Extract Ulric skin-1',
-                icon = "__pyalienlife__/graphics/icons/skin.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
 		},	
 	}
@@ -368,7 +368,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'defective-collagen',
                 name = 'Extract Vonix skin-1',
-                icon = "__pyalienlife__/graphics/icons/skin.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
 		},	
 	}
@@ -408,7 +408,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'defective-collagen',
                 name = 'Extract Vrauks chithin-1',
-                icon = "__pyalienlife__/graphics/icons/chitin.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",
                 icon_size = 64,
 		},	
 	}
@@ -448,7 +448,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'defective-collagen',
                 name = 'Extract xeno chitin-1',
-                icon = "__pyalienlife__/graphics/icons/chitin.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",
                 icon_size = 64,
 		},	
 	}
@@ -486,7 +486,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'defective-collagen',
                 name = 'Extract zipir skin-1',
-                icon = "__pyalienlife__/graphics/icons/skin.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
 		},	
 	}

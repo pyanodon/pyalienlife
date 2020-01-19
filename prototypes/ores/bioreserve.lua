@@ -15,7 +15,7 @@ ENTITY {
     type = "resource",
     name = "ore-bioreserve",
     category = "ore-bioreserve",
-    icon = "__pyalienlife__/graphics/icons/biosample.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/biosample.png",
     icon_size = 64,
     flags = {"placeable-neutral"},
     order = "a-b-a",
@@ -51,7 +51,7 @@ ENTITY {
     stage_counts = {300, 200, 170, 150, 120, 100, 80, 60, 40, 35, 15},
     stages = {
         sheet = {
-            filename = "__pyalienlife__/graphics/entity/bioreserve/rich-1.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/bioreserve/rich-1.png",
             priority = "extra-high",
             width = 64,
             height = 80,
@@ -60,7 +60,7 @@ ENTITY {
             variation_count = 11,
             shift = util.by_pixel(0, -16),
             hr_version = {
-                filename = "__pyalienlife__/graphics/entity/bioreserve/hr-rich-1.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/bioreserve/hr-rich-1.png",
                 priority = "extra-high",
                 width = 128,
                 height = 160,

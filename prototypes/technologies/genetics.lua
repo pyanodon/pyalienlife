@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "genetics-mk01",
-    icon = "__pyalienlife__/graphics/technology/genetics-mk01.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/genetics-mk01.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"microbiology-mk01"},
@@ -18,7 +18,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = 'technology',
     name = 'genetics-mk02',
-    icon = '__pyalienlife__/graphics/technology/genetics-mk02.png',
+    icon = '__pyalienlifegraphics__/graphics/technology/genetics-mk02.png',
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'genetics-mk01',"machines-mk02"},
@@ -36,7 +36,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = 'technology',
     name = 'genetics-mk03',
-    icon = '__pyalienlife__/graphics/technology/genetics-mk03.png',
+    icon = '__pyalienlifegraphics__/graphics/technology/genetics-mk03.png',
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'genetics-mk02'},
@@ -57,7 +57,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "genetics-mk04",
-    icon = "__pyalienlife__/graphics/technology/genetics-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/genetics-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"genetics-mk03"},

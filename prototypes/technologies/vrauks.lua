@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "vrauks",
-    icon = "__pyalienlife__/graphics/technology/vrauks.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/vrauks.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"zoology"},
@@ -18,7 +18,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "vrauks-mk02",
-    icon = "__pyalienlife__/graphics/technology/vrauks-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/vrauks-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"vrauks"},
@@ -37,7 +37,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "vrauks-mk03",
-    icon = "__pyalienlife__/graphics/technology/vrauks-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/vrauks-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"vrauks-mk02"},
@@ -57,7 +57,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "vrauks-mk04",
-    icon = "__pyalienlife__/graphics/technology/vrauks-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/vrauks-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"vrauks-mk03"},

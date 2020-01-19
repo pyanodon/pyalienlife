@@ -603,7 +603,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'rendering',
 			name = 'Full Render auogs',
-			icon = "__pyalienlife__/graphics/icons/rendering-auog.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-auog.png",
 			icon_size = 64,
 		},
 		--bonemeal
@@ -626,7 +626,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
 			name = 'auogs to Bonemeal',
-			icon = "__pyalienlife__/graphics/icons/bonemeal.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/bonemeal.png",
 			icon_size = 64,
 		},
 		--meat
@@ -643,7 +643,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
 			name = 'Extract auog Meat',
-			icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 			icon_size = 64,
 		},
 		--brain
@@ -660,7 +660,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
 			name = 'Extract auog brains',
-			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},	
 		--skin
@@ -677,7 +677,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
 			name = 'Extract auog skin',
-			icon = "__pyalienlife__/graphics/icons/skin.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
 			icon_size = 32,
 		},
 		--bones
@@ -694,7 +694,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
 			name = 'Extract auog bones',
-			icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
 			icon_size = 64,
 		},
 		--guts
@@ -711,7 +711,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
 			name = 'Extract auog guts',
-			icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
 		},
 		--blood
@@ -728,7 +728,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
 			name = 'Extract auog blood',
-			icon = "__pyalienlife__/graphics/icons/blood.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
 			icon_size = 64,
 		},
 		--fat
@@ -745,7 +745,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
 			name = 'Extract auog lard',
-			icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
 			icon_size = 64,
 		},
 		--brain auog rendering
@@ -763,7 +763,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'nanochondria',
 			name = 'Extract brains from Improved auogs',
-			icon = "__pyalienlife__/graphics/icons/brain-caged-auog.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-auog.png",
 			icon_size = 64,
 		},
 		--bone auog rendering
@@ -781,7 +781,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'bmp',
 			name = 'Extract bones from Improved auogs',
-			icon = "__pyalienlife__/graphics/icons/bone-caged-auog.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-auog.png",
 			icon_size = 64,
 		},
 		--bonemeal auog rendering
@@ -798,7 +798,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'bmp',
 			name = 'Extract bonemeal from Improved auogs',
-			icon = "__pyalienlife__/graphics/icons/bonemeal-caged-auog.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/bonemeal-caged-auog.png",
 			icon_size = 64,
         },
 		--meat auog rendering
@@ -816,7 +816,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
 			name = 'Extract meat from Improved auogs',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-auog.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-auog.png",
 			icon_size = 64,
 		},
 		--guts auog rendering
@@ -834,7 +834,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'antitumor',
 			name = 'Extract guts from Improved auogs',
-			icon = "__pyalienlife__/graphics/icons/guts-caged-auog.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-auog.png",
 			icon_size = 64,
 		},
 		--blood auog rendering
@@ -852,7 +852,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
 			name = 'Extract blood from Improved auogs',
-			icon = "__pyalienlife__/graphics/icons/blood-caged-auog.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-auog.png",
 			icon_size = 64,
 		},
 		--skin auog rendering
@@ -870,7 +870,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'reca',
 			name = 'Extract skin from Improved auogs',
-			icon = "__pyalienlife__/graphics/icons/skin-caged-auog.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-auog.png",
 			icon_size = 64,
 		},
 		--fat auog rendering
@@ -888,7 +888,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'orexigenic',
 			name = 'Extract fat from Improved auogs',
-			icon = "__pyalienlife__/graphics/icons/fat-caged-auog.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-auog.png",
 			icon_size = 64,
 		},
 	}

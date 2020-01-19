@@ -18,7 +18,7 @@ RECIPE {
 FLUID {
     type = "fluid",
     name = "manure-bacteria",
-    icon = "__pyalienlife__/graphics/icons/manure-bacteria.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/manure-bacteria.png",
 	icon_size = 64,
     default_temperature = 10,
     base_color = {r = 0.505, g = 0.639, b = 0.533},

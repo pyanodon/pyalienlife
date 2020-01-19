@@ -32,7 +32,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'fto4',
 			name = 'Extract arthurian lard-2',
-			icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
 			icon_size = 64,
 		},	
 		--fat arthurian rendering
@@ -50,7 +50,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'fto4',
 			name = 'Extract fat from Improved arthurians-2',
-			icon = "__pyalienlife__/graphics/icons/fat-caged-arthurian.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-arthurian.png",
 			icon_size = 64,
 		},
 	}
@@ -87,7 +87,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'fto4',
                 name = 'Extract auog lard-2',
-                icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
 		},	
 		--fat auog rendering
@@ -105,7 +105,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'fto4',
 			name = 'Extract fat from Improved auogs-2',
-			icon = "__pyalienlife__/graphics/icons/fat-caged-auog.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-auog.png",
 			icon_size = 64,
 		},
 	}
@@ -144,7 +144,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'fto4',
                 name = 'Extract dhilmos lard-2',
-                icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
 		},	
 		--fat dhilmos rendering
@@ -162,7 +162,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'fto4',
 			name = 'Extract fat from Improved dhilmoss-2',
-			icon = "__pyalienlife__/graphics/icons/fat-dhilmos.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/fat-dhilmos.png",
 			icon_size = 64,
 		},
 	}
@@ -199,7 +199,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'fto4',
                 name = 'Extract kmauts lard-2',
-                icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
 		},	
 		--fat kmauts rendering
@@ -217,7 +217,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'fto4',
 			name = 'Extract fat from Improved kmauts-2',
-			icon = "__pyalienlife__/graphics/icons/fat-caged-kmauts.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-kmauts.png",
 			icon_size = 64,
         },
 	}
@@ -254,7 +254,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'fto4',
                 name = 'Extract Mukmoux lard-2',
-                icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
 		},	
 		--fat mukmoux rendering
@@ -272,7 +272,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'fto4',
 			name = 'Extract fat from Improved Mukmouxs-2',
-			icon = "__pyalienlife__/graphics/icons/fat-caged-mukmoux.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-mukmoux.png",
 			icon_size = 64,
 		},
 	}
@@ -309,7 +309,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'fto4',
                 name = 'Extract phadai Fat-2',
-                icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
 		},	
 		--fat phadai rendering
@@ -327,7 +327,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'fto4',
 			name = 'Extract fat from Improved phadais-2',
-			icon = "__pyalienlife__/graphics/icons/fat-caged-phadai.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-phadai.png",
 			icon_size = 64,
         },
 	}
@@ -364,7 +364,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'fto4',
                 name = 'Extract scrondrix lard-2',
-                icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
 		},	
 		--fat scrondrix rendering
@@ -382,7 +382,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'fto4',
 			name = 'Extract fat from Improved scrondrixs-2',
-			icon = "__pyalienlife__/graphics/icons/fat-caged-scrondrix.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-scrondrix.png",
 			icon_size = 64,
 		},
 	}
@@ -418,7 +418,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'fto4',
                 name = 'Extract Trits lard-2',
-                icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
 		},	
 		--fat trits rendering
@@ -436,7 +436,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'fto4',
 			name = 'Extract fat from Improved Trits-2',
-			icon = "__pyalienlife__/graphics/icons/fat-trits.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/fat-trits.png",
 			icon_size = 64,
 		},
 	}
@@ -473,7 +473,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'fto4',
                 name = 'Extract Ulric lard-2',
-                icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
 		},	
 		--fat ulric rendering
@@ -491,7 +491,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'fto4',
 			name = 'Extract fat from Improved Ulrics-2',
-			icon = "__pyalienlife__/graphics/icons/fat-caged-ulric.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-ulric.png",
 			icon_size = 64,
 		},
 	}
@@ -530,7 +530,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'fto4',
                 name = 'Extract Vonix lard-2',
-                icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
 		},	
 		--fat vonix rendering
@@ -549,7 +549,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'fto4',
 			name = 'Extract fat from Improved Vonixes-2',
-			icon = "__pyalienlife__/graphics/icons/fat-vonix.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/fat-vonix.png",
 			icon_size = 64,
 		},
 	}
@@ -590,7 +590,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'fto4',
                 name = 'Extract zipir lard-2',
-                icon = "__pyalienlife__/graphics/icons/mukmoux-fat.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
 		},	
 		--fat zipir rendering
@@ -608,7 +608,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'fto4',
 			name = 'Extract fat from Improved Zipir-2',
-			icon = "__pyalienlife__/graphics/icons/fat-zipir.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/fat-zipir.png",
 			icon_size = 64,
 		},
 	}

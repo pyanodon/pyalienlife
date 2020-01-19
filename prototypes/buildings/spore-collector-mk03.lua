@@ -18,7 +18,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "spore-collector-mk03",
-    icon = "__pyalienlife__/graphics/icons/spore-collector-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/spore-collector-mk03.png",
     icon_size = 32,
     flags = {},
     subgroup = "py-alienlife-buildings-mk03",
@@ -30,7 +30,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "spore-collector-mk03",
-    icon = "__pyalienlife__/graphics/icons/spore-collector-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/spore-collector-mk03.png",
 	icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "spore-collector-mk03"},
@@ -56,7 +56,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlife__/graphics/entity/spore-collector/base.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/spore-collector/base.png",
                 width = 243,
                 height = 32,
                 line_length = 6,
@@ -65,7 +65,7 @@ ENTITY {
                 shift = util.by_pixel(10, 96)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/spore-collector/up.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/spore-collector/up.png",
                 width = 243,
                 height = 320,
                 line_length = 8,
@@ -75,7 +75,7 @@ ENTITY {
             },
 
             {
-                filename = "__pyalienlife__/graphics/entity/spore-collector/mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/spore-collector/mask.png",
                 width = 243,
                 height = 320,
                 line_length = 8,
@@ -108,8 +108,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/spore-collector.ogg", volume = 1.5},
-        idle_sound = {filename = "__pyalienlife__/sounds/spore-collector.ogg", volume = 1.1},
+        sound = {filename = "__pyalienlifegraphics__/sounds/spore-collector.ogg", volume = 1.5},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/spore-collector.ogg", volume = 1.1},
         apparent_volume = 2.5
     }
 }

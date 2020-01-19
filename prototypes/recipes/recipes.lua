@@ -13,7 +13,7 @@ RECIPE {
         {type = 'item', name = 'biomass', amount = 7},
     },
     --main_product = "silicon-wafer",
-    icon = '__pyalienlife__/graphics/icons/biomass.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/biomass.png',
     icon_size = 32,
     subgroup = 'py-alienlife-plants',
     order = 'a'
@@ -43,7 +43,7 @@ RECIPE {
         {type = 'item', name = 'biomass', amount = 10},
     },
     --main_product = "silicon-wafer",
-    icon = '__pyalienlife__/graphics/icons/biomass.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/biomass.png',
     icon_size = 32,
     subgroup = 'py-alienlife-plants',
     order = 'a'
@@ -1250,7 +1250,7 @@ RECIPE {
         {type = "fluid", name = "combustion-mixture1", amount = 150, temperature = 600},
         {type = "fluid", name = "steam", amount = 500, temperature = 60}
     },
-    icon = "__pyalienlife__/graphics/icons/combustion-oleochemical.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/combustion-oleochemical.png",
     icon_size = 32,
     --main_product = "combustion-mixture1",
     subgroup = "py-combustion",
@@ -1273,7 +1273,7 @@ RECIPE {
         {type = "fluid", name = "combustion-mixture1", amount = 150, temperature = 650},
         {type = "fluid", name = "steam", amount = 500, temperature = 60}
     },
-    icon = "__pyalienlife__/graphics/icons/combustion-fish-oil.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/combustion-fish-oil.png",
     icon_size = 32,
     --main_product = "combustion-mixture1",
     subgroup = "py-combustion",
@@ -1296,7 +1296,7 @@ RECIPE {
         {type = "fluid", name = "combustion-mixture1", amount = 200, temperature = 600},
         {type = "fluid", name = "steam", amount = 500, temperature = 60}
     },
-    icon = "__pyalienlife__/graphics/icons/combustion-lard.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/combustion-lard.png",
     icon_size = 32,
     --main_product = "combustion-mixture1",
     subgroup = "py-combustion",
@@ -1320,7 +1320,7 @@ RECIPE {
         {type = "fluid", name = "combustion-mixture1", amount = 200, temperature = 600},
         {type = "fluid", name = "steam", amount = 500, temperature = 60}
     },
-    icon = "__pyalienlife__/graphics/icons/combustion-ethanol.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/combustion-ethanol.png",
     icon_size = 32,
     --main_product = "combustion-mixture1",
     subgroup = "py-combustion",

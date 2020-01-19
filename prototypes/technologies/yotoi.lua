@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "yotoi",
-    icon = "__pyalienlife__/graphics/technology/yotoi.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/yotoi.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk02","genetics-mk02"},
@@ -19,7 +19,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "yotoi-mk02",
-    icon = "__pyalienlife__/graphics/technology/yotoi-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/yotoi-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"yotoi"},
@@ -38,7 +38,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "yotoi-mk03",
-    icon = "__pyalienlife__/graphics/technology/yotoi-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/yotoi-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"yotoi-mk02"},
@@ -58,7 +58,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "yotoi-mk04",
-    icon = "__pyalienlife__/graphics/technology/yotoi-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/yotoi-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"yotoi-mk03"},

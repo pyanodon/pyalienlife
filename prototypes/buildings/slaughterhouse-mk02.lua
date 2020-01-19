@@ -20,7 +20,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "slaughterhouse-mk02",
-    icon = "__pyalienlife__/graphics/icons/slaughterhouse-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/slaughterhouse-mk02.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk02",
@@ -32,7 +32,7 @@ ITEM {
 ENTITY {
     type = 'assembling-machine',
     name = "slaughterhouse-mk02",
-    icon = "__pyalienlife__/graphics/icons/slaughterhouse-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/slaughterhouse-mk02.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "slaughterhouse-mk02"},
@@ -60,7 +60,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlife__/graphics/entity/slaughterhouse/base.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/slaughterhouse/base.png",
                 width = 384,
                 height = 32,
                 line_length = 5,
@@ -70,7 +70,7 @@ ENTITY {
                 shift = util.by_pixel(16, 160)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/slaughterhouse/a1.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/slaughterhouse/a1.png",
                 width = 96,
                 height = 324,
                 line_length = 21,
@@ -80,7 +80,7 @@ ENTITY {
                 shift = util.by_pixel(-128, -18)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/slaughterhouse/a1-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/slaughterhouse/a1-mask.png",
                 width = 96,
                 height = 324,
                 line_length = 21,
@@ -91,7 +91,7 @@ ENTITY {
                 tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/slaughterhouse/a2.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/slaughterhouse/a2.png",
                 width = 96,
                 height = 324,
                 line_length = 21,
@@ -101,7 +101,7 @@ ENTITY {
                 shift = util.by_pixel(-32, -18)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/slaughterhouse/a2-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/slaughterhouse/a2-mask.png",
                 width = 96,
                 height = 324,
                 line_length = 21,
@@ -112,7 +112,7 @@ ENTITY {
                 tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/slaughterhouse/a3.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/slaughterhouse/a3.png",
                 width = 96,
                 height = 324,
                 line_length = 21,
@@ -122,7 +122,7 @@ ENTITY {
                 shift = util.by_pixel(64, -18)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/slaughterhouse/a3-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/slaughterhouse/a3-mask.png",
                 width = 96,
                 height = 324,
                 line_length = 21,
@@ -133,7 +133,7 @@ ENTITY {
                 tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/slaughterhouse/a4.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/slaughterhouse/a4.png",
                 width = 96,
                 height = 324,
                 line_length = 21,
@@ -143,7 +143,7 @@ ENTITY {
                 shift = util.by_pixel(160, -18)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/slaughterhouse/a4-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/slaughterhouse/a4-mask.png",
                 width = 96,
                 height = 324,
                 line_length = 21,
@@ -177,8 +177,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/slaughterhouse.ogg", volume = 1.15},
-        idle_sound = {filename = "__pyalienlife__/sounds/slaughterhouse.ogg", volume = 0.75},
+        sound = {filename = "__pyalienlifegraphics__/sounds/slaughterhouse.ogg", volume = 1.15},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/slaughterhouse.ogg", volume = 0.75},
         apparent_volume = 2.5
     }
 }

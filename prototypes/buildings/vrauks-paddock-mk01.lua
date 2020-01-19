@@ -18,7 +18,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "vrauks-paddock-mk01",
-    icon = "__pyalienlife__/graphics/icons/vrauks-paddock-mk01.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/vrauks-paddock-mk01.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk01",
@@ -30,7 +30,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "vrauks-paddock-mk01",
-    icon = "__pyalienlife__/graphics/icons/vrauks-paddock-mk01.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/vrauks-paddock-mk01.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "vrauks-paddock-mk01"},
@@ -58,7 +58,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlife__/graphics/entity/vrauks-paddock/vrauks-paddock-mk01.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/vrauks-paddock/vrauks-paddock-mk01.png",
                 width = 448,
                 height = 448,
                 --line_length = 5,
@@ -75,7 +75,7 @@ ENTITY {
             south_position = {-2.0, -2.0},
             east_position = {-2.0, -2.0},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/vrauks-paddock/alpha.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/vrauks-paddock/alpha.png",
                 frame_count = 90,
                 line_length = 9,
                 width = 128,
@@ -89,7 +89,7 @@ ENTITY {
             south_position = {3.0, -3.0},
             east_position = {3.0, -3.0},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/vrauks-paddock/beta.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/vrauks-paddock/beta.png",
                 frame_count = 90,
                 line_length = 9,
                 width = 128,
@@ -103,7 +103,7 @@ ENTITY {
             south_position = {0.0, 3.1},
             east_position = {0.0, 3.1},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/vrauks-paddock/midbottom.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/vrauks-paddock/midbottom.png",
                 frame_count = 90,
                 line_length = 9,
                 width = 160,
@@ -117,7 +117,7 @@ ENTITY {
             south_position = {2.2, 0.7},
             east_position = {2.2, 0.7},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/vrauks-paddock/right.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/vrauks-paddock/right.png",
                 frame_count = 90,
                 line_length = 10,
                 width = 128,
@@ -131,7 +131,7 @@ ENTITY {
             south_position = {-4.0, 1.7},
             east_position = {-4.0, 1.7},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/vrauks-paddock/small-01.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/vrauks-paddock/small-01.png",
                 frame_count = 90,
                 line_length = 10,
                 width = 96,
@@ -145,7 +145,7 @@ ENTITY {
             south_position = {-2.5, 1.6},
             east_position = {-2.5, 1.6},
             animation = {
-                filename = "__pyalienlife__/graphics/entity/vrauks-paddock/small-02.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/vrauks-paddock/small-02.png",
                 frame_count = 180,
                 line_length = 18,
                 width = 64,
@@ -157,8 +157,8 @@ ENTITY {
 
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/vrauks-paddock.ogg", volume = 0.8},
-        idle_sound = {filename = "__pyalienlife__/sounds/vrauks-paddock.ogg", volume = 0.37},
+        sound = {filename = "__pyalienlifegraphics__/sounds/vrauks-paddock.ogg", volume = 0.8},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/vrauks-paddock.ogg", volume = 0.37},
         apparent_volume = 2.5
     }
 }

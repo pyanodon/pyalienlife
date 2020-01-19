@@ -22,7 +22,7 @@ fun.autorecipes {
 			crafting_speed = 130,
 			tech = 'bigger-colon',
 			name = 'auog-manure-1a',
-			--icon = "__pyalienlife__/graphics/icons/atomizer-mk01.png"
+			--icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk01.png"
 		},
 		{
 			ingredients =
@@ -39,7 +39,7 @@ fun.autorecipes {
 			crafting_speed = 120,
 			tech = 'bigger-colon',
 			name = 'auog-manure-2a',
-			--icon = "__pyalienlife__/graphics/icons/navens-culture-mk01.png"
+			--icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk01.png"
 		},
 		{
 			ingredients =

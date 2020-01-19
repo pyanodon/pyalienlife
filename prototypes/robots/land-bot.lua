@@ -15,7 +15,7 @@ RECIPE{
 ITEM{
     type = "item-with-entity-data",
     name = "land-bot",
-    icon = "__pyalienlife__/graphics/icons/land-beetle.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/land-beetle.png",
     icon_size = 64,
     subgroup = "transport",
     order = "a",
@@ -28,7 +28,7 @@ data:extend(
   {
     type = "unit",
     name = "land-bot",
-    icon = "__pyalienlife__/graphics/icons/land-beetle.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/land-beetle.png",
     icon_size = 64,
     flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "not-repairable", "breaths-air"},
 	minable = {mining_time = 0.1, result = 'land-bot'},
@@ -65,8 +65,8 @@ data:extend(
 			{
 			filenames =
 				{
-					  "__pyalienlife__/graphics/entity/land-beetle/beetle.png",
-					  "__pyalienlife__/graphics/entity/land-beetle/beetle-2.png",
+					  "__pyalienlifegraphics__/graphics/entity/land-beetle/beetle.png",
+					  "__pyalienlifegraphics__/graphics/entity/land-beetle/beetle-2.png",
 				},
 			slice = 16,
 			lines_per_file = 16,
@@ -81,8 +81,8 @@ data:extend(
 			{
 			filenames =
 			{
-			  "__pyalienlife__/graphics/entity/land-beetle/beetle-sh.png",
-			  "__pyalienlife__/graphics/entity/land-beetle/beetle-sh-2.png",
+			  "__pyalienlifegraphics__/graphics/entity/land-beetle/beetle-sh.png",
+			  "__pyalienlifegraphics__/graphics/entity/land-beetle/beetle-sh-2.png",
 			},
 			slice = 16,
 			lines_per_file = 16,
@@ -116,8 +116,8 @@ data:extend(
 			{
 			filenames =
 				{
-					  "__pyalienlife__/graphics/entity/land-beetle/beetle.png",
-					  "__pyalienlife__/graphics/entity/land-beetle/beetle-2.png",
+					  "__pyalienlifegraphics__/graphics/entity/land-beetle/beetle.png",
+					  "__pyalienlifegraphics__/graphics/entity/land-beetle/beetle-2.png",
 				},
 			slice = 16,
 			lines_per_file = 16,
@@ -132,8 +132,8 @@ data:extend(
 			{
 			filenames =
 			{
-			  "__pyalienlife__/graphics/entity/land-beetle/beetle-sh.png",
-			  "__pyalienlife__/graphics/entity/land-beetle/beetle-sh-2.png",
+			  "__pyalienlifegraphics__/graphics/entity/land-beetle/beetle-sh.png",
+			  "__pyalienlifegraphics__/graphics/entity/land-beetle/beetle-sh-2.png",
 			},
 			slice = 16,
 			lines_per_file = 16,

@@ -19,7 +19,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "trits-reef-mk04",
-    icon = "__pyalienlife__/graphics/icons/trits-reef-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/trits-reef-mk04.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk04",
@@ -31,7 +31,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "trits-reef-mk04",
-    icon = "__pyalienlife__/graphics/icons/trits-reef-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/trits-reef-mk04.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "trits-reef-mk04"},
@@ -59,7 +59,7 @@ ENTITY {
     animation = {
         layers = {
         {
-        filename = "__pyalienlife__/graphics/entity/trits-reef/off.png",
+        filename = "__pyalienlifegraphics__/graphics/entity/trits-reef/off.png",
         width = 384,
         height = 512,
         frame_count = 1,
@@ -67,7 +67,7 @@ ENTITY {
         shift = util.by_pixel(32, -96)
         },
         {
-            filename = "__pyalienlife__/graphics/entity/trits-reef/off-mask.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/trits-reef/off-mask.png",
             width = 384,
             height = 512,
             frame_count = 1,
@@ -76,7 +76,7 @@ ENTITY {
             tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
         },
         {
-            filename = "__pyalienlife__/graphics/entity/trits-reef/over.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/trits-reef/over.png",
             width = 384,
             height = 512,
             frame_count = 1,
@@ -92,7 +92,7 @@ ENTITY {
             south_position = util.by_pixel(-0, 0),
             east_position = util.by_pixel(-0, 0),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/trits-reef/a1.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/trits-reef/a1.png",
                 frame_count = 179,
                 line_length = 30,
                 width = 64,
@@ -106,7 +106,7 @@ ENTITY {
             south_position = util.by_pixel(-0, 0),
             east_position = util.by_pixel(-0, 0),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/trits-reef/a2.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/trits-reef/a2.png",
                 frame_count = 179,
                 line_length = 30,
                 width = 64,
@@ -120,7 +120,7 @@ ENTITY {
             south_position = util.by_pixel(-0, 0),
             east_position = util.by_pixel(-0, 0),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/trits-reef/a3.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/trits-reef/a3.png",
                 frame_count = 179,
                 line_length = 30,
                 width = 64,
@@ -134,7 +134,7 @@ ENTITY {
             south_position = util.by_pixel(-0, 0),
             east_position = util.by_pixel(-0, 0),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/trits-reef/a4.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/trits-reef/a4.png",
                 frame_count = 179,
                 line_length = 30,
                 width = 64,
@@ -148,7 +148,7 @@ ENTITY {
             south_position = util.by_pixel(-0, 0),
             east_position = util.by_pixel(-0, 0),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/trits-reef/a5.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/trits-reef/a5.png",
                 frame_count = 179,
                 line_length = 30,
                 width = 64,
@@ -163,7 +163,7 @@ ENTITY {
             south_position = util.by_pixel(32, -96),
             east_position = util.by_pixel(32, -96),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/trits-reef/over.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/trits-reef/over.png",
                 width = 384,
                 height = 512,
                 frame_count = 1,
@@ -215,8 +215,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/trits-reef.ogg", volume = 1.0},
-        idle_sound = {filename = "__pyalienlife__/sounds/trits-reef.ogg", volume = 0.65},
+        sound = {filename = "__pyalienlifegraphics__/sounds/trits-reef.ogg", volume = 1.0},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/trits-reef.ogg", volume = 0.65},
         apparent_volume = 0.45
     }
 }

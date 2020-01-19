@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "domestication",
-    icon = "__pyalienlife__/graphics/technology/domestication-1.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/domestication-1.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"biotech-mk02","land-animals-mk02"},
@@ -19,7 +19,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "domestication-mk02",
-    icon = "__pyalienlife__/graphics/technology/domestication-2.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/domestication-2.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"domestication","dingrits"},

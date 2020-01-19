@@ -20,7 +20,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "pyphoon-bay",
-    icon = "__pyalienlife__/graphics/icons/pyphoon-bay.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/pyphoon-bay.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-generators",
@@ -32,7 +32,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "pyphoon-bay",
-    icon = "__pyalienlife__/graphics/icons/pyphoon-bay.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/pyphoon-bay.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "pyphoon-bay"},
@@ -61,7 +61,7 @@ ENTITY {
         layers = {
             --off
             {
-                filename = "__pyalienlife__/graphics/entity/pyphoon-bay/off.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/pyphoon-bay/off.png",
                 width = 320,
                 height = 349,
                 frame_count = 1,
@@ -77,7 +77,7 @@ ENTITY {
             south_position = util.by_pixel(-128, -16),
             east_position = util.by_pixel(-128, -16),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/pyphoon-bay/a1.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/pyphoon-bay/a1.png",
                 frame_count = 150,
                 line_length = 32,
                 width = 64,
@@ -91,7 +91,7 @@ ENTITY {
             south_position = util.by_pixel(-64, -16),
             east_position = util.by_pixel(-64, -16),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/pyphoon-bay/a2.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/pyphoon-bay/a2.png",
                 frame_count = 150,
                 line_length = 32,
                 width = 64,
@@ -105,7 +105,7 @@ ENTITY {
             south_position = util.by_pixel(-0, -16),
             east_position = util.by_pixel(-0, -16),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/pyphoon-bay/a3.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/pyphoon-bay/a3.png",
                 frame_count = 150,
                 line_length = 32,
                 width = 64,
@@ -119,7 +119,7 @@ ENTITY {
             south_position = util.by_pixel(64, -16),
             east_position = util.by_pixel(64, -16),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/pyphoon-bay/a4.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/pyphoon-bay/a4.png",
                 frame_count = 150,
                 line_length = 32,
                 width = 64,
@@ -133,7 +133,7 @@ ENTITY {
             south_position = util.by_pixel(128, -16),
             east_position = util.by_pixel(128, -16),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/pyphoon-bay/a5.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/pyphoon-bay/a5.png",
                 frame_count = 150,
                 line_length = 32,
                 width = 64,
@@ -144,8 +144,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/pyphoon-bay.ogg", volume = 1.5},
-        idle_sound = {filename = "__pyalienlife__/sounds/pyphoon-bay.ogg", volume = 1.0},
+        sound = {filename = "__pyalienlifegraphics__/sounds/pyphoon-bay.ogg", volume = 1.5},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/pyphoon-bay.ogg", volume = 1.0},
         apparent_volume = 2.5
     }
 }

@@ -32,7 +32,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'exercises',
 			name = 'Extract arthurian Meat-1',
-			icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 			icon_size = 64,
 		},	
 	}
@@ -69,7 +69,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'exercises',
                 name = 'Extract auog Meat-1',
-                icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
                 icon_size = 64,
 		},	
 	}
@@ -108,7 +108,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'exercises',
 				name = 'Extract dhilmos Meat-1',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
 		},	
 	}
@@ -145,7 +145,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'exercises',
 				name = 'Extract dingrits Meat-1',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
 		},	
 	}
@@ -182,7 +182,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'exercises',
 				name = 'Extract kmauts Meat-1',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
 		},	
 	}
@@ -219,7 +219,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'exercises',
 				name = 'Extract Mukmoux Meat-1',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
 		},	
 	}
@@ -256,7 +256,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'exercises',
 				name = 'Extract phadai Meat-1',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
 		},	
 	}
@@ -293,7 +293,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'exercises',
 				name = 'Extract phagnot Meat-1',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
 		},	
 	}
@@ -330,7 +330,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'exercises',
 				name = 'Extract scrondrix Meat-1',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
 		},	
 	}
@@ -366,7 +366,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'exercises',
 				name = 'Extract Trits Meat-1',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
 		},	
 	}
@@ -403,7 +403,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'exercises',
 				name = 'Extract Ulric Meat-1',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
 		},	
 	}
@@ -442,7 +442,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'exercises',
 				name = 'Extract Vonix Meat-1',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
 		},	
 	}
@@ -482,7 +482,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'exercises',
 				name = 'Extract Vrauks Meat-1',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
 		},	
 	}
@@ -522,7 +522,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'exercises',
 				name = 'Extract Xeno Meat-1',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
 		},	
 	}
@@ -555,7 +555,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'exercises',
 			name = 'Extract xyhiphoe Meat-1',
-			icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 			icon_size = 64,
 		},
 	}
@@ -593,7 +593,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'exercises',
 				name = 'Extract zipir Meat-1',
-				icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
 		},	
 	}

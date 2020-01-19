@@ -19,7 +19,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "lb-provider-chest",
-    icon = "__pyalienlife__/graphics/icons/chest-provider.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/chest-provider.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-others",
@@ -31,7 +31,7 @@ ITEM {
 ENTITY {
     type = "container",
     name = "lb-provider-chest",
-    icon = "__pyalienlife__/graphics/icons/chest-provider.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/chest-provider.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "lb-provider-chest"},
@@ -49,7 +49,7 @@ ENTITY {
 			layers =
 				{
 					{
-						filename = "__pyalienlife__/graphics/entity/land-beetle/chest-provider.png",
+						filename = "__pyalienlifegraphics__/graphics/entity/land-beetle/chest-provider.png",
 						priority = "high",
 						width = 69,
 						height = 67,

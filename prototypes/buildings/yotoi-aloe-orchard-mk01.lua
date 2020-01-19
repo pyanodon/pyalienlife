@@ -19,7 +19,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "yotoi-aloe-orchard-mk01",
-    icon = "__pyalienlife__/graphics/icons/yotoi-aloe-orchard-mk01.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/yotoi-aloe-orchard-mk01.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk01",
@@ -31,7 +31,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "yotoi-aloe-orchard-mk01",
-    icon = "__pyalienlife__/graphics/icons/yotoi-aloe-orchard-mk01.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/yotoi-aloe-orchard-mk01.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "yotoi-aloe-orchard-mk01"},
@@ -59,7 +59,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlife__/graphics/entity/yotoi-aloe-orchard/a1.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/yotoi-aloe-orchard/a1.png",
                 width = 384,
                 height = 96,
                 line_length = 5,
@@ -68,7 +68,7 @@ ENTITY {
                 shift = util.by_pixel(16, 128)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/yotoi-aloe-orchard/a1-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/yotoi-aloe-orchard/a1-mask.png",
                 width = 384,
                 height = 96,
                 line_length = 5,
@@ -78,7 +78,7 @@ ENTITY {
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/yotoi-aloe-orchard/a2.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/yotoi-aloe-orchard/a2.png",
                 width = 384,
                 height = 96,
                 line_length = 5,
@@ -87,7 +87,7 @@ ENTITY {
                 shift = util.by_pixel(16, 32)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/yotoi-aloe-orchard/a2-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/yotoi-aloe-orchard/a2-mask.png",
                 width = 384,
                 height = 96,
                 line_length = 5,
@@ -97,7 +97,7 @@ ENTITY {
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/yotoi-aloe-orchard/a3.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/yotoi-aloe-orchard/a3.png",
                 width = 384,
                 height = 96,
                 line_length = 5,
@@ -106,7 +106,7 @@ ENTITY {
                 shift = util.by_pixel(16, -64)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/yotoi-aloe-orchard/a3-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/yotoi-aloe-orchard/a3-mask.png",
                 width = 384,
                 height = 96,
                 line_length = 5,
@@ -116,7 +116,7 @@ ENTITY {
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/yotoi-aloe-orchard/a4.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/yotoi-aloe-orchard/a4.png",
                 width = 384,
                 height = 96,
                 line_length = 5,
@@ -125,7 +125,7 @@ ENTITY {
                 shift = util.by_pixel(16, -160)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/yotoi-aloe-orchard/a4-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/yotoi-aloe-orchard/a4-mask.png",
                 width = 384,
                 height = 96,
                 line_length = 5,
@@ -173,8 +173,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/yotoi-aloe-orchard.ogg", volume = 1.9},
-        idle_sound = {filename = "__pyalienlife__/sounds/yotoi-aloe-orchard.ogg", volume = 1.3},
+        sound = {filename = "__pyalienlifegraphics__/sounds/yotoi-aloe-orchard.ogg", volume = 1.9},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/yotoi-aloe-orchard.ogg", volume = 1.3},
         apparent_volume = 2.5
     }
 }

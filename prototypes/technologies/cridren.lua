@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "cridren",
-    icon = "__pyalienlife__/graphics/technology/cridren.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/cridren.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk03"},
@@ -20,7 +20,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "cridren-mk02",
-    icon = "__pyalienlife__/graphics/technology/cridren-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/cridren-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"cridren"},
@@ -40,7 +40,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "cridren-mk03",
-    icon = "__pyalienlife__/graphics/technology/cridren-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/cridren-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"cridren-mk02"},
@@ -61,7 +61,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "cridren-mk04",
-    icon = "__pyalienlife__/graphics/technology/cridren-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/cridren-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"cridren-mk03"},

@@ -546,7 +546,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'dingrits',
 			name = 'Full Render dingrits',
-			icon = "__pyalienlife__/graphics/icons/rendering-dingrits.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-dingrits.png",
 			icon_size = 64,
 		},
 		--meat
@@ -569,7 +569,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'dingrits',
 			name = 'Extract dingrits Meat',
-			icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 			icon_size = 64,
 		},
 		--brain
@@ -586,7 +586,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'dingrits',
 			name = 'Extract dingrits brains',
-			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},	
 		--bones
@@ -603,7 +603,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'dingrits',
 			name = 'Extract dingrits bones',
-			icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
 			icon_size = 64,
 		},
 		--guts
@@ -620,7 +620,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'dingrits',
 			name = 'Extract dingrits guts',
-			icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
 		},
 		--blood
@@ -637,7 +637,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'dingrits',
 			name = 'Extract dingrits blood',
-			icon = "__pyalienlife__/graphics/icons/blood.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
 			icon_size = 64,
 		},
 		--Pelt
@@ -654,7 +654,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'dingrits',
 			name = 'Extract dingrits Pelt',
-			icon = "__pyalienlife__/graphics/icons/pelt.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/pelt.png",
 			icon_size = 64,
 		},
 		--Dingrit Spike
@@ -671,7 +671,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'dingrits',
 			name = 'Extract dingrits Spikes',
-			icon = "__pyalienlife__/graphics/icons/dingrit-spike.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/dingrit-spike.png",
 			icon_size = 64,
 		},
 		--brain dingrits rendering
@@ -689,7 +689,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'nanochondria',
 			name = 'Extract brains from Improved dingrits',
-			icon = "__pyalienlife__/graphics/icons/brain-caged-dingrits.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-dingrits.png",
 			icon_size = 64,
 		},
 		--bone dingrits rendering
@@ -707,7 +707,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'bmp',
 			name = 'Extract bones from Improved dingrits',
-			icon = "__pyalienlife__/graphics/icons/bone-caged-dingrits.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-dingrits.png",
 			icon_size = 64,
 		},
 		--guts dingrits rendering
@@ -725,7 +725,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'antitumor',
 			name = 'Extract guts from Improved dingrits',
-			icon = "__pyalienlife__/graphics/icons/guts-caged-dingrits.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-dingrits.png",
 			icon_size = 64,
 		},
 		--blood dingrits rendering
@@ -743,7 +743,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
 			name = 'Extract blood from Improved dingrits',
-			icon = "__pyalienlife__/graphics/icons/blood-caged-dingrits.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-dingrits.png",
 			icon_size = 64,
 		},
 		--meat dingrits rendering
@@ -761,7 +761,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
 			name = 'Extract meat from Improved dingrits',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-dingrits.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-dingrits.png",
 			icon_size = 64,
 		},
 	}

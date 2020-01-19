@@ -32,7 +32,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'organ-replication',
 			name = 'Extract arthurian guts-1',
-			icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
 		},	
 	}
@@ -69,7 +69,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'organ-replication',
                 name = 'Extract auog guts-1',
-                icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},	
 	}
@@ -108,7 +108,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'organ-replication',
                 name = 'Extract dhilmos guts-1',
-                icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},	
 	}
@@ -145,7 +145,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'organ-replication',
                 name = 'Extract dingrits guts-1',
-                icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},	
 	}
@@ -182,7 +182,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'organ-replication',
                 name = 'Extract kmauts guts-1',
-                icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},	
 	}
@@ -219,7 +219,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'organ-replication',
                 name = 'Extract Mukmoux guts-1',
-                icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},	
 	}
@@ -256,7 +256,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'organ-replication',
                 name = 'Extract phadai guts-1',
-                icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},	
 	}
@@ -293,7 +293,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'organ-replication',
                 name = 'Extract phagnot guts-1',
-                icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},	
 	}
@@ -330,7 +330,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'organ-replication',
                 name = 'Extract scrondrix guts-1',
-                icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},	
 	}
@@ -366,7 +366,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'organ-replication',
                 name = 'Extract Trits guts-1',
-                icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},	
 	}
@@ -403,7 +403,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'organ-replication',
                 name = 'Extract Ulric guts-1',
-                icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},	
 	}
@@ -442,7 +442,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'organ-replication',
                 name = 'Extract Vonix guts-1',
-                icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},	
 	}
@@ -482,7 +482,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'organ-replication',
                 name = 'Extract Vrauks guts-1',
-                icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},	
 	}
@@ -515,7 +515,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'organ-replication',
 			name = 'Extract xyhiphoe guts-1',
-			icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
 		},
 	}
@@ -553,7 +553,7 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'organ-replication',
                 name = 'Extract zipir guts-1',
-                icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},	
 	}

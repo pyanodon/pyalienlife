@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "recombinant-ery",
-    icon = "__pyalienlife__/graphics/technology/recombinant-ery.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/recombinant-ery.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"pharmagenomics"},

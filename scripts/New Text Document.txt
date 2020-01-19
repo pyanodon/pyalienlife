@@ -7,23 +7,24 @@
 6. Keep messing with the speed on the mega farm. I changed it buts it still feels to slow. 
 7. Add the new victory condition triggers for the quantum computer and victory message. I've already disabled it on the rocket. 
 8. Idk something will pop up
-9. Farm needs sound files replaced for rocket engines and the doors opening and closing
+9. Farm needs sound files replaced for rocket engines and the doors opening and closing -- DONE
 11.add the energy drink speed up -- DONE
+12. add code to disable speed up after short time
 
 --TODO: LATER STUFF
 
 caravan menu with pip windows to show the current location like the train menu
 
 
---Modules
-cadaveric
-navens
-yaedols
-bhoddos
-sponge
-grods
-kicalk
-ralesia
-rennea
-tuuphra
-yotoi
+--Modules--
+--cadaveric
+--navens
+--yaedols
+--bhoddos
+--sponge
+--grods
+--kicalk
+--ralesia
+--rennea
+--tuuphra
+--yotoi

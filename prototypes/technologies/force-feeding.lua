@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "force-feeding",
-    icon = "__pyalienlife__/graphics/technology/force-feeding.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/force-feeding.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"genetic-design"},
@@ -22,7 +22,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "fto4",
-    icon = "__pyalienlife__/graphics/technology/fto4.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/fto4.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"force-feeding","orexigenic"},

@@ -46,7 +46,7 @@ TECHNOLOGY('fluid-handling'):remove_pack('logistic-science-pack')
 TECHNOLOGY('automation-2'):remove_pack('logistic-science-pack')
 TECHNOLOGY('exoskeleton-equipment'):remove_prereq('electric-engine'):remove_prereq('solar-panel-equipment'):add_prereq('bio-implants')
 TECHNOLOGY('exoskeleton-equipment'):add_pack('production-science-pack')
-ITEM("raw-fish", "capsule"):set("icon", "__pyalienlife__/graphics/icons/fish.png")
+ITEM("raw-fish", "capsule"):set("icon", "__pyalienlifegraphics__/graphics/icons/fish.png")
 
 --RECIPES UPDATES
 

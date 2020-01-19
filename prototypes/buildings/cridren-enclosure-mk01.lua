@@ -18,7 +18,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "cridren-enclosure-mk01",
-    icon = "__pyalienlife__/graphics/icons/cridren-enclosure-mk01.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/cridren-enclosure-mk01.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk01",
@@ -30,7 +30,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "cridren-enclosure-mk01",
-    icon = "__pyalienlife__/graphics/icons/cridren-enclosure-mk01.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/cridren-enclosure-mk01.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "cridren-enclosure-mk01"},
@@ -58,7 +58,7 @@ ENTITY {
     animation = {
         layers = {
         {
-        filename = "__pyalienlife__/graphics/entity/cridren-enclosure/off.png",
+        filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/off.png",
         width = 352,
         height = 352,
         frame_count = 1,
@@ -66,7 +66,7 @@ ENTITY {
         shift = util.by_pixel(16, -16)
         },
         {
-            filename = "__pyalienlife__/graphics/entity/cridren-enclosure/off-mask.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/off-mask.png",
             width = 352,
             height = 352,
             frame_count = 1,
@@ -83,7 +83,7 @@ ENTITY {
             south_position = util.by_pixel(0, -0),
             east_position = util.by_pixel(0, -0),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/cridren-enclosure/a1.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/a1.png",
                 frame_count = 182,
                 line_length = 32,
                 width = 64,
@@ -97,7 +97,7 @@ ENTITY {
             south_position = util.by_pixel(0, -0),
             east_position = util.by_pixel(0, -0),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/cridren-enclosure/a2.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/a2.png",
                 frame_count = 182,
                 line_length = 32,
                 width = 64,
@@ -111,7 +111,7 @@ ENTITY {
             south_position = util.by_pixel(0, -0),
             east_position = util.by_pixel(0, -0),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/cridren-enclosure/a3.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/a3.png",
                 frame_count = 182,
                 line_length = 32,
                 width = 64,
@@ -125,7 +125,7 @@ ENTITY {
             south_position = util.by_pixel(0, -0),
             east_position = util.by_pixel(0, -0),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/cridren-enclosure/a4.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/a4.png",
                 frame_count = 182,
                 line_length = 32,
                 width = 64,
@@ -139,7 +139,7 @@ ENTITY {
             south_position = util.by_pixel(0, -0),
             east_position = util.by_pixel(0, -0),
             animation = {
-                filename = "__pyalienlife__/graphics/entity/cridren-enclosure/a5.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/a5.png",
                 frame_count = 182,
                 line_length = 32,
                 width = 32,
@@ -150,8 +150,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/cridren-enclosure.ogg", volume = 1.0},
-        idle_sound = {filename = "__pyalienlife__/sounds/cridren-enclosure.ogg", volume = 0.65},
+        sound = {filename = "__pyalienlifegraphics__/sounds/cridren-enclosure.ogg", volume = 1.0},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/cridren-enclosure.ogg", volume = 0.65},
         apparent_volume = 0.45
     }
 }

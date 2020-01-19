@@ -19,7 +19,7 @@ ENTITY {
     type = "resource",
     name = "yotoi-tree-fruit",
     category = "yotoi-tree-fruit",
-    icon = "__pyalienlife__/graphics/icons/yotoi-fruit.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/yotoi-fruit.png",
     icon_size = 64,
     flags = {"placeable-neutral"},
     order = "a-b-a",
@@ -57,7 +57,7 @@ ENTITY {
     stage_counts = {800},
     stages = {
         sheet = {
-            filename = "__pyalienlife__/graphics/entity/crops/yotoi/yotoi.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/crops/yotoi/yotoi.png",
             priority = "extra-high",
             width = 64,
             height = 64,
@@ -65,7 +65,7 @@ ENTITY {
             variation_count = 1,
             shift = util.by_pixel(0, -0),
             hr_version = {
-                filename = "__pyalienlife__/graphics/entity/crops/yotoi/hr-yotoi.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/crops/yotoi/hr-yotoi.png",
                 priority = "extra-high",
                 width = 128,
                 height = 128,

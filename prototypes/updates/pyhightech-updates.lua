@@ -35,7 +35,7 @@ require('prototypes/recipes/recipes-auto-antelope')
 ITEM {
     type = "item",
     name = "replicator-kicalk",
-    icon = "__pyalienlife__/graphics/icons/replicator-kicalk.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/replicator-kicalk.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-replicators",
@@ -48,7 +48,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "replicator-cadaveric-arum",
-    icon = "__pyalienlife__/graphics/icons/replicator-cadaveric-arum.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/replicator-cadaveric-arum.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-replicators",
@@ -59,7 +59,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "cadaveric-arum-codex",
-    icon = "__pyalienlife__/graphics/icons/cadaveric-arum-codex.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum-codex.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-codex",
@@ -304,7 +304,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'moss', amount = 25},
     },
-    icon = '__pyalienlife__/graphics/icons/moss.png',
+    icon = '__pyalienlifegraphics__/graphics/icons/moss.png',
     icon_size = 32,
     subgroup = 'py-alienlife-plants',
     order = 'a'

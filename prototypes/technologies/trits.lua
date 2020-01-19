@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "trits",
-    icon = "__pyalienlife__/graphics/technology/trits.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/trits.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"water-animals-mk02","biotech-mk02"},
@@ -20,7 +20,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "trits-mk02",
-    icon = "__pyalienlife__/graphics/technology/trits-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/trits-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"trits"},
@@ -40,7 +40,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "trits-mk03",
-    icon = "__pyalienlife__/graphics/technology/trits-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/trits-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"trits-mk02"},
@@ -61,7 +61,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "trits-mk04",
-    icon = "__pyalienlife__/graphics/technology/trits-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/trits-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"trits-mk03"},

@@ -575,7 +575,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'phagnot',
 			name = 'Full Render phagnots',
-			icon = "__pyalienlife__/graphics/icons/rendering-phagnot.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-phagnot.png",
 			icon_size = 64,
 		},
 		--meat
@@ -598,7 +598,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'phagnot',
 			name = 'Extract phagnot Meat',
-			icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 			icon_size = 64,
 		},
 		--brain
@@ -615,7 +615,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'phagnot',
 			name = 'Extract phagnot brains',
-			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},	
 		--skin
@@ -632,7 +632,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'phagnot',
 			name = 'Extract phagnot skin',
-			icon = "__pyalienlife__/graphics/icons/skin.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
 			icon_size = 32,
 		},
 		--bones
@@ -649,7 +649,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'phagnot',
 			name = 'Extract phagnot bones',
-			icon = "__pyalienlife__/graphics/icons/mip/bones-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
 			icon_size = 64,
 		},
 		--guts
@@ -666,7 +666,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'phagnot',
 			name = 'Extract phagnot guts',
-			icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
 		},
 		--blood
@@ -683,7 +683,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'phagnot',
 			name = 'Extract phagnot blood',
-			icon = "__pyalienlife__/graphics/icons/blood.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
 			icon_size = 64,
 		},
 		--Gas Bladder
@@ -700,7 +700,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'phagnot',
 			name = 'Extract phagnot Gas bladder',
-			icon = "__pyalienlife__/graphics/icons/gas-bladder.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/gas-bladder.png",
 			icon_size = 64,
 		},
 		--brain phagnot rendering
@@ -719,7 +719,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'nanochondria',
 			name = 'Extract brains from Improved phagnots',
-			icon = "__pyalienlife__/graphics/icons/brain-caged-phagnot.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-phagnot.png",
 			icon_size = 64,
 		},
 		--bone phagnot rendering
@@ -737,7 +737,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'bmp',
 			name = 'Extract bones from Improved phagnots',
-			icon = "__pyalienlife__/graphics/icons/bone-caged-phagnot.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-phagnot.png",
 			icon_size = 64,
 		},
 		--guts phagnot rendering
@@ -755,7 +755,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'antitumor',
 			name = 'Extract guts from Improved phagnots',
-			icon = "__pyalienlife__/graphics/icons/guts-caged-phagnot.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-phagnot.png",
 			icon_size = 64,
 		},
 		--blood phagnot rendering
@@ -773,7 +773,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
 			name = 'Extract blood from Improved phagnots',
-			icon = "__pyalienlife__/graphics/icons/blood-caged-phagnot.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-phagnot.png",
 			icon_size = 64,
 		},
 		--skin phagnot rendering
@@ -791,7 +791,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'reca',
 			name = 'Extract skin from Improved phagnots',
-			icon = "__pyalienlife__/graphics/icons/skin-caged-phagnot.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-phagnot.png",
 			icon_size = 64,
 		},
 		--meat phagnot rendering
@@ -809,7 +809,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
 			name = 'Extract meat from Improved phagnots',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-phagnot.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-phagnot.png",
 			icon_size = 64,
 		},
 	}

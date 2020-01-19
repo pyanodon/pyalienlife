@@ -20,7 +20,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "vat-brain",
-    icon = "__pyalienlife__/graphics/icons/vat-brain.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/vat-brain.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-others",
@@ -32,7 +32,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "vat-brain",
-    icon = "__pyalienlife__/graphics/icons/vat-brain.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/vat-brain.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "vat-brain"},
@@ -59,7 +59,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlife__/graphics/entity/vat-brain/bot.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/vat-brain/bot.png",
                 width = 256,
                 height = 64,
                 line_length = 8,
@@ -68,7 +68,7 @@ ENTITY {
                 shift = util.by_pixel(16, 95)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/vat-brain/1.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/vat-brain/1.png",
                 width = 64,
                 height = 288,
                 line_length = 32,
@@ -77,7 +77,7 @@ ENTITY {
                 shift = util.by_pixel(-80, -80)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/vat-brain/2.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/vat-brain/2.png",
                 width = 64,
                 height = 288,
                 line_length = 32,
@@ -86,7 +86,7 @@ ENTITY {
                 shift = util.by_pixel(-16, -80)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/vat-brain/3.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/vat-brain/3.png",
                 width = 64,
                 height = 288,
                 line_length = 32,
@@ -95,7 +95,7 @@ ENTITY {
                 shift = util.by_pixel(48, -80)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/vat-brain/4.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/vat-brain/4.png",
                 width = 64,
                 height = 288,
                 line_length = 32,
@@ -141,8 +141,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/vat-brain.ogg", volume = 1.5},
-        idle_sound = {filename = "__pyalienlife__/sounds/vat-brain.ogg", volume = 1.00},
+        sound = {filename = "__pyalienlifegraphics__/sounds/vat-brain.ogg", volume = 1.5},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/vat-brain.ogg", volume = 1.00},
         apparent_volume = 2.5
     }
 }

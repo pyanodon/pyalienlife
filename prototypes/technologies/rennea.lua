@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "rennea",
-    icon = "__pyalienlife__/graphics/technology/rennea.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/rennea.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk03"},
@@ -20,7 +20,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "rennea-mk02",
-    icon = "__pyalienlife__/graphics/technology/rennea-mk02.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/rennea-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"rennea"},
@@ -40,7 +40,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "rennea-mk03",
-    icon = "__pyalienlife__/graphics/technology/rennea-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/rennea-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"rennea-mk02"},
@@ -61,7 +61,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "rennea-mk04",
-    icon = "__pyalienlife__/graphics/technology/rennea-mk04.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/rennea-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"rennea-mk03"},

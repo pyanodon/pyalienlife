@@ -543,7 +543,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'rendering',
 			name = 'Full Render Vrauks',
-			icon = "__pyalienlife__/graphics/icons/rendering-vrauks.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-vrauks.png",
 			icon_size = 64,
 		},
 		--meat
@@ -566,7 +566,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
 			name = 'Extract Vrauks Meat',
-			icon = "__pyalienlife__/graphics/icons/mip/meat-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 			icon_size = 64,
 		},
 		--brain
@@ -583,7 +583,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
 			name = 'Extract Vrauks brains',
-			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},	
 		--skin
@@ -600,7 +600,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
 			name = 'Extract Vrauks chithin',
-			icon = "__pyalienlife__/graphics/icons/chitin.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",
 			icon_size = 64,
 		},
 		--guts
@@ -617,7 +617,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
 			name = 'Extract Vrauks guts',
-			icon = "__pyalienlife__/graphics/icons/mip/guts-01.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
 		},
 		--blood
@@ -634,7 +634,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
 			name = 'Extract Vrauks blood',
-			icon = "__pyalienlife__/graphics/icons/arthropod-blood.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
 			icon_size = 32,
 		},
 		--brain vrauks rendering
@@ -652,7 +652,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'nanochondria',
 			name = 'Extract brains from Improved Vrauks',
-			icon = "__pyalienlife__/graphics/icons/brain-caged-vrauks.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-vrauks.png",
 			icon_size = 64,
 		},
 		--meat vrauks rendering
@@ -670,7 +670,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
 			name = 'Extract meat from Improved Vrauks',
-			icon = "__pyalienlife__/graphics/icons/meat-caged-vrauks.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-vrauks.png",
 			icon_size = 64,
 		},
 		--guts vrauks rendering
@@ -688,7 +688,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'antitumor',
 			name = 'Extract guts from Improved Vrauks',
-			icon = "__pyalienlife__/graphics/icons/guts-caged-vrauks.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-vrauks.png",
 			icon_size = 64,
 		},
 		--blood vrauks rendering
@@ -706,7 +706,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
 			name = 'Extract blood from Improved Vrauks',
-			icon = "__pyalienlife__/graphics/icons/blood-caged-vrauks.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-vrauks.png",
 			icon_size = 64,
 		},
 		--skin vrauks rendering
@@ -724,7 +724,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'reca',
 			name = 'Extract skin from Improved Vrauks',
-			icon = "__pyalienlife__/graphics/icons/chitin-caged-vrauks.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/chitin-caged-vrauks.png",
 			icon_size = 64,
 		},
 	}

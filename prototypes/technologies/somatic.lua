@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "somatic",
-    icon = "__pyalienlife__/graphics/technology/somatic.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/somatic.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"genetic-design"},
@@ -22,7 +22,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "transgenes",
-    icon = "__pyalienlife__/graphics/technology/transgenes.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/transgenes.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"somatic","recombinant-ery"},

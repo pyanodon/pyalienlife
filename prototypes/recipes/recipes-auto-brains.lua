@@ -32,7 +32,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
 			name = 'Full Render arthuriansb',
-			icon = "__pyalienlife__/graphics/icons/rendering-arthurian.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-arthurian.png",
 			icon_size = 64,
 		},
 		--brain
@@ -55,7 +55,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'interactive-cognition',
 			name = 'Extract arthurian brainsb',
-			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},	
 	}
@@ -90,7 +90,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
 			name = 'Full Render auogsb',
-			icon = "__pyalienlife__/graphics/icons/rendering-auog.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-auog.png",
 			icon_size = 64,
 		},
 		--brain
@@ -113,7 +113,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'interactive-cognition',
 			name = 'Extract auog brainsb',
-			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},	
 	}
@@ -148,7 +148,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
 			name = 'Full Render dingritsb',
-			icon = "__pyalienlife__/graphics/icons/rendering-dingrits.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-dingrits.png",
 			icon_size = 64,
 		},
 		--brain
@@ -171,7 +171,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'interactive-cognition',
 			name = 'Extract dingrits brainsb',
-			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},	
 	}
@@ -205,7 +205,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
 			name = 'Full Render kmautsb',
-			icon = "__pyalienlife__/graphics/icons/rendering-kmauts.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-kmauts.png",
 			icon_size = 64,
 		},
 		--brain
@@ -227,7 +227,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'interactive-cognition',
 			name = 'Extract kmauts brainsb',
-			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},	
 	}
@@ -262,7 +262,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
 			name = 'Full Render Mukmouxsb',
-			icon = "__pyalienlife__/graphics/icons/rendering-mukmoux.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-mukmoux.png",
 			icon_size = 64,
 		},
 		--brain
@@ -285,7 +285,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'interactive-cognition',
 			name = 'Extract Mukmoux brainsb',
-			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},	
 	}
@@ -321,7 +321,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
 			name = 'Full Render phadaisb',
-			icon = "__pyalienlife__/graphics/icons/rendering-phadai.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-phadai.png",
 			icon_size = 64,
 		},
 		--brain
@@ -346,7 +346,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'interactive-cognition',
 			name = 'Extract phadai brainsb',
-			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},	
 	}
@@ -381,7 +381,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
 			name = 'Full Render phagnotsb',
-			icon = "__pyalienlife__/graphics/icons/rendering-phagnot.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-phagnot.png",
 			icon_size = 64,
 		},
 		--brain
@@ -404,7 +404,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'interactive-cognition',
 			name = 'Extract phagnot brainsb',
-			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},	
 	}
@@ -441,7 +441,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
 			name = 'Full Render scrondrixsb',
-			icon = "__pyalienlife__/graphics/icons/rendering-scrondrix.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-scrondrix.png",
 			icon_size = 64,
 		},
 		--brain
@@ -465,7 +465,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'interactive-cognition',
 			name = 'Extract scrondrix brainsb',
-			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},
 	}
@@ -500,7 +500,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
 			name = 'Full Render Tritsb',
-			icon = "__pyalienlife__/graphics/icons/rendering-trits.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-trits.png",
 			icon_size = 64,
 		},
 		--brain
@@ -523,7 +523,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'interactive-cognition',
 			name = 'Extract Trits brainsb',
-			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},	
 	}
@@ -558,7 +558,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
 			name = 'Full Render Ulricsb',
-			icon = "__pyalienlife__/graphics/icons/rendering-ulric.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-ulric.png",
 			icon_size = 64,
 		},
 		--brain
@@ -581,7 +581,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'interactive-cognition',
 			name = 'Extract Ulric brainsb',
-			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},	
 	}
@@ -616,7 +616,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
 			name = 'Full Render Vonixb',
-			icon = "__pyalienlife__/graphics/icons/rendering-vonix.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-vonix.png",
 			icon_size = 64,
 		},
 		--brain
@@ -639,7 +639,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'interactive-cognition',
 			name = 'Extract Vonix brainb',
-			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},
 	}
@@ -674,7 +674,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
 			name = 'Full Render Vrauksb',
-			icon = "__pyalienlife__/graphics/icons/rendering-vrauks.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-vrauks.png",
 			icon_size = 64,
 		},
 		--brain
@@ -695,7 +695,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'interactive-cognition',
 			name = 'Extract Vrauks brainsb',
-			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},	
 	}
@@ -730,7 +730,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
 			name = 'Full Render Xenosb',
-			icon = "__pyalienlife__/graphics/icons/rendering-xeno.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-xeno.png",
 			icon_size = 64,
 		},
 		--brain
@@ -751,7 +751,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'interactive-cognition',
 			name = 'Extract Xeno brainsb',
-			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},	
 	}
@@ -785,7 +785,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
 			name = 'Full Render zipirb',
-			icon = "__pyalienlife__/graphics/icons/rendering-zipir.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-zipir.png",
 			icon_size = 64,
 		},
 		--brain
@@ -807,7 +807,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'interactive-cognition',
 			name = 'Extract zipir brainb',
-			icon = "__pyalienlife__/graphics/icons/mip/brain-04.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
 		},
 	}

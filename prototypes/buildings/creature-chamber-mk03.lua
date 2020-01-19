@@ -18,7 +18,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "creature-chamber-mk03",
-    icon = "__pyalienlife__/graphics/icons/creature-chamber-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/creature-chamber-mk03.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk03",
@@ -30,7 +30,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "creature-chamber-mk03",
-    icon = "__pyalienlife__/graphics/icons/creature-chamber-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/creature-chamber-mk03.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "creature-chamber-mk03"},
@@ -58,7 +58,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlife__/graphics/entity/creature-chamber/base.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/creature-chamber/base.png",
                 width = 384,
                 height = 32,
                 line_length = 5,
@@ -67,7 +67,7 @@ ENTITY {
                 shift = util.by_pixel(16, 160)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/creature-chamber/a1.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/creature-chamber/a1.png",
                 width = 128,
                 height = 320,
                 line_length = 16,
@@ -76,7 +76,7 @@ ENTITY {
                 shift = util.by_pixel(-112, -16)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/creature-chamber/a1-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/creature-chamber/a1-mask.png",
                 width = 128,
                 height = 320,
                 line_length = 16,
@@ -86,7 +86,7 @@ ENTITY {
                 tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/creature-chamber/a2.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/creature-chamber/a2.png",
                 width = 128,
                 height = 320,
                 line_length = 16,
@@ -95,7 +95,7 @@ ENTITY {
                 shift = util.by_pixel(16, -16)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/creature-chamber/a2-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/creature-chamber/a2-mask.png",
                 width = 128,
                 height = 320,
                 line_length = 16,
@@ -105,7 +105,7 @@ ENTITY {
                 tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
             },
             {
-                filename = "__pyalienlife__/graphics/entity/creature-chamber/a3.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/creature-chamber/a3.png",
                 width = 128,
                 height = 320,
                 line_length = 16,
@@ -114,7 +114,7 @@ ENTITY {
                 shift = util.by_pixel(144, -16)
             },
             {
-                filename = "__pyalienlife__/graphics/entity/creature-chamber/a3-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/creature-chamber/a3-mask.png",
                 width = 128,
                 height = 320,
                 line_length = 16,
@@ -186,8 +186,8 @@ ENTITY {
 
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlife__/sounds/creature-chamber.ogg", volume = 0.7},
-        idle_sound = {filename = "__pyalienlife__/sounds/creature-chamber.ogg", volume = 0.45},
+        sound = {filename = "__pyalienlifegraphics__/sounds/creature-chamber.ogg", volume = 0.7},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/creature-chamber.ogg", volume = 0.45},
         apparent_volume = 2.5
     }
 }
