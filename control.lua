@@ -575,7 +575,7 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 
 	landbots = global.landbots
 	caravanroutes = global.caravanroutes
-	
+
 	log(serpent.block(landbots))
 
 	if event.entity.name == 'lb-control-tower' then
@@ -680,9 +680,9 @@ script.on_event(defines.events.on_gui_selection_state_changed, function(event)
 			--log(value)
 			--log(serpent.block(outpost_table))
 			--log(serpent.block(outpost_table[value]))
-			
+
 			local otnum = global.outpost_numbers[value]
-			
+
 			caravanroutes[id_num].startpoint.id = outpost_table['outpost'..otnum].entity.unit_number
 			caravanroutes[id_num].startpoint.pos = outpost_table['outpost'..otnum].entity.position
 
@@ -692,9 +692,9 @@ script.on_event(defines.events.on_gui_selection_state_changed, function(event)
 			--log(value)
 			--log(serpent.block(outpost_table))
 			--log(serpent.block(outpost_table[value]))
-			
+
 			local otnum = global.outpost_numbers[value]
-			
+
 			caravanroutes[id_num].endpoint.id = outpost_table['outpost'..otnum].entity.unit_number
 			caravanroutes[id_num].endpoint.pos = outpost_table['outpost'..otnum].entity.position
 		end
@@ -731,10 +731,11 @@ script.on_event(defines.events.on_gui_value_changed, function(event)
 end)
 
 script.on_event(defines.events.on_gui_confirmed, function(event)
-
-global.outpost_names[global.current_outpost] = outpostgui.outpost_name.text
-
+	if event.element.name == 'outpost_name' then
+		global.outpost_names[global.current_outpost] = outpostgui.outpost_name.text
+	end
 end)
+
 script.on_event(defines.events.on_gui_elem_changed, function(event)
 
 	landbots = global.landbots
@@ -860,7 +861,7 @@ local function create_caravan_gui(event, entity)
 		for n, name in pairs(global.outpost_names) do
 			table.insert(names, name)
 			global.outpost_numbers[name] = n
-		end 
+		end
 	caravangui.ctable.route_frame.add({type = 'drop-down', name = 'outpost-list', items = names })
 	if caravanroutes[entity.unit_number] ~= nil and caravanroutes[entity.unit_number].endpoint.id ~= nil and global.outpost_names[caravanroutes[entity.unit_number].endpoint.id] ~= nil then
 		caption = 'Route End: '.. global.outpost_names[caravanroutes[entity.unit_number].endpoint.id]
