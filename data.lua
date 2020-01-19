@@ -284,6 +284,8 @@ require("prototypes/fluids/manure-bacteria")
 require("prototypes/fluids/liquid-manure")
 require("prototypes/fluids/creamy-latex")
 require("prototypes/fluids/formic-acid")
+require("prototypes/fluids/subcritical-water")
+require("prototypes/fluids/depolymerized-organics")
 
 --(( RECIPES ))--
 require('prototypes/items/items')

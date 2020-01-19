@@ -1533,3 +1533,21 @@ RECIPE {
     },
     --main_product = "b-molasse",
 }:add_unlock("mycology-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'crude-from-manure',
+    category = 'fts-reactor',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'fluid', name = 'depolymerized-organics', amount = 100},
+    },
+    results = {
+        {type = 'fluid', name = 'crude-oil', amount = 70},
+        {type = 'fluid', name = 'steam', amount = 50, temperature = 165},
+        {type = 'fluid', name = 'dirty-water', amount = 50},
+        {type = 'item', name = 'soot', amount = 3},
+    },
+    main_product = "crude-oil",
+}:add_unlock("biotech-mk02"):change_category('lor')

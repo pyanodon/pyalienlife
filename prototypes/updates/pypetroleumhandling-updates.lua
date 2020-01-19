@@ -1,3 +1,5 @@
+local fun = require("prototypes/functions/functions")
+
 --BUILDINDS--
 
 
@@ -15,6 +17,9 @@ RECIPE('chemical-science-01'):replace_ingredient("water","crude-oil")
 RECIPE('production-science-01'):replace_ingredient("water","crude-oil")
 RECIPE('chemical-science-01'):replace_ingredient("water","crude-oil")
 RECIPE('harvester'):replace_ingredient("small-parts-01","small-parts-03")
+
+
+fun.results_replacer("crude-from-manure", "crude-oil", "scrude")
 
 ----EXCLUSIVE RECIPES----
 
@@ -85,3 +90,18 @@ RECIPE {
         {type = 'fluid', name = 'natural-gas', amount = 50}
     }
 }:add_unlock('phagnot-mk02'):change_category('gas-refinery')
+
+RECIPE {
+    type = 'recipe',
+    name = 'subcritical-water-2',
+    category = 'heat-exchanger',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'fluid', name = 'pressured-water', amount = 200},
+        {type = 'fluid', name = 'hot-air', amount = 100},
+    },
+    results = {
+        {type = 'fluid', name = 'subcritical-water', amount = 200},
+    },
+}:add_unlock("biotech-mk02")
