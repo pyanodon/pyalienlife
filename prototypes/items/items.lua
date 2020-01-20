@@ -3304,7 +3304,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "x",
-    stack_size = 10
+    stack_size = 1
 }
 
 ITEM {
@@ -6259,7 +6259,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-replicators",
     order = "x",
-    stack_size = 10
+    stack_size = 1
 }
 
 ITEM {
@@ -6270,7 +6270,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-replicators",
     order = "x",
-    stack_size = 10
+    stack_size = 1
 }
 
 ITEM {
@@ -6281,7 +6281,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-replicators",
     order = "x",
-    stack_size = 10
+    stack_size = 1
 }
 
 ITEM {
@@ -6292,7 +6292,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-replicators",
     order = "x",
-    stack_size = 10
+    stack_size = 1
 }
 
 ITEM {
@@ -6303,7 +6303,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-replicators",
     order = "x",
-    stack_size = 10
+    stack_size = 1
 }
 
 ITEM {
@@ -6314,7 +6314,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-replicators",
     order = "x",
-    stack_size = 10
+    stack_size = 1
 }
 
 ITEM {
@@ -6325,7 +6325,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-replicators",
     order = "x",
-    stack_size = 10
+    stack_size = 1
 }
 
 ------------------------------

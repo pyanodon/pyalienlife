@@ -40,7 +40,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-replicators",
     order = "x",
-    stack_size = 10
+    stack_size = 1
 }
 
 ----CADAVERIC ARUM-----
@@ -53,7 +53,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-replicators",
     order = "x",
-    stack_size = 10
+    stack_size = 1
 }
 
 ITEM {
