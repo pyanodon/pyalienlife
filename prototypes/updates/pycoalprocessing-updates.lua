@@ -45,6 +45,7 @@ RECIPE('chemical-science-pack'):replace_ingredient("advanced-circuit","neuroproc
 RECIPE('filtration-media'):add_ingredient({type = "item", name = "micro-fiber", amount = 2})
 RECIPE('alien-sample01'):add_ingredient({type = "item", name = "bio-sample", amount = 12})
 RECIPE('flask'):remove_ingredient("wood"):add_ingredient({type = "item", name = "stopper", amount = 2})
+RECIPE('aromatics-to-plastic'):remove_unlock('methanol-processing-1'):add_unlock('coal-processing-1'):change_category('biofactory')
 
 RECIPE('mukmoux-fat'):remove_unlock('coal-processing-2')
 RECIPE('log-organics'):remove_unlock('coal-processing-2')
