@@ -26,6 +26,8 @@ end
 
 --ADAPTATIONS
 
+data.raw.fish.fish.minable.result = 'fish'
+
 for _, recipe in pairs(data.raw.recipe) do
     local r = RECIPE(recipe)
     r:replace_ingredient('py-fertilizer', 'fertilizer')
