@@ -624,7 +624,7 @@ fun.autorecipes {
 					{name='bonemeal', amount = 4},
 				},
 			crafting_speed = 15,
-			tech = 'advanced-rendering',
+			tech = 'rendering',
 			name = 'auogs to Bonemeal',
 			icon = "__pyalienlifegraphics__/graphics/icons/bonemeal.png",
 			icon_size = 64,
