@@ -67,7 +67,7 @@ RECIPE {
     results = {
         {type = "item", name = "biomass", amount = 10}
     },
-}:add_unlock("botany-mk01")
+}:add_unlock("botany-mk02")
 
 RECIPE {
     type = "recipe",
