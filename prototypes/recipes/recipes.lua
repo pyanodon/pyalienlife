@@ -1551,3 +1551,19 @@ RECIPE {
     },
     main_product = "crude-oil",
 }:add_unlock("biotech-mk02"):change_category('lor')
+
+RECIPE {
+    type = 'recipe',
+    name = 'bone-to-bonemeal-2',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'bones', amount = 10},
+        {type = 'fluid', name = 'steam', amount = 200, temperature = 165},
+    },
+    results = {
+        {type = 'item', name = 'bonemeal', amount = 5},
+    },
+    --main_product = "crude-oil",
+}:add_unlock("rendering"):change_category('fbreactor')
