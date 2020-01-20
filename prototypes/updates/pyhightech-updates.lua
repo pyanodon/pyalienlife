@@ -217,7 +217,7 @@ RECIPE('fawogae2'):remove_unlock('advanced-electronics')
 RECIPE('fiber'):remove_unlock('basic-electronics')
 --RECIPE('urea'):change_category('vrauks'):subgroup_order("py-alienlife-auog", "a")
 ITEM('urea'):subgroup_order("py-alienlife-auog", "a")
-RECIPE('waste-water-urea'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('basic-electronics'):add_unlock('dhilmos')
+RECIPE('waste-water-urea'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('basic-electronics'):add_unlock('water-animals-mk01')
 RECIPE('ammonia-urea'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('oil-processing'):add_unlock('biotech-mk02')
 RECIPE('urea2'):remove_unlock('coal-processing-1')
 RECIPE('urea'):set_fields {enabled = false}
