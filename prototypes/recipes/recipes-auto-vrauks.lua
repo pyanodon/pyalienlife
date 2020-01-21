@@ -315,7 +315,7 @@ fun.autorecipes {
                     {name='biomass',amount =15},
                     {name='moss',amount =10},
 					{name='waterbarrel',amount=4,return_item={name='empty-barrel',amount=4}},
-					{name='bedding',amount = 3},
+					{name='saps',amount = 3},
 				},
 			results =
 				{
@@ -338,11 +338,11 @@ fun.autorecipes {
 			crafting_speed = 60,
 			tech = 'vrauks'
 		},
-		--saps
+		--bedding
 		{
 			ingredients =
 				{
-					{name='saps',amount = 10},
+					{name='bedding',amount = 10},
 				},
 			results =
 				{
