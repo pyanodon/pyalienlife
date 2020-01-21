@@ -260,7 +260,7 @@ require("prototypes/buildings/collector")
 require("prototypes/buildings/test-filtered-chest-mk01")
 
 --Loco--
-require('prototypes/loco/pyloco')
+--require('prototypes/loco/pyloco')
 
 --(( FLUIDS ))--
 require("prototypes/fluids/zogna-bacteria")
