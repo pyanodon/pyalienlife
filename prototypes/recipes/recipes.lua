@@ -716,6 +716,7 @@ RECIPE {
     energy_required = 20,
     ingredients = {
         {type = 'item', name = 'peptidase-m58', amount = 1},
+        {type = 'item', name = 'carapace', amount = 5},
         {type = 'item', name = 'guts', amount = 8},
         {type = 'item', name = 'cobalt-nx', amount = 4},
         {type = 'item', name = 'retrovirus', amount = 1},
