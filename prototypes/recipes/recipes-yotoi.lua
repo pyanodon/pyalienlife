@@ -169,7 +169,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'yotoi-mk02', amount = 2},
+        {type = 'item', name = 'yotoi', amount = 2},
         {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'yotoi-seeds', amount = 10},
         {type = 'fluid', name = 'carbon-dioxide', amount = 300},
@@ -179,7 +179,7 @@ RECIPE {
         {type = 'fluid', name = 'water', amount = 1000},
         },
     results = {
-        {type = 'item', name = 'yotoi-mk03', amount = 1, probability = 0.005},
+        {type = 'item', name = 'yotoi-mk03', amount = 1, probability = 0.004},
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "yotoi-mk03",
@@ -196,7 +196,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'yotoi-mk03', amount = 2},
+        {type = 'item', name = 'yotoi', amount = 2},
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},
         {type = 'item', name = 'yotoi-seeds', amount = 10},
         {type = 'fluid', name = 'carbon-dioxide', amount = 300},
@@ -206,7 +206,7 @@ RECIPE {
         {type = 'fluid', name = 'water', amount = 1000},
         },
     results = {
-        {type = 'item', name = 'yotoi-mk04', amount = 1, probability = 0.005},
+        {type = 'item', name = 'yotoi-mk04', amount = 1, probability = 0.003},
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "yotoi-mk04",

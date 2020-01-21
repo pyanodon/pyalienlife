@@ -239,7 +239,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'arthurian-mk02', amount = 2},
+        {type = 'item', name = 'arthurian', amount = 2},
         {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'caged-ulric', amount = 1},
         {type = 'item', name = 'bedding', amount = 3},
@@ -247,7 +247,7 @@ RECIPE {
         {type = 'item', name = 'water-barrel', amount = 4},
         },
     results = {
-        {type = 'item', name = 'arthurian-mk03', amount = 1, probability = 0.005},
+        {type = 'item', name = 'arthurian-mk03', amount = 1, probability = 0.004},
         {type = 'item', name = 'empty-barrel', amount = 4},
     },
     --main_product = "arthurian-mk03",
@@ -264,7 +264,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'arthurian-mk03', amount = 2},
+        {type = 'item', name = 'arthurian', amount = 2},
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},
         {type = 'item', name = 'caged-ulric', amount = 1},
         {type = 'item', name = 'bedding', amount = 3},
@@ -272,7 +272,7 @@ RECIPE {
         {type = 'item', name = 'water-barrel', amount = 4},
         },
     results = {
-        {type = 'item', name = 'arthurian-mk04', amount = 1, probability = 0.005},
+        {type = 'item', name = 'arthurian-mk04', amount = 1, probability = 0.003},
         {type = 'item', name = 'empty-barrel', amount = 4},
     },
     --main_product = "arthurian-mk04",

@@ -124,7 +124,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'xyhiphoe-mk02', amount = 2},
+        {type = 'item', name = 'xyhiphoe', amount = 2},
         {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'fish-food-02', amount = 2},
         {type = 'item', name = 'filtration-media', amount = 5},
@@ -132,7 +132,7 @@ RECIPE {
         {type = 'fluid', name = 'pressured-water', amount = 3000},
         },
     results = {
-        {type = 'item', name = 'xyhiphoe-mk03', amount = 1, probability = 0.005},
+        {type = 'item', name = 'xyhiphoe-mk03', amount = 1, probability = 0.004},
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "xyhiphoe-mk03",
@@ -149,7 +149,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'xyhiphoe-mk03', amount = 2},
+        {type = 'item', name = 'xyhiphoe', amount = 2},
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},
         {type = 'item', name = 'fish-food-02', amount = 2},
         {type = 'item', name = 'filtration-media', amount = 5},
@@ -157,7 +157,7 @@ RECIPE {
         {type = 'fluid', name = 'pressured-water', amount = 3000},
         },
     results = {
-        {type = 'item', name = 'xyhiphoe-mk04', amount = 1, probability = 0.005},
+        {type = 'item', name = 'xyhiphoe-mk04', amount = 1, probability = 0.003},
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "xyhiphoe-mk04",

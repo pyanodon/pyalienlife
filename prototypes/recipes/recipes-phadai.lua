@@ -231,7 +231,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'phadai-mk02', amount = 2},
+        {type = 'item', name = 'phadai', amount = 2},
         {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'phadai-food-02', amount = 1},
         {type = 'item', name = 'programmable-speaker', amount = 3},
@@ -241,7 +241,7 @@ RECIPE {
         {type = 'item', name = 'meat', amount = 5},
         },
     results = {
-        {type = 'item', name = 'phadai-mk03', amount = 1, probability = 0.005},
+        {type = 'item', name = 'phadai-mk03', amount = 1, probability = 0.004},
         {type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "phadai-mk03",
@@ -258,7 +258,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'phadai-mk03', amount = 2},
+        {type = 'item', name = 'phadai', amount = 2},
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},
         {type = 'item', name = 'phadai-food-02', amount = 1},
         {type = 'item', name = 'programmable-speaker', amount = 3},
@@ -268,7 +268,7 @@ RECIPE {
         {type = 'item', name = 'meat', amount = 5},
         },
     results = {
-        {type = 'item', name = 'phadai-mk04', amount = 1, probability = 0.005},
+        {type = 'item', name = 'phadai-mk04', amount = 1, probability = 0.003},
         {type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "phadai-mk04",
