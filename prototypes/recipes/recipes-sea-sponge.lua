@@ -215,13 +215,13 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'sea-sponge-mk02', amount = 2},
+        {type = 'item', name = 'sea-sponge', amount = 2},
         {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'fluid', name = 'phytoplankton', amount = 50},
         {type = 'fluid', name = 'zogna-bacteria', amount = 100},
         },
     results = {
-        {type = 'item', name = 'sea-sponge-mk03', amount = 1, probability = 0.005},
+        {type = 'item', name = 'sea-sponge-mk03', amount = 1, probability = 0.004},
         {type = 'fluid', name = 'water-saline', amount = 50},
     },
     --main_product = "sea-sponge-mk03",
@@ -238,13 +238,13 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'sea-sponge-mk03', amount = 2},
+        {type = 'item', name = 'sea-sponge', amount = 2},
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},
         {type = 'fluid', name = 'phytoplankton', amount = 50},
         {type = 'fluid', name = 'zogna-bacteria', amount = 100},
         },
     results = {
-        {type = 'item', name = 'sea-sponge-mk04', amount = 1, probability = 0.005},
+        {type = 'item', name = 'sea-sponge-mk04', amount = 1, probability = 0.003},
         {type = 'fluid', name = 'water-saline', amount = 50},
     },
     --main_product = "sea-sponge-mk04",

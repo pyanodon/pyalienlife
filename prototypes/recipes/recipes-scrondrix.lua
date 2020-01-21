@@ -182,7 +182,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'scrondrix-mk02', amount = 2},
+        {type = 'item', name = 'scrondrix', amount = 2},
         {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'meat', amount = 5},
         {type = 'item', name = 'bedding', amount = 4},
@@ -191,7 +191,7 @@ RECIPE {
         {type = 'item', name = 'water-barrel', amount = 8},
         },
     results = {
-        {type = 'item', name = 'scrondrix-mk03', amount = 1, probability = 0.005},
+        {type = 'item', name = 'scrondrix-mk03', amount = 1, probability = 0.004},
         {type = 'item', name = 'empty-barrel', amount = 8},
     },
     --main_product = "scrondrix-mk03",
@@ -208,7 +208,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'scrondrix-mk03', amount = 2},
+        {type = 'item', name = 'scrondrix', amount = 2},
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},
         {type = 'item', name = 'meat', amount = 5},
         {type = 'item', name = 'bedding', amount = 4},
@@ -217,7 +217,7 @@ RECIPE {
         {type = 'item', name = 'water-barrel', amount = 8},
         },
     results = {
-        {type = 'item', name = 'scrondrix-mk04', amount = 1, probability = 0.005},
+        {type = 'item', name = 'scrondrix-mk04', amount = 1, probability = 0.003},
         {type = 'item', name = 'empty-barrel', amount = 8},
     },
     --main_product = "scrondrix-mk04",

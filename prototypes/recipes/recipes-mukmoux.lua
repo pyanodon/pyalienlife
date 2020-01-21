@@ -224,7 +224,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'mukmoux-mk02', amount = 2},
+        {type = 'item', name = 'mukmoux', amount = 2},
         {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'mukmoux-food-02', amount = 3},
         {type = 'item', name = 'bedding', amount = 4},
@@ -233,7 +233,7 @@ RECIPE {
         {type = 'item', name = 'water-barrel', amount = 6},
         },
     results = {
-        {type = 'item', name = 'mukmoux-mk03', amount = 1, probability = 0.005},
+        {type = 'item', name = 'mukmoux-mk03', amount = 1, probability = 0.004},
         {type = 'item', name = 'empty-barrel', amount = 6},
     },
     --main_product = "mukmoux-mk03",
@@ -250,7 +250,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'mukmoux-mk03', amount = 2},
+        {type = 'item', name = 'mukmoux', amount = 2},
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},
         {type = 'item', name = 'mukmoux-food-02', amount = 3},
         {type = 'item', name = 'bedding', amount = 4},
@@ -259,7 +259,7 @@ RECIPE {
         {type = 'item', name = 'water-barrel', amount = 6},
         },
     results = {
-        {type = 'item', name = 'mukmoux-mk04', amount = 1, probability = 0.005},
+        {type = 'item', name = 'mukmoux-mk04', amount = 1, probability = 0.003},
         {type = 'item', name = 'empty-barrel', amount = 6},
     },
     --main_product = "mukmoux-mk04",

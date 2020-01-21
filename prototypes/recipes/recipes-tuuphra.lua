@@ -127,7 +127,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'tuuphra-mk02', amount = 2},
+        {type = 'item', name = 'tuuphra', amount = 2},
         {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'fluid', name = 'carbon-dioxide', amount = 300},
         {type = 'item', name = 'manure', amount = 15},
@@ -136,7 +136,7 @@ RECIPE {
         {type = 'fluid', name = 'water', amount = 1000},
         },
     results = {
-        {type = 'item', name = 'tuuphra-mk03', amount = 1, probability = 0.005},
+        {type = 'item', name = 'tuuphra-mk03', amount = 1, probability = 0.004},
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "tuuphra-mk03",
@@ -153,7 +153,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'tuuphra-mk03', amount = 2},
+        {type = 'item', name = 'tuuphra', amount = 2},
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},
         {type = 'fluid', name = 'carbon-dioxide', amount = 300},
         {type = 'item', name = 'manure', amount = 15},
@@ -162,7 +162,7 @@ RECIPE {
         {type = 'fluid', name = 'water', amount = 1000},
         },
     results = {
-        {type = 'item', name = 'tuuphra-mk04', amount = 1, probability = 0.005},
+        {type = 'item', name = 'tuuphra-mk04', amount = 1, probability = 0.003},
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "tuuphra-mk04",

@@ -198,7 +198,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'zipir2', amount = 2},
+        {type = 'item', name = 'zipir1', amount = 2},
         {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'filtration-media', amount = 5},
         {type = 'item', name = 'stone-wool', amount = 4},
@@ -206,7 +206,7 @@ RECIPE {
         {type = 'fluid', name = 'pressured-water', amount = 3000},
         },
     results = {
-        {type = 'item', name = 'zipir3', amount = 1, probability = 0.005},
+        {type = 'item', name = 'zipir3', amount = 1, probability = 0.004},
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "zipir-mk03",
@@ -223,7 +223,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'zipir3', amount = 2},
+        {type = 'item', name = 'zipir1', amount = 2},
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},
         {type = 'item', name = 'filtration-media', amount = 5},
         {type = 'item', name = 'stone-wool', amount = 4},
@@ -231,7 +231,7 @@ RECIPE {
         {type = 'fluid', name = 'pressured-water', amount = 3000},
         },
     results = {
-        {type = 'item', name = 'zipir4', amount = 1, probability = 0.005},
+        {type = 'item', name = 'zipir4', amount = 1, probability = 0.003},
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "zipir-mk04",

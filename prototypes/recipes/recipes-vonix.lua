@@ -152,7 +152,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'vonix-mk02', amount = 2},
+        {type = 'item', name = 'vonix', amount = 2},
         {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'caged-mukmoux', amount = 1},
         {type = 'item', name = 'guts', amount = 5},
@@ -160,7 +160,7 @@ RECIPE {
         {type = 'item', name = 'water-barrel', amount = 15},
         },
     results = {
-        {type = 'item', name = 'vonix-mk03', amount = 1, probability = 0.005},
+        {type = 'item', name = 'vonix-mk03', amount = 1, probability = 0.004},
         {type = 'item', name = 'empty-barrel', amount = 15},
     },
     --main_product = "vonix-mk03",
@@ -177,7 +177,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'vonix-mk03', amount = 2},
+        {type = 'item', name = 'vonix', amount = 2},
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},
         {type = 'item', name = 'caged-mukmoux', amount = 1},
         {type = 'item', name = 'guts', amount = 5},
@@ -185,7 +185,7 @@ RECIPE {
         {type = 'item', name = 'water-barrel', amount = 15},
         },
     results = {
-        {type = 'item', name = 'vonix-mk04', amount = 1, probability = 0.005},
+        {type = 'item', name = 'vonix-mk04', amount = 1, probability = 0.003},
         {type = 'item', name = 'empty-barrel', amount = 15},
     },
     --main_product = "vonix-mk04",
