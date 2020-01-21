@@ -31,7 +31,7 @@ ITEM {
 }
 
 ENTITY {
-    type = "generator",
+    type = "burner-generator",
     name = "generator-2",
     icon = "__pyalienlifegraphics__/graphics/icons/generator-2.png",
     icon_size = 64,
@@ -63,7 +63,7 @@ ENTITY {
 		},
 	effectivity = 1,
 	max_power_output = "3.5MW",
-    horizontal_animation = {
+    animation = {
         layers = {
             {
                 filename = "__pyalienlifegraphics__/graphics/entity/generator-2/a1.png",
@@ -83,10 +83,6 @@ ENTITY {
                 animation_speed = 0.4,
                 shift = util.by_pixel(80, -16)
             },
-    },
-},
-    vertical_animation = {
-        layers = {
             {
                 filename = "__pyalienlifegraphics__/graphics/entity/generator-2/a1.png",
                 width = 128,
