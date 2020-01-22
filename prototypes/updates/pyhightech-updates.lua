@@ -526,7 +526,7 @@ RECIPE {
         {type = 'fluid', name = 'zogna-bacteria', amount = 10},
     },
     results = {
-        {type = 'item', name = 'urea', amount = 20},
+        {type = 'item', name = 'urea', amount = 30},
     },
     --main_product = "cocoon",
 }:add_unlock("biotech-mk01")
