@@ -453,7 +453,7 @@ RECIPE {
         {type = 'item', name = 'urea', amount = 8},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk02")
+}:add_unlock("molecular-decohesion-mk01")
 
 RECIPE {
     type = 'recipe',
