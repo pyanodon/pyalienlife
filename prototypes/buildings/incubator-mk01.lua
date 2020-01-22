@@ -14,7 +14,7 @@ RECIPE {
     enabled = false,
     ingredients = {
         {"glass", 50},
-        {"assembling-machine-2", 2},
+        {"assembling-machine-1", 2},
         {"gasifier", 1},
         {"nexelit-plate", 30},
         {"plastic-bar", 30},
@@ -24,7 +24,7 @@ RECIPE {
     results = {
         {"incubator-mk01", 1}
     }
-}:add_unlock("microbiology-mk02")
+}:add_unlock("microbiology-mk01")
 
 ITEM {
     type = "item",
