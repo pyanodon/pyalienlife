@@ -2,7 +2,7 @@ RECIPE {
     type = "recipe",
     name = "collector",
     energy_required = 0.5,
-    enabled = true,
+    enabled = false,
     ingredients = {
         {"electric-mining-drill", 2},
         {"soil-extractormk01", 1},
@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"collector", 1}
     }
-}
+}:add_unlock("biotech-mk01")
 
 ITEM {
     type = "item",
