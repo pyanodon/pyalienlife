@@ -9,7 +9,7 @@ RECIPE {
     enabled = false,
     energy_required = 300,
     ingredients = {
-        {type = 'item', name = 'alien-sample01', amount = 2},
+        {type = 'item', name = 'earth-generic-sample', amount = 2},
         {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'cdna', amount = 3},
         {type = 'item', name = 'auog-codex', amount = 1},
