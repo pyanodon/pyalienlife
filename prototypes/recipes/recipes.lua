@@ -1206,7 +1206,7 @@ RECIPE {
     type = "recipe",
     name = "bio-container",
     category = "crafting",
-    enabled = true,
+    enabled = false,
     energy_required = 1,
     ingredients = {
         {type = 'item', name = 'lead-plate', amount = 1},
@@ -1218,7 +1218,7 @@ RECIPE {
         {type = 'item', name = 'bio-container', amount = 1}
     },
     --main_product = "adrenal-cortex",
-}
+}:add_unlock("biotech-mk01")
 
 RECIPE {
     type = "recipe",
