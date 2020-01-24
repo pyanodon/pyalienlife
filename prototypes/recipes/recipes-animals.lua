@@ -83,7 +83,7 @@ RECIPE {
         {type = 'fluid', name = 'steam', amount = 100},
     },
     results = {
-        {type = 'item', name = 'vrauks-food-01', amount = 2},
+        {type = 'item', name = 'vrauks-food-01', amount = 3},
     },
 }:add_unlock("food-mk01"):add_ingredient({type = "item", name = "fiberboard", amount = 1})
 

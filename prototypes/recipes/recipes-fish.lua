@@ -22,7 +22,7 @@ RECIPE {
         {type = 'fluid', name = 'steam', amount = 100},
     },
     results = {
-        {type = 'item', name = 'fish-food-01', amount = 1},
+        {type = 'item', name = 'fish-food-01', amount = 3},
     },
 }:add_unlock("food-mk02")
 
@@ -45,7 +45,7 @@ RECIPE {
         {type = 'fluid', name = 'blood', amount = 50},
     },
     results = {
-        {type = 'item', name = 'fish-food-02', amount = 1},
+        {type = 'item', name = 'fish-food-02', amount = 3},
     },
 }:add_unlock("food-mk03")
 

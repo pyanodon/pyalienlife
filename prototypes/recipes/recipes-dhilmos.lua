@@ -129,7 +129,7 @@ RECIPE {
         {type = 'fluid', name = 'steam', amount = 100},
     },
     results = {
-        {type = 'item', name = 'dhilmos-food-01', amount = 1},
+        {type = 'item', name = 'dhilmos-food-01', amount = 3},
     },
 }:add_unlock("food-mk01")
 
@@ -151,7 +151,7 @@ RECIPE {
         {type = 'fluid', name = 'blood', amount = 50},
     },
     results = {
-        {type = 'item', name = 'dhilmos-food-02', amount = 1},
+        {type = 'item', name = 'dhilmos-food-02', amount = 3},
     },
 }:add_unlock("food-mk02")
 
