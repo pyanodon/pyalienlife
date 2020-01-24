@@ -75,7 +75,7 @@ RECIPE {
         {type = 'fluid', name = 'steam', amount = 100},
     },
     results = {
-        {type = 'item', name = 'phadai-food-01', amount = 1},
+        {type = 'item', name = 'phadai-food-01', amount = 3},
     },
 }:add_unlock("food-mk03")
 
@@ -99,7 +99,7 @@ RECIPE {
         {type = 'fluid', name = 'steam', amount = 100},
     },
     results = {
-        {type = 'item', name = 'phadai-food-02', amount = 1},
+        {type = 'item', name = 'phadai-food-02', amount = 3},
     },
 }:add_unlock("food-mk03")
 

@@ -72,7 +72,7 @@ RECIPE {
         {type = 'fluid', name = 'steam', amount = 100},
     },
     results = {
-        {type = 'item', name = 'mukmoux-food-01', amount = 1},
+        {type = 'item', name = 'mukmoux-food-01', amount = 3},
     },
 }:add_unlock("food-mk02")
 
@@ -94,7 +94,7 @@ RECIPE {
         {type = 'fluid', name = 'steam', amount = 100},
     },
     results = {
-        {type = 'item', name = 'mukmoux-food-02', amount = 1},
+        {type = 'item', name = 'mukmoux-food-02', amount = 3},
     },
 }:add_unlock("food-mk03")
 

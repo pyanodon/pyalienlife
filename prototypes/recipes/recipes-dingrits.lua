@@ -74,7 +74,7 @@ RECIPE {
         {type = 'fluid', name = 'fish-oil', amount = 100},
     },
     results = {
-        {type = 'item', name = 'dingrits-food-01', amount = 1},
+        {type = 'item', name = 'dingrits-food-01', amount = 3},
     },
 }:add_unlock("food-mk01")
 
@@ -97,7 +97,7 @@ RECIPE {
         {type = 'fluid', name = 'fish-oil', amount = 100},
     },
     results = {
-        {type = 'item', name = 'dingrits-food-02', amount = 1},
+        {type = 'item', name = 'dingrits-food-02', amount = 3},
     },
 }:add_unlock("food-mk02")
 
