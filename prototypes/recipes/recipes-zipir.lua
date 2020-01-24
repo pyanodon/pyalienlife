@@ -66,7 +66,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'plastic-bar', amount = 2},
-        {type = 'item', name = 'seaweed', amount = 3},
+        {type = 'item', name = 'seaweed', amount = 20},
         {type = 'item', name = 'ralesia-seeds', amount = 10},
         {type = 'item', name = 'fish', amount = 10},
         {type = 'item', name = 'bones', amount = 5},
@@ -87,7 +87,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'plastic-bar', amount = 2},
         {type = 'item', name = 'navens', amount = 1},
-        {type = 'item', name = 'seaweed', amount = 5},
+        {type = 'item', name = 'seaweed', amount = 20},
         {type = 'item', name = 'fish', amount = 8},
         {type = 'item', name = 'rennea', amount = 15},
         {type = 'item', name = 'fawogae', amount = 10},
