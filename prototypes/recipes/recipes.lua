@@ -353,7 +353,7 @@ RECIPE {
     enabled = false,
     energy_required = 15,
     ingredients = {
-        {type = 'item', name = 'seaweed', amount = 10},
+        {type = 'item', name = 'seaweed', amount = 20},
         {type = 'item', name = 'navens', amount = 5},
     },
     results = {
@@ -1117,7 +1117,7 @@ RECIPE {
     enabled = true,
     energy_required = 15,
     ingredients = {
-        {type = 'item', name = 'seaweed', amount = 4},
+        {type = 'item', name = 'seaweed', amount = 5},
         {type = 'item', name = 'stone', amount = 5},
         {type = 'fluid', name = 'water', amount = 100},
         {type = 'item', name = 'limestone', amount = 4},
