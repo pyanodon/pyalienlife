@@ -1,3 +1,4 @@
+--[[
 local TRlist = {
     {tech = 'bigger-colon', oldrecipe = 'manure-1', newrecipe = 'manure-1a'},
     {tech = 'bigger-colon', oldrecipe = 'manure-2', newrecipe = 'manure-2a'},
@@ -387,10 +388,4049 @@ local TRlist = {
 --bladder--
     {tech = 'bladder', oldrecipe = 'Extract phagnot Gas bladder', newrecipe = 'Extract phagnot Gas bladder-1'},
 }
-
+]]--
 
 --tech: the tech that is required to be researched for the new recipe
 --oldrecipe: the recipe that is currently being used
 --newrecipe: the recipe that you want set on the machines using the old recipe
+
+local TRlist =
+	{
+		upgrades =
+			{
+				--Manure
+				{
+				base_recipe = 'manure-1',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'manure-1a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'manure-1b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'manure-2',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'manure-2a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'manure-2b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'manure-3',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'manure-3a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'manure-3b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'manure-4',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'manure-4a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'manure-4b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'manure-5',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'manure-5a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'manure-5b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'manure-6',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'manure-6a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'manure-6b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'manure-7',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'manure-7a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'manure-7b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'muk-manure-1',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'muk-manure-1a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'muk-manure-1b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'muk-manure-2',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'muk-manure-2a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'muk-manure-2b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'muk-manure-3',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'muk-manure-3a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'muk-manure-3b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'muk-manure-4',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'muk-manure-4a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'muk-manure-4b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'muk-manure-5',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'muk-manure-5a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'muk-manure-5b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'muk-manure-6',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'muk-manure-6a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'muk-manure-6b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'muk-manure-7',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'muk-manure-7a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'muk-manure-7b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'auog-manure-1',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'auog-manure-1a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'auog-manure-1b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'auog-manure-2',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'auog-manure-2a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'auog-manure-2b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'auog-manure-3',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'auog-manure-3a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'auog-manure-3b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'auog-manure-4',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'auog-manure-4a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'auog-manure-4b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'auog-manure-5',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'auog-manure-5a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'auog-manure-5b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'auog-manure-6',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'auog-manure-6a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'auog-manure-6b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'auog-manure-7',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'auog-manure-7a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'auog-manure-7b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'phag-manure-1',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'phag-manure-1a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'phag-manure-1b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'phag-manure-2',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'phag-manure-2a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'phag-manure-2b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'phag-manure-3',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'phag-manure-3a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'phag-manure-3b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'phag-manure-4',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'phag-manure-4a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'phag-manure-4b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'phag-manure-5',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'phag-manure-5a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'phag-manure-5b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'phag-manure-6',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'phag-manure-6a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'phag-manure-6b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'phag-manure-7',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'phag-manure-7a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'phag-manure-7b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'scrondrix-manure-1',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'scrondrix-manure-1a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'scrondrix-manure-1b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'scrondrix-manure-2',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'scrondrix-manure-2a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'scrondrix-manure-2b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'scrondrix-manure-3',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'scrondrix-manure-3a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'scrondrix-manure-3b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'scrondrix-manure-4',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'scrondrix-manure-4a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'scrondrix-manure-4b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'scrondrix-manure-5',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'scrondrix-manure-5a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'scrondrix-manure-5b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'scrondrix-manure-6',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'scrondrix-manure-6a',
+					tech = 'bigger-colon',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'scrondrix-manure-6b',
+					tech = 'explosive-diarrhea',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				--Brains
+				{
+				base_recipe = 'Full Render arthurians',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Full Render arthuriansb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract arthurian brains',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract arthurian brainsb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract arthurian brains-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Full Render auogs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Full Render auogsb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract auog brains',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract auog brainsb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract auog brains-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Full Render dingrits',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Full Render dingritsb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract dingrits brains',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract dingrits brainsb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract dingrits brains-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Full Render kmauts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Full Render kmautsb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract kmauts brains',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract kmauts brainsb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract kmauts brains-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Full Render Mukmouxs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Full Render Mukmouxsb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract Mukmoux brains',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Mukmoux brainsb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Mukmoux brains-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Full Render phadais',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Full Render phadaisb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract phadai brains',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract phadai brainsb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract phadai brains-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Full Render phagnots',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Full Render phagnotsb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract phagnot brains',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract phagnot brainsb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract phagnot brains-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Full Render scrondrixs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Full Render scrondrixsb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract scrondrix brains',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract scrondrix brainsb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract scrondrix brains-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Full Render Trits',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Full Render Tritsb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract Trits brains',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Trits brainsb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Trits brains-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Full Render Ulrics',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Full Render Ulricsb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract Ulric brains',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Ulric brainsb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Ulric brains-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Full Render Vonix',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Full Render Vonixb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract Vonix brain',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Vonix brainb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Vonix brain-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Full Render Vrauks',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Full Render Vrauksb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract Vrauks brains',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Vrauks brainsb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Vrauks brains-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Full Render Xenos',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Full Render Xenosb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract Xeno brains',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Xeno brainsb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Xeno brains-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Full Render zipir',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Full Render zipirb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract zipir brain',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract zipir brainb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract zipir brain-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				--Brains2
+				{
+				base_recipe = 'Extract brains from Improved arthurians',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract brains from Improved arthurians-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract brains from Improved auogs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract brains from Improved auogs-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract brains from Improved dingrits',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract brains from Improved dingrits-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract brains from Improved kmauts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract brains from Improved kmauts-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract brains from Improved Mukmouxs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract brains from Improved Mukmouxs-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract brains from Improved phadais',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract brains from Improved phadais-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract brains from Improved scrondrixs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract brains from Improved scrondrixs-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract brains from Improved phagnots',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract brains from Improved phagnots-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract brains from Improved Trits',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract brains from Improved arthurians-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract brains from Improved Ulrics',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract brains from Improved Ulrics-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract brains from Improved Vonixes',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract brains from Improved Vonixes-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract brains from Improved Vrauks',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract brains from Improved Vrauks-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract brains from Improved Xenos',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract brains from Improved Xenos-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract brains from Improved Zipir',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract brains from Improved Zipir-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				--Meat
+				{
+				base_recipe = 'Extract arthurian Meat',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract arthurian Meat-1',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract arthurian Meat-2',
+					tech = 'myostatin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract auog Meat',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract auog Meat-1',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract auog Meat-2',
+					tech = 'myostatin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract dhilmos Meat',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract dhilmos Meat-1',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract dhilmos Meat-2',
+					tech = 'myostatin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract dingrits Meat',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract dingrits Meat-1',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract dingrits Meat-2',
+					tech = 'myostatin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract kmauts Meat',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract kmauts Meat-1',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract kmauts Meat-2',
+					tech = 'myostatin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Mukmoux Meat',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Mukmoux Meat-1',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Mukmoux Meat-2',
+					tech = 'myostatin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract phadai Meat',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract phadai Meat-1',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract phadai Meat-2',
+					tech = 'myostatin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract phagnot Meat',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract phagnot Meat-1',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract phagnot Meat-2',
+					tech = 'myostatin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract scrondrix Meat',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract scrondrix Meat-1',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract scrondrix Meat-2',
+					tech = 'myostatin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Trits Meat',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Trits Meat-1',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Trits Meat-2',
+					tech = 'myostatin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Ulric Meat',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Ulric Meat-1',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Ulric Meat-2',
+					tech = 'myostatin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Vonix Meat',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Vonix Meat-1',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Vonix Meat-2',
+					tech = 'myostatin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Vrauks Meat',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Vrauks Meat-1',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Vrauks Meat-2',
+					tech = 'myostatin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Xeno Meat',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Xeno Meat-1',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Xeno Meat-2',
+					tech = 'myostatin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract xyhiphoe Meat',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract xyhiphoe Meat-1',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract xyhiphoe Meat-2',
+					tech = 'myostatin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract zipir Meat',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract zipir Meat-1',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract zipir Meat-2',
+					tech = 'myostatin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				--Meat-2
+				{
+				base_recipe = 'Extract meat from Improved arthurians',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract meat from Improved arthurians-2',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract meat from Improved auogs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract meat from Improved auogs-2',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract meat from Improved dhilmoss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract meat from Improved dhilmoss-2',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract meat from Improved dingritss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract meat from Improved dingritss-2',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract meat from Improved kmautss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract meat from Improved kmautss-2',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract meat from Improved Mukmouxs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract meat from Improved Mukmouxs-2',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract meat from Improved phadais',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract meat from Improved phadais-2',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract meat from Improved phagnots',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract meat from Improved phagnots-2',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract meat from Improved scrondrixs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract meat from Improved scrondrixs-2',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract meat from Improved Tritss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract meat from Improved Tritss-2',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract meat from Improved Ulrics',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract meat from Improved Ulrics-2',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract meat from Improved Vonixs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract meat from Improved Vonixs-2',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract meat from Improved Vraukss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract meat from Improved Vraukss-2',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract meat from Improved Xenos',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract meat from Improved Xenos-2',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract meat from Improved xyhiphoes',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract meat from Improved xyhiphoes-2',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract meat from Improved zipirs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract meat from Improved zipirs-2',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				--bones
+				{
+				base_recipe = 'Extract arthurian bones',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract arthurian bones-1',
+					tech = 'osteocyte',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract arthurian bones-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract auog bones',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract auog bones-1',
+					tech = 'osteocyte',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract auog bones-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract dhilmos bones',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract dhilmos bones-1',
+					tech = 'osteocyte',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract dhilmos bones-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract dingrits bones',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract dingrits bones-1',
+					tech = 'osteocyte',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract dingrits bones-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract kmauts bones',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract kmauts bones-1',
+					tech = 'osteocyte',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract kmauts bones-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Mukmoux bones',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Mukmoux bones-1',
+					tech = 'osteocyte',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Mukmoux bones-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract phadai bones',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract phadai bones-1',
+					tech = 'osteocyte',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract phadai bones-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract phagnot bones',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract phagnot bones-1',
+					tech = 'osteocyte',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract phagnot bones-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract scrondrix bones',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract scrondrix bones-1',
+					tech = 'osteocyte',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract scrondrix bones-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Trits bones',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Trits bones-1',
+					tech = 'osteocyte',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Trits bones-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Ulric bones',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Ulric bones-1',
+					tech = 'osteocyte',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Ulric bones-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Vonix bones',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Vonix bones-1',
+					tech = 'osteocyte',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Vonix bones-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Vrauks bones',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Vrauks bones-1',
+					tech = 'osteocyte',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Vrauks bones-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Xeno bones',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Xeno bones-1',
+					tech = 'osteocyte',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Xeno bones-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract xyhiphoe bones',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract xyhiphoe bones-1',
+					tech = 'osteocyte',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract xyhiphoe bones-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract zipir bones',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract zipir bones-1',
+					tech = 'osteocyte',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract zipir bones-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				--bones-2
+				{
+				base_recipe = 'Extract bones from Improved arthurians',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract bones from Improved arthurians-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract bones from Improved auogs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract bones from Improved auogs-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract bones from Improved dhilmoss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract bones from Improved dhilmoss-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract bones from Improved dingritss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract bones from Improved dingritss-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract bones from Improved kmautss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract bones from Improved kmautss-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract bones from Improved Mukmouxs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract bones from Improved Mukmouxs-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract bones from Improved phadais',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract bones from Improved phadais-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract bones from Improved phagnots',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract bones from Improved phagnots-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract bones from Improved scrondrixs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract bones from Improved scrondrixs-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract bones from Improved Tritss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract bones from Improved Tritss-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract bones from Improved Ulrics',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract bones from Improved Ulrics-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract bones from Improved Vonixs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract bones from Improved Vonixs-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract bones from Improved Vraukss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract bones from Improved Vraukss-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract bones from Improved Xenos',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract bones from Improved Xenos-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract bones from Improved xyhiphoes',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract bones from Improved xyhiphoes-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract bones from Improved zipirs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract bones from Improved zipirs-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				--guts
+				{
+				base_recipe = 'Extract arthurian guts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract arthurian guts-1',
+					tech = 'organ-replication',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract arthurian guts-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract auog guts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract auog guts-1',
+					tech = 'organ-replication',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract auog guts-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract dhilmos guts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract dhilmos guts-1',
+					tech = 'organ-replication',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract dhilmos guts-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract dingrits guts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract dingrits guts-1',
+					tech = 'organ-replication',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract dingrits guts-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract kmauts guts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract kmauts guts-1',
+					tech = 'organ-replication',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract kmauts guts-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Mukmoux guts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Mukmoux guts-1',
+					tech = 'organ-replication',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Mukmoux guts-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract phadai guts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract phadai guts-1',
+					tech = 'organ-replication',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract phadai guts-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract phagnot guts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract phagnot guts-1',
+					tech = 'organ-replication',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract phagnot guts-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract scrondrix guts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract scrondrix guts-1',
+					tech = 'organ-replication',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract scrondrix guts-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Trits guts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Trits guts-1',
+					tech = 'organ-replication',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Trits guts-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Ulric guts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Ulric guts-1',
+					tech = 'organ-replication',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Ulric guts-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Vonix guts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Vonix guts-1',
+					tech = 'organ-replication',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Vonix guts-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Vrauks guts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Vrauks guts-1',
+					tech = 'organ-replication',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Vrauks guts-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Xeno guts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Xeno guts-1',
+					tech = 'organ-replication',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Xeno guts-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract xyhiphoe guts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract xyhiphoe guts-1',
+					tech = 'organ-replication',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract xyhiphoe guts-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract zipir guts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract zipir guts-1',
+					tech = 'organ-replication',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract zipir guts-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				--guts-2
+				{
+				base_recipe = 'Extract guts from Improved arthurians',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract guts from Improved arthurians-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract guts from Improved auogs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract guts from Improved auogs-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract guts from Improved dhilmoss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract guts from Improved dhilmoss-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract guts from Improved dingritss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract guts from Improved dingritss-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract guts from Improved kmautss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract guts from Improved kmautss-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract guts from Improved Mukmouxs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract guts from Improved Mukmouxs-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract guts from Improved phadais',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract guts from Improved phadais-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract guts from Improved phagnots',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract guts from Improved phagnots-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract guts from Improved scrondrixs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract guts from Improved scrondrixs-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract guts from Improved Tritss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract guts from Improved Tritss-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract guts from Improved Ulrics',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract guts from Improved Ulrics-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract guts from Improved Vonixs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract guts from Improved Vonixs-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract guts from Improved Vraukss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract guts from Improved Vraukss-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract guts from Improved Xenos',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract guts from Improved Xenos-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract guts from Improved xyhiphoes',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract guts from Improved xyhiphoes-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract guts from Improved zipirs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract guts from Improved zipirs-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				--blood
+				{
+				base_recipe = 'Extract arthurian blood',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract arthurian blood-1',
+					tech = 'somatic',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract arthurian blood-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract auog blood',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract auog blood-1',
+					tech = 'somatic',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract auog blood-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract dhilmos blood',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract dhilmos blood-1',
+					tech = 'somatic',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract dhilmos blood-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract dingrits blood',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract dingrits blood-1',
+					tech = 'somatic',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract dingrits blood-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract kmauts blood',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract kmauts blood-1',
+					tech = 'somatic',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract kmauts blood-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Mukmoux blood',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Mukmoux blood-1',
+					tech = 'somatic',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Mukmoux blood-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract phadai blood',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract phadai blood-1',
+					tech = 'somatic',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract phadai blood-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract phagnot blood',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract phagnot blood-1',
+					tech = 'somatic',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract phagnot blood-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract scrondrix blood',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract scrondrix blood-1',
+					tech = 'somatic',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract scrondrix blood-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Trits blood',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Trits blood-1',
+					tech = 'somatic',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Trits blood-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Ulric blood',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Ulric blood-1',
+					tech = 'somatic',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Ulric blood-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Vonix blood',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Vonix blood-1',
+					tech = 'somatic',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Vonix blood-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Vrauks blood',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Vrauks blood-1',
+					tech = 'somatic',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Vrauks blood-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Xeno blood',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Xeno blood-1',
+					tech = 'somatic',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Xeno blood-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract xyhiphoe blood',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract xyhiphoe blood-1',
+					tech = 'somatic',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract xyhiphoe blood-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract zipir blood',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract zipir blood-1',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract zipir blood-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				--blood-2
+				{
+				base_recipe = 'Extract blood from Improved arthurians',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract blood from Improved arthurians-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract blood from Improved auogs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract blood from Improved auogs-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract blood from Improved dhilmoss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract blood from Improved dhilmoss-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract blood from Improved dingritss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract blood from Improved dingritss-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract blood from Improved kmautss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract blood from Improved kmautss-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract blood from Improved Mukmouxs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract blood from Improved Mukmouxs-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract blood from Improved phadais',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract blood from Improved phadais-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract blood from Improved phagnots',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract blood from Improved phagnots-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract blood from Improved scrondrixs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract blood from Improved scrondrixs-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract blood from Improved Tritss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract blood from Improved Tritss-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract blood from Improved Ulrics',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract blood from Improved Ulrics-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract blood from Improved Vonixs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract blood from Improved Vonixs-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract blood from Improved Vraukss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract blood from Improved Vraukss-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract blood from Improved Xenos',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract blood from Improved Xenos-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract blood from Improved xyhiphoes',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract blood from Improved xyhiphoes-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract blood from Improved zipirs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract blood from Improved zipirs-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				--skin
+				{
+				base_recipe = 'Extract arthurian skin',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract arthurian skin-1',
+					tech = 'defective-collagen',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract arthurian skin-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract auog skin',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract auog skin-1',
+					tech = 'defective-collagen',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract auog skin-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract dhilmos chithin',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract dhilmos chithin-1',
+					tech = 'defective-collagen',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract dhilmos chithin-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract dingrits skin',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract dingrits skin-1',
+					tech = 'defective-collagen',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract dingrits skin-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract kmauts skin',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract kmauts skin-1',
+					tech = 'defective-collagen',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract kmauts skin-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Mukmoux skin',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Mukmoux skin-1',
+					tech = 'defective-collagen',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Mukmoux skin-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract phadai skin',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract phadai skin-1',
+					tech = 'defective-collagen',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract phadai skin-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract phagnot skin',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract phagnot skin-1',
+					tech = 'defective-collagen',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract phagnot skin-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract scrondrix skin',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract scrondrix skin-1',
+					tech = 'defective-collagen',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract scrondrix skin-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Trits skin',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Trits skin-1',
+					tech = 'defective-collagen',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Trits skin-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Ulric skin',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Ulric skin-1',
+					tech = 'defective-collagen',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Ulric skin-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Vonix skin',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Vonix skin-1',
+					tech = 'defective-collagen',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Vonix skin-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Vrauks chithin',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Vrauks chithin-1',
+					tech = 'defective-collagen',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Vrauks chithin-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Xeno chithin',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Xeno chithin-1',
+					tech = 'defective-collagen',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Xeno chithin-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract xyhiphoe skin',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract xyhiphoe skin-1',
+					tech = 'defective-collagen',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract xyhiphoe skin-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract zipir skin',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract zipir skin-1',
+					tech = 'defective-collagen',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract zipir skin-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				--skin-2
+				{
+				base_recipe = 'Extract skin from Improved arthurians',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract skin from Improved arthurians-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract skin from Improved auogs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract skin from Improved auogs-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract chithin from Improved dhilmoss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract chithin from Improved dhilmoss-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract skin from Improved dingritss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract skin from Improved dingritss-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract skin from Improved kmautss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract skin from Improved kmautss-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract skin from Improved Mukmouxs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract skin from Improved Mukmouxs-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract skin from Improved phadais',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract skin from Improved phadais-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract skin from Improved phagnots',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract skin from Improved phagnots-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract skin from Improved scrondrixs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract skin from Improved scrondrixs-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract skin from Improved Tritss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract skin from Improved Tritss-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract skin from Improved Ulrics',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract skin from Improved Ulrics-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract skin from Improved Vonixs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract skin from Improved Vonixs-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract chithin from Improved Vraukss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract chithin from Improved Vraukss-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract chithin from Improved Xenos',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract chithin from Improved Xenos-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract skin from Improved xyhiphoes',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract skin from Improved xyhiphoes-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract skin from Improved zipirs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract skin from Improved zipirs-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				--lard
+				{
+				base_recipe = 'Extract arthurian lard',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract arthurian lard-1',
+					tech = 'force-feeding',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract arthurian lard-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract auog lard',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract auog lard-1',
+					tech = 'force-feeding',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract auog lard-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract dhilmos lard',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract dhilmos lard-1',
+					tech = 'force-feeding',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract dhilmos lard-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract dingrits lard',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract dingrits lard-1',
+					tech = 'force-feeding',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract dingrits lard-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract kmauts lard',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract kmauts lard-1',
+					tech = 'force-feeding',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract kmauts lard-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Mukmoux lard',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Mukmoux lard-1',
+					tech = 'force-feeding',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Mukmoux lard-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract phadai Fat',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract phadai Fat-1',
+					tech = 'force-feeding',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract phadai Fat-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract phagnot lard',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract phagnot lard-1',
+					tech = 'force-feeding',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract phagnot lard-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract scrondrix lard',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract scrondrix lard-1',
+					tech = 'force-feeding',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract scrondrix lard-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Trits lard',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Trits lard-1',
+					tech = 'force-feeding',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Trits lard-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Ulric lard',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Ulric lard-1',
+					tech = 'force-feeding',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Ulric lard-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Vonix lard',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Vonix lard-1',
+					tech = 'force-feeding',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Vonix lard-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Vrauks lard',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Vrauks lard-1',
+					tech = 'force-feeding',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Vrauks lard-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Xeno lard',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Xeno lard-1',
+					tech = 'force-feeding',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Xeno lard-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract xyhiphoe lard',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract xyhiphoe lard-1',
+					tech = 'force-feeding',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract xyhiphoe lard-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract zipir lard',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract zipir lard-1',
+					tech = 'force-feeding',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract zipir lard-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				--lard-2
+				{
+				base_recipe = 'Extract lard from Improved arthurians',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract lard from Improved arthurians-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract lard from Improved auogs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract lard from Improved auogs-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract lard from Improved dhilmoss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract lard from Improved dhilmoss-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract lard from Improved dingritss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract lard from Improved dingritss-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract lard from Improved kmautss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract lard from Improved kmautss-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract lard from Improved Mukmouxs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract lard from Improved Mukmouxs-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract fat from Improved phadais',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract fat from Improved phadais-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract lard from Improved phagnots',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract lard from Improved phagnots-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract lard from Improved scrondrixs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract lard from Improved scrondrixs-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract lard from Improved Tritss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract lard from Improved Tritss-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract lard from Improved Ulrics',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract lard from Improved Ulrics-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract lard from Improved Vonixs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract lard from Improved Vonixs-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract lard from Improved Vraukss',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract lard from Improved Vraukss-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract lard from Improved Xenos',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract lard from Improved Xenos-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract lard from Improved xyhiphoes',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract lard from Improved xyhiphoes-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract fat from Improved zipirs',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract fat from Improved zipirs-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				--bladder
+				{
+				base_recipe = 'Extract phagnot Gas bladder',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract phagnot Gas bladder-1',
+					tech = 'bladder',
+					unlocked = false,
+					level = 2,
+					},
+				},
+			},
+		techs_with_upgrades =
+			{
+				['bigger-colon'] = true,
+				['explosive-diarrhea'] = true,
+				['interactive-cognition'] = true,
+				['metamide5'] = true,
+				['exercises'] = true,
+				['myostatin'] = true,
+				['osteocyte'] = true,
+				['hardened-bone'] = true,
+				['organ-replication'] = true,
+				['cavity'] = true,
+				['somatic'] = true,
+				['transgenes'] = true,
+				['defective-collagen'] = true,
+				['double-skin'] = true,
+				['force-feeding'] = true,
+				['fto4'] = true,
+				['bladder'] = true,
+				['kmauts'] = true,
+				['ulric'] = true,
+				['mukmoux'] = true,
+				['arthurian'] = true,
+				['xeno'] = true,
+				['dhilmos'] = true,
+				['scrondrix'] = true,
+				['scrondrix-mk02'] = true,
+				['anabolic-rna'] = true,
+				['phadai'] = true,
+				['auog'] = true,
+				['dingrits'] = true,
+				['vonix'] = true,
+				['vonix-mk02'] = true,
+				['phagnot'] = true,
+				['nanochondria'] = true,
+				['rendering'] = true,
+				['advanced-rendering'] = true,
+				['bmp'] = true,
+				['zipir'] = true,
+				['zipir-mk02'] = true,
+				['antitumor'] = true,
+				['trits'] = true,
+				['recombinant-ery'] = true,
+				['reca'] = true,
+				['orexigenic'] = true,
+				['interactive-cognition'] = true,
+				['exercises'] = true,
+				['osteocyte'] = true,
+			},
+	}
 
 return(TRlist)
