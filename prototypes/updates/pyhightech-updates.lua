@@ -978,3 +978,18 @@ RECIPE {
         {type = 'item', name = 'recombinant-ery', amount = 2},
     },
 }:add_unlock("recombinant-ery")
+
+RECIPE {
+    type = 'recipe',
+    name = 'nanofibrils-2',
+    category = 'nmf',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'collagen', amount = 5},
+        {type = 'item', name = 'chitosan', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'nanofibrils', amount = 1},
+    },
+}:add_unlock("chitin")

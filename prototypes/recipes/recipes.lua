@@ -1594,6 +1594,7 @@ RECIPE {
     energy_required = 5,
     ingredients = {
         {type = 'item', name = 'chitin', amount = 5},
+        {type = 'item', name = 'sodium-hydroxide', amount = 5},
         {type = 'fluid', name = 'mutant-enzymes', amount = 50},
     },
     results = {

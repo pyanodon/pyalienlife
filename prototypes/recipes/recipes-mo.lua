@@ -431,6 +431,7 @@ RECIPE {
         {type = 'item', name = 'bhoddos', amount = 5},
         {type = 'item', name = 'fawogae', amount = 15},
         {type = 'item', name = 'yaedols', amount = 6},
+        {type = 'item', name = 'magnetic-beads', amount = 5},
         {type = 'item', name = 'flask', amount = 5},
         {type = 'item', name = 'empty-petri-dish', amount = 5},
         {type = 'item', name = 'retrovirus', amount = 4},
@@ -497,6 +498,7 @@ RECIPE {
         {type = 'item', name = 'meat', amount = 10},
         {type = 'item', name = 'bhoddos', amount = 10},
         {type = 'item', name = 'filtration-media', amount = 5},
+        {type = 'item', name = 'magnetic-beads', amount = 5},
         {type = 'item', name = 'pineal-gland', amount = 2},
     },
     results = {
