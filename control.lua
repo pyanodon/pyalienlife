@@ -1,5 +1,6 @@
 
-local TRlist = require('scripts/techswap')
+local TRlist_og = require('scripts/techswap')
+local TRlist = {}
 
 --Mega Farms
 local farm_table = {}
@@ -162,17 +163,6 @@ global.landbots =
 
 --END--
 
---local techswap_recipes = {}
-
-local function recipe_list()
-        for _, tech in pairs(TRlist) do
-				global.techswap_recipes[tech.oldrecipe] =
-					{
-						upgrade = tech.newrecipe
-					}
-		end
-end
-
 script.on_init(
     function()
         global.landbots = landbots
@@ -184,15 +174,19 @@ script.on_init(
 		global.has_drawn_square = false
 		global.logistics_square = ''
 		remote.call("silo_script","set_no_victory", true)
-		global.techswap_recipes = {}
-		recipe_list()
-		log(serpent.block(global.techswap_recipes))
+		global.TRlist = TRlist_og
+		TRlist = global.TRlist
     end)
 
 script.on_load(function(event)
 
 landbots = global.landbots
 caravanroutes = global.caravanroutes
+
+TRlist = global.TRlist
+
+log(serpent.block(global.TRlist))
+log(serpent.block(TRlist))
 
 end)
 
@@ -983,6 +977,46 @@ end)
 script.on_event(
     defines.events.on_research_finished,
     function(event)
+	
+	if global.TRlist == nil then
+		global.TRlist = TRlist_og
+		TRlist = TRlist_og
+	end
+	--log('hit')
+	--log(serpent.block(TRlist.techs_with_upgrades['bigger-colon']))
+	
+	local tech = event.research
+	
+	if TRlist.techs_with_upgrades[tech.name] == true then
+		if tech.effects ~= nil then
+			for e, effect in pairs(tech.effects) do
+				if effect.type == 'unlock-recipe' then
+					for u, upgrade in pairs(TRlist.upgrades) do
+						if effect.recipe == upgrade.base_recipe then
+							if upgrade.current_lvl > 1 then
+								event.research.force.recipes[upgrade.base_recipe].enabled = false
+							end
+						elseif effect.recipe == upgrade.upgrade_1.recipe then
+							upgrade.current_lvl = 2
+							event.research.force.recipes[upgrade.base_recipe].enabled = false
+							upgrade.upgrade_1.unlocked = true
+						elseif upgrade.upgrade_2 ~= nil and effect.recipe == upgrade.upgrade_2.recipe then
+							upgrade.current_lvl = 3
+							event.research.force.recipes[upgrade.base_recipe].enabled = false
+							event.research.force.recipes[upgrade.upgrade_1.recipe].enabled = false
+							upgrade.upgrade_2.unlocked = true
+						end
+					end
+				end
+			end
+		end
+	end
+	
+	global.TRlist = TRlist
+	
+	--log(serpent.block(global.TRlist))
+	
+	--[[
 	log(serpent.block(event.research.effects))
 		for _, recipe in pairs(event.research.effects) do
 			if global.techswap_recipes[recipe.recipe] ~= nil then
@@ -1031,5 +1065,6 @@ script.on_event(
                 end
             end
         end
-    end
-)
+		]]--
+
+end)
