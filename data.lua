@@ -73,6 +73,7 @@ require('prototypes/technologies/somatic')
 require('prototypes/technologies/collagen')
 require('prototypes/technologies/force-feeding')
 require('prototypes/technologies/bladder')
+require('prototypes/technologies/chitin')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -286,6 +287,7 @@ require("prototypes/fluids/creamy-latex")
 require("prototypes/fluids/formic-acid")
 require("prototypes/fluids/subcritical-water")
 require("prototypes/fluids/depolymerized-organics")
+require("prototypes/fluids/mutant-enzymes")
 
 --(( RECIPES ))--
 require('prototypes/items/items')

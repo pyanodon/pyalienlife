@@ -250,6 +250,7 @@ RECIPE {
         {type = 'fluid', name = 'gta', amount = 50},
         {type = 'fluid', name = 'oleochemicals', amount = 100},
         {type = 'item', name = 'primers', amount = 8},
+        {type = 'item', name = 'chimeric-proteins', amount = 4},
         {type = 'item', name = 'cdna', amount = 8},
     },
     results = {
@@ -485,3 +486,37 @@ RECIPE {
         {type = 'item', name = 'orexigenic', amount = 1},
     },
 }:add_unlock("orexigenic")
+
+RECIPE {
+    type = 'recipe',
+    name = 'cbp',
+    category = 'genlab',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'meat', amount = 10},
+        {type = 'item', name = 'bhoddos', amount = 10},
+        {type = 'item', name = 'filtration-media', amount = 5},
+        {type = 'item', name = 'pineal-gland', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'cbp', amount = 1},
+    },
+}:add_unlock("chitin")
+
+RECIPE {
+    type = 'recipe',
+    name = 'chimeric-proteins',
+    category = 'genlab',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'magnetic-beads', amount = 5},
+        {type = 'item', name = 'retrovirus', amount = 4},
+        {type = 'fluid', name = 'ethanol', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'chimeric-proteins', amount = 1},
+    },
+}:add_unlock("chitin"):add_ingredient({type = "fluid", name = "ethylene-glycol", amount = 50})
+

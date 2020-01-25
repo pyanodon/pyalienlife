@@ -785,7 +785,18 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/lignin.png",
     icon_size = 64,
     fuel_category = "chemical",
-    fuel_value = "6MJ",
+    fuel_value = "8MJ",
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "chitosan",
+    icon = "__pyalienlifegraphics__/graphics/icons/chitosan.png",
+    icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
@@ -881,8 +892,41 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "magnetic-beads",
+    icon = "__pyalienlifegraphics__/graphics/icons/magnetic-beads.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "cbp",
+    icon = "__pyalienlifegraphics__/graphics/icons/cbp.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "h",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
     name = "nanofibrils",
     icon = "__pyalienlifegraphics__/graphics/icons/nanofibrils.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "biobattery",
+    icon = "__pyalienlifegraphics__/graphics/icons/biobattery.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-items",

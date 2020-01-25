@@ -1568,3 +1568,116 @@ RECIPE {
     },
     --main_product = "crude-oil",
 }:add_unlock("rendering"):change_category('fbreactor')
+
+RECIPE {
+    type = 'recipe',
+    name = 'magnetic-beads',
+    category = 'nmf',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'iron-plate', amount = 5},
+        {type = 'item', name = 'nickel-plate', amount = 3},
+        {type = 'item', name = 'agar', amount = 6},
+        {type = 'item', name = 'aluminium-plate', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'magnetic-beads', amount = 5},
+    },
+}:add_unlock("chitin"):change_category('nano')
+
+RECIPE {
+    type = 'recipe',
+    name = 'chitosan',
+    category = 'bio-reactor',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'chitin', amount = 5},
+        {type = 'fluid', name = 'mutant-enzymes', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'chitosan', amount = 5},
+    },
+}:add_unlock("chitin")
+
+RECIPE {
+    type = 'recipe',
+    name = 'nanofibrils',
+    category = 'nmf',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'chitin', amount = 5},
+        {type = 'item', name = 'chitosan', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'nanofibrils', amount = 1},
+    },
+}:add_unlock("chitin")
+
+RECIPE {
+    type = 'recipe',
+    name = 'filtration-media-2',
+    category = 'crafting',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'gravel', amount = 25},
+        {type = 'item', name = 'active-carbon', amount = 5},
+        {type = 'item', name = 'nanofibrils', amount = 1},
+        {type = 'item', name = 'cellulose', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'filtration-media', amount = 15},
+    },
+}:add_unlock("chitin"):add_ingredient({type = "item", name = "micro-fiber", amount = 5})
+
+RECIPE {
+    type = 'recipe',
+    name = 'biobattery',
+    category = 'crafting-with-fluid',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'nexelit-plate', amount = 5},
+        {type = 'item', name = 'plastic-bar', amount = 4},
+        {type = 'item', name = 'nanofibrils', amount = 2},
+        {type = 'item', name = 'cobalt-nx', amount = 3},
+        {type = 'item', name = 'glass', amount = 10},
+        {type = 'fluid', name = 'bacteria-1', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'biobattery', amount = 1},
+    },
+}:add_unlock("chitin"):add_ingredient({type = "item", name = "ceramic", amount = 5})
+
+RECIPE {
+    type = 'recipe',
+    name = 'extract-lead',
+    category = 'carbonfilter',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'chitosan', amount = 3},
+        {type = 'fluid', name = 'dirty-water', amount = 150},
+    },
+    results = {
+        {type = 'item', name = 'ore-lead', amount = 10},
+    },
+}:add_unlock("chitin")
+
+RECIPE {
+    type = 'recipe',
+    name = 'extract-aluminium',
+    category = 'carbonfilter',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'chitosan', amount = 3},
+        {type = 'fluid', name = 'dirty-water', amount = 150},
+    },
+    results = {
+        {type = 'item', name = 'ore-aluminium', amount = 10},
+    },
+}:add_unlock("chitin")
