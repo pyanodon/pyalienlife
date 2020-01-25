@@ -210,6 +210,8 @@ RECIPE('nanochondria'):add_ingredient({type = "item", name = "paramagnetic-mater
 RECIPE('quantum-vortex-storage-system'):add_ingredient({type = "item", name = "strangelets", amount = 2})
 RECIPE('nv-center'):add_ingredient({type = "item", name = "strangelets", amount = 2})
 RECIPE('space-science-pack'):add_ingredient({type = "item", name = "strangelets", amount = 5})
+RECIPE('yag-laser-module'):add_ingredient({type = "item", name = "nanofibrils", amount = 3})
+RECIPE('parametric-oscilator'):add_ingredient({type = "item", name = "nanofibrils", amount = 3})
 
 RECIPE('zipir-carcass'):remove_unlock('basic-electronics')
 RECIPE('capacitor-core'):add_ingredient({type = "item", name = "nano-cellulose", amount = 2})
@@ -225,6 +227,13 @@ RECIPE('mukmoux-fat2'):remove_unlock('advanced-electronics')
 RECIPE('mukmoux-fat3'):remove_unlock('advanced-electronics')
 RECIPE('fertilizer'):remove_unlock('basic-electronics')
 RECIPE('advanced-circuit'):add_ingredient({type = 'item', name = 'battery', amount = 5})
+RECIPE('fault-current-inductor'):replace_ingredient("battery", "biobattery")
+RECIPE('pcb3-2'):replace_ingredient("battery", "biobattery")
+RECIPE('pcb4'):add_ingredient({type = 'item', name = 'biobattery', amount = 5})
+RECIPE('biobattery'):replace_ingredient("nexelit-plate", "lithium-niobate"):replace_ingredient("cobalt-nx", "crco-alloy"):replace_ingredient("glass", "glass-fiber")
+RECIPE('nxag-matrix'):add_ingredient({type = 'item', name = 'chitosan', amount = 2})
+RECIPE('processor-core'):add_ingredient({type = 'item', name = 'chitosan', amount = 2})
+RECIPE('kondo-core'):add_ingredient({type = 'item', name = 'nanofibrils', amount = 3})
 
 
 fun.results_replacer("dhilmos-sex-01", "dirty-water", "waste-water")

@@ -39,7 +39,7 @@ TECHNOLOGY {
     icon = '__pyalienlifegraphics__/graphics/technology/biotech-mk03.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'biotech-mk02',"land-animals-mk02","water-animals-mk02"},
+    prerequisites = {'chitin',"land-animals-mk02","water-animals-mk02"},
     effects = {},
     unit = {
         count = 250,
