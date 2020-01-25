@@ -224,6 +224,7 @@ RECIPE('urea'):set_fields {enabled = false}
 RECIPE('mukmoux-fat2'):remove_unlock('advanced-electronics')
 RECIPE('mukmoux-fat3'):remove_unlock('advanced-electronics')
 RECIPE('fertilizer'):remove_unlock('basic-electronics')
+RECIPE('advanced-circuit'):add_ingredient({type = 'item', name = 'battery', amount = 5})
 
 
 fun.results_replacer("dhilmos-sex-01", "dirty-water", "waste-water")
@@ -945,3 +946,26 @@ RECIPE {
     },
     --main_product = "b-molasse",
 }:add_unlock("mycology-mk03")
+
+RECIPE {
+    type = 'recipe',
+    name = 'recombinant-ery-2',
+    category = 'genlab',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'adam42-gen', amount = 1},
+        {type = 'item', name = 'cysteine', amount = 1},
+        {type = 'item', name = 'alien-enzymes', amount = 1},
+        {type = 'item', name = 'guts', amount = 15},
+        {type = 'item', name = 'mukmoux-fat', amount = 15},
+        {type = 'item', name = 'lab-instrument', amount = 5},
+        {type = 'fluid', name = 'gta', amount = 50},
+        {type = 'item', name = 'myoglobin', amount = 1},
+        {type = 'item', name = 'flask', amount = 5},
+        {type = 'item', name = 'mmp', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'recombinant-ery', amount = 2},
+    },
+}:add_unlock("recombinant-ery")

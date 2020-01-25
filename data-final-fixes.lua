@@ -516,6 +516,7 @@ local recipes_list =
   "enediyne",
   "enzyme-pks",
   "recombinant-ery",
+  "recombinant-ery-2",
   "orexigenic",
   "moss-1",
   "moss-2",
