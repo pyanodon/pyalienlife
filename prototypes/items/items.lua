@@ -870,6 +870,28 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "chimeric-proteins",
+    icon = "__pyalienlifegraphics__/graphics/icons/chimeric-proteins.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-genetics",
+    order = "h",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "nanofibrils",
+    icon = "__pyalienlifegraphics__/graphics/icons/nanofibrils.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
     name = "alien-sample-02",
     icon = "__pyalienlifegraphics__/graphics/icons/alien-sample-02.png",
 	icon_size = 64,
