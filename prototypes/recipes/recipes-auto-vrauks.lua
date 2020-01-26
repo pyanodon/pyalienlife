@@ -238,35 +238,6 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'antitumor'
 		},
-		--Recombinant Ery
-		{
-			ingredients =
-				{
-					{name='gh',amount ='R'},
-					{name='antitumor',amount ='R'},
-					{name='recombinantery',amount =1},
-				},
-			results =
-				{
-					{name='gutscagedvrauks', amount ='R'},
-					{name='bloodcagedvrauks', 1},
-				},
-			crafting_speed = 90,
-			tech = 'recombinant-ery'
-		},
-		--Recombinant Ery and gh
-		{
-			ingredients =
-				{
-					{name='gh',amount =1},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 30,
-			tech = 'recombinant-ery'
-		},
 		--reca
 		{
 			ingredients =
@@ -277,7 +248,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bloodcagedvrauks', amount ='R'},
+					{name='gutscagedvrauks', amount ='R'},
 					{name='skincagedvrauks', 1},
 				},
 			crafting_speed = 90,
@@ -536,7 +507,7 @@ fun.autorecipes {
 					{name='chitin', probability = 0.3,amount_min =1,amount_max =1},
 					--{name='fat', probability = 0.3,amount_min =1,amount_max =1},
 					{name='guts', probability = 0.4,amount_min =1,amount_max =2},
-					{name='arthropodblood', amount =20},
+					{name='formicacid', amount =200},
 					{name='cage',amount=1},
 					{name='brain', probability = 0.4,amount_min =1,amount_max =1},
 				},
@@ -559,7 +530,7 @@ fun.autorecipes {
 					{name='chitin', amount ='R'},
 					--{name='fat', amount ='R'},
 					{name='guts', amount ='R'},
-					{name='arthropodblood', amount ='R'},
+					{name='formicacid', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='meat', amount =2},
 				},
@@ -620,7 +591,7 @@ fun.autorecipes {
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
 		},
-		--blood
+		--formicacid
 		{
 			ingredients =
 				{
@@ -629,13 +600,13 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='arthropodblood', amount =35},
+					{name='formicacid', amount =400},
 				},
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
-			name = 'Extract Vrauks blood',
-			icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
-			icon_size = 32,
+			name = 'Extract Vrauks Formic Acid',
+			icon = "__pyalienlifegraphics__/graphics/icons/formic-acid.png",
+			icon_size = 64,
 		},
 		--brain vrauks rendering
 		{
@@ -646,7 +617,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='arthropodblood', amount ='R'},
+					{name='formicacid', amount ='R'},
 					{name='brain', amount =3},
 				},
 			crafting_speed = 15,
@@ -664,7 +635,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bonemeal', amount ='R'},
+					{name='brain', amount ='R'},
 					{name='meat', amount =6},
 				},
 			crafting_speed = 15,
@@ -682,7 +653,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bonemeal', amount ='R'},
+					{name='meat', amount ='R'},
 					{name='guts', amount =7},
 				},
 			crafting_speed = 15,
@@ -691,34 +662,16 @@ fun.autorecipes {
 			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-vrauks.png",
 			icon_size = 64,
 		},
-		--blood vrauks rendering
-		{
-			ingredients =
-				{
-					{name='gutscagedvrauks',amount='R'},
-					{name='bloodcagedvrauks',amount=1},
-				},
-			results =
-				{
-					{name='guts', amount ='R'},
-					{name='arthropodblood', amount =100},
-				},
-			crafting_speed = 15,
-			tech = 'recombinant-ery',
-			name = 'Extract blood from Improved Vrauks',
-			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-vrauks.png",
-			icon_size = 64,
-		},
 		--skin vrauks rendering
 		{
 			ingredients =
 				{
-					{name='bloodcagedvrauks',amount='R'},
+					{name='gutscagedvrauks',amount='R'},
 					{name='skincagedvrauks',amount=1},
 				},
 			results =
 				{
-					{name='arthropodblood', amount ='R'},
+					{name='guts', amount ='R'},
 					{name='chitin', amount =6},
 				},
 			crafting_speed = 15,

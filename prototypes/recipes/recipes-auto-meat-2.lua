@@ -688,7 +688,7 @@ fun.autorecipes {
 					{name='meat', amount ='R'},
 					{name='skin', amount ='R'},
 					{name='chitin', amount ='R'},
-					{name='arthropodblood', amount ='R'},
+					{name='formicacid', amount ='R'},
 					{name='sulfuricacid', amount ='R'},
 					{name='fat', amount ='R'},
 					{name='guts', amount ='R'},

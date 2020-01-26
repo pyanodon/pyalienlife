@@ -15,7 +15,7 @@ RECIPE {
     results = {
         {"navens-culture-mk01", 1}
     }
-}:add_unlock("navens")
+}:add_unlock("navens"):add_ingredient({type = "item", name = "small-parts-01", amount = 30})
 
 ITEM {
     type = "item",

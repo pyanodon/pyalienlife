@@ -4,12 +4,16 @@
         enabled = false,
         ingredients =
 			{
-			{'iron-plate', 5}
+                {"steel-plate", 50},
+                {"duralumin", 30},
+                {"electronic-circuit", 10},
+                {"lead-plate", 50},
+                {"titanium-plate", 100},
 			},
         results = {
             {'outpost', 1}
         }
-    }:add_unlock("domestication")
+    }:add_unlock("domestication"):add_ingredient({type = "item", name = "small-parts-01", amount = 100})
 
     ITEM {
         type = "item",

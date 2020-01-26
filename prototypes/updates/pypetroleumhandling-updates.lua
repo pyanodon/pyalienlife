@@ -20,6 +20,7 @@ RECIPE('harvester'):replace_ingredient("small-parts-01","small-parts-03")
 
 
 fun.results_replacer("crude-from-manure", "crude-oil", "scrude")
+fun.results_replacer("crude-from-manure", "ash", "soot")
 
 ----EXCLUSIVE RECIPES----
 

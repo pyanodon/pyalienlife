@@ -1,13 +1,17 @@
 RECIPE{
     type = "recipe",
     name = "caravan",
-    energy_required = 4,
+	energy_required = 50,
+	category = 'creature-chamber',
     enabled = false,
     ingredients =
     {
-      {"engine-unit", 20},
-      {"electronic-circuit", 10},
-      {"steel-plate", 30}
+        {type = 'item', name = 'alien-sample01', amount = 5},
+		{type = 'item', name = 'bio-sample', amount = 20},
+		{type = 'item', name = 'auog', amount = 1},
+        {type = 'item', name = 'cdna', amount = 5},
+        {type = 'item', name = 'earth-bear-sample', amount = 1},
+        {type = 'fluid', name = 'fetal-serum', amount = 100},
     },
     result = "caravan"
   }:add_unlock("domestication")

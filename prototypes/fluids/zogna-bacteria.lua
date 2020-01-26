@@ -5,8 +5,8 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = 'item', name = 'empty-petri-dish', amount = 1},
-        {type = 'item', name = 'agar', amount = 1},
+        {type = 'item', name = 'petri-dish', amount = 2},
+        {type = 'item', name = 'small-lamp', amount = 1},
         {type = 'item', name = 'wood', amount = 5},
     },
     results = {

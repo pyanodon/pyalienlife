@@ -274,7 +274,7 @@ local TRlist = {
     {tech = 'somatic', oldrecipe = 'Extract Trits blood', newrecipe = 'Extract Trits blood-1'},
     {tech = 'somatic', oldrecipe = 'Extract Ulric blood', newrecipe = 'Extract Ulric blood-1'},
     {tech = 'somatic', oldrecipe = 'Extract Vonix blood', newrecipe = 'Extract Vonix blood-1'},
-    {tech = 'somatic', oldrecipe = 'Extract Vrauks blood', newrecipe = 'Extract Vrauks blood-1'},
+--    {tech = 'somatic', oldrecipe = 'Extract Vrauks blood', newrecipe = 'Extract Vrauks blood-1'},
     {tech = 'somatic', oldrecipe = 'Extract Xeno blood', newrecipe = 'Extract Xeno blood-1'},
     {tech = 'somatic', oldrecipe = 'Extract xyhiphoe blood', newrecipe = 'Extract xyhiphoe blood-1'},
     {tech = 'somatic', oldrecipe = 'Extract zipir blood', newrecipe = 'Extract zipir blood-1'},
@@ -302,8 +302,8 @@ local TRlist = {
     {tech = 'transgenes', oldrecipe = 'Extract blood from Improved Trits', newrecipe = 'Extract blood from Improved Trits-2'},
     {tech = 'transgenes', oldrecipe = 'Extract Ulric blood-1', newrecipe = 'Extract Ulric blood-2'},
     {tech = 'transgenes', oldrecipe = 'Extract blood from Improved Ulrics', newrecipe = 'Extract blood from Improved Ulrics-2'},
-    {tech = 'transgenes', oldrecipe = 'Extract Vrauks blood-1', newrecipe = 'Extract Vrauks blood-2'},
-    {tech = 'transgenes', oldrecipe = 'Extract blood from Improved Vrauks', newrecipe = 'Extract blood from Improved Vrauks-2'},
+--    {tech = 'transgenes', oldrecipe = 'Extract Vrauks blood-1', newrecipe = 'Extract Vrauks blood-2'},
+--    {tech = 'transgenes', oldrecipe = 'Extract blood from Improved Vrauks', newrecipe = 'Extract blood from Improved Vrauks-2'},
     {tech = 'transgenes', oldrecipe = 'Extract Xeno blood-1', newrecipe = 'Extract Xeno blood-2'},
     {tech = 'transgenes', oldrecipe = 'Extract blood from Improved Xenos', newrecipe = 'Extract blood from Improved Xenos-2'},
     {tech = 'transgenes', oldrecipe = 'Extract xyhiphoe blood-1', newrecipe = 'Extract xyhiphoe blood-2'},
@@ -387,7 +387,11 @@ local TRlist = {
 
 --bladder--
     {tech = 'bladder', oldrecipe = 'Extract phagnot Gas bladder', newrecipe = 'Extract phagnot Gas bladder-1'},
+
+--formic--
+    {tech = 'formic', oldrecipe = 'Extract Vrauks Formic Acid', newrecipe = 'Extract Vrauks Formic Acid-1'},
 }
+
 
 local technames = {}
 

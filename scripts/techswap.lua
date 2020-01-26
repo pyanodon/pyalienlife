@@ -3188,24 +3188,21 @@ local TRlist =
 					level = 3,
 					},
 				},
+
+
 				{
-				base_recipe = 'Extract Vrauks blood',
-				current_lvl = 1,
-				upgrade_1 =
-					{
-					recipe = 'Extract Vrauks blood-1',
-					tech = 'somatic',
-					unlocked = false,
-					level = 2,
+					base_recipe = 'Extract Vrauks Formic Acid',
+					current_lvl = 1,
+					upgrade_1 =
+						{
+						recipe = 'Extract Vrauks Formic Acid-1',
+						tech = 'formic',
+						unlocked = false,
+						level = 2,
+						},
 					},
-				upgrade_2 =
-					{
-					recipe = 'Extract Vrauks blood-2',
-					tech = 'transgenes',
-					unlocked = false,
-					level = 3,
-					},
-				},
+
+
 				{
 				base_recipe = 'Extract Xeno blood',
 				current_lvl = 1,
@@ -3388,17 +3385,6 @@ local TRlist =
 				upgrade_1 =
 					{
 					recipe = 'Extract blood from Improved Vonixs-2',
-					tech = 'transgenes',
-					unlocked = false,
-					level = 2,
-					},
-				},
-				{
-				base_recipe = 'Extract blood from Improved Vraukss',
-				current_lvl = 1,
-				upgrade_1 =
-					{
-					recipe = 'Extract blood from Improved Vraukss-2',
 					tech = 'transgenes',
 					unlocked = false,
 					level = 2,
@@ -4430,6 +4416,7 @@ local TRlist =
 				['interactive-cognition'] = true,
 				['exercises'] = true,
 				['osteocyte'] = true,
+				['formic'] = true,
 			},
 	}
 

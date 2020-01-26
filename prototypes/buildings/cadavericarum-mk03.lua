@@ -24,7 +24,7 @@ RECIPE {
     results = {
         {"cadavericarum-mk03", 1}
     }
-}:add_unlock("cadaveric-arum-mk03")
+}:add_unlock("cadaveric-arum-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
 
 ITEM {
     type = "item",
