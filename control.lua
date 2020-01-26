@@ -473,7 +473,7 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 			end
 			if event.result == defines.behavior_result.fail	then
 				--log('hit')
-				log(serpent.block(lb))
+				--log(serpent.block(lb))
 			end
 			if event.result == defines.behavior_result.deleted then
 				--log('hit')
@@ -481,12 +481,12 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 				end
 			end
 		elseif global.caravan_unit_numbers[event.unit_number] ~= nil then
-			log(serpent.block(caravanroutes))
+			--log(serpent.block(caravanroutes))
 			local car = event.unit_number
-			log(event.unit_number)
-			log(caravanroutes[car].unit.position)
-			log(caravanroutes[car].startpoint.pos)
-			log(caravanroutes[car].endpoint.pos)
+			--log(event.unit_number)
+			--log(caravanroutes[car].unit.position)
+			--log(caravanroutes[car].startpoint.pos)
+			--log(caravanroutes[car].endpoint.pos)
 			if math.sqrt((caravanroutes[car].unit.position.x - caravanroutes[car].startpoint.pos.x) ^ 2 + (caravanroutes[car].unit.position.y - caravanroutes[car].startpoint.pos.y) ^ 2) <= 10 then
 				if game.surfaces[caravanroutes[car].unit.surface.name].find_entity('outpost', caravanroutes[car].startpoint.pos) ~= nil then
 				local outpostinventory = game.surfaces[caravanroutes[car].unit.surface.name].find_entity('outpost', caravanroutes[car].startpoint.pos).get_inventory(defines.inventory.chest)
@@ -519,49 +519,51 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 						end
 					log(serpent.block(caravanroutes[car]))
 					end
-				end
 				--caravanroutes[car].inventory.item = outpostinventory
 				caravanroutes[car].unit.set_command {
 					type = defines.command.go_to_location,
 					destination = caravanroutes[car].endpoint.pos,
 					radius = 4
 				}
-			elseif math.sqrt((caravanroutes[car].endpoint.pos.x - caravanroutes[car].unit.position.x) ^ 2 + (caravanroutes[car].endpoint.pos.y - caravanroutes[car].unit.position.y) ^ 2) <= 10 then
-				local outpostinventory = game.surfaces[caravanroutes[car].unit.surface.name].find_entity('outpost', caravanroutes[car].endpoint.pos).get_inventory(defines.inventory.chest)
-				if outpostinventory ~= nil then
-					if caravanroutes[car].inventory.hasitem then
-						outpostinventory.insert({name=caravanroutes[car].inventory.item, count=caravanroutes[car].inventory.stackamount})
-						caravanroutes[car].inventory.hasitem = false
-						caravanroutes[car].inventory.item = ''
-						caravanroutes[car].inventory.stackamount = 0
-					else
-						local contents = outpostinventory.get_contents()
-						--log(serpent.block(outpostinventory))
-						--log(serpent.block(outpostinventory.get_contents()))
-						for i, item in pairs(contents) do
-							--log(serpent.block(i))
-							--log(serpent.block(item))
-							local stacksize = game.item_prototypes[i].stack_size
-							caravanroutes[car].inventory.item = i
-							if item < stacksize then
-								caravanroutes[car].inventory.stackamount = item
-								caravanroutes[car].inventory.hasitem = true
-								outpostinventory.remove({name = i, count = item})
-							else
-								caravanroutes[car].inventory.stackamount = stacksize
-								caravanroutes[car].inventory.hasitem = true
-								outpostinventory.remove({name = i, count = stacksize})
-							end
-							break
-						end
-					end
-				log(serpent.block(caravanroutes[car]))
 				end
-				caravanroutes[car].unit.set_command {
-					type = defines.command.go_to_location,
-					destination = caravanroutes[car].startpoint.pos,
-					radius = 4
-				}
+			elseif math.sqrt((caravanroutes[car].endpoint.pos.x - caravanroutes[car].unit.position.x) ^ 2 + (caravanroutes[car].endpoint.pos.y - caravanroutes[car].unit.position.y) ^ 2) <= 10 then
+				if game.surfaces[caravanroutes[car].unit.surface.name].find_entity('outpost', caravanroutes[car].endpoint.pos) ~= nil then
+					local outpostinventory = game.surfaces[caravanroutes[car].unit.surface.name].find_entity('outpost', caravanroutes[car].endpoint.pos).get_inventory(defines.inventory.chest)
+					if outpostinventory ~= nil then
+						if caravanroutes[car].inventory.hasitem then
+							outpostinventory.insert({name=caravanroutes[car].inventory.item, count=caravanroutes[car].inventory.stackamount})
+							caravanroutes[car].inventory.hasitem = false
+							caravanroutes[car].inventory.item = ''
+							caravanroutes[car].inventory.stackamount = 0
+						else
+							local contents = outpostinventory.get_contents()
+							--log(serpent.block(outpostinventory))
+							--log(serpent.block(outpostinventory.get_contents()))
+							for i, item in pairs(contents) do
+								--log(serpent.block(i))
+								--log(serpent.block(item))
+								local stacksize = game.item_prototypes[i].stack_size
+								caravanroutes[car].inventory.item = i
+								if item < stacksize then
+									caravanroutes[car].inventory.stackamount = item
+									caravanroutes[car].inventory.hasitem = true
+									outpostinventory.remove({name = i, count = item})
+								else
+									caravanroutes[car].inventory.stackamount = stacksize
+									caravanroutes[car].inventory.hasitem = true
+									outpostinventory.remove({name = i, count = stacksize})
+								end
+								break
+							end
+						end
+					log(serpent.block(caravanroutes[car]))
+					end
+					caravanroutes[car].unit.set_command {
+						type = defines.command.go_to_location,
+						destination = caravanroutes[car].startpoint.pos,
+						radius = 4
+					}
+				end
 			end
 		end
 		global.caravanroutes = caravanroutes
@@ -631,6 +633,8 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 		--remove all refernces to this chest
 		landbots.towers[landbots.requesterchests[event.entity.unit_number].tower].requestorchests[event.entity.unit_number] = nil
 		landbots.requesterchests[event.entity.unit_number] = nil
+	elseif event.entity.name == 'outpost' then
+		global.outpost_names[event.entity.unit_number] = nil
 	end
 
 	global.landbots = landbots
@@ -977,16 +981,14 @@ end)
 script.on_event(
     defines.events.on_research_finished,
     function(event)
-	
+
 	if global.TRlist == nil then
 		global.TRlist = TRlist_og
 		TRlist = TRlist_og
 	end
 	--log('hit')
 	--log(serpent.block(TRlist.techs_with_upgrades['bigger-colon']))
-	
-	local tech = event.research
-	
+	local tech = event.research	
 	if TRlist.techs_with_upgrades[tech.name] == true then
 		if tech.effects ~= nil then
 			for e, effect in pairs(tech.effects) do
@@ -1011,60 +1013,5 @@ script.on_event(
 			end
 		end
 	end
-	
 	global.TRlist = TRlist
-	
-	--log(serpent.block(global.TRlist))
-	
-	--[[
-	log(serpent.block(event.research.effects))
-		for _, recipe in pairs(event.research.effects) do
-			if global.techswap_recipes[recipe.recipe] ~= nil then
-				if event.research.force.recipes[global.techswap_recipes[recipe.recipe].upgrade].enabled == true then
-					event.research.force.recipes[recipe.recipe].enabled = false
-				end
-			end
-		end
-        for _, tech in pairs(TRlist) do
-				log(serpent.block(recipes))
-            if event.research.name == tech.tech then
-                --log(serpent.block(tech))
-                if event.research.force.recipes[tech.oldrecipe] ~= nil and event.research.force.recipes[tech.newrecipe] ~= nil then
-                    local cat = event.research.force.recipes[tech.oldrecipe].category
-
-                    local entities = game.surfaces['nauvis'].find_entities_filtered {force = event.research.force}
-                    --log('hit')
-                    for _, ent in pairs(entities) do
-                        --log('hit')
-                        --log(serpent.block(ent.name))
-                        --if ent.name == 'fwf-mk01' then
-                        --log(ent.prototype.name)
-                        --log(serpent.block(ent.prototype.name))
-                        --log(serpent.block(cat))
-                        --log(serpent.block(ent.prototype.crafting_categories))
-                        --end
-                        if ent.prototype ~= nil and ent.prototype.crafting_categories ~= nil then
-                            --log('hit')
-                            --for c, category in pairs(ent.prototype.crafting_categories) do
-                            --log('hit')
-                            if ent.prototype.crafting_categories[cat] then
-                                --log('hit')
-                                local currentrecipe = ent.get_recipe()
-                                --log(serpent.block(currentrecipe.name))
-                                --log(tech.oldrecipe)
-                                if currentrecipe ~= nil and currentrecipe.name == tech.oldrecipe then
-                                    --log(serpent.block(currentrecipe.name))
-                                    --log(tech.oldrecipe)
-                                    --log('hit')
-                                    ent.set_recipe(tech.newrecipe)
-                                end
-                            end
-                        end
-                    end
-                    event.research.force.recipes[tech.oldrecipe].enabled = false
-                end
-            end
-        end
-		]]--
-
 end)
