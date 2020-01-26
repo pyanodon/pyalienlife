@@ -623,7 +623,7 @@ fun.autorecipes {
 					{name='meat', amount ='R'},
 					{name='chitin', amount ='R'},
 					{name='guts', amount ='R'},
-					{name='arthropodblood', amount ='R'},
+					{name='formicacid', amount ='R'},
 					{name='brain', amount ='R'},
                     {name='brain', amount =4},
                     {name='cage', amount =1},

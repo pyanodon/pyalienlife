@@ -276,6 +276,7 @@ items.inputs.skincagedvrauks = {'chitin-caged-vrauks', 1}
 items.inputs.gutscagedvrauks = {'guts-caged-vrauks', 1}
 items.inputs.vrauksfood01 = {'vrauks-food-01', 1}
 items.inputs.vrauksfood02 = {'vrauks-food-02', 1}
+items.inputs.formicacid = {'formic-acid', 1}
 
 items.inputs.meatxyhiphoe = {'meat-xyhiphoe', 1}
 items.inputs.bloodxyhiphoe = {'blood-xyhiphoe', 1}

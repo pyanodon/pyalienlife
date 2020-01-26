@@ -451,14 +451,14 @@ fun.autorecipes {
 ------------------VRAUKS------------------
 
 fun.autorecipes {
-    name = 'rendering-blood-vrauks',
+    name = 'rendering-formic-vrauks',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-vrauks',
 	order = 'b',
     mats =
 	{
-		--blood
+		--formic acid
 		{
 			ingredients =
 				{
@@ -472,21 +472,22 @@ fun.autorecipes {
 					{name='fat', amount ='R'},
 					{name='guts', amount ='R'},
 					{name='chitin', amount ='R'},
-					{name='arthropodblood', amount ='R'},
+					{name='formicacid', amount ='R'},
 					{name='sulfuricacid', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='arthropodblood', amount =45},
+					{name='formicacid', amount =500},
 				},
                 crafting_speed = 15,
-                tech = 'somatic',
-                name = 'Extract Vrauks blood-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
-                icon_size = 32,
+                tech = 'formic',
+				name = 'Extract Vrauks Formic Acid-1',
+				icon = "__pyalienlifegraphics__/graphics/icons/formic-acid.png",
+				icon_size = 64,
 		},	
 	}
 }
+
 
 ------------------RENDERING XENOS------------------
 

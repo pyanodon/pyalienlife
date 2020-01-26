@@ -74,6 +74,7 @@ require('prototypes/technologies/collagen')
 require('prototypes/technologies/force-feeding')
 require('prototypes/technologies/bladder')
 require('prototypes/technologies/chitin')
+require('prototypes/technologies/formic')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -237,7 +238,7 @@ require("prototypes/buildings/trits-reef-mk01")
 require("prototypes/buildings/trits-reef-mk02")
 require("prototypes/buildings/trits-reef-mk03")
 require("prototypes/buildings/trits-reef-mk04")
---require('prototypes/buildings/outpost')
+require('prototypes/buildings/outpost')
 --require('prototypes/buildings/foodbowl')
 require('prototypes/buildings/generator-1')
 require('prototypes/buildings/generator-2')
@@ -252,7 +253,7 @@ require("prototypes/buildings/harvester")
 require("prototypes/buildings/collector")
 
 --Caravan ceature
---require('prototypes/ceatures/caravan')
+require('prototypes/ceatures/caravan')
 
 --Land bot
 --require('prototypes/robots/land-bot')

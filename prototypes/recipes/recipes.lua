@@ -1548,7 +1548,7 @@ RECIPE {
         {type = 'fluid', name = 'crude-oil', amount = 70},
         {type = 'fluid', name = 'steam', amount = 50, temperature = 165},
         {type = 'fluid', name = 'dirty-water', amount = 50},
-        {type = 'item', name = 'soot', amount = 3},
+        {type = 'item', name = 'ash', amount = 3},
     },
     main_product = "crude-oil",
 }:add_unlock("biotech-mk02"):change_category('lor')
