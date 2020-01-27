@@ -34,7 +34,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 140,
-			tech = 'food-mk02'
+			tech = 'dingrits'
 		},
 		--yaedols
 		{
@@ -48,7 +48,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 130,
-			tech = 'dingrits'
+			tech = 'dingrits-mk02'
 		},
 		--yotoileaves
 		{
@@ -61,7 +61,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 120,
-			tech = 'dingrits'
+			tech = 'dingrits-mk02'
 		},		
 		--food 2
 		{
@@ -78,7 +78,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 110,
-			tech = 'dingrits'
+			tech = 'dingrits-mk03'
 		},
 		--food 2 yaedols
 		{
@@ -103,8 +103,8 @@ fun.autorecipes {
 				{
 				
 				},
-			crafting_speed = 90,
-			tech = 'dingrits'
+			crafting_speed = 80,
+			tech = 'dingrits-mk04'
 		},
 		--gh
 		{

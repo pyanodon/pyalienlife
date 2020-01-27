@@ -4367,6 +4367,54 @@ local TRlist =
 					level = 2,
 					},
 				},
+				--carapace
+				{
+				base_recipe = 'Extract phadai Carapace',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract phadai Carapace-1',
+					tech = 'party-animal',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				--pelt
+				{
+				base_recipe = 'Extract dingrits Pelt',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract dingrits Pelt-1',
+					tech = 'exo-insertion',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				--spikes
+				{
+				base_recipe = 'Extract dingrits Spikes',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract dingrits Spikes-1',
+					tech = 'argumented-spikes',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				--pineal
+				{
+				base_recipe = 'Extract scrondrix Pineal Gland',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract scrondrix Pineal Gland-1',
+					tech = 'conarium-stem',
+					unlocked = false,
+					level = 2,
+					},
+				},
 			},
 		techs_with_upgrades =
 			{
@@ -4417,6 +4465,10 @@ local TRlist =
 				['exercises'] = true,
 				['osteocyte'] = true,
 				['formic'] = true,
+				['party-animal'] = true,
+				['exo-insertion'] = true,
+				['argumented-spikes'] = true,
+				['conarium-stem'] = true,
 			},
 	}
 
