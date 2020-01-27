@@ -519,7 +519,7 @@ fun.autorecipes {
 			tech = 'somatic',
 			name = 'Extract Xeno blood-1',
 			icon = "__base__/graphics/icons/fluid/sulfuric-acid.png",
-			icon_size = 32,
+			icon_size = 64,
 		},	
 	}
 }

@@ -390,6 +390,19 @@ local TRlist = {
 
 --formic--
     {tech = 'formic', oldrecipe = 'Extract Vrauks Formic Acid', newrecipe = 'Extract Vrauks Formic Acid-1'},
+
+--carapace--
+    {tech = 'party-animal', oldrecipe = 'Extract phadai Carapace', newrecipe = 'Extract phadai Carapace-1'},
+
+--pelt--
+    {tech = 'exo-insertion', oldrecipe = 'Extract dingrits Pelt', newrecipe = 'Extract dingrits Pelt-1'},
+
+--spikes--
+    {tech = 'argumented-spikes', oldrecipe = 'Extract dingrits Spikes', newrecipe = 'Extract dingrits Spikes-1'},
+
+--pineal--
+    {tech = 'conarium-stem', oldrecipe = 'Extract scrondrix Pineal Gland', newrecipe = 'Extract scrondrix Pineal Gland-1'},
+
 }
 
 

@@ -694,7 +694,7 @@ fun.autorecipes {
 			tech = 'transgenes',
 			name = 'Extract Xeno blood-2',
 			icon = "__base__/graphics/icons/fluid/sulfuric-acid.png",
-			icon_size = 32,
+			icon_size = 64,
 		},	
 		--blood xeno rendering
 		{

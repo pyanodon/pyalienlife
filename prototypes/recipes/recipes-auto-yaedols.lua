@@ -60,7 +60,7 @@ fun.autorecipes {
                 {name='yaedols',amount =3}
             },
         crafting_speed = 90,
-        tech = 'yaedols'
+        tech = 'yaedols-mk02'
     },
     {
         ingredients =
@@ -72,7 +72,7 @@ fun.autorecipes {
                 {name='yaedols',amount =4}
             },
         crafting_speed = 90,
-        tech = 'yaedols'
+        tech = 'yaedols-mk02'
     },
     {
         ingredients =
@@ -84,7 +84,7 @@ fun.autorecipes {
                 {name='yaedols',amount =5}
             },
         crafting_speed = 90,
-        tech = 'yaedols'
+        tech = 'yaedols-mk03'
     },
     {
         ingredients =
@@ -96,7 +96,7 @@ fun.autorecipes {
                 {name='yaedols',amount =6}
             },
         crafting_speed = 90,
-        tech = 'mycology-mk03'
+        tech = 'yaedols-mk03'
     },
     {
         ingredients =
@@ -109,7 +109,7 @@ fun.autorecipes {
                 {name='yaedols',amount =8}
             },
         crafting_speed = 90,
-        tech = 'mycology-mk03'
+        tech = 'yaedols-mk03'
     },
     --GH
     {
@@ -126,7 +126,7 @@ fun.autorecipes {
                 {name='yaedols',amount =8}
             },
         crafting_speed = 70,
-        tech = 'mycology-mk04'
+        tech = 'yaedols-mk04'
     },
     {
         ingredients =
@@ -142,7 +142,7 @@ fun.autorecipes {
                 {name='yaedols',amount =10}
             },
         crafting_speed = 70,
-        tech = 'mycology-mk04'
+        tech = 'yaedols-mk04'
     },
     {
         ingredients =
@@ -157,7 +157,7 @@ fun.autorecipes {
                 {name='yaedols',amount =12}
             },
         crafting_speed = 70,
-        tech = 'mycology-mk04'
+        tech = 'yaedols-mk04'
     },
     {
         ingredients =
@@ -171,7 +171,7 @@ fun.autorecipes {
                 {name='yaedols',amount =15}
             },
         crafting_speed = 70,
-        tech = 'mycology-mk04'
+        tech = 'yaedols-mk04'
     },
 	}
 }

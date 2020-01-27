@@ -172,6 +172,7 @@ fun.autorecipes {
                     {name='bones', amount ='R'},
 					{name='meat', amount ='R'},
 					{name='skin', amount ='R'},
+					{name='carapace', amount ='R'},
 					{name='fat', amount ='R'},
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},

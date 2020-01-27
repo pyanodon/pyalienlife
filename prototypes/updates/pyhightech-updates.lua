@@ -23,6 +23,7 @@ require("prototypes/buildings/kicalk-plantation-mk04")
 --TECHNOLOGY--
 TECHNOLOGY('nano-tech'):add_prereq('microbiology-mk03')
 TECHNOLOGY('bio-implants'):add_prereq('nano-tech')
+TECHNOLOGY('advanced-electronics'):add_prereq('chitin')
 TECHNOLOGY('antitumor'):add_prereq('earnshaw-theorem')
 RECIPE('kicalk-plantation'):remove_unlock('coal-processing-1')
 RECIPE('cadaveric-arum-mk01'):remove_unlock('basic-electronics')
@@ -234,6 +235,7 @@ RECIPE('biobattery'):replace_ingredient("nexelit-plate", "lithium-niobate"):repl
 RECIPE('nxag-matrix'):add_ingredient({type = 'item', name = 'chitosan', amount = 2})
 RECIPE('processor-core'):add_ingredient({type = 'item', name = 'chitosan', amount = 2})
 RECIPE('kondo-core'):add_ingredient({type = 'item', name = 'nanofibrils', amount = 3})
+RECIPE('biobattery'):add_ingredient({type = "item", name = "re-magnet", amount = 10}):add_ingredient({type = "item", name = "nylon", amount = 5})
 
 
 fun.results_replacer("dhilmos-sex-01", "dirty-water", "waste-water")
