@@ -61,7 +61,7 @@ data:extend(
       range = 0.5,
       cooldown = 35,
       ammo_type = make_unit_melee_ammo_type(7),
-      sound = make_biter_roars(0.4),
+      --sound = make_biter_roars(0.4),
 	animation =
 	{
 		layers =
@@ -123,8 +123,8 @@ data:extend(
 	max_pursue_distance = 50,
 	--corpse = "arthurian-corpse",
 	dying_explosion = "blood-explosion-small",
-	dying_sound =  make_biter_dying_sounds(0.4),
-	working_sound =  make_biter_calls(0.3),
+	--dying_sound =  make_biter_dying_sounds(0.4),
+	--working_sound =  make_biter_calls(0.3),
 	--run_animation = biterrunanimation(small_biter_scale, small_biter_tint1, small_biter_tint2),
 
 	run_animation =
@@ -181,7 +181,7 @@ data:extend(
   }
 --[[
 	caravan.add_arthur_die_animation(scale, --small_biter_tint1, small_biter_tint2,
-  	{
+	{
 		type = "corpse",
 		name = "caravan-corpse",
 		icon = "__base__/graphics/icons/small-biter-corpse.png",
