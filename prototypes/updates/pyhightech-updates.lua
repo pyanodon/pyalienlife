@@ -597,7 +597,7 @@ RECIPE {
         {type = 'fluid', name = 'bacteria-1', amount = 10},
     },
     results = {
-        {type = 'fluid', name = 'methane', amount = 80},
+        {type = 'fluid', name = 'methane', amount = 150},
     },
     --main_product = "cocoon",
 }:add_unlock("kmauts")

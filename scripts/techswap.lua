@@ -4439,6 +4439,18 @@ local TRlist =
 					level = 2,
 					},
 				},
+				--shell
+				{
+				base_recipe = 'Extract xyhiphoe shell',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract xyhiphoe shell-1',
+					tech = 'artificial-calcification',
+					unlocked = false,
+					level = 2,
+					},
+				},
 			},
 		techs_with_upgrades =
 			{
@@ -4495,6 +4507,7 @@ local TRlist =
 				['conarium-stem'] = true,
 				['hydrolase-amplification'] = true,
 				['zootoxins'] = true,
+				['artificial-calcification'] = true,
 			},
 	}
 

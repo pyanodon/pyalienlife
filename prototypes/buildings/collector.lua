@@ -51,7 +51,7 @@ ENTITY {
     {
       type = "burner",
       fuel_category = "bio-container",
-      effectivity = 1,
+      effectivity = 0.3,
       fuel_inventory_size = 1,
       emissions_per_minute = 0.06,
     },
