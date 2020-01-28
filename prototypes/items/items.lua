@@ -3339,7 +3339,7 @@ ITEM {
         ammo_category = "capsule",
         cooldown = 30,
         range = 0,
-        
+
 		ammo_type =
         {
           category = "capsule",
@@ -3378,7 +3378,7 @@ ITEM {
     name = "stopper",
     icon = "__pyalienlifegraphics__/graphics/icons/mip/stopper-02.png",
     icon_size = 64,
-    icon_mipmaps = 8,
+    icon_mipmaps = 0,
     pictures =
     {
       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/stopper-01.png", scale = 0.25, mipmap_count = 1 },
@@ -3747,7 +3747,7 @@ local alien_life_limitations_ulric =
     local alien_life_limitations_xyhiphoe =
 	{
     }
-	
+
 ---PLANTS---
 local alien_life_limitations_sponge =
 	{
@@ -3928,7 +3928,7 @@ local alien_life_limitations_sponge =
 	  "cadaveric-arum12",
 	  "cadaveric-arum13"
     }
-	
+
 local alien_life_limitations_yaedols =
 	{
 	"yaedols1",
