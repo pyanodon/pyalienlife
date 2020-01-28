@@ -225,7 +225,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 15,
 			tech = 'bladder',
-			name = 'Extract phagnot Gas bladder-2',
+			name = 'Extract phagnot Gas bladder-1',
 			icon = "__pyalienlifegraphics__/graphics/icons/gas-bladder.png",
 			icon_size = 64,
 		},
@@ -269,5 +269,38 @@ fun.autorecipes {
 				icon = "__pyalienlifegraphics__/graphics/icons/venon-gland.png",
 				icon_size = 64,
 		},	
+	}
+}
+
+------------------XYHIPHOE SHELL------------------
+
+fun.autorecipes {
+    name = 'rendering-shell-xyhiphoe',
+	category = 'slaughterhouse',
+	--module_limitations = 'auog',
+	subgroup = 'py-alienlife-xyhiphoe',
+	order = 'b',
+    mats =
+	{
+		--shell
+		{
+			ingredients =
+				{
+					{name='xyhiphoe',amount=1},
+				},
+			results =
+				{
+					{name='meat', amount ='R'},
+					{name='shell', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='arthropodblood', amount ='R'},
+					{name='shell', amount =5},
+				},
+			crafting_speed = 15,
+			tech = 'artificial-calcification',
+			name = 'Extract xyhiphoe shell-1',
+			icon = "__pyalienlifegraphics__/graphics/icons/shell.png",
+			icon_size = 64,
+		},
 	}
 }

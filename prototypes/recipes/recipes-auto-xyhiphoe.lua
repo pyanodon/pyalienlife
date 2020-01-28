@@ -236,35 +236,6 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'recombinant-ery'
 		},
-		--reca
-		{
-			ingredients =
-				{
-					{name='gh',amount ='R'},
-					{name='recombinantery',amount ='R'},
-					{name='reca',amount =1},
-				},
-			results =
-				{
-					{name='bloodxyhiphoe', amount ='R'},
-					{name='shellxyhiphoe', 1},
-				},
-			crafting_speed = 90,
-			tech = 'reca'
-		},
-		--reca and gh
-		{
-			ingredients =
-				{
-					{name='gh',amount =1},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 30,
-			tech = 'reca'
-		},
 	}
 }
 
@@ -642,24 +613,6 @@ fun.autorecipes {
 			tech = 'recombinant-ery',
 			name = 'Extract blood from Improved xyhiphoe',
 			icon = "__pyalienlifegraphics__/graphics/icons/blood-xyhiphoe.png",
-			icon_size = 64,
-		},
-		--shell xyhiphoe rendering
-		{
-			ingredients =
-				{
-					{name='bloodxyhiphoe',amount='R'},
-					{name='shellxyhiphoe',amount=1},
-				},
-			results =
-				{
-					{name='arthropodblood', amount ='R'},
-					{name='shell', amount =7},
-				},
-			crafting_speed = 15,
-			tech = 'reca',
-			name = 'Extract shell from Improved xyhiphoe',
-			icon = "__pyalienlifegraphics__/graphics/icons/shell-xyhiphoe.png",
 			icon_size = 64,
 		},
 	}

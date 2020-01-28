@@ -409,6 +409,9 @@ local TRlist = {
 --venom--
     {tech = 'zootoxins', oldrecipe = 'Extract Vonix´s Venom Gland', newrecipe = 'Extract Vonix´s Venom Gland-1'},
 
+--shell--
+    {tech = 'artificial-calcification', oldrecipe = 'Extract xyhiphoe shell', newrecipe = 'Extract xyhiphoe shell-1'},
+
 }
 
 
