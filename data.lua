@@ -82,6 +82,7 @@ require('prototypes/technologies/conarium-stem')
 require('prototypes/technologies/hydrolase-amplification')
 require('prototypes/technologies/zootoxins')
 require('prototypes/technologies/artificial-calcification')
+require('prototypes/technologies/stochastic-cortex')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")

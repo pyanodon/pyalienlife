@@ -43,15 +43,15 @@ ENTITY {
     collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     module_specification = {
-        module_slots = 4
+        module_slots = 2
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-    mining_speed = 1,
+    mining_speed = 0.3,
     energy_source =
     {
       type = "burner",
       fuel_category = "bio-container",
-      effectivity = 0.3,
+      effectivity = 1,
       fuel_inventory_size = 1,
       emissions_per_minute = 0.06,
     },
