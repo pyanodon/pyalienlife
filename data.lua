@@ -79,6 +79,8 @@ require('prototypes/technologies/party-animal')
 require('prototypes/technologies/exo-insertion')
 require('prototypes/technologies/argumented-spikes')
 require('prototypes/technologies/conarium-stem')
+require('prototypes/technologies/hydrolase-amplification')
+require('prototypes/technologies/zootoxins')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")

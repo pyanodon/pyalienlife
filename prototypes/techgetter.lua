@@ -403,6 +403,12 @@ local TRlist = {
 --pineal--
     {tech = 'conarium-stem', oldrecipe = 'Extract scrondrix Pineal Gland', newrecipe = 'Extract scrondrix Pineal Gland-1'},
 
+--tendon--
+    {tech = 'hydrolase-amplification', oldrecipe = 'Extract kmauts tendons', newrecipe = 'Extract kmauts tendons-1'},
+
+--venom--
+    {tech = 'zootoxins', oldrecipe = 'Extract Vonix´s Venom Gland', newrecipe = 'Extract Vonix´s Venom Gland-1'},
+
 }
 
 

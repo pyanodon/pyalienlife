@@ -545,7 +545,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 15,
 			tech = 'vonix-mk02',
-			name = 'Extract Vonix´s Venon Gland',
+			name = 'Extract Vonix´s Venom Gland',
 			icon = "__pyalienlifegraphics__/graphics/icons/venon-gland.png",
 			icon_size = 64,
 		},	
