@@ -4451,6 +4451,18 @@ local TRlist =
 					level = 2,
 					},
 				},
+				--cortex
+				{
+				base_recipe = 'adrenal-cortex',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'adrenal-cortex-2',
+					tech = 'stochastic-cortex',
+					unlocked = false,
+					level = 2,
+					},
+				},
 			},
 		techs_with_upgrades =
 			{
@@ -4508,6 +4520,7 @@ local TRlist =
 				['hydrolase-amplification'] = true,
 				['zootoxins'] = true,
 				['artificial-calcification'] = true,
+				['stochastic-cortex'] = true,
 			},
 	}
 

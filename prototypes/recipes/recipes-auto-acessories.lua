@@ -304,3 +304,20 @@ fun.autorecipes {
 		},
 	}
 }
+
+------------------CRUDREN CORTEX------------------
+
+RECIPE {
+    type = "recipe",
+    name = "adrenal-cortex-2",
+    category = "slaughterhouse",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = 'item', name = 'cridren', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'adrenal-cortex', amount = 2}
+    },
+    main_product = "adrenal-cortex",
+}:add_unlock("stochastic-cortex")

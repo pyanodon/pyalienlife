@@ -412,6 +412,9 @@ local TRlist = {
 --shell--
     {tech = 'artificial-calcification', oldrecipe = 'Extract xyhiphoe shell', newrecipe = 'Extract xyhiphoe shell-1'},
 
+--cortex--
+    {tech = 'stochastic-cortex', oldrecipe = 'adrenal-cortex', newrecipe = 'adrenal-cortex-2'},
+
 }
 
 
