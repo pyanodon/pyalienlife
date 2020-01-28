@@ -791,7 +791,7 @@ local recipes_list =
   "Full Render Vonix",
   "Extract Vonix Meat",
   "Extract Vonix brain",
-  "Extract Vonix´s Venon Gland",
+  "Extract Vonix´s Venom Gland",
   "Extract Vonix skin",
   "Extract Vonix guts",
   "Extract Vonix blood",

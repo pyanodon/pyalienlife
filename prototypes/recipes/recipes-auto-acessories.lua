@@ -156,3 +156,118 @@ fun.autorecipes {
 		},	
 	}
 }
+
+------------------KMAUTS TENDONS------------------
+
+fun.autorecipes {
+    name = 'rendering-tendon-kmauts',
+	category = 'slaughterhouse',
+	--module_limitations = 'auog',
+	subgroup = 'py-alienlife-kmauts',
+	order = 'b',
+    mats =
+	{
+		--fat
+		{
+			ingredients =
+				{
+					{name='cagedkmauts',amount=1},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='tendon', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='blood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='cage',amount=1},
+					{name='tendon', amount =3},
+				},
+                crafting_speed = 15,
+                tech = 'hydrolase-amplification',
+				name = 'Extract kmauts tendons-1',
+				icon = "__pyalienlifegraphics__/graphics/icons/tendon.png",
+				icon_size = 64,
+		},	
+	}
+}
+
+------------------PHAGNOT BLADDER------------------
+
+fun.autorecipes {
+    name = 'rendering-bladder-phagnot',
+	category = 'slaughterhouse',
+	--module_limitations = 'auog',
+	subgroup = 'py-alienlife-phagnot',
+	order = 'b',
+    mats =
+	{
+		--gas-bladder
+		{
+			ingredients =
+				{
+					{name='cagedphagnot',amount=1},
+				},
+			results =
+				{
+					{name='bones', amount='R'},
+					{name='meat', amount='R'},
+					{name='skin', amount='R'},
+                    {name='guts', amount='R'},
+                    {name='gasbladder', amount='R'},
+					{name='blood', amount='R'},
+					{name='cage',amount=1},
+                    {name='brain', amount='R'},
+                    {name='gasbladder', amount=2},
+				},
+			crafting_speed = 15,
+			tech = 'bladder',
+			name = 'Extract phagnot Gas bladder-2',
+			icon = "__pyalienlifegraphics__/graphics/icons/gas-bladder.png",
+			icon_size = 64,
+		},
+	}
+}
+
+------------------VONIX VENON GLAND------------------
+
+fun.autorecipes {
+    name = 'rendering-venon-vonix',
+	category = 'slaughterhouse',
+	--module_limitations = 'auog',
+	subgroup = 'py-alienlife-vonix',
+	order = 'b',
+    mats =
+	{
+		--venon
+		{
+			ingredients =
+				{
+					{name='vonix',amount=1},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='venongland', amount ='R'},
+					{name='chitin', amount ='R'},
+					{name='arthropodblood', amount ='R'},
+					{name='sulfuricacid', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='blood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='venongland', amount =2},
+				},
+                crafting_speed = 15,
+                tech = 'zootoxins',
+				name = 'Extract Vonix´s Venom Gland-1',
+				icon = "__pyalienlifegraphics__/graphics/icons/venon-gland.png",
+				icon_size = 64,
+		},	
+	}
+}

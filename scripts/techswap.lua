@@ -4415,6 +4415,30 @@ local TRlist =
 					level = 2,
 					},
 				},
+				--tendon
+				{
+				base_recipe = 'Extract kmauts tendons',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract kmauts tendons-1',
+					tech = 'hydrolase-amplification',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				--venom
+				{
+				base_recipe = 'Extract Vonix´s Venom Gland',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Vonix´s Venom Gland-1',
+					tech = 'zootoxins',
+					unlocked = false,
+					level = 2,
+					},
+				},
 			},
 		techs_with_upgrades =
 			{
@@ -4469,6 +4493,8 @@ local TRlist =
 				['exo-insertion'] = true,
 				['argumented-spikes'] = true,
 				['conarium-stem'] = true,
+				['hydrolase-amplification'] = true,
+				['zootoxins'] = true,
 			},
 	}
 

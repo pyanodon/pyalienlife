@@ -34,7 +34,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 140,
-			tech = 'food-mk02'
+			tech = 'kmauts-mk02'
 		},
 		--rennea
 		{
@@ -48,7 +48,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 130,
-			tech = 'organic-breeding'
+			tech = 'kmauts-mk03'
 		},
 		--tuuphra
 		{
@@ -61,7 +61,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 120,
-			tech = 'organic-breeding'
+			tech = 'kmauts-mk04'
 		},		
 		--gh
 		{
