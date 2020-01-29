@@ -13,7 +13,6 @@ fun.autorecipes {
 				{
 					{name='cagedscondrix',amount =1},
 					{name='waterbarrel',amount=5,return_item={name='empty-barrel',amount=5}},
-					{name='cage',amount=1},
 				},
 			results =
 				{
@@ -27,6 +26,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='cagedscondrix',amount ='R'},
+					{name='cage',amount=1,return_item={name='cage',amount=1}},
 					{name='dingritsfood01',amount =1},
 				},
 			results =
@@ -91,7 +91,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 100,
-			tech = 'dingrits'
+			tech = 'dingrits-mk03'
 		},
 		--food 2 yaedols yotoileaves
 		{
@@ -125,6 +125,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='antiviral',amount =1},
+					{name='cage',amount='R'},
 				},
 			results =
 				{
