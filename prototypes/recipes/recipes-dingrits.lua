@@ -137,7 +137,7 @@ RECIPE {
         {type = 'item', name = 'dingrits-cub', amount = 1},
         {type = 'item', name = 'gh', amount = 1},
         {type = 'item', name = 'resveratrol', amount = 1},
-        {type = 'item', name = 'cage', amount = 1},
+        {type = 'item', name = 'cage', amount = 2},
         {type = 'item', name = 'dingrits-codex', amount = 1},
         {type = 'item', name = 'earth-wolf-sample', amount = 1},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
