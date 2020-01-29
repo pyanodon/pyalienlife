@@ -74,7 +74,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'kmauts-cub', amount = 1},
         {type = 'item', name = 'gh', amount = 1},
-        {type = 'item', name = 'cage', amount = 1},
+        {type = 'item', name = 'cage', amount = 2},
         {type = 'item', name = 'resveratrol', amount = 1},
         {type = 'item', name = 'kmauts-codex', amount = 1},
         {type = 'fluid', name = 'fetal-serum', amount = 50},

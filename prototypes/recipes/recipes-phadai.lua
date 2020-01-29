@@ -142,7 +142,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'phadai-pup', amount = 1},
         {type = 'item', name = 'gh', amount = 1},
-        {type = 'item', name = 'cage', amount = 1},
+        {type = 'item', name = 'cage', amount = 2},
         {type = 'item', name = 'phadai-codex', amount = 1},
         {type = 'item', name = 'resveratrol', amount = 1},
         {type = 'item', name = 'earth-tiger-sample', amount = 1},

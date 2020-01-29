@@ -185,7 +185,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'dingrits-mk02', amount = 1},
     },
-}:add_unlock("domestication")
+}:add_unlock("domestication-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -201,7 +201,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'dingrits-mk02', amount = 1},
     },
-}:add_unlock("domestication")
+}:add_unlock("domestication-mk02")
 
 --mk03
 
@@ -219,7 +219,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'dingrits-mk03', amount = 1},
     },
-}:add_unlock("domestication")
+}:add_unlock("domestication-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -235,7 +235,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'dingrits-mk03', amount = 1},
     },
-}:add_unlock("domestication")
+}:add_unlock("domestication-mk02")
 
 --mk04
 
@@ -253,7 +253,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'dingrits-mk04', amount = 1},
     },
-}:add_unlock("domestication")
+}:add_unlock("domestication-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -269,4 +269,4 @@ RECIPE {
     results = {
         {type = 'item', name = 'dingrits-mk04', amount = 1},
     },
-}:add_unlock("domestication")
+}:add_unlock("domestication-mk02")

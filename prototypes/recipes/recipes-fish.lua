@@ -79,7 +79,7 @@ RECIPE {
     name = 'fish-sex-pup-02',
     category = 'fish-farm',
     enabled = false,
-    energy_required = 120,
+    energy_required = 100,
     ingredients = {
         {type = 'item', name = 'fish-food-02', amount = 1},
         {type = 'fluid', name = 'water-saline', amount = 300},
@@ -104,14 +104,14 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'fish-egg', amount = 3},
+        {type = 'item', name = 'fish-egg', amount = 5},
         {type = 'item', name = 'filtration-media', amount = 1},
         {type = 'item', name = 'resveratrol', amount = 1},
         {type = 'item', name = 'moss-gen', amount = 1},
         {type = 'fluid', name = 'fetal-serum', amount = 20},
     },
     results = {
-        {type = 'item', name = 'fish', amount = 3},
+        {type = 'item', name = 'fish', amount = 5},
     },
     main_product = "fish",
     subgroup = 'py-alienlife-fish',
@@ -127,7 +127,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'fish', amount = 10},
+        {type = 'item', name = 'fish', amount = 5},
     },
     results = {
         {type = 'item', name = 'meat', amount = 2, probability = 0.5},

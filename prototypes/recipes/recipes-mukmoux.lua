@@ -137,7 +137,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'mukmoux-calf', amount = 1},
         {type = 'item', name = 'gh', amount = 1},
-        {type = 'item', name = 'cage', amount = 1},
+        {type = 'item', name = 'cage', amount = 2},
         {type = 'item', name = 'resveratrol', amount = 1},
         {type = 'item', name = 'mukmoux-codex', amount = 1},
         {type = 'item', name = 'earth-cow-sample', amount = 1},
