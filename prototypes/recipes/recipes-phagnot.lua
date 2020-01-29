@@ -127,7 +127,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'phagnot-cub', amount = 1},
         {type = 'item', name = 'gh', amount = 1},
-        {type = 'item', name = 'cage', amount = 1},
+        {type = 'item', name = 'cage', amount = 2},
         {type = 'item', name = 'resveratrol', amount = 1},
         {type = 'item', name = 'phagnot-codex', amount = 1},
         {type = 'item', name = 'earth-giraffe-sample', amount = 1},

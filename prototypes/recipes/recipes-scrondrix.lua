@@ -99,7 +99,7 @@ RECIPE {
         {type = 'item', name = 'scrondrix-pup', amount = 1},
         {type = 'item', name = 'gh', amount = 1},
         {type = 'item', name = 'resveratrol', amount = 1},
-        {type = 'item', name = 'cage', amount = 1},
+        {type = 'item', name = 'cage', amount = 2},
         {type = 'item', name = 'scrondrix-codex', amount = 1},
         {type = 'item', name = 'earth-roadrunner-sample', amount = 1},
         {type = 'fluid', name = 'fetal-serum', amount = 50},

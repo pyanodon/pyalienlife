@@ -83,7 +83,7 @@ RECIPE {
         {type = 'fluid', name = 'steam', amount = 100},
     },
     results = {
-        {type = 'item', name = 'vrauks-food-01', amount = 3},
+        {type = 'item', name = 'vrauks-food-01', amount = 4},
     },
 }:add_unlock("food-mk01"):add_ingredient({type = "item", name = "fiberboard", amount = 1})
 
@@ -105,7 +105,7 @@ RECIPE {
         {type = 'fluid', name = 'steam', amount = 100},
     },
     results = {
-        {type = 'item', name = 'vrauks-food-02', amount = 5},
+        {type = 'item', name = 'vrauks-food-02', amount = 6},
     },
 }:add_unlock("food-mk02"):add_ingredient({type = "item", name = "fiberboard", amount = 2})
 
@@ -173,7 +173,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'cocoon', amount = 1},
         {type = 'item', name = 'gh', amount = 1},
-        {type = 'item', name = 'cage', amount = 1},
+        {type = 'item', name = 'cage', amount = 3},
         {type = 'item', name = 'resveratrol', amount = 1},
         {type = 'item', name = 'vrauks-codex', amount = 1},
         {type = 'item', name = 'earth-generic-sample', amount = 1},
