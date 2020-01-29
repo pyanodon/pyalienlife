@@ -298,7 +298,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "b",
-    stack_size = 500
+    stack_size = 200
 }
 
 ITEM {
@@ -320,7 +320,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "b",
-    stack_size = 200
+    stack_size = 50
 }
 
 ITEM {

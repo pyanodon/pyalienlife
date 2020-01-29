@@ -1682,3 +1682,18 @@ RECIPE {
         {type = 'item', name = 'ore-aluminium', amount = 10},
     },
 }:add_unlock("chitin")
+
+RECIPE {
+    type = 'recipe',
+    name = 'fish-oil-to-lube',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'fluid', name = 'fish-oil', amount = 100},
+        {type = 'item', name = 'ash', amount = 5},
+    },
+    results = {
+        {type = 'fluid', name = 'lubricant', amount = 100},
+    },
+}:add_unlock("water-animals-mk02")

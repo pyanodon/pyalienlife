@@ -93,7 +93,7 @@ RECIPE {
         {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'petri-dish-bacteria', amount = 5},
         {type = 'item', name = 'plasmids', amount = 1},
-        {type = 'item', name = 'moss-gen', amount = 1},
+        {type = 'item', name = 'moss-gen', amount = 5},
         {type = 'item', name = 'lab-instrument', amount = 1},
         {type = 'item', name = 'fawogae-substrate', amount = 4},
     },
