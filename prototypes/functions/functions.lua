@@ -1014,6 +1014,7 @@ recipe =
     local return_item_type
     local return_item_name
     local return_amount
+	local return_items_table = {}
     local results
     local require_item = false
     local require_item_name
@@ -1184,8 +1185,9 @@ recipe =
                     end
                 end
             end
-
+			
             if item.return_item ~= nil then
+				--log('hit')
                 return_item = true
                 return_item_name = item.return_item.name
                 if item.return_item.amount ~= nil then
@@ -1208,10 +1210,22 @@ recipe =
                     type1 = 'item'
                 end
                 return_item_type = type1
+								
+				local returned_item =
+					{
+					type = return_item_type,
+					name = return_item_name,
+					amount = return_amount
+					}
+				
+				table.insert(return_items_table, returned_item)
+				
             end
         end
-
-        --log(serpent.block(ingredients))
+		
+		log(serpent.block(return_items_table))
+        
+		--log(serpent.block(ingredients))
 
         results = lastresults
         --log(serpent.block(results))
@@ -1493,7 +1507,10 @@ recipe =
             }
 
             if return_item and return_item_name ~= nil then
-                overrides.add_result(na, {type = return_item_type, name = return_item_name, amount = return_amount})
+				for r, rit in pairs(return_items_table) do
+					overrides.add_result(na, rit)
+				end
+				--overrides.add_result(na, {type = return_item_type, name = return_item_name, amount = return_amount})
             end
 
             if mat.icon == nil then
@@ -1518,7 +1535,7 @@ recipe =
                 RECIPE(na):add_unlock(tech_unlock)
             end
 
-            --log(serpent.block(data.raw.recipe[na]))
+            log(serpent.block(data.raw.recipe[na]))
 
             number = number + 1
         end
