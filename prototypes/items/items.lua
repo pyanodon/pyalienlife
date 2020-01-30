@@ -2386,6 +2386,164 @@ ITEM {
     stack_size = 50
 }
 
+-------rich biomass------
+
+ITEM {
+    type = "item",
+    name = "pb-biomass",
+    icon = "__pyalienlifegraphics__/graphics/icons/pb-biomass.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "ni-biomass",
+    icon = "__pyalienlifegraphics__/graphics/icons/ni-biomass.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "au-biomass",
+    icon = "__pyalienlifegraphics__/graphics/icons/au-biomass.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "s-biomass",
+    icon = "__pyalienlifegraphics__/graphics/icons/s-biomass.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "sn-biomass",
+    icon = "__pyalienlifegraphics__/graphics/icons/sn-biomass.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "zn-biomass",
+    icon = "__pyalienlifegraphics__/graphics/icons/zn-biomass.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "al-biomass",
+    icon = "__pyalienlifegraphics__/graphics/icons/al-biomass.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "cu-biomass",
+    icon = "__pyalienlifegraphics__/graphics/icons/cu-biomass.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "co-biomass",
+    icon = "__pyalienlifegraphics__/graphics/icons/co-biomass.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "ti-biomass",
+    icon = "__pyalienlifegraphics__/graphics/icons/ti-biomass.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "nacl-biomass",
+    icon = "__pyalienlifegraphics__/graphics/icons/nacl-biomass.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "fe-biomass",
+    icon = "__pyalienlifegraphics__/graphics/icons/fe-biomass.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "nb-biomass",
+    icon = "__pyalienlifegraphics__/graphics/icons/nb-biomass.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "ag-biomass",
+    icon = "__pyalienlifegraphics__/graphics/icons/ag-biomass.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 50
+}
+
+---------------------------------------
+
 ITEM {
     type = "item",
     name = "bedding",
@@ -5243,7 +5401,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "d-c",
     stack_size = 10,
-	effect = { speed = {bonus = 25}},
+	effect = { speed = {bonus = 30}},
 	limitation = alien_life_limitations_dingrits,
     limitation_message_key = "Its full",
     fuel_category = 'dingrits',
@@ -5266,7 +5424,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "d-d",
     stack_size = 10,
-	effect = { speed = {bonus = 30}},
+	effect = { speed = {bonus = 35}},
 	limitation = alien_life_limitations_dingrits,
     limitation_message_key = "Its full",
     fuel_category = 'dingrits',
@@ -5573,7 +5731,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "gd",
     stack_size = 10,
-	effect = { speed = {bonus = 20}},
+	effect = { speed = {bonus = 35}},
 	limitation = alien_life_limitations_grod,
 	limitation_message_key = "Its full"
 }

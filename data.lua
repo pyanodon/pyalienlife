@@ -298,6 +298,7 @@ require("prototypes/fluids/formic-acid")
 require("prototypes/fluids/subcritical-water")
 require("prototypes/fluids/depolymerized-organics")
 require("prototypes/fluids/mutant-enzymes")
+require("prototypes/fluids/chelator")
 
 --(( RECIPES ))--
 require('prototypes/items/items')
@@ -401,6 +402,7 @@ require('prototypes/recipes/recipes-auto-fat-1')
 require('prototypes/recipes/recipes-auto-fat-2')
 require('prototypes/recipes/recipes-bladder')
 require('prototypes/recipes/recipes-auto-acessories')
+require('prototypes/recipes/recipes-photomining')
 
 --(( ORES ))--
 require('prototypes/ores/ralesia')

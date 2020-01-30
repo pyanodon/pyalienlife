@@ -7,7 +7,7 @@ TECHNOLOGY {
     prerequisites = {"xenobiology"},
     effects = {},
     unit = {
-        count = 120,
+        count = 150,
         ingredients = {
             {"automation-science-pack", 1},
         },
@@ -24,7 +24,7 @@ TECHNOLOGY {
     prerequisites = {'botany-mk01'},
     effects = {},
     unit = {
-        count = 120,
+        count = 200,
         ingredients = {
             {'automation-science-pack', 1},
             {'logistic-science-pack', 1}
@@ -42,12 +42,12 @@ TECHNOLOGY {
     prerequisites = {'botany-mk02'},
     effects = {},
     unit = {
-        count = 120,
+        count = 250,
         ingredients = {
             {'automation-science-pack', 1},
             {'logistic-science-pack', 1},
             {'chemical-science-pack', 1},
-            {'py-science-pack', 2},
+            {'py-science-pack', 1},
         },
         time = 60
     }
@@ -62,13 +62,13 @@ TECHNOLOGY {
     prerequisites = {"botany-mk03"},
     effects = {},
     unit = {
-        count = 100,
+        count = 300,
         ingredients = {
-            {'automation-science-pack', 3},
-            {'logistic-science-pack', 2},
-            {'chemical-science-pack', 2},
-            {'utility-science-pack', 1},
-            {'py-science-pack', 3},
+            {'automation-science-pack', 1},
+            {'logistic-science-pack', 1},
+            {'chemical-science-pack', 1},
+            {'production-science-pack', 1},
+            {'py-science-pack', 1},
         },
         time = 45
     }
