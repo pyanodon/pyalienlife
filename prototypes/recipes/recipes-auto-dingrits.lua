@@ -16,7 +16,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cageddingrits', probability = 0.8,amount_min =1,amount_max =1},
+					{name='cageddingrits', probability = 0.7,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 150,
 			tech = 'dingrits'
@@ -26,12 +26,13 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='cagedscondrix',amount ='R'},
-					--{name='cage',amount=1,return_item={name='cage',amount=1}},
 					{name='dingritsfood01',amount =1},
 				},
 			results =
 				{
 				
+					{name='cageddingrits',amount ='R'},
+					{name='cageddingrits', probability = 0.8,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 140,
 			tech = 'dingrits'
@@ -75,7 +76,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+					{name='cageddingrits',amount ='R'},
+					{name='cageddingrits', probability = 0.9,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 110,
 			tech = 'dingrits-mk03'
@@ -130,7 +132,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='cageddingrits', amount ='R'},
-					{name='cageddingrits', amount =1},
+					{name='cageddingrits', probability = 1,amount_min =1,amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'

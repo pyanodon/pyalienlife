@@ -18,7 +18,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cagedauog', probability = 0.8,amount_min =1,amount_max =1},
+					{name='cagedauog', probability = 0.7,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 160,
 			tech = 'auog'
@@ -32,7 +32,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+					{name='cagedauog',amount ='R'},
+					{name='cagedauog', probability = 0.8,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 150,
 			tech = 'auog'
@@ -76,7 +77,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+					{name='cagedauog',amount ='R'},
+					{name='cagedauog', probability = 0.9,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 120,
 			tech = 'auog-mk03'
@@ -130,7 +132,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='cagedauog', amount ='R'},
-					{name='cagedauog', amount =1},
+					{name='cagedauog', probability = 1,amount_min =1,amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'

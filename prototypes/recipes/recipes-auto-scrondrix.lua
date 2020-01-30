@@ -73,7 +73,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+					{name='cagedscrondrix',amount ='R'},
+					{name='cagedscrondrix', probability = 0.9,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 110,
 			tech = 'scrondrix-mk04'
@@ -101,7 +102,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='cagedscrondrix', amount ='R'},
-					{name='cagedscrondrix', amount =1},
+					{name='cagedscrondrix', probability = 1,amount_min =1,amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'

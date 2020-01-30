@@ -17,7 +17,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cagedarthurian', probability = 0.8,amount_min =1,amount_max =1},
+					{name='cagedarthurian', probability = 0.7,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 130,
 			tech = 'arthurian'
@@ -30,10 +30,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+					{name='cagedarthurian',amount ='R'},
+					{name='cagedarthurian', probability = 0.8,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 120,
-			tech = 'food-mk01'
+			tech = 'arthurian-mk02'
 		},
 		--bedding
 		{
@@ -46,7 +47,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 110,
-			tech = 'organic-breeding'
+			tech = 'arthurian-mk02'
 		},
 		--fiber
 		{
@@ -59,7 +60,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 100,
-			tech = 'organic-breeding'
+			tech = 'arthurian-mk03'
 		},		
 		--food 2
 		{
@@ -73,10 +74,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+					{name='cagedarthurian',amount ='R'},
+					{name='cagedarthurian', probability = 0.9,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 90,
-			tech = 'food-mk02'
+			tech = 'arthurian-mk03'
 		},
 		--food 2 bedding
 		{
@@ -89,7 +91,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 85,
-			tech = 'organic-breeding'
+			tech = 'arthurian-mk04'
 		},
 		--food 2 salt fiber
 		{
@@ -102,7 +104,7 @@ fun.autorecipes {
 				
 				},
 			crafting_speed = 80,
-			tech = 'organic-breeding'
+			tech = 'arthurian-mk04'
 		},	
 		--gh
 		{
@@ -127,7 +129,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='cagedarthurian', amount ='R'},
-					{name='cagedarthurian', amount =1},
+					{name='cagedarthurian', probability = 1,amount_min =1,amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'

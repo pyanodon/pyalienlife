@@ -112,6 +112,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'kicalk-mk02', amount = 1, probability = 0.005},
+        {type = 'item', name = 'kicalk', amount = 1, probability = 0.5},
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     main_product = "kicalk-mk02",
@@ -138,6 +139,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'kicalk-mk03', amount = 1, probability = 0.004},
+        {type = 'item', name = 'kicalk', amount = 1, probability = 0.6},
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "kicalk-mk03",
@@ -164,6 +166,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'kicalk-mk04', amount = 1, probability = 0.003},
+        {type = 'item', name = 'kicalk', amount = 1, probability = 0.7},
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "kicalk-mk04",
