@@ -155,6 +155,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'cadaveric-arum-mk02-a', amount = 1, probability = 0.005},
+        {type = 'item', name = 'cadaveric-arum', amount = 1, probability = 0.5},
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "cadaveric-arum-mk02",
@@ -181,6 +182,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'cadaveric-arum-mk03-a', amount = 1, probability = 0.004},
+        {type = 'item', name = 'cadaveric-arum', amount = 1, probability = 0.6},
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "cadaveric-arum-mk03",
@@ -207,6 +209,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'cadaveric-arum-mk04-a', amount = 1, probability = 0.003},
+        {type = 'item', name = 'cadaveric-arum', amount = 1, probability = 0.7},
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "cadaveric-arum-mk04",

@@ -17,7 +17,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cagedphagnot', probability = 0.8,amount_min =1,amount_max =1},
+					{name='cagedphagnot', probability = 0.7,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 150,
 			tech = 'phagnot'
@@ -31,7 +31,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+					{name='cagedphagnot',amount ='R'},
+					{name='cagedphagnot', probability = 0.8,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 140,
 			tech = 'phagnot'
@@ -75,7 +76,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+					{name='cagedphagnot',amount ='R'},
+					{name='cagedphagnot', probability = 0.9,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 110,
 			tech = 'phagnot-mk03'
@@ -129,7 +131,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='cagedphagnot', amount ='R'},
-					{name='cagedphagnot', amount =1},
+					{name='cagedphagnot', probability = 1,amount_min =1,amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'

@@ -111,6 +111,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'tuuphra-mk02', amount = 1, probability = 0.005},
+        {type = 'item', name = 'tuuphra', amount = 1, probability = 0.5},
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     main_product = "tuuphra-mk02",
@@ -137,6 +138,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'tuuphra-mk03', amount = 1, probability = 0.004},
+        {type = 'item', name = 'tuuphra', amount = 1, probability = 0.6},
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "tuuphra-mk03",
@@ -163,6 +165,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'tuuphra-mk04', amount = 1, probability = 0.003},
+        {type = 'item', name = 'tuuphra', amount = 1, probability = 0.7},
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "tuuphra-mk04",
