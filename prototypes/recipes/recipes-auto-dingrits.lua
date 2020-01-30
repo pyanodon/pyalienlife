@@ -26,7 +26,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='cagedscondrix',amount ='R'},
-					{name='cage',amount=1,return_item={name='cage',amount=1}},
+					--{name='cage',amount=1,return_item={name='cage',amount=1}},
 					{name='dingritsfood01',amount =1},
 				},
 			results =

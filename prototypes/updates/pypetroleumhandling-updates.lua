@@ -17,10 +17,12 @@ RECIPE('chemical-science-01'):replace_ingredient("water","crude-oil")
 RECIPE('production-science-01'):replace_ingredient("water","crude-oil")
 RECIPE('chemical-science-01'):replace_ingredient("water","crude-oil")
 RECIPE('harvester'):replace_ingredient("small-parts-01","small-parts-03")
+RECIPE('seeds-extract-01'):add_ingredient({type = "item", name = "guar-seeds", amount = 100})
 
 
 fun.results_replacer("crude-from-manure", "crude-oil", "scrude")
 fun.results_replacer("crude-from-manure", "ash", "soot")
+fun.results_replacer("guar-separation", "organics", "biomass")
 
 ----EXCLUSIVE RECIPES----
 

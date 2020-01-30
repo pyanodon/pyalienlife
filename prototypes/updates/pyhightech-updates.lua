@@ -994,3 +994,17 @@ RECIPE {
         {type = 'item', name = 'nanofibrils', amount = 1},
     },
 }:add_unlock("chitin")
+
+RECIPE {
+    type = 'recipe',
+    name = 'kicalk-to-chelator',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'kicalk', amount = 2},
+    },
+    results = {
+        {type = 'fluid', name = 'chelator', amount = 25},
+    },
+}:add_unlock("phytomining-mk02")

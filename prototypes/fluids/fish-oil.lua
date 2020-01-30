@@ -21,7 +21,7 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "item", name = "fish", amount = 10},
+        {type = "item", name = "fish", amount = 5},
     },
     results = {
         {type = 'fluid', name = 'fish-oil', amount = 50},

@@ -273,7 +273,7 @@ RECIPE {
         {type = 'item', name = 'bones', amount = 6},
         {type = 'item', name = 'manure', amount = 5},
         {type = 'item', name = 'ash', amount = 10},
-        {type = 'item', name = 'organics', amount = 20}
+        {type = 'item', name = 'biomass', amount = 20}
     },
     results = {
         {type = 'item', name = 'fertilizer', amount = 10}
@@ -1149,7 +1149,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'sodium-alginate', amount = 1},
         {type = 'fluid', name = 'creamy-latex', amount = 100},
-        {type = 'fluid', name = 'formic-acid', amount = 400},
+        {type = 'fluid', name = 'formic-acid', amount = 100},
     },
     results = {
         {type = 'item', name = 'latex-slab', amount = 1}

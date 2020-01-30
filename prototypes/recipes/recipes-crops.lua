@@ -82,7 +82,7 @@ RECIPE {
 --PHYTHOPLANCTON--
 RECIPE {
     type = "recipe",
-    name = "phytoplankton-2",
+    name = "phytoplankton-3",
     category = "plankton",
     enabled = false,
     energy_required = 15,

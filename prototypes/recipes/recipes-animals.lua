@@ -79,7 +79,7 @@ RECIPE {
         {type = 'item', name = 'moss', amount = 10},
         {type = 'item', name = 'wood-seeds', amount = 10},
         {type = 'item', name = 'agar', amount = 10},
-        {type = 'fluid', name = 'fish-oil', amount = 50},
+        {type = 'item', name = 'cellulose', amount = 5},
         {type = 'fluid', name = 'steam', amount = 100},
     },
     results = {
