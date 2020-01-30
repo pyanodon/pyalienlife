@@ -1008,3 +1008,60 @@ RECIPE {
         {type = 'fluid', name = 'chelator', amount = 25},
     },
 }:add_unlock("phytomining-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'cadaveric-pb',
+    category = 'arum',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'item', name = 'cadaveric-arum', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 's-biomass', amount = 10},
+        {type = 'fluid', name = 'waste-water', amount = 50},
+    },
+    main_product = "s-biomass",
+    icon = '__pyalienlifegraphics__/graphics/icons/s-biomass.png',
+    icon_size = 64,
+}:add_unlock("phytomining")
+
+RECIPE {
+    type = 'recipe',
+    name = 'kicalk-pb',
+    category = 'kicalk',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'item', name = 'kicalk', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'zn-biomass', amount = 10},
+        {type = 'fluid', name = 'waste-water', amount = 50},
+    },
+    main_product = "zn-biomass",
+    icon = '__pyalienlifegraphics__/graphics/icons/zn-biomass.png',
+    icon_size = 64,
+}:add_unlock("phytomining")
+
+RECIPE {
+    type = 'recipe',
+    name = 's-biomass-extraction',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 's-biomass', amount = 10},
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 165},
+    },
+    results = {
+        {type = 'item', name = 'sulfur', amount = 10},
+        {type = 'item', name = 'biomass', amount = 5},
+    },
+    main_product = "sulfur",
+    icon = '__base__/graphics/icons/sulfur.png',
+    icon_size = 64,
+}:add_unlock("phytomining"):change_category('pulp')
