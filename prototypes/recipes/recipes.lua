@@ -226,9 +226,9 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'neuroprocessor',
-    category = 'nmf',
+    category = 'data-array',
     enabled = false,
-    energy_required = 10,
+    energy_required = 2,
     ingredients = {
         {type = 'item', name = 'nexelit-matrix', amount = 5},
         {type = 'item', name = 'brain', amount = 1},
@@ -236,13 +236,12 @@ RECIPE {
         {type = 'item', name = 'bio-sample', amount = 2},
         {type = 'item', name = 'nickel-plate', amount = 5},
         {type = 'item', name = 'electronic-circuit', amount = 1},
-        {type = 'fluid', name = 'vacuum', amount = 50},
         {type = 'item', name = 'optical-fiber', amount = 5},
     },
     results = {
         {type = 'item', name = 'neuroprocessor', amount = 2},
     },
-}:add_unlock("biotech-mk02"):change_category('nano')
+}:add_unlock("biotech-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -960,12 +959,12 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'neuromorphic-chip',
+    name = 'empty-neuromorphic-chip',
     category = 'nmf',
     enabled = false,
     energy_required = 15,
     ingredients = {
-        {type = 'item', name = 'neuroprocessor', amount = 3},
+        {type = 'item', name = 'neuroprocessor', amount = 2},
         {type = 'item', name = 'biofilm', amount = 1},
         {type = 'item', name = 'optical-fiber', amount = 5},
         {type = 'item', name = 'nano-cellulose', amount = 5},
@@ -973,9 +972,23 @@ RECIPE {
         {type = 'fluid', name = 'vacuum', amount = 100},
     },
     results = {
-        {type = 'item', name = 'neuromorphic-chip', amount = 1},
+        {type = 'item', name = 'empty-neuromorphic-chip', amount = 1},
     },
 }:add_unlock("biotech-mk03"):change_category('nano')
+
+RECIPE {
+    type = 'recipe',
+    name = 'format-neuromorphic-chip',
+    category = 'data-array',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'empty-neuromorphic-chip', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'neuromorphic-chip', amount = 1},
+    },
+}:add_unlock("biotech-mk03")
 
 RECIPE {
     type = 'recipe',

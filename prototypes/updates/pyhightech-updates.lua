@@ -170,7 +170,6 @@ RECIPE('zipir-reef-mk04'):add_ingredient({type = "item", name = "hyperelastic-ma
 
 ----RECIPES----
 RECIPE('fungal-substrate'):add_ingredient({type = "item", name = "urea", amount = 3})
-RECIPE('neuromorphic-chip'):add_ingredient({type = "item", name = "carbon-nanotube", amount = 2}):add_ingredient({type = "item", name = "diamagnetic-material", amount = 4}):add_ingredient({type = "item", name = "paramagnetic-material", amount = 2})
 RECIPE('alien-sample-03'):replace_ingredient("plastic-bar", "graphene-roll")
 RECIPE('log7-2'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a"):remove_unlock('basic-electronics'):add_unlock('botany-mk02')
 --RECIPE('urea'):replace_ingredient("fawogae", "seaweed"):subgroup_order("py-alienlife-items", "a")
@@ -179,7 +178,7 @@ RECIPE('bonemeal3'):remove_unlock('advanced-electronics'):subgroup_order("py-ali
 RECIPE('bonemeal4'):remove_unlock('advanced-electronics'):subgroup_order("py-alienlife-items", "a")
 RECIPE('cobalt-extract'):replace_ingredient("sulfuric-acid", "cyanic-acid")
 RECIPE('neuroprocessor'):replace_ingredient("electronic-circuit", "pcb2"):add_ingredient({type = "item", name = "resistor1", amount = 4}):add_ingredient({type = "item", name = "capacitor1", amount = 3}):add_ingredient({type = "item", name = "inductor1", amount = 5}):add_ingredient({type = "item", name = "transistor", amount = 5})
-RECIPE('neuromorphic-chip'):add_ingredient({type = "item", name = "bakelite", amount = 5}):add_ingredient({type = "item", name = "micro-fiber", amount = 4}):add_ingredient({type = "item", name = "capacitor2", amount = 5}):add_ingredient({type = "item", name = "melamine", amount = 10}):add_ingredient({type = "fluid", name = "etching", amount = 40})
+RECIPE('empty-neuromorphic-chip'):add_ingredient({type = "item", name = "bakelite", amount = 5}):add_ingredient({type = "item", name = "micro-fiber", amount = 4}):add_ingredient({type = "item", name = "capacitor2", amount = 5}):add_ingredient({type = "item", name = "melamine", amount = 10}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 2}):add_ingredient({type = "item", name = "diamagnetic-material", amount = 4}):add_ingredient({type = "item", name = "paramagnetic-material", amount = 2})
 RECIPE('formamide'):replace_ingredient("nitrogen", "ammonia"):change_category('fbreactor')
 RECIPE('bacteria-2'):subgroup_order("py-alienlife-genetics", "a"):remove_unlock('nano-tech'):add_unlock('microbiology-mk03'):add_ingredient({type = "item", name = "petri-dish", amount = 3}):add_ingredient({type = "item", name = "nexelit-plate", amount = 2}):add_ingredient({type = "item", name = "flask", amount = 5}):add_ingredient({type = "item", name = "chitin", amount = 5})
 RECIPE('rendering'):remove_unlock('basic-electronics')
