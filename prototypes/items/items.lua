@@ -5611,7 +5611,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-b",
     stack_size = 10,
-	effect = { speed = {bonus = 105}},
+	effect = { speed = {bonus = 110}},
 	limitation = alien_life_limitations_vonix,
 	limitation_message_key = "Its full"
 }
@@ -5631,7 +5631,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-c",
     stack_size = 10,
-	effect = { speed = {bonus = 110}},
+	effect = { speed = {bonus = 120}},
 	limitation = alien_life_limitations_vonix,
 	limitation_message_key = "Its full"
 }
@@ -5651,7 +5651,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-d",
     stack_size = 10,
-	effect = { speed = {bonus = 115}},
+	effect = { speed = {bonus = 130}},
 	limitation = alien_life_limitations_vonix,
 	limitation_message_key = "Its full"
 }
