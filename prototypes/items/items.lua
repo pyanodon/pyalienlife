@@ -3125,6 +3125,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "empty-neuromorphic-chip",
+    icon = "__pyalienlifegraphics__/graphics/icons/empty-neuromorphic-chip.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
     name = "neuromorphic-chip",
     icon = "__pyalienlifegraphics__/graphics/icons/neuromorphic-chip.png",
 	icon_size = 64,
