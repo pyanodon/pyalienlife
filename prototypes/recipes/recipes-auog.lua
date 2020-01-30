@@ -213,6 +213,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'auog-mk02', amount = 1, probability = 0.005},
+        {type = 'item', name = 'auog', amount = 1, probability = 0.5},
         {type = 'item', name = 'empty-barrel', amount = 3},
     },
     --main_product = "auog-mk02",
@@ -239,6 +240,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'auog-mk03', amount = 1, probability = 0.004},
+        {type = 'item', name = 'auog', amount = 1, probability = 0.6},
         {type = 'item', name = 'empty-barrel', amount = 3},
     },
     --main_product = "auog-mk03",
@@ -265,6 +267,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'auog-mk04', amount = 1, probability = 0.003},
         {type = 'item', name = 'empty-barrel', amount = 3},
+        {type = 'item', name = 'auog', amount = 1, probability = 0.7},
     },
     --main_product = "auog-mk04",
     icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',

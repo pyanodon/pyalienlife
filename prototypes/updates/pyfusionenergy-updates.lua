@@ -22,6 +22,7 @@ ITEM('serine'):subgroup_order('py-alienlife-kmauts', 'b')
 ITEM('kmauts-ration'):subgroup_order('py-alienlife-food', 'b')
 RECIPE('nembit-matrix'):add_ingredient({type = "item", name = "nano-cellulose", amount = 3})
 RECIPE('science-coating'):add_ingredient({type = "item", name = "chitosan", amount = 5})
+RECIPE('xyhiphoe-hydrocyclone'):remove_unlock('vanadium-processing'):add_unlock('biotech-mk02')
 
 RECIPE('xyhiphoe-blood'):remove_unlock('vanadium-processing')
 RECIPE('vanabins'):remove_ingredient("xyhiphoe-blood"):add_ingredient({type = "fluid", name = "arthropod-blood", amount = 40})
