@@ -103,7 +103,7 @@ RECIPE {
     main_product = "pb-biomass",
     icon = '__pyalienlifegraphics__/graphics/icons/pb-biomass.png',
     icon_size = 64,
-}:add_unlock("phytomining")
+}:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -126,7 +126,7 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'grod-au',
+    name = 'grod-al',
     category = 'grod',
     enabled = false,
     energy_required = 100,
@@ -135,13 +135,13 @@ RECIPE {
         {type = 'item', name = 'grod', amount = 1},
     },
     results = {
-        {type = 'item', name = 'au-biomass', amount = 10},
+        {type = 'item', name = 'al-biomass', amount = 10},
         {type = 'fluid', name = 'waste-water', amount = 50},
     },
-    main_product = "au-biomass",
-    icon = '__pyalienlifegraphics__/graphics/icons/au-biomass.png',
+    main_product = "al-biomass",
+    icon = '__pyalienlifegraphics__/graphics/icons/al-biomass.png',
     icon_size = 64,
-}:add_unlock("phytomining-mk03")
+}:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -160,7 +160,26 @@ RECIPE {
     main_product = "ag-biomass",
     icon = '__pyalienlifegraphics__/graphics/icons/ag-biomass.png',
     icon_size = 64,
-}:add_unlock("phytomining-mk02")
+}:add_unlock("phytomining-mk03")
+
+RECIPE {
+    type = 'recipe',
+    name = 'seaweed-ag',
+    category = 'seaweed',
+    enabled = false,
+    energy_required = 50,
+    ingredients = {
+        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'item', name = 'seaweed', amount = 40},
+    },
+    results = {
+        {type = 'item', name = 'ag-biomass', amount = 10},
+        {type = 'fluid', name = 'waste-water', amount = 50},
+    },
+    main_product = "ag-biomass",
+    icon = '__pyalienlifegraphics__/graphics/icons/ag-biomass.png',
+    icon_size = 64,
+}:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -170,16 +189,168 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'fluid', name = 'dirty-water', amount = 200},
-        {type = 'item', name = 'moss', amount = 10},
+        {type = 'item', name = 'moss', amount = 30},
     },
     results = {
-        {type = 'item', name = 'ag-biomass', amount = 10},
+        {type = 'item', name = 'zn-biomass', amount = 10},
         {type = 'fluid', name = 'waste-water', amount = 50},
     },
-    main_product = "ag-biomass",
-    icon = '__pyalienlifegraphics__/graphics/icons/ag-biomass.png',
+    main_product = "zn-biomass",
+    icon = '__pyalienlifegraphics__/graphics/icons/zn-biomass.png',
     icon_size = 64,
 }:add_unlock("phytomining-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'navens-au',
+    category = 'navens',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'item', name = 'navens', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'au-biomass', amount = 10},
+        {type = 'fluid', name = 'waste-water', amount = 50},
+    },
+    main_product = "au-biomass",
+    icon = '__pyalienlifegraphics__/graphics/icons/au-biomass.png',
+    icon_size = 64,
+}:add_unlock("phytomining-mk03")
+
+RECIPE {
+    type = 'recipe',
+    name = 'navens-fe',
+    category = 'navens',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'item', name = 'navens', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'fe-biomass', amount = 8},
+        {type = 'fluid', name = 'waste-water', amount = 50},
+    },
+    main_product = "fe-biomass",
+    icon = '__pyalienlifegraphics__/graphics/icons/fe-biomass.png',
+    icon_size = 64,
+}:add_unlock("phytomining")
+
+RECIPE {
+    type = 'recipe',
+    name = 'rennea-cu',
+    category = 'rennea',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'item', name = 'rennea', amount = 3},
+    },
+    results = {
+        {type = 'item', name = 'cu-biomass', amount = 10},
+        {type = 'fluid', name = 'waste-water', amount = 50},
+    },
+    main_product = "cu-biomass",
+    icon = '__pyalienlifegraphics__/graphics/icons/cu-biomass.png',
+    icon_size = 64,
+}:add_unlock("phytomining")
+
+RECIPE {
+    type = 'recipe',
+    name = 'rennea-co',
+    category = 'rennea',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'item', name = 'rennea', amount = 3},
+    },
+    results = {
+        {type = 'item', name = 'co-biomass', amount = 10},
+        {type = 'fluid', name = 'waste-water', amount = 50},
+    },
+    main_product = "co-biomass",
+    icon = '__pyalienlifegraphics__/graphics/icons/co-biomass.png',
+    icon_size = 64,
+}:add_unlock("phytomining-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'ralesia-ni',
+    category = 'ralesia',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'item', name = 'ralesia', amount = 3},
+    },
+    results = {
+        {type = 'item', name = 'ni-biomass', amount = 10},
+        {type = 'fluid', name = 'waste-water', amount = 50},
+    },
+    main_product = "ni-biomass",
+    icon = '__pyalienlifegraphics__/graphics/icons/ni-biomass.png',
+    icon_size = 64,
+}:add_unlock("phytomining-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'tuuphra-nacl',
+    category = 'tuuphra',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'item', name = 'tuuphra', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'nacl-biomass', amount = 10},
+        {type = 'fluid', name = 'waste-water', amount = 50},
+    },
+    main_product = "nacl-biomass",
+    icon = '__pyalienlifegraphics__/graphics/icons/nacl-biomass.png',
+    icon_size = 64,
+}:add_unlock("phytomining")
+
+RECIPE {
+    type = 'recipe',
+    name = 'yaedols-ti',
+    category = 'yaedols',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'item', name = 'yaedols', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'ti-biomass', amount = 10},
+        {type = 'fluid', name = 'waste-water', amount = 50},
+    },
+    main_product = "ti-biomass",
+    icon = '__pyalienlifegraphics__/graphics/icons/ti-biomass.png',
+    icon_size = 64,
+}:add_unlock("phytomining-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'yotoi-fe',
+    category = 'yotoi',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'item', name = 'yotoi', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'fe-biomass', amount = 15},
+        {type = 'fluid', name = 'waste-water', amount = 50},
+    },
+    main_product = "fe-biomass",
+    icon = '__pyalienlifegraphics__/graphics/icons/fe-biomass.png',
+    icon_size = 64,
+}:add_unlock("phytomining")
 
 -------BIOMASS EXTRACTION----------
 
@@ -200,7 +371,45 @@ RECIPE {
     main_product = "ore-lead",
     icon = '__pyraworesgraphics__/graphics/icons/mip/ore-lead.png',
     icon_size = 64,
+}:add_unlock("phytomining-mk02"):change_category('pulp')
+
+RECIPE {
+    type = 'recipe',
+    name = 'sn-biomass-extraction',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'sn-biomass', amount = 10},
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 165},
+    },
+    results = {
+        {type = 'item', name = 'ore-tin', amount = 15},
+        {type = 'item', name = 'biomass', amount = 5},
+    },
+    main_product = "ore-tin",
+    icon = '__pyraworesgraphics__/graphics/icons/mip/ore-tin.png',
+    icon_size = 64,
 }:add_unlock("phytomining"):change_category('pulp')
+
+RECIPE {
+    type = 'recipe',
+    name = 'al-biomass-extraction',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'al-biomass', amount = 10},
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 165},
+    },
+    results = {
+        {type = 'item', name = 'ore-aluminium', amount = 15},
+        {type = 'item', name = 'biomass', amount = 5},
+    },
+    main_product = "ore-aluminium",
+    icon = '__pyraworesgraphics__/graphics/icons/mip/ore-aluminium.png',
+    icon_size = 64,
+}:add_unlock("phytomining-mk02"):change_category('pulp')
 
 RECIPE {
     type = 'recipe',
@@ -219,7 +428,7 @@ RECIPE {
     main_product = "lead-refined-dust-03",
     icon = '__pyraworesgraphics__/graphics/icons/lead-refined-dust-03.png',
     icon_size = 32,
-}:add_unlock("phytomining-mk02"):change_category('pulp')
+}:add_unlock("phytomining-mk03"):change_category('pulp')
 
 RECIPE {
     type = 'recipe',
@@ -257,7 +466,7 @@ RECIPE {
     main_product = "ore-zinc",
     icon = '__pyraworesgraphics__/graphics/icons/mip/ore-zinc.png',
     icon_size = 64,
-}:add_unlock("phytomining"):change_category('pulp')
+}:add_unlock("phytomining-mk02"):change_category('pulp')
 
 RECIPE {
     type = 'recipe',
@@ -353,3 +562,22 @@ RECIPE {
     icon = '__base__/graphics/icons/iron-ore.png',
     icon_size = 64,
 }:add_unlock("phytomining"):change_category('pulp')
+
+RECIPE {
+    type = 'recipe',
+    name = 'ni-biomass-extraction',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'ni-biomass', amount = 10},
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 165},
+    },
+    results = {
+        {type = 'item', name = 'ore-nickel', amount = 15},
+        {type = 'item', name = 'biomass', amount = 5},
+    },
+    main_product = "ore-nickel",
+    icon = '__pyraworesgraphics__/graphics/icons/mip/ore-nickel.png',
+    icon_size = 64,
+}:add_unlock("phytomining-mk02"):change_category('pulp')

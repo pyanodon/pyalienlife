@@ -1030,7 +1030,7 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'kicalk-pb',
+    name = 'kicalk-zn',
     category = 'kicalk',
     enabled = false,
     energy_required = 100,
@@ -1045,7 +1045,7 @@ RECIPE {
     main_product = "zn-biomass",
     icon = '__pyalienlifegraphics__/graphics/icons/zn-biomass.png',
     icon_size = 64,
-}:add_unlock("phytomining")
+}:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = 'recipe',
