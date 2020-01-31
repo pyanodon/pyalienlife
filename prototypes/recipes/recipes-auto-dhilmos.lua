@@ -13,7 +13,7 @@ fun.autorecipes {
 				{
 					{name='phytoplankton',amount =50},
 					{name='dhilmosegg',amount =1},
-					{name='watersaline',amount=100,return_item={name='dirty-water',amount=100}},
+					{name='watersaline',amount=100,return_item={name='waste-water',amount=100}},
 				},
 			results =
 				{
@@ -285,7 +285,7 @@ fun.autorecipes {
 				{
                     {name='phytoplankton',amount =50},
                     {name='seaweed',amount = 'R'},
-					{name='watersaline',amount=100,return_item={name='dirty-water',amount=100}},
+					{name='watersaline',amount=100,return_item={name='waste-water',amount=100}},
 					{name='filtrationmedia',amount = 2},
 				},
 			results =

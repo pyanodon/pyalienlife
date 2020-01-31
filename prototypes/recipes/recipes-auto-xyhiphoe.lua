@@ -13,7 +13,7 @@ fun.autorecipes {
 				{
                     {name='fishfood1',amount =1},
                     {name='phytoplankton',amount =50},
-					{name='pressuredwater',amount ='*3000',return_item={name='wastewater',amount='*15'}},
+					{name='pressuredwater',amount ='*3000',return_item={name='waste-water',amount= 200}},
 				},
 			results =
 				{
@@ -255,7 +255,7 @@ fun.autorecipes {
 				{
                     {name='fishfood1',amount =1},
                     {name='phytoplankton',amount =50},
-					{name='pressuredwater',amount ='*300',return_item={name='wastewater',amount='*15'}},
+					{name='pressuredwater',amount ='*300',return_item={name='waste-water',amount= 200}},
 					--{name='cage',amount=1},
 					{name='saps',amount = 5},
 				},
