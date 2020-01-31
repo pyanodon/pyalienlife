@@ -15,7 +15,7 @@ fun.autorecipes {
 					{name='zipiregg',amount ='1'},
 					{name='fish',amount ='3'},
 					{name='stonewool',amount ='3'},
-                    {name='water',amount ='*20',return_item={name='wastewater',amount='*10'}},
+                    {name='water',amount ='*20',return_item={name='waste-water',amount=100}},
 				},
 			results =
 				{
@@ -334,7 +334,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='pressuredwater',amount ='*30',return_item={name='wastewater',amount='*10'}},
+                    {name='pressuredwater',amount ='*30',return_item={name='waste-water',amount=100}},
 					{name='stonewool',amount =3},
 					{name='fish',amount ='3'},
                     {name='phytoplankton',amount ='*20'},
@@ -416,7 +416,7 @@ fun.autorecipes {
                     {name='fawogaesubstrate',amount = 'R'},
                     {name='watersaline',amount = 'R'},
 
-                    {name='pressuredwater',amount ='*30',return_item={name='wastewater',amount='*10'}},
+                    {name='pressuredwater',amount ='*30',return_item={name='waste-water',amount=100}},
 					{name='stonewool',amount =3},
                     {name='phytoplankton',amount ='*50'},
 					{name='pheromones',amount =1},

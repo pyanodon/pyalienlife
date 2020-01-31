@@ -13,7 +13,7 @@ fun.autorecipes {
 				{
                     {name='seaweed',amount =15},
                     {name='woodseeds',amount =15},
-					{name='watersaline',amount ='*3000',return_item={name='wastewater',amount='*15'}},
+					{name='watersaline',amount ='*3000',return_item={name='waste-water',amount=500}},
 				},
 			results =
 				{
@@ -374,7 +374,7 @@ fun.autorecipes {
 				{
                     {name='seaweed',amount =15},
                     {name='woodseeds',amount =15},
-					{name='watersaline',amount ='*300',return_item={name='wastewater',amount='*15'}},
+					{name='watersaline',amount ='*300',return_item={name='waste-water',amount= 300}},
 					--{name='cage',amount=1},
 					{name='sponge',amount = 2},
 				},
