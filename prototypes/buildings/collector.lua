@@ -55,7 +55,7 @@ ENTITY {
       fuel_inventory_size = 1,
       emissions_per_minute = 0.06,
     },
-    energy_usage = "1000kW",
+    energy_usage = "300kW",
     mining_power = 1,
     resource_searching_radius = 3.5,
     vector_to_place_result = {0, -3.85},

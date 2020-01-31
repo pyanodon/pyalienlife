@@ -988,25 +988,37 @@ script.on_event(
 	end
 	--log('hit')
 	--log(serpent.block(TRlist.techs_with_upgrades['bigger-colon']))
-	local tech = event.research	
+	local tech = event.research
+	if tech.name == 'hardened-bone' then
+	log(serpent.block(tech.name))
+	end
 	if TRlist.techs_with_upgrades[tech.name] == true then
 		if tech.effects ~= nil then
 			for e, effect in pairs(tech.effects) do
 				if effect.type == 'unlock-recipe' then
 					for u, upgrade in pairs(TRlist.upgrades) do
+						--log(serpent.block(upgrade.base_recipe))
 						if effect.recipe == upgrade.base_recipe then
 							if upgrade.current_lvl > 1 then
 								event.research.force.recipes[upgrade.base_recipe].enabled = false
 							end
 						elseif effect.recipe == upgrade.upgrade_1.recipe then
+							if upgrade.current_lvl > 2 then
+								event.research.force.recipes[upgrade.upgrade_1.recipe].enabled = false
+							end
 							upgrade.current_lvl = 2
 							event.research.force.recipes[upgrade.base_recipe].enabled = false
 							upgrade.upgrade_1.unlocked = true
 						elseif upgrade.upgrade_2 ~= nil and effect.recipe == upgrade.upgrade_2.recipe then
+							log('hit')
+							log(serpent.block(upgrade.upgrade_1.recipe))
+							log(serpent.block(upgrade.upgrade_2.recipe))
+							--log(serpent.block(event.research.force.recipes[upgrade.upgrade_1.recipe].enabled))
 							upgrade.current_lvl = 3
 							event.research.force.recipes[upgrade.base_recipe].enabled = false
 							event.research.force.recipes[upgrade.upgrade_1.recipe].enabled = false
 							upgrade.upgrade_2.unlocked = true
+							--log(serpent.block(event.research.force.recipes[upgrade.upgrade_1.recipe].enabled))
 						end
 					end
 				end
