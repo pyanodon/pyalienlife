@@ -1,3 +1,5 @@
+local fun = require("prototypes/functions/functions")
+
 --BUILDINDS--
 ITEM("fawogae-plantation-mk02"):set("icon", "__pyalienlifegraphics__/graphics/icons/fawogae-plantation-mk02.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-buildings-mk02", "d")
 ITEM("fawogae-plantation-mk03"):set("icon", "__pyalienlifegraphics__/graphics/icons/fawogae-plantation-mk03.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-buildings-mk03", "d")
@@ -52,6 +54,12 @@ RECIPE('log-organics'):remove_unlock('coal-processing-2')
 RECIPE('bonemeal'):remove_unlock('coal-processing-1')
 RECIPE('organics-from-wood'):remove_unlock('coal-processing-2')
 RECIPE('soil-separation'):remove_unlock('separation')
+
+fun.results_replacer("log2", "log", "log",4)
+fun.results_replacer("log4", "log", "log",5)
+fun.results_replacer("log3", "log", "log",6)
+fun.results_replacer("log5", "log", "log",7)
+fun.results_replacer("log6", "log", "log",8)
 
 ----EXCLUSIVE RECIPES----
 

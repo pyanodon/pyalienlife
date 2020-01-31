@@ -242,6 +242,7 @@ fun.results_replacer("fish-sex-pup-01", "dirty-water", "waste-water")
 fun.results_replacer("fish-sex-pup-02", "dirty-water", "waste-water")
 
 fun.results_replacer("fertilizer", "py-fertilizer", "fertilizer")
+fun.results_replacer("log7-2", "log", "log",8)
 --fun.results_replacer("urea", "urea", "urea",5)
 
 ----EXCLUSIVE RECIPES----
@@ -1030,6 +1031,47 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
+    name = 'cadaveric-pb-2',
+    category = 'arum',
+    enabled = false,
+    energy_required = 60,
+    ingredients = {
+        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'item', name = 'cadaveric-arum', amount = 1},
+        {type = 'fluid', name = 'chelator', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 's-biomass', amount = 20},
+        {type = 'fluid', name = 'waste-water', amount = 80},
+    },
+    main_product = "s-biomass",
+    icon = '__pyalienlifegraphics__/graphics/icons/s-biomass.png',
+    icon_size = 64,
+}:add_unlock("phytomining-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'cadaveric-pb-3',
+    category = 'arum',
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'item', name = 'hmas', amount = 1},
+        {type = 'item', name = 'cadaveric-arum', amount = 1},
+        {type = 'fluid', name = 'chelator', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 's-biomass', amount = 60},
+        {type = 'fluid', name = 'waste-water', amount = 100},
+    },
+    main_product = "s-biomass",
+    icon = '__pyalienlifegraphics__/graphics/icons/s-biomass.png',
+    icon_size = 64,
+}:add_unlock("phytomining-mk03")
+
+RECIPE {
+    type = 'recipe',
     name = 'kicalk-zn',
     category = 'kicalk',
     enabled = false,
@@ -1046,6 +1088,49 @@ RECIPE {
     icon = '__pyalienlifegraphics__/graphics/icons/zn-biomass.png',
     icon_size = 64,
 }:add_unlock("phytomining-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'kicalk-zn-2',
+    category = 'kicalk',
+    enabled = false,
+    energy_required = 60,
+    ingredients = {
+        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'item', name = 'kicalk', amount = 1},
+        {type = 'fluid', name = 'chelator', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'zn-biomass', amount = 20},
+        {type = 'fluid', name = 'waste-water', amount = 80},
+    },
+    main_product = "zn-biomass",
+    icon = '__pyalienlifegraphics__/graphics/icons/zn-biomass.png',
+    icon_size = 64,
+}:add_unlock("phytomining-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'kicalk-zn-3',
+    category = 'kicalk',
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'item', name = 'kicalk', amount = 1},
+        {type = 'item', name = 'hmas', amount = 1},
+        {type = 'fluid', name = 'chelator', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'zn-biomass', amount = 80},
+        {type = 'fluid', name = 'waste-water', amount = 100},
+    },
+    main_product = "zn-biomass",
+    icon = '__pyalienlifegraphics__/graphics/icons/zn-biomass.png',
+    icon_size = 64,
+}:add_unlock("phytomining-mk03")
+
+-------BIOMASS EXTRACTION----------------------------------
 
 RECIPE {
     type = 'recipe',

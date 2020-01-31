@@ -153,6 +153,18 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "hmas",
+    icon = "__pyalienlifegraphics__/graphics/icons/hmas.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 100
+}
+
+
+ITEM {
+    type = "item",
     name = "fungal-substrate-02",
     icon = "__pyalienlifegraphics__/graphics/icons/fungal-substrate-02.png",
     icon_size = 32,
