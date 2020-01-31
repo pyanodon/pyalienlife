@@ -1897,22 +1897,22 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract meat from Improved dingritss',
+				base_recipe = 'Extract meat from Improved dingrits',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract meat from Improved dingritss-2',
+					recipe = 'Extract meat from Improved dingrits-2',
 					tech = 'exercises',
 					unlocked = false,
 					level = 2,
 					},
 				},
 				{
-				base_recipe = 'Extract meat from Improved kmautss',
+				base_recipe = 'Extract meat from Improved kmauts',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract meat from Improved kmautss-2',
+					recipe = 'Extract meat from Improved kmauts-2',
 					tech = 'exercises',
 					unlocked = false,
 					level = 2,
@@ -1963,11 +1963,11 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract meat from Improved Tritss',
+				base_recipe = 'Extract meat from Improved Trits',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract meat from Improved Tritss-2',
+					recipe = 'Extract meat from Improved Trits-2',
 					tech = 'exercises',
 					unlocked = false,
 					level = 2,
@@ -1985,22 +1985,22 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract meat from Improved Vonixs',
+				base_recipe = 'Extract meat from Improved Vonixes',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract meat from Improved Vonixs-2',
+					recipe = 'Extract meat from Improved Vonixes-2',
 					tech = 'exercises',
 					unlocked = false,
 					level = 2,
 					},
 				},
 				{
-				base_recipe = 'Extract meat from Improved Vraukss',
+				base_recipe = 'Extract meat from Improved Vrauks',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract meat from Improved Vraukss-2',
+					recipe = 'Extract meat from Improved Vrauks-2',
 					tech = 'exercises',
 					unlocked = false,
 					level = 2,
@@ -2018,22 +2018,22 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract meat from Improved xyhiphoes',
+				base_recipe = 'Extract meat from Improved xyhiphoe',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract meat from Improved xyhiphoes-2',
+					recipe = 'Extract meat from Improved xyhiphoe-2',
 					tech = 'exercises',
 					unlocked = false,
 					level = 2,
 					},
 				},
 				{
-				base_recipe = 'Extract meat from Improved zipirs',
+				base_recipe = 'Extract meat from Improved Zipir',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract meat from Improved zipirs-2',
+					recipe = 'Extract meat from Improved Zipir-2',
 					tech = 'exercises',
 					unlocked = false,
 					level = 2,
@@ -2363,22 +2363,22 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract bones from Improved dingritss',
+				base_recipe = 'Extract bones from Improved dingrits',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract bones from Improved dingritss-2',
+					recipe = 'Extract bones from Improved dingrits-2',
 					tech = 'hardened-bone',
 					unlocked = false,
 					level = 2,
 					},
 				},
 				{
-				base_recipe = 'Extract bones from Improved kmautss',
+				base_recipe = 'Extract bones from Improved kmauts',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract bones from Improved kmautss-2',
+					recipe = 'Extract bones from Improved kmauts-2',
 					tech = 'hardened-bone',
 					unlocked = false,
 					level = 2,
@@ -2429,11 +2429,11 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract bones from Improved Tritss',
+				base_recipe = 'Extract bones from Improved Trits',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract bones from Improved Tritss-2',
+					recipe = 'Extract bones from Improved Trits-2',
 					tech = 'hardened-bone',
 					unlocked = false,
 					level = 2,
@@ -2462,22 +2462,22 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract bones from Improved Vraukss',
+				base_recipe = 'Extract bones from Improved Vrauks',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract bones from Improved Vraukss-2',
+					recipe = 'Extract bones from Improved Vrauks-2',
 					tech = 'hardened-bone',
 					unlocked = false,
 					level = 2,
 					},
 				},
 				{
-				base_recipe = 'Extract bones from Improved Xenos',
+				base_recipe = 'Extract bones from Improved xenos',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract bones from Improved Xenos-2',
+					recipe = 'Extract bones from Improved xenos-2',
 					tech = 'hardened-bone',
 					unlocked = false,
 					level = 2,
@@ -2495,11 +2495,11 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract bones from Improved zipirs',
+				base_recipe = 'Extract bones from Improved Zipirs',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract bones from Improved zipirs-2',
+					recipe = 'Extract bones from Improved Zipirs-2',
 					tech = 'hardened-bone',
 					unlocked = false,
 					level = 2,
@@ -2536,7 +2536,7 @@ local TRlist =
 					},
 				upgrade_2 =
 					{
-					recipe = 'Extract auog guts-2',
+					recipe = 'Extract auog guts-5',
 					tech = 'cavity',
 					unlocked = false,
 					level = 3,
@@ -2829,22 +2829,22 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract guts from Improved dingritss',
+				base_recipe = 'Extract guts from Improved dingrits',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract guts from Improved dingritss-2',
+					recipe = 'Extract guts from Improved dingrits-2',
 					tech = 'cavity',
 					unlocked = false,
 					level = 2,
 					},
 				},
 				{
-				base_recipe = 'Extract guts from Improved kmautss',
+				base_recipe = 'Extract guts from Improved kmauts',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract guts from Improved kmautss-2',
+					recipe = 'Extract guts from Improved kmauts-2',
 					tech = 'cavity',
 					unlocked = false,
 					level = 2,
@@ -2895,11 +2895,11 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract guts from Improved Tritss',
+				base_recipe = 'Extract guts from Improved Trits',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract guts from Improved Tritss-2',
+					recipe = 'Extract guts from Improved Trits-2',
 					tech = 'cavity',
 					unlocked = false,
 					level = 2,
@@ -2917,22 +2917,22 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract guts from Improved Vonixs',
+				base_recipe = 'Extract guts from Improved Vonixes',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract guts from Improved Vonixs-2',
+					recipe = 'Extract guts from Improved Vonixes-2',
 					tech = 'cavity',
 					unlocked = false,
 					level = 2,
 					},
 				},
 				{
-				base_recipe = 'Extract guts from Improved Vraukss',
+				base_recipe = 'Extract guts from Improved Vrauks',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract guts from Improved Vraukss-2',
+					recipe = 'Extract guts from Improved Vrauks-2',
 					tech = 'cavity',
 					unlocked = false,
 					level = 2,
@@ -2950,22 +2950,22 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract guts from Improved xyhiphoes',
+				base_recipe = 'Extract guts from Improved xyhiphoe',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract guts from Improved xyhiphoes-2',
+					recipe = 'Extract guts from Improved xyhiphoe-2',
 					tech = 'cavity',
 					unlocked = false,
 					level = 2,
 					},
 				},
 				{
-				base_recipe = 'Extract guts from Improved zipirs',
+				base_recipe = 'Extract guts from Improved Zipir',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract guts from Improved zipirs-2',
+					recipe = 'Extract guts from Improved Zipir-2',
 					tech = 'cavity',
 					unlocked = false,
 					level = 2,
@@ -3292,22 +3292,22 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract blood from Improved dingritss',
+				base_recipe = 'Extract blood from Improved dingrits',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract blood from Improved dingritss-2',
+					recipe = 'Extract blood from Improved dingrits-2',
 					tech = 'transgenes',
 					unlocked = false,
 					level = 2,
 					},
 				},
 				{
-				base_recipe = 'Extract blood from Improved kmautss',
+				base_recipe = 'Extract blood from Improved kmauts',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract blood from Improved kmautss-2',
+					recipe = 'Extract blood from Improved kmauts-2',
 					tech = 'transgenes',
 					unlocked = false,
 					level = 2,
@@ -3358,11 +3358,11 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract blood from Improved Tritss',
+				base_recipe = 'Extract blood from Improved Trits',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract blood from Improved Tritss-2',
+					recipe = 'Extract blood from Improved Trits-1',
 					tech = 'transgenes',
 					unlocked = false,
 					level = 2,
@@ -3380,11 +3380,11 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract blood from Improved Vonixs',
+				base_recipe = 'Extract Arthropod from Improved Vonixes',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract blood from Improved Vonixs-2',
+					recipe = 'Extract Arthropod from Improved Vonixes-2',
 					tech = 'transgenes',
 					unlocked = false,
 					level = 2,
@@ -3402,22 +3402,22 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract blood from Improved xyhiphoes',
+				base_recipe = 'Extract blood from Improved xyhiphoe',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract blood from Improved xyhiphoes-2',
+					recipe = 'Extract blood from Improved xyhiphoe-2',
 					tech = 'transgenes',
 					unlocked = false,
 					level = 2,
 					},
 				},
 				{
-				base_recipe = 'Extract blood from Improved zipirs',
+				base_recipe = 'Extract Arthropod blood from Improved Zipir',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract blood from Improved zipirs-2',
+					recipe = 'Extract Arthropod blood from Improved Zipir-2',
 					tech = 'transgenes',
 					unlocked = false,
 					level = 2,
@@ -3461,18 +3461,18 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract dhilmos chithin',
+				base_recipe = 'Extract dhilmos chitin',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract dhilmos chithin-1',
+					recipe = 'Extract dhilmos chitin-1',
 					tech = 'defective-collagen',
 					unlocked = false,
 					level = 2,
 					},
 				upgrade_2 =
 					{
-					recipe = 'Extract dhilmos chithin-2',
+					recipe = 'Extract dhilmos chitin-2',
 					tech = 'double-skin',
 					unlocked = false,
 					level = 3,
@@ -3533,18 +3533,18 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract phadai skin',
+				base_recipe = 'Extract phadai Skin',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract phadai skin-1',
+					recipe = 'Extract phadai Skin-1',
 					tech = 'defective-collagen',
 					unlocked = false,
 					level = 2,
 					},
 				upgrade_2 =
 					{
-					recipe = 'Extract phadai skin-2',
+					recipe = 'Extract phadai Skin-2',
 					tech = 'double-skin',
 					unlocked = false,
 					level = 3,
@@ -3695,6 +3695,24 @@ local TRlist =
 					},
 				},
 				{
+				base_recipe = 'Extract xeno chitin',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract xeno chitin-1',
+					tech = 'defective-collagen',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract xeno chitin-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
 				base_recipe = 'Extract zipir skin',
 				current_lvl = 1,
 				upgrade_1 =
@@ -3747,22 +3765,22 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract skin from Improved dingritss',
+				base_recipe = 'Extract skin from Improved dingrits',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract skin from Improved dingritss-2',
+					recipe = 'Extract skin from Improved dingrits-2',
 					tech = 'double-skin',
 					unlocked = false,
 					level = 2,
 					},
 				},
 				{
-				base_recipe = 'Extract skin from Improved kmautss',
+				base_recipe = 'Extract skin from Improved kmauts',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract skin from Improved kmautss-2',
+					recipe = 'Extract skin from Improved kmauts-2',
 					tech = 'double-skin',
 					unlocked = false,
 					level = 2,
@@ -3813,11 +3831,11 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract skin from Improved Tritss',
+				base_recipe = 'Extract skin from Improved Trits',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract skin from Improved Tritss-2',
+					recipe = 'Extract skin from Improved Trits-2',
 					tech = 'double-skin',
 					unlocked = false,
 					level = 2,
@@ -3835,33 +3853,33 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract skin from Improved Vonixs',
+				base_recipe = 'Extract skin from Improved Vonixes',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract skin from Improved Vonixs-2',
+					recipe = 'Extract skin from Improved Vonixes-2',
 					tech = 'double-skin',
 					unlocked = false,
 					level = 2,
 					},
 				},
 				{
-				base_recipe = 'Extract chithin from Improved Vraukss',
+				base_recipe = 'Extract skin from Improved Vrauks',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract chithin from Improved Vraukss-2',
+					recipe = 'Extract skin from Improved Vrauks-2',
 					tech = 'double-skin',
 					unlocked = false,
 					level = 2,
 					},
 				},
 				{
-				base_recipe = 'Extract chithin from Improved Xenos',
+				base_recipe = 'Extract Chitin from Improved xenos',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract chithin from Improved Xenos-2',
+					recipe = 'Extract Chitin from Improved xenos-2',
 					tech = 'double-skin',
 					unlocked = false,
 					level = 2,
@@ -3879,11 +3897,11 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract skin from Improved zipirs',
+				base_recipe = 'Extract skin from Improved Zipir',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract skin from Improved zipirs-2',
+					recipe = 'Extract skin from Improved Zipir-2',
 					tech = 'double-skin',
 					unlocked = false,
 					level = 2,
@@ -4180,66 +4198,66 @@ local TRlist =
 				},
 				--lard-2
 				{
-				base_recipe = 'Extract lard from Improved arthurians',
+				base_recipe = 'Extract fat from Improved arthurians',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract lard from Improved arthurians-2',
+					recipe = 'Extract fat from Improved arthurians-2',
 					tech = 'fto4',
 					unlocked = false,
 					level = 2,
 					},
 				},
 				{
-				base_recipe = 'Extract lard from Improved auogs',
+				base_recipe = 'Extract fat from Improved auogs',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract lard from Improved auogs-2',
+					recipe = 'Extract fat from Improved auogs-2',
 					tech = 'fto4',
 					unlocked = false,
 					level = 2,
 					},
 				},
 				{
-				base_recipe = 'Extract lard from Improved dhilmoss',
+				base_recipe = 'Extract fat from Improved dhilmoss',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract lard from Improved dhilmoss-2',
+					recipe = 'Extract fat from Improved dhilmoss-2',
 					tech = 'fto4',
 					unlocked = false,
 					level = 2,
 					},
 				},
 				{
-				base_recipe = 'Extract lard from Improved dingritss',
+				base_recipe = 'Extract lard from Improved dingrits',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract lard from Improved dingritss-2',
+					recipe = 'Extract lard from Improved dingrits-2',
 					tech = 'fto4',
 					unlocked = false,
 					level = 2,
 					},
 				},
 				{
-				base_recipe = 'Extract lard from Improved kmautss',
+				base_recipe = 'Extract fat from Improved kmauts',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract lard from Improved kmautss-2',
+					recipe = 'Extract fat from Improved kmauts-2',
 					tech = 'fto4',
 					unlocked = false,
 					level = 2,
 					},
 				},
 				{
-				base_recipe = 'Extract lard from Improved Mukmouxs',
+				base_recipe = 'Extract fat from Improved Mukmouxs',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract lard from Improved Mukmouxs-2',
+					recipe = 'Extract fat from Improved Mukmouxs-2',
 					tech = 'fto4',
 					unlocked = false,
 					level = 2,
@@ -4268,55 +4286,55 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract lard from Improved scrondrixs',
+				base_recipe = 'Extract fat from Improved scrondrixs',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract lard from Improved scrondrixs-2',
+					recipe = 'Extract fat from Improved scrondrixs-2',
 					tech = 'fto4',
 					unlocked = false,
 					level = 2,
 					},
 				},
 				{
-				base_recipe = 'Extract lard from Improved Tritss',
+				base_recipe = 'Extract fat from Improved Trits',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract lard from Improved Tritss-2',
+					recipe = 'Extract fat from Improved Trits-2',
 					tech = 'fto4',
 					unlocked = false,
 					level = 2,
 					},
 				},
 				{
-				base_recipe = 'Extract lard from Improved Ulrics',
+				base_recipe = 'Extract fat from Improved Ulrics',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract lard from Improved Ulrics-2',
+					recipe = 'Extract fat from Improved Ulrics-2',
 					tech = 'fto4',
 					unlocked = false,
 					level = 2,
 					},
 				},
 				{
-				base_recipe = 'Extract lard from Improved Vonixs',
+				base_recipe = 'Extract fat from Improved Vonixes',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract lard from Improved Vonixs-2',
+					recipe = 'Extract fat from Improved Vonixes-2',
 					tech = 'fto4',
 					unlocked = false,
 					level = 2,
 					},
 				},
 				{
-				base_recipe = 'Extract lard from Improved Vraukss',
+				base_recipe = 'Extract lard from Improved Vrauks',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract lard from Improved Vraukss-2',
+					recipe = 'Extract lard from Improved Vrauks-2',
 					tech = 'fto4',
 					unlocked = false,
 					level = 2,
@@ -4345,11 +4363,11 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract fat from Improved zipirs',
+				base_recipe = 'Extract fat from Improved Zipir',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract fat from Improved zipirs-2',
+					recipe = 'Extract fat from Improved Zipir-2',
 					tech = 'fto4',
 					unlocked = false,
 					level = 2,
