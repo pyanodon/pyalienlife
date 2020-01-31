@@ -108,3 +108,64 @@ RECIPE {
         {type = 'fluid', name = 'subcritical-water', amount = 200},
     },
 }:add_unlock("biotech-mk02")
+
+
+RECIPE {
+    type = 'recipe',
+    name = 'guar-nb',
+    category = 'guar',
+    enabled = false,
+    energy_required = 50,
+    ingredients = {
+        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'item', name = 'guar-seeds', amount = 20},
+    },
+    results = {
+        {type = 'item', name = 'nb-biomass', amount = 10},
+        {type = 'fluid', name = 'waste-water', amount = 50},
+    },
+    main_product = "nb-biomass",
+    icon = '__pyalienlifegraphics__/graphics/icons/nb-biomass.png',
+    icon_size = 64,
+}:add_unlock("phytomining-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'guar-nb-2',
+    category = 'guar',
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'item', name = 'guar-seeds', amount = 20},
+        {type = 'fluid', name = 'chelator', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'nb-biomass', amount = 20},
+        {type = 'fluid', name = 'waste-water', amount = 80},
+    },
+    main_product = "nb-biomass",
+    icon = '__pyalienlifegraphics__/graphics/icons/nb-biomass.png',
+    icon_size = 64,
+}:add_unlock("phytomining-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'guar-nb-3',
+    category = 'guar',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'item', name = 'guar-seeds', amount = 20},
+        {type = 'fluid', name = 'chelator', amount = 50},
+        {type = 'item', name = 'hmas', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'nb-biomass', amount = 60},
+        {type = 'fluid', name = 'waste-water', amount = 100},
+    },
+    main_product = "nb-biomass",
+    icon = '__pyalienlifegraphics__/graphics/icons/nb-biomass.png',
+    icon_size = 64,
+}:add_unlock("phytomining-mk03")

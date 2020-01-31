@@ -4481,6 +4481,80 @@ local TRlist =
 					level = 2,
 					},
 				},
+				--SPORES
+				{
+				base_recipe = 'navens-spore',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'navens-spore-2',
+					tech = 'microfilters',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'navens-spore-3',
+					tech = 'microfilters-mk02',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'fawogae-spore',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'fawogae-spore-2',
+					tech = 'microfilters',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'fawogae-spore-3',
+					tech = 'microfilters-mk02',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'yaedols-spores',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'yaedols-spores-2',
+					tech = 'microfilters',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'yaedols-spores-3',
+					tech = 'microfilters-mk02',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'bhoddos-spore',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'bhoddos-spore-2',
+					tech = 'microfilters',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'bhoddos-spore-3',
+					tech = 'microfilters-mk02',
+					unlocked = false,
+					level = 3,
+					},
+				},
+
 			},
 		techs_with_upgrades =
 			{
@@ -4539,6 +4613,8 @@ local TRlist =
 				['zootoxins'] = true,
 				['artificial-calcification'] = true,
 				['stochastic-cortex'] = true,
+				['microfilters'] = true,
+				['microfilters-mk02'] = true,
 			},
 	}
 

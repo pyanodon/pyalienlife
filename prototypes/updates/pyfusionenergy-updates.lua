@@ -1,3 +1,5 @@
+local fun = require("prototypes/functions/functions")
+
 --TECHNOLOGY--
 
 --BUILDINDS--
@@ -34,5 +36,9 @@ RECIPE('kmauts-ration'):subgroup_order('py-alienlife-food', 'b'):remove_unlock('
 :add_ingredient({type = "item", name = "yotoi-seeds", amount = 10})
 RECIPE('control-unit'):add_ingredient({type = "item", name = "neuromorphic-chip", amount = 1}):add_ingredient({type = 'item', name = 'biobattery', amount = 2})
 RECIPE('production-science-pack'):add_ingredient({type = "item", name = "alien-enzymes", amount = 1})
+
+
+fun.results_replacer("log7", "log", "log",9)
+fun.results_replacer("log8", "log", "log",10)
 
 ----EXCLUSIVE RECIPES----

@@ -84,6 +84,7 @@ require('prototypes/technologies/zootoxins')
 require('prototypes/technologies/artificial-calcification')
 require('prototypes/technologies/stochastic-cortex')
 require('prototypes/technologies/phytomining')
+require('prototypes/technologies/microfilters')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")

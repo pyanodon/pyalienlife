@@ -55,20 +55,6 @@ RECIPE {
 
 -----SPORES----
 
-RECIPE {
-    type = "recipe",
-    name = "navens-spore",
-    category = "spore",
-    enabled = false,
-    energy_required = 15,
-    ingredients = {
-        {type = "item", name = "navens", amount = 2},
-    },
-    results = {
-        {type = "item", name = "navens-spore", amount = 5}
-    },
-}:add_unlock("navens")
-
 
 ---UPDATES---
 RECIPE {
