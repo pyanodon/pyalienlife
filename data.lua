@@ -269,7 +269,7 @@ require('prototypes/ceatures/caravan')
 --require('prototypes/robots/land-bot')
 
 --test chest--
-require("prototypes/buildings/test-filtered-chest-mk01")
+--require("prototypes/buildings/test-filtered-chest-mk01")
 
 --Loco--
 --require('prototypes/loco/pyloco')

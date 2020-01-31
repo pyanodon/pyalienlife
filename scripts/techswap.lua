@@ -4615,6 +4615,10 @@ local TRlist =
 				['stochastic-cortex'] = true,
 				['microfilters'] = true,
 				['microfilters-mk02'] = true,
+				['navens'] = true,
+				['mycology-mk01'] = true,
+				['yaedols'] = true,
+				
 			},
 	}
 
