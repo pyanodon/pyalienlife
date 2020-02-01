@@ -552,7 +552,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-phagnot',
 	--module_limitations = 'phagnot',
 	subgroup = 'py-alienlife-phagnot',
 	order = 'b',

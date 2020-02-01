@@ -238,8 +238,6 @@ RECIPE('biobattery'):add_ingredient({type = "item", name = "re-magnet", amount =
 
 
 fun.results_replacer("dhilmos-sex-01", "dirty-water", "waste-water")
-fun.results_replacer("fish-sex-pup-01", "dirty-water", "waste-water")
-fun.results_replacer("fish-sex-pup-02", "dirty-water", "waste-water")
 
 fun.results_replacer("fertilizer", "py-fertilizer", "fertilizer")
 fun.results_replacer("log7-2", "log", "log",8)

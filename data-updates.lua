@@ -50,6 +50,7 @@ TECHNOLOGY('exoskeleton-equipment'):remove_prereq('electric-engine'):remove_prer
 TECHNOLOGY('exoskeleton-equipment'):add_pack('production-science-pack')
 ITEM("raw-fish", "capsule"):set("icon", "__pyalienlifegraphics__/graphics/icons/fish.png")
 ITEM("raw-fish", "capsule"):set("icon_size", 32)
+RECIPE('modular-armor'):add_ingredient({type = "item", name = "pelt", amount = 1})
 
 --RECIPES UPDATES
 

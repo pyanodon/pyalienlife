@@ -467,7 +467,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-xyhiphoe',
 	--module_limitations = 'xyhiphoe',
 	subgroup = 'py-alienlife-xyhiphoe',
 	order = 'b',

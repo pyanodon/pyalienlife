@@ -586,7 +586,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-mukmoux',
 	--module_limitations = 'mukmoux',
 	subgroup = 'py-alienlife-mukmoux',
 	order = 'b',
@@ -792,6 +792,23 @@ fun.autorecipes {
 			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-mukmoux.png",
 			icon_size = 64,
 		},
+		--bonemeal mukmouc rendering
+		{
+			ingredients =
+				{
+
+				},
+			results =
+				{
+					{name='bones', amount ='R'},
+					{name='bonemeal', amount =10},
+				},
+			crafting_speed = 15,
+			tech = 'bmp',
+			name = 'Extract bonemeal from Improved Mukmoux',
+			icon = "__pyalienlifegraphics__/graphics/icons/bonemeal-caged-mukmoux.png",
+			icon_size = 64,
+		},
 		--meat mukmoux rendering
 		{
 			ingredients =
@@ -801,7 +818,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
+					{name='bonemeal', amount ='R'},
 					{name='meat', amount =10},
 				},
 			crafting_speed = 15,
