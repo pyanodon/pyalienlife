@@ -5,7 +5,7 @@ local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
     name = 'rendering-carapace-phadai',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-phadai',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-phadai',
 	order = 'b',
@@ -43,7 +43,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-pelt-dingrits',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-dingrits',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-dingrits',
 	order = 'b',
@@ -83,7 +83,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-spikes-dingrits',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-dingrits',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-dingrits',
 	order = 'b',
@@ -123,7 +123,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-pineal-scrondrix',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-scrondrix',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-scrondrix',
 	order = 'b',
@@ -161,7 +161,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-tendon-kmauts',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-kmauts',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-kmauts',
 	order = 'b',
@@ -199,7 +199,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-bladder-phagnot',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-phagnot',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-phagnot',
 	order = 'b',
@@ -236,7 +236,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-venon-vonix',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-vonix',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-vonix',
 	order = 'b',
@@ -276,7 +276,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-shell-xyhiphoe',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-xyhiphoe',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-xyhiphoe',
 	order = 'b',
@@ -310,7 +310,7 @@ fun.autorecipes {
 RECIPE {
     type = "recipe",
     name = "adrenal-cortex-2",
-    category = "slaughterhouse",
+    category = "slaughterhouse-cridren",
     enabled = false,
     energy_required = 15,
     ingredients = {

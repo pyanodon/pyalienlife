@@ -5,7 +5,7 @@ local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
     name = 'rendering-bone-arthurians',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-arthurian',
 	--module_limitations = 'arthurian',
 	subgroup = 'py-alienlife-arthurian',
 	order = 'b',
@@ -42,7 +42,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-bone-auog',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-auog',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-auog',
 	order = 'b',
@@ -80,7 +80,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-bone-dingrits',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-dingrits',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-dingrits',
 	order = 'b',
@@ -117,7 +117,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-bone-mukmoux',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-mukmoux',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-mukmoux',
 	order = 'b',
@@ -154,7 +154,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-bone-phadai',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-phadai',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-phadai',
 	order = 'b',
@@ -191,7 +191,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-bone-phagnot',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-phagnot',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-phagnot',
 	order = 'b',
@@ -228,7 +228,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-bone-scrondrix',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-scrondrix',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-scrondrix',
 	order = 'b',
@@ -265,7 +265,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-bone-trits',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-trits',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-trits',
 	order = 'b',
@@ -301,7 +301,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-bone-ulric',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-ulric',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-ulric',
 	order = 'b',
@@ -338,7 +338,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-bone-xeno',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-xeno',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-xeno',
 	order = 'b',

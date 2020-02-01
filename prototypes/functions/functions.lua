@@ -1223,7 +1223,7 @@ recipe =
             end
         end
 		
-		log(serpent.block(return_items_table))
+		--log(serpent.block(return_items_table))
         
 		--log(serpent.block(ingredients))
 
@@ -1535,7 +1535,7 @@ recipe =
                 RECIPE(na):add_unlock(tech_unlock)
             end
 
-            log(serpent.block(data.raw.recipe[na]))
+            --log(serpent.block(data.raw.recipe[na]))
 
             number = number + 1
         end

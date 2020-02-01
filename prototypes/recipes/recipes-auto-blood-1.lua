@@ -5,7 +5,7 @@ local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
     name = 'rendering-blood-arthurians',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-arthurian',
 	--module_limitations = 'arthurian',
 	subgroup = 'py-alienlife-arthurian',
 	order = 'b',
@@ -42,7 +42,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-blood-auog',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-auog',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-auog',
 	order = 'b',
@@ -79,7 +79,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-blood-dhilmos',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-dhilmos',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-dhilmos',
 	order = 'b',
@@ -118,7 +118,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-blood-dingrits',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-dingrits',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-dingrits',
 	order = 'b',
@@ -155,7 +155,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-blood-kmauts',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-kmauts',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-kmauts',
 	order = 'b',
@@ -192,7 +192,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-blood-mukmoux',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-mukmoux',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-mukmoux',
 	order = 'b',
@@ -229,7 +229,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-blood-phadai',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-phadai',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-phadai',
 	order = 'b',
@@ -266,7 +266,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-blood-phagnot',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-phagnot',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-phagnot',
 	order = 'b',
@@ -303,7 +303,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-blood-scrondrix',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-scrondrix',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-scrondrix',
 	order = 'b',
@@ -340,7 +340,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-blood-trits',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-trits',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-trits',
 	order = 'b',
@@ -376,7 +376,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-blood-ulric',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-ulric',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-ulric',
 	order = 'b',
@@ -413,7 +413,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-blood-vonix',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-vonix',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-vonix',
 	order = 'b',
@@ -452,7 +452,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-formic-vrauks',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-vrauks',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-vrauks',
 	order = 'b',
@@ -493,7 +493,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-blood-xenos',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-xeno',
 	--module_limitations = 'xeno',
 	subgroup = 'py-alienlife-xeno',
 	order = 'b',
@@ -529,7 +529,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-blood-xyhiphoe',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-xyhiphoe',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-xyhiphoe',
 	order = 'b',
@@ -561,7 +561,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-blood-zipir',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-zipir',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-zipir',
 	order = 'b',
