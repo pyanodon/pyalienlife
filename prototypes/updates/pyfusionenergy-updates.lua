@@ -42,3 +42,4 @@ fun.results_replacer("log7", "log", "log",9)
 fun.results_replacer("log8", "log", "log",10)
 
 ----EXCLUSIVE RECIPES----
+
