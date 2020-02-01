@@ -3380,11 +3380,11 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract Arthropod from Improved Vonixes',
+				base_recipe = 'Extract Arthropod blood from Improved Vonixes',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract Arthropod from Improved Vonixes-2',
+					recipe = 'Extract Arthropod blood from Improved Vonixes-2',
 					tech = 'transgenes',
 					unlocked = false,
 					level = 2,
