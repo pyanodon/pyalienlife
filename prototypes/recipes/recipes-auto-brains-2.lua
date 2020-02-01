@@ -5,7 +5,7 @@ local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
     name = 'rendering-brains-arthurians-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-arthurian',
 	--module_limitations = 'arthurian',
 	subgroup = 'py-alienlife-arthurian',
 	order = 'b',
@@ -59,7 +59,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-brains-auog-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-auog',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-auog',
 	order = 'b',
@@ -114,7 +114,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-brains-dingrits-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-dingrits',
 	--module_limitations = 'dingrits',
 	subgroup = 'py-alienlife-dingrits',
 	order = 'b',
@@ -168,7 +168,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-brains-kmauts-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-kmauts',
 	--module_limitations = 'kmauts',
 	subgroup = 'py-alienlife-kmauts',
 	order = 'b',
@@ -221,7 +221,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-brain-mukmoux-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-mukmoux',
 	--module_limitations = 'mukmoux',
 	subgroup = 'py-alienlife-mukmoux',
 	order = 'b',
@@ -276,7 +276,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-phadai-brain-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-phadai',
 	--module_limitations = 'phadai',
 	subgroup = 'py-alienlife-phadai',
 	order = 'b',
@@ -333,7 +333,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-brains-phagnot-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-phagnot',
 	--module_limitations = 'phagnot',
 	subgroup = 'py-alienlife-phagnot',
 	order = 'b',
@@ -388,7 +388,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-brains-scrondrix-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-scrondrix',
 	--module_limitations = 'scrondrix',
 	subgroup = 'py-alienlife-scrondrix',
 	order = 'b',
@@ -443,7 +443,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-brain-trits-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-trits',
 	--module_limitations = 'trits',
 	subgroup = 'py-alienlife-trits',
 	order = 'b',
@@ -497,7 +497,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-brain-ulric-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-ulric',
 	--module_limitations = 'ulric',
 	subgroup = 'py-alienlife-ulric',
 	order = 'b',
@@ -551,7 +551,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-brain-vonix-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-vonix',
 	--module_limitations = 'vonix',
 	subgroup = 'py-alienlife-vonix',
 	order = 'b',
@@ -606,7 +606,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-brain-vrauks-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-vrauks',
 	--module_limitations = 'vrauks',
 	subgroup = 'py-alienlife-vrauks',
 	order = 'b',
@@ -658,7 +658,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-brains-xenos-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-xeno',
 	--module_limitations = 'xeno',
 	subgroup = 'py-alienlife-xeno',
 	order = 'b',
@@ -717,7 +717,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-brain-zipir-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-zipir',
 	--module_limitations = 'zipir',
 	subgroup = 'py-alienlife-zipir',
 	order = 'b',

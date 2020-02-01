@@ -37,10 +37,6 @@ data:extend {
     },
     {
         type = "recipe-category",
-        name = "slaughterhouse"
-    },
-    {
-        type = "recipe-category",
         name = "sponge"
     },
     {
@@ -230,5 +226,86 @@ data:extend {
 	{
         type = "resource-category",
         name = "ore-bioreserve"
+    },
+	------slaughterhouse------
+	{
+        type = "recipe-category",
+        name = "slaughterhouse"
+    },
+	{
+        type = "recipe-category",
+        name = "slaughterhouse-auog"
+    },
+	{
+        type = "recipe-category",
+        name = "slaughterhouse-ulric"
+    },
+	{
+        type = "recipe-category",
+        name = "slaughterhouse-mukmoux"
+    },
+	{
+        type = "recipe-category",
+        name = "slaughterhouse-arthurian"
+    },
+	{
+        type = "recipe-category",
+        name = "slaughterhouse-dhilmos"
+    },
+	{
+        type = "recipe-category",
+        name = "slaughterhouse-scrondrix"
+    },
+	{
+        type = "recipe-category",
+        name = "slaughterhouse-phadai"
+    },
+	{
+        type = "recipe-category",
+        name = "slaughterhouse-fish"
+    },
+	{
+        type = "recipe-category",
+        name = "slaughterhouse-phagnot"
+    },
+	{
+        type = "recipe-category",
+        name = "slaughterhouse-kmauts"
+    },
+	{
+        type = "recipe-category",
+        name = "slaughterhouse-dingrits"
+    },
+	{
+        type = "recipe-category",
+        name = "slaughterhouse-xeno"
+    },
+	{
+        type = "recipe-category",
+        name = "slaughterhouse-cridren"
+    },
+	{
+        type = "recipe-category",
+        name = "slaughterhouse-antelope"
+    },
+	{
+        type = "recipe-category",
+        name = "slaughterhouse-zipir"
+    },
+	{
+        type = "recipe-category",
+        name = "slaughterhouse-trits"
+    },
+	{
+        type = "recipe-category",
+        name = "slaughterhouse-vonix"
+    },
+	{
+        type = "recipe-category",
+        name = "slaughterhouse-vrauks"
+    },
+	{
+        type = "recipe-category",
+        name = "slaughterhouse-xyhiphoe"
     },
 }

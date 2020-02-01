@@ -2178,5 +2178,3 @@ local recipes_list =
 
 --adding to module limitation list
 FUN.productivity(recipes_list)
-
---require('prototypes/techgetter')

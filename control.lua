@@ -163,6 +163,9 @@ global.landbots =
 
 --END--
 
+--slaughterhouse gui
+local slaughterhouse_gui
+
 script.on_init(
     function()
         global.landbots = landbots
@@ -176,6 +179,7 @@ script.on_init(
 		remote.call("silo_script","set_no_victory", true)
 		global.TRlist = TRlist_og
 		TRlist = global.TRlist
+		global.current_entity = {}
     end)
 
 script.on_load(function(event)
@@ -651,11 +655,42 @@ local function create_outpost_gui(event)
 	log(serpent.block(global.outpost_names))
 end
 
+local function create_slaughterhouse_animal_table(gui)
+	local sg_table = gui
+	sg_table.add({type = 'table', name = 's_table', column_count = 6})
+	sg_table.s_table.add({type = 'sprite-button', name = 'auog', sprite = 'item/auog', style = 'image_tab_slot'})
+	sg_table.s_table.add({type = 'sprite-button', name = 'ulric', sprite = 'item/ulric', style = 'image_tab_slot'})
+	sg_table.s_table.add({type = 'sprite-button', name = 'mukmoux', sprite = 'item/mukmoux', style = 'image_tab_slot'})
+	sg_table.s_table.add({type = 'sprite-button', name = 'arthurian', sprite = 'item/arthurian', style = 'image_tab_slot'})
+	sg_table.s_table.add({type = 'sprite-button', name = 'dhilmos', sprite = 'item/dhilmos', style = 'image_tab_slot'})
+	sg_table.s_table.add({type = 'sprite-button', name = 'scrondrix', sprite = 'item/scrondrix', style = 'image_tab_slot'})
+	sg_table.s_table.add({type = 'sprite-button', name = 'phadai', sprite = 'item/phadai', style = 'image_tab_slot'})
+	sg_table.s_table.add({type = 'sprite-button', name = 'fish', sprite = 'item/fish', style = 'image_tab_slot'})
+	sg_table.s_table.add({type = 'sprite-button', name = 'phagnot', sprite = 'item/phagnot', style = 'image_tab_slot'})
+	sg_table.s_table.add({type = 'sprite-button', name = 'kmauts', sprite = 'item/kmauts', style = 'image_tab_slot'})
+	sg_table.s_table.add({type = 'sprite-button', name = 'dingrits', sprite = 'item/dingrits', style = 'image_tab_slot'})
+	sg_table.s_table.add({type = 'sprite-button', name = 'xeno', sprite = 'item/xeno', style = 'image_tab_slot'})
+	sg_table.s_table.add({type = 'sprite-button', name = 'cridren', sprite = 'item/cridren', style = 'image_tab_slot'})
+	sg_table.s_table.add({type = 'sprite-button', name = 'antelope', sprite = 'item/antelope', style = 'image_tab_slot'})
+	sg_table.s_table.add({type = 'sprite-button', name = 'zipir', sprite = 'item/zipir1', style = 'image_tab_slot'})
+	sg_table.s_table.add({type = 'sprite-button', name = 'trits', sprite = 'item/trits', style = 'image_tab_slot'})
+	sg_table.s_table.add({type = 'sprite-button', name = 'vonix', sprite = 'item/vonix', style = 'image_tab_slot'})
+	sg_table.s_table.add({type = 'sprite-button', name = 'vrauks', sprite = 'item/vrauks', style = 'image_tab_slot'})
+	sg_table.s_table.add({type = 'sprite-button', name = 'xyhiphoe', sprite = 'item/xyhiphoe', style = 'image_tab_slot'})
+end
+
+local function create_slaughterhouse_gui(event)
+
+	local player = game.players[event.player_index]
+	slaughterhouse_gui = player.gui.screen.add({type = 'frame', name = 'recipe_menu', direction = 'vertical', caption = 'Choose Your Next Victim', style = 'inner_frame_in_outer_frame'})
+	slaughterhouse_gui.force_auto_center()
+	create_slaughterhouse_animal_table(slaughterhouse_gui)
+	
+end
 
 script.on_event(defines.events.on_gui_opened,function(event)
-
     if event.entity ~= nil then
-        --log(event.entity.name)
+        log(event.entity.name)
 		--log(event.gui_type)
         if event.entity.name == 'lb-requester-chest' then
 			local player = game.players[event.player_index]
@@ -672,13 +707,19 @@ script.on_event(defines.events.on_gui_opened,function(event)
         elseif event.entity.name == 'outpost' then
 			create_outpost_gui(event)
 			global.current_outpost = event.entity.unit_number
+		elseif event.entity ~= nil and string.match(event.entity.name, 'slaughterhouse') and event.entity.get_recipe() == nil then
+			--log('hit')
+			table.insert(global.current_entity ,event.player_index)
+			global.current_entity[event.player_index] = event.entity
+			game.players[event.player_index].opened = nil
+			create_slaughterhouse_gui(event)
 		end
     end
 
 end)
 
 script.on_event(defines.events.on_gui_selection_state_changed, function(event)
-
+	log(event.element.name)
 	caravanroutes = global.caravanroutes
 	--log(serpent.block(caravanroutes))
 	--log(event.element.selected_index)
@@ -717,7 +758,7 @@ script.on_event(defines.events.on_gui_selection_state_changed, function(event)
 end)
 
 script.on_event(defines.events.on_gui_value_changed, function(event)
-
+	log(event.element.name)
 	landbots = global.landbots
 
 	--log(event.element.name)
@@ -743,13 +784,14 @@ script.on_event(defines.events.on_gui_value_changed, function(event)
 end)
 
 script.on_event(defines.events.on_gui_confirmed, function(event)
+	log(event.element.name)
 	if event.element.name == 'outpost_name' then
 		global.outpost_names[global.current_outpost] = outpostgui.outpost_name.text
 	end
 end)
 
 script.on_event(defines.events.on_gui_elem_changed, function(event)
-
+	log(event.element.name)
 	landbots = global.landbots
 	--log(event.element.name)
 
@@ -776,19 +818,50 @@ script.on_event(defines.events.on_gui_elem_changed, function(event)
 	global.landbots = landbots
 end)
 
-script.on_event(defines.events.on_gui_click, function(event)
+local function create_slaughterhouse_recipe_gui(event)
+	local slaughterhouse_recipe_gui = event.element.parent
+	local button_name = event.element.name
+	slaughterhouse_recipe_gui.clear()
+	slaughterhouse_recipe_gui.add({type = 'frame', name = 'recipe_selection_frame', caption = 'Select Recipe'})
+	slaughterhouse_recipe_gui.recipe_selection_frame.add({type = 'sprite-button', name = 'slaughterhouse_back', sprite = 'utility/left_arrow'})
+	slaughterhouse_recipe_gui.recipe_selection_frame.add({type = 'table', name = 'recipe_table', column_count = 5})
+	for r, recipe in pairs(game.players[event.player_index].force.recipes) do
+		if string.match(recipe.category, 'slaughterhouse') and string.match(recipe.category, button_name) and recipe.enabled == true then
+			slaughterhouse_recipe_gui.recipe_selection_frame.recipe_table.add({type = 'sprite-button', name = 'recipe-menu_'..recipe.name, sprite = 'recipe/'..recipe.name, style = 'recipe_slot_button'})
+		end
+	end
+end
 
+script.on_event(defines.events.on_gui_click, function(event)
+	log(event.element.name)
+	--log(string.match(event.element.name, 'recipe%-menu'))
 	if event.element.name == 'caravan_close' then
 		caravangui.destroy()
 		hascarguiopen = false
 		lastclickedunit = {}
+	elseif event.element.parent.name == 's_table' then
+		create_slaughterhouse_recipe_gui(event)
+	elseif event.element.name == 'slaughterhouse_back' then
+		--log(event.element.parent.name)
+		--log(event.element.parent.parent.name)
+		--log(event.element.parent.parent.parent.name)
+		local elem_p2 = event.element.parent.parent.parent
+		event.element.parent.parent.destroy()
+		create_slaughterhouse_animal_table(elem_p2)
+	elseif string.match(event.element.name, 'recipe%-menu') ~= nil then
+		--log('hit')
+		local entity = global.current_entity[event.player_index]
+			--log(entity.name)
+			entity.set_recipe(string.match(event.element.name, "%_(.*)"))
+			event.element.parent.parent.parent.parent.destroy()
+			global.current_entity[event.player_index] = nil
+			--log(serpent.block(global.current_entity))
 	end
-
 end)
 
 script.on_event(defines.events.on_gui_closed, function(event)
-
 	if event.entity ~= nil then
+		log(event.entity.name)
         if event.entity.name == 'lb-requester-chest' then
 			request_gui.destroy()
         elseif event.entity.name == 'outpost' then
@@ -940,24 +1013,24 @@ end)
 --added 3d trees to bio reserve and remove depleted resource trees
 script.on_event(defines.events.on_resource_depleted, function(event)
 	local resourcetrees = game.surfaces['nauvis'].find_entities_filtered{position = event.entity.position, name = event.entity.name..'-fake'} --, type='tree'}
-	log(serpent.block(resourcetrees))
-	log(serpent.block(resourcetrees.name))
+	--log(serpent.block(resourcetrees))
+	--log(serpent.block(resourcetrees.name))
 	for t, tree in pairs(resourcetrees) do
-		log(serpent.block(resourcetrees))
-		log(serpent.block(resourcetrees.name))
+		--log(serpent.block(resourcetrees))
+		--log(serpent.block(resourcetrees.name))
 		tree.destroy()
 	end
 end)
 
 script.on_event(defines.events.on_player_cursor_stack_changed, function(event)
 
-log('hit')
+--log('hit')
 	if game.players[event.player_index].cursor_stack ~= nil and game.players[event.player_index].cursor_stack.valid_for_read == true then
 	--log(game.players[event.player_index].cursor_stack)
 	--log(game.players[event.player_index].cursor_stack.valid)
 	--log(game.players[event.player_index].cursor_stack.valid_for_read)
 		local cursor_item = game.players[event.player_index].cursor_stack.name
-		log(cursor_item)
+		--log(cursor_item)
 		if cursor_item == 'lb-requester-chest' or cursor_item == 'lb-provider-chest' then
 			global.logistics_square = rendering.draw_rectangle{color={r = 255, g = 165, b = 0, a = 0.75},filled=true,left_top={-30,-30},right_bottom={30,30},surface='nauvis',draw_on_ground = true}
 			global.has_drawn_square = true
@@ -990,7 +1063,7 @@ script.on_event(
 	--log(serpent.block(TRlist.techs_with_upgrades['bigger-colon']))
 	local tech = event.research
 	if tech.name == 'hardened-bone' then
-	log(serpent.block(tech.name))
+	--log(serpent.block(tech.name))
 	end
 	if TRlist.techs_with_upgrades[tech.name] == true then
 		if tech.effects ~= nil then
@@ -1010,9 +1083,9 @@ script.on_event(
 							event.research.force.recipes[upgrade.base_recipe].enabled = false
 							upgrade.upgrade_1.unlocked = true
 						elseif upgrade.upgrade_2 ~= nil and effect.recipe == upgrade.upgrade_2.recipe then
-							log('hit')
-							log(serpent.block(upgrade.upgrade_1.recipe))
-							log(serpent.block(upgrade.upgrade_2.recipe))
+							--log('hit')
+							--log(serpent.block(upgrade.upgrade_1.recipe))
+							--log(serpent.block(upgrade.upgrade_2.recipe))
 							--log(serpent.block(event.research.force.recipes[upgrade.upgrade_1.recipe].enabled))
 							upgrade.current_lvl = 3
 							event.research.force.recipes[upgrade.base_recipe].enabled = false

@@ -126,7 +126,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-antelope',
 	--module_limitations = 'antelope',
 	subgroup = 'py-alienlife-antelope',
 	order = 'b',

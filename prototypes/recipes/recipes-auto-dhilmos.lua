@@ -430,7 +430,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-dhilmos',
 	--module_limitations = 'dhilmos',
 	subgroup = 'py-alienlife-dhilmos',
 	order = 'b',
