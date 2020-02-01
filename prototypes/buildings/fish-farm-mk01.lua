@@ -47,7 +47,7 @@ ENTITY {
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 5
+        module_slots = 6
     },
     allowed_effects = {"speed"},
     crafting_categories = {"fish-farm"},

@@ -169,3 +169,27 @@ RECIPE {
     icon = '__pyalienlifegraphics__/graphics/icons/nb-biomass.png',
     icon_size = 64,
 }:add_unlock("phytomining-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "lab-instrument-2",
+    category = "crafting",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "lens", amount = 3},
+        {type = "item", name = "engine-unit", amount = 1},
+        {type = "item", name = "equipment-chassi", amount = 2},
+        {type = "item", name = "electronic-circuit", amount = 1},
+        {type = "item", name = "small-parts-01", amount = 5},
+        {type = "item", name = "rubber", amount = 10},
+    },
+    results = {
+        {type = "item", name = "lab-instrument", amount = 4}
+    },
+    main_product = "lab-instrument",
+    icon = "__pycoalprocessinggraphics__/graphics/icons/mip/lab-05.png",
+    icon_size = 64,
+    subgroup = "py-items",
+    order = "o"
+}:add_unlock("engine")

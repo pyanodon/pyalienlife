@@ -5263,9 +5263,105 @@ ITEM {
 	fuel_value = '1MJ',
     flags = {},
     subgroup = "py-alienlife-modules",
-    order = "a",
+    order = "fa",
     stack_size = 10,
 	effect = { speed = {bonus = 15}},
+	limitation = alien_life_limitations_fish,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "fish-mk02",
+    icon = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+    icon_mipmaps = 5,
+    pictures =
+    {
+      { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-01.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-02.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-04.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-05.png", scale = 0.25, mipmap_count = 1 },
+    },
+	category = "fish",
+	tier = 2,
+	fuel_category = 'food',
+	fuel_value = '2MJ',
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "fb",
+    stack_size = 10,
+	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_fish,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "fish-mk03",
+    icon = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+    icon_mipmaps = 5,
+    pictures =
+    {
+      { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-01.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-02.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-04.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-05.png", scale = 0.25, mipmap_count = 1 },
+    },
+	category = "fish",
+	tier = 3,
+	fuel_category = 'food',
+	fuel_value = '3MJ',
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "fc",
+    stack_size = 10,
+	effect = { speed = {bonus = 25}},
+	limitation = alien_life_limitations_fish,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "fish-mk04",
+    icon = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+    icon_mipmaps = 5,
+    pictures =
+    {
+      { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-01.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-02.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-04.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-05.png", scale = 0.25, mipmap_count = 1 },
+    },
+	category = "fish",
+	tier = 4,
+	fuel_category = 'food',
+	fuel_value = '4MJ',
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "fd",
+    stack_size = 10,
+	effect = { speed = {bonus = 30}},
 	limitation = alien_life_limitations_fish,
 	limitation_message_key = "Its full"
 }

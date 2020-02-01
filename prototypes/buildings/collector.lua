@@ -43,10 +43,10 @@ ENTITY {
     collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     module_specification = {
-        module_slots = 2
+        module_slots = 1
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-    mining_speed = 0.3,
+    mining_speed = 0.2,
     energy_source =
     {
       type = "burner",
@@ -55,7 +55,7 @@ ENTITY {
       fuel_inventory_size = 1,
       emissions_per_minute = 0.06,
     },
-    energy_usage = "300kW",
+    energy_usage = "200kW",
     mining_power = 1,
     resource_searching_radius = 3.5,
     vector_to_place_result = {0, -3.85},
