@@ -586,7 +586,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-phadai',
 	--module_limitations = 'phadai',
 	subgroup = 'py-alienlife-phadai',
 	order = 'b',

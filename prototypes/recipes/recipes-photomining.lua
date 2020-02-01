@@ -24,7 +24,7 @@ RECIPE {
         {type = 'item', name = 'niobium-plate', amount = 2},
         {type = 'item', name = 'chimeric-proteins', amount = 1},
         {type = 'item', name = 'magnetic-beads', amount = 5},
-        {type = 'item', name = 'guts', amount = 5},
+        {type = 'item', name = 'skin', amount = 10},
         {type = 'fluid', name = 'diborane', amount = 100},
     },
     results = {

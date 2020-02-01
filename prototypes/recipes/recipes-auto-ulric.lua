@@ -581,7 +581,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-ulric',
 	--module_limitations = 'ulric',
 	subgroup = 'py-alienlife-ulric',
 	order = 'b',

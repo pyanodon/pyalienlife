@@ -22,6 +22,7 @@ items.inputs.fungalsubstrate = {'fungal-substrate', 1}
 items.inputs.fungalsubstrate02 = {'fungal-substrate-02', 1}
 items.inputs.fungalsubstrate03 = {'fungal-substrate-03', 1}
 items.inputs.nitrogen = {'nitrogen', 10}
+items.inputs.oxygen = {'oxygen', 10}
 items.inputs.smalllamp = {'small-lamp', 1}
 items.inputs.slackedlime = {'slacked-lime', 10}
 items.inputs.watersaline = {'water-saline', 10}
@@ -180,6 +181,7 @@ items.inputs.fishfood1 = {'fish-food-01', 1}
 items.inputs.fishfood2 = {'fish-food-02', 1}
 items.inputs.fishegg = {'fish-egg', 1}
 items.inputs.sponge = {'sponge', 1}
+items.inputs.fishoil = {'fish-oil', 1}
 items.inputs.finenexelit = {'fine-nexelit-powder', 1}
 
 items.inputs.cagedscrondrix = {'caged-scrondrix', 1}

@@ -496,7 +496,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-scrondrix',
 	--module_limitations = 'scrondrix',
 	subgroup = 'py-alienlife-scrondrix',
 	order = 'b',

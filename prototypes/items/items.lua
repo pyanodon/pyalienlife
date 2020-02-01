@@ -3885,8 +3885,6 @@ local alien_life_limitations_ulric =
 
     local alien_life_limitations_fish =
 	{
-    "fish-sex-pup-01",
-    "fish-sex-pup-02",
     }
 
     local alien_life_limitations_phagnot =

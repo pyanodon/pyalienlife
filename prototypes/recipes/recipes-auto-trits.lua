@@ -586,7 +586,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-trits',
 	--module_limitations = 'trits',
 	subgroup = 'py-alienlife-trits',
 	order = 'b',

@@ -1,5 +1,5 @@
 --------------------------FISH-----------------------
-
+local fun = require("prototypes/functions/functions")
 
 ----first----
 
@@ -17,7 +17,8 @@ RECIPE {
         {type = 'item', name = 'bio-sample', amount = 2},
         {type = 'item', name = 'mukmoux-fat', amount = 4},
         {type = 'item', name = 'seaweed', amount = 5},
-        {type = 'item', name = 'fish', amount = 5},
+        {type = 'item', name = 'skin', amount = 5},
+        {type = 'item', name = 'fish', amount = 2},
         {type = 'item', name = 'bones', amount = 5},
         {type = 'fluid', name = 'steam', amount = 100},
     },
@@ -39,7 +40,8 @@ RECIPE {
         {type = 'item', name = 'yotoi-fruit', amount = 3},
         {type = 'item', name = 'ash', amount = 10},
         {type = 'item', name = 'seaweed', amount = 5},
-        {type = 'item', name = 'fish', amount = 5},
+        {type = 'item', name = 'skin', amount = 5},
+        {type = 'item', name = 'fish', amount = 2},
         {type = 'item', name = 'bones', amount = 5},
         {type = 'fluid', name = 'steam', amount = 100},
         {type = 'fluid', name = 'blood', amount = 50},
@@ -54,45 +56,6 @@ RECIPE {
 
 ---pup maker---
 
-RECIPE {
-    type = 'recipe',
-    name = 'fish-sex-pup-01',
-    category = 'fish-farm',
-    enabled = false,
-    energy_required = 140,
-    ingredients = {
-        {type = 'item', name = 'fish-food-01', amount = 1},
-        {type = 'fluid', name = 'water-saline', amount = 300},
-        {type = 'item', name = 'small-lamp', amount = 2},
-    },
-    results = {
-        {type = 'item', name = 'fish-egg', amount = 10},
-        {type = 'fluid', name = 'dirty-water', amount = 300},
-    },
-    main_product = "fish-egg",
-    subgroup = 'py-alienlife-fish',
-    order = 'a',
-}:add_unlock("assisted-embryology")
-
-RECIPE {
-    type = 'recipe',
-    name = 'fish-sex-pup-02',
-    category = 'fish-farm',
-    enabled = false,
-    energy_required = 100,
-    ingredients = {
-        {type = 'item', name = 'fish-food-02', amount = 1},
-        {type = 'fluid', name = 'water-saline', amount = 300},
-        {type = 'item', name = 'small-lamp', amount = 2},
-    },
-    results = {
-        {type = 'item', name = 'fish-egg', amount = 15},
-        {type = 'fluid', name = 'dirty-water', amount = 300},
-    },
-    main_product = "fish-egg",
-    subgroup = 'py-alienlife-fish',
-    order = 'a',
-}:add_unlock("assisted-embryology")
 
 
 ---maturing---
@@ -111,39 +74,150 @@ RECIPE {
         {type = 'fluid', name = 'fetal-serum', amount = 20},
     },
     results = {
-        {type = 'item', name = 'fish', amount = 5},
+        {type = 'item', name = 'fish', amount = 10},
     },
     main_product = "fish",
     subgroup = 'py-alienlife-fish',
     order = 'a',
 }:add_unlock("assisted-embryology")
 
----PROCESSING
 
-RECIPE {
-    type = 'recipe',
-    name = 'fish-full-rendering',
-    category = 'slaughterhouse',
-    enabled = false,
-    energy_required = 30,
-    ingredients = {
-        {type = 'item', name = 'fish', amount = 5},
-    },
-    results = {
-        {type = 'item', name = 'meat', amount = 2, probability = 0.5},
-        {type = 'item', name = 'brain', amount = 1, probability = 0.3},
-        {type = 'item', name = 'skin', amount = 3, probability = 0.5},
-        {type = 'fluid', name = 'blood', amount = 25},
-        {type = 'item', name = 'guts', amount = 5, probability = 0.5},
-    },
-    --main_product = "fish",
-    subgroup = 'py-alienlife-fish',
-    order = 'a',
-    icon = "__pyalienlifegraphics__/graphics/icons/rendering-fish.png",
-    icon_size = 64,
-}:add_unlock("water-animals-mk02")
-----adverse products----
+------------------RENDERING------------------
 
+fun.autorecipes {
+    name = 'rendering',
+	category = 'slaughterhouse-fish',
+	--module_limitations = 'fish',
+	subgroup = 'py-alienlife-fish',
+	order = 'b',
+    mats =
+	{
+		{
+			ingredients =
+				{
+					{name='fish',amount=5},
+				},
+			results =
+				{
+					{name='bones', probability = 0.4,amount_min =1,amount_max =2},
+					{name='meat', probability = 0.5,amount_min =1,amount_max =2},
+					{name='skin', probability = 0.5,amount_min =1,amount_max =3},
+					{name='guts', probability = 0.5,amount_min =1,amount_max =5},
+					{name='blood', amount =25},
+				},
+			crafting_speed = 30,
+			tech = 'water-animals-mk01',
+			name = 'Full Render Fish',
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-fish.png",
+			icon_size = 64,
+		},
+		--meat
+		{
+			ingredients =
+				{
 
-----PROCESSING----
-
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='blood', amount ='R'},
+                    {name='brain', amount ='R'},
+					{name='meat', amount =2},
+				},
+			crafting_speed = 15,
+			tech = 'water-animals-mk02',
+			name = 'Extract Fish Meat',
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
+			icon_size = 64,
+		},
+		--skin
+		{
+			ingredients =
+				{
+					--{name='cagedfish',amount=1},
+				},
+			results =
+				{
+					{name='meat', amount ='R'},
+					{name='skin', amount =3},
+				},
+			crafting_speed = 15,
+			tech = 'water-animals-mk02',
+			name = 'Extract Fish skin',
+			icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
+			icon_size = 32,
+		},
+		--bones
+		{
+			ingredients =
+				{
+					--{name='cagedfish',amount=1},
+				},
+			results =
+				{
+					{name='skin', amount ='R'},
+					{name='bones', amount =2},
+				},
+			crafting_speed = 15,
+			tech = 'water-animals-mk02',
+			name = 'Extract Fish bones',
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
+			icon_size = 64,
+		},
+		--guts
+		{
+			ingredients =
+				{
+					--{name='cagedfish',amount=1},
+				},
+			results =
+				{
+					{name='bones', amount ='R'},
+					{name='guts', amount =5},
+				},
+			crafting_speed = 15,
+			tech = 'water-animals-mk02',
+			name = 'Extract Fish guts',
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
+			icon_size = 64,
+		},
+		--blood
+		{
+			ingredients =
+				{
+					--{name='cagedfish',amount=1},
+				},
+			results =
+				{
+					{name='guts', amount ='R'},
+					{name='blood', amount =40},
+				},
+			crafting_speed = 15,
+			tech = 'water-animals-mk02',
+			name = 'Extract Fish blood',
+			icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
+			icon_size = 64,
+		},
+		--oil
+		{
+			ingredients =
+				{
+					--{name='cagedfish',amount=1},
+				},
+			results =
+				{
+					{name='blood', amount ='R'},
+					{name='fishoil', amount =50},
+				},
+			crafting_speed = 10,
+			tech = 'water-animals-mk01',
+			name = 'Extract Oil from fish',
+			icon = "__pyalienlifegraphics__/graphics/icons/fish-oil.png",
+			icon_size = 64,
+		},
+	}
+}

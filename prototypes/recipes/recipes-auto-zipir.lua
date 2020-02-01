@@ -494,7 +494,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-zipir',
 	--module_limitations = 'zipir',
 	subgroup = 'py-alienlife-zipir',
 	order = 'b',

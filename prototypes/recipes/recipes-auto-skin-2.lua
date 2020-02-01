@@ -5,7 +5,7 @@ local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
     name = 'rendering-skin-arthurians-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-arthurian',
 	--module_limitations = 'arthurian',
 	subgroup = 'py-alienlife-arthurian',
 	order = 'b',
@@ -60,7 +60,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-skin-auog-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-auog',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-auog',
 	order = 'b',
@@ -115,7 +115,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-skin-dhilmos-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-dhilmos',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-dhilmos',
 	order = 'b',
@@ -154,7 +154,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-skin-mukmoux-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-mukmoux',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-mukmoux',
 	order = 'b',
@@ -209,7 +209,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-skin-phadai-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-phadai',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-phadai',
 	order = 'b',
@@ -265,7 +265,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-skin-phagnot-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-phagnot',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-phagnot',
 	order = 'b',
@@ -320,7 +320,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-skin-scrondrix-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-scrondrix',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-scrondrix',
 	order = 'b',
@@ -375,7 +375,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-skin-trits-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-trits',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-trits',
 	order = 'b',
@@ -429,7 +429,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-skin-ulric-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-ulric',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-ulric',
 	order = 'b',
@@ -484,7 +484,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-skin-vonix-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-vonix',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-vonix',
 	order = 'b',
@@ -542,7 +542,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-skin-vrauks-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-vrauks',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-vrauks',
 	order = 'b',
@@ -601,7 +601,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-skin-xeno-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-xeno',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-xeno',
 	order = 'b',
@@ -660,7 +660,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-skin-zipir-2',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-zipir',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-zipir',
 	order = 'b',

@@ -5,7 +5,7 @@ local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
     name = 'rendering-guts-arthurians',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-arthurian',
 	--module_limitations = 'arthurian',
 	subgroup = 'py-alienlife-arthurian',
 	order = 'b',
@@ -42,7 +42,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-guts-auog',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-auog',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-auog',
 	order = 'b',
@@ -79,7 +79,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-guts-dhilmos',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-dhilmos',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-dhilmos',
 	order = 'b',
@@ -118,7 +118,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-guts-dingrits',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-dingrits',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-dingrits',
 	order = 'b',
@@ -155,7 +155,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-guts-kmauts',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-kmauts',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-kmauts',
 	order = 'b',
@@ -192,7 +192,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-guts-mukmoux',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-mukmoux',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-mukmoux',
 	order = 'b',
@@ -229,7 +229,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-guts-phadai',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-phadai',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-phadai',
 	order = 'b',
@@ -266,7 +266,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-guts-phagnot',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-phagnot',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-phagnot',
 	order = 'b',
@@ -303,7 +303,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-guts-scrondrix',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-scrondrix',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-scrondrix',
 	order = 'b',
@@ -340,7 +340,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-guts-trits',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-trits',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-trits',
 	order = 'b',
@@ -376,7 +376,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-guts-ulric',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-ulric',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-ulric',
 	order = 'b',
@@ -413,7 +413,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-guts-vonix',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-vonix',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-vonix',
 	order = 'b',
@@ -452,7 +452,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-guts-vrauks',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-vrauks',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-vrauks',
 	order = 'b',
@@ -492,7 +492,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-guts-xyhiphoe',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-xyhiphoe',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-xyhiphoe',
 	order = 'b',
@@ -524,7 +524,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering-guts-zipir',
-	category = 'slaughterhouse',
+	category = 'slaughterhouse-zipir',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-zipir',
 	order = 'b',
