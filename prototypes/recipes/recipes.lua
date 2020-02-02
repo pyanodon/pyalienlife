@@ -1710,3 +1710,19 @@ RECIPE {
         {type = 'fluid', name = 'lubricant', amount = 100},
     },
 }:add_unlock("water-animals-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'unit-controller',
+    category = 'crafting',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'iron-stick', amount = 1},
+        {type = 'item', name = 'auog-food-01', amount = 1},
+        {type = 'item', name = 'copper-cable', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'unit-controller', amount = 1},
+    },
+}:add_unlock("domestication")
