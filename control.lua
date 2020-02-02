@@ -166,6 +166,148 @@ global.landbots =
 --slaughterhouse gui
 local slaughterhouse_gui
 
+
+local function create_outpost_gui(event)
+	local player = game.players[event.player_index]
+	outpostgui = player.gui.left.add({type = 'frame', name = 'outpost_frame', direction = 'horizontal'})
+	outpostgui.add({type = 'textfield', name = 'outpost_name', text = 'Outpost Name', lose_focus_on_confirm = true})
+	if global.outpost_names[event.entity.unit_number] ~= nil then
+		outpostgui.outpost_name.text = global.outpost_names[event.entity.unit_number]
+	end
+	log(serpent.block(global.outpost_names))
+end
+
+local function create_slaughterhouse_animal_table(gui, player)
+	local animals =
+		{
+		'auog',
+		'ulric',
+		'mukmoux',
+		'arthurian',
+		'dhilmos',
+		'scrondrix',
+		'phadai',
+		'fish',
+		'phagnot',
+		'kmauts',
+		'dingrits',
+		'xeno',
+		'cridren',
+		'antelope',
+		'trits',
+		'vonix',
+		'vrauks',
+		'xyhiphoe',
+		'zipir'
+		}
+	--log(player)
+	--log(serpent.block(animals))
+	local sg_table = gui
+	sg_table.add({type = 'table', name = 's_table', column_count = 6})
+	for r, recipe in pairs(game.players[player].force.recipes) do
+		if string.match(recipe.category, 'slaughterhouse') then
+		--log('hit')
+			for a, animal in pairs(animals) do
+				--log('hit')
+				--log(animal)
+				if string.match(recipe.category, animal) and recipe.enabled == true then
+					--log('hit')
+					if next(sg_table.s_table.children) ~= nil then
+						local child_list = {}
+						for c, child in pairs(sg_table.s_table.children) do
+							--log(child.name)
+							child_list[child.name] = true
+						end
+						if child_list[animal] == nil then
+							--log('hit')
+							if animal == 'zipir' then
+								sg_table.s_table.add({type = 'sprite-button', name = animal, sprite = 'item/'..animal..'1', style = 'image_tab_slot'})
+							else
+								sg_table.s_table.add({type = 'sprite-button', name = animal, sprite = 'item/'..animal, style = 'image_tab_slot'})
+							end
+						end
+					elseif next(sg_table.s_table.children) == nil then
+						--log('hit')
+						sg_table.s_table.add({type = 'sprite-button', name = animal, sprite = 'item/'..animal, style = 'image_tab_slot'})
+					end
+				end
+			end
+		end
+	end
+		
+		--[[
+		if string.match(recipe.category, 'slaughterhouse') and string.match(recipe.category, 'auog') and recipe.enabled == true and auog_button == false then
+			sg_table.s_table.add({type = 'sprite-button', name = 'auog', sprite = 'item/auog', style = 'image_tab_slot'})
+			auog_button == true
+		end
+		if string.match(recipe.category, 'slaughterhouse') and string.match(recipe.category, 'ulric') and recipe.enabled == true and ulric_button == false then
+			sg_table.s_table.add({type = 'sprite-button', name = 'ulric', sprite = 'item/ulric', style = 'image_tab_slot'})
+			ulric_button == true
+		end
+		if string.match(recipe.category, 'slaughterhouse') and string.match(recipe.category, 'auog') and recipe.enabled == true and auog_button == false then
+			sg_table.s_table.add({type = 'sprite-button', name = 'mukmoux', sprite = 'item/mukmoux', style = 'image_tab_slot'})
+		end
+		if string.match(recipe.category, 'slaughterhouse') and string.match(recipe.category, 'auog') and recipe.enabled == true and auog_button == false then
+			sg_table.s_table.add({type = 'sprite-button', name = 'arthurian', sprite = 'item/arthurian', style = 'image_tab_slot'})
+		end
+		if string.match(recipe.category, 'slaughterhouse') and string.match(recipe.category, 'auog') and recipe.enabled == true and auog_button == false then
+			sg_table.s_table.add({type = 'sprite-button', name = 'dhilmos', sprite = 'item/dhilmos', style = 'image_tab_slot'})
+		end
+		if string.match(recipe.category, 'slaughterhouse') and string.match(recipe.category, 'auog') and recipe.enabled == true and auog_button == false then
+			sg_table.s_table.add({type = 'sprite-button', name = 'scrondrix', sprite = 'item/scrondrix', style = 'image_tab_slot'})
+		end
+		if string.match(recipe.category, 'slaughterhouse') and string.match(recipe.category, 'auog') and recipe.enabled == true and auog_button == false then
+			sg_table.s_table.add({type = 'sprite-button', name = 'phadai', sprite = 'item/phadai', style = 'image_tab_slot'})
+		end
+		if string.match(recipe.category, 'slaughterhouse') and string.match(recipe.category, 'auog') and recipe.enabled == true and auog_button == false then
+			sg_table.s_table.add({type = 'sprite-button', name = 'fish', sprite = 'item/fish', style = 'image_tab_slot'})
+		end
+		if string.match(recipe.category, 'slaughterhouse') and string.match(recipe.category, 'auog') and recipe.enabled == true and auog_button == false then
+			sg_table.s_table.add({type = 'sprite-button', name = 'phagnot', sprite = 'item/phagnot', style = 'image_tab_slot'})
+		end
+		if string.match(recipe.category, 'slaughterhouse') and string.match(recipe.category, 'auog') and recipe.enabled == true and auog_button == false then
+			sg_table.s_table.add({type = 'sprite-button', name = 'kmauts', sprite = 'item/kmauts', style = 'image_tab_slot'})
+		end
+		if string.match(recipe.category, 'slaughterhouse') and string.match(recipe.category, 'auog') and recipe.enabled == true and auog_button == false then
+			sg_table.s_table.add({type = 'sprite-button', name = 'dingrits', sprite = 'item/dingrits', style = 'image_tab_slot'})
+		end
+		if string.match(recipe.category, 'slaughterhouse') and string.match(recipe.category, 'auog') and recipe.enabled == true and auog_button == false then
+			sg_table.s_table.add({type = 'sprite-button', name = 'xeno', sprite = 'item/xeno', style = 'image_tab_slot'})
+		end
+		if string.match(recipe.category, 'slaughterhouse') and string.match(recipe.category, 'auog') and recipe.enabled == true and auog_button == false then
+			sg_table.s_table.add({type = 'sprite-button', name = 'cridren', sprite = 'item/cridren', style = 'image_tab_slot'})
+		end
+		if string.match(recipe.category, 'slaughterhouse') and string.match(recipe.category, 'auog') and recipe.enabled == true and auog_button == false then
+			sg_table.s_table.add({type = 'sprite-button', name = 'antelope', sprite = 'item/antelope', style = 'image_tab_slot'})
+		end
+		if string.match(recipe.category, 'slaughterhouse') and string.match(recipe.category, 'auog') and recipe.enabled == true and auog_button == false then
+			sg_table.s_table.add({type = 'sprite-button', name = 'zipir', sprite = 'item/zipir1', style = 'image_tab_slot'})
+		end
+		if string.match(recipe.category, 'slaughterhouse') and string.match(recipe.category, 'auog') and recipe.enabled == true and auog_button == false then
+			sg_table.s_table.add({type = 'sprite-button', name = 'trits', sprite = 'item/trits', style = 'image_tab_slot'})
+		end
+		if string.match(recipe.category, 'slaughterhouse') and string.match(recipe.category, 'auog') and recipe.enabled == true and auog_button == false then
+			sg_table.s_table.add({type = 'sprite-button', name = 'vonix', sprite = 'item/vonix', style = 'image_tab_slot'})
+		end
+		if string.match(recipe.category, 'slaughterhouse') and string.match(recipe.category, 'auog') and recipe.enabled == true and auog_button == false then
+			sg_table.s_table.add({type = 'sprite-button', name = 'vrauks', sprite = 'item/vrauks', style = 'image_tab_slot'})
+		end
+		if string.match(recipe.category, 'slaughterhouse') and string.match(recipe.category, 'auog') and recipe.enabled == true and auog_button == false then
+			sg_table.s_table.add({type = 'sprite-button', name = 'xyhiphoe', sprite = 'item/xyhiphoe', style = 'image_tab_slot'})
+		end
+		]]--
+end
+
+local function create_slaughterhouse_gui(event)
+
+	local player = game.players[event.player_index]
+	slaughterhouse_gui = player.gui.screen.add({type = 'frame', name = 'recipe_menu', direction = 'vertical', caption = 'Choose Your Next Victim', style = 'inner_frame_in_outer_frame'})
+	slaughterhouse_gui.add({type = 'sprite-button', name = 'slaughterhouse_close', sprite = 'utility/close_fat'})
+	slaughterhouse_gui.force_auto_center()
+	create_slaughterhouse_animal_table(slaughterhouse_gui, event.player_index)
+	global.slaughterhouse_gui_open = true
+end
+
 script.on_init(
     function()
         global.landbots = landbots
@@ -180,6 +322,13 @@ script.on_init(
 		global.TRlist = TRlist_og
 		TRlist = global.TRlist
 		global.current_entity = {}
+		global.slaughterhouse_gui_open = false
+		global.watch_slaughterhouse = false
+		global.watched_slaughterhouse =
+			{
+			entity = {},
+			player = ''
+			}
     end)
 
 script.on_load(function(event)
@@ -192,6 +341,17 @@ TRlist = global.TRlist
 log(serpent.block(global.TRlist))
 log(serpent.block(TRlist))
 
+end)
+
+script.on_configuration_changed(function(event)
+	global.current_entity = {}
+	global.slaughterhouse_gui_open = false
+	global.watch_slaughterhouse = false
+	global.watched_slaughterhouse =
+		{
+		entity = {},
+		player = ''
+		}
 end)
 
 script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity}, function(event)
@@ -585,6 +745,28 @@ script.on_nth_tick(5, function(event)
 	global.landbots = landbots
 end)
 
+script.on_event(defines.events.on_tick, function(event)
+	if global.watch_slaughterhouse == true then
+		if global.watched_slaughterhouse.entity.get_recipe() == nil then
+			--log('hit')
+			if global.slaughterhouse_gui_open == false then
+				--log('hit')
+				table.insert(global.current_entity ,global.watched_slaughterhouse.player)
+				global.current_entity[global.watched_slaughterhouse.player] = global.watched_slaughterhouse.entity
+				log(serpent.block(global.current_entity))
+				game.players[global.watched_slaughterhouse.player].opened = nil
+				local event =
+					{
+					player_index = global.watched_slaughterhouse.player,
+					entity = global.watched_slaughterhouse.entity
+					}
+				create_slaughterhouse_gui(event)
+				log(serpent.block(global.watched_slaughterhouse))
+			end
+		end
+	end
+end)
+
 script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity},function(event)
 
 	landbots = global.landbots
@@ -645,49 +827,6 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 	global.caravanroutes = caravanroutes
 end)
 
-local function create_outpost_gui(event)
-	local player = game.players[event.player_index]
-	outpostgui = player.gui.left.add({type = 'frame', name = 'outpost_frame', direction = 'horizontal'})
-	outpostgui.add({type = 'textfield', name = 'outpost_name', text = 'Outpost Name', lose_focus_on_confirm = true})
-	if global.outpost_names[event.entity.unit_number] ~= nil then
-		outpostgui.outpost_name.text = global.outpost_names[event.entity.unit_number]
-	end
-	log(serpent.block(global.outpost_names))
-end
-
-local function create_slaughterhouse_animal_table(gui)
-	local sg_table = gui
-	sg_table.add({type = 'table', name = 's_table', column_count = 6})
-	sg_table.s_table.add({type = 'sprite-button', name = 'auog', sprite = 'item/auog', style = 'image_tab_slot'})
-	sg_table.s_table.add({type = 'sprite-button', name = 'ulric', sprite = 'item/ulric', style = 'image_tab_slot'})
-	sg_table.s_table.add({type = 'sprite-button', name = 'mukmoux', sprite = 'item/mukmoux', style = 'image_tab_slot'})
-	sg_table.s_table.add({type = 'sprite-button', name = 'arthurian', sprite = 'item/arthurian', style = 'image_tab_slot'})
-	sg_table.s_table.add({type = 'sprite-button', name = 'dhilmos', sprite = 'item/dhilmos', style = 'image_tab_slot'})
-	sg_table.s_table.add({type = 'sprite-button', name = 'scrondrix', sprite = 'item/scrondrix', style = 'image_tab_slot'})
-	sg_table.s_table.add({type = 'sprite-button', name = 'phadai', sprite = 'item/phadai', style = 'image_tab_slot'})
-	sg_table.s_table.add({type = 'sprite-button', name = 'fish', sprite = 'item/fish', style = 'image_tab_slot'})
-	sg_table.s_table.add({type = 'sprite-button', name = 'phagnot', sprite = 'item/phagnot', style = 'image_tab_slot'})
-	sg_table.s_table.add({type = 'sprite-button', name = 'kmauts', sprite = 'item/kmauts', style = 'image_tab_slot'})
-	sg_table.s_table.add({type = 'sprite-button', name = 'dingrits', sprite = 'item/dingrits', style = 'image_tab_slot'})
-	sg_table.s_table.add({type = 'sprite-button', name = 'xeno', sprite = 'item/xeno', style = 'image_tab_slot'})
-	sg_table.s_table.add({type = 'sprite-button', name = 'cridren', sprite = 'item/cridren', style = 'image_tab_slot'})
-	sg_table.s_table.add({type = 'sprite-button', name = 'antelope', sprite = 'item/antelope', style = 'image_tab_slot'})
-	sg_table.s_table.add({type = 'sprite-button', name = 'zipir', sprite = 'item/zipir1', style = 'image_tab_slot'})
-	sg_table.s_table.add({type = 'sprite-button', name = 'trits', sprite = 'item/trits', style = 'image_tab_slot'})
-	sg_table.s_table.add({type = 'sprite-button', name = 'vonix', sprite = 'item/vonix', style = 'image_tab_slot'})
-	sg_table.s_table.add({type = 'sprite-button', name = 'vrauks', sprite = 'item/vrauks', style = 'image_tab_slot'})
-	sg_table.s_table.add({type = 'sprite-button', name = 'xyhiphoe', sprite = 'item/xyhiphoe', style = 'image_tab_slot'})
-end
-
-local function create_slaughterhouse_gui(event)
-
-	local player = game.players[event.player_index]
-	slaughterhouse_gui = player.gui.screen.add({type = 'frame', name = 'recipe_menu', direction = 'vertical', caption = 'Choose Your Next Victim', style = 'inner_frame_in_outer_frame'})
-	slaughterhouse_gui.force_auto_center()
-	create_slaughterhouse_animal_table(slaughterhouse_gui)
-	
-end
-
 script.on_event(defines.events.on_gui_opened,function(event)
     if event.entity ~= nil then
         log(event.entity.name)
@@ -707,12 +846,20 @@ script.on_event(defines.events.on_gui_opened,function(event)
         elseif event.entity.name == 'outpost' then
 			create_outpost_gui(event)
 			global.current_outpost = event.entity.unit_number
-		elseif event.entity ~= nil and string.match(event.entity.name, 'slaughterhouse') and event.entity.get_recipe() == nil then
+		elseif event.entity ~= nil and string.match(event.entity.name, 'slaughterhouse') and event.entity.get_recipe() == nil and global.slaughterhouse_gui_open == false then
 			--log('hit')
 			table.insert(global.current_entity ,event.player_index)
 			global.current_entity[event.player_index] = event.entity
 			game.players[event.player_index].opened = nil
 			create_slaughterhouse_gui(event)
+		elseif event.entity ~= nil and string.match(event.entity.name, 'slaughterhouse') and event.entity.get_recipe() == nil and global.slaughterhouse_gui_open == true then
+			game.players[event.player_index].opened = nil
+		elseif event.entity ~= nil and string.match(event.entity.name, 'slaughterhouse') and event.entity.get_recipe() ~= nil then
+			log('hit')
+			global.watch_slaughterhouse = true
+			global.watched_slaughterhouse.entity = event.entity
+			global.watched_slaughterhouse.player = event.player_index
+			--global.current_entity[event.player_index] = event.entity
 		end
     end
 
@@ -839,6 +986,9 @@ script.on_event(defines.events.on_gui_click, function(event)
 		caravangui.destroy()
 		hascarguiopen = false
 		lastclickedunit = {}
+	elseif event.element.name == 'slaughterhouse_close' then
+		slaughterhouse_gui.destroy()
+		global.slaughterhouse_gui_open = false
 	elseif event.element.parent.name == 's_table' then
 		create_slaughterhouse_recipe_gui(event)
 	elseif event.element.name == 'slaughterhouse_back' then
@@ -847,14 +997,19 @@ script.on_event(defines.events.on_gui_click, function(event)
 		--log(event.element.parent.parent.parent.name)
 		local elem_p2 = event.element.parent.parent.parent
 		event.element.parent.parent.destroy()
-		create_slaughterhouse_animal_table(elem_p2)
+		create_slaughterhouse_animal_table(elem_p2, event.player_index)
 	elseif string.match(event.element.name, 'recipe%-menu') ~= nil then
 		--log('hit')
 		local entity = global.current_entity[event.player_index]
-			--log(entity.name)
+			log(serpent.block(global.current_entity))
+			log(serpent.block(global.current_entity[event.player_index]))
+			log(entity.name)
+			log(serpent.block(entity))
+			log(serpent.block(global.current_entity))
 			entity.set_recipe(string.match(event.element.name, "%_(.*)"))
 			event.element.parent.parent.parent.parent.destroy()
 			global.current_entity[event.player_index] = nil
+			global.slaughterhouse_gui_open = false
 			--log(serpent.block(global.current_entity))
 	end
 end)
@@ -868,6 +1023,11 @@ script.on_event(defines.events.on_gui_closed, function(event)
 			outpostgui.destroy()
 		end
     end
+	if event.entity ~= nil and string.match(event.entity.name, 'slaughterhouse') and global.watch_slaughterhouse == true then
+		log('hit')
+		global.watch_slaughterhouse = false
+		--global.current_entity[event.player_index] = nil
+	end
 
 end)
 
@@ -906,7 +1066,7 @@ script.on_event(defines.events.on_rocket_launched, function(event)
                         local rpos = event.rocket_silo.position
                         repeat
                             game.surfaces['nauvis'].create_entity {name = farm.crop, position = {rpos.x + posx, (rpos.y - 15) + posy}, amount = output[rs.get_recipe().name]}
-                            game.surfaces['nauvis'].create_entity {name = farm.crop .. '-fake', position = {rpos.x + posx, (rpos.y - 15) + posy}}
+                            --game.surfaces['nauvis'].create_entity {name = farm.crop .. '-fake', position = {rpos.x + posx, (rpos.y - 15) + posy}}
                             posx = posx + 1
                             if posx == 12 then
                                 posx = -11
