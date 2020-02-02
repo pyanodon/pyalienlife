@@ -11,7 +11,7 @@ RECIPE {
         {"stone", 100},
         {"iron-plate", 30},
         {"duralumin", 10},
-        {"treated-wood", 208},
+        {"treated-wood", 50},
         {"small-lamp", 20}
     },
     results = {

@@ -1713,16 +1713,30 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'unit-controller',
-    category = 'crafting',
+    name = 'albumin-1',
+    category = 'genlab',
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'iron-stick', amount = 1},
-        {type = 'item', name = 'auog-food-01', amount = 1},
-        {type = 'item', name = 'copper-cable', amount = 1},
+        {type = 'fluid', name = 'blood', amount = 100},
     },
     results = {
-        {type = 'item', name = 'unit-controller', amount = 1},
+        {type = 'item', name = 'albumin', amount = 1},
     },
-}:add_unlock("domestication")
+    --main_product = "cocoon",
+}:add_unlock("biotech-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'albumin-2',
+    category = 'genlab',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'arthurian-egg', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'albumin', amount = 3},
+    },
+    --main_product = "cocoon",
+}:add_unlock("biotech-mk02")
