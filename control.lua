@@ -989,7 +989,7 @@ script.on_event(defines.events.on_gui_click, function(event)
 	elseif event.element.name == 'slaughterhouse_close' then
 		slaughterhouse_gui.destroy()
 		global.slaughterhouse_gui_open = false
-	elseif event.element.parent.name == 's_table' then
+	elseif event.element.parent ~= nil and event.element.parent.name == 's_table' then
 		create_slaughterhouse_recipe_gui(event)
 	elseif event.element.name == 'slaughterhouse_back' then
 		--log(event.element.parent.name)
