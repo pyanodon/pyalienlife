@@ -630,7 +630,7 @@ RECIPE {
         {type = 'item', name = 'grod', amount = 5},
     },
     results = {
-        {type = 'item', name = 'dried-grods', amount = 1},
+        {type = 'item', name = 'dried-grods', amount = 5},
     },
 }:add_unlock('grod')
 
@@ -643,10 +643,10 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'wood', amount = 5},
         {type = 'item', name = 'yotoi-leaves', amount = 5},
-        {type = 'item', name = 'dried-grods', amount = 2},
+        {type = 'item', name = 'dried-grods', amount = 1},
     },
     results = {
-        {type = 'item', name = 'bedding', amount = 1},
+        {type = 'item', name = 'bedding', amount = 2},
     },
 }:add_unlock('grod'):add_ingredient({type = "item", name = "raw-fiber", amount = 5})
 
