@@ -1,3 +1,5 @@
+local fun = require("prototypes/functions/functions")
+
 RECIPE {
     type = 'recipe',
     name = 'auog-recharge',
@@ -133,9 +135,7 @@ RECIPE {
 }:add_unlock("domestication")
 
 
-
-
-
+-------DINGRTIS----------------
 
 RECIPE {
     type = 'recipe',
