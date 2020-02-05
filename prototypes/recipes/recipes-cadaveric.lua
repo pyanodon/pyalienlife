@@ -48,10 +48,10 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "item", name = "cadaveric-arum", amount = 5},
+        {type = "item", name = "cadaveric-arum", amount = 4},
     },
     results = {
-        {type = "item", name = "cadaveric-arum-seeds", amount = 7}
+        {type = "item", name = "cadaveric-arum-seeds", amount = 8}
     },
 }:add_unlock("cadaveric-arum")
 
@@ -68,7 +68,9 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "dms", amount = 25},
+        {type = "item", name = "cadaveric-arum-seeds", amount = 2}
     },
+    main_product = "dms"
 }:add_unlock("cadaveric-arum")
 
 RECIPE {
@@ -112,8 +114,10 @@ RECIPE {
         {type = "item", name = "cadaveric-arum", amount = 2},
     },
     results = {
-        {type = "fluid", name = "acidgas", amount = 50}
+        {type = "fluid", name = "acidgas", amount = 50},
+        {type = "item", name = "cadaveric-arum-seeds", amount = 2}
     },
+    main_product = "acidgas"
 }:add_unlock("cadaveric-arum")
 
 

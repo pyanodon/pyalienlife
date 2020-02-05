@@ -1126,9 +1126,9 @@ recipe =
                         for _, res in pairs(ingredients) do
                             if res.name == ing[1] then
                                 res.amount = res.amount + mod
-                            else
-                                table.insert(ingredients, {type = type1, name = ing[1], amount = ing[2] + mod})
-                                break
+                            --else
+                                --table.insert(ingredients, {type = type1, name = ing[1], amount = ing[2] + mod})
+                                --break
                             end
                         end
                     else
@@ -1185,7 +1185,7 @@ recipe =
                     end
                 end
             end
-			
+
             if item.return_item ~= nil then
 				--log('hit')
                 return_item = true
@@ -1210,21 +1210,19 @@ recipe =
                     type1 = 'item'
                 end
                 return_item_type = type1
-								
+
 				local returned_item =
 					{
 					type = return_item_type,
 					name = return_item_name,
 					amount = return_amount
 					}
-				
 				table.insert(return_items_table, returned_item)
-				
+
             end
         end
-		
+
 		--log(serpent.block(return_items_table))
-        
 		--log(serpent.block(ingredients))
 
         results = lastresults
