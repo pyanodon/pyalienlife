@@ -11,7 +11,6 @@ TECHNOLOGY {
         ingredients = {
             {'automation-science-pack', 1},
             {'logistic-science-pack', 1},
-            {'py-science-pack', 1},
         },
         time = 45
     }
@@ -43,7 +42,7 @@ TECHNOLOGY {
     icon = '__pyalienlifegraphics__/graphics/technology/organ-printing-mk03.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'biotech-mk03','organ-printing-mk02'},
+    prerequisites = {'biotech-mk03','organ-printing-mk02','immunosupressants'},
     effects = {},
     unit = {
         count = 400,
