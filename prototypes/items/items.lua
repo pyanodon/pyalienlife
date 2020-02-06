@@ -2998,6 +2998,83 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "laboratory-grown-brain",
+    icon = "__pyalienlifegraphics__/graphics/icons/laboratory-grown-brain.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "tissue-engineered-fat",
+    icon = "__pyalienlifegraphics__/graphics/icons/tissue-engineered-fat.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "in-vitro-meat",
+    icon = "__pyalienlifegraphics__/graphics/icons/in-vitro-meat.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "biomimetic-skin",
+    icon = "__pyalienlifegraphics__/graphics/icons/biomimetic-skin.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "bioartificial-guts",
+    icon = "__pyalienlifegraphics__/graphics/icons/bioartificial-guts.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "scafold-free-bones",
+    icon = "__pyalienlifegraphics__/graphics/icons/scafold-free-bones.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "bio-scafold",
+    icon = "__pyalienlifegraphics__/graphics/icons/bio-scafold.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "phagnot-cub",
     icon = "__pyalienlifegraphics__/graphics/icons/phagnot-pup.png",
     icon_size = 64,
