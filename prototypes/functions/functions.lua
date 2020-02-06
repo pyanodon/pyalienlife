@@ -1488,7 +1488,12 @@ recipe =
 
         if singlerecipe then
             local na = mat.name or name .. number
+            local order
+            if recipe.order ~= nil then
+                order = recipe.order ..'-'.. string.char(number+64)
+            end
 
+            log(serpent.block(order))
             RECIPE {
                 type = 'recipe',
                 name = na,
@@ -1498,7 +1503,7 @@ recipe =
                 ingredients = ingredients,
                 results = results,
                 subgroup = recipe.subgroup,
-                order = recipe.order,
+                order = order,
                 --main_product = results[1].name,
                 --icon = mat.icon
                 localised_name = mat.name
