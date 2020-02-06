@@ -6442,7 +6442,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cad-a",
     stack_size = 10,
-	effect = { speed = {bonus = 15}},
+	effect = { speed = {bonus = 25}},
 	limitation = alien_life_limitations_cadaveric,
 	limitation_message_key = "Its full"
 }
@@ -6462,7 +6462,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cad-b",
     stack_size = 10,
-	effect = { speed = {bonus = 20}},
+	effect = { speed = {bonus = 35}},
 	limitation = alien_life_limitations_cadaveric,
 	limitation_message_key = "Its full"
 }
@@ -6482,7 +6482,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cad-c",
     stack_size = 10,
-	effect = { speed = {bonus = 25}},
+	effect = { speed = {bonus = 45}},
 	limitation = alien_life_limitations_cadaveric,
 	limitation_message_key = "Its full"
 }
@@ -6502,7 +6502,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cad-d",
     stack_size = 10,
-	effect = { speed = {bonus = 30}},
+	effect = { speed = {bonus = 60}},
 	limitation = alien_life_limitations_cadaveric,
 	limitation_message_key = "Its full"
 }

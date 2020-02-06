@@ -13,7 +13,7 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    {name='kicalkseeds',amount = "*4"},
+                    {name='kicalkseeds',amount = "*3"},
                     {name='clay',amount = "*1"},
 				},
 			results =
@@ -26,7 +26,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='kicalkseeds'},
+					{name='kicalkseeds',amount = "+1"},
 					{name='water',amount = 800},
 				},
 			results =

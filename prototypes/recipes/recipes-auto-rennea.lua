@@ -13,7 +13,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='renneaseeds',amount = 5},
+					{name='renneaseeds', amount = 1},
 					{name='water',amount = '*10'},
 				},
 			results =
@@ -26,7 +26,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    --{'s1'},
+                    {name='renneaseeds', amount = '+1'},
 					{name='soil',amount ='*12'},
 				},
 			results =
@@ -40,8 +40,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    --{'s1'},
-                    --{'a'},
+                    {name='renneaseeds', amount = '+1'},
                     {name='coarse',amount ='+10'},
 				},
 			results =
@@ -55,9 +54,7 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    --{'s1'},
-                    --{'a'},
-                    --{'b','+15'},
+                    {name='renneaseeds', amount = '+2'},
                     {name='manure',amount =10},
 				},
 			results =
