@@ -1435,7 +1435,7 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = 'item', name = 'bones', amount = 5},
+        {type = 'item', name = 'bones', amount = 3},
         {type = 'fluid', name = 'sweet-syrup', amount = 100},
     },
     results = {

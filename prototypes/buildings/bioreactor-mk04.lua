@@ -104,7 +104,7 @@ ENTITY {
                 height = 236,
                 line_length = 8,
                 animation_speed = 0.3,
-                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
+                tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0},
                 priority = "medium"
             }
         },
