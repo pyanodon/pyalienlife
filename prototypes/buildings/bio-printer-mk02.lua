@@ -55,7 +55,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = 0.5,
     },
-    energy_usage = "600kW",
+    energy_usage = "1000kW",
     ingredient_count = 50,
     fluid_boxes = {
         --1
@@ -248,7 +248,7 @@ ENTITY {
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
         sound = {filename = "__pyalienlifegraphics__/sounds/bio-printer.ogg", volume = 0.9},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/bio-printer.ogg", volume = 0.65},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/bio-printer.ogg", volume = 0.55},
         apparent_volume = 2.5
     }
 }

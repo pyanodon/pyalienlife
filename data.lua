@@ -305,6 +305,8 @@ require("prototypes/fluids/subcritical-water")
 require("prototypes/fluids/depolymerized-organics")
 require("prototypes/fluids/mutant-enzymes")
 require("prototypes/fluids/chelator")
+require("prototypes/fluids/xenogenic-cells")
+require("prototypes/fluids/psc")
 
 --(( RECIPES ))--
 require('prototypes/items/items')
@@ -410,6 +412,7 @@ require('prototypes/recipes/recipes-auto-fat-2')
 require('prototypes/recipes/recipes-bladder')
 require('prototypes/recipes/recipes-auto-acessories')
 require('prototypes/recipes/recipes-photomining')
+require('prototypes/recipes/recipes-bioprinting')
 
 --(( ORES ))--
 require('prototypes/ores/ralesia')
