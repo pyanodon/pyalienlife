@@ -13,7 +13,7 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    {name='cadavericarumseeds',amount = "*4"},
+                    {name='cadavericarumseeds'},
                     {name='coalgas',amount = "*10"},
 				},
 			results =
@@ -26,7 +26,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='kicalkseeds'},
+					{name='cadavericarumseeds',amount = "+1"},
 					{name='water',amount = 500},
 				},
 			results =
@@ -39,7 +39,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    --{'s1'},
+                    {name='cadavericarumseeds',amount = "+1"},
 					{name='sand',amount = 5},
 				},
 			results =
@@ -53,8 +53,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    --{'s1'},
-                    --{'a'},
+                    {name='cadavericarumseeds',amount = "+1"},
                     {name='stonewool',amount ='+1'},
 				},
 			results =
