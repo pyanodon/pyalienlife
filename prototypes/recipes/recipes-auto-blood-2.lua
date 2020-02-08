@@ -685,6 +685,7 @@ fun.autorecipes {
 				{
 					{name='bones', amount ='R'},
 					{name='chitin', amount ='R'},
+					{name='cage',amount=1},
 					{name='sulfuricacid', amount ='R'},
                     {name='meat', amount ='R'},
                     {name='brain', amount ='R'},

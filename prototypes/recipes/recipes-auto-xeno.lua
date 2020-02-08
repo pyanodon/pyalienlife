@@ -576,7 +576,7 @@ fun.autorecipes {
 			tech = 'xeno',
 			name = 'Extract Xeno blood',
 			icon = "__base__/graphics/icons/fluid/sulfuric-acid.png",
-			icon_size = 32,
+			icon_size = 64,
 		},
 		--brain xeno rendering
 		{
