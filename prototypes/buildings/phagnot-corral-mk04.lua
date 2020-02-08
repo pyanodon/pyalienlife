@@ -59,7 +59,7 @@ ENTITY {
     animation = {
         layers = {
         {
-        filename = "__pyalienlifegraphics__/graphics/entity/phagnot-corral/off.png",
+        filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/off.png",
         width = 416,
         height = 448,
         frame_count = 1,
@@ -67,7 +67,7 @@ ENTITY {
         shift = util.by_pixel(16, -32)
         },
         {
-            filename = "__pyalienlifegraphics__/graphics/entity/phagnot-corral/off-mask.png",
+            filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/off-mask.png",
             width = 416,
             height = 448,
             frame_count = 1,
@@ -84,7 +84,7 @@ ENTITY {
             south_position = util.by_pixel(0, -0),
             east_position = util.by_pixel(0, -0),
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/phagnot-corral/mom.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/mom.png",
                 frame_count = 68,
                 line_length = 10,
                 width = 96,
@@ -98,7 +98,7 @@ ENTITY {
             south_position = util.by_pixel(0, -0),
             east_position = util.by_pixel(0, -0),
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/phagnot-corral/porta.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/porta.png",
                 frame_count = 68,
                 line_length = 10,
                 width = 64,
@@ -112,7 +112,7 @@ ENTITY {
             south_position = util.by_pixel(0, -0),
             east_position = util.by_pixel(0, -0),
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/phagnot-corral/pup.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/pup.png",
                 frame_count = 68,
                 line_length = 10,
                 width = 64,
@@ -126,7 +126,7 @@ ENTITY {
             south_position = util.by_pixel(0, -0),
             east_position = util.by_pixel(0, -0),
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/phagnot-corral/sit.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/sit.png",
                 frame_count = 68,
                 line_length = 10,
                 width = 64,
@@ -140,7 +140,7 @@ ENTITY {
             south_position = util.by_pixel(0, -0),
             east_position = util.by_pixel(0, -0),
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/phagnot-corral/walk-01.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/walk-01.png",
                 frame_count = 130,
                 line_length = 16,
                 width = 128,
@@ -154,7 +154,7 @@ ENTITY {
             south_position = util.by_pixel(0, -0),
             east_position = util.by_pixel(0, -0),
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/phagnot-corral/walk-02.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/walk-02.png",
                 frame_count = 130,
                 line_length = 16,
                 width = 105,

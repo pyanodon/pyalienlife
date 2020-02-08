@@ -60,7 +60,7 @@ ENTITY {
     animation = {
         layers = {
         {
-        filename = "__pyalienlifegraphics__/graphics/entity/vonix-den/off.png",
+        filename = "__pyalienlifegraphics2__/graphics/entity/vonix-den/off.png",
         width = 352,
         height = 352,
         frame_count = 1,
@@ -68,7 +68,7 @@ ENTITY {
         shift = util.by_pixel(16, -16)
         },
         {
-            filename = "__pyalienlifegraphics__/graphics/entity/vonix-den/off-mask.png",
+            filename = "__pyalienlifegraphics2__/graphics/entity/vonix-den/off-mask.png",
             width = 352,
             height = 352,
             frame_count = 1,
@@ -85,7 +85,7 @@ ENTITY {
             south_position = util.by_pixel(191, 64),
             east_position = util.by_pixel(191, 64),
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/vonix-den/sh.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/vonix-den/sh.png",
                 frame_count = 150,
                 line_length = 10,
                 width = 64,
@@ -99,7 +99,7 @@ ENTITY {
             south_position = util.by_pixel(-0, 128),
             east_position = util.by_pixel(-0, 128),
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/vonix-den/a1.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/vonix-den/a1.png",
                 frame_count = 150,
                 line_length = 6,
                 width = 320,
@@ -113,7 +113,7 @@ ENTITY {
             south_position = util.by_pixel(-0, 64),
             east_position = util.by_pixel(-0, 64),
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/vonix-den/a2.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/vonix-den/a2.png",
                 frame_count = 150,
                 line_length = 6,
                 width = 320,
@@ -127,7 +127,7 @@ ENTITY {
             south_position = util.by_pixel(-0, 0),
             east_position = util.by_pixel(-0, 0),
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/vonix-den/a3.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/vonix-den/a3.png",
                 frame_count = 150,
                 line_length = 6,
                 width = 320,
@@ -141,7 +141,7 @@ ENTITY {
             south_position = util.by_pixel(-0, -64),
             east_position = util.by_pixel(-0, -64),
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/vonix-den/a4.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/vonix-den/a4.png",
                 frame_count = 150,
                 line_length = 6,
                 width = 320,
@@ -155,7 +155,7 @@ ENTITY {
             south_position = util.by_pixel(-0, -128),
             east_position = util.by_pixel(-0, -128),
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/vonix-den/a5.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/vonix-den/a5.png",
                 frame_count = 150,
                 line_length = 6,
                 width = 320,
@@ -169,7 +169,7 @@ ENTITY {
             south_position = util.by_pixel(-0, -192),
             east_position = util.by_pixel(-0, -192),
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/vonix-den/a6.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/vonix-den/a6.png",
                 frame_count = 150,
                 line_length = 6,
                 width = 320,
@@ -183,7 +183,7 @@ ENTITY {
             south_position = util.by_pixel(-0, -256),
             east_position = util.by_pixel(-0, -256),
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/vonix-den/a7.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/vonix-den/a7.png",
                 frame_count = 150,
                 line_length = 6,
                 width = 320,

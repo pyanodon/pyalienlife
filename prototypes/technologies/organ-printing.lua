@@ -57,7 +57,7 @@ TECHNOLOGY {
         time = 45
     }
 }
-
+--[[
 TECHNOLOGY {
     type = 'technology',
     name = 'mass-production',
@@ -78,3 +78,4 @@ TECHNOLOGY {
         time = 45
     }
 }
+]]--

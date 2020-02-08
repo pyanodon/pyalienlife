@@ -60,7 +60,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/sap-extractor/i.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/sap-extractor/i.png",
                 width = 160,
                 height = 178,
                 line_length = 10,
@@ -69,7 +69,7 @@ ENTITY {
                 shift = util.by_pixel(0, -10)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/sap-extractor/i-mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/sap-extractor/i-mask.png",
                 width = 160,
                 height = 178,
                 line_length = 10,
@@ -79,7 +79,7 @@ ENTITY {
                 tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/sap-extractor/shadow.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/sap-extractor/shadow.png",
                 width = 160,
                 height = 160,
                 line_length = 10,

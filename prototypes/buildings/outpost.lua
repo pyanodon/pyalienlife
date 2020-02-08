@@ -53,7 +53,7 @@
         scale_info_icons = true,
 
 		picture = {
-            filename = "__pyalienlifegraphics__/graphics/entity/outpost/off.png",
+            filename = "__pyalienlifegraphics2__/graphics/entity/outpost/off.png",
             priority = "high",
             width = 224,
             height = 224,

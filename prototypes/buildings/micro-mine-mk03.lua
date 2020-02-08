@@ -60,7 +60,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/micro-mine/a1.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/micro-mine/a1.png",
                 width = 96,
                 height = 320,
                 line_length = 21,
@@ -69,7 +69,7 @@ ENTITY {
                 shift = util.by_pixel(-64, -46)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/micro-mine/a1-mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/micro-mine/a1-mask.png",
                 width = 96,
                 height = 320,
                 line_length = 21,
@@ -79,7 +79,7 @@ ENTITY {
                 tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/micro-mine/a2.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/micro-mine/a2.png",
                 width = 96,
                 height = 320,
                 line_length = 21,
@@ -88,7 +88,7 @@ ENTITY {
                 shift = util.by_pixel(32, -46)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/micro-mine/a2-mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/micro-mine/a2-mask.png",
                 width = 96,
                 height = 320,
                 line_length = 21,
@@ -98,7 +98,7 @@ ENTITY {
                 tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/micro-mine/a3.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/micro-mine/a3.png",
                 width = 64,
                 height = 320,
                 line_length = 21,
@@ -107,7 +107,7 @@ ENTITY {
                 shift = util.by_pixel(112, -46)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/micro-mine/a3-mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/micro-mine/a3-mask.png",
                 width = 64,
                 height = 320,
                 line_length = 21,

@@ -59,7 +59,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/vat-brain/bot.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/vat-brain/bot.png",
                 width = 256,
                 height = 64,
                 line_length = 8,
@@ -68,7 +68,7 @@ ENTITY {
                 shift = util.by_pixel(16, 95)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/vat-brain/1.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/vat-brain/1.png",
                 width = 64,
                 height = 288,
                 line_length = 32,
@@ -77,7 +77,7 @@ ENTITY {
                 shift = util.by_pixel(-80, -80)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/vat-brain/2.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/vat-brain/2.png",
                 width = 64,
                 height = 288,
                 line_length = 32,
@@ -86,7 +86,7 @@ ENTITY {
                 shift = util.by_pixel(-16, -80)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/vat-brain/3.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/vat-brain/3.png",
                 width = 64,
                 height = 288,
                 line_length = 32,
@@ -95,7 +95,7 @@ ENTITY {
                 shift = util.by_pixel(48, -80)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/vat-brain/4.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/vat-brain/4.png",
                 width = 64,
                 height = 288,
                 line_length = 32,

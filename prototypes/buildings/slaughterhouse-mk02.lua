@@ -60,7 +60,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/slaughterhouse/base.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/base.png",
                 width = 384,
                 height = 32,
                 line_length = 5,
@@ -70,7 +70,7 @@ ENTITY {
                 shift = util.by_pixel(16, 160)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/slaughterhouse/a1.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a1.png",
                 width = 96,
                 height = 324,
                 line_length = 21,
@@ -80,7 +80,7 @@ ENTITY {
                 shift = util.by_pixel(-128, -18)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/slaughterhouse/a1-mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a1-mask.png",
                 width = 96,
                 height = 324,
                 line_length = 21,
@@ -91,7 +91,7 @@ ENTITY {
                 tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/slaughterhouse/a2.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a2.png",
                 width = 96,
                 height = 324,
                 line_length = 21,
@@ -101,7 +101,7 @@ ENTITY {
                 shift = util.by_pixel(-32, -18)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/slaughterhouse/a2-mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a2-mask.png",
                 width = 96,
                 height = 324,
                 line_length = 21,
@@ -112,7 +112,7 @@ ENTITY {
                 tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/slaughterhouse/a3.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a3.png",
                 width = 96,
                 height = 324,
                 line_length = 21,
@@ -122,7 +122,7 @@ ENTITY {
                 shift = util.by_pixel(64, -18)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/slaughterhouse/a3-mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a3-mask.png",
                 width = 96,
                 height = 324,
                 line_length = 21,
@@ -133,7 +133,7 @@ ENTITY {
                 tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/slaughterhouse/a4.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a4.png",
                 width = 96,
                 height = 324,
                 line_length = 21,
@@ -143,7 +143,7 @@ ENTITY {
                 shift = util.by_pixel(160, -18)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/slaughterhouse/a4-mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a4-mask.png",
                 width = 96,
                 height = 324,
                 line_length = 21,

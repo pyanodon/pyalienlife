@@ -58,7 +58,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/vrauks-paddock/vrauks-paddock-mk01.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/vrauks-paddock/vrauks-paddock-mk01.png",
                 width = 448,
                 height = 448,
                 --line_length = 5,
@@ -75,7 +75,7 @@ ENTITY {
             south_position = {-2.0, -2.0},
             east_position = {-2.0, -2.0},
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/vrauks-paddock/alpha.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/vrauks-paddock/alpha.png",
                 frame_count = 90,
                 line_length = 9,
                 width = 128,
@@ -89,7 +89,7 @@ ENTITY {
             south_position = {3.0, -3.0},
             east_position = {3.0, -3.0},
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/vrauks-paddock/beta.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/vrauks-paddock/beta.png",
                 frame_count = 90,
                 line_length = 9,
                 width = 128,
@@ -103,7 +103,7 @@ ENTITY {
             south_position = {0.0, 3.1},
             east_position = {0.0, 3.1},
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/vrauks-paddock/midbottom.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/vrauks-paddock/midbottom.png",
                 frame_count = 90,
                 line_length = 9,
                 width = 160,
@@ -117,7 +117,7 @@ ENTITY {
             south_position = {2.2, 0.7},
             east_position = {2.2, 0.7},
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/vrauks-paddock/right.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/vrauks-paddock/right.png",
                 frame_count = 90,
                 line_length = 10,
                 width = 128,
@@ -131,7 +131,7 @@ ENTITY {
             south_position = {-4.0, 1.7},
             east_position = {-4.0, 1.7},
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/vrauks-paddock/small-01.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/vrauks-paddock/small-01.png",
                 frame_count = 90,
                 line_length = 10,
                 width = 96,
@@ -145,7 +145,7 @@ ENTITY {
             south_position = {-2.5, 1.6},
             east_position = {-2.5, 1.6},
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/vrauks-paddock/small-02.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/vrauks-paddock/small-02.png",
                 frame_count = 180,
                 line_length = 18,
                 width = 64,

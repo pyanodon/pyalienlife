@@ -61,7 +61,7 @@ ENTITY {
         layers = {
             --off
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/pyphoon-bay/off.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/pyphoon-bay/off.png",
                 width = 320,
                 height = 349,
                 frame_count = 1,
@@ -77,7 +77,7 @@ ENTITY {
             south_position = util.by_pixel(-128, -16),
             east_position = util.by_pixel(-128, -16),
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/pyphoon-bay/a1.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/pyphoon-bay/a1.png",
                 frame_count = 150,
                 line_length = 32,
                 width = 64,
@@ -91,7 +91,7 @@ ENTITY {
             south_position = util.by_pixel(-64, -16),
             east_position = util.by_pixel(-64, -16),
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/pyphoon-bay/a2.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/pyphoon-bay/a2.png",
                 frame_count = 150,
                 line_length = 32,
                 width = 64,
@@ -105,7 +105,7 @@ ENTITY {
             south_position = util.by_pixel(-0, -16),
             east_position = util.by_pixel(-0, -16),
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/pyphoon-bay/a3.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/pyphoon-bay/a3.png",
                 frame_count = 150,
                 line_length = 32,
                 width = 64,
@@ -119,7 +119,7 @@ ENTITY {
             south_position = util.by_pixel(64, -16),
             east_position = util.by_pixel(64, -16),
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/pyphoon-bay/a4.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/pyphoon-bay/a4.png",
                 frame_count = 150,
                 line_length = 32,
                 width = 64,
@@ -133,7 +133,7 @@ ENTITY {
             south_position = util.by_pixel(128, -16),
             east_position = util.by_pixel(128, -16),
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/pyphoon-bay/a5.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/pyphoon-bay/a5.png",
                 frame_count = 150,
                 line_length = 32,
                 width = 64,

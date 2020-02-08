@@ -59,7 +59,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/moss-farm/a-base.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/moss-farm/a-base.png",
                 width = 192,
                 height = 32,
                 line_length = 10,
@@ -68,7 +68,7 @@ ENTITY {
                 shift = util.by_pixel(0, 80)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/moss-farm/a1.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/moss-farm/a1.png",
                 width = 64,
                 height = 256,
                 line_length = 20,
@@ -78,7 +78,7 @@ ENTITY {
             },
 
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/moss-farm/mask-1.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/moss-farm/mask-1.png",
                 width = 64,
                 height = 256,
                 line_length = 20,
@@ -88,7 +88,7 @@ ENTITY {
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/moss-farm/a2.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/moss-farm/a2.png",
                 width = 64,
                 height = 256,
                 line_length = 20,
@@ -97,7 +97,7 @@ ENTITY {
                 shift = util.by_pixel(0, -64)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/moss-farm/mask-2.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/moss-farm/mask-2.png",
                 width = 64,
                 height = 256,
                 line_length = 20,
@@ -107,7 +107,7 @@ ENTITY {
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/moss-farm/a3.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/moss-farm/a3.png",
                 width = 64,
                 height = 256,
                 line_length = 20,
@@ -116,7 +116,7 @@ ENTITY {
                 shift = util.by_pixel(64, -64)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/moss-farm/mask-3.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/moss-farm/mask-3.png",
                 width = 64,
                 height = 256,
                 line_length = 20,
@@ -126,7 +126,7 @@ ENTITY {
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/moss-farm/sh.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/moss-farm/sh.png",
                 width = 64,
                 height = 201,
                 line_length = 20,

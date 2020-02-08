@@ -79,7 +79,7 @@ ENTITY {
     animations = {
         layers = {
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/harvester/left.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/harvester/left.png",
                 width = 128,
                 height = 256,
                 line_length = 16,
@@ -88,7 +88,7 @@ ENTITY {
                 shift = {-1.5, -0.5}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/harvester/right.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/harvester/right.png",
                 width = 128,
                 height = 256,
                 line_length = 16,

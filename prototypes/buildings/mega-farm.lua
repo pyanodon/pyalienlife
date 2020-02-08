@@ -112,7 +112,7 @@ ENTITY {
 
     shadow_sprite =
     {
-      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
       width = 32,
       height = 32,
       shift = util.by_pixel(0, -0),
@@ -120,7 +120,7 @@ ENTITY {
     
     hole_sprite =
     {
-      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
       width = 32,
       height = 32,
       --slice = 2,
@@ -128,7 +128,7 @@ ENTITY {
     },
     hole_light_sprite =
     {
-      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
       width = 32,
       height = 32,
       --slice = 2,
@@ -137,7 +137,7 @@ ENTITY {
 
     rocket_shadow_overlay_sprite =
     {
-      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
       width = 32,
       height = 32,
       --slice = 2,
@@ -145,7 +145,7 @@ ENTITY {
     },
     rocket_glow_overlay_sprite =
     {
-      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
       width = 32,
       height = 32,
       --slice = 2,
@@ -155,7 +155,7 @@ ENTITY {
 
     door_back_sprite =
     {
-      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
       width = 32,
       height = 32,
       --slice = 2,
@@ -164,7 +164,7 @@ ENTITY {
     door_back_open_offset = {1.8, -1.8 * 0.43299225},
     door_front_sprite =
     {
-      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
       width = 32,
       height = 32,
       --slice = 2,
@@ -176,7 +176,7 @@ ENTITY {
     {
       layers = {
         {
-        filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/farm/bot.png",
+        filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/farm/bot.png",
         width = 288,
         height = 64,
         frame_count = 100,
@@ -189,7 +189,7 @@ ENTITY {
 	
     base_front_sprite =
     {
-      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
       width = 32,
       height = 32,
       --slice = 2,
@@ -197,7 +197,7 @@ ENTITY {
     },
     red_lights_back_sprites =
     {
-        filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+        filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
         width = 32,
         height = 32,
         --slice = 2,
@@ -209,7 +209,7 @@ ENTITY {
       layers =
       {
         {
-          filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+          filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
           width = 32,
           height = 32,
           --slice = 2,
@@ -221,7 +221,7 @@ ENTITY {
     {
     layers = {
             {
-            filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/farm/a1.png",
+            filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/farm/a1.png",
             width = 128,
             height = 288,
             frame_count = 100,
@@ -230,7 +230,7 @@ ENTITY {
             shift = util.by_pixel(-48, -64),
             },
             {
-              filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/farm/a2.png",
+              filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/farm/a2.png",
               width = 128,
               height = 288,
               frame_count = 100,
@@ -239,7 +239,7 @@ ENTITY {
               shift = util.by_pixel(80, -64),
               },
               {
-                filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/farm/a3.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/farm/a3.png",
                 width = 32,
                 height = 288,
                 frame_count = 100,
@@ -252,7 +252,7 @@ ENTITY {
 
     arm_01_back_animation =
     {
-      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
       width = 32,
       height = 32,
       frame_count = 1,
@@ -263,7 +263,7 @@ ENTITY {
 
     arm_02_right_animation =
     {
-        filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+        filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
         width = 32,
         height = 32,
         frame_count = 1,
@@ -274,7 +274,7 @@ ENTITY {
 
     arm_03_front_animation =
     {
-      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
       width = 32,
       height = 32,
       frame_count = 1,
@@ -344,7 +344,7 @@ ENTITY {
 
     rocket_sprite = util.add_shift_offset(util.by_pixel(0, 32*3.5), --util.mul_shift(rocket_rise_offset, -1),
     {
-      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
       width = 32,
       height = 32,
       shift = util.by_pixel(0, -0),
@@ -352,7 +352,7 @@ ENTITY {
 
     rocket_shadow_sprite = util.add_shift_offset(util.by_pixel(-146, -120),
     {
-      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
       priority = "medium",
       width = 32,
       height = 32,
@@ -361,14 +361,14 @@ ENTITY {
 
     rocket_glare_overlay_sprite = util.add_shift_offset(util.by_pixel(0, 112+112),
     {
-      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
       blend_mode = "additive",
       width = 32,
       height = 32,
     }),
     rocket_smoke_top1_animation = util.add_shift_offset(util.by_pixel(0-66, -112+28+232+32),
     {
-      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
       priority = "medium",
       tint = { r = 0.8, g = 0.8, b = 1, a = 0.8 },
       --tint = { r = 1, g = 0, b = 0, a = 0.8 },
@@ -381,7 +381,7 @@ ENTITY {
     }),
     rocket_smoke_top2_animation = util.add_shift_offset(util.by_pixel(0+17, -112+28+265+32),
     {
-      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
       priority = "medium",
       tint = { r = 0.8, g = 0.8, b = 1, a = 0.8 },
       --tint = { r = 1, g = 0, b = 0, a = 0.8 },
@@ -394,7 +394,7 @@ ENTITY {
     }),
     rocket_smoke_top3_animation = util.add_shift_offset(util.by_pixel(0+48, -112+28+252+32),
     {
-      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
       priority = "medium",
       tint = { r = 0.8, g = 0.8, b = 1, a = 0.8 },
       --tint = { r = 1, g = 0, b = 0, a = 0.8 },
@@ -408,7 +408,7 @@ ENTITY {
 
     rocket_smoke_bottom1_animation = util.add_shift_offset(util.by_pixel(0-69, -112+28+205+32),
     {
-      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
       priority = "medium",
       tint = { r = 0.8, g = 0.8, b = 1, a = 0.8 },
       --tint = { r = 1, g = 0, b = 0, a = 0.8 },
@@ -421,7 +421,7 @@ ENTITY {
     }),
     rocket_smoke_bottom2_animation = util.add_shift_offset(util.by_pixel(0+62, -112+28+207+32),
     {
-      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
       priority = "medium",
       tint = { r = 0.8, g = 0.8, b = 1, a = 0.8 },
       --tint = { r = 1, g = 0, b = 0, a = 0.8 },
@@ -434,7 +434,7 @@ ENTITY {
     }),
     rocket_flame_animation = util.add_shift_offset(util.by_pixel(-1, 280-16),
     {
-      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
       priority = "medium",
       tint = { r = 0.8, g = 0.8, b = 1, a = 0.8 },
       --tint = { r = 1, g = 0, b = 0, a = 0.8 },
@@ -447,7 +447,7 @@ ENTITY {
     }),
     rocket_flame_left_animation = util.add_shift_offset(util.by_pixel(-32-28+3, 280-68+1),
     {
-      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
       priority = "medium",
       tint = { r = 0.8, g = 0.8, b = 1, a = 0.8 },
       --tint = { r = 1, g = 0, b = 0, a = 0.8 },
@@ -462,7 +462,7 @@ ENTITY {
 
     rocket_flame_right_animation = util.add_shift_offset(util.by_pixel(32+16, 280-50),
     {
-      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
       priority = "medium",
       tint = { r = 0.8, g = 0.8, b = 1, a = 0.8 },
       --tint = { r = 1, g = 0, b = 0, a = 0.8 },
