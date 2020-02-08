@@ -59,7 +59,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/navens-culture/a1.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a1.png",
                 width = 352,
                 height = 64,
                 line_length = 5,
@@ -68,7 +68,7 @@ ENTITY {
                 shift = util.by_pixel(16, 128)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/navens-culture/a1-mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a1-mask.png",
                 width = 352,
                 height = 64,
                 line_length = 5,
@@ -78,7 +78,7 @@ ENTITY {
                 tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/navens-culture/a2.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a2.png",
                 width = 352,
                 height = 64,
                 line_length = 5,
@@ -87,7 +87,7 @@ ENTITY {
                 shift = util.by_pixel(16, 64)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/navens-culture/a2-mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a2-mask.png",
                 width = 352,
                 height = 64,
                 line_length = 5,
@@ -97,7 +97,7 @@ ENTITY {
                 tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/navens-culture/a3.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a3.png",
                 width = 352,
                 height = 64,
                 line_length = 5,
@@ -106,7 +106,7 @@ ENTITY {
                 shift = util.by_pixel(16, 0)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/navens-culture/a3-mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a3-mask.png",
                 width = 352,
                 height = 64,
                 line_length = 5,
@@ -116,7 +116,7 @@ ENTITY {
                 tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/navens-culture/a4.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a4.png",
                 width = 352,
                 height = 64,
                 line_length = 5,
@@ -125,7 +125,7 @@ ENTITY {
                 shift = util.by_pixel(16, -64)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/navens-culture/a4-mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a4-mask.png",
                 width = 352,
                 height = 64,
                 line_length = 5,
@@ -135,7 +135,7 @@ ENTITY {
                 tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/navens-culture/a5.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a5.png",
                 width = 352,
                 height = 64,
                 line_length = 5,
@@ -144,7 +144,7 @@ ENTITY {
                 shift = util.by_pixel(16, -128)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/navens-culture/a5-mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a5-mask.png",
                 width = 352,
                 height = 64,
                 line_length = 5,
@@ -154,7 +154,7 @@ ENTITY {
                 tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/navens-culture/a6.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a6.png",
                 width = 352,
                 height = 32,
                 line_length = 5,

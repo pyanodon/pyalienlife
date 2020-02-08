@@ -60,7 +60,7 @@ ENTITY {
     animation = {
         layers = {
         {
-        filename = "__pyalienlifegraphics__/graphics/entity/yaedols-culture/off.png",
+        filename = "__pyalienlifegraphics2__/graphics/entity/yaedols-culture/off.png",
         width = 352,
         height = 384,
         frame_count = 1,
@@ -68,7 +68,7 @@ ENTITY {
         shift = util.by_pixel(0, -16)
         },
         {
-            filename = "__pyalienlifegraphics__/graphics/entity/yaedols-culture/off-mask.png",
+            filename = "__pyalienlifegraphics2__/graphics/entity/yaedols-culture/off-mask.png",
             width = 351,
             height = 384,
             frame_count = 1,
@@ -86,7 +86,7 @@ ENTITY {
             south_position = util.by_pixel(-144, -16),
             east_position = util.by_pixel(-144, -16),
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/yaedols-culture/a1.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/yaedols-culture/a1.png",
                 frame_count = 150,
                 line_length = 30,
                 width = 64,
@@ -100,7 +100,7 @@ ENTITY {
             south_position = util.by_pixel(-80, -16),
             east_position = util.by_pixel(-80, -16),
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/yaedols-culture/a2.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/yaedols-culture/a2.png",
                 frame_count = 150,
                 line_length = 30,
                 width = 64,
@@ -114,7 +114,7 @@ ENTITY {
             south_position = util.by_pixel(-16, -16),
             east_position = util.by_pixel(-16, -16),
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/yaedols-culture/a3.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/yaedols-culture/a3.png",
                 frame_count = 150,
                 line_length = 30,
                 width = 64,
@@ -128,7 +128,7 @@ ENTITY {
             south_position = util.by_pixel(48, -16),
             east_position = util.by_pixel(48, -16),
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/yaedols-culture/a4.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/yaedols-culture/a4.png",
                 frame_count = 150,
                 line_length = 30,
                 width = 64,
@@ -142,7 +142,7 @@ ENTITY {
             south_position = util.by_pixel(112, -16),
             east_position = util.by_pixel(112, -16),
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/yaedols-culture/a5.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/yaedols-culture/a5.png",
                 frame_count = 150,
                 line_length = 30,
                 width = 64,
@@ -156,7 +156,7 @@ ENTITY {
             south_position = util.by_pixel(160, -16),
             east_position = util.by_pixel(160, -16),
             animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/yaedols-culture/a6.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/yaedols-culture/a6.png",
                 frame_count = 150,
                 line_length = 30,
                 width = 32,

@@ -67,7 +67,7 @@ ENTITY {
     pictures =
     {
       {
-        filename = "__pyalienlifegraphics__/graphics/entity/tower/tower.png",
+        filename = "__pyalienlifegraphics2__/graphics/entity/tower/tower.png",
         width = 192,
         height = 352,
         scale = 0.5,
@@ -122,7 +122,7 @@ ENTITY {
     },
     base =
     {
-		filename = "__pyalienlifegraphics__/graphics/entity/tower/tower.png",
+		filename = "__pyalienlifegraphics2__/graphics/entity/tower/tower.png",
 		width = 192,
 		height = 352,
 		scale = 0.5,
@@ -130,14 +130,14 @@ ENTITY {
     },
     base_patch =
     {
-      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
       width = 32,
       height = 32,
       shift = util.by_pixel(0, -0),
     },
     base_animation =
     {
-      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
       width = 32,
       height = 32,
 	  frame_count = 1,
@@ -146,7 +146,7 @@ ENTITY {
     },
     door_animation_up =
     {
-      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
       width = 32,
       height = 32,
 	  frame_count = 1,
@@ -154,7 +154,7 @@ ENTITY {
     },
     door_animation_down =
     {
-      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
       width = 32,
       height = 32,
 	  frame_count = 1,
@@ -162,7 +162,7 @@ ENTITY {
     },
     recharging_animation =
     {
-      filename = "__pyalienlifegraphics__/graphics/entity/mega-farm/filler.png",
+      filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
       width = 32,
       height = 32,
 	  frame_count = 1,

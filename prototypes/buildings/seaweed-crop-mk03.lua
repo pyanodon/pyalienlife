@@ -58,7 +58,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/seaweed-crop/base.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/seaweed-crop/base.png",
                 width = 416,
                 height = 50,
                 line_length = 4,
@@ -67,7 +67,7 @@ ENTITY {
                 shift = util.by_pixel(0, 183)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/seaweed-crop/base-mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/seaweed-crop/base-mask.png",
                 width = 416,
                 height = 50,
                 line_length = 4,
@@ -77,7 +77,7 @@ ENTITY {
                 tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/seaweed-crop/a1.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/seaweed-crop/a1.png",
                 width = 64,
                 height = 384,
                 line_length = 25,
@@ -86,7 +86,7 @@ ENTITY {
                 shift = util.by_pixel(-176, -34)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/seaweed-crop/a1-mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/seaweed-crop/a1-mask.png",
                 width = 64,
                 height = 384,
                 line_length = 25,
@@ -96,7 +96,7 @@ ENTITY {
                 tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/seaweed-crop/a2.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/seaweed-crop/a2.png",
                 width = 64,
                 height = 384,
                 line_length = 25,
@@ -105,7 +105,7 @@ ENTITY {
                 shift = util.by_pixel(-112, -34)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/seaweed-crop/a2-mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/seaweed-crop/a2-mask.png",
                 width = 64,
                 height = 384,
                 line_length = 25,
@@ -115,7 +115,7 @@ ENTITY {
                 tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/seaweed-crop/a3.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/seaweed-crop/a3.png",
                 width = 64,
                 height = 384,
                 line_length = 25,
@@ -124,7 +124,7 @@ ENTITY {
                 shift = util.by_pixel(-48, -34)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/seaweed-crop/a3-mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/seaweed-crop/a3-mask.png",
                 width = 64,
                 height = 384,
                 line_length = 25,
@@ -134,7 +134,7 @@ ENTITY {
                 tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/seaweed-crop/a4.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/seaweed-crop/a4.png",
                 width = 64,
                 height = 384,
                 line_length = 25,
@@ -143,7 +143,7 @@ ENTITY {
                 shift = util.by_pixel(16, -34)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/seaweed-crop/a4-mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/seaweed-crop/a4-mask.png",
                 width = 64,
                 height = 384,
                 line_length = 25,
@@ -153,7 +153,7 @@ ENTITY {
                 tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/seaweed-crop/a5.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/seaweed-crop/a5.png",
                 width = 64,
                 height = 384,
                 line_length = 25,
@@ -162,7 +162,7 @@ ENTITY {
                 shift = util.by_pixel(80, -34)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/seaweed-crop/a5-mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/seaweed-crop/a5-mask.png",
                 width = 64,
                 height = 384,
                 line_length = 25,
@@ -172,7 +172,7 @@ ENTITY {
                 tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/seaweed-crop/a6.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/seaweed-crop/a6.png",
                 width = 64,
                 height = 384,
                 line_length = 25,
@@ -181,7 +181,7 @@ ENTITY {
                 shift = util.by_pixel(144, -34)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/seaweed-crop/a6-mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/seaweed-crop/a6-mask.png",
                 width = 64,
                 height = 384,
                 line_length = 25,
@@ -191,7 +191,7 @@ ENTITY {
                 tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/seaweed-crop/a7.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/seaweed-crop/a7.png",
                 width = 32,
                 height = 384,
                 line_length = 25,
@@ -200,7 +200,7 @@ ENTITY {
                 shift = util.by_pixel(192, -34)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/seaweed-crop/a7-mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/seaweed-crop/a7-mask.png",
                 width = 32,
                 height = 384,
                 line_length = 25,

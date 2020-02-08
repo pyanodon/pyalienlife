@@ -62,7 +62,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/rennea-plantation/s1.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s1.png",
                 width = 448,
                 height = 96,
                 line_length = 4,
@@ -71,7 +71,7 @@ ENTITY {
                 shift = util.by_pixel(16, 160)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/rennea-plantation/s1-mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s1-mask.png",
                 width = 448,
                 height = 96,
                 line_length = 4,
@@ -81,7 +81,7 @@ ENTITY {
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/rennea-plantation/s2.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s2.png",
                 width = 448,
                 height = 96,
                 line_length = 4,
@@ -90,7 +90,7 @@ ENTITY {
                 shift = util.by_pixel(16, 64)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/rennea-plantation/s2-mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s2-mask.png",
                 width = 448,
                 height = 96,
                 line_length = 4,
@@ -100,7 +100,7 @@ ENTITY {
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/rennea-plantation/s3.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s3.png",
                 width = 448,
                 height = 96,
                 line_length = 4,
@@ -109,7 +109,7 @@ ENTITY {
                 shift = util.by_pixel(16, -32)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/rennea-plantation/s3-mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s3-mask.png",
                 width = 448,
                 height = 96,
                 line_length = 4,
@@ -119,7 +119,7 @@ ENTITY {
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/rennea-plantation/s4.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s4.png",
                 width = 448,
                 height = 96,
                 line_length = 4,
@@ -128,7 +128,7 @@ ENTITY {
                 shift = util.by_pixel(16, -128)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/rennea-plantation/s4-mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s4-mask.png",
                 width = 448,
                 height = 96,
                 line_length = 4,
@@ -138,7 +138,7 @@ ENTITY {
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/rennea-plantation/s5.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s5.png",
                 width = 448,
                 height = 96,
                 line_length = 4,
@@ -147,7 +147,7 @@ ENTITY {
                 shift = util.by_pixel(16, -224)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/rennea-plantation/s5-mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s5-mask.png",
                 width = 448,
                 height = 96,
                 line_length = 4,

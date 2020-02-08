@@ -56,7 +56,7 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/spore-collector/base.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/spore-collector/base.png",
                 width = 243,
                 height = 32,
                 line_length = 6,
@@ -65,7 +65,7 @@ ENTITY {
                 shift = util.by_pixel(10, 96)
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/spore-collector/up.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/spore-collector/up.png",
                 width = 243,
                 height = 320,
                 line_length = 8,
@@ -75,7 +75,7 @@ ENTITY {
             },
 
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/spore-collector/mask.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/spore-collector/mask.png",
                 width = 243,
                 height = 320,
                 line_length = 8,

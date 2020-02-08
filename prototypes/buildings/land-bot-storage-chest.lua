@@ -49,7 +49,7 @@ ENTITY {
 			layers =
 				{
 					{
-						filename = "__pyalienlifegraphics__/graphics/entity/land-beetle/chest-storage.png",
+						filename = "__pyalienlifegraphics2__/graphics/entity/land-beetle/chest-storage.png",
 						priority = "high",
 						width = 69,
 						height = 67,
