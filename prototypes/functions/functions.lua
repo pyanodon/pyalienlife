@@ -1123,12 +1123,58 @@ recipe =
                 elseif sign == '+' then
                     --log("here")
                     if next(ingredients) ~= nil then
-                        for _, res in pairs(ingredients) do
+                        --[[
+						for _, res in pairs(ingredients) do
                             if res.name == ing[1] then
                                 res.amount = res.amount + mod
                             --else
                                 --table.insert(ingredients, {type = type1, name = ing[1], amount = ing[2] + mod})
                                 --break
+                            end
+                        end
+						]]--
+						local rl = {}
+                        for _, res in pairs(ingredients) do
+                            rl[res.name] = true
+                        end
+                        if rl[ing[1]] then
+                            for _, res in pairs(ingredients) do
+                                --log('hit')
+                                --log(serpent.block(res))
+                                if res.name == ing[1] then
+                                    --log(serpent.block(res))
+                                    if res.amount ~= nil then
+                                        res.amount = res.amount + mod
+                                    elseif res.probability ~= nil then
+                                        --log(serpent.block(ing))
+                                        --log(mod)
+                                        local num1, num2 = string.match(mod, '(%d+)/(%d+)')
+                                        --log(num1)
+                                        --log(num2)
+                                        if not tonumber(mod) then
+                                            mod = num1 / num2
+                                        end
+                                        --log(mod)
+                                        res.probability = res.probability + mod
+                                    --break
+                                    end
+                                end
+                            end
+                        else
+                            --log(ing[1])
+                            --log(mod)
+                            if item.amount ~= nil then
+                                table.insert(ingredients, {type = type1, name = ing[1], amount = ing[2] + mod})
+                                break
+                            elseif res.probability ~= nil then
+                                --log(mod)
+                                local num1, num2 = string.match(mod, '(%d+)/(%d+)')
+                                --log(num1)
+                                --log(num2)
+                                mod = num1 / num2
+                                --log(mod)
+                                res.probability = res.probability + mod
+                                break
                             end
                         end
                     else
@@ -1493,7 +1539,7 @@ recipe =
                 order = recipe.order ..'-'.. string.char(number+64)
             end
 
-            log(serpent.block(order))
+            --log(serpent.block(order))
             RECIPE {
                 type = 'recipe',
                 name = na,
