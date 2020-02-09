@@ -1128,6 +1128,37 @@ local TRlist =
 					level = 3,
 					},
 				},
+
+				{
+				base_recipe = 'Full Render Korlex',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Full Render Korlexb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract Korlex brain',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Korlex brainb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Korlex brain-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 3,
+					},
+				},
+
 				{
 				base_recipe = 'Full Render Mukmouxs',
 				current_lvl = 1,
@@ -1463,6 +1494,19 @@ local TRlist =
 					level = 2,
 					},
 				},
+
+				{
+				base_recipe = 'Extract brains from Improved Korlex',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract brains from Improved Korlex-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 2,
+					},
+				},
+
 				{
 				base_recipe = 'Extract brains from Improved Mukmouxs',
 				current_lvl = 1,
@@ -1659,6 +1703,24 @@ local TRlist =
 				upgrade_2 =
 					{
 					recipe = 'Extract kmauts Meat-2',
+					tech = 'myostatin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Korlex Meat',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Korlex Meat-1',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Korlex Meat-2',
 					tech = 'myostatin',
 					unlocked = false,
 					level = 3,
@@ -1919,6 +1981,17 @@ local TRlist =
 					},
 				},
 				{
+				base_recipe = 'Extract meat from Improved Korlex',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract meat from Improved Korlex-2',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
 				base_recipe = 'Extract meat from Improved Mukmouxs',
 				current_lvl = 1,
 				upgrade_1 =
@@ -2113,18 +2186,18 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract kmauts bones',
+				base_recipe = 'Extract Korlex bones',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract kmauts bones-1',
+					recipe = 'Extract Korlex bones-1',
 					tech = 'osteocyte',
 					unlocked = false,
 					level = 2,
 					},
 				upgrade_2 =
 					{
-					recipe = 'Extract kmauts bones-2',
+					recipe = 'Extract Korlex bones-2',
 					tech = 'hardened-bone',
 					unlocked = false,
 					level = 3,
@@ -2374,11 +2447,11 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract bones from Improved kmauts',
+				base_recipe = 'Extract bones from Improved Korlex',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract bones from Improved kmauts-2',
+					recipe = 'Extract bones from Improved Korlex-2',
 					tech = 'hardened-bone',
 					unlocked = false,
 					level = 2,
@@ -2591,6 +2664,24 @@ local TRlist =
 				upgrade_2 =
 					{
 					recipe = 'Extract kmauts guts-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Korlex guts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Korlex guts-1',
+					tech = 'organ-replication',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Korlex guts-2',
 					tech = 'cavity',
 					unlocked = false,
 					level = 3,
@@ -2851,6 +2942,17 @@ local TRlist =
 					},
 				},
 				{
+				base_recipe = 'Extract guts from Improved Korlex',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract guts from Improved Korlex-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
 				base_recipe = 'Extract guts from Improved Mukmouxs',
 				current_lvl = 1,
 				upgrade_1 =
@@ -3062,6 +3164,24 @@ local TRlist =
 					level = 3,
 					},
 				},
+				{
+					base_recipe = 'Extract Korlex blood',
+					current_lvl = 1,
+					upgrade_1 =
+						{
+						recipe = 'Extract Korlex blood-1',
+						tech = 'somatic',
+						unlocked = false,
+						level = 2,
+						},
+					upgrade_2 =
+						{
+						recipe = 'Extract Korlex blood-2',
+						tech = 'transgenes',
+						unlocked = false,
+						level = 3,
+						},
+					},
 				{
 				base_recipe = 'Extract Mukmoux blood',
 				current_lvl = 1,
@@ -3314,6 +3434,17 @@ local TRlist =
 					},
 				},
 				{
+					base_recipe = 'Extract blood from Improved Korlex',
+					current_lvl = 1,
+					upgrade_1 =
+						{
+						recipe = 'Extract blood from Improved Korlex-2',
+						tech = 'transgenes',
+						unlocked = false,
+						level = 2,
+						},
+					},
+				{
 				base_recipe = 'Extract blood from Improved Mukmouxs',
 				current_lvl = 1,
 				upgrade_1 =
@@ -3497,18 +3628,18 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract kmauts skin',
+				base_recipe = 'Extract Korlex skin',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract kmauts skin-1',
+					recipe = 'Extract Korlex skin-1',
 					tech = 'defective-collagen',
 					unlocked = false,
 					level = 2,
 					},
 				upgrade_2 =
 					{
-					recipe = 'Extract kmauts skin-2',
+					recipe = 'Extract Korlex skin-2',
 					tech = 'double-skin',
 					unlocked = false,
 					level = 3,
@@ -3776,11 +3907,11 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract skin from Improved kmauts',
+				base_recipe = 'Extract skin from Improved Korlex',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract skin from Improved kmauts-2',
+					recipe = 'Extract skin from Improved Korlex-2',
 					tech = 'double-skin',
 					unlocked = false,
 					level = 2,
@@ -3993,6 +4124,24 @@ local TRlist =
 				upgrade_2 =
 					{
 					recipe = 'Extract kmauts lard-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract Korlex lard',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Korlex lard-1',
+					tech = 'force-feeding',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract Korlex lard-2',
 					tech = 'fto4',
 					unlocked = false,
 					level = 3,
@@ -4247,6 +4396,17 @@ local TRlist =
 				upgrade_1 =
 					{
 					recipe = 'Extract fat from Improved kmauts-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract fat from Improved Korlex',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract fat from Improved Korlex-2',
 					tech = 'fto4',
 					unlocked = false,
 					level = 2,
@@ -4576,6 +4736,7 @@ local TRlist =
 				['fto4'] = true,
 				['bladder'] = true,
 				['kmauts'] = true,
+				['korlex'] = true,
 				['ulric'] = true,
 				['mukmoux'] = true,
 				['arthurian'] = true,

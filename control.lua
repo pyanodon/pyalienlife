@@ -95,7 +95,8 @@ local function create_slaughterhouse_animal_table(gui, player)
 		'vonix',
 		'vrauks',
 		'xyhiphoe',
-		'zipir'
+		'zipir',
+		'korlex',
 		}
 	--log(player)
 	--log(serpent.block(animals))

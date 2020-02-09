@@ -233,6 +233,64 @@ fun.autorecipes {
 	}
 }
 
+------------------KORLEX------------------
+
+fun.autorecipes {
+    name = 'rendering-brains-korlex',
+	category = 'slaughterhouse-korlex',
+	--module_limitations = 'arthurian',
+	subgroup = 'py-alienlife-korlex',
+	order = 'b',
+    mats =
+	{
+		{
+			ingredients =
+				{
+					{name='cagedkorlex',amount=1},
+				},
+			results =
+				{
+					{name='bones', probability = 0.3,amount_min =1,amount_max =2},
+					{name='meat', probability = 0.4,amount_min =1,amount_max =3},
+					{name='skin', probability = 0.4,amount_min =1,amount_max =4},
+					{name='fat', probability = 0.2,amount_min =1,amount_max =1},
+					{name='guts', probability = 0.4,amount_min =1,amount_max =2},
+					{name='blood', amount =20},
+					{name='cage',amount=1},
+					{name='brain', probability = 0.6,amount_min =1,amount_max =2},
+				},
+			crafting_speed = 30,
+			tech = 'interactive-cognition',
+			name = 'Full Render Korlexb',
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-korlex.png",
+			icon_size = 64,
+		},
+		--brain
+		{
+			ingredients =
+				{
+					--{name='cagedkorlex',amount=1},
+				},
+			results =
+				{
+					{name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='blood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='brain', amount =2},
+				},
+			crafting_speed = 15,
+			tech = 'interactive-cognition',
+			name = 'Extract Korlex brainb',
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
+			icon_size = 64,
+		},	
+	}
+}
+
 ------------------MUKMOUX------------------
 
 fun.autorecipes {

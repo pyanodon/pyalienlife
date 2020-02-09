@@ -280,6 +280,10 @@ data:extend {
         type = "recipe-category",
         name = "slaughterhouse-kmauts"
     },
+    {
+        type = "recipe-category",
+        name = "slaughterhouse-korlex"
+    },
 	{
         type = "recipe-category",
         name = "slaughterhouse-dingrits"
