@@ -279,6 +279,62 @@ fun.autorecipes {
 	}
 }
 
+
+------------------KORLEX------------------
+
+fun.autorecipes {
+    name = 'rendering-meats-korlex-2',
+	category = 'slaughterhouse-korlex',
+	--module_limitations = 'auog',
+	subgroup = 'py-alienlife-korlex',
+	order = 'b',
+    mats =
+	{
+		--meat
+		{
+			ingredients =
+				{
+					{name='cagedkorlex',amount=1},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='blood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='cage',amount=1},
+					{name='meat', amount =5},
+				},
+                crafting_speed = 15,
+                tech = 'myostatin',
+				name = 'Extract Korlex Meat-2',
+				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
+				icon_size = 64,
+		},	
+		--meat korlex rendering
+		{
+			ingredients =
+				{
+					{name='cagedkorlex',amount='R'},
+					{name='meatcagedkorlex',amount=1},
+				},
+			results =
+				{
+					{name='arthropodblood', amount ='R'},
+					{name='meat', amount =7},
+				},
+			crafting_speed = 15,
+			tech = 'myostatin',
+			name = 'Extract meat from Improved Korlex-2',
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-korlex.png",
+			icon_size = 64,
+        },
+	}
+}
+
 ------------------MUKMOUX------------------
 
 fun.autorecipes {

@@ -288,6 +288,20 @@ items.inputs.xyhiphoecub = {'xyhiphoe-cub', 1}
 items.inputs.shell = {'shell', 1}
 items.inputs.xyhiphoe = {'xyhiphoe', 1}
 
+items.inputs.milk = {'milk', 1}
+items.inputs.cagedkorlex = {'caged-korlex', 1}
+items.inputs.braincagedkorlex = {'brain-caged-korlex', 1}
+items.inputs.meatcagedkorlex = {'meat-caged-korlex', 1}
+items.inputs.bloodcagedkorlex = {'blood-caged-korlex', 1}
+items.inputs.gutscagedkorlex = {'guts-caged-korlex', 1}
+items.inputs.skincagedkorlex = {'skin-caged-korlex', 1}
+items.inputs.bonecagedkorlex = {'bone-caged-korlex', 1}
+items.inputs.fatcagedkorlex = {'fat-caged-korlex', 1}
+items.inputs.korlexpup = {'korlex-pup', 1}
+items.inputs.korlexfood01 = {'korlex-food-01', 1}
+items.inputs.korlexfood02 = {'korlex-food-02', 1}
+
+
 items.outputs = items.inputs
 --can put output replacements below here
 

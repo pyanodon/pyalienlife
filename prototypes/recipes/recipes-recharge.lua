@@ -1,4 +1,39 @@
 local fun = require("prototypes/functions/functions")
+---------------------ABLAZED-------------
+
+RECIPE {
+    type = 'recipe',
+    name = 'charged-auog',
+    category = 'crafting',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'auog', amount = 1},
+        {type = 'item', name = 'energy-drink', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'charged-auog', amount = 1},
+    },
+}:add_unlock("energy-drink")
+
+RECIPE {
+    type = 'recipe',
+    name = 'charged-dingrit',
+    category = 'crafting',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'dingrits', amount = 1},
+        {type = 'item', name = 'energy-drink', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'charged-dingrit', amount = 1},
+    },
+}:add_unlock("energy-drink")
+
+---------------------MK LEVELS--------------
+
+
 
 RECIPE {
     type = 'recipe',
@@ -8,7 +43,7 @@ RECIPE {
     energy_required = 40,
     ingredients = {
         {type = 'item', name = 'used-auog', amount = 1},
-        {type = 'item', name = 'bedding', amount = 2},
+        {type = 'item', name = 'bedding', amount = 1},
         {type = 'item', name = 'auog-food-01', amount = 2},
     },
     results = {
@@ -24,7 +59,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'used-auog', amount = 1},
-        {type = 'item', name = 'bedding', amount = 2},
+        {type = 'item', name = 'bedding', amount = 1},
         {type = 'item', name = 'auog-food-02', amount = 2},
     },
     results = {
@@ -43,12 +78,13 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'used-auog-mk02', amount = 1},
         {type = 'item', name = 'bedding', amount = 2},
+        {type = 'item', name = 'energy-drink', amount = 1},
         {type = 'item', name = 'auog-food-01', amount = 2},
     },
     results = {
         {type = 'item', name = 'auog-mk02', amount = 1},
     },
-}:add_unlock("domestication")
+}:add_unlock("domestication-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -58,13 +94,14 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'used-auog-mk02', amount = 1},
+        {type = 'item', name = 'energy-drink', amount = 1},
         {type = 'item', name = 'bedding', amount = 2},
         {type = 'item', name = 'auog-food-02', amount = 2},
     },
     results = {
         {type = 'item', name = 'auog-mk02', amount = 1},
     },
-}:add_unlock("domestication")
+}:add_unlock("domestication-mk02")
 
 --mk03
 
@@ -76,13 +113,14 @@ RECIPE {
     energy_required = 40,
     ingredients = {
         {type = 'item', name = 'used-auog-mk03', amount = 1},
+        {type = 'item', name = 'energy-drink', amount = 1},
         {type = 'item', name = 'bedding', amount = 2},
         {type = 'item', name = 'auog-food-01', amount = 2},
     },
     results = {
         {type = 'item', name = 'auog-mk03', amount = 1},
     },
-}:add_unlock("domestication")
+}:add_unlock("artificial-breeding")
 
 RECIPE {
     type = 'recipe',
@@ -92,13 +130,14 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'used-auog-mk03', amount = 1},
+        {type = 'item', name = 'energy-drink', amount = 1},
         {type = 'item', name = 'bedding', amount = 2},
         {type = 'item', name = 'auog-food-02', amount = 2},
     },
     results = {
         {type = 'item', name = 'auog-mk03', amount = 1},
     },
-}:add_unlock("domestication")
+}:add_unlock("artificial-breeding")
 
 --mk04
 
@@ -110,13 +149,14 @@ RECIPE {
     energy_required = 40,
     ingredients = {
         {type = 'item', name = 'used-auog-mk04', amount = 1},
+        {type = 'item', name = 'energy-drink', amount = 1},
         {type = 'item', name = 'bedding', amount = 2},
         {type = 'item', name = 'auog-food-01', amount = 2},
     },
     results = {
         {type = 'item', name = 'auog-mk04', amount = 1},
     },
-}:add_unlock("domestication")
+}:add_unlock("biased-mutation")
 
 RECIPE {
     type = 'recipe',
@@ -126,13 +166,14 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'used-auog-mk04', amount = 1},
+        {type = 'item', name = 'energy-drink', amount = 1},
         {type = 'item', name = 'bedding', amount = 2},
         {type = 'item', name = 'auog-food-02', amount = 2},
     },
     results = {
         {type = 'item', name = 'auog-mk04', amount = 1},
     },
-}:add_unlock("domestication")
+}:add_unlock("biased-mutation")
 
 
 -------DINGRTIS----------------
@@ -145,7 +186,7 @@ RECIPE {
     energy_required = 40,
     ingredients = {
         {type = 'item', name = 'used-dingrit', amount = 1},
-        {type = 'item', name = 'bedding', amount = 2},
+        {type = 'item', name = 'bedding', amount = 1},
         {type = 'item', name = 'dingrits-food-01', amount = 2},
     },
     results = {
@@ -161,7 +202,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'used-dingrit', amount = 1},
-        {type = 'item', name = 'bedding', amount = 2},
+        {type = 'item', name = 'bedding', amount = 1},
         {type = 'item', name = 'dingrits-food-02', amount = 2},
     },
     results = {
@@ -179,6 +220,7 @@ RECIPE {
     energy_required = 40,
     ingredients = {
         {type = 'item', name = 'used-dingrit-mk02', amount = 1},
+        {type = 'item', name = 'energy-drink', amount = 1},
         {type = 'item', name = 'bedding', amount = 2},
         {type = 'item', name = 'dingrits-food-01', amount = 2},
     },
@@ -195,6 +237,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'used-dingrit-mk02', amount = 1},
+        {type = 'item', name = 'energy-drink', amount = 1},
         {type = 'item', name = 'bedding', amount = 2},
         {type = 'item', name = 'dingrits-food-02', amount = 2},
     },
@@ -213,13 +256,14 @@ RECIPE {
     energy_required = 40,
     ingredients = {
         {type = 'item', name = 'used-dingrit-mk03', amount = 1},
+        {type = 'item', name = 'energy-drink', amount = 1},
         {type = 'item', name = 'bedding', amount = 2},
         {type = 'item', name = 'dingrits-food-01', amount = 2},
     },
     results = {
         {type = 'item', name = 'dingrits-mk03', amount = 1},
     },
-}:add_unlock("domestication-mk02")
+}:add_unlock("artificial-breeding")
 
 RECIPE {
     type = 'recipe',
@@ -229,13 +273,14 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'used-dingrit-mk03', amount = 1},
+        {type = 'item', name = 'energy-drink', amount = 1},
         {type = 'item', name = 'bedding', amount = 2},
         {type = 'item', name = 'dingrits-food-02', amount = 2},
     },
     results = {
         {type = 'item', name = 'dingrits-mk03', amount = 1},
     },
-}:add_unlock("domestication-mk02")
+}:add_unlock("artificial-breeding")
 
 --mk04
 
@@ -247,13 +292,14 @@ RECIPE {
     energy_required = 40,
     ingredients = {
         {type = 'item', name = 'used-dingrit-mk04', amount = 1},
+        {type = 'item', name = 'energy-drink', amount = 1},
         {type = 'item', name = 'bedding', amount = 2},
         {type = 'item', name = 'dingrits-food-01', amount = 2},
     },
     results = {
         {type = 'item', name = 'dingrits-mk04', amount = 1},
     },
-}:add_unlock("domestication-mk02")
+}:add_unlock("biased-mutation")
 
 RECIPE {
     type = 'recipe',
@@ -263,10 +309,11 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'used-dingrit-mk04', amount = 1},
+        {type = 'item', name = 'energy-drink', amount = 1},
         {type = 'item', name = 'bedding', amount = 2},
         {type = 'item', name = 'dingrits-food-02', amount = 2},
     },
     results = {
         {type = 'item', name = 'dingrits-mk04', amount = 1},
     },
-}:add_unlock("domestication-mk02")
+}:add_unlock("biased-mutation")

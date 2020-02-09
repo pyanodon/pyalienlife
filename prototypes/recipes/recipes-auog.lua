@@ -181,20 +181,7 @@ RECIPE {
 }:add_unlock("auog")
 
 ---charged---
-RECIPE {
-    type = 'recipe',
-    name = 'charged-auog',
-    category = 'bay',
-    enabled = false,
-    energy_required = 15,
-    ingredients = {
-        {type = 'item', name = 'auog', amount = 1},
-        {type = 'item', name = 'energy-drink', amount = 1},
-    },
-    results = {
-        {type = 'item', name = 'charged-auog', amount = 1},
-    },
-}:add_unlock("energy-drink")
+
 
 ---UPDATES---
 RECIPE {

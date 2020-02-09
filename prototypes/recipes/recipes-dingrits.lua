@@ -189,20 +189,7 @@ RECIPE {
 }:add_unlock("dingrits")
 
 ---charged---
-RECIPE {
-    type = 'recipe',
-    name = 'charged-dingrit',
-    category = 'bay',
-    enabled = false,
-    energy_required = 15,
-    ingredients = {
-        {type = 'item', name = 'dingrits', amount = 1},
-        {type = 'item', name = 'energy-drink', amount = 1},
-    },
-    results = {
-        {type = 'item', name = 'charged-dingrit', amount = 1},
-    },
-}:add_unlock("energy-drink")
+
 
 ---UPDATES---
 RECIPE {

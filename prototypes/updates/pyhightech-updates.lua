@@ -241,6 +241,8 @@ RECIPE('nxag-matrix'):add_ingredient({type = 'item', name = 'chitosan', amount =
 RECIPE('processor-core'):add_ingredient({type = 'item', name = 'chitosan', amount = 2})
 RECIPE('kondo-core'):add_ingredient({type = 'item', name = 'nanofibrils', amount = 3})
 RECIPE('biobattery'):add_ingredient({type = "item", name = "re-magnet", amount = 10}):add_ingredient({type = "item", name = "nylon", amount = 5})
+RECIPE('space-science-pack'):add_ingredient({type = "item", name = "antimatter", amount = 1})
+RECIPE('bose-einstein-superfluid'):add_ingredient({type = "fluid", name = "deuterium", amount = 10})
 
 
 fun.results_replacer("dhilmos-sex-01", "dirty-water", "waste-water")

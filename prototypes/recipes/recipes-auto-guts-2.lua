@@ -278,6 +278,62 @@ fun.autorecipes {
 	}
 }
 
+------------------KORLEX------------------
+
+fun.autorecipes {
+    name = 'rendering-guts-korlex-2',
+	category = 'slaughterhouse-korlex',
+	--module_limitations = 'auog',
+	subgroup = 'py-alienlife-korlex',
+	order = 'b',
+    mats =
+	{
+		--guts
+		{
+			ingredients =
+				{
+					{name='cagedkorlex',amount=1},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='blood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='cage',amount=1},
+					{name='guts', amount =4},
+				},
+                crafting_speed = 15,
+                tech = 'cavity',
+                name = 'Extract Korlex guts-2',
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
+                icon_size = 64,
+		},	
+		--guts korlex rendering
+		{
+			ingredients =
+				{
+					{name='cagedkorlex',amount='R'},
+					{name='gutscagedkorlex',amount=1},
+				},
+			results =
+				{
+					{name='brain', amount ='R'},
+					{name='guts', amount =7},
+				},
+			crafting_speed = 15,
+			tech = 'cavity',
+			name = 'Extract guts from Improved Korlex-2',
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-korlex.png",
+			icon_size = 64,
+        },
+	}
+}
+
+
 ------------------MUKMOUX------------------
 
 fun.autorecipes {

@@ -113,6 +113,44 @@ fun.autorecipes {
 	}
 }
 
+------------------KORLEX------------------
+
+fun.autorecipes {
+    name = 'rendering-bone-korlex',
+	category = 'slaughterhouse-korlex',
+	--module_limitations = 'auog',
+	subgroup = 'py-alienlife-korlex',
+	order = 'b',
+    mats =
+	{
+		--bone
+		{
+			ingredients =
+				{
+					{name='cagedkorlex',amount=1},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='blood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='cage',amount=1},
+					{name='bones', amount =4},
+				},
+                crafting_speed = 15,
+                tech = 'osteocyte',
+                name = 'Extract Korlex bones-1',
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
+                icon_size = 64,
+		},	
+	}
+}
+
+
 ------------------MUKMOUX------------------
 
 fun.autorecipes {

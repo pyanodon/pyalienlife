@@ -217,6 +217,59 @@ fun.autorecipes {
 	}
 }
 
+------------------KORLEX------------------
+
+fun.autorecipes {
+    name = 'rendering-brains-korlex-2',
+	category = 'slaughterhouse-korlex',
+	--module_limitations = 'korlex',
+	subgroup = 'py-alienlife-korlex',
+	order = 'b',
+    mats =
+	{
+		--brain
+		{
+			ingredients =
+				{
+					{name='cagedkorlex',amount=1},
+				},
+			results =
+				{
+					{name='meat', amount ='R'},
+                    {name='guts', amount ='R'},
+                    {name='fat', amount ='R'},
+					{name='tendon', amount ='R'},
+					{name='arthropodblood', amount ='R'},
+					{name='brain', amount ='R'},
+                    {name='brain', amount =4},
+                    {name='cage', amount =1},
+				},
+			crafting_speed = 15,
+			tech = 'metamide5',
+			name = 'Extract Korlex brain-2',
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
+			icon_size = 64,
+		},	
+		--brain korlex rendering
+		{
+			ingredients =
+				{
+					{name='cagedkorlex',amount='R'},
+					{name='braincagedkorlex',amount=1},
+				},
+			results =
+				{
+                    {name='brain', amount =5},
+				},
+			crafting_speed = 15,
+			tech = 'metamide5',
+			name = 'Extract brains from Improved Korlex-2',
+			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-korlex.png",
+			icon_size = 64,
+		},
+	}
+}
+
 ------------------MUKMOUX------------------
 
 fun.autorecipes {

@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/korlex.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"land-animals-mk02","biotech-mk02",'mukmoux'},
+    prerequisites = {"tuuphra","biotech-mk02",'mukmoux'},
     effects = {},
     unit = {
         count = 230,

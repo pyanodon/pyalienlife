@@ -25,7 +25,7 @@ ITEM {
     order = "a",
     stack_size = 10,
     fuel_category = 'auog',
-    fuel_value = '200MJ',
+    fuel_value = '150MJ',
     burnt_result = 'used-auog'
 }
 
@@ -3504,6 +3504,28 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "korlex-food-01",
+    icon = "__pyalienlifegraphics__/graphics/icons/korlex-food-01.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-food",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "korlex-food-02",
+    icon = "__pyalienlifegraphics__/graphics/icons/korlex-food-02.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-food",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
     name = "photophore",
     icon = "__pyalienlifegraphics__/graphics/icons/photophore.png",
 	icon_size = 64,
@@ -5331,7 +5353,7 @@ ITEM {
 	limitation = alien_life_limitations_auog,
     limitation_message_key = "Its full",
     fuel_category = 'auog',
-    fuel_value = '150MJ',
+    fuel_value = '200MJ',
     burnt_result = 'used-auog-mk02'
 }
 
@@ -5354,7 +5376,7 @@ ITEM {
 	limitation = alien_life_limitations_auog,
     limitation_message_key = "Its full",
     fuel_category = 'auog',
-    fuel_value = '200MJ',
+    fuel_value = '250MJ',
     burnt_result = 'used-auog-mk03'
 }
 
@@ -5377,7 +5399,7 @@ ITEM {
 	limitation = alien_life_limitations_auog,
     limitation_message_key = "Its full",
     fuel_category = 'auog',
-    fuel_value = '250MJ',
+    fuel_value = '300MJ',
     burnt_result = 'used-auog-mk04'
 }
 
@@ -5690,7 +5712,7 @@ ITEM {
 	limitation = alien_life_limitations_dingrits,
     limitation_message_key = "Its full",
     fuel_category = 'dingrits',
-    fuel_value = '100MJ',
+    fuel_value = '150MJ',
     burnt_result = 'used-dingrit-mk02'
 }
 
@@ -5713,7 +5735,7 @@ ITEM {
 	limitation = alien_life_limitations_dingrits,
     limitation_message_key = "Its full",
     fuel_category = 'dingrits',
-    fuel_value = '130MJ',
+    fuel_value = '170MJ',
     burnt_result = 'used-dingrit-mk03'
 }
 
@@ -5736,7 +5758,7 @@ ITEM {
 	limitation = alien_life_limitations_dingrits,
     limitation_message_key = "Its full",
     fuel_category = 'dingrits',
-    fuel_value = '170MJ',
+    fuel_value = '200MJ',
     burnt_result = 'used-dingrit-mk04'
 }
 
