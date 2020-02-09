@@ -1,40 +1,40 @@
 RECIPE {
     type = "recipe",
-    name = "ez-ranch-mk01",
+    name = "ez-ranch-mk03",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"engine-unit", 10},
-        {"plastic-bar", 20},
-        {"steel-plate", 100},
-        {"duralumin", 30},
-        {"glass", 20},
-        {"titanium-plate", 40},
+        {"ez-ranch-mk02", 1},
+        {"ticocr-alloy", 30},
+        {"super-steel", 50},
+        {"nbti-alloy", 50},
+        {"nexelit-plate", 50},
+        {"processing-unit", 40},
     },
     results = {
-        {"ez-ranch-mk01", 1}
+        {"ez-ranch-mk03", 1}
     }
-}:add_unlock("korlex"):add_ingredient({type = "item", name = "small-parts-01", amount = 100})
+}:add_unlock("korlex-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 100})
 
 ITEM {
     type = "item",
-    name = "ez-ranch-mk01",
-    icon = "__pyalienlifegraphics__/graphics/icons/ez-ranch-mk01.png",
+    name = "ez-ranch-mk03",
+    icon = "__pyalienlifegraphics__/graphics/icons/ez-ranch-mk03.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-buildings-mk03",
     order = "d",
-    place_result = "ez-ranch-mk01",
+    place_result = "ez-ranch-mk03",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "ez-ranch-mk01",
-    icon = "__pyalienlifegraphics__/graphics/icons/ez-ranch-mk01.png",
+    name = "ez-ranch-mk03",
+    icon = "__pyalienlifegraphics__/graphics/icons/ez-ranch-mk03.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "ez-ranch-mk01"},
+    minable = {mining_time = 0.5, result = "ez-ranch-mk03"},
     fast_replaceable_group = "ez-ranch",
     max_health = 100,
     corpse = "medium-remnants",
@@ -44,7 +44,7 @@ ENTITY {
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 3
+        module_slots = 5
     },
     allowed_effects = {"speed"},
     crafting_categories = {"korlex"},
@@ -54,7 +54,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = 0.5,
     },
-    energy_usage = "850kW",
+    energy_usage = "1050kW",
     ingredient_count = 10,
     animation = {
         layers = {
@@ -75,7 +75,7 @@ ENTITY {
                 frame_count = 1,
                 --animation_speed = 0.3,
                 shift = util.by_pixel(16, -16),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
             },
         }
     },
