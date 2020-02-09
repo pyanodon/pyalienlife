@@ -3929,6 +3929,105 @@ ITEM {
     stack_size = 50
 }
 
+ITEM {
+    type = "item",
+    name = "caged-korlex",
+    icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-korlex",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "brain-caged-korlex",
+    icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-korlex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-korlex",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "bone-caged-korlex",
+    icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-korlex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-korlex",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "meat-caged-korlex",
+    icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-korlex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-korlex",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "skin-caged-korlex",
+    icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-korlex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-korlex",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "blood-caged-korlex",
+    icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-korlex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-korlex",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "guts-caged-korlex",
+    icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-korlex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-korlex",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "fat-caged-korlex",
+    icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-korlex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-korlex",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "korlex-pup",
+    icon = "__pyalienlifegraphics__/graphics/icons/korlex-pup.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-korlex",
+    order = "a",
+    stack_size = 50
+}
+
 ------RULES-----
 
 ---CREATURES---
@@ -3937,6 +4036,10 @@ local alien_life_limitations_ulric =
 	}
 
     local alien_life_limitations_mukmoux =
+	{
+    }
+
+    local alien_life_limitations_korlex =
 	{
     }
 
@@ -6666,6 +6769,84 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+ITEM {
+    type = "module",
+    name = "korlex",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/korlex.png"},
+        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "korlex",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-a",
+    stack_size = 10,
+	effect = { speed = {bonus = 20}},
+	limitation = alien_life_limitations_korlex,
+	limitation_message_key = "Its full"
+}
+ITEM {
+    type = "module",
+    name = "korlex-mk02",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/korlex.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "korlex",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-b",
+    stack_size = 10,
+	effect = { speed = {bonus = 25}},
+	limitation = alien_life_limitations_korlex,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "korlex-mk03",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/korlex.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "korlex",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-c",
+    stack_size = 10,
+	effect = { speed = {bonus = 30}},
+	limitation = alien_life_limitations_korlex,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "korlex-mk04",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/korlex.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "korlex",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 35}},
+	limitation = alien_life_limitations_korlex,
+	limitation_message_key = "Its full"
+}
 
 ---replicators----
 
@@ -6861,15 +7042,17 @@ data:extend(
     type = "module-category",
     name = "arum"
   },
-
   {
     type = "module-category",
     name = "vrauks"
   },
-
   {
     type = "module-category",
     name = "xyhiphoe"
+  },
+  {
+    type = "module-category",
+    name = "korlex"
   },
   --item used to select the ceature and start and end points of the route
 	{

@@ -161,37 +161,43 @@ data:extend {
         type = "item-subgroup",
         name = "py-alienlife-xeno",
         group = "py-alienlife",
-        order = "e-i"
+        order = "e-l"
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-antelope",
         group = "py-alienlife",
-        order = "e-j"
+        order = "e-m"
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-zipir",
         group = "py-alienlife",
-        order = "e-k"
+        order = "e-n"
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-trits",
         group = "py-alienlife",
-        order = "e-l"
+        order = "e-o"
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-xyhiphoe",
         group = "py-alienlife",
-        order = "e-m"
+        order = "e-p"
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-sponge",
         group = "py-alienlife",
-        order = "e-n"
+        order = "e-q"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-korlex",
+        group = "py-alienlife",
+        order = "e-r"
     },
     {
         type = "item-subgroup",
