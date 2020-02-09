@@ -1,0 +1,77 @@
+TECHNOLOGY {
+    type = "technology",
+    name = "korlex",
+    icon = "__pyalienlifegraphics__/graphics/technology/korlex.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {"land-animals-mk02","biotech-mk02",'mukmoux'},
+    effects = {},
+    unit = {
+        count = 230,
+        ingredients = {
+            {"automation-science-pack", 1},
+            {"logistic-science-pack", 2},
+        },
+        time = 50
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "korlex-mk02",
+    icon = "__pyalienlifegraphics__/graphics/technology/korlex-mk02.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {"korlex"},
+    effects = {},
+    unit = {
+        count = 280,
+        ingredients = {
+            {"automation-science-pack", 1},
+            {"logistic-science-pack", 1},
+            {"py-science-pack", 1},
+        },
+        time = 50
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "korlex-mk03",
+    icon = "__pyalienlifegraphics__/graphics/technology/korlex-mk03.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {"korlex-mk02"},
+    effects = {},
+    unit = {
+        count = 330,
+        ingredients = {
+            {"automation-science-pack", 1},
+            {"logistic-science-pack", 1},
+            {"py-science-pack", 1},
+            {'chemical-science-pack', 1},
+        },
+        time = 50
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "korlex-mk04",
+    icon = "__pyalienlifegraphics__/graphics/technology/korlex-mk04.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {"korlex-mk03"},
+    effects = {},
+    unit = {
+        count = 380,
+        ingredients = {
+            {"automation-science-pack", 1},
+            {"logistic-science-pack", 1},
+            {"py-science-pack", 1},
+            {'chemical-science-pack', 1},
+            {'production-science-pack', 1},
+        },
+        time = 50
+    }
+}

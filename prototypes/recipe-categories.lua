@@ -141,6 +141,10 @@ data:extend {
     },
     {
         type = "recipe-category",
+        name = "korlex"
+    },
+    {
+        type = "recipe-category",
         name = "bay"
     },
     {

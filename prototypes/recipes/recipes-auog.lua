@@ -184,9 +184,9 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'charged-auog',
-    category = 'crafting',
+    category = 'bay',
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 15,
     ingredients = {
         {type = 'item', name = 'auog', amount = 1},
         {type = 'item', name = 'energy-drink', amount = 1},

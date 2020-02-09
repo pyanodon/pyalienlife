@@ -45,7 +45,7 @@ ENTITY {
     --draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 0
+        module_slots = 4
     },
     allowed_effects = {"speed"},
     crafting_categories = {"bay"},
@@ -144,8 +144,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/pyphoon-bay.ogg", volume = 1.5},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/pyphoon-bay.ogg", volume = 1.0},
+        sound = {filename = "__pyalienlifegraphics__/sounds/pyphoon-bay.ogg", volume = 2.5},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/pyphoon-bay.ogg", volume = 1.5},
         apparent_volume = 2.5
     }
 }
