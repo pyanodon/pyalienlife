@@ -253,7 +253,7 @@ RECIPE {
         {type = 'item', name = 'moss', amount = 10},
         {type = 'item', name = 'alien-sample01', amount = 1},
         {type = 'item', name = 'alien-sample-02', amount = 1},
-        {type = 'item', name = 'plastic-bar', amount = 5},
+        {type = 'item', name = 'plastic-bar', amount = 15},
         {type = 'item', name = 'neuroprocessor', amount = 2},
         {type = 'item', name = 'flask', amount = 1},
     },
@@ -371,7 +371,7 @@ RECIPE {
         {type = 'item', name = 'plasmids', amount = 2},
         {type = 'item', name = 'flask', amount = 3},
         {type = 'fluid', name = 'decalin', amount = 30},
-        {type = 'item', name = 'plastic-bar', amount = 1},
+        {type = 'item', name = 'plastic-bar', amount = 10},
     },
     results = {
         {type = 'item', name = 'cytostatics', amount = 1}
@@ -663,7 +663,7 @@ RECIPE {
         {type = 'item', name = 'lab-instrument', amount = 1},
         {type = 'item', name = 'retrovirus', amount = 2},
         {type = 'item', name = 'guts', amount = 5},
-        {type = 'item', name = 'plastic-bar', amount = 1},
+        {type = 'item', name = 'plastic-bar', amount = 10},
         {type = 'fluid', name = 'water', amount = 300}
     },
     results = {
@@ -1655,7 +1655,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'nexelit-plate', amount = 5},
-        {type = 'item', name = 'plastic-bar', amount = 4},
+        {type = 'item', name = 'plastic-bar', amount = 15},
         {type = 'item', name = 'nanofibrils', amount = 2},
         {type = 'item', name = 'cobalt-nx', amount = 3},
         {type = 'item', name = 'glass', amount = 10},
@@ -1740,3 +1740,118 @@ RECIPE {
     },
     --main_product = "cocoon",
 }:add_unlock("biotech-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'casein-mixture-01',
+    category = 'mixer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'fluid', name = 'milk', amount = 50},
+        {type = 'fluid', name = 'acetic-acid', amount = 50},
+    },
+    results = {
+        {type = 'fluid', name = 'casein-mixture', amount = 50},
+        {type = 'fluid', name = 'waste-water', amount = 50},
+    },
+    main_product = "casein-mixture",
+}:add_unlock("korlex")
+
+RECIPE {
+    type = 'recipe',
+    name = 'casein-mixture-02',
+    category = 'mixer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'fluid', name = 'milk', amount = 50},
+        {type = 'fluid', name = 'hydrogen-chloride', amount = 50},
+    },
+    results = {
+        {type = 'fluid', name = 'casein-mixture', amount = 60},
+        {type = 'fluid', name = 'waste-water', amount = 50},
+    },
+    main_product = "casein-mixture",
+}:add_unlock("korlex")
+
+RECIPE {
+    type = 'recipe',
+    name = 'casein-mixture-03',
+    category = 'mixer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'fluid', name = 'milk', amount = 50},
+        {type = 'fluid', name = 'sulfuric-acid', amount = 100},
+    },
+    results = {
+        {type = 'fluid', name = 'casein-mixture', amount = 80},
+        {type = 'fluid', name = 'waste-water', amount = 50},
+    },
+    main_product = "casein-mixture",
+}:add_unlock("korlex-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'casein-pulp-01',
+    category = 'agitator',
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = 'fluid', name = 'casein-mixture', amount = 50},
+        {type = 'fluid', name = 'water', amount = 500},
+    },
+    results = {
+        {type = 'fluid', name = 'casein-pulp-01', amount = 100},
+        {type = 'fluid', name = 'dirty-water', amount = 50},
+    },
+    main_product = "casein-pulp-01",
+}:add_unlock("korlex")
+
+RECIPE {
+    type = 'recipe',
+    name = 'casein-pulp-02',
+    category = 'pan',
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = 'fluid', name = 'casein-pulp-01', amount = 50},
+        {type = 'fluid', name = 'water', amount = 1000},
+    },
+    results = {
+        {type = 'fluid', name = 'casein-pulp-02', amount = 50},
+       -- {type = 'fluid', name = 'dirty-water', amount = 50},
+    },
+    --main_product = "casein-pulp-01",
+}:add_unlock("korlex")
+
+RECIPE {
+    type = 'recipe',
+    name = 'casein',
+    category = 'evaporator',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'fluid', name = 'casein-pulp-02', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'casein', amount = 5},
+    },
+    --main_product = "casein-pulp-01",
+}:add_unlock("korlex")
+
+RECIPE {
+    type = 'recipe',
+    name = 'plastic-from-casein',
+    category = 'advanced-crafting',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'casein', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'plastic-bar', amount = 20},
+    },
+    --main_product = "casein-pulp-01",
+}:add_unlock("korlex"):add_ingredient({type = "fluid", name = "hot-air", amount = 100})

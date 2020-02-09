@@ -1168,6 +1168,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "korlex-codex",
+    icon = "__pyalienlifegraphics__/graphics/icons/korlex-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
     name = "vrauks-codex",
     icon = "__pyalienlifegraphics__/graphics/icons/vrauks-codex.png",
 	icon_size = 64,
@@ -4026,6 +4037,17 @@ ITEM {
     subgroup = "py-alienlife-korlex",
     order = "a",
     stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "casein",
+    icon = "__pyalienlifegraphics__/graphics/icons/casein.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 100
 }
 
 ------RULES-----

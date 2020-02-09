@@ -122,6 +122,8 @@ RECIPE('yaedols-culture-mk03'):add_ingredient({type = "item", name = "graphene-r
 RECIPE('yotoi-aloe-orchard-mk03'):add_ingredient({type = "item", name = "graphene-roll", amount = 20}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 15})
 RECIPE('zipir-reef-mk03'):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10}):add_ingredient({type = "item", name = "diamagnetic-material", amount = 20})
 RECIPE('bio-printer-mk03'):add_ingredient({type = "item", name = "graphene-roll", amount = 30}):add_ingredient({type = "item", name = "biopolymer", amount = 15})
+RECIPE('ez-ranch-mk03'):add_ingredient({type = "item", name = "paramagnetic-material", amount = 25}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 20})
+
 
 
 --mk04--
@@ -165,6 +167,7 @@ RECIPE('yaedols-culture-mk04'):add_ingredient({type = "item", name = "phosphate-
 RECIPE('yotoi-aloe-orchard-mk04'):add_ingredient({type = "item", name = "aerogel", amount = 40}):add_ingredient({type = "item", name = "harmonic-absorber", amount = 30})
 RECIPE('zipir-reef-mk04'):add_ingredient({type = "item", name = "hyperelastic-material", amount = 50})
 RECIPE('bio-printer-mk04'):add_ingredient({type = "item", name = "harmonic-absorber", amount = 20}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 50}):add_ingredient({type = "item", name = "intelligent-unit", amount = 15})
+RECIPE('ez-ranch-mk04'):add_ingredient({type = "item", name = "intelligent-unit", amount = 30}):add_ingredient({type = "item", name = "quantum-vortex-storage-system", amount = 10}):add_ingredient({type = "item", name = "phosphate-glass", amount = 100})
 
 
 
@@ -1151,3 +1154,58 @@ RECIPE {
     icon = '__base__/graphics/icons/sulfur.png',
     icon_size = 64,
 }:add_unlock("phytomining"):change_category('pulp')
+
+
+RECIPE {
+    type = 'recipe',
+    name = 'casein-melamine',
+    category = 'fbreactor',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'casein', amount = 5},
+        {type = 'fluid', name = 'cyanic-acid', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'melamine', amount = 10},
+    },
+    --main_product = "casein-pulp-01",
+}:add_unlock("korlex-mk02")
+
+----------MILK FIBER--------------------
+
+RECIPE {
+    type = 'recipe',
+    name = 'casein-solution',
+    category = 'mixer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'casein', amount = 5},
+        {type = 'item', name = 'sodium-hydroxide', amount = 5},
+        {type = 'fluid', name = 'water', amount = 500},
+    },
+    results = {
+        {type = 'fluid', name = 'casein-solution', amount = 50},
+    },
+    --main_product = "casein-pulp-01",
+}:add_unlock("energy-drink")
+
+RECIPE {
+    type = 'recipe',
+    name = 'raw-fiber-casein',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'fluid', name = 'sulfuric-acid', amount = 30},
+        {type = 'fluid', name = 'methanal', amount = 100},
+        {type = 'item', name = 'sugar', amount = 5},
+        {type = 'item', name = 'kicalk', amount = 1},
+        {type = 'fluid', name = 'casein-solution', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'raw-fiber', amount = 40},
+    },
+    --main_product = "casein-pulp-01",
+}:add_unlock("energy-drink")
