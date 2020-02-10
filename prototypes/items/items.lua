@@ -937,6 +937,28 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "empty-barrel-milk",
+    icon = "__pyalienlifegraphics__/graphics/icons/empty-barrel-milk.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "barrel-milk",
+    icon = "__pyalienlifegraphics__/graphics/icons/barrel-milk.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "h",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
     name = "biobattery",
     icon = "__pyalienlifegraphics__/graphics/icons/biobattery.png",
 	icon_size = 64,

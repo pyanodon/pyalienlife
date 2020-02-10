@@ -43,7 +43,7 @@ RECIPE('fawogae-substrate'):remove_ingredient("fawogae"):add_ingredient({type = 
 RECIPE('bio-sample01'):add_ingredient({type = "item", name = "petri-dish-bacteria", amount = 2})
 RECIPE('ralesia'):remove_unlock('coal-processing-1')
 RECIPE('ralesia-seeds'):remove_unlock('coal-processing-1'):add_unlock('ralesia'):subgroup_order("py-alienlife-ralesia", "a"):change_category('nursery'):replace_ingredient("ralesia","ralesias")
-RECIPE('chemical-science-pack'):replace_ingredient("advanced-circuit","neuroprocessor"):add_ingredient({type = "item", name = "alien-sample-02", amount = 1})
+RECIPE('chemical-science-pack'):add_ingredient({type = "item", name = "alien-sample-02", amount = 1})
 RECIPE('filtration-media'):add_ingredient({type = "item", name = "micro-fiber", amount = 2})
 RECIPE('alien-sample01'):add_ingredient({type = "item", name = "bio-sample", amount = 12})
 RECIPE('flask'):remove_ingredient("wood"):add_ingredient({type = "item", name = "stopper", amount = 2})

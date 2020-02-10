@@ -4714,7 +4714,85 @@ local TRlist =
 					level = 3,
 					},
 				},
+--MILK
 
+				{
+				base_recipe = 'korlex-milk-1',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'korlex-milk-1b',
+					tech = 'biopolymer-clusters',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+					base_recipe = 'korlex-milk-2',
+					current_lvl = 1,
+					upgrade_1 =
+						{
+						recipe = 'korlex-milk-2b',
+						tech = 'biopolymer-clusters',
+						unlocked = false,
+						level = 2,
+						},
+					},
+				{
+				base_recipe = 'korlex-milk-3',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'korlex-milk-3b',
+					tech = 'biopolymer-clusters',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'korlex-milk-4',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'korlex-milk-4b',
+					tech = 'biopolymer-clusters',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'korlex-milk-5',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'korlex-milk-5b',
+					tech = 'biopolymer-clusters',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'korlex-milk-6',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'korlex-milk-6b',
+					tech = 'biopolymer-clusters',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'korlex-milk-7',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'korlex-milk-7b',
+					tech = 'biopolymer-clusters',
+					unlocked = false,
+					level = 2,
+					},
+				},
 			},
 		techs_with_upgrades =
 			{
@@ -4737,6 +4815,9 @@ local TRlist =
 				['bladder'] = true,
 				['kmauts'] = true,
 				['korlex'] = true,
+				['korlex-mk02'] = true,
+				['korlex-mk03'] = true,
+				['korlex-mk04'] = true,
 				['ulric'] = true,
 				['mukmoux'] = true,
 				['arthurian'] = true,
@@ -4779,6 +4860,7 @@ local TRlist =
 				['navens'] = true,
 				['mycology-mk01'] = true,
 				['yaedols'] = true,
+				['biopolymer-clusters'] = true,
 				
 			},
 	}

@@ -65,7 +65,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'plastic-bar', amount = 3},
+        {type = 'item', name = 'plastic-bar', amount = 6},
         {type = 'item', name = 'meat', amount = 10},
         {type = 'item', name = 'rennea-seeds', amount = 10},
         {type = 'item', name = 'guts', amount = 5},
@@ -86,7 +86,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'plastic-bar', amount = 3},
+        {type = 'item', name = 'plastic-bar', amount = 6},
         {type = 'item', name = 'meat', amount = 10},
         {type = 'item', name = 'bones', amount = 10},
         {type = 'item', name = 'rennea-seeds', amount = 10},
