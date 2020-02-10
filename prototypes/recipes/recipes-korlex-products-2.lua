@@ -15,7 +15,7 @@ fun.autorecipes {
 				{
                     {name='bhoddos',amount =2},
                     {name='tuuphra',amount =5},
-                    {name='emptybarrelmilk',amount =1},
+                    {name='emptybarrelmilk',amount =2},
 					{name='waterbarrel',amount=10,return_item={name='empty-barrel',amount=10}},
 				},
 			results =
@@ -50,7 +50,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='ash',amount =10},
-                    {name='emptybarrel',amount ='+1'},
+                    {name='emptybarrelmilk',amount ='+1'},
 				},
 			results =
 				{
@@ -66,7 +66,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='fish',amount =5},
-                    {name='emptybarrel',amount ='+2'},
+                    {name='emptybarrelmilk',amount ='+2'},
 				},
 			results =
 				{
@@ -85,7 +85,7 @@ fun.autorecipes {
 					{name='fish',amount ='R'},
 					{name='korlexfood01',amount ='R'},
                     {name='korlexfood02'},
-                    {name='emptybarrel',amount ='+3'},
+                    {name='emptybarrelmilk',amount ='+3'},
 				},
 			results =
 				{
@@ -101,7 +101,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='ash',amount =4},
-                    {name='emptybarrel',amount ='+1'},
+                    {name='emptybarrelmilk',amount ='+1'},
 				},
 			results =
 				{
@@ -117,7 +117,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='fish',amount =5},
-                    {name='emptybarrel',amount ='+2'},
+                    {name='emptybarrelmilk',amount ='+2'},
 				},
 			results =
 				{

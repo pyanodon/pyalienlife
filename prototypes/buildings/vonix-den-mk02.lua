@@ -24,7 +24,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk02",
-    order = "d",
+    order = "f",
     place_result = "vonix-den-mk02",
     stack_size = 10
 }
