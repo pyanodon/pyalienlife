@@ -90,6 +90,7 @@ RECIPE {
         {type = 'item', name = 'bones', amount = 10},
         {type = 'item', name = 'tuuphra', amount = 5},
         {type = 'item', name = 'yotoi-fruit', amount = 10},
+        {type = 'item', name = 'casein', amount = 5},
         {type = 'item', name = 'guts', amount = 10},
         {type = 'item', name = 'seaweed', amount = 5},
         {type = 'item', name = 'skin', amount = 15},
