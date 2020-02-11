@@ -59,7 +59,7 @@ ENTITY {
     animation = {
         layers = {
         {
-        filename = "__pyalienlifegraphics2__/graphics/entity/zipir/off.png",
+        filename = "__pyalienlifegraphics3__/graphics/entity/zipir/off.png",
         width = 305,
         height = 290,
         frame_count = 1,
@@ -67,7 +67,7 @@ ENTITY {
         shift = util.by_pixel(8,-1),
         },
         {
-            filename = "__pyalienlifegraphics2__/graphics/entity/zipir/off-mask.png",
+            filename = "__pyalienlifegraphics3__/graphics/entity/zipir/off-mask.png",
             width = 305,
             height = 290,
             frame_count = 1,
@@ -84,7 +84,7 @@ ENTITY {
             south_position = util.by_pixel(-112.5, -50),
             east_position = util.by_pixel(-112.5, -50),
             animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/zipir/a.png",
+                filename = "__pyalienlifegraphics3__/graphics/entity/zipir/a.png",
                 frame_count = 255,
                 line_length = 32,
                 width = 64,
@@ -99,7 +99,7 @@ ENTITY {
             south_position = util.by_pixel(-112.5, -50),
             east_position = util.by_pixel(-112.5, -50),
             animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/zipir/b.png",
+                filename = "__pyalienlifegraphics3__/graphics/entity/zipir/b.png",
                 frame_count = 255,
                 line_length = 32,
                 width = 64,
@@ -114,7 +114,7 @@ ENTITY {
             south_position = util.by_pixel(-112.5, -50),
             east_position = util.by_pixel(-112.5, -50),
             animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/zipir/c.png",
+                filename = "__pyalienlifegraphics3__/graphics/entity/zipir/c.png",
                 frame_count = 255,
                 line_length = 32,
                 width = 64,
@@ -129,7 +129,7 @@ ENTITY {
             south_position = util.by_pixel(-112.5, -50),
             east_position = util.by_pixel(-112.5, -50),
             animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/zipir/d.png",
+                filename = "__pyalienlifegraphics3__/graphics/entity/zipir/d.png",
                 frame_count = 255,
                 line_length = 32,
                 width = 64,
@@ -144,7 +144,7 @@ ENTITY {
             south_position = util.by_pixel(-112.5, -50),
             east_position = util.by_pixel(-112.5, -50),
             animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/zipir/e.png",
+                filename = "__pyalienlifegraphics3__/graphics/entity/zipir/e.png",
                 frame_count = 255,
                 line_length = 32,
                 width = 13,
