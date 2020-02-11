@@ -933,7 +933,7 @@ RECIPE {
         {type = 'item', name = 'lignin', amount = 5},
     },
     results = {
-        {type = 'fluid', name = 'aromatics', amount = 50},
+        {type = 'fluid', name = 'aromatics', amount = 150},
     },
 }:add_unlock("biotech-mk02")
 
