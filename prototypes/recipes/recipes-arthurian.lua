@@ -68,7 +68,7 @@ RECIPE {
         {type = 'item', name = 'ralesias', amount = 5},
         {type = 'item', name = 'tuuphra-seeds', amount = 1},
         {type = 'item', name = 'yotoi-leaves', amount = 5},
-        {type = 'item', name = 'caged-mukmoux', amount = 1},
+        {type = 'item', name = 'meat', amount = 10},
         {type = 'fluid', name = 'fish-oil', amount = 30},
         {type = 'fluid', name = 'steam', amount = 100},
     },
@@ -88,7 +88,8 @@ RECIPE {
         {type = 'item', name = 'grod', amount = 4},
         {type = 'item', name = 'tuuphra-seeds', amount = 1},
         {type = 'item', name = 'yotoi-leaves', amount = 5},
-        {type = 'item', name = 'caged-mukmoux', amount = 1},
+        {type = 'item', name = 'meat', amount = 10},
+        {type = 'item', name = 'casein', amount = 5},
         {type = 'item', name = 'ash', amount = 10},
         {type = 'item', name = 'moss', amount = 10},
         {type = 'item', name = 'guts', amount = 5},
@@ -96,7 +97,7 @@ RECIPE {
         {type = 'fluid', name = 'steam', amount = 100},
     },
     results = {
-        {type = 'item', name = 'arthurian-food-02', amount = 3},
+        {type = 'item', name = 'arthurian-food-02', amount = 4},
     },
 }:add_unlock("food-mk02")
 
