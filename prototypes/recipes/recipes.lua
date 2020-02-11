@@ -997,7 +997,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'cellulose', amount = 5},
+        {type = 'item', name = 'cellulose', amount = 10},
         {type = 'item', name = 'filtration-media', amount = 1},
         {type = 'fluid', name = 'boric-acid', amount = 100},
         {type = 'fluid', name = 'steam', amount = 100, temperature = 500},
@@ -1052,7 +1052,7 @@ RECIPE {
         {type = 'fluid', name = 'oxygen', amount = 30},
     },
     results = {
-        {type = 'fluid', name = 'syngas', amount = 80},
+        {type = 'fluid', name = 'syngas', amount = 100},
     },
 }:add_unlock("biotech-mk01")
 
