@@ -49,7 +49,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 130,
 			tech = 'phadai-mk02'
@@ -62,11 +62,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 120,
 			tech = 'phadai-mk02'
-		},		
+		},
 		--food 2
 		{
 			ingredients =
@@ -93,7 +93,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 100,
 			tech = 'phadai-mk03'
@@ -106,7 +106,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 90,
 			tech = 'phadai-mk04'
@@ -120,7 +120,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 30,
 			tech = 'growth-hormone'
@@ -302,7 +302,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'recombinant-ery'
         },
-    		--reca
+		--reca
 		{
 			ingredients =
 				{
@@ -330,8 +330,8 @@ fun.autorecipes {
 				},
 			crafting_speed = 30,
 			tech = 'reca'
-        },
-    	--orexigenic
+		},
+		--orexigenic
 		{
 			ingredients =
 				{
@@ -402,7 +402,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 60,
 			tech = 'assisted-embryology'
@@ -415,7 +415,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 55,
 			tech = 'assisted-embryology'
@@ -428,11 +428,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 50,
 			tech = 'assisted-embryology'
-		},		
+		},
 		--food 2
 		{
 			ingredients =
@@ -445,7 +445,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 50,
 			tech = 'assisted-embryology'
@@ -458,7 +458,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 45,
 			tech = 'assisted-embryology'
@@ -471,11 +471,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 40,
 			tech = 'assisted-embryology'
-		},	
+		},
 		-----------------------PHEROMONES-----------------------------
 		{
 			ingredients =
@@ -506,7 +506,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 60,
 			tech = 'pheromones'
@@ -519,7 +519,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 55,
 			tech = 'pheromones'
@@ -532,11 +532,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 50,
 			tech = 'pheromones'
-		},		
+		},
 		--food 2
 		{
 			ingredients =
@@ -549,7 +549,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 50,
 			tech = 'pheromones'
@@ -562,7 +562,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 45,
 			tech = 'pheromones'
@@ -575,11 +575,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 40,
 			tech = 'pheromones'
-		},	
+		},
 	}
 }
 ------------------RENDERING------------------
@@ -656,7 +656,7 @@ fun.autorecipes {
 			name = 'Extract phadai brains',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 		--bones
 		{
 			ingredients =

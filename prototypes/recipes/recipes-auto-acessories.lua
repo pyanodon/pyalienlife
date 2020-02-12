@@ -35,7 +35,7 @@ fun.autorecipes {
                 name = 'Extract phadai Carapace-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/carapace.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -75,7 +75,7 @@ fun.autorecipes {
                 name = 'Extract dingrits Pelt-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/pelt.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -115,7 +115,7 @@ fun.autorecipes {
                 name = 'Extract dingrits Spikes-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/dingrit-spike.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -153,7 +153,7 @@ fun.autorecipes {
 				name = 'Extract scrondrix Pineal Gland-1',
 				icon = "__pyalienlifegraphics__/graphics/icons/pineal-gland.png",
 				icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -191,7 +191,7 @@ fun.autorecipes {
 				name = 'Extract kmauts tendons-1',
 				icon = "__pyalienlifegraphics__/graphics/icons/tendon.png",
 				icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -268,7 +268,7 @@ fun.autorecipes {
 				name = 'Extract Vonix´s Venom Gland-1',
 				icon = "__pyalienlifegraphics__/graphics/icons/venon-gland.png",
 				icon_size = 64,
-		},	
+		},
 	}
 }
 

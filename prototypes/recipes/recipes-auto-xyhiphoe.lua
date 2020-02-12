@@ -32,7 +32,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 140,
 			tech = 'water-invertebrates-mk01'
@@ -45,7 +45,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 130,
 			tech = 'water-invertebrates-mk02'
@@ -58,11 +58,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 120,
 			tech = 'water-invertebrates-mk02'
-		},		
+		},
 		--fish egg
 		{
 			ingredients =
@@ -88,7 +88,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 100,
 			tech = 'water-invertebrates-mk04'
@@ -101,11 +101,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 90,
 			tech = 'water-invertebrates-mk04'
-		},	
+		},
 		--gh
 		{
 			ingredients =
@@ -115,7 +115,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 30,
 			tech = 'growth-hormone'
@@ -276,7 +276,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 70,
 			tech = 'assisted-embryology'
@@ -289,7 +289,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 65,
 			tech = 'assisted-embryology'
@@ -302,11 +302,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 60,
 			tech = 'assisted-embryology'
-		},		
+		},
 		--food 2
 		{
 			ingredients =
@@ -319,7 +319,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 65,
 			tech = 'assisted-embryology'
@@ -332,7 +332,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 60,
 			tech = 'xyhiphoe'
@@ -345,11 +345,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 55,
 			tech = 'assisted-embryology'
-		},	
+		},
 		-----------------------PHEROMONES-----------------------------
 		{
 			ingredients =
@@ -385,7 +385,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 60,
 			tech = 'pheromones'
@@ -398,7 +398,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 55,
 			tech = 'pheromones'
@@ -411,11 +411,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 50,
 			tech = 'pheromones'
-		},		
+		},
 		--food 2
 		{
 			ingredients =
@@ -428,7 +428,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 50,
 			tech = 'pheromones'
@@ -441,7 +441,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 45,
 			tech = 'pheromones'
@@ -454,11 +454,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 40,
 			tech = 'pheromones'
-		},	
+		},
 
 	}
 }

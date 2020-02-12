@@ -1,3 +1,5 @@
+local util = require('util')
+
 RECIPE{
     type = "recipe",
     name = "not-a-tank",
@@ -151,7 +153,7 @@ data:extend(
         frame_count = 21,
         direction_count = 16,
         shift = util.mul_shift(util.by_pixel(-2, -6), 0.5),
-        scale = scale,
+        --scale = scale,
       }
             --[[
 			{

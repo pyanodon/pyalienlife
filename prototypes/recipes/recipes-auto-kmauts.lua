@@ -46,7 +46,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 130,
 			tech = 'kmauts-mk03'
@@ -59,11 +59,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 120,
 			tech = 'kmauts-mk04'
-		},		
+		},
 		--gh
 		{
 			ingredients =
@@ -73,7 +73,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 30,
 			tech = 'growth-hormone'
@@ -292,7 +292,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 60,
 			tech = 'assisted-embryology'
@@ -305,7 +305,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 55,
 			tech = 'assisted-embryology'
@@ -318,11 +318,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 50,
 			tech = 'assisted-embryology'
-		},		
+		},
 		-----------------------PHEROMONES-----------------------------
 		{
 			ingredients =
@@ -354,7 +354,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 50,
 			tech = 'pheromones'
@@ -367,7 +367,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 40,
 			tech = 'pheromones'
@@ -380,11 +380,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 35,
 			tech = 'pheromones'
-		},		
+		},
 	}
 }
 ------------------RENDERING------------------
@@ -456,7 +456,7 @@ fun.autorecipes {
 			name = 'Extract kmauts brains',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 		--tendon
 		{
 			ingredients =

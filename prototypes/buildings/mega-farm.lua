@@ -1,3 +1,4 @@
+local util = require('util')
 
 RECIPE {
     type = "recipe",
@@ -117,7 +118,7 @@ ENTITY {
       height = 32,
       shift = util.by_pixel(0, -0),
     },
-    
+
     hole_sprite =
     {
       filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
@@ -186,7 +187,7 @@ ENTITY {
         },
       }
   },
-	
+
     base_front_sprite =
     {
       filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
@@ -246,7 +247,7 @@ ENTITY {
                 line_length = 16,
                 animation_speed = 0.15,
                 shift = util.by_pixel(160, -64),
-                },  
+                },
     }
   },
 

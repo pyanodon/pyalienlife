@@ -34,7 +34,7 @@ fun.autorecipes {
 			name = 'Extract arthurian lard-1',
 			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
 			icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -71,7 +71,7 @@ fun.autorecipes {
                 name = 'Extract auog lard-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -110,7 +110,7 @@ fun.autorecipes {
                 name = 'Extract dhilmos lard-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -147,7 +147,7 @@ fun.autorecipes {
                 name = 'Extract kmauts lard-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -184,7 +184,7 @@ fun.autorecipes {
                 name = 'Extract Korlex lard-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -221,7 +221,7 @@ fun.autorecipes {
                 name = 'Extract Mukmoux lard-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -258,7 +258,7 @@ fun.autorecipes {
                 name = 'Extract phadai Fat-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -295,7 +295,7 @@ fun.autorecipes {
                 name = 'Extract scrondrix lard-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -331,7 +331,7 @@ fun.autorecipes {
                 name = 'Extract Trits lard-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -368,7 +368,7 @@ fun.autorecipes {
                 name = 'Extract Ulric lard-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -407,7 +407,7 @@ fun.autorecipes {
                 name = 'Extract Vonix lard-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -446,6 +446,6 @@ fun.autorecipes {
                 name = 'Extract zipir lard-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }

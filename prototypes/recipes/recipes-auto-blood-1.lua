@@ -34,7 +34,7 @@ fun.autorecipes {
 			name = 'Extract arthurian blood-1',
 			icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
 			icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -71,7 +71,7 @@ fun.autorecipes {
                 name = 'Extract auog blood-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -110,7 +110,7 @@ fun.autorecipes {
                 name = 'Extract dhilmos blood-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
                 icon_size = 32,
-		},	
+		},
 	}
 }
 
@@ -147,7 +147,7 @@ fun.autorecipes {
                 name = 'Extract dingrits blood-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -184,7 +184,7 @@ fun.autorecipes {
                 name = 'Extract kmauts blood-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
                 icon_size = 32,
-		},	
+		},
 	}
 }
 
@@ -221,7 +221,7 @@ fun.autorecipes {
                 name = 'Extract Korlex blood-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -258,7 +258,7 @@ fun.autorecipes {
                 name = 'Extract Mukmoux blood-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -295,7 +295,7 @@ fun.autorecipes {
                 name = 'Extract phadai blood-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -332,7 +332,7 @@ fun.autorecipes {
                 name = 'Extract phagnot blood-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -369,7 +369,7 @@ fun.autorecipes {
                 name = 'Extract scrondrix blood-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -405,7 +405,7 @@ fun.autorecipes {
                 name = 'Extract Trits blood-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -442,7 +442,7 @@ fun.autorecipes {
                 name = 'Extract Ulric blood-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -481,7 +481,7 @@ fun.autorecipes {
                 name = 'Extract Vonix blood-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
                 icon_size = 32,
-		},	
+		},
 	}
 }
 
@@ -521,7 +521,7 @@ fun.autorecipes {
 				name = 'Extract Vrauks Formic Acid-1',
 				icon = "__pyalienlifegraphics__/graphics/icons/formic-acid.png",
 				icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -557,7 +557,7 @@ fun.autorecipes {
 			name = 'Extract Xeno blood-1',
 			icon = "__base__/graphics/icons/fluid/sulfuric-acid.png",
 			icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -629,6 +629,6 @@ fun.autorecipes {
                 name = 'Extract zipir blood-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
                 icon_size = 32,
-		},	
+		},
 	}
 }

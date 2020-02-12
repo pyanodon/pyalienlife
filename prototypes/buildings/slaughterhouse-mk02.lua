@@ -76,7 +76,7 @@ ENTITY {
                 line_length = 21,
                 frame_count = 105,
                 animation_speed = 0.3,
-                run_mode = backward,
+                -- run_mode = "backward",
                 shift = util.by_pixel(-128, -18)
             },
             {

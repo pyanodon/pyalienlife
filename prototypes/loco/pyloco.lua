@@ -137,8 +137,8 @@ data:extend(
                 color = {r = 1.0, g = 0.9, b = 0.9}
               }
             },
-            back_light = rolling_stock_back_light(),
-            stand_by_light = rolling_stock_stand_by_light(),
+            back_light = _G.rolling_stock_back_light(),
+            stand_by_light = _G.rolling_stock_stand_by_light(),
             color = {r = 0.92, g = 0.07, b = 0, a = 0.5},
             pictures =
             {
@@ -296,7 +296,7 @@ data:extend(
               size = {20, 40},
               scale = 0.5
             },
-            wheels = standard_train_wheels,
+            wheels = _G.standard_train_wheels,
             stop_trigger =
             {
               -- left side
@@ -334,7 +334,7 @@ data:extend(
                 }
               }
             },
-            drive_over_tie_trigger = drive_over_tie(),
+            drive_over_tie_trigger = _G.drive_over_tie(),
             tie_distance = 50,
             vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
             working_sound =

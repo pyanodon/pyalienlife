@@ -8,16 +8,16 @@ function farm_table.add(farm)
     --log(serpent.block(farms))
 end
 
-script.on_init(
-    function(event)
-    end
-)
+-- script.on_init(
+--     function()
+--     end
+-- )
 
-script.on_nth_tick(
-    30,
-    function(event)
-    end
-)
+-- script.on_nth_tick(
+--     30,
+--     function()
+--     end
+-- )
 
 script.on_event(
     defines.events.on_rocket_launched,
@@ -29,7 +29,7 @@ script.on_event(
             local item = event.rocket.get_inventory(defines.inventory.rocket).get_contents()
             local items = {}
 
-            for k, v in pairs(item) do
+            for k in pairs(item) do
                 items['item1'] = k
             end
             log(items['item1'])
@@ -37,13 +37,13 @@ script.on_event(
 
             local rs = event.rocket_silo
 
-            for f, farm in pairs(farms) do
+            for _, farm in pairs(farms) do
                 log(serpent.block(farm))
                 if items['item1'] == farm.seed then
                     log('hits')
                     local recipes = {}
                     local output = {}
-                    for r, recipe in pairs(farm.recipes) do
+                    for _, recipe in pairs(farm.recipes) do
                         log(serpent.block(recipe))
                         recipes[recipe.recipe_name] = true
                         output[recipe.recipe_name] = recipe.crop_output
@@ -68,7 +68,7 @@ script.on_event(
             end
             local rpos = event.rocket_silo.position
             local harvesters = game.surfaces['nauvis'].find_entities_filtered {area = {{rpos.x - 11, (rpos.y - 15) - 11}, {rpos.x + 11, (rpos.y - 15) + 11}}, name = 'harvester'}
-            for h, har in pairs(harvesters) do
+            for _, har in pairs(harvesters) do
                 har.update_connections()
             end
         end

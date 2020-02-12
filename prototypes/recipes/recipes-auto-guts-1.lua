@@ -34,7 +34,7 @@ fun.autorecipes {
 			name = 'Extract arthurian guts-1',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -71,7 +71,7 @@ fun.autorecipes {
                 name = 'Extract auog guts-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -110,7 +110,7 @@ fun.autorecipes {
                 name = 'Extract dhilmos guts-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -147,7 +147,7 @@ fun.autorecipes {
                 name = 'Extract dingrits guts-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -184,7 +184,7 @@ fun.autorecipes {
                 name = 'Extract kmauts guts-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -221,7 +221,7 @@ fun.autorecipes {
                 name = 'Extract Korlex guts-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -258,7 +258,7 @@ fun.autorecipes {
                 name = 'Extract Mukmoux guts-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -295,7 +295,7 @@ fun.autorecipes {
                 name = 'Extract phadai guts-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -332,7 +332,7 @@ fun.autorecipes {
                 name = 'Extract phagnot guts-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -369,7 +369,7 @@ fun.autorecipes {
                 name = 'Extract scrondrix guts-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -405,7 +405,7 @@ fun.autorecipes {
                 name = 'Extract Trits guts-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -442,7 +442,7 @@ fun.autorecipes {
                 name = 'Extract Ulric guts-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -481,7 +481,7 @@ fun.autorecipes {
                 name = 'Extract Vonix guts-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -521,7 +521,7 @@ fun.autorecipes {
                 name = 'Extract Vrauks guts-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -592,6 +592,6 @@ fun.autorecipes {
                 name = 'Extract zipir guts-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }

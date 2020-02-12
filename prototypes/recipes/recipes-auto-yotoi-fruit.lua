@@ -129,7 +129,7 @@ fun.autorecipes {
 				   --{'b','+15'},
 				   --{'carbondioxide','R'},
 				   --{name='bloodmeal',amount ='R'},
-                	{name='carbondioxide',amount ='*20'},
+					{name='carbondioxide',amount ='*20'},
                     --{'d'},
                 },
 			results =

@@ -1,4 +1,4 @@
-local fun = require("prototypes/functions/functions")
+require("prototypes/functions/functions")
 
 RECIPE {
     type = 'recipe',

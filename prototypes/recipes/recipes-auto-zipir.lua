@@ -33,7 +33,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 140,
 			tech = 'zipir'
@@ -47,7 +47,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 130,
 			tech = 'zipir-mk02'
@@ -65,7 +65,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 120,
 			tech = 'zipir-mk03'
-		},		
+		},
 		--phyto
 		{
 			ingredients =
@@ -76,7 +76,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 110,
 			tech = 'zipir-mk03'
@@ -97,7 +97,7 @@ fun.autorecipes {
 			crafting_speed = 90,
 			tech = 'zipir-mk04'
 		},
-        
+
 		--gh
 		{
 			ingredients =
@@ -107,7 +107,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 30,
 			tech = 'growth-hormone'
@@ -356,7 +356,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 60,
 			tech = 'zipir-mk02'
@@ -370,7 +370,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 55,
 			tech = 'zipir-mk03'
@@ -383,11 +383,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 50,
 			tech = 'zipir-mk03'
-		},		
+		},
 		--food 2
 		{
 			ingredients =
@@ -398,7 +398,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 40,
 			tech = 'zipir-mk04'
@@ -440,7 +440,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 60,
 			tech = 'pheromones'
@@ -454,7 +454,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 55,
 			tech = 'pheromones'
@@ -467,11 +467,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 50,
 			tech = 'pheromones'
-		},		
+		},
 		--food 2
 		{
 			ingredients =
@@ -482,7 +482,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 40,
 			tech = 'pheromones'

@@ -162,7 +162,7 @@ local speed_module_blacklist =
 "cadaveric-arum13"
 }
 
-function effectivityblacklist(cat)
+local function effectivityblacklist(cat)
 
 	local catlist = {}
 	local effectlimitaionlist = {}

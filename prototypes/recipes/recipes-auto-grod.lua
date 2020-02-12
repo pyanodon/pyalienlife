@@ -140,7 +140,7 @@ fun.autorecipes {
 				   --{'b','+15'},
 				   --{'carbondioxide','R'},
 				   {name='coarse',amount ='R'},
-                	{name='slackedlime',amount ='*2'},
+					{name='slackedlime',amount ='*2'},
                     --{'d'},
                 },
 			results =

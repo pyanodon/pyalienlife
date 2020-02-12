@@ -57,7 +57,7 @@ fun.autorecipes {
 			name = 'Extract arthurian brainsb',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -115,7 +115,7 @@ fun.autorecipes {
 			name = 'Extract auog brainsb',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -173,7 +173,7 @@ fun.autorecipes {
 			name = 'Extract dingrits brainsb',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -229,7 +229,7 @@ fun.autorecipes {
 			name = 'Extract kmauts brainsb',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -287,7 +287,7 @@ fun.autorecipes {
 			name = 'Extract Korlex brainb',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -345,7 +345,7 @@ fun.autorecipes {
 			name = 'Extract Mukmoux brainsb',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -406,7 +406,7 @@ fun.autorecipes {
 			name = 'Extract phadai brainsb',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -464,7 +464,7 @@ fun.autorecipes {
 			name = 'Extract phagnot brainsb',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -583,7 +583,7 @@ fun.autorecipes {
 			name = 'Extract Trits brainsb',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -641,7 +641,7 @@ fun.autorecipes {
 			name = 'Extract Ulric brainsb',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -755,7 +755,7 @@ fun.autorecipes {
 			name = 'Extract Vrauks brainsb',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -811,7 +811,7 @@ fun.autorecipes {
 			name = 'Extract Xeno brainsb',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 	}
 }
 

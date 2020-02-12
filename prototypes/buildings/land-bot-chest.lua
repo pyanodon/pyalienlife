@@ -86,9 +86,9 @@ ENTITY {
     }
   }
 
-function generate_constant_combinator(combinator)
+local function generate_constant_combinator(combinator)
   combinator.sprites =
-    make_4way_animation_from_spritesheet({ layers =
+    _G.make_4way_animation_from_spritesheet({ layers =
       {
         {
           filename = "__base__/graphics/entity/combinator/constant-combinator.png",
@@ -293,5 +293,5 @@ generate_constant_combinator {
     },
     circuit_wire_max_distance = 0
   }
-  
+
 })

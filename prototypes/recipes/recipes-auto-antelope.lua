@@ -24,7 +24,7 @@ fun.autorecipes {
 			crafting_speed = 150,
 			tech = 'schrodinger-antelope'
         },
-        
+
 		{
 			ingredients =
 				{
@@ -32,7 +32,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 140,
 			tech = 'schrodinger-antelope'
@@ -46,7 +46,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 130,
 			tech = 'schrodinger-antelope'
@@ -59,11 +59,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 120,
 			tech = 'schrodinger-antelope'
-		},		
+		},
 		--food 2 salt
 		{
 			ingredients =
@@ -72,7 +72,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 100,
 			tech = 'schrodinger-antelope'
@@ -86,7 +86,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 30,
 			tech = 'growth-hormone'
@@ -194,7 +194,7 @@ fun.autorecipes {
 			name = 'Extract antelope brains',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 		--skin
 		{
 			ingredients =

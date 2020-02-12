@@ -1,3 +1,6 @@
+-- luacheck: ignore
+-- DEAR GOD WHY Kingarthur!
+
 local overrides = {}
 
 --add item/fluid to recipe ingredients
@@ -243,7 +246,7 @@ function overrides.Recipe(recipe)
                     subgroup = recipe.subgroup or nil,
                     enabled = recipe.enabled or false,
                     allow_decomposition = recipe.allow_decomposition or false,
-                    energy_required = energy_required or 1,
+                    energy_required = recipe.energy_required or 1,
                     ingredients = prep_ingredients,
                     results = prep_results,
                     icon = icon,
@@ -272,7 +275,7 @@ function overrides.Patch(recipe)
     if data.raw.recipe[name] ~= nil then
         if newingredients ~= nil then
             for i1, ing1 in pairs(currentingredients) do
-                for i2, ing2 in pairs(newingredients) do
+                for _, ing2 in pairs(newingredients) do
                     if ing1.name == ing2.name then
                         if string.find(ing2.amount, '[%+]') ~= nil then
                             ing1.amount = ing1.amount + string.sub(string.find(ing2.amount, '%d'))
@@ -290,7 +293,7 @@ function overrides.Patch(recipe)
 
         if newresults ~= nil then
             for r1, res1 in pairs(currentresults) do
-                for r2, res2 in pairs(newresults) do
+                for _, res2 in pairs(newresults) do
                     if res1.name == res2.name then
                         if string.find(res2.amount, '[%+]') ~= nil then
                             res1.amount = res1.amount + string.sub(string.find(res2.amount, '%d'))
@@ -592,12 +595,12 @@ end
 
 --used to remove a whole category of recipes
 --use case wipe all recipes from a building
-function overrides.recipe_category_remove(category, blacklist)
+function overrides.recipe_category_remove(category)
     --log("function was used")
 
     local hiddenrecipes = {}
 
-    for r, recipe in pairs(data.raw.recipe) do
+    for _, recipe in pairs(data.raw.recipe) do
         if recipe.category == category then
             --log(recipe.category)
             --log(category)
@@ -927,7 +930,7 @@ end
     --
 end
 
-function overrides.Tech_create(tech)
+function overrides.Tech_create()
 end
 
 --adds recipe to tech for unlock if tech and recipe exists
@@ -940,7 +943,7 @@ function overrides.tech_add_recipe(tech, recipe)
 end
 
 --removes recipe from tech if tech exists and includes recipe in effects
-function overrides.tech_remove_recipe(tech, recipe)
+function overrides.tech_remove_recipe()
 end
 
 function overrides.tech_add_prerequisites(tech, prereq)
@@ -1016,21 +1019,21 @@ recipe =
     local return_amount
 	local return_items_table = {}
     local results
-    local require_item = false
-    local require_item_name
-    local require_amount
+    -- local require_item = false
+    -- local require_item_name
+    -- local require_amount
     local crafting_speed
     local tech_unlock
-    local icon
+    -- local icon
 
     local lastings = {}
     local lastresults = {}
     --log(serpent.block(recipe))
     local number = 1
-    local reuseitem = false
-    local lastitem
+    -- local reuseitem = false
+    -- local lastitem
 
-    local firstitem = true
+    -- local firstitem = true
 
     singlerecipe = true
 
@@ -1038,8 +1041,8 @@ recipe =
         --log(number)
         --log(serpent.block(mat))
 
-        ingredients = {}
-        results = {}
+        -- ingredients = {}
+        -- results = {}
 
         ingredients = table.deepcopy(lastings)
 
@@ -1556,7 +1559,7 @@ recipe =
             }
 
             if return_item and return_item_name ~= nil then
-				for r, rit in pairs(return_items_table) do
+				for _, rit in pairs(return_items_table) do
 					overrides.add_result(na, rit)
 				end
 				--overrides.add_result(na, {type = return_item_type, name = return_item_name, amount = return_amount})

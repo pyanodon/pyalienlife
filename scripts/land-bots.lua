@@ -72,18 +72,18 @@ global.landbots =
 	}
 ]] --
 
-local botdata =
-	{
-	tower = '',
-	unit = {},
-	carryamount = 5,
-	hasitem = false,
-	isgettingitem = false,
-	destinationchest = '',
-	requestorchest = '',
-	inventorycount = 0,
-	itemname = ''
-	}
+-- local botdata =
+-- 	{
+-- 	tower = '',
+-- 	unit = {},
+-- 	carryamount = 5,
+-- 	hasitem = false,
+-- 	isgettingitem = false,
+-- 	destinationchest = '',
+-- 	requestorchest = '',
+-- 	inventorycount = 0,
+-- 	itemname = ''
+-- 	}
 
 local landbots =
 	{
@@ -118,10 +118,10 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 			--scan for pre constructed chests and add them if they are not marked as part of another network.
 			-- find a way to display existing network areas when placing bots, chests, and towers
 			local existingitems = game.surfaces["nauvis"].find_entities({{tower.position.x-25, tower.position.y-25}, {tower.position.x+25, tower.position.y+25}})
-			for e, entity in pairs(existingitems) do
-				if entity.name == 'land-bot' then
+			for _, entity in pairs(existingitems) do
+				-- if entity.name == 'land-bot' then
 
-				elseif entity.name == 'lb-requester-chest' then
+					if entity.name == 'lb-requester-chest' then
 					local chestcontrols = game.surfaces['nauvis'].find_entity('lb-requester-controls', entity.position)
 					landbots.towers[tower.unit_number].requestorchests[entity.unit_number] = {chest = entity, controls = chestcontrols, requestsinroute = {}}
 				elseif entity.name == 'lb-provider-chest' then
@@ -172,7 +172,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 								}
 					landbots.requesterchests[E.unit_number] =
 						{
-							tower = t, 
+							tower = t,
 							request_slots = slots
 						}
 					log(serpent.block(landbots.requesterchests[E.unit_number]))
@@ -194,7 +194,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 
 script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity}, function(event)
 	if event.entity.name == 'lb-control-tower' then
-		for t, tower in pairs(landbots.towers) do
+		for t in pairs(landbots.towers) do
 			if t == event.entity.unit_number then
 				landbots.towers[t] = nil
 			end
@@ -202,17 +202,17 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 	end
 end)
 
-script.on_event(
-    defines.events.on_put_item,
-    function(event)
-    end
-)
+-- script.on_event(
+--     defines.events.on_put_item,
+--     function(event)
+--     end
+-- )
 
-script.on_event(
-    defines.events.on_player_selected_area,
-    function(event)
-    end
-)
+-- script.on_event(
+--     defines.events.on_player_selected_area,
+--     function(event)
+--     end
+-- )
 
 script.on_event(
     defines.events.on_ai_command_completed,
@@ -266,27 +266,27 @@ script.on_event(
 				end
 			end
 		end
-		if event.result == defines.behavior_result.in_progress then
-			if lb[event.unit_number] ~= nil then
+		-- if event.result == defines.behavior_result.in_progress then
+		-- 	if lb[event.unit_number] ~= nil then
 
-			end
-		end
-		if event.result == defines.behavior_result.fail	then
-			if lb[event.unit_number] ~= nil then
+		-- 	end
+		-- end
+		-- if event.result == defines.behavior_result.fail	then
+		-- 	if lb[event.unit_number] ~= nil then
 
-			end
-		end
-		if event.result == defines.behavior_result.deleted then
-			if lb[event.unit_number] ~= nil then
+		-- 	end
+		-- end
+		-- if event.result == defines.behavior_result.deleted then
+		-- 	if lb[event.unit_number] ~= nil then
 
-			end
-		end
+		-- 	end
+		-- end
     end
 )
 
-script.on_nth_tick(5, function(event)
+script.on_nth_tick(5, function()
 --log('hit')
-for t, tower in pairs(landbots.towers) do
+for _, tower in pairs(landbots.towers) do
 	if tower.currentlyactivebotcount < tower.totalbotcount then
 		--log('hit')
 		for r,req in pairs(tower.requestorchests) do
@@ -297,15 +297,15 @@ for t, tower in pairs(landbots.towers) do
 				local signals = req.controls.get_merged_signals(defines.circuit_connector_id.constant_combinator)
 				--log(serpent.block(signals))
 				if signals ~= nil then
-					for s, sig in pairs(signals) do
+					for _, sig in pairs(signals) do
 						--log(serpent.block(sig))
 						local inventory = req.chest.get_inventory(defines.inventory.chest).get_contents()
 						local set = {}
-						for i, inv in pairs(inventory) do
+						for i in pairs(inventory) do
 							--log(serpent.block(inv))
 							set[i] = true
 						end
-						local requestamount = 0
+						local requestamount
 						if req.requestsinroute[sig.signal.name] ~= nil then
 							requestamount = sig.count - req.requestsinroute[sig.signal.name]
 						else
@@ -326,6 +326,7 @@ for t, tower in pairs(landbots.towers) do
 								end
 								if pset[sig.signal.name] ~= nil then
 								--send landbot to get stuff from this provider box
+								-- luacheck: ignore 512
 									for i, inact in pairs(tower.inactivebots) do
 										local bots = landbots.bots
 										bots[inact].unit.set_command{type = defines.command.go_to_location, destination = prov.chest.position, radius = 2}
@@ -384,19 +385,19 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 		if event.player_index ~= nil then
 			game.players[event.player_index].insert({name=landbots.bots[bot.unit_number].itemname,count=landbots.bots[bot.unit_number].inventorycount})
 		end
-		
-		--remove bot from bots table 
+
+		--remove bot from bots table
 		landbots.bots[bot.unit_number] = nil
-	elseif event.entity.name == 'lb-provider-chest' then
-		--remove all refernces to this chest
-		
-	elseif event.entity.name == 'lb-requester-chest' then
-		--remove all refernces to this chest
-		
-	elseif event.entity.name == 'lb-control-tower' then
-	
+	-- elseif event.entity.name == 'lb-provider-chest' then
+	-- 	--remove all refernces to this chest
+
+	-- elseif event.entity.name == 'lb-requester-chest' then
+	-- 	--remove all refernces to this chest
+
+	-- elseif event.entity.name == 'lb-control-tower' then
+
 	end
-	
+
 
 end)
 
@@ -410,7 +411,7 @@ script.on_event(defines.events.on_gui_opened,function(event)
         if event.entity.name == 'lb-requester-chest' then
 			local player = game.players[event.player_index]
 			request_gui = player.gui.left.add({type = 'frame', name = 'test', direction = 'vertical'})
-			
+
 			request_gui.add({type = 'table', name = 'table', column_count = 1})
 			--request_gui.table.add({type = 'list-box', name = 'list-box', items = {'iron-plate','copper-plate'}})
 			request_gui.table.add({type = 'choose-elem-button', name = 'elem', elem_type = 'item'})
@@ -425,7 +426,7 @@ end)
 script.on_event(defines.events.on_gui_value_changed, function(event)
 
 	log(event.element.name)
-	
+
 	if event.element.name == 'request-slider' then
 		log(serpent.block(event.element.parent.children))
 		event.element.parent['numfield'].text = event.element.slider_value
@@ -444,7 +445,7 @@ script.on_event(defines.events.on_gui_closed, function(event)
 	if event.entity ~= nil then
         if event.entity.name == 'lb-requester-chest' then
 			request_gui.destroy()
-			
+
         end
     end
 

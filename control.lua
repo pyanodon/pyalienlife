@@ -3,16 +3,15 @@ local TRlist_og = require('scripts/techswap')
 local TRlist = {}
 
 --Mega Farms
-local farm_table = {}
-local farms = {}
 
-function farm_table.add(farm)
-    --log(serpent.block(farms))
-    table.insert(farms, farm)
-    --log(serpent.block(farms))
-end
+-- local farm_table = {}
+-- function farm_table.add(farm)
+--     --log(serpent.block(farms))
+--     table.insert(farms, farm)
+--     --log(serpent.block(farms))
+-- end
 
-farms =
+local farms =
 	{
 	farm1 = require('scripts/crops/farm-ralesia'),
 	farm2 = require('scripts/crops/farm-rennea'),
@@ -32,9 +31,9 @@ farms =
 --Caravan
 local caravanroutes = {}
 local lastclickedunit = {}
-local start = {}
-local endding = {}
-local routenumber = 1
+-- local start = {}
+-- local endding = {}
+-- local routenumber = 1
 
 --local outpost_table = {}
 
@@ -102,17 +101,17 @@ local function create_slaughterhouse_animal_table(gui, player)
 	--log(serpent.block(animals))
 	local sg_table = gui
 	sg_table.add({type = 'table', name = 's_table', column_count = 6})
-	for r, recipe in pairs(game.players[player].force.recipes) do
+	for _, recipe in pairs(game.players[player].force.recipes) do
 		if string.match(recipe.category, 'slaughterhouse') then
 		--log('hit')
-			for a, animal in pairs(animals) do
+			for _, animal in pairs(animals) do
 				--log('hit')
 				--log(animal)
 				if string.match(recipe.category, animal) and recipe.enabled == true then
 					--log('hit')
 					if next(sg_table.s_table.children) ~= nil then
 						local child_list = {}
-						for c, child in pairs(sg_table.s_table.children) do
+						for _, child in pairs(sg_table.s_table.children) do
 							--log(child.name)
 							child_list[child.name] = true
 						end
@@ -165,7 +164,7 @@ script.on_init(
 			}
     end)
 
-script.on_load(function(event)
+script.on_load(function()
 caravanroutes = global.caravanroutes
 
 TRlist = global.TRlist
@@ -175,7 +174,7 @@ TRlist = global.TRlist
 
 end)
 
-script.on_configuration_changed(function(event)
+script.on_configuration_changed(function()
 	global.current_entity = {}
 	global.slaughterhouse_gui_open = false
 	global.watch_slaughterhouse = false
@@ -225,21 +224,22 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
     end
 )
 
-script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity}, function(event)
-	
-end)
-
-script.on_event(defines.events.on_put_item, function(event)
-
-
+script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity}, function()
 
 end)
 
-local function ai(event)
+script.on_event(defines.events.on_put_item, function()
 
-end
+
+
+end)
+
+-- local function ai(event)
+
+-- end
 
 script.on_event(defines.events.on_ai_command_completed, function(event)
+	-- luacheck: ignore 512
 	caravanroutes = global.caravanroutes
 	--log('hit')
 		--log(event.result)
@@ -330,7 +330,7 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 				end
 			end
 		end
-		
+
 		if event.result == defines.behavior_result.success then
 			log('hit')
 		end
@@ -343,9 +343,9 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 		if event.result == defines.behavior_result.deleted then
 			log('hit')
 		end
-		
+
 		global.caravanroutes = caravanroutes
-		
+
     end)
 --[[
 script.on_nth_tick(5, function(event)
@@ -355,7 +355,7 @@ script.on_nth_tick(5, function(event)
 	global.caravanroutes = caravanroutes
 end)
 ]]--
-script.on_event(defines.events.on_tick, function(event)
+script.on_event(defines.events.on_tick, function()
 	if global.watch_slaughterhouse == true then
 		if global.watched_slaughterhouse.entity.get_recipe() == nil then
 			--log('hit')
@@ -441,11 +441,11 @@ script.on_event(defines.events.on_gui_selection_state_changed, function(event)
 			--log(serpent.block(outpost_table[value]))
 
 			local otnum = global.outpost_numbers[value]
-			
+
 			log(serpent.block(caravanroutes[id_num]))
 			--log(serpent.block(outpost_table))
 			--log(serpent.block(outpost_table['outpost'..otnum]))
-			
+
 			caravanroutes[id_num].endpoint.id = global.outpost_table['outpost'..otnum].entity.unit_number
 			caravanroutes[id_num].endpoint.pos = global.outpost_table['outpost'..otnum].entity.position
 		end
@@ -455,9 +455,9 @@ script.on_event(defines.events.on_gui_selection_state_changed, function(event)
 
 end)
 
-script.on_event(defines.events.on_gui_value_changed, function(event)
+script.on_event(defines.events.on_gui_value_changed, function()
 	--log(event.element.name)
-	
+
 end)
 
 script.on_event(defines.events.on_gui_confirmed, function(event)
@@ -467,7 +467,7 @@ script.on_event(defines.events.on_gui_confirmed, function(event)
 	end
 end)
 
-script.on_event(defines.events.on_gui_elem_changed, function(event)
+script.on_event(defines.events.on_gui_elem_changed, function()
 	--log(event.element.name)
 end)
 
@@ -478,7 +478,7 @@ local function create_slaughterhouse_recipe_gui(event)
 	slaughterhouse_recipe_gui.add({type = 'frame', name = 'recipe_selection_frame', caption = 'Select Recipe'})
 	slaughterhouse_recipe_gui.recipe_selection_frame.add({type = 'sprite-button', name = 'slaughterhouse_back', sprite = 'utility/left_arrow'})
 	slaughterhouse_recipe_gui.recipe_selection_frame.add({type = 'table', name = 'recipe_table', column_count = 5})
-	for r, recipe in pairs(game.players[event.player_index].force.recipes) do
+	for _, recipe in pairs(game.players[event.player_index].force.recipes) do
 		if string.match(recipe.category, 'slaughterhouse') and string.match(recipe.category, button_name) and recipe.enabled == true then
 			slaughterhouse_recipe_gui.recipe_selection_frame.recipe_table.add({type = 'sprite-button', name = 'recipe-menu_'..recipe.name, sprite = 'recipe/'..recipe.name, style = 'recipe_slot_button'})
 		end
@@ -543,7 +543,7 @@ script.on_event(defines.events.on_rocket_launched, function(event)
             local item = event.rocket.get_inventory(defines.inventory.rocket).get_contents()
             local items = {}
 
-            for k, v in pairs(item) do
+            for k in pairs(item) do
                 items['item1'] = k
             end
             --log(items['item1'])
@@ -551,13 +551,13 @@ script.on_event(defines.events.on_rocket_launched, function(event)
 
             local rs = event.rocket_silo
 
-            for f, farm in pairs(farms) do
+            for _, farm in pairs(farms) do
                 --log(serpent.block(farm))
                 if items['item1'] == farm.seed then
                     --log('hits')
                     local recipes = {}
                     local output = {}
-                    for r, recipe in pairs(farm.recipes) do
+                    for _, recipe in pairs(farm.recipes) do
                         --log(serpent.block(recipe))
                         recipes[recipe.recipe_name] = true
                         output[recipe.recipe_name] = recipe.crop_output
@@ -582,7 +582,7 @@ script.on_event(defines.events.on_rocket_launched, function(event)
             end
             local rpos = event.rocket_silo.position
             local harvesters = game.surfaces['nauvis'].find_entities_filtered {area = {{rpos.x - 11, (rpos.y - 15) - 11}, {rpos.x + 11, (rpos.y - 15) + 11}}, name = 'harvester'}
-            for h, har in pairs(harvesters) do
+            for _, har in pairs(harvesters) do
                 har.update_connections()
             end
         end
@@ -594,7 +594,7 @@ local function create_caravan_gui(event, entity)
 	local player = game.players[event.player_index]
 	caravangui = player.gui.center.add({type = 'frame', name = 'caravan_frame_left', direction = 'horizontal'})
 	caravangui.add({type = 'table', name = 'ctable', column_count = 1})
-	local caption = ''
+	local caption
 	if caravanroutes[entity.unit_number] ~= nil and caravanroutes[entity.unit_number].startpoint.id ~= nil and global.outpost_names[caravanroutes[entity.unit_number].startpoint.id] ~= nil then
 		caption = 'Route Start: '.. global.outpost_names[caravanroutes[entity.unit_number].startpoint.id]
 	else
@@ -637,7 +637,7 @@ script.on_event(defines.events.on_player_selected_area, function(event)
 	caravanroutes = global.caravanroutes
 
 	if event.item == 'unit-controller' then
-		for e, ent in pairs(event.entities) do
+		for _, ent in pairs(event.entities) do
 			--log(serpent.block(ent.name))
 			--log('did a thing here')
 			if ent.name == 'caravan' and hascarguiopen == false then
@@ -679,7 +679,7 @@ script.on_event(defines.events.on_resource_depleted, function(event)
 	local resourcetrees = game.surfaces['nauvis'].find_entities_filtered{position = event.entity.position, name = event.entity.name..'-fake'} --, type='tree'}
 	--log(serpent.block(resourcetrees))
 	--log(serpent.block(resourcetrees.name))
-	for t, tree in pairs(resourcetrees) do
+	for _, tree in pairs(resourcetrees) do
 		--log(serpent.block(resourcetrees))
 		--log(serpent.block(resourcetrees.name))
 		tree.destroy()
@@ -726,14 +726,14 @@ script.on_event(
 	--log('hit')
 	--log(serpent.block(TRlist.techs_with_upgrades['bigger-colon']))
 	local tech = event.research
-	if tech.name == 'hardened-bone' then
-	--log(serpent.block(tech.name))
-	end
+	-- if tech.name == 'hardened-bone' then
+	-- --log(serpent.block(tech.name))
+	-- end
 	if TRlist.techs_with_upgrades[tech.name] == true then
 		if tech.effects ~= nil then
-			for e, effect in pairs(tech.effects) do
+			for _, effect in pairs(tech.effects) do
 				if effect.type == 'unlock-recipe' then
-					for u, upgrade in pairs(TRlist.upgrades) do
+					for _, upgrade in pairs(TRlist.upgrades) do
 						--log(serpent.block(upgrade.base_recipe))
 						if effect.recipe == upgrade.base_recipe then
 							if upgrade.current_lvl > 1 then

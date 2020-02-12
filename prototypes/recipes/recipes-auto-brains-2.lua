@@ -34,7 +34,7 @@ fun.autorecipes {
 			name = 'Extract arthurian brains-2',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 		--brain arthurian rendering
 		{
 			ingredients =
@@ -89,7 +89,7 @@ fun.autorecipes {
 			name = 'Extract auog brains-2',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 		--brain auog rendering
 		{
 			ingredients =
@@ -143,7 +143,7 @@ fun.autorecipes {
 			name = 'Extract dingrits brains-2',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 		--brain dingrits rendering
 		{
 			ingredients =
@@ -196,7 +196,7 @@ fun.autorecipes {
 			name = 'Extract kmauts brains-2',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 		--brain kmauts rendering
 		{
 			ingredients =
@@ -249,7 +249,7 @@ fun.autorecipes {
 			name = 'Extract Korlex brain-2',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 		--brain korlex rendering
 		{
 			ingredients =
@@ -303,7 +303,7 @@ fun.autorecipes {
 			name = 'Extract Mukmoux brains-2',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 		--brain mukmoux rendering
 		{
 			ingredients =
@@ -360,7 +360,7 @@ fun.autorecipes {
 			name = 'Extract phadai brains-2',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 		--brain phadai rendering
 		{
 			ingredients =
@@ -415,7 +415,7 @@ fun.autorecipes {
 			name = 'Extract phagnot brains-2',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 		--brain phagnot rendering
 		{
 			ingredients =
@@ -524,7 +524,7 @@ fun.autorecipes {
 			name = 'Extract Trits brains-2',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 		--brain trits rendering
 		{
 			ingredients =
@@ -579,7 +579,7 @@ fun.autorecipes {
 			name = 'Extract Ulric brains-2',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 		--brain ulric rendering
 		{
 			ingredients =
@@ -686,7 +686,7 @@ fun.autorecipes {
 			name = 'Extract Vrauks brains-2',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 		--brain vrauks rendering
 		{
 			ingredients =
@@ -738,7 +738,7 @@ fun.autorecipes {
 			name = 'Extract Xeno brains-2',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 
 		--brain xeno rendering
 		{

@@ -128,8 +128,8 @@ fun.autorecipes {
                     --{'a'},
 				   --{'b','+15'},
 				   --{'carbondioxide','R'},
-				   {name='syngas',amount ='R'},
-                	{name='fluegas',amount ='*2'},
+				    {name='syngas',amount ='R'},
+					{name='fluegas',amount ='*2'},
                     --{'d'},
                 },
 			results =
