@@ -51,7 +51,7 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = 'item', name = 'cocoon', amount = 1},
+        {type = 'item', name = 'cocoon', amount = 4},
         {type = 'item', name = 'steel-plate', amount = 1},
         {type = 'item', name = 'petri-dish', amount = 1},
         {type = 'item', name = 'flask', amount = 1},
@@ -69,7 +69,7 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = 'item', name = 'cocoon', amount = 1},
+        {type = 'item', name = 'cocoon', amount = 4},
         {type = 'item', name = 'steel-plate', amount = 1},
         {type = 'item', name = 'petri-dish', amount = 1},
         {type = 'item', name = 'flask', amount = 1},
@@ -129,7 +129,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'retrovirus', amount = 1},
         {type = 'item', name = 'flask', amount = 2},
-        {type = 'item', name = 'cocoon', amount = 1},
+        {type = 'item', name = 'cocoon', amount = 10},
         {type = 'item', name = 'lab-instrument', amount = 1},
     },
     results = {
