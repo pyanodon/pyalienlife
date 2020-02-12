@@ -48,7 +48,7 @@ TECHNOLOGY {
             {'logistic-science-pack', 3},
             {'chemical-science-pack', 2},
             {'py-science-pack', 1},
-            
+
         },
         time = 60
     }

@@ -111,7 +111,7 @@ fun.autorecipes {
 				   --{'b','+15'},
 				   --{'carbondioxide','R'},
 				   {name='soil',amount ='R'},
-                	{name='bones',amount ='*10'},
+					{name='bones',amount ='*10'},
                     --{'d'},
                 },
 			results =

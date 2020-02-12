@@ -4,7 +4,6 @@ local fun = require("prototypes/functions/functions")
 fun.autorecipes {
     name = 'korlex-milk',
 	category = 'korlex',
-	subgroup = 'py-alienlife-korlex',
 	module_limitations = 'korlex',
 	subgroup = 'py-alienlife-korlex',
 	order = 'z',

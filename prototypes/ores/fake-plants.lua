@@ -1,5 +1,5 @@
 
-for o, ore in pairs(data.raw.resource) do
+for _, ore in pairs(data.raw.resource) do
 
 	if string.match(ore.icon, '__pyalienlife') ~= nil then
 
@@ -54,5 +54,5 @@ data:extend({
 })
 
 	end
-	
+
 end

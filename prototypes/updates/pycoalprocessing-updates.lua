@@ -117,7 +117,7 @@ if mods["pyhightech"] then
 
     RECIPE('processing-unit'):remove_ingredient("microchip"):add_ingredient({type = "item", name = "neuromorphic-chip", amount = 1})
 
-    else 
+    else
 
     RECIPE('processing-unit'):add_ingredient({type = "item", name = "neuromorphic-chip", amount = 1})
 end

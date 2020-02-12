@@ -4,7 +4,6 @@ local fun = require("prototypes/functions/functions")
 fun.autorecipes {
     name = 'manure',
 	category = 'mukmoux',
-	subgroup = 'py-alienlife-mukmoux',
 	module_limitations = 'mukmoux',
 	subgroup = 'py-alienlife-mukmoux',
 	order = 'z',

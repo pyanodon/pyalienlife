@@ -42,12 +42,12 @@ ENTITY  {
     dying_explosion = "medium-explosion",
     alert_icon_shift = util.by_pixel(0, 0),
     energy_per_hit_point = 1,
-    crash_trigger = crash_trigger(),
+    crash_trigger = _G.crash_trigger(),
     collision_box = {{-0.35, -0.35}, {0.35, 0.35}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     effectivity = 0.5,
     braking_power = "200kW",
-	energy_source = 
+	energy_source =
 		{
 			type = "void"
 		},
@@ -75,11 +75,11 @@ ENTITY  {
              width_in_frames = 1,
              height_in_frames = 1,
             },
-            
+
           },
         },
-        
-        
+
+
       }
     },
     turret_rotation_speed = 0 / 60,

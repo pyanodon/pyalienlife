@@ -34,7 +34,7 @@ fun.autorecipes {
 			name = 'Extract arthurian lard-2',
 			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
 			icon_size = 64,
-		},	
+		},
 		--fat arthurian rendering
 		{
 			ingredients =
@@ -89,7 +89,7 @@ fun.autorecipes {
                 name = 'Extract auog lard-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
-		},	
+		},
 		--fat auog rendering
 		{
 			ingredients =
@@ -146,7 +146,7 @@ fun.autorecipes {
                 name = 'Extract dhilmos lard-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
-		},	
+		},
 		--fat dhilmos rendering
 		{
 			ingredients =
@@ -201,7 +201,7 @@ fun.autorecipes {
                 name = 'Extract kmauts lard-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
-		},	
+		},
 		--fat kmauts rendering
 		{
 			ingredients =
@@ -256,7 +256,7 @@ fun.autorecipes {
                 name = 'Extract Korlex lard-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
-		},	
+		},
 		--fat korlex rendering
 		{
 			ingredients =
@@ -311,7 +311,7 @@ fun.autorecipes {
                 name = 'Extract Mukmoux lard-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
-		},	
+		},
 		--fat mukmoux rendering
 		{
 			ingredients =
@@ -366,7 +366,7 @@ fun.autorecipes {
                 name = 'Extract phadai Fat-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
-		},	
+		},
 		--fat phadai rendering
 		{
 			ingredients =
@@ -421,7 +421,7 @@ fun.autorecipes {
                 name = 'Extract scrondrix lard-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
-		},	
+		},
 		--fat scrondrix rendering
 		{
 			ingredients =
@@ -475,7 +475,7 @@ fun.autorecipes {
                 name = 'Extract Trits lard-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
-		},	
+		},
 		--fat trits rendering
 		{
 			ingredients =
@@ -530,7 +530,7 @@ fun.autorecipes {
                 name = 'Extract Ulric lard-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
-		},	
+		},
 		--fat ulric rendering
 		{
 			ingredients =
@@ -587,7 +587,7 @@ fun.autorecipes {
                 name = 'Extract Vonix lard-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
-		},	
+		},
 		--fat vonix rendering
 		{
 			ingredients =
@@ -647,7 +647,7 @@ fun.autorecipes {
                 name = 'Extract zipir lard-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
                 icon_size = 64,
-		},	
+		},
 		--fat zipir rendering
 		{
 			ingredients =

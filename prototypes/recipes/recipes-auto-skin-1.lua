@@ -34,7 +34,7 @@ fun.autorecipes {
 			name = 'Extract arthurian skin-1',
 			icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
 			icon_size = 32,
-		},	
+		},
 	}
 }
 
@@ -71,7 +71,7 @@ fun.autorecipes {
                 name = 'Extract auog skin-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
-		},	
+		},
 	}
 }
 
@@ -110,7 +110,7 @@ fun.autorecipes {
                 name = 'Extract dhilmos chitin-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -147,7 +147,7 @@ fun.autorecipes {
                 name = 'Extract Korlex skin-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
-		},	
+		},
 	}
 }
 
@@ -184,7 +184,7 @@ fun.autorecipes {
                 name = 'Extract Mukmoux skin-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
-		},	
+		},
 	}
 }
 
@@ -222,7 +222,7 @@ fun.autorecipes {
                 name = 'Extract phadai Skin-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
-		},	
+		},
 	}
 }
 
@@ -259,7 +259,7 @@ fun.autorecipes {
                 name = 'Extract phagnot skin-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
-		},	
+		},
 	}
 }
 
@@ -296,7 +296,7 @@ fun.autorecipes {
                 name = 'Extract scrondrix skin-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
-		},	
+		},
 	}
 }
 
@@ -332,7 +332,7 @@ fun.autorecipes {
                 name = 'Extract Trits skin-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
-		},	
+		},
 	}
 }
 
@@ -369,7 +369,7 @@ fun.autorecipes {
                 name = 'Extract Ulric skin-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
-		},	
+		},
 	}
 }
 
@@ -408,7 +408,7 @@ fun.autorecipes {
                 name = 'Extract Vonix skin-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
-		},	
+		},
 	}
 }
 
@@ -448,7 +448,7 @@ fun.autorecipes {
                 name = 'Extract Vrauks chithin-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -488,7 +488,7 @@ fun.autorecipes {
                 name = 'Extract xeno chitin-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 ------------------ZIPIR------------------
@@ -526,6 +526,6 @@ fun.autorecipes {
                 name = 'Extract zipir skin-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
-		},	
+		},
 	}
 }

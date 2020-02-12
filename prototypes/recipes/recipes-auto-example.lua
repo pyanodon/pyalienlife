@@ -1,7 +1,7 @@
-local fun = require("prototypes/functions/functions")
+require("prototypes/functions/functions")
 
 		--((single mode example))--
-
+--[[
 fun.autorecipes { -- is a function call can be many per file is the same as RECIPE{} that is used in the rest of pymods
     name = 'single-example', -- recipe name if in single recipe mode *@*
     category = 'recipe-category', -- used in input recipe and output if outcategory not provided to set category
@@ -9,7 +9,7 @@ fun.autorecipes { -- is a function call can be many per file is the same as RECI
 	module_limitations = "ulric", --adds the recipes to a modules allowed recipes table *
 	subgroup = 'subgroup', -- sets the recipes subgroups for menu organizion
     order = 'order', -- sets order for menu organizion
-    mats = -- stuff needed for each recipe. 
+    mats = -- stuff needed for each recipe.
 	{
 		{
 			ingredients = -- duh, first time can not be empty or youll get an empty ingredients table
@@ -32,17 +32,17 @@ fun.autorecipes { -- is a function call can be many per file is the same as RECI
 		{
 			ingredients = -- same as above but can be empty to reuse the same ingredients as the recipe before this one
 				{
-					
+
 				},
 			results = -- same as above but can be empty to reuse the same results as the recipe before this one
 				{
-					
+
 				},
-				
+
 		},
 	},
 }
-
+--]]
 
 -- *: means this is not required for a recipe to work
 -- *@*: is only used in single recipe mode as is (i.e. singlerecipe = true) dualmode adds a number
@@ -50,10 +50,10 @@ fun.autorecipes { -- is a function call can be many per file is the same as RECI
 -- **: its all or nothing with these 3. if you use probability you have to use min and max
 -- ***: amount min and max are optional as by default it is set to 1:1 which will give you perecent chance
 -- *&*: return item allows you to set an item to be a result in the input recipe. amount is not need as it defaults to useing the same value as the item its a part of
---[[ 
-*!*: inggredients and results carry over from the top recipe down. amount can have a few possible entries. 
-+,-,*,/,R, and numbers. 
- +,-,*,/: if an item with the same name exist in the mats above this recipe it will preform the set math operation on that amount useing the new value (i.e. old amount + new amount). if this is a new item being added it will perform the math operation on the default value of the item from the items table. 
+--[[
+*!*: inggredients and results carry over from the top recipe down. amount can have a few possible entries.
++,-,*,/,R, and numbers.
+ +,-,*,/: if an item with the same name exist in the mats above this recipe it will preform the set math operation on that amount useing the new value (i.e. old amount + new amount). if this is a new item being added it will perform the math operation on the default value of the item from the items table.
 R: will clear this entry from the ingredients/results table it is in
 numbers: sets amount to this value no matter what it was before
 ]]--

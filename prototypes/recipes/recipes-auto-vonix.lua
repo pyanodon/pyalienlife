@@ -32,7 +32,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 140,
 			tech = 'vonix'
@@ -60,11 +60,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 120,
 			tech = 'vonix-mk03'
-		},		
+		},
 		--navens
 		{
 			ingredients =
@@ -74,7 +74,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 110,
 			tech = 'vonix-mk04'
@@ -88,7 +88,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 30,
 			tech = 'growth-hormone'
@@ -335,7 +335,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 60,
 			tech = 'vonix'
@@ -348,7 +348,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 55,
 			tech = 'vonix-mk02'
@@ -361,11 +361,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 50,
 			tech = 'vonix-mk03'
-		},		
+		},
 		--navens
 		{
 			ingredients =
@@ -375,7 +375,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 40,
 			tech = 'vonix-mk04'
@@ -412,7 +412,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 60,
 			tech = 'pheromones'
@@ -425,7 +425,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 55,
 			tech = 'pheromones'
@@ -438,11 +438,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 50,
 			tech = 'pheromones'
-		},		
+		},
 		--navens
 		{
 			ingredients =
@@ -452,7 +452,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 40,
 			tech = 'pheromones'
@@ -549,7 +549,7 @@ fun.autorecipes {
 			name = 'Extract Vonix´s Venom Gland',
 			icon = "__pyalienlifegraphics__/graphics/icons/venon-gland.png",
 			icon_size = 64,
-		},	
+		},
 		--skin
 		{
 			ingredients =

@@ -30,7 +30,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 120,
 			tech = 'xeno'
@@ -43,7 +43,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 110,
 			tech = 'xeno'
@@ -56,11 +56,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 100,
 			tech = 'xeno'
-		},		
+		},
 		--ulric
 		{
 			ingredients =
@@ -87,7 +87,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 85,
 			tech = 'xeno'
@@ -100,11 +100,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 80,
 			tech = 'xeno'
-		},	
+		},
 		--gh
 		{
 			ingredients =
@@ -114,7 +114,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 30,
 			tech = 'growth-hormone'
@@ -349,7 +349,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 80,
 			tech = 'assisted-embryology'
-		},		
+		},
 		--ulric
 		{
 			ingredients =
@@ -378,7 +378,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 65,
 			tech = 'assisted-embryology'
-		},	
+		},
 		-----------------------PHEROMONES-----------------------------
 		{
 			ingredients =
@@ -423,7 +423,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 50,
 			tech = 'pheromones'
-		},		
+		},
 		--ulric
 		{
 			ingredients =
@@ -452,7 +452,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 40,
 			tech = 'pheromones'
-		},	
+		},
 
 	}
 }
@@ -526,7 +526,7 @@ fun.autorecipes {
 			name = 'Extract Xeno brains',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 		--skin
 		{
 			ingredients =

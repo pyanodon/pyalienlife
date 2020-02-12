@@ -34,7 +34,7 @@ fun.autorecipes {
 			name = 'Extract arthurian blood-2',
 			icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
 			icon_size = 64,
-		},	
+		},
 		--blood arthurian rendering
 		{
 			ingredients =
@@ -89,7 +89,7 @@ fun.autorecipes {
                 name = 'Extract auog blood-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
-		},	
+		},
 		--blood auog rendering
 		{
 			ingredients =
@@ -146,7 +146,7 @@ fun.autorecipes {
                 name = 'Extract dhilmos blood-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
                 icon_size = 32,
-		},	
+		},
 		--blood dhilmos rendering
 		{
 			ingredients =
@@ -201,7 +201,7 @@ fun.autorecipes {
                 name = 'Extract dingrits blood-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
-		},	
+		},
 		--blood dingrits rendering
 		{
 			ingredients =
@@ -256,7 +256,7 @@ fun.autorecipes {
                 name = 'Extract kmauts blood-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
                 icon_size = 32,
-		},	
+		},
 		--blood kmauts rendering
 		{
 			ingredients =
@@ -312,7 +312,7 @@ fun.autorecipes {
                 name = 'Extract Korlex blood-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
-		},	
+		},
 		--blood korlex rendering
 		{
 			ingredients =
@@ -368,7 +368,7 @@ fun.autorecipes {
                 name = 'Extract Mukmoux blood-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
-		},	
+		},
 		--blood mukmoux rendering
 		{
 			ingredients =
@@ -423,7 +423,7 @@ fun.autorecipes {
                 name = 'Extract phadai blood-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
-		},	
+		},
 		--blood phadai rendering
 		{
 			ingredients =
@@ -478,7 +478,7 @@ fun.autorecipes {
                 name = 'Extract phagnot blood-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
-		},	
+		},
 		--blood phagnot rendering
 		{
 			ingredients =
@@ -533,7 +533,7 @@ fun.autorecipes {
                 name = 'Extract scrondrix blood-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
-		},	
+		},
 		--blood scrondrix rendering
 		{
 			ingredients =
@@ -587,7 +587,7 @@ fun.autorecipes {
                 name = 'Extract Trits blood-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
-		},	
+		},
 		--blood trits rendering
 		{
 			ingredients =
@@ -642,7 +642,7 @@ fun.autorecipes {
                 name = 'Extract Ulric blood-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
                 icon_size = 64,
-		},	
+		},
 		--blood ulric rendering
 		{
 			ingredients =
@@ -699,7 +699,7 @@ fun.autorecipes {
                 name = 'Extract Vonix blood-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
                 icon_size = 32,
-		},	
+		},
 		--blood vonix rendering
 		{
 			ingredients =
@@ -753,7 +753,7 @@ fun.autorecipes {
 			name = 'Extract Xeno blood-2',
 			icon = "__base__/graphics/icons/fluid/sulfuric-acid.png",
 			icon_size = 64,
-		},	
+		},
 		--blood xeno rendering
 		{
 			ingredients =
@@ -862,7 +862,7 @@ fun.autorecipes {
                 name = 'Extract zipir blood-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
                 icon_size = 32,
-		},	
+		},
 		--blood zipir rendering
 		{
 			ingredients =

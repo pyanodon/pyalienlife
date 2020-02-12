@@ -1,3 +1,5 @@
+local util = require('util')
+
 RECIPE{
     type = "recipe",
     name = "caravan",
@@ -60,7 +62,7 @@ data:extend(
       type = "projectile",
       range = 0.5,
       cooldown = 35,
-      ammo_type = make_unit_melee_ammo_type(7),
+      ammo_type = _G.make_unit_melee_ammo_type(7),
       --sound = make_biter_roars(0.4),
 	animation =
 	{
@@ -86,7 +88,7 @@ data:extend(
 			frame_count = 30,
 			direction_count = 16,
 			shift = util.mul_shift(util.by_pixel(-0, -0), 0.5),
-			scale = scale,
+			--scale = scale,
 			},
 			{
 			filenames =
@@ -108,7 +110,7 @@ data:extend(
 			frame_count = 30,
 			shift = util.mul_shift(util.by_pixel(0, 48)),
 			direction_count = 16,
-			scale = scale,
+			--scale = scale,
 			draw_as_shadow = true,
 		  }
 		}
@@ -151,7 +153,7 @@ data:extend(
 			frame_count = 30,
 			direction_count = 16,
 			shift = util.mul_shift(util.by_pixel(-0, -0)),
-			scale = scale,
+			scale = _G.scale,
 			},
 			{
 			filenames =
@@ -173,7 +175,7 @@ data:extend(
 			frame_count = 30,
 			shift = util.mul_shift(util.by_pixel(-0, 48)),
 			direction_count = 16,
-			scale = scale,
+			--scale = scale,
 			draw_as_shadow = true,
 		  }
 		}

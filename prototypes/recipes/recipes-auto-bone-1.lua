@@ -34,7 +34,7 @@ fun.autorecipes {
                 name = 'Extract arthurian bones-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -71,7 +71,7 @@ fun.autorecipes {
                 name = 'Extract auog bones-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -109,7 +109,7 @@ fun.autorecipes {
                 name = 'Extract dingrits bones-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -146,7 +146,7 @@ fun.autorecipes {
                 name = 'Extract Korlex bones-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -184,7 +184,7 @@ fun.autorecipes {
                 name = 'Extract Mukmoux bones-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -221,7 +221,7 @@ fun.autorecipes {
                 name = 'Extract phadai bones-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -258,7 +258,7 @@ fun.autorecipes {
                 name = 'Extract phagnot bones-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -295,7 +295,7 @@ fun.autorecipes {
                 name = 'Extract scrondrix bones-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -331,7 +331,7 @@ fun.autorecipes {
                 name = 'Extract Trits bones-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -368,7 +368,7 @@ fun.autorecipes {
                 name = 'Extract Ulric bones-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -408,6 +408,6 @@ fun.autorecipes {
                 name = 'Extract Xeno bones-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }

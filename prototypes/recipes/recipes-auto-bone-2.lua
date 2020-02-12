@@ -34,7 +34,7 @@ fun.autorecipes {
                 name = 'Extract arthurian bones-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
-		},	
+		},
 		--bone arthurian rendering
 		{
 			ingredients =
@@ -90,7 +90,7 @@ fun.autorecipes {
                 name = 'Extract auog bones-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
-		},	
+		},
 		--bone auog rendering
 		{
 			ingredients =
@@ -145,7 +145,7 @@ fun.autorecipes {
                 name = 'Extract dingrits bones-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
-		},	
+		},
 		--meat dingrits rendering
 		{
 			ingredients =
@@ -200,7 +200,7 @@ fun.autorecipes {
                 name = 'Extract Korlex bones-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
-		},	
+		},
 		--bone korlex rendering
 		{
 			ingredients =
@@ -255,7 +255,7 @@ fun.autorecipes {
                 name = 'Extract Mukmoux bones-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
-		},	
+		},
 		--bone mukmoux rendering
 		{
 			ingredients =
@@ -310,7 +310,7 @@ fun.autorecipes {
                 name = 'Extract phadai bones-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
-		},	
+		},
 		--bone phadai rendering
 		{
 			ingredients =
@@ -365,7 +365,7 @@ fun.autorecipes {
                 name = 'Extract phagnot bones-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
-		},	
+		},
 		--bone phagnot rendering
 		{
 			ingredients =
@@ -420,7 +420,7 @@ fun.autorecipes {
                 name = 'Extract scrondrix bones-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
-		},	
+		},
 		--bone scrondrix rendering
 		{
 			ingredients =
@@ -474,7 +474,7 @@ fun.autorecipes {
                 name = 'Extract Trits bones-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
-		},	
+		},
 		--bone trits rendering
 		{
 			ingredients =
@@ -529,7 +529,7 @@ fun.autorecipes {
                 name = 'Extract Ulric bones-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
-		},	
+		},
 		--bone ulric rendering
 		{
 			ingredients =
@@ -587,7 +587,7 @@ fun.autorecipes {
                 name = 'Extract Xeno bones-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
                 icon_size = 64,
-		},	
+		},
 		--bone xeno rendering
 		{
 			ingredients =

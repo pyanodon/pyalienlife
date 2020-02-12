@@ -34,7 +34,7 @@ fun.autorecipes {
 			name = 'Extract arthurian guts-2',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
-		},		
+		},
 		--guts arthurian rendering
 		{
 			ingredients =
@@ -89,7 +89,7 @@ fun.autorecipes {
                 name = 'Extract auog guts-5',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},	
+		},
 		--guts auog rendering
 		{
 			ingredients =
@@ -146,7 +146,7 @@ fun.autorecipes {
                 name = 'Extract dhilmos guts-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},	
+		},
 		--guts dhilmos rendering
 		{
 			ingredients =
@@ -201,7 +201,7 @@ fun.autorecipes {
                 name = 'Extract dingrits guts-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},	
+		},
 		--guts dingrits rendering
 		{
 			ingredients =
@@ -256,7 +256,7 @@ fun.autorecipes {
                 name = 'Extract kmauts guts-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},	
+		},
 		--guts kmauts rendering
 		{
 			ingredients =
@@ -311,7 +311,7 @@ fun.autorecipes {
                 name = 'Extract Korlex guts-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},	
+		},
 		--guts korlex rendering
 		{
 			ingredients =
@@ -367,7 +367,7 @@ fun.autorecipes {
                 name = 'Extract Mukmoux guts-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},	
+		},
 		--guts mukmoux rendering
 		{
 			ingredients =
@@ -422,7 +422,7 @@ fun.autorecipes {
                 name = 'Extract phadai guts-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},	
+		},
 		--guts phadai rendering
 		{
 			ingredients =
@@ -477,7 +477,7 @@ fun.autorecipes {
                 name = 'Extract phagnot guts-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},	
+		},
 		--guts phagnot rendering
 		{
 			ingredients =
@@ -532,7 +532,7 @@ fun.autorecipes {
                 name = 'Extract scrondrix guts-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},	
+		},
 		--guts scrondrix rendering
 		{
 			ingredients =
@@ -586,7 +586,7 @@ fun.autorecipes {
                 name = 'Extract Trits guts-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},	
+		},
 		--guts trits rendering
 		{
 			ingredients =
@@ -698,7 +698,7 @@ fun.autorecipes {
                 name = 'Extract Vonix guts-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},	
+		},
 		--guts vonix rendering
 		{
 			ingredients =
@@ -758,7 +758,7 @@ fun.autorecipes {
                 name = 'Extract Vrauks guts-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},		
+		},
 		--guts vrauks rendering
 		{
 			ingredients =
@@ -867,7 +867,7 @@ fun.autorecipes {
                 name = 'Extract zipir guts-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
-		},	
+		},
 		--guts zipir rendering
 		{
 			ingredients =

@@ -75,7 +75,7 @@ ENTITY {
       }
     }
   }
-  
+
 ENTITY {
     type = "roboport",
     name = "hidden-roboport-for-logistics-radius",
@@ -199,9 +199,9 @@ ENTITY {
       }
     },
 
-    circuit_wire_connection_point = circuit_connector_definitions["roboport"].points,
-    circuit_connector_sprites = circuit_connector_definitions["roboport"].sprites,
-    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    circuit_wire_connection_point = _G.circuit_connector_definitions["roboport"].points,
+    circuit_connector_sprites = _G.circuit_connector_definitions["roboport"].sprites,
+    circuit_wire_max_distance = _G.default_circuit_wire_max_distance,
 
     default_available_logistic_output_signal = {type = "virtual", name = "signal-X"},
     default_total_logistic_output_signal = {type = "virtual", name = "signal-Y"},

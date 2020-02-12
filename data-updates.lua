@@ -1,5 +1,5 @@
 require("__stdlib__/stdlib/data/data").Util.create_data_globals()
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
+require("__pycoalprocessing__/prototypes/functions/functions")
 
 if mods["pyfusionenergy"] then
     require("prototypes/updates/pyfusionenergy-updates")

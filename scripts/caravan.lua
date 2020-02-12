@@ -7,7 +7,7 @@ local endding = {}
 local routenumber = 1
 
 script.on_init(
-    function(event)
+    function()
         global.caravanroutes = {}
     end
 )
@@ -27,7 +27,7 @@ script.on_event(
     function(event)
         if event.item == 'carrot-on-stick' then
             --log("it works")
-            for e, ent in pairs(event.entities) do
+            for _, ent in pairs(event.entities) do
                 --log(serpent.block(ent.name))
                 if ent.name == 'caravan' then
                     if next(lastclickedunit) == nil then
@@ -110,6 +110,7 @@ script.on_event(
 script.on_event(
     defines.events.on_ai_command_completed,
     function(event)
+        -- luacheck: ignore 512
         local car = event.unit_number
         --log(event.unit_number)
         --log(serpent.block(event.result))

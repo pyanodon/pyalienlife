@@ -350,7 +350,7 @@ local TRlist = {
     {tech = 'double-skin', oldrecipe = 'Extract skin from Improved Vrauks', newrecipe = 'Extract skin from Improved Vrauks-2'},
     {tech = 'double-skin', oldrecipe = 'Extract zipir skin-1', newrecipe = 'Extract zipir skin-2'},
     {tech = 'double-skin', oldrecipe = 'Extract skin from Improved Zipir', newrecipe = 'Extract skin from Improved Zipir-2'},
-    
+
 --fat 1--
     {tech = 'force-feeding', oldrecipe = 'Extract arthurian lard', newrecipe = 'Extract arthurian lard-1'},
     {tech = 'force-feeding', oldrecipe = 'Extract auog lard', newrecipe = 'Extract auog lard-1'},
@@ -362,7 +362,7 @@ local TRlist = {
     {tech = 'force-feeding', oldrecipe = 'Extract Trits lard', newrecipe = 'Extract Trits lard-1'},
     {tech = 'force-feeding', oldrecipe = 'Extract Vonix lard', newrecipe = 'Extract Vonix lard-1'},
     {tech = 'force-feeding', oldrecipe = 'Extract zipir lard', newrecipe = 'Extract zipir lard-1'},
- 
+
 --fat 2--
     {tech = 'fto4', oldrecipe = 'Extract arthurian lard-1', newrecipe = 'Extract arthurian lard-2'},
     {tech = 'fto4', oldrecipe = 'Extract fat from Improved arthurians', newrecipe = 'Extract fat from Improved arthurians-2'},
@@ -4798,11 +4798,8 @@ local TRlist =
 			{
 				['bigger-colon'] = true,
 				['explosive-diarrhea'] = true,
-				['interactive-cognition'] = true,
 				['metamide5'] = true,
-				['exercises'] = true,
 				['myostatin'] = true,
-				['osteocyte'] = true,
 				['hardened-bone'] = true,
 				['organ-replication'] = true,
 				['cavity'] = true,
@@ -4861,7 +4858,7 @@ local TRlist =
 				['mycology-mk01'] = true,
 				['yaedols'] = true,
 				['biopolymer-clusters'] = true,
-				
+
 			},
 	}
 

@@ -44,7 +44,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 110,
 			tech = 'arthurian-mk02'
@@ -57,11 +57,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 100,
 			tech = 'arthurian-mk03'
-		},		
+		},
 		--food 2
 		{
 			ingredients =
@@ -88,7 +88,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 85,
 			tech = 'arthurian-mk04'
@@ -101,11 +101,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 80,
 			tech = 'arthurian-mk04'
-		},	
+		},
 		--gh
 		{
 			ingredients =
@@ -115,7 +115,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-				
+
 				},
 			crafting_speed = 30,
 			tech = 'growth-hormone'
@@ -409,7 +409,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 80,
 			tech = 'assisted-embryology'
-		},		
+		},
 		--food 2
 		{
 			ingredients =
@@ -438,7 +438,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 65,
 			tech = 'assisted-embryology'
-		},	
+		},
 		-----------------------PHEROMONES-----------------------------
 		{
 			ingredients =
@@ -483,7 +483,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 50,
 			tech = 'pheromones'
-		},		
+		},
 		--food 2
 		{
 			ingredients =
@@ -512,7 +512,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 40,
 			tech = 'pheromones'
-		},	
+		},
 
 	}
 }
@@ -605,7 +605,7 @@ fun.autorecipes {
 			name = 'Extract arthurian brains',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
 			icon_size = 64,
-		},	
+		},
 		--skin
 		{
 			ingredients =
@@ -690,7 +690,7 @@ fun.autorecipes {
 			name = 'Extract arthurian lard',
 			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
 			icon_size = 64,
-		},	
+		},
 		--brain arthurian rendering
 		{
 			ingredients =

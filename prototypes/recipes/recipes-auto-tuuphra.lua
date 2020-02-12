@@ -129,7 +129,7 @@ fun.autorecipes {
 				   --{'b','+15'},
 				   --{'nitrogen','R'},
 				   --{name='bloodmeal',amount ='R'},
-                	{name='nitrogen',amount ='*20'},
+					{name='nitrogen',amount ='*20'},
                     --{'d'},
                 },
 			results =

@@ -34,7 +34,7 @@ fun.autorecipes {
 			name = 'Extract arthurian skin-2',
 			icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
 			icon_size = 32,
-		},	
+		},
 		--skin arthurian rendering
 		{
 			ingredients =
@@ -89,7 +89,7 @@ fun.autorecipes {
                 name = 'Extract auog skin-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
-		},	
+		},
 		--skin auog rendering
 		{
 			ingredients =
@@ -146,7 +146,7 @@ fun.autorecipes {
                 name = 'Extract dhilmos chitin-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -183,7 +183,7 @@ fun.autorecipes {
                 name = 'Extract Korlex skin-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
-		},	
+		},
 		--skin korlex rendering
 		{
 			ingredients =
@@ -238,7 +238,7 @@ fun.autorecipes {
                 name = 'Extract Mukmoux skin-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
-		},	
+		},
 		--skin mukmoux rendering
 		{
 			ingredients =
@@ -294,7 +294,7 @@ fun.autorecipes {
                 name = 'Extract phadai Skin-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
-		},	
+		},
 		--skin phadai rendering
 		{
 			ingredients =
@@ -349,7 +349,7 @@ fun.autorecipes {
                 name = 'Extract phagnot skin-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
-		},	
+		},
 		--skin phagnot rendering
 		{
 			ingredients =
@@ -404,7 +404,7 @@ fun.autorecipes {
                 name = 'Extract scrondrix skin-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
-		},	
+		},
 		--skin scrondrix rendering
 		{
 			ingredients =
@@ -458,7 +458,7 @@ fun.autorecipes {
                 name = 'Extract Trits skin-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
-		},	
+		},
 		--skin trits rendering
 		{
 			ingredients =
@@ -513,7 +513,7 @@ fun.autorecipes {
                 name = 'Extract Ulric skin-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
-		},	
+		},
 		--skin ulric rendering
 		{
 			ingredients =
@@ -570,7 +570,7 @@ fun.autorecipes {
                 name = 'Extract Vonix skin-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
-		},	
+		},
 		--skin vonix rendering
 		{
 			ingredients =
@@ -629,7 +629,7 @@ fun.autorecipes {
                 name = 'Extract Vrauks chithin-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",
                 icon_size = 64,
-		},	
+		},
 		--skin vrauks rendering
 		{
 			ingredients =
@@ -688,7 +688,7 @@ fun.autorecipes {
                 name = 'Extract xeno chitin-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",
                 icon_size = 64,
-		},	
+		},
 		--skin xeno rendering
 		{
 			ingredients =
@@ -746,7 +746,7 @@ fun.autorecipes {
                 name = 'Extract zipir skin-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
                 icon_size = 32,
-		},	
+		},
 		--skin zipir rendering
 		{
 			ingredients =

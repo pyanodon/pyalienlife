@@ -34,7 +34,7 @@ fun.autorecipes {
 			name = 'Extract arthurian Meat-1',
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 			icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -71,7 +71,7 @@ fun.autorecipes {
                 name = 'Extract auog Meat-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
                 icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -110,7 +110,7 @@ fun.autorecipes {
 				name = 'Extract dhilmos Meat-1',
 				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -147,7 +147,7 @@ fun.autorecipes {
 				name = 'Extract dingrits Meat-1',
 				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -184,7 +184,7 @@ fun.autorecipes {
 				name = 'Extract kmauts Meat-1',
 				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -221,7 +221,7 @@ fun.autorecipes {
 				name = 'Extract Korlex Meat-1',
 				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -258,7 +258,7 @@ fun.autorecipes {
 				name = 'Extract Mukmoux Meat-1',
 				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -295,7 +295,7 @@ fun.autorecipes {
 				name = 'Extract phadai Meat-1',
 				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -332,7 +332,7 @@ fun.autorecipes {
 				name = 'Extract phagnot Meat-1',
 				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -369,7 +369,7 @@ fun.autorecipes {
 				name = 'Extract scrondrix Meat-1',
 				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -405,7 +405,7 @@ fun.autorecipes {
 				name = 'Extract Trits Meat-1',
 				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -442,7 +442,7 @@ fun.autorecipes {
 				name = 'Extract Ulric Meat-1',
 				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -481,7 +481,7 @@ fun.autorecipes {
 				name = 'Extract Vonix Meat-1',
 				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -521,7 +521,7 @@ fun.autorecipes {
 				name = 'Extract Vrauks Meat-1',
 				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -561,7 +561,7 @@ fun.autorecipes {
 				name = 'Extract Xeno Meat-1',
 				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
-		},	
+		},
 	}
 }
 
@@ -632,6 +632,6 @@ fun.autorecipes {
 				name = 'Extract zipir Meat-1',
 				icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 				icon_size = 64,
-		},	
+		},
 	}
 }
