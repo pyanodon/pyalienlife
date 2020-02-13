@@ -1,6 +1,6 @@
 --module bonus formula = crafting speed * ( 1 + ( module bounus in decimal * number of modules )
 --i.e. 0.01 * ( 1 + ( 15 * 6 )
---module bonus is a whole number do to the size of the bonus amount 
+--module bonus is a whole number do to the size of the bonus amount
 
 require("__stdlib__/stdlib/data/data").Util.create_data_globals()
 
