@@ -84,6 +84,7 @@ RECIPE {
         {type = 'item', name = 'tin-plate', amount = 2},
         {type = 'item', name = 'fawogae', amount = 5},
         {type = 'item', name = 'ralesia-seeds', amount = 15},
+        {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'tuuphra-seeds', amount = 15},
         {type = 'item', name = 'ash', amount = 10},
         {type = 'item', name = 'moss', amount = 15},
@@ -91,7 +92,7 @@ RECIPE {
         {type = 'fluid', name = 'steam', amount = 100},
     },
     results = {
-        {type = 'item', name = 'phagnot-food-02', amount = 3},
+        {type = 'item', name = 'phagnot-food-02', amount = 5},
     },
 }:add_unlock("food-mk02"):add_ingredient({type = "item", name = "raw-fiber", amount = 10})
 

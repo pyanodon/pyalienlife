@@ -100,6 +100,7 @@ RECIPE {
         {type = 'item', name = 'wood-seeds', amount = 10},
         {type = 'item', name = 'agar', amount = 10},
         {type = 'item', name = 'casein', amount = 5},
+        {type = 'item', name = 'bio-sample', amount = 6},
         {type = 'item', name = 'moss', amount = 10},
         {type = 'item', name = 'guts', amount = 5},
         {type = 'fluid', name = 'fish-oil', amount = 50},

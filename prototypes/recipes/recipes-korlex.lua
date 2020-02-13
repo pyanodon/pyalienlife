@@ -73,6 +73,7 @@ RECIPE {
         {type = 'item', name = 'sea-sponge', amount = 1},
         {type = 'item', name = 'rennea', amount = 8},
         {type = 'item', name = 'meat', amount = 10},
+        {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'salt', amount = 10},
         {type = 'item', name = 'biomass', amount = 20},
         {type = 'item', name = 'yaedols', amount = 4},
@@ -81,7 +82,7 @@ RECIPE {
         {type = 'fluid', name = 'fish-oil', amount = 100},
     },
     results = {
-        {type = 'item', name = 'korlex-food-02', amount = 4},
+        {type = 'item', name = 'korlex-food-02', amount = 5},
     },
 }:add_unlock("food-mk03"):add_ingredient({type = "item", name = "fiberboard", amount = 2})
 

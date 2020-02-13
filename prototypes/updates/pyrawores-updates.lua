@@ -8,6 +8,21 @@ RECIPE('cadaveric-arum-mk02'):add_ingredient({type = "item", name = "duralumin",
 RECIPE('cadaveric-arum-mk03'):add_ingredient({type = "item", name = "stainless-steel", amount = 25}):add_ingredient({type = "item", name = "aluminium-plate", amount = 40})
 RECIPE('cadaveric-arum-mk04'):add_ingredient({type = "item", name = "super-steel", amount = 25})
 
+RECIPE('aluminium-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
+RECIPE('chromium-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
+RECIPE('coal-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
+RECIPE('copper-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
+RECIPE('iron-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
+RECIPE('zinc-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
+RECIPE('uranium-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
+RECIPE('titanium-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
+RECIPE('tin-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
+RECIPE('lead-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
+RECIPE('nexelit-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
+RECIPE('quartz-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
+RECIPE('nickel-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
+RECIPE('phosphate-mine-02'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
+
 
 --RECIPES--
 

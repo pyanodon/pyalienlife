@@ -82,6 +82,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'tin-plate', amount = 2},
         {type = 'item', name = 'fawogae', amount = 5},
+        {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'ralesias', amount = 5},
         {type = 'item', name = 'wood-seeds', amount = 1},
         {type = 'item', name = 'ash', amount = 10},
@@ -90,7 +91,7 @@ RECIPE {
         {type = 'fluid', name = 'steam', amount = 100},
     },
     results = {
-        {type = 'item', name = 'auog-food-02', amount = 3},
+        {type = 'item', name = 'auog-food-02', amount = 5},
     },
 }:add_unlock("food-mk02")
 

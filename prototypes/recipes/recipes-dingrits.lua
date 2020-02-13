@@ -90,6 +90,7 @@ RECIPE {
         {type = 'item', name = 'bones', amount = 10},
         {type = 'item', name = 'tuuphra', amount = 5},
         {type = 'item', name = 'yotoi-fruit', amount = 10},
+        {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'casein', amount = 5},
         {type = 'item', name = 'guts', amount = 10},
         {type = 'item', name = 'seaweed', amount = 5},
@@ -98,7 +99,7 @@ RECIPE {
         {type = 'fluid', name = 'fish-oil', amount = 100},
     },
     results = {
-        {type = 'item', name = 'dingrits-food-02', amount = 3},
+        {type = 'item', name = 'dingrits-food-02', amount = 5},
     },
 }:add_unlock("food-mk02")
 

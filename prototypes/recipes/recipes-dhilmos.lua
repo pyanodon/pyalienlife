@@ -143,6 +143,7 @@ RECIPE {
         {type = 'item', name = 'nickel-plate', amount = 2},
         {type = 'item', name = 'navens', amount = 1},
         {type = 'item', name = 'seaweed', amount = 3},
+        {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'yotoi-seeds', amount = 10},
         {type = 'item', name = 'guts', amount = 5},
         {type = 'item', name = 'skin', amount = 3},
@@ -151,7 +152,7 @@ RECIPE {
         {type = 'fluid', name = 'blood', amount = 50},
     },
     results = {
-        {type = 'item', name = 'dhilmos-food-02', amount = 3},
+        {type = 'item', name = 'dhilmos-food-02', amount = 5},
     },
 }:add_unlock("food-mk02")
 

@@ -38,6 +38,7 @@ RECIPE {
         {type = 'item', name = 'fawogae', amount = 10},
         {type = 'item', name = 'mukmoux-fat', amount = 4},
         {type = 'item', name = 'yotoi-fruit', amount = 3},
+        {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'ash', amount = 10},
         {type = 'item', name = 'seaweed', amount = 5},
         {type = 'item', name = 'skin', amount = 5},
@@ -47,7 +48,7 @@ RECIPE {
         {type = 'fluid', name = 'blood', amount = 50},
     },
     results = {
-        {type = 'item', name = 'fish-food-02', amount = 3},
+        {type = 'item', name = 'fish-food-02', amount = 5},
     },
 }:add_unlock("food-mk03")
 
