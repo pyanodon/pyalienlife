@@ -151,7 +151,6 @@ script.on_init(
 		global.current_outpost = {}
 		global.outpost_numbers = {}
 		global.outpost_table = {}
-		remote.call("silo_script","set_no_victory", true)
 		global.TRlist = TRlist_og
 		TRlist = global.TRlist
 		global.current_entity = {}
@@ -162,6 +161,10 @@ script.on_init(
 			entity = {},
 			player = ''
 			}
+		if not remote.interfaces["silo_script"] then
+			return
+		end
+		remote.call("silo_script","set_no_victory", true)
     end)
 
 script.on_load(function()

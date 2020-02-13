@@ -3676,6 +3676,46 @@ ITEM {
 }
 
 ITEM {
+    type = "capsule",
+    name = "dried-meat",
+    icon = "__pyhightechgraphics__/graphics/icons/dried-meat.png",
+    icon_size = 32,
+    flags = {},
+    subgroup = "py-hightech-zipir",
+	capsule_action =
+    {
+      type = "use-on-self",
+      attack_parameters =
+      {
+        type = "projectile",
+        ammo_category = "capsule",
+        cooldown = 30,
+        range = 0,
+        ammo_type =
+        {
+          category = "capsule",
+          target_type = "position",
+          action =
+          {
+            type = "direct",
+            action_delivery =
+            {
+              type = "instant",
+              target_effects =
+              {
+                type = "damage",
+                damage = {type = "physical", amount = -80}
+              }
+            }
+          }
+        }
+      }
+    },
+    order = "h",
+    stack_size = 200
+}
+
+ITEM {
     type = "item",
     name = "bioreserve",
     icon = "__pyalienlifegraphics__/graphics/icons/replicator-bioreserve.png",
@@ -5511,7 +5551,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "fa",
     stack_size = 10,
-	effect = { speed = {bonus = 15}},
+	effect = { speed = {bonus = 7.5}},
 	limitation = alien_life_limitations_fish,
 	limitation_message_key = "Its full"
 }
@@ -5543,7 +5583,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "fb",
     stack_size = 10,
-	effect = { speed = {bonus = 20}},
+	effect = { speed = {bonus = 10}},
 	limitation = alien_life_limitations_fish,
 	limitation_message_key = "Its full"
 }
@@ -5575,7 +5615,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "fc",
     stack_size = 10,
-	effect = { speed = {bonus = 25}},
+	effect = { speed = {bonus = 12.5}},
 	limitation = alien_life_limitations_fish,
 	limitation_message_key = "Its full"
 }
@@ -5607,7 +5647,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "fd",
     stack_size = 10,
-	effect = { speed = {bonus = 30}},
+	effect = { speed = {bonus = 15}},
 	limitation = alien_life_limitations_fish,
 	limitation_message_key = "Its full"
 }
@@ -5863,7 +5903,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-a",
     stack_size = 10,
-	effect = { speed = {bonus = 20}},
+	effect = { speed = {bonus = 10}},
 	limitation = alien_life_limitations_kmauts,
 	limitation_message_key = "Its full"
 }
@@ -5883,7 +5923,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-b",
     stack_size = 10,
-	effect = { speed = {bonus = 25}},
+	effect = { speed = {bonus = 12.5}},
 	limitation = alien_life_limitations_kmauts,
 	limitation_message_key = "Its full"
 }
@@ -5903,7 +5943,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-c",
     stack_size = 10,
-	effect = { speed = {bonus = 30}},
+	effect = { speed = {bonus = 15}},
 	limitation = alien_life_limitations_kmauts,
 	limitation_message_key = "Its full"
 }
@@ -5923,7 +5963,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 10,
-	effect = { speed = {bonus = 35}},
+	effect = { speed = {bonus = 17.5}},
 	limitation = alien_life_limitations_kmauts,
 	limitation_message_key = "Its full"
 }
@@ -6179,7 +6219,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "b-a",
     stack_size = 10,
-	effect = { speed = {bonus = 90}},
+	effect = { speed = {bonus = 45}},
 	limitation = alien_life_limitations_bhoddos,
 	limitation_message_key = "Its full"
 }
@@ -6199,7 +6239,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "b-b",
     stack_size = 10,
-	effect = { speed = {bonus = 100}},
+	effect = { speed = {bonus = 50}},
 	limitation = alien_life_limitations_bhoddos,
 	limitation_message_key = "Its full"
 }
@@ -6219,7 +6259,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "b-c",
     stack_size = 10,
-	effect = { speed = {bonus = 110}},
+	effect = { speed = {bonus = 55}},
 	limitation = alien_life_limitations_bhoddos,
 	limitation_message_key = "Its full"
 }
@@ -6239,7 +6279,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "b-d",
     stack_size = 10,
-	effect = { speed = {bonus = 120}},
+	effect = { speed = {bonus = 60}},
 	limitation = alien_life_limitations_bhoddos,
 	limitation_message_key = "Its full"
 }
