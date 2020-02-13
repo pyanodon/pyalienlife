@@ -91,13 +91,14 @@ RECIPE {
         {type = 'item', name = 'meat', amount = 10},
         {type = 'item', name = 'casein', amount = 5},
         {type = 'item', name = 'ash', amount = 10},
+        {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'moss', amount = 10},
         {type = 'item', name = 'guts', amount = 5},
         {type = 'fluid', name = 'fish-oil', amount = 30},
         {type = 'fluid', name = 'steam', amount = 100},
     },
     results = {
-        {type = 'item', name = 'arthurian-food-02', amount = 4},
+        {type = 'item', name = 'arthurian-food-02', amount = 5},
     },
 }:add_unlock("food-mk02")
 
