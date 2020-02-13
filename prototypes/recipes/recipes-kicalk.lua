@@ -13,7 +13,7 @@ RECIPE {
         {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'cdna', amount = 3},
         {type = 'item', name = 'kicalk-codex', amount = 1},
-        {type = 'item', name = 'earth-flower-sample', amount = 1},
+        {type = 'item', name = 'earth-palmtree-sample', amount = 1},
         {type = 'fluid', name = 'water', amount = 1000},
     },
     results = {
@@ -46,7 +46,7 @@ RECIPE {
     energy_required = 300,
     ingredients = {
         {type = 'item', name = 'steel-chest', amount = 1},
-        {type = 'item', name = 'py-science-pack', amount = 50},
+        {type = 'item', name = 'automation-science-pack', amount = 50},
         {type = 'item', name = 'kicalk-codex', amount = 1},
     },
     results = {

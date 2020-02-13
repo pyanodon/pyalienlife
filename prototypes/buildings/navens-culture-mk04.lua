@@ -43,7 +43,7 @@ ENTITY {
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 7
+        module_slots = 14
     },
     allowed_effects = {"speed"},
     crafting_categories = {"navens"},

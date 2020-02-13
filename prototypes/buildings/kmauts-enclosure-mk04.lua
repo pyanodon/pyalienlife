@@ -43,11 +43,11 @@ ENTITY {
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 9
+        module_slots = 24
     },
     allowed_effects = {"speed"},
     crafting_categories = {"kmauts"},
-    crafting_speed = 0.005,
+    crafting_speed = 0.01,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

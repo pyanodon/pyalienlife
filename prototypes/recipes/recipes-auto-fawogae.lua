@@ -19,7 +19,7 @@ fun.autorecipes {
 				{
 					{name='fawogae',amount ='*4'}
 				},
-			crafting_speed = 25,
+			crafting_speed = 70,
 			tech = 'fawogae'
         },
         {
@@ -31,7 +31,7 @@ fun.autorecipes {
 				{
 					{name='fawogae',amount ='+2'}
 				},
-			crafting_speed = 25,
+			crafting_speed = 60,
 			tech = 'fawogae'
         },
         {
@@ -43,7 +43,7 @@ fun.autorecipes {
 				{
 					{name='fawogae',amount ='+2'}
 				},
-			crafting_speed = 25,
+			crafting_speed = 55,
 			tech = 'fawogae'
         },
         {
@@ -55,7 +55,7 @@ fun.autorecipes {
 				{
 					{name='fawogae',amount =9}
 				},
-			crafting_speed = 25,
+			crafting_speed = 52,
 			tech = 'fawogae'
         },
         --green
@@ -70,7 +70,7 @@ fun.autorecipes {
 				{
 					{name='fawogae',amount =10}
 				},
-			crafting_speed = 20,
+			crafting_speed = 48,
 			tech = 'mycology-mk02'
         },
         {
@@ -82,7 +82,7 @@ fun.autorecipes {
 				{
 					{name='fawogae',amount =11}
 				},
-			crafting_speed = 20,
+			crafting_speed = 44,
 			tech = 'mycology-mk02'
         },
         {
@@ -94,7 +94,7 @@ fun.autorecipes {
 				{
 					{name='fawogae',amount =12}
 				},
-			crafting_speed = 20,
+			crafting_speed = 40,
 			tech = 'mycology-mk02'
         },
     --blue
@@ -110,7 +110,7 @@ fun.autorecipes {
 				{
 					{name='fawogae',amount =14}
 				},
-			crafting_speed = 18,
+			crafting_speed = 36,
 			tech = 'mycology-mk03'
         },
         {
@@ -122,7 +122,7 @@ fun.autorecipes {
 				{
 					{name='fawogae',amount =15}
 				},
-			crafting_speed = 18,
+			crafting_speed = 32,
 			tech = 'mycology-mk03'
         },
         {
@@ -134,7 +134,7 @@ fun.autorecipes {
 				{
 					{name='fawogae',amount =16}
 				},
-			crafting_speed = 18,
+			crafting_speed = 28,
 			tech = 'mycology-mk03'
 		},
     --GH
@@ -149,7 +149,7 @@ fun.autorecipes {
             {
                 {name='fawogae',amount =16}
             },
-        crafting_speed = 15,
+        crafting_speed = 25,
         tech = 'mycology-mk04'
     },
     {
@@ -165,7 +165,7 @@ fun.autorecipes {
             {
                 {name='fawogae',amount =17}
             },
-        crafting_speed = 15,
+        crafting_speed = 20,
         tech = 'mycology-mk04'
     },
     {
@@ -192,7 +192,7 @@ fun.autorecipes {
             {
                 {name='fawogae',amount =20}
             },
-        crafting_speed = 15,
+        crafting_speed = 10,
         tech = 'mycology-mk04'
     },
 	}
