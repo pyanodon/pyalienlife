@@ -1,9 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.9
+  Balance:
+    - Balanced some foods
+    - fixed the animals beacon abuse.
+    - buffed coal from navens
+    - fixed some exploits, you dirt cheaters!
+    - balanced collectors to return stuff correctly
+---------------------------------------------------------------------------------------------------
 Version: 1.0.8
   Balance:
     - fixed issue with loading pyal in old saves
     - fixed issue with kicalk using wrong dna pack
-    - "fixed" fawoge
+    - "fixed" fawogae
     - started rebalancing machine speeds per tier
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.7
