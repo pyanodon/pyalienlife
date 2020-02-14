@@ -47,7 +47,7 @@ ENTITY {
     module_specification = {
         module_slots = 8
     },
-    allowed_effects = {"speed"},
+    allowed_effects = {"speed","productivity"},
     crafting_categories = {"korlex"},
     crafting_speed = 0.01,
     energy_source = {
