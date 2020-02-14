@@ -44,9 +44,9 @@ ENTITY {
     --draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 7
+        module_slots = 10
     },
-    allowed_effects = {"speed"},
+    allowed_effects = {"speed","productivity"},
     crafting_categories = {"phadai"},
     crafting_speed = 0.01,
     energy_source = {
