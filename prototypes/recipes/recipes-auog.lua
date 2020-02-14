@@ -84,6 +84,7 @@ RECIPE {
         {type = 'item', name = 'fawogae', amount = 5},
         {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'ralesias', amount = 5},
+        {type = 'item', name = 'casein', amount = 10},
         {type = 'item', name = 'wood-seeds', amount = 1},
         {type = 'item', name = 'ash', amount = 10},
         {type = 'item', name = 'moss', amount = 10},
