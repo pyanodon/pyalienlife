@@ -72,6 +72,7 @@ RECIPE {
         {type = 'item', name = 'fish', amount = 5},
         {type = 'item', name = 'sea-sponge', amount = 1},
         {type = 'item', name = 'rennea', amount = 8},
+        {type = 'item', name = 'casein', amount = 5},
         {type = 'item', name = 'meat', amount = 10},
         {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'salt', amount = 10},
