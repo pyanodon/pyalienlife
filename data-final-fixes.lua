@@ -19,9 +19,7 @@ log(serpent.block(recipenames))
 ]]--
 
 for _, drill in pairs(data.raw['mining-drill']) do
-
 	drill.allowed_effects = {"consumption", "speed", "pollution"}
-	
 end
 
 local speed_module_blacklist =
