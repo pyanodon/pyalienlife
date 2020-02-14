@@ -2,9 +2,9 @@
 Version: 1.0.8
   Balance:
     - fixed issue with loading pyal in old saves
-	- fixed issue with kicalk using wrong dna pack
-	- "fixed" fawoge
-	- started rebalancing machine speeds per tier
+    - fixed issue with kicalk using wrong dna pack
+    - "fixed" fawoge
+    - started rebalancing machine speeds per tier
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.7
   Balance:
