@@ -62,14 +62,15 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = 'item', name = 'py-science-pack', amount = 2},
+        {type = 'item', name = 'production-science-01', amount = 5},
+        {type = 'item', name = 'py-science-pack', amount = 8},
         {type = 'item', name = 'chemical-science-pack', amount = 10},
-        {type = 'item', name = 'brain', amount = 8},
-        {type = 'fluid', name = 'gta', amount = 50},
-        {type = 'fluid', name = 'fetal-serum', amount = 150},
-        {type = 'item', name = 'nexelit-plate', amount = 5},
+        {type = 'item', name = 'brain', amount = 30},
+        {type = 'fluid', name = 'gta', amount = 250},
+        {type = 'fluid', name = 'fetal-serum', amount = 500},
+        {type = 'item', name = 'nexelit-plate', amount = 50},
     },
     results = {
         {type = 'item', name = 'utility-science-pack', amount = 1},
     },
-}:add_unlock("biotech-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 10})
+}:add_unlock("biotech-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 20})
