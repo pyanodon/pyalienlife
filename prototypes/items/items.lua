@@ -1276,11 +1276,10 @@ ITEM {
     stack_size = 10
 }
 
---PY FIX
 ITEM {
     type = "item",
     name = "fawogae-codex",
-    icon = "__pyalienlifegraphics__/graphics/icons/ralesia-codex.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/fawogae-codex.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-codex",
@@ -1376,11 +1375,10 @@ ITEM {
     stack_size = 10
 }
 
---PY FIX
 ITEM {
     type = "item",
     name = "earth-shroom-sample",
-    icon = "__pyalienlifegraphics__/graphics/icons/earth-flower-sample.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/earth-shroom-sample.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-samples",
@@ -3169,7 +3167,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/bhoddos-spore.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-bhoddos",
+    subgroup = "py-alienlife-items",
     order = "a",
     stack_size = 50
 }
@@ -3702,7 +3700,7 @@ ITEM {
 ITEM {
     type = "capsule",
     name = "dried-meat",
-    icon = "__pyalienlifegraphics3__/graphics/icons/dried-meat.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/dried-meat.png",
     icon_size = 32,
     flags = {},
     subgroup = "py-alienlife-items",
@@ -4435,7 +4433,7 @@ local alien_life_limitations_yaedols =
   "yaedols11",
   "yaedols12",
 	}
-	
+
 local alien_life_limitations_fawogae =
 	{
 	'fawogae-mk02',

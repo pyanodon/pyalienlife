@@ -26,25 +26,6 @@ fun.results_replacer("guar-separation", "organics", "biomass")
 
 ----EXCLUSIVE RECIPES----
 
-
-RECIPE {
-    type = "recipe",
-    name = "guar-separation-b",
-    category = "solid-separator",
-    enabled = false,
-    energy_required = 3,
-    ingredients = {
-        {type = "item", name = "guar", amount = 10},
-        },
-    results = {
-        {type = "item", name = "guar-seeds", amount = 50},
-        {type = "item", name = "biomass", amount = 10},
-    },
-    main_product = "guar-seeds",
-    subgroup = "py-petroleum-handling-recipes",
-    order = "a"
-}:add_unlock("oil-machines-mk01")
-
 RECIPE {
     type = 'recipe',
     name = 'biomass-1-a',
@@ -118,7 +99,7 @@ RECIPE {
     energy_required = 50,
     ingredients = {
         {type = 'fluid', name = 'dirty-water', amount = 200},
-        {type = 'item', name = 'guar-seeds', amount = 20},
+        {type = 'item', name = 'guar-seeds', amount = 40},
     },
     results = {
         {type = 'item', name = 'nb-biomass', amount = 10},
@@ -137,7 +118,7 @@ RECIPE {
     energy_required = 40,
     ingredients = {
         {type = 'fluid', name = 'dirty-water', amount = 200},
-        {type = 'item', name = 'guar-seeds', amount = 20},
+        {type = 'item', name = 'guar-seeds', amount = 40},
         {type = 'fluid', name = 'chelator', amount = 50},
     },
     results = {
@@ -157,7 +138,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'fluid', name = 'dirty-water', amount = 200},
-        {type = 'item', name = 'guar-seeds', amount = 20},
+        {type = 'item', name = 'guar-seeds', amount = 40},
         {type = 'fluid', name = 'chelator', amount = 50},
         {type = 'item', name = 'hmas', amount = 1},
     },

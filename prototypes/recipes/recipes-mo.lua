@@ -9,7 +9,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'fawogae-spore', amount = 1, probability = 0.4},
     },
-}:add_unlock("mycology-mk01")
+}:add_unlock("fawogae")
 
 RECIPE {
     type = 'recipe',
