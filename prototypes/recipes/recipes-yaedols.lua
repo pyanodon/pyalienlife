@@ -12,6 +12,7 @@ RECIPE {
         {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'cdna', amount = 3},
         {type = 'item', name = 'bio-sample', amount = 5},
+        {type = 'item', name = 'earth-shroom-sample', amount = 1},
         {type = 'item', name = 'moss-gen', amount = 5},
         {type = 'item', name = 'navens-codex', amount = 1},
         {type = 'item', name = 'yaedols-codex', amount = 1},
