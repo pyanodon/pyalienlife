@@ -95,7 +95,7 @@ ENTITY {
             pipe_picture = DATA.Pipes.pictures("assembling-machine-3", {0, 0.22}, {0.02, -1}, nil, nil, pipes),
             base_area = 10,
             base_level = -1,
-            pipe_connections = {{type = "input", position = {3.5, 0.5}}}
+            pipe_connections = {{type = "input", position = {3.5, -0.5}}}
         },
         off_when_no_fluid_recipe = true
     },

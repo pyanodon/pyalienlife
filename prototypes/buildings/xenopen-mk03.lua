@@ -144,7 +144,7 @@ ENTITY {
                 filename = "__pyalienlifegraphics3__/graphics/entity/xenopen/hit.png",
                 frame_count = 60,
                 line_length = 10,
-                run_mode = "backward",
+                run_mode = "forward-then-backward",
                 width = 160,
                 height = 96,
                 animation_speed = 0.4

@@ -2173,7 +2173,6 @@ local recipes_list =
   "log-organics-2",
   "organics-from-wood-2",
   "soil-separation-2",
-  "guar-separation-b",
   "biomass-1-a",
   "dried-grods-02",
   "gas-bladder-to-natura-gas",

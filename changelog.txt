@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+  Balance:
+    - Added mechanics to Fawogae
+    - Fixed Xenos animation
+    - Removed duplicate recipe when pyPH is active
+    - Rebalanced guar-niobium phytomining production
+---------------------------------------------------------------------------------------------------
 Version: 1.0.9
   Balance:
     - Balanced some foods
