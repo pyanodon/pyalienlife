@@ -1,5 +1,6 @@
 require("__stdlib__/stdlib/data/data").Util.create_data_globals()
 require("__pycoalprocessing__/prototypes/functions/functions")
+local fun = require("prototypes/functions/functions")
 
 if mods["pyfusionenergy"] then
     require("prototypes/updates/pyfusionenergy-updates")
@@ -27,6 +28,7 @@ end
 --ADAPTATIONS
 
 data.raw.fish.fish.minable.result = 'fish'
+data.raw.item.fawogae = nil
 
 for _, recipe in pairs(data.raw.recipe) do
     local r = RECIPE(recipe)
@@ -43,6 +45,8 @@ for _, recipe in pairs(data.raw.recipe) do
     local r = RECIPE(recipe)
     r:replace_ingredient('xyhiphoe-blood', 'arthropod-blood')
 end
+
+--fun.global_item_replacer('fawogae', 'fawogae-mk01')
 
 TECHNOLOGY('fluid-handling'):remove_pack('logistic-science-pack')
 TECHNOLOGY('automation-2'):remove_pack('logistic-science-pack')

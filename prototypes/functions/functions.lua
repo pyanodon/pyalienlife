@@ -1279,7 +1279,8 @@ recipe =
         --log(serpent.block(mat.results))
 
         for i, item in pairs(mat.results) do
-            --log(serpent.block(mat.results))
+            --log(serpent.block(mat))
+			--log(serpent.block(mat.results))
             --log(serpent.block(item))
             --log(serpent.block(item[1]))
             --log(serpent.block(items))

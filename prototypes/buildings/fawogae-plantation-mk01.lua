@@ -59,11 +59,11 @@ ENTITY {
     selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 1
+        module_slots = 20
     },
-    allowed_effects = {"consumption","speed"},
+    allowed_effects = {"speed","productivity"},
     crafting_categories = {"fawogae"},
-    crafting_speed = 0.3,
+    crafting_speed = 0.1,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
@@ -88,6 +88,14 @@ ENTITY {
             base_area = 10,
             base_level = -1,
             pipe_connections = {{type = "input", position = {-3.5, 0.5}}}
+        },
+		{
+            production_type = "input",
+            pipe_covers = DATA.Pipes.covers(false, true, true, true),
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", {0, 0.22}, {0.02, -1}, nil, nil, pipes),
+            base_area = 10,
+            base_level = -1,
+            pipe_connections = {{type = "input", position = {3.5, 0.5}}}
         },
         off_when_no_fluid_recipe = true
     },

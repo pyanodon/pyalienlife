@@ -432,6 +432,7 @@ require('prototypes/recipes/recipes-bladder')
 require('prototypes/recipes/recipes-auto-acessories')
 require('prototypes/recipes/recipes-photomining')
 require('prototypes/recipes/recipes-bioprinting')
+require('prototypes/recipes/recipes-fawogae')
 
 --(( ORES ))--
 require('prototypes/ores/ralesia')

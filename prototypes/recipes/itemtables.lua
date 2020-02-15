@@ -106,6 +106,7 @@ items.inputs.mukmouxfood02 = {'mukmoux-food-02', 1}
 items.inputs.mukmouxcalf = {'mukmoux-calf', 1}
 items.inputs.ulriccub = {'ulric-cub', 1}
 items.inputs.ralesias = {'ralesias', 1}
+items.inputs.fawogae = {'fawogae', 1}
 items.inputs.meat = {'meat',1}
 items.inputs.bones = {'bones', 1}
 items.inputs.blood = {'blood',10}
