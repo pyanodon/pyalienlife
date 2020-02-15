@@ -1904,3 +1904,21 @@ RECIPE {
     icon = '__pyalienlifegraphics__/graphics/icons/empty-barrel-milk-recipe.png',
     icon_size = 64,
 }:add_unlock("korlex")
+
+RECIPE {
+    type = "recipe",
+    name = "flask-2",
+    enabled = false,
+    energy_required = 3,
+    ingredients = {
+        {type = "item", name = "glass", amount = 10},
+        {type = "item", name = "boron-trioxide", amount = 5}
+    },
+    results = {
+        {"flask", 5}
+    },
+    icon = "__pycoalprocessinggraphics__/graphics/icons/mip/glassware-01.png",
+    icon_size = 64,
+    subgroup = "py-items",
+    order = "f"
+}:add_unlock("genetics-mk01")
