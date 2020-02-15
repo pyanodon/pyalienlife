@@ -1522,7 +1522,7 @@ RECIPE {
     energy_required = 5,
     ingredients = {
         {type = 'item', name = 'sporopollenin', amount = 5},
-        {type = 'fluid', name = 'refsyngas', amount = 100},
+        {type = 'fluid', name = 'refsyngas', amount = 150},
         {type = 'item', name = 'lead-plate', amount = 2},
     },
     results = {
@@ -1915,10 +1915,31 @@ RECIPE {
         {type = "item", name = "boron-trioxide", amount = 5}
     },
     results = {
-        {"flask", 4}
+        {"flask", 3}
     },
     icon = "__pycoalprocessinggraphics__/graphics/icons/mip/glassware-01.png",
     icon_size = 64,
     subgroup = "py-items",
     order = "f"
 }:add_unlock("genetics-mk01")
+
+RECIPE {
+    type = "recipe",
+    name = "flask-3",
+    enabled = false,
+    category = 'advanced-foundry',
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "glass", amount = 10},
+        {type = "fluid", name = "refsyngas", amount = 150},
+        {type = "item", name = "purified-quartz", amount = 1},
+        {type = "item", name = "boron-trioxide", amount = 5}
+    },
+    results = {
+        {"flask", 5}
+    },
+    icon = "__pycoalprocessinggraphics__/graphics/icons/mip/glassware-01.png",
+    icon_size = 64,
+    subgroup = "py-items",
+    order = "f"
+}:add_unlock("genetics-mk02")
