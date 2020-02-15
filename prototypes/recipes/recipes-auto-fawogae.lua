@@ -7,7 +7,7 @@ fun.autorecipes {
 	category = 'fawogae',
 	subgroup = 'py-alienlife-fawogae',
 	order = 'b',
-	--module_limitations = 'fawogae',
+	module_limitations = 'fawogae',
     mats =
 	{
 		{

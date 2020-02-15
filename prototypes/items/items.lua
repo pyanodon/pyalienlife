@@ -1276,6 +1276,18 @@ ITEM {
     stack_size = 10
 }
 
+--PY FIX
+ITEM {
+    type = "item",
+    name = "fawogae-codex",
+    icon = "__pyalienlifegraphics__/graphics/icons/ralesia-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
 ITEM {
     type = "item",
     name = "mukmoux-codex",
@@ -1356,6 +1368,18 @@ ITEM {
 ITEM {
     type = "item",
     name = "earth-flower-sample",
+    icon = "__pyalienlifegraphics__/graphics/icons/earth-flower-sample.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-samples",
+    order = "a",
+    stack_size = 10
+}
+
+--PY FIX
+ITEM {
+    type = "item",
+    name = "earth-shroom-sample",
     icon = "__pyalienlifegraphics__/graphics/icons/earth-flower-sample.png",
 	icon_size = 64,
     flags = {},
@@ -3678,10 +3702,10 @@ ITEM {
 ITEM {
     type = "capsule",
     name = "dried-meat",
-    icon = "__pyhightechgraphics__/graphics/icons/dried-meat.png",
+    icon = "__pyalienlifegraphics3__/graphics/icons/dried-meat.png",
     icon_size = 32,
     flags = {},
-    subgroup = "py-hightech-zipir",
+    subgroup = "py-alienlife-items",
 	capsule_action =
     {
       type = "use-on-self",
@@ -4410,6 +4434,13 @@ local alien_life_limitations_yaedols =
   "yaedols10",
   "yaedols11",
   "yaedols12",
+	}
+	
+local alien_life_limitations_fawogae =
+	{
+	'fawogae-mk02',
+	'fawogae-mk03',
+	'fawogae-mk04'
 	}
 
 ----MODULES----
@@ -6956,6 +6987,86 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+ITEM {
+    type = "module",
+    name = "fawogae",
+    icons =
+	{
+        {icon = "__pycoalprocessinggraphics__/graphics/icons/fawogae-icon.png", icon_size = 32},
+        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "fawogae",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 0.45}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_fawogae,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "fawogae-mk02",
+    icons =
+	{
+        {icon = "__pycoalprocessinggraphics__/graphics/icons/fawogae-icon.png", icon_size = 32},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "fawogae",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 0.95}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_fawogae,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "fawogae-mk03",
+    icons =
+	{
+        {icon = "__pycoalprocessinggraphics__/graphics/icons/fawogae-icon.png", icon_size = 32},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "fawogae",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 1.45}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_fawogae,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "fawogae-mk04",
+    icons =
+	{
+        {icon = "__pycoalprocessinggraphics__/graphics/icons/fawogae-icon.png", icon_size = 32},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "fawogae",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 1.95}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_fawogae,
+	limitation_message_key = "Its full"
+}
+
 ---replicators----
 
 ITEM {
@@ -7161,6 +7272,10 @@ data:extend(
   {
     type = "module-category",
     name = "korlex"
+  },
+  {
+    type = "module-category",
+    name = "fawogae"
   },
   --item used to select the ceature and start and end points of the route
 	{
