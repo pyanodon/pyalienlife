@@ -1943,3 +1943,21 @@ RECIPE {
     subgroup = "py-items",
     order = "f"
 }:add_unlock("genetics-mk02")
+
+if not mods['pyhightech'] then
+
+RECIPE {
+    type = 'recipe',
+    name = 'dried-meat',
+    category = 'smelting',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'meat', amount = 10}
+    },
+    results = {
+        {type = 'item', name = 'dried-meat', amount = 5}
+    }
+}:add_unlock('advanced-rendering')
+
+end
