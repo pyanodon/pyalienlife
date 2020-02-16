@@ -571,8 +571,13 @@ script.on_event(defines.events.on_rocket_launched, function(event)
                         local posx = -11
                         local posy = -11
                         local rpos = event.rocket_silo.position
-                        repeat
-                            game.surfaces['nauvis'].create_entity {name = farm.crop, position = {rpos.x + posx, (rpos.y - 15) + posy}, amount = output[rs.get_recipe().name]}
+						repeat
+							if game.surfaces['nauvis'].find_entity(farm.crop,{rpos.x + posx, (rpos.y - 15) + posy}) == nil then
+								game.surfaces['nauvis'].create_entity {name = farm.crop, position = {rpos.x + posx, (rpos.y - 15) + posy}, amount = output[rs.get_recipe().name]}
+							else
+								local ore = game.surfaces['nauvis'].find_entity(farm.crop,{rpos.x + posx, (rpos.y - 15) + posy})
+								ore.amount = ore.amount + output[rs.get_recipe().name]
+							end
                             --game.surfaces['nauvis'].create_entity {name = farm.crop .. '-fake', position = {rpos.x + posx, (rpos.y - 15) + posy}}
                             posx = posx + 1
                             if posx == 12 then
