@@ -1938,7 +1938,7 @@ RECIPE {
         {type = "item", name = "boron-trioxide", amount = 5}
     },
     results = {
-        {"flask", 5}
+        {"flask", 6}
     },
     icon = "__pycoalprocessinggraphics__/graphics/icons/mip/glassware-01.png",
     icon_size = 64,
