@@ -62,7 +62,7 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = 'item', name = 'production-science-01', amount = 5},
+        {type = 'item', name = 'production-science-pack', amount = 5},
         {type = 'item', name = 'py-science-pack', amount = 8},
         {type = 'item', name = 'chemical-science-pack', amount = 10},
         {type = 'item', name = 'brain', amount = 30},

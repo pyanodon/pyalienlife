@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+  Balance:
+    - Fixed utility science recipe
+    - Added dried meat recipe for when pyhightech is disabled
+---------------------------------------------------------------------------------------------------
 Version: 1.1.1
   Balance:
     - Fixed Ralesia recipes
