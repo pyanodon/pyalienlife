@@ -1934,7 +1934,7 @@ RECIPE {
         {type = "item", name = "glass", amount = 10},
         {type = "fluid", name = "refsyngas", amount = 150},
         {type = "item", name = "purified-quartz", amount = 1},
-        {type = "item", name = "stopper", amount = 5},
+        {type = "item", name = "stopper", amount = 6},
         {type = "item", name = "boron-trioxide", amount = 5}
     },
     results = {
