@@ -21,7 +21,7 @@ fun.autorecipes {
 				{
 					{name='cagedantelope', probability = 0.5,amount_min =1,amount_max =1},
 				},
-			crafting_speed = 150,
+			crafting_speed = 120,
 			tech = 'schrodinger-antelope'
         },
 
@@ -34,7 +34,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 140,
+			crafting_speed = 110,
 			tech = 'schrodinger-antelope'
 		},
 
@@ -48,7 +48,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 130,
+			crafting_speed = 100,
 			tech = 'schrodinger-antelope'
 		},
 		--fiber
@@ -61,7 +61,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 120,
+			crafting_speed = 90,
 			tech = 'schrodinger-antelope'
 		},
 		--food 2 salt
@@ -74,7 +74,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 100,
+			crafting_speed = 80,
 			tech = 'schrodinger-antelope'
 		},
 		--gh
