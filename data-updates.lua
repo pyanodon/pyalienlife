@@ -56,6 +56,8 @@ TECHNOLOGY('exoskeleton-equipment'):add_pack('production-science-pack')
 ITEM("raw-fish", "capsule"):set("icon", "__pyalienlifegraphics__/graphics/icons/fish.png")
 ITEM("raw-fish", "capsule"):set("icon_size", 32)
 RECIPE('modular-armor'):add_ingredient({type = "item", name = "pelt", amount = 1})
+RECIPE('low-density-structure'):add_ingredient({type = "item", name = "metallic-glass", amount = 3}):add_ingredient({type = "item", name = "ticocr-alloy", amount = 2})
+RECIPE('rocket-silo'):add_ingredient({type = "item", name = "metallic-glass", amount = 30}):add_ingredient({type = "item", name = "ticocr-allyo", amount = 20})
 
 --RECIPES UPDATES
 

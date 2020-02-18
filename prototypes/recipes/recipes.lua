@@ -848,6 +848,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'hyaline', amount = 3},
         {type = 'item', name = 'sea-sponge', amount = 2},
+        {type = 'item', name = 'ticocr-alloy', amount = 1},
         {type = 'item', name = 'chitin', amount = 4},
         {type = 'item', name = 'alien-enzymes', amount = 1},
         {type = 'item', name = 'pineal-gland', amount = 1},
@@ -945,6 +946,8 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'lignin', amount = 20},
+        {type = 'item', name = 'ticocr-alloy', amount = 1},
+        {type = 'item', name = 'metallic-glass', amount = 2},
         {type = 'item', name = 'bio-sample', amount = 15},
         {type = 'item', name = 'cridren-seeds', amount = 20},
         {type = 'item', name = 'gas-bladder', amount = 3},
