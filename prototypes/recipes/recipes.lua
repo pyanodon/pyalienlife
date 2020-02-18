@@ -1255,6 +1255,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "oleochemical-combustion",
+    localised_name = {"recipe-name.combustion-mixture", {"fluid-name.oleochemicals"}, 600},
     category = "combustion",
     enabled = false,
     energy_required = 3,
@@ -1278,6 +1279,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fish-oil-combustion",
+    localised_name = {"recipe-name.combustion-mixture", {"fluid-name.fish-oil"}, 650},
     category = "combustion",
     enabled = false,
     energy_required = 3,
@@ -1301,6 +1303,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "lard-combustion",
+    localised_name = {"recipe-name.combustion-mixture", {"item-name.mukmoux-fat"}, 600},
     category = "combustion",
     enabled = false,
     energy_required = 3,
@@ -1325,6 +1328,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ethanol-combustion",
+    localised_name = {"recipe-name.combustion-mixture", {"fluid-name.ethanol"}, 600},
     category = "combustion",
     enabled = false,
     energy_required = 3,
