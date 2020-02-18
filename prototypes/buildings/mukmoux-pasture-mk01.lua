@@ -8,7 +8,7 @@ RECIPE {
         {"steel-plate", 100},
         {"duralumin", 30},
         {"storage-tank", 5},
-        {"advanced-circuit", 10} --bob electronic-logic-board
+        {"electronic-circuit", 10} --bob electronic-logic-board
     },
     results = {
         {"mukmoux-pasture-mk01", 1}
