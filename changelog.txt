@@ -5,6 +5,7 @@ Date: 2020-02-18
     - Grammar check
     - Navens correct tech
     - Mukmoux pasture mk01 fixed
+    - Fixed crafting speed of biofactories
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.7
 Date: 2020-02-17
