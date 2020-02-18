@@ -61,7 +61,7 @@ fun.autorecipes {
                 {name='navens',amount =5}
             },
         crafting_speed = 90,
-        tech = 'navens'
+        tech = 'navens-mk02'
     },
     {
         ingredients =
@@ -73,7 +73,7 @@ fun.autorecipes {
                 {name='navens',amount =6}
             },
         crafting_speed = 90,
-        tech = 'navens'
+        tech = 'navens-mk02'
     },
     {
         ingredients =
@@ -85,7 +85,7 @@ fun.autorecipes {
                 {name='navens',amount =7}
             },
         crafting_speed = 90,
-        tech = 'navens'
+        tech = 'navens-mk02'
     },
     {
         ingredients =
@@ -97,7 +97,7 @@ fun.autorecipes {
                 {name='navens',amount =8}
             },
         crafting_speed = 90,
-        tech = 'mycology-mk03'
+        tech = 'navens-mk03'
     },
     {
         ingredients =
@@ -110,7 +110,7 @@ fun.autorecipes {
                 {name='navens',amount =9}
             },
         crafting_speed = 90,
-        tech = 'mycology-mk03'
+        tech = 'navens-mk03'
     },
     --GH
     {
@@ -127,7 +127,7 @@ fun.autorecipes {
                 {name='navens',amount =9}
             },
         crafting_speed = 70,
-        tech = 'mycology-mk04'
+        tech = 'navens-mk04'
     },
     {
         ingredients =
@@ -143,7 +143,7 @@ fun.autorecipes {
                 {name='navens',amount =10}
             },
         crafting_speed = 70,
-        tech = 'mycology-mk04'
+        tech = 'navens-mk04'
     },
     {
         ingredients =
@@ -158,7 +158,7 @@ fun.autorecipes {
                 {name='navens',amount =14}
             },
         crafting_speed = 70,
-        tech = 'mycology-mk04'
+        tech = 'navens-mk04'
     },
     {
         ingredients =
@@ -172,7 +172,7 @@ fun.autorecipes {
                 {name='navens',amount =15}
             },
         crafting_speed = 70,
-        tech = 'mycology-mk04'
+        tech = 'navens-mk04'
     },
 	}
 }

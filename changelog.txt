@@ -3,6 +3,8 @@ Version: 1.1.8
 Date: 2020-02-18
   Changes:
     - Grammar check
+    - Navens correct tech
+    - Mukmoux pasture mk01 fixed
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.7
 Date: 2020-02-17
