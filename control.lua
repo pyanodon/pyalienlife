@@ -578,7 +578,6 @@ script.on_event(defines.events.on_rocket_launched, function(event)
 								local ore = game.surfaces['nauvis'].find_entity(farm.crop,{rpos.x + posx, (rpos.y - 15) + posy})
 								ore.amount = ore.amount + output[rs.get_recipe().name]
 							end
-                            --game.surfaces['nauvis'].create_entity {name = farm.crop .. '-fake', position = {rpos.x + posx, (rpos.y - 15) + posy}}
                             posx = posx + 1
                             if posx == 12 then
                                 posx = -11
@@ -589,7 +588,7 @@ script.on_event(defines.events.on_rocket_launched, function(event)
                 end
             end
             local rpos = event.rocket_silo.position
-            local harvesters = game.surfaces['nauvis'].find_entities_filtered {area = {{rpos.x - 11, (rpos.y - 15) - 11}, {rpos.x + 11, (rpos.y - 15) + 11}}, name = 'harvester'}
+            local harvesters = game.surfaces['nauvis'].find_entities_filtered {area = {{rpos.x - 11, (rpos.y - 15) - 11}, {rpos.x + 11, (rpos.y - 15) + 11}}, name = {'harvester','collector'}}
             for _, har in pairs(harvesters) do
                 har.update_connections()
             end
