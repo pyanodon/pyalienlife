@@ -22,7 +22,7 @@ RECIPE('bacteria-1'):remove_unlock('helium-processing'):add_unlock('microbiology
 RECIPE('serine'):remove_unlock('helium-processing'):add_unlock('kmauts'):subgroup_order('py-alienlife-kmauts', 'b'):change_category('bio-reactor'):remove_ingredient("kmauts-ration"):add_ingredient({type = "item", name = "tendon", amount = 5}):add_ingredient({type = "fluid", name = "zogna-bacteria", amount = 40})
 ITEM('serine'):subgroup_order('py-alienlife-kmauts', 'b')
 ITEM('kmauts-ration'):subgroup_order('py-alienlife-food', 'b')
-RECIPE('nembit-matrix'):add_ingredient({type = "item", name = "nano-cellulose", amount = 3})
+RECIPE('nenbit-matrix'):add_ingredient({type = "item", name = "nano-cellulose", amount = 3})
 RECIPE('science-coating'):add_ingredient({type = "item", name = "chitosan", amount = 5})
 RECIPE('xyhiphoe-hydrocyclone'):remove_unlock('vanadium-processing'):add_unlock('biotech-mk02')
 
@@ -42,4 +42,3 @@ fun.results_replacer("log7", "log", "log",9)
 fun.results_replacer("log8", "log", "log",10)
 
 ----EXCLUSIVE RECIPES----
-

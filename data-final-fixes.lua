@@ -4,7 +4,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 --RECIPES UPDATES
 
-RECIPE('exoskeleton-equipment'):add_ingredient({type = "item", name = "metalic-glass", amount = 30})
+RECIPE('exoskeleton-equipment'):add_ingredient({type = "item", name = "metallic-glass", amount = 30})
 
 --[[
 local recipenames = {}
