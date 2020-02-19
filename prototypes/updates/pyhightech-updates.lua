@@ -90,7 +90,7 @@ RECIPE('atomizer-mk03'):add_ingredient({type = "item", name = "carbon-nanotube",
 RECIPE('auog-paddock-mk03'):add_ingredient({type = "item", name = "phosphate-glass", amount = 40})
 RECIPE('bhoddos-culture-mk03'):add_ingredient({type = "item", name = "diamagnetic-material", amount = 20})
 RECIPE('biofactory-mk03'):add_ingredient({type = "item", name = "diamagnetic-material", amount = 30}):add_ingredient({type = "item", name = "paramagnetic-material", amount = 20})
-RECIPE('bioreactor-mk03'):add_ingredient({type = "item", name = "heavy-fermion", amount = 20}):add_ingredient({type = "item", name = "superconductor", amount = 10}):add_ingredient({type = "item", name = "phosphate-glass", amount = 50})
+RECIPE('bio-reactor-mk03'):add_ingredient({type = "item", name = "heavy-fermion", amount = 20}):add_ingredient({type = "item", name = "superconductor", amount = 10}):add_ingredient({type = "item", name = "phosphate-glass", amount = 50})
 RECIPE('cadavericarum-mk03'):add_ingredient({type = "item", name = "heavy-fermion", amount = 15}):add_ingredient({type = "item", name = "superconductor", amount = 10})
 RECIPE('creature-chamber-mk03'):add_ingredient({type = "item", name = "biopolymer", amount = 15}):add_ingredient({type = "item", name = "graphene-roll", amount = 20}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 15}):add_ingredient({type = "item", name = "superconductor", amount = 5})
 RECIPE('cridren-enclosure-mk03'):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10}):add_ingredient({type = "item", name = "phosphate-glass", amount = 30}):add_ingredient({type = "item", name = "biopolymer", amount = 20})
@@ -132,7 +132,7 @@ RECIPE('atomizer-mk04'):add_ingredient({type = "item", name = "nems", amount = 1
 RECIPE('auog-paddock-mk04'):add_ingredient({type = "item", name = "nems", amount = 10}):add_ingredient({type = "item", name = "re-magnet", amount = 50}):add_ingredient({type = "item", name = "sub-denier-microfiber", amount = 30})
 RECIPE('bhoddos-culture-mk04'):add_ingredient({type = "item", name = "hyperelastic-material", amount = 30}):add_ingredient({type = "item", name = "quantum-vortex-storage-system", amount = 10}):add_ingredient({type = "item", name = "intelligent-unit", amount = 10})
 RECIPE('biofactory-mk04'):add_ingredient({type = "item", name = "harmonic-absorber", amount = 15}):add_ingredient({type = "item", name = "intelligent-unit", amount = 15}):add_ingredient({type = "item", name = "sub-denier-microfiber", amount = 20})
-RECIPE('bio-reactor-mk04'):add_ingredient({type = "item", name = "hyperelastic-material", amount = 30}):add_ingredient({type = "item", name = "nc-center", amount = 10})
+RECIPE('bio-reactor-mk04'):add_ingredient({type = "item", name = "hyperelastic-material", amount = 30}):add_ingredient({type = "item", name = "nv-center", amount = 10})
 RECIPE('cadavericarum-mk04'):add_ingredient({type = "item", name = "hyperelastic-material", amount = 15}):add_ingredient({type = "item", name = "quantum-dots", amount = 5})
 RECIPE('creature-chamber-mk04'):add_ingredient({type = "item", name = "re-magnet", amount = 100}):add_ingredient({type = "item", name = "phosphate-glass", amount = 100}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 30})
 RECIPE('cridren-enclosure-mk04'):add_ingredient({type = "item", name = "intelligent-unit", amount = 30}):add_ingredient({type = "item", name = "nems", amount = 10}):add_ingredient({type = "item", name = "phosphate-glass", amount = 100})
@@ -203,9 +203,9 @@ RECIPE('alien-sample-02'):add_ingredient({type = "item", name = "micro-fiber", a
 RECIPE('resveratrol'):change_category('pulp')
 RECIPE('dhilmos-pool-mk01'):replace_ingredient("glass", "phosphate-glass"):replace_ingredient("plastic-bar", "biopolymer"):add_ingredient({type = "item", name = "aerogel", amount = 5})
 RECIPE('dhilmos-codex'):replace_ingredient("glass", "phosphate-glass")
-RECIPE('fertilizer-1'):change_category('fbreator')
-RECIPE('fertilizer-3'):change_category('fbreator')
-RECIPE('fertilizer-4'):change_category('fbreator')
+RECIPE('fertilizer-1'):change_category('fbreactor')
+RECIPE('fertilizer-3'):change_category('fbreactor')
+RECIPE('fertilizer-4'):change_category('fbreactor')
 RECIPE('fish-food-02'):remove_ingredient("blood"):add_ingredient({type = "item", name = "blood-meal", amount = 5})
 RECIPE('yaedols-codex'):replace_ingredient("glass", "phosphate-glass")
 RECIPE('dingrits-codex'):replace_ingredient("glass", "phosphate-glass")
@@ -474,7 +474,7 @@ RECIPE {
         {type = 'item', name = 'urea', amount = 8},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk01")
+}:add_unlock("molecular-decohesion")
 
 RECIPE {
     type = 'recipe',

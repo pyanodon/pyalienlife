@@ -335,7 +335,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 60,
-			tech = 'xyhiphoe'
+			tech = 'assisted-embryology'
 		},
 		--food 2 bloodmeal fiber
 		{
