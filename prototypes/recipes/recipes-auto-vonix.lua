@@ -77,7 +77,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 110,
-			tech = 'vonix-mk04'
+			tech = 'vonix-mk03'
 		},
 		--gh
 		{
@@ -378,7 +378,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 40,
-			tech = 'vonix-mk04'
+			tech = 'vonix-mk03'
 		},
 
 		-----------------------PHEROMONES-----------------------------

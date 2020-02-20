@@ -33,7 +33,7 @@ RECIPE {
         {type = 'item', name = 'bio-scafold', amount = 2},
     },
     --main_product = "cocoon",
-}:add_unlock("organ-printing-mk01")
+}:add_unlock("organ-printing")
 
 RECIPE {
     type = 'recipe',
