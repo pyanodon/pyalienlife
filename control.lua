@@ -572,29 +572,12 @@ script.on_event(defines.events.on_rocket_launched, function(event)
                         local posy = -11
                         local rpos = event.rocket_silo.position
 						repeat
-							local ore_pos = {rpos.x + posx, (rpos.y - 15) + posy}
-							local resources = game.surfaces['nauvis'].find_entities_filtered{position = ore_pos, type='resource'}
-							local ore = nil
-							
-							for _, r in pairs (resources) do
-								if r.name == farm.crop then
-									if ore == nil then
-										ore = r
-									else -- Fix in case there were overlapping resources. Shouldn't happen any more
-										ore.amount = ore.amount + r.amount 
-										r.destroy()
-									end
-								else
-									r.destroy() -- Remove other resources, for example changing the recipe in the auto farm
-								end
-							end
-							
-							if ore == nil then
-								game.surfaces['nauvis'].create_entity {name = farm.crop, position = ore_pos, amount = output[rs.get_recipe().name]}
+							if game.surfaces['nauvis'].find_entity(farm.crop,{rpos.x + posx, (rpos.y - 15) + posy}) == nil then
+								game.surfaces['nauvis'].create_entity {name = farm.crop, position = {rpos.x + posx, (rpos.y - 15) + posy}, amount = output[rs.get_recipe().name]}
 							else
+								local ore = game.surfaces['nauvis'].find_entity(farm.crop,{rpos.x + posx, (rpos.y - 15) + posy})
 								ore.amount = ore.amount + output[rs.get_recipe().name]
 							end
-
                             --game.surfaces['nauvis'].create_entity {name = farm.crop .. '-fake', position = {rpos.x + posx, (rpos.y - 15) + posy}}
                             posx = posx + 1
                             if posx == 12 then
@@ -605,11 +588,9 @@ script.on_event(defines.events.on_rocket_launched, function(event)
                     end
                 end
             end
-			
             local rpos = event.rocket_silo.position
-            local harvesters = game.surfaces['nauvis'].find_entities_filtered {area = {{rpos.x - 11, (rpos.y - 15) - 11}, {rpos.x + 11, (rpos.y - 15) + 11}}, name = {'harvester', 'collector'}}
-            
-			for _, har in pairs(harvesters) do
+            local harvesters = game.surfaces['nauvis'].find_entities_filtered {area = {{rpos.x - 11, (rpos.y - 15) - 11}, {rpos.x + 11, (rpos.y - 15) + 11}}, name = 'harvester'}
+            for _, har in pairs(harvesters) do
                 har.update_connections()
             end
         end
