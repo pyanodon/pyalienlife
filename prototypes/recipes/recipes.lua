@@ -433,7 +433,7 @@ RECIPE {
         {type = 'item', name = 'pineal-gland', amount = 1}
     },
     results = {
-        {type = 'item', name = 'gh', amount = 1}
+        {type = 'item', name = 'gh', amount = 5}
     }
 }:add_unlock('growth-hormone')
 
@@ -518,7 +518,7 @@ RECIPE {
         {type = 'item', name = 'flask', amount = 5},
     },
     results = {
-        {type = 'item', name = 'reca', amount = 1}
+        {type = 'item', name = 'reca', amount = 5}
     }
 }:add_unlock('reca')
 
@@ -744,7 +744,7 @@ RECIPE {
         {type = 'fluid', name = 'zogna-bacteria', amount = 40},
     },
     results = {
-        {type = 'item', name = 'antiviral', amount = 1}
+        {type = 'item', name = 'antiviral', amount = 5}
     }
 }:add_unlock('antiviral')
 
@@ -821,7 +821,7 @@ RECIPE {
     name = 'nanochondria',
     category = 'nmf',
     enabled = false,
-    energy_required = 15,
+    energy_required = 20,
     ingredients = {
         {type = 'item', name = 'ticocr-alloy', amount = 1},
         {type = 'item', name = 'pelt', amount = 4},
@@ -834,7 +834,7 @@ RECIPE {
         {type = 'fluid', name = 'bacteria-1', amount = 40},
     },
     results = {
-        {type = 'item', name = 'nanochondria', amount = 1}
+        {type = 'item', name = 'nanochondria', amount = 5}
     }
 }:add_unlock('nanochondria'):change_category('nano'):add_ingredient({type = "item", name = "resilin", amount = 1}):add_ingredient({type = "item", name = "collagen", amount = 5}):replace_ingredient("bacteria-1", "bacteria-2")
 
@@ -858,7 +858,7 @@ RECIPE {
         {type = 'item', name = 'purine-analogues', amount = 1},
     },
     results = {
-        {type = 'item', name = 'bmp', amount = 1}
+        {type = 'item', name = 'bmp', amount = 5}
     }
 }:add_unlock('bmp'):replace_ingredient("bacteria-1", "bacteria-2"):replace_ingredient("sea-sponge", "collagen"):add_ingredient({type = "fluid", name = "dms", amount = 100})
 
@@ -956,7 +956,7 @@ RECIPE {
         {type = 'fluid', name = 'bacteria-1', amount = 40},
     },
     results = {
-        {type = 'item', name = 'pheromones', amount = 1}
+        {type = 'item', name = 'pheromones', amount = 5}
     }
 }:add_unlock('pheromones'):add_ingredient({type = "item", name = "biopolymer", amount = 3})
 
