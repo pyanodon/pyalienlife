@@ -802,7 +802,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'ticocr-alloy',
-    category = 'nmf',
+    category = 'eaf',
     enabled = false,
     energy_required = 10,
     ingredients = {
