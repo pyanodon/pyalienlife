@@ -1214,3 +1214,20 @@ RECIPE {
     },
     --main_product = "casein-pulp-01",
 }:add_unlock("energy-drink")
+
+RECIPE {
+    type = 'recipe',
+    name = 'casein-mixture-01',
+    category = 'mixer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'fluid', name = 'milk', amount = 50},
+        {type = 'fluid', name = 'acetic-acid', amount = 50},
+    },
+    results = {
+        {type = 'fluid', name = 'casein-mixture', amount = 50},
+        {type = 'fluid', name = 'waste-water', amount = 50},
+    },
+    main_product = "casein-mixture",
+}:add_unlock("korlex")
