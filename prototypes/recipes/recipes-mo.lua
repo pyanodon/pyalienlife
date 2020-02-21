@@ -298,7 +298,7 @@ RECIPE {
         {type = 'item', name = 'purine-analogues', amount = 1},
     },
     results = {
-        {type = 'item', name = 'anabolic-rna', amount = 1},
+        {type = 'item', name = 'anabolic-rna', amount = 5},
     },
 }:add_unlock("anabolic-rna")
 
@@ -377,7 +377,7 @@ RECIPE {
         {type = 'item', name = 'chitin', amount = 20},
     },
     results = {
-        {type = 'item', name = 'antitumor', amount = 1},
+        {type = 'item', name = 'antitumor', amount = 5},
     },
 }:add_unlock("antitumor"):change_category('nano'):replace_ingredient("cytostatics", "superconductor-servomechanims")
 
@@ -460,7 +460,7 @@ RECIPE {
         {type = 'item', name = 'mmp', amount = 1},
     },
     results = {
-        {type = 'item', name = 'recombinant-ery', amount = 1},
+        {type = 'item', name = 'recombinant-ery', amount = 5},
     },
 }:add_unlock("recombinant-ery")
 
@@ -484,7 +484,7 @@ RECIPE {
         {type = 'item', name = 'vonix-eggs', amount = 1},
     },
     results = {
-        {type = 'item', name = 'orexigenic', amount = 1},
+        {type = 'item', name = 'orexigenic', amount = 5},
     },
 }:add_unlock("orexigenic")
 
