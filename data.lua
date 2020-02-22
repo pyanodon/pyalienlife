@@ -92,6 +92,7 @@ require('prototypes/technologies/phytomining')
 require('prototypes/technologies/microfilters')
 require('prototypes/technologies/organ-printing')
 require('prototypes/technologies/biopolymer-clusters')
+require('prototypes/technologies/moondrop')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -433,6 +434,8 @@ require('prototypes/recipes/recipes-auto-acessories')
 require('prototypes/recipes/recipes-photomining')
 require('prototypes/recipes/recipes-bioprinting')
 require('prototypes/recipes/recipes-fawogae')
+require('prototypes/recipes/recipes-moondrop')
+require('prototypes/recipes/recipes-auto-moondrop')
 
 --(( ORES ))--
 require('prototypes/ores/ralesia')

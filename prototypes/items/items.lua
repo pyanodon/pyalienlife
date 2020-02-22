@@ -1333,6 +1333,28 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "moondrop-codex",
+    icon = "__pyalienlifegraphics__/graphics/icons/moondrop-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "moondrop-seeds",
+    icon = "__pyalienlifegraphics__/graphics/icons/moondrop-seeds.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-moon",
+    order = "x",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "earth-generic-sample",
     icon = "__pyalienlifegraphics__/graphics/icons/earth-generic-sample.png",
 	icon_size = 64,
@@ -4439,7 +4461,11 @@ local alien_life_limitations_fawogae =
 	'fawogae-mk02',
 	'fawogae-mk03',
 	'fawogae-mk04'
-	}
+    }
+    
+local alien_life_limitations_moondrop =
+    {
+    }
 
 ----MODULES----
 
@@ -7065,6 +7091,86 @@ ITEM {
 	limitation_message_key = "Its full"
 }
 
+ITEM {
+    type = "module",
+    name = "moondrop",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/moondrop.png", icon_size = 64},
+        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "moondrop",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 0.45}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_moondrop,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "moondrop-mk02",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/moondrop.png", icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "moondrop",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 0.95}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_moondrop,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "moondrop-mk03",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/moondrop.png", icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "moondrop",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 1.45}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_moondrop,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "moondrop-mk04",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/moondrop.png", icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "moondrop",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-d",
+    stack_size = 10,
+	effect = { speed = {bonus = 1.95}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_moondrop,
+	limitation_message_key = "Its full"
+}
+
 ---replicators----
 
 ITEM {
@@ -7274,6 +7380,10 @@ data:extend(
   {
     type = "module-category",
     name = "fawogae"
+  },
+  {
+    type = "module-category",
+    name = "moondrop"
   },
   --item used to select the ceature and start and end points of the route
 	{

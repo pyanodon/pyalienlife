@@ -291,6 +291,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-moon",
+        group = "py-alienlife",
+        order = "g-e"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-codex",
         group = "py-alienlife",
         order = "h"
