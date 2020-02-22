@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/xeno.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"biotech-mk02","land-animals-mk02"},
+    prerequisites = {"biotech-mk02","land-animals-mk02","assisted-embryology"},
     effects = {},
     unit = {
         count = 200,

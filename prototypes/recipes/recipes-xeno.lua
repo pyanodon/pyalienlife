@@ -28,10 +28,11 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = 'item', name = 'glass', amount = 2},
+        {type = 'item', name = 'phosphate-glass', amount = 5},
         {type = 'item', name = 'small-lamp', amount = 5},
-        {type = 'item', name = 'electronic-circuit', amount = 50},
-        {type = 'item', name = 'tinned-cable', amount = 20},
+        {type = 'item', name = 'advanced-circuit', amount = 50},
+        {type = 'item', name = 'green-wire', amount = 10},
+        {type = 'item', name = 'red-wire', amount = 10},
     },
     results = {
         {type = 'item', name = 'xeno-codex', amount = 1},
