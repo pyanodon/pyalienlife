@@ -4462,7 +4462,7 @@ local alien_life_limitations_fawogae =
 	'fawogae-mk03',
 	'fawogae-mk04'
     }
-    
+
 local alien_life_limitations_moondrop =
     {
     }
