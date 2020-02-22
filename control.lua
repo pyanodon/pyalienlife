@@ -161,6 +161,7 @@ script.on_init(
 			entity = {},
 			player = ''
 			}
+		global.has_built_first_farm = false
 		if not remote.interfaces["silo_script"] then
 			return
 		end
@@ -189,7 +190,52 @@ script.on_configuration_changed(function()
 	if global.outpost_table == nil then
 		global.outpost_table = {}
 	end
+	if global.has_built_first_farm == nil then
+		global.has_built_first_farm = false
+	end
 end)
+
+local farm_buildings =
+	{
+		'arthurian',
+		'auog',
+		'bhoddos',
+		'cadavericarum',
+		'cridren',
+		'dhilmos',
+		'dingrits',
+		'ranch',
+		'fawogae',
+		'fish',
+		'grod',
+		'kicalk',
+		'kmauts',
+		'mukmoux',
+		'navens',
+		'phadai',
+		'phagnot',
+		'ralesia',
+		'rennea',
+		'scrondrix',
+		'trits',
+		'tuuphra',
+		'ulric',
+		'vonix',
+		'vrauks',
+		'xenopen',
+		'xyhiphoe',
+		'yaedols',
+		'yotoi',
+		'zipir'
+	}
+
+local farm_help_gui
+
+local function create_farm_help_message(event)
+	local player = game.players[event.player_index]
+	farm_help_gui = player.gui.center.add({type = 'frame', name = 'farm_help', direction = 'horizontal', caption = 'All  plants and animal buildings require 1 or more copies of the wanted item to fuction'})
+	farm_help_gui.add({type = 'button', name = 'fh_accept_button', caption = 'OK'})
+end
 
 script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity}, function(event)
         local E = event.created_entity
@@ -222,6 +268,12 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 			global.outpost_names[E.unit_number] = 'outpost-'..E.unit_number
 		elseif E.name == 'caravan' then
 			global.caravan_unit_numbers[E.unit_number] = true
+		elseif global.has_built_first_farm == false then
+			for _, farm in pairs(farm_buildings) do
+				if string.match(E.name, farm) then
+					create_farm_help_message(event)
+				end
+			end
 		end
 		--log(serpent.block(landbots))
     end
@@ -520,6 +572,9 @@ script.on_event(defines.events.on_gui_click, function(event)
 			global.current_entity[event.player_index] = nil
 			global.slaughterhouse_gui_open = false
 			--log(serpent.block(global.current_entity))
+	elseif event.element.name == 'fh_accept_button' and global.has_built_first_farm == false then
+		farm_help_gui.destroy()
+		global.has_built_first_farm = true
 	end
 end)
 
