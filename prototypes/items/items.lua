@@ -6523,7 +6523,7 @@ ITEM {
     },
     icon_size = 64,
 	category = "zipir",
-	tier = 41,
+	tier = 4,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "zd",
