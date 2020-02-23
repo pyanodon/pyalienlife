@@ -11,7 +11,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='bhoddos',amount =10},
+					{name='bhoddos',amount =3},
 					{name='waterbarrel',amount=3,return_item={name='empty-barrel',amount=3}},
 					{name='cage',amount=1},
 				},
@@ -344,7 +344,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='bhoddos',amount =10},
+                    {name='bhoddos',amount =2},
                     {name='yotoiseeds',amount =15},
 					{name='waterbarrel',amount=3,return_item={name='empty-barrel',amount=3}},
 					--{name='cage',amount=1},
@@ -448,7 +448,7 @@ fun.autorecipes {
 					{name='rawfiber',amount = 'R'},
 					{name='salt',amount = 'R'},
 					{name='phagnotfood02',amount = 'R'},
-					{name='bhoddos',amount =15},
+					{name='bhoddos',amount =3},
 					{name='pheromones',amount =1},
                     {name='yotoiseeds',amount =15},
 					--{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
