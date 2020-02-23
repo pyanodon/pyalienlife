@@ -6,11 +6,11 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = 'item', name = 'au-biomass', amount = 25},
+        {type = 'item', name = 'au-biomass', amount = 5},
         {type = 'fluid', name = 'methane', amount = 100},
     },
     results = {
-        {type = 'item', name = 'moondrop-gas', amount = 5},
+        {type = 'item', name = 'moondrop-gas', amount = 10},
     },
 }:add_unlock("moondrop-mk04")
 
@@ -21,11 +21,11 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = 'item', name = 'co-biomass', amount = 25},
+        {type = 'item', name = 'co-biomass', amount = 5},
         {type = 'fluid', name = 'methane', amount = 100},
     },
     results = {
-        {type = 'item', name = 'moondrop-diesel', amount = 5},
+        {type = 'item', name = 'moondrop-diesel', amount = 10},
     },
 }:add_unlock("moondrop-mk03")
 
@@ -36,11 +36,11 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = 'item', name = 'zn-biomass', amount = 25},
+        {type = 'item', name = 'zn-biomass', amount = 5},
         {type = 'fluid', name = 'methane', amount = 100},
     },
     results = {
-        {type = 'item', name = 'moondrop-kerosene', amount = 5},
+        {type = 'item', name = 'moondrop-kerosene', amount = 10},
     },
 }:add_unlock("moondrop-mk03")
 
@@ -51,11 +51,11 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = 'item', name = 'fe-biomass', amount = 25},
+        {type = 'item', name = 'fe-biomass', amount = 5},
         {type = 'fluid', name = 'methane', amount = 100},
     },
     results = {
-        {type = 'item', name = 'moondrop-fueloil', amount = 5},
+        {type = 'item', name = 'moondrop-fueloil', amount = 10},
     },
 }:add_unlock("moondrop-mk02")
 
@@ -70,10 +70,10 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'moondrop-gas', amount = 25},
+        {type = 'item', name = 'moondrop-gas', amount = 20},
     },
     results = {
-        {type = 'fluid', name = 'gasoline', amount = 100},
+        {type = 'fluid', name = 'gasoline', amount = 300},
         {type = 'item', name = 'ash', amount = 10},
     },
     main_product = 'gasoline',
@@ -86,10 +86,10 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'moondrop-diesel', amount = 25},
+        {type = 'item', name = 'moondrop-diesel', amount = 20},
     },
     results = {
-        {type = 'fluid', name = 'diesel', amount = 100},
+        {type = 'fluid', name = 'diesel', amount = 200},
         {type = 'item', name = 'ash', amount = 10},
     },
     main_product = 'diesel',
@@ -102,10 +102,10 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'moondrop-kerosene', amount = 25},
+        {type = 'item', name = 'moondrop-kerosene', amount = 20},
     },
     results = {
-        {type = 'fluid', name = 'kerosene', amount = 100},
+        {type = 'fluid', name = 'kerosene', amount = 400},
         {type = 'item', name = 'ash', amount = 10},
     },
     main_product = 'kerosene',
@@ -116,12 +116,12 @@ RECIPE {
     name = 'moonshine-fueloil-pressing-1',
     category = 'hpf',
     enabled = false,
-    energy_required = 10,
+    energy_required = 5,
     ingredients = {
-        {type = 'item', name = 'moondrop-fueloil', amount = 25},
+        {type = 'item', name = 'moondrop-fueloil', amount = 20},
     },
     results = {
-        {type = 'fluid', name = 'fuel-oil', amount = 100},
+        {type = 'fluid', name = 'fuel-oil', amount = 250},
         {type = 'item', name = 'ash', amount = 10},
     },
     main_product = 'fuel-oil',

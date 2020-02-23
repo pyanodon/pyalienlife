@@ -21,7 +21,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/moondrop-2.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"botany-mk02","moondrop-mk01"},
+    prerequisites = {"botany-mk02","moondrop-mk01","phytomining"},
     effects = {},
     unit = {
         count = 200,
@@ -39,7 +39,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/moondrop-3.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"botany-mk03","moondrop-mk02"},
+    prerequisites = {"botany-mk03","moondrop-mk02","phytomining-mk02"},
     effects = {},
     unit = {
         count = 250,
@@ -58,7 +58,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/moondrop-4.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"botany-mk04","moondrop-mk03"},
+    prerequisites = {"botany-mk04","moondrop-mk03","phytomining-mk03"},
     effects = {},
     unit = {
         count = 350,
