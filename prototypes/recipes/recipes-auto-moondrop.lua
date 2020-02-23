@@ -25,7 +25,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    --{'s1'},
+                    {name='moondropseeds',amount='+1'},
 					{name='hydrogen',amount ='*10'},
 				},
 			results =
@@ -39,8 +39,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    --{'s1'},
-                    --{'a'},
+                    {name='moondropseeds',amount='+2'},
                     {name='soil',amount ='+15'},
 				},
 			results =
@@ -54,9 +53,7 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    --{'s1'},
-                    --{'a'},
-                    --{'b','+15'},
+                    {name='moondropseeds',amount='+2'},
                     {name='manure',amount =5},
 				},
 			results =
@@ -70,10 +67,7 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    --{'s1'},
-                    --{'a'},
-                    --{'b','+15'},
-                    --{'c','*10'},
+                    {name='moondropseeds',amount='+2'},
                     {name='ash',amount =10},
 				},
 			results =
@@ -87,9 +81,7 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    --{'s1'},
-                    --{'a'},
-					--{'b','+15'},
+                    {name='moondropseeds',amount='+2'},
 					{name='ash',amount ='R'},
                     {name='biomass',amount ='*5'},
                     --{'d'},
@@ -105,9 +97,7 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    --{'s1'},
-                    --{'a'},
-					--{'b','+15'},
+                    {name='moondropseeds',amount='+2'},
 					{name='hydrogen',amount ='R'},
                     {name='syngas',amount ='*3'},
                     --{'d'},
@@ -123,10 +113,7 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    --{'s1'},
-                    --{'a'},
-				   --{'b','+15'},
-				   --{'carbondioxide','R'},
+                    {name='moondropseeds',amount='+2'},
 				    {name='syngas',amount ='R'},
 					{name='fluegas',amount ='*2'},
                     --{'d'},
@@ -142,11 +129,7 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    --{'s1'},
-                    --{'a'},
-                    --{'b','+15'},
-                    --{'g','*2'},
-					--{'d'},
+                    {name='moondropseeds',amount='+2'},
 					{name='manure',amount ='R'},
                     {name='fertilizer',amount ='+4'},
 				},
@@ -162,11 +145,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    --{'s1'},
-                    --{'a'},
-                    --{'b','+15'},
-                    --{'g','*2'},
-					--{'d'},
+                    {name='moondropseeds',amount='+2'},
 					{name='fluegas',amount ='R'},
                     {name='syngas',amount ='*10'},
 				},
