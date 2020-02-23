@@ -3,7 +3,7 @@ RECIPE {
     name = 'logistic-science-01',
     category = 'vat',
     enabled = false,
-    energy_required = 10,
+    energy_required = 15,
     ingredients = {
         {type = 'item', name = 'automation-science-pack', amount = 10},
         {type = 'item', name = 'brain', amount = 5},
@@ -21,7 +21,7 @@ RECIPE {
     name = 'chemical-science-01',
     category = 'vat',
     enabled = false,
-    energy_required = 10,
+    energy_required = 15,
     ingredients = {
         {type = 'item', name = 'logistic-science-pack', amount = 10},
         {type = 'item', name = 'automation-science-pack', amount = 5},
