@@ -13,9 +13,7 @@ RECIPE {
         {type = 'item', name = 'cdna', amount = 3},
         {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'moondrop-codex', amount = 1},
-        {type = 'item', name = 'earth-flower-sample', amount = 1},
-        {type = 'item', name = 'earth-potato-sample', amount = 1},
-        {type = 'item', name = 'earth-sunflower-sample', amount = 1},
+        {type = 'item', name = 'earth-flower-sample', amount = 2},
         {type = 'fluid', name = 'water', amount = 1000},
     },
     results = {

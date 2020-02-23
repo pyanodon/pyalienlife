@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/moondrop.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"botany-mk01"},
+    prerequisites = {"botany-mk01","ralesia"},
     effects = {},
     unit = {
         count = 150,
