@@ -19,6 +19,10 @@ require("prototypes/buildings/kicalk-plantation-mk01")
 require("prototypes/buildings/kicalk-plantation-mk02")
 require("prototypes/buildings/kicalk-plantation-mk03")
 require("prototypes/buildings/kicalk-plantation-mk04")
+require('prototypes/technologies/moondrop')
+require('prototypes/recipes/recipes-moondrop')
+require('prototypes/recipes/recipes-auto-moondrop')
+require('prototypes/recipes/recipes-moondrop-products')
 
 --TECHNOLOGY--
 TECHNOLOGY('nano-tech'):add_prereq('microbiology-mk03')

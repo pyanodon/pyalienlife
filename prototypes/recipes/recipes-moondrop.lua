@@ -5,7 +5,7 @@
 RECIPE {
     type = 'recipe',
     name = 'moondrop-sample',
-    category = 'moon',
+    category = 'nursery',
     enabled = false,
     energy_required = 200,
     ingredients = {
@@ -63,7 +63,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "moondrop-seeds",
-    category = "moon",
+    category = "nursery",
     enabled = false,
     energy_required = 200,
     ingredients = {
