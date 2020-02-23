@@ -637,7 +637,6 @@ ITEM {
 {
     type = "tool",
     name = "py-science-pack",
-    localised_description = {"item-description.science-pack"},
     icon = "__pyalienlifegraphics__/graphics/icons/py-science-pack.png",
     icon_size = 64,
     subgroup = "py-alienlife-items",
