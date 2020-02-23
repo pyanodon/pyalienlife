@@ -34,7 +34,7 @@ fun.autorecipes {
 					{name='moondrop',amount ='+1'}
 				},
 				crafting_speed = 120,
-				tech = 'ralesia'
+				tech = 'moondrop-mk01'
 		},
 		{
 			ingredients =
@@ -48,7 +48,7 @@ fun.autorecipes {
 					{name='moondrop',amount ='+2'}
 				},
 				crafting_speed = 120,
-				tech = 'ralesia'
+				tech = 'moondrop-mk01'
         },
         {
 			ingredients =
@@ -62,7 +62,7 @@ fun.autorecipes {
 					{name='moondrop',amount ='+3'}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk02'
+				tech = 'moondrop-mk02'
         },
         {
 			ingredients =
@@ -76,7 +76,7 @@ fun.autorecipes {
 					{name='moondrop',amount ='+2'}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk02'
+				tech = 'moondrop-mk02'
         },
         {
 			ingredients =
@@ -92,7 +92,7 @@ fun.autorecipes {
 					{name='moondrop',amount ='+3'}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk02'
+				tech = 'moondrop-mk02'
         },
         {
 			ingredients =
@@ -108,7 +108,7 @@ fun.autorecipes {
 					{name='moondrop',amount ='+2'}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk03'
+				tech = 'moondrop-mk03'
         },
         {
 			ingredients =
@@ -124,7 +124,7 @@ fun.autorecipes {
 					{name='moondrop',amount ='+3'}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk03'
+				tech = 'moondrop-mk03'
         },
         {
 			ingredients =
@@ -140,7 +140,7 @@ fun.autorecipes {
 					{name='moondrop',amount =25}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk04'
+				tech = 'moondrop-mk04'
 		},
 		{
 			ingredients =
@@ -156,7 +156,7 @@ fun.autorecipes {
 					{name='moondrop',amount =25}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk04'
+				tech = 'moondrop-mk04'
 		},
     --GH
 		{
@@ -173,7 +173,7 @@ fun.autorecipes {
 					{name='moondrop',amount =25}
 				},
 			crafting_speed = 70,
-			tech = 'botany-mk04'
+			tech = 'moondrop-mk04'
 		},
 		{
 			ingredients =
@@ -189,7 +189,7 @@ fun.autorecipes {
 					{name='moondrop',amount =27}
 				},
 			crafting_speed = 70,
-			tech = 'botany-mk04'
+			tech = 'moondrop-mk04'
 		},
 		{
 			ingredients =
@@ -204,7 +204,7 @@ fun.autorecipes {
 					{name='moondrop',amount =29}
 				},
 			crafting_speed = 70,
-			tech = 'botany-mk04'
+			tech = 'moondrop-mk04'
 		},
 		{
 			ingredients =
@@ -219,7 +219,7 @@ fun.autorecipes {
 					{name='moondrop',amount =35}
 				},
 			crafting_speed = 70,
-			tech = 'botany-mk04'
+			tech = 'moondrop-mk04'
 		},
 	}
 }
