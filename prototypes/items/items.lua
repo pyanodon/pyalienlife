@@ -7106,7 +7106,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 10,
-	effect = { speed = {bonus = 0.45}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 50}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_moondrop,
 	limitation_message_key = "Its full"
 }
@@ -7126,7 +7126,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 10,
-	effect = { speed = {bonus = 0.95}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 100}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_moondrop,
 	limitation_message_key = "Its full"
 }
@@ -7146,7 +7146,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 10,
-	effect = { speed = {bonus = 1.45}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 150}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_moondrop,
 	limitation_message_key = "Its full"
 }
@@ -7166,9 +7166,53 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 10,
-	effect = { speed = {bonus = 1.95}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 200}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_moondrop,
 	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "item",
+    name = "moondrop-gas",
+    icon = "__pyalienlifegraphics__/graphics/icons/moondrop-flower-iron.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-c",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "moondrop-diesel",
+    icon = "__pyalienlifegraphics__/graphics/icons/moondrop-flower-cobalt.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-c",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "moondrop-kerosene",
+    icon = "__pyalienlifegraphics__/graphics/icons/moondrop-flower-zinc.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-c",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "moondrop-fueloil",
+    icon = "__pyalienlifegraphics__/graphics/icons/moondrop-flower-gold.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-c",
+    stack_size = 50
 }
 
 ---replicators----

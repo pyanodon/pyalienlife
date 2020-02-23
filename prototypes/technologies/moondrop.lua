@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "moondrop-mk01",
-    icon = "__pyalienlifegraphics__/graphics/technology/ralesia.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/moondrop.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk01"},
@@ -18,7 +18,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "moondrop-mk02",
-    icon = "__pyalienlifegraphics__/graphics/technology/ralesia.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/moondrop-2.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk02","moondrop-mk01"},
@@ -36,7 +36,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "moondrop-mk03",
-    icon = "__pyalienlifegraphics__/graphics/technology/ralesia.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/moondrop-3.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk03","moondrop-mk02"},
@@ -55,7 +55,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "moondrop-mk04",
-    icon = "__pyalienlifegraphics__/graphics/technology/ralesia.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/moondrop-4.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk04","moondrop-mk03"},

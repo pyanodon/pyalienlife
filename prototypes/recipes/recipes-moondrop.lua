@@ -5,7 +5,7 @@
 RECIPE {
     type = 'recipe',
     name = 'moondrop-sample',
-    category = 'nursery',
+    category = 'moon',
     enabled = false,
     energy_required = 200,
     ingredients = {
@@ -21,7 +21,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'moondrop', amount = 2},
     },
-}:add_unlock("moondrop")
+}:add_unlock("moondrop-mk01")
 
 RECIPE {
     type = 'recipe',
@@ -38,7 +38,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'moondrop-codex', amount = 1},
     },
-}:add_unlock("moondrop")
+}:add_unlock("moondrop-mk01")
 
 --[[
 RECIPE {
@@ -57,6 +57,27 @@ RECIPE {
     },
 }:add_unlock("ralesia")
 ]]--
+
+---breeding---
+
+-----SEEDS----
+
+RECIPE {
+    type = "recipe",
+    name = "moondrop-seeds",
+    category = "moon",
+    enabled = false,
+    energy_required = 200,
+    ingredients = {
+        {type = "item", name = "moondrop", amount = 1},
+    },
+    results = {
+        {type = "item", name = "moondrop", amount = 1},
+        {type = "item", name = "moondrop-seeds", amount_min = 1, amount_max = 1, proability = 0.25}
+    },
+    main_product = 'moondrop-seeds',
+}:add_unlock("moondrop-mk01")
+
 
 --[[
 RECIPE {
