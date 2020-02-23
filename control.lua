@@ -1,4 +1,6 @@
 
+if script.active_mods["debugadapter"] then require('__debugadapter__/debugadapter.lua') end
+
 local TRlist_og = require('scripts/techswap')
 local TRlist = {}
 
@@ -412,7 +414,7 @@ end)
 ]]--
 script.on_event(defines.events.on_tick, function()
 	if global.watch_slaughterhouse == true then
-		if global.watched_slaughterhouse.entity.get_recipe() == nil then
+		if global.watched_slaughterhouse.entity.valid and global.watched_slaughterhouse.entity.get_recipe() == nil then
 			--log('hit')
 			if global.slaughterhouse_gui_open == false then
 				--log('hit')
