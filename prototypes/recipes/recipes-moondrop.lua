@@ -71,7 +71,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "moondrop", amount = 1},
-        {type = "item", name = "moondrop-seeds", amount_min = 1, amount_max = 1, proability = 0.25}
+        {type = "item", name = "moondrop-seeds", amount_min = 1, amount_max = 1, probability = 0.25}
     },
     main_product = 'moondrop-seeds',
 }:add_unlock("moondrop-mk01")

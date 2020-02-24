@@ -275,8 +275,11 @@ fun.results_replacer("log7-2", "log", "log",8)
 --fun.results_replacer("urea", "urea", "urea",5)
 
 RECIPE('methane'):add_unlock('coal-processing-1')
+RECIPE('methane'):add_ingredient('moondrop-seeds')
 RECIPE('methane-py-fertilizer'):add_unlock('moondrop-mk02')
+RECIPE('methane-py-fertilizer'):add_ingredient('moondrop-seeds')
 RECIPE('methane-co2'):add_unlock('moondrop-mk02')
+RECIPE('methane-co2'):add_ingredient('moondrop-seeds')
 
 ----EXCLUSIVE RECIPES----
 
