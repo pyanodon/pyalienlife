@@ -272,6 +272,40 @@ fun.autorecipes {
 	}
 }
 
+------------------TRITS PHOTOPHORES------------------
+
+fun.autorecipes {
+    name = 'rendering-photophore-trits',
+	category = 'slaughterhouse-trits',
+	--module_limitations = 'auog',
+	subgroup = 'py-alienlife-trits',
+	order = 'b',
+    mats =
+	{
+		--photophore
+		{
+			ingredients =
+				{
+					{name='trits',amount=1},
+				},
+			results =
+				{
+					{name='meat', amount ='R'},
+					{name='shell', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='arthropodblood', amount ='R'},
+					{name='photophore', amount =4},
+				},
+			crafting_speed = 15,
+			tech = 'ctc',
+			name = 'Extract Trits Photophores-1',
+			icon = "__pyalienlifegraphics__/graphics/icons/photophore.png",
+			icon_size = 64,
+		},
+	}
+}
+
+
 ------------------XYHIPHOE SHELL------------------
 
 fun.autorecipes {

@@ -92,6 +92,7 @@ require('prototypes/technologies/phytomining')
 require('prototypes/technologies/microfilters')
 require('prototypes/technologies/organ-printing')
 require('prototypes/technologies/biopolymer-clusters')
+require('prototypes/technologies/ctc')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
