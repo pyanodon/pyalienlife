@@ -380,7 +380,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='ulriccub', probability = 0.7,amount_min =1,amount_max =2},
+					{name='ulriccub',amount = 1},
 				},
 			crafting_speed = 70,
 			tech = 'assisted-embryology'
@@ -485,7 +485,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='ulriccub',amount = 'R'},
-					{name='ulriccub', amount =1},
+					{name='ulriccub', amount =2},
 				},
 			crafting_speed = 70,
 			tech = 'pheromones'

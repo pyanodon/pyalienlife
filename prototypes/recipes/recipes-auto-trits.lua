@@ -485,6 +485,7 @@ fun.autorecipes {
 					{name='fishegg',amount = 'R'},
 					--{name='seaweed',amount =15},
 					{name='pheromones',amount =1},
+					{name='moondrop',amount ='5'},
                     --{name='woodseeds',amount =15},
 					--{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
 					--{name='sponge',amount = 1},
@@ -492,7 +493,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='tritscub',amount = 'R'},
-					{name='tritscub', amount =1},
+					{name='tritscub', amount =2},
 				},
 			crafting_speed = 70,
 			tech = 'pheromones'

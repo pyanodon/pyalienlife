@@ -494,7 +494,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='korlexpup',amount = 'R'},
-					{name='korlexpup', amount =1},
+					{name='korlexpup', amount =2},
 				},
 			crafting_speed = 70,
 			tech = 'pheromones'

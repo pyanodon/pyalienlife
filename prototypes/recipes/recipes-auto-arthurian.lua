@@ -453,7 +453,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='arthurianegg',amount = 'R'},
-					{name='arthurianegg', amount =6},
+					{name='arthurianegg', amount =8},
 				},
 			crafting_speed = 70,
 			tech = 'pheromones'

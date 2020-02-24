@@ -424,7 +424,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='zipiregg',amount = 'R'},
-					{name='zipiregg', amount =2},
+					{name='zipiregg', amount =3},
 				},
 			crafting_speed = 70,
 			tech = 'pheromones'

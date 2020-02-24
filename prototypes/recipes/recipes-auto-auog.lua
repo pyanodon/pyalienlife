@@ -484,7 +484,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='auogpup',amount = 'R'},
-					{name='auogpup', amount =1},
+					{name='auogpup', amount =2},
 				},
 			crafting_speed = 70,
 			tech = 'pheromones'
