@@ -6,6 +6,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
+        {type = 'item', name = 'moondrop-seeds', amount = 15},
         {type = 'item', name = 'au-biomass', amount = 5},
         {type = 'fluid', name = 'methane', amount = 100},
     },
@@ -21,6 +22,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
+        {type = 'item', name = 'moondrop-seeds', amount = 15},
         {type = 'item', name = 'co-biomass', amount = 5},
         {type = 'fluid', name = 'methane', amount = 100},
     },
@@ -36,6 +38,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
+        {type = 'item', name = 'moondrop-seeds', amount = 15},
         {type = 'item', name = 'zn-biomass', amount = 5},
         {type = 'fluid', name = 'methane', amount = 100},
     },
@@ -51,6 +54,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
+        {type = 'item', name = 'moondrop-seeds', amount = 15},
         {type = 'item', name = 'fe-biomass', amount = 5},
         {type = 'fluid', name = 'methane', amount = 100},
     },

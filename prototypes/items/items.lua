@@ -4262,197 +4262,47 @@ local alien_life_limitations_ulric =
 local alien_life_limitations_sponge =
 	{
 	"sea-sponge-1",
-  "sea-sponge-2",
+    "sea-sponge-2",
     }
 
     local alien_life_limitations_ralesia =
 	{
-    "ralesias1",
-  "ralesias2",
-  "ralesias3",
-  "ralesias4",
-  "ralesias5",
-  "ralesias6",
-  "ralesias7",
-  "ralesias8",
-  "ralesias9",
-  "ralesias10",
-  "ralesias11",
-  "ralesias12",
-  "ralesias13",
-  "ralesias14"
     }
 
     local alien_life_limitations_kicalk =
     {
-	"kicalk1",
-  "kicalk2",
-  "kicalk3",
-  "kicalk4",
-  "kicalk5",
-  "kicalk6",
-  "kicalk7",
-  "kicalk8",
-  "kicalk9",
-  "kicalk10",
-  "kicalk11",
-  "kicalk12",
-  "kicalk13",
-  "kicalk14"
     }
 
     local alien_life_limitations_tuuphra =
 	{
-	"tuuphra1",
-  "tuuphra2",
-  "tuuphra3",
-  "tuuphra4",
-  "tuuphra5",
-  "tuuphra6",
-  "tuuphra7",
-  "tuuphra8",
-  "tuuphra9",
-  "tuuphra10",
-  "tuuphra11",
-  "tuuphra12",
-  "tuuphra13",
-  "tuuphra14"
     }
 
     local alien_life_limitations_navens =
 	{
-		"navens1",
-	  "navens2",
-	  "navens3",
-	  "navens4",
-	  "navens5",
-	  "navens6",
-	  "navens7",
-	  "navens8",
-	  "navens9",
-	  "navens10",
-	  "navens11",
-	  "navens12"
     }
 
     local alien_life_limitations_yotoi =
 	{
-	"yotoi1",
-  "yotoi2",
-  "yotoi3",
-  "yotoi4",
-  "yotoi5",
-  "yotoi6",
-  "yotoi7",
-  "yotoi8",
-  "yotoi9",
-  "yotoi10",
-  "yotoi11",
-  "yotoi12",
-  "yotoi13",
-  "yotoi14",
-  "yotoifruit1",
-  "yotoifruit2",
-  "yotoifruit3",
-  "yotoifruit4",
-  "yotoifruit5",
-  "yotoifruit6",
-  "yotoifruit7",
-  "yotoifruit8",
-  "yotoifruit9",
-  "yotoifruit10",
-  "yotoifruit11",
-  "yotoifruit12",
-  "yotoifruit13",
-  "yotoifruit14"
     }
 
     local alien_life_limitations_rennea =
 	{
-	"rennea1",
-  "rennea2",
-  "rennea3",
-  "rennea4",
-  "rennea5",
-  "rennea6",
-  "rennea7",
-  "rennea8",
-  "rennea9",
-  "rennea10",
-  "rennea11",
-  "rennea12",
-  "rennea13",
-  "rennea14"
     }
 
     local alien_life_limitations_grod =
 	{
-	"grod1",
-  "grod2",
-  "grod3",
-  "grod4",
-  "grod5",
-  "grod6",
-  "grod7",
-  "grod8",
-  "grod9",
-  "grod10",
-  "grod11",
-  "grod12",
-  "grod13",
-  "grod14",
-  "grod15",
     }
 
     local alien_life_limitations_bhoddos =
 	{
-	"bhoddos1",
-  "bhoddos2",
-  "bhoddos3",
-  "bhoddos4",
-  "bhoddos5",
-  "bhoddos6",
-  "bhoddos7",
-  "bhoddos8",
-  "bhoddos9",
-  "bhoddos10",
-  "bhoddos11",
-  "bhoddos12",
-  "bhoddos13",
-  "bhoddos14",
     }
 
   local alien_life_limitations_cadaveric =
 	{
-	"cadaveric-arum1",
-	  "cadaveric-arum2",
-	  "cadaveric-arum3",
-	  "cadaveric-arum4",
-	  "cadaveric-arum5",
-	  "cadaveric-arum6",
-	  "cadaveric-arum7",
-	  "cadaveric-arum8",
-	  "cadaveric-arum9",
-	  "cadaveric-arum10",
-	  "cadaveric-arum11",
-	  "cadaveric-arum12",
-	  "cadaveric-arum13"
     }
 
 local alien_life_limitations_yaedols =
 	{
-	"yaedols1",
-  "yaedols2",
-  "yaedols3",
-  "yaedols4",
-  "yaedols5",
-  "yaedols6",
-  "yaedols7",
-  "yaedols8",
-  "yaedols9",
-  "yaedols10",
-  "yaedols11",
-  "yaedols12",
 	}
 
 local alien_life_limitations_fawogae =
@@ -7105,7 +6955,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 10,
-	effect = { speed = {bonus = 50}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_moondrop,
 	limitation_message_key = "Its full"
 }
@@ -7125,7 +6975,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 10,
-	effect = { speed = {bonus = 100}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_moondrop,
 	limitation_message_key = "Its full"
 }
@@ -7145,7 +6995,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 10,
-	effect = { speed = {bonus = 150}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_moondrop,
 	limitation_message_key = "Its full"
 }
@@ -7165,7 +7015,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 10,
-	effect = { speed = {bonus = 200}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_moondrop,
 	limitation_message_key = "Its full"
 }
