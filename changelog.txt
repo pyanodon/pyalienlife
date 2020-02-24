@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.2
+Date: 2020-02-24
+  Changes:
+    - Added photophore recipes.
+    - Added photophore improved recipe.
+    - Fixed vrauks lastest recipes.
+    - Fixed Korlex improved blood extraction.
+    - Fixed Cobalt-sulfate recipe.
+    - Added Moondrop to new mechanics.
+    - Added Idiot-proof message when ploping some buildings.
+    - Balanced pheromone uses.
+---------------------------------------------------------------------------------------------------
 Version: 1.2.1
 Date: 2020-02-21
   Changes:

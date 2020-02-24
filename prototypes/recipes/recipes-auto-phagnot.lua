@@ -457,7 +457,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='phagnotcub',amount = 'R'},
-					{name='phagnotcub', amount =1},
+					{name='phagnotcub', amount =2},
 				},
 			crafting_speed = 70,
 			tech = 'pheromones'

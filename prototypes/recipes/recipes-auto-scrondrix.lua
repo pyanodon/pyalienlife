@@ -352,7 +352,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='scrondrixcub', probability = 0.7,amount_min =1,amount_max =2},
+					{name='scrondrixcub',amount = 1},
 				},
 			crafting_speed = 70,
 			tech = 'assisted-embryology'
@@ -429,7 +429,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='scrondrixcub',amount = 'R'},
-					{name='scrondrixcub', amount =1},
+					{name='scrondrixcub', amount =2},
 				},
 			crafting_speed = 70,
 			tech = 'pheromones'
