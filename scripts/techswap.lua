@@ -4641,6 +4641,18 @@ local TRlist =
 					level = 2,
 					},
 				},
+				--photophore
+				{
+				base_recipe = 'Extract Trits Photophores',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Trits Photophores-1',
+					tech = 'ctc',
+					unlocked = false,
+					level = 2,
+					},
+				},
 				--SPORES
 				{
 				base_recipe = 'navens-spore',
@@ -4837,6 +4849,7 @@ local TRlist =
 				['zipir-mk02'] = true,
 				['antitumor'] = true,
 				['trits'] = true,
+				['trits-mk02'] = true,
 				['recombinant-ery'] = true,
 				['reca'] = true,
 				['orexigenic'] = true,
@@ -4858,6 +4871,7 @@ local TRlist =
 				['mycology-mk01'] = true,
 				['yaedols'] = true,
 				['biopolymer-clusters'] = true,
+				['ctc'] = true,
 
 			},
 	}

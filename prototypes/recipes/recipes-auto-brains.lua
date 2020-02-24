@@ -551,6 +551,7 @@ fun.autorecipes {
 					{name='skin', probability = 0.4,amount_min =1,amount_max =3},
 					{name='fat', probability = 0.4,amount_min =2,amount_max =5},
 					{name='guts', probability = 0.4,amount_min =1,amount_max =4},
+					{name='photophore', probability = 0.2,amount_min =1,amount_max =2},
 					{name='blood', amount =60},
 					--{name='cage',amount=1},
 					{name='brain', probability = 0.4,amount_min =1,amount_max =2},

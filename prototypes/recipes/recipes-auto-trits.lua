@@ -12,7 +12,8 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='seaweed',amount =15},
-                    {name='woodseeds',amount =15},
+					{name='woodseeds',amount =15},
+					{name='moondrop',amount =5},
 					{name='watersaline',amount ='*3000',return_item={name='waste-water',amount=500}},
 				},
 			results =
@@ -373,7 +374,8 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='seaweed',amount =15},
-                    {name='woodseeds',amount =15},
+					{name='woodseeds',amount =15},
+					{name='moondrop',amount =5},
 					{name='watersaline',amount ='*300',return_item={name='waste-water',amount= 300}},
 					--{name='cage',amount=1},
 					{name='sponge',amount = 2},
@@ -476,7 +478,8 @@ fun.autorecipes {
                     {name='sponge',amount = 'R'},
                     {name='bhoddos',amount = 'R'},
                     {name='albumin',amount = 'R'},
-                    {name='guts',amount = 'R'},
+					{name='guts',amount = 'R'},
+					{name='moondrop',amount ='R'},
                     {name='sodiumalginate',amount = 'R'},
                     {name='filtrationmedia',amount = 'R'},
 					{name='fishegg',amount = 'R'},
@@ -604,6 +607,7 @@ fun.autorecipes {
 					{name='skin', probability = 0.4,amount_min =1,amount_max =3},
 					{name='fat', probability = 0.4,amount_min =2,amount_max =5},
 					{name='guts', probability = 0.4,amount_min =1,amount_max =4},
+					{name='photophore', probability = 0.2,amount_min =1,amount_max =2},
 					{name='blood', amount =60},
 					--{name='cage',amount=1},
 					{name='brain', probability = 0.4,amount_min =1,amount_max =1},
@@ -739,6 +743,23 @@ fun.autorecipes {
 			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
 			icon_size = 64,
 		},
+		--photophore
+		{
+			ingredients =
+				{
+					--{name='trits',amount=1},
+				},
+			results =
+				{
+					{name='fat', amount ='R'},
+					{name='photophore', amount =2},
+				},
+			crafting_speed = 15,
+			tech = 'trits',
+			name = 'Extract Trits Photophores',
+			icon = "__pyalienlifegraphics__/graphics/icons/photophore.png",
+			icon_size = 64,
+		},
 		--brain trits rendering
 		{
 			ingredients =
@@ -748,7 +769,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='fat', amount ='R'},
+					{name='photophore', amount ='R'},
 					{name='brain', amount =3},
 				},
 			crafting_speed = 15,

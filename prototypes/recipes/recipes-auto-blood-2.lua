@@ -323,7 +323,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='arthropodblood', amount =80},
+					{name='blood', amount =80},
 				},
 			crafting_speed = 15,
 			tech = 'transgenes',

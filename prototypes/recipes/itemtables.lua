@@ -306,6 +306,7 @@ items.inputs.korlexfood02 = {'korlex-food-02', 1}
 
 items.inputs.moondropseeds = {'moondrop-seeds', 1}
 items.inputs.moondrop = {'moondrop', 1}
+items.inputs.photophore = {'photophore', 1}
 
 items.outputs = items.inputs
 --can put output replacements below here

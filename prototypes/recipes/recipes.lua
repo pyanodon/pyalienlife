@@ -560,7 +560,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cobalt-sulfate',
-    category = 'drp',
+    category = 'leaching',
     enabled = false,
     energy_required = 12,
     ingredients = {
