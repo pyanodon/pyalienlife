@@ -32,7 +32,7 @@ ENTITY {
     type = "assembling-machine",
     name = "cridren-enclosure-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/cridren-enclosure-mk04.png",
-    icon_size = 32,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "cridren-enclosure-mk04"},
     fast_replaceable_group = "cridren-enclosure",
