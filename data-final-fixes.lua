@@ -1105,6 +1105,7 @@ local recipes_list =
   "Extract kmauts Meat",
   "Extract kmauts brains",
   "Extract kmauts tendons",
+  "Extract kmauts tendons-1",
   "Extract kmauts guts",
   "Extract kmauts blood",
   "Extract kmauts lard",
