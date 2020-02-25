@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.3
+Date: 2020-02-24
+  Changes:
+    - fixed error caused by robots building farms attempting to display message
+    - Balanced moondrop
+    - adjusted plant and animal stack sizes
+---------------------------------------------------------------------------------------------------
 Version: 1.2.2
 Date: 2020-02-24
   Changes:

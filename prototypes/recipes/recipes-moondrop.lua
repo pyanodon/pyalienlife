@@ -65,13 +65,15 @@ RECIPE {
     name = "moondrop-seeds",
     category = "nursery",
     enabled = false,
-    energy_required = 200,
+    energy_required = 5,
     ingredients = {
-        {type = "item", name = "moondrop", amount = 1},
+        {type = "item", name = "moondrop", amount = 5},
     },
     results = {
-        {type = "item", name = "moondrop", amount = 1},
-        {type = "item", name = "moondrop-seeds", amount_min = 1, amount_max = 1, probability = 0.25}
+        {type = "item", name = "moondrop", amount = 2},
+        {type = "item", name = "moondrop", amount_min = 1, amount_max = 3, probability = 0.50},
+        {type = "item", name = "moondrop-seeds", amount= 7},
+        {type = "item", name = "moondrop-seeds", amount_min = 1, amount_max = 3, probability = 0.25}
     },
     main_product = 'moondrop-seeds',
 }:add_unlock("moondrop-mk01")
