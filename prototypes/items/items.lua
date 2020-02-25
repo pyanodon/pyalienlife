@@ -6949,7 +6949,7 @@ ITEM {
         --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
     },
     icon_size = 64,
-	category = "moondrop",
+	category = "moon",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-modules",
@@ -6969,7 +6969,7 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
     },
     icon_size = 64,
-	category = "moondrop",
+	category = "moon",
 	tier = 2,
     flags = {},
     subgroup = "py-alienlife-modules",
@@ -6989,7 +6989,7 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
     },
     icon_size = 64,
-	category = "moondrop",
+	category = "moon",
 	tier = 3,
     flags = {},
     subgroup = "py-alienlife-modules",
@@ -7009,7 +7009,7 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
     },
     icon_size = 64,
-	category = "moondrop",
+	category = "moon",
 	tier = 4,
     flags = {},
     subgroup = "py-alienlife-modules",
@@ -7276,7 +7276,7 @@ data:extend(
   },
   {
     type = "module-category",
-    name = "moondrop"
+    name = "moon"
   },
   --item used to select the ceature and start and end points of the route
 	{

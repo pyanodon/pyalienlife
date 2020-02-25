@@ -228,7 +228,8 @@ local farm_buildings =
 		'xyhiphoe',
 		'yaedols',
 		'yotoi',
-		'zipir'
+		'zipir',
+		'moondrop'
 	}
 
 local farm_help_gui
