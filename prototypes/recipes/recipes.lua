@@ -231,7 +231,7 @@ RECIPE {
     energy_required = 2,
     ingredients = {
         {type = 'item', name = 'nexelit-matrix', amount = 5},
-        {type = 'item', name = 'brain', amount = 1},
+        {type = 'item', name = 'brain', amount = 2},
         {type = 'item', name = 'agar', amount = 3},
         {type = 'item', name = 'bio-sample', amount = 2},
         {type = 'item', name = 'nickel-plate', amount = 5},
