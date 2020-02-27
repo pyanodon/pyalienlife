@@ -17,7 +17,7 @@ RECIPE {
         {type = 'fluid', name = 'water', amount = 1000},
     },
     results = {
-        {type = 'item', name = 'moondrop', amount = 2},
+        {type = 'item', name = 'moondrop', amount = 4},
     },
 }:add_unlock("moondrop-mk01")
 

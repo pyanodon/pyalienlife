@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.5
+Date: 2020-02-27
+  Changes:
+    - fixed caged phadai was in dingrits spike recipe
+    - add script to disable any building that doesnt have a farm module
+    -add icon to display when farm is missing modules
+---------------------------------------------------------------------------------------------------
 Version: 1.2.4
 Date: 2020-02-25
   Changes:
