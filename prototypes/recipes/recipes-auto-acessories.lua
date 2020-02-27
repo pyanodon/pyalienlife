@@ -93,7 +93,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedphadai',amount=1},
+					{name='cageddingrits',amount=1},
 				},
 			results =
 				{
