@@ -236,7 +236,7 @@ RECIPE {
         {type = 'item', name = 'bio-sample', amount = 2},
         {type = 'item', name = 'nickel-plate', amount = 5},
         {type = 'item', name = 'electronic-circuit', amount = 1},
-        {type = 'item', name = 'optical-fiber', amount = 5},
+        {type = 'item', name = 'optical-fiber', amount = 10},
     },
     results = {
         {type = 'item', name = 'neuroprocessor', amount = 2},
@@ -969,7 +969,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'neuroprocessor', amount = 2},
         {type = 'item', name = 'biofilm', amount = 1},
-        {type = 'item', name = 'optical-fiber', amount = 5},
+        {type = 'item', name = 'optical-fiber', amount = 10},
         {type = 'item', name = 'nano-cellulose', amount = 5},
         {type = 'item', name = 'nexelit-matrix', amount = 3},
         {type = 'fluid', name = 'vacuum', amount = 100},

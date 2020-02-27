@@ -236,7 +236,7 @@ RECIPE('nanochondria'):add_ingredient({type = "item", name = "paramagnetic-mater
 RECIPE('quantum-vortex-storage-system'):add_ingredient({type = "item", name = "strangelets", amount = 2})
 RECIPE('nv-center'):add_ingredient({type = "item", name = "strangelets", amount = 2})
 RECIPE('space-science-pack'):add_ingredient({type = "item", name = "strangelets", amount = 5})
-RECIPE('yag-laser-module'):add_ingredient({type = "item", name = "nanofibrils", amount = 3})
+RECIPE('yag-laser-module'):add_ingredient({type = "item", name = "nanofibrils", amount = 3}):add_ingredient({type = "item", name = "cobalt-fluoride", amount = 3})
 RECIPE('parametric-oscilator'):add_ingredient({type = "item", name = "nanofibrils", amount = 3})
 
 RECIPE('zipir-carcass'):remove_unlock('basic-electronics')
