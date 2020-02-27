@@ -451,7 +451,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='salt',amount ='R'},
+					{name='salt',amount = 5},
 				},
 			results =
 				{
