@@ -31,6 +31,8 @@ RECIPE('bonemeal-salt'):remove_unlock('machines-mk02')
 RECIPE('starch'):remove_unlock('machines-mk02')
 RECIPE('starch-2'):remove_unlock('machines-mk02')
 RECIPE('fertilizer-2'):remove_unlock('basic-electronics')
+RECIPE('molten-stainless-steel'):add_ingredient({type = "item", name = "cobalt-extract", amount = 1})
+RECIPE('molten-super-steel'):add_ingredient({type = "item", name = "cobalt-oxide", amount = 1})
 
 ----EXCLUSIVE RECIPES----
 
