@@ -145,57 +145,6 @@ local function create_slaughterhouse_gui(event)
 	global.slaughterhouse_gui_open = true
 end
 
-script.on_init(
-    function()
-        global.caravanroutes = caravanroutes
-		global.caravan_unit_numbers = {}
-		global.outpost_names = {}
-		global.current_outpost = {}
-		global.outpost_numbers = {}
-		global.outpost_table = {}
-		global.TRlist = TRlist_og
-		TRlist = global.TRlist
-		global.current_entity = {}
-		global.slaughterhouse_gui_open = false
-		global.watch_slaughterhouse = false
-		global.watched_slaughterhouse =
-			{
-			entity = {},
-			player = ''
-			}
-		global.has_built_first_farm = false
-		if not remote.interfaces["silo_script"] then
-			return
-		end
-		remote.call("silo_script","set_no_victory", true)
-    end)
-
-script.on_load(function()
-caravanroutes = global.caravanroutes
-
-TRlist = global.TRlist
-
---log(serpent.block(global.TRlist))
---log(serpent.block(TRlist))
-
-end)
-
-script.on_configuration_changed(function()
-	global.current_entity = {}
-	global.slaughterhouse_gui_open = false
-	global.watch_slaughterhouse = false
-	global.watched_slaughterhouse =
-		{
-		entity = {},
-		player = ''
-		}
-	if global.outpost_table == nil then
-		global.outpost_table = {}
-	end
-	if global.has_built_first_farm == nil then
-		global.has_built_first_farm = false
-	end
-end)
 
 local farm_buildings =
 	{
@@ -232,13 +181,112 @@ local farm_buildings =
 		'moondrop'
 	}
 
+local function disable_machine(entity)
+	local E = entity
+	--table.insert(global.farms, E)
+	global.farms[E.unit_number] = entity
+	global.farm_count_last = global.farm_count_last + 1
+	--table.insert(global.farm_count, E.unit_number)
+	global.farm_count[global.farm_count_last] = E.unit_number
+	E.active = false
+	local stopsign = rendering.draw_sprite{sprite = 'item/cadaveric-arum-seeds', render_layer = '188', target = E.position, surface = E.surface.name}
+	local stoptext = rendering.draw_text{text = 'Requires ' .. E.name .. ' to function', surface = E.surface, target = E.position, target_offset = {0,-6}, color = {255,255,255}, scale = 2, alignment = 'center'}
+end
+
+script.on_init(
+    function()
+        global.caravanroutes = caravanroutes
+		global.caravan_unit_numbers = {}
+		global.outpost_names = {}
+		global.current_outpost = {}
+		global.outpost_numbers = {}
+		global.outpost_table = {}
+		global.TRlist = TRlist_og
+		TRlist = global.TRlist
+		global.current_entity = {}
+		global.slaughterhouse_gui_open = false
+		global.watch_slaughterhouse = false
+		global.watched_slaughterhouse =
+			{
+			entity = {},
+			player = ''
+			}
+		global.has_built_first_farm = false
+		global.farms = {}
+		global.farm_count = {}
+		global.farm_count_last = 0
+		global.checked_farm_counter = 1
+
+
+
+		if not remote.interfaces["silo_script"] then
+			return
+		end
+		remote.call("silo_script","set_no_victory", true)
+    end)
+
+script.on_load(function()
+caravanroutes = global.caravanroutes
+
+TRlist = global.TRlist
+
+--log(serpent.block(global.TRlist))
+--log(serpent.block(TRlist))
+
+end)
+
+script.on_configuration_changed(function(event)
+	global.current_entity = {}
+	global.slaughterhouse_gui_open = false
+	global.watch_slaughterhouse = false
+	global.watched_slaughterhouse =
+		{
+		entity = {},
+		player = ''
+		}
+	if global.outpost_table == nil then
+		global.outpost_table = {}
+	end
+	if global.has_built_first_farm == nil then
+		global.has_built_first_farm = false
+	end
+	if global.checked_farm_counter == nil then
+		global.checked_farm_counter = 1
+	end
+	if global.farm_count == nil then
+		global.farm_count = {}
+	end
+	if global.farm_count_last == nil then
+		global.farm_count_last = 0
+	end
+	if global.farms == nil then
+		global.farms = {}
+		local entities = surface['nauvis'].find_entities()
+		for _, entity in pairs(entities) do
+			for _, farm in pairs(farm_buildings) do
+				if string.match(entity.name, farm) then
+					--global.farms[entity.unit_number] = entity
+					--table.insert(global.farms, entity)
+					if entity.get_module_inventory().is_empty() == true then
+						disable_machine(entity)
+					else
+					global.farms[entity.unit_number] = entity
+					table.insert(global.farm_count, entity.unit_number)
+					global.farm_count_last = global.farm_count_last +1
+					end
+				end
+			end
+		end
+	end
+end)
+
 local farm_help_gui
 
 local function create_farm_help_message(event)
 	local player
 	if event.player_index ~= nil then
 		player = game.players[event.player_index]
-		farm_help_gui = player.gui.center.add({type = 'frame', name = 'farm_help', direction = 'horizontal', caption = 'All  plants and animal buildings require 1 or more copies of the wanted item to fuction'})
+		farm_help_gui = player.gui.center.add({type = 'frame', name = 'farm_help', direction = 'horizontal', caption = 'All plants and animal buildings require 1 or more copies of the wanted item to fuction. Craft the first version from codex and DNA samples.'})
 		farm_help_gui.add({type = 'button', name = 'fh_accept_button', caption = 'OK'})
 	end
 end
@@ -278,6 +326,13 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 			for _, farm in pairs(farm_buildings) do
 				if string.match(E.name, farm) then
 					create_farm_help_message(event)
+					disable_machine(E)
+				end
+			end
+		elseif global.has_built_first_farm == true then 
+			for _, farm in pairs(farm_buildings) do
+				if string.match(E.name, farm) then
+					disable_machine(E)
 				end
 			end
 		end
@@ -434,6 +489,27 @@ script.on_event(defines.events.on_tick, function()
 				create_slaughterhouse_gui(event)
 				--log(serpent.block(global.watched_slaughterhouse))
 			end
+		end
+	end
+	if next(global.farm_count) ~= nil and global.farm_count_last > 0 then
+		log(serpent.block(global.farms))
+		log(serpent.block(global.farm_count))
+		for k,v in pairs(global.farm_count) do
+			log(k)
+			log(v)
+		end
+		local start_num = global.checked_farm_counter
+		for i = global.checked_farm_counter, 10000 do
+			repeat 
+				log('hit')
+				log(i)
+				log(serpent.block(global.farms[global.farm_count[i]]))
+				if global.farms[global.farm_count[i]].get_module_inventory().is_empty() == false then
+					global.farms[global.farm_count[i]].active = true
+				end
+			until i == start_num + 10
+			global.checked_farm_counter = i + 1
+			break
 		end
 	end
 end)
