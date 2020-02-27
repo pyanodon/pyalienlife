@@ -448,3 +448,5 @@ require('prototypes/ores/bioreserve')
 --require('prototypes/ores/fake-plants')
 
 data.raw["utility-constants"].default.recipe_step_limit = 2000;
+
+require('prototypes/sprites/sprites')

@@ -189,8 +189,10 @@ local function disable_machine(entity)
 	--table.insert(global.farm_count, E.unit_number)
 	global.farm_count[global.farm_count_last] = E.unit_number
 	E.active = false
-	local stopsign = rendering.draw_sprite{sprite = 'item/cadaveric-arum-seeds', render_layer = '188', target = E.position, surface = E.surface.name}
-	local stoptext = rendering.draw_text{text = 'Requires ' .. E.name .. ' to function', surface = E.surface, target = E.position, target_offset = {0,-6}, color = {255,255,255}, scale = 2, alignment = 'center'}
+	local stopsign = rendering.draw_sprite{sprite = 'no_module_animal', render_layer = '188', target = E.position, surface = E.surface.name}
+	--log(serpent.block(stopsign))
+	global.rendered_icons[E.unit_number] = stopsign
+	--local stoptext = rendering.draw_text{text = 'Requires ' .. E.name .. ' to function', surface = E.surface, target = E.position, target_offset = {0,-6}, color = {255,255,255}, scale = 2, alignment = 'center'}
 end
 
 script.on_init(
@@ -216,9 +218,9 @@ script.on_init(
 		global.farm_count = {}
 		global.farm_count_last = 0
 		global.checked_farm_counter = 1
-
-
-
+		global.farm_help_message_open = false
+		global.rendered_icons = {}
+global.farm_migration = false
 		if not remote.interfaces["silo_script"] then
 			return
 		end
@@ -235,7 +237,7 @@ TRlist = global.TRlist
 
 end)
 
-script.on_configuration_changed(function(event)
+script.on_configuration_changed(function()
 	global.current_entity = {}
 	global.slaughterhouse_gui_open = false
 	global.watch_slaughterhouse = false
@@ -259,23 +261,37 @@ script.on_configuration_changed(function(event)
 	if global.farm_count_last == nil then
 		global.farm_count_last = 0
 	end
+	if global.farm_help_message_open == nil then
+		global.farm_help_message_open = false
+	end
+	if global.rendered_icons == nil then
+		global.rendered_icons = {}
+	end
+	if global.farm_migration == nil then
+		global.farm_migration = false
+	end
 	if global.farms == nil then
 		global.farms = {}
-		local entities = surface['nauvis'].find_entities()
-		for _, entity in pairs(entities) do
-			for _, farm in pairs(farm_buildings) do
-				if string.match(entity.name, farm) then
-					--global.farms[entity.unit_number] = entity
-					--table.insert(global.farms, entity)
-					if entity.get_module_inventory().is_empty() == true then
-						disable_machine(entity)
-					else
-					global.farms[entity.unit_number] = entity
-					table.insert(global.farm_count, entity.unit_number)
-					global.farm_count_last = global.farm_count_last +1
+		if global.farm_migration == false then
+			local entities = game.surfaces['nauvis'].find_entities_filtered{type='assembling-machine'}
+			for _, entity in pairs(entities) do
+				for _, farm in pairs(farm_buildings) do
+					if string.match(entity.name, farm) then
+						--global.farms[entity.unit_number] = entity
+						--table.insert(global.farms, entity)
+						if entity.valid == true and entity.get_module_inventory() ~= nil and entity.get_module_inventory().is_empty() == true then
+							disable_machine(entity)
+						else
+							if entity.unit_number ~= nil then
+								global.farms[entity.unit_number] = entity
+								table.insert(global.farm_count, entity.unit_number)
+								global.farm_count_last = global.farm_count_last +1
+							end
+						end
 					end
 				end
 			end
+			global.farm_migration = true
 		end
 	end
 end)
@@ -286,8 +302,11 @@ local function create_farm_help_message(event)
 	local player
 	if event.player_index ~= nil then
 		player = game.players[event.player_index]
+		if global.farm_help_message_open == false then
 		farm_help_gui = player.gui.center.add({type = 'frame', name = 'farm_help', direction = 'horizontal', caption = 'All plants and animal buildings require 1 or more copies of the wanted item to fuction. Craft the first version from codex and DNA samples.'})
 		farm_help_gui.add({type = 'button', name = 'fh_accept_button', caption = 'OK'})
+		global.farm_help_message_open = true
+		end
 	end
 end
 
@@ -329,7 +348,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 					disable_machine(E)
 				end
 			end
-		elseif global.has_built_first_farm == true then 
+		elseif global.has_built_first_farm == true then
 			for _, farm in pairs(farm_buildings) do
 				if string.match(E.name, farm) then
 					disable_machine(E)
@@ -339,10 +358,6 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 		--log(serpent.block(landbots))
     end
 )
-
-script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity}, function()
-
-end)
 
 script.on_event(defines.events.on_put_item, function()
 
@@ -492,29 +507,65 @@ script.on_event(defines.events.on_tick, function()
 		end
 	end
 	if next(global.farm_count) ~= nil and global.farm_count_last > 0 then
-		log(serpent.block(global.farms))
-		log(serpent.block(global.farm_count))
+		--log(serpent.block(global.farms))
+		--log(serpent.block(global.farm_count))
+		--[[
 		for k,v in pairs(global.farm_count) do
 			log(k)
 			log(v)
 		end
+		]]--
 		local start_num = global.checked_farm_counter
 		for i = global.checked_farm_counter, 10000 do
-			repeat 
-				log('hit')
-				log(i)
-				log(serpent.block(global.farms[global.farm_count[i]]))
-				if global.farms[global.farm_count[i]].get_module_inventory().is_empty() == false then
-					global.farms[global.farm_count[i]].active = true
+			--log('hit')
+			--log(i)
+			--log(serpent.block(global.farms[global.farm_count[i]]))
+			if global.farms[global.farm_count[i]] == nil then
+				break
+			elseif global.farms[global.farm_count[i]].valid == true and global.farms[global.farm_count[i]].get_module_inventory().is_empty() == false then
+				global.farms[global.farm_count[i]].active = true
+				if global.rendered_icons[global.farm_count[i]] ~= nil then
+				rendering.destroy(global.rendered_icons[global.farm_count[i]])
+				global.rendered_icons[global.farm_count[i]] = nil
 				end
-			until i == start_num + 10
+			elseif global.farms[global.farm_count[i]].valid == true and global.farms[global.farm_count[i]].get_module_inventory().is_empty() == true then
+				global.farms[global.farm_count[i]].active = false
+				log(serpent.block(global.farm_count[i]))
+				log(serpent.block(global.rendered_icons[global.farm_count[i]]))
+				if global.rendered_icons[global.farm_count[i]] == nil then --and  rendering.is_valid(global.rendered_icons[global.farm_count[i]]) == false then
+					local E = global.farms[global.farm_count[i]]
+					local stopsign = rendering.draw_sprite{sprite = 'no_module_animal', render_layer = '188', target = E.position, surface = E.surface.name}
+					global.rendered_icons[E.unit_number] = stopsign
+				end
+			end
 			global.checked_farm_counter = i + 1
-			break
+			if global.checked_farm_counter > global.farm_count_last then
+				global.checked_farm_counter = 1
+			end
+			if i == start_num + 10 then
+				break
+			end
 		end
 	end
 end)
 
 script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity},function(event)
+	local E = event.entity
+	for _, farm in pairs(farm_buildings) do
+		if string.match(E.name, farm) then
+			table.remove(global.farms, E.unit_number)
+			local table_key = 0
+			for k, v in pairs(global.farm_count) do
+				if v == E.unit_number then
+					 table_key = k
+				end
+			end
+			table.remove(global.farm_count, table_key)
+			if global.rendered_icons[E.unit_number] ~= nil then
+				rendering.destroy(global.rendered_icons[E.unit_number])
+			end
+		end
+	end
 	caravanroutes = global.caravanroutes
 	--log(serpent.block(landbots))
 		if event.entity.name == 'outpost' then
@@ -657,6 +708,7 @@ script.on_event(defines.events.on_gui_click, function(event)
 	elseif event.element.name == 'fh_accept_button' and global.has_built_first_farm == false then
 		farm_help_gui.destroy()
 		global.has_built_first_farm = true
+		global.farm_help_message_open = false
 	end
 end)
 
