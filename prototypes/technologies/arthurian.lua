@@ -4,13 +4,15 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/arthurian.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"land-animals-mk02","biotech-mk02","genetics-mk02","organic-breeding"},
+    prerequisites = {"land-animals-mk02","biotech-mk02","genetics-mk02","organic-breeding","assisted-embryology"},
     effects = {},
     unit = {
-        count = 100,
+        count = 150,
         ingredients = {
             {"automation-science-pack", 4},
-            {"logistic-science-pack", 1},
+            {"logistic-science-pack", 2},
+            {'chemical-science-pack', 1},
+            {"py-science-pack", 1},
         },
         time = 50
     }
@@ -25,10 +27,11 @@ TECHNOLOGY {
     prerequisites = {"arthurian"},
     effects = {},
     unit = {
-        count = 150,
+        count = 200,
         ingredients = {
             {"automation-science-pack", 4},
             {"logistic-science-pack", 2},
+            {'chemical-science-pack', 1},
             {"py-science-pack", 2},
         },
         time = 50
@@ -44,12 +47,13 @@ TECHNOLOGY {
     prerequisites = {"arthurian-mk02"},
     effects = {},
     unit = {
-        count = 200,
+        count = 250,
         ingredients = {
             {"automation-science-pack", 1},
             {"logistic-science-pack", 2},
             {"py-science-pack", 1},
             {'chemical-science-pack', 1},
+            {'production-science-pack', 2},
         },
         time = 50
     }
@@ -64,13 +68,14 @@ TECHNOLOGY {
     prerequisites = {"arthurian-mk03"},
     effects = {},
     unit = {
-        count = 250,
+        count = 300,
         ingredients = {
             {"automation-science-pack", 1},
             {"logistic-science-pack", 2},
             {"py-science-pack", 1},
             {'chemical-science-pack', 1},
             {'production-science-pack', 2},
+            {'utility-science-pack', 1},
         },
         time = 50
     }
