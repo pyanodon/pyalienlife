@@ -4408,7 +4408,7 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/sea-sponge.png"}
     },
     icon_size = 64,
-    category = "sea-sponge",
+    category = "sponge",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-modules",
@@ -4428,7 +4428,7 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/sea-sponge.png"}
     },
     icon_size = 64,
-    category = "sea-sponge",
+    category = "sponge",
 	tier = 2,
     flags = {},
     subgroup = "py-alienlife-modules",
@@ -4448,7 +4448,7 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/sea-sponge.png"}
     },
     icon_size = 64,
-    category = "sea-sponge",
+    category = "sponge",
 	tier = 3,
     flags = {},
     subgroup = "py-alienlife-modules",
@@ -4468,7 +4468,7 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/sea-sponge.png"}
     },
     icon_size = 64,
-    category = "sea-sponge",
+    category = "sponge",
 	tier = 4,
     flags = {},
     subgroup = "py-alienlife-modules",
@@ -4488,7 +4488,7 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png"}
     },
     icon_size = 64,
-    category = "ralesia-flower",
+    category = "ralesia",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-modules",
@@ -4508,7 +4508,7 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png"}
     },
     icon_size = 64,
-    category = "ralesia-flower",
+    category = "ralesia",
 	tier = 2,
     flags = {},
     subgroup = "py-alienlife-modules",
@@ -4528,7 +4528,7 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png"}
     },
     icon_size = 64,
-    category = "ralesia-flower",
+    category = "ralesia",
 	tier = 3,
     flags = {},
     subgroup = "py-alienlife-modules",
@@ -4548,7 +4548,7 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png"}
     },
     icon_size = 64,
-    category = "ralesia-flower",
+    category = "ralesia",
 	tier = 4,
     flags = {},
     subgroup = "py-alienlife-modules",
@@ -7152,11 +7152,11 @@ data:extend(
   },
   {
     type = "module-category",
-    name = "sea-sponge"
+    name = "sponge"
   },
   {
     type = "module-category",
-    name = "ralesia-flower"
+    name = "ralesia"
   },
   {
     type = "module-category",
