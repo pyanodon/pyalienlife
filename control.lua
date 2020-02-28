@@ -473,7 +473,7 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 				end
 			end
 		end
-
+--[[
 		if event.result == defines.behavior_result.success then
 			--log('hit')
 		end
@@ -486,7 +486,7 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 		if event.result == defines.behavior_result.deleted then
 			--log('hit')
 		end
-
+]]--
 		global.caravanroutes = caravanroutes
 
     end)
