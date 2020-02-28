@@ -278,8 +278,9 @@ require('prototypes/buildings/vat-brain')
 require("prototypes/buildings/harvester")
 require("prototypes/buildings/collector")
 
---Caravan ceature
-require('prototypes/ceatures/caravan')
+--Ceature
+require('prototypes/creatures/caravan')
+require('prototypes/creatures/dingrido')
 
 --Land bot
 --require('prototypes/robots/land-bot')
