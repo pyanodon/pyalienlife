@@ -188,6 +188,7 @@ RECIPE('yotoi-aloe-orchard-mk04'):add_ingredient({type = "item", name = "aerogel
 RECIPE('zipir-reef-mk04'):add_ingredient({type = "item", name = "hyperelastic-material", amount = 50})
 RECIPE('bio-printer-mk04'):add_ingredient({type = "item", name = "harmonic-absorber", amount = 20}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 50}):add_ingredient({type = "item", name = "intelligent-unit", amount = 15})
 RECIPE('ez-ranch-mk04'):add_ingredient({type = "item", name = "intelligent-unit", amount = 30}):add_ingredient({type = "item", name = "quantum-vortex-storage-system", amount = 10}):add_ingredient({type = "item", name = "phosphate-glass", amount = 100})
+RECIPE('mega-farm'):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 10}):add_ingredient({type = "item", name = "harmonic-absorber", amount = 30}):add_ingredient({type = "item", name = "intelligent-unit", amount = 50})
 
 
 
