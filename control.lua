@@ -182,6 +182,7 @@ local farm_buildings =
 	}
 
 local function disable_machine(entity)
+	log('hit')
 	local E = entity
 	--table.insert(global.farms, E)
 	global.farms[E.unit_number] = entity
@@ -269,23 +270,34 @@ script.on_configuration_changed(function()
 	end
 	if global.farm_migration == nil then
 		global.farm_migration = false
+	elseif global.farm_migration == true and global.farm_fix == nil then
+		global.farm_migration = false
+		global.farm_fix = true
 	end
 	if global.farms == nil then
 		global.farms = {}
 		if global.farm_migration == false then
+			--log('hit')
 			local entities = game.surfaces['nauvis'].find_entities_filtered{type='assembling-machine'}
 			for _, entity in pairs(entities) do
+				--log('hit')
 				for _, farm in pairs(farm_buildings) do
+					--log('hit')
 					if string.match(entity.name, farm) then
+						--log('hit')
 						--global.farms[entity.unit_number] = entity
 						--table.insert(global.farms, entity)
 						if entity.valid == true and entity.get_module_inventory() ~= nil and entity.get_module_inventory().is_empty() == true then
+							--log('hit')
 							disable_machine(entity)
 						else
+							--log('hit')
 							if entity.unit_number ~= nil then
+								--log('hit')
 								global.farms[entity.unit_number] = entity
 								table.insert(global.farm_count, entity.unit_number)
-								global.farm_count_last = global.farm_count_last +1
+								global.farm_count_last = global.farm_count_last + 1
+								--log('hit')
 							end
 						end
 					end
@@ -487,6 +499,7 @@ script.on_nth_tick(5, function(event)
 end)
 ]]--
 script.on_event(defines.events.on_tick, function()
+	log('tick start')
 	if global.watch_slaughterhouse == true then
 		if global.watched_slaughterhouse.entity.valid and global.watched_slaughterhouse.entity.get_recipe() == nil then
 			--log('hit')
@@ -508,43 +521,50 @@ script.on_event(defines.events.on_tick, function()
 	end
 	if next(global.farm_count) ~= nil and global.farm_count_last > 0 then
 		--log(serpent.block(global.farms))
-		--log(serpent.block(global.farm_count))
+		log(serpent.block(global.farm_count))
+		log(serpent.block(global.farm_count_last))
+		log(serpent.block(global.checked_farm_counter))
 		--[[
 		for k,v in pairs(global.farm_count) do
-			log(k)
-			log(v)
+			--log(k)
+			--log(v)
 		end
 		]]--
 		local start_num = global.checked_farm_counter
-		for i = global.checked_farm_counter, 10000 do
-			--log('hit')
-			--log(i)
+		for i = global.checked_farm_counter, global.farm_count_last do
+			log('hit')
+			log(i)
+			--log(serpent.block(global.farms))
 			--log(serpent.block(global.farms[global.farm_count[i]]))
-			if global.farms[global.farm_count[i]] == nil then
-				break
-			elseif global.farms[global.farm_count[i]].valid == true and global.farms[global.farm_count[i]].get_module_inventory().is_empty() == false then
+			--if global.farms[global.farm_count[i]] == nil then
+				--log('hit')
+				--break
+			--else
+			if global.farms[global.farm_count[i]] ~= nil and global.farms[global.farm_count[i]].valid == true and global.farms[global.farm_count[i]].get_module_inventory().is_empty() == false then
 				global.farms[global.farm_count[i]].active = true
 				if global.rendered_icons[global.farm_count[i]] ~= nil then
 				rendering.destroy(global.rendered_icons[global.farm_count[i]])
 				global.rendered_icons[global.farm_count[i]] = nil
 				end
-			elseif global.farms[global.farm_count[i]].valid == true and global.farms[global.farm_count[i]].get_module_inventory().is_empty() == true then
+			elseif global.farms[global.farm_count[i]] ~= nil and global.farms[global.farm_count[i]].valid == true and global.farms[global.farm_count[i]].get_module_inventory().is_empty() == true then
 				global.farms[global.farm_count[i]].active = false
-				log(serpent.block(global.farm_count[i]))
-				log(serpent.block(global.rendered_icons[global.farm_count[i]]))
+				--log(serpent.block(global.farm_count[i]))
+				--log(serpent.block(global.rendered_icons[global.farm_count[i]]))
 				if global.rendered_icons[global.farm_count[i]] == nil then --and  rendering.is_valid(global.rendered_icons[global.farm_count[i]]) == false then
 					local E = global.farms[global.farm_count[i]]
 					local stopsign = rendering.draw_sprite{sprite = 'no_module_animal', render_layer = '188', target = E.position, surface = E.surface.name}
 					global.rendered_icons[E.unit_number] = stopsign
 				end
 			end
-			global.checked_farm_counter = i + 1
-			if global.checked_farm_counter > global.farm_count_last then
-				global.checked_farm_counter = 1
-			end
-			if i == start_num + 10 then
+			if i == start_num + 9 then
 				break
 			end
+		end
+		global.checked_farm_counter = start_num + 9
+		--log(global.checked_farm_counter)
+		--log(global.farm_count_last)
+		if global.checked_farm_counter > global.farm_count_last + 10 then
+			global.checked_farm_counter = 1
 		end
 	end
 end)
