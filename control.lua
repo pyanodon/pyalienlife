@@ -72,7 +72,7 @@ local function create_outpost_gui(event)
 	if global.outpost_names[event.entity.unit_number] ~= nil then
 		outpostgui.outpost_name.text = global.outpost_names[event.entity.unit_number]
 	end
-	log(serpent.block(global.outpost_names))
+	--log(serpent.block(global.outpost_names))
 end
 
 local function create_slaughterhouse_animal_table(gui, player)
@@ -182,7 +182,7 @@ local farm_buildings =
 	}
 
 local function disable_machine(entity)
-	log('hit')
+	--log('hit')
 	local E = entity
 	--table.insert(global.farms, E)
 	global.farms[E.unit_number] = entity
@@ -390,7 +390,7 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 			--log(serpent.block(caravanroutes))
 			local car = event.unit_number
 			--log(event.unit_number)
-			log(serpent.block(caravanroutes[car]))
+			--log(serpent.block(caravanroutes[car]))
 			--log(caravanroutes[car].unit.position)
 			--log(caravanroutes[car].startpoint.pos)
 			--log(caravanroutes[car].endpoint.pos)
@@ -475,16 +475,16 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 		end
 
 		if event.result == defines.behavior_result.success then
-			log('hit')
+			--log('hit')
 		end
 		if event.result == defines.behavior_result.in_progress then
-			log('hit')
+			--log('hit')
 		end
 		if event.result == defines.behavior_result.fail	then
-			log('hit')
+			--log('hit')
 		end
 		if event.result == defines.behavior_result.deleted then
-			log('hit')
+			--log('hit')
 		end
 
 		global.caravanroutes = caravanroutes
@@ -499,7 +499,7 @@ script.on_nth_tick(5, function(event)
 end)
 ]]--
 script.on_event(defines.events.on_tick, function()
-	log('tick start')
+	--log('tick start')
 	if global.watch_slaughterhouse == true then
 		if global.watched_slaughterhouse.entity.valid and global.watched_slaughterhouse.entity.get_recipe() == nil then
 			--log('hit')
@@ -521,9 +521,9 @@ script.on_event(defines.events.on_tick, function()
 	end
 	if next(global.farm_count) ~= nil and global.farm_count_last > 0 then
 		--log(serpent.block(global.farms))
-		log(serpent.block(global.farm_count))
-		log(serpent.block(global.farm_count_last))
-		log(serpent.block(global.checked_farm_counter))
+		--log(serpent.block(global.farm_count))
+		--log(serpent.block(global.farm_count_last))
+		--log(serpent.block(global.checked_farm_counter))
 		--[[
 		for k,v in pairs(global.farm_count) do
 			--log(k)
@@ -532,8 +532,8 @@ script.on_event(defines.events.on_tick, function()
 		]]--
 		local start_num = global.checked_farm_counter
 		for i = global.checked_farm_counter, global.farm_count_last do
-			log('hit')
-			log(i)
+			--log('hit')
+			--log(i)
 			--log(serpent.block(global.farms))
 			--log(serpent.block(global.farms[global.farm_count[i]]))
 			--if global.farms[global.farm_count[i]] == nil then
@@ -610,7 +610,7 @@ script.on_event(defines.events.on_gui_opened,function(event)
 		elseif event.entity ~= nil and string.match(event.entity.name, 'slaughterhouse') and event.entity.get_recipe() == nil and global.slaughterhouse_gui_open == true then
 			game.players[event.player_index].opened = nil
 		elseif event.entity ~= nil and string.match(event.entity.name, 'slaughterhouse') and event.entity.get_recipe() ~= nil then
-			log('hit')
+			--log('hit')
 			global.watch_slaughterhouse = true
 			global.watched_slaughterhouse.entity = event.entity
 			global.watched_slaughterhouse.player = event.player_index
@@ -650,7 +650,7 @@ script.on_event(defines.events.on_gui_selection_state_changed, function(event)
 
 			local otnum = global.outpost_numbers[value]
 
-			log(serpent.block(caravanroutes[id_num]))
+			--log(serpent.block(caravanroutes[id_num]))
 			--log(serpent.block(outpost_table))
 			--log(serpent.block(outpost_table['outpost'..otnum]))
 
@@ -715,11 +715,11 @@ script.on_event(defines.events.on_gui_click, function(event)
 	elseif string.match(event.element.name, 'recipe%-menu') ~= nil then
 		--log('hit')
 		local entity = global.current_entity[event.player_index]
-			log(serpent.block(global.current_entity))
-			log(serpent.block(global.current_entity[event.player_index]))
-			log(entity.name)
-			log(serpent.block(entity))
-			log(serpent.block(global.current_entity))
+			--log(serpent.block(global.current_entity))
+			--log(serpent.block(global.current_entity[event.player_index]))
+			--log(entity.name)
+			--log(serpent.block(entity))
+			--log(serpent.block(global.current_entity))
 			entity.set_recipe(string.match(event.element.name, "%_(.*)"))
 			event.element.parent.parent.parent.parent.destroy()
 			global.current_entity[event.player_index] = nil
