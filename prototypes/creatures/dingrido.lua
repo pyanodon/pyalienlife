@@ -3,24 +3,30 @@ local util = require('util')
 RECIPE{
     type = "recipe",
     name = "dingrido",
-    energy_required = 4,
-    enabled = true,
+    energy_required = 90,
+    category = 'creature-chamber',
+    enabled = false,
     ingredients =
     {
-      {"engine-unit", 20},
-      {"electronic-circuit", 10},
-      {"steel-plate", 30}
+      {type = 'item', name = 'alien-sample-02', amount = 10},
+      {type = 'item', name = 'cdna', amount = 30},
+      {type = 'item', name = 'cbp', amount = 10},
+      {type = 'item', name = 'bio-sample', amount = 100},
+      {type = 'item', name = 'dingrits-codex', amount = 5},
+      {type = 'item', name = 'earth-wolf-sample', amount = 10},
+      {type = 'fluid', name = 'fetal-serum', amount = 100},
+      {type = 'fluid', name = 'artificial-blood', amount = 200},
     },
     result = "dingrido"
-  }
+  }:add_unlock("domestication-mk02")
 
 ITEM{
     type = "item-with-entity-data",
     name = "dingrido",
-    icon = "__base__/graphics/icons/locomotive.png",
-    icon_size = 32,
-    subgroup = "transport",
-    order = "a[train-system]-f[diesel-locomotive]",
+    icon = "__pyalienlifegraphics__/graphics/icons/dingrido.png",
+    icon_size = 64,
+    subgroup = "py-alienlife-buildings-others",
+    order = "x",
     place_result = "dingrido",
     stack_size = 5
   }
@@ -30,8 +36,8 @@ data:extend(
       {
         type = "car",
         name = "dingrido",
-        icon = "__base__/graphics/icons/tank.png",
-        icon_size = 32,
+        icon = "__pyalienlifegraphics__/graphics/icons/dingrido.png",
+        icon_size = 64,
         flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-flammable"},
         minable = {mining_time = 0.5, result = "dingrido"},
         mined_sound = {filename = "__core__/sound/deconstruct-medium.ogg"},
@@ -313,8 +319,8 @@ data:extend(
           --},
           match_speed_to_activity = true
         },
-        open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.7 },
-        close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 },
+        open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.1 },
+        close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.1 },
         rotation_speed = 0.0035,
         tank_driving = true,
         weight = 10000,
