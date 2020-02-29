@@ -196,6 +196,11 @@ local function disable_machine(entity)
 	--local stoptext = rendering.draw_text{text = 'Requires ' .. E.name .. ' to function', surface = E.surface, target = E.position, target_offset = {0,-6}, color = {255,255,255}, scale = 2, alignment = 'center'}
 end
 
+--Ocula--
+
+
+--END--
+
 script.on_init(
     function()
         global.caravanroutes = caravanroutes
@@ -221,7 +226,10 @@ script.on_init(
 		global.checked_farm_counter = 1
 		global.farm_help_message_open = false
 		global.rendered_icons = {}
-global.farm_migration = false
+		global.farm_migration = false
+
+		global.ocula_master_table = {ocula = {}, ocula_boxes = {}}
+
 		if not remote.interfaces["silo_script"] then
 			return
 		end
@@ -229,9 +237,9 @@ global.farm_migration = false
     end)
 
 script.on_load(function()
-caravanroutes = global.caravanroutes
+	caravanroutes = global.caravanroutes
 
-TRlist = global.TRlist
+	TRlist = global.TRlist
 
 --log(serpent.block(global.TRlist))
 --log(serpent.block(TRlist))
@@ -306,6 +314,9 @@ script.on_configuration_changed(function()
 			global.farm_migration = true
 		end
 	end
+	if global.ocula_master_table == nil then
+		global.ocula_master_table = {ocula = {}, ocula_boxes = {}}
+	end
 end)
 
 local farm_help_gui
@@ -353,6 +364,23 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 			global.outpost_names[E.unit_number] = 'outpost-'..E.unit_number
 		elseif E.name == 'caravan' then
 			global.caravan_unit_numbers[E.unit_number] = true
+		elseif E.name == 'ipod' then
+			global.ocula_master_table.ocula_boxes[E.unit_number] = E
+		elseif E.name == 'ocula' then
+			global.ocula_master_table.ocula[E.unit_number] =
+				{
+					entity = E,
+					base = '',
+					current_inventory =
+						{
+							item_name = '',
+							amount = ''
+						},
+					max_stack_size = 50,
+					current_target = 'na',
+					getting_items = false,
+					delivering_items = false
+				}
 		elseif global.has_built_first_farm == false then
 			for _, farm in pairs(farm_buildings) do
 				if string.match(E.name, farm) then

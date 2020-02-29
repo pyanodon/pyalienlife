@@ -529,15 +529,15 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = 'item', name = 'copper-ore', amount = 10},
-        {type = 'item', name = 'ore-nickel', amount = 10},
+        {type = 'item', name = 'copper-ore', amount = 8},
+        {type = 'item', name = 'ore-nickel', amount = 8},
     },
     results = {
-        {type = 'item', name = 'mixed-ores', amount = 2},
+        {type = 'item', name = 'mixed-ores', amount = 3},
         {type = 'item', name = 'stone', amount = 1, probability = 0.5},
     },
     main_product = "mixed-ores",
-}:add_unlock('biotech-mk02'):add_ingredient({type = "item", name = "rare-earth-ore", amount = 5})
+}:add_unlock('biotech-mk02'):add_ingredient({type = "item", name = "rare-earth-ore", amount = 4})
 
 RECIPE {
     type = 'recipe',

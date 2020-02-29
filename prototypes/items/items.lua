@@ -198,6 +198,51 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "fawogae-spore-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/fawogae-spore.png", icon_size = 32},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "fawogae-spore-mk03",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/fawogae-spore.png", icon_size = 32},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "fawogae-spore-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/fawogae-spore.png", icon_size = 32},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
     name = "navens-spore",
     icon = "__pyalienlifegraphics__/graphics/icons/navens-spore.png",
     icon_size = 64,
@@ -6923,7 +6968,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 50,
-	effect = { speed = {bonus = 1.45}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 1.45}, productivity = {bonus = 0.01}},
 	limitation = alien_life_limitations_fawogae,
 	limitation_message_key = "Its full"
 }
@@ -6943,7 +6988,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 50,
-	effect = { speed = {bonus = 1.95}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 1.95}, productivity = {bonus = 0.02}},
 	limitation = alien_life_limitations_fawogae,
 	limitation_message_key = "Its full"
 }
