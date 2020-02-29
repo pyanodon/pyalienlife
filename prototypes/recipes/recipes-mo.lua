@@ -1,15 +1,3 @@
-RECIPE {
-    type = 'recipe',
-    name = 'fawogae-spore',
-    category = 'spore',
-    enabled = false,
-    energy_required = 15,
-    ingredients = {
-    },
-    results = {
-        {type = 'item', name = 'fawogae-spore', amount = 1, probability = 0.4},
-    },
-}:add_unlock("fawogae")
 
 RECIPE {
     type = 'recipe',

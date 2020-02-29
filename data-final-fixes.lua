@@ -1188,6 +1188,7 @@ local recipes_list =
   "Extract scrondrix Meat",
   "Extract scrondrix brains",
   "Extract scrondrix Pineal Gland",
+  "Extract scrondrix Pineal Gland-1",
   "Extract scrondrix skin",
   "Extract scrondrix bones",
   "Extract scrondrix guts",
