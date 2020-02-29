@@ -130,7 +130,7 @@ ITEM{
       --dying_sound =  make_biter_dying_sounds(0.4),
       --working_sound =  make_biter_calls(0.3),
       --run_animation = biterrunanimation(small_biter_scale, small_biter_tint1, small_biter_tint2),
-    
+
       run_animation =
       {
         layers =
@@ -200,4 +200,3 @@ ITEM{
       ]]--
       }
       )
-    
