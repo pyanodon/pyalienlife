@@ -53,7 +53,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedphadai',amount=1},
+					{name='cageddingrits',amount=1},
 				},
 			results =
 				{
@@ -375,19 +375,6 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'fawogae-spore-2',
-    category = 'spore',
-    enabled = false,
-    energy_required = 15,
-    ingredients = {
-    },
-    results = {
-        {type = 'item', name = 'fawogae-spore', amount = 1, probability = 0.6},
-    },
-}:add_unlock("microfilters")
-
-RECIPE {
-    type = 'recipe',
     name = 'yaedols-spores-2',
     category = 'spore',
     enabled = false,
@@ -425,19 +412,6 @@ RECIPE {
     },
     results = {
         {type = 'item', name = 'navens-spore', amount = 1, probability = 0.8},
-    },
-}:add_unlock("microfilters-mk02")
-
-RECIPE {
-    type = 'recipe',
-    name = 'fawogae-spore-3',
-    category = 'spore',
-    enabled = false,
-    energy_required = 15,
-    ingredients = {
-    },
-    results = {
-        {type = 'item', name = 'fawogae-spore', amount = 1, probability = 0.8},
     },
 }:add_unlock("microfilters-mk02")
 
