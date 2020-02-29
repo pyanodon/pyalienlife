@@ -2660,6 +2660,10 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/dingrits-food-01.png",
 	icon_size = 64,
     flags = {},
+    fuel_category = 'food',
+    fuel_value = '2MJ',
+    fuel_acceleration_multiplier = 1.4,
+    fuel_top_speed_multiplier = 1.1,
     subgroup = "py-alienlife-food",
     order = "x",
     stack_size = 10
@@ -2671,6 +2675,10 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/dingrits-food-02.png",
 	icon_size = 64,
     flags = {},
+    fuel_category = 'food',
+    fuel_value = '4MJ',
+    fuel_acceleration_multiplier = 1.6,
+    fuel_top_speed_multiplier = 1.4,
     subgroup = "py-alienlife-food",
     order = "x",
     stack_size = 10
