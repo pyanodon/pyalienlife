@@ -168,6 +168,71 @@ RECIPE {
 }:add_unlock("selective-breeding")
 
 
+RECIPE {
+    type = 'recipe',
+    name = 'phagnot-mature-basic-mk02',
+    category = 'phagnot',
+    enabled = false,
+    energy_required = 50,
+    ingredients = {
+        {type = 'item', name = 'phagnot-cub-mk02', amount = 1},
+        {type = 'item', name = 'barrel-milk', amount = 1},
+        {type = 'item', name = 'dried-grods', amount = 3},
+        {type = 'item', name = 'fawogae', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'phagnot-mk02', amount = 1},
+        {type = 'item', name = 'empty-barrel-milk', amount = 1}
+    },
+    main_product = "phagnot-mk02",
+    subgroup = 'py-alienlife-phagnot',
+    order = 'a',
+}:add_unlock("selective-breeding")
+
+
+RECIPE {
+    type = 'recipe',
+    name = 'phagnot-mature-basic-mk03',
+    category = 'phagnot',
+    enabled = false,
+    energy_required = 50,
+    ingredients = {
+        {type = 'item', name = 'phagnot-cub-mk03', amount = 1},
+        {type = 'item', name = 'barrel-milk', amount = 1},
+        {type = 'item', name = 'dried-grods', amount = 3},
+        {type = 'item', name = 'fawogae', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'phagnot-mk03', amount = 1},
+        {type = 'item', name = 'empty-barrel-milk', amount = 1}
+    },
+    main_product = "phagnot-mk03",
+    subgroup = 'py-alienlife-phagnot',
+    order = 'a',
+}:add_unlock("artificial-breeding")
+
+
+RECIPE {
+    type = 'recipe',
+    name = 'phagnot-mature-basic-mk04',
+    category = 'phagnot',
+    enabled = false,
+    energy_required = 50,
+    ingredients = {
+        {type = 'item', name = 'phagnot-cub-mk04', amount = 1},
+        {type = 'item', name = 'barrel-milk', amount = 1},
+        {type = 'item', name = 'dried-grods', amount = 3},
+        {type = 'item', name = 'fawogae', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'phagnot-mk04', amount = 1},
+        {type = 'item', name = 'empty-barrel-milk', amount = 1}
+    },
+    main_product = "phagnot-mk04",
+    subgroup = 'py-alienlife-phagnot',
+    order = 'a',
+}:add_unlock("biased-mutation")
+
 ----adverse products----
 
 ----PROCESSING----
@@ -307,7 +372,7 @@ RECIPE {
         {type = 'item', name = 'phagnot-cub', amount = 1, probability = 0.5},
         {type = 'item', name = 'phagnot-mk02', amount_min = 0, amount_max = 2}
     },
-    --main_product = "phagnot-mk02",
+    main_product = "phagnot-mk02",
     icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
     icon_size = 64,
     subgroup = 'py-alienlife-phagnot',
@@ -335,7 +400,7 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 5},
         {type = 'item', name = 'phagnot-cub', amount = 1, probability = 0.25},
     },
-    --main_product = "phagnot-mk03",
+    main_product = "phagnot-mk03",
     icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png',
     icon_size = 64,
     subgroup = 'py-alienlife-phagnot',
@@ -365,7 +430,7 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 5},
         {type = 'item', name = 'phagnot-cub', amount = 1, probability = 0.25},
     },
-    --main_product = "phagnot-mk04",
+    main_product = "phagnot-mk04",
     icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
     icon_size = 64,
     subgroup = 'py-alienlife-phagnot',
