@@ -12,9 +12,9 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='pressuredwater',amount ='*30'},
-					{name='zipiregg',amount ='1'},
-					{name='fish',amount ='3'},
-					{name='stonewool',amount ='3'},
+					{name='zipiregg',amount =1},
+					{name='fish',amount =3},
+					{name='stonewool',amount =3},
                     {name='water',amount ='*20',return_item={name='waste-water',amount=100}},
 				},
 			results =
@@ -336,7 +336,7 @@ fun.autorecipes {
 				{
                     {name='pressuredwater',amount ='*30',return_item={name='waste-water',amount=100}},
 					{name='stonewool',amount =3},
-					{name='fish',amount ='3'},
+					{name='fish',amount =3},
                     {name='phytoplankton',amount ='*20'},
 				},
 			results =
@@ -436,7 +436,7 @@ fun.autorecipes {
                     --{name='woodseeds',amount ='R'},
                     --{name='cagedmukmoux',amount ='R'},
 					{name='fawogaesubstrate',amount =10},
-					{name='fish',amount ='3'},
+					{name='fish',amount =3},
 				},
 			results =
 				{
