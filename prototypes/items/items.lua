@@ -3215,6 +3215,51 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "phagnot-cub-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/phagnot-pup.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-phagnot",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "phagnot-cub-mk03",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/phagnot-pup.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-phagnot",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "phagnot-cub-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/phagnot-pup.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-phagnot",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "gas-bladder",
     icon = "__pyalienlifegraphics__/graphics/icons/gas-bladder.png",
     icon_size = 64,
@@ -6118,7 +6163,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "p-b",
     stack_size = 25,
-	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 40}, productivity = {bonus = 0.03}},
 	limitation = alien_life_limitations_phagnot,
 	limitation_message_key = "Its full"
 }
@@ -6138,7 +6183,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "p-c",
     stack_size = 25,
-	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 60}, productivity = {bonus = 0.05}},
 	limitation = alien_life_limitations_phagnot,
 	limitation_message_key = "Its full"
 }
@@ -6158,7 +6203,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "p-d",
     stack_size = 25,
-	effect = { speed = {bonus = 35}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 80}, productivity = {bonus = 0.1}},
 	limitation = alien_life_limitations_phagnot,
 	limitation_message_key = "Its full"
 }
