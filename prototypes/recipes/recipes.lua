@@ -527,13 +527,13 @@ RECIPE {
     name = 'mixed-ores',
     category = 'ball-mill',
     enabled = false,
-    energy_required = 5,
+    energy_required = 2.5,
     ingredients = {
         {type = 'item', name = 'copper-ore', amount = 8},
         {type = 'item', name = 'ore-nickel', amount = 8},
     },
     results = {
-        {type = 'item', name = 'mixed-ores', amount = 3},
+        {type = 'item', name = 'mixed-ores', amount = 5},
         {type = 'item', name = 'stone', amount = 1, probability = 0.5},
     },
     main_product = "mixed-ores",
@@ -544,14 +544,14 @@ RECIPE {
     name = 'cobalt-extract',
     category = 'flotation',
     enabled = false,
-    energy_required = 6,
+    energy_required = 4,
     ingredients = {
-        {type = 'fluid', name = 'pressured-air', amount = 150},
-        {type = 'fluid', name = 'sulfuric-acid', amount = 50},
-        {type = 'item', name = 'mixed-ores', amount = 5},
+        {type = 'fluid', name = 'pressured-air', amount = 450},
+        {type = 'fluid', name = 'sulfuric-acid', amount = 150},
+        {type = 'item', name = 'mixed-ores', amount = 15},
     },
     results = {
-        {type = 'item', name = 'cobalt-extract', amount = 1},
+        {type = 'item', name = 'cobalt-extract', amount = 3},
         {type = 'fluid', name = 'dirty-water', amount = 50},
     },
     main_product = "cobalt-extract",
@@ -562,14 +562,14 @@ RECIPE {
     name = 'cobalt-sulfate',
     category = 'leaching',
     enabled = false,
-    energy_required = 12,
+    energy_required = 10,
     ingredients = {
         {type = 'fluid', name = 'syngas', amount = 150},
         {type = 'item', name = 'lime', amount = 3},
-        {type = 'item', name = 'cobalt-extract', amount = 1},
+        {type = 'item', name = 'cobalt-extract', amount = 3},
     },
     results = {
-        {type = 'item', name = 'cobalt-sulfate', amount = 1},
+        {type = 'item', name = 'cobalt-sulfate', amount = 3},
     },
 }:add_unlock('biotech-mk03')
 
@@ -578,13 +578,13 @@ RECIPE {
     name = 'cobalt-sulfate-02',
     category = 'leaching',
     enabled = false,
-    energy_required = 12,
+    energy_required = 10,
     ingredients = {
-        {type = 'fluid', name = 'sulfuric-acid', amount = 100},
-        {type = 'item', name = 'cobalt-sulfate', amount = 1},
+        {type = 'fluid', name = 'sulfuric-acid', amount = 300},
+        {type = 'item', name = 'cobalt-sulfate', amount = 3},
     },
     results = {
-        {type = 'item', name = 'cobalt-sulfate-02', amount = 1},
+        {type = 'item', name = 'cobalt-sulfate-02', amount = 3},
     },
 }:add_unlock('biotech-mk03')
 
@@ -593,14 +593,14 @@ RECIPE {
     name = 'cobalt-oxide',
     category = 'leaching',
     enabled = false,
-    energy_required = 6,
+    energy_required = 4,
     ingredients = {
         {type = 'fluid', name = 'water', amount = 500},
-        {type = 'item', name = 'cobalt-sulfate-02', amount = 1},
+        {type = 'item', name = 'cobalt-sulfate-02', amount = 3},
     },
     results = {
-        {type = 'item', name = 'cobalt-oxide', amount = 1},
-        {type = 'fluid', name = 'dirty-water', amount = 50},
+        {type = 'item', name = 'cobalt-oxide', amount = 3},
+        {type = 'fluid', name = 'dirty-water', amount = 100},
     },
     main_product = "cobalt-oxide",
 }:add_unlock('biotech-mk03')
@@ -610,15 +610,15 @@ RECIPE {
     name = 'cobalt-nx',
     category = 'nmf',
     enabled = false,
-    energy_required = 10,
+    energy_required = 8,
     ingredients = {
-        {type = 'item', name = 'nexelit-plate', amount = 10},
-        {type = 'item', name = 'cobalt-oxide', amount = 1},
+        {type = 'item', name = 'nexelit-plate', amount = 20},
+        {type = 'item', name = 'cobalt-oxide', amount = 3},
     },
     results = {
-        {type = 'item', name = 'cobalt-nx', amount = 1},
+        {type = 'item', name = 'cobalt-nx', amount = 3},
     },
-}:add_unlock('biotech-mk03'):add_ingredient({type = "item", name = "ceramic", amount = 5})
+}:add_unlock('biotech-mk03'):add_ingredient({type = "item", name = "ceramic", amount = 10})
 
 RECIPE {
     type = 'recipe',
