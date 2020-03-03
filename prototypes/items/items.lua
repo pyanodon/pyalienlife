@@ -188,7 +188,11 @@ ITEM {
 ITEM {
     type = "item",
     name = "fawogae-spore",
-    icon = "__pyalienlifegraphics__/graphics/icons/fawogae-spore.png",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/fawogae-spore.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png", icon_size = 64},
+        },
     icon_size = 32,
     flags = {},
     subgroup = "py-alienlife-items",
@@ -1603,7 +1607,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arthurian",
     order = "h",
-    stack_size = 500
+    stack_size = 50
 }
 
 ITEM {
@@ -1845,7 +1849,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dhilmos",
     order = "h",
-    stack_size = 100
+    stack_size = 50
 }
 
 ITEM {
@@ -2351,7 +2355,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "x",
-    stack_size = 10
+    stack_size = 50
 }
 
 ITEM {
@@ -2935,7 +2939,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-vonix",
     order = "x",
-    stack_size = 10
+    stack_size = 50
 }
 
 ITEM {
@@ -2957,7 +2961,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-zipir",
     order = "x",
-    stack_size = 10
+    stack_size = 50
 }
 
 ITEM {
@@ -3723,7 +3727,56 @@ ITEM {
 ITEM {
     type = "item",
     name = "kicalk-seeds",
-    icon = "__pyalienlifegraphics__/graphics/icons/kicalk-seeds.png",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/kicalk-seeds.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png", icon_size = 64},
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-kicalk",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "kicalk-seeds-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/kicalk-seeds.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-kicalk",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "kicalk-seeds-mk03",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/kicalk-seeds.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-kicalk",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "kicalk-seeds-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/kicalk-seeds.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
+        },
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-kicalk",
@@ -6575,7 +6628,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-a",
     stack_size = 50,
-	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 0.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_kicalk,
 	limitation_message_key = "Its full"
 }
@@ -6595,7 +6648,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-b",
     stack_size = 50,
-	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 1}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_kicalk,
 	limitation_message_key = "Its full"
 }
@@ -6615,7 +6668,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-c",
     stack_size = 50,
-	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 2}, productivity = {bonus = 0.01}},
 	limitation = alien_life_limitations_kicalk,
 	limitation_message_key = "Its full"
 }
@@ -6635,7 +6688,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 50,
-	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 3}, productivity = {bonus = 0.02}},
 	limitation = alien_life_limitations_kicalk,
 	limitation_message_key = "Its full"
 }

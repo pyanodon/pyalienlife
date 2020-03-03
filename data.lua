@@ -451,3 +451,28 @@ require('prototypes/ores/bioreserve')
 data.raw["utility-constants"].default.recipe_step_limit = 2000;
 
 require('prototypes/sprites/sprites')
+
+local biomass_convertion =
+    {
+        --['item_name'] = {item_amount = 1, biomass_amount = 1}
+        ['ralesia'] = {item_amount = 1, biomass_amount = 1}
+    }
+
+for i, item in pairs(biomass_convertion) do
+
+    RECIPE {
+        type = 'recipe',
+        name = 'biomass-' .. i,
+        category = 'creature-chamber',
+        enabled = false,
+        energy_required = 10,
+        ingredients = {
+            {type = 'item', name = i, amount = item.item_amount},
+        },
+        results = {
+            {type = 'item', name = 'biomass', amount = item.biomass_amount},
+        },
+        main_product = 'biomass'
+    }
+
+end
