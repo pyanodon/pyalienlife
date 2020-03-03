@@ -41,7 +41,13 @@ data:extend(
     max_health = 25,
     order = "b-b-a",
     subgroup="enemies",
-    resistances = {},
+    resistances = 
+		{
+			{
+				type = "physical",
+				percent = 100
+			},
+		},
     healing_per_tick = 0.01,
     collision_box = {{-0.6, -0.6}, {0.6, 0.6}},
     selection_box = {{-1, -1}, {1, 1}},
@@ -117,7 +123,7 @@ data:extend(
 	},
 	},
 	vision_distance = 30,
-	movement_speed = 0.07,
+	movement_speed = 0.1,
 	distance_per_frame = 0.13,
 	pollution_to_join_attack = 4,
 	distraction_cooldown = 300,
@@ -128,7 +134,8 @@ data:extend(
 	--dying_sound =  make_biter_dying_sounds(0.4),
 	--working_sound =  make_biter_calls(0.3),
 	--run_animation = biterrunanimation(small_biter_scale, small_biter_tint1, small_biter_tint2),
-
+	has_belt_immunity = true,
+	affected_by_tiles = true,
 	run_animation =
 	{
 		layers =

@@ -181,6 +181,51 @@ local farm_buildings =
 		'moondrop'
 	}
 
+	local animal_farm_buildings =
+	{
+		['arthurian'] = true,
+		['auog'] = true,
+		['cridren'] = true,
+		['dhilmos'] = true,
+		['dingrits'] = true,
+		['ranch'] = true,
+		['fish'] = true,
+		['kmauts'] = true,
+		['mukmoux'] = true,
+		['phadai'] = true,
+		['phagnot'] = true,
+		['scrondrix'] = true,
+		['trits'] = true,
+		['ulric'] = true,
+		['vonix'] = true,
+		['vrauks'] = true,
+		['xenopen'] = true,
+		['xyhiphoe'] = true,
+		['yaedols'] = true,
+		['zipir'] = true,
+	}
+
+	local plant_farm_buildings =
+	{
+		['bhoddos'] = true,
+		['cadavericarum'] = true,
+		['grod'] = true,
+		['kicalk'] = true,
+		['ralesia'] = true,
+		['rennea'] = true,
+		['tuuphra'] = true,
+		['yotoi'] = true,
+		['moondrop'] = true
+	}
+
+	local fungus_farm_buildings =
+	{
+		['bhoddos'] = true,
+		['fawogae'] = true,
+		['yaedols'] = true,
+		['navens'] = true,
+	}
+
 local function disable_machine(entity)
 	--log('hit')
 	local E = entity
@@ -190,8 +235,17 @@ local function disable_machine(entity)
 	--table.insert(global.farm_count, E.unit_number)
 	global.farm_count[global.farm_count_last] = E.unit_number
 	E.active = false
-	local stopsign = rendering.draw_sprite{sprite = 'no_module_animal', render_layer = '188', target = E.position, surface = E.surface.name}
-	--log(serpent.block(stopsign))
+	local stopsign
+	for _, farm in pairs(farm_buildings) do
+		if animal_farm_buildings[string.match(E.name, farm)] then
+			stopsign = rendering.draw_sprite{sprite = 'no_module_animal', render_layer = '188', target = E.position, surface = E.surface.name}
+		elseif plant_farm_buildings[string.match(E.name, farm)] then
+			stopsign = rendering.draw_sprite{sprite = 'no_module_plant', render_layer = '188', target = E.position, surface = E.surface.name}
+		elseif fungus_farm_buildings[string.match(E.name, farm)] then
+			stopsign = rendering.draw_sprite{sprite = 'no_module_fungi', render_layer = '188', target = E.position, surface = E.surface.name}
+		end
+	end
+		--log(serpent.block(stopsign))
 	global.rendered_icons[E.unit_number] = stopsign
 	--local stoptext = rendering.draw_text{text = 'Requires ' .. E.name .. ' to function', surface = E.surface, target = E.position, target_offset = {0,-6}, color = {255,255,255}, scale = 2, alignment = 'center'}
 end
@@ -517,7 +571,8 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 ]]--
 		global.caravanroutes = caravanroutes
 
-    end)
+	end)
+
 --[[
 script.on_nth_tick(5, function(event)
 --log('hit')
@@ -526,6 +581,7 @@ script.on_nth_tick(5, function(event)
 	global.caravanroutes = caravanroutes
 end)
 ]]--
+
 script.on_event(defines.events.on_tick, function()
 	--log('tick start')
 	if global.watch_slaughterhouse == true then
@@ -580,7 +636,16 @@ script.on_event(defines.events.on_tick, function()
 				--log(serpent.block(global.rendered_icons[global.farm_count[i]]))
 				if global.rendered_icons[global.farm_count[i]] == nil then --and  rendering.is_valid(global.rendered_icons[global.farm_count[i]]) == false then
 					local E = global.farms[global.farm_count[i]]
-					local stopsign = rendering.draw_sprite{sprite = 'no_module_animal', render_layer = '188', target = E.position, surface = E.surface.name}
+					local stopsign
+					for _, farm in pairs(farm_buildings) do
+						if animal_farm_buildings[string.match(E.name, farm)] then
+							stopsign = rendering.draw_sprite{sprite = 'no_module_animal', render_layer = '188', target = E.position, surface = E.surface.name}
+						elseif plant_farm_buildings[string.match(E.name, farm)] then
+							stopsign = rendering.draw_sprite{sprite = 'no_module_plant', render_layer = '188', target = E.position, surface = E.surface.name}
+						elseif fungus_farm_buildings[string.match(E.name, farm)] then
+							stopsign = rendering.draw_sprite{sprite = 'no_module_fungi', render_layer = '188', target = E.position, surface = E.surface.name}
+						end
+					end
 					global.rendered_icons[E.unit_number] = stopsign
 				end
 			end

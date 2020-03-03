@@ -50,11 +50,11 @@ ENTITY {
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 8
+        module_slots = 50
     },
     allowed_effects = {"speed","productivity"},
     crafting_categories = {"kicalk"},
-    crafting_speed = 0.004,
+    crafting_speed = 0.04,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
