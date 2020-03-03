@@ -41,7 +41,7 @@ data:extend(
     max_health = 25,
     order = "b-b-a",
     subgroup="enemies",
-    resistances = 
+    resistances =
 		{
 			{
 				type = "physical",
