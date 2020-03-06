@@ -380,7 +380,7 @@ local function create_farm_help_message(event)
 	if event.player_index ~= nil then
 		player = game.players[event.player_index]
 		if global.farm_help_message_open == false then
-		farm_help_gui = player.gui.center.add({type = 'frame', name = 'farm_help', direction = 'horizontal', caption = 'All plants and animal buildings require 1 or more copies of the wanted item to fuction. Craft the first version from codex and DNA samples.'})
+		farm_help_gui = player.gui.center.add({type = 'frame', name = 'farm_help', direction = 'horizontal', caption = 'All plants and animal buildings require 1 or more copies of the wanted item to function. Craft the first version from codex and DNA samples.'})
 		farm_help_gui.add({type = 'button', name = 'fh_accept_button', caption = 'OK'})
 		global.farm_help_message_open = true
 		end
