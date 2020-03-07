@@ -277,10 +277,12 @@ require('prototypes/buildings/mega-farm')
 require('prototypes/buildings/vat-brain')
 require("prototypes/buildings/harvester")
 require("prototypes/buildings/collector")
+require("prototypes/buildings/ipod")
 
 --Ceature
 require('prototypes/creatures/caravan')
 require('prototypes/creatures/dingrido')
+require('prototypes/creatures/ocula')
 
 --Land bot
 --require('prototypes/robots/land-bot')
