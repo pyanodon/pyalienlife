@@ -652,6 +652,21 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
+    name = 'bedding-improve',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 7,
+    ingredients = {
+        {type = 'item', name = 'bedding', amount = 1},
+        {type = 'fluid', name = 'formic-acid', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'bedding', amount = 2},
+    },
+}:add_unlock('grod-mk02')
+
+RECIPE {
+    type = 'recipe',
     name = 'zymogens',
     category = 'genlab',
     enabled = false,
