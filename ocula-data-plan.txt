@@ -19,11 +19,20 @@ global =
             },
         ocula_bases =
             {
-                unit_number = entity 
+                unit_number =
+					{
+						entity = entity,
+						assigned_active_occula =
+							{
+							unit_number
+							},
+						totalt_ocula_count = #,
+						inactive_ocula = #
+					}
             },
         active_ocula =
             {
-                unit_number
+                unit_number = ocula_bases.unit_number
             },
         items_in_route =
             {

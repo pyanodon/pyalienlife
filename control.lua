@@ -282,7 +282,7 @@ script.on_init(
 		global.rendered_icons = {}
 		global.farm_migration = false
 
-		global.ocula_master_table = {ocula = {}, ocula_boxes = {}}
+		global.ocula_master_table = {ocula = {}, ocula_boxes = {}, active_ocula = {}, item_in_route = {}}
 
 		if not remote.interfaces["silo_script"] then
 			return
@@ -369,7 +369,7 @@ script.on_configuration_changed(function()
 		end
 	end
 	if global.ocula_master_table == nil then
-		global.ocula_master_table = {ocula = {}, ocula_boxes = {}}
+		global.ocula_master_table = {ocula = {}, ocula_boxes = {}, active_ocula = {}, item_in_route = {}}
 	end
 end)
 
@@ -419,22 +419,44 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 		elseif E.name == 'caravan' then
 			global.caravan_unit_numbers[E.unit_number] = true
 		elseif E.name == 'ipod' then
-			global.ocula_master_table.ocula_boxes[E.unit_number] = E
+			global.ocula_master_table.ocula_boxes[E.unit_number] =
+				{
+					entity = E,
+					assigned_active_occula = {},
+					total_ocula_count = 0,
+					inactive_ocula = 0
+				}
 		elseif E.name == 'ocula' then
+			local base
+			local box_search = game.surfaces['nauvis'].find_entities_filtered{position = E.position, radius = 100, type = 'container'}
+			for _, con in pairs(box_search) do
+				if con.name == 'ipod' then
+					base = con
+					break
+				end
+			end
 			global.ocula_master_table.ocula[E.unit_number] =
 				{
 					entity = E,
-					base = '',
+					base = base.unit_number,
 					current_inventory =
 						{
 							item_name = '',
 							amount = ''
 						},
 					max_stack_size = 50,
-					current_target = 'na',
+					current_target = '',
 					getting_items = false,
 					delivering_items = false
 				}
+			if base ~= nil and base.valid then
+				E.set_command {
+					type = defines.command.go_to_location,
+					destination_entity = base,
+					radius = 0.5
+				}
+				global.ocula_master_table.ocula_boxes[base.unit_number].total_ocula_count = global.ocula_master_table.ocula_boxes[base.unit_number].total_ocula_count + 1
+			end
 		elseif global.has_built_first_farm == false then
 			for _, farm in pairs(farm_buildings) do
 				if string.match(E.name, farm) then
@@ -555,20 +577,39 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 				end
 			end
 		end
---[[
+
 		if event.result == defines.behavior_result.success then
-			--log('hit')
+			log('hit')
+			if global.ocula_master_table.ocula[event.unit_number] ~= nil and global.ocula_master_table.ocula[event.unit_number].entity.valid then
+				log('hit')
+				--log(serpent.block(global.ocula_master_table))
+				if global.ocula_master_table.ocula_boxes[global.ocula_master_table.ocula[event.unit_number].base].entity.get_inventory(defines.inventory.chest).can_insert({name = 'ocula', count = 1}) then
+					local inv = global.ocula_master_table.ocula_boxes[global.ocula_master_table.ocula[event.unit_number].base].entity.get_inventory(defines.inventory.chest)
+					inv.insert({name = 'ocula', count = 1})
+					global.ocula_master_table.ocula[event.unit_number].entity.destroy()
+					global.ocula_master_table.ocula[event.unit_number] = nil
+				end
+			end
 		end
 		if event.result == defines.behavior_result.in_progress then
-			--log('hit')
+			log('hit')
+			if global.ocula_master_table.ocula[event.unit_number] ~= nil and global.ocula_master_table.ocula[event.unit_number].entity.valid then
+				log('hit')
+			end
 		end
 		if event.result == defines.behavior_result.fail	then
-			--log('hit')
+			log('hit')
+			if global.ocula_master_table.ocula[event.unit_number] ~= nil and global.ocula_master_table.ocula[event.unit_number].entity.valid then
+				log('hit')
+			end
 		end
 		if event.result == defines.behavior_result.deleted then
-			--log('hit')
+			log('hit')
+			if global.ocula_master_table.ocula[event.unit_number] ~= nil and global.ocula_master_table.ocula[event.unit_number].entity.valid then
+				log('hit')
+			end
 		end
-]]--
+
 		global.caravanroutes = caravanroutes
 
 	end)

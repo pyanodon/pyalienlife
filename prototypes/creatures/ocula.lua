@@ -46,6 +46,7 @@ ITEM{
         resistances = {},
         healing_per_tick = 0.01,
         collision_box = {{0,0}, {0,0}},
+        collision_mask = {},
         selection_box = {{-1, -1}, {1, 1}},
       --[[
         --handles enemy loot dropping
