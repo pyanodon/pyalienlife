@@ -23,7 +23,7 @@ RECIPE{
 ITEM{
     type = "item-with-entity-data",
     name = "ocula",
-    icon = "__pyalienlifegraphics__/graphics/icons/dingrido.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/ocula.png",
     icon_size = 64,
     subgroup = "py-alienlife-buildings-others",
     order = "x",
