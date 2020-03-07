@@ -207,7 +207,6 @@ local farm_buildings =
 
 	local plant_farm_buildings =
 	{
-		['bhoddos'] = true,
 		['cadavericarum'] = true,
 		['grod'] = true,
 		['kicalk'] = true,
