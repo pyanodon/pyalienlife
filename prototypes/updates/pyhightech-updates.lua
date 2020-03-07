@@ -339,7 +339,7 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'moss-4',
+    name = 'moss-5',
     category = 'moss',
     enabled = false,
     energy_required = 10,
