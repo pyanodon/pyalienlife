@@ -84,6 +84,7 @@ ITEM{
           height = 160,
           frame_count = 20,
           direction_count = 16,
+          animation_speed = 0.3,
           --shift = util.mul_shift(util.by_pixel(-0, -0), 0.5),
           --scale = scale,
           },
@@ -102,6 +103,7 @@ ITEM{
           frame_count = 20,
           shift = util.mul_shift(util.by_pixel(0, 48)),
           direction_count = 16,
+          animation_speed = 0.3,
           --scale = scale,
           draw_as_shadow = true,
           }
@@ -139,6 +141,7 @@ ITEM{
           height = 160,
           frame_count = 20,
           direction_count = 16,
+          animation_speed = 0.3,
           --shift = util.mul_shift(util.by_pixel(-0, -0), 0.5),
           --scale = scale,
           },
@@ -157,6 +160,7 @@ ITEM{
           frame_count = 20,
           shift = util.mul_shift(util.by_pixel(0, 48)),
           direction_count = 16,
+          animation_speed = 0.3,
           --scale = scale,
           draw_as_shadow = true,
           }
