@@ -657,13 +657,15 @@ RECIPE {
     enabled = false,
     energy_required = 7,
     ingredients = {
-        {type = 'item', name = 'bedding', amount = 1},
-        {type = 'fluid', name = 'formic-acid', amount = 50},
+        {type = 'item', name = 'wood', amount = 5},
+        {type = 'item', name = 'yotoi-leaves', amount = 5},
+        {type = 'item', name = 'dried-grods', amount = 1},
+        {type = 'fluid', name = 'formic-acid', amount = 100},
     },
     results = {
-        {type = 'item', name = 'bedding', amount = 2},
+        {type = 'item', name = 'bedding', amount = 4},
     },
-}:add_unlock('grod-mk02')
+}:add_unlock('grod-mk02'):add_ingredient({type = "item", name = "raw-fiber", amount = 5})
 
 RECIPE {
     type = 'recipe',
