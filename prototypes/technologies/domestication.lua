@@ -22,7 +22,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/domestication-2.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"domestication","dingrits"},
+    prerequisites = {"domestication","dingrits","chitin"},
     effects = {},
     unit = {
         count = 150,
