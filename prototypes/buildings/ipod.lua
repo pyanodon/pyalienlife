@@ -19,7 +19,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "ipod",
-    iicon = "__pyalienlifegraphics__/graphics/icons/eye-pod.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/eye-pod.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-others",
