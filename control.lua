@@ -706,6 +706,17 @@ script.on_event(
 					end
 				elseif global.ocula_master_table.ocula[event.unit_number] ~= nil and global.ocula_master_table.ocula[event.unit_number].delivering_items == true then
 					log("found the player")
+					local player = game.get_player(ocula.target_player)
+					global.ocula_master_table.item_in_route[player.index][ocula.current_inventory.item_name] = global.ocula_master_table.item_in_route[player.index][ocula.current_inventory.item_name] - ocula.current_inventory.amount
+					player.get_main_inventory().insert({name=ocula.current_inventory.item_name, count = ocula.current_inventory.amount})
+					ocula.current_inventory.item_name = ''
+					ocula.current_inventory.amount = 0
+					ocula.delivering_items = false
+					ocula.entity.set_command {
+						type = defines.command.go_to_location,
+						destination_entity = global.ocula_master_table.ocula_boxes[ocula.base].entity,
+						radius = 0.5
+					}
 				end
 			end
 		end
@@ -740,9 +751,8 @@ script.on_event(
 		global.caravanroutes = caravanroutes
 	end
 )
-
---request count is all fucked up and not updating the amount the ocula are supposed to retrive
-script.on_nth_tick(5, function(event)
+--[[
+script.on_nth_tick(5, function()
 		--log('hit')
 		for _, p in pairs(game.players) do
 			--log(p.name)
@@ -751,6 +761,8 @@ script.on_nth_tick(5, function(event)
 			--log(p.character.request_slot_count)
 			--log(serpent.block(p.get_main_inventory().get_contents()))
 			local inv = p.get_main_inventory().get_contents()
+			local iir
+			local total_item_count
 			--log(serpent.block(inv))
 			for s = 1, p.character.request_slot_count do --
 				--log(s)
@@ -759,37 +771,19 @@ script.on_nth_tick(5, function(event)
 					if global.ocula_master_table.requested_items[p.index] == nil then
 						global.ocula_master_table.requested_items[p.index] = {}
 					end
-					log('hit')
-					if global.ocula_master_table.item_in_route[p.index] ~= nil then
-						log('hit')
-						if global.ocula_master_table.item_in_route[p.index][p.character.get_request_slot(s).name] ~= nil and inv[p.character.get_request_slot(s).name] ~= nil then
-							log('hit')
-							if inv[p.character.get_request_slot(s).name] + global.ocula_master_table.item_in_route[p.index][p.character.get_request_slot(s).name] < p.character.get_request_slot(s).count or global.ocula_master_table.item_in_route[p.index][p.character.get_request_slot(s).name] == nil then
-								log('hit')
-								if inv[p.character.get_request_slot(s).name] ~= nil and inv[p.character.get_request_slot(s).name] < p.character.get_request_slot(s).count then
-									--log(p.index)
-									--log(p.character.get_request_slot(s).name)
-									--log(p.character.get_request_slot(s).count)
-									--log(inv[p.character.get_request_slot(s).name])
-									global.ocula_master_table.requested_items[p.index][p.character.get_request_slot(s).name] =
-										p.character.get_request_slot(s).count - inv[p.character.get_request_slot(s).name]
-								elseif inv[p.character.get_request_slot(s).name] == nil then
-									global.ocula_master_table.requested_items[p.index][p.character.get_request_slot(s).name] =
-										p.character.get_request_slot(s).count
-								end
-							end
-						end
-					elseif global.ocula_master_table.item_in_route[p.index] == nil then
-						if inv[p.character.get_request_slot(s).name] ~= nil and inv[p.character.get_request_slot(s).name] < p.character.get_request_slot(s).count then
-							--log(p.index)
-							--log(p.character.get_request_slot(s).name)
-							--log(p.character.get_request_slot(s).count)
-							--log(inv[p.character.get_request_slot(s).name])
-							global.ocula_master_table.requested_items[p.index][p.character.get_request_slot(s).name] = p.character.get_request_slot(s).count - inv[p.character.get_request_slot(s).name]
-						elseif inv[p.character.get_request_slot(s).name] == nil then
-							global.ocula_master_table.requested_items[p.index][p.character.get_request_slot(s).name] = p.character.get_request_slot(s).count
-						end
+					if global.ocula_master_table.item_in_route[p.index] ~= nil and global.ocula_master_table.item_in_route[p.index][p.character.get_request_slot(s)] ~= nil then
+						iir = global.ocula_master_table.item_in_route[p.index][p.character.get_request_slot(s)]
+					else
+						iir = 0
 					end
+					if inv[p.character.get_request_slot(s).name] ~= nil then
+						total_item_count =  inv[p.character.get_request_slot(s).name] + iir
+					else
+						total_item_count = iir
+					end
+
+					global.ocula_master_table.requested_items[p.index][p.character.get_request_slot(s).name] =
+					p.character.get_request_slot(s).count - total_item_count
 					log(serpent.block(global.ocula_master_table))
 				end
 			end
@@ -797,8 +791,8 @@ script.on_nth_tick(5, function(event)
 		end
 	end
 )
-
-script.on_nth_tick(30, function(event)
+]]--
+script.on_nth_tick(30, function()
 		--log("hit")
 		for _, play in pairs(game.players) do
 			--log(p.name)
@@ -806,12 +800,47 @@ script.on_nth_tick(30, function(event)
 				--log('hit')
 				break
 			else
-				for p, player in pairs(global.ocula_master_table.requested_items) do
+				--log(p.name)
+				--check if player is missing stuff and add it to the list of things to attempt to be filled by the ocula
+				--log('hit')
+				--log(p.character.request_slot_count)
+				--log(serpent.block(p.get_main_inventory().get_contents()))
+				local inv = play.get_main_inventory().get_contents()
+				local iir
+				local total_item_count
+				log(serpent.block(inv))
+				for s = 1, play.character.request_slot_count do --
+					--log(s)
+					--log(serpent.block(play.character.get_request_slot(s)))
+					if play.character.get_request_slot(s) ~= nil then
+						if global.ocula_master_table.requested_items[play.index] == nil then
+							global.ocula_master_table.requested_items[play.index] = {}
+						end
+						--log(serpent.block(global.ocula_master_table.item_in_route[play.index]))
+						--log(serpent.block(global.ocula_master_table.item_in_route[play.index][play.character.get_request_slot(s).name]))
+						if global.ocula_master_table.item_in_route[play.index] ~= nil and global.ocula_master_table.item_in_route[play.index][play.character.get_request_slot(s).name] ~= nil then
+							iir = global.ocula_master_table.item_in_route[play.index][play.character.get_request_slot(s).name]
+						else
+							iir = 0
+						end
+						if inv[play.character.get_request_slot(s).name] ~= nil then
+							total_item_count =  inv[play.character.get_request_slot(s).name] + iir
+						else
+							total_item_count = iir
+						end
+						log(inv[play.character.get_request_slot(s).name])
+						log(iir)
+						log(total_item_count)
+						global.ocula_master_table.requested_items[play.index][play.character.get_request_slot(s).name] = play.character.get_request_slot(s).count - total_item_count
+						log(serpent.block(global.ocula_master_table))
+						end
+					end
+				for _, player in pairs(global.ocula_master_table.requested_items) do
 					--log('hit')
 					--log(serpent.block(player))
 					if next(player) ~= nil then
 						--log('hit')
-						for ob, ocula_box in pairs(global.ocula_master_table.ocula_boxes) do
+						for _, ocula_box in pairs(global.ocula_master_table.ocula_boxes) do
 							--log('hit')
 							local oc_box = ocula_box.entity
 							if oc_box.force.find_logistic_network_by_position(oc_box.position, oc_box.surface) ~= nil then
@@ -824,11 +853,13 @@ script.on_nth_tick(30, function(event)
 										--log(serpent.block(i))
 										--log(serpent.block(con))
 										--log(serpent.block(con[i]))
-										if con[i] ~= nil and ocula_box.inactive_ocula > 0 then
+										if item > 0 and con[i] ~= nil and ocula_box.inactive_ocula > 0 then
 											ocula_box.inactive_ocula = ocula_box.inactive_ocula - 1
+											oc_box.get_inventory(defines.inventory.chest).remove({name='ocula',count=1})
 											log("hit")
 											local ocula =
 												game.surfaces["nauvis"].create_entity {name = "ocula", position = oc_box.position, force = oc_box.force}
+											ocula_box.assigned_active_occula[ocula.unit_number] = ocula
 											local destination = log_net.select_pickup_point {name = i, position = oc_box.position}
 											log(serpent.block(destination))
 											local amount
@@ -868,7 +899,7 @@ script.on_nth_tick(30, function(event)
 												radius = 0.5
 											}
 										--log(serpent.block(global.ocula_master_table))
-										break
+										return
 										end
 									end
 								end
