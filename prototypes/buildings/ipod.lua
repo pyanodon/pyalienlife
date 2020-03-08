@@ -37,7 +37,7 @@ ENTITY {
     minable = {mining_time = 0.1, result = "ipod"},
     max_health = 100,
     corpse = "wooden-chest-remnants",
-    collision_box = {{-0.35, -0.35}, {0.35, 0.35}},
+    collision_box = {{-1.45, -1.45}, {1.45, 1.45}},
     fast_replaceable_group = "container",
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     inventory_size = 16,
