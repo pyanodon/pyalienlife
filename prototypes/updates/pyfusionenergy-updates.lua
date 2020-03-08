@@ -27,7 +27,7 @@ RECIPE('science-coating'):add_ingredient({type = "item", name = "chitosan", amou
 RECIPE('xyhiphoe-hydrocyclone'):remove_unlock('vanadium-processing'):add_unlock('biotech-mk02')
 
 RECIPE('xyhiphoe-blood'):remove_unlock('vanadium-processing')
-RECIPE('vanabins'):remove_ingredient("xyhiphoe-blood"):add_ingredient({type = "fluid", name = "arthropod-blood", amount = 40})
+RECIPE('vanabins'):remove_ingredient("xyhiphoe-blood"):add_ingredient({type = "fluid", name = "arthropod-blood", amount = 150})
 RECIPE('kmauts-enclosure-mk01'):remove_unlock('helium-processing') --substituir por versao pyal
 RECIPE('kmauts-enclosure-mk02'):remove_unlock('machines-mk02')
 RECIPE('kmauts-enclosure-mk03'):remove_unlock('machines-mk03')
