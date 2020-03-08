@@ -19,7 +19,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "ipod",
-    icon = "__pyalienlifegraphics__/graphics/icons/data-array.png",
+    iicon = "__pyalienlifegraphics__/graphics/icons/eye-pod.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-others",
@@ -31,8 +31,8 @@ ITEM {
 ENTITY {
     type = "container",
     name = "ipod",
-    icon = "__base__/graphics/icons/wooden-chest.png",
-    icon_size = 32,
+    icon = "__pyalienlifegraphics__/graphics/icons/eye-pod.png",
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "ipod"},
     max_health = 100,
