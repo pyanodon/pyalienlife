@@ -2,7 +2,7 @@ RECIPE {
     type = "recipe",
     name = "ipod",
     energy_required = 1,
-    enabled = true,
+    enabled = false,
     ingredients = {
         {"steel-plate", 50},
         {"glass", 40},
@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"ipod", 1}
     }
-}--:add_unlock("xenobiology")
+}:add_unlock("domestication-mk02")
 
 ITEM {
     type = "item",
