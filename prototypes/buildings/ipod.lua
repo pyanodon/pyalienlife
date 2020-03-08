@@ -39,7 +39,7 @@ ENTITY {
     corpse = "wooden-chest-remnants",
     collision_box = {{-0.35, -0.35}, {0.35, 0.35}},
     fast_replaceable_group = "container",
-    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     inventory_size = 16,
     open_sound = { filename = "__base__/sound/wooden-chest-open.ogg" },
     close_sound = { filename = "__base__/sound/wooden-chest-close.ogg" },
@@ -49,7 +49,7 @@ ENTITY {
       layers =
       {
         {
-          filename = "__pyalienlifegrpahics2/graphics/entity/ocula/eye-pod.png",
+          filename = "__pyalienlifegraphics2__/graphics/entity/ocula/eye-pod.png",
           priority = "extra-high",
           width = 100,
           height = 96,
