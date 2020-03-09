@@ -409,6 +409,12 @@ script.on_configuration_changed(
 				requested_items = {}
 			}
 		end
+		if global.ocula_master_table.requested_items == nil then
+			global.ocula_master_table.requested_items = {}
+		end
+		if global.ocula_master_table.item_in_route == nil then
+			global.ocula_master_table.item_in_route = {}
+		end
 	end
 )
 

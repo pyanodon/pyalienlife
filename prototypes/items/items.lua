@@ -6196,7 +6196,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "p-a",
     stack_size = 25,
-	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 2}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_phagnot,
 	limitation_message_key = "Its full"
 }
@@ -6216,7 +6216,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "p-b",
     stack_size = 25,
-	effect = { speed = {bonus = 40}, productivity = {bonus = 0.03}},
+	effect = { speed = {bonus = 4}, productivity = {bonus = 0.01}},
 	limitation = alien_life_limitations_phagnot,
 	limitation_message_key = "Its full"
 }
@@ -6236,7 +6236,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "p-c",
     stack_size = 25,
-	effect = { speed = {bonus = 60}, productivity = {bonus = 0.05}},
+	effect = { speed = {bonus = 6}, productivity = {bonus = 0.03}},
 	limitation = alien_life_limitations_phagnot,
 	limitation_message_key = "Its full"
 }
@@ -6256,7 +6256,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "p-d",
     stack_size = 25,
-	effect = { speed = {bonus = 80}, productivity = {bonus = 0.1}},
+	effect = { speed = {bonus = 8}, productivity = {bonus = 0.5}},
 	limitation = alien_life_limitations_phagnot,
 	limitation_message_key = "Its full"
 }
