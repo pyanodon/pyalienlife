@@ -38,7 +38,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'zipir-codex', amount = 2},
     },
-}:add_unlock("zipir")
+}:add_unlock("water-invertebrates-mk01")
 
 RECIPE {
     type = 'recipe',
@@ -48,13 +48,13 @@ RECIPE {
     energy_required = 300,
     ingredients = {
         {type = 'item', name = 'steel-chest', amount = 1},
-        {type = 'item', name = 'chemical-science-pack', amount = 5},
+        {type = 'item', name = 'logistic-science-pack', amount = 15},
         {type = 'item', name = 'zipir-codex', amount = 1},
     },
     results = {
         {type = 'item', name = 'earth-crustacean-sample', amount = 1},
     },
-}:add_unlock("zipir")
+}:add_unlock("water-invertebrates-mk01")
 
 ----food----
 
