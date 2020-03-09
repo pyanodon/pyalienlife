@@ -79,6 +79,7 @@ local function create_slaughterhouse_animal_table(gui, player)
 		"ulric",
 		"mukmoux",
 		"arthurian",
+		"cottongut",
 		"dhilmos",
 		"scrondrix",
 		"phadai",
@@ -161,6 +162,7 @@ local farm_buildings = {
 	"auog",
 	"bhoddos",
 	"cadavericarum",
+	"prandium-lab",
 	"cridren",
 	"dhilmos",
 	"dingrits",
@@ -193,6 +195,7 @@ local farm_buildings = {
 local animal_farm_buildings = {
 	["arthurian"] = true,
 	["auog"] = true,
+	["prandium-lab"] = true,
 	["cridren"] = true,
 	["dhilmos"] = true,
 	["dingrits"] = true,

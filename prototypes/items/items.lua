@@ -4353,10 +4353,10 @@ ITEM {
 ITEM {
     type = "item",
     name = "cottongut",
-    icon = "__pyalienlifegraphics__/graphics/icons/cottomgut.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-cottomgut",
+    subgroup = "py-alienlife-cottongut",
     order = "a",
     stack_size = 10
 }
@@ -4499,7 +4499,9 @@ local alien_life_limitations_fawogae =
 local alien_life_limitations_moondrop =
     {
     }
-
+local alien_life_limitations_cottongut =
+    {
+    }
 ----MODULES----
 
 ITEM {
