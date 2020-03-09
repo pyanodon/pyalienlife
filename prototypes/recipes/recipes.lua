@@ -1949,21 +1949,6 @@ RECIPE {
     order = "f"
 }:add_unlock("genetics-mk02")
 
-RECIPE {
-    type = 'recipe',
-    name = 'test',
-    category = 'cottongut',
-    enabled = false,
-    energy_required = 100,
-    ingredients = {
-        {type = 'item', name = 'steel-plate', amount = 1},
-    },
-    results = {
-        {type = 'item', name = 'empty-barrel-milk', amount = 1},
-    },
-    --main_product = "casein-pulp-01",
-}:add_unlock("cottongut-mk01")
-
 if not mods['pyhightech'] then
 
 RECIPE {
