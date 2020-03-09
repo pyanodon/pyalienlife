@@ -61,6 +61,10 @@ data:extend {
     },
     {
         type = "recipe-category",
+        name = "cottongut"
+    },
+    {
+        type = "recipe-category",
         name = "dhilmos"
     },
     {
@@ -319,5 +323,9 @@ data:extend {
 	{
         type = "recipe-category",
         name = "slaughterhouse-xyhiphoe"
+    },
+    {
+        type = "recipe-category",
+        name = "slaughterhouse-cottongut"
     },
 }

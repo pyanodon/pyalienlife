@@ -4328,6 +4328,39 @@ ITEM {
     stack_size = 100
 }
 
+ITEM {
+    type = "item",
+    name = "cottongut-codex",
+    icon = "__pyalienlifegraphics__/graphics/icons/cottongut-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "earth-mouse-sample",
+    icon = "__pyalienlifegraphics__/graphics/icons/earth-mouse-sample.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-samples",
+    order = "a",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "cottongut",
+    icon = "__pyalienlifegraphics__/graphics/icons/cottomgut.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottomgut",
+    order = "a",
+    stack_size = 10
+}
+
 ------RULES-----
 
 ---CREATURES---
@@ -7215,6 +7248,86 @@ ITEM {
     stack_size = 50
 }
 
+ITEM {
+    type = "module",
+    name = "cottongut-mk01",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/cottongut-module.png"},
+        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "cottongut",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "cg-a",
+    stack_size = 25,
+	effect = { speed = {bonus = 5}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_cottongut,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "cottongut-mk02",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/cottongut-module.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "cottongut",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "cg-b",
+    stack_size = 25,
+	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_cottongut,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "cottongut-mk03",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/cottongut-module.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "cottongut",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "cg-c",
+    stack_size = 25,
+	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_cottongut,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "cottongut-mk04",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/cottongut-module.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "cottongut",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "cg-d",
+    stack_size = 25,
+	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_cottongut,
+	limitation_message_key = "Its full"
+}
+
 ---replicators----
 
 ITEM {
@@ -7428,6 +7541,10 @@ data:extend(
   {
     type = "module-category",
     name = "moon"
+  },
+  {
+    type = "module-category",
+    name = "cottongut"
   },
   --item used to select the ceature and start and end points of the route
 	{
