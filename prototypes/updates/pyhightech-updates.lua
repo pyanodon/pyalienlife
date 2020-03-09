@@ -1172,7 +1172,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 's-biomass-extraction',
-    category = 'biofactory',
+    category = 'desulfurization',
     enabled = false,
     energy_required = 10,
     ingredients = {
