@@ -305,7 +305,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'phagnot', amount = 2},
+        {type = 'item', name = 'phagnot-mk02', amount = 2},
         {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'phagnot-food-02', amount = 3},
         {type = 'item', name = 'bedding', amount = 4},
@@ -331,7 +331,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'phagnot', amount = 2},
+        {type = 'item', name = 'phagnot-mk03', amount = 2},
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},
         {type = 'item', name = 'phagnot-food-02', amount = 3},
         {type = 'item', name = 'bedding', amount = 4},

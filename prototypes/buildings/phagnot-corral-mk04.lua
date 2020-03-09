@@ -44,7 +44,7 @@ ENTITY {
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 20
+        module_slots = 40
     },
     allowed_effects = {"speed","productivity"},
     crafting_categories = {"phagnot"},
