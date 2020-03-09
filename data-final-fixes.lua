@@ -9,7 +9,7 @@ RECIPE('exoskeleton-equipment'):add_ingredient({type = "item", name = "metallic-
 for _,module in pairs(data.raw.module) do
   if module.subgroup == "py-alienlife-modules" then
     for _, recipe in pairs(data.raw.recipe) do
-      if recipe.category == module.category and module.limitation[recipe.name] == nil then
+      if recipe.category == module.category and module.limitation ~= nil and module.limitation[recipe.name] == nil then
         table.insert(module.limitation, recipe.name)
       end
     end
