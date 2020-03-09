@@ -21,7 +21,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/cottongut-mk02.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"cottongut"},
+    prerequisites = {"cottongut-mk01"},
     effects = {},
     unit = {
         count = 150,

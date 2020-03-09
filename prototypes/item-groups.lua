@@ -201,6 +201,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-cottongut",
+        group = "py-alienlife",
+        order = "e-s"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-plants",
         group = "py-alienlife",
         order = "f"
