@@ -434,6 +434,7 @@ require('prototypes/recipes/recipes-auto-acessories')
 require('prototypes/recipes/recipes-photomining')
 require('prototypes/recipes/recipes-bioprinting')
 require('prototypes/recipes/recipes-fawogae')
+require('prototypes/recipes/recipes-cottongut')
 
 
 --(( ORES ))--
