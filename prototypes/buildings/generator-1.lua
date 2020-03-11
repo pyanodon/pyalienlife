@@ -53,13 +53,13 @@ ENTITY {
 		{
 			type = "burner",
 			fuel_category = "auog",
-			effectivity = 1,
+			effectivity = 2,
             fuel_inventory_size = 1,
             burnt_inventory_size = 1,
 			emissions_per_minute = 0,
 		},
 	effectivity = 1,
-	max_power_output = "2.8MW",
+	max_power_output = "15MW",
     animation = {
         layers = {
             {

@@ -4361,6 +4361,38 @@ ITEM {
     stack_size = 10
 }
 
+ITEM {
+    type = "item",
+    name = "cottongut-food-01",
+    icon = "__pyalienlifegraphics__/graphics/icons/cottongut-food-01.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-food",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "cottongut-food-02",
+    icon = "__pyalienlifegraphics__/graphics/icons/cottongut-food-02.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-food",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "cottongut-pup",
+    icon = "__pyalienlifegraphics__/graphics/icons/cottongut-pup.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottongut",
+    order = "h",
+    stack_size = 500
+}
 ------RULES-----
 
 ---CREATURES---
