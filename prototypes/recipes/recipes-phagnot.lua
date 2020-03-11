@@ -63,6 +63,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'tin-plate', amount = 2},
+        {type = 'item', name = 'plastic-bar', amount = 2},
         {type = 'item', name = 'bhoddos', amount = 3},
         {type = 'item', name = 'fawogae', amount = 5},
         {type = 'item', name = 'ralesia-seeds', amount = 15},
@@ -83,6 +84,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'tin-plate', amount = 2},
+        {type = 'item', name = 'plastic-bar', amount = 2},
         {type = 'item', name = 'bhoddos', amount = 4},
         {type = 'item', name = 'fawogae', amount = 5},
         {type = 'item', name = 'ralesia-seeds', amount = 15},
