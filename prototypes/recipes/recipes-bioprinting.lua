@@ -202,6 +202,23 @@ RECIPE {
         {type = 'item', name = 'plasmids', amount = 1},
     },
     results = {
+        {type = 'fluid', name = 'xenogenic-cells', amount = 65},
+    },
+    --main_product = "cocoon",
+}:add_unlock("organ-printing-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'plasmid-xenogenic-from-bonemeal',
+    category = 'incubator',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'fluid', name = 'oxygen', amount = 50},
+        {type = 'item', name = 'bonemeal', amount = 5},
+        {type = 'item', name = 'plasmids', amount = 1},
+    },
+    results = {
         {type = 'fluid', name = 'xenogenic-cells', amount = 70},
     },
     --main_product = "cocoon",
@@ -305,6 +322,24 @@ RECIPE {
         {type = 'fluid', name = 'oxygen', amount = 50},
         {type = 'item', name = 'plasmids', amount = 1},
         {type = 'item', name = 'bones', amount = 5},
+        {type = 'item', name = 'gh', amount = 1},
+    },
+    results = {
+        {type = 'fluid', name = 'xenogenic-cells', amount = 140},
+    },
+    --main_product = "cocoon",
+}:add_unlock("organ-printing-mk03")
+
+RECIPE {
+    type = 'recipe',
+    name = 'gh-xenogenic-from-bonemeal',
+    category = 'incubator',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'fluid', name = 'oxygen', amount = 50},
+        {type = 'item', name = 'plasmids', amount = 1},
+        {type = 'item', name = 'bonemeal', amount = 5},
         {type = 'item', name = 'gh', amount = 1},
     },
     results = {
@@ -502,6 +537,22 @@ RECIPE {
     },
     results = {
         {type = 'item', name = 'bones', amount = 5},
+    },
+    --main_product = "psc",
+}:add_unlock("organ-printing")
+
+RECIPE {
+    type = 'recipe',
+    name = 'print-bonemeal',
+    category = 'bio-printer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'fluid', name = 'psc', amount = 10},
+        {type = 'item', name = 'bio-scafold', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'bonemeal', amount = 5},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing")
