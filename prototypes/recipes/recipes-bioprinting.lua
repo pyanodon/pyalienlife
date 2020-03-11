@@ -85,6 +85,22 @@ RECIPE {
         {type = 'item', name = 'bones', amount = 5},
     },
     results = {
+        {type = 'fluid', name = 'xenogenic-cells', amount = 45},
+    },
+    --main_product = "cocoon",
+}:add_unlock("organ-printing")
+
+RECIPE {
+    type = 'recipe',
+    name = 'xenogenic-from-bonemeal',
+    category = 'incubator',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'fluid', name = 'oxygen', amount = 50},
+        {type = 'item', name = 'bonemeal', amount = 5},
+    },
+    results = {
         {type = 'fluid', name = 'xenogenic-cells', amount = 50},
     },
     --main_product = "cocoon",
