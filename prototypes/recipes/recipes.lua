@@ -1376,7 +1376,7 @@ RECIPE {
         {type = 'item', name = 'wood-seeds', amount = 10},
     },
     results = {
-        {type = 'item', name = 'seeds-extract-01', amount = 1}
+        {type = 'item', name = 'seeds-extract-01', amount = 5}
     },
     --main_product = "adrenal-cortex",
 }:add_unlock("energy-drink"):change_category('pulp')
@@ -1405,13 +1405,13 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = 'item', name = 'aluminium-plate', amount = 1},
+        {type = 'item', name = 'aluminium-plate', amount = 7},
         {type = 'fluid', name = 'water', amount = 500},
         {type = 'fluid', name = 'syrup-01', amount = 25},
         {type = 'fluid', name = 'carbon-dioxide', amount = 100},
     },
     results = {
-        {type = 'item', name = 'energy-drink', amount = 1}
+        {type = 'item', name = 'energy-drink', amount = 7}
     },
     --main_product = "adrenal-cortex",
 }:add_unlock("energy-drink")
