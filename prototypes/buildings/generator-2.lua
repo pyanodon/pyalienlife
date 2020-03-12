@@ -61,8 +61,8 @@ ENTITY {
             burnt_inventory_size = 1,
 			emissions_per_minute = 0,
 		},
-	effectivity = 1,
-	max_power_output = "4.5MW",
+	effectivity = 2,
+	max_power_output = "20MW",
     animation = {
         layers = {
             {
