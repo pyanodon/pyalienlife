@@ -276,7 +276,7 @@ RECIPE {
         {type = 'item', name = 'kicalk-mk02', amount = 2, probability = 0.2},
         {type = 'item', name = 'kicalk-seeds', amount = 3, probability = 0.4},
         {type = 'item', name = 'kicalk-seeds-mk02', amount = 3, probability = 0.2},
-        {type = 'item', name = 'kicalk-seeds-mk03', amount = 2, probability = 0.15},
+        {type = 'item', name = 'kicalk-seeds-mk03', amount = 2, probability = 0.05},
     },
     --main_product = "kicalk-mk03",
     icons =
@@ -297,7 +297,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},
-        {type = 'item', name = 'kicalk-seeds-mk03', amount = 6},
+        {type = 'item', name = 'kicalk-seeds-mk04', amount = 6},
         {type = 'fluid', name = 'carbon-dioxide', amount = 300},
         {type = 'item', name = 'laser-module', amount = 2},
         {type = 'item', name = 'retrovirus', amount = 2},
