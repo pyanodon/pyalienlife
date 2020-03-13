@@ -308,6 +308,12 @@ items.inputs.moondropseeds = {'moondrop-seeds', 1}
 items.inputs.moondrop = {'moondrop', 1}
 items.inputs.photophore = {'photophore', 1}
 
+items.inputs.cottongut = {'cottongut', 1}
+items.inputs.cottongutcub = {'cottongut-pup', 1}
+items.inputs.cottongutfood01 = {'cottongut-food-01', 1}
+items.inputs.cottongutfood02 = {'cottongut-food-02', 1}
+
+
 items.outputs = items.inputs
 --can put output replacements below here
 

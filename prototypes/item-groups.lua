@@ -343,4 +343,10 @@ data:extend {
         group = "py-alienlife",
         order = "z"
     },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-science",
+        group = "py-alienlife",
+        order = "z"
+    },
 }
