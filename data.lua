@@ -282,6 +282,7 @@ require('prototypes/buildings/prandium-lab-mk04')
 --Ceature
 require('prototypes/creatures/caravan')
 require('prototypes/creatures/dingrido')
+require('prototypes/creatures/crawdad')
 require('prototypes/creatures/ocula')
 
 --Land bot
