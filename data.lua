@@ -93,7 +93,7 @@ require('prototypes/technologies/microfilters')
 require('prototypes/technologies/organ-printing')
 require('prototypes/technologies/biopolymer-clusters')
 require('prototypes/technologies/ctc')
-require('prototypes/technologies/cottongut')
+--require('prototypes/technologies/cottongut')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -273,26 +273,18 @@ require('prototypes/buildings/mega-farm')
 require('prototypes/buildings/vat-brain')
 require("prototypes/buildings/harvester")
 require("prototypes/buildings/collector")
-require("prototypes/buildings/ipod")
-require('prototypes/buildings/prandium-lab-mk01')
-require('prototypes/buildings/prandium-lab-mk02')
-require('prototypes/buildings/prandium-lab-mk03')
-require('prototypes/buildings/prandium-lab-mk04')
+--require("prototypes/buildings/ipod")
+--require('prototypes/buildings/prandium-lab-mk01')
+--require('prototypes/buildings/prandium-lab-mk02')
+--require('prototypes/buildings/prandium-lab-mk03')
+--require('prototypes/buildings/prandium-lab-mk04')
 
---Ceature
+--Creature
 require('prototypes/creatures/caravan')
 require('prototypes/creatures/dingrido')
 require('prototypes/creatures/crawdad')
-require('prototypes/creatures/ocula')
+--require('prototypes/creatures/ocula')
 
---Land bot
---require('prototypes/robots/land-bot')
-
---test chest--
---require("prototypes/buildings/test-filtered-chest-mk01")
-
---Loco--
---require('prototypes/loco/pyloco')
 
 --(( FLUIDS ))--
 require("prototypes/fluids/zogna-bacteria")
@@ -438,9 +430,9 @@ require('prototypes/recipes/recipes-auto-acessories')
 require('prototypes/recipes/recipes-photomining')
 require('prototypes/recipes/recipes-bioprinting')
 require('prototypes/recipes/recipes-fawogae')
-require('prototypes/recipes/recipes-cottongut')
-require('prototypes/recipes/recipes-cottongut-science-red')
-require('prototypes/recipes/recipes-auto-cottongut')
+--require('prototypes/recipes/recipes-cottongut')
+--require('prototypes/recipes/recipes-cottongut-science-red')
+--require('prototypes/recipes/recipes-auto-cottongut')
 
 
 --(( ORES ))--
