@@ -275,6 +275,9 @@ require("prototypes/buildings/harvester")
 require("prototypes/buildings/collector")
 require("prototypes/buildings/ipod")
 require('prototypes/buildings/prandium-lab-mk01')
+require('prototypes/buildings/prandium-lab-mk02')
+require('prototypes/buildings/prandium-lab-mk03')
+require('prototypes/buildings/prandium-lab-mk04')
 
 --Ceature
 require('prototypes/creatures/caravan')
@@ -435,6 +438,8 @@ require('prototypes/recipes/recipes-photomining')
 require('prototypes/recipes/recipes-bioprinting')
 require('prototypes/recipes/recipes-fawogae')
 require('prototypes/recipes/recipes-cottongut')
+require('prototypes/recipes/recipes-cottongut-science-red')
+require('prototypes/recipes/recipes-auto-cottongut')
 
 
 --(( ORES ))--

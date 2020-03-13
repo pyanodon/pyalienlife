@@ -4393,6 +4393,50 @@ ITEM {
     order = "h",
     stack_size = 500
 }
+
+ITEM {
+    type = "item",
+    name = "red-science-seeds",
+    icon = "__pyalienlifegraphics__/graphics/icons/cottongut-pup.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-science",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "green-science-seeds",
+    icon = "__pyalienlifegraphics__/graphics/icons/cottongut-pup.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-science",
+    order = "b",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "blue-science-seeds",
+    icon = "__pyalienlifegraphics__/graphics/icons/cottongut-pup.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-science",
+    order = "c",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "py-science-seeds",
+    icon = "__pyalienlifegraphics__/graphics/icons/cottongut-pup.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-science",
+    order = "d",
+    stack_size = 100
+}
 ------RULES-----
 
 ---CREATURES---

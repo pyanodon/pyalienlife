@@ -195,6 +195,10 @@ data:extend {
         type = "recipe-category",
         name = "vat"
     },
+    {
+        type = "recipe-category",
+        name = "science"
+    },
     ------crops------
 	{
         type = "resource-category",

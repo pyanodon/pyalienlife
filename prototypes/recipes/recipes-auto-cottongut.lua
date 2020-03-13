@@ -3,7 +3,7 @@ local fun = require("prototypes/functions/functions")
 fun.autorecipes {
     name = 'caged-cottongut',
 	category = 'cottongut',
-	module_limitations = 'cottongut',
+	module_limitations = 'cottongut-mk01',
 	subgroup = 'py-alienlife-cottongut',
 	order = 'b',
     mats =
@@ -13,11 +13,10 @@ fun.autorecipes {
 				{
 					{name='moondrop',amount =4},
 					{name='waterbarrel',amount=2,return_item={name='empty-barrel',amount=2}},
-					{name='cage',amount=1},
 				},
 			results =
 				{
-					{name='cagedcottongut', probability = 0.7,amount_min =1,amount_max =1},
+					{name='cottongut', amount = 4},
 				},
 			crafting_speed = 150,
 			tech = 'cottongut'
@@ -31,8 +30,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cagedcottongut',amount ='R'},
-					{name='cagedcottongut', probability = 0.8,amount_min =1,amount_max =1},
+					{name='cottongut',amount = '+3'},
 				},
 			crafting_speed = 140,
 			tech = 'cottongut'
@@ -46,7 +44,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-
+					{name='cottongut',amount = '+2'},
 				},
 			crafting_speed = 130,
 			tech = 'cottongut-mk02'
@@ -59,7 +57,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-
+					{name='cottongut',amount = '+3'},
 				},
 			crafting_speed = 120,
 			tech = 'cottongut-mk02'
@@ -76,8 +74,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cagedcottongut',amount ='R'},
-					{name='cagedcottongut', probability = 0.9,amount_min =1,amount_max =1},
+					{name='cottongut',amount ='+4'},
 				},
 			crafting_speed = 110,
 			tech = 'cottongut-mk03'
@@ -90,7 +87,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-
+					{name='cottongut',amount = '+3'},
 				},
 			crafting_speed = 100,
 			tech = 'cottongut-mk03'
@@ -103,7 +100,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-
+					{name='cottongut',amount = '+3'},
 				},
 			crafting_speed = 90,
 			tech = 'cottongut-mk04'
@@ -117,7 +114,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-
+					{name='cottongut',amount = '+3'},
 				},
 			crafting_speed = 30,
 			tech = 'growth-hormone'
@@ -130,8 +127,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cagedcottongut', amount ='R'},
-					{name='cagedcottongut', probability = 1,amount_min =1,amount_max =2},
+					{name='cottongut',amount = '+3'},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -145,11 +141,12 @@ fun.autorecipes {
 				},
 			results =
 				{
-
+					{name='cottongut',amount = '+3'},
 				},
 			crafting_speed = 90,
 			tech = 'antiviral'
 		},
+		--[[
 		--nanochondria
 		{
 			ingredients =
@@ -159,8 +156,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cagedcottongut', amount ='R'},
-					{name='braincagedcottongut',1},
+					{name='cottongut', amount ='R'},
+					{name='braincottongut',1},
 				},
 			crafting_speed = 90,
 			tech = 'nanochondria'
@@ -189,8 +186,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='braincagedcottongut', amount ='R'},
-					{name='bonecagedcottongut', 1},
+					{name='braincottongut', amount ='R'},
+					{name='bonecottongut', 1},
 				},
 			crafting_speed = 90,
 			tech = 'bmp'
@@ -220,8 +217,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bonecagedcottongut', amount ='R'},
-					{name='meatcagedcottongut', 1},
+					{name='bonecottongut', amount ='R'},
+					{name='meatcottongut', 1},
 				},
 			crafting_speed = 90,
 			tech = 'anabolic-rna'
@@ -250,8 +247,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meatcagedcottongut', amount ='R'},
-					{name='gutscagedcottongut', 1},
+					{name='meatcottongut', amount ='R'},
+					{name='gutscottongut', 1},
 				},
 			crafting_speed = 90,
 			tech = 'antitumor'
@@ -280,8 +277,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='gutscagedcottongut', amount ='R'},
-					{name='bloodcagedcottongut', 1},
+					{name='gutscottongut', amount ='R'},
+					{name='bloodcottongut', 1},
 				},
 			crafting_speed = 90,
 			tech = 'recombinant-ery'
@@ -309,8 +306,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bloodcagedcottongut', amount ='R'},
-					{name='skincagedcottongut', 1},
+					{name='bloodcottongut', amount ='R'},
+					{name='skincottongut', 1},
 				},
 			crafting_speed = 90,
 			tech = 'reca'
@@ -328,6 +325,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'reca'
 		},
+		]]--
 	}
 }
 
@@ -336,7 +334,7 @@ fun.autorecipes {
 fun.autorecipes {
     name = 'cottongut-cub',
 	category = 'cottongut',
-	module_limitations = 'cottongut',
+	module_limitations = 'cottongut-mk01',
 	subgroup = 'py-alienlife-cottongut',
 	order = 'c',
     mats =
@@ -561,7 +559,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedcottongut',amount=1},
+					{name='cottongut',amount=1},
 				},
 			results =
 				{
@@ -577,14 +575,14 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'cottongut',
 			name = 'Full Render cottonguts',
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-cottongut.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png",
 			icon_size = 64,
 		},
 		--meat
 		{
 			ingredients =
 				{
-					--{name='cagedcottongut',amount=1},
+					--{name='cottongut',amount=1},
 				},
 			results =
 				{
@@ -607,7 +605,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedcottongut',amount=1},
+					--{name='cottongut',amount=1},
 				},
 			results =
 				{
@@ -624,7 +622,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedcottongut',amount=1},
+					--{name='cottongut',amount=1},
 				},
 			results =
 				{
@@ -641,7 +639,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedcottongut',amount=1},
+					--{name='cottongut',amount=1},
 				},
 			results =
 				{
@@ -658,7 +656,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedcottongut',amount=1},
+					--{name='cottongut',amount=1},
 				},
 			results =
 				{
@@ -675,7 +673,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedcottongut',amount=1},
+					--{name='cottongut',amount=1},
 				},
 			results =
 				{
@@ -692,7 +690,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedcottongut',amount=1},
+					--{name='cottongut',amount=1},
 				},
 			results =
 				{
@@ -705,12 +703,13 @@ fun.autorecipes {
 			icon = "__pyalienlifegraphics__/graphics/icons/gas-bladder.png",
 			icon_size = 64,
 		},
+		--[[
 		--brain cottongut rendering
 		{
 			ingredients =
 				{
-					{name='cagedcottongut',amount='R'},
-					{name='braincagedcottongut',amount=1},
+					{name='cottongut',amount='R'},
+					{name='braincottongut',amount=1},
 				},
 			results =
 				{
@@ -728,8 +727,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='braincagedcottongut',amount='R'},
-					{name='bonecagedcottongut',amount=1},
+					{name='braincottongut',amount='R'},
+					{name='bonecottongut',amount=1},
 				},
 			results =
 				{
@@ -746,8 +745,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='bonecagedcottongut',amount='R'},
-					{name='gutscagedcottongut',amount=1},
+					{name='bonecottongut',amount='R'},
+					{name='gutscottongut',amount=1},
 				},
 			results =
 				{
@@ -764,8 +763,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gutscagedcottongut',amount='R'},
-					{name='bloodcagedcottongut',amount=1},
+					{name='gutscottongut',amount='R'},
+					{name='bloodcottongut',amount=1},
 				},
 			results =
 				{
@@ -782,8 +781,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='bloodcagedcottongut',amount='R'},
-					{name='skincagedcottongut',amount=1},
+					{name='bloodcottongut',amount='R'},
+					{name='skincottongut',amount=1},
 				},
 			results =
 				{
@@ -800,8 +799,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='skincagedcottongut',amount='R'},
-					{name='meatcagedcottongut',amount=1},
+					{name='skincottongut',amount='R'},
+					{name='meatcottongut',amount=1},
 				},
 			results =
 				{
@@ -814,5 +813,6 @@ fun.autorecipes {
 			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-cottongut.png",
 			icon_size = 64,
 		},
+		]]--
 	}
 }
