@@ -78,7 +78,7 @@ data:extend(
         },
         collision_box = {{-0.9, -1.3}, {0.9, 1.3}},
         selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
-        drawing_box = {{-1.8, -1.8}, {1.8, 1.5}},
+        drawing_box = {{-1.8, -1.8}, {1.8, 1.8}},
         effectivity = 0.98,
         braking_power = "2000kW",
         burner =
@@ -324,7 +324,7 @@ data:extend(
         rotation_speed = 0.0035,
         tank_driving = true,
         weight = 10000,
-        inventory_size = 100,
+        inventory_size = 150,
         guns = {}
       }
     }
