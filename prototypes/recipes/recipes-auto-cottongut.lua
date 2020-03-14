@@ -21,12 +21,11 @@ fun.autorecipes {
 			crafting_speed = 150,
 			tech = 'cottongut'
 		},
-		--food 1
+		--Salt
 		{
 			ingredients =
 				{
-					{name='bhoddos',amount ='R'},
-					{name='cottongutfood01',amount =1},
+					{name='salt',amount = 3},
 				},
 			results =
 				{
@@ -35,11 +34,11 @@ fun.autorecipes {
 			crafting_speed = 140,
 			tech = 'cottongut'
 		},
-		--salt
+		--Food 1
 		{
 			ingredients =
 				{
-					{name='salt',amount = 3},
+					{name='cottongutfood01',amount =1},
 					{name='bedding',amount = 1},
 				},
 			results =
@@ -53,7 +52,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 10},
+					{name='rawfiber',amount = 5},
 				},
 			results =
 				{

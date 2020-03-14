@@ -3,14 +3,14 @@
 ----COPIES OF OG SCIENCE---
 RECIPE {
     type = 'recipe',
-    name = 'cottongut-science-red-seeds',
+    name = 'cottongut-science-blue-seeds',
     enabled = false,
-    energy_required = 4,
+    energy_required = 4.5,
     ingredients =
         {
         },
     results = {
-        {type = 'item', name = 'red-science-seeds', amount = 3},
+        {type = 'item', name = 'blue-science-seeds', amount = 3},
     },
     --main_product = "cottongut-mk02",
     icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
@@ -24,16 +24,16 @@ RECIPE {
 ---STARTER---
 RECIPE {
     type = 'recipe',
-    name = 'cottongut-science-red',
+    name = 'cottongut-science-blue',
     category = 'cottongut',
     enabled = false,
     energy_required = 135,
     ingredients = {
         {type = 'item', name = 'cottongut', amount = 2},
-        {type = 'item', name = 'red-science-seeds', amount = 1},
+        {type = 'item', name = 'blue-science-seeds', amount = 1},
         },
     results = {
-        {type = 'item', name = 'automation-science-pack', amount = 25, probability = 0.1},
+        {type = 'item', name = 'chemical-science-pack', amount = 25, probability = 0.1},
     },
     --main_product = "cottongut-mk02",
     icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
@@ -46,16 +46,16 @@ RECIPE {
 ---UPGRADES---
 RECIPE {
     type = 'recipe',
-    name = 'cottongut-science-red-02',
+    name = 'cottongut-science-blue-02',
     category = 'cottongut',
     enabled = false,
     energy_required = 135,
     ingredients = {
         {type = 'item', name = 'cottongut', amount = 5},
-        {type = 'item', name = 'red-science-seeds', amount = 1},
+        {type = 'item', name = 'blue-science-seeds', amount = 1},
         },
     results = {
-        {type = 'item', name = 'automation-science-pack', amount = 50, probability = 0.1},
+        {type = 'item', name = 'chemical-science-pack', amount = 50, probability = 0.1},
     },
     --main_product = "cottongut-mk02",
     icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
@@ -66,16 +66,16 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'cottongut-science-red-03',
+    name = 'cottongut-science-blue-03',
     category = 'cottongut',
     enabled = false,
     energy_required = 135,
     ingredients = {
-        {type = 'item', name = 'cottongut', amount = 10},
-        {type = 'item', name = 'red-science-seeds', amount = 1},
+        {type = 'item', name = 'cottongut', amount = 5},
+        {type = 'item', name = 'blue-science-seeds', amount = 1},
         },
     results = {
-        {type = 'item', name = 'automation-science-pack', amount = 75, probability = 0.1},
+        {type = 'item', name = 'chemical-science-pack', amount = 75, probability = 0.1},
     },
     --main_product = "cottongut-mk03",
     icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png',
@@ -86,16 +86,16 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'cottongut-science-red-04',
+    name = 'cottongut-science-blue-04',
     category = 'cottongut',
     enabled = false,
     energy_required = 135,
     ingredients = {
-        {type = 'item', name = 'cottongut', amount = 15},
-        {type = 'item', name = 'red-science-seeds', amount = 1},
+        {type = 'item', name = 'cottongut', amount = 5},
+        {type = 'item', name = 'blue-science-seeds', amount = 1},
         },
     results = {
-        {type = 'item', name = 'automation-science-pack', amount = 100, probability = 0.1},
+        {type = 'item', name = 'chemical-science-pack', amount = 100, probability = 0.1},
     },
     --main_product = "cottongut-mk04",
     icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
@@ -109,16 +109,16 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'cottongut-science-red-05',
+    name = 'cottongut-science-blue-05',
     category = 'cottongut',
     enabled = false,
     energy_required = 135,
     ingredients = {
-        {type = 'item', name = 'cottongut', amount = 40},
-        {type = 'item', name = 'red-science-seeds', amount = 1},
+        {type = 'item', name = 'cottongut', amount = 5},
+        {type = 'item', name = 'blue-science-seeds', amount = 1},
         },
     results = {
-        {type = 'item', name = 'automation-science-pack', amount = 200, probability = 0.1},
+        {type = 'item', name = 'chemical-science-pack', amount = 200, probability = 0.1},
     },
     --main_product = "cottongut-mk04",
     icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
