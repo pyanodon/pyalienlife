@@ -1263,7 +1263,7 @@ RECIPE {
         {type = 'item', name = 'navens', amount = 1},
     },
     results = {
-        {type = 'item', name = 'coal', amount = 10}
+        {type = 'item', name = 'raw-coal', amount = 10}
     },
     --main_product = "adrenal-cortex",
 }:add_unlock("navens")
