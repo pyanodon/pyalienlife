@@ -70,7 +70,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'stone-brick', amount = 5},
         {type = 'fluid', name = 'water', amount = 100},
-        {type = 'fluid', name = 'boric-acid', amount = 50},
+        {type = 'fluid', name = 'boric-acid', amount = 400},
         {type = 'item', name = 'cellulose', amount = 4},
     },
     results = {
