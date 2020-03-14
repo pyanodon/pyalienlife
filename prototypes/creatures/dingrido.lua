@@ -305,7 +305,7 @@ data:extend(
           sound =
           {
             filename = "__pyalienlifegraphics__/sounds/dingrit-breath.ogg",
-            volume = 1.3
+            volume = 1
           },
           --activate_sound =
           --{
@@ -319,8 +319,8 @@ data:extend(
           --},
           match_speed_to_activity = false
         },
-        open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.1 },
-        close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.1 },
+        open_sound = { filename = "__pyalienlifegraphics3__/sounds/dingrito-in.ogg", volume=0.9 },
+        close_sound = { filename = "__pyalienlifegraphics3__/sounds/dingrito-out.ogg", volume = 0.9 },
         rotation_speed = 0.0035,
         tank_driving = true,
         weight = 9000,
