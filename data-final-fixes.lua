@@ -5,6 +5,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 --RECIPES UPDATES
 
 RECIPE('exoskeleton-equipment'):add_ingredient({type = "item", name = "metallic-glass", amount = 30})
+RECIPE('plastic-bar'):remove_unlock('plastics')
 
 for _,module in pairs(data.raw.module) do
   if module.subgroup == "py-alienlife-modules" then
