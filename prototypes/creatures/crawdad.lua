@@ -8,7 +8,7 @@ RECIPE{
     enabled = false,
     ingredients =
     {
-      {type = 'item', name = 'alien-sample-02', amount = 10},
+      {type = 'item', name = 'alien-sample01', amount = 10},
       {type = 'item', name = 'cdna', amount = 10},
       {type = 'item', name = 'moss-gen', amount = 30},
       {type = 'item', name = 'bio-sample', amount = 100},
