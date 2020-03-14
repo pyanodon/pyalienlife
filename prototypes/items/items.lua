@@ -1565,7 +1565,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "h",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1576,7 +1576,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "h",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -2181,7 +2181,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2192,7 +2192,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2324,7 +2324,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2335,7 +2335,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2368,7 +2368,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "x",
-    stack_size = 10
+    stack_size = 500
 }
 
 ITEM {
@@ -2379,7 +2379,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "x",
-    stack_size = 10
+    stack_size = 500
 }
 
 ITEM {
@@ -2717,7 +2717,7 @@ ITEM {
     fuel_top_speed_multiplier = 1.4,
     subgroup = "py-alienlife-food",
     order = "x",
-    stack_size = 10
+    stack_size = 500
 }
 
 ITEM {
@@ -2732,7 +2732,7 @@ ITEM {
     fuel_top_speed_multiplier = 1.6,
     subgroup = "py-alienlife-food",
     order = "x",
-    stack_size = 10
+    stack_size = 500
 }
 
 ITEM {
@@ -3040,7 +3040,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "x",
-    stack_size = 10
+    stack_size = 500
 }
 
 ITEM {
@@ -3051,7 +3051,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "x",
-    stack_size = 10
+    stack_size = 500
 }
 
 ITEM {
@@ -3635,7 +3635,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "x",
-    stack_size = 10
+    stack_size = 500
 }
 
 ITEM {
@@ -3646,7 +3646,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "x",
-    stack_size = 10
+    stack_size = 500
 }
 
 ITEM {
@@ -3657,7 +3657,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "x",
-    stack_size = 10
+    stack_size = 500
 }
 
 ITEM {
@@ -3668,7 +3668,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "x",
-    stack_size = 10
+    stack_size = 500
 }
 
 ITEM {
@@ -3679,7 +3679,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "x",
-    stack_size = 10
+    stack_size = 500
 }
 
 ITEM {
@@ -3690,7 +3690,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "x",
-    stack_size = 10
+    stack_size = 500
 }
 
 ITEM {
@@ -4360,7 +4360,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-cottongut",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -4398,8 +4398,85 @@ ITEM {
 
 ITEM {
     type = "item",
-    name = "red-science-seeds",
-    icon = "__pyalienlifegraphics__/graphics/icons/cottongut-pup.png",
+    name = "brain-cottongut",
+    icon = "__pyalienlifegraphics__/graphics/icons/brain-cottongut.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottongut",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "bone-cottongut",
+    icon = "__pyalienlifegraphics__/graphics/icons/bone-cottongut.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottongut",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "meat-cottongut",
+    icon = "__pyalienlifegraphics__/graphics/icons/meat-cottongut.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottongut",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "blood-cottongut",
+    icon = "__pyalienlifegraphics__/graphics/icons/blood-cottongut.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottongut",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "guts-cottongut",
+    icon = "__pyalienlifegraphics__/graphics/icons/guts-cottongut.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottongut",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "fat-cottongut",
+    icon = "__pyalienlifegraphics__/graphics/icons/fat-cottongut.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottongut",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "skin-cottongut",
+    icon = "__pyalienlifegraphics__/graphics/icons/skin-cottongut.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottongut",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "solidified-sarcorus",
+    icon = "__pyalienlifegraphics__/graphics/icons/solidified-sarcorus.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-science",
@@ -4409,8 +4486,8 @@ ITEM {
 
 ITEM {
     type = "item",
-    name = "green-science-seeds",
-    icon = "__pyalienlifegraphics__/graphics/icons/cottongut-pup.png",
+    name = "paragen",
+    icon = "__pyalienlifegraphics__/graphics/icons/paragen.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-science",
@@ -4420,8 +4497,8 @@ ITEM {
 
 ITEM {
     type = "item",
-    name = "blue-science-seeds",
-    icon = "__pyalienlifegraphics__/graphics/icons/cottongut-pup.png",
+    name = "negasium",
+    icon = "__pyalienlifegraphics__/graphics/icons/negasium.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-science",
@@ -4431,8 +4508,30 @@ ITEM {
 
 ITEM {
     type = "item",
-    name = "py-science-seeds",
-    icon = "__pyalienlifegraphics__/graphics/icons/cottongut-pup.png",
+    name = "denatured-seismite",
+    icon = "__pyalienlifegraphics__/graphics/icons/denatured-seismite.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-science",
+    order = "d",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "nonconductive-phazogen",
+    icon = "__pyalienlifegraphics__/graphics/icons/nonconductive-phazogen.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-science",
+    order = "d",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "destablilized-toxirus",
+    icon = "__pyalienlifegraphics__/graphics/icons/destablilized-toxirus.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-science",
