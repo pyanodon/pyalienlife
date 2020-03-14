@@ -808,7 +808,7 @@ script.on_nth_tick(30, function()
 			if play.force.find_logistic_network_by_position(play.position, play.surface) ~= nil then
 				--log('hit')
 				break
-			else
+			elseif play.character ~= nil then
 				--log(p.name)
 				--check if player is missing stuff and add it to the list of things to attempt to be filled by the ocula
 				--log('hit')
