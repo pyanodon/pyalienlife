@@ -3,22 +3,21 @@ local util = require('util')
 RECIPE{
     type = "recipe",
     name = "crawdad",
-    energy_required = 90,
+    energy_required = 120,
     category = 'creature-chamber',
     enabled = false,
     ingredients =
     {
       {type = 'item', name = 'alien-sample-02', amount = 10},
-      {type = 'item', name = 'cdna', amount = 30},
-      {type = 'item', name = 'cbp', amount = 10},
+      {type = 'item', name = 'cdna', amount = 10},
+      {type = 'item', name = 'moss-gen', amount = 30},
       {type = 'item', name = 'bio-sample', amount = 100},
-      {type = 'item', name = 'ralesia-codex', amount = 5},
-      {type = 'item', name = 'earth-wolf-sample', amount = 10},
-      {type = 'fluid', name = 'fetal-serum', amount = 100},
-      {type = 'fluid', name = 'artificial-blood', amount = 200},
+      {type = 'item', name = 'earth-generic-sample', amount = 20},
+      {type = 'fluid', name = 'blood', amount = 300},
+      {type = 'fluid', name = 'water-saline', amount = 500},
     },
     result = "crawdad"
-  }:add_unlock("domestication-mk02")
+  }:add_unlock("zoology")
 
 ITEM{
     type = "item-with-entity-data",
@@ -57,12 +56,12 @@ data:extend(
           },
           {
             type = "physical",
-            --decrease = 15,
-            percent = 100
+            decrease = 15,
+            percent = 60
           },
           {
             type = "impact",
-            --decrease = 20,
+            decrease = 20,
             percent = 100
           },
           {
@@ -272,8 +271,8 @@ data:extend(
         close_sound = { filename = "__pyalienlifegraphics3__/sounds/crawdad-out.ogg", volume = 0.5 },
         rotation_speed = 0.015,
         --tank_driving = true,
-        weight = 700,
-        inventory_size = 100,
+        weight = 1000,
+        inventory_size = 120,
         guns = {}
       }
     }

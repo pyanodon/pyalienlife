@@ -138,7 +138,7 @@ data:extend(
           frame_count = 16,
           direction_count = 64,
           shift = util.by_pixel(-0.0, -0.0),
-          animation_speed = 2,
+          animation_speed = 1,
           max_advance = 1,
           stripes =
           {
@@ -171,7 +171,7 @@ data:extend(
             frame_count = 16,
             direction_count = 64,
             shift = util.by_pixel(-0.0, -0.0),
-            animation_speed = 2,
+            animation_speed = 1,
             max_advance = 1,
             stripes =
             {
@@ -196,7 +196,7 @@ data:extend(
               height_in_frames = 16
               },
             },
-            scale = 0.5
+            scale = 0.85
           }
           },
           {
@@ -208,7 +208,7 @@ data:extend(
           direction_count = 64,
           shift = util.by_pixel(0.0, 0.0),
           max_advance = 1,
-          animation_speed = 2,
+          animation_speed = 1,
           stripes =
           {
             {
@@ -242,7 +242,7 @@ data:extend(
             direction_count = 64,
             shift = util.by_pixel(0.0, 0.0),
             max_advance = 1,
-            animation_speed = 2,
+            animation_speed = 1,
             stripes =
             {
               {
@@ -266,7 +266,7 @@ data:extend(
               height_in_frames = 16
               },
             },
-            scale = 0.5
+            scale = 0.85
           }
         }
       }
@@ -317,14 +317,14 @@ data:extend(
           --  filename = "__base__/sound/fight/tank-engine-stop.ogg",
           --  volume = 0.6
           --},
-          match_speed_to_activity = true
+          match_speed_to_activity = false
         },
         open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.1 },
         close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.1 },
         rotation_speed = 0.0035,
         tank_driving = true,
-        weight = 10000,
-        inventory_size = 150,
+        weight = 9000,
+        inventory_size = 250,
         guns = {}
       }
     }
