@@ -79,12 +79,12 @@ RECIPE {
     --main_product = "cocoon",
 }:add_unlock("biotech-mk02")
 
-table.insert(data.raw.lab.lab.inputs, 'py-science-pack')
+--table.insert(data.raw.lab.lab.inputs, 'py-science-pack')
 
-data.raw.recipe['cottongut-science-red-seeds'].ingredients = data.raw.recipe['automation-science-pack'].ingredients
+--data.raw.recipe['cottongut-science-red-seeds'].ingredients = data.raw.recipe['automation-science-pack'].ingredients
 
-data.raw.recipe['cottongut-science-green-seeds'].ingredients = data.raw.recipe['logistic-science-pack'].ingredients
+--data.raw.recipe['cottongut-science-green-seeds'].ingredients = data.raw.recipe['logistic-science-pack'].ingredients
 
-data.raw.recipe['cottongut-science-blue-seeds'].ingredients = data.raw.recipe['chemical-science-pack'].ingredients
+--data.raw.recipe['cottongut-science-blue-seeds'].ingredients = data.raw.recipe['chemical-science-pack'].ingredients
 
-data.raw.recipe['cottongut-science-py-seeds'].ingredients = data.raw.recipe['py-science-pack'].ingredients
+--data.raw.recipe['cottongut-science-py-seeds'].ingredients = data.raw.recipe['py-science-pack'].ingredients
