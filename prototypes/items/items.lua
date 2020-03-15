@@ -4508,8 +4508,8 @@ ITEM {
 
 ITEM {
     type = "item",
-    name = "denatured-seismite",
-    icon = "__pyalienlifegraphics__/graphics/icons/denatured-seismite.png",
+    name = "nonconductive-phazogen",
+    icon = "__pyalienlifegraphics__/graphics/icons/nonconductive-phazogen.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-science",
@@ -4519,8 +4519,8 @@ ITEM {
 
 ITEM {
     type = "item",
-    name = "nonconductive-phazogen",
-    icon = "__pyalienlifegraphics__/graphics/icons/nonconductive-phazogen.png",
+    name = "denatured-seismite",
+    icon = "__pyalienlifegraphics__/graphics/icons/denatured-seismite.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-science",
