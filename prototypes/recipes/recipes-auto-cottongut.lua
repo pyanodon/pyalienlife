@@ -567,7 +567,6 @@ fun.autorecipes {
 					{name='meat', probability = 0.1,amount_min =1,amount_max =2},
 					{name='skin', probability = 0.2,amount_min =1,amount_max =1},
                     {name='guts', probability = 0.3,amount_min =1,amount_max =1},
-                    {name='gasbladder', probability = 0.4,amount_min =1,amount_max =1},
 					{name='blood', amount =20},
 					{name='cage',amount=1},
 					{name='brain', probability = 0.4,amount_min =1,amount_max =1},
@@ -575,7 +574,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'cottongut',
 			name = 'Full Render cottonguts',
-			icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-cottongut.png",
 			icon_size = 64,
 		},
 		--meat
