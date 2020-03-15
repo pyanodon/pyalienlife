@@ -20,7 +20,7 @@ fun.autorecipes {
 					{name='cottongut', amount = 6},
 				},
 			crafting_speed = 150,
-			tech = 'cottongut'
+			tech = 'cottongut-mk01'
 		},
 		--Salt
 		{
@@ -33,7 +33,7 @@ fun.autorecipes {
 					{name='cottongut',amount = '+3'},
 				},
 			crafting_speed = 140,
-			tech = 'cottongut'
+			tech = 'cottongut-mk01'
 		},
 		--Food 1
 		{
