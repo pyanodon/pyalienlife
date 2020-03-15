@@ -119,6 +119,62 @@ fun.autorecipes {
 	}
 }
 
+------------------COTTONGUT------------------
+
+fun.autorecipes {
+    name = 'rendering-brains-cottongut',
+	category = 'slaughterhouse-cottongut',
+	--module_limitations = 'cottongut',
+	subgroup = 'py-alienlife-cottongut',
+	order = 'b',
+    mats =
+	{
+		{
+			ingredients =
+				{
+					{name='cottongut',amount=5},
+				},
+			results =
+				{
+					{name='bones', probability = 0.4,amount_min =1,amount_max =5},
+					{name='meat', probability = 0.3,amount_min =1,amount_max =4},
+					{name='skin', probability = 0.4,amount_min =1,amount_max =4},
+                    {name='guts', probability = 0.5,amount_min =1,amount_max =5},
+					{name='blood', amount =40},
+					{name='brain', probability = 0.3,amount_min =1,amount_max =3},
+				},
+			crafting_speed = 30,
+			tech = 'interactive-cognition',
+			name = 'Full Render cottongutb',
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-cottongut.png",
+			icon_size = 64,
+		},
+		--brain
+		{
+			ingredients =
+				{
+					--{name='cagedcottongut',amount=1},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='blood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='brain', amount =4},
+				},
+			crafting_speed = 15,
+			tech = 'interactive-cognition',
+			name = 'Extract cottongut brainsb',
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
+			icon_size = 64,
+		},
+	}
+}
+
 ------------------DINGRITS------------------
 
 fun.autorecipes {

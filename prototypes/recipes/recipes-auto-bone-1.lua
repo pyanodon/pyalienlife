@@ -75,6 +75,41 @@ fun.autorecipes {
 	}
 }
 
+------------------COTTONGUT------------------
+
+fun.autorecipes {
+    name = 'rendering-bone-cottongut',
+	category = 'slaughterhouse-cottongut',
+	--module_limitations = 'cottongut',
+	subgroup = 'py-alienlife-cottongut',
+	order = 'b',
+    mats =
+	{
+		--bone
+		{
+			ingredients =
+				{
+					{name='cottongut',amount=5},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='blood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='bones', amount =6},
+				},
+                crafting_speed = 15,
+                tech = 'osteocyte',
+                name = 'Extract cottongut bones-1',
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
+                icon_size = 64,
+		},
+	}
+}
 
 ------------------DINGRITS------------------
 

@@ -111,6 +111,60 @@ fun.autorecipes {
 	}
 }
 
+------------------COTTONGUT------------------
+
+fun.autorecipes {
+    name = 'rendering-blood-cottongut-2',
+	category = 'slaughterhouse-cottongut',
+	--module_limitations = 'cottongut',
+	subgroup = 'py-alienlife-cottongut',
+	order = 'b',
+    mats =
+	{
+		--blood
+		{
+			ingredients =
+				{
+					{name='cottongut',amount=1},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='blood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='blood', amount =100},
+				},
+                crafting_speed = 15,
+                tech = 'transgenes',
+                name = 'Extract cottongut blood-2',
+                icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
+                icon_size = 64,
+		},
+		--blood cottongut rendering
+		{
+			ingredients =
+				{
+					{name='cottongut',amount='R'},
+					{name='bloodcottongut',amount=5},
+				},
+			results =
+				{
+					{name='guts', amount ='R'},
+					{name='blood', amount =160},
+				},
+			crafting_speed = 15,
+			tech = 'transgenes',
+			name = 'Extract blood from Improved cottonguts-2',
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-cottongut.png",
+			icon_size = 64,
+		},
+	}
+}
+
 ------------------DHILMOS------------------
 
 fun.autorecipes {

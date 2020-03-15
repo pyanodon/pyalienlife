@@ -111,6 +111,59 @@ fun.autorecipes {
 	}
 }
 
+------------------COTTONGUTS------------------
+
+fun.autorecipes {
+    name = 'rendering-fat-cottongut-2',
+	category = 'slaughterhouse-cottongut',
+	--module_limitations = 'cottongut',
+	subgroup = 'py-alienlife-cottongut',
+	order = 'b',
+    mats =
+	{
+		--fat
+		{
+			ingredients =
+				{
+					{name='cottongut',amount=5},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='blood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='fat', amount =7},
+				},
+                crafting_speed = 15,
+                tech = 'fto4',
+                name = 'Extract cottongut lard-2',
+                icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
+                icon_size = 64,
+		},
+		--fat cottongut rendering
+		{
+			ingredients =
+				{
+					{name='cottongut',amount='R'},
+					{name='fatcottongut',amount=5},
+				},
+			results =
+				{
+					{name='skin', amount ='R'},
+					{name='fat', amount =8},
+				},
+			crafting_speed = 15,
+			tech = 'fto4',
+			name = 'Extract lard from Improved cottonguts-2',
+			icon = "__pyalienlifegraphics__/graphics/icons/fat-cottongut.png",
+			icon_size = 64,
+		},
+	}
+}
 ------------------DHILMOS------------------
 
 fun.autorecipes {
