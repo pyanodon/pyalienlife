@@ -559,21 +559,21 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cottongut',amount=10},
+					{name='cottongut',amount=5},
 				},
 			results =
 				{
-					{name='bones', probability = 0.5,amount_min =1,amount_max =6},
-					{name='meat', probability = 0.1,amount_min =1,amount_max =2},
-					{name='skin', probability = 0.2,amount_min =1,amount_max =1},
-                    {name='guts', probability = 0.3,amount_min =1,amount_max =1},
-					{name='blood', amount =20},
-					{name='cage',amount=1},
-					{name='brain', probability = 0.4,amount_min =1,amount_max =1},
+					{name='bones', probability = 0.4,amount_min =1,amount_max =5},
+					{name='meat', probability = 0.3,amount_min =1,amount_max =4},
+					{name='skin', probability = 0.4,amount_min =1,amount_max =4},
+					{name='guts', probability = 0.5,amount_min =1,amount_max =5},
+					{name='fat', probability = 0.3,amount_min =1,amount_max =4},
+					{name='blood', amount =40},
+					{name='brain', probability = 0.3,amount_min =1,amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'cottongut',
-			name = 'Full Render cottonguts',
+			name = 'Full Render cottongut',
 			icon = "__pyalienlifegraphics__/graphics/icons/rendering-cottongut.png",
 			icon_size = 64,
 		},
@@ -588,11 +588,10 @@ fun.autorecipes {
 					{name='bones', amount ='R'},
 					{name='meat', amount ='R'},
 					{name='skin', amount ='R'},
-					{name='gasbladder', amount ='R'},
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='meat', amount =2},
+					{name='meat', amount =4},
 				},
 			crafting_speed = 15,
 			tech = 'cottongut',
@@ -609,7 +608,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', amount ='R'},
-					{name='brain', amount =1},
+					{name='brain', amount =2},
 				},
 			crafting_speed = 15,
 			tech = 'cottongut',
@@ -626,7 +625,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='skin', amount =1},
+					{name='skin', amount =4},
 				},
 			crafting_speed = 15,
 			tech = 'cottongut',
@@ -643,7 +642,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='bones', amount =6},
+					{name='bones', amount =5},
 				},
 			crafting_speed = 15,
 			tech = 'cottongut',
@@ -660,7 +659,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bones', amount ='R'},
-					{name='guts', amount =1},
+					{name='guts', amount =5},
 				},
 			crafting_speed = 15,
 			tech = 'cottongut',
@@ -677,7 +676,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='blood', amount =40},
+					{name='blood', amount =60},
 				},
 			crafting_speed = 15,
 			tech = 'cottongut',
@@ -685,21 +684,21 @@ fun.autorecipes {
 			icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
 			icon_size = 64,
 		},
-		--Gas Bladder
+		--fat
 		{
 			ingredients =
 				{
-					--{name='cottongut',amount=1},
+					--{name='cagedarthurian',amount=1},
 				},
 			results =
 				{
 					{name='blood', amount ='R'},
-					{name='gasbladder', amount =1},
+					{name='fat', amount =5},
 				},
 			crafting_speed = 15,
-			tech = 'cottongut',
-			name = 'Extract cottongut Gas bladder',
-			icon = "__pyalienlifegraphics__/graphics/icons/gas-bladder.png",
+			tech = 'arthurian',
+			name = 'Extract cottongut lard',
+			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
 			icon_size = 64,
 		},
 		--brain cottongut rendering
@@ -711,8 +710,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='blood', amount ='R'},
-					{name='gasbladder', amount ='R'},
+					{name='fat', amount ='R'},
 					{name='brain', amount =3},
 				},
 			crafting_speed = 15,
@@ -793,11 +791,29 @@ fun.autorecipes {
 			icon = "__pyalienlifegraphics__/graphics/icons/skin-cottongut.png",
 			icon_size = 64,
 		},
-		--meat cottongut rendering
+		--fat cottongut rendering
 		{
 			ingredients =
 				{
 					{name='skincottongut',amount='R'},
+					{name='fatcottongut',amount=1},
+				},
+			results =
+				{
+					{name='skin', amount ='R'},
+					{name='fat', amount =6},
+				},
+			crafting_speed = 15,
+			tech = 'orexigenic',
+			name = 'Extract lard from Improved cottonguts',
+			icon = "__pyalienlifegraphics__/graphics/icons/fat-cottongut.png",
+			icon_size = 64,
+		},
+		--meat cottongut rendering
+		{
+			ingredients =
+				{
+					{name='fatcottongut',amount='R'},
 					{name='meatcottongut',amount=5},
 				},
 			results =
