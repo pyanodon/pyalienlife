@@ -5,6 +5,7 @@ RECIPE {
     type = 'recipe',
     name = 'cottongut-science-green-seeds',
     enabled = false,
+    category = 'genlab',
     energy_required = 4,
     ingredients =
         {
