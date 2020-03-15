@@ -325,7 +325,6 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'reca'
 		},
-		
 	}
 }
 
