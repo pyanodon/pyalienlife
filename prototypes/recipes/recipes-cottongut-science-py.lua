@@ -5,6 +5,7 @@ RECIPE {
     type = 'recipe',
     name = 'cottongut-science-py-seeds',
     enabled = false,
+    category = 'incubator',
     energy_required = 15,
     ingredients =
         {
