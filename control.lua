@@ -162,7 +162,7 @@ local farm_buildings = {
 	"auog",
 	"bhoddos",
 	"cadavericarum",
-	"prandium-lab",
+	"prandium",
 	"cridren",
 	"dhilmos",
 	"dingrits",
@@ -195,7 +195,6 @@ local farm_buildings = {
 local animal_farm_buildings = {
 	["arthurian"] = true,
 	["auog"] = true,
-	["prandium-lab"] = true,
 	["cridren"] = true,
 	["dhilmos"] = true,
 	["dingrits"] = true,
@@ -205,6 +204,7 @@ local animal_farm_buildings = {
 	["mukmoux"] = true,
 	["phadai"] = true,
 	["phagnot"] = true,
+	['prandium'] = true,
 	["scrondrix"] = true,
 	["trits"] = true,
 	["ulric"] = true,
@@ -817,7 +817,7 @@ script.on_nth_tick(30, function()
 				local inv = play.get_main_inventory().get_contents()
 				local iir
 				local total_item_count
-				log(serpent.block(inv))
+				--log(serpent.block(inv))
 				for s = 1, play.character.request_slot_count do --
 					--log(s)
 					--log(serpent.block(play.character.get_request_slot(s)))
@@ -837,11 +837,11 @@ script.on_nth_tick(30, function()
 						else
 							total_item_count = iir
 						end
-						log(inv[play.character.get_request_slot(s).name])
-						log(iir)
-						log(total_item_count)
+						--log(inv[play.character.get_request_slot(s).name])
+						--log(iir)
+						--log(total_item_count)
 						global.ocula_master_table.requested_items[play.index][play.character.get_request_slot(s).name] = play.character.get_request_slot(s).count - total_item_count
-						log(serpent.block(global.ocula_master_table))
+						--log(serpent.block(global.ocula_master_table))
 						end
 					end
 				for _, player in pairs(global.ocula_master_table.requested_items) do
@@ -865,19 +865,19 @@ script.on_nth_tick(30, function()
 										if item > 0 and con[i] ~= nil and ocula_box.inactive_ocula > 0 then
 											ocula_box.inactive_ocula = ocula_box.inactive_ocula - 1
 											oc_box.get_inventory(defines.inventory.chest).remove({name='ocula',count=1})
-											log("hit")
+											--log("hit")
 											local ocula =
 												game.surfaces["nauvis"].create_entity {name = "ocula", position = oc_box.position, force = oc_box.force}
 											ocula_box.assigned_active_occula[ocula.unit_number] = ocula
 											local destination = log_net.select_pickup_point {name = i, position = oc_box.position}
-											log(serpent.block(destination))
+											--log(serpent.block(destination))
 											local amount
 											if item > 50 then
 												amount = 50
 											else
 												amount = item
 											end
-											log(amount)
+											--log(amount)
 											global.ocula_master_table.ocula[ocula.unit_number] = {
 												entity = ocula,
 												base = oc_box.unit_number,
@@ -901,7 +901,7 @@ script.on_nth_tick(30, function()
 											else
 												global.ocula_master_table.item_in_route[play.index][i] = amount
 											end
-											log(global.ocula_master_table.item_in_route[play.index][i])
+											--log(global.ocula_master_table.item_in_route[play.index][i])
 											ocula.set_command {
 												type = defines.command.go_to_location,
 												destination_entity = destination.owner,

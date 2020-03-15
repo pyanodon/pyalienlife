@@ -11,12 +11,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='moondrop',amount =4},
+					{name='moondrop',amount = 4},
+					{name='woodseeds', amount = 4},
 					{name='waterbarrel',amount=2,return_item={name='empty-barrel',amount=2}},
 				},
 			results =
 				{
-					{name='cottongut', amount = 4},
+					{name='cottongut', amount = 6},
 				},
 			crafting_speed = 150,
 			tech = 'cottongut'
@@ -25,7 +26,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='salt',amount = 3},
+					{name='ralesiaseeds',amount = 3},
 				},
 			results =
 				{
@@ -38,6 +39,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
+					{name = 'woodseeds',amount = 'R'},
+					{name = 'ralesiaseeds',amount ='R'},
 					{name='cottongutfood01',amount =1},
 					{name='bedding',amount = 1},
 				},
@@ -52,7 +55,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 5},
+					{name='thuupraseeds', amount = 5},
 				},
 			results =
 				{
@@ -66,8 +69,6 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='cottongutfood01',amount ='R'},
-					{name='salt',amount ='R'},
-					{name='rawfiber',amount ='R'},
 					{name='cottongutfood02',amount =1},
 
 				},
@@ -82,7 +83,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='salt',amount =3},
+					{name = 'thuupraseeds',amount = 'R'},
+					{name='bhoddos',amount = 4},
 				},
 			results =
 				{
@@ -95,7 +97,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 10},
+					{name='grodseeds',amount = '*3'},
 				},
 			results =
 				{
@@ -145,7 +147,6 @@ fun.autorecipes {
 			crafting_speed = 90,
 			tech = 'antiviral'
 		},
-		--[[
 		--nanochondria
 		{
 			ingredients =
@@ -156,7 +157,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='cottongut', amount ='R'},
-					{name='braincottongut',1},
+					{name='braincottongut',amount = 4},
 				},
 			crafting_speed = 90,
 			tech = 'nanochondria'
@@ -186,7 +187,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='braincottongut', amount ='R'},
-					{name='bonecottongut', 1},
+					{name='bonecottongut', amount = 4},
 				},
 			crafting_speed = 90,
 			tech = 'bmp'
@@ -217,7 +218,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bonecottongut', amount ='R'},
-					{name='meatcottongut', 1},
+					{name='meatcottongut', amount = 4},
 				},
 			crafting_speed = 90,
 			tech = 'anabolic-rna'
@@ -247,7 +248,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meatcottongut', amount ='R'},
-					{name='gutscottongut', 1},
+					{name='gutscottongut', amount = 4},
 				},
 			crafting_speed = 90,
 			tech = 'antitumor'
@@ -277,7 +278,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='gutscottongut', amount ='R'},
-					{name='bloodcottongut', 1},
+					{name='bloodcottongut', amount = 4},
 				},
 			crafting_speed = 90,
 			tech = 'recombinant-ery'
@@ -306,7 +307,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bloodcottongut', amount ='R'},
-					{name='skincottongut', 1},
+					{name='skincottongut', amount = 4},
 				},
 			crafting_speed = 90,
 			tech = 'reca'
@@ -324,12 +325,12 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'reca'
 		},
-		]]--
+		
 	}
 }
 
 ------------------CUB MAKER------------------
-
+--[[
 fun.autorecipes {
     name = 'cottongut-cub',
 	category = 'cottongut',
@@ -545,6 +546,7 @@ fun.autorecipes {
 		},
 	}
 }
+]]--
 ------------------RENDERING------------------
 
 fun.autorecipes {
@@ -558,7 +560,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cottongut',amount=1},
+					{name='cottongut',amount=10},
 				},
 			results =
 				{
@@ -702,13 +704,12 @@ fun.autorecipes {
 			icon = "__pyalienlifegraphics__/graphics/icons/gas-bladder.png",
 			icon_size = 64,
 		},
-		--[[
 		--brain cottongut rendering
 		{
 			ingredients =
 				{
 					{name='cottongut',amount='R'},
-					{name='braincottongut',amount=1},
+					{name='braincottongut',amount=5},
 				},
 			results =
 				{
@@ -719,7 +720,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'nanochondria',
 			name = 'Extract brains from Improved cottonguts',
-			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-cottongut.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/brain-cottongut.png",
 			icon_size = 64,
 		},
 		--bone cottongut rendering
@@ -727,7 +728,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='braincottongut',amount='R'},
-					{name='bonecottongut',amount=1},
+					{name='bonecottongut',amount=5},
 				},
 			results =
 				{
@@ -737,7 +738,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'bmp',
 			name = 'Extract bones from Improved cottonguts',
-			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-cottongut.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/bone-cottongut.png",
 			icon_size = 64,
 		},
 		--guts cottongut rendering
@@ -745,7 +746,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='bonecottongut',amount='R'},
-					{name='gutscottongut',amount=1},
+					{name='gutscottongut',amount=5},
 				},
 			results =
 				{
@@ -755,7 +756,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'antitumor',
 			name = 'Extract guts from Improved cottonguts',
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-cottongut.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-cottongut.png",
 			icon_size = 64,
 		},
 		--blood cottongut rendering
@@ -763,7 +764,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='gutscottongut',amount='R'},
-					{name='bloodcottongut',amount=1},
+					{name='bloodcottongut',amount=5},
 				},
 			results =
 				{
@@ -773,7 +774,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
 			name = 'Extract blood from Improved cottonguts',
-			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-cottongut.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-cottongut.png",
 			icon_size = 64,
 		},
 		--skin cottongut rendering
@@ -781,7 +782,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='bloodcottongut',amount='R'},
-					{name='skincottongut',amount=1},
+					{name='skincottongut',amount=5},
 				},
 			results =
 				{
@@ -791,7 +792,7 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'reca',
 			name = 'Extract skin from Improved cottonguts',
-			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-cottongut.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/skin-cottongut.png",
 			icon_size = 64,
 		},
 		--meat cottongut rendering
@@ -799,7 +800,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='skincottongut',amount='R'},
-					{name='meatcottongut',amount=1},
+					{name='meatcottongut',amount=5},
 				},
 			results =
 				{
@@ -809,9 +810,8 @@ fun.autorecipes {
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
 			name = 'Extract meat from Improved cottonguts',
-			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-cottongut.png",
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-cottongut.png",
 			icon_size = 64,
 		},
-		]]--
 	}
 }

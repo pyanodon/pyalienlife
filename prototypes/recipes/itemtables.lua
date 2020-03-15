@@ -312,7 +312,13 @@ items.inputs.cottongut = {'cottongut', 1}
 items.inputs.cottongutcub = {'cottongut-pup', 1}
 items.inputs.cottongutfood01 = {'cottongut-food-01', 1}
 items.inputs.cottongutfood02 = {'cottongut-food-02', 1}
-
+items.inputs.braincottongut = {'brain-cottongut', 1}
+items.inputs.bonecottongut = {'bone-cottongut', 1}
+items.inputs.meatcottongut = {'meat-cottongut', 1}
+items.inputs.bloodcottongut = {'blood-cottongut', 1}
+items.inputs.gutscottongut = {'guts-cottongut', 1}
+items.inputs.fatcottongut = {'fat-cottongut', 1}
+items.inputs.skincottongut = {'skin-cottongut', 1}
 
 items.outputs = items.inputs
 --can put output replacements below here
