@@ -51,7 +51,7 @@ RECIPE {
     enabled = false,
     energy_required = 135,
     ingredients = {
-        {type = 'item', name = 'cottongut', amount = 5},
+        {type = 'item', name = 'cottongut', amount = 8},
         {type = 'item', name = 'paragen', amount = 1},
         },
     results = {
@@ -71,7 +71,7 @@ RECIPE {
     enabled = false,
     energy_required = 135,
     ingredients = {
-        {type = 'item', name = 'cottongut', amount = 5},
+        {type = 'item', name = 'cottongut', amount = 14},
         {type = 'item', name = 'paragen', amount = 1},
         },
     results = {
@@ -91,7 +91,7 @@ RECIPE {
     enabled = false,
     energy_required = 135,
     ingredients = {
-        {type = 'item', name = 'cottongut', amount = 5},
+        {type = 'item', name = 'cottongut', amount = 20},
         {type = 'item', name = 'paragen', amount = 1},
         },
     results = {
@@ -114,7 +114,7 @@ RECIPE {
     enabled = false,
     energy_required = 135,
     ingredients = {
-        {type = 'item', name = 'cottongut', amount = 5},
+        {type = 'item', name = 'cottongut', amount = 60},
         {type = 'item', name = 'paragen', amount = 1},
         },
     results = {

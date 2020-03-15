@@ -70,8 +70,8 @@ RECIPE {
         {type = "item", name = "moondrop", amount = 5},
     },
     results = {
-        {type = "item", name = "moondrop", amount = 2},
-        {type = "item", name = "moondrop", amount_min = 1, amount_max = 3, probability = 0.50},
+        {type = "item", name = "moondrop", amount = 2, catalyst_amount = 2},
+        {type = "item", name = "moondrop", amount_min = 1, amount_max = 3, probability = 0.10, catalyst_amount = 3},
         {type = "item", name = "moondrop-seeds", amount= 7},
         {type = "item", name = "moondrop-seeds", amount_min = 1, amount_max = 3, probability = 0.25}
     },

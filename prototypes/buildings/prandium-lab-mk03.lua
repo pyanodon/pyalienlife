@@ -4,13 +4,11 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"iron-plate", 100},
-        {"electronic-circuit", 15},
-        {"small-lamp", 8},
-        {"aluminium-plate", 40},
-        {"steel-plate", 40},
-        {"iron-gear-wheel", 30},
-        {"glass", 50},
+        {"prandium-lab-mk02", 1},
+        {"processing-unit", 30},
+        {"ticocr-alloy", 20},
+        {"stainless-steel", 40},
+        {"molybdenum-plate", 20},
     },
     results = {
         {"prandium-lab-mk03", 1}

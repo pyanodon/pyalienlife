@@ -29,7 +29,7 @@ RECIPE {
     enabled = false,
     energy_required = 135,
     ingredients = {
-        {type = 'item', name = 'cottongut', amount = 2},
+        {type = 'item', name = 'cottongut', amount = 10},
         {type = 'item', name = 'negasium', amount = 1},
         },
     results = {
@@ -51,7 +51,7 @@ RECIPE {
     enabled = false,
     energy_required = 135,
     ingredients = {
-        {type = 'item', name = 'cottongut', amount = 5},
+        {type = 'item', name = 'cottongut', amount = 25},
         {type = 'item', name = 'negasium', amount = 1},
         },
     results = {
@@ -71,7 +71,7 @@ RECIPE {
     enabled = false,
     energy_required = 135,
     ingredients = {
-        {type = 'item', name = 'cottongut', amount = 5},
+        {type = 'item', name = 'cottongut', amount = 60},
         {type = 'item', name = 'negasium', amount = 1},
         },
     results = {
@@ -91,7 +91,7 @@ RECIPE {
     enabled = false,
     energy_required = 135,
     ingredients = {
-        {type = 'item', name = 'cottongut', amount = 5},
+        {type = 'item', name = 'cottongut', amount = 100},
         {type = 'item', name = 'negasium', amount = 1},
         },
     results = {

@@ -4,18 +4,17 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"iron-plate", 100},
-        {"electronic-circuit", 15},
+        {'prandium-lab-mk01', 1},
+        {"advanced-circuit", 20},
         {"small-lamp", 8},
-        {"aluminium-plate", 40},
+        {"nexelit-plate", 30},
         {"steel-plate", 40},
-        {"iron-gear-wheel", 30},
         {"glass", 50},
     },
     results = {
         {"prandium-lab-mk02", 1}
     }
-}:add_unlock("cottongut-mk02")
+}:add_unlock("cottongut-mk02"):add_ingredient('advanced-small-part')
 
 ITEM {
     type = "item",

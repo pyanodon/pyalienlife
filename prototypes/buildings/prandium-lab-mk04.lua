@@ -4,18 +4,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"iron-plate", 100},
-        {"electronic-circuit", 15},
-        {"small-lamp", 8},
-        {"aluminium-plate", 40},
-        {"steel-plate", 40},
-        {"iron-gear-wheel", 30},
-        {"glass", 50},
+        {"prandium-lab-mk03", 1},
+        {'processing-unit', 15},
+        {"super-steel", 40},
+        {"super-alloy", 30},
     },
     results = {
         {"prandium-lab-mk04", 1}
     }
-}:add_unlock("cottongut-mk04")
+}:add_unlock("cottongut-mk04"):replace_ingredient('processing-unit', 'intelligent-unit')
 
 ITEM {
     type = "item",
