@@ -40,7 +40,7 @@ data:extend(
         flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-flammable"},
         minable = {mining_time = 0.5, result = "crawdad"},
         mined_sound = {filename = "__core__/sound/deconstruct-medium.ogg"},
-        max_health = 2000,
+        max_health = 10000,
         corpse = "tank-remnants",
         dying_explosion = "big-explosion",
         alert_icon_shift = util.by_pixel(-4, -13),
