@@ -37,6 +37,9 @@ RECIPE('kmauts-ration'):subgroup_order('py-alienlife-food', 'b'):remove_unlock('
 RECIPE('control-unit'):add_ingredient({type = 'item', name = 'biobattery', amount = 2}):replace_ingredient("advanced-circuit", "processing-unit")
 RECIPE('production-science-pack'):add_ingredient({type = "item", name = "alien-enzymes", amount = 1})
 RECIPE('super-alloy'):add_ingredient({type = "item", name = "cobalt-oxide", amount = 2})
+RECIPE('control-unit'):change_category('research')
+RECIPE('sc-unit'):change_category('research')
+RECIPE('sc-wire'):change_category('research')
 
 
 fun.results_replacer("log7", "log", "log",9)

@@ -199,6 +199,10 @@ data:extend {
         type = "recipe-category",
         name = "science"
     },
+    {
+        type = "recipe-category",
+        name = "research"
+    },
     ------crops------
 	{
         type = "resource-category",
@@ -232,7 +236,7 @@ data:extend {
         type = "resource-category",
         name = "arum"
     },
-
+    ------ores------
     {
         type = "fuel-category",
         name = "bio-container"

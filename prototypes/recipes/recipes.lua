@@ -246,7 +246,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'py-science-pack',
-    category = 'biofactory',
+    category = 'research',
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -419,7 +419,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'gh',
-    category = 'bio-reactor',
+    category = 'research',
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -433,7 +433,7 @@ RECIPE {
         {type = 'item', name = 'pineal-gland', amount = 1}
     },
     results = {
-        {type = 'item', name = 'gh', amount = 5}
+        {type = 'item', name = 'gh', amount = 10}
     }
 }:add_unlock('growth-hormone')
 
@@ -502,7 +502,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'reca',
-    category = 'bio-reactor',
+    category = 'research',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -518,7 +518,7 @@ RECIPE {
         {type = 'item', name = 'flask', amount = 5},
     },
     results = {
-        {type = 'item', name = 'reca', amount = 5}
+        {type = 'item', name = 'reca', amount = 10}
     }
 }:add_unlock('reca')
 
@@ -748,7 +748,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'antiviral',
-    category = 'bio-reactor',
+    category = 'research',
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -761,7 +761,7 @@ RECIPE {
         {type = 'fluid', name = 'zogna-bacteria', amount = 40},
     },
     results = {
-        {type = 'item', name = 'antiviral', amount = 5}
+        {type = 'item', name = 'antiviral', amount = 10}
     }
 }:add_unlock('antiviral')
 
@@ -836,7 +836,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'nanochondria',
-    category = 'nmf',
+    category = 'research',
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -851,7 +851,7 @@ RECIPE {
         {type = 'fluid', name = 'bacteria-1', amount = 40},
     },
     results = {
-        {type = 'item', name = 'nanochondria', amount = 5}
+        {type = 'item', name = 'nanochondria', amount = 10}
     }
 }:add_unlock('nanochondria'):change_category('nano'):add_ingredient({type = "item", name = "resilin", amount = 1}):add_ingredient({type = "item", name = "collagen", amount = 5}):replace_ingredient("bacteria-1", "bacteria-2")
 
@@ -859,7 +859,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'bmp',
-    category = 'bio-reactor',
+    category = 'research',
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -875,7 +875,7 @@ RECIPE {
         {type = 'item', name = 'purine-analogues', amount = 1},
     },
     results = {
-        {type = 'item', name = 'bmp', amount = 5}
+        {type = 'item', name = 'bmp', amount = 10}
     }
 }:add_unlock('bmp'):replace_ingredient("bacteria-1", "bacteria-2"):replace_ingredient("sea-sponge", "collagen"):add_ingredient({type = "fluid", name = "dms", amount = 100})
 

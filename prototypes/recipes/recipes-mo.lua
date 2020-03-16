@@ -271,7 +271,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'anabolic-rna',
-    category = 'incubator',
+    category = 'research',
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -286,7 +286,7 @@ RECIPE {
         {type = 'item', name = 'purine-analogues', amount = 1},
     },
     results = {
-        {type = 'item', name = 'anabolic-rna', amount = 5},
+        {type = 'item', name = 'anabolic-rna', amount = 10},
     },
 }:add_unlock("anabolic-rna")
 
@@ -331,7 +331,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'immunosupressants',
-    category = 'biofactory',
+    category = 'research',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -349,7 +349,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'antitumor',
-    category = 'nmf',
+    category = 'research',
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -365,7 +365,7 @@ RECIPE {
         {type = 'item', name = 'chitin', amount = 20},
     },
     results = {
-        {type = 'item', name = 'antitumor', amount = 5},
+        {type = 'item', name = 'antitumor', amount = 10},
     },
 }:add_unlock("antitumor"):change_category('nano'):replace_ingredient("cytostatics", "superconductor-servomechanims")
 
@@ -455,7 +455,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'orexigenic',
-    category = 'biofactory',
+    category = 'research',
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -472,7 +472,7 @@ RECIPE {
         {type = 'item', name = 'vonix-eggs', amount = 1},
     },
     results = {
-        {type = 'item', name = 'orexigenic', amount = 5},
+        {type = 'item', name = 'orexigenic', amount = 10},
     },
 }:add_unlock("orexigenic")
 

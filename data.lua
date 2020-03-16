@@ -278,6 +278,10 @@ require('prototypes/buildings/prandium-lab-mk01')
 require('prototypes/buildings/prandium-lab-mk02')
 require('prototypes/buildings/prandium-lab-mk03')
 require('prototypes/buildings/prandium-lab-mk04')
+require('prototypes/buildings/research-center-mk01')
+require('prototypes/buildings/research-center-mk02')
+require('prototypes/buildings/research-center-mk03')
+require('prototypes/buildings/research-center-mk04')
 
 --Creature
 require('prototypes/creatures/caravan')

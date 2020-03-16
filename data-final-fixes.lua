@@ -6,6 +6,12 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 RECIPE('exoskeleton-equipment'):add_ingredient({type = "item", name = "metallic-glass", amount = 30})
 RECIPE('plastic-bar'):remove_unlock('plastics')
+RECIPE('automation-science-pack'):change_category('research')
+RECIPE('logistic-science-pack'):change_category('research')
+RECIPE('chemical-science-pack'):change_category('research')
+RECIPE('military-science-pack'):change_category('research')
+RECIPE('production-science-pack'):change_category('research')
+RECIPE('utility-science-pack'):change_category('research')
 
 for _,module in pairs(data.raw.module) do
   if module.subgroup == "py-alienlife-modules" then

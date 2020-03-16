@@ -5,7 +5,7 @@ RECIPE {
     type = 'recipe',
     name = 'cottongut-science-py-seeds',
     enabled = false,
-    category = 'incubator',
+    category = 'research',
     energy_required = 15,
     ingredients =
         {
@@ -26,7 +26,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-py',
-    category = 'cottongut',
+    category = 'research',
     enabled = false,
     energy_required = 135,
     ingredients = {
@@ -48,7 +48,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-py-02',
-    category = 'cottongut',
+    category = 'research',
     enabled = false,
     energy_required = 135,
     ingredients = {
@@ -68,7 +68,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-py-03',
-    category = 'cottongut',
+    category = 'research',
     enabled = false,
     energy_required = 135,
     ingredients = {
@@ -88,7 +88,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-py-04',
-    category = 'cottongut',
+    category = 'research',
     enabled = false,
     energy_required = 135,
     ingredients = {
@@ -111,7 +111,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-py-05',
-    category = 'cottongut',
+    category = 'research',
     enabled = false,
     energy_required = 135,
     ingredients = {

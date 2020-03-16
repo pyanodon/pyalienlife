@@ -4,8 +4,9 @@
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-red-seeds',
+    category = 'research',
     enabled = false,
-    energy_required = 4,
+    energy_required = 10,
     ingredients =
         {
         },
@@ -25,7 +26,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-red',
-    category = 'cottongut',
+    category = 'research',
     enabled = false,
     energy_required = 135,
     ingredients = {
@@ -47,7 +48,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-red-02',
-    category = 'cottongut',
+    category = 'research',
     enabled = false,
     energy_required = 135,
     ingredients = {
@@ -67,7 +68,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-red-03',
-    category = 'cottongut',
+    category = 'research',
     enabled = false,
     energy_required = 135,
     ingredients = {
@@ -87,7 +88,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-red-04',
-    category = 'cottongut',
+    category = 'research',
     enabled = false,
     energy_required = 135,
     ingredients = {
@@ -110,7 +111,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-red-05',
-    category = 'cottongut',
+    category = 'research',
     enabled = false,
     energy_required = 135,
     ingredients = {

@@ -5,7 +5,8 @@ RECIPE {
     type = 'recipe',
     name = 'cottongut-science-blue-seeds',
     enabled = false,
-    energy_required = 4.5,
+    category = 'research',
+    energy_required = 10,
     ingredients =
         {
         },
@@ -17,7 +18,7 @@ RECIPE {
     --icon_size = 64,
     subgroup = "py-items",
     order = "a1"
-}:add_unlock("cottongut-mk03")
+}:add_unlock("cottongut-mk03"):change_category('nano')
 
 ---cottongut-boosts---
 
@@ -25,7 +26,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-blue',
-    category = 'cottongut',
+    category = 'research',
     enabled = false,
     energy_required = 135,
     ingredients = {
@@ -47,7 +48,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-blue-02',
-    category = 'cottongut',
+    category = 'research',
     enabled = false,
     energy_required = 135,
     ingredients = {
@@ -67,7 +68,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-blue-03',
-    category = 'cottongut',
+    category = 'research',
     enabled = false,
     energy_required = 135,
     ingredients = {
@@ -87,7 +88,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-blue-04',
-    category = 'cottongut',
+    category = 'research',
     enabled = false,
     energy_required = 135,
     ingredients = {

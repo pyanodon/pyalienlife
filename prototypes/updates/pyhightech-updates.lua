@@ -143,6 +143,7 @@ RECIPE('yotoi-aloe-orchard-mk03'):add_ingredient({type = "item", name = "graphen
 RECIPE('zipir-reef-mk03'):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10}):add_ingredient({type = "item", name = "diamagnetic-material", amount = 20})
 RECIPE('bio-printer-mk03'):add_ingredient({type = "item", name = "graphene-roll", amount = 30}):add_ingredient({type = "item", name = "biopolymer", amount = 15})
 RECIPE('ez-ranch-mk03'):add_ingredient({type = "item", name = "paramagnetic-material", amount = 25}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 20})
+RECIPE('research-center-mk03'):add_ingredient({type = "item", name = "phosphate-glass", amount = 40}):add_ingredient({type = "item", name = "biopolymer", amount = 20})
 
 
 
@@ -189,6 +190,8 @@ RECIPE('zipir-reef-mk04'):add_ingredient({type = "item", name = "hyperelastic-ma
 RECIPE('bio-printer-mk04'):add_ingredient({type = "item", name = "harmonic-absorber", amount = 20}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 50}):add_ingredient({type = "item", name = "intelligent-unit", amount = 15})
 RECIPE('ez-ranch-mk04'):add_ingredient({type = "item", name = "intelligent-unit", amount = 30}):add_ingredient({type = "item", name = "quantum-vortex-storage-system", amount = 10}):add_ingredient({type = "item", name = "phosphate-glass", amount = 100})
 RECIPE('mega-farm'):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 10}):add_ingredient({type = "item", name = "harmonic-absorber", amount = 30}):add_ingredient({type = "item", name = "intelligent-unit", amount = 50})
+RECIPE('research-center-mk04'):add_ingredient({type = "item", name = "quantum-vortex-storage-system", amount = 10}):add_ingredient({type = "item", name = "aerogel", amount = 100}):add_ingredient({type = "item", name = "intelligent-unit", amount = 50})
+
 
 
 
@@ -238,7 +241,14 @@ RECIPE('quantum-vortex-storage-system'):add_ingredient({type = "item", name = "s
 RECIPE('nv-center'):add_ingredient({type = "item", name = "strangelets", amount = 2})
 RECIPE('space-science-pack'):add_ingredient({type = "item", name = "strangelets", amount = 5})
 RECIPE('yag-laser-module'):add_ingredient({type = "item", name = "nanofibrils", amount = 3}):add_ingredient({type = "item", name = "cobalt-fluoride", amount = 3})
-RECIPE('parametric-oscilator'):add_ingredient({type = "item", name = "nanofibrils", amount = 3})
+RECIPE('parametric-oscilator'):add_ingredient({type = "item", name = "nanofibrils", amount = 3}):change_category('research')
+RECIPE('superconductor-servomechanims'):change_category('research')
+RECIPE('superconductor'):add_ingredient({type = "item", name = "bio-battery", amount = 2}):change_category('research')
+RECIPE('sc-unit'):add_ingredient({type = "item", name = "re-magnet", amount = 2})
+RECIPE('harmonic-absorber'):change_category('research')
+RECIPE('diamagnetic-material'):change_category('research')
+RECIPE('paramagnetic-material'):change_category('research')
+RECIPE('myoglobin'):change_category('genlab')
 
 RECIPE('zipir-carcass'):remove_unlock('basic-electronics')
 RECIPE('capacitor-core'):add_ingredient({type = "item", name = "nano-cellulose", amount = 2})
