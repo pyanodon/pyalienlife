@@ -325,6 +325,35 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'reca'
 		},
+		--orexigenic
+		{
+			ingredients =
+				{
+					{name='gh',amount ='R'},
+					{name='reca',amount ='R'},
+					{name='orexigenic',amount =1},
+				},
+			results =
+				{
+					{name='skincottongut', amount ='R'},
+					{name='fatcottongut', 1},
+				},
+			crafting_speed = 80,
+			tech = 'orexigenic'
+		},
+		--orexigenic and gh
+		{
+			ingredients =
+				{
+					{name='gh',amount =1},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'orexigenic'
+		},
 	}
 }
 
