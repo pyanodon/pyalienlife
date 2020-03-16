@@ -2,19 +2,19 @@ RECIPE {
     type = "recipe",
     name = "research-center-mk01",
     energy_required = 0.5,
-    enabled = false,
+    enabled = true,
     ingredients = {
         {"iron-plate", 100},
         {"distilator", 1},
-        {"steel-plate", 30},
+        {"micro-mine-mk01", 1},
         {"electronic-circuit", 50},
         {"glass", 40},
-        {"tinned-cable", 100},
+        {"copper-cable", 100},
     },
     results = {
         {"research-center-mk01", 1}
     }
-}:add_unlock("coal-processing-1")
+}
 
 ITEM {
     type = "item",
