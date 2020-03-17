@@ -40,7 +40,7 @@ RECIPE {
     --icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
     --icon_size = 64,
     subgroup = 'py-alienlife-cottongut',
-    order = 'za'
+    order = 'a1'
 }:add_unlock("cottongut-mk01")
 
 
@@ -62,7 +62,7 @@ RECIPE {
     --icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
     --icon_size = 64,
     subgroup = 'py-alienlife-cottongut',
-    order = 'zb'
+    order = 'a2'
 }:add_unlock("cottongut-mk02")
 
 RECIPE {
@@ -82,7 +82,7 @@ RECIPE {
     --icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png',
     --icon_size = 64,
     subgroup = 'py-alienlife-cottongut',
-    order = 'zc'
+    order = 'a3'
 }:add_unlock("cottongut-mk03")
 
 RECIPE {
@@ -102,7 +102,7 @@ RECIPE {
     --icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
     --icon_size = 64,
     subgroup = 'py-alienlife-cottongut',
-    order = 'zd'
+    order = 'a4'
 }:add_unlock("cottongut-mk04")
 
 
@@ -125,5 +125,5 @@ RECIPE {
     --icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
     --icon_size = 64,
     subgroup = 'py-alienlife-cottongut',
-    order = 'zd'
+    order = 'a5'
 }:add_unlock("biased-mutation")
