@@ -426,7 +426,7 @@ local recipes_list =
   "cobalt-oxide",
   "cobalt-nx",
   "dried-grods",
-  "bedding",
+  --"bedding",
   "zymogens",
   "mmp",
   "peptidase-m58",

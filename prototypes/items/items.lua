@@ -4577,6 +4577,9 @@ local alien_life_limitations_ulric =
 
     local alien_life_limitations_fish =
 	{
+        'fish-mk02',
+        'fish-mk03',
+        'fish-mk04'
     }
 
     local alien_life_limitations_phagnot =
@@ -5822,7 +5825,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "fa",
     stack_size = 25,
-	effect = { speed = {bonus = 7.5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 3.75}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_fish,
 	limitation_message_key = "Its full"
 }
@@ -5856,7 +5859,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "fb",
     stack_size = 25,
-	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_fish,
 	limitation_message_key = "Its full"
 }
@@ -5890,7 +5893,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "fc",
     stack_size = 25,
-	effect = { speed = {bonus = 12.5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 6.25}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_fish,
 	limitation_message_key = "Its full"
 }
@@ -5924,7 +5927,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "fd",
     stack_size = 25,
-	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 7.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_fish,
 	limitation_message_key = "Its full"
 }
