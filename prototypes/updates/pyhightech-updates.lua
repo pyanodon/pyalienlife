@@ -509,7 +509,7 @@ RECIPE {
         {type = 'fluid', name = 'blood', amount = 100},
     },
     results = {
-        {type = 'item', name = 'urea', amount = 8},
+        {type = 'item', name = 'urea', amount = 10},
     },
     --main_product = "cocoon",
 }:add_unlock("molecular-decohesion")
