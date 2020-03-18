@@ -13,7 +13,7 @@ RECIPE{
 		{type = 'item', name = 'auog', amount = 1},
         {type = 'item', name = 'cdna', amount = 5},
         {type = 'item', name = 'earth-bear-sample', amount = 1},
-        {type = 'fluid', name = 'fetal-serum', amount = 100},
+        {type = 'fluid', name = 'water-saline', amount = 100},
     },
     result = "caravan"
   }:add_unlock("auog")
