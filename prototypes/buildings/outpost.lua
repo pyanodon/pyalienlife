@@ -13,7 +13,7 @@
         results = {
             {'outpost', 1}
         }
-    }:add_unlock("domestication"):add_ingredient({type = "item", name = "small-parts-01", amount = 100})
+    }:add_unlock("auog"):add_ingredient({type = "item", name = "small-parts-01", amount = 100})
 
     ITEM {
         type = "item",

@@ -57,7 +57,7 @@ RECIPE {
         {type = 'fluid', name = 'hot-air', amount = 100},
     },
     results = {
-        {type = 'item', name = 'dried-grods', amount = 5},
+        {type = 'item', name = 'dried-grods', amount = 6},
     },
 }:add_unlock('grod')
 

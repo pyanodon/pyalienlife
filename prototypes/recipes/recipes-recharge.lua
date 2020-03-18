@@ -33,7 +33,39 @@ RECIPE {
 
 ---------------------MK LEVELS--------------
 
+RECIPE {
+    type = 'recipe',
+    name = 'auog-recharge-0',
+    category = 'bay',
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'used-auog', amount = 1},
+        {type = 'item', name = 'raw-fiber', amount = 5},
+        {type = 'item', name = 'auog-food-01', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'auog', amount = 1},
+    },
+}:add_unlock("domestication")
 
+RECIPE {
+    type = 'recipe',
+    name = 'auog-recharge-00',
+    category = 'bay',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'used-auog', amount = 1},
+        {type = 'item', name = 'raw-fiber', amount = 5},
+        {type = 'item', name = 'meat', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'auog', amount = 1},
+    },
+}:add_unlock("domestication")
+
+--mk01
 
 RECIPE {
     type = 'recipe',
@@ -49,7 +81,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'auog', amount = 2},
     },
-}:add_unlock("domestication")
+}:add_unlock("domestication-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -65,7 +97,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'auog', amount = 4},
     },
-}:add_unlock("domestication")
+}:add_unlock("domestication-mk02")
 
 --mk02
 
@@ -192,7 +224,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'dingrits', amount = 5},
     },
-}:add_unlock("domestication-mk02")
+}:add_unlock("domestication-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -208,7 +240,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'dingrits', amount = 5},
     },
-}:add_unlock("domestication-mk02")
+}:add_unlock("domestication-mk03")
 
 --mk02
 
@@ -227,7 +259,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'dingrits-mk02', amount = 5},
     },
-}:add_unlock("domestication-mk02")
+}:add_unlock("domestication-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -244,7 +276,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'dingrits-mk02', amount = 5},
     },
-}:add_unlock("domestication-mk02")
+}:add_unlock("domestication-mk03")
 
 --mk03
 

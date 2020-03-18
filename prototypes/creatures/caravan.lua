@@ -16,7 +16,7 @@ RECIPE{
         {type = 'fluid', name = 'fetal-serum', amount = 100},
     },
     result = "caravan"
-  }:add_unlock("domestication")
+  }:add_unlock("auog")
 
 ITEM{
     type = "item-with-entity-data",

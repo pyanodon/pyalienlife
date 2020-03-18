@@ -1,4 +1,20 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.4.0
+Date: 2020-03-18
+  Changes:
+    - Re balanced generators.
+    - Added new tech level for domestication.
+    - Small changes in neuromorphic chips.
+    - Fixed fish modules and buildings.
+    - Fixed Cottongut lard.
+    - Moved Caravans to Domestication 1.
+    - Domestication 1 now is a red tech.
+    - Dingrido now is a blue tech.
+    - Improved dried grod recipe is uses hot-air.
+    - Added early recipes for pyphoon bay.
+    - Changed generator recipes.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.3.9
 Date: 2020-03-17
   Changes:

@@ -6,7 +6,10 @@ RECIPE {
     ingredients = {
         {"steel-plate", 15},
         {"pipe", 10},
-        {"iron-plate", 25},
+        {"auog", 1},
+        {"iron-plate", 50},
+        {"aluminium-plate", 50},
+        {"lead-plate", 30},
         {"iron-stick", 30},
         {"iron-gear-wheel", 40}
     },
