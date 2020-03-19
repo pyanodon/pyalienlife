@@ -60,7 +60,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*10'},
-					{name='rennea',amount ='+1'}
+					{name='rennea',amount ='+3'}
 				},
 				crafting_speed = 100,
 				tech = 'rennea-mk02'
@@ -72,7 +72,7 @@ fun.autorecipes {
                     --{'a'},
                     --{'b','+15'},
                     --{'c','*10'},
-                    {name='yaedols',amount =5},
+                    {name='yaedols',amount =2},
 				},
 			results =
 				{
@@ -220,7 +220,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='rennea',amount ="+1"}
+					{name='rennea',amount ="+3"}
 				},
 			crafting_speed = 70,
 			tech = 'rennea-mk04'

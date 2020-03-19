@@ -63,7 +63,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*10'},
-					{name='ralesias',amount ='+3'}
+					{name='ralesias',amount ='+6'}
 				},
 				crafting_speed = 100,
 				tech = 'botany-mk02'
@@ -223,7 +223,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='ralesias',amount =29}
+					{name='ralesias',amount ='+3'}
 				},
 			crafting_speed = 70,
 			tech = 'botany-mk04'
@@ -238,7 +238,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='ralesias',amount =35}
+					{name='ralesias',amount =40}
 				},
 			crafting_speed = 70,
 			tech = 'botany-mk04'

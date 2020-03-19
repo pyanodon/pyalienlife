@@ -63,7 +63,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*10'},
-					{name='tuuphra',amount ='+1'}
+					{name='tuuphra',amount ='+3'}
 				},
 				crafting_speed = 100,
 				tech = 'tuuphra-mk02'
@@ -223,7 +223,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='tuuphra',amount ="+1"}
+					{name='tuuphra',amount ="+3"}
 				},
 			crafting_speed = 70,
 			tech = 'growth-hormone'

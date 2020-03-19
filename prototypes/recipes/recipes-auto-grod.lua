@@ -166,7 +166,7 @@ fun.autorecipes {
 				{
 					--{'a','*25'},
 					--{'a','+3'}
-					{name='grod',amount ='+2'}
+					{name='grod',amount ='+3'}
 				},
 				crafting_speed = 100,
 				tech = 'grod-mk04'
@@ -236,7 +236,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='grod',amount =29}
+					{name='grod',amount =32}
 				},
 			crafting_speed = 70,
 			tech = 'grod-mk04'
@@ -251,7 +251,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='grod',amount =35}
+					{name='grod',amount =40}
 				},
 			crafting_speed = 70,
 			tech = 'grod-mk04'

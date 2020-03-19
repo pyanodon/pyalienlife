@@ -75,7 +75,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*10'},
-					{name='cadavericarum',amount ='+1'}
+					{name='cadavericarum',amount ='+3'}
 				},
 				crafting_speed = 100,
 				tech = 'cadaveric-arum-mk02'
@@ -195,7 +195,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cadavericarum',amount ="+1"}
+					{name='cadavericarum',amount ="+3"}
 				},
 			crafting_speed = 70,
 			tech = 'cadaveric-arum-mk04'

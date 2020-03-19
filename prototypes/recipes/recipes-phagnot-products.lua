@@ -35,7 +35,7 @@ fun.autorecipes {
                     {name='manure',amount ='+1'},
 				},
 			crafting_speed = 120,
-			tech = 'phagnot',
+			tech = 'phagnot-mk02',
 			name = 'phag-manure-2',
 			--icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk01.png"
 		},
@@ -48,10 +48,10 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure',amount ='+6'},
 				},
 				crafting_speed = 120,
-				tech = 'phagnot',
+				tech = 'phagnot-mk02',
 				name = 'phag-manure-3',
 		},
 		{
@@ -62,10 +62,10 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure',amount ='+2'},
 				},
 				crafting_speed = 120,
-				tech = 'phagnot',
+				tech = 'phagnot-mk03',
 				name = 'phag-manure-4',
 		},
 		{
@@ -80,10 +80,10 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount =5},
+                    --{name='manure',amount =5},
 				},
 				crafting_speed = 100,
-				tech = 'phagnot',
+				tech = 'phagnot-mk03',
 				name = 'phag-manure-5',
 		},
 		{
@@ -95,10 +95,10 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure',amount ='+6'},
 				},
 				crafting_speed = 100,
-				tech = 'phagnot',
+				tech = 'phagnot-mk04',
 				name = 'phag-manure-6',
 		},
 		{
@@ -109,10 +109,10 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure',amount ='+2'},
 				},
 				crafting_speed = 100,
-				tech = 'phagnot',
+				tech = 'phagnot-mk04',
 				name = 'phag-manure-7',
 		},
 	}

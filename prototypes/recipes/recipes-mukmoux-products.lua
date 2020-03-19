@@ -18,7 +18,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='manure',amount =6},
+					{name='manure',amount ='*6'},
 				},
 			crafting_speed = 100,
 			tech = 'mukmoux',
@@ -85,7 +85,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='manure',amount =10}
+					{name='manure',amount ='+1'}
 				},
 				crafting_speed = 60,
 				tech = 'mukmoux',
