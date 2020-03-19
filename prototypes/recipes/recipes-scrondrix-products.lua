@@ -18,7 +18,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='manure',amount ='*3'},
+                    {name='manure',amount ='*5'},
 				},
 			crafting_speed = 130,
 			tech = 'scrondrix',
@@ -34,7 +34,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure',amount ='+2'},
 				},
 			crafting_speed = 120,
 			tech = 'scrondrix',
@@ -50,10 +50,10 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure',amount ='+6'},
 				},
 				crafting_speed = 120,
-				tech = 'scrondrix',
+				tech = 'scrondrix-mk02',
 				name = 'scrondrix-manure-3',
 		},
 		{
@@ -64,10 +64,10 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure',amount ='+2'},
 				},
 				crafting_speed = 120,
-				tech = 'scrondrix',
+				tech = 'scrondrix-mk02',
 				name = 'scrondrix-manure-4',
 		},
 		{
@@ -78,10 +78,10 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure',amount ='+6'},
 				},
 				crafting_speed = 100,
-				tech = 'scrondrix',
+				tech = 'scrondrix-mk03',
 				name = 'scrondrix-manure-5',
 		},
 		{
@@ -92,10 +92,10 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure',amount ='+2'},
 				},
 				crafting_speed = 100,
-				tech = 'scrondrix',
+				tech = 'scrondrix-mk04',
 				name = 'scrondrix-manure-6',
 		},
 	}

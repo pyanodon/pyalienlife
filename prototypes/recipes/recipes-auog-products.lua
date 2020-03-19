@@ -50,10 +50,10 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='manure',amount ='+1'}
+					{name='manure',amount ='+6'}
 				},
 				crafting_speed = 120,
-				tech = 'auog',
+				tech = 'auog-mk02',
 				name = 'auog-manure-3',
 		},
 		{
@@ -67,7 +67,7 @@ fun.autorecipes {
 					{name='manure',amount ='+2'}
 				},
 				crafting_speed = 120,
-				tech = 'auog',
+				tech = 'auog-mk03',
 				name = 'auog-manure-4',
 		},
 		{
@@ -82,10 +82,10 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='manure',amount ='+1'}
+					{name='manure',amount ='+6'}
 				},
 				crafting_speed = 100,
-				tech = 'auog',
+				tech = 'auog-mk03',
 				name = 'auog-manure-5',
 		},
 		{
@@ -97,10 +97,10 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='manure',amount ='+2'}
+					{name='manure',amount ='+6'}
 				},
 				crafting_speed = 100,
-				tech = 'auog',
+				tech = 'auog-mk04',
 				name = 'auog-manure-6',
 		},
 		{
@@ -114,7 +114,7 @@ fun.autorecipes {
 					{name='manure',amount ='+2'}
 				},
 				crafting_speed = 100,
-				tech = 'auog',
+				tech = 'auog-mk04',
 				name = 'auog-manure-7',
 		},
 	}

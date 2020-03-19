@@ -48,10 +48,10 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='manure',amount ='+1'}
+					{name='manure',amount ='+6'}
 				},
 				crafting_speed = 120,
-				tech = 'ulric',
+				tech = 'ulric-mk02',
 				name = 'manure-3',
 		},
 		{
@@ -65,7 +65,7 @@ fun.autorecipes {
 					{name='manure',amount ='+2'}
 				},
 				crafting_speed = 120,
-				tech = 'ulric',
+				tech = 'ulric-mk02',
 				name = 'manure-4',
 		},
 		{
@@ -80,10 +80,10 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='manure',amount =8}
+					{name='manure',amount ='+1'}
 				},
 				crafting_speed = 100,
-				tech = 'ulric',
+				tech = 'ulric-mk03',
 				name = 'manure-5',
 		},
 		{
@@ -95,10 +95,10 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='manure',amount ='+2'}
+					{name='manure',amount ='+6'}
 				},
 				crafting_speed = 100,
-				tech = 'ulric',
+				tech = 'ulric-mk04',
 				name = 'manure-6',
 		},
 		{
@@ -112,7 +112,7 @@ fun.autorecipes {
 					{name='manure',amount ='+2'}
 				},
 				crafting_speed = 100,
-				tech = 'ulric',
+				tech = 'ulric--mk04',
 				name = 'manure-7',
 		},
 	}

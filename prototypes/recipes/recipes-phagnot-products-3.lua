@@ -49,7 +49,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure',amount ='+6'},
 				},
 				crafting_speed = 120,
                 tech = 'explosive-diarrhea',
@@ -63,7 +63,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure',amount ='+2'},
 				},
 				crafting_speed = 120,
                 tech = 'explosive-diarrhea',
@@ -81,7 +81,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount =5},
+                    --{name='manure',amount =5},
 				},
 				crafting_speed = 100,
                 tech = 'explosive-diarrhea',
@@ -96,7 +96,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure',amount ='+6'},
 				},
 				crafting_speed = 100,
                 tech = 'explosive-diarrhea',
@@ -110,7 +110,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure',amount ='+2'},
 				},
 				crafting_speed = 100,
                 tech = 'explosive-diarrhea',

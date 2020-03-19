@@ -76,7 +76,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*10'},
-					{name='kicalk',amount ='+1'}
+					{name='kicalk',amount ='+4'}
 				},
 				crafting_speed = 100,
 				tech = 'kicalk-mk02'
@@ -216,7 +216,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='kicalk',amount ="+1"}
+					{name='kicalk',amount ="+4"}
 				},
 			crafting_speed = 70,
 			tech = 'kicalk-mk04'

@@ -1050,10 +1050,10 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'kicalk', amount = 2},
+        {type = 'item', name = 'kicalk', amount = 1},
     },
     results = {
-        {type = 'fluid', name = 'chelator', amount = 25},
+        {type = 'fluid', name = 'chelator', amount = 50},
     },
 }:add_unlock("phytomining-mk02")
 
