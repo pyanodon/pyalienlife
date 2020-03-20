@@ -18,7 +18,7 @@ fun.autorecipes {
 				{
 					{name='manure',amount ='*4'},
 				},
-			crafting_speed = 130,
+			crafting_speed = 90,
 			tech = 'bigger-colon',
 			name = 'manure-1a',
 			--name = 'cheeses',
@@ -35,7 +35,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+2'}
 				},
-			crafting_speed = 120,
+			crafting_speed = 80,
 			tech = 'bigger-colon',
 			name = 'manure-2a',
 			--name = 'jesus',
@@ -52,7 +52,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+6'}
 				},
-				crafting_speed = 120,
+				crafting_speed = 70,
 				tech = 'bigger-colon',
 				name = 'manure-3a',
 		},
@@ -66,7 +66,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+2'}
 				},
-				crafting_speed = 120,
+				crafting_speed = 60,
 				tech = 'bigger-colon',
 				name = 'manure-4a',
 		},
@@ -84,7 +84,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+1'}
 				},
-				crafting_speed = 100,
+				crafting_speed = 50,
 				tech = 'bigger-colon',
 				name = 'manure-5a',
 		},
@@ -99,7 +99,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+6'}
 				},
-				crafting_speed = 100,
+				crafting_speed = 40,
 				tech = 'bigger-colon',
 				name = 'manure-6a',
 		},
@@ -113,7 +113,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+2'}
 				},
-				crafting_speed = 100,
+				crafting_speed = 30,
 				tech = 'bigger-colon',
 				name = 'manure-7a',
 		},

@@ -20,7 +20,7 @@ fun.autorecipes {
 				{
 					{name='manure',amount ='*6'},
 				},
-			crafting_speed = 100,
+			crafting_speed = 90,
 			tech = 'mukmoux',
 			name = 'muk-manure-1',
 			--icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk01.png"
@@ -54,7 +54,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+1'}
 				},
-				crafting_speed = 80,
+				crafting_speed = 70,
 				tech = 'mukmoux',
 				name = 'muk-manure-3',
 		},
@@ -69,7 +69,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+2'}
 				},
-				crafting_speed = 80,
+				crafting_speed = 60,
 				tech = 'mukmoux',
 				name = 'muk-manure-4',
 		},
@@ -87,7 +87,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+1'}
 				},
-				crafting_speed = 60,
+				crafting_speed = 50,
 				tech = 'mukmoux',
 				name = 'muk-manure-5',
 		},
@@ -102,7 +102,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+2'}
 				},
-				crafting_speed = 60,
+				crafting_speed = 40,
 				tech = 'mukmoux',
 				name = 'muk-manure-6',
 		},
@@ -117,7 +117,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+2'}
 				},
-				crafting_speed = 60,
+				crafting_speed = 30,
 				tech = 'mukmoux',
 				name = 'muk-manure-7',
 		},
