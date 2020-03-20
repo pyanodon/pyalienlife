@@ -18,7 +18,7 @@ fun.autorecipes {
 				{
 					{name='manure',amount ='*3'},
 				},
-			crafting_speed = 130,
+			crafting_speed = 90,
 			tech = 'ulric',
 			name = 'manure-1',
 			--icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk01.png"
@@ -34,7 +34,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+2'}
 				},
-			crafting_speed = 120,
+			crafting_speed = 80,
 			tech = 'ulric',
 			name = 'manure-2',
 			--icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk01.png"
@@ -50,7 +50,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+6'}
 				},
-				crafting_speed = 120,
+				crafting_speed = 70,
 				tech = 'ulric-mk02',
 				name = 'manure-3',
 		},
@@ -64,7 +64,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+2'}
 				},
-				crafting_speed = 120,
+				crafting_speed = 60,
 				tech = 'ulric-mk02',
 				name = 'manure-4',
 		},
@@ -82,7 +82,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+1'}
 				},
-				crafting_speed = 100,
+				crafting_speed = 50,
 				tech = 'ulric-mk03',
 				name = 'manure-5',
 		},
@@ -97,7 +97,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+6'}
 				},
-				crafting_speed = 100,
+				crafting_speed = 40,
 				tech = 'ulric-mk04',
 				name = 'manure-6',
 		},
@@ -111,7 +111,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+2'}
 				},
-				crafting_speed = 100,
+				crafting_speed = 30,
 				tech = 'ulric--mk04',
 				name = 'manure-7',
 		},

@@ -19,7 +19,7 @@ fun.autorecipes {
 				{
 					{name='manure',amount ='*5'},
 				},
-			crafting_speed = 130,
+			crafting_speed = 90,
 			tech = 'explosive-diarrhea',
 			name = 'auog-manure-1b',
 			--icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk01.png"
@@ -36,7 +36,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+2'}
 				},
-			crafting_speed = 120,
+			crafting_speed = 80,
 			tech = 'explosive-diarrhea',
 			name = 'auog-manure-2b',
 			--icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk01.png"
@@ -52,7 +52,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+6'}
 				},
-				crafting_speed = 120,
+				crafting_speed = 70,
 				tech = 'explosive-diarrhea',
 				name = 'auog-manure-3b',
 		},
@@ -66,7 +66,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+2'}
 				},
-				crafting_speed = 120,
+				crafting_speed = 60,
 				tech = 'explosive-diarrhea',
 				name = 'auog-manure-4b',
 		},
@@ -84,7 +84,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+1'}
 				},
-				crafting_speed = 100,
+				crafting_speed = 50,
 				tech = 'explosive-diarrhea',
 				name = 'auog-manure-5b',
 		},
@@ -99,7 +99,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+6'}
 				},
-				crafting_speed = 100,
+				crafting_speed = 40,
 				tech = 'explosive-diarrhea',
 				name = 'auog-manure-6b',
 		},
@@ -113,7 +113,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+2'}
 				},
-				crafting_speed = 100,
+				crafting_speed = 30,
 				tech = 'explosive-diarrhea',
 				name = 'auog-manure-7b',
 		},
