@@ -19,7 +19,7 @@ fun.autorecipes {
 				{
 					{name='manure',amount ='*2'},
 				},
-			crafting_speed = 90,
+			crafting_speed = 80,
 			tech = 'auog',
 			name = 'auog-manure-1',
 			--icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk01.png"
@@ -36,7 +36,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+2'}
 				},
-			crafting_speed = 80,
+			crafting_speed = 70,
 			tech = 'auog',
 			name = 'auog-manure-2',
 			--icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk01.png"
@@ -52,21 +52,21 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+6'}
 				},
-				crafting_speed = 70,
+				crafting_speed = 50,
 				tech = 'auog-mk02',
 				name = 'auog-manure-3',
 		},
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount =5},
+					{name='rawfiber',amount =3},
 				},
 			results =
 				{
 					--{'a','*5'}
 					{name='manure',amount ='+2'}
 				},
-				crafting_speed = 60,
+				crafting_speed = 45,
 				tech = 'auog-mk03',
 				name = 'auog-manure-4',
 		},
@@ -84,7 +84,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+6'}
 				},
-				crafting_speed = 50,
+				crafting_speed = 40,
 				tech = 'auog-mk03',
 				name = 'auog-manure-5',
 		},
@@ -99,21 +99,21 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+6'}
 				},
-				crafting_speed = 40,
+				crafting_speed = 25,
 				tech = 'auog-mk04',
 				name = 'auog-manure-6',
 		},
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount =5},
+					{name='rawfiber',amount =3},
 				},
 			results =
 				{
 					--{'a','*5'}
 					{name='manure',amount ='+2'}
 				},
-				crafting_speed = 30,
+				crafting_speed = 20,
 				tech = 'auog-mk04',
 				name = 'auog-manure-7',
 		},

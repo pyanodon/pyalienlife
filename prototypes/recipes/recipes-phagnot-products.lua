@@ -18,7 +18,7 @@ fun.autorecipes {
 				{
                     {name='manure',amount ='*2'},
 				},
-			crafting_speed = 90,
+			crafting_speed = 80,
 			tech = 'phagnot',
 			name = 'phag-manure-1',
 			--icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk01.png"
@@ -34,7 +34,7 @@ fun.autorecipes {
 					--{'a','*5'}
                     {name='manure',amount ='+1'},
 				},
-			crafting_speed = 80,
+			crafting_speed = 70,
 			tech = 'phagnot-mk02',
 			name = 'phag-manure-2',
 			--icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk01.png"
@@ -50,7 +50,7 @@ fun.autorecipes {
 					--{'a','*5'}
                     {name='manure',amount ='+6'},
 				},
-				crafting_speed = 70,
+				crafting_speed = 55,
 				tech = 'phagnot-mk02',
 				name = 'phag-manure-3',
 		},
@@ -64,7 +64,7 @@ fun.autorecipes {
 					--{'a','*5'}
                     {name='manure',amount ='+2'},
 				},
-				crafting_speed = 60,
+				crafting_speed = 40,
 				tech = 'phagnot-mk03',
 				name = 'phag-manure-4',
 		},
@@ -82,7 +82,7 @@ fun.autorecipes {
 					--{'a','*5'}
                     --{name='manure',amount =5},
 				},
-				crafting_speed = 50,
+				crafting_speed = 35,
 				tech = 'phagnot-mk03',
 				name = 'phag-manure-5',
 		},
@@ -97,21 +97,21 @@ fun.autorecipes {
 					--{'a','*5'}
                     {name='manure',amount ='+6'},
 				},
-				crafting_speed = 40,
+				crafting_speed = 20,
 				tech = 'phagnot-mk04',
 				name = 'phag-manure-6',
 		},
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount =10},
+					{name='rawfiber',amount =5},
 				},
 			results =
 				{
 					--{'a','*5'}
                     {name='manure',amount ='+2'},
 				},
-				crafting_speed = 30,
+				crafting_speed = 15,
 				tech = 'phagnot-mk04',
 				name = 'phag-manure-7',
 		},

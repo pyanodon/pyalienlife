@@ -20,7 +20,7 @@ fun.autorecipes {
 				{
                     {name='manure',amount ='*6'},
 				},
-			crafting_speed = 90,
+			crafting_speed = 80,
 			tech = 'bigger-colon',
 			name = 'scrondrix-manure-1a',
 			--icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk01.png"
@@ -36,7 +36,7 @@ fun.autorecipes {
 					--{'a','*5'}
                     {name='manure',amount ='+2'},
 				},
-			crafting_speed = 80,
+			crafting_speed = 70,
 			tech = 'bigger-colon',
 			name = 'scrondrix-manure-2a',
 			--icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk01.png"
@@ -52,7 +52,7 @@ fun.autorecipes {
 					--{'a','*5'}
                     {name='manure',amount ='+6'},
 				},
-				crafting_speed = 70,
+				crafting_speed = 55,
 				tech = 'bigger-colon',
 				name = 'scrondrix-manure-3a',
 		},
@@ -66,7 +66,7 @@ fun.autorecipes {
 					--{'a','*5'}
                     {name='manure',amount ='+2'},
 				},
-				crafting_speed = 60,
+				crafting_speed = 50,
 				tech = 'bigger-colon',
 				name = 'scrondrix-manure-4a',
 		},
@@ -80,7 +80,7 @@ fun.autorecipes {
 					--{'a','*5'}
                     {name='manure',amount ='+6'},
 				},
-				crafting_speed = 50,
+				crafting_speed = 40,
 				tech = 'bigger-colon',
 				name = 'scrondrix-manure-5a',
 		},
@@ -94,7 +94,7 @@ fun.autorecipes {
 					--{'a','*5'}
                     {name='manure',amount ='+2'},
 				},
-				crafting_speed = 40,
+				crafting_speed = 25,
 				tech = 'bigger-colon',
 				name = 'scrondrix-manure-6a',
 		},
