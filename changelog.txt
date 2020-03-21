@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.4.1
+Date: 2020-03-21
+  Changes:
+    - Balanced seaweed.
+    - Balanced all manure recipes.
+    - Fixed silver foam deadlock.
+    - Removed prod modules from creature chamber.
+    - Balanced all plants that use manure.
+    - Balanced photomining recipes.
+    - Some tech tree balances.
+    - Fixed caravans.
+---------------------------------------------------------------------------------------------------
 Version: 1.4.0
 Date: 2020-03-18
   Changes:
