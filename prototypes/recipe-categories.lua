@@ -203,6 +203,10 @@ data:extend {
         type = "recipe-category",
         name = "research"
     },
+    {
+        type = "recipe-category",
+        name = "compost"
+    },
     ------crops------
 	{
         type = "resource-category",
