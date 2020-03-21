@@ -55,7 +55,7 @@ RECIPE {
         {type = 'fluid', name = 'slacked-lime', amount = 50},
     },
     results = {
-        {type = 'item', name = 'seaweed', amount = 10},
+        {type = 'item', name = 'seaweed', amount = 6},
     },
 }:add_unlock("botany-mk02")
 
@@ -64,14 +64,14 @@ RECIPE {
     name = 'seaweed-9',
     category = 'seaweed',
     enabled = false,
-    energy_required = 10,
+    energy_required = 20,
     ingredients = {
         {type = 'fluid', name = 'water-saline', amount = 100},
         {type = 'fluid', name = 'slacked-lime', amount = 50},
-        {type = 'item', name = 'fertilizer', amount = 5},
+        {type = 'item', name = 'fertilizer', amount = 1},
     },
     results = {
-        {type = 'item', name = 'seaweed', amount = 12},
+        {type = 'item', name = 'seaweed', amount = 20},
     },
 }:add_unlock("botany-mk02")
 
@@ -87,7 +87,7 @@ RECIPE {
         {type = 'item', name = 'iron-ore-dust', amount = 1},
     },
     results = {
-        {type = 'item', name = 'seaweed', amount = 15},
+        {type = 'item', name = 'seaweed', amount = 30},
     },
 }:add_unlock("botany-mk03")
 
@@ -96,10 +96,10 @@ RECIPE {
     name = 'seaweed-6',
     category = 'seaweed',
     enabled = false,
-    energy_required = 20,
+    energy_required = 40,
     ingredients = {
         {type = 'fluid', name = 'water', amount = 150},
-        {type = 'item', name = 'limestone', amount = 3},
+        {type = 'item', name = 'limestone', amount = 2},
     },
     results = {
         {type = 'item', name = 'seaweed', amount = 8},
@@ -111,7 +111,7 @@ RECIPE {
     name = 'seaweed-7',
     category = 'seaweed',
     enabled = false,
-    energy_required = 10,
+    energy_required = 30,
     ingredients = {
         {type = 'fluid', name = 'water-saline', amount = 100},
         {type = 'fluid', name = 'slacked-lime', amount = 100},
@@ -119,6 +119,6 @@ RECIPE {
         {type = 'item', name = 'limestone', amount = 3},
     },
     results = {
-        {type = 'item', name = 'seaweed', amount = 20},
+        {type = 'item', name = 'seaweed', amount = 25},
     },
 }:add_unlock("botany-mk04")
