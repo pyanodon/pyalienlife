@@ -11,7 +11,7 @@ RECIPE{
         {type = 'item', name = 'alien-sample01', amount = 5},
 		{type = 'item', name = 'bio-sample', amount = 20},
 		{type = 'item', name = 'auog', amount = 1},
-        {type = 'item', name = 'cdna', amount = 5},
+        {type = 'item', name = 'moss-gen', amount = 15},
         {type = 'item', name = 'earth-bear-sample', amount = 1},
         {type = 'fluid', name = 'water-saline', amount = 100},
     },
