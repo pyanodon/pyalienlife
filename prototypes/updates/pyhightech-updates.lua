@@ -316,15 +316,15 @@ RECIPE {
     name = 'seaweed-8',
     category = 'seaweed',
     enabled = false,
-    energy_required = 5,
+    energy_required = 20,
     ingredients = {
         {type = 'fluid', name = 'water-saline', amount = 100},
         {type = 'fluid', name = 'slacked-lime', amount = 100},
         {type = 'item', name = 'iron-ore-dust', amount = 1},
-        {type = 'item', name = 'fertilizer', amount = 3},
+        {type = 'item', name = 'fertilizer', amount = 1},
     },
     results = {
-        {type = 'item', name = 'seaweed', amount = 30},
+        {type = 'item', name = 'seaweed', amount = 35},
     },
 }:add_unlock("botany-mk04")
 
