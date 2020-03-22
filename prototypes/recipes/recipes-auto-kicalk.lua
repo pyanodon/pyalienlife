@@ -93,7 +93,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*12'},
-					{name='kicalk',amount ='+1'}
+					{name='kicalk',amount ='+2'}
 				},
 				crafting_speed = 100,
 				tech = 'kicalk-mk02'
@@ -161,13 +161,13 @@ fun.autorecipes {
                     --{'g','*2'},
 					--{'d'},
 					{name='water',amount ='R'},
-                    {name='fluegas',amount ='*2'},
+                    {name='fluegas',amount ='1'},
 				},
 			results =
 				{
 					--{'a','*25'},
 					--{'a','+3'}
-					{name='kicalk',amount ="+2"}
+					{name='kicalk',amount ="+4"}
 				},
 				crafting_speed = 100,
 				tech = 'kicalk-mk04'

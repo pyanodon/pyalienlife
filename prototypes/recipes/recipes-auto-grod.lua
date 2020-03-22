@@ -93,7 +93,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*12'},
-					{name='grod',amount ='+2'}
+					{name='grod',amount ='+3'}
 				},
 				crafting_speed = 100,
 				tech = 'grod-mk02'

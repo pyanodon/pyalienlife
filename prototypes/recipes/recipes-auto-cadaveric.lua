@@ -92,7 +92,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*12'},
-					{name='cadavericarum',amount ='+1'}
+					{name='cadavericarum',amount ='+2'}
 				},
 				crafting_speed = 100,
 				tech = 'cadaveric-arum-mk02'

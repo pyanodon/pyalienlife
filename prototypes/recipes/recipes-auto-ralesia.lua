@@ -129,13 +129,13 @@ fun.autorecipes {
 				   --{'b','+15'},
 				   --{'carbondioxide','R'},
 				    {name='syngas',amount ='R'},
-					{name='fluegas',amount ='*2'},
+					{name='fluegas',amount ='1'},
                     --{'d'},
                 },
 			results =
 				{
 					--{'a','*20'},
-					{name='ralesias',amount ='+3'}
+					{name='ralesias',amount ='+5'}
 				},
 				crafting_speed = 100,
 				tech = 'botany-mk03'

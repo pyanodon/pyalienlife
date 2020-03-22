@@ -80,7 +80,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*12'},
-					{name='yotoi',amount ='+1'}
+					{name='yotoi',amount ='+2'}
 				},
 				crafting_speed = 100,
 				tech = 'yotoi-mk02'
