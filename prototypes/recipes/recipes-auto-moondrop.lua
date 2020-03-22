@@ -73,7 +73,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*12'},
-					{name='moondrop',amount ='+2'}
+					{name='moondrop',amount ='+3'}
 				},
 				crafting_speed = 100,
 				tech = 'moondrop-mk02'

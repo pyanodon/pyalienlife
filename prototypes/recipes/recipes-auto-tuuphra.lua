@@ -80,7 +80,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*12'},
-					{name='tuuphra',amount ='+1'}
+					{name='tuuphra',amount ='+2'}
 				},
 				crafting_speed = 100,
 				tech = 'tuuphra-mk02'
