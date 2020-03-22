@@ -29,7 +29,7 @@ ITEM {
 }
 
 ENTITY {
-    type = "assembling-machine",
+    type = "furnace",
     name = "compost-plant-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/compost-plant-mk01.png",
     icon_size = 64,
@@ -49,6 +49,8 @@ ENTITY {
     allowed_effects = {"speed","productivity"},
     crafting_categories = {"compost"},
     crafting_speed = 1,
+    source_inventory_size = 1,
+    result_inventory_size = 1,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
@@ -243,6 +245,7 @@ working_visualisations = {
             pipe_connections = {{type = "input", position = {2.0, -6.0}}},
             secondary_draw_orders = { north = -1 }
         },
+        --[[
         {
             production_type = "input",
             pipe_covers = DATA.Pipes.covers(false, true, true, true),
@@ -252,6 +255,7 @@ working_visualisations = {
             pipe_connections = {{type = "input", position = {-2.0, -6.0}}},
             secondary_draw_orders = { north = -1 }
         },
+        ]]--
         {
             production_type = "output",
             pipe_covers = DATA.Pipes.covers(false, true, true, true),

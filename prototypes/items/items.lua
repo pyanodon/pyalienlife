@@ -4398,6 +4398,66 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "cottongut-pup-mk01",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/cottongut-pup.png"},
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottongut",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "cottongut-pup-mk02",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/cottongut-pup.png"},
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottongut",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "cottongut-pup-mk03",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/cottongut-pup.png"},
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottongut",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "cottongut-pup-mk04",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/cottongut-pup.png"},
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottongut",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
     name = "brain-cottongut",
     icon = "__pyalienlifegraphics__/graphics/icons/brain-cottongut.png",
 	icon_size = 64,
@@ -7453,7 +7513,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cg-a",
     stack_size = 25,
-	effect = { speed = {bonus = 5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 2.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_cottongut,
 	limitation_message_key = "Its full"
 }
@@ -7473,7 +7533,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cg-b",
     stack_size = 25,
-	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_cottongut,
 	limitation_message_key = "Its full"
 }
@@ -7493,7 +7553,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cg-c",
     stack_size = 25,
-	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 7.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_cottongut,
 	limitation_message_key = "Its full"
 }
@@ -7513,7 +7573,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cg-d",
     stack_size = 25,
-	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_cottongut,
 	limitation_message_key = "Its full"
 }

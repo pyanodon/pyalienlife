@@ -879,10 +879,18 @@ local biomass_convertion =
         ['guar'] = {item_amount = 1, biomass_amount = 1},
         ['guar-gum'] = {item_amount = 1, biomass_amount = 1},
         ['guar-seeds'] = {item_amount = 10, biomass_amount = 1},
-
+        --[fluidname] = {item_amount, biomass_amount, type = 'fluid'}
     }
 
+local type
+
 for i, item in pairs(biomass_convertion) do
+
+    if item.type == nil or item.type ~= 'fluid' then
+        type = 'item'
+    elseif item.type == 'fluid' then
+        type = 'fluid'
+    end
 
     RECIPE {
         type = 'recipe',
@@ -891,12 +899,14 @@ for i, item in pairs(biomass_convertion) do
         enabled = false,
         energy_required = 10,
         ingredients = {
-            {type = 'item', name = i, amount = item.item_amount},
+            {type = type, name = i, amount = item.item_amount},
         },
         results = {
             {type = 'item', name = 'biomass', amount = item.biomass_amount},
         },
-        main_product = 'biomass'
+        main_product = 'biomass',
+        subgroup = 'py-alienlife-compost',
+        order = 'z'
     }:add_unlock("compost")
 
 end
