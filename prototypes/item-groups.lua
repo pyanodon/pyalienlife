@@ -349,4 +349,10 @@ data:extend {
         group = "py-alienlife",
         order = "z"
     },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-compost",
+        group = "py-alienlife",
+        order = "zz"
+    },
 }
