@@ -879,7 +879,44 @@ local biomass_convertion =
         ['guar'] = {item_amount = 1, biomass_amount = 1},
         ['guar-gum'] = {item_amount = 1, biomass_amount = 1},
         ['guar-seeds'] = {item_amount = 10, biomass_amount = 1},
-        --[fluidname] = {item_amount, biomass_amount, type = 'fluid'}
+        ['blood'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'}
+        ['tar'] = {item_amount = 20, biomass_amount = 4, type = 'fluid'}
+        ['crude-oil'] = {item_amount = 20, biomass_amount = 5, type = 'fluid'}
+        ['aromatics'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'}
+        ['glycerol'] = {item_amount = 10, biomass_amount = 10, type = 'fluid'}
+        ['oleochemicals'] = {item_amount = 10, biomass_amount = 10, type = 'fluid'}
+        ['xyhiphoe-blood'] = {item_amount = 10, biomass_amount = 10, type = 'fluid'}
+        ['phytoplankton'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'}
+        ['a-molasse'] = {item_amount = 10, biomass_amount = 12, type = 'fluid'}
+        ['arthropod-blood'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'}
+        ['b-molasse'] = {item_amount = 10, biomass_amount = 12, type = 'fluid'}
+        ['casein-mixture'] = {item_amount = 10, biomass_amount = 7, type = 'fluid'}
+        ['casein-pulp-01'] = {item_amount = 10, biomass_amount = 8, type = 'fluid'}
+        ['casein-pulp-02'] = {item_amount = 10, biomass_amount = 9, type = 'fluid'}
+        ['casein-solution'] = {item_amount = 10, biomass_amount = 10, type = 'fluid'}
+        ['chelator'] = {item_amount = 10, biomass_amount = 12, type = 'fluid'}
+        ['depolymerized-organics'] = {item_amount = 10, biomass_amount = 15, type = 'fluid'}
+        ['ethanol'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'}
+        ['fetal-serum'] = {item_amount = 10, biomass_amount = 4, type = 'fluid'}
+        ['fish-oil'] = {item_amount = 10, biomass_amount = 8, type = 'fluid'}
+        ['flavonoids'] = {item_amount = 10, biomass_amount = 15, type = 'fluid'}
+        ['milk'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'}
+        ['psc'] = {item_amount = 5, biomass_amount = 5, type = 'fluid'}
+        ['sweet-syrup'] = {item_amount = 10, biomass_amount = 8, type = 'fluid'}
+        ['syrup-01'] = {item_amount = 10, biomass_amount = 7, type = 'fluid'}
+        ['xenogenic-cells'] = {item_amount = 5, biomass_amount = 4, type = 'fluid'}
+        ['creamy-latex'] = {item_amount = 20, biomass_amount = 5, type = 'fluid'}
+        ['liquid-manure'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'}
+        ['black-liquor'] = {item_amount = 10, biomass_amount = 10, type = 'fluid'}
+        ['tall-oil'] = {item_amount = 10, biomass_amount = 8, type = 'fluid'}
+        ['raw-ralesia-extract'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'}
+        ['ralesia-extract'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'}
+        ['condensates'] = {item_amount = 10, biomass_amount = 4, type = 'fluid'}
+        ['condensed-distillate'] = {item_amount = 10, biomass_amount = 4, type = 'fluid'}
+        ['naphtha'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'}
+        ['scrude'] = {item_amount = 10, biomass_amount = 3, type = 'fluid'}
+
+
     }
 
 local type
