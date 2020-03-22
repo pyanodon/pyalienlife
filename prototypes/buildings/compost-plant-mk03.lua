@@ -90,9 +90,9 @@ ENTITY {
 working_visualisations = {
     {
         north_position = util.by_pixel(-144, -112),
-        west_position = util.by_pixel(0, -0),
-        south_position = util.by_pixel(0, -0),
-        east_position = util.by_pixel(0, -0),
+        west_position = util.by_pixel(-144, -112),
+        south_position = util.by_pixel(-144, -112),
+        east_position = util.by_pixel(-144, -112),
         animation = {
             filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a1.png",
             frame_count = 100,
@@ -104,9 +104,9 @@ working_visualisations = {
     },
     {
         north_position = util.by_pixel(-144, -112),
-        west_position = util.by_pixel(0, -0),
-        south_position = util.by_pixel(0, -0),
-        east_position = util.by_pixel(0, -0),
+        west_position = util.by_pixel(-144, -112),
+        south_position = util.by_pixel(-144, -112),
+        east_position = util.by_pixel(-144, -112),
         animation = {
             filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a1-mask.png",
             frame_count = 100,
@@ -133,9 +133,9 @@ working_visualisations = {
     },
     {
         north_position = util.by_pixel(-80, -112),
-        west_position = util.by_pixel(0, -0),
-        south_position = util.by_pixel(0, -0),
-        east_position = util.by_pixel(0, -0),
+        west_position = util.by_pixel(-80, -112),
+        south_position = util.by_pixel(-80, -112),
+        east_position = util.by_pixel(-80, -112),
         animation = {
             filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a2-mask.png",
             frame_count = 100,
@@ -148,9 +148,9 @@ working_visualisations = {
     },
     {
         north_position = util.by_pixel(-16, -112),
-        west_position = util.by_pixel(0, -0),
-        south_position = util.by_pixel(0, -0),
-        east_position = util.by_pixel(0, -0),
+        west_position = util.by_pixel(-16, -112),
+        south_position = util.by_pixel(-16, -112),
+        east_position = util.by_pixel(-16, -112),
         animation = {
             filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a3.png",
             frame_count = 100,
@@ -162,9 +162,9 @@ working_visualisations = {
     },
     {
         north_position = util.by_pixel(-16, -112),
-        west_position = util.by_pixel(0, -0),
-        south_position = util.by_pixel(0, -0),
-        east_position = util.by_pixel(0, -0),
+        west_position = util.by_pixel(-16, -112),
+        south_position = util.by_pixel(-16, -112),
+        east_position = util.by_pixel(-16, -112),
         animation = {
             filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a3-mask.png",
             frame_count = 100,
@@ -177,9 +177,9 @@ working_visualisations = {
     },
     {
         north_position = util.by_pixel(48, -112),
-        west_position = util.by_pixel(0, -0),
-        south_position = util.by_pixel(0, -0),
-        east_position = util.by_pixel(0, -0),
+        west_position = util.by_pixel(48, -112),
+        south_position = util.by_pixel(48, -112),
+        east_position = util.by_pixel(48, -112),
         animation = {
             filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a4.png",
             frame_count = 100,
@@ -191,9 +191,9 @@ working_visualisations = {
     },
     {
         north_position = util.by_pixel(48, -112),
-        west_position = util.by_pixel(0, -0),
-        south_position = util.by_pixel(0, -0),
-        east_position = util.by_pixel(0, -0),
+        west_position = util.by_pixel(48, -112),
+        south_position = util.by_pixel(48, -112),
+        east_position = util.by_pixel(48, -112),
         animation = {
             filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a4-mask.png",
             frame_count = 100,
@@ -206,9 +206,9 @@ working_visualisations = {
     },
     {
         north_position = util.by_pixel(112, -112),
-        west_position = util.by_pixel(0, -0),
-        south_position = util.by_pixel(0, -0),
-        east_position = util.by_pixel(0, -0),
+        west_position = util.by_pixel(112, -112),
+        south_position = util.by_pixel(112, -112),
+        east_position = util.by_pixel(112, -112),
         animation = {
             filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a5.png",
             frame_count = 100,
@@ -220,9 +220,9 @@ working_visualisations = {
     },
     {
         north_position = util.by_pixel(112, -112),
-        west_position = util.by_pixel(0, -0),
-        south_position = util.by_pixel(0, -0),
-        east_position = util.by_pixel(0, -0),
+        west_position = util.by_pixel(112, -112),
+        south_position = util.by_pixel(112, -112),
+        east_position = util.by_pixel(112, -112),
         animation = {
             filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a5-mask.png",
             frame_count = 100,
@@ -242,7 +242,7 @@ working_visualisations = {
             pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             base_area = 10,
             base_level = -1,
-            pipe_connections = {{type = "input", position = {2.0, -6.0}}},
+            pipe_connections = {{type = "input", position = {0.0, -6.0}}},
             secondary_draw_orders = { north = -1 }
         },
         --[[
@@ -256,24 +256,6 @@ working_visualisations = {
             secondary_draw_orders = { north = -1 }
         },
         ]]
-        {
-            production_type = "output",
-            pipe_covers = DATA.Pipes.covers(false, true, true, true),
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            base_area = 10,
-            base_level = 1,
-            pipe_connections = {{type = "output", position = {2.0, 6.0}}},
-            secondary_draw_orders = { north = -1 }
-        },
-        {
-            production_type = "output",
-            pipe_covers = DATA.Pipes.covers(false, true, true, true),
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            base_area = 10,
-            base_level = 1,
-            pipe_connections = {{type = "output", position = {-2.0, 6.0}}},
-            secondary_draw_orders = { north = -1 }
-        },
         off_when_no_fluid_recipe = true
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},

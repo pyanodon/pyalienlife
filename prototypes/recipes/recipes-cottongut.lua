@@ -87,7 +87,7 @@ RECIPE {
         {type = 'item', name = 'seaweed', amount = 10},
         {type = 'item', name = 'wood-seeds', amount = 15},
         {type = 'item', name = 'ash', amount = 10},
-        {type = 'item', name = 'moondrop-seeds', amount = 10},
+        {type = 'item', name = 'moondrop', amount = 10},
         {type = 'fluid', name = 'steam', amount = 100},
     },
     results = {
@@ -133,7 +133,7 @@ RECIPE {
     energy_required = 50,
     ingredients = {
         {type = 'item', name = 'cottongut-pup-mk01', amount = 1},
-        {type = 'item', name = 'moondrop-seeds', amount = 3},
+        {type = 'item', name = 'moondrop', amount = 3},
         {type = 'item', name = 'wood', amount = 1},
         {type = 'item', name = 'cottongut-food-01', amount = 1},
     },
@@ -247,7 +247,7 @@ RECIPE {
         {type = 'item', name = 'cottongut-mk04', amount = 2},
         {type = 'item', name = 'bedding', amount = 1},
         {type = 'item', name = 'dhilmos-egg', amount = 2},
-        {type = 'item', name = 'moondrop-seeds', amount = 5},
+        {type = 'item', name = 'moondrop', amount = 5},
         {type = 'item', name = 'cottongut-food-02', amount = 3},
         },
     results = {

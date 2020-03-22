@@ -1949,6 +1949,21 @@ RECIPE {
     order = "f"
 }:add_unlock("genetics-mk02")
 
+RECIPE {
+    type = 'recipe',
+    name = 'biomass-cooking',
+    category = 'hpf',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'biomass', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'raw-coal', amount = 2},
+    },
+    --main_product = "casein-pulp-01",
+}:add_unlock("compost")
+
 
 if not mods['pyhightech'] then
 
