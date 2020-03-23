@@ -920,11 +920,11 @@ local biomass_convertion =
 
 local type
 
-local name
-
 local local_name_type
 
 for i, item in pairs(biomass_convertion) do
+
+local name = ''
 
     if item.type == nil or item.type ~= 'fluid' then
         type = 'item'
