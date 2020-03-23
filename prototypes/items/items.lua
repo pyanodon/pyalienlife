@@ -1235,7 +1235,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1246,7 +1246,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1257,7 +1257,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1268,7 +1268,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1279,7 +1279,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1290,7 +1290,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1301,7 +1301,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1312,7 +1312,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1323,7 +1323,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1334,7 +1334,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1345,7 +1345,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1356,7 +1356,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1367,7 +1367,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1378,7 +1378,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1389,7 +1389,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1411,7 +1411,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1422,7 +1422,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1433,7 +1433,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1444,7 +1444,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1455,7 +1455,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1466,7 +1466,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1477,7 +1477,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1488,7 +1488,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1499,7 +1499,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1510,7 +1510,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1521,7 +1521,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2038,7 +2038,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2049,7 +2049,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2159,7 +2159,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2203,7 +2203,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2302,7 +2302,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2346,7 +2346,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2390,7 +2390,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2401,7 +2401,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2412,7 +2412,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2511,7 +2511,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dingrits",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2702,7 +2702,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dingrits",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2820,7 +2820,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2831,7 +2831,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-kmauts",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2842,7 +2842,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2853,7 +2853,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2864,7 +2864,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-xyhiphoe",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2875,7 +2875,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-xyhiphoe",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2930,7 +2930,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-vonix",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2952,7 +2952,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-vonix",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2974,7 +2974,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2996,7 +2996,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3018,7 +3018,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3029,7 +3029,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3283,7 +3283,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3492,7 +3492,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3503,7 +3503,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3525,7 +3525,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3580,7 +3580,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3602,7 +3602,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3613,7 +3613,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3624,7 +3624,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-cridren",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3701,7 +3701,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-trits",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3712,7 +3712,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-latex",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3723,7 +3723,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-latex",
     order = "d",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3794,7 +3794,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3805,7 +3805,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3816,7 +3816,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-latex",
     order = "e",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3827,7 +3827,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-latex",
     order = "f",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3838,7 +3838,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "f",
-    stack_size = 10,
+    stack_size = 100,
 	capsule_action =
     {
       type = "use-on-self",
@@ -4338,7 +4338,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -4349,7 +4349,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
