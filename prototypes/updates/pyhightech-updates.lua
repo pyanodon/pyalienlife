@@ -315,7 +315,7 @@ RECIPE {
     name = 'seaweed-8',
     category = 'seaweed',
     enabled = false,
-    energy_required = 20,
+    energy_required = 55,
     ingredients = {
         {type = 'fluid', name = 'water-saline', amount = 100},
         {type = 'fluid', name = 'slacked-lime', amount = 100},
@@ -323,7 +323,7 @@ RECIPE {
         {type = 'item', name = 'fertilizer', amount = 1},
     },
     results = {
-        {type = 'item', name = 'seaweed', amount = 35},
+        {type = 'item', name = 'seaweed', amount = 100},
     },
 }:add_unlock("botany-mk04")
 
@@ -367,44 +367,6 @@ RECIPE {
     subgroup = 'py-alienlife-plants',
     order = 'a'
 }:add_unlock("botany-mk04")
-
-RECIPE {
-    type = 'recipe',
-    name = 'mukmoux-manure-03',
-    category = 'mukmoux',
-    enabled = false,
-    energy_required = 80,
-    ingredients = {
-        {type = 'item', name = 'mukmoux-food-01', amount = 1},
-        {type = 'item', name = 'salt', amount = 10},
-        {type = 'item', name = 'raw-fiber', amount = 5},
-        {type = 'item', name = 'water-barrel', amount = 10},
-    },
-    results = {
-        {type = 'item', name = 'manure', amount = 8},
-        {type = 'item', name = 'empty-barrel', amount = 10},
-    },
-    main_product = "manure",
-}:add_unlock("mukmoux")
-
-RECIPE {
-    type = 'recipe',
-    name = 'mukmoux-manure-03-food',
-    category = 'mukmoux',
-    enabled = false,
-    energy_required = 80,
-    ingredients = {
-        {type = 'item', name = 'mukmoux-food-02', amount = 1},
-        {type = 'item', name = 'salt', amount = 10},
-        {type = 'item', name = 'raw-fiber', amount = 5},
-        {type = 'item', name = 'water-barrel', amount = 10},
-    },
-    results = {
-        {type = 'item', name = 'manure', amount = 10},
-        {type = 'item', name = 'empty-barrel', amount = 10},
-    },
-    main_product = "manure",
-}:add_unlock("mukmoux")
 
 --scrondrix
 

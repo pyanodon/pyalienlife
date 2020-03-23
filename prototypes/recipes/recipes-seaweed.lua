@@ -64,14 +64,14 @@ RECIPE {
     name = 'seaweed-9',
     category = 'seaweed',
     enabled = false,
-    energy_required = 20,
+    energy_required = 45,
     ingredients = {
         {type = 'fluid', name = 'water-saline', amount = 100},
         {type = 'fluid', name = 'slacked-lime', amount = 50},
         {type = 'item', name = 'fertilizer', amount = 1},
     },
     results = {
-        {type = 'item', name = 'seaweed', amount = 20},
+        {type = 'item', name = 'seaweed', amount = 60},
     },
 }:add_unlock("botany-mk02")
 
@@ -80,7 +80,7 @@ RECIPE {
     name = 'seaweed-5',
     category = 'seaweed',
     enabled = false,
-    energy_required = 12,
+    energy_required = 60,
     ingredients = {
         {type = 'fluid', name = 'water-saline', amount = 100},
         {type = 'fluid', name = 'slacked-lime', amount = 100},
@@ -111,7 +111,7 @@ RECIPE {
     name = 'seaweed-7',
     category = 'seaweed',
     enabled = false,
-    energy_required = 30,
+    energy_required = 20,
     ingredients = {
         {type = 'fluid', name = 'water-saline', amount = 100},
         {type = 'fluid', name = 'slacked-lime', amount = 100},
@@ -119,6 +119,6 @@ RECIPE {
         {type = 'item', name = 'limestone', amount = 3},
     },
     results = {
-        {type = 'item', name = 'seaweed', amount = 25},
+        {type = 'item', name = 'seaweed', amount = 35},
     },
 }:add_unlock("botany-mk04")

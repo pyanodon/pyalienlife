@@ -177,7 +177,6 @@ RECIPE {
         {type = 'item', name = 'zipir1', amount = 2},
         {type = 'item', name = 'fawogae-substrate', amount = 15},
         {type = 'item', name = 'filtration-media', amount = 5},
-        {type = 'item', name = 'stone-wool', amount = 4},
         {type = 'item', name = 'fish', amount = 5},
         {type = 'fluid', name = 'pressured-water', amount = 3000},
         },
@@ -191,7 +190,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-zipir',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("selective-breeding"):add_ingredient({type = "item", name = "stone-wool", amount = 4})
 
 RECIPE {
     type = 'recipe',
@@ -203,7 +202,6 @@ RECIPE {
         {type = 'item', name = 'zipir1', amount = 2},
         {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'filtration-media', amount = 5},
-        {type = 'item', name = 'stone-wool', amount = 4},
         {type = 'item', name = 'fish', amount = 5},
         {type = 'fluid', name = 'pressured-water', amount = 3000},
         },
@@ -217,7 +215,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-zipir',
     order = 'zb'
-}:add_unlock("artificial-breeding"):replace_ingredient("saps", "blood-meal")
+}:add_unlock("artificial-breeding"):replace_ingredient("saps", "blood-meal"):add_ingredient({type = "item", name = "stone-wool", amount = 4})
 
 RECIPE {
     type = 'recipe',
@@ -229,7 +227,6 @@ RECIPE {
         {type = 'item', name = 'zipir1', amount = 2},
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},
         {type = 'item', name = 'filtration-media', amount = 5},
-        {type = 'item', name = 'stone-wool', amount = 4},
         {type = 'item', name = 'fish', amount = 5},
         {type = 'fluid', name = 'pressured-water', amount = 3000},
         },
@@ -243,4 +240,4 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-zipir',
     order = 'zc'
-}:add_unlock("biased-mutation"):replace_ingredient("saps", "blood-meal")
+}:add_unlock("biased-mutation"):replace_ingredient("saps", "blood-meal"):add_ingredient({type = "item", name = "stone-wool", amount = 4})
