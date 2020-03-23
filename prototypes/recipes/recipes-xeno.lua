@@ -28,7 +28,7 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = 'item', name = 'phosphate-glass', amount = 5},
+        {type = 'item', name = 'glass', amount = 5},
         {type = 'item', name = 'small-lamp', amount = 5},
         {type = 'item', name = 'advanced-circuit', amount = 50},
         {type = 'item', name = 'green-wire', amount = 10},
@@ -37,7 +37,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'xeno-codex', amount = 1},
     },
-}:add_unlock("xeno")
+}:add_unlock("xeno"):replace_ingredient("glass", "phosphate-glass")
 
 
 ----food----

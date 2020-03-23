@@ -41,13 +41,12 @@ RECIPE {
     energy_required = 40,
     ingredients = {
         {type = 'item', name = 'used-auog', amount = 1},
-        {type = 'item', name = 'raw-fiber', amount = 5},
         {type = 'item', name = 'auog-food-01', amount = 2},
     },
     results = {
         {type = 'item', name = 'auog', amount = 1},
     },
-}:add_unlock("domestication")
+}:add_unlock("domestication"):add_ingredient({type = "item", name = "raw-fiber", amount = 5})
 
 RECIPE {
     type = 'recipe',
@@ -57,13 +56,12 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'used-auog', amount = 1},
-        {type = 'item', name = 'raw-fiber', amount = 5},
         {type = 'item', name = 'meat', amount = 5},
     },
     results = {
         {type = 'item', name = 'auog', amount = 1},
     },
-}:add_unlock("domestication")
+}:add_unlock("domestication"):add_ingredient({type = "item", name = "raw-fiber", amount = 5})
 
 --mk01
 

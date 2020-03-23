@@ -4607,8 +4607,6 @@ local alien_life_limitations_ulric =
 
     local alien_life_limitations_mukmoux =
 	{
-	'mukmoux-manure-03',
-	'mukmoux-manure-03-food'
     }
 
     local alien_life_limitations_korlex =

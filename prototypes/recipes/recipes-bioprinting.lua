@@ -25,7 +25,7 @@ RECIPE {
     energy_required = 15,
     ingredients = {
         {type = 'item', name = 'sodium-alginate', amount = 1},
-        {type = 'item', name = 'collagen', amount = 2},
+        {type = 'item', name = 'guts', amount = 2},
         {type = 'fluid', name = 'boric-acid', amount = 200},
 
     },
@@ -33,7 +33,7 @@ RECIPE {
         {type = 'item', name = 'bio-scafold', amount = 2},
     },
     --main_product = "cocoon",
-}:add_unlock("organ-printing")
+}:add_unlock("organ-printing"):replace_ingredient("guts", "collagen")
 
 RECIPE {
     type = 'recipe',
