@@ -920,29 +920,43 @@ local biomass_convertion =
 
 local type
 
+local name
+
+local local_name_type
+
 for i, item in pairs(biomass_convertion) do
 
     if item.type == nil or item.type ~= 'fluid' then
         type = 'item'
+        local_name_type = 'item'
+        if data.raw.item[i] ~= nil then
+            name = data.raw.item[i].localised_name
+        end
     elseif item.type == 'fluid' then
         type = 'fluid'
+        local_name_type = 'fluid'
+        if data.raw.fluid[i] ~= nil then
+            name = data.raw.fluid[i].localised_name
+        end
     end
 
-    RECIPE {
-        type = 'recipe',
-        name = 'biomass-' .. i,
-        category = 'compost',
-        enabled = false,
-        energy_required = 10,
-        ingredients = {
-            {type = type, name = i, amount = item.item_amount},
-        },
-        results = {
-            {type = 'item', name = 'biomass', amount = item.biomass_amount},
-        },
-        main_product = 'biomass',
-        subgroup = 'py-alienlife-compost',
-        order = 'z'
-    }:add_unlock("compost")
-
+    if data.raw.item[i] ~= nil or data.raw.fluid[i] ~= nil then
+        RECIPE {
+            type = 'recipe',
+            name = 'biomass-' .. i,
+            category = 'compost',
+            enabled = false,
+            energy_required = 10,
+            ingredients = {
+                {type = type, name = i, amount = item.item_amount},
+            },
+            results = {
+                {type = 'item', name = 'biomass', amount = item.biomass_amount},
+            },
+            main_product = 'biomass',
+            subgroup = 'py-alienlife-compost',
+            order = 'z',
+            localised_name = {'', 'Compost ' .. item.item_amount .. ' x ', {local_name_type .. '-name.' .. i}}
+        }:add_unlock("compost")
+    end
 end

@@ -1,5 +1,9 @@
 local fun = require("prototypes/functions/functions")
 
+if mods['pyhightech'] then
+    require('prototypes/recipes/recipes-moondrop-products')
+end
+
 --BUILDINDS--
 
 
@@ -176,3 +180,4 @@ RECIPE {
 }:add_unlock("engine")
 
 RECIPE('fawogae-mk04-breeder'):replace_ingredient("iron-plate", "nb-biomass")
+
