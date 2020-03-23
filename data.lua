@@ -924,20 +924,20 @@ local local_name_type
 
 for i, item in pairs(biomass_convertion) do
 
-local name = ''
+--local name = ''
 
     if item.type == nil or item.type ~= 'fluid' then
         type = 'item'
         local_name_type = 'item'
-        if data.raw.item[i] ~= nil then
-            name = data.raw.item[i].localised_name
-        end
+        --if data.raw.item[i] ~= nil then
+           --name = data.raw.item[i].localised_name
+        --end
     elseif item.type == 'fluid' then
         type = 'fluid'
         local_name_type = 'fluid'
-        if data.raw.fluid[i] ~= nil then
-            name = data.raw.fluid[i].localised_name
-        end
+        --if data.raw.fluid[i] ~= nil then
+            --name = data.raw.fluid[i].localised_name
+        --end
     end
 
     if data.raw.item[i] ~= nil or data.raw.fluid[i] ~= nil then
