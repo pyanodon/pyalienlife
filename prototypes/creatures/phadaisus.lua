@@ -43,7 +43,8 @@ data:extend(
         minable = {mining_time = 0.5, result = "qaavi"},
         mined_sound = {filename = "__core__/sound/deconstruct-medium.ogg"},
         max_health = 4000,
-        corpse = "medium-biter-corpse",
+        has_belt_immunity = false,
+        corpse = "big-biter-corpse",
         dying_explosion = "blood-explosion-huge",
         alert_icon_shift = util.by_pixel(-4, -13),
         immune_to_tree_impacts = true,
@@ -131,10 +132,7 @@ data:extend(
         },
         animation =
         {
-          layers =
-          {
-          {
-          --priority = "low",
+          priority = "high",
           width = 352,
           height = 352,
           frame_count = 15,
@@ -186,8 +184,6 @@ data:extend(
             "__pyalienlifegraphics3__/graphics/entity/phadaisus/a38.png",
             "__pyalienlifegraphics3__/graphics/entity/phadaisus/a39.png",
           },
-      }
-    }
     },
 
         turret_animation =
@@ -244,7 +240,7 @@ data:extend(
         --tank_driving = true,
         weight = 600,
         inventory_size = 250,
-        guns = {}
+        --guns = {"flamethrower"}
       }
     }
   )
