@@ -2,7 +2,7 @@ local util = require('util')
 
 RECIPE{
     type = "recipe",
-    name = "phadaisus",
+    name = "qaavi",
     energy_required = 120,
     category = 'creature-chamber',
     enabled = false,
@@ -18,17 +18,17 @@ RECIPE{
       {type = 'fluid', name = 'artificial-blood', amount = 300},
       {type = 'fluid', name = 'water-saline', amount = 500},
     },
-    result = "phadaisus"
+    result = "qaavi"
   }:add_unlock("pharmagenomics")
 
 ITEM{
     type = "item-with-entity-data",
-    name = "phadaisus",
+    name = "qaavi",
     icon = "__pyalienlifegraphics__/graphics/icons/phadaisus.png",
     icon_size = 64,
     subgroup = "py-alienlife-buildings-others",
     order = "x",
-    place_result = "phadaisus",
+    place_result = "qaavi",
     stack_size = 5
   }
 
@@ -36,11 +36,11 @@ data:extend(
     {
       {
         type = "car",
-        name = "phadaisus",
+        name = "qaavi",
         icon = "__pyalienlifegraphics__/graphics/icons/phadaisus.png",
         icon_size = 64,
         flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-flammable"},
-        minable = {mining_time = 0.5, result = "phadaisus"},
+        minable = {mining_time = 0.5, result = "qaavi"},
         mined_sound = {filename = "__core__/sound/deconstruct-medium.ogg"},
         max_health = 4000,
         corpse = "medium-biter-corpse",
@@ -77,7 +77,8 @@ data:extend(
             percent = 70
           }
         },
-        collision_box = {{-0.9, -1.3}, {0.9, 1.3}},
+        collision_box = {{0,0}, {0,0}},
+        collision_mask = {},
         selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
         drawing_box = {{-1.8, -1.8}, {1.8, 1.8}},
         effectivity = 1,
@@ -133,15 +134,15 @@ data:extend(
           layers =
           {
           {
-          priority = "low",
+          --priority = "low",
           width = 352,
           height = 352,
           frame_count = 15,
           slice = 5,
           lines_per_file = 5,
           direction_count = 64,
-          shift = util.by_pixel(-0.0, -0.0),
-          animation_speed = 1.0,
+          shift = util.by_pixel(20, -0.0),
+          animation_speed = 0.8,
           max_advance = 1,
           filenames =
           {
@@ -223,7 +224,7 @@ data:extend(
           sound =
           {
             filename = "__pyalienlifegraphics3__/sounds/phadaisus-breath.ogg",
-            volume = 0.9
+            volume = 1.2
           },
           --activate_sound =
           --{
@@ -237,8 +238,8 @@ data:extend(
           --},
           match_speed_to_activity = false
         },
-        open_sound = { filename = "__pyalienlifegraphics3__/sounds/phadaisus-in.ogg", volume=0.5 },
-        close_sound = { filename = "__pyalienlifegraphics3__/sounds/phadaisus-out.ogg", volume = 0.5 },
+        open_sound = { filename = "__pyalienlifegraphics3__/sounds/phadaisus-in.ogg", volume=0.9 },
+        close_sound = { filename = "__pyalienlifegraphics3__/sounds/phadaisus-out.ogg", volume = 0.75 },
         rotation_speed = 0.015,
         --tank_driving = true,
         weight = 600,
