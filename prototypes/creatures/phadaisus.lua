@@ -91,7 +91,7 @@ data:extend(
         },
         consumption = "140kW",
         --terrain_friction_modifier = 0.01,
-        friction = 2e-3,
+        friction = 5e-3,
         light =
         {
           {
@@ -224,7 +224,7 @@ data:extend(
           sound =
           {
             filename = "__pyalienlifegraphics3__/sounds/phadaisus-breath.ogg",
-            volume = 1.2
+            volume = 1.4
           },
           --activate_sound =
           --{
