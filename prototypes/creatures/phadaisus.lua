@@ -91,7 +91,7 @@ data:extend(
         },
         consumption = "140kW",
         --terrain_friction_modifier = 0.01,
-        friction = 5e-3,
+        friction = 3e-3,
         light =
         {
           {
