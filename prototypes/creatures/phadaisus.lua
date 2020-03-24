@@ -224,7 +224,7 @@ data:extend(
           sound =
           {
             filename = "__pyalienlifegraphics3__/sounds/phadaisus-breath.ogg",
-            volume = 1.4
+            volume = 0.9
           },
           --activate_sound =
           --{
