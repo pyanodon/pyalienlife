@@ -1110,20 +1110,6 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'manure-to-biomass',
-    category = 'evaporator',
-    enabled = false,
-    energy_required = 5,
-    ingredients = {
-        {type = "item", name = "manure", amount = 10},
-    },
-    results = {
-        {type = 'item', name = 'biomass', amount = 10},
-    },
-}:add_unlock("biotech-mk02")
-
-RECIPE {
-    type = 'recipe',
     name = 'manure-to-crude',
     category = 'biofactory',
     enabled = false,
