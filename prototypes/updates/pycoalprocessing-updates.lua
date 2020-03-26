@@ -75,34 +75,6 @@ fun.results_replacer("log6", "log", "log",8)
 
 RECIPE {
     type = "recipe",
-    name = "log-organics-2",
-    category = "wpu",
-    enabled = false,
-    energy_required = 15,
-    ingredients = {
-        {type = "item", name = "log", amount = 1}
-    },
-    results = {
-        {type = "item", name = "biomass", amount = 10}
-    },
-}:add_unlock("botany-mk02")
-
-RECIPE {
-    type = "recipe",
-    name = "organics-from-wood-2",
-    category = "wpu",
-    enabled = false,
-    energy_required = 4,
-    ingredients = {
-        {type = "item", name = "wood", amount = 10}
-    },
-    results = {
-        {type = "item", name = "biomass", amount = 20}
-    },
-}:add_unlock("botany-mk02")
-
-RECIPE {
-    type = "recipe",
     name = "soil-separation-2",
     category = "solid-separator",
     enabled = false,
