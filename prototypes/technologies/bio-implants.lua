@@ -4,10 +4,10 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/bio-implants.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"pharmagenomics","biotech-mk03"},
+    prerequisites = {"biotech-mk04"},
     effects = {},
     unit = {
-        count = 120,
+        count = 250,
         ingredients = {
             {"automation-science-pack", 3},
             {"logistic-science-pack", 3},

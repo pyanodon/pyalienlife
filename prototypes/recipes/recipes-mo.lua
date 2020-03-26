@@ -213,13 +213,13 @@ RECIPE {
     enabled = false,
     energy_required = 25,
     ingredients = {
-        {type = 'item', name = 'fur', amount = 20},
+        {type = 'item', name = 'fur', amount = 10},
         {type = 'item', name = 'chitin', amount = 5},
         {type = 'fluid', name = 'bacteria-1', amount = 100},
         {type = 'fluid', name = 'oleochemicals', amount = 100},
     },
     results = {
-        {type = 'item', name = 'cysteine', amount = 1},
+        {type = 'item', name = 'cysteine', amount = 5},
     },
 }:add_unlock("genetics-mk04"):replace_ingredient("bacteria-1", "bacteria-2")
 
@@ -428,7 +428,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'enzyme-pks', amount = 1},
     },
-}:add_unlock("biotech-mk04")
+}:add_unlock("pharmagenomics")
 
 RECIPE {
     type = 'recipe',

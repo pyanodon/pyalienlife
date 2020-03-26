@@ -10,7 +10,7 @@ RECIPE('automation-science-pack'):change_category('research')
 RECIPE('logistic-science-pack'):change_category('research')
 RECIPE('chemical-science-pack'):change_category('research')
 RECIPE('military-science-pack'):change_category('research')
-RECIPE('production-science-pack'):change_category('research')
+RECIPE('production-science-pack'):change_category('research'):remove_unlock('diamond-mining'):add_unlock('pharmagenomics')
 RECIPE('utility-science-pack'):change_category('research')
 
 for _,module in pairs(data.raw.module) do
@@ -559,6 +559,10 @@ local recipes_list =
   "earth-generic-sample",
   "vrauks-food-01",
   "vrauks-food-02",
+  "cottongut-food-01",
+  "cottongut-food-02",
+  "korlex-food-01",
+  "korlex-food-02",
   --"caged-vrauks",
   --"uncaged-vrauks",
   "vrauks-mature-01",
