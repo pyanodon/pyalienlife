@@ -161,7 +161,7 @@ fun.autorecipes {
                     --{'g','*2'},
 					--{'d'},
 					{name='water',amount ='R'},
-                    {name='fluegas',amount ='1'},
+                    {name='fluegas',amount ='*1'},
 				},
 			results =
 				{

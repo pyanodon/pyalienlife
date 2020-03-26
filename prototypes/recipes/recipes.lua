@@ -421,19 +421,19 @@ RECIPE {
     name = 'gh',
     category = 'research',
     enabled = false,
-    energy_required = 20,
+    energy_required = 70,
     ingredients = {
-        {type = 'item', name = 'plasmids', amount = 2},
-        {type = 'item', name = 'bio-sample', amount = 5},
-        {type = 'item', name = 'cdna', amount = 1},
-        {type = 'item', name = 'petri-dish', amount = 5},
-        {type = 'item', name = 'flask', amount = 3},
-        {type = 'item', name = 'lab-instrument', amount = 1},
-        {type = 'fluid', name = 'bacteria-1', amount = 50},
-        {type = 'item', name = 'pineal-gland', amount = 1}
+        {type = 'item', name = 'plasmids', amount = 6},
+        {type = 'item', name = 'bio-sample', amount = 20},
+        {type = 'item', name = 'cdna', amount = 2},
+        {type = 'item', name = 'petri-dish', amount = 20},
+        {type = 'item', name = 'flask', amount = 10},
+        {type = 'item', name = 'lab-instrument', amount = 4},
+        {type = 'fluid', name = 'bacteria-1', amount = 200},
+        {type = 'item', name = 'pineal-gland', amount = 3}
     },
     results = {
-        {type = 'item', name = 'gh', amount = 10}
+        {type = 'item', name = 'gh', amount = 50}
     }
 }:add_unlock('growth-hormone')
 
@@ -497,7 +497,7 @@ RECIPE {
         {type = 'item', name = 'fur', amount = 10},
     },
     main_product = "fur",
-}:add_unlock('biotech-mk04')
+}:add_unlock('pharmagenomics')
 
 RECIPE {
     type = 'recipe',

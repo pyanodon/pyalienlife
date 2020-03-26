@@ -73,4 +73,4 @@ RECIPE {
     results = {
         {type = 'item', name = 'utility-science-pack', amount = 1},
     },
-}:add_unlock("biotech-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 20})
+}:add_unlock("pharmagenomics"):add_ingredient({type = "item", name = "small-parts-03", amount = 20})

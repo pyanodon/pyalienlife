@@ -129,7 +129,7 @@ fun.autorecipes {
 				   --{'b','+15'},
 				   --{'carbondioxide','R'},
 				    {name='syngas',amount ='R'},
-					{name='fluegas',amount ='1'},
+					{name='fluegas',amount ='*1'},
                     --{'d'},
                 },
 			results =

@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.4.4
+Date: 2020-03-26
+  Changes:
+    - Removed unecessary pipe connections in vat-brain.
+    - Removed duplicated recipes for biomass from wood and logs (sorry viking guy XD)
+    - Re-organized a good chunk of the later tech tree.
+    - Production science now is on pharmagenonics.
+    - Rebalanced growth hormone.
+    - Fixed one kicalk recipe with wrong flue gas.
+    - Allowed prod modules in all food recipes.
+    - Removed productivity bonus from phagnots.
+    - When add Ulric to feed Xenos, the output was increased.
+    - Balanced Cysteine
+    - Dingrits now requiere chemical science pack instead of production science pack.
+---------------------------------------------------------------------------------------------------
 Version: 1.4.3
 Date: ????
   Changes:

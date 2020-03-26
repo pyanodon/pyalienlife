@@ -68,13 +68,14 @@ fun.autorecipes {
 					--{name='meat',amount ='R'},
 					{name='fish',amount ='R'},
 					{name='guts',amount ='R'},
+					{name='xenoegg',amount ='+1'},
 					{name='cagedulric',amount =1},
 
 				},
 			results =
 				{
 					{name='cagedxeno',amount ='R'},
-					{name='cagedxeno', probability = 0.9,amount_min =1,amount_max =1},
+					{name='cagedxeno', probability = 1.8,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 90,
 			tech = 'xeno'
@@ -128,7 +129,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='cagedxeno', amount ='R'},
-					{name='cagedxeno', probability = 1,amount_min =1,amount_max =2},
+					{name='cagedxeno', probability = 1.5,amount_min =1,amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -319,7 +320,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='xenoegg', amount =2},
+					{name='xenoegg', amount =1},
 				},
 			crafting_speed = 100,
 			tech = 'assisted-embryology'

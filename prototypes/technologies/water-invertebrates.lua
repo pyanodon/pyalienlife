@@ -60,7 +60,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/water-invertebrates-mk04.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"water-invertebrates-mk03","biotech-mk03","water-animals-mk03"},
+    prerequisites = {"water-invertebrates-mk03","biotech-mk04","water-animals-mk03"},
     effects = {},
     unit = {
         count = 200,
@@ -68,7 +68,6 @@ TECHNOLOGY {
             {'automation-science-pack', 4},
             {'logistic-science-pack', 3},
             {'chemical-science-pack', 2},
-            {'utility-science-pack', 1},
             {'production-science-pack', 1},
             {'py-science-pack', 4},
         },
