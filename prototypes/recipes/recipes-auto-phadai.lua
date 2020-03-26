@@ -11,7 +11,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='meat',amount =15},
+					{name='cottongut',amount =2},
 					{name='waterbarrel',amount=4,return_item={name='empty-barrel',amount=4}},
                     {name='cage',amount=1},
                     {name='speaker',amount=1},
@@ -376,7 +376,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='meat',amount =15},
+                    {name='cottongut',amount =3},
                     {name='fawogae',amount =10},
 					{name='waterbarrel',amount=5,return_item={name='empty-barrel',amount=5}},
 					--{name='cage',amount=1},

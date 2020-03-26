@@ -11,7 +11,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedulric',amount =1},
+					{name='cottongut',amount =4},
 					{name='arthurianegg',amount =1},
 					{name='waterbarrel',amount=4,return_item={name='empty-barrel',amount=4}},
 				},
@@ -371,7 +371,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='cagedulric',amount =1},
+                    {name='cottongut',amount =2},
                     {name='cocoon',amount =1},
                     {name='rawfiber',amount = 'R'},
 					{name='waterbarrel',amount=5,return_item={name='empty-barrel',amount=5}},
