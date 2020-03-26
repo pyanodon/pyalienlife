@@ -10,7 +10,6 @@ RECIPE{
     {
       {type = 'item', name = 'enzyme-pks', amount = 1},
       {type = 'item', name = 'zymogens', amount = 5},
-      {type = 'item', name = 'alien-enzymes', amount = 1},
       {type = 'item', name = 'phadai', amount = 1},
       {type = 'item', name = 'bio-sample', amount = 100},
       {type = 'item', name = 'earth-generic-sample', amount = 50},

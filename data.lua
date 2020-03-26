@@ -466,7 +466,7 @@ require('prototypes/sprites/sprites')
 local biomass_convertion =
     {
         ['ralesia'] = {item_amount = 1, biomass_amount = 1},
-        ['wood'] = {item_amount = 2, biomass_amount = 1},
+        ['wood'] = {item_amount = 10, biomass_amount = 1},
         ['cocoon'] = {item_amount = 1, biomass_amount = 1},
         ['bhoddos-spore'] = {item_amount = 10, biomass_amount = 1},
         ['bonemeal'] = {item_amount = 1, biomass_amount = 3},
@@ -680,7 +680,7 @@ local biomass_convertion =
         ['cottongut-pup'] = {item_amount = 10, biomass_amount = 3},
         ['moss'] = {item_amount = 1, biomass_amount = 1},
         ['wood-seedling'] = {item_amount = 1, biomass_amount = 1},
-        ['wood-seeds'] = {item_amount = 1, biomass_amount = 1},
+        ['wood-seeds'] = {item_amount = 10, biomass_amount = 1},
         ['seaweed'] = {item_amount = 1, biomass_amount = 2},
         ['ralesia-seeds'] = {item_amount = 1, biomass_amount = 1},
         ['saps'] = {item_amount = 10, biomass_amount = 1},
@@ -868,7 +868,7 @@ local biomass_convertion =
         ['zipir2'] = {item_amount = 1, biomass_amount = 20},
         ['zipir3'] = {item_amount = 1, biomass_amount = 20},
         ['zipir4'] = {item_amount = 1, biomass_amount = 20},
-        ['log'] = {item_amount = 1, biomass_amount = 2},
+        ['log'] = {item_amount = 5, biomass_amount = 2},
         ['dry-ralesia'] = {item_amount = 1, biomass_amount = 1},
         ['ralesia-powder'] = {item_amount = 1, biomass_amount = 1},
         ['raw-fiber'] = {item_amount = 1, biomass_amount = 1},
