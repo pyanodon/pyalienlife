@@ -1950,6 +1950,20 @@ RECIPE {
     --main_product = "casein-pulp-01",
 }:add_unlock("compost")
 
+RECIPE {
+    type = 'recipe',
+    name = 'biomass-cooking-2',
+    category = 'hpf',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'biomass', amount = 15},
+    },
+    results = {
+        {type = 'item', name = 'coke', amount = 5},
+    },
+    --main_product = "casein-pulp-01",
+}:add_unlock("compost")
 
 if not mods['pyhightech'] then
 
