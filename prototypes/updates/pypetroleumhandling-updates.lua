@@ -32,26 +32,6 @@ fun.results_replacer("guar-separation", "organics", "biomass")
 
 RECIPE {
     type = 'recipe',
-    name = 'biomass-1-a',
-    category = 'evaporator',
-    enabled = false,
-    energy_required = 10,
-    ingredients = {
-        {type = 'fluid', name = 'phytoplankton', amount = 20},
-        {type = 'fluid', name = 'hot-air', amount = 100},
-    },
-    results = {
-        {type = 'item', name = 'biomass', amount = 10},
-    },
-    --main_product = "silicon-wafer",
-    icon = '__pyalienlifegraphics__/graphics/icons/biomass.png',
-    icon_size = 32,
-    subgroup = 'py-alienlife-plants',
-    order = 'a'
-}:add_unlock("microbiology-mk01")
-
-RECIPE {
-    type = 'recipe',
     name = 'dried-grods-02',
     category = 'evaporator',
     enabled = false,

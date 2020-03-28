@@ -1,24 +1,5 @@
 require("prototypes/functions/functions")
 
-RECIPE {
-    type = 'recipe',
-    name = 'biomass-1',
-    category = 'evaporator',
-    enabled = false,
-    energy_required = 10,
-    ingredients = {
-        {type = 'fluid', name = 'phytoplankton', amount = 20},
-    },
-    results = {
-        {type = 'item', name = 'biomass', amount = 7},
-    },
-    --main_product = "silicon-wafer",
-    icon = '__pyalienlifegraphics__/graphics/icons/biomass.png',
-    icon_size = 32,
-    subgroup = 'py-alienlife-plants',
-    order = 'a'
-}:add_unlock("microbiology-mk01")
-
 --Example result replacer
 --results_replacer(recipe name*, old item*, new item*, new_amount**)
 --to use copy the local at top to the given file and then add the following line with the required variables
@@ -28,26 +9,6 @@ RECIPE {
 --**optional. whole numbers only
 
 --log(serpent.block(data.raw.recipe["biomass-1"]))
-
-RECIPE {
-    type = 'recipe',
-    name = 'biomass-2',
-    category = 'evaporator',
-    enabled = false,
-    energy_required = 5,
-    ingredients = {
-        {type = 'fluid', name = 'phytoplankton', amount = 20},
-        {type = 'item', name = 'fawogae', amount = 5},
-    },
-    results = {
-        {type = 'item', name = 'biomass', amount = 10},
-    },
-    --main_product = "silicon-wafer",
-    icon = '__pyalienlifegraphics__/graphics/icons/biomass.png',
-    icon_size = 32,
-    subgroup = 'py-alienlife-plants',
-    order = 'a'
-}:add_unlock("mycology-mk02")
 
 RECIPE {
     type = 'recipe',
