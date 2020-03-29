@@ -256,7 +256,7 @@ fluid_boxes = {
         secondary_draw_orders = { north = -1 }
     },
     ]]
-    off_when_no_fluid_recipe = true
+    --off_when_no_fluid_recipe = true
 },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
