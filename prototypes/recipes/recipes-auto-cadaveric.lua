@@ -146,9 +146,9 @@ fun.autorecipes {
 				{
 					--{'a','*25'},
 					--{'a','+3'}
-					{name='cadavericarum',amount ='+1'}
+					{name='cadavericarum',amount ='+6'}
 				},
-				crafting_speed = 100,
+				crafting_speed = 85,
 				tech = 'cadaveric-arum-mk04'
 		},
     --GH
@@ -165,7 +165,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cadavericarum',amount ="+1"}
+					{name='cadavericarum',amount ="+5"}
 				},
 			crafting_speed = 70,
 			tech = 'cadaveric-arum-mk04'
@@ -197,7 +197,7 @@ fun.autorecipes {
 				{
 					{name='cadavericarum',amount ="+3"}
 				},
-			crafting_speed = 70,
+			crafting_speed = 60,
 			tech = 'cadaveric-arum-mk04'
 		},
 		{
@@ -210,9 +210,9 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cadavericarum',amount ="+1"}
+					{name='cadavericarum',amount ="+6"}
 				},
-			crafting_speed = 70,
+			crafting_speed = 55,
 			tech = 'cadaveric-arum-mk04'
 		},
 	}

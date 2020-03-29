@@ -146,15 +146,15 @@ fun.autorecipes {
                     --{'g','*2'},
 					--{'d'},
 					--{name='manure',amount ='R'},
-                    {name='fertilizer',amount ='*7'},
+                    {name='fertilizer',amount ='+7'},
 				},
 			results =
 				{
 					--{'a','*25'},
 					--{'a','+3'}
-					{name='rennea',amount ="+1"}
+					{name='rennea',amount ="+9"}
 				},
-				crafting_speed = 100,
+				crafting_speed = 85,
 				tech = 'rennea-mk04'
 		},
 		{
@@ -174,7 +174,7 @@ fun.autorecipes {
 					--{'a','+3'}
 					{name='rennea',amount ="+1"}
 				},
-				crafting_speed = 100,
+				crafting_speed = 75,
 				tech = 'rennea-mk04'
 		},
     --GH
@@ -235,7 +235,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='rennea',amount ="+2"}
+					{name='rennea',amount ="+5"}
 				},
 			crafting_speed = 70,
 			tech = 'rennea-mk04'
