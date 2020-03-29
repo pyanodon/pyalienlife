@@ -950,6 +950,7 @@ for i, item in pairs(biomass_convertion) do
             name = 'biomass-' .. i,
             category = 'compost',
             enabled = false,
+			hidden = true,
             energy_required = 10,
             ingredients = {
                 {type = type, name = i, amount = item.item_amount},
