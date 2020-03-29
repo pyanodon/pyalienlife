@@ -137,9 +137,9 @@ fun.autorecipes {
 				{
 					--{'a','*25'},
 					--{'a','+3'}
-					{name='moondrop',amount =25}
+					{name='moondrop',amount ='+8'}
 				},
-				crafting_speed = 100,
+				crafting_speed = 85,
 				tech = 'moondrop-mk04'
 		},
 		{
@@ -153,9 +153,9 @@ fun.autorecipes {
 				{
 					--{'a','*25'},
 					--{'a','+3'}
-					{name='moondrop',amount =25}
+					{name='moondrop',amount ='+1'}
 				},
-				crafting_speed = 100,
+				crafting_speed = 75,
 				tech = 'moondrop-mk04'
 		},
     --GH
@@ -170,7 +170,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='moondrop',amount =25}
+					{name='moondrop',amount ='+8'}
 				},
 			crafting_speed = 70,
 			tech = 'moondrop-mk04'
@@ -186,7 +186,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='moondrop',amount =27}
+					{name='moondrop',amount ='+2'}
 				},
 			crafting_speed = 70,
 			tech = 'moondrop-mk04'
@@ -201,7 +201,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='moondrop',amount =29}
+					{name='moondrop',amount ='+3'}
 				},
 			crafting_speed = 70,
 			tech = 'moondrop-mk04'
@@ -216,7 +216,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='moondrop',amount =35}
+					{name='moondrop',amount ='+8'}
 				},
 			crafting_speed = 70,
 			tech = 'moondrop-mk04'
