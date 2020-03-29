@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.4.6
+Date: 2020-03-29
+  Changes:
+    - Balanced all crops for fertilizer better usage.
+    - Removed the remaining biomass alternative recipes.
+    - Hidden all biomass recipes from menu.
+    - Added biomass to coke recipe.
+    - Phadaisus now doesnt need alien enzymes.
+    - Arthurians and Phadais now prefer a fresh cottongut as a snack.
+---------------------------------------------------------------------------------------------------
 Version: 1.4.5
 Date: 2020-03-28
   Changes:
