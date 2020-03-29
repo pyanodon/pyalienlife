@@ -1906,7 +1906,7 @@ RECIPE {
         {type = 'item', name = 'biomass', amount = 10},
     },
     results = {
-        {type = 'item', name = 'raw-coal', amount = 2},
+        {type = 'item', name = 'raw-coal', amount = 5},
     },
     --main_product = "casein-pulp-01",
 }:add_unlock("compost")
