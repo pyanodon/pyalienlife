@@ -116,7 +116,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*17'},
-					{name='tuuphra',amount ='+5'}    --bloodmeal is very expensive 
+					{name='tuuphra',amount ='+5'}
 				},
 				crafting_speed = 100,
 				tech = 'tuuphra-mk03'
