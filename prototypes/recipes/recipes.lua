@@ -98,7 +98,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'empty-petri-dish',
-    category = 'crafting',
+    category = 'glassworks',
     enabled = true,
     energy_required = 3,
     ingredients = {
@@ -1576,6 +1576,7 @@ RECIPE {
         {type = 'item', name = 'chitin', amount = 5},
         {type = 'item', name = 'sodium-hydroxide', amount = 5},
         {type = 'fluid', name = 'mutant-enzymes', amount = 50},
+        {type = 'item', name = 'empty-petri-dish', amount = 2},
     },
     results = {
         {type = 'item', name = 'chitosan', amount = 5},
@@ -1858,6 +1859,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "flask-2",
+    category = 'glassworks',
     enabled = false,
     energy_required = 3,
     ingredients = {
@@ -1878,7 +1880,7 @@ RECIPE {
     type = "recipe",
     name = "flask-3",
     enabled = false,
-    category = 'advanced-foundry',
+    category = 'glassworks',
     energy_required = 5,
     ingredients = {
         {type = "item", name = "glass", amount = 10},

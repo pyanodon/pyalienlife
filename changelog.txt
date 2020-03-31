@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.4.7
+Date: 2020-03-31
+  Changes:
+    - Balanced Cridrens
+    - Adapted recipes to glassworks.
+    - Balanced biomass
+    - Biomass to raw coal balanced.
+    - Balanced tuuphra.
+---------------------------------------------------------------------------------------------------
 Version: 1.4.6
 Date: 2020-03-29
   Changes:

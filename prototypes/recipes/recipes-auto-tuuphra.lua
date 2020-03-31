@@ -27,7 +27,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     --{'s1'},
-					{name='soil',amount ='*10'},
+					{name='soil',amount ='20'},
 				},
 			results =
 				{
@@ -42,7 +42,7 @@ fun.autorecipes {
 				{
                     --{'s1'},
                     --{'a'},
-                    {name='coarse',amount ='+15'},
+                    {name='coarse',amount ='+10'},
 				},
 			results =
 				{
@@ -63,7 +63,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*10'},
-					{name='tuuphra',amount ='+3'}
+					{name='tuuphra',amount ='+2'}
 				},
 				crafting_speed = 100,
 				tech = 'tuuphra-mk02'
@@ -75,12 +75,12 @@ fun.autorecipes {
                     --{'a'},
                     --{'b','+15'},
                     --{'c','*10'},
-                    {name='ash',amount =10},
+                    {name='ash',amount =5},
 				},
 			results =
 				{
 					--{'a','*12'},
-					{name='tuuphra',amount ='+2'}
+					{name='tuuphra',amount ='+3'}
 				},
 				crafting_speed = 100,
 				tech = 'tuuphra-mk02'
@@ -110,13 +110,13 @@ fun.autorecipes {
                     --{'a'},
 					--{'b','+15'},
 					--{name='soil',amount ='R'},
-                    {name='bloodmeal',amount ='*8'},
+                    {name='bloodmeal',amount ='2'},
                     --{'d'},
 				},
 			results =
 				{
 					--{'a','*17'},
-					{name='tuuphra',amount ='+1'}
+					{name='tuuphra',amount ='+5'}    --bloodmeal is very expensive 
 				},
 				crafting_speed = 100,
 				tech = 'tuuphra-mk03'
@@ -129,13 +129,13 @@ fun.autorecipes {
 				   --{'b','+15'},
 				   --{'nitrogen','R'},
 				   --{name='bloodmeal',amount ='R'},
-					{name='nitrogen',amount ='*20'},
+					{name='nitrogen',amount ='*15'},
                     --{'d'},
                 },
 			results =
 				{
 					--{'a','*20'},
-					{name='tuuphra',amount ='+1'}
+					{name='tuuphra',amount ='+2'}
 				},
 				crafting_speed = 100,
 				tech = 'tuuphra-mk03'
@@ -149,13 +149,13 @@ fun.autorecipes {
                     --{'g','*2'},
 					--{'d'},
 					--{name='manure',amount ='R'},
-                    {name='fertilizer',amount ='*5'},
+                    {name='fertilizer',amount ='*2'},
 				},
 			results =
 				{
 					--{'a','*25'},
 					--{'a','+3'}
-					{name='tuuphra',amount ="+1"}
+					{name='tuuphra',amount ="+7"}
 				},
 				crafting_speed = 100,
 				tech = 'tuuphra-mk04'
@@ -169,15 +169,15 @@ fun.autorecipes {
                     --{'g','*2'},
 					--{'d'},
 					--{name='nitrogen',amount ='R'},
-                    {name='smalllamp',amount ='*10'},
+                    {name='smalllamp',amount ='*2'},
 				},
 			results =
 				{
 					--{'a','*25'},
 					--{'a','+3'}
-					{name='tuuphra',amount ="+1"}
+					{name='tuuphra',amount ="+3"}
 				},
-				crafting_speed = 100,
+				crafting_speed = 90,
 				tech = 'tuuphra-mk04'
 		},
     --GH
@@ -192,9 +192,9 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='tuuphra',amount ="+1"}
+					{name='tuuphra',amount ="+4"}
 				},
-			crafting_speed = 70,
+			crafting_speed = 60,
 			tech = 'growth-hormone'
 		},
 		{
@@ -210,37 +210,37 @@ fun.autorecipes {
 				{
 					{name='tuuphra',amount ="+1"}
 				},
-			crafting_speed = 70,
+			crafting_speed = 60,
 			tech = 'growth-hormone'
 		},
 		{
 			ingredients =
 				{
-					{name='bloodmeal',amount ='*10'},
+					{name='bloodmeal',amount ='*2'},
 					{name='manure',amount =10},
 					--{'biomass','R'},
 					--{'gh',1},
 				},
 			results =
 				{
-					{name='tuuphra',amount ="+3"}
+					{name='tuuphra',amount ="+8"}
 				},
-			crafting_speed = 70,
+			crafting_speed = 60,
 			tech = 'growth-hormone'
 		},
 		{
 			ingredients =
 				{
 					{name='manure',amount ='R'},
-					{name='fertilizer',amount =5},
-					{name='urea',amount =15},
+					{name='fertilizer',amount =2},
+					{name='urea',amount =10},
 					--{'gh',1},
 				},
 			results =
 				{
-					{name='tuuphra',amount ="+2"}
+					{name='tuuphra',amount ="+4"}
 				},
-			crafting_speed = 70,
+			crafting_speed = 60,
 			tech = 'growth-hormone'
 		},
 	}
