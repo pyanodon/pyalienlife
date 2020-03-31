@@ -20,7 +20,7 @@ fun.autorecipes {
 				{
 					{name='cridren',amount = '*1'},
 				},
-			crafting_speed = 150,
+			crafting_speed = 120,
 			tech = 'cridren'
 		},
 		{
@@ -34,7 +34,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					--{name='cridren',amount ='+1'}
 				},
-				crafting_speed = 140,
+				crafting_speed = 105,
 				tech = 'cridren'
 		},
 		{
@@ -49,7 +49,7 @@ fun.autorecipes {
 					--{'a','*7'},
 					--{name='cridren',amount ='+1'}
 				},
-				crafting_speed = 130,
+				crafting_speed = 100,
 				tech = 'cridren'
         },
         {
@@ -65,40 +65,51 @@ fun.autorecipes {
 					--{'a','*10'},
 					--{name='cridren',amount ='+1'}
 				},
+				crafting_speed = 90,
+				tech = 'cridren-mk02'
+        },
+        {
+			ingredients =
+				{
+					{name='cridrenseeds',amount ='+1'},
+					{name='manure',amount ='+5'},
+                    {name='soil',amount ='+25'},
+                    {name='fish',amount ='+6'},
+                    {name='cagedarthurian',amount = '+1'},
+                    {name='ash',amount ='20'},
+				},
+			results =
+				{
+					--{'a','*12'},
+					{name='cridren',amount ='+1'}
+				},
 				crafting_speed = 120,
 				tech = 'cridren-mk02'
         },
         {
 			ingredients =
 				{
-                    --{'s1'},
-                    --{'a'},
-                    --{'b','+15'},
-                    --{'c','*10'},
-                    {name='ash',amount =10},
-				},
-			results =
-				{
-					--{'a','*12'},
-					--{name='cridren',amount ='+2'}
-				},
-				crafting_speed = 110,
-				tech = 'cridren-mk02'
-        },
-        {
-			ingredients =
-				{
-                    --{'s1'},
-                    --{'a'},
-					--{'b','+15'},
-					{name='ash',amount ='R'},
-                    {name='biomass',amount ='*10'},
+                    {name='biomass',amount ='*30'},
                     --{'d'},
 				},
 			results =
 				{
 					--{'a','*15'},
 					--{name='cridren',amount ='+1'}
+				},
+				crafting_speed = 110,
+				tech = 'cridren-mk03'
+        },
+        {
+			ingredients =
+				{
+				   {name='soil',amount ='R'},
+					{name='bones',amount ='*20'},
+                },
+			results =
+				{
+					--{'a','*20'},
+					--{name='cridren',amount ='+3'}
 				},
 				crafting_speed = 100,
 				tech = 'cridren-mk03'
@@ -107,51 +118,27 @@ fun.autorecipes {
 			ingredients =
 				{
                     --{'s1'},
-                    --{'a'},
-				   --{'b','+15'},
-				   --{'carbondioxide','R'},
-				   {name='soil',amount ='R'},
-					{name='bones',amount ='*10'},
-                    --{'d'},
-                },
-			results =
-				{
-					--{'a','*20'},
-					--{name='cridren',amount ='+3'}
-				},
-				crafting_speed = 80,
-				tech = 'cridren-mk03'
-        },
-        {
-			ingredients =
-				{
-                    --{'s1'},
-                    --{'a'},
-                    --{'b','+15'},
-                    --{'g','*2'},
-					--{'d'},
+                    {name='cagedarthurian',amount = '+1'},
+                    {name='cridrenseeds',amount ='+1'},
+                    {name='fish',amount ='+4'},
+					{name='bones',amount ='+10'},
 					{name='manure',amount ='R'},
-                    {name='fertilizer',amount ='+4'},
+                    {name='fertilizer',amount =15},
 				},
 			results =
 				{
 					--{'a','*25'},
 					--{'a','+3'}
-					--{name='cridren',amount =25}
+					{name='cridren',amount ='+1'}
 				},
-				crafting_speed = 70,
+				crafting_speed = 120,
 				tech = 'cridren-mk04'
 		},
 		{
 			ingredients =
 				{
-                    --{'s1'},
-                    --{'a'},
-                    --{'b','+15'},
-                    --{'g','*2'},
-					--{'d'},
 					{name='bones',amount ='R'},
-                    {name='soil',amount ='*20'},
+                    {name='soil',amount ='+40'},
 				},
 			results =
 				{
@@ -159,7 +146,7 @@ fun.autorecipes {
 					--{'a','+3'}
 					--{name='cridren',amount =25}
 				},
-				crafting_speed = 60,
+				crafting_speed = 110,
 				tech = 'cridren-mk04'
 		},
     --GH
@@ -169,14 +156,15 @@ fun.autorecipes {
 					--{name='biomass',amount ='R'},
 					--{name='soil',amount ='R'},
 					--{name='manure',amount ='R'},
-					--{name='fertilizer',amount ='R'},
+					--{name='cridrenseeds',amount =2},
 					{name='gh',1},
+					--{name='cagedarthurian',amount =2},
 				},
 			results =
 				{
 					--{name='cridren',amount =25}
 				},
-			crafting_speed = 40,
+			crafting_speed = 75,
 			tech = 'cridren-mk04'
 		},
 		{
@@ -192,7 +180,7 @@ fun.autorecipes {
 				{
 					{name='cridren',amount ='+1'}
 				},
-			crafting_speed = 30,
+			crafting_speed = 60,
 			tech = 'cridren-mk04'
 		},
 		{
@@ -207,21 +195,23 @@ fun.autorecipes {
 				{
 					{name='cridren',amount ='+1'}
 				},
-			crafting_speed = 30,
+			crafting_speed = 55,
 			tech = 'cridren-mk04'
 		},
 		{
 			ingredients =
 				{
 					{name='manure',amount ='*10'},
-					{name='urea',amount =15},
-					--{'gh',1},
+					{name='urea',amount =30},
+					{name='gh',amount ='+1'},
+					{name='cridrenseeds',amount ='+1'},
+					{name='cagedarthurian',amount = '+1'},
 				},
 			results =
 				{
-					{name='cridren',amount ='+1'}
+					{name='cridren',amount ='+2'}
 				},
-			crafting_speed = 30,
+			crafting_speed = 50,
 			tech = 'cridren-mk04'
 		},
 	}
