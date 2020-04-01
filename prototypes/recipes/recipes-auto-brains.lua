@@ -633,6 +633,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
+					{name='photophore', amount ='R'},
 					{name='brain', amount =2},
 				},
 			crafting_speed = 15,
