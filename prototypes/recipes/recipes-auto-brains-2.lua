@@ -568,6 +568,7 @@ fun.autorecipes {
 					{name='meat', amount ='R'},
 					{name='skin', amount ='R'},
 					{name='fat', amount ='R'},
+					{name='photophore', amount ='R'},
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
