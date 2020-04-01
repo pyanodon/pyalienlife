@@ -384,7 +384,7 @@ RECIPE {
     enabled = false,
     energy_required = 70,
     ingredients = {
-        {type = 'item', name = 'plasmids', amount = 6},
+        {type = 'item', name = 'plasmids', amount = 5},
         {type = 'item', name = 'bio-sample', amount = 20},
         {type = 'item', name = 'cdna', amount = 2},
         {type = 'item', name = 'petri-dish', amount = 20},
@@ -394,7 +394,7 @@ RECIPE {
         {type = 'item', name = 'pineal-gland', amount = 3}
     },
     results = {
-        {type = 'item', name = 'gh', amount = 50}
+        {type = 'item', name = 'gh', amount = 60}
     }
 }:add_unlock('growth-hormone')
 
@@ -921,22 +921,22 @@ RECIPE {
     name = 'pheromones',
     category = 'bio-reactor',
     enabled = false,
-    energy_required = 10,
+    energy_required = 150,
     ingredients = {
-        {type = 'item', name = 'lignin', amount = 20},
-        {type = 'item', name = 'ticocr-alloy', amount = 1},
-        {type = 'item', name = 'metallic-glass', amount = 2},
-        {type = 'item', name = 'bio-sample', amount = 15},
-        {type = 'item', name = 'cridren-seeds', amount = 20},
-        {type = 'item', name = 'gas-bladder', amount = 3},
-        {type = 'item', name = 'alien-enzymes', amount = 1},
-        {type = 'fluid', name = 'creosote', amount = 200},
-        {type = 'fluid', name = 'bacteria-1', amount = 40},
+        {type = 'item', name = 'lignin', amount = 200},
+        {type = 'item', name = 'ticocr-alloy', amount = 3},
+        {type = 'item', name = 'metallic-glass', amount = 10},
+        {type = 'item', name = 'bio-sample', amount = 25},
+        {type = 'item', name = 'cridren-seeds', amount = 7},
+        {type = 'item', name = 'gas-bladder', amount = 17},
+        {type = 'item', name = 'alien-enzymes', amount = 3},
+        {type = 'fluid', name = 'creosote', amount = 1000},
+        {type = 'fluid', name = 'bacteria-1', amount = 300},
     },
     results = {
-        {type = 'item', name = 'pheromones', amount = 5}
+        {type = 'item', name = 'pheromones', amount = 100}
     }
-}:add_unlock('pheromones'):add_ingredient({type = "item", name = "biopolymer", amount = 3})
+}:add_unlock('pheromones'):add_ingredient({type = "item", name = "biopolymer", amount = 10})
 
 RECIPE {
     type = 'recipe',
