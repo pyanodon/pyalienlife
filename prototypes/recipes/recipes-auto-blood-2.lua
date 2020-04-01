@@ -125,7 +125,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cottongut',amount=1},
+					{name='cottongut',amount=5},
 				},
 			results =
 				{
