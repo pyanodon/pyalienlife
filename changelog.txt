@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.4.8
+Date: 2020-04-01
+  Changes:
+    - Buffed power cycles.
+    - Fixed Trits.
+    - Decreased rennea to lower tech level.
+    - Balanced Growth Hormone and Antiviral.
+---------------------------------------------------------------------------------------------------
 Version: 1.4.7
 Date: 2020-03-31
   Changes:
