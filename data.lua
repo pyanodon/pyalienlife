@@ -890,7 +890,7 @@ local biomass_convertion =
         ['glycerol'] = {item_amount = 10, biomass_amount = 10, type = 'fluid'},
         ['oleochemicals'] = {item_amount = 10, biomass_amount = 10, type = 'fluid'},
         ['xyhiphoe-blood'] = {item_amount = 10, biomass_amount = 10, type = 'fluid'},
-        ['phytoplankton'] = {item_amount = 10, biomass_amount = 40, type = 'fluid'},
+        ['phytoplankton'] = {item_amount = 10, biomass_amount = 30, type = 'fluid'},
         ['a-molasse'] = {item_amount = 10, biomass_amount = 12, type = 'fluid'},
         ['arthropod-blood'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'},
         ['b-molasse'] = {item_amount = 10, biomass_amount = 12, type = 'fluid'},

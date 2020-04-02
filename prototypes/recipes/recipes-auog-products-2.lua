@@ -82,7 +82,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='manure',amount ='+1'}
+					{name='manure',amount ='+6'}
 				},
 				crafting_speed = 40,
 				tech = 'bigger-colon',

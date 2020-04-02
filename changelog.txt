@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.4.9
+Date: 2020-04-02
+  Changes:
+    - Added unlock for MK levels of phythoplankon farms.
+    - Fixed modules in data-array and bio-reactors.
+    - Fixed manure updates.
+---------------------------------------------------------------------------------------------------
 Version: 1.4.8
 Date: 2020-04-01
   Changes:
