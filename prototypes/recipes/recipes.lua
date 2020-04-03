@@ -1630,7 +1630,7 @@ RECIPE {
         {type = 'fluid', name = 'bacteria-1', amount = 100},
     },
     results = {
-        {type = 'item', name = 'biobattery', amount = 1},
+        {type = 'item', name = 'biobattery', amount = 5},
     },
 }:add_unlock("chitin"):add_ingredient({type = "item", name = "ceramic", amount = 5})
 
