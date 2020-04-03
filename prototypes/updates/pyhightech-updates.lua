@@ -392,10 +392,10 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'carapace', amount = 10},
+        {type = 'item', name = 'carapace', amount = 5},
     },
     results = {
-        {type = 'item', name = 'rare-earth-ore', amount = 5},
+        {type = 'item', name = 'rare-earth-ore', amount = 20},
     },
     --main_product = "cocoon",
 }:add_unlock("molecular-decohesion-mk03")
@@ -410,7 +410,7 @@ RECIPE {
         {type = 'item', name = 'meat', amount = 10},
     },
     results = {
-        {type = 'fluid', name = 'cyanic-acid', amount = 30},
+        {type = 'fluid', name = 'cyanic-acid', amount = 50},
     },
     --main_product = "cocoon",
 }:add_unlock("molecular-decohesion-mk02")
@@ -422,10 +422,10 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'kicalk-seeds', amount = 30},
+        {type = 'item', name = 'kicalk-seeds', amount = 5},
     },
     results = {
-        {type = 'item', name = 'iron-ore', amount = 5},
+        {type = 'item', name = 'iron-ore', amount = 20},
     },
     --main_product = "cocoon",
 }:add_unlock("molecular-decohesion-mk03")
@@ -437,7 +437,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'cadaveric-arum', amount = 2},
+        {type = 'item', name = 'cadaveric-arum', amount = 1},
     },
     results = {
         {type = 'item', name = 'sulfur', amount = 10},
@@ -452,7 +452,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'cadaveric-arum', amount = 2},
+        {type = 'item', name = 'cadaveric-arum', amount = 1},
     },
     results = {
         {type = 'item', name = 'copper-ore', amount = 10},
@@ -808,10 +808,10 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'chitin', amount = 7},
+        {type = 'item', name = 'chitin', amount = 1},
     },
     results = {
-        {type = 'item', name = 'phosphate-rock', amount = 4},
+        {type = 'item', name = 'phosphate-rock', amount = 7},
     },
     --main_product = "cocoon",
 }:add_unlock("molecular-decohesion-mk02")
@@ -823,10 +823,10 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'meat', amount = 10},
+        {type = 'item', name = 'meat', amount = 13},
     },
     results = {
-        {type = 'item', name = 'phosphate-rock', amount = 4},
+        {type = 'item', name = 'phosphate-rock', amount = 3},
     },
     --main_product = "cocoon",
 }:add_unlock("molecular-decohesion")
@@ -841,7 +841,7 @@ RECIPE {
         {type = 'item', name = 'fish', amount = 10},
     },
     results = {
-        {type = 'item', name = 'phosphate-rock', amount = 6},
+        {type = 'item', name = 'phosphate-rock', amount = 1},
     },
     --main_product = "cocoon",
 }:add_unlock("molecular-decohesion-mk02")
@@ -853,10 +853,10 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'wood-seeds', amount = 30},
+        {type = 'item', name = 'wood-seeds', amount = 20},
     },
     results = {
-        {type = 'item', name = 'phosphate-rock', amount = 7},
+        {type = 'item', name = 'phosphate-rock', amount = 2},
     },
     --main_product = "cocoon",
 }:add_unlock("molecular-decohesion")
@@ -871,7 +871,7 @@ RECIPE {
         {type = 'item', name = 'rennea-seeds', amount = 10},
     },
     results = {
-        {type = 'item', name = 'phosphate-rock', amount = 8},
+        {type = 'item', name = 'phosphate-rock', amount = 3},
     },
     --main_product = "cocoon",
 }:add_unlock("molecular-decohesion-mk03")
