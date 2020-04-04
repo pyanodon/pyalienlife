@@ -240,6 +240,7 @@ data:extend(
         weight = 600,
         inventory_size = 250,
         --guns = {"flamethrower"}
+        render_layer = 'air-object'
       }
     }
   )

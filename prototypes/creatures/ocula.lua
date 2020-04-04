@@ -38,7 +38,7 @@ ITEM{
         icon = "__pyalienlifegraphics__/graphics/icons/ocula.png",
         icon_size = 64,
         flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "not-repairable", "breaths-air"},
-      minable = {mining_time = 0.1, result = 'ocula'},
+        minable = {mining_time = 0.1, result = 'ocula'},
         max_health = 25,
         order = "b-b-a",
         subgroup="enemies",
@@ -166,21 +166,6 @@ ITEM{
           }
         }
       },
+      render_layer = 'air-object'
       }
-    --[[
-      caravan.add_arthur_die_animation(scale, --small_biter_tint1, small_biter_tint2,
-      {
-        type = "corpse",
-        name = "caravan-corpse",
-        icon = "__base__/graphics/icons/small-biter-corpse.png",
-        icon_size = 32,
-        selection_box = {{-0.8, -0.8}, {0.8, 0.8}},
-        selectable_in_game = false,
-        subgroup="corpses",
-        order = "c[corpse]-a[biter]-a[small]",
-        flags = {"placeable-neutral", "placeable-off-grid", "building-direction-8-way", "not-repairable", "not-on-map"}
-      }
-      )
-      ]]--
-      }
-      )
+})
