@@ -446,6 +446,7 @@ end
 local function built_ocula(event)
 	local E = event
 	local base
+	local unit_num
 	local box_search =
 		game.surfaces["nauvis"].find_entities_filtered {position = E.position, radius = 100, type = "container"}
 	for _, con in pairs(box_search) do
@@ -454,9 +455,14 @@ local function built_ocula(event)
 			break
 		end
 	end
+	if base == nil then
+		unit_num = ''
+	else
+		unit_num = base.unit_number
+	end
 	global.ocula_master_table.ocula[E.unit_number] = {
 		entity = E,
-		base = base.unit_number,
+		base = unit_num,
 		current_inventory = {
 			item_name = "",
 			amount = ""
@@ -475,6 +481,7 @@ local function built_ocula(event)
 		global.ocula_master_table.ocula_boxes[base.unit_number].total_ocula_count =
 			global.ocula_master_table.ocula_boxes[base.unit_number].total_ocula_count + 1
 	end
+	log(serpent.block(global.ocula_master_table.ocula[E.unit_number]))
 end
 
 script.on_event(
@@ -521,6 +528,21 @@ script.on_event(
 				total_ocula_count = 0,
 				inactive_ocula = 0
 			}
+			local icheck = game.surfaces['nauvis'].find_entities_filtered{position = E.position, radius = 100, type = 'unit'}
+			for _, entity in pairs(icheck) do
+				if entity.name == 'ocula' then
+					if global.ocula_master_table.ocula[entity.unit_number].base == '' then
+						global.ocula_master_table.ocula[entity.unit_number].base = E.unit_number
+						global.ocula_master_table.ocula[entity.unit_number].entity.set_command {
+							type = defines.command.go_to_location,
+							destination_entity = E,
+							radius = 0.5
+						}
+						global.ocula_master_table.ocula_boxes[E.unit_number].total_ocula_count = global.ocula_master_table.ocula_boxes[E.unit_number].total_ocula_count + 1
+					end
+				end
+			end
+			log(serpent.block(global.ocula_master_table))
 		elseif E.name == "ocula" then
 			built_ocula(E)
 		elseif global.has_built_first_farm == false then
@@ -534,6 +556,26 @@ script.on_event(
 			for _, farm in pairs(farm_buildings) do
 				if string.match(E.name, farm) then
 					disable_machine(E)
+				end
+			end
+		end
+		if E.name == 'clone-1' then
+			local group = game.surfaces['nauvis'].create_unit_group{position = E.position, force = E.force}
+			group.add_member(E)
+			log(serpent.block(E.unit_group.group_number))
+			local x = 0
+			local y = 0
+			for i=1,704 do
+			rendering.draw_sprite{
+				sprite = 'bio-tree-' .. i,
+				render_layer = '188',
+				target = {x,y},
+				surface = E.surface.name
+			}
+			x = x + 2
+				if x == 50 then
+					x = 0
+					y = y + 2
 				end
 			end
 		end
