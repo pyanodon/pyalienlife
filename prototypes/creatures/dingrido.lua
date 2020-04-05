@@ -41,7 +41,7 @@ data:extend(
         flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-flammable"},
         minable = {mining_time = 0.5, result = "dingrido"},
         mined_sound = {filename = "__core__/sound/deconstruct-medium.ogg"},
-        max_health = 3000,
+        max_health = 10000,
         corpse = "medium-biter-corpse",
         dying_explosion = "blood-explosion-huge",
         alert_icon_shift = util.by_pixel(-4, -13),
@@ -88,8 +88,8 @@ data:extend(
           fuel_inventory_size = 1,
         },
         consumption = "500kW",
-        terrain_friction_modifier = 0.01,
-        friction = 0.001,
+        terrain_friction_modifier = 0.001,
+        friction = 0.0001,
         light =
         {
           {
@@ -323,7 +323,7 @@ data:extend(
         close_sound = { filename = "__pyalienlifegraphics3__/sounds/dingrito-out.ogg", volume = 0.9 },
         rotation_speed = 0.0035,
         tank_driving = true,
-        weight = 9000,
+        weight = 7000,
         inventory_size = 250,
         guns = {}
       }

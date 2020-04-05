@@ -41,7 +41,7 @@ data:extend(
         flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-flammable"},
         minable = {mining_time = 0.5, result = "qaavi"},
         mined_sound = {filename = "__core__/sound/deconstruct-medium.ogg"},
-        max_health = 4000,
+        max_health = 5000,
         has_belt_immunity = false,
         corpse = "big-biter-corpse",
         dying_explosion = "blood-explosion-huge",
@@ -82,7 +82,7 @@ data:extend(
         selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
         drawing_box = {{-1.8, -1.8}, {1.8, 1.8}},
         effectivity = 1,
-        braking_power = "200kW",
+        braking_power = "2000kW",
         burner =
         {
           fuel_category = "food",
@@ -91,7 +91,7 @@ data:extend(
         },
         consumption = "140kW",
         --terrain_friction_modifier = 0.01,
-        friction = 3e-3,
+        friction = 0.001,
         light =
         {
           {
