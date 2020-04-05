@@ -466,7 +466,7 @@ require('prototypes/ores/fake-plants')
 local biomass_convertion =
     {
         ['ralesia'] = {item_amount = 1, biomass_amount = 1},
-        ['wood'] = {item_amount = 5, biomass_amount = 7},
+        ['wood'] = {item_amount = 5, biomass_amount = 15},
         ['cocoon'] = {item_amount = 1, biomass_amount = 1},
         ['bhoddos-spore'] = {item_amount = 10, biomass_amount = 1},
         ['bonemeal'] = {item_amount = 1, biomass_amount = 3},
@@ -678,9 +678,9 @@ local biomass_convertion =
         ['skin-cottongut'] = {item_amount = 5, biomass_amount = 5},
         ['cottongut'] = {item_amount = 10, biomass_amount = 5},
         ['cottongut-pup'] = {item_amount = 10, biomass_amount = 3},
-        ['moss'] = {item_amount = 3, biomass_amount = 4},
+        ['moss'] = {item_amount = 3, biomass_amount = 13},
         ['wood-seedling'] = {item_amount = 1, biomass_amount = 1},
-        ['wood-seeds'] = {item_amount = 10, biomass_amount = 7},
+        ['wood-seeds'] = {item_amount = 4, biomass_amount = 30},
         ['seaweed'] = {item_amount = 1, biomass_amount = 2},
         ['ralesia-seeds'] = {item_amount = 1, biomass_amount = 1},
         ['saps'] = {item_amount = 10, biomass_amount = 1},
@@ -919,7 +919,6 @@ local biomass_convertion =
         ['condensed-distillate'] = {item_amount = 10, biomass_amount = 4, type = 'fluid'},
         ['naphtha'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'},
         ['scrude'] = {item_amount = 10, biomass_amount = 3, type = 'fluid'},
-
     }
 
 local type
