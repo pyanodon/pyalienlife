@@ -273,20 +273,20 @@ RECIPE {
     name = 'anabolic-rna',
     category = 'research',
     enabled = false,
-    energy_required = 15,
+    energy_required = 380,
     ingredients = {
-        {type = 'item', name = 'adam42-gen', amount = 1},
-        {type = 'item', name = 'cysteine', amount = 1},
-        {type = 'item', name = 'alien-enzymes', amount = 1},
-        {type = 'item', name = 'meat', amount = 10},
-        {type = 'item', name = 'adrenal-cortex', amount = 5},
-        {type = 'item', name = 'lab-instrument', amount = 5},
-        {type = 'fluid', name = 'gta', amount = 50},
-        {type = 'item', name = 'flask', amount = 5},
-        {type = 'item', name = 'purine-analogues', amount = 1},
+        {type = 'item', name = 'adam42-gen', amount = 3},
+        {type = 'item', name = 'cysteine', amount = 3},
+        {type = 'item', name = 'alien-enzymes', amount = 3},
+        {type = 'item', name = 'meat', amount = 60},
+        {type = 'item', name = 'adrenal-cortex', amount = 25},
+        {type = 'item', name = 'lab-instrument', amount = 50},
+        {type = 'fluid', name = 'gta', amount = 150},
+        {type = 'item', name = 'flask', amount = 50},
+        {type = 'item', name = 'purine-analogues', amount = 3},
     },
     results = {
-        {type = 'item', name = 'anabolic-rna', amount = 10},
+        {type = 'item', name = 'anabolic-rna', amount = 300},
     },
 }:add_unlock("anabolic-rna")
 
@@ -499,14 +499,14 @@ RECIPE {
     name = 'chimeric-proteins',
     category = 'genlab',
     enabled = false,
-    energy_required = 20,
+    energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'magnetic-beads', amount = 5},
+        {type = 'item', name = 'magnetic-beads', amount = 15},
         {type = 'item', name = 'retrovirus', amount = 4},
-        {type = 'fluid', name = 'ethanol', amount = 100},
+        {type = 'fluid', name = 'ethanol', amount = 500},
     },
     results = {
-        {type = 'item', name = 'chimeric-proteins', amount = 1},
+        {type = 'item', name = 'chimeric-proteins', amount = 5},
     },
 }:add_unlock("chitin"):add_ingredient({type = "fluid", name = "ethylene-glycol", amount = 50})
 

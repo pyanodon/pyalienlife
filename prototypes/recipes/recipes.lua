@@ -1603,17 +1603,17 @@ RECIPE {
     name = 'filtration-media-2',
     category = 'crafting',
     enabled = false,
-    energy_required = 20,
+    energy_required = 100,
     ingredients = {
-        {type = 'item', name = 'gravel', amount = 25},
-        {type = 'item', name = 'active-carbon', amount = 5},
-        {type = 'item', name = 'nanofibrils', amount = 1},
-        {type = 'item', name = 'cellulose', amount = 5},
+        {type = 'item', name = 'gravel', amount = 100},
+        {type = 'item', name = 'active-carbon', amount = 25},
+        {type = 'item', name = 'nanofibrils', amount = 2},
+        {type = 'item', name = 'cellulose', amount = 25},
     },
     results = {
-        {type = 'item', name = 'filtration-media', amount = 15},
+        {type = 'item', name = 'filtration-media', amount = 100},
     },
-}:add_unlock("chitin"):add_ingredient({type = "item", name = "micro-fiber", amount = 5})
+}:add_unlock("chitin"):add_ingredient({type = "item", name = "micro-fiber", amount = 20})
 
 RECIPE {
     type = 'recipe',
