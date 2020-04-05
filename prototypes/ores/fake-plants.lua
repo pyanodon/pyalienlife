@@ -7,7 +7,7 @@ for _, ore in pairs(data.raw.resource) do
       local x = 0
       local y = 0
       for i = 1, 704 do 
-        log(i)
+        --log(i)
       data:extend({
         {
           type = "sprite",

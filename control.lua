@@ -583,6 +583,32 @@ script.on_event(
 	end
 )
 
+script.on_event(defines.events.on_entity_died, function(event)
+
+	local E = event.entity
+
+	if E.name == 'ipod' then
+		global.ocula_master_table.ocula_boxes[E.unit_number] = nil
+	elseif E.name == 'ocula' then
+		log(serpent.block(global.ocula_master_table))
+		--reducing ocula box entity count
+		global.ocula_master_table.ocula_boxes[global.ocula_master_table.ocula[E.unit_number].base].total_ocula_count = global.ocula_master_table.ocula_boxes[global.ocula_master_table.ocula[E.unit_number].base].total_ocula_count - 1
+
+		--removing ocula box refernece to this entity
+		global.ocula_master_table.ocula_boxes[global.ocula_master_table.ocula[E.unit_number].base].assigned_active_occula[E.unit_number] = nil
+
+		--removing the enroute item carried by this ocula by the amount it was carrying to allow more to be dispatched
+		global.ocula_master_table.requested_items[global.ocula_master_table.ocula[E.unit_number].target_item] = global.ocula_master_table.requested_items[global.ocula_master_table.ocula[E.unit_number].target_item] - global.ocula_master_table.ocula[E.unit_number].target_amount
+		if global.ocula_master_table.requested_items[global.ocula_master_table.ocula[E.unit_number].target_item] == 0 then
+			global.ocula_master_table.requested_items[global.ocula_master_table.ocula[E.unit_number].target_item] = nil
+		end
+
+		--deleting ocula
+		global.ocula_master_table.ocula[E.unit_number] = nil
+	end
+
+end)
+
 script.on_event(
 	defines.events.on_put_item,
 	function()
@@ -715,11 +741,11 @@ script.on_event(
 		end
 
 		if event.result == defines.behavior_result.success then
-			log("hit")
+			--log("hit")
 			if global.ocula_master_table.ocula[event.unit_number] ~= nil then
 				local ocula = global.ocula_master_table.ocula[event.unit_number]
 				if ocula.getting_items == false and ocula.delivering_items == false and ocula.entity.valid then
-					log("hit")
+					--log("hit")
 					--log(serpent.block(global.ocula_master_table))
 					if
 						global.ocula_master_table.ocula_boxes[ocula.base].entity.get_inventory(defines.inventory.chest).can_insert(
@@ -910,7 +936,7 @@ script.on_nth_tick(30, function()
 											--log("hit")
 											local ocula =
 												game.surfaces["nauvis"].create_entity {name = "ocula", position = oc_box.position, force = oc_box.force}
-											ocula_box.assigned_active_occula[ocula.unit_number] = ocula
+											ocula_box.assigned_active_occula[ocula.unit_number] = ocula.unit_number
 											local destination = log_net.select_pickup_point {name = i, position = oc_box.position}
 											--log(serpent.block(destination))
 											local amount
@@ -949,7 +975,7 @@ script.on_nth_tick(30, function()
 												destination_entity = destination.owner,
 												radius = 0.5
 											}
-										--log(serpent.block(global.ocula_master_table))
+										log(serpent.block(global.ocula_master_table))
 										return
 										end
 									end
