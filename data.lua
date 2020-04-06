@@ -274,7 +274,7 @@ require('prototypes/buildings/mega-farm')
 require('prototypes/buildings/vat-brain')
 require("prototypes/buildings/harvester")
 require("prototypes/buildings/collector")
-require("prototypes/buildings/ipod")
+--require("prototypes/buildings/ipod")
 require('prototypes/buildings/prandium-lab-mk01')
 require('prototypes/buildings/prandium-lab-mk02')
 require('prototypes/buildings/prandium-lab-mk03')
@@ -293,8 +293,8 @@ require('prototypes/creatures/caravan')
 require('prototypes/creatures/dingrido')
 require('prototypes/creatures/crawdad')
 require('prototypes/creatures/phadaisus')
-require('prototypes/creatures/ocula')
-require('prototypes/creatures/clone-1')
+--require('prototypes/creatures/ocula')
+--require('prototypes/creatures/clone-1')
 
 --(( FLUIDS ))--
 require("prototypes/fluids/zogna-bacteria")
@@ -461,7 +461,7 @@ data.raw["utility-constants"].default.recipe_step_limit = 2000;
 
 --sprities
 require('prototypes/sprites/sprites')
-require('prototypes/ores/fake-plants')
+--require('prototypes/ores/fake-plants')
 
 local biomass_convertion =
     {

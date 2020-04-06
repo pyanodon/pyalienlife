@@ -584,6 +584,7 @@ script.on_event(
 )
 
 local function ocula_removed(event)
+	local E = event.entity
 	local OT = global.ocula_master_table
 	log(serpent.block(OT))
 	--reducing ocula box entity count
@@ -593,17 +594,18 @@ local function ocula_removed(event)
 	OT.ocula_boxes[OT.ocula[E.unit_number].base].assigned_active_occula[E.unit_number] = nil
 
 	--removing the enroute item carried by this ocula by the amount it was carrying to allow more to be dispatched
+	local ocula = OT.ocula
 	local oci = ocula[E.unit_number].current_inventory
-	if OT.requested_items[OT.oci.item_name] ~= nil then
-		OT.requested_items[OT.oci.item_name] = OT.requested_items[OT.oci.item_name] - OT.oci.amount
-		if OT.requested_items[OT.oci.item_name] == 0 then
-			OT.requested_items[OT.oci.item_name] = nil
+	if OT.requested_items[oci.item_name] ~= nil then
+		OT.requested_items[oci.item_name] = OT.requested_items[oci.item_name] - oci.amount
+		if OT.requested_items[oci.item_name] == 0 then
+			OT.requested_items[oci.item_name] = nil
 		end
 	end
-	if OT.item_in_route[OT.oci.item_name] ~= nil then
-		OT.item_in_route[OT.oci.item_name] = OT.item_in_route[OT.oci.item_name] - OT.oci.amount
-		if OT.item_in_route[OT.oci.item_name] == 0 then
-			OT.item_in_route[OT.oci.item_name] = nil
+	if OT.item_in_route[oci.item_name] ~= nil then
+		OT.item_in_route[oci.item_name] = OT.item_in_route[oci.item_name] - oci.amount
+		if OT.item_in_route[oci.item_name] == 0 then
+			OT.item_in_route[oci.item_name] = nil
 		end
 	end
 
