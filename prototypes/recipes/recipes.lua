@@ -704,7 +704,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'alien-enzymes', amount = 1}
     }
-}:add_unlock('pharmagenomics'):add_ingredient({type = "item", name = "paramagnetic-material", amount = 1}):add_ingredient({type = "item", name = "diamagnetic-material", amount = 1})
+}:add_unlock('pharmagenomics'):add_ingredient({type = "item", name = "paramagnetic-material", amount = 1})--:add_ingredient({type = "item", name = "diamagnetic-material", amount = 1})
 
 RECIPE {
     type = 'recipe',

@@ -583,6 +583,34 @@ script.on_event(
 	end
 )
 
+local function ocula_removed(event)
+	local OT = global.ocula_master_table
+	log(serpent.block(OT))
+	--reducing ocula box entity count
+	OT.ocula_boxes[OT.ocula[E.unit_number].base].total_ocula_count = OT.ocula_boxes[OT.ocula[E.unit_number].base].total_ocula_count - 1
+
+	--removing ocula box refernece to this entity
+	OT.ocula_boxes[OT.ocula[E.unit_number].base].assigned_active_occula[E.unit_number] = nil
+
+	--removing the enroute item carried by this ocula by the amount it was carrying to allow more to be dispatched
+	local oci = ocula[E.unit_number].current_inventory
+	if OT.requested_items[OT.oci.item_name] ~= nil then
+		OT.requested_items[OT.oci.item_name] = OT.requested_items[OT.oci.item_name] - OT.oci.amount
+		if OT.requested_items[OT.oci.item_name] == 0 then
+			OT.requested_items[OT.oci.item_name] = nil
+		end
+	end
+	if OT.item_in_route[OT.oci.item_name] ~= nil then
+		OT.item_in_route[OT.oci.item_name] = OT.item_in_route[OT.oci.item_name] - OT.oci.amount
+		if OT.item_in_route[OT.oci.item_name] == 0 then
+			OT.item_in_route[OT.oci.item_name] = nil
+		end
+	end
+
+	--deleting ocula
+	OT.ocula[E.unit_number] = nil
+end
+
 script.on_event(defines.events.on_entity_died, function(event)
 
 	local E = event.entity
@@ -590,21 +618,7 @@ script.on_event(defines.events.on_entity_died, function(event)
 	if E.name == 'ipod' then
 		global.ocula_master_table.ocula_boxes[E.unit_number] = nil
 	elseif E.name == 'ocula' then
-		log(serpent.block(global.ocula_master_table))
-		--reducing ocula box entity count
-		global.ocula_master_table.ocula_boxes[global.ocula_master_table.ocula[E.unit_number].base].total_ocula_count = global.ocula_master_table.ocula_boxes[global.ocula_master_table.ocula[E.unit_number].base].total_ocula_count - 1
-
-		--removing ocula box refernece to this entity
-		global.ocula_master_table.ocula_boxes[global.ocula_master_table.ocula[E.unit_number].base].assigned_active_occula[E.unit_number] = nil
-
-		--removing the enroute item carried by this ocula by the amount it was carrying to allow more to be dispatched
-		global.ocula_master_table.requested_items[global.ocula_master_table.ocula[E.unit_number].target_item] = global.ocula_master_table.requested_items[global.ocula_master_table.ocula[E.unit_number].target_item] - global.ocula_master_table.ocula[E.unit_number].target_amount
-		if global.ocula_master_table.requested_items[global.ocula_master_table.ocula[E.unit_number].target_item] == 0 then
-			global.ocula_master_table.requested_items[global.ocula_master_table.ocula[E.unit_number].target_item] = nil
-		end
-
-		--deleting ocula
-		global.ocula_master_table.ocula[E.unit_number] = nil
+		ocula_removed(E)
 	end
 
 end)
@@ -1011,10 +1025,7 @@ script.on_event(
 				end
 			end
 		end
-		if
-			next(global.farm_count) ~= nil and global.farm_count_last > 0
-		 --
-		 then
+		if next(global.farm_count) ~= nil and global.farm_count_last > 0 then
 			--log(serpent.block(global.farms))
 			--log(serpent.block(global.farm_count))
 			--log(serpent.block(global.farm_count_last))
@@ -1024,21 +1035,20 @@ script.on_event(
 			--log(k)
 			--log(v)
 		end
-		]] local start_num =
-				global.checked_farm_counter
+		]]
+		local start_num = global.checked_farm_counter
 			for i = global.checked_farm_counter, global.farm_count_last do
 				--log('hit')
 				--log(i)
 				--log(serpent.block(global.farms))
 				--log(serpent.block(global.farms[global.farm_count[i]]))
-				--if global.farms[global.farm_count[i]] == nil then
+				if global.farms[global.farm_count[i]].valid == false then
 				--log('hit')
-				--break
-				--else
-				if
-					global.farms[global.farm_count[i]] ~= nil and global.farms[global.farm_count[i]].valid == true and
-						global.farms[global.farm_count[i]].get_module_inventory().is_empty() == false
-				 then
+					if global.rendered_icons[global.farm_count[i]] ~= nil then
+						rendering.destroy(global.rendered_icons[global.farm_count[i]])
+						global.rendered_icons[global.farm_count[i]] = nil
+					end
+				elseif global.farms[global.farm_count[i]] ~= nil and global.farms[global.farm_count[i]].valid == true and global.farms[global.farm_count[i]].get_module_inventory().is_empty() == false then
 					global.farms[global.farm_count[i]].active = true
 					if global.rendered_icons[global.farm_count[i]] ~= nil then
 						rendering.destroy(global.rendered_icons[global.farm_count[i]])
@@ -1123,6 +1133,11 @@ script.on_event(
 			global.outpost_names[event.entity.unit_number] = nil
 		end
 		global.caravanroutes = caravanroutes
+		if E.name == 'ocula' then
+		ocula_removed(E)
+		elseif E.name == 'ipod' then
+			global.ocula_master_table.ocula_boxes[E.unit_number] = nil
+		end
 	end
 )
 
