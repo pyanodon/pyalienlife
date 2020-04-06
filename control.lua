@@ -1044,12 +1044,13 @@ script.on_event(
 				--log(i)
 				--log(serpent.block(global.farms))
 				--log(serpent.block(global.farms[global.farm_count[i]]))
-				if global.farms[global.farm_count[i]].valid == false then
+				if global.farms[global.farm_count[i]] ~= nil and global.farms[global.farm_count[i]].valid == false then
 				--log('hit')
 					if global.rendered_icons[global.farm_count[i]] ~= nil then
 						rendering.destroy(global.rendered_icons[global.farm_count[i]])
 						global.rendered_icons[global.farm_count[i]] = nil
 					end
+					global.farms[global.farm_count[i]] = nil
 				elseif global.farms[global.farm_count[i]] ~= nil and global.farms[global.farm_count[i]].valid == true and global.farms[global.farm_count[i]].get_module_inventory().is_empty() == false then
 					global.farms[global.farm_count[i]].active = true
 					if global.rendered_icons[global.farm_count[i]] ~= nil then
