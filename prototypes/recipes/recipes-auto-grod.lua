@@ -14,7 +14,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='grodseeds'},
-                    {name='urea',amount = 5},
+                    {name='urea',amount = 10},
 				},
 			results =
 				{
@@ -31,9 +31,9 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='grod',amount = 4},
+					{name='grod',amount = '+1'},
 				},
-			crafting_speed = 130,
+			crafting_speed = 140,
 			tech = 'grod'
 		},
 		{
@@ -111,7 +111,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*15'},
-					{name='grod',amount ='+3'}
+					{name='grod',amount ='+2'}
 				},
 				crafting_speed = 100,
 				tech = 'grod-mk02'
@@ -127,9 +127,9 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*17'},
-					{name='grod',amount ='+2'}
+					{name='grod',amount ='+3'}
 				},
-				crafting_speed = 100,
+				crafting_speed = 90,
 				tech = 'grod-mk03'
         },
         {
@@ -146,9 +146,9 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*20'},
-					{name='grod',amount ='+3'}
+					{name='grod',amount ='+2'}
 				},
-				crafting_speed = 100,
+				crafting_speed = 85,
 				tech = 'grod-mk03'
         },
         {
@@ -168,7 +168,7 @@ fun.autorecipes {
 					--{'a','+3'}
 					{name='grod',amount ='+8'}
 				},
-				crafting_speed = 85,
+				crafting_speed = 70,
 				tech = 'grod-mk04'
 		},
 		{
@@ -186,7 +186,7 @@ fun.autorecipes {
 				{
 					--{'a','*25'},
 					--{'a','+3'}
-					{name='grod',amount =25}
+					{name='grod',amount ="+2"}
 				},
 				crafting_speed = 70,
 				tech = 'grod-mk04'
@@ -204,7 +204,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='grod',amount ='+10'}
+					{name='grod',amount ='+12'}
 				},
 			crafting_speed = 70,
 			tech = 'grod-mk04'
@@ -220,7 +220,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='grod',amount =27}
+					{name='grod',amount ="+1"}
 				},
 			crafting_speed = 70,
 			tech = 'grod-mk04'
@@ -236,7 +236,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='grod',amount =32}
+					{name='grod',amount ="+3"}
 				},
 			crafting_speed = 70,
 			tech = 'grod-mk04'
@@ -251,7 +251,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='grod',amount =48}
+					{name='grod',amount ="+1"}
 				},
 			crafting_speed = 55,
 			tech = 'grod-mk04'
