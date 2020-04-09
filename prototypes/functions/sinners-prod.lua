@@ -75,14 +75,12 @@ for m, mod in pairs(data.raw.module) do
     if string.match(mod.name, 'mk03') == 'mk03' then
         local modname = mod.name
         table.insert(mods3, modname)
-        
     end
 
     if string.match(mod.name, 'mk04') == 'mk04' then
         log(mod.name)
         local modname = mod.name
         table.insert(mods4, modname)
-        
     end
 
 end
