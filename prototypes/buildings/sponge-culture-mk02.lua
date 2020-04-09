@@ -45,11 +45,11 @@ ENTITY {
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 5
+        module_slots = 16
     },
     allowed_effects = {"speed","productivity"},
     crafting_categories = {"sponge"},
-    crafting_speed = 0.01,
+    crafting_speed = 0.05,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

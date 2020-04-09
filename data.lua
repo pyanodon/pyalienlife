@@ -964,3 +964,5 @@ for i, item in pairs(biomass_convertion) do
         }:add_unlock("compost")
     end
 end
+
+require('prototypes/functions/sinners-prod')
