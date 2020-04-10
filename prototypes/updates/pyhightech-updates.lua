@@ -245,7 +245,7 @@ RECIPE('superconductor-servomechanims'):change_category('research')
 RECIPE('superconductor'):add_ingredient({type = "item", name = "bio-battery", amount = 2}):change_category('research')
 RECIPE('sc-unit'):add_ingredient({type = "item", name = "re-magnet", amount = 2})
 RECIPE('harmonic-absorber'):change_category('research')
-RECIPE('diamagnetic-material'):change_category('research')--:remove_unlock('earnshaw-theorem'):add_unlock('pharmagenomics')
+RECIPE('diamagnetic-material'):change_category('research'):remove_unlock('earnshaw-theorem'):add_unlock('pharmagenomics')
 RECIPE('paramagnetic-material'):change_category('research'):remove_unlock('nano-tech'):add_unlock('pharmagenomics')
 RECIPE('myoglobin'):change_category('genlab')
 
