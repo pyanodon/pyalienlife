@@ -441,14 +441,14 @@ RECIPE {
         {type = 'item', name = 'cysteine', amount = 1},
         {type = 'item', name = 'alien-enzymes', amount = 1},
         {type = 'item', name = 'guts', amount = 15},
-        {type = 'item', name = 'mukmoux-fat', amount = 15},
-        {type = 'item', name = 'lab-instrument', amount = 5},
+        {type = 'item', name = 'mukmoux-fat', amount = 30},
+        {type = 'item', name = 'lab-instrument', amount = 10},
         {type = 'fluid', name = 'gta', amount = 50},
-        {type = 'item', name = 'flask', amount = 5},
+        {type = 'item', name = 'flask', amount = 20},
         {type = 'item', name = 'mmp', amount = 1},
     },
     results = {
-        {type = 'item', name = 'recombinant-ery', amount = 5},
+        {type = 'item', name = 'recombinant-ery', amount = 300},
     },
 }:add_unlock("recombinant-ery")
 
