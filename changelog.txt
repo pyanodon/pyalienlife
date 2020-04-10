@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.5.2
+Date: 2020-04-10
+  Changes:
+    - Added new graphics for mukmoux. Will resize stuff.
+    - Lots of balances in a lot of farm buildings.
+    - Fixed locale.
+    - Balanced grod
+    - Balanced recombinant ery
+---------------------------------------------------------------------------------------------------
 Version: 1.5.1
 Date: 2020-04-06
   Changes:
