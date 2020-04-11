@@ -208,7 +208,7 @@ data:extend(
   }
   )
 
-  massive_explosion = function()
+  local massive_explosion = function()
 	return
 	{
 	  width = 330,
