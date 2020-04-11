@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.5.3
+Date: 2020-04-11
+  Changes:
+    - Added tooltips to slaghterhouse gui.
+    - Fixed issue with kmuats not showing in slaughterhouse gui.
+    - fixed deadlock related to diamagnetic material in empty neuromorphic chip
+    - Add Nuka-van.
+---------------------------------------------------------------------------------------------------
 Version: 1.5.2
 Date: 2020-04-10
   Changes:
