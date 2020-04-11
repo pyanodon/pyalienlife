@@ -82,7 +82,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='blood', amount =120},
+					{name='blood', amount ='+20'},
 				},
                 crafting_speed = 15,
                 tech = 'transgenes',
@@ -100,7 +100,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='blood', amount =160},
+					{name='blood', amount ='+50'},
 				},
 			crafting_speed = 15,
 			tech = 'transgenes',

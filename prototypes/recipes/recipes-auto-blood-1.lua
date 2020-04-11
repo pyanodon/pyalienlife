@@ -64,7 +64,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='blood', amount =110},
+					{name='blood', amount ='+20'},
 				},
                 crafting_speed = 15,
                 tech = 'somatic',
