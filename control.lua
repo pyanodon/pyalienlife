@@ -124,7 +124,7 @@ local function create_slaughterhouse_animal_table(gui, player)
 										name = animal,
 										elem_type = 'item',
 										item = animal .. "1",
-										style = "image_tab_slot", 
+										style = "image_tab_slot",
 										--tooltip = animal
 									}
 								)
@@ -1370,7 +1370,6 @@ script.on_event(
 			local elem_p2 = event.element.parent.parent.parent
 			event.element.parent.parent.destroy()
 			create_slaughterhouse_animal_table(elem_p2, event.player_index)
-		
 		elseif string.match(event.element.name, "recipe%-menu") ~= nil then
 			--log(serpent.block(global.current_entity))
 			--log('hit')
@@ -1538,14 +1537,13 @@ local function create_caravan_gui(event, entity)
 	hascarguiopen = true
 end
 
-local function create_nuka_caravan_gui(event, entity)
+local function create_nuka_caravan_gui(event)
 	--log('did a thing')
 	--log(serpent.block(outpost_table))
 	local player = game.players[event.player_index]
 	caravangui = player.gui.center.add({type = "frame", name = "nuka_caravan_frame_left", direction = "horizontal"})
 	caravangui.add({type = "table", name = "ctable", column_count = 1})
-	
-	caravangui.ctable.add({type = "frame", name = "route_frame_2", direction = "vertical", caption = caption})
+	caravangui.ctable.add({type = "frame", name = "route_frame_2", direction = "vertical"})
 	caravangui.ctable.route_frame_2.add({type = "drop-down", name = "destination", items = {'exterminatus'}})
 
 	caravangui.add({type = "sprite-button", name = "caravan_close", sprite = "utility/close_fat"})
