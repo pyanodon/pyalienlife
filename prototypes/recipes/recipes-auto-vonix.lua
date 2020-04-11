@@ -628,7 +628,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='fat', amount ='R'},
-					{name='brain', amount =3},
+					{name='brain', amount =5},
 				},
 			crafting_speed = 15,
 			tech = 'nanochondria',
@@ -646,7 +646,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='guts', amount =14},
+					{name='guts', amount =20},
 				},
 			crafting_speed = 15,
 			tech = 'antitumor',
@@ -664,7 +664,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='arthropodblood', amount =150},
+					{name='arthropodblood', amount =230},
 				},
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
@@ -682,7 +682,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='arthropodblood', amount ='R'},
-					{name='skin', amount =8},
+					{name='skin', amount =13},
 				},
 			crafting_speed = 15,
 			tech = 'reca',
@@ -700,7 +700,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='fat', amount =15},
+					{name='fat', amount =23},
 				},
 			crafting_speed = 15,
 			tech = 'orexigenic',
@@ -718,7 +718,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='fat', amount ='R'},
-					{name='meat', amount =10},
+					{name='meat', amount =13},
 				},
 			crafting_speed = 15,
 			tech = 'anabolic-rna',

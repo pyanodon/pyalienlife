@@ -554,7 +554,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='chitin', amount ='R'},
-					{name='meat', amount =4},
+					{name='meat', amount =6},
 				},
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
@@ -572,7 +572,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', amount ='R'},
-					{name='guts', amount =4},
+					{name='guts', amount =6},
 				},
 			crafting_speed = 15,
 			tech = 'antitumor',
@@ -590,7 +590,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='arthropodblood', amount =60},
+					{name='arthropodblood', amount =120},
 				},
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
@@ -608,7 +608,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='arthropodblood', amount ='R'},
-					{name='fat', amount =4},
+					{name='fat', amount =6},
 				},
 			crafting_speed = 15,
 			tech = 'orexigenic',

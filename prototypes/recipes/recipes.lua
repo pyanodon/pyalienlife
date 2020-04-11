@@ -801,18 +801,18 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = 'item', name = 'ticocr-alloy', amount = 1},
-        {type = 'item', name = 'pelt', amount = 4},
-        {type = 'item', name = 'metallic-glass', amount = 2},
-        {type = 'item', name = 'propeptides', amount = 1},
-        {type = 'item', name = 'chitin', amount = 4},
-        {type = 'item', name = 'alien-enzymes', amount = 1},
-        {type = 'item', name = 'pineal-gland', amount = 1},
+        {type = 'item', name = 'ticocr-alloy', amount = 7},
+        {type = 'item', name = 'pelt', amount = 10},
+        {type = 'item', name = 'metallic-glass', amount = 8},
+        {type = 'item', name = 'propeptides', amount = 10},
+        {type = 'item', name = 'chitin', amount = 20},
+        {type = 'item', name = 'alien-enzymes', amount = 2},
+        {type = 'item', name = 'pineal-gland', amount = 3},
         {type = 'item', name = 'adrenal-cortex', amount = 10},
-        {type = 'fluid', name = 'bacteria-1', amount = 40},
+        {type = 'fluid', name = 'bacteria-1', amount = 100},
     },
     results = {
-        {type = 'item', name = 'nanochondria', amount = 10}
+        {type = 'item', name = 'nanochondria', amount = 400}
     }
 }:add_unlock('nanochondria'):change_category('nano'):add_ingredient({type = "item", name = "resilin", amount = 1}):add_ingredient({type = "item", name = "collagen", amount = 5}):replace_ingredient("bacteria-1", "bacteria-2")
 
@@ -824,19 +824,19 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = 'item', name = 'hyaline', amount = 3},
-        {type = 'item', name = 'sea-sponge', amount = 2},
-        {type = 'item', name = 'ticocr-alloy', amount = 1},
-        {type = 'item', name = 'chitin', amount = 4},
-        {type = 'item', name = 'alien-enzymes', amount = 1},
-        {type = 'item', name = 'pineal-gland', amount = 1},
-        {type = 'item', name = 'flask', amount = 3},
-        {type = 'item', name = 'lab-instrument', amount = 1},
+        {type = 'item', name = 'hyaline', amount = 10},
+        {type = 'item', name = 'sea-sponge', amount = 25},
+        {type = 'item', name = 'ticocr-alloy', amount = 3},
+        {type = 'item', name = 'chitin', amount = 15},
+        {type = 'item', name = 'alien-enzymes', amount = 2},
+        {type = 'item', name = 'pineal-gland', amount = 4},
+        {type = 'item', name = 'flask', amount = 30},
+        {type = 'item', name = 'lab-instrument', amount = 25},
         {type = 'fluid', name = 'bacteria-1', amount = 40},
-        {type = 'item', name = 'purine-analogues', amount = 1},
+        {type = 'item', name = 'purine-analogues', amount = 2},
     },
     results = {
-        {type = 'item', name = 'bmp', amount = 10}
+        {type = 'item', name = 'bmp', amount = 350}
     }
 }:add_unlock('bmp'):replace_ingredient("bacteria-1", "bacteria-2"):replace_ingredient("sea-sponge", "collagen"):add_ingredient({type = "fluid", name = "dms", amount = 100})
 

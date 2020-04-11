@@ -589,7 +589,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='sulfuricacid', amount ='R'},
-					{name='brain', amount =3},
+					{name='brain', amount =4},
 				},
 			crafting_speed = 15,
 			tech = 'nanochondria',
@@ -607,7 +607,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='bones', amount =7},
+					{name='bones', amount =11},
 				},
 			crafting_speed = 15,
 			tech = 'bmp',
@@ -624,7 +624,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bones', amount ='R'},
-					{name='bonemeal', amount =8},
+					{name='bonemeal', amount =13},
 				},
 			crafting_speed = 15,
 			tech = 'bmp',
@@ -642,7 +642,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bonemeal', amount ='R'},
-					{name='sulfuricacid', amount =120},
+					{name='sulfuricacid', amount =200},
 				},
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
@@ -660,7 +660,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='sulfuricacid', amount ='R'},
-					{name='chitin', amount =9},
+					{name='chitin', amount =23},
 				},
 			crafting_speed = 15,
 			tech = 'reca',
@@ -678,7 +678,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='chitin', amount ='R'},
-					{name='meat', amount =8},
+					{name='meat', amount =10},
 				},
 			crafting_speed = 15,
 			tech = 'anabolic-rna',

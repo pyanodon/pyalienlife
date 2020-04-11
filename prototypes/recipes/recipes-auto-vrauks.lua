@@ -620,7 +620,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='formicacid', amount ='R'},
-					{name='brain', amount =3},
+					{name='brain', amount =4},
 				},
 			crafting_speed = 15,
 			tech = 'nanochondria',
@@ -638,7 +638,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='meat', amount =6},
+					{name='meat', amount =10},
 				},
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
@@ -656,7 +656,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', amount ='R'},
-					{name='guts', amount =7},
+					{name='guts', amount =11},
 				},
 			crafting_speed = 15,
 			tech = 'antitumor',
@@ -674,7 +674,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='chitin', amount =6},
+					{name='chitin', amount =15},
 				},
 			crafting_speed = 15,
 			tech = 'reca',
