@@ -290,6 +290,7 @@ require('prototypes/buildings/compost-plant-mk04')
 
 --Creature
 require('prototypes/creatures/caravan')
+require('prototypes/creatures/nuka-caravan')
 require('prototypes/creatures/dingrido')
 require('prototypes/creatures/crawdad')
 require('prototypes/creatures/phadaisus')
