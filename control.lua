@@ -440,7 +440,7 @@ script.on_configuration_changed(
 		end
 	end
 )
-
+--[[
 script.on_event(defines.events.on_player_created, function(event)
 
 local player = game.players[event.player_index]
@@ -454,7 +454,7 @@ player.gui.top.add(
 )
 
 end)
-
+]]--
 local farm_help_gui
 
 local function create_farm_help_message(event)
