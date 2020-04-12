@@ -47,7 +47,7 @@ RECIPE {
     name = 'yaedols-spores',
     category = 'spore',
     enabled = false,
-    energy_required = 15,
+    energy_required = 8,
     ingredients = {
     },
     results = {
