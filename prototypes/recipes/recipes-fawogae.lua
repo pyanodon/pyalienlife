@@ -7,7 +7,7 @@ RECIPE {
     name = 'fawogae-spore',
     category = 'spore',
     enabled = false,
-    energy_required = 15,
+    energy_required = 8,
     ingredients = {
     },
     results = {
@@ -20,7 +20,7 @@ RECIPE {
     name = 'fawogae-spore-2',
     category = 'spore',
     enabled = false,
-    energy_required = 15,
+    energy_required = 5,
     ingredients = {
     },
     results = {
@@ -33,7 +33,7 @@ RECIPE {
     name = 'fawogae-spore-3',
     category = 'spore',
     enabled = false,
-    energy_required = 15,
+    energy_required = 5,
     ingredients = {
     },
     results = {
