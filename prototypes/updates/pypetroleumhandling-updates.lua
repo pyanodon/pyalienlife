@@ -161,3 +161,18 @@ RECIPE {
 
 RECIPE('fawogae-mk04-breeder'):replace_ingredient("iron-plate", "nb-biomass")
 
+RECIPE {
+    type = 'recipe',
+    name = 'flue-gas-3',
+    category = 'gas-refinery',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'biomass', amount = 10},
+        {type = 'fluid', name = 'hot-air', amount = 100},
+    },
+    results = {
+        {type = 'fluid', name = 'flue-gas', amount = 200},
+    },
+    --main_product = "casein-pulp-01",
+}:add_unlock("compost")

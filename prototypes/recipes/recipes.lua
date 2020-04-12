@@ -1915,6 +1915,37 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
+    name = 'flue-gas-1',
+    category = 'gasifier',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'biomass', amount = 10},
+    },
+    results = {
+        {type = 'fluid', name = 'flue-gas', amount = 150},
+    },
+    --main_product = "casein-pulp-01",
+}:add_unlock("compost"):change_category('gas-refinery')
+
+RECIPE {
+    type = 'recipe',
+    name = 'flue-gas-2',
+    category = 'gasifier',
+    enabled = false,
+    energy_required = 8,
+    ingredients = {
+        {type = 'item', name = 'ash', amount = 10},
+        {type = 'fluid', name = 'pressured-air', amount = 50},
+    },
+    results = {
+        {type = 'fluid', name = 'flue-gas', amount = 150},
+    },
+    --main_product = "casein-pulp-01",
+}:add_unlock("compost"):change_category('gas-refinery')
+
+RECIPE {
+    type = 'recipe',
     name = 'biomass-cooking-2',
     category = 'hpf',
     enabled = false,
