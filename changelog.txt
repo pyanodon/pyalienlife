@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.5.5
+Date: 2020-04-12
+  Changes:
+    - Speed up spore collectors.
+    - Tons of coding improvements.
+    - Updates in ALL animals rendering and improved versions.
+    - Added flue gas direct recipes.
+---------------------------------------------------------------------------------------------------
 Version: 1.5.4
 Date: 2020-04-11
   Changes:
