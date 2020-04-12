@@ -1627,22 +1627,22 @@ function overrides.reprocess_recipes_1()
     for r, recipe in pairs(reprocess_recipes_1) do
         local pre_ing = table.deepcopy(data.raw.recipe[upgrade1[r]].ingredients)
         local pre_res = table.deepcopy(data.raw.recipe[upgrade1[r]].results)
-        log(serpent.block(data.raw.recipe[r]))
-        log(serpent.block(recipe))
-        log(serpent.block(pre_ing))
-        log(serpent.block(pre_res))
+       --log(serpent.block(data.raw.recipe[r]))
+       --log(serpent.block(recipe))
+       --log(serpent.block(pre_ing))
+       --log(serpent.block(pre_res))
         for res, result in pairs(pre_res) do
-            log(serpent.block(r))
-            log(serpent.block(result))
+           --log(serpent.block(r))
+           --log(serpent.block(result))
             for _, res2 in pairs(recipe.results) do
-                log(serpent.block(res2))
+               --log(serpent.block(res2))
                 if result.name == res2.name then
                     if res2.amount ~= nil and string.match(res2.amount, '%+') ~= nil then
                         local amount = string.match(res2.amount, '%d+')
-                        log(serpent.block(data.raw.recipe[upgrade1[r]]))
-                        log(serpent.block(data.raw.recipe[upgrade1[r]].results))
-                        log(serpent.block(data.raw.recipe[upgrade1[r]].results[res]))
-                        log(serpent.block(data.raw.recipe[upgrade1[r]].results[res].amount))
+                       --log(serpent.block(data.raw.recipe[upgrade1[r]]))
+                       --log(serpent.block(data.raw.recipe[upgrade1[r]].results))
+                       --log(serpent.block(data.raw.recipe[upgrade1[r]].results[res]))
+                       --log(serpent.block(data.raw.recipe[upgrade1[r]].results[res].amount))
                         data.raw.recipe[r].results[res].amount = data.raw.recipe[upgrade1[r]].results[res].amount + amount
                     end
                 end
@@ -1652,18 +1652,32 @@ function overrides.reprocess_recipes_1()
 end
 
 function overrides.reprocess_recipes_2()
-
-    log(serpent.block(reprocess_recipes_2))
-
-    --for r, recipe in pairs(reprocess_recipes_1) do
-
-        --local pre_ing = table.deepcopy(data.raw.recipe[upgrade1[r]].ingredients)
-        --local pre_res = table.deepcopy(data.raw.recipe[upgrade1[r]].results)
-
-        --log(serpent.block(data.raw.recipe[r]))
-
-    --end
-
+   --log(serpent.block(reprocess_recipes_2))
+    for r, recipe in pairs(reprocess_recipes_2) do
+        local pre_ing = table.deepcopy(data.raw.recipe[upgrade2[r]].ingredients)
+        local pre_res = table.deepcopy(data.raw.recipe[upgrade2[r]].results)
+       --log(serpent.block(data.raw.recipe[r]))
+       --log(serpent.block(recipe))
+       --log(serpent.block(pre_ing))
+       --log(serpent.block(pre_res))
+        for res, result in pairs(pre_res) do
+           --log(serpent.block(r))
+           --log(serpent.block(result))
+            for _, res2 in pairs(recipe.results) do
+               --log(serpent.block(res2))
+                if result.name == res2.name then
+                    if res2.amount ~= nil and string.match(res2.amount, '%+') ~= nil then
+                        local amount = string.match(res2.amount, '%d+')
+                       --log(serpent.block(data.raw.recipe[upgrade2[r]]))
+                       --log(serpent.block(data.raw.recipe[upgrade2[r]].results))
+                       --log(serpent.block(data.raw.recipe[upgrade2[r]].results[res]))
+                       --log(serpent.block(data.raw.recipe[upgrade2[r]].results[res].amount))
+                        data.raw.recipe[r].results[res].amount = data.raw.recipe[upgrade2[r]].results[res].amount + amount
+                    end
+                end
+            end
+        end
+    end
 end
 
 return overrides
