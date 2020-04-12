@@ -954,6 +954,27 @@ function overrides.tech_add_prerequisites(tech, prereq)
     end
 end
 
+local TRlist = require('scripts/techswap')
+
+local upgrade1 = {}
+local upgrade2 = {}
+
+--log(serpent.block(TRlist.upgrades))
+
+for up, upgrade in pairs(TRlist.upgrades) do
+--log(serpent.block(upgrade))
+    if upgrade.upgrade_1 ~= nil and upgrade.upgrade_1.recipe ~= nil then
+        upgrade1[upgrade.upgrade_1.recipe] = upgrade.base_recipe
+    end
+    if upgrade.upgrade_2 ~= nil and upgrade.upgrade_2.recipe ~= nil then
+        upgrade2[upgrade.upgrade_2.recipe] = upgrade.upgrade_1.recipe
+    end
+end
+
+local reprocess_recipes_1 = {}
+
+local reprocess_recipes_2 = {}
+
 function overrides.autorecipes(recipe)
     local items = require('prototypes/recipes/itemtables') --*: optional, defaults to true --**: required if using dual recipe mode as itermidate items will be made from this
     --
@@ -1043,6 +1064,12 @@ recipe =
 
         -- ingredients = {}
         -- results = {}
+
+        if mat.name ~= nil and upgrade1[mat.name] ~= nil then
+            reprocess_recipes_1[mat.name] = mat
+        elseif mat.name ~= nil and upgrade2[mat.name] ~= nil then
+            reprocess_recipes_2[mat.name] = mat
+        end
 
         ingredients = table.deepcopy(lastings)
 
@@ -1432,7 +1459,7 @@ recipe =
                         else
                             --log(ing[1])
                             --log(mod)
-                            if res.amount ~= nil then
+                            if item.amount ~= nil then
                                 table.insert(results, {type = type1, name = ing[1], amount = ing[2] + mod})
                                 break
                             elseif res.probability ~= nil then
@@ -1593,6 +1620,50 @@ recipe =
             number = number + 1
         end
     end
+end
+
+function overrides.reprocess_recipes_1()
+    --log(serpent.block(reprocess_recipes_1))
+    for r, recipe in pairs(reprocess_recipes_1) do
+        local pre_ing = table.deepcopy(data.raw.recipe[upgrade1[r]].ingredients)
+        local pre_res = table.deepcopy(data.raw.recipe[upgrade1[r]].results)
+        log(serpent.block(data.raw.recipe[r]))
+        log(serpent.block(recipe))
+        log(serpent.block(pre_ing))
+        log(serpent.block(pre_res))
+        for res, result in pairs(pre_res) do
+            log(serpent.block(r))
+            log(serpent.block(result))
+            for _, res2 in pairs(recipe.results) do
+                log(serpent.block(res2))
+                if result.name == res2.name then
+                    if res2.amount ~= nil and string.match(res2.amount, '%+') ~= nil then
+                        local amount = string.match(res2.amount, '%d+')
+                        log(serpent.block(data.raw.recipe[upgrade1[r]]))
+                        log(serpent.block(data.raw.recipe[upgrade1[r]].results))
+                        log(serpent.block(data.raw.recipe[upgrade1[r]].results[res]))
+                        log(serpent.block(data.raw.recipe[upgrade1[r]].results[res].amount))
+                        data.raw.recipe[r].results[res].amount = data.raw.recipe[upgrade1[r]].results[res].amount + amount
+                    end
+                end
+            end
+        end
+    end
+end
+
+function overrides.reprocess_recipes_2()
+
+    log(serpent.block(reprocess_recipes_2))
+
+    --for r, recipe in pairs(reprocess_recipes_1) do
+
+        --local pre_ing = table.deepcopy(data.raw.recipe[upgrade1[r]].ingredients)
+        --local pre_res = table.deepcopy(data.raw.recipe[upgrade1[r]].results)
+
+        --log(serpent.block(data.raw.recipe[r]))
+
+    --end
+
 end
 
 return overrides

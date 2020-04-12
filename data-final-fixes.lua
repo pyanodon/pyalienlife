@@ -2205,3 +2205,7 @@ local recipes_list =
 
 --adding to module limitation list
 FUN.productivity(recipes_list)
+
+log(serpent.block(data.raw.recipe['Extract auog blood']))
+log(serpent.block(data.raw.recipe['Extract auog blood-1']))
+log(serpent.block(data.raw.recipe['Extract auog blood-2']))

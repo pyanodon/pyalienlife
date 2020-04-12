@@ -966,4 +966,8 @@ for i, item in pairs(biomass_convertion) do
     end
 end
 
-require('prototypes/functions/sinners-prod')
+local fun = require("prototypes/functions/functions")
+
+fun.reprocess_recipes_1()
+
+fun.reprocess_recipes_2()
