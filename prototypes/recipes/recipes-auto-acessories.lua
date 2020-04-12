@@ -365,7 +365,7 @@ RECIPE {
     name = 'navens-spore-2',
     category = 'spore',
     enabled = false,
-    energy_required = 15,
+    energy_required = 5,
     ingredients = {
     },
     results = {
@@ -378,7 +378,7 @@ RECIPE {
     name = 'yaedols-spores-2',
     category = 'spore',
     enabled = false,
-    energy_required = 15,
+    energy_required = 5,
     ingredients = {
     },
     results = {
@@ -391,7 +391,7 @@ RECIPE {
     name = 'bhoddos-spore-2',
     category = 'spore',
     enabled = false,
-    energy_required = 15,
+    energy_required = 5,
     ingredients = {
     },
     results = {
@@ -407,7 +407,7 @@ RECIPE {
     name = 'navens-spore-3',
     category = 'spore',
     enabled = false,
-    energy_required = 15,
+    energy_required = 5,
     ingredients = {
     },
     results = {
@@ -420,7 +420,7 @@ RECIPE {
     name = 'yaedols-spores-3',
     category = 'spore',
     enabled = false,
-    energy_required = 15,
+    energy_required = 5,
     ingredients = {
     },
     results = {
@@ -433,7 +433,7 @@ RECIPE {
     name = 'bhoddos-spore-3',
     category = 'spore',
     enabled = false,
-    energy_required = 15,
+    energy_required = 5,
     ingredients = {
     },
     results = {
