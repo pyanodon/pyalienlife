@@ -1633,17 +1633,28 @@ function overrides.reprocess_recipes_1()
        --log(serpent.block(pre_res))
         for res, result in pairs(pre_res) do
            --log(serpent.block(r))
+           --log(serpent.block(res))
+           --log(serpent.block(result.name))
            --log(serpent.block(result))
-            for _, res2 in pairs(recipe.results) do
-               --log(serpent.block(res2))
+            for r2, res2 in pairs(recipe.results) do
+                --log(serpent.block(r2))
+                --log(serpent.block(res2))
                 if result.name == res2.name then
                     if res2.amount ~= nil and string.match(res2.amount, '%+') ~= nil then
                         local amount = string.match(res2.amount, '%d+')
-                       --log(serpent.block(data.raw.recipe[upgrade1[r]]))
-                       --log(serpent.block(data.raw.recipe[upgrade1[r]].results))
-                       --log(serpent.block(data.raw.recipe[upgrade1[r]].results[res]))
-                       --log(serpent.block(data.raw.recipe[upgrade1[r]].results[res].amount))
-                        data.raw.recipe[r].results[res].amount = data.raw.recipe[upgrade1[r]].results[res].amount + amount
+                        --log(amount)
+                        --log(serpent.block(data.raw.recipe[upgrade1[r]]))
+                        --log(serpent.block(data.raw.recipe[upgrade1[r]].results))
+                        --log(serpent.block(data.raw.recipe[upgrade1[r]].results[res]))
+                        --log(serpent.block(data.raw.recipe[upgrade1[r]].results[res].amount))
+                        --log(serpent.block(data.raw.recipe[r]))
+                        --log(serpent.block(data.raw.recipe[r].results))
+                        --log(serpent.block(data.raw.recipe[r].results[res]))
+                        for k,v in pairs(data.raw.recipe[r].results) do
+                            if v.name == res2.name then
+                                data.raw.recipe[r].results[k].amount = data.raw.recipe[upgrade1[r]].results[res].amount + amount
+                            end
+                        end
                     end
                 end
             end
