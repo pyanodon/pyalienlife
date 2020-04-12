@@ -27,7 +27,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='blood', amount =70},
+					{name='blood', amount ='+20'},
 				},
 			crafting_speed = 15,
 			tech = 'transgenes',
@@ -45,7 +45,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='blood', amount =100},
+					{name='blood', amount ='+50'},
 				},
 			crafting_speed = 15,
 			tech = 'transgenes',
@@ -136,7 +136,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='blood', amount =100},
+					{name='blood', amount ='+20'},
 				},
                 crafting_speed = 15,
                 tech = 'transgenes',
@@ -154,7 +154,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='blood', amount =160},
+					{name='blood', amount ='+50'},
 				},
 			crafting_speed = 15,
 			tech = 'transgenes',
@@ -193,7 +193,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='arthropodblood', amount =50},
+					{name='arthropodblood', amount ='+30'},
 				},
                 crafting_speed = 15,
                 tech = 'transgenes',
@@ -211,7 +211,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='arthropodblood', amount =80},
+					{name='arthropodblood', amount ='+50'},
 				},
 			crafting_speed = 15,
 			tech = 'transgenes',
@@ -248,7 +248,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='blood', amount =50},
+					{name='blood', amount ='+20'},
 				},
                 crafting_speed = 15,
                 tech = 'transgenes',
@@ -266,7 +266,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='blood', amount =60},
+					{name='blood', amount ='+50'},
 				},
 			crafting_speed = 15,
 			tech = 'transgenes',
@@ -303,7 +303,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='arthropodblood', amount =40},
+					{name='arthropodblood', amount ='+30'},
 				},
                 crafting_speed = 15,
                 tech = 'transgenes',
@@ -321,7 +321,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='arthropodblood', amount =70},
+					{name='arthropodblood', amount ='+30'},
 				},
 			crafting_speed = 15,
 			tech = 'transgenes',
@@ -359,7 +359,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='blood', amount =40},
+					{name='blood', amount ='+20'},
 				},
                 crafting_speed = 15,
                 tech = 'transgenes',
@@ -377,7 +377,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='blood', amount =80},
+					{name='blood', amount ='+50'},
 				},
 			crafting_speed = 15,
 			tech = 'transgenes',
@@ -415,7 +415,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='blood', amount =150},
+					{name='blood', amount ='+20'},
 				},
                 crafting_speed = 15,
                 tech = 'transgenes',
@@ -433,7 +433,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='blood', amount =200},
+					{name='blood', amount ='+50'},
 				},
 			crafting_speed = 15,
 			tech = 'transgenes',
@@ -470,7 +470,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='blood', amount =50},
+					{name='blood', amount ='+20'},
 				},
                 crafting_speed = 15,
                 tech = 'transgenes',
@@ -488,7 +488,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='blood', amount =85},
+					{name='blood', amount ='+50'},
 				},
 			crafting_speed = 15,
 			tech = 'transgenes',
@@ -525,7 +525,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='blood', amount =60},
+					{name='blood', amount ='+20'},
 				},
                 crafting_speed = 15,
                 tech = 'transgenes',
@@ -543,7 +543,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='blood', amount =90},
+					{name='blood', amount ='+50'},
 				},
 			crafting_speed = 15,
 			tech = 'transgenes',
@@ -580,7 +580,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='blood', amount =90},
+					{name='blood', amount ='+20'},
 				},
                 crafting_speed = 15,
                 tech = 'transgenes',
@@ -598,7 +598,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='blood', amount =150},
+					{name='blood', amount ='+40'},
 				},
 			crafting_speed = 15,
 			tech = 'transgenes',
@@ -634,7 +634,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='blood', amount =100},
+					{name='blood', amount ='+20'},
 				},
                 crafting_speed = 15,
                 tech = 'transgenes',
@@ -652,7 +652,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='blood', amount =170},
+					{name='blood', amount ='+50'},
 				},
 			crafting_speed = 15,
 			tech = 'transgenes',
@@ -689,7 +689,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='blood', amount =100},
+					{name='blood', amount ='+20'},
 				},
                 crafting_speed = 15,
                 tech = 'transgenes',
@@ -707,7 +707,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='blood', amount =130},
+					{name='blood', amount ='+50'},
 				},
 			crafting_speed = 15,
 			tech = 'transgenes',
@@ -746,7 +746,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='arthropodblood', amount =120},
+					{name='arthropodblood', amount ='+30'},
 				},
                 crafting_speed = 15,
                 tech = 'transgenes',
@@ -765,7 +765,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='arthropodblood', amount =165},
+					{name='arthropodblood', amount ='+50'},
 				},
 			crafting_speed = 15,
 			tech = 'transgenes',
@@ -800,7 +800,7 @@ fun.autorecipes {
 					{name='sulfuricacid', amount ='R'},
                     {name='meat', amount ='R'},
                     {name='brain', amount ='R'},
-					{name='sulfuricacid', amount =100},
+					{name='sulfuricacid', amount ='+30'},
 				},
 			crafting_speed = 15,
 			tech = 'transgenes',
@@ -818,7 +818,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bonemeal', amount ='R'},
-					{name='sulfuricacid', amount =140},
+					{name='sulfuricacid', amount ='+50'},
 				},
 			crafting_speed = 15,
 			tech = 'transgenes',
@@ -852,7 +852,7 @@ fun.autorecipes {
 					{name='shell', amount ='R'},
 					{name='guts', amount ='R'},
 					{name='arthropodblood', amount ='R'},
-					{name='arthropodblood', amount =100},
+					{name='arthropodblood', amount ='+30'},
 				},
 			crafting_speed = 15,
 			tech = 'transgenes',
@@ -870,7 +870,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='arthropodblood', amount =150},
+					{name='arthropodblood', amount ='+50'},
 				},
 			crafting_speed = 15,
 			tech = 'transgenes',
@@ -909,7 +909,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='arthropodblood', amount =85},
+					{name='arthropodblood', amount ='+30'},
 				},
                 crafting_speed = 15,
                 tech = 'transgenes',
@@ -927,7 +927,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='arthropodblood', amount =110},
+					{name='arthropodblood', amount ='+50'},
 				},
 			crafting_speed = 15,
 			tech = 'transgenes',

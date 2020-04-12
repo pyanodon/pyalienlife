@@ -27,7 +27,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='guts', amount =5},
+					{name='guts', amount ='+2'},
 				},
 			crafting_speed = 15,
 			tech = 'cavity',
@@ -45,7 +45,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bonemeal', amount ='R'},
-					{name='guts', amount =9},
+					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'cavity',
@@ -82,7 +82,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='guts', amount =5},
+					{name='guts', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'cavity',
@@ -100,7 +100,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', amount ='R'},
-					{name='guts', amount =9},
+					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'cavity',
@@ -136,7 +136,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='guts', amount =7},
+					{name='guts', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'cavity',
@@ -154,7 +154,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', amount ='R'},
-					{name='guts', amount =8},
+					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'cavity',
@@ -193,7 +193,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='guts', amount =3},
+					{name='guts', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'cavity',
@@ -211,7 +211,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', amount ='R'},
-					{name='guts', amount =6},
+					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'cavity',
@@ -248,7 +248,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='guts', amount =6},
+					{name='guts', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'cavity',
@@ -266,7 +266,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bones', amount ='R'},
-					{name='guts', amount =9},
+					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'cavity',
@@ -303,7 +303,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='guts', amount =4},
+					{name='guts', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'cavity',
@@ -321,7 +321,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='guts', amount =7},
+					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'cavity',
@@ -358,7 +358,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='guts', amount =4},
+					{name='guts', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'cavity',
@@ -376,7 +376,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='guts', amount =7},
+					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'cavity',
@@ -414,7 +414,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='guts', amount =10},
+					{name='guts', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'cavity',
@@ -432,7 +432,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', amount ='R'},
-					{name='guts', amount =14},
+					{name='guts', amount ='+7'},
 				},
 			crafting_speed = 15,
 			tech = 'cavity',
@@ -469,7 +469,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='guts', amount =5},
+					{name='guts', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'cavity',
@@ -487,7 +487,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bones', amount ='R'},
-					{name='guts', amount =10},
+					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'cavity',
@@ -524,7 +524,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='guts', amount =3},
+					{name='guts', amount ='+1'},
 				},
                 crafting_speed = 15,
                 tech = 'cavity',
@@ -542,7 +542,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bones', amount ='R'},
-					{name='guts', amount =6},
+					{name='guts', amount ='+4'},
 				},
 			crafting_speed = 15,
 			tech = 'cavity',
@@ -579,7 +579,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='guts', amount =6},
+					{name='guts', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'cavity',
@@ -597,7 +597,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bones', amount ='R'},
-					{name='guts', amount =10},
+					{name='guts', amount ='+6'},
 				},
 			crafting_speed = 15,
 			tech = 'cavity',
@@ -633,7 +633,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='guts', amount =6},
+					{name='guts', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'cavity',
@@ -651,7 +651,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', amount ='R'},
-					{name='guts', amount =13},
+					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'cavity',
@@ -688,7 +688,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='guts', amount =5},
+					{name='guts', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'cavity',
@@ -706,7 +706,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bonemeal', amount ='R'},
-					{name='guts', amount =9},
+					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'cavity',
@@ -745,7 +745,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='guts', amount =8},
+					{name='guts', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'cavity',
@@ -764,7 +764,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='guts', amount =16},
+					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'cavity',
@@ -805,7 +805,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='guts', amount =4},
+					{name='guts', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'cavity',
@@ -824,7 +824,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bonemeal', amount ='R'},
-					{name='guts', amount =9},
+					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'cavity',
@@ -857,7 +857,7 @@ fun.autorecipes {
 					{name='shell', amount ='R'},
 					{name='guts', amount ='R'},
 					{name='arthropodblood', amount ='R'},
-					{name='guts', amount =6},
+					{name='guts', amount ='+4'},
 				},
 			crafting_speed = 15,
 			tech = 'cavity',
@@ -875,7 +875,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', amount ='R'},
-					{name='guts', amount =10},
+					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'cavity',
@@ -914,7 +914,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='guts', amount =6},
+					{name='guts', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'cavity',
@@ -932,7 +932,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='guts', amount =10},
+					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'cavity',
