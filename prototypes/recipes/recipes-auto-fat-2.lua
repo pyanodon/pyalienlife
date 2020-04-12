@@ -27,7 +27,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='fat', amount =3},
+					{name='fat', amount ='+2'},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -45,7 +45,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='fat', amount =6},
+					{name='fat', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -82,7 +82,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='fat', amount =4},
+					{name='fat', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'fto4',
@@ -100,7 +100,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='fat', amount =8},
+					{name='fat', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -136,7 +136,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='fat', amount =7},
+					{name='fat', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'fto4',
@@ -154,7 +154,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='fat', amount =8},
+					{name='fat', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -192,7 +192,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='fat', amount =3},
+					{name='fat', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'fto4',
@@ -210,7 +210,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='arthropodblood', amount ='R'},
-					{name='fat', amount =6},
+					{name='fat', amount ='+6'},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -247,7 +247,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='fat', amount =4},
+					{name='fat', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'fto4',
@@ -265,7 +265,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', amount ='R'},
-					{name='fat', amount =7},
+					{name='fat', amount ='+2'},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -302,7 +302,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='fat', amount =5},
+					{name='fat', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'fto4',
@@ -320,7 +320,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', amount ='R'},
-					{name='fat', amount =7},
+					{name='fat', amount ='+3'},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -357,7 +357,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='fat', amount =7},
+					{name='fat', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'fto4',
@@ -375,7 +375,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='fat', amount =10},
+					{name='fat', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -412,7 +412,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='fat', amount =3},
+					{name='fat', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'fto4',
@@ -430,7 +430,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='fat', amount =7},
+					{name='fat', amount ='+4'},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -467,7 +467,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='fat', amount =5},
+					{name='fat', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'fto4',
@@ -485,7 +485,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='fat', amount =9},
+					{name='fat', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -521,7 +521,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='fat', amount =9},
+					{name='fat', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'fto4',
@@ -539,7 +539,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='fat', amount =25},
+					{name='fat', amount ='+8'},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -576,7 +576,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='fat', amount =4},
+					{name='fat', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'fto4',
@@ -594,7 +594,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='fat', amount =8},
+					{name='fat', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -633,7 +633,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='fat', amount =7},
+					{name='fat', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'fto4',
@@ -652,7 +652,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='fat', amount =17},
+					{name='fat', amount ='+6'},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -693,7 +693,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='fat', amount =5},
+					{name='fat', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'fto4',
@@ -711,7 +711,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='fat', amount =12},
+					{name='fat', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',

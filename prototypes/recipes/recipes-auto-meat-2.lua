@@ -27,7 +27,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='meat', amount =7},
+					{name='meat', amount ='+2'},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -45,7 +45,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='fat', amount ='R'},
-					{name='meat', amount =8},
+					{name='meat', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -83,7 +83,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='meat', amount =12},
+					{name='meat', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -101,7 +101,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bonemeal', amount ='R'},
-					{name='meat', amount =16},
+					{name='meat', amount ='+6'},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -138,7 +138,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='meat', amount =6},
+					{name='meat', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -156,7 +156,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bonemeal', amount ='R'},
-					{name='meat', amount =9},
+					{name='meat', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -194,7 +194,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='meat', amount =3},
+					{name='meat', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -212,7 +212,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='chitin', amount ='R'},
-					{name='meat', amount =6},
+					{name='meat', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -249,7 +249,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='meat', amount =6},
+					{name='meat', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -267,7 +267,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', amount ='R'},
-					{name='meat', amount =7},
+					{name='meat', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -304,7 +304,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='meat', amount =4},
+					{name='meat', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -322,7 +322,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='arthropodblood', amount ='R'},
-					{name='meat', amount =7},
+					{name='meat', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -360,7 +360,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='meat', amount =5},
+					{name='meat', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -378,7 +378,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='arthropodblood', amount ='R'},
-					{name='meat', amount =7},
+					{name='meat', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -415,7 +415,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='meat', amount =7},
+					{name='meat', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -433,7 +433,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bones', amount ='R'},
-					{name='meat', amount =12},
+					{name='meat', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -470,7 +470,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='meat', amount =6},
+					{name='meat', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -488,7 +488,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', amount ='R'},
-					{name='meat', amount =10},
+					{name='meat', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -525,7 +525,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='meat', amount =4},
+					{name='meat', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -543,7 +543,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='meat', amount =9},
+					{name='meat', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -580,7 +580,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='meat', amount =7},
+					{name='meat', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -598,7 +598,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='fat', amount ='R'},
-					{name='meat', amount =10},
+					{name='meat', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -634,7 +634,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='meat', amount =8},
+					{name='meat', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -652,7 +652,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bones', amount ='R'},
-					{name='meat', amount =11},
+					{name='meat', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -689,7 +689,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='meat', amount =6},
+					{name='meat', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -707,7 +707,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='meat', amount =9},
+					{name='meat', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -746,7 +746,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='meat', amount =8},
+					{name='meat', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -765,7 +765,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='fat', amount ='R'},
-					{name='meat', amount =12},
+					{name='meat', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -805,7 +805,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='meat', amount =4},
+					{name='meat', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -824,7 +824,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bonemeal', amount ='R'},
-					{name='meat', amount =8},
+					{name='meat', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -864,7 +864,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='meat', amount =6},
+					{name='meat', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -884,7 +884,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='chitin', amount ='R'},
-					{name='meat', amount =10},
+					{name='meat', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -917,7 +917,7 @@ fun.autorecipes {
 					{name='shell', amount ='R'},
 					{name='guts', amount ='R'},
 					{name='arthropodblood', amount ='R'},
-					{name='meat', amount =4},
+					{name='meat', amount ='+2'},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -935,7 +935,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='arthropodblood', amount ='R'},
-					{name='meat', amount =7},
+					{name='meat', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -974,7 +974,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='meat', amount =6},
+					{name='meat', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -992,7 +992,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='fat', amount ='R'},
-					{name='meat', amount =10},
+					{name='meat', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
