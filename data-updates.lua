@@ -58,6 +58,8 @@ ITEM("raw-fish", "capsule"):set("icon_size", 32)
 RECIPE('modular-armor'):add_ingredient({type = "item", name = "pelt", amount = 1})
 RECIPE('low-density-structure'):add_ingredient({type = "item", name = "metallic-glass", amount = 3}):add_ingredient({type = "item", name = "ticocr-alloy", amount = 2})
 RECIPE('rocket-silo'):add_ingredient({type = "item", name = "metallic-glass", amount = 30}):add_ingredient({type = "item", name = "ticocr-alloy", amount = 20})
+TECHNOLOGY('atomic-bomb'):remove_pack('utility-science-pack'):remove_pack('production-science-pack'):remove_prereq('rocket-control-unit'):remove_prereq('kovarex-enrichment-process'):remove_prereq('military-4'):remove_prereq('rocketry'):add_prereq('domestication-mk02'):add_prereq('uranium-mk03')
+RECIPE('atomic-bomb'):add_ingredient({type = "item", name = "titanium-plate", amount = 20}):add_ingredient({type = "item", name = "fuelrod-mk01", amount = 10}):remove_ingredient("rocket-control-unit"):remove_ingredient("yellow-cake"):add_ingredient({type = "item", name = "neuromorphic-chip", amount = 1})
 
 --RECIPES UPDATES
 

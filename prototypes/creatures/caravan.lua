@@ -16,7 +16,7 @@ RECIPE{
         {type = 'fluid', name = 'water-saline', amount = 100},
     },
     result = "caravan"
-  }:add_unlock("auog")
+  }:add_unlock("domestication")
 
 ITEM{
     type = "item-with-entity-data",
