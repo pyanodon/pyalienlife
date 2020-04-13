@@ -18,7 +18,7 @@ RECIPE{
 		{type = 'item', name = 'atomic-bomb', amount = 1},
     },
     result = "nuka-caravan"
-  }:add_unlock("auog")
+  }:add_unlock("domestication-mk03")
 
 ITEM{
     type = "item-with-entity-data",
