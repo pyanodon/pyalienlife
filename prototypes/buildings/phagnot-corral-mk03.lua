@@ -32,7 +32,7 @@ ENTITY {
     type = "assembling-machine",
     name = "phagnot-corral-mk03",
     icon = "__pyalienlifegraphics__/graphics/icons/phagnot-corral-mk03.png",
-    icon_size = 32,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "phagnot-corral-mk03"},
     fast_replaceable_group = "phagnot-corral",
@@ -44,11 +44,11 @@ ENTITY {
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 7
+        module_slots = 30
     },
     allowed_effects = {"speed","productivity"},
     crafting_categories = {"phagnot"},
-    crafting_speed = 0.01,
+    crafting_speed = 0.05,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

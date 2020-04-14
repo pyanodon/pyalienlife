@@ -27,7 +27,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='skin', amount =4},
+					{name='skin', amount ='+2'},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -45,7 +45,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', amount ='R'},
-					{name='skin', amount =7},
+					{name='skin', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -82,7 +82,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='skin', amount =4},
+					{name='skin', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -100,7 +100,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', amount ='R'},
-					{name='skin', amount =8},
+					{name='skin', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -111,6 +111,59 @@ fun.autorecipes {
 	}
 }
 
+------------------COTTONGUT------------------
+
+fun.autorecipes {
+    name = 'rendering-skin-cottongut-2',
+	category = 'slaughterhouse-cottongut',
+	--module_limitations = 'cottongut',
+	subgroup = 'py-alienlife-cottongut',
+	order = 'b',
+    mats =
+	{
+		--skin
+		{
+			ingredients =
+				{
+					{name='cottongut',amount=5},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='blood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='skin', amount ='+1'},
+				},
+                crafting_speed = 15,
+                tech = 'double-skin',
+                name = 'Extract cottongut skin-2',
+                icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
+                icon_size = 32,
+		},
+		--skin cottongut rendering
+		{
+			ingredients =
+				{
+					{name='cottongut',amount='R'},
+					{name='skincottongut',amount=5},
+				},
+			results =
+				{
+					{name='blood', amount ='R'},
+					{name='skin', amount ='+3'},
+				},
+			crafting_speed = 15,
+			tech = 'double-skin',
+			name = 'Extract skin from Improved cottonguts-2',
+			icon = "__pyalienlifegraphics__/graphics/icons/skin-cottongut.png",
+			icon_size = 64,
+		},
+	}
+}
 ------------------DHILMOS------------------
 
 fun.autorecipes {
@@ -139,7 +192,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='chitin', amount =5},
+					{name='chitin', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -176,7 +229,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='skin', amount =7},
+					{name='skin', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -194,7 +247,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', amount ='R'},
-					{name='skin', amount =10},
+					{name='skin', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -231,7 +284,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='skin', amount =6},
+					{name='skin', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -249,7 +302,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', amount ='R'},
-					{name='skin', amount =9},
+					{name='skin', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -287,7 +340,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='skin', amount =4},
+					{name='skin', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -305,7 +358,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', amount ='R'},
-					{name='skin', amount =7},
+					{name='skin', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -342,7 +395,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='skin', amount =3},
+					{name='skin', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -360,7 +413,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', amount ='R'},
-					{name='skin', amount =6},
+					{name='skin', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -397,7 +450,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='skin', amount =5},
+					{name='skin', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -415,7 +468,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', amount ='R'},
-					{name='skin', amount =9},
+					{name='skin', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -451,7 +504,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='skin', amount =5},
+					{name='skin', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -469,7 +522,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', amount ='R'},
-					{name='skin', amount =11},
+					{name='skin', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -506,7 +559,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='skin', amount =4},
+					{name='skin', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -524,7 +577,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', amount ='R'},
-					{name='skin', amount =8},
+					{name='skin', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -563,7 +616,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='skin', amount =6},
+					{name='skin', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -582,7 +635,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='arthropodblood', amount ='R'},
-					{name='skin', amount =10},
+					{name='skin', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -622,7 +675,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='chitin', amount =3},
+					{name='chitin', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -641,7 +694,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='formicacid', amount ='R'},
-					{name='chitin', amount =8},
+					{name='chitin', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -681,7 +734,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='chitin', amount =6},
+					{name='chitin', amount ='+4'},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -701,7 +754,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='sulfuricacid', amount ='R'},
-					{name='chitin', amount =11},
+					{name='chitin', amount ='+7'},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -739,7 +792,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='skin', amount =8},
+					{name='skin', amount ='+4'},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -757,7 +810,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='arthropodblood', amount ='R'},
-					{name='skin', amount =14},
+					{name='skin', amount ='+8'},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',

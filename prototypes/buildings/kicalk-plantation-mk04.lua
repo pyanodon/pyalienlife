@@ -52,15 +52,15 @@ ENTITY {
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 10
+        module_slots = 100
     },
     allowed_effects = {"speed","productivity"},
     crafting_categories = {"kicalk"},
-    crafting_speed = 0.004,
+    crafting_speed = 0.04,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = -25,
+        emissions_per_minute = -35,
     },
     energy_usage = "950kW",
     ingredient_count = 20,

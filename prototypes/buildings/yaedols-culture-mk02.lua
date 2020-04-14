@@ -33,7 +33,7 @@ ENTITY {
     type = "assembling-machine",
     name = "yaedols-culture-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/yaedols-culture-mk02.png",
-    icon_size = 32,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "yaedols-culture-mk02"},
     fast_replaceable_group = "yaedols-culture",

@@ -23,9 +23,9 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-auog",
     order = "a",
-    stack_size = 10,
+    stack_size = 25,
     fuel_category = 'auog',
-    fuel_value = '150MJ',
+    fuel_value = '250MJ',
     burnt_result = 'used-auog'
 }
 
@@ -43,9 +43,9 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dingrits",
     order = "a",
-    stack_size = 10,
+    stack_size = 25,
     fuel_category = 'dingrits',
-    fuel_value = '120MJ',
+    fuel_value = '220MJ',
     burnt_result = 'used-dingrit'
 }
 
@@ -188,8 +188,57 @@ ITEM {
 ITEM {
     type = "item",
     name = "fawogae-spore",
-    icon = "__pyalienlifegraphics__/graphics/icons/fawogae-spore.png",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/fawogae-spore.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png", icon_size = 64},
+        },
     icon_size = 32,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "fawogae-spore-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/fawogae-spore.png", icon_size = 32},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "fawogae-spore-mk03",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/fawogae-spore.png", icon_size = 32},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "fawogae-spore-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/fawogae-spore.png", icon_size = 32},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
+        },
+    icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
@@ -637,7 +686,6 @@ ITEM {
 {
     type = "tool",
     name = "py-science-pack",
-    localised_description = {"item-description.science-pack"},
     icon = "__pyalienlifegraphics__/graphics/icons/py-science-pack.png",
     icon_size = 64,
     subgroup = "py-alienlife-items",
@@ -727,7 +775,9 @@ ITEM {
       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/meat-06.png", scale = 0.25, mipmap_count = 1 },
     },
 	fuel_category = 'food',
-	fuel_value = '1MJ',
+    fuel_value = '2MJ',
+    fuel_acceleration_multiplier = 1.1,
+    fuel_top_speed_multiplier = 1.15,
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
@@ -1185,7 +1235,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1196,7 +1246,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1207,7 +1257,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1218,7 +1268,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1229,7 +1279,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1240,7 +1290,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1251,7 +1301,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1262,7 +1312,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1273,7 +1323,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1284,7 +1334,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1295,7 +1345,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1306,7 +1356,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1317,7 +1367,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1328,7 +1378,29 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "moondrop-codex",
+    icon = "__pyalienlifegraphics__/graphics/icons/moondrop-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "moondrop-seeds",
+    icon = "__pyalienlifegraphics__/graphics/icons/moondrop-seeds.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-moon",
+    order = "x",
+    stack_size = 500
 }
 
 ITEM {
@@ -1339,7 +1411,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1350,7 +1422,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1361,7 +1433,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1372,7 +1444,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1383,7 +1455,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1394,7 +1466,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1405,7 +1477,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1416,7 +1488,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1427,7 +1499,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1438,7 +1510,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1449,7 +1521,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1493,7 +1565,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "h",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1504,7 +1576,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "h",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1537,7 +1609,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arthurian",
     order = "h",
-    stack_size = 500
+    stack_size = 50
 }
 
 ITEM {
@@ -1768,7 +1840,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-yotoi",
     order = "h",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1779,7 +1851,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dhilmos",
     order = "h",
-    stack_size = 100
+    stack_size = 50
 }
 
 ITEM {
@@ -1944,7 +2016,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-cadaveric",
     order = "x",
-    stack_size = 10
+    stack_size = 500
 }
 
 ITEM {
@@ -1966,7 +2038,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1977,7 +2049,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -1988,7 +2060,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-rennea",
     order = "h",
-    stack_size = 400
+    stack_size = 500
 }
 
 ITEM {
@@ -2087,7 +2159,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2109,7 +2181,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2120,7 +2192,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2131,7 +2203,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2230,7 +2302,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2252,7 +2324,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2263,7 +2335,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2274,7 +2346,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2285,7 +2357,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "x",
-    stack_size = 10
+    stack_size = 50
 }
 
 ITEM {
@@ -2296,7 +2368,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "x",
-    stack_size = 10
+    stack_size = 500
 }
 
 ITEM {
@@ -2307,7 +2379,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "x",
-    stack_size = 10
+    stack_size = 500
 }
 
 ITEM {
@@ -2318,7 +2390,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2329,7 +2401,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2340,7 +2412,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2439,7 +2511,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dingrits",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2630,7 +2702,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dingrits",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2639,9 +2711,13 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/dingrits-food-01.png",
 	icon_size = 64,
     flags = {},
+    fuel_category = 'food',
+    fuel_value = '2MJ',
+    fuel_acceleration_multiplier = 1.5,
+    fuel_top_speed_multiplier = 1.4,
     subgroup = "py-alienlife-food",
     order = "x",
-    stack_size = 10
+    stack_size = 500
 }
 
 ITEM {
@@ -2650,9 +2726,13 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/dingrits-food-02.png",
 	icon_size = 64,
     flags = {},
+    fuel_category = 'food',
+    fuel_value = '4MJ',
+    fuel_acceleration_multiplier = 1.8,
+    fuel_top_speed_multiplier = 1.6,
     subgroup = "py-alienlife-food",
     order = "x",
-    stack_size = 10
+    stack_size = 500
 }
 
 ITEM {
@@ -2740,7 +2820,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2751,7 +2831,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-kmauts",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2762,7 +2842,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2773,7 +2853,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2784,7 +2864,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-xyhiphoe",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2795,7 +2875,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-xyhiphoe",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2850,7 +2930,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-vonix",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2861,7 +2941,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-vonix",
     order = "x",
-    stack_size = 10
+    stack_size = 50
 }
 
 ITEM {
@@ -2872,7 +2952,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-vonix",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2883,7 +2963,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-zipir",
     order = "x",
-    stack_size = 10
+    stack_size = 50
 }
 
 ITEM {
@@ -2894,7 +2974,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2905,7 +2985,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-grod",
     order = "x",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2916,7 +2996,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2938,7 +3018,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2949,7 +3029,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -2960,7 +3040,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "x",
-    stack_size = 10
+    stack_size = 500
 }
 
 ITEM {
@@ -2971,7 +3051,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "x",
-    stack_size = 10
+    stack_size = 500
 }
 
 ITEM {
@@ -3141,6 +3221,51 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "phagnot-cub-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/phagnot-pup.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-phagnot",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "phagnot-cub-mk03",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/phagnot-pup.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-phagnot",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "phagnot-cub-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/phagnot-pup.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-phagnot",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "gas-bladder",
     icon = "__pyalienlifegraphics__/graphics/icons/gas-bladder.png",
     icon_size = 64,
@@ -3158,7 +3283,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3367,7 +3492,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3378,7 +3503,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3389,7 +3514,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-cridren",
     order = "x",
-    stack_size = 10
+    stack_size = 500
 }
 
 ITEM {
@@ -3400,7 +3525,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3455,7 +3580,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3477,7 +3602,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3488,7 +3613,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3499,7 +3624,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-cridren",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3510,7 +3635,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "x",
-    stack_size = 10
+    stack_size = 500
 }
 
 ITEM {
@@ -3521,7 +3646,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "x",
-    stack_size = 10
+    stack_size = 500
 }
 
 ITEM {
@@ -3532,7 +3657,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "x",
-    stack_size = 10
+    stack_size = 500
 }
 
 ITEM {
@@ -3543,7 +3668,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "x",
-    stack_size = 10
+    stack_size = 500
 }
 
 ITEM {
@@ -3554,7 +3679,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "x",
-    stack_size = 10
+    stack_size = 500
 }
 
 ITEM {
@@ -3565,7 +3690,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-food",
     order = "x",
-    stack_size = 10
+    stack_size = 500
 }
 
 ITEM {
@@ -3576,7 +3701,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-trits",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3587,7 +3712,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-latex",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3598,18 +3723,67 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-latex",
     order = "d",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
     type = "item",
     name = "kicalk-seeds",
-    icon = "__pyalienlifegraphics__/graphics/icons/kicalk-seeds.png",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/kicalk-seeds.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png", icon_size = 64},
+        },
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-kicalk",
     order = "a",
-    stack_size = 300
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "kicalk-seeds-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/kicalk-seeds.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-kicalk",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "kicalk-seeds-mk03",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/kicalk-seeds.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-kicalk",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "kicalk-seeds-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/kicalk-seeds.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-kicalk",
+    order = "a",
+    stack_size = 500
 }
 
 ITEM {
@@ -3620,7 +3794,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3631,7 +3805,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3642,7 +3816,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-latex",
     order = "e",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3653,7 +3827,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-latex",
     order = "f",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -3664,7 +3838,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "f",
-    stack_size = 10,
+    stack_size = 100,
 	capsule_action =
     {
       type = "use-on-self",
@@ -4156,6 +4330,274 @@ ITEM {
     stack_size = 100
 }
 
+ITEM {
+    type = "item",
+    name = "cottongut-codex",
+    icon = "__pyalienlifegraphics__/graphics/icons/cottongut-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "earth-mouse-sample",
+    icon = "__pyalienlifegraphics__/graphics/icons/earth-mouse-sample.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-samples",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "cottongut",
+    icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottongut",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "cottongut-food-01",
+    icon = "__pyalienlifegraphics__/graphics/icons/cottongut-food-01.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-food",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "cottongut-food-02",
+    icon = "__pyalienlifegraphics__/graphics/icons/cottongut-food-02.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-food",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "cottongut-pup",
+    icon = "__pyalienlifegraphics__/graphics/icons/cottongut-pup.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottongut",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "cottongut-pup-mk01",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/cottongut-pup.png"},
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottongut",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "cottongut-pup-mk02",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/cottongut-pup.png"},
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottongut",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "cottongut-pup-mk03",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/cottongut-pup.png"},
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottongut",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "cottongut-pup-mk04",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/cottongut-pup.png"},
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottongut",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "brain-cottongut",
+    icon = "__pyalienlifegraphics__/graphics/icons/brain-cottongut.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottongut",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "bone-cottongut",
+    icon = "__pyalienlifegraphics__/graphics/icons/bone-cottongut.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottongut",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "meat-cottongut",
+    icon = "__pyalienlifegraphics__/graphics/icons/meat-cottongut.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottongut",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "blood-cottongut",
+    icon = "__pyalienlifegraphics__/graphics/icons/blood-cottongut.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottongut",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "guts-cottongut",
+    icon = "__pyalienlifegraphics__/graphics/icons/guts-cottongut.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottongut",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "fat-cottongut",
+    icon = "__pyalienlifegraphics__/graphics/icons/fat-cottongut.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottongut",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "skin-cottongut",
+    icon = "__pyalienlifegraphics__/graphics/icons/skin-cottongut.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottongut",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "solidified-sarcorus",
+    icon = "__pyalienlifegraphics__/graphics/icons/solidified-sarcorus.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-science",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "paragen",
+    icon = "__pyalienlifegraphics__/graphics/icons/paragen.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-science",
+    order = "b",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "negasium",
+    icon = "__pyalienlifegraphics__/graphics/icons/negasium.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-science",
+    order = "c",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "nonconductive-phazogen",
+    icon = "__pyalienlifegraphics__/graphics/icons/nonconductive-phazogen.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-science",
+    order = "d",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "denatured-seismite",
+    icon = "__pyalienlifegraphics__/graphics/icons/denatured-seismite.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-science",
+    order = "d",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "destablilized-toxirus",
+    icon = "__pyalienlifegraphics__/graphics/icons/destablilized-toxirus.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-science",
+    order = "d",
+    stack_size = 100
+}
 ------RULES-----
 
 ---CREATURES---
@@ -4165,8 +4607,6 @@ local alien_life_limitations_ulric =
 
     local alien_life_limitations_mukmoux =
 	{
-	'mukmoux-manure-03',
-	'mukmoux-manure-03-food'
     }
 
     local alien_life_limitations_korlex =
@@ -4195,6 +4635,9 @@ local alien_life_limitations_ulric =
 
     local alien_life_limitations_fish =
 	{
+        'fish-mk02',
+        'fish-mk03',
+        'fish-mk04'
     }
 
     local alien_life_limitations_phagnot =
@@ -4241,197 +4684,47 @@ local alien_life_limitations_ulric =
 local alien_life_limitations_sponge =
 	{
 	"sea-sponge-1",
-  "sea-sponge-2",
+    "sea-sponge-2",
     }
 
     local alien_life_limitations_ralesia =
 	{
-    "ralesias1",
-  "ralesias2",
-  "ralesias3",
-  "ralesias4",
-  "ralesias5",
-  "ralesias6",
-  "ralesias7",
-  "ralesias8",
-  "ralesias9",
-  "ralesias10",
-  "ralesias11",
-  "ralesias12",
-  "ralesias13",
-  "ralesias14"
     }
 
     local alien_life_limitations_kicalk =
     {
-	"kicalk1",
-  "kicalk2",
-  "kicalk3",
-  "kicalk4",
-  "kicalk5",
-  "kicalk6",
-  "kicalk7",
-  "kicalk8",
-  "kicalk9",
-  "kicalk10",
-  "kicalk11",
-  "kicalk12",
-  "kicalk13",
-  "kicalk14"
     }
 
     local alien_life_limitations_tuuphra =
 	{
-	"tuuphra1",
-  "tuuphra2",
-  "tuuphra3",
-  "tuuphra4",
-  "tuuphra5",
-  "tuuphra6",
-  "tuuphra7",
-  "tuuphra8",
-  "tuuphra9",
-  "tuuphra10",
-  "tuuphra11",
-  "tuuphra12",
-  "tuuphra13",
-  "tuuphra14"
     }
 
     local alien_life_limitations_navens =
 	{
-		"navens1",
-	  "navens2",
-	  "navens3",
-	  "navens4",
-	  "navens5",
-	  "navens6",
-	  "navens7",
-	  "navens8",
-	  "navens9",
-	  "navens10",
-	  "navens11",
-	  "navens12"
     }
 
     local alien_life_limitations_yotoi =
 	{
-	"yotoi1",
-  "yotoi2",
-  "yotoi3",
-  "yotoi4",
-  "yotoi5",
-  "yotoi6",
-  "yotoi7",
-  "yotoi8",
-  "yotoi9",
-  "yotoi10",
-  "yotoi11",
-  "yotoi12",
-  "yotoi13",
-  "yotoi14",
-  "yotoifruit1",
-  "yotoifruit2",
-  "yotoifruit3",
-  "yotoifruit4",
-  "yotoifruit5",
-  "yotoifruit6",
-  "yotoifruit7",
-  "yotoifruit8",
-  "yotoifruit9",
-  "yotoifruit10",
-  "yotoifruit11",
-  "yotoifruit12",
-  "yotoifruit13",
-  "yotoifruit14"
     }
 
     local alien_life_limitations_rennea =
 	{
-	"rennea1",
-  "rennea2",
-  "rennea3",
-  "rennea4",
-  "rennea5",
-  "rennea6",
-  "rennea7",
-  "rennea8",
-  "rennea9",
-  "rennea10",
-  "rennea11",
-  "rennea12",
-  "rennea13",
-  "rennea14"
     }
 
     local alien_life_limitations_grod =
 	{
-	"grod1",
-  "grod2",
-  "grod3",
-  "grod4",
-  "grod5",
-  "grod6",
-  "grod7",
-  "grod8",
-  "grod9",
-  "grod10",
-  "grod11",
-  "grod12",
-  "grod13",
-  "grod14",
-  "grod15",
     }
 
     local alien_life_limitations_bhoddos =
 	{
-	"bhoddos1",
-  "bhoddos2",
-  "bhoddos3",
-  "bhoddos4",
-  "bhoddos5",
-  "bhoddos6",
-  "bhoddos7",
-  "bhoddos8",
-  "bhoddos9",
-  "bhoddos10",
-  "bhoddos11",
-  "bhoddos12",
-  "bhoddos13",
-  "bhoddos14",
     }
 
   local alien_life_limitations_cadaveric =
 	{
-	"cadaveric-arum1",
-	  "cadaveric-arum2",
-	  "cadaveric-arum3",
-	  "cadaveric-arum4",
-	  "cadaveric-arum5",
-	  "cadaveric-arum6",
-	  "cadaveric-arum7",
-	  "cadaveric-arum8",
-	  "cadaveric-arum9",
-	  "cadaveric-arum10",
-	  "cadaveric-arum11",
-	  "cadaveric-arum12",
-	  "cadaveric-arum13"
     }
 
 local alien_life_limitations_yaedols =
 	{
-	"yaedols1",
-  "yaedols2",
-  "yaedols3",
-  "yaedols4",
-  "yaedols5",
-  "yaedols6",
-  "yaedols7",
-  "yaedols8",
-  "yaedols9",
-  "yaedols10",
-  "yaedols11",
-  "yaedols12",
 	}
 
 local alien_life_limitations_fawogae =
@@ -4439,8 +4732,14 @@ local alien_life_limitations_fawogae =
 	'fawogae-mk02',
 	'fawogae-mk03',
 	'fawogae-mk04'
-	}
+    }
 
+local alien_life_limitations_moondrop =
+    {
+    }
+local alien_life_limitations_cottongut =
+    {
+    }
 ----MODULES----
 
 ITEM {
@@ -4458,7 +4757,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "u-a",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_ulric,
 	limitation_message_key = "Its full"
@@ -4478,7 +4777,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "u-b",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_ulric,
 	limitation_message_key = "Its full"
@@ -4498,7 +4797,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "u-c",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_ulric,
 	limitation_message_key = "Its full"
@@ -4518,7 +4817,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "u-d",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 35}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_ulric,
 	limitation_message_key = "Its full"
@@ -4533,13 +4832,13 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/sea-sponge.png"}
     },
     icon_size = 64,
-    category = "sea-sponge",
+    category = "sponge",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "sa",
-    stack_size = 10,
-	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
+    stack_size = 25,
+	effect = { speed = {bonus = 2.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_sponge,
 	limitation_message_key = "Its full"
 }
@@ -4553,13 +4852,13 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/sea-sponge.png"}
     },
     icon_size = 64,
-    category = "sea-sponge",
+    category = "sponge",
 	tier = 2,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "sb",
-    stack_size = 10,
-	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
+    stack_size = 25,
+	effect = { speed = {bonus = 5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_sponge,
 	limitation_message_key = "Its full"
 }
@@ -4573,13 +4872,13 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/sea-sponge.png"}
     },
     icon_size = 64,
-    category = "sea-sponge",
+    category = "sponge",
 	tier = 3,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "sc",
-    stack_size = 10,
-	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
+    stack_size = 25,
+	effect = { speed = {bonus = 8}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_sponge,
 	limitation_message_key = "Its full"
 }
@@ -4593,13 +4892,13 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/sea-sponge.png"}
     },
     icon_size = 64,
-    category = "sea-sponge",
+    category = "sponge",
 	tier = 4,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "sd",
-    stack_size = 10,
-	effect = { speed = {bonus = 35}, productivity = {bonus = -0.01}},
+    stack_size = 25,
+	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_sponge,
 	limitation_message_key = "Its full"
 }
@@ -4613,12 +4912,12 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png"}
     },
     icon_size = 64,
-    category = "ralesia-flower",
+    category = "ralesia",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "ra",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_ralesia,
 	limitation_message_key = "Its full"
@@ -4633,12 +4932,12 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png"}
     },
     icon_size = 64,
-    category = "ralesia-flower",
+    category = "ralesia",
 	tier = 2,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "rb",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_ralesia,
 	limitation_message_key = "Its full"
@@ -4653,12 +4952,12 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png"}
     },
     icon_size = 64,
-    category = "ralesia-flower",
+    category = "ralesia",
 	tier = 3,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "rc",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_ralesia,
 	limitation_message_key = "Its full"
@@ -4673,12 +4972,12 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png"}
     },
     icon_size = 64,
-    category = "ralesia-flower",
+    category = "ralesia",
 	tier = 4,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "rd",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_ralesia,
 	limitation_message_key = "Its full"
@@ -4698,7 +4997,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "m-a",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_mukmoux,
 	limitation_message_key = "Its full"
@@ -4718,7 +5017,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "m-b",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 12.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_mukmoux,
 	limitation_message_key = "Its full"
@@ -4738,7 +5037,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "m-c",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_mukmoux,
 	limitation_message_key = "Its full"
@@ -4758,7 +5057,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "m-d",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 17.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_mukmoux,
 	limitation_message_key = "Its full"
@@ -4778,7 +5077,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "aa",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_arthurian,
 	limitation_message_key = "Its full"
@@ -4798,7 +5097,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "ab",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_arthurian,
 	limitation_message_key = "Its full"
@@ -4818,7 +5117,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "ac",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_arthurian,
 	limitation_message_key = "Its full"
@@ -4838,7 +5137,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "ad",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 35}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_arthurian,
 	limitation_message_key = "Its full"
@@ -4858,7 +5157,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "ta",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_tuuphra,
 	limitation_message_key = "Its full"
@@ -4878,7 +5177,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "tb",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_tuuphra,
 	limitation_message_key = "Its full"
@@ -4898,7 +5197,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "tc",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_tuuphra,
 	limitation_message_key = "Its full"
@@ -4918,7 +5217,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "td",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 35}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_tuuphra,
 	limitation_message_key = "Its full"
@@ -4938,7 +5237,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "na",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_navens,
 	limitation_message_key = "Its full"
@@ -4958,7 +5257,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "nb",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_navens,
 	limitation_message_key = "Its full"
@@ -4978,7 +5277,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "nc",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_navens,
 	limitation_message_key = "Its full"
@@ -4998,7 +5297,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "nd",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_navens,
 	limitation_message_key = "Its full"
@@ -5018,7 +5317,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "ya",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_yotoi,
 	limitation_message_key = "Its full"
@@ -5038,7 +5337,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "yb",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_yotoi,
 	limitation_message_key = "Its full"
@@ -5058,7 +5357,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "yc",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_yotoi,
 	limitation_message_key = "Its full"
@@ -5078,7 +5377,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "yd",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 35}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_yotoi,
 	limitation_message_key = "Its full"
@@ -5098,7 +5397,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "da",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_dhilmos,
 	limitation_message_key = "Its full"
@@ -5118,7 +5417,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "db",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_dhilmos,
 	limitation_message_key = "Its full"
@@ -5138,7 +5437,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "dc",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_dhilmos,
 	limitation_message_key = "Its full"
@@ -5158,7 +5457,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "dd",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_dhilmos,
 	limitation_message_key = "Its full"
@@ -5178,8 +5477,8 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "sr-a",
-    stack_size = 10,
-	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
+    stack_size = 25,
+	effect = { speed = {bonus = 3.30}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_scrondrix,
 	limitation_message_key = "Its full"
 }
@@ -5198,8 +5497,8 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "sr-b",
-    stack_size = 10,
-	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
+    stack_size = 25,
+	effect = { speed = {bonus = 6.61}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_scrondrix,
 	limitation_message_key = "Its full"
 }
@@ -5218,8 +5517,8 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "sr-c",
-    stack_size = 10,
-	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
+    stack_size = 25,
+	effect = { speed = {bonus = 9.91}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_scrondrix,
 	limitation_message_key = "Its full"
 }
@@ -5238,8 +5537,8 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "sr-d",
-    stack_size = 10,
-	effect = { speed = {bonus = 35}, productivity = {bonus = -0.01}},
+    stack_size = 25,
+	effect = { speed = {bonus = 13.21}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_scrondrix,
 	limitation_message_key = "Its full"
 }
@@ -5258,7 +5557,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "ren-a",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_rennea,
 	limitation_message_key = "Its full"
@@ -5278,7 +5577,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "ren-b",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_rennea,
 	limitation_message_key = "Its full"
@@ -5298,7 +5597,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "ren-c",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_rennea,
 	limitation_message_key = "Its full"
@@ -5318,7 +5617,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "ren-d",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_rennea,
 	limitation_message_key = "Its full"
@@ -5338,7 +5637,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "ph-a",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_phadai,
 	limitation_message_key = "Its full"
@@ -5358,7 +5657,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "ph-b",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_phadai,
 	limitation_message_key = "Its full"
@@ -5378,7 +5677,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "ph-c",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_phadai,
 	limitation_message_key = "Its full"
@@ -5398,7 +5697,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "ph-d",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 35}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_phadai,
 	limitation_message_key = "Its full"
@@ -5418,12 +5717,12 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "a",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 50}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_auog,
     limitation_message_key = "Its full",
     fuel_category = 'auog',
-    fuel_value = '100MJ',
+    fuel_value = '200MJ',
     burnt_result = 'used-auog'
 }
 
@@ -5441,12 +5740,12 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "a-b",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 55}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_auog,
     limitation_message_key = "Its full",
     fuel_category = 'auog',
-    fuel_value = '200MJ',
+    fuel_value = '300MJ',
     burnt_result = 'used-auog-mk02'
 }
 
@@ -5464,12 +5763,12 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "a-c",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 60}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_auog,
     limitation_message_key = "Its full",
     fuel_category = 'auog',
-    fuel_value = '250MJ',
+    fuel_value = '350MJ',
     burnt_result = 'used-auog-mk03'
 }
 
@@ -5487,12 +5786,12 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "a-d",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 65}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_auog,
     limitation_message_key = "Its full",
     fuel_category = 'auog',
-    fuel_value = '300MJ',
+    fuel_value = '400MJ',
     burnt_result = 'used-auog-mk04'
 }
 
@@ -5577,12 +5876,14 @@ ITEM {
 	category = "fish",
 	tier = 1,
 	fuel_category = 'food',
-	fuel_value = '1MJ',
+    fuel_value = '1MJ',
+    fuel_acceleration_multiplier = 1.2,
+    fuel_top_speed_multiplier = 1.2,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "fa",
-    stack_size = 10,
-	effect = { speed = {bonus = 7.5}, productivity = {bonus = -0.01}},
+    stack_size = 25,
+	effect = { speed = {bonus = 3.75}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_fish,
 	limitation_message_key = "Its full"
 }
@@ -5609,12 +5910,14 @@ ITEM {
 	category = "fish",
 	tier = 2,
 	fuel_category = 'food',
-	fuel_value = '2MJ',
+    fuel_value = '2MJ',
+    fuel_acceleration_multiplier = 1.3,
+    fuel_top_speed_multiplier = 1.3,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "fb",
-    stack_size = 10,
-	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
+    stack_size = 25,
+	effect = { speed = {bonus = 5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_fish,
 	limitation_message_key = "Its full"
 }
@@ -5641,12 +5944,14 @@ ITEM {
 	category = "fish",
 	tier = 3,
 	fuel_category = 'food',
-	fuel_value = '3MJ',
+    fuel_value = '3MJ',
+    fuel_acceleration_multiplier = 1.4,
+    fuel_top_speed_multiplier = 1.4,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "fc",
-    stack_size = 10,
-	effect = { speed = {bonus = 12.5}, productivity = {bonus = -0.01}},
+    stack_size = 25,
+	effect = { speed = {bonus = 6.25}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_fish,
 	limitation_message_key = "Its full"
 }
@@ -5673,12 +5978,14 @@ ITEM {
 	category = "fish",
 	tier = 4,
 	fuel_category = 'food',
-	fuel_value = '4MJ',
+    fuel_value = '4MJ',
+    fuel_acceleration_multiplier = 1.5,
+    fuel_top_speed_multiplier = 1.5,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "fd",
-    stack_size = 10,
-	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
+    stack_size = 25,
+	effect = { speed = {bonus = 7.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_fish,
 	limitation_message_key = "Its full"
 }
@@ -5697,7 +6004,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "yaed-a",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_yaedols,
 	limitation_message_key = "Its full"
@@ -5717,7 +6024,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "yaed-b",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_yaedols,
 	limitation_message_key = "Its full"
@@ -5737,7 +6044,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "yaed-c",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_yaedols,
 	limitation_message_key = "Its full"
@@ -5757,7 +6064,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "yaed-d",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 35}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_yaedols,
 	limitation_message_key = "Its full"
@@ -5777,12 +6084,12 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "d-a",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_dingrits,
     limitation_message_key = "Its full",
     fuel_category = 'dingrits',
-    fuel_value = '80MJ',
+    fuel_value = '200MJ',
     burnt_result = 'used-dingrit'
 }
 
@@ -5800,12 +6107,12 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "d-b",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_dingrits,
     limitation_message_key = "Its full",
     fuel_category = 'dingrits',
-    fuel_value = '150MJ',
+    fuel_value = '270MJ',
     burnt_result = 'used-dingrit-mk02'
 }
 
@@ -5823,12 +6130,12 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "d-c",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_dingrits,
     limitation_message_key = "Its full",
     fuel_category = 'dingrits',
-    fuel_value = '170MJ',
+    fuel_value = '290MJ',
     burnt_result = 'used-dingrit-mk03'
 }
 
@@ -5846,12 +6153,12 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "d-d",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 35}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_dingrits,
     limitation_message_key = "Its full",
     fuel_category = 'dingrits',
-    fuel_value = '200MJ',
+    fuel_value = '420MJ',
     burnt_result = 'used-dingrit-mk04'
 }
 
@@ -5933,7 +6240,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "k-a",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_kmauts,
 	limitation_message_key = "Its full"
@@ -5953,7 +6260,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "k-b",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 12.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_kmauts,
 	limitation_message_key = "Its full"
@@ -5973,7 +6280,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "k-c",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_kmauts,
 	limitation_message_key = "Its full"
@@ -5993,7 +6300,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "k-d",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 17.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_kmauts,
 	limitation_message_key = "Its full"
@@ -6013,7 +6320,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "v-a",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 100}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_vonix,
 	limitation_message_key = "Its full"
@@ -6033,7 +6340,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "v-b",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 110}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_vonix,
 	limitation_message_key = "Its full"
@@ -6053,7 +6360,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "v-c",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 120}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_vonix,
 	limitation_message_key = "Its full"
@@ -6073,7 +6380,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "v-d",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 130}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_vonix,
 	limitation_message_key = "Its full"
@@ -6093,7 +6400,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "ga",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_grod,
 	limitation_message_key = "Its full"
@@ -6113,7 +6420,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "gb",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_grod,
 	limitation_message_key = "Its full"
@@ -6133,7 +6440,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "gc",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_grod,
 	limitation_message_key = "Its full"
@@ -6153,7 +6460,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "gd",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 35}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_grod,
 	limitation_message_key = "Its full"
@@ -6169,8 +6476,8 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "p-a",
-    stack_size = 10,
-	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
+    stack_size = 25,
+	effect = { speed = {bonus = 2}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_phagnot,
 	limitation_message_key = "Its full"
 }
@@ -6189,8 +6496,8 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "p-b",
-    stack_size = 10,
-	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
+    stack_size = 25,
+	effect = { speed = {bonus = 4}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_phagnot,
 	limitation_message_key = "Its full"
 }
@@ -6209,8 +6516,8 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "p-c",
-    stack_size = 10,
-	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
+    stack_size = 25,
+	effect = { speed = {bonus = 6}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_phagnot,
 	limitation_message_key = "Its full"
 }
@@ -6229,8 +6536,8 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "p-d",
-    stack_size = 10,
-	effect = { speed = {bonus = 35}, productivity = {bonus = -0.01}},
+    stack_size = 25,
+	effect = { speed = {bonus = 8}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_phagnot,
 	limitation_message_key = "Its full"
 }
@@ -6249,7 +6556,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "b-a",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 45}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_bhoddos,
 	limitation_message_key = "Its full"
@@ -6269,7 +6576,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "b-b",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 50}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_bhoddos,
 	limitation_message_key = "Its full"
@@ -6289,7 +6596,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "b-c",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 55}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_bhoddos,
 	limitation_message_key = "Its full"
@@ -6309,7 +6616,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "b-d",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 60}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_bhoddos,
 	limitation_message_key = "Its full"
@@ -6329,7 +6636,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "x-a",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_xeno,
 	limitation_message_key = "Its full"
@@ -6349,7 +6656,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "x-b",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_xeno,
 	limitation_message_key = "Its full"
@@ -6369,7 +6676,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "x-c",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_xeno,
 	limitation_message_key = "Its full"
@@ -6389,7 +6696,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "x-d",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_xeno,
 	limitation_message_key = "Its full"
@@ -6405,7 +6712,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "a",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 70}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_cridren,
 	limitation_message_key = "Its full"
@@ -6421,7 +6728,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "a",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_antelope,
 	limitation_message_key = "Its full"
@@ -6441,7 +6748,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "za",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_zipir,
 	limitation_message_key = "Its full"
@@ -6461,7 +6768,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "zb",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_zipir,
 	limitation_message_key = "Its full"
@@ -6481,7 +6788,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "zc",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 35}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_zipir,
 	limitation_message_key = "Its full"
@@ -6497,11 +6804,11 @@ ITEM {
     },
     icon_size = 64,
 	category = "zipir",
-	tier = 41,
+	tier = 4,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "zd",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 40}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_zipir,
 	limitation_message_key = "Its full"
@@ -6521,8 +6828,8 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "tr-a",
-    stack_size = 10,
-	effect = { speed = {bonus = 80}, productivity = {bonus = -0.01}},
+    stack_size = 25,
+	effect = { speed = {bonus = 40}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_trits,
 	limitation_message_key = "Its full"
 }
@@ -6541,8 +6848,8 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "tr-b",
-    stack_size = 10,
-	effect = { speed = {bonus = 90}, productivity = {bonus = -0.01}},
+    stack_size = 25,
+	effect = { speed = {bonus = 45}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_trits,
 	limitation_message_key = "Its full"
 }
@@ -6561,8 +6868,8 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "tr-c",
-    stack_size = 10,
-	effect = { speed = {bonus = 100}, productivity = {bonus = -0.01}},
+    stack_size = 25,
+	effect = { speed = {bonus = 50}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_trits,
 	limitation_message_key = "Its full"
 }
@@ -6581,8 +6888,8 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "tr-d",
-    stack_size = 10,
-	effect = { speed = {bonus = 110}, productivity = {bonus = -0.01}},
+    stack_size = 25,
+	effect = { speed = {bonus = 55}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_trits,
 	limitation_message_key = "Its full"
 }
@@ -6601,8 +6908,8 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "k-a",
-    stack_size = 10,
-	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
+    stack_size = 50,
+	effect = { speed = {bonus = 0.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_kicalk,
 	limitation_message_key = "Its full"
 }
@@ -6621,8 +6928,8 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "k-b",
-    stack_size = 10,
-	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
+    stack_size = 50,
+	effect = { speed = {bonus = 1}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_kicalk,
 	limitation_message_key = "Its full"
 }
@@ -6641,8 +6948,8 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "k-c",
-    stack_size = 10,
-	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
+    stack_size = 50,
+	effect = { speed = {bonus = 2}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_kicalk,
 	limitation_message_key = "Its full"
 }
@@ -6661,8 +6968,8 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "k-d",
-    stack_size = 10,
-	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
+    stack_size = 50,
+	effect = { speed = {bonus = 3}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_kicalk,
 	limitation_message_key = "Its full"
 }
@@ -6681,7 +6988,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "cad-a",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_cadaveric,
 	limitation_message_key = "Its full"
@@ -6701,7 +7008,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "cad-b",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 35}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_cadaveric,
 	limitation_message_key = "Its full"
@@ -6721,7 +7028,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "cad-c",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 45}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_cadaveric,
 	limitation_message_key = "Its full"
@@ -6741,7 +7048,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "cad-d",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 60}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_cadaveric,
 	limitation_message_key = "Its full"
@@ -6761,7 +7068,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "v-a",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_vrauks,
 	limitation_message_key = "Its full"
@@ -6780,7 +7087,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "v-b",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_vrauks,
 	limitation_message_key = "Its full"
@@ -6800,7 +7107,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "v-c",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_vrauks,
 	limitation_message_key = "Its full"
@@ -6820,7 +7127,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "v-d",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_vrauks,
 	limitation_message_key = "Its full"
@@ -6841,7 +7148,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "v-a",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 100}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_xyhiphoe,
 	limitation_message_key = "Its full"
@@ -6860,7 +7167,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "v-b",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 105}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_xyhiphoe,
 	limitation_message_key = "Its full"
@@ -6880,7 +7187,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "v-c",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 110}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_xyhiphoe,
 	limitation_message_key = "Its full"
@@ -6900,7 +7207,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "v-d",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 115}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_xyhiphoe,
 	limitation_message_key = "Its full"
@@ -6920,7 +7227,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "k-a",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_korlex,
 	limitation_message_key = "Its full"
@@ -6939,7 +7246,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "k-b",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_korlex,
 	limitation_message_key = "Its full"
@@ -6959,7 +7266,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "k-c",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_korlex,
 	limitation_message_key = "Its full"
@@ -6979,7 +7286,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "k-d",
-    stack_size = 10,
+    stack_size = 25,
 	effect = { speed = {bonus = 35}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_korlex,
 	limitation_message_key = "Its full"
@@ -6999,7 +7306,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "k-d",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 0.45}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_fawogae,
 	limitation_message_key = "Its full"
@@ -7019,7 +7326,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "k-d",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 0.95}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_fawogae,
 	limitation_message_key = "Its full"
@@ -7039,7 +7346,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "k-d",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 1.45}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_fawogae,
 	limitation_message_key = "Its full"
@@ -7059,9 +7366,213 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "k-d",
-    stack_size = 10,
+    stack_size = 50,
 	effect = { speed = {bonus = 1.95}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_fawogae,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "moondrop",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/moondrop.png", icon_size = 64},
+        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "moon",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-d",
+    stack_size = 50,
+	effect = { speed = {bonus = 5}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_moondrop,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "moondrop-mk02",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/moondrop.png", icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "moon",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-d",
+    stack_size = 50,
+	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_moondrop,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "moondrop-mk03",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/moondrop.png", icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "moon",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-d",
+    stack_size = 50,
+	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_moondrop,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "moondrop-mk04",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/moondrop.png", icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "moon",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-d",
+    stack_size = 50,
+	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_moondrop,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "item",
+    name = "moondrop-gas",
+    icon = "__pyalienlifegraphics__/graphics/icons/moondrop-flower-iron.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-c",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "moondrop-diesel",
+    icon = "__pyalienlifegraphics__/graphics/icons/moondrop-flower-cobalt.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-c",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "moondrop-kerosene",
+    icon = "__pyalienlifegraphics__/graphics/icons/moondrop-flower-zinc.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-c",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "moondrop-fueloil",
+    icon = "__pyalienlifegraphics__/graphics/icons/moondrop-flower-gold.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-c",
+    stack_size = 50
+}
+
+ITEM {
+    type = "module",
+    name = "cottongut-mk01",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/cottongut-module.png"},
+        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "cottongut",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "cg-a",
+    stack_size = 25,
+	effect = { speed = {bonus = 2.5}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_cottongut,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "cottongut-mk02",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/cottongut-module.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "cottongut",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "cg-b",
+    stack_size = 25,
+	effect = { speed = {bonus = 5}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_cottongut,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "cottongut-mk03",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/cottongut-module.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "cottongut",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "cg-c",
+    stack_size = 25,
+	effect = { speed = {bonus = 7.5}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_cottongut,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "cottongut-mk04",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/cottongut-module.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "cottongut",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "cg-d",
+    stack_size = 25,
+	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_cottongut,
 	limitation_message_key = "Its full"
 }
 
@@ -7153,11 +7664,11 @@ data:extend(
   },
   {
     type = "module-category",
-    name = "sea-sponge"
+    name = "sponge"
   },
   {
     type = "module-category",
-    name = "ralesia-flower"
+    name = "ralesia"
   },
   {
     type = "module-category",
@@ -7274,6 +7785,14 @@ data:extend(
   {
     type = "module-category",
     name = "fawogae"
+  },
+  {
+    type = "module-category",
+    name = "moon"
+  },
+  {
+    type = "module-category",
+    name = "cottongut"
   },
   --item used to select the ceature and start and end points of the route
 	{

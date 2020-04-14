@@ -214,7 +214,6 @@ RECIPE {
         {type = 'item', name = 'ulric', amount = 2},
         {type = 'item', name = 'ulric-food-02', amount = 2},
         {type = 'item', name = 'bedding', amount = 4},
-        {type = 'item', name = 'raw-fiber', amount = 6},
         {type = 'item', name = 'water-barrel', amount = 7},
         },
     results = {
@@ -227,7 +226,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-ulric',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("selective-breeding"):add_ingredient({type = 'item', name = 'raw-fiber', amount = 6})
 
 RECIPE {
     type = 'recipe',
@@ -240,7 +239,6 @@ RECIPE {
         {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'ulric-food-02', amount = 3},
         {type = 'item', name = 'bedding', amount = 4},
-        {type = 'item', name = 'raw-fiber', amount = 6},
         {type = 'item', name = 'water-barrel', amount = 7},
         },
     results = {
@@ -253,7 +251,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-ulric',
     order = 'zb'
-}:add_unlock("artificial-breeding")
+}:add_unlock("artificial-breeding"):add_ingredient({type = 'item', name = 'raw-fiber', amount = 6})
 
 RECIPE {
     type = 'recipe',
@@ -266,7 +264,6 @@ RECIPE {
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},
         {type = 'item', name = 'ulric-food-02', amount = 3},
         {type = 'item', name = 'bedding', amount = 4},
-        {type = 'item', name = 'raw-fiber', amount = 6},
         {type = 'item', name = 'water-barrel', amount = 7},
         },
     results = {
@@ -279,5 +276,4 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-ulric',
     order = 'zc'
-}:add_unlock("biased-mutation")
-
+}:add_unlock("biased-mutation"):add_ingredient({type = 'item', name = 'raw-fiber', amount = 6})

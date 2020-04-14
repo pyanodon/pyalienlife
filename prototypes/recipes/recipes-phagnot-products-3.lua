@@ -19,7 +19,7 @@ fun.autorecipes {
 				{
                     {name='manure',amount ='*4'},
 				},
-			crafting_speed = 130,
+			crafting_speed = 80,
 			tech = 'explosive-diarrhea',
 			name = 'phag-manure-1b',
 			--icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk01.png"
@@ -35,7 +35,7 @@ fun.autorecipes {
 					--{'a','*5'}
                     {name='manure',amount ='+1'},
 				},
-			crafting_speed = 120,
+			crafting_speed = 70,
 			tech = 'explosive-diarrhea',
 			name = 'phag-manure-2b',
 			--icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk01.png"
@@ -49,9 +49,9 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure',amount ='+6'},
 				},
-				crafting_speed = 120,
+				crafting_speed = 55,
                 tech = 'explosive-diarrhea',
                 name = 'phag-manure-3b',
 		},
@@ -63,9 +63,9 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure',amount ='+2'},
 				},
-				crafting_speed = 120,
+				crafting_speed = 40,
                 tech = 'explosive-diarrhea',
                 name = 'phag-manure-4b',
 		},
@@ -81,9 +81,9 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount =5},
+                    --{name='manure',amount =5},
 				},
-				crafting_speed = 100,
+				crafting_speed = 35,
                 tech = 'explosive-diarrhea',
                 name = 'phag-manure-5b',
 		},
@@ -96,23 +96,23 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure',amount ='+6'},
 				},
-				crafting_speed = 100,
+				crafting_speed = 20,
                 tech = 'explosive-diarrhea',
                 name = 'phag-manure-6b',
 		},
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount =10},
+					{name='rawfiber',amount =5},
 				},
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure',amount ='+2'},
 				},
-				crafting_speed = 100,
+				crafting_speed = 15,
                 tech = 'explosive-diarrhea',
                 name = 'phag-manure-7b',
 		},

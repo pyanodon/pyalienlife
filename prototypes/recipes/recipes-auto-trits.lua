@@ -12,7 +12,8 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='seaweed',amount =15},
-                    {name='woodseeds',amount =15},
+					{name='woodseeds',amount =15},
+					{name='moondrop',amount =5},
 					{name='watersaline',amount ='*3000',return_item={name='waste-water',amount=500}},
 				},
 			results =
@@ -373,7 +374,8 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='seaweed',amount =15},
-                    {name='woodseeds',amount =15},
+					{name='woodseeds',amount =15},
+					{name='moondrop',amount =5},
 					{name='watersaline',amount ='*300',return_item={name='waste-water',amount= 300}},
 					--{name='cage',amount=1},
 					{name='sponge',amount = 2},
@@ -476,12 +478,14 @@ fun.autorecipes {
                     {name='sponge',amount = 'R'},
                     {name='bhoddos',amount = 'R'},
                     {name='albumin',amount = 'R'},
-                    {name='guts',amount = 'R'},
+					{name='guts',amount = 'R'},
+					{name='moondrop',amount ='R'},
                     {name='sodiumalginate',amount = 'R'},
                     {name='filtrationmedia',amount = 'R'},
 					{name='fishegg',amount = 'R'},
 					--{name='seaweed',amount =15},
 					{name='pheromones',amount =1},
+					{name='moondrop',amount =5},
                     --{name='woodseeds',amount =15},
 					--{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
 					--{name='sponge',amount = 1},
@@ -489,7 +493,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='tritscub',amount = 'R'},
-					{name='tritscub', amount =1},
+					{name='tritscub', amount =2},
 				},
 			crafting_speed = 70,
 			tech = 'pheromones'
@@ -604,6 +608,7 @@ fun.autorecipes {
 					{name='skin', probability = 0.4,amount_min =1,amount_max =3},
 					{name='fat', probability = 0.4,amount_min =2,amount_max =5},
 					{name='guts', probability = 0.4,amount_min =1,amount_max =4},
+					{name='photophore', probability = 0.2,amount_min =1,amount_max =2},
 					{name='blood', amount =60},
 					--{name='cage',amount=1},
 					{name='brain', probability = 0.4,amount_min =1,amount_max =1},
@@ -629,6 +634,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
+					{name='photophore', amount ='R'},
 					{name='meat', amount =6},
 				},
 			crafting_speed = 15,
@@ -739,6 +745,23 @@ fun.autorecipes {
 			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
 			icon_size = 64,
 		},
+		--photophore
+		{
+			ingredients =
+				{
+					--{name='trits',amount=1},
+				},
+			results =
+				{
+					{name='fat', amount ='R'},
+					{name='photophore', amount =2},
+				},
+			crafting_speed = 15,
+			tech = 'trits',
+			name = 'Extract Trits Photophores',
+			icon = "__pyalienlifegraphics__/graphics/icons/photophore.png",
+			icon_size = 64,
+		},
 		--brain trits rendering
 		{
 			ingredients =
@@ -748,8 +771,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='fat', amount ='R'},
-					{name='brain', amount =3},
+					{name='photophore', amount ='R'},
+					{name='brain', amount =5},
 				},
 			crafting_speed = 15,
 			tech = 'nanochondria',
@@ -767,7 +790,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='bones', amount =9},
+					{name='bones', amount =14},
 				},
 			crafting_speed = 15,
 			tech = 'bmp',
@@ -785,7 +808,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bones', amount ='R'},
-					{name='meat', amount =9},
+					{name='meat', amount =15},
 				},
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
@@ -803,7 +826,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', amount ='R'},
-					{name='guts', amount =11},
+					{name='guts', amount =15},
 				},
 			crafting_speed = 15,
 			tech = 'antitumor',
@@ -821,7 +844,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='blood', amount =150},
+					{name='blood', amount =200},
 				},
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
@@ -839,7 +862,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', amount ='R'},
-					{name='skin', amount =9},
+					{name='skin', amount =13},
 				},
 			crafting_speed = 15,
 			tech = 'reca',
@@ -857,7 +880,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='fat', amount =20},
+					{name='fat', amount =30},
 				},
 			crafting_speed = 15,
 			tech = 'orexigenic',

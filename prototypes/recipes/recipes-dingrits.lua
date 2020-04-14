@@ -32,7 +32,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'glass', amount = 2},
         {type = 'item', name = 'small-lamp', amount = 2},
-        {type = 'item', name = 'processing-unit', amount = 5},
+        {type = 'item', name = 'advanced-circuit', amount = 5},
         {type = 'item', name = 'green-wire', amount = 5},
     },
     results = {
@@ -48,7 +48,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'steel-chest', amount = 1},
-        {type = 'item', name = 'production-science-pack', amount = 50},
+        {type = 'item', name = 'chemical-science-pack', amount = 20},
         {type = 'item', name = 'dingrits-codex', amount = 1},
     },
     results = {

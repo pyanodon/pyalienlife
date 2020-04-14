@@ -1,0 +1,41 @@
+global = 
+    {
+        ocula = 
+            {
+                [unit_number] =
+                    {
+                        entity = entity,
+                        base = unit_number,
+                        current_inventory = 
+                            {
+                                item_name = item,
+                                amount = amount
+                            },
+                        max_stack_size = 50,
+                        current_target = target,
+                        getting_item = bool,
+                        delivering_item = bool,
+                    }
+            },
+        ocula_bases =
+            {
+                unit_number =
+					{
+						entity = entity,
+						assigned_active_occula =
+							{
+							unit_number
+							},
+						totalt_ocula_count = #,
+						inactive_ocula = #
+					}
+            },
+        active_ocula =
+            {
+                unit_number = ocula_bases.unit_number
+            },
+        items_in_route =
+            {
+            item_name = amount
+            }
+    }

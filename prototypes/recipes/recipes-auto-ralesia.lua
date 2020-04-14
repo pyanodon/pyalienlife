@@ -63,7 +63,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*10'},
-					{name='ralesias',amount ='+3'}
+					{name='ralesias',amount ='+6'}
 				},
 				crafting_speed = 100,
 				tech = 'botany-mk02'
@@ -129,13 +129,13 @@ fun.autorecipes {
 				   --{'b','+15'},
 				   --{'carbondioxide','R'},
 				    {name='syngas',amount ='R'},
-					{name='fluegas',amount ='*2'},
+					{name='fluegas',amount ='*1'},
                     --{'d'},
                 },
 			results =
 				{
 					--{'a','*20'},
-					{name='ralesias',amount ='+3'}
+					{name='ralesias',amount ='+5'}
 				},
 				crafting_speed = 100,
 				tech = 'botany-mk03'
@@ -155,9 +155,9 @@ fun.autorecipes {
 				{
 					--{'a','*25'},
 					--{'a','+3'}
-					{name='ralesias',amount =25}
+					{name='ralesias',amount ="+8"}
 				},
-				crafting_speed = 100,
+				crafting_speed = 85,
 				tech = 'botany-mk04'
 		},
 		{
@@ -175,9 +175,9 @@ fun.autorecipes {
 				{
 					--{'a','*25'},
 					--{'a','+3'}
-					{name='ralesias',amount =25}
+					{name='ralesias',amount ='+2'}
 				},
-				crafting_speed = 100,
+				crafting_speed = 75,
 				tech = 'botany-mk04'
 		},
     --GH
@@ -192,7 +192,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='ralesias',amount =25}
+					{name='ralesias',amount ="+10"}
 				},
 			crafting_speed = 70,
 			tech = 'botany-mk04'
@@ -208,7 +208,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='ralesias',amount =27}
+					{name='ralesias',amount ="+3"}
 				},
 			crafting_speed = 70,
 			tech = 'botany-mk04'
@@ -223,7 +223,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='ralesias',amount =29}
+					{name='ralesias',amount ='+8'}
 				},
 			crafting_speed = 70,
 			tech = 'botany-mk04'
@@ -238,7 +238,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='ralesias',amount =35}
+					{name='ralesias',amount ="+8"}
 				},
 			crafting_speed = 70,
 			tech = 'botany-mk04'

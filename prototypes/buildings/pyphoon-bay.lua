@@ -47,15 +47,15 @@ ENTITY {
     module_specification = {
         module_slots = 4
     },
-    allowed_effects = {"speed","productivity"},
+    allowed_effects = {"speed","consumption"},
     crafting_categories = {"bay"},
-    crafting_speed = 1,
+    crafting_speed = 2,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
         emissions_per_minute = -0.1,
     },
-    energy_usage = "500kW",
+    energy_usage = "100kW",
     ingredient_count = 10,
     animation = {
         layers = {

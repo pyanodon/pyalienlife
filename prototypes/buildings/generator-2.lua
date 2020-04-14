@@ -8,15 +8,15 @@ RECIPE {
         {"niobium-pipe", 10},
         {"nexelit-plate", 25},
         {"processing-unit", 10},
-        {"engine-unit", 4},
-        {"low-density-structure", 20},
+        {"dingrits", 1},
+        {"electric-engine-unit", 5},
         {"nbfe-alloy", 20},
         {"iron-gear-wheel", 40}
     },
     results = {
         {"generator-2", 1}
     }
-}:add_unlock("domestication-mk02")
+}:add_unlock("domestication-mk03")
 
 ITEM {
     type = "item",
@@ -61,8 +61,8 @@ ENTITY {
             burnt_inventory_size = 1,
 			emissions_per_minute = 0,
 		},
-	effectivity = 1,
-	max_power_output = "3.5MW",
+	effectivity = 2,
+	max_power_output = "20MW",
     animation = {
         layers = {
             {

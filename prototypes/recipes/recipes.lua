@@ -1,24 +1,5 @@
 require("prototypes/functions/functions")
 
-RECIPE {
-    type = 'recipe',
-    name = 'biomass-1',
-    category = 'evaporator',
-    enabled = false,
-    energy_required = 10,
-    ingredients = {
-        {type = 'fluid', name = 'phytoplankton', amount = 20},
-    },
-    results = {
-        {type = 'item', name = 'biomass', amount = 7},
-    },
-    --main_product = "silicon-wafer",
-    icon = '__pyalienlifegraphics__/graphics/icons/biomass.png',
-    icon_size = 32,
-    subgroup = 'py-alienlife-plants',
-    order = 'a'
-}:add_unlock("microbiology-mk01")
-
 --Example result replacer
 --results_replacer(recipe name*, old item*, new item*, new_amount**)
 --to use copy the local at top to the given file and then add the following line with the required variables
@@ -28,26 +9,6 @@ RECIPE {
 --**optional. whole numbers only
 
 --log(serpent.block(data.raw.recipe["biomass-1"]))
-
-RECIPE {
-    type = 'recipe',
-    name = 'biomass-2',
-    category = 'evaporator',
-    enabled = false,
-    energy_required = 5,
-    ingredients = {
-        {type = 'fluid', name = 'phytoplankton', amount = 20},
-        {type = 'item', name = 'fawogae', amount = 5},
-    },
-    results = {
-        {type = 'item', name = 'biomass', amount = 10},
-    },
-    --main_product = "silicon-wafer",
-    icon = '__pyalienlifegraphics__/graphics/icons/biomass.png',
-    icon_size = 32,
-    subgroup = 'py-alienlife-plants',
-    order = 'a'
-}:add_unlock("mycology-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -73,14 +34,14 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'fluid', name = 'water', amount = 50},
-        {type = 'item', name = 'fungal-substrate', amount = 2},
+        {type = 'item', name = 'fungal-substrate', amount = 1},
         {type = 'item', name = 'wood', amount = 4},
         {type = 'item', name = 'biomass', amount = 5},
         {type = 'item', name = 'petri-dish-bacteria', amount = 1},
         {type = 'item', name = 'bones', amount = 2},
     },
     results = {
-        {type = 'item', name = 'fungal-substrate-02', amount = 4},
+        {type = 'item', name = 'fungal-substrate-02', amount = 5},
     },
 }:add_unlock("mycology-mk02")
 
@@ -93,14 +54,14 @@ RECIPE {
     ingredients = {
         {type = 'fluid', name = 'phytoplankton', amount = 50},
         {type = 'item', name = 'tuuphra', amount = 3},
-        {type = 'item', name = 'fungal-substrate-02', amount = 3},
+        {type = 'item', name = 'fungal-substrate-02', amount = 1},
         {type = 'item', name = 'biomass', amount = 4},
         {type = 'item', name = 'ash', amount = 10},
         {type = 'item', name = 'petri-dish-bacteria', amount = 1},
         {type = 'item', name = 'bones', amount = 2},
     },
     results = {
-        {type = 'item', name = 'fungal-substrate-03', amount = 3},
+        {type = 'item', name = 'fungal-substrate-03', amount = 5},
     },
 }:add_unlock("mycology-mk03"):add_ingredient({type = "item", name = "raw-fiber", amount = 5})
 
@@ -137,7 +98,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'empty-petri-dish',
-    category = 'crafting',
+    category = 'glassworks',
     enabled = true,
     energy_required = 3,
     ingredients = {
@@ -231,22 +192,22 @@ RECIPE {
     energy_required = 2,
     ingredients = {
         {type = 'item', name = 'nexelit-matrix', amount = 5},
-        {type = 'item', name = 'brain', amount = 1},
+        {type = 'item', name = 'brain', amount = 5},
         {type = 'item', name = 'agar', amount = 3},
-        {type = 'item', name = 'bio-sample', amount = 2},
+        {type = 'item', name = 'bio-sample', amount = 3},
         {type = 'item', name = 'nickel-plate', amount = 5},
         {type = 'item', name = 'electronic-circuit', amount = 1},
-        {type = 'item', name = 'optical-fiber', amount = 5},
+        {type = 'item', name = 'optical-fiber', amount = 10},
     },
     results = {
         {type = 'item', name = 'neuroprocessor', amount = 2},
     },
-}:add_unlock("biotech-mk02")
+}:add_unlock("biotech-mk02"):add_ingredient({type = "item", name = "cermet", amount = 5})
 
 RECIPE {
     type = 'recipe',
     name = 'py-science-pack',
-    category = 'biofactory',
+    category = 'research',
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -419,21 +380,21 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'gh',
-    category = 'bio-reactor',
+    category = 'research',
     enabled = false,
-    energy_required = 20,
+    energy_required = 70,
     ingredients = {
-        {type = 'item', name = 'plasmids', amount = 2},
-        {type = 'item', name = 'bio-sample', amount = 5},
-        {type = 'item', name = 'cdna', amount = 1},
-        {type = 'item', name = 'petri-dish', amount = 5},
-        {type = 'item', name = 'flask', amount = 3},
-        {type = 'item', name = 'lab-instrument', amount = 1},
-        {type = 'fluid', name = 'bacteria-1', amount = 50},
-        {type = 'item', name = 'pineal-gland', amount = 1}
+        {type = 'item', name = 'plasmids', amount = 5},
+        {type = 'item', name = 'bio-sample', amount = 20},
+        {type = 'item', name = 'cdna', amount = 2},
+        {type = 'item', name = 'petri-dish', amount = 20},
+        {type = 'item', name = 'flask', amount = 10},
+        {type = 'item', name = 'lab-instrument', amount = 4},
+        {type = 'fluid', name = 'bacteria-1', amount = 200},
+        {type = 'item', name = 'pineal-gland', amount = 3}
     },
     results = {
-        {type = 'item', name = 'gh', amount = 1}
+        {type = 'item', name = 'gh', amount = 60}
     }
 }:add_unlock('growth-hormone')
 
@@ -497,12 +458,12 @@ RECIPE {
         {type = 'item', name = 'fur', amount = 10},
     },
     main_product = "fur",
-}:add_unlock('biotech-mk04')
+}:add_unlock('pharmagenomics')
 
 RECIPE {
     type = 'recipe',
     name = 'reca',
-    category = 'bio-reactor',
+    category = 'research',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -518,7 +479,7 @@ RECIPE {
         {type = 'item', name = 'flask', amount = 5},
     },
     results = {
-        {type = 'item', name = 'reca', amount = 1}
+        {type = 'item', name = 'reca', amount = 10}
     }
 }:add_unlock('reca')
 
@@ -527,31 +488,31 @@ RECIPE {
     name = 'mixed-ores',
     category = 'ball-mill',
     enabled = false,
-    energy_required = 5,
+    energy_required = 2.5,
     ingredients = {
-        {type = 'item', name = 'copper-ore', amount = 10},
-        {type = 'item', name = 'ore-nickel', amount = 10},
+        {type = 'item', name = 'copper-ore', amount = 8},
+        {type = 'item', name = 'ore-nickel', amount = 8},
     },
     results = {
-        {type = 'item', name = 'mixed-ores', amount = 2},
+        {type = 'item', name = 'mixed-ores', amount = 5},
         {type = 'item', name = 'stone', amount = 1, probability = 0.5},
     },
     main_product = "mixed-ores",
-}:add_unlock('biotech-mk02'):add_ingredient({type = "item", name = "rare-earth-ore", amount = 5})
+}:add_unlock('biotech-mk02'):add_ingredient({type = "item", name = "rare-earth-ore", amount = 4})
 
 RECIPE {
     type = 'recipe',
     name = 'cobalt-extract',
     category = 'flotation',
     enabled = false,
-    energy_required = 6,
+    energy_required = 4,
     ingredients = {
-        {type = 'fluid', name = 'pressured-air', amount = 150},
-        {type = 'fluid', name = 'sulfuric-acid', amount = 50},
-        {type = 'item', name = 'mixed-ores', amount = 5},
+        {type = 'fluid', name = 'pressured-air', amount = 450},
+        {type = 'fluid', name = 'sulfuric-acid', amount = 150},
+        {type = 'item', name = 'mixed-ores', amount = 15},
     },
     results = {
-        {type = 'item', name = 'cobalt-extract', amount = 1},
+        {type = 'item', name = 'cobalt-extract', amount = 3},
         {type = 'fluid', name = 'dirty-water', amount = 50},
     },
     main_product = "cobalt-extract",
@@ -560,16 +521,16 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cobalt-sulfate',
-    category = 'drp',
+    category = 'leaching',
     enabled = false,
-    energy_required = 12,
+    energy_required = 10,
     ingredients = {
         {type = 'fluid', name = 'syngas', amount = 150},
         {type = 'item', name = 'lime', amount = 3},
-        {type = 'item', name = 'cobalt-extract', amount = 1},
+        {type = 'item', name = 'cobalt-extract', amount = 3},
     },
     results = {
-        {type = 'item', name = 'cobalt-sulfate', amount = 1},
+        {type = 'item', name = 'cobalt-sulfate', amount = 3},
     },
 }:add_unlock('biotech-mk03')
 
@@ -578,13 +539,13 @@ RECIPE {
     name = 'cobalt-sulfate-02',
     category = 'leaching',
     enabled = false,
-    energy_required = 12,
+    energy_required = 10,
     ingredients = {
-        {type = 'fluid', name = 'sulfuric-acid', amount = 100},
-        {type = 'item', name = 'cobalt-sulfate', amount = 1},
+        {type = 'fluid', name = 'sulfuric-acid', amount = 300},
+        {type = 'item', name = 'cobalt-sulfate', amount = 3},
     },
     results = {
-        {type = 'item', name = 'cobalt-sulfate-02', amount = 1},
+        {type = 'item', name = 'cobalt-sulfate-02', amount = 3},
     },
 }:add_unlock('biotech-mk03')
 
@@ -593,14 +554,14 @@ RECIPE {
     name = 'cobalt-oxide',
     category = 'leaching',
     enabled = false,
-    energy_required = 6,
+    energy_required = 4,
     ingredients = {
         {type = 'fluid', name = 'water', amount = 500},
-        {type = 'item', name = 'cobalt-sulfate-02', amount = 1},
+        {type = 'item', name = 'cobalt-sulfate-02', amount = 3},
     },
     results = {
-        {type = 'item', name = 'cobalt-oxide', amount = 1},
-        {type = 'fluid', name = 'dirty-water', amount = 50},
+        {type = 'item', name = 'cobalt-oxide', amount = 3},
+        {type = 'fluid', name = 'dirty-water', amount = 100},
     },
     main_product = "cobalt-oxide",
 }:add_unlock('biotech-mk03')
@@ -610,15 +571,15 @@ RECIPE {
     name = 'cobalt-nx',
     category = 'nmf',
     enabled = false,
-    energy_required = 10,
+    energy_required = 8,
     ingredients = {
-        {type = 'item', name = 'nexelit-plate', amount = 10},
-        {type = 'item', name = 'cobalt-oxide', amount = 1},
+        {type = 'item', name = 'nexelit-plate', amount = 20},
+        {type = 'item', name = 'cobalt-oxide', amount = 3},
     },
     results = {
-        {type = 'item', name = 'cobalt-nx', amount = 1},
+        {type = 'item', name = 'cobalt-nx', amount = 3},
     },
-}:add_unlock('biotech-mk03'):add_ingredient({type = "item", name = "ceramic", amount = 5})
+}:add_unlock('biotech-mk03'):add_ingredient({type = "item", name = "ceramic", amount = 10})
 
 RECIPE {
     type = 'recipe',
@@ -649,6 +610,23 @@ RECIPE {
         {type = 'item', name = 'bedding', amount = 2},
     },
 }:add_unlock('grod'):add_ingredient({type = "item", name = "raw-fiber", amount = 5})
+
+RECIPE {
+    type = 'recipe',
+    name = 'bedding-improve',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 7,
+    ingredients = {
+        {type = 'item', name = 'wood', amount = 5},
+        {type = 'item', name = 'yotoi-leaves', amount = 5},
+        {type = 'item', name = 'dried-grods', amount = 1},
+        {type = 'fluid', name = 'formic-acid', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'bedding', amount = 4},
+    },
+}:add_unlock('grod-mk02'):add_ingredient({type = "item", name = "raw-fiber", amount = 5})
 
 RECIPE {
     type = 'recipe',
@@ -726,12 +704,12 @@ RECIPE {
     results = {
         {type = 'item', name = 'alien-enzymes', amount = 1}
     }
-}:add_unlock('pharmagenomics'):add_ingredient({type = "item", name = "paramagnetic-material", amount = 1}):add_ingredient({type = "item", name = "diamagnetic-material", amount = 1})
+}:add_unlock('pharmagenomics'):add_ingredient({type = "item", name = "paramagnetic-material", amount = 1})--:add_ingredient({type = "item", name = "diamagnetic-material", amount = 1})
 
 RECIPE {
     type = 'recipe',
     name = 'antiviral',
-    category = 'bio-reactor',
+    category = 'research',
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -744,7 +722,7 @@ RECIPE {
         {type = 'fluid', name = 'zogna-bacteria', amount = 40},
     },
     results = {
-        {type = 'item', name = 'antiviral', amount = 1}
+        {type = 'item', name = 'antiviral', amount = 10}
     }
 }:add_unlock('antiviral')
 
@@ -802,7 +780,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'ticocr-alloy',
-    category = 'nmf',
+    category = 'eaf',
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -819,22 +797,22 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'nanochondria',
-    category = 'nmf',
+    category = 'research',
     enabled = false,
-    energy_required = 15,
+    energy_required = 20,
     ingredients = {
-        {type = 'item', name = 'ticocr-alloy', amount = 1},
-        {type = 'item', name = 'pelt', amount = 4},
-        {type = 'item', name = 'metallic-glass', amount = 2},
-        {type = 'item', name = 'propeptides', amount = 1},
-        {type = 'item', name = 'chitin', amount = 4},
-        {type = 'item', name = 'alien-enzymes', amount = 1},
-        {type = 'item', name = 'pineal-gland', amount = 1},
+        {type = 'item', name = 'ticocr-alloy', amount = 7},
+        {type = 'item', name = 'pelt', amount = 10},
+        {type = 'item', name = 'metallic-glass', amount = 8},
+        {type = 'item', name = 'propeptides', amount = 10},
+        {type = 'item', name = 'chitin', amount = 20},
+        {type = 'item', name = 'alien-enzymes', amount = 2},
+        {type = 'item', name = 'pineal-gland', amount = 3},
         {type = 'item', name = 'adrenal-cortex', amount = 10},
-        {type = 'fluid', name = 'bacteria-1', amount = 40},
+        {type = 'fluid', name = 'bacteria-1', amount = 100},
     },
     results = {
-        {type = 'item', name = 'nanochondria', amount = 1}
+        {type = 'item', name = 'nanochondria', amount = 400}
     }
 }:add_unlock('nanochondria'):change_category('nano'):add_ingredient({type = "item", name = "resilin", amount = 1}):add_ingredient({type = "item", name = "collagen", amount = 5}):replace_ingredient("bacteria-1", "bacteria-2")
 
@@ -842,23 +820,23 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'bmp',
-    category = 'bio-reactor',
+    category = 'research',
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = 'item', name = 'hyaline', amount = 3},
-        {type = 'item', name = 'sea-sponge', amount = 2},
-        {type = 'item', name = 'ticocr-alloy', amount = 1},
-        {type = 'item', name = 'chitin', amount = 4},
-        {type = 'item', name = 'alien-enzymes', amount = 1},
-        {type = 'item', name = 'pineal-gland', amount = 1},
-        {type = 'item', name = 'flask', amount = 3},
-        {type = 'item', name = 'lab-instrument', amount = 1},
+        {type = 'item', name = 'hyaline', amount = 10},
+        {type = 'item', name = 'sea-sponge', amount = 25},
+        {type = 'item', name = 'ticocr-alloy', amount = 3},
+        {type = 'item', name = 'chitin', amount = 15},
+        {type = 'item', name = 'alien-enzymes', amount = 2},
+        {type = 'item', name = 'pineal-gland', amount = 4},
+        {type = 'item', name = 'flask', amount = 30},
+        {type = 'item', name = 'lab-instrument', amount = 25},
         {type = 'fluid', name = 'bacteria-1', amount = 40},
-        {type = 'item', name = 'purine-analogues', amount = 1},
+        {type = 'item', name = 'purine-analogues', amount = 2},
     },
     results = {
-        {type = 'item', name = 'bmp', amount = 1}
+        {type = 'item', name = 'bmp', amount = 350}
     }
 }:add_unlock('bmp'):replace_ingredient("bacteria-1", "bacteria-2"):replace_ingredient("sea-sponge", "collagen"):add_ingredient({type = "fluid", name = "dms", amount = 100})
 
@@ -943,22 +921,22 @@ RECIPE {
     name = 'pheromones',
     category = 'bio-reactor',
     enabled = false,
-    energy_required = 10,
+    energy_required = 150,
     ingredients = {
-        {type = 'item', name = 'lignin', amount = 20},
-        {type = 'item', name = 'ticocr-alloy', amount = 1},
-        {type = 'item', name = 'metallic-glass', amount = 2},
-        {type = 'item', name = 'bio-sample', amount = 15},
-        {type = 'item', name = 'cridren-seeds', amount = 20},
-        {type = 'item', name = 'gas-bladder', amount = 3},
-        {type = 'item', name = 'alien-enzymes', amount = 1},
-        {type = 'fluid', name = 'creosote', amount = 200},
-        {type = 'fluid', name = 'bacteria-1', amount = 40},
+        {type = 'item', name = 'lignin', amount = 200},
+        {type = 'item', name = 'ticocr-alloy', amount = 3},
+        {type = 'item', name = 'metallic-glass', amount = 10},
+        {type = 'item', name = 'bio-sample', amount = 25},
+        {type = 'item', name = 'cridren-seeds', amount = 7},
+        {type = 'item', name = 'gas-bladder', amount = 17},
+        {type = 'item', name = 'alien-enzymes', amount = 3},
+        {type = 'fluid', name = 'creosote', amount = 1000},
+        {type = 'fluid', name = 'bacteria-1', amount = 300},
     },
     results = {
-        {type = 'item', name = 'pheromones', amount = 1}
+        {type = 'item', name = 'pheromones', amount = 100}
     }
-}:add_unlock('pheromones'):add_ingredient({type = "item", name = "biopolymer", amount = 3})
+}:add_unlock('pheromones'):add_ingredient({type = "item", name = "biopolymer", amount = 10})
 
 RECIPE {
     type = 'recipe',
@@ -969,7 +947,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'neuroprocessor', amount = 2},
         {type = 'item', name = 'biofilm', amount = 1},
-        {type = 'item', name = 'optical-fiber', amount = 5},
+        {type = 'item', name = 'optical-fiber', amount = 10},
         {type = 'item', name = 'nano-cellulose', amount = 5},
         {type = 'item', name = 'nexelit-matrix', amount = 3},
         {type = 'fluid', name = 'vacuum', amount = 100},
@@ -1088,20 +1066,6 @@ RECIPE {
     },
     results = {
         {type = 'item', name = 'biofilm', amount = 4},
-    },
-}:add_unlock("biotech-mk02")
-
-RECIPE {
-    type = 'recipe',
-    name = 'manure-to-biomass',
-    category = 'evaporator',
-    enabled = false,
-    energy_required = 5,
-    ingredients = {
-        {type = "item", name = "manure", amount = 10},
-    },
-    results = {
-        {type = 'item', name = 'biomass', amount = 10},
     },
 }:add_unlock("biotech-mk02")
 
@@ -1246,7 +1210,7 @@ RECIPE {
         {type = 'item', name = 'navens', amount = 1},
     },
     results = {
-        {type = 'item', name = 'coal', amount = 10}
+        {type = 'item', name = 'raw-coal', amount = 10}
     },
     --main_product = "adrenal-cortex",
 }:add_unlock("navens")
@@ -1255,7 +1219,6 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "oleochemical-combustion",
-    localised_name = {"recipe-name.combustion-mixture", {"fluid-name.oleochemicals"}, 600},
     category = "combustion",
     enabled = false,
     energy_required = 3,
@@ -1279,7 +1242,6 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fish-oil-combustion",
-    localised_name = {"recipe-name.combustion-mixture", {"fluid-name.fish-oil"}, 650},
     category = "combustion",
     enabled = false,
     energy_required = 3,
@@ -1303,7 +1265,6 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "lard-combustion",
-    localised_name = {"recipe-name.combustion-mixture", {"item-name.mukmoux-fat"}, 600},
     category = "combustion",
     enabled = false,
     energy_required = 3,
@@ -1328,7 +1289,6 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ethanol-combustion",
-    localised_name = {"recipe-name.combustion-mixture", {"fluid-name.ethanol"}, 600},
     category = "combustion",
     enabled = false,
     energy_required = 3,
@@ -1363,7 +1323,7 @@ RECIPE {
         {type = 'item', name = 'wood-seeds', amount = 10},
     },
     results = {
-        {type = 'item', name = 'seeds-extract-01', amount = 1}
+        {type = 'item', name = 'seeds-extract-01', amount = 5}
     },
     --main_product = "adrenal-cortex",
 }:add_unlock("energy-drink"):change_category('pulp')
@@ -1392,13 +1352,13 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = 'item', name = 'aluminium-plate', amount = 1},
+        {type = 'item', name = 'aluminium-plate', amount = 7},
         {type = 'fluid', name = 'water', amount = 500},
         {type = 'fluid', name = 'syrup-01', amount = 25},
         {type = 'fluid', name = 'carbon-dioxide', amount = 100},
     },
     results = {
-        {type = 'item', name = 'energy-drink', amount = 1}
+        {type = 'item', name = 'energy-drink', amount = 7}
     },
     --main_product = "adrenal-cortex",
 }:add_unlock("energy-drink")
@@ -1616,6 +1576,7 @@ RECIPE {
         {type = 'item', name = 'chitin', amount = 5},
         {type = 'item', name = 'sodium-hydroxide', amount = 5},
         {type = 'fluid', name = 'mutant-enzymes', amount = 50},
+        {type = 'item', name = 'empty-petri-dish', amount = 2},
     },
     results = {
         {type = 'item', name = 'chitosan', amount = 5},
@@ -1642,17 +1603,17 @@ RECIPE {
     name = 'filtration-media-2',
     category = 'crafting',
     enabled = false,
-    energy_required = 20,
+    energy_required = 100,
     ingredients = {
-        {type = 'item', name = 'gravel', amount = 25},
-        {type = 'item', name = 'active-carbon', amount = 5},
-        {type = 'item', name = 'nanofibrils', amount = 1},
-        {type = 'item', name = 'cellulose', amount = 5},
+        {type = 'item', name = 'gravel', amount = 100},
+        {type = 'item', name = 'active-carbon', amount = 25},
+        {type = 'item', name = 'nanofibrils', amount = 2},
+        {type = 'item', name = 'cellulose', amount = 25},
     },
     results = {
-        {type = 'item', name = 'filtration-media', amount = 15},
+        {type = 'item', name = 'filtration-media', amount = 100},
     },
-}:add_unlock("chitin"):add_ingredient({type = "item", name = "micro-fiber", amount = 5})
+}:add_unlock("chitin"):add_ingredient({type = "item", name = "micro-fiber", amount = 20})
 
 RECIPE {
     type = 'recipe',
@@ -1669,7 +1630,7 @@ RECIPE {
         {type = 'fluid', name = 'bacteria-1', amount = 100},
     },
     results = {
-        {type = 'item', name = 'biobattery', amount = 1},
+        {type = 'item', name = 'biobattery', amount = 5},
     },
 }:add_unlock("chitin"):add_ingredient({type = "item", name = "ceramic", amount = 5})
 
@@ -1747,23 +1708,6 @@ RECIPE {
     },
     --main_product = "cocoon",
 }:add_unlock("biotech-mk02")
-
-RECIPE {
-    type = 'recipe',
-    name = 'casein-mixture-01',
-    category = 'mixer',
-    enabled = false,
-    energy_required = 10,
-    ingredients = {
-        {type = 'fluid', name = 'milk', amount = 50},
-        {type = 'fluid', name = 'acetic-acid', amount = 50},
-    },
-    results = {
-        {type = 'fluid', name = 'casein-mixture', amount = 50},
-        {type = 'fluid', name = 'waste-water', amount = 50},
-    },
-    main_product = "casein-mixture",
-}:add_unlock("korlex")
 
 RECIPE {
     type = 'recipe',
@@ -1915,6 +1859,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "flask-2",
+    category = 'glassworks',
     enabled = false,
     energy_required = 3,
     ingredients = {
@@ -1935,7 +1880,7 @@ RECIPE {
     type = "recipe",
     name = "flask-3",
     enabled = false,
-    category = 'advanced-foundry',
+    category = 'glassworks',
     energy_required = 5,
     ingredients = {
         {type = "item", name = "glass", amount = 10},
@@ -1952,6 +1897,67 @@ RECIPE {
     subgroup = "py-items",
     order = "f"
 }:add_unlock("genetics-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'biomass-cooking',
+    category = 'hpf',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'biomass', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'raw-coal', amount = 5},
+    },
+    --main_product = "casein-pulp-01",
+}:add_unlock("compost")
+
+RECIPE {
+    type = 'recipe',
+    name = 'flue-gas-1',
+    category = 'gasifier',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'biomass', amount = 10},
+    },
+    results = {
+        {type = 'fluid', name = 'flue-gas', amount = 150},
+    },
+    --main_product = "casein-pulp-01",
+}:add_unlock("compost"):change_category('gas-refinery')
+
+RECIPE {
+    type = 'recipe',
+    name = 'flue-gas-2',
+    category = 'gasifier',
+    enabled = false,
+    energy_required = 8,
+    ingredients = {
+        {type = 'item', name = 'ash', amount = 10},
+        {type = 'fluid', name = 'pressured-air', amount = 50},
+    },
+    results = {
+        {type = 'fluid', name = 'flue-gas', amount = 150},
+    },
+    --main_product = "casein-pulp-01",
+}:add_unlock("compost"):change_category('gas-refinery')
+
+RECIPE {
+    type = 'recipe',
+    name = 'biomass-cooking-2',
+    category = 'hpf',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'biomass', amount = 15},
+    },
+    results = {
+        {type = 'item', name = 'coke', amount = 5},
+    },
+    --main_product = "casein-pulp-01",
+}:add_unlock("compost")
 
 if not mods['pyhightech'] then
 

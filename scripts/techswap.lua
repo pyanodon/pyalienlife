@@ -1071,6 +1071,35 @@ local TRlist =
 					},
 				},
 				{
+				base_recipe = 'Full Render cottongut',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Full Render cottongutb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract cottongut brains',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract cottongut brainsb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract cottongut brains-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
 				base_recipe = 'Full Render dingrits',
 				current_lvl = 1,
 				upgrade_1 =
@@ -1473,6 +1502,17 @@ local TRlist =
 					},
 				},
 				{
+				base_recipe = 'Extract brains from Improved cottonguts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract brains from Improved cottonguts-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
 				base_recipe = 'Extract brains from Improved dingrits',
 				current_lvl = 1,
 				upgrade_1 =
@@ -1649,6 +1689,24 @@ local TRlist =
 				upgrade_2 =
 					{
 					recipe = 'Extract auog Meat-2',
+					tech = 'myostatin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract cottongut Meat',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract cottongut Meat-1',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract cottongut Meat-2',
 					tech = 'myostatin',
 					unlocked = false,
 					level = 3,
@@ -1948,6 +2006,17 @@ local TRlist =
 					},
 				},
 				{
+				base_recipe = 'Extract meat from Improved cottonguts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract meat from Improved cottonguts-2',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
 				base_recipe = 'Extract meat from Improved dhilmoss',
 				current_lvl = 1,
 				upgrade_1 =
@@ -2144,6 +2213,24 @@ local TRlist =
 				upgrade_2 =
 					{
 					recipe = 'Extract auog bones-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract cottongut bones',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract cottongut bones-1',
+					tech = 'osteocyte',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract cottongut bones-2',
 					tech = 'hardened-bone',
 					unlocked = false,
 					level = 3,
@@ -2425,6 +2512,17 @@ local TRlist =
 					},
 				},
 				{
+				base_recipe = 'Extract bones from Improved cottonguts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract bones from Improved cottonguts-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
 				base_recipe = 'Extract bones from Improved dhilmoss',
 				current_lvl = 1,
 				upgrade_1 =
@@ -2610,6 +2708,24 @@ local TRlist =
 				upgrade_2 =
 					{
 					recipe = 'Extract auog guts-5',
+					tech = 'cavity',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract cottongut guts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract cottongut guts-1',
+					tech = 'organ-replication',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract cottongut guts-5',
 					tech = 'cavity',
 					unlocked = false,
 					level = 3,
@@ -2909,6 +3025,17 @@ local TRlist =
 					},
 				},
 				{
+				base_recipe = 'Extract guts from Improved cottonguts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract guts from Improved cottonguts-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
 				base_recipe = 'Extract guts from Improved dhilmoss',
 				current_lvl = 1,
 				upgrade_1 =
@@ -3110,6 +3237,26 @@ local TRlist =
 					level = 3,
 					},
 				},
+
+				{
+				base_recipe = 'Extract cottongut blood',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract cottongut blood-1',
+					tech = 'somatic',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract cottongut blood-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 3,
+					},
+				},
+
 				{
 				base_recipe = 'Extract dhilmos blood',
 				current_lvl = 1,
@@ -3308,8 +3455,6 @@ local TRlist =
 					level = 3,
 					},
 				},
-
-
 				{
 					base_recipe = 'Extract Vrauks Formic Acid',
 					current_lvl = 1,
@@ -3321,8 +3466,6 @@ local TRlist =
 						level = 2,
 						},
 					},
-
-
 				{
 				base_recipe = 'Extract Xeno blood',
 				current_lvl = 1,
@@ -3395,6 +3538,17 @@ local TRlist =
 				upgrade_1 =
 					{
 					recipe = 'Extract blood from Improved auogs-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract blood from Improved cottonguts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract blood from Improved cottonguts-2',
 					tech = 'transgenes',
 					unlocked = false,
 					level = 2,
@@ -3586,6 +3740,24 @@ local TRlist =
 				upgrade_2 =
 					{
 					recipe = 'Extract auog skin-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract cottongut skin',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract cottongut skin-1',
+					tech = 'defective-collagen',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract cottongut skin-2',
 					tech = 'double-skin',
 					unlocked = false,
 					level = 3,
@@ -3885,6 +4057,17 @@ local TRlist =
 					},
 				},
 				{
+				base_recipe = 'Extract skin from Improved cottonguts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract skin from Improved cottonguts-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
 				base_recipe = 'Extract chithin from Improved dhilmoss',
 				current_lvl = 1,
 				upgrade_1 =
@@ -4070,6 +4253,24 @@ local TRlist =
 				upgrade_2 =
 					{
 					recipe = 'Extract auog lard-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract cottongut lard',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract cottongut lard-1',
+					tech = 'force-feeding',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract cottongut lard-2',
 					tech = 'fto4',
 					unlocked = false,
 					level = 3,
@@ -4369,6 +4570,17 @@ local TRlist =
 					},
 				},
 				{
+				base_recipe = 'Extract lard from Improved cottonguts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract lard from Improved cottonguts-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
 				base_recipe = 'Extract fat from Improved dhilmoss',
 				current_lvl = 1,
 				upgrade_1 =
@@ -4641,6 +4853,18 @@ local TRlist =
 					level = 2,
 					},
 				},
+				--photophore
+				{
+				base_recipe = 'Extract Trits Photophores',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract Trits Photophores-1',
+					tech = 'ctc',
+					unlocked = false,
+					level = 2,
+					},
+				},
 				--SPORES
 				{
 				base_recipe = 'navens-spore',
@@ -4816,19 +5040,33 @@ local TRlist =
 				['korlex-mk03'] = true,
 				['korlex-mk04'] = true,
 				['ulric'] = true,
+				['ulric-mk02'] = true,
+				['ulric-mk03'] = true,
+				['ulric-mk04'] = true,
 				['mukmoux'] = true,
+				['mukmoux-mk02'] = true,
+				['mukmoux-mk03'] = true,
+				['mukmoux-mk04'] = true,
 				['arthurian'] = true,
 				['xeno'] = true,
 				['dhilmos'] = true,
 				['scrondrix'] = true,
 				['scrondrix-mk02'] = true,
+				['scrondrix-mk03'] = true,
+				['scrondrix-mk04'] = true,
 				['anabolic-rna'] = true,
 				['phadai'] = true,
 				['auog'] = true,
+				['auog-mk02'] = true,
+				['auog-mk03'] = true,
+				['auog-mk04'] = true,
 				['dingrits'] = true,
 				['vonix'] = true,
 				['vonix-mk02'] = true,
 				['phagnot'] = true,
+				['phagnot-mk02'] = true,
+				['phagnot-mk03'] = true,
+				['phagnot-mk04'] = true,
 				['nanochondria'] = true,
 				['rendering'] = true,
 				['advanced-rendering'] = true,
@@ -4837,6 +5075,7 @@ local TRlist =
 				['zipir-mk02'] = true,
 				['antitumor'] = true,
 				['trits'] = true,
+				['trits-mk02'] = true,
 				['recombinant-ery'] = true,
 				['reca'] = true,
 				['orexigenic'] = true,
@@ -4858,6 +5097,7 @@ local TRlist =
 				['mycology-mk01'] = true,
 				['yaedols'] = true,
 				['biopolymer-clusters'] = true,
+				['ctc'] = true,
 
 			},
 	}

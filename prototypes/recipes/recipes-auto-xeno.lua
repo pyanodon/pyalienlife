@@ -68,13 +68,14 @@ fun.autorecipes {
 					--{name='meat',amount ='R'},
 					{name='fish',amount ='R'},
 					{name='guts',amount ='R'},
+					{name='xenoegg',amount ='+1'},
 					{name='cagedulric',amount =1},
 
 				},
 			results =
 				{
 					{name='cagedxeno',amount ='R'},
-					{name='cagedxeno', probability = 0.9,amount_min =1,amount_max =1},
+					{name='cagedxeno', probability = 1.8,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 90,
 			tech = 'xeno'
@@ -128,7 +129,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='cagedxeno', amount ='R'},
-					{name='cagedxeno', probability = 1,amount_min =1,amount_max =2},
+					{name='cagedxeno', probability = 1.5,amount_min =1,amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -319,7 +320,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='xenoegg', amount =2},
+					{name='xenoegg', amount =1},
 				},
 			crafting_speed = 100,
 			tech = 'assisted-embryology'
@@ -588,7 +589,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='sulfuricacid', amount ='R'},
-					{name='brain', amount =3},
+					{name='brain', amount =4},
 				},
 			crafting_speed = 15,
 			tech = 'nanochondria',
@@ -606,7 +607,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='bones', amount =7},
+					{name='bones', amount =11},
 				},
 			crafting_speed = 15,
 			tech = 'bmp',
@@ -623,7 +624,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bones', amount ='R'},
-					{name='bonemeal', amount =8},
+					{name='bonemeal', amount =13},
 				},
 			crafting_speed = 15,
 			tech = 'bmp',
@@ -641,7 +642,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bonemeal', amount ='R'},
-					{name='sulfuricacid', amount =120},
+					{name='sulfuricacid', amount =200},
 				},
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
@@ -659,7 +660,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='sulfuricacid', amount ='R'},
-					{name='chitin', amount =9},
+					{name='chitin', amount =23},
 				},
 			crafting_speed = 15,
 			tech = 'reca',
@@ -677,7 +678,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='chitin', amount ='R'},
-					{name='meat', amount =8},
+					{name='meat', amount =10},
 				},
 			crafting_speed = 15,
 			tech = 'anabolic-rna',

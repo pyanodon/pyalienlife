@@ -61,6 +61,10 @@ data:extend {
     },
     {
         type = "recipe-category",
+        name = "cottongut"
+    },
+    {
+        type = "recipe-category",
         name = "dhilmos"
     },
     {
@@ -191,6 +195,18 @@ data:extend {
         type = "recipe-category",
         name = "vat"
     },
+    {
+        type = "recipe-category",
+        name = "science"
+    },
+    {
+        type = "recipe-category",
+        name = "research"
+    },
+    {
+        type = "recipe-category",
+        name = "compost"
+    },
     ------crops------
 	{
         type = "resource-category",
@@ -224,7 +240,7 @@ data:extend {
         type = "resource-category",
         name = "arum"
     },
-
+    ------ores------
     {
         type = "fuel-category",
         name = "bio-container"
@@ -319,5 +335,9 @@ data:extend {
 	{
         type = "recipe-category",
         name = "slaughterhouse-xyhiphoe"
+    },
+    {
+        type = "recipe-category",
+        name = "slaughterhouse-cottongut"
     },
 }

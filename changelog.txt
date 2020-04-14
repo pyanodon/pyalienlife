@@ -1,4 +1,295 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.5.5
+Date: 2020-04-12
+  Changes:
+    - Speed up spore collectors.
+    - Tons of coding improvements.
+    - Updates in ALL animals rendering and improved versions.
+    - Added flue gas direct recipes.
+---------------------------------------------------------------------------------------------------
+Version: 1.5.4
+Date: 2020-04-11
+  Changes:
+    - Fixed bug.
+---------------------------------------------------------------------------------------------------
+Version: 1.5.3
+Date: 2020-04-11
+  Changes:
+    - Added tooltips to slaghterhouse gui.
+    - Fixed issue with kmuats not showing in slaughterhouse gui.
+    - fixed deadlock related to diamagnetic material in empty neuromorphic chip
+    - Add Nuka-van.
+---------------------------------------------------------------------------------------------------
+Version: 1.5.2
+Date: 2020-04-10
+  Changes:
+    - Added new graphics for mukmoux. Will resize stuff.
+    - Lots of balances in a lot of farm buildings.
+    - Fixed locale.
+    - Balanced grod
+    - Balanced recombinant ery
+---------------------------------------------------------------------------------------------------
+Version: 1.5.1
+Date: 2020-04-06
+  Changes:
+    - fixed error in script
+---------------------------------------------------------------------------------------------------
+Version: 1.5.0
+Date: 2020-04-06
+  Changes:
+    - fixed deadlock in alien enzymes. removed diamagnetic material and moved paramagnetic material to earlier unlock.
+---------------------------------------------------------------------------------------------------
+Version: 1.4.9
+Date: 2020-04-02
+  Changes:
+    - Added unlock for MK levels of phythoplankon farms.
+    - Fixed modules in data-array and bio-reactors.
+    - Fixed manure updates.
+---------------------------------------------------------------------------------------------------
+Version: 1.4.8
+Date: 2020-04-01
+  Changes:
+    - Buffed power cycles.
+    - Fixed Trits.
+    - Decreased rennea to lower tech level.
+    - Balanced Growth Hormone and Antiviral.
+---------------------------------------------------------------------------------------------------
+Version: 1.4.7
+Date: 2020-03-31
+  Changes:
+    - Balanced Cridrens
+    - Adapted recipes to glassworks.
+    - Balanced biomass
+    - Biomass to raw coal balanced.
+    - Balanced tuuphra.
+---------------------------------------------------------------------------------------------------
+Version: 1.4.6
+Date: 2020-03-29
+  Changes:
+    - Balanced all crops for fertilizer better usage.
+    - Removed the remaining biomass alternative recipes.
+    - Hidden all biomass recipes from menu.
+    - Added biomass to coke recipe.
+    - Phadaisus now doesnt need alien enzymes.
+    - Arthurians and Phadais now prefer a fresh cottongut as a snack.
+---------------------------------------------------------------------------------------------------
+Version: 1.4.5
+Date: 2020-03-28
+  Changes:
+    - Fixed desync issues from the composter
+---------------------------------------------------------------------------------------------------
+Version: 1.4.4
+Date: 2020-03-26
+  Changes:
+    - Removed unecessary pipe connections in vat-brain.
+    - Removed duplicated recipes for biomass from wood and logs (sorry viking guy XD)
+    - Re-organized a good chunk of the later tech tree.
+    - Production science now is on pharmagenonics.
+    - Rebalanced growth hormone.
+    - Fixed one kicalk recipe with wrong flue gas.
+    - Allowed prod modules in all food recipes.
+    - Removed productivity bonus from phagnots.
+    - When add Ulric to feed Xenos, the output was increased.
+    - Balanced Cysteine
+    - Dingrits now requiere chemical science pack instead of production science pack.
+---------------------------------------------------------------------------------------------------
+Version: 1.4.3
+Date: ????
+  Changes:
+    - Added Phadaisus.
+    - Added py-science to pharmagenonics.
+    - Stack sizes adjusted.
+    - Fixed som biomass coding.
+    - Changes made to allow play pyAL without pyHT for wimps.
+    - Biomass name tweaks.
+    - Balanced flue gas in botanical cultures.
+    - Added Cermet to neuroprocessors.
+    - Balances in seaweed.
+---------------------------------------------------------------------------------------------------
+Version: 1.4.2
+Date: 2020-03-22
+  Changes:
+    - Added compost plant, tech and recipes.
+    - Fixed and added new cottongut recipes.
+    - Locale fix for vrauks
+    - Fix on caravan recipe.
+    - Added biomass convertion recipe.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.4.1
+Date: 2020-03-21
+  Changes:
+    - Balanced seaweed.
+    - Balanced all manure recipes.
+    - Fixed silver foam deadlock.
+    - Removed prod modules from creature chamber.
+    - Balanced all plants that use manure.
+    - Balanced photomining recipes.
+    - Some tech tree balances.
+    - Fixed caravans.
+---------------------------------------------------------------------------------------------------
+Version: 1.4.0
+Date: 2020-03-18
+  Changes:
+    - Re balanced generators.
+    - Added new tech level for domestication.
+    - Small changes in neuromorphic chips.
+    - Fixed fish modules and buildings.
+    - Fixed Cottongut lard.
+    - Moved Caravans to Domestication 1.
+    - Domestication 1 now is a red tech.
+    - Dingrido now is a blue tech.
+    - Improved dried grod recipe is uses hot-air.
+    - Added early recipes for pyphoon bay.
+    - Changed generator recipes.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.3.9
+Date: 2020-03-17
+  Changes:
+    - Fixed cottongut random lard.
+    - Buffed urea from blood.
+---------------------------------------------------------------------------------------------------
+Version: 1.3.8
+Date: 2020-03-16
+  Changes:
+    - Fix research center initial level.
+---------------------------------------------------------------------------------------------------
+Version: 1.3.7
+Date: 2020-03-16
+  Changes:
+    - Added Research centers.
+    - Migrated lots of recipes to research center.
+    - Cottongut food now requieres bio samples.
+    - Fixed cotongut recipes.
+    - Crawdad buff
+---------------------------------------------------------------------------------------------------
+Version: 1.3.6
+Date: 2020-03-15
+  Changes:
+    - Fixed cottongut tech
+---------------------------------------------------------------------------------------------------
+Version: 1.3.5
+Date: 2020-03-15
+  Changes:
+    - Added Prandium Labs.
+    - Added Cottongut rendering and farming mechanics.
+    - Added science boost recipes until py-science.
+    - Fixed a bug where py-science was disabled.
+    - Fixed error in script related to missing character.
+    - Buff in fungal substrate recipes.
+    - Disabled vanilla plastic recipe.
+    - Migration file updated.
+    - Sea sponge fix.
+    - Bhoddos now have its own tech tree.
+---------------------------------------------------------------------------------------------------
+Version: 1.3.4
+Date: 2020-03-14
+  Changes:
+    - Fixed crawdad recipe v 2.0
+---------------------------------------------------------------------------------------------------
+Version: 1.3.3
+Date: 2020-03-14
+  Changes:
+    - Fixed crawdad recipe.
+---------------------------------------------------------------------------------------------------
+Version: 1.3.2
+Date: 2020-03-14
+  Changes:
+    - Added Crawdad
+    - Balances for Dingrido
+    - Added raw data for future updates
+    - Removed all the productivity where it shouldnt be
+    - Buff in generators and their parts, fuels and recipes.
+    - Balanced pyphoon bay recipes.
+    - Increased pollution absorption values in all pyAl organic buildings.
+    - Fixed some silly food recipe errors.
+    - Added bonemeal in organ printing.
+    - Nerfed basic plastic recipe.
+    - Nerfed production-science bat brain recipe.
+    - Fixed Zipir tech unlock problem.
+    - Fixed phytomining sulfur recipe when pyHT is enabled.
+    - Fixed bug with Ulric needing raw-fiber when pyHT isnt enabled.
+    - Phagnots rebalance.
+    - Neuroprocessors doesnt requiere transistors anymore.
+    - Nerfed vanadium.
+    - Improved bedding recipe.
+    - Enabled extra moss recipe when pyHT is enabled.
+    - Fixed Bhoddos icon.
+---------------------------------------------------------------------------------------------------
+Version: 1.3.1
+Date: 2020-03-03
+  Changes:
+    - adjustments to kicalk upgrades
+    - added missing module icons for plants and fungi
+    - standardized creature egg stack sizes
+---------------------------------------------------------------------------------------------------
+Version: 1.3.0
+Date: 2020-03-01
+  Changes:
+    - adjustments to phagnot and cobalt
+---------------------------------------------------------------------------------------------------
+Version: 1.2.9
+Date: 2020-02-29
+  Changes:
+    - fixed an script error for pycoaltbaa
+---------------------------------------------------------------------------------------------------
+Version: 1.2.8
+Date: 2020-02-29
+  Changes:
+    - Added Dingridos.
+---------------------------------------------------------------------------------------------------
+Version: 1.2.7
+Date: 2020-02-28
+  Changes:
+    - disabled excessive logging
+---------------------------------------------------------------------------------------------------
+Version: 1.2.6
+Date: 2020-02-28
+  Changes:
+    - fixed bugs with farm disable script not checking all farms
+---------------------------------------------------------------------------------------------------
+Version: 1.2.5
+Date: 2020-02-27
+  Changes:
+    - fixed caged phadai was in dingrits spike recipe
+    - add script to disable any building that doesnt have a farm module
+    - add icon to display when farm is missing modules
+---------------------------------------------------------------------------------------------------
+Version: 1.2.4
+Date: 2020-02-25
+  Changes:
+    - fixed that moondrop modules were disabled for moondrop methane recipes
+---------------------------------------------------------------------------------------------------
+Version: 1.2.3
+Date: 2020-02-24
+  Changes:
+    - fixed error caused by robots building farms attempting to display message
+    - Balanced moondrop
+    - adjusted plant and animal stack sizes
+---------------------------------------------------------------------------------------------------
+Version: 1.2.2
+Date: 2020-02-24
+  Changes:
+    - Added photophore recipes.
+    - Added photophore improved recipe.
+    - Fixed vrauks lastest recipes.
+    - Fixed Korlex improved blood extraction.
+    - Fixed Cobalt-sulfate recipe.
+    - Added Moondrop to new mechanics.
+    - Added Idiot-proof message when ploping some buildings.
+    - Balanced pheromone uses.
+---------------------------------------------------------------------------------------------------
+Version: 1.2.1
+Date: 2020-02-21
+  Changes:
+    - Fixed pyHT bug based on pyAL
+---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+Date: 2020-02-20
+  Changes:
+    - Fixed phagnot tech
+---------------------------------------------------------------------------------------------------
 Version: 1.1.9
 Date: 2020-02-19
   Changes:

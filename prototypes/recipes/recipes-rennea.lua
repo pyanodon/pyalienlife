@@ -9,9 +9,9 @@ RECIPE {
     enabled = false,
     energy_required = 200,
     ingredients = {
-        {type = 'item', name = 'alien-sample-03', amount = 10},
+        {type = 'item', name = 'alien-sample-02', amount = 10},
         {type = 'item', name = 'cdna', amount = 10},
-        {type = 'item', name = 'bio-sample', amount = 10},
+        {type = 'item', name = 'bio-sample', amount = 20},
         {type = 'item', name = 'fertilizer', amount = 30},
         {type = 'item', name = 'rennea-codex', amount = 1},
         {type = 'item', name = 'earth-sunflower-sample', amount = 1},
@@ -47,7 +47,7 @@ RECIPE {
     energy_required = 300,
     ingredients = {
         {type = 'item', name = 'steel-chest', amount = 1},
-        {type = 'item', name = 'chemical-science-pack', amount = 100},
+        {type = 'item', name = 'logistic-science-pack', amount = 100},
         {type = 'item', name = 'rennea-codex', amount = 1},
     },
     results = {

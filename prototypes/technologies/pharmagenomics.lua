@@ -4,10 +4,10 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/pharmagenomics.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"biotech-mk04","genetics-mk04"},
+    prerequisites = {"biotech-mk03","dingrits","genetics-mk03"},
     effects = {},
     unit = {
-        count = 200,
+        count = 400,
         ingredients = {
             {"automation-science-pack", 3},
             {"logistic-science-pack", 2},

@@ -96,7 +96,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fish',amount=5},
+					{name='fish',amount=8},
 				},
 			results =
 				{

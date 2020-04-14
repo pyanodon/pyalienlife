@@ -380,7 +380,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='ulriccub', probability = 0.7,amount_min =1,amount_max =2},
+					{name='ulriccub',amount = 1},
 				},
 			crafting_speed = 70,
 			tech = 'assisted-embryology'
@@ -485,7 +485,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='ulriccub',amount = 'R'},
-					{name='ulriccub', amount =1},
+					{name='ulriccub', amount =2},
 				},
 			crafting_speed = 70,
 			tech = 'pheromones'
@@ -761,7 +761,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='fat', amount ='R'},
-					{name='brain', amount =3},
+					{name='brain', amount =5},
 				},
 			crafting_speed = 15,
 			tech = 'nanochondria',
@@ -779,7 +779,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='bones', amount =8},
+					{name='bones', amount =13},
 				},
 			crafting_speed = 15,
 			tech = 'bmp',
@@ -796,7 +796,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bones', amount ='R'},
-					{name='bonemeal', amount =12},
+					{name='bonemeal', amount =24},
 				},
 			crafting_speed = 15,
 			tech = 'bmp',
@@ -814,7 +814,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bonemeal', amount ='R'},
-					{name='guts', amount =7},
+					{name='guts', amount =12},
 				},
 			crafting_speed = 15,
 			tech = 'antitumor',
@@ -832,7 +832,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='blood', amount =120},
+					{name='blood', amount =200},
 				},
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
@@ -850,7 +850,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', amount ='R'},
-					{name='skin', amount =6},
+					{name='skin', amount =10},
 				},
 			crafting_speed = 15,
 			tech = 'reca',
@@ -868,7 +868,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='fat', amount =6},
+					{name='fat', amount =10},
 				},
 			crafting_speed = 15,
 			tech = 'orexigenic',
@@ -886,7 +886,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='meat', amount =7},
+					{name='meat', amount =11},
 				},
 			crafting_speed = 15,
 			tech = 'anabolic-rna',

@@ -27,7 +27,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='skin', amount =3},
+					{name='skin', amount ='+2'},
 				},
 			crafting_speed = 15,
 			tech = 'defective-collagen',
@@ -64,7 +64,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='skin', amount =3},
+					{name='skin', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'defective-collagen',
@@ -74,6 +74,43 @@ fun.autorecipes {
 		},
 	}
 }
+
+------------------COTTONGUT------------------
+
+fun.autorecipes {
+    name = 'rendering-skin-cottongut',
+	category = 'slaughterhouse-cottongut',
+	--module_limitations = 'cottongut',
+	subgroup = 'py-alienlife-cottongut',
+	order = 'b',
+    mats =
+	{
+		--skin
+		{
+			ingredients =
+				{
+					{name='cottongut',amount=5},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='blood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='skin', amount ='+2'},
+				},
+                crafting_speed = 15,
+                tech = 'defective-collagen',
+                name = 'Extract cottongut skin-1',
+                icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
+                icon_size = 32,
+		},
+	}
+}
+
 
 ------------------DHILMOS------------------
 
@@ -103,7 +140,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='chitin', amount =4},
+					{name='chitin', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'defective-collagen',
@@ -140,7 +177,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='skin', amount =6},
+					{name='skin', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'defective-collagen',
@@ -177,7 +214,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='skin', amount =5},
+					{name='skin', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'defective-collagen',
@@ -215,7 +252,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='skin', amount =3},
+					{name='skin', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'defective-collagen',
@@ -252,7 +289,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='skin', amount =2},
+					{name='skin', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'defective-collagen',
@@ -289,7 +326,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='skin', amount =4},
+					{name='skin', amount ='+4'},
 				},
                 crafting_speed = 15,
                 tech = 'defective-collagen',
@@ -325,7 +362,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='skin', amount =4},
+					{name='skin', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'defective-collagen',
@@ -362,7 +399,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='skin', amount =3},
+					{name='skin', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'defective-collagen',
@@ -401,7 +438,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='skin', amount =5},
+					{name='skin', amount ='+4'},
 				},
                 crafting_speed = 15,
                 tech = 'defective-collagen',
@@ -441,7 +478,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='chitin', amount =2},
+					{name='chitin', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'defective-collagen',
@@ -481,7 +518,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='chitin', amount =5},
+					{name='chitin', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'defective-collagen',
@@ -519,7 +556,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='skin', amount =7},
+					{name='skin', amount ='+6'},
 				},
                 crafting_speed = 15,
                 tech = 'defective-collagen',

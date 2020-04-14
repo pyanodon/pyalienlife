@@ -60,7 +60,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/genetics-mk04.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"genetics-mk03"},
+    prerequisites = {"genetics-mk03","pharmagenomics"},
     effects = {},
     unit = {
         count = 300,

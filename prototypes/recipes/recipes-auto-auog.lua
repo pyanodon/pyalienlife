@@ -484,7 +484,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='auogpup',amount = 'R'},
-					{name='auogpup', amount =1},
+					{name='auogpup', amount =2},
 				},
 			crafting_speed = 70,
 			tech = 'pheromones'
@@ -755,14 +755,15 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='cagedauog',amount='R'},
-					{name='braincagedauog',amount=1},
+					{name='braincagedauog',amount=2},
 				},
 			results =
 				{
 					{name='fat', amount ='R'},
-					{name='brain', amount =3},
+					{name='brain', amount =8},
+					{name='cage',amount = 1}
 				},
-			crafting_speed = 15,
+			crafting_speed = 30,
 			tech = 'nanochondria',
 			name = 'Extract brains from Improved auogs',
 			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-auog.png",
@@ -778,7 +779,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='bones', amount =7},
+					{name='bones', amount =11},
 				},
 			crafting_speed = 15,
 			tech = 'bmp',
@@ -795,7 +796,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bones', amount ='R'},
-					{name='bonemeal', amount =5},
+					{name='bonemeal', amount =7},
 				},
 			crafting_speed = 15,
 			tech = 'bmp',
@@ -813,7 +814,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bonemeal', amount ='R'},
-					{name='meat', amount =14},
+					{name='meat', amount =28},
 				},
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
@@ -831,7 +832,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', amount ='R'},
-					{name='guts', amount =7},
+					{name='guts', amount =11},
 				},
 			crafting_speed = 15,
 			tech = 'antitumor',
@@ -849,7 +850,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='blood', amount =140},
+					{name='blood', amount =200},
 				},
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
@@ -867,7 +868,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', amount ='R'},
-					{name='skin', amount =6},
+					{name='skin', amount =10},
 				},
 			crafting_speed = 15,
 			tech = 'reca',
@@ -885,7 +886,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='fat', amount =6},
+					{name='fat', amount =10},
 				},
 			crafting_speed = 15,
 			tech = 'orexigenic',
