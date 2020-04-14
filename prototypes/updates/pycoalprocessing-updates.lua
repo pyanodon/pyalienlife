@@ -4,8 +4,8 @@ local fun = require("prototypes/functions/functions")
 ITEM("fawogae-plantation-mk02"):set("icon", "__pyalienlifegraphics__/graphics/icons/fawogae-plantation-mk02.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-buildings-mk02", "d")
 ITEM("fawogae-plantation-mk03"):set("icon", "__pyalienlifegraphics__/graphics/icons/fawogae-plantation-mk03.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-buildings-mk03", "d")
 ITEM("fawogae-plantation-mk04"):set("icon", "__pyalienlifegraphics__/graphics/icons/fawogae-plantation-mk04.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-buildings-mk04", "d")
-RECIPE('fawogae-plantation'):set_fields {enabled = false}
-RECIPE('fawogae-plantation-mk02'):add_unlock('mycology-mk02'):subgroup_order("py-alienlife-buildings-mk02", "b"):replace_ingredient("fawogae-plantation","fawogae-plantation-mk01")
+RECIPE('fawogae-plantation-mk01'):set_fields {enabled = false}
+RECIPE('fawogae-plantation-mk02'):add_unlock('mycology-mk02'):subgroup_order("py-alienlife-buildings-mk02", "b")
 data.raw['assembling-machine']['fawogae-plantation-mk02'].crafting_speed = 0.1
 data.raw['assembling-machine']['fawogae-plantation-mk02'].module_specification = {module_slots = 45}
 data.raw['assembling-machine']['fawogae-plantation-mk02'].allowed_effects = {"speed","productivity"}
@@ -22,7 +22,7 @@ RECIPE('botanical-nursery-mk02'):remove_unlock('machines-mk02'):add_unlock('bota
 RECIPE('botanical-nursery-mk03'):remove_unlock('machines-mk03'):add_unlock('botany-mk03'):subgroup_order("py-alienlife-buildings-mk03", "b")
 RECIPE('botanical-nursery-mk04'):remove_unlock('machines-mk04'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk04", "b")
 RECIPE('hpf'):remove_unlock('coal-processing-1'):set_fields {enabled = true}
-RECIPE('ralesia-plantation'):remove_unlock('coal-processing-1')
+RECIPE('ralesia-plantation-mk01'):remove_unlock('coal-processing-1')
 --RECIPE('ralesia-plantation-mk02'):add_unlock('botany-mk02'):subgroup_order("py-alienlife-buildings-mk02", "e")
 --RECIPE('ralesia-plantation-mk03'):add_unlock('botany-mk03'):subgroup_order("py-alienlife-buildings-mk03", "e")
 --RECIPE('ralesia-plantation-mk04'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk04", "e")
