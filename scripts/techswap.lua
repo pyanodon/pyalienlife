@@ -1596,7 +1596,7 @@ local TRlist =
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract brains from Improved arthurians-2',
+					recipe = 'Extract brains from Improved Trits-2',
 					tech = 'metamide5',
 					unlocked = false,
 					level = 2,
