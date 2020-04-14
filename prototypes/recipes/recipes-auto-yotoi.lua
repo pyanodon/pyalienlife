@@ -63,7 +63,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*10'},
-					{name='yotoi',amount ='+1'}
+					{name='yotoi',amount ='+3'}
 				},
 				crafting_speed = 100,
 				tech = 'yotoi-mk02'
@@ -80,7 +80,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*12'},
-					{name='yotoi',amount ='+1'}
+					{name='yotoi',amount ='+2'}
 				},
 				crafting_speed = 100,
 				tech = 'yotoi-mk02'
@@ -155,9 +155,9 @@ fun.autorecipes {
 				{
 					--{'a','*25'},
 					--{'a','+3'}
-					{name='yotoi',amount ="+1"}
+					{name='yotoi',amount ="+5"}
 				},
-				crafting_speed = 100,
+				crafting_speed = 85,
 				tech = 'yotoi-mk04'
 		},
 		{
@@ -177,7 +177,7 @@ fun.autorecipes {
 					--{'a','+3'}
 					{name='yotoi',amount ="+1"}
 				},
-				crafting_speed = 100,
+				crafting_speed = 75,
 				tech = 'yotoi-mk04'
 		},
     --GH
@@ -192,7 +192,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='yotoi',amount ="+1"}
+					{name='yotoi',amount ="+8"}
 				},
 			crafting_speed = 70,
 			tech = 'yotoi-mk04'
@@ -223,7 +223,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='yotoi',amount ="+1"}
+					{name='yotoi',amount ="+3"}
 				},
 			crafting_speed = 70,
 			tech = 'yotoi-mk04'
@@ -238,7 +238,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='yotoi',amount ="+2"}
+					{name='yotoi',amount ="+5"}
 				},
 			crafting_speed = 70,
 			tech = 'yotoi-mk04'

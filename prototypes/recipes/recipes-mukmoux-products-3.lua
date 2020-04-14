@@ -18,9 +18,9 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='manure',amount =8},
+					{name='manure',amount ='*8'},
 				},
-			crafting_speed = 100,
+			crafting_speed = 60,
 			tech = 'explosive-diarrhea',
 			name = 'muk-manure-1b',
 			--icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk01.png"
@@ -38,7 +38,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					--{name='manure',amount ='+2'}
 				},
-			crafting_speed = 80,
+			crafting_speed = 50,
 			tech = 'explosive-diarrhea',
 			name = 'muk-manure-2b',
 			--icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk01.png"
@@ -54,7 +54,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+1'}
 				},
-				crafting_speed = 80,
+				crafting_speed = 45,
                 tech = 'explosive-diarrhea',
                 name = 'muk-manure-3b',
 		},
@@ -69,7 +69,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+2'}
 				},
-				crafting_speed = 80,
+				crafting_speed = 35,
                 tech = 'explosive-diarrhea',
                 name = 'muk-manure-4b',
 		},
@@ -85,9 +85,9 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='manure',amount =12}
+					{name='manure',amount ='+1'}
 				},
-				crafting_speed = 60,
+				crafting_speed = 25,
                 tech = 'explosive-diarrhea',
                 name = 'muk-manure-5b',
 		},
@@ -102,7 +102,7 @@ fun.autorecipes {
 					--{'a','*5'}
 					{name='manure',amount ='+2'}
 				},
-				crafting_speed = 60,
+				crafting_speed = 20,
                 tech = 'explosive-diarrhea',
                 name = 'muk-manure-6b',
 		},
@@ -110,14 +110,14 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount =5},
+					{name='rawfiber',amount =3},
 				},
 			results =
 				{
 					--{'a','*5'}
 					{name='manure',amount ='+2'}
 				},
-				crafting_speed = 60,
+				crafting_speed = 10,
                 tech = 'explosive-diarrhea',
                 name = 'muk-manure-7b',
 		},

@@ -3,6 +3,34 @@ for _, ore in pairs(data.raw.resource) do
 
 	if string.match(ore.icon, '__pyalienlife') ~= nil then
 
+    if ore.name == 'ore-bioreserve' then
+      local x = 0
+      local y = 0
+      for i = 1, 704 do
+        --log(i)
+      data:extend({
+        {
+          type = "sprite",
+          name = "bio-tree-"..i,
+          filename = "__pyalienlifegraphics__/graphics/entity/bioreserve/hr-rich-1.png",
+          --priority = "extra-high-no-scale",
+          width = 128,
+          height = 160,
+          x = x,
+          y = y,
+          --flags = {"gui-icon"},
+          --mipmap_count = 1,
+          --scale = 0.5
+        }
+      })
+      x = x + 128
+      if x == 8192 then
+        x = 0
+        y = y + 160
+      end
+    end
+    end
+
 data:extend({
     {
         type = "tree",

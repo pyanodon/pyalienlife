@@ -370,7 +370,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='xyhiphoecub',amount = 'R'},
-					{name='xyhiphoecub', amount =1},
+					{name='xyhiphoecub', amount =2},
 				},
 			crafting_speed = 70,
 			tech = 'pheromones'
@@ -572,7 +572,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='arthropodblood', amount ='R'},
-					{name='meat', amount =5},
+					{name='meat', amount =8},
 				},
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
@@ -590,7 +590,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', amount ='R'},
-					{name='guts', amount =8},
+					{name='guts', amount =11},
 				},
 			crafting_speed = 15,
 			tech = 'antitumor',
@@ -608,7 +608,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='arthropodblood', amount =140},
+					{name='arthropodblood', amount =300},
 				},
 			crafting_speed = 15,
 			tech = 'recombinant-ery',

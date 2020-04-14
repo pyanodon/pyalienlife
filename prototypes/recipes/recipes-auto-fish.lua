@@ -54,7 +54,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='seaweed',amount = '10'},
+					{name='seaweed',amount = 10},
 				},
 			results =
 				{

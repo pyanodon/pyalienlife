@@ -33,7 +33,7 @@ ENTITY {
     type = "assembling-machine",
     name = "vonix-den-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/vonix-den-mk02.png",
-    icon_size = 32,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "vonix-den-mk02"},
     fast_replaceable_group = "vonix-den",

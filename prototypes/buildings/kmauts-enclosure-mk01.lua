@@ -33,7 +33,7 @@ ENTITY {
     type = "assembling-machine",
     name = "kmauts-enclosure-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/kmauts-enclosure-mk01.png",
-	icon_size = 32,
+	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "kmauts-enclosure-mk01"},
     fast_replaceable_group = "kmauts-enclosure",

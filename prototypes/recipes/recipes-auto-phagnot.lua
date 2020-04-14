@@ -11,7 +11,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='bhoddos',amount =10},
+					{name='bhoddos',amount =3},
 					{name='waterbarrel',amount=3,return_item={name='empty-barrel',amount=3}},
 					{name='cage',amount=1},
 				},
@@ -344,7 +344,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='bhoddos',amount =10},
+                    {name='bhoddos',amount =2},
                     {name='yotoiseeds',amount =15},
 					{name='waterbarrel',amount=3,return_item={name='empty-barrel',amount=3}},
 					--{name='cage',amount=1},
@@ -448,7 +448,7 @@ fun.autorecipes {
 					{name='rawfiber',amount = 'R'},
 					{name='salt',amount = 'R'},
 					{name='phagnotfood02',amount = 'R'},
-					{name='bhoddos',amount =15},
+					{name='bhoddos',amount =3},
 					{name='pheromones',amount =1},
                     {name='yotoiseeds',amount =15},
 					--{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
@@ -457,7 +457,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='phagnotcub',amount = 'R'},
-					{name='phagnotcub', amount =1},
+					{name='phagnotcub', amount =2},
 				},
 			crafting_speed = 70,
 			tech = 'pheromones'
@@ -716,7 +716,7 @@ fun.autorecipes {
 				{
 					{name='blood', amount ='R'},
 					{name='gasbladder', amount ='R'},
-					{name='brain', amount =3},
+					{name='brain', amount =5},
 				},
 			crafting_speed = 15,
 			tech = 'nanochondria',
@@ -734,7 +734,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='bones', amount =12},
+					{name='bones', amount =30},
 				},
 			crafting_speed = 15,
 			tech = 'bmp',
@@ -752,7 +752,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bones', amount ='R'},
-					{name='guts', amount =4},
+					{name='guts', amount =6},
 				},
 			crafting_speed = 15,
 			tech = 'antitumor',
@@ -770,7 +770,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='blood', amount =70},
+					{name='blood', amount =100},
 				},
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
@@ -788,7 +788,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', amount ='R'},
-					{name='skin', amount =4},
+					{name='skin', amount =7},
 				},
 			crafting_speed = 15,
 			tech = 'reca',
@@ -806,7 +806,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='meat', amount =7},
+					{name='meat', amount =11},
 				},
 			crafting_speed = 15,
 			tech = 'anabolic-rna',

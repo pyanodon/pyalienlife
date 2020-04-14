@@ -18,9 +18,9 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='manure',amount ='*3'},
+                    {name='manure',amount ='*5'},
 				},
-			crafting_speed = 130,
+			crafting_speed = 80,
 			tech = 'scrondrix',
 			name = 'scrondrix-manure-1',
 			--icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk01.png"
@@ -34,9 +34,9 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure',amount ='+2'},
 				},
-			crafting_speed = 120,
+			crafting_speed = 70,
 			tech = 'scrondrix',
 			name = 'scrondrix-manure-2',
 			--icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk01.png"
@@ -50,10 +50,10 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure',amount ='+6'},
 				},
-				crafting_speed = 120,
-				tech = 'scrondrix',
+				crafting_speed = 55,
+				tech = 'scrondrix-mk02',
 				name = 'scrondrix-manure-3',
 		},
 		{
@@ -64,10 +64,10 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure',amount ='+2'},
 				},
-				crafting_speed = 120,
-				tech = 'scrondrix',
+				crafting_speed = 50,
+				tech = 'scrondrix-mk02',
 				name = 'scrondrix-manure-4',
 		},
 		{
@@ -78,10 +78,10 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure',amount ='+6'},
 				},
-				crafting_speed = 100,
-				tech = 'scrondrix',
+				crafting_speed = 40,
+				tech = 'scrondrix-mk03',
 				name = 'scrondrix-manure-5',
 		},
 		{
@@ -92,10 +92,10 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure',amount ='+2'},
 				},
-				crafting_speed = 100,
-				tech = 'scrondrix',
+				crafting_speed = 25,
+				tech = 'scrondrix-mk04',
 				name = 'scrondrix-manure-6',
 		},
 	}

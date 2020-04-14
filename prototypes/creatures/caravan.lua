@@ -11,9 +11,9 @@ RECIPE{
         {type = 'item', name = 'alien-sample01', amount = 5},
 		{type = 'item', name = 'bio-sample', amount = 20},
 		{type = 'item', name = 'auog', amount = 1},
-        {type = 'item', name = 'cdna', amount = 5},
+        {type = 'item', name = 'moss-gen', amount = 15},
         {type = 'item', name = 'earth-bear-sample', amount = 1},
-        {type = 'fluid', name = 'fetal-serum', amount = 100},
+        {type = 'fluid', name = 'water-saline', amount = 100},
     },
     result = "caravan"
   }:add_unlock("domestication")
@@ -41,7 +41,13 @@ data:extend(
     max_health = 25,
     order = "b-b-a",
     subgroup="enemies",
-    resistances = {},
+    resistances =
+		{
+			{
+				type = "physical",
+				percent = 100
+			},
+		},
     healing_per_tick = 0.01,
     collision_box = {{-0.6, -0.6}, {0.6, 0.6}},
     selection_box = {{-1, -1}, {1, 1}},
@@ -117,7 +123,7 @@ data:extend(
 	},
 	},
 	vision_distance = 30,
-	movement_speed = 0.07,
+	movement_speed = 0.1,
 	distance_per_frame = 0.13,
 	pollution_to_join_attack = 4,
 	distraction_cooldown = 300,
@@ -128,7 +134,8 @@ data:extend(
 	--dying_sound =  make_biter_dying_sounds(0.4),
 	--working_sound =  make_biter_calls(0.3),
 	--run_animation = biterrunanimation(small_biter_scale, small_biter_tint1, small_biter_tint2),
-
+	has_belt_immunity = true,
+	affected_by_tiles = true,
 	run_animation =
 	{
 		layers =

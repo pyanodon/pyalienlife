@@ -10,7 +10,7 @@ items.inputs.hydrogen = {'hydrogen', 10}
 items.inputs.coarse = {'coarse', 10}
 items.inputs.carbondioxide = {'carbon-dioxide', 10}
 items.inputs.syngas = {'syngas', 10}
-items.inputs.fluegas = {'flue-gas', 100}
+items.inputs.fluegas = {'flue-gas', 50}
 items.inputs.fertilizer = {'fertilizer', 1}
 items.inputs.ash = {'ash', 10}
 items.inputs.limestone = {'limestone', 1}
@@ -304,6 +304,21 @@ items.inputs.korlexpup = {'korlex-pup', 1}
 items.inputs.korlexfood01 = {'korlex-food-01', 1}
 items.inputs.korlexfood02 = {'korlex-food-02', 1}
 
+items.inputs.moondropseeds = {'moondrop-seeds', 1}
+items.inputs.moondrop = {'moondrop', 1}
+items.inputs.photophore = {'photophore', 1}
+
+items.inputs.cottongut = {'cottongut', 1}
+items.inputs.cottongutcub = {'cottongut-pup', 1}
+items.inputs.cottongutfood01 = {'cottongut-food-01', 1}
+items.inputs.cottongutfood02 = {'cottongut-food-02', 1}
+items.inputs.braincottongut = {'brain-cottongut', 1}
+items.inputs.bonecottongut = {'bone-cottongut', 1}
+items.inputs.meatcottongut = {'meat-cottongut', 1}
+items.inputs.bloodcottongut = {'blood-cottongut', 1}
+items.inputs.gutscottongut = {'guts-cottongut', 1}
+items.inputs.fatcottongut = {'fat-cottongut', 1}
+items.inputs.skincottongut = {'skin-cottongut', 1}
 
 items.outputs = items.inputs
 --can put output replacements below here

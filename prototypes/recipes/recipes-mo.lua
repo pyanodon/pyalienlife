@@ -1,15 +1,3 @@
-RECIPE {
-    type = 'recipe',
-    name = 'fawogae-spore',
-    category = 'spore',
-    enabled = false,
-    energy_required = 15,
-    ingredients = {
-    },
-    results = {
-        {type = 'item', name = 'fawogae-spore', amount = 1, probability = 0.4},
-    },
-}:add_unlock("fawogae")
 
 RECIPE {
     type = 'recipe',
@@ -225,13 +213,13 @@ RECIPE {
     enabled = false,
     energy_required = 25,
     ingredients = {
-        {type = 'item', name = 'fur', amount = 20},
+        {type = 'item', name = 'fur', amount = 10},
         {type = 'item', name = 'chitin', amount = 5},
         {type = 'fluid', name = 'bacteria-1', amount = 100},
         {type = 'fluid', name = 'oleochemicals', amount = 100},
     },
     results = {
-        {type = 'item', name = 'cysteine', amount = 1},
+        {type = 'item', name = 'cysteine', amount = 5},
     },
 }:add_unlock("genetics-mk04"):replace_ingredient("bacteria-1", "bacteria-2")
 
@@ -283,22 +271,22 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'anabolic-rna',
-    category = 'incubator',
+    category = 'research',
     enabled = false,
-    energy_required = 15,
+    energy_required = 380,
     ingredients = {
-        {type = 'item', name = 'adam42-gen', amount = 1},
-        {type = 'item', name = 'cysteine', amount = 1},
-        {type = 'item', name = 'alien-enzymes', amount = 1},
-        {type = 'item', name = 'meat', amount = 10},
-        {type = 'item', name = 'adrenal-cortex', amount = 5},
-        {type = 'item', name = 'lab-instrument', amount = 5},
-        {type = 'fluid', name = 'gta', amount = 50},
-        {type = 'item', name = 'flask', amount = 5},
-        {type = 'item', name = 'purine-analogues', amount = 1},
+        {type = 'item', name = 'adam42-gen', amount = 3},
+        {type = 'item', name = 'cysteine', amount = 3},
+        {type = 'item', name = 'alien-enzymes', amount = 3},
+        {type = 'item', name = 'meat', amount = 60},
+        {type = 'item', name = 'adrenal-cortex', amount = 25},
+        {type = 'item', name = 'lab-instrument', amount = 50},
+        {type = 'fluid', name = 'gta', amount = 150},
+        {type = 'item', name = 'flask', amount = 50},
+        {type = 'item', name = 'purine-analogues', amount = 3},
     },
     results = {
-        {type = 'item', name = 'anabolic-rna', amount = 1},
+        {type = 'item', name = 'anabolic-rna', amount = 300},
     },
 }:add_unlock("anabolic-rna")
 
@@ -343,7 +331,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'immunosupressants',
-    category = 'biofactory',
+    category = 'research',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -361,23 +349,23 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'antitumor',
-    category = 'nmf',
+    category = 'research',
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = 'item', name = 'cytostatics', amount = 1},
-        {type = 'item', name = 'propeptides', amount = 1},
+        {type = 'item', name = 'cytostatics', amount = 2},
+        {type = 'item', name = 'propeptides', amount = 5},
         {type = 'item', name = 'alien-enzymes', amount = 1},
-        {type = 'item', name = 'dynemicin', amount = 1},
-        {type = 'item', name = 'enediyne', amount = 1},
-        {type = 'item', name = 'lab-instrument', amount = 5},
-        {type = 'fluid', name = 'gta', amount = 50},
-        {type = 'fluid', name = 'arthropod-blood', amount = 50},
-        {type = 'item', name = 'flask', amount = 5},
-        {type = 'item', name = 'chitin', amount = 20},
+        {type = 'item', name = 'dynemicin', amount = 3},
+        {type = 'item', name = 'enediyne', amount = 3},
+        {type = 'item', name = 'lab-instrument', amount = 100},
+        {type = 'fluid', name = 'gta', amount = 150},
+        {type = 'fluid', name = 'arthropod-blood', amount = 200},
+        {type = 'item', name = 'flask', amount = 150},
+        {type = 'item', name = 'chitin', amount = 50},
     },
     results = {
-        {type = 'item', name = 'antitumor', amount = 1},
+        {type = 'item', name = 'antitumor', amount = 500},
     },
 }:add_unlock("antitumor"):change_category('nano'):replace_ingredient("cytostatics", "superconductor-servomechanims")
 
@@ -440,7 +428,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'enzyme-pks', amount = 1},
     },
-}:add_unlock("biotech-mk04")
+}:add_unlock("pharmagenomics")
 
 RECIPE {
     type = 'recipe',
@@ -453,38 +441,38 @@ RECIPE {
         {type = 'item', name = 'cysteine', amount = 1},
         {type = 'item', name = 'alien-enzymes', amount = 1},
         {type = 'item', name = 'guts', amount = 15},
-        {type = 'item', name = 'mukmoux-fat', amount = 15},
-        {type = 'item', name = 'lab-instrument', amount = 5},
+        {type = 'item', name = 'mukmoux-fat', amount = 30},
+        {type = 'item', name = 'lab-instrument', amount = 10},
         {type = 'fluid', name = 'gta', amount = 50},
-        {type = 'item', name = 'flask', amount = 5},
+        {type = 'item', name = 'flask', amount = 20},
         {type = 'item', name = 'mmp', amount = 1},
     },
     results = {
-        {type = 'item', name = 'recombinant-ery', amount = 1},
+        {type = 'item', name = 'recombinant-ery', amount = 300},
     },
 }:add_unlock("recombinant-ery")
 
 RECIPE {
     type = 'recipe',
     name = 'orexigenic',
-    category = 'biofactory',
+    category = 'research',
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'alien-enzymes', amount = 1},
-        {type = 'item', name = 'guts', amount = 20},
-        {type = 'fluid', name = 'fish-oil', amount = 100},
-        {type = 'item', name = 'lab-instrument', amount = 5},
-        {type = 'item', name = 'flask', amount = 5},
-        {type = 'item', name = 'zinc-plate', amount = 5},
-        {type = 'item', name = 'cridren', amount = 1},
-        {type = 'item', name = 'carapace', amount = 5},
-        {type = 'item', name = 'yotoi', amount = 5},
-        {type = 'item', name = 'grod', amount = 15},
-        {type = 'item', name = 'vonix-eggs', amount = 1},
+        {type = 'item', name = 'alien-enzymes', amount = 2},
+        {type = 'item', name = 'guts', amount = 40},
+        {type = 'fluid', name = 'fish-oil', amount = 200},
+        {type = 'item', name = 'lab-instrument', amount = 25},
+        {type = 'item', name = 'flask', amount = 25},
+        {type = 'item', name = 'zinc-plate', amount = 52},
+        {type = 'item', name = 'cridren', amount = 7},
+        {type = 'item', name = 'carapace', amount = 10},
+        {type = 'item', name = 'yotoi', amount = 20},
+        {type = 'item', name = 'grod', amount = 30},
+        {type = 'item', name = 'vonix-eggs', amount = 15},
     },
     results = {
-        {type = 'item', name = 'orexigenic', amount = 1},
+        {type = 'item', name = 'orexigenic', amount = 250},
     },
 }:add_unlock("orexigenic")
 
@@ -511,14 +499,14 @@ RECIPE {
     name = 'chimeric-proteins',
     category = 'genlab',
     enabled = false,
-    energy_required = 20,
+    energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'magnetic-beads', amount = 5},
+        {type = 'item', name = 'magnetic-beads', amount = 15},
         {type = 'item', name = 'retrovirus', amount = 4},
-        {type = 'fluid', name = 'ethanol', amount = 100},
+        {type = 'fluid', name = 'ethanol', amount = 500},
     },
     results = {
-        {type = 'item', name = 'chimeric-proteins', amount = 1},
+        {type = 'item', name = 'chimeric-proteins', amount = 5},
     },
 }:add_unlock("chitin"):add_ingredient({type = "fluid", name = "ethylene-glycol", amount = 50})
 

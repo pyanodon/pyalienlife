@@ -26,7 +26,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-                    {name='brain', amount =5},
+                    {name='brain', amount ='+2'},
                     {name='cage', amount =1},
 				},
 			crafting_speed = 15,
@@ -44,7 +44,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='brain', amount =6},
+                    {name='brain', amount ='+2'},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -81,7 +81,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-                    {name='brain', amount =4},
+                    {name='brain', amount ='+2'},
                     {name='cage', amount =1},
 				},
 			crafting_speed = 15,
@@ -99,12 +99,66 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='brain', amount =5},
+                    {name='brain', amount ='+2'},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
 			name = 'Extract brains from Improved auogs-2',
 			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-auog.png",
+			icon_size = 64,
+		},
+	}
+}
+
+------------------COTTONGUT------------------
+
+fun.autorecipes {
+    name = 'rendering-brains-cottongut-2',
+	category = 'slaughterhouse-cottongut',
+	--module_limitations = 'cottongut',
+	subgroup = 'py-alienlife-cottongut',
+	order = 'b',
+    mats =
+	{
+
+		--brain
+		{
+			ingredients =
+				{
+					{name='cottongut',amount=5},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='blood', amount ='R'},
+					{name='brain', amount ='R'},
+                    {name='brain', amount ='+2'},
+				},
+			crafting_speed = 15,
+			tech = 'metamide5',
+			name = 'Extract cottongut brains-2',
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
+			icon_size = 64,
+		},
+		--brain cottongut rendering
+		{
+			ingredients =
+				{
+					{name='cottongut',amount='R'},
+					{name='braincottongut',amount=5},
+				},
+			results =
+				{
+                    {name='brain', amount ='+2'},
+				},
+			crafting_speed = 15,
+			tech = 'metamide5',
+			name = 'Extract brains from Improved cottonguts-2',
+			icon = "__pyalienlifegraphics__/graphics/icons/brain-cottongut.png",
 			icon_size = 64,
 		},
 	}
@@ -135,7 +189,7 @@ fun.autorecipes {
 					{name='dingritspike', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-                    {name='brain', amount =4},
+                    {name='brain', amount ='+2'},
                     {name='cage', amount =1},
 				},
 			crafting_speed = 15,
@@ -153,7 +207,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='brain', amount =5},
+                    {name='brain', amount ='+2'},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -188,7 +242,7 @@ fun.autorecipes {
 					{name='tendon', amount ='R'},
 					{name='arthropodblood', amount ='R'},
 					{name='brain', amount ='R'},
-                    {name='brain', amount =4},
+                    {name='brain', amount ='+2'},
                     {name='cage', amount =1},
 				},
 			crafting_speed = 15,
@@ -206,7 +260,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='brain', amount =5},
+                    {name='brain', amount ='+2'},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -241,7 +295,7 @@ fun.autorecipes {
 					{name='tendon', amount ='R'},
 					{name='arthropodblood', amount ='R'},
 					{name='brain', amount ='R'},
-                    {name='brain', amount =4},
+                    {name='brain', amount ='+2'},
                     {name='cage', amount =1},
 				},
 			crafting_speed = 15,
@@ -259,7 +313,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='brain', amount =5},
+                    {name='brain', amount ='+2'},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -295,7 +349,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-                    {name='brain', amount =4},
+                    {name='brain', amount ='+2'},
                     {name='cage', amount =1},
 				},
 			crafting_speed = 15,
@@ -314,7 +368,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='fat', amount ='R'},
-                    {name='brain', amount =5},
+                    {name='brain', amount ='+2'},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -352,7 +406,7 @@ fun.autorecipes {
 					{name='carapace', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-                    {name='brain', amount =4},
+                    {name='brain', amount ='+2'},
                     {name='cage', amount =1},
 				},
 			crafting_speed = 15,
@@ -371,7 +425,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='carapace', amount ='R'},
-                    {name='brain', amount =5},
+                    {name='brain', amount ='+2'},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -407,7 +461,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-                    {name='brain', amount =4},
+                    {name='brain', amount ='+2'},
                     {name='cage', amount =1},
 				},
 			crafting_speed = 15,
@@ -425,7 +479,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='brain', amount =5},
+                    {name='brain', amount ='+2'},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -463,7 +517,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-                    {name='brain', amount =4},
+                    {name='brain', amount ='+2'},
                     {name='cage', amount =1},
 				},
 			crafting_speed = 15,
@@ -481,7 +535,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='brain', amount =5},
+                    {name='brain', amount ='+2'},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -514,10 +568,11 @@ fun.autorecipes {
 					{name='meat', amount ='R'},
 					{name='skin', amount ='R'},
 					{name='fat', amount ='R'},
+					{name='photophore', amount ='R'},
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-                    {name='brain', amount =4},
+                    {name='brain', amount ='+2'},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -535,7 +590,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='fat', amount ='R'},
-                    {name='brain', amount =5},
+                    {name='brain', amount ='+2'},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -571,7 +626,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-                    {name='brain', amount =4},
+                    {name='brain', amount ='+2'},
                     {name='cage', amount =1},
 				},
 			crafting_speed = 15,
@@ -589,7 +644,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='brain', amount =5},
+                    {name='brain', amount ='+2'},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -625,7 +680,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='arthropodblood', amount ='R'},
 					{name='brain', amount ='R'},
-                    {name='brain', amount =4},
+                    {name='brain', amount ='+2'},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -643,7 +698,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='fat', amount ='R'},
-                    {name='brain', amount =5},
+                    {name='brain', amount ='+2'},
 
 				},
 			crafting_speed = 15,
@@ -678,7 +733,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='formicacid', amount ='R'},
 					{name='brain', amount ='R'},
-                    {name='brain', amount =4},
+                    {name='brain', amount ='+2'},
                     {name='cage', amount =1},
 				},
 			crafting_speed = 15,
@@ -696,7 +751,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='brain', amount =5},
+                    {name='brain', amount ='+2'},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -730,7 +785,7 @@ fun.autorecipes {
 					{name='sulfuricacid', amount ='R'},
                     {name='meat', amount ='R'},
                     {name='brain', amount ='R'},
-                    {name='brain', amount =4},
+                    {name='brain', amount ='+2'},
                     {name='cage', amount =1},
 				},
 			crafting_speed = 15,
@@ -755,7 +810,7 @@ fun.autorecipes {
 					{name='meat', amount ='R'},
 					{name='cage', amount ='R'},
                     {name='brain', amount ='R'},
-                    {name='brain', amount =5},
+                    {name='brain', amount ='+2'},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -790,7 +845,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='arthropodblood', amount ='R'},
 					{name='brain', amount ='R'},
-                    {name='brain', amount =4},
+                    {name='brain', amount ='+2'},
                     {name='cage', amount =1},
 				},
 			crafting_speed = 15,
@@ -809,7 +864,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='fat', amount ='R'},
-					{name='brain', amount =5},
+                    {name='brain', amount ='+2'},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',

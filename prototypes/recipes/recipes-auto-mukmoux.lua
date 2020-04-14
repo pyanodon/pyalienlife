@@ -451,7 +451,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='salt',amount ='R'},
+					{name='salt',amount = 5},
 				},
 			results =
 				{
@@ -489,7 +489,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='mukmouxcalf',amount = 'R'},
-					{name='mukmouxcalf', amount =1},
+					{name='mukmouxcalf', amount =2},
 				},
 			crafting_speed = 70,
 			tech = 'pheromones'
@@ -766,7 +766,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='fat', amount ='R'},
-					{name='brain', amount =3},
+					{name='brain', amount =4},
 				},
 			crafting_speed = 15,
 			tech = 'nanochondria',
@@ -784,7 +784,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='bones', amount =8},
+					{name='bones', amount =13},
 				},
 			crafting_speed = 15,
 			tech = 'bmp',
@@ -801,7 +801,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bones', amount ='R'},
-					{name='bonemeal', amount =10},
+					{name='bonemeal', amount =16},
 				},
 			crafting_speed = 15,
 			tech = 'bmp',
@@ -819,7 +819,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bonemeal', amount ='R'},
-					{name='meat', amount =10},
+					{name='meat', amount =24},
 				},
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
@@ -837,7 +837,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', amount ='R'},
-					{name='guts', amount =12},
+					{name='guts', amount =20},
 				},
 			crafting_speed = 15,
 			tech = 'antitumor',
@@ -855,7 +855,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='blood', amount =180},
+					{name='blood', amount =250},
 				},
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
@@ -873,7 +873,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', amount ='R'},
-					{name='skin', amount =7},
+					{name='skin', amount =10},
 				},
 			crafting_speed = 15,
 			tech = 'reca',
@@ -891,7 +891,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='fat', amount =8},
+					{name='fat', amount =20},
 				},
 			crafting_speed = 15,
 			tech = 'orexigenic',

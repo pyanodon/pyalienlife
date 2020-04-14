@@ -48,7 +48,7 @@ fun.autorecipes {
                 {name='bhoddos', amount ='+1'}
             },
         crafting_speed = 120,
-        tech = 'mycology-mk02'
+        tech = 'bhoddos-mk02'
     },
     {
         ingredients =
@@ -60,7 +60,7 @@ fun.autorecipes {
                 {name='bhoddos',amount ='+1'}
             },
         crafting_speed = 100,
-        tech = 'mycology-mk02'
+        tech = 'bhoddos-mk02'
     },
     {
         ingredients =
@@ -72,7 +72,7 @@ fun.autorecipes {
                 {name='bhoddos',amount ='+1'}
             },
         crafting_speed = 90,
-        tech = 'mycology-mk02'
+        tech = 'bhoddos-mk02'
     },
     --blue
     {
@@ -88,7 +88,7 @@ fun.autorecipes {
                 {name='bhoddos',amount =5}
             },
         crafting_speed = 90,
-        tech = 'mycology-mk03'
+        tech = 'bhoddos-mk03'
     },
     {
         ingredients =
@@ -100,7 +100,7 @@ fun.autorecipes {
                 {name='bhoddos',amount ='+1'}
             },
         crafting_speed = 90,
-        tech = 'mycology-mk03'
+        tech = 'bhoddos-mk03'
     },
     {
         ingredients =
@@ -112,7 +112,7 @@ fun.autorecipes {
                 {name='bhoddos',amount ='+1'}
             },
         crafting_speed = 90,
-        tech = 'mycology-mk03'
+        tech = 'bhoddos-mk03'
     },
     {
         ingredients =
@@ -124,7 +124,7 @@ fun.autorecipes {
                 {name='bhoddos',amount ='+1'}
             },
         crafting_speed = 90,
-        tech = 'mycology-mk03'
+        tech = 'bhoddos-mk03'
     },
     {
         ingredients =
@@ -137,7 +137,7 @@ fun.autorecipes {
                 {name='bhoddos',amount ='+1'}
             },
         crafting_speed = 90,
-        tech = 'mycology-mk03'
+        tech = 'bhoddos-mk03'
     },
     --GH
     {
@@ -154,7 +154,7 @@ fun.autorecipes {
                 {name='bhoddos',amount ='+1'}
             },
         crafting_speed = 70,
-        tech = 'mycology-mk04'
+        tech = 'bhoddos-mk04'
     },
     {
         ingredients =
@@ -170,7 +170,7 @@ fun.autorecipes {
                 {name='bhoddos',amount ='+1'}
             },
         crafting_speed = 70,
-        tech = 'mycology-mk04'
+        tech = 'bhoddos-mk04'
     },
     {
         ingredients =
@@ -185,7 +185,7 @@ fun.autorecipes {
                 {name='bhoddos',amount ='+1'}
             },
         crafting_speed = 70,
-        tech = 'mycology-mk04'
+        tech = 'bhoddos-mk04'
     },
     {
         ingredients =
@@ -199,7 +199,7 @@ fun.autorecipes {
                 {name='bhoddos',amount ='+1'}
             },
         crafting_speed = 70,
-        tech = 'mycology-mk04'
+        tech = 'bhoddos-mk04'
     },
 	}
 }

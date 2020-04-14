@@ -53,7 +53,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedphadai',amount=1},
+					{name='cageddingrits',amount=1},
 				},
 			results =
 				{
@@ -93,7 +93,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedphadai',amount=1},
+					{name='cageddingrits',amount=1},
 				},
 			results =
 				{
@@ -272,6 +272,40 @@ fun.autorecipes {
 	}
 }
 
+------------------TRITS PHOTOPHORES------------------
+
+fun.autorecipes {
+    name = 'rendering-photophore-trits',
+	category = 'slaughterhouse-trits',
+	--module_limitations = 'auog',
+	subgroup = 'py-alienlife-trits',
+	order = 'b',
+    mats =
+	{
+		--photophore
+		{
+			ingredients =
+				{
+					{name='trits',amount=1},
+				},
+			results =
+				{
+					{name='meat', amount ='R'},
+					{name='shell', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='arthropodblood', amount ='R'},
+					{name='photophore', amount =4},
+				},
+			crafting_speed = 15,
+			tech = 'ctc',
+			name = 'Extract Trits Photophores-1',
+			icon = "__pyalienlifegraphics__/graphics/icons/photophore.png",
+			icon_size = 64,
+		},
+	}
+}
+
+
 ------------------XYHIPHOE SHELL------------------
 
 fun.autorecipes {
@@ -331,7 +365,7 @@ RECIPE {
     name = 'navens-spore-2',
     category = 'spore',
     enabled = false,
-    energy_required = 15,
+    energy_required = 5,
     ingredients = {
     },
     results = {
@@ -341,23 +375,10 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'fawogae-spore-2',
-    category = 'spore',
-    enabled = false,
-    energy_required = 15,
-    ingredients = {
-    },
-    results = {
-        {type = 'item', name = 'fawogae-spore', amount = 1, probability = 0.6},
-    },
-}:add_unlock("microfilters")
-
-RECIPE {
-    type = 'recipe',
     name = 'yaedols-spores-2',
     category = 'spore',
     enabled = false,
-    energy_required = 15,
+    energy_required = 5,
     ingredients = {
     },
     results = {
@@ -370,7 +391,7 @@ RECIPE {
     name = 'bhoddos-spore-2',
     category = 'spore',
     enabled = false,
-    energy_required = 15,
+    energy_required = 5,
     ingredients = {
     },
     results = {
@@ -386,7 +407,7 @@ RECIPE {
     name = 'navens-spore-3',
     category = 'spore',
     enabled = false,
-    energy_required = 15,
+    energy_required = 5,
     ingredients = {
     },
     results = {
@@ -396,23 +417,10 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'fawogae-spore-3',
-    category = 'spore',
-    enabled = false,
-    energy_required = 15,
-    ingredients = {
-    },
-    results = {
-        {type = 'item', name = 'fawogae-spore', amount = 1, probability = 0.8},
-    },
-}:add_unlock("microfilters-mk02")
-
-RECIPE {
-    type = 'recipe',
     name = 'yaedols-spores-3',
     category = 'spore',
     enabled = false,
-    energy_required = 15,
+    energy_required = 5,
     ingredients = {
     },
     results = {
@@ -425,7 +433,7 @@ RECIPE {
     name = 'bhoddos-spore-3',
     category = 'spore',
     enabled = false,
-    energy_required = 15,
+    energy_required = 5,
     ingredients = {
     },
     results = {

@@ -27,7 +27,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='bones', amount =6},
+					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'hardened-bone',
@@ -45,7 +45,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='bones', amount =9},
+					{name='bones', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'hardened-bone',
@@ -83,7 +83,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='bones', amount =5},
+					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'hardened-bone',
@@ -101,12 +101,67 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='bones', amount =9},
+					{name='bones', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'hardened-bone',
 			name = 'Extract bones from Improved auogs-2',
 			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-auog.png",
+			icon_size = 64,
+		},
+	}
+}
+
+------------------COTTONGUT------------------
+
+fun.autorecipes {
+    name = 'rendering-bone-cottongut-2',
+	category = 'slaughterhouse-cottongut',
+	--module_limitations = 'cottongut',
+	subgroup = 'py-alienlife-cottongut',
+	order = 'b',
+    mats =
+	{
+
+		--bone
+		{
+			ingredients =
+				{
+					{name='cottongut',amount=5},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='blood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='bones', amount ='+2'},
+				},
+                crafting_speed = 15,
+                tech = 'hardened-bone',
+                name = 'Extract cottongut bones-2',
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
+                icon_size = 64,
+		},
+		--bone cottongut rendering
+		{
+			ingredients =
+				{
+					{name='cottongut',amount='R'},
+					{name='bonecottongut',amount=5},
+				},
+			results =
+				{
+					{name='brain', amount ='R'},
+					{name='bones', amount ='+2'},
+				},
+			crafting_speed = 15,
+			tech = 'hardened-bone',
+			name = 'Extract bones from Improved cottonguts-2',
+			icon = "__pyalienlifegraphics__/graphics/icons/bone-cottongut.png",
 			icon_size = 64,
 		},
 	}
@@ -138,7 +193,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='bones', amount =3},
+					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'hardened-bone',
@@ -156,7 +211,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='bones', amount =7},
+					{name='bones', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'hardened-bone',
@@ -193,7 +248,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='bones', amount =5},
+					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'hardened-bone',
@@ -211,7 +266,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='bones', amount =8},
+					{name='bones', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'hardened-bone',
@@ -248,7 +303,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='bones', amount =5},
+					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'hardened-bone',
@@ -266,7 +321,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='bones', amount =10},
+					{name='bones', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'hardened-bone',
@@ -303,7 +358,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='bones', amount =4},
+					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'hardened-bone',
@@ -321,7 +376,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='bones', amount =8},
+					{name='bones', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'hardened-bone',
@@ -358,7 +413,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='bones', amount =8},
+					{name='bones', amount ='+4'},
 				},
                 crafting_speed = 15,
                 tech = 'hardened-bone',
@@ -376,7 +431,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='bones', amount =14},
+					{name='bones', amount ='+8'},
 				},
 			crafting_speed = 15,
 			tech = 'hardened-bone',
@@ -413,7 +468,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='bones', amount =6},
+					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'hardened-bone',
@@ -431,7 +486,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='bones', amount =11},
+					{name='bones', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'hardened-bone',
@@ -467,7 +522,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='bones', amount =6},
+					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'hardened-bone',
@@ -485,7 +540,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='bones', amount =11},
+					{name='bones', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'hardened-bone',
@@ -522,7 +577,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='bones', amount =6},
+					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'hardened-bone',
@@ -540,7 +595,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='bones', amount =10},
+					{name='bones', amount ='+5'},
 				},
 			crafting_speed = 15,
 			tech = 'hardened-bone',
@@ -580,7 +635,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='bones', amount =5},
+					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'hardened-bone',
@@ -600,7 +655,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', amount ='R'},
-					{name='bones', amount =9},
+					{name='bones', amount ='+4'},
 				},
 			crafting_speed = 15,
 			tech = 'hardened-bone',

@@ -121,6 +121,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'nickel-plate', amount = 2},
+        {type = 'item', name = 'plastic-bar', amount = 2},
         {type = 'item', name = 'seaweed', amount = 3},
         {type = 'item', name = 'yotoi-seeds', amount = 10},
         {type = 'item', name = 'guts', amount = 5},
@@ -141,6 +142,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'nickel-plate', amount = 2},
+        {type = 'item', name = 'plastic-bar', amount = 2},
         {type = 'item', name = 'navens', amount = 1},
         {type = 'item', name = 'seaweed', amount = 3},
         {type = 'item', name = 'bio-sample', amount = 5},

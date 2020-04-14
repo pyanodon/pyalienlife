@@ -27,7 +27,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='bones', amount =5},
+					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'osteocyte',
@@ -64,7 +64,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='bones', amount =4},
+					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'osteocyte',
@@ -75,6 +75,41 @@ fun.autorecipes {
 	}
 }
 
+------------------COTTONGUT------------------
+
+fun.autorecipes {
+    name = 'rendering-bone-cottongut',
+	category = 'slaughterhouse-cottongut',
+	--module_limitations = 'cottongut',
+	subgroup = 'py-alienlife-cottongut',
+	order = 'b',
+    mats =
+	{
+		--bone
+		{
+			ingredients =
+				{
+					{name='cottongut',amount=5},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='blood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='bones', amount ='+3'},
+				},
+                crafting_speed = 15,
+                tech = 'osteocyte',
+                name = 'Extract cottongut bones-1',
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
+                icon_size = 64,
+		},
+	}
+}
 
 ------------------DINGRITS------------------
 
@@ -102,7 +137,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='bones', amount =2},
+					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'osteocyte',
@@ -139,7 +174,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='bones', amount =4},
+					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'osteocyte',
@@ -177,7 +212,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='bones', amount =4},
+					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'osteocyte',
@@ -214,7 +249,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='bones', amount =3},
+					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'osteocyte',
@@ -251,7 +286,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='bones', amount =7},
+					{name='bones', amount ='+5'},
 				},
                 crafting_speed = 15,
                 tech = 'osteocyte',
@@ -288,7 +323,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='bones', amount =5},
+					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'osteocyte',
@@ -324,7 +359,7 @@ fun.autorecipes {
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
-					{name='bones', amount =5},
+					{name='bones', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'osteocyte',
@@ -361,7 +396,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='bones', amount =5},
+					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
                 tech = 'osteocyte',
@@ -401,7 +436,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='bones', amount =4},
+					{name='bones', amount ='+2'},
 				},
                 crafting_speed = 15,
                 tech = 'osteocyte',

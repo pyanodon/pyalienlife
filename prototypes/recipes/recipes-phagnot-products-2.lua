@@ -19,7 +19,7 @@ fun.autorecipes {
 				{
                     {name='manure',amount ='*3'},
 				},
-			crafting_speed = 130,
+			crafting_speed = 80,
 			tech = 'bigger-colon',
 			name = 'phag-manure-1a',
 			--icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk01.png"
@@ -35,7 +35,7 @@ fun.autorecipes {
 					--{'a','*5'}
                     {name='manure',amount ='+1'},
 				},
-			crafting_speed = 120,
+			crafting_speed = 70,
 			tech = 'bigger-colon',
 			name = 'phag-manure-2a',
 			--icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk01.png"
@@ -49,9 +49,9 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure',amount ='+6'},
 				},
-				crafting_speed = 120,
+				crafting_speed = 55,
                 tech = 'bigger-colon',
                 name = 'phag-manure-3a',
 		},
@@ -63,9 +63,9 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure',amount ='+2'},
 				},
-				crafting_speed = 120,
+				crafting_speed = 40,
                 tech = 'bigger-colon',
                 name = 'phag-manure-4a',
 		},
@@ -81,9 +81,9 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount =5},
+                --    {name='manure',amount =5},
 				},
-				crafting_speed = 100,
+				crafting_speed = 35,
                 tech = 'bigger-colon',
                 name = 'phag-manure-5a',
 		},
@@ -96,23 +96,23 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure',amount ='+6'},
 				},
-				crafting_speed = 100,
+				crafting_speed = 20,
                 tech = 'bigger-colon',
                 name = 'phag-manure-6a',
 		},
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount =10},
+					{name='rawfiber',amount =5},
 				},
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure',amount ='+2'},
 				},
-				crafting_speed = 100,
+				crafting_speed = 15,
                 tech = 'bigger-colon',
                 name = 'phag-manure-7a',
 		},

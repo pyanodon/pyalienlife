@@ -201,6 +201,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-cottongut",
+        group = "py-alienlife",
+        order = "e-s"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-plants",
         group = "py-alienlife",
         order = "f"
@@ -291,6 +297,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-moon",
+        group = "py-alienlife",
+        order = "g-e"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-codex",
         group = "py-alienlife",
         order = "h"
@@ -330,5 +342,17 @@ data:extend {
         name = "py-alienlife-modules",
         group = "py-alienlife",
         order = "z"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-science",
+        group = "py-alienlife",
+        order = "z"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-compost",
+        group = "py-alienlife",
+        order = "zz"
     },
 }

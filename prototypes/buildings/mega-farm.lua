@@ -7,13 +7,16 @@ RECIPE {
     enabled = false,
     ingredients = {
         {"concrete", 200},
-        {"niobium-pipe", 35},
-        {"electronic-circuit", 25},
-        {"stone", 100},
-        {"iron-plate", 30},
-        {"duralumin", 10},
         {"treated-wood", 50},
-        {"small-lamp", 20}
+        {"control-unit", 10},
+        {"boron-carbide", 30},
+        {"low-density-structure", 20},
+        {"blanket", 5},
+        {"nbfe-alloy", 50},
+        {"kevlar", 100},
+        {"divertor", 10},
+        {"metallic-glass", 30},
+        {"processing-unit", 50},
     },
     results = {
         {"mega-farm", 1}
