@@ -5864,7 +5864,7 @@ ITEM {
     name = "fish",
     icon = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png",
     icon_size = 64,
-    icon_mipmaps = 5,
+    icon_mipmaps = 7,
     pictures =
     {
       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-01.png", scale = 0.25, mipmap_count = 1 },
@@ -5872,6 +5872,8 @@ ITEM {
       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png", scale = 0.25, mipmap_count = 1 },
       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-04.png", scale = 0.25, mipmap_count = 1 },
       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-05.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-06.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-07.png", scale = 0.25, mipmap_count = 1 },
     },
 	category = "fish",
 	tier = 1,
@@ -5898,7 +5900,7 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
     },
     icon_size = 64,
-    icon_mipmaps = 5,
+    icon_mipmaps = 7,
     pictures =
     {
       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-01.png", scale = 0.25, mipmap_count = 1 },
@@ -5906,6 +5908,8 @@ ITEM {
       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png", scale = 0.25, mipmap_count = 1 },
       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-04.png", scale = 0.25, mipmap_count = 1 },
       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-05.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-06.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-07.png", scale = 0.25, mipmap_count = 1 },
     },
 	category = "fish",
 	tier = 2,
@@ -5932,7 +5936,7 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
     },
     icon_size = 64,
-    icon_mipmaps = 5,
+    icon_mipmaps = 7,
     pictures =
     {
       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-01.png", scale = 0.25, mipmap_count = 1 },
@@ -5940,6 +5944,8 @@ ITEM {
       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png", scale = 0.25, mipmap_count = 1 },
       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-04.png", scale = 0.25, mipmap_count = 1 },
       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-05.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-06.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-07.png", scale = 0.25, mipmap_count = 1 },
     },
 	category = "fish",
 	tier = 3,
@@ -5966,7 +5972,7 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
     },
     icon_size = 64,
-    icon_mipmaps = 5,
+    icon_mipmaps = 7,
     pictures =
     {
       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-01.png", scale = 0.25, mipmap_count = 1 },
@@ -5974,6 +5980,8 @@ ITEM {
       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png", scale = 0.25, mipmap_count = 1 },
       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-04.png", scale = 0.25, mipmap_count = 1 },
       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-05.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-06.png", scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-07.png", scale = 0.25, mipmap_count = 1 },
     },
 	category = "fish",
 	tier = 4,
