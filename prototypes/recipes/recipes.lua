@@ -465,21 +465,21 @@ RECIPE {
     name = 'reca',
     category = 'research',
     enabled = false,
-    energy_required = 30,
+    energy_required = 70,
     ingredients = {
         {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'alien-enzymes', amount = 1},
         {type = 'fluid', name = 'fetal-serum', amount = 100},
         {type = 'item', name = 'adrenal-cortex', amount = 3},
-        {type = 'item', name = 'bones', amount = 20},
-        {type = 'item', name = 'navens', amount = 20},
-        {type = 'item', name = 'cysteine', amount = 5},
-        {type = 'item', name = 'lab-instrument', amount = 5},
+        {type = 'item', name = 'bones', amount = 40},
+        {type = 'item', name = 'navens', amount = 30},
+        {type = 'item', name = 'cysteine', amount = 3},
+        {type = 'item', name = 'lab-instrument', amount = 50},
         {type = 'fluid', name = 'gta', amount = 50},
-        {type = 'item', name = 'flask', amount = 5},
+        {type = 'item', name = 'flask', amount = 50},
     },
     results = {
-        {type = 'item', name = 'reca', amount = 10}
+        {type = 'item', name = 'reca', amount = 500}
     }
 }:add_unlock('reca')
 
@@ -711,18 +711,18 @@ RECIPE {
     name = 'antiviral',
     category = 'research',
     enabled = false,
-    energy_required = 15,
+    energy_required = 800,
     ingredients = {
         {type = 'item', name = 'alien-enzymes', amount = 1},
-        {type = 'item', name = 'brain', amount = 2},
+        {type = 'item', name = 'brain', amount = 20},
         {type = 'item', name = 'cysteine', amount = 1},
         {type = 'item', name = 'mmp', amount = 1},
-        {type = 'item', name = 'yotoi-leaves', amount = 50},
-        {type = 'item', name = 'chitin', amount = 4},
-        {type = 'fluid', name = 'zogna-bacteria', amount = 40},
+        {type = 'item', name = 'yotoi-leaves', amount = 20},
+        {type = 'item', name = 'chitin', amount = 30},
+        {type = 'fluid', name = 'zogna-bacteria', amount = 100},
     },
     results = {
-        {type = 'item', name = 'antiviral', amount = 10}
+        {type = 'item', name = 'antiviral', amount = 2000}
     }
 }:add_unlock('antiviral')
 
@@ -1708,6 +1708,30 @@ RECIPE {
     },
     --main_product = "cocoon",
 }:add_unlock("biotech-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'perfect-samples',
+    category = 'research',
+    enabled = false,
+    energy_required = 50,
+    ingredients = {
+        {type = 'item', name = 'intestinal-ee', amount = 1},
+        {type = 'item', name = 'cognition-osteochain', amount = 1},
+        {type = 'item', name = 'adaptable-automucosa', amount = 1},
+        {type = 'item', name = 'polynuclear-ganglion', amount = 1},
+        {type = 'item', name = 'cryogland', amount = 1},
+        {type = 'item', name = 'subdermal-chemosnare', amount = 1},
+        {type = 'item', name = 'snarer-heart', amount = 1},
+        {type = 'item', name = 'magnetic-organ', amount = 1},
+        {type = 'item', name = 'glandular-myocluster', amount = 1},
+        {type = 'item', name = 'dimensional-gastricorg', amount = 1},
+        {type = 'fluid', name = 'autoantigens', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'perfect-samples', amount = 10},
+    },
+}:add_unlock("biotech-mk04")
 
 RECIPE {
     type = 'recipe',

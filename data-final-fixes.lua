@@ -11,7 +11,7 @@ RECIPE('logistic-science-pack'):change_category('research')
 RECIPE('chemical-science-pack'):change_category('research')
 RECIPE('military-science-pack'):change_category('research')
 RECIPE('production-science-pack'):change_category('research'):remove_unlock('diamond-mining'):add_unlock('pharmagenomics')
-RECIPE('utility-science-pack'):change_category('research')
+RECIPE('utility-science-pack'):change_category('research'):add_ingredient({type = "item", name = "perfect-samples", amount = 1})
 
 for _,module in pairs(data.raw.module) do
   if module.subgroup == "py-alienlife-modules" then
