@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.5.6
+Date: 2020-04-17
+  Changes:
+    - Added late game recipes.
+    - Utility science new requieres perfect samples.
+    - Fixed wrong recipe in the upgrade recipes.
+    - Fixed pycp updates.
+    - Space science now requieres yellow-cake.
+    - Balanced atomic bomb and nuka-vans to be proper unlocked.
+---------------------------------------------------------------------------------------------------
 Version: 1.5.5
 Date: 2020-04-12
   Changes:
