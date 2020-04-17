@@ -7663,6 +7663,128 @@ ITEM {
     stack_size = 1
 }
 
+---special parts----
+
+ITEM {
+    type = "item",
+    name = "intestinal-ee",
+    icon = "__pyalienlifegraphics3__/graphics/icons/intestinal-ee.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-scrondrix",
+    order = "x",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "cognition-osteochain",
+    icon = "__pyalienlifegraphics3__/graphics/icons/cognition-osteochain.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-xeno",
+    order = "x",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "adaptable-automucosa",
+    icon = "__pyalienlifegraphics3__/graphics/icons/adaptable-automucosa.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-zipir",
+    order = "x",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "polynuclear-ganglion",
+    icon = "__pyalienlifegraphics3__/graphics/icons/polynuclear-ganglion.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arthurian",
+    order = "x",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "cryogland",
+    icon = "__pyalienlifegraphics3__/graphics/icons/cryogland.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-korlex",
+    order = "x",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "subdermal-chemosnare",
+    icon = "__pyalienlifegraphics3__/graphics/icons/subdermal-chemosnare.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-phadai",
+    order = "x",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "snarer-heart",
+    icon = "__pyalienlifegraphics3__/graphics/icons/snarer-heart.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-dingrits",
+    order = "x",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "magnetic-organ",
+    icon = "__pyalienlifegraphics3__/graphics/icons/magnetic-organ.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-ulric",
+    order = "x",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "glandular-myocluster",
+    icon = "__pyalienlifegraphics3__/graphics/icons/glandular-myocluster.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-auog",
+    order = "x",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "perfect-samples",
+    icon = "__pyalienlifegraphics3__/graphics/icons/perfect-samples.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "x",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "dimensional-gastricorg",
+    icon = "__pyalienlifegraphics3__/graphics/icons/dimensional-gastricorg.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-antelope",
+    order = "x",
+    stack_size = 50
+}
 ------------------------------
 data:extend(
 {
@@ -7802,7 +7924,7 @@ data:extend(
     type = "module-category",
     name = "cottongut"
   },
-  --item used to select the ceature and start and end points of the route
+  --item used to select the creature and start and end points of the route
 	{
 		type = 'selection-tool',
 		name = 'unit-controller',

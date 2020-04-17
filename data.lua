@@ -330,6 +330,7 @@ require("prototypes/fluids/casein-pulp-01")
 require("prototypes/fluids/casein-pulp-02")
 require("prototypes/fluids/casein-solution")
 require("prototypes/fluids/milk")
+require("prototypes/fluids/autoantigens")
 
 --(( RECIPES ))--
 require('prototypes/items/items')
