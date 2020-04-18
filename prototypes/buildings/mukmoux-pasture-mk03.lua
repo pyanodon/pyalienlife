@@ -43,11 +43,11 @@ ENTITY {
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 18
+        module_slots = 20
     },
     allowed_effects = {"speed","productivity"},
     crafting_categories = {"mukmoux"},
-    crafting_speed = 0.02,
+    crafting_speed = 0.04,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

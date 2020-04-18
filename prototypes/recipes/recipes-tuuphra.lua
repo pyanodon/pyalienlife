@@ -174,3 +174,106 @@ RECIPE {
     subgroup = 'py-alienlife-tuuphra',
     order = 'zc'
 }:add_unlock("biased-mutation")
+
+
+--Secondary Upgrade Recipes--
+--SUR--
+--WIP--
+--mk02--
+
+RECIPE {
+    type = 'recipe',
+    name = 'tuuphra-mk02',
+    category = 'tuuphra',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'tuuphra', amount = 2},
+        {type = 'item', name = 'tuuphra-seeds', amount = 10},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 300},
+        {type = 'item', name = 'manure', amount = 15},
+        {type = 'item', name = 'coarse', amount = 20},
+        {type = 'item', name = 'soil', amount = 100},
+        {type = 'fluid', name = 'water', amount = 1000},
+        },
+    results = {
+        {type = 'item', name = 'tuuphra-mk02', amount = 1, probability = 0.005},
+        {type = 'item', name = 'tuuphra', amount = 1, probability = 0.5},
+        --{type = 'item', name = 'empty-barrel', amount = 7},
+    },
+    main_product = "tuuphra-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/tuuphra.png", icon_size = 64},
+            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
+        },
+    icon_size = 64,
+    subgroup = 'py-alienlife-tuuphra',
+    order = 'za'
+}:add_unlock("selective-breeding")
+
+--mk03--
+
+RECIPE {
+    type = 'recipe',
+    name = 'tuuphra-mk03',
+    category = 'tuuphra',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'tuuphra', amount = 2},
+        {type = 'item', name = 'alien-sample-03', amount = 1},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 300},
+        {type = 'item', name = 'manure', amount = 15},
+        {type = 'item', name = 'coarse', amount = 20},
+        {type = 'item', name = 'soil', amount = 100},
+        {type = 'fluid', name = 'water', amount = 1000},
+        },
+    results = {
+        {type = 'item', name = 'tuuphra-mk03', amount = 1, probability = 0.004},
+        {type = 'item', name = 'tuuphra', amount = 1, probability = 0.6},
+        --{type = 'item', name = 'empty-barrel', amount = 7},
+    },
+    --main_product = "tuuphra-mk03",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/tuuphra.png", icon_size = 64},
+            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png', icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
+        },
+    icon_size = 64,
+    subgroup = 'py-alienlife-tuuphra',
+    order = 'zb'
+}:add_unlock("artificial-breeding")
+
+--mk04--
+
+RECIPE {
+    type = 'recipe',
+    name = 'tuuphra-mk04',
+    category = 'tuuphra',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'tuuphra', amount = 2},
+        {type = 'item', name = 'zinc-finger-proteins', amount = 1},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 300},
+        {type = 'item', name = 'manure', amount = 15},
+        {type = 'item', name = 'coarse', amount = 20},
+        {type = 'item', name = 'soil', amount = 100},
+        {type = 'fluid', name = 'water', amount = 1000},
+        },
+    results = {
+        {type = 'item', name = 'tuuphra-mk04', amount = 1, probability = 0.003},
+        {type = 'item', name = 'tuuphra', amount = 1, probability = 0.7},
+        --{type = 'item', name = 'empty-barrel', amount = 7},
+    },
+    --main_product = "tuuphra-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/tuuphra.png", icon_size = 64},
+            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png', icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
+        },
+    icon_size = 64,
+    subgroup = 'py-alienlife-tuuphra',
+    order = 'zc'
+}:add_unlock("biased-mutation")
