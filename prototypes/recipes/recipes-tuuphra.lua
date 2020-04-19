@@ -176,7 +176,6 @@ RECIPE {
         {type = 'item', name = 'tuuphra-mk02', amount = 1, probability = 0.15},
         {type = 'item', name = 'tuuphra-mk03', amount = 1, probability = 0.01},
         {type = 'item', name = 'tuuphra-mk04', amount = 1, probability = 0.003},
-        
     },
     --main_product = "tuuphra-mk04",
     icons =
