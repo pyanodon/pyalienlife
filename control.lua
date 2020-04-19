@@ -842,7 +842,8 @@ script.on_event(
 					if global.ocula_master_table.idling_at_player[player.index] == nil then
 						table.insert(global.ocula_master_table.idling_at_player, player.index)
 					end
-					local inv = player.get_main_inventory()					if inv.can_insert({name=ocula.current_inventory.item_name, count = ocula.current_inventory.amount}) == true then
+					local inv = player.get_main_inventory()
+					if inv.can_insert({name=ocula.current_inventory.item_name, count = ocula.current_inventory.amount}) == true then
 						global.ocula_master_table.item_in_route[player.index][ocula.current_inventory.item_name] = global.ocula_master_table.item_in_route[player.index][ocula.current_inventory.item_name] - ocula.current_inventory.amount
 						local inserted = player.get_main_inventory().insert({name=ocula.current_inventory.item_name, count = ocula.current_inventory.amount})
 						if inserted == ocula.current_inventory.amount then
@@ -869,6 +870,7 @@ script.on_event(
 					end
 				end
 			end
+			log(serpent.block(global.ocula_master_table))
 		end
 		if event.result == defines.behavior_result.in_progress then
 			log("hit")
