@@ -332,7 +332,8 @@ script.on_init(
 			ocula_boxes = {},
 			active_ocula = {},
 			item_in_route = {},
-			requested_items = {}
+			requested_items = {},
+			idling_at_player = {}
 		}
 		if not remote.interfaces["silo_script"] then
 			return
@@ -429,7 +430,8 @@ script.on_configuration_changed(
 				ocula_boxes = {},
 				active_ocula = {},
 				item_in_route = {},
-				requested_items = {}
+				requested_items = {},
+				idling_at_player = {}
 			}
 		end
 		if global.ocula_master_table.requested_items == nil then
@@ -437,6 +439,9 @@ script.on_configuration_changed(
 		end
 		if global.ocula_master_table.item_in_route == nil then
 			global.ocula_master_table.item_in_route = {}
+		end
+		if global.ocula_master_table.idling_at_player == nil then
+			global.idling_at_player = {}
 		end
 	end
 )
@@ -831,19 +836,37 @@ script.on_event(
 							}
 						end
 					end
-				elseif global.ocula_master_table.ocula[event.unit_number] ~= nil and global.ocula_master_table.ocula[event.unit_number].delivering_items == true then
+				elseif ocula.delivering_items == true then
 					log("found the player")
 					local player = game.get_player(ocula.target_player)
-					global.ocula_master_table.item_in_route[player.index][ocula.current_inventory.item_name] = global.ocula_master_table.item_in_route[player.index][ocula.current_inventory.item_name] - ocula.current_inventory.amount
-					player.get_main_inventory().insert({name=ocula.current_inventory.item_name, count = ocula.current_inventory.amount})
-					ocula.current_inventory.item_name = ''
-					ocula.current_inventory.amount = 0
-					ocula.delivering_items = false
-					ocula.entity.set_command {
-						type = defines.command.go_to_location,
-						destination_entity = global.ocula_master_table.ocula_boxes[ocula.base].entity,
-						radius = 0.5
-					}
+					if global.ocula_master_table.idling_at_player[player.index] == nil then
+						table.insert(global.ocula_master_table.idling_at_player, player.index)
+					end
+					local inv = player.get_main_inventory()					if inv.can_insert({name=ocula.current_inventory.item_name, count = ocula.current_inventory.amount}) == true then
+						global.ocula_master_table.item_in_route[player.index][ocula.current_inventory.item_name] = global.ocula_master_table.item_in_route[player.index][ocula.current_inventory.item_name] - ocula.current_inventory.amount
+						local inserted = player.get_main_inventory().insert({name=ocula.current_inventory.item_name, count = ocula.current_inventory.amount})
+						if inserted == ocula.current_inventory.amount then
+							--has inserted everything can return home
+							ocula.current_inventory.item_name = ''
+							ocula.current_inventory.amount = 0
+							ocula.delivering_items = false
+							ocula.entity.set_command {
+								type = defines.command.go_to_location,
+								destination_entity = global.ocula_master_table.ocula_boxes[ocula.base].entity,
+								radius = 0.5
+							}
+							if global.ocula_master_table.idling_at_player[player.index][ocula.entity.unit_number] ~= nil then
+								--remove ocula from player waiting list
+								global.ocula_master_table.idling_at_player[player.index][ocula.entity.unit_number] = nil
+							end
+						elseif inserted < ocula.current_inventory.amount then
+							--subtract inserted amount and enter waiting queue
+							ocula.current_inventory.amount = ocula.current_inventory.amount - inserted
+							table.insert(global.ocula_master_table.idling_at_player[player.index], ocula.entity.unit_number)
+						end
+					elseif inv.can_insert({name=ocula.current_inventory.item_name, count = ocula.current_inventory.amount}) == false then
+						table.insert(global.ocula_master_table.idling_at_player[player.index], ocula.entity.unit_number)
+					end
 				end
 			end
 		end
