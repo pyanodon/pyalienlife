@@ -820,9 +820,9 @@ script.on_event(
 						local chest = ocula.current_target.get_inventory(defines.inventory.chest)
 						local chest_stuff = chest.get_contents()
 						if chest_stuff[ocula.target_item] ~= nil then
-							log(ocula.target_amount)
+							--log(ocula.target_amount)
 							local took_stuff = chest.remove({name = ocula.target_item, count = ocula.target_amount})
-							log(took_stuff)
+							--log(took_stuff)
 							ocula.current_inventory.item_name = ocula.target_item
 							ocula.current_inventory.amount = took_stuff
 							ocula.target_item = ""
@@ -837,11 +837,12 @@ script.on_event(
 						end
 					end
 				elseif ocula.delivering_items == true then
-					log("found the player")
+					--log("found the player")
 					local player = game.get_player(ocula.target_player)
 					if global.ocula_master_table.idling_at_player[player.index] == nil then
-						table.insert(global.ocula_master_table.idling_at_player, player.index)
+						global.ocula_master_table.idling_at_player[player.index] = {}
 					end
+					--log(serpent.block(global.ocula_master_table))
 					local inv = player.get_main_inventory()
 					if inv.can_insert({name=ocula.current_inventory.item_name, count = ocula.current_inventory.amount}) == true then
 						global.ocula_master_table.item_in_route[player.index][ocula.current_inventory.item_name] = global.ocula_master_table.item_in_route[player.index][ocula.current_inventory.item_name] - ocula.current_inventory.amount
@@ -866,11 +867,13 @@ script.on_event(
 							table.insert(global.ocula_master_table.idling_at_player[player.index], ocula.entity.unit_number)
 						end
 					elseif inv.can_insert({name=ocula.current_inventory.item_name, count = ocula.current_inventory.amount}) == false then
-						table.insert(global.ocula_master_table.idling_at_player[player.index], ocula.entity.unit_number)
+						if global.ocula_master_table.idling_at_player[player.index][ocula.entity.unit_number] == nil then
+							table.insert(global.ocula_master_table.idling_at_player[player.index], ocula.entity.unit_number)
+						end
 					end
 				end
 			end
-			log(serpent.block(global.ocula_master_table))
+			--log(serpent.block(global.ocula_master_table))
 		end
 		if event.result == defines.behavior_result.in_progress then
 			log("hit")
@@ -1056,6 +1059,27 @@ script.on_nth_tick(30, function()
 									end
 								end
 							end
+						end
+					end
+				end
+			end
+		end
+		if next(global.ocula_master_table.idling_at_player) ~= nil then
+			--log('hit')
+			for _, p in pairs(global.ocula_master_table.idling_at_player) do
+				--log(serpent.block(p))
+				if next(p) ~= nil then
+					--log('hit')
+					--log(p[1])
+					for _, o in pairs(p) do
+						if global.ocula_master_table.ocula[o] ~= nil then
+							local ocula = global.ocula_master_table.ocula[o]
+							--log('hit')
+							ocula.entity.set_command {
+								type = defines.command.go_to_location,
+								destination_entity = game.get_player(ocula.target_player).character,
+								radius = 0.5
+							}
 						end
 					end
 				end
