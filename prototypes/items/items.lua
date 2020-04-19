@@ -5158,7 +5158,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ta",
     stack_size = 50,
-	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 2}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_tuuphra,
 	limitation_message_key = "Its full"
 }
@@ -5178,7 +5178,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "tb",
     stack_size = 50,
-	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 4}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_tuuphra,
 	limitation_message_key = "Its full"
 }
@@ -5198,7 +5198,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "tc",
     stack_size = 50,
-	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 6}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_tuuphra,
 	limitation_message_key = "Its full"
 }
@@ -5218,7 +5218,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "td",
     stack_size = 50,
-	effect = { speed = {bonus = 35}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 8}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_tuuphra,
 	limitation_message_key = "Its full"
 }
