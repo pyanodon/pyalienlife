@@ -23,7 +23,7 @@ RECIPE{
 ITEM{
     type = "item-with-entity-data",
     name = "nuka-caravan",
-    icon = "__pyalienlifegraphics__/graphics/icons/caravan.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/nuka-van.png",
     icon_size = 64,
     subgroup = "py-containers-warehouse",
     order = "a",
@@ -36,7 +36,7 @@ data:extend(
   {
     type = "unit",
     name = "nuka-caravan",
-    icon = "__pyalienlifegraphics__/graphics/icons/caravan.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/nuka-van.png",
     icon_size = 64,
     flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "not-repairable", "breaths-air"},
 	minable = {mining_time = 0.1, result = 'caravan'},
