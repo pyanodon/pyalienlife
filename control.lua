@@ -1064,6 +1064,7 @@ script.on_nth_tick(30, function()
 				end
 			end
 		end
+		--[[
 		if next(global.ocula_master_table.idling_at_player) ~= nil then
 			--log('hit')
 			for _, p in pairs(global.ocula_master_table.idling_at_player) do
@@ -1085,6 +1086,7 @@ script.on_nth_tick(30, function()
 				end
 			end
 		end
+		]]--
 	end
 )
 
