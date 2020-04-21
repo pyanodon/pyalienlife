@@ -421,6 +421,51 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "cocoon-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/cocoon.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-recipes",
+    order = "b",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "cocoon-mk03",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/cocoon.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-recipes",
+    order = "b",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "cocoon-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/cocoon.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-recipes",
+    order = "b",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "plasmids",
     icon = "__pyalienlifegraphics__/graphics/icons/plasmids.png",
     icon_size = 64,
