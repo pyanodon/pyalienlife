@@ -1929,10 +1929,10 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = 'item', name = 'biomass', amount = 10},
+        {type = 'item', name = 'biomass', amount = 20},
     },
     results = {
-        {type = 'item', name = 'raw-coal', amount = 5},
+        {type = 'item', name = 'raw-coal', amount = 4},
     },
     --main_product = "casein-pulp-01",
 }:add_unlock("compost")
@@ -1942,7 +1942,7 @@ RECIPE {
     name = 'flue-gas-1',
     category = 'gasifier',
     enabled = false,
-    energy_required = 5,
+    energy_required = 2,
     ingredients = {
         {type = 'item', name = 'biomass', amount = 10},
     },
@@ -1957,7 +1957,7 @@ RECIPE {
     name = 'flue-gas-2',
     category = 'gasifier',
     enabled = false,
-    energy_required = 8,
+    energy_required = 3,
     ingredients = {
         {type = 'item', name = 'ash', amount = 10},
         {type = 'fluid', name = 'pressured-air', amount = 50},
