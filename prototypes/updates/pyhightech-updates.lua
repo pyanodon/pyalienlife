@@ -1000,7 +1000,7 @@ RECIPE {
         {type = 'item', name = 'chitosan', amount = 5},
     },
     results = {
-        {type = 'item', name = 'nanofibrils', amount = 1},
+        {type = 'item', name = 'nanofibrils', amount = 3},
     },
 }:add_unlock("chitin")
 
