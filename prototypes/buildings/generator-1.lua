@@ -71,7 +71,7 @@ ENTITY {
                 height = 288,
                 line_length = 64,
                 frame_count = 250,
-                animation_speed = 0.2,
+                animation_speed = 0.4,
                 shift = util.by_pixel(-96, -32)
             },
             {
@@ -80,7 +80,7 @@ ENTITY {
                 height = 288,
                 line_length = 64,
                 frame_count = 250,
-                animation_speed = 0.2,
+                animation_speed = 0.4,
                 shift = util.by_pixel(-64, -32)
             },
             {
@@ -89,7 +89,7 @@ ENTITY {
                 height = 288,
                 line_length = 64,
                 frame_count = 250,
-                animation_speed = 0.2,
+                animation_speed = 0.4,
                 shift = util.by_pixel(-32, -32)
             },
             {
@@ -98,7 +98,7 @@ ENTITY {
                 height = 288,
                 line_length = 64,
                 frame_count = 250,
-                animation_speed = 0.2,
+                animation_speed = 0.4,
                 shift = util.by_pixel(-0, -32)
             },
             {
@@ -107,7 +107,7 @@ ENTITY {
                 height = 288,
                 line_length = 64,
                 frame_count = 250,
-                animation_speed = 0.2,
+                animation_speed = 0.4,
                 shift = util.by_pixel(32, -32)
             },
             {
@@ -116,7 +116,7 @@ ENTITY {
                 height = 288,
                 line_length = 64,
                 frame_count = 250,
-                animation_speed = 0.2,
+                animation_speed = 0.4,
                 shift = util.by_pixel(64, -32)
             },
             {
@@ -125,7 +125,7 @@ ENTITY {
                 height = 288,
                 line_length = 64,
                 frame_count = 250,
-                animation_speed = 0.2,
+                animation_speed = 0.4,
                 shift = util.by_pixel(96, -32)
             },
             {
@@ -134,79 +134,7 @@ ENTITY {
                 height = 288,
                 line_length = 64,
                 frame_count = 250,
-                animation_speed = 0.2,
-                shift = util.by_pixel(128, -32)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a1.png",
-                width = 32,
-                height = 288,
-                line_length = 64,
-                frame_count = 250,
-                animation_speed = 0.2,
-                shift = util.by_pixel(-96, -32)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a2.png",
-                width = 32,
-                height = 288,
-                line_length = 64,
-                frame_count = 250,
-                animation_speed = 0.2,
-                shift = util.by_pixel(-64, -32)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a3.png",
-                width = 32,
-                height = 288,
-                line_length = 64,
-                frame_count = 250,
-                animation_speed = 0.2,
-                shift = util.by_pixel(-32, -32)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a4.png",
-                width = 32,
-                height = 288,
-                line_length = 64,
-                frame_count = 250,
-                animation_speed = 0.2,
-                shift = util.by_pixel(-0, -32)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a5.png",
-                width = 32,
-                height = 288,
-                line_length = 64,
-                frame_count = 250,
-                animation_speed = 0.2,
-                shift = util.by_pixel(32, -32)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a6.png",
-                width = 32,
-                height = 288,
-                line_length = 64,
-                frame_count = 250,
-                animation_speed = 0.2,
-                shift = util.by_pixel(64, -32)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a7.png",
-                width = 32,
-                height = 288,
-                line_length = 64,
-                frame_count = 250,
-                animation_speed = 0.2,
-                shift = util.by_pixel(96, -32)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a8.png",
-                width = 32,
-                height = 288,
-                line_length = 64,
-                frame_count = 250,
-                animation_speed = 0.2,
+                animation_speed = 0.4,
                 shift = util.by_pixel(128, -32)
             },
     },
