@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.0
+Date: ????
+  Changes:
+    - Added new auog graphics. Be sure to save your game before update. It will cmay cause overlaps, lose of modules etc.
+    - Updated auog icons and tech.
+    - Fixed small korlex milk stuff.
+    - Locale changes in alien samples.
+    - New icon for nuka-van
+    - Balanced some nanofibrils.
+    - Balanced some fluegas recipes.
+    - Primary adaptations to vrauks (experimental)
+---------------------------------------------------------------------------------------------------
 Version: 1.5.9
 Date: 2020-04-20
   Changes:
