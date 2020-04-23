@@ -2363,6 +2363,51 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "auog-pup-mk02",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/auog-pup.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-auog",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "auog-pup-mk03",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/auog-pup.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-auog",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "auog-pup-mk04",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/auog-pup.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-auog",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "auog-food-01",
     icon = "__pyalienlifegraphics__/graphics/icons/auog-food-01.png",
 	icon_size = 64,
