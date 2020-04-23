@@ -1,6 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.1
+Date: 2020-04-23
+  Changes:
+    - Removed productivity from composters
+    - Rebalanced auog modules and and secondary module production recipes
+---------------------------------------------------------------------------------------------------
 Version: 1.6.0
-Date: ????
+Date: 2020-04-22
   Changes:
     - Added new auog graphics. Be sure to save your game before update. It will cmay cause overlaps, lose of modules etc.
     - Updated auog icons and tech.
