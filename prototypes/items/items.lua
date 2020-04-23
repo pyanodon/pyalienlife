@@ -5763,7 +5763,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "a",
     stack_size = 25,
-	effect = { speed = {bonus = 50}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 6.7}, productivity = {bonus = -0.01}},--16.75
 	limitation = alien_life_limitations_auog,
     limitation_message_key = "Its full",
     fuel_category = 'auog',
@@ -5786,7 +5786,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "a-b",
     stack_size = 25,
-	effect = { speed = {bonus = 55}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 13.4}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_auog,
     limitation_message_key = "Its full",
     fuel_category = 'auog',
@@ -5809,7 +5809,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "a-c",
     stack_size = 25,
-	effect = { speed = {bonus = 60}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 20.1}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_auog,
     limitation_message_key = "Its full",
     fuel_category = 'auog',
@@ -5832,7 +5832,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "a-d",
     stack_size = 25,
-	effect = { speed = {bonus = 65}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 26.8}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_auog,
     limitation_message_key = "Its full",
     fuel_category = 'auog',
@@ -7126,6 +7126,7 @@ ITEM {
 	limitation = alien_life_limitations_vrauks,
 	limitation_message_key = "Its full"
 }
+
 ITEM {
     type = "module",
     name = "vrauks-mk02",
@@ -7185,7 +7186,6 @@ ITEM {
 	limitation = alien_life_limitations_vrauks,
 	limitation_message_key = "Its full"
 }
-
 
 ITEM {
     type = "module",
