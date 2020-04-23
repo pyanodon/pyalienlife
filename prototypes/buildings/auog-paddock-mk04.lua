@@ -42,11 +42,11 @@ ENTITY {
     selection_box = {{-7.0, -7.0}, {7.0, 7.0}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 7
+        module_slots = 10
     },
     allowed_effects = {"speed","productivity"},
     crafting_categories = {"auog"},
-    crafting_speed = 0.01,
+    crafting_speed = 0.075,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
