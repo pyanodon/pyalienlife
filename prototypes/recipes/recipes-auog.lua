@@ -286,7 +286,6 @@ RECIPE {
         {type = 'item', name = 'seaweed', amount = 10},
         {type = 'item', name = 'saps', amount = 10},
         {type = 'item', name = 'barrel-milk', amount = 2},
-        },
         {type = 'item', name = 'water-barrel', amount = 3},
         },
     results = {
