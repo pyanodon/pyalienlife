@@ -288,6 +288,11 @@ require('prototypes/buildings/compost-plant-mk02')
 require('prototypes/buildings/compost-plant-mk03')
 require('prototypes/buildings/compost-plant-mk04')
 
+--weapons/defenses
+--require('prototypes/weapons/turrets/gun-turret-mk01')
+--require('prototypes/weapons/ammo/basic-ammo')
+--require('prototypes/weapons/landmines/basic-tar-mine')
+
 --Creature
 require('prototypes/creatures/caravan')
 require('prototypes/creatures/nuka-caravan')
