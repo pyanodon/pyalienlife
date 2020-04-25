@@ -290,8 +290,12 @@ require('prototypes/buildings/compost-plant-mk04')
 
 --weapons/defenses
 --require('prototypes/weapons/turrets/gun-turret-mk01')
---require('prototypes/weapons/ammo/basic-ammo')
+--require('prototypes/weapons/turrets/rocket-turret-mk01')
 --require('prototypes/weapons/landmines/basic-tar-mine')
+
+--ammo
+--require('prototypes/weapons/ammo/basic-ammo')
+--require('prototypes/weapons/ammo/basic-rocket')
 
 --Creature
 require('prototypes/creatures/caravan')
@@ -336,6 +340,7 @@ require("prototypes/fluids/casein-pulp-02")
 require("prototypes/fluids/casein-solution")
 require("prototypes/fluids/milk")
 require("prototypes/fluids/autoantigens")
+require('prototypes/fluids/cadaveric-arum-cum')
 
 --(( RECIPES ))--
 require('prototypes/items/items')
@@ -455,6 +460,8 @@ require('prototypes/recipes/recipes-cottongut-science-green')
 require('prototypes/recipes/recipes-cottongut-science-blue')
 require('prototypes/recipes/recipes-cottongut-science-py')
 
+--gunpowder poo
+--require('prototypes/recipes/recipes-vrauk-products')
 
 --(( ORES ))--
 require('prototypes/ores/ralesia')
