@@ -186,7 +186,7 @@ RECIPE {
         {type = 'fluid', name = 'water', amount = 1000},
         },
     results = {
-        {type = 'item', name = 'cadaveric-arum-mk02-seed-juice', amount = 200},
+        {type = 'fluid', name = 'cadaveric-arum-mk02-seed-juice', amount = 200},
     },
     --main_product = "cadaveric-arum-mk02",
     icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
@@ -202,7 +202,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'cadaveric-arum-mk02-seed-juice', amount = 75},
+        {type = 'fluid', name = 'cadaveric-arum-mk02-seed-juice', amount = 75},
         {type = 'fluid', name = 'coal-gas', amount = 500},
         {type = 'item', name = 'sulfur', amount = 10},
         {type = 'fluid', name = 'water', amount = 1000},
