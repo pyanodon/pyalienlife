@@ -1322,7 +1322,7 @@ recipe =
             local a_min
             local a_max
 
-            --log(serpent.block(ing))
+            log(serpent.block(ing))
             if data.raw.item[ing[1]] ~= nil or data.raw.fluid[ing[1]] ~= nil or data.raw.module[ing[1]] ~= nil then
                 --log(serpent.block(item.amount))
                 if item.amount ~= nil then
@@ -1590,15 +1590,17 @@ recipe =
 				for _, rit in pairs(return_items_table) do
 					overrides.add_result(na, rit)
 				end
-				--overrides.add_result(na, {type = return_item_type, name = return_item_name, amount = return_amount})
             end
 
             if mat.icon == nil then
+                --log(serpent.block(data.raw.recipe[na]))
+                --log(serpent.block(results))
                 data.raw.recipe[na].main_product = results[1].name
             else
-                data.raw.recipe[na].icons = {
-                    {icon = mat.icon}
-                }
+                data.raw.recipe[na].icons =
+                    {
+                        {icon = mat.icon}
+                    }
                 if mat.icon_size == 64 then
                     data.raw.recipe[na].icon_size = 64
                 elseif mat.icon_size == 32 then
