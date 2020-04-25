@@ -142,7 +142,13 @@ RECIPE {
     },
 }:add_unlock("mega-farm-cadaveric-arum"):add_ingredient({type = "item", name = "nems", amount = 10}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10})
 
----UPDATES---
+--Secondary Upgrade Recipes--
+--SUR--
+--WIP--
+
+--mk02--
+--WIP--
+
 RECIPE {
     type = 'recipe',
     name = 'cadaveric-arum-mk02',
@@ -150,17 +156,15 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'cadaveric-arum', amount = 2},
-        {type = 'item', name = 'cadaveric-arum-seeds', amount = 10},
-        {type = 'fluid', name = 'coal-gas', amount = 500},
+        {type = 'item', name = 'cadaveric-arum-seeds', amount = 5},
+        {type = 'fluid', name = 'refsyngas', amount = 100},
         {type = 'item', name = 'fertilizer', amount = 10},
-        {type = 'item', name = 'ash', amount = 20},
-        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'item', name = 'sulfur', amount = 20},
+        {type = 'fluid', name = 'acidgas', amount = 100},
         },
     results = {
         {type = 'item', name = 'cadaveric-arum-mk02-a', amount = 1, probability = 0.005},
         {type = 'item', name = 'cadaveric-arum', amount = 1, probability = 0.5},
-        --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "cadaveric-arum-mk02",
     icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
@@ -168,6 +172,78 @@ RECIPE {
     subgroup = 'py-alienlife-cadaveric',
     order = 'za'
 }:add_unlock("selective-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'cadaveric-arum-mk02-seeder',
+    category = 'arum',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'cadaveric-arum-mk02-a', amount = 1},
+        {type = 'fluid', name = 'coal-gas', amount = 500},
+        {type = 'item', name = 'sulfur', amount = 10},
+        {type = 'fluid', name = 'water', amount = 1000},
+        },
+    results = {
+        {type = 'item', name = 'cadaveric-arum-mk02-seed-juice', amount = 200},
+    },
+    --main_product = "cadaveric-arum-mk02",
+    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-cadaveric',
+    order = 'za'
+}:add_unlock("selective-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'cadaveric-arum-mk02-juicer',
+    category = 'pan',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'cadaveric-arum-mk02-seed-juice', amount = 75},
+        {type = 'fluid', name = 'coal-gas', amount = 500},
+        {type = 'item', name = 'sulfur', amount = 10},
+        {type = 'fluid', name = 'water', amount = 1000},
+        },
+    results = {
+        {type = 'item', name = 'cadaveric-arum-mk02-seeds', amount = 3},
+        {type = 'fluid', name = 'dms', amount = 25},
+        {type = 'fluid', name = 'acidgas', amount = 50}
+    },
+    --main_product = "cadaveric-arum-mk02",
+    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-cadaveric',
+    order = 'za'
+}:add_unlock("selective-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'cadaveric-arum-mk02-breeder',
+    category = 'arum',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'cadaveric-arum-mk02-seeds', amount = 4},
+        {type = 'fluid', name = 'coalbed-gas', amount = 75},
+        {type = 'item', name = 'sulfur', amount = 10},
+        {type = 'fluid', name = 'outlet-gas-01', amount = 200},
+        },
+    results = {
+        {type = 'item', name = 'cadaveric-arum-mk02-a', amount = 1},
+        {type = 'fluid', name = 'outlet-gas-02', amount = 50},
+    },
+    --main_product = "cadaveric-arum-mk02",
+    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-cadaveric',
+    order = 'za'
+}:add_unlock("selective-breeding")
+
+--MK03--
+--WIP--
 
 RECIPE {
     type = 'recipe',
@@ -195,6 +271,9 @@ RECIPE {
     subgroup = 'py-alienlife-cadaveric',
     order = 'zb'
 }:add_unlock("artificial-breeding")
+
+--MK04--
+--WIP--
 
 RECIPE {
     type = 'recipe',
