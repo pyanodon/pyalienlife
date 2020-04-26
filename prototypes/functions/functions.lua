@@ -1322,7 +1322,7 @@ recipe =
             local a_min
             local a_max
 
-            log(serpent.block(ing))
+            --log(serpent.block(ing))
             if data.raw.item[ing[1]] ~= nil or data.raw.fluid[ing[1]] ~= nil or data.raw.module[ing[1]] ~= nil then
                 --log(serpent.block(item.amount))
                 if item.amount ~= nil then
