@@ -2077,6 +2077,39 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "cadaveric-arum-seeds-mk02",
+    icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum-seeds.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cadaveric",
+    order = "x",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "cadaveric-arum-seeds-mk03",
+    icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum-seeds.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cadaveric",
+    order = "x",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "cadaveric-arum-seeds-mk04",
+    icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum-seeds.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cadaveric",
+    order = "x",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
     name = "pineal-gland",
     icon = "__pyalienlifegraphics__/graphics/icons/pineal-gland.png",
 	icon_size = 64,

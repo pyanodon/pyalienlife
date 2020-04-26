@@ -258,8 +258,9 @@ local fungus_farm_buildings = {
 local function disable_machine(entity)
 	--log('hit')
 	local E = entity
+	--log(E.name)
 	--table.insert(global.farms, E)
-	global.farms[E.unit_number] = entity
+	global.farms[E.unit_number] = E
 	global.farm_count_last = global.farm_count_last + 1
 	--table.insert(global.farm_count, E.unit_number)
 	global.farm_count[global.farm_count_last] = E.unit_number
@@ -523,11 +524,38 @@ local function built_ocula(event)
 	log(serpent.block(global.ocula_master_table.ocula[E.unit_number]))
 end
 
+script.on_event(defines.events.script_raised_built, function(event)
+log('hit')
+
+end)
+
+script.on_event(defines.events.script_raised_revive, function(event)
+	--log('hit')
+	--log(event.entity.name)
+	local E = event.entity
+	if global.has_built_first_farm == false then
+		for _, farm in pairs(farm_buildings) do
+			if string.match(E.name, farm) then -- or string.match(E.ghost_name, farm) then
+				create_farm_help_message(event)
+				disable_machine(E)
+			end
+		end
+	elseif global.has_built_first_farm == true then
+		for _, farm in pairs(farm_buildings) do
+			if string.match(E.name, farm) then -- or string.match(E.ghost_name, farm) then
+				disable_machine(E)
+			end
+		end
+	end
+end)
+
 script.on_event(
 	{defines.events.on_built_entity, defines.events.on_robot_built_entity},
 	function(event)
+		--log('klonan bot did a thing')
 		local E = event.created_entity
 		--log(E.name)
+		--log(E.ghost_name)
 		--log(serpent.block(landbots))
 
 		if E.name == "mega-farm" then
@@ -586,14 +614,14 @@ script.on_event(
 			built_ocula(E)
 		elseif global.has_built_first_farm == false then
 			for _, farm in pairs(farm_buildings) do
-				if string.match(E.name, farm) then
+				if string.match(E.name, farm) then -- or string.match(E.ghost_name, farm) then
 					create_farm_help_message(event)
 					disable_machine(E)
 				end
 			end
 		elseif global.has_built_first_farm == true then
 			for _, farm in pairs(farm_buildings) do
-				if string.match(E.name, farm) then
+				if string.match(E.name, farm) then -- or string.match(E.ghost_name, farm) then
 					disable_machine(E)
 				end
 			end
@@ -1129,6 +1157,7 @@ script.on_event(
 				--log(i)
 				--log(serpent.block(global.farms))
 				--log(serpent.block(global.farms[global.farm_count[i]]))
+				--log(serpent.block(global.farms[global.farm_count[i]].name))
 				if global.farms[global.farm_count[i]] ~= nil and global.farms[global.farm_count[i]].valid == false then
 				--log('hit')
 					if global.rendered_icons[global.farm_count[i]] ~= nil then
