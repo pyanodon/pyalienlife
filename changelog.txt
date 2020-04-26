@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.3
+Date: 2020-04-26
+  Changes:
+    - rebalanced the module speed bonus and machine crafting speeds for Arthurians, cadaveric arum, navens, and yaedols to avooid module speed bonus cap
+    - added breeding recipes for the higher tier cadaveric arum modules
+    - balance changes to rennea
+    - fixed issues with construction drones breaking functionally of farms do to improper event listener in pyal
+    - tweaks to cocoons to fix duplicate recipes and slight balance changes
+---------------------------------------------------------------------------------------------------
 Version: 1.6.2
 Date: 2020-04-24
   Changes:
