@@ -56,7 +56,7 @@ ENTITY {
     minable = {mining_time = 1, result = "mega-farm"},
     max_health = 5000,
     dying_explosion = "medium-explosion",
-    corpse = "rocket-silo-generic-remnants",
+    corpse = "rocket-silo-remnants",
     collision_box = {{-3.5, -3.5}, {3.5, 3.5}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     hole_clipping_box = { {-0.5, -0.5}, {0.5, 0.5} },

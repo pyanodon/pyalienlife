@@ -17,6 +17,7 @@ items.inputs.limestone = {'limestone', 1}
 items.inputs.stone = {'stone', 1}
 items.inputs.biomass = {'biomass', 1}
 items.inputs.manure = {'manure', 1}
+items.inputs.guano = {'guano', 1}
 items.inputs.cocoon = {'cocoon', 1}
 items.inputs.fungalsubstrate = {'fungal-substrate', 1}
 items.inputs.fungalsubstrate02 = {'fungal-substrate-02', 1}

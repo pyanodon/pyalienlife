@@ -48,7 +48,7 @@ ENTITY {
     },
     allowed_effects = {"speed","productivity"},
     crafting_categories = {"tuuphra"},
-    crafting_speed = 0.01,
+    crafting_speed = 0.05,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

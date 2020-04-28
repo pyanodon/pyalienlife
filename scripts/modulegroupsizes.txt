@@ -1,0 +1,39 @@
+big herds:
+Mukmoux, 
+Ulrix, 
+Dingrits,
+Cottonguts,
+Scrondrix,
+Korlex
+
+medium herds: 
+Phadai, 
+Arthurians, 
+Xenos, 
+Dhilmos, 
+Zipir
+
+loners: 
+Vonix, 
+Trits, 
+Auog, 
+Xyhiphoe,
+
+big crops: 
+Fawogae, 
+kicalk, 
+rennea, 
+moondrop, 
+yotoi
+
+medium: 
+grod, 
+ralesia, 
+cadaveric, 
+tuuphra
+
+loner: 
+Bhoddos, 
+Navens, 
+Yaedols, 
+cridren,

@@ -440,3 +440,198 @@ RECIPE {
         {type = 'item', name = 'bhoddos-spore', amount = 1, probability = 0.8},
     },
 }:add_unlock("microfilters-mk02")
+
+------------------MAGNETIC ORGAN------------------
+
+RECIPE {
+    type = "recipe",
+    name = "magnetic-organ",
+    category = "genlab",
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'guts-caged-ulric', amount = 1}
+    },
+    results = {
+		{type = 'item', name = 'magnetic-organ', amount = 1},
+		{type = 'item', name = 'cage', amount = 1},
+    },
+    main_product = "magnetic-organ",
+}:add_unlock("antitumor")
+
+------------------Intestinal electrical epithelium------------------
+
+RECIPE {
+    type = "recipe",
+    name = "intestinal-ee",
+    category = "genlab",
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'guts-caged-scrondrix', amount = 1}
+    },
+    results = {
+		{type = 'item', name = 'intestinal-ee', amount = 1},
+		{type = 'item', name = 'cage', amount = 1},
+    },
+    main_product = "intestinal-ee",
+}:add_unlock("antitumor")
+
+------------------cognition-osteochain------------------
+
+RECIPE {
+    type = "recipe",
+    name = "cognition-osteochain",
+    category = "genlab",
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'bone-xeno', amount = 1}
+    },
+    results = {
+		{type = 'item', name = 'cognition-osteochain', amount = 1},
+    },
+    main_product = "cognition-osteochain",
+}:add_unlock("bmp")
+
+------------------adaptable-automucosa------------------
+
+RECIPE {
+    type = "recipe",
+    name = "adaptable-automucosa",
+    category = "genlab",
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'skin-zipir', amount = 1}
+    },
+    results = {
+		{type = 'item', name = 'adaptable-automucosa', amount = 1},
+    },
+    main_product = "adaptable-automucosa",
+}:add_unlock("reca")
+
+------------------polynuclear-ganglion------------------
+
+RECIPE {
+    type = "recipe",
+    name = "polynuclear-ganglion",
+    category = "genlab",
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'brain-caged-arthurian', amount = 1}
+    },
+    results = {
+		{type = 'item', name = 'polynuclear-ganglion', amount = 1},
+		{type = 'item', name = 'cage', amount = 1},
+    },
+    main_product = "polynuclear-ganglion",
+}:add_unlock("nanochondria")
+
+------------------cryogland------------------
+
+RECIPE {
+    type = "recipe",
+    name = "cryogland",
+    category = "genlab",
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'fat-caged-korlex', amount = 1}
+    },
+    results = {
+		{type = 'item', name = 'cryogland', amount = 1},
+		{type = 'item', name = 'cage', amount = 1},
+    },
+    main_product = "cryogland",
+}:add_unlock("orexigenic")
+
+------------------subdermal-chemosnare------------------
+
+RECIPE {
+    type = "recipe",
+    name = "subdermal-chemosnare",
+    category = "genlab",
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'skin-caged-phadai', amount = 1}
+    },
+    results = {
+		{type = 'item', name = 'subdermal-chemosnare', amount = 1},
+		{type = 'item', name = 'cage', amount = 1},
+    },
+    main_product = "subdermal-chemosnare",
+}:add_unlock("reca")
+
+------------------snarer-heart------------------
+
+RECIPE {
+    type = "recipe",
+    name = "snarer-heart",
+    category = "genlab",
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'meat-caged-dingrits', amount = 1}
+    },
+    results = {
+		{type = 'item', name = 'snarer-heart', amount = 1},
+		{type = 'item', name = 'cage', amount = 1},
+    },
+    main_product = "snarer-heart",
+}:add_unlock("anabolic-rna")
+
+------------------glandular-myocluster------------------
+
+RECIPE {
+    type = "recipe",
+    name = "glandular-myocluster",
+    category = "genlab",
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'meat-caged-auog', amount = 1}
+    },
+    results = {
+		{type = 'item', name = 'glandular-myocluster', amount = 1},
+		{type = 'item', name = 'cage', amount = 1},
+    },
+    main_product = "glandular-myocluster",
+}:add_unlock("anabolic-rna")
+
+------------------autoantigens------------------
+
+RECIPE {
+    type = "recipe",
+    name = "autoantigens",
+    category = "genlab",
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'blood-dhilmos', amount = 1}
+    },
+    results = {
+		{type = 'fluid', name = 'autoantigens', amount = 50},
+    },
+    main_product = "autoantigens",
+}:add_unlock("recombinant-ery")
+
+------------------dimensional-gastricorg------------------
+
+RECIPE {
+    type = "recipe",
+    name = "dimensional-gastricorg",
+    category = "genlab",
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'caged-antelope', amount = 1}
+    },
+    results = {
+		{type = 'item', name = 'dimensional-gastricorg', amount = 1},
+		{type = 'item', name = 'cage-antelope', amount = 1},
+    },
+    main_product = "dimensional-gastricorg",
+}:add_unlock("nanochondria")

@@ -258,8 +258,9 @@ local fungus_farm_buildings = {
 local function disable_machine(entity)
 	--log('hit')
 	local E = entity
+	--log(E.name)
 	--table.insert(global.farms, E)
-	global.farms[E.unit_number] = entity
+	global.farms[E.unit_number] = E
 	global.farm_count_last = global.farm_count_last + 1
 	--table.insert(global.farm_count, E.unit_number)
 	global.farm_count[global.farm_count_last] = E.unit_number
@@ -332,7 +333,8 @@ script.on_init(
 			ocula_boxes = {},
 			active_ocula = {},
 			item_in_route = {},
-			requested_items = {}
+			requested_items = {},
+			idling_at_player = {}
 		}
 		if not remote.interfaces["silo_script"] then
 			return
@@ -429,7 +431,8 @@ script.on_configuration_changed(
 				ocula_boxes = {},
 				active_ocula = {},
 				item_in_route = {},
-				requested_items = {}
+				requested_items = {},
+				idling_at_player = {}
 			}
 		end
 		if global.ocula_master_table.requested_items == nil then
@@ -437,6 +440,9 @@ script.on_configuration_changed(
 		end
 		if global.ocula_master_table.item_in_route == nil then
 			global.ocula_master_table.item_in_route = {}
+		end
+		if global.ocula_master_table.idling_at_player == nil then
+			global.idling_at_player = {}
 		end
 	end
 )
@@ -518,11 +524,38 @@ local function built_ocula(event)
 	log(serpent.block(global.ocula_master_table.ocula[E.unit_number]))
 end
 
+script.on_event(defines.events.script_raised_built, function(event)
+log('hit')
+
+end)
+
+script.on_event(defines.events.script_raised_revive, function(event)
+	--log('hit')
+	--log(event.entity.name)
+	local E = event.entity
+	if global.has_built_first_farm == false then
+		for _, farm in pairs(farm_buildings) do
+			if string.match(E.name, farm) then -- or string.match(E.ghost_name, farm) then
+				create_farm_help_message(event)
+				disable_machine(E)
+			end
+		end
+	elseif global.has_built_first_farm == true then
+		for _, farm in pairs(farm_buildings) do
+			if string.match(E.name, farm) then -- or string.match(E.ghost_name, farm) then
+				disable_machine(E)
+			end
+		end
+	end
+end)
+
 script.on_event(
 	{defines.events.on_built_entity, defines.events.on_robot_built_entity},
 	function(event)
+		--log('klonan bot did a thing')
 		local E = event.created_entity
 		--log(E.name)
+		--log(E.ghost_name)
 		--log(serpent.block(landbots))
 
 		if E.name == "mega-farm" then
@@ -581,14 +614,14 @@ script.on_event(
 			built_ocula(E)
 		elseif global.has_built_first_farm == false then
 			for _, farm in pairs(farm_buildings) do
-				if string.match(E.name, farm) then
+				if string.match(E.name, farm) then -- or string.match(E.ghost_name, farm) then
 					create_farm_help_message(event)
 					disable_machine(E)
 				end
 			end
 		elseif global.has_built_first_farm == true then
 			for _, farm in pairs(farm_buildings) do
-				if string.match(E.name, farm) then
+				if string.match(E.name, farm) then -- or string.match(E.ghost_name, farm) then
 					disable_machine(E)
 				end
 			end
@@ -815,9 +848,9 @@ script.on_event(
 						local chest = ocula.current_target.get_inventory(defines.inventory.chest)
 						local chest_stuff = chest.get_contents()
 						if chest_stuff[ocula.target_item] ~= nil then
-							log(ocula.target_amount)
+							--log(ocula.target_amount)
 							local took_stuff = chest.remove({name = ocula.target_item, count = ocula.target_amount})
-							log(took_stuff)
+							--log(took_stuff)
 							ocula.current_inventory.item_name = ocula.target_item
 							ocula.current_inventory.amount = took_stuff
 							ocula.target_item = ""
@@ -831,21 +864,44 @@ script.on_event(
 							}
 						end
 					end
-				elseif global.ocula_master_table.ocula[event.unit_number] ~= nil and global.ocula_master_table.ocula[event.unit_number].delivering_items == true then
-					log("found the player")
+				elseif ocula.delivering_items == true then
+					--log("found the player")
 					local player = game.get_player(ocula.target_player)
-					global.ocula_master_table.item_in_route[player.index][ocula.current_inventory.item_name] = global.ocula_master_table.item_in_route[player.index][ocula.current_inventory.item_name] - ocula.current_inventory.amount
-					player.get_main_inventory().insert({name=ocula.current_inventory.item_name, count = ocula.current_inventory.amount})
-					ocula.current_inventory.item_name = ''
-					ocula.current_inventory.amount = 0
-					ocula.delivering_items = false
-					ocula.entity.set_command {
-						type = defines.command.go_to_location,
-						destination_entity = global.ocula_master_table.ocula_boxes[ocula.base].entity,
-						radius = 0.5
-					}
+					if global.ocula_master_table.idling_at_player[player.index] == nil then
+						global.ocula_master_table.idling_at_player[player.index] = {}
+					end
+					--log(serpent.block(global.ocula_master_table))
+					local inv = player.get_main_inventory()
+					if inv.can_insert({name=ocula.current_inventory.item_name, count = ocula.current_inventory.amount}) == true then
+						global.ocula_master_table.item_in_route[player.index][ocula.current_inventory.item_name] = global.ocula_master_table.item_in_route[player.index][ocula.current_inventory.item_name] - ocula.current_inventory.amount
+						local inserted = player.get_main_inventory().insert({name=ocula.current_inventory.item_name, count = ocula.current_inventory.amount})
+						if inserted == ocula.current_inventory.amount then
+							--has inserted everything can return home
+							ocula.current_inventory.item_name = ''
+							ocula.current_inventory.amount = 0
+							ocula.delivering_items = false
+							ocula.entity.set_command {
+								type = defines.command.go_to_location,
+								destination_entity = global.ocula_master_table.ocula_boxes[ocula.base].entity,
+								radius = 0.5
+							}
+							if global.ocula_master_table.idling_at_player[player.index][ocula.entity.unit_number] ~= nil then
+								--remove ocula from player waiting list
+								global.ocula_master_table.idling_at_player[player.index][ocula.entity.unit_number] = nil
+							end
+						elseif inserted < ocula.current_inventory.amount then
+							--subtract inserted amount and enter waiting queue
+							ocula.current_inventory.amount = ocula.current_inventory.amount - inserted
+							table.insert(global.ocula_master_table.idling_at_player[player.index], ocula.entity.unit_number)
+						end
+					elseif inv.can_insert({name=ocula.current_inventory.item_name, count = ocula.current_inventory.amount}) == false then
+						if global.ocula_master_table.idling_at_player[player.index][ocula.entity.unit_number] == nil then
+							table.insert(global.ocula_master_table.idling_at_player[player.index], ocula.entity.unit_number)
+						end
+					end
 				end
 			end
+			--log(serpent.block(global.ocula_master_table))
 		end
 		if event.result == defines.behavior_result.in_progress then
 			log("hit")
@@ -1036,6 +1092,29 @@ script.on_nth_tick(30, function()
 				end
 			end
 		end
+		--[[
+		if next(global.ocula_master_table.idling_at_player) ~= nil then
+			--log('hit')
+			for _, p in pairs(global.ocula_master_table.idling_at_player) do
+				--log(serpent.block(p))
+				if next(p) ~= nil then
+					--log('hit')
+					--log(p[1])
+					for _, o in pairs(p) do
+						if global.ocula_master_table.ocula[o] ~= nil then
+							local ocula = global.ocula_master_table.ocula[o]
+							--log('hit')
+							ocula.entity.set_command {
+								type = defines.command.go_to_location,
+								destination_entity = game.get_player(ocula.target_player).character,
+								radius = 0.5
+							}
+						end
+					end
+				end
+			end
+		end
+		]]--
 	end
 )
 
@@ -1078,6 +1157,7 @@ script.on_event(
 				--log(i)
 				--log(serpent.block(global.farms))
 				--log(serpent.block(global.farms[global.farm_count[i]]))
+				--log(serpent.block(global.farms[global.farm_count[i]].name))
 				if global.farms[global.farm_count[i]] ~= nil and global.farms[global.farm_count[i]].valid == false then
 				--log('hit')
 					if global.rendered_icons[global.farm_count[i]] ~= nil then
