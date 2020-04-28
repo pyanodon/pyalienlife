@@ -167,20 +167,15 @@ ITEM{
         }
       },
       render_layer = 'air-object',
-      walking_sound =
+      working_sound =
       {
         aggregation =
         {
           max_count = 2,
           remove = true
         },
-        variations =
-        {
-          {
-            filename = "__pyalienlifegraphics3__/sounds/ocula-walk.ogg",
-            volume = 1.5
-          },
-        }
+        filename = "__pyalienlifegraphics3__/sounds/ocula-walk.ogg",
+        volume = 1.5
       }
       }
 })
