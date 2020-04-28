@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.4
+Date: 2020-04-28
+  Changes:
+    - rebalanced the module speed bonus and machine crafting speeds for rennea and dingrits to avooid module speed bonus cap
+    - added breeding recipes for rennea modules
+---------------------------------------------------------------------------------------------------
 Version: 1.6.3
 Date: 2020-04-26
   Changes:
