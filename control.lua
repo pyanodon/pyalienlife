@@ -524,10 +524,12 @@ local function built_ocula(event)
 	log(serpent.block(global.ocula_master_table.ocula[E.unit_number]))
 end
 
+--[[
 script.on_event(defines.events.script_raised_built, function(event)
 log('hit')
 
 end)
+]]--
 
 script.on_event(defines.events.script_raised_revive, function(event)
 	--log('hit')

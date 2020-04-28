@@ -141,7 +141,6 @@ RECIPE{
         {type = 'item', name = 'dingrits-cub', amount = 3},
         {type = 'item', name = 'rennea-seeds-mk02', amount = 10},
         {type = 'item', name = 'tuuphra', amount = 20},
-        
         },
     results = {
         {type = 'item', name = 'dingrits', amount_min = 1, amount_max = 3},
@@ -281,7 +280,6 @@ RECIPE{
         {type = 'item', name = 'dingrits-cub', amount = 3},
         {type = 'item', name = 'rennea-seeds-mk03', amount = 10},
         {type = 'item', name = 'tuuphra', amount = 20},
-        
         },
     results = {
         {type = 'item', name = 'dingrits', amount_min = 1, amount_max = 3},
@@ -421,7 +419,6 @@ RECIPE{
         {type = 'item', name = 'dingrits-cub', amount = 3},
         {type = 'item', name = 'rennea-seeds-mk04', amount = 10},
         {type = 'item', name = 'tuuphra', amount = 20},
-        
         },
     results = {
         {type = 'item', name = 'dingrits', amount_min = 1, amount_max = 3},
