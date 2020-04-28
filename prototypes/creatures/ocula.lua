@@ -175,7 +175,7 @@ ITEM{
           remove = true
         },
         filename = "__pyalienlifegraphics3__/sounds/ocula-walk.ogg",
-        volume = 1.5
+        volume = 0.65
       }
       }
 })
