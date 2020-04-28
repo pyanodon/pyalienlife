@@ -2154,6 +2154,107 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "rennea-seeds-mk02",
+    icon = "__pyalienlifegraphics__/graphics/icons/rennea-seeds.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-rennea",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "digested-rennea-seeds-mk02",
+    icon = "__pyalienlifegraphics__/graphics/icons/mip/rennea-manure-01.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-rennea",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "abraded-rennea-seeds-mk02",
+    icon = "__pyalienlifegraphics__/graphics/icons/rennea-seeds.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-rennea",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "rennea-seeds-mk03",
+    icon = "__pyalienlifegraphics__/graphics/icons/rennea-seeds.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-rennea",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "digested-rennea-seeds-mk03",
+    icon = "__pyalienlifegraphics__/graphics/icons/mip/rennea-manure-01.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-rennea",
+    order = "h",
+    stack_size = 500
+}
+
+
+ITEM {
+    type = "item",
+    name = "abraded-rennea-seeds-mk03",
+    icon = "__pyalienlifegraphics__/graphics/icons/rennea-seeds.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-rennea",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "rennea-seeds-mk04",
+    icon = "__pyalienlifegraphics__/graphics/icons/rennea-seeds.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-rennea",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "digested-rennea-seeds-mk04",
+    icon = "__pyalienlifegraphics__/graphics/icons/mip/rennea-manure-01.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-rennea",
+    order = "h",
+    stack_size = 500
+}
+
+
+ITEM {
+    type = "item",
+    name = "abraded-rennea-seeds-mk04",
+    icon = "__pyalienlifegraphics__/graphics/icons/rennea-seeds.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-rennea",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
     name = "caged-phadai",
     icon = "__pyalienlifegraphics__/graphics/icons/caged-phadai.png",
 	icon_size = 64,
@@ -5692,7 +5793,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ren-a",
     stack_size = 50,
-	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = .32}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_rennea,
 	limitation_message_key = "Its full"
 }
@@ -5712,7 +5813,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ren-b",
     stack_size = 50,
-	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = .63}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_rennea,
 	limitation_message_key = "Its full"
 }
@@ -5732,7 +5833,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ren-c",
     stack_size = 50,
-	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 1.25}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_rennea,
 	limitation_message_key = "Its full"
 }
@@ -5752,7 +5853,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ren-d",
     stack_size = 50,
-	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 2.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_rennea,
 	limitation_message_key = "Its full"
 }
@@ -6227,7 +6328,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "d-a",
     stack_size = 25,
-	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 0.8}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_dingrits,
     limitation_message_key = "Its full",
     fuel_category = 'dingrits',
@@ -6250,7 +6351,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "d-b",
     stack_size = 25,
-	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 1.6}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_dingrits,
     limitation_message_key = "Its full",
     fuel_category = 'dingrits',
@@ -6273,7 +6374,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "d-c",
     stack_size = 25,
-	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 3.2}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_dingrits,
     limitation_message_key = "Its full",
     fuel_category = 'dingrits',
@@ -6296,7 +6397,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "d-d",
     stack_size = 25,
-	effect = { speed = {bonus = 35}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 6.4}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_dingrits,
     limitation_message_key = "Its full",
     fuel_category = 'dingrits',
