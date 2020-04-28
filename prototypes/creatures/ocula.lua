@@ -166,6 +166,21 @@ ITEM{
           }
         }
       },
-      render_layer = 'air-object'
+      render_layer = 'air-object',
+      walking_sound =
+      {
+        aggregation =
+        {
+          max_count = 2,
+          remove = true
+        },
+        variations =
+        {
+          {
+            filename = "__base__/sound/creatures/biter-walk-1.ogg",
+            volume = 0.5
+          },
+        }
+      }
       }
 })
