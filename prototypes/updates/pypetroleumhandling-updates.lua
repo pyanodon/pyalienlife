@@ -166,7 +166,7 @@ RECIPE {
     name = 'flue-gas-3',
     category = 'gas-refinery',
     enabled = false,
-    energy_required = 5,
+    energy_required = 2,
     ingredients = {
         {type = 'item', name = 'biomass', amount = 10},
         {type = 'fluid', name = 'hot-air', amount = 100},

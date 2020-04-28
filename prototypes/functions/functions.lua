@@ -1590,15 +1590,17 @@ recipe =
 				for _, rit in pairs(return_items_table) do
 					overrides.add_result(na, rit)
 				end
-				--overrides.add_result(na, {type = return_item_type, name = return_item_name, amount = return_amount})
             end
 
             if mat.icon == nil then
+                --log(serpent.block(data.raw.recipe[na]))
+                --log(serpent.block(results))
                 data.raw.recipe[na].main_product = results[1].name
             else
-                data.raw.recipe[na].icons = {
-                    {icon = mat.icon}
-                }
+                data.raw.recipe[na].icons =
+                    {
+                        {icon = mat.icon}
+                    }
                 if mat.icon_size == 64 then
                     data.raw.recipe[na].icon_size = 64
                 elseif mat.icon_size == 32 then
@@ -1633,12 +1635,50 @@ function overrides.reprocess_recipes_core(recipes_to_check, upgrade)
        --log(serpent.block(recipe.name))
        --log(serpent.block(pre_ing))
        --log(serpent.block(pre_res))
+       for ing, ingred in pairs(pre_ing) do
+            --log('hit')
+            --log(serpent.block(r))
+            --log(serpent.block(ing))
+            --log(serpent.block(ingred.name))
+            --log(serpent.block(ingred))
+            for ing2, ingred2 in pairs(recipe.ingredients) do
+                --log('hit')
+                --log(serpent.block(ing2))
+                --log(serpent.block(ingred2))
+                --log(serpent.block(ingred.name))
+                --log(serpent.block(ingred2.name))
+                --log(serpent.block(items.inputs[ingred2.name][1]))
+                if ingred.name == items.inputs[ingred2.name][1] then
+                    --log('hit')
+                    if ingred2.amount ~= nil and string.match(ingred2.amount, '%+') ~= nil then
+                        --log('hit')
+                        local amount = string.match(ingred2.amount, '%d+')
+                        --log(amount)
+                        --log(serpent.block(data.raw.recipe[upgrade .. up_num [r]]))
+                        --log(serpent.block(data.raw.recipe[upgrade .. up_num [r]].ingredients))
+                        --log(serpent.block(data.raw.recipe[upgrade .. up_num [r]].ingredients[ing]))
+                        --log(serpent.block(data.raw.recipe[upgrade .. up_num [r]].ingredients[ing].amount))
+                        --log(serpent.block(data.raw.recipe[r]))
+                        --log(serpent.block(data.raw.recipe[r].ingredients))
+                        --log(serpent.block(data.raw.recipe[r].ingredients[ing]))
+                        for k,v in pairs(data.raw.recipe[r].ingredients) do
+                            --log('hit')
+                            if v.name == items.inputs[ingred2.name][1] then
+                                --log('hit')
+                                data.raw.recipe[r].ingredients[k].amount = data.raw.recipe[upgrade[r]].ingredients[ing].amount + amount
+                            end
+                        end
+                    end
+                end
+            end
+        end
+
         for res, result in pairs(pre_res) do
             --log('hit')
-           --log(serpent.block(r))
-           --log(serpent.block(res))
-           --log(serpent.block(result.name))
-           --log(serpent.block(result))
+            --log(serpent.block(r))
+            --log(serpent.block(res))
+            --log(serpent.block(result.name))
+            --log(serpent.block(result))
             for r2, res2 in pairs(recipe.results) do
                 --log('hit')
                 --log(serpent.block(r2))

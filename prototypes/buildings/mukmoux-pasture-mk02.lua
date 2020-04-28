@@ -47,7 +47,7 @@ ENTITY {
     },
     allowed_effects = {"speed","productivity"},
     crafting_categories = {"mukmoux"},
-    crafting_speed = 0.02,
+    crafting_speed = 0.04,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

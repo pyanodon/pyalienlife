@@ -1,4 +1,61 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.3
+Date: 2020-04-26
+  Changes:
+    - rebalanced the module speed bonus and machine crafting speeds for Arthurians, cadaveric arum, navens, and yaedols to avooid module speed bonus cap
+    - added breeding recipes for the higher tier cadaveric arum modules
+    - balance changes to rennea
+    - fixed issues with construction drones breaking functionally of farms do to improper event listener in pyal
+    - tweaks to cocoons to fix duplicate recipes and slight balance changes
+---------------------------------------------------------------------------------------------------
+Version: 1.6.2
+Date: 2020-04-24
+  Changes:
+    - fixed bug in mega farm related to factorio 18.20 update.
+---------------------------------------------------------------------------------------------------
+Version: 1.6.1
+Date: 2020-04-23
+  Changes:
+    - Removed productivity from composters
+    - Rebalanced auog modules and and secondary module production recipes
+---------------------------------------------------------------------------------------------------
+Version: 1.6.0
+Date: 2020-04-22
+  Changes:
+    - Added new auog graphics. Be sure to save your game before update. It will cmay cause overlaps, lose of modules etc.
+    - Updated auog icons and tech.
+    - Fixed small korlex milk stuff.
+    - Locale changes in alien samples.
+    - New icon for nuka-van
+    - Balanced some nanofibrils.
+    - Balanced some fluegas recipes.
+    - Primary adaptations to vrauks (experimental)
+---------------------------------------------------------------------------------------------------
+Version: 1.5.9
+Date: 2020-04-20
+  Changes:
+    - fixed mistake in upgrade recipe script.
+---------------------------------------------------------------------------------------------------
+Version: 1.5.8
+Date: 2020-04-19
+  Changes:
+    - fix script error.
+---------------------------------------------------------------------------------------------------
+Version: 1.5.7
+Date: 2020-04-19
+  Changes:
+    - Rebalanced tuuphra modules and added breeding recipes.
+---------------------------------------------------------------------------------------------------
+Version: 1.5.6
+Date: 2020-04-17
+  Changes:
+    - Added late game recipes.
+    - Utility science new requieres perfect samples.
+    - Fixed wrong recipe in the upgrade recipes.
+    - Fixed pycp updates.
+    - Space science now requieres yellow-cake.
+    - Balanced atomic bomb and nuka-vans to be proper unlocked.
+---------------------------------------------------------------------------------------------------
 Version: 1.5.5
 Date: 2020-04-12
   Changes:

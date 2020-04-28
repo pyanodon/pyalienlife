@@ -11,7 +11,7 @@ RECIPE('logistic-science-pack'):change_category('research')
 RECIPE('chemical-science-pack'):change_category('research')
 RECIPE('military-science-pack'):change_category('research')
 RECIPE('production-science-pack'):change_category('research'):remove_unlock('diamond-mining'):add_unlock('pharmagenomics')
-RECIPE('utility-science-pack'):change_category('research')
+RECIPE('utility-science-pack'):change_category('research'):add_ingredient({type = "item", name = "perfect-samples", amount = 1})
 
 for _,module in pairs(data.raw.module) do
   if module.subgroup == "py-alienlife-modules" then
@@ -2206,6 +2206,7 @@ local recipes_list =
 --adding to module limitation list
 FUN.productivity(recipes_list)
 
-log(serpent.block(data.raw.recipe['Extract Mukmoux lard']))
-log(serpent.block(data.raw.recipe['Extract Mukmoux lard-1']))
-log(serpent.block(data.raw.recipe['Extract Mukmoux lard-2']))
+--log(serpent.block(data.raw.recipe['korlex-milk-4b']))
+--log(serpent.block(data.raw.recipe['korlex-milk-5b']))
+--log(serpent.block(data.raw.recipe['korlex-milk-6b']))
+--log(serpent.block(data.raw.recipe['korlex-milk-7b']))

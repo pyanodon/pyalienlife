@@ -306,7 +306,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-
+					{name = 'cocoon', amount = 'R'},
+					{name = 'cocoon', amount = 3}
 				},
 			crafting_speed = 60,
 			tech = 'vrauks'
@@ -315,11 +316,11 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='bedding',amount = 10},
+					{name='bedding',amount = 3},
 				},
 			results =
 				{
-
+					{name = 'cocoon', amount = '+3'}
 				},
 			crafting_speed = 55,
 			tech = 'vrauks'
@@ -332,7 +333,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-
+					{name = 'cocoon', amount = '+1'}
 				},
 			crafting_speed = 50,
 			tech = 'assisted-embryology'
@@ -349,7 +350,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-
+					{name = 'cocoon', amount = '+2'}
 				},
 			crafting_speed = 50,
 			tech = 'assisted-embryology'
@@ -358,11 +359,11 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='saps',amount ='R'},
+					{name='saps',amount =5},
 				},
 			results =
 				{
-
+					{name = 'cocoon', amount = '+1'}
 				},
 			crafting_speed = 45,
 			tech = 'assisted-embryology'
@@ -375,7 +376,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-
+					{name = 'cocoon', amount = '+1'}
 				},
 			crafting_speed = 40,
 			tech = 'assisted-embryology'
@@ -394,8 +395,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cocoon',amount = 'R'},
-					{name='cocoon', amount =3},
+					{name='cocoon', amount = 'R'},
+					{name='cocoon', amount = '+3'},
 				},
 			crafting_speed = 70,
 			tech = 'pheromones'
@@ -405,12 +406,12 @@ fun.autorecipes {
 			ingredients =
 				{
 
-                    {name='biomass',amount ='R'},
-					{name='vrauksfood01',amount =1},
+                    {name='biomass', amount = 'R'},
+					{name='vrauksfood01', amount = 1},
 				},
 			results =
 				{
-
+					{name = 'cocoon', amount = '+1'}
 				},
 			crafting_speed = 60,
 			tech = 'pheromones'
@@ -423,7 +424,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-
+					{name = 'cocoon', amount = '+1'}
 				},
 			crafting_speed = 55,
 			tech = 'pheromones'
@@ -436,7 +437,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-
+					{name = 'cocoon', amount = '+1'}
 				},
 			crafting_speed = 50,
 			tech = 'pheromones'
@@ -453,7 +454,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-
+					{name = 'cocoon', amount = '+1'}
 				},
 			crafting_speed = 50,
 			tech = 'pheromones'
@@ -462,11 +463,11 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='saps',amount ='R'},
+					{name='saps',amount = 6},
 				},
 			results =
 				{
-
+					{name = 'cocoon', amount = '+1'}
 				},
 			crafting_speed = 45,
 			tech = 'pheromones'
@@ -479,7 +480,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-
+					{name = 'cocoon', amount = '+1'}
 				},
 			crafting_speed = 40,
 			tech = 'pheromones'
