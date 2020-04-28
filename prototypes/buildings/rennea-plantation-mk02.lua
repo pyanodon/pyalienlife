@@ -45,11 +45,11 @@ ENTITY {
     --draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 11
+        module_slots = 60
     },
     allowed_effects = {"speed","productivity"},
     crafting_categories = {"rennea"},
-    crafting_speed = 0.01,
+    crafting_speed = 0.1,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
