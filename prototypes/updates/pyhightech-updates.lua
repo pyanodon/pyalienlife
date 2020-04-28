@@ -282,7 +282,14 @@ fun.results_replacer("dhilmos-sex-01", "dirty-water", "waste-water")
 
 fun.results_replacer("fertilizer", "py-fertilizer", "fertilizer")
 fun.results_replacer("log7-2", "log", "log",8)
---fun.results_replacer("urea", "urea", "urea",5)
+
+fun.results_replacer("rennea-mk02-seed-seperation", "light-oil", "tall-oil")
+fun.results_replacer("rennea-mk03-seed-seperation", "light-oil", "tall-oil")
+fun.results_replacer("rennea-mk04-seed-seperation", "light-oil", "tall-oil")
+fun.results_replacer("rennea-mk02-seed-seperation", "tar", "black-liquour")
+fun.results_replacer("rennea-mk03-seed-seperation", "tar", "black-liquour")
+fun.results_replacer("rennea-mk04-seed-seperation", "tar", "black-liquour")
+
 
 RECIPE('methane'):add_unlock('coal-processing-1')
 RECIPE('methane'):add_ingredient('moondrop-seeds')
