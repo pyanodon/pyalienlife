@@ -177,8 +177,8 @@ ITEM{
         variations =
         {
           {
-            filename = "__base__/sound/creatures/biter-walk-1.ogg",
-            volume = 0.5
+            filename = "__pyalienlifegraphics3__/sounds/ocula-walk.ogg",
+            volume = 1.5
           },
         }
       }
