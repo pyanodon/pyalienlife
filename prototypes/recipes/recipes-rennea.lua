@@ -111,7 +111,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'rennea', amount = 4},
         {type = 'fluid', name = 'carbon-dioxide', amount = 300},
-        {type = 'item', name = 'stone-wool', amount = 5},
+        {type = 'item', name = 'filtration-media', amount = 5},
         {type = 'item', name = 'manure', amount = 15},
         {type = 'item', name = 'coarse', amount = 10},
         {type = 'fluid', name = 'water', amount = 1000},
@@ -129,7 +129,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-rennea',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("selective-breeding"):replace_ingredient("filtration-media", "stone-wool")
 
 RECIPE{
     type = 'recipe',
@@ -193,8 +193,8 @@ RECIPE {
         {type = 'item', name = 'abraded-rennea-seeds-mk02', amount = 6},
         {type = 'fluid', name = 'carbon-dioxide', amount = 300},
         {type = 'fluid', name = 'nitrogen', amount = 100},
-        {type = 'item', name = 'stone-wool', amount = 10},
-        {type = 'item', name = 'phosphoric-acid-barrel', amount = 2},
+        {type = 'item', name = 'filtration-media', amount = 10},
+        {type = 'item', name = 'sulfuric-acid-barrel', amount = 2},
         {type = 'item', name = 'coarse', amount = 10},
         {type = 'item', name = 'water-barrel', amount = 10},
         },
@@ -211,7 +211,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-rennea',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("selective-breeding"):replace_ingredient("filtration-media", "stone-wool"):replace_ingredient("sulfuric-acid-barrel", "phosphoric-acid-barrel")
 
 RECIPE {
     type = 'recipe',
@@ -224,8 +224,8 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'rennea-seeds-mk02', amount_min = 10, amount_max = 15},
-        {type = 'fluid', name = 'tall-oil', amount = 10},
-        {type = 'fluid', name = 'black-liquor', amount = 10}
+        {type = 'fluid', name = 'light-oil', amount = 10},
+        {type = 'fluid', name = 'tar', amount = 10}
     },
     main_product = "rennea-seeds-mk02",
     icons =
@@ -250,7 +250,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'rennea-mk02', amount = 4},
         {type = 'fluid', name = 'carbon-dioxide', amount = 300},
-        {type = 'item', name = 'stone-wool', amount = 5},
+        {type = 'item', name = 'filtration-media', amount = 5},
         {type = 'item', name = 'manure', amount = 15},
         {type = 'item', name = 'coarse', amount = 10},
         {type = 'fluid', name = 'water', amount = 1000},
@@ -268,7 +268,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-rennea',
     order = 'za'
-}:add_unlock("artificial-breeding")
+}:add_unlock("artificial-breeding"):replace_ingredient("filtration-media", "stone-wool")
 
 RECIPE{
     type = 'recipe',
@@ -332,8 +332,8 @@ RECIPE {
         {type = 'item', name = 'abraded-rennea-seeds-mk03', amount = 6},
         {type = 'fluid', name = 'carbon-dioxide', amount = 300},
         {type = 'fluid', name = 'nitrogen', amount = 100},
-        {type = 'item', name = 'stone-wool', amount = 10},
-        {type = 'item', name = 'phosphoric-acid-barrel', amount = 2},
+        {type = 'item', name = 'filtration-media', amount = 10},
+        {type = 'item', name = 'sulfuric-acid-barrel', amount = 2},
         {type = 'item', name = 'coarse', amount = 10},
         {type = 'item', name = 'water-barrel', amount = 10},
         },
@@ -350,7 +350,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-rennea',
     order = 'za'
-}:add_unlock("artificial-breeding")
+}:add_unlock("artificial-breeding"):replace_ingredient("filtration-media", "stone-wool"):replace_ingredient("sulfuric-acid-barrel", "phosphoric-acid-barrel")
 
 RECIPE {
     type = 'recipe',
@@ -363,8 +363,8 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'rennea-seeds-mk03', amount_min = 10, amount_max = 15},
-        {type = 'fluid', name = 'tall-oil', amount = 10},
-        {type = 'fluid', name = 'black-liquor', amount = 10}
+        {type = 'fluid', name = 'light-oil', amount = 10},
+        {type = 'fluid', name = 'tar', amount = 10}
     },
     main_product = "rennea-seeds-mk03",
     icons =
@@ -389,7 +389,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'rennea-mk03', amount = 4},
         {type = 'fluid', name = 'carbon-dioxide', amount = 300},
-        {type = 'item', name = 'stone-wool', amount = 5},
+        {type = 'item', name = 'filtration-media', amount = 5},
         {type = 'item', name = 'manure', amount = 15},
         {type = 'item', name = 'coarse', amount = 10},
         {type = 'fluid', name = 'water', amount = 1000},
@@ -407,7 +407,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-rennea',
     order = 'za'
-}:add_unlock("biased-mutation")
+}:add_unlock("biased-mutation"):replace_ingredient("filtration-media", "stone-wool")
 
 RECIPE{
     type = 'recipe',
@@ -471,8 +471,8 @@ RECIPE {
         {type = 'item', name = 'abraded-rennea-seeds-mk04', amount = 6},
         {type = 'fluid', name = 'carbon-dioxide', amount = 300},
         {type = 'fluid', name = 'nitrogen', amount = 100},
-        {type = 'item', name = 'stone-wool', amount = 10},
-        {type = 'item', name = 'phosphoric-acid-barrel', amount = 2},
+        {type = 'item', name = 'filtration-media', amount = 10},
+        {type = 'item', name = 'sulfuric-acid-barrel', amount = 2},
         {type = 'item', name = 'coarse', amount = 10},
         {type = 'item', name = 'water-barrel', amount = 10},
         },
@@ -489,7 +489,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-rennea',
     order = 'za'
-}:add_unlock("biased-mutation")
+}:add_unlock("biased-mutation"):replace_ingredient("filtration-media", "stone-wool"):replace_ingredient("sulfuric-acid-barrel", "phosphoric-acid-barrel")
 
 RECIPE {
     type = 'recipe',
@@ -502,8 +502,8 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'rennea-seeds-mk04', amount_min = 10, amount_max = 15},
-        {type = 'fluid', name = 'tall-oil', amount = 10},
-        {type = 'fluid', name = 'black-liquor', amount = 10}
+        {type = 'fluid', name = 'light-oil', amount = 10},
+        {type = 'fluid', name = 'tar', amount = 10}
     },
     main_product = "rennea-seeds-mk04",
     icons =

@@ -202,7 +202,7 @@ RECIPE {
     energy_required = 200,
     ingredients = {
         {type = 'item', name = 'tuuphra-mk02', amount = 1},
-        {type = 'fluid', name = 'phosphoric-acid', amount = 300},
+        {type = 'fluid', name = 'sulfuric-acid', amount = 300},
         {type = 'item', name = 'lime', amount = 50},
         {type = 'item', name = 'fertilizer', amount = 30},
         {type = 'item', name = 'biomass', amount = 100},
@@ -220,7 +220,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-tuuphra',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("selective-breeding"):replace_ingredient("sulfuric-acid", "phosphoric-acid")
 
 --mk03--
 
@@ -232,7 +232,7 @@ RECIPE {
     energy_required = 300,
     ingredients = {
         {type = 'item', name = 'tuuphra-mk03', amount = 1},
-        {type = 'fluid', name = 'phosphoric-acid', amount = 300},
+        {type = 'fluid', name = 'sulfuric-acid', amount = 300},
         {type = 'item', name = 'sporopollenin', amount = 50},
         {type = 'item', name = 'seeds-extract-01', amount = 50},
         {type = 'item', name = 'fertilizer', amount = 60},
@@ -251,7 +251,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-tuuphra',
     order = 'zb'
-}:add_unlock("artificial-breeding")
+}:add_unlock("artificial-breeding"):replace_ingredient("sulfuric-acid", "phosphoric-acid")
 
 --mk04--
 
