@@ -87,9 +87,9 @@ ENTITY {
     working_visualisations = {
         {
             north_position = util.by_pixel(-120, -174),
-            west_position = util.by_pixel(-0, 0),
-            south_position = util.by_pixel(-0, 0),
-            east_position = util.by_pixel(-0, 0),
+            west_position = util.by_pixel(-120, -174),
+            south_position = util.by_pixel(-120, -174),
+            east_position = util.by_pixel(-120, -174),
             animation = {
                 filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/a1.png",
                 frame_count = 179,
@@ -101,9 +101,9 @@ ENTITY {
         },
         {
             north_position = util.by_pixel(-56, -174),
-            west_position = util.by_pixel(-0, 0),
-            south_position = util.by_pixel(-0, 0),
-            east_position = util.by_pixel(-0, 0),
+            west_position = util.by_pixel(-56, -174),
+            south_position = util.by_pixel(-56, -174),
+            east_position = util.by_pixel(-56, -174),
             animation = {
                 filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/a2.png",
                 frame_count = 179,
@@ -115,9 +115,9 @@ ENTITY {
         },
         {
             north_position = util.by_pixel(8, -174),
-            west_position = util.by_pixel(-0, 0),
-            south_position = util.by_pixel(-0, 0),
-            east_position = util.by_pixel(-0, 0),
+            west_position = util.by_pixel(8, -174),
+            south_position = util.by_pixel(8, -174),
+            east_position = util.by_pixel(8, -174),
             animation = {
                 filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/a3.png",
                 frame_count = 179,
@@ -129,9 +129,9 @@ ENTITY {
         },
         {
             north_position = util.by_pixel(72, -174),
-            west_position = util.by_pixel(-0, 0),
-            south_position = util.by_pixel(-0, 0),
-            east_position = util.by_pixel(-0, 0),
+            west_position = util.by_pixel(72, -174),
+            south_position = util.by_pixel(72, -174),
+            east_position = util.by_pixel(72, -174),
             animation = {
                 filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/a4.png",
                 frame_count = 179,
@@ -143,9 +143,9 @@ ENTITY {
         },
         {
             north_position = util.by_pixel(136, -174),
-            west_position = util.by_pixel(-0, 0),
-            south_position = util.by_pixel(-0, 0),
-            east_position = util.by_pixel(-0, 0),
+            west_position = util.by_pixel(136, -174),
+            south_position = util.by_pixel(136, -174),
+            east_position = util.by_pixel(136, -174),
             animation = {
                 filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/a5.png",
                 frame_count = 179,
