@@ -42,13 +42,13 @@ ENTITY {
     collision_box = {{-5.8, -5.8}, {5.8, 5.8}},
     selection_box = {{-6.0, -6.0}, {6.0, 6.0}},
     module_specification = {
-        module_slots = 14,
+        module_slots = 32,
     },
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     allowed_effects = {"speed","productivity"},
     crafting_categories = {"ulric"},
-    crafting_speed = 0.01,
+    crafting_speed = 0.125,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
