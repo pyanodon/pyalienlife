@@ -47,7 +47,7 @@ ENTITY {
     match_animation_speed_to_activity = false,
     allowed_effects = {"speed","productivity"},
     crafting_categories = {"ulric"},
-    crafting_speed = 0.01,
+    crafting_speed = 0.125,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
