@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.7
+Date: ????
+  Changes:
+    - Added Ulric breeding recipes.
+    - Added new Ulric graphics.
+    - Adjusted Ulric modules.
+    - Fixed trits graphics bug on rotation.
+---------------------------------------------------------------------------------------------------
 Version: 1.6.6
 Date: 2020-04-28
   Changes:
