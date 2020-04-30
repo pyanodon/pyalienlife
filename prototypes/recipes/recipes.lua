@@ -2000,3 +2000,17 @@ RECIPE {
 }:add_unlock('advanced-rendering')
 
 end
+
+RECIPE {
+    type = 'recipe',
+    name = 'sample-cup',
+    category = 'crafting',
+    enabled = false,
+    energy_required = 2,
+    ingredients = {
+        {type = 'item', name = 'plastic-bar', amount = 2}
+    },
+    results = {
+        {type = 'item', name = 'sample-cup', amount = 4}
+    }
+}:add_unlock("selective-breeding")

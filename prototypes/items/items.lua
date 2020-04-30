@@ -609,6 +609,51 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "ulric-cub-mk02",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/ulric-cub.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-ulric",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "ulric-cub-mk03",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/ulric-cub.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-ulric",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "ulric-cub-mk04",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/ulric-cub.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-ulric",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "caged-arthurian",
     icon = "__pyalienlifegraphics__/graphics/icons/caged-arthurian.png",
     icon_size = 64,
@@ -1283,6 +1328,61 @@ ITEM {
     stack_size = 500
 }
 
+ITEM {
+    type = "item",
+    name = "sample-cup",
+    icon = "__pyalienlifegraphics__/graphics/icons/sample-cup.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "ulric-mk02-dna-sample",
+    icon = "__pyalienlifegraphics__/graphics/icons/syringe.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "ulric-mk03-dna-sample",
+    icon = "__pyalienlifegraphics__/graphics/icons/syringe.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "ulric-mk04-dna-sample",
+    icon = "__pyalienlifegraphics__/graphics/icons/syringe.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 100
+}
+--[[
+ITEM {
+    type = "item",
+    name = "syringe",
+    icon = "__pyalienlifegraphics__/graphics/icons/syringe.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 100
+}
+]]--
 ITEM {
     type = "item",
     name = "ulric-codex",
@@ -5056,6 +5156,70 @@ ITEM {
 	effect = { speed = {bonus = 5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_ulric,
 	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "item",
+    name = "used-ulric",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 1
+}
+
+ITEM {
+    type = "item",
+    name = "used-ulric-mk02",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 1
+}
+
+ITEM {
+    type = "item",
+    name = "used-ulric-mk03",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 1
+}
+
+ITEM {
+    type = "item",
+    name = "used-ulric-mk04",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 1
 }
 
 ITEM {
