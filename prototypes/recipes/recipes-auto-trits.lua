@@ -11,16 +11,16 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='seaweed',amount =15},
-					{name='woodseeds',amount =15},
-					{name='moondrop',amount =5},
-					{name='watersaline',amount ='*3000',return_item={name='waste-water',amount=500}},
+                    {name='seaweed',amount =30},
+					{name='woodseeds',amount =30},
+					{name='moondrop',amount =15},
+					{name='watersaline',amount ='*700',return_item={name='waste-water',amount=250}},  -- it was 300 salt/ 0.7 animal way to much now it is 70 for 1.4 animals
 				},
 			results =
 				{
-					{name='trits', probability = 0.7,amount_min =1,amount_max =1},
+					{name='trits', probability = 0.7,amount_min =2,amount_max =2},
 				},
-			crafting_speed = 150,
+			crafting_speed = 280,
 			tech = 'trits'
 		},
 		--filtration
@@ -29,40 +29,40 @@ fun.autorecipes {
 				{
                     --{name='woodseeds',amount ='R'},
                     --{name='seaweed',amount ='R'},
-					{name='filtrationmedia',amount =1},
+					{name='filtrationmedia',amount =2},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 140,
+			crafting_speed = 260,
 			tech = 'trits'
 		},
 		--sodiumalginate
 		{
 			ingredients =
 				{
-					{name='sodiumalginate',amount = 10},
+					{name='sodiumalginate',amount = 15},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 130,
+			crafting_speed = 240,
 			tech = 'trits-mk02'
 		},
 		--sponge
 		{
 			ingredients =
 				{
-					{name='sponge',amount = 2},
+					{name='sponge',amount = 5},
 				},
 			results =
 				{
 					{name='trits',amount ='R'},
-					{name='trits', probability = 0.8,amount_min =1,amount_max =1},
+					{name='trits', probability = 0.8,amount_min =2,amount_max =2},
 				},
-			crafting_speed = 120,
+			crafting_speed = 220,
 			tech = 'trits-mk02'
 		},
 		--fish egg
@@ -71,41 +71,41 @@ fun.autorecipes {
 				{
 					{name='sodiumalginate',amount ='R'},
 					{name='sponge',amount ='R'},
-					{name='fishegg',amount =15},
+					{name='fishegg',amount =25},
 
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 110,
+			crafting_speed = 200,
 			tech = 'trits-mk03'
 		},
 		--food 2 sodiumalginate
 		{
 			ingredients =
 				{
-					{name='sodiumalginate',amount =10},
+					{name='sodiumalginate',amount =20},
 				},
 			results =
 				{
 					{name='trits',amount ='R'},
-					{name='trits', probability = 0.9,amount_min =1,amount_max =1},
+					{name='trits', probability = 0.9,amount_min =2,amount_max =2},
 				},
-			crafting_speed = 100,
+			crafting_speed = 180,
 			tech = 'trits-mk04'
 		},
 		--food 2 sodiumalginate fiber
 		{
 			ingredients =
 				{
-					{name='sponge',amount = 5},
+					{name='sponge',amount = 7},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 90,
+			crafting_speed = 160,
 			tech = 'trits-mk04'
 		},
 		--gh
@@ -119,7 +119,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 30,
+			crafting_speed = 50,
 			tech = 'growth-hormone'
 		},
 		--antiviral and gh
@@ -131,9 +131,9 @@ fun.autorecipes {
 			results =
 				{
 					{name='trits', amount ='R'},
-					{name='trits', probability = 1,amount_min =1,amount_max =2},
+					{name='trits', probability = 1,amount_min =2,amount_max =3},
 				},
-			crafting_speed = 30,
+			crafting_speed = 50,
 			tech = 'antiviral'
 		},
 		--antiviral
@@ -147,7 +147,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 90,
+			crafting_speed = 160,
 			tech = 'antiviral'
 		},
 		--nanochondria
@@ -160,9 +160,9 @@ fun.autorecipes {
 			results =
 				{
 					{name='trits', amount ='R'},
-					{name='braintrits',1},
+					{name='braintrits',2},
 				},
-			crafting_speed = 90,
+			crafting_speed = 160,
 			tech = 'nanochondria'
 		},
 		--nanochondria and gh
@@ -176,7 +176,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 30,
+			crafting_speed = 50,
 			tech = 'nanochondria'
 		},
 		--bmp
@@ -190,9 +190,9 @@ fun.autorecipes {
 			results =
 				{
 					{name='braintrits', amount ='R'},
-					{name='bonetrits', 1},
+					{name='bonetrits', 2},
 				},
-			crafting_speed = 90,
+			crafting_speed = 160,
 			tech = 'bmp'
 		},
 
@@ -207,7 +207,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 30,
+			crafting_speed = 50,
 			tech = 'bmp'
 		},
 		--rna anabolic
@@ -221,9 +221,9 @@ fun.autorecipes {
 			results =
 				{
 					{name='bonetrits', amount ='R'},
-					{name='meattrits', 1},
+					{name='meattrits', 2},
 				},
-			crafting_speed = 90,
+			crafting_speed = 160,
 			tech = 'anabolic-rna'
 		},
 		--rna anabolic and gh
@@ -237,7 +237,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 30,
+			crafting_speed = 50,
 			tech = 'anabolic-rna'
 		},
 		--antitumor
@@ -251,9 +251,9 @@ fun.autorecipes {
 			results =
 				{
 					{name='meattrits', amount ='R'},
-					{name='gutstrits', 1},
+					{name='gutstrits', 2},
 				},
-			crafting_speed = 90,
+			crafting_speed = 160,
 			tech = 'antitumor'
 		},
 		--antitumor and gh
@@ -267,7 +267,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 30,
+			crafting_speed = 50,
 			tech = 'antitumor'
 		},
 		--Recombinant Ery
@@ -281,9 +281,9 @@ fun.autorecipes {
 			results =
 				{
 					{name='gutstrits', amount ='R'},
-					{name='bloodtrits', 1},
+					{name='bloodtrits', 2},
 				},
-			crafting_speed = 90,
+			crafting_speed = 160,
 			tech = 'recombinant-ery'
 		},
 		--Recombinant Ery and gh
@@ -296,7 +296,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 30,
+			crafting_speed = 50,
 			tech = 'recombinant-ery'
 		},
 		--reca
@@ -310,9 +310,9 @@ fun.autorecipes {
 			results =
 				{
 					{name='bloodtrits', amount ='R'},
-					{name='skintrits', 1},
+					{name='skintrits', 2},
 				},
-			crafting_speed = 90,
+			crafting_speed = 160,
 			tech = 'reca'
 		},
 		--reca and gh
@@ -325,7 +325,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 30,
+			crafting_speed = 50,
 			tech = 'reca'
 		},
 		--orexigenic
@@ -339,9 +339,9 @@ fun.autorecipes {
 			results =
 				{
 					{name='skintrits', amount ='R'},
-					{name='fattrits', 1},
+					{name='fattrits', 2},
 				},
-			crafting_speed = 90,
+			crafting_speed = 160,
 			tech = 'orexigenic'
 		},
 		--orexigenic and gh
@@ -354,7 +354,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 30,
+			crafting_speed = 50,
 			tech = 'orexigenic'
 		},
 	}
@@ -382,9 +382,9 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='tritscub', amount =1},
+					{name='tritscub', amount =2},
 				},
-			crafting_speed = 80,
+			crafting_speed = 120,
 			tech = 'assisted-embryology'
 		},
 		--food 1
@@ -399,7 +399,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 70,
+			crafting_speed = 110,
 			tech = 'assisted-embryology'
 		},
 		--sodiumalginate
@@ -412,7 +412,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 65,
+			crafting_speed = 100,
 			tech = 'assisted-embryology'
 		},
 		--albumin
@@ -425,7 +425,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 90,
 			tech = 'assisted-embryology'
 		},
 		--food 2
@@ -442,7 +442,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 65,
+			crafting_speed = 100,
 			tech = 'assisted-embryology'
 		},
 		--food 2 sodiumalginate
@@ -455,7 +455,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 90,
 			tech = 'trits'
 		},
 		--food 2 sodiumalginate fiber
@@ -468,7 +468,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 55,
+			crafting_speed = 80,
 			tech = 'assisted-embryology'
 		},
 		-----------------------PHEROMONES-----------------------------
@@ -485,7 +485,7 @@ fun.autorecipes {
 					{name='fishegg',amount = 'R'},
 					--{name='seaweed',amount =15},
 					{name='pheromones',amount =1},
-					{name='moondrop',amount =5},
+					{name='moondrop',amount =10},
                     --{name='woodseeds',amount =15},
 					--{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
 					--{name='sponge',amount = 1},
@@ -493,9 +493,9 @@ fun.autorecipes {
 			results =
 				{
 					{name='tritscub',amount = 'R'},
-					{name='tritscub', amount =2},
+					{name='tritscub', amount =5},
 				},
-			crafting_speed = 70,
+			crafting_speed = 140,
 			tech = 'pheromones'
 		},
 		--food 1
@@ -504,39 +504,39 @@ fun.autorecipes {
 				{
                     --{name='woodseeds',amount ='R'},
                     --{name='seaweed',amount ='R'},
-					{name='filtrationmedia',amount =2},
+					{name='filtrationmedia',amount =3},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 120,
 			tech = 'pheromones'
 		},
 		--sodiumalginate
 		{
 			ingredients =
 				{
-					{name='sodiumalginate',amount = 10},
+					{name='sodiumalginate',amount = 15},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 55,
+			crafting_speed = 110,
 			tech = 'pheromones'
 		},
 		--fiber
 		{
 			ingredients =
 				{
-					{name='sponge',amount = 5},
+					{name='sponge',amount = 10},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'pheromones'
 		},
 		--food 2
@@ -546,14 +546,14 @@ fun.autorecipes {
 					--{name='filtrationmedia',amount ='R'},
 					--{name='sodiumalginate',amount ='R'},
 					--{name='sponge',amount ='R'},
-					{name='fishegg',amount =1},
+					{name='fishegg',amount =3},
 
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'pheromones'
 		},
 		--food 2 sodiumalginate
@@ -566,7 +566,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 45,
+			crafting_speed = 90,
 			tech = 'pheromones'
 		},
 		--food 2 sodiumalginate fiber
@@ -579,7 +579,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 40,
+			crafting_speed = 80,
 			tech = 'pheromones'
 		},
 

@@ -376,9 +376,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='cottongut',amount =3},
-                    {name='fawogae',amount =10},
-					{name='waterbarrel',amount=5,return_item={name='empty-barrel',amount=5}},
+                    {name='cottongut',amount =6},
+                    {name='fawogae',amount =20},
+					{name='waterbarrel',amount=15,return_item={name='empty-barrel',amount=15}},
 					--{name='cage',amount=1},
                     {name='bedding',amount = 1},
                     {name='speaker',amount=1},
@@ -386,9 +386,9 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='phadaipup', amount =1},
+					{name='phadaipup', amount =3},
 				},
-			crafting_speed = 70,
+			crafting_speed = 140,
 			tech = 'assisted-embryology'
 		},
 		--food 1
@@ -397,40 +397,40 @@ fun.autorecipes {
 				{
                     {name='fawogae',amount ='R'},
                     {name='meat',amount ='R'},
-                    {name='meat',amount =10},
-					{name='phadaifood01',amount =1},
+                    {name='meat',amount =20},
+					{name='phadaifood01',amount =2},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 120,
 			tech = 'assisted-embryology'
 		},
 		--fawogae
 		{
 			ingredients =
 				{
-					{name='fawogae',amount = 10},
+					{name='fawogae',amount = 20},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 55,
+			crafting_speed = 110,
 			tech = 'assisted-embryology'
 		},
 		--energydrink
 		{
 			ingredients =
 				{
-					{name='energydrink',amount = 4},
+					{name='energydrink',amount = 6},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'assisted-embryology'
 		},
 		--food 2
@@ -440,40 +440,40 @@ fun.autorecipes {
 					{name='phadaifood01',amount ='R'},
 					{name='fawogae',amount ='R'},
 					{name='energydrink',amount ='R'},
-					{name='phadaifood02',amount =1},
+					{name='phadaifood02',amount =2},
 
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'assisted-embryology'
 		},
 		--food 2 fawogae
 		{
 			ingredients =
 				{
-					{name='fawogae',amount =5},
+					{name='fawogae',amount =10},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 45,
+			crafting_speed = 90,
 			tech = 'assisted-embryology'
 		},
 		--food 2 fawogae energydrink
 		{
 			ingredients =
 				{
-					{name='energydrink',amount = 4},
+					{name='energydrink',amount = 6},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 40,
+			crafting_speed = 80,
 			tech = 'assisted-embryology'
 		},
 		-----------------------PHEROMONES-----------------------------
@@ -485,16 +485,16 @@ fun.autorecipes {
 					{name='phadaifood02',amount = 'R'},
 					--{name='meat',amount =15},
 					{name='pheromones',amount =1},
-                    {name='fawogae',amount =15},
+                    {name='fawogae',amount =30},
 					--{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
 					--{name='bedding',amount = 1},
 				},
 			results =
 				{
 					{name='phadaipup',amount = 'R'},
-					{name='phadaipup', amount =2},
+					{name='phadaipup', amount =5},
 				},
-			crafting_speed = 70,
+			crafting_speed = 140,
 			tech = 'pheromones'
 		},
 		--food 1
@@ -502,39 +502,39 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='fawogae',amount ='R'},
-					{name='phadaifood01',amount =1},
+					{name='phadaifood01',amount =2},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 120,
 			tech = 'pheromones'
 		},
 		--fawogae
 		{
 			ingredients =
 				{
-					{name='fawogae',amount = 10},
+					{name='fawogae',amount = 20},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 55,
+			crafting_speed = 110,
 			tech = 'pheromones'
 		},
 		--energydrink
 		{
 			ingredients =
 				{
-					{name='energydrink',amount = 5},
+					{name='energydrink',amount = 10},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'pheromones'
 		},
 		--food 2
@@ -544,14 +544,14 @@ fun.autorecipes {
 					{name='phadaifood01',amount ='R'},
 					{name='fawogae',amount ='R'},
 					{name='energydrink',amount ='R'},
-					{name='phadaifood02',amount =1},
+					{name='phadaifood02',amount =2},
 
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'pheromones'
 		},
 		--food 2 fawogae
@@ -564,20 +564,20 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 45,
+			crafting_speed = 90,
 			tech = 'pheromones'
 		},
 		--food 2 fawogae energydrink
 		{
 			ingredients =
 				{
-					{name='energydrink',amount = 5},
+					{name='energydrink',amount = 7},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 40,
+			crafting_speed = 80,
 			tech = 'pheromones'
 		},
 	}
