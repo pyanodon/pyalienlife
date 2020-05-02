@@ -376,17 +376,17 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='fawogae',amount =15},
-                    {name='ralesiaseeds',amount =15},
-					{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
+                    {name='fawogae',amount =30},
+                    {name='ralesiaseeds',amount =30},
+					{name='waterbarrel',amount=15,return_item={name='empty-barrel',amount=15}},
 					--{name='cage',amount=1},
 					{name='bedding',amount = 2},
 				},
 			results =
 				{
-					{name='mukmouxcalf', amount =1},
+					{name='mukmouxcalf', amount =3},
 				},
-			crafting_speed = 80,
+			crafting_speed = 160,
 			tech = 'assisted-embryology'
 		},
 		--food 1
@@ -395,13 +395,13 @@ fun.autorecipes {
 				{
                     {name='ralesiaseeds',amount ='R'},
                     {name='fawogae',amount ='R'},
-					{name='mukmouxfood01',amount =1},
+					{name='mukmouxfood01',amount =2},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 70,
+			crafting_speed = 140,
 			tech = 'assisted-embryology'
 		},
 		--salt
@@ -414,20 +414,20 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 65,
+			crafting_speed = 130,
 			tech = 'assisted-embryology'
 		},
 		--fiber
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 5},
+					{name='rawfiber',amount = 8},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 120,
 			tech = 'assisted-embryology'
 		},
 		--food 2
@@ -437,40 +437,40 @@ fun.autorecipes {
 					{name='mukmouxfood01',amount ='R'},
 					{name='salt',amount ='R'},
 					{name='rawfiber',amount ='R'},
-					{name='mukmouxfood02',amount =1},
+					{name='mukmouxfood02',amount =2},
 
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 65,
+			crafting_speed = 130,
 			tech = 'assisted-embryology'
 		},
 		--food 2 salt
 		{
 			ingredients =
 				{
-					{name='salt',amount = 5},
+					{name='salt',amount = 8},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 120,
 			tech = 'assisted-embryology'
 		},
 		--food 2 salt fiber
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 5},
+					{name='rawfiber',amount = 10},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 55,
+			crafting_speed = 110,
 			tech = 'assisted-embryology'
 		},
 		-----------------------PHEROMONES-----------------------------
@@ -480,18 +480,18 @@ fun.autorecipes {
 					{name='rawfiber',amount = 'R'},
 					{name='salt',amount = 'R'},
 					{name='mukmouxfood02',amount = 'R'},
-					{name='fawogae',amount =15},
+					{name='fawogae',amount =20},
 					{name='pheromones',amount =1},
-                    {name='ralesiaseeds',amount =15},
+                    {name='ralesiaseeds',amount =20},
 					--{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
 					--{name='bedding',amount = 1},
 				},
 			results =
 				{
 					{name='mukmouxcalf',amount = 'R'},
-					{name='mukmouxcalf', amount =2},
+					{name='mukmouxcalf', amount =5},
 				},
-			crafting_speed = 70,
+			crafting_speed = 140,
 			tech = 'pheromones'
 		},
 		--food 1
@@ -500,13 +500,13 @@ fun.autorecipes {
 				{
                     {name='ralesiaseeds',amount ='R'},
                     {name='fawogae',amount ='R'},
-					{name='mukmouxfood01',amount =1},
+					{name='mukmouxfood01',amount =2},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 120,
 			tech = 'pheromones'
 		},
 		--salt
@@ -519,20 +519,20 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 55,
+			crafting_speed = 110,
 			tech = 'pheromones'
 		},
 		--fiber
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 5},
+					{name='rawfiber',amount = 10},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'pheromones'
 		},
 		--food 2
@@ -542,14 +542,14 @@ fun.autorecipes {
 					{name='mukmouxfood01',amount ='R'},
 					{name='salt',amount ='R'},
 					{name='rawfiber',amount ='R'},
-					{name='mukmouxfood02',amount =1},
+					{name='mukmouxfood02',amount =2},
 
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'pheromones'
 		},
 		--food 2 salt
@@ -562,20 +562,20 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 45,
+			crafting_speed = 90,
 			tech = 'pheromones'
 		},
 		--food 2 salt fiber
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 5},
+					{name='rawfiber',amount = 10},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 40,
+			crafting_speed = 80,
 			tech = 'pheromones'
 		},
 

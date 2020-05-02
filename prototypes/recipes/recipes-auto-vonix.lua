@@ -12,15 +12,15 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='cagedmukmoux',amount =1},
-                    {name='vonixegg',amount =1},
+                    {name='vonixegg',amount =2},
 					{name='guts',amount =10},
-					{name='waterbarrel',amount=15,return_item={name='empty-barrel',amount=15}},
+					{name='waterbarrel',amount=20,return_item={name='empty-barrel',amount=20}},
 				},
 			results =
 				{
-					{name='vonix', probability = 0.8,amount_min =1,amount_max =1},
+					{name='vonix', probability = 0.8,amount_min =2,amount_max =2},
 				},
-			crafting_speed = 150,
+			crafting_speed = 250,
 			tech = 'vonix'
 		},
 --yotoi leaves
@@ -34,22 +34,22 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 140,
+			crafting_speed = 235,
 			tech = 'vonix'
 		},
 		--bedding
 		{
 			ingredients =
 				{
-					{name='bedding',amount = 5},
+					{name='bedding',amount = 3},
 					{name='cagedauog',amount = 1},
 				},
 			results =
 				{
 					{name='vonix',amount ='R'},
-					{name='vonix', probability = 0.9,amount_min =1,amount_max =1},
+					{name='vonix', probability = 0.9,amount_min =2,amount_max =3},   --since the auog is a large price increase  (maybe i need to add another egg)
 				},
-			crafting_speed = 130,
+			crafting_speed = 220,
 			tech = 'vonix-mk02'
 		},
 		--fiber
@@ -62,7 +62,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 120,
+			crafting_speed = 210,
 			tech = 'vonix-mk03'
 		},
 		--navens
@@ -76,7 +76,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 110,
+			crafting_speed = 200,
 			tech = 'vonix-mk03'
 		},
 		--gh
@@ -90,7 +90,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 30,
+			crafting_speed = 60,
 			tech = 'growth-hormone'
 		},
 		--antiviral and gh
@@ -102,9 +102,9 @@ fun.autorecipes {
 			results =
 				{
 					{name='vonix', amount ='R'},
-					{name='vonix', probability = 1,amount_min =1,amount_max =2},
+					{name='vonix', probability = 1,amount_min =2,amount_max =3},
 				},
-			crafting_speed = 30,
+			crafting_speed = 60,
 			tech = 'antiviral'
 		},
 		--antiviral
@@ -118,7 +118,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 90,
+			crafting_speed = 180,
 			tech = 'antiviral'
 		},
 		--nanochondria
@@ -131,9 +131,9 @@ fun.autorecipes {
 			results =
 				{
 					{name='vonix', amount ='R'},
-					{name='brainvonix',1},
+					{name='brainvonix',2},
 				},
-			crafting_speed = 90,
+			crafting_speed = 180,
 			tech = 'nanochondria'
 		},
 		--nanochondria and gh
@@ -147,7 +147,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 30,
+			crafting_speed = 60,
 			tech = 'nanochondria'
 		},
 		--rna anabolic
@@ -161,9 +161,9 @@ fun.autorecipes {
 			results =
 				{
 					{name='brainvonix', amount ='R'},
-					{name='meatvonix', 1},
+					{name='meatvonix', 2},
 				},
-			crafting_speed = 90,
+			crafting_speed = 180,
 			tech = 'anabolic-rna'
 		},
 		--rna anabolic and gh
@@ -177,7 +177,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 30,
+			crafting_speed = 60,
 			tech = 'anabolic-rna'
 		},
 		--antitumor
@@ -186,14 +186,14 @@ fun.autorecipes {
 				{
 					{name='gh',amount ='R'},
 					{name='anabolicrna',amount ='R'},
-					{name='antitumor',amount =1},
+					{name='antitumor',amount =2},
 				},
 			results =
 				{
 					{name='meatvonix', amount ='R'},
 					{name='gutsvonix', 1},
 				},
-			crafting_speed = 90,
+			crafting_speed = 180,
 			tech = 'antitumor'
 		},
 		--antitumor and gh
@@ -207,7 +207,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 30,
+			crafting_speed = 60,
 			tech = 'antitumor'
 		},
 		--Recombinant Ery
@@ -221,9 +221,9 @@ fun.autorecipes {
 			results =
 				{
 					{name='gutsvonix', amount ='R'},
-					{name='bloodvonix', 1},
+					{name='bloodvonix', 2},
 				},
-			crafting_speed = 90,
+			crafting_speed = 180,
 			tech = 'recombinant-ery'
 		},
 		--Recombinant Ery and gh
@@ -236,7 +236,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 30,
+			crafting_speed = 60,
 			tech = 'recombinant-ery'
 		},
 		--reca
@@ -250,9 +250,9 @@ fun.autorecipes {
 			results =
 				{
 					{name='bloodvonix', amount ='R'},
-					{name='skinvonix', 1},
+					{name='skinvonix', 2},
 				},
-			crafting_speed = 90,
+			crafting_speed = 180,
 			tech = 'reca'
 		},
 		--reca and gh
@@ -265,7 +265,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 30,
+			crafting_speed = 60,
 			tech = 'reca'
 		},
 		--orexigenic
@@ -279,9 +279,9 @@ fun.autorecipes {
 			results =
 				{
 					{name='skinvonix', amount ='R'},
-					{name='fatvonix', 1},
+					{name='fatvonix', 2},
 				},
-			crafting_speed = 90,
+			crafting_speed = 180,
 			tech = 'orexigenic'
 		},
 		--orexigenic and gh
@@ -294,13 +294,13 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 30,
+			crafting_speed = 60,
 			tech = 'orexigenic'
 		},
 	}
 }
 
-------------------CUB MAKER------------------
+------------------EGG MAKER------------------
 
 fun.autorecipes {
     name = 'vonix-cub',
@@ -316,13 +316,13 @@ fun.autorecipes {
                     {name='cagedmukmoux',amount =1},
 					{name='cagedauog',amount =1},
 					{name='meat',amount =5},
-					{name='waterbarrel',amount=20,return_item={name='empty-barrel',amount=20}},
+					{name='waterbarrel',amount=50,return_item={name='empty-barrel',amount=50}},
 				},
 			results =
 				{
-					{name='vonixegg', probability = 0.7,amount_min =1,amount_max =3},
+					{name='vonixegg', probability = 0.7,amount_min =6,amount_max =8},
 				},
-			crafting_speed = 70,
+			crafting_speed = 140,
 			tech = 'vonix'
 		},
 		--guts
@@ -337,20 +337,20 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 120,
 			tech = 'vonix'
 		},
 		--bedding
 		{
 			ingredients =
 				{
-					{name='bedding',amount = 10},
+					{name='bedding',amount = 3},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 55,
+			crafting_speed = 110,
 			tech = 'vonix-mk02'
 		},
 		--fiber
@@ -363,21 +363,21 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'vonix-mk03'
 		},
 		--navens
 		{
 			ingredients =
 				{
-					{name='navens',amount =5},
+					{name='navens',amount =10},
 
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 40,
+			crafting_speed = 80,
 			tech = 'vonix-mk03'
 		},
 
@@ -397,9 +397,9 @@ fun.autorecipes {
 			results =
 				{
 					{name='vonixegg',amount = 'R'},
-					{name='vonixegg', amount =2},
+					{name='vonixegg', amount =10},
 				},
-			crafting_speed = 70,
+			crafting_speed = 140,
 			tech = 'pheromones'
 		},
 		--yotoi leaves
@@ -414,20 +414,20 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 120,
 			tech = 'pheromones'
 		},
 		--bedding
 		{
 			ingredients =
 				{
-					{name='bedding',amount = 10},
+					{name='bedding',amount = 3},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 55,
+			crafting_speed = 110,
 			tech = 'pheromones'
 		},
 		--fiber
@@ -440,7 +440,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'pheromones'
 		},
 		--navens
@@ -454,7 +454,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 40,
+			crafting_speed = 80,
 			tech = 'pheromones'
 		},
 	}
