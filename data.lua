@@ -95,6 +95,7 @@ require('prototypes/technologies/biopolymer-clusters')
 require('prototypes/technologies/ctc')
 require('prototypes/technologies/cottongut')
 require('prototypes/technologies/compost')
+require('prototypes/technologies/arqad')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -287,6 +288,7 @@ require('prototypes/buildings/compost-plant-mk01')
 require('prototypes/buildings/compost-plant-mk02')
 require('prototypes/buildings/compost-plant-mk03')
 require('prototypes/buildings/compost-plant-mk04')
+require('prototypes/buildings/arqad-hive-mk01')
 
 --weapons/defenses
 --require('prototypes/weapons/turrets/gun-turret-mk01')
