@@ -1,41 +1,42 @@
 RECIPE {
     type = "recipe",
-    name = "arqad-hive-mk01",
+    name = "arqad-hive-mk03",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
         {"glass", 50},
-        {"automated-factory-mk01", 1},
-        {"gasifier", 1},
-        {"aluminium-plate", 30},
-        {"steel-plate", 40},
-        {"iron-gear-wheel", 50},
-        {"pipe", 20},
+        {"arqad-hive-mk02", 1},
+        {"nichrome", 20},
+        {"sc-unit", 10},
+        {"ticocr-alloy", 40},
+        {"neuromorphic-chip", 40},
+        {"stainless-steel", 40},
+        {"molybdenum-plate", 20},
     },
     results = {
-        {"arqad-hive-mk01", 1}
+        {"arqad-hive-mk03", 1}
     }
-}:add_unlock("arqad")
+}:add_unlock("arqad-mk03")
 
 ITEM {
     type = "item",
-    name = "arqad-hive-mk01",
-    icon = "__pyalienlifegraphics3__/graphics/icons/arqad-hive-mk01.png",
+    name = "arqad-hive-mk03",
+    icon = "__pyalienlifegraphics3__/graphics/icons/arqad-hive-mk03.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-buildings-mk03",
     order = "d",
-    place_result = "arqad-hive-mk01",
+    place_result = "arqad-hive-mk03",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "arqad-hive-mk01",
-    icon = "__pyalienlifegraphics3__/graphics/icons/arqad-hive-mk01.png",
+    name = "arqad-hive-mk03",
+    icon = "__pyalienlifegraphics3__/graphics/icons/arqad-hive-mk03.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "arqad-hive-mk01"},
+    minable = {mining_time = 0.5, result = "arqad-hive-mk03"},
     fast_replaceable_group = "arqad-hive",
     max_health = 400,
     corpse = "big-remnants",
@@ -44,7 +45,7 @@ ENTITY {
     selection_box = {{-6.0, -6.0}, {6.0, 6.0}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 10
+        module_slots = 17
     },
     allowed_effects = {"speed","productivity"},
     crafting_categories = {"arqad"},
@@ -54,7 +55,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = 0.5,
     },
-    energy_usage = "350kW",
+    energy_usage = "750kW",
     ingredient_count = 20,
     animation = {
         layers = {
@@ -78,7 +79,7 @@ ENTITY {
                 shift = util.by_pixel(0, -32),
                 priority = "low",
                 --animation_speed = 0.75,
-				tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+				tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
             },
             --DOME
             {

@@ -8131,6 +8131,28 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "used-comb",
+    icon = "__pyalienlifegraphics3__/graphics/icons/used-comb.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arqad",
+    order = "t",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "earth-bee-sample",
+    icon = "__pyalienlifegraphics3__/graphics/icons/earth-bee-sample.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-samples",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
     name = "filled-comb",
     icon = "__pyalienlifegraphics3__/graphics/icons/filled-comb.png",
     icon_size = 64,

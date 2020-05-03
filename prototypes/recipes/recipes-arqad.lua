@@ -12,7 +12,7 @@ RECIPE {
         {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'cdna', amount = 3},
         {type = 'item', name = 'arqad-codex', amount = 1},
-        --{type = 'item', name = 'earth-bee-sample', amount = 1},
+        {type = 'item', name = 'earth-bee-sample', amount = 1},
         {type = 'fluid', name = 'water', amount = 1000}, --add alien sample from pyALiens mod here.
     },
     results = {
@@ -36,10 +36,10 @@ RECIPE {
         {type = 'item', name = 'arqad-codex', amount = 1},
     },
 }:add_unlock("arqad")
---[[
+
 RECIPE {
     type = 'recipe',
-    name = 'earth-arqad-sample',
+    name = 'earth-bee-sample',
     category = 'data-array',
     enabled = false,
     energy_required = 300,
@@ -52,50 +52,56 @@ RECIPE {
         {type = 'item', name = 'earth-bee-sample', amount = 1},
     },
 }:add_unlock("arqad")
-]]--
---[[
-----food----
+
+
+----combs----
 RECIPE {
     type = 'recipe',
-    name = 'arqad-food-01',
+    name = 'empty-comb',
     category = 'crafting-with-fluid',
     enabled = false,
-    energy_required = 10,
+    energy_required = 3,
     ingredients = {
-        {type = 'item', name = 'plastic-bar', amount = 2},
-        {type = 'item', name = 'fawogae', amount = 5},
-        {type = 'item', name = 'seaweed', amount = 5},
-        {type = 'item', name = 'moss', amount = 5},
-        {type = 'fluid', name = 'steam', amount = 100},
+        {type = 'item', name = 'tailings-dust', amount = 15},
+        {type = 'item', name = 'coal-dust', amount = 4},
+        {type = 'item', name = 'sand', amount = 5},
+        {type = 'item', name = 'ash', amount = 5},
+        {type = 'fluid', name = 'creosote', amount = 30},
     },
     results = {
-        {type = 'item', name = 'arqad-food-01', amount = 3},
+        {type = 'item', name = 'empty-comb', amount = 1},
     },
-}:add_unlock("food-mk01")
+}:add_unlock("arqad")
 
 RECIPE {
     type = 'recipe',
-    name = 'arqad-food-02',
-    category = 'crafting-with-fluid',
+    name = 'empty-comb-2',
+    category = 'casting',
     enabled = false,
-    energy_required = 10,
+    energy_required = 6,
     ingredients = {
-        {type = 'item', name = 'plastic-bar', amount = 2},
-        {type = 'item', name = 'fawogae', amount = 5},
-        {type = 'item', name = 'bio-sample', amount = 5},
-        {type = 'item', name = 'ralesias', amount = 5},
-        {type = 'item', name = 'casein', amount = 10},
-        {type = 'item', name = 'wood-seeds', amount = 1},
-        {type = 'item', name = 'ash', amount = 10},
-        {type = 'item', name = 'moss', amount = 10},
-        {type = 'item', name = 'seaweed', amount = 5},
+        {type = 'fluid', name = 'wax', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'empty-comb', amount = 8},
+    },
+}:add_unlock("arqad-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'wax',
+    category = 'hpf',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'used-comb', amount = 5},
         {type = 'fluid', name = 'steam', amount = 100},
     },
     results = {
-        {type = 'item', name = 'arqad-food-02', amount = 5},
+        {type = 'fluid', name = 'wax', amount = 50},
     },
-}:add_unlock("food-mk02")
-]]--
+}:add_unlock("arqad-mk02"):replace_ingredient("steam","hot-air")
+
 ---breeding---
 
 ---pup maker---
@@ -194,7 +200,7 @@ RECIPE {
         {type = 'item', name = 'arqad-maggot', amount = 25},
         {type = 'item', name = 'crude-oil-barrel', amount = 250},
         {type = 'item', name = 'raw-coal', amount = 5},
-        {type = 'item', name = 'mutant-enzymes-barrel', amount = 50},
+        {type = 'item', name = 'mutant-enzymes-barrel', amount = 2},
         },
     results = {
         {type = 'item', name = 'arqad-mk02', probability = 0.005, amount = 1},
@@ -228,7 +234,7 @@ RECIPE {
     --main_product = "arqad-mk02",
     icons =
         {
-            {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
+            {icon = "__pyalienlifegraphics3__/graphics/icons/ulric.png"},
             {icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.25,shift = {-7.5,-7.5}},
             {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', scale = 0.25,shift = {-7.5,-7.5}},
         },
