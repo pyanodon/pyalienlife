@@ -143,6 +143,7 @@ RECIPE('zipir-reef-mk03'):add_ingredient({type = "item", name = "carbon-nanotube
 RECIPE('bio-printer-mk03'):add_ingredient({type = "item", name = "graphene-roll", amount = 30}):add_ingredient({type = "item", name = "biopolymer", amount = 15})
 RECIPE('ez-ranch-mk03'):add_ingredient({type = "item", name = "paramagnetic-material", amount = 25}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 20})
 RECIPE('research-center-mk03'):add_ingredient({type = "item", name = "phosphate-glass", amount = 40}):add_ingredient({type = "item", name = "biopolymer", amount = 20})
+RECIPE('arqad-hive-mk03'):add_ingredient({type = "item", name = "superconductor", amount = 5}):add_ingredient({type = "item", name = "phosphate-glass", amount = 50}):add_ingredient({type = "item", name = "heavy-fermion", amount = 15})
 
 
 
@@ -190,7 +191,7 @@ RECIPE('bio-printer-mk04'):add_ingredient({type = "item", name = "harmonic-absor
 RECIPE('ez-ranch-mk04'):add_ingredient({type = "item", name = "intelligent-unit", amount = 30}):add_ingredient({type = "item", name = "quantum-vortex-storage-system", amount = 10}):add_ingredient({type = "item", name = "phosphate-glass", amount = 100})
 RECIPE('mega-farm'):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 10}):add_ingredient({type = "item", name = "harmonic-absorber", amount = 30}):add_ingredient({type = "item", name = "intelligent-unit", amount = 50})
 RECIPE('research-center-mk04'):add_ingredient({type = "item", name = "quantum-vortex-storage-system", amount = 10}):add_ingredient({type = "item", name = "aerogel", amount = 100}):add_ingredient({type = "item", name = "intelligent-unit", amount = 50})
-
+RECIPE('arqad-hive-mk04'):add_ingredient({type = "item", name = "phosphate-glass", amount = 100}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 30})
 
 
 
@@ -282,7 +283,14 @@ fun.results_replacer("dhilmos-sex-01", "dirty-water", "waste-water")
 
 fun.results_replacer("fertilizer", "py-fertilizer", "fertilizer")
 fun.results_replacer("log7-2", "log", "log",8)
---fun.results_replacer("urea", "urea", "urea",5)
+
+fun.results_replacer("rennea-mk02-seed-seperation", "light-oil", "tall-oil")
+fun.results_replacer("rennea-mk03-seed-seperation", "light-oil", "tall-oil")
+fun.results_replacer("rennea-mk04-seed-seperation", "light-oil", "tall-oil")
+fun.results_replacer("rennea-mk02-seed-seperation", "tar", "black-liquour")
+fun.results_replacer("rennea-mk03-seed-seperation", "tar", "black-liquour")
+fun.results_replacer("rennea-mk04-seed-seperation", "tar", "black-liquour")
+
 
 RECIPE('methane'):add_unlock('coal-processing-1')
 RECIPE('methane'):add_ingredient('moondrop-seeds')

@@ -609,6 +609,51 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "ulric-cub-mk02",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/ulric-cub.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-ulric",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "ulric-cub-mk03",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/ulric-cub.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-ulric",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "ulric-cub-mk04",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/ulric-cub.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-ulric",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "caged-arthurian",
     icon = "__pyalienlifegraphics__/graphics/icons/caged-arthurian.png",
     icon_size = 64,
@@ -1283,6 +1328,61 @@ ITEM {
     stack_size = 500
 }
 
+ITEM {
+    type = "item",
+    name = "sample-cup",
+    icon = "__pyalienlifegraphics__/graphics/icons/sample-cup.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "ulric-mk02-dna-sample",
+    icon = "__pyalienlifegraphics__/graphics/icons/syringe.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "ulric-mk03-dna-sample",
+    icon = "__pyalienlifegraphics__/graphics/icons/syringe.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "ulric-mk04-dna-sample",
+    icon = "__pyalienlifegraphics__/graphics/icons/syringe.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 100
+}
+--[[
+ITEM {
+    type = "item",
+    name = "syringe",
+    icon = "__pyalienlifegraphics__/graphics/icons/syringe.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 100
+}
+]]--
 ITEM {
     type = "item",
     name = "ulric-codex",
@@ -2144,6 +2244,107 @@ ITEM {
 ITEM {
     type = "item",
     name = "rennea-seeds",
+    icon = "__pyalienlifegraphics__/graphics/icons/rennea-seeds.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-rennea",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "rennea-seeds-mk02",
+    icon = "__pyalienlifegraphics__/graphics/icons/rennea-seeds.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-rennea",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "digested-rennea-seeds-mk02",
+    icon = "__pyalienlifegraphics__/graphics/icons/mip/rennea-manure-01.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-rennea",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "abraded-rennea-seeds-mk02",
+    icon = "__pyalienlifegraphics__/graphics/icons/rennea-seeds.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-rennea",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "rennea-seeds-mk03",
+    icon = "__pyalienlifegraphics__/graphics/icons/rennea-seeds.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-rennea",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "digested-rennea-seeds-mk03",
+    icon = "__pyalienlifegraphics__/graphics/icons/mip/rennea-manure-01.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-rennea",
+    order = "h",
+    stack_size = 500
+}
+
+
+ITEM {
+    type = "item",
+    name = "abraded-rennea-seeds-mk03",
+    icon = "__pyalienlifegraphics__/graphics/icons/rennea-seeds.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-rennea",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "rennea-seeds-mk04",
+    icon = "__pyalienlifegraphics__/graphics/icons/rennea-seeds.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-rennea",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "digested-rennea-seeds-mk04",
+    icon = "__pyalienlifegraphics__/graphics/icons/mip/rennea-manure-01.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-rennea",
+    order = "h",
+    stack_size = 500
+}
+
+
+ITEM {
+    type = "item",
+    name = "abraded-rennea-seeds-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/rennea-seeds.png",
 	icon_size = 64,
     flags = {},
@@ -4790,6 +4991,10 @@ local alien_life_limitations_ulric =
 	{
     }
 
+    local alien_life_limitations_arqad =
+	{
+    }
+
     local alien_life_limitations_cridren =
 	{
     }
@@ -4892,7 +5097,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "u-a",
     stack_size = 25,
-	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 2}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_ulric,
 	limitation_message_key = "Its full"
 }
@@ -4912,7 +5117,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "u-b",
     stack_size = 25,
-	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 3}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_ulric,
 	limitation_message_key = "Its full"
 }
@@ -4932,7 +5137,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "u-c",
     stack_size = 25,
-	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 4}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_ulric,
 	limitation_message_key = "Its full"
 }
@@ -4952,9 +5157,73 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "u-d",
     stack_size = 25,
-	effect = { speed = {bonus = 35}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_ulric,
 	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "item",
+    name = "used-ulric",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 1
+}
+
+ITEM {
+    type = "item",
+    name = "used-ulric-mk02",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 1
+}
+
+ITEM {
+    type = "item",
+    name = "used-ulric-mk03",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 1
+}
+
+ITEM {
+    type = "item",
+    name = "used-ulric-mk04",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 1
 }
 
 ITEM {
@@ -5692,7 +5961,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ren-a",
     stack_size = 50,
-	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = .32}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_rennea,
 	limitation_message_key = "Its full"
 }
@@ -5712,7 +5981,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ren-b",
     stack_size = 50,
-	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = .63}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_rennea,
 	limitation_message_key = "Its full"
 }
@@ -5732,7 +6001,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ren-c",
     stack_size = 50,
-	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 1.25}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_rennea,
 	limitation_message_key = "Its full"
 }
@@ -5752,7 +6021,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ren-d",
     stack_size = 50,
-	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 2.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_rennea,
 	limitation_message_key = "Its full"
 }
@@ -6227,7 +6496,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "d-a",
     stack_size = 25,
-	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 0.8}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_dingrits,
     limitation_message_key = "Its full",
     fuel_category = 'dingrits',
@@ -6250,7 +6519,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "d-b",
     stack_size = 25,
-	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 1.6}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_dingrits,
     limitation_message_key = "Its full",
     fuel_category = 'dingrits',
@@ -6273,7 +6542,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "d-c",
     stack_size = 25,
-	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 3.2}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_dingrits,
     limitation_message_key = "Its full",
     fuel_category = 'dingrits',
@@ -6296,7 +6565,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "d-d",
     stack_size = 25,
-	effect = { speed = {bonus = 35}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 6.4}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_dingrits,
     limitation_message_key = "Its full",
     fuel_category = 'dingrits',
@@ -7717,6 +7986,199 @@ ITEM {
 	limitation = alien_life_limitations_cottongut,
 	limitation_message_key = "Its full"
 }
+----ARQAD
+
+ITEM {
+    type = "module",
+    name = "arqad",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png"},
+        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "arqad",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "q-a",
+    stack_size = 25,
+	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_arqad,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "arqad-mk02",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "arqad",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "q-b",
+    stack_size = 25,
+	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_arqad,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "arqad-mk03",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "arqad",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "q-c",
+    stack_size = 25,
+	effect = { speed = {bonus = 25}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_arqad,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "arqad-mk04",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "arqad",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "q-d",
+    stack_size = 25,
+	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_arqad,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "item",
+    name = "arqad-egg",
+    icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arqad",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "arqad-maggot",
+    icon = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png",
+    icon_size = 64,
+    icon_mipmaps = 7,
+    pictures =
+    {
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-02.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-03.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-04.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-05.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-06.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-07.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-08.png",   scale = 0.25, mipmap_count = 1 },
+
+    },
+    flags = {},
+    subgroup = "py-alienlife-arqad",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "empty-comb",
+    icon = "__pyalienlifegraphics3__/graphics/icons/empty-comb.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arqad",
+    order = "t",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "filled-comb",
+    icon = "__pyalienlifegraphics3__/graphics/icons/filled-comb.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arqad",
+    order = "t",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "guts-arqad",
+    icon = "__pyalienlifegraphics3__/graphics/icons/guts-arqad.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arqad",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "meat-arqad",
+    icon = "__pyalienlifegraphics3__/graphics/icons/meat-arqad.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arqad",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "blood-arqad",
+    icon = "__pyalienlifegraphics3__/graphics/icons/blood-arqad.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arqad",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "chitin-arqad",
+    icon = "__pyalienlifegraphics3__/graphics/icons/chitin-arqad.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arqad",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "arqad-codex",
+    icon = "__pyalienlifegraphics3__/graphics/icons/arqad-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 100
+}
 
 ---replicators----
 
@@ -8005,6 +8467,10 @@ data:extend(
   {
     type = "module-category",
     name = "bhoddos"
+  },
+  {
+    type = "module-category",
+    name = "arqad"
   },
   {
     type = "module-category",

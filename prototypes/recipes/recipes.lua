@@ -363,17 +363,17 @@ RECIPE {
     name = 'resveratrol',
     category = 'biofactory',
     enabled = false,
-    energy_required = 20,
+    energy_required = 30,
     ingredients = {
         {type = 'item', name = 'yotoi-fruit', amount = 10},
-        {type = 'item', name = 'nexelit-plate', amount = 2},
-        {type = 'item', name = 'chromium', amount = 1},
-        {type = 'item', name = 'flask', amount = 1},
-        {type = 'item', name = 'moss', amount = 15},
-        {type = 'fluid', name = 'organic-solvent', amount = 70}
+        {type = 'item', name = 'nexelit-plate', amount = 4},
+        {type = 'item', name = 'chromium', amount = 5},
+        {type = 'item', name = 'flask', amount = 2},
+        {type = 'item', name = 'moss', amount = 20},
+        {type = 'fluid', name = 'organic-solvent', amount = 100}
     },
     results = {
-        {type = 'item', name = 'resveratrol', amount = 1}
+        {type = 'item', name = 'resveratrol', amount = 10}
     }
 }:add_unlock('genetics-mk02')
 
@@ -1975,7 +1975,7 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = 'item', name = 'biomass', amount = 15},
+        {type = 'item', name = 'biomass', amount = 20},
     },
     results = {
         {type = 'item', name = 'coke', amount = 5},

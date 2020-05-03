@@ -373,16 +373,16 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='fawogae',amount =15},
-                    {name='ralesiaseeds',amount =15},
-					{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
+                    {name='fawogae',amount =3.},
+                    {name='ralesiaseeds',amount =30},
+					{name='waterbarrel',amount=15,return_item={name='empty-barrel',amount=15}},
 					{name='bedding',amount = 1},
 				},
 			results =
 				{
-					{name='ulriccub',amount = 1},
+					{name='ulriccub',amount = 3},
 				},
-			crafting_speed = 70,
+			crafting_speed = 140,
 			tech = 'assisted-embryology'
 		},
 		--food 1
@@ -391,13 +391,13 @@ fun.autorecipes {
 				{
                     {name='ralesiaseeds',amount ='R'},
                     {name='fawogae',amount ='R'},
-					{name='ulricfood01',amount =1},
+					{name='ulricfood01',amount =2},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 120,
 			tech = 'assisted-embryology'
 		},
 		--salt
@@ -410,20 +410,20 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 55,
+			crafting_speed = 110,
 			tech = 'assisted-embryology'
 		},
 		--fiber
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 5},
+					{name='rawfiber',amount =10},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'assisted-embryology'
 		},
 		--food 2
@@ -433,14 +433,14 @@ fun.autorecipes {
 					{name='ulricfood01',amount ='R'},
 					{name='salt',amount ='R'},
 					{name='rawfiber',amount ='R'},
-					{name='ulricfood02',amount =1},
+					{name='ulricfood02',amount =2},
 
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'assisted-embryology'
 		},
 		--food 2 salt
@@ -453,20 +453,20 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 45,
+			crafting_speed = 90,
 			tech = 'assisted-embryology'
 		},
 		--food 2 salt fiber
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 5},
+					{name='rawfiber',amount = 10},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 40,
+			crafting_speed = 80,
 			tech = 'assisted-embryology'
 		},
 		-----------------------PHEROMONES-----------------------------
@@ -476,18 +476,18 @@ fun.autorecipes {
 					{name='rawfiber',amount = 'R'},
 					{name='salt',amount = 'R'},
 					{name='ulricfood02',amount = 'R'},
-					{name='fawogae',amount =15},
+					{name='fawogae',amount =30},
 					{name='pheromones',amount =1},
-                    {name='ralesiaseeds',amount =15},
+                    {name='ralesiaseeds',amount =30},
 					--{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
 					--{name='bedding',amount = 1},
 				},
 			results =
 				{
 					{name='ulriccub',amount = 'R'},
-					{name='ulriccub', amount =2},
+					{name='ulriccub', amount =5},
 				},
-			crafting_speed = 70,
+			crafting_speed = 140,
 			tech = 'pheromones'
 		},
 		--food 1
@@ -496,13 +496,13 @@ fun.autorecipes {
 				{
                     {name='ralesiaseeds',amount ='R'},
                     {name='fawogae',amount ='R'},
-					{name='ulricfood01',amount =1},
+					{name='ulricfood01',amount =2},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 120,
 			tech = 'pheromones'
 		},
 		--salt
@@ -515,20 +515,20 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 55,
+			crafting_speed = 110,
 			tech = 'pheromones'
 		},
 		--fiber
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 5},
+					{name='rawfiber',amount = 10},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'pheromones'
 		},
 		--food 2
@@ -538,14 +538,14 @@ fun.autorecipes {
 					{name='ulricfood01',amount ='R'},
 					{name='salt',amount ='R'},
 					{name='rawfiber',amount ='R'},
-					{name='ulricfood02',amount =1},
+					{name='ulricfood02',amount =2},
 
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'pheromones'
 		},
 		--food 2 salt
@@ -558,20 +558,20 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 45,
+			crafting_speed = 90,
 			tech = 'pheromones'
 		},
 		--food 2 salt fiber
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 5},
+					{name='rawfiber',amount = 10},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 40,
+			crafting_speed = 80,
 			tech = 'pheromones'
 		},
 	}

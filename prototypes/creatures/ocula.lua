@@ -111,7 +111,7 @@ ITEM{
       },
       },
       vision_distance = 30,
-      movement_speed = 0.07,
+      movement_speed = 0.17,
       distance_per_frame = 0.13,
       pollution_to_join_attack = 4,
       distraction_cooldown = 300,
@@ -166,6 +166,16 @@ ITEM{
           }
         }
       },
-      render_layer = 'air-object'
+      render_layer = 'air-object',
+      working_sound =
+      {
+        aggregation =
+        {
+          max_count = 2,
+          remove = true
+        },
+        filename = "__pyalienlifegraphics3__/sounds/ocula-walk.ogg",
+        volume = 0.65
+      }
       }
 })

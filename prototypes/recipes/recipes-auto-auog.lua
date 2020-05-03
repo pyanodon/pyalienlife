@@ -374,16 +374,16 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='biomass',amount =15},
-                    {name='moss',amount =10},
-					{name='waterbarrel',amount=4,return_item={name='empty-barrel',amount=4}},
-					{name='bedding',amount = 3},
+                    {name='biomass',amount =30},
+                    {name='moss',amount =20},
+					{name='waterbarrel',amount=10,return_item={name='empty-barrel',amount=10}},
+					{name='bedding',amount = 1},
 				},
 			results =
 				{
-					{name='auogpup', probability = 0.7,amount_min =1,amount_max =1},
+					{name='auogpup', probability = 0.8,amount_min =3,amount_max =3},
 				},
-			crafting_speed = 70,
+			crafting_speed = 140,
 			tech = 'assisted-embryology'
 		},
 		--food 1
@@ -391,39 +391,39 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='biomass',amount ='R'},
-					{name='auogfood01',amount =1},
+					{name='auogfood01',amount =2},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 120,
 			tech = 'assisted-embryology'
 		},
 		--saps
 		{
 			ingredients =
 				{
-					{name='saps',amount = 10},
+					{name='saps',amount = 15},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 55,
+			crafting_speed = 110,
 			tech = 'assisted-embryology'
 		},
 		--fiber
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 5},
+					{name='rawfiber',amount = 10},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'assisted-embryology'
 		},
 		--food 2
@@ -433,14 +433,14 @@ fun.autorecipes {
 					{name='auogfood01',amount ='R'},
 					{name='saps',amount ='R'},
 					{name='rawfiber',amount ='R'},
-					{name='auogfood02',amount =1},
+					{name='auogfood02',amount =2},
 
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'assisted-embryology'
 		},
 		--food 2 saps
@@ -453,20 +453,20 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 45,
+			crafting_speed = 90,
 			tech = 'assisted-embryology'
 		},
 		--food 2 saps fiber
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 5},
+					{name='rawfiber',amount = 10},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 40,
+			crafting_speed = 80,
 			tech = 'assisted-embryology'
 		},
 		-----------------------PHEROMONES-----------------------------
@@ -476,7 +476,7 @@ fun.autorecipes {
 					{name='rawfiber',amount = 'R'},
 					{name='saps',amount = 'R'},
 					{name='auogfood02',amount = 'R'},
-					{name='biomass',amount =15},
+					{name='biomass',amount =30},
 					{name='pheromones',amount =1},
 					--{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
 					--{name='bedding',amount = 1},
@@ -484,9 +484,9 @@ fun.autorecipes {
 			results =
 				{
 					{name='auogpup',amount = 'R'},
-					{name='auogpup', amount =2},
+					{name='auogpup', amount =5},
 				},
-			crafting_speed = 70,
+			crafting_speed = 140,
 			tech = 'pheromones'
 		},
 		--food 1
@@ -495,39 +495,39 @@ fun.autorecipes {
 				{
 
                     {name='biomass',amount ='R'},
-					{name='auogfood01',amount =1},
+					{name='auogfood01',amount =2},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 120,
 			tech = 'pheromones'
 		},
 		--saps
 		{
 			ingredients =
 				{
-					{name='saps',amount = 10},
+					{name='saps',amount = 15},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 55,
+			crafting_speed = 110,
 			tech = 'pheromones'
 		},
 		--fiber
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 5},
+					{name='rawfiber',amount = 10},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'pheromones'
 		},
 		--food 2
@@ -537,14 +537,14 @@ fun.autorecipes {
 					{name='auogfood01',amount ='R'},
 					{name='saps',amount ='R'},
 					{name='rawfiber',amount ='R'},
-					{name='auogfood02',amount =1},
+					{name='auogfood02',amount =2},
 
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'pheromones'
 		},
 		--food 2 saps
@@ -557,20 +557,20 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 45,
+			crafting_speed = 90,
 			tech = 'pheromones'
 		},
 		--food 2 saps fiber
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 5},
+					{name='rawfiber',amount = 10},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 40,
+			crafting_speed = 80,
 			tech = 'pheromones'
 		},
 	}

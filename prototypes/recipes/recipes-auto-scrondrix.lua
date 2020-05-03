@@ -344,17 +344,17 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='fawogae',amount =15},
-					{name='woodseeds',amount =15},
-					{name='meat',amount =5},
-					{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
+                    {name='fawogae',amount =20},
+					{name='woodseeds',amount =20},
+					{name='meat',amount =10},
+					{name='waterbarrel',amount=20,return_item={name='empty-barrel',amount=20}},
 					{name='bedding',amount = 1},
 				},
 			results =
 				{
-					{name='scrondrixcub',amount = 1},
+					{name='scrondrixcub',amount = 3},
 				},
-			crafting_speed = 70,
+			crafting_speed = 140,
 			tech = 'assisted-embryology'
 		},
 		--yotoi leaves
@@ -369,47 +369,47 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 120,
 			tech = 'assisted-embryology'
 		},
 		--salt
 		{
 			ingredients =
 				{
-					{name='salt',amount = 10},
+					{name='salt',amount = 15},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 55,
+			crafting_speed = 110,
 			tech = 'assisted-embryology'
 		},
 		--fiber
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 10},
+					{name='rawfiber',amount = 20},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'assisted-embryology'
 		},
 		--navens
 		{
 			ingredients =
 				{
-					{name='navens',amount =5},
+					{name='navens',amount =7},
 
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'assisted-embryology'
 		},
 
@@ -429,9 +429,9 @@ fun.autorecipes {
 			results =
 				{
 					{name='scrondrixcub',amount = 'R'},
-					{name='scrondrixcub', amount =2},
+					{name='scrondrixcub', amount =5},
 				},
-			crafting_speed = 70,
+			crafting_speed = 140,
 			tech = 'pheromones'
 		},
 		--yotoi leaves
@@ -446,33 +446,33 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 6120,
 			tech = 'pheromones'
 		},
 		--salt
 		{
 			ingredients =
 				{
-					{name='salt',amount = 10},
+					{name='salt',amount = 15},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 55,
+			crafting_speed = 110,
 			tech = 'pheromones'
 		},
 		--fiber
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 5},
+					{name='rawfiber',amount = 10},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed =100,
 			tech = 'pheromones'
 		},
 		--navens
@@ -486,7 +486,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'pheromones'
 		},
 	}
