@@ -461,6 +461,8 @@ require('prototypes/recipes/recipes-cottongut-science-red')
 require('prototypes/recipes/recipes-cottongut-science-green')
 require('prototypes/recipes/recipes-cottongut-science-blue')
 require('prototypes/recipes/recipes-cottongut-science-py')
+require('prototypes/recipes/recipes-arqad')
+
 
 --gunpowder poo
 --require('prototypes/recipes/recipes-vrauk-products')
