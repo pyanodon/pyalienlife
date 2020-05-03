@@ -207,6 +207,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-arqad",
+        group = "py-alienlife",
+        order = "e-t"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-plants",
         group = "py-alienlife",
         order = "f"

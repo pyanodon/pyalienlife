@@ -88,6 +88,7 @@ local function create_slaughterhouse_animal_table(gui, player)
 		"kmauts",
 		"dingrits",
 		"xeno",
+		"arqad",
 		"cridren",
 		"antelope",
 		"trits",
@@ -206,6 +207,7 @@ local farm_buildings = {
 	"vonix",
 	"vrauks",
 	"xenopen",
+	"arqad",
 	"xyhiphoe",
 	"yaedols",
 	"yotoi",
@@ -232,6 +234,7 @@ local animal_farm_buildings = {
 	["vonix"] = true,
 	["vrauks"] = true,
 	["xenopen"] = true,
+	["arqad"] = true,
 	["xyhiphoe"] = true,
 	["yaedols"] = true,
 	["zipir"] = true
