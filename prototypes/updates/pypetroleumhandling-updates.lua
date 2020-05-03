@@ -22,11 +22,12 @@ RECIPE('production-science-01'):replace_ingredient("water","crude-oil")
 RECIPE('chemical-science-01'):replace_ingredient("water","crude-oil")
 RECIPE('harvester'):replace_ingredient("small-parts-01","small-parts-03")
 RECIPE('seeds-extract-01'):add_ingredient({type = "item", name = "guar-seeds", amount = 100})
-
+RECIPE('arqad-jelly'):replace_ingredient("active-carbon","carbon-black"):replace_ingredient("oleochemicals-barrel","btx-barrel")
 
 fun.results_replacer("crude-from-manure", "crude-oil", "scrude")
 fun.results_replacer("crude-from-manure", "ash", "soot")
 fun.results_replacer("guar-separation", "organics", "biomass")
+fun.results_replacer("bitumen-comb", "tar", "bitumen")
 
 ----EXCLUSIVE RECIPES----
 

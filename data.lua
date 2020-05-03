@@ -347,6 +347,8 @@ require("prototypes/fluids/milk")
 require("prototypes/fluids/autoantigens")
 require('prototypes/fluids/cadaveric-arum-cum')
 require('prototypes/fluids/wax')
+require('prototypes/fluids/arqad-jelly')
+require('prototypes/fluids/bee-venom')
 
 --(( RECIPES ))--
 require('prototypes/items/items')

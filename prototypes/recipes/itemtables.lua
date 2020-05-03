@@ -332,6 +332,7 @@ items.inputs.gutsarqad = {'guts-arqad', 1}
 items.inputs.meatarqad = {'meat-arqad', 1}
 items.inputs.chitinarqad = {'chitin-arqad', 1}
 items.inputs.arqad = {'arqad', 1}
+items.inputs.venom = {'bee-venom', 1}
 
 items.outputs = items.inputs
 --can put output replacements below here
