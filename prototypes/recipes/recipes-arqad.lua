@@ -234,7 +234,7 @@ RECIPE {
     --main_product = "arqad-mk02",
     icons =
         {
-            {icon = "__pyalienlifegraphics3__/graphics/icons/ulric.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
             {icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.25,shift = {-7.5,-7.5}},
             {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', scale = 0.25,shift = {-7.5,-7.5}},
         },
