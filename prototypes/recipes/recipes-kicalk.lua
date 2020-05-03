@@ -66,7 +66,7 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "item", name = "kicalk", amount = 3},
+        {type = "item", name = "kicalk", amount = 2},
     },
     results = {
         {type = "item", name = "kicalk-seeds", amount = 5}

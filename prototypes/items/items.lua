@@ -8070,6 +8070,21 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "arqad-egg-nest",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
+            {icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.25,shift = {-7.5,-7.5}},
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arqad",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "arqad-egg",
     icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png",
     icon_size = 64,
