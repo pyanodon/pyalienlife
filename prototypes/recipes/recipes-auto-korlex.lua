@@ -378,18 +378,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='tuuphra',amount =5},
-                    {name='kicalk',amount =1},
-                    {name='bhoddos',amount =1},
-					{name='waterbarrel',amount=8,return_item={name='empty-barrel',amount=8}},
+                    {name='tuuphra',amount =6},
+                    {name='kicalk',amount =3},
+                    {name='bhoddos',amount =2},
+					{name='waterbarrel',amount=20,return_item={name='empty-barrel',amount=20}},
 					--{name='cage',amount=1},
-					{name='bedding',amount = 2},
+					{name='bedding',amount = 1},
 				},
 			results =
 				{
-					{name='korlexpup', amount =1},
+					{name='korlexpup', amount =3},
 				},
-			crafting_speed = 80,
+			crafting_speed = 160,
 			tech = 'assisted-embryology'
 		},
 		--food 1
@@ -399,39 +399,39 @@ fun.autorecipes {
                     {name='bhoddos',amount ='R'},
                     {name='kicalk',amount ='R'},
                     {name='tuuphra',amount ='R'},
-					{name='korlexfood01',amount =1},
+					{name='korlexfood01',amount =2},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 70,
+			crafting_speed = 140,
 			tech = 'assisted-embryology'
 		},
 		--ash
 		{
 			ingredients =
 				{
-					{name='ash',amount = 10},
+					{name='ash',amount = 20},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 65,
+			crafting_speed = 130,
 			tech = 'assisted-embryology'
 		},
 		--fish
 		{
 			ingredients =
 				{
-					{name='fish',amount = 5},
+					{name='fish',amount = 10},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 120,
 			tech = 'assisted-embryology'
 		},
 		--food 2
@@ -441,14 +441,14 @@ fun.autorecipes {
 					{name='korlexfood01',amount ='R'},
 					{name='ash',amount ='R'},
 					{name='fish',amount ='R'},
-					{name='korlexfood02',amount =1},
+					{name='korlexfood02',amount =2},
 
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 65,
+			crafting_speed = 130,
 			tech = 'assisted-embryology'
 		},
 		--food 2 ash
@@ -461,20 +461,20 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 120,
 			tech = 'assisted-embryology'
 		},
 		--food 2 ash fish
 		{
 			ingredients =
 				{
-					{name='fish',amount = 5},
+					{name='fish',amount = 10},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 55,
+			crafting_speed = 110,
 			tech = 'assisted-embryology'
 		},
 		-----------------------PHEROMONES-----------------------------
@@ -484,19 +484,19 @@ fun.autorecipes {
 					{name='fish',amount = 'R'},
 					{name='ash',amount = 'R'},
                     {name='korlexfood02',amount = 'R'},
-                    {name='kicalk',amount =1},
-					{name='tuuphra',amount =5},
+                    {name='kicalk',amount =3},
+					{name='tuuphra',amount =6},
 					{name='pheromones',amount =1},
-                    {name='bhoddos',amount =1},
+                    {name='bhoddos',amount =2},
 					--{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
 					--{name='bedding',amount = 1},
 				},
 			results =
 				{
 					{name='korlexpup',amount = 'R'},
-					{name='korlexpup', amount =2},
+					{name='korlexpup', amount =5},
 				},
-			crafting_speed = 70,
+			crafting_speed = 140,
 			tech = 'pheromones'
 		},
 		--food 1
@@ -506,39 +506,39 @@ fun.autorecipes {
                     {name='bhoddos',amount ='R'},
                     {name='tuuphra',amount ='R'},
                     {name='kicalk',amount ='R'},
-					{name='korlexfood01',amount =1},
+					{name='korlexfood01',amount =2},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 120,
 			tech = 'pheromones'
 		},
 		--ash
 		{
 			ingredients =
 				{
-					{name='ash',amount = 10},
+					{name='ash',amount = 20},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 55,
+			crafting_speed = 110,
 			tech = 'pheromones'
 		},
 		--fish
 		{
 			ingredients =
 				{
-					{name='fish',amount = 5},
+					{name='fish',amount = 10},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'pheromones'
 		},
 		--food 2
@@ -548,14 +548,14 @@ fun.autorecipes {
 					{name='korlexfood01',amount ='R'},
 					{name='ash',amount ='R'},
 					{name='fish',amount ='R'},
-					{name='korlexfood02',amount =1},
+					{name='korlexfood02',amount =2},
 
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'pheromones'
 		},
 		--food 2 ash
@@ -568,20 +568,20 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 45,
+			crafting_speed = 60,
 			tech = 'pheromones'
 		},
 		--food 2 ash fish
 		{
 			ingredients =
 				{
-					{name='fish',amount = 5},
+					{name='fish',amount = 10},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 40,
+			crafting_speed = 80,
 			tech = 'pheromones'
 		},
 

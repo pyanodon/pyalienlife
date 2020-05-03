@@ -145,6 +145,10 @@ data:extend {
     },
     {
         type = "recipe-category",
+        name = "arqad"
+    },
+    {
+        type = "recipe-category",
         name = "korlex"
     },
     {
@@ -245,8 +249,6 @@ data:extend {
         type = "fuel-category",
         name = "bio-container"
     },
-
-    ------ores------
 	{
         type = "resource-category",
         name = "ore-bioreserve"
@@ -339,5 +341,9 @@ data:extend {
     {
         type = "recipe-category",
         name = "slaughterhouse-cottongut"
+    },
+    {
+        type = "recipe-category",
+        name = "slaughterhouse-arqad"
     },
 }

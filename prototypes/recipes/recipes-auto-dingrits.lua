@@ -317,17 +317,17 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='cagedscondrix',amount =1},
-                    {name='yotoiseeds',amount =15},
-					{name='waterbarrel',amount=5,return_item={name='empty-barrel',amount=5}},
+                    {name='cagedscondrix',amount =3},
+                    {name='yotoiseeds',amount =30},
+					{name='waterbarrel',amount=15,return_item={name='empty-barrel',amount=15}},
 					--{name='cage',amount=1},
 					{name='bedding',amount = 1},
 				},
 			results =
 				{
-					{name='dingritscub', amount =1},
+					{name='dingritscub', amount =3},
 				},
-			crafting_speed = 70,
+			crafting_speed = 150,
 			tech = 'assisted-embryology'
 		},
 		--food 1
@@ -336,119 +336,14 @@ fun.autorecipes {
 				{
                     {name='yotoiseeds',amount ='R'},
                     {name='cagedscondrix',amount ='R'},
-					{name='dingritsfood01',amount =1},
+					{name='dingritsfood01',amount =2},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 120,
 			tech = 'assisted-embryology'
-		},
-		--yaedols
-		{
-			ingredients =
-				{
-					{name='yaedols',amount = 5},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 55,
-			tech = 'assisted-embryology'
-		},
-		--yotoileaves
-		{
-			ingredients =
-				{
-					{name='yotoileaves',amount = 10},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 50,
-			tech = 'assisted-embryology'
-		},
-		--food 2
-		{
-			ingredients =
-				{
-					{name='dingritsfood01',amount ='R'},
-					{name='yaedols',amount ='R'},
-					{name='yotoileaves',amount ='R'},
-					{name='dingritsfood02',amount =1},
-
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 50,
-			tech = 'assisted-embryology'
-		},
-		--food 2 yaedols
-		{
-			ingredients =
-				{
-					{name='yaedols',amount =5},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 45,
-			tech = 'assisted-embryology'
-		},
-		--food 2 yaedols yotoileaves
-		{
-			ingredients =
-				{
-					{name='yotoileaves',amount = 10},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 40,
-			tech = 'assisted-embryology'
-		},
-		-----------------------PHEROMONES-----------------------------
-		{
-			ingredients =
-				{
-					{name='yotoileaves',amount = 'R'},
-					{name='yaedols',amount = 'R'},
-					{name='dingritsfood02',amount = 'R'},
-					{name='cagedscondrix',amount =1},
-					{name='pheromones',amount =1},
-                    {name='yotoiseeds',amount =15},
-					--{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
-					--{name='bedding',amount = 1},
-				},
-			results =
-				{
-					{name='dingritscub',amount = 'R'},
-					{name='dingritscub', amount =2},
-				},
-			crafting_speed = 70,
-			tech = 'pheromones'
-		},
-		--food 1
-		{
-			ingredients =
-				{
-                    {name='yotoiseeds',amount ='R'},
-                    {name='cagedscondrix',amount ='R'},
-					{name='dingritsfood01',amount =1},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 60,
-			tech = 'pheromones'
 		},
 		--yaedols
 		{
@@ -460,20 +355,125 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 55,
+			crafting_speed = 100,
+			tech = 'assisted-embryology'
+		},
+		--yotoileaves
+		{
+			ingredients =
+				{
+					{name='yotoileaves',amount = 15},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 90,
+			tech = 'assisted-embryology'
+		},
+		--food 2
+		{
+			ingredients =
+				{
+					{name='dingritsfood01',amount ='R'},
+					{name='yaedols',amount ='R'},
+					{name='yotoileaves',amount ='R'},
+					{name='dingritsfood02',amount =2},
+
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 90,
+			tech = 'assisted-embryology'
+		},
+		--food 2 yaedols
+		{
+			ingredients =
+				{
+					{name='yaedols',amount =10},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 85,
+			tech = 'assisted-embryology'
+		},
+		--food 2 yaedols yotoileaves
+		{
+			ingredients =
+				{
+					{name='yotoileaves',amount = 15},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 75,
+			tech = 'assisted-embryology'
+		},
+		-----------------------PHEROMONES-----------------------------
+		{
+			ingredients =
+				{
+					{name='yotoileaves',amount = 'R'},
+					{name='yaedols',amount = 'R'},
+					{name='dingritsfood02',amount = 'R'},
+					{name='cagedscondrix',amount =2},
+					{name='pheromones',amount =1},
+                    {name='yotoiseeds',amount =30},
+					--{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
+					--{name='bedding',amount = 1},
+				},
+			results =
+				{
+					{name='dingritscub',amount = 'R'},
+					{name='dingritscub', amount =5},
+				},
+			crafting_speed = 140,
+			tech = 'pheromones'
+		},
+		--food 1
+		{
+			ingredients =
+				{
+                    {name='yotoiseeds',amount ='R'},
+                    {name='cagedscondrix',amount ='R'},
+					{name='dingritsfood01',amount =2},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 120,
+			tech = 'pheromones'
+		},
+		--yaedols
+		{
+			ingredients =
+				{
+					{name='yaedols',amount = 15},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 110,
 			tech = 'pheromones'
 		},
 		--yotoileaves
 		{
 			ingredients =
 				{
-					{name='yotoileaves',amount = 5},
+					{name='yotoileaves',amount = 10},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'pheromones'
 		},
 		--food 2
@@ -483,14 +483,14 @@ fun.autorecipes {
 					{name='dingritsfood01',amount ='R'},
 					{name='yaedols',amount ='R'},
 					{name='yotoileaves',amount ='R'},
-					{name='dingritsfood02',amount =1},
+					{name='dingritsfood02',amount =2},
 
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'pheromones'
 		},
 		--food 2 yaedols
@@ -503,20 +503,20 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 45,
+			crafting_speed = 90,
 			tech = 'pheromones'
 		},
 		--food 2 yaedols yotoileaves
 		{
 			ingredients =
 				{
-					{name='yotoileaves',amount = 5},
+					{name='yotoileaves',amount = 10},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 40,
+			crafting_speed = 80,
 			tech = 'pheromones'
 		},
 	}

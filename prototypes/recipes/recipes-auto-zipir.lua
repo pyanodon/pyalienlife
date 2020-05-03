@@ -334,16 +334,16 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='pressuredwater',amount ='*30',return_item={name='waste-water',amount=100}},
-					{name='stonewool',amount =3},
-					{name='fish',amount =3},
-                    {name='phytoplankton',amount ='*20'},
+                    {name='pressuredwater',amount ='*60',return_item={name='waste-water',amount=200}},
+					{name='stonewool',amount =2},
+					{name='fish',amount =5},
+                    {name='phytoplankton',amount ='*100'},
 				},
 			results =
 				{
-                    {name='zipiregg', probability = 1,amount_min =1,amount_max =3},
+                    {name='zipiregg', probability = 1,amount_min =5,amount_max =7},  -- maybe 8 for the max if you feel generous 
 				},
-			crafting_speed = 70,
+			crafting_speed = 140,
 			tech = 'zipir'
 		},
 		--fawogae
@@ -352,13 +352,13 @@ fun.autorecipes {
 				{
                     --{name='woodseeds',amount ='R'},
                     --{name='cagedmukmoux',amount ='R'},
-					{name='fawogaesubstrate',amount =10},
+					{name='fawogaesubstrate',amount =15},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 120,
 			tech = 'zipir-mk02'
 		},
 		--water saline
@@ -366,26 +366,26 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='pressuredwater',amount = 'R'},
-					{name='watersaline',amount = '*10'},
+					{name='watersaline',amount = '*20'},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 55,
+			crafting_speed = 110,
 			tech = 'zipir-mk03'
 		},
 		--food1
 		{
 			ingredients =
 				{
-					{name='zipirfood01',amount = 4},
+					{name='zipirfood01',amount = 6},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'zipir-mk03'
 		},
 		--food 2
@@ -393,14 +393,14 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='zipirfood01',amount = 'R'},
-                    {name='zipirfood02',amount = 4},
+                    {name='zipirfood02',amount = 3},
 
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 40,
+			crafting_speed = 80,
 			tech = 'zipir-mk04'
 		},
 
@@ -416,17 +416,17 @@ fun.autorecipes {
                     {name='fawogaesubstrate',amount = 'R'},
                     {name='watersaline',amount = 'R'},
 
-                    {name='pressuredwater',amount ='*30',return_item={name='waste-water',amount=100}},
-					{name='stonewool',amount =3},
-                    {name='phytoplankton',amount ='*50'},
+                    {name='pressuredwater',amount ='*90',return_item={name='waste-water',amount=300}},
+					{name='stonewool',amount =2},
+                    {name='phytoplankton',amount ='*200'},
 					{name='pheromones',amount =1},
 				},
 			results =
 				{
 					{name='zipiregg',amount = 'R'},
-					{name='zipiregg', amount =3},
+					{name='zipiregg', amount =10},
 				},
-			crafting_speed = 70,
+			crafting_speed = 200,
 			tech = 'pheromones'
 		},
 		--fawogae
@@ -435,14 +435,14 @@ fun.autorecipes {
 				{
                     --{name='woodseeds',amount ='R'},
                     --{name='cagedmukmoux',amount ='R'},
-					{name='fawogaesubstrate',amount =10},
-					{name='fish',amount =3},
+					{name='fawogaesubstrate',amount =30},
+					{name='fish',amount =10},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 180,
 			tech = 'pheromones'
 		},
 		--water saline
@@ -450,26 +450,26 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='pressuredwater',amount = 'R'},
-					{name='watersaline',amount = '*10'},
+					{name='watersaline',amount = '*30'},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 55,
+			crafting_speed = 160,
 			tech = 'pheromones'
 		},
 		--food1
 		{
 			ingredients =
 				{
-					{name='zipirfood01',amount = 4},
+					{name='zipirfood01',amount = 10},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 140,
 			tech = 'pheromones'
 		},
 		--food 2
@@ -477,14 +477,14 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='zipirfood01',amount = 'R'},
-                    {name='zipirfood02',amount = 4},
+                    {name='zipirfood02',amount = 8},
 
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 40,
+			crafting_speed = 120,
 			tech = 'pheromones'
 		},
 	}

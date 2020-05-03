@@ -253,17 +253,17 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='fishfood1',amount =1},
-                    {name='phytoplankton',amount =50},
-					{name='pressuredwater',amount ='*300',return_item={name='waste-water',amount= 200}},
+                    {name='fishfood1',amount =2},
+                    {name='phytoplankton',amount =150},
+					{name='pressuredwater',amount ='*1000',return_item={name='waste-water',amount= 650}},
 					--{name='cage',amount=1},
-					{name='saps',amount = 5},
+					{name='saps',amount = 10},
 				},
 			results =
 				{
-					{name='xyhiphoecub', amount =1},
+					{name='xyhiphoecub', amount =4},
 				},
-			crafting_speed = 80,
+			crafting_speed = 160,
 			tech = 'assisted-embryology'
 		},
 		--food 1
@@ -278,33 +278,33 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 70,
+			crafting_speed = 140,
 			tech = 'assisted-embryology'
 		},
 		--bloodmeal
 		{
 			ingredients =
 				{
-					{name='bloodmeal',amount = 5},
+					{name='bloodmeal',amount = 10},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 65,
+			crafting_speed = 130,
 			tech = 'assisted-embryology'
 		},
 		--albumin
 		{
 			ingredients =
 				{
-					{name='albumin',amount = 5},
+					{name='albumin',amount = 7},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 100,
 			tech = 'assisted-embryology'
 		},
 		--food 2
@@ -314,40 +314,40 @@ fun.autorecipes {
 					--{name='filtrationmedia',amount ='R'},
 					--{name='bloodmeal',amount ='R'},
 					--{name='albumin',amount ='R'},
-					{name='fishegg',amount =5},
+					{name='fishegg',amount =15},
 
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 65,
+			crafting_speed = 130,
 			tech = 'assisted-embryology'
 		},
 		--food 2 bloodmeal
 		{
 			ingredients =
 				{
-					{name='fishfood2',amount ='*1'},
+					{name='fishfood2',amount ='*2'},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 120,
 			tech = 'assisted-embryology'
 		},
 		--food 2 bloodmeal fiber
 		{
 			ingredients =
 				{
-					{name='fawogae',amount = 5},
+					{name='fawogae',amount = 15},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 55,
+			crafting_speed = 110,
 			tech = 'assisted-embryology'
 		},
 		-----------------------PHEROMONES-----------------------------
@@ -370,9 +370,9 @@ fun.autorecipes {
 			results =
 				{
 					{name='xyhiphoecub',amount = 'R'},
-					{name='xyhiphoecub', amount =2},
+					{name='xyhiphoecub', amount =6},
 				},
-			crafting_speed = 70,
+			crafting_speed = 140,
 			tech = 'pheromones'
 		},
 		--food 1
@@ -387,33 +387,33 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 120,
 			tech = 'pheromones'
 		},
 		--bloodmeal
 		{
 			ingredients =
 				{
-					{name='bloodmeal',amount = 5},
+					{name='bloodmeal',amount = 10},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 55,
+			crafting_speed = 110,
 			tech = 'pheromones'
 		},
 		--fiber
 		{
 			ingredients =
 				{
-					{name='saps',amount = 5},
+					{name='saps',amount = 10},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 100,
 			tech = 'pheromones'
 		},
 		--food 2
@@ -423,40 +423,40 @@ fun.autorecipes {
 					--{name='filtrationmedia',amount ='R'},
 					--{name='bloodmeal',amount ='R'},
 					--{name='saps',amount ='R'},
-					{name='fishegg',amount =5},
+					{name='fishegg',amount =10},
 
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 50,
+			crafting_speed = 90,
 			tech = 'pheromones'
 		},
 		--food 2 bloodmeal
 		{
 			ingredients =
 				{
-					{name='fishfood2',amount =1},
+					{name='fishfood2',amount =2},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 45,
+			crafting_speed = 80,
 			tech = 'pheromones'
 		},
 		--food 2 bloodmeal fiber
 		{
 			ingredients =
 				{
-					{name='fawogae',amount = 5},
+					{name='fawogae',amount = 15},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 40,
+			crafting_speed = 70,
 			tech = 'pheromones'
 		},
 

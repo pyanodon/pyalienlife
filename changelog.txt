@@ -1,4 +1,29 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.7
+Date: 2020-04-30
+  Changes:
+    - Added Ulric breeding recipes.
+    - Added new Ulric graphics.
+    - Adjusted Ulric modules.
+    - Fixed trits graphics bug on rotation.
+---------------------------------------------------------------------------------------------------
+Version: 1.6.6
+Date: 2020-04-28
+  Changes:
+    - Fix for pyHT independence.
+---------------------------------------------------------------------------------------------------
+Version: 1.6.5
+Date: 2020-04-28
+  Changes:
+    - Balanced rennea
+    - Added Ocula
+---------------------------------------------------------------------------------------------------
+Version: 1.6.4
+Date: 2020-04-28
+  Changes:
+    - rebalanced the module speed bonus and machine crafting speeds for rennea and dingrits to avooid module speed bonus cap
+    - added breeding recipes for rennea modules
+---------------------------------------------------------------------------------------------------
 Version: 1.6.3
 Date: 2020-04-26
   Changes:

@@ -30,7 +30,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'glass', amount = 2},
         {type = 'item', name = 'small-lamp', amount = 5},
-        {type = 'item', name = 'electronic-circuit', amount = 50},
+        {type = 'item', name = 'electronic-circuit', amount = 10},
         {type = 'item', name = 'tinned-cable', amount = 20},
     },
     results = {
@@ -47,7 +47,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'steel-chest', amount = 1},
         {type = 'item', name = 'automation-science-pack', amount = 100},
-        {type = 'item', name = 'auog-codex', amount = 1},
+        {type = 'item', name = 'auog-codex', amount = 5},
     },
     results = {
         {type = 'item', name = 'earth-bear-sample', amount = 1},
@@ -107,15 +107,13 @@ RECIPE {
     name = 'auog-mature-01',
     category = 'creature-chamber',
     enabled = false,
-    energy_required = 60,
+    energy_required = 100,
     ingredients = {
-        {type = 'item', name = 'auog-pup', amount = 1},
-        {type = 'item', name = 'auog-codex', amount = 1},
-        {type = 'item', name = 'earth-bear-sample', amount = 1},
+        {type = 'item', name = 'auog-pup', amount = 10},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
     },
     results = {
-        {type = 'item', name = 'auog', amount = 1},
+        {type = 'item', name = 'auog', amount = 10},
     },
     main_product = "auog",
     subgroup = 'py-alienlife-auog',
@@ -127,17 +125,15 @@ RECIPE {
     name = 'auog-mature-02',
     category = 'creature-chamber',
     enabled = false,
-    energy_required = 20,
+    energy_required = 40,
     ingredients = {
-        {type = 'item', name = 'auog-pup', amount = 1},
+        {type = 'item', name = 'auog-pup', amount = 10},
         {type = 'item', name = 'gh', amount = 1},
-        {type = 'item', name = 'auog-codex', amount = 1},
-        {type = 'item', name = 'resveratrol', amount = 1},
-        {type = 'item', name = 'earth-bear-sample', amount = 1},
+        {type = 'item', name = 'resveratrol', amount = 2},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
     },
     results = {
-        {type = 'item', name = 'auog', amount = 2},
+        {type = 'item', name = 'auog', amount = 20},
     },
     --main_product = "caged-auog",
     subgroup = 'py-alienlife-auog',

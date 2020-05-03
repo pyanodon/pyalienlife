@@ -312,43 +312,43 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='cagedmukmoux',amount =1},
+                    {name='cagedmukmoux',amount =2},
                     {name='bones',amount ='R'},
                     {name='guts',amount = 'R'},
-					{name='waterbarrel',amount=5,return_item={name='empty-barrel',amount=5}},
-					{name='fish',amount = 10},
+					{name='waterbarrel',amount=15,return_item={name='empty-barrel',amount=15}},
+					{name='fish',amount = 25},
 				},
 			results =
 				{
-					{name='xenoegg', amount =1},
+					{name='xenoegg', amount =3},
 				},
-			crafting_speed = 100,
+			crafting_speed = 200,
 			tech = 'assisted-embryology'
 		},
 		--bones
 		{
 			ingredients =
 				{
-					{name='bones',amount =15},
+					{name='bones',amount =20},
 				},
 			results =
 				{
-                    {name='xenoegg', amount ="+1"},
+                    {name='xenoegg', amount ="+2"},
 				},
-			crafting_speed = 90,
+			crafting_speed = 180,
 			tech = 'assisted-embryology'
 		},
 		--fiber
 		{
 			ingredients =
 				{
-					{name='guts',amount = 5},
+					{name='guts',amount = 10},
 				},
 			results =
 				{
                     {name='xenoegg', amount ="+1"},
 				},
-			crafting_speed = 80,
+			crafting_speed = 170,
 			tech = 'assisted-embryology'
 		},
 		--ulric
@@ -357,27 +357,27 @@ fun.autorecipes {
 				{
                     {name='meat',amount ='R'},
                     {name='guts',amount = 'R'},
-					{name='cagedulric',amount =1},
+					{name='cagedulric',amount =2},
 
 				},
 			results =
 				{
-                    {name='xenoegg', amount ="+1"},
+                    {name='xenoegg', amount ="+4"},
 				},
-			crafting_speed = 75,
+			crafting_speed = 140,
 			tech = 'assisted-embryology'
 		},
 		--ulric salt fiber
 		{
 			ingredients =
 				{
-					{name='guts',amount = 5},
+					{name='guts',amount = 10},
 				},
 			results =
 				{
                     {name='xenoegg', amount ="+1"},
 				},
-			crafting_speed = 65,
+			crafting_speed = 130,
 			tech = 'assisted-embryology'
 		},
 		-----------------------PHEROMONES-----------------------------
@@ -394,9 +394,9 @@ fun.autorecipes {
 			results =
 				{
 					{name='xenoegg',amount = 'R'},
-					{name='xenoegg', amount =6},
+					{name='xenoegg', amount =15},
 				},
-			crafting_speed = 70,
+			crafting_speed =140,
 			tech = 'pheromones'
 		},
 		--meat
@@ -409,20 +409,20 @@ fun.autorecipes {
 				{
                     {name='xenoegg', amount ="+1"},
 				},
-			crafting_speed = 60,
+			crafting_speed = 115,
 			tech = 'pheromones'
 		},
 		--guts
 		{
 			ingredients =
 				{
-					{name='guts',amount = 5},
+					{name='guts',amount = 10},
 				},
 			results =
 				{
                     {name='xenoegg', amount ="+1"},
 				},
-			crafting_speed = 50,
+			crafting_speed = 110,
 			tech = 'pheromones'
 		},
 		--ulric
@@ -431,27 +431,27 @@ fun.autorecipes {
 				{
 					{name='meat',amount ='R'},
 					{name='guts',amount ='R'},
-					{name='cagedulric',amount =1},
+					{name='cagedulric',amount =2},
 
 				},
 			results =
 				{
-                    {name='xenoegg', amount ="+1"},
+                    {name='xenoegg', amount ="+3"},
 				},
-			crafting_speed = 50,
+			crafting_speed = 90,
 			tech = 'pheromones'
 		},
 		--ulric salt fiber
 		{
 			ingredients =
 				{
-					{name='guts',amount = 5},
+					{name='guts',amount = 10},
 				},
 			results =
 				{
                     {name='xenoegg', amount ="+1"},
 				},
-			crafting_speed = 40,
+			crafting_speed = 80,
 			tech = 'pheromones'
 		},
 

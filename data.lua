@@ -95,6 +95,7 @@ require('prototypes/technologies/biopolymer-clusters')
 require('prototypes/technologies/ctc')
 require('prototypes/technologies/cottongut')
 require('prototypes/technologies/compost')
+require('prototypes/technologies/arqad')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -274,7 +275,7 @@ require('prototypes/buildings/mega-farm')
 require('prototypes/buildings/vat-brain')
 require("prototypes/buildings/harvester")
 require("prototypes/buildings/collector")
---require("prototypes/buildings/ipod")
+require("prototypes/buildings/ipod")
 require('prototypes/buildings/prandium-lab-mk01')
 require('prototypes/buildings/prandium-lab-mk02')
 require('prototypes/buildings/prandium-lab-mk03')
@@ -287,6 +288,7 @@ require('prototypes/buildings/compost-plant-mk01')
 require('prototypes/buildings/compost-plant-mk02')
 require('prototypes/buildings/compost-plant-mk03')
 require('prototypes/buildings/compost-plant-mk04')
+require('prototypes/buildings/arqad-hive-mk01')
 
 --weapons/defenses
 --require('prototypes/weapons/turrets/gun-turret-mk01')
@@ -303,7 +305,7 @@ require('prototypes/creatures/nuka-caravan')
 require('prototypes/creatures/dingrido')
 require('prototypes/creatures/crawdad')
 require('prototypes/creatures/phadaisus')
---require('prototypes/creatures/ocula')
+require('prototypes/creatures/ocula')
 --require('prototypes/creatures/clone-1')
 
 --(( FLUIDS ))--
@@ -652,6 +654,12 @@ local biomass_convertion =
         ['meat-xeno'] = {item_amount = 1, biomass_amount = 20},
         ['sulfuric-xeno'] = {item_amount = 1, biomass_amount = 20},
         ['xeno-egg'] = {item_amount = 1, biomass_amount = 5},
+        ['guts-arqad'] = {item_amount = 1, biomass_amount = 5},
+        ['chitin-arqad'] = {item_amount = 1, biomass_amount = 5},
+        ['meat-arqad'] = {item_amount = 1, biomass_amount = 5},
+        ['blood-arqad'] = {item_amount = 1, biomass_amount = 5},
+        ['arqad-egg'] = {item_amount = 1, biomass_amount = 5},
+        ['arqad-maggot'] = {item_amount = 1, biomass_amount = 5},
         ['blood-zipir'] = {item_amount = 1, biomass_amount = 25},
         ['brain-zipir'] = {item_amount = 1, biomass_amount = 25},
         ['fat-zipir'] = {item_amount = 1, biomass_amount = 25},
@@ -871,6 +879,10 @@ local biomass_convertion =
         ['xeno-mk02'] = {item_amount = 1, biomass_amount = 20},
         ['xeno-mk03'] = {item_amount = 1, biomass_amount = 30},
         ['xeno-mk04'] = {item_amount = 1, biomass_amount = 40},
+        ['arqad'] = {item_amount = 1, biomass_amount = 10},
+        ['arqad-mk02'] = {item_amount = 1, biomass_amount = 20},
+        ['arqad-mk03'] = {item_amount = 1, biomass_amount = 30},
+        ['arqad-mk04'] = {item_amount = 1, biomass_amount = 40},
         ['yotoi'] = {item_amount = 1, biomass_amount = 15},
         ['yotoi-mk02'] = {item_amount = 1, biomass_amount = 25},
         ['yotoi-mk03'] = {item_amount = 1, biomass_amount = 35},
