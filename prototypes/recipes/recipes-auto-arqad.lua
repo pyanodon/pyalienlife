@@ -584,6 +584,23 @@ fun.autorecipes {
 			icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
 			icon_size = 32,
 		},
+		--venom
+		{
+			ingredients =
+				{
+					--{name='arqad',amount=1},
+				},
+			results =
+				{
+					{name='arthropodblood', amount ='R'},
+					{name='venom', amount =3},
+				},
+			crafting_speed = 15,
+			tech = 'advanced-rendering',
+			name = 'Extract arqad venom',
+			icon = "__pyalienlifegraphics3__/graphics/icons/bee-venom.png",
+			icon_size = 64,
+		},
 		--meat arqad rendering
 		{
 			ingredients =
@@ -593,7 +610,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='arthropodblood', amount ='R'},
+					{name='venom', amount ='R'},
 					{name='meat', amount =5},
 				},
 			crafting_speed = 15,

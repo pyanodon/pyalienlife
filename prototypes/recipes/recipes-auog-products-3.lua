@@ -111,7 +111,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='manure',amount ='+2'}
+					{name='manure',amount ='+4'}
 				},
 				crafting_speed = 20,
 				tech = 'explosive-diarrhea',

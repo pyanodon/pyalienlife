@@ -75,6 +75,22 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
+    name = 'bitumen-comb',
+    category = 'advanced-crafting',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'filled-comb', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'used-comb', amount = 1},
+        {type = 'fluid', name = 'tar', amount = 50},
+    },
+    main_product = "tar",
+}:add_unlock("arqad")
+
+RECIPE {
+    type = 'recipe',
     name = 'empty-comb-2',
     category = 'casting',
     enabled = false,
@@ -92,7 +108,7 @@ RECIPE {
     name = 'wax',
     category = 'hpf',
     enabled = false,
-    energy_required = 5,
+    energy_required = 10,
     ingredients = {
         {type = 'item', name = 'used-comb', amount = 5},
         {type = 'fluid', name = 'steam', amount = 100},
@@ -102,7 +118,41 @@ RECIPE {
     },
 }:add_unlock("arqad-mk02"):replace_ingredient("steam","hot-air")
 
----breeding---
+---products---
+
+RECIPE {
+    type = 'recipe',
+    name = 'wax-2',
+    category = 'arqad',
+    enabled = false,
+    energy_required = 50,
+    ingredients = {
+        {type = 'item', name = 'ralesia', amount = 3},
+        {type = 'item', name = 'bhoddos-spore', amount = 2},
+        {type = 'item', name = 'oleochemicals-barrel', amount = 3},
+    },
+    results = {
+        {type = 'item', name = 'wax-barrel', amount = 3},
+    },
+    --main_product = "wax-barrel",
+}:add_unlock("arqad")
+
+RECIPE {
+    type = 'recipe',
+    name = 'arqad-jelly',
+    category = 'arqad',
+    enabled = false,
+    energy_required = 65,
+    ingredients = {
+        {type = 'item', name = 'rennea', amount = 1},
+        {type = 'item', name = 'active-carbon', amount = 1},
+        {type = 'item', name = 'oleochemicals-barrel', amount = 3},
+    },
+    results = {
+        {type = 'item', name = 'arqad-jelly-barrel', amount = 3},
+    },
+    --main_product = "arqad-jelly-barrel",
+}:add_unlock("arqad-mk02")
 
 ---pup maker---
 
