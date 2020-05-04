@@ -83,13 +83,13 @@ RECIPE {
 
 table.insert(data.raw.lab.lab.inputs, 'py-science-pack')
 
-data.raw.recipe['cottongut-science-red-seeds'].ingredients = table.deepcopy(data.raw.recipe['automation-science-pack'].ingredients)
+--data.raw.recipe['cottongut-science-red-seeds'].ingredients = table.deepcopy(data.raw.recipe['automation-science-pack'].ingredients)
 
-data.raw.recipe['cottongut-science-green-seeds'].ingredients = table.deepcopy(data.raw.recipe['logistic-science-pack'].ingredients)
+--data.raw.recipe['cottongut-science-green-seeds'].ingredients = table.deepcopy(data.raw.recipe['logistic-science-pack'].ingredients)
 
-data.raw.recipe['cottongut-science-blue-seeds'].ingredients = table.deepcopy(data.raw.recipe['chemical-science-pack'].ingredients)
+--data.raw.recipe['cottongut-science-blue-seeds'].ingredients = table.deepcopy(data.raw.recipe['chemical-science-pack'].ingredients)
 
-data.raw.recipe['cottongut-science-py-seeds'].ingredients = table.deepcopy(data.raw.recipe['py-science-pack'].ingredients)
+--data.raw.recipe['cottongut-science-py-seeds'].ingredients = table.deepcopy(data.raw.recipe['py-science-pack'].ingredients)
 
 RECIPE('cottongut-science-red-seeds'):add_ingredient({type = "item", name = "cellulose", amount = 2}):add_ingredient({type = "item", name = "petri-dish", amount = 2})
 RECIPE('cottongut-science-green-seeds'):add_ingredient({type = "item", name = "cytostatics", amount = 1}):add_ingredient({type = "item", name = "flask", amount = 3})
