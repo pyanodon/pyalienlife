@@ -635,3 +635,20 @@ RECIPE {
     },
     main_product = "dimensional-gastricorg",
 }:add_unlock("nanochondria")
+
+------------------Sternite-lung------------------
+
+RECIPE {
+    type = "recipe",
+    name = "sternite-lung",
+    category = "genlab",
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'guts-arqad', amount = 1}
+    },
+    results = {
+		{type = 'item', name = 'sternite-lung', amount = 1},
+    },
+    main_product = "sternite-lung",
+}:add_unlock("antitumor")

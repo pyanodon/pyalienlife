@@ -576,7 +576,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='arthropodblood', amount =100},
+					{name='arthropodblood', amount =40},
 				},
 			crafting_speed = 15,
 			tech = 'advanced-rendering',

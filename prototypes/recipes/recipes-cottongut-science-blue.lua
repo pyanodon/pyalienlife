@@ -9,6 +9,12 @@ RECIPE {
     energy_required = 10,
     ingredients =
         {
+            {type = 'item', name = 'alien-sample-02', amount = 1},
+            {type = 'item', name = 'bio-sample', amount = 2},
+            {type = 'item', name = 'navens', amount = 1},
+            {type = 'item', name = 'neuromorphic-chip', amount = 1},
+            {type = 'fluid', name = 'blood', amount = 100},
+
         },
     results = {
         {type = 'item', name = 'negasium', amount = 3},
@@ -16,9 +22,9 @@ RECIPE {
     main_product = "negasium",
     --icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
     --icon_size = 64,
-    subgroup = "py-items",
+    subgroup = "py-alienlife-items",
     order = "a1"
-}:add_unlock("cottongut-mk03"):change_category('nano')
+}:add_unlock("cottongut-mk03"):change_category('nano'):add_ingredient({type = "item", name = "kicalk-seeds", amount = 1})
 
 ---cottongut-boosts---
 

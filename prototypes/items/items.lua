@@ -8208,6 +8208,28 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "arqad-propolis",
+    icon = "__pyalienlifegraphics3__/graphics/icons/arqad-propolis.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arqad",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "sternite-lung",
+    icon = "__pyalienlifegraphics3__/graphics/icons/sternite-lungs.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arqad",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "arqad-codex",
     icon = "__pyalienlifegraphics3__/graphics/icons/arqad-codex.png",
 	icon_size = 64,
