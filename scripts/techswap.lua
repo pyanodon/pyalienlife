@@ -1695,6 +1695,24 @@ local TRlist =
 					},
 				},
 				{
+				base_recipe = 'Extract arqad Meat',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract arqad Meat-1',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract arqad Meat-2',
+					tech = 'myostatin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
 				base_recipe = 'Extract cottongut Meat',
 				current_lvl = 1,
 				upgrade_1 =
@@ -1989,6 +2007,17 @@ local TRlist =
 				upgrade_1 =
 					{
 					recipe = 'Extract meat from Improved arthurians-2',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract meat from Improved arqads',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract meat from Improved arqads-2',
 					tech = 'exercises',
 					unlocked = false,
 					level = 2,
@@ -2696,6 +2725,24 @@ local TRlist =
 					},
 				},
 				{
+				base_recipe = 'Extract arqad guts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract arqad guts-1',
+					tech = 'organ-replication',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract arqad guts-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
 				base_recipe = 'Extract auog guts',
 				current_lvl = 1,
 				upgrade_1 =
@@ -2707,7 +2754,7 @@ local TRlist =
 					},
 				upgrade_2 =
 					{
-					recipe = 'Extract auog guts-5',
+					recipe = 'Extract auog guts-2',
 					tech = 'cavity',
 					unlocked = false,
 					level = 3,
@@ -2725,7 +2772,7 @@ local TRlist =
 					},
 				upgrade_2 =
 					{
-					recipe = 'Extract cottongut guts-5',
+					recipe = 'Extract cottongut guts-2',
 					tech = 'cavity',
 					unlocked = false,
 					level = 3,
@@ -3008,6 +3055,17 @@ local TRlist =
 				upgrade_1 =
 					{
 					recipe = 'Extract guts from Improved arthurians-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract guts from Improved arqads',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract guts from Improved arqads-2',
 					tech = 'cavity',
 					unlocked = false,
 					level = 2,
@@ -3456,6 +3514,24 @@ local TRlist =
 					},
 				},
 				{
+					base_recipe = 'Extract arqad arthropodblood',
+					current_lvl = 1,
+					upgrade_1 =
+						{
+						recipe = 'Extract arqad arthropodblood-1',
+						tech = 'somatic',
+						unlocked = false,
+						level = 2,
+						},
+					upgrade_2 =
+						{
+						recipe = 'Extract arqad arthropodblood-2',
+						tech = 'transgenes',
+						unlocked = false,
+						level = 3,
+						},
+					},
+				{
 					base_recipe = 'Extract Vrauks Formic Acid',
 					current_lvl = 1,
 					upgrade_1 =
@@ -3708,6 +3784,17 @@ local TRlist =
 					level = 2,
 					},
 				},
+				{
+				base_recipe = 'Extract arthropodblood from Improved arqads',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract arthropodblood from Improved arqads-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 2,
+					},
+				},
 				--skin
 				{
 				base_recipe = 'Extract arthurian skin',
@@ -3776,6 +3863,24 @@ local TRlist =
 				upgrade_2 =
 					{
 					recipe = 'Extract dhilmos chitin-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract arqad chitin',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract arqad chitin-1',
+					tech = 'defective-collagen',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract arqad chitin-2',
 					tech = 'double-skin',
 					unlocked = false,
 					level = 3,
@@ -4073,6 +4178,17 @@ local TRlist =
 				upgrade_1 =
 					{
 					recipe = 'Extract chithin from Improved dhilmoss-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract chitin from Improved arqads',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract chitin from Improved arqads-2',
 					tech = 'double-skin',
 					unlocked = false,
 					level = 2,
@@ -4865,6 +4981,52 @@ local TRlist =
 					level = 2,
 					},
 				},
+				--propolis
+				{
+				base_recipe = 'arqad-propolis-01',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arqad-propolis-02',
+					tech = 'cardial-hypopharynx',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'propolis-diesel-01',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'propolis-diesel-02',
+					tech = 'cardial-hypopharynx',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				--royal jelly
+				{
+				base_recipe = 'arqad-jelly-01',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arqad-jelly-02',
+					tech = 'chromasome-infocrystalization',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'jelly-to-kerosene-01',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'jelly-to-kerosene-02',
+					tech = 'chromasome-infocrystalization',
+					unlocked = false,
+					level = 2,
+					},
+				},
 				--SPORES
 				{
 				base_recipe = 'navens-spore',
@@ -5098,6 +5260,8 @@ local TRlist =
 				['yaedols'] = true,
 				['biopolymer-clusters'] = true,
 				['ctc'] = true,
+				['cardial-hypopharynx'] = true,
+				['chromasome-infocrystalization'] = true,
 
 			},
 	}

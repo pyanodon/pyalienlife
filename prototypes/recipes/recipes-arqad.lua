@@ -139,7 +139,7 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'arqad-jelly',
+    name = 'arqad-jelly-01',
     category = 'arqad',
     enabled = false,
     energy_required = 100,
@@ -156,7 +156,7 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'arqad-propolis',
+    name = 'arqad-propolis-01',
     category = 'arqad',
     enabled = false,
     energy_required = 100,
@@ -175,7 +175,7 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'propolis-diesel',
+    name = 'propolis-diesel-01',
     category = 'olefin',
     enabled = false,
     energy_required = 10,
@@ -191,7 +191,7 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'jelly-to-kerosene',
+    name = 'jelly-to-kerosene-01',
     category = 'olefin',
     enabled = false,
     energy_required = 10,

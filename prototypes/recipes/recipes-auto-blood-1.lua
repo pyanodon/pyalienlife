@@ -38,6 +38,44 @@ fun.autorecipes {
 	}
 }
 
+------------------ARQAD------------------
+
+fun.autorecipes {
+    name = 'rendering-blood-arqad',
+	category = 'slaughterhouse-arqad',
+	--module_limitations = 'arqad',
+	subgroup = 'py-alienlife-arqad',
+	order = 'b',
+    mats =
+	{
+		--blood
+		{
+			ingredients =
+				{
+					{name='arqad',amount=3},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='venom', amount ='R'},
+					{name='blood', amount ='R'},
+					{name='brain', amount ='R'},
+					--{name='cage',amount=1},
+					{name='arthropodblood', amount ='+20'},
+				},
+                crafting_speed = 15,
+                tech = 'somatic',
+                name = 'Extract arqad arthropodblood-1',
+                icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
+                icon_size = 32,
+		},
+	}
+}
+
 ------------------AUOGS------------------
 
 fun.autorecipes {
