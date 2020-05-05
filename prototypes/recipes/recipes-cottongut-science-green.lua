@@ -9,6 +9,9 @@ RECIPE {
     energy_required = 10,
     ingredients =
         {
+            {type = 'fluid', name = 'subcritical-water', amount = 200},
+            {type = 'fluid', name = 'artificial-blood', amount = 50},
+            {type = 'item', name = 'bio-sample', amount = 2},
         },
     results = {
         {type = 'item', name = 'paragen', amount = 3},
@@ -16,7 +19,7 @@ RECIPE {
     main_product = "paragen",
     --icon = '__pyalienlifegraphics__/graphics/icons/paragen.png',
     --icon_size = 64,
-    subgroup = "py-items",
+    subgroup = "py-alienlife-items",
     order = "a1"
 }:add_unlock("cottongut-mk02")
 
