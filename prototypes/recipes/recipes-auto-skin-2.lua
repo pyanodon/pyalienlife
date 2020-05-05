@@ -56,6 +56,62 @@ fun.autorecipes {
 	}
 }
 
+------------------ARQUAD------------------
+
+fun.autorecipes {
+    name = 'rendering-skin-arqad-2',
+	category = 'slaughterhouse-arqad',
+	--module_limitations = 'arqad',
+	subgroup = 'py-alienlife-arqad',
+	order = 'b',
+    mats =
+	{
+		--skin
+		{
+			ingredients =
+				{
+					{name='arqad',amount=3},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='chitin', amount ='R'},
+					{name='venom', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='arthropodblood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='chitin', amount ='+2'},
+				},
+                crafting_speed = 15,
+                tech = 'double-skin',
+                name = 'Extract arqad chitin-2',
+                icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",
+                icon_size = 64,
+		},
+		--skin arqad rendering
+		{
+			ingredients =
+				{
+					{name='arqad',amount='R'},
+					{name='chitinarqad',amount=1},
+				},
+			results =
+				{
+					{name='arthropodblood', amount ='R'},
+					{name='chitin', amount ='+4'},
+				},
+			crafting_speed = 15,
+			tech = 'double-skin',
+			name = 'Extract chitin from Improved arqads-2',
+			icon = "__pyalienlifegraphics3__/graphics/icons/chitin-arqad.png",
+			icon_size = 64,
+		},
+	}
+}
+
 ------------------AUOGS------------------
 
 fun.autorecipes {
