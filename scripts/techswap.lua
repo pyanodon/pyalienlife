@@ -5100,6 +5100,136 @@ local TRlist =
 					level = 3,
 					},
 				},
+
+				---COMB
+
+				{
+				base_recipe = 'arqad-filled-comb-1',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arqad-filled-comb-1a',
+					tech = 'pheromone-transition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'arqad-filled-comb-1b',
+					tech = 'diversified-mycoaccretion',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'arqad-filled-comb-2',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arqad-filled-comb-2a',
+					tech = 'pheromone-transition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'arqad-filled-comb-2b',
+					tech = 'diversified-mycoaccretion',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'arqad-filled-comb-3',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arqad-filled-comb-3a',
+					tech = 'pheromone-transition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'arqad-filled-comb-3b',
+					tech = 'diversified-mycoaccretion',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'arqad-filled-comb-4',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arqad-filled-comb-4a',
+					tech = 'pheromone-transition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'arqad-filled-comb-4b',
+					tech = 'diversified-mycoaccretion',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'arqad-filled-comb-5',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arqad-filled-comb-5a',
+					tech = 'pheromone-transition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'arqad-filled-comb-5b',
+					tech = 'diversified-mycoaccretion',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'arqad-filled-comb-6',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arqad-filled-comb-6a',
+					tech = 'pheromone-transition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'arqad-filled-comb-6b',
+					tech = 'diversified-mycoaccretion',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'arqad-filled-comb-7',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arqad-filled-comb-7a',
+					tech = 'pheromone-transition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'arqad-filled-comb-7b',
+					tech = 'diversified-mycoaccretion',
+					unlocked = false,
+					level = 3,
+					},
+				},
+
 --MILK
 
 				{
@@ -5180,6 +5310,7 @@ local TRlist =
 					},
 				},
 			},
+
 		techs_with_upgrades =
 			{
 				['bigger-colon'] = true,
@@ -5262,6 +5393,8 @@ local TRlist =
 				['ctc'] = true,
 				['cardial-hypopharynx'] = true,
 				['chromasome-infocrystalization'] = true,
+				['pheromone-transition'] = true,
+				['diversified-mycoaccretion'] = true,
 
 			},
 	}
