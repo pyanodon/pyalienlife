@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.8
+Date: ????
+  Changes:
+    - Added Arqads
+    - Rebalanced all maturation recipes
+    - Balanced resveratrol
+    - Nerfed biomass to coke
+    - Remake of the cottongut science ingredients.
+    - Removed support for pyVeganism unofficial mod.
+    - Added ulric breeding basic recipes.
+    - pyHT is now requiered to play pyAL.
+---------------------------------------------------------------------------------------------------
 Version: 1.6.7
 Date: 2020-05-03
   Changes:
