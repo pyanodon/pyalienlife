@@ -373,11 +373,12 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'arqad-mk02-hatching',
-    category = 'glassworks',
+    category = 'incubator',
     enabled = false,
     energy_required = 50,
     ingredients = {
         {type = 'item', name = 'arqad-egg', amount = 5},
+        {type = 'fluid', name = 'hot-air', amount = 100},
         },
     results = {
         {type = 'item', name ='arqad-maggot', amount = 4},
