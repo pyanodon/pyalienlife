@@ -9,7 +9,7 @@ Date: 2020-05-06
     - Remake of the cottongut science ingredients.
     - Removed support for pyVeganism unofficial mod.
     - Added ulric breeding basic recipes.
-    - pyHT is now requiered to play pyAL.
+    - pyPH is now requiered to play pyAL.
 ---------------------------------------------------------------------------------------------------
 Version: 1.6.7
 Date: 2020-05-03
