@@ -1191,7 +1191,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "adrenal-cortex",
-    category = "slaughterhouse",
+    category = "slaughterhouse-cridren",
     enabled = false,
     energy_required = 15,
     ingredients = {
