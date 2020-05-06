@@ -53,8 +53,8 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'kmauts-cub', amount = 10},
         {type = 'item', name = 'cage', amount = 10},
-        {type = 'fluid', name = 'fetal-serum', amount = 50},   
-        {type = 'fluid', name = 'fish-oil', amount = 50},      
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
+        {type = 'fluid', name = 'fish-oil', amount = 50},
     },
     results = {
         {type = 'item', name = 'caged-kmauts', amount = 10},

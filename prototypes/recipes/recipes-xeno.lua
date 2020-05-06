@@ -52,7 +52,7 @@ RECIPE {
     energy_required = 120,
     ingredients = {
         {type = 'item', name = 'xeno-egg', amount = 10},
-        {type = 'item', name = 'caged-mukmoux', amount = 10},   --man it was painfull t put here a fair price 
+        {type = 'item', name = 'caged-mukmoux', amount = 10},   --man it was painfull t put here a fair price
         {type = 'fluid', name = 'fetal-serum', amount = 50},
     },
     results = {

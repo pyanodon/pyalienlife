@@ -146,7 +146,7 @@ RECIPE {
         {type = 'fluid', name = 'fetal-serum', amount = 50},
     },
     results = {
-        {type = 'item', name = 'caged-vrauks', amount = 30}, --it was 3 so is is 30 now 
+        {type = 'item', name = 'caged-vrauks', amount = 30}, --it was 3 so is is 30 now
     },
     main_product = "caged-vrauks",
     subgroup = 'py-alienlife-vrauks',

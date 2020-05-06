@@ -401,7 +401,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = 'item', name = 'arqad-maggot', amount = 1},
+        {type = 'item', name = 'arqad-maggot', amount = 9},
         {type = 'item', name = 'meat', amount = 10},
         {type = 'item', name = 'zipir-pup', amount = 2},
         },
