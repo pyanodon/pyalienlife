@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.6.8
-Date: ????
+Date: 2020-05-06
   Changes:
     - Added Arqads
     - Rebalanced all maturation recipes
