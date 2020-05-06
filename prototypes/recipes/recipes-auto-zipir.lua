@@ -341,7 +341,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='zipiregg', probability = 1,amount_min =5,amount_max =7},  -- maybe 8 for the max if you feel generous 
+                    {name='zipiregg', probability = 1,amount_min =5,amount_max =7},  -- maybe 8 for the max if you feel generous
 				},
 			crafting_speed = 140,
 			tech = 'zipir'
