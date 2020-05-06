@@ -15,6 +15,10 @@ RECIPE {
             {type = 'item', name = 'bio-sample', amount = 2},
             {type = 'item', name = 'bhoddos', amount = 2},
             {type = 'item', name = 'sea-sponge', amount = 1},
+            {type = "item", name = "flask", amount = 3},
+            {type = "item", name = "navens", amount = 2},
+            {type = "item", name = "brain", amount = 1},
+            {type = "item", name = "retrovirus", amount = 1}
         },
     results = {
         {type = 'item', name = 'nonconductive-phazogen', amount = 3},

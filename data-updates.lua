@@ -82,16 +82,3 @@ RECIPE {
 }:add_unlock("biotech-mk02")
 
 table.insert(data.raw.lab.lab.inputs, 'py-science-pack')
-
---data.raw.recipe['cottongut-science-red-seeds'].ingredients = table.deepcopy(data.raw.recipe['automation-science-pack'].ingredients)
-
---data.raw.recipe['cottongut-science-green-seeds'].ingredients = table.deepcopy(data.raw.recipe['logistic-science-pack'].ingredients)
-
---data.raw.recipe['cottongut-science-blue-seeds'].ingredients = table.deepcopy(data.raw.recipe['chemical-science-pack'].ingredients)
-
---data.raw.recipe['cottongut-science-py-seeds'].ingredients = table.deepcopy(data.raw.recipe['py-science-pack'].ingredients)
-
-RECIPE('cottongut-science-red-seeds'):add_ingredient({type = "item", name = "cellulose", amount = 2}):add_ingredient({type = "item", name = "petri-dish", amount = 2})
-RECIPE('cottongut-science-green-seeds'):add_ingredient({type = "item", name = "cytostatics", amount = 1}):add_ingredient({type = "item", name = "flask", amount = 3})
-RECIPE('cottongut-science-blue-seeds'):add_ingredient({type = "item", name = "nano-cellulose", amount = 1}):add_ingredient({type = "item", name = "adrenal-cortex", amount = 1}):remove_ingredient("optical-fiber"):remove_ingredient("advanced-circuit"):remove_ingredient("stainless-steel"):add_ingredient({type = "item", name = "lab-instrument", amount = 2}):replace_ingredient("nexelit-plate", "stainless-steel")
-RECIPE('cottongut-science-py-seeds'):remove_ingredient("flask"):add_ingredient({type = "item", name = "flask", amount = 3}):remove_ingredient("moss"):remove_ingredient("alien-sample01"):add_ingredient({type = "item", name = "navens", amount = 2}):add_ingredient({type = "item", name = "brain", amount = 1}):add_ingredient({type = "item", name = "retrovirus", amount = 1})
