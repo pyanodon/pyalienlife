@@ -98,6 +98,7 @@ require('prototypes/technologies/compost')
 require('prototypes/technologies/arqad')
 require('prototypes/technologies/cardial-hypopharynx')
 require('prototypes/technologies/chromasome-infocrystalization')
+require('prototypes/technologies/pheromone-transition')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -472,6 +473,9 @@ require('prototypes/recipes/recipes-cottongut-science-py')
 require('prototypes/recipes/recipes-arqad')
 require('prototypes/recipes/recipes-auto-arqad')
 require('prototypes/recipes/recipes-arqad-updates')
+require('prototypes/recipes/recipes-arqad-products')
+require('prototypes/recipes/recipes-arqad-products-1')
+require('prototypes/recipes/recipes-arqad-products-2')
 
 
 --gunpowder poo

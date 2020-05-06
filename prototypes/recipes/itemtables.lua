@@ -326,6 +326,7 @@ items.inputs.coal = {'coal', 1}
 items.inputs.redhotcoke = {'redhot-coke', 1}
 items.inputs.filledcomb = {'filled-comb', 1}
 items.inputs.naturalbarrel = {'natural-gas-barrel', 1}
+items.inputs.talloilbarrel = {'tall-oil-barrel', 1}
 items.inputs.arqadegg = {'arqad-egg', 1}
 items.inputs.bloodarqad = {'blood-arqad', 1}
 items.inputs.gutsarqad = {'guts-arqad', 1}
