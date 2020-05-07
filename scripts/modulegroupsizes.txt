@@ -5,6 +5,7 @@ Dingrits,
 Cottonguts,
 Scrondrix,
 Korlex
+kmauts
 
 medium herds:
 Phadai,

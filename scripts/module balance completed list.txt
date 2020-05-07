@@ -1,0 +1,34 @@
+
+--modules with bonus amounts chaeck and adjusted
+    these are machines that are adjusted to not hit the 32,767% cap
+    
+    
+    
+    
+    
+    
+    Cadaveric arum
+    fawogae
+    Navens
+    Yaedols
+    Bhoddos
+    Arthurian
+    Auog
+    Cridren
+    Dhilmos
+    Dingrits
+    Korlex
+    Fish
+    Kmauts
+    Mukmoux
+    Phadai
+    Phagnot
+    Cottongut
+    Scrondrix
+    Sea Sponge
+    Trits
+    Ulric
+    
+
+
+any ones with a breeding recipe should be done but will be rechecked to confirm it is up to spec
