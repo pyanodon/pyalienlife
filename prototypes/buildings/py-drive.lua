@@ -87,15 +87,7 @@
                 shift = { -0.03125, -1.71875},
                 animation_speed = 0.5
               },
-              {
-                filename = "__base__/graphics/entity/beacon/beacon-base.png",
-                width = 116,
-                height = 93,
-                frame_count = 1,
-                line_length = 1,
-                animation_speed = 1 / 3,
-                shift = { 0.34375, 0.046875}
-            },
+
           }
         },
         --vehicle_impact_sound = sounds.generic_impact,
