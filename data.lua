@@ -296,6 +296,8 @@ require('prototypes/buildings/arqad-hive-mk02')
 require('prototypes/buildings/arqad-hive-mk03')
 require('prototypes/buildings/arqad-hive-mk04')
 
+require('prototypes/buildings/py-drive')
+
 --weapons/defenses
 --require('prototypes/weapons/turrets/gun-turret-mk01')
 --require('prototypes/weapons/turrets/rocket-turret-mk01')

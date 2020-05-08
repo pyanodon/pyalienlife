@@ -339,6 +339,8 @@ script.on_init(
 			requested_items = {},
 			idling_at_player = {}
 		}
+
+		global.pycloud = {}
 		if not remote.interfaces["silo_script"] then
 			return
 		end
@@ -446,6 +448,9 @@ script.on_configuration_changed(
 		end
 		if global.ocula_master_table.idling_at_player == nil then
 			global.idling_at_player = {}
+		end
+		if global.pycloud == nil then
+			global.pycloud = {}
 		end
 	end
 )
@@ -557,9 +562,9 @@ end)
 script.on_event(
 	{defines.events.on_built_entity, defines.events.on_robot_built_entity},
 	function(event)
-		--log('klonan bot did a thing')
+		log('klonan bot did a thing')
 		local E = event.created_entity
-		--log(E.name)
+		log(E.name)
 		--log(E.ghost_name)
 		--log(serpent.block(landbots))
 
@@ -617,6 +622,13 @@ script.on_event(
 			log(serpent.block(global.ocula_master_table))
 		elseif E.name == "ocula" then
 			built_ocula(E)
+		elseif E.name == "pydrive" then
+			log('hit')
+			game.surfaces["nauvis"].create_entity {
+				name = "pydrive_skin",
+				position = E.position,
+				--force = E.force
+			}
 		elseif global.has_built_first_farm == false then
 			for _, farm in pairs(farm_buildings) do
 				if string.match(E.name, farm) then -- or string.match(E.ghost_name, farm) then
