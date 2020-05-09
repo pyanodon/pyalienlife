@@ -28,5 +28,14 @@ global.pycloud =
                         9,
                         10 --ten items max per cloud any attempts to insert items after the tenth will just sit in the input chest
                     }
+            },
+        chests =
+            {
+                chest_id =
+                    {
+                        input_output_state = state,
+                        cloud_id_num = num,
+                        entity = entity
+                    }
             }
     }

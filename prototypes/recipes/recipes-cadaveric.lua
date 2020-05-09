@@ -78,14 +78,16 @@ RECIPE {
     name = "cadaveric-processing-02",
     category = "nursery",
     enabled = false,
-    energy_required = 5,
+    energy_required = 10,
     ingredients = {
         {type = "item", name = "cadaveric-arum", amount = 2},
         {type = "fluid", name = "acidgas", amount = 100},
     },
     results = {
-        {type = "fluid", name = "dms", amount = 50}
+        {type = "fluid", name = "dms", amount = 70},
+        {type = "item", name = "cadaveric-arum-seeds", amount = 2}
     },
+     main_product = "dms"
 }:add_unlock("cadaveric-arum")
 
 RECIPE {
@@ -114,7 +116,7 @@ RECIPE {
         {type = "item", name = "cadaveric-arum", amount = 2},
     },
     results = {
-        {type = "fluid", name = "acidgas", amount = 50},
+        {type = "fluid", name = "acidgas", amount = 100},
         {type = "item", name = "cadaveric-arum-seeds", amount = 2}
     },
     main_product = "acidgas"
