@@ -308,7 +308,7 @@ end
 --Pycloud--
 local function create_pycloud_chest_gui(event)
 	local player = game.players[event.player_index]
-	chest_gui =
+	local chest_gui =
 		player.gui.screen.add(
 			{
 				type = "frame",
