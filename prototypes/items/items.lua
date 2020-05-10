@@ -1902,6 +1902,51 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "yotoi-fruit-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/yotoi-fruit.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-yotoi",
+    order = "h",
+    stack_size = 400
+}
+
+ITEM {
+    type = "item",
+    name = "yotoi-fruit-mk03",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/yotoi-fruit.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-yotoi",
+    order = "h",
+    stack_size = 400
+}
+
+ITEM {
+    type = "item",
+    name = "yotoi-fruit-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/yotoi-fruit.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-yotoi",
+    order = "h",
+    stack_size = 400
+}
+
+ITEM {
+    type = "item",
     name = "yotoi-leaves",
     icon = "__pyalienlifegraphics__/graphics/icons/yotoi-leaves.png",
 	icon_size = 64,
@@ -1992,6 +2037,51 @@ ITEM {
     type = "item",
     name = "yotoi-seeds",
     icon = "__pyalienlifegraphics__/graphics/icons/yotoi-seeds.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-yotoi",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "yotoi-seeds-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/yotoi-seeds.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-yotoi",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "yotoi-seeds-mk03",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/yotoi-seeds.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-yotoi",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "yotoi-seeds-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/yotoi-seeds.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
+        },
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-yotoi",
