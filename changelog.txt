@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.9
+Date: 2020-05-10
+  Changes:
+    - Remodulated all farms to not break factorio module bonus limit
+    - added yotoi breeding
+    - fixed error with not all cridren recipes showing in sluaghterhouse
+    - miscellaneous balance adjustments
+---------------------------------------------------------------------------------------------------
 Version: 1.6.8
 Date: 2020-05-06
   Changes:
