@@ -14,17 +14,3 @@
 --TODO: LATER STUFF
 
 caravan menu with pip windows to show the current location like the train menu
-
-
---Modules--
---cadaveric
---navens
---yaedols
---bhoddos
---sponge
---grods
---kicalk
---ralesia
---rennea
---tuuphra
---yotoi

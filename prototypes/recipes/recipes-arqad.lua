@@ -135,7 +135,7 @@ RECIPE {
         {type = 'item', name = 'wax-barrel', amount = 3},
     },
     --main_product = "wax-barrel",
-}:add_unlock("arqad")
+}:add_unlock("arqad-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -289,7 +289,7 @@ RECIPE {
 --WIP--
 
 --mk02--
---WIP--
+--DONE--
 
 RECIPE {
     type = 'recipe',
