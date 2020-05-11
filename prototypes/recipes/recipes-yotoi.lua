@@ -224,7 +224,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'yotoi-fruit-mk02',
-    category = 'crafting-with-fluid',
+    category = 'nursery',
     enabled = false,
     energy_required = 30,
     ingredients = {
