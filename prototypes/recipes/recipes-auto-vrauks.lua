@@ -395,7 +395,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cocoon', amount = 'R'},
+					--{name='cocoon', amount = 'R'},
 					{name='cocoon', amount = '+3'},
 				},
 			crafting_speed = 70,
