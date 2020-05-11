@@ -55,7 +55,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='thuupraseeds', amount = 5},
+					{name='tuuphraseeds', amount = 5},
 				},
 			results =
 				{
@@ -83,7 +83,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'thuupraseeds',amount = 'R'},
+					{name = 'tuuphraseeds',amount = 'R'},
 					{name='bhoddos',amount = 4},
 				},
 			results =
