@@ -431,7 +431,8 @@ script.on_init(
 						[0] = {},
 					},
 				chests = {},
-				current_chest = ''
+				current_chest = '',
+				current_network_search = 0
 			}
 		if not remote.interfaces["silo_script"] then
 			return
@@ -549,7 +550,8 @@ script.on_configuration_changed(
 						[0] = {},
 					},
 				chests = {},
-				current_chest = ''
+				current_chest = '',
+				current_network_search = 0
 			}
 		end
 	end
@@ -1217,31 +1219,48 @@ script.on_nth_tick(30, function()
 				end
 			end
 		end
-		--[[
-		if next(global.ocula_master_table.idling_at_player) ~= nil then
-			--log('hit')
-			for _, p in pairs(global.ocula_master_table.idling_at_player) do
-				--log(serpent.block(p))
-				if next(p) ~= nil then
-					--log('hit')
-					--log(p[1])
-					for _, o in pairs(p) do
-						if global.ocula_master_table.ocula[o] ~= nil then
-							local ocula = global.ocula_master_table.ocula[o]
-							--log('hit')
-							ocula.entity.set_command {
-								type = defines.command.go_to_location,
-								destination_entity = game.get_player(ocula.target_player).character,
-								radius = 0.5
-							}
+end)
+
+script.on_nth_tick(20, function()
+
+	local pycloud = global.pycloud
+	local networks = pycloud.networks
+	local cns = pycloud.current_network_search
+	local items = {}
+	if cns == 0 then
+		cns = 1
+	end
+	if networks[cns] ~= nil then
+		if next(networks[cns].stored_items) ~= nil then
+			for i, item in pairs(networks[cns].stored_items) do
+					items[i] = true
+			end
+			for ic, in_chest in pairs(networks[cns].input_chests) do
+				if pycloud.chests[in_chest] ~= nil and pycloud.chests[in_chest].entity ~= nil then
+					local inv = pycloud.chests[in_chest].entity.get_inventory(defines.inventory.chest).get_contents()
+					if inv ~= nil then
+						for c, contents in pairs(inv) do
+							if items[c] == true then
+								if networks[cns].stored_items[c].amount < game.item_prototypes[c].stack_size then
+									local amount = inv.remove(c)
+									networks[cns].stored_items[c].amount = amount
+								end
+							end
 						end
 					end
 				end
 			end
+		elseif next(networks[cns].stored_items) == nil then
+			--asd
 		end
-		]]--
 	end
-)
+	--asd
+	if pycloud.current_network_search[cns + 1] ~= nil then
+		pycloud.current_network_search = cns + 1
+	else
+		pycloud.current_network_search = 1
+	end
+end)
 
 script.on_event(
 	defines.events.on_tick,
@@ -1350,9 +1369,7 @@ script.on_event(
 	end
 )
 
-script.on_event(
-	{defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity},
-	function(event)
+script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity}, function(event)
 		local E = event.entity
 		for _, farm in pairs(farm_buildings) do
 			if string.match(E.name, farm) then
@@ -1383,9 +1400,7 @@ script.on_event(
 	end
 )
 
-script.on_event(
-	defines.events.on_gui_opened,
-	function(event)
+script.on_event(defines.events.on_gui_opened, function(event)
 		if event.entity ~= nil then
 			--log(event.entity.name)
 			--log(event.gui_type)
@@ -1418,9 +1433,7 @@ script.on_event(
 	end
 )
 
-script.on_event(
-	defines.events.on_gui_selection_state_changed,
-	function(event)
+script.on_event(defines.events.on_gui_selection_state_changed, function(event)
 		--log(event.element.name)
 		caravanroutes = global.caravanroutes
 		--log(serpent.block(caravanroutes))
@@ -1480,22 +1493,27 @@ script.on_event(
 script.on_event(defines.events.on_gui_switch_state_changed, function(event)
 
 	if event.element.name == 'chest_state_switch' then
-		global.pycloud.chests[global.pycloud.current_chest.unit_number].input_output_state = event.element.switch_state
+		local pycloud = global.pycloud
+		pycloud.chests[pycloud.current_chest.unit_number].input_output_state = event.element.switch_state
 		--check for chest network and update the put in that as well
+		local cur_chest = pycloud.current_chest.unit_number
+		if pycloud.networks[pycloud.chests[cur_chest].cloud_id_num] ~= nil then
+			if pycloud.chests[cur_chest].input_output_state == 'left' then
+				table.insert(pycloud.networks[pycloud.chests[cur_chest].cloud_id_num].input_chests, cur_chest)
+			elseif pycloud.chests[cur_chest].input_output_state == 'right' then
+				table.insert(pycloud.networks[pycloud.chests[cur_chest].cloud_id_num].output_chests, cur_chest)
+			end
+		end
 	end
 	log(serpent.block(global.pycloud))
 end)
 
-script.on_event(
-	defines.events.on_gui_value_changed,
-	function()
+script.on_event(defines.events.on_gui_value_changed, function()
 		--log(event.element.name)
 	end
 )
 
-script.on_event(
-	defines.events.on_gui_confirmed,
-	function(event)
+script.on_event(defines.events.on_gui_confirmed, function(event)
 		--log(event.element.name)
 		if event.element.name == "outpost_name" then
 			global.outpost_names[global.current_outpost] = outpostgui.outpost_name.text
