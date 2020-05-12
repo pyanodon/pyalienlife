@@ -38,6 +38,43 @@ fun.autorecipes {
 	}
 }
 
+------------------ARQAD------------------
+
+fun.autorecipes {
+    name = 'rendering-guts-arqad',
+	category = 'slaughterhouse-arqad',
+	--module_limitations = 'arqad',
+	subgroup = 'py-alienlife-arqad',
+	order = 'b',
+    mats =
+	{
+		--guts
+		{
+			ingredients =
+				{
+					{name='arqad',amount=3},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='venom', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='arthropodblood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='guts', amount ='+3'},
+				},
+                crafting_speed = 15,
+                tech = 'organ-replication',
+                name = 'Extract arqad guts-1',
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
+                icon_size = 64,
+		},
+	}
+}
+
 ------------------AUOGS------------------
 
 fun.autorecipes {

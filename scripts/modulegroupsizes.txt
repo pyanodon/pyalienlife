@@ -4,7 +4,9 @@ Ulric,
 Dingrits,
 Cottonguts,
 Scrondrix,
-Korlex
+Korlex,
+kmauts,
+Vrauks
 
 medium herds:
 Phadai,

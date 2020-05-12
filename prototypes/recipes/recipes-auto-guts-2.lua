@@ -56,6 +56,61 @@ fun.autorecipes {
 	}
 }
 
+------------------ARQAD------------------
+
+fun.autorecipes {
+    name = 'rendering-guts-arqad-2',
+	category = 'slaughterhouse-arqad',
+	--module_limitations = 'arqad',
+	subgroup = 'py-alienlife-arqad',
+	order = 'b',
+    mats =
+	{
+		--guts
+		{
+			ingredients =
+				{
+					{name='arqad',amount=3},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='venom', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='arthropodblood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='guts', amount ='+2'},
+				},
+                crafting_speed = 15,
+                tech = 'cavity',
+                name = 'Extract arqad guts-2',
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
+                icon_size = 64,
+		},
+		--guts arqad rendering
+		{
+			ingredients =
+				{
+					{name='arqad',amount='R'},
+					{name='gutsarqad',amount=1},
+				},
+			results =
+				{
+					{name='chitin', amount ='R'},
+					{name='guts', amount ='+5'},
+				},
+			crafting_speed = 15,
+			tech = 'cavity',
+			name = 'Extract guts from Improved arqads-2',
+			icon = "__pyalienlifegraphics3__/graphics/icons/guts-arqad.png",
+			icon_size = 64,
+		},
+	}
+}
+
 ------------------AUOGS------------------
 
 fun.autorecipes {
@@ -86,7 +141,7 @@ fun.autorecipes {
 				},
                 crafting_speed = 15,
                 tech = 'cavity',
-                name = 'Extract auog guts-5',
+                name = 'Extract auog guts-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},
@@ -140,7 +195,7 @@ fun.autorecipes {
 				},
                 crafting_speed = 15,
                 tech = 'cavity',
-                name = 'Extract cottongut guts-5',
+                name = 'Extract cottongut guts-2',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},

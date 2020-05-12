@@ -340,6 +340,7 @@ RECIPE {
         {type = 'item', name = 'pacifastin', amount = 1},
         {type = 'item', name = 'purine-analogues', amount = 1},
         {type = 'fluid', name = 'nitrogen-mustard', amount = 100},
+        {type = 'fluid', name = 'arqad-jelly', amount = 150},
     },
     results = {
         {type = 'item', name = 'immunosupressants', amount = 1}

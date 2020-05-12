@@ -48,7 +48,7 @@ ENTITY {
     },
     allowed_effects = {"speed","productivity"},
     crafting_categories = {"phadai"},
-    crafting_speed = 0.01,
+    crafting_speed = 0.04,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

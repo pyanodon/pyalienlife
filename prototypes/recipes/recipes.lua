@@ -341,6 +341,25 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
+    name = 'cytostatics-2',
+    category = 'genlab',
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = 'item', name = 'sea-sponge', amount = 1},
+        {type = 'item', name = 'arqad-propolis', amount = 1},
+        {type = 'item', name = 'plasmids', amount = 2},
+        {type = 'item', name = 'flask', amount = 3},
+        {type = 'fluid', name = 'decalin', amount = 30},
+        {type = 'item', name = 'plastic-bar', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'cytostatics', amount = 3}
+    }
+}:add_unlock('genetics-mk02')
+
+RECIPE {
+    type = 'recipe',
     name = 'microcin-j25',
     category = 'bio-reactor',
     enabled = false,
@@ -720,6 +739,7 @@ RECIPE {
         {type = 'item', name = 'yotoi-leaves', amount = 20},
         {type = 'item', name = 'chitin', amount = 30},
         {type = 'fluid', name = 'zogna-bacteria', amount = 100},
+        {type = 'fluid', name = 'bee-venom', amount = 50},
     },
     results = {
         {type = 'item', name = 'antiviral', amount = 2000}
@@ -810,6 +830,7 @@ RECIPE {
         {type = 'item', name = 'pineal-gland', amount = 3},
         {type = 'item', name = 'adrenal-cortex', amount = 10},
         {type = 'fluid', name = 'bacteria-1', amount = 100},
+        {type = 'fluid', name = 'arqad-jelly', amount = 150},
     },
     results = {
         {type = 'item', name = 'nanochondria', amount = 400}
@@ -1170,7 +1191,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "adrenal-cortex",
-    category = "slaughterhouse",
+    category = "slaughterhouse-cridren",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -1722,6 +1743,7 @@ RECIPE {
         {type = 'item', name = 'polynuclear-ganglion', amount = 1},
         {type = 'item', name = 'cryogland', amount = 1},
         {type = 'item', name = 'subdermal-chemosnare', amount = 1},
+        {type = 'item', name = 'sternite-lung', amount = 1},
         {type = 'item', name = 'snarer-heart', amount = 1},
         {type = 'item', name = 'magnetic-organ', amount = 1},
         {type = 'item', name = 'glandular-myocluster', amount = 1},
@@ -2000,3 +2022,17 @@ RECIPE {
 }:add_unlock('advanced-rendering')
 
 end
+
+RECIPE {
+    type = 'recipe',
+    name = 'sample-cup',
+    category = 'crafting',
+    enabled = false,
+    energy_required = 2,
+    ingredients = {
+        {type = 'item', name = 'plastic-bar', amount = 2}
+    },
+    results = {
+        {type = 'item', name = 'sample-cup', amount = 4}
+    }
+}:add_unlock("selective-breeding")
