@@ -305,6 +305,90 @@ end
 
 --END--
 
+--Pycloud--
+local function create_pycloud_chest_gui(event)
+	local player = game.players[event.player_index]
+	local chest_gui =
+		player.gui.screen.add(
+			{
+				type = "frame",
+				name = "chest_menu",
+				direction = "vertical",
+				caption = "Chest Stuff goes here",
+				style = "inner_frame_in_outer_frame"
+			}
+		)
+		--chest_gui.add({type = "sprite-button", name = "cloud_chest_close", sprite = "utility/close_fat"})
+
+		chest_gui.add(
+			{
+				type = 'frame',
+				name = 'chest_state_frame',
+				direction = 'horizontal',
+				caption = 'DICKS',
+				style = "inner_frame_in_outer_frame"
+			}
+		)
+		chest_gui.chest_state_frame.add(
+			{
+				type = 'label',
+				name = 'Current_chest_state',
+				caption = 'Current put state: '
+			}
+		)
+		chest_gui.chest_state_frame.add(
+			{
+				type = 'switch',
+				name = 'chest_state_switch',
+				switch_state = 'left',
+				left_label_caption = 'Input',
+				right_label_caption = 'Output'
+			}
+		)
+
+		chest_gui.add(
+			{
+				type = 'frame',
+				name = 'chest_id_frame',
+				direction = 'vertical',
+				caption = 'DICKS ID',
+				style = "inner_frame_in_outer_frame"
+			}
+		)
+		chest_gui.chest_id_frame.add(
+			{
+				type = 'label',
+				name = 'Current_chest_network_id',
+				caption = 'Current cloud network id: ' .. global.pycloud.chests[event.entity.unit_number].cloud_id_num
+			}
+		)
+		chest_gui.chest_id_frame.add(
+			{
+				type = 'frame',
+				name = 'new_chest_id_frame',
+				direction = 'horizontal',
+				--caption = 'DICKS ID',
+				style = "invisible_frame"
+			}
+		)
+		chest_gui.chest_id_frame.new_chest_id_frame.add(
+			{
+				type = 'label',
+				name = 'Change_chest_network_id',
+				caption = 'Change cloud id number'
+			}
+		)
+		chest_gui.chest_id_frame.new_chest_id_frame.add(
+			{
+				type = 'textfield',
+				name = 'chest_id_text',
+				numeric = true,
+				text = global.pycloud.chests[event.entity.unit_number].cloud_id_num,
+				caption = 'test'
+			}
+		)
+end
+
 script.on_init(
 	function()
 		global.caravanroutes = caravanroutes
@@ -339,6 +423,16 @@ script.on_init(
 			requested_items = {},
 			idling_at_player = {}
 		}
+
+		global.pycloud =
+			{
+				networks =
+					{
+						[0] = {},
+					},
+				chests = {},
+				current_chest = ''
+			}
 		if not remote.interfaces["silo_script"] then
 			return
 		end
@@ -446,6 +540,17 @@ script.on_configuration_changed(
 		end
 		if global.ocula_master_table.idling_at_player == nil then
 			global.idling_at_player = {}
+		end
+		if global.pycloud == nil then
+			global.pycloud =
+			{
+				networks =
+					{
+						[0] = {},
+					},
+				chests = {},
+				current_chest = ''
+			}
 		end
 	end
 )
@@ -557,9 +662,9 @@ end)
 script.on_event(
 	{defines.events.on_built_entity, defines.events.on_robot_built_entity},
 	function(event)
-		--log('klonan bot did a thing')
+		log('klonan bot did a thing')
 		local E = event.created_entity
-		--log(E.name)
+		log(E.name)
 		--log(E.ghost_name)
 		--log(serpent.block(landbots))
 
@@ -617,6 +722,21 @@ script.on_event(
 			log(serpent.block(global.ocula_master_table))
 		elseif E.name == "ocula" then
 			built_ocula(E)
+		elseif E.name == "pydrive" then
+			log('hit')
+			game.surfaces["nauvis"].create_entity {
+				name = "pydrive_skin",
+				position = E.position,
+				--force = E.force
+			}
+			local chest =
+				{
+					entity = E,
+					cloud_id_num = 0,
+					input_output_state = 'left'
+				}
+			global.pycloud.chests[E.unit_number] = chest
+			log(serpent.block(global.pycloud))
 		elseif global.has_built_first_farm == false then
 			for _, farm in pairs(farm_buildings) do
 				if string.match(E.name, farm) then -- or string.match(E.ghost_name, farm) then
@@ -1290,6 +1410,9 @@ script.on_event(
 				global.watched_slaughterhouse.entity = event.entity
 				global.watched_slaughterhouse.player = event.player_index
 			--global.current_entity[event.player_index] = event.entity
+			elseif event.entity.name == 'pydrive' and game.players[event.player_index].gui.screen.chest_menu == nil then
+				create_pycloud_chest_gui(event)
+				global.pycloud.current_chest = event.entity
 			end
 		end
 	end
@@ -1354,6 +1477,15 @@ script.on_event(
 	end
 )
 
+script.on_event(defines.events.on_gui_switch_state_changed, function(event)
+
+	if event.element.name == 'chest_state_switch' then
+		global.pycloud.chests[global.pycloud.current_chest.unit_number].input_output_state = event.element.switch_state
+		--check for chest network and update the put in that as well
+	end
+	log(serpent.block(global.pycloud))
+end)
+
 script.on_event(
 	defines.events.on_gui_value_changed,
 	function()
@@ -1367,6 +1499,36 @@ script.on_event(
 		--log(event.element.name)
 		if event.element.name == "outpost_name" then
 			global.outpost_names[global.current_outpost] = outpostgui.outpost_name.text
+		end
+		if event.element.name == 'chest_id_text' then
+			log(serpent.block(global.pycloud))
+			local pycloud = global.pycloud
+			local un = pycloud.current_chest.unit_number
+			log(un)
+			if event.element.text ~= 0 then
+				pycloud.chests[un].cloud_id_num = event.element.text
+				if pycloud.networks[event.element.text] == nil then
+					local default =
+					{
+						input_chests = {},
+						output_chests =	{},
+						stored_items = {}
+					}
+					pycloud.networks[event.element.text] = default
+					if pycloud.chests[un].input_output_state == 'left' then
+						table.insert(pycloud.networks[event.element.text].input_chests, un)
+					elseif pycloud.chests[un].input_output_state == 'right' then
+						table.insert(pycloud.networks[event.element.text].output_chests, un)
+					end
+				elseif pycloud.networks[event.element.text] ~= nil then
+					if pycloud.chests[un].input_output_state == 'left' then
+						table.insert(pycloud.networks[event.element.text].input_chests, un)
+					elseif pycloud.chests[un].input_output_state == 'right' then
+						table.insert(pycloud.networks[event.element.text].output_chests, un)
+					end
+				end
+			end
+			log(serpent.block(global.pycloud))
 		end
 	end
 )
@@ -1474,6 +1636,10 @@ script.on_event(
 			farm_help_gui.destroy()
 			global.has_built_first_farm = true
 			global.farm_help_message_open = false
+		--elseif event.element.name == 'cloud_chest_close' then
+			--global.pycloud.current_chest = ''
+			--local player = game.players[event.player_index]
+			--player.gui.screen.chest_menu.destroy()
 		end
 	end
 )
@@ -1491,6 +1657,13 @@ script.on_event(
 			--log('hit')
 			global.watch_slaughterhouse = false
 		--global.current_entity[event.player_index] = nil
+		end
+		if event.entity ~= nil and event.entity.name == 'pydrive' then
+			local player = game.players[event.player_index]
+			if player.gui.screen.chest_menu ~= nil then
+				player.gui.screen.chest_menu.destroy()
+				global.pycloud.current_chest = ''
+			end
 		end
 	end
 )

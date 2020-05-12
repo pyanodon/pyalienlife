@@ -135,7 +135,66 @@ RECIPE {
     },
 }:add_unlock("mega-farm-yotoi"):add_ingredient({type = "item", name = "nems", amount = 10}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10})
 
----UPDATES---
+--Secondary Upgrade Recipes--
+--SUR--
+--WIP--
+
+--mk02--
+--WIP--
+
+RECIPE {
+    type = 'recipe',
+    name = 'yotoi-fruit-gmo-mk02',
+    category = 'yotoi',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'yotoi', amount = 4},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 300},
+        {type = 'item', name = 'enzyme-pks', amount = 2},
+        {type = 'item', name = 'chimeric-proteins', amount = 5},
+        {type = 'fluid', name = 'arqad-jelly', amount = 100},
+        },
+    results = {
+        {type = 'item', name = 'yotoi-fruit-mk02', amount = 1, probability = 0.005},
+        {type = 'item', name = 'yotoi-fruit', amount = 1, probability = 0.5},
+    },
+    main_product = "yotoi-fruit-mk02",
+    icons =
+        {
+            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png'},
+            {icon = "__pyalienlifegraphics__/graphics/icons/yotoi-fruit.png", scale = 0.25,shift = {-7.5,-7.5}}
+        },
+    icon_size = 64,
+    subgroup = 'py-alienlife-yotoi',
+    order = 'za'
+}:add_unlock("selective-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'yotoi-seeds-mk02',
+    category = 'nursery',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'yotoi-fruit-mk02', amount = 1},
+        {type = 'fluid', name = 'liquid-nitrogen', amount = 50},
+        },
+    results = {
+        {type = 'item', name = 'yotoi-seeds-mk02', amount = 3},
+        {type = 'item', name = 'biomass', amount = 2},
+    },
+    main_product = "yotoi-seeds-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/yotoi-seeds.png"},
+            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', scale = 0.25,shift = {-7.5,-7.5}},
+        },
+    icon_size = 64,
+    subgroup = 'py-alienlife-yotoi',
+    order = 'za'
+}:add_unlock("selective-breeding")
+
 RECIPE {
     type = 'recipe',
     name = 'yotoi-mk02',
@@ -143,25 +202,52 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'yotoi', amount = 2},
-        {type = 'item', name = 'yotoi-seeds', amount = 10},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 300},
-        {type = 'item', name = 'fertilizer', amount = 10},
-        {type = 'item', name = 'sand', amount = 10},
-        {type = 'item', name = 'small-lamp', amount = 10},
-        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'item', name = 'yotoi-seeds-mk02', amount = 5},
+        {type = 'fluid', name = 'liquid-manure', amount = 70},
+        {type = 'item', name = 'pure-sand', amount = 10},
+        {type = 'item', name = 'biomass', amount = 15},
         },
     results = {
-        {type = 'item', name = 'yotoi-mk02', amount = 1, probability = 0.005},
-        {type = 'item', name = 'yotoi', amount = 1, probability = 0.5},
-        --{type = 'item', name = 'empty-barrel', amount = 7},
+        {type = 'item', name = 'yotoi-mk02', amount = 2},
     },
     main_product = "yotoi-mk02",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/yotoi.png"},
+            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', scale = 0.25,shift = {-7.5,-7.5}},
+        },
     icon_size = 64,
     subgroup = 'py-alienlife-yotoi',
     order = 'za'
 }:add_unlock("selective-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'yotoi-fruit-mk02',
+    category = 'nursery',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'yotoi-mk02', amount = 1},
+        {type = 'fluid', name = 'cold-clean-air', amount = 50},
+        },
+    results = {
+        {type = 'item', name = 'yotoi-fruit-mk02', amount = 2},
+        {type = 'item', name = 'yotoi-leaves', amount = 5},
+    },
+    main_product = "yotoi-fruit-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/yotoi-fruit.png"},
+            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', scale = 0.25,shift = {-7.5,-7.5}},
+        },
+    icon_size = 64,
+    subgroup = 'py-alienlife-yotoi',
+    order = 'za'
+}:add_unlock("selective-breeding")
+
+--mk03--
+--WIP--
 
 RECIPE {
     type = 'recipe',
@@ -190,6 +276,9 @@ RECIPE {
     subgroup = 'py-alienlife-yotoi',
     order = 'zb'
 }:add_unlock("artificial-breeding")
+
+--mk04--
+--WIP--
 
 RECIPE {
     type = 'recipe',

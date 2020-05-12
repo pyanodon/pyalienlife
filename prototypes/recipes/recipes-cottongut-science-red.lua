@@ -9,6 +9,11 @@ RECIPE {
     energy_required = 10,
     ingredients =
         {
+            {type = 'item', name = 'fawogae-substrate', amount = 10},
+            {type = 'item', name = 'bio-sample', amount = 2},
+            {type = 'item', name = 'plasmids', amount = 1},
+            {type = "item", name = "cellulose", amount = 2},
+            {type = "item", name = "petri-dish", amount = 2}
         },
     results = {
         {type = 'item', name = 'solidified-sarcorus', amount = 3},
@@ -16,7 +21,7 @@ RECIPE {
     main_product = "solidified-sarcorus",
     --icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
     --icon_size = 64,
-    subgroup = "py-items",
+    subgroup = "py-alienlife-items",
     order = "a1"
 }:add_unlock("cottongut-mk01")
 

@@ -121,7 +121,7 @@ RECIPE {
     energy_required = 80,
     ingredients = {
         {type = 'item', name = 'cocoon', amount = 10},
-        {type = 'item', name = 'cage', amount = 1},
+        {type = 'item', name = 'cage', amount = 10},
         {type = 'fluid', name = 'water', amount = 500},
     },
     results = {
@@ -146,7 +146,7 @@ RECIPE {
         {type = 'fluid', name = 'fetal-serum', amount = 50},
     },
     results = {
-        {type = 'item', name = 'caged-vrauks', amount = 30}, --it was 3 so is is 30 now 
+        {type = 'item', name = 'caged-vrauks', amount = 30}, --it was 3 so is is 30 now
     },
     main_product = "caged-vrauks",
     subgroup = 'py-alienlife-vrauks',
@@ -238,7 +238,7 @@ RECIPE {
 --SUR--
 --WIP--
 --MK02--
---done--
+--DONE--
 ---UPDATES---
 RECIPE {
     type = 'recipe',

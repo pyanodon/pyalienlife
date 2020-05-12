@@ -96,6 +96,9 @@ require('prototypes/technologies/ctc')
 require('prototypes/technologies/cottongut')
 require('prototypes/technologies/compost')
 require('prototypes/technologies/arqad')
+require('prototypes/technologies/cardial-hypopharynx')
+require('prototypes/technologies/chromasome-infocrystalization')
+require('prototypes/technologies/pheromone-transition')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -289,6 +292,11 @@ require('prototypes/buildings/compost-plant-mk02')
 require('prototypes/buildings/compost-plant-mk03')
 require('prototypes/buildings/compost-plant-mk04')
 require('prototypes/buildings/arqad-hive-mk01')
+require('prototypes/buildings/arqad-hive-mk02')
+require('prototypes/buildings/arqad-hive-mk03')
+require('prototypes/buildings/arqad-hive-mk04')
+
+--require('prototypes/buildings/py-drive')
 
 --weapons/defenses
 --require('prototypes/weapons/turrets/gun-turret-mk01')
@@ -343,6 +351,9 @@ require("prototypes/fluids/casein-solution")
 require("prototypes/fluids/milk")
 require("prototypes/fluids/autoantigens")
 require('prototypes/fluids/cadaveric-arum-cum')
+require('prototypes/fluids/wax')
+require('prototypes/fluids/arqad-jelly')
+require('prototypes/fluids/bee-venom')
 
 --(( RECIPES ))--
 require('prototypes/items/items')
@@ -461,6 +472,13 @@ require('prototypes/recipes/recipes-cottongut-science-red')
 require('prototypes/recipes/recipes-cottongut-science-green')
 require('prototypes/recipes/recipes-cottongut-science-blue')
 require('prototypes/recipes/recipes-cottongut-science-py')
+require('prototypes/recipes/recipes-arqad')
+require('prototypes/recipes/recipes-auto-arqad')
+require('prototypes/recipes/recipes-arqad-updates')
+require('prototypes/recipes/recipes-arqad-products')
+require('prototypes/recipes/recipes-arqad-products-1')
+require('prototypes/recipes/recipes-arqad-products-2')
+
 
 --gunpowder poo
 --require('prototypes/recipes/recipes-vrauk-products')
@@ -710,18 +728,18 @@ local biomass_convertion =
         ['rennea-seeds'] = {item_amount = 1, biomass_amount = 1},
         ['yotoi-fruit'] = {item_amount = 1, biomass_amount = 3},
         ['yotoi-leaves'] = {item_amount = 1, biomass_amount = 2},
-        ['yotoi-seeds'] = {item_amount = 1, biomass_amount = 1},
-        ['tuuphra-seeds'] = {item_amount = 1, biomass_amount = 1},
+        ['yotoi-seeds'] = {item_amount = 10, biomass_amount = 10},
+        ['tuuphra-seeds'] = {item_amount = 10, biomass_amount = 10},
         ['dried-grods'] = {item_amount = 1, biomass_amount = 1},
-        ['grod-seeds'] = {item_amount = 1, biomass_amount = 1},
+        ['grod-seeds'] = {item_amount = 10, biomass_amount = 10},
         ['adrenal-cortex'] = {item_amount = 1, biomass_amount = 1},
         ['cridren-seeds'] = {item_amount = 1, biomass_amount = 1},
-        ['kicalk-seeds'] = {item_amount = 1, biomass_amount = 6},
-        ['kicalk-seeds-mk02'] = {item_amount = 1, biomass_amount = 1},
-        ['kicalk-seeds-mk03'] = {item_amount = 1, biomass_amount = 1},
-        ['kicalk-seeds-mk04'] = {item_amount = 1, biomass_amount = 1},
-        ['cadaveric-arum-seeds'] = {item_amount = 1, biomass_amount = 1},
-        ['moondrop-seeds'] = {item_amount = 1, biomass_amount = 1},
+        ['kicalk-seeds'] = {item_amount = 5, biomass_amount = 30},
+        ['kicalk-seeds-mk02'] = {item_amount = 5, biomass_amount = 30},
+        ['kicalk-seeds-mk03'] = {item_amount = 5, biomass_amount = 30},
+        ['kicalk-seeds-mk04'] = {item_amount = 5, biomass_amount = 30},
+        ['cadaveric-arum-seeds'] = {item_amount = 10, biomass_amount = 10},
+        ['moondrop-seeds'] = {item_amount = 5, biomass_amount = 30},
         ['kmauts-ration'] = {item_amount = 1, biomass_amount = 5},
         ['arthurian-food-01'] = {item_amount = 1, biomass_amount = 5},
         ['arthurian-food-02'] = {item_amount = 1, biomass_amount = 5},
@@ -969,8 +987,48 @@ for i, item in pairs(biomass_convertion) do
             --name = data.raw.fluid[i].localised_name
         --end
     end
-
-    if data.raw.item[i] ~= nil or data.raw.fluid[i] ~= nil then
+    --log(serpent.block(data.raw.item[i]))
+    local icon
+    if type == 'item' and data.raw.item[i] ~= nil then
+        if data.raw.item[i].icon ~= nil then
+            log('hit')
+            icon = {icon = data.raw.item[i].icon, icon_size = data.raw.item[i].icon_size}
+        elseif data.raw.item[i].icons ~= nil then
+            log('hit')
+            icon = data.raw.item[i].icons[1]
+            if data.raw.item[i].icon_size ~= nil then
+                icon.icon_size = data.raw.item[i].icon_size
+            elseif data.raw.item[i].icons[1].icon_size ~= nil then
+                icon.icon_size = data.raw.item[i].icons[1].icon_size
+            end
+        end
+    elseif type == 'fluid' then
+        if data.raw.fluid[i].icon ~= nil then
+            log('hit')
+            icon = {icon = data.raw.fluid[i].icon, icon_size = data.raw.fluid[i].icon_size}
+        elseif data.raw.fluid[i].icons ~= nil then
+            log('hit')
+            icon = data.raw.fluid[i].icons[1]
+        end
+    elseif type == 'item' and data.raw.module[i] ~= nil then
+        if data.raw.module[i].icon ~= nil then
+            log('hit')
+            icon = {icon = data.raw.module[i].icon, icon_size = data.raw.module[i].icon_size}
+        elseif data.raw.module[i].icons ~= nil then
+            log('hit')
+            if string.match(data.raw.module[i].icons[1].icon, 'over') ~= nil then
+                icon = data.raw.module[i].icons[2]
+            else
+                icon = data.raw.module[i].icons[1]
+            end
+            if data.raw.module[i].icon_size ~= nil then
+                icon.icon_size = data.raw.module[i].icon_size
+            elseif data.raw.module[i].icons[1].icon_size ~= nil then
+                icon.icon_size = data.raw.module[i].icons[1].icon_size
+            end
+        end
+    end
+    if data.raw.item[i] ~= nil or data.raw.fluid[i] ~= nil or data.raw.module[i] ~= nil then
         RECIPE {
             type = 'recipe',
             name = 'biomass-' .. i,
@@ -984,11 +1042,17 @@ for i, item in pairs(biomass_convertion) do
             results = {
                 {type = 'item', name = 'biomass', amount = item.biomass_amount},
             },
-            main_product = 'biomass',
+            --main_product = 'biomass',
+            icons =
+                {
+                    icon,
+                    {icon = "__pyalienlifegraphics__/graphics/icons/biomass.png", scale = 0.50, shift = {-7.5,-7.5}, icon_size = 32}
+                },
             subgroup = 'py-alienlife-compost',
-            order = 'z',
+            order = i,
             localised_name = {'', 'Compost ' .. item.item_amount .. ' x ', {local_name_type .. '-name.' .. i}}
         }:add_unlock("compost")
+        log(serpent.block(data.raw.recipe['biomass-' .. i]))
     end
 end
 

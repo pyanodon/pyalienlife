@@ -9,6 +9,16 @@ RECIPE {
     energy_required = 15,
     ingredients =
         {
+            {type = 'fluid', name = 'hydrogen-chloride', amount = 50},
+            {type = 'fluid', name = 'oleochemicals', amount = 50},
+            {type = 'item', name = 'tuuphra', amount = 5},
+            {type = 'item', name = 'bio-sample', amount = 2},
+            {type = 'item', name = 'bhoddos', amount = 2},
+            {type = 'item', name = 'sea-sponge', amount = 1},
+            {type = "item", name = "flask", amount = 3},
+            {type = "item", name = "navens", amount = 2},
+            {type = "item", name = "brain", amount = 1},
+            {type = "item", name = "retrovirus", amount = 1}
         },
     results = {
         {type = 'item', name = 'nonconductive-phazogen', amount = 3},
@@ -16,7 +26,7 @@ RECIPE {
     main_product = "nonconductive-phazogen",
     --icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
     --icon_size = 64,
-    subgroup = "py-items",
+    subgroup = "py-alienlife-items",
     order = "a1"
 }:add_unlock("cottongut-mk02")
 

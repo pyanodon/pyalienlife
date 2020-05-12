@@ -48,14 +48,14 @@ ENTITY {
     },
     allowed_effects = {"speed","productivity"},
     crafting_categories = {"arqad"},
-    crafting_speed = 0.01,
+    crafting_speed = 0.02,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
         emissions_per_minute = 0.5,
     },
     energy_usage = "350kW",
-    ingredient_count = 10,
+    ingredient_count = 20,
     animation = {
         layers = {
             --TERRAIN
@@ -69,17 +69,7 @@ ENTITY {
                 priority = "low",
                 --animation_speed = 0.75,
             },
-            --DOME
             {
-                filename = "__pyalienlifegraphics3__/graphics/entity/arqad-hive/dome-base.png",
-                frame_count = 1,
-                width = 384,
-                height = 480,
-                shift = util.by_pixel(0, -64),
-                priority = "low",
-                --animation_speed = 0.75,
-            },
-			{
                 filename = "__pyalienlifegraphics3__/graphics/entity/arqad-hive/off-mask.png",
                 width = 384,
                 height = 448,
@@ -89,6 +79,16 @@ ENTITY {
                 priority = "low",
                 --animation_speed = 0.75,
 				tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+            },
+            --DOME
+            {
+                filename = "__pyalienlifegraphics3__/graphics/entity/arqad-hive/dome-base.png",
+                frame_count = 1,
+                width = 384,
+                height = 480,
+                shift = util.by_pixel(0, -64),
+                priority = "low",
+                --animation_speed = 0.75,
             },
         }
     },

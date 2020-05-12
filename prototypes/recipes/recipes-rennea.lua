@@ -66,7 +66,7 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "item", name = "rennea", amount = 5},
+        {type = "item", name = "rennea", amount = 4},
     },
     results = {
         {type = "item", name = "rennea-seeds", amount = 7}
