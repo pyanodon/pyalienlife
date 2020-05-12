@@ -190,10 +190,9 @@ ITEM {
     name = "fawogae-spore",
     icons =
         {
-            {icon = "__pyalienlifegraphics__/graphics/icons/fawogae-spore.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/fawogae-spore.png", icon_size = 32,},
             {icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png", icon_size = 64},
         },
-    icon_size = 32,
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
@@ -208,7 +207,6 @@ ITEM {
             {icon = "__pyalienlifegraphics__/graphics/icons/fawogae-spore.png", icon_size = 32},
             {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
         },
-    icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
@@ -223,7 +221,6 @@ ITEM {
             {icon = "__pyalienlifegraphics__/graphics/icons/fawogae-spore.png", icon_size = 32},
             {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
         },
-    icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
@@ -238,7 +235,6 @@ ITEM {
             {icon = "__pyalienlifegraphics__/graphics/icons/fawogae-spore.png", icon_size = 32},
             {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
         },
-    icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
@@ -5981,8 +5977,8 @@ ITEM {
     name = "scrondrix-mk02",
     icons =
 	{
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png"}
+        {icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
     },
     icon_size = 64,
 	category = "scrondrix",
@@ -6001,8 +5997,8 @@ ITEM {
     name = "scrondrix-mk03",
     icons =
 	{
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png"}
+        {icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
     },
     icon_size = 64,
 	category = "scrondrix",
@@ -6021,8 +6017,8 @@ ITEM {
     name = "scrondrix-mk04",
     icons =
 	{
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png"}
+        {icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
     },
     icon_size = 64,
 	category = "scrondrix",
@@ -6061,8 +6057,8 @@ ITEM {
     name = "rennea-mk02",
     icons =
 	{
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/rennea.png"}
+        {icon = "__pyalienlifegraphics__/graphics/icons/rennea.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
     },
     icon_size = 64,
 	category = "rennea",
@@ -6081,8 +6077,8 @@ ITEM {
     name = "rennea-mk03",
     icons =
 	{
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/rennea.png"}
+        {icon = "__pyalienlifegraphics__/graphics/icons/rennea.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
     },
     icon_size = 64,
 	category = "rennea",
@@ -6101,8 +6097,8 @@ ITEM {
     name = "rennea-mk04",
     icons =
 	{
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/rennea.png"}
+        {icon = "__pyalienlifegraphics__/graphics/icons/rennea.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
     },
     icon_size = 64,
 	category = "rennea",
@@ -6141,8 +6137,8 @@ ITEM {
     name = "phadai-mk02",
     icons =
 	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/phadai.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/phadai.png"}
     },
     icon_size = 64,
 	category = "phadai",
@@ -6161,8 +6157,8 @@ ITEM {
     name = "phadai-mk03",
     icons =
 	{
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/phadai.png"}
+        {icon = "__pyalienlifegraphics__/graphics/icons/phadai.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
     },
     icon_size = 64,
 	category = "phadai",
@@ -6181,8 +6177,8 @@ ITEM {
     name = "phadai-mk04",
     icons =
 	{
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/phadai.png"}
+        {icon = "__pyalienlifegraphics__/graphics/icons/phadai.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
     },
     icon_size = 64,
 	category = "phadai",
@@ -7801,7 +7797,6 @@ ITEM {
         {icon = "__pycoalprocessinggraphics__/graphics/icons/fawogae-icon.png", icon_size = 32},
         --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
     },
-    icon_size = 64,
 	category = "fawogae",
 	tier = 1,
     flags = {},
@@ -7819,9 +7814,8 @@ ITEM {
     icons =
 	{
         {icon = "__pycoalprocessinggraphics__/graphics/icons/fawogae-icon.png", icon_size = 32},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
     },
-    icon_size = 64,
 	category = "fawogae",
 	tier = 2,
     flags = {},
@@ -7839,9 +7833,9 @@ ITEM {
     icons =
 	{
         {icon = "__pycoalprocessinggraphics__/graphics/icons/fawogae-icon.png", icon_size = 32},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png",
+        icon_size = 64},
     },
-    icon_size = 64,
 	category = "fawogae",
 	tier = 3,
     flags = {},
@@ -7859,9 +7853,9 @@ ITEM {
     icons =
 	{
         {icon = "__pycoalprocessinggraphics__/graphics/icons/fawogae-icon.png", icon_size = 32},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png",
+        icon_size = 64},
     },
-    icon_size = 64,
 	category = "fawogae",
 	tier = 4,
     flags = {},
