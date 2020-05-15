@@ -12,6 +12,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='cottongut',amount =4},
+					{name='cage',amount = 1},
 					{name='arthurianegg',amount =1},
 					{name='waterbarrel',amount=4,return_item={name='empty-barrel',amount=4}},
 				},
