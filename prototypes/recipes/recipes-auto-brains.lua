@@ -132,16 +132,17 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cottongut',amount=5},
+					{name='cottongut',amount=6},
 				},
 			results =
 				{
 					{name='bones', probability = 0.4,amount_min =1,amount_max =5},
 					{name='meat', probability = 0.3,amount_min =1,amount_max =4},
 					{name='skin', probability = 0.4,amount_min =1,amount_max =4},
-                    {name='guts', probability = 0.5,amount_min =1,amount_max =5},
+					{name='guts', probability = 0.5,amount_min =1,amount_max =5},
+					{name='fat', probability = 0.3,amount_min =1,amount_max =4},
 					{name='blood', amount =40},
-					{name='brain', probability = 0.3,amount_min =1,amount_max =3},
+					{name='brain', probability = 0.3,amount_min =1,amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
