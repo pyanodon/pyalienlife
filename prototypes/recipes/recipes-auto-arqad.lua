@@ -290,7 +290,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='arqadegg', probability = 0.8,amount_min =3,amount_max =3},
+					{name='arqadegg', probability = 0.85,amount_min =3,amount_max =4},
 				},
 			crafting_speed = 140,
 			tech = 'assisted-embryology'
@@ -300,7 +300,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='biomass',amount ='R'},
-					{name='yaedols',amount =2},
+					{name='yaedols',amount =1},
 				},
 			results =
 				{
@@ -404,7 +404,7 @@ fun.autorecipes {
 				{
 
                     {name='biomass',amount ='R'},
-					{name='yaedols',amount =2},
+					{name='yaedols',amount =1},
 				},
 			results =
 				{
