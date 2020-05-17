@@ -205,10 +205,15 @@ RECIPE {
     main_product = "arthurian",
 }:add_unlock("arthurian")
 
----UPDATES---
+--Secondary Upgrade Recipes--
+--SUR--
+--WIP--
+--mk02--
+--DONE--
+
 RECIPE {
     type = 'recipe',
-    name = 'arthurian-mk02',
+    name = 'arthurian-egg-mk02-gmo',
     category = 'arthurian',
     enabled = false,
     energy_required = 30,
@@ -220,16 +225,100 @@ RECIPE {
         {type = 'item', name = 'water-barrel', amount = 4},
         },
     results = {
-        {type = 'item', name = 'arthurian-mk02', amount = 1, probability = 0.005},
-        {type = 'item', name = 'arthurian', amount = 1, probability = 0.5},
+        {type = 'item', name = 'arthurian-egg-mk02', amount = 1, probability = 0.005},
+        {type = 'item', name = 'arthurian-egg', amount = 1, probability = 0.5},
         {type = 'item', name = 'empty-barrel', amount = 4},
     },
     --main_product = "arthurian-mk02",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
+    icons =
+        {
+            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png'},
+            {icon = "__pyalienlifegraphics__/graphics/icons/arthurian.png", scale = 0.25, shift = {-7.5,-7.5}}
+        },
     icon_size = 64,
     subgroup = 'py-alienlife-arthurian',
     order = 'za'
 }:add_unlock("selective-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'arthurian-pup-mk02',
+    category = 'incubator',
+    enabled = false,
+    energy_required = 45,
+    ingredients = {
+        {type = 'item', name = 'arthurian-egg-mk02', amount = 1},
+        {type = 'fluid', name = 'gta', amount = 150},
+        },
+    results = {
+        {type = 'item', name = 'arthurian-pup-mk02', amount = 1, probability = 0.5},
+    },
+    --main_product = "arthurian-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/arthurian-pup.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk02.png", scale = 0.25, shift = {-7.5,-7.5}}
+        },
+    icon_size = 64,
+    subgroup = 'py-alienlife-arthurian',
+    order = 'za'
+}:add_unlock("selective-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'arthurian-mk02',
+    category = 'arthurian',
+    enabled = false,
+    energy_required = 50,
+    ingredients = {
+        {type = 'item', name = 'arthurian-pup-mk02', amount = 1},
+        {type = 'item', name = 'arthurian-food-02', amount = 3},
+        {type = 'item', name = 'dhilmos-pup', amount = 4},
+        {type = 'item', name = 'syrup-01-barrel', amount = 3},
+        },
+    results = {
+        {type = 'item', name = 'arthurian-mk02', amount = 1},
+        {type = 'item', name = 'empty-barrel', amount = 3},
+    },
+    --main_product = "arthurian-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/arthurian.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk02.png", scale = 0.25, shift = {-7.5,-7.5}}
+        },
+    icon_size = 64,
+    subgroup = 'py-alienlife-arthurian',
+    order = 'za'
+}:add_unlock("selective-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'arthurian-egg-mk02',
+    category = 'arthurian',
+    enabled = false,
+    energy_required = 60,
+    ingredients = {
+        {type = 'item', name = 'arthurian-mk02', amount = 1},
+        {type = 'item', name = 'arthurian-food-01', amount = 4},
+        {type = 'item', name = 'fish-egg', amount = 25},
+        {type = 'item', name = 'dried-meat', amount = 5},
+        },
+    results = {
+        {type = 'item', name = 'arthurian-egg-mk02', amount = 3},
+    },
+    --main_product = "arthurian-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/arthurian-egg.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk02.png", scale = 0.25, shift = {-7.5,-7.5}}
+        },
+    icon_size = 64,
+    subgroup = 'py-alienlife-arthurian',
+    order = 'za'
+}:add_unlock("selective-breeding")
+
+--MK03--
+--WIP--
 
 RECIPE {
     type = 'recipe',
@@ -256,6 +345,9 @@ RECIPE {
     subgroup = 'py-alienlife-arthurian',
     order = 'zb'
 }:add_unlock("artificial-breeding")
+
+--MK04--
+--WIP--
 
 RECIPE {
     type = 'recipe',
