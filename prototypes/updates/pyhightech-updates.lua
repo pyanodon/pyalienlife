@@ -275,7 +275,7 @@ RECIPE('bose-einstein-superfluid'):add_ingredient({type = "fluid", name = "deute
 if mods['pyhightech'] then
 	data.raw.item['dried-meat'] = nil
 end
-RECIPE('dried-meat'):remove_unlock('advanced-rendering'):change_category('smelting')
+--RECIPE('dried-meat'):remove_unlock('advanced-rendering'):change_category('smelting')
 
 fun.results_replacer("dhilmos-sex-01", "dirty-water", "waste-water")
 

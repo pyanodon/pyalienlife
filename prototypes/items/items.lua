@@ -1766,8 +1766,98 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "arthurian-egg-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/arthurian-egg.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arthurian",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "arthurian-egg-mk03",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/arthurian-egg.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arthurian",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "arthurian-egg-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/arthurian-egg.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arthurian",
+    order = "h",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "arthurian-pup",
     icon = "__pyalienlifegraphics__/graphics/icons/arthurian-pup.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arthurian",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "arthurian-pup-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/arthurian-pup.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arthurian",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "arthurian-pup-mk03",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/arthurian-pup.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arthurian",
+    order = "h",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "arthurian-pup-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/arthurian-pup.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
+        },
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-arthurian",

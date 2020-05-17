@@ -2019,7 +2019,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'dried-meat', amount = 5}
     }
-}:add_unlock('advanced-rendering')
+}:add_unlock('rendering')
 
 end
 
