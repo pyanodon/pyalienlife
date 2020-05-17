@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.0
+Date: 2020-05-17
+  Changes:
+    - Added arthurian mk02 breeding
+    - made adjustment to compost recipe icons
+    - fixed missing cage and typos
+    - miscellaneous balance adjustments
+---------------------------------------------------------------------------------------------------
 Version: 1.6.9
 Date: 2020-05-10
   Changes:
