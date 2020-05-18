@@ -913,7 +913,7 @@ local biomass_convertion =
         ['zipir2'] = {item_amount = 1, biomass_amount = 30},
         ['zipir3'] = {item_amount = 1, biomass_amount = 40},
         ['zipir4'] = {item_amount = 1, biomass_amount = 50},
-        ['log'] = {item_amount = 5, biomass_amount = 30},
+        ['log'] = {item_amount = 3, biomass_amount = 35},
         ['dry-ralesia'] = {item_amount = 1, biomass_amount = 1},
         ['ralesia-powder'] = {item_amount = 1, biomass_amount = 1},
         ['raw-fiber'] = {item_amount = 1, biomass_amount = 3},
