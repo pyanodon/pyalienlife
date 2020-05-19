@@ -2005,11 +2005,11 @@ RECIPE {
     --main_product = "casein-pulp-01",
 }:add_unlock("compost")
 
-if not mods['pyhightech'] then
+--if not mods['pyhightech'] then
 
 RECIPE {
     type = 'recipe',
-    name = 'dried-meat',
+    name = 'dried-meat-01',
     category = 'smelting',
     enabled = false,
     energy_required = 5,
@@ -2018,10 +2018,11 @@ RECIPE {
     },
     results = {
         {type = 'item', name = 'dried-meat', amount = 5}
-    }
+    },
+    main_product = 'dried-meat'
 }:add_unlock('rendering')
 
-end
+--end
 
 RECIPE {
     type = 'recipe',

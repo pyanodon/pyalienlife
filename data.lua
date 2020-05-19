@@ -310,6 +310,7 @@ require('prototypes/buildings/py-drive')
 --Creature
 require('prototypes/creatures/caravan')
 require('prototypes/creatures/nuka-caravan')
+require('prototypes/creatures/flying-caravan')
 require('prototypes/creatures/dingrido')
 require('prototypes/creatures/crawdad')
 require('prototypes/creatures/phadaisus')
