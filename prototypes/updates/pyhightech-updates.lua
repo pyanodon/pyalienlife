@@ -274,8 +274,9 @@ RECIPE('space-science-pack'):add_ingredient({type = "item", name = "antimatter",
 RECIPE('bose-einstein-superfluid'):add_ingredient({type = "fluid", name = "deuterium", amount = 10})
 if mods['pyhightech'] then
 	data.raw.item['dried-meat'] = nil
+    RECIPE('dried-meat'):remove_unlock('advanced-rendering'):change_category('smelting')
 end
---RECIPE('dried-meat'):remove_unlock('advanced-rendering'):change_category('smelting')
+
 
 fun.results_replacer("dhilmos-sex-01", "dirty-water", "waste-water")
 
