@@ -82,3 +82,42 @@ RECIPE {
 }:add_unlock("biotech-mk02")
 
 table.insert(data.raw.lab.lab.inputs, 'py-science-pack')
+
+--copy`s of combustion recipes with biomass
+for r,recipe in pairs(data.raw.recipe) do
+    if recipe.category == 'combustion' then
+        local recipe_copy = table.deepcopy(recipe)
+        local name = recipe_copy.name
+
+        for i, ing in pairs(recipe_copy.ingredients) do
+            if ing.name == 'coke' then
+                ing.name = 'biomass'
+            end
+        end
+
+        RECIPE {
+            type = "recipe",
+            name = name .. 'biomass',
+            category = "combustion",
+            enabled = false,
+            energy_required = 3,
+            ingredients = recipe_copy.ingredients,
+            results = recipe_copy.results,
+            icon = recipe_copy.icon,
+            icon_size = recipe_copy.icon_size,
+            --main_product = "combustion-mixture1",
+            subgroup = recipe_copy.subgroup,
+            order = recipe_copy.order
+        }
+
+        for t, tech in pairs(data.raw.technology) do
+            for e, effect in pairs(tech.effects) do
+                if effect.type == 'unlock-recipe' and effect.recipe == 'name' then
+                    (name .. 'biomass'):add_unlock(tech.name)
+                    break
+                end
+            end
+            break
+        end
+    end
+end
