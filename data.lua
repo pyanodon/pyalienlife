@@ -270,7 +270,6 @@ require("prototypes/buildings/ez-ranch-mk01")
 require("prototypes/buildings/ez-ranch-mk02")
 require("prototypes/buildings/ez-ranch-mk03")
 require("prototypes/buildings/ez-ranch-mk04")
-require('prototypes/buildings/outpost')
 require('prototypes/buildings/generator-1')
 require('prototypes/buildings/generator-2')
 require('prototypes/buildings/pyphoon-bay')
@@ -298,6 +297,8 @@ require('prototypes/buildings/arqad-hive-mk04')
 
 require('prototypes/buildings/py-drive')
 
+require('prototypes/buildings/outpost')
+require('prototypes/buildings/flyavan-outpost')
 --weapons/defenses
 --require('prototypes/weapons/turrets/gun-turret-mk01')
 --require('prototypes/weapons/turrets/rocket-turret-mk01')
