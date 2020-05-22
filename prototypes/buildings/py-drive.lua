@@ -14,7 +14,7 @@
     ITEM {
         type = "item",
         name = 'pydrive',
-        icon = "__pyalienlifegraphics__/graphics/icons/food-bowl.png",
+        icon = "__pyalienlifegraphics3__/graphics/icons/logistic-station.png",
         icon_size = 64,
         flags = {},
         subgroup = "py-containers-warehouse",
