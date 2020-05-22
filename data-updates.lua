@@ -82,43 +82,73 @@ RECIPE {
 }:add_unlock("biotech-mk02")
 
 table.insert(data.raw.lab.lab.inputs, 'py-science-pack')
---[[
+
 --copy`s of combustion recipes with biomass
 for r,recipe in pairs(data.raw.recipe) do
-    if recipe.category == 'combustion' then
+    --log('hit')
+    if recipe.category == 'combustion' and string.match(recipe.name, 'biomass') == nil then
+        --log('hit')
         local recipe_copy = table.deepcopy(recipe)
         local name = recipe_copy.name
 
         for i, ing in pairs(recipe_copy.ingredients) do
+            --log('hit')
             if ing.name == 'coke' then
                 ing.name = 'biomass'
-            end
-        end
-
-        RECIPE {
-            type = "recipe",
-            name = name .. 'biomass',
-            category = "combustion",
-            enabled = false,
-            energy_required = 3,
-            ingredients = recipe_copy.ingredients,
-            results = recipe_copy.results,
-            icon = recipe_copy.icon,
-            icon_size = recipe_copy.icon_size,
-            --main_product = "combustion-mixture1",
-            subgroup = recipe_copy.subgroup,
-            order = recipe_copy.order
-        }
-
-        for t, tech in pairs(data.raw.technology) do
-            for e, effect in pairs(tech.effects) do
-                if effect.type == 'unlock-recipe' and effect.recipe == 'name' then
-                    (name .. 'biomass'):add_unlock(tech.name)
-                    break
+                local locale
+                local type
+                local temp
+                for a, ingred in pairs(recipe.ingredients) do
+                    if ingred.name ~= 'water' and ingred.name ~= 'coke' then
+                        locale = ingred.name
+                        type = ingred.type
+                    end
+                end
+                log(serpent.block(recipe.ingredients))
+                log(locale)
+                for res, result in pairs(recipe.results) do
+                    if result.name == "combustion-mixture1" then
+                        temp = result.temperature
+                    end
+                end
+                RECIPE {
+                    type = "recipe",
+                    name = name .. '-biomass',
+                    category = "combustion",
+                    enabled = false,
+                    energy_required = 3,
+                    ingredients = recipe_copy.ingredients,
+                    results = recipe_copy.results,
+                    icon = recipe_copy.icon,
+                    icon_size = recipe_copy.icon_size,
+                    --main_product = "combustion-mixture1",
+                    subgroup = recipe_copy.subgroup,
+                    order = recipe_copy.order,
+                    localised_name = {'', {type .. '-name.' .. locale}, ' with ',{'item-name.biomass'}, ' to combustion mixture (' .. temp .. '°C)' }
+                }
+                --log('hit')
+                for t, tech in pairs(data.raw.technology) do
+                    --log('hit')
+                    --log(serpent.block(tech))
+                    if tech.effects ~= nil then
+                        for e, effect in pairs(tech.effects) do
+                            --log('hit')
+                            --log(serpent.block(effect))
+                            --log(serpent.block(effect.type))
+                            --log(serpent.block(effect.recipe))
+                            --log(serpent.block(name))
+                            if effect.type == 'unlock-recipe' and effect.recipe == name then
+                                --log('hit')
+                                RECIPE(name .. '-biomass'):add_unlock(tech.name)
+                                --log(serpent.block(data.raw.technology[tech.name]))
+                                break
+                            end
+                        end
+                    end
+                    --break
                 end
             end
-            break
         end
+        --log(serpent.block(data.raw.recipe[name .. '-biomass']))
     end
 end
-]]--
