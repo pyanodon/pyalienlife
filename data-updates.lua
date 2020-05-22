@@ -82,7 +82,7 @@ RECIPE {
 }:add_unlock("biotech-mk02")
 
 table.insert(data.raw.lab.lab.inputs, 'py-science-pack')
-
+--[[
 --copy`s of combustion recipes with biomass
 for r,recipe in pairs(data.raw.recipe) do
     if recipe.category == 'combustion' then
@@ -121,3 +121,4 @@ for r,recipe in pairs(data.raw.recipe) do
         end
     end
 end
+]]--

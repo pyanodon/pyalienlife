@@ -994,10 +994,10 @@ for i, item in pairs(biomass_convertion) do
     local icon
     if type == 'item' and data.raw.item[i] ~= nil then
         if data.raw.item[i].icon ~= nil then
-            log('hit')
+            --log('hit')
             icon = {icon = data.raw.item[i].icon, icon_size = data.raw.item[i].icon_size}
         elseif data.raw.item[i].icons ~= nil then
-            log('hit')
+            --log('hit')
             icon = data.raw.item[i].icons[1]
             if data.raw.item[i].icon_size ~= nil then
                 icon.icon_size = data.raw.item[i].icon_size
@@ -1007,18 +1007,18 @@ for i, item in pairs(biomass_convertion) do
         end
     elseif type == 'fluid' then
         if data.raw.fluid[i].icon ~= nil then
-            log('hit')
+            --log('hit')
             icon = {icon = data.raw.fluid[i].icon, icon_size = data.raw.fluid[i].icon_size}
         elseif data.raw.fluid[i].icons ~= nil then
-            log('hit')
+            --log('hit')
             icon = data.raw.fluid[i].icons[1]
         end
     elseif type == 'item' and data.raw.module[i] ~= nil then
         if data.raw.module[i].icon ~= nil then
-            log('hit')
+            --log('hit')
             icon = {icon = data.raw.module[i].icon, icon_size = data.raw.module[i].icon_size}
         elseif data.raw.module[i].icons ~= nil then
-            log('hit')
+            --log('hit')
             if string.match(data.raw.module[i].icons[1].icon, 'over') ~= nil then
                 icon = data.raw.module[i].icons[2]
             else
@@ -1055,7 +1055,7 @@ for i, item in pairs(biomass_convertion) do
             order = i,
             localised_name = {'', 'Compost ' .. item.item_amount .. ' x ', {local_name_type .. '-name.' .. i}}
         }:add_unlock("compost")
-        log(serpent.block(data.raw.recipe['biomass-' .. i]))
+        --log(serpent.block(data.raw.recipe['biomass-' .. i]))
     end
 end
 
