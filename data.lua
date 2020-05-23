@@ -522,10 +522,10 @@ local biomass_convertion =
         ['grod-seeds'] = {item_amount = 10, biomass_amount = 25},
         ['adrenal-cortex'] = {item_amount = 1, biomass_amount = 1},
         ['cridren-seeds'] = {item_amount = 1, biomass_amount = 1},
-        ['kicalk-seeds'] = {item_amount = 5, biomass_amount = 30},
-        ['kicalk-seeds-mk02'] = {item_amount = 5, biomass_amount = 30},
-        ['kicalk-seeds-mk03'] = {item_amount = 5, biomass_amount = 30},
-        ['kicalk-seeds-mk04'] = {item_amount = 5, biomass_amount = 30},
+        ['kicalk-seeds'] = {item_amount = 10, biomass_amount = 280},
+        ['kicalk-seeds-mk02'] = {item_amount = 10, biomass_amount = 300},
+        ['kicalk-seeds-mk03'] = {item_amount = 10, biomass_amount = 320},
+        ['kicalk-seeds-mk04'] = {item_amount = 10, biomass_amount = 340},
         ['cadaveric-arum-seeds'] = {item_amount = 10, biomass_amount = 25},
         ['moondrop-seeds'] = {item_amount = 5, biomass_amount = 15},
         ['creamy-latex'] = {item_amount = 400, biomass_amount = 20, type = 'fluid'},
@@ -549,10 +549,10 @@ local biomass_convertion =
         ['grod-mk02'] = {item_amount = 1, biomass_amount = 5},
         ['grod-mk03'] = {item_amount = 1, biomass_amount = 5},
         ['grod-mk04'] = {item_amount = 1, biomass_amount = 5},
-        ['kicalk'] = {item_amount = 3, biomass_amount = 45},
-        ['kicalk-mk02'] = {item_amount = 1, biomass_amount = 17},
-        ['kicalk-mk03'] = {item_amount = 1, biomass_amount = 19},
-        ['kicalk-mk04'] = {item_amount = 1, biomass_amount = 21},
+        ['kicalk'] = {item_amount = 4, biomass_amount = 280},
+        ['kicalk-mk02'] = {item_amount = 4, biomass_amount = 300},
+        ['kicalk-mk03'] = {item_amount = 4, biomass_amount = 320},
+        ['kicalk-mk04'] = {item_amount = 4, biomass_amount = 340},
         ['phytoplankton'] = {item_amount = 50, biomass_amount = 40, type = 'fluid'},
         ['moondrop'] = {item_amount = 5, biomass_amount = 25},
         ['fawogae-spore'] = {item_amount = 10, biomass_amount = 10},
@@ -562,6 +562,10 @@ local biomass_convertion =
         ['navens-spore'] = {item_amount = 10, biomass_amount = 10},
         ['bhoddos-spore'] = {item_amount = 10, biomass_amount = 10},
         ['yaedols-spores'] = {item_amount = 10, biomass_amount = 10},
+        ['fawogae'] = {item_amount = 20, biomass_amount = 60},
+        ['fawogae-mk02'] = {item_amount = 20, biomass_amount = 65},
+        ['fawogae-mk03'] = {item_amount = 20, biomass_amount = 70},
+        ['fawogae-mk04'] = {item_amount = 20, biomass_amount = 75},
 
 
         ['cocoon'] = {item_amount = 1, biomass_amount = 1},
@@ -850,10 +854,6 @@ local biomass_convertion =
         ['moondrop-fueloil'] = {item_amount = 1, biomass_amount = 1},
         ['moondrop-gas'] = {item_amount = 1, biomass_amount = 1},
         ['moondrop-kerosene'] = {item_amount = 1, biomass_amount = 1},
-        ['fawogae'] = {item_amount = 2, biomass_amount = 1},
-        ['fawogae-mk02'] = {item_amount = 2, biomass_amount = 1},
-        ['fawogae-mk03'] = {item_amount = 2, biomass_amount = 1},
-        ['fawogae-mk04'] = {item_amount = 2, biomass_amount = 1},
         ['moondrop-mk02'] = {item_amount = 5, biomass_amount = 1},
         ['moondrop-mk03'] = {item_amount = 5, biomass_amount = 1},
         ['moondrop-mk04'] = {item_amount = 5, biomass_amount = 1},
@@ -969,7 +969,8 @@ local biomass_convertion =
         ['condensates'] = {item_amount = 10, biomass_amount = 4, type = 'fluid'},
         ['condensed-distillate'] = {item_amount = 10, biomass_amount = 4, type = 'fluid'},
         ['naphtha'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'},
-        ['scrude'] = {item_amount = 10, biomass_amount = 3, type = 'fluid'},    }
+        ['scrude'] = {item_amount = 10, biomass_amount = 3, type = 'fluid'},
+    }
 
 local type
 
