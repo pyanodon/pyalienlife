@@ -28,6 +28,8 @@ end
 --ADAPTATIONS
 
 data.raw.fish.fish.minable.result = 'fish'
+--data.raw.fish.fish = nil
+
 data.raw.item.fawogae = nil
 
 for _, recipe in pairs(data.raw.recipe) do

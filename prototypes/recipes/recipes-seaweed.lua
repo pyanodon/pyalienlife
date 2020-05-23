@@ -1,5 +1,55 @@
 --------------------------SEA WEED-----------------------
 
+
+data:extend({
+    {
+    type = "fish",
+    name = "seaweed",
+    icon = "__pyalienlifegraphics__/graphics/icons/seaweed.png",
+    icon_size = 64, icon_mipmaps = 4,
+    flags = {"placeable-neutral", "not-on-map"},
+    minable = {mining_time = 0.4, result = "seaweed", count = 2},
+    max_health = 20,
+    subgroup = "creatures",
+    order = "b-a",
+    collision_box = {{-0.75, -0.75}, {0.75, 0.75}},
+    selection_box = {{-0.5, -0.3}, {0.5, 0.3}},
+    pictures =
+    {
+      {
+        filename = "__base__/graphics/entity/fish/fish-1.png",
+        priority = "extra-high",
+        width = 22,
+        height = 36
+      },
+      {
+        filename = "__base__/graphics/entity/fish/fish-2.png",
+        priority = "extra-high",
+        width = 32,
+        height = 32
+      }
+    },
+    --autoplace = { influence = 0.05 }
+    autoplace =
+    {
+        order = "xc",
+        --max_probability = 0.025,
+        peaks =
+        {
+            {
+                influence = 0.04,
+                --min_influence = 0,
+                --water_optimal = 0.875,
+                --water_range = 0.125,
+                --water_max_range = 0.125,
+            }
+        },
+    },
+    active = false
+  }
+})
+
+--[[
 RECIPE {
     type = 'recipe',
     name = 'seaweed',
@@ -13,112 +63,4 @@ RECIPE {
         {type = 'item', name = 'seaweed', amount = 4},
     },
 }
-
-RECIPE {
-    type = 'recipe',
-    name = 'seaweed-2',
-    category = 'seaweed',
-    enabled = false,
-    energy_required = 25,
-    ingredients = {
-        {type = 'fluid', name = 'water', amount = 150},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 100},
-    },
-    results = {
-        {type = 'item', name = 'seaweed', amount = 6},
-    },
-}:add_unlock("botany-mk01")
-
-RECIPE {
-    type = 'recipe',
-    name = 'seaweed-3',
-    category = 'seaweed',
-    enabled = false,
-    energy_required = 25,
-    ingredients = {
-        {type = 'fluid', name = 'water-saline', amount = 100},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 100},
-    },
-    results = {
-        {type = 'item', name = 'seaweed', amount = 8},
-    },
-}:add_unlock("botany-mk01")
-
-RECIPE {
-    type = 'recipe',
-    name = 'seaweed-4',
-    category = 'seaweed',
-    enabled = false,
-    energy_required = 15,
-    ingredients = {
-        {type = 'fluid', name = 'water-saline', amount = 100},
-        {type = 'fluid', name = 'slacked-lime', amount = 50},
-    },
-    results = {
-        {type = 'item', name = 'seaweed', amount = 6},
-    },
-}:add_unlock("botany-mk02")
-
-RECIPE {
-    type = 'recipe',
-    name = 'seaweed-9',
-    category = 'seaweed',
-    enabled = false,
-    energy_required = 45,
-    ingredients = {
-        {type = 'fluid', name = 'water-saline', amount = 100},
-        {type = 'fluid', name = 'slacked-lime', amount = 50},
-        {type = 'item', name = 'fertilizer', amount = 1},
-    },
-    results = {
-        {type = 'item', name = 'seaweed', amount = 60},
-    },
-}:add_unlock("botany-mk02")
-
-RECIPE {
-    type = 'recipe',
-    name = 'seaweed-5',
-    category = 'seaweed',
-    enabled = false,
-    energy_required = 60,
-    ingredients = {
-        {type = 'fluid', name = 'water-saline', amount = 100},
-        {type = 'fluid', name = 'slacked-lime', amount = 100},
-        {type = 'item', name = 'iron-ore-dust', amount = 1},
-    },
-    results = {
-        {type = 'item', name = 'seaweed', amount = 30},
-    },
-}:add_unlock("botany-mk03")
-
-RECIPE {
-    type = 'recipe',
-    name = 'seaweed-6',
-    category = 'seaweed',
-    enabled = false,
-    energy_required = 40,
-    ingredients = {
-        {type = 'fluid', name = 'water', amount = 150},
-        {type = 'item', name = 'limestone', amount = 2},
-    },
-    results = {
-        {type = 'item', name = 'seaweed', amount = 8},
-    },
-}:add_unlock("botany-mk01")
-
-RECIPE {
-    type = 'recipe',
-    name = 'seaweed-7',
-    category = 'seaweed',
-    enabled = false,
-    energy_required = 20,
-    ingredients = {
-        {type = 'fluid', name = 'water-saline', amount = 100},
-        {type = 'fluid', name = 'slacked-lime', amount = 100},
-        {type = 'item', name = 'iron-ore-dust', amount = 1},
-        {type = 'item', name = 'limestone', amount = 3},
-    },
-    results = {
-        {type = 'item', name = 'seaweed', amount = 35},
-    },
-}:add_unlock("botany-mk04")
+]]--
