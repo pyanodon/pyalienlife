@@ -48,12 +48,12 @@
         inventory_size = 800,
         scale_info_icons = true,
 		picture = {
-            filename = "__pyalienlifegraphics2__/graphics/entity/outpost/hr-food-bowl.png",
+            filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/off.png",
             priority = "high",
-            width = 136,
-            height = 128,
-            scale = 0.5,
-            shift = {0, 0},
+            width = 512,
+            height = 576,
+            --scale = 0.5,
+            shift = util.by_pixel(16, -48),
         }
     }
 

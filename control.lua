@@ -582,7 +582,7 @@ local function create_farm_help_message(event)
 					type = "frame",
 					name = "farm_help",
 					direction = "horizontal",
-					caption = "All plants and animal buildings require 1 or more copies of the wanted item to function. Craft the first version from codex and DNA samples."
+					caption = "All plants and animal buildings require 1 or more copies of the wanted item to function. Craft the first version from codex and DNA samples.Put them in the module slots"
 				}
 			)
 			farm_help_gui.add({type = "button", name = "fh_accept_button", caption = "OK"})
