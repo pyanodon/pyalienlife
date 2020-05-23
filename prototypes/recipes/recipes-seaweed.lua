@@ -17,17 +17,33 @@ data:extend({
     pictures =
     {
       {
-        filename = "__base__/graphics/entity/fish/fish-1.png",
+        filename = "__pyalienlifegraphics2__/graphics/icons/seaweed-water-01.png",
         priority = "extra-high",
-        width = 22,
-        height = 36
-      },
-      {
-        filename = "__base__/graphics/entity/fish/fish-2.png",
-        priority = "extra-high",
+        blend_mode = "additive-soft",
         width = 32,
         height = 32
-      }
+      },
+      {
+        filename = "__pyalienlifegraphics2__/graphics/icons/seaweed-water-02.png",
+        priority = "extra-high",
+        blend_mode = "additive-soft",
+        width = 32,
+        height = 32
+      },
+      {
+        filename = "__pyalienlifegraphics2__/graphics/icons/seaweed-water-02.png",
+        priority = "extra-high",
+        blend_mode = "additive-soft",
+        width = 32,
+        height = 32
+      },
+      {
+        filename = "__pyalienlifegraphics2__/graphics/icons/seaweed-water-02.png",
+        priority = "extra-high",
+        blend_mode = "additive-soft",
+        width = 32,
+        height = 32
+      },
     },
     --autoplace = { influence = 0.05 }
     autoplace =
