@@ -334,6 +334,11 @@ RECIPE {
     },
 }:add_unlock("botany-mk04")
 
+table.insert(data.raw.module['seaweed'].limitation, 'seaweed-8')
+table.insert(data.raw.module['seaweed-mk02'].limitation, 'seaweed-8')
+table.insert(data.raw.module['seaweed-mk03'].limitation, 'seaweed-8')
+table.insert(data.raw.module['seaweed-mk04'].limitation, 'seaweed-8')
+
 RECIPE {
     type = "recipe",
     name = "phytoplankton-2",
