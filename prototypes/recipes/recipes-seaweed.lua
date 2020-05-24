@@ -86,4 +86,4 @@ RECIPE {
   results = {
       {type = 'item', name = 'seaweed-mk02', amount = 1},
   },
-}
+}:add_unlock("selective-breeding")
