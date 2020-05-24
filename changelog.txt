@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.1
+Date: 2020-05-24
+  Changes:
+    - Added modules do sap, seaweed and moss. (Collect them from water, rocks and trees).
+    - Balanced lots of biomass recipes in compost plant.
+    - Added alt versions of combustion mixtures using biomass instead of coke.
+    - Initial moondrop breeding program
+    - pyHT isnt requiered anymore to play pyAL
+---------------------------------------------------------------------------------------------------
 Version: 1.7.0
 Date: 2020-05-17
   Changes:
