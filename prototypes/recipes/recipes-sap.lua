@@ -13,7 +13,7 @@ end
 RECIPE {
     type = "recipe",
     name = "sap-seeds",
-    category = "sap",
+    category = "nursery",
     enabled = true,
     energy_required = 5,
     ingredients = {
