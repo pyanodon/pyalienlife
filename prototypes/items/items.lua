@@ -5379,7 +5379,7 @@ ITEM {
 
 ITEM {
     type = "module",
-    name = "moss",    
+    name = "moss",
     icons =
     {
         --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
@@ -5393,13 +5393,13 @@ ITEM {
     order = "m-a",
     stack_size = 300,
 	effect = { speed = {bonus = 1.3}, productivity = {bonus = -0.01}},
-	limitation = alien_life_limitations_ulric,
+	limitation = alien_life_limitations_moss,
 	limitation_message_key = "Its full"
 }
 
 ITEM {
     type = "module",
-    name = "moss-mk02",    
+    name = "moss-mk02",
     icons =
     {
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
@@ -5413,13 +5413,13 @@ ITEM {
     order = "m-b",
     stack_size = 300,
 	effect = { speed = {bonus = 2.6}, productivity = {bonus = -0.01}},
-	limitation = alien_life_limitations_ulric,
+	limitation = alien_life_limitations_moss,
 	limitation_message_key = "Its full"
 }
 
 ITEM {
     type = "module",
-    name = "moss-mk03",    
+    name = "moss-mk03",
     icons =
     {
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
@@ -5433,13 +5433,13 @@ ITEM {
     order = "m-c",
     stack_size = 300,
 	effect = { speed = {bonus = 3.9}, productivity = {bonus = -0.01}},
-	limitation = alien_life_limitations_ulric,
+	limitation = alien_life_limitations_moss,
 	limitation_message_key = "Its full"
 }
 
 ITEM {
     type = "module",
-    name = "moss-mk04",    
+    name = "moss-mk04",
     icons =
     {
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
@@ -5453,7 +5453,7 @@ ITEM {
     order = "m-d",
     stack_size = 300,
 	effect = { speed = {bonus = 5.2}, productivity = {bonus = -0.01}},
-	limitation = alien_life_limitations_ulric,
+	limitation = alien_life_limitations_moss,
 	limitation_message_key = "Its full"
 }
 
@@ -5473,7 +5473,7 @@ ITEM {
     order = "m-a",
     stack_size = 300,
 	effect = { speed = {bonus = 5}, productivity = {bonus = -0.01}},
-	limitation = alien_life_limitations_ulric,
+	limitation = alien_life_limitations_sap,
 	limitation_message_key = "Its full"
 }
 
@@ -5493,13 +5493,13 @@ ITEM {
     order = "m-b",
     stack_size = 300,
 	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
-	limitation = alien_life_limitations_ulric,
+	limitation = alien_life_limitations_sap,
 	limitation_message_key = "Its full"
 }
 
 ITEM {
     type = "module",
-    name = "sap-tree-mk03",    
+    name = "sap-tree-mk03",
     icons =
     {
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
@@ -5513,13 +5513,13 @@ ITEM {
     order = "m-c",
     stack_size = 300,
 	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
-	limitation = alien_life_limitations_ulric,
+	limitation = alien_life_limitations_sap,
 	limitation_message_key = "Its full"
 }
 
 ITEM {
     type = "module",
-    name = "sap-tree-mk04",    
+    name = "sap-tree-mk04",
     icons =
     {
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
@@ -5533,13 +5533,13 @@ ITEM {
     order = "m-d",
     stack_size = 300,
 	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
-	limitation = alien_life_limitations_ulric,
+	limitation = alien_life_limitations_sap,
 	limitation_message_key = "Its full"
 }
 
 ITEM {
     type = "module",
-    name = "ulric",    
+    name = "ulric",
     icons =
     {
         --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
