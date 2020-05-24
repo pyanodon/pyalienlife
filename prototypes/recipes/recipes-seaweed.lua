@@ -1,6 +1,5 @@
 --------------------------SEA WEED-----------------------
 
-
 data:extend({
     {
     type = "fish",
@@ -53,7 +52,7 @@ data:extend({
         peaks =
         {
             {
-                influence = 0.04,
+                influence = 0.03,
                 --min_influence = 0,
                 --water_optimal = 0.875,
                 --water_range = 0.125,
@@ -61,22 +60,30 @@ data:extend({
             }
         },
     },
-    active = false
   }
 })
 
---[[
+
+--Secondary Upgrade Recipes--
+--SUR--
+--WIP--
+
+--mk02--
+--DONE--
+
 RECIPE {
-    type = 'recipe',
-    name = 'seaweed',
-    category = 'seaweed',
-    enabled = true,
-    energy_required = 25,
-    ingredients = {
-        {type = 'fluid', name = 'water', amount = 200},
-    },
-    results = {
-        {type = 'item', name = 'seaweed', amount = 4},
-    },
+  type = 'recipe',
+  name = 'seaweed-mk02',
+  category = 'seaweed',
+  enabled = true,
+  energy_required = 25,
+  ingredients = {
+      {type = 'fluid', name = 'water', amount = 200},
+      {type = 'item', name = 'molybdenum-oxide', amount = 5},
+      {type = 'item', name = 'fertilizer', amount = 1},
+      {type = 'item', name = 'seaweed', amount = 5},
+  },
+  results = {
+      {type = 'item', name = 'seaweed-mk02', amount = 1},
+  },
 }
-]]--

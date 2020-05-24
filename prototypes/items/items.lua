@@ -1,3 +1,5 @@
+
+--[[
 ITEM {
     type = "item",
     name = "moss",
@@ -8,6 +10,7 @@ ITEM {
     order = "a",
     stack_size = 500
 }
+]]--
 
 ITEM {
     type = "item",
@@ -4230,6 +4233,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "sap-seeds",
+    icon = "__pyalienlifegraphics__/graphics/icons/sap-seeds.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-latex",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
     name = "sodium-alginate",
     icon = "__pyalienlifegraphics__/graphics/icons/sodium-alginate.png",
 	icon_size = 64,
@@ -5120,11 +5134,23 @@ ITEM {
         'seaweed-2',
         'seaweed-3',
         'seaweed-4',
-        'seaweed-9',
         'seaweed-5',
         'seaweed-6',
         'seaweed-7',
+        --'seaweed-8', have to add that else where as its a pyht recipe
+        'seaweed-9',
 	}
+
+    local alien_life_limitations_moss =
+	{
+    }
+
+    local alien_life_limitations_sap =
+	{
+        'sap-seeds',
+        'sap-tree',
+        'sap-01'
+    }
 
     local alien_life_limitations_ulric =
 	{
@@ -5296,7 +5322,7 @@ ITEM {
     name = "seaweed-mk02",
     icons =
     {
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/seaweed.png"}
     },
     icon_size = 64,
@@ -5304,7 +5330,7 @@ ITEM {
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-modules",
-    order = "s-a",
+    order = "s-b",
     stack_size = 300,
 	effect = { speed = {bonus = 2}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_seaweed,
@@ -5316,7 +5342,7 @@ ITEM {
     name = "seaweed-mk03",
     icons =
     {
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/seaweed.png"}
     },
     icon_size = 64,
@@ -5324,7 +5350,7 @@ ITEM {
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-modules",
-    order = "s-a",
+    order = "s-c",
     stack_size = 300,
 	effect = { speed = {bonus = 3}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_seaweed,
@@ -5336,7 +5362,7 @@ ITEM {
     name = "seaweed-mk04",
     icons =
     {
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/seaweed.png"}
     },
     icon_size = 64,
@@ -5344,7 +5370,7 @@ ITEM {
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-modules",
-    order = "s-a",
+    order = "s-d",
     stack_size = 300,
 	effect = { speed = {bonus = 4}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_seaweed,
@@ -5353,8 +5379,167 @@ ITEM {
 
 ITEM {
     type = "module",
-    name = "ulric",
-    icon = "__pyalienlifegraphics__/graphics/icons/ulric.png",
+    name = "moss",    
+    icons =
+    {
+        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/moss.png"}
+    },
+    icon_size = 32,
+	category = "moss",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "m-a",
+    stack_size = 300,
+	effect = { speed = {bonus = 1.3}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_ulric,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "moss-mk02",    
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/moss.png"}
+    },
+    icon_size = 32,
+	category = "moss",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "m-b",
+    stack_size = 300,
+	effect = { speed = {bonus = 2.6}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_ulric,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "moss-mk03",    
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/moss.png"}
+    },
+    icon_size = 32,
+	category = "moss",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "m-c",
+    stack_size = 300,
+	effect = { speed = {bonus = 3.9}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_ulric,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "moss-mk04",    
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/moss.png"}
+    },
+    icon_size = 32,
+	category = "moss",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "m-d",
+    stack_size = 300,
+	effect = { speed = {bonus = 5.2}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_ulric,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "sap-tree",
+    icons =
+    {
+        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+        {icon = "__pyalienlifegraphics2__/graphics/icons/sap-tree.png"}
+    },
+    icon_size = 64,
+	category = "sap",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "m-a",
+    stack_size = 300,
+	effect = { speed = {bonus = 5}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_ulric,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "sap-tree-mk02",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+        {icon = "__pyalienlifegraphics2__/graphics/icons/sap-tree.png"}
+    },
+    icon_size = 64,
+	category = "sap",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "m-b",
+    stack_size = 300,
+	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_ulric,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "sap-tree-mk03",    
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+        {icon = "__pyalienlifegraphics2__/graphics/icons/sap-tree.png"}
+    },
+    icon_size = 64,
+	category = "sap",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "m-c",
+    stack_size = 300,
+	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_ulric,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "sap-tree-mk04",    
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlifegraphics2__/graphics/icons/sap-tree.png"}
+    },
+    icon_size = 64,
+	category = "sap",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "m-d",
+    stack_size = 300,
+	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_ulric,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "ulric",    
     icons =
     {
         --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
@@ -8714,6 +8899,14 @@ data:extend(
     {
         type = "module-category",
         name = "seaweed"
+    },
+    {
+        type = "module-category",
+        name = "moss"
+    },
+    {
+        type = "module-category",
+        name = "sap"
     },
     {
     type = "module-category",
