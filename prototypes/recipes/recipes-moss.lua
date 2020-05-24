@@ -10,7 +10,7 @@ for _, rock in pairs(data.raw['simple-entity']) do
                 {type = 'item', name = 'moss', amount = 1, probability = 0.1}
             }
     elseif rock.minable ~= nil and rock.minable.results ~= nil and rock.minable.results[1].item == 'stone' then
-        table.insert(rock.minable.results, {type = 'item', name = 'moss', amount = 1, probability = 0.01})
+        table.insert(rock.minable.results, {type = 'item', name = 'moss', amount = 1, probability = 0.1})
     end
     if rock.loot ~= nil and rock.loot[1].item == 'stone' then
         rock.loot =
