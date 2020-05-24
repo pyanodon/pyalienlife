@@ -27,7 +27,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sap-tree",
-    category = "sap",
+    category = "nursery",
     enabled = true,
     energy_required = 120,
     ingredients = {
