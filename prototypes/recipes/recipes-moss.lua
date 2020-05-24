@@ -1,6 +1,6 @@
 --MOSS--
 
-for r, rock in pairs(data.raw['simple-entity']) do
+for _, rock in pairs(data.raw['simple-entity']) do
     log('hit')
     if rock.minable ~= nil and rock.minable.result == 'stone' then
         log('hit')

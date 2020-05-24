@@ -1,6 +1,6 @@
 
 
-for t, tree in pairs(data.raw.tree) do
+for _, tree in pairs(data.raw.tree) do
     tree.minable.results =
         {
             {type = 'item', name = 'wood', amount = tree.minable.count},

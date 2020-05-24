@@ -86,7 +86,7 @@ RECIPE {
 table.insert(data.raw.lab.lab.inputs, 'py-science-pack')
 
 --copy`s of combustion recipes with biomass
-for r,recipe in pairs(data.raw.recipe) do
+for _,recipe in pairs(data.raw.recipe) do
     --log('hit')
     if recipe.category == 'combustion' and string.match(recipe.name, 'biomass') == nil then
         --log('hit')
@@ -100,7 +100,7 @@ for r,recipe in pairs(data.raw.recipe) do
                 local locale
                 local type
                 local temp
-                for a, ingred in pairs(recipe.ingredients) do
+                for _, ingred in pairs(recipe.ingredients) do
                     if ingred.name ~= 'water' and ingred.name ~= 'coke' then
                         locale = ingred.name
                         type = ingred.type
@@ -108,7 +108,7 @@ for r,recipe in pairs(data.raw.recipe) do
                 end
                 log(serpent.block(recipe.ingredients))
                 log(locale)
-                for res, result in pairs(recipe.results) do
+                for _, result in pairs(recipe.results) do
                     if result.name == "combustion-mixture1" then
                         temp = result.temperature
                     end
@@ -129,11 +129,11 @@ for r,recipe in pairs(data.raw.recipe) do
                     localised_name = {'', {type .. '-name.' .. locale}, ' with ',{'item-name.biomass'}, ' to combustion mixture (' .. temp .. '°C)' }
                 }
                 --log('hit')
-                for t, tech in pairs(data.raw.technology) do
+                for _, tech in pairs(data.raw.technology) do
                     --log('hit')
                     --log(serpent.block(tech))
                     if tech.effects ~= nil then
-                        for e, effect in pairs(tech.effects) do
+                        for _, effect in pairs(tech.effects) do
                             --log('hit')
                             --log(serpent.block(effect))
                             --log(serpent.block(effect.type))
