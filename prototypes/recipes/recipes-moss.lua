@@ -7,7 +7,7 @@ for _, rock in pairs(data.raw['simple-entity']) do
         rock.minable.results =
             {
                 {type = 'item', name = 'stone', amount = rock.minable.count},
-                {type = 'item', name = 'moss', amount = 1, probability = 0.01}
+                {type = 'item', name = 'moss', amount = 1, probability = 0.1}
             }
     elseif rock.minable ~= nil and rock.minable.results ~= nil and rock.minable.results[1].item == 'stone' then
         table.insert(rock.minable.results, {type = 'item', name = 'moss', amount = 1, probability = 0.01})
@@ -16,7 +16,7 @@ for _, rock in pairs(data.raw['simple-entity']) do
         rock.loot =
             {
                 {item = "stone", probability = 1, count_min = 9, count_max = 25},
-                {item = "moss", probability = 0.01, count = 1}
+                {item = "moss", probability = 0.1, count = 1}
             }
     end
     log(serpent.block(data.raw['simple-entity'][rock.name]))
