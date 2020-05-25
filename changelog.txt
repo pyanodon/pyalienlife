@@ -3,6 +3,7 @@ Version: 1.7.2
 Date: 2020-05-24
   Changes:
     - Fixed bug related to trees missing minable property.
+	  - Added new background image.
 ---------------------------------------------------------------------------------------------------
 Version: 1.7.1
 Date: 2020-05-24
