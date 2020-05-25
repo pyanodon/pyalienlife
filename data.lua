@@ -499,6 +499,7 @@ require('prototypes/ores/yotoi-fruit')
 require('prototypes/ores/bioreserve')
 
 data.raw["utility-constants"].default.recipe_step_limit = 2000;
+data.raw["utility-constants"].default.main_menu_background_image_location = "__pyalienlifegraphics3__/graphics/pyal-wall.jpg"
 
 --sprities
 require('prototypes/sprites/sprites')
