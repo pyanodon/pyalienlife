@@ -1,9 +1,9 @@
 --MOSS--
 
 for _, rock in pairs(data.raw['simple-entity']) do
-    log('hit')
+    --log('hit')
     if rock.minable ~= nil and rock.minable.result == 'stone' then
-        log('hit')
+        --log('hit')
         rock.minable.results =
             {
                 {type = 'item', name = 'stone', amount = rock.minable.count},
@@ -19,7 +19,7 @@ for _, rock in pairs(data.raw['simple-entity']) do
                 {item = "moss", probability = 0.1, count = 1}
             }
     end
-    log(serpent.block(data.raw['simple-entity'][rock.name]))
+    --log(serpent.block(data.raw['simple-entity'][rock.name]))
 end
 
 --Secondary Upgrade Recipes--
