@@ -149,6 +149,42 @@ fun.autorecipes {
 	}
 }
 
+------------------DINGRITS------------------
+
+fun.autorecipes {
+    name = 'rendering-skin-dingrits',
+	category = 'slaughterhouse-dingrits',
+	--module_limitations = 'dingrits',
+	subgroup = 'py-alienlife-dingrits',
+	order = 'b',
+    mats =
+	{
+		--skin
+		{
+			ingredients =
+				{
+					{name='cageddingrits',amount=1},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='pelt', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='blood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='pelt', amount ='+1'},
+				},
+                crafting_speed = 15,
+                tech = 'defective-collagen',
+				name = 'Extract dingrits Pelt-1',
+				icon = "__pyalienlifegraphics__/graphics/icons/pelt.png",
+				icon_size = 64,
+		},
+	}
+}
 
 ------------------DHILMOS------------------
 

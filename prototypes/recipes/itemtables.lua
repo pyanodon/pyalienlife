@@ -159,6 +159,7 @@ items.inputs.meatcageddingrits = {'meat-caged-dingrits', 1}
 items.inputs.bloodcageddingrits = {'blood-caged-dingrits', 1}
 items.inputs.gutscageddingrits = {'guts-caged-dingrits', 1}
 items.inputs.fatcageddingrits = {'fat-caged-dingrits', 1}
+items.inputs.skincageddingrits = {'skin-caged-dingrits', 1}
 items.inputs.cageddingrits = {'caged-dingrits', 1}
 items.inputs.dingritscub = {'dingrits-cub', 1}
 items.inputs.cagedscondrix = {'caged-scrondrix', 1}

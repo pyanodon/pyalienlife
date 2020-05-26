@@ -2999,6 +2999,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "skin-caged-dingrits",
+    icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-dingrits.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-dingrits",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "brain-caged-dingrits",
     icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-dingrits.png",
     icon_size = 64,
@@ -8848,6 +8859,39 @@ ITEM {
     subgroup = "py-alienlife-dingrits",
     order = "x",
     stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "space-dingrit",
+    icon = "__pyalienlifegraphics3__/graphics/icons/space-dingrit.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-dingrits",
+    order = "x",
+    stack_size = 1
+}
+
+ITEM {
+    type = "item",
+    name = "space-dingrit-return",
+    icon = "__pyalienlifegraphics3__/graphics/icons/space-dingrit-return.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-dingrits",
+    order = "x",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "space-suit",
+    icon = "__pyalienlifegraphics3__/graphics/icons/space-suit.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-dingrits",
+    order = "x",
+    stack_size = 1
 }
 
 ITEM {

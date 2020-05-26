@@ -2023,3 +2023,44 @@ RECIPE {
         {type = 'item', name = 'sample-cup', amount = 4}
     }
 }:add_unlock("selective-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'space-suit',
+    category = 'crafting',
+    enabled = false,
+    energy_required = 60,
+    ingredients = {
+        {type = 'item', name = 'plastic-bar', amount = 10},
+        {type = 'item', name = 'metallic-glass', amount = 20},
+        {type = 'item', name = 'rubber', amount = 15},
+        {type = 'item', name = 'kevlar', amount = 30},
+        {type = 'item', name = 'aramid', amount = 30},
+        {type = 'item', name = 'glass', amount = 30},
+        {type = 'item', name = 'biofilm', amount = 10},
+        {type = 'item', name = 'science-coating', amount = 5},
+        {type = 'item', name = 'silver-foam', amount = 5},
+        {type = 'item', name = 'nexelit-cartridge', amount = 3},
+        {type = 'item', name = 'exoskeleton-equipment', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'space-suit', amount = 1}
+    }
+}:add_unlock("laika")
+
+RECIPE {
+    type = 'recipe',
+    name = 'space-dingrit',
+    category = 'crafting-with-fluid',
+    enabled = false,
+    energy_required = 60,
+    ingredients = {
+        {type = 'item', name = 'space-suit', amount = 1},
+        {type = 'item', name = 'skin-caged-dingrits', amount = 1},
+        {type = 'fluid', name = 'pressured-air', amount = 250},
+        {type = 'fluid', name = 'artificial-blood', amount = 200},
+    },
+    results = {
+        {type = 'item', name = 'space-dingrit', amount = 1}
+    }
+}:add_unlock("laika")

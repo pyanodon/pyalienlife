@@ -99,6 +99,7 @@ require('prototypes/technologies/arqad')
 require('prototypes/technologies/cardial-hypopharynx')
 require('prototypes/technologies/chromasome-infocrystalization')
 require('prototypes/technologies/pheromone-transition')
+require('prototypes/technologies/laika')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")

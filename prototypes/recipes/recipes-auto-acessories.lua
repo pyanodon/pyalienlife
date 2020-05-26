@@ -68,11 +68,11 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='pelt', amount =2},
+					{name='pelt', amount ='+1'},
 				},
                 crafting_speed = 15,
                 tech = 'exo-insertion',
-                name = 'Extract dingrits Pelt-1',
+                name = 'Extract dingrits Pelt-1a',
                 icon = "__pyalienlifegraphics__/graphics/icons/pelt.png",
                 icon_size = 64,
 		},
@@ -574,14 +574,13 @@ RECIPE {
     enabled = false,
     energy_required = 40,
     ingredients = {
-        {type = 'item', name = 'meat-caged-dingrits', amount = 1}
+        {type = 'item', name = 'space-dingrit-return', amount = 1}
     },
     results = {
-		{type = 'item', name = 'snarer-heart', amount = 1},
-		{type = 'item', name = 'cage', amount = 1},
+		{type = 'item', name = 'snarer-heart', amount = 10},
     },
     main_product = "snarer-heart",
-}:add_unlock("anabolic-rna")
+}:add_unlock("laika")
 
 ------------------glandular-myocluster------------------
 
