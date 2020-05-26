@@ -25,7 +25,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'arqad-propolis', amount = 1},
-        {type = 'fluid', name = 'methanol', amount = 60},
+        {type = 'fluid', name = 'methanol', amount = 50},
     },
     results = {
         {type = 'fluid', name = 'diesel', amount = 350},
@@ -43,10 +43,10 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'fluid', name = 'arqad-jelly', amount = 50},
-        {type = 'fluid', name = 'crude-oil', amount = 200},
+        {type = 'fluid', name = 'crude-oil', amount = 150},
     },
     results = {
-        {type = 'fluid', name = 'kerosene', amount = 460},
+        {type = 'fluid', name = 'kerosene', amount = 450},
     },
     --main_product = "tar",
 }:add_unlock("chromasome-infocrystalization")

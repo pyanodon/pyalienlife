@@ -20,7 +20,7 @@ fun.autorecipes {
 				{
 					{name='cagedmukmoux', probability = 0.7,amount_min =1,amount_max =1},
 				},
-			crafting_speed = 150,
+			crafting_speed = 70,
 			tech = 'mukmoux'
 		},
 		--food 1
@@ -36,7 +36,7 @@ fun.autorecipes {
 					{name='cagedmukmoux',amount ='R'},
 					{name='cagedmukmoux', probability = 0.8,amount_min =1,amount_max =1},
 				},
-			crafting_speed = 140,
+			crafting_speed = 55,
 			tech = 'mukmoux'
 		},
 		--salt
@@ -50,7 +50,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 130,
+			crafting_speed = 50,
 			tech = 'mukmoux-mk02'
 		},
 		--fiber
@@ -63,7 +63,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 120,
+			crafting_speed = 45,
 			tech = 'mukmoux-mk02'
 		},
 		--food 2
@@ -81,7 +81,7 @@ fun.autorecipes {
 					{name='cagedmukmoux',amount ='R'},
 					{name='cagedmukmoux', probability = 0.9,amount_min =1,amount_max =1},
 				},
-			crafting_speed = 110,
+			crafting_speed = 40,
 			tech = 'mukmoux-mk03'
 		},
 		--food 2 salt
@@ -94,7 +94,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 100,
+			crafting_speed = 35,
 			tech = 'mukmoux-mk03'
 		},
 		--food 2 salt fiber
@@ -107,7 +107,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 90,
+			crafting_speed = 30,
 			tech = 'mukmoux-mk04'
 		},
 		--gh
@@ -121,7 +121,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 30,
+			crafting_speed = 12,
 			tech = 'growth-hormone'
 		},
 		--antiviral and gh
@@ -136,7 +136,7 @@ fun.autorecipes {
 					{name='cagedmukmoux', amount ='R'},
 					{name='cagedmukmoux', probability = 1,amount_min =1,amount_max =2},
 				},
-			crafting_speed = 30,
+			crafting_speed = 12,
 			tech = 'antiviral'
 		},
 		--antiviral
@@ -150,7 +150,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 90,
+			crafting_speed = 30,
 			tech = 'antiviral'
 		},
 		--nanochondria
@@ -165,7 +165,7 @@ fun.autorecipes {
 					{name='cagedmukmoux', amount ='R'},
 					{name='braincagedmukmoux',1},
 				},
-			crafting_speed = 90,
+			crafting_speed = 30,
 			tech = 'nanochondria'
 		},
 		--nanochondria and gh
@@ -179,7 +179,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 30,
+			crafting_speed = 12,
 			tech = 'nanochondria'
 		},
 		--bmp
@@ -195,7 +195,7 @@ fun.autorecipes {
 					{name='braincagedmukmoux', amount ='R'},
 					{name='bonecagedmukmoux', 1},
 				},
-			crafting_speed = 90,
+			crafting_speed = 30,
 			tech = 'bmp'
 		},
 
@@ -210,7 +210,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 30,
+			crafting_speed = 12,
 			tech = 'bmp'
 		},
 		--rna anabolic
@@ -226,7 +226,7 @@ fun.autorecipes {
 					{name='bonecagedmukmoux', amount ='R'},
 					{name='meatcagedmukmoux', 1},
 				},
-			crafting_speed = 90,
+			crafting_speed = 30,
 			tech = 'anabolic-rna'
 		},
 		--rna anabolic and gh
@@ -240,7 +240,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 30,
+			crafting_speed = 12,
 			tech = 'anabolic-rna'
 		},
 		--antitumor
@@ -256,7 +256,7 @@ fun.autorecipes {
 					{name='meatcagedmukmoux', amount ='R'},
 					{name='gutscagedmukmoux', 1},
 				},
-			crafting_speed = 90,
+			crafting_speed = 30,
 			tech = 'antitumor'
 		},
 		--antitumor and gh
@@ -270,7 +270,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 30,
+			crafting_speed = 12,
 			tech = 'antitumor'
 		},
 		--Recombinant Ery
@@ -286,7 +286,7 @@ fun.autorecipes {
 					{name='gutscagedmukmoux', amount ='R'},
 					{name='bloodcagedmukmoux', 1},
 				},
-			crafting_speed = 90,
+			crafting_speed = 30,
 			tech = 'recombinant-ery'
 		},
 		--Recombinant Ery and gh
@@ -299,7 +299,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 30,
+			crafting_speed = 12,
 			tech = 'recombinant-ery'
 		},
 		--reca
@@ -315,7 +315,7 @@ fun.autorecipes {
 					{name='bloodcagedmukmoux', amount ='R'},
 					{name='skincagedmukmoux', 1},
 				},
-			crafting_speed = 90,
+			crafting_speed = 30,
 			tech = 'reca'
 		},
 		--reca and gh
@@ -328,7 +328,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 30,
+			crafting_speed = 12,
 			tech = 'reca'
 		},
 		--orexigenic
@@ -344,7 +344,7 @@ fun.autorecipes {
 					{name='skincagedmukmoux', amount ='R'},
 					{name='fatcagedmukmoux', 1},
 				},
-			crafting_speed = 90,
+			crafting_speed = 30,
 			tech = 'orexigenic'
 		},
 		--orexigenic and gh
@@ -357,7 +357,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 30,
+			crafting_speed = 12,
 			tech = 'orexigenic'
 		},
 	}
@@ -386,7 +386,7 @@ fun.autorecipes {
 				{
 					{name='mukmouxcalf', amount =3},
 				},
-			crafting_speed = 160,
+			crafting_speed = 75,
 			tech = 'assisted-embryology'
 		},
 		--food 1
@@ -401,33 +401,33 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 140,
+			crafting_speed = 65,
 			tech = 'assisted-embryology'
 		},
 		--salt
 		{
 			ingredients =
 				{
-					{name='salt',amount = 10},
+					{name='salt',amount = 5},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 130,
+			crafting_speed = 60,
 			tech = 'assisted-embryology'
 		},
 		--fiber
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 8},
-				},
+					{name='rawfiber',amount = 4},     -- reduced fiber since in the end : you sed more buildings to make the extra fiber then you could save farm space
+				},                                    -- not to mention the resources
 			results =
 				{
 
 				},
-			crafting_speed = 120,
+			crafting_speed = 55,
 			tech = 'assisted-embryology'
 		},
 		--food 2
@@ -444,33 +444,33 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 130,
+			crafting_speed = 50,
 			tech = 'assisted-embryology'
 		},
 		--food 2 salt
 		{
 			ingredients =
 				{
-					{name='salt',amount = 8},
+					{name='salt',amount = 4},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 120,
+			crafting_speed = 45,
 			tech = 'assisted-embryology'
 		},
 		--food 2 salt fiber
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 10},
+					{name='rawfiber',amount = 5},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 110,
+			crafting_speed = 40,
 			tech = 'assisted-embryology'
 		},
 		-----------------------PHEROMONES-----------------------------
@@ -491,7 +491,7 @@ fun.autorecipes {
 					{name='mukmouxcalf',amount = 'R'},
 					{name='mukmouxcalf', amount =5},
 				},
-			crafting_speed = 140,
+			crafting_speed = 65,
 			tech = 'pheromones'
 		},
 		--food 1
@@ -506,33 +506,33 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 120,
+			crafting_speed = 50,
 			tech = 'pheromones'
 		},
 		--salt
 		{
 			ingredients =
 				{
-					{name='salt',amount = 10},
+					{name='salt',amount = 5},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 110,
+			crafting_speed = 45,
 			tech = 'pheromones'
 		},
 		--fiber
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 10},
+					{name='rawfiber',amount = 5},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 100,
+			crafting_speed = 40,
 			tech = 'pheromones'
 		},
 		--food 2
@@ -549,7 +549,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 100,
+			crafting_speed = 40,
 			tech = 'pheromones'
 		},
 		--food 2 salt
@@ -562,20 +562,20 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 90,
+			crafting_speed = 35,
 			tech = 'pheromones'
 		},
 		--food 2 salt fiber
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 10},
+					{name='rawfiber',amount = 5},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 80,
+			crafting_speed = 30,
 			tech = 'pheromones'
 		},
 
