@@ -65,6 +65,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'tin-plate', amount = 2},
         {type = 'item', name = 'fawogae', amount = 5},
+        {type = 'item', name = 'bio-sample', amount = 2},
         {type = 'item', name = 'ralesias', amount = 5},
         {type = 'item', name = 'tuuphra-seeds', amount = 1},
         {type = 'item', name = 'yotoi-leaves', amount = 5},
@@ -87,7 +88,7 @@ RECIPE {
         {type = 'item', name = 'tin-plate', amount = 2},
         {type = 'item', name = 'grod', amount = 4},
         {type = 'item', name = 'tuuphra-seeds', amount = 1},
-        {type = 'item', name = 'yotoi-leaves', amount = 5},
+        {type = 'item', name = 'guar-gum', amount = 1},
         {type = 'item', name = 'meat', amount = 10},
         {type = 'item', name = 'casein', amount = 5},
         {type = 'item', name = 'ash', amount = 10},
