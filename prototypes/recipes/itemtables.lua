@@ -16,6 +16,7 @@ items.inputs.ash = {'ash', 10}
 items.inputs.limestone = {'limestone', 1}
 items.inputs.stone = {'stone', 1}
 items.inputs.biomass = {'biomass', 1}
+items.inputs.biomass = {'guar', 1}
 items.inputs.manure = {'manure', 1}
 items.inputs.guano = {'guano', 1}
 items.inputs.cocoon = {'cocoon', 1}
