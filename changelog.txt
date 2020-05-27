@@ -1,4 +1,27 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.2
+Date: 2020-05-24
+  Changes:
+    - Fixed bug related to trees missing minable property.
+    - Added new background image.
+---------------------------------------------------------------------------------------------------
+Version: 1.7.1
+Date: 2020-05-24
+  Changes:
+    - Added modules do sap, seaweed and moss. (Collect them from water, rocks and trees).
+    - Balanced lots of biomass recipes in compost plant.
+    - Added alt versions of combustion mixtures using biomass instead of coke.
+    - Initial moondrop breeding program
+    - pyHT isnt requiered anymore to play pyAL
+---------------------------------------------------------------------------------------------------
+Version: 1.7.0
+Date: 2020-05-17
+  Changes:
+    - Added arthurian mk02 breeding
+    - made adjustment to compost recipe icons
+    - fixed missing cage and typos
+    - miscellaneous balance adjustments
+---------------------------------------------------------------------------------------------------
 Version: 1.6.9
 Date: 2020-05-10
   Changes:

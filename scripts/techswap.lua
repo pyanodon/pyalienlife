@@ -3887,18 +3887,18 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract dingrits skin',
+				base_recipe = 'Extract dingrits Pelt-1a',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract dingrits skin-1',
+					recipe = 'Extract dingrits Pelt-1',
 					tech = 'defective-collagen',
 					unlocked = false,
 					level = 2,
 					},
 				upgrade_2 =
 					{
-					recipe = 'Extract dingrits skin-2',
+					recipe = 'Extract dingrits Pelt-2',
 					tech = 'double-skin',
 					unlocked = false,
 					level = 3,
@@ -4195,11 +4195,11 @@ local TRlist =
 					},
 				},
 				{
-				base_recipe = 'Extract skin from Improved dingrits',
+				base_recipe = 'Extract pelt from Improved dingrits',
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract skin from Improved dingrits-2',
+					recipe = 'Extract pelt from Improved dingrits-2',
 					tech = 'double-skin',
 					unlocked = false,
 					level = 2,
@@ -4891,7 +4891,7 @@ local TRlist =
 				current_lvl = 1,
 				upgrade_1 =
 					{
-					recipe = 'Extract dingrits Pelt-1',
+					recipe = 'Extract dingrits Pelt-1a',
 					tech = 'exo-insertion',
 					unlocked = false,
 					level = 2,

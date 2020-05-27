@@ -196,7 +196,7 @@ RECIPE('arqad-hive-mk04'):add_ingredient({type = "item", name = "phosphate-glass
 
 
 
-
+RECIPE('pydrive'):add_ingredient({type = "item", name = "graphene-roll", amount = 50}):add_ingredient({type = "item", name = "superconductor", amount = 10}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 30})
 
 ----RECIPES----
 RECIPE('fungal-substrate'):add_ingredient({type = "item", name = "urea", amount = 3})
@@ -274,8 +274,9 @@ RECIPE('space-science-pack'):add_ingredient({type = "item", name = "antimatter",
 RECIPE('bose-einstein-superfluid'):add_ingredient({type = "fluid", name = "deuterium", amount = 10})
 if mods['pyhightech'] then
 	data.raw.item['dried-meat'] = nil
+    RECIPE('dried-meat'):remove_unlock('advanced-rendering'):change_category('smelting')
 end
-RECIPE('dried-meat'):remove_unlock('advanced-rendering'):change_category('smelting')
+
 
 fun.results_replacer("dhilmos-sex-01", "dirty-water", "waste-water")
 
@@ -332,6 +333,11 @@ RECIPE {
         {type = 'item', name = 'seaweed', amount = 100},
     },
 }:add_unlock("botany-mk04")
+
+table.insert(data.raw.module['seaweed'].limitation, 'seaweed-8')
+table.insert(data.raw.module['seaweed-mk02'].limitation, 'seaweed-8')
+table.insert(data.raw.module['seaweed-mk03'].limitation, 'seaweed-8')
+table.insert(data.raw.module['seaweed-mk04'].limitation, 'seaweed-8')
 
 RECIPE {
     type = "recipe",

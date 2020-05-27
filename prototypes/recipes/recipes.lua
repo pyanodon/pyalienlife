@@ -1176,20 +1176,6 @@ RECIPE {
 
 RECIPE {
     type = "recipe",
-    name = "sap-01",
-    category = "sap",
-    hidden = true,
-    enabled = true,
-    energy_required = 20,
-    ingredients = {
-    },
-    results = {
-        {type = 'item', name = 'saps', amount = 1}
-    }
-}
-
-RECIPE {
-    type = "recipe",
     name = "adrenal-cortex",
     category = "slaughterhouse-cridren",
     enabled = false,
@@ -2005,11 +1991,11 @@ RECIPE {
     --main_product = "casein-pulp-01",
 }:add_unlock("compost")
 
-if not mods['pyhightech'] then
+--if not mods['pyhightech'] then
 
 RECIPE {
     type = 'recipe',
-    name = 'dried-meat',
+    name = 'dried-meat-01',
     category = 'smelting',
     enabled = false,
     energy_required = 5,
@@ -2018,10 +2004,11 @@ RECIPE {
     },
     results = {
         {type = 'item', name = 'dried-meat', amount = 5}
-    }
-}:add_unlock('advanced-rendering')
+    },
+    main_product = 'dried-meat'
+}:add_unlock('rendering')
 
-end
+--end
 
 RECIPE {
     type = 'recipe',
@@ -2036,3 +2023,44 @@ RECIPE {
         {type = 'item', name = 'sample-cup', amount = 4}
     }
 }:add_unlock("selective-breeding")
+
+RECIPE {
+    type = 'recipe',
+    name = 'space-suit',
+    category = 'crafting',
+    enabled = false,
+    energy_required = 60,
+    ingredients = {
+        {type = 'item', name = 'plastic-bar', amount = 10},
+        {type = 'item', name = 'metallic-glass', amount = 20},
+        {type = 'item', name = 'rubber', amount = 15},
+        {type = 'item', name = 'kevlar', amount = 30},
+        {type = 'item', name = 'aramid', amount = 30},
+        {type = 'item', name = 'glass', amount = 30},
+        {type = 'item', name = 'biofilm', amount = 10},
+        {type = 'item', name = 'science-coating', amount = 5},
+        {type = 'item', name = 'silver-foam', amount = 5},
+        {type = 'item', name = 'nexelit-cartridge', amount = 3},
+        {type = 'item', name = 'exoskeleton-equipment', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'space-suit', amount = 1}
+    }
+}:add_unlock("laika")
+
+RECIPE {
+    type = 'recipe',
+    name = 'space-dingrit',
+    category = 'crafting-with-fluid',
+    enabled = false,
+    energy_required = 60,
+    ingredients = {
+        {type = 'item', name = 'space-suit', amount = 1},
+        {type = 'item', name = 'skin-caged-dingrits', amount = 1},
+        {type = 'fluid', name = 'pressured-air', amount = 250},
+        {type = 'fluid', name = 'artificial-blood', amount = 200},
+    },
+    results = {
+        {type = 'item', name = 'space-dingrit', amount = 1}
+    }
+}:add_unlock("laika")

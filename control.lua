@@ -212,7 +212,10 @@ local farm_buildings = {
 	"yaedols",
 	"yotoi",
 	"zipir",
-	"moondrop"
+	"moondrop",
+	'seaweed',
+	'sap',
+	'moss'
 }
 
 local animal_farm_buildings = {
@@ -248,7 +251,10 @@ local plant_farm_buildings = {
 	["rennea"] = true,
 	["tuuphra"] = true,
 	["yotoi"] = true,
-	["moondrop"] = true
+	["moondrop"] = true,
+	["moss"] = true,
+	["seaweed"] = true,
+	["sap"] = true,
 }
 
 local fungus_farm_buildings = {
@@ -434,6 +440,7 @@ script.on_init(
 				current_chest = '',
 				current_network_search = 0
 			}
+		global.fish_disable = false
 		if not remote.interfaces["silo_script"] then
 			return
 		end
@@ -554,6 +561,9 @@ script.on_configuration_changed(
 				current_network_search = 0
 			}
 		end
+		if global.fish_disable == nil then
+			global.fish_disable = false
+		end
 	end
 )
 --[[
@@ -584,7 +594,7 @@ local function create_farm_help_message(event)
 					type = "frame",
 					name = "farm_help",
 					direction = "horizontal",
-					caption = "All plants and animal buildings require 1 or more copies of the wanted item to function. Craft the first version from codex and DNA samples."
+					caption = "All plants and animal buildings require 1 or more copies of the wanted item to function. Craft the first version from codex and DNA samples.Put them in the module slots"
 				}
 			)
 			farm_help_gui.add({type = "button", name = "fh_accept_button", caption = "OK"})
@@ -1455,6 +1465,13 @@ script.on_event(
 				global.checked_farm_counter = 1
 			end
 		end
+		if global.fish_disable == false then
+			local weeds = game.surfaces['nauvis'].find_entities_filtered{name = 'seaweed'}
+			for _,weed in pairs(weeds) do
+				weed.active = false
+			end
+			global.fish_disable = true
+		end
 	end
 )
 
@@ -1489,7 +1506,19 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 	end
 )
 
-script.on_event(defines.events.on_gui_opened, function(event)
+
+script.on_event(defines.events.on_chunk_generated, function(event)
+
+	local weeds = game.surfaces['nauvis'].find_entities_filtered{area = event.area, name = 'seaweed'}
+	for _,weed in pairs(weeds) do
+		weed.active = false
+	end
+
+end)
+
+script.on_event(
+	defines.events.on_gui_opened,
+	function(event)
 		if event.entity ~= nil then
 			--log(event.entity.name)
 			--log(event.gui_type)

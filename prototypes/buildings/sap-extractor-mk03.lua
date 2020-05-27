@@ -45,11 +45,11 @@ ENTITY {
     match_animation_speed_to_activity = false,
     fixed_recipe = "sap-01",
     module_specification = {
-        module_slots = 3
+        module_slots = 6
     },
-    allowed_effects = {"consumption", "speed"},
+    allowed_effects = {"consumption", "speed", 'productivity'},
     crafting_categories = {"sap"},
-    crafting_speed = 3,
+    crafting_speed = 0.1,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

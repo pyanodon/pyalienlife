@@ -222,7 +222,7 @@ RECIPE {
         {type = 'item', name = 'nanofibrils', amount = 2},
         {type = 'item', name = 'energy-drink', amount =1},
         {type = 'item', name = 'albumin', amount =10},
-        {type = 'item', name = 'immunosupressants', amount =2},
+        --{type = 'item', name = 'immunosupressants', amount =2},
         },
     results = {
         {type = 'item', name = 'auog', amount = 1, probability = 0.7},
