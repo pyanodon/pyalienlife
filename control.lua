@@ -1249,18 +1249,18 @@ script.on_nth_tick(20, function()
 		log('hit')
 		if next(networks[cnsnum].stored_items) ~= nil then
 			log('hit')
-			for i, item in pairs(networks[cnsnum].stored_items) do
+			for i, _ in pairs(networks[cnsnum].stored_items) do
 				log('hit')
 				items[i] = true
 			end
-			for ic, in_chest in pairs(networks[cnsnum].input_chests) do
+			for _, in_chest in pairs(networks[cnsnum].input_chests) do
 				log('hit')
 				if pycloud.chests[in_chest] ~= nil and pycloud.chests[in_chest].entity ~= nil then
 					log('hit')
 					local inv = pycloud.chests[in_chest].entity.get_inventory(defines.inventory.chest)
 					if inv ~= nil then
 						log('hit')
-						for c, contents in pairs(inv.get_contents()) do
+						for c, _ in pairs(inv.get_contents()) do
 							log('hit')
 							if items[c] == true then
 								log('hit')
@@ -1279,7 +1279,7 @@ script.on_nth_tick(20, function()
 					end
 				end
 			end
-			for oc, out_chest in pairs(networks[cnsnum].output_chests) do
+			for _, out_chest in pairs(networks[cnsnum].output_chests) do
 				log('hit')
 				if pycloud.chests[out_chest] ~= nil and pycloud.chests[out_chest].entity ~= nil then
 					log('hit')
@@ -1287,7 +1287,7 @@ script.on_nth_tick(20, function()
 					--log(serpent.block(inv))
 					if inv ~= nil then
 						log('hit')
-						for c, contents in pairs(inv.get_contents()) do
+						for c, _ in pairs(inv.get_contents()) do
 							log('hit')
 							if items[c] == true then
 								log('hit')
@@ -1325,7 +1325,7 @@ script.on_nth_tick(20, function()
 			end
 		elseif next(networks[cnsnum].stored_items) == nil then
 			log('hit')
-			for ic, in_chest in pairs(networks[cnsnum].input_chests) do
+			for _, in_chest in pairs(networks[cnsnum].input_chests) do
 				log('hit')
 				if pycloud.chests[in_chest] ~= nil and pycloud.chests[in_chest].entity ~= nil then
 					log('hit')
@@ -1353,12 +1353,13 @@ script.on_nth_tick(20, function()
 	end
 	--asd
 	--log(serpent.block(pycloud.current_network_search))
+	--log(cns)
 	if pycloud.networks[cns + 1] ~= nil then
 		pycloud.current_network_search = cns + 1
 	else
 		pycloud.current_network_search = 1
 	end
-	log(serpent.block(global.pycloud))
+	--log(serpent.block(global.pycloud))
 end)
 
 script.on_event(
