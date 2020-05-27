@@ -96,7 +96,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(-240, 80),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b2.png",
@@ -105,7 +105,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(-208, 80),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b3.png",
@@ -114,7 +114,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(-176, 80),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b4.png",
@@ -124,7 +124,7 @@
                 frame_count = 250,
                 shift = util.by_pixel(-144, 80),
                 run_mode = "backward",
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b5.png",
@@ -133,7 +133,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(-112, 80),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b6.png",
@@ -142,7 +142,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(-80, 80),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b7.png",
@@ -151,7 +151,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(-48, 80),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b8.png",
@@ -160,7 +160,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(-16, 80),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b9.png",
@@ -169,7 +169,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(16, 80),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b10.png",
@@ -178,7 +178,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(48, 80),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b11.png",
@@ -187,7 +187,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(80, 80),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b12.png",
@@ -196,7 +196,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(112, 80),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b13.png",
@@ -205,7 +205,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(144, 80),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b14.png",
@@ -214,7 +214,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(176, 80),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b15.png",
@@ -223,7 +223,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(208, 80),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t1.png",
@@ -232,7 +232,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(-240, -208),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t2.png",
@@ -241,7 +241,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(-208, -208),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t3.png",
@@ -250,7 +250,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(-176, -208),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t4.png",
@@ -259,7 +259,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(-144, -208),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t5.png",
@@ -268,7 +268,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(-112, -208),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t6.png",
@@ -277,7 +277,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(-80, -208),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t7.png",
@@ -286,7 +286,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(-48, -208),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t8.png",
@@ -295,7 +295,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(-16, -208),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t9.png",
@@ -304,7 +304,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(16, -208),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t10.png",
@@ -313,7 +313,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(48, -208),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t11.png",
@@ -322,7 +322,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(80, -208),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t12.png",
@@ -331,7 +331,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(112, -208),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t13.png",
@@ -340,7 +340,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(144, -208),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t14.png",
@@ -349,7 +349,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(176, -208),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
               {
                 filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t15.png",
@@ -358,7 +358,7 @@
                 line_length = 50,
                 frame_count = 250,
                 shift = util.by_pixel(208, -208),
-                animation_speed = 0.2
+                animation_speed = 0.18
               },
 
           }
