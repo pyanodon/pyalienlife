@@ -14,7 +14,7 @@
         {type = 'item', name = 'gh', amount = 4},
         {type = 'item', name = 'enzyme-pks', amount = 2},
         {type = 'item', name = 'upgrader-mk02', amount = 1},
-        {type = 'item', name = 'atomated-factory-mk01', amount = 1},
+        {type = 'item', name = 'automated-factory-mk01', amount = 1},
 
 			},
         results = {
