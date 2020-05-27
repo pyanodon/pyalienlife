@@ -30,6 +30,14 @@ end
 data.raw.fish.fish.minable.result = 'fish'
 --data.raw.fish.fish = nil
 
+--Remove space science from satellite
+data.raw.item.satellite.rocket_launch_product =
+    {
+        type = 'item',
+        name = 'tholins',
+        amount = 0
+    }
+
 data.raw.item.fawogae = nil
 
 for _, recipe in pairs(data.raw.recipe) do
