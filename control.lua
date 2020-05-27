@@ -437,7 +437,8 @@ script.on_init(
 						[0] = {},
 					},
 				chests = {},
-				current_chest = ''
+				current_chest = '',
+				current_network_search = 0
 			}
 		global.fish_disable = false
 		if not remote.interfaces["silo_script"] then
@@ -556,7 +557,8 @@ script.on_configuration_changed(
 						[0] = {},
 					},
 				chests = {},
-				current_chest = ''
+				current_chest = '',
+				current_network_search = 0
 			}
 		end
 		if global.fish_disable == nil then
@@ -1227,31 +1229,137 @@ script.on_nth_tick(30, function()
 				end
 			end
 		end
-		--[[
-		if next(global.ocula_master_table.idling_at_player) ~= nil then
-			--log('hit')
-			for _, p in pairs(global.ocula_master_table.idling_at_player) do
-				--log(serpent.block(p))
-				if next(p) ~= nil then
-					--log('hit')
-					--log(p[1])
-					for _, o in pairs(p) do
-						if global.ocula_master_table.ocula[o] ~= nil then
-							local ocula = global.ocula_master_table.ocula[o]
-							--log('hit')
-							ocula.entity.set_command {
-								type = defines.command.go_to_location,
-								destination_entity = game.get_player(ocula.target_player).character,
-								radius = 0.5
-							}
+end)
+
+script.on_nth_tick(20, function()
+	log('hit')
+	local pycloud = global.pycloud
+	local networks = pycloud.networks
+	local cns = pycloud.current_network_search
+	local items = {}
+	if cns == 0 then
+		cns = 1
+	end
+	local cnsnum = tostring(cns)
+	log('hit')
+	--log(cns)
+	--log(serpent.block(networks[tostring(cns)]))
+	--log(serpent.block(networks['1']))
+	if networks[cnsnum] ~= nil then
+		log('hit')
+		if next(networks[cnsnum].stored_items) ~= nil then
+			log('hit')
+			for i, item in pairs(networks[cnsnum].stored_items) do
+				log('hit')
+				items[i] = true
+			end
+			for ic, in_chest in pairs(networks[cnsnum].input_chests) do
+				log('hit')
+				if pycloud.chests[in_chest] ~= nil and pycloud.chests[in_chest].entity ~= nil then
+					log('hit')
+					local inv = pycloud.chests[in_chest].entity.get_inventory(defines.inventory.chest)
+					if inv ~= nil then
+						log('hit')
+						for c, contents in pairs(inv.get_contents()) do
+							log('hit')
+							if items[c] == true then
+								log('hit')
+								--log(cnsnum)
+								--log(c)
+								if networks[cnsnum].stored_items[c] < game.item_prototypes[c].stack_size then
+									log('hit')
+									local amount = inv.remove(c)
+									networks[cnsnum].stored_items[c] = amount
+								end
+							elseif items[c] ~= true then
+								local amount = inv.remove(c)
+								networks[cnsnum].stored_items[c] = amount
+							end
+						end
+					end
+				end
+			end
+			for oc, out_chest in pairs(networks[cnsnum].output_chests) do
+				log('hit')
+				if pycloud.chests[out_chest] ~= nil and pycloud.chests[out_chest].entity ~= nil then
+					log('hit')
+					local inv = pycloud.chests[out_chest].entity.get_inventory(defines.inventory.chest)
+					--log(serpent.block(inv))
+					if inv ~= nil then
+						log('hit')
+						for c, contents in pairs(inv.get_contents()) do
+							log('hit')
+							if items[c] == true then
+								log('hit')
+								if networks[cnsnum].stored_items[c] > 0 and inv.get_item_count(c) < game.item_prototypes[c].stack_size then
+									log('hit')
+									local num_mis = game.item_prototypes[c].stack_size - inv.get_item_count(c)
+									if num_mis > networks[cnsnum].stored_items[c] then
+										inv.insert({name = c, count = networks[cnsnum].stored_items[c]})
+										networks[cnsnum].stored_items[c] = 0
+									elseif networks[cnsnum].stored_items[c] > num_mis then
+										inv.insert({name = c, count = num_mis})
+										networks[cnsnum].stored_items[c] = networks[cnsnum].stored_items[c] - num_mis
+									end
+									--[[
+										local required_amount = game.item_prototypes[c].stack_size - inv.get_item_count(c)
+									local amount = inv.insert({name = c, count = required_amount})
+									networks[cnsnum].stored_items[c] = amount
+									]]--
+								end
+							end
+						end
+						for si, stored_item in pairs(networks[cnsnum].stored_items) do
+							log('hit')
+							--log(serpent.block(inv.get_item_count(si)))
+							if inv.get_item_count(si) < game.item_prototypes[si].stack_size and stored_item > 0 then
+								log('hit')
+								log(si)
+								log(stored_item)
+								local amount = inv.insert({name = si, count = stored_item})
+								networks[cnsnum].stored_items[si] = networks[cnsnum].stored_items[si] - amount
+							end
+						end
+					end
+				end
+			end
+		elseif next(networks[cnsnum].stored_items) == nil then
+			log('hit')
+			for ic, in_chest in pairs(networks[cnsnum].input_chests) do
+				log('hit')
+				if pycloud.chests[in_chest] ~= nil and pycloud.chests[in_chest].entity ~= nil then
+					log('hit')
+					local inv = pycloud.chests[in_chest].entity.get_inventory(defines.inventory.chest)
+					if inv ~= nil then
+						log('hit')
+						for c, contents in pairs(inv.get_contents()) do
+							log(serpent.block(c))
+							log(serpent.block(contents))
+							log('hit')
+							if networks[cnsnum].stored_items[c] ~= nil and networks[cnsnum].stored_items[c] < game.item_prototypes[c].stack_size then
+								log('hit')
+								local amount = inv.remove(c)
+								networks[cnsnum].stored_items[c] = amount
+							elseif networks[cnsnum].stored_items[c] == nil then
+								log('hit')
+								local amount = inv.remove(c)
+								networks[cnsnum].stored_items[c] = amount
+							end
 						end
 					end
 				end
 			end
 		end
-		]]--
 	end
-)
+	--asd
+	--log(serpent.block(pycloud.current_network_search))
+	if pycloud.networks[cns + 1] ~= nil then
+		pycloud.current_network_search = cns + 1
+	else
+		pycloud.current_network_search = 1
+	end
+	log(serpent.block(global.pycloud))
+end)
 
 script.on_event(
 	defines.events.on_tick,
@@ -1367,9 +1475,7 @@ script.on_event(
 	end
 )
 
-script.on_event(
-	{defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity},
-	function(event)
+script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity}, function(event)
 		local E = event.entity
 		for _, farm in pairs(farm_buildings) do
 			if string.match(E.name, farm) then
@@ -1399,6 +1505,7 @@ script.on_event(
 		end
 	end
 )
+
 
 script.on_event(defines.events.on_chunk_generated, function(event)
 
@@ -1444,9 +1551,7 @@ script.on_event(
 	end
 )
 
-script.on_event(
-	defines.events.on_gui_selection_state_changed,
-	function(event)
+script.on_event(defines.events.on_gui_selection_state_changed, function(event)
 		--log(event.element.name)
 		caravanroutes = global.caravanroutes
 		--log(serpent.block(caravanroutes))
@@ -1506,27 +1611,44 @@ script.on_event(
 script.on_event(defines.events.on_gui_switch_state_changed, function(event)
 
 	if event.element.name == 'chest_state_switch' then
-		global.pycloud.chests[global.pycloud.current_chest.unit_number].input_output_state = event.element.switch_state
+		local pycloud = global.pycloud
+		pycloud.chests[pycloud.current_chest.unit_number].input_output_state = event.element.switch_state
 		--check for chest network and update the put in that as well
+		local cur_chest = pycloud.current_chest.unit_number
+		if pycloud.networks[pycloud.chests[cur_chest].cloud_id_num] ~= nil then
+			if pycloud.chests[cur_chest].input_output_state == 'left' then
+				table.insert(pycloud.networks[pycloud.chests[cur_chest].cloud_id_num].input_chests, cur_chest)
+			elseif pycloud.chests[cur_chest].input_output_state == 'right' then
+				table.insert(pycloud.networks[pycloud.chests[cur_chest].cloud_id_num].output_chests, cur_chest)
+				log(serpent.block(pycloud.networks[pycloud.chests[cur_chest].cloud_id_num].input_chests))
+				log(serpent.block(pycloud.networks[pycloud.chests[cur_chest].cloud_id_num].input_chests[cur_chest]))
+				log(serpent.block(cur_chest))
+				for k, v in pairs(pycloud.networks[pycloud.chests[cur_chest].cloud_id_num].input_chests) do
+					log('hit')
+					if v == cur_chest then
+						log('hit')
+						table.remove(pycloud.networks[pycloud.chests[cur_chest].cloud_id_num].input_chests, k)
+						break
+					end
+				end
+			end
+		end
 	end
 	log(serpent.block(global.pycloud))
 end)
 
-script.on_event(
-	defines.events.on_gui_value_changed,
-	function()
+script.on_event(defines.events.on_gui_value_changed, function()
 		--log(event.element.name)
 	end
 )
 
-script.on_event(
-	defines.events.on_gui_confirmed,
-	function(event)
+script.on_event(defines.events.on_gui_confirmed, function(event)
 		--log(event.element.name)
 		if event.element.name == "outpost_name" then
 			global.outpost_names[global.current_outpost] = outpostgui.outpost_name.text
 		end
 		if event.element.name == 'chest_id_text' then
+			log(event.element.text)
 			log(serpent.block(global.pycloud))
 			local pycloud = global.pycloud
 			local un = pycloud.current_chest.unit_number
