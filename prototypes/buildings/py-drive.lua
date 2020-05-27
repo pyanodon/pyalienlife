@@ -1,15 +1,26 @@
 	RECIPE {
         type = "recipe",
         name = 'pydrive',
-        enabled = true,
+        enabled = false,
         ingredients =
 			{
-			{'iron-plate', 5}
+        {type = 'item', name = 'format-neuromorphic-chip', amount = 10},
+        {type = 'item', name = 'super-steel', amount = 200},
+        {type = 'item', name = 'processing-unit', amount = 20},
+        {type = 'item', name = 'small-parts-03', amount = 100},
+        {type = 'item', name = 'alien-sample-03', amount = 4},
+        {type = 'item', name = 'vonix', amount = 2},
+        {type = 'item', name = 'earth-cow-sample', amount = 10},
+        {type = 'item', name = 'gh', amount = 4},
+        {type = 'item', name = 'enzyme-pks', amount = 2},
+        {type = 'item', name = 'upgrader-mk02', amount = 1},
+        {type = 'item', name = 'atomated-factory-mk01', amount = 1},
+
 			},
         results = {
             {'pydrive', 1}
         }
-    }--:add_unlock("domestication")
+    }:add_unlock("domestication-mk03")
 
     ITEM {
         type = "item",

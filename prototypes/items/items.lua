@@ -8873,8 +8873,8 @@ ITEM {
     rocket_launch_product =
     {
         type = 'item',
-        name = 'tholins',
-        amount = 0
+        name = 'space-dingrit-return',
+        amount = 1
     }
 }
 

@@ -34,7 +34,7 @@ data.raw.fish.fish.minable.result = 'fish'
 data.raw.item.satellite.rocket_launch_product =
     {
         type = 'item',
-        name = 'tholins',
+        name = 'iron-plate',
         amount = 0
     }
 
