@@ -4,7 +4,7 @@
         enabled = false,
         ingredients =
 			{
-        {type = 'item', name = 'format-neuromorphic-chip', amount = 10},
+        {type = 'item', name = 'neuromorphic-chip', amount = 10},
         {type = 'item', name = 'super-steel', amount = 200},
         {type = 'item', name = 'processing-unit', amount = 20},
         {type = 'item', name = 'small-parts-03', amount = 100},
