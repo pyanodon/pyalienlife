@@ -44,7 +44,6 @@ data:extend({
         height = 32
       },
     },
-    --autoplace = { influence = 0.05 }
     autoplace =
     {
         order = "xc",
@@ -52,7 +51,7 @@ data:extend({
         peaks =
         {
             {
-                influence = 0.03,
+                influence = 0.02,
                 --min_influence = 0,
                 --water_optimal = 0.875,
                 --water_range = 0.125,

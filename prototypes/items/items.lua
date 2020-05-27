@@ -8869,7 +8869,13 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dingrits",
     order = "x",
-    stack_size = 1
+    stack_size = 1,
+    rocket_launch_product =
+    {
+        type = 'item',
+        name = 'tholins',
+        amount = 0
+    }
 }
 
 ITEM {

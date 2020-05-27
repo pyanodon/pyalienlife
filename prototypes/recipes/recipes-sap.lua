@@ -5,7 +5,7 @@ for _, tree in pairs(data.raw.tree) do
         tree.minable.results =
             {
                 {type = 'item', name = 'wood', amount = tree.minable.count},
-                {type = 'item', name = 'saps', amount_min = 1, amount_max = 5, probability = 0.1},
+                {type = 'item', name = 'saps', amount = 1, probability = 0.05},
                 {type = 'item', name = 'sap-seeds', amount = 5, probability = 0.005}
             }
     end
