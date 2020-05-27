@@ -296,10 +296,10 @@ require('prototypes/buildings/arqad-hive-mk02')
 require('prototypes/buildings/arqad-hive-mk03')
 require('prototypes/buildings/arqad-hive-mk04')
 
---require('prototypes/buildings/py-drive')
+require('prototypes/buildings/py-drive')
 
 require('prototypes/buildings/outpost')
---require('prototypes/buildings/flyavan-outpost')
+require('prototypes/buildings/flyavan-outpost')
 --weapons/defenses
 --require('prototypes/weapons/turrets/gun-turret-mk01')
 --require('prototypes/weapons/turrets/rocket-turret-mk01')
@@ -312,7 +312,7 @@ require('prototypes/buildings/outpost')
 --Creature
 require('prototypes/creatures/caravan')
 require('prototypes/creatures/nuka-caravan')
---require('prototypes/creatures/flying-caravan')
+require('prototypes/creatures/flying-caravan')
 require('prototypes/creatures/dingrido')
 require('prototypes/creatures/crawdad')
 require('prototypes/creatures/phadaisus')
