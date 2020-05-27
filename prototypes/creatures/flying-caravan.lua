@@ -8,15 +8,24 @@ RECIPE{
     enabled = false,
     ingredients =
     {
-        {type = 'item', name = 'alien-sample01', amount = 5},
-		{type = 'item', name = 'bio-sample', amount = 20},
-		{type = 'item', name = 'auog', amount = 1},
-        {type = 'item', name = 'moss-gen', amount = 15},
-        {type = 'item', name = 'earth-bear-sample', amount = 1},
-        {type = 'fluid', name = 'water-saline', amount = 100},
+        {type = 'item', name = 'alien-sample-02', amount = 5},
+		{type = 'item', name = 'bio-sample', amount = 50},
+		{type = 'item', name = 'trits', amount = 1},
+		{type = 'item', name = 'cdna', amount = 5},
+		{type = 'item', name = 'brain', amount = 5},
+		{type = 'item', name = 'lab-instrument', amount = 10},
+		{type = 'item', name = 'neuroprocessor', amount = 5},
+		{type = 'item', name = 'py-science-pack', amount = 5},
+        {type = 'item', name = 'earth-cow-sample', amount = 5},
+		{type = 'fluid', name = 'artificial-blood', amount = 150},
+		{type = 'fluid', name = 'xenogenic-cells', amount = 100},
+		{type = 'fluid', name = 'hydrogen', amount = 500},
+		{type = 'item', name = 'small-parts-01', amount = 100},
+		{type = 'item', name = 'red-wire', amount = 10},
+		{type = 'item', name = 'green-wire', amount = 10},
     },
     result = "flyavan"
-  }:add_unlock("domestication")
+  }:add_unlock("domestication-mk02")
 
 ITEM{
     type = "item-with-entity-data",
@@ -132,7 +141,7 @@ data:extend(
 			width = 480,
 			height = 410,
 			frame_count = 50,
-			shift = util.mul_shift(util.by_pixel(130, 110)),
+			shift = util.mul_shift(util.by_pixel(140, 120)),
 			direction_count = 16,
 			--scale = scale,
 			draw_as_shadow = true,
@@ -214,7 +223,7 @@ data:extend(
 			width = 480,
 			height = 410,
 			frame_count = 50,
-			shift = util.mul_shift(util.by_pixel(130, 110)),
+			shift = util.mul_shift(util.by_pixel(140, 120)),
 			direction_count = 16,
 			--scale = scale,
 			draw_as_shadow = true,
