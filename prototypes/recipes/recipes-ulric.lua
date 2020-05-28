@@ -71,7 +71,7 @@ RECIPE {
         {type = 'fluid', name = 'steam', amount = 100},
     },
     results = {
-        {type = 'item', name = 'ulric-food-01', amount = 3},
+        {type = 'item', name = 'ulric-food-01', amount = 6},
     },
 }:add_unlock("food-mk01")
 
@@ -94,7 +94,7 @@ RECIPE {
         {type = 'fluid', name = 'steam', amount = 100},
     },
     results = {
-        {type = 'item', name = 'ulric-food-02', amount = 5},
+        {type = 'item', name = 'ulric-food-02', amount = 6},
     },
 }:add_unlock("food-mk02")
 

@@ -99,7 +99,7 @@ RECIPE {
         {type = 'fluid', name = 'steam', amount = 100},
     },
     results = {
-        {type = 'item', name = 'arthurian-food-02', amount = 5},
+        {type = 'item', name = 'arthurian-food-02', amount = 6},
     },
 }:add_unlock("food-mk02")
 
