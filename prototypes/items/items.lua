@@ -4250,7 +4250,22 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-latex",
     order = "a",
-    stack_size = 100
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "sap-seeds-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/sap-seeds.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-latex",
+    order = "a",
+    stack_size = 500
 }
 
 ITEM {
@@ -5139,6 +5154,10 @@ ITEM {
 ------RULES-----
 
 ---CREATURES---
+    local alien_life_limitations_tree =
+    {
+    }
+
     local alien_life_limitations_seaweed =
 	{
         'seaweed',
@@ -5307,6 +5326,86 @@ local alien_life_limitations_cottongut =
     {
     }
 ----MODULES----
+
+ITEM {
+    type = "module",
+    name = "tree-mk01",
+    icons =
+    {
+        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+        {icon = "__pyalienlifegraphics2__/graphics/icons/forest-tree.png"}
+    },
+    icon_size = 64,
+	category = "tree",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "t-a",
+    stack_size = 300,
+	effect = { speed = {bonus = 0.8}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_tree,
+	limitation_message_key = "Dicks"
+}
+
+ITEM {
+    type = "module",
+    name = "tree-mk02",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+        {icon = "__pyalienlifegraphics2__/graphics/icons/forest-tree.png"}
+    },
+    icon_size = 64,
+	category = "tree",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "t-b",
+    stack_size = 300,
+	effect = { speed = {bonus = 1.6}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_tree,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "tree-mk03",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+        {icon = "__pyalienlifegraphics2__/graphics/icons/forest-tree.png"}
+    },
+    icon_size = 64,
+	category = "tree",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "t-c",
+    stack_size = 300,
+	effect = { speed = {bonus = 2.4}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_tree,
+	limitation_message_key = "Its full"
+}
+
+ITEM {
+    type = "module",
+    name = "tree-mk04",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlifegraphics2__/graphics/icons/forest-tree.png"}
+    },
+    icon_size = 64,
+	category = "tree",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "t-d",
+    stack_size = 300,
+	effect = { speed = {bonus = 3.2}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_tree,
+	limitation_message_key = "Its full"
+}
 
 ITEM {
     type = "module",
@@ -8946,6 +9045,10 @@ ITEM {
 ------------------------------
 data:extend(
 {
+    {
+        type = "module-category",
+        name = "tree"
+    },
     {
         type = "module-category",
         name = "seaweed"

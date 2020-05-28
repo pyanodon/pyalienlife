@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.3
+Date: 2020-05-28
+  Changes:
+    - Add tree module for fast wood forestry
+    - Add sap mk02 breeding
+    - add guar to several recipes
+    - added Dingrit space program
+    - other tweaks and adjustments
+---------------------------------------------------------------------------------------------------
 Version: 1.7.2
 Date: 2020-05-24
   Changes:
