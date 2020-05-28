@@ -84,7 +84,7 @@ RECIPE {
         {type = 'fluid', name = 'fish-oil', amount = 100},
     },
     results = {
-        {type = 'item', name = 'korlex-food-02', amount = 5},
+        {type = 'item', name = 'korlex-food-02', amount = 6},
     },
 }:add_unlock("food-mk03"):add_ingredient({type = "item", name = "fiberboard", amount = 2})
 
