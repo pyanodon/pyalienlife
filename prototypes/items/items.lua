@@ -5156,6 +5156,16 @@ ITEM {
 ---CREATURES---
     local alien_life_limitations_tree =
     {
+        'log1',
+        'log2',
+        'log3',
+        'log4',
+        'log5',
+        'log6',
+        'log7',
+        'log7-2',
+        'log8',
+        'tree'
     }
 
     local alien_life_limitations_seaweed =
