@@ -199,7 +199,7 @@ RECIPE {
     ingredients = {
         {type = 'fluid', name = 'oxygen', amount = 50},
         {type = 'item', name = 'bones', amount = 5},
-        {type = 'item', name = 'plasmids', amount = 1},
+        {type = 'item', name = 'plasmids', amount = 3},
     },
     results = {
         {type = 'fluid', name = 'xenogenic-cells', amount = 65},
@@ -216,7 +216,7 @@ RECIPE {
     ingredients = {
         {type = 'fluid', name = 'oxygen', amount = 50},
         {type = 'item', name = 'bonemeal', amount = 5},
-        {type = 'item', name = 'plasmids', amount = 1},
+        {type = 'item', name = 'plasmids', amount = 3},
     },
     results = {
         {type = 'fluid', name = 'xenogenic-cells', amount = 70},
@@ -233,7 +233,7 @@ RECIPE {
     ingredients = {
         {type = 'fluid', name = 'oxygen', amount = 50},
         {type = 'item', name = 'skin', amount = 5},
-        {type = 'item', name = 'plasmids', amount = 1},
+        {type = 'item', name = 'plasmids', amount = 3},
     },
     results = {
         {type = 'fluid', name = 'xenogenic-cells', amount = 70},
@@ -250,7 +250,7 @@ RECIPE {
     ingredients = {
         {type = 'fluid', name = 'oxygen', amount = 50},
         {type = 'item', name = 'guts', amount = 5},
-        {type = 'item', name = 'plasmids', amount = 1},
+        {type = 'item', name = 'plasmids', amount = 3},
     },
     results = {
         {type = 'fluid', name = 'xenogenic-cells', amount = 60},
@@ -267,7 +267,7 @@ RECIPE {
     ingredients = {
         {type = 'fluid', name = 'oxygen', amount = 50},
         {type = 'item', name = 'mukmoux-fat', amount = 5},
-        {type = 'item', name = 'plasmids', amount = 1},
+        {type = 'item', name = 'plasmids', amount = 3},
     },
     results = {
         {type = 'fluid', name = 'xenogenic-cells', amount = 40},
@@ -284,7 +284,7 @@ RECIPE {
     ingredients = {
         {type = 'fluid', name = 'oxygen', amount = 50},
         {type = 'item', name = 'meat', amount = 5},
-        {type = 'item', name = 'plasmids', amount = 1},
+        {type = 'item', name = 'plasmids', amount = 3},
     },
     results = {
         {type = 'fluid', name = 'xenogenic-cells', amount = 50},
@@ -301,7 +301,7 @@ RECIPE {
     ingredients = {
         {type = 'fluid', name = 'oxygen', amount = 50},
         {type = 'item', name = 'brain', amount = 5},
-        {type = 'item', name = 'plasmids', amount = 1},
+        {type = 'item', name = 'plasmids', amount = 3},
     },
     results = {
         {type = 'fluid', name = 'xenogenic-cells', amount = 50},
@@ -320,7 +320,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'fluid', name = 'oxygen', amount = 50},
-        {type = 'item', name = 'plasmids', amount = 1},
+        {type = 'item', name = 'plasmids', amount = 3},
         {type = 'item', name = 'bones', amount = 5},
         {type = 'item', name = 'gh', amount = 1},
     },
@@ -338,7 +338,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'fluid', name = 'oxygen', amount = 50},
-        {type = 'item', name = 'plasmids', amount = 1},
+        {type = 'item', name = 'plasmids', amount = 3},
         {type = 'item', name = 'bonemeal', amount = 5},
         {type = 'item', name = 'gh', amount = 1},
     },
@@ -357,7 +357,7 @@ RECIPE {
     ingredients = {
         {type = 'fluid', name = 'oxygen', amount = 50},
         {type = 'item', name = 'skin', amount = 5},
-        {type = 'item', name = 'plasmids', amount = 1},
+        {type = 'item', name = 'plasmids', amount = 3},
         {type = 'item', name = 'gh', amount = 1},
     },
     results = {
@@ -375,7 +375,7 @@ RECIPE {
     ingredients = {
         {type = 'fluid', name = 'oxygen', amount = 50},
         {type = 'item', name = 'guts', amount = 5},
-        {type = 'item', name = 'plasmids', amount = 1},
+        {type = 'item', name = 'plasmids', amount = 3},
         {type = 'item', name = 'gh', amount = 1},
     },
     results = {
@@ -392,7 +392,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'fluid', name = 'oxygen', amount = 50},
-        {type = 'item', name = 'plasmids', amount = 1},
+        {type = 'item', name = 'plasmids', amount = 3},
         {type = 'item', name = 'mukmoux-fat', amount = 5},
         {type = 'item', name = 'gh', amount = 1},
     },
@@ -410,7 +410,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'fluid', name = 'oxygen', amount = 50},
-        {type = 'item', name = 'plasmids', amount = 1},
+        {type = 'item', name = 'plasmids', amount = 3},
         {type = 'item', name = 'meat', amount = 5},
         {type = 'item', name = 'gh', amount = 1},
     },
@@ -428,7 +428,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'fluid', name = 'oxygen', amount = 50},
-        {type = 'item', name = 'plasmids', amount = 1},
+        {type = 'item', name = 'plasmids', amount = 3},
         {type = 'item', name = 'brain', amount = 5},
         {type = 'item', name = 'gh', amount = 1},
     },

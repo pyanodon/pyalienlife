@@ -19,7 +19,7 @@ RECIPE {
     name = 'plasmids',
     category = 'biofactory',
     enabled = false,
-    energy_required = 6,
+    energy_required = 8,
     ingredients = {
         {type = 'fluid', name = 'zogna-bacteria', amount = 20},
         {type = 'item', name = 'petri-dish-bacteria', amount = 1},
