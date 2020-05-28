@@ -329,7 +329,7 @@ RECIPE {
     energy_required = 15,
     ingredients = {
         {type = 'item', name = 'sea-sponge', amount = 1},
-        {type = 'item', name = 'plasmids', amount = 2},
+        {type = 'item', name = 'plasmids', amount = 6},
         {type = 'item', name = 'flask', amount = 3},
         {type = 'fluid', name = 'decalin', amount = 30},
         {type = 'item', name = 'plastic-bar', amount = 10},
@@ -348,7 +348,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'sea-sponge', amount = 1},
         {type = 'item', name = 'arqad-propolis', amount = 1},
-        {type = 'item', name = 'plasmids', amount = 2},
+        {type = 'item', name = 'plasmids', amount = 5},
         {type = 'item', name = 'flask', amount = 3},
         {type = 'fluid', name = 'decalin', amount = 30},
         {type = 'item', name = 'plastic-bar', amount = 10},

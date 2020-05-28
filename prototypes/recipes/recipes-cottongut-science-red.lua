@@ -11,7 +11,7 @@ RECIPE {
         {
             {type = 'item', name = 'fawogae-substrate', amount = 10},
             {type = 'item', name = 'bio-sample', amount = 2},
-            {type = 'item', name = 'plasmids', amount = 1},
+            {type = 'item', name = 'plasmids', amount = 2},
             {type = "item", name = "cellulose", amount = 2},
             {type = "item", name = "petri-dish", amount = 2}
         },
