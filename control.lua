@@ -549,7 +549,7 @@ script.on_configuration_changed(
 		if global.ocula_master_table.idling_at_player == nil then
 			global.idling_at_player = {}
 		end
-		if global.pycloud == nil then
+		if global.pycloud == nil or global.pycloud.current_network_search == nil then
 			global.pycloud =
 			{
 				networks =

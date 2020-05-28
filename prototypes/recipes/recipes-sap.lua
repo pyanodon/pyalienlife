@@ -1,5 +1,4 @@
 
-
 for _, tree in pairs(data.raw.tree) do
     if tree.minable ~= nil then
         tree.minable.results =
@@ -10,7 +9,6 @@ for _, tree in pairs(data.raw.tree) do
             }
     end
 end
-
 
 RECIPE {
     type = "recipe",
@@ -31,7 +29,7 @@ RECIPE {
     name = "sap-tree",
     category = "nursery",
     enabled = true,
-    energy_required = 120,
+    energy_required = 45,
     ingredients = {
         {type = "item", name = "sap-seeds", amount = 5},
     },
@@ -47,22 +45,38 @@ RECIPE {
 
 --mk02--
 --WIP--
---[[
+
 RECIPE {
     type = 'recipe',
-    name = 'sap-tree-mk02',
+    name = 'sap-seeds-mk02',
     category = 'sap',
-    enabled = true,
+    enabled = false,
     energy_required = 25,
     ingredients = {
         {type = 'fluid', name = 'dirty-water', amount = 200},
         {type = 'item', name = 'sodium-alginate', amount = 1},
         {type = 'item', name = 'urea', amount = 1},
         {type = 'item', name = 'moss', amount = 5},
-        {type = 'item', name = 'wood', amount = 5},
+        {type = 'item', name = 'sap-tree', amount = 5},
     },
     results = {
         {type = 'item', name = 'sap-seeds-mk02', amount = 1},
     },
-  }
-  ]]--
+  }:add_unlock("selective-breeding")
+
+  RECIPE {
+    type = 'recipe',
+    name = 'sap-tree-mk02',
+    category = 'sap',
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'item', name = 'sap-seeds-mk02', amount = 6},
+        {type = 'item', name = 'fertilizer', amount = 4},
+        {type = 'item', name = 'bone-meal', amount = 10}
+    },
+    results = {
+        {type = 'item', name = 'sap-tree-mk02', amount = 1},
+    },
+  }:add_unlock("selective-breeding")
