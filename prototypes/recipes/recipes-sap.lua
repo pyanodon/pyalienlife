@@ -74,7 +74,7 @@ RECIPE {
         {type = 'fluid', name = 'dirty-water', amount = 200},
         {type = 'item', name = 'sap-seeds-mk02', amount = 6},
         {type = 'item', name = 'fertilizer', amount = 4},
-        {type = 'item', name = 'bone-meal', amount = 10}
+        {type = 'item', name = 'bonemeal', amount = 10}
     },
     results = {
         {type = 'item', name = 'sap-tree-mk02', amount = 1},
