@@ -49,7 +49,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'sap-seeds-mk02',
-    category = 'sap',
+    category = 'nursery',
     enabled = false,
     energy_required = 25,
     ingredients = {
@@ -67,7 +67,7 @@ RECIPE {
   RECIPE {
     type = 'recipe',
     name = 'sap-tree-mk02',
-    category = 'sap',
+    category = 'nursery',
     enabled = false,
     energy_required = 40,
     ingredients = {
