@@ -199,7 +199,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 500
+    stack_size = 300
 }
 
 ITEM {
@@ -213,7 +213,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 500
+    stack_size = 300
 }
 
 ITEM {
@@ -227,7 +227,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 500
+    stack_size = 300
 }
 
 ITEM {
@@ -241,7 +241,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 500
+    stack_size = 300
 }
 
 ITEM {
@@ -252,7 +252,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 500
+    stack_size = 300
 }
 
 ITEM {
@@ -263,7 +263,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 500
+    stack_size = 300
 }
 
 ITEM {
@@ -3821,7 +3821,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 50
+    stack_size = 300
 }
 
 ITEM {
@@ -5522,8 +5522,8 @@ ITEM {
     name = "moss-mk02",
     icons =
     {
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/moss.png"}
+        {icon = "__pyalienlifegraphics__/graphics/icons/moss.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
     },
     icon_size = 32,
 	category = "moss",
@@ -5542,8 +5542,8 @@ ITEM {
     name = "moss-mk03",
     icons =
     {
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/moss.png"}
+        {icon = "__pyalienlifegraphics__/graphics/icons/moss.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
     },
     icon_size = 32,
 	category = "moss",
@@ -5562,8 +5562,8 @@ ITEM {
     name = "moss-mk04",
     icons =
     {
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/moss.png"}
+        {icon = "__pyalienlifegraphics__/graphics/icons/moss.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
     },
     icon_size = 32,
 	category = "moss",
