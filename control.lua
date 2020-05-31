@@ -346,7 +346,7 @@ local function create_pycloud_chest_gui(event)
 			{
 				type = 'switch',
 				name = 'chest_state_switch',
-				switch_state = 'left',
+				switch_state = global.pycloud.chests[event.entity.unit_number].input_output_state,
 				left_label_caption = 'Input',
 				right_label_caption = 'Output'
 			}
@@ -1327,7 +1327,7 @@ script.on_nth_tick(20, function()
 			--log('hit')
 			for _, in_chest in pairs(networks[cnsnum].input_chests) do
 				--log('hit')
-				if pycloud.chests[in_chest] ~= nil and pycloud.chests[in_chest].entity ~= nil then
+				if pycloud.chests[in_chest] ~= nil and pycloud.chests[in_chest].entity.valid ~= false then
 					--log('hit')
 					local inv = pycloud.chests[in_chest].entity.get_inventory(defines.inventory.chest)
 					if inv ~= nil then
@@ -1506,7 +1506,7 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 		elseif E.name == 'pydrive' then
 			local skin = game.surfaces['nauvis'].find_entities( { {E.position.x-1,E.position.y-1}, {E.position.x+1,E.position.y+1} } )
 			if skin ~= nil then
-				for e,ent in pairs(skin) do
+				for _,ent in pairs(skin) do
 					if ent.name == 'pydrive_skin' then
 						ent.destroy()
 						log(serpent.block(global.pycloud))
@@ -1517,11 +1517,18 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 							pycloud.chests[E.unit_number] = nil
 						else
 							if pycloud.networks[chest.cloud_id_num] ~= nil then
+								log('hit')
 								if chest.input_output_state == 'left' then
-									pycloud.networks[chest.cloud_id_num].input_chests[chest.entity.unit_number] = nil
+									for k, _ in pairs(pycloud.networks[tostring(chest.cloud_id_num)].input_chests) do
+										table.remove(pycloud.networks[tostring(chest.cloud_id_num)].input_chests, k)
+									end
 								elseif chest.input_output_state == 'right' then
-									pycloud.networks[chest.cloud_id_num].output_chests[chest.entity.unit_number] = nil
+									log('hit')
+									for k,_ in pairs(pycloud.networks[chest.cloud_id_num].output_chests) do
+										table.remove(pycloud.networks[chest.cloud_id_num].output_chests, k)
+									end
 								end
+								pycloud.chests[E.unit_number] = nil
 								log(serpent.block(global.pycloud))
 							end
 						end
