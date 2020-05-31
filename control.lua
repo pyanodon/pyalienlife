@@ -1236,10 +1236,12 @@ script.on_nth_tick(20, function()
 	local pycloud = global.pycloud
 	local networks = pycloud.networks
 	local cns = pycloud.current_network_search
+	log(cns)
 	local items = {}
 	if cns == 0 then
 		cns = 1
 	end
+	log(cns)
 	local cnsnum = tostring(cns)
 	--log('hit')
 	--log(cns)
@@ -1352,11 +1354,15 @@ script.on_nth_tick(20, function()
 		end
 	end
 	--asd
-	--log(serpent.block(pycloud.current_network_search))
-	--log(cns)
-	if pycloud.networks[cns + 1] ~= nil then
-		pycloud.current_network_search = cns + 1
-	else
+	log(serpent.block(pycloud.current_network_search))
+	log(cns)
+	pycloud.current_network_search = cns + 1
+	local key
+	for k,_ in pairs(pycloud.networks) do
+		log(k)
+		key = k
+	end
+	if tonumber(cns) > tonumber(key) then
 		pycloud.current_network_search = 1
 	end
 	--log(serpent.block(global.pycloud))
