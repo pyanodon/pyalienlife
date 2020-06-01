@@ -176,7 +176,7 @@ RECIPE {
     energy_required = 4,
     ingredients = {
         {type = 'item', name = 'iron-stick', amount = 15},
-        {type = 'item', name = 'titanium-plate', amount = 10},
+        {type = 'item', name = 'titanium-plate', amount = 5},
         {type = 'item', name = 'solder', amount = 2},
     },
     results = {
