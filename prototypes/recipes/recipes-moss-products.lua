@@ -65,13 +65,13 @@ RECIPE {
     enabled = false,
     energy_required = 15,
     ingredients = {
-        {type = 'fluid', name = 'water', amount = 100},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 100},
-        {type = 'item', name = 'limestone', amount = 3},
-        {type = 'item', name = 'coarse', amount = 5},
+        {type = 'fluid', name = 'water', amount = 200},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 150},
+        {type = 'item', name = 'limestone', amount = 4},
+        {type = 'item', name = 'coarse', amount = 6},
     },
     results = {
-        {type = 'item', name = 'moss', amount = 15},
+        {type = 'item', name = 'moss', amount = 17},   -- added 2 so i cant call it a pure nerff
     },
     icon = '__pyalienlifegraphics__/graphics/icons/moss.png',
     icon_size = 32,
