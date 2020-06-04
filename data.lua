@@ -318,6 +318,7 @@ require('prototypes/creatures/crawdad')
 require('prototypes/creatures/phadaisus')
 require('prototypes/creatures/ocula')
 --require('prototypes/creatures/clone-1')
+require('prototypes/creatures/dig-osaurus')
 
 --(( FLUIDS ))--
 require("prototypes/fluids/zogna-bacteria")
