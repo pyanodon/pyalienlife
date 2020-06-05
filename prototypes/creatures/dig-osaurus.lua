@@ -121,9 +121,51 @@ animations =
     {
       layers =
       {
-        character_animations.level1.mining_tool,
-        character_animations.level1.mining_tool_mask,
-        character_animations.level1.mining_tool_shadow
+        {
+          stripes =
+          {
+            {
+            filename = "__pyalienlifegraphics3__/graphics/entity/dig-osaur/mining-1.png",
+            width_in_frames = 17,
+            height_in_frames = 8,
+            },
+            {
+            filename = "__pyalienlifegraphics3__/graphics/entity/dig-osaur/mining-2.png",
+            width_in_frames = 18,
+            height_in_frames = 8,
+            },
+          },
+          width = 128,
+          height = 128,
+          shift = util.by_pixel(0,0),
+          frame_count = 35,
+          direction_count = 8,
+          animation_speed = 0.6,
+          scale = 0.7,
+        },
+        {
+          stripes =
+          {
+            {
+            filename = "__pyalienlifegraphics3__/graphics/entity/dig-osaur/mining-sh1.png",
+            width_in_frames = 17,
+            height_in_frames = 8,
+            },
+            {
+            filename = "__pyalienlifegraphics3__/graphics/entity/dig-osaur/mining-sh2.png",
+            width_in_frames = 18,
+            height_in_frames = 8,
+            },
+          },
+          width = 128,
+          height = 128,
+          shift = util.by_pixel(6,0),
+          frame_count = 35,
+          direction_count = 8,
+          animation_speed = 0.6,
+          draw_as_shadow = true,
+          scale = 0.7,
+        },
       }
     },
     running_with_gun =
@@ -146,9 +188,27 @@ animations =
     {
       layers =
       {
-        character_animations.level1.running,
-        character_animations.level1.running_mask,
-        character_animations.level1.running_shadow
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/dig-osaur/walk.png",
+          width = 128,
+          height = 128,
+          shift = util.by_pixel(0.0,0.0),
+          frame_count = 18,
+          direction_count = 8,
+          animation_speed = 0.6,
+          scale = 0.7,
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/dig-osaur/walk-sh.png",
+          width = 128,
+          height = 128,
+          shift = util.by_pixel(6,0),
+          frame_count = 18,
+          direction_count = 8,
+          animation_speed = 0.6,
+          draw_as_shadow = true,
+          scale = 0.7,
+        },
       }
     }
   },

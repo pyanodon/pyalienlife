@@ -32,7 +32,7 @@ ITEM{
     name = "flyavan",
     icon = "__pyalienlifegraphics3__/graphics/icons/flyavan.png",
     icon_size = 64,
-    subgroup = "py-containers-warehouse",
+    subgroup = "py-alienlife-special-creatures",
     order = "a",
     place_result = "flyavan",
     stack_size = 5

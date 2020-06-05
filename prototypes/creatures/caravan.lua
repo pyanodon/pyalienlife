@@ -23,7 +23,7 @@ ITEM{
     name = "caravan",
     icon = "__pyalienlifegraphics__/graphics/icons/caravan.png",
     icon_size = 64,
-    subgroup = "py-containers-warehouse",
+    subgroup = "py-alienlife-special-creatures",
     order = "a",
     place_result = "caravan",
     stack_size = 5
