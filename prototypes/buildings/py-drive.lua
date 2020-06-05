@@ -363,5 +363,7 @@
 
           }
         },
-        --vehicle_impact_sound = sounds.generic_impact,
+        working_sound = {
+          sound = {filename = "__pyalienlifegraphics3__/sounds/pydrive.ogg", volume = 0.95},
+      },
       }
