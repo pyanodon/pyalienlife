@@ -24,7 +24,7 @@ ITEM{
     name = "ocula",
     icon = "__pyalienlifegraphics__/graphics/icons/ocula.png",
     icon_size = 64,
-    subgroup = "py-alienlife-buildings-others",
+    subgroup = "py-alienlife-special-creatures",
     order = "x",
     place_result = "ocula",
     stack_size = 5

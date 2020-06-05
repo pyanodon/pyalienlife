@@ -25,7 +25,7 @@ ITEM{
     name = "qaavi",
     icon = "__pyalienlifegraphics__/graphics/icons/phadaisus.png",
     icon_size = 64,
-    subgroup = "py-alienlife-buildings-others",
+    subgroup = "py-alienlife-special-creatures",
     order = "x",
     place_result = "qaavi",
     stack_size = 5
