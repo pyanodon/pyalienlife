@@ -5,6 +5,8 @@ end
 local TRlist_og = require("scripts/techswap")
 local TRlist = {}
 
+local bio_list = require('prototypes/items/biomass-convertion')
+
 --Mega Farms
 
 -- local farm_table = {}
@@ -394,6 +396,98 @@ local function create_pycloud_chest_gui(event)
 			}
 		)
 end
+--[[
+--Biomass tables--
+local function order_biolist()
+
+local bio = global.compostables.og_list
+	--log(serpent.block(bio))
+	local name_table = {}
+	local input_table = {}
+	local output_table = {}
+	for i, item in pairs(bio) do
+		--log(i)
+		--log(serpent.block(item))
+		table.insert(name_table, i)
+		if input_table[item.item_amount] == nil then
+			input_table[item.item_amount] = {i}
+		else
+			table.insert(input_table[item.item_amount], i)
+		end
+		if output_table[item.biomass_amount] == nil then
+			output_table[item.biomass_amount] = {i}
+		else
+			table.insert(output_table[item.biomass_amount], i)
+		end
+	end
+	--log(serpent.block(name_table))
+	--log(serpent.block(input_table))
+	--log(serpent.block(output_table))
+	table.sort(name_table)
+	for k,v in pairs(input_table) do
+		--log(k)
+		--log(serpent.block(v))
+		table.sort(v)
+	end
+	for k,v in pairs(output_table) do
+		--log(k)
+		--log(serpent.block(v))
+		table.sort(v)
+	end
+	--log(serpent.block(name_table))
+	--log(serpent.block(input_table))
+	--log(serpent.block(output_table))
+	global.compostables.name_order = name_table
+	global.compostables.input_order = input_table
+	global.compostables.output_order = output_table
+end
+]]--
+remote.add_interface('data_puller',
+	{order_biolist = function()
+
+		local bio = global.compostables.og_list
+			--log(serpent.block(bio))
+			local name_table = {}
+			local input_table = {}
+			local output_table = {}
+			for i, item in pairs(bio) do
+				--log(i)
+				--log(serpent.block(item))
+				table.insert(name_table, i)
+				if input_table[item.item_amount] == nil then
+					input_table[item.item_amount] = {i}
+				else
+					table.insert(input_table[item.item_amount], i)
+				end
+				if output_table[item.biomass_amount] == nil then
+					output_table[item.biomass_amount] = {i}
+				else
+					table.insert(output_table[item.biomass_amount], i)
+				end
+			end
+			--log(serpent.block(name_table))
+			--log(serpent.block(input_table))
+			--log(serpent.block(output_table))
+			table.sort(name_table)
+			for k,v in pairs(input_table) do
+				--log(k)
+				--log(serpent.block(v))
+				table.sort(v)
+			end
+			for k,v in pairs(output_table) do
+				--log(k)
+				--log(serpent.block(v))
+				table.sort(v)
+			end
+			--log(serpent.block(name_table))
+			--log(serpent.block(input_table))
+			--log(serpent.block(output_table))
+			--global.compostables.name_order = name_table
+			--global.compostables.input_order = input_table
+			--global.compostables.output_order = output_table
+			return bio, name_table, input_table, output_table
+		end
+})
 
 script.on_init(
 	function()
@@ -441,6 +535,14 @@ script.on_init(
 				current_network_search = 0
 			}
 		global.fish_disable = false
+		global.compostables =
+		{
+			og_list = bio_list,
+			name_order = {},
+			input_order = {},
+			output_order = {}
+		}
+		--order_biolist()
 		if not remote.interfaces["silo_script"] then
 			return
 		end
@@ -564,23 +666,19 @@ script.on_configuration_changed(
 		if global.fish_disable == nil then
 			global.fish_disable = false
 		end
+		if global.compostables == nil then
+			global.compostables =
+				{
+					og_list = bio_list,
+					name_order = {},
+					input_order = {},
+					output_order = {}
+				}
+				--order_biolist()
+		end
 	end
 )
---[[
-script.on_event(defines.events.on_player_created, function(event)
 
-local player = game.players[event.player_index]
-
-player.gui.top.add(
-	{
-		type = 'sprite-button',
-		name = 'pywiki',
-		sprite = 'pywiki'
-	}
-)
-
-end)
-]]--
 local farm_help_gui
 
 local function create_farm_help_message(event)
@@ -1271,7 +1369,7 @@ script.on_nth_tick(20, function()
 								if networks[cnsnum].stored_items[c] < game.item_prototypes[c].stack_size then
 									--log('hit')
 									local amount = inv.remove(c)
-									networks[cnsnum].stored_items[c] = amount
+									networks[cnsnum].stored_items[c] = networks[cnsnum].stored_items[c] + amount
 								end
 							elseif items[c] ~= true then
 								local amount = inv.remove(c)
