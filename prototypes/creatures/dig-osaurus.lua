@@ -33,6 +33,38 @@ ITEM{
 ]]--
 data:extend(
     {
+      {
+        type = "optimized-particle",
+        name = "character-footprint-particle",
+        render_layer = "decals",
+        render_layer_when_on_ground = "decals",
+        life_time = 600, --300
+        fade_away_duration = 125,
+        pictures =
+        {
+          sheet =
+          {
+            filename = "__base__/graphics/entity/character/footprints.png",
+            line_length = 2,
+            frame_count = 2,
+            width = 15,
+            height = 11,
+            shift = util.by_pixel(0.5, 0.5),
+            variation_count = 8,
+            hr_version =
+            {
+              filename = "__base__/graphics/entity/character/hr-footprints.png",
+              line_length = 2,
+              frame_count = 2,
+              width = 30,
+              height = 22,
+              shift = util.by_pixel(0.25, 0.25),
+              scale = 0.5,
+              variation_count = 8,
+            },
+          }
+        },
+      },
 --ENTITY {
 {
 type = "character",
