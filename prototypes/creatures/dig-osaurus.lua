@@ -44,24 +44,14 @@ data:extend(
         {
           sheet =
           {
-            filename = "__base__/graphics/entity/character/footprints.png",
+            filename = "__pyalienlifegraphics3__/graphics/entity/dig-osaur/footprints.png",
             line_length = 2,
             frame_count = 2,
-            width = 15,
-            height = 11,
-            shift = util.by_pixel(0.5, 0.5),
+            width = 30,
+            height = 22,
+            shift = util.by_pixel(0.25, 0.25),
             variation_count = 8,
-            hr_version =
-            {
-              filename = "__base__/graphics/entity/character/hr-footprints.png",
-              line_length = 2,
-              frame_count = 2,
-              width = 30,
-              height = 22,
-              shift = util.by_pixel(0.25, 0.25),
-              scale = 0.5,
-              variation_count = 8,
-            },
+            scale = 0.5,
           }
         },
       },
