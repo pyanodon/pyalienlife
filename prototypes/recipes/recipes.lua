@@ -1120,7 +1120,7 @@ RECIPE {
     name = "sodium-alginate",
     category = "hpf",
     enabled = true,
-    energy_required = 10,
+    energy_required = 5,
     ingredients = {
         {type = 'item', name = 'seaweed', amount = 5},
         {type = 'item', name = 'stone', amount = 5},
