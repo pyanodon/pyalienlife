@@ -5,6 +5,8 @@ end
 local TRlist_og = require("scripts/techswap")
 local TRlist = {}
 
+local bio_list = require('prototypes/items/biomass-convertion')
+
 --Mega Farms
 
 -- local farm_table = {}
@@ -394,6 +396,98 @@ local function create_pycloud_chest_gui(event)
 			}
 		)
 end
+--[[
+--Biomass tables--
+local function order_biolist()
+
+local bio = global.compostables.og_list
+	--log(serpent.block(bio))
+	local name_table = {}
+	local input_table = {}
+	local output_table = {}
+	for i, item in pairs(bio) do
+		--log(i)
+		--log(serpent.block(item))
+		table.insert(name_table, i)
+		if input_table[item.item_amount] == nil then
+			input_table[item.item_amount] = {i}
+		else
+			table.insert(input_table[item.item_amount], i)
+		end
+		if output_table[item.biomass_amount] == nil then
+			output_table[item.biomass_amount] = {i}
+		else
+			table.insert(output_table[item.biomass_amount], i)
+		end
+	end
+	--log(serpent.block(name_table))
+	--log(serpent.block(input_table))
+	--log(serpent.block(output_table))
+	table.sort(name_table)
+	for k,v in pairs(input_table) do
+		--log(k)
+		--log(serpent.block(v))
+		table.sort(v)
+	end
+	for k,v in pairs(output_table) do
+		--log(k)
+		--log(serpent.block(v))
+		table.sort(v)
+	end
+	--log(serpent.block(name_table))
+	--log(serpent.block(input_table))
+	--log(serpent.block(output_table))
+	global.compostables.name_order = name_table
+	global.compostables.input_order = input_table
+	global.compostables.output_order = output_table
+end
+]]--
+remote.add_interface('data_puller',
+	{order_biolist = function()
+
+		local bio = global.compostables.og_list
+			--log(serpent.block(bio))
+			local name_table = {}
+			local input_table = {}
+			local output_table = {}
+			for i, item in pairs(bio) do
+				--log(i)
+				--log(serpent.block(item))
+				table.insert(name_table, i)
+				if input_table[item.item_amount] == nil then
+					input_table[item.item_amount] = {i}
+				else
+					table.insert(input_table[item.item_amount], i)
+				end
+				if output_table[item.biomass_amount] == nil then
+					output_table[item.biomass_amount] = {i}
+				else
+					table.insert(output_table[item.biomass_amount], i)
+				end
+			end
+			--log(serpent.block(name_table))
+			--log(serpent.block(input_table))
+			--log(serpent.block(output_table))
+			table.sort(name_table)
+			for k,v in pairs(input_table) do
+				--log(k)
+				--log(serpent.block(v))
+				table.sort(v)
+			end
+			for k,v in pairs(output_table) do
+				--log(k)
+				--log(serpent.block(v))
+				table.sort(v)
+			end
+			--log(serpent.block(name_table))
+			--log(serpent.block(input_table))
+			--log(serpent.block(output_table))
+			--global.compostables.name_order = name_table
+			--global.compostables.input_order = input_table
+			--global.compostables.output_order = output_table
+			return bio, name_table, input_table, output_table
+		end
+})
 
 script.on_init(
 	function()
@@ -441,6 +535,14 @@ script.on_init(
 				current_network_search = 0
 			}
 		global.fish_disable = false
+		global.compostables =
+		{
+			og_list = bio_list,
+			name_order = {},
+			input_order = {},
+			output_order = {}
+		}
+		--order_biolist()
 		if not remote.interfaces["silo_script"] then
 			return
 		end
@@ -564,23 +666,19 @@ script.on_configuration_changed(
 		if global.fish_disable == nil then
 			global.fish_disable = false
 		end
+		if global.compostables == nil then
+			global.compostables =
+				{
+					og_list = bio_list,
+					name_order = {},
+					input_order = {},
+					output_order = {}
+				}
+				--order_biolist()
+		end
 	end
 )
---[[
-script.on_event(defines.events.on_player_created, function(event)
 
-local player = game.players[event.player_index]
-
-player.gui.top.add(
-	{
-		type = 'sprite-button',
-		name = 'pywiki',
-		sprite = 'pywiki'
-	}
-)
-
-end)
-]]--
 local farm_help_gui
 
 local function create_farm_help_message(event)
@@ -641,7 +739,7 @@ local function built_ocula(event)
 		global.ocula_master_table.ocula_boxes[base.unit_number].total_ocula_count =
 			global.ocula_master_table.ocula_boxes[base.unit_number].total_ocula_count + 1
 	end
-	log(serpent.block(global.ocula_master_table.ocula[E.unit_number]))
+	--log(serpent.block(global.ocula_master_table.ocula[E.unit_number]))
 end
 
 --[[
@@ -674,9 +772,9 @@ end)
 script.on_event(
 	{defines.events.on_built_entity, defines.events.on_robot_built_entity},
 	function(event)
-		log('klonan bot did a thing')
+		--log('klonan bot did a thing')
 		local E = event.created_entity
-		log(E.name)
+		--log(E.name)
 		--log(E.ghost_name)
 		--log(serpent.block(landbots))
 
@@ -731,7 +829,7 @@ script.on_event(
 					end
 				end
 			end
-			log(serpent.block(global.ocula_master_table))
+			--log(serpent.block(global.ocula_master_table))
 		elseif E.name == "ocula" then
 			built_ocula(E)
 		elseif E.name == "pydrive" then
@@ -748,7 +846,7 @@ script.on_event(
 					input_output_state = 'left'
 				}
 			global.pycloud.chests[E.unit_number] = chest
-			log(serpent.block(global.pycloud))
+			--log(serpent.block(global.pycloud))
 		elseif global.has_built_first_farm == false then
 			for _, farm in pairs(farm_buildings) do
 				if string.match(E.name, farm) then -- or string.match(E.ghost_name, farm) then
@@ -766,7 +864,7 @@ script.on_event(
 		if E.name == 'clone-1' then
 			local group = game.surfaces['nauvis'].create_unit_group{position = E.position, force = E.force}
 			group.add_member(E)
-			log(serpent.block(E.unit_group.group_number))
+			--log(serpent.block(E.unit_group.group_number))
 			local x = 0
 			local y = 0
 			for i=1,704 do
@@ -790,7 +888,7 @@ script.on_event(
 local function ocula_removed(event)
 	local E = event.entity
 	local OT = global.ocula_master_table
-	log(serpent.block(OT))
+	--log(serpent.block(OT))
 	--reducing ocula box entity count
 	OT.ocula_boxes[OT.ocula[E.unit_number].base].total_ocula_count = OT.ocula_boxes[OT.ocula[E.unit_number].base].total_ocula_count - 1
 
@@ -1041,30 +1139,30 @@ script.on_event(
 			--log(serpent.block(global.ocula_master_table))
 		end
 		if event.result == defines.behavior_result.in_progress then
-			log("hit")
+			--log("hit")
 			if
 				global.ocula_master_table.ocula[event.unit_number] ~= nil and
 					global.ocula_master_table.ocula[event.unit_number].entity.valid
 			 then
-				log("hit")
+				--log("hit")
 			end
 		end
 		if event.result == defines.behavior_result.fail then
-			log("hit")
+			--log("hit")
 			if
 				global.ocula_master_table.ocula[event.unit_number] ~= nil and
 					global.ocula_master_table.ocula[event.unit_number].entity.valid
 			 then
-				log("hit")
+				--log("hit")
 			end
 		end
 		if event.result == defines.behavior_result.deleted then
-			log("hit")
+			--log("hit")
 			if
 				global.ocula_master_table.ocula[event.unit_number] ~= nil and
 					global.ocula_master_table.ocula[event.unit_number].entity.valid
 			 then
-				log("hit")
+				--log("hit")
 			end
 		end
 
@@ -1218,7 +1316,7 @@ script.on_nth_tick(30, function()
 												destination_entity = destination.owner,
 												radius = 0.5
 											}
-										log(serpent.block(global.ocula_master_table))
+										--log(serpent.block(global.ocula_master_table))
 										return
 										end
 									end
@@ -1236,12 +1334,12 @@ script.on_nth_tick(20, function()
 	local pycloud = global.pycloud
 	local networks = pycloud.networks
 	local cns = pycloud.current_network_search
-	log(cns)
+	--log(cns)
 	local items = {}
 	if cns == 0 then
 		cns = 1
 	end
-	log(cns)
+	--log(cns)
 	local cnsnum = tostring(cns)
 	--log('hit')
 	--log(cns)
@@ -1271,7 +1369,7 @@ script.on_nth_tick(20, function()
 								if networks[cnsnum].stored_items[c] < game.item_prototypes[c].stack_size then
 									--log('hit')
 									local amount = inv.remove(c)
-									networks[cnsnum].stored_items[c] = amount
+									networks[cnsnum].stored_items[c] = networks[cnsnum].stored_items[c] + amount
 								end
 							elseif items[c] ~= true then
 								local amount = inv.remove(c)
@@ -1335,8 +1433,8 @@ script.on_nth_tick(20, function()
 					if inv ~= nil then
 						--log('hit')
 						for c, contents in pairs(inv.get_contents()) do
-							log(serpent.block(c))
-							log(serpent.block(contents))
+							--log(serpent.block(c))
+							--log(serpent.block(contents))
 							--log('hit')
 							if networks[cnsnum].stored_items[c] ~= nil and networks[cnsnum].stored_items[c] < game.item_prototypes[c].stack_size then
 								--log('hit')
@@ -1354,12 +1452,12 @@ script.on_nth_tick(20, function()
 		end
 	end
 	--asd
-	log(serpent.block(pycloud.current_network_search))
-	log(cns)
+	--log(serpent.block(pycloud.current_network_search))
+	--log(cns)
 	pycloud.current_network_search = cns + 1
 	local key
 	for k,_ in pairs(pycloud.networks) do
-		log(k)
+		--log(k)
 		key = k
 	end
 	if tonumber(cns) > tonumber(key) then
@@ -1515,27 +1613,27 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 				for _,ent in pairs(skin) do
 					if ent.name == 'pydrive_skin' then
 						ent.destroy()
-						log(serpent.block(global.pycloud))
+						--log(serpent.block(global.pycloud))
 						local pycloud = global.pycloud
 						local chest = pycloud.chests[E.unit_number]
-						log(serpent.block(chest))
+						--log(serpent.block(chest))
 						if pycloud.chests[E.unit_number].cloud_id_num == 0 then
 							pycloud.chests[E.unit_number] = nil
 						else
 							if pycloud.networks[chest.cloud_id_num] ~= nil then
-								log('hit')
+								--log('hit')
 								if chest.input_output_state == 'left' then
 									for k, _ in pairs(pycloud.networks[tostring(chest.cloud_id_num)].input_chests) do
 										table.remove(pycloud.networks[tostring(chest.cloud_id_num)].input_chests, k)
 									end
 								elseif chest.input_output_state == 'right' then
-									log('hit')
+									--log('hit')
 									for k,_ in pairs(pycloud.networks[chest.cloud_id_num].output_chests) do
 										table.remove(pycloud.networks[chest.cloud_id_num].output_chests, k)
 									end
 								end
 								pycloud.chests[E.unit_number] = nil
-								log(serpent.block(global.pycloud))
+								--log(serpent.block(global.pycloud))
 							end
 						end
 					end
@@ -1596,7 +1694,7 @@ script.on_event(defines.events.on_gui_selection_state_changed, function(event)
 		--log(serpent.block(next(lastclickedunit)))
 		--log(serpent.block(lastclickedunit[next(lastclickedunit)].unit_number))
 		if next(lastclickedunit) ~= nil then
-			log(serpent.block(lastclickedunit))
+			--log(serpent.block(lastclickedunit))
 			local id_num = next(lastclickedunit)
 			if event.element.name == "outpost-list" then
 				local value = event.element.get_item(event.element.selected_index)
@@ -1629,7 +1727,7 @@ script.on_event(defines.events.on_gui_selection_state_changed, function(event)
 				caravanroutes[id_num].endpoint.id = global.outpost_table["outpost" .. otnum].entity.unit_number
 				caravanroutes[id_num].endpoint.pos = global.outpost_table["outpost" .. otnum].entity.position
 			elseif event.element.name == 'destination' then
-				log(serpent.block(id_num))
+				--log(serpent.block(id_num))
 				local bitters = game.surfaces['nauvis'].find_entities_filtered{force = 'enemy', position = lastclickedunit[id_num].position, radius = 2000}
 				for _, enemy in pairs(bitters) do
 					lastclickedunit[id_num].set_command {
@@ -1671,7 +1769,7 @@ script.on_event(defines.events.on_gui_switch_state_changed, function(event)
 			end
 		end
 	end
-	log(serpent.block(global.pycloud))
+	--log(serpent.block(global.pycloud))
 end)
 
 script.on_event(defines.events.on_gui_value_changed, function()
@@ -2031,7 +2129,7 @@ script.on_event(
 				elseif ent.name == 'nuka-caravan' then
 					create_nuka_caravan_gui(event, ent)
 					lastclickedunit[ent.unit_number] = ent
-					log(serpent.block(lastclickedunit))
+					--log(serpent.block(lastclickedunit))
 				end
 			end
 		end
