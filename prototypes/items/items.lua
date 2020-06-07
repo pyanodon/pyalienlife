@@ -5354,7 +5354,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 0.8}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_tree,
-	limitation_message_key = "Dicks"
+	limitation_message_key = "wood"
 }
 
 ITEM {
@@ -5367,14 +5367,14 @@ ITEM {
     },
     icon_size = 64,
 	category = "tree",
-	tier = 1,
+	tier = 2,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "t-b",
     stack_size = 300,
 	effect = { speed = {bonus = 1.6}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_tree,
-	limitation_message_key = "Its full"
+	limitation_message_key = "wood"
 }
 
 ITEM {
@@ -5387,14 +5387,14 @@ ITEM {
     },
     icon_size = 64,
 	category = "tree",
-	tier = 1,
+	tier = 3,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "t-c",
     stack_size = 300,
 	effect = { speed = {bonus = 2.4}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_tree,
-	limitation_message_key = "Its full"
+	limitation_message_key = "wood"
 }
 
 ITEM {
@@ -5407,14 +5407,14 @@ ITEM {
     },
     icon_size = 64,
 	category = "tree",
-	tier = 1,
+	tier = 4,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "t-d",
     stack_size = 300,
 	effect = { speed = {bonus = 3.2}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_tree,
-	limitation_message_key = "Its full"
+	limitation_message_key = "wood"
 }
 
 ITEM {
@@ -5434,7 +5434,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 1}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_seaweed,
-	limitation_message_key = "Its full"
+	limitation_message_key = "weed"
 }
 
 ITEM {
@@ -5447,14 +5447,14 @@ ITEM {
     },
     icon_size = 64,
 	category = "seaweed",
-	tier = 1,
+	tier = 2,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "s-b",
     stack_size = 300,
 	effect = { speed = {bonus = 2}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_seaweed,
-	limitation_message_key = "Its full"
+	limitation_message_key = "weed"
 }
 
 ITEM {
@@ -5467,14 +5467,14 @@ ITEM {
     },
     icon_size = 64,
 	category = "seaweed",
-	tier = 1,
+	tier = 3,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "s-c",
     stack_size = 300,
 	effect = { speed = {bonus = 3}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_seaweed,
-	limitation_message_key = "Its full"
+	limitation_message_key = "weed"
 }
 
 ITEM {
@@ -5487,14 +5487,14 @@ ITEM {
     },
     icon_size = 64,
 	category = "seaweed",
-	tier = 1,
+	tier = 4,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "s-d",
     stack_size = 300,
 	effect = { speed = {bonus = 4}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_seaweed,
-	limitation_message_key = "Its full"
+	limitation_message_key = "weed"
 }
 
 ITEM {
@@ -5514,7 +5514,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 1.3}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_moss,
-	limitation_message_key = "Its full"
+	limitation_message_key = "moss"
 }
 
 ITEM {
@@ -5527,14 +5527,14 @@ ITEM {
     },
     icon_size = 32,
 	category = "moss",
-	tier = 1,
+	tier = 2,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "m-b",
     stack_size = 300,
 	effect = { speed = {bonus = 2.6}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_moss,
-	limitation_message_key = "Its full"
+	limitation_message_key = "moss"
 }
 
 ITEM {
@@ -5547,14 +5547,14 @@ ITEM {
     },
     icon_size = 32,
 	category = "moss",
-	tier = 1,
+	tier = 3,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "m-c",
     stack_size = 300,
 	effect = { speed = {bonus = 3.9}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_moss,
-	limitation_message_key = "Its full"
+	limitation_message_key = "moss"
 }
 
 ITEM {
@@ -5567,14 +5567,14 @@ ITEM {
     },
     icon_size = 32,
 	category = "moss",
-	tier = 1,
+	tier = 4,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "m-d",
     stack_size = 300,
 	effect = { speed = {bonus = 5.2}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_moss,
-	limitation_message_key = "Its full"
+	limitation_message_key = "moss"
 }
 
 ITEM {
@@ -5594,7 +5594,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_sap,
-	limitation_message_key = "Its full"
+	limitation_message_key = "sap"
 }
 
 ITEM {
@@ -5607,14 +5607,14 @@ ITEM {
     },
     icon_size = 64,
 	category = "sap",
-	tier = 1,
+	tier = 2,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "m-b",
     stack_size = 300,
 	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_sap,
-	limitation_message_key = "Its full"
+	limitation_message_key = "sap"
 }
 
 ITEM {
@@ -5627,14 +5627,14 @@ ITEM {
     },
     icon_size = 64,
 	category = "sap",
-	tier = 1,
+	tier = 3,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "m-c",
     stack_size = 300,
 	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_sap,
-	limitation_message_key = "Its full"
+	limitation_message_key = "sap"
 }
 
 ITEM {
@@ -5647,14 +5647,14 @@ ITEM {
     },
     icon_size = 64,
 	category = "sap",
-	tier = 1,
+	tier = 4,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "m-d",
     stack_size = 300,
 	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_sap,
-	limitation_message_key = "Its full"
+	limitation_message_key = "sap"
 }
 
 ITEM {
@@ -5674,7 +5674,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 2}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_ulric,
-	limitation_message_key = "Its full"
+	limitation_message_key = "ulric"
 }
 
 ITEM {
@@ -5694,7 +5694,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 3}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_ulric,
-	limitation_message_key = "Its full"
+	limitation_message_key = "ulric"
 }
 
 ITEM {
@@ -5714,7 +5714,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 4}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_ulric,
-	limitation_message_key = "Its full"
+	limitation_message_key = "ulric"
 }
 
 ITEM {
@@ -5734,7 +5734,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_ulric,
-	limitation_message_key = "Its full"
+	limitation_message_key = "ulric"
 }
 
 ITEM {
@@ -5818,7 +5818,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 2.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_sponge,
-	limitation_message_key = "Its full"
+	limitation_message_key = "sponge"
 }
 
 ITEM {
@@ -5838,7 +5838,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_sponge,
-	limitation_message_key = "Its full"
+	limitation_message_key = "sponge"
 }
 
 ITEM {
@@ -5858,7 +5858,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 8}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_sponge,
-	limitation_message_key = "Its full"
+	limitation_message_key = "sponge"
 }
 
 ITEM {
@@ -5878,7 +5878,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_sponge,
-	limitation_message_key = "Its full"
+	limitation_message_key = "sponge"
 }
 
 ITEM {
@@ -5898,7 +5898,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 1.66}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_ralesia,
-	limitation_message_key = "Its full"
+	limitation_message_key = "ralesia"
 }
 
 ITEM {
@@ -5918,7 +5918,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 3.32}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_ralesia,
-	limitation_message_key = "Its full"
+	limitation_message_key = "ralesia"
 }
 
 ITEM {
@@ -5938,7 +5938,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 4.98}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_ralesia,
-	limitation_message_key = "Its full"
+	limitation_message_key = "ralesia"
 }
 
 ITEM {
@@ -5958,7 +5958,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 6.66}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_ralesia,
-	limitation_message_key = "Its full"
+	limitation_message_key = "ralesia"
 }
 
 ITEM {
@@ -5978,7 +5978,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_mukmoux,
-	limitation_message_key = "Its full"
+	limitation_message_key = "mukmoux"
 }
 
 ITEM {
@@ -5998,7 +5998,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 6.25}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_mukmoux,
-	limitation_message_key = "Its full"
+	limitation_message_key = "mukmoux"
 }
 
 ITEM {
@@ -6018,7 +6018,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 7.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_mukmoux,
-	limitation_message_key = "Its full"
+	limitation_message_key = "mukmoux"
 }
 
 ITEM {
@@ -6038,7 +6038,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 8.75}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_mukmoux,
-	limitation_message_key = "Its full"
+	limitation_message_key = "mukmoux"
 }
 
 ITEM {
@@ -6058,7 +6058,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 2.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_arthurian,
-	limitation_message_key = "Its full"
+	limitation_message_key = "arthurian"
 }
 
 ITEM {
@@ -6078,7 +6078,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_arthurian,
-	limitation_message_key = "Its full"
+	limitation_message_key = "arthurian"
 }
 
 ITEM {
@@ -6098,7 +6098,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 7.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_arthurian,
-	limitation_message_key = "Its full"
+	limitation_message_key = "arthurian"
 }
 
 ITEM {
@@ -6118,7 +6118,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_arthurian,
-	limitation_message_key = "Its full"
+	limitation_message_key = "arthurian"
 }
 
 ITEM {
@@ -6138,7 +6138,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 2}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_tuuphra,
-	limitation_message_key = "Its full"
+	limitation_message_key = "tuuphra"
 }
 
 ITEM {
@@ -6158,7 +6158,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 4}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_tuuphra,
-	limitation_message_key = "Its full"
+	limitation_message_key = "tuuphra"
 }
 
 ITEM {
@@ -6178,7 +6178,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 6}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_tuuphra,
-	limitation_message_key = "Its full"
+	limitation_message_key = "tuuphra"
 }
 
 ITEM {
@@ -6198,7 +6198,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 8}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_tuuphra,
-	limitation_message_key = "Its full"
+	limitation_message_key = "tuuphra"
 }
 
 ITEM {
@@ -6218,7 +6218,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 7.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_navens,
-	limitation_message_key = "Its full"
+	limitation_message_key = "navens"
 }
 
 ITEM {
@@ -6238,7 +6238,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_navens,
-	limitation_message_key = "Its full"
+	limitation_message_key = "navens"
 }
 
 ITEM {
@@ -6258,7 +6258,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 12.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_navens,
-	limitation_message_key = "Its full"
+	limitation_message_key = "navens"
 }
 
 ITEM {
@@ -6278,7 +6278,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_navens,
-	limitation_message_key = "Its full"
+	limitation_message_key = "navens"
 }
 
 ITEM {
@@ -6298,7 +6298,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 0.6}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_yotoi,
-	limitation_message_key = "Its full"
+	limitation_message_key = "yotoi"
 }
 
 ITEM {
@@ -6318,7 +6318,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 1.2}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_yotoi,
-	limitation_message_key = "Its full"
+	limitation_message_key = "yotoi"
 }
 
 ITEM {
@@ -6338,7 +6338,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 1.8}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_yotoi,
-	limitation_message_key = "Its full"
+	limitation_message_key = "yotoi"
 }
 
 ITEM {
@@ -6358,7 +6358,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 2.4}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_yotoi,
-	limitation_message_key = "Its full"
+	limitation_message_key = "yotoi"
 }
 
 ITEM {
@@ -6378,7 +6378,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 7.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_dhilmos,
-	limitation_message_key = "Its full"
+	limitation_message_key = "dhilmos"
 }
 
 ITEM {
@@ -6398,7 +6398,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_dhilmos,
-	limitation_message_key = "Its full"
+	limitation_message_key = "dhilmos"
 }
 
 ITEM {
@@ -6418,7 +6418,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 12.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_dhilmos,
-	limitation_message_key = "Its full"
+	limitation_message_key = "dhilmos"
 }
 
 ITEM {
@@ -6438,7 +6438,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_dhilmos,
-	limitation_message_key = "Its full"
+	limitation_message_key = "dhilmos"
 }
 
 ITEM {
@@ -6458,7 +6458,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 3.30}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_scrondrix,
-	limitation_message_key = "Its full"
+	limitation_message_key = "scrondrix"
 }
 
 ITEM {
@@ -6478,7 +6478,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 6.61}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_scrondrix,
-	limitation_message_key = "Its full"
+	limitation_message_key = "scrondrix"
 }
 
 ITEM {
@@ -6498,7 +6498,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 9.91}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_scrondrix,
-	limitation_message_key = "Its full"
+	limitation_message_key = "scrondrix"
 }
 
 ITEM {
@@ -6518,7 +6518,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 13.21}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_scrondrix,
-	limitation_message_key = "Its full"
+	limitation_message_key = "scrondrix"
 }
 
 ITEM {
@@ -6538,7 +6538,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = .32}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_rennea,
-	limitation_message_key = "Its full"
+	limitation_message_key = "rennea"
 }
 
 ITEM {
@@ -6558,7 +6558,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = .63}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_rennea,
-	limitation_message_key = "Its full"
+	limitation_message_key = "rennea"
 }
 
 ITEM {
@@ -6578,7 +6578,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 1.25}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_rennea,
-	limitation_message_key = "Its full"
+	limitation_message_key = "rennea"
 }
 
 ITEM {
@@ -6598,7 +6598,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 2.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_rennea,
-	limitation_message_key = "Its full"
+	limitation_message_key = "rennea"
 }
 
 ITEM {
@@ -6618,7 +6618,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_phadai,
-	limitation_message_key = "Its full"
+	limitation_message_key = "phadai"
 }
 
 ITEM {
@@ -6638,7 +6638,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 12.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_phadai,
-	limitation_message_key = "Its full"
+	limitation_message_key = "phadai"
 }
 
 ITEM {
@@ -6658,7 +6658,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_phadai,
-	limitation_message_key = "Its full"
+	limitation_message_key = "phadai"
 }
 
 ITEM {
@@ -6678,7 +6678,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 17.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_phadai,
-	limitation_message_key = "Its full"
+	limitation_message_key = "phadai"
 }
 
 ITEM {
@@ -6698,7 +6698,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 6.7}, productivity = {bonus = -0.01}},--16.75
 	limitation = alien_life_limitations_auog,
-    limitation_message_key = "Its full",
+    limitation_message_key = "auog",
     fuel_category = 'auog',
     fuel_value = '200MJ',
     burnt_result = 'used-auog'
@@ -6721,7 +6721,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 13.4}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_auog,
-    limitation_message_key = "Its full",
+    limitation_message_key = "auog",
     fuel_category = 'auog',
     fuel_value = '300MJ',
     burnt_result = 'used-auog-mk02'
@@ -6744,7 +6744,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 20.1}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_auog,
-    limitation_message_key = "Its full",
+    limitation_message_key = "auog",
     fuel_category = 'auog',
     fuel_value = '350MJ',
     burnt_result = 'used-auog-mk03'
@@ -6767,7 +6767,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 26.8}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_auog,
-    limitation_message_key = "Its full",
+    limitation_message_key = "auog",
     fuel_category = 'auog',
     fuel_value = '400MJ',
     burnt_result = 'used-auog-mk04'
@@ -6865,7 +6865,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 3.75}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_fish,
-	limitation_message_key = "Its full"
+	limitation_message_key = "fish"
 }
 
 ITEM {
@@ -6901,7 +6901,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_fish,
-	limitation_message_key = "Its full"
+	limitation_message_key = "fish"
 }
 
 ITEM {
@@ -6937,7 +6937,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 6.25}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_fish,
-	limitation_message_key = "Its full"
+	limitation_message_key = "fish"
 }
 
 ITEM {
@@ -6973,7 +6973,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 7.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_fish,
-	limitation_message_key = "Its full"
+	limitation_message_key = "fish"
 }
 
 ITEM {
@@ -6993,7 +6993,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_yaedols,
-	limitation_message_key = "Its full"
+	limitation_message_key = "yaedols"
 }
 
 ITEM {
@@ -7013,7 +7013,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 12.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_yaedols,
-	limitation_message_key = "Its full"
+	limitation_message_key = "yaedols"
 }
 
 ITEM {
@@ -7033,7 +7033,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_yaedols,
-	limitation_message_key = "Its full"
+	limitation_message_key = "yaedols"
 }
 
 ITEM {
@@ -7053,7 +7053,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 17.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_yaedols,
-	limitation_message_key = "Its full"
+	limitation_message_key = "yaedols"
 }
 
 ITEM {
@@ -7073,7 +7073,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 0.8}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_dingrits,
-    limitation_message_key = "Its full",
+    limitation_message_key = "dingrits",
     fuel_category = 'dingrits',
     fuel_value = '200MJ',
     burnt_result = 'used-dingrit'
@@ -7096,7 +7096,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 1.6}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_dingrits,
-    limitation_message_key = "Its full",
+    limitation_message_key = "dingrits",
     fuel_category = 'dingrits',
     fuel_value = '270MJ',
     burnt_result = 'used-dingrit-mk02'
@@ -7119,7 +7119,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 3.2}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_dingrits,
-    limitation_message_key = "Its full",
+    limitation_message_key = "dingrits",
     fuel_category = 'dingrits',
     fuel_value = '290MJ',
     burnt_result = 'used-dingrit-mk03'
@@ -7142,7 +7142,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 6.4}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_dingrits,
-    limitation_message_key = "Its full",
+    limitation_message_key = "dingrits",
     fuel_category = 'dingrits',
     fuel_value = '420MJ',
     burnt_result = 'used-dingrit-mk04'
@@ -7229,7 +7229,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 0.4}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_kmauts,
-	limitation_message_key = "Its full"
+	limitation_message_key = "kmauts"
 }
 
 ITEM {
@@ -7249,7 +7249,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 0.8}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_kmauts,
-	limitation_message_key = "Its full"
+	limitation_message_key = "kmauts"
 }
 
 ITEM {
@@ -7269,7 +7269,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 1.2}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_kmauts,
-	limitation_message_key = "Its full"
+	limitation_message_key = "kmauts"
 }
 
 ITEM {
@@ -7289,7 +7289,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 1.6}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_kmauts,
-	limitation_message_key = "Its full"
+	limitation_message_key = "kmauts"
 }
 
 ITEM {
@@ -7309,7 +7309,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 50}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_vonix,
-	limitation_message_key = "Its full"
+	limitation_message_key = "vonix"
 }
 
 ITEM {
@@ -7329,7 +7329,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 55}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_vonix,
-	limitation_message_key = "Its full"
+	limitation_message_key = "vonix"
 }
 
 ITEM {
@@ -7349,7 +7349,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 60}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_vonix,
-	limitation_message_key = "Its full"
+	limitation_message_key = "vonix"
 }
 
 ITEM {
@@ -7369,7 +7369,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 65}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_vonix,
-	limitation_message_key = "Its full"
+	limitation_message_key = "vonix"
 }
 
 ITEM {
@@ -7389,7 +7389,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 2.85}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_grod,
-	limitation_message_key = "Its full"
+	limitation_message_key = "grod"
 }
 
 ITEM {
@@ -7409,7 +7409,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 5.7}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_grod,
-	limitation_message_key = "Its full"
+	limitation_message_key = "grod"
 }
 
 ITEM {
@@ -7429,7 +7429,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 8.55}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_grod,
-	limitation_message_key = "Its full"
+	limitation_message_key = "grod"
 }
 
 ITEM {
@@ -7449,7 +7449,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 11.4}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_grod,
-	limitation_message_key = "Its full"
+	limitation_message_key = "grod"
 }
 
 ITEM {
@@ -7465,7 +7465,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 2}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_phagnot,
-	limitation_message_key = "Its full"
+	limitation_message_key = "phagnot"
 }
 
 ITEM {
@@ -7485,7 +7485,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 4}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_phagnot,
-	limitation_message_key = "Its full"
+	limitation_message_key = "phagnot"
 }
 
 ITEM {
@@ -7505,7 +7505,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 6}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_phagnot,
-	limitation_message_key = "Its full"
+	limitation_message_key = "phagnot"
 }
 
 ITEM {
@@ -7525,7 +7525,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 8}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_phagnot,
-	limitation_message_key = "Its full"
+	limitation_message_key = "phagnot"
 }
 
 ITEM {
@@ -7545,7 +7545,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 45}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_bhoddos,
-	limitation_message_key = "Its full"
+	limitation_message_key = "bhoddos"
 }
 
 ITEM {
@@ -7565,7 +7565,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 50}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_bhoddos,
-	limitation_message_key = "Its full"
+	limitation_message_key = "bhoddos"
 }
 
 ITEM {
@@ -7585,7 +7585,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 55}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_bhoddos,
-	limitation_message_key = "Its full"
+	limitation_message_key = "bhoddos"
 }
 
 ITEM {
@@ -7605,7 +7605,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 60}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_bhoddos,
-	limitation_message_key = "Its full"
+	limitation_message_key = "bhoddos"
 }
 
 ITEM {
@@ -7625,7 +7625,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 2}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_xeno,
-	limitation_message_key = "Its full"
+	limitation_message_key = "xeno"
 }
 
 ITEM {
@@ -7645,7 +7645,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 4}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_xeno,
-	limitation_message_key = "Its full"
+	limitation_message_key = "xeno"
 }
 
 ITEM {
@@ -7665,7 +7665,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 6}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_xeno,
-	limitation_message_key = "Its full"
+	limitation_message_key = "xeno"
 }
 
 ITEM {
@@ -7685,7 +7685,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 8}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_xeno,
-	limitation_message_key = "Its full"
+	limitation_message_key = "xeno"
 }
 
 ITEM {
@@ -7701,7 +7701,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 70}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_cridren,
-	limitation_message_key = "Its full"
+	limitation_message_key = "cridren"
 }
 
 ITEM {
@@ -7717,7 +7717,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_antelope,
-	limitation_message_key = "Its full"
+	limitation_message_key = "antelope"
 }
 
 ITEM {
@@ -7737,7 +7737,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 2}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_zipir,
-	limitation_message_key = "Its full"
+	limitation_message_key = "zipir"
 }
 
 ITEM {
@@ -7757,7 +7757,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 4}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_zipir,
-	limitation_message_key = "Its full"
+	limitation_message_key = "zipir"
 }
 
 ITEM {
@@ -7777,7 +7777,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 6}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_zipir,
-	limitation_message_key = "Its full"
+	limitation_message_key = "zipir"
 }
 
 ITEM {
@@ -7797,7 +7797,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 8}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_zipir,
-	limitation_message_key = "Its full"
+	limitation_message_key = "zipir"
 }
 
 ITEM {
@@ -7817,7 +7817,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 40}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_trits,
-	limitation_message_key = "Its full"
+	limitation_message_key = "trits"
 }
 
 ITEM {
@@ -7837,7 +7837,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 45}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_trits,
-	limitation_message_key = "Its full"
+	limitation_message_key = "trits"
 }
 
 ITEM {
@@ -7857,7 +7857,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 50}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_trits,
-	limitation_message_key = "Its full"
+	limitation_message_key = "trits"
 }
 
 ITEM {
@@ -7877,7 +7877,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 55}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_trits,
-	limitation_message_key = "Its full"
+	limitation_message_key = "trits"
 }
 
 ITEM {
@@ -7897,7 +7897,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 0.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_kicalk,
-	limitation_message_key = "Its full"
+	limitation_message_key = "kicalk"
 }
 
 ITEM {
@@ -7917,7 +7917,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 1}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_kicalk,
-	limitation_message_key = "Its full"
+	limitation_message_key = "kicalk"
 }
 
 ITEM {
@@ -7937,7 +7937,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 2}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_kicalk,
-	limitation_message_key = "Its full"
+	limitation_message_key = "kicalk"
 }
 
 ITEM {
@@ -7957,7 +7957,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 3}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_kicalk,
-	limitation_message_key = "Its full"
+	limitation_message_key = "kicalk"
 }
 
 ITEM {
@@ -7977,7 +7977,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 12.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_cadaveric,
-	limitation_message_key = "Its full"
+	limitation_message_key = "cadaveric-arum"
 }
 
 ITEM {
@@ -7997,7 +7997,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 17.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_cadaveric,
-	limitation_message_key = "Its full"
+	limitation_message_key = "cadaveric-arum"
 }
 
 ITEM {
@@ -8017,7 +8017,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 22.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_cadaveric,
-	limitation_message_key = "Its full"
+	limitation_message_key = "cadaveric-arum"
 }
 
 ITEM {
@@ -8037,7 +8037,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_cadaveric,
-	limitation_message_key = "Its full"
+	limitation_message_key = "cadaveric-arum"
 }
 
 ITEM {
@@ -8057,7 +8057,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 0.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_vrauks,
-	limitation_message_key = "Its full"
+	limitation_message_key = "vrauks"
 }
 
 ITEM {
@@ -8077,7 +8077,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 0.75}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_vrauks,
-	limitation_message_key = "Its full"
+	limitation_message_key = "vrauks"
 }
 
 ITEM {
@@ -8097,7 +8097,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 1}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_vrauks,
-	limitation_message_key = "Its full"
+	limitation_message_key = "vrauks"
 }
 
 ITEM {
@@ -8117,7 +8117,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 1.15}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_vrauks,
-	limitation_message_key = "Its full"
+	limitation_message_key = "vrauks"
 }
 
 ITEM {
@@ -8137,7 +8137,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_xyhiphoe,
-	limitation_message_key = "Its full"
+	limitation_message_key = "xyhiphoe"
 }
 ITEM {
     type = "module",
@@ -8156,7 +8156,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 40}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_xyhiphoe,
-	limitation_message_key = "Its full"
+	limitation_message_key = "xyhiphoe"
 }
 
 ITEM {
@@ -8176,7 +8176,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 60}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_xyhiphoe,
-	limitation_message_key = "Its full"
+	limitation_message_key = "xyhiphoe"
 }
 
 ITEM {
@@ -8196,7 +8196,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 80}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_xyhiphoe,
-	limitation_message_key = "Its full"
+	limitation_message_key = "xyhiphoe"
 }
 
 ITEM {
@@ -8216,7 +8216,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 2.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_korlex,
-	limitation_message_key = "Its full"
+	limitation_message_key = "korlex"
 }
 ITEM {
     type = "module",
@@ -8235,7 +8235,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 3.13}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_korlex,
-	limitation_message_key = "Its full"
+	limitation_message_key = "korlex"
 }
 
 ITEM {
@@ -8255,7 +8255,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 3.75}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_korlex,
-	limitation_message_key = "Its full"
+	limitation_message_key = "korlex"
 }
 
 ITEM {
@@ -8275,7 +8275,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 4.38}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_korlex,
-	limitation_message_key = "Its full"
+	limitation_message_key = "korlex"
 }
 
 ITEM {
@@ -8294,7 +8294,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 0.45}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_fawogae,
-	limitation_message_key = "Its full"
+	limitation_message_key = "fawogae"
 }
 
 ITEM {
@@ -8313,7 +8313,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 0.95}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_fawogae,
-	limitation_message_key = "Its full"
+	limitation_message_key = "fawogae"
 }
 
 ITEM {
@@ -8333,7 +8333,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 1.45}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_fawogae,
-	limitation_message_key = "Its full"
+	limitation_message_key = "fawogae"
 }
 
 ITEM {
@@ -8353,7 +8353,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 1.95}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_fawogae,
-	limitation_message_key = "Its full"
+	limitation_message_key = "fawogae"
 }
 
 ITEM {
@@ -8373,7 +8373,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 1}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_moondrop,
-	limitation_message_key = "Its full"
+	limitation_message_key = "moondrop"
 }
 
 ITEM {
@@ -8393,7 +8393,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 2}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_moondrop,
-	limitation_message_key = "Its full"
+	limitation_message_key = "moondrop"
 }
 
 ITEM {
@@ -8413,7 +8413,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 3}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_moondrop,
-	limitation_message_key = "Its full"
+	limitation_message_key = "moondrop"
 }
 
 ITEM {
@@ -8433,7 +8433,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 4}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_moondrop,
-	limitation_message_key = "Its full"
+	limitation_message_key = "moondrop"
 }
 
 ITEM {
@@ -8497,7 +8497,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 1}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_cottongut,
-	limitation_message_key = "Its full"
+	limitation_message_key = "cottongut"
 }
 
 ITEM {
@@ -8517,7 +8517,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 2}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_cottongut,
-	limitation_message_key = "Its full"
+	limitation_message_key = "cottongut"
 }
 
 ITEM {
@@ -8537,7 +8537,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 3}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_cottongut,
-	limitation_message_key = "Its full"
+	limitation_message_key = "cottongut"
 }
 
 ITEM {
@@ -8557,7 +8557,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 4}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_cottongut,
-	limitation_message_key = "Its full"
+	limitation_message_key = "cottongut"
 }
 ----ARQAD
 
@@ -8578,7 +8578,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 7.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_arqad,
-	limitation_message_key = "Its full"
+	limitation_message_key = "arqad"
 }
 
 ITEM {
@@ -8598,7 +8598,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_arqad,
-	limitation_message_key = "Its full"
+	limitation_message_key = "arqad"
 }
 
 ITEM {
@@ -8618,7 +8618,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 12.5}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_arqad,
-	limitation_message_key = "Its full"
+	limitation_message_key = "arqad"
 }
 
 ITEM {
@@ -8638,7 +8638,7 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
 	limitation = alien_life_limitations_arqad,
-	limitation_message_key = "Its full"
+	limitation_message_key = "arqad"
 }
 
 ITEM {
