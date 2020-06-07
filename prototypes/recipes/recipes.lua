@@ -36,13 +36,15 @@ RECIPE {
         {type = 'fluid', name = 'water', amount = 50},
         {type = 'item', name = 'fungal-substrate', amount = 1},
         {type = 'item', name = 'wood', amount = 4},
-        {type = 'item', name = 'biomass', amount = 5},
+        {type = 'item', name = 'biomass', amount = 10},
         {type = 'item', name = 'petri-dish-bacteria', amount = 1},
         {type = 'item', name = 'bones', amount = 2},
     },
     results = {
         {type = 'item', name = 'fungal-substrate-02', amount = 5},
+        {type = 'item', name = 'empty-petri-dish', amount = 1},
     },
+    main_product = "fungal-substrate-02",
 }:add_unlock("mycology-mk02")
 
 RECIPE {
@@ -55,14 +57,16 @@ RECIPE {
         {type = 'fluid', name = 'phytoplankton', amount = 50},
         {type = 'item', name = 'tuuphra', amount = 3},
         {type = 'item', name = 'fungal-substrate-02', amount = 1},
-        {type = 'item', name = 'biomass', amount = 4},
+        {type = 'item', name = 'biomass', amount = 15},
         {type = 'item', name = 'ash', amount = 10},
         {type = 'item', name = 'petri-dish-bacteria', amount = 1},
         {type = 'item', name = 'bones', amount = 2},
     },
     results = {
         {type = 'item', name = 'fungal-substrate-03', amount = 5},
+        {type = 'item', name = 'empty-petri-dish', amount = 1},
     },
+    main_product = "fungal-substrate-03",
 }:add_unlock("mycology-mk03"):add_ingredient({type = "item", name = "raw-fiber", amount = 5})
 
 RECIPE {
@@ -1116,7 +1120,7 @@ RECIPE {
     name = "sodium-alginate",
     category = "hpf",
     enabled = true,
-    energy_required = 10,
+    energy_required = 5,
     ingredients = {
         {type = 'item', name = 'seaweed', amount = 5},
         {type = 'item', name = 'stone', amount = 5},

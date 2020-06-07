@@ -25,7 +25,7 @@ ITEM{
     name = "dingrido",
     icon = "__pyalienlifegraphics__/graphics/icons/dingrido.png",
     icon_size = 64,
-    subgroup = "py-alienlife-buildings-others",
+    subgroup = "py-alienlife-special-creatures",
     order = "x",
     place_result = "dingrido",
     stack_size = 5

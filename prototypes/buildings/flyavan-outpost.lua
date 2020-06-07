@@ -25,7 +25,7 @@
         icon = "__pyalienlifegraphics3__/graphics/icons/flyavan-outpost.png",
         icon_size = 64,
         flags = {},
-        subgroup = "py-containers-warehouse",
+        subgroup = "py-alienlife-buildings-others",
         order = 'a',
         place_result = 'flyavan-outpost',
         stack_size = 15
