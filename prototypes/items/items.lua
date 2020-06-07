@@ -5163,10 +5163,13 @@ ITEM {
         'log5',
         'log6',
         'log7',
-        'log7-2',
         'log8',
         'tree'
     }
+
+    if mods['pyhightech'] then
+        table.insert(alien_life_limitations_tree, 'log7-2')
+    end
 
     local alien_life_limitations_seaweed =
 	{

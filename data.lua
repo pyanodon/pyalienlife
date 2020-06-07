@@ -989,7 +989,7 @@ local local_name_type
 for i, item in pairs(biomass_convertion) do
 
 --local name = ''
-
+log(i)
     if item.type == nil or item.type ~= 'fluid' then
         type = 'item'
         local_name_type = 'item'
@@ -1019,10 +1019,10 @@ for i, item in pairs(biomass_convertion) do
             end
         end
     elseif type == 'fluid' then
-        if data.raw.fluid[i].icon ~= nil then
+        if data.raw.fluid[i] ~= nil and data.raw.fluid[i].icon ~= nil then
             --log('hit')
             icon = {icon = data.raw.fluid[i].icon, icon_size = data.raw.fluid[i].icon_size}
-        elseif data.raw.fluid[i].icons ~= nil then
+        elseif data.raw.fluid[i] ~= nil and data.raw.fluid[i].icons ~= nil then
             --log('hit')
             icon = data.raw.fluid[i].icons[1]
         end
