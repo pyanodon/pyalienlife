@@ -1242,3 +1242,9 @@ RECIPE {
     },
     main_product = "casein-mixture",
 }:add_unlock("korlex")
+
+RECIPE('rennea-mk02-breeding'):replace_ingredient("sulfuric-acid-barrel", "phosphoric-acid-barrel")
+
+RECIPE('rennea-mk03-breeding'):replace_ingredient("sulfuric-acid-barrel", "phosphoric-acid-barrel")
+
+RECIPE('rennea-mk04-breeding'):replace_ingredient("sulfuric-acid-barrel", "phosphoric-acid-barrel")

@@ -518,7 +518,7 @@ local local_name_type
 for i, item in pairs(bio_list) do
 
 --local name = ''
-log(i)
+--log(i)
     if item.type == nil or item.type ~= 'fluid' then
         type = 'item'
         local_name_type = 'item'
