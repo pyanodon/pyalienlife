@@ -18,7 +18,7 @@
     ITEM {
         type = "item",
         name = 'outpost-mining',
-        icon = "__pyalienlifegraphics__/graphics/icons/outpost.png",
+        icon = "__pyalienlifegraphics3__/graphics/icons/outpost-mining.png",
         icon_size = 64,
         flags = {},
         subgroup = "py-alienlife-buildings-others",
@@ -30,7 +30,7 @@
 	ENTITY {
         type = "container",
         name = 'outpost-mining',
-        icon = "__pyalienlifegraphics__/graphics/icons/outpost.png",
+        icon = "__pyalienlifegraphics3__/graphics/icons/outpost-mining.png",
         icon_size = 64,
         flags = {"placeable-neutral", "placeable-player", "player-creation"},
         minable = {mining_time = 2, result = 'outpost-mining'},
@@ -46,17 +46,29 @@
                 percent = 90
             }
         },
-        collision_box = {{-2.7, -2.7}, {2.7, 2.7}},
-        selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
-        drawing_box = {{-3.0, -3.0}, {3.0, 3.0}},
+        collision_box = {{-3.3, -3.3}, {3.3, 3.3}},
+        selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+        drawing_box = {{-3.5, -3.5}, {3.5, 3.5}},
         inventory_size = 800,
         scale_info_icons = true,
 
 		picture = {
-            filename = "__pyalienlifegraphics2__/graphics/entity/outpost/off.png",
-            priority = "high",
-            width = 224,
-            height = 224,
-            shift = util.by_pixel(16, -16),
-        },
-    }
+            layers = {
+                {
+                filename = "__pyalienlifegraphics3__/graphics/entity/outpost-mining/outpost-mining.png",
+                priority = "high",
+                width = 224,
+                height = 320,
+                shift = util.by_pixel(0, -48),
+                },
+                {
+                filename = "__pyalienlifegraphics3__/graphics/entity/outpost-mining/outpost-mining-mask.png",
+                priority = "high",
+                width = 224,
+                height = 320,
+                shift = util.by_pixel(0, -48),
+                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+            },
+        }
+}
