@@ -22,7 +22,7 @@ RECIPE {
         {type = 'item', name = 'biomass', amount = 2},
     },
     results = {
-        {type = 'item', name = 'fungal-substrate', amount = 5},
+        {type = 'item', name = 'fungal-substrate', amount = 10},
     },
 }:add_unlock("mycology-mk01")
 
@@ -41,7 +41,7 @@ RECIPE {
         {type = 'item', name = 'bones', amount = 2},
     },
     results = {
-        {type = 'item', name = 'fungal-substrate-02', amount = 5},
+        {type = 'item', name = 'fungal-substrate-02', amount = 10},
         {type = 'item', name = 'empty-petri-dish', amount = 1},
     },
     main_product = "fungal-substrate-02",
@@ -63,7 +63,7 @@ RECIPE {
         {type = 'item', name = 'bones', amount = 2},
     },
     results = {
-        {type = 'item', name = 'fungal-substrate-03', amount = 5},
+        {type = 'item', name = 'fungal-substrate-03', amount = 10},
         {type = 'item', name = 'empty-petri-dish', amount = 1},
     },
     main_product = "fungal-substrate-03",
