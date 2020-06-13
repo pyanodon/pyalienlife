@@ -834,7 +834,7 @@ script.on_event(
 			built_ocula(E)
 		elseif E.name == "pydrive" then
 			--log('hit')
-			game.surfaces["nauvis"].create_entity {
+			local skin = game.surfaces["nauvis"].create_entity {
 				name = "pydrive_skin",
 				position = E.position,
 				--force = E.force
@@ -843,7 +843,8 @@ script.on_event(
 				{
 					entity = E,
 					cloud_id_num = 0,
-					input_output_state = 'left'
+					input_output_state = 'left',
+					skin = skin
 				}
 			global.pycloud.chests[E.unit_number] = chest
 			--log(serpent.block(global.pycloud))
@@ -1358,7 +1359,8 @@ script.on_nth_tick(20, function()
 				if pycloud.chests[in_chest] ~= nil and pycloud.chests[in_chest].entity ~= nil then
 					--log('hit')
 					local inv = pycloud.chests[in_chest].entity.get_inventory(defines.inventory.chest)
-					if inv ~= nil then
+					if inv ~= nil and pycloud.chests[in_chest].skin.energy > 1 then
+						log(serpent.block(pycloud.chests[in_chest].skin.energy))
 						--log('hit')
 						for c, _ in pairs(inv.get_contents()) do
 							--log('hit')
@@ -1385,7 +1387,7 @@ script.on_nth_tick(20, function()
 					--log('hit')
 					local inv = pycloud.chests[out_chest].entity.get_inventory(defines.inventory.chest)
 					--log(serpent.block(inv))
-					if inv ~= nil then
+					if inv ~= nil and pycloud.chests[out_chest].skin.energy > 1 then
 						--log('hit')
 						for c, _ in pairs(inv.get_contents()) do
 							--log('hit')
@@ -1430,7 +1432,7 @@ script.on_nth_tick(20, function()
 				if pycloud.chests[in_chest] ~= nil and pycloud.chests[in_chest].entity.valid ~= false then
 					--log('hit')
 					local inv = pycloud.chests[in_chest].entity.get_inventory(defines.inventory.chest)
-					if inv ~= nil then
+					if inv ~= nil and pycloud.chests[in_chest].skin.energy > 1 then
 						--log('hit')
 						for c, contents in pairs(inv.get_contents()) do
 							--log(serpent.block(c))
