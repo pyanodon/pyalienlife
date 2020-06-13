@@ -67,7 +67,7 @@
             shift = util.by_pixel(16, -48),
         }
     }
-
+--[[
     ENTITY {
         type = "simple-entity",
         name = "pydrive_skin",
@@ -367,3 +367,312 @@
           sound = {filename = "__pyalienlifegraphics3__/sounds/pydrive.ogg", volume = 0.95},
       },
       }
+]]--
+
+ENTITY {
+  type = "electric-energy-interface",
+  name = "pydrive_skin",
+  icon = "__pyalienlifegraphics3__/graphics/icons/logistic-station.png",
+  icon_size = 64, icon_mipmaps = 4,
+  flags = {"placeable-player", "player-creation", "hidden"},
+  subgroup = "py-containers-warehouse",
+  order = 'a',
+  map_color = {r = 0, g = 0.365, b = 0.58, a = 1},
+  max_health = 150,
+  corpse = "big-remnants",
+  dying_explosion = "medium-explosion",
+  collision_box = {{0,0}, {0,0}},
+  selection_box = {{0,0}, {0,0}},
+  --light = {intensity = 0.75, size = 8, color = {r = 1.0, g = 1.0, b = 1.0}},
+  --integration_patch_render_layer = "decals",
+  --integration_patch = hr_crash_site_lab_ground(),
+  energy_source = {
+      type = "electric",
+      usage_priority = "secondary-input",
+      emissions_per_minute = 3,
+      buffer_capacity = '20MW'
+  },
+  energy_usage = "1000kW",
+  continuous_animation = true,
+  animations =
+  {
+    layers =
+    {
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b1.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(-240, 80),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b2.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(-208, 80),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b3.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(-176, 80),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b4.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(-144, 80),
+          run_mode = "backward",
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b5.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(-112, 80),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b6.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(-80, 80),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b7.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(-48, 80),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b8.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(-16, 80),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b9.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(16, 80),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b10.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(48, 80),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b11.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(80, 80),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b12.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(112, 80),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b13.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(144, 80),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b14.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(176, 80),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/b15.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(208, 80),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t1.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(-240, -208),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t2.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(-208, -208),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t3.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(-176, -208),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t4.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(-144, -208),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t5.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(-112, -208),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t6.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(-80, -208),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t7.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(-48, -208),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t8.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(-16, -208),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t9.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(16, -208),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t10.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(48, -208),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t11.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(80, -208),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t12.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(112, -208),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t13.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(144, -208),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t14.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(176, -208),
+          animation_speed = 0.18
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/t15.png",
+          width = 32,
+          height = 288,
+          line_length = 50,
+          frame_count = 250,
+          shift = util.by_pixel(208, -208),
+          animation_speed = 0.18
+        },
+
+    }
+  },
+  working_sound = {
+    sound = {filename = "__pyalienlifegraphics3__/sounds/pydrive.ogg", volume = 0.95},
+},
+}
