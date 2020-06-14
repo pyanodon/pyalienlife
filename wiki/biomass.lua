@@ -102,52 +102,55 @@ function wiki.biomass(wiki_pane, og_list, name_order)
             direction = "vertical"
         }
     for i,item in pairs(name_order) do
-        local type
-        if og_list[item].type ~= nil then
-            type = 'fluid'
-        else
-            type = 'item'
+        if game.item_prototypes[item] ~= nil or game.fluid_prototypes[item] then
+            local type
+            --log(serpent.block(item))
+            if og_list[item].type ~= nil then
+                type = 'fluid'
+            else
+                type = 'item'
+            end
+            local item_frame = wiki_pane.biomass_tab_frame.bio_scroll.biomass_frame.add
+                {
+                    type = 'frame',
+                    name = item .. '_frame',
+                    style = 'invisible_frame',
+                    direction = "horizontal"
+                }
+            item_frame.style.bottom_padding = 5
+            item_frame.add
+                {
+                    type = 'sprite',
+                    name = item .. '_sprite',
+                    sprite = type .. '/' .. item,
+                    caption = game[type .. '_prototypes'][item].localised_name
+                }
+            item_frame[item .. '_sprite'].style.width = 64
+            item_frame[item .. '_sprite'].style.height = 64
+            item_frame[item .. '_sprite'].style.stretch_image_to_widget_size = true
+            local name = item_frame.add
+                {
+                    type = 'label',
+                    name = item .. '_name',
+                    caption = game[type .. '_prototypes'][item].localised_name
+                }
+            name.style.left_padding = 10
+            name.style.width = name_width
+            local input = item_frame.add
+                {
+                    type = 'label',
+                    name = item .. '_input_amount',
+                    caption = og_list[item].item_amount
+                }
+            input.style.width = input_width
+            local output = item_frame.add
+                {
+                    type = 'label',
+                    name = item .. '_biomass_amount',
+                    caption = og_list[item].biomass_amount
+                }
+            output.style.width = output_width
         end
-        local item_frame = wiki_pane.biomass_tab_frame.bio_scroll.biomass_frame.add
-            {
-                type = 'frame',
-                name = item .. '_frame',
-                style = 'invisible_frame',
-                direction = "horizontal"
-            }
-        item_frame.style.bottom_padding = 5
-        item_frame.add
-            {
-                type = 'sprite',
-                name = item .. '_sprite',
-                sprite = type .. '/' .. item,
-                caption = game[type .. '_prototypes'][item].localised_name
-            }
-        item_frame[item .. '_sprite'].style.width = 64
-        item_frame[item .. '_sprite'].style.height = 64
-        item_frame[item .. '_sprite'].style.stretch_image_to_widget_size = true
-        local name = item_frame.add
-            {
-                type = 'label',
-                name = item .. '_name',
-                caption = game[type .. '_prototypes'][item].localised_name
-            }
-        name.style.left_padding = 10
-        name.style.width = name_width
-        local input = item_frame.add
-            {
-                type = 'label',
-                name = item .. '_input_amount',
-                caption = og_list[item].item_amount
-            }
-        input.style.width = input_width
-        local output = item_frame.add
-            {
-                type = 'label',
-                name = item .. '_biomass_amount',
-                caption = og_list[item].biomass_amount
-            }
-        output.style.width = output_width
     end
 end
 
