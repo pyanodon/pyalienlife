@@ -13,7 +13,7 @@ fun.autorecipes {
 				{
                     {name='emptycomb',amount =7},
                     {name='biomass',amount =10},
-					{name='talloilbarrel',amount=2,return_item={name='empty-barrel',amount=2}},
+					{name='crudebarrel',amount=2,return_item={name='empty-barrel',amount=2}},
 				},
 			results =
 				{
@@ -124,3 +124,18 @@ fun.autorecipes {
 		},
 	}
 }
+
+local arqad_filled =
+	{
+		'arqad-filled-comb-1b',
+		'arqad-filled-comb-2b',
+		'arqad-filled-comb-3b',
+		'arqad-filled-comb-4b',
+		'arqad-filled-comb-5b',
+		'arqad-filled-comb-6b',
+		'arqad-filled-comb-7b',
+	}
+
+for recipe in pairs(arqad_filled) do
+	RECIPE(recipe):replace_ingredient('crude-oil-barrel','tall-oil-barrel')
+end
