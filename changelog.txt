@@ -1,4 +1,25 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.8
+Date: 2020-06-14
+  Changes:
+    - Fixed pyHT loading errors.
+    - Added biomass to the wiki.
+    - Balances on Arquads recipes.
+    - Added pY Logistic Center.
+    - Balances in several fungi recipes.
+    - Added rennea breeding program.
+    - Balances in phagnot food.
+    - All fungi substrates now return petri-dishes.
+    - Clean up tons of lines of coding.
+    - Balanced moss recipes.
+    - Cages now are cheaper.
+    - Several biomass balances.
+    - Fixed typos.
+    - Fixed sap and icon layering issue.
+    - Balances on bioprinting.
+    - Balances on cottongut red science.
+    - Balanes on plasmids.
+---------------------------------------------------------------------------------------------------
 Version: 1.7.7
 Date: 2020-05-29
   Changes:
