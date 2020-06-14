@@ -1139,6 +1139,7 @@ script.on_event(
 			end
 			--log(serpent.block(global.ocula_master_table))
 		end
+		--[[
 		if event.result == defines.behavior_result.in_progress then
 			--log("hit")
 			if
@@ -1148,6 +1149,8 @@ script.on_event(
 				--log("hit")
 			end
 		end
+		]]--
+		--[[
 		if event.result == defines.behavior_result.fail then
 			--log("hit")
 			if
@@ -1157,6 +1160,8 @@ script.on_event(
 				--log("hit")
 			end
 		end
+		]]--
+		--[[
 		if event.result == defines.behavior_result.deleted then
 			--log("hit")
 			if
@@ -1166,7 +1171,7 @@ script.on_event(
 				--log("hit")
 			end
 		end
-
+		]]--
 		global.caravanroutes = caravanroutes
 	end
 )
@@ -1434,7 +1439,7 @@ script.on_nth_tick(20, function()
 					local inv = pycloud.chests[in_chest].entity.get_inventory(defines.inventory.chest)
 					if inv ~= nil and pycloud.chests[in_chest].skin.energy > 1 then
 						--log('hit')
-						for c, contents in pairs(inv.get_contents()) do
+						for c, _ in pairs(inv.get_contents()) do
 							--log(serpent.block(c))
 							--log(serpent.block(contents))
 							--log('hit')

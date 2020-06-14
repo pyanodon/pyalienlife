@@ -299,7 +299,7 @@ require('prototypes/buildings/arqad-hive-mk04')
 require('prototypes/buildings/py-drive')
 
 require('prototypes/buildings/outpost')
-require('prototypes/buildings/outpost-mining')
+--require('prototypes/buildings/outpost-mining')
 --require('prototypes/buildings/flyavan-outpost')
 --weapons/defenses
 --require('prototypes/weapons/turrets/gun-turret-mk01')
@@ -319,7 +319,7 @@ require('prototypes/creatures/crawdad')
 require('prototypes/creatures/phadaisus')
 require('prototypes/creatures/ocula')
 --require('prototypes/creatures/clone-1')
-require('prototypes/creatures/dig-osaurus')
+--require('prototypes/creatures/dig-osaurus')
 
 --(( FLUIDS ))--
 require("prototypes/fluids/zogna-bacteria")

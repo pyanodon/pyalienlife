@@ -57,7 +57,7 @@ function wiki.biomass(wiki_pane, og_list, name_order)
             type = 'button',
             name = 'name_button',
             caption = 'Item Name'
-        }   
+        }
     local input_frame = wiki_pane.biomass_tab_frame.bio_button_frame.add
         {
             type = 'frame',
