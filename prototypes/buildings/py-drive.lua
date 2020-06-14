@@ -390,7 +390,8 @@ ENTITY {
       type = "electric",
       usage_priority = "secondary-input",
       emissions_per_minute = 3,
-      buffer_capacity = '20MW'
+      buffer_capacity = '20MW',
+      render_no_power_icon = true
   },
   energy_usage = "1000kW",
   continuous_animation = true,

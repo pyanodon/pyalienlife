@@ -322,7 +322,7 @@ local function create_pycloud_chest_gui(event)
 				type = "frame",
 				name = "chest_menu",
 				direction = "vertical",
-				caption = "Chest Stuff goes here",
+				caption = "Logistic Station",
 				style = "inner_frame_in_outer_frame"
 			}
 		)
@@ -333,7 +333,7 @@ local function create_pycloud_chest_gui(event)
 				type = 'frame',
 				name = 'chest_state_frame',
 				direction = 'horizontal',
-				caption = 'DICKS',
+				--caption = 'DICKS',
 				style = "inner_frame_in_outer_frame"
 			}
 		)
@@ -359,7 +359,7 @@ local function create_pycloud_chest_gui(event)
 				type = 'frame',
 				name = 'chest_id_frame',
 				direction = 'vertical',
-				caption = 'DICKS ID',
+				--caption = 'DICKS ID',
 				style = "inner_frame_in_outer_frame"
 			}
 		)
