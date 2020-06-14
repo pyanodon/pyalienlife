@@ -67,8 +67,6 @@ local biomass_convertion =
     ['fawogae-mk02'] = {item_amount = 20, biomass_amount = 65},
     ['fawogae-mk03'] = {item_amount = 20, biomass_amount = 70},
     ['fawogae-mk04'] = {item_amount = 20, biomass_amount = 75},
-
-
     ['cocoon'] = {item_amount = 1, biomass_amount = 1},
     ['bonemeal'] = {item_amount = 1, biomass_amount = 3},
     ['bones'] = {item_amount = 1, biomass_amount = 3},
