@@ -19,7 +19,7 @@ RECIPE{
     },
     result = "digosaurus"
   }--:add_unlock("zoology")
-
+]]--
 ITEM{
     type = "item-with-entity-data",
     name = "digosaurus",
@@ -30,7 +30,7 @@ ITEM{
     place_result = "digosaurus",
     stack_size = 5
   }
-]]--
+
 data:extend(
     {
       {
@@ -58,8 +58,8 @@ data:extend(
 --ENTITY {
 {
 type = "character",
-name = 'character',
---name = "digosaurus",
+--name = 'character',
+name = "digosaurus",
 icon = "__base__/graphics/icons/character.png",
 icon_size = 64, icon_mipmaps = 4,
 flags = {"placeable-off-grid", "breaths-air", "not-repairable", "not-on-map", "not-flammable"},

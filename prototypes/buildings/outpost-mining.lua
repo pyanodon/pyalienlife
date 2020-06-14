@@ -28,7 +28,7 @@
     }
 
 	ENTITY {
-        type = "container",
+        type = "assembling-machine",
         name = 'outpost-mining',
         icon = "__pyalienlifegraphics3__/graphics/icons/outpost-mining.png",
         icon_size = 64,
@@ -70,5 +70,16 @@
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
                 },
             },
-        }
+        },
+        radius_visualisation_specification =
+            {
+            sprite =
+            {
+                filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-radius-visualization.png",
+                width = 10,
+                height = 10
+            },
+            distance = 40.5,
+            offset = {0, -43}
+            }
 }
