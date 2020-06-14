@@ -992,7 +992,7 @@ RECIPE {
         {type = 'item', name = 'mukmoux-fat', amount = 30},
         {type = 'item', name = 'lab-instrument', amount = 10},
         {type = 'fluid', name = 'gta', amount = 50},
-        {type = 'item', name = 'myoglobin', amount = 1},
+        {type = 'item', name = 'myoglobin', amount = 3},
         {type = 'item', name = 'flask', amount = 20},
         {type = 'item', name = 'mmp', amount = 1},
     },
