@@ -328,6 +328,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
+					{name='fishfood1',amount ='R'},
 					{name='fishfood2',amount ='*2'},
 				},
 			results =
