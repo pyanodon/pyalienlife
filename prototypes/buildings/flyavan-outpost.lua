@@ -62,4 +62,7 @@
             height = 512,
             shift = util.by_pixel(32, -48),
         },
+        working_sound = {
+            sound = {filename = "__pyalienlifegraphics3__/sounds/flyavan.ogg", volume = 1.25},
+        },
     }
