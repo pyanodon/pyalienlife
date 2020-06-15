@@ -1,7 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.7.9
-Date: ????
+Date: 2020-06-15
   Changes:
+    - Fixed kmauts in slaughterhouse.
+    - Fixed Xyhiphoe double food recipe.
+    - Fixed bioprinter speed.
+    - Fixed load order issues.
+    - Disabled prod modules in fungi substrate recipes.
 ---------------------------------------------------------------------------------------------------
 Version: 1.7.8
 Date: 2020-06-14

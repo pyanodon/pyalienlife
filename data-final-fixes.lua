@@ -395,8 +395,8 @@ local recipes_list =
   "formic-acid",
   "biomass-1",
   "biomass-2",
-  "fungal-substrate",
-  "fungal-substrate-02",
+  --"fungal-substrate",
+  --"fungal-substrate-02",
   "fungal-substrate-03",
   "wood-seedling",
   "wood-seeds",
@@ -2215,10 +2215,3 @@ FUN.productivity(recipes_list)
 --log(serpent.block(data.raw.recipe['korlex-milk-5b']))
 --log(serpent.block(data.raw.recipe['korlex-milk-6b']))
 --log(serpent.block(data.raw.recipe['korlex-milk-7b']))
---[[
-for k,v in pairs(data.raw.item) do
-  if string.match(v.name, 'barrel') ~= nil then
-    log(serpent.block(v))
-  end
-end
-]]--
