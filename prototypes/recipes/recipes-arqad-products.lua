@@ -124,18 +124,3 @@ fun.autorecipes {
 		},
 	}
 }
-
-local arqad_filled =
-	{
-		'arqad-filled-comb-1',
-		'arqad-filled-comb-2',
-		'arqad-filled-comb-3',
-		'arqad-filled-comb-4',
-		'arqad-filled-comb-5',
-		'arqad-filled-comb-6',
-		'arqad-filled-comb-7',
-	}
-
-for recipe in pairs(arqad_filled) do
-	RECIPE(recipe):replace_ingredient('crude-oil-barrel','tall-oil-barrel')
-end

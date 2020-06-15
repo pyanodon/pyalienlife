@@ -241,7 +241,7 @@ RECIPE('space-science-pack'):add_ingredient({type = "item", name = "strangelets"
 RECIPE('yag-laser-module'):add_ingredient({type = "item", name = "nanofibrils", amount = 3}):add_ingredient({type = "item", name = "cobalt-fluoride", amount = 3})
 RECIPE('parametric-oscilator'):add_ingredient({type = "item", name = "nanofibrils", amount = 3}):change_category('research')
 RECIPE('superconductor-servomechanims'):change_category('research')
-RECIPE('superconductor'):add_ingredient({type = "item", name = "bio-battery", amount = 2}):change_category('research')
+RECIPE('superconductor'):add_ingredient({type = "item", name = "biobattery", amount = 2}):change_category('research')
 RECIPE('sc-unit'):add_ingredient({type = "item", name = "re-magnet", amount = 2})
 RECIPE('harmonic-absorber'):change_category('research')
 RECIPE('diamagnetic-material'):change_category('research')--:remove_unlock('earnshaw-theorem'):add_unlock('pharmagenomics')
@@ -1248,3 +1248,34 @@ RECIPE('rennea-mk02-breeding'):replace_ingredient("sulfuric-acid-barrel", "phosp
 RECIPE('rennea-mk03-breeding'):replace_ingredient("sulfuric-acid-barrel", "phosphoric-acid-barrel")
 
 RECIPE('rennea-mk04-breeding'):replace_ingredient("sulfuric-acid-barrel", "phosphoric-acid-barrel")
+
+
+local arqad_filled =
+	{
+		'arqad-filled-comb-1',
+		'arqad-filled-comb-2',
+		'arqad-filled-comb-3',
+		'arqad-filled-comb-4',
+		'arqad-filled-comb-5',
+		'arqad-filled-comb-6',
+        'arqad-filled-comb-7',
+        'arqad-filled-comb-1a',
+		'arqad-filled-comb-2a',
+		'arqad-filled-comb-3a',
+		'arqad-filled-comb-4a',
+		'arqad-filled-comb-5a',
+		'arqad-filled-comb-6a',
+        'arqad-filled-comb-7a',
+        'arqad-filled-comb-1b',
+		'arqad-filled-comb-2b',
+		'arqad-filled-comb-3b',
+		'arqad-filled-comb-4b',
+		'arqad-filled-comb-5b',
+		'arqad-filled-comb-6b',
+		'arqad-filled-comb-7b',
+	}
+
+for _, recipe in pairs(arqad_filled) do
+	RECIPE(recipe):replace_ingredient('crude-oil-barrel','tall-oil-barrel')
+end
+
