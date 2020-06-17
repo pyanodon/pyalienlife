@@ -359,6 +359,12 @@ require('prototypes/fluids/cadaveric-arum-cum')
 require('prototypes/fluids/wax')
 require('prototypes/fluids/arqad-jelly')
 require('prototypes/fluids/bee-venom')
+require('prototypes/fluids/dda')
+require('prototypes/fluids/mcb')
+require('prototypes/fluids/chloral')
+require('prototypes/fluids/pre-pesticide-01')
+require('prototypes/fluids/pre-pesticide-02')
+require('prototypes/fluids/ethyl-mercaptan')
 
 --(( RECIPES ))--
 require('prototypes/items/items')

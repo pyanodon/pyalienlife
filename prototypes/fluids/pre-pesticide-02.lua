@@ -1,0 +1,15 @@
+FLUID {
+    type = "fluid",
+    name = "pre-pesticide-02",
+    icon = "__pyalienlifegraphics3__/graphics/icons/pre-pesticide-02.png",
+	icon_size = 64,
+    default_temperature = 10,
+    base_color = {r = 0.066, g = 0.082, b = 0.066},
+    flow_color = {r = 0.066, g = 0.082, b = 0.066},
+    max_temperature = 100,
+    gas_temperature = 15,
+    pressure_to_speed_ratio = 0.4,
+    flow_to_energy_ratio = 0.59,
+    subgroup = "py-alienlife-fluids",
+    order = "f"
+}

@@ -5151,6 +5151,28 @@ ITEM {
     order = "d",
     stack_size = 100
 }
+
+ITEM {
+    type = "item",
+    name = "pesticide-mk01",
+    icon = "__pyalienlifegraphics3__/graphics/icons/pesticide-mk01.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "d",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "pesticide-mk02",
+    icon = "__pyalienlifegraphics3__/graphics/icons/pesticide-mk02.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "d",
+    stack_size = 100
+}
 ------RULES-----
 
 ---CREATURES---
