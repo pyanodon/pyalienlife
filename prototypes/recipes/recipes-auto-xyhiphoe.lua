@@ -240,7 +240,7 @@ fun.autorecipes {
 	}
 }
 
-------------------pup MAKER------------------
+------------------larva MAKER------------------
 
 fun.autorecipes {
     name = 'xyhiphoe-cub',
@@ -257,11 +257,11 @@ fun.autorecipes {
                     {name='phytoplankton',amount =150},
 					{name='pressuredwater',amount ='*1000',return_item={name='waste-water',amount= 650}},
 					--{name='cage',amount=1},
-					{name='saps',amount = 10},
+					{name='saps',amount = 6},
 				},
 			results =
 				{
-					{name='xyhiphoecub', amount =4},
+					{name='xyhiphoecub', amount =3},
 				},
 			crafting_speed = 160,
 			tech = 'assisted-embryology'
@@ -276,7 +276,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-
+					{name='xyhiphoecub', amount ="+2"},
 				},
 			crafting_speed = 140,
 			tech = 'assisted-embryology'
@@ -285,11 +285,11 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='bloodmeal',amount = 10},
+					{name='bloodmeal',amount = 4},
 				},
 			results =
 				{
-
+					{name='xyhiphoecub', amount ="+3"},
 				},
 			crafting_speed = 130,
 			tech = 'assisted-embryology'
@@ -298,11 +298,11 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='albumin',amount = 7},
+					{name='albumin',amount = 1},
 				},
 			results =
 				{
-
+					{name='xyhiphoecub', amount ="+3"},
 				},
 			crafting_speed = 100,
 			tech = 'assisted-embryology'
@@ -314,12 +314,12 @@ fun.autorecipes {
 					--{name='filtrationmedia',amount ='R'},
 					--{name='bloodmeal',amount ='R'},
 					--{name='albumin',amount ='R'},
-					{name='fishegg',amount =15},
+					{name='fishegg',amount =10},
 
 				},
 			results =
 				{
-
+					{name='xyhiphoecub', amount ="+12"},
 				},
 			crafting_speed = 130,
 			tech = 'assisted-embryology'
@@ -333,7 +333,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-
+					{name='xyhiphoecub', amount ="+4"},
 				},
 			crafting_speed = 120,
 			tech = 'assisted-embryology'
@@ -342,11 +342,11 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fawogae',amount = 15},
+					{name='fawogae',amount = 5},
 				},
 			results =
 				{
-
+					{name='xyhiphoecub', amount ="+3"},
 				},
 			crafting_speed = 110,
 			tech = 'assisted-embryology'
@@ -371,7 +371,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='xyhiphoecub',amount = 'R'},
-					{name='xyhiphoecub', amount =6},
+					{name='xyhiphoecub', amount =25},
 				},
 			crafting_speed = 140,
 			tech = 'pheromones'
@@ -386,7 +386,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-
+					{name='xyhiphoecub', amount ='+2'},
 				},
 			crafting_speed = 120,
 			tech = 'pheromones'
@@ -395,11 +395,11 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='bloodmeal',amount = 10},
+					{name='bloodmeal',amount = 4},
 				},
 			results =
 				{
-
+					{name='xyhiphoecub', amount ="+3"},
 				},
 			crafting_speed = 110,
 			tech = 'pheromones'
@@ -408,11 +408,11 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='saps',amount = 10},
+					{name='saps',amount = 5},
 				},
 			results =
 				{
-
+					{name='xyhiphoecub', amount ="+3"},
 				},
 			crafting_speed = 100,
 			tech = 'pheromones'
@@ -429,7 +429,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-
+					{name='xyhiphoecub', amount ="+15"},
 				},
 			crafting_speed = 90,
 			tech = 'pheromones'
@@ -438,11 +438,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
+					{name='fishfood1',amount ='R'},
 					{name='fishfood2',amount =2},
 				},
 			results =
 				{
-
+					{name='xyhiphoecub', amount ="+4"},
 				},
 			crafting_speed = 80,
 			tech = 'pheromones'
@@ -451,13 +452,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fawogae',amount = 15},
+					{name='fawogae',amount = 5},
 				},
 			results =
 				{
-
+					{name='xyhiphoecub', amount ="+4"},
 				},
-			crafting_speed = 70,
+			crafting_speed = 65,
 			tech = 'pheromones'
 		},
 
