@@ -338,6 +338,8 @@ items.inputs.chitinarqad = {'chitin-arqad', 1}
 items.inputs.arqad = {'arqad', 1}
 items.inputs.venom = {'bee-venom', 1}
 items.inputs.crudebarrel = {'crude-oil-barrel', 1}
+items.inputs.pesticide01 = {'pesticide-mk01', 1}
+items.inputs.pesticide02 = {'pesticide-mk02', 1}
 
 items.outputs = items.inputs
 --can put output replacements below here
