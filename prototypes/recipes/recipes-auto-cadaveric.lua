@@ -114,7 +114,27 @@ fun.autorecipes {
 				},
 				crafting_speed = 100,
 				tech = 'cadaveric-arum-mk02'
-        },
+		},
+		{
+			ingredients =
+				{
+                    --{'s1'},
+                    --{'a'},
+                    --{'b','+15'},
+                    --{'g','*2'},
+					--{'d'},
+					--{name='manure',amount ='R'},
+                    {name='pesticide01',amount ='+1'},
+				},
+			results =
+				{
+					--{'a','*25'},
+					--{'a','+3'}
+					{name='cadavericarum',amount ='+2'}
+				},
+				crafting_speed = 85,
+				tech = 'cadaveric-arum-mk03'
+		},
         {
 			ingredients =
 				{
@@ -130,7 +150,28 @@ fun.autorecipes {
 				},
 				crafting_speed = 100,
 				tech = 'cadaveric-arum-mk03'
-        },
+		},
+		{
+			ingredients =
+				{
+                    --{'s1'},
+                    --{'a'},
+                    --{'b','+15'},
+                    --{'g','*2'},
+					--{'d'},
+					--{name='manure',amount ='R'},
+					{name='pesticide01',amount ='R'},
+					{name='pesticide02',amount ='+1'},
+				},
+			results =
+				{
+					--{'a','*25'},
+					--{'a','+3'}
+					{name='cadavericarum',amount ='+4'}
+				},
+				crafting_speed = 85,
+				tech = 'cadaveric-arum-mk03'
+		},
         {
 			ingredients =
 				{
@@ -159,7 +200,8 @@ fun.autorecipes {
 					{name='fluegas',amount ='R'},
 					{name='manure',amount ='R'},
                     {name='fertilizer',amount ='R'},
-                    {name='coalgas',amount ='R'},
+					{name='coalgas',amount ='R'},
+					--{name='pesticide02',amount ='R'},
                     --{name='water',amount ='*5'},
 					{name='gh',1},
 				},
