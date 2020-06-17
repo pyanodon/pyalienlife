@@ -2054,17 +2054,139 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'space-dingrit',
-    category = 'crafting-with-fluid',
+    name = 'mcb',
+    category = 'wet-scrubber',
     enabled = false,
-    energy_required = 60,
+    energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'space-suit', amount = 1},
-        {type = 'item', name = 'skin-caged-dingrits', amount = 1},
-        {type = 'fluid', name = 'pressured-air', amount = 250},
-        {type = 'fluid', name = 'artificial-blood', amount = 200},
+        {type = 'item', name = 'iron-plate', amount = 3},
+        {type = 'fluid', name = 'btx', amount = 100},
+        {type = 'fluid', name = 'chlorine', amount = 200},
     },
     results = {
-        {type = 'item', name = 'space-dingrit', amount = 1}
-    }
-}:add_unlock("laika")
+        {type = 'fluid', name = 'mcb', amount = 100},
+        {type = 'fluid', name = 'hydrogen-chloride', amount = 50},
+    },
+    main_product = "mcb",
+}:add_unlock("pesticides-mk01"):replace_ingredient("btx", "benzene")
+
+RECIPE {
+    type = 'recipe',
+    name = 'chloral',
+    category = 'gas-refinery',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'fluid', name = 'ethanol', amount = 100},
+        {type = 'fluid', name = 'chlorine', amount = 200},
+    },
+    results = {
+        {type = 'fluid', name = 'chloral', amount = 100},
+        {type = 'fluid', name = 'hydrogen-chloride', amount = 100},
+    },
+    main_product = "chloral",
+}:add_unlock("pesticides-mk01")
+
+RECIPE {
+    type = 'recipe',
+    name = 'pre-pesticide-01',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'fluid', name = 'chloral', amount = 50},
+        {type = 'fluid', name = 'sulfuric-acid', amount = 50},
+        {type = 'item', name = 'sodium-hydroxide', amount = 4},
+        {type = 'fluid', name = 'mcb', amount = 200},
+    },
+    results = {
+        {type = 'fluid', name = 'pre-pesticide-01', amount = 100},
+    },
+    --main_product = "chloral",
+}:add_unlock("pesticides-mk01")
+
+RECIPE {
+    type = 'recipe',
+    name = 'pesticide-mk01',
+    category = 'crafting-with-fluid',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'fluid', name = 'pre-pesticide-01', amount = 100},
+        {type = 'fluid', name = 'bee-venom', amount = 5},
+        {type = 'item', name = 'plastic-bar', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'pesticide-mk01', amount = 5},
+    },
+    --main_product = "chloral",
+}:add_unlock("pesticides-mk01")
+
+----pest 2-----
+
+RECIPE {
+    type = 'recipe',
+    name = 'ethyl-mercaptan',
+    category = 'mixer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'aluminium-plate', amount = 2},
+        {type = 'fluid', name = 'ethanol', amount = 100},
+        {type = 'fluid', name = 'acidgas', amount = 100},
+    },
+    results = {
+        {type = 'fluid', name = 'ethyl-mercaptan', amount = 100},
+    },
+    --main_product = "mcb",
+}:add_unlock("pesticides-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'dda',
+    category = 'agitator',
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = 'item', name = 'p2s5', amount = 2},
+        {type = 'fluid', name = 'ethanol', amount = 100},
+    },
+    results = {
+        {type = 'fluid', name = 'dda', amount = 100},
+    },
+    --main_product = "mcb",
+}:add_unlock("pesticides-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'pre-pesticide-02',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'fluid', name = 'methanal', amount = 100},
+        {type = 'fluid', name = 'dda', amount = 50},
+        {type = 'fluid', name = 'ethyl-mercaptan', amount = 100},
+    },
+    results = {
+        {type = 'fluid', name = 'pre-pesticide-02', amount = 100},
+    },
+    --main_product = "chloral",
+}:add_unlock("pesticides-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'pesticide-mk02',
+    category = 'crafting-with-fluid',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'fluid', name = 'pre-pesticide-02', amount = 100},
+        {type = 'fluid', name = 'bee-venom', amount = 5},
+        {type = 'item', name = 'plastic-bar', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'pesticide-mk02', amount = 5},
+    },
+    --main_product = "chloral",
+}:add_unlock("pesticides-mk02")

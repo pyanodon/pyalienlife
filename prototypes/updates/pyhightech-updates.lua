@@ -1243,6 +1243,23 @@ RECIPE {
     main_product = "casein-mixture",
 }:add_unlock("korlex")
 
+RECIPE {
+    type = 'recipe',
+    name = 'ethyl-mercaptan-2',
+    category = 'mixer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'chromium', amount = 2},
+        {type = 'fluid', name = 'ethylene', amount = 100},
+        {type = 'fluid', name = 'acidgas', amount = 100},
+    },
+    results = {
+        {type = 'fluid', name = 'ethyl-mercaptan', amount = 200},
+    },
+    --main_product = "mcb",
+}:add_unlock("pesticides-mk02")
+
 RECIPE('rennea-mk02-breeding'):replace_ingredient("sulfuric-acid-barrel", "phosphoric-acid-barrel")
 
 RECIPE('rennea-mk03-breeding'):replace_ingredient("sulfuric-acid-barrel", "phosphoric-acid-barrel")
