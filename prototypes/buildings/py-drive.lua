@@ -381,7 +381,7 @@ ENTITY {
   max_health = 150,
   corpse = "big-remnants",
   dying_explosion = "medium-explosion",
-  collision_box = {{0,0}, {0,0}},
+  collision_box = {{-7.3, -7.3}, {7.3, 7.3}},
   selection_box = {{0,0}, {0,0}},
   --light = {intensity = 0.75, size = 8, color = {r = 1.0, g = 1.0, b = 1.0}},
   --integration_patch_render_layer = "decals",
