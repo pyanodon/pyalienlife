@@ -87,9 +87,9 @@ data:extend(
           effectivity = 1,
           fuel_inventory_size = 1,
         },
-        consumption = "500kW",
+        consumption = "250kW",
         terrain_friction_modifier = 0.001,
-        friction = 0.0001,
+        friction = 0.0002,
         light =
         {
           {
