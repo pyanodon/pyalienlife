@@ -592,7 +592,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='chitin', amount ='+3'},
+					{name='chitin', amount ='+4'},
 				},
                 crafting_speed = 15,
                 tech = 'defective-collagen',

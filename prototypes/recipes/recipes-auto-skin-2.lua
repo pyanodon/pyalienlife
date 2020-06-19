@@ -847,7 +847,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='chitin', amount ='+4'},
+					{name='chitin', amount ='+5'},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -867,7 +867,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='sulfuricacid', amount ='R'},
-					{name='chitin', amount ='+7'},
+					{name='chitin', amount ='+10'},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
