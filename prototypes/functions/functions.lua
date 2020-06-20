@@ -1721,4 +1721,78 @@ function overrides.reprocess_recipes_2()
    overrides.reprocess_recipes_core(reprocess_recipes_2, upgrade2)
 end
 
+function overrides.tech_upgrade(tech_upgrade)
+    for _, tab in pairs(tech_upgrade) do
+        log(serpent.block(tab))
+        for _, tech in pairs(tab) do
+            log(serpent.block(tech))
+        TECHNOLOGY {
+                type = "technology",
+                name = tech.technology.name,
+                icon = tech.technology.icon,
+                icon_size = tech.technology.icon_size,
+                order = tech.technology.order,
+                prerequisites = tech.technology.prerequisites,
+                effects = {},
+                unit = tech.technology.unit
+            }
+        local module_effects = {}
+            if tech.upgrades ~= nil then
+                if tech.upgrades.consumption ~= nil then
+                    log(serpent.block(tech.upgrades))
+                    log(serpent.block(tech.upgrades.consumption))
+                    local consumption = {bonus = tech.upgrades.consumption}
+                    log(serpent.block(consumption))
+                    table.insert(module_effects, consumption)
+                    --module_effects[consumption] = {bonus = tech.upgrades.consumption}
+                end
+                if tech.upgrades.speed ~= nil then
+                    local speed = {bonus = tech.upgrades.speed}
+                    table.insert(module_effects, speed)
+                    --module_effects[speed] = {bonus = tech.upgrades.speed}
+                end
+                if tech.upgrades.productivity ~= nil then
+                    local productivity = {bonus = tech.upgrades.productivity}
+                    table.insert(module_effects, productivity)
+                    --module_effects[productivity] = {bonus = tech.upgrades.productivity}
+                end
+                if tech.upgrades.pollution ~= nil then
+                    local pollution = {bonus = tech.upgrades.pollution}
+                    table.insert(module_effects, pollution)
+                    --module_effects[pollution] = {bonus = tech.upgrades.pollution}
+                end
+            end
+            log(serpent.block(module_effects))
+            ITEM {
+                type = "module",
+                name = tech.technology.name .. '-module',
+                icons =
+                {
+                    --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+                    {icon = "__pyalienlifegraphics2__/graphics/icons/forest-tree.png"}
+                },
+                icon_size = 64,
+                category = tech.technology.name,
+                tier = 1,
+                flags = {},
+                subgroup = "py-alienlife-modules",
+                order = "t-a",
+                stack_size = 300,
+                effect = module_effects,
+                --limitation = {},
+                --limitation_message_key = "dicks"
+            }
+
+            data:extend(
+                {
+                    {
+                        type = "module-category",
+                        name = tech.technology.name
+                    },
+                }
+            )
+        end
+    end
+end
+
 return overrides
