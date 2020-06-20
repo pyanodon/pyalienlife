@@ -489,6 +489,29 @@ remote.add_interface('data_puller',
 		end
 })
 
+local tech_upgrade_table = require("prototypes/upgrades/tech-upgrades")
+
+local function log_all_machines_for_upgrades(tech_upgrades)
+--log('hit')
+--log(serpent.block(tech_upgrades))
+	for tab, table in pairs(tech_upgrades) do
+		--log(serpent.block(table))
+		for t, tech in pairs(table) do
+			--log(serpent.block(tech))
+			global.tech_upgrades[tech.technology.name] =
+				{
+					entities = tech.entities,
+					techs_to_lock = tech.techs_to_lock,
+					module_name = tech.technology.name .. '-module',
+					upgrade = tech.upgrade
+				}
+			if tech.upgrade == true then
+				global.tech_upgrades[tech.technology.name].prerequisites = tech.prerequisites
+			end
+		end
+	end
+end
+
 script.on_init(
 	function()
 		global.caravanroutes = caravanroutes
@@ -543,6 +566,13 @@ script.on_init(
 			output_order = {}
 		}
 		--order_biolist()
+		global.tech_upgrades =
+		{
+			entities_master_list = {},
+			unlocked_techs = {},
+			disabled_techs = {}
+		}
+		log_all_machines_for_upgrades(tech_upgrade_table)
 		if not remote.interfaces["silo_script"] then
 			return
 		end
@@ -2251,5 +2281,24 @@ script.on_event(
 			end
 		end
 		global.TRlist = TRlist
+		if global.tech_upgrades[tech] ~= nil then
+			for e,entity in pairs(global.tech_upgrades[tech].entities) do
+				if global.tech_upgrades.entities_master_list[entity] == nil then
+					table.insert(global.tech_upgrades.entities_master_list, entity)
+				end
+			end
+			if global.tech_upgrades.unlocked_techs[tech] == nil and global.tech_upgrades.disabled_techs[tech] == nil then
+				if global.tech_upgrades[tech].prerequisites ~= nil then
+					for p, pre in pairs(global.tech_upgrades[tech].prerequisites) do
+						if global.tech_upgrades.unlocked_techs[pre] ~= nil then
+							global.tech_upgrades.unlocked_techs[pre] = nil
+							table.insert(global.tech_upgrades.disabled_techs, pre)
+							event.research.force.technologies[pre].enabled = false
+							event.research.force.technologies[pre].visible_when_disabled = false
+						end
+					end
+				end
+			end
+		end
 	end
 )
