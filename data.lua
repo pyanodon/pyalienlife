@@ -297,6 +297,9 @@ require('prototypes/buildings/arqad-hive-mk02')
 require('prototypes/buildings/arqad-hive-mk03')
 require('prototypes/buildings/arqad-hive-mk04')
 
+require('prototypes/buildings/silo-2')
+require('prototypes/buildings/rocket-mk02')
+
 require('prototypes/buildings/py-drive')
 
 require('prototypes/buildings/outpost')
