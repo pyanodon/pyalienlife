@@ -85,35 +85,20 @@ ENTITY {
 
     hole_sprite =
     {
-      filename = "__base__/graphics/entity/rocket-silo/01-rocket-silo-hole.png",
-      width = 202,
-      height = 136,
+      filename = "__base__/graphics/entity/rocket-silo/hr-01-rocket-silo-hole.png",
+      width = 400,
+      height = 270,
+      scale = 0.5,
       shift = util.by_pixel(-6, 16),
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/rocket-silo/hr-01-rocket-silo-hole.png",
-        width = 400,
-        height = 270,
-        shift = util.by_pixel(-5, 16),
-        scale = 0.5
-      }
     },
     hole_light_sprite =
     {
-      filename = "__base__/graphics/entity/rocket-silo/01-rocket-silo-hole-light.png",
-      width = 202,
-      height = 136,
+      filename = "__pyalienlifegraphics3__/graphics/entity/silo-2/hole-light.png",
+      width = 400,
+      height = 270,
+      scale = 0.5,
       shift = util.by_pixel(-6, 16),
       tint = {1,1,1,0},
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/rocket-silo/hr-01-rocket-silo-hole-light.png",
-        width = 400,
-        height = 270,
-        shift = util.by_pixel(-5, 16),
-        tint = {1,1,1,0},
-        scale = 0.5
-      }
     },
 
     rocket_shadow_overlay_sprite =
@@ -121,15 +106,15 @@ ENTITY {
       filename = "__base__/graphics/entity/rocket-silo/03-rocket-over-shadow-over-rocket.png",
       width = 212,
       height = 142,
-      shift = util.by_pixel(-2, 22),
+      shift = util.by_pixel(-0, 22),
     },
     rocket_glow_overlay_sprite =
     {
-      filename = "__base__/graphics/entity/rocket-silo/03-rocket-over-glow.png",
+      filename = "__pyalienlifegraphics3__/graphics/entity/silo-2/rocket-over-glow.png",
       blend_mode = "additive",
-      width = 218,
+      width = 160,
       height = 222,
-      shift = util.by_pixel(-4, 36),
+      shift = util.by_pixel(-0, 0),
     },
 
     door_back_sprite =
@@ -176,7 +161,31 @@ ENTITY {
           filename = "__pyalienlifegraphics3__/graphics/entity/silo-2/luz.png",
           width = 64,
           height = 64,
-          sshift = util.by_pixel(-64, 64),
+          shift = util.by_pixel(-185, -231),
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/silo-2/luz.png",
+          width = 64,
+          height = 64,
+          shift = util.by_pixel(-166, -243),
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/silo-2/luz.png",
+          width = 64,
+          height = 64,
+          shift = util.by_pixel(-149, -256),
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/silo-2/luz.png",
+          width = 64,
+          height = 64,
+          shift = util.by_pixel(-133, -263),
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/silo-2/luz.png",
+          width = 64,
+          height = 64,
+          shift = util.by_pixel(-115, -273),
         },
       }
     },
@@ -189,7 +198,7 @@ ENTITY {
           filename = "__pyalienlifegraphics3__/graphics/entity/silo-2/luz.png",
           width = 64,
           height = 64,
-          sshift = util.by_pixel(-64, 64),
+          shift = util.by_pixel(-64, 64),
         },
       }
     },
@@ -208,38 +217,41 @@ ENTITY {
 
     arm_01_back_animation =
     {
-      filename = "__base__/graphics/entity/rocket-silo/08-rocket-silo-arms-back.png",
+      filename = "__pyalienlifegraphics3__/graphics/entity/silo-2/arm-back.png",
       priority = "medium",
-      width = 66,
-      height = 76,
-      frame_count = 32,
-      line_length = 32,
-      animation_speed = 0.3,
-      shift = util.by_pixel(-54, -84),
+      width = 384,
+      height = 96,
+      frame_count = 16,
+      run_mode = "backward",
+      line_length = 4,
+      animation_speed = 0.25,
+      shift = util.by_pixel(-0, -270),
     },
 
     arm_02_right_animation =
     {
-      filename = "__base__/graphics/entity/rocket-silo/08-rocket-silo-arms-right.png",
+      filename = "__pyalienlifegraphics3__/graphics/entity/silo-2/arm-right.png",
       priority = "medium",
-      width = 94,
-      height = 94,
-      frame_count = 32,
-      line_length = 32,
-      animation_speed = 0.3,
-      shift = util.by_pixel(100, -38),
+      width = 288,
+      height = 288,
+      frame_count = 16,
+      run_mode = "backward",
+      line_length = 8,
+      animation_speed = 0.25,
+      shift = util.by_pixel(144, -80),
     },
 
     arm_03_front_animation =
     {
-      filename = "__base__/graphics/entity/rocket-silo/13-rocket-silo-arms-front.png",
+      filename = "__pyalienlifegraphics3__/graphics/entity/silo-2/arm-left.png",
       priority = "medium",
-      width = 66,
-      height = 114,
-      frame_count = 32,
-      line_length = 32,
-      animation_speed = 0.3,
-      shift = util.by_pixel(-52, 16),
+      width = 192,
+      height = 288,
+      frame_count = 16,
+      line_length = 8,
+      run_mode = "backward",
+      animation_speed = 0.25,
+      shift = util.by_pixel(-96, -80),
     },
 
     base_front_sprite =
