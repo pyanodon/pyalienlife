@@ -24,11 +24,10 @@ TECHNOLOGY {
     prerequisites = {"food-mk01"},
     effects = {},
     unit = {
-        count = 200,
+        count = 400,
         ingredients = {
             {"automation-science-pack", 1},
             {'logistic-science-pack', 2},
-            {'py-science-pack', 2},
         },
         time = 50
     }
