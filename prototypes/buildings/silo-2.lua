@@ -2,7 +2,7 @@ RECIPE {
   type = "recipe",
   name = "silo-2",
   energy_required = 1,
-  enabled = true,
+  enabled = false,
   ingredients = {
       {"pipe", 2},
   },
@@ -14,7 +14,7 @@ RECIPE {
 ITEM {
   type = "item",
   name = "silo-2",
-  icon = "__pyalienlifegraphics__/graphics/icons/slaughterhouse-mk01.png",
+  icon = "__pyalienlifegraphics2__/graphics/icons/launchpad-mk01.png",
   icon_size = 64,
   flags = {},
   subgroup = "py-alienlife-buildings-mk01",
@@ -269,7 +269,7 @@ ENTITY {
     alarm_sound =
     {
       filename = "__pyalienlifegraphics2__/sounds/alarm.ogg",
-      volume = 0.85
+      volume = 0.8
     },
     clamps_on_sound =
     {
