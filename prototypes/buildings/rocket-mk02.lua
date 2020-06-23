@@ -10,8 +10,8 @@ ENTITY {
     inventory_size = 1,
     rising_speed = 1 / (7 * 60),
     engine_starting_speed = 1 / (5.5 * 60),
-    flying_speed = 1 / (2000 * 30),
-    flying_acceleration = 0.02,
+    flying_speed = 1 / (2000 * 10),
+    flying_acceleration = 0.03,
 
     glow_light =
     {
@@ -80,7 +80,7 @@ ENTITY {
       line_length = 8,
       animation_speed = 0.5,
       scale = 1.5*1.3,
-      shift = util.by_pixel(32, 64),
+      shift = util.by_pixel(32, 192),
     },
     rocket_smoke_top2_animation =
     {
@@ -94,7 +94,7 @@ ENTITY {
       line_length = 8,
       animation_speed = 0.5,
       scale = 1.5*1.3,
-      shift = util.by_pixel(16, -2),
+      shift = util.by_pixel(-32, 192),
 
     },
     rocket_smoke_top3_animation =
@@ -121,7 +121,7 @@ ENTITY {
       line_length = 8,
       animation_speed = 0.5,
       scale = 1.5*1.3,
-      shift = util.by_pixel(-2, -2),
+      shift = util.by_pixel(-32, 256),
 
     },
     rocket_smoke_bottom2_animation =
@@ -136,7 +136,7 @@ ENTITY {
       line_length = 8,
       animation_speed = 0.5,
       scale = 1.5*1.3,
-      shift = util.by_pixel(-2, -2),
+      shift = util.by_pixel(32, 256),
 
     },
     rocket_flame_animation =

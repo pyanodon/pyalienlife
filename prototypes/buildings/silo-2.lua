@@ -268,8 +268,8 @@ ENTITY {
 
     alarm_sound =
     {
-      filename = "__base__/sound/silo-alarm.ogg",
-      volume = 1.0
+      filename = "__pyalienlifegraphics2__/sounds/alarm.ogg",
+      volume = 0.85
     },
     clamps_on_sound =
     {
@@ -283,13 +283,13 @@ ENTITY {
     },
     doors_sound =
     {
-      filename = "__base__/sound/silo-doors.ogg",
+      filename = "__pyalienlifegraphics2__/sounds/door.ogg",
       volume = 0.8
     },
     raise_rocket_sound =
     {
-      filename = "__base__/sound/silo-raise-rocket.ogg",
-      volume = 1.0
+      filename = "__pyalienlifegraphics2__/sounds/raise.ogg",
+      volume = 0.9
     },
     --open_sound = sounds.machine_open,
     --close_sound = sounds.machine_close,
@@ -303,8 +303,8 @@ ENTITY {
     },
     flying_sound =
     {
-      filename = "__base__/sound/silo-rocket.ogg",
-      volume = 1.0,
+      filename = "__pyalienlifegraphics2__/sounds/rocket.ogg",
+      volume = 1.1,
       audible_distance_modifier = 3,
     }
 }
