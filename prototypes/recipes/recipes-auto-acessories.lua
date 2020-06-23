@@ -328,7 +328,7 @@ fun.autorecipes {
 					{name='shell', amount ='R'},
 					{name='guts', amount ='R'},
 					{name='arthropodblood', amount ='R'},
-					{name='shell', amount =5},
+					{name='shell', amount =15},
 				},
 			crafting_speed = 15,
 			tech = 'artificial-calcification',
