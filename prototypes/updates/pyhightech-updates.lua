@@ -195,7 +195,8 @@ RECIPE('arqad-hive-mk04'):add_ingredient({type = "item", name = "phosphate-glass
 
 
 
-
+RECIPE('silo-2'):replace_ingredient("processing-unit", "intelligent-unit"):add_ingredient({type = "item", name = "hyperelastic-material", amount = 10}):add_ingredient({type = "item", name = "phosphate-glass", amount = 100}):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 5})
+RECIPE('rocket-mk01-part'):add_ingredient({type = "item", name = "graphene-roll", amount = 5}):add_ingredient({type = "item", name = "harmonic-absorber", amount = 1})
 RECIPE('pydrive'):add_ingredient({type = "item", name = "graphene-roll", amount = 50}):add_ingredient({type = "item", name = "superconductor", amount = 10}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 30})
 
 ----RECIPES----
