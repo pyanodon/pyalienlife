@@ -1,15 +1,22 @@
 RECIPE {
   type = "recipe",
   name = "silo-2",
-  energy_required = 1,
+  energy_required = 10,
   enabled = false,
   ingredients = {
-      {"pipe", 2},
+      {"super-steel", 100},
+      {"concrete", 200},
+      {"low-density-structure", 50},
+      {"processing-unit", 20},
+      {"divertor", 20},
+      {"niobium-pipe", 100},
+      {"small-parts-03", 500},
+      {"py-local-radar", 1},
   },
   results = {
       {"silo-2", 1}
   }
-}
+}:add_unlock("space-program-mk01")
 
 ITEM {
   type = "item",
@@ -29,8 +36,8 @@ ENTITY {
   icon = "__base__/graphics/icons/rocket-silo.png",
   icon_size = 64, icon_mipmaps = 4,
   flags = {"placeable-player", "player-creation"},
-  crafting_categories = {"rocket-building"},
-  rocket_parts_required = 1,
+  crafting_categories = {"rocket-mk01"},
+  rocket_parts_required = 3,
   crafting_speed = 1,
   rocket_result_inventory_size = 1,
   module_specification =
@@ -38,7 +45,7 @@ ENTITY {
     module_slots = 4,
     module_info_icon_shift = {0, 3.3}
   },
-    fixed_recipe = "rocket-part",
+    fixed_recipe = "rocket-mk01-part",
     show_recipe_icon = false,
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     minable = {mining_time = 1, result = "silo-2"},
@@ -134,14 +141,23 @@ ENTITY {
     },
     door_front_open_offset = {0.0, 1.8},
 
-    base_day_sprite =
-    {
-      filename = "__pyalienlifegraphics3__/graphics/entity/silo-2/silo-base.png",
-      width = 384,
-      height = 604,
-      shift = util.by_pixel(0, -112),
+    base_day_sprite ={
+    layers = {
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/silo-2/silo-base.png",
+          width = 384,
+          height = 604,
+          shift = util.by_pixel(0, -112),
+        },
+        {
+          filename = "__pyalienlifegraphics3__/graphics/entity/silo-2/silo-base-mask.png",
+          width = 384,
+          height = 604,
+          shift = util.by_pixel(0, -112),
+          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+        },
+      }
     },
-
     shadow_sprite =
     {
       filename = "__pyalienlifegraphics3__/graphics/entity/silo-2/silo-sh.png",
@@ -254,15 +270,25 @@ ENTITY {
       shift = util.by_pixel(-96, -80),
     },
 
-    base_front_sprite =
-    {
-      filename = "__pyalienlifegraphics3__/graphics/entity/silo-2/over.png",
-      priority = "high",
-      width = 384,
-      height = 604,
-      shift = util.by_pixel(-0, -112),
-    },
-
+    base_front_sprite ={
+    layers = {
+          {
+            filename = "__pyalienlifegraphics3__/graphics/entity/silo-2/over.png",
+            priority = "high",
+            width = 384,
+            height = 604,
+            shift = util.by_pixel(-0, -112),
+          },
+          {
+            filename = "__pyalienlifegraphics3__/graphics/entity/silo-2/over-mask.png",
+            priority = "high",
+            width = 384,
+            height = 604,
+            shift = util.by_pixel(-0, -112),
+            tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+          },
+        }
+      },
     silo_fade_out_start_distance = 8,
     silo_fade_out_end_distance = 15,
 

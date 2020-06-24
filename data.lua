@@ -100,6 +100,7 @@ require('prototypes/technologies/cardial-hypopharynx')
 require('prototypes/technologies/chromasome-infocrystalization')
 require('prototypes/technologies/pheromone-transition')
 require('prototypes/technologies/laika')
+require('prototypes/technologies/space-program-mk01')
 require('prototypes/technologies/pesticides')
 
 --(( BUILDINGS ))--
