@@ -24,14 +24,14 @@ ENTITY{
     corpse = "beacon-remnants",
     dying_explosion = "beacon-explosion",
     collision_box = {{0,0}, {0,0}},
-    selection_box = {{0,0}, {0,0}},
+    selection_box = {{-1,-1}, {1, 1}},
     damaged_trigger_effect = hit_effects.entity(),
     --drawing_box = {{-1.5, -2.2}, {1.5, 1.3}},
     allowed_effects = {"consumption", "speed", "pollution","productivity"},
 
     graphics_set = require("__base__.prototypes.entity.beacon-animations"),
 
-    supply_area_distance = 1,
+    supply_area_distance = 5,
     energy_source =
         {
             type = "void",
