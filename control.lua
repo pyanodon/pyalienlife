@@ -493,12 +493,12 @@ local tech_upgrade_table = require("prototypes/upgrades/tech-upgrades")
 
 local function log_all_machines_for_upgrades(tech_upgrades)
 --log('hit')
---log(serpent.block(tech_upgrades))
+log(serpent.block(tech_upgrades))
 	for tab, table in pairs(tech_upgrades) do
-		--log(serpent.block(table))
+		log(serpent.block(table))
 		for t, tech in pairs(table) do
-			--log(serpent.block(tech))
-			global.tech_upgrades[tech.technology.name] =
+			log(serpent.block(tech))
+			global.tech_upgrades.techs[tech.technology.name] =
 				{
 					entities = tech.entities,
 					techs_to_lock = tech.techs_to_lock,
@@ -506,10 +506,11 @@ local function log_all_machines_for_upgrades(tech_upgrades)
 					upgrade = tech.upgrade
 				}
 			if tech.upgrade == true then
-				global.tech_upgrades[tech.technology.name].prerequisites = tech.prerequisites
+				global.tech_upgrades.techs[tech.technology.name].prerequisites = tech.prerequisites
 			end
 		end
 	end
+	log(serpent.block(global.tech_upgrades))
 end
 
 script.on_init(
@@ -570,7 +571,8 @@ script.on_init(
 		{
 			entities_master_list = {},
 			unlocked_techs = {},
-			disabled_techs = {}
+			disabled_techs = {},
+			techs = {}
 		}
 		log_all_machines_for_upgrades(tech_upgrade_table)
 		if not remote.interfaces["silo_script"] then
@@ -802,7 +804,6 @@ end)
 script.on_event(
 	{defines.events.on_built_entity, defines.events.on_robot_built_entity},
 	function(event)
-		--log('klonan bot did a thing')
 		local E = event.created_entity
 		--log(E.name)
 		--log(E.ghost_name)
@@ -878,6 +879,16 @@ script.on_event(
 				}
 			global.pycloud.chests[E.unit_number] = chest
 			--log(serpent.block(global.pycloud))
+		elseif global.tech_upgrades.entities_master_list[E.name] ~= nil then
+			log('hit')
+			local beacon = game.surfaces['nauvis'].create_entity{
+				name = 'hidden-beacon',
+				position = E.position,
+				force = game.players[event.player_index].force
+			}
+			local module = beacon.get_inventory(defines.inventory.beacon_modules)
+			local mod = module.insert({name = global.tech_upgrades.techs[global.tech_upgrades.entities_master_list[E.name]].module_name, count = 1})
+			log(mod)
 		elseif global.has_built_first_farm == false then
 			for _, farm in pairs(farm_buildings) do
 				if string.match(E.name, farm) then -- or string.match(E.ghost_name, farm) then
@@ -913,6 +924,7 @@ script.on_event(
 			end
 		end
 		--log(serpent.block(landbots))
+		--log(serpent.block(global.tech_upgrades.entities_master_list[E.name]))
 	end
 )
 
@@ -2281,24 +2293,24 @@ script.on_event(
 			end
 		end
 		global.TRlist = TRlist
-		if global.tech_upgrades[tech] ~= nil then
-			for e,entity in pairs(global.tech_upgrades[tech].entities) do
-				if global.tech_upgrades.entities_master_list[entity] == nil then
-					table.insert(global.tech_upgrades.entities_master_list, entity)
+		if global.tech_upgrades.techs[tech.name] ~= nil then
+			
+			log('hit')
+			log(tech.name)
+			table.insert(global.tech_upgrades.unlocked_techs, tech.name)
+			for t, tec in pairs(global.tech_upgrades.techs[tech.name].techs_to_lock) do
+				if global.tech_upgrades.disabled_techs[tec] == nil then
+					global.tech_upgrades.disabled_techs[tec] = true
+					game.forces[tech.force.name].technologies[tec].enabled = false
+					game.forces[tech.force.name].technologies[tec].visible_when_disabled = false
 				end
 			end
-			if global.tech_upgrades.unlocked_techs[tech] == nil and global.tech_upgrades.disabled_techs[tech] == nil then
-				if global.tech_upgrades[tech].prerequisites ~= nil then
-					for p, pre in pairs(global.tech_upgrades[tech].prerequisites) do
-						if global.tech_upgrades.unlocked_techs[pre] ~= nil then
-							global.tech_upgrades.unlocked_techs[pre] = nil
-							table.insert(global.tech_upgrades.disabled_techs, pre)
-							event.research.force.technologies[pre].enabled = false
-							event.research.force.technologies[pre].visible_when_disabled = false
-						end
-					end
+			for e, ent in pairs(global.tech_upgrades.techs[tech.name].entities) do
+				if global.tech_upgrades.entities_master_list[ent] == nil then
+					global.tech_upgrades.entities_master_list[ent] = tech.name
 				end
 			end
+			log(serpent.block(global.tech_upgrades))
 		end
 	end
 )

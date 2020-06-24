@@ -22,7 +22,7 @@ local tech_upgrades =
                     time = 45
                     }
                 },
-            entities = 'vrauks-paddock-mk01', 'vrauks-paddock-mk02','vrauks-paddock-mk03','vrauks-paddock-mk04',-- the entities that should be effected by this tech upgrade. can be a single entity or a table of entities
+            entities = {'vrauks-paddock-mk01', 'vrauks-paddock-mk02','vrauks-paddock-mk03','vrauks-paddock-mk04'},-- the entities that should be effected by this tech upgrade. can be a single entity or a table of entities
             upgrades = -- the effects the tech will have on the building. 1 = 100%
                 {
                     consumption = 1, --energy useage
@@ -54,7 +54,7 @@ local tech_upgrades =
                     time = 45
                     }
                 },
-            entities = 'automated-factory',
+            entities = {'automated-factory'},
             upgrades =
                 {
                     consumption = 2,
@@ -127,7 +127,7 @@ local tech_upgrades =
                     time = 45
                     }
                 },
-            entities = 'automated-factory-mk03',
+            entities = {'automated-factory-mk03'},
             upgrades =
                 {
                     consumption = 10,
