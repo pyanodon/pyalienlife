@@ -1738,29 +1738,25 @@ function overrides.tech_upgrade(tech_upgrade)
             }
         local module_effects = {}
             if tech.upgrades ~= nil then
-                if tech.upgrades.consumption ~= nil then
-                    log(serpent.block(tech.upgrades))
-                    log(serpent.block(tech.upgrades.consumption))
-                    local consumption = {bonus = tech.upgrades.consumption}
-                    log(serpent.block(consumption))
-                    table.insert(module_effects, consumption)
-                    --module_effects[consumption] = {bonus = tech.upgrades.consumption}
-                end
-                if tech.upgrades.speed ~= nil then
-                    local speed = {bonus = tech.upgrades.speed}
-                    table.insert(module_effects, speed)
-                    --module_effects[speed] = {bonus = tech.upgrades.speed}
-                end
-                if tech.upgrades.productivity ~= nil then
-                    local productivity = {bonus = tech.upgrades.productivity}
-                    table.insert(module_effects, productivity)
-                    --module_effects[productivity] = {bonus = tech.upgrades.productivity}
-                end
-                if tech.upgrades.pollution ~= nil then
-                    local pollution = {bonus = tech.upgrades.pollution}
-                    table.insert(module_effects, pollution)
-                    --module_effects[pollution] = {bonus = tech.upgrades.pollution}
-                end
+                module_effects =
+                    {
+                        consumption =
+                            {
+                                bonus = tech.upgrades.consumption
+                            },
+                        speed =
+                            {
+                                bonus = tech.upgrades.speed
+                            },
+                        productivity =
+                            {
+                                bonus = tech.upgrades.productivity
+                            },
+                        pollution =
+                            {
+                                bonus = tech.upgrades.pollution
+                            }
+                    }
             end
             log(serpent.block(module_effects))
             ITEM {
