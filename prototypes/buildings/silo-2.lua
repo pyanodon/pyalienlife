@@ -336,7 +336,7 @@ ENTITY {
       sound =
       {
         filename = "__base__/sound/rocket-silo-working-1.ogg",
-        volume = 0.8
+        volume = 1.2
       },
     },
     flying_sound =
