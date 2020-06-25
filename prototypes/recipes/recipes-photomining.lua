@@ -960,7 +960,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'pb-biomass', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100, temperature = 165},
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 500},
     },
     results = {
         {type = 'item', name = 'ore-lead', amount = 15},
@@ -979,7 +979,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'sn-biomass', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100, temperature = 165},
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 500},
     },
     results = {
         {type = 'item', name = 'ore-tin', amount = 15},
@@ -998,7 +998,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'al-biomass', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100, temperature = 165},
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 500},
     },
     results = {
         {type = 'item', name = 'ore-aluminium', amount = 15},
@@ -1017,7 +1017,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'ag-biomass', amount = 20},
-        {type = 'fluid', name = 'steam', amount = 100, temperature = 165},
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 500},
     },
     results = {
         {type = 'item', name = 'lead-refined-dust-03', amount = 6},
@@ -1036,7 +1036,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'au-biomass', amount = 30},
-        {type = 'fluid', name = 'steam', amount = 100, temperature = 165},
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 500},
     },
     results = {
         {type = 'item', name = 'gold-concentrate', amount = 1},
@@ -1055,7 +1055,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'zn-biomass', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100, temperature = 165},
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 500},
     },
     results = {
         {type = 'item', name = 'ore-zinc', amount = 15},
@@ -1074,7 +1074,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'cu-biomass', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100, temperature = 165},
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 500},
     },
     results = {
         {type = 'item', name = 'copper-ore', amount = 20},
@@ -1093,7 +1093,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'co-biomass', amount = 25},
-        {type = 'fluid', name = 'steam', amount = 100, temperature = 165},
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 500},
     },
     results = {
         {type = 'item', name = 'cobalt-extract', amount = 2},
@@ -1112,7 +1112,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'nacl-biomass', amount = 15},
-        {type = 'fluid', name = 'steam', amount = 100, temperature = 165},
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 500},
     },
     results = {
         {type = 'item', name = 'salt', amount = 30},
@@ -1131,7 +1131,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'ti-biomass', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100, temperature = 165},
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 500},
     },
     results = {
         {type = 'item', name = 'ore-titanium', amount = 15},
@@ -1150,7 +1150,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'fe-biomass', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100, temperature = 165},
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 500},
     },
     results = {
         {type = 'item', name = 'iron-ore', amount = 20},
@@ -1169,7 +1169,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'ni-biomass', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100, temperature = 165},
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 500},
     },
     results = {
         {type = 'item', name = 'ore-nickel', amount = 15},
@@ -1188,7 +1188,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'nb-biomass', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100, temperature = 165},
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 500},
     },
     results = {
         {type = 'item', name = 'niobium-ore', amount = 10},
