@@ -124,7 +124,7 @@ RECIPE {
     energy_required = 5,
     ingredients = {
         {type = 'item', name = 'seaweed', amount = 5},
-        {type = 'fluid', name = 'steam', amount = 100, temperature = 165},
+        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165},
     },
     results = {
         {type = 'item', name = 'agar', amount = 1},
@@ -273,7 +273,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'fluid', name = 'acidgas', amount = 100},
-        {type = 'fluid', name = 'steam', amount = 200, temperature = 165},
+        {type = 'fluid', name = 'steam', amount = 200, minimum_temperature = 165},
         {type = 'item', name = 'cobalt-extract', amount = 3},
         {type = 'item', name = 'chromium', amount = 3},
     },
@@ -909,7 +909,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'cellulose', amount = 4},
         {type = 'item', name = 'sodium-hydroxide', amount = 2},
-        {type = 'fluid', name = 'steam', amount = 100, temperature = 165},
+        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165},
     },
     results = {
         {type = 'item', name = 'lignin', amount = 8},
@@ -1145,7 +1145,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'latex-slab', amount = 1},
-        {type = 'fluid', name = 'steam', amount = 150, temperature = 165},
+        {type = 'fluid', name = 'steam', amount = 150, minimum_temperature = 165},
     },
     results = {
         {type = 'item', name = 'latex', amount = 1}
@@ -1526,7 +1526,7 @@ RECIPE {
     },
     results = {
         {type = 'fluid', name = 'crude-oil', amount = 70},
-        {type = 'fluid', name = 'steam', amount = 50, temperature = 165},
+        {type = 'fluid', name = 'steam', amount = 50, minimum_temperature = 165},
         {type = 'fluid', name = 'dirty-water', amount = 50},
         {type = 'item', name = 'ash', amount = 3},
     },
@@ -1541,7 +1541,7 @@ RECIPE {
     energy_required = 5,
     ingredients = {
         {type = 'item', name = 'bones', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 200, temperature = 165},
+        {type = 'fluid', name = 'steam', amount = 200, minimum_temperature = 165},
     },
     results = {
         {type = 'item', name = 'bonemeal', amount = 5},
