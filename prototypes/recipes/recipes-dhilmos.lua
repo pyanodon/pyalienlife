@@ -147,7 +147,7 @@ RECIPE {
         {type = 'item', name = 'guar-gum', amount = 1},
         {type = 'item', name = 'skin', amount = 3},
         {type = 'item', name = 'bones', amount = 3},
-        {type = 'fluid', name = 'steam', amount = 100, temperature = 165}
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 165},
         {type = 'fluid', name = 'blood', amount = 50},
     },
     results = {

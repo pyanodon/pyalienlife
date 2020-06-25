@@ -72,7 +72,7 @@ RECIPE {
         {type = 'item', name = 'bones', amount = 5},
         {type = 'item', name = 'guar-gum', amount = 1},
         {type = 'item', name = 'biomass', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100, temperature = 165}
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 165},
     },
     results = {
         {type = 'item', name = 'zipir-food-01', amount = 6},
@@ -95,7 +95,7 @@ RECIPE {
         {type = 'item', name = 'rennea', amount = 15},
         {type = 'item', name = 'fawogae', amount = 10},
         {type = 'item', name = 'tuuphra', amount = 3},
-        {type = 'fluid', name = 'steam', amount = 100, temperature = 165}
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 165},
         {type = 'fluid', name = 'blood', amount = 50},
     },
     results = {
