@@ -71,7 +71,7 @@ RECIPE {
         {type = 'item', name = 'yotoi-fruit', amount = 10},
         {type = 'item', name = 'guts', amount = 10},
         {type = 'item', name = 'guar-gum', amount = 1},
-        {type = 'fluid', name = 'steam', amount = 100},
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 165}
         {type = 'fluid', name = 'fish-oil', amount = 100},
     },
     results = {
@@ -96,7 +96,7 @@ RECIPE {
         {type = 'item', name = 'guts', amount = 10},
         {type = 'item', name = 'guar-gum', amount = 1},
         {type = 'item', name = 'skin', amount = 15},
-        {type = 'fluid', name = 'steam', amount = 100},
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 165}
         {type = 'fluid', name = 'fish-oil', amount = 100},
     },
     results = {
