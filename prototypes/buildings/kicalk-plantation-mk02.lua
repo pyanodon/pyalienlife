@@ -52,7 +52,7 @@ ENTITY {
     module_specification = {
         module_slots = 50
     },
-    allowed_effects = {"speed","productivity"},
+    allowed_effects = {"speed","productivity",'consumption','pollution'},
     crafting_categories = {"kicalk"},
     crafting_speed = 0.04,
     energy_source = {
