@@ -2183,7 +2183,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'rocket-mk01-part',
-    category = 'advanced-crafting',
+    category = 'rocket-mk01',
     enabled = false,
     hidden = true,
     energy_required = 20,

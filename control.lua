@@ -493,11 +493,11 @@ local tech_upgrade_table = require("prototypes/upgrades/tech-upgrades")
 
 local function log_all_machines_for_upgrades(tech_upgrades)
 --log('hit')
-log(serpent.block(tech_upgrades))
+--log(serpent.block(tech_upgrades))
 	for tab, table in pairs(tech_upgrades) do
-		log(serpent.block(table))
+		--log(serpent.block(table))
 		for t, tech in pairs(table) do
-			log(serpent.block(tech))
+			--log(serpent.block(tech))
 			global.tech_upgrades.techs[tech.technology.name] =
 				{
 					entities = tech.entities,
@@ -510,7 +510,7 @@ log(serpent.block(tech_upgrades))
 			end
 		end
 	end
-	log(serpent.block(global.tech_upgrades))
+	--log(serpent.block(global.tech_upgrades))
 end
 
 script.on_init(
@@ -2295,14 +2295,18 @@ script.on_event(
 		global.TRlist = TRlist
 		if global.tech_upgrades.techs[tech.name] ~= nil then
 			
-			log('hit')
-			log(tech.name)
+			--log('hit')
+			--log(tech.name)
 			table.insert(global.tech_upgrades.unlocked_techs, tech.name)
 			for t, tec in pairs(global.tech_upgrades.techs[tech.name].techs_to_lock) do
 				if global.tech_upgrades.disabled_techs[tec] == nil then
 					global.tech_upgrades.disabled_techs[tec] = true
-					game.forces[tech.force.name].technologies[tec].enabled = false
-					game.forces[tech.force.name].technologies[tec].visible_when_disabled = false
+					if game.forces[tech.force.name].technologies[tec] ~= nil and game.forces[tech.force.name].technologies[tec].enabled == true then
+						game.forces[tech.force.name].technologies[tec].enabled = false
+					end
+					if game.forces[tech.force.name].technologies[tec] ~= nil and game.forces[tech.force.name].technologies[tec].visible_when_disabled == true then
+						game.forces[tech.force.name].technologies[tec].visible_when_disabled = false
+					end
 				end
 			end
 			for e, ent in pairs(global.tech_upgrades.techs[tech.name].entities) do
@@ -2310,7 +2314,7 @@ script.on_event(
 					global.tech_upgrades.entities_master_list[ent] = tech.name
 				end
 			end
-			log(serpent.block(global.tech_upgrades))
+			--log(serpent.block(global.tech_upgrades))
 		end
 	end
 )
