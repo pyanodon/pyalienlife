@@ -55,7 +55,7 @@ RECIPE {
         {type = 'item', name = 'seaweed', amount = 10},
         {type = 'item', name = 'salt', amount = 10},
         {type = 'item', name = 'fawogae', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 165}
     },
     results = {
         {type = 'item', name = 'korlex-food-01', amount = 3},
@@ -80,7 +80,7 @@ RECIPE {
         {type = 'item', name = 'biomass', amount = 20},
         {type = 'item', name = 'yaedols', amount = 4},
         {type = 'item', name = 'tuuphra', amount = 3},
-        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165},
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 165}
         {type = 'fluid', name = 'fish-oil', amount = 100},
     },
     results = {

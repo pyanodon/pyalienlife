@@ -74,7 +74,7 @@ RECIPE {
         {type = 'item', name = 'casein', amount = 10},
         {type = 'item', name = 'ralesia', amount = 10},
         {type = 'item', name = 'bones', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 165}
     },
     results = {
         {type = 'item', name = 'phadai-food-01', amount = 6},
@@ -100,7 +100,7 @@ RECIPE {
         {type = 'item', name = 'ash', amount = 10},
         {type = 'item', name = 'fish', amount = 5},
         {type = 'item', name = 'ralesia', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 165}
     },
     results = {
         {type = 'item', name = 'phadai-food-02', amount = 5},

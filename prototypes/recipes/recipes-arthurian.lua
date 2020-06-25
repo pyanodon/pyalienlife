@@ -71,7 +71,7 @@ RECIPE {
         {type = 'item', name = 'yotoi-leaves', amount = 5},
         {type = 'item', name = 'meat', amount = 10},
         {type = 'fluid', name = 'fish-oil', amount = 30},
-        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 165}
     },
     results = {
         {type = 'item', name = 'arthurian-food-01', amount = 3},
@@ -96,7 +96,7 @@ RECIPE {
         {type = 'item', name = 'moss', amount = 10},
         {type = 'item', name = 'guts', amount = 5},
         {type = 'fluid', name = 'fish-oil', amount = 30},
-        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 165}
     },
     results = {
         {type = 'item', name = 'arthurian-food-02', amount = 6},

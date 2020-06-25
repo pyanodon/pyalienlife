@@ -48,7 +48,7 @@ RECIPE {
         {type = 'item', name = 'wood-seeds', amount = 10},
         {type = 'item', name = 'agar', amount = 10},
         {type = 'item', name = 'cellulose', amount = 5},
-        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 165}
     },
     results = {
         {type = 'item', name = 'vrauks-food-01', amount = 4},
@@ -72,7 +72,7 @@ RECIPE {
         {type = 'item', name = 'moss', amount = 10},
         {type = 'item', name = 'guts', amount = 5},
         {type = 'fluid', name = 'fish-oil', amount = 50},
-        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
+        {type = 'fluid', name = 'steam', amount = 100, temperature = 165}
     },
     results = {
         {type = 'item', name = 'vrauks-food-02', amount = 6},
