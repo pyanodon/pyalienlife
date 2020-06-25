@@ -116,6 +116,32 @@ fun.autorecipes {
 				crafting_speed = 100,
 				tech = 'kicalk-mk02'
         },
+
+
+
+
+        {
+			ingredients =
+				{
+
+
+                    {name='pesticide01',amount ='+1'},
+
+
+				},
+			results =
+				{
+					--{'a','*17'},
+					{name='kicalk',amount ='+4'}
+				},
+				crafting_speed = 100,
+				tech = 'kicalk-mk03'
+        },
+
+
+
+
+
         {
 			ingredients =
 				{
@@ -127,11 +153,39 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*17'},
-					{name='kicalk',amount ='+1'}
+					{name='kicalk',amount ='+4'}
 				},
 				crafting_speed = 100,
 				tech = 'kicalk-mk03'
         },
+
+
+
+
+
+        {
+			ingredients =
+				{
+
+
+
+                    {name='pesticide01',amount ='R'},
+                    {name='pesticide02',amount ='+1'},
+				},
+			results =
+				{
+					--{'a','*17'},
+					{name='kicalk',amount ='+6'}
+				},
+				crafting_speed = 100,
+				tech = 'kicalk-mk03'
+        },
+
+
+
+
+
+
         {
 			ingredients =
 				{
@@ -141,7 +195,7 @@ fun.autorecipes {
                     --{'g','*2'},
 					--{'d'},
 					{name='manure',amount ='R'},
-                    {name='fertilizer',amount ='+4'},
+                    {name='fertilizer',amount ='+1'},
 				},
 			results =
 				{
@@ -225,13 +279,13 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='manure',amount ='R'},
-					{name='fertilizer',amount =5},
+					{name='fertilizer',amount =1},
 					{name='clay',amount =15},
 					--{'gh',1},
 				},
 			results =
 				{
-					{name='kicalk',amount ="+1"}
+					{name='kicalk',amount ="+18"}
 				},
 			crafting_speed = 70,
 			tech = 'kicalk-mk04'

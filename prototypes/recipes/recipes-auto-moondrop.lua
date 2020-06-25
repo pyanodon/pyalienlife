@@ -110,12 +110,42 @@ fun.autorecipes {
 				crafting_speed = 100,
 				tech = 'moondrop-mk03'
         },
-        {
+
+
+
+
+
+
+
+
+
+                {
 			ingredients =
 				{
                     {name='moondropseeds',amount='+2'},
+                    {name='pesticide01',amount ='+1'},
+                    --{'d'},
+                },
+			results =
+				{
+					--{'a','*20'},
+					{name='moondrop',amount ='+5'}
+				},
+				crafting_speed = 100,
+				tech = 'moondrop-mk03'
+        },
+
+
+
+
+
+
+        {
+			ingredients =
+				{
+                    {name='moondropseeds',amount='+1'},
 				    {name='syngas',amount ='R'},
-					{name='fluegas',amount ='*2'},
+					{name='fluegas',amount ='*3'},
                     --{'d'},
                 },
 			results =
@@ -126,6 +156,30 @@ fun.autorecipes {
 				crafting_speed = 100,
 				tech = 'moondrop-mk03'
         },
+
+
+
+
+                {
+			ingredients =
+				{
+                    {name='pesticide01',amount ='R'},
+                    {name='moondropseeds',amount='+2'},
+                    {name='pesticide02',amount ='+1'},
+
+                },
+			results =
+				{
+					--{'a','*20'},
+					{name='moondrop',amount ='+10'}
+				},
+				crafting_speed = 100,
+				tech = 'moondrop-mk03'
+        },
+
+
+
+
         {
 			ingredients =
 				{
@@ -137,7 +191,7 @@ fun.autorecipes {
 				{
 					--{'a','*25'},
 					--{'a','+3'}
-					{name='moondrop',amount ='+8'}
+					{name='moondrop',amount ='+12'}
 				},
 				crafting_speed = 85,
 				tech = 'moondrop-mk04'
@@ -145,7 +199,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='moondropseeds',amount='+2'},
+                    {name='moondropseeds',amount='+1'},
 					{name='fluegas',amount ='R'},
                     {name='syngas',amount ='*10'},
 				},
@@ -153,7 +207,7 @@ fun.autorecipes {
 				{
 					--{'a','*25'},
 					--{'a','+3'}
-					{name='moondrop',amount ='+1'}
+					{name='moondrop',amount ='+2'}
 				},
 				crafting_speed = 75,
 				tech = 'moondrop-mk04'
