@@ -2188,7 +2188,7 @@ RECIPE {
     hidden = true,
     energy_required = 20,
     ingredients = {
-        {type = 'fluid', name = 'lubricant', amount = 100},
+        {type = 'item', name = 'lubricant-barrel', amount = 50},
         {type = 'item', name = 'super-alloy', amount = 5},
         {type = 'item', name = 'low-density-structure', amount = 2},
         {type = 'item', name = 'fuelrod-mk03', amount = 1},
