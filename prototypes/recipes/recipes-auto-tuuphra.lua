@@ -121,25 +121,79 @@ fun.autorecipes {
 				crafting_speed = 100,
 				tech = 'tuuphra-mk03'
         },
+
+
+
+
+
         {
 			ingredients =
 				{
-                    --{'s1'},
-                    --{'a'},
-				   --{'b','+15'},
-				   --{'nitrogen','R'},
-				   --{name='bloodmeal',amount ='R'},
-					{name='nitrogen',amount ='*15'},
+
+
+                    {name='pesticide01',amount ='+1'},
                     --{'d'},
                 },
 			results =
 				{
 					--{'a','*20'},
-					{name='tuuphra',amount ='+2'}
+					{name='tuuphra',amount ='+8'}
 				},
 				crafting_speed = 100,
 				tech = 'tuuphra-mk03'
         },
+
+
+
+
+
+
+
+        {
+			ingredients =
+				{
+
+
+                    {name='nitrogen',amount ='+*50'},
+                    --{'d'},
+                },
+			results =
+				{
+					--{'a','*20'},
+					{name='tuuphra',amount ='+3'}
+				},
+				crafting_speed = 100,
+				tech = 'tuuphra-mk03'
+        },
+
+
+
+
+
+
+        {
+			ingredients =
+				{
+
+
+                    {name='pesticide01',amount ='R'},
+                    {name='pesticide02',amount ='+1'},
+                    --{'d'},
+                },
+			results =
+				{
+					--{'a','*20'},
+					{name='tuuphra',amount ='+10'}
+				},
+				crafting_speed = 100,
+				tech = 'tuuphra-mk03'
+        },
+
+
+
+
+
+
         {
 			ingredients =
 				{
@@ -175,7 +229,7 @@ fun.autorecipes {
 				{
 					--{'a','*25'},
 					--{'a','+3'}
-					{name='tuuphra',amount ="+3"}
+					{name='tuuphra',amount ="+10"}
 				},
 				crafting_speed = 90,
 				tech = 'tuuphra-mk04'
@@ -208,7 +262,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='tuuphra',amount ="+1"}
+					{name='tuuphra',amount ="+2"}
 				},
 			crafting_speed = 60,
 			tech = 'growth-hormone'
@@ -223,7 +277,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='tuuphra',amount ="+8"}
+					{name='tuuphra',amount ="+12"}
 				},
 			crafting_speed = 60,
 			tech = 'growth-hormone'
@@ -238,7 +292,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='tuuphra',amount ="+4"}
+					{name='tuuphra',amount ="+14"}
 				},
 			crafting_speed = 60,
 			tech = 'growth-hormone'

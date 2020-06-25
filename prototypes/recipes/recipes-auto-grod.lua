@@ -132,6 +132,32 @@ fun.autorecipes {
 				crafting_speed = 90,
 				tech = 'grod-mk03'
         },
+
+
+
+
+
+        {
+			ingredients =
+				{
+
+                    {name='pesticide01',amount ='+1'},
+
+                },
+			results =
+				{
+					--{'a','*20'},
+					{name='grod',amount ='+10'}
+				},
+				crafting_speed = 85,
+				tech = 'grod-mk03'
+        },
+
+
+
+
+
+
         {
 			ingredients =
 				{
@@ -146,11 +172,37 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*20'},
-					{name='grod',amount ='+2'}
+					{name='grod',amount ='+8'}
 				},
 				crafting_speed = 85,
 				tech = 'grod-mk03'
         },
+
+
+
+
+
+
+        {
+			ingredients =
+				{
+                    {name='pesticide01',amount ='R'},
+                    {name='pesticide02',amount ='+1'},
+                },
+			results =
+				{
+					--{'a','*20'},
+					{name='grod',amount ='+8'}
+				},
+				crafting_speed = 85,
+				tech = 'grod-mk03'
+        },
+
+
+
+
+
+
         {
 			ingredients =
 				{
@@ -236,7 +288,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='grod',amount ="+3"}
+					{name='grod',amount ="+15"}
 				},
 			crafting_speed = 70,
 			tech = 'grod-mk04'
@@ -251,7 +303,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='grod',amount ="+1"}
+					{name='grod',amount ="+15"}
 				},
 			crafting_speed = 55,
 			tech = 'grod-mk04'
