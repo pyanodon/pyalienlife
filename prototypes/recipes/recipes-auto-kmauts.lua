@@ -270,7 +270,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='cagedulric',amount =1},
-                    {name='rennea',amount =15},
+                    {name='rennea',amount =10},
 					{name='waterbarrel',amount=4,return_item={name='empty-barrel',amount=4}},
 					--{name='cage',amount=1},
 					{name='bedding',amount = 1},
@@ -301,7 +301,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='rennea',amount = 15},
+					{name='rennea',amount = 10},
 				},
 			results =
 				{
@@ -332,7 +332,7 @@ fun.autorecipes {
 					{name='kmautsration',amount = 'R'},
 					{name='cagedulric',amount =1},
 					{name='pheromones',amount =1},
-                    {name='rennea',amount =15},
+                    {name='rennea',amount =5},
 					--{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
 					--{name='bedding',amount = 1},
 				},
@@ -363,7 +363,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='rennea',amount = 10},
+					{name='rennea',amount = 5},
 				},
 			results =
 				{
