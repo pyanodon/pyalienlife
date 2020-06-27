@@ -83,7 +83,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = -4,
     },
-    energy_usage = "200kW",
+    energy_usage = "400kW",
     ingredient_count = 20,
     animation = {
         filename = "__pycoalprocessinggraphics__/graphics/entity/ralesia-plantation/ralesia-plantation.png",
