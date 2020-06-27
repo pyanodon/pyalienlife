@@ -24,7 +24,7 @@ ITEM {
   icon = "__pyalienlifegraphics2__/graphics/icons/launchpad-mk01.png",
   icon_size = 64,
   flags = {},
-  subgroup = "py-alienlife-buildings-mk01",
+  subgroup = "py-alienlife-buildings-others",
   order = "a",
   place_result = "silo-2",
   stack_size = 10
