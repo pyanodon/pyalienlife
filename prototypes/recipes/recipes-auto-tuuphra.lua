@@ -277,7 +277,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='tuuphra',amount ="+12"}
+					{name='tuuphra',amount ="+18"}
 				},
 			crafting_speed = 60,
 			tech = 'growth-hormone'
@@ -292,7 +292,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='tuuphra',amount ="+14"}
+					{name='tuuphra',amount ="+16"}
 				},
 			crafting_speed = 60,
 			tech = 'growth-hormone'
