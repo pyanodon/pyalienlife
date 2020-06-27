@@ -290,7 +290,7 @@ fun.autorecipes {
 				{
 					{name='grod',amount ="+20"}
 				},
-			crafting_speed = 70,
+			crafting_speed = 60,
 			tech = 'grod-mk04'
 		},
 		{

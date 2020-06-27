@@ -75,7 +75,7 @@ fun.autorecipes {
                     --{'a'},
                     --{'b','+15'},
                     --{'c','*10'},
-                    {name='ash',amount =10},
+                    {name='ash',amount =6},
 				},
 			results =
 				{
@@ -135,7 +135,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*20'},
-					{name='yotoifruit',amount ='+6'}
+					{name='yotoifruit',amount ='+8'}
 				},
 				crafting_speed = 50,
 				tech = 'yotoi-mk03'
@@ -200,7 +200,7 @@ fun.autorecipes {
 				{
 					--{'a','*25'},
 					--{'a','+3'}
-					{name='yotoifruit',amount ="+5"}
+					{name='yotoifruit',amount ="+16"}
 				},
 				crafting_speed = 35,
 				tech = 'yotoi-mk04'
@@ -277,13 +277,13 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='manure',amount ='R'},
-					{name='fertilizer',amount =1},
+					{name='fertilizer',amount =3},
 					{name='urea',amount =15},
 					--{'gh',1},
 				},
 			results =
 				{
-					{name='yotoifruit',amount ="+5"}
+					{name='yotoifruit',amount ="+25"}
 				},
 			crafting_speed = 15,
 			tech = 'yotoi-mk04'
