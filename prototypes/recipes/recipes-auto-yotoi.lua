@@ -121,6 +121,33 @@ fun.autorecipes {
 				crafting_speed = 100,
 				tech = 'yotoi-mk03'
         },
+
+
+
+
+        {
+			ingredients =
+				{
+
+                    {name='pesticide01',amount ='+1'},
+                    --{'d'},
+                },
+			results =
+				{
+					--{'a','*20'},
+					{name='yotoi',amount ='+8'}
+				},
+				crafting_speed = 100,
+				tech = 'yotoi-mk03'
+        },
+
+
+
+
+
+
+
+
         {
 			ingredients =
 				{
@@ -140,6 +167,31 @@ fun.autorecipes {
 				crafting_speed = 100,
 				tech = 'yotoi-mk03'
         },
+
+
+
+
+        {
+			ingredients =
+				{
+
+                    {name='pesticide01',amount ='R'},
+                    {name='pesticide02',amount ='+1'},
+                    --{'d'},
+                },
+			results =
+				{
+					--{'a','*20'},
+					{name='yotoi',amount ='+10'}
+				},
+				crafting_speed = 100,
+				tech = 'yotoi-mk03'
+        },
+
+
+
+
+
         {
 			ingredients =
 				{

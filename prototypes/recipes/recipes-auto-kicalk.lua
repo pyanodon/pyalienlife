@@ -256,7 +256,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='kicalk',amount ="+1"}
+					{name='kicalk',amount ="+2"}
 				},
 			crafting_speed = 70,
 			tech = 'kicalk-mk04'
@@ -264,13 +264,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='manure',amount =10},
+					{name='manure',amount =5},
 					--{'biomass','R'},
 					--{'gh',1},
 				},
 			results =
 				{
-					{name='kicalk',amount ="+4"}
+					{name='kicalk',amount ="+10"}
 				},
 			crafting_speed = 70,
 			tech = 'kicalk-mk04'
@@ -280,7 +280,7 @@ fun.autorecipes {
 				{
                     {name='manure',amount ='R'},
 					{name='fertilizer',amount =1},
-					{name='clay',amount =15},
+					{name='clay',amount =10},
 					--{'gh',1},
 				},
 			results =
@@ -292,3 +292,9 @@ fun.autorecipes {
 		},
 	}
 }
+
+
+
+
+--(500°C - 15°C) × 0.2 kJ × 60 units = 5820 kW
+-- deci   1200 steam la 500 e  5820*20 kj = 116.4 MJ (100% eff) sau  0.97 MJ / 1 steam la 500C la 100% eff

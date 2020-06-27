@@ -42,12 +42,12 @@ fun.autorecipes {
 				{
                     --{'s1'},
                     --{'a'},
-                    {name='limestone',amount ='+15'},
+                    {name='limestone',amount ='+5'},
 				},
 			results =
 				{
 					--{'a','*7'},
-					{name='yotoifruit',amount ='+1'}
+					{name='yotoifruit',amount ='+2'}
 				},
 				crafting_speed = 80,
 				tech = 'yotoi'
@@ -63,7 +63,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*10'},
-					{name='yotoifruit',amount ='+3'}
+					{name='yotoifruit',amount ='+8'}
 				},
 				crafting_speed = 75,
 				tech = 'yotoi-mk02'
@@ -80,7 +80,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*12'},
-					{name='yotoifruit',amount ='+2'}
+					{name='yotoifruit',amount ='+3'}
 				},
 				crafting_speed = 70,
 				tech = 'yotoi-mk02'
@@ -110,36 +110,81 @@ fun.autorecipes {
                     --{'a'},
 					--{'b','+15'},
 					--{name='stone',amount ='R'},
-                    {name='bloodmeal',amount ='*8'},
+                    {name='bloodmeal',amount ='*1'},
                     --{'d'},
 				},
 			results =
 				{
 					--{'a','*17'},
-					{name='yotoifruit',amount ='+1'}
+					{name='yotoifruit',amount ='+4'}
 				},
 				crafting_speed = 60,
 				tech = 'yotoi-mk03'
         },
+
+
+
+
         {
 			ingredients =
 				{
-                    --{'s1'},
-                    --{'a'},
-				   --{'b','+15'},
-				   --{'carbondioxide','R'},
-				   --{name='bloodmeal',amount ='R'},
+
+                    {name='pesticide01',amount ='+1'},
+                    --{'d'},
+                },
+			results =
+				{
+					--{'a','*20'},
+					{name='yotoifruit',amount ='+6'}
+				},
+				crafting_speed = 50,
+				tech = 'yotoi-mk03'
+        },
+
+
+
+
+
+        {
+			ingredients =
+				{
+
 					{name='carbondioxide',amount ='*20'},
                     --{'d'},
                 },
 			results =
 				{
 					--{'a','*20'},
-					{name='yotoifruit',amount ='+1'}
+					{name='yotoifruit',amount ='+2'}
 				},
 				crafting_speed = 50,
 				tech = 'yotoi-mk03'
         },
+
+
+
+        {
+			ingredients =
+				{
+
+                    {name='pesticide01',amount ='R'},
+                    {name='pesticide02',amount ='+1'},
+                },
+			results =
+				{
+					--{'a','*20'},
+					{name='yotoifruit',amount ='+10'}
+				},
+				crafting_speed = 50,
+				tech = 'yotoi-mk03'
+        },
+
+
+
+
+
+
+
         {
 			ingredients =
 				{
@@ -149,7 +194,7 @@ fun.autorecipes {
                     --{'g','*2'},
 					--{'d'},
 					--{name='manure',amount ='R'},
-                    {name='fertilizer',amount ='*5'},
+                    {name='fertilizer',amount ='*1'},
 				},
 			results =
 				{
@@ -192,7 +237,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='yotoifruit',amount ="+1"}
+					{name='yotoifruit',amount ="+8"}
 				},
 			crafting_speed = 30,
 			tech = 'yotoi-mk04'
@@ -208,7 +253,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='yotoifruit',amount ="+1"}
+					{name='yotoifruit',amount ="+3"}
 				},
 			crafting_speed = 30,
 			tech = 'yotoi-mk04'
@@ -216,7 +261,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='bloodmeal',amount ='*10'},
+					{name='bloodmeal',amount ='*5'},
 					{name='manure',amount =10},
 					--{'biomass','R'},
 					--{'gh',1},
@@ -232,7 +277,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='manure',amount ='R'},
-					{name='fertilizer',amount =5},
+					{name='fertilizer',amount =1},
 					{name='urea',amount =15},
 					--{'gh',1},
 				},

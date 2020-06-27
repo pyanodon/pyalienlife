@@ -172,7 +172,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*20'},
-					{name='grod',amount ='+8'}
+					{name='grod',amount ='+10'}
 				},
 				crafting_speed = 85,
 				tech = 'grod-mk03'
@@ -282,13 +282,13 @@ fun.autorecipes {
 				{
                     {name='slackedlime',amount ='*10'},
                     {name='fluegas',amount ='R'},
-					{name='manure',amount =10},
+					{name='manure',amount =8},
 					--{'biomass','R'},
 					--{'gh',1},
 				},
 			results =
 				{
-					{name='grod',amount ="+15"}
+					{name='grod',amount ="+20"}
 				},
 			crafting_speed = 70,
 			tech = 'grod-mk04'
