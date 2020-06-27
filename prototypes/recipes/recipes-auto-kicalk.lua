@@ -285,7 +285,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='kicalk',amount ="+18"}
+					{name='kicalk',amount ="+21"}
 				},
 			crafting_speed = 70,
 			tech = 'kicalk-mk04'

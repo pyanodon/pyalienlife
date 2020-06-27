@@ -42,7 +42,7 @@ fun.autorecipes {
 				{
                     --{'s1'},
                     --{'a'},
-                    {name='limestone',amount ='+15'},
+                    {name='limestone',amount ='+5'},
 				},
 			results =
 				{
@@ -63,7 +63,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*10'},
-					{name='yotoi',amount ='+3'}
+					{name='yotoi',amount ='+8'}
 				},
 				crafting_speed = 100,
 				tech = 'yotoi-mk02'
@@ -75,7 +75,7 @@ fun.autorecipes {
                     --{'a'},
                     --{'b','+15'},
                     --{'c','*10'},
-                    {name='ash',amount =10},
+                    {name='ash',amount =5},
 				},
 			results =
 				{
@@ -116,7 +116,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*17'},
-					{name='yotoi',amount ='+1'}
+					{name='yotoi',amount ='+6'}
 				},
 				crafting_speed = 100,
 				tech = 'yotoi-mk03'
@@ -156,13 +156,13 @@ fun.autorecipes {
 				   --{'b','+15'},
 				   --{'carbondioxide','R'},
 				   --{name='bloodmeal',amount ='R'},
-					{name='carbondioxide',amount ='*20'},
+					{name='carbondioxide',amount ='*50'},
                     --{'d'},
                 },
 			results =
 				{
 					--{'a','*20'},
-					{name='yotoi',amount ='+1'}
+					{name='yotoi',amount ='+3'}
 				},
 				crafting_speed = 100,
 				tech = 'yotoi-mk03'

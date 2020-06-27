@@ -32,7 +32,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='rennea',amount ='+1'}
+					{name='rennea',amount ='+2'}
 				},
 				crafting_speed = 100,
 				tech = 'rennea'
@@ -118,25 +118,73 @@ fun.autorecipes {
 				crafting_speed = 75,
 				tech = 'rennea-mk03'
         },
+
+
+
+
+
         {
 			ingredients =
 				{
-                    --{'s1'},
-                    --{'a'},
-				   --{'b','+15'},
-				   --{'carbondioxide','R'},
-				   --{name='bloodmeal',amount ='R'},
-					{name='carbondioxide',amount ='*40'},
-                    --{'d'},
+                    {name='pesticide01',amount ='+1'},
+
                 },
 			results =
 				{
 					--{'a','*20'},
-					{name='rennea',amount ='+1'}
+					{name='rennea',amount ='+6'}
 				},
 				crafting_speed = 70,
 				tech = 'rennea-mk03'
         },
+
+
+
+
+
+
+
+        {
+			ingredients =
+				{
+					{name='carbondioxide',amount ='*40'},
+                },
+			results =
+				{
+					--{'a','*20'},
+					{name='rennea',amount ='+2'}
+				},
+				crafting_speed = 70,
+				tech = 'rennea-mk03'
+        },
+
+
+
+
+
+
+        {
+			ingredients =
+				{
+
+                    {name='pesticide01',amount ='R'},
+                    {name='pesticide02',amount ='+1'},
+                },
+			results =
+				{
+					--{'a','*20'},
+					{name='rennea',amount ='+8'}
+				},
+				crafting_speed = 70,
+				tech = 'rennea-mk03'
+        },
+
+
+
+
+
+
+
         {
 			ingredients =
 				{
