@@ -2054,6 +2054,22 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
+    name = 'space-dingrit',
+    category = 'crafting',
+    enabled = false,
+    energy_required = 120,
+    ingredients = {
+        {type = 'item', name = 'space-suit', amount = 1},
+        {type = 'item', name = 'skin-caged-dingrits', amount = 1},
+        {type = 'item', name = 'immunosupressants', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'space-dingrit', amount = 1}
+    }
+}:add_unlock("laika")
+
+RECIPE {
+    type = 'recipe',
     name = 'mcb',
     category = 'wet-scrubber',
     enabled = false,
