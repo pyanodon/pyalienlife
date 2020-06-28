@@ -494,9 +494,9 @@ local tech_upgrade_table = require("prototypes/upgrades/tech-upgrades")
 local function log_all_machines_for_upgrades(tech_upgrades)
 --log('hit')
 --log(serpent.block(tech_upgrades))
-	for tab, table in pairs(tech_upgrades) do
+	for _, table in pairs(tech_upgrades) do
 		--log(serpent.block(table))
-		for t, tech in pairs(table) do
+		for _, tech in pairs(table) do
 			--log(serpent.block(tech))
 			global.tech_upgrades.techs[tech.technology.name] =
 				{
@@ -965,7 +965,7 @@ script.on_event(defines.events.on_entity_died, function(event)
 	if E.name == 'ipod' then
 		global.ocula_master_table.ocula_boxes[E.unit_number] = nil
 	elseif E.name == 'ocula' then
-		ocula_removed(E)
+		ocula_removed(event)
 	end
 
 end)
@@ -1217,47 +1217,7 @@ script.on_event(
 		global.caravanroutes = caravanroutes
 	end
 )
---[[
-script.on_nth_tick(5, function()
-		--log('hit')
-		for _, p in pairs(game.players) do
-			--log(p.name)
-			--check if player is missing stuff and add it to the list of things to attempt to be filled by the ocula
-			--log('hit')
-			--log(p.character.request_slot_count)
-			--log(serpent.block(p.get_main_inventory().get_contents()))
-			local inv = p.get_main_inventory().get_contents()
-			local iir
-			local total_item_count
-			--log(serpent.block(inv))
-			for s = 1, p.character.request_slot_count do --
-				--log(s)
-				--log(serpent.block(p.character.get_request_slot(s)))
-				if p.character.get_request_slot(s) ~= nil then
-					if global.ocula_master_table.requested_items[p.index] == nil then
-						global.ocula_master_table.requested_items[p.index] = {}
-					end
-					if global.ocula_master_table.item_in_route[p.index] ~= nil and global.ocula_master_table.item_in_route[p.index][p.character.get_request_slot(s)] ~= nil then
-						iir = global.ocula_master_table.item_in_route[p.index][p.character.get_request_slot(s)]
-					else
-						iir = 0
-					end
-					if inv[p.character.get_request_slot(s).name] ~= nil then
-						total_item_count =  inv[p.character.get_request_slot(s).name] + iir
-					else
-						total_item_count = iir
-					end
 
-					global.ocula_master_table.requested_items[p.index][p.character.get_request_slot(s).name] =
-					p.character.get_request_slot(s).count - total_item_count
-					log(serpent.block(global.ocula_master_table))
-				end
-			end
-			--end
-		end
-	end
-)
-]]--
 script.on_nth_tick(30, function()
 		--log("hit")
 		for _, play in pairs(game.players) do
@@ -1653,7 +1613,7 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 		end
 		global.caravanroutes = caravanroutes
 		if E.name == 'ocula' then
-		ocula_removed(E)
+		ocula_removed(event)
 		elseif E.name == 'ipod' then
 			global.ocula_master_table.ocula_boxes[E.unit_number] = nil
 		elseif E.name == 'pydrive' then
@@ -2294,7 +2254,7 @@ script.on_event(
 		end
 		global.TRlist = TRlist
 		if global.tech_upgrades.techs[tech.name] ~= nil then
-			
+
 			--log('hit')
 			--log(tech.name)
 			table.insert(global.tech_upgrades.unlocked_techs, tech.name)
