@@ -2258,7 +2258,7 @@ script.on_event(
 			--log('hit')
 			--log(tech.name)
 			table.insert(global.tech_upgrades.unlocked_techs, tech.name)
-			for t, tec in pairs(global.tech_upgrades.techs[tech.name].techs_to_lock) do
+			for _, tec in pairs(global.tech_upgrades.techs[tech.name].techs_to_lock) do
 				if global.tech_upgrades.disabled_techs[tec] == nil then
 					global.tech_upgrades.disabled_techs[tec] = true
 					if game.forces[tech.force.name].technologies[tec] ~= nil and game.forces[tech.force.name].technologies[tec].enabled == true then
@@ -2269,7 +2269,7 @@ script.on_event(
 					end
 				end
 			end
-			for e, ent in pairs(global.tech_upgrades.techs[tech.name].entities) do
+			for _, ent in pairs(global.tech_upgrades.techs[tech.name].entities) do
 				if global.tech_upgrades.entities_master_list[ent] == nil then
 					global.tech_upgrades.entities_master_list[ent] = tech.name
 				end
