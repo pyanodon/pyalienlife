@@ -1,3 +1,14 @@
+Version: 1.8.1
+Date: 2020-06-28
+  Changes:
+    - Balanced Xyhiphoe
+    - Added Pesticides
+    - Fixed pY Logistic Station
+    - Fixed Ocula
+    - Dingridoo now consumes less and are more maneuverable.
+    - Tweaks for glass
+    - Pyphoon bay speed up.
+    - Locale changes
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.0
 Date: 2020-06-15
