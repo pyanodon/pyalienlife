@@ -593,7 +593,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='arthropodblood', amount ='R'},
-					{name='venom', amount =3},
+					{name='venom', amount =30},
 				},
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
