@@ -24,7 +24,7 @@ ITEM {
   icon = "__pyalienlifegraphics2__/graphics/icons/launchpad-mk01.png",
   icon_size = 64,
   flags = {},
-  subgroup = "py-alienlife-buildings-mk01",
+  subgroup = "py-alienlife-buildings-others",
   order = "a",
   place_result = "silo-2",
   stack_size = 10
@@ -52,7 +52,7 @@ ENTITY {
     max_health = 5000,
     corpse = "rocket-silo-remnants",
     dying_explosion = "rocket-silo-explosion",
-    collision_box = {{-5.8, -5.80}, {5.80, 5.80}},
+    collision_box = {{-5.80, -5.80}, {5.80, 5.80}},
     selection_box = {{-6.0, -6.0}, {6.0, 6.0}},
     --damaged_trigger_effect = hit_effects.entity(),
     hole_clipping_box = { {-2.75, -1.15}, {2.75, 2.25} },
@@ -82,6 +82,18 @@ ENTITY {
     times_to_blink = 3,
     light_blinking_speed = 1 / (3 * 60),
     door_opening_speed = 1 / (4.25 * 60),
+
+    fluid_boxes = {
+      --1
+      {
+          production_type = "input",
+          pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+          pipe_covers = DATA.Pipes.covers(false, true, true, true),
+          base_area = 10,
+          base_level = -1,
+          pipe_connections = {{type = "input", position = {-6,0.5}}}
+      },
+    },
 
     base_engine_light =
     {
@@ -324,7 +336,7 @@ ENTITY {
       sound =
       {
         filename = "__base__/sound/rocket-silo-working-1.ogg",
-        volume = 0.8
+        volume = 1.2
       },
     },
     flying_sound =
