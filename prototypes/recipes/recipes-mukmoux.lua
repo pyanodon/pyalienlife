@@ -69,7 +69,7 @@ RECIPE {
         {type = 'item', name = 'seaweed', amount = 5},
         {type = 'item', name = 'salt', amount = 10},
         {type = 'item', name = 'saps', amount = 5},
-        {type = 'fluid', name = 'steam', amount = 100},
+        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
     },
     results = {
         {type = 'item', name = 'mukmoux-food-01', amount = 3},
@@ -92,7 +92,7 @@ RECIPE {
         {type = 'item', name = 'biomass', amount = 5},
         {type = 'item', name = 'saps', amount = 5},
         {type = 'item', name = 'tuuphra', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100},
+        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
     },
     results = {
         {type = 'item', name = 'mukmoux-food-02', amount = 5},
