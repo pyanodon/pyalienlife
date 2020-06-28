@@ -1,3 +1,14 @@
+require("prototypes/functions/functions")
+
+--Example result replacer
+--results_replacer(recipe name*, old item*, new item*, new_amount**)
+--to use copy the local at top to the given file and then add the following line with the required variables
+--fun.results_replacer("biomass-1", "biomass", "iron-plate", 3)
+
+--*required
+--**optional. whole numbers only
+
+--log(serpent.block(data.raw.recipe["biomass-1"]))
 
 RECIPE {
     type = 'recipe',
@@ -95,7 +106,7 @@ RECIPE {
     enabled = true,
     energy_required = 3,
     ingredients = {
-        {type = 'fluid', name = 'molten-glass', amount = 20},
+        {type = 'item', name = 'glass', amount = 2},
     },
     results = {
         {type = 'item', name = 'empty-petri-dish', amount = 1},
@@ -1888,7 +1899,7 @@ RECIPE {
     enabled = false,
     energy_required = 3,
     ingredients = {
-        {type = "fluid", name = "molten-glass", amount = 100},
+        {type = "item", name = "glass", amount = 10},
         {type = "item", name = "boron-trioxide", amount = 5},
         {type = "item", name = "stopper", amount = 4},
     },
@@ -1908,7 +1919,7 @@ RECIPE {
     category = 'glassworks',
     energy_required = 5,
     ingredients = {
-        {type = "fluid", name = "molten-glass", amount = 100},
+        {type = "item", name = "glass", amount = 10},
         {type = "fluid", name = "refsyngas", amount = 150},
         {type = "item", name = "purified-quartz", amount = 1},
         {type = "item", name = "stopper", amount = 5},
@@ -2053,8 +2064,8 @@ RECIPE {
         {type = 'fluid', name = 'chlorine', amount = 200},
     },
     results = {
-        {type = 'fluid', name = 'mcb', amount = 100},
-        {type = 'fluid', name = 'hydrogen-chloride', amount = 50},
+        {type = 'fluid', name = 'mcb', amount = 200},
+        {type = 'fluid', name = 'hydrogen-chloride', amount = 100},
     },
     main_product = "mcb",
 }:add_unlock("pesticides-mk01"):replace_ingredient("btx", "benzene")
@@ -2070,8 +2081,8 @@ RECIPE {
         {type = 'fluid', name = 'chlorine', amount = 200},
     },
     results = {
-        {type = 'fluid', name = 'chloral', amount = 100},
-        {type = 'fluid', name = 'hydrogen-chloride', amount = 100},
+        {type = 'fluid', name = 'chloral', amount = 200},
+        {type = 'fluid', name = 'hydrogen-chloride', amount = 200},
     },
     main_product = "chloral",
 }:add_unlock("pesticides-mk01")
@@ -2086,7 +2097,7 @@ RECIPE {
         {type = 'fluid', name = 'chloral', amount = 50},
         {type = 'fluid', name = 'sulfuric-acid', amount = 50},
         {type = 'item', name = 'sodium-hydroxide', amount = 4},
-        {type = 'fluid', name = 'mcb', amount = 200},
+        {type = 'fluid', name = 'mcb', amount = 100},
     },
     results = {
         {type = 'fluid', name = 'pre-pesticide-01', amount = 100},
@@ -2102,11 +2113,11 @@ RECIPE {
     energy_required = 5,
     ingredients = {
         {type = 'fluid', name = 'pre-pesticide-01', amount = 100},
-        {type = 'fluid', name = 'bee-venom', amount = 5},
+        {type = 'fluid', name = 'bee-venom', amount = 50},
         {type = 'item', name = 'plastic-bar', amount = 2},
     },
     results = {
-        {type = 'item', name = 'pesticide-mk01', amount = 5},
+        {type = 'item', name = 'pesticide-mk01', amount = 50},
     },
     --main_product = "chloral",
 }:add_unlock("pesticides-mk01")
@@ -2121,11 +2132,11 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'aluminium-plate', amount = 2},
-        {type = 'fluid', name = 'ethanol', amount = 100},
+        {type = 'fluid', name = 'ethanol', amount = 50},
         {type = 'fluid', name = 'acidgas', amount = 100},
     },
     results = {
-        {type = 'fluid', name = 'ethyl-mercaptan', amount = 100},
+        {type = 'fluid', name = 'ethyl-mercaptan', amount = 200},
     },
     --main_product = "mcb",
 }:add_unlock("pesticides-mk02")
@@ -2138,10 +2149,10 @@ RECIPE {
     energy_required = 15,
     ingredients = {
         {type = 'item', name = 'p2s5', amount = 2},
-        {type = 'fluid', name = 'ethanol', amount = 100},
+        {type = 'fluid', name = 'ethanol', amount = 80},
     },
     results = {
-        {type = 'fluid', name = 'dda', amount = 100},
+        {type = 'fluid', name = 'dda', amount = 200},
     },
     --main_product = "mcb",
 }:add_unlock("pesticides-mk02")
@@ -2171,11 +2182,11 @@ RECIPE {
     energy_required = 5,
     ingredients = {
         {type = 'fluid', name = 'pre-pesticide-02', amount = 100},
-        {type = 'fluid', name = 'bee-venom', amount = 5},
+        {type = 'fluid', name = 'bee-venom', amount = 50},
         {type = 'item', name = 'plastic-bar', amount = 2},
     },
     results = {
-        {type = 'item', name = 'pesticide-mk02', amount = 5},
+        {type = 'item', name = 'pesticide-mk02', amount = 100},
     },
     --main_product = "chloral",
 }:add_unlock("pesticides-mk02")
