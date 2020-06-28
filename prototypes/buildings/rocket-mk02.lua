@@ -1,3 +1,5 @@
+local fun = require("prototypes/functions/functions")
+
 ENTITY {
     type = "rocket-silo-rocket",
     name = "rocket-mk02",
