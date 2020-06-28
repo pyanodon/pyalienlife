@@ -100,7 +100,7 @@ require('prototypes/technologies/cardial-hypopharynx')
 require('prototypes/technologies/chromasome-infocrystalization')
 require('prototypes/technologies/pheromone-transition')
 require('prototypes/technologies/laika')
-require('prototypes/technologies/space-program')
+--require('prototypes/technologies/space-program')
 require('prototypes/technologies/pesticides')
 
 --(( BUILDINGS ))--
@@ -298,8 +298,8 @@ require('prototypes/buildings/arqad-hive-mk02')
 require('prototypes/buildings/arqad-hive-mk03')
 require('prototypes/buildings/arqad-hive-mk04')
 
-require('prototypes/buildings/silo-2')
-require('prototypes/buildings/rocket-mk02')
+--require('prototypes/buildings/silo-2')
+--require('prototypes/buildings/rocket-mk02')
 
 require('prototypes/buildings/py-drive')
 
@@ -514,8 +514,8 @@ require('prototypes/ores/yotoi-fruit')
 require('prototypes/ores/bioreserve')
 
 --Tech upgrade stuff--
-require('prototypes/upgrades/hidden-beacon')
-require('prototypes/upgrades/tech-upgrades')
+--require('prototypes/upgrades/hidden-beacon')
+--require('prototypes/upgrades/tech-upgrades')
 
 data.raw["utility-constants"].default.recipe_step_limit = 2000;
 data.raw["utility-constants"].default.main_menu_background_image_location = "__pyalienlifegraphics3__/graphics/pyal-wall.jpg"
