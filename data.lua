@@ -100,7 +100,7 @@ require('prototypes/technologies/cardial-hypopharynx')
 require('prototypes/technologies/chromasome-infocrystalization')
 require('prototypes/technologies/pheromone-transition')
 require('prototypes/technologies/laika')
---require('prototypes/technologies/space-program')
+require('prototypes/technologies/space-program')
 require('prototypes/technologies/pesticides')
 
 --(( BUILDINGS ))--
@@ -297,9 +297,10 @@ require('prototypes/buildings/arqad-hive-mk01')
 require('prototypes/buildings/arqad-hive-mk02')
 require('prototypes/buildings/arqad-hive-mk03')
 require('prototypes/buildings/arqad-hive-mk04')
+require('prototypes/buildings/space-dingrits-mk01')
 
---require('prototypes/buildings/silo-2')
---require('prototypes/buildings/rocket-mk02')
+require('prototypes/buildings/silo-2')
+require('prototypes/buildings/rocket-mk02')
 
 require('prototypes/buildings/py-drive')
 

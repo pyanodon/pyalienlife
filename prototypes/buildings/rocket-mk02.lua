@@ -7,7 +7,7 @@ ENTITY {
     selection_box = {{0, 0}, {0, 0}},
     dying_explosion = "massive-explosion",
     shadow_slave_entity = "rocket-silo-rocket-shadow",
-    inventory_size = 1,
+    inventory_size = 10,
     rising_speed = 1 / (7 * 60),
     engine_starting_speed = 1 / (5.5 * 60),
     flying_speed = 1 / (2000 * 10),
