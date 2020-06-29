@@ -39,7 +39,7 @@ ENTITY {
   crafting_categories = {"rocket-mk01"},
   rocket_parts_required = 3,
   crafting_speed = 1,
-  rocket_result_inventory_size = 1,
+  rocket_result_inventory_size = 10,
   module_specification =
   {
     module_slots = 4,
@@ -82,18 +82,6 @@ ENTITY {
     times_to_blink = 3,
     light_blinking_speed = 1 / (3 * 60),
     door_opening_speed = 1 / (4.25 * 60),
-
-    fluid_boxes = {
-      --1
-      {
-          production_type = "input",
-          pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
-          pipe_covers = DATA.Pipes.covers(false, true, true, true),
-          base_area = 10,
-          base_level = -1,
-          pipe_connections = {{type = "input", position = {-6,0.5}}}
-      },
-    },
 
     base_engine_light =
     {
