@@ -41,6 +41,7 @@ ENTITY {
     dying_explosion = "big-explosion",
     collision_box = {{-3.8, -3.8}, {3.8, 3.8}},
     selection_box = {{-4.0, -4.0}, {4.0, 4.0}},
+    collision_mask = {'ground-tile','water-tile','layer-11'},
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
