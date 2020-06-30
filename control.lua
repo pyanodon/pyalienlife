@@ -837,7 +837,7 @@ script.on_event(
 			--local outpost = {entity = E, name = math.random(1,100)}
 			global.outpost_table["outpost" .. E.unit_number] = {entity = E, name = math.random(1, 100)}
 			global.outpost_names[E.unit_number] = "outpost-" .. E.unit_number
-		elseif E.name == "caravan" then
+		elseif E.name == "caravan" or E.name == "flyavan" then
 			global.caravan_unit_numbers[E.unit_number] = true
 		elseif E.name == "ipod" then
 			global.ocula_master_table.ocula_boxes[E.unit_number] = {
@@ -2112,7 +2112,7 @@ script.on_event(
 			for _, ent in pairs(event.entities) do
 				--log(serpent.block(ent.name))
 				--log('did a thing here')
-				if ent.name == "caravan" and hascarguiopen == false then
+				if (ent.name == "caravan" or ent.name == "flyavan") and hascarguiopen == false then
 					create_caravan_gui(event, ent)
 					lastclickedunit[ent.unit_number] = ent
 					local newroute = {
