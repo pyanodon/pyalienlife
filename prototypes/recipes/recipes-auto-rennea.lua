@@ -27,7 +27,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='renneaseeds', amount = '+1'},
-					{name='soil',amount ='*12'},
+					{name='soil',amount ='*10'},
 				},
 			results =
 				{
@@ -41,12 +41,12 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='renneaseeds', amount = '+1'},
-                    {name='coarse',amount ='+7'},    -- 6 if you are generous
+                    {name='coarse',amount ='+7'},    
 				},
 			results =
 				{
 					--{'a','*7'},
-					{name='rennea',amount ='+2'}    -- since you need so sort a HUGE amount of soil or inverst a lot of iron for that amount of coarse
+					{name='rennea',amount ='+4'}    
 				},
 				crafting_speed = 100,
 				tech = 'rennea'
@@ -55,12 +55,12 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='renneaseeds', amount = '+2'},
-                    {name='manure',amount =8},
+                    {name='manure',amount =6},
 				},
 			results =
 				{
 					--{'a','*10'},
-					{name='rennea',amount ='+4'}   -- iron is cut in about half  but it replaced with X2 more manure  i made it worth it
+					{name='rennea',amount ='+8'}   
 				},
 				crafting_speed = 100,
 				tech = 'rennea-mk02'
@@ -77,7 +77,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*12'},
-					{name='rennea',amount ='+7'}
+					{name='rennea',amount ='+10'}
 				},
 				crafting_speed = 90,
 				tech = 'rennea-mk02'
@@ -152,9 +152,9 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*20'},
-					{name='rennea',amount ='+2'}
+					{name='rennea',amount ='+5'}
 				},
-				crafting_speed = 70,
+				crafting_speed = 65,
 				tech = 'rennea-mk03'
         },
 
@@ -175,7 +175,7 @@ fun.autorecipes {
 					--{'a','*20'},
 					{name='rennea',amount ='+8'}
 				},
-				crafting_speed = 70,
+				crafting_speed = 60,
 				tech = 'rennea-mk03'
         },
 
@@ -200,9 +200,9 @@ fun.autorecipes {
 				{
 					--{'a','*25'},
 					--{'a','+3'}
-					{name='rennea',amount ="+11"}
+					{name='rennea',amount ="+15"}
 				},
-				crafting_speed = 55,
+				crafting_speed = 50,
 				tech = 'rennea-mk04'
 		},
 		{
@@ -214,15 +214,15 @@ fun.autorecipes {
                     --{'g','*2'},
 					--{'d'},
 					--{name='carbondioxide',amount ='R'},
-                    {name='smalllamp',amount ='*3'},
+                    {name='smalllamp',amount ='*1'},
 				},
 			results =
 				{
 					--{'a','*25'},
 					--{'a','+3'}
-					{name='rennea',amount ="+2"}
+					{name='rennea',amount ="+5"}
 				},
-				crafting_speed = 50,
+				crafting_speed = 45,
 				tech = 'rennea-mk04'
 		},
     --GH
@@ -237,15 +237,15 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='rennea',amount ="+1"}
+					{name='rennea',amount ="+5"}
 				},
-			crafting_speed = 30,
+			crafting_speed = 25,
 			tech = 'rennea-mk04'
 		},
 		{
 			ingredients =
 				{
-					{name='lignin',amount =5},
+					{name='lignin',amount =3},
 					--{'carbondioxide','R'},
 					--{'manure','R'},
 					--{'lignin','R'},
@@ -253,24 +253,24 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='rennea',amount ="+1"}
+					{name='rennea',amount ="+5"}
 				},
-			crafting_speed = 30,
+			crafting_speed = 25,
 			tech = 'rennea-mk04'
 		},
 		{
 			ingredients =
 				{
 					{name='bloodmeal',amount ='*1'},
-					{name='manure',amount =7},
+					{name='manure',amount =5},
 					--{'lignin','R'},
 					--{'gh',1},
 				},
 			results =
 				{
-					{name='rennea',amount ="+3"}
+					{name='rennea',amount ="+4"}
 				},
-			crafting_speed = 25,
+			crafting_speed = 20,
 			tech = 'rennea-mk04'
 		},
 		{
@@ -283,10 +283,12 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='rennea',amount ="+11"}
+					{name='rennea',amount ="+10"}
 				},
-			crafting_speed = 20,
+			crafting_speed = 15,
 			tech = 'rennea-mk04'
 		},
 	}
 }
+
+

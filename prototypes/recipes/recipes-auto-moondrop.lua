@@ -224,9 +224,9 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='moondrop',amount ='+8'}
+					{name='moondrop',amount ='+3'}
 				},
-			crafting_speed = 70,
+			crafting_speed = 35,
 			tech = 'moondrop-mk04'
 		},
 		{
@@ -242,14 +242,14 @@ fun.autorecipes {
 				{
 					{name='moondrop',amount ='+2'}
 				},
-			crafting_speed = 70,
+			crafting_speed = 35,
 			tech = 'moondrop-mk04'
 		},
 		{
 			ingredients =
 				{
 					{name='syngas',amount ='*10'},
-					{name='manure',amount =10},
+					{name='manure',amount =5},
 					--{'biomass','R'},
 					--{'gh',1},
 				},
@@ -257,22 +257,22 @@ fun.autorecipes {
 				{
 					{name='moondrop',amount ='+3'}
 				},
-			crafting_speed = 70,
+			crafting_speed = 30,
 			tech = 'moondrop-mk04'
 		},
 		{
 			ingredients =
 				{
 					{name='manure',amount ='R'},
-					{name='fertilizer',amount =5},
-					{name='urea',amount =15},
+					{name='fertilizer',amount =1},
+					{name='urea',amount =5},
 					--{'gh',1},
 				},
 			results =
 				{
 					{name='moondrop',amount ='+8'}
 				},
-			crafting_speed = 70,
+			crafting_speed = 20,
 			tech = 'moondrop-mk04'
 		},
 	}

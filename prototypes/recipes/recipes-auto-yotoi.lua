@@ -82,7 +82,7 @@ fun.autorecipes {
 					--{'a','*12'},
 					{name='yotoi',amount ='+2'}
 				},
-				crafting_speed = 100,
+				crafting_speed = 90,
 				tech = 'yotoi-mk02'
         },
         {
@@ -100,7 +100,7 @@ fun.autorecipes {
 					--{'a','*15'},
 					{name='yotoi',amount ='+1'}
 				},
-				crafting_speed = 100,
+				crafting_speed = 90,
 				tech = 'yotoi-mk02'
         },
         {
@@ -110,7 +110,7 @@ fun.autorecipes {
                     --{'a'},
 					--{'b','+15'},
 					--{name='sand',amount ='R'},
-                    {name='bloodmeal',amount ='*8'},
+                    {name='bloodmeal',amount ='*4'},
                     --{'d'},
 				},
 			results =
@@ -118,7 +118,7 @@ fun.autorecipes {
 					--{'a','*17'},
 					{name='yotoi',amount ='+6'}
 				},
-				crafting_speed = 100,
+				crafting_speed = 80,
 				tech = 'yotoi-mk03'
         },
 
@@ -137,15 +137,9 @@ fun.autorecipes {
 					--{'a','*20'},
 					{name='yotoi',amount ='+8'}
 				},
-				crafting_speed = 100,
+				crafting_speed = 75,
 				tech = 'yotoi-mk03'
         },
-
-
-
-
-
-
 
 
         {
@@ -162,14 +156,11 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*20'},
-					{name='yotoi',amount ='+3'}
+					{name='yotoi',amount ='+4'}
 				},
-				crafting_speed = 100,
+				crafting_speed = 70,
 				tech = 'yotoi-mk03'
         },
-
-
-
 
         {
 			ingredients =
@@ -182,13 +173,11 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*20'},
-					{name='yotoi',amount ='+10'}
+					{name='yotoi',amount ='+8'}
 				},
-				crafting_speed = 100,
+				crafting_speed = 70,
 				tech = 'yotoi-mk03'
         },
-
-
 
 
 
@@ -201,15 +190,15 @@ fun.autorecipes {
                     --{'g','*2'},
 					--{'d'},
 					--{name='manure',amount ='R'},
-                    {name='fertilizer',amount ='*5'},
+                    {name='fertilizer',amount ='*1'},
 				},
 			results =
 				{
 					--{'a','*25'},
 					--{'a','+3'}
-					{name='yotoi',amount ="+5"}
+					{name='yotoi',amount ="+10"}
 				},
-				crafting_speed = 85,
+				crafting_speed = 55,
 				tech = 'yotoi-mk04'
 		},
 		{
@@ -221,15 +210,15 @@ fun.autorecipes {
                     --{'g','*2'},
 					--{'d'},
 					--{name='carbondioxide',amount ='R'},
-                    {name='smalllamp',amount ='*10'},
+                    {name='smalllamp',amount ='*2'},
 				},
 			results =
 				{
 					--{'a','*25'},
 					--{'a','+3'}
-					{name='yotoi',amount ="+1"}
+					{name='yotoi',amount ="+4"}
 				},
-				crafting_speed = 75,
+				crafting_speed = 50,
 				tech = 'yotoi-mk04'
 		},
     --GH
@@ -246,7 +235,7 @@ fun.autorecipes {
 				{
 					{name='yotoi',amount ="+8"}
 				},
-			crafting_speed = 70,
+			crafting_speed = 35,
 			tech = 'yotoi-mk04'
 		},
 		{
@@ -260,16 +249,16 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='yotoi',amount ="+1"}
+					{name='yotoi',amount ="+2"}
 				},
-			crafting_speed = 70,
+			crafting_speed = 35,
 			tech = 'yotoi-mk04'
 		},
 		{
 			ingredients =
 				{
-					{name='bloodmeal',amount ='*10'},
-					{name='manure',amount =10},
+					{name='bloodmeal',amount ='*1'},
+					{name='manure',amount =5},
 					--{'biomass','R'},
 					--{'gh',1},
 				},
@@ -277,22 +266,22 @@ fun.autorecipes {
 				{
 					{name='yotoi',amount ="+3"}
 				},
-			crafting_speed = 70,
+			crafting_speed = 30,
 			tech = 'yotoi-mk04'
 		},
 		{
 			ingredients =
 				{
 					{name='manure',amount ='R'},
-					{name='fertilizer',amount =5},
-					{name='urea',amount =15},
+					{name='fertilizer',amount =1},
+					{name='urea',amount =5},
 					--{'gh',1},
 				},
 			results =
 				{
-					{name='yotoi',amount ="+5"}
+					{name='yotoi',amount ="+10"}
 				},
-			crafting_speed = 70,
+			crafting_speed = 20,
 			tech = 'yotoi-mk04'
 		},
 	}

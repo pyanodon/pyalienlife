@@ -264,15 +264,15 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='manure',amount =5},
+					{name='manure',amount =2},
 					--{'biomass','R'},
 					--{'gh',1},
 				},
 			results =
 				{
-					{name='kicalk',amount ="+10"}
+					{name='kicalk',amount ="+5"}
 				},
-			crafting_speed = 70,
+			crafting_speed = 60,
 			tech = 'kicalk-mk04'
 		},
 		{
@@ -285,9 +285,9 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='kicalk',amount ="+21"}
+					{name='kicalk',amount ="+5"}
 				},
-			crafting_speed = 70,
+			crafting_speed = 45,
 			tech = 'kicalk-mk04'
 		},
 	}
