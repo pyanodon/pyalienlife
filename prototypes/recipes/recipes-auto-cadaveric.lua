@@ -159,7 +159,7 @@ fun.autorecipes {
                     --{'b','+15'},
                     --{'g','*2'},
 					--{'d'},
-                    {name='cadavericarumseeds',amount = "+4"},
+                    {name='cadavericarumseeds',amount = "+6"},
 					{name='pesticide01',amount ='R'},
 					{name='pesticide02',amount ='+1'},
 				},
