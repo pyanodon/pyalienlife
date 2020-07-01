@@ -575,6 +575,7 @@ script.on_init(
 			techs = {}
 		}
 		--log_all_machines_for_upgrades(tech_upgrade_table)
+		global.energy_drink = {}
 		if not remote.interfaces["silo_script"] then
 			return
 		end
@@ -707,6 +708,9 @@ script.on_configuration_changed(
 					output_order = {}
 				}
 				--order_biolist()
+		end
+		if global.energy_drink == nil then
+			global.energy_drink = {}
 		end
 	end
 )
@@ -1224,6 +1228,13 @@ script.on_nth_tick(30, function()
 		--log("hit")
 		for _, play in pairs(game.players) do
 			--log(p.name)
+			if global.energy_drink[play.index] ~= nil and global.energy_drink[play.index].active == true and global.energy_drink[play.index].time < 7200 then
+				global.energy_drink[play.index].time = global.energy_drink[play.index].time + 30
+			elseif global.energy_drink[play.index] ~= nil and global.energy_drink[play.index].active == true and global.energy_drink[play.index].time >= 7200 then
+				global.energy_drink[play.index].active = false
+				global.energy_drink[play.index].time = 0
+				game.players[play.index].character_running_speed_modifier = 1
+			end
 			if play.force.find_logistic_network_by_position(play.position, play.surface) ~= nil then
 				--log('hit')
 				break
@@ -2204,6 +2215,11 @@ script.on_event(
 	function(event)
 		if event.item.name == "energy-drink" then
 			game.players[event.player_index].character_running_speed_modifier = 5
+			global.energy_drink[event.player_index] =
+				{
+					active = true,
+					time = 0,
+				}
 		end
 	end
 )
