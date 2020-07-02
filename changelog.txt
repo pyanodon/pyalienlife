@@ -1,15 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.6
+Date: 2020-07-02
+  Changes:
+    - Fixed error related to molten glass fluid not existing
+---------------------------------------------------------------------------------------------------
 Version: 1.8.5
 Date: 2020-07-02
   Changes:
     - Fixes on advanced recipes and pesticides
     - Moved polynuclear-ganglion and dimensional-gastricorg back to nanocondria and make nanocondria now unlocks without yellow tech.
----------------------------------------------------------------------------------------------------
-Version: 1.8.4
-Date: 2020-07-02
-  Changes:
-    - Fixed recipe required methanal when pyhightech wasnt active.
-    - Moved polynuclear-ganglion and dimensional-gastricorg to biotech-mk04 from nanochondria as they are a required to be able to unlock that tech.
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.3
 Date: 2020-06-28
