@@ -60,7 +60,7 @@
         scale_info_icons = true,
 		picture = {
             filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/off.png",
-            priority = "high",
+            priority = "low",
             width = 512,
             height = 576,
             --scale = 0.5,
@@ -405,7 +405,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(-240, 80),
+          shift = util.by_pixel(-224, 96),
           animation_speed = 0.18
         },
         {
@@ -414,7 +414,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(-208, 80),
+          shift = util.by_pixel(-192, 96),
           animation_speed = 0.18
         },
         {
@@ -423,7 +423,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(-176, 80),
+          shift = util.by_pixel(-160, 96),
           animation_speed = 0.18
         },
         {
@@ -432,7 +432,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(-144, 80),
+          shift = util.by_pixel(-128, 96),
           run_mode = "backward",
           animation_speed = 0.18
         },
@@ -442,7 +442,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(-112, 80),
+          shift = util.by_pixel(-96, 96),
           animation_speed = 0.18
         },
         {
@@ -451,7 +451,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(-80, 80),
+          shift = util.by_pixel(-64, 96),
           animation_speed = 0.18
         },
         {
@@ -460,7 +460,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(-48, 80),
+          shift = util.by_pixel(-32, 96),
           animation_speed = 0.18
         },
         {
@@ -469,7 +469,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(-16, 80),
+          shift = util.by_pixel(-0, 96),
           animation_speed = 0.18
         },
         {
@@ -478,7 +478,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(16, 80),
+          shift = util.by_pixel(32, 96),
           animation_speed = 0.18
         },
         {
@@ -487,7 +487,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(48, 80),
+          shift = util.by_pixel(64, 96),
           animation_speed = 0.18
         },
         {
@@ -496,7 +496,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(80, 80),
+          shift = util.by_pixel(96, 96),
           animation_speed = 0.18
         },
         {
@@ -505,7 +505,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(112, 80),
+          shift = util.by_pixel(128, 96),
           animation_speed = 0.18
         },
         {
@@ -514,7 +514,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(144, 80),
+          shift = util.by_pixel(160, 96),
           animation_speed = 0.18
         },
         {
@@ -523,7 +523,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(176, 80),
+          shift = util.by_pixel(192, 96),
           animation_speed = 0.18
         },
         {
@@ -532,7 +532,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(208, 80),
+          shift = util.by_pixel(224, 96),
           animation_speed = 0.18
         },
         {
@@ -541,7 +541,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(-240, -208),
+          shift = util.by_pixel(-224, -192),
           animation_speed = 0.18
         },
         {
@@ -550,7 +550,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(-208, -208),
+          shift = util.by_pixel(-192, -192),
           animation_speed = 0.18
         },
         {
@@ -559,7 +559,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(-176, -208),
+          shift = util.by_pixel(-160, -192),
           animation_speed = 0.18
         },
         {
@@ -568,7 +568,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(-144, -208),
+          shift = util.by_pixel(-128, -192),
           animation_speed = 0.18
         },
         {
@@ -577,7 +577,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(-112, -208),
+          shift = util.by_pixel(-96, -192),
           animation_speed = 0.18
         },
         {
@@ -586,7 +586,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(-80, -208),
+          shift = util.by_pixel(-64, -192),
           animation_speed = 0.18
         },
         {
@@ -595,7 +595,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(-48, -208),
+          shift = util.by_pixel(-32, -192),
           animation_speed = 0.18
         },
         {
@@ -604,7 +604,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(-16, -208),
+          shift = util.by_pixel(-0, -192),
           animation_speed = 0.18
         },
         {
@@ -613,7 +613,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(16, -208),
+          shift = util.by_pixel(32, -192),
           animation_speed = 0.18
         },
         {
@@ -622,7 +622,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(48, -208),
+          shift = util.by_pixel(64, -192),
           animation_speed = 0.18
         },
         {
@@ -631,7 +631,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(80, -208),
+          shift = util.by_pixel(96, -192),
           animation_speed = 0.18
         },
         {
@@ -640,7 +640,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(112, -208),
+          shift = util.by_pixel(128, -192),
           animation_speed = 0.18
         },
         {
@@ -649,7 +649,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(144, -208),
+          shift = util.by_pixel(160, -192),
           animation_speed = 0.18
         },
         {
@@ -658,7 +658,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(176, -208),
+          shift = util.by_pixel(192, -192),
           animation_speed = 0.18
         },
         {
@@ -667,7 +667,7 @@ ENTITY {
           height = 288,
           line_length = 50,
           frame_count = 250,
-          shift = util.by_pixel(208, -208),
+          shift = util.by_pixel(224, -192),
           animation_speed = 0.18
         },
 
