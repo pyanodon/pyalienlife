@@ -998,7 +998,7 @@ RECIPE {
         {type = 'item', name = 'mmp', amount = 1},
     },
     results = {
-        {type = 'item', name = 'recombinant-ery', amount = 450},
+        {type = 'item', name = 'recombinant-ery', amount = 250},
     },
 }:add_unlock("recombinant-ery")
 
