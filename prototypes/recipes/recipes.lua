@@ -502,7 +502,7 @@ RECIPE {
         {type = 'item', name = 'flask', amount = 50},
     },
     results = {
-        {type = 'item', name = 'reca', amount = 500}
+        {type = 'item', name = 'reca', amount = 250}
     }
 }:add_unlock('reca')
 
@@ -746,7 +746,7 @@ RECIPE {
         {type = 'fluid', name = 'bee-venom', amount = 50},
     },
     results = {
-        {type = 'item', name = 'antiviral', amount = 2000}
+        {type = 'item', name = 'antiviral', amount = 500}
     }
 }:add_unlock('antiviral')
 
@@ -837,7 +837,7 @@ RECIPE {
         {type = 'fluid', name = 'arqad-jelly', amount = 150},
     },
     results = {
-        {type = 'item', name = 'nanochondria', amount = 400}
+        {type = 'item', name = 'nanochondria', amount = 200}
     }
 }:add_unlock('nanochondria'):change_category('nano'):add_ingredient({type = "item", name = "resilin", amount = 1}):add_ingredient({type = "item", name = "collagen", amount = 5}):replace_ingredient("bacteria-1", "bacteria-2")
 
@@ -861,7 +861,7 @@ RECIPE {
         {type = 'item', name = 'purine-analogues', amount = 2},
     },
     results = {
-        {type = 'item', name = 'bmp', amount = 350}
+        {type = 'item', name = 'bmp', amount = 300}
     }
 }:add_unlock('bmp'):replace_ingredient("bacteria-1", "bacteria-2"):replace_ingredient("sea-sponge", "collagen"):add_ingredient({type = "fluid", name = "dms", amount = 100})
 
@@ -2130,7 +2130,7 @@ RECIPE {
     ingredients = {
         {type = 'fluid', name = 'pre-pesticide-01', amount = 100},
         {type = 'fluid', name = 'bee-venom', amount = 50},
-        {type = 'item', name = 'plastic-bar', amount = 2},
+        {type = 'item', name = 'plastic-bar', amount = 10},
     },
     results = {
         {type = 'item', name = 'pesticide-mk01', amount = 50},
@@ -2185,10 +2185,10 @@ RECIPE {
         {type = 'fluid', name = 'ethyl-mercaptan', amount = 100},
     },
     results = {
-        {type = 'fluid', name = 'pre-pesticide-02', amount = 100},
+        {type = 'fluid', name = 'pre-pesticide-02', amount = 50},
     },
     --main_product = "chloral",
-}:add_unlock("pesticides-mk02"):add_ingredient({type = 'fluid', name = 'methanal', amount = 100})
+}:add_unlock("pesticides-mk02"):replace_ingredient("methanol", "methanal")
 
 RECIPE {
     type = 'recipe',
@@ -2199,10 +2199,10 @@ RECIPE {
     ingredients = {
         {type = 'fluid', name = 'pre-pesticide-02', amount = 100},
         {type = 'fluid', name = 'bee-venom', amount = 50},
-        {type = 'item', name = 'plastic-bar', amount = 2},
+        {type = 'item', name = 'plastic-bar', amount = 10},
     },
     results = {
-        {type = 'item', name = 'pesticide-mk02', amount = 100},
+        {type = 'item', name = 'pesticide-mk02', amount = 50},
     },
     --main_product = "chloral",
 }:add_unlock("pesticides-mk02")
