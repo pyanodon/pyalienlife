@@ -46,7 +46,7 @@ ENTITY {
     module_specification = {
         module_slots = 21
     },
-    allowed_effects = {"speed","productivity"},
+    allowed_effects = {"speed","productivity",'consumption','pollution'},
     crafting_categories = {"grod"},
     crafting_speed = 0.075,
     energy_source = {
@@ -55,7 +55,7 @@ ENTITY {
         emissions_per_minute = -5,
     },
     energy_usage = "800kW",
-    ingredient_count = 10,
+    ingredient_count = 13,
     animation = {
         layers = {
             {
