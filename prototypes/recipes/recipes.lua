@@ -2180,7 +2180,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'fluid', name = 'methanal', amount = 100},
+        {type = 'fluid', name = 'methanol', amount = 100},
         {type = 'fluid', name = 'dda', amount = 50},
         {type = 'fluid', name = 'ethyl-mercaptan', amount = 100},
     },
@@ -2188,7 +2188,7 @@ RECIPE {
         {type = 'fluid', name = 'pre-pesticide-02', amount = 100},
     },
     --main_product = "chloral",
-}:add_unlock("pesticides-mk02")
+}:add_unlock("pesticides-mk02"):add_ingredient({type = 'fluid', name = 'methanal', amount = 100})
 
 RECIPE {
     type = 'recipe',

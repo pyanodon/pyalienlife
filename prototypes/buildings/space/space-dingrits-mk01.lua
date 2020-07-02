@@ -1,3 +1,5 @@
+---WIP---
+---REDO RECIPE---
 RECIPE {
     type = "recipe",
     name = "space-dingrits-mk01",
@@ -77,14 +79,14 @@ ENTITY {
             tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },
             {
-            filename = "__pyalienlifegraphics3__/graphics/entity/arqad-hive/dome-base.png",
+            filename = "__pyalienlifegraphics3__/graphics/entity/dome/dome.png",
             frame_count = 1,
-            width = 384,
-            height = 480,
+            width = 437,
+            height = 571,
             shift = util.by_pixel(0, -64),
             priority = "low",
             --animation_speed = 0.75,
-            scale = 1.25
+            scale = 1
             },
       },
     },
@@ -237,14 +239,14 @@ ENTITY {
             south_position = util.by_pixel(-0, -64),
             east_position = util.by_pixel(-0, -64),
             animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/arqad-hive/dome-overlay.png",
+                filename = "__pyalienlifegraphics3__/graphics/entity/dome/dome.png",
                 frame_count = 1,
-                width = 384,
-                height = 480,
+                width = 437,
+                height = 571,
                 --line_length = 31,
                 --animation_speed = 0.4,
                 priority = "extra-high",
-                scale = 1.25
+                scale = 1
             }
         }
     },

@@ -527,7 +527,7 @@ RECIPE {
 		{type = 'item', name = 'cage', amount = 1},
     },
     main_product = "polynuclear-ganglion",
-}:add_unlock("nanochondria")
+}:add_unlock("biotech-mk04")
 
 ------------------cryogland------------------
 
@@ -633,7 +633,7 @@ RECIPE {
 		{type = 'item', name = 'cage-antelope', amount = 1},
     },
     main_product = "dimensional-gastricorg",
-}:add_unlock("nanochondria")
+}:add_unlock("biotech-mk04")
 
 ------------------Sternite-lung------------------
 
