@@ -106,7 +106,7 @@ RECIPE {
     enabled = true,
     energy_required = 3,
     ingredients = {
-        {type = 'item', name = 'glass', amount = 2},
+        {type = 'fluid', name = 'molten-glass', amount = 20},
     },
     results = {
         {type = 'item', name = 'empty-petri-dish', amount = 1},
