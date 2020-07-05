@@ -41,12 +41,12 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='renneaseeds', amount = '+1'},
-                    {name='coarse',amount ='+7'},    
+                    {name='coarse',amount ='+7'},
 				},
 			results =
 				{
 					--{'a','*7'},
-					{name='rennea',amount ='+4'}    
+					{name='rennea',amount ='+4'}
 				},
 				crafting_speed = 100,
 				tech = 'rennea'
@@ -60,7 +60,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*10'},
-					{name='rennea',amount ='+8'}   
+					{name='rennea',amount ='+8'}
 				},
 				crafting_speed = 100,
 				tech = 'rennea-mk02'
@@ -290,5 +290,3 @@ fun.autorecipes {
 		},
 	}
 }
-
-
