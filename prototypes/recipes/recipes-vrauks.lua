@@ -47,7 +47,7 @@ RECIPE {
         {type = 'item', name = 'moss', amount = 10},
         {type = 'item', name = 'wood-seeds', amount = 10},
         {type = 'item', name = 'agar', amount = 10},
-        {type = 'item', name = 'cellulose', amount = 5},
+        {type = 'item', name = 'cellulose', amount = 3},
         {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
     },
     results = {
@@ -67,6 +67,7 @@ RECIPE {
         {type = 'item', name = 'ralesia', amount = 6},
         {type = 'item', name = 'wood-seeds', amount = 10},
         {type = 'item', name = 'agar', amount = 10},
+        {type = 'item', name = 'cellulose', amount = 5},
         {type = 'item', name = 'casein', amount = 5},
         {type = 'item', name = 'bio-sample', amount = 6},
         {type = 'item', name = 'moss', amount = 10},
