@@ -128,7 +128,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='antiviral',amount =1},
-					{name='cage',amount='R'},
+					--{name='cage',amount='R'},
 				},
 			results =
 				{
@@ -312,7 +312,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bloodcageddingrits', amount ='R'},
-					{name='skincageddingrits', amount = 4},
+					{name='skincageddingrits', amount = 2},
 				},
 			crafting_speed = 90,
 			tech = 'reca'
