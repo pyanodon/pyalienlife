@@ -273,6 +273,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='fat', amount ='R'},
+					{name='antelopecage', amount='R'},
 					{name='strangelets', amount =1},
 				},
 			crafting_speed = 15,
