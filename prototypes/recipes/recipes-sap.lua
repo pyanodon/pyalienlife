@@ -1,4 +1,4 @@
-log(serpent.block(data.raw.tree['temperate-tree'].minable.results))
+--log(serpent.block(data.raw.tree['temperate-tree'].minable.results))
 for _, tree in pairs(data.raw.tree) do
     if tree.minable ~= nil  and tree.minable.results ~= nil and tree.minable.results[1].name == 'wood' then
         local mine_results_1 =
@@ -19,7 +19,7 @@ for _, tree in pairs(data.raw.tree) do
         table.insert(tree.minable.results, mine_results_2)
     end
 end
-log(serpent.block(data.raw.tree['temperate-tree'].minable.results))
+--log(serpent.block(data.raw.tree['temperate-tree'].minable.results))
 
 RECIPE {
     type = "recipe",
