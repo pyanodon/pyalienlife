@@ -1899,7 +1899,7 @@ RECIPE {
     enabled = false,
     energy_required = 3,
     ingredients = {
-        {type = "item", name = "glass", amount = 10},
+        {type = "fluid", name = "molten-glass", amount = 100},
         {type = "item", name = "boron-trioxide", amount = 5},
         {type = "item", name = "stopper", amount = 4},
     },
@@ -1919,7 +1919,7 @@ RECIPE {
     category = 'glassworks',
     energy_required = 5,
     ingredients = {
-        {type = "item", name = "glass", amount = 10},
+        {type = "fluid", name = "molten-glass", amount = 100},
         {type = "fluid", name = "refsyngas", amount = 150},
         {type = "item", name = "purified-quartz", amount = 1},
         {type = "item", name = "stopper", amount = 5},
