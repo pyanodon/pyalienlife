@@ -1,6 +1,3 @@
-if script.active_mods["debugadapter"] then
-	require("__debugadapter__/debugadapter.lua")
-end
 
 local TRlist_og = require("scripts/techswap")
 local TRlist = {}
