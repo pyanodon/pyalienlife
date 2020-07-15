@@ -28,14 +28,13 @@ fun.autorecipes {
 				{
 					{name='cagedulric',amount ='R'},
 					{name='kmautsration',amount =1},
-					{name='cage',amount="+1"},
 				},
 			results =
 				{
 					{name='cagedkmauts',amount ='R'},
-					{name='cagedkmauts', probability = 0.9,amount_min =2,amount_max =2}, --1.8
+					{name='cagedkmauts', probability = 0.9,amount_min =1,amount_max =1},
 				},
-			crafting_speed = 130,
+			crafting_speed = 140,
 			tech = 'kmauts-mk02'
 		},
 		--rennea
@@ -44,13 +43,12 @@ fun.autorecipes {
 				{
 					{name='rennea',amount = 3},
 					{name='bedding',amount = 1},
-					{name='cage',amount="+1"},
 				},
 			results =
 				{
-					{name='cagedkmauts', probability = 0.95,amount_min =2,amount_max =3},  --2.375
+
 				},
-			crafting_speed = 120,
+			crafting_speed = 130,
 			tech = 'kmauts-mk03'
 		},
 		--tuuphra
@@ -58,41 +56,40 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='tuuphra',amount = 10},
-					{name='cage',amount="+1"},
 				},
 			results =
 				{
-					{name='cagedkmauts', probability = 0.75,amount_min =3,amount_max =4},    --2.625
+
 				},
-			crafting_speed = 110,
+			crafting_speed = 120,
 			tech = 'kmauts-mk04'
 		},
 		--gh
 		{
 			ingredients =
 				{
-					{name='gh',amount =2},
+					{name='gh',amount =1},
 
 				},
 			results =
 				{
-					{name='cagedkmauts', probability = 0.8,amount_min =3,amount_max =4},   --2.8
+
 				},
-			crafting_speed = 25,
+			crafting_speed = 30,
 			tech = 'growth-hormone'
 		},
 		--antiviral and gh
 		{
 			ingredients =
 				{
-					{name='antiviral',amount =2},
+					{name='antiviral',amount =1},
 				},
 			results =
 				{
 					{name='cagedkmauts', amount ='R'},
-					{name='cagedkmauts', probability = 1,amount_min =3,amount_max =3},
+					{name='cagedkmauts', probability = 1,amount_min =1,amount_max =2},
 				},
-			crafting_speed = 25,
+			crafting_speed = 30,
 			tech = 'antiviral'
 		},
 		--antiviral
@@ -106,20 +103,20 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 80,
+			crafting_speed = 70,
 			tech = 'antiviral'
 		},
 		--nanochondria
 		{
 			ingredients =
 				{
-					{name='nanochondria',amount =2},
+					{name='nanochondria',amount =1},
 					--{name='antiviral',amount ='R'},
 				},
 			results =
 				{
 					{name='cagedkmauts', amount ='R'},
-					{name='braincagedkmauts',3},
+					{name='braincagedkmauts',1},
 				},
 			crafting_speed = 70,
 			tech = 'nanochondria'
@@ -129,13 +126,13 @@ fun.autorecipes {
 			ingredients =
 				{
 					--{name='nanochondria',amount =1},
-					{name='gh',amount =2},
+					{name='gh',amount =1},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 25,
+			crafting_speed = 30,
 			tech = 'nanochondria'
 		},
 		--rna anabolic
@@ -144,14 +141,14 @@ fun.autorecipes {
 				{
 					{name='gh',amount ='R'},
 					{name='nanochondria',amount ='R'},
-					{name='anabolicrna',amount =2},
+					{name='anabolicrna',amount =1},
 				},
 			results =
 				{
 					{name='braincagedkmauts', amount ='R'},
-					{name='meatcagedkmauts', 3},
+					{name='meatcagedkmauts', 1},
 				},
-			crafting_speed = 70,
+			crafting_speed = 80,
 			tech = 'anabolic-rna'
 		},
 		--rna anabolic and gh
@@ -159,13 +156,13 @@ fun.autorecipes {
 			ingredients =
 				{
 					--{name='nanochondria',amount =1},
-					{name='gh',amount =2},
+					{name='gh',amount =1},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 25,
+			crafting_speed = 30,
 			tech = 'anabolic-rna'
 		},
 		--antitumor
@@ -174,14 +171,14 @@ fun.autorecipes {
 				{
 					{name='gh',amount ='R'},
 					{name='anabolicrna',amount ='R'},
-					{name='antitumor',amount =2},
+					{name='antitumor',amount =1},
 				},
 			results =
 				{
 					{name='meatcagedkmauts', amount ='R'},
-					{name='gutscagedkmauts', 3},
+					{name='gutscagedkmauts', 1},
 				},
-			crafting_speed = 70,
+			crafting_speed = 80,
 			tech = 'antitumor'
 		},
 		--antitumor and gh
@@ -189,13 +186,13 @@ fun.autorecipes {
 			ingredients =
 				{
 					--{name='nanochondria',amount =1},
-					{name='gh',amount =2},
+					{name='gh',amount =1},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 25,
+			crafting_speed = 30,
 			tech = 'antitumor'
 		},
 		--Recombinant Ery
@@ -204,27 +201,27 @@ fun.autorecipes {
 				{
 					{name='gh',amount ='R'},
 					{name='antitumor',amount ='R'},
-					{name='recombinantery',amount =2},
+					{name='recombinantery',amount =1},
 				},
 			results =
 				{
 					{name='gutscagedkmauts', amount ='R'},
-					{name='bloodcagedkmauts', 3},
+					{name='bloodcagedkmauts', 1},
 				},
-			crafting_speed = 70,
+			crafting_speed = 80,
 			tech = 'recombinant-ery'
 		},
 		--Recombinant Ery and gh
 		{
 			ingredients =
 				{
-					{name='gh',amount =2},
+					{name='gh',amount =1},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 25,
+			crafting_speed = 30,
 			tech = 'recombinant-ery'
         },
 		--orexigenic
@@ -233,12 +230,12 @@ fun.autorecipes {
 				{
 					{name='gh',amount ='R'},
 					{name='recombinantery',amount ='R'},
-					{name='orexigenic',amount =2},
+					{name='orexigenic',amount =1},
 				},
 			results =
 				{
 					{name='bloodcagedkmauts', amount ='R'},
-					{name='fatcagedkmauts', 3},
+					{name='fatcagedkmauts', 1},
 				},
 			crafting_speed = 70,
 			tech = 'orexigenic'
@@ -247,13 +244,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =2},
+					{name='gh',amount =1},
 				},
 			results =
 				{
 
 				},
-			crafting_speed = 25,
+			crafting_speed = 30,
 			tech = 'orexigenic'
 		},
 	}
@@ -295,7 +292,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='kmautscub', amount ="+5"},
+
 				},
 			crafting_speed = 60,
 			tech = 'assisted-embryology'
@@ -304,11 +301,11 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='rennea',amount = 5},
+					{name='rennea',amount = 10},
 				},
 			results =
 				{
-					{name='kmautscub', amount ="+1"},
+
 				},
 			crafting_speed = 55,
 			tech = 'assisted-embryology'
@@ -321,7 +318,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='kmautscub', amount ="+2"},
+
 				},
 			crafting_speed = 50,
 			tech = 'assisted-embryology'
@@ -333,16 +330,16 @@ fun.autorecipes {
 					{name='tuuphra',amount = 'R'},
 					{name='rennea',amount = 'R'},
 					{name='kmautsration',amount = 'R'},
-					{name='cagedulric',amount =4},
-					{name='pheromones',amount =2},
-                    {name='rennea',amount =15},
+					{name='cagedulric',amount =1},
+					{name='pheromones',amount =1},
+                    {name='rennea',amount =5},
 					--{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
 					--{name='bedding',amount = 1},
 				},
 			results =
 				{
 					{name='kmautscub',amount = 'R'},
-					{name='kmautscub', amount =6},
+					{name='kmautscub', amount =2},
 				},
 			crafting_speed = 60,
 			tech = 'pheromones'
@@ -357,7 +354,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='kmautscub', amount ="+6"},
+
 				},
 			crafting_speed = 50,
 			tech = 'pheromones'
@@ -370,7 +367,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='kmautscub', amount ="+1"},
+
 				},
 			crafting_speed = 40,
 			tech = 'pheromones'
@@ -383,7 +380,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='kmautscub', amount ="+2"},
+
 				},
 			crafting_speed = 35,
 			tech = 'pheromones'

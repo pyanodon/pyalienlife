@@ -44,12 +44,12 @@ RECIPE {
     energy_required = 15,
     ingredients = {
         {type = 'item', name = 'sodium-alginate', amount = 1},
-        {type = 'item', name = 'chitosan', amount = 1},             -- not sure what this is will return here
+        {type = 'item', name = 'chitosan', amount = 1},             -- very expensive
         {type = 'fluid', name = 'boric-acid', amount = 200},
 
     },
     results = {
-        {type = 'item', name = 'bio-scafold', amount = 3},
+        {type = 'item', name = 'bio-scafold', amount = 8},
     },
     --main_product = "cocoon",
 }:add_unlock("organ-printing-mk02")
@@ -769,15 +769,15 @@ RECIPE {
     name = 'print-bones-immunosupressants',
     category = 'bio-printer',
     enabled = false,
-    energy_required = 10,
+    energy_required = 15,
     ingredients = {
-        {type = 'fluid', name = 'psc', amount = 10},
-        {type = 'fluid', name = 'fetal-serum', amount = 30},
+        {type = 'fluid', name = 'psc', amount = 40},
+        {type = 'fluid', name = 'fetal-serum', amount = 20},
         {type = 'item', name = 'bio-scafold', amount = 1},
         {type = 'item', name = 'immunosupressants', amount = 1},
     },
     results = {
-        {type = 'item', name = 'bones', amount = 30},
+        {type = 'item', name = 'bones', amount = 15},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk03")
@@ -787,15 +787,15 @@ RECIPE {
     name = 'print-meat-immunosupressants',
     category = 'bio-printer',
     enabled = false,
-    energy_required = 10,
+    energy_required = 15,
     ingredients = {
-        {type = 'fluid', name = 'psc', amount = 10},
-        {type = 'fluid', name = 'fetal-serum', amount = 30},
+        {type = 'fluid', name = 'psc', amount = 40},
+        {type = 'fluid', name = 'fetal-serum', amount = 20},
         {type = 'item', name = 'bio-scafold', amount = 1},
         {type = 'item', name = 'immunosupressants', amount = 1},
     },
     results = {
-        {type = 'item', name = 'meat', amount = 30},
+        {type = 'item', name = 'meat', amount = 21},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk03")
@@ -805,15 +805,15 @@ RECIPE {
     name = 'print-fat-immunosupressants',
     category = 'bio-printer',
     enabled = false,
-    energy_required = 10,
+    energy_required = 15,
     ingredients = {
-        {type = 'fluid', name = 'psc', amount = 10},
-        {type = 'fluid', name = 'fetal-serum', amount = 30},
+        {type = 'fluid', name = 'psc', amount = 30},
+        {type = 'fluid', name = 'fetal-serum', amount = 20},
         {type = 'item', name = 'bio-scafold', amount = 1},
         {type = 'item', name = 'immunosupressants', amount = 1},
     },
     results = {
-        {type = 'item', name = 'mukmoux-fat', amount = 30},
+        {type = 'item', name = 'mukmoux-fat', amount = 25},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk03")
@@ -823,15 +823,15 @@ RECIPE {
     name = 'print-brain-immunosupressants',
     category = 'bio-printer',
     enabled = false,
-    energy_required = 10,
+    energy_required = 15,
     ingredients = {
-        {type = 'fluid', name = 'psc', amount = 20},
-        {type = 'fluid', name = 'fetal-serum', amount = 5},
+        {type = 'fluid', name = 'psc', amount = 50},
+        {type = 'fluid', name = 'fetal-serum', amount = 40},
         {type = 'item', name = 'bio-scafold', amount = 1},
         {type = 'item', name = 'immunosupressants', amount = 1},
     },
     results = {
-        {type = 'item', name = 'brain', amount = 15},
+        {type = 'item', name = 'brain', amount = 13},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk03")
@@ -841,15 +841,15 @@ RECIPE {
     name = 'print-skin-immunosupressants',
     category = 'bio-printer',
     enabled = false,
-    energy_required = 10,
+    energy_required = 15,
     ingredients = {
-        {type = 'fluid', name = 'psc', amount = 10},
-        {type = 'fluid', name = 'fetal-serum', amount = 30},
+        {type = 'fluid', name = 'psc', amount = 40},
+        {type = 'fluid', name = 'fetal-serum', amount = 40},
         {type = 'item', name = 'bio-scafold', amount = 1},
         {type = 'item', name = 'immunosupressants', amount = 1},
     },
     results = {
-        {type = 'item', name = 'skin', amount = 30},
+        {type = 'item', name = 'skin', amount = 25},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk03")
@@ -859,18 +859,20 @@ RECIPE {
     name = 'print-guts-immunosupressants',
     category = 'bio-printer',
     enabled = false,
-    energy_required = 10,
+    energy_required = 15,
     ingredients = {
-        {type = 'fluid', name = 'psc', amount = 10},
-        {type = 'fluid', name = 'fetal-serum', amount = 30},
+        {type = 'fluid', name = 'psc', amount = 40},
+        {type = 'fluid', name = 'fetal-serum', amount = 40},
         {type = 'item', name = 'bio-scafold', amount = 1},
         {type = 'item', name = 'immunosupressants', amount = 1},
     },
     results = {
-        {type = 'item', name = 'guts', amount = 30},
+        {type = 'item', name = 'guts', amount = 35},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk03")
+
+
 
 
 ------------------------------------SPECIAL ORGAN PRINTING with FETAL SERUM--------------------------

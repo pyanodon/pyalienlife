@@ -361,13 +361,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    --{name='woodseeds',amount ='R'},
-                    --{name='fawogae',amount ='R'},
+
 					{name='yotoileaves',amount =10},
 				},
 			results =
 				{
-
+					{name='scrondrixcub',amount = '+1'},
 				},
 			crafting_speed = 120,
 			tech = 'assisted-embryology'
@@ -376,7 +375,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='salt',amount = 15},
+					{name='salt',amount = 5},
 				},
 			results =
 				{
@@ -389,11 +388,11 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount = 20},
+					{name='rawfiber',amount = 5},
 				},
 			results =
 				{
-
+					{name='scrondrixcub',amount = '+2'},
 				},
 			crafting_speed = 100,
 			tech = 'assisted-embryology'
@@ -402,12 +401,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='navens',amount =7},
+					{name='navens',amount =8},
 
 				},
 			results =
 				{
-
+					{name='scrondrixcub',amount = '+4'},
 				},
 			crafting_speed = 100,
 			tech = 'assisted-embryology'
@@ -429,7 +428,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='scrondrixcub',amount = 'R'},
-					{name='scrondrixcub', amount =5},
+					{name='scrondrixcub', amount =8},
 				},
 			crafting_speed = 140,
 			tech = 'pheromones'
@@ -444,16 +443,16 @@ fun.autorecipes {
 				},
 			results =
 				{
-
+					{name='scrondrixcub', amount ='+1'},
 				},
-			crafting_speed = 6120,
+			crafting_speed = 120,
 			tech = 'pheromones'
 		},
 		--salt
 		{
 			ingredients =
 				{
-					{name='salt',amount = 15},
+					{name='salt',amount = 5},
 				},
 			results =
 				{
@@ -470,7 +469,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-
+					{name='scrondrixcub', amount ='+2'},
 				},
 			crafting_speed =100,
 			tech = 'pheromones'
@@ -484,7 +483,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-
+					{name='scrondrixcub', amount ='+2'},
 				},
 			crafting_speed = 100,
 			tech = 'pheromones'
