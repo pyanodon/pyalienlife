@@ -49,13 +49,13 @@ ENTITY {
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"bio-printer"},
-    crafting_speed = 1,
+    crafting_speed = 3,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
         emissions_per_minute = 0.5,
     },
-    energy_usage = "900kW",
+    energy_usage = "9000kW",
     ingredient_count = 50,
     fluid_boxes = {
         --1
