@@ -1841,7 +1841,7 @@ RECIPE {
         {type = 'item', name = 'plastic-bar', amount = 20},
     },
     --main_product = "casein-pulp-01",
-}:add_unlock("korlex"):add_ingredient({type = "fluid", name = "hot-air", amount = 100})
+}:add_unlock("korlex"):add_ingredient({type = "fluid", name = "hot-air", amount = 25})
 
 RECIPE {
     type = 'recipe',
