@@ -58,7 +58,7 @@ RECIPE {
     energy_required = 135,
     ingredients = {
         {type = 'item', name = 'cottongut', amount = 8},
-        {type = 'item', name = 'paragen', amount = 1},
+        {type = 'item', name = 'paragen', amount = 3},
         },
     results = {
         {type = 'item', name = 'logistic-science-pack', amount = 50, probability = 0.1},
@@ -78,7 +78,7 @@ RECIPE {
     energy_required = 135,
     ingredients = {
         {type = 'item', name = 'cottongut', amount = 14},
-        {type = 'item', name = 'paragen', amount = 1},
+        {type = 'item', name = 'paragen', amount = 4},
         },
     results = {
         {type = 'item', name = 'logistic-science-pack', amount = 75, probability = 0.1},
@@ -98,7 +98,7 @@ RECIPE {
     energy_required = 135,
     ingredients = {
         {type = 'item', name = 'cottongut', amount = 20},
-        {type = 'item', name = 'paragen', amount = 1},
+        {type = 'item', name = 'paragen', amount = 6},
         },
     results = {
         {type = 'item', name = 'logistic-science-pack', amount = 100, probability = 0.1},
@@ -121,7 +121,7 @@ RECIPE {
     energy_required = 135,
     ingredients = {
         {type = 'item', name = 'cottongut', amount = 60},
-        {type = 'item', name = 'paragen', amount = 1},
+        {type = 'item', name = 'paragen', amount = 10},
         },
     results = {
         {type = 'item', name = 'logistic-science-pack', amount = 200, probability = 0.1},
