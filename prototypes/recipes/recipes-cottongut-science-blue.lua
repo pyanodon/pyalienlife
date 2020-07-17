@@ -63,7 +63,7 @@ RECIPE {
     energy_required = 135,
     ingredients = {
         {type = 'item', name = 'cottongut', amount = 25},
-        {type = 'item', name = 'negasium', amount = 1},
+        {type = 'item', name = 'negasium', amount = 2},
         },
     results = {
         {type = 'item', name = 'chemical-science-pack', amount = 50, probability = 0.1},
@@ -83,7 +83,7 @@ RECIPE {
     energy_required = 135,
     ingredients = {
         {type = 'item', name = 'cottongut', amount = 60},
-        {type = 'item', name = 'negasium', amount = 1},
+        {type = 'item', name = 'negasium', amount = 5},
         },
     results = {
         {type = 'item', name = 'chemical-science-pack', amount = 75, probability = 0.1},
@@ -103,7 +103,7 @@ RECIPE {
     energy_required = 135,
     ingredients = {
         {type = 'item', name = 'cottongut', amount = 100},
-        {type = 'item', name = 'negasium', amount = 1},
+        {type = 'item', name = 'negasium', amount = 8},
         },
     results = {
         {type = 'item', name = 'chemical-science-pack', amount = 100, probability = 0.1},
