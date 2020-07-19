@@ -1569,9 +1569,25 @@ animations =
     {
       layers =
       {
-        character_animations.level1.idle,
-        character_animations.level1.idle_mask,
-        character_animations.level1.idle_shadow
+        {
+          filenames =
+            {
+              "__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-1.png",
+              "__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-2.png",
+              "__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-3.png",
+              "__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-4.png",
+            },
+          slice = 10,
+          lines_per_file = 10,
+          line_length = 10,
+          width = 160,
+          height = 192,
+          frame_count = 50,
+          direction_count = 8,
+          animation_speed = 0.4,
+          shift = util.mul_shift(util.by_pixel(-0, -0)),
+          scale = 0.7,
+          },
       }
     },
     idle_with_gun =
