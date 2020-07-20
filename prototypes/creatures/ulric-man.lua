@@ -1557,7 +1557,7 @@ tool_attack_result =
     target_effects =
     {
       type = "damage",
-      damage = { amount = 8 , type = "physical"}
+      damage = { amount = 16 , type = "physical"}
     }
   }
 },
@@ -1723,8 +1723,8 @@ light =
 {
   {
     minimum_darkness = 0.3,
-    intensity = 0.4,
-    size = 25,
+    intensity = 0.5,
+    size = 40,
     color = {r=1.0, g=1.0, b=1.0}
   },
   {
