@@ -2249,3 +2249,31 @@ RECIPE {
     },
     --main_product = "chloral",
 }:add_unlock("space-program-mk01")
+
+RECIPE {
+    type = 'recipe',
+    name = 'ulric-infusion',
+    category = 'genlab',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'fluid', name = 'xenogenic-cells', amount = 300},
+        {type = 'fluid', name = 'flavonoids', amount = 100},
+        {type = 'item', name = 'neuroprocessor', amount = 1},
+        {type = 'item', name = 'ulric-codex', amount = 5},
+        {type = 'item', name = 'earth-horse-sample', amount = 5},
+        {type = 'item', name = 'cdna', amount = 5},
+        {type = 'item', name = 'retrovirus', amount = 2},
+        {type = 'item', name = 'paragen', amount = 10},
+        {type = 'item', name = 'lab-instrument', amount = 5},
+        {type = 'item', name = 'flask', amount = 15},
+        {type = 'item', name = 'meat', amount = 30},
+        {type = 'item', name = 'bones', amount = 15},
+        {type = 'item', name = 'brain', amount = 1},
+        {type = 'item', name = 'skin', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'ulric-infusion', amount = 1},
+    },
+    --main_product = "chloral",
+}:add_unlock("symbiosis-mk01")
