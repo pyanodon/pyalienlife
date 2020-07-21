@@ -5195,6 +5195,18 @@ ITEM {
     order = "d",
     stack_size = 20
 }
+
+ITEM {
+    type = "item",
+    name = "ulric-infusion",
+    icon = "__pyalienlifegraphics2__/graphics/icons/ulric-infusion.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "d",
+    stack_size = 20
+}
+
 ------RULES-----
 
 ---CREATURES---
