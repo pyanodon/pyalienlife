@@ -113,37 +113,6 @@ local tech_upgrades =
                     'parthenogenesis'
                 }
             },
-        example_4 =
-            {
-            technology =
-                {
-                name = "test-4",
-                icon = "__pyalienlifegraphics__/graphics/technology/adv-rendering.png",
-                icon_size = 128,
-                order = "c-a",
-                prerequisites = {"biotech-mk02","rendering"},
-                unit = {
-                    count = 160,
-                    ingredients = {
-                        {"automation-science-pack", 1},
-                        {"logistic-science-pack", 1},
-                    },
-                    time = 45
-                    }
-                },
-            entities = {'automated-factory-mk03'},
-            upgrades =
-                {
-                    consumption = 10,
-                    speed = 10,
-                    productivity = 10,
-                    pollution = 10
-                },
-            techs_to_lock =
-                {
-                    'test-1'
-                }
-            }
     }
 
 return(tech_upgrades)
