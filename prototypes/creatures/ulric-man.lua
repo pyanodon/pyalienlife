@@ -1503,7 +1503,6 @@ data:extend(
 {
 type = "character",
 name = 'character',
---name = "digosaurus",
 icon = "__base__/graphics/icons/character.png",
 icon_size = 64, icon_mipmaps = 4,
 flags = {"placeable-off-grid", "breaths-air", "not-repairable", "not-on-map", "not-flammable"},
