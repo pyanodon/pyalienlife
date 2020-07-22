@@ -1941,7 +1941,7 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = 'item', name = 'biomass', amount = 20},
+        {type = 'item', name = 'biomass', amount = 50},
     },
     results = {
         {type = 'item', name = 'raw-coal', amount = 4},
@@ -1980,6 +1980,7 @@ RECIPE {
     --main_product = "casein-pulp-01",
 }:add_unlock("compost"):change_category('gas-refinery')
 
+--[[
 RECIPE {
     type = 'recipe',
     name = 'biomass-cooking-2',
@@ -1994,6 +1995,8 @@ RECIPE {
     },
     --main_product = "casein-pulp-01",
 }:add_unlock("compost")
+
+]]--
 
 --if not mods['pyhightech'] then
 
