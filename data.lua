@@ -104,6 +104,7 @@ require('prototypes/technologies/laika')
 require('prototypes/technologies/space-program')
 require('prototypes/technologies/pesticides')
 require('prototypes/technologies/symbiosis')
+require('prototypes/technologies/bioprocessing')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")

@@ -275,6 +275,8 @@ RECIPE('kondo-core'):add_ingredient({type = 'item', name = 'nanofibrils', amount
 RECIPE('biobattery'):add_ingredient({type = "item", name = "re-magnet", amount = 10}):add_ingredient({type = "item", name = "nylon", amount = 5})
 RECIPE('space-science-pack'):add_ingredient({type = "item", name = "antimatter", amount = 1})
 RECIPE('bose-einstein-superfluid'):add_ingredient({type = "fluid", name = "deuterium", amount = 10})
+RECIPE('green-sic'):add_ingredient({type = 'item', name = 'graphite', amount = 3}):remove_unlock('bioprocessing'):add_unlock('basic-electronics')
+RECIPE('sic'):remove_unlock('bioprocessing'):add_unlock('basic-electronics')
 if mods['pyhightech'] then
 	data.raw.item['dried-meat'] = nil
     RECIPE('dried-meat'):remove_unlock('advanced-rendering'):change_category('smelting')
@@ -1262,6 +1264,49 @@ RECIPE {
     },
     --main_product = "mcb",
 }:add_unlock("pesticides-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'nisi',
+    category = 'chemical',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'fluid', name = 'vacuum', amount = 300},
+        {type = 'item', name = 'nickel-plate', amount = 1},
+        {type = 'item', name = 'silicon', amount = 2},
+        {type = 'item', name = 'cobalt-extract', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'nisi', amount = 1},
+        {type = "item", name = "cobalt-extract", amount = 2, probability = 0.5},
+    },
+    main_product = "nisi",
+}:add_unlock("basic-electronics"):change_category('gas-separator')
+
+RECIPE {
+    type = 'recipe',
+    name = 'mosfet',
+    category = 'electronic',
+    enabled = false,
+    energy_required = 6,
+    ingredients = {
+        {type = 'fluid', name = 'al-pulp-01', amount = 15},
+        {type = 'fluid', name = 'sulfuric-acid', amount = 100},
+        {type = 'item', name = 'aluminium-plate', amount = 1},
+        {type = 'item', name = 'reo', amount = 5},
+        {type = 'item', name = 'sic', amount = 3},
+        {type = 'item', name = 'plastic-bar', amount = 3},
+        {type = 'item', name = 'nisi', amount = 2},
+        {type = 'item', name = 'heavy-n', amount = 4},
+        {type = 'item', name = 'light-n', amount = 4},
+        {type = 'item', name = 'p-dope', amount = 4},
+    },
+    results = {
+        {type = 'item', name = 'mosfet', amount = 4},
+    },
+    --main_product = "chloral",
+}:add_unlock("basic-electronics")
 
 RECIPE('rennea-mk02-breeding'):replace_ingredient("sulfuric-acid-barrel", "phosphoric-acid-barrel")
 
