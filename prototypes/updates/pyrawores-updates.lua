@@ -120,3 +120,37 @@ RECIPE {
     subgroup = "py-rawores-fluids",
     order = "cab"
 }:add_unlock("quartz-mk01")
+
+RECIPE {
+    type = "recipe",
+    name = "drill-head-6",
+    category = "crafting",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "steel-plate", amount = 4},
+        {type = "item", name = "sic", amount = 1},
+        {type = "item", name = "titanium-plate", amount = 4},
+        {type = "item", name = "niobium-plate", amount = 3},
+    },
+    results = {
+        {type = "item", name = "drill-head", amount = 8}
+    }
+}:add_unlock("iron-mk02")
+
+RECIPE {
+    type = "recipe",
+    name = "drill-head-7",
+    category = "crafting",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "steel-plate", amount = 8},
+        {type = "item", name = "titanium-plate", amount = 4},
+        {type = "item", name = "aluminium-plate", amount = 6},
+        {type = "item", name = "sic", amount = 1},
+    },
+    results = {
+        {type = "item", name = "drill-head", amount = 7}
+    }
+}:add_unlock("coal-processing-2")

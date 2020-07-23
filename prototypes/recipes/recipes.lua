@@ -2283,49 +2283,6 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'nisi',
-    category = 'chemical',
-    enabled = false,
-    energy_required = 5,
-    ingredients = {
-        {type = 'fluid', name = 'vacuum', amount = 300},
-        {type = 'item', name = 'nickel-plate', amount = 1},
-        {type = 'item', name = 'silicon', amount = 2},
-        {type = 'item', name = 'cobalt-extract', amount = 2},
-    },
-    results = {
-        {type = 'item', name = 'nisi', amount = 1},
-        {type = "item", name = "cobalt-extract", amount = 2, probability = 0.5},
-    },
-    main_product = "nisi",
-}:add_unlock("basic-electronics"):change_category('gas-separator')
-
-RECIPE {
-    type = 'recipe',
-    name = 'mosfet',
-    category = 'electronic',
-    enabled = false,
-    energy_required = 6,
-    ingredients = {
-        {type = 'fluid', name = 'al-pulp-01', amount = 15},
-        {type = 'fluid', name = 'sulfuric-acid', amount = 100},
-        {type = 'item', name = 'aluminium-plate', amount = 1},
-        {type = 'item', name = 'reo', amount = 5},
-        {type = 'item', name = 'sic', amount = 3},
-        {type = 'item', name = 'plastic-bar', amount = 3},
-        {type = 'item', name = 'nisi', amount = 2},
-        {type = 'item', name = 'heavy-n', amount = 4},
-        {type = 'item', name = 'light-n', amount = 4},
-        {type = 'item', name = 'p-dope', amount = 4},
-    },
-    results = {
-        {type = 'item', name = 'mosfet', amount = 4},
-    },
-    --main_product = "chloral",
-}:add_unlock("basic-electronics")
-
-RECIPE {
-    type = 'recipe',
     name = 'quartz-tube',
     category = 'glassworks',
     enabled = false,
@@ -2339,3 +2296,180 @@ RECIPE {
     },
     --main_product = "chloral",
 }:add_unlock("quartz-mk01"):add_ingredient({type = 'item', name = 'reo', amount = 5})
+
+RECIPE {
+    type = 'recipe',
+    name = 'powedered-biomass',
+    category = 'secondary-crusher',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'biomass', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'powdered-biomass', amount = 10},
+    },
+    --main_product = "chloral",
+}:add_unlock("bioprocessing"):change_category('pulp')
+
+RECIPE {
+    type = 'recipe',
+    name = 'fine-powdered-biomass',
+    category = 'screener',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'powdered-biomass', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'fine-powdered-biomass', amount = 6},
+        {type = "item", name = "powdered-biomass", amount = 2, probability = 0.2},
+        {type = "item", name = "biomass", amount = 2, probability = 0.1},
+    },
+    main_product = "fine-powdered-biomass",
+}:add_unlock("bioprocessing")
+
+RECIPE {
+    type = 'recipe',
+    name = 'dried-biomass',
+    category = 'evaporator',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'fine-powdered-biomass', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'dried-biomass', amount = 10},
+    },
+    --main_product = "chloral",
+}:add_unlock("bioprocessing")
+
+RECIPE {
+    type = 'recipe',
+    name = 'green-sic',
+    category = 'eaf',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'powdered-quartz', amount = 4},
+        {type = 'item', name = 'coke', amount = 6},
+    },
+    results = {
+        {type = 'item', name = 'green-sic', amount = 1},
+    },
+    --main_product = "chloral",
+}:add_unlock("bioprocessing")
+
+RECIPE {
+    type = 'recipe',
+    name = 'sic',
+    category = 'secondary-crusher',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'green-sic', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'sic', amount = 1},
+    },
+    --main_product = "chloral",
+    icon = "__pyalienlifegraphics__/graphics/icons/green-sic-recrush.png",
+	icon_size = 64,
+    subgroup = "py-alienlife-items",
+    order = "h"
+}:add_unlock("bioprocessing")
+
+RECIPE {
+    type = 'recipe',
+    name = 'bio-oil-1',
+    category = 'distilator',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'fluid', name = 'bio-oil', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'raw-coal', amount = 10},
+        {type = 'item', name = 'ash', amount = 1},
+        {type = 'fluid', name = 'condensates', amount = 80},
+    },
+    main_product = "condensates",
+}:add_unlock("bioprocessing")
+
+RECIPE {
+    type = 'recipe',
+    name = 'bio-oil-2',
+    category = 'lor',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'fluid', name = 'bio-oil', amount = 100},
+    },
+    results = {
+        {type = 'fluid', name = 'condensates', amount = 100},
+    },
+    --main_product = "chloral",
+}:add_unlock("light-oil-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'bio-oil-3',
+    category = 'reformer',
+    enabled = false,
+    energy_required = 6,
+    ingredients = {
+        {type = 'fluid', name = 'bio-oil', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'raw-coal', amount = 15},
+    },
+    --main_product = "chloral",
+}:add_unlock("coal-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'bio-oil-4',
+    category = 'gas-refinery',
+    enabled = false,
+    energy_required = 6,
+    ingredients = {
+        {type = 'fluid', name = 'bio-oil', amount = 100},
+    },
+    results = {
+        {type = 'fluid', name = 'natural-gas', amount = 90},
+        {type = 'fluid', name = 'petroleum-gas', amount = 10},
+    },
+    main_product = "natural-gas",
+}:add_unlock("petroleum-gas-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'bio-oil-5',
+    category = 'gas-refinery',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'fluid', name = 'bio-oil', amount = 100},
+        {type = 'item', name = 'nexelit-plate', amount = 1},
+    },
+    results = {
+        {type = 'fluid', name = 'natural-gas', amount = 120},
+    },
+    --main_product = "chloral",
+}:add_unlock("petroleum-gas-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'bio-oil-6',
+    category = 'gas-refinery',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'fluid', name = 'bio-oil', amount = 100},
+        {type = 'item', name = 'nickel-plate', amount = 2},
+    },
+    results = {
+        {type = 'fluid', name = 'refsyngas', amount = 120},
+    },
+    --main_product = "chloral",
+}:add_unlock("petroleum-gas-mk02")
