@@ -2280,3 +2280,62 @@ RECIPE {
     },
     --main_product = "chloral",
 }:add_unlock("symbiosis-mk01")
+
+RECIPE {
+    type = 'recipe',
+    name = 'nisi',
+    category = 'chemical',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'fluid', name = 'vacuum', amount = 300},
+        {type = 'item', name = 'nickel-plate', amount = 1},
+        {type = 'item', name = 'silicon', amount = 2},
+        {type = 'item', name = 'cobalt-extract', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'nisi', amount = 1},
+        {type = "item", name = "cobalt-extract", amount = 2, probability = 0.5},
+    },
+    main_product = "nisi",
+}:add_unlock("basic-electronics"):change_category('gas-separator')
+
+RECIPE {
+    type = 'recipe',
+    name = 'mosfet',
+    category = 'electronic',
+    enabled = false,
+    energy_required = 6,
+    ingredients = {
+        {type = 'fluid', name = 'al-pulp-01', amount = 15},
+        {type = 'fluid', name = 'sulfuric-acid', amount = 100},
+        {type = 'item', name = 'aluminium-plate', amount = 1},
+        {type = 'item', name = 'reo', amount = 5},
+        {type = 'item', name = 'sic', amount = 3},
+        {type = 'item', name = 'plastic-bar', amount = 3},
+        {type = 'item', name = 'nisi', amount = 2},
+        {type = 'item', name = 'heavy-n', amount = 4},
+        {type = 'item', name = 'light-n', amount = 4},
+        {type = 'item', name = 'p-dope', amount = 4},
+    },
+    results = {
+        {type = 'item', name = 'mosfet', amount = 4},
+    },
+    --main_product = "chloral",
+}:add_unlock("basic-electronics")
+
+RECIPE {
+    type = 'recipe',
+    name = 'quartz-tube',
+    category = 'glassworks',
+    enabled = false,
+    energy_required = 6,
+    ingredients = {
+        {type = 'fluid', name = 'molten-glass', amount = 100},
+        {type = 'item', name = 'boron-trioxide', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'quartz-tube', amount = 3},
+    },
+    --main_product = "chloral",
+}:add_unlock("quartz-mk01"):add_ingredient({type = 'item', name = 'reo', amount = 5})

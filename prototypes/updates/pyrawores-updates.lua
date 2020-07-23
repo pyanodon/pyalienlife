@@ -96,3 +96,27 @@ RECIPE {
         {type = "item", name = "fertilizer", amount = 15}
     }
 }:add_unlock("biotech-mk02"):replace_ingredient("manure", "urea")
+
+RECIPE {
+    type = 'recipe',
+    name = 'hydrogen-chloride-2',
+    category = 'chemistry',
+    enabled = false,
+    energy_required = 3,
+    ingredients = {
+        {type = "fluid", name = "hydrogen", amount = 100},
+        {type = "fluid", name = "chlorine", amount = 100},
+        {type = 'item', name = 'quartz-tube', amount = 1},
+        {type = "item", name = "small-lamp", amount = 1}
+    },
+    results = {
+        {type = "fluid", name = "hydrogen-chloride", amount = 100},
+        {type = "item", name = "small-lamp", amount = 1, probability = 0.9},
+        {type = 'item', name = 'quartz-tube', amount = 1},
+    },
+    main_product = "hydrogen-chloride",
+    icon = "__pyraworesgraphics__/graphics/icons/hydrogen-chloride.png",
+    icon_size = 32,
+    subgroup = "py-rawores-fluids",
+    order = "cab"
+}:add_unlock("quartz-mk01")
