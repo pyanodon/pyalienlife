@@ -1442,7 +1442,7 @@ local character_animations =
   },
 }
 
---local character_animations = require ("__base__.prototypes.entity.demo-character-animations")
+
 --[[
 RECIPE{
     type = "recipe",
@@ -1502,7 +1502,8 @@ data:extend(
 --ENTITY {
 {
 type = "character",
-name = 'character',
+--name = 'ulric-man-attack',
+name = "character",
 icon = "__base__/graphics/icons/character.png",
 icon_size = 64, icon_mipmaps = 4,
 flags = {"placeable-off-grid", "breaths-air", "not-repairable", "not-on-map", "not-flammable"},
@@ -1515,7 +1516,7 @@ hit_visualization_box = {{-0.2, -1.1}, {0.2, 0.2}},
 sticker_box = {{-0.2, -1}, {0.2, 0}},
 crafting_categories = {"crafting"},
 mining_categories = {"basic-solid"},
-character_corpse = "character-corpse",
+character_corpse = "ulric-man-corpse",
 inventory_size = 100,
 build_distance = 20,
 drop_item_distance = 20,
@@ -1625,14 +1626,14 @@ animations =
         {
             filenames =
               {
-                "__pyalienlifegraphics3__/graphics/entity/ulric-man/mine-01.png",
-                "__pyalienlifegraphics3__/graphics/entity/ulric-man/mine-02.png",
+                "__pyalienlifegraphics3__/graphics/entity/ulric-man/attack-01.png",
+                "__pyalienlifegraphics3__/graphics/entity/ulric-man/attack-02.png",
               },
             slice = 10,
             lines_per_file = 10,
             line_length = 10,
-            width = 192,
-            height = 192,
+            width = 288,
+            height = 256,
             frame_count = 20,
             direction_count = 8,
             animation_speed = 0.25,
@@ -1642,14 +1643,14 @@ animations =
             {
             filenames =
               {
-                "__pyalienlifegraphics3__/graphics/entity/ulric-man/mine-01-sh.png",
-                "__pyalienlifegraphics3__/graphics/entity/ulric-man/mine-02-sh.png",
+                "__pyalienlifegraphics3__/graphics/entity/ulric-man/attack-01-sh.png",
+                "__pyalienlifegraphics3__/graphics/entity/ulric-man/attack-02-sh.png",
               },
             slice = 10,
             lines_per_file = 10,
             line_length = 10,
-            width = 160,
-            height = 96,
+            width = 320,
+            height = 224,
             frame_count = 20,
             direction_count = 8,
             animation_speed = 0.25,
@@ -1666,13 +1667,6 @@ animations =
         character_animations.level1.running_gun,
         character_animations.level1.running_gun_mask,
         character_animations.level1.running_gun_shadow
-      }
-    },
-    flipped_shadow_running_with_gun =
-    {
-      layers =
-      {
-        character_animations.level1.running_gun_shadow_flipped
       }
     },
     running =

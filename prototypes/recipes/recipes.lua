@@ -2351,11 +2351,11 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'powdered-quartz', amount = 4},
-        {type = 'item', name = 'coke', amount = 6},
+        {type = 'item', name = 'powdered-quartz', amount = 12},
+        {type = 'item', name = 'coke', amount = 18},
     },
     results = {
-        {type = 'item', name = 'green-sic', amount = 1},
+        {type = 'item', name = 'green-sic', amount = 3},
     },
     --main_product = "chloral",
 }:add_unlock("bioprocessing")
@@ -2367,10 +2367,10 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = 'item', name = 'green-sic', amount = 1},
+        {type = 'item', name = 'green-sic', amount = 3},
     },
     results = {
-        {type = 'item', name = 'sic', amount = 1},
+        {type = 'item', name = 'sic', amount = 3},
     },
     --main_product = "chloral",
     icon = "__pyalienlifegraphics__/graphics/icons/green-sic-recrush.png",

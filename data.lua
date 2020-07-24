@@ -365,7 +365,8 @@ require('prototypes/creatures/dingrido')
 require('prototypes/creatures/crawdad')
 require('prototypes/creatures/phadaisus')
 require('prototypes/creatures/ocula')
-require('prototypes/creatures/ulric-man')
+require('prototypes/creatures/ulric-man-mining')
+require('prototypes/creatures/ulric-man-attack')
 --require('prototypes/creatures/clone-1')
 --require('prototypes/creatures/dig-osaurus')
 
@@ -568,6 +569,8 @@ data.raw["utility-constants"].default.main_menu_background_image_location = "__p
 require('prototypes/sprites/sprites')
 --require('prototypes/ores/fake-plants')
 
+data.raw.fluid['bio-oil'].fuel_value = '0.1MJ'
+
 local bio_list = require('prototypes/items/biomass-convertion')
 
 local type
@@ -650,7 +653,7 @@ for i, item in pairs(bio_list) do
             icons =
                 {
                     icon,
-                    {icon = "__pyalienlifegraphics__/graphics/icons/biomass.png", scale = 0.50, shift = {-7.5,-7.5}, icon_size = 32}
+                    {icon = "__pyalienlifegraphics__/graphics/icons/biomass.png", scale = 0.50, shift = {-7.5,-7.5}, icon_size = 64}
                 },
             subgroup = 'py-alienlife-compost',
             order = i,
