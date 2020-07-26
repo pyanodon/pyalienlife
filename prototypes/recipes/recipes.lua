@@ -2304,10 +2304,10 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = 'item', name = 'biomass', amount = 10},
+        {type = 'item', name = 'biomass', amount = 20},
     },
     results = {
-        {type = 'item', name = 'powdered-biomass', amount = 10},
+        {type = 'item', name = 'powdered-biomass', amount = 20},
     },
     --main_product = "chloral",
 }:add_unlock("bioprocessing"):change_category('pulp')
@@ -2319,12 +2319,12 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = 'item', name = 'powdered-biomass', amount = 10},
+        {type = 'item', name = 'powdered-biomass', amount = 30},
     },
     results = {
-        {type = 'item', name = 'fine-powdered-biomass', amount = 6},
-        {type = "item", name = "powdered-biomass", amount = 2, probability = 0.2},
-        {type = "item", name = "biomass", amount = 2, probability = 0.1},
+        {type = 'item', name = 'fine-powdered-biomass', amount = 18},
+        {type = "item", name = "powdered-biomass", amount = 6, probability = 0.2},
+        {type = "item", name = "biomass", amount = 6, probability = 0.1},
     },
     main_product = "fine-powdered-biomass",
 }:add_unlock("bioprocessing")
@@ -2336,10 +2336,10 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'fine-powdered-biomass', amount = 10},
+        {type = 'item', name = 'fine-powdered-biomass', amount = 30},
     },
     results = {
-        {type = 'item', name = 'dried-biomass', amount = 10},
+        {type = 'item', name = 'dried-biomass', amount = 30},
     },
     --main_product = "chloral",
 }:add_unlock("bioprocessing")
@@ -2386,12 +2386,12 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = 'fluid', name = 'bio-oil', amount = 100},
+        {type = 'fluid', name = 'bio-oil', amount = 200},
     },
     results = {
-        {type = 'item', name = 'raw-coal', amount = 10},
-        {type = 'item', name = 'ash', amount = 1},
-        {type = 'fluid', name = 'condensates', amount = 80},
+        {type = 'item', name = 'raw-coal', amount = 20},
+        {type = 'item', name = 'ash', amount = 2},
+        {type = 'fluid', name = 'condensates', amount = 160},
     },
     main_product = "condensates",
 }:add_unlock("bioprocessing")
@@ -2403,12 +2403,14 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = 'fluid', name = 'bio-oil', amount = 100},
+        {type = 'fluid', name = 'bio-oil', amount = 300},
     },
     results = {
-        {type = 'fluid', name = 'condensates', amount = 100},
+        {type = 'fluid', name = 'condensates', amount = 150},
+        {type = 'fluid', name = 'low-distillate', amount = 50},
+        {type = 'fluid', name = 'medium-distillate', amount = 50},
     },
-    --main_product = "chloral",
+    main_product = "condensates",
 }:add_unlock("light-oil-mk02")
 
 RECIPE {

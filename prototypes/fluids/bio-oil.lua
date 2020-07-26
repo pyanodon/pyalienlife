@@ -19,7 +19,7 @@ RECIPE {
     name = 'bio-oil',
     category = 'gasifier',
     enabled = false,
-    energy_required = 10,
+    energy_required = 5,
     ingredients = {
         {type = 'item', name = 'dried-biomass', amount = 10},
         {type = 'item', name = 'sic', amount = 1},
