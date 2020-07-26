@@ -437,7 +437,6 @@ local biomass_convertion =
     ['qaavi'] = {item_amount = 1, biomass_amount = 300},
     ['blood'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'},
     ['tar'] = {item_amount = 20, biomass_amount = 4, type = 'fluid'},
-    ['crude-oil'] = {item_amount = 20, biomass_amount = 5, type = 'fluid'},
     ['aromatics'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'},
     ['glycerol'] = {item_amount = 10, biomass_amount = 10, type = 'fluid'},
     ['oleochemicals'] = {item_amount = 10, biomass_amount = 10, type = 'fluid'},
@@ -465,10 +464,11 @@ local biomass_convertion =
     ['tall-oil'] = {item_amount = 10, biomass_amount = 8, type = 'fluid'},
     ['raw-ralesia-extract'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'},
     ['ralesia-extract'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'},
-    ['condensates'] = {item_amount = 10, biomass_amount = 4, type = 'fluid'},
-    ['condensed-distillate'] = {item_amount = 10, biomass_amount = 4, type = 'fluid'},
-    ['naphtha'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'},
-    ['scrude'] = {item_amount = 10, biomass_amount = 3, type = 'fluid'},
+    --['crude-oil'] = {item_amount = 20, biomass_amount = 5, type = 'fluid'},
+    --['condensates'] = {item_amount = 10, biomass_amount = 4, type = 'fluid'},
+    --['condensed-distillate'] = {item_amount = 10, biomass_amount = 4, type = 'fluid'},
+    --['naphtha'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'},
+    --['scrude'] = {item_amount = 10, biomass_amount = 3, type = 'fluid'},
 }
 
 return(biomass_convertion)

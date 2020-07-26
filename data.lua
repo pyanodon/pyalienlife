@@ -365,8 +365,8 @@ require('prototypes/creatures/dingrido')
 require('prototypes/creatures/crawdad')
 require('prototypes/creatures/phadaisus')
 require('prototypes/creatures/ocula')
-require('prototypes/creatures/ulric-man-mining')
-require('prototypes/creatures/ulric-man-attack')
+--require('prototypes/creatures/ulric-man-mining')
+--require('prototypes/creatures/ulric-man-attack')
 --require('prototypes/creatures/clone-1')
 --require('prototypes/creatures/dig-osaurus')
 
@@ -559,8 +559,8 @@ require('prototypes/ores/yotoi-fruit')
 require('prototypes/ores/bioreserve')
 
 --Tech upgrade stuff--
-require('prototypes/upgrades/hidden-beacon')
-require('prototypes/upgrades/tech-upgrades')
+--require('prototypes/upgrades/hidden-beacon')
+--require('prototypes/upgrades/tech-upgrades')
 
 data.raw["utility-constants"].default.recipe_step_limit = 2000;
 data.raw["utility-constants"].default.main_menu_background_image_location = "__pyalienlifegraphics3__/graphics/pyal-wall.jpg"
@@ -653,7 +653,7 @@ for i, item in pairs(bio_list) do
             icons =
                 {
                     icon,
-                    {icon = "__pyalienlifegraphics__/graphics/icons/biomass.png", scale = 0.50, shift = {-7.5,-7.5}, icon_size = 64}
+                    {icon = "__pyalienlifegraphics__/graphics/icons/biomass.png", scale = 0.25, shift = {-7.5,-7.5}, icon_size = 64}
                 },
             subgroup = 'py-alienlife-compost',
             order = i,
