@@ -219,6 +219,7 @@ log(serpent.block(shrecipes))
 
 local recipes_list =
 	{
+  "mosfet",
 	"moss-farm-mk01",
   "moss-farm-mk02",
   "moss-farm-mk03",

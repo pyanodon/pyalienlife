@@ -25,10 +25,10 @@ local tech_upgrades =
             entities = {'vrauks-paddock-mk01', 'vrauks-paddock-mk02','vrauks-paddock-mk03','vrauks-paddock-mk04'},-- the entities that should be effected by this tech upgrade. can be a single entity or a table of entities
             upgrades = -- the effects the tech will have on the building. 1 = 100%
                 {
-                    consumption = 1.5, --energy usage
-                    speed = 1.2, -- machine speed
-                    productivity = 0.8, -- productivity. and yes i know you`ll never use this but I`ll make sure it works anyway
-                    pollution = 1.2 -- pollution this machine will produce while running
+                    consumption = 0.5, --energy usage
+                    speed = 0.2, -- machine speed
+                    productivity = -0.2, -- productivity. and yes i know you`ll never use this but I`ll make sure it works anyway
+                    pollution = 0.2 -- pollution this machine will produce while running
                 },
             techs_to_lock = -- techs that should be locked and hidden if this tech is researched
                 {
@@ -58,10 +58,10 @@ local tech_upgrades =
             entities = {'vrauks-paddock-mk01', 'vrauks-paddock-mk02','vrauks-paddock-mk03','vrauks-paddock-mk04'},
             upgrades =
                 {
-                    consumption = 0.7,
-                    speed = 0.8,
-                    productivity = 0.9,
-                    pollution = 1.0
+                    consumption = -0.3,
+                    speed = -0.2,
+                    productivity = -0.1,
+                    pollution = 0.0
                 },
             techs_to_lock =
                 {
@@ -102,10 +102,10 @@ local tech_upgrades =
                 },
             upgrades =
                 {
-                    consumption = 1.1,
-                    speed = 0.8,
-                    productivity = 0.8,
-                    pollution = 0.5
+                    consumption = 0.1,
+                    speed = -0.2,
+                    productivity = -0.2,
+                    pollution = -0.5
                 },
             techs_to_lock =
                 {
