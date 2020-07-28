@@ -4837,6 +4837,30 @@ local TRlist =
 					level = 3,
 					},
 				},
+--SAWDUST
+
+				{
+				base_recipe = 'auog-food-01',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'auog-food-01b',
+					tech = 'sawdust',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'auog-food-02',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'auog-food-02b',
+					tech = 'sawdust',
+					unlocked = false,
+					level = 2,
+					},
+				},
 
 --MILK
 
@@ -5003,6 +5027,7 @@ local TRlist =
 				['chromasome-infocrystalization'] = true,
 				['pheromone-transition'] = true,
 				['diversified-mycoaccretion'] = true,
+				['sawdust'] = true,
 
 			},
 	}
