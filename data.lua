@@ -416,6 +416,10 @@ require('prototypes/fluids/pre-pesticide-01')
 require('prototypes/fluids/pre-pesticide-02')
 require('prototypes/fluids/ethyl-mercaptan')
 
+--Tech upgrade stuff--
+require('prototypes/upgrades/hidden-beacon')
+require('prototypes/upgrades/tech-upgrades')
+
 --(( RECIPES ))--
 require('prototypes/items/items')
 require('prototypes/recipes/recipes')
@@ -557,10 +561,6 @@ require('prototypes/ores/grod')
 require('prototypes/ores/yotoi')
 require('prototypes/ores/yotoi-fruit')
 require('prototypes/ores/bioreserve')
-
---Tech upgrade stuff--
-require('prototypes/upgrades/hidden-beacon')
-require('prototypes/upgrades/tech-upgrades')
 
 data.raw["utility-constants"].default.recipe_step_limit = 2000;
 data.raw["utility-constants"].default.main_menu_background_image_location = "__pyalienlifegraphics3__/graphics/pyal-wall.jpg"

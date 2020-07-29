@@ -2238,6 +2238,8 @@ script.on_event(
 					if effect.type == "unlock-recipe" then
 						for _, upgrade in pairs(TRlist.upgrades) do
 							--log(serpent.block(upgrade.base_recipe))
+							--log(serpent.block(upgrade.current_lvl))
+							--log(serpent.block(effect.recipe))
 							if effect.recipe == upgrade.base_recipe then
 								if upgrade.current_lvl > 1 then
 									event.research.force.recipes[upgrade.base_recipe].enabled = false
@@ -2266,11 +2268,12 @@ script.on_event(
 			end
 		end
 		global.TRlist = TRlist
+		--log(serpent.block(global.TRlist))
 
 		if global.tech_upgrades.techs[tech.name] ~= nil then
 
-			log('hit')
-			log(tech.name)
+			--log('hit')
+			--log(tech.name)
 			table.insert(global.tech_upgrades.unlocked_techs, tech.name)
 			for _, tec in pairs(global.tech_upgrades.techs[tech.name].techs_to_lock) do
 				if global.tech_upgrades.disabled_techs[tec] == nil then
@@ -2288,7 +2291,7 @@ script.on_event(
 					global.tech_upgrades.entities_master_list[ent] = tech.name
 				end
 			end
-			log(serpent.block(global.tech_upgrades))
+			--log(serpent.block(global.tech_upgrades))
 		end
 
 	end

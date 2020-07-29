@@ -5028,7 +5028,8 @@ local TRlist =
 				['pheromone-transition'] = true,
 				['diversified-mycoaccretion'] = true,
 				['sawdust'] = true,
-
+				['food-mk01'] = true,
+				['food-mk02'] = true
 			},
 	}
 
