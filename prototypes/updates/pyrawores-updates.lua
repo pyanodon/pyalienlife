@@ -99,7 +99,7 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'hydrogen-chloride-2',
+    name = 'hydrogen-chloride-quartz',
     category = 'chemistry',
     enabled = false,
     energy_required = 3,

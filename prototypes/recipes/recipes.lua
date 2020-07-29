@@ -2351,8 +2351,8 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'powdered-quartz', amount = 12},
-        {type = 'item', name = 'coke', amount = 18},
+        {type = 'item', name = 'powdered-quartz', amount = 8},
+        {type = 'item', name = 'coke', amount = 14},
     },
     results = {
         {type = 'item', name = 'green-sic', amount = 3},
@@ -2370,7 +2370,7 @@ RECIPE {
         {type = 'item', name = 'green-sic', amount = 3},
     },
     results = {
-        {type = 'item', name = 'sic', amount = 3},
+        {type = 'item', name = 'sic', amount = 4},
     },
     --main_product = "chloral",
     icon = "__pyalienlifegraphics__/graphics/icons/green-sic-recrush.png",

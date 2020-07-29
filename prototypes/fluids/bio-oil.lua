@@ -19,16 +19,16 @@ RECIPE {
     name = 'bio-oil',
     category = 'gasifier',
     enabled = false,
-    energy_required = 5,
+    energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'dried-biomass', amount = 10},
-        {type = 'item', name = 'sic', amount = 1},
+        {type = 'item', name = 'dried-biomass', amount = 30},
+        {type = 'item', name = 'sic', amount = 3},
         {type = 'item', name = 'quartz-tube', amount = 1},
-        {type = 'fluid', name = 'nitrogen', amount = 100},
+        {type = 'fluid', name = 'nitrogen', amount = 300},
     },
     results = {
-        {type = 'fluid', name = 'bio-oil', amount = 100},
-        {type = "item", name = "quartz-tube", amount = 1, probability = 0.5},
+        {type = 'fluid', name = 'bio-oil', amount = 300},
+        {type = "item", name = "quartz-tube", amount = 1, probability = 0.75},
     },
     main_product = "bio-oil",
 }:add_unlock("bioprocessing"):change_category('hor')
