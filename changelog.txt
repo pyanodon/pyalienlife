@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.9.0
+Date: 2020-07-29
+  Changes:
+    - Fixed error with trees not droping sap or sap seeds.
+    - Balanced bio-oil to use less quartz.
+    - Fixed that new hydrogen chloride recipe was overriding a different recipe with the same name.
+---------------------------------------------------------------------------------------------------
 Version: 1.8.8
 Date: 2020-07-26
   Changes:

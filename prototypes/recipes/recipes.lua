@@ -2355,7 +2355,7 @@ RECIPE {
         {type = 'item', name = 'coke', amount = 14},
     },
     results = {
-        {type = 'item', name = 'green-sic', amount = 3},
+        {type = 'item', name = 'green-sic', amount = 4},
     },
     --main_product = "chloral",
 }:add_unlock("bioprocessing")
