@@ -22,7 +22,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'dried-biomass', amount = 30},
-        {type = 'item', name = 'sic', amount = 3},
+        {type = 'item', name = 'sic', amount = 2},
         {type = 'item', name = 'quartz-tube', amount = 1},
         {type = 'fluid', name = 'nitrogen', amount = 300},
     },
