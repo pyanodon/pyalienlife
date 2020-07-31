@@ -238,7 +238,7 @@ Version: 1.5.6
 Date: 2020-04-17
   Changes:
     - Added late game recipes.
-    - Utility science new requires perfect samples.
+    - Utility science now requires perfect samples.
     - Fixed wrong recipe in the upgrade recipes.
     - Fixed pycp updates.
     - Space science now requieres yellow-cake.
