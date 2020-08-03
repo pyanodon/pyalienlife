@@ -490,24 +490,16 @@ local tech_upgrade_table = require("prototypes/upgrades/tech-upgrades")
 
 local function log_all_machines_for_upgrades(tech_upgrades)
 --log('hit')
---log(serpent.block(tech_upgrades))
+log(serpent.block(tech_upgrades))
 	for _, table in pairs(tech_upgrades) do
-		--log(serpent.block(table))
-		for _, tech in pairs(table) do
-			--log(serpent.block(tech))
-			global.tech_upgrades.techs[tech.technology.name] =
-				{
-					entities = tech.entities,
-					techs_to_lock = tech.techs_to_lock,
-					module_name = tech.technology.name .. '-module',
-					upgrade = tech.upgrade
-				}
-			if tech.upgrade == true then
-				global.tech_upgrades.techs[tech.technology.name].prerequisites = tech.prerequisites
-			end
+		log(serpent.block(table))
+		global.tech_upgrades.techs[table.master_tech.name] = {}
+		for _, tech in pairs(table.sub_techs) do
+			log(serpent.block(tech))
+			global.tech_upgrades.techs[table.master_tech.name][tech.technology.name] = tech
 		end
 	end
-	--log(serpent.block(global.tech_upgrades))
+	log(serpent.block(global.tech_upgrades))
 end
 
 script.on_init(
@@ -2216,89 +2208,163 @@ script.on_event(
 					time = 0,
 				}
 		end
-	end
-)
-
-script.on_event(
-	defines.events.on_research_finished,
-	function(event)
-		if global.TRlist == nil then
-			global.TRlist = TRlist_og
-			TRlist = TRlist_og
-		end
-		--log('hit')
-		--log(serpent.block(TRlist.techs_with_upgrades['bigger-colon']))
-		local tech = event.research
-		-- if tech.name == 'hardened-bone' then
-		-- --log(serpent.block(tech.name))
-		-- end
-		if TRlist.techs_with_upgrades[tech.name] == true then
-			if tech.effects ~= nil then
-				for _, effect in pairs(tech.effects) do
-					if effect.type == "unlock-recipe" then
-						for _, upgrade in pairs(TRlist.upgrades) do
-							--log(serpent.block(upgrade.base_recipe))
-							--log(serpent.block(upgrade.current_lvl))
-							--log(serpent.block(effect.recipe))
-							if effect.recipe == upgrade.base_recipe then
-								if upgrade.current_lvl > 1 then
-									event.research.force.recipes[upgrade.base_recipe].enabled = false
-								end
-							elseif effect.recipe == upgrade.upgrade_1.recipe then
-								if upgrade.current_lvl > 2 then
-									event.research.force.recipes[upgrade.upgrade_1.recipe].enabled = false
-								end
-								upgrade.current_lvl = 2
-								event.research.force.recipes[upgrade.base_recipe].enabled = false
-								upgrade.upgrade_1.unlocked = true
-							elseif upgrade.upgrade_2 ~= nil and effect.recipe == upgrade.upgrade_2.recipe then
-								--log('hit')
-								--log(serpent.block(upgrade.upgrade_1.recipe))
-								--log(serpent.block(upgrade.upgrade_2.recipe))
-								--log(serpent.block(event.research.force.recipes[upgrade.upgrade_1.recipe].enabled))
-								upgrade.current_lvl = 3
-								event.research.force.recipes[upgrade.base_recipe].enabled = false
-								event.research.force.recipes[upgrade.upgrade_1.recipe].enabled = false
-								upgrade.upgrade_2.unlocked = true
-							--log(serpent.block(event.research.force.recipes[upgrade.upgrade_1.recipe].enabled))
-							end
-						end
-					end
-				end
-			end
-		end
-		global.TRlist = TRlist
-		--log(serpent.block(global.TRlist))
-
-		if global.tech_upgrades.techs[tech.name] ~= nil then
-
-			--log('hit')
-			--log(tech.name)
-			table.insert(global.tech_upgrades.unlocked_techs, tech.name)
-			for _, tec in pairs(global.tech_upgrades.techs[tech.name].techs_to_lock) do
-				if global.tech_upgrades.disabled_techs[tec] == nil then
-					global.tech_upgrades.disabled_techs[tec] = true
-					if game.forces[tech.force.name].technologies[tec] ~= nil and game.forces[tech.force.name].technologies[tec].enabled == true then
-						game.forces[tech.force.name].technologies[tec].enabled = false
-					end
-					if game.forces[tech.force.name].technologies[tec] ~= nil and game.forces[tech.force.name].technologies[tec].visible_when_disabled == true then
-						game.forces[tech.force.name].technologies[tec].visible_when_disabled = false
-					end
-				end
-			end
-			for _, ent in pairs(global.tech_upgrades.techs[tech.name].entities) do
-				if global.tech_upgrades.entities_master_list[ent] == nil then
-					global.tech_upgrades.entities_master_list[ent] = tech.name
-				end
-			end
-			--log(serpent.block(global.tech_upgrades))
-		end
-
-	end
-)
+end)
 
 script.on_event(defines.events.on_entity_damaged, function(event)
 
 --log('hit')
 
+end)
+
+--tech unlock gui and toogle scripts
+local function Tech_upgrades(event)
+	if global.TRlist == nil then
+		global.TRlist = TRlist_og
+		TRlist = TRlist_og
+	end
+	--log('hit')
+	--log(serpent.block(TRlist.techs_with_upgrades['bigger-colon']))
+	local tech = event.research
+	-- if tech.name == 'hardened-bone' then
+	-- --log(serpent.block(tech.name))
+	-- end
+	if TRlist.techs_with_upgrades[tech.name] == true then
+		if tech.effects ~= nil then
+			for _, effect in pairs(tech.effects) do
+				if effect.type == "unlock-recipe" then
+					for _, upgrade in pairs(TRlist.upgrades) do
+						--log(serpent.block(upgrade.base_recipe))
+						--log(serpent.block(upgrade.current_lvl))
+						--log(serpent.block(effect.recipe))
+						if effect.recipe == upgrade.base_recipe then
+							if upgrade.current_lvl > 1 then
+								event.research.force.recipes[upgrade.base_recipe].enabled = false
+							end
+						elseif effect.recipe == upgrade.upgrade_1.recipe then
+							if upgrade.current_lvl > 2 then
+								event.research.force.recipes[upgrade.upgrade_1.recipe].enabled = false
+							end
+							upgrade.current_lvl = 2
+							event.research.force.recipes[upgrade.base_recipe].enabled = false
+							upgrade.upgrade_1.unlocked = true
+						elseif upgrade.upgrade_2 ~= nil and effect.recipe == upgrade.upgrade_2.recipe then
+							--log('hit')
+							--log(serpent.block(upgrade.upgrade_1.recipe))
+							--log(serpent.block(upgrade.upgrade_2.recipe))
+							--log(serpent.block(event.research.force.recipes[upgrade.upgrade_1.recipe].enabled))
+							upgrade.current_lvl = 3
+							event.research.force.recipes[upgrade.base_recipe].enabled = false
+							event.research.force.recipes[upgrade.upgrade_1.recipe].enabled = false
+							upgrade.upgrade_2.unlocked = true
+						--log(serpent.block(event.research.force.recipes[upgrade.upgrade_1.recipe].enabled))
+						end
+					end
+				end
+			end
+		end
+	end
+	global.TRlist = TRlist
+	--log(serpent.block(global.TRlist))
+
+	if global.tech_upgrades.techs[tech.name] ~= nil then
+
+		log('hit')
+		log(tech.name)
+		table.insert(global.tech_upgrades.unlocked_techs, tech.name)
+		local players = event.research.force.connected_players
+		local player = players[1]
+		local turd = player.gui.screen
+			if turd.turd_frame == nil then
+				turd.add(
+					{
+						type = 'frame',
+						name = 'turd_frame',
+						caption = 'Technological Upgrade and Research Device',
+						direction = 'horizontal'
+					}
+				)
+				turd.turd_frame.force_auto_center()
+				for t,tec in pairs(global.tech_upgrades.techs[tech.name]) do
+					log(t)
+					log(serpent.block(tec))
+					local flow = turd.turd_frame.add(
+						{
+							type = 'frame',
+							name = 'tech_flow' .. t,
+							direction = 'vertical',
+							--style = 'inventory_scroll_pane'
+						}
+					)
+					flow.style.right_padding = 20
+					flow.add(
+						{
+							type = 'sprite',
+							name = 'tech_icon' .. t,
+							sprite = t,
+						}
+					)
+					flow.add(
+						{
+							type = 'label',
+							name = 'tech' .. t,
+							caption = t
+						}
+					)
+					flow.add(
+						{
+							type = 'label',
+							name = 'tech_effects' .. t,
+							caption = 'bullshit here'
+						}
+					)
+					for u, up in pairs(tec.upgrades) do
+						local con_num = up * 100
+						flow.add(
+							{
+								type = 'label',
+								name = 'tech_upgrade_effects' .. t .. u,
+								caption = u .. ' = ' .. con_num .. '%'
+							}
+						)
+					end
+					flow.add(
+						{
+							type = 'label',
+							name = 'entites' .. t,
+							caption = 'Effected Entities'
+						}
+					)
+					for e, ent in pairs(tec.entities) do
+						local ent_name = game.entity_prototypes[ent].localised_name
+						flow.add(
+							{
+								type = 'label',
+								name = t .. ent,
+								caption = ent_name
+							}
+						)
+					end
+					flow.add(
+						{
+							type = 'button',
+							name = 'button' .. t,
+							caption = 'Select'
+						}
+					)
+				end
+
+			end
+		--[[
+		for _, ent in pairs(global.tech_upgrades.techs[tech.name].entities) do
+			if global.tech_upgrades.entities_master_list[ent] == nil then
+				global.tech_upgrades.entities_master_list[ent] = tech.name
+			end
+		end
+		]]--
+		--log(serpent.block(global.tech_upgrades))
+	end
+end
+
+script.on_event(defines.events.on_research_finished, function(event)
+	Tech_upgrades(event)
 end)

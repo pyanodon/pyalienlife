@@ -417,8 +417,8 @@ require('prototypes/fluids/pre-pesticide-02')
 require('prototypes/fluids/ethyl-mercaptan')
 
 --Tech upgrade stuff--
---require('prototypes/upgrades/hidden-beacon')
---require('prototypes/upgrades/tech-upgrades')
+require('prototypes/upgrades/hidden-beacon')
+require('prototypes/upgrades/tech-upgrades')
 
 --(( RECIPES ))--
 require('prototypes/items/items')

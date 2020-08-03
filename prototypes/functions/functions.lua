@@ -1734,20 +1734,39 @@ function overrides.reprocess_recipes_2()
 end
 
 function overrides.tech_upgrade(tech_upgrade)
+    --log(serpent.block(tech_upgrade))
     for _, tab in pairs(tech_upgrade) do
-        log(serpent.block(tab))
-        for _, tech in pairs(tab) do
-            log(serpent.block(tech))
+        --log(serpent.block(tab))
+        for _, tech in pairs(tab.sub_techs) do
+            --log(serpent.block(tech))
         TECHNOLOGY {
                 type = "technology",
-                name = tech.technology.name,
-                icon = tech.technology.icon,
-                icon_size = tech.technology.icon_size,
-                order = tech.technology.order,
-                prerequisites = tech.technology.prerequisites,
+                name = tab.master_tech.name,
+                icon = tab.master_tech.icon,
+                icon_size = tab.master_tech.icon_size,
+                order = tab.master_tech.order,
+                prerequisites = tab.master_tech.prerequisites,
                 effects = {},
-                unit = tech.technology.unit
+                unit = tab.master_tech.unit
             }
+            
+            data:extend(
+            {
+                {
+                    type = "sprite",
+                    name = tech.technology.name,
+                    filename = tech.technology.icon,
+                    --priority = "extra-high-no-scale",
+                    size = tech.technology.icon_size,
+                    --width = 64,
+                    --height = 64,
+                    --flags = {"gui-icon"},
+                    --mipmap_count = 1,
+                    --scale = 0.5
+                },
+            }
+            )
+            --log(serpent.block(tab.master_tech.name))
         local module_effects = {}
             if tech.upgrades ~= nil then
                 module_effects =
@@ -1770,7 +1789,7 @@ function overrides.tech_upgrade(tech_upgrade)
                             }
                     }
             end
-            log(serpent.block(module_effects))
+            --log(serpent.block(module_effects))
             ITEM {
                 type = "module",
                 name = tech.technology.name .. '-module',
