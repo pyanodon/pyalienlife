@@ -1,12 +1,10 @@
 
---tech upgrade test example file
-
 local tech_upgrades =
     {
         master_tech = -- This is the tech that is displayed in the tech tree
             {
-                name = 'Vrauks Upgrades',
-                icon = "__pyalienlifegraphics3__/graphics/technology/parthenogenesis.png",
+                name = 'vrauks-upgrade',
+                icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-vrauk.png",
                 icon_size = 128,
                 order = "c-a",
                 prerequisites = {"vrauks-mk02"},
@@ -30,18 +28,6 @@ local tech_upgrades =
                     icon = "__pyalienlifegraphics3__/graphics/technology/parthenogenesis.png",
                     icon_size = 128,
                     order = "c-a",
-                    --[[
-                    prerequisites = {"vrauks-mk02"},
-                    unit = {
-                        count = 500,
-                        ingredients = {
-                            {"automation-science-pack", 1},
-                            {"logistic-science-pack", 1},
-                            {"chemical-science-pack", 1},
-                        },
-                        time = 45
-                        }
-                    ]]--
                     },
                 entities = {'vrauks-paddock-mk01', 'vrauks-paddock-mk02','vrauks-paddock-mk03','vrauks-paddock-mk04'},-- the entities that should be effected by this tech upgrade. can be a single entity or a table of entities
                 upgrades = -- the effects the tech will have on the building. 1 = 100%
@@ -65,18 +51,6 @@ local tech_upgrades =
                     icon = "__pyalienlifegraphics3__/graphics/technology/natural-cycle.png",
                     icon_size = 128,
                     order = "c-a",
-                    --[[
-                    prerequisites = {"vrauks-mk02"},
-                    unit = {
-                        count = 500,
-                        ingredients = {
-                            {"automation-science-pack", 1},
-                            {"logistic-science-pack", 1},
-                            {"chemical-science-pack", 1},
-                        },
-                        time = 45
-                        }
-                    ]]--
                     },
                 entities = {'vrauks-paddock-mk01', 'vrauks-paddock-mk02','vrauks-paddock-mk03','vrauks-paddock-mk04'},
                 upgrades =
@@ -105,18 +79,6 @@ local tech_upgrades =
                     icon = "__pyalienlifegraphics3__/graphics/technology/reuse-water.png",
                     icon_size = 128,
                     order = "c-a",
-                    --[[
-                    prerequisites = {"vrauks-mk02"},
-                    unit = {
-                        count = 500,
-                        ingredients = {
-                            {"automation-science-pack", 1},
-                            {"logistic-science-pack", 1},
-                            {"chemical-science-pack", 1},
-                        },
-                        time = 45
-                        }
-                    ]]--
                     },
                 entities =
                     {

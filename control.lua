@@ -880,7 +880,7 @@ script.on_event(
 				force = game.players[event.player_index].force
 			}
 			local module = beacon.get_inventory(defines.inventory.beacon_modules)
-			local mod = module.insert({name = global.tech_upgrades.techs[global.tech_upgrades.entities_master_list[E.name]].module_name, count = 1})
+			local mod = module.insert({name = global.tech_upgrades.entities_master_list[E.name] .. '-module', count = 1})
 			log(mod)
 		elseif global.has_built_first_farm == false then
 			for _, farm in pairs(farm_buildings) do
@@ -1934,9 +1934,30 @@ script.on_event(
 			--global.pycloud.current_chest = ''
 			--local player = game.players[event.player_index]
 			--player.gui.screen.chest_menu.destroy()
+		elseif event.element.name == 'turd_close' then
+			local turd = game.players[event.player_index].gui.screen.turd_frame
+			if turd ~= nil then
+				turd.destroy()
+			end
+		elseif string.match(event.element.name, 'turd_select') then
+			log('hit')
+			log(event.element.name)
+			local sub_name = string.match(event.element.name, '[^_]*$')
+			log(serpent.block(sub_name))
+			local sub_tech = sub_name
+			local name = string.match(event.element.parent.name, '[^_]*$')
+			local tech = name
+			log(serpent.block(name))
+			log(serpent.block(global.tech_upgrades))
+			log(serpent.block(global.tech_upgrades.techs))
+			for _, ent in pairs(global.tech_upgrades.techs[tech][sub_tech].entities) do
+				if global.tech_upgrades.entities_master_list[ent] == nil then
+					global.tech_upgrades.entities_master_list[ent] = sub_tech
+				end
+			end
+			log(serpent.block(global.tech_upgrades.entities_master_list))
 		end
-	end
-)
+	end)
 
 script.on_event(
 	defines.events.on_gui_closed,
@@ -2290,7 +2311,7 @@ local function Tech_upgrades(event)
 					local flow = turd.turd_frame.add(
 						{
 							type = 'frame',
-							name = 'tech_flow' .. t,
+							name = 'tech_flow_' .. t .. '_' .. tech.name,
 							direction = 'vertical',
 							--style = 'inventory_scroll_pane'
 						}
@@ -2347,20 +2368,20 @@ local function Tech_upgrades(event)
 					flow.add(
 						{
 							type = 'button',
-							name = 'button' .. t,
+							name = 'turd_select_button_' .. t,
 							caption = 'Select'
 						}
 					)
 				end
+				turd.turd_frame.add(
+					{
+						type = "sprite-button",
+                    	name = "turd_close",
+                    	sprite = "utility/close_fat"
+					}
+				)
 
 			end
-		--[[
-		for _, ent in pairs(global.tech_upgrades.techs[tech.name].entities) do
-			if global.tech_upgrades.entities_master_list[ent] == nil then
-				global.tech_upgrades.entities_master_list[ent] = tech.name
-			end
-		end
-		]]--
 		--log(serpent.block(global.tech_upgrades))
 	end
 end

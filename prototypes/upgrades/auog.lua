@@ -1,14 +1,10 @@
 
---tech upgrade test example file
-
 local tech_upgrades =
     {
-        example_1 = -- can be whatever just used to identify this table
+        master_tech = -- This is the tech that is displayed in the tech tree
             {
-            technology = -- no touchy
-                {
-                name = "sawdust", -- this is the tech name. duh
-                icon = "__pyalienlifegraphics3__/graphics/technology/sawdust.png", -- do i really need to spell it out for you
+                name = "auog-upgrade", -- this is the tech name. duh
+                icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-auog.png", -- do i really need to spell it out for you
                 icon_size = 128,
                 order = "c-a",
                 prerequisites = {"auog-mk02"},
@@ -21,6 +17,17 @@ local tech_upgrades =
                     },
                     time = 45
                     }
+            },
+        sub_techs =
+            {
+            example_1 = -- can be whatever just used to identify this table
+            {
+            technology = -- no touchy
+                {
+                name = "sawdust", -- this is the tech name. duh
+                icon = "__pyalienlifegraphics3__/graphics/technology/sawdust.png", -- do i really need to spell it out for you
+                icon_size = 128,
+                order = "c-a",
                 },
                 entities =
                 {
@@ -50,16 +57,6 @@ local tech_upgrades =
                 icon = "__pyalienlifegraphics3__/graphics/technology/glowing-mushroom.png",
                 icon_size = 128,
                 order = "c-a",
-                prerequisites = {"auog-mk02"},
-                unit = {
-                    count = 500,
-                    ingredients = {
-                        {"automation-science-pack", 1},
-                        {"logistic-science-pack", 1},
-                        {"chemical-science-pack", 1},
-                    },
-                    time = 45
-                    }
                 },
                 entities =
                 {
@@ -94,16 +91,6 @@ local tech_upgrades =
                 icon = "__pyalienlifegraphics3__/graphics/technology/underground-chambers.png",
                 icon_size = 128,
                 order = "c-a",
-                prerequisites = {"auog-mk02"},
-                unit = {
-                    count = 500,
-                    ingredients = {
-                        {"automation-science-pack", 1},
-                        {"logistic-science-pack", 1},
-                        {"chemical-science-pack", 1},
-                    },
-                    time = 45
-                    }
                 },
             entities =
                 {
@@ -125,6 +112,7 @@ local tech_upgrades =
                     'glowing-mushrooms'
                 }
             },
+        }
     }
 
 return(tech_upgrades)
