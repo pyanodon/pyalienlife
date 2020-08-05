@@ -248,6 +248,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='pelt', amount ='+1'},
+					{name='cage',amount=1},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -266,6 +267,7 @@ fun.autorecipes {
 				{
 					{name='meat', amount ='R'},
 					{name='pelt', amount ='+2'},
+					{name='cage',amount=1},
 				},
 			crafting_speed = 15,
 			tech = 'reca',

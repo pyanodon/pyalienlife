@@ -176,6 +176,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='pelt', amount ='+1'},
+					{name='cage',amount=1},
 				},
                 crafting_speed = 15,
                 tech = 'defective-collagen',
