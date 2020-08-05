@@ -808,6 +808,7 @@ fun.autorecipes {
 				{
 					{name='meat', amount ='R'},
 					{name='pelt', amount =3},
+					{name='cage', amount=1},
 				},
 			crafting_speed = 15,
 			tech = 'reca',
