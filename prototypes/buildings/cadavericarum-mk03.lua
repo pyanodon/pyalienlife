@@ -9,42 +9,42 @@ local pipe = {
 
 RECIPE {
     type = "recipe",
-    name = "cadavericarum-mk03",
+    name = "cadaveric-arum-mk03",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
         {"nichrome", 20},
         {"processing-unit", 20},
         {"molybdenum-plate", 60},
-        {"cadavericarum-mk02", 1},
+        {"cadaveric-arum-mk02", 1},
         {"stainless-steel", 10},
         {"boron-carbide", 15},
         {"sc-unit", 10},
     },
     results = {
-        {"cadavericarum-mk03", 1}
+        {"cadaveric-arum-mk03", 1}
     }
 }:add_unlock("cadaveric-arum-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
 
 ITEM {
     type = "item",
-    name = "cadavericarum-mk03",
+    name = "cadaveric-arum-mk03",
     icon = "__pyhightechgraphics__/graphics/icons/cadaveric-arum-mk03.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk03",
     order = "b",
-    place_result = "cadavericarum-mk03",
+    place_result = "cadaveric-arum-mk03",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "cadavericarum-mk03",
+    name = "cadaveric-arum-mk03",
     icon = "__pyhightechgraphics__/graphics/icons/cadaveric-arum-mk03.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "cadavericarum-mk03"},
+    minable = {mining_time = 0.5, result = "cadaveric-arum-mk03"},
     fast_replaceable_group = "cadaveric-arum",
     max_health = 100,
     corpse = "big-remnants",
