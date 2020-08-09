@@ -9,41 +9,41 @@ local pipe = {
 
 RECIPE {
     type = "recipe",
-    name = "cadavericarum-mk04",
+    name = "cadaveric-arum-mk04",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
         {"control-unit", 10},
         {"wall-shield", 10},
-        {"cadavericarum-mk03", 1},
+        {"cadaveric-arum-mk03", 1},
         {"super-steel", 70},
         {"blanket", 2},
         {"kevlar", 50},
     },
     results = {
-        {"cadavericarum-mk04", 1}
+        {"cadaveric-arum-mk04", 1}
     }
 }:add_unlock("cadaveric-arum-mk04")
 
 ITEM {
     type = "item",
-    name = "cadavericarum-mk04",
+    name = "cadaveric-arum-mk04",
     icon = "__pyhightechgraphics__/graphics/icons/cadaveric-arum-mk04.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk04",
     order = "b",
-    place_result = "cadavericarum-mk04",
+    place_result = "cadaveric-arum-mk04",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "cadavericarum-mk04",
+    name = "cadaveric-arum-mk04",
     icon = "__pyhightechgraphics__/graphics/icons/cadaveric-arum-mk04.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "cadavericarum-mk04"},
+    minable = {mining_time = 0.5, result = "cadaveric-arum-mk04"},
     fast_replaceable_group = "cadaveric-arum",
     max_health = 100,
     corpse = "big-remnants",
