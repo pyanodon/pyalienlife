@@ -2457,7 +2457,9 @@ script.on_event("tech-upgrades", function(event)
 			log(t)
 			log(serpent.block(tech))
 			if tech == true then
-				left_scroll['button' .. t].style.pie_progress_color = {0.5,0.5,0.5}
+				log('hit')
+				left_scroll['button' .. t].style = 'red_logistic_slot_button'
+				--left_scroll['button' .. t].style.strikethrough_color  = {0.5,0.5,0.5}
 			end
 		end
 
