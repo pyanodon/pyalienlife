@@ -102,7 +102,7 @@ RECIPE {
     energy_required = 20,
     ingredients = {
         {type = 'fluid', name = 'oxygen', amount = 100},
-        {type = 'item', name = 'bonemeal', amount = 5},  
+        {type = 'item', name = 'bonemeal', amount = 5},
     },
     results = {
         {type = 'fluid', name = 'xenogenic-cells', amount = 85},
@@ -333,7 +333,7 @@ RECIPE {
         {type = 'item', name = 'gh', amount = 1},
     },
     results = {
-        {type = 'fluid', name = 'xenogenic-cells', amount = 155},         
+        {type = 'fluid', name = 'xenogenic-cells', amount = 155},
     },
     --main_product = "cocoon",
 }:add_unlock("organ-printing-mk03")
@@ -510,7 +510,7 @@ RECIPE {
         {type = 'item', name = 'primers', amount = 1},
     },
     results = {
-        {type = 'fluid', name = 'psc', amount = 200},                     
+        {type = 'fluid', name = 'psc', amount = 200},
         {type = 'fluid', name = 'carbon-dioxide', amount = 50},
     },
     main_product = "psc",
@@ -531,7 +531,7 @@ RECIPE {
         {type = 'item', name = 'primers', amount = 1},
     },
     results = {
-        {type = 'fluid', name = 'psc', amount = 275},                    
+        {type = 'fluid', name = 'psc', amount = 275},
         {type = 'fluid', name = 'carbon-dioxide', amount = 50},
     },
     main_product = "psc",
@@ -964,7 +964,7 @@ RECIPE {
         {type = 'item', name = 'bio-scafold', amount = 1},
     },
     results = {
-        {type = 'item', name = 'pineal-gland', amount = 30},
+        {type = 'item', name = 'pineal-gland', amount = 24},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk02")
@@ -981,7 +981,7 @@ RECIPE {
         {type = 'item', name = 'bio-scafold', amount = 1},
     },
     results = {
-        {type = 'item', name = 'tendon', amount = 2},   
+        {type = 'item', name = 'tendon', amount = 2},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk02")
@@ -998,7 +998,7 @@ RECIPE {
         {type = 'item', name = 'bio-scafold', amount = 1},
     },
     results = {
-        {type = 'item', name = 'gas-bladder', amount = 25},
+        {type = 'item', name = 'gas-bladder', amount = 20},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk02")
@@ -1032,7 +1032,7 @@ RECIPE {
         {type = 'item', name = 'bio-scafold', amount = 1},
     },
     results = {
-        {type = 'item', name = 'shell', amount = 1500}, --since it is effectively limestone atm
+        {type = 'item', name = 'shell', amount = 150}, --since it is effectively limestone atm
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk02")
@@ -1044,12 +1044,12 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = 'fluid', name = 'psc', amount = 200},
-        {type = 'fluid', name = 'fetal-serum', amount = 200},
-        {type = 'item', name = 'bio-scafold', amount = 3},
+        {type = 'fluid', name = 'psc', amount = 50},
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
+        {type = 'item', name = 'bio-scafold', amount = 1},
     },
     results = {
-        {type = 'item', name = 'adrenal-cortex', amount = 1},
+        {type = 'item', name = 'adrenal-cortex', amount = 15},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk02")
@@ -1160,7 +1160,7 @@ RECIPE {
         {type = 'item', name = 'immunosupressants', amount = 1},
     },
     results = {
-        {type = 'item', name = 'tendon', amount = 5},          
+        {type = 'item', name = 'tendon', amount = 5},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk03")
@@ -1214,7 +1214,7 @@ RECIPE {
         {type = 'item', name = 'immunosupressants', amount = 1},
     },
     results = {
-        {type = 'item', name = 'shell', amount = 3000},   -- this is limestone it has to be HUGE 
+        {type = 'item', name = 'shell', amount = 200},   -- this is limestone it has to be HUGE
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk03")
@@ -1226,13 +1226,13 @@ RECIPE {
     enabled = false,
     energy_required = 45,
     ingredients = {
-        {type = 'fluid', name = 'psc', amount = 450},
-        {type = 'fluid', name = 'fetal-serum', amount = 350},
+        {type = 'fluid', name = 'psc', amount = 50},
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
         {type = 'item', name = 'bio-scafold', amount = 1},
         {type = 'item', name = 'immunosupressants', amount = 1},
     },
     results = {
-        {type = 'item', name = 'adrenal-cortex', amount = 1},
+        {type = 'item', name = 'adrenal-cortex', amount = 20},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk03")
@@ -1243,7 +1243,7 @@ RECIPE {
 
 
 
---below this i didnt change stuff 
+--below this i didnt change stuff
 
 ------------------------------------SUPER SPECIAL ORGAN PRINTING with IMMUNOSUPPRESSANT--------------------------
 
