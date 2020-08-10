@@ -306,7 +306,7 @@ require('prototypes/buildings/arqad-hive-mk04')
 require('prototypes/buildings/space/space-arthurian-pen-mk01')
 require('prototypes/buildings/space/space-auog-paddock-mk01')
 require('prototypes/buildings/space/space-bhoddos-culture-mk01')
-require('prototypes/buildings/space/space-cadaveric-arum-mk01')
+require('prototypes/buildings/space/space-cadavericarum-mk01')
 require('prototypes/buildings/space/space-cridren-enclosure-mk01')
 require('prototypes/buildings/space/space-dingrits-mk01')
 require('prototypes/buildings/space/space-ez-ranch-mk01')
@@ -668,3 +668,14 @@ local fun = require("prototypes/functions/functions")
 fun.reprocess_recipes_1()
 
 fun.reprocess_recipes_2()
+
+--(( Shortcut keys ))--
+local recipeselect=
+	{
+	type = "custom-input",
+	name = "tech-upgrades",
+	key_sequence = "CONTROL + T",
+	consuming = "none"
+	}
+
+data:extend{recipeselect}
