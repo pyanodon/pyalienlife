@@ -466,7 +466,7 @@ fun.autorecipes {
 					{name='meat', amount ='R'},
 					{name='fat', amount ='R'},
 					{name='guts', amount ='R'},
-					{name='blood', amount ='R'},
+					{name='arthropodblood', amount ='R'},
 					{name='chitin', amount ='R'},
 					{name='meat', amount =1},
 				},
