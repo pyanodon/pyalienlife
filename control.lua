@@ -561,7 +561,8 @@ script.on_init(
 			entities_master_list = {},
 			unlocked_techs = {},
 			disabled_techs = {},
-			techs = {}
+			techs = {},
+			tech_status = {}
 		}
 		log_all_machines_for_upgrades(tech_upgrade_table)
 		global.energy_drink = {}
@@ -1955,6 +1956,9 @@ script.on_event(
 					global.tech_upgrades.entities_master_list[ent] = sub_tech
 				end
 			end
+			global.tech_upgrades.tech_status[tech] = true
+			global.tech_upgrades.techs[tech][sub_tech].selected = true
+			log(serpent.block(global.tech_upgrades.techs[tech]))
 			log(serpent.block(global.tech_upgrades.entities_master_list))
 		end
 	end)
@@ -2294,7 +2298,9 @@ local function Tech_upgrades(event)
 		table.insert(global.tech_upgrades.unlocked_techs, tech.name)
 		local players = event.research.force.connected_players
 		local player = players[1]
-		local turd = player.gui.screen
+		if player ~= nil then
+			log('hit')
+			local turd = player.gui.screen
 			if turd.turd_frame == nil then
 				turd.add(
 					{
@@ -2306,8 +2312,8 @@ local function Tech_upgrades(event)
 				)
 				turd.turd_frame.force_auto_center()
 				for t,tec in pairs(global.tech_upgrades.techs[tech.name]) do
-					log(t)
-					log(serpent.block(tec))
+					--log(t)
+					--log(serpent.block(tec))
 					local flow = turd.turd_frame.add(
 						{
 							type = 'frame',
@@ -2383,9 +2389,78 @@ local function Tech_upgrades(event)
 
 			end
 		--log(serpent.block(global.tech_upgrades))
+		else
+			log('hit')
+			for t,tec in pairs(global.tech_upgrades.techs[tech.name]) do
+				log(serpent.block(global.tech_upgrades.techs[tech.name]))
+				log(serpent.block(tec))
+				tec.selected = false
+			end
+			global.tech_upgrades.tech_status[tech.name] = false
+			log(serpent.block(global.tech_upgrades.tech_status))
+			log(serpent.block(global.tech_upgrades))
+		end
 	end
 end
 
 script.on_event(defines.events.on_research_finished, function(event)
 	Tech_upgrades(event)
+end)
+
+script.on_event("tech-upgrades", function(event)
+
+	local player = game.players[event.player_index]
+
+	local turd_master = player.gui.screen
+	if turd_master_frame == nil then
+		turd_master.add(
+			{
+				type = 'frame',
+				name = 'turd_master_frame',
+				caption = 'Technological Upgrade and Research Device',
+				direction = 'horizontal'
+			}
+		)
+		turd_master.turd_master_frame.force_auto_center()
+		local left = turd_master.turd_master_frame.add(
+			{
+				type = 'frame',
+				name = 'left_tech_window',
+				direction = 'vertical'
+			}
+		)
+		local left_scroll = left.add(
+			{
+				type = 'scroll-pane',
+				name = 'turd_scroll',
+				style = 'inventory_scroll_pane'
+			}
+		)
+		local right = turd_master.turd_master_frame.add(
+			{
+				type = 'frame',
+				name = 'right_tech_window',
+				direction = 'horizontal'
+			}
+		)
+
+		for t, tech in pairs(global.tech_upgrades.tech_status) do
+			left_scroll.add(
+				{
+					type = 'sprite-button',
+					name = 'button' .. t,
+					sprite = 'technology/' .. t
+				}
+			)
+			left_scroll['button' .. t].style.width = 128
+			left_scroll['button' .. t].style.height = 128
+			log(t)
+			log(serpent.block(tech))
+			if tech == true then
+				left_scroll['button' .. t].style.pie_progress_color = {0.5,0.5,0.5}
+			end
+		end
+
+	end
+
 end)
