@@ -91,3 +91,14 @@ ITEM {
     order = "a",
     stack_size = 100
 }
+
+ITEM {
+    type = "item",
+    name = "abacus",
+    icon = "__pyalienlifegraphics__/graphics/icons/abacus.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arthurian",
+    order = "a",
+    stack_size = 100
+}

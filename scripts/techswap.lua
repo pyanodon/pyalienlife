@@ -4943,6 +4943,384 @@ local TRlist =
 				},
 			},
 
+--ABACUS
+
+				{
+				base_recipe = 'arthurian-01',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-01a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-02',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-02a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-03',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-03a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-04',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-04a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-05',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-05a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-06',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-06a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-07',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-07a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-08',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-08a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-09',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-09a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-10',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-10a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-11',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-11a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-12',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-12a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-13',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-13a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-14',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-14a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-15',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-15a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-16',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-16a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-17',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-17a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-18',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-18a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-19',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-19a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-20',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-20a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-21',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-21a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-22',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-22a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-23',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-23a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-24',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-24a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-egg-01',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-egg-01a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-egg-02',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-egg-02a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-egg-03',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-egg-03a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-egg-04',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-egg-04a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-egg-05',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-egg-05a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-egg-06',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-egg-06a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-egg-07',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-egg-07a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-egg-08',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-egg-08a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-egg-09',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-egg-09a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'arthurian-egg-10',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arthurian-egg-10a',
+					tech = 'abacus',
+					unlocked = false,
+					level = 2,
+					},
+				},
+
+
 		techs_with_upgrades =
 			{
 				['bigger-colon'] = true,
@@ -5029,7 +5407,12 @@ local TRlist =
 				['diversified-mycoaccretion'] = true,
 				['sawdust'] = true,
 				['food-mk01'] = true,
-				['food-mk02'] = true
+				['food-mk02'] = true,
+				['arthurian-mk01'] = true,
+				['arthurian-mk02'] = true,
+				['arthurian-mk03'] = true,
+				['arthurian-mk04'] = true,
+				['abacus'] = true,
 			},
 	}
 
