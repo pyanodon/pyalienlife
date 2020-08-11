@@ -136,6 +136,7 @@ items.inputs.bacteria2 = {'bacteria-2',1} --pyht
 items.inputs.yaedolsspore = {'yaedols-spores',1}
 items.inputs.yaedols = {'yaedols',1}
 items.inputs.wood = {'wood',1}
+items.inputs.abacus = {'abacus',1}
 items.inputs.woodseeds = {'wood-seeds',1}
 items.inputs.moss = {'moss',1}
 items.inputs.ammonia = {'ammonia',2}
