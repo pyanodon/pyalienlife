@@ -2313,17 +2313,18 @@ local function Tech_building_upgrades(event)
 						{
 							type = 'label',
 							name = 'tech' .. t,
-							caption = t
+							caption = {'technology-name.' .. t}
 						}
 					)
-					local tech_description = 'technology-description.' .. t
 					flow.add(
 						{
 							type = 'label',
 							name = 'tech_effects' .. t,
-							caption = 'technology-description.abacus'--tech_description
+							caption = {'technology-description.' .. t}
 						}
 					)
+					flow['tech_effects' .. t].style.maximal_width = 200
+					flow['tech_effects' .. t].style.single_line = false
 					for u, up in pairs(tec.upgrades) do
 						local con_num = up * 100
 						flow.add(
