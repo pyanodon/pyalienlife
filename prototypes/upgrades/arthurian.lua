@@ -90,7 +90,7 @@ local tech_upgrades =
                 technology =
                     {
                     name = "cannibalism",
-                    icon = "__pyalienlifegraphics3__/graphics/technology/lard-machine.png",
+                    icon = "__pyalienlifegraphics3__/graphics/technology/cannibalism.png",
                     icon_size = 128,
                     order = "c-a",
                     },
