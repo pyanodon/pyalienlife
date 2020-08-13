@@ -1,7 +1,7 @@
 local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
-    name = 'caged-arthurian',
+    name = 'caged-arthurian-2',
 	category = 'arthurian',
 	module_limitations = 'arthurian',
 	subgroup = 'py-alienlife-arthurian',

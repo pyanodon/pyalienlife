@@ -37,6 +37,7 @@ local tech_upgrades =
                         'arthurian-pen-mk03',
                         'arthurian-pen-mk04',
                     },-- the entities that should be effected by this tech upgrade. can be a single entity or a table of entities
+                is_upgrade = true,
                 upgrades = -- the effects the tech will have on the building. 1 = 100%
                     {
                         consumption = 0.0, --energy usage
