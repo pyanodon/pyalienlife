@@ -89,7 +89,7 @@ local tech_upgrades =
                 technology =
                     {
                     name = "drone",
-                    icon = "__pyalienlifegraphics3__/graphics/technology/lard-machine.png",
+                    icon = "__pyalienlifegraphics3__/graphics/technology/drone.png",
                     icon_size = 128,
                     order = "c-a",
                     },
