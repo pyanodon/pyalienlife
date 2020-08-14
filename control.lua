@@ -490,16 +490,16 @@ local tech_upgrade_table = require("prototypes/upgrades/tech-upgrades")
 
 local function log_all_machines_for_upgrades(tech_upgrades)
 --log('hit')
-log(serpent.block(tech_upgrades))
+--log(serpent.block(tech_upgrades))
 	for _, table in pairs(tech_upgrades) do
-		log(serpent.block(table))
+		--log(serpent.block(table))
 		global.tech_upgrades.techs[table.master_tech.name] = {}
 		for _, tech in pairs(table.sub_techs) do
-			log(serpent.block(tech))
+			--log(serpent.block(tech))
 			global.tech_upgrades.techs[table.master_tech.name][tech.technology.name] = tech
 		end
 	end
-	log(serpent.block(global.tech_upgrades))
+	--log(serpent.block(global.tech_upgrades))
 end
 
 script.on_init(
@@ -562,7 +562,8 @@ script.on_init(
 			unlocked_techs = {},
 			disabled_techs = {},
 			techs = {},
-			tech_status = {}
+			tech_status = {},
+			currently_selected = {}
 		}
 		log_all_machines_for_upgrades(tech_upgrade_table)
 		global.energy_drink = {}
@@ -1951,6 +1952,70 @@ script.on_event(
 			log(serpent.block(name))
 			log(serpent.block(global.tech_upgrades))
 			log(serpent.block(global.tech_upgrades.techs))
+			event.element.style = 'confirm_button'
+			global.tech_upgrades.currently_selected =
+				{
+					tech = tech,
+					sub_tech = sub_tech
+				}
+			local player = game.players[event.player_index]
+			local screen = player.gui.screen
+			if screen.turd_confirm_frame == nil then
+				screen.add(
+					{
+						type = 'frame',
+						name = 'turd_confirm_frame',
+						direction = 'vertical'
+					}
+				)
+				screen.turd_confirm_frame.force_auto_center()
+				screen.turd_confirm_frame.style.width = 250
+				log(type(sub_name))
+				log({'technology-name.' .. sub_name})
+				local string =  {'technology-name.' .. sub_name}
+				screen.turd_confirm_frame.add(
+					{
+						type = 'label',
+						name = 'confirm_infobox',
+						caption = 'Are you sure you want to active the ' .. tostring(string) .. '. Once active this choice can not be undone'
+					}
+				)
+				screen.turd_confirm_frame.confirm_infobox.style.single_line = false
+				local flow = screen.turd_confirm_frame.add(
+					{
+						type = 'flow',
+						name = 'button_box',
+						direction = 'horizontal'
+					}
+				)
+				flow.add(
+					{
+						type = 'button',
+						name = 'turd_back',
+						caption = 'Back'
+					}
+				)
+				flow.turd_back.style = 'back_button'
+				flow.add(
+					{
+						type = 'button',
+						name = 'turd_confirm',
+						caption = 'Confirm'
+					}
+				)
+				flow.turd_confirm.style = 'confirm_button'
+				--flow.turd_confirm.style.strikethrough_color = {0.5,0.5,0.5}
+			end
+		elseif string.match(event.element.name, 'turd_back') then
+			local player = game.players[event.player_index]
+			local screen = player.gui.screen
+			if screen.turd_confirm_frame ~= nil then
+				screen.turd_confirm_frame.destroy()
+			end
+			global.tech_upgrades.currently_selected = {}
+		elseif string.match(event.element.name, 'turd_confirm') then
+			local tech = global.tech_upgrades.currently_selected.tech
+			local sub_tech = global.tech_upgrades.currently_selected.sub_tech
 			for _, ent in pairs(global.tech_upgrades.techs[tech][sub_tech].entities) do
 				if global.tech_upgrades.entities_master_list[ent] == nil then
 					global.tech_upgrades.entities_master_list[ent] = sub_tech
@@ -1984,6 +2049,89 @@ script.on_event(
 						player.force.recipes[upgrade.upgrade_2.recipe].enabled = true
 					end
 				end
+			end
+			local player = game.players[event.player_index]
+			if player.gui.screen.turd_confirm_frame ~= nil then
+				player.gui.screen.turd_confirm_frame.destroy()
+			end
+			if player.gui.screen.turd_frame ~= nil then
+				player.gui.screen.turd_frame.destroy()
+			end
+			global.tech_upgrades.currently_selected = {}
+		elseif string.match(event.element.name, 'turd_master_button') then
+			local player = game.players[event.player_index]
+			local tech_name = string.match(event.element.name, '[^_]*$')
+			log(serpent.block(tech_name))
+			for t, tech in pairs(global.tech_upgrades.techs[tech_name]) do
+				log(t)
+				log(serpent.block(tech))
+				local sub_tech = player.gui.screen.turd_master_frame.right_tech_window
+				local flow = sub_tech.add(
+					{
+						type = 'frame',
+						name = 'tech_flow_' .. t .. '_' .. tech_name,
+						direction = 'vertical',
+						--style = 'inventory_scroll_pane'
+					}
+				)
+				flow.style.right_padding = 20
+					flow.add(
+						{
+							type = 'sprite',
+							name = 'tech_icon' .. t,
+							sprite = t,
+						}
+					)
+					flow.add(
+						{
+							type = 'label',
+							name = 'tech' .. t,
+							caption = {'technology-name.' .. t}
+						}
+					)
+					flow.add(
+						{
+							type = 'label',
+							name = 'tech_effects' .. t,
+							caption = {'technology-description.' .. t}
+						}
+					)
+					flow['tech_effects' .. t].style.maximal_width = 200
+					flow['tech_effects' .. t].style.single_line = false
+					for u, up in pairs(tech.upgrades) do
+						local con_num = up * 100
+						flow.add(
+							{
+								type = 'label',
+								name = 'tech_upgrade_effects' .. t .. u,
+								caption = u .. ' = ' .. con_num .. '%'
+							}
+						)
+					end
+					flow.add(
+						{
+							type = 'label',
+							name = 'entites' .. t,
+							caption = 'Effected Entities'
+						}
+					)
+					for e, ent in pairs(tech.entities) do
+						local ent_name = game.entity_prototypes[ent].localised_name
+						flow.add(
+							{
+								type = 'label',
+								name = t .. ent,
+								caption = ent_name
+							}
+						)
+					end
+					flow.add(
+						{
+							type = 'button',
+							name = 'turd_select_button_' .. t,
+							caption = 'Select'
+						}
+					)
 			end
 		end
 	end)
@@ -2445,7 +2593,7 @@ script.on_event("tech-upgrades", function(event)
 	local player = game.players[event.player_index]
 
 	local turd_master = player.gui.screen
-	if turd_master_frame == nil then
+	if turd_master.turd_master_frame == nil then
 		turd_master.add(
 			{
 				type = 'frame',
@@ -2459,14 +2607,22 @@ script.on_event("tech-upgrades", function(event)
 			{
 				type = 'frame',
 				name = 'left_tech_window',
-				direction = 'vertical'
+				direction = 'horizontal'
 			}
 		)
+		--left.style.width = 300
 		local left_scroll = left.add(
 			{
 				type = 'scroll-pane',
 				name = 'turd_scroll',
 				style = 'inventory_scroll_pane'
+			}
+		)
+		local left_table = left_scroll.add(
+			{
+				type = 'table',
+				name = 'master_tech_table',
+				column_count = 2
 			}
 		)
 		local right = turd_master.turd_master_frame.add(
@@ -2476,26 +2632,28 @@ script.on_event("tech-upgrades", function(event)
 				direction = 'horizontal'
 			}
 		)
-
+		right.style.minimal_width = 800
 		for t, tech in pairs(global.tech_upgrades.tech_status) do
-			left_scroll.add(
+			left_table.add(
 				{
 					type = 'sprite-button',
-					name = 'button' .. t,
+					name = 'turd_master_button_' .. t,
 					sprite = 'technology/' .. t
 				}
 			)
-			left_scroll['button' .. t].style.width = 128
-			left_scroll['button' .. t].style.height = 128
+			left_table['turd_master_button_' .. t].style.width = 128
+			left_table['turd_master_button_' .. t].style.height = 128
 			log(t)
 			log(serpent.block(tech))
 			if tech == true then
 				log('hit')
-				left_scroll['button' .. t].style = 'red_logistic_slot_button'
-				--left_scroll['button' .. t].style.strikethrough_color  = {0.5,0.5,0.5}
+				left_table['turd_master_button_' .. t].style = 'red_logistic_slot_button'
+				--left_table['button' .. t].style.strikethrough_color  = {0.5,0.5,0.5}
 			end
 		end
 
+	elseif turd_master.turd_master_frame ~= nil then
+		turd_master.turd_master_frame.destroy()
 	end
 
 end)
