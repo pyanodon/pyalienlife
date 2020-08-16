@@ -28,7 +28,7 @@ RECIPE {
     --icon_size = 64,
     subgroup = "py-alienlife-items",
     order = "a1"
-}:add_unlock("cottongut-mk03"):change_category('nano'):add_ingredient({type = "item", name = "kicalk-seeds", amount = 1})
+}:add_unlock("cottongut-mk03"):change_category('nano'):add_ingredient({type = "item", name = "kicalk-seeds", amount = 1}):add_ingredient({type = "item", name = "nylon", amount = 5})
 
 ---cottongut-boosts---
 
@@ -44,9 +44,9 @@ RECIPE {
         {type = 'item', name = 'denatured-seismite', amount = 1},
         },
     results = {
-        {type = 'item', name = 'chemical-science-pack', amount = 25, probability = 0.1},
+        {type = 'item', name = 'production-science-pack', amount = 25, probability = 0.1},
     },
-    main_product = 'chemical-science-pack',
+    main_product = 'production-science-pack',
    --icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
    --icon_size = 64,
     subgroup = 'py-alienlife-cottongut',
@@ -66,9 +66,9 @@ RECIPE {
         {type = 'item', name = 'denatured-seismite', amount = 2},
         },
     results = {
-        {type = 'item', name = 'chemical-science-pack', amount = 50, probability = 0.1},
+        {type = 'item', name = 'production-science-pack', amount = 50, probability = 0.1},
     },
-    main_product = 'chemical-science-pack',
+    main_product = 'production-science-pack',
    --icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
    --icon_size = 64,
     subgroup = 'py-alienlife-cottongut',
@@ -86,9 +86,9 @@ RECIPE {
         {type = 'item', name = 'denatured-seismite', amount = 5},
         },
     results = {
-        {type = 'item', name = 'chemical-science-pack', amount = 75, probability = 0.1},
+        {type = 'item', name = 'production-science-pack', amount = 75, probability = 0.1},
     },
-    main_product = 'chemical-science-pack',
+    main_product = 'production-science-pack',
    --icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png',
    --icon_size = 64,
     subgroup = 'py-alienlife-cottongut',
@@ -106,9 +106,9 @@ RECIPE {
         {type = 'item', name = 'denatured-seismite', amount = 8},
         },
     results = {
-        {type = 'item', name = 'chemical-science-pack', amount = 100, probability = 0.1},
+        {type = 'item', name = 'production-science-pack', amount = 100, probability = 0.1},
     },
-    main_product = 'chemical-science-pack',
+    main_product = 'production-science-pack',
    --icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
    --icon_size = 64,
     subgroup = 'py-alienlife-cottongut',
@@ -129,9 +129,9 @@ RECIPE {
         {type = 'item', name = 'denatured-seismite', amount = 1},
         },
     results = {
-        {type = 'item', name = 'chemical-science-pack', amount = 200, probability = 0.1},
+        {type = 'item', name = 'production-science-pack', amount = 200, probability = 0.1},
     },
-    main_product = 'chemical-science-pack',
+    main_product = 'production-science-pack',
    --icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
    --icon_size = 64,
     subgroup = 'py-alienlife-cottongut',
