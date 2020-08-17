@@ -9,6 +9,7 @@ local tech_upgrade =
         ulric = require("prototypes/upgrades/ulric"),
         seaweed = require("prototypes/upgrades/seaweed"),
         sap = require("prototypes/upgrades/sap"),
+        antelope = require("prototypes/upgrades/antelope"),
         arthurian = require("prototypes/upgrades/arthurian"),
         atomizer = require("prototypes/upgrades/atomizer"),
         --test_1 is a filler name for table readablity by fleshy meat bags. name it whatever and then set it to require the tech upgrade fills
