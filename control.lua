@@ -2025,6 +2025,7 @@ script.on_event(
 			global.tech_upgrades.techs[tech][sub_tech].selected = true
 			log(serpent.block(global.tech_upgrades.techs[tech]))
 			log(serpent.block(global.tech_upgrades.entities_master_list))
+			local player = game.players[event.player_index]
 			if global.tech_upgrades.techs[tech][sub_tech].is_upgrade == true then
 				log(serpent.block(global.TRlist))
 				for u, upgrade in pairs(global.TRlist) do
@@ -2038,7 +2039,6 @@ script.on_event(
 						log('hit')
 						upgrade.current_lvl = 3
 					end
-					local player = game.players[event.player_index]
 					if upgrade.current_lvl ~= nil and upgrade.current_lvl > 1 and player.force.recipes[upgrade.base_recipe].enabled == true then
 						player.force.recipes[upgrade.base_recipe].enabled = false
 						player.force.recipes[upgrade.upgrade_1.recipe].enabled = true
@@ -2048,6 +2048,11 @@ script.on_event(
 						player.force.recipes[upgrade_1.recipe].enabled = false
 						player.force.recipes[upgrade.upgrade_2.recipe].enabled = true
 					end
+				end
+			end
+			if global.tech_upgrades.techs[tech][sub_tech].recipes_to_unlock ~= nil then
+				for r, recipe in pairs(global.tech_upgrades.techs[tech][sub_tech].recipes_to_unlock) do
+					player.force.recipes[recipe].enabled = true
 				end
 			end
 			local player = game.players[event.player_index]
@@ -2124,6 +2129,34 @@ script.on_event(
 								caption = ent_name
 							}
 						)
+					end
+					if tech.recipes_to_unlock ~= nil then
+						flow.add(
+							{
+								type = 'label',
+								name = 'unlocked_recipes',
+								caption = 'Recipes to Unlock'
+							}
+						)
+						for r, recipe in pairs(tech.recipes_to_unlock) do
+							flow.add(
+								{
+									type = 'label',
+									name = t .. recipe,
+									caption = {tostring('recipe-name.' .. recipe)}
+								}
+							)
+							flow.add(
+								{
+									type = 'choose-elem-button',
+									name = t .. recipe .. 'tooltip',
+									elem_type = 'recipe',
+									recipe = recipe,
+									enabled = false
+									--ignored_by_interaction = true			
+								}
+							)
+						end
 					end
 					flow.add(
 						{
@@ -2499,6 +2532,34 @@ local function Tech_building_upgrades(event)
 								caption = ent_name
 							}
 						)
+					end
+					if tec.recipes_to_unlock ~= nil then
+						flow.add(
+							{
+								type = 'label',
+								name = 'unlocked_recipes',
+								caption = 'Recipes to Unlock'
+							}
+						)
+						for r, recipe in pairs(tec.recipes_to_unlock) do
+							flow.add(
+								{
+									type = 'label',
+									name = t .. recipe,
+									caption = {tostring('recipe-name.' .. recipe)}
+								}
+							)
+							flow.add(
+								{
+									type = 'choose-elem-button',
+									name = t .. recipe .. 'tooltip',
+									elem_type = 'recipe',
+									recipe = recipe,
+									enabled = false
+									--ignored_by_interaction = true			
+								}
+							)
+						end
 					end
 					flow.add(
 						{

@@ -2491,4 +2491,4 @@ RECIPE {
         {type = 'item', name = 'abacus', amount = 2},
     },
     --main_product = "chloral",
-}:add_unlock("abacus")
+}:add_unlock("abacus")--not a real tech
