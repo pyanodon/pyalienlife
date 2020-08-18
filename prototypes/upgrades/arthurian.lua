@@ -49,6 +49,10 @@ local tech_upgrades =
                     {
                         'heated-stone',
                         'cannibalism',
+                    },
+                recipes_to_unlock =
+                    {
+                        'abacus'
                     }
                 },
             example_2 =
