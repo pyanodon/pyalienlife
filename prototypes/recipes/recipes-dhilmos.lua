@@ -95,7 +95,6 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'dhilmos-pup', amount = 10},
         {type = 'item', name = 'gh', amount = 1},
-        {type = 'item', name = 'cage', amount = 20},
         {type = 'item', name = 'resveratrol', amount = 3},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
     },
