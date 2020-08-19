@@ -438,7 +438,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     --{name='woodseeds',amount ='R'},
-                    --{name='fawogae',amount ='15'},
+                    --{name='fawogae',amount =15},
 					{name='yotoileaves',amount =10},
 				},
 			results =
