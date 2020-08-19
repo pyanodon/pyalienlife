@@ -623,7 +623,7 @@ fun.autorecipes {
 					{name='sulfuricacid', amount ='R'},
                     {name='meat', amount ='R'},
                     {name='brain', amount ='R'},
-                    {name='cage', amount ='1'},
+                    {name='cage', amount =1},
 					{name='sulfuricacid', amount ='+30'},
 				},
 			crafting_speed = 15,

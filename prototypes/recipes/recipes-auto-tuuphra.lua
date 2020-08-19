@@ -27,7 +27,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     --{'s1'},
-					{name='soil',amount ='20'},
+					{name='soil',amount =20},
 				},
 			results =
 				{
@@ -110,7 +110,7 @@ fun.autorecipes {
                     --{'a'},
 					--{'b','+15'},
 					--{name='soil',amount ='R'},
-                    {name='bloodmeal',amount ='2'},
+                    {name='bloodmeal',amount =2},
                     --{'d'},
 				},
 			results =
