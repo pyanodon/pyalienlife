@@ -5320,6 +5320,52 @@ local TRlist =
 					},
 				},
 
+--BIOPRINTING
+
+				{
+				base_recipe = 'bio-scafold',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'bio-scafolda',
+					tech = 'high-viability',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'bio-scafold-2',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'bio-scafold-2a',
+					tech = 'high-viability',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'bio-scafold-3',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'bio-scafold-3a',
+					tech = 'high-viability',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'bio-scafold-4',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'bio-scafold-4a',
+					tech = 'high-viability',
+					unlocked = false,
+					level = 2,
+					},
+				},
 
 		techs_with_upgrades =
 			{
@@ -5413,6 +5459,11 @@ local TRlist =
 				['arthurian-mk03'] = true,
 				['arthurian-mk04'] = true,
 				['abacus'] = true,
+				['organ-printing-mk01'] = true,
+				['organ-printing-mk02'] = true,
+				['organ-printing-mk03'] = true,
+				['organ-printing-mk04'] = true,
+				['high-viability'] = true,
 			},
 	}
 

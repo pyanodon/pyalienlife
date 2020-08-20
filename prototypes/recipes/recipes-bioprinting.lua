@@ -1,6 +1,5 @@
 ------------------------------------------------bio-scafold-------------------------------
 
-
 RECIPE {
     type = 'recipe',
     name = 'bio-scafold',
@@ -44,7 +43,7 @@ RECIPE {
     energy_required = 15,
     ingredients = {
         {type = 'item', name = 'sodium-alginate', amount = 1},
-        {type = 'item', name = 'chitosan', amount = 1},             -- very expensive
+        {type = 'item', name = 'chitosan', amount = 1},
         {type = 'fluid', name = 'boric-acid', amount = 200},
 
     },
@@ -72,7 +71,82 @@ RECIPE {
     --main_product = "cocoon",
 }:add_unlock("organ-printing-mk03")
 
+------------------------------------------------bio-scafold upgrade-------------------------------
 
+RECIPE {
+    type = 'recipe',
+    name = 'bio-scafolda',
+    category = 'nmf',
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = 'item', name = 'sodium-alginate', amount = 1},
+        {type = 'item', name = 'bonemeal', amount = 5},
+        {type = 'item', name = 'small-lamp', amount = 2},
+        {type = 'fluid', name = 'boric-acid', amount = 200},
+    },
+    results = {
+        {type = 'item', name = 'bio-scafold', amount = 1},
+    },
+    --main_product = "cocoon",
+}:add_unlock("high-viability")--not a real tech
+
+RECIPE {
+    type = 'recipe',
+    name = 'bio-scafold-2a',
+    category = 'nmf',
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = 'item', name = 'sodium-alginate', amount = 1},
+        {type = 'item', name = 'guts', amount = 7},
+        {type = 'item', name = 'small-lamp', amount = 2},
+        {type = 'fluid', name = 'boric-acid', amount = 200},
+
+    },
+    results = {
+        {type = 'item', name = 'bio-scafold', amount = 1},
+    },
+    --main_product = "cocoon",
+}:add_unlock("high-viability"):replace_ingredient("guts", "collagen")--not a real tech
+
+RECIPE {
+    type = 'recipe',
+    name = 'bio-scafold-3a',
+    category = 'nmf',
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = 'item', name = 'sodium-alginate', amount = 1},
+        {type = 'item', name = 'chitosan', amount = 1},
+        {type = 'item', name = 'small-lamp', amount = 2},
+        {type = 'fluid', name = 'boric-acid', amount = 200},
+
+    },
+    results = {
+        {type = 'item', name = 'bio-scafold', amount = 8},
+    },
+    --main_product = "cocoon",
+}:add_unlock("high-viability")--not a real tech
+
+RECIPE {
+    type = 'recipe',
+    name = 'bio-scafold-4a',
+    category = 'nmf',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'sodium-alginate', amount = 5},
+        {type = 'item', name = 'nanofibrils', amount = 1},
+        {type = 'item', name = 'small-lamp', amount = 2},
+        {type = 'fluid', name = 'boric-acid', amount = 1000},
+
+    },
+    results = {
+        {type = 'item', name = 'bio-scafold', amount = 15},
+    },
+    --main_product = "cocoon",
+}:add_unlock("high-viability")--not a real tech
 
 
 
