@@ -302,7 +302,7 @@ require('prototypes/buildings/arqad-hive-mk03')
 require('prototypes/buildings/arqad-hive-mk04')
 
 --((SPACE BUILDINGS))--
---[[
+
 require('prototypes/buildings/space/space-arthurian-pen-mk01')
 require('prototypes/buildings/space/space-auog-paddock-mk01')
 require('prototypes/buildings/space/space-bhoddos-culture-mk01')
@@ -337,7 +337,6 @@ require('prototypes/buildings/space/space-xyhiphoe-pool-mk01')
 require('prototypes/buildings/space/space-yaedols-culture-mk01')
 require('prototypes/buildings/space/space-yotoi-aloe-orchard-mk01')
 require('prototypes/buildings/space/space-zipir-reef-mk01')
-]]--
 
 --((ROCKET))--
 require('prototypes/buildings/silo-2')
