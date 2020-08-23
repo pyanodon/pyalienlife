@@ -77,16 +77,6 @@ ENTITY {
             shift = util.by_pixel(16, -32),
             tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },
-            {
-                filename = "__pyalienlifegraphics3__/graphics/entity/dome/dome.png",
-                frame_count = 1,
-                width = 437,
-                height = 571,
-                shift = util.by_pixel(0, -64),
-                priority = "low",
-                --animation_speed = 0.75,
-                scale = 1
-            },
         }
     },
     working_visualisations = {

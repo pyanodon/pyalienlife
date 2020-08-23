@@ -104,16 +104,6 @@ ENTITY {
                 priority = "extra-high"
                 --animation_speed = 0.75,
             },
-            {
-                filename = "__pyalienlifegraphics3__/graphics/entity/dome/dome.png",
-                frame_count = 1,
-                width = 437,
-                height = 571,
-                shift = util.by_pixel(0, -64),
-                priority = "low",
-                --animation_speed = 0.75,
-                scale = 1
-            },
         }
     },
     working_visualisations = {
