@@ -26,7 +26,7 @@ local tech_upgrades =
                 technology = -- no touchy
                     {
                     name = "sc-core", -- this is the tech name. duh
-                    icon = "__pyalienlifegraphics3__/graphics/technology/air-con.png",
+                    icon = "__pyalienlifegraphics3__/graphics/technology/sc-core.png",
                     icon_size = 128,
                     order = "c-a",
                     },
