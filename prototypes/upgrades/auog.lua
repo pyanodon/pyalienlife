@@ -47,7 +47,8 @@ local tech_upgrades =
                 {
                     'glowing-mushrooms',
                     'underground-chambers',
-                }
+                },
+            is_upgrade = true,
             },
         example_2 =
             {
@@ -77,7 +78,7 @@ local tech_upgrades =
                     'sawdust',
                     'underground-chambers',
                 },
-            is_upgrade = true, -- tell this its an upgrade of other techs
+            is_upgrade = false, -- tell this its an upgrade of other techs
             prerequisites = -- table of all techs that are replaced by this one.
                 {
                     --'example-1'
