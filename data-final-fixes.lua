@@ -398,7 +398,7 @@ local recipes_list =
   "biomass-2",
   --"fungal-substrate",
   --"fungal-substrate-02",
-  "fungal-substrate-03",
+  --"fungal-substrate-03",
   "wood-seedling",
   "wood-seeds",
   "empty-petri-dish",
