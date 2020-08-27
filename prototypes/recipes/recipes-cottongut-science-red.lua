@@ -93,7 +93,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-red-04',
-    category = 'research',
+    category = 'space-cottongut',
     enabled = false,
     energy_required = 135,
     ingredients = {
@@ -116,7 +116,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-red-05',
-    category = 'research',
+    category = 'space-cottongut',
     enabled = false,
     energy_required = 135,
     ingredients = {

@@ -58,7 +58,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-py-02',
-    category = 'research',
+    category = 'space-cottongut',
     enabled = false,
     energy_required = 135,
     ingredients = {
@@ -78,7 +78,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-py-03',
-    category = 'research',
+    category = 'space-cottongut',
     enabled = false,
     energy_required = 135,
     ingredients = {
@@ -98,7 +98,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-py-04',
-    category = 'research',
+    category = 'space-cottongut',
     enabled = false,
     energy_required = 135,
     ingredients = {
@@ -121,7 +121,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-py-05',
-    category = 'research',
+    category = 'space-cottongut',
     enabled = false,
     energy_required = 135,
     ingredients = {

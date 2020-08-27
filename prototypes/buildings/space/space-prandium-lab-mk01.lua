@@ -49,7 +49,7 @@ ENTITY {
         module_slots = 20
     },
     allowed_effects = {"speed","productivity",'consumption','pollution'},
-    crafting_categories = {"cottongut"},
+    crafting_categories = {"space-cottongut"},
     crafting_speed = 0.05,
     energy_source = {
         type = "electric",

@@ -350,4 +350,8 @@ data:extend {
         type = "recipe-category",
         name = "slaughterhouse-arqad"
     },
+    {
+        type = "recipe-category",
+        name = "space-cottongut"
+    },
 }
