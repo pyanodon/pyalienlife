@@ -57,7 +57,7 @@ RECIPE {
     enabled = false,
     energy_required = 135,
     ingredients = {
-        {type = 'item', name = 'cottongut', amount = 8},
+        {type = 'item', name = 'cottongut', amount = 12},
         {type = 'item', name = 'paragen', amount = 4},
         },
     results = {
@@ -77,7 +77,7 @@ RECIPE {
     enabled = false,
     energy_required = 135,
     ingredients = {
-        {type = 'item', name = 'cottongut', amount = 14},
+        {type = 'item', name = 'cottongut', amount = 36},
         {type = 'item', name = 'paragen', amount = 6},
         },
     results = {
@@ -93,11 +93,11 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-green-04',
-    category = 'research',
+    category = 'space-cottongut',
     enabled = false,
     energy_required = 135,
     ingredients = {
-        {type = 'item', name = 'cottongut', amount = 24},
+        {type = 'item', name = 'cottongut', amount = 108},
         {type = 'item', name = 'paragen', amount = 8},
         },
     results = {
@@ -116,11 +116,11 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-green-05',
-    category = 'research',
+    category = 'space-cottongut',
     enabled = false,
     energy_required = 135,
     ingredients = {
-        {type = 'item', name = 'cottongut', amount = 40},
+        {type = 'item', name = 'cottongut', amount = 324},
         {type = 'item', name = 'paragen', amount = 10},
         },
     results = {

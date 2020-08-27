@@ -23,8 +23,6 @@ for _,module in pairs(data.raw.module) do
   end
 end
 
-log(serpent.block(data.raw.module.gord))
-
 for _, drill in pairs(data.raw['mining-drill']) do
 	drill.allowed_effects = {"consumption", "speed", "pollution"}
 end
@@ -2212,7 +2210,19 @@ local recipes_list =
 --adding to module limitation list
 FUN.productivity(recipes_list)
 
---log(serpent.block(data.raw.recipe['korlex-milk-4b']))
---log(serpent.block(data.raw.recipe['korlex-milk-5b']))
---log(serpent.block(data.raw.recipe['korlex-milk-6b']))
---log(serpent.block(data.raw.recipe['korlex-milk-7b']))
+local old_limits = table.deepcopy(data.raw.module['cottongut-mk04'].limitation)
+
+data.raw.module['cottongut-mk04'].limitation =
+{
+  'cottongut-science-red-04',
+  'cottongut-science-red-05',
+  'cottongut-science-green-04',
+  'cottongut-science-green-05',
+  'cottongut-science-blue-03',
+  'cottongut-science-blue-04',
+  'cottongut-science-blue-05',
+}
+
+for r, recipe in pairs(old_limits) do
+  table.insert(data.raw.module['cottongut-mk04'].limitation , recipe)
+end

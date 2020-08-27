@@ -5391,9 +5391,11 @@ local alien_life_limitations_fawogae =
 local alien_life_limitations_moondrop =
     {
     }
+
 local alien_life_limitations_cottongut =
     {
     }
+
 ----MODULES----
 
 ITEM {
@@ -8618,6 +8620,7 @@ ITEM {
 	limitation = alien_life_limitations_cottongut,
 	limitation_message_key = "cottongut"
 }
+
 ----ARQAD
 
 ITEM {
