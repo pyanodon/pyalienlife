@@ -17,6 +17,7 @@ local tech_upgrade =
         biofactory = require("prototypes/upgrades/biofactory"),
         bioreactor = require("prototypes/upgrades/bioreactor"),
         cadaveric = require("prototypes/upgrades/cadaveric"),
+        compost = require("prototypes/upgrades/compost"),
         --test_1 is a filler name for table readablity by fleshy meat bags. name it whatever and then set it to require the tech upgrade fills
         --each name needs to be unque to keep the files seperated
     }
