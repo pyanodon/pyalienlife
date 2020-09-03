@@ -875,7 +875,7 @@ script.on_event(
 			global.pycloud.chests[E.unit_number] = chest
 			--log(serpent.block(global.pycloud))
 		elseif global.tech_upgrades.entities_master_list[E.name] ~= nil then
-			log('hit')
+			--log('hit')
 			local beacon = game.surfaces['nauvis'].create_entity{
 				name = 'hidden-beacon',
 				position = E.position,
@@ -883,7 +883,7 @@ script.on_event(
 			}
 			local module = beacon.get_inventory(defines.inventory.beacon_modules)
 			local mod = module.insert({name = global.tech_upgrades.entities_master_list[E.name] .. '-module', count = 1})
-			log(mod)
+			--log(mod)
 		elseif global.has_built_first_farm == false then
 			for _, farm in pairs(farm_buildings) do
 				if string.match(E.name, farm) then -- or string.match(E.ghost_name, farm) then
@@ -1369,7 +1369,7 @@ script.on_nth_tick(20, function()
 					--log('hit')
 					local inv = pycloud.chests[in_chest].entity.get_inventory(defines.inventory.chest)
 					if inv ~= nil and pycloud.chests[in_chest].skin.energy > 1 then
-						log(serpent.block(pycloud.chests[in_chest].skin.energy))
+						--log(serpent.block(pycloud.chests[in_chest].skin.energy))
 						--log('hit')
 						for c, _ in pairs(inv.get_contents()) do
 							--log('hit')
@@ -1848,7 +1848,7 @@ script.on_event(
 			global.scipt_opening_gui = true
 			global.current_entity[event.player_index] = nil
 			global.slaughterhouse_gui_open = false
-			log('set recipe')
+			--log('set recipe')
 		end
 	end
 )
@@ -1942,16 +1942,16 @@ script.on_event(
 				turd.destroy()
 			end
 		elseif string.match(event.element.name, 'turd_select') then
-			log('hit')
-			log(event.element.name)
+			--log('hit')
+			--log(event.element.name)
 			local sub_name = string.match(event.element.name, '[^_]*$')
-			log(serpent.block(sub_name))
+			--log(serpent.block(sub_name))
 			local sub_tech = sub_name
 			local name = string.match(event.element.parent.name, '[^_]*$')
 			local tech = name
-			log(serpent.block(name))
-			log(serpent.block(global.tech_upgrades))
-			log(serpent.block(global.tech_upgrades.techs))
+			--log(serpent.block(name))
+			--log(serpent.block(global.tech_upgrades))
+			--log(serpent.block(global.tech_upgrades.techs))
 			event.element.style = 'confirm_button'
 			global.tech_upgrades.currently_selected =
 				{
@@ -1970,8 +1970,8 @@ script.on_event(
 				)
 				screen.turd_confirm_frame.force_auto_center()
 				screen.turd_confirm_frame.style.width = 250
-				log(type(sub_name))
-				log({'technology-name.' .. sub_name})
+				--log(type(sub_name))
+				--log({'technology-name.' .. sub_name})
 				local string =  {'technology-name.' .. sub_name}
 				screen.turd_confirm_frame.add(
 					{
@@ -2023,20 +2023,20 @@ script.on_event(
 			end
 			global.tech_upgrades.tech_status[tech] = true
 			global.tech_upgrades.techs[tech][sub_tech].selected = true
-			log(serpent.block(global.tech_upgrades.techs[tech]))
-			log(serpent.block(global.tech_upgrades.entities_master_list))
+			--log(serpent.block(global.tech_upgrades.techs[tech]))
+			--log(serpent.block(global.tech_upgrades.entities_master_list))
 			local player = game.players[event.player_index]
 			if global.tech_upgrades.techs[tech][sub_tech].is_upgrade == true then
-				log(serpent.block(global.TRlist))
+				--log(serpent.block(global.TRlist))
 				for u, upgrade in pairs(global.TRlist) do
-					log(u)
-					log(serpent.block(upgrade))
-					log(sub_tech)
+					--log(u)
+					--log(serpent.block(upgrade))
+					--log(sub_tech)
 					if upgrade.upgrade_1 ~= nil and upgrade.upgrade_1.tech == sub_tech then
-						log('hit')
+						--log('hit')
 						upgrade.current_lvl = 2
 					elseif upgrade.upgrade_2 ~= nil and upgrade.upgrade_2.tech == sub_tech then
-						log('hit')
+						--log('hit')
 						upgrade.current_lvl = 3
 					end
 					if upgrade.current_lvl ~= nil and upgrade.current_lvl > 1 and player.force.recipes[upgrade.base_recipe].enabled == true then
@@ -2066,10 +2066,10 @@ script.on_event(
 		elseif string.match(event.element.name, 'turd_master_button') then
 			local player = game.players[event.player_index]
 			local tech_name = string.match(event.element.name, '[^_]*$')
-			log(serpent.block(tech_name))
+			--log(serpent.block(tech_name))
 			for t, tech in pairs(global.tech_upgrades.techs[tech_name]) do
-				log(t)
-				log(serpent.block(tech))
+				--log(t)
+				--log(serpent.block(tech))
 				local sub_tech = player.gui.screen.turd_master_frame.right_tech_window
 				local flow = sub_tech.add(
 					{
@@ -2453,13 +2453,13 @@ local function Tech_building_upgrades(event)
 
 	if global.tech_upgrades.techs[tech.name] ~= nil then
 
-		log('hit')
-		log(tech.name)
+		--log('hit')
+		--log(tech.name)
 		table.insert(global.tech_upgrades.unlocked_techs, tech.name)
 		local players = event.research.force.connected_players
 		local player = players[1]
 		if player ~= nil then
-			log('hit')
+			--log('hit')
 			local turd = player.gui.screen
 			if turd.turd_frame == nil then
 				turd.add(
@@ -2472,8 +2472,8 @@ local function Tech_building_upgrades(event)
 				)
 				turd.turd_frame.force_auto_center()
 				for t,tec in pairs(global.tech_upgrades.techs[tech.name]) do
-					log(t)
-					log(serpent.block(tec))
+					--log(t)
+					--log(serpent.block(tec))
 					local flow = turd.turd_frame.add(
 						{
 							type = 'frame',
@@ -2580,15 +2580,15 @@ local function Tech_building_upgrades(event)
 			end
 		--log(serpent.block(global.tech_upgrades))
 		else
-			log('hit')
+			--log('hit')
 			for t,tec in pairs(global.tech_upgrades.techs[tech.name]) do
-				log(serpent.block(global.tech_upgrades.techs[tech.name]))
-				log(serpent.block(tec))
+				--log(serpent.block(global.tech_upgrades.techs[tech.name]))
+				--log(serpent.block(tec))
 				tec.selected = false
 			end
 			global.tech_upgrades.tech_status[tech.name] = false
-			log(serpent.block(global.tech_upgrades.tech_status))
-			log(serpent.block(global.tech_upgrades))
+			--log(serpent.block(global.tech_upgrades.tech_status))
+			--log(serpent.block(global.tech_upgrades))
 		end
 	end
 end
@@ -2704,10 +2704,10 @@ script.on_event("tech-upgrades", function(event)
 			)
 			left_table['turd_master_button_' .. t].style.width = 128
 			left_table['turd_master_button_' .. t].style.height = 128
-			log(t)
-			log(serpent.block(tech))
+			--log(t)
+			--log(serpent.block(tech))
 			if tech == true then
-				log('hit')
+				--log('hit')
 				left_table['turd_master_button_' .. t].style = 'red_logistic_slot_button'
 				--left_table['button' .. t].style.strikethrough_color  = {0.5,0.5,0.5}
 			end
