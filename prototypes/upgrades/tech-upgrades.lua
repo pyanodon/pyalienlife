@@ -20,6 +20,7 @@ local tech_upgrade =
         compost = require("prototypes/upgrades/compost"),
         creature = require("prototypes/upgrades/creature"),
         genlab = require("prototypes/upgrades/genlab"),
+        cridren = require("prototypes/upgrades/cridren"),
         --test_1 is a filler name for table readablity by fleshy meat bags. name it whatever and then set it to require the tech upgrade fills
         --each name needs to be unque to keep the files seperated
     }
