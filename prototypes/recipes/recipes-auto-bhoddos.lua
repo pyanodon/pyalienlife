@@ -117,7 +117,7 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {name='ammonia',amount ='*10'},
+                {name='ammonia',amount ='*50'},
             },
         results =
             {
