@@ -897,6 +897,8 @@ script.on_event(
 					disable_machine(E)
 				end
 			end
+		--elseif E.name == '' then
+			--asd		
 		end
 		if E.name == 'clone-1' then
 			local group = game.surfaces['nauvis'].create_unit_group{position = E.position, force = E.force}

@@ -209,22 +209,7 @@ ENTITY {
                 animation_speed = 0.4
             }
         },
-        {
-            north_position = util.by_pixel(-0, -64),
-            west_position = util.by_pixel(-0, -64),
-            south_position = util.by_pixel(-0, -64),
-            east_position = util.by_pixel(-0, -64),
-            animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/dome/dome.png",
-                frame_count = 1,
-                width = 437,
-                height = 571,
-                --line_length = 31,
-                --animation_speed = 0.4,
-                priority = "extra-high",
-                scale = 1
-            }
-        }
+        
     },
 
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
