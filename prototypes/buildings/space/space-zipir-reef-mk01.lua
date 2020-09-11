@@ -75,16 +75,7 @@ ENTITY {
             shift = util.by_pixel(8,-1),
             tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
         },
-        {
-            filename = "__pyalienlifegraphics3__/graphics/entity/dome/dome.png",
-            frame_count = 1,
-            width = 437,
-            height = 571,
-            shift = util.by_pixel(0, -64),
-            priority = "low",
-            --animation_speed = 0.75,
-            scale = 1
-        },
+        
     }
     },
     working_visualisations = {
@@ -163,22 +154,7 @@ ENTITY {
                 shift = util.by_pixel(230,0)
             }
         },
-        {
-            north_position = util.by_pixel(-0, -64),
-            west_position = util.by_pixel(-0, -64),
-            south_position = util.by_pixel(-0, -64),
-            east_position = util.by_pixel(-0, -64),
-            animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/dome/dome.png",
-                frame_count = 1,
-                width = 437,
-                height = 571,
-                --line_length = 31,
-                --animation_speed = 0.4,
-                priority = "extra-high",
-                scale = 1
-            }
-        }
+        
     },
     fluid_boxes = {
         --1

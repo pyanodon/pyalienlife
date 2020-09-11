@@ -32,6 +32,17 @@ data:extend(
     --flags = {"gui-icon"},
     --mipmap_count = 1,
     --scale = 0.5
-  }
+  },
+  {
+    type = "sprite",
+    name = "dome",
+    filename = "__pyalienlifegraphics3__/graphics/entity/dome/dome.png",
+    --priority = "extra-high-no-scale",
+    width = 437,
+    height = 571,
+    --flags = {"gui-icon"},
+    --mipmap_count = 1,
+    --scale = 0.5
+  },
 }
 )
