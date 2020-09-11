@@ -457,7 +457,7 @@ RECIPE {
         {type = 'item', name = 'cadaveric-arum', amount = 1},
     },
     results = {
-        {type = 'item', name = 'sulfur', amount = 6},
+        {type = 'item', name = 'sulfur', amount = 5},
     },
     --main_product = "cocoon",
 }:add_unlock("molecular-decohesion-mk03")
