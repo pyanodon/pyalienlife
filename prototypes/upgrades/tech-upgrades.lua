@@ -23,6 +23,7 @@ local tech_upgrade =
         cridren = require("prototypes/upgrades/cridren"),
         dataarray = require("prototypes/upgrades/data-array"),
         dhilmos = require("prototypes/upgrades/dhilmos"),
+        dingrits = require("prototypes/upgrades/dingrits"),
         --test_1 is a filler name for table readablity by fleshy meat bags. name it whatever and then set it to require the tech upgrade fills
         --each name needs to be unque to keep the files seperated
     }
