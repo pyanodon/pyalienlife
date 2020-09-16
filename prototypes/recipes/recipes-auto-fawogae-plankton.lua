@@ -2,7 +2,7 @@ local fun = require("prototypes/functions/functions")
 
 
 fun.autorecipes {
-    name = 'fawogae',
+    name = 'fawogae-2',
 	--baseitem = 'ralesia',
 	category = 'fawogae',
 	subgroup = 'py-alienlife-fawogae',
@@ -20,20 +20,20 @@ fun.autorecipes {
 					{name='fawogae',amount ='*4'}
 				},
 			crafting_speed = 70,
-			tech = 'fawogae'
+			tech = 'plankton'
         },
         {
 			ingredients =
 				{
-					{name='water'},
+					{name='phytoplankton',amount ='*10'},
 				},
 			results =
 				{
 					{name='fawogae',amount ='+2'}
 				},
 			crafting_speed = 60,
-			name = 'fawogae-01',
-			tech = 'fawogae'
+			name = 'fawogae-01a',
+			tech = 'plankton'
         },
         {
 			ingredients =
@@ -45,8 +45,8 @@ fun.autorecipes {
 					{name='fawogae',amount ='+5'}
 				},
 			crafting_speed = 55,
-			name = 'fawogae-02',
-			tech = 'fawogae'
+			name = 'fawogae-02a',
+			tech = 'plankton'
         },
         {
 			ingredients =
@@ -58,8 +58,8 @@ fun.autorecipes {
 					{name='fawogae',amount ='+14'}
 				},
 			crafting_speed = 52,
-			name = 'fawogae-03',
-			tech = 'fawogae'
+			name = 'fawogae-03a',
+			tech = 'plankton'
         },
         --green
         {
@@ -74,8 +74,8 @@ fun.autorecipes {
 					{name='fawogae',amount ="+5"}
 				},
 			crafting_speed = 48,
-			name = 'fawogae-04',
-			tech = 'mycology-mk02'
+			name = 'fawogae-04a',
+			tech = 'plankton'
         },
         {
 			ingredients =
@@ -87,8 +87,8 @@ fun.autorecipes {
 					{name='fawogae',amount ='+3'}
 				},
 			crafting_speed = 44,
-			name = 'fawogae-05',
-			tech = 'mycology-mk02'
+			name = 'fawogae-05a',
+			tech = 'plankton'
         },
         {
 			ingredients =
@@ -100,8 +100,8 @@ fun.autorecipes {
 					{name='fawogae',amount ='+2'}
 				},
 			crafting_speed = 40,
-			name = 'fawogae-06',
-			tech = 'mycology-mk02'
+			name = 'fawogae-06a',
+			tech = 'plankton'
         },
     --blue
         {
@@ -117,8 +117,8 @@ fun.autorecipes {
 					{name='fawogae',amount ='+4'}
 				},
 			crafting_speed = 36,
-			name = 'fawogae-07',
-			tech = 'mycology-mk03'
+			name = 'fawogae-07a',
+			tech = 'plankton'
         },
         {
 			ingredients =
@@ -130,8 +130,8 @@ fun.autorecipes {
 					{name='fawogae',amount ='+4'}
 				},
 			crafting_speed = 32,
-			name = 'fawogae-08',
-			tech = 'mycology-mk03'
+			name = 'fawogae-08a',
+			tech = 'plankton'
         },
         {
 			ingredients =
@@ -143,8 +143,8 @@ fun.autorecipes {
 					{name='fawogae',amount ='+2'}
 				},
 			crafting_speed = 28,
-			name = 'fawogae-09',
-			tech = 'mycology-mk03'
+			name = 'fawogae-09a',
+			tech = 'plankton'
 		},
     --GH
     {
@@ -159,8 +159,8 @@ fun.autorecipes {
                 {name='fawogae',amount ='+6'}
             },
 		crafting_speed = 25,
-		name = 'fawogae-10',
-        tech = 'mycology-mk04'
+		name = 'fawogae-10a',
+        tech = 'plankton'
     },
     {
         ingredients =
@@ -176,8 +176,8 @@ fun.autorecipes {
                 {name='fawogae',amount ='+2'}
             },
 		crafting_speed = 20,
-		name = 'fawogae-11',
-        tech = 'mycology-mk04'
+		name = 'fawogae-11a',
+        tech = 'plankton'
     },
     {
         ingredients =
@@ -191,8 +191,8 @@ fun.autorecipes {
                 {name='fawogae',amount ='+3'}
             },
 		crafting_speed = 15,
-		name = 'fawogae-12',
-        tech = 'mycology-mk04'
+		name = 'fawogae-12a',
+        tech = 'plankton'
     },
     {
         ingredients =
@@ -205,8 +205,8 @@ fun.autorecipes {
                 {name='fawogae',amount ='+10'}
             },
 		crafting_speed = 10,
-		name = 'fawogae-13',
-        tech = 'mycology-mk04'
+		name = 'fawogae-13a',
+        tech = 'plankton'
     },
 	}
 }
