@@ -5320,6 +5320,152 @@ local TRlist =
 					},
 				},
 
+--LICHEN
+
+				{
+				base_recipe = 'fawogae-01',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'fawogae-01a',
+					tech = 'lichen',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'fawogae-02',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'fawogae-02a',
+					tech = 'lichen',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'fawogae-03',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'fawogae-03a',
+					tech = 'lichen',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'fawogae-04',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'fawogae-04a',
+					tech = 'lichen',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'fawogae-05',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'fawogae-05a',
+					tech = 'lichen',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'fawogae-06',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'fawogae-06a',
+					tech = 'lichen',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'fawogae-07',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'fawogae-07a',
+					tech = 'lichen',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'fawogae-08',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'fawogae-08a',
+					tech = 'lichen',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'fawogae-09',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'fawogae-09a',
+					tech = 'lichen',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'fawogae-10',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'fawogae-10a',
+					tech = 'lichen',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'fawogae-11',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'fawogae-11a',
+					tech = 'lichen',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'fawogae-12',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'fawogae-12a',
+					tech = 'lichen',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'fawogae-13',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'fawogae-13a',
+					tech = 'lichen',
+					unlocked = false,
+					level = 2,
+					},
+				},
+
 --BIOPRINTING
 
 				{
@@ -5444,6 +5590,10 @@ local TRlist =
 				['microfilters-mk02'] = true,
 				['navens'] = true,
 				['mycology-mk01'] = true,
+				['mycology-mk02'] = true,
+				['mycology-mk03'] = true,
+				['mycology-mk04'] = true,
+				['lichen'] = true,
 				['yaedols'] = true,
 				['biopolymer-clusters'] = true,
 				['ctc'] = true,

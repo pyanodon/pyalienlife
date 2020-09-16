@@ -548,6 +548,7 @@ require('prototypes/recipes/recipes-arqad-products-1')
 require('prototypes/recipes/recipes-arqad-products-2')
 require('prototypes/recipes/recipes-tree')
 require('prototypes/recipes/recipes-auto-arthurian-abacus')
+require('prototypes/recipes/recipes-auto-fawogae-plankton')
 
 --gunpowder poo
 --require('prototypes/recipes/recipes-vrauk-products')
