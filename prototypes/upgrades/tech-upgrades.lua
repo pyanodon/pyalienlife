@@ -26,6 +26,7 @@ local tech_upgrade =
         dingrits = require("prototypes/upgrades/dingrits"),
         korlex = require("prototypes/upgrades/korlex"),
         fawogae = require("prototypes/upgrades/fawogae"),
+        fish = require("prototypes/upgrades/fish"),
         --test_1 is a filler name for table readablity by fleshy meat bags. name it whatever and then set it to require the tech upgrade fills
         --each name needs to be unque to keep the files seperated
     }
