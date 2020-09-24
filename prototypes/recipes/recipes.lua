@@ -1304,12 +1304,12 @@ RECIPE {
     enabled = false,
     energy_required = 3,
     ingredients = {
-        {type = "fluid", name = "ethanol", amount = 100},
+        {type = "fluid", name = "ethanol", amount = 150},
         {type = "fluid", name = "water", amount = 500},
         {type = "item", name = "coke", amount = 3}
     },
     results = {
-        {type = "fluid", name = "combustion-mixture1", amount = 200, temperature = 600},
+        {type = "fluid", name = "combustion-mixture1", amount = 200, temperature = 680},
         {type = "fluid", name = "steam", amount = 500, temperature = 60}
     },
     icon = "__pyalienlifegraphics__/graphics/icons/combustion-ethanol.png",
