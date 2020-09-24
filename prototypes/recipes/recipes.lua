@@ -1304,7 +1304,7 @@ RECIPE {
     enabled = false,
     energy_required = 3,
     ingredients = {
-        {type = "fluid", name = "ethanol", amount = 150},
+        {type = "fluid", name = "ethanol", amount = 100},
         {type = "fluid", name = "water", amount = 500},
         {type = "item", name = "coke", amount = 3}
     },
