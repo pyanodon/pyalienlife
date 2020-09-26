@@ -101,7 +101,7 @@ require('prototypes/technologies/cardial-hypopharynx')
 require('prototypes/technologies/chromasome-infocrystalization')
 require('prototypes/technologies/pheromone-transition')
 require('prototypes/technologies/laika')
-require('prototypes/technologies/space-program')
+--require('prototypes/technologies/space-program')
 require('prototypes/technologies/pesticides')
 require('prototypes/technologies/symbiosis')
 require('prototypes/technologies/bioprocessing')
@@ -339,12 +339,12 @@ require('prototypes/buildings/space/space-yotoi-aloe-orchard-mk01')
 require('prototypes/buildings/space/space-zipir-reef-mk01')
 
 --((ROCKET))--
-require('prototypes/buildings/silo-2')
-require('prototypes/buildings/rocket-mk02')
+--require('prototypes/buildings/silo-2')
+--require('prototypes/buildings/rocket-mk02')
 
 require('prototypes/buildings/py-drive')
 
-require('prototypes/buildings/outpost')
+--require('prototypes/buildings/outpost')
 --require('prototypes/buildings/outpost-mining')
 --require('prototypes/buildings/flyavan-outpost')
 --weapons/defenses
@@ -357,9 +357,9 @@ require('prototypes/buildings/outpost')
 --require('prototypes/weapons/ammo/basic-rocket')
 
 --Creature
-require('prototypes/creatures/caravan')
-require('prototypes/creatures/nuka-caravan')
-require('prototypes/creatures/flying-caravan')
+--require('prototypes/creatures/caravan')
+--require('prototypes/creatures/nuka-caravan')
+--require('prototypes/creatures/flying-caravan')
 require('prototypes/creatures/dingrido')
 require('prototypes/creatures/crawdad')
 require('prototypes/creatures/phadaisus')
@@ -569,7 +569,7 @@ data.raw["utility-constants"].default.main_menu_background_image_location = "__p
 require('prototypes/sprites/sprites')
 --require('prototypes/ores/fake-plants')
 
-data.raw.fluid['bio-oil'].fuel_value = '0.1MJ'
+data.raw.fluid['bio-oil'].fuel_value = '0.13MJ'
 
 local bio_list = require('prototypes/items/biomass-convertion')
 
