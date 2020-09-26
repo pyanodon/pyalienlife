@@ -1308,6 +1308,34 @@ RECIPE {
     --main_product = "chloral",
 }:add_unlock("basic-electronics")
 
+RECIPE {
+    type = 'recipe',
+    name = 'cooling-system',
+    category = 'electronic',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'stainless-steel', amount = 2},
+        {type = 'item', name = 'nexelit-plate', amount = 4},
+        {type = 'item', name = 'duralumin', amount = 3},
+        {type = 'item', name = 'solder', amount = 2},
+        {type = 'item', name = 'graphene-roll', amount = 1},
+        {type = 'fluid', name = 'sulfuric-acid', amount = 100},
+        {type = 'fluid', name = 'liquid-nitrogen', amount = 50},
+        {type = 'item', name = 'nylon-parts', amount = 5},
+        {type = 'item', name = 'small-parts-02', amount = 3},
+        {type = 'item', name = 'chitosan', amount = 1},
+        {type = 'item', name = 'kevlar', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'cooling-system', amount = 1},
+    },
+    --main_product = "chloral",
+}:add_unlock("advanced-electronics")
+
+RECIPE('processing-unit'):add_ingredient({type = "item", name = "cooling-system", amount = 1})
+RECIPE('intelligent-unit'):add_ingredient({type = "item", name = "cooling-system", amount = 2})
+
 RECIPE('rennea-mk02-breeding'):replace_ingredient("sulfuric-acid-barrel", "phosphoric-acid-barrel")
 
 RECIPE('rennea-mk03-breeding'):replace_ingredient("sulfuric-acid-barrel", "phosphoric-acid-barrel")

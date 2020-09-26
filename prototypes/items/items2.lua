@@ -102,3 +102,14 @@ ITEM {
     order = "a",
     stack_size = 100
 }
+
+ITEM {
+    type = "item",
+    name = "cooling-system",
+    icon = "__pyalienlifegraphics__/graphics/icons/cooling-system.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-hightech-tier-3",
+    order = "a",
+    stack_size = 100
+}

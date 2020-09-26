@@ -21,7 +21,7 @@ TECHNOLOGY {
     icon = '__pyalienlifegraphics__/graphics/technology/genetics-mk02.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'genetics-mk01',"machines-mk02"},
+    prerequisites = {'genetics-mk01',"machines-mk02","korlex"},
     effects = {},
     unit = {
         count = 200,
