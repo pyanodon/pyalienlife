@@ -1319,6 +1319,28 @@ RECIPE {
     order = "a"
 }:add_unlock("energy-3")
 
+--bio-oil to CM1
+RECIPE {
+    type = "recipe",
+    name = "bio-oil-combustion",
+    category = "combustion",
+    enabled = false,
+    energy_required = 3,
+    ingredients = {
+        {type = "fluid", name = "bio-oil", amount = 100},
+        {type = "fluid", name = "water", amount = 500},
+        {type = "item", name = "coke", amount = 3}
+    },
+    results = {
+        {type = "fluid", name = "combustion-mixture1", amount = 150, temperature = 600},
+        {type = "fluid", name = "steam", amount = 500, temperature = 60}
+    },
+    icon = "__pyalienlifegraphics__/graphics/icons/combustion-bio-oil.png",
+    icon_size = 32,
+    --main_product = "combustion-mixture1",
+    subgroup = "py-combustion",
+    order = "a"
+}:add_unlock("energy-1")
 
 ----energy drink----
 

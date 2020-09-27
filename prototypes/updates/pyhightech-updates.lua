@@ -1325,6 +1325,7 @@ RECIPE {
         {type = 'item', name = 'nylon-parts', amount = 5},
         {type = 'item', name = 'small-parts-02', amount = 3},
         {type = 'item', name = 'chitosan', amount = 1},
+        {type = 'item', name = 'science-coating', amount = 1},
         {type = 'item', name = 'kevlar', amount = 1},
     },
     results = {
@@ -1335,6 +1336,8 @@ RECIPE {
 
 RECIPE('processing-unit'):add_ingredient({type = "item", name = "cooling-system", amount = 1})
 RECIPE('intelligent-unit'):add_ingredient({type = "item", name = "cooling-system", amount = 2})
+RECIPE('var-josephson-junction'):add_ingredient({type = "item", name = "cooling-system", amount = 1})
+RECIPE('pi-josephson-junction'):add_ingredient({type = "item", name = "cooling-system", amount = 1})
 
 RECIPE('rennea-mk02-breeding'):replace_ingredient("sulfuric-acid-barrel", "phosphoric-acid-barrel")
 
