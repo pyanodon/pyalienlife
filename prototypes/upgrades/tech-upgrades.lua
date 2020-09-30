@@ -19,7 +19,6 @@ local tech_upgrade =
         cadaveric = require("prototypes/upgrades/cadaveric"),
         compost = require("prototypes/upgrades/compost"),
         creature = require("prototypes/upgrades/creature"),
-        genlab = require("prototypes/upgrades/genlab"),
         cridren = require("prototypes/upgrades/cridren"),
         dataarray = require("prototypes/upgrades/data-array"),
         dhilmos = require("prototypes/upgrades/dhilmos"),
@@ -28,6 +27,8 @@ local tech_upgrade =
         fawogae = require("prototypes/upgrades/fawogae"),
         fish = require("prototypes/upgrades/fish"),
         fwf = require("prototypes/upgrades/fwf"),
+        genlab = require("prototypes/upgrades/genlab"),
+        genlab = require("prototypes/upgrades/grod"),
         --test_1 is a filler name for table readablity by fleshy meat bags. name it whatever and then set it to require the tech upgrade fills
         --each name needs to be unque to keep the files seperated
     }
