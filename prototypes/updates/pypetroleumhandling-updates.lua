@@ -178,3 +178,17 @@ RECIPE {
     },
     --main_product = "casein-pulp-01",
 }:add_unlock("compost")
+
+RECIPE {
+    type = "recipe",
+    name = "stopper-2",
+    category = "crafting",
+    enabled = true,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'rubber', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'stopper', amount = 2}
+    }
+}:add_unlock("rubber")
