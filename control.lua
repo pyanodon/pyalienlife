@@ -1720,11 +1720,13 @@ script.on_event(defines.events.on_gui_selection_state_changed, function(event)
 				caravanroutes[id_num].startpoint.id = global.outpost_table["outpost" .. otnum].entity.unit_number
 				caravanroutes[id_num].startpoint.pos = global.outpost_table["outpost" .. otnum].entity.position
 
+				--[[
 				caravanroutes[id_num].unit.set_command {
 					type = defines.command.go_to_location,
 					destination = caravanroutes[id_num].startpoint.pos,
 					radius = 4
 				}
+				]]--
 			elseif event.element.name == "outpost-list-2" then
 				local value = event.element.get_item(event.element.selected_index)
 				--log(value)
@@ -2168,6 +2170,24 @@ script.on_event(
 						}
 					)
 			end
+		elseif event.element.name == 'route_set_button' then
+			local id_num = next(lastclickedunit)
+			if global.caravanroutes[id_num].startpoint.id ~= 0 and global.caravanroutes[id_num].endpoint.id ~= 0 then
+				log(serpent.block(global.caravanroutes))
+				global.caravanroutes[id_num].unit.set_command {
+					type = defines.command.go_to_location,
+					destination = caravanroutes[id_num].startpoint.pos,
+					radius = 4
+				}
+			else
+				event.element.parent.add(
+					{
+						type = 'label',
+						name = 'warning',
+						caption = 'the caravan doesnt have a route set it will not fuction until it has both a start and end point set.'
+					}
+				)
+			end
 		end
 	end)
 
@@ -2302,7 +2322,14 @@ local function create_caravan_gui(event, entity)
 	end
 	caravangui.ctable.add({type = "frame", name = "route_frame_2", direction = "vertical", caption = caption})
 	caravangui.ctable.route_frame_2.add({type = "drop-down", name = "outpost-list-2", items = names})
-
+	caravangui.ctable.add(
+		{
+		  type = 'button',
+		  name = 'route_set_button',
+		  caption = {"gui.confirm"},
+		  style = 'confirm_button'
+		}
+	  )
 	caravangui.add({type = "frame", name = "caravan_frame_center", direction = "vertical", caption = "current inventory"})
 	if caravanroutes[entity.unit_number] ~= nil and caravanroutes[entity.unit_number].inventory.hasitem == true then
 		caravangui.caravan_frame_center.add(
@@ -2648,9 +2675,9 @@ end
 
 script.on_event(defines.events.on_research_finished, function(event)
 	Tech_recipe_upgrades(event)
-	Tech_building_upgrades(event)
+	--Tech_building_upgrades(event)
 end)
-
+--[[
 script.on_event("tech-upgrades", function(event)
 
 	local player = game.players[event.player_index]
@@ -2720,3 +2747,4 @@ script.on_event("tech-upgrades", function(event)
 	end
 
 end)
+]]--

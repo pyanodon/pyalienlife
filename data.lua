@@ -344,7 +344,7 @@ require('prototypes/buildings/space/space-zipir-reef-mk01')
 
 require('prototypes/buildings/py-drive')
 
---require('prototypes/buildings/outpost')
+require('prototypes/buildings/outpost')
 --require('prototypes/buildings/outpost-mining')
 --require('prototypes/buildings/flyavan-outpost')
 --weapons/defenses
@@ -357,9 +357,9 @@ require('prototypes/buildings/py-drive')
 --require('prototypes/weapons/ammo/basic-rocket')
 
 --Creature
---require('prototypes/creatures/caravan')
---require('prototypes/creatures/nuka-caravan')
---require('prototypes/creatures/flying-caravan')
+require('prototypes/creatures/caravan')
+require('prototypes/creatures/nuka-caravan')
+require('prototypes/creatures/flying-caravan')
 require('prototypes/creatures/dingrido')
 require('prototypes/creatures/crawdad')
 require('prototypes/creatures/phadaisus')
@@ -416,8 +416,8 @@ require('prototypes/fluids/pre-pesticide-02')
 require('prototypes/fluids/ethyl-mercaptan')
 
 --Tech upgrade stuff--
-require('prototypes/upgrades/hidden-beacon')
-require('prototypes/upgrades/tech-upgrades')
+--require('prototypes/upgrades/hidden-beacon')
+--require('prototypes/upgrades/tech-upgrades')
 
 --(( RECIPES ))--
 require('prototypes/items/items')
@@ -668,7 +668,7 @@ local fun = require("prototypes/functions/functions")
 fun.reprocess_recipes_1()
 
 fun.reprocess_recipes_2()
-
+--[[
 --(( Shortcut keys ))--
 local recipeselect=
 	{
@@ -679,3 +679,4 @@ local recipeselect=
 	}
 
 data:extend{recipeselect}
+]]--
