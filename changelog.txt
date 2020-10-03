@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.9.1
+Date: 2020-10-03
+  Changes:
+    - Fixed error antelope not being placable.
+    - fixed crash with caravan when not having both start and end points set up.
+    - added bio oil combustion mix recipe.
+    - added rubber stopper from rubber recipe.
+    - several adjustments and balance changes to cottonguts. still work in progress.
+    - update to factorio version 1.0.
+---------------------------------------------------------------------------------------------------
 Version: 1.9.0
 Date: 2020-07-29
   Changes:
