@@ -2210,7 +2210,7 @@ local recipes_list =
 --adding to module limitation list
 FUN.productivity(recipes_list)
 
-local old_limits = table.deepcopy(data.raw.module['cottongut-mk04'].limitation)
+local old_limits = table.deepcopy(data.raw.module['cottongut-mk04'].limitation) or {}
 
 data.raw.module['cottongut-mk04'].limitation =
 {
