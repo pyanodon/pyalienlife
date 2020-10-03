@@ -18,8 +18,14 @@ for _, tree in pairs(data.raw.tree) do
         table.insert(tree.minable.results, mine_results_1)
         table.insert(tree.minable.results, mine_results_2)
     elseif tree.minable ~= nil and tree.minable.result == 'wood' then
+        tree.minable.result = nil
         tree.minable.results =
             {
+                {
+                    type = 'item',
+                    name = 'wood',
+                    amount = tree.minable.count,
+                },
                 {
                     type = 'item',
                     name = 'saps',
@@ -31,11 +37,6 @@ for _, tree in pairs(data.raw.tree) do
                     name = 'sap-seeds',
                     amount = 5,
                     probability = 0.005
-                },
-                {
-                    type = 'item',
-                    name = 'wood',
-                    amount = tree.minable.count,
                 }
             }
     end
