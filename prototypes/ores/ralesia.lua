@@ -25,7 +25,7 @@ ENTITY {
     order = "a-b-a",
     map_color = {r = 0.960, g = 0.666, b = 0.0},
     minable = {
-        hardness = 1,
+        
         -- mining_particle = "aluminium-ore-particle",
         mining_time = 2,
         results = {
