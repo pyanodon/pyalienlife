@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.9.2
+Date: 2020-10-03
+  Changes:
+    - Fixed crash when attempting to place an entity.
+    - remove outdated entity property that doesnt do anything anymore.
+    - updated ore gen code to current standard.
+---------------------------------------------------------------------------------------------------
 Version: 1.9.1
 Date: 2020-10-03
   Changes:
