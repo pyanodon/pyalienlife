@@ -3,7 +3,7 @@ DATA {
     category = "resource",
     name = "ore-bioreserve",
     richness = true,
-    order = "b-e"
+    order = "p-bio"
 }
 
 DATA {

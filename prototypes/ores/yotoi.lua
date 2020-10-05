@@ -1,19 +1,3 @@
---[[
-DATA {
-    type = "autoplace-control",
-    category = "resource",
-    name = "ore-aluminium",
-    richness = true,
-    order = "b-e"
-}
-]]--
-
---[[
-DATA {
-    type = "noise-layer",
-    name = "ore-aluminium"
-}
-]]--
 
 ENTITY {
     type = "resource",
