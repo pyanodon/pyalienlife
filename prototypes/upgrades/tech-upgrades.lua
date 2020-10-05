@@ -25,6 +25,7 @@ local tech_upgrade =
         genlab = require("prototypes/upgrades/genlab"),
         genlab = require("prototypes/upgrades/grod"),
         incubator = require("prototypes/upgrades/incubator"),
+        kicalk = require("prototypes/upgrades/kicalk"),
         ulric = require("prototypes/upgrades/ulric"),
         seaweed = require("prototypes/upgrades/seaweed"),
         sap = require("prototypes/upgrades/sap"),
