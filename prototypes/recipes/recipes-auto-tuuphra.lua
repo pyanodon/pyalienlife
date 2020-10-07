@@ -27,7 +27,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     --{'s1'},
-					{name='soil',amount ='20'},
+					{name='soil',amount =20},
 				},
 			results =
 				{
@@ -110,7 +110,7 @@ fun.autorecipes {
                     --{'a'},
 					--{'b','+15'},
 					--{name='soil',amount ='R'},
-                    {name='bloodmeal',amount ='2'},
+                    {name='bloodmeal',amount =2},
                     --{'d'},
 				},
 			results =
@@ -121,25 +121,79 @@ fun.autorecipes {
 				crafting_speed = 100,
 				tech = 'tuuphra-mk03'
         },
+
+
+
+
+
         {
 			ingredients =
 				{
-                    --{'s1'},
-                    --{'a'},
-				   --{'b','+15'},
-				   --{'nitrogen','R'},
-				   --{name='bloodmeal',amount ='R'},
-					{name='nitrogen',amount ='*15'},
+
+
+                    {name='pesticide01',amount ='+1'},
                     --{'d'},
                 },
 			results =
 				{
 					--{'a','*20'},
-					{name='tuuphra',amount ='+2'}
+					{name='tuuphra',amount ='+8'}
 				},
 				crafting_speed = 100,
 				tech = 'tuuphra-mk03'
         },
+
+
+
+
+
+
+
+        {
+			ingredients =
+				{
+
+
+                    {name='nitrogen',amount ='+*50'},
+                    --{'d'},
+                },
+			results =
+				{
+					--{'a','*20'},
+					{name='tuuphra',amount ='+3'}
+				},
+				crafting_speed = 100,
+				tech = 'tuuphra-mk03'
+        },
+
+
+
+
+
+
+        {
+			ingredients =
+				{
+
+
+                    {name='pesticide01',amount ='R'},
+                    {name='pesticide02',amount ='+1'},
+                    --{'d'},
+                },
+			results =
+				{
+					--{'a','*20'},
+					{name='tuuphra',amount ='+10'}
+				},
+				crafting_speed = 100,
+				tech = 'tuuphra-mk03'
+        },
+
+
+
+
+
+
         {
 			ingredients =
 				{
@@ -157,7 +211,7 @@ fun.autorecipes {
 					--{'a','+3'}
 					{name='tuuphra',amount ="+7"}
 				},
-				crafting_speed = 100,
+				crafting_speed = 80,
 				tech = 'tuuphra-mk04'
 		},
 		{
@@ -169,15 +223,15 @@ fun.autorecipes {
                     --{'g','*2'},
 					--{'d'},
 					--{name='nitrogen',amount ='R'},
-                    {name='smalllamp',amount ='*2'},
+                    {name='smalllamp',amount ='*1'},
 				},
 			results =
 				{
 					--{'a','*25'},
 					--{'a','+3'}
-					{name='tuuphra',amount ="+3"}
+					{name='tuuphra',amount ="+5"}
 				},
-				crafting_speed = 90,
+				crafting_speed = 70,
 				tech = 'tuuphra-mk04'
 		},
     --GH
@@ -192,9 +246,9 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='tuuphra',amount ="+4"}
+					{name='tuuphra',amount ="+6"}
 				},
-			crafting_speed = 60,
+			crafting_speed = 50,
 			tech = 'growth-hormone'
 		},
 		{
@@ -208,16 +262,16 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='tuuphra',amount ="+1"}
+					{name='tuuphra',amount ="+2"}
 				},
-			crafting_speed = 60,
+			crafting_speed = 50,
 			tech = 'growth-hormone'
 		},
 		{
 			ingredients =
 				{
 					{name='bloodmeal',amount ='*2'},
-					{name='manure',amount =10},
+					{name='manure',amount =5},
 					--{'biomass','R'},
 					--{'gh',1},
 				},
@@ -225,7 +279,7 @@ fun.autorecipes {
 				{
 					{name='tuuphra',amount ="+8"}
 				},
-			crafting_speed = 60,
+			crafting_speed = 45,
 			tech = 'growth-hormone'
 		},
 		{
@@ -238,9 +292,9 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='tuuphra',amount ="+4"}
+					{name='tuuphra',amount ="+10"}
 				},
-			crafting_speed = 60,
+			crafting_speed = 30,
 			tech = 'growth-hormone'
 		},
 	}

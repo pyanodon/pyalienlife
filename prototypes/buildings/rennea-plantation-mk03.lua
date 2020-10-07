@@ -46,7 +46,7 @@ ENTITY {
     module_specification = {
         module_slots = 90
     },
-    allowed_effects = {"speed","productivity"},
+    allowed_effects = {"speed","productivity",'consumption','pollution'},
     crafting_categories = {"rennea"},
     crafting_speed = 0.1,
     energy_source = {
@@ -54,8 +54,8 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = -5,
     },
-    energy_usage = "550kW",
-    ingredient_count = 10,
+    energy_usage = "1700kW",
+    ingredient_count = 30,
     animation = {
         layers = {
             {

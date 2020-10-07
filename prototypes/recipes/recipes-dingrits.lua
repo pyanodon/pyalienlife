@@ -70,11 +70,12 @@ RECIPE {
         {type = 'item', name = 'tuuphra', amount = 5},
         {type = 'item', name = 'yotoi-fruit', amount = 10},
         {type = 'item', name = 'guts', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100},
+        {type = 'item', name = 'guar-gum', amount = 1},
+        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165},
         {type = 'fluid', name = 'fish-oil', amount = 100},
     },
     results = {
-        {type = 'item', name = 'dingrits-food-01', amount = 3},
+        {type = 'item', name = 'dingrits-food-01', amount = 6},
     },
 }:add_unlock("food-mk01")
 
@@ -93,13 +94,13 @@ RECIPE {
         {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'casein', amount = 5},
         {type = 'item', name = 'guts', amount = 10},
-        {type = 'item', name = 'seaweed', amount = 5},
+        {type = 'item', name = 'guar-gum', amount = 1},
         {type = 'item', name = 'skin', amount = 15},
-        {type = 'fluid', name = 'steam', amount = 100},
+        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165},
         {type = 'fluid', name = 'fish-oil', amount = 100},
     },
     results = {
-        {type = 'item', name = 'dingrits-food-02', amount = 5},
+        {type = 'item', name = 'dingrits-food-02', amount = 6},
     },
 }:add_unlock("food-mk02")
 

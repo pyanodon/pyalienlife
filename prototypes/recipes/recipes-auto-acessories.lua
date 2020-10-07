@@ -68,11 +68,11 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='pelt', amount =2},
+					{name='pelt', amount ='+1'},
 				},
                 crafting_speed = 15,
                 tech = 'exo-insertion',
-                name = 'Extract dingrits Pelt-1',
+                name = 'Extract dingrits Pelt-1a',
                 icon = "__pyalienlifegraphics__/graphics/icons/pelt.png",
                 icon_size = 64,
 		},
@@ -328,7 +328,7 @@ fun.autorecipes {
 					{name='shell', amount ='R'},
 					{name='guts', amount ='R'},
 					{name='arthropodblood', amount ='R'},
-					{name='shell', amount =5},
+					{name='shell', amount =15},
 				},
 			crafting_speed = 15,
 			tech = 'artificial-calcification',
@@ -574,14 +574,13 @@ RECIPE {
     enabled = false,
     energy_required = 40,
     ingredients = {
-        {type = 'item', name = 'meat-caged-dingrits', amount = 1}
+        {type = 'item', name = 'space-dingrit-return', amount = 1}
     },
     results = {
-		{type = 'item', name = 'snarer-heart', amount = 1},
-		{type = 'item', name = 'cage', amount = 1},
+		{type = 'item', name = 'snarer-heart', amount = 10},
     },
     main_product = "snarer-heart",
-}:add_unlock("anabolic-rna")
+}:add_unlock("laika")
 
 ------------------glandular-myocluster------------------
 
@@ -652,3 +651,47 @@ RECIPE {
     },
     main_product = "sternite-lung",
 }:add_unlock("antitumor")
+
+----food----
+RECIPE {
+    type = 'recipe',
+    name = 'auog-food-01b',
+    category = 'crafting-with-fluid',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'plastic-bar', amount = 2},
+        {type = 'item', name = 'fawogae', amount = 5},
+        {type = 'item', name = 'wood', amount = 3},
+        {type = 'item', name = 'seaweed', amount = 5},
+        {type = 'item', name = 'moss', amount = 5},
+        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
+    },
+    results = {
+        {type = 'item', name = 'auog-food-01', amount = 3},
+    },
+}:add_unlock("sawdust")
+
+RECIPE {
+    type = 'recipe',
+    name = 'auog-food-02b',
+    category = 'crafting-with-fluid',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'plastic-bar', amount = 2},
+        {type = 'item', name = 'fawogae', amount = 5},
+        {type = 'item', name = 'bio-sample', amount = 5},
+        {type = 'item', name = 'wood', amount = 3},
+        {type = 'item', name = 'ralesias', amount = 5},
+        {type = 'item', name = 'casein', amount = 10},
+        {type = 'item', name = 'wood-seeds', amount = 1},
+        {type = 'item', name = 'ash', amount = 10},
+        {type = 'item', name = 'moss', amount = 10},
+        {type = 'item', name = 'seaweed', amount = 5},
+        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
+    },
+    results = {
+        {type = 'item', name = 'auog-food-02', amount = 5},
+    },
+}:add_unlock("sawdust")

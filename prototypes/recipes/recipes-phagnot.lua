@@ -64,15 +64,16 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'tin-plate', amount = 2},
         {type = 'item', name = 'plastic-bar', amount = 2},
-        {type = 'item', name = 'bhoddos', amount = 3},
+        {type = 'item', name = 'bhoddos', amount = 1},
         {type = 'item', name = 'fawogae', amount = 5},
+        {type = 'item', name = 'guar', amount = 5},
         {type = 'item', name = 'ralesia-seeds', amount = 15},
         {type = 'item', name = 'tuuphra-seeds', amount = 15},
         {type = 'item', name = 'ash', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100},
+        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
     },
     results = {
-        {type = 'item', name = 'phagnot-food-01', amount = 3},
+        {type = 'item', name = 'phagnot-food-01', amount = 6},
     },
 }:add_unlock("food-mk01"):add_ingredient({type = "item", name = "raw-fiber", amount = 10})
 
@@ -85,18 +86,19 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'tin-plate', amount = 2},
         {type = 'item', name = 'plastic-bar', amount = 2},
-        {type = 'item', name = 'bhoddos', amount = 4},
+        {type = 'item', name = 'bhoddos', amount = 1},
         {type = 'item', name = 'fawogae', amount = 5},
+        {type = 'item', name = 'guar', amount = 5},
         {type = 'item', name = 'ralesia-seeds', amount = 15},
         {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'tuuphra-seeds', amount = 15},
         {type = 'item', name = 'ash', amount = 10},
         {type = 'item', name = 'moss', amount = 15},
         {type = 'item', name = 'seaweed', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100},
+        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
     },
     results = {
-        {type = 'item', name = 'phagnot-food-02', amount = 5},
+        {type = 'item', name = 'phagnot-food-02', amount = 6},
     },
 }:add_unlock("food-mk02"):add_ingredient({type = "item", name = "raw-fiber", amount = 10})
 

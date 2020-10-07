@@ -46,7 +46,7 @@ ENTITY {
     },
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
-    allowed_effects = {"speed","productivity"},
+    allowed_effects = {"speed","productivity",'consumption','pollution'},
     crafting_categories = {"ulric"},
     crafting_speed = 0.125,
     energy_source = {

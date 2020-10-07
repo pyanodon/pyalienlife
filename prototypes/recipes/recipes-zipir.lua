@@ -70,11 +70,12 @@ RECIPE {
         {type = 'item', name = 'ralesia-seeds', amount = 10},
         {type = 'item', name = 'fish', amount = 10},
         {type = 'item', name = 'bones', amount = 5},
+        {type = 'item', name = 'guar-gum', amount = 1},
         {type = 'item', name = 'biomass', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100},
+        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165},
     },
     results = {
-        {type = 'item', name = 'zipir-food-01', amount = 5},
+        {type = 'item', name = 'zipir-food-01', amount = 6},
     },
 }:add_unlock("food-mk01")
 
@@ -90,14 +91,15 @@ RECIPE {
         {type = 'item', name = 'seaweed', amount = 20},
         {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'fish', amount = 8},
+        {type = 'item', name = 'guar-gum', amount = 1},
         {type = 'item', name = 'rennea', amount = 15},
         {type = 'item', name = 'fawogae', amount = 10},
         {type = 'item', name = 'tuuphra', amount = 3},
-        {type = 'fluid', name = 'steam', amount = 100},
+        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165},
         {type = 'fluid', name = 'blood', amount = 50},
     },
     results = {
-        {type = 'item', name = 'zipir-food-02', amount = 5},
+        {type = 'item', name = 'zipir-food-02', amount = 6},
     },
 }:add_unlock("food-mk02")
 

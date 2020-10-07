@@ -25,7 +25,7 @@ require('prototypes/recipes/recipes-auto-moondrop')
 
 --TECHNOLOGY--
 TECHNOLOGY('nano-tech'):add_prereq('microbiology-mk03')
-TECHNOLOGY('bio-implants'):add_prereq('nano-tech')
+--TECHNOLOGY('bio-implants'):add_prereq('nano-tech')
 TECHNOLOGY('advanced-electronics'):add_prereq('chitin')
 TECHNOLOGY('antitumor'):add_prereq('earnshaw-theorem')
 RECIPE('kicalk-plantation'):remove_unlock('coal-processing-1')
@@ -110,7 +110,7 @@ RECIPE('auog-paddock-mk03'):add_ingredient({type = "item", name = "phosphate-gla
 RECIPE('bhoddos-culture-mk03'):add_ingredient({type = "item", name = "diamagnetic-material", amount = 20})
 RECIPE('biofactory-mk03'):add_ingredient({type = "item", name = "diamagnetic-material", amount = 30}):add_ingredient({type = "item", name = "paramagnetic-material", amount = 20})
 RECIPE('bio-reactor-mk03'):add_ingredient({type = "item", name = "heavy-fermion", amount = 20}):add_ingredient({type = "item", name = "superconductor", amount = 10}):add_ingredient({type = "item", name = "phosphate-glass", amount = 50})
-RECIPE('cadavericarum-mk03'):add_ingredient({type = "item", name = "heavy-fermion", amount = 15}):add_ingredient({type = "item", name = "superconductor", amount = 10})
+RECIPE('cadaveric-arum-mk03'):add_ingredient({type = "item", name = "heavy-fermion", amount = 15}):add_ingredient({type = "item", name = "superconductor", amount = 10})
 RECIPE('creature-chamber-mk03'):add_ingredient({type = "item", name = "biopolymer", amount = 15}):add_ingredient({type = "item", name = "graphene-roll", amount = 20}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 15}):add_ingredient({type = "item", name = "superconductor", amount = 5})
 RECIPE('cridren-enclosure-mk03'):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10}):add_ingredient({type = "item", name = "phosphate-glass", amount = 30}):add_ingredient({type = "item", name = "biopolymer", amount = 20})
 RECIPE('dhilmos-pool-mk03'):add_ingredient({type = "item", name = "paramagnetic-material", amount = 20}):add_ingredient({type = "item", name = "heavy-fermion", amount = 20})
@@ -154,7 +154,7 @@ RECIPE('auog-paddock-mk04'):add_ingredient({type = "item", name = "nems", amount
 RECIPE('bhoddos-culture-mk04'):add_ingredient({type = "item", name = "hyperelastic-material", amount = 30}):add_ingredient({type = "item", name = "quantum-vortex-storage-system", amount = 10}):add_ingredient({type = "item", name = "intelligent-unit", amount = 10})
 RECIPE('biofactory-mk04'):add_ingredient({type = "item", name = "harmonic-absorber", amount = 15}):add_ingredient({type = "item", name = "intelligent-unit", amount = 15}):add_ingredient({type = "item", name = "sub-denier-microfiber", amount = 20})
 RECIPE('bio-reactor-mk04'):add_ingredient({type = "item", name = "hyperelastic-material", amount = 30}):add_ingredient({type = "item", name = "nv-center", amount = 10})
-RECIPE('cadavericarum-mk04'):add_ingredient({type = "item", name = "hyperelastic-material", amount = 15}):add_ingredient({type = "item", name = "quantum-dots", amount = 5})
+RECIPE('cadaveric-arum-mk04'):add_ingredient({type = "item", name = "hyperelastic-material", amount = 15}):add_ingredient({type = "item", name = "quantum-dots", amount = 5})
 RECIPE('creature-chamber-mk04'):add_ingredient({type = "item", name = "re-magnet", amount = 100}):add_ingredient({type = "item", name = "phosphate-glass", amount = 100}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 30})
 RECIPE('cridren-enclosure-mk04'):add_ingredient({type = "item", name = "intelligent-unit", amount = 30}):add_ingredient({type = "item", name = "nems", amount = 10}):add_ingredient({type = "item", name = "phosphate-glass", amount = 100})
 RECIPE('dhilmos-pool-mk04'):add_ingredient({type = "item", name = "phosphate-glass", amount = 100}):add_ingredient({type = "item", name = "carbon-aerogel", amount = 20}):add_ingredient({type = "item", name = "aerogel", amount = 30})
@@ -195,8 +195,9 @@ RECIPE('arqad-hive-mk04'):add_ingredient({type = "item", name = "phosphate-glass
 
 
 
-
-
+RECIPE('silo-2'):replace_ingredient("processing-unit", "intelligent-unit"):add_ingredient({type = "item", name = "hyperelastic-material", amount = 10}):add_ingredient({type = "item", name = "phosphate-glass", amount = 100}):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 5})
+RECIPE('rocket-mk01-part'):add_ingredient({type = "item", name = "graphene-roll", amount = 5}):add_ingredient({type = "item", name = "harmonic-absorber", amount = 1})
+RECIPE('pydrive'):add_ingredient({type = "item", name = "graphene-roll", amount = 50}):add_ingredient({type = "item", name = "superconductor", amount = 10}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 30})
 
 ----RECIPES----
 RECIPE('fungal-substrate'):add_ingredient({type = "item", name = "urea", amount = 3})
@@ -241,7 +242,7 @@ RECIPE('space-science-pack'):add_ingredient({type = "item", name = "strangelets"
 RECIPE('yag-laser-module'):add_ingredient({type = "item", name = "nanofibrils", amount = 3}):add_ingredient({type = "item", name = "cobalt-fluoride", amount = 3})
 RECIPE('parametric-oscilator'):add_ingredient({type = "item", name = "nanofibrils", amount = 3}):change_category('research')
 RECIPE('superconductor-servomechanims'):change_category('research')
-RECIPE('superconductor'):add_ingredient({type = "item", name = "bio-battery", amount = 2}):change_category('research')
+RECIPE('superconductor'):add_ingredient({type = "item", name = "biobattery", amount = 2}):change_category('research')
 RECIPE('sc-unit'):add_ingredient({type = "item", name = "re-magnet", amount = 2})
 RECIPE('harmonic-absorber'):change_category('research')
 RECIPE('diamagnetic-material'):change_category('research')--:remove_unlock('earnshaw-theorem'):add_unlock('pharmagenomics')
@@ -254,6 +255,7 @@ RECIPE('fawogae2'):remove_unlock('advanced-electronics')
 RECIPE('fiber'):remove_unlock('basic-electronics')
 --RECIPE('urea'):change_category('vrauks'):subgroup_order("py-alienlife-auog", "a")
 ITEM('urea'):subgroup_order("py-alienlife-auog", "a")
+ITEM('mosfet'):subgroup_order("py-hightech-tier-2", "f")
 RECIPE('waste-water-urea'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('basic-electronics'):add_unlock('water-animals-mk01')
 RECIPE('ammonia-urea'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('oil-processing'):add_unlock('biotech-mk02')
 RECIPE('urea2'):remove_unlock('coal-processing-1')
@@ -261,7 +263,8 @@ RECIPE('urea'):set_fields {enabled = false}
 RECIPE('mukmoux-fat2'):remove_unlock('advanced-electronics')
 RECIPE('mukmoux-fat3'):remove_unlock('advanced-electronics')
 RECIPE('fertilizer'):remove_unlock('basic-electronics')
-RECIPE('advanced-circuit'):add_ingredient({type = 'item', name = 'battery', amount = 5})
+RECIPE('advanced-circuit'):add_ingredient({type = 'item', name = 'battery', amount = 5}):add_ingredient({type = 'item', name = 'mosfet', amount = 5})
+RECIPE('processing-unit'):add_ingredient({type = 'item', name = 'mosfet', amount = 10})
 RECIPE('fault-current-inductor'):replace_ingredient("battery", "biobattery")
 RECIPE('pcb3-2'):replace_ingredient("battery", "biobattery")
 RECIPE('pcb4'):add_ingredient({type = 'item', name = 'biobattery', amount = 5})
@@ -272,10 +275,13 @@ RECIPE('kondo-core'):add_ingredient({type = 'item', name = 'nanofibrils', amount
 RECIPE('biobattery'):add_ingredient({type = "item", name = "re-magnet", amount = 10}):add_ingredient({type = "item", name = "nylon", amount = 5})
 RECIPE('space-science-pack'):add_ingredient({type = "item", name = "antimatter", amount = 1})
 RECIPE('bose-einstein-superfluid'):add_ingredient({type = "fluid", name = "deuterium", amount = 10})
+RECIPE('green-sic'):add_ingredient({type = 'item', name = 'graphite', amount = 3}):remove_unlock('bioprocessing'):add_unlock('basic-electronics')
+RECIPE('sic'):remove_unlock('bioprocessing'):add_unlock('basic-electronics')
 if mods['pyhightech'] then
 	data.raw.item['dried-meat'] = nil
+    RECIPE('dried-meat'):remove_unlock('advanced-rendering'):change_category('smelting')
 end
-RECIPE('dried-meat'):remove_unlock('advanced-rendering'):change_category('smelting')
+
 
 fun.results_replacer("dhilmos-sex-01", "dirty-water", "waste-water")
 
@@ -332,6 +338,11 @@ RECIPE {
         {type = 'item', name = 'seaweed', amount = 100},
     },
 }:add_unlock("botany-mk04")
+
+table.insert(data.raw.module['seaweed'].limitation, 'seaweed-8')
+table.insert(data.raw.module['seaweed-mk02'].limitation, 'seaweed-8')
+table.insert(data.raw.module['seaweed-mk03'].limitation, 'seaweed-8')
+table.insert(data.raw.module['seaweed-mk04'].limitation, 'seaweed-8')
 
 RECIPE {
     type = "recipe",
@@ -446,7 +457,7 @@ RECIPE {
         {type = 'item', name = 'cadaveric-arum', amount = 1},
     },
     results = {
-        {type = 'item', name = 'sulfur', amount = 10},
+        {type = 'item', name = 'sulfur', amount = 5},
     },
     --main_product = "cocoon",
 }:add_unlock("molecular-decohesion-mk03")
@@ -991,7 +1002,7 @@ RECIPE {
         {type = 'item', name = 'mmp', amount = 1},
     },
     results = {
-        {type = 'item', name = 'recombinant-ery', amount = 450},
+        {type = 'item', name = 'recombinant-ery', amount = 250},
     },
 }:add_unlock("recombinant-ery")
 
@@ -1154,7 +1165,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 's-biomass', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100, temperature = 165},
+        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165},
     },
     results = {
         {type = 'item', name = 'sulfur', amount = 10},
@@ -1236,3 +1247,131 @@ RECIPE {
     },
     main_product = "casein-mixture",
 }:add_unlock("korlex")
+
+RECIPE {
+    type = 'recipe',
+    name = 'ethyl-mercaptan-2',
+    category = 'mixer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'chromium', amount = 2},
+        {type = 'fluid', name = 'ethylene', amount = 100},
+        {type = 'fluid', name = 'acidgas', amount = 100},
+    },
+    results = {
+        {type = 'fluid', name = 'ethyl-mercaptan', amount = 200},
+    },
+    --main_product = "mcb",
+}:add_unlock("pesticides-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'nisi',
+    category = 'chemical',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'fluid', name = 'vacuum', amount = 300},
+        {type = 'item', name = 'nickel-plate', amount = 1},
+        {type = 'item', name = 'silicon', amount = 2},
+        {type = 'item', name = 'cobalt-extract', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'nisi', amount = 1},
+        {type = "item", name = "cobalt-extract", amount = 2, probability = 0.5},
+    },
+    main_product = "nisi",
+}:add_unlock("basic-electronics"):change_category('gas-separator')
+
+RECIPE {
+    type = 'recipe',
+    name = 'mosfet',
+    category = 'electronic',
+    enabled = false,
+    energy_required = 6,
+    ingredients = {
+        {type = 'fluid', name = 'al-pulp-01', amount = 15},
+        {type = 'fluid', name = 'sulfuric-acid', amount = 100},
+        {type = 'item', name = 'aluminium-plate', amount = 1},
+        {type = 'item', name = 'reo', amount = 5},
+        {type = 'item', name = 'sic', amount = 3},
+        {type = 'item', name = 'plastic-bar', amount = 3},
+        {type = 'item', name = 'nisi', amount = 2},
+        {type = 'item', name = 'heavy-n', amount = 4},
+        {type = 'item', name = 'light-n', amount = 4},
+        {type = 'item', name = 'p-dope', amount = 4},
+    },
+    results = {
+        {type = 'item', name = 'mosfet', amount = 4},
+    },
+    --main_product = "chloral",
+}:add_unlock("basic-electronics")
+
+RECIPE {
+    type = 'recipe',
+    name = 'cooling-system',
+    category = 'electronic',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'stainless-steel', amount = 2},
+        {type = 'item', name = 'nexelit-plate', amount = 4},
+        {type = 'item', name = 'duralumin', amount = 3},
+        {type = 'item', name = 'solder', amount = 2},
+        {type = 'item', name = 'graphene-roll', amount = 1},
+        {type = 'fluid', name = 'sulfuric-acid', amount = 100},
+        {type = 'fluid', name = 'liquid-nitrogen', amount = 50},
+        {type = 'item', name = 'nylon-parts', amount = 5},
+        {type = 'item', name = 'small-parts-02', amount = 3},
+        {type = 'item', name = 'chitosan', amount = 1},
+        {type = 'item', name = 'science-coating', amount = 1},
+        {type = 'item', name = 'kevlar', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'cooling-system', amount = 1},
+    },
+    --main_product = "chloral",
+}:add_unlock("advanced-electronics")
+
+RECIPE('processing-unit'):add_ingredient({type = "item", name = "cooling-system", amount = 1})
+RECIPE('intelligent-unit'):add_ingredient({type = "item", name = "cooling-system", amount = 2})
+RECIPE('var-josephson-junction'):add_ingredient({type = "item", name = "cooling-system", amount = 1})
+RECIPE('pi-josephson-junction'):add_ingredient({type = "item", name = "cooling-system", amount = 1})
+
+RECIPE('rennea-mk02-breeding'):replace_ingredient("sulfuric-acid-barrel", "phosphoric-acid-barrel")
+
+RECIPE('rennea-mk03-breeding'):replace_ingredient("sulfuric-acid-barrel", "phosphoric-acid-barrel")
+
+RECIPE('rennea-mk04-breeding'):replace_ingredient("sulfuric-acid-barrel", "phosphoric-acid-barrel")
+
+
+local arqad_filled =
+	{
+		'arqad-filled-comb-1',
+		'arqad-filled-comb-2',
+		'arqad-filled-comb-3',
+		'arqad-filled-comb-4',
+		'arqad-filled-comb-5',
+		'arqad-filled-comb-6',
+        'arqad-filled-comb-7',
+        'arqad-filled-comb-1a',
+		'arqad-filled-comb-2a',
+		'arqad-filled-comb-3a',
+		'arqad-filled-comb-4a',
+		'arqad-filled-comb-5a',
+		'arqad-filled-comb-6a',
+        'arqad-filled-comb-7a',
+        'arqad-filled-comb-1b',
+		'arqad-filled-comb-2b',
+		'arqad-filled-comb-3b',
+		'arqad-filled-comb-4b',
+		'arqad-filled-comb-5b',
+		'arqad-filled-comb-6b',
+		'arqad-filled-comb-7b',
+	}
+
+for _, recipe in pairs(arqad_filled) do
+	RECIPE(recipe):replace_ingredient('crude-oil-barrel','tall-oil-barrel')
+end
+

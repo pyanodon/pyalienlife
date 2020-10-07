@@ -1,33 +1,32 @@
 
 global.pycloud =
     {
-        *cloud_id_num* = --zero will not be used as it will be the empty default number
+        networks =
             {
-                input_chests =
-                    {
-                        id_num
-                    },
-                output_chests =
-                    {
-                        id_num
-                    },
-                stored_items =
-                    {
-                        1 =
-                            {
-                            item_name = '',
-                            amount = 0
-                            },
-                        2,
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10 --ten items max per cloud any attempts to insert items after the tenth will just sit in the input chest
-                    }
+                *cloud_id_num* = --zero will not be used as it will be the empty default number
+                {
+                    input_chests =
+                        {
+                            id_num
+                        },
+                    output_chests =
+                        {
+                            id_num
+                        },
+                    stored_items =
+                        {
+                            1** name = amount -- store name as key for amount
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            8,
+                            9,
+                            10 --ten items max per cloud any attempts to insert items after the tenth will just sit in the input chest
+                        }
+                }
             },
         chests =
             {

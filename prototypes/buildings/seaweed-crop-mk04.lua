@@ -43,17 +43,17 @@ ENTITY {
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 4
+        module_slots = 40
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"seaweed"},
-    crafting_speed = 4,
+    crafting_speed = 0.1,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
         emissions_per_minute = -35,
     },
-    energy_usage = "750kW",
+    energy_usage = "2300kW",
     ingredient_count = 10,
     animation = {
         layers = {

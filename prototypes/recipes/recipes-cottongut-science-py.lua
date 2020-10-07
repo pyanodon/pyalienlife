@@ -58,12 +58,12 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-py-02',
-    category = 'research',
+    category = 'space-cottongut',
     enabled = false,
     energy_required = 135,
     ingredients = {
         {type = 'item', name = 'cottongut', amount = 15},
-        {type = 'item', name = 'nonconductive-phazogen', amount = 1},
+        {type = 'item', name = 'nonconductive-phazogen', amount = 2},
         },
     results = {
         {type = 'item', name = 'py-science-pack', amount = 50, probability = 0.1},
@@ -78,12 +78,12 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-py-03',
-    category = 'research',
+    category = 'space-cottongut',
     enabled = false,
     energy_required = 135,
     ingredients = {
         {type = 'item', name = 'cottongut', amount = 25},
-        {type = 'item', name = 'nonconductive-phazogen', amount = 1},
+        {type = 'item', name = 'nonconductive-phazogen', amount = 4},
         },
     results = {
         {type = 'item', name = 'py-science-pack', amount = 75, probability = 0.1},
@@ -98,12 +98,12 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-py-04',
-    category = 'research',
+    category = 'space-cottongut',
     enabled = false,
     energy_required = 135,
     ingredients = {
         {type = 'item', name = 'cottongut', amount = 35},
-        {type = 'item', name = 'nonconductive-phazogen', amount = 1},
+        {type = 'item', name = 'nonconductive-phazogen', amount = 6},
         },
     results = {
         {type = 'item', name = 'py-science-pack', amount = 100, probability = 0.1},
@@ -121,12 +121,12 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-py-05',
-    category = 'research',
+    category = 'space-cottongut',
     enabled = false,
     energy_required = 135,
     ingredients = {
         {type = 'item', name = 'cottongut', amount = 55},
-        {type = 'item', name = 'nonconductive-phazogen', amount = 1},
+        {type = 'item', name = 'nonconductive-phazogen', amount = 10},
         },
     results = {
         {type = 'item', name = 'py-science-pack', amount = 200, probability = 0.1},

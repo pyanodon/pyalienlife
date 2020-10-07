@@ -19,10 +19,11 @@ RECIPE('rubber-04'):add_ingredient({type = "item", name = "latex", amount = 1})
 RECIPE('logistic-science-01'):replace_ingredient("water","crude-oil")
 RECIPE('chemical-science-01'):replace_ingredient("water","crude-oil")
 RECIPE('production-science-01'):replace_ingredient("water","crude-oil")
+RECIPE('production-science-pack'):add_ingredient({type = "item", name = "small-parts-03", amount = 10})
 RECIPE('chemical-science-01'):replace_ingredient("water","crude-oil")
 RECIPE('harvester'):replace_ingredient("small-parts-01","small-parts-03")
 RECIPE('seeds-extract-01'):add_ingredient({type = "item", name = "guar-seeds", amount = 100})
-RECIPE('arqad-jelly'):replace_ingredient("active-carbon","carbon-black"):replace_ingredient("oleochemicals-barrel","btx-barrel")
+RECIPE('arqad-jelly-01'):replace_ingredient("active-carbon","carbon-black"):replace_ingredient("oleochemicals-barrel","btx-barrel")
 
 fun.results_replacer("crude-from-manure", "crude-oil", "scrude")
 fun.results_replacer("crude-from-manure", "ash", "soot")
@@ -39,7 +40,7 @@ RECIPE {
     energy_required = 5,
     ingredients = {
         {type = 'item', name = 'grod', amount = 5},
-        {type = 'fluid', name = 'hot-air', amount = 100},
+        {type = 'fluid', name = 'hot-air', amount = 25},
     },
     results = {
         {type = 'item', name = 'dried-grods', amount = 6},
@@ -170,10 +171,24 @@ RECIPE {
     energy_required = 2,
     ingredients = {
         {type = 'item', name = 'biomass', amount = 10},
-        {type = 'fluid', name = 'hot-air', amount = 100},
+        {type = 'fluid', name = 'hot-air', amount = 50},
     },
     results = {
         {type = 'fluid', name = 'flue-gas', amount = 200},
     },
     --main_product = "casein-pulp-01",
 }:add_unlock("compost")
+
+RECIPE {
+    type = "recipe",
+    name = "stopper-2",
+    category = "crafting",
+    enabled = true,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'rubber', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'stopper', amount = 2}
+    }
+}:add_unlock("rubber")

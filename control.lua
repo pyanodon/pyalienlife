@@ -1,9 +1,8 @@
-if script.active_mods["debugadapter"] then
-	require("__debugadapter__/debugadapter.lua")
-end
 
 local TRlist_og = require("scripts/techswap")
 local TRlist = {}
+
+local bio_list = require('prototypes/items/biomass-convertion')
 
 --Mega Farms
 
@@ -212,7 +211,10 @@ local farm_buildings = {
 	"yaedols",
 	"yotoi",
 	"zipir",
-	"moondrop"
+	"moondrop",
+	'seaweed',
+	'sap',
+	'moss'
 }
 
 local animal_farm_buildings = {
@@ -248,7 +250,10 @@ local plant_farm_buildings = {
 	["rennea"] = true,
 	["tuuphra"] = true,
 	["yotoi"] = true,
-	["moondrop"] = true
+	["moondrop"] = true,
+	["moss"] = true,
+	["seaweed"] = true,
+	["sap"] = true,
 }
 
 local fungus_farm_buildings = {
@@ -314,7 +319,7 @@ local function create_pycloud_chest_gui(event)
 				type = "frame",
 				name = "chest_menu",
 				direction = "vertical",
-				caption = "Chest Stuff goes here",
+				caption = "Logistic Station",
 				style = "inner_frame_in_outer_frame"
 			}
 		)
@@ -325,7 +330,7 @@ local function create_pycloud_chest_gui(event)
 				type = 'frame',
 				name = 'chest_state_frame',
 				direction = 'horizontal',
-				caption = 'DICKS',
+				--caption = 'DICKS',
 				style = "inner_frame_in_outer_frame"
 			}
 		)
@@ -340,7 +345,7 @@ local function create_pycloud_chest_gui(event)
 			{
 				type = 'switch',
 				name = 'chest_state_switch',
-				switch_state = 'left',
+				switch_state = global.pycloud.chests[event.entity.unit_number].input_output_state,
 				left_label_caption = 'Input',
 				right_label_caption = 'Output'
 			}
@@ -351,7 +356,7 @@ local function create_pycloud_chest_gui(event)
 				type = 'frame',
 				name = 'chest_id_frame',
 				direction = 'vertical',
-				caption = 'DICKS ID',
+				--caption = 'DICKS ID',
 				style = "inner_frame_in_outer_frame"
 			}
 		)
@@ -387,6 +392,114 @@ local function create_pycloud_chest_gui(event)
 				caption = 'test'
 			}
 		)
+end
+--[[
+--Biomass tables--
+local function order_biolist()
+
+local bio = global.compostables.og_list
+	--log(serpent.block(bio))
+	local name_table = {}
+	local input_table = {}
+	local output_table = {}
+	for i, item in pairs(bio) do
+		--log(i)
+		--log(serpent.block(item))
+		table.insert(name_table, i)
+		if input_table[item.item_amount] == nil then
+			input_table[item.item_amount] = {i}
+		else
+			table.insert(input_table[item.item_amount], i)
+		end
+		if output_table[item.biomass_amount] == nil then
+			output_table[item.biomass_amount] = {i}
+		else
+			table.insert(output_table[item.biomass_amount], i)
+		end
+	end
+	--log(serpent.block(name_table))
+	--log(serpent.block(input_table))
+	--log(serpent.block(output_table))
+	table.sort(name_table)
+	for k,v in pairs(input_table) do
+		--log(k)
+		--log(serpent.block(v))
+		table.sort(v)
+	end
+	for k,v in pairs(output_table) do
+		--log(k)
+		--log(serpent.block(v))
+		table.sort(v)
+	end
+	--log(serpent.block(name_table))
+	--log(serpent.block(input_table))
+	--log(serpent.block(output_table))
+	global.compostables.name_order = name_table
+	global.compostables.input_order = input_table
+	global.compostables.output_order = output_table
+end
+]]--
+remote.add_interface('data_puller',
+	{order_biolist = function()
+
+		local bio = global.compostables.og_list
+			--log(serpent.block(bio))
+			local name_table = {}
+			local input_table = {}
+			local output_table = {}
+			for i, item in pairs(bio) do
+				--log(i)
+				--log(serpent.block(item))
+				table.insert(name_table, i)
+				if input_table[item.item_amount] == nil then
+					input_table[item.item_amount] = {i}
+				else
+					table.insert(input_table[item.item_amount], i)
+				end
+				if output_table[item.biomass_amount] == nil then
+					output_table[item.biomass_amount] = {i}
+				else
+					table.insert(output_table[item.biomass_amount], i)
+				end
+			end
+			--log(serpent.block(name_table))
+			--log(serpent.block(input_table))
+			--log(serpent.block(output_table))
+			table.sort(name_table)
+			for k,v in pairs(input_table) do
+				--log(k)
+				--log(serpent.block(v))
+				table.sort(v)
+			end
+			for k,v in pairs(output_table) do
+				--log(k)
+				--log(serpent.block(v))
+				table.sort(v)
+			end
+			--log(serpent.block(name_table))
+			--log(serpent.block(input_table))
+			--log(serpent.block(output_table))
+			--global.compostables.name_order = name_table
+			--global.compostables.input_order = input_table
+			--global.compostables.output_order = output_table
+			return bio, name_table, input_table, output_table
+		end
+})
+
+local tech_upgrade_table = require("prototypes/upgrades/tech-upgrades")
+
+local function log_all_machines_for_upgrades(tech_upgrades)
+--log('hit')
+--log(serpent.block(tech_upgrades))
+	for _, table in pairs(tech_upgrades) do
+		--log(serpent.block(table))
+		global.tech_upgrades.techs[table.master_tech.name] = {}
+		for _, tech in pairs(table.sub_techs) do
+			--log(serpent.block(tech))
+			global.tech_upgrades.techs[table.master_tech.name][tech.technology.name] = tech
+		end
+	end
+	--log(serpent.block(global.tech_upgrades))
 end
 
 script.on_init(
@@ -431,8 +544,29 @@ script.on_init(
 						[0] = {},
 					},
 				chests = {},
-				current_chest = ''
+				current_chest = '',
+				current_network_search = 0
 			}
+		global.fish_disable = false
+		global.compostables =
+		{
+			og_list = bio_list,
+			name_order = {},
+			input_order = {},
+			output_order = {}
+		}
+		--order_biolist()
+		global.tech_upgrades =
+		{
+			entities_master_list = {},
+			unlocked_techs = {},
+			disabled_techs = {},
+			techs = {},
+			tech_status = {},
+			currently_selected = {}
+		}
+		log_all_machines_for_upgrades(tech_upgrade_table)
+		global.energy_drink = {}
 		if not remote.interfaces["silo_script"] then
 			return
 		end
@@ -541,7 +675,7 @@ script.on_configuration_changed(
 		if global.ocula_master_table.idling_at_player == nil then
 			global.idling_at_player = {}
 		end
-		if global.pycloud == nil then
+		if global.pycloud == nil or global.pycloud.current_network_search == nil then
 			global.pycloud =
 			{
 				networks =
@@ -549,26 +683,29 @@ script.on_configuration_changed(
 						[0] = {},
 					},
 				chests = {},
-				current_chest = ''
+				current_chest = '',
+				current_network_search = 0
 			}
+		end
+		if global.fish_disable == nil then
+			global.fish_disable = false
+		end
+		if global.compostables == nil then
+			global.compostables =
+				{
+					og_list = bio_list,
+					name_order = {},
+					input_order = {},
+					output_order = {}
+				}
+				--order_biolist()
+		end
+		if global.energy_drink == nil then
+			global.energy_drink = {}
 		end
 	end
 )
---[[
-script.on_event(defines.events.on_player_created, function(event)
 
-local player = game.players[event.player_index]
-
-player.gui.top.add(
-	{
-		type = 'sprite-button',
-		name = 'pywiki',
-		sprite = 'pywiki'
-	}
-)
-
-end)
-]]--
 local farm_help_gui
 
 local function create_farm_help_message(event)
@@ -582,7 +719,7 @@ local function create_farm_help_message(event)
 					type = "frame",
 					name = "farm_help",
 					direction = "horizontal",
-					caption = "All plants and animal buildings require 1 or more copies of the wanted item to function. Craft the first version from codex and DNA samples."
+					caption = "All plants and animal buildings require 1 or more copies of the wanted item to function. Craft the first version from codex and DNA samples.Put them in the module slots"
 				}
 			)
 			farm_help_gui.add({type = "button", name = "fh_accept_button", caption = "OK"})
@@ -629,7 +766,7 @@ local function built_ocula(event)
 		global.ocula_master_table.ocula_boxes[base.unit_number].total_ocula_count =
 			global.ocula_master_table.ocula_boxes[base.unit_number].total_ocula_count + 1
 	end
-	log(serpent.block(global.ocula_master_table.ocula[E.unit_number]))
+	--log(serpent.block(global.ocula_master_table.ocula[E.unit_number]))
 end
 
 --[[
@@ -662,9 +799,8 @@ end)
 script.on_event(
 	{defines.events.on_built_entity, defines.events.on_robot_built_entity},
 	function(event)
-		log('klonan bot did a thing')
 		local E = event.created_entity
-		log(E.name)
+		--log(E.name)
 		--log(E.ghost_name)
 		--log(serpent.block(landbots))
 
@@ -696,7 +832,7 @@ script.on_event(
 			--local outpost = {entity = E, name = math.random(1,100)}
 			global.outpost_table["outpost" .. E.unit_number] = {entity = E, name = math.random(1, 100)}
 			global.outpost_names[E.unit_number] = "outpost-" .. E.unit_number
-		elseif E.name == "caravan" then
+		elseif E.name == "caravan" or E.name == "flyavan" then
 			global.caravan_unit_numbers[E.unit_number] = true
 		elseif E.name == "ipod" then
 			global.ocula_master_table.ocula_boxes[E.unit_number] = {
@@ -719,12 +855,12 @@ script.on_event(
 					end
 				end
 			end
-			log(serpent.block(global.ocula_master_table))
+			--log(serpent.block(global.ocula_master_table))
 		elseif E.name == "ocula" then
 			built_ocula(E)
 		elseif E.name == "pydrive" then
-			log('hit')
-			game.surfaces["nauvis"].create_entity {
+			--log('hit')
+			local skin = game.surfaces["nauvis"].create_entity {
 				name = "pydrive_skin",
 				position = E.position,
 				--force = E.force
@@ -733,10 +869,23 @@ script.on_event(
 				{
 					entity = E,
 					cloud_id_num = 0,
-					input_output_state = 'left'
+					input_output_state = 'left',
+					skin = skin
 				}
 			global.pycloud.chests[E.unit_number] = chest
-			log(serpent.block(global.pycloud))
+			--log(serpent.block(global.pycloud))
+		--[[
+		elseif global.tech_upgrades.entities_master_list[E.name] ~= nil then
+			--log('hit')
+			local beacon = game.surfaces['nauvis'].create_entity{
+				name = 'hidden-beacon',
+				position = E.position,
+				force = game.players[event.player_index].force
+			}
+			local module = beacon.get_inventory(defines.inventory.beacon_modules)
+			local mod = module.insert({name = global.tech_upgrades.entities_master_list[E.name] .. '-module', count = 1})
+			--log(mod)
+		]]--
 		elseif global.has_built_first_farm == false then
 			for _, farm in pairs(farm_buildings) do
 				if string.match(E.name, farm) then -- or string.match(E.ghost_name, farm) then
@@ -750,11 +899,13 @@ script.on_event(
 					disable_machine(E)
 				end
 			end
+		--elseif E.name == '' then
+			--asd		
 		end
 		if E.name == 'clone-1' then
 			local group = game.surfaces['nauvis'].create_unit_group{position = E.position, force = E.force}
 			group.add_member(E)
-			log(serpent.block(E.unit_group.group_number))
+			--log(serpent.block(E.unit_group.group_number))
 			local x = 0
 			local y = 0
 			for i=1,704 do
@@ -772,13 +923,14 @@ script.on_event(
 			end
 		end
 		--log(serpent.block(landbots))
+		--log(serpent.block(global.tech_upgrades.entities_master_list[E.name]))
 	end
 )
 
 local function ocula_removed(event)
 	local E = event.entity
 	local OT = global.ocula_master_table
-	log(serpent.block(OT))
+	--log(serpent.block(OT))
 	--reducing ocula box entity count
 	OT.ocula_boxes[OT.ocula[E.unit_number].base].total_ocula_count = OT.ocula_boxes[OT.ocula[E.unit_number].base].total_ocula_count - 1
 
@@ -812,7 +964,7 @@ script.on_event(defines.events.on_entity_died, function(event)
 	if E.name == 'ipod' then
 		global.ocula_master_table.ocula_boxes[E.unit_number] = nil
 	elseif E.name == 'ocula' then
-		ocula_removed(E)
+		ocula_removed(event)
 	end
 
 end)
@@ -1028,82 +1180,54 @@ script.on_event(
 			end
 			--log(serpent.block(global.ocula_master_table))
 		end
+		--[[
 		if event.result == defines.behavior_result.in_progress then
-			log("hit")
+			--log("hit")
 			if
 				global.ocula_master_table.ocula[event.unit_number] ~= nil and
 					global.ocula_master_table.ocula[event.unit_number].entity.valid
 			 then
-				log("hit")
+				--log("hit")
 			end
 		end
+		]]--
+		--[[
 		if event.result == defines.behavior_result.fail then
-			log("hit")
+			--log("hit")
 			if
 				global.ocula_master_table.ocula[event.unit_number] ~= nil and
 					global.ocula_master_table.ocula[event.unit_number].entity.valid
 			 then
-				log("hit")
+				--log("hit")
 			end
 		end
+		]]--
+		--[[
 		if event.result == defines.behavior_result.deleted then
-			log("hit")
+			--log("hit")
 			if
 				global.ocula_master_table.ocula[event.unit_number] ~= nil and
 					global.ocula_master_table.ocula[event.unit_number].entity.valid
 			 then
-				log("hit")
+				--log("hit")
 			end
 		end
-
+		]]--
 		global.caravanroutes = caravanroutes
 	end
 )
---[[
-script.on_nth_tick(5, function()
-		--log('hit')
-		for _, p in pairs(game.players) do
-			--log(p.name)
-			--check if player is missing stuff and add it to the list of things to attempt to be filled by the ocula
-			--log('hit')
-			--log(p.character.request_slot_count)
-			--log(serpent.block(p.get_main_inventory().get_contents()))
-			local inv = p.get_main_inventory().get_contents()
-			local iir
-			local total_item_count
-			--log(serpent.block(inv))
-			for s = 1, p.character.request_slot_count do --
-				--log(s)
-				--log(serpent.block(p.character.get_request_slot(s)))
-				if p.character.get_request_slot(s) ~= nil then
-					if global.ocula_master_table.requested_items[p.index] == nil then
-						global.ocula_master_table.requested_items[p.index] = {}
-					end
-					if global.ocula_master_table.item_in_route[p.index] ~= nil and global.ocula_master_table.item_in_route[p.index][p.character.get_request_slot(s)] ~= nil then
-						iir = global.ocula_master_table.item_in_route[p.index][p.character.get_request_slot(s)]
-					else
-						iir = 0
-					end
-					if inv[p.character.get_request_slot(s).name] ~= nil then
-						total_item_count =  inv[p.character.get_request_slot(s).name] + iir
-					else
-						total_item_count = iir
-					end
 
-					global.ocula_master_table.requested_items[p.index][p.character.get_request_slot(s).name] =
-					p.character.get_request_slot(s).count - total_item_count
-					log(serpent.block(global.ocula_master_table))
-				end
-			end
-			--end
-		end
-	end
-)
-]]--
 script.on_nth_tick(30, function()
 		--log("hit")
 		for _, play in pairs(game.players) do
 			--log(p.name)
+			if global.energy_drink[play.index] ~= nil and global.energy_drink[play.index].active == true and global.energy_drink[play.index].time < 7200 then
+				global.energy_drink[play.index].time = global.energy_drink[play.index].time + 30
+			elseif global.energy_drink[play.index] ~= nil and global.energy_drink[play.index].active == true and global.energy_drink[play.index].time >= 7200 then
+				global.energy_drink[play.index].active = false
+				global.energy_drink[play.index].time = 0
+				game.players[play.index].character_running_speed_modifier = 1
+			end
 			if play.force.find_logistic_network_by_position(play.position, play.surface) ~= nil then
 				--log('hit')
 				break
@@ -1206,7 +1330,7 @@ script.on_nth_tick(30, function()
 												destination_entity = destination.owner,
 												radius = 0.5
 											}
-										log(serpent.block(global.ocula_master_table))
+										--log(serpent.block(global.ocula_master_table))
 										return
 										end
 									end
@@ -1217,31 +1341,145 @@ script.on_nth_tick(30, function()
 				end
 			end
 		end
-		--[[
-		if next(global.ocula_master_table.idling_at_player) ~= nil then
+end)
+
+script.on_nth_tick(20, function()
+	--log('hit')
+	local pycloud = global.pycloud
+	local networks = pycloud.networks
+	local cns = pycloud.current_network_search
+	--log(cns)
+	local items = {}
+	if cns == 0 then
+		cns = 1
+	end
+	--log(cns)
+	local cnsnum = tostring(cns)
+	--log('hit')
+	--log(cns)
+	--log(serpent.block(networks[tostring(cns)]))
+	--log(serpent.block(networks['1']))
+	if networks[cnsnum] ~= nil then
+		--log('hit')
+		if next(networks[cnsnum].stored_items) ~= nil then
 			--log('hit')
-			for _, p in pairs(global.ocula_master_table.idling_at_player) do
-				--log(serpent.block(p))
-				if next(p) ~= nil then
+			for i, _ in pairs(networks[cnsnum].stored_items) do
+				--log('hit')
+				items[i] = true
+			end
+			for _, in_chest in pairs(networks[cnsnum].input_chests) do
+				--log('hit')
+				if pycloud.chests[in_chest] ~= nil and pycloud.chests[in_chest].entity ~= nil then
 					--log('hit')
-					--log(p[1])
-					for _, o in pairs(p) do
-						if global.ocula_master_table.ocula[o] ~= nil then
-							local ocula = global.ocula_master_table.ocula[o]
+					local inv = pycloud.chests[in_chest].entity.get_inventory(defines.inventory.chest)
+					if inv ~= nil and pycloud.chests[in_chest].skin.energy > 1 then
+						--log(serpent.block(pycloud.chests[in_chest].skin.energy))
+						--log('hit')
+						for c, _ in pairs(inv.get_contents()) do
 							--log('hit')
-							ocula.entity.set_command {
-								type = defines.command.go_to_location,
-								destination_entity = game.get_player(ocula.target_player).character,
-								radius = 0.5
-							}
+							if items[c] == true then
+								--log('hit')
+								--log(cnsnum)
+								--log(c)
+								if networks[cnsnum].stored_items[c] < game.item_prototypes[c].stack_size then
+									--log('hit')
+									local amount = inv.remove(c)
+									networks[cnsnum].stored_items[c] = networks[cnsnum].stored_items[c] + amount
+								end
+							elseif items[c] ~= true then
+								local amount = inv.remove(c)
+								networks[cnsnum].stored_items[c] = amount
+							end
+						end
+					end
+				end
+			end
+			for _, out_chest in pairs(networks[cnsnum].output_chests) do
+				--log('hit')
+				if pycloud.chests[out_chest] ~= nil and pycloud.chests[out_chest].entity ~= nil then
+					--log('hit')
+					local inv = pycloud.chests[out_chest].entity.get_inventory(defines.inventory.chest)
+					--log(serpent.block(inv))
+					if inv ~= nil and pycloud.chests[out_chest].skin.energy > 1 then
+						--log('hit')
+						for c, _ in pairs(inv.get_contents()) do
+							--log('hit')
+							if items[c] == true then
+								--log('hit')
+								if networks[cnsnum].stored_items[c] > 0 and inv.get_item_count(c) < game.item_prototypes[c].stack_size then
+									--log('hit')
+									local num_mis = game.item_prototypes[c].stack_size - inv.get_item_count(c)
+									if num_mis > networks[cnsnum].stored_items[c] then
+										inv.insert({name = c, count = networks[cnsnum].stored_items[c]})
+										networks[cnsnum].stored_items[c] = 0
+									elseif networks[cnsnum].stored_items[c] > num_mis then
+										inv.insert({name = c, count = num_mis})
+										networks[cnsnum].stored_items[c] = networks[cnsnum].stored_items[c] - num_mis
+									end
+									--[[
+										local required_amount = game.item_prototypes[c].stack_size - inv.get_item_count(c)
+									local amount = inv.insert({name = c, count = required_amount})
+									networks[cnsnum].stored_items[c] = amount
+									]]--
+								end
+							end
+						end
+						for si, stored_item in pairs(networks[cnsnum].stored_items) do
+							--log('hit')
+							--log(serpent.block(inv.get_item_count(si)))
+							if inv.get_item_count(si) < game.item_prototypes[si].stack_size and stored_item > 0 then
+								--log('hit')
+								--log(si)
+								--log(stored_item)
+								local amount = inv.insert({name = si, count = stored_item})
+								networks[cnsnum].stored_items[si] = networks[cnsnum].stored_items[si] - amount
+							end
+						end
+					end
+				end
+			end
+		elseif next(networks[cnsnum].stored_items) == nil then
+			--log('hit')
+			for _, in_chest in pairs(networks[cnsnum].input_chests) do
+				--log('hit')
+				if pycloud.chests[in_chest] ~= nil and pycloud.chests[in_chest].entity.valid ~= false then
+					--log('hit')
+					local inv = pycloud.chests[in_chest].entity.get_inventory(defines.inventory.chest)
+					if inv ~= nil and pycloud.chests[in_chest].skin.energy > 1 then
+						--log('hit')
+						for c, _ in pairs(inv.get_contents()) do
+							--log(serpent.block(c))
+							--log(serpent.block(contents))
+							--log('hit')
+							if networks[cnsnum].stored_items[c] ~= nil and networks[cnsnum].stored_items[c] < game.item_prototypes[c].stack_size then
+								--log('hit')
+								local amount = inv.remove(c)
+								networks[cnsnum].stored_items[c] = amount
+							elseif networks[cnsnum].stored_items[c] == nil then
+								--log('hit')
+								local amount = inv.remove(c)
+								networks[cnsnum].stored_items[c] = amount
+							end
 						end
 					end
 				end
 			end
 		end
-		]]--
 	end
-)
+	--asd
+	--log(serpent.block(pycloud.current_network_search))
+	--log(cns)
+	pycloud.current_network_search = cns + 1
+	local key
+	for k,_ in pairs(pycloud.networks) do
+		--log(k)
+		key = k
+	end
+	if tonumber(cns) > tonumber(key) then
+		pycloud.current_network_search = 1
+	end
+	--log(serpent.block(global.pycloud))
+end)
 
 script.on_event(
 	defines.events.on_tick,
@@ -1347,12 +1585,17 @@ script.on_event(
 				global.checked_farm_counter = 1
 			end
 		end
+		if global.fish_disable == false then
+			local weeds = game.surfaces['nauvis'].find_entities_filtered{name = 'seaweed'}
+			for _,weed in pairs(weeds) do
+				weed.active = false
+			end
+			global.fish_disable = true
+		end
 	end
 )
 
-script.on_event(
-	{defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity},
-	function(event)
+script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity}, function(event)
 		local E = event.entity
 		for _, farm in pairs(farm_buildings) do
 			if string.match(E.name, farm) then
@@ -1376,12 +1619,52 @@ script.on_event(
 		end
 		global.caravanroutes = caravanroutes
 		if E.name == 'ocula' then
-		ocula_removed(E)
+		ocula_removed(event)
 		elseif E.name == 'ipod' then
 			global.ocula_master_table.ocula_boxes[E.unit_number] = nil
+		elseif E.name == 'pydrive' then
+			local skin = game.surfaces['nauvis'].find_entities( { {E.position.x-1,E.position.y-1}, {E.position.x+1,E.position.y+1} } )
+			if skin ~= nil then
+				for _,ent in pairs(skin) do
+					if ent.name == 'pydrive_skin' then
+						ent.destroy()
+						--log(serpent.block(global.pycloud))
+						local pycloud = global.pycloud
+						local chest = pycloud.chests[E.unit_number]
+						--log(serpent.block(chest))
+						if pycloud.chests[E.unit_number].cloud_id_num == 0 then
+							pycloud.chests[E.unit_number] = nil
+						else
+							if pycloud.networks[chest.cloud_id_num] ~= nil then
+								--log('hit')
+								if chest.input_output_state == 'left' then
+									for k, _ in pairs(pycloud.networks[tostring(chest.cloud_id_num)].input_chests) do
+										table.remove(pycloud.networks[tostring(chest.cloud_id_num)].input_chests, k)
+									end
+								elseif chest.input_output_state == 'right' then
+									--log('hit')
+									for k,_ in pairs(pycloud.networks[chest.cloud_id_num].output_chests) do
+										table.remove(pycloud.networks[chest.cloud_id_num].output_chests, k)
+									end
+								end
+								pycloud.chests[E.unit_number] = nil
+								--log(serpent.block(global.pycloud))
+							end
+						end
+					end
+				end
+			end
 		end
+end)
+
+script.on_event(defines.events.on_chunk_generated, function(event)
+
+	local weeds = game.surfaces['nauvis'].find_entities_filtered{area = event.area, name = 'seaweed'}
+	for _,weed in pairs(weeds) do
+		weed.active = false
 	end
-)
+
+end)
 
 script.on_event(
 	defines.events.on_gui_opened,
@@ -1418,9 +1701,7 @@ script.on_event(
 	end
 )
 
-script.on_event(
-	defines.events.on_gui_selection_state_changed,
-	function(event)
+script.on_event(defines.events.on_gui_selection_state_changed, function(event)
 		--log(event.element.name)
 		caravanroutes = global.caravanroutes
 		--log(serpent.block(caravanroutes))
@@ -1428,7 +1709,7 @@ script.on_event(
 		--log(serpent.block(next(lastclickedunit)))
 		--log(serpent.block(lastclickedunit[next(lastclickedunit)].unit_number))
 		if next(lastclickedunit) ~= nil then
-			log(serpent.block(lastclickedunit))
+			--log(serpent.block(lastclickedunit))
 			local id_num = next(lastclickedunit)
 			if event.element.name == "outpost-list" then
 				local value = event.element.get_item(event.element.selected_index)
@@ -1441,11 +1722,13 @@ script.on_event(
 				caravanroutes[id_num].startpoint.id = global.outpost_table["outpost" .. otnum].entity.unit_number
 				caravanroutes[id_num].startpoint.pos = global.outpost_table["outpost" .. otnum].entity.position
 
+				--[[
 				caravanroutes[id_num].unit.set_command {
 					type = defines.command.go_to_location,
 					destination = caravanroutes[id_num].startpoint.pos,
 					radius = 4
 				}
+				]]--
 			elseif event.element.name == "outpost-list-2" then
 				local value = event.element.get_item(event.element.selected_index)
 				--log(value)
@@ -1461,7 +1744,7 @@ script.on_event(
 				caravanroutes[id_num].endpoint.id = global.outpost_table["outpost" .. otnum].entity.unit_number
 				caravanroutes[id_num].endpoint.pos = global.outpost_table["outpost" .. otnum].entity.position
 			elseif event.element.name == 'destination' then
-				log(serpent.block(id_num))
+				--log(serpent.block(id_num))
 				local bitters = game.surfaces['nauvis'].find_entities_filtered{force = 'enemy', position = lastclickedunit[id_num].position, radius = 2000}
 				for _, enemy in pairs(bitters) do
 					lastclickedunit[id_num].set_command {
@@ -1480,31 +1763,48 @@ script.on_event(
 script.on_event(defines.events.on_gui_switch_state_changed, function(event)
 
 	if event.element.name == 'chest_state_switch' then
-		global.pycloud.chests[global.pycloud.current_chest.unit_number].input_output_state = event.element.switch_state
+		local pycloud = global.pycloud
+		pycloud.chests[pycloud.current_chest.unit_number].input_output_state = event.element.switch_state
 		--check for chest network and update the put in that as well
+		local cur_chest = pycloud.current_chest.unit_number
+		if pycloud.networks[pycloud.chests[cur_chest].cloud_id_num] ~= nil and pycloud.chests[cur_chest].cloud_id_num ~= 0 then
+			if pycloud.chests[cur_chest].input_output_state == 'left' then
+				table.insert(pycloud.networks[pycloud.chests[cur_chest].cloud_id_num].input_chests, cur_chest)
+			elseif pycloud.chests[cur_chest].input_output_state == 'right' then
+				table.insert(pycloud.networks[pycloud.chests[cur_chest].cloud_id_num].output_chests, cur_chest)
+				--log(serpent.block(pycloud.networks[pycloud.chests[cur_chest].cloud_id_num].input_chests))
+				--log(serpent.block(pycloud.networks[pycloud.chests[cur_chest].cloud_id_num].input_chests[cur_chest]))
+				--log(serpent.block(cur_chest))
+				for k, v in pairs(pycloud.networks[pycloud.chests[cur_chest].cloud_id_num].input_chests) do
+					--log('hit')
+					if v == cur_chest then
+						--log('hit')
+						table.remove(pycloud.networks[pycloud.chests[cur_chest].cloud_id_num].input_chests, k)
+						break
+					end
+				end
+			end
+		end
 	end
-	log(serpent.block(global.pycloud))
+	--log(serpent.block(global.pycloud))
 end)
 
-script.on_event(
-	defines.events.on_gui_value_changed,
-	function()
+script.on_event(defines.events.on_gui_value_changed, function()
 		--log(event.element.name)
 	end
 )
 
-script.on_event(
-	defines.events.on_gui_confirmed,
-	function(event)
+script.on_event(defines.events.on_gui_confirmed, function(event)
 		--log(event.element.name)
 		if event.element.name == "outpost_name" then
 			global.outpost_names[global.current_outpost] = outpostgui.outpost_name.text
 		end
 		if event.element.name == 'chest_id_text' then
-			log(serpent.block(global.pycloud))
+			--log(event.element.text)
+			--log(serpent.block(global.pycloud))
 			local pycloud = global.pycloud
 			local un = pycloud.current_chest.unit_number
-			log(un)
+			--log(un)
 			if event.element.text ~= 0 then
 				pycloud.chests[un].cloud_id_num = event.element.text
 				if pycloud.networks[event.element.text] == nil then
@@ -1528,7 +1828,9 @@ script.on_event(
 					end
 				end
 			end
-			log(serpent.block(global.pycloud))
+			--log(event.element.parent.parent.name)
+			event.element.parent.parent.Current_chest_network_id.caption = 'Current cloud network id: ' .. global.pycloud.chests[un].cloud_id_num
+			--log(serpent.block(global.pycloud))
 		end
 	end
 )
@@ -1552,7 +1854,7 @@ script.on_event(
 			global.scipt_opening_gui = true
 			global.current_entity[event.player_index] = nil
 			global.slaughterhouse_gui_open = false
-			log('set recipe')
+			--log('set recipe')
 		end
 	end
 )
@@ -1640,9 +1942,256 @@ script.on_event(
 			--global.pycloud.current_chest = ''
 			--local player = game.players[event.player_index]
 			--player.gui.screen.chest_menu.destroy()
+		elseif event.element.name == 'turd_close' then
+			local turd = game.players[event.player_index].gui.screen.turd_frame
+			if turd ~= nil then
+				turd.destroy()
+			end
+		elseif string.match(event.element.name, 'turd_select') then
+			--log('hit')
+			--log(event.element.name)
+			local sub_name = string.match(event.element.name, '[^_]*$')
+			--log(serpent.block(sub_name))
+			local sub_tech = sub_name
+			local name = string.match(event.element.parent.name, '[^_]*$')
+			local tech = name
+			--log(serpent.block(name))
+			--log(serpent.block(global.tech_upgrades))
+			--log(serpent.block(global.tech_upgrades.techs))
+			event.element.style = 'confirm_button'
+			global.tech_upgrades.currently_selected =
+				{
+					tech = tech,
+					sub_tech = sub_tech
+				}
+			local player = game.players[event.player_index]
+			local screen = player.gui.screen
+			if screen.turd_confirm_frame == nil then
+				screen.add(
+					{
+						type = 'frame',
+						name = 'turd_confirm_frame',
+						direction = 'vertical'
+					}
+				)
+				screen.turd_confirm_frame.force_auto_center()
+				screen.turd_confirm_frame.style.width = 250
+				--log(type(sub_name))
+				--log({'technology-name.' .. sub_name})
+				local string =  {'technology-name.' .. sub_name}
+				screen.turd_confirm_frame.add(
+					{
+						type = 'label',
+						name = 'confirm_infobox',
+						caption = 'Are you sure you want to active the ' .. tostring(string) .. '. Once active this choice can not be undone'
+					}
+				)
+				screen.turd_confirm_frame.confirm_infobox.style.single_line = false
+				local flow = screen.turd_confirm_frame.add(
+					{
+						type = 'flow',
+						name = 'button_box',
+						direction = 'horizontal'
+					}
+				)
+				flow.add(
+					{
+						type = 'button',
+						name = 'turd_back',
+						caption = 'Back'
+					}
+				)
+				flow.turd_back.style = 'back_button'
+				flow.add(
+					{
+						type = 'button',
+						name = 'turd_confirm',
+						caption = 'Confirm'
+					}
+				)
+				flow.turd_confirm.style = 'confirm_button'
+				--flow.turd_confirm.style.strikethrough_color = {0.5,0.5,0.5}
+			end
+		elseif string.match(event.element.name, 'turd_back') then
+			local player = game.players[event.player_index]
+			local screen = player.gui.screen
+			if screen.turd_confirm_frame ~= nil then
+				screen.turd_confirm_frame.destroy()
+			end
+			global.tech_upgrades.currently_selected = {}
+		elseif string.match(event.element.name, 'turd_confirm') then
+			local tech = global.tech_upgrades.currently_selected.tech
+			local sub_tech = global.tech_upgrades.currently_selected.sub_tech
+			for _, ent in pairs(global.tech_upgrades.techs[tech][sub_tech].entities) do
+				if global.tech_upgrades.entities_master_list[ent] == nil then
+					global.tech_upgrades.entities_master_list[ent] = sub_tech
+				end
+			end
+			global.tech_upgrades.tech_status[tech] = true
+			global.tech_upgrades.techs[tech][sub_tech].selected = true
+			--log(serpent.block(global.tech_upgrades.techs[tech]))
+			--log(serpent.block(global.tech_upgrades.entities_master_list))
+			local player = game.players[event.player_index]
+			if global.tech_upgrades.techs[tech][sub_tech].is_upgrade == true then
+				--log(serpent.block(global.TRlist))
+				for u, upgrade in pairs(global.TRlist) do
+					--log(u)
+					--log(serpent.block(upgrade))
+					--log(sub_tech)
+					if upgrade.upgrade_1 ~= nil and upgrade.upgrade_1.tech == sub_tech then
+						--log('hit')
+						upgrade.current_lvl = 2
+					elseif upgrade.upgrade_2 ~= nil and upgrade.upgrade_2.tech == sub_tech then
+						--log('hit')
+						upgrade.current_lvl = 3
+					end
+					if upgrade.current_lvl ~= nil and upgrade.current_lvl > 1 and player.force.recipes[upgrade.base_recipe].enabled == true then
+						player.force.recipes[upgrade.base_recipe].enabled = false
+						player.force.recipes[upgrade.upgrade_1.recipe].enabled = true
+					end
+					if upgrade.current_lvl ~= nil and upgrade.current_lvl > 2 and player.force.recipes[upgrade_1.recipe].enabled == true then
+						player.force.recipes[upgrade.base_recipe].enabled = false
+						player.force.recipes[upgrade_1.recipe].enabled = false
+						player.force.recipes[upgrade.upgrade_2.recipe].enabled = true
+					end
+				end
+			end
+			if global.tech_upgrades.techs[tech][sub_tech].recipes_to_unlock ~= nil then
+				for r, recipe in pairs(global.tech_upgrades.techs[tech][sub_tech].recipes_to_unlock) do
+					player.force.recipes[recipe].enabled = true
+				end
+			end
+			local player = game.players[event.player_index]
+			if player.gui.screen.turd_confirm_frame ~= nil then
+				player.gui.screen.turd_confirm_frame.destroy()
+			end
+			if player.gui.screen.turd_frame ~= nil then
+				player.gui.screen.turd_frame.destroy()
+			end
+			global.tech_upgrades.currently_selected = {}
+		elseif string.match(event.element.name, 'turd_master_button') then
+			local player = game.players[event.player_index]
+			local tech_name = string.match(event.element.name, '[^_]*$')
+			--log(serpent.block(tech_name))
+			for t, tech in pairs(global.tech_upgrades.techs[tech_name]) do
+				--log(t)
+				--log(serpent.block(tech))
+				local sub_tech = player.gui.screen.turd_master_frame.right_tech_window
+				local flow = sub_tech.add(
+					{
+						type = 'frame',
+						name = 'tech_flow_' .. t .. '_' .. tech_name,
+						direction = 'vertical',
+						--style = 'inventory_scroll_pane'
+					}
+				)
+				flow.style.right_padding = 20
+					flow.add(
+						{
+							type = 'sprite',
+							name = 'tech_icon' .. t,
+							sprite = t,
+						}
+					)
+					flow.add(
+						{
+							type = 'label',
+							name = 'tech' .. t,
+							caption = {'technology-name.' .. t}
+						}
+					)
+					flow.add(
+						{
+							type = 'label',
+							name = 'tech_effects' .. t,
+							caption = {'technology-description.' .. t}
+						}
+					)
+					flow['tech_effects' .. t].style.maximal_width = 200
+					flow['tech_effects' .. t].style.single_line = false
+					for u, up in pairs(tech.upgrades) do
+						local con_num = up * 100
+						flow.add(
+							{
+								type = 'label',
+								name = 'tech_upgrade_effects' .. t .. u,
+								caption = u .. ' = ' .. con_num .. '%'
+							}
+						)
+					end
+					flow.add(
+						{
+							type = 'label',
+							name = 'entites' .. t,
+							caption = 'Effected Entities'
+						}
+					)
+					for e, ent in pairs(tech.entities) do
+						local ent_name = game.entity_prototypes[ent].localised_name
+						flow.add(
+							{
+								type = 'label',
+								name = t .. ent,
+								caption = ent_name
+							}
+						)
+					end
+					if tech.recipes_to_unlock ~= nil then
+						flow.add(
+							{
+								type = 'label',
+								name = 'unlocked_recipes',
+								caption = 'Recipes to Unlock'
+							}
+						)
+						for r, recipe in pairs(tech.recipes_to_unlock) do
+							flow.add(
+								{
+									type = 'label',
+									name = t .. recipe,
+									caption = {tostring('recipe-name.' .. recipe)}
+								}
+							)
+							flow.add(
+								{
+									type = 'choose-elem-button',
+									name = t .. recipe .. 'tooltip',
+									elem_type = 'recipe',
+									recipe = recipe,
+									enabled = false
+									--ignored_by_interaction = true			
+								}
+							)
+						end
+					end
+					flow.add(
+						{
+							type = 'button',
+							name = 'turd_select_button_' .. t,
+							caption = 'Select'
+						}
+					)
+			end
+		elseif event.element.name == 'route_set_button' then
+			local id_num = next(lastclickedunit)
+			if global.caravanroutes[id_num].startpoint.id ~= 0 and global.caravanroutes[id_num].endpoint.id ~= 0 then
+				log(serpent.block(global.caravanroutes))
+				global.caravanroutes[id_num].unit.set_command {
+					type = defines.command.go_to_location,
+					destination = caravanroutes[id_num].startpoint.pos,
+					radius = 4
+				}
+			else
+				event.element.parent.add(
+					{
+						type = 'label',
+						name = 'warning',
+						caption = 'the caravan doesnt have a route set it will not fuction until it has both a start and end point set.'
+					}
+				)
+			end
 		end
-	end
-)
+	end)
 
 script.on_event(
 	defines.events.on_gui_closed,
@@ -1775,7 +2324,14 @@ local function create_caravan_gui(event, entity)
 	end
 	caravangui.ctable.add({type = "frame", name = "route_frame_2", direction = "vertical", caption = caption})
 	caravangui.ctable.route_frame_2.add({type = "drop-down", name = "outpost-list-2", items = names})
-
+	caravangui.ctable.add(
+		{
+		  type = 'button',
+		  name = 'route_set_button',
+		  caption = {"gui.confirm"},
+		  style = 'confirm_button'
+		}
+	  )
 	caravangui.add({type = "frame", name = "caravan_frame_center", direction = "vertical", caption = "current inventory"})
 	if caravanroutes[entity.unit_number] ~= nil and caravanroutes[entity.unit_number].inventory.hasitem == true then
 		caravangui.caravan_frame_center.add(
@@ -1816,7 +2372,7 @@ script.on_event(
 			for _, ent in pairs(event.entities) do
 				--log(serpent.block(ent.name))
 				--log('did a thing here')
-				if ent.name == "caravan" and hascarguiopen == false then
+				if (ent.name == "caravan" or ent.name == "flyavan") and hascarguiopen == false then
 					create_caravan_gui(event, ent)
 					lastclickedunit[ent.unit_number] = ent
 					local newroute = {
@@ -1844,7 +2400,7 @@ script.on_event(
 				elseif ent.name == 'nuka-caravan' then
 					create_nuka_caravan_gui(event, ent)
 					lastclickedunit[ent.unit_number] = ent
-					log(serpent.block(lastclickedunit))
+					--log(serpent.block(lastclickedunit))
 				end
 			end
 		end
@@ -1908,56 +2464,289 @@ script.on_event(
 	function(event)
 		if event.item.name == "energy-drink" then
 			game.players[event.player_index].character_running_speed_modifier = 5
+			global.energy_drink[event.player_index] =
+				{
+					active = true,
+					time = 0,
+				}
+		end
+end)
+
+script.on_event(defines.events.on_entity_damaged, function(event)
+
+--log('hit')
+
+end)
+
+local function Tech_building_upgrades(event)
+
+	local tech = event.research
+
+	if global.tech_upgrades.techs[tech.name] ~= nil then
+
+		--log('hit')
+		--log(tech.name)
+		table.insert(global.tech_upgrades.unlocked_techs, tech.name)
+		local players = event.research.force.connected_players
+		local player = players[1]
+		if player ~= nil then
+			--log('hit')
+			local turd = player.gui.screen
+			if turd.turd_frame == nil then
+				turd.add(
+					{
+						type = 'frame',
+						name = 'turd_frame',
+						caption = 'Technological Upgrade and Research Device',
+						direction = 'horizontal'
+					}
+				)
+				turd.turd_frame.force_auto_center()
+				for t,tec in pairs(global.tech_upgrades.techs[tech.name]) do
+					--log(t)
+					--log(serpent.block(tec))
+					local flow = turd.turd_frame.add(
+						{
+							type = 'frame',
+							name = 'tech_flow_' .. t .. '_' .. tech.name,
+							direction = 'vertical',
+							--style = 'inventory_scroll_pane'
+						}
+					)
+					flow.style.right_padding = 20
+					flow.add(
+						{
+							type = 'sprite',
+							name = 'tech_icon' .. t,
+							sprite = t,
+						}
+					)
+					flow.add(
+						{
+							type = 'label',
+							name = 'tech' .. t,
+							caption = {'technology-name.' .. t}
+						}
+					)
+					flow.add(
+						{
+							type = 'label',
+							name = 'tech_effects' .. t,
+							caption = {'technology-description.' .. t}
+						}
+					)
+					flow['tech_effects' .. t].style.maximal_width = 200
+					flow['tech_effects' .. t].style.single_line = false
+					for u, up in pairs(tec.upgrades) do
+						local con_num = up * 100
+						flow.add(
+							{
+								type = 'label',
+								name = 'tech_upgrade_effects' .. t .. u,
+								caption = u .. ' = ' .. con_num .. '%'
+							}
+						)
+					end
+					flow.add(
+						{
+							type = 'label',
+							name = 'entites' .. t,
+							caption = 'Effected Entities'
+						}
+					)
+					for e, ent in pairs(tec.entities) do
+						local ent_name = game.entity_prototypes[ent].localised_name
+						flow.add(
+							{
+								type = 'label',
+								name = t .. ent,
+								caption = ent_name
+							}
+						)
+					end
+					if tec.recipes_to_unlock ~= nil then
+						flow.add(
+							{
+								type = 'label',
+								name = 'unlocked_recipes',
+								caption = 'Recipes to Unlock'
+							}
+						)
+						for r, recipe in pairs(tec.recipes_to_unlock) do
+							flow.add(
+								{
+									type = 'label',
+									name = t .. recipe,
+									caption = {tostring('recipe-name.' .. recipe)}
+								}
+							)
+							flow.add(
+								{
+									type = 'choose-elem-button',
+									name = t .. recipe .. 'tooltip',
+									elem_type = 'recipe',
+									recipe = recipe,
+									enabled = false
+									--ignored_by_interaction = true			
+								}
+							)
+						end
+					end
+					flow.add(
+						{
+							type = 'button',
+							name = 'turd_select_button_' .. t,
+							caption = 'Select'
+						}
+					)
+				end
+				turd.turd_frame.add(
+					{
+						type = "sprite-button",
+                    	name = "turd_close",
+                    	sprite = "utility/close_fat"
+					}
+				)
+
+			end
+		--log(serpent.block(global.tech_upgrades))
+		else
+			--log('hit')
+			for t,tec in pairs(global.tech_upgrades.techs[tech.name]) do
+				--log(serpent.block(global.tech_upgrades.techs[tech.name]))
+				--log(serpent.block(tec))
+				tec.selected = false
+			end
+			global.tech_upgrades.tech_status[tech.name] = false
+			--log(serpent.block(global.tech_upgrades.tech_status))
+			--log(serpent.block(global.tech_upgrades))
 		end
 	end
-)
+end
 
-script.on_event(
-	defines.events.on_research_finished,
-	function(event)
-		if global.TRlist == nil then
-			global.TRlist = TRlist_og
-			TRlist = TRlist_og
-		end
-		--log('hit')
-		--log(serpent.block(TRlist.techs_with_upgrades['bigger-colon']))
-		local tech = event.research
-		-- if tech.name == 'hardened-bone' then
-		-- --log(serpent.block(tech.name))
-		-- end
-		if TRlist.techs_with_upgrades[tech.name] == true then
-			if tech.effects ~= nil then
-				for _, effect in pairs(tech.effects) do
-					if effect.type == "unlock-recipe" then
-						for _, upgrade in pairs(TRlist.upgrades) do
-							--log(serpent.block(upgrade.base_recipe))
-							if effect.recipe == upgrade.base_recipe then
-								if upgrade.current_lvl > 1 then
-									event.research.force.recipes[upgrade.base_recipe].enabled = false
-								end
-							elseif effect.recipe == upgrade.upgrade_1.recipe then
-								if upgrade.current_lvl > 2 then
-									event.research.force.recipes[upgrade.upgrade_1.recipe].enabled = false
-								end
-								upgrade.current_lvl = 2
+--tech unlock gui and toogle scripts
+local function Tech_recipe_upgrades(event)
+	if global.TRlist == nil then
+		global.TRlist = TRlist_og
+		TRlist = TRlist_og
+	end
+	--log('hit')
+	--log(serpent.block(TRlist.techs_with_upgrades['bigger-colon']))
+	local tech = event.research
+	-- if tech.name == 'hardened-bone' then
+	-- --log(serpent.block(tech.name))
+	-- end
+	if TRlist.techs_with_upgrades[tech.name] == true then
+		if tech.effects ~= nil then
+			for _, effect in pairs(tech.effects) do
+				if effect.type == "unlock-recipe" then
+					for _, upgrade in pairs(TRlist.upgrades) do
+						--log(serpent.block(upgrade.base_recipe))
+						--log(serpent.block(upgrade.current_lvl))
+						--log(serpent.block(effect.recipe))
+						if effect.recipe == upgrade.base_recipe then
+							if upgrade.current_lvl > 1 then
 								event.research.force.recipes[upgrade.base_recipe].enabled = false
-								upgrade.upgrade_1.unlocked = true
-							elseif upgrade.upgrade_2 ~= nil and effect.recipe == upgrade.upgrade_2.recipe then
-								--log('hit')
-								--log(serpent.block(upgrade.upgrade_1.recipe))
-								--log(serpent.block(upgrade.upgrade_2.recipe))
-								--log(serpent.block(event.research.force.recipes[upgrade.upgrade_1.recipe].enabled))
-								upgrade.current_lvl = 3
-								event.research.force.recipes[upgrade.base_recipe].enabled = false
-								event.research.force.recipes[upgrade.upgrade_1.recipe].enabled = false
-								upgrade.upgrade_2.unlocked = true
-							--log(serpent.block(event.research.force.recipes[upgrade.upgrade_1.recipe].enabled))
 							end
+						elseif effect.recipe == upgrade.upgrade_1.recipe then
+							if upgrade.current_lvl > 2 then
+								event.research.force.recipes[upgrade.upgrade_1.recipe].enabled = false
+							end
+							upgrade.current_lvl = 2
+							event.research.force.recipes[upgrade.base_recipe].enabled = false
+							upgrade.upgrade_1.unlocked = true
+						elseif upgrade.upgrade_2 ~= nil and effect.recipe == upgrade.upgrade_2.recipe then
+							--log('hit')
+							--log(serpent.block(upgrade.upgrade_1.recipe))
+							--log(serpent.block(upgrade.upgrade_2.recipe))
+							--log(serpent.block(event.research.force.recipes[upgrade.upgrade_1.recipe].enabled))
+							upgrade.current_lvl = 3
+							event.research.force.recipes[upgrade.base_recipe].enabled = false
+							event.research.force.recipes[upgrade.upgrade_1.recipe].enabled = false
+							upgrade.upgrade_2.unlocked = true
+						--log(serpent.block(event.research.force.recipes[upgrade.upgrade_1.recipe].enabled))
 						end
 					end
 				end
 			end
 		end
-		global.TRlist = TRlist
 	end
-)
+	global.TRlist = TRlist
+	--log(serpent.block(global.TRlist))
+end
+
+script.on_event(defines.events.on_research_finished, function(event)
+	Tech_recipe_upgrades(event)
+	--Tech_building_upgrades(event)
+end)
+--[[
+script.on_event("tech-upgrades", function(event)
+
+	local player = game.players[event.player_index]
+
+	local turd_master = player.gui.screen
+	if turd_master.turd_master_frame == nil then
+		turd_master.add(
+			{
+				type = 'frame',
+				name = 'turd_master_frame',
+				caption = 'Technological Upgrade and Research Device',
+				direction = 'horizontal'
+			}
+		)
+		turd_master.turd_master_frame.force_auto_center()
+		local left = turd_master.turd_master_frame.add(
+			{
+				type = 'frame',
+				name = 'left_tech_window',
+				direction = 'horizontal'
+			}
+		)
+		--left.style.width = 300
+		local left_scroll = left.add(
+			{
+				type = 'scroll-pane',
+				name = 'turd_scroll',
+				style = 'inventory_scroll_pane'
+			}
+		)
+		local left_table = left_scroll.add(
+			{
+				type = 'table',
+				name = 'master_tech_table',
+				column_count = 2
+			}
+		)
+		local right = turd_master.turd_master_frame.add(
+			{
+				type = 'frame',
+				name = 'right_tech_window',
+				direction = 'horizontal'
+			}
+		)
+		right.style.minimal_width = 800
+		for t, tech in pairs(global.tech_upgrades.tech_status) do
+			left_table.add(
+				{
+					type = 'sprite-button',
+					name = 'turd_master_button_' .. t,
+					sprite = 'technology/' .. t
+				}
+			)
+			left_table['turd_master_button_' .. t].style.width = 128
+			left_table['turd_master_button_' .. t].style.height = 128
+			--log(t)
+			--log(serpent.block(tech))
+			if tech == true then
+				--log('hit')
+				left_table['turd_master_button_' .. t].style = 'red_logistic_slot_button'
+				--left_table['button' .. t].style.strikethrough_color  = {0.5,0.5,0.5}
+			end
+		end
+
+	elseif turd_master.turd_master_frame ~= nil then
+		turd_master.turd_master_frame.destroy()
+	end
+
+end)
+]]--

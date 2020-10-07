@@ -211,7 +211,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-rennea',
     order = 'za'
-}:add_unlock("selective-breeding"):replace_ingredient("filtration-media", "stone-wool"):replace_ingredient("sulfuric-acid-barrel", "phosphoric-acid-barrel")
+}:add_unlock("selective-breeding"):replace_ingredient("filtration-media", "stone-wool")
 
 RECIPE {
     type = 'recipe',
@@ -350,7 +350,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-rennea',
     order = 'za'
-}:add_unlock("artificial-breeding"):replace_ingredient("filtration-media", "stone-wool"):replace_ingredient("sulfuric-acid-barrel", "phosphoric-acid-barrel")
+}:add_unlock("artificial-breeding"):replace_ingredient("filtration-media", "stone-wool")
 
 RECIPE {
     type = 'recipe',
@@ -489,7 +489,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-rennea',
     order = 'za'
-}:add_unlock("biased-mutation"):replace_ingredient("filtration-media", "stone-wool"):replace_ingredient("sulfuric-acid-barrel", "phosphoric-acid-barrel")
+}:add_unlock("biased-mutation"):replace_ingredient("filtration-media", "stone-wool")
 
 RECIPE {
     type = 'recipe',

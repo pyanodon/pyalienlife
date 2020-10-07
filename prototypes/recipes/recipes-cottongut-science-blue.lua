@@ -41,7 +41,7 @@ RECIPE {
     energy_required = 135,
     ingredients = {
         {type = 'item', name = 'cottongut', amount = 10},
-        {type = 'item', name = 'negasium', amount = 1},
+        {type = 'item', name = 'negasium', amount = 10},
         },
     results = {
         {type = 'item', name = 'chemical-science-pack', amount = 25, probability = 0.1},
@@ -62,8 +62,8 @@ RECIPE {
     enabled = false,
     energy_required = 135,
     ingredients = {
-        {type = 'item', name = 'cottongut', amount = 25},
-        {type = 'item', name = 'negasium', amount = 1},
+        {type = 'item', name = 'cottongut', amount = 30},
+        {type = 'item', name = 'negasium', amount = 10},
         },
     results = {
         {type = 'item', name = 'chemical-science-pack', amount = 50, probability = 0.1},
@@ -78,12 +78,12 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-blue-03',
-    category = 'research',
+    category = 'space-cottongut',
     enabled = false,
     energy_required = 135,
     ingredients = {
-        {type = 'item', name = 'cottongut', amount = 60},
-        {type = 'item', name = 'negasium', amount = 1},
+        {type = 'item', name = 'cottongut', amount = 90},
+        {type = 'item', name = 'negasium', amount = 10},
         },
     results = {
         {type = 'item', name = 'chemical-science-pack', amount = 75, probability = 0.1},
@@ -98,12 +98,12 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-blue-04',
-    category = 'research',
+    category = 'space-cottongut',
     enabled = false,
     energy_required = 135,
     ingredients = {
-        {type = 'item', name = 'cottongut', amount = 100},
-        {type = 'item', name = 'negasium', amount = 1},
+        {type = 'item', name = 'cottongut', amount = 270},
+        {type = 'item', name = 'negasium', amount = 10},
         },
     results = {
         {type = 'item', name = 'chemical-science-pack', amount = 100, probability = 0.1},
@@ -117,16 +117,16 @@ RECIPE {
 
 
 ---END GAME---
---[[
+
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-blue-05',
-    category = 'cottongut',
+    category = 'space-cottongut',
     enabled = false,
     energy_required = 135,
     ingredients = {
-        {type = 'item', name = 'cottongut', amount = 5},
-        {type = 'item', name = 'negasium', amount = 1},
+        {type = 'item', name = 'cottongut', amount = 810},
+        {type = 'item', name = 'negasium', amount = 10},
         },
     results = {
         {type = 'item', name = 'chemical-science-pack', amount = 200, probability = 0.1},
@@ -137,4 +137,3 @@ RECIPE {
     subgroup = 'py-alienlife-cottongut',
     order = 'c5'
 }:add_unlock("biased-mutation")
-]]--

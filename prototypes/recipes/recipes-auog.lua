@@ -66,7 +66,7 @@ RECIPE {
         {type = 'item', name = 'fawogae', amount = 5},
         {type = 'item', name = 'seaweed', amount = 5},
         {type = 'item', name = 'moss', amount = 5},
-        {type = 'fluid', name = 'steam', amount = 100},
+        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
     },
     results = {
         {type = 'item', name = 'auog-food-01', amount = 3},
@@ -89,7 +89,7 @@ RECIPE {
         {type = 'item', name = 'ash', amount = 10},
         {type = 'item', name = 'moss', amount = 10},
         {type = 'item', name = 'seaweed', amount = 5},
-        {type = 'fluid', name = 'steam', amount = 100},
+        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
     },
     results = {
         {type = 'item', name = 'auog-food-02', amount = 5},
@@ -111,11 +111,12 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'auog-pup', amount = 10},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
+        {type = 'item', name = 'cage', amount = 10},
     },
     results = {
-        {type = 'item', name = 'auog', amount = 10},
+        {type = 'item', name = 'caged-auog', amount = 10},
     },
-    main_product = "auog",
+    main_product = "caged-auog",
     subgroup = 'py-alienlife-auog',
     order = 'a',
 }:add_unlock("assisted-embryology")
@@ -131,9 +132,10 @@ RECIPE {
         {type = 'item', name = 'gh', amount = 1},
         {type = 'item', name = 'resveratrol', amount = 2},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
+        {type = 'item', name = 'cage', amount = 20},
     },
     results = {
-        {type = 'item', name = 'auog', amount = 20},
+        {type = 'item', name = 'caged-auog', amount = 20},
     },
     --main_product = "caged-auog",
     subgroup = 'py-alienlife-auog',
@@ -222,7 +224,7 @@ RECIPE {
         {type = 'item', name = 'nanofibrils', amount = 2},
         {type = 'item', name = 'energy-drink', amount =1},
         {type = 'item', name = 'albumin', amount =10},
-        {type = 'item', name = 'immunosupressants', amount =2},
+        --{type = 'item', name = 'immunosupressants', amount =2},
         },
     results = {
         {type = 'item', name = 'auog', amount = 1, probability = 0.7},
