@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"prandium-lab-mk02", 1}
     }
-}:add_unlock("cottongut-mk02"):add_ingredient('advanced-small-part')
+}:add_unlock("cottongut-mk02"):add_ingredient('small-parts-02')
 
 ITEM {
     type = "item",
@@ -45,7 +45,7 @@ ENTITY {
     module_specification = {
         module_slots = 40
     },
-    allowed_effects = {"speed","productivity"},
+    allowed_effects = {"speed","productivity",'consumption','pollution'},
     crafting_categories = {"cottongut"},
     crafting_speed = 0.05,
     energy_source = {

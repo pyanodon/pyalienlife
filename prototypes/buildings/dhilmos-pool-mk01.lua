@@ -48,7 +48,7 @@ ENTITY {
     module_specification = {
         module_slots = 5
     },
-    allowed_effects = {"speed","productivity"},
+    allowed_effects = {"speed","productivity",'consumption','pollution'},
     crafting_categories = {"dhilmos"},
     crafting_speed = 0.02,
     energy_source = {

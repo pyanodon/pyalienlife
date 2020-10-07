@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/collagen.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"genetic-design"},
+    prerequisites = {"genetic-design","exo-insertion"},
     effects = {},
     unit = {
         count = 400,

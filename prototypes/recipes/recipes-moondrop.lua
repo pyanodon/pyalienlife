@@ -78,31 +78,13 @@ RECIPE {
     main_product = 'moondrop-seeds',
 }:add_unlock("moondrop-mk01")
 
+--Secondary Upgrade Recipes--
+--SUR--
+--WIP--
 
---[[
-RECIPE {
-    type = 'recipe',
-    name = 'replicator-ralesia',
-    category = 'advanced-crafting',
-    enabled = false,
-    energy_required = 30,
-    ingredients = {
-        {type = 'item', name = 'ralesia-codex', amount = 1},
-        {type = 'item', name = 'ralesia-seeds', amount = 100},
-        {type = 'item', name = 'titanium-plate', amount = 100},
-        {type = 'item', name = 'metallic-glass', amount = 2},
-        {type = 'item', name = 'biofilm', amount = 20},
-        {type = 'item', name = 'plastic-bar', amount = 100},
-        {type = 'item', name = 'blanket-chassi', amount = 1},
-    },
-    results = {
-        {type = 'item', name = 'replicator-ralesia', amount = 1},
-    },
-}:add_unlock("mega-farm-ralesia"):add_ingredient({type = "item", name = "nems", amount = 10}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10})
-]]--
+--mk02--
+--WIP--
 
-
----UPDATES---
 RECIPE {
     type = 'recipe',
     name = 'moondrop-mk02',

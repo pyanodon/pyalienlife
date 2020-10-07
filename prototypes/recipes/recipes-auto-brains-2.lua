@@ -846,7 +846,6 @@ fun.autorecipes {
 					{name='arthropodblood', amount ='R'},
 					{name='brain', amount ='R'},
                     {name='brain', amount ='+2'},
-                    {name='cage', amount =1},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',

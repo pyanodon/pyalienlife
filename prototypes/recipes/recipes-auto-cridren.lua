@@ -76,7 +76,7 @@ fun.autorecipes {
                     {name='soil',amount ='+25'},
                     {name='fish',amount ='+6'},
                     {name='cagedarthurian',amount = '+1'},
-                    {name='ash',amount ='20'},
+                    {name='ash',amount =20},
 				},
 			results =
 				{

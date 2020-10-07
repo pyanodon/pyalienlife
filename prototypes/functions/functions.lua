@@ -976,9 +976,10 @@ local reprocess_recipes_1 = {}
 local reprocess_recipes_2 = {}
 
 function overrides.autorecipes(recipe)
+    --log('hit')
     local items = require('prototypes/recipes/itemtables') --*: optional, defaults to true --**: required if using dual recipe mode as itermidate items will be made from this
     --
-
+    --log('hit')
     --[[
 recipe =
 	{
@@ -1028,7 +1029,7 @@ recipe =
     module_limitations = string*
 ]] --***:needs at least a single mats table with an input item and a output item. following tables will add or remove items and make a new recipe
     --*__*:amount includes math keys +,-,*,/,R. will do math based on symbol with number. R will clear item from mats
-
+    --log('hit')
     local name = recipe.name
     local singlerecipe
     local category = recipe.category
@@ -1055,10 +1056,11 @@ recipe =
     -- local lastitem
 
     -- local firstitem = true
-
+    --log('hit')
     singlerecipe = true
 
     for _, mat in pairs(mats) do
+        --log('hit')
         --log(number)
         --log(serpent.block(mat))
 
@@ -1077,6 +1079,7 @@ recipe =
         --log(serpent.block(ingredients))
 
         for i, item in pairs(mat.ingredients) do
+            --log('hit')
             --log(serpent.block(ingredients))
             --log(serpent.block(item))
             --log(serpent.block(item[1]))
@@ -1261,7 +1264,7 @@ recipe =
                     end
                 end
             end
-
+            --log('hit')
             if item.return_item ~= nil then
 				--log('hit')
                 return_item = true
@@ -1297,7 +1300,7 @@ recipe =
 
             end
         end
-
+        --log('hit')
 		--log(serpent.block(return_items_table))
 		--log(serpent.block(ingredients))
 
@@ -1306,6 +1309,7 @@ recipe =
         --log(serpent.block(mat.results))
 
         for i, item in pairs(mat.results) do
+            --log('hit')
             --log(serpent.block(mat))
 			--log(serpent.block(mat.results))
             --log(serpent.block(item))
@@ -1321,11 +1325,13 @@ recipe =
             local prodvalue
             local a_min
             local a_max
-
+            --log('hit')
             --log(serpent.block(ing))
             if data.raw.item[ing[1]] ~= nil or data.raw.fluid[ing[1]] ~= nil or data.raw.module[ing[1]] ~= nil then
+                --log('hit')
                 --log(serpent.block(item.amount))
                 if item.amount ~= nil then
+                    --log('hit')
                     --log("hit")
                     sign = string.sub(item.amount, 1, 1)
                     mod = string.sub(item.amount, 2, 10)
@@ -1353,7 +1359,7 @@ recipe =
                     sign = nil
                     mod = nil
                 end
-
+                --log('hit')
                 --log(serpent.block(ing))
                 --log(sign)
                 --log(mod)
@@ -1369,7 +1375,7 @@ recipe =
                 else
                     type1 = 'item'
                 end
-
+                --log('hit')
                 if prod == true then
                     for r, result in pairs(results) do
                         if result.name == item.name then
@@ -1380,18 +1386,21 @@ recipe =
                         end
                     end
                 end
-
+                --log('hit')
                 if sign == nil then
                     if next(results) ~= nil then
                         --log("hit")
                         --log(serpent.block(results))
                         local rl = {}
+                        --log('hit')
                         for _, res in pairs(results) do
                             rl[res.name] = true
                         end
+                        --log('hit')
                         if rl[ing[1]] then
                             for _, res in pairs(results) do
                                 if res.name == ing[1] then
+                                    --log('hit')
                                     --log(res.name)
                                     --log(ing[1])
                                     --res.amount = res.amount + ing[2]
@@ -1428,6 +1437,7 @@ recipe =
                         table.insert(results, {type = type1, name = ing[1], amount = ing[2]})
                     end
                 elseif sign == '+' then
+                    --log('hit')
                     if next(results) ~= nil then
                         local rl = {}
                         for _, res in pairs(results) do
@@ -1457,6 +1467,7 @@ recipe =
                                 end
                             end
                         else
+                            --log('hit')
                             --log(ing[1])
                             --log(mod)
                             if item.amount ~= nil then
@@ -1523,7 +1534,7 @@ recipe =
                     end
                 end
             end
-
+            --log('hit')
             if item.require_item ~= nil then
                 require_item = true
                 require_item_name = item.require_item[1]
@@ -1538,7 +1549,7 @@ recipe =
                 end
             end
         end
-
+        --log('hit')
         crafting_speed = mat.crafting_speed
         tech_unlock = mat.tech
 
@@ -1549,7 +1560,7 @@ recipe =
                 number = number + 1
             until data.raw.recipe[name .. number] == nil
         end
-
+        --log('hit')
         local enabled
 
         if tech_unlock == nil then
@@ -1557,13 +1568,14 @@ recipe =
         else
             enabled = false
         end
-
+        --log('hit')
         lastings = table.deepcopy(ingredients)
         lastresults = table.deepcopy(results)
 
         --log(serpent.block(lastings))
 
         if singlerecipe then
+            --log('hit')
             local na = mat.name or name .. number
             local order
             if recipe.order ~= nil then
@@ -1585,13 +1597,13 @@ recipe =
                 --icon = mat.icon
                 localised_name = mat.name
             }
-
+            --log('hit')
             if return_item and return_item_name ~= nil then
 				for _, rit in pairs(return_items_table) do
 					overrides.add_result(na, rit)
 				end
             end
-
+            --log('hit')
             if mat.icon == nil then
                 --log(serpent.block(data.raw.recipe[na]))
                 --log(serpent.block(results))
@@ -1607,7 +1619,7 @@ recipe =
                     data.raw.recipe[na].icon_size = 32
                 end
             end
-
+            --log('hit')
             if recipe.module_limitations ~= nil then
                 table.insert(data.raw.module[recipe.module_limitations].limitation, na)
             end
@@ -1616,7 +1628,7 @@ recipe =
             if tech_unlock ~= nil then
                 RECIPE(na):add_unlock(tech_unlock)
             end
-
+            --log('hit')
             --log(serpent.block(data.raw.recipe[na]))
 
             number = number + 1
@@ -1719,6 +1731,95 @@ end
 
 function overrides.reprocess_recipes_2()
    overrides.reprocess_recipes_core(reprocess_recipes_2, upgrade2)
+end
+
+function overrides.tech_upgrade(tech_upgrade)
+    --log(serpent.block(tech_upgrade))
+    for _, tab in pairs(tech_upgrade) do
+        --log(serpent.block(tab))
+        for _, tech in pairs(tab.sub_techs) do
+            --log(serpent.block(tech))
+        TECHNOLOGY {
+                type = "technology",
+                name = tab.master_tech.name,
+                icon = tab.master_tech.icon,
+                icon_size = tab.master_tech.icon_size,
+                order = tab.master_tech.order,
+                prerequisites = tab.master_tech.prerequisites,
+                effects = {},
+                unit = tab.master_tech.unit
+            }
+            
+            data:extend(
+            {
+                {
+                    type = "sprite",
+                    name = tech.technology.name,
+                    filename = tech.technology.icon,
+                    --priority = "extra-high-no-scale",
+                    size = tech.technology.icon_size,
+                    --width = 64,
+                    --height = 64,
+                    --flags = {"gui-icon"},
+                    --mipmap_count = 1,
+                    --scale = 0.5
+                },
+            }
+            )
+            --log(serpent.block(tab.master_tech.name))
+        local module_effects = {}
+            if tech.upgrades ~= nil then
+                module_effects =
+                    {
+                        consumption =
+                            {
+                                bonus = tech.upgrades.consumption
+                            },
+                        speed =
+                            {
+                                bonus = tech.upgrades.speed
+                            },
+                        productivity =
+                            {
+                                bonus = tech.upgrades.productivity
+                            },
+                        pollution =
+                            {
+                                bonus = tech.upgrades.pollution
+                            }
+                    }
+            end
+            --log(serpent.block(module_effects))
+            ITEM {
+                type = "module",
+                name = tech.technology.name .. '-module',
+                icons =
+                {
+                    --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+                    {icon = "__pyalienlifegraphics2__/graphics/icons/forest-tree.png"}
+                },
+                icon_size = 64,
+                category = tech.technology.name,
+                tier = 1,
+                flags = {},
+                subgroup = "py-alienlife-modules",
+                order = "t-a",
+                stack_size = 300,
+                effect = module_effects,
+                --limitation = {},
+                --limitation_message_key = "dicks"
+            }
+
+            data:extend(
+                {
+                    {
+                        type = "module-category",
+                        name = tech.technology.name
+                    },
+                }
+            )
+        end
+    end
 end
 
 return overrides

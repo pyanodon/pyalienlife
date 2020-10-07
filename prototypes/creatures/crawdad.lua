@@ -24,7 +24,7 @@ ITEM{
     name = "crawdad",
     icon = "__pyalienlifegraphics__/graphics/icons/crawdad.png",
     icon_size = 64,
-    subgroup = "py-alienlife-buildings-others",
+    subgroup = "py-alienlife-special-creatures",
     order = "x",
     place_result = "crawdad",
     stack_size = 5

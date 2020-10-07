@@ -70,13 +70,14 @@ RECIPE {
         {type = 'item', name = 'rennea-seeds', amount = 10},
         {type = 'item', name = 'guts', amount = 5},
         {type = 'item', name = 'fish', amount = 5},
+        {type = 'item', name = 'guar-gum', amount = 2},
         {type = 'item', name = 'casein', amount = 10},
         {type = 'item', name = 'ralesia', amount = 10},
         {type = 'item', name = 'bones', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100},
+        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
     },
     results = {
-        {type = 'item', name = 'phadai-food-01', amount = 3},
+        {type = 'item', name = 'phadai-food-01', amount = 6},
     },
 }:add_unlock("food-mk03")
 
@@ -99,7 +100,7 @@ RECIPE {
         {type = 'item', name = 'ash', amount = 10},
         {type = 'item', name = 'fish', amount = 5},
         {type = 'item', name = 'ralesia', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100},
+        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
     },
     results = {
         {type = 'item', name = 'phadai-food-02', amount = 5},

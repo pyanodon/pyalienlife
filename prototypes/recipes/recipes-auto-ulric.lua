@@ -885,7 +885,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
 					{name='meat', amount =11},
 				},
 			crafting_speed = 15,

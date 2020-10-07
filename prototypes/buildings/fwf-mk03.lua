@@ -44,11 +44,11 @@ ENTITY {
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 3
+        module_slots = 75
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"fwf"},
-    crafting_speed = 3,
+    crafting_speed = 0.05,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

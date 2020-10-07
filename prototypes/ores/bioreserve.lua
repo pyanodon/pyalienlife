@@ -3,7 +3,7 @@ DATA {
     category = "resource",
     name = "ore-bioreserve",
     richness = true,
-    order = "b-e"
+    order = "p-bio"
 }
 
 DATA {
@@ -20,33 +20,29 @@ ENTITY {
     flags = {"placeable-neutral"},
     order = "a-b-a",
     map_color = {r = 0.647, g = 0.0, b = 0.415},
+    highlight = true,
     minable = {
-        hardness = 1,
         mining_time = 1,
         results = {
             {"bio-sample", 1}
         },
     },
-    starting_area = true,
     collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
-    autoplace = {
-		order = 'b',
-        control = "ore-bioreserve",
-        sharpness = 15/16,
-        richness_multiplier = 100,
-        richness_multiplier_distance_bonus = 1.5,
-        richness_base = 2,
-        coverage = 0.0006,
-        peaks = {
-            {
-                noise_layer = "ore-bioreserve",
-                noise_octaves_difference = -0.85,
-                noise_persistence = 0.4
-            }
-        },
-		starting_area_size = 5500 * 0.002,
-		starting_area_amount = 100
+    tree_removal_probability = 0.7,
+    tree_removal_max_distance = 32 * 32,
+    autoplace = resource_autoplace.resource_autoplace_settings
+    {
+        name = "ore-bioreserve",
+        order = "b",
+        base_density = 10,
+        base_spots_per_km2 = 1.25,
+        has_starting_area_placement = true,
+        random_spot_size_minimum = 2,
+        random_spot_size_maximum = 4,
+        regular_rq_factor_multiplier = 1,
+        starting_rq_factor_multiplier = 2,
+        candidate_spot_count = 20
     },
     stage_counts = {300, 200, 170, 150, 120, 100, 80, 60, 40, 35, 15},
     stages = {

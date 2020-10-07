@@ -52,7 +52,7 @@ ENTITY {
     module_specification = {
         module_slots = 50
     },
-    allowed_effects = {"speed","productivity"},
+    allowed_effects = {"speed","productivity",'consumption','pollution'},
     crafting_categories = {"kicalk"},
     crafting_speed = 0.04,
     energy_source = {
@@ -60,7 +60,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = -35,
     },
-    energy_usage = "650kW",
+    energy_usage = "1300kW",
     ingredient_count = 20,
     animation = {
         layers = {

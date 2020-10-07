@@ -9,7 +9,7 @@ local pipe = {
 
 RECIPE {
     type = "recipe",
-    name = "cadavericarum-mk01",
+    name = "cadaveric-arum-mk01",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
@@ -20,29 +20,29 @@ RECIPE {
         {"hydrocyclone-mk01", 1}
     },
     results = {
-        {"cadavericarum-mk01", 1}
+        {"cadaveric-arum-mk01", 1}
     }
 }:add_unlock("cadaveric-arum")
 
 ITEM {
     type = "item",
-    name = "cadavericarum-mk01",
+    name = "cadaveric-arum-mk01",
     icon = "__pyhightechgraphics__/graphics/icons/cadaveric-arum-mk01.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk01",
     order = "b",
-    place_result = "cadavericarum-mk01",
+    place_result = "cadaveric-arum-mk01",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "cadavericarum-mk01",
+    name = "cadaveric-arum-mk01",
     icon = "__pyhightechgraphics__/graphics/icons/cadaveric-arum-mk01.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "cadavericarum-mk01"},
+    minable = {mining_time = 0.5, result = "cadaveric-arum-mk01"},
     fast_replaceable_group = "cadaveric-arum",
     max_health = 100,
     corpse = "big-remnants",
@@ -61,7 +61,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = -3,
     },
-    energy_usage = "450kW",
+    energy_usage = "1800kW",
     ingredient_count = 10,
     animation = {
         layers = {

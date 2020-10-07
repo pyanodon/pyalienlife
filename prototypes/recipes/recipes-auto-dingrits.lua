@@ -128,7 +128,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='antiviral',amount =1},
-					{name='cage',amount='R'},
+					--{name='cage',amount='R'},
 				},
 			results =
 				{
@@ -300,6 +300,35 @@ fun.autorecipes {
 				},
 			crafting_speed = 30,
 			tech = 'recombinant-ery'
+		},
+		--reca
+		{
+			ingredients =
+				{
+					{name='gh',amount ='R'},
+					{name='recombinantery',amount ='R'},
+					{name='reca',amount =1},
+				},
+			results =
+				{
+					{name='bloodcageddingrits', amount ='R'},
+					{name='skincageddingrits', amount = 2},
+				},
+			crafting_speed = 90,
+			tech = 'reca'
+		},
+		--reca and gh
+		{
+			ingredients =
+				{
+					{name='gh',amount =1},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'reca'
 		},
 	}
 }
@@ -653,7 +682,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', amount ='R'},
-					{name='pelt', amount =1},
+					{name='pelt', amount =2},
 				},
 			crafting_speed = 15,
 			tech = 'dingrits',
@@ -766,6 +795,25 @@ fun.autorecipes {
 			tech = 'anabolic-rna',
 			name = 'Extract meat from Improved dingrits',
 			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-dingrits.png",
+			icon_size = 64,
+		},
+		--skin dingrits rendering
+		{
+			ingredients =
+				{
+					{name='meatcageddingrits',amount='R'},
+					{name='skincageddingrits',amount=1},
+				},
+			results =
+				{
+					{name='meat', amount ='R'},
+					{name='pelt', amount =3},
+					{name='cage', amount=1},
+				},
+			crafting_speed = 15,
+			tech = 'reca',
+			name = 'Extract pelt from Improved dingrits',
+			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-dingrits.png",
 			icon_size = 64,
 		},
 	}

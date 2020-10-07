@@ -32,7 +32,9 @@ RECIPE('starch'):remove_unlock('machines-mk02')
 RECIPE('starch-2'):remove_unlock('machines-mk02')
 RECIPE('fertilizer-2'):remove_unlock('basic-electronics')
 RECIPE('molten-stainless-steel'):add_ingredient({type = "item", name = "cobalt-extract", amount = 1})
+RECIPE('full-molten-stainless-steel-3'):add_ingredient({type = "item", name = "cobalt-extract", amount = 1})
 RECIPE('molten-super-steel'):add_ingredient({type = "item", name = "cobalt-oxide", amount = 1})
+RECIPE('full-molten-super-steel-3'):add_ingredient({type = "item", name = "cobalt-oxide", amount = 1})
 
 ----EXCLUSIVE RECIPES----
 
@@ -94,3 +96,61 @@ RECIPE {
         {type = "item", name = "fertilizer", amount = 15}
     }
 }:add_unlock("biotech-mk02"):replace_ingredient("manure", "urea")
+
+RECIPE {
+    type = 'recipe',
+    name = 'hydrogen-chloride-quartz',
+    category = 'chemistry',
+    enabled = false,
+    energy_required = 3,
+    ingredients = {
+        {type = "fluid", name = "hydrogen", amount = 100},
+        {type = "fluid", name = "chlorine", amount = 100},
+        {type = 'item', name = 'quartz-tube', amount = 1},
+        {type = "item", name = "small-lamp", amount = 1}
+    },
+    results = {
+        {type = "fluid", name = "hydrogen-chloride", amount = 100},
+        {type = "item", name = "small-lamp", amount = 1, probability = 0.9},
+        {type = 'item', name = 'quartz-tube', amount = 1},
+    },
+    main_product = "hydrogen-chloride",
+    icon = "__pyraworesgraphics__/graphics/icons/hydrogen-chloride.png",
+    icon_size = 32,
+    subgroup = "py-rawores-fluids",
+    order = "cab"
+}:add_unlock("quartz-mk01")
+
+RECIPE {
+    type = "recipe",
+    name = "drill-head-6",
+    category = "crafting",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "steel-plate", amount = 4},
+        {type = "item", name = "sic", amount = 1},
+        {type = "item", name = "titanium-plate", amount = 4},
+        {type = "item", name = "niobium-plate", amount = 3},
+    },
+    results = {
+        {type = "item", name = "drill-head", amount = 8}
+    }
+}:add_unlock("iron-mk02")
+
+RECIPE {
+    type = "recipe",
+    name = "drill-head-7",
+    category = "crafting",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "steel-plate", amount = 8},
+        {type = "item", name = "titanium-plate", amount = 4},
+        {type = "item", name = "aluminium-plate", amount = 6},
+        {type = "item", name = "sic", amount = 1},
+    },
+    results = {
+        {type = "item", name = "drill-head", amount = 7}
+    }
+}:add_unlock("coal-processing-2")

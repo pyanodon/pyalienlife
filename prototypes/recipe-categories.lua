@@ -211,6 +211,10 @@ data:extend {
         type = "recipe-category",
         name = "compost"
     },
+    {
+        type = "recipe-category",
+        name = "rocket-mk01"
+    },
     ------crops------
 	{
         type = "resource-category",
@@ -345,5 +349,9 @@ data:extend {
     {
         type = "recipe-category",
         name = "slaughterhouse-arqad"
+    },
+    {
+        type = "recipe-category",
+        name = "space-cottongut"
     },
 }

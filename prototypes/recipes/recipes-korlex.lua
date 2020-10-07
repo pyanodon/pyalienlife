@@ -55,7 +55,7 @@ RECIPE {
         {type = 'item', name = 'seaweed', amount = 10},
         {type = 'item', name = 'salt', amount = 10},
         {type = 'item', name = 'fawogae', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100},
+        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165},
     },
     results = {
         {type = 'item', name = 'korlex-food-01', amount = 3},
@@ -71,19 +71,20 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'fish', amount = 5},
         {type = 'item', name = 'sea-sponge', amount = 1},
-        {type = 'item', name = 'rennea', amount = 8},
+        {type = 'item', name = 'rennea', amount = 5},
         {type = 'item', name = 'casein', amount = 5},
         {type = 'item', name = 'meat', amount = 10},
         {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'salt', amount = 10},
+        {type = 'item', name = 'guar-gum', amount = 1},
         {type = 'item', name = 'biomass', amount = 20},
         {type = 'item', name = 'yaedols', amount = 4},
         {type = 'item', name = 'tuuphra', amount = 3},
-        {type = 'fluid', name = 'steam', amount = 100},
+        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165},
         {type = 'fluid', name = 'fish-oil', amount = 100},
     },
     results = {
-        {type = 'item', name = 'korlex-food-02', amount = 5},
+        {type = 'item', name = 'korlex-food-02', amount = 6},
     },
 }:add_unlock("food-mk03"):add_ingredient({type = "item", name = "fiberboard", amount = 2})
 

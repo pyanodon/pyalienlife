@@ -95,7 +95,6 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'dhilmos-pup', amount = 10},
         {type = 'item', name = 'gh', amount = 1},
-        {type = 'item', name = 'cage', amount = 20},
         {type = 'item', name = 'resveratrol', amount = 3},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
     },
@@ -122,11 +121,12 @@ RECIPE {
         {type = 'item', name = 'yotoi-seeds', amount = 10},
         {type = 'item', name = 'guts', amount = 5},
         {type = 'item', name = 'skin', amount = 3},
+        {type = 'item', name = 'guar-gum', amount = 1},
         {type = 'item', name = 'biomass', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100},
+        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
     },
     results = {
-        {type = 'item', name = 'dhilmos-food-01', amount = 3},
+        {type = 'item', name = 'dhilmos-food-01', amount = 6},
     },
 }:add_unlock("food-mk01")
 
@@ -143,14 +143,14 @@ RECIPE {
         {type = 'item', name = 'seaweed', amount = 3},
         {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'yotoi-seeds', amount = 10},
-        {type = 'item', name = 'guts', amount = 5},
+        {type = 'item', name = 'guar-gum', amount = 1},
         {type = 'item', name = 'skin', amount = 3},
         {type = 'item', name = 'bones', amount = 3},
-        {type = 'fluid', name = 'steam', amount = 100},
+        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165},
         {type = 'fluid', name = 'blood', amount = 50},
     },
     results = {
-        {type = 'item', name = 'dhilmos-food-02', amount = 5},
+        {type = 'item', name = 'dhilmos-food-02', amount = 6},
     },
 }:add_unlock("food-mk02")
 

@@ -1,4 +1,3 @@
-require("prototypes/functions/functions")
 ---------------------ABLAZED-------------
 
 RECIPE {

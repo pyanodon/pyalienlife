@@ -507,7 +507,7 @@ fun.autorecipes {
 				{
 					--{name='bones', probability = 0.3,amount_min =1,amount_max =4},
 					{name='meat', probability = 0.4,amount_min =1,amount_max =2},
-					{name='chitin', probability = 0.3,amount_min =1,amount_max =1},
+					{name='chitin', probability = 0.2,amount_min =1,amount_max =1},
 					--{name='fat', probability = 0.3,amount_min =1,amount_max =1},
 					{name='guts', probability = 0.4,amount_min =1,amount_max =2},
 					{name='formicacid', amount =200},

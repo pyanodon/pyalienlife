@@ -46,7 +46,7 @@ ENTITY {
     module_specification = {
         module_slots = 66
     },
-    allowed_effects = {"speed","productivity"},
+    allowed_effects = {"speed","productivity",'consumption','pollution'},
     crafting_categories = {"yotoi"},
     crafting_speed = 0.06,
     energy_source = {
@@ -54,7 +54,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = -3,
     },
-    energy_usage = "500kW",
+    energy_usage = "1000kW",
     ingredient_count = 10,
     animation = {
         layers = {

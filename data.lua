@@ -7,6 +7,7 @@ require("__stdlib__/stdlib/data/data").Util.create_data_globals()
 require("prototypes/item-groups")
 require("prototypes/recipe-categories")
 require("prototypes/fuel-categories")
+require('prototypes/items/items2')
 
 --(( Technology ))--
 require("prototypes/technologies/xenobiology")
@@ -99,6 +100,11 @@ require('prototypes/technologies/arqad')
 require('prototypes/technologies/cardial-hypopharynx')
 require('prototypes/technologies/chromasome-infocrystalization')
 require('prototypes/technologies/pheromone-transition')
+require('prototypes/technologies/laika')
+--require('prototypes/technologies/space-program')
+require('prototypes/technologies/pesticides')
+require('prototypes/technologies/symbiosis')
+require('prototypes/technologies/bioprocessing')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -270,7 +276,6 @@ require("prototypes/buildings/ez-ranch-mk01")
 require("prototypes/buildings/ez-ranch-mk02")
 require("prototypes/buildings/ez-ranch-mk03")
 require("prototypes/buildings/ez-ranch-mk04")
-require('prototypes/buildings/outpost')
 require('prototypes/buildings/generator-1')
 require('prototypes/buildings/generator-2')
 require('prototypes/buildings/pyphoon-bay')
@@ -296,8 +301,52 @@ require('prototypes/buildings/arqad-hive-mk02')
 require('prototypes/buildings/arqad-hive-mk03')
 require('prototypes/buildings/arqad-hive-mk04')
 
---require('prototypes/buildings/py-drive')
+--((SPACE BUILDINGS))--
+--[[
+require('prototypes/buildings/space/space-arthurian-pen-mk01')
+require('prototypes/buildings/space/space-auog-paddock-mk01')
+require('prototypes/buildings/space/space-bhoddos-culture-mk01')
+require('prototypes/buildings/space/space-cadavericarum-mk01')
+require('prototypes/buildings/space/space-cridren-enclosure-mk01')
+require('prototypes/buildings/space/space-dingrits-mk01')
+require('prototypes/buildings/space/space-ez-ranch-mk01')
+require('prototypes/buildings/space/space-fish-farm-mk01')
+require('prototypes/buildings/space/space-fwf-mk01')
+require('prototypes/buildings/space/space-grod-swamp-mk01')
+require('prototypes/buildings/space/space-kicalk-plantation-mk01')
+require('prototypes/buildings/space/space-kmauts-enclosure-mk01')
+require('prototypes/buildings/space/space-moss-farm-mk01')
+require('prototypes/buildings/space/space-mukmoux-pasture-mk01')
+require('prototypes/buildings/space/space-navens-culture-mk01')
+require('prototypes/buildings/space/space-phadai-enclosure-mk01')
+require('prototypes/buildings/space/space-phagnot-corral-mk01')
+require('prototypes/buildings/space/space-prandium-lab-mk01')
+require('prototypes/buildings/space/space-ralesia-plantation-mk01')
+require('prototypes/buildings/space/space-rennea-plantation-mk01')
+require('prototypes/buildings/space/space-sap-extractor-mk01')
+require('prototypes/buildings/space/space-scrondrix-pen-mk01')
+require('prototypes/buildings/space/space-seaweed-crop-mk01')
+require('prototypes/buildings/space/space-sponge-culture-mk01')
+require('prototypes/buildings/space/space-trits-reef-mk01')
+require('prototypes/buildings/space/space-tuuphra-plantation-mk01')
+require('prototypes/buildings/space/space-ulric-corral-mk01')
+require('prototypes/buildings/space/space-vonix-den-mk01')
+require('prototypes/buildings/space/space-vrauks-paddock-mk01')
+require('prototypes/buildings/space/space-xenopen-mk01')
+require('prototypes/buildings/space/space-xyhiphoe-pool-mk01')
+require('prototypes/buildings/space/space-yaedols-culture-mk01')
+require('prototypes/buildings/space/space-yotoi-aloe-orchard-mk01')
+require('prototypes/buildings/space/space-zipir-reef-mk01')
+]]--
+--((ROCKET))--
+--require('prototypes/buildings/silo-2')
+--require('prototypes/buildings/rocket-mk02')
 
+require('prototypes/buildings/py-drive')
+
+require('prototypes/buildings/outpost')
+--require('prototypes/buildings/outpost-mining')
+--require('prototypes/buildings/flyavan-outpost')
 --weapons/defenses
 --require('prototypes/weapons/turrets/gun-turret-mk01')
 --require('prototypes/weapons/turrets/rocket-turret-mk01')
@@ -310,11 +359,15 @@ require('prototypes/buildings/arqad-hive-mk04')
 --Creature
 require('prototypes/creatures/caravan')
 require('prototypes/creatures/nuka-caravan')
+require('prototypes/creatures/flying-caravan')
 require('prototypes/creatures/dingrido')
 require('prototypes/creatures/crawdad')
 require('prototypes/creatures/phadaisus')
 require('prototypes/creatures/ocula')
+--require('prototypes/creatures/ulric-man-mining')
+--require('prototypes/creatures/ulric-man-attack')
 --require('prototypes/creatures/clone-1')
+--require('prototypes/creatures/dig-osaurus')
 
 --(( FLUIDS ))--
 require("prototypes/fluids/zogna-bacteria")
@@ -354,14 +407,29 @@ require('prototypes/fluids/cadaveric-arum-cum')
 require('prototypes/fluids/wax')
 require('prototypes/fluids/arqad-jelly')
 require('prototypes/fluids/bee-venom')
+require('prototypes/fluids/dda')
+require('prototypes/fluids/mcb')
+require('prototypes/fluids/bio-oil')
+require('prototypes/fluids/chloral')
+require('prototypes/fluids/pre-pesticide-01')
+require('prototypes/fluids/pre-pesticide-02')
+require('prototypes/fluids/ethyl-mercaptan')
+
+--Tech upgrade stuff--
+--require('prototypes/upgrades/hidden-beacon')
+--require('prototypes/upgrades/tech-upgrades')
 
 --(( RECIPES ))--
 require('prototypes/items/items')
 require('prototypes/recipes/recipes')
 require('prototypes/recipes/recipes-atomizer')
 require('prototypes/recipes/recipes-mo')
-require('prototypes/recipes/recipes-crops')
+require('prototypes/recipes/recipes-moss')
+require('prototypes/recipes/recipes-moss-products')
 require('prototypes/recipes/recipes-seaweed')
+require('prototypes/recipes/recipes-seaweed-products')
+require('prototypes/recipes/recipes-sap')
+require('prototypes/recipes/recipes-sap-products')
 require('prototypes/recipes/recipes-animals')
 require('prototypes/recipes/recipes-ulric')
 require('prototypes/recipes/recipes-sea-sponge')
@@ -478,7 +546,9 @@ require('prototypes/recipes/recipes-arqad-updates')
 require('prototypes/recipes/recipes-arqad-products')
 require('prototypes/recipes/recipes-arqad-products-1')
 require('prototypes/recipes/recipes-arqad-products-2')
-
+require('prototypes/recipes/recipes-tree')
+require('prototypes/recipes/recipes-auto-arthurian-abacus')
+require('prototypes/recipes/recipes-auto-fawogae-plankton')
 
 --gunpowder poo
 --require('prototypes/recipes/recipes-vrauk-products')
@@ -493,487 +563,24 @@ require('prototypes/ores/yotoi-fruit')
 require('prototypes/ores/bioreserve')
 
 data.raw["utility-constants"].default.recipe_step_limit = 2000;
+data.raw["utility-constants"].default.main_menu_background_image_location = "__pyalienlifegraphics3__/graphics/pyal-wall.jpg"
 
 --sprities
 require('prototypes/sprites/sprites')
 --require('prototypes/ores/fake-plants')
 
-local biomass_convertion =
-    {
-        ['ralesia'] = {item_amount = 1, biomass_amount = 1},
-        ['wood'] = {item_amount = 5, biomass_amount = 15},
-        ['cocoon'] = {item_amount = 1, biomass_amount = 1},
-        ['bhoddos-spore'] = {item_amount = 10, biomass_amount = 1},
-        ['bonemeal'] = {item_amount = 1, biomass_amount = 3},
-        ['bones'] = {item_amount = 1, biomass_amount = 3},
-        ['brain'] = {item_amount = 1, biomass_amount = 3},
-        ['carapace'] = {item_amount = 1, biomass_amount = 5},
-        ['casein'] = {item_amount = 1, biomass_amount = 6},
-        ['cellulose'] = {item_amount = 1, biomass_amount = 4},
-        ['chitin'] = {item_amount = 1, biomass_amount = 5},
-        ['chitosan'] = {item_amount = 1, biomass_amount = 8},
-        ['fawogae-spore'] = {item_amount = 10, biomass_amount = 1},
-        ['fawogae-spore-mk02'] = {item_amount = 1, biomass_amount = 5},
-        ['fawogae-spore-mk03'] = {item_amount = 1, biomass_amount = 8},
-        ['fawogae-spore-mk04'] = {item_amount = 1, biomass_amount = 10},
-        ['fawogae-substrate'] = {item_amount = 1, biomass_amount = 5},
-        ['fungal-substrate'] = {item_amount = 1, biomass_amount = 4},
-        ['fungal-substrate-02'] = {item_amount = 1, biomass_amount = 5},
-        ['fungal-substrate-03'] = {item_amount = 1, biomass_amount = 6},
-        ['guts'] = {item_amount = 1, biomass_amount = 3},
-        ['hmas'] = {item_amount = 1, biomass_amount = 20},
-        ['lignin'] = {item_amount = 1, biomass_amount = 12},
-        ['meat'] = {item_amount = 1, biomass_amount = 3},
-        ['mukmoux-fat'] = {item_amount = 1, biomass_amount = 3},
-        ['nano-cellulose'] = {item_amount = 1, biomass_amount = 10},
-        ['navens-spore'] = {item_amount = 10, biomass_amount = 1},
-        ['petri-dish'] = {item_amount = 1, biomass_amount = 1},
-        ['petri-dish-bacteria'] = {item_amount = 1, biomass_amount = 1},
-        ['sporopollenin'] = {item_amount = 1, biomass_amount = 3},
-        ['yaedols-spores'] = {item_amount = 10, biomass_amount = 1},
-        ['agar'] = {item_amount = 1, biomass_amount = 3},
-        ['seeds-extract-01'] = {item_amount = 1, biomass_amount = 5},
-        ['sugar'] = {item_amount = 1, biomass_amount = 10},
-        ['bedding'] = {item_amount = 1, biomass_amount = 15},
-        ['manure'] = {item_amount = 1, biomass_amount = 8},
-        ['ag-biomass'] = {item_amount = 1, biomass_amount = 8},
-        ['al-biomass'] = {item_amount = 1, biomass_amount = 8},
-        ['albumin'] = {item_amount = 1, biomass_amount = 8},
-        ['au-biomass'] = {item_amount = 1, biomass_amount = 8},
-        ['co-biomass'] = {item_amount = 1, biomass_amount = 8},
-        ['cu-biomass'] = {item_amount = 1, biomass_amount = 8},
-        ['dried-meat'] = {item_amount = 1, biomass_amount = 8},
-        ['fe-biomass'] = {item_amount = 1, biomass_amount = 8},
-        ['fertilizer'] = {item_amount = 1, biomass_amount = 15},
-        ['nacl-biomass'] = {item_amount = 1, biomass_amount = 8},
-        ['nanofibrils'] = {item_amount = 1, biomass_amount = 20},
-        ['nb-biomass'] = {item_amount = 1, biomass_amount = 8},
-        ['ni-biomass'] = {item_amount = 1, biomass_amount = 8},
-        ['pb-biomass'] = {item_amount = 1, biomass_amount = 8},
-        ['s-biomass'] = {item_amount = 1, biomass_amount = 8},
-        ['skin'] = {item_amount = 1, biomass_amount = 3},
-        ['sn-biomass'] = {item_amount = 1, biomass_amount = 8},
-        ['ti-biomass'] = {item_amount = 1, biomass_amount = 8},
-        ['zn-biomass'] = {item_amount = 1, biomass_amount = 8},
-        ['fish-egg'] = {item_amount = 1, biomass_amount = 4},
-        ['sea-sponge-sprouts'] = {item_amount = 1, biomass_amount = 10},
-        ['blood-caged-ulric'] = {item_amount = 1, biomass_amount = 20},
-        ['bone-caged-ulric'] = {item_amount = 1, biomass_amount = 20},
-        ['brain-caged-ulric'] = {item_amount = 1, biomass_amount = 20},
-        ['fat-caged-ulric'] = {item_amount = 1, biomass_amount = 20},
-        ['guts-caged-ulric'] = {item_amount = 1, biomass_amount = 20},
-        ['meat-caged-ulric'] = {item_amount = 1, biomass_amount = 20},
-        ['skin-caged-ulric'] = {item_amount = 1, biomass_amount = 20},
-        ['blood-caged-auog'] = {item_amount = 1, biomass_amount = 30},
-        ['bone-caged-auog'] = {item_amount = 1, biomass_amount = 30},
-        ['brain-caged-auog'] = {item_amount = 1, biomass_amount = 30},
-        ['fat-caged-auog'] = {item_amount = 1, biomass_amount = 30},
-        ['guts-caged-auog'] = {item_amount = 1, biomass_amount = 30},
-        ['meat-caged-auog'] = {item_amount = 1, biomass_amount = 30},
-        ['skin-caged-auog'] = {item_amount = 1, biomass_amount = 30},
-        ['caged-auog'] = {item_amount = 1, biomass_amount = 20},
-        ['urea'] = {item_amount = 1, biomass_amount = 1},
-        ['auog-pup'] = {item_amount = 1, biomass_amount = 15},
-        ['blood-caged-mukmoux'] = {item_amount = 1, biomass_amount = 25},
-        ['bone-caged-mukmoux'] = {item_amount = 1, biomass_amount = 25},
-        ['brain-caged-mukmoux'] = {item_amount = 1, biomass_amount = 25},
-        ['fat-caged-mukmoux'] = {item_amount = 1, biomass_amount = 25},
-        ['guts-caged-mukmoux'] = {item_amount = 1, biomass_amount = 25},
-        ['meat-caged-mukmoux'] = {item_amount = 1, biomass_amount = 25},
-        ['skin-caged-mukmoux'] = {item_amount = 1, biomass_amount = 25},
-        ['caged-mukmoux'] = {item_amount = 1, biomass_amount = 20},
-        ['mukmoux-calf'] = {item_amount = 1, biomass_amount = 10},
-        ['blood-caged-vrauks'] = {item_amount = 1, biomass_amount = 20},
-        ['brain-caged-vrauks'] = {item_amount = 1, biomass_amount = 20},
-        ['caged-vrauks'] = {item_amount = 1, biomass_amount = 20},
-        ['chitin-caged-vrauks'] = {item_amount = 1, biomass_amount = 20},
-        ['guts-caged-vrauks'] = {item_amount = 1, biomass_amount = 20},
-        ['meat-caged-vrauks'] = {item_amount = 1, biomass_amount = 20},
-        ['blood-caged-arthurian'] = {item_amount = 1, biomass_amount = 20},
-        ['bone-caged-arthurian'] = {item_amount = 1, biomass_amount = 20},
-        ['brain-caged-arthurian'] = {item_amount = 1, biomass_amount = 20},
-        ['fat-caged-arthurian'] = {item_amount = 1, biomass_amount = 20},
-        ['guts-caged-arthurian'] = {item_amount = 1, biomass_amount = 20},
-        ['meat-caged-arthurian'] = {item_amount = 1, biomass_amount = 20},
-        ['skin-caged-arthurian'] = {item_amount = 1, biomass_amount = 20},
-        ['caged-arthurian'] = {item_amount = 1, biomass_amount = 20},
-        ['arthurian-egg'] = {item_amount = 1, biomass_amount = 5},
-        ['arthurian-pup'] = {item_amount = 1, biomass_amount = 10},
-        ['blood-dhilmos'] = {item_amount = 1, biomass_amount = 20},
-        ['fat-dhilmos'] = {item_amount = 1, biomass_amount = 20},
-        ['guts-dhilmos'] = {item_amount = 1, biomass_amount = 20},
-        ['meat-dhilmos'] = {item_amount = 1, biomass_amount = 20},
-        ['dhilmos-pup'] = {item_amount = 1, biomass_amount = 10},
-        ['dhilmos-egg'] = {item_amount = 1, biomass_amount = 5},
-        ['blood-caged-scrondrix'] = {item_amount = 1, biomass_amount = 25},
-        ['bone-caged-scrondrix'] = {item_amount = 1, biomass_amount = 25},
-        ['brain-caged-scrondrix'] = {item_amount = 1, biomass_amount = 25},
-        ['fat-caged-scrondrix'] = {item_amount = 1, biomass_amount = 25},
-        ['guts-caged-scrondrix'] = {item_amount = 1, biomass_amount = 25},
-        ['meat-caged-scrondrix'] = {item_amount = 1, biomass_amount = 25},
-        ['skin-caged-scrondrix'] = {item_amount = 1, biomass_amount = 25},
-        ['caged-scrondrix'] = {item_amount = 1, biomass_amount = 25},
-        ['pineal-gland'] = {item_amount = 1, biomass_amount = 2},
-        ['scrondrix-pup'] = {item_amount = 1, biomass_amount = 15},
-        ['blood-caged-phadai'] = {item_amount = 1, biomass_amount = 20},
-        ['bone-caged-phadai'] = {item_amount = 1, biomass_amount = 20},
-        ['brain-caged-phadai'] = {item_amount = 1, biomass_amount = 20},
-        ['fat-caged-phadai'] = {item_amount = 1, biomass_amount = 20},
-        ['guts-caged-phadai'] = {item_amount = 1, biomass_amount = 20},
-        ['meat-caged-phadai'] = {item_amount = 1, biomass_amount = 20},
-        ['skin-caged-phadai'] = {item_amount = 1, biomass_amount = 20},
-        ['caged-phadai'] = {item_amount = 1, biomass_amount = 20},
-        ['phadai-pup'] = {item_amount = 1, biomass_amount = 15},
-        ['blood-caged-dingrits'] = {item_amount = 1, biomass_amount = 15},
-        ['bone-caged-dingrits'] = {item_amount = 1, biomass_amount = 15},
-        ['brain-caged-dingrits'] = {item_amount = 1, biomass_amount = 15},
-        ['fat-caged-dingrits'] = {item_amount = 1, biomass_amount = 15},
-        ['guts-caged-dingrits'] = {item_amount = 1, biomass_amount = 15},
-        ['meat-caged-dingrits'] = {item_amount = 1, biomass_amount = 15},
-        ['caged-dingrits'] = {item_amount = 1, biomass_amount = 15},
-        ['charged-dingrit'] = {item_amount = 1, biomass_amount = 20},
-        ['dingrits-cub'] = {item_amount = 1, biomass_amount = 10},
-        ['dingrit-spike'] = {item_amount = 1, biomass_amount = 3},
-        ['fur'] = {item_amount = 1, biomass_amount = 3},
-        ['pelt'] = {item_amount = 1, biomass_amount = 4},
-        ['blood-caged-kmauts'] = {item_amount = 1, biomass_amount = 20},
-        ['brain-caged-kmauts'] = {item_amount = 1, biomass_amount = 20},
-        ['fat-caged-kmauts'] = {item_amount = 1, biomass_amount = 20},
-        ['guts-caged-kmauts'] = {item_amount = 1, biomass_amount = 20},
-        ['meat-caged-kmauts'] = {item_amount = 1, biomass_amount = 20},
-        ['caged-kmauts'] = {item_amount = 1, biomass_amount = 20},
-        ['kmauts-cub'] = {item_amount = 1, biomass_amount = 10},
-        ['serine'] = {item_amount = 1, biomass_amount = 5},
-        ['tendon'] = {item_amount = 1, biomass_amount = 5},
-        ['blood-vonix'] = {item_amount = 1, biomass_amount = 30},
-        ['brain-vonix'] = {item_amount = 1, biomass_amount = 30},
-        ['fat-vonix'] = {item_amount = 1, biomass_amount = 30},
-        ['guts-vonix'] = {item_amount = 1, biomass_amount = 30},
-        ['meat-vonix'] = {item_amount = 1, biomass_amount = 30},
-        ['skin-vonix'] = {item_amount = 1, biomass_amount = 30},
-        ['venon-gland'] = {item_amount = 1, biomass_amount = 2},
-        ['vonix-cub'] = {item_amount = 1, biomass_amount = 15},
-        ['vonix-eggs'] = {item_amount = 1, biomass_amount = 5},
-        ['blood-caged-phagnot'] = {item_amount = 1, biomass_amount = 15},
-        ['bone-caged-phagnot'] = {item_amount = 1, biomass_amount = 15},
-        ['brain-caged-phagnot'] = {item_amount = 1, biomass_amount = 15},
-        ['guts-caged-phagnot'] = {item_amount = 1, biomass_amount = 15},
-        ['meat-caged-phagnot'] = {item_amount = 1, biomass_amount = 15},
-        ['skin-caged-phagnot'] = {item_amount = 1, biomass_amount = 15},
-        ['caged-phagnot'] = {item_amount = 1, biomass_amount = 15},
-        ['phagnot-cub'] = {item_amount = 1, biomass_amount = 10},
-        ['phagnot-cub-mk02'] = {item_amount = 1, biomass_amount = 10},
-        ['phagnot-cub-mk03'] = {item_amount = 1, biomass_amount = 10},
-        ['phagnot-cub-mk04'] = {item_amount = 1, biomass_amount = 10},
-        ['gas-bladder'] = {item_amount = 1, biomass_amount = 3},
-        ['bone-xeno'] = {item_amount = 1, biomass_amount = 20},
-        ['brain-xeno'] = {item_amount = 1, biomass_amount = 20},
-        ['chitin-xeno'] = {item_amount = 1, biomass_amount = 20},
-        ['meat-xeno'] = {item_amount = 1, biomass_amount = 20},
-        ['sulfuric-xeno'] = {item_amount = 1, biomass_amount = 20},
-        ['xeno-egg'] = {item_amount = 1, biomass_amount = 5},
-        ['guts-arqad'] = {item_amount = 1, biomass_amount = 5},
-        ['chitin-arqad'] = {item_amount = 1, biomass_amount = 5},
-        ['meat-arqad'] = {item_amount = 1, biomass_amount = 5},
-        ['blood-arqad'] = {item_amount = 1, biomass_amount = 5},
-        ['arqad-egg'] = {item_amount = 1, biomass_amount = 5},
-        ['arqad-maggot'] = {item_amount = 1, biomass_amount = 5},
-        ['blood-zipir'] = {item_amount = 1, biomass_amount = 25},
-        ['brain-zipir'] = {item_amount = 1, biomass_amount = 25},
-        ['fat-zipir'] = {item_amount = 1, biomass_amount = 25},
-        ['guts-zipir'] = {item_amount = 1, biomass_amount = 25},
-        ['meat-zipir'] = {item_amount = 1, biomass_amount = 25},
-        ['skin-zipir'] = {item_amount = 1, biomass_amount = 25},
-        ['zipir-eggs'] = {item_amount = 1, biomass_amount = 5},
-        ['zipir-pup'] = {item_amount = 1, biomass_amount = 10},
-        ['blood-trits'] = {item_amount = 1, biomass_amount = 35},
-        ['brain-trits'] = {item_amount = 1, biomass_amount = 35},
-        ['fat-trits'] = {item_amount = 1, biomass_amount = 35},
-        ['guts-trits'] = {item_amount = 1, biomass_amount = 35},
-        ['meat-trits'] = {item_amount = 1, biomass_amount = 35},
-        ['skin-trits'] = {item_amount = 1, biomass_amount = 35},
-        ['bone-trits'] = {item_amount = 1, biomass_amount = 35},
-        ['trits-pup'] = {item_amount = 1, biomass_amount = 20},
-        ['photophore'] = {item_amount = 1, biomass_amount = 5},
-        ['blood-xyhiphoe'] = {item_amount = 1, biomass_amount = 10},
-        ['meat-xyhiphoe'] = {item_amount = 1, biomass_amount = 10},
-        ['guts-xyhiphoe'] = {item_amount = 1, biomass_amount = 10},
-        ['shell-xyhiphoe'] = {item_amount = 1, biomass_amount = 10},
-        ['shell'] = {item_amount = 1, biomass_amount = 1},
-        ['xyhiphoe-cub'] = {item_amount = 1, biomass_amount = 1},
-        ['blood-caged-korlex'] = {item_amount = 1, biomass_amount = 10},
-        ['bone-caged-korlex'] = {item_amount = 1, biomass_amount = 10},
-        ['brain-caged-korlex'] = {item_amount = 1, biomass_amount = 10},
-        ['fat-caged-korlex'] = {item_amount = 1, biomass_amount = 10},
-        ['guts-caged-korlex'] = {item_amount = 1, biomass_amount = 10},
-        ['meat-caged-korlex'] = {item_amount = 1, biomass_amount = 10},
-        ['skin-caged-korlex'] = {item_amount = 1, biomass_amount = 10},
-        ['caged-korlex'] = {item_amount = 1, biomass_amount = 10},
-        ['korlex-pup'] = {item_amount = 1, biomass_amount = 5},
-        ['blood-cottongut'] = {item_amount = 5, biomass_amount = 5},
-        ['bone-cottongut'] = {item_amount = 5, biomass_amount = 5},
-        ['brain-cottongut'] = {item_amount = 5, biomass_amount = 5},
-        ['fat-cottongut'] = {item_amount = 5, biomass_amount = 5},
-        ['guts-cottongut'] = {item_amount = 5, biomass_amount = 5},
-        ['meat-cottongut'] = {item_amount = 5, biomass_amount = 5},
-        ['skin-cottongut'] = {item_amount = 5, biomass_amount = 5},
-        ['cottongut'] = {item_amount = 10, biomass_amount = 5},
-        ['cottongut-pup'] = {item_amount = 10, biomass_amount = 3},
-        ['moss'] = {item_amount = 3, biomass_amount = 13},
-        ['wood-seedling'] = {item_amount = 1, biomass_amount = 1},
-        ['wood-seeds'] = {item_amount = 4, biomass_amount = 30},
-        ['seaweed'] = {item_amount = 1, biomass_amount = 2},
-        ['ralesia-seeds'] = {item_amount = 1, biomass_amount = 1},
-        ['saps'] = {item_amount = 10, biomass_amount = 1},
-        ['rennea-seeds'] = {item_amount = 1, biomass_amount = 1},
-        ['yotoi-fruit'] = {item_amount = 1, biomass_amount = 3},
-        ['yotoi-leaves'] = {item_amount = 1, biomass_amount = 2},
-        ['yotoi-seeds'] = {item_amount = 10, biomass_amount = 10},
-        ['tuuphra-seeds'] = {item_amount = 10, biomass_amount = 10},
-        ['dried-grods'] = {item_amount = 1, biomass_amount = 1},
-        ['grod-seeds'] = {item_amount = 10, biomass_amount = 10},
-        ['adrenal-cortex'] = {item_amount = 1, biomass_amount = 1},
-        ['cridren-seeds'] = {item_amount = 1, biomass_amount = 1},
-        ['kicalk-seeds'] = {item_amount = 5, biomass_amount = 30},
-        ['kicalk-seeds-mk02'] = {item_amount = 5, biomass_amount = 30},
-        ['kicalk-seeds-mk03'] = {item_amount = 5, biomass_amount = 30},
-        ['kicalk-seeds-mk04'] = {item_amount = 5, biomass_amount = 30},
-        ['cadaveric-arum-seeds'] = {item_amount = 10, biomass_amount = 10},
-        ['moondrop-seeds'] = {item_amount = 5, biomass_amount = 30},
-        ['kmauts-ration'] = {item_amount = 1, biomass_amount = 5},
-        ['arthurian-food-01'] = {item_amount = 1, biomass_amount = 5},
-        ['arthurian-food-02'] = {item_amount = 1, biomass_amount = 5},
-        ['auog-food-01'] = {item_amount = 1, biomass_amount = 5},
-        ['auog-food-02'] = {item_amount = 1, biomass_amount = 5},
-        ['cottongut-food-01'] = {item_amount = 1, biomass_amount = 5},
-        ['cottongut-food-02'] = {item_amount = 1, biomass_amount = 5},
-        ['dhilmos-food-01'] = {item_amount = 1, biomass_amount = 5},
-        ['dhilmos-food-02'] = {item_amount = 1, biomass_amount = 5},
-        ['mukmoux-food-01'] = {item_amount = 1, biomass_amount = 5},
-        ['mukmoux-food-02'] = {item_amount = 1, biomass_amount = 5},
-        ['phadai-food-01'] = {item_amount = 1, biomass_amount = 5},
-        ['phadai-food-02'] = {item_amount = 1, biomass_amount = 5},
-        ['ulric-food-01'] = {item_amount = 1, biomass_amount = 5},
-        ['ulric-food-02'] = {item_amount = 1, biomass_amount = 5},
-        ['dingrits-food-01'] = {item_amount = 1, biomass_amount = 5},
-        ['dingrits-food-02'] = {item_amount = 1, biomass_amount = 5},
-        ['fish-food-01'] = {item_amount = 1, biomass_amount = 5},
-        ['fish-food-02'] = {item_amount = 1, biomass_amount = 5},
-        ['korlex-food-01'] = {item_amount = 1, biomass_amount = 5},
-        ['korlex-food-02'] = {item_amount = 1, biomass_amount = 5},
-        ['phagnot-food-01'] = {item_amount = 1, biomass_amount = 5},
-        ['phagnot-food-02'] = {item_amount = 1, biomass_amount = 5},
-        ['vrauks-food-01'] = {item_amount = 1, biomass_amount = 5},
-        ['vrauks-food-02'] = {item_amount = 1, biomass_amount = 5},
-        ['zipir-food-01'] = {item_amount = 1, biomass_amount = 5},
-        ['zipir-food-02'] = {item_amount = 1, biomass_amount = 5},
-        ['used-auog'] = {item_amount = 1, biomass_amount = 8},
-        ['used-auog-mk02'] = {item_amount = 1, biomass_amount = 10},
-        ['used-auog-mk03'] = {item_amount = 1, biomass_amount = 20},
-        ['used-auog-mk04'] = {item_amount = 1, biomass_amount = 25},
-        ['used-dingrit'] = {item_amount = 1, biomass_amount = 8},
-        ['used-dingrit-mk02'] = {item_amount = 1, biomass_amount = 10},
-        ['used-dingrit-mk03'] = {item_amount = 1, biomass_amount = 20},
-        ['used-dingrit-mk04'] = {item_amount = 1, biomass_amount = 30},
-        ['antelope'] = {item_amount = 1, biomass_amount = 12},
-        ['auog'] = {item_amount = 1, biomass_amount = 20},
-        ['auog-mk02'] = {item_amount = 1, biomass_amount = 20},
-        ['auog-mk03'] = {item_amount = 1, biomass_amount = 20},
-        ['auog-mk04'] = {item_amount = 1, biomass_amount = 20},
-        ['cridren'] = {item_amount = 1, biomass_amount = 40},
-        ['arthurian'] = {item_amount = 1, biomass_amount = 10},
-        ['arthurian-mk02'] = {item_amount = 1, biomass_amount = 10},
-        ['arthurian-mk03'] = {item_amount = 1, biomass_amount = 10},
-        ['arthurian-mk04'] = {item_amount = 1, biomass_amount = 10},
-        ['bhoddos'] = {item_amount = 1, biomass_amount = 5},
-        ['bhoddos-mk02'] = {item_amount = 1, biomass_amount = 5},
-        ['bhoddos-mk03'] = {item_amount = 1, biomass_amount = 5},
-        ['bhoddos-mk04'] = {item_amount = 1, biomass_amount = 5},
-        ['cadaveric-arum'] = {item_amount = 1, biomass_amount = 5},
-        ['cadaveric-arum-mk02-a'] = {item_amount = 1, biomass_amount = 5},
-        ['cadaveric-arum-mk03-a'] = {item_amount = 1, biomass_amount = 5},
-        ['cadaveric-arum-mk04-a'] = {item_amount = 1, biomass_amount = 5},
-        ['cottongut-mk01'] = {item_amount = 1, biomass_amount = 5},
-        ['cottongut-mk02'] = {item_amount = 1, biomass_amount = 5},
-        ['cottongut-mk03'] = {item_amount = 1, biomass_amount = 5},
-        ['cottongut-mk04'] = {item_amount = 1, biomass_amount = 5},
-        ['dingrits'] = {item_amount = 1, biomass_amount = 20},
-        ['dingrits-mk02'] = {item_amount = 1, biomass_amount = 20},
-        ['dingrits-mk03'] = {item_amount = 1, biomass_amount = 20},
-        ['dingrits-mk04'] = {item_amount = 1, biomass_amount = 20},
-        ['dhilmos'] = {item_amount = 1, biomass_amount = 15},
-        ['dhilmos-mk02'] = {item_amount = 1, biomass_amount = 15},
-        ['dhilmos-mk03'] = {item_amount = 1, biomass_amount = 15},
-        ['dhilmos-mk04'] = {item_amount = 1, biomass_amount = 15},
-        ['fish'] = {item_amount = 1, biomass_amount = 5},
-        ['fish-mk02'] = {item_amount = 1, biomass_amount = 5},
-        ['fish-mk03'] = {item_amount = 1, biomass_amount = 5},
-        ['fish-mk04'] = {item_amount = 1, biomass_amount = 5},
-        ['grod'] = {item_amount = 1, biomass_amount = 5},
-        ['grod-mk02'] = {item_amount = 1, biomass_amount = 5},
-        ['grod-mk03'] = {item_amount = 1, biomass_amount = 5},
-        ['grod-mk04'] = {item_amount = 1, biomass_amount = 5},
-        ['kicalk'] = {item_amount = 1, biomass_amount = 6},
-        ['kicalk-mk02'] = {item_amount = 1, biomass_amount = 8},
-        ['kicalk-mk03'] = {item_amount = 1, biomass_amount = 10},
-        ['kicalk-mk04'] = {item_amount = 1, biomass_amount = 12},
-        ['kmauts'] = {item_amount = 1, biomass_amount = 10},
-        ['kmauts-mk02'] = {item_amount = 1, biomass_amount = 10},
-        ['kmauts-mk03'] = {item_amount = 1, biomass_amount = 10},
-        ['kmauts-mk04'] = {item_amount = 1, biomass_amount = 10},
-        ['korlex'] = {item_amount = 1, biomass_amount = 10},
-        ['korlex-mk02'] = {item_amount = 1, biomass_amount = 10},
-        ['korlex-mk03'] = {item_amount = 1, biomass_amount = 10},
-        ['korlex-mk04'] = {item_amount = 1, biomass_amount = 10},
-        ['moondrop-diesel'] = {item_amount = 1, biomass_amount = 1},
-        ['moondrop-fueloil'] = {item_amount = 1, biomass_amount = 1},
-        ['moondrop-gas'] = {item_amount = 1, biomass_amount = 1},
-        ['moondrop-kerosene'] = {item_amount = 1, biomass_amount = 1},
-        ['fawogae'] = {item_amount = 2, biomass_amount = 1},
-        ['fawogae-mk02'] = {item_amount = 2, biomass_amount = 1},
-        ['fawogae-mk03'] = {item_amount = 2, biomass_amount = 1},
-        ['fawogae-mk04'] = {item_amount = 2, biomass_amount = 1},
-        ['moondrop'] = {item_amount = 5, biomass_amount = 1},
-        ['moondrop-mk02'] = {item_amount = 5, biomass_amount = 1},
-        ['moondrop-mk03'] = {item_amount = 5, biomass_amount = 1},
-        ['moondrop-mk04'] = {item_amount = 5, biomass_amount = 1},
-        ['mukmoux'] = {item_amount = 1, biomass_amount = 25},
-        ['mukmoux-mk02'] = {item_amount = 1, biomass_amount = 25},
-        ['mukmoux-mk03'] = {item_amount = 1, biomass_amount = 25},
-        ['mukmoux-mk04'] = {item_amount = 1, biomass_amount = 25},
-        ['navens'] = {item_amount = 1, biomass_amount = 10},
-        ['navens-mk02'] = {item_amount = 1, biomass_amount = 10},
-        ['navens-mk03'] = {item_amount = 1, biomass_amount = 10},
-        ['navens-mk04'] = {item_amount = 1, biomass_amount = 10},
-        ['phagnot'] = {item_amount = 1, biomass_amount = 12},
-        ['phagnot-mk02'] = {item_amount = 1, biomass_amount = 12},
-        ['phagnot-mk03'] = {item_amount = 1, biomass_amount = 12},
-        ['phagnot-mk04'] = {item_amount = 1, biomass_amount = 12},
-        ['phadai'] = {item_amount = 1, biomass_amount = 10},
-        ['phadai-mk02'] = {item_amount = 1, biomass_amount = 10},
-        ['phadai-mk03'] = {item_amount = 1, biomass_amount = 10},
-        ['phadai-mk04'] = {item_amount = 1, biomass_amount = 10},
-        ['ralesias'] = {item_amount = 5, biomass_amount = 1},
-        ['ralesias-mk02'] = {item_amount = 1, biomass_amount = 1},
-        ['ralesias-mk03'] = {item_amount = 1, biomass_amount = 1},
-        ['ralesias-mk04'] = {item_amount = 1, biomass_amount = 1},
-        ['rennea'] = {item_amount = 5, biomass_amount = 1},
-        ['rennea-mk02'] = {item_amount = 1, biomass_amount = 1},
-        ['rennea-mk03'] = {item_amount = 1, biomass_amount = 1},
-        ['rennea-mk04'] = {item_amount = 1, biomass_amount = 1},
-        ['sea-sponge'] = {item_amount = 1, biomass_amount = 5},
-        ['sea-sponge-mk02'] = {item_amount = 1, biomass_amount = 5},
-        ['sea-sponge-mk03'] = {item_amount = 1, biomass_amount = 5},
-        ['sea-sponge-mk04'] = {item_amount = 1, biomass_amount = 5},
-        ['scrondrix'] = {item_amount = 1, biomass_amount = 20},
-        ['scrondrix-mk02'] = {item_amount = 1, biomass_amount = 20},
-        ['scrondrix-mk03'] = {item_amount = 1, biomass_amount = 20},
-        ['scrondrix-mk04'] = {item_amount = 1, biomass_amount = 20},
-        ['tuuphra'] = {item_amount = 1, biomass_amount = 5},
-        ['tuuphra-mk02'] = {item_amount = 1, biomass_amount = 15},
-        ['tuuphra-mk03'] = {item_amount = 1, biomass_amount = 20},
-        ['tuuphra-mk04'] = {item_amount = 1, biomass_amount = 25},
-        ['trits'] = {item_amount = 1, biomass_amount = 30},
-        ['trits-mk02'] = {item_amount = 1, biomass_amount = 40},
-        ['trits-mk03'] = {item_amount = 1, biomass_amount = 50},
-        ['trits-mk04'] = {item_amount = 1, biomass_amount = 60},
-        ['ulric'] = {item_amount = 1, biomass_amount = 8},
-        ['ulric-mk02'] = {item_amount = 1, biomass_amount = 10},
-        ['ulric-mk03'] = {item_amount = 1, biomass_amount = 12},
-        ['ulric-mk04'] = {item_amount = 1, biomass_amount = 14},
-        ['vonix'] = {item_amount = 1, biomass_amount = 40},
-        ['vonix-mk02'] = {item_amount = 1, biomass_amount = 50},
-        ['vonix-mk03'] = {item_amount = 1, biomass_amount = 60},
-        ['vonix-mk04'] = {item_amount = 1, biomass_amount = 70},
-        ['vrauks'] = {item_amount = 1, biomass_amount = 8},
-        ['vrauks-mk02'] = {item_amount = 1, biomass_amount = 10},
-        ['vrauks-mk03'] = {item_amount = 1, biomass_amount = 12},
-        ['vrauks-mk04'] = {item_amount = 1, biomass_amount = 14},
-        ['xyhiphoe'] = {item_amount = 1, biomass_amount = 10},
-        ['xyhiphoe-mk02'] = {item_amount = 1, biomass_amount = 15},
-        ['xyhiphoe-mk03'] = {item_amount = 1, biomass_amount = 20},
-        ['xyhiphoe-mk04'] = {item_amount = 1, biomass_amount = 25},
-        ['xeno'] = {item_amount = 1, biomass_amount = 10},
-        ['xeno-mk02'] = {item_amount = 1, biomass_amount = 20},
-        ['xeno-mk03'] = {item_amount = 1, biomass_amount = 30},
-        ['xeno-mk04'] = {item_amount = 1, biomass_amount = 40},
-        ['arqad'] = {item_amount = 1, biomass_amount = 10},
-        ['arqad-mk02'] = {item_amount = 1, biomass_amount = 20},
-        ['arqad-mk03'] = {item_amount = 1, biomass_amount = 30},
-        ['arqad-mk04'] = {item_amount = 1, biomass_amount = 40},
-        ['yotoi'] = {item_amount = 1, biomass_amount = 15},
-        ['yotoi-mk02'] = {item_amount = 1, biomass_amount = 25},
-        ['yotoi-mk03'] = {item_amount = 1, biomass_amount = 35},
-        ['yotoi-mk04'] = {item_amount = 1, biomass_amount = 45},
-        ['yaedols'] = {item_amount = 1, biomass_amount = 10},
-        ['yaedols-mk02'] = {item_amount = 1, biomass_amount = 20},
-        ['yaedols-mk03'] = {item_amount = 1, biomass_amount = 30},
-        ['yaedols-mk04'] = {item_amount = 1, biomass_amount = 40},
-        ['zipir1'] = {item_amount = 1, biomass_amount = 20},
-        ['zipir2'] = {item_amount = 1, biomass_amount = 30},
-        ['zipir3'] = {item_amount = 1, biomass_amount = 40},
-        ['zipir4'] = {item_amount = 1, biomass_amount = 50},
-        ['log'] = {item_amount = 5, biomass_amount = 30},
-        ['dry-ralesia'] = {item_amount = 1, biomass_amount = 1},
-        ['ralesia-powder'] = {item_amount = 1, biomass_amount = 1},
-        ['raw-fiber'] = {item_amount = 1, biomass_amount = 3},
-        ['fiber'] = {item_amount = 1, biomass_amount = 3},
-        ['micro-fiber'] = {item_amount = 1, biomass_amount = 4},
-        ['myoglobin'] = {item_amount = 1, biomass_amount = 1},
-        ['collagen'] = {item_amount = 1, biomass_amount = 5},
-        ['blood-meal'] = {item_amount = 1, biomass_amount = 2},
-        ['guar'] = {item_amount = 1, biomass_amount = 1},
-        ['guar-gum'] = {item_amount = 1, biomass_amount = 1},
-        ['guar-seeds'] = {item_amount = 10, biomass_amount = 1},
-        ['crawdad'] = {item_amount = 1, biomass_amount = 100},
-        ['dingrido'] = {item_amount = 1, biomass_amount = 200},
-        ['qaavi'] = {item_amount = 1, biomass_amount = 300},
-        ['blood'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'},
-        ['tar'] = {item_amount = 20, biomass_amount = 4, type = 'fluid'},
-        ['crude-oil'] = {item_amount = 20, biomass_amount = 5, type = 'fluid'},
-        ['aromatics'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'},
-        ['glycerol'] = {item_amount = 10, biomass_amount = 10, type = 'fluid'},
-        ['oleochemicals'] = {item_amount = 10, biomass_amount = 10, type = 'fluid'},
-        ['xyhiphoe-blood'] = {item_amount = 10, biomass_amount = 10, type = 'fluid'},
-        ['phytoplankton'] = {item_amount = 10, biomass_amount = 30, type = 'fluid'},
-        ['a-molasse'] = {item_amount = 10, biomass_amount = 12, type = 'fluid'},
-        ['arthropod-blood'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'},
-        ['b-molasse'] = {item_amount = 10, biomass_amount = 12, type = 'fluid'},
-        ['casein-mixture'] = {item_amount = 10, biomass_amount = 7, type = 'fluid'},
-        ['casein-pulp-01'] = {item_amount = 10, biomass_amount = 8, type = 'fluid'},
-        ['casein-pulp-02'] = {item_amount = 10, biomass_amount = 9, type = 'fluid'},
-        ['casein-solution'] = {item_amount = 10, biomass_amount = 10, type = 'fluid'},
-        ['chelator'] = {item_amount = 10, biomass_amount = 12, type = 'fluid'},
-        ['depolymerized-organics'] = {item_amount = 10, biomass_amount = 15, type = 'fluid'},
-        ['ethanol'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'},
-        ['fetal-serum'] = {item_amount = 10, biomass_amount = 4, type = 'fluid'},
-        ['fish-oil'] = {item_amount = 10, biomass_amount = 8, type = 'fluid'},
-        ['flavonoids'] = {item_amount = 10, biomass_amount = 15, type = 'fluid'},
-        ['milk'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'},
-        ['psc'] = {item_amount = 5, biomass_amount = 5, type = 'fluid'},
-        ['sweet-syrup'] = {item_amount = 10, biomass_amount = 8, type = 'fluid'},
-        ['syrup-01'] = {item_amount = 10, biomass_amount = 7, type = 'fluid'},
-        ['xenogenic-cells'] = {item_amount = 5, biomass_amount = 4, type = 'fluid'},
-        ['creamy-latex'] = {item_amount = 20, biomass_amount = 5, type = 'fluid'},
-        ['liquid-manure'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'},
-        ['black-liquor'] = {item_amount = 10, biomass_amount = 10, type = 'fluid'},
-        ['tall-oil'] = {item_amount = 10, biomass_amount = 8, type = 'fluid'},
-        ['raw-ralesia-extract'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'},
-        ['ralesia-extract'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'},
-        ['condensates'] = {item_amount = 10, biomass_amount = 4, type = 'fluid'},
-        ['condensed-distillate'] = {item_amount = 10, biomass_amount = 4, type = 'fluid'},
-        ['naphtha'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'},
-        ['scrude'] = {item_amount = 10, biomass_amount = 3, type = 'fluid'},
-    }
+data.raw.fluid['bio-oil'].fuel_value = '0.13MJ'
+
+local bio_list = require('prototypes/items/biomass-convertion')
 
 local type
 
 local local_name_type
 
-for i, item in pairs(biomass_convertion) do
+for i, item in pairs(bio_list) do
 
 --local name = ''
-
+--log(i)
     if item.type == nil or item.type ~= 'fluid' then
         type = 'item'
         local_name_type = 'item'
@@ -991,10 +598,10 @@ for i, item in pairs(biomass_convertion) do
     local icon
     if type == 'item' and data.raw.item[i] ~= nil then
         if data.raw.item[i].icon ~= nil then
-            log('hit')
+            --log('hit')
             icon = {icon = data.raw.item[i].icon, icon_size = data.raw.item[i].icon_size}
         elseif data.raw.item[i].icons ~= nil then
-            log('hit')
+            --log('hit')
             icon = data.raw.item[i].icons[1]
             if data.raw.item[i].icon_size ~= nil then
                 icon.icon_size = data.raw.item[i].icon_size
@@ -1003,19 +610,19 @@ for i, item in pairs(biomass_convertion) do
             end
         end
     elseif type == 'fluid' then
-        if data.raw.fluid[i].icon ~= nil then
-            log('hit')
+        if data.raw.fluid[i] ~= nil and data.raw.fluid[i].icon ~= nil then
+            --log('hit')
             icon = {icon = data.raw.fluid[i].icon, icon_size = data.raw.fluid[i].icon_size}
-        elseif data.raw.fluid[i].icons ~= nil then
-            log('hit')
+        elseif data.raw.fluid[i] ~= nil and data.raw.fluid[i].icons ~= nil then
+            --log('hit')
             icon = data.raw.fluid[i].icons[1]
         end
     elseif type == 'item' and data.raw.module[i] ~= nil then
         if data.raw.module[i].icon ~= nil then
-            log('hit')
+            --log('hit')
             icon = {icon = data.raw.module[i].icon, icon_size = data.raw.module[i].icon_size}
         elseif data.raw.module[i].icons ~= nil then
-            log('hit')
+            --log('hit')
             if string.match(data.raw.module[i].icons[1].icon, 'over') ~= nil then
                 icon = data.raw.module[i].icons[2]
             else
@@ -1046,13 +653,13 @@ for i, item in pairs(biomass_convertion) do
             icons =
                 {
                     icon,
-                    {icon = "__pyalienlifegraphics__/graphics/icons/biomass.png", scale = 0.50, shift = {-7.5,-7.5}, icon_size = 32}
+                    {icon = "__pyalienlifegraphics__/graphics/icons/biomass.png", scale = 0.25, shift = {-7.5,-7.5}, icon_size = 64}
                 },
             subgroup = 'py-alienlife-compost',
             order = i,
             localised_name = {'', 'Compost ' .. item.item_amount .. ' x ', {local_name_type .. '-name.' .. i}}
         }:add_unlock("compost")
-        log(serpent.block(data.raw.recipe['biomass-' .. i]))
+        --log(serpent.block(data.raw.recipe['biomass-' .. i]))
     end
 end
 
@@ -1061,3 +668,15 @@ local fun = require("prototypes/functions/functions")
 fun.reprocess_recipes_1()
 
 fun.reprocess_recipes_2()
+--[[
+--(( Shortcut keys ))--
+local recipeselect=
+	{
+	type = "custom-input",
+	name = "tech-upgrades",
+	key_sequence = "CONTROL + T",
+	consuming = "none"
+	}
+
+data:extend{recipeselect}
+]]--

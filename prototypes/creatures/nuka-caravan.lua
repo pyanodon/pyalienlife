@@ -25,7 +25,7 @@ ITEM{
     name = "nuka-caravan",
     icon = "__pyalienlifegraphics__/graphics/icons/nuka-van.png",
     icon_size = 64,
-    subgroup = "py-containers-warehouse",
+    subgroup = "py-alienlife-special-creatures",
     order = "a",
     place_result = "nuka-caravan",
     stack_size = 5

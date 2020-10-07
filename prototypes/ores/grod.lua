@@ -1,19 +1,3 @@
---[[
-DATA {
-    type = "autoplace-control",
-    category = "resource",
-    name = "ore-aluminium",
-    richness = true,
-    order = "b-e"
-}
-]]--
-
---[[
-DATA {
-    type = "noise-layer",
-    name = "ore-aluminium"
-}
-]]--
 
 ENTITY {
     type = "resource",
@@ -25,7 +9,7 @@ ENTITY {
     order = "a-b-a",
     map_color = {r = 0.0, g = 0.576, b = 0.517},
     minable = {
-        hardness = 1,
+        
         -- mining_particle = "aluminium-ore-particle",
         mining_time = 2,
         results = {

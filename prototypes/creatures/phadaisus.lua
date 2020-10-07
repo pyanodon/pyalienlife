@@ -25,7 +25,7 @@ ITEM{
     name = "qaavi",
     icon = "__pyalienlifegraphics__/graphics/icons/phadaisus.png",
     icon_size = 64,
-    subgroup = "py-alienlife-buildings-others",
+    subgroup = "py-alienlife-special-creatures",
     order = "x",
     place_result = "qaavi",
     stack_size = 5
@@ -219,7 +219,7 @@ data:extend(
           sound =
           {
             filename = "__pyalienlifegraphics3__/sounds/phadaisus-breath.ogg",
-            volume = 0.9
+            volume = 0.7
           },
           --activate_sound =
           --{

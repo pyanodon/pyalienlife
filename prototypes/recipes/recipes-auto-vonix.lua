@@ -407,7 +407,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     --{name='woodseeds',amount ='R'},
-                    --{name='cagedmukmoux',amount ='15'},
+                    --{name='cagedmukmoux',amount =15},
 					{name='meat',amount =10},
 				},
 			results =

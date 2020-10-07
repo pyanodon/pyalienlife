@@ -100,12 +100,12 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='ash',amount =4},
-                    {name='emptybarrelmilk',amount ='+1'},
+                    {name='emptybarrelmilk',amount ='+4'},
 				},
 			results =
 				{
 					--{'a','*5'}
-					{name='milkbarrel',amount ='+1'}
+					{name='milkbarrel',amount ='+4'}
 				},
 				crafting_speed = 60,
 				tech = 'biopolymer-clusters',
@@ -116,12 +116,12 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='fish',amount =5},
-                    {name='emptybarrelmilk',amount ='+2'},
+                    {name='emptybarrelmilk',amount ='+5'},  -- 4 would be ok too but in the case of b recipes not so worth it
 				},
 			results =
 				{
 					--{'a','*5'}
-					{name='milkbarrel',amount ='+2'}
+					{name='milkbarrel',amount ='+5'}
 				},
 				crafting_speed = 60,
 				tech = 'biopolymer-clusters',

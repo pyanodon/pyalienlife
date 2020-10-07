@@ -36,7 +36,7 @@ RECIPE {
     energy_required = 135,
     ingredients = {
         {type = 'item', name = 'cottongut', amount = 4},
-        {type = 'item', name = 'paragen', amount = 1},
+        {type = 'item', name = 'paragen', amount = 2},
         },
     results = {
         {type = 'item', name = 'logistic-science-pack', amount = 25, probability = 0.1},
@@ -57,11 +57,11 @@ RECIPE {
     enabled = false,
     energy_required = 135,
     ingredients = {
-        {type = 'item', name = 'cottongut', amount = 8},
-        {type = 'item', name = 'paragen', amount = 1},
+        {type = 'item', name = 'cottongut', amount = 12},
+        {type = 'item', name = 'paragen', amount = 4},
         },
     results = {
-        {type = 'item', name = 'logistic-science-pack', amount = 50, probability = 0.1},
+        {type = 'item', name = 'logistic-science-pack', amount = 60, probability = 0.1},
     },
     main_product = 'logistic-science-pack',
    --icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
@@ -77,11 +77,11 @@ RECIPE {
     enabled = false,
     energy_required = 135,
     ingredients = {
-        {type = 'item', name = 'cottongut', amount = 14},
-        {type = 'item', name = 'paragen', amount = 1},
+        {type = 'item', name = 'cottongut', amount = 36},
+        {type = 'item', name = 'paragen', amount = 6},
         },
     results = {
-        {type = 'item', name = 'logistic-science-pack', amount = 75, probability = 0.1},
+        {type = 'item', name = 'logistic-science-pack', amount = 130, probability = 0.1},
     },
     main_product = 'logistic-science-pack',
    --icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png',
@@ -93,15 +93,15 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-green-04',
-    category = 'research',
+    category = 'space-cottongut',
     enabled = false,
     energy_required = 135,
     ingredients = {
-        {type = 'item', name = 'cottongut', amount = 20},
-        {type = 'item', name = 'paragen', amount = 1},
+        {type = 'item', name = 'cottongut', amount = 108},
+        {type = 'item', name = 'paragen', amount = 8},
         },
     results = {
-        {type = 'item', name = 'logistic-science-pack', amount = 100, probability = 0.1},
+        {type = 'item', name = 'logistic-science-pack', amount = 280, probability = 0.1},
     },
     main_product = 'logistic-science-pack',
    --icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
@@ -116,15 +116,15 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-green-05',
-    category = 'research',
+    category = 'space-cottongut',
     enabled = false,
     energy_required = 135,
     ingredients = {
-        {type = 'item', name = 'cottongut', amount = 60},
-        {type = 'item', name = 'paragen', amount = 1},
+        {type = 'item', name = 'cottongut', amount = 324},
+        {type = 'item', name = 'paragen', amount = 10},
         },
     results = {
-        {type = 'item', name = 'logistic-science-pack', amount = 200, probability = 0.1},
+        {type = 'item', name = 'logistic-science-pack', amount = 600, probability = 0.1},
     },
     main_product = 'logistic-science-pack',
    --icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',

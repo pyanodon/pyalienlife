@@ -220,6 +220,65 @@ fun.autorecipes {
 		},
 	}
 }
+
+------------------DINGRITS------------------
+
+fun.autorecipes {
+    name = 'rendering-skin-dingrits-2',
+	category = 'slaughterhouse-dingrits',
+	--module_limitations = 'dingrits',
+	subgroup = 'py-alienlife-dingrits',
+	order = 'b',
+    mats =
+	{
+		--skin
+		{
+			ingredients =
+				{
+					{name='cageddingrits',amount=1},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='pelt', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='blood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='pelt', amount ='+1'},
+					{name='cage',amount=1},
+				},
+                crafting_speed = 15,
+                tech = 'double-skin',
+				name = 'Extract dingrits Pelt-2',
+				icon = "__pyalienlifegraphics__/graphics/icons/pelt.png",
+				icon_size = 64,
+		},
+		--skin dingrits rendering
+		{
+			ingredients =
+				{
+					{name='cageddingrits',amount='R'},
+					{name='skincageddingrits',amount=1},
+				},
+			results =
+				{
+					{name='meat', amount ='R'},
+					{name='pelt', amount ='+2'},
+					{name='cage',amount=1},
+				},
+			crafting_speed = 15,
+			tech = 'reca',
+			name = 'Extract pelt from Improved dingrits-2',
+			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-dingrits.png",
+			icon_size = 64,
+		},
+	}
+}
+
+
 ------------------DHILMOS------------------
 
 fun.autorecipes {
@@ -790,7 +849,7 @@ fun.autorecipes {
 					{name='blood', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='cage',amount=1},
-					{name='chitin', amount ='+4'},
+					{name='chitin', amount ='+5'},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -810,7 +869,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='sulfuricacid', amount ='R'},
-					{name='chitin', amount ='+7'},
+					{name='chitin', amount ='+10'},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',

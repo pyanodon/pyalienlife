@@ -12,6 +12,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='cottongut',amount =4},
+					{name='cage',amount = 1},
 					{name='arthurianegg',amount =1},
 					{name='waterbarrel',amount=4,return_item={name='empty-barrel',amount=4}},
 				},
@@ -20,6 +21,7 @@ fun.autorecipes {
 					{name='cagedarthurian', probability = 0.7,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 130,
+			name = 'arthurian-01',
 			tech = 'arthurian'
 		},
 		--food 1
@@ -34,6 +36,7 @@ fun.autorecipes {
 					{name='cagedarthurian', probability = 0.8,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 120,
+			name = 'arthurian-02',
 			tech = 'arthurian-mk02'
 		},
 		--bedding
@@ -47,6 +50,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 110,
+			name = 'arthurian-03',
 			tech = 'arthurian-mk02'
 		},
 		--fiber
@@ -60,6 +64,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 100,
+			name = 'arthurian-04',
 			tech = 'arthurian-mk03'
 		},
 		--food 2
@@ -78,6 +83,7 @@ fun.autorecipes {
 					{name='cagedarthurian', probability = 0.9,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 90,
+			name = 'arthurian-05',
 			tech = 'arthurian-mk03'
 		},
 		--food 2 bedding
@@ -91,6 +97,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 85,
+			name = 'arthurian-06',
 			tech = 'arthurian-mk04'
 		},
 		--food 2 salt fiber
@@ -104,6 +111,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 80,
+			name = 'arthurian-07',
 			tech = 'arthurian-mk04'
 		},
 		--gh
@@ -118,6 +126,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 30,
+			name = 'arthurian-08',
 			tech = 'growth-hormone'
 		},
 		--antiviral and gh
@@ -132,6 +141,7 @@ fun.autorecipes {
 					{name='cagedarthurian', probability = 1,amount_min =1,amount_max =2},
 				},
 			crafting_speed = 30,
+			name = 'arthurian-09',
 			tech = 'antiviral'
 		},
 		--antiviral
@@ -146,6 +156,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 80,
+			name = 'arthurian-10',
 			tech = 'antiviral'
 		},
 		--nanochondria
@@ -161,6 +172,7 @@ fun.autorecipes {
 					{name='braincagedarthurian',1},
 				},
 			crafting_speed = 80,
+			name = 'arthurian-11',
 			tech = 'nanochondria'
 		},
 		--nanochondria and gh
@@ -175,6 +187,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 30,
+			name = 'arthurian-12',
 			tech = 'nanochondria'
 		},
 		--bmp
@@ -191,6 +204,7 @@ fun.autorecipes {
 					{name='bonecagedarthurian', 1},
 				},
 			crafting_speed = 80,
+			name = 'arthurian-13',
 			tech = 'bmp'
 		},
 
@@ -206,6 +220,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 30,
+			name = 'arthurian-14',
 			tech = 'bmp'
 		},
 		--rna anabolic
@@ -222,6 +237,7 @@ fun.autorecipes {
 					{name='meatcagedarthurian', 1},
 				},
 			crafting_speed = 80,
+			name = 'arthurian-15',
 			tech = 'anabolic-rna'
 		},
 		--rna anabolic and gh
@@ -236,6 +252,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 30,
+			name = 'arthurian-16',
 			tech = 'anabolic-rna'
 		},
 		--antitumor
@@ -252,6 +269,7 @@ fun.autorecipes {
 					{name='gutscagedarthurian', 1},
 				},
 			crafting_speed = 80,
+			name = 'arthurian-17',
 			tech = 'antitumor'
 		},
 		--antitumor and gh
@@ -266,6 +284,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 30,
+			name = 'arthurian-18',
 			tech = 'antitumor'
 		},
 		--Recombinant Ery
@@ -282,6 +301,7 @@ fun.autorecipes {
 					{name='bloodcagedarthurian', 1},
 				},
 			crafting_speed = 80,
+			name = 'arthurian-19',
 			tech = 'recombinant-ery'
 		},
 		--Recombinant Ery and gh
@@ -295,6 +315,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 30,
+			name = 'arthurian-20',
 			tech = 'recombinant-ery'
 		},
 		--reca
@@ -311,6 +332,7 @@ fun.autorecipes {
 					{name='skincagedarthurian', 1},
 				},
 			crafting_speed = 80,
+			name = 'arthurian-21',
 			tech = 'reca'
 		},
 		--reca and gh
@@ -324,6 +346,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 30,
+			name = 'arthurian-22',
 			tech = 'reca'
 		},
 		--orexigenic
@@ -340,6 +363,7 @@ fun.autorecipes {
 					{name='fatcagedarthurian', 1},
 				},
 			crafting_speed = 80,
+			name = 'arthurian-23',
 			tech = 'orexigenic'
 		},
 		--orexigenic and gh
@@ -353,6 +377,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 30,
+			name = 'arthurian-24',
 			tech = 'orexigenic'
 		},
 	}
@@ -382,6 +407,7 @@ fun.autorecipes {
 					{name='arthurianegg', amount =3},
 				},
 			crafting_speed = 100,
+			name = 'arthurian-egg-01',
 			tech = 'assisted-embryology'
 		},
 		--food 1
@@ -395,6 +421,7 @@ fun.autorecipes {
                     {name='arthurianegg', amount ="+1"},
 				},
 			crafting_speed = 90,
+			name = 'arthurian-egg-02',
 			tech = 'assisted-embryology'
 		},
 		--fiber
@@ -408,6 +435,7 @@ fun.autorecipes {
                     {name='arthurianegg', amount ="+1"},
 				},
 			crafting_speed = 80,
+			name = 'arthurian-egg-03',
 			tech = 'assisted-embryology'
 		},
 		--food 2
@@ -424,6 +452,7 @@ fun.autorecipes {
                     {name='arthurianegg', amount ="+1"},
 				},
 			crafting_speed = 75,
+			name = 'arthurian-egg-04',
 			tech = 'assisted-embryology'
 		},
 		--food 2 salt fiber
@@ -437,6 +466,7 @@ fun.autorecipes {
                     {name='arthurianegg', amount ="+1"},
 				},
 			crafting_speed = 65,
+			name = 'arthurian-egg-05',
 			tech = 'assisted-embryology'
 		},
 		-----------------------PHEROMONES-----------------------------
@@ -456,6 +486,7 @@ fun.autorecipes {
 					{name='arthurianegg', amount =8},
 				},
 			crafting_speed = 70,
+			name = 'arthurian-egg-06',
 			tech = 'pheromones'
 		},
 		--food 1
@@ -469,6 +500,7 @@ fun.autorecipes {
                     {name='arthurianegg', amount ="+1"},
 				},
 			crafting_speed = 60,
+			name = 'arthurian-egg-07',
 			tech = 'pheromones'
 		},
 		--fiber
@@ -482,6 +514,7 @@ fun.autorecipes {
                     {name='arthurianegg', amount ="+1"},
 				},
 			crafting_speed = 50,
+			name = 'arthurian-egg-08',
 			tech = 'pheromones'
 		},
 		--food 2
@@ -498,6 +531,7 @@ fun.autorecipes {
                     {name='arthurianegg', amount ="+1"},
 				},
 			crafting_speed = 50,
+			name = 'arthurian-egg-09',
 			tech = 'pheromones'
 		},
 		--food 2 salt fiber
@@ -511,6 +545,7 @@ fun.autorecipes {
                     {name='arthurianegg', amount ="+1"},
 				},
 			crafting_speed = 40,
+			name = 'arthurian-egg-10',
 			tech = 'pheromones'
 		},
 

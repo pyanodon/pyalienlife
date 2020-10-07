@@ -1,11 +1,171 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.9.2
+Date: 2020-10-03
+  Changes:
+    - Fixed crash when attempting to place an entity.
+    - remove outdated entity property that doesnt do anything anymore.
+    - updated ore gen code to current standard.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.1
+Date: 2020-10-03
+  Changes:
+    - Fixed error antelope not being placable.
+    - fixed crash with caravan when not having both start and end points set up.
+    - added bio oil combustion mix recipe.
+    - added rubber stopper from rubber recipe.
+    - several adjustments and balance changes to cottonguts. still work in progress.
+    - update to factorio version 1.0.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.0
+Date: 2020-07-29
+  Changes:
+    - Fixed error with trees not droping sap or sap seeds.
+    - Balanced bio-oil to use less quartz.
+    - Fixed that new hydrogen chloride recipe was overriding a different recipe with the same name.
+---------------------------------------------------------------------------------------------------
+Version: 1.8.8
+Date: 2020-07-26
+  Changes:
+    - Added migration to update recipes
+---------------------------------------------------------------------------------------------------
+Version: 1.8.7
+Date: 2020-07-26
+  Changes:
+    - Rebalanced biomass fuel value.
+    - Added biomass processing chains.
+    - Fixed bug with rocks not having moss.
+    - Added Ulric Mutagenic Infusion.
+    - Cottongut science adjustments.
+    - Petri dish moved over to molten glass system.
+    - Adjustements to recipes using hot air to be inline with new system.
+---------------------------------------------------------------------------------------------------
+Version: 1.8.6
+Date: 2020-07-02
+  Changes:
+    - Fixed error related to molten glass fluid not existing
+---------------------------------------------------------------------------------------------------
+Version: 1.8.5
+Date: 2020-07-02
+  Changes:
+    - Fixes on advanced recipes and pesticides
+    - Moved polynuclear-ganglion and dimensional-gastricorg back to nanocondria and made nanocondria now unlock without yellow tech.
+---------------------------------------------------------------------------------------------------
+Version: 1.8.3
+Date: 2020-06-28
+  Changes:
+    - Fixed missing dingrit.
+---------------------------------------------------------------------------------------------------
+Version: 1.8.2
+Date: 2020-06-28
+  Changes:
+    - Fixed crash when placing any building.
+---------------------------------------------------------------------------------------------------
+Version: 1.8.1
+Date: 2020-06-28
+  Changes:
+    - Balanced Xyhiphoe
+    - Added Pesticides
+    - Fixed pY Logistic Station
+    - Fixed Ocula
+    - Dingrido now consumes less and are more maneuverable.
+    - Tweaks for glass
+    - Pyphoon bay speed up.
+    - Locale changes
+---------------------------------------------------------------------------------------------------
+Version: 1.8.0
+Date: 2020-06-15
+  Changes:
+    - Release problem
+---------------------------------------------------------------------------------------------------
+Version: 1.7.9
+Date: 2020-06-15
+  Changes:
+    - Fixed kmauts in slaughterhouse.
+    - Fixed Xyhiphoe double food recipe.
+    - Fixed bioprinter speed.
+    - Fixed load order issues.
+    - Disabled prod modules in fungi substrate recipes.
+---------------------------------------------------------------------------------------------------
+Version: 1.7.8
+Date: 2020-06-14
+  Changes:
+    - Fixed pyHT loading errors.
+    - Added biomass to the wiki.
+    - Balances on Arquad's recipes.
+    - Added pY Logistic Center.
+    - Balances in several fungi recipes.
+    - Added rennea breeding program.
+    - Balances in phagnot food.
+    - All fungi substrates now return petri-dishes.
+    - Clean up tons of lines of coding.
+    - Balanced moss recipes.
+    - Cages now are cheaper.
+    - Several biomass balances.
+    - Fixed typos.
+    - Fixed sap and icon layering issue.
+    - Balances on bioprinting.
+    - Balances on cottongut red science.
+    - Balanes on plasmids.
+---------------------------------------------------------------------------------------------------
+Version: 1.7.7
+Date: 2020-05-29
+  Changes:
+    - Fix sap recipes set to the wrong machine.
+---------------------------------------------------------------------------------------------------
+Version: 1.7.6
+Date: 2020-05-28
+  Changes:
+    - Revert back some biomass stuff. Food, by the way will still needing guar.
+---------------------------------------------------------------------------------------------------
+Version: 1.7.5
+Date: 2020-05-28
+  Changes:
+    - Add log recipes to tree module limitation list
+---------------------------------------------------------------------------------------------------
+Version: 1.7.4
+Date: 2020-05-28
+  Changes:
+    - Correct error in spelling of bonemeal item in recipe
+---------------------------------------------------------------------------------------------------
+Version: 1.7.3
+Date: 2020-05-28
+  Changes:
+    - Add tree module for fast wood forestry
+    - Add sap mk02 breeding
+    - Add guar to several recipes
+    - Added Dingrit space program
+    - Other tweaks and adjustments
+---------------------------------------------------------------------------------------------------
+Version: 1.7.2
+Date: 2020-05-24
+  Changes:
+    - Fixed bug related to trees missing minable property.
+    - Added new background image.
+---------------------------------------------------------------------------------------------------
+Version: 1.7.1
+Date: 2020-05-24
+  Changes:
+    - Added modules do sap, seaweed and moss. (Collect them from water, rocks and trees).
+    - Balanced lots of biomass recipes in compost plant.
+    - Added alt versions of combustion mixtures using biomass instead of coke.
+    - Initial moondrop breeding program
+    - pyHT isnt required anymore to play pyAL
+---------------------------------------------------------------------------------------------------
+Version: 1.7.0
+Date: 2020-05-17
+  Changes:
+    - Added arthurian mk02 breeding
+    - Made adjustment to compost recipe icons
+    - Fixed missing cage and typos
+    - Miscellaneous balance adjustments
+---------------------------------------------------------------------------------------------------
 Version: 1.6.9
 Date: 2020-05-10
   Changes:
     - Remodulated all farms to not break factorio module bonus limit
-    - added yotoi breeding
-    - fixed error with not all cridren recipes showing in sluaghterhouse
-    - miscellaneous balance adjustments
+    - Added yotoi breeding
+    - Fixed error with not all cridren recipes showing in sluaghterhouse
+    - Miscellaneous balance adjustments
 ---------------------------------------------------------------------------------------------------
 Version: 1.6.8
 Date: 2020-05-06
@@ -17,7 +177,7 @@ Date: 2020-05-06
     - Remake of the cottongut science ingredients.
     - Removed support for pyVeganism unofficial mod.
     - Added ulric breeding basic recipes.
-    - pyPH is now requiered to play pyAL.
+    - pyPH is now required to play pyAL.
 ---------------------------------------------------------------------------------------------------
 Version: 1.6.7
 Date: 2020-05-03
@@ -41,22 +201,22 @@ Date: 2020-04-28
 Version: 1.6.4
 Date: 2020-04-28
   Changes:
-    - rebalanced the module speed bonus and machine crafting speeds for rennea and dingrits to avooid module speed bonus cap
-    - added breeding recipes for rennea modules
+    - Rebalanced the module speed bonus and machine crafting speeds for rennea and dingrits to avoid module speed bonus cap
+    - Added breeding recipes for rennea modules
 ---------------------------------------------------------------------------------------------------
 Version: 1.6.3
 Date: 2020-04-26
   Changes:
-    - rebalanced the module speed bonus and machine crafting speeds for Arthurians, cadaveric arum, navens, and yaedols to avooid module speed bonus cap
-    - added breeding recipes for the higher tier cadaveric arum modules
-    - balance changes to rennea
-    - fixed issues with construction drones breaking functionally of farms do to improper event listener in pyal
-    - tweaks to cocoons to fix duplicate recipes and slight balance changes
+    - Rebalanced the module speed bonus and machine crafting speeds for Arthurians, cadaveric arum, navens, and yaedols to avooid module speed bonus cap
+    - Added breeding recipes for the higher tier cadaveric arum modules
+    - Balance changes to rennea
+    - Fixed issues with construction drones breaking functionally of farms do to improper event listener in pyAL
+    - Tweaks to cocoons to fix duplicate recipes and slight balance changes
 ---------------------------------------------------------------------------------------------------
 Version: 1.6.2
 Date: 2020-04-24
   Changes:
-    - fixed bug in mega farm related to factorio 18.20 update.
+    - Fixed bug in mega farm related to factorio 18.20 update.
 ---------------------------------------------------------------------------------------------------
 Version: 1.6.1
 Date: 2020-04-23
@@ -67,7 +227,7 @@ Date: 2020-04-23
 Version: 1.6.0
 Date: 2020-04-22
   Changes:
-    - Added new auog graphics. Be sure to save your game before update. It will cmay cause overlaps, lose of modules etc.
+    - Added new auog graphics. Be sure to save your game before update. It will may cause overlaps, lose of modules etc.
     - Updated auog icons and tech.
     - Fixed small korlex milk stuff.
     - Locale changes in alien samples.
@@ -79,12 +239,12 @@ Date: 2020-04-22
 Version: 1.5.9
 Date: 2020-04-20
   Changes:
-    - fixed mistake in upgrade recipe script.
+    - Fixed mistake in upgrade recipe script.
 ---------------------------------------------------------------------------------------------------
 Version: 1.5.8
 Date: 2020-04-19
   Changes:
-    - fix script error.
+    - Fix script error.
 ---------------------------------------------------------------------------------------------------
 Version: 1.5.7
 Date: 2020-04-19
@@ -95,7 +255,7 @@ Version: 1.5.6
 Date: 2020-04-17
   Changes:
     - Added late game recipes.
-    - Utility science new requieres perfect samples.
+    - Utility science now requires perfect samples.
     - Fixed wrong recipe in the upgrade recipes.
     - Fixed pycp updates.
     - Space science now requieres yellow-cake.
@@ -119,7 +279,7 @@ Date: 2020-04-11
   Changes:
     - Added tooltips to slaghterhouse gui.
     - Fixed issue with kmuats not showing in slaughterhouse gui.
-    - fixed deadlock related to diamagnetic material in empty neuromorphic chip
+    - Fixed deadlock related to diamagnetic material in empty neuromorphic chip
     - Add Nuka-van.
 ---------------------------------------------------------------------------------------------------
 Version: 1.5.2
@@ -134,17 +294,17 @@ Date: 2020-04-10
 Version: 1.5.1
 Date: 2020-04-06
   Changes:
-    - fixed error in script
+    - Fixed error in script
 ---------------------------------------------------------------------------------------------------
 Version: 1.5.0
 Date: 2020-04-06
   Changes:
-    - fixed deadlock in alien enzymes. removed diamagnetic material and moved paramagnetic material to earlier unlock.
+    - Fixed deadlock in alien enzymes. Removed diamagnetic material and moved paramagnetic material to earlier unlock.
 ---------------------------------------------------------------------------------------------------
 Version: 1.4.9
 Date: 2020-04-02
   Changes:
-    - Added unlock for MK levels of phythoplankon farms.
+    - Added unlock for MK levels of phytoplankon farms.
     - Fixed modules in data-array and bio-reactors.
     - Fixed manure updates.
 ---------------------------------------------------------------------------------------------------
@@ -162,7 +322,7 @@ Date: 2020-03-31
     - Balanced Cridrens
     - Adapted recipes to glassworks.
     - Balanced biomass
-    - Biomass to raw coal balanced.
+    - Balanced Biomass to raw coal .
     - Balanced tuuphra.
 ---------------------------------------------------------------------------------------------------
 Version: 1.4.6
@@ -322,19 +482,19 @@ Date: 2020-03-14
 Version: 1.3.1
 Date: 2020-03-03
   Changes:
-    - adjustments to kicalk upgrades
-    - added missing module icons for plants and fungi
-    - standardized creature egg stack sizes
+    - Adjustments to kicalk upgrades
+    - Added missing module icons for plants and fungi
+    - Standardized creature egg stack sizes
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.0
 Date: 2020-03-01
   Changes:
-    - adjustments to phagnot and cobalt
+    - Adjustments to phagnot and cobalt
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.9
 Date: 2020-02-29
   Changes:
-    - fixed an script error for pycoaltbaa
+    - Fixed an script error for pycoaltbaa
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.8
 Date: 2020-02-29
@@ -344,31 +504,31 @@ Date: 2020-02-29
 Version: 1.2.7
 Date: 2020-02-28
   Changes:
-    - disabled excessive logging
+    - Disabled excessive logging
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.6
 Date: 2020-02-28
   Changes:
-    - fixed bugs with farm disable script not checking all farms
+    - Fixed bugs with farm disable script not checking all farms
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.5
 Date: 2020-02-27
   Changes:
-    - fixed caged phadai was in dingrits spike recipe
-    - add script to disable any building that doesnt have a farm module
-    - add icon to display when farm is missing modules
+    - Fixed caged phadai was in dingrits spike recipe
+    - Add script to disable any building that doesnt have a farm module
+    - Add icon to display when farm is missing modules
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.4
 Date: 2020-02-25
   Changes:
-    - fixed that moondrop modules were disabled for moondrop methane recipes
+    - Fixed that moondrop modules were disabled for moondrop methane recipes
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.3
 Date: 2020-02-24
   Changes:
-    - fixed error caused by robots building farms attempting to display message
+    - Fixed error caused by robots building farms attempting to display message
     - Balanced moondrop
-    - adjusted plant and animal stack sizes
+    - Adjusted plant and animal stack sizes
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.2
 Date: 2020-02-24
@@ -395,7 +555,7 @@ Date: 2020-02-20
 Version: 1.1.9
 Date: 2020-02-19
   Changes:
-    - fixed labs not having py science pack
+    - Fixed labs not having py science pack
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.8
 Date: 2020-02-18
@@ -417,7 +577,7 @@ Date: 2020-02-16
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
   Balance:
-    - adjust bhoddos sample
+    - Adjust bhoddos sample
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.4
   Balance:
@@ -447,17 +607,17 @@ Version: 1.1.0
 Version: 1.0.9
   Balance:
     - Balanced some foods
-    - fixed the animals beacon abuse.
+    - Fixed the animals beacon abuse.
     - buffed coal from navens
-    - fixed some exploits, you dirt cheaters!
-    - balanced collectors to return stuff correctly
+    - Fixed some exploits, you dirt cheaters!
+    - Balanced collectors to return stuff correctly
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.8
   Balance:
-    - fixed issue with loading pyal in old saves
-    - fixed issue with kicalk using wrong dna pack
+    - Fixed issue with loading pyal in old saves
+    - Fixed issue with kicalk using wrong dna pack
     - "fixed" fawogae
-    - started rebalancing machine speeds per tier
+    - Started rebalancing machine speeds per tier
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.7
   Balance:

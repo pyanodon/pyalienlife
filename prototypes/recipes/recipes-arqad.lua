@@ -60,7 +60,7 @@ RECIPE {
     name = 'empty-comb',
     category = 'crafting-with-fluid',
     enabled = false,
-    energy_required = 3,
+    energy_required = 5,
     ingredients = {
         {type = 'item', name = 'tailings-dust', amount = 15},
         {type = 'item', name = 'coal-dust', amount = 4},
@@ -69,7 +69,7 @@ RECIPE {
         {type = 'fluid', name = 'creosote', amount = 30},
     },
     results = {
-        {type = 'item', name = 'empty-comb', amount = 1},
+        {type = 'item', name = 'empty-comb', amount = 7},
     },
 }:add_unlock("arqad")
 
@@ -108,15 +108,15 @@ RECIPE {
     name = 'wax',
     category = 'hpf',
     enabled = false,
-    energy_required = 10,
+    energy_required = 4,
     ingredients = {
         {type = 'item', name = 'used-comb', amount = 5},
-        {type = 'fluid', name = 'steam', amount = 100},
+        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
     },
     results = {
         {type = 'fluid', name = 'wax', amount = 50},
     },
-}:add_unlock("arqad-mk02"):replace_ingredient("steam","hot-air")
+}:add_unlock("arqad-mk02"):remove_ingredient("steam"):add_ingredient({type = "item", name = "hot-air", amount = 25})
 
 ---products---
 
@@ -125,7 +125,7 @@ RECIPE {
     name = 'wax-2',
     category = 'arqad',
     enabled = false,
-    energy_required = 50,
+    energy_required = 50,    --i think this one is a bit slow but atm not sure , this is a reminder [same for wax1]
     ingredients = {
         {type = 'item', name = 'ralesia', amount = 3},
         {type = 'item', name = 'bhoddos-spore', amount = 2},

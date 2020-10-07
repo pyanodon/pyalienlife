@@ -19,7 +19,7 @@ RECIPE {
     name = 'plasmids',
     category = 'biofactory',
     enabled = false,
-    energy_required = 6,
+    energy_required = 8,
     ingredients = {
         {type = 'fluid', name = 'zogna-bacteria', amount = 20},
         {type = 'item', name = 'petri-dish-bacteria', amount = 1},
@@ -110,6 +110,25 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
+    name = 'primers-02',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 6,
+    ingredients = {
+        {type = 'item', name = 'petri-dish-bacteria', amount = 10},
+        {type = 'item', name = 'fawogae', amount = 5},
+        {type = 'item', name = 'saps', amount = 5},
+        {type = 'item', name = 'sea-sponge', amount = 1},
+        {type = 'item', name = 'lab-instrument', amount = 1},
+        {type = 'fluid', name = 'phytoplankton', amount = 20},
+    },
+    results = {
+        {type = 'item', name = 'primers', amount = 1},
+    },
+}:add_unlock("genetics-mk02")
+
+RECIPE {
+    type = 'recipe',
     name = 'dna-polymerase',
     category = 'genlab',
     enabled = false,
@@ -153,6 +172,7 @@ RECIPE {
         {type = 'item', name = 'alien-sample01', amount = 1},
         {type = 'item', name = 'bio-sample', amount = 10},
         {type = 'item', name = 'dna-polymerase', amount = 1},
+        {type = 'fluid', name = 'milk', amount = 100},
         {type = 'item', name = 'plastic-bar', amount = 10},
         {type = 'fluid', name = 'formamide', amount = 150},
         {type = 'item', name = 'flask', amount = 2},
@@ -286,7 +306,7 @@ RECIPE {
         {type = 'item', name = 'purine-analogues', amount = 3},
     },
     results = {
-        {type = 'item', name = 'anabolic-rna', amount = 300},
+        {type = 'item', name = 'anabolic-rna', amount = 200},
     },
 }:add_unlock("anabolic-rna")
 
@@ -366,7 +386,7 @@ RECIPE {
         {type = 'item', name = 'chitin', amount = 50},
     },
     results = {
-        {type = 'item', name = 'antitumor', amount = 500},
+        {type = 'item', name = 'antitumor', amount = 250},
     },
 }:add_unlock("antitumor"):change_category('nano'):replace_ingredient("cytostatics", "superconductor-servomechanims")
 
@@ -449,7 +469,7 @@ RECIPE {
         {type = 'item', name = 'mmp', amount = 1},
     },
     results = {
-        {type = 'item', name = 'recombinant-ery', amount = 300},
+        {type = 'item', name = 'recombinant-ery', amount = 200},
     },
 }:add_unlock("recombinant-ery")
 
@@ -473,7 +493,7 @@ RECIPE {
         {type = 'item', name = 'vonix-eggs', amount = 15},
     },
     results = {
-        {type = 'item', name = 'orexigenic', amount = 250},
+        {type = 'item', name = 'orexigenic', amount = 200},
     },
 }:add_unlock("orexigenic")
 
@@ -510,4 +530,3 @@ RECIPE {
         {type = 'item', name = 'chimeric-proteins', amount = 5},
     },
 }:add_unlock("chitin"):add_ingredient({type = "fluid", name = "ethylene-glycol", amount = 50})
-

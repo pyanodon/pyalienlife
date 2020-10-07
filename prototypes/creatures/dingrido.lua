@@ -25,7 +25,7 @@ ITEM{
     name = "dingrido",
     icon = "__pyalienlifegraphics__/graphics/icons/dingrido.png",
     icon_size = 64,
-    subgroup = "py-alienlife-buildings-others",
+    subgroup = "py-alienlife-special-creatures",
     order = "x",
     place_result = "dingrido",
     stack_size = 5
@@ -80,16 +80,16 @@ data:extend(
         selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
         drawing_box = {{-1.8, -1.8}, {1.8, 1.8}},
         effectivity = 0.98,
-        braking_power = "2000kW",
+        braking_power = "10000kW",
         burner =
         {
           fuel_category = "food",
           effectivity = 1,
           fuel_inventory_size = 1,
         },
-        consumption = "500kW",
+        consumption = "250kW",
         terrain_friction_modifier = 0.001,
-        friction = 0.0001,
+        friction = 0.0002,
         light =
         {
           {
@@ -305,7 +305,7 @@ data:extend(
           sound =
           {
             filename = "__pyalienlifegraphics__/sounds/dingrit-breath.ogg",
-            volume = 1
+            volume = 0.7
           },
           --activate_sound =
           --{
@@ -321,7 +321,7 @@ data:extend(
         },
         open_sound = { filename = "__pyalienlifegraphics3__/sounds/dingrito-in.ogg", volume=0.9 },
         close_sound = { filename = "__pyalienlifegraphics3__/sounds/dingrito-out.ogg", volume = 0.9 },
-        rotation_speed = 0.0035,
+        rotation_speed = 0.0095,
         tank_driving = true,
         weight = 7000,
         inventory_size = 250,

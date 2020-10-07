@@ -47,7 +47,7 @@ ENTITY {
     module_specification = {
         module_slots = 27
     },
-    allowed_effects = {"speed","productivity"},
+    allowed_effects = {"speed","productivity",'consumption','pollution'},
     crafting_categories = {"fish-farm"},
     crafting_speed = 0.04,
     energy_source = {
@@ -55,7 +55,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = 0.5,
     },
-    energy_usage = "1100kW",
+    energy_usage = "2500kW",
     ingredient_count = 10,
     animation = {
         layers = {

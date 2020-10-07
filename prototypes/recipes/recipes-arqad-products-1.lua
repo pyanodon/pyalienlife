@@ -13,7 +13,7 @@ fun.autorecipes {
 				{
                     {name='emptycomb',amount =6},
                     {name='biomass',amount =10},
-					{name='talloilbarrel',amount=2,return_item={name='empty-barrel',amount=2}},
+					{name='crudebarrel',amount=2,return_item={name='empty-barrel',amount=2}},
 				},
 			results =
 				{

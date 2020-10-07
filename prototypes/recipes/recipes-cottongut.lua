@@ -66,7 +66,7 @@ RECIPE {
         {type = 'item', name = 'ralesia-seeds', amount = 2},
         {type = 'item', name = 'seaweed', amount = 5},
         {type = 'item', name = 'wood-seeds', amount = 5},
-        {type = 'fluid', name = 'steam', amount = 100},
+        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
     },
     results = {
         {type = 'item', name = 'cottongut-food-01', amount = 4},
@@ -88,7 +88,7 @@ RECIPE {
         {type = 'item', name = 'wood-seeds', amount = 15},
         {type = 'item', name = 'ash', amount = 10},
         {type = 'item', name = 'moondrop', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100},
+        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
     },
     results = {
         {type = 'item', name = 'cottongut-food-02', amount = 6},

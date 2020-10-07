@@ -588,7 +588,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cottongut',amount=5},
+					{name='cottongut',amount=6},
 				},
 			results =
 				{
@@ -598,7 +598,7 @@ fun.autorecipes {
 					{name='guts', probability = 0.5,amount_min =1,amount_max =5},
 					{name='fat', probability = 0.3,amount_min =1,amount_max =4},
 					{name='blood', amount =40},
-					{name='brain', probability = 0.3,amount_min =1,amount_max =2},
+					{name='brain', probability = 0.3,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 30,
 			tech = 'cottongut-mk01',
@@ -741,7 +741,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='fat', amount ='R'},
-					{name='brain', amount =3},
+					{name='brain', amount =5},
 				},
 			crafting_speed = 15,
 			tech = 'nanochondria',
@@ -848,7 +848,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
 					{name='meat', amount =7},
 				},
 			crafting_speed = 15,

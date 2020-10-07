@@ -80,6 +80,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'titanium-plate', amount = 10},
+        {type = 'item', name = 'super-alloy', amount = 1},
         {type = 'item', name = 'ticocr-alloy', amount = 5},
         {type = 'item', name = 'diamond', amount = 10},
     },

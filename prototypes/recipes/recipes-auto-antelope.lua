@@ -145,6 +145,7 @@ fun.autorecipes {
 					{name='fat', probability = 0.5,amount_min =1,amount_max =2},
 					{name='guts', probability = 0.5,amount_min =1,amount_max =4},
 					{name='brain', probability = 0.5,amount_min =1,amount_max =1},
+					{name='antelopecage', amount=1},
 					{name='strangelets', probability = 0.2,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 30,
@@ -272,6 +273,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='fat', amount ='R'},
+					{name='antelopecage', amount='R'},
 					{name='strangelets', amount =1},
 				},
 			crafting_speed = 15,
