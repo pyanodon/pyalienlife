@@ -1409,6 +1409,7 @@ RECIPE {
         {type = 'item', name = 'bio-scafold', amount = 2},
         {type = 'item', name = 'immunosupressants', amount = 1},
         {type = 'item', name = 'enzyme-pks', amount = 1},
+        {type = 'item', name = 'hyaline', amount = 1},
     },
     results = {
         {type = 'item', name = 'scafold-free-bones', amount = 1},
