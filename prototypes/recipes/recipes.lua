@@ -879,7 +879,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'hyaline', amount = 1}
     }
-}:add_unlock('bmp')
+}:add_unlock('bmp'):add_ingredient({type = "item", name = "collagen", amount = 3})
 
 RECIPE {
     type = "recipe",
