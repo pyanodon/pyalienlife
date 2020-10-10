@@ -27,7 +27,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     --{'s1'},
-					{name='sand',amount ='*10'},
+					{name='sand',amount ='*5'},
 				},
 			results =
 				{

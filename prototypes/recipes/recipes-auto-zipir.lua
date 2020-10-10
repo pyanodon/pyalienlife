@@ -43,7 +43,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='pressuredwater',amount = 'R'},
-					{name='watersaline',amount = '*10'},
+					{name='watersaline',amount = '*100'},
 				},
 			results =
 				{
@@ -366,7 +366,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='pressuredwater',amount = 'R'},
-					{name='watersaline',amount = '*20'},
+					{name='watersaline',amount = '*200'},
 				},
 			results =
 				{
@@ -450,7 +450,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='pressuredwater',amount = 'R'},
-					{name='watersaline',amount = '*30'},
+					{name='watersaline',amount = '*300'},
 				},
 			results =
 				{

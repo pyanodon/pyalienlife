@@ -52,10 +52,10 @@ ENTITY {
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = -3,
+        emissions_per_minute = -2,
     },
     energy_usage = "1000kW",
-    ingredient_count = 10,
+    ingredient_count = 20,
     animation = {
         layers = {
             {

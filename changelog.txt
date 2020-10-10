@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.9.3
+Date: 2020-10-08
+  Changes:
+    - Fixed Yotoi aloe ingredient count.
+    - Fixed tuuphra needing good alien samples.
+    - Fixed zipir low saline requirement.
+    - Added hyaline to bone printing.
+    - Added collagen to hyalie recipe.
+---------------------------------------------------------------------------------------------------
 Version: 1.9.2
 Date: 2020-10-03
   Changes:
