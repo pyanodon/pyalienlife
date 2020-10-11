@@ -27,12 +27,12 @@ fun.autorecipes {
 			ingredients =
 				{
                     --{'s1'},
-					{name='sand',amount ='*5'},
+					{name='sand',amount ='+8'},
 				},
 			results =
 				{
 					--{'a','*5'}
-					{name='yotoi',amount ='+1'}
+					{name='yotoi',amount ='+2'}
 				},
 				crafting_speed = 120,
 				tech = 'yotoi'
@@ -42,12 +42,12 @@ fun.autorecipes {
 				{
                     --{'s1'},
                     --{'a'},
-                    {name='limestone',amount ='+5'},
+                    {name='limestone',amount ='+6'},
 				},
 			results =
 				{
 					--{'a','*7'},
-					{name='yotoi',amount ='+1'}
+					{name='yotoi',amount ='+2'}
 				},
 				crafting_speed = 120,
 				tech = 'yotoi'
@@ -58,7 +58,7 @@ fun.autorecipes {
                     --{'s1'},
                     --{'a'},
                     --{'b','+15'},
-                    {name='manure',amount =5},
+                    {name='manure',amount =6},
 				},
 			results =
 				{
