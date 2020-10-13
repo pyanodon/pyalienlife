@@ -82,3 +82,17 @@ RECIPE {
         {type = 'fluid', name = 'hydrogen', amount = 200}
     }
 }:add_unlock('phagnot-mk03'):change_category('gas-refinery')
+
+RECIPE {
+    type = 'recipe',
+    name = 'gas-bladder-to-hot-air',
+    category = 'gas-separator',
+    enabled = false,
+    energy_required = 8,
+    ingredients = {
+        {type = 'item', name = 'gas-bladder', amount = 1},
+    },
+    results = {
+        {type = 'fluid', name = 'hot-air', amount = 300}
+    }
+}:add_unlock('phagnot-mk03'):change_category('gas-refinery')
