@@ -1749,7 +1749,7 @@ function overrides.tech_upgrade(tech_upgrade)
                 effects = {},
                 unit = tab.master_tech.unit
             }
-            
+
             data:extend(
             {
                 {

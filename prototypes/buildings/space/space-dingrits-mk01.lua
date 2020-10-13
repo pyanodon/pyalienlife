@@ -223,7 +223,7 @@ ENTITY {
                 animation_speed = 0.3
             }
         },
-        
+
     },
 
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},

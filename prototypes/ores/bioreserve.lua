@@ -1,3 +1,4 @@
+local resource_autoplace = require("resource-autoplace")
 DATA {
     type = "autoplace-control",
     category = "resource",

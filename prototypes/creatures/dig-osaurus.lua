@@ -505,7 +505,6 @@ local character_animations =
       hr_version =
       {
         filename = "__base__/graphics/entity/character/hr-level1_running_gun_shadow_flipped.png",
-        line_length = 22,
         width = 178,
         height = 100,
         shift = util.by_pixel(25.5,0.0),
@@ -984,7 +983,6 @@ local character_animations =
       hr_version =
       {
         filename = "__base__/graphics/entity/character/hr-level2addon_running_gun_shadow_flipped.png",
-        line_length = 22,
         width = 138,
         height = 58,
         shift = util.by_pixel(34.0,1.0),
@@ -1427,7 +1425,6 @@ local character_animations =
       hr_version =
       {
         filename = "__base__/graphics/entity/character/hr-level3addon_running_gun_shadow_flipped.png",
-        line_length = 22,
         width = 142,
         height = 64,
         shift = util.by_pixel(33.5,0.5),

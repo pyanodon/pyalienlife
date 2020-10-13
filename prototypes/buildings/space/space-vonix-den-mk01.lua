@@ -78,7 +78,7 @@ ENTITY {
             shift = util.by_pixel(16, -16),
             tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
         },
-        
+
       },
     },
     working_visualisations = {
@@ -194,7 +194,7 @@ ENTITY {
                 animation_speed = 0.4
             }
         },
-        
+
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {

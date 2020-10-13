@@ -308,7 +308,7 @@ fun.autorecipes {
 					{name='gh',amount ='R'},
 					{name='recombinantery',amount ='R'},
 					{name='reca',amount =1},
-					{name='cage',amount ='+1'},					
+					{name='cage',amount ='+1'},
 				},
 			results =
 				{

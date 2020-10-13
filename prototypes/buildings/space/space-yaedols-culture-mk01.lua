@@ -78,7 +78,7 @@ ENTITY {
             shift = util.by_pixel(0, -16),
             tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
         },
-        
+
       },
     },
 
@@ -167,7 +167,7 @@ ENTITY {
                 animation_speed = 0.5
             }
         },
-        
+
     },
 
     fluid_boxes = {

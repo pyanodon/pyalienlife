@@ -140,7 +140,7 @@ ENTITY {
                 animation_speed = 0.4
             }
         },
-        
+
     },
 
     fluid_boxes = {

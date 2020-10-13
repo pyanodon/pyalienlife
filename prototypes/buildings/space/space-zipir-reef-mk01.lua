@@ -75,7 +75,7 @@ ENTITY {
             shift = util.by_pixel(8,-1),
             tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
         },
-        
+
     }
     },
     working_visualisations = {
@@ -154,7 +154,7 @@ ENTITY {
                 shift = util.by_pixel(230,0)
             }
         },
-        
+
     },
     fluid_boxes = {
         --1

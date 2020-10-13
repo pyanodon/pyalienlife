@@ -2223,6 +2223,6 @@ data.raw.module['cottongut-mk04'].limitation =
   'cottongut-science-blue-05',
 }
 
-for r, recipe in pairs(old_limits) do
+for _, recipe in pairs(old_limits) do
   table.insert(data.raw.module['cottongut-mk04'].limitation , recipe)
 end

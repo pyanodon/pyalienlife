@@ -900,7 +900,7 @@ script.on_event(
 				end
 			end
 		--elseif E.name == '' then
-			--asd		
+			--asd
 		end
 		if E.name == 'clone-1' then
 			local group = game.surfaces['nauvis'].create_unit_group{position = E.position, force = E.force}
@@ -2034,7 +2034,7 @@ script.on_event(
 			local player = game.players[event.player_index]
 			if global.tech_upgrades.techs[tech][sub_tech].is_upgrade == true then
 				--log(serpent.block(global.TRlist))
-				for u, upgrade in pairs(global.TRlist) do
+				for _, upgrade in pairs(global.TRlist) do
 					--log(u)
 					--log(serpent.block(upgrade))
 					--log(sub_tech)
@@ -2057,11 +2057,10 @@ script.on_event(
 				end
 			end
 			if global.tech_upgrades.techs[tech][sub_tech].recipes_to_unlock ~= nil then
-				for r, recipe in pairs(global.tech_upgrades.techs[tech][sub_tech].recipes_to_unlock) do
+				for _, recipe in pairs(global.tech_upgrades.techs[tech][sub_tech].recipes_to_unlock) do
 					player.force.recipes[recipe].enabled = true
 				end
 			end
-			local player = game.players[event.player_index]
 			if player.gui.screen.turd_confirm_frame ~= nil then
 				player.gui.screen.turd_confirm_frame.destroy()
 			end
@@ -2126,7 +2125,7 @@ script.on_event(
 							caption = 'Effected Entities'
 						}
 					)
-					for e, ent in pairs(tech.entities) do
+					for _, ent in pairs(tech.entities) do
 						local ent_name = game.entity_prototypes[ent].localised_name
 						flow.add(
 							{
@@ -2144,7 +2143,7 @@ script.on_event(
 								caption = 'Recipes to Unlock'
 							}
 						)
-						for r, recipe in pairs(tech.recipes_to_unlock) do
+						for _, recipe in pairs(tech.recipes_to_unlock) do
 							flow.add(
 								{
 									type = 'label',
@@ -2159,7 +2158,7 @@ script.on_event(
 									elem_type = 'recipe',
 									recipe = recipe,
 									enabled = false
-									--ignored_by_interaction = true			
+									--ignored_by_interaction = true
 								}
 							)
 						end
@@ -2472,13 +2471,12 @@ script.on_event(
 		end
 end)
 
-script.on_event(defines.events.on_entity_damaged, function(event)
-
+script.on_event(defines.events.on_entity_damaged, function()
+	-- Try to avoid this event... It fires... a LOT
 --log('hit')
-
 end)
 
-local function Tech_building_upgrades(event)
+local function _Tech_building_upgrades(event)
 
 	local tech = event.research
 
@@ -2554,7 +2552,7 @@ local function Tech_building_upgrades(event)
 							caption = 'Effected Entities'
 						}
 					)
-					for e, ent in pairs(tec.entities) do
+					for _, ent in pairs(tec.entities) do
 						local ent_name = game.entity_prototypes[ent].localised_name
 						flow.add(
 							{
@@ -2572,7 +2570,7 @@ local function Tech_building_upgrades(event)
 								caption = 'Recipes to Unlock'
 							}
 						)
-						for r, recipe in pairs(tec.recipes_to_unlock) do
+						for _, recipe in pairs(tec.recipes_to_unlock) do
 							flow.add(
 								{
 									type = 'label',
@@ -2587,7 +2585,7 @@ local function Tech_building_upgrades(event)
 									elem_type = 'recipe',
 									recipe = recipe,
 									enabled = false
-									--ignored_by_interaction = true			
+									--ignored_by_interaction = true
 								}
 							)
 						end
@@ -2603,8 +2601,8 @@ local function Tech_building_upgrades(event)
 				turd.turd_frame.add(
 					{
 						type = "sprite-button",
-                    	name = "turd_close",
-                    	sprite = "utility/close_fat"
+						name = "turd_close",
+						sprite = "utility/close_fat"
 					}
 				)
 
@@ -2612,7 +2610,7 @@ local function Tech_building_upgrades(event)
 		--log(serpent.block(global.tech_upgrades))
 		else
 			--log('hit')
-			for t,tec in pairs(global.tech_upgrades.techs[tech.name]) do
+			for _,tec in pairs(global.tech_upgrades.techs[tech.name]) do
 				--log(serpent.block(global.tech_upgrades.techs[tech.name]))
 				--log(serpent.block(tec))
 				tec.selected = false
