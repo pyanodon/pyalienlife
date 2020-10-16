@@ -5466,6 +5466,53 @@ local TRlist =
 					},
 				},
 
+--MOSS
+
+				{
+				base_recipe = 'moss-1',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'moss-1a',
+					tech = 'spores',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'moss-2',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'moss-2a',
+					tech = 'spores',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'moss-3',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'moss-3a',
+					tech = 'spores',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'moss-4',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'moss-4a',
+					tech = 'spores',
+					unlocked = false,
+					level = 2,
+					},
+				},
+
 --BIOPRINTING
 
 				{

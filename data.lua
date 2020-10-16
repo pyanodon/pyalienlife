@@ -346,7 +346,7 @@ require('prototypes/buildings/py-drive')
 
 require('prototypes/buildings/outpost')
 --require('prototypes/buildings/outpost-mining')
---require('prototypes/buildings/flyavan-outpost')
+require('prototypes/buildings/flyavan-outpost')
 --weapons/defenses
 --require('prototypes/weapons/turrets/gun-turret-mk01')
 --require('prototypes/weapons/turrets/rocket-turret-mk01')
@@ -416,8 +416,8 @@ require('prototypes/fluids/pre-pesticide-02')
 require('prototypes/fluids/ethyl-mercaptan')
 
 --Tech upgrade stuff--
---require('prototypes/upgrades/hidden-beacon')
---require('prototypes/upgrades/tech-upgrades')
+require('prototypes/upgrades/hidden-beacon')
+require('prototypes/upgrades/tech-upgrades')
 
 --(( RECIPES ))--
 require('prototypes/items/items')
@@ -426,6 +426,7 @@ require('prototypes/recipes/recipes-atomizer')
 require('prototypes/recipes/recipes-mo')
 require('prototypes/recipes/recipes-moss')
 require('prototypes/recipes/recipes-moss-products')
+require('prototypes/recipes/recipes-moss-products-upgrade')
 require('prototypes/recipes/recipes-seaweed')
 require('prototypes/recipes/recipes-seaweed-products')
 require('prototypes/recipes/recipes-sap')
@@ -668,7 +669,7 @@ local fun = require("prototypes/functions/functions")
 fun.reprocess_recipes_1()
 
 fun.reprocess_recipes_2()
---[[
+
 --(( Shortcut keys ))--
 local recipeselect=
 	{
@@ -679,4 +680,3 @@ local recipeselect=
 	}
 
 data:extend{recipeselect}
-]]--

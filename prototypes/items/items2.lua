@@ -113,3 +113,14 @@ ITEM {
     order = "a",
     stack_size = 100
 }
+
+ITEM {
+    type = "item",
+    name = "chlorinated-water",
+    icon = "__pyalienlifegraphics2__/graphics/icons/bleach.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 100
+}

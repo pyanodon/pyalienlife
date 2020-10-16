@@ -28,6 +28,7 @@ local tech_upgrade =
         kicalk = require("prototypes/upgrades/kicalk"),
         kmauts = require("prototypes/upgrades/kmauts"),
         micromine = require("prototypes/upgrades/micromine"),
+        moss = require("prototypes/upgrades/moss"),
         ulric = require("prototypes/upgrades/ulric"),
         seaweed = require("prototypes/upgrades/seaweed"),
         sap = require("prototypes/upgrades/sap"),

@@ -215,7 +215,7 @@ RECIPE {
     enabled = false,
     energy_required = 15,
     ingredients = {
-        {type = 'item', name = 'moss', amount = 10},
+        {type = 'item', name = 'moss', amount = 20},
         {type = 'item', name = 'alien-sample01', amount = 1},
         {type = 'item', name = 'alien-sample-02', amount = 1},
         {type = 'item', name = 'plastic-bar', amount = 15},
@@ -2514,3 +2514,19 @@ RECIPE {
     },
     --main_product = "chloral",
 }:add_unlock("abacus")--not a real tech
+
+RECIPE {
+    type = 'recipe',
+    name = 'chlorinated water',
+    category = 'chemistry',
+    enabled = false,
+    energy_required = 3,
+    ingredients = {
+        {type = 'fluid', name = 'water', amount = 100},
+        {type = 'fluid', name = 'chlorine', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'chlorinated-water', amount = 1},
+    },
+    --main_product = "chloral",
+}:add_unlock("moss")--not a real tech
