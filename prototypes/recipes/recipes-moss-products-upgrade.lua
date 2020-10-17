@@ -3,7 +3,7 @@ RECIPE {
     type = 'recipe',
     name = 'moss-1a',
     category = 'moss',
-    enabled = true,
+    enabled = false,
     energy_required = 15,
     ingredients = {
         {type = 'fluid', name = 'water', amount = 100},
@@ -38,7 +38,7 @@ RECIPE {
     icon_size = 32,
     subgroup = 'py-alienlife-plants',
     order = 'a'
-}:add_unlock("botany-mk01")
+}
 
 RECIPE {
     type = 'recipe',
@@ -59,7 +59,7 @@ RECIPE {
     icon_size = 32,
     subgroup = 'py-alienlife-plants',
     order = 'a'
-}:add_unlock("botany-mk02")
+}
 
 RECIPE {
     type = 'recipe',
@@ -81,7 +81,7 @@ RECIPE {
     icon_size = 32,
     subgroup = 'py-alienlife-plants',
     order = 'a'
-}:add_unlock("botany-mk03")
+}
 
 RECIPE {
     type = 'recipe',
@@ -104,4 +104,4 @@ RECIPE {
     icon_size = 32,
     subgroup = 'py-alienlife-plants',
     order = 'a'
-}:add_unlock("botany-mk04")
+}
