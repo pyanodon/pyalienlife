@@ -874,7 +874,6 @@ script.on_event(
 				}
 			global.pycloud.chests[E.unit_number] = chest
 			--log(serpent.block(global.pycloud))
-		--[[
 		elseif global.tech_upgrades.entities_master_list[E.name] ~= nil then
 			--log('hit')
 			local beacon = game.surfaces['nauvis'].create_entity{
@@ -885,7 +884,6 @@ script.on_event(
 			local module = beacon.get_inventory(defines.inventory.beacon_modules)
 			local mod = module.insert({name = global.tech_upgrades.entities_master_list[E.name] .. '-module', count = 1})
 			--log(mod)
-		]]--
 		elseif global.has_built_first_farm == false then
 			for _, farm in pairs(farm_buildings) do
 				if string.match(E.name, farm) then -- or string.match(E.ghost_name, farm) then
@@ -1898,6 +1896,114 @@ local function create_slaughterhouse_recipe_gui(event)
 	end
 end
 
+local function right_window(player, tech_name)
+	local sub_tech = player.gui.screen.turd_master_frame.right_tech_window
+				for t, tech in pairs(global.tech_upgrades.techs[tech_name]) do
+					log(t)
+					log(serpent.block(tech))
+
+					local flow = sub_tech.add(
+						{
+							type = 'frame',
+							name = 'tech_flow_' .. t .. '_' .. tech_name,
+							direction = 'vertical',
+							--style = 'inventory_scroll_pane'
+						}
+					)
+					flow.style.right_padding = 20
+						flow.add(
+							{
+								type = 'sprite',
+								name = 'tech_icon' .. t,
+								sprite = t,
+							}
+						)
+						flow.add(
+							{
+								type = 'label',
+								name = 'tech' .. t,
+								caption = {'technology-name.' .. t}
+							}
+						)
+						flow.add(
+							{
+								type = 'label',
+								name = 'tech_effects' .. t,
+								caption = {'technology-description.' .. t}
+							}
+						)
+						flow['tech_effects' .. t].style.maximal_width = 200
+						flow['tech_effects' .. t].style.single_line = false
+						for u, up in pairs(tech.upgrades) do
+							local con_num = up * 100
+							flow.add(
+								{
+									type = 'label',
+									name = 'tech_upgrade_effects' .. t .. u,
+									caption = u .. ' = ' .. con_num .. '%'
+								}
+							)
+						end
+						flow.add(
+							{
+								type = 'label',
+								name = 'entites' .. t,
+								caption = 'Effected Entities'
+							}
+						)
+						for _, ent in pairs(tech.entities) do
+							local ent_name = game.entity_prototypes[ent].localised_name
+							flow.add(
+								{
+									type = 'label',
+									name = t .. ent,
+									caption = ent_name
+								}
+							)
+						end
+						if tech.recipes_to_unlock ~= nil then
+							flow.add(
+								{
+									type = 'label',
+									name = 'unlocked_recipes',
+									caption = 'Recipes to Unlock'
+								}
+							)
+							for _, recipe in pairs(tech.recipes_to_unlock) do
+								flow.add(
+									{
+										type = 'label',
+										name = t .. recipe,
+										caption = {tostring('recipe-name.' .. recipe)}
+									}
+								)
+								flow.add(
+									{
+										type = 'choose-elem-button',
+										name = t .. recipe .. 'tooltip',
+										elem_type = 'recipe',
+										recipe = recipe,
+										enabled = false
+										--ignored_by_interaction = true
+									}
+								)
+							end
+						end
+						flow.add(
+							{
+								type = 'button',
+								name = 'turd_select_button_' .. t,
+								caption = 'Select'
+							}
+						)
+				end
+				sub_tech.add({
+					type = 'flow',
+					name = 'right_window-' .. tech_name,
+				})
+
+end
+
 script.on_event(
 	defines.events.on_gui_click,
 	function(event)
@@ -2071,105 +2177,11 @@ script.on_event(
 		elseif string.match(event.element.name, 'turd_master_button') then
 			local player = game.players[event.player_index]
 			local tech_name = string.match(event.element.name, '[^_]*$')
+			log(event.element.name)
 			--log(serpent.block(tech_name))
-			for t, tech in pairs(global.tech_upgrades.techs[tech_name]) do
-				--log(t)
-				--log(serpent.block(tech))
-				local sub_tech = player.gui.screen.turd_master_frame.right_tech_window
-				local flow = sub_tech.add(
-					{
-						type = 'frame',
-						name = 'tech_flow_' .. t .. '_' .. tech_name,
-						direction = 'vertical',
-						--style = 'inventory_scroll_pane'
-					}
-				)
-				flow.style.right_padding = 20
-					flow.add(
-						{
-							type = 'sprite',
-							name = 'tech_icon' .. t,
-							sprite = t,
-						}
-					)
-					flow.add(
-						{
-							type = 'label',
-							name = 'tech' .. t,
-							caption = {'technology-name.' .. t}
-						}
-					)
-					flow.add(
-						{
-							type = 'label',
-							name = 'tech_effects' .. t,
-							caption = {'technology-description.' .. t}
-						}
-					)
-					flow['tech_effects' .. t].style.maximal_width = 200
-					flow['tech_effects' .. t].style.single_line = false
-					for u, up in pairs(tech.upgrades) do
-						local con_num = up * 100
-						flow.add(
-							{
-								type = 'label',
-								name = 'tech_upgrade_effects' .. t .. u,
-								caption = u .. ' = ' .. con_num .. '%'
-							}
-						)
-					end
-					flow.add(
-						{
-							type = 'label',
-							name = 'entites' .. t,
-							caption = 'Effected Entities'
-						}
-					)
-					for _, ent in pairs(tech.entities) do
-						local ent_name = game.entity_prototypes[ent].localised_name
-						flow.add(
-							{
-								type = 'label',
-								name = t .. ent,
-								caption = ent_name
-							}
-						)
-					end
-					if tech.recipes_to_unlock ~= nil then
-						flow.add(
-							{
-								type = 'label',
-								name = 'unlocked_recipes',
-								caption = 'Recipes to Unlock'
-							}
-						)
-						for _, recipe in pairs(tech.recipes_to_unlock) do
-							flow.add(
-								{
-									type = 'label',
-									name = t .. recipe,
-									caption = {tostring('recipe-name.' .. recipe)}
-								}
-							)
-							flow.add(
-								{
-									type = 'choose-elem-button',
-									name = t .. recipe .. 'tooltip',
-									elem_type = 'recipe',
-									recipe = recipe,
-									enabled = false
-									--ignored_by_interaction = true
-								}
-							)
-						end
-					end
-					flow.add(
-						{
-							type = 'button',
-							name = 'turd_select_button_' .. t,
-							caption = 'Select'
-						}
-					)
+			if player.gui.screen.turd_master_frame.right_tech_window['right_window-' .. tech_name] == nil then
+				player.gui.screen.turd_master_frame.right_tech_window.clear()
+				right_window(player, tech_name)
 			end
 		elseif event.element.name == 'route_set_button' then
 			local id_num = next(lastclickedunit)
@@ -2675,9 +2687,9 @@ end
 
 script.on_event(defines.events.on_research_finished, function(event)
 	Tech_recipe_upgrades(event)
-	--Tech_building_upgrades(event)
+	_Tech_building_upgrades(event)
 end)
---[[
+
 script.on_event("tech-upgrades", function(event)
 
 	local player = game.players[event.player_index]
@@ -2747,4 +2759,3 @@ script.on_event("tech-upgrades", function(event)
 	end
 
 end)
-]]--
