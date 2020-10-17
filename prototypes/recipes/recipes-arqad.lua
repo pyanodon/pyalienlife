@@ -358,8 +358,9 @@ RECIPE {
         },
     results = {
         {type = 'item', name ='arqad-egg', amount = 20},
+        {type = 'item', name = 'empty-barrel-milk', amount = 1},
     },
-    --main_product = "arqad-mk02",
+    main_product = "arqad-egg",
     icons =
         {
             {icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png"},

@@ -1,6 +1,16 @@
 local fun = require("prototypes/functions/functions")
 
 --TECHNOLOGY--
+TECHNOLOGY('advanced-mining-facilities'):add_pack('py-science-pack')
+TECHNOLOGY('diamond-mining'):add_pack('py-science-pack')
+TECHNOLOGY('fusion-mk01'):add_pack('py-science-pack')
+TECHNOLOGY('fusion-mk02'):add_pack('py-science-pack')
+TECHNOLOGY('fusion-mk03'):add_pack('py-science-pack')
+TECHNOLOGY('fusion-mk04'):add_pack('py-science-pack')
+TECHNOLOGY('helium-processing'):add_pack('py-science-pack')
+TECHNOLOGY('molybdenum-processing'):add_pack('py-science-pack')
+TECHNOLOGY('regolite-mining'):add_pack('py-science-pack')
+TECHNOLOGY('vanadium-processing'):add_pack('py-science-pack')
 
 --BUILDINDS--
 RECIPE('plankton-farm'):remove_unlock('vanadium-processing'):add_unlock('microbiology-mk01'):remove_ingredient("niobium-plate"):remove_ingredient("storage-tank"):add_ingredient({type = "item", name = "pipe", amount = 20}):add_ingredient({type = "item", name = "iron-gear-wheel", amount = 25}):subgroup_order('py-alienlife-buildings-mk01', 'p')
