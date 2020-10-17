@@ -5512,6 +5512,17 @@ local TRlist =
 					level = 2,
 					},
 				},
+				{
+				base_recipe = 'moss-5',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'moss-5a',
+					tech = 'spores',
+					unlocked = false,
+					level = 2,
+					},
+				},
 
 --BIOPRINTING
 
