@@ -28,7 +28,7 @@ ITEM {
     order = "a",
     stack_size = 300,
     fuel_category = 'auog',
-    fuel_value = '250MJ',
+    fuel_value = '350MJ',
     burnt_result = 'used-auog'
 }
 
@@ -48,7 +48,7 @@ ITEM {
     order = "a",
     stack_size = 300,
     fuel_category = 'dingrits',
-    fuel_value = '220MJ',
+    fuel_value = '420MJ',
     burnt_result = 'used-dingrit'
 }
 
