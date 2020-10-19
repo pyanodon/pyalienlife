@@ -306,6 +306,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'arqad-mk02', probability = 0.005, amount = 1},
         {type = 'item', name = 'arqad', probability = 0.8, amount = 1},
+        {type = 'item', name = 'empty-barrel', amount = 5},
     },
     --main_product = "arqad-mk02",
     icons =
@@ -331,6 +332,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'arqad-egg-nest', amount = 1},
+        {type = 'item', name = 'empty-comb', amount = 5},
     },
     --main_product = "arqad-mk02",
     icons =
@@ -441,6 +443,7 @@ RECIPE {
         {type = 'item', name = 'arqad-mk03', probability = 0.005, amount = 1},
         {type = 'item', name = 'arqad-mk02', probability = 0.4, amount = 1},
         {type = 'item', name = 'arqad', probability = 0.4, amount = 1},
+        {type = 'item', name = 'empty-barrel', amount = 9},
     },
     --main_product = "arqad-mk03",
     icons =
@@ -466,6 +469,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'arqad-egg-nest-3', amount = 1},
+        {type = 'item', name = 'empty-comb', amount = 5},
     },
     --main_product = "arqad-mk03",
     icons =
