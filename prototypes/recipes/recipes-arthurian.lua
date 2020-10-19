@@ -209,6 +209,7 @@ RECIPE {
 --Secondary Upgrade Recipes--
 --SUR--
 --WIP--
+
 --mk02--
 --DONE--
 
@@ -239,7 +240,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arthurian',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("arthurian-breeding-1")
 
 RECIPE {
     type = 'recipe',
@@ -263,7 +264,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arthurian',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("arthurian-breeding-1")
 
 RECIPE {
     type = 'recipe',
@@ -290,7 +291,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arthurian',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("arthurian-breeding-1")
 
 RECIPE {
     type = 'recipe',
@@ -316,7 +317,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arthurian',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("arthurian-breeding-1")
 
 --MK03--
 --WIP--
@@ -345,7 +346,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arthurian',
     order = 'zb'
-}:add_unlock("artificial-breeding")
+}:add_unlock("arthurian-breeding-2")
 
 --MK04--
 --WIP--
@@ -374,4 +375,4 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arthurian',
     order = 'zc'
-}:add_unlock("biased-mutation")
+}:add_unlock("arthurian-breeding-3")

@@ -1,40 +1,40 @@
+Antalope
+Arqad
+Arthurian
+Auog
+Bhoddos
+Cadaveric-arum
+Cottongut
+Cridren
+Dhilmos
+Dingrits
+Fawogae
+Fish
+Grod
+Kicalk
+Kmauts
+Korlex
+Moondrop
+Mukmoux
+Navens
+Phadai
+Phagnot
+Ralesia
+Rennea
+Scrondrix
+Sea-Sponge
+Trits
+Tuupra
+Ulric
+Vonix
+Vrauks
+Xeno
+Xyhiphoe
+Yaedols
+Yotoi
+Zipir
 
 --modules with bonus amounts chaeck and adjusted
     these are machines that are adjusted to not hit the 32,767% cap
-    
-    Cadaveric arum
-    fawogae
-    Navens
-    Yaedols
-    Bhoddos
-    Arthurian
-    Auog
-    Cridren
-    Dhilmos
-    Dingrits
-    Korlex
-    Fish
-    Kmauts
-    Mukmoux
-    Phadai
-    Phagnot
-    Cottongut
-    Scrondrix
-    Sea Sponge
-    Trits
-    Ulric
-    Vrauks
-    Xeno
-    Xyhiphoe
-    Zipir
-    Grod
-    Kicalk
-    Ralesia
-    Rennea
-    Tuupra
-    Yotoi
-    Vonix
-    Arqad
-    Moondrop
 
 any ones with a breeding recipe should be done but will be rechecked to confirm it is up to spec

@@ -5396,6 +5396,8 @@ local alien_life_limitations_cottongut =
     {
     }
 
+local alien_life_limitations_guar = {}
+
 ----MODULES----
 
 ITEM {
@@ -8621,6 +8623,30 @@ ITEM {
 	limitation_message_key = "cottongut"
 }
 
+----GUAR
+
+data.raw.item.guar = nil
+
+ITEM {
+    type = "module",
+    name = "guar",
+    icons =
+	{
+        {icon = "__pypetroleumhandlinggraphics__/graphics/icons/guar.png"},
+        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 32,
+	category = "guar",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "g-a",
+    stack_size = 300,
+	effect = { speed = {bonus = 7.5}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_guar,
+	limitation_message_key = "guar"
+}
+
 ----ARQAD
 
 ITEM {
@@ -8720,6 +8746,38 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "arqad-egg-nest-3",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
+            {icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.25,shift = {-7.5,-7.5}},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arqad",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "arqad-egg-nest-4",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
+            {icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.25,shift = {-7.5,-7.5}},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arqad",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "arqad-egg",
     icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png",
     icon_size = 64,
@@ -8731,8 +8789,94 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "arqad-egg-3",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arqad",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "arqad-egg-4",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arqad",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "arqad-maggot",
     icon = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png",
+    icon_size = 64,
+    icon_mipmaps = 7,
+    pictures =
+    {
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-02.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-03.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-04.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-05.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-06.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-07.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-08.png",   scale = 0.25, mipmap_count = 1 },
+
+    },
+    flags = {},
+    subgroup = "py-alienlife-arqad",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "arqad-maggot-3",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+        },
+    icon_size = 64,
+    icon_mipmaps = 7,
+    pictures =
+    {
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-02.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-03.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-04.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-05.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-06.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-07.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-08.png",   scale = 0.25, mipmap_count = 1 },
+
+    },
+    flags = {},
+    subgroup = "py-alienlife-arqad",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "arqad-maggot-4",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+        },
     icon_size = 64,
     icon_mipmaps = 7,
     pictures =
@@ -9272,6 +9416,10 @@ data:extend(
   {
     type = "module-category",
     name = "cottongut"
+  },
+  {
+    type = "module-category",
+    name = "guar"
   },
   --item used to select the creature and start and end points of the route
 	{
