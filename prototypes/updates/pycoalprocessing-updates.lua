@@ -40,7 +40,6 @@ ITEM("botanical-nursery-mk03"):set("icon", "__pyalienlifegraphics__/graphics/ico
 ITEM("botanical-nursery-mk04"):set("icon", "__pyalienlifegraphics__/graphics/icons/botanical-nursery-mk04.png"):set_fields {icon_size = 64,}
 
 -----RECIPES-----
---ITEM('fawogae')
 FLUID('carbon-dioxide'):subgroup_order("py-alienlife-items", "a")
 ITEM('ralesia-seeds'):subgroup_order("py-alienlife-ralesia", "a")
 ITEM('bonemeal'):subgroup_order("py-alienlife-items", "a")
@@ -56,12 +55,11 @@ RECIPE('log5'):change_category('fwf'):add_ingredient({type = "item", name = "woo
 RECIPE('log6'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a"):remove_unlock('coal-processing-2'):add_unlock('botany-mk02')
 RECIPE('log-wood'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('coal-processing-1'):add_unlock('botany-mk01')
 RECIPE('fawogae-substrate'):remove_ingredient("fawogae"):add_ingredient({type = "item", name = "petri-dish-bacteria", amount = 1}):add_ingredient({type = "item", name = "cellulose", amount = 1}):replace_ingredient("coke","moss"):subgroup_order("py-alienlife-recipes", "a")
-RECIPE('bio-sample01'):add_ingredient({type = "item", name = "petri-dish-bacteria", amount = 2})
+RECIPE('bio-sample01'):add_ingredient({type = "item", name = "petri-dish-bacteria", amount = 2}):add_ingredient({type = "item", name = "bio-sample", amount = 12})
 RECIPE('ralesia'):remove_unlock('coal-processing-1')
 RECIPE('ralesia-seeds'):remove_unlock('coal-processing-1'):add_unlock('ralesia'):subgroup_order("py-alienlife-ralesia", "a"):change_category('nursery'):replace_ingredient("ralesia","ralesias")
 RECIPE('chemical-science-pack'):add_ingredient({type = "item", name = "alien-sample-02", amount = 1})
 RECIPE('filtration-media'):add_ingredient({type = "item", name = "micro-fiber", amount = 2})
-RECIPE('alien-sample01'):add_ingredient({type = "item", name = "bio-sample", amount = 12})
 RECIPE('flask'):remove_ingredient("wood"):add_ingredient({type = "item", name = "stopper", amount = 2})
 RECIPE('aromatics-to-plastic'):remove_unlock('methanol-processing-1'):add_unlock('coal-processing-1'):change_category('biofactory'):remove_ingredient("aromatics"):add_ingredient({type = "fluid", name = "aromatics", amount = 50}):remove_ingredient("syngas"):add_ingredient({type = "fluid", name = "syngas", amount = 100})
 
