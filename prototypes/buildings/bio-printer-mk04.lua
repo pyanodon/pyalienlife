@@ -55,7 +55,6 @@ ENTITY {
         emissions_per_minute = 0.5,
     },
     energy_usage = "16000kW",
-    ingredient_count = 50,
     fluid_boxes = {
         --1
         {

@@ -56,7 +56,6 @@ ENTITY {
         emissions_per_minute = -0.1,
     },
     energy_usage = "100kW",
-    ingredient_count = 20,
     animation = {
         layers = {
             --off
