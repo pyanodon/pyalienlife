@@ -5524,6 +5524,20 @@ local TRlist =
 					},
 				},
 
+--SAWDUST
+
+				{
+				base_recipe = 'energy-drink',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'energy-drinkb',
+					tech = 'ethanol-boost',
+					unlocked = false,
+					level = 2,
+					},
+				},
+
 --BIOPRINTING
 
 				{
@@ -5672,6 +5686,8 @@ local TRlist =
 				['organ-printing-mk03'] = true,
 				['organ-printing-mk04'] = true,
 				['high-viability'] = true,
+				['ethanol-boost'] = true,
+				['spores'] = true,
 			},
 	}
 

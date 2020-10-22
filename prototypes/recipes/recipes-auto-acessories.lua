@@ -695,3 +695,23 @@ RECIPE {
         {type = 'item', name = 'auog-food-02', amount = 5},
     },
 }:add_unlock("sawdust")
+
+------phadai alcoholic energy drink-----
+
+RECIPE {
+    type = "recipe",
+    name = "energy-drinkb",
+    category = "mixer",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'aluminium-plate', amount = 7},
+        {type = 'fluid', name = 'ethanol', amount = 50},
+        {type = 'fluid', name = 'syrup-01', amount = 25},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'energy-drink', amount = 7}
+    },
+    --main_product = "adrenal-cortex",
+}:add_unlock("ethanol-boost")
