@@ -8734,8 +8734,25 @@ ITEM {
     name = "arqad-egg-nest",
     icons =
         {
+            {icon = "__pyalienlifegraphics__/graphics/icons/vrauks.png"},
+            {icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.25,shift = {-7.5,-7.5}},
+            --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arqad",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "arqad-egg-nest-2",
+    icons =
+        {
             {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
             {icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.25,shift = {-7.5,-7.5}},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
         },
     icon_size = 64,
     flags = {},
@@ -8749,7 +8766,7 @@ ITEM {
     name = "arqad-egg-nest-3",
     icons =
         {
-            {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/phadai.png"},
             {icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.25,shift = {-7.5,-7.5}},
             {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
         },
@@ -8765,7 +8782,7 @@ ITEM {
     name = "arqad-egg-nest-4",
     icons =
         {
-            {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/korlex.png"},
             {icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.25,shift = {-7.5,-7.5}},
             {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
         },
@@ -8786,6 +8803,23 @@ ITEM {
     order = "a",
     stack_size = 50
 }
+
+
+ITEM {
+    type = "item",
+    name = "arqad-egg-2",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arqad",
+    order = "a",
+    stack_size = 50
+}
+
 
 ITEM {
     type = "item",
@@ -8840,6 +8874,35 @@ ITEM {
     order = "a",
     stack_size = 50
 }
+
+ITEM {
+    type = "item",
+    name = "arqad-maggot-2",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+        },
+    icon_size = 64,
+    icon_mipmaps = 7,
+    pictures =
+    {
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-02.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-03.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-04.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-05.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-06.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-07.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-08.png",   scale = 0.25, mipmap_count = 1 },
+
+    },
+    flags = {},
+    subgroup = "py-alienlife-arqad",
+    order = "a",
+    stack_size = 50
+}
+
 
 ITEM {
     type = "item",

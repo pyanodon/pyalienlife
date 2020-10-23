@@ -2,6 +2,15 @@ local fun = require("prototypes/functions/functions")
 
 if mods['pyhightech'] then
     require('prototypes/recipes/recipes-moondrop-products')
+    RECIPE('arqad-mk02'):remove_ingredient('crude-oil-barrel'):add_ingredient({type = 'item', name = 'moondrop-fueloil', amount = 25}):add_ingredient({type = 'item', name = 'moondrop-diesel', amount = 5})
+    --data.raw.recipe['arqad-mk02'].results[3] = nil
+    fun.results_replacer('arqad-mk02','empty-barrel','empty-barrel', 2)
+    RECIPE('arqad-mk03'):remove_ingredient('crude-oil-barrel'):add_ingredient({type = 'item', name = 'moondrop-diesel', amount = 40}):add_ingredient({type = 'item', name = 'moondrop-kerosene', amount = 10})
+    --data.raw.recipe['arqad-mk03'].results[4] = nil
+    fun.results_replacer('arqad-mk03','empty-barrel','empty-barrel', 4)
+    RECIPE('arqad-mk04'):remove_ingredient('crude-oil-barrel'):add_ingredient({type = 'item', name = 'moondrop-kerosene', amount = 40}):add_ingredient({type = 'item', name = 'moondrop-gas', amount = 10})
+    --data.raw.recipe['arqad-mk04'].results[5] = nil
+    fun.results_replacer('arqad-mk04','empty-barrel','empty-barrel', 8)
 end
 
 --BUILDINDS--

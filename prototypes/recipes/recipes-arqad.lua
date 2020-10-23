@@ -247,6 +247,85 @@ RECIPE {
     order = 'a',
 }:add_unlock("growth-hormone")
 
+----arqad eggs----
+
+RECIPE {
+    type = 'recipe',
+    name = 'arqad-mk01-breeding',
+    category = 'arqad',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'item', name = 'arqad', amount = 1},
+        {type = 'item', name = 'vrauks', amount = 3},
+        {type = 'item', name = 'filled-comb', amount = 5},
+        },
+    results = {
+        {type = 'item', name = 'arqad-egg-nest', amount = 1},
+        {type = 'item', name = 'empty-comb', amount = 5},
+    },
+    --main_product = "arqad-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/vrauks.png"},
+            {icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.25,shift = {-7.5,-7.5}},
+            --{icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', scale = 0.25,shift = {-7.5,-7.5}},
+        },
+    icon_size = 64,
+    subgroup = 'py-alienlife-arqad',
+    order = 'za'
+}:add_unlock("arqad-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'arqad-mk01-incubating',
+    category = 'vrauks',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'item', name = 'arqad-egg-nest', amount = 1},
+        {type = 'item', name = 'bedding', amount = 2},
+        {type = 'item', name = 'vrauk-food-01', amount = 2},
+        },
+    results = {
+        {type = 'item', name ='arqad-egg', amount = 20},
+    },
+    --main_product = "arqad-egg",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png"},
+            --{icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', scale = 0.25,shift = {-7.5,-7.5}},
+        },
+    icon_size = 64,
+    subgroup = 'py-alienlife-arqad',
+    order = 'za'
+}:add_unlock("arqad-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'arqad-hatching',
+    category = 'incubator',
+    enabled = false,
+    energy_required = 50,
+    ingredients = {
+        {type = 'item', name = 'arqad-egg', amount = 5},
+        {type = 'fluid', name = 'hot-air', amount = 100},
+        },
+    results = {
+        {type = 'item', name ='arqad-maggot', amount = 4},
+    },
+    --main_product = "arqad-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png"},
+            --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+            --{icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', scale = 0.25,shift = {-7.5,-7.5}},
+        },
+    icon_size = 64,
+    subgroup = 'py-alienlife-arqad',
+    order = 'za'
+}:add_unlock("arqad-mk02")
+
 ----adverse products----
 
 ----PROCESSING----
@@ -286,7 +365,7 @@ RECIPE {
 
 --Secondary Upgrade Recipes--
 --SUR--
---WIP--
+--DONE--
 
 --mk02--
 --DONE--
@@ -306,7 +385,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'arqad-mk02', probability = 0.005, amount = 1},
         {type = 'item', name = 'arqad', probability = 0.8, amount = 1},
-        {type = 'item', name = 'empty-barrel', amount = 5},
+        {type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "arqad-mk02",
     icons =
@@ -317,7 +396,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arqad',
     order = 'za'
-}:add_unlock("arqad-breeding-1"):remove_ingredient('crude-oil-barrel'):add_ingredient({type = 'item', name = 'moondrop-fueloil', amount = 25}):add_ingredient({type = 'item', name = 'moondrop-diesel', amount = 5})
+}:add_unlock("arqad-breeding-1")
 
 RECIPE {
     type = 'recipe',
@@ -331,7 +410,7 @@ RECIPE {
         {type = 'item', name = 'filled-comb', amount = 5},
         },
     results = {
-        {type = 'item', name = 'arqad-egg-nest', amount = 1},
+        {type = 'item', name = 'arqad-egg-nest-2', amount = 1},
         {type = 'item', name = 'empty-comb', amount = 5},
     },
     --main_product = "arqad-mk02",
@@ -353,13 +432,13 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = 'item', name = 'arqad-egg-nest', amount = 1},
+        {type = 'item', name = 'arqad-egg-nest-2', amount = 1},
         {type = 'item', name = 'bedding', amount = 2},
         {type = 'item', name = 'barrel-milk', amount = 1},
         {type = 'item', name = 'ulric-food-01', amount = 1},
         },
     results = {
-        {type = 'item', name ='arqad-egg', amount = 20},
+        {type = 'item', name ='arqad-egg-2', amount = 20},
         {type = 'item', name = 'empty-barrel-milk', amount = 1},
     },
     --main_product = "arqad-egg",
@@ -380,11 +459,11 @@ RECIPE {
     enabled = false,
     energy_required = 50,
     ingredients = {
-        {type = 'item', name = 'arqad-egg', amount = 5},
+        {type = 'item', name = 'arqad-egg-2', amount = 5},
         {type = 'fluid', name = 'hot-air', amount = 100},
         },
     results = {
-        {type = 'item', name ='arqad-maggot', amount = 4},
+        {type = 'item', name ='arqad-maggot-2', amount = 4},
     },
     --main_product = "arqad-mk02",
     icons =
@@ -405,7 +484,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = 'item', name = 'arqad-maggot', amount = 9},
+        {type = 'item', name = 'arqad-maggot-2', amount = 9},
         {type = 'item', name = 'meat', amount = 10},
         {type = 'item', name = 'zipir-pup', amount = 2},
         },
@@ -425,7 +504,7 @@ RECIPE {
 }:add_unlock("arqad-breeding-1")
 
 --MK03--
---WIP--
+--DONE--
 
 RECIPE {
     type = 'recipe',
@@ -434,8 +513,8 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = 'item', name = 'arqad-maggot-3', amount = 25},
-        {type = 'item', name = 'crude-oil-barrel', amount = 5},
+        {type = 'item', name = 'arqad-maggot-2', amount = 25},
+        {type = 'item', name = 'crude-oil-barrel', amount = 10},
         {type = 'item', name = 'coke', amount = 20},
         {type = 'item', name = 'mutant-enzymes-barrel', amount = 4},
         },
@@ -443,7 +522,7 @@ RECIPE {
         {type = 'item', name = 'arqad-mk03', probability = 0.005, amount = 1},
         {type = 'item', name = 'arqad-mk02', probability = 0.4, amount = 1},
         {type = 'item', name = 'arqad', probability = 0.4, amount = 1},
-        {type = 'item', name = 'empty-barrel', amount = 9},
+        {type = 'item', name = 'empty-barrel', amount = 14},
     },
     --main_product = "arqad-mk03",
     icons =
@@ -454,7 +533,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arqad',
     order = 'zb'
-}:add_unlock("arqad-breeding-2"):remove_ingredient('crude-oil-barrel'):add_ingredient({type = 'item', name = 'moondrop-diesel', amount = 40}):add_ingredient({type = 'item', name = 'moondrop-kerosene', amount = 10})
+}:add_unlock("arqad-breeding-2")
 
 RECIPE {
     type = 'recipe',
@@ -464,7 +543,7 @@ RECIPE {
     energy_required = 100,
     ingredients = {
         {type = 'item', name = 'arqad-mk03', amount = 1},
-        {type = 'item', name = 'ulric', amount = 2},
+        {type = 'item', name = 'phadai', amount = 2},
         {type = 'item', name = 'filled-comb', amount = 5},
         },
     results = {
@@ -474,7 +553,7 @@ RECIPE {
     --main_product = "arqad-mk03",
     icons =
         {
-            {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/phadai.png"},
             {icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.25,shift = {-7.5,-7.5}},
             {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png', scale = 0.25,shift = {-7.5,-7.5}},
         },
@@ -486,18 +565,17 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'arqad-mk03-incubating',
-    category = 'ulric',
+    category = 'phadai',
     enabled = false,
     energy_required = 100,
     ingredients = {
         {type = 'item', name = 'arqad-egg-nest-3', amount = 1},
         {type = 'item', name = 'bedding', amount = 2},
-        {type = 'item', name = 'barrel-milk', amount = 1},
-        {type = 'item', name = 'ulric-food-01', amount = 1},
+        {type = 'item', name = 'energy-drink', amount = 1},
+        {type = 'item', name = 'phadai-food-02', amount = 2},
         },
     results = {
         {type = 'item', name ='arqad-egg-3', amount = 20},
-        {type = 'item', name = 'empty-barrel-milk', amount = 1},
     },
     --main_product = "arqad-egg-3",
     icons =
@@ -543,8 +621,8 @@ RECIPE {
     energy_required = 100,
     ingredients = {
         {type = 'item', name = 'arqad-maggot-3', amount = 9},
-        {type = 'item', name = 'meat', amount = 10},
-        {type = 'item', name = 'zipir-pup', amount = 2},
+        {type = 'item', name = 'meat', amount = 20},
+        {type = 'item', name = 'dhilmos-pup', amount = 5},
         },
     results = {
         {type = 'item', name ='arqad-mk03', amount_min = 3, amount_max = 13},
@@ -562,4 +640,139 @@ RECIPE {
 }:add_unlock("arqad-breeding-2")
 
 --MK04--
---WIP--
+--DONE--
+
+RECIPE {
+    type = 'recipe',
+    name = 'arqad-mk04',
+    category = 'arqad',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'item', name = 'arqad-maggot-3', amount = 25},
+        {type = 'item', name = 'crude-oil-barrel', amount = 20},
+        {type = 'item', name = 'coke', amount = 20},
+        {type = 'item', name = 'mutant-enzymes-barrel', amount = 8},
+        },
+    results = {
+        {type = 'item', name = 'arqad-mk04', probability = 0.005, amount = 1},
+        {type = 'item', name = 'arqad-mk03', probability = 0.3, amount = 1},
+        {type = 'item', name = 'arqad-mk02', probability = 0.3, amount = 1},
+        {type = 'item', name = 'arqad', probability = 0.2, amount = 1},
+        {type = 'item', name = 'empty-barrel', amount = 28},
+    },
+    --main_product = "arqad-mk04",
+    icons =
+        {
+            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png', icon_size = 64},
+            {icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
+        },
+    icon_size = 64,
+    subgroup = 'py-alienlife-arqad',
+    order = 'zb'
+}:add_unlock("arqad-breeding-3")
+
+RECIPE {
+    type = 'recipe',
+    name = 'arqad-mk04-breeding',
+    category = 'arqad',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'item', name = 'arqad-mk04', amount = 1},
+        {type = 'item', name = 'korlex', amount = 2},
+        {type = 'item', name = 'filled-comb', amount = 5},
+        },
+    results = {
+        {type = 'item', name = 'arqad-egg-nest-4', amount = 1},
+        {type = 'item', name = 'empty-comb', amount = 5},
+    },
+    --main_product = "arqad-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/korlex.png"},
+            {icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.25,shift = {-7.5,-7.5}},
+            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png', scale = 0.25,shift = {-7.5,-7.5}},
+        },
+    icon_size = 64,
+    subgroup = 'py-alienlife-arqad',
+    order = 'zb'
+}:add_unlock("arqad-breeding-3")
+
+RECIPE {
+    type = 'recipe',
+    name = 'arqad-mk04-incubating',
+    category = 'korlex',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'item', name = 'arqad-egg-nest-4', amount = 1},
+        {type = 'item', name = 'bedding', amount = 2},
+        {type = 'item', name = 'barrel-milk', amount = 5},
+        {type = 'item', name = 'korlex-food-02', amount = 4},
+        },
+    results = {
+        {type = 'item', name ='arqad-egg-4', amount = 20},
+        {type = 'item', name = 'empty-barrel-milk', amount = 5},
+    },
+    --main_product = "arqad-egg-4",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png"},
+            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png', scale = 0.25,shift = {-7.5,-7.5}},
+        },
+    icon_size = 64,
+    subgroup = 'py-alienlife-arqad',
+    order = 'zb'
+}:add_unlock("arqad-breeding-3")
+
+RECIPE {
+    type = 'recipe',
+    name = 'arqad-mk04-hatching',
+    category = 'incubator',
+    enabled = false,
+    energy_required = 50,
+    ingredients = {
+        {type = 'item', name = 'arqad-egg-4', amount = 5},
+        {type = 'fluid', name = 'hot-air', amount = 100},
+        },
+    results = {
+        {type = 'item', name ='arqad-maggot-4', amount = 4},
+    },
+    --main_product = "arqad-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png"},
+            --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png', scale = 0.25,shift = {-7.5,-7.5}},
+        },
+    icon_size = 64,
+    subgroup = 'py-alienlife-arqad',
+    order = 'zb'
+}:add_unlock("arqad-breeding-3")
+
+RECIPE {
+    type = 'recipe',
+    name = 'arqad-mk04-maturing',
+    category = 'arqad',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'item', name = 'arqad-maggot-4', amount = 9},
+        {type = 'item', name = 'meat', amount = 30},
+        {type = 'item', name = 'xyhiphoe-cub', amount = 8},
+        },
+    results = {
+        {type = 'item', name ='arqad-mk04', amount_min = 3, amount_max = 13},
+    },
+    --main_product = "arqad-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png"},
+            --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png', scale = 0.25,shift = {-7.5,-7.5}},
+        },
+    icon_size = 64,
+    subgroup = 'py-alienlife-arqad',
+    order = 'zb'
+}:add_unlock("arqad-breeding-3")

@@ -2,7 +2,6 @@
 --Breeding recipes started
 
 mk02:
-arqad
 arthurian
 
 
@@ -20,3 +19,16 @@ mk03:
 
 
 mk04:
+
+
+--Breeding recipes completed
+
+mk02:
+arqad
+
+
+mk03:
+arqad
+
+mk04:
+arqad
