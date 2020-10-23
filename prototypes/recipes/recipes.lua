@@ -1919,14 +1919,14 @@ RECIPE {
     name = "flask-2",
     category = 'glassworks',
     enabled = false,
-    energy_required = 15,
+    energy_required = 3,
     ingredients = {
-        {type = "fluid", name = "molten-glass", amount = 350},
-        {type = "item", name = "boron-trioxide", amount = 8},
-        {type = "item", name = "stopper", amount = 15},
+        {type = "fluid", name = "molten-glass", amount = 100},
+        {type = "item", name = "boron-trioxide", amount = 5},
+        {type = "item", name = "stopper", amount = 4},
     },
     results = {
-        {"flask", 10}
+        {"flask", 3}
     },
     icon = "__pycoalprocessinggraphics__/graphics/icons/mip/glassware-01.png",
     icon_size = 64,
@@ -1939,16 +1939,16 @@ RECIPE {
     name = "flask-3",
     enabled = false,
     category = 'glassworks',
-    energy_required = 18,
+    energy_required = 5,
     ingredients = {
-        {type = "fluid", name = "molten-glass", amount = 250},
-        {type = "fluid", name = "refsyngas", amount = 200},
+        {type = "fluid", name = "molten-glass", amount = 100},
+        {type = "fluid", name = "refsyngas", amount = 150},
         {type = "item", name = "purified-quartz", amount = 1},
-        {type = "item", name = "stopper", amount = 25},
-        {type = "item", name = "boron-trioxide", amount = 15}
+        {type = "item", name = "stopper", amount = 5},
+        {type = "item", name = "boron-trioxide", amount = 5}
     },
     results = {
-        {"flask", 25}
+        {"flask", 6}
     },
     icon = "__pycoalprocessinggraphics__/graphics/icons/mip/glassware-01.png",
     icon_size = 64,
