@@ -874,8 +874,9 @@ script.on_event(
 				}
 			global.pycloud.chests[E.unit_number] = chest
 			--log(serpent.block(global.pycloud))
-		elseif global.tech_upgrades.entities_master_list[E.name] ~= nil then
+		--elseif global.tech_upgrades.entities_master_list[E.name] ~= nil then
 			--log('hit')
+			--[[
 			local beacon = game.surfaces['nauvis'].create_entity{
 				name = 'hidden-beacon',
 				position = E.position,
@@ -883,6 +884,7 @@ script.on_event(
 			}
 			local module = beacon.get_inventory(defines.inventory.beacon_modules)
 			local mod = module.insert({name = global.tech_upgrades.entities_master_list[E.name] .. '-module', count = 1})
+			]]--
 			--log(mod)
 		elseif global.has_built_first_farm == false then
 			for _, farm in pairs(farm_buildings) do
