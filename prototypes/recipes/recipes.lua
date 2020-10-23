@@ -1921,12 +1921,12 @@ RECIPE {
     enabled = false,
     energy_required = 3,
     ingredients = {
-        {type = "fluid", name = "molten-glass", amount = 100},
+        {type = "fluid", name = "molten-glass", amount = 120},
         {type = "item", name = "boron-trioxide", amount = 5},
         {type = "item", name = "stopper", amount = 4},
     },
     results = {
-        {"flask", 3}
+        {"flask", 4}
     },
     icon = "__pycoalprocessinggraphics__/graphics/icons/mip/glassware-01.png",
     icon_size = 64,
@@ -1941,14 +1941,14 @@ RECIPE {
     category = 'glassworks',
     energy_required = 5,
     ingredients = {
-        {type = "fluid", name = "molten-glass", amount = 100},
-        {type = "fluid", name = "refsyngas", amount = 150},
+        {type = "fluid", name = "molten-glass", amount = 140},
+        {type = "fluid", name = "refsyngas", amount = 300},
         {type = "item", name = "purified-quartz", amount = 1},
-        {type = "item", name = "stopper", amount = 5},
-        {type = "item", name = "boron-trioxide", amount = 5}
+        {type = "item", name = "stopper", amount = 20},
+        {type = "item", name = "boron-trioxide", amount = 10}
     },
     results = {
-        {"flask", 6}
+        {"flask", 32}
     },
     icon = "__pycoalprocessinggraphics__/graphics/icons/mip/glassware-01.png",
     icon_size = 64,
