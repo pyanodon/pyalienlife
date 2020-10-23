@@ -2155,9 +2155,9 @@ script.on_event(
 						player.force.recipes[upgrade.base_recipe].enabled = false
 						player.force.recipes[upgrade.upgrade_1.recipe].enabled = true
 					end
-					if upgrade.current_lvl ~= nil and upgrade.current_lvl > 2 and player.force.recipes[upgrade_1.recipe].enabled == true then
+					if upgrade.current_lvl ~= nil and upgrade.current_lvl > 2 and player.force.recipes[upgrade.upgrade_1.recipe].enabled == true then
 						player.force.recipes[upgrade.base_recipe].enabled = false
-						player.force.recipes[upgrade_1.recipe].enabled = false
+						player.force.recipes[upgrade.upgrade_1.recipe].enabled = false
 						player.force.recipes[upgrade.upgrade_2.recipe].enabled = true
 					end
 				end
