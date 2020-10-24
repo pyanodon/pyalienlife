@@ -285,7 +285,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'arqad-egg-nest', amount = 1},
         {type = 'item', name = 'bedding', amount = 2},
-        {type = 'item', name = 'vrauk-food-01', amount = 2},
+        {type = 'item', name = 'vrauks-food-01', amount = 2},
         },
     results = {
         {type = 'item', name ='arqad-egg', amount = 20},
