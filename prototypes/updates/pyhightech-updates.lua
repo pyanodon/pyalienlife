@@ -1341,6 +1341,17 @@ RECIPE {
     --main_product = "chloral",
 }:add_unlock("advanced-electronics")
 
+ITEM {
+    type = "item",
+    name = "cooling-system",
+    icon = "__pyalienlifegraphics__/graphics/icons/cooling-system.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-hightech-tier-3",
+    order = "a",
+    stack_size = 100
+}
+
 RECIPE('processing-unit'):add_ingredient({type = "item", name = "cooling-system", amount = 1})
 RECIPE('intelligent-unit'):add_ingredient({type = "item", name = "cooling-system", amount = 2})
 RECIPE('var-josephson-junction'):add_ingredient({type = "item", name = "cooling-system", amount = 1})
