@@ -543,7 +543,7 @@ RECIPE {
     energy_required = 100,
     ingredients = {
         {type = 'item', name = 'arqad-mk03', amount = 1},
-        {type = 'item', name = 'phadai', amount = 2},
+        {type = 'item', name = 'korlex', amount = 2},
         {type = 'item', name = 'filled-comb', amount = 5},
         },
     results = {
@@ -553,7 +553,7 @@ RECIPE {
     --main_product = "arqad-mk03",
     icons =
         {
-            {icon = "__pyalienlifegraphics__/graphics/icons/phadai.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/korlex.png"},
             {icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.25,shift = {-7.5,-7.5}},
             {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png', scale = 0.25,shift = {-7.5,-7.5}},
         },
@@ -565,14 +565,14 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'arqad-mk03-incubating',
-    category = 'phadai',
+    category = 'korlex',
     enabled = false,
     energy_required = 100,
     ingredients = {
         {type = 'item', name = 'arqad-egg-nest-3', amount = 1},
         {type = 'item', name = 'bedding', amount = 2},
         {type = 'item', name = 'energy-drink', amount = 1},
-        {type = 'item', name = 'phadai-food-02', amount = 2},
+        {type = 'item', name = 'korlex-food-02', amount = 2},
         },
     results = {
         {type = 'item', name ='arqad-egg-3', amount = 20},
@@ -680,7 +680,7 @@ RECIPE {
     energy_required = 100,
     ingredients = {
         {type = 'item', name = 'arqad-mk04', amount = 1},
-        {type = 'item', name = 'korlex', amount = 2},
+        {type = 'item', name = 'phadai', amount = 2},
         {type = 'item', name = 'filled-comb', amount = 5},
         },
     results = {
@@ -690,7 +690,7 @@ RECIPE {
     --main_product = "arqad-mk04",
     icons =
         {
-            {icon = "__pyalienlifegraphics__/graphics/icons/korlex.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/phadai.png"},
             {icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.25,shift = {-7.5,-7.5}},
             {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png', scale = 0.25,shift = {-7.5,-7.5}},
         },
@@ -702,14 +702,14 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'arqad-mk04-incubating',
-    category = 'korlex',
+    category = 'phadai',
     enabled = false,
     energy_required = 100,
     ingredients = {
         {type = 'item', name = 'arqad-egg-nest-4', amount = 1},
         {type = 'item', name = 'bedding', amount = 2},
         {type = 'item', name = 'barrel-milk', amount = 5},
-        {type = 'item', name = 'korlex-food-02', amount = 4},
+        {type = 'item', name = 'phadai-food-02', amount = 4},
         },
     results = {
         {type = 'item', name ='arqad-egg-4', amount = 20},

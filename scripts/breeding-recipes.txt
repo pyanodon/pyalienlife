@@ -2,12 +2,6 @@
 --Breeding recipes started
 
 mk02:
-arthurian
-
-
-
-
-auog
 cadaveric
 rennea
 tuuphra
@@ -25,10 +19,15 @@ mk04:
 
 mk02:
 arqad
-
+arthurian
+auog
 
 mk03:
 arqad
+arthurian
+auog
 
 mk04:
 arqad
+arthurian
+auog

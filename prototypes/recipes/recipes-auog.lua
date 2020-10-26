@@ -180,38 +180,10 @@ RECIPE {
 
 --Secondary Upgrade Recipes--
 --SUR--
---WIP--
+--DONE--
 
 --mk02--
 --DONE--
-
-RECIPE {
-    type = 'recipe',
-    name = 'auog-pup-01',
-    category = 'auog',
-    enabled = false,
-    energy_required = 100,
-    ingredients = {
-        {type = 'item', name = 'auog', amount = 1},
-        {type = 'item', name = 'biomass', amount = 10},
-        {type = 'item', name = 'moss', amount = 8},
-        {type = 'item', name = 'water-barrel', amount = 2},
-        {type = 'item', name = 'bedding', amount = 1},
-        },
-    results = {
-        {type = 'item', name='auog-pup', probability = 0.25,amount_min = 1,amount_max = 4},
-        {type = 'item', name = 'empty-barrel', amount = 2}
-    },
-    --main_product = "auog-mk02",
-    icons =
-        {
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', icon_size = 64},
-            {icon = "__pyalienlifegraphics__/graphics/icons/auog-pup.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
-    icon_size = 64,
-    subgroup = 'py-alienlife-auog',
-    order = 'za'
-}:add_unlock("selective-breeding")
 
 RECIPE {
     type = 'recipe',
@@ -240,7 +212,35 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("auog-breeding-1")
+
+RECIPE {
+    type = 'recipe',
+    name = 'auog-pup-01',
+    category = 'auog',
+    enabled = false,
+    energy_required = 100,
+    ingredients = {
+        {type = 'item', name = 'auog', amount = 1},
+        {type = 'item', name = 'biomass', amount = 10},
+        {type = 'item', name = 'moss', amount = 8},
+        {type = 'item', name = 'water-barrel', amount = 2},
+        {type = 'item', name = 'bedding', amount = 1},
+        },
+    results = {
+        {type = 'item', name='auog-pup', probability = 0.25,amount_min = 1,amount_max = 4},
+        {type = 'item', name = 'empty-barrel', amount = 2}
+    },
+    --main_product = "auog-mk02",
+    icons =
+        {
+            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', icon_size = 64},
+            {icon = "__pyalienlifegraphics__/graphics/icons/auog-pup.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
+        },
+    icon_size = 64,
+    subgroup = 'py-alienlife-auog',
+    order = 'za'
+}:add_unlock("auog-breeding-1")
 
 RECIPE {
     type = 'recipe',
@@ -269,7 +269,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("auog-breeding-1")
 
 RECIPE {
     type = 'recipe',
@@ -300,10 +300,10 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("auog-breeding-1")
 
 --MK03--
---WIP--
+--DONE--
 
 RECIPE {
     type = 'recipe',
@@ -332,7 +332,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
     order = 'za'
-}:add_unlock("artificial-breeding")
+}:add_unlock("auog-breeding-2")
 
 RECIPE {
     type = 'recipe',
@@ -361,7 +361,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
     order = 'za'
-}:add_unlock("artificial-breeding")
+}:add_unlock("auog-breeding-2")
 
 RECIPE {
     type = 'recipe',
@@ -392,10 +392,10 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
     order = 'za'
-}:add_unlock("artificial-breeding")
+}:add_unlock("auog-breeding-2")
 
 --MK04--
---WIP--
+--DONE--
 
 RECIPE {
     type = 'recipe',
@@ -424,7 +424,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
     order = 'za'
-}:add_unlock("biased-mutation")
+}:add_unlock("auog-breeding-3")
 
 RECIPE {
     type = 'recipe',
@@ -453,7 +453,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
     order = 'za'
-}:add_unlock("biased-mutation")
+}:add_unlock("auog-breeding-3")
 
 RECIPE {
     type = 'recipe',
@@ -484,4 +484,4 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
     order = 'za'
-}:add_unlock("biased-mutation")
+}:add_unlock("auog-breeding-3")
