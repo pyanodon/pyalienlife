@@ -32,6 +32,7 @@ local tech_upgrade =
         mukmoux = require("prototypes/upgrades/mukmoux"),
         navens = require("prototypes/upgrades/navens"),
         phadai = require("prototypes/upgrades/phadai"),
+        phagnot = require("prototypes/upgrades/phagnot"),
         ulric = require("prototypes/upgrades/ulric"),
         seaweed = require("prototypes/upgrades/seaweed"),
         sap = require("prototypes/upgrades/sap"),
