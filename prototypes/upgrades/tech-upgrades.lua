@@ -13,6 +13,7 @@ local tech_upgrade =
         bioreactor = require("prototypes/upgrades/bioreactor"),
         cadaveric = require("prototypes/upgrades/cadaveric"),
         compost = require("prototypes/upgrades/compost"),
+        cottongut = require("prototypes/upgrades/cottongut"),
         creature = require("prototypes/upgrades/creature"),
         cridren = require("prototypes/upgrades/cridren"),
         dataarray = require("prototypes/upgrades/data-array"),
