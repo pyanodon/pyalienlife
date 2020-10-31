@@ -39,7 +39,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='moondropseeds',amount='+2'},
+                    {name='moondropseeds',amount='+1'},
                     {name='soil',amount ='+15'},
 				},
 			results =
