@@ -546,17 +546,18 @@ RECIPE {
     name = 'filtration-media-4',
     category = 'crafting',
     enabled = false,
-    energy_required = 5,
+    energy_required = 15,
     ingredients = {
         {type = "item", name = "pure-sand", amount = 30},
-        {type = "item", name = "active-carbon", amount = 3},
+        {type = "item", name = "active-carbon", amount = 10},
         {type = "item", name = "gravel", amount = 25},
-        {type = 'item', name = 'cellulose', amount = 5},
-        {type = 'item', name = 'sub-denier-microfiber', amount = 1},
+        {type = 'item', name = 'cellulose', amount = 25},
+        {type = 'item', name = 'sub-denier-microfiber', amount = 3},
     },
     results = {
-        {type = 'item', name = 'filtration-media', amount = 10},
+        {type = 'item', name = 'filtration-media', amount = 100},
     },
+    order = 'd'
 }:add_unlock("nano-tech")
 
 RECIPE {
@@ -1393,3 +1394,7 @@ for _, recipe in pairs(arqad_filled) do
 	RECIPE(recipe):replace_ingredient('crude-oil-barrel','tall-oil-barrel')
 end
 
+fun.results_replacer('biofilm-pyht', 'biofilm', 'biofilm', 75)
+
+data.raw.recipe.biofilm.energy_required = 10
+fun.results_replacer('biofilm', 'biofilm', 'biofilm', 10)

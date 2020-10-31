@@ -1044,6 +1044,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'filtration-media', amount = 3},
     },
+    order = 'b'
 }:add_unlock("biotech-mk02")
 
 RECIPE {
@@ -1087,7 +1088,7 @@ RECIPE {
         {type = "item", name = "fawogae-substrate", amount = 15},
         {type = "item", name = "lime", amount = 5},
         {type = "item", name = "biomass", amount = 10},
-        {type = 'item', name = 'cellulose', amount = 5},
+        {type = 'item', name = 'cellulose', amount = 10},
     },
     results = {
         {type = 'item', name = 'biofilm', amount = 4},
@@ -1639,14 +1640,15 @@ RECIPE {
     energy_required = 100,
     ingredients = {
         {type = 'item', name = 'gravel', amount = 100},
-        {type = 'item', name = 'active-carbon', amount = 25},
+        {type = 'item', name = 'active-carbon', amount = 20},
         {type = 'item', name = 'nanofibrils', amount = 2},
         {type = 'item', name = 'cellulose', amount = 25},
     },
     results = {
-        {type = 'item', name = 'filtration-media', amount = 100},
+        {type = 'item', name = 'filtration-media', amount = 75},
     },
-}:add_unlock("chitin"):add_ingredient({type = "item", name = "micro-fiber", amount = 20})
+    order = 'c'
+}:add_unlock("chitin"):add_ingredient({type = "item", name = "micro-fiber", amount = 15})
 
 RECIPE {
     type = 'recipe',
