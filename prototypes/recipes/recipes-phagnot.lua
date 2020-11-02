@@ -89,7 +89,7 @@ RECIPE {
         {type = 'item', name = 'bhoddos', amount = 1},
         {type = 'item', name = 'fawogae', amount = 5},
         {type = 'item', name = 'guar', amount = 5},
-        {type = 'item', name = 'ralesia-seeds', amount = 15},
+        {type = 'fluid', name = 'arqad-honey', amount = 100},
         {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'tuuphra-seeds', amount = 15},
         {type = 'item', name = 'ash', amount = 10},

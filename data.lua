@@ -417,6 +417,7 @@ require('prototypes/fluids/chloral')
 require('prototypes/fluids/pre-pesticide-01')
 require('prototypes/fluids/pre-pesticide-02')
 require('prototypes/fluids/ethyl-mercaptan')
+require('prototypes/fluids/arqad-honey')
 
 --Tech upgrade stuff--
 require('prototypes/upgrades/hidden-beacon')
@@ -553,6 +554,9 @@ require('prototypes/recipes/recipes-arqad-products-2')
 require('prototypes/recipes/recipes-tree')
 require('prototypes/recipes/recipes-auto-arthurian-abacus')
 require('prototypes/recipes/recipes-auto-fawogae-plankton')
+require('prototypes/recipes/recipes-arqad-honey')
+require('prototypes/recipes/recipes-arqad-honey-1')
+require('prototypes/recipes/recipes-arqad-honey-2')
 
 --gunpowder poo
 --require('prototypes/recipes/recipes-vrauk-products')

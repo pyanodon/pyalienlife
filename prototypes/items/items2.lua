@@ -113,3 +113,25 @@ ITEM {
     order = "a",
     stack_size = 100
 }
+
+ITEM {
+    type = "item",
+    name = "honeycomb",
+    icon = "__pyalienlifegraphics2__/graphics/icons/honeycomb.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arqad",
+    order = "ua",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "empty-honeycomb",
+    icon = "__pyalienlifegraphics2__/graphics/icons/empty-honeycomb.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arqad",
+    order = "ub",
+    stack_size = 100
+}

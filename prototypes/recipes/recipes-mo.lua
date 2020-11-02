@@ -135,6 +135,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'retrovirus', amount = 1},
+        {type = 'fluid', name = 'arqad-honey', amount = 50},
         {type = 'item', name = 'flask', amount = 2},
         {type = 'item', name = 'cocoon', amount = 10},
         {type = 'item', name = 'lab-instrument', amount = 1},
@@ -151,6 +152,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
+        {type = 'fluid', name = 'arqad-honey', amount = 50},
         {type = 'item', name = 'retrovirus', amount = 1},
         {type = 'item', name = 'flask', amount = 2},
         {type = 'item', name = 'lab-instrument', amount = 1},
@@ -193,7 +195,7 @@ RECIPE {
         {type = 'item', name = 'alien-sample01', amount = 2},
         {type = 'item', name = 'alien-sample-02', amount = 1},
         {type = 'item', name = 'bio-sample', amount = 20},
-        {type = 'item', name = 'dna-polymerase', amount = 2},
+        {type = 'item', name = 'dna-polymerase', amount = 3},
         {type = 'item', name = 'plastic-bar', amount = 15},
         {type = 'item', name = 'flask', amount = 5},
         {type = 'item', name = 'chitin', amount = 5},
@@ -215,7 +217,7 @@ RECIPE {
         {type = 'fluid', name = 'flutec-pp6', amount = 50},
         {type = 'item', name = 'yaedols', amount = 2},
         {type = 'item', name = 'retrovirus', amount = 5},
-        {type = 'fluid', name = 'ethanolamine', amount = 50},
+        {type = 'fluid', name = 'ethanolamine', amount = 100},
         {type = 'item', name = 'flask', amount = 5},
         {type = 'item', name = 'cridren', amount = 5},
         {type = 'item', name = 'dhilmos-egg', amount = 5},

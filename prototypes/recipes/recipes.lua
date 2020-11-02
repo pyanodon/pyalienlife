@@ -221,6 +221,7 @@ RECIPE {
         {type = 'item', name = 'plastic-bar', amount = 15},
         {type = 'item', name = 'neuroprocessor', amount = 2},
         {type = 'item', name = 'flask', amount = 1},
+        {type = 'fluid', name = 'flavonoids', amount = 50},
     },
     results = {
         {type = 'item', name = 'py-science-pack', amount = 3},
@@ -393,7 +394,8 @@ RECIPE {
         {type = 'item', name = 'chromium', amount = 5},
         {type = 'item', name = 'flask', amount = 2},
         {type = 'item', name = 'moss', amount = 20},
-        {type = 'fluid', name = 'organic-solvent', amount = 100}
+        {type = 'fluid', name = 'organic-solvent', amount = 100},
+        {type = 'fluid', name = 'arqad-honey', amount = 100},
     },
     results = {
         {type = 'item', name = 'resveratrol', amount = 10}

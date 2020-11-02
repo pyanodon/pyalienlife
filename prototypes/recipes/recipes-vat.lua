@@ -8,7 +8,7 @@ RECIPE {
         {type = 'item', name = 'automation-science-pack', amount = 10},
         {type = 'item', name = 'brain', amount = 5},
         {type = 'fluid', name = 'water', amount = 1000},
-        --{type = 'fluid', name = 'fetal-serum', amount = 100},
+        {type = 'fluid', name = 'arqad-honey', amount = 100},
         {type = 'item', name = 'nexelit-plate', amount = 5},
     },
     results = {
@@ -28,6 +28,7 @@ RECIPE {
         {type = 'item', name = 'brain', amount = 8},
         {type = 'fluid', name = 'water', amount = 1000},
         {type = 'fluid', name = 'fetal-serum', amount = 100},
+        {type = 'fluid', name = 'arqad-honey', amount = 100},
         {type = 'item', name = 'nexelit-plate', amount = 5},
     },
     results = {
@@ -48,6 +49,7 @@ RECIPE {
         {type = 'item', name = 'brain', amount = 15},
         {type = 'fluid', name = 'water', amount = 1000},
         {type = 'fluid', name = 'fetal-serum', amount = 250},
+        {type = 'fluid', name = 'arqad-honey', amount = 100},
         {type = 'item', name = 'nexelit-plate', amount = 15},
     },
     results = {
@@ -68,6 +70,7 @@ RECIPE {
         {type = 'item', name = 'brain', amount = 30},
         {type = 'fluid', name = 'gta', amount = 250},
         {type = 'fluid', name = 'fetal-serum', amount = 500},
+        {type = 'fluid', name = 'arqad-honey', amount = 100},
         {type = 'item', name = 'nexelit-plate', amount = 50},
     },
     results = {

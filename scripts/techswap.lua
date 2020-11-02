@@ -4837,6 +4837,154 @@ local TRlist =
 					level = 3,
 					},
 				},
+
+				---HONEY
+
+				{
+				base_recipe = 'arqad-filled-honeycomb-1',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arqad-filled-honeycomb-1a',
+					tech = 'pheromone-transition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'arqad-filled-honeycomb-1b',
+					tech = 'diversified-mycoaccretion',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'arqad-filled-honeycomb-2',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arqad-filled-honeycomb-2a',
+					tech = 'pheromone-transition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'arqad-filled-honeycomb-2b',
+					tech = 'diversified-mycoaccretion',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'arqad-filled-honeycomb-3',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arqad-filled-honeycomb-3a',
+					tech = 'pheromone-transition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'arqad-filled-honeycomb-3b',
+					tech = 'diversified-mycoaccretion',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'arqad-filled-honeycomb-4',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arqad-filled-honeycomb-4a',
+					tech = 'pheromone-transition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'arqad-filled-honeycomb-4b',
+					tech = 'diversified-mycoaccretion',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'arqad-filled-honeycomb-5',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arqad-filled-honeycomb-5a',
+					tech = 'pheromone-transition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'arqad-filled-honeycomb-5b',
+					tech = 'diversified-mycoaccretion',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'arqad-filled-honeycomb-6',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arqad-filled-honeycomb-6a',
+					tech = 'pheromone-transition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'arqad-filled-honeycomb-6b',
+					tech = 'diversified-mycoaccretion',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'arqad-filled-honeycomb-7',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arqad-filled-honeycomb-7a',
+					tech = 'pheromone-transition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'arqad-filled-honeycomb-7b',
+					tech = 'diversified-mycoaccretion',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'arqad-filled-honeycomb-8',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'arqad-filled-honeycomb-8a',
+					tech = 'pheromone-transition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'arqad-filled-honeycomb-8b',
+					tech = 'diversified-mycoaccretion',
+					unlocked = false,
+					level = 3,
+					},
+				},
+
 --SAWDUST
 
 				{

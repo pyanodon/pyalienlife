@@ -91,6 +91,22 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
+    name = 'honey-comb',
+    category = 'carbonfilter',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'honeycomb', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'empty-honeycomb', amount = 1},
+        {type = 'fluid', name = 'arqad-honey', amount = 50},
+    },
+    main_product = "arqad-honey",
+}:add_unlock("arqad-mk02")
+
+RECIPE {
+    type = 'recipe',
     name = 'empty-comb-2',
     category = 'casting',
     enabled = false,
@@ -105,12 +121,41 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
+    name = 'empty-honeycomb-2',
+    category = 'casting',
+    enabled = false,
+    energy_required = 6,
+    ingredients = {
+        {type = 'fluid', name = 'wax', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'empty-honeycomb', amount = 8},
+    },
+}:add_unlock("arqad-mk02")
+
+RECIPE {
+    type = 'recipe',
     name = 'wax',
     category = 'hpf',
     enabled = false,
     energy_required = 4,
     ingredients = {
         {type = 'item', name = 'used-comb', amount = 5},
+        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
+    },
+    results = {
+        {type = 'fluid', name = 'wax', amount = 50},
+    },
+}:add_unlock("arqad-mk02"):remove_ingredient("steam"):add_ingredient({type = "fluid", name = "hot-air", amount = 25})
+
+RECIPE {
+    type = 'recipe',
+    name = 'wax-honeycomb',
+    category = 'hpf',
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+        {type = 'item', name = 'empty-honeycomb', amount = 5},
         {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
     },
     results = {
@@ -204,6 +249,66 @@ RECIPE {
     },
     --main_product = "tar",
 }:add_unlock("arqad-mk03")
+
+RECIPE {
+    type = 'recipe',
+    name = 'wax-to-lube',
+    category = 'mixer',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'fluid', name = 'wax', amount = 120},
+        {type = 'fluid', name = 'pressured-hydrogen', amount = 10},
+    },
+    results = {
+        {type = 'fluid', name = 'lubricant', amount = 120},
+    },
+}:add_unlock("arqad-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'wax-to-tar',
+    category = 'gasifier',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'fluid', name = 'wax', amount = 100},
+        {type = 'fluid', name = 'oxygen', amount = 20},
+    },
+    results = {
+        {type = 'fluid', name = 'tar', amount = 150},
+    },
+}:add_unlock("arqad-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'honey-to-sugar',
+    category = 'evaporator',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'fluid', name = 'arqad-honey', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'sugar', amount = 10},
+    },
+}:add_unlock("arqad-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'honey-to-ethanol',
+    category = 'bio-reactor',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'fluid', name = 'arqad-honey', amount = 100},
+        {type = 'fluid', name = 'water', amount = 500},
+        {type = 'fluid', name = 'manure-bacteria', amount = 50},
+    },
+    results = {
+        {type = 'fluid', name = 'ethanol', amount = 200},
+    },
+}:add_unlock("arqad-mk02")
 
 ---pup maker---
 

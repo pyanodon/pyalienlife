@@ -15,6 +15,7 @@ fun.autorecipes {
 				{
 					{name='renneaseeds', amount = 1},
 					{name='water',amount = '*10'},
+					{name='manurebacteria',amount = '*5'},
 				},
 			results =
 				{

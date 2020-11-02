@@ -14,7 +14,7 @@ fun.autorecipes {
                     {name='cagedmukmoux',amount =1},
                     {name='vonixegg',amount =2},
 					{name='guts',amount =10},
-					{name='waterbarrel',amount=20,return_item={name='empty-barrel',amount=20}},
+					{name='honeybarrel',amount=1,return_item={name='empty-barrel',amount=1}},
 				},
 			results =
 				{
@@ -316,7 +316,7 @@ fun.autorecipes {
                     {name='cagedmukmoux',amount =1},
 					{name='cagedauog',amount =1},
 					{name='meat',amount =5},
-					{name='waterbarrel',amount=50,return_item={name='empty-barrel',amount=50}},
+					{name='honeybarrel',amount=2,return_item={name='empty-barrel',amount=2}},
 				},
 			results =
 				{
@@ -391,7 +391,6 @@ fun.autorecipes {
 					{name='meat',amount ='R'},
 					{name='pheromones',amount =1},
                     --{name='cagedauog',amount =4},
-					--{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
 					--{name='cagedauog',amount = 1},
 				},
 			results =

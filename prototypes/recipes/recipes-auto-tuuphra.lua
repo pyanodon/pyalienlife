@@ -15,6 +15,7 @@ fun.autorecipes {
 				{
 					{name='tuuphraseeds',amount = 5},
 					{name='water',amount = '*10'},
+					{name='manurebacteria',amount = '*5'},
 				},
 			results =
 				{
