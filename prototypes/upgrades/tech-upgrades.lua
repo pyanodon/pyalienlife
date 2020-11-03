@@ -30,6 +30,7 @@ local tech_upgrade =
         kmauts = require("prototypes/upgrades/kmauts"),
         micromine = require("prototypes/upgrades/micromine"),
         moss = require("prototypes/upgrades/moss"),
+        moondrop = require("prototypes/upgrades/moondrop"), --Must check it. Thats a pyht enabled tech upgrade, what if they arent playin it pyht?
         mukmoux = require("prototypes/upgrades/mukmoux"),
         navens = require("prototypes/upgrades/navens"),
         phadai = require("prototypes/upgrades/phadai"),

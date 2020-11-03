@@ -5672,7 +5672,7 @@ local TRlist =
 					},
 				},
 
---SAWDUST
+--ETHANOL
 
 				{
 				base_recipe = 'energy-drink',
@@ -5728,6 +5728,185 @@ local TRlist =
 					{
 					recipe = 'bio-scafold-4a',
 					tech = 'high-viability',
+					unlocked = false,
+					level = 2,
+					},
+				},
+
+--MOONDROP
+
+				{
+				base_recipe = 'moondrop-1',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'moondrop-1a',
+					tech = 'cu',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'moondrop-2',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'moondrop-2a',
+					tech = 'cu',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'moondrop-3',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'moondrop-3a',
+					tech = 'cu',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'moondrop-4',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'moondrop-4a',
+					tech = 'cu',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+					base_recipe = 'moondrop-5',
+					current_lvl = 1,
+					upgrade_1 =
+						{
+						recipe = 'moondrop-5a',
+						tech = 'cu',
+						unlocked = false,
+						level = 2,
+						},
+					},
+				{
+				base_recipe = 'moondrop-6',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'moondrop-6a',
+					tech = 'cu',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'moondrop-7',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'moondrop-7a',
+					tech = 'cu',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'moondrop-8',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'moondrop-8a',
+					tech = 'cu',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'moondrop-9',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'moondrop-9a',
+					tech = 'cu',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'moondrop-10',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'moondrop-10a',
+					tech = 'cu',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'moondrop-11',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'moondrop-11a',
+					tech = 'cu',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'moondrop-12',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'moondrop-12a',
+					tech = 'cu',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'moondrop-13',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'moondrop-13a',
+					tech = 'cu',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'moondrop-14',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'moondrop-14a',
+					tech = 'cu',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'moondrop-15',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'moondrop-15a',
+					tech = 'cu',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'moondrop-16',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'moondrop-16a',
+					tech = 'cu',
 					unlocked = false,
 					level = 2,
 					},
@@ -5836,6 +6015,7 @@ local TRlist =
 				['high-viability'] = true,
 				['ethanol-boost'] = true,
 				['spores'] = true,
+				['cu'] = true,
 			},
 	}
 
