@@ -1,6 +1,6 @@
 {
   "name": "pyalienlife",
-  "version": "1.9.4",
+  "version": "1.9.5",
   "factorio_version": "1.0",
   "title": "Pyanodons AlienLife",
   "author": "Pyanodon, Nexela, Kingarthur",
@@ -23,15 +23,6 @@
   ],
   "package": {
     "ignore": [],
-    "git_publish_branch": "master",
-    "no_git_push": false,
-    "no_portal_upload": false,
-    "scripts": {
-      "datestamp": "../pycoalprocessing/.github/publish/datestamp.sh",
-      "prepackage": "../pycoalprocessing/.github/publish/prepackage.sh",
-      "prepublish": "../pycoalprocessing/.github/publish/prepublish.sh",
-      "publish": "../pycoalprocessing/.github/publish/publish.sh",
-      "version": "../pycoalprocessing/.github/publish/version.sh"
-    }
+    "scripts": {}
   }
 }
