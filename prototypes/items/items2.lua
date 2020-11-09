@@ -245,7 +245,7 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-simik",
-    order = "a",
+    order = "b",
     stack_size = 50
 }
 
@@ -256,7 +256,7 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-simik",
-    order = "a",
+    order = "b",
     stack_size = 50
 }
 
@@ -267,7 +267,7 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-simik",
-    order = "a",
+    order = "b",
     stack_size = 50
 }
 
@@ -278,7 +278,7 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-simik",
-    order = "a",
+    order = "b",
     stack_size = 50
 }
 
@@ -289,7 +289,7 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-simik",
-    order = "a",
+    order = "b",
     stack_size = 50
 }
 
@@ -300,7 +300,7 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-simik",
-    order = "a",
+    order = "b",
     stack_size = 50
 }
 
@@ -311,7 +311,7 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-simik",
-    order = "a",
+    order = "b",
     stack_size = 50
 }
 
@@ -322,7 +322,7 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-simik",
-    order = "a",
+    order = "b",
     stack_size = 50
 }
 
@@ -333,7 +333,7 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-simik",
-    order = "a",
+    order = "b",
     stack_size = 50
 }
 
@@ -344,7 +344,7 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-simik",
-    order = "a",
+    order = "b",
     stack_size = 50
 }
 
@@ -361,12 +361,23 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "simik",
+    icon = "__pyalienlifegraphics2__/graphics/icons/simik.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-simik",
+    order = "aa",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "keratin",
     icon = "__pyalienlifegraphics2__/graphics/icons/keratin.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-simik",
-    order = "a",
+    order = "c",
     stack_size = 50
 }
 
