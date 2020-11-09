@@ -135,3 +135,259 @@ ITEM {
     order = "ub",
     stack_size = 100
 }
+
+local alien_life_limitations_simik =
+{
+}
+
+----MODULES----
+
+ITEM {
+    type = "module",
+    name = "simik",
+    icons =
+    {
+        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+        {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png"}
+    },
+    icon_size = 64,
+	category = "simik",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "xa-a",
+    stack_size = 300,
+	effect = { speed = {bonus = 1}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_simik,
+	limitation_message_key = "Simik"
+}
+
+ITEM {
+    type = "module",
+    name = "simik-mk02",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+        {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png"}
+    },
+    icon_size = 64,
+	category = "simik",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "xa-b",
+    stack_size = 300,
+	effect = { speed = {bonus = 2}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_simik,
+	limitation_message_key = "Simik"
+}
+
+ITEM {
+    type = "module",
+    name = "simik-mk03",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+        {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png"}
+    },
+    icon_size = 64,
+	category = "simik",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "xa-c",
+    stack_size = 300,
+	effect = { speed = {bonus = 3}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_simik,
+	limitation_message_key = "Simik"
+}
+
+ITEM {
+    type = "module",
+    name = "simik-mk04",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png"}
+    },
+    icon_size = 64,
+	category = "simik",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "xa-d",
+    stack_size = 300,
+	effect = { speed = {bonus = 4}, productivity = {bonus = -0.01}},
+	limitation = alien_life_limitations_simik,
+	limitation_message_key = "Simik"
+}
+
+    {
+    type = "module-category",
+    name = "simik",
+    }
+
+ITEM {
+    type = "item",
+    name = "caged-simik",
+    icon = "__pyalienlifegraphics2__/graphics/icons/caged-simik.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-simik",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "brain-caged-simik",
+    icon = "__pyalienlifegraphics2__/graphics/icons/brain-caged-simik.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-simik",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "bone-caged-simik",
+    icon = "__pyalienlifegraphics2__/graphics/icons/bone-caged-simik.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-simik",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "chitin-caged-simik",
+    icon = "__pyalienlifegraphics2__/graphics/icons/chitin-caged-simik.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-simik",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "meat-caged-simik",
+    icon = "__pyalienlifegraphics2__/graphics/icons/meat-caged-simik.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-simik",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "skin-caged-simik",
+    icon = "__pyalienlifegraphics2__/graphics/icons/skin-caged-simik.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-simik",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "blood-caged-simik",
+    icon = "__pyalienlifegraphics2__/graphics/icons/blood-caged-simik.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-simik",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "guts-caged-simik",
+    icon = "__pyalienlifegraphics2__/graphics/icons/guts-caged-simik.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-simik",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "fat-caged-simik",
+    icon = "__pyalienlifegraphics2__/graphics/icons/fat-caged-simik.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-simik",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "hot-air-caged-simik",
+    icon = "__pyalienlifegraphics2__/graphics/icons/hot-air-caged-simik.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-simik",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "keratin-caged-simik",
+    icon = "__pyalienlifegraphics2__/graphics/icons/keratin-caged-simik.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-simik",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "simik-pup",
+    icon = "__pyalienlifegraphics2__/graphics/icons/simik-pup.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-simik",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "keratin",
+    icon = "__pyalienlifegraphics2__/graphics/icons/keratin.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-simik",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "simik-codex",
+    icon = "__pyalienlifegraphics2__/graphics/icons/simik-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "strorix-unknown-sample",
+    icon = "__pyalienlifegraphics2__/graphics/icons/strorix-unknown-sample.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-samples",
+    order = "a",
+    stack_size = 100
+}

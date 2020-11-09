@@ -197,7 +197,13 @@ data:extend {
         type = "item-subgroup",
         name = "py-alienlife-sponge",
         group = "py-alienlife",
-        order = "e-q"
+        order = "e-qa"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-simik",
+        group = "py-alienlife",
+        order = "e-qb"
     },
     {
         type = "item-subgroup",
