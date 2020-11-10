@@ -165,6 +165,10 @@ data:extend {
     },
     {
         type = "recipe-category",
+        name = "simik"
+    },
+    {
+        type = "recipe-category",
         name = "ralesia-farm"
     },
     {
@@ -349,6 +353,10 @@ data:extend {
     {
         type = "recipe-category",
         name = "slaughterhouse-arqad"
+    },
+    {
+        type = "recipe-category",
+        name = "slaughterhouse-simik"
     },
     {
         type = "recipe-category",

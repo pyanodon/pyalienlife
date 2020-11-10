@@ -2534,3 +2534,19 @@ RECIPE {
     },
     --main_product = "chloral",
 }:add_unlock("moss")--not a real tech
+
+
+RECIPE {
+    type = 'recipe',
+    name = 'testett',
+    category = 'simik',
+    enabled = false,
+    energy_required = 300,
+    ingredients = {
+        {type = 'item', name = 'iron-plate', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'coal', amount = 1},
+    },
+    --main_product = "chloral",
+}:add_unlock("simik-mk01")--not a real tech

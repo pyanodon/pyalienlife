@@ -108,6 +108,7 @@ require('prototypes/technologies/laika')
 require('prototypes/technologies/pesticides')
 require('prototypes/technologies/symbiosis')
 require('prototypes/technologies/bioprocessing')
+require('prototypes/technologies/simik')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -303,6 +304,10 @@ require('prototypes/buildings/arqad-hive-mk01')
 require('prototypes/buildings/arqad-hive-mk02')
 require('prototypes/buildings/arqad-hive-mk03')
 require('prototypes/buildings/arqad-hive-mk04')
+require('prototypes/buildings/simik-den-mk01')
+require('prototypes/buildings/simik-den-mk02')
+require('prototypes/buildings/simik-den-mk03')
+require('prototypes/buildings/simik-den-mk04')
 
 --((SPACE BUILDINGS))--
 --[[
@@ -418,6 +423,7 @@ require('prototypes/fluids/pre-pesticide-01')
 require('prototypes/fluids/pre-pesticide-02')
 require('prototypes/fluids/ethyl-mercaptan')
 require('prototypes/fluids/arqad-honey')
+require('prototypes/fluids/simik-blood')
 
 --Tech upgrade stuff--
 require('prototypes/upgrades/hidden-beacon')

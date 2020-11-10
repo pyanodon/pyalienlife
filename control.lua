@@ -95,7 +95,8 @@ local function create_slaughterhouse_animal_table(gui, player)
 		"vrauks",
 		"xyhiphoe",
 		"zipir",
-		"korlex"
+		"korlex",
+		"simik",
 	}
 	--log(player)
 	--log(serpent.block(animals))
@@ -214,7 +215,8 @@ local farm_buildings = {
 	"moondrop",
 	'seaweed',
 	'sap',
-	'moss'
+	'moss',
+	'simik',
 }
 
 local animal_farm_buildings = {
@@ -239,7 +241,8 @@ local animal_farm_buildings = {
 	["arqad"] = true,
 	["xyhiphoe"] = true,
 	["yaedols"] = true,
-	["zipir"] = true
+	["zipir"] = true,
+	["simik"] = true,
 }
 
 local plant_farm_buildings = {
