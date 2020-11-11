@@ -412,6 +412,120 @@ fun.autorecipes {
 	}
 }
 
+------------------SIMIK SKIN------------------
+
+fun.autorecipes {
+    name = 'rendering-skin-simik',
+	category = 'slaughterhouse-simik',
+	--module_limitations = 'auog',
+	subgroup = 'py-alienlife-simik',
+	order = 'b',
+    mats =
+	{
+		--skin
+		{
+			ingredients =
+				{
+					{name='cagedsimik',amount=1},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='simikblood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='cage',amount=1},
+					{name='skin', amount ='+3'},
+				},
+                crafting_speed = 15,
+                tech = 'defective-collagen',
+                name = 'Extract simik skin-1',
+                icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
+                icon_size = 32,
+		},
+	}
+}
+
+------------------SIMIK CHITIN------------------
+
+fun.autorecipes {
+    name = 'rendering-chitin-simik',
+	category = 'slaughterhouse-simik',
+	--module_limitations = 'auog',
+	subgroup = 'py-alienlife-simik',
+	order = 'b',
+    mats =
+	{
+		--skin
+		{
+			ingredients =
+				{
+					{name='cagedsimik',amount=1},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='chitin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='simikblood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='cage',amount=1},
+					{name='chitin', amount ='+2'},
+				},
+                crafting_speed = 15,
+                tech = 'defective-collagen',
+                name = 'Extract simik chitin-1',
+                icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",
+                icon_size = 64,
+		},
+	}
+}
+
+------------------SIMIK KERATIN------------------
+
+fun.autorecipes {
+    name = 'rendering-keratin-simik',
+	category = 'slaughterhouse-simik',
+	--module_limitations = 'auog',
+	subgroup = 'py-alienlife-simik',
+	order = 'b',
+    mats =
+	{
+		--skin
+		{
+			ingredients =
+				{
+					{name='cagedsimik',amount=1},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='chitin', amount ='R'},
+					{name='keratin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='simikblood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='cage',amount=1},
+					{name='keratin', amount ='+1'},
+				},
+                crafting_speed = 15,
+                tech = 'defective-collagen',
+                name = 'Extract simik keratin-1',
+                icon = "__pyalienlifegraphics2__/graphics/icons/keratin.png",
+                icon_size = 64,
+		},
+	}
+}
+
 ------------------TRITS------------------
 
 fun.autorecipes {

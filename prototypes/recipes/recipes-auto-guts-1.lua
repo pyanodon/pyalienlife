@@ -409,7 +409,7 @@ fun.autorecipes {
 	}
 }
 
-------------------SSCRONDRIX------------------
+------------------SCRONDRIX------------------
 
 fun.autorecipes {
     name = 'rendering-guts-scrondrix',
@@ -440,6 +440,43 @@ fun.autorecipes {
                 crafting_speed = 15,
                 tech = 'organ-replication',
                 name = 'Extract scrondrix guts-1',
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
+                icon_size = 64,
+		},
+	}
+}
+
+------------------SIMIKS------------------
+
+fun.autorecipes {
+    name = 'rendering-guts-simik',
+	category = 'slaughterhouse-simik',
+	--module_limitations = 'auog',
+	subgroup = 'py-alienlife-simik',
+	order = 'b',
+    mats =
+	{
+		--guts
+		{
+			ingredients =
+				{
+					{name='cagedsimik',amount=1},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='simikblood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='cage',amount=1},
+					{name='guts', amount ='+1'},
+				},
+                crafting_speed = 15,
+                tech = 'organ-replication',
+                name = 'Extract simik guts-1',
                 icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
                 icon_size = 64,
 		},

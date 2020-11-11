@@ -594,6 +594,174 @@ fun.autorecipes {
 	}
 }
 
+------------------SIMIKS------------------
+
+fun.autorecipes {
+    name = 'rendering-skin-simik-2',
+	category = 'slaughterhouse-simik',
+	--module_limitations = 'auog',
+	subgroup = 'py-alienlife-simik',
+	order = 'b',
+    mats =
+	{
+		--skin
+		{
+			ingredients =
+				{
+					{name='cagedsimik',amount=1},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='simikblood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='cage',amount=1},
+					{name='skin', amount ='+3'},
+				},
+                crafting_speed = 15,
+                tech = 'double-skin',
+                name = 'Extract simik skin-2',
+                icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
+                icon_size = 32,
+		},
+		--skin simik rendering
+		{
+			ingredients =
+				{
+					{name='cagedsimik',amount='R'},
+					{name='skincagedsimik',amount=1},
+				},
+			results =
+				{
+					{name='blood', amount ='R'},
+					{name='skin', amount ='+5'},
+				},
+			crafting_speed = 15,
+			tech = 'double-skin',
+			name = 'Extract skin from Improved simik-2',
+			icon = "__pyalienlifegraphics2__/graphics/icons/skin-caged-simik.png",
+			icon_size = 64,
+		},
+	}
+}
+
+------------------SIMIKS CHITIN------------------
+
+fun.autorecipes {
+    name = 'rendering-chitin-simik-2',
+	category = 'slaughterhouse-simik',
+	--module_limitations = 'auog',
+	subgroup = 'py-alienlife-simik',
+	order = 'b',
+    mats =
+	{
+		--skin
+		{
+			ingredients =
+				{
+					{name='cagedsimik',amount=1},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='chitin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='simikblood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='cage',amount=1},
+					{name='chitin', amount ='+3'},
+				},
+                crafting_speed = 15,
+                tech = 'double-skin',
+                name = 'Extract simik chitin-2',
+                icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",
+                icon_size = 64,
+		},
+		--chitin simik rendering
+		{
+			ingredients =
+				{
+					{name='cagedsimik',amount='R'},
+					{name='chitincagedsimik',amount=1},
+				},
+			results =
+				{
+					{name='blood', amount ='R'},
+					{name='chitin', amount ='+4'},
+				},
+			crafting_speed = 15,
+			tech = 'double-skin',
+			name = 'Extract chitin from Improved simik-2',
+			icon = "__pyalienlifegraphics2__/graphics/icons/chitin-caged-simik.png",
+			icon_size = 64,
+		},
+	}
+}
+
+------------------SIMIKS KERATIN------------------
+
+fun.autorecipes {
+    name = 'rendering-keratin-simik-2',
+	category = 'slaughterhouse-simik',
+	--module_limitations = 'auog',
+	subgroup = 'py-alienlife-simik',
+	order = 'b',
+    mats =
+	{
+		--keratin
+		{
+			ingredients =
+				{
+					{name='cagedsimik',amount=1},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='chitin', amount ='R'},
+					{name='keratin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='simikblood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='cage',amount=1},
+					{name='keratin', amount ='+3'},
+				},
+                crafting_speed = 15,
+                tech = 'double-skin',
+                name = 'Extract simik keratin-2',
+                icon = "__pyalienlifegraphics2__/graphics/icons/keratin.png",
+                icon_size = 64,
+		},
+		--keratin simik rendering
+		{
+			ingredients =
+				{
+					{name='cagedsimik',amount='R'},
+					{name='keratincagedsimik',amount=1},
+				},
+			results =
+				{
+					{name='blood', amount ='R'},
+					{name='keratin', amount ='+3'},
+				},
+			crafting_speed = 15,
+			tech = 'double-skin',
+			name = 'Extract keratin from Improved simik-2',
+			icon = "__pyalienlifegraphics2__/graphics/icons/keratin-caged-simik.png",
+			icon_size = 64,
+		},
+	}
+}
+
 ------------------TRITS------------------
 
 fun.autorecipes {

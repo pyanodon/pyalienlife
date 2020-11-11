@@ -497,6 +497,61 @@ fun.autorecipes {
 	}
 }
 
+------------------SIMIKS------------------
+
+fun.autorecipes {
+    name = 'rendering-bone-simik-2',
+	category = 'slaughterhouse-simik',
+	--module_limitations = 'auog',
+	subgroup = 'py-alienlife-simik',
+	order = 'b',
+    mats =
+	{
+		--bone
+		{
+			ingredients =
+				{
+					{name='cagedsimik',amount=1},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='simikblood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='cage',amount=1},
+					{name='bones', amount ='+3'},
+				},
+                crafting_speed = 15,
+                tech = 'hardened-bone',
+                name = 'Extract simik bones-2',
+                icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
+                icon_size = 64,
+		},
+		--bone simik rendering
+		{
+			ingredients =
+				{
+					{name='cagedsimik',amount='R'},
+					{name='bonecagedsimik',amount=1},
+				},
+			results =
+				{
+					{name='brain', amount ='R'},
+					{name='bones', amount ='+5'},
+				},
+			crafting_speed = 15,
+			tech = 'hardened-bone',
+			name = 'Extract bones from Improved simik-2',
+			icon = "__pyalienlifegraphics2__/graphics/icons/bone-caged-simik.png",
+			icon_size = 64,
+		},
+	}
+}
+
 ------------------TRITS------------------
 
 fun.autorecipes {

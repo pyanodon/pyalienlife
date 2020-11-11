@@ -339,7 +339,7 @@ fun.autorecipes {
 	}
 }
 
-------------------CRUDREN CORTEX------------------
+------------------CRIDREN CORTEX------------------
 
 RECIPE {
     type = "recipe",

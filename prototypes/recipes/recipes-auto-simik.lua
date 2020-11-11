@@ -681,7 +681,7 @@ fun.autorecipes {
                     {name='brain', amount ='R'},
                     {name='keratin', amount ='R'},
                     {name='chitin', amount ='R'},
-					{name='meat', amount =6},
+					{name='meat', amount =3},
 				},
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
@@ -783,7 +783,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bones', amount ='R'},
-					{name='guts', amount =4},
+					{name='guts', amount =3},
 				},
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
@@ -858,7 +858,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 15,
 			tech = 'bmp',
-			name = 'Extract bones from Improved simiks',
+			name = 'Extract bones from Improved simik',
 			icon = "__pyalienlifegraphics2__/graphics/icons/bone-caged-simik.png",
 			icon_size = 64,
 		},
@@ -872,11 +872,11 @@ fun.autorecipes {
 			results =
 				{
 					{name='bones', amount ='R'},
-					{name='meat', amount =14},
+					{name='meat', amount =11},
 				},
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
-			name = 'Extract meat from Improved simiks',
+			name = 'Extract meat from Improved simik',
 			icon = "__pyalienlifegraphics2__/graphics/icons/meat-caged-simik.png",
 			icon_size = 64,
 		},
@@ -890,11 +890,11 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', amount ='R'},
-					{name='guts', amount =9},
+					{name='guts', amount =8},
 				},
 			crafting_speed = 15,
 			tech = 'antitumor',
-			name = 'Extract guts from Improved simiks',
+			name = 'Extract guts from Improved simik',
 			icon = "__pyalienlifegraphics2__/graphics/icons/guts-caged-simik.png",
 			icon_size = 64,
 		},
@@ -925,12 +925,12 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='blood', amount ='R'},
+					{name='simikblood', amount ='R'},
 					{name='skin', amount =8},
 				},
 			crafting_speed = 15,
 			tech = 'reca',
-			name = 'Extract skin from Improved simiks',
+			name = 'Extract skin from Improved simik',
 			icon = "__pyalienlifegraphics2__/graphics/icons/skin-caged-simik.png",
 			icon_size = 64,
 		},
@@ -948,8 +948,43 @@ fun.autorecipes {
 				},
 			crafting_speed = 15,
 			tech = 'orexigenic',
-			name = 'Extract fat from Improved simiks',
+			name = 'Extract fat from Improved simik',
 			icon = "__pyalienlifegraphics2__/graphics/icons/fat-caged-simik.png",
+			icon_size = 64,
+		},
+		--chitin simik rendering
+		{
+			ingredients =
+				{
+					{name='fatcagedsimik',amount='R'},
+					{name='chitincagedsimik',amount=1},
+				},
+			results =
+				{
+					{name='fat', amount ='R'},
+					{name='chitin', amount =10},
+				},
+			crafting_speed = 15,
+			tech = 'reca',
+			name = 'Extract chitin from Improved simik',
+			icon = "__pyalienlifegraphics2__/graphics/icons/chitin-caged-simik.png",
+			icon_size = 64,
+		},
+		--keratin simik rendering
+		{
+			ingredients =
+				{
+
+				},
+			results =
+				{
+					{name='chitin', amount ='R'},
+					{name='keratin', amount =10},
+				},
+			crafting_speed = 15,
+			tech = 'reca',
+			name = 'Extract keratin from Improved simik',
+			icon = "__pyalienlifegraphics2__/graphics/icons/keratin-caged-simik.png",
 			icon_size = 64,
 		},
 	}

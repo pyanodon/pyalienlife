@@ -1512,6 +1512,24 @@ local TRlist =
 					},
 				},
 				{
+				base_recipe = 'Extract simik Meat',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract simik Meat-1',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract simik Meat-2',
+					tech = 'myostatin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
 				base_recipe = 'Extract Trits Meat',
 				current_lvl = 1,
 				upgrade_1 =
@@ -1765,6 +1783,17 @@ local TRlist =
 				upgrade_1 =
 					{
 					recipe = 'Extract meat from Improved scrondrixs-2',
+					tech = 'exercises',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract meat from Improved simik',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract meat from Improved simik-2',
 					tech = 'exercises',
 					unlocked = false,
 					level = 2,
@@ -2029,6 +2058,24 @@ local TRlist =
 					},
 				},
 				{
+				base_recipe = 'Extract simik bones',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract simik bones-1',
+					tech = 'osteocyte',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract simik bones-2',
+					tech = 'hardened-bone',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
 				base_recipe = 'Extract Trits bones',
 				current_lvl = 1,
 				upgrade_1 =
@@ -2265,6 +2312,17 @@ local TRlist =
 					level = 2,
 					},
 				},
+				{
+					base_recipe = 'Extract bones from Improved simik',
+					current_lvl = 1,
+					upgrade_1 =
+						{
+						recipe = 'Extract bones from Improved simik-2',
+						tech = 'hardened-bone',
+						unlocked = false,
+						level = 2,
+						},
+					},
 				{
 				base_recipe = 'Extract bones from Improved Trits',
 				current_lvl = 1,
@@ -2560,6 +2618,24 @@ local TRlist =
 					},
 				},
 				{
+				base_recipe = 'Extract simik guts',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract simik guts-1',
+					tech = 'organ-replication',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract simik guts-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
 				base_recipe = 'Extract Trits guts',
 				current_lvl = 1,
 				upgrade_1 =
@@ -2813,6 +2889,17 @@ local TRlist =
 				upgrade_1 =
 					{
 					recipe = 'Extract guts from Improved scrondrixs-2',
+					tech = 'cavity',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract guts from Improved simik',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract guts from Improved simik-2',
 					tech = 'cavity',
 					unlocked = false,
 					level = 2,
@@ -3661,6 +3748,60 @@ local TRlist =
 					},
 				},
 				{
+				base_recipe = 'Extract simik skin',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract simik skin-1',
+					tech = 'defective-collagen',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract simik skin-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract simik chitin',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract simik chitin-1',
+					tech = 'defective-collagen',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract simik chitin-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
+				base_recipe = 'Extract simik keratin',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract simik keratin-1',
+					tech = 'defective-collagen',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract simik keratin-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
 				base_recipe = 'Extract Trits skin',
 				current_lvl = 1,
 				upgrade_1 =
@@ -3921,6 +4062,39 @@ local TRlist =
 				upgrade_1 =
 					{
 					recipe = 'Extract skin from Improved scrondrixs-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract skin from Improved simik',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract skin from Improved simik-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract chitin from Improved simik',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract chitin from Improved simik-2',
+					tech = 'double-skin',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract keratin from Improved simik',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract keratin from Improved simik-2',
 					tech = 'double-skin',
 					unlocked = false,
 					level = 2,
@@ -4203,6 +4377,24 @@ local TRlist =
 					},
 				},
 				{
+				base_recipe = 'Extract simik lard',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract simik lard-1',
+					tech = 'force-feeding',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract simik lard-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
 				base_recipe = 'Extract Trits lard',
 				current_lvl = 1,
 				upgrade_1 =
@@ -4445,6 +4637,17 @@ local TRlist =
 				upgrade_1 =
 					{
 					recipe = 'Extract fat from Improved scrondrixs-2',
+					tech = 'fto4',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract fat from Improved simik',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract fat from Improved simik-2',
 					tech = 'fto4',
 					unlocked = false,
 					level = 2,

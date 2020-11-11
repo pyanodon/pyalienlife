@@ -13,6 +13,8 @@ RECIPE {
         {type = 'item', name = 'cdna', amount = 5},
         {type = 'item', name = 'bio-sample', amount = 30},
         {type = 'item', name = 'simik-codex', amount = 1},
+        {type = 'item', name = 'earth-tiger-sample', amount = 1},
+        {type = 'item', name = 'earth-lizard-sample', amount = 1},
         {type = 'item', name = 'strorix-unknown-sample', amount = 5}, --add alien sample from pyALiens mod here.
         {type = 'fluid', name = 'fetal-serum', amount = 100},
         {type = 'fluid', name = 'blood', amount = 700},
