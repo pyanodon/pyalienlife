@@ -447,6 +447,43 @@ fun.autorecipes {
 	}
 }
 
+------------------SIMIK------------------
+
+fun.autorecipes {
+    name = 'rendering-blood-simik',
+	category = 'slaughterhouse-simik',
+	--module_limitations = 'auog',
+	subgroup = 'py-alienlife-simik',
+	order = 'b',
+    mats =
+	{
+		--blood
+		{
+			ingredients =
+				{
+					{name='cagedsimik',amount=1},
+				},
+			results =
+				{
+                    {name='bones', amount ='R'},
+					{name='meat', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='simikblood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='cage',amount=1},
+					{name='simikblood', amount ='+20'},
+				},
+                crafting_speed = 15,
+                tech = 'somatic',
+                name = 'Extract simik blood-1',
+                icon = "__pyalienlifegraphics2__/graphics/icons/simik-blood.png",
+                icon_size = 64,
+		},
+	}
+}
+
 ------------------TRITS------------------
 
 fun.autorecipes {

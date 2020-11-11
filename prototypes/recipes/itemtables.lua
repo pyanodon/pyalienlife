@@ -344,10 +344,29 @@ items.inputs.gutsarqad = {'guts-arqad', 1}
 items.inputs.meatarqad = {'meat-arqad', 1}
 items.inputs.chitinarqad = {'chitin-arqad', 1}
 items.inputs.arqad = {'arqad', 1}
+items.inputs.arqadmaggot = {'arqad-maggot', 1}
 items.inputs.venom = {'bee-venom', 1}
 items.inputs.crudebarrel = {'crude-oil-barrel', 1}
 items.inputs.pesticide01 = {'pesticide-mk01', 1}
 items.inputs.pesticide02 = {'pesticide-mk02', 1}
+
+items.inputs.cagedsimik = {'caged-simik', 1}
+items.inputs.simikpup = {'simik-pup', 1}
+items.inputs.braincagedsimik = {'brain-caged-simik', 1}
+items.inputs.meatcagedsimik = {'meat-caged-simik', 1}
+items.inputs.bloodcagedsimik = {'blood-caged-simik', 1}
+items.inputs.gutscagedsimik = {'guts-caged-simik', 1}
+items.inputs.skincagedsimik = {'skin-caged-simik', 1}
+items.inputs.bonecagedsimik = {'bone-caged-simik', 1}
+items.inputs.fatcagedsimik = {'fat-caged-simik', 1}
+items.inputs.chitincagedsimik = {'chitin-caged-simik', 1}
+items.inputs.keratincagedsimik = {'keratin-caged-simik', 1}
+items.inputs.olefinbarrel = {'olefin-barrel', 1}
+items.inputs.seasponge = {'sea-sponge', 1}
+items.inputs.keratin = {'keratin', 1}
+items.inputs.simikfood01 = {'simik-food-01', 1}
+items.inputs.simikfood02 = {'simik-food-02', 1}
+items.inputs.simikblood = {'simik-blood',1}
 
 items.outputs = items.inputs
 --can put output replacements below here

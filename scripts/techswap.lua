@@ -913,6 +913,35 @@ local TRlist =
 					},
 				},
 				{
+				base_recipe = 'Full Render simik',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Full Render simikb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract simik brains',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract simik brainsb',
+					tech = 'interactive-cognition',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract simik brains-2',
+					tech = 'metamide5',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
 				base_recipe = 'Full Render Trits',
 				current_lvl = 1,
 				upgrade_1 =
@@ -3068,6 +3097,24 @@ local TRlist =
 					},
 				},
 				{
+				base_recipe = 'Extract simik blood',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract simik blood-1',
+					tech = 'somatic',
+					unlocked = false,
+					level = 2,
+					},
+				upgrade_2 =
+					{
+					recipe = 'Extract simik blood-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 3,
+					},
+				},
+				{
 				base_recipe = 'Extract Trits blood',
 				current_lvl = 1,
 				upgrade_1 =
@@ -3321,6 +3368,17 @@ local TRlist =
 				upgrade_1 =
 					{
 					recipe = 'Extract blood from Improved scrondrixs-2',
+					tech = 'transgenes',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'Extract blood from Improved simik',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'Extract blood from Improved simik-2',
 					tech = 'transgenes',
 					unlocked = false,
 					level = 2,

@@ -25,6 +25,22 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
+    name = 'strorix-unknown-sample',
+    category = 'data-array',
+    enabled = false,
+    energy_required = 300,
+    ingredients = {
+        {type = 'item', name = 'steel-chest', amount = 1},
+        {type = 'item', name = 'logistic-science-pack', amount = 100},
+        {type = 'item', name = 'simik-codex', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'strorix-unknown-sample', amount = 1},
+    },
+}:add_unlock("simik-mk01")
+
+RECIPE {
+    type = 'recipe',
     name = 'simik-codex',
     category = 'crafting',
     enabled = false,
@@ -193,7 +209,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'caged-simik', amount = 1},
     },
-}:add_unlock("simik")
+}:add_unlock("simik-mk01")
 
 RECIPE {
     type = 'recipe',
@@ -209,7 +225,7 @@ RECIPE {
         {type = 'item', name = 'cage', amount = 1},
     },
     main_product = "simik",
-}:add_unlock("simik")
+}:add_unlock("simik-mk01")
 
 
 ---UPDATES---

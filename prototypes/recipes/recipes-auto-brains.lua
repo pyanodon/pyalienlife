@@ -586,6 +586,68 @@ fun.autorecipes {
 	}
 }
 
+------------------SIMIKS------------------
+
+fun.autorecipes {
+    name = 'rendering-brains-simik',
+	category = 'slaughterhouse-simik',
+	--module_limitations = 'scrondrix',
+	subgroup = 'py-alienlife-simik',
+	order = 'b',
+    mats =
+	{
+		{
+			ingredients =
+				{
+					{name='cagedsimik',amount=1},
+				},
+			results =
+				{
+					{name='bones', probability = 0.1,amount_min =1,amount_max =4},
+					{name='meat', probability = 0.3,amount_min =2,amount_max =5},
+                    {name='skin', probability = 0.2,amount_min =1,amount_max =2},
+                    {name='chitin', probability = 0.2,amount_min =1,amount_max =1},
+					{name='fat', probability = 0.2,amount_min =1,amount_max =1},
+                    {name='guts', probability = 0.4,amount_min =1,amount_max =1},
+                    {name='keratin', probability = 0.1,amount_min =1,amount_max =1},
+					{name='simikblood', amount =30},
+					{name='cage',amount=1},
+					{name='brain', probability = 0.3,amount_min =1,amount_max =2},
+				},
+			crafting_speed = 30,
+			tech = 'interactive-cognition',
+			name = 'Full Render simikb',
+			icon = "__pyalienlifegraphics2__/graphics/icons/rendering-simik.png",
+			icon_size = 64,
+		},
+		--brain
+		{
+			ingredients =
+				{
+					--{name='cagedscrondrix',amount=1},
+				},
+			results =
+				{
+                    {name='meat', amount ='R'},
+					{name='bones', amount ='R'},
+					{name='keratin', amount ='R'},
+					{name='chitin', amount ='R'},
+					{name='skin', amount ='R'},
+					{name='fat', amount ='R'},
+					{name='guts', amount ='R'},
+					{name='simikblood', amount ='R'},
+					{name='brain', amount ='R'},
+					{name='brain', amount ='+2'},
+				},
+			crafting_speed = 15,
+			tech = 'interactive-cognition',
+			name = 'Extract simik brainsb',
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
+			icon_size = 64,
+		},
+	}
+}
+
 ------------------TRITS------------------
 
 fun.autorecipes {
