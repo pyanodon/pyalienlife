@@ -10,6 +10,7 @@ RECIPE {
         {"agzn-alloy", 20},
         {"big-electric-pole", 8},
         {"laser-turret", 5},
+        {"lens", 10},
         {"advanced-circuit", 20},
         {"pump", 1},
         {"steel-plate", 50},

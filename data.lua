@@ -563,6 +563,7 @@ require('prototypes/recipes/recipes-auto-fawogae-plankton')
 require('prototypes/recipes/recipes-arqad-honey')
 require('prototypes/recipes/recipes-arqad-honey-1')
 require('prototypes/recipes/recipes-arqad-honey-2')
+require('prototypes/recipes/recipes-simik')
 
 --gunpowder poo
 --require('prototypes/recipes/recipes-vrauk-products')

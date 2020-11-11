@@ -391,3 +391,25 @@ ITEM {
     order = "a",
     stack_size = 100
 }
+
+ITEM {
+    type = "item",
+    name = "simik-food-01",
+    icon = "__pyalienlifegraphics2__/graphics/icons/simik-food-01.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-food",
+    order = "x",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "simik-food-02",
+    icon = "__pyalienlifegraphics2__/graphics/icons/simik-food-02.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-food",
+    order = "x",
+    stack_size = 100
+}
