@@ -496,10 +496,12 @@ local function log_all_machines_for_upgrades(tech_upgrades)
 --log(serpent.block(tech_upgrades))
 	for _, table in pairs(tech_upgrades) do
 		--log(serpent.block(table))
-		global.tech_upgrades.techs[table.master_tech.name] = {}
-		for _, tech in pairs(table.sub_techs) do
-			--log(serpent.block(tech))
-			global.tech_upgrades.techs[table.master_tech.name][tech.technology.name] = tech
+		if table.is_ht == nil or table.is_ht == false or game.active_mods['pyhightech'] then
+			global.tech_upgrades.techs[table.master_tech.name] = {}
+			for _, tech in pairs(table.sub_techs) do
+				--log(serpent.block(tech))
+				global.tech_upgrades.techs[table.master_tech.name][tech.technology.name] = tech
+			end
 		end
 	end
 	--log(serpent.block(global.tech_upgrades))

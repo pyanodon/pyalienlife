@@ -19,6 +19,7 @@ local tech_upgrades =
                 time = 45
                 }
             },
+        is_ht = true,
         sub_techs =
             {
             example_1 = -- can be whatever just used to identify this table

@@ -4,14 +4,12 @@ local tech_upgrade =
     {
         auog = require("prototypes/upgrades/auog"),
         arqad = require("prototypes/upgrades/arqad"),
-        antelope = require("prototypes/upgrades/antelope"),
         arthurian = require("prototypes/upgrades/arthurian"),
         atomizer = require("prototypes/upgrades/atomizer"),
         bhoddos = require("prototypes/upgrades/bhoddos"),
         bioprinting = require("prototypes/upgrades/bioprinting"),
         biofactory = require("prototypes/upgrades/biofactory"),
         bioreactor = require("prototypes/upgrades/bioreactor"),
-        cadaveric = require("prototypes/upgrades/cadaveric"),
         compost = require("prototypes/upgrades/compost"),
         cottongut = require("prototypes/upgrades/cottongut"),
         creature = require("prototypes/upgrades/creature"),
@@ -26,11 +24,9 @@ local tech_upgrade =
         genlab = require("prototypes/upgrades/genlab"),
         grod = require("prototypes/upgrades/grod"),
         incubator = require("prototypes/upgrades/incubator"),
-        kicalk = require("prototypes/upgrades/kicalk"),
         kmauts = require("prototypes/upgrades/kmauts"),
         micromine = require("prototypes/upgrades/micromine"),
         moss = require("prototypes/upgrades/moss"),
-        moondrop = require("prototypes/upgrades/moondrop"), --Must check it. Thats a pyht enabled tech upgrade, what if they arent playin it pyht?
         mukmoux = require("prototypes/upgrades/mukmoux"),
         navens = require("prototypes/upgrades/navens"),
         phadai = require("prototypes/upgrades/phadai"),
@@ -40,9 +36,17 @@ local tech_upgrade =
         sap = require("prototypes/upgrades/sap"),
         slaughterhouse = require("prototypes/upgrades/slaughterhouse"),
         vrauk = require("prototypes/upgrades/vrauks"),
+
+        --pyht techs
+        antelope = require("prototypes/upgrades/antelope"),
+        cadaveric = require("prototypes/upgrades/cadaveric"),
+        kicalk = require("prototypes/upgrades/kicalk"),
+        moondrop = require("prototypes/upgrades/moondrop")
         --test_1 is a filler name for table readablity by fleshy meat bags. name it whatever and then set it to require the tech upgrade fills
         --each name needs to be unque to keep the files seperated
     }
+
+log(serpent.block(tech_upgrade))
 
 if data ~= nil then
     --log('hit')
