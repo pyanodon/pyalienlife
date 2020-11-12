@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = '__pyalienlifegraphics__/graphics/technology/phytomining.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'botany-mk01'},
+    prerequisites = {'botany-mk01','coal-processing-2'},
     effects = {},
     unit = {
         count = 200,
