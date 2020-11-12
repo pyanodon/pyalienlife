@@ -489,8 +489,8 @@ remote.add_interface('data_puller',
 		end
 })
 
-local tech_upgrade_table = require("prototypes/upgrades/tech-upgrades")
-
+--local tech_upgrade_table = require("prototypes/upgrades/tech-upgrades")
+--[[
 local function log_all_machines_for_upgrades(tech_upgrades)
 --log('hit')
 --log(serpent.block(tech_upgrades))
@@ -506,7 +506,7 @@ local function log_all_machines_for_upgrades(tech_upgrades)
 	end
 	--log(serpent.block(global.tech_upgrades))
 end
-
+]]--
 script.on_init(
 	function()
 		global.caravanroutes = caravanroutes
@@ -561,6 +561,7 @@ script.on_init(
 			output_order = {}
 		}
 		--order_biolist()
+		--[[
 		global.tech_upgrades =
 		{
 			entities_master_list = {},
@@ -570,7 +571,8 @@ script.on_init(
 			tech_status = {},
 			currently_selected = {}
 		}
-		log_all_machines_for_upgrades(tech_upgrade_table)
+		]]--
+		--log_all_machines_for_upgrades(tech_upgrade_table)
 		global.energy_drink = {}
 		if not remote.interfaces["silo_script"] then
 			return
@@ -973,16 +975,6 @@ script.on_event(defines.events.on_entity_died, function(event)
 	end
 
 end)
-
-script.on_event(
-	defines.events.on_put_item,
-	function()
-	end
-)
-
--- local function ai(event)
-
--- end
 
 script.on_event(
 	defines.events.on_ai_command_completed,
@@ -2490,11 +2482,6 @@ script.on_event(
 		end
 end)
 
-script.on_event(defines.events.on_entity_damaged, function()
-	-- Try to avoid this event... It fires... a LOT
---log('hit')
-end)
-
 local function _Tech_building_upgrades(event)
 
 	local tech = event.research
@@ -2694,9 +2681,9 @@ end
 
 script.on_event(defines.events.on_research_finished, function(event)
 	Tech_recipe_upgrades(event)
-	_Tech_building_upgrades(event)
+	--_Tech_building_upgrades(event)
 end)
-
+--[[
 script.on_event("tech-upgrades", function(event)
 
 	local player = game.players[event.player_index]
@@ -2766,3 +2753,4 @@ script.on_event("tech-upgrades", function(event)
 	end
 
 end)
+]]--
