@@ -565,6 +565,7 @@ require('prototypes/recipes/recipes-arqad-honey-1')
 require('prototypes/recipes/recipes-arqad-honey-2')
 require('prototypes/recipes/recipes-simik')
 require('prototypes/recipes/recipes-auto-simik')
+require('prototypes/recipes/recipes-simik-metals')
 
 --gunpowder poo
 --require('prototypes/recipes/recipes-vrauk-products')
