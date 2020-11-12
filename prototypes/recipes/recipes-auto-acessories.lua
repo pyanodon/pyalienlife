@@ -652,6 +652,23 @@ RECIPE {
     main_product = "sternite-lung",
 }:add_unlock("antitumor")
 
+------------------Hormonal-thoughtorg------------------
+
+RECIPE {
+    type = "recipe",
+    name = "hormonal",
+    category = "genlab",
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'brain-caged-simik', amount = 1}
+    },
+    results = {
+		{type = 'item', name = 'hormonal', amount = 1},
+    },
+    main_product = "hormonal",
+}:add_unlock("nanochondria")
+
 ----food----
 RECIPE {
     type = 'recipe',

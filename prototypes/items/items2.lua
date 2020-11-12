@@ -413,3 +413,14 @@ ITEM {
     order = "x",
     stack_size = 100
 }
+
+ITEM {
+    type = "item",
+    name = "hormonal",
+    icon = "__pyalienlifegraphics2__/graphics/icons/hormonal.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-simik",
+    order = "x",
+    stack_size = 50
+}

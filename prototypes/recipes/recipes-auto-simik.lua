@@ -78,7 +78,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='cagedsimik',amount ='R'},
-					{name='cagedsimik', probability = 0.9,amount_min =1,amount_max =1},
+					{name='cagedsimik',amount =1},
 				},
 			crafting_speed = 120,
 			tech = 'simik-mk03'
@@ -271,6 +271,37 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'antitumor'
 		},
+
+		--antitumor hot air
+		{
+			ingredients =
+				{
+					{name='gh',amount ='R'},
+
+				},
+			results =
+				{
+					{name='gutscagedsimik', amount ='R'},
+					{name='hotaircagedsimik', 1},
+				},
+			crafting_speed = 90,
+			tech = 'antitumor'
+		},
+		--antitumor and gh hot air
+		{
+			ingredients =
+				{
+					--{name='nanochondria',amount =1},
+					{name='gh',amount =1},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'antitumor'
+		},
+
 		--Recombinant Ery
 		{
 			ingredients =
@@ -281,7 +312,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='gutscagedsimik', amount ='R'},
+					{name='hotaircagedsimik', amount ='R'},
 					{name='bloodcagedsimik', 1},
 				},
 			crafting_speed = 90,
@@ -808,7 +839,7 @@ fun.autorecipes {
 			icon = "__pyalienlifegraphics2__/graphics/icons/simik-blood.png",
 			icon_size = 64,
 		},
-		--fat
+		--hot air
 		{
 			ingredients =
 				{
@@ -817,6 +848,23 @@ fun.autorecipes {
 			results =
 				{
 					{name='simikblood', amount ='R'},
+					{name='hotair', amount =80},
+				},
+			crafting_speed = 15,
+			tech = 'advanced-rendering',
+			name = 'Extract simik hot air',
+			icon = "__pypetroleumhandlinggraphics__/graphics/icons/hot-air.png",
+			icon_size = 32,
+		},
+		--fat
+		{
+			ingredients =
+				{
+					--{name='cagedsimik',amount=1},
+				},
+			results =
+				{
+					{name='hotair', amount ='R'},
 					{name='fat', amount =3},
 				},
 			crafting_speed = 15,
@@ -916,16 +964,34 @@ fun.autorecipes {
 			icon = "__pyalienlifegraphics2__/graphics/icons/blood-caged-simik.png",
 			icon_size = 64,
 		},
-		--skin simik rendering
+		--hot air simik rendering
 		{
 			ingredients =
 				{
 					{name='bloodcagedsimik',amount='R'},
-					{name='skincagedsimik',amount=1},
+					{name='hotaircagedsimik',amount=1},
 				},
 			results =
 				{
 					{name='simikblood', amount ='R'},
+					{name='hotair', amount =250},
+				},
+			crafting_speed = 15,
+			tech = 'antitumor',
+			name = 'Extract hot-air from Improved simik',
+			icon = "__pyalienlifegraphics2__/graphics/icons/hot-air-caged-simik.png",
+			icon_size = 64,
+		},
+		--skin simik rendering
+		{
+			ingredients =
+				{
+					{name='hotaircagedsimik',amount='R'},
+					{name='skincagedsimik',amount=1},
+				},
+			results =
+				{
+					{name='hotair', amount ='R'},
 					{name='skin', amount =8},
 				},
 			crafting_speed = 15,

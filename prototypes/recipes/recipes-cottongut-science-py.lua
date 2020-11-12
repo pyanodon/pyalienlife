@@ -9,7 +9,7 @@ RECIPE {
     energy_required = 15,
     ingredients =
         {
-            {type = 'fluid', name = 'hydrogen-chloride', amount = 50},
+            {type = 'fluid', name = 'simik-blood', amount = 50},
             {type = 'fluid', name = 'oleochemicals', amount = 50},
             {type = 'item', name = 'tuuphra', amount = 5},
             {type = 'item', name = 'bio-sample', amount = 2},

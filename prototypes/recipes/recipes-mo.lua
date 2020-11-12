@@ -129,6 +129,26 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
+    name = 'primers-03',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 6,
+    ingredients = {
+        {type = 'item', name = 'petri-dish-bacteria', amount = 10},
+        {type = 'item', name = 'fawogae', amount = 5},
+        {type = 'item', name = 'saps', amount = 5},
+        {type = 'item', name = 'sea-sponge', amount = 1},
+        {type = 'item', name = 'lab-instrument', amount = 1},
+        {type = 'fluid', name = 'phytoplankton', amount = 20},
+        {type = 'fluid', name = 'simik-blood', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'primers', amount = 2},
+    },
+}:add_unlock("genetics-mk02")
+
+RECIPE {
+    type = 'recipe',
     name = 'dna-polymerase',
     category = 'genlab',
     enabled = false,
@@ -237,6 +257,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'fur', amount = 10},
         {type = 'item', name = 'chitin', amount = 5},
+        {type = 'item', name = 'keratin', amount = 2},
         {type = 'fluid', name = 'bacteria-1', amount = 100},
         {type = 'fluid', name = 'oleochemicals', amount = 100},
     },

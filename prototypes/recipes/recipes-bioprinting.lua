@@ -8,6 +8,7 @@ RECIPE {
     energy_required = 15,
     ingredients = {
         {type = 'item', name = 'sodium-alginate', amount = 1},
+        {type = 'item', name = 'keratin', amount = 1},
         {type = 'item', name = 'bonemeal', amount = 5},
         {type = 'fluid', name = 'boric-acid', amount = 200},
     },
@@ -25,6 +26,7 @@ RECIPE {
     energy_required = 15,
     ingredients = {
         {type = 'item', name = 'sodium-alginate', amount = 1},
+        {type = 'item', name = 'keratin', amount = 1},
         {type = 'item', name = 'guts', amount = 7},
         {type = 'fluid', name = 'boric-acid', amount = 200},
 
@@ -43,6 +45,7 @@ RECIPE {
     energy_required = 15,
     ingredients = {
         {type = 'item', name = 'sodium-alginate', amount = 1},
+        {type = 'item', name = 'keratin', amount = 1},
         {type = 'item', name = 'chitosan', amount = 1},
         {type = 'fluid', name = 'boric-acid', amount = 200},
 
@@ -62,6 +65,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'sodium-alginate', amount = 5},
         {type = 'item', name = 'nanofibrils', amount = 1},
+        {type = 'item', name = 'keratin', amount = 1},
         {type = 'fluid', name = 'boric-acid', amount = 1000},
 
     },
@@ -81,12 +85,13 @@ RECIPE {
     energy_required = 15,
     ingredients = {
         {type = 'item', name = 'sodium-alginate', amount = 1},
+        {type = 'item', name = 'keratin', amount = 1},
         {type = 'item', name = 'bonemeal', amount = 5},
         {type = 'item', name = 'small-lamp', amount = 2},
         {type = 'fluid', name = 'boric-acid', amount = 200},
     },
     results = {
-        {type = 'item', name = 'bio-scafold', amount = 1},
+        {type = 'item', name = 'bio-scafold', amount = 2},
     },
     --main_product = "cocoon",
 }:add_unlock("high-viability")--not a real tech
@@ -99,13 +104,14 @@ RECIPE {
     energy_required = 15,
     ingredients = {
         {type = 'item', name = 'sodium-alginate', amount = 1},
+        {type = 'item', name = 'keratin', amount = 1},
         {type = 'item', name = 'guts', amount = 7},
         {type = 'item', name = 'small-lamp', amount = 2},
         {type = 'fluid', name = 'boric-acid', amount = 200},
 
     },
     results = {
-        {type = 'item', name = 'bio-scafold', amount = 1},
+        {type = 'item', name = 'bio-scafold', amount = 2},
     },
     --main_product = "cocoon",
 }:add_unlock("high-viability"):replace_ingredient("guts", "collagen")--not a real tech
@@ -118,13 +124,14 @@ RECIPE {
     energy_required = 15,
     ingredients = {
         {type = 'item', name = 'sodium-alginate', amount = 1},
+        {type = 'item', name = 'keratin', amount = 1},
         {type = 'item', name = 'chitosan', amount = 1},
         {type = 'item', name = 'small-lamp', amount = 2},
         {type = 'fluid', name = 'boric-acid', amount = 200},
 
     },
     results = {
-        {type = 'item', name = 'bio-scafold', amount = 8},
+        {type = 'item', name = 'bio-scafold', amount = 14},
     },
     --main_product = "cocoon",
 }:add_unlock("high-viability")--not a real tech
@@ -137,13 +144,14 @@ RECIPE {
     energy_required = 20,
     ingredients = {
         {type = 'item', name = 'sodium-alginate', amount = 5},
+        {type = 'item', name = 'keratin', amount = 1},
         {type = 'item', name = 'nanofibrils', amount = 1},
         {type = 'item', name = 'small-lamp', amount = 2},
         {type = 'fluid', name = 'boric-acid', amount = 1000},
 
     },
     results = {
-        {type = 'item', name = 'bio-scafold', amount = 15},
+        {type = 'item', name = 'bio-scafold', amount = 17},
     },
     --main_product = "cocoon",
 }:add_unlock("high-viability")--not a real tech

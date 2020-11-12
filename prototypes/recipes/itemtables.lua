@@ -358,6 +358,7 @@ items.inputs.bloodcagedsimik = {'blood-caged-simik', 1}
 items.inputs.gutscagedsimik = {'guts-caged-simik', 1}
 items.inputs.skincagedsimik = {'skin-caged-simik', 1}
 items.inputs.bonecagedsimik = {'bone-caged-simik', 1}
+items.inputs.hotaircagedsimik = {'hot-air-caged-simik', 1}
 items.inputs.fatcagedsimik = {'fat-caged-simik', 1}
 items.inputs.chitincagedsimik = {'chitin-caged-simik', 1}
 items.inputs.keratincagedsimik = {'keratin-caged-simik', 1}
@@ -367,6 +368,7 @@ items.inputs.keratin = {'keratin', 1}
 items.inputs.simikfood01 = {'simik-food-01', 1}
 items.inputs.simikfood02 = {'simik-food-02', 1}
 items.inputs.simikblood = {'simik-blood',1}
+items.inputs.hotair = {'hot-air', 1}
 
 items.outputs = items.inputs
 --can put output replacements below here
