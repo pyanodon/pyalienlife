@@ -2,6 +2,15 @@
 Version: 1.9.5
 Date: ????
   Changes:
+    - Added Simiks.
+    - Added arqad honey chain.
+    - Fixed a deadlock in phytomining.
+    - Fixed some upgrade crashing when pyht is disabled.
+    - Added new model to the Nukavan.
+    - Balances in filtration media.
+    - Moondrop fixes in auto recipes.
+    - Buffed animal-based electric generators.
+    - Added Arthurian and Auog breeding program.
 ---------------------------------------------------------------------------------------------------
 Version: 1.9.4
 Date: 2020-10-24
