@@ -2,6 +2,7 @@
 Version: 1.9.6
 Date: ????
   Changes:
+    - Fixed bioreactors by adding one more input pipe.
 ---------------------------------------------------------------------------------------------------
 Version: 1.9.5
 Date: 2020-11-13

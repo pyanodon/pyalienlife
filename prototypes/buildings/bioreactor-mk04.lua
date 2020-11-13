@@ -134,7 +134,16 @@ ENTITY {
             pipe_covers = DATA.Pipes.covers(true, true, true, true),
             base_area = 10,
             base_level = -1,
-            pipe_connections = {{type = "input", position = {1.0, 4.0}}},
+            pipe_connections = {{type = "input", position = {2.0, 4.0}}},
+            priority = "extra-high"
+        },
+        {
+            production_type = "input",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {-0.00, -0.95}, nil, nil),
+            pipe_covers = DATA.Pipes.covers(true, true, true, true),
+            base_area = 10,
+            base_level = -1,
+            pipe_connections = {{type = "input", position = {0.0, 4.0}}},
             priority = "extra-high"
         },
         --South2
@@ -144,7 +153,7 @@ ENTITY {
             pipe_covers = DATA.Pipes.covers(true, true, true, true),
             base_area = 10,
             base_level = -1,
-            pipe_connections = {{type = "input", position = {-1.0, 4.0}}},
+            pipe_connections = {{type = "input", position = {-2.0, 4.0}}},
             priority = "extra-high"
         },
         off_when_no_fluid_recipe = true
