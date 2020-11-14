@@ -103,7 +103,7 @@ RECIPE {
         {type = 'fluid', name = 'arqad-honey', amount = 50},
     },
     main_product = "arqad-honey",
-}:add_unlock("arqad-mk02")
+}:add_unlock("arqad")
 
 RECIPE {
     type = 'recipe',
@@ -131,7 +131,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'empty-honeycomb', amount = 8},
     },
-}:add_unlock("arqad-mk02")
+}:add_unlock("arqad")
 
 RECIPE {
     type = 'recipe',
@@ -180,7 +180,7 @@ RECIPE {
         {type = 'item', name = 'wax-barrel', amount = 3},
     },
     --main_product = "wax-barrel",
-}:add_unlock("arqad-mk02")
+}:add_unlock("arqad")
 
 RECIPE {
     type = 'recipe',

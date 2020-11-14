@@ -19,7 +19,7 @@ fun.autorecipes {
 					{name='honeycomb',amount ='*3'},
 				},
 			crafting_speed = 80,
-			tech = 'arqad-mk02',
+			tech = 'arqad',
 			name = 'arqad-filled-honeycomb-1',
 			--icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk01.png"
 		},

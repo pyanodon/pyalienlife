@@ -355,14 +355,6 @@ require('prototypes/buildings/py-drive')
 require('prototypes/buildings/outpost')
 --require('prototypes/buildings/outpost-mining')
 --require('prototypes/buildings/flyavan-outpost')
---weapons/defenses
---require('prototypes/weapons/turrets/gun-turret-mk01')
---require('prototypes/weapons/turrets/rocket-turret-mk01')
---require('prototypes/weapons/landmines/basic-tar-mine')
-
---ammo
---require('prototypes/weapons/ammo/basic-ammo')
---require('prototypes/weapons/ammo/basic-rocket')
 
 --Creature
 require('prototypes/creatures/caravan')
