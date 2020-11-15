@@ -1,7 +1,8 @@
----------------------------------------------------------------------------------------------------
 Version: 1.9.9
 Date: ????
   Changes:
+    - Fix deadlock in arqad 2 tech due to good alien sample -> DNA polymerase -> arqad honey -> wax locked behind arqad 2 tech.
+    - Added migration to update tech and recipes for arqad 2 deadlock.
 ---------------------------------------------------------------------------------------------------
 Version: 1.9.8
 Date: 2020-11-14
