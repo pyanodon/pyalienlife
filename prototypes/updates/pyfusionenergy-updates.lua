@@ -8,7 +8,7 @@ TECHNOLOGY('fusion-mk02'):add_pack('py-science-pack')
 TECHNOLOGY('fusion-mk03'):add_pack('py-science-pack')
 TECHNOLOGY('fusion-mk04'):add_pack('py-science-pack')
 TECHNOLOGY('helium-processing'):add_pack('py-science-pack')
-TECHNOLOGY('molybdenum-processing'):add_pack('py-science-pack')
+--TECHNOLOGY('molybdenum-processing'):add_pack('py-science-pack')
 TECHNOLOGY('regolite-mining'):add_pack('py-science-pack')
 TECHNOLOGY('vanadium-processing'):add_pack('py-science-pack')
 
