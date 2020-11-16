@@ -2,6 +2,7 @@
 Version: 1.9.9
 Date: ????
   Changes:
+    - Removed py science pack from molybdenum processing to fix py science deadlock.
 ---------------------------------------------------------------------------------------------------
 Version: 1.9.8
 Date: 2020-11-14
