@@ -1,7 +1,7 @@
 local fun = require("prototypes/functions/functions")
 
 --TECHNOLOGY--
-TECHNOLOGY('advanced-mining-facilities'):add_pack('py-science-pack')
+--TECHNOLOGY('advanced-mining-facilities'):add_pack('py-science-pack')
 TECHNOLOGY('diamond-mining'):add_pack('py-science-pack')
 TECHNOLOGY('fusion-mk01'):add_pack('py-science-pack')
 TECHNOLOGY('fusion-mk02'):add_pack('py-science-pack')

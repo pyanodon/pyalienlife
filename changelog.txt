@@ -2,6 +2,7 @@
 Version: 1.9.10
 Date: ????
   Changes:
+    - Removed py science pack from advanced mining facilities processing to fix py science deadlock.
 ---------------------------------------------------------------------------------------------------
 Version: 1.9.9
 Date: 2020-11-16
