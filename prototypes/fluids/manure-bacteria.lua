@@ -10,7 +10,7 @@ RECIPE {
         {type = 'item', name = 'manure', amount = 3},
     },
     results = {
-        {type = 'fluid', name = 'manure-bacteria', amount = 50},
+        {type = 'fluid', name = 'manure-bacteria', amount = 100},
     },
     --main_product = "cocoon",
 }:add_unlock("microbiology-mk02")
