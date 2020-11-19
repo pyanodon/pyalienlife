@@ -185,3 +185,41 @@ RECIPE {
         {type = "item", name = "drill-head", amount = 7}
     }
 }:add_unlock("coal-processing-2")
+
+
+RECIPE {
+    type = "recipe",
+    name = "mold",
+    category = "casting",
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+        {type = "fluid", name = "wax", amount = 20},
+        {type = "item", name = "silicon", amount = 5},
+        {type = "item", name = "green-sic", amount = 5},
+        {type = "item", name = "clay", amount = 1},
+    },
+    results = {
+        {type = "item", name = "mold", amount = 4}
+    },
+    main_product= "mold",
+    subgroup = "py-rawores-casting",
+    order = "a"
+  }:add_unlock("iron-mk02")
+
+RECIPE('casting-gear'):replace_ingredient('sand-casting','mold')
+RECIPE('casting-pipe'):replace_ingredient('sand-casting','mold')
+RECIPE('casting-pipe-ug'):replace_ingredient('sand-casting','mold')
+RECIPE('casting-sticks'):replace_ingredient('sand-casting','mold')
+RECIPE('casting-copper-cable'):replace_ingredient('sand-casting','mold')
+RECIPE('casting-tin-cable'):replace_ingredient('sand-casting','mold')
+RECIPE('casting-engine-unit'):replace_ingredient('sand-casting','mold')
+RECIPE('casting-bolt'):replace_ingredient('sand-casting','mold')
+RECIPE('casting-small-parts'):replace_ingredient('sand-casting','mold')
+RECIPE('casting-niobium-pipe'):replace_ingredient('sand-casting','mold')
+RECIPE('casting-niobium-pipe-underground'):replace_ingredient('sand-casting','mold')
+RECIPE('casting-ht-pipe'):replace_ingredient('sand-casting','mold')
+RECIPE('casting-ht-pipe-underground'):replace_ingredient('sand-casting','mold')
+RECIPE('casting-drill-heads'):replace_ingredient('sand-casting','mold')
+RECIPE('casting-equipment-chassi'):replace_ingredient('sand-casting','mold')
+RECIPE('casting-lead-container'):replace_ingredient('sand-casting','mold')
