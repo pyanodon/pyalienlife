@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.9.12
-Date: ????
+Date: 2020-11-20
   Changes:
     - Changed arqad 1 wax recipe to give empty honeycombs and moved honeycomb melting recipe to arqad 1.
     - Add wax mold to the casting recipes.
