@@ -161,7 +161,7 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'wax', amount = 50},
     },
-}:add_unlock("arqad-mk02"):remove_ingredient("steam"):add_ingredient({type = "fluid", name = "hot-air", amount = 25})
+}:add_unlock("arqad"):remove_ingredient("steam"):add_ingredient({type = "fluid", name = "hot-air", amount = 25})
 
 ---products---
 
@@ -177,9 +177,10 @@ RECIPE {
         {type = 'item', name = 'oleochemicals-barrel', amount = 3},
     },
     results = {
-        {type = 'item', name = 'wax-barrel', amount = 3},
+        {type = 'item', name = 'empty-barrel', amount = 3},
+        {type = 'item', name = 'empty-honeycomb', amount = 5},
     },
-    --main_product = "wax-barrel",
+    main_product = "empty-honeycomb",
 }:add_unlock("arqad")
 
 RECIPE {
