@@ -10,7 +10,7 @@ RECIPE {
         {"titanium-plate", 20},
         {"iron-gear-wheel", 20}, --bob steel-bearing
         {"iron-plate", 10},
-        {"electronic-circuit", 10} --bob basic-circuit-board
+        {"electronic-circuit", 10}
     },
     results = {
         {"space-ulric-corral-mk01", 1}

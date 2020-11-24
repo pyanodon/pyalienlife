@@ -1,5 +1,5 @@
 
-local movement_triggers = require("__base__.prototypes.entity.demo-movement-triggers")
+local movement_triggers = require("__base__.prototypes.entity.movement-triggers")
 
 local character_animations =
 {

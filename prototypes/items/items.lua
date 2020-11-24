@@ -9506,8 +9506,8 @@ data:extend(
         type = 'shortcut',
         name = 'auog-selector',
         order = "a[yarm]",
-        action = 'create-blueprint-item',
-        item_to_create = 'unit-controller',
+        action = 'spawn-item',
+        item_to_spawn = 'unit-controller',
         style = 'green',
         icon = {
             filename = '__pyalienlifegraphics__/graphics/icons/carrot_on_a_stick.png',

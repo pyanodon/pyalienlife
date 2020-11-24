@@ -1,5 +1,5 @@
 
-local movement_triggers = require("__base__.prototypes.entity.demo-movement-triggers")
+local movement_triggers = require("__base__.prototypes.entity.movement-triggers")
 
 local character_animations =
 {
@@ -1439,7 +1439,7 @@ local character_animations =
   },
 }
 
---local character_animations = require ("__base__.prototypes.entity.demo-character-animations")
+--local character_animations = require ("__base__.prototypes.entity.character-animations")
 --[[
 RECIPE{
     type = "recipe",
