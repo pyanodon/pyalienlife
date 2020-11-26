@@ -33,6 +33,7 @@ local tech_upgrade =
         phagnot = require("prototypes/upgrades/phagnot"),
         ralesia = require("prototypes/upgrades/ralesia"),
         rennea = require("prototypes/upgrades/rennea"),
+        research = require("prototypes/upgrades/research"),
         ulric = require("prototypes/upgrades/ulric"),
         seaweed = require("prototypes/upgrades/seaweed"),
         sap = require("prototypes/upgrades/sap"),
