@@ -669,7 +669,7 @@ RECIPE {
     main_product = "hormonal",
 }:add_unlock("nanochondria")
 
-----food----
+----AUOG food----
 RECIPE {
     type = 'recipe',
     name = 'auog-food-01b',
@@ -712,6 +712,56 @@ RECIPE {
         {type = 'item', name = 'auog-food-02', amount = 5},
     },
 }:add_unlock("sawdust")
+
+----SIMIK food----
+RECIPE {
+    type = 'recipe',
+    name = 'simik-food-01a',
+    category = 'crafting-with-fluid',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'lead-plate', amount = 2},
+        {type = 'item', name = 'xyhiphoe', amount = 1},
+        {type = 'item', name = 'coal-dust', amount = 10},
+        {type = 'item', name = 'uranium-ore', amount = 10},
+        {type = 'item', name = 'skin', amount = 10},
+        {type = 'item', name = 'albumin', amount = 2},
+        {type = 'item', name = 'gravel', amount = 5},
+        {type = 'item', name = 'sulfur', amount = 10},
+        {type = 'item', name = 'navens', amount = 1},
+        {type = 'fluid', name = 'olefin', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'simik-food-01', amount = 6},
+    },
+}:add_unlock("unstable"):add_ingredient({type = "item", name = "cadaveric-arum", amount = 2}):replace_ingredient("gravel", "phosphate-rock")
+
+RECIPE {
+    type = 'recipe',
+    name = 'simik-food-02a',
+    category = 'crafting-with-fluid',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'lead-plate', amount = 2},
+        {type = 'item', name = 'xyhiphoe', amount = 1},
+        {type = 'item', name = 'albumin', amount = 2},
+        {type = 'item', name = 'gravel', amount = 5},
+        {type = 'item', name = 'coal-dust', amount = 10},
+        {type = 'item', name = 'uranium-ore', amount = 10},
+        {type = 'item', name = 'skin', amount = 10},
+        {type = 'item', name = 'sulfur', amount = 10},
+        {type = 'item', name = 'navens', amount = 1},
+        {type = 'item', name = 'bio-sample', amount = 5},
+        {type = 'item', name = 'yaedols', amount = 2},
+        {type = 'fluid', name = 'olefin', amount = 50},
+        {type = 'fluid', name = 'blood', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'simik-food-02', amount = 10},
+    },
+}:add_unlock("unstable"):add_ingredient({type = "item", name = "cadaveric-arum", amount = 2}):replace_ingredient("gravel", "phosphate-rock")
 
 ------phadai alcoholic energy drink-----
 

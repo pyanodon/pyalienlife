@@ -5271,6 +5271,31 @@ local TRlist =
 					},
 				},
 
+--UNSTABLE
+
+				{
+				base_recipe = 'simik-food-01',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'simik-food-01a',
+					tech = 'unstable',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'simik-food-02',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'simik-food-02a',
+					tech = 'unstable',
+					unlocked = false,
+					level = 2,
+					},
+				},
+
 --MILK
 
 				{
@@ -6625,6 +6650,7 @@ local TRlist =
 				['spores'] = true,
 				['cu'] = true,
 				['boronb'] = true,
+				['unstable'] = true,
 			},
 	}
 
