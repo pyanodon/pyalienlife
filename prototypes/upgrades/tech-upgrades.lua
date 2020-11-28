@@ -34,10 +34,11 @@ local tech_upgrade =
         ralesia = require("prototypes/upgrades/ralesia"),
         rennea = require("prototypes/upgrades/rennea"),
         research = require("prototypes/upgrades/research"),
-        ulric = require("prototypes/upgrades/ulric"),
-        seaweed = require("prototypes/upgrades/seaweed"),
         sap = require("prototypes/upgrades/sap"),
+        seaweed = require("prototypes/upgrades/seaweed"),
         slaughterhouse = require("prototypes/upgrades/slaughterhouse"),
+        scrondrix = require("prototypes/upgrades/scrondrix"),
+        ulric = require("prototypes/upgrades/ulric"),
         vrauk = require("prototypes/upgrades/vrauks"),
 
         --pyht techs

@@ -6173,6 +6173,353 @@ local TRlist =
 					},
 				},
 
+--SCRONDRIX BORON
+
+				{
+				base_recipe = 'caged-scrondrix-1',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'caged-scrondrix-1a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'caged-scrondrix-2',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'caged-scrondrix-2a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'caged-scrondrix-3',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'caged-scrondrix-3a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'caged-scrondrix-4',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'caged-scrondrix-4a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'caged-scrondrix-5',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'caged-scrondrix-5a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'caged-scrondrix-6',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'caged-scrondrix-6a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'caged-scrondrix-7',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'caged-scrondrix-7a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'caged-scrondrix-8',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'caged-scrondrix-8a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'caged-scrondrix-9',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'caged-scrondrix-9a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'caged-scrondrix-10',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'caged-scrondrix-10a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'caged-scrondrix-11',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'caged-scrondrix-11a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'caged-scrondrix-12',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'caged-scrondrix-12a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'caged-scrondrix-13',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'caged-scrondrix-13a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'caged-scrondrix-14',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'caged-scrondrix-14a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'caged-scrondrix-15',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'caged-scrondrix-15a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'caged-scrondrix-16',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'caged-scrondrix-16a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'caged-scrondrix-17',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'caged-scrondrix-17a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'caged-scrondrix-18',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'caged-scrondrix-18a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'caged-scrondrix-19',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'caged-scrondrix-19a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'caged-scrondrix-20',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'caged-scrondrix-20a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'caged-scrondrix-21',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'caged-scrondrix-21a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'caged-scrondrix-22',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'caged-scrondrix-22a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'scrondrix-cub-1',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'scrondrix-cub-1a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'scrondrix-cub-2',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'scrondrix-cub-2a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'scrondrix-cub-3',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'scrondrix-cub-3a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'scrondrix-cub-4',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'scrondrix-cub-4a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'scrondrix-cub-5',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'scrondrix-cub-5a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'scrondrix-cub-6',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'scrondrix-cub-6a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'scrondrix-cub-7',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'scrondrix-cub-7a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'scrondrix-cub-8',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'scrondrix-cub-8a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+				{
+				base_recipe = 'scrondrix-cub-9',
+				current_lvl = 1,
+				upgrade_1 =
+					{
+					recipe = 'scrondrix-cub-10a',
+					tech = 'boronb',
+					unlocked = false,
+					level = 2,
+					},
+				},
+
+
+
+
 		techs_with_upgrades =
 			{
 				['bigger-colon'] = true,
@@ -6277,6 +6624,7 @@ local TRlist =
 				['ethanol-boost'] = true,
 				['spores'] = true,
 				['cu'] = true,
+				['boronb'] = true,
 			},
 	}
 

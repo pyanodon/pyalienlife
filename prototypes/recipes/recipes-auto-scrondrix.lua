@@ -21,7 +21,8 @@ fun.autorecipes {
 					{name='cagedscrondrix', probability = 0.8,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 150,
-			tech = 'scrondrix'
+			tech = 'scrondrix',
+			name = 'caged-scrondrix-1',
 		},
 		--yotoi leaves
 		{
@@ -35,7 +36,8 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 140,
-			tech = 'scrondrix'
+			tech = 'scrondrix',
+			name = 'caged-scrondrix-2',
 		},
 		--salt
 		{
@@ -49,7 +51,8 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 130,
-			tech = 'scrondrix-mk02'
+			tech = 'scrondrix-mk02',
+			name = 'caged-scrondrix-3',
 		},
 		--fiber
 		{
@@ -62,7 +65,8 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 120,
-			tech = 'scrondrix-mk03'
+			tech = 'scrondrix-mk03',
+			name = 'caged-scrondrix-4',
 		},
 		--navens
 		{
@@ -77,7 +81,8 @@ fun.autorecipes {
 					{name='cagedscrondrix', probability = 0.9,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 110,
-			tech = 'scrondrix-mk04'
+			tech = 'scrondrix-mk04',
+			name = 'caged-scrondrix-5',
 		},
 		--gh
 		{
@@ -91,7 +96,8 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 30,
-			tech = 'growth-hormone'
+			tech = 'growth-hormone',
+			name = 'caged-scrondrix-6',
 		},
 		--antiviral and gh
 		{
@@ -105,7 +111,8 @@ fun.autorecipes {
 					{name='cagedscrondrix', probability = 1,amount_min =1,amount_max =2},
 				},
 			crafting_speed = 30,
-			tech = 'antiviral'
+			tech = 'antiviral',
+			name = 'caged-scrondrix-7',
 		},
 		--antiviral
 		{
@@ -119,7 +126,8 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 90,
-			tech = 'antiviral'
+			tech = 'antiviral',
+			name = 'caged-scrondrix-8',
 		},
 		--nanochondria
 		{
@@ -134,7 +142,8 @@ fun.autorecipes {
 					{name='braincagedscrondrix',1},
 				},
 			crafting_speed = 90,
-			tech = 'nanochondria'
+			tech = 'nanochondria',
+			name = 'caged-scrondrix-9',
 		},
 		--nanochondria and gh
 		{
@@ -148,7 +157,8 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 30,
-			tech = 'nanochondria'
+			tech = 'nanochondria',
+			name = 'caged-scrondrix-10',
 		},
 		--bmp
 		{
@@ -164,7 +174,8 @@ fun.autorecipes {
 					{name='bonecagedscrondrix', 1},
 				},
 			crafting_speed = 90,
-			tech = 'bmp'
+			tech = 'bmp',
+			name = 'caged-scrondrix-11',
 		},
 
 		--bmp and gh
@@ -179,7 +190,8 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 30,
-			tech = 'bmp'
+			tech = 'bmp',
+			name = 'caged-scrondrix-12',
 		},
 		--rna anabolic
 		{
@@ -195,7 +207,8 @@ fun.autorecipes {
 					{name='meatcagedscrondrix', 1},
 				},
 			crafting_speed = 90,
-			tech = 'anabolic-rna'
+			tech = 'anabolic-rna',
+			name = 'caged-scrondrix-13',
 		},
 		--rna anabolic and gh
 		{
@@ -209,7 +222,8 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 30,
-			tech = 'anabolic-rna'
+			tech = 'anabolic-rna',
+			name = 'caged-scrondrix-14',
 		},
 		--antitumor
 		{
@@ -225,7 +239,8 @@ fun.autorecipes {
 					{name='gutscagedscrondrix', 1},
 				},
 			crafting_speed = 90,
-			tech = 'antitumor'
+			tech = 'antitumor',
+			name = 'caged-scrondrix-15',
 		},
 		--antitumor and gh
 		{
@@ -239,7 +254,8 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 30,
-			tech = 'antitumor'
+			tech = 'antitumor',
+			name = 'caged-scrondrix-16',
 		},
 		--Recombinant Ery
 		{
@@ -255,7 +271,8 @@ fun.autorecipes {
 					{name='bloodcagedscrondrix', 1},
 				},
 			crafting_speed = 90,
-			tech = 'recombinant-ery'
+			tech = 'recombinant-ery',
+			name = 'caged-scrondrix-17',
 		},
 		--Recombinant Ery and gh
 		{
@@ -268,7 +285,8 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 30,
-			tech = 'recombinant-ery'
+			tech = 'recombinant-ery',
+			name = 'caged-scrondrix-18',
 		},
 		--reca
 		{
@@ -284,7 +302,8 @@ fun.autorecipes {
 					{name='skincagedscrondrix', 1},
 				},
 			crafting_speed = 90,
-			tech = 'reca'
+			tech = 'reca',
+			name = 'caged-scrondrix-19',
 		},
 		--reca and gh
 		{
@@ -297,7 +316,8 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 30,
-			tech = 'reca'
+			tech = 'reca',
+			name = 'caged-scrondrix-20',
 		},
 		--orexigenic
 		{
@@ -313,7 +333,8 @@ fun.autorecipes {
 					{name='fatcagedscrondrix', 1},
 				},
 			crafting_speed = 90,
-			tech = 'orexigenic'
+			tech = 'orexigenic',
+			name = 'caged-scrondrix-21',
 		},
 		--orexigenic and gh
 		{
@@ -326,7 +347,8 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 30,
-			tech = 'orexigenic'
+			tech = 'orexigenic',
+			name = 'caged-scrondrix-22',
 		},
 	}
 }
@@ -355,7 +377,8 @@ fun.autorecipes {
 					{name='scrondrixcub',amount = 3},
 				},
 			crafting_speed = 140,
-			tech = 'assisted-embryology'
+			tech = 'assisted-embryology',
+			name = 'scrondrix-cub-1',
 		},
 		--yotoi leaves
 		{
@@ -369,7 +392,8 @@ fun.autorecipes {
 					{name='scrondrixcub',amount = '+1'},
 				},
 			crafting_speed = 120,
-			tech = 'assisted-embryology'
+			tech = 'assisted-embryology',
+			name = 'scrondrix-cub-2',
 		},
 		--salt
 		{
@@ -382,7 +406,8 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 110,
-			tech = 'assisted-embryology'
+			tech = 'assisted-embryology',
+			name = 'scrondrix-cub-3',
 		},
 		--fiber
 		{
@@ -395,7 +420,8 @@ fun.autorecipes {
 					{name='scrondrixcub',amount = '+2'},
 				},
 			crafting_speed = 100,
-			tech = 'assisted-embryology'
+			tech = 'assisted-embryology',
+			name = 'scrondrix-cub-4',
 		},
 		--navens
 		{
@@ -409,7 +435,8 @@ fun.autorecipes {
 					{name='scrondrixcub',amount = '+4'},
 				},
 			crafting_speed = 100,
-			tech = 'assisted-embryology'
+			tech = 'assisted-embryology',
+			name = 'scrondrix-cub-5',
 		},
 
 		-----------------------PHEROMONES-----------------------------
@@ -431,7 +458,8 @@ fun.autorecipes {
 					{name='scrondrixcub', amount =8},
 				},
 			crafting_speed = 140,
-			tech = 'pheromones'
+			tech = 'pheromones',
+			name = 'scrondrix-cub-6',
 		},
 		--yotoi leaves
 		{
@@ -446,7 +474,8 @@ fun.autorecipes {
 					{name='scrondrixcub', amount ='+1'},
 				},
 			crafting_speed = 120,
-			tech = 'pheromones'
+			tech = 'pheromones',
+			name = 'scrondrix-cub-7',
 		},
 		--salt
 		{
@@ -459,7 +488,8 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 110,
-			tech = 'pheromones'
+			tech = 'pheromones',
+			name = 'scrondrix-cub-8',
 		},
 		--fiber
 		{
@@ -472,7 +502,8 @@ fun.autorecipes {
 					{name='scrondrixcub', amount ='+2'},
 				},
 			crafting_speed =100,
-			tech = 'pheromones'
+			tech = 'pheromones',
+			name = 'scrondrix-cub-9',
 		},
 		--navens
 		{
@@ -486,7 +517,8 @@ fun.autorecipes {
 					{name='scrondrixcub', amount ='+2'},
 				},
 			crafting_speed = 100,
-			tech = 'pheromones'
+			tech = 'pheromones',
+			name = 'scrondrix-cub-10',
 		},
 	}
 }
