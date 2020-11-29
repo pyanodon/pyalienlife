@@ -661,13 +661,13 @@ RECIPE {
     enabled = false,
     energy_required = 40,
     ingredients = {
-        {type = 'item', name = 'brain-caged-simik', amount = 1}
+        {type = 'item', name = 'guts-caged-simik', amount = 1}
     },
     results = {
 		{type = 'item', name = 'hormonal', amount = 1},
     },
     main_product = "hormonal",
-}:add_unlock("nanochondria")
+}:add_unlock("antitumor")
 
 ----AUOG food----
 RECIPE {
@@ -682,6 +682,7 @@ RECIPE {
         {type = 'item', name = 'wood', amount = 3},
         {type = 'item', name = 'seaweed', amount = 5},
         {type = 'item', name = 'moss', amount = 5},
+        {type = 'item', name = 'starch', amount = 4},
         {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
     },
     results = {
@@ -705,6 +706,7 @@ RECIPE {
         {type = 'item', name = 'wood-seeds', amount = 1},
         {type = 'item', name = 'ash', amount = 10},
         {type = 'item', name = 'moss', amount = 10},
+        {type = 'item', name = 'starch', amount = 4},
         {type = 'item', name = 'seaweed', amount = 5},
         {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
     },
@@ -729,6 +731,7 @@ RECIPE {
         {type = 'item', name = 'albumin', amount = 2},
         {type = 'item', name = 'gravel', amount = 5},
         {type = 'item', name = 'sulfur', amount = 10},
+        {type = 'item', name = 'starch', amount = 4},
         {type = 'item', name = 'navens', amount = 1},
         {type = 'fluid', name = 'olefin', amount = 50},
     },
@@ -752,6 +755,7 @@ RECIPE {
         {type = 'item', name = 'uranium-ore', amount = 10},
         {type = 'item', name = 'skin', amount = 10},
         {type = 'item', name = 'sulfur', amount = 10},
+        {type = 'item', name = 'starch', amount = 4},
         {type = 'item', name = 'navens', amount = 1},
         {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'yaedols', amount = 2},
