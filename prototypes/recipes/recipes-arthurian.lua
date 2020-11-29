@@ -95,6 +95,7 @@ RECIPE {
         {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'moss', amount = 10},
         {type = 'item', name = 'guts', amount = 5},
+        {type = 'item', name = 'starch', amount = 4},
         {type = 'fluid', name = 'fish-oil', amount = 30},
         {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
     },

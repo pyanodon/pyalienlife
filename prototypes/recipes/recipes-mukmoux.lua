@@ -92,6 +92,7 @@ RECIPE {
         {type = 'item', name = 'biomass', amount = 5},
         {type = 'item', name = 'saps', amount = 5},
         {type = 'item', name = 'tuuphra', amount = 10},
+        {type = 'item', name = 'starch', amount = 4},
         {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
     },
     results = {
