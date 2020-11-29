@@ -36,9 +36,10 @@ local tech_upgrade =
         research = require("prototypes/upgrades/research"),
         sap = require("prototypes/upgrades/sap"),
         seaweed = require("prototypes/upgrades/seaweed"),
-        slaughterhouse = require("prototypes/upgrades/slaughterhouse"),
         scrondrix = require("prototypes/upgrades/scrondrix"),
         simik = require("prototypes/upgrades/simik"),
+        slaughterhouse = require("prototypes/upgrades/slaughterhouse"),
+        sponge = require("prototypes/upgrades/sponge"),
         ulric = require("prototypes/upgrades/ulric"),
         vrauk = require("prototypes/upgrades/vrauks"),
 
