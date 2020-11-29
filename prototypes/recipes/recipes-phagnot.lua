@@ -70,6 +70,7 @@ RECIPE {
         {type = 'item', name = 'ralesia-seeds', amount = 15},
         {type = 'item', name = 'tuuphra-seeds', amount = 15},
         {type = 'item', name = 'ash', amount = 10},
+        {type = 'item', name = 'starch', amount = 4},
         {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
     },
     results = {

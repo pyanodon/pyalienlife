@@ -66,6 +66,7 @@ RECIPE {
         {type = 'item', name = 'ralesia-seeds', amount = 2},
         {type = 'item', name = 'seaweed', amount = 5},
         {type = 'item', name = 'wood-seeds', amount = 5},
+        {type = 'item', name = 'starch', amount = 4},
         {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
     },
     results = {

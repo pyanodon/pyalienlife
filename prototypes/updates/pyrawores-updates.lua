@@ -54,7 +54,7 @@ TECHNOLOGY('uranium-mk03'):add_pack('py-science-pack')
 TECHNOLOGY('uranium-mk04'):add_pack('py-science-pack')
 TECHNOLOGY('zinc-mk03'):add_pack('py-science-pack')
 TECHNOLOGY('zinc-mk04'):add_pack('py-science-pack')
-
+RECIPE('fuelrod-mk02'):remove_unlock('fuel-production'):add_unlock('uranium-mk02')
 --RECIPES--
 
 RECIPE('mukmoux-fat-salt'):remove_unlock('machines-mk02')

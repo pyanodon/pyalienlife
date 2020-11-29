@@ -35,7 +35,7 @@
     }
 
 	ENTITY {
-        type = "container",
+        type = "linked-container",
         name = 'pydrive',
         icon = "__pyalienlifegraphics3__/graphics/icons/logistic-station.png",
         icon_size = 64,
@@ -65,7 +65,8 @@
             height = 576,
             --scale = 0.5,
             shift = util.by_pixel(16, -48),
-        }
+        },
+        gui_mode = 'all'
     }
 --[[
     ENTITY {
