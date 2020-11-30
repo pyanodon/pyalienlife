@@ -13,13 +13,14 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {name='bhoddosspore',amount =2},
+                {name='bhoddosspore',amount =5},
                 {name='biomass',amount =10},
+                {name='fuelrodmk01',amount=1},
                 {name='water',amount ='*10'},
             },
         results =
             {
-                {name='bhoddos'}
+                {name='bhoddos', amount = 3}
             },
         crafting_speed = 140,
         tech = 'bhoddos'
@@ -45,7 +46,7 @@ fun.autorecipes {
             },
         results =
             {
-                {name='bhoddos', amount ='+1'}
+                {name='bhoddos', amount ='+2'}
             },
         crafting_speed = 120,
         tech = 'bhoddos-mk02'

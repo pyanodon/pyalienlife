@@ -370,6 +370,11 @@ items.inputs.simikfood02 = {'simik-food-02', 1}
 items.inputs.simikblood = {'simik-blood',1}
 items.inputs.hotair = {'hot-air', 1}
 items.inputs.boron = {'boron', 1}
+items.inputs.fuelrodmk01 = {'fuelrod-mk01', 1}
+items.inputs.fuelrodmk02 = {'fuelrod-mk02', 1}
+items.inputs.fuelrodmk03 = {'fuelrod-mk03', 1}
+items.inputs.fuelrodmk04 = {'fuelrod-mk04', 1}
+items.inputs.fuelrodmk05 = {'fuelrod-mk05', 1}
 
 items.outputs = items.inputs
 --can put output replacements below here

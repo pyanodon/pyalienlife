@@ -78,12 +78,38 @@ TECHNOLOGY {
     name = "auog-breeding-3",
     icons =
     {
-        {icon = "__pyalienlifegraphics__/graphics/technology/arthurian.png"},
+        {icon = "__pyalienlifegraphics__/graphics/technology/auog.png"},
         {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png', icon_size = 64, scale = 0.5,shift = {35,35}},
     },
     icon_size = 128,
     order = "c-a",
     prerequisites = {"biased-mutation","auog-breeding-2"},
+    effects = {},
+    unit = {
+        count = 200,
+        ingredients = {
+            {"automation-science-pack", 3},
+            {'logistic-science-pack', 4},
+            {'chemical-science-pack', 3},
+            {'production-science-pack', 1},
+            {'utility-science-pack', 1},
+            {'py-science-pack', 2},
+        },
+        time = 50
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "bhoddos-breeding-3",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/technology/bhoddos.png"},
+        {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png', icon_size = 64, scale = 0.5,shift = {35,35}},
+    },
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {"biased-mutation","bhoddos-breeding-2"},
     effects = {},
     unit = {
         count = 200,
