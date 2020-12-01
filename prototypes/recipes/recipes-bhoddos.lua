@@ -56,10 +56,10 @@ RECIPE {
 
 --Secondary Upgrade Recipes--
 --SUR--
---WIP--
+--DONE--
 
 --mk02--
---WIP--
+--DONE--
 
 RECIPE {
     type = 'recipe',
@@ -82,7 +82,7 @@ RECIPE {
     icons =
         {
             {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', icon_size = 64},
-            {icon = "__pyalienlifegraphics3__/graphics/icons/bhoddos-spore.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
+            {icon = "__pyalienlifegraphics__/graphics/icons/bhoddos-spore.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
         },
     icon_size = 64,
     subgroup = 'py-alienlife-bhoddos',
@@ -108,7 +108,32 @@ RECIPE {
     --main_product = "bhoddos-mk02",
     icons =
         {
-            {icon = "__pyalienlifegraphics3__/graphics/icons/bhoddos.png", icon_size = 64},
+            {icon = "__pyalienlifegraphics__/graphics/icons/bhoddos.png", icon_size = 64},
+            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
+        },
+    icon_size = 64,
+    subgroup = 'py-alienlife-bhoddos',
+    order = 'za'
+}:add_unlock("bhoddos-breeding-1")
+
+RECIPE {
+    type = 'recipe',
+    name = 'bhoddos-spore-mk02-breeding',
+    category = 'bhoddos',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'bhoddos-mk02', amount = 1},
+        {type = 'item', name = 'fungal-substrate-02', amount = 5},
+        {type = 'fluid', name = 'liquid-manure', amount = 50},
+        },
+    results = {
+        {type = 'item', name = 'bhoddos-spore-mk02', amount = 8, probability = 0.8},
+    },
+    --main_product = "bhoddos-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/bhoddos-spore.png", icon_size = 64},
             {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
         },
     icon_size = 64,
@@ -117,7 +142,7 @@ RECIPE {
 }:add_unlock("bhoddos-breeding-1")
 
 --mk03--
---WIP--
+--DONE--
 
 RECIPE {
     type = 'recipe',
@@ -141,7 +166,7 @@ RECIPE {
     icons =
         {
             {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png', icon_size = 64},
-            {icon = "__pyalienlifegraphics3__/graphics/icons/bhoddos-spore.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
+            {icon = "__pyalienlifegraphics__/graphics/icons/bhoddos-spore.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
         },
     icon_size = 64,
     subgroup = 'py-alienlife-bhoddos',
@@ -167,7 +192,32 @@ RECIPE {
     --main_product = "bhoddos-mk02",
     icons =
         {
-            {icon = "__pyalienlifegraphics3__/graphics/icons/bhoddos.png", icon_size = 64},
+            {icon = "__pyalienlifegraphics__/graphics/icons/bhoddos.png", icon_size = 64},
+            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png', icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
+        },
+    icon_size = 64,
+    subgroup = 'py-alienlife-bhoddos',
+    order = 'za'
+}:add_unlock("bhoddos-breeding-2")
+
+RECIPE {
+    type = 'recipe',
+    name = 'bhoddos-spore-mk03-breeding',
+    category = 'bhoddos',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'bhoddos-mk03', amount = 1},
+        {type = 'item', name = 'fungal-substrate-03', amount = 5},
+        {type = 'fluid', name = 'bacteria-1', amount = 75},
+        },
+    results = {
+        {type = 'item', name = 'bhoddos-spore-mk03', amount = 9, probability = 0.7},
+    },
+    --main_product = "bhoddos-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/bhoddos-spore.png", icon_size = 64},
             {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png', icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
         },
     icon_size = 64,
@@ -176,11 +226,11 @@ RECIPE {
 }:add_unlock("bhoddos-breeding-2")
 
 --mk04--
---WIP--
+--DONE--
 
 RECIPE {
     type = 'recipe',
-    name = 'bhoddos-spore-mk03',
+    name = 'bhoddos-spore-mk04',
     category = 'bhoddos',
     enabled = false,
     energy_required = 30,
@@ -200,7 +250,7 @@ RECIPE {
     icons =
         {
             {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png', icon_size = 64},
-            {icon = "__pyalienlifegraphics3__/graphics/icons/bhoddos-spore.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
+            {icon = "__pyalienlifegraphics__/graphics/icons/bhoddos-spore.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
         },
     icon_size = 64,
     subgroup = 'py-alienlife-bhoddos',
@@ -209,7 +259,7 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'bhoddos-mk03',
+    name = 'bhoddos-mk04',
     category = 'bhoddos',
     enabled = false,
     energy_required = 30,
@@ -226,10 +276,36 @@ RECIPE {
     --main_product = "bhoddos-mk02",
     icons =
         {
-            {icon = "__pyalienlifegraphics3__/graphics/icons/bhoddos.png", icon_size = 64},
+            {icon = "__pyalienlifegraphics__/graphics/icons/bhoddos.png", icon_size = 64},
             {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png', icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
         },
     icon_size = 64,
     subgroup = 'py-alienlife-bhoddos',
     order = 'za'
 }:add_unlock("bhoddos-breeding-3")
+
+RECIPE {
+    type = 'recipe',
+    name = 'bhoddos-spore-mk04-breeding',
+    category = 'bhoddos',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'bhoddos-mk04', amount = 1},
+        {type = 'item', name = 'fungal-substrate-03', amount = 5},
+        {type = 'item', name = 'gh', amount = 2},
+        {type = 'fluid', name = 'bacteria-1', amount = 100},
+        },
+    results = {
+        {type = 'item', name = 'bhoddos-spore-mk04', amount = 9, probability = 0.75},
+    },
+    --main_product = "bhoddos-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/bhoddos-spore.png", icon_size = 64},
+            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png', icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
+        },
+    icon_size = 64,
+    subgroup = 'py-alienlife-bhoddos',
+    order = 'za'
+}:add_unlock("bhoddos-breeding-3"):replace_ingredient("bacteria-1", "bacteria-2")

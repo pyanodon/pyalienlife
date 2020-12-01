@@ -100,7 +100,7 @@ TECHNOLOGY {
     name = "bhoddos-breeding-2",
     icons =
     {
-        {icon = "__pyalienlifegraphics__/graphics/technology/auog.png"},
+        {icon = "__pyalienlifegraphics__/graphics/technology/bhoddos.png"},
         {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png', icon_size = 64, scale = 0.5,shift = {35,35}},
     },
     icon_size = 128,
