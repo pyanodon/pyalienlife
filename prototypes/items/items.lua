@@ -3826,6 +3826,51 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "bhoddos-spore-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/bhoddos-spore.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 300
+}
+
+ITEM {
+    type = "item",
+    name = "bhoddos-spore-mk03",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/bhoddos-spore.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 300
+}
+
+ITEM {
+    type = "item",
+    name = "bhoddos-spore-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/bhoddos-spore.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 300
+}
+
+ITEM {
+    type = "item",
     name = "immunosupressants",
     icon = "__pyalienlifegraphics__/graphics/icons/immunosuppressants.png",
     icon_size = 64,
@@ -5505,8 +5550,8 @@ ITEM {
     name = "seaweed-mk02",
     icons =
     {
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/seaweed.png"}
+        {icon = "__pyalienlifegraphics__/graphics/icons/seaweed.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
     },
     icon_size = 64,
 	category = "seaweed",
@@ -5525,8 +5570,8 @@ ITEM {
     name = "seaweed-mk03",
     icons =
     {
+        {icon = "__pyalienlifegraphics__/graphics/icons/seaweed.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/seaweed.png"}
     },
     icon_size = 64,
 	category = "seaweed",
@@ -5545,8 +5590,8 @@ ITEM {
     name = "seaweed-mk04",
     icons =
     {
+        {icon = "__pyalienlifegraphics__/graphics/icons/seaweed.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/seaweed.png"}
     },
     icon_size = 64,
 	category = "seaweed",
