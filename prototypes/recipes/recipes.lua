@@ -806,7 +806,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'ticocr-alloy',
-    category = 'eaf',
+    category = 'py-rawores-smelter',
     enabled = false,
     energy_required = 10,
     ingredients = {
