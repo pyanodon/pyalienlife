@@ -40,6 +40,7 @@ local tech_upgrade =
         simik = require("prototypes/upgrades/simik"),
         slaughterhouse = require("prototypes/upgrades/slaughterhouse"),
         sponge = require("prototypes/upgrades/sponge"),
+        trits = require("prototypes/upgrades/trits"),
         ulric = require("prototypes/upgrades/ulric"),
         vrauk = require("prototypes/upgrades/vrauks"),
 
