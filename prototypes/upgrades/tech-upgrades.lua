@@ -43,6 +43,7 @@ local tech_upgrade =
         trits = require("prototypes/upgrades/trits"),
         tuuphra = require("prototypes/upgrades/tuuphra"),
         ulric = require("prototypes/upgrades/ulric"),
+        vonix = require("prototypes/upgrades/vonix"),
         vrauk = require("prototypes/upgrades/vrauks"),
 
         --pyht techs
