@@ -45,6 +45,7 @@ local tech_upgrade =
         ulric = require("prototypes/upgrades/ulric"),
         vonix = require("prototypes/upgrades/vonix"),
         vrauk = require("prototypes/upgrades/vrauks"),
+        xeno = require("prototypes/upgrades/xeno"),
 
         --pyht techs
         antelope = require("prototypes/upgrades/antelope"),
