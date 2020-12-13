@@ -41,6 +41,7 @@ RECIPE('xyhiphoe-hydrocyclone'):remove_unlock('vanadium-processing'):add_unlock(
 RECIPE('silver-foam'):remove_unlock('fusion-mk03'):add_unlock('pharmagenomics')
 RECIPE('agzn-alloy'):remove_unlock('fusion-mk03'):add_unlock('pharmagenomics')
 RECIPE('steam-heating'):remove_unlock('coal-processing-3'):add_unlock('coal-processing-2')
+RECIPE('sc-wire'):add_ingredient({type = 'item', name = 'agzn-alloy', amount = 1})
 
 RECIPE('xyhiphoe-blood'):remove_unlock('vanadium-processing')
 RECIPE('vanabins'):remove_ingredient("xyhiphoe-blood"):add_ingredient({type = "fluid", name = "arthropod-blood", amount = 150})
