@@ -1345,6 +1345,47 @@ RECIPE {
     --main_product = "chloral",
 }:add_unlock("advanced-electronics")
 
+RECIPE {
+    type = "recipe",
+    name = "starch-3",
+    category = "pulp",
+    enabled = false,
+    energy_required = 3,
+    ingredients = {
+        {type = "item", name = "guar-seeds", amount = 100}
+    },
+    results = {
+        {type = "item", name = "starch", amount = 3},
+        {type = "item", name = "biomass", amount = 5},
+    },
+    main_product= "starch",
+    icon = "__pyraworesgraphics__/graphics/icons/starch.png",
+    icon_size = 32,
+    subgroup = "py-rawores-recipes",
+    order = "j"
+}:add_unlock("machines-mk02"):add_ingredient({type = 'item', name = 'fiberboard', amount = 1})
+
+RECIPE {
+    type = "recipe",
+    name = "starch-4",
+    category = "pulp",
+    enabled = false,
+    energy_required = 3,
+    ingredients = {
+        {type = "item", name = "guar-seeds", amount = 100},
+        {type = "item", name = "sodium-sulfate", amount = 1},
+    },
+    results = {
+        {type = "item", name = "starch", amount = 10},
+        {type = "item", name = "biomass", amount = 5},
+    },
+    main_product= "starch",
+    icon = "__pyraworesgraphics__/graphics/icons/starch.png",
+    icon_size = 32,
+    subgroup = "py-rawores-recipes",
+    order = "j"
+}:add_unlock("machines-mk02"):add_ingredient({type = 'item', name = 'fiberboard', amount = 1})
+
 ITEM {
     type = "item",
     name = "cooling-system",
