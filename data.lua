@@ -651,7 +651,7 @@ for i, item in pairs(bio_list) do
             name = 'biomass-' .. i,
             category = 'compost',
             enabled = false,
-			hidden = true,
+			hide_from_player_crafting = true,
             energy_required = 3,
             ingredients = {
                 {type = type, name = i, amount = item.item_amount},
