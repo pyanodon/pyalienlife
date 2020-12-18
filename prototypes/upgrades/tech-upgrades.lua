@@ -47,6 +47,7 @@ local tech_upgrade =
         vrauk = require("prototypes/upgrades/vrauks"),
         xeno = require("prototypes/upgrades/xeno"),
         xyhiphoe = require("prototypes/upgrades/xyhiphoe"),
+        yaedols = require("prototypes/upgrades/yaedols"),
 
         --pyht techs
         antelope = require("prototypes/upgrades/antelope"),
