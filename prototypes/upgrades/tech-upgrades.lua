@@ -49,6 +49,7 @@ local tech_upgrade =
         xyhiphoe = require("prototypes/upgrades/xyhiphoe"),
         yaedols = require("prototypes/upgrades/yaedols"),
         yotoi = require("prototypes/upgrades/yotoi"),
+        zipir = require("prototypes/upgrades/zipir"),
 
         --pyht techs
         antelope = require("prototypes/upgrades/antelope"),
