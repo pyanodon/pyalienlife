@@ -3,16 +3,17 @@ local tech_upgrades =
     {
         master_tech =
             {
-            name = "simik-digestion-mk01", -- this is the tech name. duh
-            icon = "__pyalienlifegraphics3__/graphics/technology/updates/simik-digestion-mk01.png",
+            name = "simik-digestion-mk03", -- this is the tech name. duh
+            icon = "__pyalienlifegraphics3__/graphics/technology/updates/simik-digestion-mk03.png",
             icon_size = 128,
             order = "c-a",
-            prerequisites = {"simik-mk01"},
+            prerequisites = {"simik-mk02"},
             unit = {
                 count = 500,
                 ingredients = {
                     {"automation-science-pack", 1},
                     {"logistic-science-pack", 1},
+                    {"py-science-pack", 1},
                 },
                 time = 45
                 }
@@ -23,8 +24,8 @@ local tech_upgrades =
                 {
                 technology = -- no touchy
                     {
-                    name = "simik-iron", -- this is the tech name. duh
-                    icon = "__pyalienlifegraphics3__/graphics/technology/simik-iron.png",
+                    name = "simik-boron", -- this is the tech name. duh
+                    icon = "__pyalienlifegraphics3__/graphics/technology/simik-boron.png",
                     icon_size = 128,
                     order = "c-a",
                     },
@@ -45,20 +46,20 @@ local tech_upgrades =
                     },
                 techs_to_lock = -- techs that should be locked and hidden if this tech is researched
                     {
-                        'simik-copper',
-                        'simik-quartz',
+                        'simik-chromium',
+                        'simik-molybdenum',
                     },
                 recipes_to_unlock =
                     {
-                        'simik-iron'
+                        'simik-boron'
                     }
                 },
             example_2 =
                 {
                 technology =
                     {
-                    name = "simik-copper",
-                    icon = "__pyalienlifegraphics3__/graphics/technology/simik-copper.png",
+                    name = "simik-chromium",
+                    icon = "__pyalienlifegraphics3__/graphics/technology/simik-chromium.png",
                     icon_size = 128,
                     order = "c-a",
                     },
@@ -78,21 +79,21 @@ local tech_upgrades =
                     },
                 techs_to_lock =
                     {
-                        'simik-iron',
-                        'simik-quartz',
+                        'simik-boron',
+                        'simik-molybdenum',
                     },
                 is_upgrade = true, -- tell this its an upgrade of other techs
                 recipes_to_unlock =
                 {
-                    'simik-copper'
+                    'simik-chromium'
                 }
                 },
             example_3 =
                 {
                 technology =
                     {
-                    name = "simik-quartz",
-                    icon = "__pyalienlifegraphics3__/graphics/technology/simik-quartz.png",
+                    name = "simik-molybdenum",
+                    icon = "__pyalienlifegraphics3__/graphics/technology/simik-molybdenum.png",
                     icon_size = 128,
                     order = "c-a",
                     },
@@ -112,13 +113,13 @@ local tech_upgrades =
                     },
                 techs_to_lock =
                     {
-                        'simik-iron',
-                        'simik-copper'
+                        'simik-boron',
+                        'simik-chromium'
                     },
                     is_upgrade = true, -- tell this its an upgrade of other techs
                     recipes_to_unlock =
                     {
-                        'simik-quartz'
+                        'simik-molybdenum'
                     }
                 },
             }

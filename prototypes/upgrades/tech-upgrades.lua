@@ -59,6 +59,11 @@ local tech_upgrade =
 
         --simik metals
         simikmetalMK01 = require("prototypes/upgrades/simikmetalMK01"),
+        simikmetalMK02 = require("prototypes/upgrades/simikmetalMK02"),
+        simikmetalMK03 = require("prototypes/upgrades/simikmetalMK03"),
+        simikmetalMK04 = require("prototypes/upgrades/simikmetalMK04"),
+        simikmetalMK05 = require("prototypes/upgrades/simikmetalMK05"),
+        simikmetalMK06 = require("prototypes/upgrades/simikmetalMK06"),
         --test_1 is a filler name for table readablity by fleshy meat bags. name it whatever and then set it to require the tech upgrade fills
         --each name needs to be unque to keep the files seperated
     }
