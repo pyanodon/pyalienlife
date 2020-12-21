@@ -40,8 +40,8 @@ local tech_upgrades =
                 upgrades = -- the effects the tech will have on the building. 1 = 100%
                     {
                         consumption = -0.1, --energy usage
-                        speed = 0.3, -- machine speed
-                        productivity = -0.15, -- productivity. and yes i know you`ll never use this but I`ll make sure it works anyway
+                        speed = 0.4, -- machine speed
+                        productivity = 0.15, -- productivity. and yes i know you`ll never use this but I`ll make sure it works anyway
                         pollution = 0.0 -- pollution this machine will produce while running
                     },
                 techs_to_lock = -- techs that should be locked and hidden if this tech is researched

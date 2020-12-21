@@ -70,8 +70,8 @@ local tech_upgrades =
                     {
                         consumption = 0.0,
                         speed = -0.1,
-                        productivity = -0.1,
-                        pollution = -0.5
+                        productivity = 0.1,
+                        pollution = -0.85
                     },
                 techs_to_lock =
                     {

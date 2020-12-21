@@ -36,7 +36,6 @@ local tech_upgrades =
                         'vonix-den-mk01',
                         'vonix-den-mk02',
                         'vonix-den-mk03',
-                        'vonix-den-mk04',
                     },-- the entities that should be effected by this tech upgrade. can be a single entity or a table of entities
                 upgrades = -- the effects the tech will have on the building. 1 = 100%
                     {
@@ -65,7 +64,6 @@ local tech_upgrades =
                         'vonix-den-mk01',
                         'vonix-den-mk02',
                         'vonix-den-mk03',
-                        'vonix-den-mk04',
                     },
                 upgrades =
                     {
@@ -99,7 +97,6 @@ local tech_upgrades =
                         'vonix-den-mk01',
                         'vonix-den-mk02',
                         'vonix-den-mk03',
-                        'vonix-den-mk04',
                     },
                 upgrades =
                     {

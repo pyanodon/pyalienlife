@@ -25,8 +25,8 @@ local tech_upgrades =
                 {
                 technology = -- no touchy
                     {
-                    name = "hsn", -- this is the tech name. duh
-                    icon = "__pyalienlifegraphics3__/graphics/technology/hsn.png",
+                    name = "respiratory", -- this is the tech name. duh
+                    icon = "__pyalienlifegraphics3__/graphics/technology/respiratory.png",
                     icon_size = 128,
                     order = "c-a",
                     },
@@ -46,16 +46,16 @@ local tech_upgrades =
                     },
                 techs_to_lock = -- techs that should be locked and hidden if this tech is researched
                     {
-                        'enn',
-                        'dwx',
+                        'neural-fusion',
+                        'cc',
                     }
                 },
             example_2 =
                 {
                 technology =
                     {
-                    name = "enn",
-                    icon = "__pyalienlifegraphics3__/graphics/technology/enn.png",
+                    name = "neural-fusion",
+                    icon = "__pyalienlifegraphics3__/graphics/technology/neural-fusion.png",
                     icon_size = 128,
                     order = "c-a",
                     },
@@ -75,8 +75,8 @@ local tech_upgrades =
                     },
                 techs_to_lock =
                     {
-                        'hsn',
-                        'dwx',
+                        'respiratory',
+                        'cc',
                     },
                 is_upgrade = false, -- tell this its an upgrade of other techs
                 prerequisites = -- table of all techs that are replaced by this one.
@@ -88,8 +88,8 @@ local tech_upgrades =
                 {
                 technology =
                     {
-                    name = "dwx",
-                    icon = "__pyalienlifegraphics3__/graphics/technology/dwx.png",
+                    name = "cc",
+                    icon = "__pyalienlifegraphics3__/graphics/technology/cc.png",
                     icon_size = 128,
                     order = "c-a",
                     },
@@ -109,8 +109,8 @@ local tech_upgrades =
                     },
                 techs_to_lock =
                     {
-                        'hsn',
-                        'enn'
+                        'respiratory',
+                        'neural-fusion'
                     }
                 },
             }

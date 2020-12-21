@@ -39,7 +39,7 @@ local tech_upgrades =
                     },-- the entities that should be effected by this tech upgrade. can be a single entity or a table of entities
                 upgrades = -- the effects the tech will have on the building. 1 = 100%
                     {
-                        consumption = 0.0, --energy usage
+                        consumption = 0.1, --energy usage
                         speed = 0.3, -- machine speed
                         productivity = 0.0, -- productivity. and yes i know you`ll never use this but I`ll make sure it works anyway
                         pollution = -0.1 -- pollution this machine will produce while running
@@ -70,7 +70,7 @@ local tech_upgrades =
                     {
                         consumption = 0.2,
                         speed = -0.15,
-                        productivity = 0.15,
+                        productivity = 0.25,
                         pollution = 0.0
                     },
                 techs_to_lock =
