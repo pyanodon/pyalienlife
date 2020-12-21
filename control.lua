@@ -489,8 +489,8 @@ remote.add_interface('data_puller',
 		end
 })
 
---local tech_upgrade_table = require("prototypes/upgrades/tech-upgrades")
---[[
+local tech_upgrade_table = require("prototypes/upgrades/tech-upgrades")
+
 local function log_all_machines_for_upgrades(tech_upgrades)
 --log('hit')
 --log(serpent.block(tech_upgrades))
@@ -506,7 +506,7 @@ local function log_all_machines_for_upgrades(tech_upgrades)
 	end
 	--log(serpent.block(global.tech_upgrades))
 end
-]]--
+
 script.on_init(
 	function()
 		global.caravanroutes = caravanroutes
@@ -561,7 +561,6 @@ script.on_init(
 			output_order = {}
 		}
 		--order_biolist()
-		--[[
 		global.tech_upgrades =
 		{
 			entities_master_list = {},
@@ -571,8 +570,7 @@ script.on_init(
 			tech_status = {},
 			currently_selected = {}
 		}
-		]]--
-		--log_all_machines_for_upgrades(tech_upgrade_table)
+		log_all_machines_for_upgrades(tech_upgrade_table)
 		global.energy_drink = {}
 		if not remote.interfaces["silo_script"] then
 			return
@@ -881,9 +879,8 @@ script.on_event(
 				}
 			global.pycloud.chests[E.unit_number] = chest
 			--log(serpent.block(global.pycloud))
-		--elseif global.tech_upgrades.entities_master_list[E.name] ~= nil then
+		elseif global.tech_upgrades.entities_master_list[E.name] ~= nil then
 			--log('hit')
-			--[[
 			local beacon = game.surfaces['nauvis'].create_entity{
 				name = 'hidden-beacon',
 				position = E.position,
@@ -891,7 +888,6 @@ script.on_event(
 			}
 			local module = beacon.get_inventory(defines.inventory.beacon_modules)
 			local mod = module.insert({name = global.tech_upgrades.entities_master_list[E.name] .. '-module', count = 1})
-			]]--
 			--log(mod)
 		elseif global.has_built_first_farm == false then
 			for _, farm in pairs(farm_buildings) do
@@ -2681,9 +2677,9 @@ end
 
 script.on_event(defines.events.on_research_finished, function(event)
 	Tech_recipe_upgrades(event)
-	--_Tech_building_upgrades(event)
+	_Tech_building_upgrades(event)
 end)
---[[
+
 script.on_event("tech-upgrades", function(event)
 
 	local player = game.players[event.player_index]
@@ -2753,4 +2749,3 @@ script.on_event("tech-upgrades", function(event)
 	end
 
 end)
-]]--
