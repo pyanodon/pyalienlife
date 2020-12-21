@@ -75,7 +75,7 @@ RECIPE {
         {type = 'item', name = 'bio-sample', amount = 1},
     },
     results = {
-        {type = 'item', name = 'coal-pulp-03-barrel', amount = 1},
+        {type = 'item', name = 'coal-pulp-03-barrel', amount = 1},    --30 coal
         {type = 'item', name = 'empty-barrel', amount = 2},
     },
     main_product = "coal-pulp-03-barrel",
@@ -110,13 +110,13 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = 'item', name = 'olefin-barrel', amount = 2},
-        {type = 'item', name = 'ore-aluminium', amount = 10},
+        {type = 'item', name = 'olefin-barrel', amount = 6},
+        {type = 'item', name = 'ore-aluminium', amount = 60},
         {type = 'item', name = 'bio-sample', amount = 1},
     },
     results = {
         {type = 'item', name = 'crystalized-sodium-aluminate', amount = 1},
-        {type = 'item', name = 'empty-barrel', amount = 2},
+        {type = 'item', name = 'empty-barrel', amount = 6},
     },
     main_product = "crystalized-sodium-aluminate",
 }:add_unlock("simik-aluminium")
@@ -130,13 +130,13 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = 'item', name = 'olefin-barrel', amount = 2},
-        {type = 'item', name = 'raw-borax', amount = 10},
+        {type = 'item', name = 'olefin-barrel', amount = 6},
+        {type = 'item', name = 'raw-borax', amount = 20},
         {type = 'item', name = 'bio-sample', amount = 1},
     },
     results = {
-        {type = 'item', name = 'boron-trioxide', amount = 5},
-        {type = 'item', name = 'empty-barrel', amount = 2},
+        {type = 'item', name = 'boron-trioxide', amount = 7},
+        {type = 'item', name = 'empty-barrel', amount = 6},
     },
     main_product = "boron-trioxide",
 }:add_unlock("simik-boron")
@@ -155,7 +155,7 @@ RECIPE {
         {type = 'item', name = 'bio-sample', amount = 1},
     },
     results = {
-        {type = 'item', name = 'chromite-sand', amount = 50},
+        {type = 'item', name = 'chromite-sand', amount = 20},
         {type = 'item', name = 'empty-barrel', amount = 2},
     },
     main_product = "chromite-sand",
@@ -175,7 +175,7 @@ RECIPE {
         {type = 'item', name = 'bio-sample', amount = 1},
     },
     results = {
-        {type = 'item', name = 'molybdenum-sulfide', amount = 25},
+        {type = 'item', name = 'molybdenum-sulfide', amount = 3},
         {type = 'item', name = 'empty-barrel', amount = 2},
     },
     main_product = "molybdenum-sulfide",
@@ -294,13 +294,13 @@ RECIPE {
     energy_required = 60,
     ingredients = {
         {type = 'item', name = 'olefin-barrel', amount = 2},
-        {type = 'item', name = 'empty-barrel', amount = 1},
-        {type = 'item', name = 'nexelit-ore', amount = 15},
+      --  {type = 'item', name = 'empty-barrel', amount = 1},
+        {type = 'item', name = 'nexelit-ore', amount = 13},
         {type = 'item', name = 'bio-sample', amount = 1},
     },
     results = {
-        {type = 'item', name = 'molten-nexelit-barrel', amount = 1},
-        {type = 'item', name = 'empty-barrel', amount = 2},
+        {type = 'item', name = 'molten-nexelit-barrel', amount = 2},
+        --{type = 'item', name = 'empty-barrel', amount = 2},
     },
     main_product = "molten-nexelit-barrel",
 }:add_unlock("simik-nexelit")
@@ -314,13 +314,13 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = 'item', name = 'olefin-barrel', amount = 2},
-        {type = 'item', name = 'ore-lead', amount = 30},
+        {type = 'item', name = 'olefin-barrel', amount = 8},
+        {type = 'item', name = 'ore-lead', amount = 80},
         {type = 'item', name = 'bio-sample', amount = 1},
     },
     results = {
         {type = 'item', name = 'high-grade-silver', amount = 1},
-        {type = 'item', name = 'empty-barrel', amount = 2},
+        {type = 'item', name = 'empty-barrel', amount = 8},
     },
     main_product = "high-grade-silver",
 }:add_unlock("simik-silver")
@@ -339,7 +339,7 @@ RECIPE {
         {type = 'item', name = 'bio-sample', amount = 1},
     },
     results = {
-        {type = 'item', name = 'gold-concentrate', amount = 1},
+        {type = 'item', name = 'gold-concentrate', amount = 2},
         {type = 'item', name = 'empty-barrel', amount = 2},
     },
     main_product = "gold-concentrate",
@@ -354,13 +354,13 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = 'item', name = 'olefin-barrel', amount = 2},
-        {type = 'item', name = 'uranium-ore', amount = 50},
+        {type = 'item', name = 'olefin-barrel', amount = 8},
+        {type = 'item', name = 'uranium-ore', amount = 30},
         {type = 'item', name = 'bio-sample', amount = 1},
     },
     results = {
-        {type = 'item', name = '70-u-powder', amount = 1},
-        {type = 'item', name = 'empty-barrel', amount = 2},
+        {type = 'item', name = '70-u-powder', amount = 11},  -- should have been 14 but i picked 11 in order to roughly offset the cost of other chemicals used in main chain 
+        {type = 'item', name = 'empty-barrel', amount = 8},
     },
     main_product = "70-u-powder",
 }:add_unlock("simik-uranium")
