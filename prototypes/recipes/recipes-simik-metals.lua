@@ -7,13 +7,13 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = 'item', name = 'olefin-barrel', amount = 2},
-        {type = 'item', name = 'iron-ore', amount = 10},
+        {type = 'item', name = 'olefin-barrel', amount = 6},
+        {type = 'item', name = 'iron-ore', amount = 50},
         {type = 'item', name = 'bio-sample', amount = 1},
     },
     results = {
         {type = 'item', name = 'unslimed-iron', amount = 5},
-        {type = 'item', name = 'empty-barrel', amount = 2},
+        {type = 'item', name = 'empty-barrel', amount = 6},
     },
     main_product = "unslimed-iron",
 }:add_unlock("simik-iron")
@@ -28,13 +28,13 @@ RECIPE {
     energy_required = 60,
     ingredients = {
         {type = 'item', name = 'olefin-barrel', amount = 2},
-        {type = 'item', name = 'empty-barrel', amount = 1},
-        {type = 'item', name = 'copper-ore', amount = 10},
+       -- {type = 'item', name = 'empty-barrel', amount = 1},
+        {type = 'item', name = 'copper-ore', amount = 15},
         {type = 'item', name = 'bio-sample', amount = 1},
     },
     results = {
-        {type = 'item', name = 'copper-solution-barrel', amount = 1},
-        {type = 'item', name = 'empty-barrel', amount = 2},
+        {type = 'item', name = 'copper-solution-barrel', amount = 2},
+       -- {type = 'item', name = 'empty-barrel', amount = 2},
     },
     main_product = "copper-solution-barrel",
 }:add_unlock("simik-copper")
@@ -50,7 +50,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'olefin-barrel', amount = 2},
         {type = 'item', name = 'empty-barrel', amount = 1},
-        {type = 'item', name = 'ore-quartz', amount = 10},
+        {type = 'item', name = 'ore-quartz', amount = 30},
         {type = 'item', name = 'bio-sample', amount = 1},
     },
     results = {
@@ -191,11 +191,11 @@ RECIPE {
     energy_required = 60,
     ingredients = {
         {type = 'item', name = 'olefin-barrel', amount = 2},
-        {type = 'item', name = 'ore-zinc', amount = 10},
+        {type = 'item', name = 'ore-zinc', amount = 15},
         {type = 'item', name = 'bio-sample', amount = 1},
     },
     results = {
-        {type = 'item', name = 'concentrated-zinc', amount = 1},
+        {type = 'item', name = 'concentrated-zinc', amount = 2},
         {type = 'item', name = 'empty-barrel', amount = 2},
     },
     main_product = "concentrated-zinc",
@@ -211,13 +211,13 @@ RECIPE {
     energy_required = 60,
     ingredients = {
         {type = 'item', name = 'olefin-barrel', amount = 2},
-        {type = 'item', name = 'empty-barrel', amount = 1},
-        {type = 'item', name = 'ore-nickel', amount = 10},
+       -- {type = 'item', name = 'empty-barrel', amount = 1},
+        {type = 'item', name = 'ore-nickel', amount = 25},   --20 can also do but we use some expensive stuff in this chain 
         {type = 'item', name = 'bio-sample', amount = 1},
     },
     results = {
-        {type = 'item', name = 'nickel-pulp-03-barrel', amount = 1},
-        {type = 'item', name = 'empty-barrel', amount = 2},
+        {type = 'item', name = 'nickel-pulp-03-barrel', amount = 2},
+       -- {type = 'item', name = 'empty-barrel', amount = 2},
     },
     main_product = "nickel-pulp-03-barrel",
 }:add_unlock("simik-nickel")
@@ -257,7 +257,7 @@ RECIPE {
         {type = 'item', name = 'bio-sample', amount = 1},
     },
     results = {
-        {type = 'item', name = 'high-grade-ti', amount = 1},
+        {type = 'item', name = 'high-grade-ti', amount = 2},
         {type = 'item', name = 'empty-barrel', amount = 2},
     },
     main_product = "high-grade-ti",
