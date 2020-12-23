@@ -68,7 +68,7 @@ local tech_upgrade =
         --each name needs to be unque to keep the files seperated
     }
 
-log(serpent.block(tech_upgrade))
+--log(serpent.block(tech_upgrade))
 
 if data ~= nil then
     --log('hit')

@@ -708,6 +708,18 @@ script.on_configuration_changed(
 		if global.energy_drink == nil then
 			global.energy_drink = {}
 		end
+		if global.tech_upgrades == nil then
+			global.tech_upgrades =
+			{
+				entities_master_list = {},
+				unlocked_techs = {},
+				disabled_techs = {},
+				techs = {},
+				tech_status = {},
+				currently_selected = {}
+			}
+			log_all_machines_for_upgrades(tech_upgrade_table)
+		end
 	end
 )
 
