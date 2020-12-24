@@ -494,17 +494,36 @@ local tech_upgrade_table = require("prototypes/upgrades/tech-upgrades")
 local function log_all_machines_for_upgrades(tech_upgrades)
 --log('hit')
 --log(serpent.block(tech_upgrades))
-	for _, table in pairs(tech_upgrades) do
-		--log(serpent.block(table))
-		if table.is_ht == nil or table.is_ht == false or game.active_mods['pyhightech'] then
-			global.tech_upgrades.techs[table.master_tech.name] = {}
-			for _, tech in pairs(table.sub_techs) do
+	for _, tab in pairs(tech_upgrades) do
+		--log(serpent.block(tab))
+		if tab.is_ht == nil or tab.is_ht == false or game.active_mods['pyhightech'] then
+			global.tech_upgrades.techs[tab.master_tech.name] = {}
+			for _, tech in pairs(tab.sub_techs) do
 				--log(serpent.block(tech))
-				global.tech_upgrades.techs[table.master_tech.name][tech.technology.name] = tech
+				global.tech_upgrades.techs[tab.master_tech.name][tech.technology.name] = tech
+				for e, ent in pairs(tech.entities) do
+					if global.tech_upgrades.entities_name_list[ent] == nil then
+						global.tech_upgrades.entities_name_list[ent] = ent
+					end
+				end
 			end
 		end
 	end
 	--log(serpent.block(global.tech_upgrades))
+end
+
+local function add_farm_to_table(ent)
+	global.tech_upgrades.entities[ent.unit_number] = ent
+end
+
+local function adding_beacon(E,player)
+	local beacon = game.surfaces['nauvis'].create_entity{
+		name = 'hidden-beacon',
+		position = E.position,
+		force = player.force
+	}
+	local module = beacon.get_inventory(defines.inventory.beacon_modules)
+	local mod = module.insert({name = global.tech_upgrades.entities_master_list[E.name] .. '-module', count = 1})
 end
 
 script.on_init(
@@ -564,6 +583,8 @@ script.on_init(
 		global.tech_upgrades =
 		{
 			entities_master_list = {},
+			entities_name_list = {},
+			entities = {},
 			unlocked_techs = {},
 			disabled_techs = {},
 			techs = {},
@@ -708,10 +729,13 @@ script.on_configuration_changed(
 		if global.energy_drink == nil then
 			global.energy_drink = {}
 		end
+		global.tech_upgrades = nil --REMOVE THIS BEFORE RELEASE
 		if global.tech_upgrades == nil then
 			global.tech_upgrades =
 			{
 				entities_master_list = {},
+				entities_name_list = {},
+				entites = {},
 				unlocked_techs = {},
 				disabled_techs = {},
 				techs = {},
@@ -719,6 +743,13 @@ script.on_configuration_changed(
 				currently_selected = {}
 			}
 			log_all_machines_for_upgrades(tech_upgrade_table)
+			log(serpent.block(global.tech_upgrades))
+			local entities = game.surfaces['nauvis'].find_entities_filtered{type = 'assembling-machine'}
+			for e, ent in pairs(entities) do
+				if global.tech_upgrades.entities_name_list[ent] ~= nil then
+					add_farm_to_table(ent)
+				end
+			end
 		end
 	end
 )
@@ -817,6 +848,7 @@ script.on_event(
 	{defines.events.on_built_entity, defines.events.on_robot_built_entity},
 	function(event)
 		local E = event.created_entity
+		local player = game.players[event.player_index]
 		--log(E.name)
 		--log(E.ghost_name)
 		--log(serpent.block(landbots))
@@ -893,14 +925,10 @@ script.on_event(
 			--log(serpent.block(global.pycloud))
 		elseif global.tech_upgrades.entities_master_list[E.name] ~= nil then
 			--log('hit')
-			local beacon = game.surfaces['nauvis'].create_entity{
-				name = 'hidden-beacon',
-				position = E.position,
-				force = game.players[event.player_index].force
-			}
-			local module = beacon.get_inventory(defines.inventory.beacon_modules)
-			local mod = module.insert({name = global.tech_upgrades.entities_master_list[E.name] .. '-module', count = 1})
+			adding_beacon(E, player)
 			--log(mod)
+		elseif global.tech_upgrades.entities_master_list[E.name] == nil and global.tech_upgrades.entities_name_list[E.name] ~= nil then
+			add_farm_to_table(E)
 		elseif global.has_built_first_farm == false then
 			for _, farm in pairs(farm_buildings) do
 				if string.match(E.name, farm) then -- or string.match(E.ghost_name, farm) then
@@ -2014,6 +2042,7 @@ end
 script.on_event(
 	defines.events.on_gui_click,
 	function(event)
+		local player = game.players[event.player_index]
 		--log(event.element.name)
 		--log(string.match(event.element.name, 'recipe%-menu'))
 		if event.element.name == "caravan_close" then
@@ -2053,7 +2082,6 @@ script.on_event(
 			global.farm_help_message_open = false
 		--elseif event.element.name == 'cloud_chest_close' then
 			--global.pycloud.current_chest = ''
-			--local player = game.players[event.player_index]
 			--player.gui.screen.chest_menu.destroy()
 		elseif event.element.name == 'turd_close' then
 			local turd = game.players[event.player_index].gui.screen.turd_frame
@@ -2077,7 +2105,6 @@ script.on_event(
 					tech = tech,
 					sub_tech = sub_tech
 				}
-			local player = game.players[event.player_index]
 			local screen = player.gui.screen
 			if screen.turd_confirm_frame == nil then
 				screen.add(
@@ -2126,7 +2153,6 @@ script.on_event(
 				--flow.turd_confirm.style.strikethrough_color = {0.5,0.5,0.5}
 			end
 		elseif string.match(event.element.name, 'turd_back') then
-			local player = game.players[event.player_index]
 			local screen = player.gui.screen
 			if screen.turd_confirm_frame ~= nil then
 				screen.turd_confirm_frame.destroy()
@@ -2139,12 +2165,16 @@ script.on_event(
 				if global.tech_upgrades.entities_master_list[ent] == nil then
 					global.tech_upgrades.entities_master_list[ent] = sub_tech
 				end
+				for b, building in pairs(global.tech_upgrades.entities) do
+					if building.name == ent then
+						adding_beacon(building, player)
+					end
+				end
 			end
 			global.tech_upgrades.tech_status[tech] = true
 			global.tech_upgrades.techs[tech][sub_tech].selected = true
 			--log(serpent.block(global.tech_upgrades.techs[tech]))
 			--log(serpent.block(global.tech_upgrades.entities_master_list))
-			local player = game.players[event.player_index]
 			if global.tech_upgrades.techs[tech][sub_tech].is_upgrade == true then
 				--log(serpent.block(global.TRlist))
 				for _, upgrade in pairs(global.TRlist) do
@@ -2182,7 +2212,6 @@ script.on_event(
 			end
 			global.tech_upgrades.currently_selected = {}
 		elseif string.match(event.element.name, 'turd_master_button') then
-			local player = game.players[event.player_index]
 			local tech_name = string.match(event.element.name, '[^_]*$')
 			log(event.element.name)
 			--log(serpent.block(tech_name))

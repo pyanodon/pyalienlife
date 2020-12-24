@@ -5460,7 +5460,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "t-a",
     stack_size = 300,
-	effect = { speed = {bonus = 0.8}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 0.8}},
 	limitation = alien_life_limitations_tree,
 	limitation_message_key = "wood"
 }
@@ -5480,7 +5480,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "t-b",
     stack_size = 300,
-	effect = { speed = {bonus = 1.6}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 1.6}},
 	limitation = alien_life_limitations_tree,
 	limitation_message_key = "wood"
 }
@@ -5500,7 +5500,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "t-c",
     stack_size = 300,
-	effect = { speed = {bonus = 2.4}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 2.4}},
 	limitation = alien_life_limitations_tree,
 	limitation_message_key = "wood"
 }
@@ -5520,7 +5520,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "t-d",
     stack_size = 300,
-	effect = { speed = {bonus = 3.2}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 3.2}},
 	limitation = alien_life_limitations_tree,
 	limitation_message_key = "wood"
 }
@@ -5540,7 +5540,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "s-a",
     stack_size = 300,
-	effect = { speed = {bonus = 1}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 1}},
 	limitation = alien_life_limitations_seaweed,
 	limitation_message_key = "weed"
 }
@@ -5560,7 +5560,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "s-b",
     stack_size = 300,
-	effect = { speed = {bonus = 2}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 2}},
 	limitation = alien_life_limitations_seaweed,
 	limitation_message_key = "weed"
 }
@@ -5580,7 +5580,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "s-c",
     stack_size = 300,
-	effect = { speed = {bonus = 3}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 3}},
 	limitation = alien_life_limitations_seaweed,
 	limitation_message_key = "weed"
 }
@@ -5600,7 +5600,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "s-d",
     stack_size = 300,
-	effect = { speed = {bonus = 4}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 4}},
 	limitation = alien_life_limitations_seaweed,
 	limitation_message_key = "weed"
 }
@@ -5620,7 +5620,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "m-a",
     stack_size = 300,
-	effect = { speed = {bonus = 1.3}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 1.3}},
 	limitation = alien_life_limitations_moss,
 	limitation_message_key = "moss"
 }
@@ -5640,7 +5640,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "m-b",
     stack_size = 300,
-	effect = { speed = {bonus = 2.6}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 2.6}},
 	limitation = alien_life_limitations_moss,
 	limitation_message_key = "moss"
 }
@@ -5660,7 +5660,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "m-c",
     stack_size = 300,
-	effect = { speed = {bonus = 3.9}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 3.9}},
 	limitation = alien_life_limitations_moss,
 	limitation_message_key = "moss"
 }
@@ -5680,7 +5680,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "m-d",
     stack_size = 300,
-	effect = { speed = {bonus = 5.2}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 5.2}},
 	limitation = alien_life_limitations_moss,
 	limitation_message_key = "moss"
 }
@@ -5700,7 +5700,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "m-a",
     stack_size = 300,
-	effect = { speed = {bonus = 5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 5}},
 	limitation = alien_life_limitations_sap,
 	limitation_message_key = "sap"
 }
@@ -5720,7 +5720,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "m-b",
     stack_size = 300,
-	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 10}},
 	limitation = alien_life_limitations_sap,
 	limitation_message_key = "sap"
 }
@@ -5740,7 +5740,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "m-c",
     stack_size = 300,
-	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 15}},
 	limitation = alien_life_limitations_sap,
 	limitation_message_key = "sap"
 }
@@ -5760,7 +5760,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "m-d",
     stack_size = 300,
-	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 20}},
 	limitation = alien_life_limitations_sap,
 	limitation_message_key = "sap"
 }
@@ -5780,7 +5780,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "u-a",
     stack_size = 300,
-	effect = { speed = {bonus = 2}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 2}},
 	limitation = alien_life_limitations_ulric,
 	limitation_message_key = "ulric"
 }
@@ -5800,7 +5800,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "u-b",
     stack_size = 300,
-	effect = { speed = {bonus = 3}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 3}},
 	limitation = alien_life_limitations_ulric,
 	limitation_message_key = "ulric"
 }
@@ -5820,7 +5820,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "u-c",
     stack_size = 300,
-	effect = { speed = {bonus = 4}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 4}},
 	limitation = alien_life_limitations_ulric,
 	limitation_message_key = "ulric"
 }
@@ -5840,7 +5840,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "u-d",
     stack_size = 300,
-	effect = { speed = {bonus = 5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 5}},
 	limitation = alien_life_limitations_ulric,
 	limitation_message_key = "ulric"
 }
@@ -5924,7 +5924,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "sa",
     stack_size = 300,
-	effect = { speed = {bonus = 2.5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 2.5}},
 	limitation = alien_life_limitations_sponge,
 	limitation_message_key = "sponge"
 }
@@ -5944,7 +5944,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "sb",
     stack_size = 300,
-	effect = { speed = {bonus = 5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 5}},
 	limitation = alien_life_limitations_sponge,
 	limitation_message_key = "sponge"
 }
@@ -5964,7 +5964,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "sc",
     stack_size = 300,
-	effect = { speed = {bonus = 8}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 8}},
 	limitation = alien_life_limitations_sponge,
 	limitation_message_key = "sponge"
 }
@@ -5984,7 +5984,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "sd",
     stack_size = 300,
-	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 10}},
 	limitation = alien_life_limitations_sponge,
 	limitation_message_key = "sponge"
 }
@@ -6004,7 +6004,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ra",
     stack_size = 300,
-	effect = { speed = {bonus = 1.66}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 1.66}},
 	limitation = alien_life_limitations_ralesia,
 	limitation_message_key = "ralesia"
 }
@@ -6024,7 +6024,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "rb",
     stack_size = 300,
-	effect = { speed = {bonus = 3.32}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 3.32}},
 	limitation = alien_life_limitations_ralesia,
 	limitation_message_key = "ralesia"
 }
@@ -6044,7 +6044,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "rc",
     stack_size = 300,
-	effect = { speed = {bonus = 4.98}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 4.98}},
 	limitation = alien_life_limitations_ralesia,
 	limitation_message_key = "ralesia"
 }
@@ -6064,7 +6064,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "rd",
     stack_size = 300,
-	effect = { speed = {bonus = 6.66}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 6.66}},
 	limitation = alien_life_limitations_ralesia,
 	limitation_message_key = "ralesia"
 }
@@ -6084,7 +6084,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "m-a",
     stack_size = 300,
-	effect = { speed = {bonus = 5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 5}},
 	limitation = alien_life_limitations_mukmoux,
 	limitation_message_key = "mukmoux"
 }
@@ -6104,7 +6104,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "m-b",
     stack_size = 300,
-	effect = { speed = {bonus = 6.25}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 6.25}},
 	limitation = alien_life_limitations_mukmoux,
 	limitation_message_key = "mukmoux"
 }
@@ -6124,7 +6124,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "m-c",
     stack_size = 300,
-	effect = { speed = {bonus = 7.5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 7.5}},
 	limitation = alien_life_limitations_mukmoux,
 	limitation_message_key = "mukmoux"
 }
@@ -6144,7 +6144,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "m-d",
     stack_size = 300,
-	effect = { speed = {bonus = 8.75}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 8.75}},
 	limitation = alien_life_limitations_mukmoux,
 	limitation_message_key = "mukmoux"
 }
@@ -6164,7 +6164,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "aa",
     stack_size = 300,
-	effect = { speed = {bonus = 2.5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 2.5}},
 	limitation = alien_life_limitations_arthurian,
 	limitation_message_key = "arthurian"
 }
@@ -6184,7 +6184,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ab",
     stack_size = 300,
-	effect = { speed = {bonus = 5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 5}},
 	limitation = alien_life_limitations_arthurian,
 	limitation_message_key = "arthurian"
 }
@@ -6204,7 +6204,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ac",
     stack_size = 300,
-	effect = { speed = {bonus = 7.5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 7.5}},
 	limitation = alien_life_limitations_arthurian,
 	limitation_message_key = "arthurian"
 }
@@ -6224,7 +6224,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ad",
     stack_size = 300,
-	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 10}},
 	limitation = alien_life_limitations_arthurian,
 	limitation_message_key = "arthurian"
 }
@@ -6244,7 +6244,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ta",
     stack_size = 300,
-	effect = { speed = {bonus = 2}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 2}},
 	limitation = alien_life_limitations_tuuphra,
 	limitation_message_key = "tuuphra"
 }
@@ -6264,7 +6264,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "tb",
     stack_size = 300,
-	effect = { speed = {bonus = 4}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 4}},
 	limitation = alien_life_limitations_tuuphra,
 	limitation_message_key = "tuuphra"
 }
@@ -6284,7 +6284,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "tc",
     stack_size = 300,
-	effect = { speed = {bonus = 6}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 6}},
 	limitation = alien_life_limitations_tuuphra,
 	limitation_message_key = "tuuphra"
 }
@@ -6304,7 +6304,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "td",
     stack_size = 300,
-	effect = { speed = {bonus = 8}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 8}},
 	limitation = alien_life_limitations_tuuphra,
 	limitation_message_key = "tuuphra"
 }
@@ -6324,7 +6324,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "na",
     stack_size = 300,
-	effect = { speed = {bonus = 7.5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 7.5}},
 	limitation = alien_life_limitations_navens,
 	limitation_message_key = "navens"
 }
@@ -6344,7 +6344,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "nb",
     stack_size = 300,
-	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 10}},
 	limitation = alien_life_limitations_navens,
 	limitation_message_key = "navens"
 }
@@ -6364,7 +6364,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "nc",
     stack_size = 300,
-	effect = { speed = {bonus = 12.5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 12.5}},
 	limitation = alien_life_limitations_navens,
 	limitation_message_key = "navens"
 }
@@ -6384,7 +6384,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "nd",
     stack_size = 300,
-	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 15}},
 	limitation = alien_life_limitations_navens,
 	limitation_message_key = "navens"
 }
@@ -6404,7 +6404,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ya",
     stack_size = 300,
-	effect = { speed = {bonus = 0.6}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 0.6}},
 	limitation = alien_life_limitations_yotoi,
 	limitation_message_key = "yotoi"
 }
@@ -6424,7 +6424,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "yb",
     stack_size = 300,
-	effect = { speed = {bonus = 1.2}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 1.2}},
 	limitation = alien_life_limitations_yotoi,
 	limitation_message_key = "yotoi"
 }
@@ -6444,7 +6444,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "yc",
     stack_size = 300,
-	effect = { speed = {bonus = 1.8}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 1.8}},
 	limitation = alien_life_limitations_yotoi,
 	limitation_message_key = "yotoi"
 }
@@ -6464,7 +6464,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "yd",
     stack_size = 300,
-	effect = { speed = {bonus = 2.4}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 2.4}},
 	limitation = alien_life_limitations_yotoi,
 	limitation_message_key = "yotoi"
 }
@@ -6484,7 +6484,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "da",
     stack_size = 300,
-	effect = { speed = {bonus = 7.5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 7.5}},
 	limitation = alien_life_limitations_dhilmos,
 	limitation_message_key = "dhilmos"
 }
@@ -6504,7 +6504,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "db",
     stack_size = 300,
-	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 10}},
 	limitation = alien_life_limitations_dhilmos,
 	limitation_message_key = "dhilmos"
 }
@@ -6524,7 +6524,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "dc",
     stack_size = 300,
-	effect = { speed = {bonus = 12.5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 12.5}},
 	limitation = alien_life_limitations_dhilmos,
 	limitation_message_key = "dhilmos"
 }
@@ -6544,7 +6544,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "dd",
     stack_size = 300,
-	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 15}},
 	limitation = alien_life_limitations_dhilmos,
 	limitation_message_key = "dhilmos"
 }
@@ -6564,7 +6564,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "sr-a",
     stack_size = 300,
-	effect = { speed = {bonus = 3.30}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 3.30}},
 	limitation = alien_life_limitations_scrondrix,
 	limitation_message_key = "scrondrix"
 }
@@ -6584,7 +6584,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "sr-b",
     stack_size = 300,
-	effect = { speed = {bonus = 6.61}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 6.61}},
 	limitation = alien_life_limitations_scrondrix,
 	limitation_message_key = "scrondrix"
 }
@@ -6604,7 +6604,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "sr-c",
     stack_size = 300,
-	effect = { speed = {bonus = 9.91}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 9.91}},
 	limitation = alien_life_limitations_scrondrix,
 	limitation_message_key = "scrondrix"
 }
@@ -6624,7 +6624,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "sr-d",
     stack_size = 300,
-	effect = { speed = {bonus = 13.21}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 13.21}},
 	limitation = alien_life_limitations_scrondrix,
 	limitation_message_key = "scrondrix"
 }
@@ -6644,7 +6644,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ren-a",
     stack_size = 300,
-	effect = { speed = {bonus = .32}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = .32}},
 	limitation = alien_life_limitations_rennea,
 	limitation_message_key = "rennea"
 }
@@ -6664,7 +6664,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ren-b",
     stack_size = 300,
-	effect = { speed = {bonus = .63}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = .63}},
 	limitation = alien_life_limitations_rennea,
 	limitation_message_key = "rennea"
 }
@@ -6684,7 +6684,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ren-c",
     stack_size = 300,
-	effect = { speed = {bonus = 1.25}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 1.25}},
 	limitation = alien_life_limitations_rennea,
 	limitation_message_key = "rennea"
 }
@@ -6704,7 +6704,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ren-d",
     stack_size = 300,
-	effect = { speed = {bonus = 2.5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 2.5}},
 	limitation = alien_life_limitations_rennea,
 	limitation_message_key = "rennea"
 }
@@ -6724,7 +6724,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ph-a",
     stack_size = 300,
-	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 10}},
 	limitation = alien_life_limitations_phadai,
 	limitation_message_key = "phadai"
 }
@@ -6744,7 +6744,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ph-b",
     stack_size = 300,
-	effect = { speed = {bonus = 12.5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 12.5}},
 	limitation = alien_life_limitations_phadai,
 	limitation_message_key = "phadai"
 }
@@ -6764,7 +6764,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ph-c",
     stack_size = 300,
-	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 15}},
 	limitation = alien_life_limitations_phadai,
 	limitation_message_key = "phadai"
 }
@@ -6784,7 +6784,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ph-d",
     stack_size = 300,
-	effect = { speed = {bonus = 17.5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 17.5}},
 	limitation = alien_life_limitations_phadai,
 	limitation_message_key = "phadai"
 }
@@ -6804,7 +6804,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "a",
     stack_size = 300,
-	effect = { speed = {bonus = 6.7}, productivity = {bonus = -0.01}},--16.75
+	effect = { speed = {bonus = 6.7}},--16.75
 	limitation = alien_life_limitations_auog,
     limitation_message_key = "auog",
     fuel_category = 'auog',
@@ -6827,7 +6827,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "a-b",
     stack_size = 300,
-	effect = { speed = {bonus = 13.4}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 13.4}},
 	limitation = alien_life_limitations_auog,
     limitation_message_key = "auog",
     fuel_category = 'auog',
@@ -6850,7 +6850,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "a-c",
     stack_size = 300,
-	effect = { speed = {bonus = 20.1}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 20.1}},
 	limitation = alien_life_limitations_auog,
     limitation_message_key = "auog",
     fuel_category = 'auog',
@@ -6873,7 +6873,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "a-d",
     stack_size = 300,
-	effect = { speed = {bonus = 26.8}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 26.8}},
 	limitation = alien_life_limitations_auog,
     limitation_message_key = "auog",
     fuel_category = 'auog',
@@ -6971,7 +6971,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "fa",
     stack_size = 300,
-	effect = { speed = {bonus = 3.75}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 3.75}},
 	limitation = alien_life_limitations_fish,
 	limitation_message_key = "fish"
 }
@@ -7007,7 +7007,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "fb",
     stack_size = 300,
-	effect = { speed = {bonus = 5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 5}},
 	limitation = alien_life_limitations_fish,
 	limitation_message_key = "fish"
 }
@@ -7043,7 +7043,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "fc",
     stack_size = 300,
-	effect = { speed = {bonus = 6.25}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 6.25}},
 	limitation = alien_life_limitations_fish,
 	limitation_message_key = "fish"
 }
@@ -7079,7 +7079,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "fd",
     stack_size = 300,
-	effect = { speed = {bonus = 7.5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 7.5}},
 	limitation = alien_life_limitations_fish,
 	limitation_message_key = "fish"
 }
@@ -7099,7 +7099,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "yaed-a",
     stack_size = 300,
-	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 10}},
 	limitation = alien_life_limitations_yaedols,
 	limitation_message_key = "yaedols"
 }
@@ -7119,7 +7119,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "yaed-b",
     stack_size = 300,
-	effect = { speed = {bonus = 12.5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 12.5}},
 	limitation = alien_life_limitations_yaedols,
 	limitation_message_key = "yaedols"
 }
@@ -7139,7 +7139,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "yaed-c",
     stack_size = 300,
-	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 15}},
 	limitation = alien_life_limitations_yaedols,
 	limitation_message_key = "yaedols"
 }
@@ -7159,7 +7159,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "yaed-d",
     stack_size = 300,
-	effect = { speed = {bonus = 17.5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 17.5}},
 	limitation = alien_life_limitations_yaedols,
 	limitation_message_key = "yaedols"
 }
@@ -7179,7 +7179,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "d-a",
     stack_size = 300,
-	effect = { speed = {bonus = 0.8}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 0.8}},
 	limitation = alien_life_limitations_dingrits,
     limitation_message_key = "dingrits",
     fuel_category = 'dingrits',
@@ -7202,7 +7202,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "d-b",
     stack_size = 300,
-	effect = { speed = {bonus = 1.6}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 1.6}},
 	limitation = alien_life_limitations_dingrits,
     limitation_message_key = "dingrits",
     fuel_category = 'dingrits',
@@ -7225,7 +7225,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "d-c",
     stack_size = 300,
-	effect = { speed = {bonus = 3.2}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 3.2}},
 	limitation = alien_life_limitations_dingrits,
     limitation_message_key = "dingrits",
     fuel_category = 'dingrits',
@@ -7248,7 +7248,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "d-d",
     stack_size = 300,
-	effect = { speed = {bonus = 6.4}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 6.4}},
 	limitation = alien_life_limitations_dingrits,
     limitation_message_key = "dingrits",
     fuel_category = 'dingrits',
@@ -7335,7 +7335,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-a",
     stack_size = 300,
-	effect = { speed = {bonus = 0.4}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 0.4}},
 	limitation = alien_life_limitations_kmauts,
 	limitation_message_key = "kmauts"
 }
@@ -7355,7 +7355,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-b",
     stack_size = 300,
-	effect = { speed = {bonus = 0.8}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 0.8}},
 	limitation = alien_life_limitations_kmauts,
 	limitation_message_key = "kmauts"
 }
@@ -7375,7 +7375,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-c",
     stack_size = 300,
-	effect = { speed = {bonus = 1.2}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 1.2}},
 	limitation = alien_life_limitations_kmauts,
 	limitation_message_key = "kmauts"
 }
@@ -7395,7 +7395,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 300,
-	effect = { speed = {bonus = 1.6}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 1.6}},
 	limitation = alien_life_limitations_kmauts,
 	limitation_message_key = "kmauts"
 }
@@ -7415,7 +7415,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-a",
     stack_size = 300,
-	effect = { speed = {bonus = 50}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 50}},
 	limitation = alien_life_limitations_vonix,
 	limitation_message_key = "vonix"
 }
@@ -7435,7 +7435,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-b",
     stack_size = 300,
-	effect = { speed = {bonus = 55}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 55}},
 	limitation = alien_life_limitations_vonix,
 	limitation_message_key = "vonix"
 }
@@ -7455,7 +7455,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-c",
     stack_size = 300,
-	effect = { speed = {bonus = 60}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 60}},
 	limitation = alien_life_limitations_vonix,
 	limitation_message_key = "vonix"
 }
@@ -7475,7 +7475,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-d",
     stack_size = 300,
-	effect = { speed = {bonus = 65}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 65}},
 	limitation = alien_life_limitations_vonix,
 	limitation_message_key = "vonix"
 }
@@ -7495,7 +7495,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ga",
     stack_size = 300,
-	effect = { speed = {bonus = 2.85}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 2.85}},
 	limitation = alien_life_limitations_grod,
 	limitation_message_key = "grod"
 }
@@ -7515,7 +7515,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "gb",
     stack_size = 300,
-	effect = { speed = {bonus = 5.7}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 5.7}},
 	limitation = alien_life_limitations_grod,
 	limitation_message_key = "grod"
 }
@@ -7535,7 +7535,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "gc",
     stack_size = 300,
-	effect = { speed = {bonus = 8.55}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 8.55}},
 	limitation = alien_life_limitations_grod,
 	limitation_message_key = "grod"
 }
@@ -7555,7 +7555,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "gd",
     stack_size = 300,
-	effect = { speed = {bonus = 11.4}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 11.4}},
 	limitation = alien_life_limitations_grod,
 	limitation_message_key = "grod"
 }
@@ -7571,7 +7571,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "p-a",
     stack_size = 300,
-	effect = { speed = {bonus = 2}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 2}},
 	limitation = alien_life_limitations_phagnot,
 	limitation_message_key = "phagnot"
 }
@@ -7591,7 +7591,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "p-b",
     stack_size = 300,
-	effect = { speed = {bonus = 4}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 4}},
 	limitation = alien_life_limitations_phagnot,
 	limitation_message_key = "phagnot"
 }
@@ -7611,7 +7611,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "p-c",
     stack_size = 300,
-	effect = { speed = {bonus = 6}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 6}},
 	limitation = alien_life_limitations_phagnot,
 	limitation_message_key = "phagnot"
 }
@@ -7631,7 +7631,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "p-d",
     stack_size = 300,
-	effect = { speed = {bonus = 8}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 8}},
 	limitation = alien_life_limitations_phagnot,
 	limitation_message_key = "phagnot"
 }
@@ -7651,7 +7651,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "b-a",
     stack_size = 300,
-	effect = { speed = {bonus = 45}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 45}},
 	limitation = alien_life_limitations_bhoddos,
 	limitation_message_key = "bhoddos"
 }
@@ -7671,7 +7671,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "b-b",
     stack_size = 300,
-	effect = { speed = {bonus = 50}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 50}},
 	limitation = alien_life_limitations_bhoddos,
 	limitation_message_key = "bhoddos"
 }
@@ -7691,7 +7691,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "b-c",
     stack_size = 300,
-	effect = { speed = {bonus = 55}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 55}},
 	limitation = alien_life_limitations_bhoddos,
 	limitation_message_key = "bhoddos"
 }
@@ -7711,7 +7711,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "b-d",
     stack_size = 300,
-	effect = { speed = {bonus = 60}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 60}},
 	limitation = alien_life_limitations_bhoddos,
 	limitation_message_key = "bhoddos"
 }
@@ -7731,7 +7731,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "x-a",
     stack_size = 300,
-	effect = { speed = {bonus = 2}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 2}},
 	limitation = alien_life_limitations_xeno,
 	limitation_message_key = "xeno"
 }
@@ -7751,7 +7751,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "x-b",
     stack_size = 300,
-	effect = { speed = {bonus = 4}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 4}},
 	limitation = alien_life_limitations_xeno,
 	limitation_message_key = "xeno"
 }
@@ -7771,7 +7771,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "x-c",
     stack_size = 300,
-	effect = { speed = {bonus = 6}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 6}},
 	limitation = alien_life_limitations_xeno,
 	limitation_message_key = "xeno"
 }
@@ -7791,7 +7791,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "x-d",
     stack_size = 300,
-	effect = { speed = {bonus = 8}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 8}},
 	limitation = alien_life_limitations_xeno,
 	limitation_message_key = "xeno"
 }
@@ -7807,7 +7807,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "a",
     stack_size = 300,
-	effect = { speed = {bonus = 70}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 70}},
 	limitation = alien_life_limitations_cridren,
 	limitation_message_key = "cridren"
 }
@@ -7823,7 +7823,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "a",
     stack_size = 300,
-	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 20}},
 	limitation = alien_life_limitations_antelope,
 	limitation_message_key = "antelope"
 }
@@ -7843,7 +7843,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "za",
     stack_size = 300,
-	effect = { speed = {bonus = 2}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 2}},
 	limitation = alien_life_limitations_zipir,
 	limitation_message_key = "zipir"
 }
@@ -7863,7 +7863,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "zb",
     stack_size = 300,
-	effect = { speed = {bonus = 4}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 4}},
 	limitation = alien_life_limitations_zipir,
 	limitation_message_key = "zipir"
 }
@@ -7883,7 +7883,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "zc",
     stack_size = 300,
-	effect = { speed = {bonus = 6}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 6}},
 	limitation = alien_life_limitations_zipir,
 	limitation_message_key = "zipir"
 }
@@ -7903,7 +7903,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "zd",
     stack_size = 300,
-	effect = { speed = {bonus = 8}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 8}},
 	limitation = alien_life_limitations_zipir,
 	limitation_message_key = "zipir"
 }
@@ -7923,7 +7923,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "tr-a",
     stack_size = 300,
-	effect = { speed = {bonus = 40}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 40}},
 	limitation = alien_life_limitations_trits,
 	limitation_message_key = "trits"
 }
@@ -7943,7 +7943,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "tr-b",
     stack_size = 300,
-	effect = { speed = {bonus = 45}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 45}},
 	limitation = alien_life_limitations_trits,
 	limitation_message_key = "trits"
 }
@@ -7963,7 +7963,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "tr-c",
     stack_size = 300,
-	effect = { speed = {bonus = 50}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 50}},
 	limitation = alien_life_limitations_trits,
 	limitation_message_key = "trits"
 }
@@ -7983,7 +7983,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "tr-d",
     stack_size = 300,
-	effect = { speed = {bonus = 55}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 55}},
 	limitation = alien_life_limitations_trits,
 	limitation_message_key = "trits"
 }
@@ -8003,7 +8003,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-a",
     stack_size = 300,
-	effect = { speed = {bonus = 0.5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 0.5}},
 	limitation = alien_life_limitations_kicalk,
 	limitation_message_key = "kicalk"
 }
@@ -8023,7 +8023,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-b",
     stack_size = 300,
-	effect = { speed = {bonus = 1}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 1}},
 	limitation = alien_life_limitations_kicalk,
 	limitation_message_key = "kicalk"
 }
@@ -8043,7 +8043,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-c",
     stack_size = 300,
-	effect = { speed = {bonus = 2}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 2}},
 	limitation = alien_life_limitations_kicalk,
 	limitation_message_key = "kicalk"
 }
@@ -8063,7 +8063,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 300,
-	effect = { speed = {bonus = 3}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 3}},
 	limitation = alien_life_limitations_kicalk,
 	limitation_message_key = "kicalk"
 }
@@ -8083,7 +8083,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cad-a",
     stack_size = 300,
-	effect = { speed = {bonus = 12.5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 12.5}},
 	limitation = alien_life_limitations_cadaveric,
 	limitation_message_key = "cadaveric-arum"
 }
@@ -8103,7 +8103,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cad-b",
     stack_size = 300,
-	effect = { speed = {bonus = 17.5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 17.5}},
 	limitation = alien_life_limitations_cadaveric,
 	limitation_message_key = "cadaveric-arum"
 }
@@ -8123,7 +8123,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cad-c",
     stack_size = 300,
-	effect = { speed = {bonus = 22.5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 22.5}},
 	limitation = alien_life_limitations_cadaveric,
 	limitation_message_key = "cadaveric-arum"
 }
@@ -8143,7 +8143,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cad-d",
     stack_size = 300,
-	effect = { speed = {bonus = 30}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 30}},
 	limitation = alien_life_limitations_cadaveric,
 	limitation_message_key = "cadaveric-arum"
 }
@@ -8163,7 +8163,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-a",
     stack_size = 300,
-	effect = { speed = {bonus = 0.5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 0.5}},
 	limitation = alien_life_limitations_vrauks,
 	limitation_message_key = "vrauks"
 }
@@ -8183,7 +8183,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-b",
     stack_size = 300,
-	effect = { speed = {bonus = 0.75}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 0.75}},
 	limitation = alien_life_limitations_vrauks,
 	limitation_message_key = "vrauks"
 }
@@ -8203,7 +8203,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-c",
     stack_size = 300,
-	effect = { speed = {bonus = 1}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 1}},
 	limitation = alien_life_limitations_vrauks,
 	limitation_message_key = "vrauks"
 }
@@ -8223,7 +8223,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-d",
     stack_size = 300,
-	effect = { speed = {bonus = 1.15}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 1.15}},
 	limitation = alien_life_limitations_vrauks,
 	limitation_message_key = "vrauks"
 }
@@ -8243,7 +8243,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-a",
     stack_size = 300,
-	effect = { speed = {bonus = 20}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 20}},
 	limitation = alien_life_limitations_xyhiphoe,
 	limitation_message_key = "xyhiphoe"
 }
@@ -8262,7 +8262,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-b",
     stack_size = 300,
-	effect = { speed = {bonus = 40}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 40}},
 	limitation = alien_life_limitations_xyhiphoe,
 	limitation_message_key = "xyhiphoe"
 }
@@ -8282,7 +8282,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-c",
     stack_size = 300,
-	effect = { speed = {bonus = 60}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 60}},
 	limitation = alien_life_limitations_xyhiphoe,
 	limitation_message_key = "xyhiphoe"
 }
@@ -8302,7 +8302,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-d",
     stack_size = 300,
-	effect = { speed = {bonus = 80}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 80}},
 	limitation = alien_life_limitations_xyhiphoe,
 	limitation_message_key = "xyhiphoe"
 }
@@ -8322,7 +8322,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-a",
     stack_size = 300,
-	effect = { speed = {bonus = 2.5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 2.5}},
 	limitation = alien_life_limitations_korlex,
 	limitation_message_key = "korlex"
 }
@@ -8341,7 +8341,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-b",
     stack_size = 300,
-	effect = { speed = {bonus = 3.13}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 3.13}},
 	limitation = alien_life_limitations_korlex,
 	limitation_message_key = "korlex"
 }
@@ -8361,7 +8361,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-c",
     stack_size = 300,
-	effect = { speed = {bonus = 3.75}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 3.75}},
 	limitation = alien_life_limitations_korlex,
 	limitation_message_key = "korlex"
 }
@@ -8381,7 +8381,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 300,
-	effect = { speed = {bonus = 4.38}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 4.38}},
 	limitation = alien_life_limitations_korlex,
 	limitation_message_key = "korlex"
 }
@@ -8400,7 +8400,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 300,
-	effect = { speed = {bonus = 0.45}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 0.45}},
 	limitation = alien_life_limitations_fawogae,
 	limitation_message_key = "fawogae"
 }
@@ -8419,7 +8419,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 300,
-	effect = { speed = {bonus = 0.95}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 0.95}},
 	limitation = alien_life_limitations_fawogae,
 	limitation_message_key = "fawogae"
 }
@@ -8439,7 +8439,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 300,
-	effect = { speed = {bonus = 1.45}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 1.45}},
 	limitation = alien_life_limitations_fawogae,
 	limitation_message_key = "fawogae"
 }
@@ -8459,7 +8459,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 300,
-	effect = { speed = {bonus = 1.95}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 1.95}},
 	limitation = alien_life_limitations_fawogae,
 	limitation_message_key = "fawogae"
 }
@@ -8479,7 +8479,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 300,
-	effect = { speed = {bonus = 1}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 1}},
 	limitation = alien_life_limitations_moondrop,
 	limitation_message_key = "moondrop"
 }
@@ -8499,7 +8499,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 300,
-	effect = { speed = {bonus = 2}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 2}},
 	limitation = alien_life_limitations_moondrop,
 	limitation_message_key = "moondrop"
 }
@@ -8519,7 +8519,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 300,
-	effect = { speed = {bonus = 3}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 3}},
 	limitation = alien_life_limitations_moondrop,
 	limitation_message_key = "moondrop"
 }
@@ -8539,7 +8539,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 300,
-	effect = { speed = {bonus = 4}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 4}},
 	limitation = alien_life_limitations_moondrop,
 	limitation_message_key = "moondrop"
 }
@@ -8603,7 +8603,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cg-a",
     stack_size = 300,
-	effect = { speed = {bonus = 1}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 1}},
 	limitation = alien_life_limitations_cottongut,
 	limitation_message_key = "cottongut"
 }
@@ -8623,7 +8623,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cg-b",
     stack_size = 300,
-	effect = { speed = {bonus = 2}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 2}},
 	limitation = alien_life_limitations_cottongut,
 	limitation_message_key = "cottongut"
 }
@@ -8643,7 +8643,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cg-c",
     stack_size = 300,
-	effect = { speed = {bonus = 3}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 3}},
 	limitation = alien_life_limitations_cottongut,
 	limitation_message_key = "cottongut"
 }
@@ -8663,7 +8663,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cg-d",
     stack_size = 300,
-	effect = { speed = {bonus = 4}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 4}},
 	limitation = alien_life_limitations_cottongut,
 	limitation_message_key = "cottongut"
 }
@@ -8687,7 +8687,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "g-a",
     stack_size = 300,
-	effect = { speed = {bonus = 7.5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 7.5}},
 	limitation = alien_life_limitations_guar,
 	limitation_message_key = "guar"
 }
@@ -8709,7 +8709,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "q-a",
     stack_size = 300,
-	effect = { speed = {bonus = 7.5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 7.5}},
 	limitation = alien_life_limitations_arqad,
 	limitation_message_key = "arqad"
 }
@@ -8729,7 +8729,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "q-b",
     stack_size = 300,
-	effect = { speed = {bonus = 10}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 10}},
 	limitation = alien_life_limitations_arqad,
 	limitation_message_key = "arqad"
 }
@@ -8749,7 +8749,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "q-c",
     stack_size = 300,
-	effect = { speed = {bonus = 12.5}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 12.5}},
 	limitation = alien_life_limitations_arqad,
 	limitation_message_key = "arqad"
 }
@@ -8769,7 +8769,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "q-d",
     stack_size = 300,
-	effect = { speed = {bonus = 15}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 15}},
 	limitation = alien_life_limitations_arqad,
 	limitation_message_key = "arqad"
 }
