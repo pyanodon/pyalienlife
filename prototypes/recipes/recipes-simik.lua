@@ -80,7 +80,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'simik-food-01', amount = 6},
     },
-}:add_unlock("food-mk02"):add_ingredient({type = "item", name = "cadaveric-arum", amount = 2})
+}:add_unlock("food-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -106,7 +106,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'simik-food-02', amount = 10},
     },
-}:add_unlock("food-mk03"):add_ingredient({type = "item", name = "cadaveric-arum", amount = 2})
+}:add_unlock("food-mk03")
 
 ---breeding---
 
