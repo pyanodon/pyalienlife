@@ -729,7 +729,9 @@ script.on_configuration_changed(
 		if global.energy_drink == nil then
 			global.energy_drink = {}
 		end
-		global.tech_upgrades = nil --REMOVE THIS BEFORE RELEASE
+		if global.tech_upgrades ~= nil and global.tech_upgrades.entities == nil then
+			global.tech_upgrades = nil
+		end
 		if global.tech_upgrades == nil then
 			global.tech_upgrades =
 			{
@@ -743,7 +745,7 @@ script.on_configuration_changed(
 				currently_selected = {}
 			}
 			log_all_machines_for_upgrades(tech_upgrade_table)
-			log(serpent.block(global.tech_upgrades))
+		--log(serpent.block(global.tech_upgrades))
 			local entities = game.surfaces['nauvis'].find_entities_filtered{type = 'assembling-machine'}
 			for e, ent in pairs(entities) do
 				if global.tech_upgrades.entities_name_list[ent] ~= nil then
@@ -1687,6 +1689,11 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 					end
 				end
 			end
+		elseif global.tech_upgrades.entities_name_list[E.name] ~= nil then
+			local beacon = game.surfaces['nauvis'].find_entities_filtered{position = E.position, name = 'hidden-beacon'}
+			if beacon ~= nil then
+				beacon.destroy()
+			end
 		end
 end)
 
@@ -1931,11 +1938,11 @@ local function create_slaughterhouse_recipe_gui(event)
 	end
 end
 
-local function right_window(player, tech_name)
+local function right_window(player, tech_name, parent_style)
 	local sub_tech = player.gui.screen.turd_master_frame.right_tech_window
 				for t, tech in pairs(global.tech_upgrades.techs[tech_name]) do
-					log(t)
-					log(serpent.block(tech))
+				--log(t)
+				--log(serpent.block(tech))
 
 					local flow = sub_tech.add(
 						{
@@ -2024,13 +2031,19 @@ local function right_window(player, tech_name)
 								)
 							end
 						end
-						flow.add(
+						local sb = flow.add(
 							{
 								type = 'button',
 								name = 'turd_select_button_' .. t,
 								caption = 'Select'
 							}
 						)
+						log(serpent.block(parent_style))
+						log(serpent.block(parent_style.name))
+						if parent_style.name == 'red_logistic_slot_button' then
+							sb.style = 'red_back_button'
+							sb.enabled = false
+						end
 				end
 				sub_tech.add({
 					type = 'flow',
@@ -2084,11 +2097,27 @@ script.on_event(
 			--global.pycloud.current_chest = ''
 			--player.gui.screen.chest_menu.destroy()
 		elseif event.element.name == 'turd_close' then
-			local turd = game.players[event.player_index].gui.screen.turd_frame
+			local turd = game.players[event.player_index].gui.screen.turd_frame or game.players[event.player_index].gui.screen.turd_master_frame
 			if turd ~= nil then
 				turd.destroy()
 			end
 		elseif string.match(event.element.name, 'turd_select') then
+			--event.element.enabled = false
+
+			--log(event.element.parent.name)
+			--log(event.element.parent.parent.name)
+			local child = player.gui.screen.turd_master_frame.right_tech_window.children
+			for c, kid in pairs(child) do
+				for s, select in pairs(kid.children) do
+					--log(select.name)
+					if string.match(select.name, 'turd_select') then
+						select.enabled = false
+						if select.name ~= event.element.name then
+							select.style = 'red_back_button'
+						end
+					end
+				end
+			end
 			--log('hit')
 			--log(event.element.name)
 			local sub_name = string.match(event.element.name, '[^_]*$')
@@ -2157,10 +2186,22 @@ script.on_event(
 			if screen.turd_confirm_frame ~= nil then
 				screen.turd_confirm_frame.destroy()
 			end
+			local child = player.gui.screen.turd_master_frame.right_tech_window.children
+			for c, kid in pairs(child) do
+				for s, select in pairs(kid.children) do
+					--log(select.name)
+					if string.match(select.name, 'turd_select') then
+						select.enabled = true
+						select.style = 'button'
+					end
+				end
+			end
 			global.tech_upgrades.currently_selected = {}
 		elseif string.match(event.element.name, 'turd_confirm') then
 			local tech = global.tech_upgrades.currently_selected.tech
 			local sub_tech = global.tech_upgrades.currently_selected.sub_tech
+		--log(serpent.block(tech))
+		--log(serpent.block(sub_tech))
 			for _, ent in pairs(global.tech_upgrades.techs[tech][sub_tech].entities) do
 				if global.tech_upgrades.entities_master_list[ent] == nil then
 					global.tech_upgrades.entities_master_list[ent] = sub_tech
@@ -2173,19 +2214,22 @@ script.on_event(
 			end
 			global.tech_upgrades.tech_status[tech] = true
 			global.tech_upgrades.techs[tech][sub_tech].selected = true
-			--log(serpent.block(global.tech_upgrades.techs[tech]))
 			--log(serpent.block(global.tech_upgrades.entities_master_list))
+		--log(serpent.block(global.tech_upgrades.techs[tech]))
+		--log(serpent.block(global.tech_upgrades.techs[tech][sub_tech]))
 			if global.tech_upgrades.techs[tech][sub_tech].is_upgrade == true then
+			--log('hit')
 				--log(serpent.block(global.TRlist))
-				for _, upgrade in pairs(global.TRlist) do
+				for _, upgrade in pairs(global.TRlist.upgrades) do
+				--log('hit')
 					--log(u)
-					--log(serpent.block(upgrade))
+				--log(serpent.block(upgrade))
 					--log(sub_tech)
 					if upgrade.upgrade_1 ~= nil and upgrade.upgrade_1.tech == sub_tech then
-						--log('hit')
+					--log('hit')
 						upgrade.current_lvl = 2
 					elseif upgrade.upgrade_2 ~= nil and upgrade.upgrade_2.tech == sub_tech then
-						--log('hit')
+					--log('hit')
 						upgrade.current_lvl = 3
 					end
 					if upgrade.current_lvl ~= nil and upgrade.current_lvl > 1 and player.force.recipes[upgrade.base_recipe].enabled == true then
@@ -2213,16 +2257,16 @@ script.on_event(
 			global.tech_upgrades.currently_selected = {}
 		elseif string.match(event.element.name, 'turd_master_button') then
 			local tech_name = string.match(event.element.name, '[^_]*$')
-			log(event.element.name)
+		--log(event.element.name)
 			--log(serpent.block(tech_name))
 			if player.gui.screen.turd_master_frame.right_tech_window['right_window-' .. tech_name] == nil then
 				player.gui.screen.turd_master_frame.right_tech_window.clear()
-				right_window(player, tech_name)
+				right_window(player, tech_name, event.element.style)
 			end
 		elseif event.element.name == 'route_set_button' then
 			local id_num = next(lastclickedunit)
 			if global.caravanroutes[id_num].startpoint.id ~= 0 and global.caravanroutes[id_num].endpoint.id ~= 0 then
-				log(serpent.block(global.caravanroutes))
+			--log(serpent.block(global.caravanroutes))
 				global.caravanroutes[id_num].unit.set_command {
 					type = defines.command.go_to_location,
 					destination = caravanroutes[id_num].startpoint.pos,
@@ -2712,6 +2756,7 @@ local function Tech_recipe_upgrades(event)
 			end
 		end
 	end
+
 	global.TRlist = TRlist
 	--log(serpent.block(global.TRlist))
 end
@@ -2784,6 +2829,13 @@ script.on_event("tech-upgrades", function(event)
 				--left_table['button' .. t].style.strikethrough_color  = {0.5,0.5,0.5}
 			end
 		end
+		turd_master.turd_master_frame.add(
+			{
+				type = "sprite-button",
+				name = "turd_close",
+				sprite = "utility/close_fat"
+			}
+		)
 
 	elseif turd_master.turd_master_frame ~= nil then
 		turd_master.turd_master_frame.destroy()

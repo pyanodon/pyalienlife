@@ -49,10 +49,12 @@ local tech_upgrades =
                         'biomimetics',
                         'covalent',
                     },
+                    --[[
                 recipes_to_unlock =
                     {
 
                     }
+                    ]]--
                 },
             example_2 =
                 {

@@ -287,10 +287,18 @@ RECIPE('space-science-pack'):add_ingredient({type = "item", name = "antimatter",
 RECIPE('bose-einstein-superfluid'):add_ingredient({type = "fluid", name = "deuterium", amount = 10})
 RECIPE('green-sic'):add_ingredient({type = 'item', name = 'graphite', amount = 3}):remove_unlock('bioprocessing'):add_unlock('basic-electronics')
 RECIPE('sic'):remove_unlock('bioprocessing'):add_unlock('basic-electronics')
+
 RECIPE('simik-food-01'):add_ingredient({type = "item", name = "cadaveric-arum", amount = 2})
+fun.add_ingredient('simik-food-01', {name = "cadaveric-arum", amount = 2})
+
 RECIPE('simik-food-02'):add_ingredient({type = "item", name = "cadaveric-arum", amount = 2})
+fun.add_ingredient('simik-food-02', {name = "cadaveric-arum", amount = 2})
+
 RECIPE('simik-food-01a'):add_ingredient({type = "item", name = "cadaveric-arum", amount = 2}):replace_ingredient("gravel", "phosphate-rock")
+fun.add_ingredient('simik-food-01a', {name = "cadaveric-arum", amount = 2})
+
 RECIPE('simik-food-02a'):add_ingredient({type = "item", name = "cadaveric-arum", amount = 2}):replace_ingredient("gravel", "phosphate-rock")
+fun.add_ingredient('simik-food-02a', {name = "cadaveric-arum", amount = 2})
 
 if mods['pyhightech'] then
 	data.raw.item['dried-meat'] = nil

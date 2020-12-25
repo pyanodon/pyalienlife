@@ -8,7 +8,7 @@ function overrides.add_ingredient(recipe, ingredient)
     -- check that recipe exists before doing anything else
     if data.raw.recipe[recipe] ~= nil then
         -- check if ingredient is item or fluid and that it exists
-        if data.raw.item[ingredient.name] ~= nil or data.raw.fluid[ingredient.name] ~= nil then
+        if data.raw.item[ingredient.name] ~= nil or data.raw.fluid[ingredient.name] ~= nil or data.raw.module[ingredient.name] ~= nil then
             -- check if type is set to fluid
             if ingredient.type == 'fluid' then
                 table.insert(data.raw.recipe[recipe].ingredients,
@@ -1753,11 +1753,8 @@ function overrides.tech_upgrade(tech_upgrade)
                 ITEM{
                     type = 'module',
                     name = tech.technology.name .. '-module',
-                    icons = {
-                        -- {icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
-                        {icon = '__pyalienlifegraphics2__/graphics/icons/forest-tree.png'}
-                    },
-                    icon_size = 64,
+                    icon = '__pycoalprocessinggraphics__/graphics/empty.png',
+                    icon_size = 32,
                     category = tech.technology.name,
                     tier = 1,
                     flags = {},
