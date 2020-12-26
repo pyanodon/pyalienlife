@@ -1690,9 +1690,11 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 				end
 			end
 		elseif global.tech_upgrades.entities_name_list[E.name] ~= nil then
-			local beacon = game.surfaces['nauvis'].find_entities_filtered{position = E.position, name = 'hidden-beacon'}
-			if beacon ~= nil then
-				beacon.destroy()
+			local beacon = game.surfaces['nauvis'].find_entities_filtered{area = {{E.position.x-2,E.position.y-2},{E.position.x+2,E.position.y+2}}, name = 'hidden-beacon'}
+			if next(beacon) ~= nil then
+				for b, bea in pairs(beacon) do
+					bea.destroy()
+				end
 			end
 		end
 end)
@@ -2038,8 +2040,8 @@ local function right_window(player, tech_name, parent_style)
 								caption = 'Select'
 							}
 						)
-						log(serpent.block(parent_style))
-						log(serpent.block(parent_style.name))
+						--log(serpent.block(parent_style))
+						--log(serpent.block(parent_style.name))
 						if parent_style.name == 'red_logistic_slot_button' then
 							sb.style = 'red_back_button'
 							sb.enabled = false
@@ -2221,25 +2223,42 @@ script.on_event(
 			--log('hit')
 				--log(serpent.block(global.TRlist))
 				for _, upgrade in pairs(global.TRlist.upgrades) do
-				--log('hit')
+					--log('hit')
 					--log(u)
-				--log(serpent.block(upgrade))
+					--log(serpent.block(upgrade))
 					--log(sub_tech)
 					if upgrade.upgrade_1 ~= nil and upgrade.upgrade_1.tech == sub_tech then
-					--log('hit')
+						--log('hit')
 						upgrade.current_lvl = 2
 					elseif upgrade.upgrade_2 ~= nil and upgrade.upgrade_2.tech == sub_tech then
-					--log('hit')
+						--log('hit')
 						upgrade.current_lvl = 3
 					end
 					if upgrade.current_lvl ~= nil and upgrade.current_lvl > 1 and player.force.recipes[upgrade.base_recipe].enabled == true then
+						--log('hit')
 						player.force.recipes[upgrade.base_recipe].enabled = false
 						player.force.recipes[upgrade.upgrade_1.recipe].enabled = true
+						for e, ent in pairs(game.surfaces['nauvis'].find_entities_filtered{type = 'assembling-machine'}) do
+							if ent.get_recipe() ~= nil then
+								local recipe = ent.get_recipe()
+								if recipe.name == upgrade.base_recipe then
+									ent.set_recipe(upgrade.upgrade_1.recipe)
+								end
+							end
+						end
 					end
 					if upgrade.current_lvl ~= nil and upgrade.current_lvl > 2 and player.force.recipes[upgrade.upgrade_1.recipe].enabled == true then
 						player.force.recipes[upgrade.base_recipe].enabled = false
 						player.force.recipes[upgrade.upgrade_1.recipe].enabled = false
 						player.force.recipes[upgrade.upgrade_2.recipe].enabled = true
+						for e, ent in pairs(game.surfaces['nauvis'].find_entities_filtered{type = 'assembling-machine'}) do
+							if ent.get_recipe() ~= nil then
+								local recipe = ent.get_recipe()
+								if recipe.name == upgrade.base_recipe then
+									ent.set_recipe(upgrade.upgrade_1.recipe)
+								end
+							end
+						end
 					end
 				end
 			end
