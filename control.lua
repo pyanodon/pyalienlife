@@ -1969,15 +1969,22 @@ local function right_window(player, tech_name, parent_style)
 								caption = {'technology-name.' .. t}
 							}
 						)
-						flow.add(
+						local dframe = flow.add(
+							{
+								type = 'frame',
+								name = 'description_frame',
+								direction = 'vertical'
+							}
+						)
+						dframe.add(
 							{
 								type = 'label',
 								name = 'tech_effects' .. t,
 								caption = {'technology-description.' .. t}
 							}
 						)
-						flow['tech_effects' .. t].style.maximal_width = 200
-						flow['tech_effects' .. t].style.single_line = false
+						dframe['tech_effects' .. t].style.maximal_width = 200
+						dframe['tech_effects' .. t].style.single_line = false
 						for u, up in pairs(tech.upgrades) do
 							local con_num = up * 100
 							flow.add(
@@ -1988,6 +1995,12 @@ local function right_window(player, tech_name, parent_style)
 								}
 							)
 						end
+						flow.add(
+							{
+								type = 'line',
+								name = 'entity_line'
+							}
+						)
 						flow.add(
 							{
 								type = 'label',
@@ -2006,6 +2019,12 @@ local function right_window(player, tech_name, parent_style)
 							)
 						end
 						if tech.recipes_to_unlock ~= nil then
+							flow.add(
+								{
+									type = 'line',
+									name = 'recipe_line'
+								}
+							)
 							flow.add(
 								{
 									type = 'label',

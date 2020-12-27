@@ -1,7 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.9.14
-Date: ????
+Date: 2020-12-27
   Changes:
+    - Added TURD.
+    - Added bhoddos breeding.
+    - This is the final content update to pyal during the pyal development period.
 ---------------------------------------------------------------------------------------------------
 Version: 1.9.13
 Date: 2020-11-24
