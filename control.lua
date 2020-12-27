@@ -516,11 +516,11 @@ local function add_farm_to_table(ent)
 	global.tech_upgrades.entities[ent.unit_number] = ent
 end
 
-local function adding_beacon(E,player)
+local function adding_beacon(E)
 	local beacon = game.surfaces['nauvis'].create_entity{
 		name = 'hidden-beacon',
 		position = E.position,
-		force = player.force
+		force = game.players.force
 	}
 	local module = beacon.get_inventory(defines.inventory.beacon_modules)
 	local mod = module.insert({name = global.tech_upgrades.entities_master_list[E.name] .. '-module', count = 1})
@@ -850,7 +850,10 @@ script.on_event(
 	{defines.events.on_built_entity, defines.events.on_robot_built_entity},
 	function(event)
 		local E = event.created_entity
-		local player = game.players[event.player_index]
+		local player
+		if event.player_index ~= nil then
+			player = game.players[event.player_index]
+		end
 		--log(E.name)
 		--log(E.ghost_name)
 		--log(serpent.block(landbots))
@@ -927,7 +930,7 @@ script.on_event(
 			--log(serpent.block(global.pycloud))
 		elseif global.tech_upgrades.entities_master_list[E.name] ~= nil then
 			--log('hit')
-			adding_beacon(E, player)
+			adding_beacon(E)
 			--log(mod)
 		elseif global.tech_upgrades.entities_master_list[E.name] == nil and global.tech_upgrades.entities_name_list[E.name] ~= nil then
 			add_farm_to_table(E)
