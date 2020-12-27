@@ -737,7 +737,7 @@ script.on_configuration_changed(
 			{
 				entities_master_list = {},
 				entities_name_list = {},
-				entites = {},
+				entities = {},
 				unlocked_techs = {},
 				disabled_techs = {},
 				techs = {},
@@ -745,13 +745,17 @@ script.on_configuration_changed(
 				currently_selected = {}
 			}
 			log_all_machines_for_upgrades(tech_upgrade_table)
-		--log(serpent.block(global.tech_upgrades))
+			--log(serpent.block(global.tech_upgrades))
 			local entities = game.surfaces['nauvis'].find_entities_filtered{type = 'assembling-machine'}
 			for e, ent in pairs(entities) do
 				if global.tech_upgrades.entities_name_list[ent] ~= nil then
 					add_farm_to_table(ent)
 				end
 			end
+		end
+		if global.tech_upgrades.entities == nil then
+			table.insert(global.tech_upgrades, entities)
+			global.tech_upgrades.entities = {}
 		end
 	end
 )
