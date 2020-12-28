@@ -2134,14 +2134,16 @@ script.on_event(
 
 			--log(event.element.parent.name)
 			--log(event.element.parent.parent.name)
-			local child = player.gui.screen.turd_master_frame.right_tech_window.children
-			for c, kid in pairs(child) do
-				for s, select in pairs(kid.children) do
-					--log(select.name)
-					if string.match(select.name, 'turd_select') then
-						select.enabled = false
-						if select.name ~= event.element.name then
-							select.style = 'red_back_button'
+			if player.gui.screen.turd_master_frame ~= nil then
+				local child = player.gui.screen.turd_master_frame.right_tech_window.children
+				for c, kid in pairs(child) do
+					for s, select in pairs(kid.children) do
+						--log(select.name)
+						if string.match(select.name, 'turd_select') then
+							select.enabled = false
+							if select.name ~= event.element.name then
+								select.style = 'red_back_button'
+							end
 						end
 					end
 				end
