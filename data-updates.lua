@@ -87,6 +87,9 @@ RECIPE {
 
 table.insert(data.raw.lab.lab.inputs, 'py-science-pack')
 
+--Updating base milk barrel with icons
+
+
 --copy`s of combustion recipes with biomass
 for _,recipe in pairs(data.raw.recipe) do
     --log('hit')

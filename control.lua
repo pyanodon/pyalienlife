@@ -1947,7 +1947,7 @@ local function create_slaughterhouse_recipe_gui(event)
 	end
 end
 
-local function right_window(player, tech_name, parent_style)
+local function right_window(player, tech_name, parent_status)
 	local sub_tech = player.gui.screen.turd_master_frame.right_tech_window
 				for t, tech in pairs(global.tech_upgrades.techs[tech_name]) do
 				--log(t)
@@ -2066,9 +2066,7 @@ local function right_window(player, tech_name, parent_style)
 								caption = 'Select'
 							}
 						)
-						--log(serpent.block(parent_style))
-						--log(serpent.block(parent_style.name))
-						if parent_style.name == 'red_logistic_slot_button' then
+						if parent_status == true then
 							sb.style = 'red_back_button'
 							sb.enabled = false
 						end
@@ -2308,7 +2306,7 @@ script.on_event(
 			--log(serpent.block(tech_name))
 			if player.gui.screen.turd_master_frame.right_tech_window['right_window-' .. tech_name] == nil then
 				player.gui.screen.turd_master_frame.right_tech_window.clear()
-				right_window(player, tech_name, event.element.style)
+				right_window(player, tech_name, global.tech_upgrades.tech_status[tech_name])
 			end
 		elseif event.element.name == 'route_set_button' then
 			local id_num = next(lastclickedunit)
@@ -2610,151 +2608,89 @@ script.on_event(
 		end
 end)
 
+local function TURD(event, player)
+
+		local turd_master = player.gui.screen
+		if turd_master.turd_master_frame == nil then
+			turd_master.add(
+				{
+					type = 'frame',
+					name = 'turd_master_frame',
+					caption = 'Technological Upgrade and Research Device',
+					direction = 'horizontal'
+				}
+			)
+			turd_master.turd_master_frame.force_auto_center()
+			local left = turd_master.turd_master_frame.add(
+				{
+					type = 'frame',
+					name = 'left_tech_window',
+					direction = 'horizontal'
+				}
+			)
+			--left.style.width = 300
+			local left_scroll = left.add(
+				{
+					type = 'scroll-pane',
+					name = 'turd_scroll',
+					style = 'inventory_scroll_pane'
+				}
+			)
+			local left_table = left_scroll.add(
+				{
+					type = 'table',
+					name = 'master_tech_table',
+					column_count = 2
+				}
+			)
+			local right = turd_master.turd_master_frame.add(
+				{
+					type = 'frame',
+					name = 'right_tech_window',
+					direction = 'horizontal'
+				}
+			)
+			right.style.minimal_width = 800
+			for t, tech in pairs(global.tech_upgrades.tech_status) do
+				left_table.add(
+					{
+						type = 'sprite-button',
+						name = 'turd_master_button_' .. t,
+						sprite = 'technology/' .. t
+					}
+				)
+				left_table['turd_master_button_' .. t].style.width = 128
+				left_table['turd_master_button_' .. t].style.height = 128
+				--log(t)
+				--log(serpent.block(tech))
+				if tech == true then
+					--log('hit')
+					--left_table['turd_master_button_' .. t].style = 'red_logistic_slot_button'
+					left_table['turd_master_button_' .. t].style = 'green_slot'
+				end
+			end
+			turd_master.turd_master_frame.add(
+				{
+					type = "sprite-button",
+					name = "turd_close",
+					sprite = "utility/close_fat"
+				}
+			)
+
+		elseif turd_master.turd_master_frame ~= nil then
+			turd_master.turd_master_frame.destroy()
+		end
+end
+--[[
 local function _Tech_building_upgrades(event)
 
 	local tech = event.research
 
 	if global.tech_upgrades.techs[tech.name] ~= nil then
-
-		--log('hit')
-		--log(tech.name)
-		table.insert(global.tech_upgrades.unlocked_techs, tech.name)
-		local players = event.research.force.connected_players
-		local player = players[1]
-		if player ~= nil then
-			--log('hit')
-			local turd = player.gui.screen
-			if turd.turd_frame == nil then
-				turd.add(
-					{
-						type = 'frame',
-						name = 'turd_frame',
-						caption = 'Technological Upgrade and Research Device',
-						direction = 'horizontal'
-					}
-				)
-				turd.turd_frame.force_auto_center()
-				for t,tec in pairs(global.tech_upgrades.techs[tech.name]) do
-					--log(t)
-					--log(serpent.block(tec))
-					local flow = turd.turd_frame.add(
-						{
-							type = 'frame',
-							name = 'tech_flow_' .. t .. '_' .. tech.name,
-							direction = 'vertical',
-							--style = 'inventory_scroll_pane'
-						}
-					)
-					flow.style.right_padding = 20
-					flow.add(
-						{
-							type = 'sprite',
-							name = 'tech_icon' .. t,
-							sprite = t,
-						}
-					)
-					flow.add(
-						{
-							type = 'label',
-							name = 'tech' .. t,
-							caption = {'technology-name.' .. t}
-						}
-					)
-					flow.add(
-						{
-							type = 'label',
-							name = 'tech_effects' .. t,
-							caption = {'technology-description.' .. t}
-						}
-					)
-					flow['tech_effects' .. t].style.maximal_width = 200
-					flow['tech_effects' .. t].style.single_line = false
-					for u, up in pairs(tec.upgrades) do
-						local con_num = up * 100
-						flow.add(
-							{
-								type = 'label',
-								name = 'tech_upgrade_effects' .. t .. u,
-								caption = u .. ' = ' .. con_num .. '%'
-							}
-						)
-					end
-					flow.add(
-						{
-							type = 'label',
-							name = 'entites' .. t,
-							caption = 'Effected Entities'
-						}
-					)
-					for _, ent in pairs(tec.entities) do
-						local ent_name = game.entity_prototypes[ent].localised_name
-						flow.add(
-							{
-								type = 'label',
-								name = t .. ent,
-								caption = ent_name
-							}
-						)
-					end
-					if tec.recipes_to_unlock ~= nil then
-						flow.add(
-							{
-								type = 'label',
-								name = 'unlocked_recipes',
-								caption = 'Recipes to Unlock'
-							}
-						)
-						for _, recipe in pairs(tec.recipes_to_unlock) do
-							flow.add(
-								{
-									type = 'label',
-									name = t .. recipe,
-									caption = {tostring('recipe-name.' .. recipe)}
-								}
-							)
-							flow.add(
-								{
-									type = 'choose-elem-button',
-									name = t .. recipe .. 'tooltip',
-									elem_type = 'recipe',
-									recipe = recipe,
-									enabled = false
-									--ignored_by_interaction = true
-								}
-							)
-						end
-					end
-					flow.add(
-						{
-							type = 'button',
-							name = 'turd_select_button_' .. t,
-							caption = 'Select'
-						}
-					)
-				end
-				turd.turd_frame.add(
-					{
-						type = "sprite-button",
-						name = "turd_close",
-						sprite = "utility/close_fat"
-					}
-				)
-
-			end
-		--log(serpent.block(global.tech_upgrades))
-		else
-			--log('hit')
-			for _,tec in pairs(global.tech_upgrades.techs[tech.name]) do
-				--log(serpent.block(global.tech_upgrades.techs[tech.name]))
-				--log(serpent.block(tec))
-				tec.selected = false
-			end
-			global.tech_upgrades.tech_status[tech.name] = false
-			--log(serpent.block(global.tech_upgrades.tech_status))
-			--log(serpent.block(global.tech_upgrades))
-		end
+		TURD(event)
 	end
 end
+]]--
 
 --tech unlock gui and toogle scripts
 local function Tech_recipe_upgrades(event)
@@ -2809,83 +2745,25 @@ local function Tech_recipe_upgrades(event)
 end
 
 script.on_event(defines.events.on_research_finished, function(event)
+	local tech = event.research
 	Tech_recipe_upgrades(event)
-	_Tech_building_upgrades(event)
+	--_Tech_building_upgrades(event)
+	if global.tech_upgrades.techs[tech.name] ~= nil then
+		global.tech_upgrades.tech_status[tech.name] = false
+		local players = tech.force.connected_players
+		local player = players[1]
+		if player ~= nil then
+			TURD(event, player)
+			local parent_status = global.tech_upgrades.tech_status[tech.name]
+			if player.gui.screen.turd_master_frame ~= nil then
+				right_window(player, tech.name, parent_status)
+			end
+		end
+	end
 end)
 
 script.on_event("tech-upgrades", function(event)
-
 	local player = game.players[event.player_index]
-
-	local turd_master = player.gui.screen
-	if turd_master.turd_master_frame == nil then
-		turd_master.add(
-			{
-				type = 'frame',
-				name = 'turd_master_frame',
-				caption = 'Technological Upgrade and Research Device',
-				direction = 'horizontal'
-			}
-		)
-		turd_master.turd_master_frame.force_auto_center()
-		local left = turd_master.turd_master_frame.add(
-			{
-				type = 'frame',
-				name = 'left_tech_window',
-				direction = 'horizontal'
-			}
-		)
-		--left.style.width = 300
-		local left_scroll = left.add(
-			{
-				type = 'scroll-pane',
-				name = 'turd_scroll',
-				style = 'inventory_scroll_pane'
-			}
-		)
-		local left_table = left_scroll.add(
-			{
-				type = 'table',
-				name = 'master_tech_table',
-				column_count = 2
-			}
-		)
-		local right = turd_master.turd_master_frame.add(
-			{
-				type = 'frame',
-				name = 'right_tech_window',
-				direction = 'horizontal'
-			}
-		)
-		right.style.minimal_width = 800
-		for t, tech in pairs(global.tech_upgrades.tech_status) do
-			left_table.add(
-				{
-					type = 'sprite-button',
-					name = 'turd_master_button_' .. t,
-					sprite = 'technology/' .. t
-				}
-			)
-			left_table['turd_master_button_' .. t].style.width = 128
-			left_table['turd_master_button_' .. t].style.height = 128
-			--log(t)
-			--log(serpent.block(tech))
-			if tech == true then
-				--log('hit')
-				left_table['turd_master_button_' .. t].style = 'red_logistic_slot_button'
-				--left_table['button' .. t].style.strikethrough_color  = {0.5,0.5,0.5}
-			end
-		end
-		turd_master.turd_master_frame.add(
-			{
-				type = "sprite-button",
-				name = "turd_close",
-				sprite = "utility/close_fat"
-			}
-		)
-
-	elseif turd_master.turd_master_frame ~= nil then
-		turd_master.turd_master_frame.destroy()
-	end
-
+	TURD(event,player)
+	log(serpent.block(global.tech_upgrades))
 end)

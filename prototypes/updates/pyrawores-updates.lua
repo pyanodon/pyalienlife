@@ -198,9 +198,7 @@ RECIPE {
     energy_required = 4,
     ingredients = {
         {type = "fluid", name = "wax", amount = 20},
-        {type = "item", name = "silicon", amount = 5},
         {type = "item", name = "green-sic", amount = 5},
-        {type = "item", name = "clay", amount = 1},
     },
     results = {
         {type = "item", name = "mold", amount = 4}
@@ -208,7 +206,7 @@ RECIPE {
     main_product= "mold",
     subgroup = "py-rawores-casting",
     order = "a"
-  }:add_unlock("iron-mk02")
+  }:add_unlock("iron-mk02"):add_ingredient({type = "item", name = "silicon", amount = 5}):add_ingredient({type = "item", name = "clay", amount = 1})
 
 RECIPE('casting-gear'):replace_ingredient('sand-casting','mold')
 RECIPE('casting-pipe'):replace_ingredient('sand-casting','mold')
