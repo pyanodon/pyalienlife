@@ -756,6 +756,12 @@ script.on_configuration_changed(
 		if global.tech_upgrades.entities == nil then
 			table.insert(global.tech_upgrades, entities)
 			global.tech_upgrades.entities = {}
+			local entities = game.surfaces['nauvis'].find_entities_filtered{type = 'assembling-machine'}
+			for e, ent in pairs(entities) do
+				if global.tech_upgrades.entities_name_list[ent] ~= nil then
+					add_farm_to_table(ent)
+				end
+			end
 		end
 	end
 )
@@ -2228,17 +2234,27 @@ script.on_event(
 		elseif string.match(event.element.name, 'turd_confirm') then
 			local tech = global.tech_upgrades.currently_selected.tech
 			local sub_tech = global.tech_upgrades.currently_selected.sub_tech
-		--log(serpent.block(tech))
-		--log(serpent.block(sub_tech))
+			--log(serpent.block(tech))
+			--log(serpent.block(sub_tech))
 			for _, ent in pairs(global.tech_upgrades.techs[tech][sub_tech].entities) do
 				if global.tech_upgrades.entities_master_list[ent] == nil then
 					global.tech_upgrades.entities_master_list[ent] = sub_tech
 				end
 				for b, building in pairs(global.tech_upgrades.entities) do
-					if building.name == ent then
-						adding_beacon(building, player)
+					--log(serpent.block(building))
+					--log(serpent.block(building.name))
+					--log(serpent.block(ent))
+					if building ~= nil and building.valid then
+						if building.name ~= nil then
+							if building.name == ent then
+								adding_beacon(building, player)
+							end
+						end
+					elseif building.valid == false then
+						global.tech_upgrades.entities[b] = nil
 					end
 				end
+				log(serpent.block(global.tech_upgrades.entities))
 			end
 			global.tech_upgrades.tech_status[tech] = true
 			global.tech_upgrades.techs[tech][sub_tech].selected = true
@@ -2764,6 +2780,11 @@ end)
 
 script.on_event("tech-upgrades", function(event)
 	local player = game.players[event.player_index]
+	for t, tech in pairs(global.tech_upgrades.techs) do
+		if global.tech_upgrades.tech_status[t] == nil and player.force.technologies[t].researched == true then
+			global.tech_upgrades.tech_status[t] = false
+		end
+	end
 	TURD(event,player)
 	log(serpent.block(global.tech_upgrades))
 end)

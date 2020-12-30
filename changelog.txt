@@ -2,6 +2,7 @@
 Version: 1.10.6
 Date: ????
   Changes:
+    - Migration for turd system to fix missing data in save files.
 ---------------------------------------------------------------------------------------------------
 Version: 1.10.5
 Date: 2020-12-30
