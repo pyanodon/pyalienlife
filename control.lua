@@ -1417,7 +1417,7 @@ script.on_nth_tick(20, function()
 			end
 			for _, in_chest in pairs(networks[cnsnum].input_chests) do
 				--log('hit')
-				if pycloud.chests[in_chest] ~= nil and pycloud.chests[in_chest].entity ~= nil then
+				if pycloud.chests[in_chest] ~= nil and pycloud.chests[in_chest].entity ~= nil and pycloud.chests[in_chest].entity.valid then
 					--log('hit')
 					local inv = pycloud.chests[in_chest].entity.get_inventory(defines.inventory.chest)
 					if inv ~= nil and pycloud.chests[in_chest].skin.energy > 1 then

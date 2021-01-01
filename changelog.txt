@@ -2,6 +2,8 @@
 Version: 1.10.7
 Date: ????
   Changes:
+    - Fixed crashed with invalid enitity.
+    - Added needed module effects that was missing some for upgrade techs to work.
 ---------------------------------------------------------------------------------------------------
 Version: 1.10.6
 Date: 2020-12-30
