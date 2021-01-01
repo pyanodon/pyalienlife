@@ -9535,7 +9535,7 @@ data:extend(
 		name = 'unit-controller',
 		icon = '__pyalienlifegraphics__/graphics/icons/carrot_on_a_stick.png',
 		icon_size = 64,
-		flags = {},
+		flags = {"spawnable", "only-in-cursor"},
 		subgroup = "tool",
 		order = "a",
 		stack_size = 1,
