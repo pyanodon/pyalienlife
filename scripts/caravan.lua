@@ -118,10 +118,14 @@ script.on_event(
             local outpostinventory = game.surfaces[caravanroutes[car].unit.surface.name].find_entity('outpost', caravanroutes[car].startpoint.pos).get_inventory(defines.inventory.chest)
             if outpostinventory ~= nil then
                 if caravanroutes[car].inventory.hasitem then
-                    outpostinventory.insert({name=caravanroutes[car].inventory.item, count=caravanroutes[car].inventory.stackamount})
-					caravanroutes[car].inventory.hasitem = false
-					caravanroutes[car].inventory.item = ''
-					caravanroutes[car].inventory.stackamount = 0
+                    local removedcount = outpostinventory.insert({name=caravanroutes[car].inventory.item, count=caravanroutes[car].inventory.stackamount})
+                    if removedcount == caravanroutes[car].inventory.stackamount then
+                        caravanroutes[car].inventory.hasitem = false
+                        caravanroutes[car].inventory.item = ''
+                        caravanroutes[car].inventory.stackamount = 0
+                    else
+                        caravanroutes[car].inventory.stackamount = caravanroutes[car].inventory.stackamount - removedcount
+                    end
                 else
                     local contents = outpostinventory.get_contents()
                     --log(serpent.block(outpostinventory))
@@ -155,10 +159,14 @@ script.on_event(
             local outpostinventory = game.surfaces[caravanroutes[car].unit.surface.name].find_entity('outpost', caravanroutes[car].endpoint.pos).get_inventory(defines.inventory.chest)
             if outpostinventory ~= nil then
                 if caravanroutes[car].inventory.hasitem then
-                    outpostinventory.insert({name=caravanroutes[car].inventory.item, count=caravanroutes[car].inventory.stackamount})
-					caravanroutes[car].inventory.hasitem = false
-					caravanroutes[car].inventory.item = ''
-					caravanroutes[car].inventory.stackamount = 0
+                    local removedcount = outpostinventory.insert({name=caravanroutes[car].inventory.item, count=caravanroutes[car].inventory.stackamount})
+                    if removedcount == caravanroutes[car].inventory.stackamount then
+                        caravanroutes[car].inventory.hasitem = false
+                        caravanroutes[car].inventory.item = ''
+                        caravanroutes[car].inventory.stackamount = 0
+                    else
+                        caravanroutes[car].inventory.stackamount = caravanroutes[car].inventory.stackamount - removedcount
+                    end
                 else
                     local contents = outpostinventory.get_contents()
                     --log(serpent.block(outpostinventory))

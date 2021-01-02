@@ -1058,12 +1058,16 @@ script.on_event(
 					)
 					if outpostinventory ~= nil then
 						if caravanroutes[car].inventory.hasitem then
-							outpostinventory.insert(
+							local removedcount = outpostinventory.insert(
 								{name = caravanroutes[car].inventory.item, count = caravanroutes[car].inventory.stackamount}
 							)
-							caravanroutes[car].inventory.hasitem = false
-							caravanroutes[car].inventory.item = ""
-							caravanroutes[car].inventory.stackamount = 0
+							if removedcount == caravanroutes[car].inventory.stackamount then
+								caravanroutes[car].inventory.hasitem = false
+								caravanroutes[car].inventory.item = ""
+								caravanroutes[car].inventory.stackamount = 0
+							else
+								caravanroutes[car].inventory.stackamount = caravanroutes[car].inventory.stackamount - removedcount
+							end
 						else
 							local contents = outpostinventory.get_contents()
 							--log(serpent.block(outpostinventory))
@@ -1110,12 +1114,16 @@ script.on_event(
 					)
 					if outpostinventory ~= nil then
 						if caravanroutes[car].inventory.hasitem then
-							outpostinventory.insert(
+							local removedcount = outpostinventory.insert(
 								{name = caravanroutes[car].inventory.item, count = caravanroutes[car].inventory.stackamount}
 							)
-							caravanroutes[car].inventory.hasitem = false
-							caravanroutes[car].inventory.item = ""
-							caravanroutes[car].inventory.stackamount = 0
+							if removedcount == caravanroutes[car].inventory.stackamount then
+								caravanroutes[car].inventory.hasitem = false
+								caravanroutes[car].inventory.item = ""
+								caravanroutes[car].inventory.stackamount = 0
+							else
+								caravanroutes[car].inventory.stackamount = caravanroutes[car].inventory.stackamount - removedcount
+							end
 						else
 							local contents = outpostinventory.get_contents()
 							--log(serpent.block(outpostinventory))
