@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.10.8
-Date: ????
+Date: 2021-01-03
   Changes:
     - Fixed error with farms not being disabled when they dont contain modules.
     - Fixed that barrels of fluids and empty barrels would receive productivity from turd upgrades.
