@@ -1580,6 +1580,16 @@ recipe =
             if return_item and return_item_name ~= nil then
                 for _, rit in pairs(return_items_table) do overrides.add_result(na, rit) end
             end
+
+            for r, result in pairs(data.raw.recipe[na].results) do
+                log(serpent.block(result))
+                if string.match(result.name, 'barrel') ~= nil then
+                    table.insert(result, catalyst_amount)
+                    result.catalyst_amount = result.amount
+                end
+                log(serpent.block(result))
+            end
+
             -- log('hit')
             if mat.icon == nil then
                 -- log(serpent.block(data.raw.recipe[na]))
@@ -1601,7 +1611,7 @@ recipe =
             -- log(serpent.block(name..number))
             if tech_unlock ~= nil then RECIPE(na):add_unlock(tech_unlock) end
             -- log('hit')
-            -- log(serpent.block(data.raw.recipe[na]))
+            log(serpent.block(data.raw.recipe[na]))
 
             number = number + 1
         end

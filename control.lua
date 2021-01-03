@@ -183,7 +183,7 @@ local farm_buildings = {
 	"arthurian",
 	"auog",
 	"bhoddos",
-	"cadavericarum",
+	"cadaveric",
 	"prandium",
 	"cridren",
 	"dhilmos",
@@ -246,7 +246,7 @@ local animal_farm_buildings = {
 }
 
 local plant_farm_buildings = {
-	["cadavericarum"] = true,
+	["cadaveric"] = true,
 	["grod"] = true,
 	["kicalk"] = true,
 	["ralesia"] = true,
@@ -944,16 +944,21 @@ script.on_event(
 			--log(mod)
 		elseif global.tech_upgrades.entities_master_list[E.name] == nil and global.tech_upgrades.entities_name_list[E.name] ~= nil then
 			add_farm_to_table(E)
-		elseif global.has_built_first_farm == false then
+		end
+		if global.has_built_first_farm == false then
 			for _, farm in pairs(farm_buildings) do
-				if string.match(E.name, farm) then -- or string.match(E.ghost_name, farm) then
+				log(E.name)
+				log(farm)
+				if string.match(E.name, farm) then
 					create_farm_help_message(event)
 					disable_machine(E)
 				end
 			end
 		elseif global.has_built_first_farm == true then
 			for _, farm in pairs(farm_buildings) do
-				if string.match(E.name, farm) then -- or string.match(E.ghost_name, farm) then
+				log(E.name)
+				log(farm)
+				if string.match(E.name, farm) then
 					disable_machine(E)
 				end
 			end
