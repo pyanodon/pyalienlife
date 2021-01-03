@@ -675,6 +675,6 @@ ENTITY {
     }
   },
   working_sound = {
-    sound = {filename = "__pyalienlifegraphics3__/sounds/pydrive.ogg", volume = 0.95},
+    sound = {filename = "__pyalienlifegraphics3__/sounds/pydrive.ogg", volume = 1.1},
 },
 }
