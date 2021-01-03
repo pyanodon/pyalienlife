@@ -1449,7 +1449,7 @@ script.on_nth_tick(20, function()
 			end
 			for _, out_chest in pairs(networks[cnsnum].output_chests) do
 				--log('hit')
-				if pycloud.chests[out_chest] ~= nil and pycloud.chests[out_chest].entity ~= nil then
+				if pycloud.chests[out_chest] ~= nil and pycloud.chests[out_chest].entity ~= nil and pycloud.chests[out_chest].entity.valid then
 					--log('hit')
 					local inv = pycloud.chests[out_chest].entity.get_inventory(defines.inventory.chest)
 					--log(serpent.block(inv))
