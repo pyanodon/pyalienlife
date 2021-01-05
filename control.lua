@@ -591,7 +591,7 @@ script.on_init(
 			tech_status = {},
 			currently_selected = {}
 		}
-		log_all_machines_for_upgrades(tech_upgrade_table)
+		--log_all_machines_for_upgrades(tech_upgrade_table)
 		global.energy_drink = {}
 		if not remote.interfaces["silo_script"] then
 			return
@@ -744,7 +744,7 @@ script.on_configuration_changed(
 				tech_status = {},
 				currently_selected = {}
 			}
-			log_all_machines_for_upgrades(tech_upgrade_table)
+			--log_all_machines_for_upgrades(tech_upgrade_table)
 			--log(serpent.block(global.tech_upgrades))
 			local entities = game.surfaces['nauvis'].find_entities_filtered{type = 'assembling-machine'}
 			for e, ent in pairs(entities) do
@@ -947,8 +947,8 @@ script.on_event(
 		end
 		if global.has_built_first_farm == false then
 			for _, farm in pairs(farm_buildings) do
-				log(E.name)
-				log(farm)
+				--log(E.name)
+				--log(farm)
 				if string.match(E.name, farm) then
 					create_farm_help_message(event)
 					disable_machine(E)
@@ -956,8 +956,8 @@ script.on_event(
 			end
 		elseif global.has_built_first_farm == true then
 			for _, farm in pairs(farm_buildings) do
-				log(E.name)
-				log(farm)
+				--log(E.name)
+				--log(farm)
 				if string.match(E.name, farm) then
 					disable_machine(E)
 				end
@@ -2259,7 +2259,7 @@ script.on_event(
 						global.tech_upgrades.entities[b] = nil
 					end
 				end
-				log(serpent.block(global.tech_upgrades.entities))
+				--log(serpent.block(global.tech_upgrades.entities))
 			end
 			global.tech_upgrades.tech_status[tech] = true
 			global.tech_upgrades.techs[tech][sub_tech].selected = true
@@ -2791,5 +2791,5 @@ script.on_event("tech-upgrades", function(event)
 		end
 	end
 	TURD(event,player)
-	log(serpent.block(global.tech_upgrades))
+	--log(serpent.block(global.tech_upgrades))
 end)

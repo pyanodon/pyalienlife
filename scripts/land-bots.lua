@@ -108,7 +108,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 
         --swap the roboport for the control tower entity
         if E.name == 'hidden-roboport-for-logistics-radius' then
-			log(E.name)
+			--log(E.name)
             local tower = game.surfaces['nauvis'].create_entity {name = 'lb-control-tower', position = {E.position.x, E.position.y}, force = E.force}
             E.destroy()
 
@@ -175,7 +175,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 							tower = t,
 							request_slots = slots
 						}
-					log(serpent.block(landbots.requesterchests[E.unit_number]))
+					--log(serpent.block(landbots.requesterchests[E.unit_number]))
                 end
             end
         elseif E.name == 'lb-provider-chest' then
@@ -220,20 +220,20 @@ script.on_event(
 	--need to check if is on the way to get an item or drop off items.
 	--need to check if there are requests to fill that are not already in route by another bot
 		local lb
-		log(event.result)
+		--log(event.result)
 		if landbots.bots[event.unit_number] ~= nil then
 			lb = landbots.bots[event.unit_number]
 		end
 		if event.result == defines.behavior_result.success then
 			if lb ~= nil then
 				if lb.isgettingitem == true then
-					log('it worked')
+					--log('it worked')
 					--get stuff from box and set destination to the requester chest that asked for it
 					local pinventory = landbots.towers[lb.tower].providerchests[lb.destinationchest].chest.get_inventory(defines.inventory.chest).get_contents()
 					local pset = {}
 					for i, inv in pairs(pinventory) do
-						log(serpent.block(i))
-						log(serpent.block(inv))
+						--log(serpent.block(i))
+						--log(serpent.block(inv))
 						pset[i] = true
 					end
 					if pset[lb.itemname] ~= nil then
@@ -312,16 +312,16 @@ for _, tower in pairs(landbots.towers) do
 							requestamount = sig.count
 						end
 						if (set[sig.signal.name] ~= nil and inventory[sig.signal.name] < requestamount) or (set[sig.signal.name] == nil) then
-							log('box isnt full of the stuff we set. send more please')
+							--log('box isnt full of the stuff we set. send more please')
 							--need to check the providers to see if any of them have what we need
 							for p, prov in pairs(tower.providerchests) do
-								log(serpent.block(p))
-								log(serpent.block(prov))
+								--log(serpent.block(p))
+								--log(serpent.block(prov))
 								local pinventory = prov.chest.get_inventory(defines.inventory.chest).get_contents()
 								local pset = {}
 								for i, inv in pairs(pinventory) do
-									log(serpent.block(i))
-									log(serpent.block(inv))
+									--log(serpent.block(i))
+									--log(serpent.block(inv))
 									pset[i] = true
 								end
 								if pset[sig.signal.name] ~= nil then
@@ -342,7 +342,7 @@ for _, tower in pairs(landbots.towers) do
 										else
 											req.requestsinroute[sig.signal.name] = req.requestsinroute[sig.signal.name] + bots[inact].carryamount
 										end
-										log(serpent.block(landbots))
+										--log(serpent.block(landbots))
 										break
 									end
 								end
@@ -425,10 +425,10 @@ end)
 
 script.on_event(defines.events.on_gui_value_changed, function(event)
 
-	log(event.element.name)
+	--log(event.element.name)
 
 	if event.element.name == 'request-slider' then
-		log(serpent.block(event.element.parent.children))
+		--log(serpent.block(event.element.parent.children))
 		event.element.parent['numfield'].text = event.element.slider_value
 	end
 
@@ -436,7 +436,7 @@ end)
 
 script.on_event(defines.events.on_gui_elem_changed, function(event)
 
-	log(event.element.name)
+	--log(event.element.name)
 
 end)
 
