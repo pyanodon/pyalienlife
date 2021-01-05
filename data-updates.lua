@@ -98,6 +98,8 @@ data.raw.item.satellite.rocket_launch_product =
 fun.add_ingredient('satellite', {type = 'item', name = 'cottongut', amount = 150})
 fun.add_ingredient('satellite', {type = 'item', name = 'antimatter', amount = 3})
 
+RECIPE('space-science-pack'):add_ingredient({type = "item", name = "destablilized-toxirus", amount = 1})
+
 --Updating base milk barrel with icons
 
 
