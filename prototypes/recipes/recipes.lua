@@ -2535,3 +2535,19 @@ RECIPE {
     },
     --main_product = "chloral",
 }:add_unlock("moss")--not a real tech
+
+RECIPE {
+    type = 'recipe',
+    name = 'arthropod-blood-to-organic-solvent',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'fluid', name = 'arthropod-blood', amount = 50},
+        {type = 'item', name = 'nickel-plate', amount = 1},
+        {type = 'fluid', name = 'cumene', amount = 20},
+    },
+    results = {
+        {type = 'fluid', name = 'organic-solvent', amount = 100},
+    }
+}:add_unlock('biotech-mk03')
