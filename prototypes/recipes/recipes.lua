@@ -2539,7 +2539,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'arthropod-blood-to-organic-solvent',
-    category = 'biofactory',
+    category = 'rectisol',
     enabled = false,
     energy_required = 5,
     ingredients = {
