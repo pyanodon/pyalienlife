@@ -1,7 +1,13 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.11.0
+Version: 1.11.1
 Date: ????
   Changes:
+---------------------------------------------------------------------------------------------------
+Version: 1.11.0
+Date: 2021-01-05
+  Changes:
+    - Removed space science from satellite. now satellite launch returns item needed in quantum computer space science.
+    - Removed debugging log statements.
 ---------------------------------------------------------------------------------------------------
 Version: 1.10.9
 Date: 2021-01-03

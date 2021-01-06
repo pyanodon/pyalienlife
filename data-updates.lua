@@ -1,6 +1,6 @@
 require("__stdlib__/stdlib/data/data").Util.create_data_globals()
-require("__pycoalprocessing__/prototypes/functions/functions")
---local fun = require("prototypes/functions/functions")
+--require("__pycoalprocessing__/prototypes/functions/functions")
+local fun = require("prototypes/functions/functions")
 
 if mods["pyfusionenergy"] then
     require("prototypes/updates/pyfusionenergy-updates")
@@ -86,6 +86,19 @@ RECIPE {
 }:add_unlock("biotech-mk02")
 
 table.insert(data.raw.lab.lab.inputs, 'py-science-pack')
+
+--remove space science from satellite
+data.raw.item.satellite.rocket_launch_product =
+    {
+        type = 'item',
+        name = 'destablilized-toxirus',
+        amount = 5
+    }
+
+fun.add_ingredient('satellite', {type = 'item', name = 'cottongut', amount = 150})
+fun.add_ingredient('satellite', {type = 'item', name = 'antimatter', amount = 3})
+
+RECIPE('space-science-pack'):add_ingredient({type = "item", name = "destablilized-toxirus", amount = 1})
 
 --Updating base milk barrel with icons
 
