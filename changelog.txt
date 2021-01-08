@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.11.1
-Date: ????
+Date: 2021-01-08
   Changes:
     - Fixed that space science couldnt be made without pyhightech being enabled.
     - Fixed bug that game wasnt being finished with completion of space science in quantum computer. win condition has been moved and unified for both rocket and quantum computer based space science to require 1 space tech to be researched.
