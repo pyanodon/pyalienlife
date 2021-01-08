@@ -2,6 +2,12 @@
 Version: 1.11.1
 Date: ????
   Changes:
+    - Fixed that space science couldnt be made without pyhightech being enabled.
+    - Fixed bug that game wasnt being finished with completion of space science in quantum computer. win condition has been moved and unified for both rocket and quantum computer based space science to require 1 space tech to be researched.
+    - Added arthropod blood to organic solvent recipe.
+    - Reduced trit pup matureing 1 output from 20 to 10.
+    - Added catalyst amount to cage output from recipes will productivity from turd.
+    - Corrected locale of cntl to Ctrl.
 ---------------------------------------------------------------------------------------------------
 Version: 1.11.0
 Date: 2021-01-05

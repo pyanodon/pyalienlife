@@ -42,6 +42,22 @@ TECHNOLOGY('quantum'):add_pack('py-science-pack')
 require('prototypes/recipes/recipes-antelope')
 require('prototypes/recipes/recipes-auto-antelope')
 
+--adjusting win condition to need q computer
+
+--remove space science from satellite
+data.raw.item.satellite.rocket_launch_product =
+    {
+        type = 'item',
+        name = 'destablilized-toxirus',
+        amount = 5
+    }
+
+fun.add_ingredient('satellite', {type = 'item', name = 'cottongut', amount = 150})
+fun.add_ingredient('satellite', {type = 'item', name = 'antimatter', amount = 3})
+
+RECIPE('space-science-pack'):add_ingredient({type = "item", name = "destablilized-toxirus", amount = 1})
+--RECIPE('satellite'):add_unlock('quantum')
+
 ----KICALK-----
 
 ITEM {

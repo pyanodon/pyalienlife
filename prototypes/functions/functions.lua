@@ -1582,12 +1582,12 @@ recipe =
             end
 
             for r, result in pairs(data.raw.recipe[na].results) do
-                log(serpent.block(result))
-                if string.match(result.name, 'barrel') ~= nil then
+                --log(serpent.block(result))
+                if string.match(result.name, 'barrel') ~= nil or result.name == 'cage' then
                     table.insert(result, catalyst_amount)
                     result.catalyst_amount = result.amount
                 end
-                log(serpent.block(result))
+                --log(serpent.block(result))
             end
 
             -- log('hit')
@@ -1611,7 +1611,7 @@ recipe =
             -- log(serpent.block(name..number))
             if tech_unlock ~= nil then RECIPE(na):add_unlock(tech_unlock) end
             -- log('hit')
-            log(serpent.block(data.raw.recipe[na]))
+            --log(serpent.block(data.raw.recipe[na]))
 
             number = number + 1
         end

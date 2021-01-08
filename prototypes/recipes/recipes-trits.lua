@@ -57,7 +57,7 @@ RECIPE {
         {type = 'fluid', name = 'fetal-serum', amount = 50},
     },
     results = {
-        {type = 'item', name = 'trits', amount = 20},
+        {type = 'item', name = 'trits', amount = 10},
     },
     --main_product = "caged-trits",
     subgroup = 'py-alienlife-trits',
@@ -166,6 +166,3 @@ RECIPE {
     subgroup = 'py-alienlife-trits',
     order = 'zc'
 }:add_unlock("biased-mutation")
-
-
-

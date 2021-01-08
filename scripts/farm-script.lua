@@ -24,7 +24,7 @@ script.on_event(
     function(event)
         if event.rocket_silo.name == 'mega-farm' then
             --log(serpent.block(event))
-            log(serpent.block(event.rocket.get_inventory(defines.inventory.rocket).get_contents()))
+            --log(serpent.block(event.rocket.get_inventory(defines.inventory.rocket).get_contents()))
 
             local item = event.rocket.get_inventory(defines.inventory.rocket).get_contents()
             local items = {}
@@ -32,25 +32,25 @@ script.on_event(
             for k in pairs(item) do
                 items['item1'] = k
             end
-            log(items['item1'])
+            --log(items['item1'])
             --log(serpent.block(item))
 
             local rs = event.rocket_silo
 
             for _, farm in pairs(farms) do
-                log(serpent.block(farm))
+                --log(serpent.block(farm))
                 if items['item1'] == farm.seed then
-                    log('hits')
+                    --log('hits')
                     local recipes = {}
                     local output = {}
                     for _, recipe in pairs(farm.recipes) do
-                        log(serpent.block(recipe))
+                        --log(serpent.block(recipe))
                         recipes[recipe.recipe_name] = true
                         output[recipe.recipe_name] = recipe.crop_output
                     end
-                    log(serpent.block(rs.get_recipe().name))
+                    --log(serpent.block(rs.get_recipe().name))
                     if recipes[rs.get_recipe().name] == true then
-                        log('it did a thing')
+                        --log('it did a thing')
                         local posx = -11
                         local posy = -11
                         local rpos = event.rocket_silo.position
@@ -79,15 +79,15 @@ script.on_event(
     {defines.events.on_built_entity, defines.events.on_robot_built_entity},
     function(event)
         local E = event.created_entity
-        log(E.name)
+        --log(E.name)
 
         if E.name == 'mega-farm' then
             local posx = -13
             local posy = -13
             local rpos = E.position
             repeat
-                log(posx)
-                log(posy)
+                --log(posx)
+                --log(posy)
                 if posx == -13 or posy == -13 or posx == 13 or posy == 13 then
                     game.surfaces['nauvis'].create_entity {name = 'wood-fence', position = {rpos.x + posx, (rpos.y - 15) + posy}, force = E.force}
                 end
