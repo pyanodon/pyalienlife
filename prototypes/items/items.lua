@@ -5460,7 +5460,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "t-a",
     stack_size = 300,
-	effect = { speed = {bonus = 0.8}},
+	effect = { speed = {bonus = 0.4}},
 	limitation = alien_life_limitations_tree,
 	limitation_message_key = "wood"
 }
@@ -5480,7 +5480,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "t-b",
     stack_size = 300,
-	effect = { speed = {bonus = 1.6}},
+	effect = { speed = {bonus = 0.8}},
 	limitation = alien_life_limitations_tree,
 	limitation_message_key = "wood"
 }
@@ -5500,7 +5500,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "t-c",
     stack_size = 300,
-	effect = { speed = {bonus = 2.4}},
+	effect = { speed = {bonus = 1.2}},
 	limitation = alien_life_limitations_tree,
 	limitation_message_key = "wood"
 }
@@ -5520,7 +5520,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "t-d",
     stack_size = 300,
-	effect = { speed = {bonus = 3.2}},
+	effect = { speed = {bonus = 1.6}},
 	limitation = alien_life_limitations_tree,
 	limitation_message_key = "wood"
 }
@@ -6164,7 +6164,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "aa",
     stack_size = 300,
-	effect = { speed = {bonus = 2.5}},
+	effect = { speed = {bonus = 1.25}},
 	limitation = alien_life_limitations_arthurian,
 	limitation_message_key = "arthurian"
 }
@@ -6184,7 +6184,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ab",
     stack_size = 300,
-	effect = { speed = {bonus = 5}},
+	effect = { speed = {bonus = 2.5}},
 	limitation = alien_life_limitations_arthurian,
 	limitation_message_key = "arthurian"
 }
@@ -6204,7 +6204,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ac",
     stack_size = 300,
-	effect = { speed = {bonus = 7.5}},
+	effect = { speed = {bonus = 3.75}},
 	limitation = alien_life_limitations_arthurian,
 	limitation_message_key = "arthurian"
 }
@@ -6224,7 +6224,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ad",
     stack_size = 300,
-	effect = { speed = {bonus = 10}},
+	effect = { speed = {bonus = 5}},
 	limitation = alien_life_limitations_arthurian,
 	limitation_message_key = "arthurian"
 }
@@ -6484,7 +6484,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "da",
     stack_size = 300,
-	effect = { speed = {bonus = 7.5}},
+	effect = { speed = {bonus = 3.75}},
 	limitation = alien_life_limitations_dhilmos,
 	limitation_message_key = "dhilmos"
 }
@@ -6504,7 +6504,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "db",
     stack_size = 300,
-	effect = { speed = {bonus = 10}},
+	effect = { speed = {bonus = 5}},
 	limitation = alien_life_limitations_dhilmos,
 	limitation_message_key = "dhilmos"
 }
@@ -6524,7 +6524,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "dc",
     stack_size = 300,
-	effect = { speed = {bonus = 12.5}},
+	effect = { speed = {bonus = 6.25}},
 	limitation = alien_life_limitations_dhilmos,
 	limitation_message_key = "dhilmos"
 }
@@ -6544,7 +6544,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "dd",
     stack_size = 300,
-	effect = { speed = {bonus = 15}},
+	effect = { speed = {bonus = 7.5}},
 	limitation = alien_life_limitations_dhilmos,
 	limitation_message_key = "dhilmos"
 }
@@ -7179,7 +7179,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "d-a",
     stack_size = 300,
-	effect = { speed = {bonus = 0.8}},
+	effect = { speed = {bonus = 0.4}},
 	limitation = alien_life_limitations_dingrits,
     limitation_message_key = "dingrits",
     fuel_category = 'dingrits',
@@ -7202,7 +7202,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "d-b",
     stack_size = 300,
-	effect = { speed = {bonus = 1.6}},
+	effect = { speed = {bonus = 0.8}},
 	limitation = alien_life_limitations_dingrits,
     limitation_message_key = "dingrits",
     fuel_category = 'dingrits',
@@ -7225,7 +7225,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "d-c",
     stack_size = 300,
-	effect = { speed = {bonus = 3.2}},
+	effect = { speed = {bonus = 1.6}},
 	limitation = alien_life_limitations_dingrits,
     limitation_message_key = "dingrits",
     fuel_category = 'dingrits',
@@ -7248,7 +7248,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "d-d",
     stack_size = 300,
-	effect = { speed = {bonus = 6.4}},
+	effect = { speed = {bonus = 3.2}},
 	limitation = alien_life_limitations_dingrits,
     limitation_message_key = "dingrits",
     fuel_category = 'dingrits',
@@ -7495,7 +7495,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ga",
     stack_size = 300,
-	effect = { speed = {bonus = 2.85}},
+	effect = { speed = {bonus = 1.425}},
 	limitation = alien_life_limitations_grod,
 	limitation_message_key = "grod"
 }
@@ -7515,7 +7515,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "gb",
     stack_size = 300,
-	effect = { speed = {bonus = 5.7}},
+	effect = { speed = {bonus = 2.85}},
 	limitation = alien_life_limitations_grod,
 	limitation_message_key = "grod"
 }
@@ -7535,7 +7535,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "gc",
     stack_size = 300,
-	effect = { speed = {bonus = 8.55}},
+	effect = { speed = {bonus = 4.275}},
 	limitation = alien_life_limitations_grod,
 	limitation_message_key = "grod"
 }
@@ -7555,7 +7555,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "gd",
     stack_size = 300,
-	effect = { speed = {bonus = 11.4}},
+	effect = { speed = {bonus = 5.7}},
 	limitation = alien_life_limitations_grod,
 	limitation_message_key = "grod"
 }
@@ -7807,7 +7807,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "a",
     stack_size = 300,
-	effect = { speed = {bonus = 70}},
+	effect = { speed = {bonus = 35}},
 	limitation = alien_life_limitations_cridren,
 	limitation_message_key = "cridren"
 }
@@ -8003,7 +8003,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-a",
     stack_size = 300,
-	effect = { speed = {bonus = 0.5}},
+	effect = { speed = {bonus = 0.25}},
 	limitation = alien_life_limitations_kicalk,
 	limitation_message_key = "kicalk"
 }
@@ -8023,7 +8023,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-b",
     stack_size = 300,
-	effect = { speed = {bonus = 1}},
+	effect = { speed = {bonus = 0.5}},
 	limitation = alien_life_limitations_kicalk,
 	limitation_message_key = "kicalk"
 }
@@ -8043,7 +8043,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-c",
     stack_size = 300,
-	effect = { speed = {bonus = 2}},
+	effect = { speed = {bonus = 1}},
 	limitation = alien_life_limitations_kicalk,
 	limitation_message_key = "kicalk"
 }
@@ -8063,7 +8063,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 300,
-	effect = { speed = {bonus = 3}},
+	effect = { speed = {bonus = 1.5}},
 	limitation = alien_life_limitations_kicalk,
 	limitation_message_key = "kicalk"
 }
@@ -8083,7 +8083,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cad-a",
     stack_size = 300,
-	effect = { speed = {bonus = 12.5}},
+	effect = { speed = {bonus = 6.25}},
 	limitation = alien_life_limitations_cadaveric,
 	limitation_message_key = "cadaveric-arum"
 }
@@ -8103,7 +8103,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cad-b",
     stack_size = 300,
-	effect = { speed = {bonus = 17.5}},
+	effect = { speed = {bonus = 8.75}},
 	limitation = alien_life_limitations_cadaveric,
 	limitation_message_key = "cadaveric-arum"
 }
@@ -8123,7 +8123,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cad-c",
     stack_size = 300,
-	effect = { speed = {bonus = 22.5}},
+	effect = { speed = {bonus = 11.25}},
 	limitation = alien_life_limitations_cadaveric,
 	limitation_message_key = "cadaveric-arum"
 }
@@ -8143,7 +8143,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cad-d",
     stack_size = 300,
-	effect = { speed = {bonus = 30}},
+	effect = { speed = {bonus = 15}},
 	limitation = alien_life_limitations_cadaveric,
 	limitation_message_key = "cadaveric-arum"
 }
@@ -8603,7 +8603,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cg-a",
     stack_size = 300,
-	effect = { speed = {bonus = 1}},
+	effect = { speed = {bonus = 0.5}},
 	limitation = alien_life_limitations_cottongut,
 	limitation_message_key = "cottongut"
 }
@@ -8623,7 +8623,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cg-b",
     stack_size = 300,
-	effect = { speed = {bonus = 2}},
+	effect = { speed = {bonus = 1}},
 	limitation = alien_life_limitations_cottongut,
 	limitation_message_key = "cottongut"
 }
@@ -8643,7 +8643,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cg-c",
     stack_size = 300,
-	effect = { speed = {bonus = 3}},
+	effect = { speed = {bonus = 1.5}},
 	limitation = alien_life_limitations_cottongut,
 	limitation_message_key = "cottongut"
 }
@@ -8663,7 +8663,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cg-d",
     stack_size = 300,
-	effect = { speed = {bonus = 4}},
+	effect = { speed = {bonus = 2}},
 	limitation = alien_life_limitations_cottongut,
 	limitation_message_key = "cottongut"
 }
@@ -8709,7 +8709,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "q-a",
     stack_size = 300,
-	effect = { speed = {bonus = 7.5}},
+	effect = { speed = {bonus = 3.75}},
 	limitation = alien_life_limitations_arqad,
 	limitation_message_key = "arqad"
 }
@@ -8729,7 +8729,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "q-b",
     stack_size = 300,
-	effect = { speed = {bonus = 10}},
+	effect = { speed = {bonus = 5}},
 	limitation = alien_life_limitations_arqad,
 	limitation_message_key = "arqad"
 }
@@ -8749,7 +8749,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "q-c",
     stack_size = 300,
-	effect = { speed = {bonus = 12.5}},
+	effect = { speed = {bonus = 6.25}},
 	limitation = alien_life_limitations_arqad,
 	limitation_message_key = "arqad"
 }
@@ -8769,7 +8769,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "q-d",
     stack_size = 300,
-	effect = { speed = {bonus = 15}},
+	effect = { speed = {bonus = 7.5}},
 	limitation = alien_life_limitations_arqad,
 	limitation_message_key = "arqad"
 }

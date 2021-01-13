@@ -48,7 +48,7 @@ ENTITY {
     },
     allowed_effects = {"speed","productivity",'consumption','pollution'},
     crafting_categories = {"dingrits"},
-    crafting_speed = 0.075,
+    crafting_speed = 0.15,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

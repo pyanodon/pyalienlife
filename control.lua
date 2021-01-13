@@ -591,7 +591,7 @@ script.on_init(
 			tech_status = {},
 			currently_selected = {}
 		}
-		--log_all_machines_for_upgrades(tech_upgrade_table)
+		log_all_machines_for_upgrades(tech_upgrade_table)
 		global.energy_drink = {}
 		if not remote.interfaces["silo_script"] then
 			return
@@ -744,7 +744,7 @@ script.on_configuration_changed(
 				tech_status = {},
 				currently_selected = {}
 			}
-			--log_all_machines_for_upgrades(tech_upgrade_table)
+			log_all_machines_for_upgrades(tech_upgrade_table)
 			--log(serpent.block(global.tech_upgrades))
 			local entities = game.surfaces['nauvis'].find_entities_filtered{type = 'assembling-machine'}
 			for e, ent in pairs(entities) do
@@ -2004,14 +2004,41 @@ local function right_window(player, tech_name, parent_status)
 						dframe['tech_effects' .. t].style.maximal_width = 200
 						dframe['tech_effects' .. t].style.single_line = false
 						for u, up in pairs(tech.upgrades) do
-							local con_num = up * 100
-							flow.add(
-								{
-									type = 'label',
-									name = 'tech_upgrade_effects' .. t .. u,
-									caption = u .. ' = ' .. con_num .. '%'
-								}
-							)
+							local con_num
+							if u == 'speed' then
+								if type(up) == 'table' then
+									con_num = up.percent * 100
+								elseif type(up) == 'number' then
+									con_num = up
+								end
+								flow.add(
+									{
+										type = 'label',
+										name = 'tech_upgrade_effects' .. t .. u,
+										caption = u .. ' = ' .. con_num .. '%'
+									}
+								)
+							--[[
+							elseif u == 'pollution' then
+								con_num = up * 100 * -1
+								flow.add(
+									{
+										type = 'label',
+										name = 'tech_upgrade_effects' .. t .. u,
+										caption = u .. ' = ' .. con_num .. '%'
+									}
+								)
+							]]--
+							else
+								con_num = up * 100
+								flow.add(
+									{
+										type = 'label',
+										name = 'tech_upgrade_effects' .. t .. u,
+										caption = u .. ' = ' .. con_num .. '%'
+									}
+								)
+							end
 						end
 						flow.add(
 							{
@@ -2688,6 +2715,7 @@ local function TURD(event, player)
 					--log('hit')
 					--left_table['turd_master_button_' .. t].style = 'red_logistic_slot_button'
 					left_table['turd_master_button_' .. t].style = 'green_slot'
+					left_table['turd_master_button_' .. t].style.size = 128
 				end
 			end
 			turd_master.turd_master_frame.add(
@@ -2769,6 +2797,7 @@ script.on_event(defines.events.on_research_finished, function(event)
 	local tech = event.research
 	Tech_recipe_upgrades(event)
 	--_Tech_building_upgrades(event)
+	--log(serpent.block(global.tech_upgrades))
 	if global.tech_upgrades.techs[tech.name] ~= nil then
 		global.tech_upgrades.tech_status[tech.name] = false
 		local players = tech.force.connected_players
@@ -2780,6 +2809,7 @@ script.on_event(defines.events.on_research_finished, function(event)
 				right_window(player, tech.name, parent_status)
 			end
 		end
+		--log(serpent.block(global.tech_upgrades))
 	end
 	--log(serpent.block(tech))
 	for p, pack in pairs(tech.research_unit_ingredients) do

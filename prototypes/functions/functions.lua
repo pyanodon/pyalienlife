@@ -1752,11 +1752,17 @@ function overrides.tech_upgrade(tech_upgrade)
                 -- log(serpent.block(tab.master_tech.name))
                 local module_effects = {}
                 if tech.upgrades ~= nil then
+                    local speed
+                    if type(tech.upgrades.speed) == 'table' then
+                        speed = {bonus = tech.upgrades.speed.module_amount}
+                    elseif type(tech.upgrades.speed) == 'number' then
+                        speed = {bonus = tech.upgrades.speed}
+                    end
                     module_effects = {
                         consumption = {bonus = tech.upgrades.consumption},
-                        speed = {bonus = tech.upgrades.speed},
+                        speed = speed,
                         productivity = {bonus = tech.upgrades.productivity},
-                        pollution = {bonus = tech.upgrades.pollution}
+                        pollution = {bonus = tech.upgrades.pollution * -1}
                     }
                 end
                 -- log(serpent.block(module_effects))
