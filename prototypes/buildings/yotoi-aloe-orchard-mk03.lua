@@ -47,7 +47,7 @@ ENTITY {
     },
     allowed_effects = {"speed","productivity",'consumption','pollution'},
     crafting_categories = {"yotoi"},
-    crafting_speed = 0.06,
+    crafting_speed = 0.12,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

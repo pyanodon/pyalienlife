@@ -74,7 +74,11 @@ local tech_upgrades =
                 upgrades =
                     {
                         consumption = 0.1,
-                        speed = 0.25,
+                        speed =
+                            {
+                                percent = 0.25, -- displayed machine speed
+                                module_amount = 39, -- actual module bonus
+                            },
                         productivity = 0.0,
                         pollution = 0.15
                     },

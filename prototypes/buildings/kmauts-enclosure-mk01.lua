@@ -48,7 +48,7 @@ ENTITY {
     },
     allowed_effects = {"speed","productivity",'consumption','pollution'},
     crafting_categories = {"kmauts"},
-    crafting_speed = 0.04,
+    crafting_speed = 0.08,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

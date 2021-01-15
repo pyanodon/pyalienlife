@@ -39,7 +39,11 @@ local tech_upgrades =
                 upgrades = -- the effects the tech will have on the building. 1 = 100%
                     {
                         consumption = 0.15, --energy usage
-                        speed = 0.15, -- machine speed
+                        speed =
+                            {
+                                percent = 0.15, -- displayed machine speed
+                                module_amount = 24, -- actual module bonus
+                            },
                         productivity = 0.0, -- productivity. and yes i know you`ll never use this but I`ll make sure it works anyway
                         pollution = 0.0 -- pollution this machine will produce while running
                     },
@@ -68,7 +72,11 @@ local tech_upgrades =
                 upgrades =
                     {
                         consumption = 0.0,
-                        speed = -0.1,
+                        speed =
+                            {
+                                percent = -0.1, -- displayed machine speed
+                                module_amount = 16, -- actual module bonus
+                            },
                         productivity = 0.05,
                         pollution = 0.0
                     },
