@@ -48,7 +48,7 @@ ENTITY {
     },
     allowed_effects = {"speed","productivity",'consumption','pollution'},
     crafting_categories = {"research"},
-    crafting_speed = 2,
+    crafting_speed = 0.75,
     energy_source = {
         type = "electric",
         usage_priority = "primary-input",
