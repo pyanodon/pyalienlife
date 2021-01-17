@@ -3,7 +3,7 @@ RECIPE {
     type = "recipe",
     name = "tree",
     category = "fwf",
-    enabled = true,
+    enabled = false,
     energy_required = 30,
     ingredients = {
         {type = "item", name = "wood-seedling", amount = 3},
@@ -11,7 +11,7 @@ RECIPE {
     results = {
         {type = "item", name = "tree-mk01", amount = 1}
     },
-}
+}:add_unlock("botany-mk01")
 
 
 --Secondary Upgrade Recipes--
