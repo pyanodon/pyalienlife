@@ -497,11 +497,13 @@ local function log_all_machines_for_upgrades(tech_upgrades)
 	for _, tab in pairs(tech_upgrades) do
 		--log(serpent.block(tab))
 		if tab.is_ht == nil or tab.is_ht == false or game.active_mods['pyhightech'] then
+			--log('hit')
 			global.tech_upgrades.techs[tab.master_tech.name] = {}
 			for _, tech in pairs(tab.sub_techs) do
 				--log(serpent.block(tech))
 				global.tech_upgrades.techs[tab.master_tech.name][tech.technology.name] = tech
 				for e, ent in pairs(tech.entities) do
+					--log(ent)
 					if global.tech_upgrades.entities_name_list[ent] == nil then
 						global.tech_upgrades.entities_name_list[ent] = ent
 					end
@@ -729,10 +731,11 @@ script.on_configuration_changed(
 		if global.energy_drink == nil then
 			global.energy_drink = {}
 		end
-		if global.tech_upgrades ~= nil and global.tech_upgrades.entities == nil then
+		if global.tech_upgrades ~= nil then
 			global.tech_upgrades = nil
 		end
 		if global.tech_upgrades == nil then
+			--log('hit')
 			global.tech_upgrades =
 			{
 				entities_master_list = {},
@@ -748,21 +751,27 @@ script.on_configuration_changed(
 			--log(serpent.block(global.tech_upgrades))
 			local entities = game.surfaces['nauvis'].find_entities_filtered{type = 'assembling-machine'}
 			for e, ent in pairs(entities) do
-				if global.tech_upgrades.entities_name_list[ent] ~= nil then
+				if global.tech_upgrades.entities_name_list[ent.name] ~= nil then
 					add_farm_to_table(ent)
 				end
 			end
 		end
-		if global.tech_upgrades.entities == nil then
+		if global.tech_upgrades.entities == nil or next(global.tech_upgrades.entities) == nil then
+			--log('hit')
 			table.insert(global.tech_upgrades, entities)
 			global.tech_upgrades.entities = {}
 			local entities = game.surfaces['nauvis'].find_entities_filtered{type = 'assembling-machine'}
 			for e, ent in pairs(entities) do
-				if global.tech_upgrades.entities_name_list[ent] ~= nil then
+				--log(ent.name)
+				--log(serpent.block(global.tech_upgrades.entities_name_list))
+				if global.tech_upgrades.entities_name_list[ent.name] ~= nil then
+					--log('hit')
 					add_farm_to_table(ent)
 				end
 			end
 		end
+		--log(serpent.block(global.tech_upgrades.entities))
+		--log(serpent.block(global.tech_upgrades.entities_name_list))
 	end
 )
 

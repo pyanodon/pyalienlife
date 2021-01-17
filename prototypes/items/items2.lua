@@ -157,7 +157,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "xa-a",
     stack_size = 300,
-	effect = { speed = {bonus = 1}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 2}},
 	limitation = alien_life_limitations_simik,
 	limitation_message_key = "Simik"
 }
@@ -177,7 +177,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "xa-b",
     stack_size = 300,
-	effect = { speed = {bonus = 2}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 4}},
 	limitation = alien_life_limitations_simik,
 	limitation_message_key = "Simik"
 }
@@ -197,7 +197,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "xa-c",
     stack_size = 300,
-	effect = { speed = {bonus = 3}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 6}},
 	limitation = alien_life_limitations_simik,
 	limitation_message_key = "Simik"
 }
@@ -217,7 +217,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "xa-d",
     stack_size = 300,
-	effect = { speed = {bonus = 4}, productivity = {bonus = -0.01}},
+	effect = { speed = {bonus = 8}},
 	limitation = alien_life_limitations_simik,
 	limitation_message_key = "Simik"
 }

@@ -153,7 +153,7 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'cadaveric-arum-mk02',
+    name = 'cadaveric-arum-mk02-item',
     category = 'arum',
     enabled = false,
     energy_required = 30,

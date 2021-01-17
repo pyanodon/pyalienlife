@@ -2,6 +2,8 @@
 Version: 1.11.2
 Date: ????
   Changes:
+    - Fixed turd menu not working.
+    - Fixed that turd speed bonuses for farms didnt account for famr modules and was far to small to be useful.
 ---------------------------------------------------------------------------------------------------
 Version: 1.11.1
 Date: 2021-01-08
