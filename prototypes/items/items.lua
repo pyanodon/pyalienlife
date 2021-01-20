@@ -9253,6 +9253,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "geostabilization-tissue",
+    icon = "__pyalienlifegraphics3__/graphics/icons/geostabilization-tissue.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-phagnot",
+    order = "x",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "cryogland",
     icon = "__pyalienlifegraphics3__/graphics/icons/cryogland.png",
 	icon_size = 64,

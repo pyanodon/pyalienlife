@@ -529,6 +529,25 @@ RECIPE {
     main_product = "polynuclear-ganglion",
 }:add_unlock("nanochondria")
 
+------------------Geostabilization Tissue------------------
+
+RECIPE {
+    type = "recipe",
+    name = "geostabilization-tissue",
+    category = "genlab",
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'brain-caged-phagnot', amount = 1},
+        {type = 'item', name = 'gas-bladder', amount = 5},
+    },
+    results = {
+		{type = 'item', name = 'geostabilization-tissue', amount = 1},
+		{type = 'item', name = 'cage', amount = 1},
+    },
+    main_product = "geostabilization-tissue",
+}:add_unlock("nanochondria")
+
 ------------------cryogland------------------
 
 RECIPE {
