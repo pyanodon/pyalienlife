@@ -2,6 +2,8 @@
 Version: 1.11.5
 Date: ????
   Changes:
+    - Fixed a deadlock.
+    - Increased phytoplankton consuption on primers.
 ---------------------------------------------------------------------------------------------------
 Version: 1.11.4
 Date: 2021-01-20

@@ -101,7 +101,7 @@ RECIPE {
         {type = 'item', name = 'fawogae', amount = 5},
         {type = 'item', name = 'saps', amount = 5},
         {type = 'item', name = 'lab-instrument', amount = 1},
-        {type = 'fluid', name = 'phytoplankton', amount = 20},
+        {type = 'fluid', name = 'phytoplankton', amount = 80},
     },
     results = {
         {type = 'item', name = 'primers', amount = 1, probability = 0.7},
@@ -120,7 +120,7 @@ RECIPE {
         {type = 'item', name = 'saps', amount = 5},
         {type = 'item', name = 'sea-sponge', amount = 1},
         {type = 'item', name = 'lab-instrument', amount = 1},
-        {type = 'fluid', name = 'phytoplankton', amount = 20},
+        {type = 'fluid', name = 'phytoplankton', amount = 80},
     },
     results = {
         {type = 'item', name = 'primers', amount = 1},
@@ -139,11 +139,11 @@ RECIPE {
         {type = 'item', name = 'saps', amount = 5},
         {type = 'item', name = 'sea-sponge', amount = 1},
         {type = 'item', name = 'lab-instrument', amount = 1},
-        {type = 'fluid', name = 'phytoplankton', amount = 20},
+        {type = 'fluid', name = 'phytoplankton', amount = 80},
         {type = 'fluid', name = 'simik-blood', amount = 50},
     },
     results = {
-        {type = 'item', name = 'primers', amount = 2},
+        {type = 'item', name = 'primers', amount = 3},
     },
 }:add_unlock("genetics-mk02")
 
