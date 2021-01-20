@@ -88,6 +88,7 @@ RECIPE {
         {type = 'item', name = 'tin-plate', amount = 2},
         {type = 'item', name = 'plastic-bar', amount = 2},
         {type = 'item', name = 'bhoddos', amount = 1},
+        {type = 'item', name = 'yotoi-fruit', amount = 5},
         {type = 'item', name = 'fawogae', amount = 5},
         {type = 'item', name = 'guar', amount = 5},
         {type = 'fluid', name = 'arqad-honey', amount = 100},

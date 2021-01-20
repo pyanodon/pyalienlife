@@ -2,6 +2,12 @@
 Version: 1.11.4
 Date: ????
   Changes:
+    - Changed from Navens to Yeadols in flavonoids recipe.
+    - Added Zymogens to adam-42 gen recipe.
+    - Quality Phagnot food now uses yotoi-fruit.
+    - Microcin J25 now requieres Navens.
+    - Perfect samples now requieres geostabilization tissue.
+    - Alien Enzymes now needs zymogens.
 ---------------------------------------------------------------------------------------------------
 Version: 1.11.3
 Date: 2021-01-19

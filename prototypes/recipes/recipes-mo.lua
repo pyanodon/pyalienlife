@@ -276,6 +276,7 @@ RECIPE {
         {type = 'item', name = 'dna-polymerase', amount = 2},
         {type = 'item', name = 'plastic-bar', amount = 20},
         {type = 'item', name = 'flask', amount = 5},
+        {type = 'item', name = 'zymogens', amount = 1},
         {type = 'item', name = 'yaedols', amount = 12},
         {type = 'item', name = 'lab-instrument', amount = 5},
         {type = 'fluid', name = 'gta', amount = 50},

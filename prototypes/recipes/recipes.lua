@@ -319,7 +319,7 @@ RECIPE {
     energy_required = 15,
     ingredients = {
         {type = 'item', name = 'seaweed', amount = 20},
-        {type = 'item', name = 'navens', amount = 5},
+        {type = 'item', name = 'yaedols', amount = 4},
     },
     results = {
         {type = 'fluid', name = 'flavonoids', amount = 30}
@@ -375,6 +375,7 @@ RECIPE {
         {type = 'item', name = 'flask', amount = 3},
         {type = 'item', name = 'lab-instrument', amount = 2},
         {type = 'item', name = 'arthurian-egg', amount = 5},
+        {type = 'item', name = 'navens', amount = 5},
         {type = 'fluid', name = 'flavonoids', amount = 30}
     },
     results = {
@@ -718,6 +719,7 @@ RECIPE {
     energy_required = 20,
     ingredients = {
         {type = 'item', name = 'peptidase-m58', amount = 1},
+        {type = 'item', name = 'zymogens', amount = 1},
         {type = 'item', name = 'carapace', amount = 5},
         {type = 'item', name = 'guts', amount = 8},
         {type = 'item', name = 'cobalt-nx', amount = 4},
