@@ -13,7 +13,7 @@ RECIPE {
             {type = 'item', name = 'bio-sample', amount = 2},
             {type = 'item', name = 'navens', amount = 1},
             {type = 'item', name = 'neuromorphic-chip', amount = 1},
-            {type = 'fluid', name = 'blood', amount = 100},
+            {type = 'fluid', name = 'blood', amount = 200},
             {type = "item", name = "nano-cellulose", amount = 1},
             {type = "item", name = "adrenal-cortex", amount = 1},
             {type = "item", name = "lab-instrument", amount = 2},

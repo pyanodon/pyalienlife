@@ -1761,6 +1761,7 @@ RECIPE {
         {type = 'item', name = 'adaptable-automucosa', amount = 1},
         {type = 'item', name = 'polynuclear-ganglion', amount = 1},
         {type = 'item', name = 'geostabilization-tissue', amount = 1},
+        {type = 'item', name = 'lcc', amount = 1},
         {type = 'item', name = 'cryogland', amount = 1},
         {type = 'item', name = 'subdermal-chemosnare', amount = 1},
         {type = 'item', name = 'sternite-lung', amount = 1},

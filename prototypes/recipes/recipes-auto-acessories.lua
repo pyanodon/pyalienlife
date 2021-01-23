@@ -548,6 +548,24 @@ RECIPE {
     main_product = "geostabilization-tissue",
 }:add_unlock("nanochondria")
 
+------------------Limno Circulation Cluster-----------------
+
+RECIPE {
+    type = "recipe",
+    name = "lcc",
+    category = "genlab",
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'blood-cottongut', amount = 5},
+        {type = 'item', name = 'negasium', amount = 1},
+    },
+    results = {
+		{type = 'item', name = 'lcc', amount = 1},
+    },
+    main_product = "lcc",
+}:add_unlock("recombinant-ery")
+
 ------------------cryogland------------------
 
 RECIPE {

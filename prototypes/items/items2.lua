@@ -424,3 +424,14 @@ ITEM {
     order = "x",
     stack_size = 50
 }
+
+ITEM {
+    type = "item",
+    name = "lcc",
+    icon = "__pyalienlifegraphics2__/graphics/icons/lcc.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-cottongut",
+    order = "x",
+    stack_size = 50
+}
