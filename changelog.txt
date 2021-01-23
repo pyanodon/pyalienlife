@@ -2,6 +2,15 @@
 Version: 1.11.6
 Date: ????
   Changes:
+    - Added russian locale.
+    - Moved depolymerized organics from biotech 2 to biotech 1.
+    - Added subcritical water recipe to biotech 1.
+    - Replaced alien sample 2 with alien sample 1 in yaedols sample.
+    - Added paragen and solidified sarcorus to py science pack.
+    - Removed py science pack from cottongut mk2 tech.
+    - Moved pressured water recipe from fusion 1 to coal processing 1.
+    - Added Limno Circulation Cluster to prefect alien samples.
+    - Added glow effects to several entitys.
 ---------------------------------------------------------------------------------------------------
 Version: 1.11.5
 Date: 2021-01-20
