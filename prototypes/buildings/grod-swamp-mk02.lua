@@ -93,7 +93,7 @@ ENTITY {
                 line_length = 12,
                 width = 128,
                 height = 224,
-                animation_speed = 0.4
+                animation_speed = 0.4,
             }
         },
         {
@@ -107,7 +107,7 @@ ENTITY {
                 line_length = 12,
                 width = 128,
                 height = 224,
-                animation_speed = 0.4
+                animation_speed = 0.4,
             }
         },
         {
@@ -121,7 +121,7 @@ ENTITY {
                 line_length = 12,
                 width = 96,
                 height = 224,
-                animation_speed = 0.4
+                animation_speed = 0.4,
             }
         },
     },

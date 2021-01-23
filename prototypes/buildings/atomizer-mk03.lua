@@ -94,7 +94,8 @@ ENTITY {
                 line_length = 9,
                 width = 224,
                 height = 192,
-                animation_speed = 0.5
+                animation_speed = 0.5,
+                draw_as_glow = true,
             }
         },
     },

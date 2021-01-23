@@ -92,6 +92,7 @@ ENTITY {
                 width = 352,
                 height = 512,
                 frame_count = 1,
+                draw_as_glow = true,
             }
         },
         {
@@ -118,7 +119,8 @@ ENTITY {
                 height = 32,
                 frame_count = 25,
                 line_length = 5,
-                animation_speed = 0.5
+                animation_speed = 0.5,
+                draw_as_glow = true,
             }
         },
         {
@@ -132,7 +134,8 @@ ENTITY {
                 height = 64,
                 frame_count = 25,
                 line_length = 5,
-                animation_speed = 0.5
+                animation_speed = 0.5,
+                draw_as_glow = true,
             }
         },
         {
@@ -147,7 +150,8 @@ ENTITY {
                 frame_count = 250,
                 line_length = 30,
                 animation_speed = 0.8,
-                scale= 0.9
+                scale= 0.9,
+                draw_as_glow = true,
             }
         },
         {
@@ -161,7 +165,8 @@ ENTITY {
                 height = 96,
                 frame_count = 248,
                 line_length = 16,
-                animation_speed = 0.3
+                animation_speed = 0.3,
+                draw_as_glow = true,
             }
         },
         {
@@ -175,7 +180,8 @@ ENTITY {
                 height = 128,
                 frame_count = 248,
                 line_length = 16,
-                animation_speed = 0.3
+                animation_speed = 0.3,
+                draw_as_glow = true,
             }
         },
     },

@@ -89,7 +89,8 @@ ENTITY {
                 line_length = 8,
                 width = 224,
                 height = 224,
-                animation_speed = 0.5
+                animation_speed = 0.5,
+                draw_as_glow = true,
             }
         },
         {
@@ -188,7 +189,8 @@ ENTITY {
                 line_length = 5,
                 width = 352,
                 height = 192,
-                animation_speed = 0.4
+                animation_speed = 0.4,
+                draw_as_glow = true,
             }
         },
         {
@@ -203,11 +205,11 @@ ENTITY {
                 line_length = 5,
                 width = 352,
                 height = 192,
-                animation_speed = 0.4
+                animation_speed = 0.4,
+                draw_as_glow = true,
             }
         },
     },
-
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
         sound = {filename = "__pyalienlifegraphics__/sounds/phadai-enclosure.ogg", volume = 0.55},

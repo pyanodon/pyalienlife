@@ -91,7 +91,8 @@ ENTITY {
                 line_length = 21,
                 width = 96,
                 height = 256,
-                animation_speed = 0.35
+                animation_speed = 0.35,
+                draw_as_glow = true,
             }
         },
         {
@@ -105,7 +106,8 @@ ENTITY {
                 line_length = 21,
                 width = 96,
                 height = 256,
-                animation_speed = 0.35
+                animation_speed = 0.35,
+                draw_as_glow = true,
             }
         },
         {
@@ -119,7 +121,8 @@ ENTITY {
                 line_length = 21,
                 width = 96,
                 height = 256,
-                animation_speed = 0.35
+                animation_speed = 0.35,
+                draw_as_glow = true,
             }
         },
         {
@@ -133,7 +136,8 @@ ENTITY {
                 line_length = 21,
                 width = 64,
                 height = 256,
-                animation_speed = 0.35
+                animation_speed = 0.35,
+                draw_as_glow = true,
             }
         },
     },

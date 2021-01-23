@@ -89,7 +89,8 @@ ENTITY {
                 line_length = 8,
                 width = 224,
                 height = 224,
-                animation_speed = 0.5
+                animation_speed = 0.5,
+                draw_as_glow = true,
             }
         },
         {
@@ -188,7 +189,8 @@ ENTITY {
                 line_length = 5,
                 width = 352,
                 height = 192,
-                animation_speed = 0.4
+                animation_speed = 0.4,
+                draw_as_glow = true,
             }
         },
         {
@@ -203,7 +205,8 @@ ENTITY {
                 line_length = 5,
                 width = 352,
                 height = 192,
-                animation_speed = 0.4
+                animation_speed = 0.4,
+                draw_as_glow = true,
             }
         },
     },
