@@ -1,12 +1,27 @@
 RECIPE {
     type = 'recipe',
-    name = 'subcritical-water',
+    name = 'subcritical-water-01',
+    category = 'combustion',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'fluid', name = 'pressured-water', amount = 200},
+        {type = 'item', name = 'biomass', amount = 30},
+    },
+    results = {
+        {type = 'fluid', name = 'subcritical-water', amount = 50},
+    },
+}:add_unlock("biotech-mk01")
+
+RECIPE {
+    type = 'recipe',
+    name = 'subcritical-water-02',
     category = 'combustion',
     enabled = false,
     energy_required = 10,
     ingredients = {
         {type = 'fluid', name = 'pressured-water', amount = 200},
-        {type = 'item', name = 'fuelrod-mk01', amount = 2},
+        {type = 'item', name = 'fuelrod-mk01', amount = 1},
     },
     results = {
         {type = 'fluid', name = 'subcritical-water', amount = 200},

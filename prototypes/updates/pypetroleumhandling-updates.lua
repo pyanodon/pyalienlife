@@ -81,13 +81,13 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'subcritical-water-2',
+    name = 'subcritical-water-03',
     category = 'heat-exchanger',
     enabled = false,
     energy_required = 5,
     ingredients = {
         {type = 'fluid', name = 'pressured-water', amount = 200},
-        {type = 'fluid', name = 'hot-air', amount = 100},
+        {type = 'fluid', name = 'hot-air', amount = 300},
     },
     results = {
         {type = 'fluid', name = 'subcritical-water', amount = 200},

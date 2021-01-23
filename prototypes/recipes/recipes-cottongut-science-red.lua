@@ -4,15 +4,16 @@
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-red-seeds',
-    category = 'research',
+    category = 'incubator',
     enabled = false,
-    energy_required = 10,
+    energy_required = 15,
     ingredients =
         {
             {type = 'item', name = 'fawogae-substrate', amount = 10},
             {type = 'item', name = 'bio-sample', amount = 2},
-            {type = 'item', name = 'plasmids', amount = 2},
-            {type = "item", name = "cellulose", amount = 2},
+            {type = 'item', name = 'plasmids', amount = 1},
+            {type = "item", name = "cellulose", amount = 3},
+            {type = "fluid", name = "depolymerized-organics", amount = 50},
             {type = "item", name = "petri-dish", amount = 2}
         },
     results = {

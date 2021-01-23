@@ -11,7 +11,7 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'depolymerized-organics', amount = 100},
     },
-}:add_unlock("biotech-mk02"):change_category('reformer')
+}:add_unlock("biotech-mk01"):change_category('reformer')
 
 FLUID {
     type = "fluid",

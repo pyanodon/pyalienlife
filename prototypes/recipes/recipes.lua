@@ -217,8 +217,9 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'moss', amount = 20},
         {type = 'item', name = 'alien-sample01', amount = 1},
-        {type = 'item', name = 'alien-sample-02', amount = 1},
         {type = 'item', name = 'plastic-bar', amount = 15},
+        {type = 'item', name = 'paragen', amount = 1},
+        {type = 'item', name = 'solidified-sarcorus', amount = 2},
         {type = 'item', name = 'neuroprocessor', amount = 2},
         {type = 'item', name = 'flask', amount = 1},
         {type = 'fluid', name = 'flavonoids', amount = 50},

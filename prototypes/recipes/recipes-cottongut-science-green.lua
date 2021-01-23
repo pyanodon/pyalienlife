@@ -5,14 +5,15 @@ RECIPE {
     type = 'recipe',
     name = 'cottongut-science-green-seeds',
     enabled = false,
-    category = 'research',
-    energy_required = 10,
+    category = 'genlab',
+    energy_required = 30,
     ingredients =
         {
             {type = 'fluid', name = 'subcritical-water', amount = 200},
             {type = 'fluid', name = 'artificial-blood', amount = 50},
             {type = 'item', name = 'bio-sample', amount = 2},
             {type = "item", name = "cytostatics", amount = 1},
+            {type = "item", name = "cottongut", amount = 4},
             {type = "item", name = "flask", amount = 3}
         },
     results = {
