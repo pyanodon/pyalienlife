@@ -51,7 +51,7 @@ RECIPE {
     --icon_size = 64,
     subgroup = "py-alienlife-items",
     order = "a1"
-}:add_unlock("cottongut-mk03")
+}:add_unlock("cottongut-mk02")
 
 ----Blue science----
 RECIPE {
