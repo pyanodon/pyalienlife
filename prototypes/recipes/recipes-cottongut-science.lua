@@ -268,7 +268,7 @@ RECIPE {
     energy_required = 1,
     ingredients =
         {
-            {type = 'item', name = 'denatured-seismite', amount = 1},
+        {type = 'item', name = 'denatured-seismite', amount = 1},
         {type = 'item', name = 'nonconductive-phazogen', amount = 2},
         {type = 'item', name = 'negasium', amount = 3},
         {type = 'item', name = 'paragen', amount = 4},

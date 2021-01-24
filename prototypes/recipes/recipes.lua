@@ -427,6 +427,29 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
+    name = 'gh-2',
+    category = 'research',
+    enabled = false,
+    energy_required = 70,
+    ingredients = {
+        {type = 'item', name = 'plasmids', amount = 5},
+        {type = 'item', name = 'bio-sample', amount = 20},
+        {type = 'item', name = 'cdna', amount = 2},
+        {type = 'item', name = 'petri-dish', amount = 20},
+        {type = 'item', name = 'nonconductive-phazogen', amount = 1},
+        {type = 'item', name = 'solidified-sarcorus', amount = 10},
+        {type = 'item', name = 'flask', amount = 10},
+        {type = 'item', name = 'lab-instrument', amount = 4},
+        {type = 'fluid', name = 'bacteria-1', amount = 200},
+        {type = 'item', name = 'pineal-gland', amount = 3}
+    },
+    results = {
+        {type = 'item', name = 'gh', amount = 100}
+    }
+}:add_unlock('growth-hormone')
+
+RECIPE {
+    type = 'recipe',
     name = 'lard-from-brains',
     category = 'bio-reactor',
     enabled = false,
@@ -757,6 +780,29 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
+    name = 'antiviral',
+    category = 'research',
+    enabled = false,
+    energy_required = 800,
+    ingredients = {
+        {type = 'item', name = 'alien-enzymes', amount = 1},
+        {type = 'item', name = 'brain', amount = 20},
+        {type = 'item', name = 'solidified-sarcorus', amount = 20},
+        {type = 'item', name = 'paragen', amount = 10},
+        {type = 'item', name = 'cysteine', amount = 1},
+        {type = 'item', name = 'mmp', amount = 1},
+        {type = 'item', name = 'yotoi-leaves', amount = 20},
+        {type = 'item', name = 'chitin', amount = 30},
+        {type = 'fluid', name = 'zogna-bacteria', amount = 100},
+        {type = 'fluid', name = 'bee-venom', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'antiviral', amount = 550}
+    }
+}:add_unlock('antiviral')
+
+RECIPE {
+    type = 'recipe',
     name = 'nitrogen-mustard',
     category = 'wet-scrubber',
     enabled = false,
@@ -867,6 +913,31 @@ RECIPE {
     },
     results = {
         {type = 'item', name = 'bmp', amount = 300}
+    }
+}:add_unlock('bmp'):replace_ingredient("bacteria-1", "bacteria-2"):replace_ingredient("sea-sponge", "collagen"):add_ingredient({type = "fluid", name = "dms", amount = 100})
+
+RECIPE {
+    type = 'recipe',
+    name = 'bmp-2',
+    category = 'research',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'hyaline', amount = 10},
+        {type = 'item', name = 'paragen', amount = 10},
+        {type = 'item', name = 'negasium', amount = 6},
+        {type = 'item', name = 'sea-sponge', amount = 25},
+        {type = 'item', name = 'ticocr-alloy', amount = 3},
+        {type = 'item', name = 'chitin', amount = 15},
+        {type = 'item', name = 'alien-enzymes', amount = 2},
+        {type = 'item', name = 'pineal-gland', amount = 4},
+        {type = 'item', name = 'flask', amount = 30},
+        {type = 'item', name = 'lab-instrument', amount = 25},
+        {type = 'fluid', name = 'bacteria-1', amount = 40},
+        {type = 'item', name = 'purine-analogues', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'bmp', amount = 350}
     }
 }:add_unlock('bmp'):replace_ingredient("bacteria-1", "bacteria-2"):replace_ingredient("sea-sponge", "collagen"):add_ingredient({type = "fluid", name = "dms", amount = 100})
 
