@@ -417,10 +417,6 @@ require('prototypes/fluids/ethyl-mercaptan')
 require('prototypes/fluids/arqad-honey')
 require('prototypes/fluids/simik-blood')
 
---Tech upgrade stuff--
-require('prototypes/upgrades/hidden-beacon')
-require('prototypes/upgrades/tech-upgrades')
-
 --(( RECIPES ))--
 require('prototypes/items/items')
 require('prototypes/recipes/recipes')

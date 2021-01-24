@@ -5630,8 +5630,8 @@ ITEM {
     name = "moss-mk02",
     icons =
     {
-        {icon = "__pyalienlifegraphics__/graphics/icons/moss.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
+        {icon = "__pyalienlifegraphics__/graphics/icons/moss.png", icon_size = 32},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64, scale = 0.5}
     },
     icon_size = 32,
 	category = "moss",
@@ -5650,8 +5650,8 @@ ITEM {
     name = "moss-mk03",
     icons =
     {
-        {icon = "__pyalienlifegraphics__/graphics/icons/moss.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
+        {icon = "__pyalienlifegraphics__/graphics/icons/moss.png", icon_size = 32},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64, scale = 0.5}
     },
     icon_size = 32,
 	category = "moss",
@@ -5670,10 +5670,10 @@ ITEM {
     name = "moss-mk04",
     icons =
     {
-        {icon = "__pyalienlifegraphics__/graphics/icons/moss.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
+        {icon = "__pyalienlifegraphics__/graphics/icons/moss.png", icon_size = 32},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64, scale = 0.5}
     },
-    icon_size = 32,
+    --icon_size = 32,
 	category = "moss",
 	tier = 4,
     flags = {},

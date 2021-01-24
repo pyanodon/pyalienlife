@@ -8,7 +8,8 @@ function overrides.add_ingredient(recipe, ingredient)
     -- check that recipe exists before doing anything else
     if data.raw.recipe[recipe] ~= nil then
         -- check if ingredient is item or fluid and that it exists
-        if data.raw.item[ingredient.name] ~= nil or data.raw.fluid[ingredient.name] ~= nil or data.raw.module[ingredient.name] ~= nil then
+        if data.raw.item[ingredient.name] ~= nil or data.raw.fluid[ingredient.name] ~= nil or
+            data.raw.module[ingredient.name] ~= nil then
             -- check if type is set to fluid
             if ingredient.type == 'fluid' then
                 table.insert(data.raw.recipe[recipe].ingredients,
@@ -1582,12 +1583,12 @@ recipe =
             end
 
             for r, result in pairs(data.raw.recipe[na].results) do
-                --log(serpent.block(result))
+                -- log(serpent.block(result))
                 if string.match(result.name, 'barrel') ~= nil or result.name == 'cage' then
                     table.insert(result, catalyst_amount)
                     result.catalyst_amount = result.amount
                 end
-                --log(serpent.block(result))
+                -- log(serpent.block(result))
             end
 
             -- log('hit')
@@ -1611,7 +1612,7 @@ recipe =
             -- log(serpent.block(name..number))
             if tech_unlock ~= nil then RECIPE(na):add_unlock(tech_unlock) end
             -- log('hit')
-            --log(serpent.block(data.raw.recipe[na]))
+            -- log(serpent.block(data.raw.recipe[na]))
 
             number = number + 1
         end
@@ -1721,19 +1722,20 @@ function overrides.tech_upgrade(tech_upgrade)
     -- log(serpent.block(tech_upgrade))
     for _, tab in pairs(tech_upgrade) do
         -- log(serpent.block(tab))
-        for _, tech in pairs(tab.sub_techs) do
-            --log(serpent.block(tech))
-            if tab.is_ht == nil or tab.is_ht == false or mods['pyhightech'] then
-                TECHNOLOGY{
-                    type = 'technology',
-                    name = tab.master_tech.name,
-                    icon = tab.master_tech.icon,
-                    icon_size = tab.master_tech.icon_size,
-                    order = tab.master_tech.order,
-                    prerequisites = tab.master_tech.prerequisites,
-                    effects = {},
-                    unit = tab.master_tech.unit
-                }
+        if tab.is_ht == nil or tab.is_ht == false or mods['pyhightech'] then
+            TECHNOLOGY{
+                type = 'technology',
+                name = tab.master_tech.name,
+                icon = tab.master_tech.icon,
+                icon_size = tab.master_tech.icon_size,
+                order = tab.master_tech.order,
+                prerequisites = tab.master_tech.prerequisites,
+                effects = {},
+                unit = tab.master_tech.unit
+            }
+            for _, tech in pairs(tab.sub_techs) do
+                -- log(serpent.block(tech))
+                --log(tech.technology.name)
 
                 data:extend({
                     {
@@ -1765,21 +1767,46 @@ function overrides.tech_upgrade(tech_upgrade)
                         pollution = {bonus = tech.upgrades.pollution * -1}
                     }
                 end
-                -- log(serpent.block(module_effects))
+
+                local categories
+                local recipes = {}
+                if tech.entities[1] ~= nil then
+                    --log('hit')
+                    if data.raw['assembling-machine'][tech.entities[1]] ~= nil then
+                        categories = data.raw['assembling-machine'][tech.entities[1]].crafting_categories
+                    elseif data.raw['furnace'][tech.entities[1]] ~= nil then
+                        categories = data.raw['furnace'][tech.entities[1]].crafting_categories
+                    end
+                    for c, cat in pairs(categories) do
+                        for r, recipe in pairs(data.raw.recipe) do
+                            if recipe.category == cat then table.insert(recipes, recipe.name) end
+                        end
+                    end
+                end
+
+                -- log(serpent.block(recipes))
+
                 ITEM{
                     type = 'module',
                     name = tech.technology.name .. '-module',
-                    icon = '__pycoalprocessinggraphics__/graphics/empty.png',
-                    icon_size = 32,
+                    icons =
+                        {
+                            {
+                                icon = tech.technology.icon,
+                                icon_size = 128,
+                                scale = 0.5
+                            }
+                        },
                     category = tech.technology.name,
                     tier = 1,
                     flags = {},
                     subgroup = 'py-alienlife-modules',
                     order = 't-a',
                     stack_size = 300,
-                    effect = module_effects
-                    -- limitation = {},
+                    effect = module_effects,
+                    limitation = recipes,
                     -- limitation_message_key = "dicks"
+                    localised_name = {"",{tostring('technology-name.' .. tech.technology.name)}}
                 }
 
                 data:extend({{type = 'module-category', name = tech.technology.name}})

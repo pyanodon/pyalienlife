@@ -159,3 +159,7 @@ for _,recipe in pairs(data.raw.recipe) do
         --log(serpent.block(data.raw.recipe[name .. '-biomass']))
     end
 end
+
+--Tech upgrade stuff--
+require('prototypes/upgrades/hidden-beacon')
+require('prototypes/upgrades/tech-upgrades')
