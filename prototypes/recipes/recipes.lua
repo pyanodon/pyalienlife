@@ -780,7 +780,7 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'antiviral',
+    name = 'antiviral-02',
     category = 'research',
     enabled = false,
     energy_required = 800,
