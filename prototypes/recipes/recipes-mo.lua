@@ -547,7 +547,7 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'recombinant-ery-2',
+    name = 'recombinant-ery-3',
     category = 'genlab',
     enabled = false,
     energy_required = 10,

@@ -127,15 +127,16 @@ RECIPE {
     energy_required = 10,
     ingredients =
         {
-            {type = 'item', name = 'alien-sample-02', amount = 3},
-            {type = 'item', name = 'bio-sample', amount = 5},
-            {type = 'item', name = 'navens', amount = 2},
+            {type = 'item', name = 'alien-sample-03', amount = 3},
+            {type = 'item', name = 'bio-sample', amount = 15},
+            {type = 'item', name = 'navens', amount = 5},
             {type = 'item', name = 'neuromorphic-chip', amount = 3},
-            {type = 'fluid', name = 'blood', amount = 200},
+            {type = 'fluid', name = 'arthropod-blood', amount = 300},
+            {type = 'fluid', name = 'chelator', amount = 200},
             {type = "item", name = "nano-cellulose", amount = 4},
             {type = "item", name = "adrenal-cortex", amount = 4},
-            {type = "item", name = "lab-instrument", amount = 4},
-            {type = "item", name = "stainless-steel", amount = 5},
+            {type = "item", name = "enzyme-pks", amount = 1},
+            {type = "item", name = "super-alloy", amount = 15},
             {type = 'item', name = 'cottongut', amount = 100}
         },
     results = {

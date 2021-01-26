@@ -1034,6 +1034,8 @@ RECIPE {
         {type = 'item', name = 'adam42-gen', amount = 1},
         {type = 'item', name = 'cysteine', amount = 1},
         {type = 'item', name = 'alien-enzymes', amount = 1},
+        {type = 'item', name = 'denatured-seismite', amount = 2},
+        {type = 'item', name = 'paragen', amount = 5},
         {type = 'item', name = 'guts', amount = 15},
         {type = 'item', name = 'mukmoux-fat', amount = 30},
         {type = 'item', name = 'lab-instrument', amount = 10},
@@ -1043,7 +1045,7 @@ RECIPE {
         {type = 'item', name = 'mmp', amount = 1},
     },
     results = {
-        {type = 'item', name = 'recombinant-ery', amount = 250},
+        {type = 'item', name = 'recombinant-ery', amount = 280},
     },
 }:add_unlock("recombinant-ery")
 
