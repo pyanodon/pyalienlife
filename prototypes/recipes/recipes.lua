@@ -1788,6 +1788,8 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'lubricant', amount = 100},
     },
+    subgroup = 'py-alienlife-fluids',
+    order = 'b1',
 }:add_unlock("water-animals-mk02")
 
 RECIPE {

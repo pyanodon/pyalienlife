@@ -264,6 +264,8 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'lubricant', amount = 120},
     },
+    subgroup = 'py-alienlife-fluids',
+    order = 'b1',
 }:add_unlock("arqad-mk02")
 
 RECIPE {

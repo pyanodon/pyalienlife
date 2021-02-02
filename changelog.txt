@@ -2,6 +2,9 @@
 Version: 1.11.11
 Date: ????
   Changes:
+      - Updated Russian Locale.
+      - Moved some recipes to other places to get rid of the fluids tab.
+      - Cottongut utility science fix.
 ---------------------------------------------------------------------------------------------------
 Version: 1.11.10
 Date: 2021-01-26
