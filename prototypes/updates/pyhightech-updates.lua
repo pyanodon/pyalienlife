@@ -49,14 +49,14 @@ data.raw.item.satellite.rocket_launch_product =
     {
         type = 'item',
         name = 'destablilized-toxirus',
-        amount = 3
+        amount = 6
     }
 
 fun.add_ingredient('satellite', {type = 'item', name = 'cottongut', amount = 150})
 fun.add_ingredient('satellite', {type = 'item', name = 'antimatter', amount = 3})
 
 RECIPE('space-science-pack'):add_ingredient({type = "item", name = "destablilized-toxirus", amount = 1})
-RECIPE('cottongut-science-utility'):replace_ingredient("perfect-samples", "destablilized-toxirus"):add_ingredient({type = "item", name = "hormonal", amount = 1}):add_ingredient({type = "item", name = "dimensional-gastricorg", amount = 1})
+RECIPE('cottongut-science-utility'):replace_ingredient("perfect-samples", "destablilized-toxirus"):add_ingredient({type = "item", name = "hormonal", amount = 1}):add_ingredient({type = "item", name = "dimensional-gastricorg", amount = 1}):add_ingredient({type = 'item', name = 'intelligent-unit', amount = 1})
 --RECIPE('satellite'):add_unlock('quantum')
 
 ----KICALK-----

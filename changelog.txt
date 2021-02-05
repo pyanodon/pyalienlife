@@ -1,25 +1,27 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.11.12
+Version: 1.12.0
 Date: ????
   Changes:
+    - fixed crash when pyhightech isnt active related to cottongut utility science needing intelligent unit.
+    - Doubled Destablilized toxirus return from satilite.
 ---------------------------------------------------------------------------------------------------
 Version: 1.11.11
 Date: 2021-02-02
   Changes:
-      - Updated Russian Locale.
-      - Moved some recipes to other places to get rid of the fluids tab.
-      - Cottongut utility science fix.
+    - Updated Russian Locale.
+    - Moved some recipes to other places to get rid of the fluids tab.
+    - Cottongut utility science fix.
 ---------------------------------------------------------------------------------------------------
 Version: 1.11.10
 Date: 2021-01-26
   Changes:
-      -Fixed Recombinant erythropoietin alternative recipe.
-      -Changed Denatured seismite at production level of cottonguts.
+    - Fixed Recombinant erythropoietin alternative recipe.
+    - Changed Denatured seismite at production level of cottonguts.
 ---------------------------------------------------------------------------------------------------
 Version: 1.11.9
 Date: 2021-01-25
   Changes:
-      -Fixed antiviral duplicates.
+    - Fixed antiviral duplicates.
 ---------------------------------------------------------------------------------------------------
 Version: 1.11.8
 Date: 2021-01-24
