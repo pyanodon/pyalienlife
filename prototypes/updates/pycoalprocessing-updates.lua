@@ -14,15 +14,15 @@ RECIPE('fawogae-plantation-mk01'):set_fields {enabled = false}
 RECIPE('fawogae-plantation-mk02'):add_unlock('mycology-mk02'):subgroup_order("py-alienlife-buildings-mk02", "b")
 data.raw['assembling-machine']['fawogae-plantation-mk02'].crafting_speed = 0.1
 data.raw['assembling-machine']['fawogae-plantation-mk02'].module_specification = {module_slots = 45}
-data.raw['assembling-machine']['fawogae-plantation-mk02'].allowed_effects = {"speed","productivity"}
+data.raw['assembling-machine']['fawogae-plantation-mk02'].allowed_effects = {"speed","productivity",'consumption','pollution'}
 RECIPE('fawogae-plantation-mk03'):add_unlock('mycology-mk03'):subgroup_order("py-alienlife-buildings-mk03", "b")
 data.raw['assembling-machine']['fawogae-plantation-mk03'].crafting_speed = 0.1
 data.raw['assembling-machine']['fawogae-plantation-mk03'].module_specification = {module_slots = 65}
-data.raw['assembling-machine']['fawogae-plantation-mk03'].allowed_effects = {"speed","productivity"}
+data.raw['assembling-machine']['fawogae-plantation-mk03'].allowed_effects = {"speed","productivity",'consumption','pollution'}
 RECIPE('fawogae-plantation-mk04'):add_unlock('mycology-mk04'):subgroup_order("py-alienlife-buildings-mk04", "b")
 data.raw['assembling-machine']['fawogae-plantation-mk04'].crafting_speed = 0.1
 data.raw['assembling-machine']['fawogae-plantation-mk04'].module_specification = {module_slots = 88}
-data.raw['assembling-machine']['fawogae-plantation-mk04'].allowed_effects = {"speed","productivity"}
+data.raw['assembling-machine']['fawogae-plantation-mk04'].allowed_effects = {"speed","productivity",'consumption','pollution'}
 RECIPE('botanical-nursery'):remove_unlock('coal-processing-1'):subgroup_order("py-alienlife-buildings-mk01", "b"):set_fields {enabled = true}--:add_unlock('botany-mk01')
 RECIPE('botanical-nursery-mk02'):remove_unlock('machines-mk02'):add_unlock('botany-mk02'):subgroup_order("py-alienlife-buildings-mk02", "b")
 RECIPE('botanical-nursery-mk03'):remove_unlock('machines-mk03'):add_unlock('botany-mk03'):subgroup_order("py-alienlife-buildings-mk03", "b")

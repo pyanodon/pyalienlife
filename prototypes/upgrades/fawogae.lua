@@ -53,6 +53,7 @@ local tech_upgrades =
                     'dry',
                 },
             is_upgrade = true,
+            module_name = 'fawogae'
             },
         example_2 =
             {
@@ -87,6 +88,7 @@ local tech_upgrades =
                     'dry',
                 },
             is_upgrade = false, -- tell this its an upgrade of other techs
+            module_name = 'fawogae',
             prerequisites = -- table of all techs that are replaced by this one.
                 {
                     --'example-1'
@@ -119,7 +121,8 @@ local tech_upgrades =
                 {
                     'lichen',
                     'acidosis'
-                }
+                },
+            module_name = 'fawogae'
             },
         }
     }

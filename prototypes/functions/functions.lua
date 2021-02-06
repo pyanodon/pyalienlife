@@ -1756,7 +1756,7 @@ function overrides.tech_upgrade(tech_upgrade)
                 if tech.upgrades ~= nil then
                     local speed
                     if type(tech.upgrades.speed) == 'table' then
-                        speed = {bonus = tech.upgrades.speed.module_amount}
+                        speed = {bonus = 0}
                     elseif type(tech.upgrades.speed) == 'number' then
                         speed = {bonus = tech.upgrades.speed}
                     end
@@ -1786,28 +1786,67 @@ function overrides.tech_upgrade(tech_upgrade)
 
                 -- log(serpent.block(recipes))
 
-                ITEM{
-                    type = 'module',
-                    name = tech.technology.name .. '-module',
-                    icons =
-                        {
+                --create 4 tiers of modules for speed bonuses
+                if type(tech.upgrades.speed) == 'table' then
+                    for i = 1, 4 do
+                        local machine = data.raw['assembling-machine'][tech.entities[i]]
+                        local module
+                        if i == 1 then
+                            module = data.raw.module[tech.module_name]
+                        elseif i > 1 then
+                            module = data.raw.module[tech.module_name .. '-mk0' .. i]
+                        end
+                        local mod_speed = (1 + (module.effect.speed.bonus * machine.module_specification.module_slots)) * tech.upgrades.speed.percent
+                        local changed_module_effects = table.deepcopy(module_effects)
+                        changed_module_effects.speed.bonus = mod_speed
+                        ITEM{
+                            type = 'module',
+                            name = tech.technology.name .. '-module-' .. i,
+                            icons =
+                                {
+                                    {
+                                        icon = tech.technology.icon,
+                                        icon_size = 128,
+                                        scale = 0.5
+                                    }
+                                },
+                            category = tech.technology.name,
+                            tier = i,
+                            flags = {},
+                            subgroup = 'py-alienlife-modules',
+                            order = 't-a',
+                            stack_size = 300,
+                            effect = changed_module_effects,
+                            limitation = recipes,
+                            -- limitation_message_key = "dicks"
+                            localised_name = {"",{tostring('technology-name.' .. tech.technology.name)}}
+                        }
+                        log(serpent.block(data.raw.module[tech.technology.name .. '-module-' .. i]))
+                    end
+                else
+                    ITEM{
+                        type = 'module',
+                        name = tech.technology.name .. '-module',
+                        icons =
                             {
-                                icon = tech.technology.icon,
-                                icon_size = 128,
-                                scale = 0.5
-                            }
-                        },
-                    category = tech.technology.name,
-                    tier = 1,
-                    flags = {},
-                    subgroup = 'py-alienlife-modules',
-                    order = 't-a',
-                    stack_size = 300,
-                    effect = module_effects,
-                    limitation = recipes,
-                    -- limitation_message_key = "dicks"
-                    localised_name = {"",{tostring('technology-name.' .. tech.technology.name)}}
-                }
+                                {
+                                    icon = tech.technology.icon,
+                                    icon_size = 128,
+                                    scale = 0.5
+                                }
+                            },
+                        category = tech.technology.name,
+                        tier = 1,
+                        flags = {},
+                        subgroup = 'py-alienlife-modules',
+                        order = 't-a',
+                        stack_size = 300,
+                        effect = module_effects,
+                        limitation = recipes,
+                        -- limitation_message_key = "dicks"
+                        localised_name = {"",{tostring('technology-name.' .. tech.technology.name)}}
+                    }
+                end
 
                 data:extend({{type = 'module-category', name = tech.technology.name}})
             end
