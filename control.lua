@@ -2804,7 +2804,7 @@ end
 
 script.on_event(defines.events.on_research_finished, function(event)
 	local tech = event.research
-	Tech_recipe_upgrades(event)
+	--Tech_recipe_upgrades(event)
 	--_Tech_building_upgrades(event)
 	--log(serpent.block(global.tech_upgrades))
 	if global.tech_upgrades.techs[tech.name] ~= nil then

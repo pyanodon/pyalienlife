@@ -59,7 +59,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/biomass.png",
     icon_size = 64,
     fuel_category = "chemical",
-    fuel_value = "1MJ",
+    fuel_value = "0.25MJ",
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
@@ -5279,10 +5279,6 @@ ITEM {
         'seaweed-3',
         'seaweed-4',
         'seaweed-5',
-        'seaweed-6',
-        'seaweed-7',
-        --'seaweed-8', have to add that else where as its a pyht recipe
-        'seaweed-9',
 	}
 
     local alien_life_limitations_moss =

@@ -1619,8 +1619,9 @@ recipe =
     end
 end
 
+
 function overrides.reprocess_recipes_core(recipes_to_check, upgrade)
-    -- log(serpent.block(recipes_to_check))
+    --log(serpent.block(recipes_to_check))
     local items = require('prototypes/recipes/itemtables')
     for r, recipe in pairs(recipes_to_check) do
         local pre_ing = table.deepcopy(data.raw.recipe[upgrade[r]].ingredients)
@@ -1711,11 +1712,11 @@ function overrides.reprocess_recipes_core(recipes_to_check, upgrade)
 end
 
 function overrides.reprocess_recipes_1()
-    overrides.reprocess_recipes_core(reprocess_recipes_1, upgrade1)
+    --overrides.reprocess_recipes_core(reprocess_recipes_1, upgrade1)
 end
 
 function overrides.reprocess_recipes_2()
-    overrides.reprocess_recipes_core(reprocess_recipes_2, upgrade2)
+    --overrides.reprocess_recipes_core(reprocess_recipes_2, upgrade2)
 end
 
 function overrides.tech_upgrade(tech_upgrade)

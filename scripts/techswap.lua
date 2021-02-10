@@ -2,6 +2,7 @@
 --oldrecipe: the recipe that is currently being used
 --newrecipe: the recipe that you want set on the machines using the old recipe
 
+--[[
 local TRlist =
 	{
 		upgrades =
@@ -6542,9 +6543,7 @@ local TRlist =
 					},
 				},
 			},
-
-
-
+--techs
 
 		techs_with_upgrades =
 			{
@@ -6653,6 +6652,13 @@ local TRlist =
 				['boronb'] = true,
 				['unstable'] = true,
 			},
+	}
+
+]]--
+
+local TRlist =
+	{
+		upgrades = {}
 	}
 
 return(TRlist)

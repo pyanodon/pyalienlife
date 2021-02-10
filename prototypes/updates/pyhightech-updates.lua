@@ -260,6 +260,9 @@ RECIPE('dhilmos-codex'):replace_ingredient("glass", "phosphate-glass")
 RECIPE('fertilizer-1'):change_category('fbreactor')
 RECIPE('fertilizer-3'):change_category('fbreactor')
 RECIPE('fertilizer-4'):change_category('fbreactor')
+RECIPE('fertilizer-fish-1'):change_category('fbreactor')
+RECIPE('fertilizer-fish-2'):change_category('fbreactor')
+RECIPE('fertilizer-fish-3'):change_category('fbreactor')
 RECIPE('fish-food-02'):remove_ingredient("blood"):add_ingredient({type = "item", name = "blood-meal", amount = 5})
 RECIPE('dingrits-codex'):replace_ingredient("glass", "phosphate-glass")
 RECIPE('scrondrix-codex'):replace_ingredient("glass", "phosphate-glass")
@@ -361,29 +364,6 @@ RECIPE {
     },
     main_product = 'fiber'
 }:add_unlock('basic-electronics')
-
-
-RECIPE {
-    type = 'recipe',
-    name = 'seaweed-8',
-    category = 'seaweed',
-    enabled = false,
-    energy_required = 55,
-    ingredients = {
-        {type = 'fluid', name = 'water-saline', amount = 100},
-        {type = 'fluid', name = 'slacked-lime', amount = 100},
-        {type = 'item', name = 'iron-ore-dust', amount = 1},
-        {type = 'item', name = 'fertilizer', amount = 1},
-    },
-    results = {
-        {type = 'item', name = 'seaweed', amount = 100},
-    },
-}:add_unlock("botany-mk04")
-
-table.insert(data.raw.module['seaweed'].limitation, 'seaweed-8')
-table.insert(data.raw.module['seaweed-mk02'].limitation, 'seaweed-8')
-table.insert(data.raw.module['seaweed-mk03'].limitation, 'seaweed-8')
-table.insert(data.raw.module['seaweed-mk04'].limitation, 'seaweed-8')
 
 RECIPE {
     type = "recipe",

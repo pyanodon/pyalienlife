@@ -8,6 +8,7 @@ fun.autorecipes {
 	module_limitations = 'auog',
     mats =
 	{
+		--base
 		{
 			ingredients =
 				{
@@ -17,24 +18,23 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='manure',amount ='*2'},
+					{name='manure',amount = 5},
 				},
 			crafting_speed = 80,
 			tech = 'auog',
 			name = 'auog-manure-1',
 			--icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk01.png"
 		},
+		--start
 		{
 			ingredients =
 				{
-                    {name='moss',amount ='R'},
-                    {name='biomass',amount ='R'},
 					{name='auogfood01'},
 				},
 			results =
 				{
 					--{'a','*5'}
-					{name='manure',amount ='+2'}
+					{name='manure',amount = 10}
 				},
 			crafting_speed = 70,
 			tech = 'auog',

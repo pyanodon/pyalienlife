@@ -265,6 +265,48 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
+    name = 'fertilizer-fish-1',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'fluid', name = 'fish-hydrolysate', amount = 150},
+    },
+    results = {
+        {type = 'item', name = 'fertilizer', amount = 3}
+    }
+}:add_unlock('water-animals-mk01')
+
+RECIPE {
+    type = 'recipe',
+    name = 'fertilizer-fish-2',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'fluid', name = 'fish-emulsion', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'fertilizer', amount = 3}
+    }
+}:add_unlock('water-animals-mk01')
+
+RECIPE {
+    type = 'recipe',
+    name = 'fertilizer-fish-3',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'fishmeal', amount = 20},
+    },
+    results = {
+        {type = 'item', name = 'fertilizer', amount = 2}
+    }
+}:add_unlock('water-animals-mk01')
+
+RECIPE {
+    type = 'recipe',
     name = 'flutec-pp6',
     category = 'biofactory',
     enabled = false,
