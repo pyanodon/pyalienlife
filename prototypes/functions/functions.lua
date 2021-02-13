@@ -960,24 +960,19 @@ local reprocess_recipes_1 = {}
 local reprocess_recipes_2 = {}
 
 function overrides.autorecipes(recipe)
-    -- log('hit')
-    local items = require('prototypes/recipes/itemtables') -- *: optional, defaults to true --**: required if using dual recipe mode as itermidate items will be made from this
-    --
+    local items = require('prototypes/recipes/itemtables')
     -- log('hit')
     --[[
 recipe =
 	{
 	name = string,
-	basitem = string,**
-	singlerecipe = bool,*
-	mats = table,***
 	mats =
 		{
 		inputs =
 			{
 				{
 				item,
-				amount*__*, -- defaults to the default value in itemtable
+				amount*__*,
 				returnitem* =
 					{
 					item,
@@ -989,30 +984,22 @@ recipe =
 			{
 				{
 				item,
-				amount*__*, -- defaults to the default value in itemtable
+				amount*__*,
 				amount_min*,
 				amount_max*,
 				probability*,
-				require_item* =
-					{
-					item,
-					amount*, -- defaults to 1:1 of output item
-					},
 				}
 			},
-		icon - is trigger to use item as secondary icon
 		crafting_speed = num,
-		out_crafting_speed = num,
 		tech = string,
-		newitem = bool
 		},
 	category = string,
-    outcategory = string,*
     subgroup = string,
     order = string
     module_limitations = string*
-]] -- ***:needs at least a single mats table with an input item and a output item. following tables will add or remove items and make a new recipe
-    -- *__*:amount includes math keys +,-,*,/,R. will do math based on symbol with number. R will clear item from mats
+]]
+-- *: optional, defaults to true
+-- *__*:amount includes math keys +,-,*,/,R. will do math based on symbol with number. R will clear item from mats
     -- log('hit')
     local name = recipe.name
     local singlerecipe
@@ -1065,7 +1052,7 @@ recipe =
         for i, item in pairs(mat.ingredients) do
             -- log('hit')
             -- log(serpent.block(ingredients))
-            -- log(serpent.block(item))
+            log(serpent.block(item))
             -- log(serpent.block(item[1]))
             -- log(serpent.block(items))
             -- log(serpent.block(items.inputs))
@@ -1073,7 +1060,7 @@ recipe =
             local ing = items.inputs[item.name]
             local sign
             local mod
-            -- log(serpent.block(ing))
+            log(serpent.block(ing))
 
             if data.raw.item[ing[1]] ~= nil or data.raw.fluid[ing[1]] ~= nil or data.raw.module[ing[1]] ~= nil or
                 string.find(ing[1], 'barrel') ~= nil then

@@ -375,6 +375,9 @@ items.inputs.fuelrodmk02 = {'fuelrod-mk02', 1}
 items.inputs.fuelrodmk03 = {'fuelrod-mk03', 1}
 items.inputs.fuelrodmk04 = {'fuelrod-mk04', 1}
 items.inputs.fuelrodmk05 = {'fuelrod-mk05', 1}
+items.inputs.phosphorousacid = {'phosphorous-acid', 1}
+items.inputs.gasoline = {'gasoline', 1}
+items.inputs.refinedsyngas = {'refinedsyngas', 1}
 
 items.outputs = items.inputs
 --can put output replacements below here

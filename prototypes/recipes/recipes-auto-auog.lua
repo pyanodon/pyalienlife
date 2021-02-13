@@ -8,82 +8,84 @@ fun.autorecipes {
 	order = 'b',
     mats =
 	{
+		--base
 		{
 			ingredients =
 				{
-                    {name='biomass',amount =15},
-                    {name='moss',amount =5},
-					{name='waterbarrel',amount=3,return_item={name='empty-barrel',amount=3}},
+					{name='auogpup', amount=8},
+                    {name='biomass',amount =20},
+                    {name='moss',amount =10},
+					{name='waterbarrel',amount=5,return_item={name='empty-barrel',amount=5}},
 					{name='cage',amount=1},
 				},
 			results =
 				{
-					{name='cagedauog', probability = 0.7,amount_min =1,amount_max =1},
+					{name='cagedauog',amount_min = 2,amount_max = 4},
+					{name = 'manure', amount_min = 5,amount_max = 12}
 				},
 			crafting_speed = 160,
 			tech = 'auog'
 		},
-		--food 1
+		--red
 		{
 			ingredients =
 				{
-					{name='biomass',amount ='R'},
-					{name='auogfood01',amount =1},
+					{name='auogfood01',amount =3},
 				},
 			results =
 				{
 					{name='cagedauog',amount ='R'},
-					{name='cagedauog', probability = 0.8,amount_min =1,amount_max =1},
-				},
-			crafting_speed = 150,
-			tech = 'auog'
-		},
-		--saps
-		{
-			ingredients =
-				{
-					{name='saps',amount = 5},
-					{name='bedding',amount = 1},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 140,
-			tech = 'auog-mk02'
-		},
-		--fiber
-		{
-			ingredients =
-				{
-					{name='rawfiber',amount = 5},
-				},
-			results =
-				{
-
+					{name='cagedauog',amount_min = 2,amount_max = 8},
+					{name = 'manure', amount = 'R'},
+					{name = 'manure', amount_min = 5,amount_max = 12}
 				},
 			crafting_speed = 130,
-			tech = 'auog-mk02'
+			tech = 'auog'
 		},
-		--food 2
+		--green
 		{
 			ingredients =
 				{
-					{name='auogfood01',amount ='R'},
-					{name='saps',amount ='R'},
-					{name='rawfiber',amount ='R'},
-					{name='auogfood02',amount =1},
+					{name='auogpup', amount='R'},
+					{name='auogpup', amount=12},
+					{name='saps',amount = 12},
+					{name='bedding',amount = 3},
+					{name='rawfiber',amount = 15},
+				},
+			results =
+				{
+					{name='cagedauog',amount ='R'},
+					{name='cagedauog',amount_min = 4,amount_max = 12},
+					{name = 'manure', amount = 'R'},
+					{name = 'manure', amount_min = 7,amount_max = 14}
+				},
+			crafting_speed = 100,
+			tech = 'auog-mk02'
+		},
+		--chem
+		{
+			ingredients =
+				{
+					{name='auogpup', amount='R'},
+					{name='auogpup', amount=15},
+					{name='saps',amount = '+5'},
+					{name='bedding',amount = '+5'},
+					{name='rawfiber',amount = '+5'},
+					{name='auogfood01',amount ='+7'},
+					{name='auogfood02',amount =5},
 
 				},
 			results =
 				{
 					{name='cagedauog',amount ='R'},
-					{name='cagedauog', probability = 0.9,amount_min =1,amount_max =1},
+					{name='cagedauog',amount_min = 8,amount_max = 15},
+					{name = 'manure', amount = 'R'},
+					{name = 'manure', amount_min = 10,amount_max = 20}
 				},
-			crafting_speed = 120,
+			crafting_speed = 70,
 			tech = 'auog-mk03'
 		},
-		--food 2 saps
+		--py
 		{
 			ingredients =
 				{

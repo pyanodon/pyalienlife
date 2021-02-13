@@ -2,3 +2,14 @@ manure production isnt high enough - good for early/ mid game. will need to move
 
 
 Move pesticide01 to pre py science or pesticide02 to later
+
+replace ralesia with ralesia extract and dry ralesia in some of the foods.
+
+look at animal foods
+
+fix the unnesssary addition of nothing to auog pup recipes to auog pup to caged auogs
+
+REMOVE RANDOM CRAP TO AUOG MANURE RECIPES. manure will be produced as part of the growth cycle from pups to adults and the breeding area
+
+TODO:
+VRAUKS FOR GREEN SCIENCE
