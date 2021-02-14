@@ -378,6 +378,8 @@ items.inputs.fuelrodmk05 = {'fuelrod-mk05', 1}
 items.inputs.phosphorousacid = {'phosphorous-acid', 1}
 items.inputs.gasoline = {'gasoline', 1}
 items.inputs.refinedsyngas = {'refinedsyngas', 1}
+items.inputs.auog = {'auog' ,1}
+items.inputs.fetalserum = {'fetal-serum', 1}
 
 items.outputs = items.inputs
 --can put output replacements below here

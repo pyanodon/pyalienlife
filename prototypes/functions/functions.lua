@@ -1284,6 +1284,7 @@ recipe =
             local mod
             local prod = false
             local prodvalue
+            local amin = false
             local a_min
             local a_max
             -- log('hit')
@@ -1314,6 +1315,19 @@ recipe =
                         a_max = item.amount_max
                     else
                         a_max = 1
+                    end
+                elseif item.probabitity == nil and (item.amount_min ~= nil or item.amount_max ~= nil) then
+                    sign = nil
+                    amin = true
+                    if item.amount_min ~= nil then
+                        a_min = item.amount_min
+                    else
+                        a_min = 1
+                    end
+                    if item.amount_max ~= nil then
+                        a_max = item.amount_max
+                    else
+                        a_max = a_min or 1
                     end
                 else
                     -- log("hit")
@@ -1354,7 +1368,9 @@ recipe =
                         -- log(serpent.block(results))
                         local rl = {}
                         -- log('hit')
-                        for _, res in pairs(results) do rl[res.name] = true end
+                        for _, res in pairs(results) do
+                            rl[res.name] = true
+                        end
                         -- log('hit')
                         if rl[ing[1]] then
                             for _, res in pairs(results) do
@@ -1392,6 +1408,13 @@ recipe =
                                     amount_max = a_max,
                                     probability = prodvalue
                                 })
+                            elseif amin == true then
+                                table.insert(results, {
+                                    type = type1,
+                                    name = ing[1],
+                                    amount_min = a_min,
+                                    amount_max = a_max,
+                                })
                             else
                                 -- log("hit")
                                 table.insert(results, {type = type1, name = ing[1], amount = ing[2]})
@@ -1405,6 +1428,13 @@ recipe =
                             amount_min = a_min,
                             amount_max = a_max,
                             probability = prodvalue
+                        })
+                    elseif amin == true then
+                        table.insert(results, {
+                            type = type1,
+                            name = ing[1],
+                            amount_min = a_min,
+                            amount_max = a_max,
                         })
                     elseif mod ~= nil then
                         -- log('hit')

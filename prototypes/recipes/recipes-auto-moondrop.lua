@@ -87,7 +87,7 @@ fun.autorecipes {
                     {name='fertilizer',amount = '+5'},
                     {name='syngas',amount ='R'},
 					{name = 'refinedsyngas', amount = 30},
-					{name='biomass',amount =10},
+					{name='biomass',amount ='+4'},
 					{name='urea',amount = 12},
 				},
 			results =

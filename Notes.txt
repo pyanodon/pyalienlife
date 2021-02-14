@@ -11,5 +11,9 @@ fix the unnesssary addition of nothing to auog pup recipes to auog pup to caged 
 
 REMOVE RANDOM CRAP TO AUOG MANURE RECIPES. manure will be produced as part of the growth cycle from pups to adults and the breeding area
 
+look into useing pheromones as an improved breeding recipe for auog pups after t4
+
+get rid of normal auogs to improved and replace with auog super solder program
+
 TODO:
 VRAUKS FOR GREEN SCIENCE
