@@ -282,6 +282,7 @@ items.inputs.bloodxeno = {'sulfuric-xeno', 1}
 items.inputs.chitinxeno = {'chitin-xeno', 1}
 items.inputs.sulfuricacid = {'sulfuric-acid', 1}
 
+items.inputs.vrauks = {'vrauks', 1}
 items.inputs.cagedvrauks = {'caged-vrauks', 1}
 items.inputs.braincagedvrauks = {'brain-caged-vrauks', 1}
 items.inputs.meatcagedvrauks = {'meat-caged-vrauks', 1}

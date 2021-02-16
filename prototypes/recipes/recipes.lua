@@ -160,8 +160,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'moss-gen',
-    category = 'genlab',
-    enabled = false,
+    category = 'genlab-handcrafting',
+    enabled = true,
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'flask', amount = 2},
@@ -170,7 +170,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'moss-gen', amount = 1},
     },
-}:add_unlock("biotech-mk01")
+}
 
 RECIPE {
     type = 'recipe',

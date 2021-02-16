@@ -18,15 +18,14 @@ RECIPE {
     type = 'recipe',
     name = 'formic-acid',
     category = 'distilator',
-    enabled = true,
+    enabled = false,
     energy_required = 4,
     ingredients = {
-        {type = "item", name = "iron-plate", amount = 2},
-        {type = "item", name = "copper-plate", amount = 2},
+        {type = 'fluid', name = 'formamide', amount = 100},
         {type = 'fluid', name = 'water', amount = 100},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 100},
+        {type = 'fluid', name = 'sulfuric-acid', amount = 50},
     },
     results = {
         {type = 'fluid', name = 'formic-acid', amount = 100},
     },
-}
+}:add_unlock("biotech-mk02")

@@ -13,7 +13,7 @@ local fun = require("prototypes/functions/functions")
 			ingredients =
 				{
 					{name='auogpup',amount =1},
-					{name = 'fetal-serum', amount = 50},
+					{name = 'fetalserum', amount = 50},
 					{name='antiviral',amount =1},
 					{name='nanochondria',amount =1},
 					--{name='antiviral',amount ='R'},

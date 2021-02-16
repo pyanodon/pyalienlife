@@ -309,6 +309,12 @@ require('prototypes/buildings/simik-den-mk02')
 require('prototypes/buildings/simik-den-mk03')
 require('prototypes/buildings/simik-den-mk04')
 
+--crashed data array
+require('prototypes/buildings/crashed-lab-mk01')
+if not mods["pyhightech"] then
+    require("prototypes/buildings/crashed-assembler-mk01")
+end
+
 --((SPACE BUILDINGS))--
 --[[
 require('prototypes/buildings/space/space-arthurian-pen-mk01')
@@ -422,6 +428,14 @@ require('prototypes/fluids/simik-blood')
 --(( RECIPES ))--
 require('prototypes/items/items')
 require('prototypes/recipes/recipes')
+
+--auog
+require('prototypes/recipes/auog/recipes-auog')
+require('prototypes/recipes/auog/recipes-auog-rendering')
+require('prototypes/recipes/auog/recipes-auog-raising')
+require('prototypes/recipes/auog/recipes-auog-growth-enhancement')
+
+
 require('prototypes/recipes/recipes-atomizer')
 require('prototypes/recipes/recipes-mo')
 require('prototypes/recipes/recipes-moss')
@@ -444,7 +458,7 @@ require('prototypes/recipes/recipes-dhilmos')
 require('prototypes/recipes/recipes-scrondrix')
 require('prototypes/recipes/recipes-rennea')
 require('prototypes/recipes/recipes-phadai')
-require('prototypes/recipes/recipes-auog')
+
 require('prototypes/recipes/recipes-fish')
 require('prototypes/recipes/recipes-korlex')
 require('prototypes/recipes/recipes-yaedols')

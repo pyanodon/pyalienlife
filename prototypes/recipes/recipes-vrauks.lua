@@ -3,7 +3,7 @@ RECIPE {
     type = 'recipe',
     name = 'vrauks',
     category = 'creature-chamber',
-    enabled = false,
+    enabled = true,
     energy_required = 300,
     ingredients = {
         {type = 'item', name = 'bio-sample', amount = 30},
@@ -16,24 +16,23 @@ RECIPE {
     results = {
         {type = 'item', name = 'vrauks', amount = 1},
     },
-}:add_unlock("vrauks")
+}
 
 RECIPE {
     type = 'recipe',
     name = 'vrauks-codex',
     category = 'crafting',
-    enabled = false,
+    enabled = true,
     energy_required = 5,
     ingredients = {
-        {type = 'item', name = 'glass', amount = 10},
-        {type = 'item', name = 'small-lamp', amount = 4},
-        {type = 'item', name = 'electronic-circuit', amount = 20},
-        {type = 'item', name = 'tinned-cable', amount = 20},
+        {type = 'item', name = 'glass', amount = 5},
+        {type = 'item', name = 'electronic-circuit', amount = 5},
+        {type = 'item', name = 'tinned-cable', amount = 10},
     },
     results = {
         {type = 'item', name = 'vrauks-codex', amount = 1},
     },
-}:add_unlock("xenobiology")
+}
 
 ----food----
 RECIPE {
@@ -85,7 +84,7 @@ RECIPE {
     type = 'recipe',
     name = 'caged-vrauks',
     category = 'crafting',
-    enabled = false,
+    enabled = true,
     energy_required = 0.5,
     ingredients = {
         {type = 'item', name = 'vrauks', amount = 1},
@@ -94,7 +93,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'caged-vrauks', amount = 1},
     },
-}:add_unlock("vrauks")
+}
 
 RECIPE {
     type = 'recipe',

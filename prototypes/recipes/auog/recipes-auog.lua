@@ -103,7 +103,7 @@ RECIPE {
 ---pup maker---
 
 ---maturing---
-
+--[[
 RECIPE {
     type = 'recipe',
     name = 'auog-mature-01',
@@ -143,7 +143,7 @@ RECIPE {
     subgroup = 'py-alienlife-auog',
     order = 'a',
 }:add_unlock("growth-hormone")
-
+]]--
 ----adverse products----
 
 ----PROCESSING----

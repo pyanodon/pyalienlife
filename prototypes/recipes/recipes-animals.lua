@@ -19,14 +19,14 @@ RECIPE {
     type = 'recipe',
     name = 'earth-generic-sample',
     category = 'data-array',
-    enabled = false,
+    enabled = true,
     energy_required = 25,
     ingredients = {
-        {type = 'item', name = 'steel-chest', amount = 1},
+        {type = 'item', name = 'iron-chest', amount = 1},
         {type = 'item', name = 'automation-science-pack', amount = 15},
         {type = 'item', name = 'bio-sample', amount = 10},
     },
     results = {
         {type = 'item', name = 'earth-generic-sample', amount = 1},
     },
-}:add_unlock("xenobiology")
+}

@@ -13,15 +13,13 @@ fun.autorecipes {
 				{
                     {name='biomass',amount =15},
                     {name='moss',amount =5},
-					{name='waterbarrel',amount=3,return_item={name='empty-barrel',amount=3}},
-					{name='cage',amount=1},
 				},
 			results =
 				{
-					{name='cagedvrauks', probability = 0.7,amount_min =1,amount_max =1},
+					{name='vrauks', probability = 0.7,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 160,
-			tech = 'vrauks'
+			--tech = 'vrauks'
 		},
 		--food 1
 		{
@@ -29,6 +27,8 @@ fun.autorecipes {
 				{
 					{name='biomass',amount ='R'},
 					{name='vrauksfood01',amount =1},
+					{name='waterbarrel',amount=3,return_item={name='empty-barrel',amount=3}},
+					{name='cage',amount=1},
 				},
 			results =
 				{
@@ -492,6 +492,33 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering',
+	category = 'vrauk-rendering',
+	--module_limitations = 'vrauks',
+	subgroup = 'py-alienlife-vrauks',
+	order = 'b',
+    mats =
+	{
+		{
+			ingredients =
+				{
+					{name='vrauks',amount=3},
+				},
+			results =
+				{
+					{name='meat', amount = 3},
+					{name='formicacid', amount =200},
+					{name='biomass',amount=4},
+				},
+			crafting_speed = 10,
+			name = 'Smashing Vrauks',
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-vrauks.png",
+			icon_size = 64,
+		}
+	}
+}
+
+fun.autorecipes {
+    name = 'rendering',
 	category = 'slaughterhouse-vrauks',
 	--module_limitations = 'vrauks',
 	subgroup = 'py-alienlife-vrauks',
@@ -501,6 +528,23 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
+					{name='vrauks',amount=3},
+				},
+			results =
+				{
+					{name='meat', amount = 3},
+					{name='formicacid', amount =200},
+					{name='biomass',amount=4},
+				},
+			crafting_speed = 10,
+			name = 'Smashing Vrauks',
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-vrauks.png",
+			icon_size = 64,
+		},
+		{
+			ingredients =
+				{
+					{name='vrauks',amount='R'},
 					{name='cagedvrauks',amount=1},
 				},
 			results =

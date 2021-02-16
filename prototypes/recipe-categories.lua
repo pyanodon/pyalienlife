@@ -362,4 +362,13 @@ data:extend {
         type = "recipe-category",
         name = "space-cottongut"
     },
+
+    {
+        type = "recipe-category",
+        name = "genlab-handcrafting"
+    },
+    {
+        type = "recipe-category",
+        name = "vrauk-rendering"
+    },
 }

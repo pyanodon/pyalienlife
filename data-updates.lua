@@ -15,6 +15,7 @@ if mods["pyhightech"] then
     require("prototypes/technologies/schrodinger-antelope")
     require("prototypes/buildings/antelope-enclosure-mk01")
     require("prototypes/updates/pyhightech-updates")
+    table.insert(data.raw['assembling-machine']['crash-site-assembling-machine-1-repaired'].crafting_categories, 'vrauk-rendering')
 end
 
 if mods["pycoalprocessing"] then
@@ -31,6 +32,10 @@ data.raw.fish.fish.minable.result = 'fish'
 --data.raw.fish.fish = nil
 
 data.raw.item.fawogae = nil
+
+table.insert(data.raw.character.character.mining_categories, "ore-bioreserve")
+
+table.insert(data.raw.character.character.crafting_categories, "genlab-handcrafting")
 
 for _, recipe in pairs(data.raw.recipe) do
     local r = RECIPE(recipe)

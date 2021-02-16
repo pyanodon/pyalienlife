@@ -17,3 +17,5 @@ get rid of normal auogs to improved and replace with auog super solder program
 
 TODO:
 VRAUKS FOR GREEN SCIENCE
+
+look into making biosample hand minable and vrauks aviable at start
