@@ -120,7 +120,7 @@ ENTITY{
             }
         }
     },
-    crafting_categories = {'crafting', 'basic-crafting', 'advanced-crafting', 'handcrafting', 'vrauk-rendering'},
+    crafting_categories = {'crafting', 'basic-crafting', 'advanced-crafting', 'handcrafting', --[['vrauk-rendering']]},
     crafting_speed = 0.3,
     energy_source = {type = 'electric', usage_priority = 'secondary-input', emissions_per_minute = 4},
     energy_usage = '90kW',

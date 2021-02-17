@@ -96,8 +96,8 @@ fun.autorecipes {
 				{
 					{name='auog', amount='R'},
 					{name='auog', amount=14},
-					{name='saps',amount =20},
-					{name='rawfiber',amount = 20},
+					{name='saps',amount ='+10'},
+					{name='rawfiber',amount = '+10'},
 				},
 			results =
 				{
@@ -205,8 +205,8 @@ fun.autorecipes {
 				{
 					{name='auogpup', amount='R'},
 					{name='auogpup', amount=20},
-					{name='saps',amount =20},
-					{name='rawfiber',amount = 20},
+					{name='saps',amount ='+10'},
+					{name='rawfiber',amount = '+10'},
 				},
 			results =
 				{

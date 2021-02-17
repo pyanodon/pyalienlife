@@ -10,8 +10,7 @@ RECIPE {
         {type = 'item', name = 'moss-gen', amount = 3},
         {type = 'item', name = 'vrauks-codex', amount = 1},
         {type = 'item', name = 'earth-generic-sample', amount = 2},
-        {type = 'item', name = 'petri-dish', amount = 5},
-        {type = 'item', name = 'flask', amount = 10},
+        {type = 'item', name = 'petri-dish', amount = 10},
     },
     results = {
         {type = 'item', name = 'vrauks', amount = 1},

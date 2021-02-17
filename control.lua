@@ -2846,3 +2846,11 @@ script.on_event("tech-upgrades", function(event)
 	TURD(event,player)
 	--log(serpent.block(global.tech_upgrades))
 end)
+
+script.on_event(defines.events.on_cutscene_cancelled, function(event)
+    game.surfaces['nauvis'].create_entity{
+        name = 'crash-site-lab-repaired',
+        position = {10, 10},
+        force = game.players[event.player_index].force
+	}
+end)

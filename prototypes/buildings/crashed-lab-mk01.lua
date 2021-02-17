@@ -176,6 +176,28 @@ ENTITY{
             }
         }
     },
+    fluid_boxes =
+    {
+      {
+        production_type = "input",
+        pipe_picture = assembler2pipepictures(),
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = -1,
+        pipe_connections = {{ type="input", position = {0, -2} }},
+        secondary_draw_orders = { north = -1 }
+      },
+      {
+        production_type = "output",
+        pipe_picture = assembler2pipepictures(),
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = 1,
+        pipe_connections = {{ type="output", position = {0, 2} }},
+        secondary_draw_orders = { north = -1 }
+      },
+      off_when_no_fluid_recipe = true
+    },
     working_sound = {
         sound = {filename = '__base__/sound/lab.ogg', volume = 0.7},
         audible_distance_modifier = 0.7,
@@ -185,7 +207,7 @@ ENTITY{
     vehicle_impact_sound = sounds.generic_impact,
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
-    crafting_categories = {"data-array"},
+    crafting_categories = {"data-array", "creature-chamber", "vrauk-rendering"},
     crafting_speed = 0.1,
     energy_source =
     {

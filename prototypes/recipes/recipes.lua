@@ -164,7 +164,7 @@ RECIPE {
     enabled = true,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'flask', amount = 2},
+        {type = 'item', name = 'petri-dish', amount = 2},
         {type = 'item', name = 'moss', amount = 20},
     },
     results = {
