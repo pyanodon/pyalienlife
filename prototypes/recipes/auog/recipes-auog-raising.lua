@@ -25,7 +25,7 @@ fun.autorecipes {
 					{name = 'manure', amount_min = 5,amount_max = 12}
 				},
 			crafting_speed = 160,
-			tech = 'auog'
+			tech = 'auog',
 		},
 		--red
 		{
@@ -121,6 +121,33 @@ fun.autorecipes {
 	module_limitations = 'auog',
 	subgroup = 'py-alienlife-auog',
 	order = 'b',
+	upgrades =
+			{
+				{
+					tech = 'bigger-colon',
+					ingredient_changes =
+					{
+						{name = 'fiber', amount = 2}
+					},
+					result_changes =
+					{
+						{name = 'manure', add_amount = 3},
+						{name = 'auog', subtract_percent_amount = 0.1, round_direction = 'up'}
+					},
+				},
+				{
+					tech = 'explosive-diarrhea',
+					ingredient_changes =
+					{
+						{name = 'ethylene-glycol', amount = 50}
+					},
+					result_changes =
+					{
+						{name = 'manure', add_amount = 5},
+						{name = 'auog', subtract_percent_amount = 0.2, round_direction = 'up'}
+					}
+				},
+			},
     mats =
 	{
 		--base

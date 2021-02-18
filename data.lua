@@ -431,21 +431,28 @@ require('prototypes/recipes/recipes')
 
 --auog
 require('prototypes/recipes/auog/recipes-auog')
-require('prototypes/recipes/auog/recipes-auog-rendering')
 require('prototypes/recipes/auog/recipes-auog-raising')
-require('prototypes/recipes/auog/recipes-auog-growth-enhancement')
+--require('prototypes/recipes/auog/recipes-auog-rendering')
+--require('prototypes/recipes/auog/recipes-auog-growth-enhancement')
+
+    --old recipes
 --require('prototypes/recipes/auog/recipes-auto-auog')
 --require('prototypes/recipes/auog/recipes-auog-products')
 --require('prototypes/recipes/auog/recipes-auog-products-2')
 --require('prototypes/recipes/auog/recipes-auog-products-3')
 
 --vrauks
+    --old recipe
 --require('prototypes/recipes/vrauks/recipes-auto-vrauks')
+
+--new
+--[[
 require('prototypes/recipes/vrauks/recipes-vrauks')
 require('prototypes/recipes/vrauks/recipes-vrauks-raising')
 require('prototypes/recipes/vrauks/recipes-vrauks-rendering')
+]]--
 
-
+--[[
 require('prototypes/recipes/recipes-atomizer')
 require('prototypes/recipes/recipes-mo')
 require('prototypes/recipes/recipes-moss')
@@ -572,6 +579,7 @@ require('prototypes/recipes/recipes-arqad-honey-2')
 require('prototypes/recipes/recipes-simik')
 require('prototypes/recipes/recipes-auto-simik')
 require('prototypes/recipes/recipes-simik-metals')
+]]--
 
 --gunpowder poo
 --require('prototypes/recipes/recipes-vrauk-products')

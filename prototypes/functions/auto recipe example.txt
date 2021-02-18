@@ -1,0 +1,41 @@
+auto recipe example
+
+name = default recipe name
+category = building category the recipes go in
+module_limitation = the module these recipes should be assigned to
+subgroup = recipe subgroup
+order = recipe order
+mats = table of ingredients, results, crafting speed, tech and other details for indivisual recipes
+
+mats example
+    mats =
+        {
+            ingredients =
+            {
+                {name = ingredient name,
+                amount = the number of items this ingredient has. required for first recipe in mat,
+                --optional choices to replace amount
+                add_amount = add more to a previously set amount
+                subtract_amount = subtracts an amount from previously set amount
+                multiply_amount = multiply amount by the given number
+                divide_amount = divide amount by the given number
+                subtract_percent_amount = subtract an amount based percentage of the total
+                round_direction = used with subtract_percent_amount to set if the number is lowered or rasied to the next whole number
+                }
+            }
+            results =
+            {
+                {name = ingredient name,
+                amount = the number of items this ingredient has. required for first recipe in mat,
+                --optional choices to replace amount
+                add_amount = add more to a previously set amount
+                subtract_amount = subtracts an amount from previously set amount
+                multiply_amount = multiply amount by the given number
+                divide_amount = divide amount by the given number
+                subtract_percent_amount = subtract an amount based percentage of the total
+                round_direction = used with subtract_percent_amount to set if the number is lowered or rasied to the next whole number
+                }
+            }
+            crafting_speed = recipe crafting speed
+            tech = the tech to unlock the recipe. leave blank for no tech lock
+        }
