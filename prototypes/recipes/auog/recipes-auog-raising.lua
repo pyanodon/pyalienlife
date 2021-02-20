@@ -21,7 +21,7 @@ fun.autorecipes {
 			results =
 				{
 					{name= 'auog', amount=2},
-					{name= 'auogpup',amount_min = 3,amount_max = 6},
+					{name= 'auog-pup',amount_min = 3,amount_max = 6},
 					{name = 'manure', amount_min = 5,amount_max = 12}
 				},
 			crafting_speed = 160,
@@ -31,12 +31,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='auogfood01',amount =3},
+					{name='auog-food-01',amount =3},
 				},
 			results =
 				{
-					{name= 'auogpup',amount ='R'},
-					{name= 'auogpup',amount_min = 4,amount_max = 8},
+					{name= 'auog-pup',amount ='R'},
+					{name= 'auog-pup',amount_min = 4,amount_max = 8},
 					{name = 'manure', amount = 'R'},
 					{name = 'manure', amount_min = 5,amount_max = 12}
 				},
@@ -51,14 +51,14 @@ fun.autorecipes {
 					{name='auog', amount=4},
 					{name='saps',amount = 12},
 					{name='bedding',amount = 3},
-					{name='rawfiber',amount = 15},
+					{name='raw-fiber',amount = 15},
 				},
 			results =
 				{
 					{name='auog', amount='R'},
 					{name='auog', amount=4},
-					{name= 'auogpup',amount ='R'},
-					{name= 'auogpup',amount_min = 4,amount_max = 20},
+					{name= 'auog-pup',amount ='R'},
+					{name= 'auog-pup',amount_min = 4,amount_max = 20},
 					{name = 'manure', amount = 'R'},
 					{name = 'manure', amount_min = 7,amount_max = 14}
 				},
@@ -73,17 +73,17 @@ fun.autorecipes {
 					{name='auog', amount=8},
 					{name='saps',amount = '+5'},
 					{name='bedding',amount = '+5'},
-					{name='rawfiber',amount = '+5'},
-					{name='auogfood01',amount ='+7'},
-					{name='auogfood02',amount =5},
+					{name='raw-fiber',amount = '+5'},
+					{name='auog-food-01',amount ='+7'},
+					{name='auog-food-02',amount =5},
 
 				},
 			results =
 				{
 					{name='auog', amount='R'},
 					{name='auog', amount=8},
-					{name= 'auogpup',amount ='R'},
-					{name= 'auogpup',amount_min = 8,amount_max = 30},
+					{name= 'auog-pup',amount ='R'},
+					{name= 'auog-pup',amount_min = 8,amount_max = 30},
 					{name = 'manure', amount = 'R'},
 					{name = 'manure', amount_min = 10,amount_max = 20}
 				},
@@ -97,14 +97,14 @@ fun.autorecipes {
 					{name='auog', amount='R'},
 					{name='auog', amount=14},
 					{name='saps',amount ='+10'},
-					{name='rawfiber',amount = '+10'},
+					{name='raw-fiber',amount = '+10'},
 				},
 			results =
 				{
 					{name='auog', amount='R'},
 					{name='auog', amount=14},
-					{name= 'auogpup',amount ='R'},
-					{name= 'auogpup',amount_min = 14,amount_max = 50},
+					{name= 'auog-pup',amount ='R'},
+					{name= 'auog-pup',amount_min = 14,amount_max = 50},
 					{name = 'manure', amount = 'R'},
 					{name = 'manure', amount_min = 20,amount_max = 30}
 				},
@@ -154,10 +154,10 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='auogpup', amount=4},
+					{name='auog-pup', amount=4},
                     {name='biomass',amount =20},
                     {name='moss',amount =10},
-					{name='waterbarrel',amount=5,return_item={name='empty-barrel',amount=5}},
+					{name='water-barrel',amount=5,return_item={name='empty-barrel',amount=5}},
 				},
 			results =
 				{
@@ -171,7 +171,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='auogfood01',amount =3},
+					{name='auog-food-01',amount =3},
 					{name='saps',amount = 12},
 				},
 			results =
@@ -188,10 +188,10 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='auogpup', amount='R'},
-					{name='auogpup', amount=12},
+					{name='auog-pup', amount='R'},
+					{name='auog-pup', amount=12},
 					{name='bedding',amount = 3},
-					{name='rawfiber',amount = 15},
+					{name='raw-fiber',amount = 15},
 				},
 			results =
 				{
@@ -207,13 +207,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='auogpup', amount='R'},
-					{name='auogpup', amount=15},
-					{name='saps',amount = '+5'},
-					{name='bedding',amount = '+5'},
-					{name='rawfiber',amount = '+5'},
-					{name='auogfood01',amount ='+7'},
-					{name='auogfood02',amount =5},
+					{name='auog-pup', amount = 'R'},
+					{name='auog-pup', amount = 15},
+					{name='saps', add_amount = 5},
+					{name='bedding', add_amount = 5},
+					{name='raw-fiber', add_amount = 5},
+					{name='auog-food-01', add_amount = 7},
+					{name='auog-food-02', amount = 5},
 
 				},
 			results =
@@ -230,10 +230,10 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='auogpup', amount='R'},
-					{name='auogpup', amount=20},
-					{name='saps',amount ='+10'},
-					{name='rawfiber',amount = '+10'},
+					{name='auog-pup', amount='R'},
+					{name='auog-pup', amount=20},
+					{name='saps', add_amount = 10},
+					{name='raw-fiber', add_amount = 10},
 				},
 			results =
 				{

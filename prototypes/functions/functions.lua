@@ -938,147 +938,138 @@ function overrides.tech_add_prerequisites(tech, prereq)
     end
 end
 
-local TRlist = require('scripts/techswap')
+function add_amount(new_input,previous_input)
+    --add new amount to old amount
+    new_input.amount = new_input.amount + previous_input
 
-local upgrade1 = {}
-local upgrade2 = {}
-
--- log(serpent.block(TRlist.upgrades))
-
-for up, upgrade in pairs(TRlist.upgrades) do
-    -- log(serpent.block(upgrade))
-    if upgrade.upgrade_1 ~= nil and upgrade.upgrade_1.recipe ~= nil then
-        upgrade1[upgrade.upgrade_1.recipe] = upgrade.base_recipe
-    end
-    if upgrade.upgrade_2 ~= nil and upgrade.upgrade_2.recipe ~= nil then
-        upgrade2[upgrade.upgrade_2.recipe] = upgrade.upgrade_1.recipe
-    end
 end
 
-local reprocess_recipes_1 = {}
+--handles all adjustments for each ingredient and result changes in autorecipe
+function recipe_item_builder(ingredients,results,previous_ingredients,previous_results)
 
-local reprocess_recipes_2 = {}
+    --add return items to results before saving them and adding to the recipe
+    for i, ing in pairs(ingredients) do
+
+        --setting ingredient type
+        table.insert(ing, type)
+        local type
+        if data.raw.item[name] ~= nil or data.raw.module[name] ~= nil then
+            type = 'item'
+        elseif data.raw.fluid[name] ~= nil then
+            type = 'fluid'
+        end
+        ing.type = type
+
+        --add return item to results if it exists
+        local return_item
+        if ing.return_item ~= nil then
+            local type
+            local name = ing.return_item.name
+            local amount = ing.return_item.amount
+            if data.raw.item[name] ~= nil or data.raw.module[name] ~= nil then
+                type = 'item'
+            elseif data.raw.fluid[name] ~= nil then
+                type = 'fluid'
+            end
+            return_item = {type = type, name = name, amount = amount}
+            table.insert(results, return_item)
+        end
+
+        --adding ingredient amount
+        if ing.add_amount ~= nil then
+            local old_amount
+            for o, old in pairs(previous_ingredients) do
+                if old.name == ing.name then
+                    old_amount = old.amount
+                end
+            end
+            add_amount(ing, old_amount)
+        end
+
+    end
+
+    for r, result in pairs(results) do
+        -- statements
+    end
+
+    return ingredients, results
+end
 
 function overrides.autorecipes(recipe)
-    local items = require('prototypes/recipes/itemtables')
     -- log('hit')
+    --main details for all recipes
+    local name = recipe.name
+        --default name for recipes if recipe doesnt provide an override
+    local numbered_name
+    local category = recipe.category
+    local module_limitation = recipe.module_limitations
+    local subgroup = recipe.subgroup
+    local order = recipe.order
+    local upgrades = {}
+    if recipe.upgrades ~= nil then
+        upgrades = recipe.upgrades
+    end
+    local mats = recipe.mats
 
+    --variables for individual recipes
+        --new ingredients
+    local ingredients
+        --old ingredients from last recipe carried over
+    local previous_ingredients
+        --new results
+    local results
+        --old results from last recipe carried over
+    local previous_results
 
+    --recipe building
+    for r, rec in pairs(mats) do
+        ingredients = rec.ingredients
+        results = rec.ingredients
+        --variable to set if recipe is enabled
+        local enabled
+        --tech name
+        local tech
 
-
-            RECIPE{
-                type = 'recipe',
-                name = na,
-                category = category,
-                enabled = enabled,
-                energy_required = crafting_speed,
-                ingredients = ingredients,
-                results = results,
-                subgroup = recipe.subgroup,
-                order = order,
-                -- main_product = results[1].name,
-                -- icon = mat.icon
-                localised_name = mat.name
-            }
-end
-
-function overrides.reprocess_recipes_core(recipes_to_check, upgrade)
-    --log(serpent.block(recipes_to_check))
-    local items = require('prototypes/recipes/itemtables')
-    for r, recipe in pairs(recipes_to_check) do
-        local pre_ing = table.deepcopy(data.raw.recipe[upgrade[r]].ingredients)
-        local pre_res = table.deepcopy(data.raw.recipe[upgrade[r]].results)
-        -- log(serpent.block(data.raw.recipe[r]))
-        -- log(serpent.block(recipe))
-        -- log(serpent.block(recipe.name))
-        -- log(serpent.block(pre_ing))
-        -- log(serpent.block(pre_res))
-        for ing, ingred in pairs(pre_ing) do
-            -- log('hit')
-            -- log(serpent.block(r))
-            -- log(serpent.block(ing))
-            -- log(serpent.block(ingred.name))
-            -- log(serpent.block(ingred))
-            for ing2, ingred2 in pairs(recipe.ingredients) do
-                -- log('hit')
-                -- log(serpent.block(ing2))
-                -- log(serpent.block(ingred2))
-                -- log(serpent.block(ingred.name))
-                -- log(serpent.block(ingred2.name))
-                -- log(serpent.block(items.inputs[ingred2.name][1]))
-                if ingred.name == items.inputs[ingred2.name][1] then
-                    -- log('hit')
-                    if ingred2.amount ~= nil and string.match(ingred2.amount, '%+') ~= nil then
-                        -- log('hit')
-                        local amount = string.match(ingred2.amount, '%d+')
-                        -- log(amount)
-                        -- log(serpent.block(data.raw.recipe[upgrade .. up_num [r]]))
-                        -- log(serpent.block(data.raw.recipe[upgrade .. up_num [r]].ingredients))
-                        -- log(serpent.block(data.raw.recipe[upgrade .. up_num [r]].ingredients[ing]))
-                        -- log(serpent.block(data.raw.recipe[upgrade .. up_num [r]].ingredients[ing].amount))
-                        -- log(serpent.block(data.raw.recipe[r]))
-                        -- log(serpent.block(data.raw.recipe[r].ingredients))
-                        -- log(serpent.block(data.raw.recipe[r].ingredients[ing]))
-                        for k, v in pairs(data.raw.recipe[r].ingredients) do
-                            -- log('hit')
-                            if v.name == items.inputs[ingred2.name][1] then
-                                -- log('hit')
-                                data.raw.recipe[r].ingredients[k].amount =
-                                    data.raw.recipe[upgrade[r]].ingredients[ing].amount + amount
-                            end
-                        end
-                    end
-                end
-            end
+        if rec.tech == nil then
+            enabled = true
+        else
+            enabled = false
+            tech = rec.tech
         end
 
-        for res, result in pairs(pre_res) do
-            -- log('hit')
-            -- log(serpent.block(r))
-            -- log(serpent.block(res))
-            -- log(serpent.block(result.name))
-            -- log(serpent.block(result))
-            for r2, res2 in pairs(recipe.results) do
-                -- log('hit')
-                -- log(serpent.block(r2))
-                -- log(serpent.block(res2))
-                -- log(serpent.block(result.name))
-                -- log(serpent.block(res2.name))
-                -- log(serpent.block(items.inputs[res2.name][1]))
-                if result.name == items.inputs[res2.name][1] then
-                    -- log('hit')
-                    if res2.amount ~= nil and string.match(res2.amount, '%+') ~= nil then
-                        -- log('hit')
-                        local amount = string.match(res2.amount, '%d+')
-                        -- log(amount)
-                        -- log(serpent.block(data.raw.recipe[upgrade .. up_num [r]]))
-                        -- log(serpent.block(data.raw.recipe[upgrade .. up_num [r]].results))
-                        -- log(serpent.block(data.raw.recipe[upgrade .. up_num [r]].results[res]))
-                        -- log(serpent.block(data.raw.recipe[upgrade .. up_num [r]].results[res].amount))
-                        -- log(serpent.block(data.raw.recipe[r]))
-                        -- log(serpent.block(data.raw.recipe[r].results))
-                        -- log(serpent.block(data.raw.recipe[r].results[res]))
-                        for k, v in pairs(data.raw.recipe[r].results) do
-                            -- log('hit')
-                            if v.name == items.inputs[res2.name][1] then
-                                -- log('hit')
-                                data.raw.recipe[r].results[k].amount =
-                                    data.raw.recipe[upgrade[r]].results[res].amount + amount
-                            end
-                        end
-                    end
-                end
-            end
+        log(serpent.block(ingredients))
+        log(serpent.block(results))
+        --process ingredients and results get return version with changes
+        ingredients, results = recipe_item_builder(ingredients, results, previous_ingredients, previous_results)
+
+        log(serpent.block(ingredients))
+        log(serpent.block(results))
+
+        --save ingredients and results for next recipe
+        previous_ingredients = ingredients
+        previous_results = results
+
+        --build recipe with stdlib recipe builder
+        RECIPE{
+            type = 'recipe',
+            name = na,
+            category = category,
+            enabled = enabled,
+            energy_required = crafting_speed,
+            ingredients = ingredients,
+            results = results,
+            subgroup = subgroup,
+            order = order,
+            -- main_product = results[1].name,
+            -- icon = mat.icon
+            localised_name = mat.name
+        }
+
+        if tech ~= nil then
+            RECIPE(na):add_unlock(tech)
         end
     end
-end
 
-function overrides.reprocess_recipes_1()
-    --overrides.reprocess_recipes_core(reprocess_recipes_1, upgrade1)
-end
-
-function overrides.reprocess_recipes_2()
-    --overrides.reprocess_recipes_core(reprocess_recipes_2, upgrade2)
 end
 
 function overrides.tech_upgrade(tech_upgrade)
