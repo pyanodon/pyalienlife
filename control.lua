@@ -240,7 +240,6 @@ local animal_farm_buildings = {
 	["xenopen"] = true,
 	["arqad"] = true,
 	["xyhiphoe"] = true,
-	["yaedols"] = true,
 	["zipir"] = true,
 	["simik"] = true,
 }
@@ -263,7 +262,7 @@ local fungus_farm_buildings = {
 	["bhoddos"] = true,
 	["fawogae"] = true,
 	["yaedols"] = true,
-	["navens"] = true
+	["navens"] = true,
 }
 
 local function disable_machine(entity)
