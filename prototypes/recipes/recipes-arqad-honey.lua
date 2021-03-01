@@ -11,7 +11,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='emptyhoneycomb',amount =3},
+                    {name='empty-honeycomb',amount =3},
                     {name='ulric',amount =1},
 				},
 			results =
@@ -26,7 +26,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='emptyhoneycomb',amount ='+3'},
+                    {name='empty-honeycomb',amount ='+3'},
 					{name='navens'},
 				},
 			results =
@@ -42,7 +42,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='emptyhoneycomb',amount ='+2'},
+                    {name='empty-honeycomb',amount ='+2'},
 					{name='skin',amount =5},
 				},
 			results =
@@ -57,7 +57,7 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    {name='emptyhoneycomb',amount ='+2'},
+                    {name='empty-honeycomb',amount ='+2'},
 					{name='meat',amount =5},
 				},
 			results =
@@ -72,7 +72,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='emptyhoneycomb',amount ='+2'},
+                    {name='empty-honeycomb',amount ='+2'},
 					{name='cottongut',amount =2},
 				},
 			results =
@@ -87,7 +87,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='emptyhoneycomb',amount ='+6'},
+                    {name='empty-honeycomb',amount ='+6'},
 					{name='meat',amount ='R'},
                     {name='cottongut',amount ='R'},
                     {name='ulric',amount ='R'},
@@ -107,7 +107,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='emptyhoneycomb',amount ='+2'},
+                    {name='empty-honeycomb',amount ='+2'},
 					{name='meat',amount =4},
 					{name='skin',amount =5},
 				},
@@ -123,7 +123,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='emptyhoneycomb',amount ='+2'},
+                    {name='empty-honeycomb',amount ='+2'},
 					{name='cottongut',amount =3},
 				},
 			results =

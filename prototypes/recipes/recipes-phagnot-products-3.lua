@@ -13,7 +13,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='fawogae',amount =10},
-					{name='waterbarrel',amount=3,return_item={name='empty-barrel'}},
+					{name='water-barrel',amount=3,return_item={name='empty-barrel'}},
 				},
 			results =
 				{
@@ -28,7 +28,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='fawogae',amount ='R'},
-					{name='phagnotfood01'},
+					{name='phagnot-food-01'},
 				},
 			results =
 				{
@@ -58,7 +58,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount =10},
+					{name='raw-fiber',amount =10},
 				},
 			results =
 				{
@@ -73,10 +73,10 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='salt',amount ='R'},
-                    {name='rawfiber',amount ='R'},
+                    {name='raw-fiber',amount ='R'},
                     {name='bedding',amount ='R'},
-					{name='phagnotfood01',amount ='R'},
-					{name='phagnotfood02'},
+					{name='phagnot-food-01',amount ='R'},
+					{name='phagnot-food-02'},
 				},
 			results =
 				{
@@ -105,7 +105,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount =5},
+					{name='raw-fiber',amount =5},
 				},
 			results =
 				{

@@ -124,7 +124,7 @@ fun.autorecipes {
                     {name='bones', amount ='R'},
 					{name='meat', amount ='R'},
 					{name='skin', amount ='R'},
-					{name='fat', amount ='R'},
+					{name='mukmoux-fat', amount ='R'},
 					{name='guts', amount ='R'},
 					{name='blood', amount ='R'},
                     {name='brain', amount ='R'},
@@ -213,7 +213,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', amount ='R'},
-					{name='fishoil', amount =100},
+					{name='fish-oil', amount =100},
 				},
 			crafting_speed = 10,
 			tech = 'water-animals-mk01',

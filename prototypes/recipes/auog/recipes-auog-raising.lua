@@ -16,7 +16,7 @@ fun.autorecipes {
 					{name= 'auog', amount=2},
                     {name='biomass',amount =20},
                     {name='moss',amount =10},
-					{name='waterbarrel',amount=5,return_item={name='empty-barrel',amount=5}},
+					{name='water-barrel',amount=5,return_item={name='empty-barrel',amount=5}},
 				},
 			results =
 				{
@@ -26,6 +26,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 160,
 			tech = 'auog',
+			main_product = 'auog-pup'
 		},
 		--red
 		{
@@ -41,7 +42,8 @@ fun.autorecipes {
 					{name = 'manure', amount_min = 5,amount_max = 12}
 				},
 			crafting_speed = 130,
-			tech = 'auog'
+			tech = 'auog',
+			main_product = 'auog-pup'
 		},
 		--green
 		{
@@ -63,7 +65,8 @@ fun.autorecipes {
 					{name = 'manure', amount_min = 7,amount_max = 14}
 				},
 			crafting_speed = 100,
-			tech = 'auog-mk02'
+			tech = 'auog-mk02',
+			main_product = 'auog-pup'
 		},
 		--chem
 		{
@@ -71,10 +74,10 @@ fun.autorecipes {
 				{
 					{name='auog', amount='R'},
 					{name='auog', amount=8},
-					{name='saps',amount = '+5'},
-					{name='bedding',amount = '+5'},
-					{name='raw-fiber',amount = '+5'},
-					{name='auog-food-01',amount ='+7'},
+					{name='saps', add_amount = 5},
+					{name='bedding',add_amount = 5},
+					{name='raw-fiber',add_amount = 5},
+					{name='auog-food-01',add_amount = 7},
 					{name='auog-food-02',amount =5},
 
 				},
@@ -88,7 +91,8 @@ fun.autorecipes {
 					{name = 'manure', amount_min = 10,amount_max = 20}
 				},
 			crafting_speed = 70,
-			tech = 'auog-mk03'
+			tech = 'auog-mk03',
+			main_product = 'auog-pup'
 		},
 		--py
 		{
@@ -96,8 +100,8 @@ fun.autorecipes {
 				{
 					{name='auog', amount='R'},
 					{name='auog', amount=14},
-					{name='saps',amount ='+10'},
-					{name='raw-fiber',amount = '+10'},
+					{name='saps', add_amount = 10},
+					{name='raw-fiber', add_amount = 10},
 				},
 			results =
 				{
@@ -109,7 +113,8 @@ fun.autorecipes {
 					{name = 'manure', amount_min = 20,amount_max = 30}
 				},
 			crafting_speed = 40,
-			tech = 'auog-mk04'
+			tech = 'auog-mk04',
+			main_product = 'auog-pup'
 		},
 	}
 }
@@ -165,7 +170,8 @@ fun.autorecipes {
 					{name = 'manure', amount_min = 5,amount_max = 12}
 				},
 			crafting_speed = 160,
-			tech = 'auog'
+			tech = 'auog',
+			main_product = 'auog'
 		},
 		--red
 		{
@@ -182,7 +188,8 @@ fun.autorecipes {
 					{name = 'manure', amount_min = 5,amount_max = 12}
 				},
 			crafting_speed = 130,
-			tech = 'auog'
+			tech = 'auog',
+			main_product = 'auog'
 		},
 		--green
 		{
@@ -201,7 +208,8 @@ fun.autorecipes {
 					{name = 'manure', amount_min = 7,amount_max = 14}
 				},
 			crafting_speed = 100,
-			tech = 'auog-mk02'
+			tech = 'auog-mk02',
+			main_product = 'auog'
 		},
 		--chem
 		{
@@ -224,7 +232,8 @@ fun.autorecipes {
 					{name = 'manure', amount_min = 10,amount_max = 20}
 				},
 			crafting_speed = 70,
-			tech = 'auog-mk03'
+			tech = 'auog-mk03',
+			main_product = 'auog'
 		},
 		--py
 		{
@@ -243,7 +252,8 @@ fun.autorecipes {
 					{name = 'manure', amount_min = 20,amount_max = 30}
 				},
 			crafting_speed = 40,
-			tech = 'auog-mk04'
+			tech = 'auog-mk04',
+			main_product = 'auog'
 		},
 	}
 }

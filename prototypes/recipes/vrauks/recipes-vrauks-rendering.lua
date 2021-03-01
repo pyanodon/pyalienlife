@@ -18,7 +18,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', amount = 3},
-					{name='formicacid', amount =200},
+					{name='formic-acid', amount =200},
 					{name='biomass',amount=4},
 				},
 			crafting_speed = 10,
@@ -41,16 +41,16 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='vrauks',amount='R'},
-					{name='cagedvrauks',amount=1},
+					{name='caged-vrauks',amount=1},
 				},
 			results =
 				{
 					--{name='bones', probability = 0.3,amount_min =1,amount_max =4},
 					{name='meat', probability = 0.4,amount_min =1,amount_max =2},
 					{name='chitin', probability = 0.2,amount_min =1,amount_max =1},
-					--{name='fat', probability = 0.3,amount_min =1,amount_max =1},
+					--{name='mukmoux-fat', probability = 0.3,amount_min =1,amount_max =1},
 					{name='guts', probability = 0.4,amount_min =1,amount_max =2},
-					{name='formicacid', amount =200},
+					{name='formic-acid', amount =200},
 					{name='cage',amount=1},
 					{name='brain', probability = 0.4,amount_min =1,amount_max =1},
 				},
@@ -64,16 +64,16 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedvrauks',amount=1},
+					--{name='caged-vrauks',amount=1},
 				},
 			results =
 				{
                     --{name='bones', amount ='R'},
 					{name='meat', amount ='R'},
 					{name='chitin', amount ='R'},
-					--{name='fat', amount ='R'},
+					--{name='mukmoux-fat', amount ='R'},
 					{name='guts', amount ='R'},
-					{name='formicacid', amount ='R'},
+					{name='formic-acid', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='meat', amount =2},
 				},
@@ -87,7 +87,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedvrauks',amount=1},
+					--{name='caged-vrauks',amount=1},
 				},
 			results =
 				{
@@ -104,7 +104,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedvrauks',amount=1},
+					--{name='caged-vrauks',amount=1},
 				},
 			results =
 				{
@@ -121,7 +121,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedvrauks',amount=1},
+					--{name='caged-vrauks',amount=1},
 				},
 			results =
 				{
@@ -134,16 +134,16 @@ fun.autorecipes {
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
 		},
-		--formicacid
+		--formic-acid
 		{
 			ingredients =
 				{
-					--{name='cagedvrauks',amount=1},
+					--{name='caged-vrauks',amount=1},
 				},
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='formicacid', amount =400},
+					{name='formic-acid', amount =400},
 				},
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
@@ -155,12 +155,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedvrauks',amount='R'},
-					{name='braincagedvrauks',amount=1},
+					{name='caged-vrauks',amount='R'},
+					{name='brain-caged-vrauks',amount=1},
 				},
 			results =
 				{
-					{name='formicacid', amount ='R'},
+					{name='formic-acid', amount ='R'},
 					{name='brain', amount =4},
 				},
 			crafting_speed = 15,
@@ -173,8 +173,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='braincagedvrauks',amount='R'},
-					{name='meatcagedvrauks',amount=1},
+					{name='brain-caged-vrauks',amount='R'},
+					{name='meat-caged-vrauks',amount=1},
 				},
 			results =
 				{
@@ -191,8 +191,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='meatcagedvrauks',amount='R'},
-					{name='gutscagedvrauks',amount=1},
+					{name='meat-caged-vrauks',amount='R'},
+					{name='guts-caged-vrauks',amount=1},
 				},
 			results =
 				{
@@ -209,8 +209,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gutscagedvrauks',amount='R'},
-					{name='skincagedvrauks',amount=1},
+					{name='guts-caged-vrauks',amount='R'},
+					{name='skin-caged-vrauks',amount=1},
 				},
 			results =
 				{

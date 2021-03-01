@@ -11,8 +11,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='ralesiaseeds',amount =5},
-					{name='waterbarrel',amount=5,return_item={name='empty-barrel'}},
+					{name='ralesia-seeds',amount =5},
+					{name='water-barrel',amount=5,return_item={name='empty-barrel'}},
 				},
 			results =
 				{
@@ -27,8 +27,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='ralesiaseeds',amount ='R'},
-					{name='ulricfood01'},
+					{name='ralesia-seeds',amount ='R'},
+					{name='ulric-food-01'},
 				},
 			results =
 				{
@@ -59,7 +59,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount =3},
+					{name='raw-fiber',amount =3},
 				},
 			results =
 				{
@@ -74,10 +74,10 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='salt',amount ='R'},
-					{name='rawfiber',amount ='R'},
-					{name='ulricfood01',amount ='R'},
+					{name='raw-fiber',amount ='R'},
+					{name='ulric-food-01',amount ='R'},
 					{name='bedding',amount ='R'},
-					{name='ulricfood02'},
+					{name='ulric-food-02'},
 				},
 			results =
 				{
@@ -106,7 +106,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount =3},
+					{name='raw-fiber',amount =3},
 				},
 			results =
 				{

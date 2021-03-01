@@ -12,9 +12,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='ralesiaseeds',amount =5},
+                    {name='ralesia-seeds',amount =5},
                     {name='fawogae',amount =15},
-					{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
+					{name='water-barrel',amount=6,return_item={name='empty-barrel',amount=6}},
 				},
 			results =
 				{
@@ -29,9 +29,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='ralesiaseeds',amount ='R'},
+					{name='ralesia-seeds',amount ='R'},
 					{name='fawogae',amount ='R'},
-					{name='mukmouxfood01'},
+					{name='mukmoux-food-01'},
 				},
 			results =
 				{
@@ -62,7 +62,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount =5},
+					{name='raw-fiber',amount =5},
 				},
 			results =
 				{
@@ -78,9 +78,9 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='salt',amount ='R'},
-					{name='rawfiber',amount ='R'},
-					{name='mukmouxfood01',amount ='R'},
-					{name='mukmouxfood02'},
+					{name='raw-fiber',amount ='R'},
+					{name='mukmoux-food-01',amount ='R'},
+					{name='mukmoux-food-02'},
 				},
 			results =
 				{
@@ -110,7 +110,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount =3},
+					{name='raw-fiber',amount =3},
 				},
 			results =
 				{

@@ -12,9 +12,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='woodseeds',amount =10},
+                    {name='wood-seeds',amount =10},
                     {name='meat',amount =4},
-					{name='waterbarrel',amount=5,return_item={name='empty-barrel'}},
+					{name='water-barrel',amount=5,return_item={name='empty-barrel'}},
 				},
 			results =
 				{
@@ -28,8 +28,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='woodseeds',amount ='R'},
-					{name='yotoileaves'},
+					--{name='wood-seeds',amount ='R'},
+					{name='yotoi-leaves'},
 				},
 			results =
 				{
@@ -87,7 +87,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount =10},
+					{name='raw-fiber',amount =10},
 				},
 			results =
 				{

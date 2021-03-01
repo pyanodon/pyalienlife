@@ -13,27 +13,27 @@ fun.autorecipes {
 				{
                     {name='biomass',amount =15},
                     {name='moss',amount =5},
+					{name='water-barrel',amount=3,return_item={name='empty-barrel',amount=3}},
+					{name='cage',amount=1},
 				},
 			results =
 				{
-					{name='vrauks', probability = 0.7,amount_min =1,amount_max =1},
+					{name='caged-vrauks', probability = 0.7,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 160,
-			--tech = 'vrauks'
+			tech = 'vrauks'
 		},
 		--food 1
 		{
 			ingredients =
 				{
 					{name='biomass',amount ='R'},
-					{name='vrauksfood01',amount =1},
-					{name='waterbarrel',amount=3,return_item={name='empty-barrel',amount=3}},
-					{name='cage',amount=1},
+					{name='vrauks-food-01',amount =1},
 				},
 			results =
 				{
-					{name='cagedvrauks',amount ='R'},
-					{name='cagedvrauks', probability = 0.8,amount_min =1,amount_max =1},
+					{name='caged-vrauks',amount ='R'},
+					{name='caged-vrauks', probability = 0.8,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 150,
 			tech = 'food-mk01'
@@ -69,16 +69,16 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='vrauksfood01',amount ='R'},
+					{name='vrauks-food-01',amount ='R'},
 					{name='saps',amount ='R'},
 					{name='fawogae',amount ='R'},
-					{name='vrauksfood02',amount =1},
+					{name='vrauks-food-02',amount =1},
 
 				},
 			results =
 				{
-					{name='cagedvrauks',amount ='R'},
-					{name='cagedvrauks', probability = 0.9,amount_min =1,amount_max =1},
+					{name='caged-vrauks',amount ='R'},
+					{name='caged-vrauks', probability = 0.9,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 120,
 			tech = 'food-mk02'
@@ -131,8 +131,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cagedvrauks', amount ='R'},
-					{name='cagedvrauks', probability = 1,amount_min =1,amount_max =2},
+					{name='caged-vrauks', amount ='R'},
+					{name='caged-vrauks', probability = 1,amount_min =1,amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -160,8 +160,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cagedvrauks', amount ='R'},
-					{name='braincagedvrauks',1},
+					{name='caged-vrauks', amount ='R'},
+					{name='brain-caged-vrauks',1},
 				},
 			crafting_speed = 90,
 			tech = 'nanochondria'
@@ -186,12 +186,12 @@ fun.autorecipes {
 				{
 					{name='gh',amount ='R'},
 					{name='nanochondria',amount ='R'},
-					{name='anabolicrna',amount =1},
+					{name='anabolic-rna',amount =1},
 				},
 			results =
 				{
-					{name='braincagedvrauks', amount ='R'},
-					{name='meatcagedvrauks', 1},
+					{name='brain-caged-vrauks', amount ='R'},
+					{name='meat-caged-vrauks', 1},
 				},
 			crafting_speed = 90,
 			tech = 'anabolic-rna'
@@ -215,13 +215,13 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='gh',amount ='R'},
-					{name='anabolicrna',amount ='R'},
+					{name='anabolic-rna',amount ='R'},
 					{name='antitumor',amount =1},
 				},
 			results =
 				{
-					{name='meatcagedvrauks', amount ='R'},
-					{name='gutscagedvrauks', 1},
+					{name='meat-caged-vrauks', amount ='R'},
+					{name='guts-caged-vrauks', 1},
 				},
 			crafting_speed = 90,
 			tech = 'antitumor'
@@ -245,13 +245,13 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='gh',amount ='R'},
-					{name='recombinantery',amount ='R'},
+					{name='recombinant-ery',amount ='R'},
 					{name='reca',amount =1},
 				},
 			results =
 				{
-					{name='gutscagedvrauks', amount ='R'},
-					{name='skincagedvrauks', 1},
+					{name='guts-caged-vrauks', amount ='R'},
+					{name='skin-caged-vrauks', 1},
 				},
 			crafting_speed = 90,
 			tech = 'reca'
@@ -287,7 +287,7 @@ fun.autorecipes {
 				{
                     {name='biomass',amount =15},
                     {name='moss',amount =10},
-					{name='waterbarrel',amount=4,return_item={name='empty-barrel',amount=4}},
+					{name='water-barrel',amount=4,return_item={name='empty-barrel',amount=4}},
 					{name='saps',amount = 3},
 				},
 			results =
@@ -302,7 +302,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='biomass',amount ='R'},
-					{name='vrauksfood01',amount =1},
+					{name='vrauks-food-01',amount =1},
 				},
 			results =
 				{
@@ -342,10 +342,10 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='vrauksfood01',amount ='R'},
+					{name='vrauks-food-01',amount ='R'},
 					{name='saps',amount ='R'},
 					{name='fawogae',amount ='R'},
-					{name='vrauksfood02',amount =1},
+					{name='vrauks-food-02',amount =1},
 
 				},
 			results =
@@ -387,10 +387,10 @@ fun.autorecipes {
 				{
 					{name='fawogae',amount = 'R'},
 					{name='saps',amount = 'R'},
-					{name='vrauksfood02',amount = 'R'},
+					{name='vrauks-food-02',amount = 'R'},
 					{name='biomass',amount =15},
 					{name='pheromones',amount =1},
-					--{name='waterbarrel',amount=6,return_item={name='empty-barrel',amount=6}},
+					--{name='water-barrel',amount=6,return_item={name='empty-barrel',amount=6}},
 					--{name='bedding',amount = 1},
 				},
 			results =
@@ -407,7 +407,7 @@ fun.autorecipes {
 				{
 
                     {name='biomass', amount = 'R'},
-					{name='vrauksfood01', amount = 1},
+					{name='vrauks-food-01', amount = 1},
 				},
 			results =
 				{
@@ -446,10 +446,10 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='vrauksfood01',amount ='R'},
+					{name='vrauks-food-01',amount ='R'},
 					{name='saps',amount ='R'},
 					{name='fawogae',amount ='R'},
-					{name='vrauksfood02',amount =1},
+					{name='vrauks-food-02',amount =1},
 
 				},
 			results =
@@ -492,33 +492,6 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'rendering',
-	category = 'vrauk-rendering',
-	--module_limitations = 'vrauks',
-	subgroup = 'py-alienlife-vrauks',
-	order = 'b',
-    mats =
-	{
-		{
-			ingredients =
-				{
-					{name='vrauks',amount=3},
-				},
-			results =
-				{
-					{name='meat', amount = 3},
-					{name='formicacid', amount =200},
-					{name='biomass',amount=4},
-				},
-			crafting_speed = 10,
-			name = 'Smashing Vrauks',
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-vrauks.png",
-			icon_size = 64,
-		}
-	}
-}
-
-fun.autorecipes {
-    name = 'rendering',
 	category = 'slaughterhouse-vrauks',
 	--module_limitations = 'vrauks',
 	subgroup = 'py-alienlife-vrauks',
@@ -528,33 +501,16 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='vrauks',amount=3},
-				},
-			results =
-				{
-					{name='meat', amount = 3},
-					{name='formicacid', amount =200},
-					{name='biomass',amount=4},
-				},
-			crafting_speed = 10,
-			name = 'Smashing Vrauks',
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-vrauks.png",
-			icon_size = 64,
-		},
-		{
-			ingredients =
-				{
-					{name='vrauks',amount='R'},
-					{name='cagedvrauks',amount=1},
+					{name='caged-vrauks',amount=1},
 				},
 			results =
 				{
 					--{name='bones', probability = 0.3,amount_min =1,amount_max =4},
 					{name='meat', probability = 0.4,amount_min =1,amount_max =2},
 					{name='chitin', probability = 0.2,amount_min =1,amount_max =1},
-					--{name='fat', probability = 0.3,amount_min =1,amount_max =1},
+					--{name='mukmoux-fat', probability = 0.3,amount_min =1,amount_max =1},
 					{name='guts', probability = 0.4,amount_min =1,amount_max =2},
-					{name='formicacid', amount =200},
+					{name='formic-acid', amount =200},
 					{name='cage',amount=1},
 					{name='brain', probability = 0.4,amount_min =1,amount_max =1},
 				},
@@ -568,16 +524,16 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedvrauks',amount=1},
+					--{name='caged-vrauks',amount=1},
 				},
 			results =
 				{
                     --{name='bones', amount ='R'},
 					{name='meat', amount ='R'},
 					{name='chitin', amount ='R'},
-					--{name='fat', amount ='R'},
+					--{name='mukmoux-fat', amount ='R'},
 					{name='guts', amount ='R'},
-					{name='formicacid', amount ='R'},
+					{name='formic-acid', amount ='R'},
 					{name='brain', amount ='R'},
 					{name='meat', amount =2},
 				},
@@ -591,7 +547,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedvrauks',amount=1},
+					--{name='caged-vrauks',amount=1},
 				},
 			results =
 				{
@@ -608,7 +564,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedvrauks',amount=1},
+					--{name='caged-vrauks',amount=1},
 				},
 			results =
 				{
@@ -625,7 +581,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedvrauks',amount=1},
+					--{name='caged-vrauks',amount=1},
 				},
 			results =
 				{
@@ -638,16 +594,16 @@ fun.autorecipes {
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
 		},
-		--formicacid
+		--formic-acid
 		{
 			ingredients =
 				{
-					--{name='cagedvrauks',amount=1},
+					--{name='caged-vrauks',amount=1},
 				},
 			results =
 				{
 					{name='guts', amount ='R'},
-					{name='formicacid', amount =400},
+					{name='formic-acid', amount =400},
 				},
 			crafting_speed = 15,
 			tech = 'advanced-rendering',
@@ -659,12 +615,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedvrauks',amount='R'},
-					{name='braincagedvrauks',amount=1},
+					{name='caged-vrauks',amount='R'},
+					{name='brain-caged-vrauks',amount=1},
 				},
 			results =
 				{
-					{name='formicacid', amount ='R'},
+					{name='formic-acid', amount ='R'},
 					{name='brain', amount =4},
 				},
 			crafting_speed = 15,
@@ -677,8 +633,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='braincagedvrauks',amount='R'},
-					{name='meatcagedvrauks',amount=1},
+					{name='brain-caged-vrauks',amount='R'},
+					{name='meat-caged-vrauks',amount=1},
 				},
 			results =
 				{
@@ -695,8 +651,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='meatcagedvrauks',amount='R'},
-					{name='gutscagedvrauks',amount=1},
+					{name='meat-caged-vrauks',amount='R'},
+					{name='guts-caged-vrauks',amount=1},
 				},
 			results =
 				{
@@ -713,8 +669,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gutscagedvrauks',amount='R'},
-					{name='skincagedvrauks',amount=1},
+					{name='guts-caged-vrauks',amount='R'},
+					{name='skin-caged-vrauks',amount=1},
 				},
 			results =
 				{

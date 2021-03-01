@@ -14,7 +14,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='ralesiaseeds'},
+					{name='ralesia-seeds'},
 					{name='water'},
 				},
 			results =
@@ -60,7 +60,7 @@ fun.autorecipes {
 					{name='water',amount ='R'},
 					{name='hydrogen',amount ='R'},
                     {name='syngas',amount = 100},
-					{name='fluegas',amount = 50},
+					{name='flue-gas',amount = 50},
 				},
 			results =
 				{

@@ -12,16 +12,16 @@ local fun = require("prototypes/functions/functions")
 		{
 			ingredients =
 				{
-					{name='auogpup',amount =1},
-					{name = 'fetalserum', amount = 50},
+					{name='auog-pup',amount =1},
+					{name = 'fetal-serum', amount = 50},
 					{name='antiviral',amount =1},
 					{name='nanochondria',amount =1},
 					--{name='antiviral',amount ='R'},
 				},
 			results =
 				{
-					{name='cagedauog', amount ='R'},
-					{name='braincagedauog',1},
+					{name='caged-auog', amount ='R'},
+					{name='brain-caged-auog',1},
 				},
 			crafting_speed = 90,
 			tech = 'nanochondria'
@@ -49,8 +49,8 @@ local fun = require("prototypes/functions/functions")
 				},
 			results =
 				{
-					{name='braincagedauog', amount ='R'},
-					{name='bonecagedauog', 1},
+					{name='brain-caged-auog', amount ='R'},
+					{name='bone-caged-auog', 1},
 				},
 			crafting_speed = 90,
 			tech = 'bmp'
@@ -76,12 +76,12 @@ local fun = require("prototypes/functions/functions")
 				{
 					{name='gh',amount ='R'},
 					{name='bmp',amount ='R'},
-					{name='anabolicrna',amount =1},
+					{name='anabolic-rna',amount =1},
 				},
 			results =
 				{
-					{name='bonecagedauog', amount ='R'},
-					{name='meatcagedauog', 1},
+					{name='bone-caged-auog', amount ='R'},
+					{name='meat-caged-auog', 1},
 				},
 			crafting_speed = 90,
 			tech = 'anabolic-rna'
@@ -105,13 +105,13 @@ local fun = require("prototypes/functions/functions")
 			ingredients =
 				{
 					{name='gh',amount ='R'},
-					{name='anabolicrna',amount ='R'},
+					{name='anabolic-rna',amount ='R'},
 					{name='antitumor',amount =1},
 				},
 			results =
 				{
-					{name='meatcagedauog', amount ='R'},
-					{name='gutscagedauog', 1},
+					{name='meat-caged-auog', amount ='R'},
+					{name='guts-caged-auog', 1},
 				},
 			crafting_speed = 90,
 			tech = 'antitumor'
@@ -136,12 +136,12 @@ local fun = require("prototypes/functions/functions")
 				{
 					{name='gh',amount ='R'},
 					{name='antitumor',amount ='R'},
-					{name='recombinantery',amount =1},
+					{name='recombinant-ery',amount =1},
 				},
 			results =
 				{
-					{name='gutscagedauog', amount ='R'},
-					{name='bloodcagedauog', 1},
+					{name='guts-caged-auog', amount ='R'},
+					{name='blood-caged-auog', 1},
 				},
 			crafting_speed = 90,
 			tech = 'recombinant-ery'
@@ -164,13 +164,13 @@ local fun = require("prototypes/functions/functions")
 			ingredients =
 				{
 					{name='gh',amount ='R'},
-					{name='recombinantery',amount ='R'},
+					{name='recombinant-ery',amount ='R'},
 					{name='reca',amount =1},
 				},
 			results =
 				{
-					{name='bloodcagedauog', amount ='R'},
-					{name='skincagedauog', 1},
+					{name='blood-caged-auog', amount ='R'},
+					{name='skin-caged-auog', 1},
 				},
 			crafting_speed = 90,
 			tech = 'reca'
@@ -198,8 +198,8 @@ local fun = require("prototypes/functions/functions")
 				},
 			results =
 				{
-					{name='skincagedauog', amount ='R'},
-					{name='fatcagedauog', 1},
+					{name='skin-caged-auog', amount ='R'},
+					{name='fat-caged-auog', 1},
 				},
 			crafting_speed = 90,
 			tech = 'orexigenic'
@@ -233,11 +233,11 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='braincagedauog',amount=2},
+					{name='brain-caged-auog',amount=2},
 				},
 			results =
 				{
-					{name='fat', amount ='R'},
+					{name='mukmoux-fat', amount ='R'},
 					{name='brain', amount =8},
 					{name='cage',amount = 1}
 				},
@@ -251,8 +251,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='braincagedauog',amount='R'},
-					{name='bonecagedauog',amount=1},
+					{name='brain-caged-auog',amount='R'},
+					{name='bone-caged-auog',amount=1},
 				},
 			results =
 				{
@@ -286,8 +286,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='bonecagedauog',amount='R'},
-					{name='meatcagedauog',amount=1},
+					{name='bone-caged-auog',amount='R'},
+					{name='meat-caged-auog',amount=1},
 				},
 			results =
 				{
@@ -304,8 +304,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='meatcagedauog',amount='R'},
-					{name='gutscagedauog',amount=1},
+					{name='meat-caged-auog',amount='R'},
+					{name='guts-caged-auog',amount=1},
 				},
 			results =
 				{
@@ -322,8 +322,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gutscagedauog',amount='R'},
-					{name='bloodcagedauog',amount=1},
+					{name='guts-caged-auog',amount='R'},
+					{name='blood-caged-auog',amount=1},
 				},
 			results =
 				{
@@ -340,8 +340,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='bloodcagedauog',amount='R'},
-					{name='skincagedauog',amount=1},
+					{name='blood-caged-auog',amount='R'},
+					{name='skin-caged-auog',amount=1},
 				},
 			results =
 				{
@@ -358,13 +358,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='skincagedauog',amount='R'},
-					{name='fatcagedauog',amount=1},
+					{name='skin-caged-auog',amount='R'},
+					{name='fat-caged-auog',amount=1},
 				},
 			results =
 				{
 					{name='skin', amount ='R'},
-					{name='fat', amount =10},
+					{name='mukmoux-fat', amount =10},
 				},
 			crafting_speed = 15,
 			tech = 'orexigenic',

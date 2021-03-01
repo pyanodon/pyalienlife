@@ -14,12 +14,12 @@ fun.autorecipes {
 				{
                     {name='bhoddos',amount =2},
                     {name='tuuphra',amount =5},
-                    {name='emptybarrelmilk',amount =1},
-					{name='waterbarrel',amount=10,return_item={name='empty-barrel',amount=10}},
+                    {name='empty-barrel-milk',amount =1},
+					{name='water-barrel',amount=10,return_item={name='empty-barrel',amount=10}},
 				},
 			results =
 				{
-					{name='milkbarrel',amount =1},
+					{name='milk-barrel',amount =1},
 				},
 			crafting_speed = 100,
 			tech = 'korlex',
@@ -32,12 +32,12 @@ fun.autorecipes {
 				{
 					{name='bhoddos',amount ='R'},
 					{name='tuuphra',amount ='R'},
-					{name='korlexfood01'},
+					{name='korlex-food-01'},
 				},
 			results =
 				{
 					--{'a','*5'}
-					--{name='milkbarrel',amount ='+2'}
+					--{name='milk-barrel',amount ='+2'}
 				},
 			crafting_speed = 80,
 			tech = 'korlex',
@@ -49,12 +49,12 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='ash',amount =10},
-                    {name='emptybarrelmilk',amount ='+1'},
+                    {name='empty-barrel-milk',amount ='+1'},
 				},
 			results =
 				{
 					--{'a','*5'}
-					{name='milkbarrel',amount ='+1'}
+					{name='milk-barrel',amount ='+1'}
 				},
 				crafting_speed = 80,
 				tech = 'korlex-mk02',
@@ -65,12 +65,12 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='fish',amount =5},
-                    {name='emptybarrelmilk',amount ='+2'},
+                    {name='empty-barrel-milk',amount ='+2'},
 				},
 			results =
 				{
 					--{'a','*5'}
-					{name='milkbarrel',amount ='+2'}
+					{name='milk-barrel',amount ='+2'}
 				},
 				crafting_speed = 80,
 				tech = 'korlex-mk02',
@@ -82,14 +82,14 @@ fun.autorecipes {
 				{
 					{name='ash',amount ='R'},
 					{name='fish',amount ='R'},
-					{name='korlexfood01',amount ='R'},
-                    {name='korlexfood02'},
-                    {name='emptybarrelmilk',amount ='+3'},
+					{name='korlex-food-01',amount ='R'},
+                    {name='korlex-food-02'},
+                    {name='empty-barrel-milk',amount ='+3'},
 				},
 			results =
 				{
 					--{'a','*5'}
-					{name='milkbarrel',amount ='+3'}
+					{name='milk-barrel',amount ='+3'}
 				},
 				crafting_speed = 60,
 				tech = 'korlex-mk03',
@@ -100,12 +100,12 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='ash',amount =4},
-                    {name='emptybarrelmilk',amount ='+1'},
+                    {name='empty-barrel-milk',amount ='+1'},
 				},
 			results =
 				{
 					--{'a','*5'}
-					{name='milkbarrel',amount ='+1'}
+					{name='milk-barrel',amount ='+1'}
 				},
 				crafting_speed = 60,
 				tech = 'korlex-mk03',
@@ -116,12 +116,12 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='fish',amount =5},
-                    {name='emptybarrelmilk',amount ='+2'},
+                    {name='empty-barrel-milk',amount ='+2'},
 				},
 			results =
 				{
 					--{'a','*5'}
-					{name='milkbarrel',amount ='+2'}
+					{name='milk-barrel',amount ='+2'}
 				},
 				crafting_speed = 60,
 				tech = 'korlex-mk04',

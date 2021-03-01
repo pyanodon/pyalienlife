@@ -12,9 +12,9 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='meat',amount =15},
-					{name='waterbarrel',amount=4,return_item={name='empty-barrel',amount=4}},
-                    {name='speaker',amount=1},
-                    {name='smalllamp',amount=2},
+					{name='water-barrel',amount=4,return_item={name='empty-barrel',amount=4}},
+                    {name='programmable-speaker',amount=1},
+                    {name='small-lamp',amount=2},
 				},
 			results =
 				{
@@ -29,7 +29,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='fawogae',amount =4},
-					{name='phadaifood01'},
+					{name='phadai-food-01'},
 				},
 			results =
 				{
@@ -58,7 +58,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='energydrink',amount =4},
+					{name='energy-drink',amount =4},
 				},
 			results =
 				{
@@ -72,10 +72,10 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='energydrink',amount ='R'},
+                    {name='energy-drink',amount ='R'},
                     {name='bedding',amount ='R'},
-					{name='phadaifood01',amount ='R'},
-					{name='phadaifood02'},
+					{name='phadai-food-01',amount ='R'},
+					{name='phadai-food-02'},
 				},
 			results =
 				{
@@ -103,7 +103,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='energydrink',amount =4},
+					{name='energy-drink',amount =4},
 				},
 			results =
 				{

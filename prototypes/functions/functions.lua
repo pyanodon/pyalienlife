@@ -938,67 +938,108 @@ function overrides.tech_add_prerequisites(tech, prereq)
     end
 end
 
-function add_amount(new_input,previous_input)
-    --add new amount to old amount
-    new_input.amount = new_input.amount + previous_input
+function modify_recipe_tables(item,items_table,previous_item_names, result_table)
+    --process both result and ingredient tables
+    --log(serpent.block(item))
+    --log(serpent.block(items_table))
 
+        local name = item.name
+        --log(name)
+
+        if previous_item_names[name] ~= true then
+            --log('hit')
+            --add new ingredient to table
+
+            --setting ingredient type
+            local item_type
+            if data.raw.item[name] ~= nil or data.raw.module[name] ~= nil then
+                item_type = 'item'
+            elseif data.raw.fluid[name] ~= nil then
+                item_type = 'fluid'
+            end
+            item.type = item_type
+
+            --add return item to results if it exists
+            local return_item
+            if item.return_item ~= nil then
+                local item_type
+                local name = item.return_item.name
+                local amount = item.return_item.amount
+                if data.raw.item[name] ~= nil or data.raw.module[name] ~= nil then
+                    item_type = 'item'
+                elseif data.raw.fluid[name] ~= nil then
+                    item_type = 'fluid'
+                end
+                return_item = {type = item_type, name = name, amount = amount}
+                table.insert(result_table, return_item)
+            end
+
+           if item.amount ~= nil then
+                if type(item.amount) == "string" and string.match(item.amount, 'R') ~= nil then
+                    for i, it in pairs(items_table) do
+                        it = nil
+                    end
+                elseif type(item.amount) == "number" then
+                    --insert new ingredient
+                    --log(serpent.block(items_table))
+                    --log(serpent.block(item))
+                    table.insert(items_table, item)
+                end
+            end
+        elseif previous_item_names[item.name] == true then
+            --alter existing ingredient
+            if item.amount == nil then
+                if item.add_amount ~= nil then
+                    --adding ingredient amount
+                    for p, pre in pairs(items_table) do
+                        if pre.name == name then
+                            pre.amount = item.add_amount + pre.amount
+                        end
+                    end
+                end
+            end
+        end
 end
 
 --handles all adjustments for each ingredient and result changes in autorecipe
 function recipe_item_builder(ingredients,results,previous_ingredients,previous_results)
+    local ing_table = table.deepcopy(previous_ingredients)
+    local result_table = table.deepcopy(previous_results)
+
+    --add old ingredient names to table
+    local previous_ingredient_names = {}
+    for p, pre in pairs(previous_ingredients) do
+        if previous_ingredient_names[pre.name] ~= true then
+            previous_ingredient_names[pre.name] = true
+        end
+    end
+
+    --add old result names to table
+    local previous_result_names = {}
+    for p, pre in pairs(previous_results) do
+        if previous_result_names[pre.name] ~= true then
+            previous_result_names[pre.name] = true
+        end
+    end
 
     --add return items to results before saving them and adding to the recipe
     for i, ing in pairs(ingredients) do
-
-        --setting ingredient type
-        table.insert(ing, type)
-        local type
-        if data.raw.item[name] ~= nil or data.raw.module[name] ~= nil then
-            type = 'item'
-        elseif data.raw.fluid[name] ~= nil then
-            type = 'fluid'
-        end
-        ing.type = type
-
-        --add return item to results if it exists
-        local return_item
-        if ing.return_item ~= nil then
-            local type
-            local name = ing.return_item.name
-            local amount = ing.return_item.amount
-            if data.raw.item[name] ~= nil or data.raw.module[name] ~= nil then
-                type = 'item'
-            elseif data.raw.fluid[name] ~= nil then
-                type = 'fluid'
-            end
-            return_item = {type = type, name = name, amount = amount}
-            table.insert(results, return_item)
-        end
-
-        --adding ingredient amount
-        if ing.add_amount ~= nil then
-            local old_amount
-            for o, old in pairs(previous_ingredients) do
-                if old.name == ing.name then
-                    old_amount = old.amount
-                end
-            end
-            add_amount(ing, old_amount)
-        end
-
+       modify_recipe_tables(ing, ing_table, previous_ingredient_names, result_table)
     end
 
     for r, result in pairs(results) do
-        -- statements
+       modify_recipe_tables(result, result_table,previous_result_names)
     end
+    --log(serpent.block(ing_table))
 
-    return ingredients, results
+    return ing_table, result_table
 end
 
 function overrides.autorecipes(recipe)
     -- log('hit')
     --main details for all recipes
     local name = recipe.name
+    --log(name)
         --default name for recipes if recipe doesnt provide an override
     local numbered_name
     local category = recipe.category
@@ -1015,16 +1056,16 @@ function overrides.autorecipes(recipe)
         --new ingredients
     local ingredients
         --old ingredients from last recipe carried over
-    local previous_ingredients
+    local previous_ingredients = {}
         --new results
     local results
         --old results from last recipe carried over
-    local previous_results
+    local previous_results = {}
 
     --recipe building
     for r, rec in pairs(mats) do
         ingredients = rec.ingredients
-        results = rec.ingredients
+        results = rec.results
         --variable to set if recipe is enabled
         local enabled
         --tech name
@@ -1037,37 +1078,54 @@ function overrides.autorecipes(recipe)
             tech = rec.tech
         end
 
-        log(serpent.block(ingredients))
-        log(serpent.block(results))
+        --log(serpent.block(ingredients))
+        --log(serpent.block(results))
         --process ingredients and results get return version with changes
-        ingredients, results = recipe_item_builder(ingredients, results, previous_ingredients, previous_results)
+        local fixed_ingredients, fixed_results = recipe_item_builder(ingredients, results, previous_ingredients, previous_results)
 
-        log(serpent.block(ingredients))
-        log(serpent.block(results))
+        --log(serpent.block(fixed_ingredients))
+        --log(serpent.block(fixed_results))
 
         --save ingredients and results for next recipe
-        previous_ingredients = ingredients
-        previous_results = results
+        previous_ingredients = fixed_ingredients
+        --log(serpent.block(previous_ingredients))
+        previous_results = fixed_results
+
+        local number
+        for i = 1, 50 do
+            number = i
+            numbered_name = name .. '-' .. number
+            if data.raw.recipe[numbered_name] == nil then
+                break
+            end
+        end
 
         --build recipe with stdlib recipe builder
         RECIPE{
             type = 'recipe',
-            name = na,
+            name = numbered_name,
             category = category,
             enabled = enabled,
-            energy_required = crafting_speed,
-            ingredients = ingredients,
+            energy_required = rec.crafting_speed,
+            ingredients = fixed_ingredients,
             results = results,
             subgroup = subgroup,
             order = order,
             -- main_product = results[1].name,
             -- icon = mat.icon
-            localised_name = mat.name
+            --localised_name = rec.name
         }
 
-        if tech ~= nil then
-            RECIPE(na):add_unlock(tech)
+        if rec.tech ~= nil then
+            RECIPE(numbered_name):add_unlock(rec.tech)
         end
+        if rec.name ~= nil then
+            data.raw.recipe[numbered_name].localised_name = rec.name
+        end
+        if rec.main_product ~= nil then
+            data.raw.recipe[numbered_name].main_product = rec.main_product
+        end
+        --log(serpent.block(data.raw.recipe[numbered_name]))
     end
 
 end

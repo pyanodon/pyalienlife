@@ -30,8 +30,8 @@ fun.autorecipes {
 					{name='biomass',amount ='R'},
 					{name = 'cocoon', amount = '+3'},
 					{name='moss',amount = '+5'},
-					{name='vrauksfood01',amount =3},
-					{name='waterbarrel',amount=3,return_item={name='empty-barrel',amount=3}},
+					{name='vrauks-food-01',amount =3},
+					{name='water-barrel',amount=3,return_item={name='empty-barrel',amount=3}},
 					{name='saps',amount = 10},
 					{name='fawogae',amount = 5},
 				},
@@ -48,7 +48,7 @@ fun.autorecipes {
 				{
 					{name = 'cocoon', amount = '+8'},
 					{name='bedding',amount = 1},
-					{name='vrauksfood02',amount =4},
+					{name='vrauks-food-02',amount =4},
 					{name='saps',amount = '+10'},
 					{name='fawogae',amount = '+5'},
 
@@ -68,7 +68,7 @@ fun.autorecipes {
 					{name='cocoon',amount = '+10'},
 					{name='bedding',amount = '+5'},
 					{name='honeycomb', amount = 4},
-					{name='syrupbarrel',amount=2,return_item={name='empty-barrel',amount=2}},
+					{name='syrup-01-barrel',amount=2,return_item={name='empty-barrel',amount=2}},
 				},
 			results =
 				{
@@ -83,8 +83,8 @@ fun.autorecipes {
 				{
 					{name='cocoon',amount = '+10'},
 					{name='bedding',amount = '+5'},
-					{name='vrauksfood01',amount ='+7'},
-					{name='vrauksfood02',amount ='+6'},
+					{name='vrauks-food-01',amount ='+7'},
+					{name='vrauks-food-02',amount ='+6'},
 				},
 			results =
 				{
@@ -112,7 +112,7 @@ fun.autorecipes {
 				{
                     {name='vrauks',amount =2},
                     {name='moss',amount =10},
-					{name='waterbarrel',amount=4,return_item={name='empty-barrel',amount=4}},
+					{name='water-barrel',amount=4,return_item={name='empty-barrel',amount=4}},
 					{name='saps',amount = 3},
 				},
 			results =
@@ -128,7 +128,7 @@ fun.autorecipes {
 				{
 					{name='vrauks',amount ='+2'},
                     {name='biomass',amount = 10},
-					{name='vrauksfood01',amount =2},
+					{name='vrauks-food-01',amount =2},
 				},
 			results =
 				{
@@ -143,7 +143,7 @@ fun.autorecipes {
 				{
 					{name='vrauks',amount ='+2'},
 					{name='bedding',amount = 3},
-					{name='vrauksfood02',amount =4},
+					{name='vrauks-food-02',amount =4},
 					{name='saps',amount = '+7'},
 				},
 			results =
@@ -158,11 +158,11 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='vrauks',amount ='+2'},
-					{name='vrauksfood01',amount ='+5'},
-					{name='vrauksfood02',amount ='+8'},
+					{name='vrauks-food-01',amount ='+5'},
+					{name='vrauks-food-02',amount ='+8'},
 					{name='bedding',amount = '+5'},
 					{name='honeycomb', amount = 4},
-					{name='syrupbarrel',amount=2,return_item={name='empty-barrel',amount=2}},
+					{name='syrup-01-barrel',amount=2,return_item={name='empty-barrel',amount=2}},
 					{name='fawogae',amount = 5},
 				},
 			results =
@@ -177,8 +177,8 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='vrauks',amount ='+2'},
-					{name='vrauksfood01',amount ='+5'},
-					{name='vrauksfood02',amount ='+8'},
+					{name='vrauks-food-01',amount ='+5'},
+					{name='vrauks-food-02',amount ='+8'},
 					{name='bedding',amount = '+5'},
 
 				},

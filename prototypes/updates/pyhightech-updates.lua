@@ -8,21 +8,24 @@ require('prototypes/recipes/recipes-auto-kicalk')
 require('prototypes/ores/arum')
 require('prototypes/technologies/mega-farm-cadaveric-arum')
 require('prototypes/technologies/cadaveric-arum')
+
 require('prototypes/recipes/recipes-arum-megafarm')
 require('prototypes/recipes/recipes-cadaveric')
-require('prototypes/recipes/recipes-auto-cadaveric')
-require("prototypes/buildings/cadavericarum-mk01")
-require("prototypes/buildings/cadavericarum-mk02")
-require("prototypes/buildings/cadavericarum-mk03")
-require("prototypes/buildings/cadavericarum-mk04")
+--require('prototypes/recipes/recipes-auto-cadaveric')
+
+require("prototypes/buildings/cadaveric-arum-mk01")
+require("prototypes/buildings/cadaveric-arum-mk02")
+require("prototypes/buildings/cadaveric-arum-mk03")
+require("prototypes/buildings/cadaveric-arum-mk04")
 require("prototypes/buildings/kicalk-plantation-mk01")
 require("prototypes/buildings/kicalk-plantation-mk02")
 require("prototypes/buildings/kicalk-plantation-mk03")
 require("prototypes/buildings/kicalk-plantation-mk04")
+
 require('prototypes/technologies/moondrop')
 require('prototypes/recipes/recipes-moondrop')
-require('prototypes/recipes/recipes-auto-moondrop')
-require('prototypes/recipes/recipes-auto-moondrop-1')
+--require('prototypes/recipes/recipes-auto-moondrop')
+--require('prototypes/recipes/recipes-auto-moondrop-1')
 
 --TECHNOLOGY--
 TECHNOLOGY('nano-tech'):add_prereq('microbiology-mk03')
@@ -40,7 +43,7 @@ TECHNOLOGY('penrose'):add_pack('py-science-pack')
 TECHNOLOGY('quantum'):add_pack('py-science-pack')
 
 require('prototypes/recipes/recipes-antelope')
-require('prototypes/recipes/recipes-auto-antelope')
+--require('prototypes/recipes/recipes-auto-antelope')
 
 --adjusting win condition to need q computer
 

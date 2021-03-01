@@ -14,7 +14,7 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    {name='kicalkseeds',amount = 15},
+                    {name='kicalk-seeds',amount = 15},
                     {name='clay',amount = 4},
 				},
 			results =
@@ -30,7 +30,7 @@ fun.autorecipes {
 				{
                     {name='water',amount = 500},
 					{name='sand',amount = 10},
-                    {name='smalllamp',amount = 1},
+                    {name='small-lamp',amount = 1},
 				},
 			results =
 				{
@@ -46,7 +46,7 @@ fun.autorecipes {
                     {name='fertilizer',amount = 5},
 					{name='ash',amount = 10},
 					{name='biomass',amount = 10},
-					{name='carbondioxide',amount = 150},
+					{name='carbon-dioxide',amount = 150},
 				},
 			results =
 				{
@@ -59,9 +59,9 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-					{name='pesticide01',amount ='+1'},
-					{name='carbondioxide',amount = 'R'},
-                    {name='fluegas',amount = 100},
+					{name='pesticide-mk01',amount ='+1'},
+					{name='carbon-dioxide',amount = 'R'},
+                    {name='flue-gas',amount = 100},
 				},
 			results =
 				{
@@ -76,7 +76,7 @@ fun.autorecipes {
 				{
 					{name='fertilizer',amount = '+6'},
 					{name='water',amount = 'R'},
-					{name = 'phosphorousacid', amount = 50, fallback = 'nitrogen'},
+					{name = 'phosphorous-acid', amount = 50, fallback = 'nitrogen'},
 					{name='biomass',amount = '+10'},
 					{name='clay',amount = '+11'},
 				},

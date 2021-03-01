@@ -13,7 +13,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='moondropseeds'},
+					{name='moondrop-seeds'},
 					{name='water'},
 				},
 			results =
@@ -28,7 +28,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='moondropseeds',amount= '+3'},
+                    {name='moondrop-seeds',amount= '+3'},
 					{name='hydrogen',amount = 100},
                     {name='soil',amount = 20},
 				},
@@ -45,7 +45,7 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    {name='moondropseeds',amount= '+4'},
+                    {name='moondrop-seeds',amount= '+4'},
 					{name='ash',amount = 10},
 					{name='fertilizer',amount = 10},
                     {name='biomass',amount = 8},
@@ -64,10 +64,10 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    {name='moondropseeds',amount='+6'},
+                    {name='moondrop-seeds',amount='+6'},
 					{name='water',amount ='R'},
                     {name='syngas',amount = 60},
-                    {name='pesticide01',amount = 2},
+                    {name='pesticide-mk01',amount = 2},
 				    {name='hydrogen',amount ='R'},
 					{name='gasoline',amount = 40},
                 },
@@ -83,7 +83,7 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    {name='moondropseeds',amount='+12'},
+                    {name='moondrop-seeds',amount='+12'},
                     {name='fertilizer',amount = '+5'},
                     {name='syngas',amount ='R'},
 					{name = 'refinedsyngas', amount = 30},

@@ -2,26 +2,25 @@
 local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
-    name = 'manure-b',
-	category = 'auog',
-	subgroup = 'py-alienlife-auog',
-	module_limitations = 'auog',
+    name = 'guano',
+	category = 'vrauks',
+	subgroup = 'py-alienlife-vrauks',
+	module_limitations = 'vrauks',
     mats =
 	{
 		{
 			ingredients =
 				{
                     {name='moss',amount =10},
-                    {name='biomass',amount =10},
-					{name='waterbarrel',amount=3,return_item={name='empty-barrel',amount=3}},
+                    {name='wood',amount =10},
 				},
 			results =
 				{
-					{name='manure',amount ='*5'},
+					{name='guano',amount =5},
 				},
 			crafting_speed = 80,
-			tech = 'explosive-diarrhea',
-			name = 'auog-manure-1b',
+			tech = 'vrauks',
+			name = 'vrauks-guano-1',
 			--icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk01.png"
 		},
 		{
@@ -29,16 +28,16 @@ fun.autorecipes {
 				{
                     {name='moss',amount ='R'},
                     {name='biomass',amount ='R'},
-					{name='auogfood01'},
+					{name='vrauks-food-01'},
 				},
 			results =
 				{
 					--{'a','*5'}
-					{name='manure',amount ='+2'}
+					{name='guano',amount ='+2'}
 				},
 			crafting_speed = 70,
-			tech = 'explosive-diarrhea',
-			name = 'auog-manure-2b',
+			tech = 'vrauks',
+			name = 'vrauks-guano-2',
 			--icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk01.png"
 		},
 		{
@@ -50,43 +49,43 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='manure',amount ='+6'}
+					{name='guano',amount ='+6'}
 				},
 				crafting_speed = 50,
-				tech = 'explosive-diarrhea',
-				name = 'auog-manure-3b',
+				tech = 'vrauks-mk02',
+				name = 'vrauks-guano-3',
 		},
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount =3},
+					{name='raw-fiber',amount =3},
 				},
 			results =
 				{
 					--{'a','*5'}
-					{name='manure',amount ='+2'}
+					{name='guano',amount ='+2'}
 				},
 				crafting_speed = 45,
-				tech = 'explosive-diarrhea',
-				name = 'auog-manure-4b',
+				tech = 'vrauks-mk03',
+				name = 'vrauks-guano-4',
 		},
 		{
 			ingredients =
 				{
 					{name='salt',amount ='R'},
-					{name='rawfiber',amount ='R'},
-					{name='auogfood01',amount ='R'},
+					{name='raw-fiber',amount ='R'},
+					{name='vrauks-food-01',amount ='R'},
 					{name='bedding',amount ='R'},
-					{name='auogfood02'},
+					{name='vrauks-food-02'},
 				},
 			results =
 				{
 					--{'a','*5'}
-					{name='manure',amount ='+6'}
+					{name='guano',amount ='+6'}
 				},
 				crafting_speed = 40,
-				tech = 'explosive-diarrhea',
-				name = 'auog-manure-5b',
+				tech = 'vrauks-mk03',
+				name = 'vrauks-guano-5',
 		},
 		{
 			ingredients =
@@ -97,25 +96,25 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='manure',amount ='+6'}
+					{name='guano',amount ='+6'}
 				},
 				crafting_speed = 25,
-				tech = 'explosive-diarrhea',
-				name = 'auog-manure-6b',
+				tech = 'vrauks-mk04',
+				name = 'vrauks-guano-6',
 		},
 		{
 			ingredients =
 				{
-					{name='rawfiber',amount =3},
+					{name='raw-fiber',amount =3},
 				},
 			results =
 				{
 					--{'a','*5'}
-					{name='manure',amount ='+4'}
+					{name='guano',amount ='+2'}
 				},
 				crafting_speed = 20,
-				tech = 'explosive-diarrhea',
-				name = 'auog-manure-7b',
+				tech = 'vrauks-mk04',
+				name = 'vrauks-guano-7',
 		},
 	}
 }

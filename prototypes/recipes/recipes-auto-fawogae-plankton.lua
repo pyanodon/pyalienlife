@@ -14,7 +14,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fawogaespore',amount =3},
+					{name='fawogae-spore',amount =3},
 				},
 			results =
 				{
@@ -29,7 +29,7 @@ fun.autorecipes {
 				{
 					{name='phytoplankton',amount ='*10'},
 					{name='fertilizer',amount =3},
-					{name='fungalsubstrate',amount =1},
+					{name='fungal-substrate',amount =1},
 				},
 			results =
 				{
@@ -43,8 +43,8 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-					{name='fungalsubstrate',amount ='R'},
-					{name='fungalsubstrate02',amount = 1},
+					{name='fungal-substrate',amount ='R'},
+					{name='fungal-substrate-02',amount = 1},
 					{name='fertilizer',amount = '+3'},
                     {name='biomass',amount = 3},
 				},
@@ -60,8 +60,8 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-					{name='fungalsubstrate02',amount ='R'},
-					{name='fungalsubstrate03',amount =1},
+					{name='fungal-substrate-02',amount ='R'},
+					{name='fungal-substrate-03',amount =1},
 					{name='fertilizer',amount = '+3'},
                     {name='biomass',amount = '+3'},
 				},
