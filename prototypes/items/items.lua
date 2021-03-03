@@ -5259,28 +5259,10 @@ ITEM {
 ---CREATURES---
     local alien_life_limitations_tree =
     {
-        'log1',
-        'log2',
-        'log3',
-        'log4',
-        'log5',
-        'log6',
-        'log7',
-        'log8',
-        'tree'
     }
-
-    if mods['pyhightech'] then
-        table.insert(alien_life_limitations_tree, 'log7-2')
-    end
 
     local alien_life_limitations_seaweed =
 	{
-        'seaweed',
-        'seaweed-2',
-        'seaweed-3',
-        'seaweed-4',
-        'seaweed-5',
 	}
 
     local alien_life_limitations_moss =
@@ -5289,9 +5271,6 @@ ITEM {
 
     local alien_life_limitations_sap =
 	{
-        'sap-seeds',
-        'sap-tree',
-        'sap-01'
     }
 
     local alien_life_limitations_ulric =
@@ -5328,9 +5307,6 @@ ITEM {
 
     local alien_life_limitations_fish =
 	{
-        'fish-mk02',
-        'fish-mk03',
-        'fish-mk04'
     }
 
     local alien_life_limitations_phagnot =
@@ -5380,8 +5356,6 @@ ITEM {
 ---PLANTS---
 local alien_life_limitations_sponge =
 	{
-	"sea-sponge-1",
-    "sea-sponge-2",
     }
 
     local alien_life_limitations_ralesia =
@@ -5426,9 +5400,6 @@ local alien_life_limitations_yaedols =
 
 local alien_life_limitations_fawogae =
 	{
-	'fawogae-mk02',
-	'fawogae-mk03',
-	'fawogae-mk04'
     }
 
 local alien_life_limitations_moondrop =
