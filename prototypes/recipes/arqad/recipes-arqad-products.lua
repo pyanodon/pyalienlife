@@ -6,121 +6,98 @@ fun.autorecipes {
 	category = 'arqad',
 	subgroup = 'py-alienlife-arqad',
 	module_limitations = 'arqad',
+	upgrades =
+		{
+			{
+				tech = 'pheromone-transition',
+				ingredient_changes =
+				{
+					{name = 'empty-comb', add_amount = 3}
+				},
+				result_changes =
+				{
+					{name = 'comb', add_amount = 3}
+				},
+			},
+			{
+				tech = 'diversified-mycoaccretion',
+				ingredient_changes =
+				{
+					{name = 'empty-comb', add_amount = 3}
+				},
+				result_changes =
+				{
+					{name = 'comb', add_amount = 3}
+				},
+			},
+		},
     mats =
 	{
+		--red
 		{
 			ingredients =
 				{
-                    {name='empty-comb',amount =5},
+                    {name='empty-comb', amount = 5},
                     {name='biomass',amount =10},
-					{name='crude-oil-barrel',amount=2,return_item={name='empty-barrel',amount=2}},
+					{name='saps',amount =4},
+					{name='crude-oil-barrel',amount=2,return_barrel = true},
 				},
 			results =
 				{
-					{name='filled-comb',amount ='*5'},
+					{name = 'filled-comb',amount = 5},
 				},
 			crafting_speed = 80,
 			tech = 'arqad',
-			name = 'arqad-filled-comb-1',
-			--icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk01.png"
+			name = 'arqad filled comb 1',
 		},
+		--py
 		{
 			ingredients =
 				{
-                    {name='empty-comb',amount ='+2'},
-                    {name='biomass',amount ='R'},
-					{name='yaedols'},
-				},
-			results =
-				{
-					--{'a','*5'}
-					{name='filled-comb',amount ='+2'}
-				},
-			crafting_speed = 70,
-			tech = 'arqad',
-			name = 'arqad-filled-comb-2',
-			--icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk01.png"
-		},
-		{
-			ingredients =
-				{
-                    {name='empty-comb',amount ='+4'},
-					{name='saps',amount =4},
+                    {name='empty-comb', add_amount = 4},
+					{name='yaedols', amount = 1},
 					{name='redhot-coke',amount =2},
 				},
 			results =
 				{
-					--{'a','*5'}
-					{name='filled-comb',amount ='+4'}
+					{name='filled-comb', add_amount = 4}
 				},
 				crafting_speed = 50,
 				tech = 'arqad-mk02',
-				name = 'arqad-filled-comb-3',
+				name = 'arqad filled comb 2',
 		},
+		--prod
 		{
 			ingredients =
 				{
-                    {name='empty-comb',amount ='+1'},
-					{name='coal',amount =3},
+                    {name='empty-comb', add_amount = 5},
+					{name='coal', amount = 3},
+					{name='zipir-egg', amount = 1},
 				},
 			results =
 				{
-					--{'a','*5'}
-					{name='filled-comb',amount ='+1'}
+					{name='filled-comb', add_amount = 5}
 				},
 				crafting_speed = 45,
 				tech = 'arqad-mk03',
-				name = 'arqad-filled-comb-4',
+				name = 'arqad filled comb 3',
 		},
+		--utility
 		{
 			ingredients =
 				{
-                    {name='empty-comb',amount ='+6'},
-					{name='saps',amount ='R'},
-					{name='coal',amount ='R'},
-					{name='yaedols',amount ='R'},
-					{name='redhot-coke',amount ='R'},
-					{name='zipir-egg'},
+                    {name='empty-comb', add_amount = 5},
+					{name='saps', add_amount = 4},
+					{name='redhot-coke',amount = 2},
+					{name='coal', add_amount = 3},
 				},
 			results =
 				{
-					--{'a','*5'}
-					{name='filled-comb',amount ='+6'}
-				},
-				crafting_speed = 40,
-				tech = 'arqad-mk03',
-				name = 'arqad-filled-comb-5',
-		},
-		{
-			ingredients =
-				{
-                    {name='empty-comb',amount ='+2'},
-					{name='saps',amount =4},
-					{name='redhot-coke',amount =2},
-				},
-			results =
-				{
-					--{'a','*5'}
-					{name='filled-comb',amount ='+2'}
+					{name='filled-comb', add_amount = 5}
 				},
 				crafting_speed = 25,
 				tech = 'arqad-mk04',
-				name = 'arqad-filled-comb-6',
-		},
-		{
-			ingredients =
-				{
-                    {name='empty-comb',amount ='+2'},
-					{name='coal',amount =3},
-				},
-			results =
-				{
-					--{'a','*5'}
-					{name='filled-comb',amount ='+2'}
-				},
-				crafting_speed = 20,
-				tech = 'arqad-mk04',
-				name = 'arqad-filled-comb-7',
+				name = 'arqad filled comb 4',
 		},
 	}
 }

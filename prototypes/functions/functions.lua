@@ -964,7 +964,7 @@ function modify_recipe_tables(item,items_table,previous_item_names, result_table
             if item.return_item ~= nil then
                 local item_type
                 local name = item.return_item.name
-                local amount = item.return_item.amount
+                local amount = item.return_item.amount or item.amount
                 if data.raw.item[name] ~= nil or data.raw.module[name] ~= nil then
                     item_type = 'item'
                 elseif data.raw.fluid[name] ~= nil then
@@ -972,6 +972,16 @@ function modify_recipe_tables(item,items_table,previous_item_names, result_table
                 end
                 return_item = {type = item_type, name = name, amount = amount}
                 table.insert(result_table, return_item)
+            end
+
+            --add empty barrels to results
+            local return_barrel
+            if item.return_barrel ~= nil and item.return_barrel == true then
+                local item_type = 'item'
+                local name = 'empty-barrel'
+                local amount = item.amount
+                return_barrel = {type = item_type, name = name, amount = amount}
+                table.insert(result_table, return_barrel)
             end
 
            if item.amount ~= nil then

@@ -1,3 +1,4 @@
+
 manure production isnt high enough - good for early/ mid game. will need to move to/ need to add synth fertilizer
 
 
@@ -7,10 +8,6 @@ replace ralesia with ralesia extract and dry ralesia in some of the foods.
 
 look at animal foods
 
-fix the unnesssary addition of nothing to auog pup recipes to auog pup to caged auogs
-
-REMOVE RANDOM CRAP TO AUOG MANURE RECIPES. manure will be produced as part of the growth cycle from pups to adults and the breeding area
-
 look into useing pheromones as an improved breeding recipe for auog pups after t4
 
 get rid of normal auogs to improved and replace with auog super solder program
@@ -19,3 +16,11 @@ TODO:
 VRAUKS FOR GREEN SCIENCE
 
 look into making biosample hand minable and vrauks aviable at start
+
+add recipes to make arqad eggs into arqad maggots and then maggots into full arqads
+
+should be 1 or few queens to many eggs to many maggots to many arqads
+
+make arqad queen have a very low but not zero chance of no return- needs a recipe to make queens from jelly
+
+arqads will steal the bees jerbs

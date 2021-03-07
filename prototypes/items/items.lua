@@ -8745,6 +8745,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "arqad-queen",
+    icon = "__pyalienlifegraphics2__/graphics/icons/arqad-queen.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arqad",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "arqad-egg-nest",
     icons =
         {

@@ -8,8 +8,6 @@ require("prototypes/functions/functions")
 --*required
 --**optional. whole numbers only
 
---log(serpent.block(data.raw.recipe["biomass-1"]))
-
 RECIPE {
     type = 'recipe',
     name = 'fungal-substrate',
@@ -2670,3 +2668,36 @@ RECIPE {
         {type = 'fluid', name = 'organic-solvent', amount = 100},
     }
 }:add_unlock('biotech-mk03'):add_ingredient({type = 'fluid', name = 'cumene', amount = 20})
+
+RECIPE {
+    type = 'recipe',
+    name = 'fetal-serum-01',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'guts', amount = 15},
+        {type = 'item', name = 'flask', amount = 1},
+        {type = 'item', name = 'silver-plate', amount = 2},
+    },
+    results = {
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
+    },
+    --main_product = "cocoon",
+}:add_unlock("biotech-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'earth-generic-sample',
+    category = 'data-array',
+    enabled = true,
+    energy_required = 25,
+    ingredients = {
+        {type = 'item', name = 'iron-chest', amount = 1},
+        {type = 'item', name = 'automation-science-pack', amount = 15},
+        {type = 'item', name = 'bio-sample', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'earth-generic-sample', amount = 1},
+    },
+}

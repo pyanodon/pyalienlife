@@ -56,7 +56,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='arthurianegg',amount = 5},
+					{name='arthurian-egg',amount = 5},
 				},
 			results =
 				{
@@ -357,7 +357,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='arthurianegg',amount = 5},
+					{name='arthurian-egg',amount = 5},
 				},
 			results =
 				{
@@ -385,7 +385,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='arthurianegg',amount = 'R'},
+					{name='arthurian-egg',amount = 'R'},
 					{name='bedding',amount = 'R'},
 					{name='navens',amount = 'R'},
 					{name='meat',amount ='R'},
@@ -433,7 +433,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='arthurianegg',amount = 5},
+					{name='arthurian-egg',amount = 5},
 				},
 			results =
 				{

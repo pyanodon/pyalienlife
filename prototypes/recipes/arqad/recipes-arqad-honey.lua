@@ -6,8 +6,34 @@ fun.autorecipes {
 	category = 'arqad',
 	subgroup = 'py-alienlife-arqad',
 	module_limitations = 'arqad',
+	upgrades =
+		{
+			{
+				tech = 'pheromone-transition',
+				ingredient_changes =
+				{
+					{name = 'empty-honeycomb', add_amount = 3}
+				},
+				result_changes =
+				{
+					{name = 'honeycomb', add_amount = 3}
+				},
+			},
+			{
+				tech = 'diversified-mycoaccretion',
+				ingredient_changes =
+				{
+					{name = 'empty-honeycomb', add_amount = 3}
+				},
+				result_changes =
+				{
+					{name = 'honeycomb', add_amount = 3}
+				},
+			},
+		},
     mats =
 	{
+		--base
 		{
 			ingredients =
 				{
@@ -16,124 +42,62 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='honeycomb',amount ='*3'},
+					{name='honeycomb',amount = 3},
 				},
-			crafting_speed = 80,
+			crafting_speed = 100,
 			tech = 'arqad',
-			name = 'arqad-filled-honeycomb-1',
-			--icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk01.png"
+			name = 'arqad filled honeycomb 1',
 		},
+		--py
 		{
 			ingredients =
 				{
-                    {name='empty-honeycomb',amount ='+3'},
-					{name='navens'},
+                    {name='empty-honeycomb', add_amount = 3},
+					{name='navens', amount = 1},
+					{name='skin', amount =5},
+					{name='meat', amount =5},
 				},
 			results =
 				{
-					--{'a','*5'}
-					{name='honeycomb',amount ='+3'}
+					{name='honeycomb', add_amount = 3}
 				},
 			crafting_speed = 70,
 			tech = 'arqad-mk02',
-			name = 'arqad-filled-honeycomb-2',
-			--icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk01.png"
+			name = 'arqad filled honeycomb 2',
 		},
+		--prod
 		{
 			ingredients =
 				{
-                    {name='empty-honeycomb',amount ='+2'},
-					{name='skin',amount =5},
+					{name = 'ulric', amount = 'R'},
+                    {name='empty-honeycomb', add_amount = 5},
+					{name='cottongut', amount = 4},
+					{name='mukmoux', amount = 1},
 				},
 			results =
 				{
-					--{'a','*5'}
-					{name='honeycomb',amount ='+2'}
-				},
-				crafting_speed = 50,
-				tech = 'arqad-mk02',
-				name = 'arqad-filled-honeycomb-3',
-        },
-        {
-			ingredients =
-				{
-                    {name='empty-honeycomb',amount ='+2'},
-					{name='meat',amount =5},
-				},
-			results =
-				{
-					--{'a','*5'}
-					{name='honeycomb',amount ='+2'}
-				},
-				crafting_speed = 50,
-				tech = 'arqad-mk02',
-				name = 'arqad-filled-honeycomb-4',
-		},
-		{
-			ingredients =
-				{
-                    {name='empty-honeycomb',amount ='+2'},
-					{name='cottongut',amount =2},
-				},
-			results =
-				{
-					--{'a','*5'}
-					{name='honeycomb',amount ='+2'}
-				},
-				crafting_speed = 45,
-				tech = 'arqad-mk03',
-				name = 'arqad-filled-honeycomb-5',
-		},
-		{
-			ingredients =
-				{
-                    {name='empty-honeycomb',amount ='+6'},
-					{name='meat',amount ='R'},
-                    {name='cottongut',amount ='R'},
-                    {name='ulric',amount ='R'},
-					{name='navens',amount ='R'},
-					{name='skin',amount ='R'},
-					{name='mukmoux'},
-				},
-			results =
-				{
-					--{'a','*5'}
-					{name='honeycomb',amount ='+6'}
+					{name='honeycomb', add_amount = 5}
 				},
 				crafting_speed = 40,
 				tech = 'arqad-mk03',
-				name = 'arqad-filled-honeycomb-6',
+				name = 'arqad filled honeycomb 3',
 		},
+		--utility
 		{
 			ingredients =
 				{
-                    {name='empty-honeycomb',amount ='+2'},
-					{name='meat',amount =4},
-					{name='skin',amount =5},
+                    {name='empty-honeycomb', add_amount = 5},
+					{name='meat', add_amount = 4},
+					{name='skin', add_amount = 5},
+					{name='cottongut', add_amount = 3},
 				},
 			results =
 				{
-					--{'a','*5'}
-					{name='honeycomb',amount ='+2'}
+					{name='honeycomb', add_amount = 5}
 				},
-				crafting_speed = 25,
+				crafting_speed = 10,
 				tech = 'arqad-mk04',
-				name = 'arqad-filled-honeycomb-7',
-		},
-		{
-			ingredients =
-				{
-                    {name='empty-honeycomb',amount ='+2'},
-					{name='cottongut',amount =3},
-				},
-			results =
-				{
-					--{'a','*5'}
-					{name='honeycomb',amount ='+2'}
-				},
-				crafting_speed = 20,
-				tech = 'arqad-mk04',
-				name = 'arqad-filled-honeycomb-8',
+				name = 'arqad filled honeycomb 4',
 		},
 	}
 }

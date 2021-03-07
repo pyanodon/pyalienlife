@@ -10,212 +10,185 @@ fun.autorecipes {
 	order = 'c',
     mats =
 	{
+		--base
 		{
 			ingredients =
 				{
-                    {name='biomass',amount =30},
-                    {name='ralesias',amount =10},
-					{name='natural-gas-barrel',amount=10,return_item={name='empty-barrel',amount=10}},
-					{name='redhot-coke',amount = 1},
+					{name = 'arqad-queen', amount =1},
+					{name = 'arqad', amount = 5},
+                    {name='arqad-honey-barrel',amount =3,return_barrel = true},
+					{name='natural-gas-barrel',amount=10,return_barrel = true},
+					{name='redhot-coke',amount = 2},
 				},
 			results =
 				{
-					{name='arqad-egg', probability = 0.85,amount_min =3,amount_max =4},
+					{name='arqad-egg',amount = 10},
+					{name = 'arqad-queen', amount =1, probability = 0.999},
 				},
 			crafting_speed = 140,
-			tech = 'assisted-embryology'
+			tech = 'arqad'
 		},
-		--food 1
+		--red tech
 		{
 			ingredients =
 				{
-                    {name='biomass',amount ='R'},
-					{name='yaedols',amount =1},
+					{name='ralesias',amount = 15},
+					{name = 'arqad', add_amount = 3},
 				},
 			results =
 				{
-
+					{name='arqad-egg', add_amount = 5},
 				},
 			crafting_speed = 120,
-			tech = 'assisted-embryology'
+			tech = 'arqad'
 		},
-		--saps
+		--py
 		{
 			ingredients =
 				{
-					{name='saps',amount = 15},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 110,
-			tech = 'assisted-embryology'
-		},
-		--coal
-		{
-			ingredients =
-				{
-					{name='coal',amount = 10},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 100,
-			tech = 'assisted-embryology'
-		},
-		--zipir-egg 2
-		{
-			ingredients =
-				{
-					{name='yaedols',amount ='R'},
-					{name='saps',amount ='R'},
-					{name='coal',amount ='R'},
-					{name='zipir-egg',amount =2},
-
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 100,
-			tech = 'assisted-embryology'
-		},
-		--food 2 saps
-		{
-			ingredients =
-				{
-					{name='saps',amount ='R'},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 90,
-			tech = 'assisted-embryology'
-		},
-		--food 2 saps fiber
-		{
-			ingredients =
-				{
-					{name='coal',amount = 10},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 80,
-			tech = 'assisted-embryology'
-		},
-		-----------------------PHEROMONES-----------------------------
-		{
-			ingredients =
-				{
-					{name='coal',amount = 'R'},
-					{name='saps',amount = 'R'},
-					{name='zipir-egg',amount = 'R'},
-					{name='biomass',amount =30},
-					{name='pheromones',amount =1},
-					--{name='natural-gas-barrel',amount=6,return_item={name='empty-barrel',amount=6}},
-					--{name='redhot-coke',amount = 1},
-				},
-			results =
-				{
-					{name='arqad-egg',amount = 'R'},
-					{name='arqad-egg', amount =8},
-				},
-			crafting_speed = 140,
-			tech = 'pheromones'
-		},
-		--food 1
-		{
-			ingredients =
-				{
-
-                    {name='biomass',amount ='R'},
 					{name='yaedols',amount =1},
+					{name='arqad-jelly-barrel', amount = 3, return_barrel = true},
+					{name = 'arqad', add_amount = 3},
 				},
 			results =
 				{
-
-				},
-			crafting_speed = 120,
-			tech = 'pheromones'
-		},
-		--saps
-		{
-			ingredients =
-				{
-					{name='saps',amount = 15},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 110,
-			tech = 'pheromones'
-		},
-		--fiber
-		{
-			ingredients =
-				{
-					{name='coal',amount = 10},
-				},
-			results =
-				{
-
+					{name='arqad-egg', add_amount = 10},
 				},
 			crafting_speed = 100,
-			tech = 'pheromones'
+			tech = 'arqad-mk02'
 		},
-		--food 2
+		--prod
 		{
 			ingredients =
 				{
-					{name='yaedols',amount ='R'},
-					{name='saps',amount ='R'},
-					{name='coal',amount ='R'},
-					{name='zipir-egg',amount =2},
-
+					{name='natural-gas-barrel', amount = 'R'},
+					{name = 'refined-natural-gas-barrel', amount = 3,return_barrel = true},
+					{name = 'arqad', add_amount = 3},
 				},
 			results =
 				{
-
-				},
-			crafting_speed = 100,
-			tech = 'pheromones'
-		},
-		--food 2 saps
-		{
-			ingredients =
-				{
-					{name='saps',amount ='R'},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 90,
-			tech = 'pheromones'
-		},
-		--food 2 saps fiber
-		{
-			ingredients =
-				{
-					{name='coal',amount = 10},
-				},
-			results =
-				{
-
+					{name='arqad-egg', add_amount = 10},
 				},
 			crafting_speed = 80,
-			tech = 'pheromones'
+			tech = 'arqad-mk03'
+		},
+		--utility
+		{
+			ingredients =
+				{
+					{name='zipir-egg',amount =4},
+					{name = 'arqad', add_amount = 3},
+				},
+			results =
+				{
+					{name='arqad-egg', add_amount = 10},
+				},
+			crafting_speed = 60,
+			tech = 'arqad-mk04'
+		}
+	}
+}
+
+--eggs to maggots
+
+fun.autorecipes {
+    name = 'arqad-maggots',
+	category = 'vrauk',
+	module_limitations = 'arqad',
+	subgroup = 'py-alienlife-arqad',
+	order = 'c',
+    mats =
+	{
+		--base
+		{
+			ingredients =
+				{
+					{name = 'arqad-egg', amount = 30},
+                    {name = 'honeycomb', amount = 5, return_item = {name = 'used-comb'}},
+					{name = 'vrauk', amount = 1},
+					{name = 'vrauks-food-01', amount = 1}
+				},
+			results =
+				{
+					{name='arqad-maggot',amount = 30},
+				},
+			crafting_speed = 70,
+			tech = 'arqad'
 		},
 	}
 }
 
---Raising
+--maggots to cocoons
+
+fun.autorecipes {
+    name = 'arqad-egg-nests',
+	category = 'arqad',
+	module_limitations = 'arqad',
+	subgroup = 'py-alienlife-arqad',
+	order = 'c',
+    mats =
+	{
+		--base
+		{
+			ingredients =
+				{
+					{name = 'arqad-maggot', amount = 5},
+                    {name='arqad-jelly-barrel',amount =1,return_barrel = true},
+					{name='empty-comb',amount =1},
+				},
+			results =
+				{
+					{name='arqad-egg-nest',amount = 1},
+				},
+			crafting_speed = 90,
+			tech = 'arqad'
+		},
+		--py
+		{
+			ingredients =
+				{
+					{name = 'arqad-maggot', add_amount = 5},
+                    {name='arqad-honey-barrel',amount = 5,return_barrel = true},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 70,
+			tech = 'arqad-mk02'
+		},
+		--prod
+		{
+			ingredients =
+				{
+					{name = 'arqad-maggot', add_amount = 5},
+                    {name='arqad-honey-barrel',amount = 7,return_barrel = true},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 50,
+			tech = 'arqad-mk03'
+		},
+		--utility
+		{
+			ingredients =
+				{
+					{name = 'arqad-maggot', amount = 5},
+                    {name='arqad-honey-barrel',amount =10,return_barrel = true},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'arqad-mk04'
+		},
+	}
+}
+
+--Raising maggots to arqads
 
 fun.autorecipes {
     name = 'caged-arqad',
@@ -229,261 +202,106 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
+                    {name='arqad-egg-nest',amount =1},
                     {name='biomass',amount =15},
                     {name='ralesias',amount =5},
-					{name='natural-gas-barrel',amount=3,return_item={name='empty-barrel',amount=3}},
+					{name='natural-gas-barrel',amount=3,return_barrel = true},
 				},
 			results =
 				{
-					{name='arqad', probability = 0.7,amount_min =1,amount_max =1},
+					{name='arqad', amount_min =2, amount_max = 4},
+					{name='used-comb',amount =1},
 				},
-			crafting_speed = 160,
+			crafting_speed = 140,
 			tech = 'arqad'
 		},
 		--red tech
 		{
 			ingredients =
 				{
-					{name='biomass',amount ='R'},
-					{name='yaedols',amount =1},
-				},
-			results =
-				{
-					{name='arqad',amount ='R'},
-					{name='arqad', probability = 0.8,amount_min =1,amount_max =1},
-				},
-			crafting_speed = 150,
-			tech = 'arqad'
-		},
-		--saps
-		{
-			ingredients =
-				{
+					{name='arqad-egg-nest', add_amount = 1},
 					{name='saps',amount = 5},
 					{name='redhot-coke',amount = 1},
 				},
 			results =
 				{
-
-				},
-			crafting_speed = 140,
-			tech = 'arqad-mk02'
-		},
-		--fiber
-		{
-			ingredients =
-				{
-					{name='coal',amount = 5},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 130,
-			tech = 'arqad-mk02'
-		},
-		--zipir egg 2
-		{
-			ingredients =
-				{
-					{name='yaedols',amount ='R'},
-					{name='saps',amount ='R'},
-					{name='coal',amount ='R'},
-					{name='zipir-egg',amount =1},
-
-				},
-			results =
-				{
-					{name='arqad',amount ='R'},
-					{name='arqad', probability = 0.9,amount_min =1,amount_max =1},
+					{name='arqad', amount_min = 5, amount_max = 10},
+					{name='used-comb', add_amount = 1},
 				},
 			crafting_speed = 120,
-			tech = 'arqad-mk03'
+			tech = 'arqad'
 		},
-		--food 2 saps
+		--py
 		{
 			ingredients =
 				{
-					{name='saps',amount =5},
+					{name='arqad-egg-nest', add_amount = 1},
+					{name='yaedols',amount =1},
 				},
 			results =
 				{
-
-				},
-			crafting_speed = 110,
-			tech = 'arqad-mk04'
-		},
-		--food 2 saps fiber
-		{
-			ingredients =
-				{
-					{name='coal',amount = 5},
-				},
-			results =
-				{
-
+					{name='arqad', amount_min = 7, amount_max = 12},
+					{name='used-comb', add_amount = 1},
 				},
 			crafting_speed = 100,
+			tech = 'arqad-mk02'
+		},
+		--prod
+		{
+			ingredients =
+				{
+					{name='arqad-egg-nest', add_amount = 1},
+					{name='zipir-egg',amount =1},
+				},
+			results =
+				{
+					{name='arqad', amount_min = 12, amount_max = 16},
+					{name='used-comb', add_amount = 1},
+				},
+			crafting_speed = 80,
+			tech = 'arqad-mk03'
+		},
+		--utility
+		{
+			ingredients =
+				{
+					{name='arqad-egg-nest', add_amount = 1},
+					{name='arthurian-egg',amount =1},
+				},
+			results =
+				{
+					{name='arqad', amount = 22},
+					{name='used-comb', add_amount = 1},
+				},
+			crafting_speed = 60,
 			tech = 'arqad-mk04'
 		},
-		--gh
-		{
-			ingredients =
-				{
-					{name='gh',amount =1},
+	}
+}
 
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 30,
-			tech = 'growth-hormone'
-		},
-		--antiviral and gh
+fun.autorecipes {
+    name = 'arqad-queen',
+	category = 'arqad',
+	module_limitations = 'arqad',
+	subgroup = 'py-alienlife-arqad',
+	order = 'b',
+    mats =
+	{
+		--base
 		{
 			ingredients =
 				{
-					{name='antiviral',amount =1},
+                    {name='arqad-egg-nest',amount =1},
+                    {name='arqad-jelly-barrel', amount = 5, return_barrel = true},
+					{name='natural-gas-barrel',amount=3,return_barrel = true},
 				},
 			results =
 				{
-					{name='arqad', amount ='R'},
-					{name='arqad', probability = 1,amount_min =1,amount_max =2},
+					{name='arqad-queen', amount = 1, probability = 0.01},
+					{name='used-comb',amount =1},
 				},
-			crafting_speed = 30,
-			tech = 'antiviral'
-		},
-		--antiviral
-		{
-			ingredients =
-				{
-					--{name='antiviral',amount =1},
-					{name='gh',amount ='R'},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 90,
-			tech = 'antiviral'
-		},
-		--rna anabolic
-		{
-			ingredients =
-				{
-					{name='gh',amount ='R'},
-					{name='anabolic-rna',amount =1},
-				},
-			results =
-				{
-					{name='arqad', amount ='R'},
-					{name='meat-arqad', 1},
-				},
-			crafting_speed = 90,
-			tech = 'anabolic-rna'
-		},
-		--rna anabolic and gh
-		{
-			ingredients =
-				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 30,
-			tech = 'anabolic-rna'
-		},
-		--antitumor
-		{
-			ingredients =
-				{
-					{name='gh',amount ='R'},
-					{name='anabolic-rna',amount ='R'},
-					{name='antitumor',amount =1},
-				},
-			results =
-				{
-					{name='meat-arqad', amount ='R'},
-					{name='guts-arqad', 1},
-				},
-			crafting_speed = 90,
-			tech = 'antitumor'
-		},
-		--antitumor and gh
-		{
-			ingredients =
-				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 30,
-			tech = 'antitumor'
-		},
-		--Recombinant Ery
-		{
-			ingredients =
-				{
-					{name='gh',amount ='R'},
-					{name='antitumor',amount ='R'},
-					{name='recombinant-ery',amount =1},
-				},
-			results =
-				{
-					{name='guts-arqad', amount ='R'},
-					{name='blood-arqad', 1},
-				},
-			crafting_speed = 90,
-			tech = 'recombinant-ery'
-		},
-		--Recombinant Ery and gh
-		{
-			ingredients =
-				{
-					{name='gh',amount =1},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 30,
-			tech = 'recombinant-ery'
-		},
-		--reca
-		{
-			ingredients =
-				{
-					{name='gh',amount ='R'},
-					{name='recombinant-ery',amount ='R'},
-					{name='reca',amount =1},
-				},
-			results =
-				{
-					{name='blood-arqad', amount ='R'},
-					{name='chitin-arqad', 1},
-				},
-			crafting_speed = 90,
-			tech = 'reca'
-		},
-		--reca and gh
-		{
-			ingredients =
-				{
-					{name='gh',amount =1},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 30,
-			tech = 'reca'
+			crafting_speed = 140,
+			tech = 'arqad'
 		},
 	}
 }
