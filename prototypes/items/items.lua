@@ -779,7 +779,7 @@ ITEM {
     name = "py-science-pack",
     icon = "__pyalienlifegraphics__/graphics/icons/py-science-pack.png",
     icon_size = 64,
-    subgroup = "py-alienlife-items",
+    subgroup = "science-pack",
     order = "a-a",
     stack_size = 200,
     durability = 1,
