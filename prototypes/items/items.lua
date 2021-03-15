@@ -1098,7 +1098,6 @@ ITEM {
     stack_size = 100
 }
 
---[[
 ITEM {
     type = "item",
     name = "barrel-milk",
@@ -1109,7 +1108,6 @@ ITEM {
     order = "h",
     stack_size = 100
 }
-]]--
 
 ITEM {
     type = "item",

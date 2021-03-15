@@ -19,7 +19,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='milk-barrel',amount =1},
+					{name='barrel-milk',amount =1},
 				},
 			crafting_speed = 100,
 			tech = 'korlex',
@@ -37,7 +37,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					--{name='milk-barrel',amount ='+2'}
+					--{name='barrel-milk',amount ='+2'}
 				},
 			crafting_speed = 80,
 			tech = 'korlex',
@@ -54,7 +54,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='milk-barrel',amount ='+1'}
+					{name='barrel-milk',amount ='+1'}
 				},
 				crafting_speed = 80,
 				tech = 'korlex-mk02',
@@ -70,7 +70,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='milk-barrel',amount ='+2'}
+					{name='barrel-milk',amount ='+2'}
 				},
 				crafting_speed = 80,
 				tech = 'korlex-mk02',
@@ -89,7 +89,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='milk-barrel',amount ='+3'}
+					{name='barrel-milk',amount ='+3'}
 				},
 				crafting_speed = 60,
 				tech = 'korlex-mk03',
@@ -105,7 +105,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='milk-barrel',amount ='+1'}
+					{name='barrel-milk',amount ='+1'}
 				},
 				crafting_speed = 60,
 				tech = 'korlex-mk03',
@@ -121,7 +121,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='milk-barrel',amount ='+2'}
+					{name='barrel-milk',amount ='+2'}
 				},
 				crafting_speed = 60,
 				tech = 'korlex-mk04',

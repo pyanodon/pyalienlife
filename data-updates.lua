@@ -55,11 +55,10 @@ for _, recipe in pairs(data.raw.recipe) do
     r:replace_ingredient('xyhiphoe-blood', 'arthropod-blood')
 end
 
---change barreled milk item to used the milk barrel icon
-data.raw.item['milk-barrel'].icon = "__pyalienlifegraphics__/graphics/icons/barrel-milk.png"
-data.raw.item['milk-barrel'].icon_size = 64
-
---need to update milk barrel empting recipe to use milk barrel
+--remove steel barrel based milk
+data.raw.item['milk-barrel'] = nil
+data.raw.recipe['fill-milk'] = nil
+data.raw.recipe['empty-milk'] = nil
 
 --fun.global_item_replacer('fawogae', 'fawogae-mk01')
 

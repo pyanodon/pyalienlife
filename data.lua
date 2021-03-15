@@ -440,6 +440,10 @@ require('prototypes/recipes/arqad/recipes-arqad-rendering')
 require('prototypes/recipes/arqad/recipes-arqad-updates')
 
 --arthurian
+require('prototypes/recipes/arthurian/recipes-arthurian')
+require('prototypes/recipes/arthurian/recipes-arthurian-raising')
+require('prototypes/recipes/arthurian/recipes-arthurian-rendering')
+require('prototypes/recipes/arthurian/recipes-arthurian-growth-enhancement')
 
 --auog
 require('prototypes/recipes/auog/recipes-auog')
@@ -448,10 +452,16 @@ require('prototypes/recipes/auog/recipes-auog-raising')
 --require('prototypes/recipes/auog/recipes-auog-growth-enhancement')
 
 --Bhoddos
+require('prototypes/recipes/bhoddos/recipes-bhoddos')
+require('prototypes/recipes/bhoddos/recipes-bhoddos-raising')
 
 --Cadaveric-arum
+require('prototypes/recipes/cadavric-arum/recipes-cadaveric')
+require('prototypes/recipes/cadavric-arum/recipes-auto-cadaveric')
+require('prototypes/recipes/cadavric-arum/recipes-arum-megafarm')
 
 --Cottongut
+
 
 --Cridren
 
