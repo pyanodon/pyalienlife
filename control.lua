@@ -524,7 +524,7 @@ local function adding_beacon(E)
 		force = game.players.force
 	}
 	local module = beacon.get_inventory(defines.inventory.beacon_modules)
-	local mod = module.insert({name = global.tech_upgrades.entities_master_list[E.name] .. '-module-1', count = 1})
+	local mod = module.insert({name = global.tech_upgrades.entities_master_list[E.name] .. '-module', count = 1})
 end
 
 script.on_init(
@@ -593,6 +593,7 @@ script.on_init(
 			currently_selected = {}
 		}
 		log_all_machines_for_upgrades(tech_upgrade_table)
+		global.has_updated = false
 		global.energy_drink = {}
 		if not remote.interfaces["silo_script"] then
 			return
@@ -733,7 +734,7 @@ script.on_configuration_changed(
 		if global.tech_upgrades ~= nil then
 			global.tech_upgrades = nil
 		end
-		if global.tech_upgrades == nil then
+		if global.tech_upgrades == nil and global.has_updated == false then
 			--log('hit')
 			global.tech_upgrades =
 			{
@@ -947,7 +948,9 @@ script.on_event(
 			global.pycloud.chests[E.unit_number] = chest
 			--log(serpent.block(global.pycloud))
 		elseif global.tech_upgrades.entities_master_list[E.name] ~= nil then
+			--log('hit')
 			adding_beacon(E)
+			--log(mod)
 		elseif global.tech_upgrades.entities_master_list[E.name] == nil and global.tech_upgrades.entities_name_list[E.name] ~= nil then
 			add_farm_to_table(E)
 		end
@@ -1592,39 +1595,6 @@ script.on_event(
 					if global.rendered_icons[global.farm_count[i]] ~= nil then
 						rendering.destroy(global.rendered_icons[global.farm_count[i]])
 						global.rendered_icons[global.farm_count[i]] = nil
-					end
-					local farm_pos = global.farms[global.farm_count[i]].position
-					local beacon = game.surfaces['nauvis'].find_entities_filtered{name = 'hidden-beacon', area = {{farm_pos.x - 1, farm_pos.y -1}, {farm_pos.x + 1, farm_pos.y + 1}}}
-					if next(beacon) ~= nil then
-						local modules = global.farms[global.farm_count[i]].get_module_inventory().get_contents()
-						for m, mod in pairs(modules) do
-							--log(m)
-							--log(mod)
-							--log(serpent.block(global.farms[global.farm_count[i]]))
-							--log(serpent.block(global.farms[global.farm_count[i]].name))
-							local b_name = global.tech_upgrades.entities_master_list[global.farms[global.farm_count[i]].name]
-							if string.match(m, '%-mk0') == nil then
-								local module = beacon[1].get_inventory(defines.inventory.beacon_modules)
-								module.clear()
-								module.insert({name = b_name .. '-module-' .. 1, count = 1})
-								break
-							elseif string.match(m, '2') ~= nil then
-								local module = beacon[1].get_inventory(defines.inventory.beacon_modules)
-								module.clear()
-								module.insert({name = b_name .. '-module-' .. 2, count = 1})
-								break
-							elseif string.match(m, '3') ~= nil then
-								local module = beacon[1].get_inventory(defines.inventory.beacon_modules)
-								module.clear()
-								module.insert({name = b_name .. '-module-' .. 3, count = 1})
-								break
-							elseif string.match(m, '4') ~= nil then
-								local module = beacon[1].get_inventory(defines.inventory.beacon_modules)
-								module.clear()
-								module.insert({name = b_name .. '-module-' .. 4, count = 1})
-								break
-							end
-						end
 					end
 				elseif
 					global.farms[global.farm_count[i]] ~= nil and global.farms[global.farm_count[i]].valid == true and
@@ -2305,10 +2275,9 @@ script.on_event(
 		elseif string.match(event.element.name, 'turd_confirm') then
 			local tech = global.tech_upgrades.currently_selected.tech
 			local sub_tech = global.tech_upgrades.currently_selected.sub_tech
-			log(serpent.block(tech))
-			log(serpent.block(sub_tech))
+			--log(serpent.block(tech))
+			--log(serpent.block(sub_tech))
 			for _, ent in pairs(global.tech_upgrades.techs[tech][sub_tech].entities) do
-				log(ent)
 				if global.tech_upgrades.entities_master_list[ent] == nil then
 					global.tech_upgrades.entities_master_list[ent] = sub_tech
 				end
@@ -2330,7 +2299,7 @@ script.on_event(
 			end
 			global.tech_upgrades.tech_status[tech] = true
 			global.tech_upgrades.techs[tech][sub_tech].selected = true
-			log(serpent.block(global.tech_upgrades.entities_master_list))
+			--log(serpent.block(global.tech_upgrades.entities_master_list))
 		--log(serpent.block(global.tech_upgrades.techs[tech]))
 		--log(serpent.block(global.tech_upgrades.techs[tech][sub_tech]))
 			if global.tech_upgrades.techs[tech][sub_tech].is_upgrade == true then
