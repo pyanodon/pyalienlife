@@ -734,8 +734,11 @@ script.on_configuration_changed(
 		if global.tech_upgrades ~= nil then
 			global.tech_upgrades = nil
 		end
+		if global.has_updated == nil then
+			global.has_updated = false
+		end
 		if global.tech_upgrades == nil and global.has_updated == false then
-			--log('hit')
+			log('hit')
 			global.tech_upgrades =
 			{
 				entities_master_list = {},
@@ -756,7 +759,7 @@ script.on_configuration_changed(
 				end
 			end
 		end
-		if global.tech_upgrades.entities == nil or next(global.tech_upgrades.entities) == nil then
+		if global.tech_upgrades.entities == nil or next(global.tech_upgrades.entities) == nil and global.has_updated == false then
 			--log('hit')
 			table.insert(global.tech_upgrades, entities)
 			global.tech_upgrades.entities = {}
@@ -770,6 +773,7 @@ script.on_configuration_changed(
 				end
 			end
 		end
+		global.has_updated = true
 		--log(serpent.block(global.tech_upgrades.entities))
 		--log(serpent.block(global.tech_upgrades.entities_name_list))
 	end
