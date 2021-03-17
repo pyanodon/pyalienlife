@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.12.3
-Date: ????
+Date: 2021-03-17
   Changes:
     - Fixed a crash caused by the fix in 1.12.2 for the crash in 1.12.1. code should only run once after first time you load the save after the change and never again.
 ---------------------------------------------------------------------------------------------------
