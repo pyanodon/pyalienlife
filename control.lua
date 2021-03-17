@@ -737,39 +737,41 @@ script.on_configuration_changed(
 		if global.has_updated == nil then
 			global.has_updated = false
 		end
-		if global.tech_upgrades == nil and global.has_updated == false then
-			log('hit')
-			global.tech_upgrades =
-			{
-				entities_master_list = {},
-				entities_name_list = {},
-				entities = {},
-				unlocked_techs = {},
-				disabled_techs = {},
-				techs = {},
-				tech_status = {},
-				currently_selected = {}
-			}
-			log_all_machines_for_upgrades(tech_upgrade_table)
-			--log(serpent.block(global.tech_upgrades))
-			local entities = game.surfaces['nauvis'].find_entities_filtered{type = 'assembling-machine'}
-			for e, ent in pairs(entities) do
-				if global.tech_upgrades.entities_name_list[ent.name] ~= nil then
-					add_farm_to_table(ent)
+		if global.has_updated == false then
+			if global.tech_upgrades == nil then
+				log('hit')
+				global.tech_upgrades =
+				{
+					entities_master_list = {},
+					entities_name_list = {},
+					entities = {},
+					unlocked_techs = {},
+					disabled_techs = {},
+					techs = {},
+					tech_status = {},
+					currently_selected = {}
+				}
+				log_all_machines_for_upgrades(tech_upgrade_table)
+				--log(serpent.block(global.tech_upgrades))
+				local entities = game.surfaces['nauvis'].find_entities_filtered{type = 'assembling-machine'}
+				for e, ent in pairs(entities) do
+					if global.tech_upgrades.entities_name_list[ent.name] ~= nil then
+						add_farm_to_table(ent)
+					end
 				end
 			end
-		end
-		if global.tech_upgrades.entities == nil or next(global.tech_upgrades.entities) == nil and global.has_updated == false then
-			--log('hit')
-			table.insert(global.tech_upgrades, entities)
-			global.tech_upgrades.entities = {}
-			local entities = game.surfaces['nauvis'].find_entities_filtered{type = 'assembling-machine'}
-			for e, ent in pairs(entities) do
-				--log(ent.name)
-				--log(serpent.block(global.tech_upgrades.entities_name_list))
-				if global.tech_upgrades.entities_name_list[ent.name] ~= nil then
-					--log('hit')
-					add_farm_to_table(ent)
+			if global.tech_upgrades.entities == nil or next(global.tech_upgrades.entities) == nil then
+				--log('hit')
+				table.insert(global.tech_upgrades, entities)
+				global.tech_upgrades.entities = {}
+				local entities = game.surfaces['nauvis'].find_entities_filtered{type = 'assembling-machine'}
+				for e, ent in pairs(entities) do
+					--log(ent.name)
+					--log(serpent.block(global.tech_upgrades.entities_name_list))
+					if global.tech_upgrades.entities_name_list[ent.name] ~= nil then
+						--log('hit')
+						add_farm_to_table(ent)
+					end
 				end
 			end
 		end
