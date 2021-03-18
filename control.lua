@@ -731,13 +731,13 @@ script.on_configuration_changed(
 		if global.energy_drink == nil then
 			global.energy_drink = {}
 		end
-		if global.tech_upgrades ~= nil then
-			global.tech_upgrades = nil
-		end
 		if global.has_updated == nil then
 			global.has_updated = false
 		end
 		if global.has_updated == false then
+			if global.tech_upgrades ~= nil then
+				global.tech_upgrades = nil
+			end
 			if global.tech_upgrades == nil then
 				log('hit')
 				global.tech_upgrades =
