@@ -1,0 +1,418 @@
+local fun = require("prototypes/functions/functions")
+
+------------------EGG MAKER------------------
+
+fun.autorecipes {
+    name = 'dhilmos-egg',
+	category = 'dhilmos',
+	module_limitations = 'dhilmos',
+	subgroup = 'py-alienlife-dhilmos',
+	order = 'c',
+    mats =
+	{
+		--chem
+		{
+			ingredients =
+				{
+					{name = 'dhilmos', amount = 1},
+                    {name='phytoplankton',amount =50},
+					{name='water-saline',amount=100,return_item={name='waste-water'}},
+					{name='filtration-media',amount = 2},
+				},
+			results =
+				{
+					{name='dhilmos-egg', amount = 2},
+				},
+			crafting_speed = 80,
+			tech = 'dhilmos'
+		},
+		--py
+		{
+			ingredients =
+				{
+					{name='dhilmos-food-01',amount =1},
+					{name='seaweed',amount = 5},
+				},
+			results =
+				{
+                    {name='dhilmos-egg', amount ="+1"},
+				},
+			crafting_speed = 70,
+			tech = 'dhilmos-mk02'
+		},
+		--prod
+		{
+			ingredients =
+				{
+                    {name='dhilmos-food-01',amount ='R'},
+                    {name='seaweed',amount = 'R'},
+					{name='dhilmos-food-02',amount =1},
+
+				},
+			results =
+				{
+                    {name='dhilmos-egg', amount ="+1"},
+				},
+			crafting_speed = 55,
+			tech = 'dhilmos-mk03'
+		},
+		--utility
+		{
+			ingredients =
+				{
+					{name='seaweed',amount = 5},
+				},
+			results =
+				{
+                    {name='dhilmos-egg', amount ="+1"},
+				},
+			crafting_speed = 50,
+			tech = 'dhilmos-mk04'
+		},
+	}
+}
+
+--hatching
+
+fun.autorecipes {
+    name = 'dhilmos-hatching',
+	category = 'dhilmos',
+	module_limitations = 'dhilmos',
+	subgroup = 'py-alienlife-dhilmos',
+	order = 'c',
+    mats =
+	{
+		--chem
+		{
+			ingredients =
+				{
+					{name='dhilmos-egg', amount = 20},
+                    {name='ralesia-powder',amount = 50},
+					{name='water-saline',amount=100,return_item={name='waste-water'}},
+					{name='hot-air',amount = 50},
+				},
+			results =
+				{
+					{name='dhilmos-pup', amount = 20},
+				},
+			crafting_speed = 80,
+			tech = 'dhilmos'
+		},
+	}
+}
+
+--[[
+		-----------------------PHEROMONES-----------------------------
+		{
+			ingredients =
+				{
+					{name='seaweed',amount = 'R'},
+					{name='dhilmos-food-02',amount = 'R'},
+					{name='fawogae',amount =15},
+					{name='pheromones',amount =1},
+				},
+			results =
+				{
+					{name='dhilmos-egg',amount = 'R'},
+					{name='dhilmos-egg', amount =6},
+				},
+			crafting_speed = 50,
+			tech = 'pheromones'
+		},
+		--food 1
+		{
+			ingredients =
+				{
+					{name='dhilmos-food-01',amount =1},
+				},
+			results =
+				{
+                    {name='dhilmos-egg', amount ="+1"},
+				},
+			crafting_speed = 40,
+			tech = 'pheromones'
+		},
+		--fiber
+		{
+			ingredients =
+				{
+					{name='seaweed',amount = 5},
+				},
+			results =
+				{
+                    {name='dhilmos-egg', amount ="+1"},
+				},
+			crafting_speed = 30,
+			tech = 'pheromones'
+		},
+		--food 2
+		{
+			ingredients =
+				{
+					{name='dhilmos-food-01',amount ='R'},
+					{name='seaweed',amount ='R'},
+					{name='dhilmos-food-02',amount =1},
+
+				},
+			results =
+				{
+                    {name='dhilmos-egg', amount ="+1"},
+				},
+			crafting_speed = 20,
+			tech = 'pheromones'
+		},
+		--food 2 salt fiber
+		{
+			ingredients =
+				{
+					{name='seaweed',amount = 5},
+				},
+			results =
+				{
+                    {name='dhilmos-egg', amount ="+1"},
+				},
+			crafting_speed = 15,
+			tech = 'pheromones'
+		},
+
+	}
+}
+]]--
+
+--raising
+
+fun.autorecipes {
+    name = 'dhilmos',
+	category = 'dhilmos',
+	module_limitations = 'dhilmos',
+	subgroup = 'py-alienlife-dhilmos',
+	order = 'b',
+    mats =
+	{
+		--chem
+		{
+			ingredients =
+				{
+					{name='dhilmos-pup', amount = 1},
+					{name='phytoplankton',amount =50},
+					{name='water-saline', amount = 100, return_item = {name = 'waste-water'}},
+				},
+			results =
+				{
+					{name='dhilmos', amount = 1},
+				},
+			crafting_speed = 150,
+			tech = 'dhilmos'
+		},
+		--py
+		{
+			ingredients =
+				{
+					{name='dhilmos-pup', add_amount = 1},
+					{name='dhilmos-food-01', amount = 2},
+					{name='filtration-media',amount = 1},
+				},
+			results =
+				{
+					{name='dhilmos', add_amount = 1},
+				},
+			crafting_speed = 120,
+			tech = 'dhilmos-mk02'
+		},
+		--prod
+		{
+			ingredients =
+				{
+					{name='dhilmos-pup', add_amount = 3},
+					{name='seaweed', amount = 10},
+					{name='dhilmos-food-02', amount = 3},
+				},
+			results =
+				{
+					{name='dhilmos', add_amount = 3},
+				},
+			crafting_speed = 90,
+			tech = 'dhilmos-mk03'
+		},
+		--utility
+		{
+			ingredients =
+				{
+					{name='dhilmos-pup', add_amount = 3},
+					{name='filtration-media', add_amount = 2},
+					{name='seaweed', add_amount = 10},
+				},
+			results =
+				{
+					{name='dhilmos', add_amount = 3},
+				},
+			crafting_speed = 60,
+			tech = 'dhilmos-mk04'
+		},
+	}
+}
+
+--[[
+		--gh
+		{
+			ingredients =
+				{
+					{name='gh',amount =1},
+
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'growth-hormone'
+		},
+		--antiviral and gh
+		{
+			ingredients =
+				{
+					{name='antiviral',amount =1},
+				},
+			results =
+				{
+					{name='dhilmos', amount ='R'},
+					{name='dhilmos', probability = 1,amount_min =1,amount_max =2},
+				},
+			crafting_speed = 30,
+			tech = 'antiviral'
+		},
+		--antiviral
+		{
+			ingredients =
+				{
+					--{name='antiviral',amount =1},
+					{name='gh',amount ='R'},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 80,
+			tech = 'antiviral'
+		},
+		--rna anabolic
+		{
+			ingredients =
+				{
+					{name='gh',amount ='R'},
+					{name='bmp',amount ='R'},
+					{name='anabolic-rna',amount =1},
+				},
+			results =
+				{
+					{name='dhilmos', amount ='R'},
+					{name='meat-dhilmos', 1},
+				},
+			crafting_speed = 80,
+			tech = 'anabolic-rna'
+		},
+		--rna anabolic and gh
+		{
+			ingredients =
+				{
+					--{name='nanochondria',amount =1},
+					{name='gh',amount =1},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'anabolic-rna'
+		},
+		--antitumor
+		{
+			ingredients =
+				{
+					{name='gh',amount ='R'},
+					{name='anabolic-rna',amount ='R'},
+					{name='antitumor',amount =1},
+				},
+			results =
+				{
+					{name='meat-dhilmos', amount ='R'},
+					{name='guts-dhilmos', 1},
+				},
+			crafting_speed = 80,
+			tech = 'antitumor'
+		},
+		--antitumor and gh
+		{
+			ingredients =
+				{
+					--{name='nanochondria',amount =1},
+					{name='gh',amount =1},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'antitumor'
+		},
+		--Recombinant Ery
+		{
+			ingredients =
+				{
+					{name='gh',amount ='R'},
+					{name='antitumor',amount ='R'},
+					{name='recombinant-ery',amount =1},
+				},
+			results =
+				{
+					{name='guts-dhilmos', amount ='R'},
+					{name='blood-dhilmos', 1},
+				},
+			crafting_speed = 80,
+			tech = 'recombinant-ery'
+		},
+		--Recombinant Ery and gh
+		{
+			ingredients =
+				{
+					{name='gh',amount =1},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'recombinant-ery'
+		},
+		--orexigenic
+		{
+			ingredients =
+				{
+					{name='gh',amount ='R'},
+					{name='reca',amount ='R'},
+					{name='orexigenic',amount =1},
+				},
+			results =
+				{
+					{name='blood-dhilmos', amount ='R'},
+					{name='fat-dhilmos', 1},
+				},
+			crafting_speed = 80,
+			tech = 'orexigenic'
+		},
+		--orexigenic and gh
+		{
+			ingredients =
+				{
+					{name='gh',amount =1},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'orexigenic'
+		},
+	}
+}
+]]--

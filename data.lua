@@ -461,11 +461,19 @@ require('prototypes/recipes/cadavric-arum/recipes-auto-cadaveric')
 require('prototypes/recipes/cadavric-arum/recipes-arum-megafarm')
 
 --Cottongut
-
+require('prototypes/recipes/cottongut/recipes-cottongut')
+require('prototypes/recipes/cottongut/recipes-cottongut-raising')
+require('prototypes/recipes/cottongut/recipes-cottongut-rendering')
+require('prototypes/recipes/cottongut/recipes-cottongut-science')
 
 --Cridren
+require('prototypes/recipes/cridren/recipes-cridren')
+require('prototypes/recipes/cridren/recipes-auto-cridren')
 
 --Dhilmos
+require('prototypes/recipes/dhilmos/recipes-dhilmos')
+require('prototypes/recipes/dhilmos/recipes-dhilmos-raising')
+require('prototypes/recipes/dhilmos/recipes-dhilmos-rendering')
 
 --Dingrits
 
