@@ -995,6 +995,8 @@ function modify_recipe_tables(item,items_table,previous_item_names, result_table
                     --log(serpent.block(item))
                     table.insert(items_table, item)
                 end
+            elseif item.amount_min ~= nil and item.amount_max ~= nil then
+                table.insert(items_table, item)
             end
         elseif previous_item_names[item.name] == true then
             --alter existing ingredient
@@ -1004,6 +1006,14 @@ function modify_recipe_tables(item,items_table,previous_item_names, result_table
                     for p, pre in pairs(items_table) do
                         if pre.name == name then
                             pre.amount = item.add_amount + pre.amount
+                        end
+                    end
+                    --replace amount_min and amount_max with new values
+                elseif item.amount_min ~= nil and item.amount_max ~= nil then
+                    for p,pre in pairs(items_table) do
+                        if pre.name == name then
+                            pre.amount_min = item.amount_min
+                            pre.amount_max = item.amount_max
                         end
                     end
                 end
@@ -1118,7 +1128,7 @@ function overrides.autorecipes(recipe)
             enabled = enabled,
             energy_required = rec.crafting_speed,
             ingredients = fixed_ingredients,
-            results = results,
+            results = fixed_results,
             subgroup = subgroup,
             order = order,
             -- main_product = results[1].name,
@@ -1134,8 +1144,10 @@ function overrides.autorecipes(recipe)
         end
         if rec.main_product ~= nil then
             data.raw.recipe[numbered_name].main_product = rec.main_product
+        elseif recipe.main_product ~= nil then
+            RECIPE(numbered_name):set_fields{main_product = recipe.main_product}
         end
-        --log(serpent.block(data.raw.recipe[numbered_name]))
+        log(serpent.block(data.raw.recipe[numbered_name]))
     end
 
 end

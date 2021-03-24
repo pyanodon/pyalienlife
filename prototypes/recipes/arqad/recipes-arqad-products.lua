@@ -6,6 +6,7 @@ fun.autorecipes {
 	category = 'arqad',
 	subgroup = 'py-alienlife-arqad',
 	module_limitations = 'arqad',
+	main_product = 'filled-comb',
 	upgrades =
 		{
 			{
@@ -48,7 +49,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 80,
 			tech = 'arqad',
-			name = 'arqad filled comb 1',
+			name = 'arqad filled comb 1'
 		},
 		--py
 		{

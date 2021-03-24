@@ -1,18 +1,13 @@
 local fun = require("prototypes/functions/functions")
 
-require('prototypes/ores/kicalk')
+
+--(( Technology ))--
 require('prototypes/technologies/mega-farm-kicalk')
-require('prototypes/recipes/recipes-kicalk-megafarm')
-require('prototypes/recipes/recipes-kicalk')
-require('prototypes/recipes/recipes-auto-kicalk')
-require('prototypes/ores/arum')
 require('prototypes/technologies/mega-farm-cadaveric-arum')
 require('prototypes/technologies/cadaveric-arum')
+require('prototypes/technologies/moondrop')
 
-require('prototypes/recipes/recipes-arum-megafarm')
-require('prototypes/recipes/recipes-cadaveric')
---require('prototypes/recipes/recipes-auto-cadaveric')
-
+--(( BUILDINGS ))--
 require("prototypes/buildings/cadavericarum-mk01")
 require("prototypes/buildings/cadavericarum-mk02")
 require("prototypes/buildings/cadavericarum-mk03")
@@ -22,18 +17,37 @@ require("prototypes/buildings/kicalk-plantation-mk02")
 require("prototypes/buildings/kicalk-plantation-mk03")
 require("prototypes/buildings/kicalk-plantation-mk04")
 
-require('prototypes/technologies/moondrop')
-require('prototypes/recipes/recipes-moondrop')
---require('prototypes/recipes/recipes-auto-moondrop')
---require('prototypes/recipes/recipes-auto-moondrop-1')
+--(( RECIPES ))--
 
+--antelope
+require('prototypes/recipes/antelope/recipes-antelope')
+--require('prototypes/recipes/antelope/recipes-auto-antelope')
+
+--Cadaveric-arum
+require('prototypes/recipes/cadaveric-arum/recipes-cadaveric')
+--require('prototypes/recipes/cadaveric-arum/recipes-auto-cadaveric')
+require('prototypes/recipes/cadaveric-arum/recipes-arum-megafarm')
+
+--kilcalk
+require('prototypes/recipes/kicalk/recipes-kicalk-megafarm')
+require('prototypes/recipes/kicalk/recipes-kicalk')
+require('prototypes/recipes/kicalk/recipes-auto-kicalk')
+
+--Moondrop
+require('prototypes/recipes/moondrop/recipes-moondrop')
+--require('prototypes/recipes/moondrop/recipes-auto-moondrop')
+--require('prototypes/recipes/moondrop/recipes-auto-moondrop-1')
+
+--(( ORES ))--
+require('prototypes/ores/kicalk')
+require('prototypes/ores/arum')
+
+--(( MODIFICATIONS ))--
 --TECHNOLOGY--
 TECHNOLOGY('nano-tech'):add_prereq('microbiology-mk03')
 --TECHNOLOGY('bio-implants'):add_prereq('nano-tech')
 TECHNOLOGY('advanced-electronics'):add_prereq('chitin')
 TECHNOLOGY('antitumor'):add_prereq('earnshaw-theorem')
-RECIPE('kicalk-plantation'):remove_unlock('coal-processing-1')
-RECIPE('cadaveric-arum-mk01'):remove_unlock('basic-electronics')
 TECHNOLOGY('advanced-electronics'):add_pack('py-science-pack')
 TECHNOLOGY('aerogel'):add_pack('py-science-pack')
 TECHNOLOGY('earnshaw-theorem'):add_pack('py-science-pack')
@@ -42,8 +56,9 @@ TECHNOLOGY('nano-tech'):add_pack('py-science-pack')
 TECHNOLOGY('penrose'):add_pack('py-science-pack')
 TECHNOLOGY('quantum'):add_pack('py-science-pack')
 
-require('prototypes/recipes/recipes-antelope')
---require('prototypes/recipes/recipes-auto-antelope')
+--RECIPES--
+RECIPE('kicalk-plantation'):remove_unlock('coal-processing-1')
+RECIPE('cadaveric-arum-mk01'):remove_unlock('basic-electronics')
 
 --adjusting win condition to need q computer
 

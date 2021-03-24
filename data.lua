@@ -430,6 +430,7 @@ require('prototypes/items/items')
 require('prototypes/recipes/recipes')
 
 --antelope
+--see pyhightech updates for files
 
 --arqad
 require('prototypes/recipes/arqad/recipes-arqad')
@@ -456,9 +457,7 @@ require('prototypes/recipes/bhoddos/recipes-bhoddos')
 require('prototypes/recipes/bhoddos/recipes-bhoddos-raising')
 
 --Cadaveric-arum
-require('prototypes/recipes/cadavric-arum/recipes-cadaveric')
-require('prototypes/recipes/cadavric-arum/recipes-auto-cadaveric')
-require('prototypes/recipes/cadavric-arum/recipes-arum-megafarm')
+--see pyhightech updates for files
 
 --Cottongut
 require('prototypes/recipes/cottongut/recipes-cottongut')
@@ -476,8 +475,13 @@ require('prototypes/recipes/dhilmos/recipes-dhilmos-raising')
 require('prototypes/recipes/dhilmos/recipes-dhilmos-rendering')
 
 --Dingrits
+require('prototypes/recipes/dingrits/recipes-dingrits')
+require('prototypes/recipes/dingrits/recipes-dingrits-raising')
+require('prototypes/recipes/dingrits/recipes-dingrits-rendering')
 
 --Fawogae
+require('prototypes/recipes/fawogae/recipes-fawogae')
+require('prototypes/recipes/fawogae/recipes-auto-fawogae')
 
 --Fish
 
@@ -486,12 +490,14 @@ require('prototypes/recipes/dhilmos/recipes-dhilmos-rendering')
 --guar
 
 --Kicalk
+--see pyhightech updates for files
 
 --Kmauts
 
 --Korlex
 
 --Moondrop
+--see pyhightech updates for files
 
 --moss
 
@@ -509,7 +515,7 @@ require('prototypes/recipes/dhilmos/recipes-dhilmos-rendering')
 
 --Sap
 --require('prototypes/recipes/recipes-sap')
-require('prototypes/recipes/recipes-sap-products')
+require('prototypes/recipes/sap/recipes-sap-products')
 
 --Scrondrix
 

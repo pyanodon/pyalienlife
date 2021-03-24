@@ -1,7 +1,7 @@
 local fun = require("prototypes/functions/functions")
 
 if mods['pyhightech'] then
-    require('prototypes/recipes/recipes-moondrop-products')
+    require('prototypes/recipes/moondrop/recipes-moondrop-products')
     RECIPE('arqad-mk02'):remove_ingredient('crude-oil-barrel'):add_ingredient({type = 'item', name = 'moondrop-fueloil', amount = 25}):add_ingredient({type = 'item', name = 'moondrop-diesel', amount = 5})
     --data.raw.recipe['arqad-mk02'].results[3] = nil
     fun.results_replacer('arqad-mk02','empty-barrel','empty-barrel', 2)

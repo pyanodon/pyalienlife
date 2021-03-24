@@ -8,6 +8,7 @@ fun.autorecipes {
 	module_limitations = 'arqad',
 	subgroup = 'py-alienlife-arqad',
 	order = 'c',
+	main_product = 'arqad-egg',
     mats =
 	{
 		--base
@@ -97,6 +98,7 @@ fun.autorecipes {
 	module_limitations = 'arqad',
 	subgroup = 'py-alienlife-arqad',
 	order = 'c',
+	main_product = 'arqad-maggot',
     mats =
 	{
 		--base
@@ -126,6 +128,7 @@ fun.autorecipes {
 	module_limitations = 'arqad',
 	subgroup = 'py-alienlife-arqad',
 	order = 'c',
+	main_product = 'arqad-egg-nest',
     mats =
 	{
 		--base
@@ -196,6 +199,7 @@ fun.autorecipes {
 	module_limitations = 'arqad',
 	subgroup = 'py-alienlife-arqad',
 	order = 'b',
+	main_product = 'arqad',
     mats =
 	{
 		--base
@@ -285,6 +289,7 @@ fun.autorecipes {
 	module_limitations = 'arqad',
 	subgroup = 'py-alienlife-arqad',
 	order = 'b',
+	main_product = 'arqad-queen',
     mats =
 	{
 		--base
