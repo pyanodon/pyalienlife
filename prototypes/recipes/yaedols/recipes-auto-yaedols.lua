@@ -51,8 +51,8 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {name='fungal-substrate-02',amount ='R'},
-                {name='manure',amount ='R'},
+                {name='fungal-substrate-02',remove_item = true},
+                {name='manure',remove_item = true},
                 {name='fungal-substrate-03',amount =2},
             },
         results =
@@ -101,7 +101,7 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {name='biomass',amount ='R'},
+                {name='biomass',remove_item = true},
                 {name='urea',amount =10},
             },
         results =
@@ -115,10 +115,10 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {name='urea',amount ='R'},
-                {name='nitrogen',amount ='R'},
-                {name='manure',amount ='R'},
-                {name='biomass',amount ='R'},
+                {name='urea',remove_item = true},
+                {name='nitrogen',remove_item = true},
+                {name='manure',remove_item = true},
+                {name='biomass',remove_item = true},
                 {name='gh',amount =1},
             },
         results =
@@ -132,9 +132,9 @@ fun.autorecipes {
         ingredients =
             {
                 {name='urea',amount =10},
-                --{'nitrogen','R'},
-                --{'manure','R'},
-                --{'biomass','R'},
+                --{'nitrogen',remove_item = true},
+                --{'manure',remove_item = true},
+                --{'biomass',remove_item = true},
                 --{'gh',1},
             },
         results =
@@ -148,8 +148,8 @@ fun.autorecipes {
         ingredients =
             {
                 {name='bacteria-2',amount ='*20'},
-                --{'manure','R'},
-                --{'biomass','R'},
+                --{'manure',remove_item = true},
+                --{'biomass',remove_item = true},
                 --{'gh',1},
             },
         results =

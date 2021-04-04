@@ -6,6 +6,7 @@ fun.autorecipes {
     name = 'arthurian-egg',
 	category = 'arthurian',
 	module_limitations = 'arthurian',
+	main_product = 'arthurian-egg',
 	subgroup = 'py-alienlife-arthurian',
 	order = 'c',
     mats =
@@ -79,8 +80,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount = 'R'},
-					{name='arthurian-food-02',amount = 'R'},
+					{name='raw-fiber',remove_item = true},
+					{name='arthurian-food-02',remove_item = true},
 					{name='fawogae',amount =15},
 					{name='pheromones',amount =1},
 					--{name='water-barrel',amount=6,return_item={name='empty-barrel',amount=6}},
@@ -88,7 +89,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='arthurian-egg',amount = 'R'},
+					{name='arthurian-egg',remove_item = true},
 					{name='arthurian-egg', amount =8},
 				},
 			crafting_speed = 70,
@@ -127,8 +128,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='arthurian-food-01',amount ='R'},
-					{name='raw-fiber',amount ='R'},
+					{name='arthurian-food-01',remove_item = true},
+					{name='raw-fiber',remove_item = true},
 					{name='arthurian-food-02',amount =1},
 
 				},
@@ -194,6 +195,7 @@ fun.autorecipes {
     name = 'arthurian-maturing',
 	category = 'arthurian',
 	module_limitations = 'arthurian',
+	main_product = 'arthurian',
 	subgroup = 'py-alienlife-arthurian',
 	order = 'b',
     mats =

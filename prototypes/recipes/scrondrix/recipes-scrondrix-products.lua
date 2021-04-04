@@ -28,7 +28,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='wood-seeds',amount ='R'},
+					--{name='wood-seeds',remove_item = true},
 					{name='yotoi-leaves'},
 				},
 			results =

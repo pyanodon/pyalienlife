@@ -29,8 +29,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='ralesia-seeds',amount ='R'},
-					{name='fawogae',amount ='R'},
+					{name='ralesia-seeds',remove_item = true},
+					{name='fawogae',remove_item = true},
 					{name='mukmoux-food-01'},
 				},
 			results =
@@ -77,9 +77,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='salt',amount ='R'},
-					{name='raw-fiber',amount ='R'},
-					{name='mukmoux-food-01',amount ='R'},
+					{name='salt',remove_item = true},
+					{name='raw-fiber',remove_item = true},
+					{name='mukmoux-food-01',remove_item = true},
 					{name='mukmoux-food-02'},
 				},
 			results =

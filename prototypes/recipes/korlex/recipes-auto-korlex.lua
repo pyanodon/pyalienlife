@@ -28,14 +28,14 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='bhoddos',amount ='R'},
-                    {name='kicalk',amount ='R'},
-                    {name='tuuphra',amount ='R'},
+                    {name='bhoddos',remove_item = true},
+                    {name='kicalk',remove_item = true},
+                    {name='tuuphra',remove_item = true},
 					{name='korlex-food-01',amount =1},
 				},
 			results =
 				{
-					{name='caged-korlex',amount ='R'},
+					{name='caged-korlex',remove_item = true},
 					{name='caged-korlex', probability = 0.8,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 140,
@@ -72,15 +72,15 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='korlex-food-01',amount ='R'},
-					{name='ash',amount ='R'},
-					{name='fish',amount ='R'},
+					{name='korlex-food-01',remove_item = true},
+					{name='ash',remove_item = true},
+					{name='fish',remove_item = true},
 					{name='korlex-food-02',amount =1},
 
 				},
 			results =
 				{
-					{name='caged-korlex',amount ='R'},
+					{name='caged-korlex',remove_item = true},
 					{name='caged-korlex', probability = 0.9,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 110,
@@ -135,7 +135,7 @@ fun.autorecipes {
 			results =
 				{
 
-					{name='caged-korlex', amount ='R'},
+					{name='caged-korlex', remove_item = true},
 					{name='caged-korlex', probability = 1,amount_min =1,amount_max =2},
 				},
 			crafting_speed = 30,
@@ -146,7 +146,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					--{name='antiviral',amount =1},
-					{name='gh',amount ='R'},
+					{name='gh',remove_item = true},
 				},
 			results =
 				{
@@ -160,11 +160,11 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='nanochondria',amount =1},
-					--{name='antiviral',amount ='R'},
+					--{name='antiviral',remove_item = true},
 				},
 			results =
 				{
-					{name='caged-korlex', amount ='R'},
+					{name='caged-korlex', remove_item = true},
 					{name='brain-caged-korlex',1},
 				},
 			crafting_speed = 90,
@@ -188,13 +188,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='nanochondria',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='nanochondria',remove_item = true},
 					{name='bmp',amount =1},
 				},
 			results =
 				{
-					{name='brain-caged-korlex', amount ='R'},
+					{name='brain-caged-korlex', remove_item = true},
 					{name='bone-caged-korlex', 1},
 				},
 			crafting_speed = 90,
@@ -219,13 +219,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='bmp',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='bmp',remove_item = true},
 					{name='anabolic-rna',amount =1},
 				},
 			results =
 				{
-					{name='bone-caged-korlex', amount ='R'},
+					{name='bone-caged-korlex', remove_item = true},
 					{name='meat-caged-korlex', 1},
 				},
 			crafting_speed = 90,
@@ -249,13 +249,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='anabolic-rna',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='anabolic-rna',remove_item = true},
 					{name='antitumor',amount =1},
 				},
 			results =
 				{
-					{name='meat-caged-korlex', amount ='R'},
+					{name='meat-caged-korlex', remove_item = true},
 					{name='guts-caged-korlex', 1},
 				},
 			crafting_speed = 90,
@@ -279,13 +279,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='antitumor',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='antitumor',remove_item = true},
 					{name='recombinant-ery',amount =1},
 				},
 			results =
 				{
-					{name='guts-caged-korlex', amount ='R'},
+					{name='guts-caged-korlex', remove_item = true},
 					{name='blood-caged-korlex', 1},
 				},
 			crafting_speed = 90,
@@ -308,13 +308,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='recombinant-ery',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='recombinant-ery',remove_item = true},
 					{name='reca',amount =1},
 				},
 			results =
 				{
-					{name='blood-caged-korlex', amount ='R'},
+					{name='blood-caged-korlex', remove_item = true},
 					{name='skin-caged-korlex', 1},
 				},
 			crafting_speed = 90,
@@ -337,13 +337,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='reca',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='reca',remove_item = true},
 					{name='orexigenic',amount =1},
 				},
 			results =
 				{
-					{name='skin-caged-korlex', amount ='R'},
+					{name='skin-caged-korlex', remove_item = true},
 					{name='fat-caged-korlex', 1},
 				},
 			crafting_speed = 90,
@@ -396,9 +396,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='bhoddos',amount ='R'},
-                    {name='kicalk',amount ='R'},
-                    {name='tuuphra',amount ='R'},
+                    {name='bhoddos',remove_item = true},
+                    {name='kicalk',remove_item = true},
+                    {name='tuuphra',remove_item = true},
 					{name='korlex-food-01',amount =2},
 				},
 			results =
@@ -438,9 +438,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='korlex-food-01',amount ='R'},
-					{name='ash',amount ='R'},
-					{name='fish',amount ='R'},
+					{name='korlex-food-01',remove_item = true},
+					{name='ash',remove_item = true},
+					{name='fish',remove_item = true},
 					{name='korlex-food-02',amount =2},
 
 				},
@@ -455,7 +455,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='ash',amount ='R'},
+					{name='ash',remove_item = true},
 				},
 			results =
 				{
@@ -481,9 +481,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fish',amount = 'R'},
-					{name='ash',amount = 'R'},
-                    {name='korlex-food-02',amount = 'R'},
+					{name='fish',remove_item = true},
+					{name='ash',remove_item = true},
+                    {name='korlex-food-02',remove_item = true},
                     {name='kicalk',amount =3},
 					{name='tuuphra',amount =6},
 					{name='pheromones',amount =1},
@@ -493,7 +493,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='korlex-pup',amount = 'R'},
+					{name='korlex-pup',remove_item = true},
 					{name='korlex-pup', amount =5},
 				},
 			crafting_speed = 140,
@@ -503,9 +503,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='bhoddos',amount ='R'},
-                    {name='tuuphra',amount ='R'},
-                    {name='kicalk',amount ='R'},
+                    {name='bhoddos',remove_item = true},
+                    {name='tuuphra',remove_item = true},
+                    {name='kicalk',remove_item = true},
 					{name='korlex-food-01',amount =2},
 				},
 			results =
@@ -545,9 +545,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='korlex-food-01',amount ='R'},
-					{name='ash',amount ='R'},
-					{name='fish',amount ='R'},
+					{name='korlex-food-01',remove_item = true},
+					{name='ash',remove_item = true},
+					{name='fish',remove_item = true},
 					{name='korlex-food-02',amount =2},
 
 				},
@@ -562,7 +562,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='ash',amount ='R'},
+					{name='ash',remove_item = true},
 				},
 			results =
 				{
@@ -628,13 +628,13 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='skin', amount ='R'},
-					{name='mukmoux-fat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='blood', amount ='R'},
-					{name='brain', amount ='R'},
+					{name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='skin', remove_item = true},
+					{name='mukmoux-fat', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='blood', remove_item = true},
+					{name='brain', remove_item = true},
 					{name='meat', amount =3},
 				},
 			crafting_speed = 15,
@@ -651,7 +651,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='brain', amount =1},
 				},
 			crafting_speed = 15,
@@ -668,7 +668,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='skin', amount =5},
 				},
 			crafting_speed = 15,
@@ -685,7 +685,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='skin', amount ='R'},
+					{name='skin', remove_item = true},
 					{name='bones', amount =3},
 				},
 			crafting_speed = 15,
@@ -702,7 +702,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
+					{name='bones', remove_item = true},
 					{name='guts', amount =2},
 				},
 			crafting_speed = 15,
@@ -719,7 +719,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='blood', amount =30},
 				},
 			crafting_speed = 15,
@@ -736,7 +736,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='blood', amount ='R'},
+					{name='blood', remove_item = true},
 					{name='mukmoux-fat', amount =3},
 				},
 			crafting_speed = 15,
@@ -749,12 +749,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-korlex',amount='R'},
+					{name='caged-korlex',remove_item = true},
 					{name='brain-caged-korlex',amount=1},
 				},
 			results =
 				{
-					{name='mukmoux-fat', amount ='R'},
+					{name='mukmoux-fat', remove_item = true},
 					{name='brain', amount =5},
 				},
 			crafting_speed = 15,
@@ -767,12 +767,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='brain-caged-korlex',amount='R'},
+					{name='brain-caged-korlex',remove_item = true},
 					{name='bone-caged-korlex',amount=1},
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='bones', amount =9},
 				},
 			crafting_speed = 15,
@@ -785,12 +785,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='bone-caged-korlex',amount='R'},
+					{name='bone-caged-korlex',remove_item = true},
 					{name='meat-caged-korlex',amount=1},
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
+					{name='bones', remove_item = true},
 					{name='meat', amount =10},
 				},
 			crafting_speed = 15,
@@ -803,12 +803,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='meat-caged-korlex',amount='R'},
+					{name='meat-caged-korlex',remove_item = true},
 					{name='guts-caged-korlex',amount=1},
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='guts', amount =7},
 				},
 			crafting_speed = 15,
@@ -821,12 +821,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='guts-caged-korlex',amount='R'},
+					{name='guts-caged-korlex',remove_item = true},
 					{name='blood-caged-korlex',amount=1},
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='blood', amount =100},
 				},
 			crafting_speed = 15,
@@ -839,12 +839,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='blood-caged-korlex',amount='R'},
+					{name='blood-caged-korlex',remove_item = true},
 					{name='skin-caged-korlex',amount=1},
 				},
 			results =
 				{
-					{name='blood', amount ='R'},
+					{name='blood', remove_item = true},
 					{name='skin', amount =13},
 				},
 			crafting_speed = 15,
@@ -857,12 +857,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='skin-caged-korlex',amount='R'},
+					{name='skin-caged-korlex',remove_item = true},
 					{name='fat-caged-korlex',amount=1},
 				},
 			results =
 				{
-					{name='skin', amount ='R'},
+					{name='skin', remove_item = true},
 					{name='mukmoux-fat', amount =8},
 				},
 			crafting_speed = 15,

@@ -28,14 +28,14 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-ulric',amount ='R'},
+					{name='caged-ulric',remove_item = true},
 					{name='cage',amount="+1"},
 					{name='kmauts-ration',amount =1},
 
 				},
 			results =
 				{
-					{name='caged-kmauts',amount ='R'},
+					{name='caged-kmauts',remove_item = true},
 					{name='caged-kmauts', probability = 0.9,amount_min =2,amount_max =2}, --1.8
 				},
 			crafting_speed = 130,
@@ -52,7 +52,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='caged-kmauts', amount = 'R'},
+					{name='caged-kmauts', remove_item = true},
 					{name='caged-kmauts', probability = 0.95,amount_min =2,amount_max =3},  --2.375
 				},
 			crafting_speed = 120,
@@ -67,7 +67,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='caged-kmauts', amount = 'R'},
+					{name='caged-kmauts', remove_item = true},
 					{name='caged-kmauts', probability = 0.75,amount_min =3,amount_max =4},    --2.625
 				},
 			crafting_speed = 110,
@@ -82,7 +82,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='caged-kmauts', amount = 'R'},
+					{name='caged-kmauts', remove_item = true},
 					{name='caged-kmauts', probability = 0.8,amount_min =3,amount_max =4},   --2.8
 				},
 			crafting_speed = 25,
@@ -96,7 +96,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='caged-kmauts', amount ='R'},
+					{name='caged-kmauts', remove_item = true},
 					{name='caged-kmauts', probability = 1,amount_min =3,amount_max =3},
 				},
 			crafting_speed = 25,
@@ -107,7 +107,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					--{name='antiviral',amount =1},
-					{name='gh',amount ='R'},
+					{name='gh',remove_item = true},
 				},
 			results =
 				{
@@ -121,11 +121,11 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='nanochondria',amount =2},
-					--{name='antiviral',amount ='R'},
+					--{name='antiviral',remove_item = true},
 				},
 			results =
 				{
-					{name='caged-kmauts', amount ='R'},
+					{name='caged-kmauts', remove_item = true},
 					{name='brain-caged-kmauts',3},
 				},
 			crafting_speed = 70,
@@ -149,13 +149,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='nanochondria',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='nanochondria',remove_item = true},
 					{name='anabolic-rna',amount =2},
 				},
 			results =
 				{
-					{name='brain-caged-kmauts', amount ='R'},
+					{name='brain-caged-kmauts', remove_item = true},
 					{name='meat-caged-kmauts', 3},
 				},
 			crafting_speed = 70,
@@ -179,13 +179,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='anabolic-rna',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='anabolic-rna',remove_item = true},
 					{name='antitumor',amount =2},
 				},
 			results =
 				{
-					{name='meat-caged-kmauts', amount ='R'},
+					{name='meat-caged-kmauts', remove_item = true},
 					{name='guts-caged-kmauts', 3},
 				},
 			crafting_speed = 70,
@@ -209,13 +209,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='antitumor',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='antitumor',remove_item = true},
 					{name='recombinant-ery',amount =2},
 				},
 			results =
 				{
-					{name='guts-caged-kmauts', amount ='R'},
+					{name='guts-caged-kmauts', remove_item = true},
 					{name='blood-caged-kmauts', 3},
 				},
 			crafting_speed = 70,
@@ -238,13 +238,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='recombinant-ery',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='recombinant-ery',remove_item = true},
 					{name='orexigenic',amount =2},
 				},
 			results =
 				{
-					{name='blood-caged-kmauts', amount ='R'},
+					{name='blood-caged-kmauts', remove_item = true},
 					{name='fat-caged-kmauts', 3},
 				},
 			crafting_speed = 70,
@@ -296,8 +296,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='rennea',amount ='R'},
-                    {name='caged-ulric',amount ='R'},
+                    {name='rennea',remove_item = true},
+                    {name='caged-ulric',remove_item = true},
 					{name='kmauts-ration',amount =1},
 				},
 			results =
@@ -337,9 +337,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='tuuphra',amount = 'R'},
-					{name='rennea',amount = 'R'},
-					{name='kmauts-ration',amount = 'R'},
+					{name='tuuphra',remove_item = true},
+					{name='rennea',remove_item = true},
+					{name='kmauts-ration',remove_item = true},
 					{name='caged-ulric',amount =4},
 					{name='pheromones',amount =2},
                     {name='rennea',amount =15},
@@ -348,7 +348,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='kmauts-cub',amount = 'R'},
+					{name='kmauts-cub',remove_item = true},
 					{name='kmauts-cub', amount =6},
 				},
 			crafting_speed = 60,
@@ -358,8 +358,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='rennea',amount ='R'},
-                    {name='caged-ulric',amount ='R'},
+                    {name='rennea',remove_item = true},
+                    {name='caged-ulric',remove_item = true},
 					{name='kmauts-ration',amount =1},
 				},
 			results =
@@ -436,12 +436,12 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
-                    {name='guts', amount ='R'},
-                    {name='mukmoux-fat', amount ='R'},
-					{name='tendon', amount ='R'},
-					{name='arthropod-blood', amount ='R'},
-					{name='brain', amount ='R'},
+					{name='meat', remove_item = true},
+                    {name='guts', remove_item = true},
+                    {name='mukmoux-fat', remove_item = true},
+					{name='tendon', remove_item = true},
+					{name='arthropod-blood', remove_item = true},
+					{name='brain', remove_item = true},
 					{name='meat', amount =2},
 				},
 			crafting_speed = 15,
@@ -458,7 +458,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='brain', amount =1},
 				},
 			crafting_speed = 15,
@@ -475,7 +475,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='tendon', amount =2},
 				},
 			crafting_speed = 15,
@@ -492,7 +492,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='tendon', amount ='R'},
+					{name='tendon', remove_item = true},
 					{name='guts', amount =2},
 				},
 			crafting_speed = 15,
@@ -509,7 +509,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='arthropod-blood', amount =20},
 				},
 			crafting_speed = 15,
@@ -527,7 +527,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='arthropod-blood', amount ='R'},
+					{name='arthropod-blood', remove_item = true},
 					{name='mukmoux-fat', amount =2},
 				},
 			crafting_speed = 15,
@@ -541,12 +541,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-kmauts',amount='R'},
+					{name='caged-kmauts',remove_item = true},
 					{name='brain-caged-kmauts',amount=1},
 				},
 			results =
 				{
-					{name='mukmoux-fat', amount ='R'},
+					{name='mukmoux-fat', remove_item = true},
 					{name='brain', amount =5},
 				},
 			crafting_speed = 15,
@@ -559,12 +559,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='brain-caged-kmauts',amount='R'},
+					{name='brain-caged-kmauts',remove_item = true},
 					{name='guts-caged-kmauts',amount=1},
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='guts', amount =7},
 				},
 			crafting_speed = 15,
@@ -577,12 +577,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='guts-caged-kmauts',amount='R'},
+					{name='guts-caged-kmauts',remove_item = true},
 					{name='blood-caged-kmauts',amount=1},
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='arthropod-blood', amount =80},
 				},
 			crafting_speed = 15,
@@ -595,12 +595,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='blood-caged-kmauts',amount='R'},
+					{name='blood-caged-kmauts',remove_item = true},
 					{name='meat-caged-kmauts',amount=1},
 				},
 			results =
 				{
-					{name='arthropod-blood', amount ='R'},
+					{name='arthropod-blood', remove_item = true},
 					{name='meat', amount =8},
 				},
 			crafting_speed = 15,
@@ -613,12 +613,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='meat-caged-kmauts',amount='R'},
+					{name='meat-caged-kmauts',remove_item = true},
 					{name='fat-caged-kmauts',amount=1},
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='mukmoux-fat', amount =7},
 				},
 			crafting_speed = 15,

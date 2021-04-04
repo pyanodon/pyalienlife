@@ -19,7 +19,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-
+					{name='arthurian', amount =1},
 				},
 			crafting_speed = 30,
 			name = 'arthurian-08',
@@ -33,7 +33,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='arthurian', amount ='R'},
+					{name='arthurian', remove_item = true},
 					{name='arthurian', probability = 1,amount_min =1,amount_max =2},
 				},
 			crafting_speed = 30,
@@ -45,7 +45,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					--{name='antiviral',amount =1},
-					{name='gh',amount ='R'},
+					{name='gh',remove_item = true},
 				},
 			results =
 				{
@@ -60,11 +60,11 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='nanochondria',amount =1},
-					--{name='antiviral',amount ='R'},
+					--{name='antiviral',remove_item = true},
 				},
 			results =
 				{
-					{name='arthurian', amount ='R'},
+					{name='arthurian', remove_item = true},
 					{name='brain-caged-arthurian',1},
 				},
 			crafting_speed = 80,
@@ -90,13 +90,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='nanochondria',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='nanochondria',remove_item = true},
 					{name='bmp',amount =1},
 				},
 			results =
 				{
-					{name='brain-caged-arthurian', amount ='R'},
+					{name='brain-caged-arthurian', remove_item = true},
 					{name='bone-caged-arthurian', 1},
 				},
 			crafting_speed = 80,
@@ -123,13 +123,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='bmp',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='bmp',remove_item = true},
 					{name='anabolic-rna',amount =1},
 				},
 			results =
 				{
-					{name='bone-caged-arthurian', amount ='R'},
+					{name='bone-caged-arthurian', remove_item = true},
 					{name='meat-caged-arthurian', 1},
 				},
 			crafting_speed = 80,
@@ -155,13 +155,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='anabolic-rna',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='anabolic-rna',remove_item = true},
 					{name='antitumor',amount =1},
 				},
 			results =
 				{
-					{name='meat-caged-arthurian', amount ='R'},
+					{name='meat-caged-arthurian', remove_item = true},
 					{name='guts-caged-arthurian', 1},
 				},
 			crafting_speed = 80,
@@ -187,13 +187,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='antitumor',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='antitumor',remove_item = true},
 					{name='recombinant-ery',amount =1},
 				},
 			results =
 				{
-					{name='guts-caged-arthurian', amount ='R'},
+					{name='guts-caged-arthurian', remove_item = true},
 					{name='blood-caged-arthurian', 1},
 				},
 			crafting_speed = 80,
@@ -218,13 +218,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='recombinant-ery',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='recombinant-ery',remove_item = true},
 					{name='reca',amount =1},
 				},
 			results =
 				{
-					{name='blood-caged-arthurian', amount ='R'},
+					{name='blood-caged-arthurian', remove_item = true},
 					{name='skin-caged-arthurian', 1},
 				},
 			crafting_speed = 80,
@@ -249,13 +249,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='reca',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='reca',remove_item = true},
 					{name='orexigenic',amount =1},
 				},
 			results =
 				{
-					{name='skin-caged-arthurian', amount ='R'},
+					{name='skin-caged-arthurian', remove_item = true},
 					{name='fat-caged-arthurian', 1},
 				},
 			crafting_speed = 80,

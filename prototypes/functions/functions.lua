@@ -946,7 +946,11 @@ function modify_recipe_tables(item,items_table,previous_item_names, result_table
         local name = item.name
         --log(name)
 
-        if previous_item_names[name] ~= true then
+        if item.remove_item ~= nil and item.remove_item == true then
+            for i, it in pairs(items_table) do
+                it = nil
+            end
+        elseif previous_item_names[name] ~= true then
             --log('hit')
             --add new ingredient to table
 
@@ -984,17 +988,8 @@ function modify_recipe_tables(item,items_table,previous_item_names, result_table
                 table.insert(result_table, return_barrel)
             end
 
-           if item.amount ~= nil then
-                if type(item.amount) == "string" and string.match(item.amount, 'R') ~= nil then
-                    for i, it in pairs(items_table) do
-                        it = nil
-                    end
-                elseif type(item.amount) == "number" then
-                    --insert new ingredient
-                    --log(serpent.block(items_table))
-                    --log(serpent.block(item))
-                    table.insert(items_table, item)
-                end
+           if item.amount ~= nil and type(item.amount) == "number" then
+                table.insert(items_table, item)
             elseif item.amount_min ~= nil and item.amount_max ~= nil then
                 table.insert(items_table, item)
             end
@@ -1014,6 +1009,13 @@ function modify_recipe_tables(item,items_table,previous_item_names, result_table
                         if pre.name == name then
                             pre.amount_min = item.amount_min
                             pre.amount_max = item.amount_max
+                        end
+                    end
+                elseif item.subtract_amount ~= nil then
+                    --subtract ingredient amount
+                    for p, pre in pairs(items_table) do
+                        if pre.name == name then
+                            pre.amount = pre.amount - item.subtract_amount
                         end
                     end
                 end
@@ -1141,6 +1143,14 @@ function overrides.autorecipes(recipe)
         end
         if rec.name ~= nil then
             data.raw.recipe[numbered_name].localised_name = rec.name
+        end
+        if rec.icon ~= nil then
+            data.raw.recipe[numbered_name].icon = rec.icon
+            if rec.icon_size ~= nil then
+                data.raw.recipe[numbered_name].icon_size = rec.icon_size
+            else
+                data.raw.recipe[numbered_name].icon_size = 32
+            end
         end
         if rec.main_product ~= nil then
             data.raw.recipe[numbered_name].main_product = rec.main_product

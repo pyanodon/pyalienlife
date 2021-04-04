@@ -44,8 +44,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='dhilmos-food-01',amount ='R'},
-                    {name='seaweed',amount = 'R'},
+                    {name='dhilmos-food-01',remove_item = true},
+                    {name='seaweed',remove_item = true},
 					{name='dhilmos-food-02',amount =1},
 
 				},
@@ -106,14 +106,14 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='seaweed',amount = 'R'},
-					{name='dhilmos-food-02',amount = 'R'},
+					{name='seaweed',remove_item = true},
+					{name='dhilmos-food-02',remove_item = true},
 					{name='fawogae',amount =15},
 					{name='pheromones',amount =1},
 				},
 			results =
 				{
-					{name='dhilmos-egg',amount = 'R'},
+					{name='dhilmos-egg',remove_item = true},
 					{name='dhilmos-egg', amount =6},
 				},
 			crafting_speed = 50,
@@ -149,8 +149,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='dhilmos-food-01',amount ='R'},
-					{name='seaweed',amount ='R'},
+					{name='dhilmos-food-01',remove_item = true},
+					{name='seaweed',remove_item = true},
 					{name='dhilmos-food-02',amount =1},
 
 				},
@@ -275,7 +275,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='dhilmos', amount ='R'},
+					{name='dhilmos', remove_item = true},
 					{name='dhilmos', probability = 1,amount_min =1,amount_max =2},
 				},
 			crafting_speed = 30,
@@ -286,7 +286,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					--{name='antiviral',amount =1},
-					{name='gh',amount ='R'},
+					{name='gh',remove_item = true},
 				},
 			results =
 				{
@@ -299,13 +299,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='bmp',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='bmp',remove_item = true},
 					{name='anabolic-rna',amount =1},
 				},
 			results =
 				{
-					{name='dhilmos', amount ='R'},
+					{name='dhilmos', remove_item = true},
 					{name='meat-dhilmos', 1},
 				},
 			crafting_speed = 80,
@@ -329,13 +329,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='anabolic-rna',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='anabolic-rna',remove_item = true},
 					{name='antitumor',amount =1},
 				},
 			results =
 				{
-					{name='meat-dhilmos', amount ='R'},
+					{name='meat-dhilmos', remove_item = true},
 					{name='guts-dhilmos', 1},
 				},
 			crafting_speed = 80,
@@ -359,13 +359,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='antitumor',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='antitumor',remove_item = true},
 					{name='recombinant-ery',amount =1},
 				},
 			results =
 				{
-					{name='guts-dhilmos', amount ='R'},
+					{name='guts-dhilmos', remove_item = true},
 					{name='blood-dhilmos', 1},
 				},
 			crafting_speed = 80,
@@ -388,13 +388,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='reca',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='reca',remove_item = true},
 					{name='orexigenic',amount =1},
 				},
 			results =
 				{
-					{name='blood-dhilmos', amount ='R'},
+					{name='blood-dhilmos', remove_item = true},
 					{name='fat-dhilmos', 1},
 				},
 			crafting_speed = 80,

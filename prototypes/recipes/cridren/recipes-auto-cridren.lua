@@ -49,7 +49,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='cridren-seeds', add_amount = 3},
-					{name='soil', amount = 'R'},
+					{name='soil', remove_item = true},
                     {name='biomass', amount = 30},
 					{name='bones', amount = 20},
 				},

@@ -29,7 +29,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='wood-seeds',amount ='R'},
+					--{name='wood-seeds',remove_item = true},
 					{name='yotoi-leaves',amount =10},
 				},
 			results =
@@ -78,7 +78,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='caged-scrondrix',amount ='R'},
+					{name='caged-scrondrix',remove_item = true},
 					{name='caged-scrondrix', probability = 0.9,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 110,
@@ -108,7 +108,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='caged-scrondrix', amount ='R'},
+					{name='caged-scrondrix', remove_item = true},
 					{name='caged-scrondrix', probability = 1,amount_min =1,amount_max =2},
 				},
 			crafting_speed = 30,
@@ -120,7 +120,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					--{name='antiviral',amount =1},
-					{name='gh',amount ='R'},
+					{name='gh',remove_item = true},
 				},
 			results =
 				{
@@ -135,11 +135,11 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='nanochondria',amount =1},
-					--{name='antiviral',amount ='R'},
+					--{name='antiviral',remove_item = true},
 				},
 			results =
 				{
-					{name='caged-scrondrix', amount ='R'},
+					{name='caged-scrondrix', remove_item = true},
 					{name='brain-caged-scrondrix',1},
 				},
 			crafting_speed = 90,
@@ -165,13 +165,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='nanochondria',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='nanochondria',remove_item = true},
 					{name='bmp',amount =1},
 				},
 			results =
 				{
-					{name='brain-caged-scrondrix', amount ='R'},
+					{name='brain-caged-scrondrix', remove_item = true},
 					{name='bone-caged-scrondrix', 1},
 				},
 			crafting_speed = 90,
@@ -198,13 +198,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='bmp',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='bmp',remove_item = true},
 					{name='anabolic-rna',amount =1},
 				},
 			results =
 				{
-					{name='bone-caged-scrondrix', amount ='R'},
+					{name='bone-caged-scrondrix', remove_item = true},
 					{name='meat-caged-scrondrix', 1},
 				},
 			crafting_speed = 90,
@@ -230,13 +230,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='anabolic-rna',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='anabolic-rna',remove_item = true},
 					{name='antitumor',amount =1},
 				},
 			results =
 				{
-					{name='meat-caged-scrondrix', amount ='R'},
+					{name='meat-caged-scrondrix', remove_item = true},
 					{name='guts-caged-scrondrix', 1},
 				},
 			crafting_speed = 90,
@@ -262,13 +262,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='antitumor',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='antitumor',remove_item = true},
 					{name='recombinant-ery',amount =1},
 				},
 			results =
 				{
-					{name='guts-caged-scrondrix', amount ='R'},
+					{name='guts-caged-scrondrix', remove_item = true},
 					{name='blood-caged-scrondrix', 1},
 				},
 			crafting_speed = 90,
@@ -293,13 +293,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='recombinant-ery',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='recombinant-ery',remove_item = true},
 					{name='reca',amount =1},
 				},
 			results =
 				{
-					{name='blood-caged-scrondrix', amount ='R'},
+					{name='blood-caged-scrondrix', remove_item = true},
 					{name='skin-caged-scrondrix', 1},
 				},
 			crafting_speed = 90,
@@ -324,13 +324,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='reca',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='reca',remove_item = true},
 					{name='orexigenic',amount =1},
 				},
 			results =
 				{
-					{name='skin-caged-scrondrix', amount ='R'},
+					{name='skin-caged-scrondrix', remove_item = true},
 					{name='fat-caged-scrondrix', 1},
 				},
 			crafting_speed = 90,
@@ -445,10 +445,10 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount = 'R'},
-					{name='salt',amount = 'R'},
-					{name='navens',amount = 'R'},
-					{name='yotoi-leaves',amount ='R'},
+					{name='raw-fiber',remove_item = true},
+					{name='salt',remove_item = true},
+					{name='navens',remove_item = true},
+					{name='yotoi-leaves',remove_item = true},
 					{name='pheromones',amount =1},
                     --{name='bedding',amount =4},
 					--{name='water-barrel',amount=6,return_item={name='empty-barrel',amount=6}},
@@ -456,7 +456,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='scrondrix-pup',amount = 'R'},
+					{name='scrondrix-pup',remove_item = true},
 					{name='scrondrix-pup', amount =8},
 				},
 			crafting_speed = 140,
@@ -467,7 +467,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    --{name='wood-seeds',amount ='R'},
+                    --{name='wood-seeds',remove_item = true},
                     --{name='fawogae',amount =15},
 					{name='yotoi-leaves',amount =10},
 				},

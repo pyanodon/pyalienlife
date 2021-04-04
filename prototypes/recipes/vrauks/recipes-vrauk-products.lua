@@ -26,8 +26,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='moss',amount ='R'},
-                    {name='biomass',amount ='R'},
+                    {name='moss',remove_item = true},
+                    {name='biomass',remove_item = true},
 					{name='vrauks-food-01'},
 				},
 			results =
@@ -72,10 +72,10 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='salt',amount ='R'},
-					{name='raw-fiber',amount ='R'},
-					{name='vrauks-food-01',amount ='R'},
-					{name='bedding',amount ='R'},
+					{name='salt',remove_item = true},
+					{name='raw-fiber',remove_item = true},
+					{name='vrauks-food-01',remove_item = true},
+					{name='bedding',remove_item = true},
 					{name='vrauks-food-02'},
 				},
 			results =

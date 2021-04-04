@@ -1,15 +1,15 @@
 TECHNOLOGY {
     type = "technology",
-    name = "water-animals-mk01",
-    icon = "__pyalienlifegraphics__/graphics/technology/water-animals-mk01.png",
+    name = "fish-mk01",
+    icon = "__pyalienlifegraphics__/graphics/technology/fish-mk01.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"zoology"},
+    prerequisites = {"water-animals-mk01"},
     effects = {},
     unit = {
         count = 200,
         ingredients = {
-            {"automation-science-pack", 2},
+            {"automation-science-pack", 3},
         },
         time = 45
     }
@@ -17,11 +17,11 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = "technology",
-    name = "water-animals-mk02",
-    icon = "__pyalienlifegraphics__/graphics/technology/water-animals-mk02.png",
+    name = "fish-mk02",
+    icon = "__pyalienlifegraphics__/graphics/technology/fish-mk02.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"water-animals-mk01","botany-mk02"},
+    prerequisites = {"fish-mk01"},
     effects = {},
     unit = {
         count = 100,
@@ -36,11 +36,11 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = "technology",
-    name = "water-animals-mk03",
-    icon = "__pyalienlifegraphics__/graphics/technology/water-animals-mk03.png",
+    name = "fish-mk03",
+    icon = "__pyalienlifegraphics__/graphics/technology/fish-mk03.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"water-animals-mk02","botany-mk03"},
+    prerequisites = {"fish-mk02"},
     effects = {},
     unit = {
         count = 100,
@@ -57,11 +57,11 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = "technology",
-    name = "water-animals-mk04",
-    icon = "__pyalienlifegraphics__/graphics/technology/water-animals-mk04.png",
+    name = "fish-mk04",
+    icon = "__pyalienlifegraphics__/graphics/technology/fish-mk04.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"water-animals-mk03"},
+    prerequisites = {"fish-mk03"},
     effects = {},
     unit = {
         count = 200,

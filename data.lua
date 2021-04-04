@@ -109,6 +109,8 @@ require('prototypes/technologies/pesticides')
 require('prototypes/technologies/symbiosis')
 require('prototypes/technologies/bioprocessing')
 require('prototypes/technologies/simik')
+require('prototypes/technologies/fish')
+require('prototypes/technologies/guar')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -484,10 +486,18 @@ require('prototypes/recipes/fawogae/recipes-fawogae')
 require('prototypes/recipes/fawogae/recipes-auto-fawogae')
 
 --Fish
+require('prototypes/recipes/fish/recipes-fish')
+require('prototypes/recipes/fish/recipes-auto-fish')
 
 --Grod
+require('prototypes/recipes/grod/recipes-grod')
+require('prototypes/recipes/grod/recipes-auto-grod')
+require('prototypes/recipes/grod/recipes-grod-megafarm')
 
 --guar
+require('prototypes/recipes/guar/recipes-guar')
+require('prototypes/recipes/guar/recipes-auto-guar')
+--need to disable guar recipes from pyph see pyph-updates
 
 --Kicalk
 --see pyhightech updates for files
@@ -522,6 +532,8 @@ require('prototypes/recipes/sap/recipes-sap-products')
 --Sea-Sponge
 
 --seaweed
+require('prototypes/recipes/seaweed/recipes-seaweed')
+require('prototypes/recipes/seaweed/recipes-seaweed-products')
 
 --simik
 

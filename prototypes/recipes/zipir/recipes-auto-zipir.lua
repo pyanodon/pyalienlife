@@ -28,7 +28,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='wood-seeds',amount ='R'},
+					--{name='wood-seeds',remove_item = true},
 					{name='fawogae-substrate',amount =10},
 				},
 			results =
@@ -42,7 +42,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='pressured-water',amount = 'R'},
+					{name='pressured-water',remove_item = true},
 					{name='water-saline',amount = '*100'},
 				},
 			results =
@@ -60,7 +60,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='zipir',amount ='R'},
+					{name='zipir',remove_item = true},
 					{name='zipir', probability = 0.8,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 120,
@@ -70,7 +70,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='water',amount = 'R'},
+                    {name='water',remove_item = true},
 					{name='phytoplankton',amount =50},
 
 				},
@@ -85,13 +85,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='zipir-food-01',amount = 'R'},
+                    {name='zipir-food-01',remove_item = true},
 					{name='zipir-food-02',amount =2},
 
 				},
 			results =
 				{
-					{name='zipir',amount ='R'},
+					{name='zipir',remove_item = true},
 					{name='zipir', probability = 0.9,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 90,
@@ -120,7 +120,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='zipir', amount ='R'},
+					{name='zipir', remove_item = true},
 					{name='zipir', probability = 1,amount_min =1,amount_max =2},
 				},
 			crafting_speed = 30,
@@ -131,7 +131,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					--{name='antiviral',amount =1},
-					{name='gh',amount ='R'},
+					{name='gh',remove_item = true},
 				},
 			results =
 				{
@@ -145,11 +145,11 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='nanochondria',amount =1},
-					--{name='antiviral',amount ='R'},
+					--{name='antiviral',remove_item = true},
 				},
 			results =
 				{
-					{name='zipir', amount ='R'},
+					{name='zipir', remove_item = true},
 					{name='brain-zipir',1},
 				},
 			crafting_speed = 90,
@@ -173,13 +173,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='nanochondria',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='nanochondria',remove_item = true},
 					{name='anabolic-rna',amount =1},
 				},
 			results =
 				{
-					{name='brain-zipir', amount ='R'},
+					{name='brain-zipir', remove_item = true},
 					{name='meat-zipir', 1},
 				},
 			crafting_speed = 90,
@@ -203,13 +203,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='anabolic-rna',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='anabolic-rna',remove_item = true},
 					{name='antitumor',amount =1},
 				},
 			results =
 				{
-					{name='meat-zipir', amount ='R'},
+					{name='meat-zipir', remove_item = true},
 					{name='guts-zipir', 1},
 				},
 			crafting_speed = 90,
@@ -233,13 +233,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='antitumor',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='antitumor',remove_item = true},
 					{name='recombinant-ery',amount =1},
 				},
 			results =
 				{
-					{name='guts-zipir', amount ='R'},
+					{name='guts-zipir', remove_item = true},
 					{name='blood-zipir', 1},
 				},
 			crafting_speed = 90,
@@ -262,13 +262,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='recombinant-ery',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='recombinant-ery',remove_item = true},
 					{name='reca',amount =1},
 				},
 			results =
 				{
-					{name='blood-zipir', amount ='R'},
+					{name='blood-zipir', remove_item = true},
 					{name='skin-zipir', 1},
 				},
 			crafting_speed = 90,
@@ -291,13 +291,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='reca',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='reca',remove_item = true},
 					{name='orexigenic',amount =1},
 				},
 			results =
 				{
-					{name='skin-zipir', amount ='R'},
+					{name='skin-zipir', remove_item = true},
 					{name='fat-zipir', 1},
 				},
 			crafting_speed = 90,
@@ -350,8 +350,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    --{name='wood-seeds',amount ='R'},
-                    --{name='caged-mukmoux',amount ='R'},
+                    --{name='wood-seeds',remove_item = true},
+                    --{name='caged-mukmoux',remove_item = true},
 					{name='fawogae-substrate',amount =15},
 				},
 			results =
@@ -365,7 +365,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='pressured-water',amount = 'R'},
+                    {name='pressured-water',remove_item = true},
 					{name='water-saline',amount = '*200'},
 				},
 			results =
@@ -392,7 +392,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='zipir-food-01',amount = 'R'},
+                    {name='zipir-food-01',remove_item = true},
                     {name='zipir-food-02',amount = 3},
 
 				},
@@ -408,13 +408,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='zipir-food-02',amount = 'R'},
-					{name='water',amount = 'R'},
-					{name='fish',amount ='R'},
-                    {name='phytoplankton',amount = 'R'},
-                    {name='stone-wool',amount = 'R'},
-                    {name='fawogae-substrate',amount = 'R'},
-                    {name='water-saline',amount = 'R'},
+                    {name='zipir-food-02',remove_item = true},
+					{name='water',remove_item = true},
+					{name='fish',remove_item = true},
+                    {name='phytoplankton',remove_item = true},
+                    {name='stone-wool',remove_item = true},
+                    {name='fawogae-substrate',remove_item = true},
+                    {name='water-saline',remove_item = true},
 
                     {name='pressured-water',amount ='*90',return_item={name='waste-water',amount=300}},
 					{name='stone-wool',amount =2},
@@ -423,7 +423,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='zipir-egg',amount = 'R'},
+					{name='zipir-egg',remove_item = true},
 					{name='zipir-egg', amount =10},
 				},
 			crafting_speed = 200,
@@ -433,8 +433,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    --{name='wood-seeds',amount ='R'},
-                    --{name='caged-mukmoux',amount ='R'},
+                    --{name='wood-seeds',remove_item = true},
+                    --{name='caged-mukmoux',remove_item = true},
 					{name='fawogae-substrate',amount =30},
 					{name='fish',amount =10},
 				},
@@ -449,7 +449,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='pressured-water',amount = 'R'},
+                    {name='pressured-water',remove_item = true},
 					{name='water-saline',amount = '*300'},
 				},
 			results =
@@ -476,7 +476,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='zipir-food-01',amount = 'R'},
+                    {name='zipir-food-01',remove_item = true},
                     {name='zipir-food-02',amount = 8},
 
 				},
@@ -529,14 +529,14 @@ fun.autorecipes {
 				},
 			results =
 				{
-					--{name='bones', amount ='R'},
-                    {name='meat', amount ='R'},
+					--{name='bones', remove_item = true},
+                    {name='meat', remove_item = true},
                     {name='meat', amount =4},
-					{name='skin', amount ='R'},
-					{name='mukmoux-fat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='arthropod-blood', amount ='R'},
-					{name='brain', amount ='R'},
+					{name='skin', remove_item = true},
+					{name='mukmoux-fat', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='arthropod-blood', remove_item = true},
+					{name='brain', remove_item = true},
 				},
 			crafting_speed = 15,
 			tech = 'zipir-mk02',
@@ -552,7 +552,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='brain', amount =1},
 				},
 			crafting_speed = 15,
@@ -569,7 +569,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='skin', amount =6},
 				},
 			crafting_speed = 15,
@@ -586,7 +586,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='skin', amount ='R'},
+					{name='skin', remove_item = true},
 					{name='guts', amount =4},
 				},
 			crafting_speed = 15,
@@ -603,7 +603,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='arthropod-blood', amount =65},
 				},
 			crafting_speed = 15,
@@ -620,7 +620,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='arthropod-blood', amount ='R'},
+					{name='arthropod-blood', remove_item = true},
 					{name='mukmoux-fat', amount =3},
 				},
 			crafting_speed = 15,
@@ -633,12 +633,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='zipir',amount='R'},
+					{name='zipir',remove_item = true},
 					{name='brain-zipir',amount=1},
 				},
 			results =
 				{
-					{name='mukmoux-fat', amount ='R'},
+					{name='mukmoux-fat', remove_item = true},
 					{name='brain', amount =4},
 				},
 			crafting_speed = 15,
@@ -651,12 +651,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='brain-zipir',amount='R'},
+					{name='brain-zipir',remove_item = true},
 					{name='guts-zipir',amount=1},
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='guts', amount =13},
 				},
 			crafting_speed = 15,
@@ -669,12 +669,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='guts-zipir',amount='R'},
+					{name='guts-zipir',remove_item = true},
 					{name='blood-zipir',amount=1},
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='arthropod-blood', amount =170},
 				},
 			crafting_speed = 15,
@@ -687,12 +687,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='blood-zipir',amount='R'},
+					{name='blood-zipir',remove_item = true},
 					{name='skin-zipir',amount=1},
 				},
 			results =
 				{
-					{name='arthropod-blood', amount ='R'},
+					{name='arthropod-blood', remove_item = true},
 					{name='skin', amount =17},
 				},
 			crafting_speed = 15,
@@ -705,12 +705,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='skin-zipir',amount='R'},
+					{name='skin-zipir',remove_item = true},
 					{name='fat-zipir',amount=1},
 				},
 			results =
 				{
-					{name='skin', amount ='R'},
+					{name='skin', remove_item = true},
 					{name='mukmoux-fat', amount =15},
 				},
 			crafting_speed = 15,
@@ -723,12 +723,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fat-zipir',amount='R'},
+					{name='fat-zipir',remove_item = true},
 					{name='meat-zipir',amount=1},
 				},
 			results =
 				{
-					{name='mukmoux-fat', amount ='R'},
+					{name='mukmoux-fat', remove_item = true},
 					{name='meat', amount =13},
 				},
 			crafting_speed = 15,

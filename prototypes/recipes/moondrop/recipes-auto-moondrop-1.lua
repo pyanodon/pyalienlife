@@ -88,7 +88,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='moondrop-seeds',amount='+2'},
-					{name='ash',amount ='R'},
+					{name='ash',remove_item = true},
                     {name='biomass',amount ='*5'},
                     --{'d'},
 				},
@@ -105,7 +105,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='moondrop-seeds',amount='+2'},
-					{name='hydrogen',amount ='R'},
+					{name='hydrogen',remove_item = true},
                     {name='syngas',amount ='*3'},
                     --{'d'},
 				},
@@ -153,7 +153,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='moondrop-seeds',amount='+1'},
-				    {name='syngas',amount ='R'},
+				    {name='syngas',remove_item = true},
 					{name='flue-gas',amount ='*3'},
                     --{'d'},
                 },
@@ -173,7 +173,7 @@ fun.autorecipes {
                 {
 			ingredients =
 				{
-                    {name='pesticide-mk01',amount ='R'},
+                    {name='pesticide-mk01',remove_item = true},
                     {name='moondrop-seeds',amount='+2'},
                     {name='pesticide-mk02',amount ='+1'},
 
@@ -195,7 +195,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='moondrop-seeds',amount='+2'},
-					{name='manure',amount ='R'},
+					{name='manure',remove_item = true},
                     {name='fertilizer',amount ='+4'},
 				},
 			results =
@@ -212,7 +212,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='moondrop-seeds',amount='+1'},
-					{name='flue-gas',amount ='R'},
+					{name='flue-gas',remove_item = true},
                     {name='syngas',amount ='*10'},
 				},
 			results =
@@ -229,10 +229,10 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='biomass',amount ='R'},
-					{name='syngas',amount ='R'},
-					{name='manure',amount ='R'},
-					{name='fertilizer',amount ='R'},
+					{name='biomass',remove_item = true},
+					{name='syngas',remove_item = true},
+					{name='manure',remove_item = true},
+					{name='fertilizer',remove_item = true},
 					{name='gh',1},
 				},
 			results =
@@ -247,9 +247,9 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='biomass',amount =10},
-					--{'nitrogen','R'},
-					--{'manure','R'},
-					--{'biomass','R'},
+					--{'nitrogen',remove_item = true},
+					--{'manure',remove_item = true},
+					--{'biomass',remove_item = true},
 					--{'gh',1},
 				},
 			results =
@@ -265,7 +265,7 @@ fun.autorecipes {
 				{
 					{name='syngas',amount ='*10'},
 					{name='manure',amount =5},
-					--{'biomass','R'},
+					--{'biomass',remove_item = true},
 					--{'gh',1},
 				},
 			results =
@@ -279,7 +279,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='manure',amount ='R'},
+					{name='manure',remove_item = true},
 					{name='fertilizer',amount =1},
 					{name='urea',amount =5},
 					--{'gh',1},

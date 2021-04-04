@@ -40,15 +40,15 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='skin', amount ='R'},
-					{name='mukmoux-fat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='blood', amount ='R'},
-					{name='brain', amount ='R'},
+					{name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='skin', remove_item = true},
+					{name='mukmoux-fat', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='blood', remove_item = true},
+					{name='brain', remove_item = true},
 					{name='bonemeal', amount = 8},
-					{name='biomass', amount = 'R'},
+					{name='biomass', remove_item = true},
 					{name='biomass', amount_min = 5, amount_max = 8},
 				},
 			crafting_speed = 10,
@@ -65,7 +65,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bonemeal', amount ='R'},
+					{name='bonemeal', remove_item = true},
 					{name='meat', amount =12},
 				},
 			crafting_speed = 10,
@@ -82,7 +82,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='brain', amount =3},
 				},
 			crafting_speed = 10,
@@ -99,7 +99,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='skin', amount =5},
 				},
 			crafting_speed = 10,
@@ -116,7 +116,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='skin', amount ='R'},
+					{name='skin', remove_item = true},
 					{name='bones', amount =7},
 				},
 			crafting_speed = 10,
@@ -133,7 +133,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
+					{name='bones', remove_item = true},
 					{name='guts', amount =8},
 				},
 			crafting_speed = 10,
@@ -150,7 +150,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='blood', amount =150},
 				},
 			crafting_speed = 10,
@@ -167,7 +167,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='blood', amount ='R'},
+					{name='blood', remove_item = true},
 					{name='mukmoux-fat', amount =6},
 				},
 			crafting_speed = 10,

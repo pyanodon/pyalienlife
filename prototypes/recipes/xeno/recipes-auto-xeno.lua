@@ -65,16 +65,16 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='meat',amount ='R'},
-					{name='fish',amount ='R'},
-					{name='guts',amount ='R'},
+					--{name='meat',remove_item = true},
+					{name='fish',remove_item = true},
+					{name='guts',remove_item = true},
 					{name='xeno-egg',amount ='+1'},
 					{name='caged-ulric',amount =1},
 
 				},
 			results =
 				{
-					{name='caged-xeno',amount ='R'},
+					{name='caged-xeno',remove_item = true},
 					{name='caged-xeno', probability = 1.8,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 90,
@@ -128,7 +128,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='caged-xeno', amount ='R'},
+					{name='caged-xeno', remove_item = true},
 					{name='caged-xeno', probability = 1.5,amount_min =1,amount_max =2},
 				},
 			crafting_speed = 30,
@@ -139,7 +139,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					--{name='antiviral',amount =1},
-					{name='gh',amount ='R'},
+					{name='gh',remove_item = true},
 				},
 			results =
 				{
@@ -153,11 +153,11 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='nanochondria',amount =1},
-					--{name='antiviral',amount ='R'},
+					--{name='antiviral',remove_item = true},
 				},
 			results =
 				{
-					{name='caged-xeno', amount ='R'},
+					{name='caged-xeno', remove_item = true},
 					{name='brain-xeno',1},
 				},
 			crafting_speed = 80,
@@ -181,13 +181,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='nanochondria',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='nanochondria',remove_item = true},
 					{name='bmp',amount =1},
 				},
 			results =
 				{
-					{name='brain-xeno', amount ='R'},
+					{name='brain-xeno', remove_item = true},
 					{name='bone-xeno', 1},
 				},
 			crafting_speed = 80,
@@ -212,13 +212,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='bmp',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='bmp',remove_item = true},
 					{name='anabolic-rna',amount =1},
 				},
 			results =
 				{
-					{name='bone-xeno', amount ='R'},
+					{name='bone-xeno', remove_item = true},
 					{name='meat-xeno', 1},
 				},
 			crafting_speed = 80,
@@ -242,13 +242,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='anabolic-rna',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='anabolic-rna',remove_item = true},
 					{name='recombinant-ery',amount =1},
 				},
 			results =
 				{
-					{name='meat-xeno', amount ='R'},
+					{name='meat-xeno', remove_item = true},
 					{name='blood-xeno', 1},
 				},
 			crafting_speed = 80,
@@ -271,13 +271,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='recombinant-ery',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='recombinant-ery',remove_item = true},
 					{name='reca',amount =1},
 				},
 			results =
 				{
-					{name='blood-xeno', amount ='R'},
+					{name='blood-xeno', remove_item = true},
 					{name='chitin-xeno', 1},
 				},
 			crafting_speed = 80,
@@ -313,8 +313,8 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='caged-mukmoux',amount =2},
-                    {name='bones',amount ='R'},
-                    {name='guts',amount = 'R'},
+                    {name='bones',remove_item = true},
+                    {name='guts',remove_item = true},
 					{name='water-barrel',amount=15,return_item={name='empty-barrel',amount=15}},
 					{name='fish',amount = 25},
 				},
@@ -355,8 +355,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='meat',amount ='R'},
-                    {name='guts',amount = 'R'},
+                    {name='meat',remove_item = true},
+                    {name='guts',remove_item = true},
 					{name='caged-ulric',amount =2},
 
 				},
@@ -384,8 +384,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='guts',amount = 'R'},
-					{name='caged-ulric',amount = 'R'},
+					{name='guts',remove_item = true},
+					{name='caged-ulric',remove_item = true},
 					--{name='bones',amount =15},
 					{name='pheromones',amount =1},
 					--{name='water-barrel',amount=6,return_item={name='empty-barrel',amount=6}},
@@ -393,7 +393,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='xeno-egg',amount = 'R'},
+					{name='xeno-egg',remove_item = true},
 					{name='xeno-egg', amount =15},
 				},
 			crafting_speed =140,
@@ -429,8 +429,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='meat',amount ='R'},
-					{name='guts',amount ='R'},
+					{name='meat',remove_item = true},
+					{name='guts',remove_item = true},
 					{name='caged-ulric',amount =2},
 
 				},
@@ -498,11 +498,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
-					{name='chitin', amount ='R'},
-					{name='sulfuric-acid', amount ='R'},
-					{name='brain', amount ='R'},
-					{name='meat', amount ='R'},
+					{name='bones', remove_item = true},
+					{name='chitin', remove_item = true},
+					{name='sulfuric-acid', remove_item = true},
+					{name='brain', remove_item = true},
+					{name='meat', remove_item = true},
 					{name='meat', amount =4},
 				},
 			crafting_speed = 15,
@@ -519,7 +519,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='brain', amount =1},
 				},
 			crafting_speed = 15,
@@ -536,7 +536,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='chitin', amount =4},
 				},
 			crafting_speed = 15,
@@ -553,7 +553,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='chitin', amount ='R'},
+					{name='chitin', remove_item = true},
 					{name='bones', amount =3},
 				},
 			crafting_speed = 15,
@@ -570,7 +570,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
+					{name='bones', remove_item = true},
 					{name='sulfuric-acid', amount =80},
 				},
 			crafting_speed = 15,
@@ -583,12 +583,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-xeno',amount='R'},
+					{name='caged-xeno',remove_item = true},
 					{name='brain-xeno',amount=1},
 				},
 			results =
 				{
-					{name='sulfuric-acid', amount ='R'},
+					{name='sulfuric-acid', remove_item = true},
 					{name='brain', amount =4},
 				},
 			crafting_speed = 15,
@@ -601,12 +601,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='brain-xeno',amount='R'},
+					{name='brain-xeno',remove_item = true},
 					{name='bone-xeno',amount=1},
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='bones', amount =11},
 				},
 			crafting_speed = 15,
@@ -623,7 +623,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
+					{name='bones', remove_item = true},
 					{name='bonemeal', amount =13},
 				},
 			crafting_speed = 15,
@@ -636,12 +636,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='bone-xeno',amount='R'},
+					{name='bone-xeno',remove_item = true},
 					{name='blood-xeno',amount=1},
 				},
 			results =
 				{
-					{name='bonemeal', amount ='R'},
+					{name='bonemeal', remove_item = true},
 					{name='sulfuric-acid', amount =200},
 				},
 			crafting_speed = 15,
@@ -654,12 +654,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='blood-xeno',amount='R'},
+					{name='blood-xeno',remove_item = true},
 					{name='chitin-xeno',amount=1},
 				},
 			results =
 				{
-					{name='sulfuric-acid', amount ='R'},
+					{name='sulfuric-acid', remove_item = true},
 					{name='chitin', amount =23},
 				},
 			crafting_speed = 15,
@@ -672,12 +672,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='chitin-xeno',amount='R'},
+					{name='chitin-xeno',remove_item = true},
 					{name='meat-xeno',amount=1},
 				},
 			results =
 				{
-					{name='chitin', amount ='R'},
+					{name='chitin', remove_item = true},
 					{name='meat', amount =10},
 				},
 			crafting_speed = 15,

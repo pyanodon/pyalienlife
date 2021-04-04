@@ -91,7 +91,7 @@ fun.autorecipes {
                     --{'s1'},
                     --{'a'},
 					--{'b','+15'},
-					--{name='ash',amount ='R'},
+					--{name='ash',remove_item = true},
                     {name='biomass',amount ='*5'},
                     --{'d'},
 				},
@@ -109,7 +109,7 @@ fun.autorecipes {
                     --{'s1'},
                     --{'a'},
 					--{'b','+15'},
-					--{name='stone',amount ='R'},
+					--{name='stone',remove_item = true},
                     {name='blood-meal',amount ='*1'},
                     --{'d'},
 				},
@@ -162,7 +162,7 @@ fun.autorecipes {
 			ingredients =
 				{
 
-                    {name='pesticide-mk01',amount ='R'},
+                    {name='pesticide-mk01',remove_item = true},
                     {name='pesticide-mk02',amount ='+1'},
                 },
 			results =
@@ -182,7 +182,7 @@ fun.autorecipes {
                     --{'b','+15'},
                     --{'g','*2'},
 					--{'d'},
-					--{name='manure',amount ='R'},
+					--{name='manure',remove_item = true},
                     {name='fertilizer',amount ='*1'},
 				},
 			results =
@@ -202,7 +202,7 @@ fun.autorecipes {
                     --{'b','+15'},
                     --{'g','*2'},
 					--{'d'},
-					--{name='carbon-dioxide',amount ='R'},
+					--{name='carbon-dioxide',remove_item = true},
                     {name='small-lamp',amount ='*1'},
 				},
 			results =
@@ -218,10 +218,10 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='biomass',amount ='R'},
-					{name='blood-meal',amount ='R'},
-					{name='manure',amount ='R'},
-					{name='fertilizer',amount ='R'},
+					{name='biomass',remove_item = true},
+					{name='blood-meal',remove_item = true},
+					{name='manure',remove_item = true},
+					{name='fertilizer',remove_item = true},
 					{name='gh',1},
 				},
 			results =
@@ -235,9 +235,9 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='biomass',amount =5},
-					--{'nitrogen','R'},
-					--{'manure','R'},
-					--{'biomass','R'},
+					--{'nitrogen',remove_item = true},
+					--{'manure',remove_item = true},
+					--{'biomass',remove_item = true},
 					--{'gh',1},
 				},
 			results =
@@ -252,7 +252,7 @@ fun.autorecipes {
 				{
 					{name='blood-meal',amount ='*1'},
 					{name='manure',amount =5},
-					--{'biomass','R'},
+					--{'biomass',remove_item = true},
 					--{'gh',1},
 				},
 			results =
@@ -265,7 +265,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='manure',amount ='R'},
+					{name='manure',remove_item = true},
 					{name='fertilizer',amount =1},
 					{name='urea',amount =5},
 					--{'gh',1},

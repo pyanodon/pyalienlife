@@ -36,10 +36,10 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
-					{name='chitin', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='arthropod-blood', amount ='R'},
+					{name='meat', remove_item = true},
+					{name='chitin', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='arthropod-blood', remove_item = true},
 					{name='meat', amount =3},
 				},
 			crafting_speed = 15,
@@ -56,7 +56,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='chitin', amount =4},
 				},
 			crafting_speed = 15,
@@ -73,7 +73,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='chitin', amount ='R'},
+					{name='chitin', remove_item = true},
 					{name='guts', amount =3},
 				},
 			crafting_speed = 15,
@@ -90,7 +90,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='arthropod-blood', amount =40},
 				},
 			crafting_speed = 15,
@@ -107,7 +107,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='arthropod-blood', amount ='R'},
+					{name='arthropod-blood', remove_item = true},
 					{name='bee-venom', amount =30},
 				},
 			crafting_speed = 15,
@@ -120,12 +120,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='arqad',amount='R'},
+					{name='arqad',remove_item = true},
 					{name='meat-arqad',amount=1},
 				},
 			results =
 				{
-					{name='bee-venom', amount ='R'},
+					{name='bee-venom', remove_item = true},
 					{name='meat', amount =5},
 				},
 			crafting_speed = 15,
@@ -138,12 +138,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='meat-arqad',amount='R'},
+					{name='meat-arqad',remove_item = true},
 					{name='guts-arqad',amount=1},
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='guts', amount =6},
 				},
 			crafting_speed = 15,
@@ -156,12 +156,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='guts-arqad',amount='R'},
+					{name='guts-arqad',remove_item = true},
 					{name='blood-arqad',amount=1},
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='arthropod-blood', amount =45},
 				},
 			crafting_speed = 15,
@@ -174,12 +174,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='blood-arqad',amount='R'},
+					{name='blood-arqad',remove_item = true},
 					{name='chitin-arqad',amount=1},
 				},
 			results =
 				{
-					{name='arthropod-blood', amount ='R'},
+					{name='arthropod-blood', remove_item = true},
 					{name='chitin', amount =7},
 				},
 			crafting_speed = 15,

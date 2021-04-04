@@ -27,12 +27,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='biomass',amount ='R'},
+					{name='biomass',remove_item = true},
 					{name='vrauks-food-01',amount =1},
 				},
 			results =
 				{
-					{name='caged-vrauks',amount ='R'},
+					{name='caged-vrauks',remove_item = true},
 					{name='caged-vrauks', probability = 0.8,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 150,
@@ -69,15 +69,15 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='vrauks-food-01',amount ='R'},
-					{name='saps',amount ='R'},
-					{name='fawogae',amount ='R'},
+					{name='vrauks-food-01',remove_item = true},
+					{name='saps',remove_item = true},
+					{name='fawogae',remove_item = true},
 					{name='vrauks-food-02',amount =1},
 
 				},
 			results =
 				{
-					{name='caged-vrauks',amount ='R'},
+					{name='caged-vrauks',remove_item = true},
 					{name='caged-vrauks', probability = 0.9,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 120,
@@ -131,7 +131,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='caged-vrauks', amount ='R'},
+					{name='caged-vrauks', remove_item = true},
 					{name='caged-vrauks', probability = 1,amount_min =1,amount_max =2},
 				},
 			crafting_speed = 30,
@@ -142,7 +142,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					--{name='antiviral',amount =1},
-					{name='gh',amount ='R'},
+					{name='gh',remove_item = true},
 				},
 			results =
 				{
@@ -156,11 +156,11 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='nanochondria',amount =1},
-					--{name='antiviral',amount ='R'},
+					--{name='antiviral',remove_item = true},
 				},
 			results =
 				{
-					{name='caged-vrauks', amount ='R'},
+					{name='caged-vrauks', remove_item = true},
 					{name='brain-caged-vrauks',1},
 				},
 			crafting_speed = 90,
@@ -184,13 +184,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='nanochondria',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='nanochondria',remove_item = true},
 					{name='anabolic-rna',amount =1},
 				},
 			results =
 				{
-					{name='brain-caged-vrauks', amount ='R'},
+					{name='brain-caged-vrauks', remove_item = true},
 					{name='meat-caged-vrauks', 1},
 				},
 			crafting_speed = 90,
@@ -214,13 +214,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='anabolic-rna',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='anabolic-rna',remove_item = true},
 					{name='antitumor',amount =1},
 				},
 			results =
 				{
-					{name='meat-caged-vrauks', amount ='R'},
+					{name='meat-caged-vrauks', remove_item = true},
 					{name='guts-caged-vrauks', 1},
 				},
 			crafting_speed = 90,
@@ -244,13 +244,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='recombinant-ery',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='recombinant-ery',remove_item = true},
 					{name='reca',amount =1},
 				},
 			results =
 				{
-					{name='guts-caged-vrauks', amount ='R'},
+					{name='guts-caged-vrauks', remove_item = true},
 					{name='skin-caged-vrauks', 1},
 				},
 			crafting_speed = 90,
@@ -301,12 +301,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='biomass',amount ='R'},
+                    {name='biomass',remove_item = true},
 					{name='vrauks-food-01',amount =1},
 				},
 			results =
 				{
-					{name = 'cocoon', amount = 'R'},
+					{name = 'cocoon', remove_item = true},
 					{name = 'cocoon', amount = 3}
 				},
 			crafting_speed = 60,
@@ -342,9 +342,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='vrauks-food-01',amount ='R'},
-					{name='saps',amount ='R'},
-					{name='fawogae',amount ='R'},
+					{name='vrauks-food-01',remove_item = true},
+					{name='saps',remove_item = true},
+					{name='fawogae',remove_item = true},
 					{name='vrauks-food-02',amount =1},
 
 				},
@@ -385,9 +385,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fawogae',amount = 'R'},
-					{name='saps',amount = 'R'},
-					{name='vrauks-food-02',amount = 'R'},
+					{name='fawogae',remove_item = true},
+					{name='saps',remove_item = true},
+					{name='vrauks-food-02',remove_item = true},
 					{name='biomass',amount =15},
 					{name='pheromones',amount =1},
 					--{name='water-barrel',amount=6,return_item={name='empty-barrel',amount=6}},
@@ -395,7 +395,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					--{name='cocoon', amount = 'R'},
+					--{name='cocoon', remove_item = true},
 					{name='cocoon', amount = '+3'},
 				},
 			crafting_speed = 70,
@@ -406,7 +406,7 @@ fun.autorecipes {
 			ingredients =
 				{
 
-                    {name='biomass', amount = 'R'},
+                    {name='biomass', remove_item = true},
 					{name='vrauks-food-01', amount = 1},
 				},
 			results =
@@ -446,9 +446,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='vrauks-food-01',amount ='R'},
-					{name='saps',amount ='R'},
-					{name='fawogae',amount ='R'},
+					{name='vrauks-food-01',remove_item = true},
+					{name='saps',remove_item = true},
+					{name='fawogae',remove_item = true},
 					{name='vrauks-food-02',amount =1},
 
 				},
@@ -528,13 +528,13 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    --{name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='chitin', amount ='R'},
-					--{name='mukmoux-fat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='formic-acid', amount ='R'},
-					{name='brain', amount ='R'},
+                    --{name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='chitin', remove_item = true},
+					--{name='mukmoux-fat', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='formic-acid', remove_item = true},
+					{name='brain', remove_item = true},
 					{name='meat', amount =2},
 				},
 			crafting_speed = 15,
@@ -551,7 +551,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='brain', amount =1},
 				},
 			crafting_speed = 15,
@@ -568,7 +568,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='chitin', amount =1},
 				},
 			crafting_speed = 15,
@@ -585,7 +585,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='chitin', amount ='R'},
+					{name='chitin', remove_item = true},
 					{name='guts', amount =2},
 				},
 			crafting_speed = 15,
@@ -602,7 +602,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='formic-acid', amount =400},
 				},
 			crafting_speed = 15,
@@ -615,12 +615,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-vrauks',amount='R'},
+					{name='caged-vrauks',remove_item = true},
 					{name='brain-caged-vrauks',amount=1},
 				},
 			results =
 				{
-					{name='formic-acid', amount ='R'},
+					{name='formic-acid', remove_item = true},
 					{name='brain', amount =4},
 				},
 			crafting_speed = 15,
@@ -633,12 +633,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='brain-caged-vrauks',amount='R'},
+					{name='brain-caged-vrauks',remove_item = true},
 					{name='meat-caged-vrauks',amount=1},
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='meat', amount =10},
 				},
 			crafting_speed = 15,
@@ -651,12 +651,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='meat-caged-vrauks',amount='R'},
+					{name='meat-caged-vrauks',remove_item = true},
 					{name='guts-caged-vrauks',amount=1},
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='guts', amount =11},
 				},
 			crafting_speed = 15,
@@ -669,12 +669,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='guts-caged-vrauks',amount='R'},
+					{name='guts-caged-vrauks',remove_item = true},
 					{name='skin-caged-vrauks',amount=1},
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='chitin', amount =15},
 				},
 			crafting_speed = 15,

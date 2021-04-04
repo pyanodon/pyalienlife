@@ -21,6 +21,7 @@ mats example
                 divide_amount = divide amount by the given number
                 subtract_percent_amount = subtract an amount based percentage of the total
                 round_direction = used with subtract_percent_amount, multiply_amount and divide_amount to set if the number is lowered or rasied to the next whole number
+                remove_item = when set to true will remove the item/fluid its set for from the table
                 }
             }
             results =
@@ -34,6 +35,7 @@ mats example
                 divide_amount = divide amount by the given number
                 subtract_percent_amount = subtract an amount based percentage of the total
                 round_direction = used with subtract_percent_amount to set if the number is lowered or rasied to the next whole number
+                remove_item = when set to true will remove the item/fluid its set for from the table
                 }
             }
             crafting_speed = recipe crafting speed

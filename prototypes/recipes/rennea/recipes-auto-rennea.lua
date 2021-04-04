@@ -89,7 +89,7 @@ fun.autorecipes {
                     --{'s1'},
                     --{'a'},
 					--{'b','+15'},
-					--{name='yaedols',amount ='R'},
+					--{name='yaedols',remove_item = true},
                     {name='lignin',amount ='*3'},
                     --{'d'},
 				},
@@ -107,7 +107,7 @@ fun.autorecipes {
                     --{'s1'},
                     --{'a'},
 					--{'b','+15'},
-					--{name='soil',amount ='R'},
+					--{name='soil',remove_item = true},
                     {name='blood-meal',amount ='*2'},   -- very expensive stuff
                     --{'d'},
 				},
@@ -168,7 +168,7 @@ fun.autorecipes {
 			ingredients =
 				{
 
-                    {name='pesticide-mk01',amount ='R'},
+                    {name='pesticide-mk01',remove_item = true},
                     {name='pesticide-mk02',amount ='+1'},
                 },
 			results =
@@ -194,7 +194,7 @@ fun.autorecipes {
                     --{'b','+15'},
                     --{'g','*2'},
 					--{'d'},
-					--{name='manure',amount ='R'},
+					--{name='manure',remove_item = true},
                     {name='fertilizer',amount ='+1'},
 				},
 			results =
@@ -214,7 +214,7 @@ fun.autorecipes {
                     --{'b','+15'},
                     --{'g','*2'},
 					--{'d'},
-					--{name='carbon-dioxide',amount ='R'},
+					--{name='carbon-dioxide',remove_item = true},
                     {name='small-lamp',amount ='*1'},
 				},
 			results =
@@ -230,10 +230,10 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='lignin',amount ='R'},
-					{name='blood-meal',amount ='R'},
-					{name='manure',amount ='R'},
-					{name='fertilizer',amount ='R'},
+					{name='lignin',remove_item = true},
+					{name='blood-meal',remove_item = true},
+					{name='manure',remove_item = true},
+					{name='fertilizer',remove_item = true},
 					{name='gh',1},
 				},
 			results =
@@ -247,9 +247,9 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='lignin',amount =3},
-					--{'carbon-dioxide','R'},
-					--{'manure','R'},
-					--{'lignin','R'},
+					--{'carbon-dioxide',remove_item = true},
+					--{'manure',remove_item = true},
+					--{'lignin',remove_item = true},
 					--{'gh',1},
 				},
 			results =
@@ -264,7 +264,7 @@ fun.autorecipes {
 				{
 					{name='blood-meal',amount ='*1'},
 					{name='manure',amount =5},
-					--{'lignin','R'},
+					--{'lignin',remove_item = true},
 					--{'gh',1},
 				},
 			results =
@@ -277,7 +277,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='manure',amount ='R'},
+					{name='manure',remove_item = true},
 					{name='fertilizer',amount =1},
 					{name='urea',amount =8},
 					--{'gh',1},

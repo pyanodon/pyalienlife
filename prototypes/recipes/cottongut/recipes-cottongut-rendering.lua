@@ -39,13 +39,13 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='mukmoux-fat', amount ='R'},
-					{name='skin', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='blood', amount ='R'},
-					{name='brain', amount ='R'},
+					{name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='mukmoux-fat', remove_item = true},
+					{name='skin', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='blood', remove_item = true},
+					{name='brain', remove_item = true},
 					{name='meat', amount =4},
 				},
 			crafting_speed = 15,
@@ -62,7 +62,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='brain', amount =2},
 				},
 			crafting_speed = 15,
@@ -79,7 +79,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='skin', amount =4},
 				},
 			crafting_speed = 15,
@@ -96,7 +96,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='skin', amount ='R'},
+					{name='skin', remove_item = true},
 					{name='bones', amount =5},
 				},
 			crafting_speed = 15,
@@ -113,7 +113,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
+					{name='bones', remove_item = true},
 					{name='guts', amount =5},
 				},
 			crafting_speed = 15,
@@ -130,7 +130,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='blood', amount =60},
 				},
 			crafting_speed = 15,
@@ -147,7 +147,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='blood', amount ='R'},
+					{name='blood', remove_item = true},
 					{name='mukmoux-fat', amount =5},
 				},
 			crafting_speed = 15,
@@ -160,12 +160,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cottongut',amount='R'},
+					{name='cottongut',remove_item = true},
 					{name='brain-cottongut',amount=5},
 				},
 			results =
 				{
-					{name='mukmoux-fat', amount ='R'},
+					{name='mukmoux-fat', remove_item = true},
 					{name='brain', amount =5},
 				},
 			crafting_speed = 15,
@@ -178,12 +178,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='brain-cottongut',amount='R'},
+					{name='brain-cottongut',remove_item = true},
 					{name='bone-cottongut',amount=5},
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='bones', amount =12},
 				},
 			crafting_speed = 15,
@@ -196,12 +196,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='bone-cottongut',amount='R'},
+					{name='bone-cottongut',remove_item = true},
 					{name='guts-cottongut',amount=5},
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
+					{name='bones', remove_item = true},
 					{name='guts', amount =4},
 				},
 			crafting_speed = 15,
@@ -214,12 +214,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='guts-cottongut',amount='R'},
+					{name='guts-cottongut',remove_item = true},
 					{name='blood-cottongut',amount=5},
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='blood', amount =70},
 				},
 			crafting_speed = 15,
@@ -232,12 +232,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='blood-cottongut',amount='R'},
+					{name='blood-cottongut',remove_item = true},
 					{name='skin-cottongut',amount=5},
 				},
 			results =
 				{
-					{name='blood', amount ='R'},
+					{name='blood', remove_item = true},
 					{name='skin', amount =4},
 				},
 			crafting_speed = 15,
@@ -250,12 +250,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='skin-cottongut',amount='R'},
+					{name='skin-cottongut',remove_item = true},
 					{name='fat-cottongut',amount=1},
 				},
 			results =
 				{
-					{name='skin', amount ='R'},
+					{name='skin', remove_item = true},
 					{name='mukmoux-fat', amount =6},
 				},
 			crafting_speed = 15,
@@ -268,12 +268,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fat-cottongut',amount='R'},
+					{name='fat-cottongut',remove_item = true},
 					{name='meat-cottongut',amount=5},
 				},
 			results =
 				{
-					{name='mukmoux-fat', amount ='R'},
+					{name='mukmoux-fat', remove_item = true},
 					{name='meat', amount =7},
 				},
 			crafting_speed = 15,

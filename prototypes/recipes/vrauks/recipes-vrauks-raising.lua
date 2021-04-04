@@ -27,7 +27,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='biomass',amount ='R'},
+					{name='biomass',remove_item = true},
 					{name = 'cocoon', amount = '+3'},
 					{name='moss',amount = '+5'},
 					{name='vrauks-food-01',amount =3},
@@ -184,7 +184,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name = 'cocoon', amount = 'R'},
+					{name = 'cocoon', remove_item = true},
 					{name = 'cocoon', amount = 40}
 				},
 			crafting_speed = 20,

@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
-    name = "tuuphra",
-    icon = "__pyalienlifegraphics__/graphics/technology/tuuphra.png",
+    name = "guar",
+    icon = "__pyalienlifegraphics__/graphics/technology/guar-mk01.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk02"},
@@ -18,11 +18,11 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = "technology",
-    name = "tuuphra-mk02",
-    icon = "__pyalienlifegraphics__/graphics/technology/tuuphra-mk02.png",
+    name = "guar-mk02",
+    icon = "__pyalienlifegraphics__/graphics/technology/guar-mk02.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"tuuphra"},
+    prerequisites = {"guar"},
     effects = {},
     unit = {
         count = 250,
@@ -37,11 +37,11 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = "technology",
-    name = "tuuphra-mk03",
-    icon = "__pyalienlifegraphics__/graphics/technology/tuuphra-mk03.png",
+    name = "guar-mk03",
+    icon = "__pyalienlifegraphics__/graphics/technology/guar-mk03.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"tuuphra-mk02"},
+    prerequisites = {"guar-mk02"},
     effects = {},
     unit = {
         count = 300,
@@ -58,11 +58,11 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = "technology",
-    name = "tuuphra-mk04",
-    icon = "__pyalienlifegraphics__/graphics/technology/tuuphra-mk04.png",
+    name = "guar-mk04",
+    icon = "__pyalienlifegraphics__/graphics/technology/guar-mk04.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"tuuphra-mk03"},
+    prerequisites = {"guar-mk03"},
     effects = {},
     unit = {
         count = 350,

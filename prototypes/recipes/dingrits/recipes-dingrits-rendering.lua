@@ -40,13 +40,13 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='pelt', amount ='R'},
-					{name='dingrit-spike', amount ='R'},
-					{name='blood', amount ='R'},
-					{name='brain', amount ='R'},
+					{name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='pelt', remove_item = true},
+					{name='dingrit-spike', remove_item = true},
+					{name='blood', remove_item = true},
+					{name='brain', remove_item = true},
 					{name='meat', amount =4},
 				},
 			crafting_speed = 15,
@@ -63,7 +63,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='brain', amount =1},
 				},
 			crafting_speed = 15,
@@ -80,7 +80,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='bones', amount =2},
 				},
 			crafting_speed = 15,
@@ -97,7 +97,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
+					{name='bones', remove_item = true},
 					{name='guts', amount =4},
 				},
 			crafting_speed = 15,
@@ -114,7 +114,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='blood', amount =30},
 				},
 			crafting_speed = 15,
@@ -131,7 +131,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='blood', amount ='R'},
+					{name='blood', remove_item = true},
 					{name='pelt', amount =2},
 				},
 			crafting_speed = 15,
@@ -148,7 +148,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='pelt', amount ='R'},
+					{name='pelt', remove_item = true},
 					{name='dingrit-spike', amount ='*1'},
 				},
 			crafting_speed = 15,
@@ -161,12 +161,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-dingrits',amount='R'},
+					{name='caged-dingrits',remove_item = true},
 					{name='brain-caged-dingrits',amount=1},
 				},
 			results =
 				{
-					{name='dingrit-spike', amount ='R'},
+					{name='dingrit-spike', remove_item = true},
 					{name='brain', amount =5},
 				},
 			crafting_speed = 15,
@@ -179,12 +179,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='brain-caged-dingrits',amount='R'},
+					{name='brain-caged-dingrits',remove_item = true},
 					{name='bone-caged-dingrits',amount=1},
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='bones', amount =8},
 				},
 			crafting_speed = 15,
@@ -197,12 +197,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='bone-caged-dingrits',amount='R'},
+					{name='bone-caged-dingrits',remove_item = true},
 					{name='guts-caged-dingrits',amount=1},
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
+					{name='bones', remove_item = true},
 					{name='guts', amount =10},
 				},
 			crafting_speed = 15,
@@ -215,12 +215,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='guts-caged-dingrits',amount='R'},
+					{name='guts-caged-dingrits',remove_item = true},
 					{name='blood-caged-dingrits',amount=1},
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='blood', amount =100},
 				},
 			crafting_speed = 15,
@@ -233,12 +233,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='blood-caged-dingrits',amount='R'},
+					{name='blood-caged-dingrits',remove_item = true},
 					{name='meat-caged-dingrits',amount=1},
 				},
 			results =
 				{
-					{name='blood', amount ='R'},
+					{name='blood', remove_item = true},
 					{name='meat', amount =7},
 				},
 			crafting_speed = 15,
@@ -251,12 +251,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='meat-caged-dingrits',amount='R'},
+					{name='meat-caged-dingrits',remove_item = true},
 					{name='skin-caged-dingrits',amount=1},
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='pelt', amount =3},
 					{name='cage', amount=1},
 				},

@@ -27,7 +27,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='wood-seeds',amount ='R'},
+					--{name='wood-seeds',remove_item = true},
 					{name='meat',amount =10},
 				},
 			results =
@@ -46,7 +46,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='vonix',amount ='R'},
+					{name='vonix',remove_item = true},
 					{name='vonix', probability = 0.9,amount_min =2,amount_max =3},   --since the auog is a large price increase  (maybe i need to add another egg)
 				},
 			crafting_speed = 220,
@@ -101,7 +101,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='vonix', amount ='R'},
+					{name='vonix', remove_item = true},
 					{name='vonix', probability = 1,amount_min =2,amount_max =3},
 				},
 			crafting_speed = 60,
@@ -112,7 +112,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					--{name='antiviral',amount =1},
-					{name='gh',amount ='R'},
+					{name='gh',remove_item = true},
 				},
 			results =
 				{
@@ -126,11 +126,11 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='nanochondria',amount =1},
-					--{name='antiviral',amount ='R'},
+					--{name='antiviral',remove_item = true},
 				},
 			results =
 				{
-					{name='vonix', amount ='R'},
+					{name='vonix', remove_item = true},
 					{name='brain-vonix',2},
 				},
 			crafting_speed = 180,
@@ -154,13 +154,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='nanochondria',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='nanochondria',remove_item = true},
 					{name='anabolic-rna',amount =1},
 				},
 			results =
 				{
-					{name='brain-vonix', amount ='R'},
+					{name='brain-vonix', remove_item = true},
 					{name='meat-vonix', 2},
 				},
 			crafting_speed = 180,
@@ -184,13 +184,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='anabolic-rna',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='anabolic-rna',remove_item = true},
 					{name='antitumor',amount =2},
 				},
 			results =
 				{
-					{name='meat-vonix', amount ='R'},
+					{name='meat-vonix', remove_item = true},
 					{name='guts-vonix', 1},
 				},
 			crafting_speed = 180,
@@ -214,13 +214,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='antitumor',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='antitumor',remove_item = true},
 					{name='recombinant-ery',amount =1},
 				},
 			results =
 				{
-					{name='guts-vonix', amount ='R'},
+					{name='guts-vonix', remove_item = true},
 					{name='blood-vonix', 2},
 				},
 			crafting_speed = 180,
@@ -243,13 +243,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='recombinant-ery',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='recombinant-ery',remove_item = true},
 					{name='reca',amount =1},
 				},
 			results =
 				{
-					{name='blood-vonix', amount ='R'},
+					{name='blood-vonix', remove_item = true},
 					{name='skin-vonix', 2},
 				},
 			crafting_speed = 180,
@@ -272,13 +272,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='reca',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='reca',remove_item = true},
 					{name='orexigenic',amount =1},
 				},
 			results =
 				{
-					{name='skin-vonix', amount ='R'},
+					{name='skin-vonix', remove_item = true},
 					{name='fat-vonix', 2},
 				},
 			crafting_speed = 180,
@@ -329,8 +329,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    --{name='wood-seeds',amount ='R'},
-                    --{name='caged-mukmoux',amount ='R'},
+                    --{name='wood-seeds',remove_item = true},
+                    --{name='caged-mukmoux',remove_item = true},
 					{name='guts',amount =10},
 				},
 			results =
@@ -385,17 +385,17 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='arthurian-egg',amount = 'R'},
-					{name='bedding',amount = 'R'},
-					{name='navens',amount = 'R'},
-					{name='meat',amount ='R'},
+					{name='arthurian-egg',remove_item = true},
+					{name='bedding',remove_item = true},
+					{name='navens',remove_item = true},
+					{name='meat',remove_item = true},
 					{name='pheromones',amount =1},
                     --{name='caged-auog',amount =4},
 					--{name='caged-auog',amount = 1},
 				},
 			results =
 				{
-					{name='vonix-egg',amount = 'R'},
+					{name='vonix-egg',remove_item = true},
 					{name='vonix-egg', amount =10},
 				},
 			crafting_speed = 140,
@@ -405,7 +405,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    --{name='wood-seeds',amount ='R'},
+                    --{name='wood-seeds',remove_item = true},
                     --{name='caged-mukmoux',amount =15},
 					{name='meat',amount =10},
 				},
@@ -499,15 +499,15 @@ fun.autorecipes {
 				},
 			results =
 				{
-					--{name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='venon-gland', amount ='R'},
+					--{name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='venon-gland', remove_item = true},
                     {name='meat', amount =6},
-					{name='skin', amount ='R'},
-					{name='mukmoux-fat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='arthropod-blood', amount ='R'},
-					{name='brain', amount ='R'},
+					{name='skin', remove_item = true},
+					{name='mukmoux-fat', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='arthropod-blood', remove_item = true},
+					{name='brain', remove_item = true},
 				},
 			crafting_speed = 15,
 			tech = 'vonix-mk02',
@@ -523,7 +523,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='brain', amount =1},
 				},
 			crafting_speed = 15,
@@ -540,7 +540,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='venon-gland', amount =1},
 				},
 			crafting_speed = 15,
@@ -557,7 +557,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='venon-gland', amount ='R'},
+					{name='venon-gland', remove_item = true},
 					{name='skin', amount =4},
 				},
 			crafting_speed = 15,
@@ -574,7 +574,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='skin', amount ='R'},
+					{name='skin', remove_item = true},
 					{name='guts', amount =6},
 				},
 			crafting_speed = 15,
@@ -591,7 +591,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='arthropod-blood', amount =100},
 				},
 			crafting_speed = 15,
@@ -608,7 +608,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='arthropod-blood', amount ='R'},
+					{name='arthropod-blood', remove_item = true},
 					{name='mukmoux-fat', amount =5},
 				},
 			crafting_speed = 15,
@@ -621,12 +621,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='vonix',amount='R'},
+					{name='vonix',remove_item = true},
 					{name='brain-vonix',amount=1},
 				},
 			results =
 				{
-					{name='mukmoux-fat', amount ='R'},
+					{name='mukmoux-fat', remove_item = true},
 					{name='brain', amount =5},
 				},
 			crafting_speed = 15,
@@ -639,12 +639,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='brain-vonix',amount='R'},
+					{name='brain-vonix',remove_item = true},
 					{name='guts-vonix',amount=1},
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='guts', amount =20},
 				},
 			crafting_speed = 15,
@@ -657,12 +657,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='guts-vonix',amount='R'},
+					{name='guts-vonix',remove_item = true},
 					{name='blood-vonix',amount=1},
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='arthropod-blood', amount =230},
 				},
 			crafting_speed = 15,
@@ -675,12 +675,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='blood-vonix',amount='R'},
+					{name='blood-vonix',remove_item = true},
 					{name='skin-vonix',amount=1},
 				},
 			results =
 				{
-					{name='arthropod-blood', amount ='R'},
+					{name='arthropod-blood', remove_item = true},
 					{name='skin', amount =13},
 				},
 			crafting_speed = 15,
@@ -693,12 +693,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='skin-vonix',amount='R'},
+					{name='skin-vonix',remove_item = true},
 					{name='fat-vonix',amount=1},
 				},
 			results =
 				{
-					{name='skin', amount ='R'},
+					{name='skin', remove_item = true},
 					{name='mukmoux-fat', amount =23},
 				},
 			crafting_speed = 15,
@@ -711,12 +711,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fat-vonix',amount='R'},
+					{name='fat-vonix',remove_item = true},
 					{name='meat-vonix',amount=1},
 				},
 			results =
 				{
-					{name='mukmoux-fat', amount ='R'},
+					{name='mukmoux-fat', remove_item = true},
 					{name='meat', amount =13},
 				},
 			crafting_speed = 15,

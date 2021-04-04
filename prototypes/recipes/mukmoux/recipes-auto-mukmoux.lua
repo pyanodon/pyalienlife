@@ -27,13 +27,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='ralesia-seeds',amount ='R'},
-                    {name='fawogae',amount ='R'},
+                    {name='ralesia-seeds',remove_item = true},
+                    {name='fawogae',remove_item = true},
 					{name='mukmoux-food-01',amount =1},
 				},
 			results =
 				{
-					{name='caged-mukmoux',amount ='R'},
+					{name='caged-mukmoux',remove_item = true},
 					{name='caged-mukmoux', probability = 0.8,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 55,
@@ -70,15 +70,15 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='mukmoux-food-01',amount ='R'},
-					{name='salt',amount ='R'},
-					{name='raw-fiber',amount ='R'},
+					{name='mukmoux-food-01',remove_item = true},
+					{name='salt',remove_item = true},
+					{name='raw-fiber',remove_item = true},
 					{name='mukmoux-food-02',amount =1},
 
 				},
 			results =
 				{
-					{name='caged-mukmoux',amount ='R'},
+					{name='caged-mukmoux',remove_item = true},
 					{name='caged-mukmoux', probability = 0.9,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 40,
@@ -133,7 +133,7 @@ fun.autorecipes {
 			results =
 				{
 
-					{name='caged-mukmoux', amount ='R'},
+					{name='caged-mukmoux', remove_item = true},
 					{name='caged-mukmoux', probability = 1,amount_min =1,amount_max =2},
 				},
 			crafting_speed = 12,
@@ -144,7 +144,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					--{name='antiviral',amount =1},
-					{name='gh',amount ='R'},
+					{name='gh',remove_item = true},
 				},
 			results =
 				{
@@ -158,11 +158,11 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='nanochondria',amount =1},
-					--{name='antiviral',amount ='R'},
+					--{name='antiviral',remove_item = true},
 				},
 			results =
 				{
-					{name='caged-mukmoux', amount ='R'},
+					{name='caged-mukmoux', remove_item = true},
 					{name='brain-caged-mukmoux',1},
 				},
 			crafting_speed = 30,
@@ -186,13 +186,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='nanochondria',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='nanochondria',remove_item = true},
 					{name='bmp',amount =1},
 				},
 			results =
 				{
-					{name='brain-caged-mukmoux', amount ='R'},
+					{name='brain-caged-mukmoux', remove_item = true},
 					{name='bonecaged-mukmoux', 1},
 				},
 			crafting_speed = 30,
@@ -217,13 +217,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='bmp',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='bmp',remove_item = true},
 					{name='anabolic-rna',amount =1},
 				},
 			results =
 				{
-					{name='bonecaged-mukmoux', amount ='R'},
+					{name='bonecaged-mukmoux', remove_item = true},
 					{name='meat-caged-mukmoux', 1},
 				},
 			crafting_speed = 30,
@@ -247,13 +247,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='anabolic-rna',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='anabolic-rna',remove_item = true},
 					{name='antitumor',amount =1},
 				},
 			results =
 				{
-					{name='meat-caged-mukmoux', amount ='R'},
+					{name='meat-caged-mukmoux', remove_item = true},
 					{name='guts-caged-mukmoux', 1},
 				},
 			crafting_speed = 30,
@@ -277,13 +277,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='antitumor',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='antitumor',remove_item = true},
 					{name='recombinant-ery',amount =1},
 				},
 			results =
 				{
-					{name='guts-caged-mukmoux', amount ='R'},
+					{name='guts-caged-mukmoux', remove_item = true},
 					{name='blood-caged-mukmoux', 1},
 				},
 			crafting_speed = 30,
@@ -306,13 +306,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='recombinant-ery',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='recombinant-ery',remove_item = true},
 					{name='reca',amount =1},
 				},
 			results =
 				{
-					{name='blood-caged-mukmoux', amount ='R'},
+					{name='blood-caged-mukmoux', remove_item = true},
 					{name='skin-caged-mukmoux', 1},
 				},
 			crafting_speed = 30,
@@ -335,13 +335,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='reca',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='reca',remove_item = true},
 					{name='orexigenic',amount =1},
 				},
 			results =
 				{
-					{name='skin-caged-mukmoux', amount ='R'},
+					{name='skin-caged-mukmoux', remove_item = true},
 					{name='fat-caged-mukmoux', 1},
 				},
 			crafting_speed = 30,
@@ -393,8 +393,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='ralesia-seeds',amount ='R'},
-                    {name='fawogae',amount ='R'},
+                    {name='ralesia-seeds',remove_item = true},
+                    {name='fawogae',remove_item = true},
 					{name='mukmoux-food-01',amount =2},
 				},
 			results =
@@ -434,9 +434,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='mukmoux-food-01',amount ='R'},
-					{name='salt',amount ='R'},
-					{name='raw-fiber',amount ='R'},
+					{name='mukmoux-food-01',remove_item = true},
+					{name='salt',remove_item = true},
+					{name='raw-fiber',remove_item = true},
 					{name='mukmoux-food-02',amount =2},
 
 				},
@@ -477,9 +477,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount = 'R'},
-					{name='salt',amount = 'R'},
-					{name='mukmoux-food-02',amount = 'R'},
+					{name='raw-fiber',remove_item = true},
+					{name='salt',remove_item = true},
+					{name='mukmoux-food-02',remove_item = true},
 					{name='fawogae',amount =20},
 					{name='pheromones',amount =1},
                     {name='ralesia-seeds',amount =20},
@@ -488,7 +488,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='mukmoux-calf',amount = 'R'},
+					{name='mukmoux-calf',remove_item = true},
 					{name='mukmoux-calf', amount =5},
 				},
 			crafting_speed = 65,
@@ -498,8 +498,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='ralesia-seeds',amount ='R'},
-                    {name='fawogae',amount ='R'},
+                    {name='ralesia-seeds',remove_item = true},
+                    {name='fawogae',remove_item = true},
 					{name='mukmoux-food-01',amount =2},
 				},
 			results =
@@ -539,9 +539,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='mukmoux-food-01',amount ='R'},
-					{name='salt',amount ='R'},
-					{name='raw-fiber',amount ='R'},
+					{name='mukmoux-food-01',remove_item = true},
+					{name='salt',remove_item = true},
+					{name='raw-fiber',remove_item = true},
 					{name='mukmoux-food-02',amount =2},
 
 				},
@@ -556,7 +556,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='salt',amount ='R'},
+					{name='salt',remove_item = true},
 				},
 			results =
 				{
@@ -622,13 +622,13 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='skin', amount ='R'},
-					{name='mukmoux-fat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='blood', amount ='R'},
-					{name='brain', amount ='R'},
+					{name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='skin', remove_item = true},
+					{name='mukmoux-fat', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='blood', remove_item = true},
+					{name='brain', remove_item = true},
 					{name='bonemeal', amount = 4},
 				},
 			crafting_speed = 15,
@@ -645,7 +645,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bonemeal', amount ='R'},
+					{name='bonemeal', remove_item = true},
 					{name='meat', amount =5},
 				},
 			crafting_speed = 15,
@@ -662,7 +662,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='brain', amount =1},
 				},
 			crafting_speed = 15,
@@ -679,7 +679,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='skin', amount =4},
 				},
 			crafting_speed = 15,
@@ -696,7 +696,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='skin', amount ='R'},
+					{name='skin', remove_item = true},
 					{name='bones', amount =3},
 				},
 			crafting_speed = 15,
@@ -713,7 +713,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
+					{name='bones', remove_item = true},
 					{name='guts', amount =8},
 				},
 			crafting_speed = 15,
@@ -730,7 +730,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='blood', amount =130},
 				},
 			crafting_speed = 15,
@@ -747,7 +747,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='blood', amount ='R'},
+					{name='blood', remove_item = true},
 					{name='mukmoux-fat', amount =5},
 				},
 			crafting_speed = 15,
@@ -760,12 +760,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-mukmoux',amount='R'},
+					{name='caged-mukmoux',remove_item = true},
 					{name='brain-caged-mukmoux',amount=1},
 				},
 			results =
 				{
-					{name='mukmoux-fat', amount ='R'},
+					{name='mukmoux-fat', remove_item = true},
 					{name='brain', amount =4},
 				},
 			crafting_speed = 15,
@@ -778,12 +778,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='brain-caged-mukmoux',amount='R'},
+					{name='brain-caged-mukmoux',remove_item = true},
 					{name='bonecaged-mukmoux',amount=1},
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='bones', amount =13},
 				},
 			crafting_speed = 15,
@@ -800,7 +800,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
+					{name='bones', remove_item = true},
 					{name='bonemeal', amount =16},
 				},
 			crafting_speed = 15,
@@ -813,12 +813,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='bonecaged-mukmoux',amount='R'},
+					{name='bonecaged-mukmoux',remove_item = true},
 					{name='meat-caged-mukmoux',amount=1},
 				},
 			results =
 				{
-					{name='bonemeal', amount ='R'},
+					{name='bonemeal', remove_item = true},
 					{name='meat', amount =24},
 				},
 			crafting_speed = 15,
@@ -831,12 +831,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='meat-caged-mukmoux',amount='R'},
+					{name='meat-caged-mukmoux',remove_item = true},
 					{name='guts-caged-mukmoux',amount=1},
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='guts', amount =20},
 				},
 			crafting_speed = 15,
@@ -849,12 +849,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='guts-caged-mukmoux',amount='R'},
+					{name='guts-caged-mukmoux',remove_item = true},
 					{name='blood-caged-mukmoux',amount=1},
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='blood', amount =250},
 				},
 			crafting_speed = 15,
@@ -867,12 +867,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='blood-caged-mukmoux',amount='R'},
+					{name='blood-caged-mukmoux',remove_item = true},
 					{name='skin-caged-mukmoux',amount=1},
 				},
 			results =
 				{
-					{name='blood', amount ='R'},
+					{name='blood', remove_item = true},
 					{name='skin', amount =10},
 				},
 			crafting_speed = 15,
@@ -885,12 +885,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='skin-caged-mukmoux',amount='R'},
+					{name='skin-caged-mukmoux',remove_item = true},
 					{name='fat-caged-mukmoux',amount=1},
 				},
 			results =
 				{
-					{name='skin', amount ='R'},
+					{name='skin', remove_item = true},
 					{name='mukmoux-fat', amount =20},
 				},
 			crafting_speed = 15,

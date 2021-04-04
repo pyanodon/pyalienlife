@@ -28,13 +28,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='meat',amount ='R'},
+                    {name='meat',remove_item = true},
                     {name='meat',amount =10},
 					{name='phadai-food-01',amount =1},
 				},
 			results =
 				{
-					{name='caged-phadai',amount ='R'},
+					{name='caged-phadai',remove_item = true},
 					{name='caged-phadai', probability = 0.8,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 140,
@@ -71,15 +71,15 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='phadai-food-01',amount ='R'},
-					{name='fawogae',amount ='R'},
-					{name='energy-drink',amount ='R'},
+					{name='phadai-food-01',remove_item = true},
+					{name='fawogae',remove_item = true},
+					{name='energy-drink',remove_item = true},
 					{name='phadai-food-02',amount =1},
 
 				},
 			results =
 				{
-					{name='caged-phadai',amount ='R'},
+					{name='caged-phadai',remove_item = true},
 					{name='caged-phadai', probability = 0.9,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 110,
@@ -133,7 +133,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='caged-phadai', amount ='R'},
+					{name='caged-phadai', remove_item = true},
 					{name='caged-phadai', probability = 1,amount_min =1,amount_max =2},
 				},
 			crafting_speed = 30,
@@ -144,7 +144,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					--{name='antiviral',amount =1},
-					{name='gh',amount ='R'},
+					{name='gh',remove_item = true},
 				},
 			results =
 				{
@@ -158,11 +158,11 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='nanochondria',amount =1},
-					--{name='antiviral',amount ='R'},
+					--{name='antiviral',remove_item = true},
 				},
 			results =
 				{
-					{name='caged-phadai', amount ='R'},
+					{name='caged-phadai', remove_item = true},
 					{name='brain-caged-phadai',1},
 				},
 			crafting_speed = 90,
@@ -186,13 +186,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='nanochondria',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='nanochondria',remove_item = true},
 					{name='bmp',amount =1},
 				},
 			results =
 				{
-					{name='brain-caged-phadai', amount ='R'},
+					{name='brain-caged-phadai', remove_item = true},
 					{name='bone-caged-phadai', 1},
 				},
 			crafting_speed = 90,
@@ -217,13 +217,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='bmp',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='bmp',remove_item = true},
 					{name='anabolic-rna',amount =1},
 				},
 			results =
 				{
-					{name='bone-caged-phadai', amount ='R'},
+					{name='bone-caged-phadai', remove_item = true},
 					{name='meat-caged-phadai', 1},
 				},
 			crafting_speed = 90,
@@ -247,13 +247,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='anabolic-rna',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='anabolic-rna',remove_item = true},
 					{name='antitumor',amount =1},
 				},
 			results =
 				{
-					{name='meat-caged-phadai', amount ='R'},
+					{name='meat-caged-phadai', remove_item = true},
 					{name='guts-caged-phadai', 1},
 				},
 			crafting_speed = 90,
@@ -277,13 +277,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='antitumor',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='antitumor',remove_item = true},
 					{name='recombinant-ery',amount =1},
 				},
 			results =
 				{
-					{name='guts-caged-phadai', amount ='R'},
+					{name='guts-caged-phadai', remove_item = true},
 					{name='blood-caged-phadai', 1},
 				},
 			crafting_speed = 90,
@@ -306,13 +306,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='recombinant-ery',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='recombinant-ery',remove_item = true},
 					{name='reca',amount =1},
 				},
 			results =
 				{
-					{name='blood-caged-phadai', amount ='R'},
+					{name='blood-caged-phadai', remove_item = true},
 					{name='skin-caged-phadai', 1},
 				},
 			crafting_speed = 90,
@@ -335,13 +335,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='reca',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='reca',remove_item = true},
 					{name='orexigenic',amount =1},
 				},
 			results =
 				{
-					{name='skin-caged-phadai', amount ='R'},
+					{name='skin-caged-phadai', remove_item = true},
 					{name='fat-caged-phadai', 1},
 				},
 			crafting_speed = 80,
@@ -395,8 +395,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='fawogae',amount ='R'},
-                    {name='meat',amount ='R'},
+                    {name='fawogae',remove_item = true},
+                    {name='meat',remove_item = true},
                     {name='meat',amount =20},
 					{name='phadai-food-01',amount =2},
 				},
@@ -437,9 +437,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='phadai-food-01',amount ='R'},
-					{name='fawogae',amount ='R'},
-					{name='energy-drink',amount ='R'},
+					{name='phadai-food-01',remove_item = true},
+					{name='fawogae',remove_item = true},
+					{name='energy-drink',remove_item = true},
 					{name='phadai-food-02',amount =2},
 
 				},
@@ -480,9 +480,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='energy-drink',amount = 'R'},
-					{name='fawogae',amount = 'R'},
-					{name='phadai-food-02',amount = 'R'},
+					{name='energy-drink',remove_item = true},
+					{name='fawogae',remove_item = true},
+					{name='phadai-food-02',remove_item = true},
 					--{name='meat',amount =15},
 					{name='pheromones',amount =1},
                     {name='fawogae',amount =30},
@@ -491,7 +491,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='phadai-pup',amount = 'R'},
+					{name='phadai-pup',remove_item = true},
 					{name='phadai-pup', amount =5},
 				},
 			crafting_speed = 140,
@@ -501,7 +501,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='fawogae',amount ='R'},
+                    {name='fawogae',remove_item = true},
 					{name='phadai-food-01',amount =2},
 				},
 			results =
@@ -541,9 +541,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='phadai-food-01',amount ='R'},
-					{name='fawogae',amount ='R'},
-					{name='energy-drink',amount ='R'},
+					{name='phadai-food-01',remove_item = true},
+					{name='fawogae',remove_item = true},
+					{name='energy-drink',remove_item = true},
 					{name='phadai-food-02',amount =2},
 
 				},
@@ -623,15 +623,15 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
-					{name='skin', amount ='R'},
-					{name='mukmoux-fat', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='pelt', amount ='R'},
-					{name='carapace', amount ='R'},
-					{name='blood', amount ='R'},
-					{name='brain', amount ='R'},
+					{name='bones', remove_item = true},
+					{name='skin', remove_item = true},
+					{name='mukmoux-fat', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='pelt', remove_item = true},
+					{name='carapace', remove_item = true},
+					{name='blood', remove_item = true},
+					{name='brain', remove_item = true},
 					{name='meat', amount =4},
 				},
 			crafting_speed = 15,
@@ -648,7 +648,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='brain', amount =1},
 				},
 			crafting_speed = 15,
@@ -665,7 +665,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='bones', amount =2},
 				},
 			crafting_speed = 15,
@@ -682,7 +682,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
+					{name='bones', remove_item = true},
 					{name='guts', amount =3},
 				},
 			crafting_speed = 15,
@@ -699,7 +699,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='blood', amount =30},
 				},
 			crafting_speed = 15,
@@ -716,7 +716,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='blood', amount ='R'},
+					{name='blood', remove_item = true},
 					{name='mukmoux-fat', amount =1},
 				},
 			crafting_speed = 15,
@@ -733,7 +733,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='mukmoux-fat', amount ='R'},
+					{name='mukmoux-fat', remove_item = true},
 					{name='carapace', amount ='*2'},
 				},
 			crafting_speed = 15,
@@ -750,7 +750,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='carapace', amount ='R'},
+					{name='carapace', remove_item = true},
 					{name='skin', amount =2},
 				},
 			crafting_speed = 15,
@@ -763,12 +763,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-phadai',amount='R'},
+					{name='caged-phadai',remove_item = true},
 					{name='brain-caged-phadai',amount=1},
 				},
 			results =
 				{
-					{name='skin', amount ='R'},
+					{name='skin', remove_item = true},
 					{name='brain', amount =6},
 				},
 			crafting_speed = 15,
@@ -781,12 +781,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='brain-caged-phadai',amount='R'},
+					{name='brain-caged-phadai',remove_item = true},
 					{name='bone-caged-phadai',amount=1},
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='bones', amount =10},
 				},
 			crafting_speed = 15,
@@ -799,12 +799,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='bone-caged-phadai',amount='R'},
+					{name='bone-caged-phadai',remove_item = true},
 					{name='guts-caged-phadai',amount=1},
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
+					{name='bones', remove_item = true},
 					{name='guts', amount =12},
 				},
 			crafting_speed = 15,
@@ -817,12 +817,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='guts-caged-phadai',amount='R'},
+					{name='guts-caged-phadai',remove_item = true},
 					{name='blood-caged-phadai',amount=1},
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='blood', amount =100},
 				},
 			crafting_speed = 15,
@@ -835,12 +835,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='blood-caged-phadai',amount='R'},
+					{name='blood-caged-phadai',remove_item = true},
 					{name='meat-caged-phadai',amount=1},
 				},
 			results =
 				{
-					{name='blood', amount ='R'},
+					{name='blood', remove_item = true},
 					{name='meat', amount =12},
 				},
 			crafting_speed = 15,
@@ -853,12 +853,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='meat-caged-phadai',amount='R'},
+					{name='meat-caged-phadai',remove_item = true},
 					{name='skin-caged-phadai',amount=1},
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='skin', amount =8},
 				},
 			crafting_speed = 15,
@@ -871,12 +871,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='skin-caged-phadai',amount='R'},
+					{name='skin-caged-phadai',remove_item = true},
 					{name='fat-caged-phadai',amount=1},
 				},
 			results =
 				{
-					{name='skin', amount ='R'},
+					{name='skin', remove_item = true},
 					{name='mukmoux-fat', amount =7},
 				},
 			crafting_speed = 15,

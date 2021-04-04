@@ -26,12 +26,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='bhoddos',amount ='R'},
+					{name='bhoddos',remove_item = true},
 					{name='phagnot-food-01',amount =1},
 				},
 			results =
 				{
-					{name='caged-phagnot',amount ='R'},
+					{name='caged-phagnot',remove_item = true},
 					{name='caged-phagnot', probability = 0.8,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 140,
@@ -68,15 +68,15 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='phagnot-food-01',amount ='R'},
-					{name='salt',amount ='R'},
-					{name='raw-fiber',amount ='R'},
+					{name='phagnot-food-01',remove_item = true},
+					{name='salt',remove_item = true},
+					{name='raw-fiber',remove_item = true},
 					{name='phagnot-food-02',amount =1},
 
 				},
 			results =
 				{
-					{name='caged-phagnot',amount ='R'},
+					{name='caged-phagnot',remove_item = true},
 					{name='caged-phagnot', probability = 0.9,amount_min =1,amount_max =1},
 				},
 			crafting_speed = 110,
@@ -130,7 +130,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='caged-phagnot', amount ='R'},
+					{name='caged-phagnot', remove_item = true},
 					{name='caged-phagnot', probability = 1,amount_min =1,amount_max =2},
 				},
 			crafting_speed = 30,
@@ -141,7 +141,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					--{name='antiviral',amount =1},
-					{name='gh',amount ='R'},
+					{name='gh',remove_item = true},
 				},
 			results =
 				{
@@ -155,11 +155,11 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='nanochondria',amount =1},
-					--{name='antiviral',amount ='R'},
+					--{name='antiviral',remove_item = true},
 				},
 			results =
 				{
-					{name='caged-phagnot', amount ='R'},
+					{name='caged-phagnot', remove_item = true},
 					{name='brain-caged-phagnot',1},
 				},
 			crafting_speed = 90,
@@ -183,13 +183,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='nanochondria',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='nanochondria',remove_item = true},
 					{name='bmp',amount =1},
 				},
 			results =
 				{
-					{name='brain-caged-phagnot', amount ='R'},
+					{name='brain-caged-phagnot', remove_item = true},
 					{name='bone-caged-phagnot', 1},
 				},
 			crafting_speed = 90,
@@ -214,13 +214,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='bmp',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='bmp',remove_item = true},
 					{name='anabolic-rna',amount =1},
 				},
 			results =
 				{
-					{name='bone-caged-phagnot', amount ='R'},
+					{name='bone-caged-phagnot', remove_item = true},
 					{name='meat-caged-phagnot', 1},
 				},
 			crafting_speed = 90,
@@ -244,13 +244,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='anabolic-rna',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='anabolic-rna',remove_item = true},
 					{name='antitumor',amount =1},
 				},
 			results =
 				{
-					{name='meat-caged-phagnot', amount ='R'},
+					{name='meat-caged-phagnot', remove_item = true},
 					{name='guts-caged-phagnot', 1},
 				},
 			crafting_speed = 90,
@@ -274,13 +274,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='antitumor',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='antitumor',remove_item = true},
 					{name='recombinant-ery',amount =1},
 				},
 			results =
 				{
-					{name='guts-caged-phagnot', amount ='R'},
+					{name='guts-caged-phagnot', remove_item = true},
 					{name='blood-caged-phagnot', 1},
 				},
 			crafting_speed = 90,
@@ -303,13 +303,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='recombinant-ery',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='recombinant-ery',remove_item = true},
 					{name='reca',amount =1},
 				},
 			results =
 				{
-					{name='blood-caged-phagnot', amount ='R'},
+					{name='blood-caged-phagnot', remove_item = true},
 					{name='skin-caged-phagnot', 1},
 				},
 			crafting_speed = 90,
@@ -361,8 +361,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='yotoi-seeds',amount ='R'},
-                    {name='bhoddos',amount ='R'},
+                    {name='yotoi-seeds',remove_item = true},
+                    {name='bhoddos',remove_item = true},
 					{name='phagnot-food-01',amount =2},
 				},
 			results =
@@ -402,9 +402,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='phagnot-food-01',amount ='R'},
-					{name='salt',amount ='R'},
-					{name='raw-fiber',amount ='R'},
+					{name='phagnot-food-01',remove_item = true},
+					{name='salt',remove_item = true},
+					{name='raw-fiber',remove_item = true},
 					{name='phagnot-food-02',amount =2},
 
 				},
@@ -445,9 +445,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount = 'R'},
-					{name='salt',amount = 'R'},
-					{name='phagnot-food-02',amount = 'R'},
+					{name='raw-fiber',remove_item = true},
+					{name='salt',remove_item = true},
+					{name='phagnot-food-02',remove_item = true},
 					{name='bhoddos',amount =6},
 					{name='pheromones',amount =1},
                     {name='yotoi-seeds',amount =30},
@@ -456,7 +456,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='phagnot-cub',amount = 'R'},
+					{name='phagnot-cub',remove_item = true},
 					{name='phagnot-cub', amount =6},
 				},
 			crafting_speed = 140,
@@ -466,8 +466,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='yotoi-seeds',amount ='R'},
-                    {name='bhoddos',amount ='R'},
+                    {name='yotoi-seeds',remove_item = true},
+                    {name='bhoddos',remove_item = true},
 					{name='phagnot-food-01',amount =2},
 				},
 			results =
@@ -507,9 +507,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='phagnot-food-01',amount ='R'},
-					{name='salt',amount ='R'},
-					{name='raw-fiber',amount ='R'},
+					{name='phagnot-food-01',remove_item = true},
+					{name='salt',remove_item = true},
+					{name='raw-fiber',remove_item = true},
 					{name='phagnot-food-02',amount =2},
 
 				},
@@ -588,13 +588,13 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='skin', amount ='R'},
-					{name='gas-bladder', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='blood', amount ='R'},
-					{name='brain', amount ='R'},
+					{name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='skin', remove_item = true},
+					{name='gas-bladder', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='blood', remove_item = true},
+					{name='brain', remove_item = true},
 					{name='meat', amount =2},
 				},
 			crafting_speed = 15,
@@ -611,7 +611,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='brain', amount =1},
 				},
 			crafting_speed = 15,
@@ -628,7 +628,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='skin', amount =1},
 				},
 			crafting_speed = 15,
@@ -645,7 +645,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='skin', amount ='R'},
+					{name='skin', remove_item = true},
 					{name='bones', amount =6},
 				},
 			crafting_speed = 15,
@@ -662,7 +662,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
+					{name='bones', remove_item = true},
 					{name='guts', amount =1},
 				},
 			crafting_speed = 15,
@@ -679,7 +679,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='blood', amount =40},
 				},
 			crafting_speed = 15,
@@ -696,7 +696,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='blood', amount ='R'},
+					{name='blood', remove_item = true},
 					{name='gas-bladder', amount =1},
 				},
 			crafting_speed = 15,
@@ -709,13 +709,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-phagnot',amount='R'},
+					{name='caged-phagnot',remove_item = true},
 					{name='brain-caged-phagnot',amount=1},
 				},
 			results =
 				{
-					{name='blood', amount ='R'},
-					{name='gas-bladder', amount ='R'},
+					{name='blood', remove_item = true},
+					{name='gas-bladder', remove_item = true},
 					{name='brain', amount =5},
 				},
 			crafting_speed = 15,
@@ -728,12 +728,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='brain-caged-phagnot',amount='R'},
+					{name='brain-caged-phagnot',remove_item = true},
 					{name='bone-caged-phagnot',amount=1},
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='bones', amount =30},
 				},
 			crafting_speed = 15,
@@ -746,12 +746,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='bone-caged-phagnot',amount='R'},
+					{name='bone-caged-phagnot',remove_item = true},
 					{name='guts-caged-phagnot',amount=1},
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
+					{name='bones', remove_item = true},
 					{name='guts', amount =6},
 				},
 			crafting_speed = 15,
@@ -764,12 +764,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='guts-caged-phagnot',amount='R'},
+					{name='guts-caged-phagnot',remove_item = true},
 					{name='blood-caged-phagnot',amount=1},
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='blood', amount =100},
 				},
 			crafting_speed = 15,
@@ -782,12 +782,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='blood-caged-phagnot',amount='R'},
+					{name='blood-caged-phagnot',remove_item = true},
 					{name='skin-caged-phagnot',amount=1},
 				},
 			results =
 				{
-					{name='blood', amount ='R'},
+					{name='blood', remove_item = true},
 					{name='skin', amount =7},
 				},
 			crafting_speed = 15,
@@ -800,12 +800,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='skin-caged-phagnot',amount='R'},
+					{name='skin-caged-phagnot',remove_item = true},
 					{name='meat-caged-phagnot',amount=1},
 				},
 			results =
 				{
-					{name='skin', amount ='R'},
+					{name='skin', remove_item = true},
 					{name='meat', amount =11},
 				},
 			crafting_speed = 15,

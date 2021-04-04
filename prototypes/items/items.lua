@@ -8641,11 +8641,11 @@ data.raw.item.guar = nil
 
 ITEM {
     type = "module",
-    name = "guar",
+    name = "guar-mk01",
     icons =
 	{
-        {icon = "__pypetroleumhandlinggraphics__/graphics/icons/guar.png"},
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/guar.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
     },
     icon_size = 32,
 	category = "guar",
@@ -8655,6 +8655,66 @@ ITEM {
     order = "g-a",
     stack_size = 300,
 	effect = { speed = {bonus = 7.5}},
+	limitation = alien_life_limitations_guar,
+	limitation_message_key = "guar"
+}
+
+ITEM {
+    type = "module",
+    name = "guar-mk02",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/guar.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 32,
+	category = "guar",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "g-b",
+    stack_size = 300,
+	effect = { speed = {bonus = 15}},
+	limitation = alien_life_limitations_guar,
+	limitation_message_key = "guar"
+}
+
+ITEM {
+    type = "module",
+    name = "guar-mk03",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/guar.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 32,
+	category = "guar",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "g-c",
+    stack_size = 300,
+	effect = { speed = {bonus = 30}},
+	limitation = alien_life_limitations_guar,
+	limitation_message_key = "guar"
+}
+
+ITEM {
+    type = "module",
+    name = "guar-mk04",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/guar.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 32,
+	category = "guar",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "g-d",
+    stack_size = 300,
+	effect = { speed = {bonus = 60}},
 	limitation = alien_life_limitations_guar,
 	limitation_message_key = "guar"
 }

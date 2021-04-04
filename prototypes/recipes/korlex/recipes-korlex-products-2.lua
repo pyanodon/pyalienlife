@@ -30,8 +30,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='bhoddos',amount ='R'},
-					{name='tuuphra',amount ='R'},
+					{name='bhoddos',remove_item = true},
+					{name='tuuphra',remove_item = true},
 					{name='korlex-food-01'},
 				},
 			results =
@@ -80,9 +80,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='ash',amount ='R'},
-					{name='fish',amount ='R'},
-					{name='korlex-food-01',amount ='R'},
+					{name='ash',remove_item = true},
+					{name='fish',remove_item = true},
+					{name='korlex-food-01',remove_item = true},
                     {name='korlex-food-02'},
                     {name='empty-barrel-milk',amount ='+3'},
 				},

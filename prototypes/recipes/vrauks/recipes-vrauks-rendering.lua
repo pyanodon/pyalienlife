@@ -3,7 +3,7 @@ local fun = require("prototypes/functions/functions")
 ------------------RENDERING------------------
 
 fun.autorecipes {
-    name = 'rendering',
+    name = 'rendering-base',
 	category = 'vrauk-rendering',
 	--module_limitations = 'vrauks',
 	subgroup = 'py-alienlife-vrauks',
@@ -29,6 +29,8 @@ fun.autorecipes {
 	}
 }
 
+log(serpent.block(data.raw.recipe['Smashing Vrauks']))
+
 fun.autorecipes {
     name = 'rendering',
 	category = 'slaughterhouse-vrauks',
@@ -40,7 +42,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='vrauks',amount='R'},
+					{name='vrauks',remove_item = true},
 					{name='caged-vrauks',amount=1},
 				},
 			results =
@@ -68,13 +70,13 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    --{name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='chitin', amount ='R'},
-					--{name='mukmoux-fat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='formic-acid', amount ='R'},
-					{name='brain', amount ='R'},
+                    --{name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='chitin', remove_item = true},
+					--{name='mukmoux-fat', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='formic-acid', remove_item = true},
+					{name='brain', remove_item = true},
 					{name='meat', amount =2},
 				},
 			crafting_speed = 15,
@@ -91,7 +93,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='brain', amount =1},
 				},
 			crafting_speed = 15,
@@ -108,7 +110,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='chitin', amount =1},
 				},
 			crafting_speed = 15,
@@ -125,7 +127,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='chitin', amount ='R'},
+					{name='chitin', remove_item = true},
 					{name='guts', amount =2},
 				},
 			crafting_speed = 15,
@@ -142,7 +144,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='formic-acid', amount =400},
 				},
 			crafting_speed = 15,
@@ -155,12 +157,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-vrauks',amount='R'},
+					{name='caged-vrauks',remove_item = true},
 					{name='brain-caged-vrauks',amount=1},
 				},
 			results =
 				{
-					{name='formic-acid', amount ='R'},
+					{name='formic-acid', remove_item = true},
 					{name='brain', amount =4},
 				},
 			crafting_speed = 15,
@@ -173,12 +175,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='brain-caged-vrauks',amount='R'},
+					{name='brain-caged-vrauks',remove_item = true},
 					{name='meat-caged-vrauks',amount=1},
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='meat', amount =10},
 				},
 			crafting_speed = 15,
@@ -191,12 +193,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='meat-caged-vrauks',amount='R'},
+					{name='meat-caged-vrauks',remove_item = true},
 					{name='guts-caged-vrauks',amount=1},
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='guts', amount =11},
 				},
 			crafting_speed = 15,
@@ -209,12 +211,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='guts-caged-vrauks',amount='R'},
+					{name='guts-caged-vrauks',remove_item = true},
 					{name='skin-caged-vrauks',amount=1},
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='chitin', amount =15},
 				},
 			crafting_speed = 15,

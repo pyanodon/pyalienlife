@@ -36,9 +36,9 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name= 'auog-pup',amount ='R'},
+					{name= 'auog-pup',remove_item = true},
 					{name= 'auog-pup',amount_min = 4,amount_max = 8},
-					{name = 'manure', amount = 'R'},
+					{name = 'manure', remove_item = true},
 					{name = 'manure', amount_min = 5,amount_max = 12}
 				},
 			crafting_speed = 130,
@@ -49,7 +49,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='auog', amount='R'},
+					{name='auog', remove_item = true},
 					{name='auog', amount=4},
 					{name='saps',amount = 12},
 					{name='bedding',amount = 3},
@@ -57,11 +57,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='auog', amount='R'},
+					{name='auog', remove_item = true},
 					{name='auog', amount=4},
-					{name= 'auog-pup',amount ='R'},
+					{name= 'auog-pup',remove_item = true},
 					{name= 'auog-pup',amount_min = 4,amount_max = 20},
-					{name = 'manure', amount = 'R'},
+					{name = 'manure', remove_item = true},
 					{name = 'manure', amount_min = 7,amount_max = 14}
 				},
 			crafting_speed = 100,
@@ -72,7 +72,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='auog', amount='R'},
+					{name='auog', remove_item = true},
 					{name='auog', amount=8},
 					{name='saps', add_amount = 5},
 					{name='bedding',add_amount = 5},
@@ -83,11 +83,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='auog', amount='R'},
+					{name='auog', remove_item = true},
 					{name='auog', amount=8},
-					{name= 'auog-pup',amount ='R'},
+					{name= 'auog-pup',remove_item = true},
 					{name= 'auog-pup',amount_min = 8,amount_max = 30},
-					{name = 'manure', amount = 'R'},
+					{name = 'manure', remove_item = true},
 					{name = 'manure', amount_min = 10,amount_max = 20}
 				},
 			crafting_speed = 70,
@@ -98,18 +98,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='auog', amount='R'},
+					{name='auog', remove_item = true},
 					{name='auog', amount=14},
 					{name='saps', add_amount = 10},
 					{name='raw-fiber', add_amount = 10},
 				},
 			results =
 				{
-					{name='auog', amount='R'},
+					{name='auog', remove_item = true},
 					{name='auog', amount=14},
-					{name= 'auog-pup',amount ='R'},
+					{name= 'auog-pup',remove_item = true},
 					{name= 'auog-pup',amount_min = 14,amount_max = 50},
-					{name = 'manure', amount = 'R'},
+					{name = 'manure', remove_item = true},
 					{name = 'manure', amount_min = 20,amount_max = 30}
 				},
 			crafting_speed = 40,
@@ -182,9 +182,9 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name= 'auog',amount ='R'},
+					{name= 'auog',remove_item = true},
 					{name= 'auog',amount_min = 2,amount_max = 8},
-					{name = 'manure', amount = 'R'},
+					{name = 'manure', remove_item = true},
 					{name = 'manure', amount_min = 5,amount_max = 12}
 				},
 			crafting_speed = 130,
@@ -195,16 +195,16 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='auog-pup', amount='R'},
+					{name='auog-pup', remove_item = true},
 					{name='auog-pup', amount=12},
 					{name='bedding',amount = 3},
 					{name='raw-fiber',amount = 15},
 				},
 			results =
 				{
-					{name= 'auog',amount ='R'},
+					{name= 'auog',remove_item = true},
 					{name= 'auog',amount_min = 4,amount_max = 12},
-					{name = 'manure', amount = 'R'},
+					{name = 'manure', remove_item = true},
 					{name = 'manure', amount_min = 7,amount_max = 14}
 				},
 			crafting_speed = 100,
@@ -215,7 +215,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='auog-pup', amount = 'R'},
+					{name='auog-pup', remove_item = true},
 					{name='auog-pup', amount = 15},
 					{name='saps', add_amount = 5},
 					{name='bedding', add_amount = 5},
@@ -226,9 +226,9 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name= 'auog',amount ='R'},
+					{name= 'auog',remove_item = true},
 					{name= 'auog',amount_min = 8,amount_max = 15},
-					{name = 'manure', amount = 'R'},
+					{name = 'manure', remove_item = true},
 					{name = 'manure', amount_min = 10,amount_max = 20}
 				},
 			crafting_speed = 70,
@@ -239,16 +239,16 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='auog-pup', amount='R'},
+					{name='auog-pup', remove_item = true},
 					{name='auog-pup', amount=20},
 					{name='saps', add_amount = 10},
 					{name='raw-fiber', add_amount = 10},
 				},
 			results =
 				{
-					{name= 'auog',amount ='R'},
+					{name= 'auog',remove_item = true},
 					{name= 'auog',amount_min = 14,amount_max = 20},
-					{name = 'manure', amount = 'R'},
+					{name = 'manure', remove_item = true},
 					{name = 'manure', amount_min = 20,amount_max = 30}
 				},
 			crafting_speed = 40,

@@ -72,9 +72,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='energy-drink',amount ='R'},
-                    {name='bedding',amount ='R'},
-					{name='phadai-food-01',amount ='R'},
+                    {name='energy-drink',remove_item = true},
+                    {name='bedding',remove_item = true},
+					{name='phadai-food-01',remove_item = true},
 					{name='phadai-food-02'},
 				},
 			results =

@@ -62,7 +62,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='natural-gas-barrel', amount = 'R'},
+					{name='natural-gas-barrel', remove_item = true},
 					{name = 'refined-natural-gas-barrel', amount = 3,return_barrel = true},
 					{name = 'arqad', add_amount = 3},
 				},

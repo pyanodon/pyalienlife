@@ -65,10 +65,10 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='moondrop-seeds',amount='+6'},
-					{name='water',amount ='R'},
+					{name='water',remove_item = true},
                     {name='syngas',amount = 60},
                     {name='pesticide-mk01',amount = 2},
-				    {name='hydrogen',amount ='R'},
+				    {name='hydrogen',remove_item = true},
 					{name='gasoline',amount = 40},
                 },
 			results =
@@ -85,7 +85,7 @@ fun.autorecipes {
 				{
                     {name='moondrop-seeds',amount='+12'},
                     {name='fertilizer',amount = '+5'},
-                    {name='syngas',amount ='R'},
+                    {name='syngas',remove_item = true},
 					{name = 'refinedsyngas', amount = 30},
 					{name='biomass',amount ='+4'},
 					{name='urea',amount = 12},

@@ -57,7 +57,7 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-					{name='fungal-substrate', amount = 'R'},
+					{name='fungal-substrate', remove_item = true},
 					{name='fungal-substrate-02', amount = 3},
 					{name='fertilizer', add_amount = 3},
                     {name='biomass', amount = 3},
@@ -74,7 +74,7 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-					{name='fungal-substrate-02',amount ='R'},
+					{name='fungal-substrate-02',remove_item = true},
 					{name='fungal-substrate-03',amount = 5},
 					{name='fertilizer', add_amount = 4},
                     {name='biomass', add_amount = 7},

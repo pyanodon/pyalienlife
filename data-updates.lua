@@ -15,7 +15,7 @@ if mods["pyhightech"] then
     require("prototypes/technologies/schrodinger-antelope")
     require("prototypes/buildings/antelope-enclosure-mk01")
     require("prototypes/updates/pyhightech-updates")
-    --table.insert(data.raw['assembling-machine']['crash-site-assembling-machine-1-repaired'].crafting_categories, 'vrauk-rendering')
+    table.insert(data.raw['assembling-machine']['crash-site-assembling-machine-1-repaired'].crafting_categories, 'vrauk-rendering')
 end
 
 if mods["pycoalprocessing"] then

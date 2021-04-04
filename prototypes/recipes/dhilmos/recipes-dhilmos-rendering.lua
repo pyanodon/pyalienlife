@@ -37,11 +37,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
-					{name='mukmoux-fat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='arthropod-blood', amount ='R'},
-					{name='chitin', amount ='R'},
+					{name='meat', remove_item = true},
+					{name='mukmoux-fat', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='arthropod-blood', remove_item = true},
+					{name='chitin', remove_item = true},
 					{name='meat', amount =1},
 				},
 			crafting_speed = 15,
@@ -58,7 +58,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='guts', amount =1},
 				},
 			crafting_speed = 15,
@@ -75,7 +75,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='arthropod-blood', amount =30}
 				},
 			crafting_speed = 15,
@@ -92,7 +92,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='arthropod-blood', amount ='R'},
+					{name='arthropod-blood', remove_item = true},
 					{name='mukmoux-fat', amount =1},
 				},
 			crafting_speed = 15,
@@ -109,7 +109,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='mukmoux-fat', amount ='R'},
+					{name='mukmoux-fat', remove_item = true},
 					{name='chitin', amount =3},
 				},
 			crafting_speed = 15,
@@ -122,12 +122,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='dhilmos',amount='R'},
+					{name='dhilmos',remove_item = true},
 					{name='meat-dhilmos',amount=1},
 				},
 			results =
 				{
-					{name='chitin', amount ='R'},
+					{name='chitin', remove_item = true},
 					{name='meat', amount =6},
 				},
 			crafting_speed = 15,
@@ -140,12 +140,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='meat-dhilmos',amount='R'},
+					{name='meat-dhilmos',remove_item = true},
 					{name='guts-dhilmos',amount=1},
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='guts', amount =6},
 				},
 			crafting_speed = 15,
@@ -158,12 +158,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='guts-dhilmos',amount='R'},
+					{name='guts-dhilmos',remove_item = true},
 					{name='blood-dhilmos',amount=1},
 				},
 			results =
 				{
-					{name='guts', amount ='R'},
+					{name='guts', remove_item = true},
 					{name='arthropod-blood', amount =120},
 				},
 			crafting_speed = 15,
@@ -176,12 +176,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='blood-dhilmos',amount='R'},
+					{name='blood-dhilmos',remove_item = true},
 					{name='fat-dhilmos',amount=1},
 				},
 			results =
 				{
-					{name='arthropod-blood', amount ='R'},
+					{name='arthropod-blood', remove_item = true},
 					{name='mukmoux-fat', amount =6},
 				},
 			crafting_speed = 15,

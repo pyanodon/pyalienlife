@@ -69,7 +69,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'ulric', amount = 'R'},
+					{name = 'ulric', remove_item = true},
                     {name='empty-honeycomb', add_amount = 5},
 					{name='cottongut', amount = 4},
 					{name='mukmoux', amount = 1},

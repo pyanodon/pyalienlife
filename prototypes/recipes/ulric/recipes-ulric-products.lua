@@ -26,7 +26,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='ralesia-seeds',amount ='R'},
+					{name='ralesia-seeds',remove_item = true},
 					{name='ulric-food-01'},
 				},
 			results =
@@ -71,10 +71,10 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='salt',amount ='R'},
-					{name='raw-fiber',amount ='R'},
-					{name='ulric-food-01',amount ='R'},
-					{name='bedding',amount ='R'},
+					{name='salt',remove_item = true},
+					{name='raw-fiber',remove_item = true},
+					{name='ulric-food-01',remove_item = true},
+					{name='bedding',remove_item = true},
 					{name='ulric-food-02'},
 				},
 			results =

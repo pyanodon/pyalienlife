@@ -57,8 +57,8 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-					{name='water',amount ='R'},
-					{name='hydrogen',amount ='R'},
+					{name='water',remove_item = true},
+					{name='hydrogen',remove_item = true},
                     {name='syngas',amount = 100},
 					{name='flue-gas',amount = 50},
 				},
@@ -73,10 +73,10 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fertilizer',amount = 'R'},
+					{name='fertilizer',remove_item = true},
 					{name='fertilizer',amount = 10},
 					{name='urea',amount = 15},
-					{name = 'biomass', amount = 'R'},
+					{name = 'biomass', remove_item = true},
 					{name = 'biomass', amount = 25}
 				},
 			results =

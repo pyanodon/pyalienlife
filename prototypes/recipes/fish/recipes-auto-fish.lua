@@ -1,154 +1,5 @@
 local fun = require("prototypes/functions/functions")
 
-fun.autorecipes {
-    name = 'breed-fish',
-	category = 'fish-farm',
-	module_limitations = 'fish',
-	subgroup = 'py-alienlife-fish',
-	order = 'b',
-    mats =
-	{
-		{
-			ingredients =
-				{
-                    {name='oxygen',amount =60},
-                    {name='small-lamp',amount =3},
-					{name='biomass',amount =10},
-					{name='water-saline',amount=100,return_item={name='waste-water',amount=100}},
-				},
-			results =
-				{
-					{name='fish',amount =10},
-				},
-			crafting_speed = 150,
-			tech = 'water-animals-mk01'
-		},
-		--food 1
-		{
-			ingredients =
-				{
-                    {name='biomass',amount ='R'},
-					{name='fishfood1',amount =1},
-				},
-			results =
-				{
-					{name='fish',amount =15},
-				},
-			crafting_speed = 130,
-			tech = 'water-animals-mk02'
-		},
-		--filtration-media
-		{
-			ingredients =
-				{
-					{name='filtration-media',amount = 1},
-				},
-			results =
-				{
-                   -- {name='fish',amount =15},
-				},
-			crafting_speed = 110,
-			tech = 'water-animals-mk02'
-		},
-		--sea weed
-		{
-			ingredients =
-				{
-					{name='seaweed',amount = 10},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 100,
-			tech = 'water-animals-mk03'
-		},
-		--food 2
-		{
-			ingredients =
-				{
-					{name='fishfood1',amount ='R'},
-					{name='filtration-media',amount ='R'},
-					{name='seaweed',amount ='R'},
-					{name='fishfood2',amount =1},
-
-				},
-			results =
-				{
-                    {name='fish',amount =20},
-				},
-			crafting_speed = 100,
-			tech = 'water-animals-mk03'
-		},
-		--food 2 filtration-media
-		{
-			ingredients =
-				{
-					{name='filtration-media',amount =1},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 85,
-			tech = 'water-animals-mk04'
-		},
-		--food 2 seaweed
-		{
-			ingredients =
-				{
-					{name='seaweed',amount = 10},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 80,
-			tech = 'water-animals-mk04'
-		},
-		--gh
-		{
-			ingredients =
-				{
-					{name='gh',amount =1},
-
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 20,
-			tech = 'growth-hormone'
-		},
-		--antiviral and gh
-		{
-			ingredients =
-				{
-					{name='antiviral',amount =1},
-				},
-			results =
-				{
-                    {name='fish',amount =30},
-				},
-			crafting_speed = 20,
-			tech = 'antiviral'
-		},
-		--antiviral
-		{
-			ingredients =
-				{
-					--{name='antiviral',amount =1},
-					{name='gh',amount ='R'},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 80,
-			tech = 'antiviral'
-		},
-	}
-}
 
 ------------------EGG MAKER------------------
 
@@ -160,22 +11,23 @@ fun.autorecipes {
 	order = 'c',
     mats =
 	{
+		--logistic
 		{
 			ingredients =
 				{
+					{name = 'fish', amount = 12},
                     {name='phytoplankton',amount =50},
-                    {name='seaweed',amount = 'R'},
-					{name='water-saline',amount=100,return_item={name='waste-water',amount=100}},
+					{name='water-saline',amount=100, return_item = {name = 'waste-water'}},
 					{name='filtration-media',amount = 2},
 				},
 			results =
 				{
-					{name='fish-egg', amount =10},
+					{name='fish-egg', amount = 25},
 				},
 			crafting_speed = 80,
-			tech = 'assisted-embryology'
+			tech = 'fish-mk01'
 		},
-		--food 1
+		--py
 		{
 			ingredients =
 				{
@@ -183,12 +35,12 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='fish-egg', amount ="+5"},
+                    {name='fish-egg', add_amount = 5},
 				},
 			crafting_speed = 70,
-			tech = 'assisted-embryology'
+			tech = 'fish-mk02'
 		},
-		--fiber
+		--prod
 		{
 			ingredients =
 				{
@@ -196,52 +48,42 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='fish-egg', amount ="+2"},
+                    {name='fish-egg', add_amount = 5},
 				},
 			crafting_speed = 60,
-			tech = 'assisted-embryology'
+			tech = 'fish-mk03'
 		},
-		--food 2
+		--utility
 		{
 			ingredients =
 				{
-                    {name='fishfood1',amount ='R'},
-                    {name='seaweed',amount = 'R'},
 					{name='fishfood2',amount =1},
+					{name='seaweed', add_amount = 10},
 
 				},
 			results =
 				{
-                    {name='fish-egg', amount ="+10"},
+                    {name='fish-egg', add_amount = 10},
 				},
 			crafting_speed = 55,
-			tech = 'assisted-embryology'
+			tech = 'fish-mk04'
 		},
-		--food 2 seaweed fiber
-		{
-			ingredients =
-				{
-					{name='seaweed',amount = 10},
-				},
-			results =
-				{
-                    {name='fish-egg', amount ="+2"},
-				},
-			crafting_speed = 50,
-			tech = 'assisted-embryology'
-		},
+	}
+}
+
+--[[
 		-----------------------PHEROMONES-----------------------------
 		{
 			ingredients =
 				{
-					{name='seaweed',amount = 'R'},
-					{name='fishfood2',amount = 'R'},
+					{name='seaweed',remove_item = true},
+					{name='fishfood2',remove_item = true},
 					{name='fawogae',amount =15},
 					{name='pheromones',amount =1},
 				},
 			results =
 				{
-					{name='fish-egg',amount = 'R'},
+					{name='fish-egg',remove_item = true},
 					{name='fish-egg', amount =32},
 				},
 			crafting_speed = 50,
@@ -277,8 +119,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fishfood1',amount ='R'},
-					{name='seaweed',amount ='R'},
+					{name='fishfood1',remove_item = true},
+					{name='seaweed',remove_item = true},
 					{name='fishfood2',amount =1},
 
 				},
@@ -305,3 +147,122 @@ fun.autorecipes {
 
 	}
 }
+]]--
+
+--Raising--
+
+fun.autorecipes {
+    name = 'breed-fish',
+	category = 'fish-farm',
+	module_limitations = 'fish',
+	subgroup = 'py-alienlife-fish',
+	order = 'b',
+    mats =
+	{
+		--logistic
+		{
+			ingredients =
+				{
+					{name = 'fish-egg', amount = 10},
+                    {name='oxygen',amount =60},
+                    {name='small-lamp',amount =3},
+					{name='biomass',amount =10},
+					{name='water-saline',amount=100,return_item={name='waste-water',amount=100}},
+				},
+			results =
+				{
+					{name='fish',amount = 10},
+				},
+			crafting_speed = 150,
+			tech = 'fish-mk01'
+		},
+		--py
+		{
+			ingredients =
+				{
+					{name='fishfood1',amount =1},
+					{name='filtration-media',amount = 1},
+				},
+			results =
+				{
+					{name='fish', add_amount = 10},
+				},
+			crafting_speed = 130,
+			tech = 'fish-mk02'
+		},
+		--prod
+		{
+			ingredients =
+				{
+					{name='seaweed',amount = 10},
+					{name='fishfood2',amount =1},
+				},
+			results =
+				{
+					{name='fish', add_amount = 10},
+				},
+			crafting_speed = 100,
+			tech = 'fish-mk03'
+		},
+		--utility
+		{
+			ingredients =
+				{
+					{name='filtration-media', add_amount = 1},
+					{name='seaweed', add_amount = 10},
+				},
+			results =
+				{
+					{name='fish', add_amount = 10},
+				},
+			crafting_speed = 85,
+			tech = 'fish-mk04'
+		},
+	}
+}
+
+--[[
+		--gh
+		{
+			ingredients =
+				{
+					{name='gh',amount =1},
+
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 20,
+			tech = 'growth-hormone'
+		},
+		--antiviral and gh
+		{
+			ingredients =
+				{
+					{name='antiviral',amount =1},
+				},
+			results =
+				{
+                    {name='fish',amount =30},
+				},
+			crafting_speed = 20,
+			tech = 'antiviral'
+		},
+		--antiviral
+		{
+			ingredients =
+				{
+					--{name='antiviral',amount =1},
+					{name='gh',remove_item = true},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 80,
+			tech = 'antiviral'
+		},
+	}
+}
+]]--

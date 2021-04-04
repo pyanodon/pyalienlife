@@ -30,7 +30,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='ralesia-seeds',amount = 'R'},
+					{name='ralesia-seeds',remove_item = true},
                     {name='yotoi-seeds',amount = 10},
                     {name='bhoddos',amount = 1},
 					{name='bedding',amount = 1},
@@ -109,8 +109,8 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'cottongut-pup', add_amount = 4},
-					{name = 'wood-seeds',amount = 'R'},
-					{name = 'ralesia-seeds',amount ='R'},
+					{name = 'wood-seeds',remove_item = true},
+					{name = 'ralesia-seeds',remove_item = true},
 					{name='cottongut-food-01',amount =1},
 					{name='bedding',amount = 1},
 					{name='tuuphra-seeds', amount = 5},
@@ -189,7 +189,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					--{name='antiviral',amount =1},
-					{name='gh',amount ='R'},
+					{name='gh',remove_item = true},
 				},
 			results =
 				{
@@ -203,11 +203,11 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='nanochondria',amount =1},
-					--{name='antiviral',amount ='R'},
+					--{name='antiviral',remove_item = true},
 				},
 			results =
 				{
-					{name='cottongut', amount ='R'},
+					{name='cottongut', remove_item = true},
 					{name='brain-cottongut',amount = 4},
 				},
 			crafting_speed = 90,
@@ -231,13 +231,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='nanochondria',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='nanochondria',remove_item = true},
 					{name='bmp',amount =1},
 				},
 			results =
 				{
-					{name='brain-cottongut', amount ='R'},
+					{name='brain-cottongut', remove_item = true},
 					{name='bone-cottongut', amount = 4},
 				},
 			crafting_speed = 90,
@@ -262,13 +262,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='bmp',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='bmp',remove_item = true},
 					{name='anabolic-rna',amount =1},
 				},
 			results =
 				{
-					{name='bone-cottongut', amount ='R'},
+					{name='bone-cottongut', remove_item = true},
 					{name='meat-cottongut', amount = 4},
 				},
 			crafting_speed = 90,
@@ -292,13 +292,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='anabolic-rna',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='anabolic-rna',remove_item = true},
 					{name='antitumor',amount =1},
 				},
 			results =
 				{
-					{name='meat-cottongut', amount ='R'},
+					{name='meat-cottongut', remove_item = true},
 					{name='guts-cottongut', amount = 4},
 				},
 			crafting_speed = 90,
@@ -322,13 +322,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='antitumor',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='antitumor',remove_item = true},
 					{name='recombinant-ery',amount =1},
 				},
 			results =
 				{
-					{name='guts-cottongut', amount ='R'},
+					{name='guts-cottongut', remove_item = true},
 					{name='blood-cottongut', amount = 4},
 				},
 			crafting_speed = 90,
@@ -351,13 +351,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='recombinant-ery',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='recombinant-ery',remove_item = true},
 					{name='reca',amount =1},
 				},
 			results =
 				{
-					{name='blood-cottongut', amount ='R'},
+					{name='blood-cottongut', remove_item = true},
 					{name='skin-cottongut', amount = 4},
 				},
 			crafting_speed = 90,
@@ -380,13 +380,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount ='R'},
-					{name='reca',amount ='R'},
+					{name='gh',remove_item = true},
+					{name='reca',remove_item = true},
 					{name='orexigenic',amount =1},
 				},
 			results =
 				{
-					{name='skin-cottongut', amount ='R'},
+					{name='skin-cottongut', remove_item = true},
 					{name='fat-cottongut', 1},
 				},
 			crafting_speed = 80,
@@ -415,9 +415,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount = 'R'},
-					{name='salt',amount = 'R'},
-					{name='cottongut-food-02',amount = 'R'},
+					{name='raw-fiber',remove_item = true},
+					{name='salt',remove_item = true},
+					{name='cottongut-food-02',remove_item = true},
 					{name='bhoddos',amount =3},
 					{name='pheromones',amount =1},
                     {name='yotoi-seeds',amount =15},
@@ -426,7 +426,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cottongut-pup',amount = 'R'},
+					{name='cottongut-pup',remove_item = true},
 					{name='cottongut-pup', amount =2},
 				},
 			crafting_speed = 70,
@@ -436,8 +436,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='yotoi-seeds',amount ='R'},
-                    {name='bhoddos',amount ='R'},
+                    {name='yotoi-seeds',remove_item = true},
+                    {name='bhoddos',remove_item = true},
 					{name='cottongut-food-01',amount =1},
 				},
 			results =
@@ -477,9 +477,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cottongut-food-01',amount ='R'},
-					{name='salt',amount ='R'},
-					{name='raw-fiber',amount ='R'},
+					{name='cottongut-food-01',remove_item = true},
+					{name='salt',remove_item = true},
+					{name='raw-fiber',remove_item = true},
 					{name='cottongut-food-02',amount =1},
 
 				},

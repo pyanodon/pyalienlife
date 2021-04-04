@@ -26,6 +26,14 @@ TECHNOLOGY('tholin-mk03'):add_pack('py-science-pack')
 TECHNOLOGY('tholin-mk04'):add_pack('py-science-pack')
 
 ----RECIPES----
+RECIPE('guar-separation'):remove_unlock("oil-machines-mk02")
+RECIPE('guar-01'):remove_unlock("oil-machines-mk01")
+RECIPE('guar-02'):remove_unlock("oil-machines-mk02")
+RECIPE('guar-03'):remove_unlock("oil-machines-mk02")
+RECIPE('guar-04'):remove_unlock("oil-machines-mk02")
+RECIPE('guar-05'):remove_unlock("oil-machines-mk02")
+
+
 
 RECIPE('retrovirus'):add_ingredient({type = "fluid", name = "hot-air", amount = 50})
 RECIPE('cobalt-fluoride'):remove_ingredient("steam"):add_ingredient({type = "fluid", name = "hot-air", amount = 100})
