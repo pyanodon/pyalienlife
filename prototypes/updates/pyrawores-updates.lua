@@ -198,7 +198,7 @@ RECIPE {
     energy_required = 4,
     ingredients = {
         {type = "fluid", name = "wax", amount = 20},
-        {type = "item", name = "green-sic", amount = 5},
+        {type = "item", name = "green-sic", amount = 2},
     },
     results = {
         {type = "item", name = "mold", amount = 4}
