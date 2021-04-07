@@ -14,7 +14,7 @@ RECIPE {
         {type = 'fluid', name = 'fish-oil', amount = 15}
     },
     main_product = 'fishmeal'
-}:add_unlock('water-animals-mk01')
+}:add_unlock('fish-mk02')
 
 FLUID {
     type = "fluid",

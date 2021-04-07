@@ -273,7 +273,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'fertilizer', amount = 3}
     }
-}:add_unlock('water-animals-mk01')
+}:add_unlock('fish-mk01')
 
 RECIPE {
     type = 'recipe',
@@ -287,7 +287,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'fertilizer', amount = 3}
     }
-}:add_unlock('water-animals-mk01')
+}:add_unlock('fish-mk02')
 
 RECIPE {
     type = 'recipe',
@@ -301,7 +301,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'fertilizer', amount = 2}
     }
-}:add_unlock('water-animals-mk01')
+}:add_unlock('fish-mk02')
 
 RECIPE {
     type = 'recipe',

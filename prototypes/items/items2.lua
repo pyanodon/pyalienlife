@@ -439,8 +439,8 @@ ITEM {
 ITEM {
     type = "item",
     name = "fishmeal",
-    icon = "__pycoalprocessinggraphics__/graphics/icons/organics.png",
-	icon_size = 32,
+    icon = "__pyalienlifegraphics__/graphics/icons/fishmeal.png",
+	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-food",
     order = "x",

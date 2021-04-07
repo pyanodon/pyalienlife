@@ -13,7 +13,7 @@ RECIPE {
         results = {
             {type = 'fluid', name = 'fish-hydrolysate', amount = 50}
         }
-    }:add_unlock('water-animals-mk01')
+    }:add_unlock('fish-mk01')
 
 FLUID {
     type = "fluid",

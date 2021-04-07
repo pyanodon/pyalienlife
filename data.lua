@@ -503,8 +503,15 @@ require('prototypes/recipes/guar/recipes-auto-guar')
 --see pyhightech updates for files
 
 --Kmauts
+require('prototypes/recipes/kmauts/recipes-kmauts')
+require('prototypes/recipes/kmauts/recipes-kmauts-raising')
+require('prototypes/recipes/kmauts/recipes-kmauts-rendering')
 
 --Korlex
+require('prototypes/recipes/korlex/recipes-korlex')
+require('prototypes/recipes/korlex/recipes-korlex-raising')
+require('prototypes/recipes/korlex/recipes-korlex-rendering')
+require('prototypes/recipes/korlex/recipes-korlex-milk')
 
 --Moondrop
 --see pyhightech updates for files
