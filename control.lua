@@ -595,10 +595,6 @@ script.on_init(
 		}
 		log_all_machines_for_upgrades(tech_upgrade_table)
 		global.energy_drink = {}
-		if not remote.interfaces["silo_script"] then
-			return
-		end
-		remote.call("silo_script", "set_no_victory", true)
 	end
 )
 
@@ -2819,20 +2815,6 @@ script.on_event(defines.events.on_research_finished, function(event)
 			end
 		end
 		--log(serpent.block(global.tech_upgrades))
-	end
-	--log(serpent.block(tech))
-	for p, pack in pairs(tech.research_unit_ingredients) do
-		--log('hit')
-		if pack.name == 'space-science-pack' then
-			--log('hit')
-			game.set_game_state
-			{
-			  game_finished = true,
-			  player_won = true,
-			  can_continue = true,
-			  victorious_force = tech.force
-			}
-		end
 	end
 end)
 

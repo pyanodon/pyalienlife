@@ -1,6 +1,5 @@
 local fun = require("prototypes/functions/functions")
 
-
 --(( Technology ))--
 require('prototypes/technologies/mega-farm-kicalk')
 require('prototypes/technologies/mega-farm-cadaveric-arum')
@@ -35,7 +34,7 @@ require('prototypes/recipes/kicalk/recipes-auto-kicalk')
 
 --Moondrop
 require('prototypes/recipes/moondrop/recipes-moondrop')
---require('prototypes/recipes/moondrop/recipes-auto-moondrop')
+require('prototypes/recipes/moondrop/recipes-auto-moondrop')
 --require('prototypes/recipes/moondrop/recipes-auto-moondrop-1')
 
 --(( ORES ))--

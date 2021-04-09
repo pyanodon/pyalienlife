@@ -111,6 +111,7 @@ require('prototypes/technologies/bioprocessing')
 require('prototypes/technologies/simik')
 require('prototypes/technologies/fish')
 require('prototypes/technologies/guar')
+require('prototypes/technologies/moss')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
