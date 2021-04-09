@@ -3,7 +3,7 @@ local sounds = require("__base__/prototypes/entity/sounds")
 local cargo_bot =
     RECIPE {
     type = 'recipe',
-    name = 'gobachov',
+    name = 'chorkok',
     energy_required = 10,
     category = 'crafting',
     enabled = true,
@@ -11,30 +11,30 @@ local cargo_bot =
         {'iron-plate', 1},
     },
     results = {
-        {'gobachov', 1}
+        {'chorkok', 1}
     }
 }
 cargo_bot:add_unlock({'domestication'})
 
 ITEM {
     type = 'item',
-    name = 'gobachov',
-    icon = '__pyalienlifegraphics2__/graphics/icons/gobachov.png',
+    name = 'chorkok',
+    icon = '__pyalienlifegraphics2__/graphics/icons/chorkok.png',
     icon_size = 64,
     flags = {},
     subgroup = 'py-alienlife-special-creatures',
-    order = 'y',
-    place_result = 'gobachov',
+    order = 'z',
+    place_result = 'chorkok',
     stack_size = 50
 }
 
 ENTITY {
     type = 'logistic-robot',
-    name = 'gobachov',
-    icon = '__pyalienlifegraphics2__/graphics/icons/gobachov.png',
+    name = 'chorkok',
+    icon = '__pyalienlifegraphics2__/graphics/icons/chorkok.png',
     icon_size = 64,
     flags = {'placeable-player', 'player-creation', 'placeable-off-grid', 'not-on-map'},
-    minable = {mining_time = 0.1, result = 'gobachov'},
+    minable = {mining_time = 0.1, result = 'chorkok'},
     resistances = {{type = 'fire', percent = 85}},
     max_health = 100,
     collision_box = {{0, 0}, {0, 0}},
@@ -49,7 +49,7 @@ ENTITY {
     min_to_charge = 0.2,
     max_to_charge = 0.95,
     idle = {
-        filename = '__pyalienlifegraphics2__/graphics/entity/bots/gobachov/idle.png',
+        filename = '__pyalienlifegraphics2__/graphics/entity/bots/chorkok/idle.png',
         priority = 'high',
         line_length = 25,
         width = 64,
@@ -59,7 +59,7 @@ ENTITY {
         direction_count = 16,
         --y = 42,
         hr_version = {
-            filename = '__pyalienlifegraphics2__/graphics/entity/bots/gobachov/hr-idle.png',
+            filename = '__pyalienlifegraphics2__/graphics/entity/bots/chorkok/hr-idle.png',
             priority = 'high',
             line_length = 25,
             width = 128,
@@ -68,11 +68,11 @@ ENTITY {
             shift = util.by_pixel(0, 0),
             direction_count = 16,
             --y = 84,
-            scale = 0.5
+            scale = 1
         }
     },
     idle_with_cargo = {
-        filename = '__pyalienlifegraphics2__/graphics/entity/bots/gobachov/carry.png',
+        filename = '__pyalienlifegraphics2__/graphics/entity/bots/chorkok/carry.png',
         priority = 'high',
         line_length = 25,
         width = 64,
@@ -81,7 +81,7 @@ ENTITY {
         shift = util.by_pixel(0, 0),
         direction_count = 16,
         hr_version = {
-            filename = '__pyalienlifegraphics2__/graphics/entity/bots/gobachov/hr-carry.png',
+            filename = '__pyalienlifegraphics2__/graphics/entity/bots/chorkok/hr-carry.png',
             priority = 'high',
             line_length = 25,
             width = 128,
@@ -89,11 +89,11 @@ ENTITY {
             frame_count = 25,
             shift = util.by_pixel(0, 0),
             direction_count = 16,
-            scale = 0.5
+            scale = 1
         }
     },
     in_motion = {
-        filename = '__pyalienlifegraphics2__/graphics/entity/bots/gobachov/idle.png',
+        filename = '__pyalienlifegraphics2__/graphics/entity/bots/chorkok/idle.png',
         priority = 'high',
         line_length = 25,
         width = 64,
@@ -102,7 +102,7 @@ ENTITY {
         shift = util.by_pixel(0, 0),
         direction_count = 16,
         hr_version = {
-            filename = '__pyalienlifegraphics2__/graphics/entity/bots/gobachov/hr-idle.png',
+            filename = '__pyalienlifegraphics2__/graphics/entity/bots/chorkok/hr-idle.png',
             priority = 'high',
             line_length = 25,
             width = 128,
@@ -110,11 +110,11 @@ ENTITY {
             frame_count = 25,
             shift = util.by_pixel(0, 0),
             direction_count = 16,
-            scale = 0.5
+            scale = 1
         }
     },
     in_motion_with_cargo = {
-        filename = '__pyalienlifegraphics2__/graphics/entity/bots/gobachov/carry.png',
+        filename = '__pyalienlifegraphics2__/graphics/entity/bots/chorkok/carry.png',
         priority = 'high',
         line_length = 25,
         width = 64,
@@ -123,7 +123,7 @@ ENTITY {
         shift = util.by_pixel(0, 0),
         direction_count = 16,
         hr_version = {
-            filename = '__pyalienlifegraphics2__/graphics/entity/bots/gobachov/hr-carry.png',
+            filename = '__pyalienlifegraphics2__/graphics/entity/bots/chorkok/hr-carry.png',
             priority = 'high',
             line_length = 25,
             width = 128,
@@ -131,11 +131,11 @@ ENTITY {
             frame_count = 25,
             shift = util.by_pixel(0, 0),
             direction_count = 16,
-            scale = 0.5
+            scale = 1
         }
     },
     shadow_idle = {
-        filename = '__pyalienlifegraphics2__/graphics/entity/bots/gobachov/sh.png',
+        filename = '__pyalienlifegraphics2__/graphics/entity/bots/chorkok/sh.png',
         priority = 'high',
         line_length = 25,
         width = 64,
@@ -145,7 +145,7 @@ ENTITY {
         draw_as_shadow = true,
         direction_count = 16,
         hr_version = {
-            filename = '__pyalienlifegraphics2__/graphics/entity/bots/gobachov/hr-sh.png',
+            filename = '__pyalienlifegraphics2__/graphics/entity/bots/chorkok/hr-sh.png',
             priority = 'high',
             line_length = 25,
             width = 128,
@@ -154,11 +154,11 @@ ENTITY {
             shift = util.by_pixel(33.5, 18.75),
             draw_as_shadow = true,
             direction_count = 16,
-            scale = 0.5
+            scale = 1
         }
     },
     shadow_idle_with_cargo = {
-        filename = '__pyalienlifegraphics2__/graphics/entity/bots/gobachov/sh.png',
+        filename = '__pyalienlifegraphics2__/graphics/entity/bots/chorkok/sh.png',
         priority = 'high',
         line_length = 25,
         width = 64,
@@ -168,7 +168,7 @@ ENTITY {
         draw_as_shadow = true,
         direction_count = 16,
         hr_version = {
-            filename = '__pyalienlifegraphics2__/graphics/entity/bots/gobachov/hr-sh.png',
+            filename = '__pyalienlifegraphics2__/graphics/entity/bots/chorkok/hr-sh.png',
             priority = 'high',
             line_length = 25,
             width = 128,
@@ -177,11 +177,11 @@ ENTITY {
             shift = util.by_pixel(33.5, 18.75),
             draw_as_shadow = true,
             direction_count = 16,
-            scale = 0.5
+            scale = 1
         }
     },
     shadow_in_motion = {
-        filename = '__pyalienlifegraphics2__/graphics/entity/bots/gobachov/sh.png',
+        filename = '__pyalienlifegraphics2__/graphics/entity/bots/chorkok/sh.png',
         priority = 'high',
         line_length = 25,
         width = 64,
@@ -191,7 +191,7 @@ ENTITY {
         draw_as_shadow = true,
         direction_count = 16,
         hr_version = {
-            filename = '__pyalienlifegraphics2__/graphics/entity/bots/gobachov/hr-sh.png',
+            filename = '__pyalienlifegraphics2__/graphics/entity/bots/chorkok/hr-sh.png',
             priority = 'high',
             line_length = 25,
             width = 128,
@@ -200,11 +200,11 @@ ENTITY {
             shift = util.by_pixel(33.5, 18.75),
             draw_as_shadow = true,
             direction_count = 16,
-            scale = 0.5
+            scale = 1
         }
     },
     shadow_in_motion_with_cargo = {
-        filename = '__pyalienlifegraphics2__/graphics/entity/bots/gobachov/sh.png',
+        filename = '__pyalienlifegraphics2__/graphics/entity/bots/chorkok/sh.png',
         priority = 'high',
         line_length = 25,
         width = 64,
@@ -214,7 +214,7 @@ ENTITY {
         draw_as_shadow = true,
         direction_count = 16,
         hr_version = {
-            filename = '__pyalienlifegraphics2__/graphics/entity/bots/gobachov/hr-sh.png',
+            filename = '__pyalienlifegraphics2__/graphics/entity/bots/chorkok/hr-sh.png',
             priority = 'high',
             line_length = 25,
             width = 128,
@@ -223,7 +223,7 @@ ENTITY {
             shift = util.by_pixel(33.5, 18.75),
             draw_as_shadow = true,
             direction_count = 16,
-            scale = 0.5
+            scale = 1
         }
     },
     working_sound = sounds.flying_robot(0.5),
