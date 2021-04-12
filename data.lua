@@ -518,10 +518,17 @@ require('prototypes/recipes/korlex/recipes-korlex-milk')
 --see pyhightech updates for files
 
 --moss
+require('prototypes/recipes/moss/recipes-moss')
+require('prototypes/recipes/moss/recipes-auto-moss')
 
 --Mukmoux
+require('prototypes/recipes/mukmoux/recipes-mukmoux')
+require('prototypes/recipes/mukmoux/recipes-mukmoux-raising')
+require('prototypes/recipes/mukmoux/recipes-mukmoux-rendering')
 
 --Navens
+require('prototypes/recipes/navens/recipes-navens')
+require('prototypes/recipes/navens/recipes-auto-navens')
 
 --Phadai
 
