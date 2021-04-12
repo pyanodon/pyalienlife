@@ -11,15 +11,15 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='pressured-water',amount ='*30'},
-					{name='zipir-egg',amount =1},
-					{name='fish',amount =3},
-					{name='stone-wool',amount =3},
-                    {name='water',amount ='*20',return_item={name='waste-water',amount=100}},
+                    {name='pressured-water', amount ='*30'},
+					{name='zipir-egg', amount =1},
+					{name='fish', amount =3},
+					{name='stone-wool', amount =3},
+                    {name='water', amount ='*20',return_item={name='waste-water', amount=100}},
 				},
 			results =
 				{
-                    {name='zipir', probability = 0.7,amount_min =1,amount_max =1},
+                    {name='zipir', probability = 0.7, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 150,
 			tech = 'zipir'
@@ -29,7 +29,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					--{name='wood-seeds',remove_item = true},
-					{name='fawogae-substrate',amount =10},
+					{name='fawogae-substrate', amount =10},
 				},
 			results =
 				{
@@ -43,7 +43,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='pressured-water',remove_item = true},
-					{name='water-saline',amount = '*100'},
+					{name='water-saline', amount = '*100'},
 				},
 			results =
 				{
@@ -56,12 +56,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='zipir-food-01',amount = 2},
+					{name='zipir-food-01', amount = 2},
 				},
 			results =
 				{
 					{name='zipir',remove_item = true},
-					{name='zipir', probability = 0.8,amount_min =1,amount_max =1},
+					{name='zipir', probability = 0.8, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 120,
 			tech = 'zipir-mk03'
@@ -71,7 +71,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='water',remove_item = true},
-					{name='phytoplankton',amount =50},
+					{name='phytoplankton', amount =50},
 
 				},
 			results =
@@ -86,13 +86,13 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='zipir-food-01',remove_item = true},
-					{name='zipir-food-02',amount =2},
+					{name='zipir-food-02', amount =2},
 
 				},
 			results =
 				{
 					{name='zipir',remove_item = true},
-					{name='zipir', probability = 0.9,amount_min =1,amount_max =1},
+					{name='zipir', probability = 0.9, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 90,
 			tech = 'zipir-mk04'
@@ -102,7 +102,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 
 				},
 			results =
@@ -116,12 +116,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='antiviral',amount =1},
+					{name='antiviral', amount =1},
 				},
 			results =
 				{
 					{name='zipir', remove_item = true},
-					{name='zipir', probability = 1,amount_min =1,amount_max =2},
+					{name='zipir', probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -130,7 +130,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='antiviral',amount =1},
+					--{name='antiviral', amount =1},
 					{name='gh',remove_item = true},
 				},
 			results =
@@ -144,7 +144,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='nanochondria',amount =1},
+					{name='nanochondria', amount =1},
 					--{name='antiviral',remove_item = true},
 				},
 			results =
@@ -159,8 +159,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -175,7 +175,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='nanochondria',remove_item = true},
-					{name='anabolic-rna',amount =1},
+					{name='anabolic-rna', amount =1},
 				},
 			results =
 				{
@@ -189,8 +189,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -205,7 +205,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='anabolic-rna',remove_item = true},
-					{name='antitumor',amount =1},
+					{name='antitumor', amount =1},
 				},
 			results =
 				{
@@ -219,8 +219,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -235,7 +235,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='antitumor',remove_item = true},
-					{name='recombinant-ery',amount =1},
+					{name='recombinant-ery', amount =1},
 				},
 			results =
 				{
@@ -249,7 +249,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -264,7 +264,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='recombinant-ery',remove_item = true},
-					{name='reca',amount =1},
+					{name='reca', amount =1},
 				},
 			results =
 				{
@@ -278,7 +278,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -293,7 +293,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='reca',remove_item = true},
-					{name='orexigenic',amount =1},
+					{name='orexigenic', amount =1},
 				},
 			results =
 				{
@@ -307,7 +307,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -334,14 +334,14 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='pressured-water',amount ='*60',return_item={name='waste-water',amount=200}},
-					{name='stone-wool',amount =2},
-					{name='fish',amount =5},
-                    {name='phytoplankton',amount ='*100'},
+                    {name='pressured-water', amount ='*60',return_item={name='waste-water', amount=200}},
+					{name='stone-wool', amount =2},
+					{name='fish', amount =5},
+                    {name='phytoplankton', amount ='*100'},
 				},
 			results =
 				{
-                    {name='zipir-egg', probability = 1,amount_min =5,amount_max =7},  -- maybe 8 for the max if you feel generous
+                    {name='zipir-egg', probability = 1, amount_min =5, amount_max =7},  -- maybe 8 for the max if you feel generous
 				},
 			crafting_speed = 140,
 			tech = 'zipir'
@@ -352,7 +352,7 @@ fun.autorecipes {
 				{
                     --{name='wood-seeds',remove_item = true},
                     --{name='caged-mukmoux',remove_item = true},
-					{name='fawogae-substrate',amount =15},
+					{name='fawogae-substrate', amount =15},
 				},
 			results =
 				{
@@ -366,7 +366,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='pressured-water',remove_item = true},
-					{name='water-saline',amount = '*200'},
+					{name='water-saline', amount = '*200'},
 				},
 			results =
 				{
@@ -379,7 +379,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='zipir-food-01',amount = 6},
+					{name='zipir-food-01', amount = 6},
 				},
 			results =
 				{
@@ -393,7 +393,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='zipir-food-01',remove_item = true},
-                    {name='zipir-food-02',amount = 3},
+                    {name='zipir-food-02', amount = 3},
 
 				},
 			results =
@@ -416,10 +416,10 @@ fun.autorecipes {
                     {name='fawogae-substrate',remove_item = true},
                     {name='water-saline',remove_item = true},
 
-                    {name='pressured-water',amount ='*90',return_item={name='waste-water',amount=300}},
-					{name='stone-wool',amount =2},
-                    {name='phytoplankton',amount ='*200'},
-					{name='pheromones',amount =1},
+                    {name='pressured-water', amount ='*90',return_item={name='waste-water', amount=300}},
+					{name='stone-wool', amount =2},
+                    {name='phytoplankton', amount ='*200'},
+					{name='pheromones', amount =1},
 				},
 			results =
 				{
@@ -435,8 +435,8 @@ fun.autorecipes {
 				{
                     --{name='wood-seeds',remove_item = true},
                     --{name='caged-mukmoux',remove_item = true},
-					{name='fawogae-substrate',amount =30},
-					{name='fish',amount =10},
+					{name='fawogae-substrate', amount =30},
+					{name='fish', amount =10},
 				},
 			results =
 				{
@@ -450,7 +450,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='pressured-water',remove_item = true},
-					{name='water-saline',amount = '*300'},
+					{name='water-saline', amount = '*300'},
 				},
 			results =
 				{
@@ -463,7 +463,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='zipir-food-01',amount = 10},
+					{name='zipir-food-01', amount = 10},
 				},
 			results =
 				{
@@ -477,7 +477,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='zipir-food-01',remove_item = true},
-                    {name='zipir-food-02',amount = 8},
+                    {name='zipir-food-02', amount = 8},
 
 				},
 			results =
@@ -503,17 +503,17 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='zipir',amount=1},
+					{name='zipir', amount=1},
 				},
 			results =
 				{
-					--{name='bones', probability = 0.5,amount_min =1,amount_max =2},
-					{name='meat', probability = 0.4,amount_min =1,amount_max =4},
-					{name='skin', probability = 0.5,amount_min =1,amount_max =6},
-					{name='mukmoux-fat', probability = 0.4,amount_min =1,amount_max =3},
-					{name='guts', probability = 0.4,amount_min =1,amount_max =4},
+					--{name='bones', probability = 0.5, amount_min =1, amount_max =2},
+					{name='meat', probability = 0.4, amount_min =1, amount_max =4},
+					{name='skin', probability = 0.5, amount_min =1, amount_max =6},
+					{name='mukmoux-fat', probability = 0.4, amount_min =1, amount_max =3},
+					{name='guts', probability = 0.4, amount_min =1, amount_max =4},
 					{name='arthropod-blood', amount =50},
-					{name='brain', probability = 0.3,amount_min =1,amount_max =1},
+					{name='brain', probability = 0.3, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 30,
 			tech = 'zipir',
@@ -548,7 +548,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='zipir',amount=1},
+					--{name='zipir', amount=1},
 				},
 			results =
 				{
@@ -565,7 +565,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='zipir',amount=1},
+					--{name='zipir', amount=1},
 				},
 			results =
 				{
@@ -582,7 +582,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='zipir',amount=1},
+					--{name='zipir', amount=1},
 				},
 			results =
 				{
@@ -599,7 +599,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='zipir',amount=1},
+					--{name='zipir', amount=1},
 				},
 			results =
 				{
@@ -616,7 +616,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='zipir',amount=1},
+					--{name='zipir', amount=1},
 				},
 			results =
 				{
@@ -634,7 +634,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='zipir',remove_item = true},
-					{name='brain-zipir',amount=1},
+					{name='brain-zipir', amount=1},
 				},
 			results =
 				{
@@ -652,7 +652,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='brain-zipir',remove_item = true},
-					{name='guts-zipir',amount=1},
+					{name='guts-zipir', amount=1},
 				},
 			results =
 				{
@@ -670,7 +670,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='guts-zipir',remove_item = true},
-					{name='blood-zipir',amount=1},
+					{name='blood-zipir', amount=1},
 				},
 			results =
 				{
@@ -688,7 +688,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='blood-zipir',remove_item = true},
-					{name='skin-zipir',amount=1},
+					{name='skin-zipir', amount=1},
 				},
 			results =
 				{
@@ -706,7 +706,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='skin-zipir',remove_item = true},
-					{name='fat-zipir',amount=1},
+					{name='fat-zipir', amount=1},
 				},
 			results =
 				{
@@ -724,7 +724,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='fat-zipir',remove_item = true},
-					{name='meat-zipir',amount=1},
+					{name='meat-zipir', amount=1},
 				},
 			results =
 				{

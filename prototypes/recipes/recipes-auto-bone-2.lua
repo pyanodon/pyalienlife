@@ -15,7 +15,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-arthurian',amount=1},
+					{name='caged-arthurian', amount=1},
 				},
 			results =
 				{
@@ -26,7 +26,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
 					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
@@ -40,7 +40,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-arthurian',remove_item = true},
-					{name='bone-caged-arthurian',amount=1},
+					{name='bone-caged-arthurian', amount=1},
 				},
 			results =
 				{
@@ -71,7 +71,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-auog',amount=1},
+					{name='caged-auog', amount=1},
 				},
 			results =
 				{
@@ -82,7 +82,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
 					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
@@ -96,7 +96,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-auog',remove_item = true},
-					{name='bone-caged-auog',amount=1},
+					{name='bone-caged-auog', amount=1},
 				},
 			results =
 				{
@@ -127,7 +127,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cottongut',amount=5},
+					{name='cottongut', amount=5},
 				},
 			results =
 				{
@@ -151,7 +151,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='cottongut',remove_item = true},
-					{name='bone-cottongut',amount=5},
+					{name='bone-cottongut', amount=5},
 				},
 			results =
 				{
@@ -181,7 +181,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-dingrits',amount=1},
+					{name='caged-dingrits', amount=1},
 				},
 			results =
 				{
@@ -192,7 +192,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
 					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
@@ -206,7 +206,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-dingrits',remove_item = true},
-					{name='bone-caged-dingrits',amount=1},
+					{name='bone-caged-dingrits', amount=1},
 				},
 			results =
 				{
@@ -236,7 +236,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-korlex',amount=1},
+					{name='caged-korlex', amount=1},
 				},
 			results =
 				{
@@ -247,7 +247,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
 					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
@@ -261,7 +261,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-korlex',remove_item = true},
-					{name='bone-caged-korlex',amount=1},
+					{name='bone-caged-korlex', amount=1},
 				},
 			results =
 				{
@@ -291,7 +291,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-mukmoux',amount=1},
+					{name='caged-mukmoux', amount=1},
 				},
 			results =
 				{
@@ -302,7 +302,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
 					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
@@ -316,7 +316,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-mukmoux',remove_item = true},
-					{name='bonecaged-mukmoux',amount=1},
+					{name='bonecaged-mukmoux', amount=1},
 				},
 			results =
 				{
@@ -346,7 +346,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-phadai',amount=1},
+					{name='caged-phadai', amount=1},
 				},
 			results =
 				{
@@ -357,7 +357,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
 					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
@@ -371,7 +371,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-phadai',remove_item = true},
-					{name='bone-caged-phadai',amount=1},
+					{name='bone-caged-phadai', amount=1},
 				},
 			results =
 				{
@@ -401,7 +401,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-phagnot',amount=1},
+					{name='caged-phagnot', amount=1},
 				},
 			results =
 				{
@@ -412,7 +412,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
 					{name='bones', amount ='+4'},
 				},
                 crafting_speed = 15,
@@ -426,7 +426,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-phagnot',remove_item = true},
-					{name='bone-caged-phagnot',amount=1},
+					{name='bone-caged-phagnot', amount=1},
 				},
 			results =
 				{
@@ -456,7 +456,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-scrondrix',amount=1},
+					{name='caged-scrondrix', amount=1},
 				},
 			results =
 				{
@@ -467,7 +467,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
 					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
@@ -481,7 +481,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-scrondrix',remove_item = true},
-					{name='bone-caged-scrondrix',amount=1},
+					{name='bone-caged-scrondrix', amount=1},
 				},
 			results =
 				{
@@ -511,7 +511,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-simik',amount=1},
+					{name='caged-simik', amount=1},
 				},
 			results =
 				{
@@ -522,7 +522,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='simik-blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
 					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
@@ -536,7 +536,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-simik',remove_item = true},
-					{name='bone-caged-simik',amount=1},
+					{name='bone-caged-simik', amount=1},
 				},
 			results =
 				{
@@ -566,7 +566,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='trits',amount=1},
+					{name='trits', amount=1},
 				},
 			results =
 				{
@@ -590,7 +590,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='trits',remove_item = true},
-					{name='bone-trits',amount=1},
+					{name='bone-trits', amount=1},
 				},
 			results =
 				{
@@ -620,7 +620,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-ulric',amount=1},
+					{name='caged-ulric', amount=1},
 				},
 			results =
 				{
@@ -631,7 +631,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
 					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
@@ -645,7 +645,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-ulric',remove_item = true},
-					{name='bone-caged-ulric',amount=1},
+					{name='bone-caged-ulric', amount=1},
 				},
 			results =
 				{
@@ -675,7 +675,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-xeno',amount=1},
+					{name='caged-xeno', amount=1},
 				},
 			results =
 				{
@@ -689,7 +689,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
 					{name='bones', amount ='+3'},
 				},
                 crafting_speed = 15,
@@ -704,7 +704,7 @@ fun.autorecipes {
 				{
 					{name='chitin-xeno',remove_item = true},
 					{name='caged-xeno',remove_item = true},
-					{name='bone-xeno',amount=1},
+					{name='bone-xeno', amount=1},
 					{name='cage', remove_item = true},
 				},
 			results =

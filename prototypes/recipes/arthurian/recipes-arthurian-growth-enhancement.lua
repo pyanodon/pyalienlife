@@ -14,7 +14,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 
 				},
 			results =
@@ -29,12 +29,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='antiviral',amount =1},
+					{name='antiviral', amount =1},
 				},
 			results =
 				{
 					{name='arthurian', remove_item = true},
-					{name='arthurian', probability = 1,amount_min =1,amount_max =2},
+					{name='arthurian', probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			name = 'arthurian-09',
@@ -44,7 +44,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='antiviral',amount =1},
+					--{name='antiviral', amount =1},
 					{name='gh',remove_item = true},
 				},
 			results =
@@ -59,7 +59,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='nanochondria',amount =1},
+					{name='nanochondria', amount =1},
 					--{name='antiviral',remove_item = true},
 				},
 			results =
@@ -75,8 +75,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -92,7 +92,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='nanochondria',remove_item = true},
-					{name='bmp',amount =1},
+					{name='bmp', amount =1},
 				},
 			results =
 				{
@@ -108,8 +108,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -125,7 +125,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='bmp',remove_item = true},
-					{name='anabolic-rna',amount =1},
+					{name='anabolic-rna', amount =1},
 				},
 			results =
 				{
@@ -140,8 +140,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -157,7 +157,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='anabolic-rna',remove_item = true},
-					{name='antitumor',amount =1},
+					{name='antitumor', amount =1},
 				},
 			results =
 				{
@@ -172,8 +172,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -189,7 +189,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='antitumor',remove_item = true},
-					{name='recombinant-ery',amount =1},
+					{name='recombinant-ery', amount =1},
 				},
 			results =
 				{
@@ -204,7 +204,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -220,7 +220,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='recombinant-ery',remove_item = true},
-					{name='reca',amount =1},
+					{name='reca', amount =1},
 				},
 			results =
 				{
@@ -235,7 +235,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -251,7 +251,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='reca',remove_item = true},
-					{name='orexigenic',amount =1},
+					{name='orexigenic', amount =1},
 				},
 			results =
 				{
@@ -266,7 +266,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{

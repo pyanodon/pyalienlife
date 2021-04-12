@@ -13,8 +13,8 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'cocoon', amount = 4},
-                    {name='biomass',amount =15},
-                    {name='moss',amount =5},
+                    {name='biomass', amount =15},
+                    {name='moss', amount =5},
 				},
 			results =
 				{
@@ -29,15 +29,15 @@ fun.autorecipes {
 				{
 					{name='biomass',remove_item = true},
 					{name = 'cocoon', amount = '+3'},
-					{name='moss',amount = '+5'},
-					{name='vrauks-food-01',amount =3},
-					{name='water-barrel',amount=3,return_item={name='empty-barrel',amount=3}},
-					{name='saps',amount = 10},
-					{name='fawogae',amount = 5},
+					{name='moss', amount = '+5'},
+					{name='vrauks-food-01', amount =3},
+					{name='water-barrel', amount=3,return_item={name='empty-barrel', amount=3}},
+					{name='saps', amount = 10},
+					{name='fawogae', amount = 5},
 				},
 			results =
 				{
-					{name='vrauks',amount = '+3'},
+					{name='vrauks', amount = '+3'},
 				},
 			crafting_speed = 120,
 			tech = 'vrauks'
@@ -47,15 +47,15 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'cocoon', amount = '+8'},
-					{name='bedding',amount = 1},
-					{name='vrauks-food-02',amount =4},
-					{name='saps',amount = '+10'},
-					{name='fawogae',amount = '+5'},
+					{name='bedding', amount = 1},
+					{name='vrauks-food-02', amount =4},
+					{name='saps', amount = '+10'},
+					{name='fawogae', amount = '+5'},
 
 				},
 			results =
 				{
-					{name='vrauks',amount ='+8'},
+					{name='vrauks', amount ='+8'},
 				},
 			crafting_speed = 80,
 			tech = 'vrauks-mk02'
@@ -65,14 +65,14 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cocoon',amount = '+10'},
-					{name='bedding',amount = '+5'},
+					{name='cocoon', amount = '+10'},
+					{name='bedding', amount = '+5'},
 					{name='honeycomb', amount = 4},
-					{name='syrup-01-barrel',amount=2,return_item={name='empty-barrel',amount=2}},
+					{name='syrup-01-barrel', amount=2,return_item={name='empty-barrel', amount=2}},
 				},
 			results =
 				{
-					{name='vrauks',amount ='+10'},
+					{name='vrauks', amount ='+10'},
 				},
 			crafting_speed = 50,
 			tech = 'vrauks-mk03'
@@ -81,14 +81,14 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cocoon',amount = '+10'},
-					{name='bedding',amount = '+5'},
-					{name='vrauks-food-01',amount ='+7'},
-					{name='vrauks-food-02',amount ='+6'},
+					{name='cocoon', amount = '+10'},
+					{name='bedding', amount = '+5'},
+					{name='vrauks-food-01', amount ='+7'},
+					{name='vrauks-food-02', amount ='+6'},
 				},
 			results =
 				{
-					{name='vrauks',amount ='+10'},
+					{name='vrauks', amount ='+10'},
 				},
 			crafting_speed = 20,
 			tech = 'vrauks-mk04'
@@ -110,14 +110,14 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='vrauks',amount =2},
-                    {name='moss',amount =10},
-					{name='water-barrel',amount=4,return_item={name='empty-barrel',amount=4}},
-					{name='saps',amount = 3},
+                    {name='vrauks', amount =2},
+                    {name='moss', amount =10},
+					{name='water-barrel', amount=4,return_item={name='empty-barrel', amount=4}},
+					{name='saps', amount = 3},
 				},
 			results =
 				{
-					{name='cocoon', amount_min =5,amount_max =7},
+					{name='cocoon', amount_min =5, amount_max =7},
 				},
 			crafting_speed = 140,
 			--tech = 'vrauks'
@@ -126,13 +126,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='vrauks',amount ='+2'},
-                    {name='biomass',amount = 10},
-					{name='vrauks-food-01',amount =2},
+					{name='vrauks', amount ='+2'},
+                    {name='biomass', amount = 10},
+					{name='vrauks-food-01', amount =2},
 				},
 			results =
 				{
-					{name='cocoon', amount_min =8,amount_max =12},
+					{name='cocoon', amount_min =8, amount_max =12},
 				},
 			crafting_speed = 110,
 			tech = 'vrauks'
@@ -141,14 +141,14 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='vrauks',amount ='+2'},
-					{name='bedding',amount = 3},
-					{name='vrauks-food-02',amount =4},
-					{name='saps',amount = '+7'},
+					{name='vrauks', amount ='+2'},
+					{name='bedding', amount = 3},
+					{name='vrauks-food-02', amount =4},
+					{name='saps', amount = '+7'},
 				},
 			results =
 				{
-					{name='cocoon', amount_min = 12,amount_max =18},
+					{name='cocoon', amount_min = 12, amount_max =18},
 				},
 			crafting_speed = 80,
 			tech = 'vrauks-mk02'
@@ -157,17 +157,17 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='vrauks',amount ='+2'},
-					{name='vrauks-food-01',amount ='+5'},
-					{name='vrauks-food-02',amount ='+8'},
-					{name='bedding',amount = '+5'},
+					{name='vrauks', amount ='+2'},
+					{name='vrauks-food-01', amount ='+5'},
+					{name='vrauks-food-02', amount ='+8'},
+					{name='bedding', amount = '+5'},
 					{name='honeycomb', amount = 4},
-					{name='syrup-01-barrel',amount=2,return_item={name='empty-barrel',amount=2}},
-					{name='fawogae',amount = 5},
+					{name='syrup-01-barrel', amount=2,return_item={name='empty-barrel', amount=2}},
+					{name='fawogae', amount = 5},
 				},
 			results =
 				{
-					{name='cocoon', amount_min = 15,amount_max =25},
+					{name='cocoon', amount_min = 15, amount_max =25},
 				},
 			crafting_speed = 50,
 			tech = 'vrauks-mk03'
@@ -176,10 +176,10 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='vrauks',amount ='+2'},
-					{name='vrauks-food-01',amount ='+5'},
-					{name='vrauks-food-02',amount ='+8'},
-					{name='bedding',amount = '+5'},
+					{name='vrauks', amount ='+2'},
+					{name='vrauks-food-01', amount ='+5'},
+					{name='vrauks-food-02', amount ='+8'},
+					{name='bedding', amount = '+5'},
 
 				},
 			results =

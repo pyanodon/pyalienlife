@@ -13,18 +13,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-dingrits',amount=1},
+					{name='caged-dingrits', amount=1},
 				},
 			results =
 				{
-					{name='bones', probability = 0.3,amount_min =1,amount_max =2},
-					{name='meat', probability = 0.3,amount_min =1,amount_max =3},
-                    {name='guts', probability = 0.3,amount_min =1,amount_max =3},
-					{name='pelt', probability = 0.1,amount_min =1,amount_max =1},
-					{name='dingrit-spike', probability = 0.1,amount_min =1,amount_max =1},
+					{name='bones', probability = 0.3, amount_min =1, amount_max =2},
+					{name='meat', probability = 0.3, amount_min =1, amount_max =3},
+                    {name='guts', probability = 0.3, amount_min =1, amount_max =3},
+					{name='pelt', probability = 0.1, amount_min =1, amount_max =1},
+					{name='dingrit-spike', probability = 0.1, amount_min =1, amount_max =1},
 					{name='blood', amount =20},
-					{name='cage',amount=1},
-					{name='brain', probability = 0.3,amount_min =1,amount_max =1},
+					{name='cage', amount=1},
+					{name='brain', probability = 0.3, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 30,
 			tech = 'dingrits',
@@ -36,7 +36,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-dingrits',amount=1},
+					--{name='caged-dingrits', amount=1},
 				},
 			results =
 				{
@@ -59,7 +59,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-dingrits',amount=1},
+					--{name='caged-dingrits', amount=1},
 				},
 			results =
 				{
@@ -76,7 +76,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-dingrits',amount=1},
+					--{name='caged-dingrits', amount=1},
 				},
 			results =
 				{
@@ -93,7 +93,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-dingrits',amount=1},
+					--{name='caged-dingrits', amount=1},
 				},
 			results =
 				{
@@ -110,7 +110,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-dingrits',amount=1},
+					--{name='caged-dingrits', amount=1},
 				},
 			results =
 				{
@@ -127,7 +127,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-dingrits',amount=1},
+					--{name='caged-dingrits', amount=1},
 				},
 			results =
 				{
@@ -144,7 +144,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-dingrits',amount=1},
+					--{name='caged-dingrits', amount=1},
 				},
 			results =
 				{
@@ -162,7 +162,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-dingrits',remove_item = true},
-					{name='brain-caged-dingrits',amount=1},
+					{name='brain-caged-dingrits', amount=1},
 				},
 			results =
 				{
@@ -180,7 +180,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='brain-caged-dingrits',remove_item = true},
-					{name='bone-caged-dingrits',amount=1},
+					{name='bone-caged-dingrits', amount=1},
 				},
 			results =
 				{
@@ -198,7 +198,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='bone-caged-dingrits',remove_item = true},
-					{name='guts-caged-dingrits',amount=1},
+					{name='guts-caged-dingrits', amount=1},
 				},
 			results =
 				{
@@ -216,7 +216,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='guts-caged-dingrits',remove_item = true},
-					{name='blood-caged-dingrits',amount=1},
+					{name='blood-caged-dingrits', amount=1},
 				},
 			results =
 				{
@@ -234,7 +234,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='blood-caged-dingrits',remove_item = true},
-					{name='meat-caged-dingrits',amount=1},
+					{name='meat-caged-dingrits', amount=1},
 				},
 			results =
 				{
@@ -252,7 +252,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='meat-caged-dingrits',remove_item = true},
-					{name='skin-caged-dingrits',amount=1},
+					{name='skin-caged-dingrits', amount=1},
 				},
 			results =
 				{

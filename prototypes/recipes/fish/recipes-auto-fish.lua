@@ -16,9 +16,9 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'fish', amount = 12},
-                    {name='phytoplankton',amount =50},
-					{name='water-saline',amount=100, return_item = {name = 'waste-water'}},
-					{name='filtration-media',amount = 2},
+                    {name='phytoplankton', amount =50},
+					{name='water-saline', amount=100, return_item = {name = 'waste-water'}},
+					{name='filtration-media', amount = 2},
 				},
 			results =
 				{
@@ -31,7 +31,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fishfood1',amount =1},
+					{name='fishfood1', amount =1},
 				},
 			results =
 				{
@@ -44,7 +44,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='seaweed',amount = 10},
+					{name='seaweed', amount = 10},
 				},
 			results =
 				{
@@ -57,7 +57,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fishfood2',amount =1},
+					{name='fishfood2', amount =1},
 					{name='seaweed', add_amount = 10},
 
 				},
@@ -78,8 +78,8 @@ fun.autorecipes {
 				{
 					{name='seaweed',remove_item = true},
 					{name='fishfood2',remove_item = true},
-					{name='fawogae',amount =15},
-					{name='pheromones',amount =1},
+					{name='fawogae', amount =15},
+					{name='pheromones', amount =1},
 				},
 			results =
 				{
@@ -93,7 +93,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fishfood1',amount =1},
+					{name='fishfood1', amount =1},
 				},
 			results =
 				{
@@ -106,7 +106,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='seaweed',amount = 5},
+					{name='seaweed', amount = 5},
 				},
 			results =
 				{
@@ -121,7 +121,7 @@ fun.autorecipes {
 				{
 					{name='fishfood1',remove_item = true},
 					{name='seaweed',remove_item = true},
-					{name='fishfood2',amount =1},
+					{name='fishfood2', amount =1},
 
 				},
 			results =
@@ -135,7 +135,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='seaweed',amount = 5},
+					{name='seaweed', amount = 5},
 				},
 			results =
 				{
@@ -164,14 +164,14 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'fish-egg', amount = 10},
-                    {name='oxygen',amount =60},
-                    {name='small-lamp',amount =3},
-					{name='biomass',amount =10},
-					{name='water-saline',amount=100,return_item={name='waste-water',amount=100}},
+                    {name='oxygen', amount =60},
+                    {name='small-lamp', amount =3},
+					{name='biomass', amount =10},
+					{name='water-saline', amount=100,return_item={name='waste-water', amount=100}},
 				},
 			results =
 				{
-					{name='fish',amount = 10},
+					{name='fish', amount = 10},
 				},
 			crafting_speed = 150,
 			tech = 'fish-mk01'
@@ -180,8 +180,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fishfood1',amount =1},
-					{name='filtration-media',amount = 1},
+					{name='fishfood1', amount =1},
+					{name='filtration-media', amount = 1},
 				},
 			results =
 				{
@@ -194,8 +194,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='seaweed',amount = 10},
-					{name='fishfood2',amount =1},
+					{name='seaweed', amount = 10},
+					{name='fishfood2', amount =1},
 				},
 			results =
 				{
@@ -226,7 +226,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 
 				},
 			results =
@@ -240,11 +240,11 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='antiviral',amount =1},
+					{name='antiviral', amount =1},
 				},
 			results =
 				{
-                    {name='fish',amount =30},
+                    {name='fish', amount =30},
 				},
 			crafting_speed = 20,
 			tech = 'antiviral'
@@ -253,7 +253,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='antiviral',amount =1},
+					--{name='antiviral', amount =1},
 					{name='gh',remove_item = true},
 				},
 			results =

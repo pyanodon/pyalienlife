@@ -13,18 +13,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-korlex',amount=1},
+					{name='caged-korlex', amount=1},
 				},
 			results =
 				{
-					{name='bones', probability = 0.3,amount_min =1,amount_max =3},
-					{name='meat', probability = 0.4,amount_min =1,amount_max =3},
-					{name='skin', probability = 0.5,amount_min =2,amount_max =5},
-					{name='mukmoux-fat', probability = 0.5,amount_min =1,amount_max =3},
-					{name='guts', probability = 0.4,amount_min =1,amount_max =2},
+					{name='bones', probability = 0.3, amount_min =1, amount_max =3},
+					{name='meat', probability = 0.4, amount_min =1, amount_max =3},
+					{name='skin', probability = 0.5, amount_min =2, amount_max =5},
+					{name='mukmoux-fat', probability = 0.5, amount_min =1, amount_max =3},
+					{name='guts', probability = 0.4, amount_min =1, amount_max =2},
 					{name='blood', amount =20},
-					{name='cage',amount=1},
-					{name='brain', probability = 0.5,amount_min =1,amount_max =1},
+					{name='cage', amount=1},
+					{name='brain', probability = 0.5, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 30,
 			tech = 'korlex',
@@ -36,7 +36,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-korlex',amount=1},
+					--{name='caged-korlex', amount=1},
 				},
 			results =
 				{
@@ -59,7 +59,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-korlex',amount=1},
+					--{name='caged-korlex', amount=1},
 				},
 			results =
 				{
@@ -76,7 +76,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-korlex',amount=1},
+					--{name='caged-korlex', amount=1},
 				},
 			results =
 				{
@@ -93,7 +93,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-korlex',amount=1},
+					--{name='caged-korlex', amount=1},
 				},
 			results =
 				{
@@ -110,7 +110,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-korlex',amount=1},
+					--{name='caged-korlex', amount=1},
 				},
 			results =
 				{
@@ -127,7 +127,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-korlex',amount=1},
+					--{name='caged-korlex', amount=1},
 				},
 			results =
 				{
@@ -144,7 +144,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-korlex',amount=1},
+					--{name='caged-korlex', amount=1},
 				},
 			results =
 				{
@@ -166,7 +166,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-korlex',remove_item = true},
-					{name='brain-caged-korlex',amount=1},
+					{name='brain-caged-korlex', amount=1},
 				},
 			results =
 				{
@@ -184,7 +184,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='brain-caged-korlex',remove_item = true},
-					{name='bone-caged-korlex',amount=1},
+					{name='bone-caged-korlex', amount=1},
 				},
 			results =
 				{
@@ -202,7 +202,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='bone-caged-korlex',remove_item = true},
-					{name='meat-caged-korlex',amount=1},
+					{name='meat-caged-korlex', amount=1},
 				},
 			results =
 				{
@@ -220,7 +220,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='meat-caged-korlex',remove_item = true},
-					{name='guts-caged-korlex',amount=1},
+					{name='guts-caged-korlex', amount=1},
 				},
 			results =
 				{
@@ -238,7 +238,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='guts-caged-korlex',remove_item = true},
-					{name='blood-caged-korlex',amount=1},
+					{name='blood-caged-korlex', amount=1},
 				},
 			results =
 				{
@@ -256,7 +256,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='blood-caged-korlex',remove_item = true},
-					{name='skin-caged-korlex',amount=1},
+					{name='skin-caged-korlex', amount=1},
 				},
 			results =
 				{
@@ -274,7 +274,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='skin-caged-korlex',remove_item = true},
-					{name='fat-caged-korlex',amount=1},
+					{name='fat-caged-korlex', amount=1},
 				},
 			results =
 				{

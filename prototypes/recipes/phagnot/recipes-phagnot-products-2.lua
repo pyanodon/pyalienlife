@@ -12,12 +12,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fawogae',amount =10},
-					{name='water-barrel',amount=3,return_item={name='empty-barrel'}},
+					{name='fawogae', amount =10},
+					{name='water-barrel', amount=3,return_item={name='empty-barrel'}},
 				},
 			results =
 				{
-                    {name='manure',amount ='*3'},
+                    {name='manure', amount ='*3'},
 				},
 			crafting_speed = 80,
 			tech = 'bigger-colon',
@@ -33,7 +33,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+1'},
+                    {name='manure', amount ='+1'},
 				},
 			crafting_speed = 70,
 			tech = 'bigger-colon',
@@ -43,13 +43,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='salt',amount =4},
-                    {name='bedding',amount =1},
+                    {name='salt', amount =4},
+                    {name='bedding', amount =1},
 				},
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+6'},
+                    {name='manure', amount ='+6'},
 				},
 				crafting_speed = 55,
                 tech = 'bigger-colon',
@@ -58,12 +58,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount =10},
+					{name='raw-fiber', amount =10},
 				},
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+2'},
+                    {name='manure', amount ='+2'},
 				},
 				crafting_speed = 40,
                 tech = 'bigger-colon',
@@ -81,7 +81,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                --    {name='manure',amount =5},
+                --    {name='manure', amount =5},
 				},
 				crafting_speed = 35,
                 tech = 'bigger-colon',
@@ -90,13 +90,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='salt',amount =4},
-                    {name='bedding',amount =2},
+                    {name='salt', amount =4},
+                    {name='bedding', amount =2},
 				},
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+6'},
+                    {name='manure', amount ='+6'},
 				},
 				crafting_speed = 20,
                 tech = 'bigger-colon',
@@ -105,12 +105,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount =5},
+					{name='raw-fiber', amount =5},
 				},
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+2'},
+                    {name='manure', amount ='+2'},
 				},
 				crafting_speed = 15,
                 tech = 'bigger-colon',

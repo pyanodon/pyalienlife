@@ -11,15 +11,15 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='rennea',amount =15},
-                    {name='navens',amount =10},
-                    {name='tuuphra-seeds',amount =15},
-					{name='water-barrel',amount=6,return_item={name='empty-barrel',amount=6}},
-					{name='cage-antelope',amount=1},
+                    {name='rennea', amount =15},
+                    {name='navens', amount =10},
+                    {name='tuuphra-seeds', amount =15},
+					{name='water-barrel', amount=6,return_item={name='empty-barrel', amount=6}},
+					{name='cage-antelope', amount=1},
 				},
 			results =
 				{
-					{name='caged-antelope', probability = 0.5,amount_min =1,amount_max =1},
+					{name='caged-antelope', probability = 0.5, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 120,
 			tech = 'schrodinger-antelope'
@@ -28,7 +28,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='nano-cellulose',amount =5},
+					{name='nano-cellulose', amount =5},
 				},
 			results =
 				{
@@ -41,8 +41,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='salt',amount = 10},
-					{name='fine-nexelit-powder',amount = 4},
+					{name='salt', amount = 10},
+					{name='fine-nexelit-powder', amount = 4},
 				},
 			results =
 				{
@@ -55,7 +55,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='sponge',amount = 5},
+					{name='sponge', amount = 5},
 				},
 			results =
 				{
@@ -68,7 +68,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='seaweed',amount =10},
+					{name='seaweed', amount =10},
 				},
 			results =
 				{
@@ -81,7 +81,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 
 				},
 			results =
@@ -95,12 +95,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='antiviral',amount =1},
+					{name='antiviral', amount =1},
 				},
 			results =
 				{
 					{name='caged-antelope', remove_item = true},
-					{name='caged-antelope', probability = 0.7,amount_min =1,amount_max =1},
+					{name='caged-antelope', probability = 0.7, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -109,7 +109,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='antiviral',amount =1},
+					--{name='antiviral', amount =1},
 					{name='gh',remove_item = true},
 				},
 			results =
@@ -135,18 +135,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-antelope',amount=1},
+					{name='caged-antelope', amount=1},
 				},
 			results =
 				{
-					{name='bones', probability = 0.5,amount_min =1,amount_max =4},
-					{name='meat', probability = 0.5,amount_min =1,amount_max =5},
-					{name='skin', probability = 0.5,amount_min =1,amount_max =2},
-					{name='mukmoux-fat', probability = 0.5,amount_min =1,amount_max =2},
-					{name='guts', probability = 0.5,amount_min =1,amount_max =4},
-					{name='brain', probability = 0.5,amount_min =1,amount_max =1},
+					{name='bones', probability = 0.5, amount_min =1, amount_max =4},
+					{name='meat', probability = 0.5, amount_min =1, amount_max =5},
+					{name='skin', probability = 0.5, amount_min =1, amount_max =2},
+					{name='mukmoux-fat', probability = 0.5, amount_min =1, amount_max =2},
+					{name='guts', probability = 0.5, amount_min =1, amount_max =4},
+					{name='brain', probability = 0.5, amount_min =1, amount_max =1},
 					{name='cage-antelope', amount=1},
-					{name='strangelets', probability = 0.2,amount_min =1,amount_max =1},
+					{name='strangelets', probability = 0.2, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 30,
 			tech = 'schrodinger-antelope',
@@ -158,7 +158,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-antelope',amount=1},
+					--{name='caged-antelope', amount=1},
 				},
 			results =
 				{
@@ -183,7 +183,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-antelope',amount=1},
+					--{name='caged-antelope', amount=1},
 				},
 			results =
 				{
@@ -200,7 +200,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-antelope',amount=1},
+					--{name='caged-antelope', amount=1},
 				},
 			results =
 				{
@@ -217,7 +217,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-antelope',amount=1},
+					--{name='caged-antelope', amount=1},
 				},
 			results =
 				{
@@ -234,7 +234,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-antelope',amount=1},
+					--{name='caged-antelope', amount=1},
 				},
 			results =
 				{
@@ -251,7 +251,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-antelope',amount=1},
+					--{name='caged-antelope', amount=1},
 				},
 			results =
 				{
@@ -268,7 +268,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-antelope',amount=1},
+					--{name='caged-antelope', amount=1},
 				},
 			results =
 				{

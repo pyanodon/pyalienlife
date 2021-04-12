@@ -11,12 +11,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='moss',amount =10},
-                    {name='wood',amount =10},
+                    {name='moss', amount =10},
+                    {name='wood', amount =10},
 				},
 			results =
 				{
-					{name='guano',amount =5},
+					{name='guano', amount =5},
 				},
 			crafting_speed = 80,
 			tech = 'vrauks',
@@ -33,7 +33,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='guano',amount ='+2'}
+					{name='guano', amount ='+2'}
 				},
 			crafting_speed = 70,
 			tech = 'vrauks',
@@ -43,13 +43,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='salt',amount =4},
-					{name='bedding',amount =2},
+					{name='salt', amount =4},
+					{name='bedding', amount =2},
 				},
 			results =
 				{
 					--{'a','*5'}
-					{name='guano',amount ='+6'}
+					{name='guano', amount ='+6'}
 				},
 				crafting_speed = 50,
 				tech = 'vrauks-mk02',
@@ -58,12 +58,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount =3},
+					{name='raw-fiber', amount =3},
 				},
 			results =
 				{
 					--{'a','*5'}
-					{name='guano',amount ='+2'}
+					{name='guano', amount ='+2'}
 				},
 				crafting_speed = 45,
 				tech = 'vrauks-mk03',
@@ -81,7 +81,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='guano',amount ='+6'}
+					{name='guano', amount ='+6'}
 				},
 				crafting_speed = 40,
 				tech = 'vrauks-mk03',
@@ -90,13 +90,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='salt',amount =4},
-					{name='bedding',amount =2},
+					{name='salt', amount =4},
+					{name='bedding', amount =2},
 				},
 			results =
 				{
 					--{'a','*5'}
-					{name='guano',amount ='+6'}
+					{name='guano', amount ='+6'}
 				},
 				crafting_speed = 25,
 				tech = 'vrauks-mk04',
@@ -105,12 +105,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount =3},
+					{name='raw-fiber', amount =3},
 				},
 			results =
 				{
 					--{'a','*5'}
-					{name='guano',amount ='+2'}
+					{name='guano', amount ='+2'}
 				},
 				crafting_speed = 20,
 				tech = 'vrauks-mk04',

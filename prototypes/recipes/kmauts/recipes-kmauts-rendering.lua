@@ -13,17 +13,17 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-kmauts',amount=1},
+					{name='caged-kmauts', amount=1},
 				},
 			results =
 				{
-					{name='meat', probability = 0.3,amount_min =1,amount_max =2},
-                    {name='guts', probability = 0.3,amount_min =1,amount_max =2},
-                    {name='mukmoux-fat', probability = 0.2,amount_min =1,amount_max =2},
-					{name='tendon', probability = 0.3,amount_min =1,amount_max =1},
+					{name='meat', probability = 0.3, amount_min =1, amount_max =2},
+                    {name='guts', probability = 0.3, amount_min =1, amount_max =2},
+                    {name='mukmoux-fat', probability = 0.2, amount_min =1, amount_max =2},
+					{name='tendon', probability = 0.3, amount_min =1, amount_max =1},
 					{name='arthropod-blood', amount =10},
-					{name='cage',amount=1},
-					{name='brain', probability = 0.3,amount_min =1,amount_max =1},
+					{name='cage', amount=1},
+					{name='brain', probability = 0.3, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 30,
 			tech = 'kmauts',
@@ -35,7 +35,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-kmauts',amount=1},
+					--{name='caged-kmauts', amount=1},
 				},
 			results =
 				{
@@ -57,7 +57,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-kmauts',amount=1},
+					--{name='caged-kmauts', amount=1},
 				},
 			results =
 				{
@@ -74,7 +74,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-kmauts',amount=1},
+					--{name='caged-kmauts', amount=1},
 				},
 			results =
 				{
@@ -91,7 +91,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-kmauts',amount=1},
+					--{name='caged-kmauts', amount=1},
 				},
 			results =
 				{
@@ -108,7 +108,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-kmauts',amount=1},
+					--{name='caged-kmauts', amount=1},
 				},
 			results =
 				{
@@ -126,7 +126,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-kmauts',amount=1},
+					--{name='caged-kmauts', amount=1},
 				},
 			results =
 				{
@@ -148,7 +148,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-kmauts',remove_item = true},
-					{name='brain-caged-kmauts',amount=1},
+					{name='brain-caged-kmauts', amount=1},
 				},
 			results =
 				{
@@ -166,7 +166,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='brain-caged-kmauts',remove_item = true},
-					{name='guts-caged-kmauts',amount=1},
+					{name='guts-caged-kmauts', amount=1},
 				},
 			results =
 				{
@@ -184,7 +184,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='guts-caged-kmauts',remove_item = true},
-					{name='blood-caged-kmauts',amount=1},
+					{name='blood-caged-kmauts', amount=1},
 				},
 			results =
 				{
@@ -202,7 +202,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='blood-caged-kmauts',remove_item = true},
-					{name='meat-caged-kmauts',amount=1},
+					{name='meat-caged-kmauts', amount=1},
 				},
 			results =
 				{
@@ -220,7 +220,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='meat-caged-kmauts',remove_item = true},
-					{name='fat-caged-kmauts',amount=1},
+					{name='fat-caged-kmauts', amount=1},
 				},
 			results =
 				{

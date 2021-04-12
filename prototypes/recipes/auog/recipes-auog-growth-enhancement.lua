@@ -12,10 +12,10 @@ local fun = require("prototypes/functions/functions")
 		{
 			ingredients =
 				{
-					{name='auog-pup',amount =1},
+					{name='auog-pup', amount =1},
 					{name = 'fetal-serum', amount = 50},
-					{name='antiviral',amount =1},
-					{name='nanochondria',amount =1},
+					{name='antiviral', amount =1},
+					{name='nanochondria', amount =1},
 					--{name='antiviral',remove_item = true},
 				},
 			results =
@@ -30,7 +30,7 @@ local fun = require("prototypes/functions/functions")
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -45,7 +45,7 @@ local fun = require("prototypes/functions/functions")
 				{
 					{name='gh',remove_item = true},
 					{name='nanochondria',remove_item = true},
-					{name='bmp',amount =1},
+					{name='bmp', amount =1},
 				},
 			results =
 				{
@@ -60,8 +60,8 @@ local fun = require("prototypes/functions/functions")
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -76,7 +76,7 @@ local fun = require("prototypes/functions/functions")
 				{
 					{name='gh',remove_item = true},
 					{name='bmp',remove_item = true},
-					{name='anabolic-rna',amount =1},
+					{name='anabolic-rna', amount =1},
 				},
 			results =
 				{
@@ -90,8 +90,8 @@ local fun = require("prototypes/functions/functions")
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -106,7 +106,7 @@ local fun = require("prototypes/functions/functions")
 				{
 					{name='gh',remove_item = true},
 					{name='anabolic-rna',remove_item = true},
-					{name='antitumor',amount =1},
+					{name='antitumor', amount =1},
 				},
 			results =
 				{
@@ -120,8 +120,8 @@ local fun = require("prototypes/functions/functions")
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -136,7 +136,7 @@ local fun = require("prototypes/functions/functions")
 				{
 					{name='gh',remove_item = true},
 					{name='antitumor',remove_item = true},
-					{name='recombinant-ery',amount =1},
+					{name='recombinant-ery', amount =1},
 				},
 			results =
 				{
@@ -150,7 +150,7 @@ local fun = require("prototypes/functions/functions")
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -165,7 +165,7 @@ local fun = require("prototypes/functions/functions")
 				{
 					{name='gh',remove_item = true},
 					{name='recombinant-ery',remove_item = true},
-					{name='reca',amount =1},
+					{name='reca', amount =1},
 				},
 			results =
 				{
@@ -179,7 +179,7 @@ local fun = require("prototypes/functions/functions")
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -194,7 +194,7 @@ local fun = require("prototypes/functions/functions")
 				{
 					{name='gh',remove_item = true},
 					{name='reca',remove_item = true},
-					{name='orexigenic',amount =1},
+					{name='orexigenic', amount =1},
 				},
 			results =
 				{
@@ -208,7 +208,7 @@ local fun = require("prototypes/functions/functions")
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -233,13 +233,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='brain-caged-auog',amount=2},
+					{name='brain-caged-auog', amount=2},
 				},
 			results =
 				{
 					{name='mukmoux-fat', remove_item = true},
 					{name='brain', amount =8},
-					{name='cage',amount = 1}
+					{name='cage', amount = 1}
 				},
 			crafting_speed = 30,
 			tech = 'nanochondria',
@@ -252,7 +252,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='brain-caged-auog',remove_item = true},
-					{name='bone-caged-auog',amount=1},
+					{name='bone-caged-auog', amount=1},
 				},
 			results =
 				{
@@ -287,7 +287,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='bone-caged-auog',remove_item = true},
-					{name='meat-caged-auog',amount=1},
+					{name='meat-caged-auog', amount=1},
 				},
 			results =
 				{
@@ -305,7 +305,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='meat-caged-auog',remove_item = true},
-					{name='guts-caged-auog',amount=1},
+					{name='guts-caged-auog', amount=1},
 				},
 			results =
 				{
@@ -323,7 +323,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='guts-caged-auog',remove_item = true},
-					{name='blood-caged-auog',amount=1},
+					{name='blood-caged-auog', amount=1},
 				},
 			results =
 				{
@@ -341,7 +341,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='blood-caged-auog',remove_item = true},
-					{name='skin-caged-auog',amount=1},
+					{name='skin-caged-auog', amount=1},
 				},
 			results =
 				{
@@ -359,7 +359,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='skin-caged-auog',remove_item = true},
-					{name='fat-caged-auog',amount=1},
+					{name='fat-caged-auog', amount=1},
 				},
 			results =
 				{

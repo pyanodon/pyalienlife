@@ -15,13 +15,13 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='cridren-seeds', amount = 3},
-					{name='caged-arthurian',amount = 1},
-					{name='fish',amount = 10},
-					{name='soil',amount = 15},
+					{name='caged-arthurian', amount = 1},
+					{name='fish', amount = 10},
+					{name='soil', amount = 15},
 				},
 			results =
 				{
-					{name='cridren',amount = 3},
+					{name='cridren', amount = 3},
 				},
 			crafting_speed = 120,
 			tech = 'cridren'
@@ -70,7 +70,7 @@ fun.autorecipes {
 					{name='bones', add_amount = 10},
                     {name='fertilizer', add_amount = 10},
 					{name='gh', amount = 1},
-					{name='antiviral',amount = 1},
+					{name='antiviral', amount = 1},
 				},
 			results =
 				{

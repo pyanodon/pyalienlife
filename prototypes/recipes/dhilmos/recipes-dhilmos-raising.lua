@@ -15,9 +15,9 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'dhilmos', amount = 1},
-                    {name='phytoplankton',amount =50},
-					{name='water-saline',amount=100,return_item={name='waste-water'}},
-					{name='filtration-media',amount = 2},
+                    {name='phytoplankton', amount =50},
+					{name='water-saline', amount=100,return_item={name='waste-water'}},
+					{name='filtration-media', amount = 2},
 				},
 			results =
 				{
@@ -30,8 +30,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='dhilmos-food-01',amount =1},
-					{name='seaweed',amount = 5},
+					{name='dhilmos-food-01', amount =1},
+					{name='seaweed', amount = 5},
 				},
 			results =
 				{
@@ -46,7 +46,7 @@ fun.autorecipes {
 				{
                     {name='dhilmos-food-01',remove_item = true},
                     {name='seaweed',remove_item = true},
-					{name='dhilmos-food-02',amount =1},
+					{name='dhilmos-food-02', amount =1},
 
 				},
 			results =
@@ -60,7 +60,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='seaweed',amount = 5},
+					{name='seaweed', amount = 5},
 				},
 			results =
 				{
@@ -87,9 +87,9 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='dhilmos-egg', amount = 20},
-                    {name='ralesia-powder',amount = 50},
-					{name='water-saline',amount=100,return_item={name='waste-water'}},
-					{name='hot-air',amount = 50},
+                    {name='ralesia-powder', amount = 50},
+					{name='water-saline', amount=100,return_item={name='waste-water'}},
+					{name='hot-air', amount = 50},
 				},
 			results =
 				{
@@ -108,8 +108,8 @@ fun.autorecipes {
 				{
 					{name='seaweed',remove_item = true},
 					{name='dhilmos-food-02',remove_item = true},
-					{name='fawogae',amount =15},
-					{name='pheromones',amount =1},
+					{name='fawogae', amount =15},
+					{name='pheromones', amount =1},
 				},
 			results =
 				{
@@ -123,7 +123,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='dhilmos-food-01',amount =1},
+					{name='dhilmos-food-01', amount =1},
 				},
 			results =
 				{
@@ -136,7 +136,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='seaweed',amount = 5},
+					{name='seaweed', amount = 5},
 				},
 			results =
 				{
@@ -151,7 +151,7 @@ fun.autorecipes {
 				{
 					{name='dhilmos-food-01',remove_item = true},
 					{name='seaweed',remove_item = true},
-					{name='dhilmos-food-02',amount =1},
+					{name='dhilmos-food-02', amount =1},
 
 				},
 			results =
@@ -165,7 +165,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='seaweed',amount = 5},
+					{name='seaweed', amount = 5},
 				},
 			results =
 				{
@@ -194,7 +194,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='dhilmos-pup', amount = 1},
-					{name='phytoplankton',amount =50},
+					{name='phytoplankton', amount =50},
 					{name='water-saline', amount = 100, return_item = {name = 'waste-water'}},
 				},
 			results =
@@ -210,7 +210,7 @@ fun.autorecipes {
 				{
 					{name='dhilmos-pup', add_amount = 1},
 					{name='dhilmos-food-01', amount = 2},
-					{name='filtration-media',amount = 1},
+					{name='filtration-media', amount = 1},
 				},
 			results =
 				{
@@ -257,7 +257,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 
 				},
 			results =
@@ -271,12 +271,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='antiviral',amount =1},
+					{name='antiviral', amount =1},
 				},
 			results =
 				{
 					{name='dhilmos', remove_item = true},
-					{name='dhilmos', probability = 1,amount_min =1,amount_max =2},
+					{name='dhilmos', probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -285,7 +285,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='antiviral',amount =1},
+					--{name='antiviral', amount =1},
 					{name='gh',remove_item = true},
 				},
 			results =
@@ -301,7 +301,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='bmp',remove_item = true},
-					{name='anabolic-rna',amount =1},
+					{name='anabolic-rna', amount =1},
 				},
 			results =
 				{
@@ -315,8 +315,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -331,7 +331,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='anabolic-rna',remove_item = true},
-					{name='antitumor',amount =1},
+					{name='antitumor', amount =1},
 				},
 			results =
 				{
@@ -345,8 +345,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -361,7 +361,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='antitumor',remove_item = true},
-					{name='recombinant-ery',amount =1},
+					{name='recombinant-ery', amount =1},
 				},
 			results =
 				{
@@ -375,7 +375,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -390,7 +390,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='reca',remove_item = true},
-					{name='orexigenic',amount =1},
+					{name='orexigenic', amount =1},
 				},
 			results =
 				{
@@ -404,7 +404,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{

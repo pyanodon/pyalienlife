@@ -13,18 +13,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-mukmoux',amount=1},
+					{name='caged-mukmoux', amount=1},
 				},
 			results =
 				{
-					{name='bones', probability = 0.4,amount_min =1,amount_max =2},
-					{name='meat', probability = 0.4,amount_min =1,amount_max =4},
-					{name='skin', probability = 0.4,amount_min =1,amount_max =4},
-					{name='mukmoux-fat', probability = 0.4,amount_min =1,amount_max =3},
-					{name='guts', probability = 0.4,amount_min =1,amount_max =4},
+					{name='bones', probability = 0.4, amount_min =1, amount_max =2},
+					{name='meat', probability = 0.4, amount_min =1, amount_max =4},
+					{name='skin', probability = 0.4, amount_min =1, amount_max =4},
+					{name='mukmoux-fat', probability = 0.4, amount_min =1, amount_max =3},
+					{name='guts', probability = 0.4, amount_min =1, amount_max =4},
 					{name='blood', amount =50},
-					{name='cage',amount=1},
-					{name='brain', probability = 0.4,amount_min =1,amount_max =1},
+					{name='cage', amount=1},
+					{name='brain', probability = 0.4, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 30,
 			tech = 'mukmoux',
@@ -36,7 +36,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-mukmoux',amount=1},
+					--{name='caged-mukmoux', amount=1},
 				},
 			results =
 				{
@@ -59,7 +59,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-mukmoux',amount=1},
+					--{name='caged-mukmoux', amount=1},
 				},
 			results =
 				{
@@ -76,7 +76,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-mukmoux',amount=1},
+					--{name='caged-mukmoux', amount=1},
 				},
 			results =
 				{
@@ -93,7 +93,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-mukmoux',amount=1},
+					--{name='caged-mukmoux', amount=1},
 				},
 			results =
 				{
@@ -110,7 +110,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-mukmoux',amount=1},
+					--{name='caged-mukmoux', amount=1},
 				},
 			results =
 				{
@@ -127,7 +127,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-mukmoux',amount=1},
+					--{name='caged-mukmoux', amount=1},
 				},
 			results =
 				{
@@ -144,7 +144,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-mukmoux',amount=1},
+					--{name='caged-mukmoux', amount=1},
 				},
 			results =
 				{
@@ -161,7 +161,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-mukmoux',amount=1},
+					--{name='caged-mukmoux', amount=1},
 				},
 			results =
 				{
@@ -183,7 +183,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-mukmoux',remove_item = true},
-					{name='brain-caged-mukmoux',amount=1},
+					{name='brain-caged-mukmoux', amount=1},
 				},
 			results =
 				{
@@ -201,7 +201,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='brain-caged-mukmoux',remove_item = true},
-					{name='bonecaged-mukmoux',amount=1},
+					{name='bonecaged-mukmoux', amount=1},
 				},
 			results =
 				{
@@ -236,7 +236,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='bonecaged-mukmoux',remove_item = true},
-					{name='meat-caged-mukmoux',amount=1},
+					{name='meat-caged-mukmoux', amount=1},
 				},
 			results =
 				{
@@ -254,7 +254,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='meat-caged-mukmoux',remove_item = true},
-					{name='guts-caged-mukmoux',amount=1},
+					{name='guts-caged-mukmoux', amount=1},
 				},
 			results =
 				{
@@ -272,7 +272,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='guts-caged-mukmoux',remove_item = true},
-					{name='blood-caged-mukmoux',amount=1},
+					{name='blood-caged-mukmoux', amount=1},
 				},
 			results =
 				{
@@ -290,7 +290,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='blood-caged-mukmoux',remove_item = true},
-					{name='skin-caged-mukmoux',amount=1},
+					{name='skin-caged-mukmoux', amount=1},
 				},
 			results =
 				{
@@ -308,7 +308,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='skin-caged-mukmoux',remove_item = true},
-					{name='fat-caged-mukmoux',amount=1},
+					{name='fat-caged-mukmoux', amount=1},
 				},
 			results =
 				{

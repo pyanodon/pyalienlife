@@ -16,10 +16,10 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'arthurian', amount = 2},
-                    {name='cottongut',amount =2},
-                    {name='cocoon',amount =1},
-					{name='water-barrel',amount=5,return_barrel = true},
-					{name='bedding',amount = 2},
+                    {name='cottongut', amount =2},
+                    {name='cocoon', amount =1},
+					{name='water-barrel', amount=5,return_barrel = true},
+					{name='bedding', amount = 2},
 				},
 			results =
 				{
@@ -34,7 +34,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='arthurian-food-01',amount =1},
+					{name='arthurian-food-01', amount =1},
 				},
 			results =
 				{
@@ -48,7 +48,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount = 5},
+					{name='raw-fiber', amount = 5},
 				},
 			results =
 				{
@@ -62,7 +62,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='arthurian-food-02',amount =1},
+					{name='arthurian-food-02', amount =1},
 				},
 			results =
 				{
@@ -82,10 +82,10 @@ fun.autorecipes {
 				{
 					{name='raw-fiber',remove_item = true},
 					{name='arthurian-food-02',remove_item = true},
-					{name='fawogae',amount =15},
-					{name='pheromones',amount =1},
-					--{name='water-barrel',amount=6,return_item={name='empty-barrel',amount=6}},
-					--{name='bedding',amount = 1},
+					{name='fawogae', amount =15},
+					{name='pheromones', amount =1},
+					--{name='water-barrel', amount=6,return_item={name='empty-barrel', amount=6}},
+					--{name='bedding', amount = 1},
 				},
 			results =
 				{
@@ -100,7 +100,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='arthurian-food-01',amount =1},
+					{name='arthurian-food-01', amount =1},
 				},
 			results =
 				{
@@ -114,7 +114,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount = 5},
+					{name='raw-fiber', amount = 5},
 				},
 			results =
 				{
@@ -130,7 +130,7 @@ fun.autorecipes {
 				{
 					{name='arthurian-food-01',remove_item = true},
 					{name='raw-fiber',remove_item = true},
-					{name='arthurian-food-02',amount =1},
+					{name='arthurian-food-02', amount =1},
 
 				},
 			results =
@@ -145,7 +145,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount = 5},
+					{name='raw-fiber', amount = 5},
 				},
 			results =
 				{
@@ -204,9 +204,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='arthurian-pup',amount =1},
-					{name='cottongut',amount =4},
-					{name='water-barrel',amount=4,return_barrel = true},
+					{name='arthurian-pup', amount =1},
+					{name='cottongut', amount =4},
+					{name='water-barrel', amount=4,return_barrel = true},
 				},
 			results =
 				{
@@ -221,8 +221,8 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='arthurian-pup', add_amount = 1},
-					{name='arthurian-food-01',amount = 1},
-					{name='bedding',amount = 2},
+					{name='arthurian-food-01', amount = 1},
+					{name='bedding', amount = 2},
 				},
 			results =
 				{
@@ -237,8 +237,8 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='arthurian-pup', add_amount = 2},
-					{name='raw-fiber',amount = 5},
-					{name='arthurian-food-02',amount =1},
+					{name='raw-fiber', amount = 5},
+					{name='arthurian-food-02', amount =1},
 				},
 			results =
 				{

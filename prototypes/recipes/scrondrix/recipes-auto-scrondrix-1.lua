@@ -11,15 +11,15 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='wood-seeds',amount =15},
-                    {name='meat',amount =5},
-                    {name='boron',amount =1},
-					{name='water-barrel',amount=5,return_item={name='empty-barrel',amount=5}},
-					{name='cage',amount=1},
+					{name='wood-seeds', amount =15},
+                    {name='meat', amount =5},
+                    {name='boron', amount =1},
+					{name='water-barrel', amount=5,return_item={name='empty-barrel', amount=5}},
+					{name='cage', amount=1},
 				},
 			results =
 				{
-					{name='caged-scrondrix', probability = 0.8,amount_min =1,amount_max =1},
+					{name='caged-scrondrix', probability = 0.8, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 150,
 			tech = 'boronb',
@@ -30,7 +30,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					--{name='wood-seeds',remove_item = true},
-					{name='yotoi-leaves',amount =10},
+					{name='yotoi-leaves', amount =10},
 				},
 			results =
 				{
@@ -44,8 +44,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='salt',amount = 5},
-					{name='bedding',amount = 1},
+					{name='salt', amount = 5},
+					{name='bedding', amount = 1},
 				},
 			results =
 				{
@@ -59,7 +59,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount = 5},
+					{name='raw-fiber', amount = 5},
 				},
 			results =
 				{
@@ -73,13 +73,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='navens',amount =5},
+					{name='navens', amount =5},
 
 				},
 			results =
 				{
 					{name='caged-scrondrix',remove_item = true},
-					{name='caged-scrondrix', probability = 0.9,amount_min =1,amount_max =1},
+					{name='caged-scrondrix', probability = 0.9, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 110,
 			tech = 'boronb',
@@ -89,7 +89,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 
 				},
 			results =
@@ -104,12 +104,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='antiviral',amount =1},
+					{name='antiviral', amount =1},
 				},
 			results =
 				{
 					{name='caged-scrondrix', remove_item = true},
-					{name='caged-scrondrix', probability = 1,amount_min =1,amount_max =2},
+					{name='caged-scrondrix', probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'boronb',
@@ -119,7 +119,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='antiviral',amount =1},
+					--{name='antiviral', amount =1},
 					{name='gh',remove_item = true},
 				},
 			results =
@@ -134,7 +134,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='nanochondria',amount =1},
+					{name='nanochondria', amount =1},
 					--{name='antiviral',remove_item = true},
 				},
 			results =
@@ -150,8 +150,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -167,7 +167,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='nanochondria',remove_item = true},
-					{name='bmp',amount =1},
+					{name='bmp', amount =1},
 				},
 			results =
 				{
@@ -183,8 +183,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -200,7 +200,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='bmp',remove_item = true},
-					{name='anabolic-rna',amount =1},
+					{name='anabolic-rna', amount =1},
 				},
 			results =
 				{
@@ -215,8 +215,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -232,7 +232,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='anabolic-rna',remove_item = true},
-					{name='antitumor',amount =1},
+					{name='antitumor', amount =1},
 				},
 			results =
 				{
@@ -247,8 +247,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -264,7 +264,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='antitumor',remove_item = true},
-					{name='recombinant-ery',amount =1},
+					{name='recombinant-ery', amount =1},
 				},
 			results =
 				{
@@ -279,7 +279,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -295,7 +295,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='recombinant-ery',remove_item = true},
-					{name='reca',amount =1},
+					{name='reca', amount =1},
 				},
 			results =
 				{
@@ -310,7 +310,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -326,7 +326,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='reca',remove_item = true},
-					{name='orexigenic',amount =1},
+					{name='orexigenic', amount =1},
 				},
 			results =
 				{
@@ -341,7 +341,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -367,16 +367,16 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='fawogae',amount =20},
-					{name='wood-seeds',amount =20},
-                    {name='meat',amount =10},
-                    {name='boron',amount =1},
-					{name='water-barrel',amount=20,return_item={name='empty-barrel',amount=20}},
-					{name='bedding',amount = 1},
+                    {name='fawogae', amount =20},
+					{name='wood-seeds', amount =20},
+                    {name='meat', amount =10},
+                    {name='boron', amount =1},
+					{name='water-barrel', amount=20,return_item={name='empty-barrel', amount=20}},
+					{name='bedding', amount = 1},
 				},
 			results =
 				{
-					{name='scrondrix-pup',amount = 3},
+					{name='scrondrix-pup', amount = 3},
 				},
 			crafting_speed = 140,
 			tech = 'boronb',
@@ -387,11 +387,11 @@ fun.autorecipes {
 			ingredients =
 				{
 
-					{name='yotoi-leaves',amount =10},
+					{name='yotoi-leaves', amount =10},
 				},
 			results =
 				{
-					{name='scrondrix-pup',amount = '+1'},
+					{name='scrondrix-pup', amount = '+1'},
 				},
 			crafting_speed = 120,
 			tech = 'boronb',
@@ -401,7 +401,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='salt',amount = 5},
+					{name='salt', amount = 5},
 				},
 			results =
 				{
@@ -415,11 +415,11 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount = 5},
+					{name='raw-fiber', amount = 5},
 				},
 			results =
 				{
-					{name='scrondrix-pup',amount = '+2'},
+					{name='scrondrix-pup', amount = '+2'},
 				},
 			crafting_speed = 100,
 			tech = 'boronb',
@@ -429,12 +429,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='navens',amount =8},
+					{name='navens', amount =8},
 
 				},
 			results =
 				{
-					{name='scrondrix-pup',amount = '+4'},
+					{name='scrondrix-pup', amount = '+4'},
 				},
 			crafting_speed = 100,
 			tech = 'boronb',
@@ -449,10 +449,10 @@ fun.autorecipes {
 					{name='salt',remove_item = true},
 					{name='navens',remove_item = true},
 					{name='yotoi-leaves',remove_item = true},
-					{name='pheromones',amount =1},
-                    --{name='bedding',amount =4},
-					--{name='water-barrel',amount=6,return_item={name='empty-barrel',amount=6}},
-					--{name='bedding',amount = 1},
+					{name='pheromones', amount =1},
+                    --{name='bedding', amount =4},
+					--{name='water-barrel', amount=6,return_item={name='empty-barrel', amount=6}},
+					--{name='bedding', amount = 1},
 				},
 			results =
 				{
@@ -468,8 +468,8 @@ fun.autorecipes {
 			ingredients =
 				{
                     --{name='wood-seeds',remove_item = true},
-                    --{name='fawogae',amount =15},
-					{name='yotoi-leaves',amount =10},
+                    --{name='fawogae', amount =15},
+					{name='yotoi-leaves', amount =10},
 				},
 			results =
 				{
@@ -483,7 +483,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='salt',amount = 5},
+					{name='salt', amount = 5},
 				},
 			results =
 				{
@@ -497,7 +497,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount = 10},
+					{name='raw-fiber', amount = 10},
 				},
 			results =
 				{
@@ -511,7 +511,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='navens',amount =5},
+					{name='navens', amount =5},
 
 				},
 			results =

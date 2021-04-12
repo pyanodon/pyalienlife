@@ -12,13 +12,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='wood-seeds',amount =10},
-                    {name='meat',amount =4},
-					{name='water-barrel',amount=5,return_item={name='empty-barrel'}},
+                    {name='wood-seeds', amount =10},
+                    {name='meat', amount =4},
+					{name='water-barrel', amount=5,return_item={name='empty-barrel'}},
 				},
 			results =
 				{
-                    {name='manure',amount ='*5'},
+                    {name='manure', amount ='*5'},
 				},
 			crafting_speed = 80,
 			tech = 'scrondrix',
@@ -34,7 +34,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+2'},
+                    {name='manure', amount ='+2'},
 				},
 			crafting_speed = 70,
 			tech = 'scrondrix',
@@ -44,13 +44,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='salt',amount =4},
-                    {name='bedding',amount =1},
+                    {name='salt', amount =4},
+                    {name='bedding', amount =1},
 				},
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+6'},
+                    {name='manure', amount ='+6'},
 				},
 				crafting_speed = 55,
 				tech = 'scrondrix-mk02',
@@ -59,12 +59,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fish',amount =5},
+					{name='fish', amount =5},
 				},
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+2'},
+                    {name='manure', amount ='+2'},
 				},
 				crafting_speed = 50,
 				tech = 'scrondrix-mk02',
@@ -73,12 +73,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='navens',amount ='*4'},
+					{name='navens', amount ='*4'},
 				},
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+6'},
+                    {name='manure', amount ='+6'},
 				},
 				crafting_speed = 40,
 				tech = 'scrondrix-mk03',
@@ -87,12 +87,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount =10},
+					{name='raw-fiber', amount =10},
 				},
 			results =
 				{
 					--{'a','*5'}
-                    {name='manure',amount ='+2'},
+                    {name='manure', amount ='+2'},
 				},
 				crafting_speed = 25,
 				tech = 'scrondrix-mk04',

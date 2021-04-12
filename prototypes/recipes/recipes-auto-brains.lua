@@ -16,18 +16,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-arthurian',amount=1},
+					{name='caged-arthurian', amount=1},
 				},
 			results =
 				{
-					{name='bones', probability = 0.3,amount_min =1,amount_max =2},
-					{name='meat', probability = 0.4,amount_min =1,amount_max =3},
-					{name='skin', probability = 0.4,amount_min =1,amount_max =4},
-					{name='mukmoux-fat', probability = 0.2,amount_min =1,amount_max =1},
-					{name='guts', probability = 0.4,amount_min =1,amount_max =2},
+					{name='bones', probability = 0.3, amount_min =1, amount_max =2},
+					{name='meat', probability = 0.4, amount_min =1, amount_max =3},
+					{name='skin', probability = 0.4, amount_min =1, amount_max =4},
+					{name='mukmoux-fat', probability = 0.2, amount_min =1, amount_max =1},
+					{name='guts', probability = 0.4, amount_min =1, amount_max =2},
 					{name='blood', amount =20},
-					{name='cage',amount=1},
-					{name='brain', probability = 0.6,amount_min =1,amount_max =3},
+					{name='cage', amount=1},
+					{name='brain', probability = 0.6, amount_min =1, amount_max =3},
 				},
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
@@ -39,7 +39,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-arthurian',amount=1},
+					--{name='caged-arthurian', amount=1},
 				},
 			results =
 				{
@@ -74,18 +74,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-auog',amount=1},
+					{name='caged-auog', amount=1},
 				},
 			results =
 				{
-					{name='bones', probability = 0.3,amount_min =1,amount_max =4},
-					{name='meat', probability = 0.4,amount_min =2,amount_max =5},
-					{name='skin', probability = 0.3,amount_min =1,amount_max =2},
-					{name='mukmoux-fat', probability = 0.3,amount_min =1,amount_max =1},
-					{name='guts', probability = 0.4,amount_min =1,amount_max =1},
+					{name='bones', probability = 0.3, amount_min =1, amount_max =4},
+					{name='meat', probability = 0.4, amount_min =2, amount_max =5},
+					{name='skin', probability = 0.3, amount_min =1, amount_max =2},
+					{name='mukmoux-fat', probability = 0.3, amount_min =1, amount_max =1},
+					{name='guts', probability = 0.4, amount_min =1, amount_max =1},
 					{name='blood', amount =50},
-					{name='cage',amount=1},
-					{name='brain', probability = 0.4,amount_min =1,amount_max =2},
+					{name='cage', amount=1},
+					{name='brain', probability = 0.4, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
@@ -97,7 +97,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-auog',amount=1},
+					--{name='caged-auog', amount=1},
 				},
 			results =
 				{
@@ -132,17 +132,17 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cottongut',amount=6},
+					{name='cottongut', amount=6},
 				},
 			results =
 				{
-					{name='bones', probability = 0.4,amount_min =1,amount_max =5},
-					{name='meat', probability = 0.3,amount_min =1,amount_max =4},
-					{name='skin', probability = 0.4,amount_min =1,amount_max =4},
-					{name='guts', probability = 0.5,amount_min =1,amount_max =5},
-					{name='mukmoux-fat', probability = 0.3,amount_min =1,amount_max =4},
+					{name='bones', probability = 0.4, amount_min =1, amount_max =5},
+					{name='meat', probability = 0.3, amount_min =1, amount_max =4},
+					{name='skin', probability = 0.4, amount_min =1, amount_max =4},
+					{name='guts', probability = 0.5, amount_min =1, amount_max =5},
+					{name='mukmoux-fat', probability = 0.3, amount_min =1, amount_max =4},
 					{name='blood', amount =40},
-					{name='brain', probability = 0.3,amount_min =1,amount_max =2},
+					{name='brain', probability = 0.3, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
@@ -154,7 +154,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedcottongut',amount=1},
+					--{name='cagedcottongut', amount=1},
 				},
 			results =
 				{
@@ -189,18 +189,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-dingrits',amount=1},
+					{name='caged-dingrits', amount=1},
 				},
 			results =
 				{
-					{name='bones', probability = 0.3,amount_min =1,amount_max =2},
-					{name='meat', probability = 0.3,amount_min =1,amount_max =3},
-                    {name='guts', probability = 0.3,amount_min =1,amount_max =3},
-					{name='pelt', probability = 0.1,amount_min =1,amount_max =1},
-					{name='dingrit-spike', probability = 0.1,amount_min =1,amount_max =1},
+					{name='bones', probability = 0.3, amount_min =1, amount_max =2},
+					{name='meat', probability = 0.3, amount_min =1, amount_max =3},
+                    {name='guts', probability = 0.3, amount_min =1, amount_max =3},
+					{name='pelt', probability = 0.1, amount_min =1, amount_max =1},
+					{name='dingrit-spike', probability = 0.1, amount_min =1, amount_max =1},
 					{name='blood', amount =20},
-					{name='cage',amount=1},
-					{name='brain', probability = 0.3,amount_min =1,amount_max =2},
+					{name='cage', amount=1},
+					{name='brain', probability = 0.3, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
@@ -212,7 +212,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-dingrits',amount=1},
+					--{name='caged-dingrits', amount=1},
 				},
 			results =
 				{
@@ -247,17 +247,17 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-kmauts',amount=1},
+					{name='caged-kmauts', amount=1},
 				},
 			results =
 				{
-					{name='meat', probability = 0.3,amount_min =1,amount_max =2},
-                    {name='guts', probability = 0.3,amount_min =1,amount_max =2},
-                    {name='mukmoux-fat', probability = 0.2,amount_min =1,amount_max =2},
-					{name='tendon', probability = 0.3,amount_min =1,amount_max =1},
+					{name='meat', probability = 0.3, amount_min =1, amount_max =2},
+                    {name='guts', probability = 0.3, amount_min =1, amount_max =2},
+                    {name='mukmoux-fat', probability = 0.2, amount_min =1, amount_max =2},
+					{name='tendon', probability = 0.3, amount_min =1, amount_max =1},
 					{name='arthropod-blood', amount =10},
-					{name='cage',amount=1},
-					{name='brain', probability = 0.3,amount_min =1,amount_max =2},
+					{name='cage', amount=1},
+					{name='brain', probability = 0.3, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
@@ -269,7 +269,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-kmauts',amount=1},
+					--{name='caged-kmauts', amount=1},
 				},
 			results =
 				{
@@ -303,18 +303,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-korlex',amount=1},
+					{name='caged-korlex', amount=1},
 				},
 			results =
 				{
-					{name='bones', probability = 0.3,amount_min =1,amount_max =2},
-					{name='meat', probability = 0.4,amount_min =1,amount_max =3},
-					{name='skin', probability = 0.4,amount_min =1,amount_max =4},
-					{name='mukmoux-fat', probability = 0.2,amount_min =1,amount_max =1},
-					{name='guts', probability = 0.4,amount_min =1,amount_max =2},
+					{name='bones', probability = 0.3, amount_min =1, amount_max =2},
+					{name='meat', probability = 0.4, amount_min =1, amount_max =3},
+					{name='skin', probability = 0.4, amount_min =1, amount_max =4},
+					{name='mukmoux-fat', probability = 0.2, amount_min =1, amount_max =1},
+					{name='guts', probability = 0.4, amount_min =1, amount_max =2},
 					{name='blood', amount =20},
-					{name='cage',amount=1},
-					{name='brain', probability = 0.6,amount_min =1,amount_max =2},
+					{name='cage', amount=1},
+					{name='brain', probability = 0.6, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
@@ -326,7 +326,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-korlex',amount=1},
+					--{name='caged-korlex', amount=1},
 				},
 			results =
 				{
@@ -361,18 +361,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-mukmoux',amount=1},
+					{name='caged-mukmoux', amount=1},
 				},
 			results =
 				{
-					{name='bones', probability = 0.4,amount_min =1,amount_max =2},
-					{name='meat', probability = 0.4,amount_min =1,amount_max =4},
-					{name='skin', probability = 0.4,amount_min =1,amount_max =4},
-					{name='mukmoux-fat', probability = 0.4,amount_min =1,amount_max =3},
-					{name='guts', probability = 0.4,amount_min =1,amount_max =4},
+					{name='bones', probability = 0.4, amount_min =1, amount_max =2},
+					{name='meat', probability = 0.4, amount_min =1, amount_max =4},
+					{name='skin', probability = 0.4, amount_min =1, amount_max =4},
+					{name='mukmoux-fat', probability = 0.4, amount_min =1, amount_max =3},
+					{name='guts', probability = 0.4, amount_min =1, amount_max =4},
 					{name='blood', amount =50},
-					{name='cage',amount=1},
-					{name='brain', probability = 0.4,amount_min =1,amount_max =2},
+					{name='cage', amount=1},
+					{name='brain', probability = 0.4, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
@@ -384,7 +384,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-mukmoux',amount=1},
+					--{name='caged-mukmoux', amount=1},
 				},
 			results =
 				{
@@ -419,19 +419,19 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-phadai',amount=1},
+					{name='caged-phadai', amount=1},
 				},
 			results =
 				{
-					{name='bones', probability = 0.3,amount_min =1,amount_max =3},
-					{name='meat', probability = 0.3,amount_min =1,amount_max =1},
-                    {name='guts', probability = 0.3,amount_min =1,amount_max =3},
-                    {name='mukmoux-fat', probability = 0.1,amount_min =1,amount_max =1},
-                    {name='skin', probability = 0.1,amount_min =1,amount_max =1},
-					{name='carapace', probability = 0.3,amount_min =1,amount_max =1},
+					{name='bones', probability = 0.3, amount_min =1, amount_max =3},
+					{name='meat', probability = 0.3, amount_min =1, amount_max =1},
+                    {name='guts', probability = 0.3, amount_min =1, amount_max =3},
+                    {name='mukmoux-fat', probability = 0.1, amount_min =1, amount_max =1},
+                    {name='skin', probability = 0.1, amount_min =1, amount_max =1},
+					{name='carapace', probability = 0.3, amount_min =1, amount_max =1},
 					{name='blood', amount =30},
-					{name='cage',amount=1},
-					{name='brain', probability = 0.5,amount_min =1,amount_max =2},
+					{name='cage', amount=1},
+					{name='brain', probability = 0.5, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
@@ -443,7 +443,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-phadai',amount=1},
+					--{name='caged-phadai', amount=1},
 				},
 			results =
 				{
@@ -480,18 +480,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-phagnot',amount=1},
+					{name='caged-phagnot', amount=1},
 				},
 			results =
 				{
-					{name='bones', probability = 0.5,amount_min =1,amount_max =6},
-					{name='meat', probability = 0.1,amount_min =1,amount_max =2},
-					{name='skin', probability = 0.2,amount_min =1,amount_max =1},
-                    {name='guts', probability = 0.3,amount_min =1,amount_max =1},
-                    {name='gas-bladder', probability = 0.4,amount_min =1,amount_max =1},
+					{name='bones', probability = 0.5, amount_min =1, amount_max =6},
+					{name='meat', probability = 0.1, amount_min =1, amount_max =2},
+					{name='skin', probability = 0.2, amount_min =1, amount_max =1},
+                    {name='guts', probability = 0.3, amount_min =1, amount_max =1},
+                    {name='gas-bladder', probability = 0.4, amount_min =1, amount_max =1},
 					{name='blood', amount =20},
-					{name='cage',amount=1},
-					{name='brain', probability = 0.4,amount_min =1,amount_max =2},
+					{name='cage', amount=1},
+					{name='brain', probability = 0.4, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
@@ -503,7 +503,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-phagnot',amount=1},
+					--{name='caged-phagnot', amount=1},
 				},
 			results =
 				{
@@ -539,19 +539,19 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-scrondrix',amount=1},
+					{name='caged-scrondrix', amount=1},
 				},
 			results =
 				{
-					{name='bones', probability = 0.5,amount_min =1,amount_max =2},
-					{name='meat', probability = 0.5,amount_min =1,amount_max =3},
-					{name='skin', probability = 0.4,amount_min =1,amount_max =1},
-					{name='mukmoux-fat', probability = 0.4,amount_min =1,amount_max =2},
-					{name='guts', probability = 0.5,amount_min =1,amount_max =2},
+					{name='bones', probability = 0.5, amount_min =1, amount_max =2},
+					{name='meat', probability = 0.5, amount_min =1, amount_max =3},
+					{name='skin', probability = 0.4, amount_min =1, amount_max =1},
+					{name='mukmoux-fat', probability = 0.4, amount_min =1, amount_max =2},
+					{name='guts', probability = 0.5, amount_min =1, amount_max =2},
 					{name='blood', amount =60},
-					{name='pineal-gland', probability = 0.4,amount_min =1,amount_max =1},
-					{name='cage',amount=1},
-					{name='brain', probability = 0.5,amount_min =1,amount_max =2},
+					{name='pineal-gland', probability = 0.4, amount_min =1, amount_max =1},
+					{name='cage', amount=1},
+					{name='brain', probability = 0.5, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
@@ -563,7 +563,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-scrondrix',amount=1},
+					--{name='caged-scrondrix', amount=1},
 				},
 			results =
 				{
@@ -599,20 +599,20 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-simik',amount=1},
+					{name='caged-simik', amount=1},
 				},
 			results =
 				{
-					{name='bones', probability = 0.1,amount_min =1,amount_max =4},
-					{name='meat', probability = 0.3,amount_min =2,amount_max =5},
-                    {name='skin', probability = 0.2,amount_min =1,amount_max =2},
-                    {name='chitin', probability = 0.2,amount_min =1,amount_max =1},
-					{name='mukmoux-fat', probability = 0.2,amount_min =1,amount_max =1},
-                    {name='guts', probability = 0.4,amount_min =1,amount_max =1},
-                    {name='keratin', probability = 0.1,amount_min =1,amount_max =1},
+					{name='bones', probability = 0.1, amount_min =1, amount_max =4},
+					{name='meat', probability = 0.3, amount_min =2, amount_max =5},
+                    {name='skin', probability = 0.2, amount_min =1, amount_max =2},
+                    {name='chitin', probability = 0.2, amount_min =1, amount_max =1},
+					{name='mukmoux-fat', probability = 0.2, amount_min =1, amount_max =1},
+                    {name='guts', probability = 0.4, amount_min =1, amount_max =1},
+                    {name='keratin', probability = 0.1, amount_min =1, amount_max =1},
 					{name='simik-blood', amount =30},
-					{name='cage',amount=1},
-					{name='brain', probability = 0.3,amount_min =1,amount_max =2},
+					{name='cage', amount=1},
+					{name='brain', probability = 0.3, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
@@ -624,7 +624,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-scrondrix',amount=1},
+					--{name='caged-scrondrix', amount=1},
 				},
 			results =
 				{
@@ -661,19 +661,19 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='trits',amount=1},
+					{name='trits', amount=1},
 				},
 			results =
 				{
-					{name='bones', probability = 0.3,amount_min =1,amount_max =4},
-					{name='meat', probability = 0.4,amount_min =1,amount_max =4},
-					{name='skin', probability = 0.4,amount_min =1,amount_max =3},
-					{name='mukmoux-fat', probability = 0.4,amount_min =2,amount_max =5},
-					{name='guts', probability = 0.4,amount_min =1,amount_max =4},
-					{name='photophore', probability = 0.2,amount_min =1,amount_max =2},
+					{name='bones', probability = 0.3, amount_min =1, amount_max =4},
+					{name='meat', probability = 0.4, amount_min =1, amount_max =4},
+					{name='skin', probability = 0.4, amount_min =1, amount_max =3},
+					{name='mukmoux-fat', probability = 0.4, amount_min =2, amount_max =5},
+					{name='guts', probability = 0.4, amount_min =1, amount_max =4},
+					{name='photophore', probability = 0.2, amount_min =1, amount_max =2},
 					{name='blood', amount =60},
-					--{name='cage',amount=1},
-					{name='brain', probability = 0.4,amount_min =1,amount_max =2},
+					--{name='cage', amount=1},
+					{name='brain', probability = 0.4, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
@@ -685,7 +685,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='trits',amount=1},
+					--{name='trits', amount=1},
 				},
 			results =
 				{
@@ -721,18 +721,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-ulric',amount=1},
+					{name='caged-ulric', amount=1},
 				},
 			results =
 				{
-					{name='bones', probability = 0.4,amount_min =1,amount_max =3},
-					{name='meat', probability = 0.4,amount_min =1,amount_max =3},
-					{name='skin', probability = 0.2,amount_min =1,amount_max =1},
-					{name='mukmoux-fat', probability = 0.3,amount_min =1,amount_max =1},
-					{name='guts', probability = 0.4,amount_min =1,amount_max =1},
+					{name='bones', probability = 0.4, amount_min =1, amount_max =3},
+					{name='meat', probability = 0.4, amount_min =1, amount_max =3},
+					{name='skin', probability = 0.2, amount_min =1, amount_max =1},
+					{name='mukmoux-fat', probability = 0.3, amount_min =1, amount_max =1},
+					{name='guts', probability = 0.4, amount_min =1, amount_max =1},
 					{name='blood', amount =50},
-					{name='cage',amount=1},
-					{name='brain', probability = 0.4,amount_min =1,amount_max =2},
+					{name='cage', amount=1},
+					{name='brain', probability = 0.4, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
@@ -744,7 +744,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-ulric',amount=1},
+					--{name='caged-ulric', amount=1},
 				},
 			results =
 				{
@@ -779,18 +779,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='vonix',amount=1},
+					{name='vonix', amount=1},
 				},
 			results =
 				{
-					--{name='bones', probability = 0.5,amount_min =1,amount_max =2},
-					{name='meat', probability = 0.5,amount_min =1,amount_max =6},
-					{name='skin', probability = 0.4,amount_min =1,amount_max =4},
-					{name='mukmoux-fat', probability = 0.5,amount_min =1,amount_max =5},
-					{name='guts', probability = 0.4,amount_min =1,amount_max =6},
+					--{name='bones', probability = 0.5, amount_min =1, amount_max =2},
+					{name='meat', probability = 0.5, amount_min =1, amount_max =6},
+					{name='skin', probability = 0.4, amount_min =1, amount_max =4},
+					{name='mukmoux-fat', probability = 0.5, amount_min =1, amount_max =5},
+					{name='guts', probability = 0.4, amount_min =1, amount_max =6},
 					{name='arthropod-blood', amount =80},
-					{name='venon-gland', probability = 0.2,amount_min =1,amount_max =1},
-					{name='brain', probability = 0.3,amount_min =1,amount_max =2},
+					{name='venon-gland', probability = 0.2, amount_min =1, amount_max =1},
+					{name='brain', probability = 0.3, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
@@ -802,7 +802,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='vonix',amount=1},
+					--{name='vonix', amount=1},
 				},
 			results =
 				{
@@ -837,18 +837,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-vrauks',amount=1},
+					{name='caged-vrauks', amount=1},
 				},
 			results =
 				{
-					--{name='bones', probability = 0.3,amount_min =1,amount_max =4},
-					{name='meat', probability = 0.4,amount_min =1,amount_max =2},
-					{name='chitin', probability = 0.3,amount_min =1,amount_max =1},
-					--{name='mukmoux-fat', probability = 0.3,amount_min =1,amount_max =1},
-					{name='guts', probability = 0.4,amount_min =1,amount_max =2},
+					--{name='bones', probability = 0.3, amount_min =1, amount_max =4},
+					{name='meat', probability = 0.4, amount_min =1, amount_max =2},
+					{name='chitin', probability = 0.3, amount_min =1, amount_max =1},
+					--{name='mukmoux-fat', probability = 0.3, amount_min =1, amount_max =1},
+					{name='guts', probability = 0.4, amount_min =1, amount_max =2},
 					{name='formic-acid', amount =200},
-					{name='cage',amount=1},
-					{name='brain', probability = 0.4,amount_min =1,amount_max =2},
+					{name='cage', amount=1},
+					{name='brain', probability = 0.4, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
@@ -860,7 +860,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-vrauks',amount=1},
+					--{name='caged-vrauks', amount=1},
 				},
 			results =
 				{
@@ -893,18 +893,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-xeno',amount=1},
+					{name='caged-xeno', amount=1},
 				},
 			results =
 				{
-					{name='bones', probability = 0.45,amount_min =1,amount_max =3},
-					{name='meat', probability = 0.4,amount_min =1,amount_max =3},
-					{name='chitin', probability = 0.4,amount_min =1,amount_max =4},
-					--{name='mukmoux-fat', probability = 0.2,amount_min =1,amount_max =1},
-					--{name='guts', probability = 0.4,amount_min =1,amount_max =2},
+					{name='bones', probability = 0.45, amount_min =1, amount_max =3},
+					{name='meat', probability = 0.4, amount_min =1, amount_max =3},
+					{name='chitin', probability = 0.4, amount_min =1, amount_max =4},
+					--{name='mukmoux-fat', probability = 0.2, amount_min =1, amount_max =1},
+					--{name='guts', probability = 0.4, amount_min =1, amount_max =2},
 					{name='sulfuric-acid', amount =60},
-					{name='cage',amount=1},
-					{name='brain', probability = 0.5,amount_min =1,amount_max =2},
+					{name='cage', amount=1},
+					{name='brain', probability = 0.5, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
@@ -916,7 +916,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-xeno',amount=1},
+					--{name='caged-xeno', amount=1},
 				},
 			results =
 				{
@@ -949,17 +949,17 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='zipir',amount=1},
+					{name='zipir', amount=1},
 				},
 			results =
 				{
-					--{name='bones', probability = 0.5,amount_min =1,amount_max =2},
-					{name='meat', probability = 0.4,amount_min =1,amount_max =4},
-					{name='skin', probability = 0.5,amount_min =1,amount_max =6},
-					{name='mukmoux-fat', probability = 0.4,amount_min =1,amount_max =3},
-					{name='guts', probability = 0.4,amount_min =1,amount_max =4},
+					--{name='bones', probability = 0.5, amount_min =1, amount_max =2},
+					{name='meat', probability = 0.4, amount_min =1, amount_max =4},
+					{name='skin', probability = 0.5, amount_min =1, amount_max =6},
+					{name='mukmoux-fat', probability = 0.4, amount_min =1, amount_max =3},
+					{name='guts', probability = 0.4, amount_min =1, amount_max =4},
 					{name='arthropod-blood', amount =50},
-					{name='brain', probability = 0.3,amount_min =1,amount_max =2},
+					{name='brain', probability = 0.3, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'interactive-cognition',
@@ -971,7 +971,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='zipir',amount=1},
+					--{name='zipir', amount=1},
 				},
 			results =
 				{

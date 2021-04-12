@@ -11,14 +11,14 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='biomass',amount =15},
-                    {name='moss',amount =5},
-					{name='water-barrel',amount=3,return_item={name='empty-barrel',amount=3}},
-					{name='cage',amount=1},
+                    {name='biomass', amount =15},
+                    {name='moss', amount =5},
+					{name='water-barrel', amount=3,return_item={name='empty-barrel', amount=3}},
+					{name='cage', amount=1},
 				},
 			results =
 				{
-					{name='caged-auog', probability = 0.7,amount_min =1,amount_max =1},
+					{name='caged-auog', probability = 0.7, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 160,
 			tech = 'auog'
@@ -28,12 +28,12 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='biomass',remove_item = true},
-					{name='auog-food-01',amount =1},
+					{name='auog-food-01', amount =1},
 				},
 			results =
 				{
 					{name='caged-auog',remove_item = true},
-					{name='caged-auog', probability = 0.8,amount_min =1,amount_max =1},
+					{name='caged-auog', probability = 0.8, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 150,
 			tech = 'auog'
@@ -42,8 +42,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='saps',amount = 5},
-					{name='bedding',amount = 1},
+					{name='saps', amount = 5},
+					{name='bedding', amount = 1},
 				},
 			results =
 				{
@@ -56,7 +56,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount = 5},
+					{name='raw-fiber', amount = 5},
 				},
 			results =
 				{
@@ -72,13 +72,13 @@ fun.autorecipes {
 					{name='auog-food-01',remove_item = true},
 					{name='saps',remove_item = true},
 					{name='raw-fiber',remove_item = true},
-					{name='auog-food-02',amount =1},
+					{name='auog-food-02', amount =1},
 
 				},
 			results =
 				{
 					{name='caged-auog',remove_item = true},
-					{name='caged-auog', probability = 0.9,amount_min =1,amount_max =1},
+					{name='caged-auog', probability = 0.9, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 120,
 			tech = 'auog-mk03'
@@ -87,7 +87,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='saps',amount =5},
+					{name='saps', amount =5},
 				},
 			results =
 				{
@@ -100,7 +100,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount = 5},
+					{name='raw-fiber', amount = 5},
 				},
 			results =
 				{
@@ -113,7 +113,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 
 				},
 			results =
@@ -127,12 +127,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='antiviral',amount =1},
+					{name='antiviral', amount =1},
 				},
 			results =
 				{
 					{name='caged-auog', remove_item = true},
-					{name='caged-auog', probability = 1,amount_min =1,amount_max =2},
+					{name='caged-auog', probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -141,7 +141,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='antiviral',amount =1},
+					--{name='antiviral', amount =1},
 					{name='gh',remove_item = true},
 				},
 			results =
@@ -155,7 +155,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='nanochondria',amount =1},
+					{name='nanochondria', amount =1},
 					--{name='antiviral',remove_item = true},
 				},
 			results =
@@ -170,8 +170,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -186,7 +186,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='nanochondria',remove_item = true},
-					{name='bmp',amount =1},
+					{name='bmp', amount =1},
 				},
 			results =
 				{
@@ -201,8 +201,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -217,7 +217,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='bmp',remove_item = true},
-					{name='anabolic-rna',amount =1},
+					{name='anabolic-rna', amount =1},
 				},
 			results =
 				{
@@ -231,8 +231,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -247,7 +247,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='anabolic-rna',remove_item = true},
-					{name='antitumor',amount =1},
+					{name='antitumor', amount =1},
 				},
 			results =
 				{
@@ -261,8 +261,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -277,7 +277,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='antitumor',remove_item = true},
-					{name='recombinant-ery',amount =1},
+					{name='recombinant-ery', amount =1},
 				},
 			results =
 				{
@@ -291,7 +291,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -306,7 +306,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='recombinant-ery',remove_item = true},
-					{name='reca',amount =1},
+					{name='reca', amount =1},
 				},
 			results =
 				{
@@ -320,7 +320,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -335,7 +335,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='reca',remove_item = true},
-					{name='orexigenic',amount =1},
+					{name='orexigenic', amount =1},
 				},
 			results =
 				{
@@ -349,7 +349,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -374,14 +374,14 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='biomass',amount =30},
-                    {name='moss',amount =20},
-					{name='water-barrel',amount=10,return_item={name='empty-barrel',amount=10}},
-					{name='bedding',amount = 1},
+                    {name='biomass', amount =30},
+                    {name='moss', amount =20},
+					{name='water-barrel', amount=10,return_item={name='empty-barrel', amount=10}},
+					{name='bedding', amount = 1},
 				},
 			results =
 				{
-					{name='auog-pup', probability = 0.8,amount_min =3,amount_max =3},
+					{name='auog-pup', probability = 0.8, amount_min =3, amount_max =3},
 				},
 			crafting_speed = 140,
 			tech = 'assisted-embryology'
@@ -391,7 +391,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='biomass',remove_item = true},
-					{name='auog-food-01',amount =2},
+					{name='auog-food-01', amount =2},
 				},
 			results =
 				{
@@ -404,7 +404,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='saps',amount = 15},
+					{name='saps', amount = 15},
 				},
 			results =
 				{
@@ -417,7 +417,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount = 10},
+					{name='raw-fiber', amount = 10},
 				},
 			results =
 				{
@@ -433,7 +433,7 @@ fun.autorecipes {
 					{name='auog-food-01',remove_item = true},
 					{name='saps',remove_item = true},
 					{name='raw-fiber',remove_item = true},
-					{name='auog-food-02',amount =2},
+					{name='auog-food-02', amount =2},
 
 				},
 			results =
@@ -460,7 +460,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount = 10},
+					{name='raw-fiber', amount = 10},
 				},
 			results =
 				{
@@ -476,10 +476,10 @@ fun.autorecipes {
 					{name='raw-fiber',remove_item = true},
 					{name='saps',remove_item = true},
 					{name='auog-food-02',remove_item = true},
-					{name='biomass',amount =30},
-					{name='pheromones',amount =1},
-					--{name='water-barrel',amount=6,return_item={name='empty-barrel',amount=6}},
-					--{name='bedding',amount = 1},
+					{name='biomass', amount =30},
+					{name='pheromones', amount =1},
+					--{name='water-barrel', amount=6,return_item={name='empty-barrel', amount=6}},
+					--{name='bedding', amount = 1},
 				},
 			results =
 				{
@@ -495,7 +495,7 @@ fun.autorecipes {
 				{
 
                     {name='biomass',remove_item = true},
-					{name='auog-food-01',amount =2},
+					{name='auog-food-01', amount =2},
 				},
 			results =
 				{
@@ -508,7 +508,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='saps',amount = 15},
+					{name='saps', amount = 15},
 				},
 			results =
 				{
@@ -521,7 +521,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount = 10},
+					{name='raw-fiber', amount = 10},
 				},
 			results =
 				{
@@ -537,7 +537,7 @@ fun.autorecipes {
 					{name='auog-food-01',remove_item = true},
 					{name='saps',remove_item = true},
 					{name='raw-fiber',remove_item = true},
-					{name='auog-food-02',amount =2},
+					{name='auog-food-02', amount =2},
 
 				},
 			results =
@@ -564,7 +564,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount = 10},
+					{name='raw-fiber', amount = 10},
 				},
 			results =
 				{
@@ -589,18 +589,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-auog',amount=1},
+					{name='caged-auog', amount=1},
 				},
 			results =
 				{
-					{name='bones', probability = 0.3,amount_min =1,amount_max =4},
-					{name='meat', probability = 0.4,amount_min =2,amount_max =5},
-					{name='skin', probability = 0.3,amount_min =1,amount_max =2},
-					{name='mukmoux-fat', probability = 0.3,amount_min =1,amount_max =1},
-					{name='guts', probability = 0.4,amount_min =1,amount_max =1},
+					{name='bones', probability = 0.3, amount_min =1, amount_max =4},
+					{name='meat', probability = 0.4, amount_min =2, amount_max =5},
+					{name='skin', probability = 0.3, amount_min =1, amount_max =2},
+					{name='mukmoux-fat', probability = 0.3, amount_min =1, amount_max =1},
+					{name='guts', probability = 0.4, amount_min =1, amount_max =1},
 					{name='blood', amount =50},
-					{name='cage',amount=1},
-					{name='brain', probability = 0.4,amount_min =1,amount_max =1},
+					{name='cage', amount=1},
+					{name='brain', probability = 0.4, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 30,
 			tech = 'rendering',
@@ -612,7 +612,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-auog',amount=1},
+					--{name='caged-auog', amount=1},
 				},
 			results =
 				{
@@ -635,7 +635,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-auog',amount=1},
+					--{name='caged-auog', amount=1},
 				},
 			results =
 				{
@@ -652,7 +652,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-auog',amount=1},
+					--{name='caged-auog', amount=1},
 				},
 			results =
 				{
@@ -669,7 +669,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-auog',amount=1},
+					--{name='caged-auog', amount=1},
 				},
 			results =
 				{
@@ -686,7 +686,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-auog',amount=1},
+					--{name='caged-auog', amount=1},
 				},
 			results =
 				{
@@ -703,7 +703,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-auog',amount=1},
+					--{name='caged-auog', amount=1},
 				},
 			results =
 				{
@@ -720,7 +720,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-auog',amount=1},
+					--{name='caged-auog', amount=1},
 				},
 			results =
 				{
@@ -737,7 +737,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-auog',amount=1},
+					--{name='caged-auog', amount=1},
 				},
 			results =
 				{
@@ -755,13 +755,13 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-auog',remove_item = true},
-					{name='brain-caged-auog',amount=2},
+					{name='brain-caged-auog', amount=2},
 				},
 			results =
 				{
 					{name='mukmoux-fat', remove_item = true},
 					{name='brain', amount =8},
-					{name='cage',amount = 1}
+					{name='cage', amount = 1}
 				},
 			crafting_speed = 30,
 			tech = 'nanochondria',
@@ -774,7 +774,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='brain-caged-auog',remove_item = true},
-					{name='bone-caged-auog',amount=1},
+					{name='bone-caged-auog', amount=1},
 				},
 			results =
 				{
@@ -809,7 +809,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='bone-caged-auog',remove_item = true},
-					{name='meat-caged-auog',amount=1},
+					{name='meat-caged-auog', amount=1},
 				},
 			results =
 				{
@@ -827,7 +827,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='meat-caged-auog',remove_item = true},
-					{name='guts-caged-auog',amount=1},
+					{name='guts-caged-auog', amount=1},
 				},
 			results =
 				{
@@ -845,7 +845,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='guts-caged-auog',remove_item = true},
-					{name='blood-caged-auog',amount=1},
+					{name='blood-caged-auog', amount=1},
 				},
 			results =
 				{
@@ -863,7 +863,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='blood-caged-auog',remove_item = true},
-					{name='skin-caged-auog',amount=1},
+					{name='skin-caged-auog', amount=1},
 				},
 			results =
 				{
@@ -881,7 +881,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='skin-caged-auog',remove_item = true},
-					{name='fat-caged-auog',amount=1},
+					{name='fat-caged-auog', amount=1},
 				},
 			results =
 				{

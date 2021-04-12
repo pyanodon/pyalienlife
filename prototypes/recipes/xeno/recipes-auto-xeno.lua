@@ -11,13 +11,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-mukmoux',amount =1},
-					{name='xeno-egg',amount =1},
-					{name='water-barrel',amount=6,return_item={name='empty-barrel',amount=6}},
+					{name='caged-mukmoux', amount =1},
+					{name='xeno-egg', amount =1},
+					{name='water-barrel', amount=6,return_item={name='empty-barrel', amount=6}},
 				},
 			results =
 				{
-					{name='caged-xeno', probability = 0.8,amount_min =1,amount_max =1},
+					{name='caged-xeno', probability = 0.8, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 130,
 			tech = 'xeno'
@@ -26,7 +26,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='bones',amount =10},
+					{name='bones', amount =10},
 				},
 			results =
 				{
@@ -39,7 +39,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fish',amount = 8},
+					{name='fish', amount = 8},
 				},
 			results =
 				{
@@ -52,7 +52,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='guts',amount = 5},
+					{name='guts', amount = 5},
 				},
 			results =
 				{
@@ -68,14 +68,14 @@ fun.autorecipes {
 					--{name='meat',remove_item = true},
 					{name='fish',remove_item = true},
 					{name='guts',remove_item = true},
-					{name='xeno-egg',amount ='+1'},
-					{name='caged-ulric',amount =1},
+					{name='xeno-egg', amount ='+1'},
+					{name='caged-ulric', amount =1},
 
 				},
 			results =
 				{
 					{name='caged-xeno',remove_item = true},
-					{name='caged-xeno', probability = 1.8,amount_min =1,amount_max =1},
+					{name='caged-xeno', probability = 1.8, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 90,
 			tech = 'xeno'
@@ -84,7 +84,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fish',amount =8},
+					{name='fish', amount =8},
 				},
 			results =
 				{
@@ -97,7 +97,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='guts',amount = 5},
+					{name='guts', amount = 5},
 				},
 			results =
 				{
@@ -110,7 +110,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 
 				},
 			results =
@@ -124,12 +124,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='antiviral',amount =1},
+					{name='antiviral', amount =1},
 				},
 			results =
 				{
 					{name='caged-xeno', remove_item = true},
-					{name='caged-xeno', probability = 1.5,amount_min =1,amount_max =2},
+					{name='caged-xeno', probability = 1.5, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -138,7 +138,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='antiviral',amount =1},
+					--{name='antiviral', amount =1},
 					{name='gh',remove_item = true},
 				},
 			results =
@@ -152,7 +152,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='nanochondria',amount =1},
+					{name='nanochondria', amount =1},
 					--{name='antiviral',remove_item = true},
 				},
 			results =
@@ -167,8 +167,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -183,7 +183,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='nanochondria',remove_item = true},
-					{name='bmp',amount =1},
+					{name='bmp', amount =1},
 				},
 			results =
 				{
@@ -198,8 +198,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -214,7 +214,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='bmp',remove_item = true},
-					{name='anabolic-rna',amount =1},
+					{name='anabolic-rna', amount =1},
 				},
 			results =
 				{
@@ -228,8 +228,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -244,7 +244,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='anabolic-rna',remove_item = true},
-					{name='recombinant-ery',amount =1},
+					{name='recombinant-ery', amount =1},
 				},
 			results =
 				{
@@ -258,7 +258,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -273,7 +273,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='recombinant-ery',remove_item = true},
-					{name='reca',amount =1},
+					{name='reca', amount =1},
 				},
 			results =
 				{
@@ -287,7 +287,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -312,11 +312,11 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='caged-mukmoux',amount =2},
+                    {name='caged-mukmoux', amount =2},
                     {name='bones',remove_item = true},
                     {name='guts',remove_item = true},
-					{name='water-barrel',amount=15,return_item={name='empty-barrel',amount=15}},
-					{name='fish',amount = 25},
+					{name='water-barrel', amount=15,return_item={name='empty-barrel', amount=15}},
+					{name='fish', amount = 25},
 				},
 			results =
 				{
@@ -329,7 +329,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='bones',amount =20},
+					{name='bones', amount =20},
 				},
 			results =
 				{
@@ -342,7 +342,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='guts',amount = 10},
+					{name='guts', amount = 10},
 				},
 			results =
 				{
@@ -357,7 +357,7 @@ fun.autorecipes {
 				{
                     {name='meat',remove_item = true},
                     {name='guts',remove_item = true},
-					{name='caged-ulric',amount =2},
+					{name='caged-ulric', amount =2},
 
 				},
 			results =
@@ -371,7 +371,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='guts',amount = 10},
+					{name='guts', amount = 10},
 				},
 			results =
 				{
@@ -386,10 +386,10 @@ fun.autorecipes {
 				{
 					{name='guts',remove_item = true},
 					{name='caged-ulric',remove_item = true},
-					--{name='bones',amount =15},
-					{name='pheromones',amount =1},
-					--{name='water-barrel',amount=6,return_item={name='empty-barrel',amount=6}},
-					--{name='fish',amount = 1},
+					--{name='bones', amount =15},
+					{name='pheromones', amount =1},
+					--{name='water-barrel', amount=6,return_item={name='empty-barrel', amount=6}},
+					--{name='fish', amount = 1},
 				},
 			results =
 				{
@@ -403,7 +403,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='meat',amount =10},
+					{name='meat', amount =10},
 				},
 			results =
 				{
@@ -416,7 +416,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='guts',amount = 10},
+					{name='guts', amount = 10},
 				},
 			results =
 				{
@@ -431,7 +431,7 @@ fun.autorecipes {
 				{
 					{name='meat',remove_item = true},
 					{name='guts',remove_item = true},
-					{name='caged-ulric',amount =2},
+					{name='caged-ulric', amount =2},
 
 				},
 			results =
@@ -445,7 +445,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='guts',amount = 10},
+					{name='guts', amount = 10},
 				},
 			results =
 				{
@@ -471,18 +471,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-xeno',amount=1},
+					{name='caged-xeno', amount=1},
 				},
 			results =
 				{
-					{name='bones', probability = 0.45,amount_min =1,amount_max =3},
-					{name='meat', probability = 0.4,amount_min =1,amount_max =3},
-					{name='chitin', probability = 0.4,amount_min =1,amount_max =4},
-					--{name='mukmoux-fat', probability = 0.2,amount_min =1,amount_max =1},
-					--{name='guts', probability = 0.4,amount_min =1,amount_max =2},
+					{name='bones', probability = 0.45, amount_min =1, amount_max =3},
+					{name='meat', probability = 0.4, amount_min =1, amount_max =3},
+					{name='chitin', probability = 0.4, amount_min =1, amount_max =4},
+					--{name='mukmoux-fat', probability = 0.2, amount_min =1, amount_max =1},
+					--{name='guts', probability = 0.4, amount_min =1, amount_max =2},
 					{name='sulfuric-acid', amount =60},
-					{name='cage',amount=1},
-					{name='brain', probability = 0.5,amount_min =1,amount_max =1},
+					{name='cage', amount=1},
+					{name='brain', probability = 0.5, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 30,
 			tech = 'xeno',
@@ -494,7 +494,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-xeno',amount=1},
+					--{name='caged-xeno', amount=1},
 				},
 			results =
 				{
@@ -515,7 +515,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-xeno',amount=1},
+					--{name='caged-xeno', amount=1},
 				},
 			results =
 				{
@@ -532,7 +532,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-xeno',amount=1},
+					--{name='caged-xeno', amount=1},
 				},
 			results =
 				{
@@ -549,7 +549,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-xeno',amount=1},
+					--{name='caged-xeno', amount=1},
 				},
 			results =
 				{
@@ -566,7 +566,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-xeno',amount=1},
+					--{name='caged-xeno', amount=1},
 				},
 			results =
 				{
@@ -584,7 +584,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-xeno',remove_item = true},
-					{name='brain-xeno',amount=1},
+					{name='brain-xeno', amount=1},
 				},
 			results =
 				{
@@ -602,7 +602,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='brain-xeno',remove_item = true},
-					{name='bone-xeno',amount=1},
+					{name='bone-xeno', amount=1},
 				},
 			results =
 				{
@@ -637,7 +637,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='bone-xeno',remove_item = true},
-					{name='blood-xeno',amount=1},
+					{name='blood-xeno', amount=1},
 				},
 			results =
 				{
@@ -655,7 +655,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='blood-xeno',remove_item = true},
-					{name='chitin-xeno',amount=1},
+					{name='chitin-xeno', amount=1},
 				},
 			results =
 				{
@@ -673,7 +673,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='chitin-xeno',remove_item = true},
-					{name='meat-xeno',amount=1},
+					{name='meat-xeno', amount=1},
 				},
 			results =
 				{

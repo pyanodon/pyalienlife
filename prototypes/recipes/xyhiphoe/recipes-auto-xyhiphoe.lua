@@ -11,13 +11,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='fishfood1',amount =1},
-                    {name='phytoplankton',amount =50},
-					{name='pressured-water',amount ='*3000',return_item={name='waste-water',amount= 200}},
+                    {name='fishfood1', amount =1},
+                    {name='phytoplankton', amount =50},
+					{name='pressured-water', amount ='*3000',return_item={name='waste-water', amount= 200}},
 				},
 			results =
 				{
-					{name='xyhiphoe', probability = 0.8,amount_min =1,amount_max =1},
+					{name='xyhiphoe', probability = 0.8, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 150,
 			tech = 'water-invertebrates-mk01'
@@ -28,7 +28,7 @@ fun.autorecipes {
 				{
                     --{name='phytoplankton',remove_item = true},
                     --{name='fishfood1',remove_item = true},
-					{name='filtration-media',amount =1},
+					{name='filtration-media', amount =1},
 				},
 			results =
 				{
@@ -41,7 +41,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='blood-meal',amount = 5},
+					{name='blood-meal', amount = 5},
 				},
 			results =
 				{
@@ -54,7 +54,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='saps',amount = 2},
+					{name='saps', amount = 2},
 				},
 			results =
 				{
@@ -69,13 +69,13 @@ fun.autorecipes {
 				{
 					{name='blood-meal',remove_item = true},
 					{name='saps',remove_item = true},
-					{name='fish-egg',amount =15},
+					{name='fish-egg', amount =15},
 
 				},
 			results =
 				{
 					{name='xyhiphoe',remove_item = true},
-					{name='xyhiphoe', probability = 0.9,amount_min =1,amount_max =1},
+					{name='xyhiphoe', probability = 0.9, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 110,
 			tech = 'water-invertebrates-mk03'
@@ -84,7 +84,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='blood-meal',amount =5},
+					{name='blood-meal', amount =5},
 				},
 			results =
 				{
@@ -97,7 +97,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='saps',amount = 5},
+					{name='saps', amount = 5},
 				},
 			results =
 				{
@@ -110,7 +110,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 
 				},
 			results =
@@ -124,12 +124,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='antiviral',amount =1},
+					{name='antiviral', amount =1},
 				},
 			results =
 				{
 					{name='xyhiphoe', remove_item = true},
-					{name='xyhiphoe', probability = 1,amount_min =1,amount_max =2},
+					{name='xyhiphoe', probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -138,7 +138,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='antiviral',amount =1},
+					--{name='antiviral', amount =1},
 					{name='gh',remove_item = true},
 				},
 			results =
@@ -154,7 +154,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					--{name='bmp',remove_item = true},
-					{name='anabolic-rna',amount =1},
+					{name='anabolic-rna', amount =1},
 				},
 			results =
 				{
@@ -168,8 +168,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -184,7 +184,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='anabolic-rna',remove_item = true},
-					{name='antitumor',amount =1},
+					{name='antitumor', amount =1},
 				},
 			results =
 				{
@@ -198,8 +198,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -214,7 +214,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='antitumor',remove_item = true},
-					{name='recombinant-ery',amount =1},
+					{name='recombinant-ery', amount =1},
 				},
 			results =
 				{
@@ -228,7 +228,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -253,11 +253,11 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='fishfood1',amount =2},
-                    {name='phytoplankton',amount =150},
-					{name='pressured-water',amount ='*1000',return_item={name='waste-water',amount= 650}},
-					--{name='cage',amount=1},
-					{name='saps',amount = 6},
+                    {name='fishfood1', amount =2},
+                    {name='phytoplankton', amount =150},
+					{name='pressured-water', amount ='*1000',return_item={name='waste-water', amount= 650}},
+					--{name='cage', amount=1},
+					{name='saps', amount = 6},
 				},
 			results =
 				{
@@ -272,7 +272,7 @@ fun.autorecipes {
 				{
                     --{name='phytoplankton',remove_item = true},
                     --{name='fishfood1',remove_item = true},
-					{name='filtration-media',amount =2},
+					{name='filtration-media', amount =2},
 				},
 			results =
 				{
@@ -285,7 +285,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='blood-meal',amount = 4},
+					{name='blood-meal', amount = 4},
 				},
 			results =
 				{
@@ -298,7 +298,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='albumin',amount = 1},
+					{name='albumin', amount = 1},
 				},
 			results =
 				{
@@ -314,7 +314,7 @@ fun.autorecipes {
 					--{name='filtration-media',remove_item = true},
 					--{name='blood-meal',remove_item = true},
 					--{name='albumin',remove_item = true},
-					{name='fish-egg',amount =10},
+					{name='fish-egg', amount =10},
 
 				},
 			results =
@@ -329,7 +329,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='fishfood1',remove_item = true},
-					{name='fishfood2',amount ='*2'},
+					{name='fishfood2', amount ='*2'},
 				},
 			results =
 				{
@@ -342,7 +342,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fawogae',amount = 5},
+					{name='fawogae', amount = 5},
 				},
 			results =
 				{
@@ -362,11 +362,11 @@ fun.autorecipes {
                     {name='blood-meal',remove_item = true},
                     {name='filtration-media',remove_item = true},
 					{name='fish-egg',remove_item = true},
-					--{name='fishfood1',amount =15},
-					{name='pheromones',amount =1},
-                    --{name='phytoplankton',amount =15},
-					--{name='water-barrel',amount=6,return_item={name='empty-barrel',amount=6}},
-					--{name='saps',amount = 1},
+					--{name='fishfood1', amount =15},
+					{name='pheromones', amount =1},
+                    --{name='phytoplankton', amount =15},
+					--{name='water-barrel', amount=6,return_item={name='empty-barrel', amount=6}},
+					--{name='saps', amount = 1},
 				},
 			results =
 				{
@@ -382,7 +382,7 @@ fun.autorecipes {
 				{
                     --{name='phytoplankton',remove_item = true},
                     --{name='fishfood1',remove_item = true},
-					{name='filtration-media',amount =2},
+					{name='filtration-media', amount =2},
 				},
 			results =
 				{
@@ -395,7 +395,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='blood-meal',amount = 4},
+					{name='blood-meal', amount = 4},
 				},
 			results =
 				{
@@ -408,7 +408,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='saps',amount = 5},
+					{name='saps', amount = 5},
 				},
 			results =
 				{
@@ -424,7 +424,7 @@ fun.autorecipes {
 					--{name='filtration-media',remove_item = true},
 					--{name='blood-meal',remove_item = true},
 					--{name='saps',remove_item = true},
-					{name='fish-egg',amount =10},
+					{name='fish-egg', amount =10},
 
 				},
 			results =
@@ -439,7 +439,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='fishfood1',remove_item = true},
-					{name='fishfood2',amount =2},
+					{name='fishfood2', amount =2},
 				},
 			results =
 				{
@@ -452,7 +452,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fawogae',amount = 5},
+					{name='fawogae', amount = 5},
 				},
 			results =
 				{
@@ -478,13 +478,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='xyhiphoe',amount=1},
+					{name='xyhiphoe', amount=1},
 				},
 			results =
 				{
-					{name='meat', probability = 0.4,amount_min =1,amount_max =1},
-					{name='shell', probability = 0.4,amount_min =1,amount_max =3},
-					{name='guts', probability = 0.4,amount_min =1,amount_max =4},
+					{name='meat', probability = 0.4, amount_min =1, amount_max =1},
+					{name='shell', probability = 0.4, amount_min =1, amount_max =3},
+					{name='guts', probability = 0.4, amount_min =1, amount_max =4},
 					{name='arthropod-blood', amount =70},
 				},
 			crafting_speed = 30,
@@ -497,7 +497,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='xyhiphoe',amount=1},
+					--{name='xyhiphoe', amount=1},
 				},
 			results =
 				{
@@ -517,7 +517,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='xyhiphoe',amount=1},
+					--{name='xyhiphoe', amount=1},
 				},
 			results =
 				{
@@ -534,7 +534,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='xyhiphoe',amount=1},
+					--{name='xyhiphoe', amount=1},
 				},
 			results =
 				{
@@ -551,7 +551,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='xyhiphoe',amount=1},
+					--{name='xyhiphoe', amount=1},
 				},
 			results =
 				{
@@ -569,7 +569,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='xyhiphoe',remove_item = true},
-					{name='meat-xyhiphoe',amount=1},
+					{name='meat-xyhiphoe', amount=1},
 				},
 			results =
 				{
@@ -587,7 +587,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='meat-xyhiphoe',remove_item = true},
-					{name='guts-xyhiphoe',amount=1},
+					{name='guts-xyhiphoe', amount=1},
 				},
 			results =
 				{
@@ -605,7 +605,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='guts-xyhiphoe',remove_item = true},
-					{name='blood-xyhiphoe',amount=1},
+					{name='blood-xyhiphoe', amount=1},
 				},
 			results =
 				{

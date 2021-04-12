@@ -13,18 +13,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-arthurian',amount=1},
+					{name='caged-arthurian', amount=1},
 				},
 			results =
 				{
-					{name='bones', probability = 0.3,amount_min =1,amount_max =2},
-					{name='meat', probability = 0.4,amount_min =1,amount_max =3},
-					{name='skin', probability = 0.4,amount_min =1,amount_max =4},
-					{name='mukmoux-fat', probability = 0.2,amount_min =1,amount_max =1},
-					{name='guts', probability = 0.4,amount_min =1,amount_max =2},
+					{name='bones', probability = 0.3, amount_min =1, amount_max =2},
+					{name='meat', probability = 0.4, amount_min =1, amount_max =3},
+					{name='skin', probability = 0.4, amount_min =1, amount_max =4},
+					{name='mukmoux-fat', probability = 0.2, amount_min =1, amount_max =1},
+					{name='guts', probability = 0.4, amount_min =1, amount_max =2},
 					{name='blood', amount =20},
-					{name='cage',amount=1},
-					{name='brain', probability = 0.6,amount_min =1,amount_max =2},
+					{name='cage', amount=1},
+					{name='brain', probability = 0.6, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'arthurian',
@@ -36,7 +36,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-arthurian',amount=1},
+					--{name='caged-arthurian', amount=1},
 				},
 			results =
 				{
@@ -59,7 +59,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-arthurian',amount=1},
+					--{name='caged-arthurian', amount=1},
 				},
 			results =
 				{
@@ -76,7 +76,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-arthurian',amount=1},
+					--{name='caged-arthurian', amount=1},
 				},
 			results =
 				{
@@ -93,7 +93,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-arthurian',amount=1},
+					--{name='caged-arthurian', amount=1},
 				},
 			results =
 				{
@@ -110,7 +110,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-arthurian',amount=1},
+					--{name='caged-arthurian', amount=1},
 				},
 			results =
 				{
@@ -127,7 +127,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-arthurian',amount=1},
+					--{name='caged-arthurian', amount=1},
 				},
 			results =
 				{
@@ -144,7 +144,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-arthurian',amount=1},
+					--{name='caged-arthurian', amount=1},
 				},
 			results =
 				{
@@ -161,7 +161,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-arthurian',amount=1},
+					--{name='caged-arthurian', amount=1},
 				},
 			results =
 				{
@@ -179,7 +179,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-arthurian',remove_item = true},
-					{name='brain-caged-arthurian',amount=1},
+					{name='brain-caged-arthurian', amount=1},
 				},
 			results =
 				{
@@ -197,7 +197,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='brain-caged-arthurian',remove_item = true},
-					{name='bone-caged-arthurian',amount=1},
+					{name='bone-caged-arthurian', amount=1},
 				},
 			results =
 				{
@@ -232,7 +232,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='bone-caged-arthurian',remove_item = true},
-					{name='guts-caged-arthurian',amount=1},
+					{name='guts-caged-arthurian', amount=1},
 				},
 			results =
 				{
@@ -250,7 +250,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='guts-caged-arthurian',remove_item = true},
-					{name='blood-caged-arthurian',amount=1},
+					{name='blood-caged-arthurian', amount=1},
 				},
 			results =
 				{
@@ -268,7 +268,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='blood-caged-arthurian',remove_item = true},
-					{name='skin-caged-arthurian',amount=1},
+					{name='skin-caged-arthurian', amount=1},
 				},
 			results =
 				{
@@ -286,7 +286,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='skin-caged-arthurian',remove_item = true},
-					{name='fat-caged-arthurian',amount=1},
+					{name='fat-caged-arthurian', amount=1},
 				},
 			results =
 				{
@@ -304,7 +304,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='fat-caged-arthurian',remove_item = true},
-					{name='meat-caged-arthurian',amount=1},
+					{name='meat-caged-arthurian', amount=1},
 				},
 			results =
 				{

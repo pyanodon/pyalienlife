@@ -13,13 +13,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='arqad',amount=3},
+					{name='arqad', amount=3},
 				},
 			results =
 				{
-					{name='meat', probability = 0.4,amount_min =1,amount_max =3},
-					{name='chitin', probability = 0.3,amount_min =1,amount_max =5},
-					{name='guts', probability = 0.4,amount_min =1,amount_max =3},
+					{name='meat', probability = 0.4, amount_min =1, amount_max =3},
+					{name='chitin', probability = 0.3, amount_min =1, amount_max =5},
+					{name='guts', probability = 0.4, amount_min =1, amount_max =3},
 					{name='arthropod-blood', amount =30},
 				},
 			crafting_speed = 30,
@@ -32,7 +32,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='arqad',amount=1},
+					--{name='arqad', amount=1},
 				},
 			results =
 				{
@@ -52,7 +52,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='arqad',amount=1},
+					--{name='arqad', amount=1},
 				},
 			results =
 				{
@@ -69,7 +69,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='arqad',amount=1},
+					--{name='arqad', amount=1},
 				},
 			results =
 				{
@@ -86,7 +86,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='arqad',amount=1},
+					--{name='arqad', amount=1},
 				},
 			results =
 				{
@@ -103,7 +103,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='arqad',amount=1},
+					--{name='arqad', amount=1},
 				},
 			results =
 				{
@@ -121,7 +121,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='arqad',remove_item = true},
-					{name='meat-arqad',amount=1},
+					{name='meat-arqad', amount=1},
 				},
 			results =
 				{
@@ -139,7 +139,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='meat-arqad',remove_item = true},
-					{name='guts-arqad',amount=1},
+					{name='guts-arqad', amount=1},
 				},
 			results =
 				{
@@ -157,7 +157,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='guts-arqad',remove_item = true},
-					{name='blood-arqad',amount=1},
+					{name='blood-arqad', amount=1},
 				},
 			results =
 				{
@@ -175,7 +175,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='blood-arqad',remove_item = true},
-					{name='chitin-arqad',amount=1},
+					{name='chitin-arqad', amount=1},
 				},
 			results =
 				{

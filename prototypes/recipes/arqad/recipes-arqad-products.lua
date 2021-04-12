@@ -39,13 +39,13 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='empty-comb', amount = 5},
-                    {name='biomass',amount =10},
-					{name='saps',amount =4},
-					{name='crude-oil-barrel',amount=2,return_barrel = true},
+                    {name='biomass', amount =10},
+					{name='saps', amount =4},
+					{name='crude-oil-barrel', amount=2,return_barrel = true},
 				},
 			results =
 				{
-					{name = 'filled-comb',amount = 5},
+					{name = 'filled-comb', amount = 5},
 				},
 			crafting_speed = 80,
 			tech = 'arqad',
@@ -57,7 +57,7 @@ fun.autorecipes {
 				{
                     {name='empty-comb', add_amount = 4},
 					{name='yaedols', amount = 1},
-					{name='redhot-coke',amount =2},
+					{name='redhot-coke', amount =2},
 				},
 			results =
 				{
@@ -89,7 +89,7 @@ fun.autorecipes {
 				{
                     {name='empty-comb', add_amount = 5},
 					{name='saps', add_amount = 4},
-					{name='redhot-coke',amount = 2},
+					{name='redhot-coke', amount = 2},
 					{name='coal', add_amount = 3},
 				},
 			results =

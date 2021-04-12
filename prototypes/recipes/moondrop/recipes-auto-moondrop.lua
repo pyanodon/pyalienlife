@@ -18,7 +18,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='moondrop',amount = 4},
+					{name='moondrop', amount = 4},
 				},
 			crafting_speed = 140,
 			name = 'moondrop 1',
@@ -29,8 +29,8 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='moondrop-seeds', add_amount= 3},
-					{name='hydrogen',amount = 100},
-                    {name='soil',amount = 20},
+					{name='hydrogen', amount = 100},
+                    {name='soil', amount = 20},
 				},
 			results =
 				{
@@ -46,9 +46,9 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='moondrop-seeds', add_amount = 4},
-					{name='ash',amount = 10},
-					{name='fertilizer',amount = 10},
-                    {name='biomass',amount = 8},
+					{name='ash', amount = 10},
+					{name='fertilizer', amount = 10},
+                    {name='biomass', amount = 8},
                     --{'d'},
 				},
 			results =
@@ -66,10 +66,10 @@ fun.autorecipes {
 				{
                     {name='moondrop-seeds', add_amount = 6},
 					{name='water',remove_item = true},
-                    {name='syngas',amount = 60},
-                    {name='pesticide-mk01',amount = 2},
+                    {name='syngas', amount = 60},
+                    {name='pesticide-mk01', amount = 2},
 				    {name='hydrogen',remove_item = true},
-					{name='gasoline',amount = 40},
+					{name='gasoline', amount = 40},
                 },
 			results =
 				{
@@ -88,7 +88,7 @@ fun.autorecipes {
                     {name='syngas',remove_item = true},
 					{name = 'refinedsyngas', amount = 30},
 					{name='biomass', add_amount = 4},
-					{name='urea',amount = 12},
+					{name='urea', amount = 12},
 				},
 			results =
 				{

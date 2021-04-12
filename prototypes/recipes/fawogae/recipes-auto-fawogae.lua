@@ -47,7 +47,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='fawogae',amount = 15}
+					{name='fawogae', amount = 15}
 				},
 			crafting_speed = 80,
 			name = 'fawogae with manure',
@@ -75,13 +75,13 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='fungal-substrate-02',remove_item = true},
-					{name='fungal-substrate-03',amount = 5},
+					{name='fungal-substrate-03', amount = 5},
 					{name='fertilizer', add_amount = 4},
                     {name='biomass', add_amount = 7},
 				},
 			results =
 				{
-					{name='fawogae',amount = 60}
+					{name='fawogae', amount = 60}
 				},
 			crafting_speed = 40,
 			name = 'fawogae with special substrate',
@@ -91,14 +91,14 @@ fun.autorecipes {
     {
         ingredients =
             {
-				{name='gh',amount =1},
-				{name='urea',amount = 10},
+				{name='gh', amount =1},
+				{name='urea', amount = 10},
                 {name='fertilizer', add_amount = 5},
 				{name='biomass', add_amount = 15},
             },
         results =
             {
-                {name='fawogae',amount = 120}
+                {name='fawogae', amount = 120}
             },
 		crafting_speed = 20,
 		name = 'fawogae with growth hormone',

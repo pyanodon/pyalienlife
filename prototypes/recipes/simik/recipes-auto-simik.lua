@@ -11,14 +11,14 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='stone-wool',amount =3},
-                    {name='sea-sponge',amount =1},
-					{name='olefin-barrel',amount=2,return_item={name='empty-barrel',amount=2}},
-					{name='cage',amount=1},
+                    {name='stone-wool', amount =3},
+                    {name='sea-sponge', amount =1},
+					{name='olefin-barrel', amount=2,return_item={name='empty-barrel', amount=2}},
+					{name='cage', amount=1},
 				},
 			results =
 				{
-					{name='caged-simik', probability = 0.7,amount_min =1,amount_max =1},
+					{name='caged-simik', probability = 0.7, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 160,
 			tech = 'simik-mk01'
@@ -28,12 +28,12 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='stone-wool',remove_item = true},
-					{name='simik-food-01',amount =1},
+					{name='simik-food-01', amount =1},
 				},
 			results =
 				{
 					{name='caged-simik',remove_item = true},
-					{name='caged-simik', probability = 0.8,amount_min =1,amount_max =1},
+					{name='caged-simik', probability = 0.8, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 150,
 			tech = 'simik-mk01'
@@ -42,8 +42,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='arqad-maggot',amount = 2},
-					{name='yotoi-leaves',amount = 3},
+					{name='arqad-maggot', amount = 2},
+					{name='yotoi-leaves', amount = 3},
 				},
 			results =
 				{
@@ -56,7 +56,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='stone',amount = 5},
+					{name='stone', amount = 5},
 				},
 			results =
 				{
@@ -72,13 +72,13 @@ fun.autorecipes {
 					{name='simik-food-01',remove_item = true},
 					{name='arqad-maggot',remove_item = true},
 					{name='stone',remove_item = true},
-					{name='simik-food-02',amount =1},
+					{name='simik-food-02', amount =1},
 
 				},
 			results =
 				{
 					{name='caged-simik',remove_item = true},
-					{name='caged-simik',amount =1},
+					{name='caged-simik', amount =1},
 				},
 			crafting_speed = 120,
 			tech = 'simik-mk03'
@@ -87,7 +87,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='arqad-maggot',amount =5},
+					{name='arqad-maggot', amount =5},
 				},
 			results =
 				{
@@ -100,7 +100,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='stone',amount = 5},
+					{name='stone', amount = 5},
 				},
 			results =
 				{
@@ -113,7 +113,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 
 				},
 			results =
@@ -127,12 +127,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='antiviral',amount =1},
+					{name='antiviral', amount =1},
 				},
 			results =
 				{
 					{name='caged-simik', remove_item = true},
-					{name='caged-simik', probability = 1,amount_min =1,amount_max =2},
+					{name='caged-simik', probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -141,7 +141,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='antiviral',amount =1},
+					--{name='antiviral', amount =1},
 					{name='gh',remove_item = true},
 				},
 			results =
@@ -155,7 +155,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='nanochondria',amount =1},
+					{name='nanochondria', amount =1},
 					--{name='antiviral',remove_item = true},
 				},
 			results =
@@ -170,8 +170,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -186,7 +186,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='nanochondria',remove_item = true},
-					{name='bmp',amount =1},
+					{name='bmp', amount =1},
 				},
 			results =
 				{
@@ -201,8 +201,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -217,7 +217,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='bmp',remove_item = true},
-					{name='anabolic-rna',amount =1},
+					{name='anabolic-rna', amount =1},
 				},
 			results =
 				{
@@ -231,8 +231,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -247,7 +247,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='anabolic-rna',remove_item = true},
-					{name='antitumor',amount =1},
+					{name='antitumor', amount =1},
 				},
 			results =
 				{
@@ -261,8 +261,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -291,8 +291,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -308,7 +308,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='antitumor',remove_item = true},
-					{name='recombinant-ery',amount =1},
+					{name='recombinant-ery', amount =1},
 				},
 			results =
 				{
@@ -322,7 +322,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -337,7 +337,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='recombinant-ery',remove_item = true},
-					{name='reca',amount =1},
+					{name='reca', amount =1},
 				},
 			results =
 				{
@@ -351,7 +351,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -378,7 +378,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -405,7 +405,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -420,7 +420,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='reca',remove_item = true},
-					{name='orexigenic',amount =1},
+					{name='orexigenic', amount =1},
 				},
 			results =
 				{
@@ -434,7 +434,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -459,14 +459,14 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='stone-wool',amount =3},
-                    {name='sea-sponge',amount =1},
-					{name='olefin-barrel',amount=5,return_item={name='empty-barrel',amount=5}},
-					{name='yotoi-leaves',amount = 3},
+                    {name='stone-wool', amount =3},
+                    {name='sea-sponge', amount =1},
+					{name='olefin-barrel', amount=5,return_item={name='empty-barrel', amount=5}},
+					{name='yotoi-leaves', amount = 3},
 				},
 			results =
 				{
-					{name='simik-pup', probability = 0.8,amount_min =3,amount_max =3},
+					{name='simik-pup', probability = 0.8, amount_min =3, amount_max =3},
 				},
 			crafting_speed = 140,
 			tech = 'assisted-embryology'
@@ -476,7 +476,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='stone-wool',remove_item = true},
-					{name='simik-food-01',amount =2},
+					{name='simik-food-01', amount =2},
 				},
 			results =
 				{
@@ -489,7 +489,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='arqad-maggot',amount = 4},
+					{name='arqad-maggot', amount = 4},
 				},
 			results =
 				{
@@ -502,7 +502,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='stone',amount = 10},
+					{name='stone', amount = 10},
 				},
 			results =
 				{
@@ -518,7 +518,7 @@ fun.autorecipes {
 					{name='simik-food-01',remove_item = true},
 					{name='arqad-maggot',remove_item = true},
 					{name='stone',remove_item = true},
-					{name='simik-food-02',amount =2},
+					{name='simik-food-02', amount =2},
 
 				},
 			results =
@@ -545,7 +545,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='stone',amount = 10},
+					{name='stone', amount = 10},
 				},
 			results =
 				{
@@ -561,10 +561,10 @@ fun.autorecipes {
 					{name='stone',remove_item = true},
 					{name='arqad-maggot',remove_item = true},
 					{name='simik-food-02',remove_item = true},
-					{name='stone-wool',amount =5},
-					{name='pheromones',amount =1},
-					--{name='olefin-barrel',amount=6,return_item={name='empty-barrel',amount=6}},
-					--{name='yotoi-leaves',amount = 3},
+					{name='stone-wool', amount =5},
+					{name='pheromones', amount =1},
+					--{name='olefin-barrel', amount=6,return_item={name='empty-barrel', amount=6}},
+					--{name='yotoi-leaves', amount = 3},
 				},
 			results =
 				{
@@ -580,7 +580,7 @@ fun.autorecipes {
 				{
 
                     {name='stone-wool',remove_item = true},
-					{name='simik-food-01',amount =2},
+					{name='simik-food-01', amount =2},
 				},
 			results =
 				{
@@ -593,7 +593,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='arqad-maggot',amount = 4},
+					{name='arqad-maggot', amount = 4},
 				},
 			results =
 				{
@@ -606,7 +606,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='stone',amount = 10},
+					{name='stone', amount = 10},
 				},
 			results =
 				{
@@ -622,7 +622,7 @@ fun.autorecipes {
 					{name='simik-food-01',remove_item = true},
 					{name='arqad-maggot',remove_item = true},
 					{name='stone',remove_item = true},
-					{name='simik-food-02',amount =2},
+					{name='simik-food-02', amount =2},
 
 				},
 			results =
@@ -649,7 +649,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='stone',amount = 10},
+					{name='stone', amount = 10},
 				},
 			results =
 				{
@@ -674,20 +674,20 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-simik',amount=1},
+					{name='caged-simik', amount=1},
 				},
 			results =
 				{
-					{name='bones', probability = 0.1,amount_min =1,amount_max =4},
-					{name='meat', probability = 0.3,amount_min =2,amount_max =5},
-                    {name='skin', probability = 0.2,amount_min =1,amount_max =2},
-                    {name='chitin', probability = 0.2,amount_min =1,amount_max =1},
-					{name='mukmoux-fat', probability = 0.2,amount_min =1,amount_max =1},
-                    {name='guts', probability = 0.4,amount_min =1,amount_max =1},
-                    {name='keratin', probability = 0.1,amount_min =1,amount_max =1},
+					{name='bones', probability = 0.1, amount_min =1, amount_max =4},
+					{name='meat', probability = 0.3, amount_min =2, amount_max =5},
+                    {name='skin', probability = 0.2, amount_min =1, amount_max =2},
+                    {name='chitin', probability = 0.2, amount_min =1, amount_max =1},
+					{name='mukmoux-fat', probability = 0.2, amount_min =1, amount_max =1},
+                    {name='guts', probability = 0.4, amount_min =1, amount_max =1},
+                    {name='keratin', probability = 0.1, amount_min =1, amount_max =1},
 					{name='simik-blood', amount =30},
-					{name='cage',amount=1},
-					{name='brain', probability = 0.3,amount_min =1,amount_max =1},
+					{name='cage', amount=1},
+					{name='brain', probability = 0.3, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 30,
 			tech = 'rendering',
@@ -724,7 +724,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-simik',amount=1},
+					--{name='caged-simik', amount=1},
 				},
 			results =
 				{
@@ -741,7 +741,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-simik',amount=1},
+					--{name='caged-simik', amount=1},
 				},
 			results =
 				{
@@ -758,7 +758,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-simik',amount=1},
+					--{name='caged-simik', amount=1},
 				},
 			results =
 				{
@@ -775,7 +775,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-simik',amount=1},
+					--{name='caged-simik', amount=1},
 				},
 			results =
 				{
@@ -792,7 +792,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-simik',amount=1},
+					--{name='caged-simik', amount=1},
 				},
 			results =
 				{
@@ -809,7 +809,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-simik',amount=1},
+					--{name='caged-simik', amount=1},
 				},
 			results =
 				{
@@ -826,7 +826,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-simik',amount=1},
+					--{name='caged-simik', amount=1},
 				},
 			results =
 				{
@@ -843,7 +843,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-simik',amount=1},
+					--{name='caged-simik', amount=1},
 				},
 			results =
 				{
@@ -860,7 +860,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-simik',amount=1},
+					--{name='caged-simik', amount=1},
 				},
 			results =
 				{
@@ -878,13 +878,13 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-simik',remove_item = true},
-					{name='brain-caged-simik',amount=2},
+					{name='brain-caged-simik', amount=2},
 				},
 			results =
 				{
 					{name='mukmoux-fat', remove_item = true},
 					{name='brain', amount =6},
-					{name='cage',amount = 1}
+					{name='cage', amount = 1}
 				},
 			crafting_speed = 30,
 			tech = 'nanochondria',
@@ -897,7 +897,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='brain-caged-simik',remove_item = true},
-					{name='bone-caged-simik',amount=1},
+					{name='bone-caged-simik', amount=1},
 				},
 			results =
 				{
@@ -915,7 +915,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='bone-caged-simik',remove_item = true},
-					{name='meat-caged-simik',amount=1},
+					{name='meat-caged-simik', amount=1},
 				},
 			results =
 				{
@@ -933,7 +933,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='meat-caged-simik',remove_item = true},
-					{name='guts-caged-simik',amount=1},
+					{name='guts-caged-simik', amount=1},
 				},
 			results =
 				{
@@ -951,7 +951,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='guts-caged-simik',remove_item = true},
-					{name='blood-caged-simik',amount=1},
+					{name='blood-caged-simik', amount=1},
 				},
 			results =
 				{
@@ -969,7 +969,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='blood-caged-simik',remove_item = true},
-					{name='hotair-caged-simik',amount=1},
+					{name='hotair-caged-simik', amount=1},
 				},
 			results =
 				{
@@ -987,7 +987,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='hotair-caged-simik',remove_item = true},
-					{name='skin-caged-simik',amount=1},
+					{name='skin-caged-simik', amount=1},
 				},
 			results =
 				{
@@ -1005,7 +1005,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='skin-caged-simik',remove_item = true},
-					{name='fat-caged-simik',amount=1},
+					{name='fat-caged-simik', amount=1},
 				},
 			results =
 				{
@@ -1023,7 +1023,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='fat-caged-simik',remove_item = true},
-					{name='chitin-caged-simik',amount=1},
+					{name='chitin-caged-simik', amount=1},
 				},
 			results =
 				{

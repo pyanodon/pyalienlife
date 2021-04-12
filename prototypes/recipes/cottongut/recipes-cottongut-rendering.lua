@@ -13,17 +13,17 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cottongut',amount=6},
+					{name='cottongut', amount=6},
 				},
 			results =
 				{
-					{name='bones', probability = 0.4,amount_min =1,amount_max =5},
-					{name='meat', probability = 0.3,amount_min =1,amount_max =4},
-					{name='skin', probability = 0.4,amount_min =1,amount_max =4},
-					{name='guts', probability = 0.5,amount_min =1,amount_max =5},
-					{name='mukmoux-fat', probability = 0.3,amount_min =1,amount_max =4},
+					{name='bones', probability = 0.4, amount_min =1, amount_max =5},
+					{name='meat', probability = 0.3, amount_min =1, amount_max =4},
+					{name='skin', probability = 0.4, amount_min =1, amount_max =4},
+					{name='guts', probability = 0.5, amount_min =1, amount_max =5},
+					{name='mukmoux-fat', probability = 0.3, amount_min =1, amount_max =4},
 					{name='blood', amount =40},
-					{name='brain', probability = 0.3,amount_min =1,amount_max =1},
+					{name='brain', probability = 0.3, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 30,
 			tech = 'cottongut-mk01',
@@ -35,7 +35,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cottongut',amount=1},
+					--{name='cottongut', amount=1},
 				},
 			results =
 				{
@@ -58,7 +58,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cottongut',amount=1},
+					--{name='cottongut', amount=1},
 				},
 			results =
 				{
@@ -75,7 +75,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cottongut',amount=1},
+					--{name='cottongut', amount=1},
 				},
 			results =
 				{
@@ -92,7 +92,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cottongut',amount=1},
+					--{name='cottongut', amount=1},
 				},
 			results =
 				{
@@ -109,7 +109,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cottongut',amount=1},
+					--{name='cottongut', amount=1},
 				},
 			results =
 				{
@@ -126,7 +126,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cottongut',amount=1},
+					--{name='cottongut', amount=1},
 				},
 			results =
 				{
@@ -143,7 +143,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-arthurian',amount=1},
+					--{name='caged-arthurian', amount=1},
 				},
 			results =
 				{
@@ -161,7 +161,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='cottongut',remove_item = true},
-					{name='brain-cottongut',amount=5},
+					{name='brain-cottongut', amount=5},
 				},
 			results =
 				{
@@ -179,7 +179,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='brain-cottongut',remove_item = true},
-					{name='bone-cottongut',amount=5},
+					{name='bone-cottongut', amount=5},
 				},
 			results =
 				{
@@ -197,7 +197,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='bone-cottongut',remove_item = true},
-					{name='guts-cottongut',amount=5},
+					{name='guts-cottongut', amount=5},
 				},
 			results =
 				{
@@ -215,7 +215,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='guts-cottongut',remove_item = true},
-					{name='blood-cottongut',amount=5},
+					{name='blood-cottongut', amount=5},
 				},
 			results =
 				{
@@ -233,7 +233,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='blood-cottongut',remove_item = true},
-					{name='skin-cottongut',amount=5},
+					{name='skin-cottongut', amount=5},
 				},
 			results =
 				{
@@ -251,7 +251,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='skin-cottongut',remove_item = true},
-					{name='fat-cottongut',amount=1},
+					{name='fat-cottongut', amount=1},
 				},
 			results =
 				{
@@ -269,7 +269,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='fat-cottongut',remove_item = true},
-					{name='meat-cottongut',amount=5},
+					{name='meat-cottongut', amount=5},
 				},
 			results =
 				{

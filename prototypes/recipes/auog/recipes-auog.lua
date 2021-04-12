@@ -230,7 +230,7 @@ RECIPE {
         {type = 'item', name = 'bedding', amount = 1},
         },
     results = {
-        {type = 'item', name='auog-pup', probability = 0.25,amount_min = 1,amount_max = 4},
+        {type = 'item', name='auog-pup', probability = 0.25, amount_min = 1, amount_max = 4},
         {type = 'item', name = 'empty-barrel', amount = 2}
     },
     --main_product = "auog-mk02",

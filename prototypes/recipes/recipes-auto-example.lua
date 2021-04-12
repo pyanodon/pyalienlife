@@ -14,13 +14,13 @@ fun.autorecipes { -- is a function call can be many per file is the same as RECI
 		{
 			ingredients = -- duh, first time can not be empty or youll get an empty ingredients table
 				{
-					{name = 'name',amount = 'amount'*('*!*'), return_item={name='item',amount='amount'*}*('*&*')},-- a single ingredient
+					{name = 'name', amount = 'amount'*('*!*'), return_item={name='item', amount='amount'*}*('*&*')},-- a single ingredient
                     {'ingredient'}, -- see above for details
                     {'ingredient'}, -- see above. no limits to the number of ingredients beyond what the machine is set to
 				},
 			results = -- double duh, same as ingredients first time cant be empty or you get nothing
 				{
-					{name='bones',amount = 'amount'*('*!*'),probability = 'probability'**, amount_min = 'amount_min'**'***', amount_max = 'amount_max'**'***'},
+					{name='bones', amount = 'amount'*('*!*'),probability = 'probability'**, amount_min = 'amount_min'**'***', amount_max = 'amount_max'**'***'},
 					{'result'}, -- see above for details
 					{'result'}, -- again not limited by this code to number of results
 				},

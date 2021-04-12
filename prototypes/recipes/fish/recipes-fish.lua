@@ -97,14 +97,14 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fish',amount=8},
+					{name='fish', amount=8},
 				},
 			results =
 				{
-					{name='bones', probability = 0.4,amount_min =1,amount_max =2},
-					{name='meat', probability = 0.5,amount_min =1,amount_max =2},
-					{name='skin', probability = 0.5,amount_min =1,amount_max =3},
-					{name='guts', probability = 0.5,amount_min =1,amount_max =5},
+					{name='bones', probability = 0.4, amount_min =1, amount_max =2},
+					{name='meat', probability = 0.5, amount_min =1, amount_max =2},
+					{name='skin', probability = 0.5, amount_min =1, amount_max =3},
+					{name='guts', probability = 0.5, amount_min =1, amount_max =5},
 					{name='blood', amount =25},
 				},
 			crafting_speed = 30,
@@ -140,7 +140,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedfish',amount=1},
+					--{name='cagedfish', amount=1},
 				},
 			results =
 				{
@@ -157,7 +157,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedfish',amount=1},
+					--{name='cagedfish', amount=1},
 				},
 			results =
 				{
@@ -174,7 +174,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedfish',amount=1},
+					--{name='cagedfish', amount=1},
 				},
 			results =
 				{
@@ -191,7 +191,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedfish',amount=1},
+					--{name='cagedfish', amount=1},
 				},
 			results =
 				{
@@ -208,7 +208,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='cagedfish',amount=1},
+					--{name='cagedfish', amount=1},
 				},
 			results =
 				{

@@ -329,8 +329,8 @@ RECIPE {
     energy_required = 90,
     ingredients = {
         {type = 'item', name = 'ulric-cub-mk02', amount = 4},
-        {type = 'item', name = 'fawogae',amount =15},
-        {type = 'item', name = 'ralesia-seeds',amount =15},
+        {type = 'item', name = 'fawogae', amount =15},
+        {type = 'item', name = 'ralesia-seeds', amount =15},
         {type = 'item', name = 'bedding', amount = 4},
         {type = 'item', name = 'barrel-milk', amount = 2},
         },
@@ -482,8 +482,8 @@ RECIPE {
     energy_required = 90,
     ingredients = {
         {type = 'item', name = 'ulric-cub-mk03', amount = 4},
-        {type = 'item', name = 'fawogae',amount =15},
-        {type = 'item', name = 'ralesia-seeds',amount =15},
+        {type = 'item', name = 'fawogae', amount =15},
+        {type = 'item', name = 'ralesia-seeds', amount =15},
         {type = 'item', name = 'bedding', amount = 4},
         {type = 'item', name = 'barrel-milk', amount = 2},
         },
@@ -620,8 +620,8 @@ RECIPE {
     energy_required = 90,
     ingredients = {
         {type = 'item', name = 'ulric-cub-mk04', amount = 4},
-        {type = 'item', name = 'fawogae',amount =15},
-        {type = 'item', name = 'ralesia-seeds',amount =15},
+        {type = 'item', name = 'fawogae', amount =15},
+        {type = 'item', name = 'ralesia-seeds', amount =15},
         {type = 'item', name = 'bedding', amount = 4},
         {type = 'item', name = 'barrel-milk', amount = 2},
         },

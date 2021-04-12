@@ -15,7 +15,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-phadai',amount=1},
+					{name='caged-phadai', amount=1},
 				},
 			results =
 				{
@@ -27,7 +27,7 @@ fun.autorecipes {
                     {name='carapace', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
 					{name='carapace', amount =3},
 				},
                 crafting_speed = 15,
@@ -53,7 +53,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-dingrits',amount=1},
+					{name='caged-dingrits', amount=1},
 				},
 			results =
 				{
@@ -67,7 +67,7 @@ fun.autorecipes {
                     {name='dingrit-spike', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
 					{name='pelt', amount ='+1'},
 				},
                 crafting_speed = 15,
@@ -93,7 +93,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-dingrits',amount=1},
+					{name='caged-dingrits', amount=1},
 				},
 			results =
 				{
@@ -107,7 +107,7 @@ fun.autorecipes {
                     {name='dingrit-spike', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
 					{name='dingrit-spike', amount =2},
 				},
                 crafting_speed = 15,
@@ -133,7 +133,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-scrondrix',amount=1},
+					{name='caged-scrondrix', amount=1},
 				},
 			results =
 				{
@@ -145,7 +145,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='pineal-gland', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
 					{name='pineal-gland', amount =2},
 				},
                 crafting_speed = 15,
@@ -171,7 +171,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-kmauts',amount=1},
+					{name='caged-kmauts', amount=1},
 				},
 			results =
 				{
@@ -183,7 +183,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
 					{name='tendon', amount =3},
 				},
                 crafting_speed = 15,
@@ -209,7 +209,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-phagnot',amount=1},
+					{name='caged-phagnot', amount=1},
 				},
 			results =
 				{
@@ -219,7 +219,7 @@ fun.autorecipes {
                     {name='guts', remove_item = true},
                     {name='gas-bladder', remove_item = true},
 					{name='blood', remove_item = true},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
                     {name='brain', remove_item = true},
                     {name='gas-bladder', amount=2},
 				},
@@ -246,7 +246,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='vonix',amount=1},
+					{name='vonix', amount=1},
 				},
 			results =
 				{
@@ -286,7 +286,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='trits',amount=1},
+					{name='trits', amount=1},
 				},
 			results =
 				{
@@ -320,7 +320,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='xyhiphoe',amount=1},
+					{name='xyhiphoe', amount=1},
 				},
 			results =
 				{

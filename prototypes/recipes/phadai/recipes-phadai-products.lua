@@ -11,14 +11,14 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='meat',amount =15},
-					{name='water-barrel',amount=4,return_item={name='empty-barrel',amount=4}},
-                    {name='programmable-speaker',amount=1},
-                    {name='small-lamp',amount=2},
+					{name='meat', amount =15},
+					{name='water-barrel', amount=4,return_item={name='empty-barrel', amount=4}},
+                    {name='programmable-speaker', amount=1},
+                    {name='small-lamp', amount=2},
 				},
 			results =
 				{
-                    {name='carapace',amount ='*1'},
+                    {name='carapace', amount ='*1'},
 				},
 			crafting_speed = 130,
 			tech = 'phadai',
@@ -28,13 +28,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fawogae',amount =4},
+					{name='fawogae', amount =4},
 					{name='phadai-food-01'},
 				},
 			results =
 				{
 					--{'a','*5'}
-                    {name='carapace',amount ='+1'},
+                    {name='carapace', amount ='+1'},
 				},
 			crafting_speed = 120,
 			tech = 'phadai',
@@ -44,12 +44,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='bedding',amount =1},
+                    {name='bedding', amount =1},
 				},
 			results =
 				{
 					--{'a','*5'}
-                    {name='carapace',amount ='+1'},
+                    {name='carapace', amount ='+1'},
 				},
 				crafting_speed = 120,
 				tech = 'phadai',
@@ -58,12 +58,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='energy-drink',amount =4},
+					{name='energy-drink', amount =4},
 				},
 			results =
 				{
 					--{'a','*5'}
-                    {name='carapace',amount ='+1'},
+                    {name='carapace', amount ='+1'},
 				},
 				crafting_speed = 120,
 				tech = 'phadai',
@@ -80,7 +80,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-                    {name='carapace',amount =5},
+                    {name='carapace', amount =5},
 				},
 				crafting_speed = 100,
 				tech = 'phadai',
@@ -89,12 +89,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='bedding',amount =2},
+                    {name='bedding', amount =2},
 				},
 			results =
 				{
 					--{'a','*5'}
-                    {name='carapace',amount ='+1'},
+                    {name='carapace', amount ='+1'},
 				},
 				crafting_speed = 100,
 				tech = 'phadai',
@@ -103,12 +103,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='energy-drink',amount =4},
+					{name='energy-drink', amount =4},
 				},
 			results =
 				{
 					--{'a','*5'}
-                    {name='carapace',amount ='+1'},
+                    {name='carapace', amount ='+1'},
 				},
 				crafting_speed = 100,
 				tech = 'phadai',

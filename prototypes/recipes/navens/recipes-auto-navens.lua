@@ -13,11 +13,11 @@ fun.autorecipes {
         {
             ingredients =
                 {
-                    {name='navens-spore',amount =2},
-                    {name='guts',amount =5},
-                    {name='water',amount = 100},
-                    {name='fungal-substrate-02',amount =2},
-                    {name='fertilizer',amount =5},
+                    {name='navens-spore', amount =2},
+                    {name='guts', amount =5},
+                    {name='water', amount = 100},
+                    {name='fungal-substrate-02', amount =2},
+                    {name='fertilizer', amount =5},
                 },
             results =
                 {
@@ -31,9 +31,9 @@ fun.autorecipes {
             ingredients =
                 {
                     {name='fungal-substrate-02',remove_item = true},
-                    {name='fungal-substrate-03',amount =2},
+                    {name='fungal-substrate-03', amount =2},
                     {name='fertilizer', add_amount = 5},
-                    {name='biomass',amount =10},
+                    {name='biomass', amount =10},
                 },
             results =
                 {
@@ -47,8 +47,8 @@ fun.autorecipes {
             ingredients =
                 {
                     {name='water', remove_item = true},
-                    {name='nitrogen',amount = 100},
-                    {name='urea',amount =10},
+                    {name='nitrogen', amount = 100},
+                    {name='urea', amount =10},
                 },
             results =
                 {
@@ -61,11 +61,11 @@ fun.autorecipes {
         {
             ingredients =
                 {
-                    {name='gh',amount =1},
+                    {name='gh', amount =1},
                     {name='urea', add_amount =10},
-                    {name='bacteria-2',amount = 200},
-                    {name='fertilizer',amount =10},
-                    {name='biomass',amount =15},
+                    {name='bacteria-2', amount = 200},
+                    {name='fertilizer', amount =10},
+                    {name='biomass', amount =15},
                 },
             results =
                 {

@@ -32,7 +32,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='moss',amount = 5},
+					{name='moss', amount = 5},
 				},
 			crafting_speed = 140,
 			name = 'moss 1',
@@ -42,7 +42,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='stone',amount = 20},
+                    {name='stone', amount = 20},
 				},
 			results =
 				{
@@ -56,7 +56,7 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    {name='coarse',amount = 10},
+                    {name='coarse', amount = 10},
 				},
 			results =
 				{

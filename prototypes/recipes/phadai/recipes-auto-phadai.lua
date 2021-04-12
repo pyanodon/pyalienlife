@@ -11,15 +11,15 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cottongut',amount =2},
-					{name='water-barrel',amount=4,return_item={name='empty-barrel',amount=4}},
-                    {name='cage',amount=1},
-                    {name='programmable-speaker',amount=1},
-                    {name='small-lamp',amount=2},
+					{name='cottongut', amount =2},
+					{name='water-barrel', amount=4,return_item={name='empty-barrel', amount=4}},
+                    {name='cage', amount=1},
+                    {name='programmable-speaker', amount=1},
+                    {name='small-lamp', amount=2},
 				},
 			results =
 				{
-					{name='caged-phadai', probability = 0.7,amount_min =1,amount_max =1},
+					{name='caged-phadai', probability = 0.7, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 150,
 			tech = 'phadai'
@@ -29,13 +29,13 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='meat',remove_item = true},
-                    {name='meat',amount =10},
-					{name='phadai-food-01',amount =1},
+                    {name='meat', amount =10},
+					{name='phadai-food-01', amount =1},
 				},
 			results =
 				{
 					{name='caged-phadai',remove_item = true},
-					{name='caged-phadai', probability = 0.8,amount_min =1,amount_max =1},
+					{name='caged-phadai', probability = 0.8, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 140,
 			tech = 'phadai'
@@ -44,8 +44,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fawogae',amount = 5},
-					{name='bedding',amount = 1},
+					{name='fawogae', amount = 5},
+					{name='bedding', amount = 1},
 				},
 			results =
 				{
@@ -58,7 +58,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='energy-drink',amount = 4},
+					{name='energy-drink', amount = 4},
 				},
 			results =
 				{
@@ -74,13 +74,13 @@ fun.autorecipes {
 					{name='phadai-food-01',remove_item = true},
 					{name='fawogae',remove_item = true},
 					{name='energy-drink',remove_item = true},
-					{name='phadai-food-02',amount =1},
+					{name='phadai-food-02', amount =1},
 
 				},
 			results =
 				{
 					{name='caged-phadai',remove_item = true},
-					{name='caged-phadai', probability = 0.9,amount_min =1,amount_max =1},
+					{name='caged-phadai', probability = 0.9, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 110,
 			tech = 'phadai-mk03'
@@ -89,7 +89,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fawogae',amount =5},
+					{name='fawogae', amount =5},
 				},
 			results =
 				{
@@ -102,7 +102,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='energy-drink',amount = 4},
+					{name='energy-drink', amount = 4},
 				},
 			results =
 				{
@@ -115,7 +115,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 
 				},
 			results =
@@ -129,12 +129,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='antiviral',amount =1},
+					{name='antiviral', amount =1},
 				},
 			results =
 				{
 					{name='caged-phadai', remove_item = true},
-					{name='caged-phadai', probability = 1,amount_min =1,amount_max =2},
+					{name='caged-phadai', probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -143,7 +143,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='antiviral',amount =1},
+					--{name='antiviral', amount =1},
 					{name='gh',remove_item = true},
 				},
 			results =
@@ -157,7 +157,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='nanochondria',amount =1},
+					{name='nanochondria', amount =1},
 					--{name='antiviral',remove_item = true},
 				},
 			results =
@@ -172,8 +172,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -188,7 +188,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='nanochondria',remove_item = true},
-					{name='bmp',amount =1},
+					{name='bmp', amount =1},
 				},
 			results =
 				{
@@ -203,8 +203,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -219,7 +219,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='bmp',remove_item = true},
-					{name='anabolic-rna',amount =1},
+					{name='anabolic-rna', amount =1},
 				},
 			results =
 				{
@@ -233,8 +233,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -249,7 +249,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='anabolic-rna',remove_item = true},
-					{name='antitumor',amount =1},
+					{name='antitumor', amount =1},
 				},
 			results =
 				{
@@ -263,8 +263,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -279,7 +279,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='antitumor',remove_item = true},
-					{name='recombinant-ery',amount =1},
+					{name='recombinant-ery', amount =1},
 				},
 			results =
 				{
@@ -293,7 +293,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -308,7 +308,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='recombinant-ery',remove_item = true},
-					{name='reca',amount =1},
+					{name='reca', amount =1},
 				},
 			results =
 				{
@@ -322,7 +322,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -337,7 +337,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='reca',remove_item = true},
-					{name='orexigenic',amount =1},
+					{name='orexigenic', amount =1},
 				},
 			results =
 				{
@@ -351,7 +351,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -376,13 +376,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='cottongut',amount =6},
-                    {name='fawogae',amount =20},
-					{name='water-barrel',amount=15,return_item={name='empty-barrel',amount=15}},
-					--{name='cage',amount=1},
-                    {name='bedding',amount = 1},
-                    {name='programmable-speaker',amount=1},
-                    {name='small-lamp',amount=2},
+                    {name='cottongut', amount =6},
+                    {name='fawogae', amount =20},
+					{name='water-barrel', amount=15,return_item={name='empty-barrel', amount=15}},
+					--{name='cage', amount=1},
+                    {name='bedding', amount = 1},
+                    {name='programmable-speaker', amount=1},
+                    {name='small-lamp', amount=2},
 				},
 			results =
 				{
@@ -397,8 +397,8 @@ fun.autorecipes {
 				{
                     {name='fawogae',remove_item = true},
                     {name='meat',remove_item = true},
-                    {name='meat',amount =20},
-					{name='phadai-food-01',amount =2},
+                    {name='meat', amount =20},
+					{name='phadai-food-01', amount =2},
 				},
 			results =
 				{
@@ -411,7 +411,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fawogae',amount = 20},
+					{name='fawogae', amount = 20},
 				},
 			results =
 				{
@@ -424,7 +424,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='energy-drink',amount = 6},
+					{name='energy-drink', amount = 6},
 				},
 			results =
 				{
@@ -440,7 +440,7 @@ fun.autorecipes {
 					{name='phadai-food-01',remove_item = true},
 					{name='fawogae',remove_item = true},
 					{name='energy-drink',remove_item = true},
-					{name='phadai-food-02',amount =2},
+					{name='phadai-food-02', amount =2},
 
 				},
 			results =
@@ -454,7 +454,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fawogae',amount =10},
+					{name='fawogae', amount =10},
 				},
 			results =
 				{
@@ -467,7 +467,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='energy-drink',amount = 6},
+					{name='energy-drink', amount = 6},
 				},
 			results =
 				{
@@ -483,11 +483,11 @@ fun.autorecipes {
 					{name='energy-drink',remove_item = true},
 					{name='fawogae',remove_item = true},
 					{name='phadai-food-02',remove_item = true},
-					--{name='meat',amount =15},
-					{name='pheromones',amount =1},
-                    {name='fawogae',amount =30},
-					--{name='water-barrel',amount=6,return_item={name='empty-barrel',amount=6}},
-					--{name='bedding',amount = 1},
+					--{name='meat', amount =15},
+					{name='pheromones', amount =1},
+                    {name='fawogae', amount =30},
+					--{name='water-barrel', amount=6,return_item={name='empty-barrel', amount=6}},
+					--{name='bedding', amount = 1},
 				},
 			results =
 				{
@@ -502,7 +502,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='fawogae',remove_item = true},
-					{name='phadai-food-01',amount =2},
+					{name='phadai-food-01', amount =2},
 				},
 			results =
 				{
@@ -515,7 +515,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fawogae',amount = 20},
+					{name='fawogae', amount = 20},
 				},
 			results =
 				{
@@ -528,7 +528,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='energy-drink',amount = 10},
+					{name='energy-drink', amount = 10},
 				},
 			results =
 				{
@@ -544,7 +544,7 @@ fun.autorecipes {
 					{name='phadai-food-01',remove_item = true},
 					{name='fawogae',remove_item = true},
 					{name='energy-drink',remove_item = true},
-					{name='phadai-food-02',amount =2},
+					{name='phadai-food-02', amount =2},
 
 				},
 			results =
@@ -558,7 +558,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fawogae',amount ='*5'},
+					{name='fawogae', amount ='*5'},
 				},
 			results =
 				{
@@ -571,7 +571,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='energy-drink',amount = 7},
+					{name='energy-drink', amount = 7},
 				},
 			results =
 				{
@@ -595,19 +595,19 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-phadai',amount=1},
+					{name='caged-phadai', amount=1},
 				},
 			results =
 				{
-					{name='bones', probability = 0.3,amount_min =1,amount_max =3},
-					{name='meat', probability = 0.3,amount_min =1,amount_max =1},
-                    {name='guts', probability = 0.3,amount_min =1,amount_max =3},
-                    {name='mukmoux-fat', probability = 0.1,amount_min =1,amount_max =1},
-                    {name='skin', probability = 0.1,amount_min =1,amount_max =1},
-					{name='carapace', probability = 0.3,amount_min =1,amount_max =1},
+					{name='bones', probability = 0.3, amount_min =1, amount_max =3},
+					{name='meat', probability = 0.3, amount_min =1, amount_max =1},
+                    {name='guts', probability = 0.3, amount_min =1, amount_max =3},
+                    {name='mukmoux-fat', probability = 0.1, amount_min =1, amount_max =1},
+                    {name='skin', probability = 0.1, amount_min =1, amount_max =1},
+					{name='carapace', probability = 0.3, amount_min =1, amount_max =1},
 					{name='blood', amount =30},
-					{name='cage',amount=1},
-					{name='brain', probability = 0.5,amount_min =1,amount_max =1},
+					{name='cage', amount=1},
+					{name='brain', probability = 0.5, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 30,
 			tech = 'phadai',
@@ -619,7 +619,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-phadai',amount=1},
+					--{name='caged-phadai', amount=1},
 				},
 			results =
 				{
@@ -644,7 +644,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-phadai',amount=1},
+					--{name='caged-phadai', amount=1},
 				},
 			results =
 				{
@@ -661,7 +661,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-phadai',amount=1},
+					--{name='caged-phadai', amount=1},
 				},
 			results =
 				{
@@ -678,7 +678,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-phadai',amount=1},
+					--{name='caged-phadai', amount=1},
 				},
 			results =
 				{
@@ -695,7 +695,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-phadai',amount=1},
+					--{name='caged-phadai', amount=1},
 				},
 			results =
 				{
@@ -712,7 +712,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-phadai',amount=1},
+					--{name='caged-phadai', amount=1},
 				},
 			results =
 				{
@@ -729,7 +729,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-phadai',amount=1},
+					--{name='caged-phadai', amount=1},
 				},
 			results =
 				{
@@ -746,7 +746,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-phadai',amount=1},
+					--{name='caged-phadai', amount=1},
 				},
 			results =
 				{
@@ -764,7 +764,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-phadai',remove_item = true},
-					{name='brain-caged-phadai',amount=1},
+					{name='brain-caged-phadai', amount=1},
 				},
 			results =
 				{
@@ -782,7 +782,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='brain-caged-phadai',remove_item = true},
-					{name='bone-caged-phadai',amount=1},
+					{name='bone-caged-phadai', amount=1},
 				},
 			results =
 				{
@@ -800,7 +800,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='bone-caged-phadai',remove_item = true},
-					{name='guts-caged-phadai',amount=1},
+					{name='guts-caged-phadai', amount=1},
 				},
 			results =
 				{
@@ -818,7 +818,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='guts-caged-phadai',remove_item = true},
-					{name='blood-caged-phadai',amount=1},
+					{name='blood-caged-phadai', amount=1},
 				},
 			results =
 				{
@@ -836,7 +836,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='blood-caged-phadai',remove_item = true},
-					{name='meat-caged-phadai',amount=1},
+					{name='meat-caged-phadai', amount=1},
 				},
 			results =
 				{
@@ -854,7 +854,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='meat-caged-phadai',remove_item = true},
-					{name='skin-caged-phadai',amount=1},
+					{name='skin-caged-phadai', amount=1},
 				},
 			results =
 				{
@@ -872,7 +872,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='skin-caged-phadai',remove_item = true},
-					{name='fat-caged-phadai',amount=1},
+					{name='fat-caged-phadai', amount=1},
 				},
 			results =
 				{

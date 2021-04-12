@@ -16,11 +16,11 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'mukmoux', amount = 1},
-                    {name='fawogae',amount =30},
-                    {name='ralesia-seeds',amount =30},
-					{name='mukmoux-food-01',amount =2},
-					{name='bedding',amount = 2},
-					{name='water-barrel',amount=15,return_barrel = true},
+                    {name='fawogae', amount =30},
+                    {name='ralesia-seeds', amount =30},
+					{name='mukmoux-food-01', amount =2},
+					{name='bedding', amount = 2},
+					{name='water-barrel', amount=15,return_barrel = true},
 				},
 			results =
 				{
@@ -35,8 +35,8 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'mukmoux', add_amount = 1},
-					{name='salt',amount = 5},
-					{name='raw-fiber',amount = 4},
+					{name='salt', amount = 5},
+					{name='raw-fiber', amount = 4},
 				},
 			results =
 				{
@@ -51,8 +51,8 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'mukmoux', add_amount = 1},
-					{name='mukmoux-food-02',amount =2},
-					{name='salt',amount = 4},
+					{name='mukmoux-food-02', amount =2},
+					{name='salt', amount = 4},
 				},
 			results =
 				{
@@ -88,11 +88,11 @@ fun.autorecipes {
 					{name='raw-fiber',remove_item = true},
 					{name='salt',remove_item = true},
 					{name='mukmoux-food-02',remove_item = true},
-					{name='fawogae',amount =20},
-					{name='pheromones',amount =1},
-                    {name='ralesia-seeds',amount =20},
-					--{name='water-barrel',amount=6,return_item={name='empty-barrel',amount=6}},
-					--{name='bedding',amount = 1},
+					{name='fawogae', amount =20},
+					{name='pheromones', amount =1},
+                    {name='ralesia-seeds', amount =20},
+					--{name='water-barrel', amount=6,return_item={name='empty-barrel', amount=6}},
+					--{name='bedding', amount = 1},
 				},
 			results =
 				{
@@ -108,7 +108,7 @@ fun.autorecipes {
 				{
                     {name='ralesia-seeds',remove_item = true},
                     {name='fawogae',remove_item = true},
-					{name='mukmoux-food-01',amount =2},
+					{name='mukmoux-food-01', amount =2},
 				},
 			results =
 				{
@@ -121,7 +121,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='salt',amount = 5},
+					{name='salt', amount = 5},
 				},
 			results =
 				{
@@ -134,7 +134,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount = 5},
+					{name='raw-fiber', amount = 5},
 				},
 			results =
 				{
@@ -150,7 +150,7 @@ fun.autorecipes {
 					{name='mukmoux-food-01',remove_item = true},
 					{name='salt',remove_item = true},
 					{name='raw-fiber',remove_item = true},
-					{name='mukmoux-food-02',amount =2},
+					{name='mukmoux-food-02', amount =2},
 
 				},
 			results =
@@ -177,7 +177,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount = 5},
+					{name='raw-fiber', amount = 5},
 				},
 			results =
 				{
@@ -231,10 +231,10 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'mukmoux-calf', amount = 3},
-                    {name='fawogae',amount =15},
-                    {name='ralesia-seeds',amount = 15},
-					{name='mukmoux-food-01',amount = 2},
-					{name='water-barrel',amount=6,return_barrel = true},
+                    {name='fawogae', amount =15},
+                    {name='ralesia-seeds', amount = 15},
+					{name='mukmoux-food-01', amount = 2},
+					{name='water-barrel', amount=6,return_barrel = true},
 				},
 			results =
 				{
@@ -249,9 +249,9 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'mukmoux-calf', add_amount = 3},
-					{name='salt',amount = 10},
-					{name='raw-fiber',amount = 5},
-					{name='bedding',amount = 2},
+					{name='salt', amount = 10},
+					{name='raw-fiber', amount = 5},
+					{name='bedding', amount = 2},
 				},
 			results =
 				{
@@ -266,8 +266,8 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'mukmoux-calf', add_amount = 3},
-					{name='mukmoux-food-02',amount =1},
-					{name='salt',amount =10},
+					{name='mukmoux-food-02', amount =1},
+					{name='salt', amount =10},
 
 				},
 			results =
@@ -301,7 +301,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 
 				},
 			results =
@@ -315,13 +315,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='antiviral',amount =1},
+					{name='antiviral', amount =1},
 				},
 			results =
 				{
 
 					{name='caged-mukmoux', remove_item = true},
-					{name='caged-mukmoux', probability = 1,amount_min =1,amount_max =2},
+					{name='caged-mukmoux', probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 12,
 			tech = 'antiviral'
@@ -330,7 +330,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='antiviral',amount =1},
+					--{name='antiviral', amount =1},
 					{name='gh',remove_item = true},
 				},
 			results =
@@ -344,7 +344,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='nanochondria',amount =1},
+					{name='nanochondria', amount =1},
 					--{name='antiviral',remove_item = true},
 				},
 			results =
@@ -359,8 +359,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -375,7 +375,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='nanochondria',remove_item = true},
-					{name='bmp',amount =1},
+					{name='bmp', amount =1},
 				},
 			results =
 				{
@@ -390,8 +390,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -406,7 +406,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='bmp',remove_item = true},
-					{name='anabolic-rna',amount =1},
+					{name='anabolic-rna', amount =1},
 				},
 			results =
 				{
@@ -420,8 +420,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -436,7 +436,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='anabolic-rna',remove_item = true},
-					{name='antitumor',amount =1},
+					{name='antitumor', amount =1},
 				},
 			results =
 				{
@@ -450,8 +450,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -466,7 +466,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='antitumor',remove_item = true},
-					{name='recombinant-ery',amount =1},
+					{name='recombinant-ery', amount =1},
 				},
 			results =
 				{
@@ -480,7 +480,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -495,7 +495,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='recombinant-ery',remove_item = true},
-					{name='reca',amount =1},
+					{name='reca', amount =1},
 				},
 			results =
 				{
@@ -509,7 +509,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -524,7 +524,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='reca',remove_item = true},
-					{name='orexigenic',amount =1},
+					{name='orexigenic', amount =1},
 				},
 			results =
 				{
@@ -538,7 +538,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{

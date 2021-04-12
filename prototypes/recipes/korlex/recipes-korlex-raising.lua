@@ -16,10 +16,10 @@ fun.autorecipes {
 				{
 					{name = 'korlex', amount = 1},
                     {name='tuuphra-seeds', amount = 10},
-					{name='korlex-food-01',amount = 2},
-					{name='bedding',amount = 1},
-					{name='fish-hydrolysate-barrel',amount=5,return_barrel = true},
-					{name='water-barrel',amount=20,return_barrel = true},
+					{name='korlex-food-01', amount = 2},
+					{name='bedding', amount = 1},
+					{name='fish-hydrolysate-barrel', amount=5,return_barrel = true},
+					{name='water-barrel', amount=20,return_barrel = true},
 				},
 			results =
 				{
@@ -34,7 +34,7 @@ fun.autorecipes {
 				{
 					{name='ash', amount = 20},
 					{name='fish-hydrolysate-barrel',remove_item = true},
-					{name='fish-emulsion-barrel',amount=5,return_barrel = true},
+					{name='fish-emulsion-barrel', amount=5,return_barrel = true},
 				},
 			results =
 				{
@@ -47,7 +47,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='korlex-food-02',amount = 2},
+					{name='korlex-food-02', amount = 2},
 					{name='ash', add_amount = 20},
 				},
 			results =
@@ -81,12 +81,12 @@ fun.autorecipes {
 					{name='fish',remove_item = true},
 					{name='ash',remove_item = true},
                     {name='korlex-food-02',remove_item = true},
-                    {name='kicalk',amount =3},
-					{name='tuuphra',amount =6},
-					{name='pheromones',amount =1},
-                    {name='bhoddos',amount =2},
-					--{name='water-barrel',amount=6,return_item={name='empty-barrel',amount=6}},
-					--{name='bedding',amount = 1},
+                    {name='kicalk', amount =3},
+					{name='tuuphra', amount =6},
+					{name='pheromones', amount =1},
+                    {name='bhoddos', amount =2},
+					--{name='water-barrel', amount=6,return_item={name='empty-barrel', amount=6}},
+					--{name='bedding', amount = 1},
 				},
 			results =
 				{
@@ -103,7 +103,7 @@ fun.autorecipes {
                     {name='bhoddos',remove_item = true},
                     {name='tuuphra',remove_item = true},
                     {name='kicalk',remove_item = true},
-					{name='korlex-food-01',amount =2},
+					{name='korlex-food-01', amount =2},
 				},
 			results =
 				{
@@ -116,7 +116,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='ash',amount = 20},
+					{name='ash', amount = 20},
 				},
 			results =
 				{
@@ -129,7 +129,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fish',amount = 10},
+					{name='fish', amount = 10},
 				},
 			results =
 				{
@@ -145,7 +145,7 @@ fun.autorecipes {
 					{name='korlex-food-01',remove_item = true},
 					{name='ash',remove_item = true},
 					{name='fish',remove_item = true},
-					{name='korlex-food-02',amount =2},
+					{name='korlex-food-02', amount =2},
 
 				},
 			results =
@@ -172,7 +172,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fish',amount = 10},
+					{name='fish', amount = 10},
 				},
 			results =
 				{
@@ -200,11 +200,11 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'korlex-pup', amount = 2},
-                    {name='tuuphra',amount =5},
-                    {name='kicalk',amount =1},
-                    {name='bhoddos',amount =1},
-					{name='korlex-food-01',amount =1},
-					{name='water-barrel',amount=8,return_barrel = true},
+                    {name='tuuphra', amount =5},
+                    {name='kicalk', amount =1},
+                    {name='bhoddos', amount =1},
+					{name='korlex-food-01', amount =1},
+					{name='water-barrel', amount=8,return_barrel = true},
 				},
 			results =
 				{
@@ -218,9 +218,9 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'korlex-pup', add_amount = 2},
-					{name='ash',amount = 10},
-					{name='bedding',amount = 2},
-					{name='fish',amount = 5},
+					{name='ash', amount = 10},
+					{name='bedding', amount = 2},
+					{name='fish', amount = 5},
 				},
 			results =
 				{
@@ -234,7 +234,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'korlex-pup', add_amount = 2},
-					{name='korlex-food-02',amount =1},
+					{name='korlex-food-02', amount =1},
 					{name='ash', add_amount = 10},
 				},
 			results =
@@ -266,7 +266,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 
 				},
 			results =
@@ -280,13 +280,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='antiviral',amount =1},
+					{name='antiviral', amount =1},
 				},
 			results =
 				{
 
 					{name='caged-korlex', remove_item = true},
-					{name='caged-korlex', probability = 1,amount_min =1,amount_max =2},
+					{name='caged-korlex', probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -295,7 +295,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='antiviral',amount =1},
+					--{name='antiviral', amount =1},
 					{name='gh',remove_item = true},
 				},
 			results =
@@ -309,7 +309,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='nanochondria',amount =1},
+					{name='nanochondria', amount =1},
 					--{name='antiviral',remove_item = true},
 				},
 			results =
@@ -324,8 +324,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -340,7 +340,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='nanochondria',remove_item = true},
-					{name='bmp',amount =1},
+					{name='bmp', amount =1},
 				},
 			results =
 				{
@@ -355,8 +355,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -371,7 +371,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='bmp',remove_item = true},
-					{name='anabolic-rna',amount =1},
+					{name='anabolic-rna', amount =1},
 				},
 			results =
 				{
@@ -385,8 +385,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -401,7 +401,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='anabolic-rna',remove_item = true},
-					{name='antitumor',amount =1},
+					{name='antitumor', amount =1},
 				},
 			results =
 				{
@@ -415,8 +415,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -431,7 +431,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='antitumor',remove_item = true},
-					{name='recombinant-ery',amount =1},
+					{name='recombinant-ery', amount =1},
 				},
 			results =
 				{
@@ -445,7 +445,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -460,7 +460,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='recombinant-ery',remove_item = true},
-					{name='reca',amount =1},
+					{name='reca', amount =1},
 				},
 			results =
 				{
@@ -474,7 +474,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -489,7 +489,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='reca',remove_item = true},
-					{name='orexigenic',amount =1},
+					{name='orexigenic', amount =1},
 				},
 			results =
 				{
@@ -503,7 +503,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{

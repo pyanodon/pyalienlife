@@ -14,11 +14,11 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='kmauts',amount = 2},
-					{name='caged-ulric',amount =1},
-                    {name='rennea',amount =10},
+                    {name='kmauts', amount = 2},
+					{name='caged-ulric', amount =1},
+                    {name='rennea', amount =10},
 					{name='water-barrel', amount = 4,return_barrel = true},
-					{name='bedding',amount = 1},
+					{name='bedding', amount = 1},
 				},
 			results =
 				{
@@ -33,7 +33,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='kmauts-ration',amount = 2},
+					{name='kmauts-ration', amount = 2},
 				},
 			results =
 				{
@@ -59,7 +59,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='tuuphra',amount = 10},
+					{name='tuuphra', amount = 10},
 				},
 			results =
 				{
@@ -78,11 +78,11 @@ fun.autorecipes {
 					{name='tuuphra',remove_item = true},
 					{name='rennea',remove_item = true},
 					{name='kmauts-ration',remove_item = true},
-					{name='caged-ulric',amount =4},
-					{name='pheromones',amount =2},
-                    {name='rennea',amount =15},
-					--{name='water-barrel',amount=6,return_item={name='empty-barrel',amount=6}},
-					--{name='bedding',amount = 1},
+					{name='caged-ulric', amount =4},
+					{name='pheromones', amount =2},
+                    {name='rennea', amount =15},
+					--{name='water-barrel', amount=6,return_item={name='empty-barrel', amount=6}},
+					--{name='bedding', amount = 1},
 				},
 			results =
 				{
@@ -98,7 +98,7 @@ fun.autorecipes {
 				{
                     {name='rennea',remove_item = true},
                     {name='caged-ulric',remove_item = true},
-					{name='kmauts-ration',amount =1},
+					{name='kmauts-ration', amount =1},
 				},
 			results =
 				{
@@ -111,7 +111,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='rennea',amount = 5},
+					{name='rennea', amount = 5},
 				},
 			results =
 				{
@@ -124,7 +124,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='tuuphra',amount = 5},
+					{name='tuuphra', amount = 5},
 				},
 			results =
 				{
@@ -152,13 +152,13 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='kmauts-cub', amount = 2},
-					{name='caged-ulric',amount =1},
-					{name='water-barrel',amount=4,return_barrel = true},
+					{name='caged-ulric', amount =1},
+					{name='water-barrel', amount=4,return_barrel = true},
 				},
 			results =
 				{
 					{name='kmauts', amount = 1},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
 				},
 			crafting_speed = 150,
 			tech = 'kmauts'
@@ -168,7 +168,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='kmauts-cub', add_amount = 2},
-					{name='kmauts-ration',amount = 2},
+					{name='kmauts-ration', amount = 2},
 				},
 			results =
 				{
@@ -182,8 +182,8 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='kmauts-cub', add_amount = 2},
-					{name='rennea',amount = 3},
-					{name='bedding',amount = 1},
+					{name='rennea', amount = 3},
+					{name='bedding', amount = 1},
 				},
 			results =
 				{
@@ -197,7 +197,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='kmauts-cub', add_amount = 2},
-					{name='tuuphra',amount = 10},
+					{name='tuuphra', amount = 10},
 				},
 			results =
 				{
@@ -214,13 +214,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =2},
+					{name='gh', amount =2},
 
 				},
 			results =
 				{
 					{name='caged-kmauts', remove_item = true},
-					{name='caged-kmauts', probability = 0.8,amount_min =3,amount_max =4},   --2.8
+					{name='caged-kmauts', probability = 0.8, amount_min =3, amount_max =4},   --2.8
 				},
 			crafting_speed = 25,
 			tech = 'growth-hormone'
@@ -229,12 +229,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='antiviral',amount =2},
+					{name='antiviral', amount =2},
 				},
 			results =
 				{
 					{name='caged-kmauts', remove_item = true},
-					{name='caged-kmauts', probability = 1,amount_min =3,amount_max =3},
+					{name='caged-kmauts', probability = 1, amount_min =3, amount_max =3},
 				},
 			crafting_speed = 25,
 			tech = 'antiviral'
@@ -243,7 +243,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='antiviral',amount =1},
+					--{name='antiviral', amount =1},
 					{name='gh',remove_item = true},
 				},
 			results =
@@ -257,7 +257,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='nanochondria',amount =2},
+					{name='nanochondria', amount =2},
 					--{name='antiviral',remove_item = true},
 				},
 			results =
@@ -272,8 +272,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =2},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =2},
 				},
 			results =
 				{
@@ -288,7 +288,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='nanochondria',remove_item = true},
-					{name='anabolic-rna',amount =2},
+					{name='anabolic-rna', amount =2},
 				},
 			results =
 				{
@@ -302,8 +302,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =2},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =2},
 				},
 			results =
 				{
@@ -318,7 +318,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='anabolic-rna',remove_item = true},
-					{name='antitumor',amount =2},
+					{name='antitumor', amount =2},
 				},
 			results =
 				{
@@ -332,8 +332,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =2},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =2},
 				},
 			results =
 				{
@@ -348,7 +348,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='antitumor',remove_item = true},
-					{name='recombinant-ery',amount =2},
+					{name='recombinant-ery', amount =2},
 				},
 			results =
 				{
@@ -362,7 +362,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =2},
+					{name='gh', amount =2},
 				},
 			results =
 				{
@@ -377,7 +377,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='recombinant-ery',remove_item = true},
-					{name='orexigenic',amount =2},
+					{name='orexigenic', amount =2},
 				},
 			results =
 				{
@@ -391,7 +391,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =2},
+					{name='gh', amount =2},
 				},
 			results =
 				{

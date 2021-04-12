@@ -15,7 +15,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-arthurian',amount=1},
+					{name='caged-arthurian', amount=1},
 				},
 			results =
 				{
@@ -26,7 +26,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
 					{name='mukmoux-fat', amount ='+2'},
 				},
 			crafting_speed = 15,
@@ -40,7 +40,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-arthurian',remove_item = true},
-					{name='fat-caged-arthurian',amount=1},
+					{name='fat-caged-arthurian', amount=1},
 				},
 			results =
 				{
@@ -70,7 +70,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-auog',amount=1},
+					{name='caged-auog', amount=1},
 				},
 			results =
 				{
@@ -81,7 +81,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
 					{name='mukmoux-fat', amount ='+2'},
 				},
                 crafting_speed = 15,
@@ -95,7 +95,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-auog',remove_item = true},
-					{name='fat-caged-auog',amount=1},
+					{name='fat-caged-auog', amount=1},
 				},
 			results =
 				{
@@ -125,7 +125,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cottongut',amount=5},
+					{name='cottongut', amount=5},
 				},
 			results =
 				{
@@ -149,7 +149,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='cottongut',remove_item = true},
-					{name='fat-cottongut',amount=5},
+					{name='fat-cottongut', amount=5},
 				},
 			results =
 				{
@@ -178,7 +178,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='dhilmos',amount=1},
+					{name='dhilmos', amount=1},
 				},
 			results =
 				{
@@ -205,7 +205,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='dhilmos',remove_item = true},
-					{name='fat-dhilmos',amount=1},
+					{name='fat-dhilmos', amount=1},
 				},
 			results =
 				{
@@ -235,7 +235,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-kmauts',amount=1},
+					{name='caged-kmauts', amount=1},
 				},
 			results =
 				{
@@ -246,7 +246,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
 					{name='mukmoux-fat', amount ='+2'},
 				},
                 crafting_speed = 15,
@@ -260,7 +260,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-kmauts',remove_item = true},
-					{name='fat-caged-kmauts',amount=1},
+					{name='fat-caged-kmauts', amount=1},
 				},
 			results =
 				{
@@ -290,7 +290,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-korlex',amount=1},
+					{name='caged-korlex', amount=1},
 				},
 			results =
 				{
@@ -301,7 +301,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
 					{name='mukmoux-fat', amount ='+2'},
 				},
                 crafting_speed = 15,
@@ -315,7 +315,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-korlex',remove_item = true},
-					{name='fat-caged-korlex',amount=1},
+					{name='fat-caged-korlex', amount=1},
 				},
 			results =
 				{
@@ -345,7 +345,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-mukmoux',amount=1},
+					{name='caged-mukmoux', amount=1},
 				},
 			results =
 				{
@@ -356,7 +356,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
 					{name='mukmoux-fat', amount ='+2'},
 				},
                 crafting_speed = 15,
@@ -370,7 +370,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-mukmoux',remove_item = true},
-					{name='fat-caged-mukmoux',amount=1},
+					{name='fat-caged-mukmoux', amount=1},
 				},
 			results =
 				{
@@ -400,7 +400,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-phadai',amount=1},
+					{name='caged-phadai', amount=1},
 				},
 			results =
 				{
@@ -411,7 +411,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
 					{name='mukmoux-fat', amount ='+2'},
 				},
                 crafting_speed = 15,
@@ -425,7 +425,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-phadai',remove_item = true},
-					{name='fat-caged-phadai',amount=1},
+					{name='fat-caged-phadai', amount=1},
 				},
 			results =
 				{
@@ -455,7 +455,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-scrondrix',amount=1},
+					{name='caged-scrondrix', amount=1},
 				},
 			results =
 				{
@@ -466,7 +466,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
 					{name='mukmoux-fat', amount ='+2'},
 				},
                 crafting_speed = 15,
@@ -480,7 +480,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-scrondrix',remove_item = true},
-					{name='fat-caged-scrondrix',amount=1},
+					{name='fat-caged-scrondrix', amount=1},
 				},
 			results =
 				{
@@ -510,7 +510,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-simik',amount=1},
+					{name='caged-simik', amount=1},
 				},
 			results =
 				{
@@ -521,7 +521,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='simik-blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
 					{name='mukmoux-fat', amount ='+2'},
 				},
                 crafting_speed = 15,
@@ -535,7 +535,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-simik',remove_item = true},
-					{name='fat-caged-simik',amount=1},
+					{name='fat-caged-simik', amount=1},
 				},
 			results =
 				{
@@ -565,7 +565,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='trits',amount=1},
+					{name='trits', amount=1},
 				},
 			results =
 				{
@@ -589,7 +589,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='trits',remove_item = true},
-					{name='fat-trits',amount=1},
+					{name='fat-trits', amount=1},
 				},
 			results =
 				{
@@ -619,7 +619,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-ulric',amount=1},
+					{name='caged-ulric', amount=1},
 				},
 			results =
 				{
@@ -630,7 +630,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='cage',amount=1},
+					{name='cage', amount=1},
 					{name='mukmoux-fat', amount ='+2'},
 				},
                 crafting_speed = 15,
@@ -644,7 +644,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-ulric',remove_item = true},
-					{name='fat-caged-ulric',amount=1},
+					{name='fat-caged-ulric', amount=1},
 				},
 			results =
 				{
@@ -674,7 +674,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='vonix',amount=1},
+					{name='vonix', amount=1},
 				},
 			results =
 				{
@@ -702,7 +702,7 @@ fun.autorecipes {
 				{
 					{name='fat-vonix',remove_item = true},
 					{name='vonix',remove_item = true},
-					{name='fat-vonix',amount=1},
+					{name='fat-vonix', amount=1},
 				},
 			results =
 				{
@@ -734,7 +734,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='zipir',amount=1},
+					{name='zipir', amount=1},
 				},
 			results =
 				{
@@ -761,7 +761,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='zipir',remove_item = true},
-					{name='fat-zipir',amount=1},
+					{name='fat-zipir', amount=1},
 				},
 			results =
 				{

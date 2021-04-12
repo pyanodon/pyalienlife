@@ -13,14 +13,14 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='dhilmos',amount=1},
+					{name='dhilmos', amount=1},
 				},
 			results =
 				{
-					{name='meat', probability = 0.2,amount_min =1,amount_max =1},
-                    {name='mukmoux-fat', probability = 0.1,amount_min =1,amount_max =1},
-                    {name='chitin', probability = 0.5,amount_min =1,amount_max =2},
-					{name='guts', probability = 0.3,amount_min =1,amount_max =1},
+					{name='meat', probability = 0.2, amount_min =1, amount_max =1},
+                    {name='mukmoux-fat', probability = 0.1, amount_min =1, amount_max =1},
+                    {name='chitin', probability = 0.5, amount_min =1, amount_max =2},
+					{name='guts', probability = 0.3, amount_min =1, amount_max =1},
 					{name='arthropod-blood', amount =15},
 				},
 			crafting_speed = 30,
@@ -54,7 +54,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='dhilmos',amount=1},
+					--{name='dhilmos', amount=1},
 				},
 			results =
 				{
@@ -71,7 +71,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='dhilmos',amount=1},
+					--{name='dhilmos', amount=1},
 				},
 			results =
 				{
@@ -88,7 +88,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='dhilmos',amount=1},
+					--{name='dhilmos', amount=1},
 				},
 			results =
 				{
@@ -105,7 +105,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='dhilmos',amount=1},
+					--{name='dhilmos', amount=1},
 				},
 			results =
 				{
@@ -123,7 +123,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='dhilmos',remove_item = true},
-					{name='meat-dhilmos',amount=1},
+					{name='meat-dhilmos', amount=1},
 				},
 			results =
 				{
@@ -141,7 +141,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='meat-dhilmos',remove_item = true},
-					{name='guts-dhilmos',amount=1},
+					{name='guts-dhilmos', amount=1},
 				},
 			results =
 				{
@@ -159,7 +159,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='guts-dhilmos',remove_item = true},
-					{name='blood-dhilmos',amount=1},
+					{name='blood-dhilmos', amount=1},
 				},
 			results =
 				{
@@ -177,7 +177,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='blood-dhilmos',remove_item = true},
-					{name='fat-dhilmos',amount=1},
+					{name='fat-dhilmos', amount=1},
 				},
 			results =
 				{

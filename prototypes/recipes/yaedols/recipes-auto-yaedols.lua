@@ -12,9 +12,9 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {name='yaedols-spore',amount =2},
-                {name='wood',amount =10},
-                {name='water',amount ='*10'},
+                {name='yaedols-spore', amount =2},
+                {name='wood', amount =10},
+                {name='water', amount ='*10'},
             },
         results =
             {
@@ -26,11 +26,11 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {name='fungal-substrate-02',amount =2},
+                {name='fungal-substrate-02', amount =2},
             },
         results =
             {
-                {name='yaedols',amount ='+1'}
+                {name='yaedols', amount ='+1'}
             },
         crafting_speed = 100,
         tech = 'yaedols'
@@ -38,11 +38,11 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {name='manure',amount =5},
+                {name='manure', amount =5},
             },
         results =
             {
-                {name='yaedols',amount ='+1'}
+                {name='yaedols', amount ='+1'}
             },
         crafting_speed = 100,
         tech = 'yaedols'
@@ -53,11 +53,11 @@ fun.autorecipes {
             {
                 {name='fungal-substrate-02',remove_item = true},
                 {name='manure',remove_item = true},
-                {name='fungal-substrate-03',amount =2},
+                {name='fungal-substrate-03', amount =2},
             },
         results =
             {
-                {name='yaedols',amount =3}
+                {name='yaedols', amount =3}
             },
         crafting_speed = 90,
         tech = 'yaedols-mk02'
@@ -65,11 +65,11 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {name='manure',amount =5},
+                {name='manure', amount =5},
             },
         results =
             {
-                {name='yaedols',amount =4}
+                {name='yaedols', amount =4}
             },
         crafting_speed = 90,
         tech = 'yaedols-mk02'
@@ -77,11 +77,11 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {name='biomass',amount =10},
+                {name='biomass', amount =10},
             },
         results =
             {
-                {name='yaedols',amount =5}
+                {name='yaedols', amount =5}
             },
         crafting_speed = 90,
         tech = 'yaedols-mk03'
@@ -89,11 +89,11 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {name='nitrogen',amount ='*10'},
+                {name='nitrogen', amount ='*10'},
             },
         results =
             {
-                {name='yaedols',amount =6}
+                {name='yaedols', amount =6}
             },
         crafting_speed = 90,
         tech = 'yaedols-mk03'
@@ -102,11 +102,11 @@ fun.autorecipes {
         ingredients =
             {
                 {name='biomass',remove_item = true},
-                {name='urea',amount =10},
+                {name='urea', amount =10},
             },
         results =
             {
-                {name='yaedols',amount =8}
+                {name='yaedols', amount =8}
             },
         crafting_speed = 90,
         tech = 'yaedols-mk03'
@@ -119,11 +119,11 @@ fun.autorecipes {
                 {name='nitrogen',remove_item = true},
                 {name='manure',remove_item = true},
                 {name='biomass',remove_item = true},
-                {name='gh',amount =1},
+                {name='gh', amount =1},
             },
         results =
             {
-                {name='yaedols',amount =8}
+                {name='yaedols', amount =8}
             },
         crafting_speed = 70,
         tech = 'yaedols-mk04'
@@ -131,7 +131,7 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {name='urea',amount =10},
+                {name='urea', amount =10},
                 --{'nitrogen',remove_item = true},
                 --{'manure',remove_item = true},
                 --{'biomass',remove_item = true},
@@ -139,7 +139,7 @@ fun.autorecipes {
             },
         results =
             {
-                {name='yaedols',amount =10}
+                {name='yaedols', amount =10}
             },
         crafting_speed = 70,
         tech = 'yaedols-mk04'
@@ -147,14 +147,14 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {name='bacteria-2',amount ='*20'},
+                {name='bacteria-2', amount ='*20'},
                 --{'manure',remove_item = true},
                 --{'biomass',remove_item = true},
                 --{'gh',1},
             },
         results =
             {
-                {name='yaedols',amount =12}
+                {name='yaedols', amount =12}
             },
         crafting_speed = 70,
         tech = 'yaedols-mk04'
@@ -162,13 +162,13 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {name='manure',amount =10},
-                {name='biomass',amount =15},
+                {name='manure', amount =10},
+                {name='biomass', amount =15},
                 --{'gh',1},
             },
         results =
             {
-                {name='yaedols',amount =15}
+                {name='yaedols', amount =15}
             },
         crafting_speed = 70,
         tech = 'yaedols-mk04'

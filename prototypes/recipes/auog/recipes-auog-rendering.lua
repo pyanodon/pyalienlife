@@ -12,19 +12,19 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-auog',amount=3},
+					{name='caged-auog', amount=3},
 				},
 			results =
 				{
-					{name='bones',amount_min =2,amount_max =6},
-					{name='meat',amount_min =3,amount_max =7},
-					{name='skin',amount_min =1,amount_max =3},
-					{name='mukmoux-fat',amount_min =1,amount_max =5},
-					{name='guts',amount_min =1,amount_max =5},
+					{name='bones', amount_min =2, amount_max =6},
+					{name='meat', amount_min =3, amount_max =7},
+					{name='skin', amount_min =1, amount_max =3},
+					{name='mukmoux-fat', amount_min =1, amount_max =5},
+					{name='guts', amount_min =1, amount_max =5},
 					{name='blood', amount =150},
-					{name='brain',amount_min =1,amount_max =3},
+					{name='brain', amount_min =1, amount_max =3},
 					{name='biomass', amount_min = 2, amount_max = 5},
-					{name='cage',amount=3},
+					{name='cage', amount=3},
 				},
 			crafting_speed = 10,
 			tech = 'rendering',
@@ -36,7 +36,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-auog',amount=1},
+					--{name='caged-auog', amount=1},
 				},
 			results =
 				{
@@ -61,7 +61,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-auog',amount=1},
+					--{name='caged-auog', amount=1},
 				},
 			results =
 				{
@@ -78,7 +78,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-auog',amount=1},
+					--{name='caged-auog', amount=1},
 				},
 			results =
 				{
@@ -95,7 +95,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-auog',amount=1},
+					--{name='caged-auog', amount=1},
 				},
 			results =
 				{
@@ -112,7 +112,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-auog',amount=1},
+					--{name='caged-auog', amount=1},
 				},
 			results =
 				{
@@ -129,7 +129,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-auog',amount=1},
+					--{name='caged-auog', amount=1},
 				},
 			results =
 				{
@@ -146,7 +146,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-auog',amount=1},
+					--{name='caged-auog', amount=1},
 				},
 			results =
 				{
@@ -163,7 +163,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-auog',amount=1},
+					--{name='caged-auog', amount=1},
 				},
 			results =
 				{

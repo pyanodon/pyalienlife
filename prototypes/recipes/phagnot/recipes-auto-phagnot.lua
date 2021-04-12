@@ -11,13 +11,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='bhoddos',amount =3},
-					{name='water-barrel',amount=3,return_item={name='empty-barrel',amount=3}},
-					{name='cage',amount=1},
+					{name='bhoddos', amount =3},
+					{name='water-barrel', amount=3,return_item={name='empty-barrel', amount=3}},
+					{name='cage', amount=1},
 				},
 			results =
 				{
-					{name='caged-phagnot', probability = 0.7,amount_min =1,amount_max =1},
+					{name='caged-phagnot', probability = 0.7, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 150,
 			tech = 'phagnot'
@@ -27,12 +27,12 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='bhoddos',remove_item = true},
-					{name='phagnot-food-01',amount =1},
+					{name='phagnot-food-01', amount =1},
 				},
 			results =
 				{
 					{name='caged-phagnot',remove_item = true},
-					{name='caged-phagnot', probability = 0.8,amount_min =1,amount_max =1},
+					{name='caged-phagnot', probability = 0.8, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 140,
 			tech = 'phagnot'
@@ -41,8 +41,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='salt',amount = 3},
-					{name='bedding',amount = 1},
+					{name='salt', amount = 3},
+					{name='bedding', amount = 1},
 				},
 			results =
 				{
@@ -55,7 +55,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount = 10},
+					{name='raw-fiber', amount = 10},
 				},
 			results =
 				{
@@ -71,13 +71,13 @@ fun.autorecipes {
 					{name='phagnot-food-01',remove_item = true},
 					{name='salt',remove_item = true},
 					{name='raw-fiber',remove_item = true},
-					{name='phagnot-food-02',amount =1},
+					{name='phagnot-food-02', amount =1},
 
 				},
 			results =
 				{
 					{name='caged-phagnot',remove_item = true},
-					{name='caged-phagnot', probability = 0.9,amount_min =1,amount_max =1},
+					{name='caged-phagnot', probability = 0.9, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 110,
 			tech = 'phagnot-mk03'
@@ -86,7 +86,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='salt',amount =3},
+					{name='salt', amount =3},
 				},
 			results =
 				{
@@ -99,7 +99,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount = 10},
+					{name='raw-fiber', amount = 10},
 				},
 			results =
 				{
@@ -112,7 +112,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 
 				},
 			results =
@@ -126,12 +126,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='antiviral',amount =1},
+					{name='antiviral', amount =1},
 				},
 			results =
 				{
 					{name='caged-phagnot', remove_item = true},
-					{name='caged-phagnot', probability = 1,amount_min =1,amount_max =2},
+					{name='caged-phagnot', probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -140,7 +140,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='antiviral',amount =1},
+					--{name='antiviral', amount =1},
 					{name='gh',remove_item = true},
 				},
 			results =
@@ -154,7 +154,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='nanochondria',amount =1},
+					{name='nanochondria', amount =1},
 					--{name='antiviral',remove_item = true},
 				},
 			results =
@@ -169,8 +169,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -185,7 +185,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='nanochondria',remove_item = true},
-					{name='bmp',amount =1},
+					{name='bmp', amount =1},
 				},
 			results =
 				{
@@ -200,8 +200,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -216,7 +216,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='bmp',remove_item = true},
-					{name='anabolic-rna',amount =1},
+					{name='anabolic-rna', amount =1},
 				},
 			results =
 				{
@@ -230,8 +230,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -246,7 +246,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='anabolic-rna',remove_item = true},
-					{name='antitumor',amount =1},
+					{name='antitumor', amount =1},
 				},
 			results =
 				{
@@ -260,8 +260,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -276,7 +276,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='antitumor',remove_item = true},
-					{name='recombinant-ery',amount =1},
+					{name='recombinant-ery', amount =1},
 				},
 			results =
 				{
@@ -290,7 +290,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -305,7 +305,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='recombinant-ery',remove_item = true},
-					{name='reca',amount =1},
+					{name='reca', amount =1},
 				},
 			results =
 				{
@@ -319,7 +319,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -344,11 +344,11 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='bhoddos',amount =3},
-                    {name='yotoi-seeds',amount =30},
-					{name='water-barrel',amount=10,return_item={name='empty-barrel',amount=10}},
-					--{name='cage',amount=1},
-					{name='bedding',amount = 1},
+                    {name='bhoddos', amount =3},
+                    {name='yotoi-seeds', amount =30},
+					{name='water-barrel', amount=10,return_item={name='empty-barrel', amount=10}},
+					--{name='cage', amount=1},
+					{name='bedding', amount = 1},
 				},
 			results =
 				{
@@ -363,7 +363,7 @@ fun.autorecipes {
 				{
                     {name='yotoi-seeds',remove_item = true},
                     {name='bhoddos',remove_item = true},
-					{name='phagnot-food-01',amount =2},
+					{name='phagnot-food-01', amount =2},
 				},
 			results =
 				{
@@ -376,7 +376,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='salt',amount = 10},
+					{name='salt', amount = 10},
 				},
 			results =
 				{
@@ -389,7 +389,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount = 15},
+					{name='raw-fiber', amount = 15},
 				},
 			results =
 				{
@@ -405,7 +405,7 @@ fun.autorecipes {
 					{name='phagnot-food-01',remove_item = true},
 					{name='salt',remove_item = true},
 					{name='raw-fiber',remove_item = true},
-					{name='phagnot-food-02',amount =2},
+					{name='phagnot-food-02', amount =2},
 
 				},
 			results =
@@ -419,7 +419,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='salt',amount =10},
+					{name='salt', amount =10},
 				},
 			results =
 				{
@@ -432,7 +432,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount = 15},
+					{name='raw-fiber', amount = 15},
 				},
 			results =
 				{
@@ -448,11 +448,11 @@ fun.autorecipes {
 					{name='raw-fiber',remove_item = true},
 					{name='salt',remove_item = true},
 					{name='phagnot-food-02',remove_item = true},
-					{name='bhoddos',amount =6},
-					{name='pheromones',amount =1},
-                    {name='yotoi-seeds',amount =30},
-					--{name='water-barrel',amount=6,return_item={name='empty-barrel',amount=6}},
-					--{name='bedding',amount = 1},
+					{name='bhoddos', amount =6},
+					{name='pheromones', amount =1},
+                    {name='yotoi-seeds', amount =30},
+					--{name='water-barrel', amount=6,return_item={name='empty-barrel', amount=6}},
+					--{name='bedding', amount = 1},
 				},
 			results =
 				{
@@ -468,7 +468,7 @@ fun.autorecipes {
 				{
                     {name='yotoi-seeds',remove_item = true},
                     {name='bhoddos',remove_item = true},
-					{name='phagnot-food-01',amount =2},
+					{name='phagnot-food-01', amount =2},
 				},
 			results =
 				{
@@ -481,7 +481,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='salt',amount = 10},
+					{name='salt', amount = 10},
 				},
 			results =
 				{
@@ -494,7 +494,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount = 10},
+					{name='raw-fiber', amount = 10},
 				},
 			results =
 				{
@@ -510,7 +510,7 @@ fun.autorecipes {
 					{name='phagnot-food-01',remove_item = true},
 					{name='salt',remove_item = true},
 					{name='raw-fiber',remove_item = true},
-					{name='phagnot-food-02',amount =2},
+					{name='phagnot-food-02', amount =2},
 
 				},
 			results =
@@ -524,7 +524,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='salt',amount ='*10'},
+					{name='salt', amount ='*10'},
 				},
 			results =
 				{
@@ -537,7 +537,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',amount =10},
+					{name='raw-fiber', amount =10},
 				},
 			results =
 				{
@@ -561,18 +561,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-phagnot',amount=1},
+					{name='caged-phagnot', amount=1},
 				},
 			results =
 				{
-					{name='bones', probability = 0.5,amount_min =1,amount_max =6},
-					{name='meat', probability = 0.1,amount_min =1,amount_max =2},
-					{name='skin', probability = 0.2,amount_min =1,amount_max =1},
-                    {name='guts', probability = 0.3,amount_min =1,amount_max =1},
-                    {name='gas-bladder', probability = 0.4,amount_min =1,amount_max =1},
+					{name='bones', probability = 0.5, amount_min =1, amount_max =6},
+					{name='meat', probability = 0.1, amount_min =1, amount_max =2},
+					{name='skin', probability = 0.2, amount_min =1, amount_max =1},
+                    {name='guts', probability = 0.3, amount_min =1, amount_max =1},
+                    {name='gas-bladder', probability = 0.4, amount_min =1, amount_max =1},
 					{name='blood', amount =20},
-					{name='cage',amount=1},
-					{name='brain', probability = 0.4,amount_min =1,amount_max =1},
+					{name='cage', amount=1},
+					{name='brain', probability = 0.4, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 30,
 			tech = 'phagnot',
@@ -584,7 +584,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-phagnot',amount=1},
+					--{name='caged-phagnot', amount=1},
 				},
 			results =
 				{
@@ -607,7 +607,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-phagnot',amount=1},
+					--{name='caged-phagnot', amount=1},
 				},
 			results =
 				{
@@ -624,7 +624,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-phagnot',amount=1},
+					--{name='caged-phagnot', amount=1},
 				},
 			results =
 				{
@@ -641,7 +641,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-phagnot',amount=1},
+					--{name='caged-phagnot', amount=1},
 				},
 			results =
 				{
@@ -658,7 +658,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-phagnot',amount=1},
+					--{name='caged-phagnot', amount=1},
 				},
 			results =
 				{
@@ -675,7 +675,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-phagnot',amount=1},
+					--{name='caged-phagnot', amount=1},
 				},
 			results =
 				{
@@ -692,7 +692,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='caged-phagnot',amount=1},
+					--{name='caged-phagnot', amount=1},
 				},
 			results =
 				{
@@ -710,7 +710,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-phagnot',remove_item = true},
-					{name='brain-caged-phagnot',amount=1},
+					{name='brain-caged-phagnot', amount=1},
 				},
 			results =
 				{
@@ -729,7 +729,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='brain-caged-phagnot',remove_item = true},
-					{name='bone-caged-phagnot',amount=1},
+					{name='bone-caged-phagnot', amount=1},
 				},
 			results =
 				{
@@ -747,7 +747,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='bone-caged-phagnot',remove_item = true},
-					{name='guts-caged-phagnot',amount=1},
+					{name='guts-caged-phagnot', amount=1},
 				},
 			results =
 				{
@@ -765,7 +765,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='guts-caged-phagnot',remove_item = true},
-					{name='blood-caged-phagnot',amount=1},
+					{name='blood-caged-phagnot', amount=1},
 				},
 			results =
 				{
@@ -783,7 +783,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='blood-caged-phagnot',remove_item = true},
-					{name='skin-caged-phagnot',amount=1},
+					{name='skin-caged-phagnot', amount=1},
 				},
 			results =
 				{
@@ -801,7 +801,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='skin-caged-phagnot',remove_item = true},
-					{name='meat-caged-phagnot',amount=1},
+					{name='meat-caged-phagnot', amount=1},
 				},
 			results =
 				{

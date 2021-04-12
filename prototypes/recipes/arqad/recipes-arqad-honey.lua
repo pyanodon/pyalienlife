@@ -37,12 +37,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='empty-honeycomb',amount =3},
-                    {name='ulric',amount =1},
+                    {name='empty-honeycomb', amount =3},
+                    {name='ulric', amount =1},
 				},
 			results =
 				{
-					{name='honeycomb',amount = 3},
+					{name='honeycomb', amount = 3},
 				},
 			crafting_speed = 100,
 			tech = 'arqad',

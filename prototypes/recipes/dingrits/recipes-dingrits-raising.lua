@@ -15,10 +15,10 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'dingrits', amount = 2},
-                    {name='caged-scrondrix',amount =3},
-                    {name='yotoi-seeds',amount =30},
-					{name='water-barrel',amount=15,return_barrel = true},
-					{name='bedding',amount = 1},				{name='dingrits-food-01',amount =2},
+                    {name='caged-scrondrix', amount =3},
+                    {name='yotoi-seeds', amount =30},
+					{name='water-barrel', amount=15,return_barrel = true},
+					{name='bedding', amount = 1},				{name='dingrits-food-01', amount =2},
 				},
 			results =
 				{
@@ -31,8 +31,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='yaedols',amount = 5},
-					{name='yotoi-leaves',amount = 10},
+					{name='yaedols', amount = 5},
+					{name='yotoi-leaves', amount = 10},
 				},
 			results =
 				{
@@ -45,7 +45,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='dingrits-food-02',amount =2},
+					{name='dingrits-food-02', amount =2},
 					{name='yaedols', add_amount =5},
 				},
 			results =
@@ -79,11 +79,11 @@ fun.autorecipes {
 					{name='yotoi-leaves',remove_item = true},
 					{name='yaedols',remove_item = true},
 					{name='dingrits-food-02',remove_item = true},
-					{name='caged-scrondrix',amount =2},
-					{name='pheromones',amount =1},
-                    {name='yotoi-seeds',amount =30},
-					--{name='water-barrel',amount=6,return_item={name='empty-barrel',amount=6}},
-					--{name='bedding',amount = 1},
+					{name='caged-scrondrix', amount =2},
+					{name='pheromones', amount =1},
+                    {name='yotoi-seeds', amount =30},
+					--{name='water-barrel', amount=6,return_item={name='empty-barrel', amount=6}},
+					--{name='bedding', amount = 1},
 				},
 			results =
 				{
@@ -99,7 +99,7 @@ fun.autorecipes {
 				{
                     {name='yotoi-seeds',remove_item = true},
                     {name='caged-scrondrix',remove_item = true},
-					{name='dingrits-food-01',amount =2},
+					{name='dingrits-food-01', amount =2},
 				},
 			results =
 				{
@@ -112,7 +112,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='yaedols',amount = 15},
+					{name='yaedols', amount = 15},
 				},
 			results =
 				{
@@ -125,7 +125,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='yotoi-leaves',amount = 10},
+					{name='yotoi-leaves', amount = 10},
 				},
 			results =
 				{
@@ -141,7 +141,7 @@ fun.autorecipes {
 					{name='dingrits-food-01',remove_item = true},
 					{name='yaedols',remove_item = true},
 					{name='yotoi-leaves',remove_item = true},
-					{name='dingrits-food-02',amount =2},
+					{name='dingrits-food-02', amount =2},
 
 				},
 			results =
@@ -155,7 +155,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='yaedols',amount ='*3'},
+					{name='yaedols', amount ='*3'},
 				},
 			results =
 				{
@@ -168,7 +168,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='yotoi-leaves',amount = 10},
+					{name='yotoi-leaves', amount = 10},
 				},
 			results =
 				{
@@ -194,14 +194,14 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'dingrits-cub', amount = 3},
-					{name='caged-scrondrix',amount =1},
-					{name='water-barrel',amount=5,return_barrel = true},
-					{name='bedding',amount = 1},
-					{name='dingrits-food-01',amount =1},
+					{name='caged-scrondrix', amount =1},
+					{name='water-barrel', amount=5,return_barrel = true},
+					{name='bedding', amount = 1},
+					{name='dingrits-food-01', amount =1},
 				},
 			results =
 				{
-					{name='dingrits', amount_min = 1,amount_max =3},
+					{name='dingrits', amount_min = 1, amount_max =3},
 				},
 			crafting_speed = 150,
 			tech = 'dingrits'
@@ -211,12 +211,12 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'dingrits-cub', amount = 5},
-					{name='yaedols',amount = 10},
-					{name='yotoi-leaves',amount = 15},
+					{name='yaedols', amount = 10},
+					{name='yotoi-leaves', amount = 15},
 				},
 			results =
 				{
-					{name='dingrits', amount_min = 3,amount_max = 5},
+					{name='dingrits', amount_min = 3, amount_max = 5},
 				},
 			crafting_speed = 130,
 			tech = 'dingrits-mk02'
@@ -226,13 +226,13 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'dingrits-cub', amount = 10},
-					{name='dingrits-food-02',amount =1},
+					{name='dingrits-food-02', amount =1},
 					{name='yaedols', add_amount = 10},
 
 				},
 			results =
 				{
-					{name='dingrits', amount_min = 7,amount_max = 10},
+					{name='dingrits', amount_min = 7, amount_max = 10},
 				},
 			crafting_speed = 110,
 			tech = 'dingrits-mk03'
@@ -259,7 +259,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 
 				},
 			results =
@@ -273,13 +273,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='antiviral',amount =1},
+					{name='antiviral', amount =1},
 					--{name='cage',remove_item = true},
 				},
 			results =
 				{
 					{name='dingrits', remove_item = true},
-					{name='dingrits', probability = 1,amount_min =1,amount_max =2},
+					{name='dingrits', probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -288,7 +288,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='antiviral',amount =1},
+					--{name='antiviral', amount =1},
 					{name='gh',remove_item = true},
 				},
 			results =
@@ -302,7 +302,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='nanochondria',amount =1},
+					{name='nanochondria', amount =1},
 					--{name='antiviral',remove_item = true},
 				},
 			results =
@@ -317,8 +317,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -333,7 +333,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='nanochondria',remove_item = true},
-					{name='bmp',amount =1},
+					{name='bmp', amount =1},
 				},
 			results =
 				{
@@ -348,8 +348,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -364,7 +364,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='bmp',remove_item = true},
-					{name='anabolic-rna',amount =1},
+					{name='anabolic-rna', amount =1},
 				},
 			results =
 				{
@@ -378,8 +378,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -394,7 +394,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='anabolic-rna',remove_item = true},
-					{name='antitumor',amount =1},
+					{name='antitumor', amount =1},
 				},
 			results =
 				{
@@ -408,8 +408,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria',amount =1},
-					{name='gh',amount =1},
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -424,7 +424,7 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='antitumor',remove_item = true},
-					{name='recombinant-ery',amount =1},
+					{name='recombinant-ery', amount =1},
 				},
 			results =
 				{
@@ -438,7 +438,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -453,8 +453,8 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='recombinant-ery',remove_item = true},
-					{name='reca',amount =1},
-					{name='cage',amount ='+1'},
+					{name='reca', amount =1},
+					{name='cage', amount ='+1'},
 				},
 			results =
 				{
@@ -468,7 +468,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh',amount =1},
+					{name='gh', amount =1},
 				},
 			results =
 				{

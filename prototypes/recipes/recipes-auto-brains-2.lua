@@ -15,7 +15,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-arthurian',amount=1},
+					{name='caged-arthurian', amount=1},
 				},
 			results =
 				{
@@ -40,7 +40,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-arthurian',remove_item = true},
-					{name='brain-caged-arthurian',amount=1},
+					{name='brain-caged-arthurian', amount=1},
 				},
 			results =
 				{
@@ -70,7 +70,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-auog',amount=1},
+					{name='caged-auog', amount=1},
 				},
 			results =
 				{
@@ -95,7 +95,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-auog',remove_item = true},
-					{name='brain-caged-auog',amount=1},
+					{name='brain-caged-auog', amount=1},
 				},
 			results =
 				{
@@ -125,7 +125,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cottongut',amount=5},
+					{name='cottongut', amount=5},
 				},
 			results =
 				{
@@ -149,7 +149,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='cottongut',remove_item = true},
-					{name='brain-cottongut',amount=5},
+					{name='brain-cottongut', amount=5},
 				},
 			results =
 				{
@@ -178,7 +178,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-dingrits',amount=1},
+					{name='caged-dingrits', amount=1},
 				},
 			results =
 				{
@@ -203,7 +203,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-dingrits',remove_item = true},
-					{name='brain-caged-dingrits',amount=1},
+					{name='brain-caged-dingrits', amount=1},
 				},
 			results =
 				{
@@ -232,7 +232,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-kmauts',amount=1},
+					{name='caged-kmauts', amount=1},
 				},
 			results =
 				{
@@ -256,7 +256,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-kmauts',remove_item = true},
-					{name='brain-caged-kmauts',amount=1},
+					{name='brain-caged-kmauts', amount=1},
 				},
 			results =
 				{
@@ -285,7 +285,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-korlex',amount=1},
+					{name='caged-korlex', amount=1},
 				},
 			results =
 				{
@@ -309,7 +309,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-korlex',remove_item = true},
-					{name='brain-caged-korlex',amount=1},
+					{name='brain-caged-korlex', amount=1},
 				},
 			results =
 				{
@@ -338,7 +338,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-mukmoux',amount=1},
+					{name='caged-mukmoux', amount=1},
 				},
 			results =
 				{
@@ -363,7 +363,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-mukmoux',remove_item = true},
-					{name='brain-caged-mukmoux',amount=1},
+					{name='brain-caged-mukmoux', amount=1},
 				},
 			results =
 				{
@@ -393,7 +393,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-phadai',amount=1},
+					{name='caged-phadai', amount=1},
 				},
 			results =
 				{
@@ -420,7 +420,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-phadai',remove_item = true},
-					{name='brain-caged-phadai',amount=1},
+					{name='brain-caged-phadai', amount=1},
 				},
 			results =
 				{
@@ -450,7 +450,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-phagnot',amount=1},
+					{name='caged-phagnot', amount=1},
 				},
 			results =
 				{
@@ -475,7 +475,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-phagnot',remove_item = true},
-					{name='brain-caged-phagnot',amount=1},
+					{name='brain-caged-phagnot', amount=1},
 				},
 			results =
 				{
@@ -505,7 +505,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-scrondrix',amount=1},
+					{name='caged-scrondrix', amount=1},
 				},
 			results =
 				{
@@ -531,7 +531,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-scrondrix',remove_item = true},
-					{name='brain-caged-scrondrix',amount=1},
+					{name='brain-caged-scrondrix', amount=1},
 				},
 			results =
 				{
@@ -560,7 +560,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='trits',amount=1},
+					{name='trits', amount=1},
 				},
 			results =
 				{
@@ -585,7 +585,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='trits',remove_item = true},
-					{name='brain-trits',amount=1},
+					{name='brain-trits', amount=1},
 				},
 			results =
 				{
@@ -615,7 +615,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-ulric',amount=1},
+					{name='caged-ulric', amount=1},
 				},
 			results =
 				{
@@ -640,7 +640,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-ulric',remove_item = true},
-					{name='brain-caged-ulric',amount=1},
+					{name='brain-caged-ulric', amount=1},
 				},
 			results =
 				{
@@ -669,7 +669,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='vonix',amount=1},
+					{name='vonix', amount=1},
 				},
 			results =
 				{
@@ -693,7 +693,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='vonix',remove_item = true},
-					{name='brain-vonix',amount=1},
+					{name='brain-vonix', amount=1},
 				},
 			results =
 				{
@@ -724,7 +724,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-vrauks',amount=1},
+					{name='caged-vrauks', amount=1},
 				},
 			results =
 				{
@@ -747,7 +747,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-vrauks',remove_item = true},
-					{name='brain-caged-vrauks',amount=1},
+					{name='brain-caged-vrauks', amount=1},
 				},
 			results =
 				{
@@ -776,7 +776,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-xeno',amount=1},
+					{name='caged-xeno', amount=1},
 				},
 			results =
 				{
@@ -800,7 +800,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-xeno',remove_item = true},
-					{name='brain-xeno',amount=1},
+					{name='brain-xeno', amount=1},
 				},
 			results =
 				{
@@ -835,7 +835,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='zipir',amount=1},
+					{name='zipir', amount=1},
 				},
 			results =
 				{
@@ -858,7 +858,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='zipir',remove_item = true},
-					{name='brain-zipir',amount=1},
+					{name='brain-zipir', amount=1},
 				},
 			results =
 				{
