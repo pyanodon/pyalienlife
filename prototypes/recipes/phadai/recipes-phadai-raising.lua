@@ -1,79 +1,117 @@
 local fun = require("prototypes/functions/functions")
 
-------------------CUB MAKER------------------
+------------------pup MAKER------------------
 
 fun.autorecipes {
-    name = 'phagnot-cub',
-	category = 'phagnot',
-	module_limitations = 'phagnot',
-	main_product = "phagnot-cub",
-	subgroup = 'py-alienlife-phagnot',
+    name = 'phadai-pup',
+	category = 'phadai',
+	module_limitations = 'phadai',
+	subgroup = 'py-alienlife-phadai',
 	order = 'c',
     mats =
 	{
-		--logistic
 		{
 			ingredients =
 				{
-					{name = 'phagnot', amount = 2},
-                    {name='bhoddos', amount =3},
-                    {name='yotoi-seeds', amount =30},
-					{name='phagnot-food-01', amount =2},
-					{name='bedding', amount = 1},
-					{name='water-barrel', amount=10,return_barrel = true},
+                    {name='cottongut', amount =6},
+                    {name='fawogae', amount =20},
+					{name='water-barrel', amount=15,return_item={name='empty-barrel', amount=15}},
+					--{name='cage', amount=1},
+                    {name='bedding', amount = 1},
+                    {name='programmable-speaker', amount=1},
+                    {name='small-lamp', amount=2},
 				},
 			results =
 				{
-					{name='phagnot-cub', amount = 6},
-					{name = 'manure', amount = 2},
+					{name='phadai-pup', amount =3},
 				},
 			crafting_speed = 140,
-			tech = 'phagnot'
+			tech = 'assisted-embryology'
 		},
-		--py
+		--food 1
 		{
 			ingredients =
 				{
-					{name='salt', amount = 10},
-					{name='raw-fiber', amount = 15},
+                    {name='fawogae',remove_item = true},
+                    {name='meat',remove_item = true},
+                    {name='meat', amount =20},
+					{name='phadai-food-01', amount =2},
 				},
 			results =
 				{
-					{name='phagnot-cub', add_amount = 2},
-					{name = 'manure', add_amount = 2},
+
 				},
-			crafting_speed = 100,
-			tech = 'phagnot-mk02'
+			crafting_speed = 120,
+			tech = 'assisted-embryology'
 		},
-		--chem
+		--fawogae
 		{
 			ingredients =
 				{
-					{name='phagnot-food-02', amount =2},
-					{name='salt', add_amount =10},
+					{name='fawogae', amount = 20},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 110,
+			tech = 'assisted-embryology'
+		},
+		--energy-drink
+		{
+			ingredients =
+				{
+					{name='energy-drink', amount = 6},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 100,
+			tech = 'assisted-embryology'
+		},
+		--food 2
+		{
+			ingredients =
+				{
+					{name='phadai-food-01',remove_item = true},
+					{name='fawogae',remove_item = true},
+					{name='energy-drink',remove_item = true},
+					{name='phadai-food-02', amount =2},
 
 				},
 			results =
 				{
-					{name='phagnot-cub', add_amount = 2},
-					{name = 'manure', add_amount = 2},
+
 				},
-			crafting_speed = 60,
-			tech = 'phagnot-mk03'
+			crafting_speed = 100,
+			tech = 'assisted-embryology'
 		},
-		--prod
+		--food 2 fawogae
 		{
 			ingredients =
 				{
-					{name='raw-fiber', add_amount = 15},
+					{name='fawogae', amount =10},
 				},
 			results =
 				{
-					{name='phagnot-cub', add_amount = 2},
-					{name = 'manure', add_amount = 2},
+
 				},
-			crafting_speed = 20,
-			tech = 'phagnot-mk04'
+			crafting_speed = 90,
+			tech = 'assisted-embryology'
+		},
+		--food 2 fawogae energy-drink
+		{
+			ingredients =
+				{
+					{name='energy-drink', amount = 6},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 80,
+			tech = 'assisted-embryology'
 		},
 	}
 }
@@ -83,19 +121,19 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='raw-fiber',remove_item = true},
-					{name='salt',remove_item = true},
-					{name='phagnot-food-02',remove_item = true},
-					{name='bhoddos', amount =6},
+					{name='energy-drink',remove_item = true},
+					{name='fawogae',remove_item = true},
+					{name='phadai-food-02',remove_item = true},
+					--{name='meat', amount =15},
 					{name='pheromones', amount =1},
-                    {name='yotoi-seeds', amount =30},
+                    {name='fawogae', amount =30},
 					--{name='water-barrel', amount=6,return_item={name='empty-barrel', amount=6}},
 					--{name='bedding', amount = 1},
 				},
 			results =
 				{
-					{name='phagnot-cub',remove_item = true},
-					{name='phagnot-cub', amount =6},
+					{name='phadai-pup',remove_item = true},
+					{name='phadai-pup', amount =5},
 				},
 			crafting_speed = 140,
 			tech = 'pheromones'
@@ -104,9 +142,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='yotoi-seeds',remove_item = true},
-                    {name='bhoddos',remove_item = true},
-					{name='phagnot-food-01', amount =2},
+                    {name='fawogae',remove_item = true},
+					{name='phadai-food-01', amount =2},
 				},
 			results =
 				{
@@ -115,11 +152,11 @@ fun.autorecipes {
 			crafting_speed = 120,
 			tech = 'pheromones'
 		},
-		--salt
+		--fawogae
 		{
 			ingredients =
 				{
-					{name='salt', amount = 10},
+					{name='fawogae', amount = 20},
 				},
 			results =
 				{
@@ -128,11 +165,11 @@ fun.autorecipes {
 			crafting_speed = 110,
 			tech = 'pheromones'
 		},
-		--fiber
+		--energy-drink
 		{
 			ingredients =
 				{
-					{name='raw-fiber', amount = 10},
+					{name='energy-drink', amount = 10},
 				},
 			results =
 				{
@@ -145,10 +182,10 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='phagnot-food-01',remove_item = true},
-					{name='salt',remove_item = true},
-					{name='raw-fiber',remove_item = true},
-					{name='phagnot-food-02', amount =2},
+					{name='phadai-food-01',remove_item = true},
+					{name='fawogae',remove_item = true},
+					{name='energy-drink',remove_item = true},
+					{name='phadai-food-02', amount =2},
 
 				},
 			results =
@@ -158,11 +195,11 @@ fun.autorecipes {
 			crafting_speed = 100,
 			tech = 'pheromones'
 		},
-		--food 2 salt
+		--food 2 fawogae
 		{
 			ingredients =
 				{
-					{name='salt', amount ='*10'},
+					{name='fawogae', amount ='*5'},
 				},
 			results =
 				{
@@ -171,11 +208,11 @@ fun.autorecipes {
 			crafting_speed = 90,
 			tech = 'pheromones'
 		},
-		--food 2 salt fiber
+		--food 2 fawogae energy-drink
 		{
 			ingredients =
 				{
-					{name='raw-fiber', amount =10},
+					{name='energy-drink', amount = 7},
 				},
 			results =
 				{
@@ -191,79 +228,74 @@ fun.autorecipes {
 --raising
 
 fun.autorecipes {
-    name = 'caged-phagnot',
-	category = 'phagnot',
-	module_limitations = 'phagnot',
-	main_product = "phagnot",
-	subgroup = 'py-alienlife-phagnot',
+    name = 'caged-phadai',
+	category = 'phadai',
+	module_limitations = 'phadai',
+	subgroup = 'py-alienlife-phadai',
 	order = 'b',
     mats =
 	{
-		--logistic
+		--chem
 		{
 			ingredients =
 				{
-					{name='phagnot-cub', amount = 6},
-					{name='bhoddos', amount =3},
-					{name='phagnot-food-01', amount =1},
-					{name='water-barrel', amount=3, return_barrel = true},
+					{name='phadai-pup', amount = 10},
+					{name='cottongut', amount =2},
+                    {name='meat', amount =10},
+					{name='phadai-food-01', amount =1},
+					{name='water-barrel', amount=4,return_barrel = true},
+                    {name='programmable-speaker', amount=1},
+                    {name='small-lamp', amount=2},
 				},
 			results =
 				{
-					{name='phagnot', amount =3},
-					{name = 'manure', amount = 4},
+					{name='phadai', amount = 5},
 				},
 			crafting_speed = 150,
-			tech = 'phagnot'
+			tech = 'phadai'
 		},
 		--py
 		{
 			ingredients =
 				{
-					{name='phagnot-cub', add_amount = 4},
-					{name='salt', amount = 3},
-					{name='raw-fiber', amount = 10},
-					{name='bedding', amount = 1},
+					{name='fawogae', amount = 5},
+					{name='bedding', amount = 4},
+					{name='energy-drink', amount = 4},
 				},
 			results =
 				{
-					{name='phagnot', add_amount =3},
-					{name = 'manure', add_amount = 4},
+
 				},
 			crafting_speed = 130,
-			tech = 'phagnot-mk02'
+			tech = 'phadai-mk02'
 		},
-		--chem
+		--production
 		{
 			ingredients =
 				{
-					{name='phagnot-cub', add_amount = 4},
-					{name='phagnot-food-02', amount =1},
-					{name='salt', amount =3},
+					{name='phadai-food-02', amount =1},{name='fawogae', add_amount = 5},
 
 				},
 			results =
 				{
-					{name='phagnot', add_amount =3},
-					{name = 'manure', add_amount = 4},
+					{name='caged-phadai',remove_item = true},
+					{name='caged-phadai', probability = 0.9, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 110,
-			tech = 'phagnot-mk03'
+			tech = 'phadai-mk03'
 		},
-		--prod
+		--utility
 		{
 			ingredients =
 				{
-					{name='phagnot-cub', add_amount = 4},
-					{name='raw-fiber', amount = 10},
+					{name='energy-drink', add_amount = 5},
 				},
 			results =
 				{
-					{name='phagnot', add_amount =3},
-					{name = 'manure', add_amount = 4},
+
 				},
 			crafting_speed = 90,
-			tech = 'phagnot-mk04'
+			tech = 'phadai-mk04'
 		},
 	}
 }
@@ -291,8 +323,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='caged-phagnot', remove_item = true},
-					{name='caged-phagnot', probability = 1, amount_min =1, amount_max =2},
+					{name='caged-phadai', remove_item = true},
+					{name='caged-phadai', probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -320,8 +352,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='caged-phagnot', remove_item = true},
-					{name='brain-caged-phagnot',1},
+					{name='caged-phadai', remove_item = true},
+					{name='brain-caged-phadai',1},
 				},
 			crafting_speed = 90,
 			tech = 'nanochondria'
@@ -350,8 +382,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='brain-caged-phagnot', remove_item = true},
-					{name='bone-caged-phagnot', 1},
+					{name='brain-caged-phadai', remove_item = true},
+					{name='bone-caged-phadai', 1},
 				},
 			crafting_speed = 90,
 			tech = 'bmp'
@@ -381,8 +413,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bone-caged-phagnot', remove_item = true},
-					{name='meat-caged-phagnot', 1},
+					{name='bone-caged-phadai', remove_item = true},
+					{name='meat-caged-phadai', 1},
 				},
 			crafting_speed = 90,
 			tech = 'anabolic-rna'
@@ -411,8 +443,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat-caged-phagnot', remove_item = true},
-					{name='guts-caged-phagnot', 1},
+					{name='meat-caged-phadai', remove_item = true},
+					{name='guts-caged-phadai', 1},
 				},
 			crafting_speed = 90,
 			tech = 'antitumor'
@@ -441,8 +473,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='guts-caged-phagnot', remove_item = true},
-					{name='blood-caged-phagnot', 1},
+					{name='guts-caged-phadai', remove_item = true},
+					{name='blood-caged-phadai', 1},
 				},
 			crafting_speed = 90,
 			tech = 'recombinant-ery'
@@ -459,7 +491,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 30,
 			tech = 'recombinant-ery'
-		},
+        },
 		--reca
 		{
 			ingredients =
@@ -470,8 +502,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='blood-caged-phagnot', remove_item = true},
-					{name='skin-caged-phagnot', 1},
+					{name='blood-caged-phadai', remove_item = true},
+					{name='skin-caged-phadai', 1},
 				},
 			crafting_speed = 90,
 			tech = 'reca'
@@ -488,6 +520,35 @@ fun.autorecipes {
 				},
 			crafting_speed = 30,
 			tech = 'reca'
+		},
+		--orexigenic
+		{
+			ingredients =
+				{
+					{name='gh',remove_item = true},
+					{name='reca',remove_item = true},
+					{name='orexigenic', amount =1},
+				},
+			results =
+				{
+					{name='skin-caged-phadai', remove_item = true},
+					{name='fat-caged-phadai', 1},
+				},
+			crafting_speed = 80,
+			tech = 'orexigenic'
+		},
+		--orexigenic and gh
+		{
+			ingredients =
+				{
+					{name='gh', amount =1},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'orexigenic'
 		},
 	}
 }

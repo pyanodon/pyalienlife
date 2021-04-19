@@ -531,8 +531,16 @@ require('prototypes/recipes/navens/recipes-navens')
 require('prototypes/recipes/navens/recipes-auto-navens')
 
 --Phadai
+require('prototypes/recipes/phadai/recipes-phadai')
+require('prototypes/recipes/phadai/recipes-phadai-raising')
+require('prototypes/recipes/phadai/recipes-phadai-rendering')
+require('prototypes/recipes/phadai/recipes-phadai-products')
+require('prototypes/recipes/phadai/recipes-phadai-recharge')
 
 --Phagnot
+require('prototypes/recipes/phagnot/recipes-phagnot')
+require('prototypes/recipes/phagnot/recipes-auto-phagnot')
+require('prototypes/recipes/phagnot/recipes-phagnot-rendering')
 
 --Ralesia
 

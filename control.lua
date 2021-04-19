@@ -180,6 +180,7 @@ local function create_slaughterhouse_gui(event)
 end
 
 local farm_buildings = {
+	"antelope",
 	"arthurian",
 	"auog",
 	"bhoddos",
@@ -191,7 +192,9 @@ local farm_buildings = {
 	"ranch",
 	"fawogae",
 	"fish",
+	"fwf",
 	"grod",
+	"guar",
 	"kicalk",
 	"kmauts",
 	"mukmoux",
@@ -201,6 +204,9 @@ local farm_buildings = {
 	"ralesia",
 	"rennea",
 	"scrondrix",
+	"sponge",
+	"seaweed",
+	"simik",
 	"trits",
 	"tuuphra",
 	"ulric",
@@ -220,6 +226,7 @@ local farm_buildings = {
 }
 
 local animal_farm_buildings = {
+	["antelope"] = true,
 	["arthurian"] = true,
 	["auog"] = true,
 	["cridren"] = true,
@@ -231,7 +238,7 @@ local animal_farm_buildings = {
 	["mukmoux"] = true,
 	["phadai"] = true,
 	["phagnot"] = true,
-	['prandium'] = true,
+	["prandium"] = true,
 	["scrondrix"] = true,
 	["trits"] = true,
 	["ulric"] = true,
@@ -240,14 +247,15 @@ local animal_farm_buildings = {
 	["xenopen"] = true,
 	["arqad"] = true,
 	["xyhiphoe"] = true,
-	["yaedols"] = true,
 	["zipir"] = true,
 	["simik"] = true,
 }
 
 local plant_farm_buildings = {
 	["cadaveric"] = true,
+	["fwf"] = true,
 	["grod"] = true,
+	["guar"] = true,
 	["kicalk"] = true,
 	["ralesia"] = true,
 	["rennea"] = true,
@@ -257,6 +265,7 @@ local plant_farm_buildings = {
 	["moss"] = true,
 	["seaweed"] = true,
 	["sap"] = true,
+	["sponge"] = true,
 }
 
 local fungus_farm_buildings = {

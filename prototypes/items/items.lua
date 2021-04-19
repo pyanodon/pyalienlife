@@ -6757,6 +6757,21 @@ ITEM {
 }
 
 ITEM {
+    type = "item",
+    name = "used-phadai",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/phadai.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 1
+}
+
+ITEM {
     type = "module",
     name = "auog",
     icons =
