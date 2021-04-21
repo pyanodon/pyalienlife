@@ -4,7 +4,7 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"stone-brick", 900},
+        {"stone-brick", 200},
         {"pump", 5},
         {"engine-unit", 5},
         {"treated-wood", 50},
