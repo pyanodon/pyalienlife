@@ -5608,15 +5608,22 @@ ITEM {
 ITEM {
     type = "module",
     name = "moss",
-    icons =
+    icon = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png",
+    icon_size = 64,
+    icon_mipmaps = 7,
+    pictures =
     {
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/moss.png"}
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-02.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-03.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-04.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-05.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-06.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-07.png",   scale = 0.25, mipmap_count = 1 },
     },
-    icon_size = 32,
+    flags = {},
 	category = "moss",
 	tier = 1,
-    flags = {},
     subgroup = "py-alienlife-modules",
     order = "m-a",
     stack_size = 300,
@@ -5630,10 +5637,21 @@ ITEM {
     name = "moss-mk02",
     icons =
     {
-        {icon = "__pyalienlifegraphics__/graphics/icons/moss.png", icon_size = 32},
+        {icon = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png", icon_size = 64},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64, scale = 0.5}
     },
-    icon_size = 32,
+    --icon_size = 64,
+    icon_mipmaps = 7,
+    pictures =
+    {
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-02.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-03.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-04.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-05.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-06.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-07.png",   scale = 0.25, mipmap_count = 1 },
+    },
 	category = "moss",
 	tier = 2,
     flags = {},
@@ -5650,10 +5668,21 @@ ITEM {
     name = "moss-mk03",
     icons =
     {
-        {icon = "__pyalienlifegraphics__/graphics/icons/moss.png", icon_size = 32},
+        {icon = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png", icon_size = 64},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64, scale = 0.5}
     },
-    icon_size = 32,
+    --icon_size = 64,
+    icon_mipmaps = 7,
+    pictures =
+    {
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-02.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-03.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-04.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-05.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-06.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-07.png",   scale = 0.25, mipmap_count = 1 },
+    },
 	category = "moss",
 	tier = 3,
     flags = {},
@@ -5670,10 +5699,21 @@ ITEM {
     name = "moss-mk04",
     icons =
     {
-        {icon = "__pyalienlifegraphics__/graphics/icons/moss.png", icon_size = 32},
+        {icon = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png", icon_size = 64},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64, scale = 0.5}
     },
-    --icon_size = 32,
+    --icon_size = 64,
+    icon_mipmaps = 7,
+    pictures =
+    {
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-02.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-03.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-04.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-05.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-06.png",   scale = 0.25, mipmap_count = 1 },
+      { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-07.png",   scale = 0.25, mipmap_count = 1 },
+    },
 	category = "moss",
 	tier = 4,
     flags = {},
@@ -8901,7 +8941,7 @@ ITEM {
     name = "arqad-maggot",
     icon = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png",
     icon_size = 64,
-    icon_mipmaps = 7,
+    icon_mipmaps = 8,
     pictures =
     {
       { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png",   scale = 0.25, mipmap_count = 1 },
@@ -8929,7 +8969,7 @@ ITEM {
             {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
         },
     icon_size = 64,
-    icon_mipmaps = 7,
+    icon_mipmaps = 8,
     pictures =
     {
       { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png",   scale = 0.25, mipmap_count = 1 },
@@ -8958,7 +8998,7 @@ ITEM {
             {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
         },
     icon_size = 64,
-    icon_mipmaps = 7,
+    icon_mipmaps = 8,
     pictures =
     {
       { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png",   scale = 0.25, mipmap_count = 1 },
@@ -8986,7 +9026,7 @@ ITEM {
             {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
         },
     icon_size = 64,
-    icon_mipmaps = 7,
+    icon_mipmaps = 8,
     pictures =
     {
       { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png",   scale = 0.25, mipmap_count = 1 },
