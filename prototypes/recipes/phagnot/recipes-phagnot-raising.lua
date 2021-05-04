@@ -197,6 +197,33 @@ fun.autorecipes {
 	main_product = "phagnot",
 	subgroup = 'py-alienlife-phagnot',
 	order = 'b',
+	upgrades =
+			{
+				{
+					tech = 'bigger-colon',
+					ingredient_changes =
+					{
+						{name = 'fiber', amount = 4}
+					},
+					result_changes =
+					{
+						{name = 'manure', add_amount = 4},
+						{name = 'phagnot', subtract_percent_amount = 0.1, round_direction = 'up'}
+					},
+				},
+				{
+					tech = 'explosive-diarrhea',
+					ingredient_changes =
+					{
+						{name = 'ethylene-glycol', amount = 100}
+					},
+					result_changes =
+					{
+						{name = 'manure', add_amount = 6},
+						{name = 'phagnot', subtract_percent_amount = 0.2, round_direction = 'up'}
+					}
+				},
+			},
     mats =
 	{
 		--logistic

@@ -243,7 +243,7 @@ fun.autorecipes {
 					{name='blood-meal',remove_item = true},
 					{name='manure',remove_item = true},
 					{name='fertilizer',remove_item = true},
-					{name='gh',1},
+					{name='gh', amount = 1},
 				},
 			results =
 				{

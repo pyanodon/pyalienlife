@@ -10,284 +10,76 @@ fun.autorecipes {
     order = 'a',
     mats =
 	{
+		--py
 		{
 			ingredients =
 				{
-					{name='rennea-seeds', amount = 1},
-					{name='water', amount = '*10'},
-					{name='manure-bacteria', amount = '*5'},
+					{name='rennea-seeds', amount = 4},
+					{name='water', amount = 100},
+					{name='manure-bacteria', amount = 50},
+					{name='soil', amount = 10},
+                    {name='coarse', amount = 8},
+                    {name='fertilizer', amount = 3},
 				},
 			results =
 				{
-					{name='rennea', amount = 1},
+					{name='rennea', amount = 4},
 				},
-			crafting_speed = 110,
+			crafting_speed = 100,
 			tech = 'rennea'
 		},
-		{
-			ingredients =
-				{
-                    {name='rennea-seeds', amount = '+1'},
-					{name='soil', amount ='*10'},
-				},
-			results =
-				{
-					--{'a','*5'}
-					{name='rennea', amount ='+2'}
-				},
-				crafting_speed = 100,
-				tech = 'rennea'
-		},
-		{
-			ingredients =
-				{
-                    {name='rennea-seeds', amount = '+1'},
-                    {name='coarse', amount ='+7'},
-				},
-			results =
-				{
-					--{'a','*7'},
-					{name='rennea', amount ='+4'}
-				},
-				crafting_speed = 100,
-				tech = 'rennea'
-        },
+		--chem
         {
 			ingredients =
 				{
-                    {name='rennea-seeds', amount = '+2'},
-                    {name='manure', amount =6},
+                    {name='rennea-seeds', add_amount = 4},
+                    {name='fertilizer', add_amount = 3},
+                    {name='yaedols', amount = 1},
+                    {name='lignin', amount = 10},
+					{name='pesticide-mk01', amount = 2},
 				},
 			results =
 				{
-					--{'a','*10'},
-					{name='rennea', amount ='+8'}
-				},
-				crafting_speed = 100,
-				tech = 'rennea-mk02'
-        },
-        {
-			ingredients =
-				{
-                    --{'s1'},
-                    --{'a'},
-                    --{'b','+15'},
-                    --{'c','*10'},
-                    {name='yaedols', amount =1},
-				},
-			results =
-				{
-					--{'a','*12'},
-					{name='rennea', amount ='+10'}
-				},
-				crafting_speed = 90,
-				tech = 'rennea-mk02'
-        },
-        {
-			ingredients =
-				{
-                    --{'s1'},
-                    --{'a'},
-					--{'b','+15'},
-					--{name='yaedols',remove_item = true},
-                    {name='lignin', amount ='*3'},
-                    --{'d'},
-				},
-			results =
-				{
-					--{'a','*15'},
-					{name='rennea', amount ='+3'}
+					{name='rennea', add_amount = 6}
 				},
 				crafting_speed = 80,
 				tech = 'rennea-mk02'
         },
+		--prod
         {
 			ingredients =
 				{
-                    --{'s1'},
-                    --{'a'},
-					--{'b','+15'},
-					--{name='soil',remove_item = true},
-                    {name='blood-meal', amount ='*2'},   -- very expensive stuff
-                    --{'d'},
+					{name='rennea-seeds', add_amount = 4},
+                    {name='fertilizer', add_amount = 3},
+                    {name='blood-meal', amount = 3},
+					{name='carbon-dioxide', amount = 200},
+					{name='pesticide-mk02', amount ='+1'},
 				},
 			results =
 				{
-					--{'a','*17'},
-					{name='rennea', amount ='+7'}
-				},
-				crafting_speed = 75,
-				tech = 'rennea-mk03'
-        },
-
-
-
-
-
-        {
-			ingredients =
-				{
-                    {name='pesticide-mk01', amount ='+1'},
-
-                },
-			results =
-				{
-					--{'a','*20'},
-					{name='rennea', amount ='+6'}
-				},
-				crafting_speed = 70,
-				tech = 'rennea-mk03'
-        },
-
-
-
-
-
-
-
-        {
-			ingredients =
-				{
-					{name='carbon-dioxide', amount ='*40'},
-                },
-			results =
-				{
-					--{'a','*20'},
-					{name='rennea', amount ='+5'}
-				},
-				crafting_speed = 65,
-				tech = 'rennea-mk03'
-        },
-
-
-
-
-
-
-        {
-			ingredients =
-				{
-
-                    {name='pesticide-mk01',remove_item = true},
-                    {name='pesticide-mk02', amount ='+1'},
-                },
-			results =
-				{
-					--{'a','*20'},
-					{name='rennea', amount ='+8'}
+					{name='rennea', add_amount = 8}
 				},
 				crafting_speed = 60,
 				tech = 'rennea-mk03'
         },
-
-
-
-
-
-
-
+		--utility
         {
 			ingredients =
 				{
-                    --{'s1'},
-                    --{'a'},
-                    --{'b','+15'},
-                    --{'g','*2'},
-					--{'d'},
-					--{name='manure',remove_item = true},
-                    {name='fertilizer', amount ='+1'},
+					{name='rennea-seeds', add_amount = 4},
+                    {name='small-lamp', amount = 2},
+					{name='gh', amount = 1},
+					{name='lignin', add_amount = 5},
+					{name='blood-meal', add_amount = 2},
+					{name='urea', amount = 8},
+					{name='pesticide-mk02', amount = 1},
 				},
 			results =
 				{
-					--{'a','*25'},
-					--{'a','+3'}
-					{name='rennea', amount ="+15"}
+					{name='rennea', add_amount = 10}
 				},
-				crafting_speed = 50,
+				crafting_speed = 40,
 				tech = 'rennea-mk04'
-		},
-		{
-			ingredients =
-				{
-                    --{'s1'},
-                    --{'a'},
-                    --{'b','+15'},
-                    --{'g','*2'},
-					--{'d'},
-					--{name='carbon-dioxide',remove_item = true},
-                    {name='small-lamp', amount ='*1'},
-				},
-			results =
-				{
-					--{'a','*25'},
-					--{'a','+3'}
-					{name='rennea', amount ="+5"}
-				},
-				crafting_speed = 45,
-				tech = 'rennea-mk04'
-		},
-    --GH
-		{
-			ingredients =
-				{
-					{name='lignin',remove_item = true},
-					{name='blood-meal',remove_item = true},
-					{name='manure',remove_item = true},
-					{name='fertilizer',remove_item = true},
-					{name='gh',1},
-				},
-			results =
-				{
-					{name='rennea', amount ="+5"}
-				},
-			crafting_speed = 25,
-			tech = 'rennea-mk04'
-		},
-		{
-			ingredients =
-				{
-					{name='lignin', amount =3},
-					--{'carbon-dioxide',remove_item = true},
-					--{'manure',remove_item = true},
-					--{'lignin',remove_item = true},
-					--{'gh',1},
-				},
-			results =
-				{
-					{name='rennea', amount ="+5"}
-				},
-			crafting_speed = 25,
-			tech = 'rennea-mk04'
-		},
-		{
-			ingredients =
-				{
-					{name='blood-meal', amount ='*1'},
-					{name='manure', amount =5},
-					--{'lignin',remove_item = true},
-					--{'gh',1},
-				},
-			results =
-				{
-					{name='rennea', amount ="+4"}
-				},
-			crafting_speed = 20,
-			tech = 'rennea-mk04'
-		},
-		{
-			ingredients =
-				{
-					{name='manure',remove_item = true},
-					{name='fertilizer', amount =1},
-					{name='urea', amount =8},
-					--{'gh',1},
-				},
-			results =
-				{
-					{name='rennea', amount ="+10"}
-				},
-			crafting_speed = 15,
-			tech = 'rennea-mk04'
 		},
 	}
 }

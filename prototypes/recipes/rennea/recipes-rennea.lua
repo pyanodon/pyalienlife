@@ -18,7 +18,7 @@ RECIPE {
         {type = 'fluid', name = 'water', amount = 1000},
     },
     results = {
-        {type = 'item', name = 'rennea', amount = 1},
+        {type = 'item', name = 'rennea', amount = 2},
     },
 }:add_unlock("rennea")
 

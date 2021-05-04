@@ -73,11 +73,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fertilizer',remove_item = true},
-					{name='fertilizer', amount = 10},
+					{name='fertilizer', add_amount = 5},
 					{name='urea', amount = 15},
-					{name = 'biomass', remove_item = true},
-					{name = 'biomass', amount = 25}
+					{name = 'biomass', add_amount = 15}
 				},
 			results =
 				{
