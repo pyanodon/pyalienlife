@@ -70,7 +70,6 @@ RECIPE {
         {type = 'item', name = 'rennea-seeds', amount = 10},
         {type = 'item', name = 'guts', amount = 5},
         {type = 'item', name = 'fish', amount = 5},
-        {type = 'item', name = 'cottongut', amount = 3},
         {type = 'item', name = 'guar-gum', amount = 2},
         {type = 'item', name = 'casein', amount = 10},
         {type = 'item', name = 'ralesia', amount = 10},
@@ -78,7 +77,7 @@ RECIPE {
         {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
     },
     results = {
-        {type = 'item', name = 'phadai-food-01', amount = 5},
+        {type = 'item', name = 'phadai-food-01', amount = 6},
     },
 }:add_unlock("food-mk03")
 
@@ -95,7 +94,6 @@ RECIPE {
         {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'rennea-seeds', amount = 10},
         {type = 'item', name = 'guts', amount = 5},
-        {type = 'item', name = 'cottongut', amount = 5},
         {type = 'item', name = 'yotoi-fruit', amount = 5},
         {type = 'item', name = 'mukmoux-fat', amount = 8},
         {type = 'item', name = 'casein', amount = 10},
