@@ -1025,12 +1025,17 @@ end
 
 --handles all adjustments for each ingredient and result changes in autorecipe
 function recipe_item_builder(ingredients,results,previous_ingredients,previous_results)
+    --log(serpent.block(ingredients))
+    --log(serpent.block(previous_ingredients))
+    --log(serpent.block(results))
     local ing_table = table.deepcopy(previous_ingredients)
     local result_table = table.deepcopy(previous_results)
 
     --add old ingredient names to table
     local previous_ingredient_names = {}
     for p, pre in pairs(previous_ingredients) do
+        --log(pre.name)
+        --log(serpent.block(previous_ingredient_names))
         if previous_ingredient_names[pre.name] ~= true then
             previous_ingredient_names[pre.name] = true
         end
@@ -1157,7 +1162,7 @@ function overrides.autorecipes(recipe)
         elseif recipe.main_product ~= nil then
             RECIPE(numbered_name):set_fields{main_product = recipe.main_product}
         end
-        log(serpent.block(data.raw.recipe[numbered_name]))
+        --log(serpent.block(data.raw.recipe[numbered_name]))
     end
 
 end

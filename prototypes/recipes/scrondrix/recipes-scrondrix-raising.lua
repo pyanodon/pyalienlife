@@ -15,7 +15,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{hame = 'scrondrix', amount = 1},
+					{name = 'scrondrix', amount = 1},
                     {name='fawogae', amount =20},
 					{name='wood-seeds', amount =20},
 					{name='meat', amount =10},

@@ -8,6 +8,7 @@ fun.autorecipes {
 	module_limitations = 'dhilmos',
 	subgroup = 'py-alienlife-dhilmos',
 	order = 'c',
+	main_product = "dhilmos-egg",
     mats =
 	{
 		--chem
@@ -187,6 +188,7 @@ fun.autorecipes {
 	module_limitations = 'dhilmos',
 	subgroup = 'py-alienlife-dhilmos',
 	order = 'b',
+	main_product = "dhilmos",
     mats =
 	{
 		--chem

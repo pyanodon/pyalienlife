@@ -555,7 +555,7 @@ require('prototypes/recipes/rennea/recipes-auto-rennea')
 require('prototypes/recipes/rennea/recipes-rennea-megafarm')
 
 --Sap
-require('prototypes/recipes/recipes-sap')
+require('prototypes/recipes/sap/recipes-sap')
 require('prototypes/recipes/sap/recipes-sap-products')
 
 --Scrondrix

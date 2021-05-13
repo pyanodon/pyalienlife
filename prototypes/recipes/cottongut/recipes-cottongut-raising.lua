@@ -8,6 +8,7 @@ fun.autorecipes {
 	module_limitations = 'cottongut-mk01',
 	subgroup = 'py-alienlife-cottongut',
 	order = 'c',
+	main_product = "cottongut-pup",
     mats =
 	{
 		--red
@@ -85,6 +86,7 @@ fun.autorecipes {
 	module_limitations = 'cottongut-mk01',
 	subgroup = 'py-alienlife-cottongut',
 	order = 'b',
+	main_product = "cottongut",
     mats =
 	{
 		--red
@@ -410,7 +412,7 @@ fun.autorecipes {
 ]]--
 
 
-		--[[
+--[[
 		-----------------------PHEROMONES-----------------------------
 		{
 			ingredients =
