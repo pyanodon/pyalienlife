@@ -187,7 +187,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'guts', amount = 10},
+        {type = 'item', name = 'guts', amount = 5},
     },
     results = {
         {type = 'fluid', name = 'chlorine', amount = 100},

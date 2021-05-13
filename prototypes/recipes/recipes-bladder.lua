@@ -65,7 +65,7 @@ RECIPE {
         {type = 'item', name = 'gas-bladder', amount = 1},
     },
     results = {
-        {type = 'fluid', name = 'chlorine', amount = 30}
+        {type = 'fluid', name = 'chlorine', amount = 50}
     }
 }:add_unlock('phagnot-mk03'):change_category('gas-refinery')
 
