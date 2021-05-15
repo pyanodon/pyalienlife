@@ -305,6 +305,7 @@ RECIPE('biobattery'):add_ingredient({type = "item", name = "re-magnet", amount =
 RECIPE('bose-einstein-superfluid'):add_ingredient({type = "fluid", name = "deuterium", amount = 10})
 RECIPE('green-sic'):add_ingredient({type = 'item', name = 'graphite', amount = 3}):remove_unlock('bioprocessing'):add_unlock('basic-electronics')
 RECIPE('sic'):remove_unlock('bioprocessing'):add_unlock('basic-electronics')
+RECIPE('pesticide-mk02'):add_ingredient({type = 'fluid', name = 'carbon-sulfide', amount = 50})
 
 RECIPE('simik-food-01'):add_ingredient({type = "item", name = "cadaveric-arum", amount = 2})
 fun.add_ingredient('simik-food-01', {name = "cadaveric-arum", amount = 2})

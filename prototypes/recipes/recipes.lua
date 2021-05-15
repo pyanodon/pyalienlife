@@ -2304,7 +2304,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'pesticide-mk02',
-    category = 'crafting-with-fluid',
+    category = 'biofactory',
     enabled = false,
     energy_required = 5,
     ingredients = {
