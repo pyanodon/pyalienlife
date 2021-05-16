@@ -199,6 +199,7 @@ fun.autorecipes {
 	module_limitations = 'mukmoux',
 	subgroup = 'py-alienlife-mukmoux',
 	order = 'b',
+	main_product = "mukmoux",
 	upgrades =
 		{
 			{

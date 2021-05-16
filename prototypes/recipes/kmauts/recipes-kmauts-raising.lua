@@ -6,9 +6,9 @@ fun.autorecipes {
     name = 'kmauts-cub',
 	category = 'kmauts',
 	module_limitations = 'kmauts',
-	main_product = 'kmauts',
 	subgroup = 'py-alienlife-kmauts',
 	order = 'c',
+	main_product = "kmauts-cub",
     mats =
 	{
 		{
@@ -145,6 +145,7 @@ fun.autorecipes {
 	module_limitations = 'kmauts',
 	subgroup = 'py-alienlife-kmauts',
 	order = 'b',
+	main_product = "kmauts",
     mats =
 	{
 		--logistic

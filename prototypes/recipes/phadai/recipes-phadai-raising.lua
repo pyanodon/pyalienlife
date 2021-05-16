@@ -8,6 +8,7 @@ fun.autorecipes {
 	module_limitations = 'phadai',
 	subgroup = 'py-alienlife-phadai',
 	order = 'c',
+	main_product = "phadai-pup",
     mats =
 	{
 		{
@@ -233,6 +234,7 @@ fun.autorecipes {
 	module_limitations = 'phadai',
 	subgroup = 'py-alienlife-phadai',
 	order = 'b',
+	main_product = "phadai",
     mats =
 	{
 		--chem

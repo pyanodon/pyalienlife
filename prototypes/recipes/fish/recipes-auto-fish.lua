@@ -9,6 +9,7 @@ fun.autorecipes {
 	module_limitations = 'fish',
 	subgroup = 'py-alienlife-fish',
 	order = 'c',
+	main_product = "fish-egg",
     mats =
 	{
 		--logistic
@@ -157,6 +158,7 @@ fun.autorecipes {
 	module_limitations = 'fish',
 	subgroup = 'py-alienlife-fish',
 	order = 'b',
+	main_product = "fish",
     mats =
 	{
 		--logistic

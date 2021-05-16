@@ -8,6 +8,7 @@ fun.autorecipes {
 	module_limitations = 'dingrits',
 	subgroup = 'py-alienlife-dingrits',
 	order = 'c',
+	main_product = "dingrits-cub",
     mats =
 	{
 		--chem
@@ -187,6 +188,7 @@ fun.autorecipes {
 	module_limitations = 'dingrits',
 	subgroup = 'py-alienlife-dingrits',
 	order = 'b',
+	main_product = "dingrits",
     mats =
 	{
 		--chem

@@ -8,6 +8,7 @@ fun.autorecipes {
 	module_limitations = 'korlex',
 	subgroup = 'py-alienlife-korlex',
 	order = 'c',
+	main_product = "korlex-pup",
     mats =
 	{
 		--logistic
@@ -193,6 +194,7 @@ fun.autorecipes {
 	module_limitations = 'korlex',
 	subgroup = 'py-alienlife-korlex',
 	order = 'b',
+	main_product = "korlex",
     mats =
 	{
 		--logistic

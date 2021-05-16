@@ -565,12 +565,20 @@ require('prototypes/recipes/scrondrix/recipes-scrondrix-rendering')
 require('prototypes/recipes/scrondrix/recipes-scrondrix-growth-enhancement')
 
 --Sea-Sponge
+require("prototypes/recipes/sea-sponge/recipes-sea-sponge")
 
 --seaweed
 require('prototypes/recipes/seaweed/recipes-seaweed')
 require('prototypes/recipes/seaweed/recipes-seaweed-products')
 
 --simik
+require('prototypes/recipes/simik/recipes-simik')
+require('prototypes/recipes/simik/recipes-simik-raising')
+require('prototypes/recipes/simik/recipes-simik-rendering')
+require('prototypes/recipes/simik/recipes-simik-metals')
+
+--Tree
+require('prototypes/recipes/tree/recipes-tree')
 
 --Trits
 

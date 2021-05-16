@@ -81,6 +81,7 @@ fun.autorecipes {
 	module_limitations = 'dhilmos',
 	subgroup = 'py-alienlife-dhilmos',
 	order = 'c',
+	main_product = "dhilmos-pup",
     mats =
 	{
 		--chem
