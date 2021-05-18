@@ -10,6 +10,7 @@ fun.autorecipes {
     order = 'a',
     mats =
 	{
+		--logistic
 		{
 			ingredients =
 				{
@@ -53,6 +54,7 @@ fun.autorecipes {
 				crafting_speed = 120,
 				tech = 'tuuphra'
         },
+		--py
         {
 			ingredients =
 				{
@@ -104,6 +106,7 @@ fun.autorecipes {
 				crafting_speed = 100,
 				tech = 'tuuphra-mk02'
         },
+		--chem
         {
 			ingredients =
 				{
@@ -189,12 +192,7 @@ fun.autorecipes {
 				crafting_speed = 100,
 				tech = 'tuuphra-mk03'
         },
-
-
-
-
-
-
+		--prod
         {
 			ingredients =
 				{
@@ -235,6 +233,10 @@ fun.autorecipes {
 				crafting_speed = 70,
 				tech = 'tuuphra-mk04'
 		},
+	}
+}
+
+--[[
     --GH
 		{
 			ingredients =
@@ -300,3 +302,4 @@ fun.autorecipes {
 		},
 	}
 }
+]]--

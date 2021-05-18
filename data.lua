@@ -581,6 +581,9 @@ require('prototypes/recipes/simik/recipes-simik-metals')
 require('prototypes/recipes/tree/recipes-tree')
 
 --Trits
+require('prototypes/recipes/trits/recipes-trits')
+require('prototypes/recipes/trits/recipes-trits-raising')
+require('prototypes/recipes/trits/recipes-trits-rendering')
 
 --Tuupra
 
