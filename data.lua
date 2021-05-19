@@ -586,6 +586,9 @@ require('prototypes/recipes/trits/recipes-trits-raising')
 require('prototypes/recipes/trits/recipes-trits-rendering')
 
 --Tuupra
+require('prototypes/recipes/tuupra/recipes-tuuphra')
+require('prototypes/recipes/tuupra/recipes-auto-tuuphra')
+require('prototypes/recipes/tuupra/recipes-tuuphra-megafarm')
 
 --Ulric
 
