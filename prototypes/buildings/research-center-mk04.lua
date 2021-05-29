@@ -139,10 +139,10 @@ ENTITY {
             }
         },
         {
-            north_position = util.by_pixel(84, -63),
-            west_position = util.by_pixel(84, -53),
-            south_position = util.by_pixel(84, -53),
-            east_position = util.by_pixel(84, -53),
+            north_position = util.by_pixel(0, -63),
+            west_position = util.by_pixel(0, -63),
+            south_position = util.by_pixel(0, -63),
+            east_position = util.by_pixel(0, -63),
             animation = {
                 filename = "__pyalienlifegraphics2__/graphics/entity/research-center/center.png",
                 width = 64,
