@@ -138,7 +138,7 @@ ENTITY {
             }
         },
         {
-            north_position = util.by_pixel(0, -63),
+            north_position = util.by_pixel(84, -63),
             west_position = util.by_pixel(84, -53),
             south_position = util.by_pixel(84, -53),
             east_position = util.by_pixel(84, -53),
