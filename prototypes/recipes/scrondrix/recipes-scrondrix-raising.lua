@@ -27,7 +27,7 @@ fun.autorecipes {
 					{name = 'manure', amount = 5},
 				},
 			crafting_speed = 140,
-			tech = 'assisted-embryology',
+			tech = 'scrondrix',
 			name = 'Scrondrix cub 1',
 		},
 		--py
@@ -44,7 +44,7 @@ fun.autorecipes {
 					{name = 'manure', add_amount = 3},
 				},
 			crafting_speed = 120,
-			tech = 'assisted-embryology',
+			tech = 'scrondrix-mk02',
 			name = 'Scrondrix cub 2',
 		},
 		--prod
@@ -60,7 +60,7 @@ fun.autorecipes {
 					{name = 'manure', add_amount = 3},
 				},
 			crafting_speed = 100,
-			tech = 'assisted-embryology',
+			tech = 'scrondrix-mk03',
 			name = 'Scrondrix cub 3',
 		},
 		--prod
@@ -75,7 +75,7 @@ fun.autorecipes {
 					{name = 'manure', add_amount = 3},
 				},
 			crafting_speed = 80,
-			tech = 'assisted-embryology',
+			tech = 'scrondrix-mk04',
 			name = 'Scrondrix cub 4',
 		},
 	}

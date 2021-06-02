@@ -8,6 +8,7 @@ fun.autorecipes {
 	module_limitations = 'trits',
 	subgroup = 'py-alienlife-trits',
 	order = 'c',
+	main_product = 'trits-pup',
     mats =
 	{
 		--py
@@ -201,6 +202,7 @@ fun.autorecipes {
 	module_limitations = 'trits',
 	subgroup = 'py-alienlife-trits',
 	order = 'b',
+	main_product = 'trits',
     mats =
 	{
 		--py

@@ -562,7 +562,7 @@ require('prototypes/recipes/sap/recipes-sap-products')
 require('prototypes/recipes/scrondrix/recipes-scrondrix')
 require('prototypes/recipes/scrondrix/recipes-scrondrix-raising')
 require('prototypes/recipes/scrondrix/recipes-scrondrix-rendering')
-require('prototypes/recipes/scrondrix/recipes-scrondrix-growth-enhancement')
+--require('prototypes/recipes/scrondrix/recipes-scrondrix-growth-enhancement')
 
 --Sea-Sponge
 require("prototypes/recipes/sea-sponge/recipes-sea-sponge")
@@ -591,8 +591,14 @@ require('prototypes/recipes/tuupra/recipes-auto-tuuphra')
 require('prototypes/recipes/tuupra/recipes-tuuphra-megafarm')
 
 --Ulric
+require('prototypes/recipes/ulric/recipes-ulric')
+require('prototypes/recipes/ulric/recipes-ulric-raising')
+require('prototypes/recipes/ulric/recipes-ulric-rendering')
 
 --Vonix
+require('prototypes/recipes/vonix/recipes-vonix')
+require('prototypes/recipes/vonix/recipes-vonix-raising')
+require('prototypes/recipes/vonix/recipes-vonix-rendering')
 
 --vrauks
 require('prototypes/recipes/vrauks/recipes-vrauks')
@@ -600,6 +606,9 @@ require('prototypes/recipes/vrauks/recipes-vrauks-raising')
 require('prototypes/recipes/vrauks/recipes-vrauks-rendering')
 
 --Xeno
+require('prototypes/recipes/xeno/recipes-xeno')
+require('prototypes/recipes/xeno/recipes-xeno-raising')
+require('prototypes/recipes/xeno/recipes-xeno-rendering')
 
 --Xyhiphoe
 

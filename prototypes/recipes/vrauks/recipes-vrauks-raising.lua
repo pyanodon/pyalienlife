@@ -6,6 +6,7 @@ fun.autorecipes {
 	module_limitations = 'vrauks',
 	subgroup = 'py-alienlife-vrauks',
 	order = 'b',
+	main_product = 'vrauks',
     mats =
 	{
 		--base
@@ -28,16 +29,16 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='biomass',remove_item = true},
-					{name = 'cocoon', amount = '+3'},
-					{name='moss', amount = '+5'},
-					{name='vrauks-food-01', amount =3},
-					{name='water-barrel', amount=3,return_item={name='empty-barrel', amount=3}},
+					{name = 'cocoon', add_amount = 3},
+					{name='moss', add_amount = 5},
+					{name='vrauks-food-01', amount = 3},
+					{name = 'water-barrel', amount = 3, return_barrel = true},
 					{name='saps', amount = 10},
 					{name='fawogae', amount = 5},
 				},
 			results =
 				{
-					{name='vrauks', amount = '+3'},
+					{name='vrauks', add_amount = 3},
 				},
 			crafting_speed = 120,
 			tech = 'vrauks'
@@ -46,16 +47,16 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'cocoon', amount = '+8'},
+					{name = 'cocoon', add_amount = 8},
 					{name='bedding', amount = 1},
 					{name='vrauks-food-02', amount =4},
-					{name='saps', amount = '+10'},
-					{name='fawogae', amount = '+5'},
+					{name='saps', add_amount = 10},
+					{name='fawogae', add_amount = 5},
 
 				},
 			results =
 				{
-					{name='vrauks', amount ='+8'},
+					{name='vrauks', add_amount = 8},
 				},
 			crafting_speed = 80,
 			tech = 'vrauks-mk02'
@@ -65,14 +66,14 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cocoon', amount = '+10'},
-					{name='bedding', amount = '+5'},
+					{name='cocoon', add_amount = 10},
+					{name='bedding', add_amount = 5},
 					{name='honeycomb', amount = 4},
 					{name='syrup-01-barrel', amount=2,return_item={name='empty-barrel', amount=2}},
 				},
 			results =
 				{
-					{name='vrauks', amount ='+10'},
+					{name='vrauks', add_amount = 10},
 				},
 			crafting_speed = 50,
 			tech = 'vrauks-mk03'
@@ -81,14 +82,14 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cocoon', amount = '+10'},
-					{name='bedding', amount = '+5'},
-					{name='vrauks-food-01', amount ='+7'},
-					{name='vrauks-food-02', amount ='+6'},
+					{name='cocoon', add_amount = 10},
+					{name='bedding', add_amount = 5},
+					{name='vrauks-food-01', add_amount = 7},
+					{name='vrauks-food-02', add_amount = 6},
 				},
 			results =
 				{
-					{name='vrauks', amount ='+10'},
+					{name='vrauks', add_amount = 10},
 				},
 			crafting_speed = 20,
 			tech = 'vrauks-mk04'
@@ -104,6 +105,7 @@ fun.autorecipes {
 	module_limitations = 'vrauks',
 	subgroup = 'py-alienlife-vrauks',
 	order = 'c',
+	main_product = 'cocoon',
     mats =
 	{
 		--base
@@ -112,7 +114,7 @@ fun.autorecipes {
 				{
                     {name='vrauks', amount =2},
                     {name='moss', amount =10},
-					{name='water-barrel', amount=4,return_item={name='empty-barrel', amount=4}},
+					{name='water-barrel', amount=4, return_barrel = true},
 					{name='saps', amount = 3},
 				},
 			results =
@@ -126,7 +128,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='vrauks', amount ='+2'},
+					{name='vrauks', add_amount = 2},
                     {name='biomass', amount = 10},
 					{name='vrauks-food-01', amount =2},
 				},
@@ -141,10 +143,10 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='vrauks', amount ='+2'},
+					{name='vrauks', add_amount = 2},
 					{name='bedding', amount = 3},
 					{name='vrauks-food-02', amount =4},
-					{name='saps', amount = '+7'},
+					{name='saps', add_amount = 7},
 				},
 			results =
 				{
@@ -157,10 +159,10 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='vrauks', amount ='+2'},
-					{name='vrauks-food-01', amount ='+5'},
-					{name='vrauks-food-02', amount ='+8'},
-					{name='bedding', amount = '+5'},
+					{name='vrauks', add_amount = 2},
+					{name='vrauks-food-01', add_amount = 5},
+					{name='vrauks-food-02', add_amount = 8},
+					{name='bedding', add_amount = 5},
 					{name='honeycomb', amount = 4},
 					{name='syrup-01-barrel', amount=2,return_item={name='empty-barrel', amount=2}},
 					{name='fawogae', amount = 5},
@@ -176,10 +178,10 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='vrauks', amount ='+2'},
-					{name='vrauks-food-01', amount ='+5'},
-					{name='vrauks-food-02', amount ='+8'},
-					{name='bedding', amount = '+5'},
+					{name='vrauks', add_amount = 2},
+					{name='vrauks-food-01', add_amount = 5},
+					{name='vrauks-food-02', add_amount = 8},
+					{name='bedding', add_amount = 5},
 
 				},
 			results =

@@ -53,7 +53,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cadaveric-arum', add_amount = 12}
+					{name='cadaveric-arum', add_amount = 8}
 				},
 				crafting_speed = 50,
 				tech = 'cadaveric-arum-mk03'
@@ -71,7 +71,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cadaveric-arum', amount ='+6'}
+					{name='cadaveric-arum', add_amount = 10}
 				},
 				crafting_speed = 20,
 				tech = 'cadaveric-arum-mk04'

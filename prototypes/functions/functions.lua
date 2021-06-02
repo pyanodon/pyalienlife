@@ -985,7 +985,13 @@ function modify_recipe_tables(item,items_table,previous_item_names, result_table
                 local name = 'empty-barrel'
                 local amount = item.amount
                 return_barrel = {type = item_type, name = name, amount = amount}
-                table.insert(result_table, return_barrel)
+                for r, result in pairs(result_table) do
+                    if result.name == name then
+                        result.amount = result.amount + amount
+                    elseif result.name ~= name then
+                        table.insert(result_table, return_barrel)
+                    end
+                end
             end
 
            if item.amount ~= nil and type(item.amount) == "number" then

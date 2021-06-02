@@ -12,7 +12,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='pressured-water', amount ='*30'},
-					{name='zipir-egg', amount =1},
+					{name='zipir-eggs', amount =1},
 					{name='fish', amount =3},
 					{name='stone-wool', amount =3},
                     {name='water', amount ='*20',return_item={name='waste-water', amount=100}},
@@ -324,7 +324,7 @@ fun.autorecipes {
 ------------------EGG MAKER------------------
 
 fun.autorecipes {
-    name = 'zipir-egg',
+    name = 'zipir-eggs',
 	category = 'zipir',
 	module_limitations = 'zipir1',
 	subgroup = 'py-alienlife-zipir',
@@ -341,7 +341,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='zipir-egg', probability = 1, amount_min =5, amount_max =7},  -- maybe 8 for the max if you feel generous
+                    {name='zipir-eggs', probability = 1, amount_min =5, amount_max =7},  -- maybe 8 for the max if you feel generous
 				},
 			crafting_speed = 140,
 			tech = 'zipir'
@@ -423,8 +423,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='zipir-egg',remove_item = true},
-					{name='zipir-egg', amount =10},
+					{name='zipir-eggs',remove_item = true},
+					{name='zipir-eggs', amount =10},
 				},
 			crafting_speed = 200,
 			tech = 'pheromones'

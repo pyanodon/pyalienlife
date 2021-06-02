@@ -8656,7 +8656,7 @@ data.raw.item.guar = nil
 
 ITEM {
     type = "module",
-    name = "guar-mk01",
+    name = "guar",
     icons =
 	{
         {icon = "__pyalienlifegraphics__/graphics/icons/guar.png"},

@@ -251,7 +251,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'korlex-pup', add_amount = 2},
-					{name='fish-oil-barrel', add_amount = 6, return_barrel = true},
+					{name='fish-oil-barrel', amount = 6, return_barrel = true},
 				},
 			results =
 				{

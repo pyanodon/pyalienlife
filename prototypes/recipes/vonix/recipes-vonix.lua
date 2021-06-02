@@ -41,34 +41,6 @@ RECIPE {
     },
 }:add_unlock("vonix")
 
-
-
-----food----
-
-
----breeding---
-
----growing---
-
-RECIPE {
-    type = 'recipe',
-    name = 'vonix-grow-01',
-    category = 'incubator',
-    enabled = false,
-    energy_required = 24,
-    ingredients = {
-        {type = 'item', name = 'vonix-eggs', amount = 4},
-        {type = 'item', name = 'meat', amount = 8},
-        {type = 'fluid', name = 'water', amount = 1000},
-    },
-    results = {
-        {type = 'item', name = 'vonix-cub', amount = 4},
-    },
-    --main_product = "vonix-pup",
-    subgroup = 'py-alienlife-vonix',
-    order = 'a',
-}:add_unlock("assisted-embryology")
-
 ---maturing---
 
 RECIPE {

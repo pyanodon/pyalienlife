@@ -73,7 +73,7 @@ fun.autorecipes {
 				{
                     {name='empty-comb', add_amount = 5},
 					{name='coal', amount = 3},
-					{name='zipir-egg', amount = 1},
+					{name='zipir-eggs', amount = 1},
 				},
 			results =
 				{

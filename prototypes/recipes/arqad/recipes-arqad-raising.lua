@@ -77,7 +77,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='zipir-egg', amount =4},
+					{name='zipir-eggs', amount =4},
 					{name = 'arqad', add_amount = 3},
 				},
 			results =
@@ -255,7 +255,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='arqad-egg-nest', add_amount = 1},
-					{name='zipir-egg', amount =1},
+					{name='zipir-eggs', amount =1},
 				},
 			results =
 				{
