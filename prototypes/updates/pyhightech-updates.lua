@@ -401,28 +401,6 @@ RECIPE {
     order = 'b'
 }:add_unlock("microbiology-mk03")
 
-RECIPE {
-    type = 'recipe',
-    name = 'moss-5',
-    category = 'moss',
-    enabled = false,
-    energy_required = 10,
-    ingredients = {
-        {type = 'fluid', name = 'water', amount = 100},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 100},
-        {type = 'item', name = 'limestone', amount = 3},
-        {type = 'item', name = 'coarse', amount = 5},
-        {type = 'item', name = 'fertilizer', amount = 3},
-    },
-    results = {
-        {type = 'item', name = 'moss', amount = 25},
-    },
-    icon = '__pyalienlifegraphics__/graphics/icons/moss.png',
-    icon_size = 32,
-    subgroup = 'py-alienlife-plants',
-    order = 'a'
-}:add_unlock("botany-mk04")
-
 --scrondrix
 
 RECIPE {

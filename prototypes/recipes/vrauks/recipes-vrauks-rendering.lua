@@ -13,7 +13,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='vrauks', amount=3},
+					{name='vrauks', amount=1},
 				},
 			results =
 				{
@@ -21,7 +21,7 @@ fun.autorecipes {
 					{name='formic-acid', amount =200},
 					{name='biomass', amount=4},
 				},
-			crafting_speed = 10,
+			crafting_speed = 6,
 			name = 'Smashing Vrauks',
 			icon = "__pyalienlifegraphics__/graphics/icons/rendering-vrauks.png",
 			icon_size = 64,

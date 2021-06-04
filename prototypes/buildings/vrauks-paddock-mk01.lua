@@ -2,18 +2,19 @@ RECIPE {
     type = "recipe",
     name = "vrauks-paddock-mk01",
     energy_required = 1,
-    enabled = false,
+    enabled = true,
     ingredients = {
         {"micro-mine-mk01", 1},
-        {"plastic-bar", 20},
-        {"steel-plate", 40},
+        {"stone-brick", 20},
+        {"iron-plate", 20},
+        {"copper-plate", 20},
         {"glass", 20},
-        {"titanium-plate", 40},
+        {"aluminium-plate", 40},
     },
     results = {
         {"vrauks-paddock-mk01", 1}
     }
-}:add_unlock("vrauks")
+}--:add_unlock("vrauks")
 
 ITEM {
     type = "item",

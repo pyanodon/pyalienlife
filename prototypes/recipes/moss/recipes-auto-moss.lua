@@ -3,7 +3,7 @@ local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
     name = 'moss',
-	category = 'moon',
+	category = 'moss',
 	module_limitations = 'moss',
 	subgroup = 'py-alienlife-moon',
     order = 'a',
@@ -32,11 +32,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='moss', amount = 5},
+					{name='moss', amount = 8},
 				},
-			crafting_speed = 140,
-			name = 'moss 1',
-			tech = 'moss-mk01'
+			crafting_speed = 100,
+			name = 'Moss 1',
+			--tech = 'moss-mk01'
 		},
 		--red
 		{
@@ -46,10 +46,10 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='moss', add_amount = 5}
+					{name='moss', add_amount = 8}
 				},
-				crafting_speed = 120,
-				name = 'moss 2',
+				crafting_speed = 80,
+				name = 'Moss 2',
 				tech = 'moss-mk01'
         },
 		--py
@@ -60,10 +60,10 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='moss', add_amount = 5}
+					{name='moss', add_amount = 8}
 				},
-				crafting_speed = 100,
-				name = 'moss 3',
+				crafting_speed = 60,
+				name = 'Moss 3',
 				tech = 'moss-mk02'
         },
 		--chem
@@ -75,10 +75,10 @@ fun.autorecipes {
                 },
 			results =
 				{
-					{name='moss', add_amount = 5}
+					{name='moss', add_amount = 8}
 				},
-				crafting_speed = 80,
-				name = 'moss 4',
+				crafting_speed = 40,
+				name = 'Moss 4',
 				tech = 'moss-mk03'
         },
 		--prod
@@ -89,10 +89,10 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='moss', add_amount = 5}
+					{name='moss', add_amount = 8}
 				},
-			crafting_speed = 60,
-			name = 'moss 5',
+			crafting_speed = 20,
+			name = 'Moss 5',
 			tech = 'moss-mk04'
 		},
 	}
