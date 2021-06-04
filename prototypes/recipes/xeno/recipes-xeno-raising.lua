@@ -371,7 +371,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat-xeno', remove_item = true},
-					{name='blood-xeno', 1},
+					{name='sulfuric-xeno', 1},
 				},
 			crafting_speed = 80,
 			tech = 'recombinant-ery'
@@ -399,7 +399,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='blood-xeno', remove_item = true},
+					{name='sulfuric-xeno', remove_item = true},
 					{name='chitin-xeno', 1},
 				},
 			crafting_speed = 80,

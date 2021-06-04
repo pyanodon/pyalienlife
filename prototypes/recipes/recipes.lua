@@ -2004,40 +2004,6 @@ RECIPE {
 }:add_unlock("korlex")
 
 RECIPE {
-    type = 'recipe',
-    name = 'fill-barrel-milk',
-    category = 'crafting-with-fluid',
-    enabled = false,
-    energy_required = 1,
-    ingredients = {
-        {type = 'item', name = 'empty-barrel-milk', amount = 1},
-        {type = 'fluid', name = 'milk', amount = 50},
-    },
-    results = {
-        {type = 'item', name = 'barrel-milk', amount = 1},
-    },
-    --main_product = "casein-pulp-01",
-}:add_unlock("korlex")
-
-RECIPE {
-    type = 'recipe',
-    name = 'empty-barrel-milk',
-    category = 'crafting-with-fluid',
-    enabled = false,
-    energy_required = 1,
-    ingredients = {
-        {type = 'item', name = 'barrel-milk', amount = 1},
-    },
-    results = {
-        {type = 'item', name = 'empty-barrel-milk', amount = 1},
-        {type = 'fluid', name = 'milk', amount = 50},
-    },
-    main_product = "milk",
-    icon = '__pyalienlifegraphics__/graphics/icons/empty-barrel-milk-recipe.png',
-    icon_size = 64,
-}:add_unlock("korlex")
-
-RECIPE {
     type = "recipe",
     name = "flask-2",
     category = 'glassworks',

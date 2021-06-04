@@ -94,7 +94,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'arqad-maggots',
-	category = 'vrauk',
+	category = 'vrauks',
 	module_limitations = 'arqad',
 	subgroup = 'py-alienlife-arqad',
 	order = 'c',
@@ -107,7 +107,7 @@ fun.autorecipes {
 				{
 					{name = 'arqad-egg', amount = 30},
                     {name = 'honeycomb', amount = 5, return_item = {name = 'used-comb'}},
-					{name = 'vrauk', amount = 1},
+					{name = 'vrauks', amount = 1},
 					{name = 'vrauks-food-01', amount = 1}
 				},
 			results =

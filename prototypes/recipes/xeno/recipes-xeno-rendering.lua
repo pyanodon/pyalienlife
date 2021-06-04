@@ -3,7 +3,7 @@ local fun = require("prototypes/functions/functions")
 ------------------RENDERING------------------
 
 fun.autorecipes {
-    name = 'rendering',
+    name = 'rendering-xeno',
 	category = 'slaughterhouse-xeno',
 	--module_limitations = 'xeno',
 	subgroup = 'py-alienlife-xeno',
@@ -179,7 +179,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='bone-xeno',remove_item = true},
-					{name='blood-xeno', amount=1},
+					{name='sulfuric-xeno', amount=1},
 				},
 			results =
 				{
@@ -196,7 +196,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='blood-xeno',remove_item = true},
+					{name='sulfuric-xeno',remove_item = true},
 					{name='chitin-xeno', amount=1},
 				},
 			results =

@@ -924,7 +924,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='caged-xeno',remove_item = true},
-					{name='blood-xeno', amount=1},
+					{name='sulfuric-xeno', amount=1},
 				},
 			results =
 				{

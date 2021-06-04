@@ -164,7 +164,7 @@ fun.autorecipes {
 
 fun.autorecipes {
     name = 'arthurian-incubating',
-	category = 'research-center',
+	category = 'research',
 	module_limitations = 'arthurian',
 	subgroup = 'py-alienlife-arthurian',
 	order = 'c',

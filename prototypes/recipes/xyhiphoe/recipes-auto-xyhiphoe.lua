@@ -11,7 +11,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='fishfood1', amount =1},
+                    {name='fish-food-01', amount =1},
                     {name='phytoplankton', amount =50},
 					{name='pressured-water', amount ='*3000',return_item={name='waste-water', amount= 200}},
 				},
@@ -27,7 +27,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     --{name='phytoplankton',remove_item = true},
-                    --{name='fishfood1',remove_item = true},
+                    --{name='fish-food-01',remove_item = true},
 					{name='filtration-media', amount =1},
 				},
 			results =
@@ -253,7 +253,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='fishfood1', amount =2},
+                    {name='fish-food-01', amount =2},
                     {name='phytoplankton', amount =150},
 					{name='pressured-water', amount ='*1000',return_item={name='waste-water', amount= 650}},
 					--{name='cage', amount=1},
@@ -271,7 +271,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     --{name='phytoplankton',remove_item = true},
-                    --{name='fishfood1',remove_item = true},
+                    --{name='fish-food-01',remove_item = true},
 					{name='filtration-media', amount =2},
 				},
 			results =
@@ -328,8 +328,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fishfood1',remove_item = true},
-					{name='fishfood2', amount ='*2'},
+					{name='fish-food-01',remove_item = true},
+					{name='fish-food-02', amount ='*2'},
 				},
 			results =
 				{
@@ -358,11 +358,11 @@ fun.autorecipes {
                     {name='saps',remove_item = true},
                     {name='fawogae',remove_item = true},
                     {name='albumin',remove_item = true},
-                    {name='fishfood2',remove_item = true},
+                    {name='fish-food-02',remove_item = true},
                     {name='blood-meal',remove_item = true},
                     {name='filtration-media',remove_item = true},
 					{name='fish-egg',remove_item = true},
-					--{name='fishfood1', amount =15},
+					--{name='fish-food-01', amount =15},
 					{name='pheromones', amount =1},
                     --{name='phytoplankton', amount =15},
 					--{name='water-barrel', amount=6,return_item={name='empty-barrel', amount=6}},
@@ -381,7 +381,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     --{name='phytoplankton',remove_item = true},
-                    --{name='fishfood1',remove_item = true},
+                    --{name='fish-food-01',remove_item = true},
 					{name='filtration-media', amount =2},
 				},
 			results =
@@ -438,8 +438,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fishfood1',remove_item = true},
-					{name='fishfood2', amount =2},
+					{name='fish-food-01',remove_item = true},
+					{name='fish-food-02', amount =2},
 				},
 			results =
 				{

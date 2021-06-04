@@ -86,7 +86,7 @@ fun.autorecipes {
                     {name='moondrop-seeds', add_amount = 12},
                     {name='fertilizer', add_amount = 5},
                     {name='syngas',remove_item = true},
-					{name = 'refinedsyngas', amount = 30},
+					{name = 'refsyngas', amount = 30},
 					{name='biomass', add_amount = 4},
 					{name='urea', amount = 12},
 				},

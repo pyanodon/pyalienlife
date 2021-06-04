@@ -57,8 +57,8 @@ end
 
 --remove steel barrel based milk
 data.raw.item['milk-barrel'] = nil
-data.raw.recipe['fill-milk'] = nil
-data.raw.recipe['empty-milk'] = nil
+--data.raw.recipe['fill-milk-barrel'] = nil
+--data.raw.recipe['empty-milk-barrel'] = nil
 
 --fun.global_item_replacer('fawogae', 'fawogae-mk01')
 
@@ -98,8 +98,40 @@ RECIPE {
 
 table.insert(data.raw.lab.lab.inputs, 'py-science-pack')
 
---Updating base milk barrel with icons
+--Updating base milk barrel with icons. replacing base recipes with py copies to use the right barrel
 
+RECIPE {
+    type = 'recipe',
+    name = 'fill-milk-barrel',
+    category = 'crafting-with-fluid',
+    enabled = false,
+    energy_required = 1,
+    ingredients = {
+        {type = 'item', name = 'empty-barrel-milk', amount = 1},
+        {type = 'fluid', name = 'milk', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'barrel-milk', amount = 1},
+    },
+}:remove_unlock("fluid-handling"):add_unlock("korlex")
+
+RECIPE {
+    type = 'recipe',
+    name = 'empty-milk-barrel',
+    category = 'crafting-with-fluid',
+    enabled = false,
+    energy_required = 1,
+    ingredients = {
+        {type = 'item', name = 'barrel-milk', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'empty-barrel-milk', amount = 1},
+        {type = 'fluid', name = 'milk', amount = 50},
+    },
+    main_product = "milk",
+    icon = '__pyalienlifegraphics__/graphics/icons/empty-barrel-milk-recipe.png',
+    icon_size = 64,
+}:remove_unlock("fluid-handling"):add_unlock("korlex")
 
 --copy`s of combustion recipes with biomass
 for _,recipe in pairs(data.raw.recipe) do

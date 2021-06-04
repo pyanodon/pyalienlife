@@ -212,7 +212,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='guts-caged-vrauks',remove_item = true},
-					{name='skin-caged-vrauks', amount=1},
+					{name='chitin-caged-vrauks', amount=1},
 				},
 			results =
 				{

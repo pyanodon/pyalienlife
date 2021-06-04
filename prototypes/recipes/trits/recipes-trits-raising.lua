@@ -19,7 +19,7 @@ fun.autorecipes {
                     {name = 'seaweed', amount =15},
 					{name = 'wood-seeds', amount =15},
 					{name = 'moondrop', amount =5},
-					{name = 'sponge', amount = 2},
+					{name = 'sea-sponge', amount = 2},
 					{name = 'filtration-media', amount =2},
 					{name = 'water-saline', amount = 300, return_item = {name = 'waste-water', amount = 300}},
 				},
@@ -82,7 +82,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name = 'sponge',remove_item = true},
+                    {name = 'sea-sponge',remove_item = true},
                     {name = 'bhoddos',remove_item = true},
                     {name = 'albumin',remove_item = true},
 					{name = 'guts',remove_item = true},
@@ -95,7 +95,7 @@ fun.autorecipes {
 					{name = 'moondrop', amount =10},
                     --{name = 'wood-seeds', amount =15},
 					--{name = 'water-barrel', amount=6,return_item={name = 'empty-barrel', amount=6}},
-					--{name = 'sponge', amount = 1},
+					--{name = 'sea-sponge', amount = 1},
 				},
 			results =
 				{
@@ -137,7 +137,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'sponge', amount = 10},
+					{name = 'sea-sponge', amount = 10},
 				},
 			results =
 				{
@@ -152,7 +152,7 @@ fun.autorecipes {
 				{
 					--{name = 'filtration-media',remove_item = true},
 					--{name = 'sodium-alginate',remove_item = true},
-					--{name = 'sponge',remove_item = true},
+					--{name = 'sea-sponge',remove_item = true},
 					{name = 'fish-egg', amount =3},
 
 				},
@@ -229,7 +229,7 @@ fun.autorecipes {
 				{
 					{name = 'trits-pup', add_amount = 1},
 					{name = 'sodium-alginate', amount = 15},
-					{name = 'sponge', amount = 5},
+					{name = 'sea-sponge', amount = 5},
 				},
 			results =
 				{
@@ -258,7 +258,7 @@ fun.autorecipes {
 				{
 					{name = 'trits-pup', add_amount = 1},
 					{name = 'sodium-alginate', add_amount = 20},
-					{name = 'sponge', add_amount = 7},
+					{name = 'sea-sponge', add_amount = 7},
 				},
 			results =
 				{
