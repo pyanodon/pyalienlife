@@ -311,7 +311,7 @@ RECIPE {
         {type = 'item', name = 'fawogae', amount = 5},
     },
     results = {
-        {type = 'item', name = 'sulfur', amount = 8},
+        {type = 'item', name = 'sulfur', amount = 5},
     },
     --main_product = "cocoon",
 }:add_unlock("molecular-decohesion")
