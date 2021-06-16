@@ -206,3 +206,12 @@ end
 --Tech upgrade stuff--
 require('prototypes/upgrades/hidden-beacon')
 require('prototypes/upgrades/tech-upgrades')
+
+if data.data_crawler then
+	  data.script_enabled = {
+		{type = "entity", name = "crash-site-assembling-machine-1-repaired"},
+		{type = "entity", name = "crash-site-lab-repaired"},
+		{type = "entity", name = "tar-patch"},
+        {type = "item", name = "earth-generic-sample"}
+	  }
+  end

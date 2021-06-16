@@ -603,7 +603,7 @@ RECIPE {
     },
     results = {
         {type = 'item', name = 'cobalt-extract', amount = 3},
-        {type = 'fluid', name = 'dirty-water', amount = 50},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 50},
     },
     main_product = "cobalt-extract",
 }:add_unlock('biotech-mk02')
@@ -651,7 +651,7 @@ RECIPE {
     },
     results = {
         {type = 'item', name = 'cobalt-oxide', amount = 3},
-        {type = 'fluid', name = 'dirty-water', amount = 100},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 100},
     },
     main_product = "cobalt-oxide",
 }:add_unlock('biotech-mk03')
@@ -1278,7 +1278,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'latex', amount = 1}
     }
-}:change_category('pulp')
+}:change_category('latex')
 
 RECIPE {
     type = "recipe",
@@ -1677,7 +1677,7 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'crude-oil', amount = 70},
         {type = 'fluid', name = 'steam', amount = 50, minimum_temperature = 165},
-        {type = 'fluid', name = 'dirty-water', amount = 50},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 50},
         {type = 'item', name = 'ash', amount = 3},
     },
     main_product = "crude-oil",
@@ -1793,7 +1793,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'chitosan', amount = 3},
-        {type = 'fluid', name = 'dirty-water', amount = 150},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 150},
     },
     results = {
         {type = 'item', name = 'ore-lead', amount = 10},
@@ -1808,7 +1808,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'chitosan', amount = 3},
-        {type = 'fluid', name = 'dirty-water', amount = 150},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 150},
     },
     results = {
         {type = 'item', name = 'ore-aluminium', amount = 10},
@@ -1936,7 +1936,7 @@ RECIPE {
     },
     results = {
         {type = 'fluid', name = 'casein-pulp-01', amount = 100},
-        {type = 'fluid', name = 'dirty-water', amount = 50},
+        {type = 'fluid', name = 'dirty-water-light', amount = 50},
     },
     main_product = "casein-pulp-01",
 }:add_unlock("korlex")
@@ -1953,7 +1953,7 @@ RECIPE {
     },
     results = {
         {type = 'fluid', name = 'casein-pulp-02', amount = 50},
-       -- {type = 'fluid', name = 'dirty-water', amount = 50},
+       -- {type = 'fluid', name = 'dirty-water-light', amount = 50},
     },
     --main_product = "casein-pulp-01",
 }:add_unlock("korlex")

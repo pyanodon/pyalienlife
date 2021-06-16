@@ -207,7 +207,7 @@ ENTITY{
     vehicle_impact_sound = sounds.generic_impact,
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
-    crafting_categories = {"data-array", "creature-chamber", "vrauk-rendering"},
+    crafting_categories = {"data-array", "creature-chamber", "vrauk-rendering", "latex"},
     crafting_speed = 0.1,
     energy_source =
     {

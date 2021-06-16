@@ -32,7 +32,7 @@ RECIPE {
     enabled = true,
     energy_required = 25,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-light', amount = 200},
         {type = 'item', name = 'sodium-alginate', amount = 1},
         --{type = 'item', name = 'urea', amount = 1},
         {type = 'item', name = 'moss', amount = 5},
@@ -54,7 +54,7 @@ RECIPE {
     enabled = true,
     energy_required = 25,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-light', amount = 200},
         {type = 'item', name = 'sodium-alginate', amount = 1},
         --{type = 'item', name = 'urea', amount = 1},
         {type = 'item', name = 'moss', amount = 5},
@@ -72,7 +72,7 @@ RECIPE {
     enabled = true,
     energy_required = 25,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-light', amount = 200},
         {type = 'item', name = 'sodium-alginate', amount = 1},
         --{type = 'item', name = 'urea', amount = 1},
         {type = 'item', name = 'moss', amount = 5},

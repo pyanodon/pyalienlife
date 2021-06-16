@@ -102,7 +102,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'grod', amount = 1},
     },
     results = {
@@ -121,7 +121,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'grod', amount = 1},
     },
     results = {
@@ -140,7 +140,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'grod', amount = 1},
     },
     results = {
@@ -159,7 +159,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'bhoddos', amount = 1},
     },
     results = {
@@ -178,7 +178,7 @@ RECIPE {
     enabled = false,
     energy_required = 50,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'seaweed', amount = 40},
     },
     results = {
@@ -197,7 +197,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'moss', amount = 30},
     },
     results = {
@@ -216,7 +216,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'navens', amount = 1},
     },
     results = {
@@ -235,7 +235,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'navens', amount = 2},
     },
     results = {
@@ -254,7 +254,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'rennea', amount = 3},
     },
     results = {
@@ -273,7 +273,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'rennea', amount = 3},
     },
     results = {
@@ -292,7 +292,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'ralesia', amount = 3},
     },
     results = {
@@ -311,7 +311,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'tuuphra', amount = 1},
     },
     results = {
@@ -330,7 +330,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'yaedols', amount = 1},
     },
     results = {
@@ -349,7 +349,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'yotoi', amount = 1},
     },
     results = {
@@ -371,7 +371,7 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'grod', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
     },
@@ -391,7 +391,7 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'grod', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
     },
@@ -411,7 +411,7 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'grod', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
     },
@@ -431,7 +431,7 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'bhoddos', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
     },
@@ -451,7 +451,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'seaweed', amount = 40},
         {type = 'fluid', name = 'chelator', amount = 50},
     },
@@ -471,7 +471,7 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'moss', amount = 30},
         {type = 'fluid', name = 'chelator', amount = 50},
     },
@@ -491,7 +491,7 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'navens', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
     },
@@ -511,7 +511,7 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'navens', amount = 2},
         {type = 'fluid', name = 'chelator', amount = 50},
     },
@@ -531,7 +531,7 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'rennea', amount = 3},
         {type = 'fluid', name = 'chelator', amount = 50},
     },
@@ -551,7 +551,7 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'rennea', amount = 3},
         {type = 'fluid', name = 'chelator', amount = 50},
     },
@@ -571,7 +571,7 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'ralesia', amount = 3},
         {type = 'fluid', name = 'chelator', amount = 50},
     },
@@ -591,7 +591,7 @@ RECIPE {
     enabled = false,
     energy_required = 50,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'tuuphra', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
     },
@@ -611,7 +611,7 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'yaedols', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
     },
@@ -631,7 +631,7 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'yotoi', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
     },
@@ -655,7 +655,7 @@ RECIPE {
     enabled = false,
     energy_required = 50,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'grod', amount = 1},
         {type = 'item', name = 'hmas', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
@@ -676,7 +676,7 @@ RECIPE {
     enabled = false,
     energy_required = 50,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'grod', amount = 1},
         {type = 'item', name = 'hmas', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
@@ -697,7 +697,7 @@ RECIPE {
     enabled = false,
     energy_required = 50,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'grod', amount = 1},
         {type = 'item', name = 'hmas', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
@@ -718,7 +718,7 @@ RECIPE {
     enabled = false,
     energy_required = 50,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'bhoddos', amount = 1},
         {type = 'item', name = 'hmas', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
@@ -739,7 +739,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'seaweed', amount = 40},
         {type = 'item', name = 'hmas', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
@@ -760,7 +760,7 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'moss', amount = 30},
         {type = 'item', name = 'hmas', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
@@ -781,7 +781,7 @@ RECIPE {
     enabled = false,
     energy_required = 50,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'navens', amount = 1},
         {type = 'item', name = 'hmas', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
@@ -802,7 +802,7 @@ RECIPE {
     enabled = false,
     energy_required = 50,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'navens', amount = 2},
         {type = 'item', name = 'hmas', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
@@ -823,7 +823,7 @@ RECIPE {
     enabled = false,
     energy_required = 50,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'rennea', amount = 3},
         {type = 'item', name = 'hmas', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
@@ -844,7 +844,7 @@ RECIPE {
     enabled = false,
     energy_required = 50,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'rennea', amount = 3},
         {type = 'item', name = 'hmas', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
@@ -865,7 +865,7 @@ RECIPE {
     enabled = false,
     energy_required = 50,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'ralesia', amount = 3},
         {type = 'item', name = 'hmas', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
@@ -886,7 +886,7 @@ RECIPE {
     enabled = false,
     energy_required = 50,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'tuuphra', amount = 1},
         {type = 'item', name = 'hmas', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
@@ -907,7 +907,7 @@ RECIPE {
     enabled = false,
     energy_required = 50,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'yaedols', amount = 1},
         {type = 'item', name = 'hmas', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
@@ -928,7 +928,7 @@ RECIPE {
     enabled = false,
     energy_required = 50,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
         {type = 'item', name = 'yotoi', amount = 1},
         {type = 'item', name = 'hmas', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},

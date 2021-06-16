@@ -65,7 +65,7 @@ RECIPE {
     energy_required = 70,
     ingredients = {
         {type = 'item', name = 'sea-sponge-sprouts', amount = 1},
-        {type = 'fluid', name = 'dirty-water', amount = 100},
+        {type = 'fluid', name = 'dirty-water-light', amount = 100},
         {type = 'fluid', name = 'zogna-bacteria', amount = 40},
     },
     results = {

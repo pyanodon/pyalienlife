@@ -15,6 +15,14 @@ require("prototypes/buildings/kicalk-plantation-mk01")
 require("prototypes/buildings/kicalk-plantation-mk02")
 require("prototypes/buildings/kicalk-plantation-mk03")
 require("prototypes/buildings/kicalk-plantation-mk04")
+require("__pyhightech__/prototypes/buildings/moondrop-greenhouse-mk02")
+require("__pyhightech__/prototypes/buildings/moondrop-greenhouse-mk03")
+require("__pyhightech__/prototypes/buildings/moondrop-greenhouse-mk04")
+
+table.insert(data.raw['assembling-machine']['pulp-mill-mk01'].crafting_categories, 'latex')
+table.insert(data.raw['assembling-machine']['pulp-mill-mk02'].crafting_categories, 'latex')
+table.insert(data.raw['assembling-machine']['pulp-mill-mk03'].crafting_categories, 'latex')
+table.insert(data.raw['assembling-machine']['pulp-mill-mk04'].crafting_categories, 'latex')
 
 --(( RECIPES ))--
 
@@ -344,7 +352,7 @@ if mods['pyhightech'] then
 end
 
 
-fun.results_replacer("dhilmos-sex-01", "dirty-water", "waste-water")
+fun.results_replacer("dhilmos-sex-01", "dirty-water-light", "waste-water")
 
 fun.results_replacer("fertilizer", "py-fertilizer", "fertilizer")
 fun.results_replacer("log7-2", "log", "log",8)
@@ -1061,7 +1069,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-light', amount = 200},
         {type = 'item', name = 'cadaveric-arum', amount = 1},
     },
     results = {
@@ -1080,7 +1088,7 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-light', amount = 200},
         {type = 'item', name = 'cadaveric-arum', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
     },
@@ -1100,7 +1108,7 @@ RECIPE {
     enabled = false,
     energy_required = 40,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-light', amount = 200},
         {type = 'item', name = 'hmas', amount = 1},
         {type = 'item', name = 'cadaveric-arum', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
@@ -1121,7 +1129,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-light', amount = 200},
         {type = 'item', name = 'kicalk', amount = 1},
     },
     results = {
@@ -1140,7 +1148,7 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-light', amount = 200},
         {type = 'item', name = 'kicalk', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
     },
@@ -1160,7 +1168,7 @@ RECIPE {
     enabled = false,
     energy_required = 40,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-light', amount = 200},
         {type = 'item', name = 'kicalk', amount = 1},
         {type = 'item', name = 'hmas', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},

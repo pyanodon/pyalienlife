@@ -371,4 +371,8 @@ data:extend {
         type = "recipe-category",
         name = "vrauk-rendering"
     },
+    {
+        type = "recipe-category",
+        name = "latex"
+    },
 }
