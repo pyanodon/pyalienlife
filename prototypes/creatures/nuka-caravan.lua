@@ -40,7 +40,7 @@ data:extend(
     icon_size = 64,
     flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "not-repairable", "breaths-air"},
 	minable = {mining_time = 0.1, result = 'caravan'},
-    max_health = 100,
+    max_health = 300,
     order = "b-b-a",
     subgroup="enemies",
     resistances =
