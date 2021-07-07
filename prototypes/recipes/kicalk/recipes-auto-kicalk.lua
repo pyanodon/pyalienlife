@@ -3,7 +3,6 @@ local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
     name = 'kicalk',
-	--baseitem = 'kicalk',
 	category = 'kicalk',
 	module_limitations = 'kicalk',
 	subgroup = 'py-alienlife-kicalk',

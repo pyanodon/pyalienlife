@@ -3,18 +3,20 @@ local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
     name = 'yotoi',
-	--baseitem = 'yotoi',
 	category = 'yotoi',
 	module_limitations = 'yotoi',
 	subgroup = 'py-alienlife-yotoi',
     order = 'a',
     mats =
 	{
+		--logistic
 		{
 			ingredients =
 				{
-					{name='yotoi-seeds'},
-					{name='water'},
+					{name='yotoi-seeds', amount = 1},
+					{name='sand', amount = 8},
+					{name='limestone', amount = 6},
+					{name='water', amount = 100},
 				},
 			results =
 				{
@@ -23,204 +25,55 @@ fun.autorecipes {
 			crafting_speed = 130,
 			tech = 'yotoi'
 		},
-		{
-			ingredients =
-				{
-                    --{'s1'},
-					{name='sand', amount ='+8'},
-				},
-			results =
-				{
-					--{'a','*5'}
-					{name='yotoi', amount ='+2'}
-				},
-				crafting_speed = 120,
-				tech = 'yotoi'
-		},
-		{
-			ingredients =
-				{
-                    --{'s1'},
-                    --{'a'},
-                    {name='limestone', amount ='+6'},
-				},
-			results =
-				{
-					--{'a','*7'},
-					{name='yotoi', amount ='+2'}
-				},
-				crafting_speed = 120,
-				tech = 'yotoi'
-        },
+		--py
         {
 			ingredients =
 				{
-                    --{'s1'},
-                    --{'a'},
-                    --{'b','+15'},
-                    {name='manure', amount =6},
+                    {name='fertilizer', amount = 6},
+					{name='ash', amount =5},
+                    {name='biomass', amount = 10},
+					{name='pesticide-mk01', amount = 1},
 				},
 			results =
 				{
-					--{'a','*10'},
-					{name='yotoi', amount ='+8'}
+					{name='yotoi', add_amount = 8}
 				},
 				crafting_speed = 100,
 				tech = 'yotoi-mk02'
         },
+		--chem
         {
 			ingredients =
 				{
-                    --{'s1'},
-                    --{'a'},
-                    --{'b','+15'},
-                    --{'c','*10'},
-                    {name='ash', amount =5},
+                    {name='blood-meal', amount = 5},
+					{name='carbon-dioxide', amount = 100},
 				},
 			results =
 				{
-					--{'a','*12'},
-					{name='yotoi', amount ='+2'}
-				},
-				crafting_speed = 90,
-				tech = 'yotoi-mk02'
-        },
-        {
-			ingredients =
-				{
-                    --{'s1'},
-                    --{'a'},
-					--{'b','+15'},
-					--{name='ash',remove_item = true},
-                    {name='biomass', amount ='*5'},
-                    --{'d'},
-				},
-			results =
-				{
-					--{'a','*15'},
-					{name='yotoi', amount ='+1'}
-				},
-				crafting_speed = 90,
-				tech = 'yotoi-mk02'
-        },
-        {
-			ingredients =
-				{
-                    --{'s1'},
-                    --{'a'},
-					--{'b','+15'},
-					--{name='sand',remove_item = true},
-                    {name='blood-meal', amount ='*4'},
-                    --{'d'},
-				},
-			results =
-				{
-					--{'a','*17'},
-					{name='yotoi', amount ='+6'}
-				},
-				crafting_speed = 80,
-				tech = 'yotoi-mk03'
-        },
-
-
-
-
-        {
-			ingredients =
-				{
-
-                    {name='pesticide-mk01', amount ='+1'},
-                    --{'d'},
-                },
-			results =
-				{
-					--{'a','*20'},
-					{name='yotoi', amount ='+8'}
-				},
-				crafting_speed = 75,
-				tech = 'yotoi-mk03'
-        },
-
-
-        {
-			ingredients =
-				{
-                    --{'s1'},
-                    --{'a'},
-				   --{'b','+15'},
-				   --{'carbon-dioxide',remove_item = true},
-				   --{name='blood-meal',remove_item = true},
-					{name='carbon-dioxide', amount ='*50'},
-                    --{'d'},
-                },
-			results =
-				{
-					--{'a','*20'},
-					{name='yotoi', amount ='+4'}
+					{name='yotoi', add_amount = 8}
 				},
 				crafting_speed = 70,
 				tech = 'yotoi-mk03'
         },
-
+		--prod
         {
 			ingredients =
 				{
-
-                    {name='pesticide-mk01',remove_item = true},
-                    {name='pesticide-mk02', amount ='+1'},
-                    --{'d'},
-                },
-			results =
-				{
-					--{'a','*20'},
-					{name='yotoi', amount ='+8'}
-				},
-				crafting_speed = 70,
-				tech = 'yotoi-mk03'
-        },
-
-
-
-        {
-			ingredients =
-				{
-                    --{'s1'},
-                    --{'a'},
-                    --{'b','+15'},
-                    --{'g','*2'},
-					--{'d'},
-					--{name='manure',remove_item = true},
-                    {name='fertilizer', amount ='*1'},
+                    {name='fertilizer', add_amount = 4},
+					{name='small-lamp', amount = 2},
+					{name='pesticide-mk02', amount = 1},
 				},
 			results =
 				{
-					--{'a','*25'},
-					--{'a','+3'}
-					{name='yotoi', amount ="+10"}
+					{name='yotoi', add_amount = 8}
 				},
-				crafting_speed = 55,
+				crafting_speed = 40,
 				tech = 'yotoi-mk04'
 		},
-		{
-			ingredients =
-				{
-                    --{'s1'},
-                    --{'a'},
-                    --{'b','+15'},
-                    --{'g','*2'},
-					--{'d'},
-					--{name='carbon-dioxide',remove_item = true},
-                    {name='small-lamp', amount ='*2'},
-				},
-			results =
-				{
-					--{'a','*25'},
-					--{'a','+3'}
-					{name='yotoi', amount ="+4"}
-				},
-				crafting_speed = 50,
-				tech = 'yotoi-mk04'
-		},
+	}
+}
+
+--[[
     --GH
 		{
 			ingredients =
@@ -286,3 +139,4 @@ fun.autorecipes {
 		},
 	}
 }
+]]--

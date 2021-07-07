@@ -3,7 +3,6 @@ local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
     name = 'fawogae',
-	--baseitem = 'ralesia',
 	category = 'fawogae',
 	subgroup = 'py-alienlife-fawogae',
 	order = 'b',

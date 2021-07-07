@@ -3,7 +3,6 @@ local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
     name = 'rennea',
-	--baseitem = 'rennea',
 	category = 'rennea',
 	module_limitations = 'rennea',
 	subgroup = 'py-alienlife-rennea',

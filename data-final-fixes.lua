@@ -403,7 +403,7 @@ local recipes_list =
   "moss-gen",
   "cage",
   "neuroprocessor",
-  "py-science-pack",
+  'py-science-pack-2',
   "fertilizer-1",
   "fertilizer-4",
   "flutec-pp6",

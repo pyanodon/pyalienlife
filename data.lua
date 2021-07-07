@@ -454,7 +454,7 @@ require('prototypes/recipes/arthurian/recipes-arthurian-growth-enhancement')
 --auog
 require('prototypes/recipes/auog/recipes-auog')
 require('prototypes/recipes/auog/recipes-auog-raising')
---require('prototypes/recipes/auog/recipes-auog-rendering')
+require('prototypes/recipes/auog/recipes-auog-rendering')
 --require('prototypes/recipes/auog/recipes-auog-growth-enhancement')
 
 --Bhoddos
@@ -613,8 +613,15 @@ require('prototypes/recipes/xeno/recipes-xeno-rendering')
 --Xyhiphoe
 
 --Yaedols
+require('prototypes/recipes/yaedols/recipes-yaedols')
+require('prototypes/recipes/yaedols/recipes-auto-yaedols')
 
 --Yotoi
+require('prototypes/recipes/yotoi/recipes-yotoi')
+require('prototypes/recipes/yotoi/recipes-auto-yotoi')
+require('prototypes/recipes/yotoi/recipes-auto-yotoi-fruit')
+require('prototypes/recipes/yotoi/recipes-yotoi-megafarm')
+require('prototypes/recipes/yotoi/recipes-yotoi-fruit-megafarm')
 
 --Zipir
 
@@ -655,8 +662,13 @@ require('prototypes/ores/yotoi')
 require('prototypes/ores/yotoi-fruit')
 require('prototypes/ores/bioreserve')
 
+
+--(( BACKGROUND ))--
 data.raw["utility-constants"].default.recipe_step_limit = 2000;
 data.raw["utility-constants"].default.main_menu_background_image_location = "__pyalienlifegraphics3__/graphics/pyal-wall.jpg"
+
+--(( TIPS AND TRICKS ))--
+require('prototypes/tips-and-tricks')
 
 --sprities
 require('prototypes/sprites/sprites')

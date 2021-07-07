@@ -3,168 +3,83 @@ local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
     name = 'yaedols',
-	--baseitem = 'ralesia',
 	category = 'yaedols',
-	--module_limitations = 'fawogae',
+	module_limitations = 'yaedols',
     mats =
 	{
-    --green
+    --logistic
     {
         ingredients =
             {
-                {name='yaedols-spore', amount =2},
-                {name='wood', amount =10},
-                {name='water', amount ='*10'},
-            },
-        results =
-            {
-                {name='yaedols'}
-            },
-        crafting_speed = 100,
-        tech = 'yaedols'
-    },
-    {
-        ingredients =
-            {
+                {name='yaedols-spores', amount = 2},
+                {name='wood', amount = 10},
+                {name='water', amount = 80},
                 {name='fungal-substrate-02', amount =2},
+                {name='fertilizer', amount = 5},
             },
         results =
             {
-                {name='yaedols', amount ='+1'}
+                {name='yaedols', amount = 3}
             },
-        crafting_speed = 100,
+        crafting_speed = 140,
         tech = 'yaedols'
     },
+    --py
     {
         ingredients =
             {
-                {name='manure', amount =5},
+                {name='yaedols-spores', add_amount = 2},
+                {name='fungal-substrate-03', amount = 2},
+                {name='fertilizer', add_amount = 5},
             },
         results =
             {
-                {name='yaedols', amount ='+1'}
+                {name='yaedols', add_amount =3}
             },
-        crafting_speed = 100,
-        tech = 'yaedols'
-    },
-    --blue
-    {
-        ingredients =
-            {
-                {name='fungal-substrate-02',remove_item = true},
-                {name='manure',remove_item = true},
-                {name='fungal-substrate-03', amount =2},
-            },
-        results =
-            {
-                {name='yaedols', amount =3}
-            },
-        crafting_speed = 90,
+        crafting_speed = 110,
         tech = 'yaedols-mk02'
     },
+    --prod
     {
         ingredients =
             {
-                {name='manure', amount =5},
-            },
-        results =
-            {
-                {name='yaedols', amount =4}
-            },
-        crafting_speed = 90,
-        tech = 'yaedols-mk02'
-    },
-    {
-        ingredients =
-            {
+                {name='yaedols-spores', add_amount = 4},
                 {name='biomass', amount =10},
+                {name='nitrogen', amount = 150},
+                {name='urea', amount = 10},
             },
         results =
             {
-                {name='yaedols', amount =5}
+                {name='yaedols', add_amount = 6}
             },
-        crafting_speed = 90,
+        crafting_speed = 80,
         tech = 'yaedols-mk03'
     },
+    --utility
     {
         ingredients =
             {
-                {name='nitrogen', amount ='*10'},
+                {name='yaedols-spores', add_amount = 8},
+                {name='urea', add_amount =10},
+                {name='bacteria-2', amount = 200},
+                {name='fertilizer', add_amount = 5},
+                {name='biomass', add_amount = 15},
             },
         results =
             {
-                {name='yaedols', amount =6}
+                {name='yaedols', add_amount = 12}
             },
-        crafting_speed = 90,
-        tech = 'yaedols-mk03'
+        crafting_speed = 50,
+        tech = 'yaedols-mk04'
     },
+}
+}
+
+--[[
     {
         ingredients =
             {
-                {name='biomass',remove_item = true},
-                {name='urea', amount =10},
-            },
-        results =
-            {
-                {name='yaedols', amount =8}
-            },
-        crafting_speed = 90,
-        tech = 'yaedols-mk03'
-    },
-    --GH
-    {
-        ingredients =
-            {
-                {name='urea',remove_item = true},
-                {name='nitrogen',remove_item = true},
-                {name='manure',remove_item = true},
-                {name='biomass',remove_item = true},
                 {name='gh', amount =1},
-            },
-        results =
-            {
-                {name='yaedols', amount =8}
-            },
-        crafting_speed = 70,
-        tech = 'yaedols-mk04'
-    },
-    {
-        ingredients =
-            {
-                {name='urea', amount =10},
-                --{'nitrogen',remove_item = true},
-                --{'manure',remove_item = true},
-                --{'biomass',remove_item = true},
-                --{'gh',1},
-            },
-        results =
-            {
-                {name='yaedols', amount =10}
-            },
-        crafting_speed = 70,
-        tech = 'yaedols-mk04'
-    },
-    {
-        ingredients =
-            {
-                {name='bacteria-2', amount ='*20'},
-                --{'manure',remove_item = true},
-                --{'biomass',remove_item = true},
-                --{'gh',1},
-            },
-        results =
-            {
-                {name='yaedols', amount =12}
-            },
-        crafting_speed = 70,
-        tech = 'yaedols-mk04'
-    },
-    {
-        ingredients =
-            {
-                {name='manure', amount =10},
-                {name='biomass', amount =15},
-                --{'gh',1},
             },
         results =
             {
@@ -175,3 +90,4 @@ fun.autorecipes {
     },
 	}
 }
+]]--

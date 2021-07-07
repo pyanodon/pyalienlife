@@ -22,7 +22,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 140,
 			name = 'moondrop 1',
-			tech = 'moondrop-mk01'
+			tech = 'moondrop'
 		},
 		--red
 		{
@@ -39,7 +39,7 @@ fun.autorecipes {
 				},
 				crafting_speed = 120,
 				name = 'moondrop 2',
-				tech = 'moondrop-mk01'
+				tech = 'moondrop'
         },
 		--py
         {

@@ -3,7 +3,6 @@ local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
     name = 'tuuphra',
-	--baseitem = 'tuuphra',
 	category = 'tuuphra',
 	module_limitations = 'tuuphra',
 	subgroup = 'py-alienlife-tuuphra',

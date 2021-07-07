@@ -11,7 +11,7 @@ TECHNOLOGY {
         ingredients = {
             {"automation-science-pack", 3},
             {"logistic-science-pack", 2},
-            {"py-science-pack", 2},
+            {'py-science-pack-2', 2},
         },
         time = 50
     }

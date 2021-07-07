@@ -116,6 +116,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'cottongut-mk01', amount = 1},
         {type = 'item', name = 'cottongut-mk01', amount = 1, probability = 0.5},
+        {type = 'item', name = 'cottongut-pup', amount = 1, probability = 0.5},
         {type = 'item', name = 'cottongut-pup-mk01', amount_min = 3, amount_max = 8, probability = 0.8},
     },
     main_product = "cottongut-pup-mk01",

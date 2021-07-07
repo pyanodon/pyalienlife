@@ -2,6 +2,10 @@ require("__stdlib__/stdlib/data/data").Util.create_data_globals()
 --require("__pycoalprocessing__/prototypes/functions/functions")
 local fun = require("prototypes/functions/functions")
 
+table.insert(data.raw.lab.lab.inputs, 'py-science-pack-1')
+table.insert(data.raw.lab.lab.inputs, 'py-science-pack-2')
+table.insert(data.raw.lab.lab.inputs, 'py-science-pack-3')
+
 if mods["pyfusionenergy"] then
     require("prototypes/updates/pyfusionenergy-updates")
 end
@@ -95,8 +99,6 @@ RECIPE {
     },
     --main_product = "cocoon",
 }:add_unlock("biotech-mk02")
-
-table.insert(data.raw.lab.lab.inputs, 'py-science-pack')
 
 --Updating base milk barrel with icons. replacing base recipes with py copies to use the right barrel
 

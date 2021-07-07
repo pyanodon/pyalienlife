@@ -1,3 +1,4 @@
+--[[
 TECHNOLOGY {
     type = "technology",
     name = "ralesia",
@@ -14,3 +15,5 @@ TECHNOLOGY {
         time = 50
     }
 }
+]]--
+TECHNOLOGY('ralesia'):set_fields{icon = "__pyalienlifegraphics__/graphics/technology/ralesia.png"}

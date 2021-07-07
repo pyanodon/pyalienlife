@@ -3,7 +3,6 @@ local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
     name = 'guar',
-	--baseitem = 'guar',
 	category = 'guar',
 	module_limitations = 'guar',
 	main_product = 'guar',

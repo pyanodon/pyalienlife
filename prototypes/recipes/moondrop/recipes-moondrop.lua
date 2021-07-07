@@ -19,7 +19,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'moondrop', amount = 4},
     },
-}:add_unlock("moondrop-mk01")
+}:add_unlock("moondrop")
 
 RECIPE {
     type = 'recipe',
@@ -36,7 +36,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'moondrop-codex', amount = 1},
     },
-}:add_unlock("moondrop-mk01")
+}:add_unlock("moondrop")
 
 --[[
 RECIPE {
@@ -76,7 +76,7 @@ RECIPE {
         {type = "item", name = "moondrop-seeds", amount_min = 1, amount_max = 3, probability = 0.25}
     },
     main_product = 'moondrop-seeds',
-}:add_unlock("moondrop-mk01")
+}:add_unlock("moondrop")
 
 --Secondary Upgrade Recipes--
 --SUR--

@@ -208,7 +208,7 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'py-science-pack',
+    name = 'py-science-pack-1',
     category = 'research',
     enabled = false,
     energy_required = 15,
@@ -223,9 +223,51 @@ RECIPE {
         {type = 'fluid', name = 'flavonoids', amount = 50},
     },
     results = {
-        {type = 'item', name = 'py-science-pack', amount = 3},
+        {type = 'item', name = 'py-science-pack-1', amount = 3},
+    },
+}:add_unlock("biotech-mk01")
+
+RECIPE {
+    type = 'recipe',
+    name = 'py-science-pack-2',
+    category = 'research',
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = 'item', name = 'moss', amount = 20},
+        {type = 'item', name = 'alien-sample01', amount = 1},
+        {type = 'item', name = 'plastic-bar', amount = 15},
+        {type = 'item', name = 'paragen', amount = 1},
+        {type = 'item', name = 'solidified-sarcorus', amount = 2},
+        {type = 'item', name = 'neuroprocessor', amount = 2},
+        {type = 'item', name = 'flask', amount = 1},
+        {type = 'fluid', name = 'flavonoids', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'py-science-pack-2', amount = 3},
     },
 }:add_unlock("biotech-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'py-science-pack-3',
+    category = 'research',
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = 'item', name = 'moss', amount = 20},
+        {type = 'item', name = 'alien-sample01', amount = 1},
+        {type = 'item', name = 'plastic-bar', amount = 15},
+        {type = 'item', name = 'paragen', amount = 1},
+        {type = 'item', name = 'solidified-sarcorus', amount = 2},
+        {type = 'item', name = 'neuroprocessor', amount = 2},
+        {type = 'item', name = 'flask', amount = 1},
+        {type = 'fluid', name = 'flavonoids', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'py-science-pack-3', amount = 3},
+    },
+}:add_unlock("biotech-mk03")
 
 RECIPE {
     type = 'recipe',

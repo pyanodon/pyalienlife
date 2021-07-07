@@ -44,7 +44,7 @@ fun.autorecipes {
 					{name='cottongut-pup', add_amount = 6},
 				},
 			crafting_speed = 60,
-			tech = 'assisted-embryology'
+			tech = 'cottongut-mk02'
 		},
 		--py
 		{

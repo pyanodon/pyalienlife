@@ -12,7 +12,7 @@ TECHNOLOGY {
             {"automation-science-pack", 3},
             {"logistic-science-pack", 3},
             {'chemical-science-pack', 2},
-            {"py-science-pack", 2},
+            {'py-science-pack-2', 2},
             {'production-science-pack', 1},
         },
         time = 50

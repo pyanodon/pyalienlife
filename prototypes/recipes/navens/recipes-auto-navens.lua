@@ -3,7 +3,6 @@ local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
     name = 'navens',
-	--baseitem = 'ralesia',
 	category = 'navens',
 	subgroup = 'py-alienlife-navens',
 	order = 'b',

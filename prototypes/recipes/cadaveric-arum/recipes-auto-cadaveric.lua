@@ -3,7 +3,6 @@ local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
     name = 'cadaveric-arum',
-	--baseitem = 'cadaveric-arum',
 	category = 'arum',
 	module_limitations = 'cadaveric-arum',
 	subgroup = 'py-alienlife-cadaveric',

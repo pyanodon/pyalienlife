@@ -1,3 +1,4 @@
+--[[
 TECHNOLOGY {
     type = "technology",
     name = "ulric",
@@ -15,6 +16,8 @@ TECHNOLOGY {
         time = 50
     }
 }
+]]--
+TECHNOLOGY('ulric'):set_fields{icon = "__pyalienlifegraphics__/graphics/technology/ulric.png"}
 
 TECHNOLOGY {
     type = "technology",
@@ -29,7 +32,7 @@ TECHNOLOGY {
         ingredients = {
             {"automation-science-pack", 1},
             {"logistic-science-pack", 1},
-            {"py-science-pack", 1},
+            {'py-science-pack-2', 1},
         },
         time = 50
     }
@@ -49,7 +52,7 @@ TECHNOLOGY {
             {"automation-science-pack", 1},
             {"logistic-science-pack", 1},
             {'chemical-science-pack', 1},
-            {"py-science-pack", 1},
+            {'py-science-pack-2', 1},
         },
         time = 50
     }
@@ -69,7 +72,7 @@ TECHNOLOGY {
             {"automation-science-pack", 1},
             {"logistic-science-pack", 1},
             {'chemical-science-pack', 1},
-            {"py-science-pack", 1},
+            {'py-science-pack-2', 1},
             {'production-science-pack', 1},
         },
         time = 50

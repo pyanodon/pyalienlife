@@ -15,7 +15,7 @@ TECHNOLOGY {
             {'chemical-science-pack', 3},
             {'production-science-pack', 1},
             {'utility-science-pack', 1},
-            {'py-science-pack', 2},
+            {'py-science-pack-2', 2},
         },
         time = 50
     }
@@ -41,7 +41,7 @@ TECHNOLOGY {
             {'chemical-science-pack', 3},
             {'production-science-pack', 1},
             {'utility-science-pack', 1},
-            {'py-science-pack', 2},
+            {'py-science-pack-2', 2},
         },
         time = 50
     }
@@ -67,7 +67,7 @@ TECHNOLOGY {
             {'chemical-science-pack', 3},
             {'production-science-pack', 1},
             {'utility-science-pack', 1},
-            {'py-science-pack', 2},
+            {'py-science-pack-2', 2},
         },
         time = 50
     }
@@ -93,7 +93,7 @@ TECHNOLOGY {
             {'chemical-science-pack', 3},
             {'production-science-pack', 1},
             {'utility-science-pack', 1},
-            {'py-science-pack', 2},
+            {'py-science-pack-2', 2},
         },
         time = 50
     }
@@ -119,7 +119,7 @@ TECHNOLOGY {
             {'chemical-science-pack', 3},
             {'production-science-pack', 1},
             {'utility-science-pack', 1},
-            {'py-science-pack', 2},
+            {'py-science-pack-2', 2},
         },
         time = 50
     }

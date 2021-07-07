@@ -1,3 +1,4 @@
+--[[
 TECHNOLOGY {
     type = "technology",
     name = "mukmoux",
@@ -15,6 +16,8 @@ TECHNOLOGY {
         time = 50
     }
 }
+]]--
+TECHNOLOGY('mukmoux'):set_fields{icon = "__pyalienlifegraphics__/graphics/technology/mukmoux.png"}
 
 TECHNOLOGY {
     type = "technology",
@@ -29,7 +32,7 @@ TECHNOLOGY {
         ingredients = {
             {"automation-science-pack", 1},
             {"logistic-science-pack", 1},
-            {"py-science-pack", 1},
+            {'py-science-pack-2', 1},
         },
         time = 50
     }
@@ -48,7 +51,7 @@ TECHNOLOGY {
         ingredients = {
             {"automation-science-pack", 1},
             {"logistic-science-pack", 1},
-            {"py-science-pack", 1},
+            {'py-science-pack-2', 1},
             {'chemical-science-pack', 1},
         },
         time = 50
@@ -68,7 +71,7 @@ TECHNOLOGY {
         ingredients = {
             {"automation-science-pack", 1},
             {"logistic-science-pack", 1},
-            {"py-science-pack", 1},
+            {'py-science-pack-2', 1},
             {'chemical-science-pack', 1},
             {'production-science-pack', 1},
         },

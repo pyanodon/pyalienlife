@@ -1,3 +1,4 @@
+if not mods['pyhightech'] then
 TECHNOLOGY {
     type = "technology",
     name = "kicalk",
@@ -14,6 +15,10 @@ TECHNOLOGY {
         time = 50
     }
 }
+else
+    TECHNOLOGY('kicalk'):set_fields{icon = "__pyalienlifegraphics__/graphics/technology/kicalk.png"}
+    TECHNOLOGY('kicalk'):add_prereq('botany-mk01')
+end
 
 TECHNOLOGY {
     type = "technology",
@@ -28,7 +33,7 @@ TECHNOLOGY {
         ingredients = {
             {"automation-science-pack", 1},
             {'logistic-science-pack', 1},
-            {'py-science-pack', 1},
+            {'py-science-pack-2', 1},
         },
         time = 50
     }
@@ -47,7 +52,7 @@ TECHNOLOGY {
         ingredients = {
             {"automation-science-pack", 1},
             {'logistic-science-pack', 1},
-            {'py-science-pack', 1},
+            {'py-science-pack-2', 1},
             {'chemical-science-pack', 1},
         },
         time = 50
@@ -67,7 +72,7 @@ TECHNOLOGY {
         ingredients = {
             {"automation-science-pack", 1},
             {'logistic-science-pack', 1},
-            {'py-science-pack', 1},
+            {'py-science-pack-2', 1},
             {'chemical-science-pack', 1},
             {'production-science-pack', 1},
         },

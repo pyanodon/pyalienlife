@@ -3,7 +3,6 @@ local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
     name = 'grod',
-	--baseitem = 'grod',
 	category = 'grod',
 	module_limitations = 'grod',
 	main_product = 'grod',

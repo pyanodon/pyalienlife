@@ -47,7 +47,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'steel-chest', amount = 1},
-        {type = 'item', name = 'py-science-pack', amount = 5},
+        {type = 'item', name = 'py-science-pack-2', amount = 5},
         {type = 'item', name = 'arthurian-codex', amount = 1},
     },
     results = {
