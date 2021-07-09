@@ -2222,7 +2222,7 @@ RECIPE {
         {type = 'fluid', name = 'chloral', amount = 50},
         {type = 'fluid', name = 'sulfuric-acid', amount = 50},
         {type = 'item', name = 'sodium-hydroxide', amount = 4},
-        {type = 'item', name = 'phenol', amount = 5},
+        {type = 'item', name = 'phenol', amount = 10},
         {type = 'fluid', name = 'mcb', amount = 100},
     },
     results = {
