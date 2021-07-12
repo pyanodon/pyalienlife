@@ -145,7 +145,7 @@ ENTITY {
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
         sound = {filename = "__pyalienlifegraphics__/sounds/generator-1.ogg", volume = 0.80},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/generator-1.ogg", volume = 0.45},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/generator-1.ogg", volume = 0.3},
         apparent_volume = 2.5
     }
 }
