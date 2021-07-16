@@ -219,6 +219,14 @@ ENTITY {
             pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             base_area = 10,
             base_level = -1,
+            pipe_connections = {{type = "input", position = {4.0, -7.0}}}
+        },
+        {
+            production_type = "input",
+            pipe_covers = DATA.Pipes.covers(false, true, true, true),
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            base_area = 10,
+            base_level = -1,
             pipe_connections = {{type = "input", position = {2.0, -7.0}}}
         },
         {
@@ -228,6 +236,14 @@ ENTITY {
             base_area = 10,
             base_level = -1,
             pipe_connections = {{type = "input", position = {-2.0, -7.0}}}
+        },
+        {
+            production_type = "input",
+            pipe_covers = DATA.Pipes.covers(false, true, true, true),
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            base_area = 10,
+            base_level = -1,
+            pipe_connections = {{type = "input", position = {-4.0, -7.0}}}
         },
         {
             production_type = "output",

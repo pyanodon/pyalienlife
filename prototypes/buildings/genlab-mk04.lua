@@ -47,7 +47,7 @@ ENTITY {
         module_slots = 4
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-    crafting_categories = {"genlab"},
+    crafting_categories = {"genlab", "genlab-handcrafting"},
     crafting_speed = 4,
     energy_source = {
         type = "electric",

@@ -2,6 +2,10 @@ require("__stdlib__/stdlib/data/data").Util.create_data_globals()
 --require("__pycoalprocessing__/prototypes/functions/functions")
 local fun = require("prototypes/functions/functions")
 
+table.insert(data.raw.lab.lab.inputs, 'py-science-pack-1')
+table.insert(data.raw.lab.lab.inputs, 'py-science-pack-2')
+table.insert(data.raw.lab.lab.inputs, 'py-science-pack-3')
+
 if mods["pyfusionenergy"] then
     require("prototypes/updates/pyfusionenergy-updates")
 end
@@ -15,6 +19,7 @@ if mods["pyhightech"] then
     require("prototypes/technologies/schrodinger-antelope")
     require("prototypes/buildings/antelope-enclosure-mk01")
     require("prototypes/updates/pyhightech-updates")
+    table.insert(data.raw['assembling-machine']['crash-site-assembling-machine-1-repaired'].crafting_categories, 'vrauk-rendering')
 end
 
 if mods["pycoalprocessing"] then
@@ -32,6 +37,11 @@ data.raw.fish.fish.minable.result = 'fish'
 
 data.raw.item.fawogae = nil
 
+table.insert(data.raw.character.character.mining_categories, "ore-bioreserve")
+
+table.insert(data.raw.character.character.crafting_categories, "genlab-handcrafting")
+table.insert(data.raw.character.character.crafting_categories, "research")
+
 for _, recipe in pairs(data.raw.recipe) do
     local r = RECIPE(recipe)
     r:replace_ingredient('py-fertilizer', 'fertilizer')
@@ -48,6 +58,11 @@ for _, recipe in pairs(data.raw.recipe) do
     local r = RECIPE(recipe)
     r:replace_ingredient('xyhiphoe-blood', 'arthropod-blood')
 end
+
+--remove steel barrel based milk
+data.raw.item['milk-barrel'] = nil
+--data.raw.recipe['fill-milk-barrel'] = nil
+--data.raw.recipe['empty-milk-barrel'] = nil
 
 --fun.global_item_replacer('fawogae', 'fawogae-mk01')
 
@@ -85,10 +100,40 @@ RECIPE {
     --main_product = "cocoon",
 }:add_unlock("biotech-mk02")
 
-table.insert(data.raw.lab.lab.inputs, 'py-science-pack')
+--Updating base milk barrel with icons. replacing base recipes with py copies to use the right barrel
 
---Updating base milk barrel with icons
+RECIPE {
+    type = 'recipe',
+    name = 'fill-milk-barrel',
+    category = 'crafting-with-fluid',
+    enabled = false,
+    energy_required = 1,
+    ingredients = {
+        {type = 'item', name = 'empty-barrel-milk', amount = 1},
+        {type = 'fluid', name = 'milk', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'barrel-milk', amount = 1},
+    },
+}:remove_unlock("fluid-handling"):add_unlock("korlex")
 
+RECIPE {
+    type = 'recipe',
+    name = 'empty-milk-barrel',
+    category = 'crafting-with-fluid',
+    enabled = false,
+    energy_required = 1,
+    ingredients = {
+        {type = 'item', name = 'barrel-milk', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'empty-barrel-milk', amount = 1},
+        {type = 'fluid', name = 'milk', amount = 50},
+    },
+    main_product = "milk",
+    icon = '__pyalienlifegraphics__/graphics/icons/empty-barrel-milk-recipe.png',
+    icon_size = 64,
+}:remove_unlock("fluid-handling"):add_unlock("korlex")
 
 --copy`s of combustion recipes with biomass
 for _,recipe in pairs(data.raw.recipe) do
@@ -163,3 +208,12 @@ end
 --Tech upgrade stuff--
 require('prototypes/upgrades/hidden-beacon')
 require('prototypes/upgrades/tech-upgrades')
+
+if data.data_crawler then
+	  data.script_enabled = {
+		{type = "entity", name = "crash-site-assembling-machine-1-repaired"},
+		{type = "entity", name = "crash-site-lab-repaired"},
+		{type = "entity", name = "tar-patch"},
+        {type = "item", name = "earth-generic-sample"}
+	  }
+  end

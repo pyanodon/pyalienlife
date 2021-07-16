@@ -1,7 +1,7 @@
 local fun = require("prototypes/functions/functions")
 
 if mods['pyhightech'] then
-    require('prototypes/recipes/recipes-moondrop-products')
+    require('prototypes/recipes/moondrop/recipes-moondrop-products')
     RECIPE('arqad-mk02'):remove_ingredient('crude-oil-barrel'):add_ingredient({type = 'item', name = 'moondrop-fueloil', amount = 25}):add_ingredient({type = 'item', name = 'moondrop-diesel', amount = 5})
     --data.raw.recipe['arqad-mk02'].results[3] = nil
     fun.results_replacer('arqad-mk02','empty-barrel','empty-barrel', 2)
@@ -16,16 +16,24 @@ end
 --BUILDINDS--
 
 --TECHNOLOGIES--
-TECHNOLOGY('oil-machines-mk03'):add_pack('py-science-pack')
-TECHNOLOGY('oil-machines-mk04'):add_pack('py-science-pack')
-TECHNOLOGY('fracking'):add_pack('py-science-pack')
-TECHNOLOGY('kerogen'):add_pack('py-science-pack')
-TECHNOLOGY('light-oil-mk03'):add_pack('py-science-pack')
-TECHNOLOGY('petroleum-gas-mk03'):add_pack('py-science-pack')
-TECHNOLOGY('tholin-mk03'):add_pack('py-science-pack')
-TECHNOLOGY('tholin-mk04'):add_pack('py-science-pack')
+TECHNOLOGY('oil-machines-mk03'):add_pack('py-science-pack-2')
+TECHNOLOGY('oil-machines-mk04'):add_pack('py-science-pack-2')
+TECHNOLOGY('fracking'):add_pack('py-science-pack-2')
+TECHNOLOGY('kerogen'):add_pack('py-science-pack-2')
+TECHNOLOGY('light-oil-mk03'):add_pack('py-science-pack-2')
+TECHNOLOGY('petroleum-gas-mk03'):add_pack('py-science-pack-2')
+TECHNOLOGY('tholin-mk03'):add_pack('py-science-pack-2')
+TECHNOLOGY('tholin-mk04'):add_pack('py-science-pack-2')
 
 ----RECIPES----
+RECIPE('guar-separation'):remove_unlock("oil-machines-mk02")
+RECIPE('guar-01'):remove_unlock("oil-machines-mk01")
+RECIPE('guar-02'):remove_unlock("oil-machines-mk02")
+RECIPE('guar-03'):remove_unlock("oil-machines-mk02")
+RECIPE('guar-04'):remove_unlock("oil-machines-mk02")
+RECIPE('guar-05'):remove_unlock("oil-machines-mk02")
+
+
 
 RECIPE('retrovirus'):add_ingredient({type = "fluid", name = "hot-air", amount = 50})
 RECIPE('cobalt-fluoride'):remove_ingredient("steam"):add_ingredient({type = "fluid", name = "hot-air", amount = 100})
@@ -102,7 +110,7 @@ RECIPE {
     enabled = false,
     energy_required = 50,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-light', amount = 200},
         {type = 'item', name = 'guar-seeds', amount = 40},
     },
     results = {
@@ -121,7 +129,7 @@ RECIPE {
     enabled = false,
     energy_required = 40,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-light', amount = 200},
         {type = 'item', name = 'guar-seeds', amount = 40},
         {type = 'fluid', name = 'chelator', amount = 50},
     },
@@ -141,7 +149,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-light', amount = 200},
         {type = 'item', name = 'guar-seeds', amount = 40},
         {type = 'fluid', name = 'chelator', amount = 50},
         {type = 'item', name = 'hmas', amount = 1},

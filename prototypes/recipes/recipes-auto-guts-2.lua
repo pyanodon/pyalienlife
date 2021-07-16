@@ -15,18 +15,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedarthurian',amount=1},
+					{name='caged-arthurian', amount=1},
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='skin', amount ='R'},
-					{name='fat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='blood', amount ='R'},
-					{name='brain', amount ='R'},
-					{name='cage',amount=1},
+					{name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='skin', remove_item = true},
+					{name='mukmoux-fat', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='blood', remove_item = true},
+					{name='brain', remove_item = true},
+					{name='cage', amount=1},
 					{name='guts', amount ='+2'},
 				},
 			crafting_speed = 15,
@@ -39,12 +39,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedarthurian',amount='R'},
-					{name='gutscagedarthurian',amount=1},
+					{name='caged-arthurian',remove_item = true},
+					{name='guts-caged-arthurian', amount=1},
 				},
 			results =
 				{
-					{name='bonemeal', amount ='R'},
+					{name='bonemeal', remove_item = true},
 					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
@@ -70,18 +70,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='arqad',amount=3},
+					{name='arqad', amount=3},
 				},
 			results =
 				{
-                    {name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='skin', amount ='R'},
-					{name='fat', amount ='R'},
-					{name='venom', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='arthropodblood', amount ='R'},
-					{name='brain', amount ='R'},
+                    {name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='skin', remove_item = true},
+					{name='mukmoux-fat', remove_item = true},
+					{name='bee-venom', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='arthropod-blood', remove_item = true},
+					{name='brain', remove_item = true},
 					{name='guts', amount ='+2'},
 				},
                 crafting_speed = 15,
@@ -94,12 +94,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='arqad',amount='R'},
-					{name='gutsarqad',amount=1},
+					{name='arqad',remove_item = true},
+					{name='guts-arqad', amount=1},
 				},
 			results =
 				{
-					{name='chitin', amount ='R'},
+					{name='chitin', remove_item = true},
 					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
@@ -125,18 +125,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedauog',amount=1},
+					{name='caged-auog', amount=1},
 				},
 			results =
 				{
-                    {name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='skin', amount ='R'},
-					{name='fat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='blood', amount ='R'},
-					{name='brain', amount ='R'},
-					{name='cage',amount=1},
+                    {name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='skin', remove_item = true},
+					{name='mukmoux-fat', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='blood', remove_item = true},
+					{name='brain', remove_item = true},
+					{name='cage', amount=1},
 					{name='guts', amount ='+2'},
 				},
                 crafting_speed = 15,
@@ -149,12 +149,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedauog',amount='R'},
-					{name='gutscagedauog',amount=1},
+					{name='caged-auog',remove_item = true},
+					{name='guts-caged-auog', amount=1},
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
@@ -180,17 +180,17 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cottongut',amount=5},
+					{name='cottongut', amount=5},
 				},
 			results =
 				{
-                    {name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='skin', amount ='R'},
-					{name='fat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='blood', amount ='R'},
-					{name='brain', amount ='R'},
+                    {name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='skin', remove_item = true},
+					{name='mukmoux-fat', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='blood', remove_item = true},
+					{name='brain', remove_item = true},
 					{name='guts', amount ='+2'},
 				},
                 crafting_speed = 15,
@@ -203,12 +203,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cottongut',amount='R'},
-					{name='gutscottongut',amount=5},
+					{name='cottongut',remove_item = true},
+					{name='guts-cottongut', amount=5},
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
@@ -234,20 +234,20 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='dhilmos',amount=1},
+					{name='dhilmos', amount=1},
 				},
 			results =
 				{
-                    {name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='skin', amount ='R'},
-					{name='chitin', amount ='R'},
-					{name='arthropodblood', amount ='R'},
-					{name='sulfuricacid', amount ='R'},
-					{name='fat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='blood', amount ='R'},
-					{name='brain', amount ='R'},
+                    {name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='skin', remove_item = true},
+					{name='chitin', remove_item = true},
+					{name='arthropod-blood', remove_item = true},
+					{name='sulfuric-acid', remove_item = true},
+					{name='mukmoux-fat', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='blood', remove_item = true},
+					{name='brain', remove_item = true},
 					{name='guts', amount ='+2'},
 				},
                 crafting_speed = 15,
@@ -260,12 +260,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='dhilmos',amount='R'},
-					{name='gutsdhilmos',amount=1},
+					{name='dhilmos',remove_item = true},
+					{name='guts-dhilmos', amount=1},
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
@@ -291,18 +291,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cageddingrits',amount=1},
+					{name='caged-dingrits', amount=1},
 				},
 			results =
 				{
-                    {name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='skin', amount ='R'},
-					{name='fat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='blood', amount ='R'},
-					{name='brain', amount ='R'},
-					{name='cage',amount=1},
+                    {name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='skin', remove_item = true},
+					{name='mukmoux-fat', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='blood', remove_item = true},
+					{name='brain', remove_item = true},
+					{name='cage', amount=1},
 					{name='guts', amount ='+2'},
 				},
                 crafting_speed = 15,
@@ -315,12 +315,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cageddingrits',amount='R'},
-					{name='gutscageddingrits',amount=1},
+					{name='caged-dingrits',remove_item = true},
+					{name='guts-caged-dingrits', amount=1},
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
+					{name='bones', remove_item = true},
 					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
@@ -346,18 +346,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedkmauts',amount=1},
+					{name='caged-kmauts', amount=1},
 				},
 			results =
 				{
-                    {name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='skin', amount ='R'},
-					{name='fat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='blood', amount ='R'},
-					{name='brain', amount ='R'},
-					{name='cage',amount=1},
+                    {name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='skin', remove_item = true},
+					{name='mukmoux-fat', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='blood', remove_item = true},
+					{name='brain', remove_item = true},
+					{name='cage', amount=1},
 					{name='guts', amount ='+2'},
 				},
                 crafting_speed = 15,
@@ -370,12 +370,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedkmauts',amount='R'},
-					{name='gutscagedkmauts',amount=1},
+					{name='caged-kmauts',remove_item = true},
+					{name='guts-caged-kmauts', amount=1},
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
@@ -401,18 +401,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedkorlex',amount=1},
+					{name='caged-korlex', amount=1},
 				},
 			results =
 				{
-                    {name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='skin', amount ='R'},
-					{name='fat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='blood', amount ='R'},
-					{name='brain', amount ='R'},
-					{name='cage',amount=1},
+                    {name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='skin', remove_item = true},
+					{name='mukmoux-fat', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='blood', remove_item = true},
+					{name='brain', remove_item = true},
+					{name='cage', amount=1},
 					{name='guts', amount ='+2'},
 				},
                 crafting_speed = 15,
@@ -425,12 +425,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedkorlex',amount='R'},
-					{name='gutscagedkorlex',amount=1},
+					{name='caged-korlex',remove_item = true},
+					{name='guts-caged-korlex', amount=1},
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
@@ -457,18 +457,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedmukmoux',amount=1},
+					{name='caged-mukmoux', amount=1},
 				},
 			results =
 				{
-                    {name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='skin', amount ='R'},
-					{name='fat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='blood', amount ='R'},
-					{name='brain', amount ='R'},
-					{name='cage',amount=1},
+                    {name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='skin', remove_item = true},
+					{name='mukmoux-fat', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='blood', remove_item = true},
+					{name='brain', remove_item = true},
+					{name='cage', amount=1},
 					{name='guts', amount ='+3'},
 				},
                 crafting_speed = 15,
@@ -481,12 +481,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedmukmoux',amount='R'},
-					{name='gutscagedmukmoux',amount=1},
+					{name='caged-mukmoux',remove_item = true},
+					{name='guts-caged-mukmoux', amount=1},
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='guts', amount ='+7'},
 				},
 			crafting_speed = 15,
@@ -512,18 +512,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedphadai',amount=1},
+					{name='caged-phadai', amount=1},
 				},
 			results =
 				{
-                    {name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='skin', amount ='R'},
-					{name='fat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='blood', amount ='R'},
-					{name='brain', amount ='R'},
-					{name='cage',amount=1},
+                    {name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='skin', remove_item = true},
+					{name='mukmoux-fat', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='blood', remove_item = true},
+					{name='brain', remove_item = true},
+					{name='cage', amount=1},
 					{name='guts', amount ='+2'},
 				},
                 crafting_speed = 15,
@@ -536,12 +536,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedphadai',amount='R'},
-					{name='gutscagedphadai',amount=1},
+					{name='caged-phadai',remove_item = true},
+					{name='guts-caged-phadai', amount=1},
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
+					{name='bones', remove_item = true},
 					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
@@ -567,18 +567,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedphagnot',amount=1},
+					{name='caged-phagnot', amount=1},
 				},
 			results =
 				{
-                    {name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='skin', amount ='R'},
-					{name='fat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='blood', amount ='R'},
-					{name='brain', amount ='R'},
-					{name='cage',amount=1},
+                    {name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='skin', remove_item = true},
+					{name='mukmoux-fat', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='blood', remove_item = true},
+					{name='brain', remove_item = true},
+					{name='cage', amount=1},
 					{name='guts', amount ='+1'},
 				},
                 crafting_speed = 15,
@@ -591,12 +591,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedphagnot',amount='R'},
-					{name='gutscagedphagnot',amount=1},
+					{name='caged-phagnot',remove_item = true},
+					{name='guts-caged-phagnot', amount=1},
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
+					{name='bones', remove_item = true},
 					{name='guts', amount ='+4'},
 				},
 			crafting_speed = 15,
@@ -622,18 +622,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedscrondrix',amount=1},
+					{name='caged-scrondrix', amount=1},
 				},
 			results =
 				{
-                    {name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='skin', amount ='R'},
-					{name='fat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='blood', amount ='R'},
-					{name='brain', amount ='R'},
-					{name='cage',amount=1},
+                    {name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='skin', remove_item = true},
+					{name='mukmoux-fat', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='blood', remove_item = true},
+					{name='brain', remove_item = true},
+					{name='cage', amount=1},
 					{name='guts', amount ='+3'},
 				},
                 crafting_speed = 15,
@@ -646,12 +646,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedscrondrix',amount='R'},
-					{name='gutscagedscrondrix',amount=1},
+					{name='caged-scrondrix',remove_item = true},
+					{name='guts-caged-scrondrix', amount=1},
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
+					{name='bones', remove_item = true},
 					{name='guts', amount ='+6'},
 				},
 			crafting_speed = 15,
@@ -677,18 +677,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedsimik',amount=1},
+					{name='caged-simik', amount=1},
 				},
 			results =
 				{
-                    {name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='skin', amount ='R'},
-					{name='fat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='simikblood', amount ='R'},
-					{name='brain', amount ='R'},
-					{name='cage',amount=1},
+                    {name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='skin', remove_item = true},
+					{name='mukmoux-fat', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='simik-blood', remove_item = true},
+					{name='brain', remove_item = true},
+					{name='cage', amount=1},
 					{name='guts', amount ='+3'},
 				},
                 crafting_speed = 15,
@@ -701,12 +701,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedsimik',amount='R'},
-					{name='gutscagedsimik',amount=1},
+					{name='caged-simik',remove_item = true},
+					{name='guts-caged-simik', amount=1},
 				},
 			results =
 				{
-					{name='bones', amount ='R'},
+					{name='bones', remove_item = true},
 					{name='guts', amount ='+4'},
 				},
 			crafting_speed = 15,
@@ -732,17 +732,17 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='trits',amount=1},
+					{name='trits', amount=1},
 				},
 			results =
 				{
-                    {name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='skin', amount ='R'},
-					{name='fat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='blood', amount ='R'},
-					{name='brain', amount ='R'},
+                    {name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='skin', remove_item = true},
+					{name='mukmoux-fat', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='blood', remove_item = true},
+					{name='brain', remove_item = true},
 					{name='guts', amount ='+2'},
 				},
                 crafting_speed = 15,
@@ -755,12 +755,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='trits',amount='R'},
-					{name='gutstrits',amount=1},
+					{name='trits',remove_item = true},
+					{name='guts-trits', amount=1},
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
@@ -786,18 +786,18 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedulric',amount=1},
+					{name='caged-ulric', amount=1},
 				},
 			results =
 				{
-                    {name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='skin', amount ='R'},
-					{name='fat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='blood', amount ='R'},
-					{name='brain', amount ='R'},
-					{name='cage',amount=1},
+                    {name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='skin', remove_item = true},
+					{name='mukmoux-fat', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='blood', remove_item = true},
+					{name='brain', remove_item = true},
+					{name='cage', amount=1},
 					{name='guts', amount ='+2'},
 				},
                 crafting_speed = 15,
@@ -810,12 +810,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedulric',amount='R'},
-					{name='gutscagedulric',amount=1},
+					{name='caged-ulric',remove_item = true},
+					{name='guts-caged-ulric', amount=1},
 				},
 			results =
 				{
-					{name='bonemeal', amount ='R'},
+					{name='bonemeal', remove_item = true},
 					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
@@ -841,20 +841,20 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='vonix',amount=1},
+					{name='vonix', amount=1},
 				},
 			results =
 				{
-                    {name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='skin', amount ='R'},
-					{name='fat', amount ='R'},
-					{name='chitin', amount ='R'},
-					{name='arthropodblood', amount ='R'},
-					{name='sulfuricacid', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='blood', amount ='R'},
-					{name='brain', amount ='R'},
+                    {name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='skin', remove_item = true},
+					{name='mukmoux-fat', remove_item = true},
+					{name='chitin', remove_item = true},
+					{name='arthropod-blood', remove_item = true},
+					{name='sulfuric-acid', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='blood', remove_item = true},
+					{name='brain', remove_item = true},
 					{name='guts', amount ='+2'},
 				},
                 crafting_speed = 15,
@@ -867,13 +867,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fatvonix',amount='R'},
-					{name='vonix',amount='R'},
-					{name='gutsvonix',amount=1},
+					{name='fat-vonix',remove_item = true},
+					{name='vonix',remove_item = true},
+					{name='guts-vonix', amount=1},
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
@@ -900,21 +900,21 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cagedvrauks',amount=1},
+					{name='caged-vrauks', amount=1},
 				},
 			results =
 				{
-                    {name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='skin', amount ='R'},
-					{name='fat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='chitin', amount ='R'},
-					{name='formicacid', amount ='R'},
-					{name='sulfuricacid', amount ='R'},
-					{name='blood', amount ='R'},
-					{name='brain', amount ='R'},
-					{name='cage',amount=1},
+                    {name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='skin', remove_item = true},
+					{name='mukmoux-fat', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='chitin', remove_item = true},
+					{name='formic-acid', remove_item = true},
+					{name='sulfuric-acid', remove_item = true},
+					{name='blood', remove_item = true},
+					{name='brain', remove_item = true},
+					{name='cage', amount=1},
 					{name='guts', amount ='+2'},
 				},
                 crafting_speed = 15,
@@ -927,13 +927,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='braincagedvrauks',amount='R'},
-					{name='cagedvrauks',amount='R'},
-					{name='gutscagedvrauks',amount=1},
+					{name='brain-caged-vrauks',remove_item = true},
+					{name='caged-vrauks',remove_item = true},
+					{name='guts-caged-vrauks', amount=1},
 				},
 			results =
 				{
-					{name='bonemeal', amount ='R'},
+					{name='bonemeal', remove_item = true},
 					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
@@ -959,14 +959,14 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='xyhiphoe',amount=1},
+					{name='xyhiphoe', amount=1},
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
-					{name='shell', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='arthropodblood', amount ='R'},
+					{name='meat', remove_item = true},
+					{name='shell', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='arthropod-blood', remove_item = true},
 					{name='guts', amount ='+4'},
 				},
 			crafting_speed = 15,
@@ -979,12 +979,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='xyhiphoe',amount='R'},
-					{name='gutsxyhiphoe',amount=1},
+					{name='xyhiphoe',remove_item = true},
+					{name='guts-xyhiphoe', amount=1},
 				},
 			results =
 				{
-					{name='meat', amount ='R'},
+					{name='meat', remove_item = true},
 					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,
@@ -1010,20 +1010,20 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='zipir',amount=1},
+					{name='zipir', amount=1},
 				},
 			results =
 				{
-                    {name='bones', amount ='R'},
-					{name='meat', amount ='R'},
-					{name='skin', amount ='R'},
-					{name='chitin', amount ='R'},
-					{name='arthropodblood', amount ='R'},
-					{name='sulfuricacid', amount ='R'},
-					{name='fat', amount ='R'},
-					{name='guts', amount ='R'},
-					{name='blood', amount ='R'},
-					{name='brain', amount ='R'},
+                    {name='bones', remove_item = true},
+					{name='meat', remove_item = true},
+					{name='skin', remove_item = true},
+					{name='chitin', remove_item = true},
+					{name='arthropod-blood', remove_item = true},
+					{name='sulfuric-acid', remove_item = true},
+					{name='mukmoux-fat', remove_item = true},
+					{name='guts', remove_item = true},
+					{name='blood', remove_item = true},
+					{name='brain', remove_item = true},
 					{name='guts', amount ='+2'},
 				},
                 crafting_speed = 15,
@@ -1036,12 +1036,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='zipir',amount='R'},
-					{name='gutszipir',amount=1},
+					{name='zipir',remove_item = true},
+					{name='guts-zipir', amount=1},
 				},
 			results =
 				{
-					{name='brain', amount ='R'},
+					{name='brain', remove_item = true},
 					{name='guts', amount ='+5'},
 				},
 			crafting_speed = 15,

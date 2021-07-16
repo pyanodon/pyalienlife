@@ -1,17 +1,4 @@
 
---[[
-ITEM {
-    type = "item",
-    name = "moss",
-    icon = "__pyalienlifegraphics__/graphics/icons/moss.png",
-	icon_size = 32,
-    flags = {},
-    subgroup = "py-alienlife-plants",
-    order = "a",
-    stack_size = 500
-}
-]]--
-
 ITEM {
     type = "item",
     name = "charged-auog",
@@ -59,7 +46,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/biomass.png",
     icon_size = 64,
     fuel_category = "chemical",
-    fuel_value = "1MJ",
+    fuel_value = "0.25MJ",
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
@@ -776,8 +763,34 @@ ITEM {
 
 {
     type = "tool",
-    name = "py-science-pack",
-    icon = "__pyalienlifegraphics__/graphics/icons/py-science-pack.png",
+    name = "py-science-pack-1",
+    icon = "__pyalienlifegraphics__/graphics/icons/py-science-pack-1.png",
+    icon_size = 64,
+    subgroup = "py-alienlife-items",
+    order = "a-a",
+    stack_size = 200,
+    durability = 1,
+    durability_description_key = "description.science-pack-remaining-amount-key",
+    durability_description_value = "description.science-pack-remaining-amount-value"
+}
+
+{
+    type = "tool",
+    name = "py-science-pack-2",
+    icon = "__pyalienlifegraphics__/graphics/icons/py-science-pack-2.png",
+    icon_size = 64,
+    subgroup = "py-alienlife-items",
+    order = "a-a",
+    stack_size = 200,
+    durability = 1,
+    durability_description_key = "description.science-pack-remaining-amount-key",
+    durability_description_value = "description.science-pack-remaining-amount-value"
+}
+
+{
+    type = "tool",
+    name = "py-science-pack-3",
+    icon = "__pyalienlifegraphics__/graphics/icons/py-science-pack-3.png",
     icon_size = 64,
     subgroup = "science-pack",
     order = "a-a",
@@ -5257,32 +5270,10 @@ ITEM {
 ---CREATURES---
     local alien_life_limitations_tree =
     {
-        'log1',
-        'log2',
-        'log3',
-        'log4',
-        'log5',
-        'log6',
-        'log7',
-        'log8',
-        'tree'
     }
-
-    if mods['pyhightech'] then
-        table.insert(alien_life_limitations_tree, 'log7-2')
-    end
 
     local alien_life_limitations_seaweed =
 	{
-        'seaweed',
-        'seaweed-2',
-        'seaweed-3',
-        'seaweed-4',
-        'seaweed-5',
-        'seaweed-6',
-        'seaweed-7',
-        --'seaweed-8', have to add that else where as its a pyht recipe
-        'seaweed-9',
 	}
 
     local alien_life_limitations_moss =
@@ -5291,9 +5282,6 @@ ITEM {
 
     local alien_life_limitations_sap =
 	{
-        'sap-seeds',
-        'sap-tree',
-        'sap-01'
     }
 
     local alien_life_limitations_ulric =
@@ -5330,9 +5318,6 @@ ITEM {
 
     local alien_life_limitations_fish =
 	{
-        'fish-mk02',
-        'fish-mk03',
-        'fish-mk04'
     }
 
     local alien_life_limitations_phagnot =
@@ -5382,8 +5367,6 @@ ITEM {
 ---PLANTS---
 local alien_life_limitations_sponge =
 	{
-	"sea-sponge-1",
-    "sea-sponge-2",
     }
 
     local alien_life_limitations_ralesia =
@@ -5428,9 +5411,6 @@ local alien_life_limitations_yaedols =
 
 local alien_life_limitations_fawogae =
 	{
-	'fawogae-mk02',
-	'fawogae-mk03',
-	'fawogae-mk04'
     }
 
 local alien_life_limitations_moondrop =
@@ -5621,7 +5601,6 @@ ITEM {
       { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-06.png",   scale = 0.25, mipmap_count = 1 },
       { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-07.png",   scale = 0.25, mipmap_count = 1 },
     },
-    flags = {},
 	category = "moss",
 	tier = 1,
     subgroup = "py-alienlife-modules",
@@ -6827,6 +6806,21 @@ ITEM {
 	effect = { speed = {bonus = 17.5}},
 	limitation = alien_life_limitations_phadai,
 	limitation_message_key = "phadai"
+}
+
+ITEM {
+    type = "item",
+    name = "used-phadai",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/phadai.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 1
 }
 
 ITEM {
@@ -8717,10 +8711,10 @@ ITEM {
     name = "guar",
     icons =
 	{
-        {icon = "__pypetroleumhandlinggraphics__/graphics/icons/guar.png"},
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/guar.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
     },
-    icon_size = 32,
+    icon_size = 64,
 	category = "guar",
 	tier = 1,
     flags = {},
@@ -8728,6 +8722,66 @@ ITEM {
     order = "g-a",
     stack_size = 300,
 	effect = { speed = {bonus = 7.5}},
+	limitation = alien_life_limitations_guar,
+	limitation_message_key = "guar"
+}
+
+ITEM {
+    type = "module",
+    name = "guar-mk02",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/guar.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "guar",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "g-b",
+    stack_size = 300,
+	effect = { speed = {bonus = 15}},
+	limitation = alien_life_limitations_guar,
+	limitation_message_key = "guar"
+}
+
+ITEM {
+    type = "module",
+    name = "guar-mk03",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/guar.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "guar",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "g-c",
+    stack_size = 300,
+	effect = { speed = {bonus = 30}},
+	limitation = alien_life_limitations_guar,
+	limitation_message_key = "guar"
+}
+
+ITEM {
+    type = "module",
+    name = "guar-mk04",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/guar.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "guar",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "g-d",
+    stack_size = 300,
+	effect = { speed = {bonus = 60}},
 	limitation = alien_life_limitations_guar,
 	limitation_message_key = "guar"
 }
@@ -8812,6 +8866,17 @@ ITEM {
 	effect = { speed = {bonus = 7.5}},
 	limitation = alien_life_limitations_arqad,
 	limitation_message_key = "arqad"
+}
+
+ITEM {
+    type = "item",
+    name = "arqad-queen",
+    icon = "__pyalienlifegraphics2__/graphics/icons/arqad-queen.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-arqad",
+    order = "a",
+    stack_size = 50
 }
 
 ITEM {

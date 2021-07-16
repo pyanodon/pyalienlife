@@ -285,6 +285,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-guar",
+        group = "py-alienlife",
+        order = "f-i"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-fungi",
         group = "py-alienlife",
         order = "g"

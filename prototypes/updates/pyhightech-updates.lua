@@ -1,16 +1,12 @@
 local fun = require("prototypes/functions/functions")
 
-require('prototypes/ores/kicalk')
+--(( Technology ))--
 require('prototypes/technologies/mega-farm-kicalk')
-require('prototypes/recipes/recipes-kicalk-megafarm')
-require('prototypes/recipes/recipes-kicalk')
-require('prototypes/recipes/recipes-auto-kicalk')
-require('prototypes/ores/arum')
 require('prototypes/technologies/mega-farm-cadaveric-arum')
 require('prototypes/technologies/cadaveric-arum')
-require('prototypes/recipes/recipes-arum-megafarm')
-require('prototypes/recipes/recipes-cadaveric')
-require('prototypes/recipes/recipes-auto-cadaveric')
+require('prototypes/technologies/moondrop')
+
+--(( BUILDINGS ))--
 require("prototypes/buildings/cadavericarum-mk01")
 require("prototypes/buildings/cadavericarum-mk02")
 require("prototypes/buildings/cadavericarum-mk03")
@@ -19,28 +15,57 @@ require("prototypes/buildings/kicalk-plantation-mk01")
 require("prototypes/buildings/kicalk-plantation-mk02")
 require("prototypes/buildings/kicalk-plantation-mk03")
 require("prototypes/buildings/kicalk-plantation-mk04")
-require('prototypes/technologies/moondrop')
-require('prototypes/recipes/recipes-moondrop')
-require('prototypes/recipes/recipes-auto-moondrop')
-require('prototypes/recipes/recipes-auto-moondrop-1')
+require("__pyhightech__/prototypes/buildings/moondrop-greenhouse-mk02")
+require("__pyhightech__/prototypes/buildings/moondrop-greenhouse-mk03")
+require("__pyhightech__/prototypes/buildings/moondrop-greenhouse-mk04")
 
+table.insert(data.raw['assembling-machine']['pulp-mill-mk01'].crafting_categories, 'latex')
+table.insert(data.raw['assembling-machine']['pulp-mill-mk02'].crafting_categories, 'latex')
+table.insert(data.raw['assembling-machine']['pulp-mill-mk03'].crafting_categories, 'latex')
+table.insert(data.raw['assembling-machine']['pulp-mill-mk04'].crafting_categories, 'latex')
+
+--(( RECIPES ))--
+
+--antelope
+require('prototypes/recipes/antelope/recipes-antelope')
+--require('prototypes/recipes/antelope/recipes-auto-antelope')
+
+--Cadaveric-arum
+require('prototypes/recipes/cadaveric-arum/recipes-cadaveric')
+--require('prototypes/recipes/cadaveric-arum/recipes-auto-cadaveric')
+require('prototypes/recipes/cadaveric-arum/recipes-arum-megafarm')
+
+--kilcalk
+require('prototypes/recipes/kicalk/recipes-kicalk-megafarm')
+require('prototypes/recipes/kicalk/recipes-kicalk')
+require('prototypes/recipes/kicalk/recipes-auto-kicalk')
+
+--Moondrop
+require('prototypes/recipes/moondrop/recipes-moondrop')
+require('prototypes/recipes/moondrop/recipes-auto-moondrop')
+--require('prototypes/recipes/moondrop/recipes-auto-moondrop-1')
+
+--(( ORES ))--
+require('prototypes/ores/kicalk')
+require('prototypes/ores/arum')
+
+--(( MODIFICATIONS ))--
 --TECHNOLOGY--
 TECHNOLOGY('nano-tech'):add_prereq('microbiology-mk03')
 --TECHNOLOGY('bio-implants'):add_prereq('nano-tech')
 TECHNOLOGY('advanced-electronics'):add_prereq('chitin')
 TECHNOLOGY('antitumor'):add_prereq('earnshaw-theorem')
+TECHNOLOGY('advanced-electronics'):add_pack('py-science-pack-2')
+TECHNOLOGY('aerogel'):add_pack('py-science-pack-2')
+TECHNOLOGY('earnshaw-theorem'):add_pack('py-science-pack-2')
+TECHNOLOGY('graphene'):add_pack('py-science-pack-2')
+TECHNOLOGY('nano-tech'):add_pack('py-science-pack-2')
+TECHNOLOGY('penrose'):add_pack('py-science-pack-2')
+TECHNOLOGY('quantum'):add_pack('py-science-pack-2')
+
+--RECIPES--
 RECIPE('kicalk-plantation'):remove_unlock('coal-processing-1')
 RECIPE('cadaveric-arum-mk01'):remove_unlock('basic-electronics')
-TECHNOLOGY('advanced-electronics'):add_pack('py-science-pack')
-TECHNOLOGY('aerogel'):add_pack('py-science-pack')
-TECHNOLOGY('earnshaw-theorem'):add_pack('py-science-pack')
-TECHNOLOGY('graphene'):add_pack('py-science-pack')
-TECHNOLOGY('nano-tech'):add_pack('py-science-pack')
-TECHNOLOGY('penrose'):add_pack('py-science-pack')
-TECHNOLOGY('quantum'):add_pack('py-science-pack')
-
-require('prototypes/recipes/recipes-antelope')
-require('prototypes/recipes/recipes-auto-antelope')
 
 --adjusting win condition to need q computer
 
@@ -107,26 +132,26 @@ RECIPE('cadaveric-arum-mk01'):remove_unlock('basic-electronics')
 RECIPE('cadaveric-arum-mk02'):remove_unlock('basic-electronics')
 RECIPE('cadaveric-arum-mk03'):remove_unlock('basic-electronics')
 RECIPE('cadaveric-arum-mk04'):remove_unlock('basic-electronics')
-RECIPE('moondrop-greenhouse-mk01'):add_unlock('moondrop-mk01'):subgroup_order("py-alienlife-buildings-mk01", "b")
+RECIPE('moondrop-greenhouse-mk01'):subgroup_order("py-alienlife-buildings-mk01", "b")
 --ENTITY('moondrop-greenhouse-mk01'):set('crafting_speed', 0.01)
 data.raw['assembling-machine']['moondrop-greenhouse-mk01'].crafting_speed = 0.1
 data.raw['assembling-machine']['moondrop-greenhouse-mk01'].module_specification.module_slots = 20
-data.raw['assembling-machine']['moondrop-greenhouse-mk01'].allowed_effects = {"speed", "productivity"}
+
 RECIPE('moondrop-greenhouse-mk02'):add_unlock('moondrop-mk02'):subgroup_order("py-alienlife-buildings-mk02", "b")
 --ENTITY('moondrop-greenhouse-mk02'):set_field('crafting_speed', 0.01)
 data.raw['assembling-machine']['moondrop-greenhouse-mk02'].crafting_speed = 0.1
 data.raw['assembling-machine']['moondrop-greenhouse-mk02'].module_specification.module_slots = 40
-data.raw['assembling-machine']['moondrop-greenhouse-mk02'].allowed_effects = {"speed", "productivity"}
+
 RECIPE('moondrop-greenhouse-mk03'):add_unlock('moondrop-mk03'):subgroup_order("py-alienlife-buildings-mk03", "b")
 --ENTITY('moondrop-greenhouse-mk03'):set_field('crafting_speed', 0.01)
 data.raw['assembling-machine']['moondrop-greenhouse-mk03'].crafting_speed = 0.1
 data.raw['assembling-machine']['moondrop-greenhouse-mk03'].module_specification.module_slots = 60
-data.raw['assembling-machine']['moondrop-greenhouse-mk03'].allowed_effects = {"speed", "productivity"}
+
 RECIPE('moondrop-greenhouse-mk04'):add_unlock('moondrop-mk04'):subgroup_order("py-alienlife-buildings-mk04", "b")
 --ENTITY('moondrop-greenhouse-mk04'):set_field('crafting_speed', 0.01)
 data.raw['assembling-machine']['moondrop-greenhouse-mk04'].crafting_speed = 0.1
 data.raw['assembling-machine']['moondrop-greenhouse-mk04'].module_specification.module_slots = 80
-data.raw['assembling-machine']['moondrop-greenhouse-mk04'].allowed_effects = {"speed", "productivity"}
+
 RECIPE('harvester'):replace_ingredient("plastic-bar", "biopolymer"):add_ingredient({type = "item", name = "aerogel", amount = 20})
 
 RECIPE('harmonic-absorber'):add_ingredient({type = "item", name = "negasium", amount = 1})
@@ -260,6 +285,9 @@ RECIPE('dhilmos-codex'):replace_ingredient("glass", "phosphate-glass")
 RECIPE('fertilizer-1'):change_category('fbreactor')
 RECIPE('fertilizer-3'):change_category('fbreactor')
 RECIPE('fertilizer-4'):change_category('fbreactor')
+RECIPE('fertilizer-fish-1'):change_category('fbreactor')
+RECIPE('fertilizer-fish-2'):change_category('fbreactor')
+RECIPE('fertilizer-fish-3'):change_category('fbreactor')
 RECIPE('fish-food-02'):remove_ingredient("blood"):add_ingredient({type = "item", name = "blood-meal", amount = 5})
 RECIPE('dingrits-codex'):replace_ingredient("glass", "phosphate-glass")
 RECIPE('scrondrix-codex'):replace_ingredient("glass", "phosphate-glass")
@@ -325,7 +353,7 @@ if mods['pyhightech'] then
 end
 
 
-fun.results_replacer("dhilmos-sex-01", "dirty-water", "waste-water")
+fun.results_replacer("dhilmos-sex-01", "dirty-water-light", "waste-water")
 
 fun.results_replacer("fertilizer", "py-fertilizer", "fertilizer")
 fun.results_replacer("log7-2", "log", "log",8)
@@ -340,9 +368,9 @@ fun.results_replacer("rennea-mk04-seed-seperation", "tar", "black-liquour")
 
 RECIPE('methane'):add_unlock('coal-processing-1')
 RECIPE('methane'):add_ingredient('moondrop-seeds')
-RECIPE('methane-py-fertilizer'):add_unlock('moondrop-mk01')
+RECIPE('methane-py-fertilizer'):add_unlock('moondrop')
 RECIPE('methane-py-fertilizer'):add_ingredient('moondrop-seeds')
-RECIPE('methane-co2'):add_unlock('moondrop-mk01')
+RECIPE('methane-co2'):add_unlock('moondrop')
 RECIPE('methane-co2'):add_ingredient('moondrop-seeds')
 
 ----EXCLUSIVE RECIPES----
@@ -363,29 +391,6 @@ RECIPE {
     main_product = 'fiber'
 }:add_unlock('basic-electronics')
 
-
-RECIPE {
-    type = 'recipe',
-    name = 'seaweed-8',
-    category = 'seaweed',
-    enabled = false,
-    energy_required = 55,
-    ingredients = {
-        {type = 'fluid', name = 'water-saline', amount = 100},
-        {type = 'fluid', name = 'slacked-lime', amount = 100},
-        {type = 'item', name = 'iron-ore-dust', amount = 1},
-        {type = 'item', name = 'fertilizer', amount = 1},
-    },
-    results = {
-        {type = 'item', name = 'seaweed', amount = 100},
-    },
-}:add_unlock("botany-mk04")
-
-table.insert(data.raw.module['seaweed'].limitation, 'seaweed-8')
-table.insert(data.raw.module['seaweed-mk02'].limitation, 'seaweed-8')
-table.insert(data.raw.module['seaweed-mk03'].limitation, 'seaweed-8')
-table.insert(data.raw.module['seaweed-mk04'].limitation, 'seaweed-8')
-
 RECIPE {
     type = "recipe",
     name = "phytoplankton-2",
@@ -404,28 +409,6 @@ RECIPE {
     subgroup = 'py-alienlife-plants',
     order = 'b'
 }:add_unlock("microbiology-mk03")
-
-RECIPE {
-    type = 'recipe',
-    name = 'moss-5',
-    category = 'moss',
-    enabled = false,
-    energy_required = 10,
-    ingredients = {
-        {type = 'fluid', name = 'water', amount = 100},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 100},
-        {type = 'item', name = 'limestone', amount = 3},
-        {type = 'item', name = 'coarse', amount = 5},
-        {type = 'item', name = 'fertilizer', amount = 3},
-    },
-    results = {
-        {type = 'item', name = 'moss', amount = 25},
-    },
-    icon = '__pyalienlifegraphics__/graphics/icons/moss.png',
-    icon_size = 32,
-    subgroup = 'py-alienlife-plants',
-    order = 'a'
-}:add_unlock("botany-mk04")
 
 --scrondrix
 
@@ -1087,7 +1070,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-light', amount = 200},
         {type = 'item', name = 'cadaveric-arum', amount = 1},
     },
     results = {
@@ -1106,7 +1089,7 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-light', amount = 200},
         {type = 'item', name = 'cadaveric-arum', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
     },
@@ -1126,7 +1109,7 @@ RECIPE {
     enabled = false,
     energy_required = 40,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-light', amount = 200},
         {type = 'item', name = 'hmas', amount = 1},
         {type = 'item', name = 'cadaveric-arum', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
@@ -1147,7 +1130,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-light', amount = 200},
         {type = 'item', name = 'kicalk', amount = 1},
     },
     results = {
@@ -1166,7 +1149,7 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-light', amount = 200},
         {type = 'item', name = 'kicalk', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
     },
@@ -1186,7 +1169,7 @@ RECIPE {
     enabled = false,
     energy_required = 40,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water', amount = 200},
+        {type = 'fluid', name = 'dirty-water-light', amount = 200},
         {type = 'item', name = 'kicalk', amount = 1},
         {type = 'item', name = 'hmas', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},

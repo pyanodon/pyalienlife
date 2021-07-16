@@ -4,7 +4,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/powdered-biomass.png",
     icon_size = 32,
     fuel_category = "chemical",
-    fuel_value = "1.05MJ",
+    fuel_value = "0.5MJ",
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
@@ -17,7 +17,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/fine-powdered-biomass.png",
     icon_size = 32,
     fuel_category = "chemical",
-    fuel_value = "1.1MJ",
+    fuel_value = "0.75MJ",
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
@@ -432,6 +432,17 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-cottongut",
+    order = "x",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "fishmeal",
+    icon = "__pyalienlifegraphics__/graphics/icons/fishmeal.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-food",
     order = "x",
     stack_size = 50
 }

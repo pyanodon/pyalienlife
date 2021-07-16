@@ -15,7 +15,7 @@ RECIPE{
 		{type = 'item', name = 'brain', amount = 5},
 		{type = 'item', name = 'lab-instrument', amount = 10},
 		{type = 'item', name = 'neuroprocessor', amount = 5},
-		{type = 'item', name = 'py-science-pack', amount = 5},
+		{type = 'item', name = 'py-science-pack-2', amount = 5},
         {type = 'item', name = 'earth-cow-sample', amount = 5},
 		{type = 'fluid', name = 'artificial-blood', amount = 150},
 		{type = 'fluid', name = 'xenogenic-cells', amount = 100},

@@ -938,784 +938,239 @@ function overrides.tech_add_prerequisites(tech, prereq)
     end
 end
 
-local TRlist = require('scripts/techswap')
+function modify_recipe_tables(item,items_table,previous_item_names, result_table)
+    --process both result and ingredient tables
+    --log(serpent.block(item))
+    --log(serpent.block(items_table))
 
-local upgrade1 = {}
-local upgrade2 = {}
+        local name = item.name
+        --log(name)
 
--- log(serpent.block(TRlist.upgrades))
+        if item.remove_item ~= nil and item.remove_item == true then
+            for i, it in pairs(items_table) do
+                it = nil
+            end
+        elseif previous_item_names[name] ~= true then
+            --log('hit')
+            --add new ingredient to table
 
-for up, upgrade in pairs(TRlist.upgrades) do
-    -- log(serpent.block(upgrade))
-    if upgrade.upgrade_1 ~= nil and upgrade.upgrade_1.recipe ~= nil then
-        upgrade1[upgrade.upgrade_1.recipe] = upgrade.base_recipe
-    end
-    if upgrade.upgrade_2 ~= nil and upgrade.upgrade_2.recipe ~= nil then
-        upgrade2[upgrade.upgrade_2.recipe] = upgrade.upgrade_1.recipe
-    end
+            --setting ingredient type
+            local item_type
+            if data.raw.item[name] ~= nil or data.raw.module[name] ~= nil then
+                item_type = 'item'
+            elseif data.raw.fluid[name] ~= nil then
+                item_type = 'fluid'
+            end
+            item.type = item_type
+
+            --add return item to results if it exists
+            local return_item
+            if item.return_item ~= nil then
+                local item_type
+                local name = item.return_item.name
+                local amount = item.return_item.amount or item.amount
+                if data.raw.item[name] ~= nil or data.raw.module[name] ~= nil then
+                    item_type = 'item'
+                elseif data.raw.fluid[name] ~= nil then
+                    item_type = 'fluid'
+                end
+                return_item = {type = item_type, name = name, amount = amount}
+                table.insert(result_table, return_item)
+            end
+
+            --add empty barrels to results
+            local return_barrel
+            if item.return_barrel ~= nil and item.return_barrel == true then
+                local item_type = 'item'
+                local name = 'empty-barrel'
+                local amount = item.amount
+                return_barrel = {type = item_type, name = name, amount = amount}
+                for r, result in pairs(result_table) do
+                    if result.name == name then
+                        result.amount = result.amount + amount
+                    elseif result.name ~= name then
+                        table.insert(result_table, return_barrel)
+                    end
+                end
+            end
+
+           if item.amount ~= nil and type(item.amount) == "number" then
+                table.insert(items_table, item)
+            elseif item.amount_min ~= nil and item.amount_max ~= nil then
+                table.insert(items_table, item)
+            end
+        elseif previous_item_names[item.name] == true then
+            --alter existing ingredient
+            if item.amount == nil then
+                if item.add_amount ~= nil then
+                    --adding ingredient amount
+                    for p, pre in pairs(items_table) do
+                        if pre.name == name then
+                            pre.amount = item.add_amount + pre.amount
+                        end
+                    end
+                    --replace amount_min and amount_max with new values
+                elseif item.amount_min ~= nil and item.amount_max ~= nil then
+                    for p,pre in pairs(items_table) do
+                        if pre.name == name then
+                            pre.amount_min = item.amount_min
+                            pre.amount_max = item.amount_max
+                        end
+                    end
+                elseif item.subtract_amount ~= nil then
+                    --subtract ingredient amount
+                    for p, pre in pairs(items_table) do
+                        if pre.name == name then
+                            pre.amount = pre.amount - item.subtract_amount
+                        end
+                    end
+                end
+            end
+        end
 end
 
-local reprocess_recipes_1 = {}
+--handles all adjustments for each ingredient and result changes in autorecipe
+function recipe_item_builder(ingredients,results,previous_ingredients,previous_results)
+    --log(serpent.block(ingredients))
+    --log(serpent.block(previous_ingredients))
+    --log(serpent.block(results))
+    local ing_table = table.deepcopy(previous_ingredients)
+    local result_table = table.deepcopy(previous_results)
 
-local reprocess_recipes_2 = {}
+    --add old ingredient names to table
+    local previous_ingredient_names = {}
+    for p, pre in pairs(previous_ingredients) do
+        --log(pre.name)
+        --log(serpent.block(previous_ingredient_names))
+        if previous_ingredient_names[pre.name] ~= true then
+            previous_ingredient_names[pre.name] = true
+        end
+    end
+
+    --add old result names to table
+    local previous_result_names = {}
+    for p, pre in pairs(previous_results) do
+        if previous_result_names[pre.name] ~= true then
+            previous_result_names[pre.name] = true
+        end
+    end
+
+    --add return items to results before saving them and adding to the recipe
+    for i, ing in pairs(ingredients) do
+       modify_recipe_tables(ing, ing_table, previous_ingredient_names, result_table)
+    end
+
+    for r, result in pairs(results) do
+       modify_recipe_tables(result, result_table,previous_result_names)
+    end
+    --log(serpent.block(ing_table))
+
+    return ing_table, result_table
+end
 
 function overrides.autorecipes(recipe)
     -- log('hit')
-    local items = require('prototypes/recipes/itemtables') -- *: optional, defaults to true --**: required if using dual recipe mode as itermidate items will be made from this
-    --
-    -- log('hit')
-    --[[
-recipe =
-	{
-	name = string,
-	basitem = string,**
-	singlerecipe = bool,*
-	mats = table,***
-	mats =
-		{
-		inputs =
-			{
-				{
-				item,
-				amount*__*, -- defaults to the default value in itemtable
-				returnitem* =
-					{
-					item,
-					amount*, -- defaults to 1:1 of input item amount
-					},
-				}
-			},
-		outputs =
-			{
-				{
-				item,
-				amount*__*, -- defaults to the default value in itemtable
-				amount_min*,
-				amount_max*,
-				probability*,
-				require_item* =
-					{
-					item,
-					amount*, -- defaults to 1:1 of output item
-					},
-				}
-			},
-		icon - is trigger to use item as secondary icon
-		crafting_speed = num,
-		out_crafting_speed = num,
-		tech = string,
-		newitem = bool
-		},
-	category = string,
-    outcategory = string,*
-    subgroup = string,
-    order = string
-    module_limitations = string*
-]] -- ***:needs at least a single mats table with an input item and a output item. following tables will add or remove items and make a new recipe
-    -- *__*:amount includes math keys +,-,*,/,R. will do math based on symbol with number. R will clear item from mats
-    -- log('hit')
+    --main details for all recipes
     local name = recipe.name
-    local singlerecipe
+    --log(name)
+        --default name for recipes if recipe doesnt provide an override
+    local numbered_name
     local category = recipe.category
+    local module_limitation = recipe.module_limitations
+    local subgroup = recipe.subgroup
+    local order = recipe.order
+    local upgrades = {}
+    if recipe.upgrades ~= nil then
+        upgrades = recipe.upgrades
+    end
     local mats = recipe.mats
+
+    --variables for individual recipes
+        --new ingredients
     local ingredients
-    local return_item = false
-    local return_item_type
-    local return_item_name
-    local return_amount
-    local return_items_table = {}
+        --old ingredients from last recipe carried over
+    local previous_ingredients = {}
+        --new results
     local results
-    -- local require_item = false
-    -- local require_item_name
-    -- local require_amount
-    local crafting_speed
-    local tech_unlock
-    -- local icon
+        --old results from last recipe carried over
+    local previous_results = {}
 
-    local lastings = {}
-    local lastresults = {}
-    -- log(serpent.block(recipe))
-    local number = 1
-    -- local reuseitem = false
-    -- local lastitem
-
-    -- local firstitem = true
-    -- log('hit')
-    singlerecipe = true
-
-    for _, mat in pairs(mats) do
-        -- log('hit')
-        -- log(number)
-        -- log(serpent.block(mat))
-
-        -- ingredients = {}
-        -- results = {}
-
-        if mat.name ~= nil and upgrade1[mat.name] ~= nil then
-            reprocess_recipes_1[mat.name] = mat
-        elseif mat.name ~= nil and upgrade2[mat.name] ~= nil then
-            reprocess_recipes_2[mat.name] = mat
-        end
-
-        ingredients = table.deepcopy(lastings)
-
-        -- log(serpent.block(lastings))
-        -- log(serpent.block(ingredients))
-
-        for i, item in pairs(mat.ingredients) do
-            -- log('hit')
-            -- log(serpent.block(ingredients))
-            -- log(serpent.block(item))
-            -- log(serpent.block(item[1]))
-            -- log(serpent.block(items))
-            -- log(serpent.block(items.inputs))
-
-            local ing = items.inputs[item.name]
-            local sign
-            local mod
-            -- log(serpent.block(ing))
-
-            if data.raw.item[ing[1]] ~= nil or data.raw.fluid[ing[1]] ~= nil or data.raw.module[ing[1]] ~= nil or
-                string.find(ing[1], 'barrel') ~= nil then
-                -- log(item.amount)
-                if item.amount ~= nil then
-                    sign = string.sub(item.amount, 1, 1)
-                    mod = string.match(item.amount, '%d+')
-                    -- log(sign)
-                    if sign ~= '+' and sign ~= '-' and sign ~= '*' and sign ~= '/' and sign ~= 'R' then
-                        -- log(sign)
-                        -- log("hit")
-                        sign = nil
-                        mod = item.amount
-                    end
-                else
-                    sign = nil
-                    mod = nil
-                end
-
-                -- log(serpent.block(ing))
-                -- log(sign)
-                -- log(mod)
-
-                local type1
-
-                if data.raw.item[ing[1]] ~= nil then
-                    type1 = 'item'
-                elseif data.raw.fluid[ing[1]] ~= nil then
-                    type1 = 'fluid'
-                elseif data.raw.module[ing[1]] ~= nil then
-                    type1 = 'item'
-                else
-                    type1 = 'item'
-                end
-
-                if sign == nil then
-                    -- log("here")
-                    if next(ingredients) ~= nil then
-                        -- log("here")
-                        for _, res in pairs(ingredients) do
-                            -- log("here")
-                            if res.name == ing[1] then
-                                -- log("here")
-                                res.amount = res.amount + ing[2]
-                            else
-                                -- log("here")
-                                -- log(mod)
-                                if mod == nil then
-                                    table.insert(ingredients, {type = type1, name = ing[1], amount = ing[2]})
-                                    break
-                                else
-                                    table.insert(ingredients, {type = type1, name = ing[1], amount = mod})
-                                    break
-                                end
-                            end
-                        end
-                    else
-                        -- log("here")
-                        if mod == nil then
-                            table.insert(ingredients, {type = type1, name = ing[1], amount = ing[2]})
-                        else
-                            table.insert(ingredients, {type = type1, name = ing[1], amount = mod})
-                        end
-                    end
-                elseif sign == '+' then
-                    -- log("here")
-                    if next(ingredients) ~= nil then
-                        --[[
-						for _, res in pairs(ingredients) do
-                            if res.name == ing[1] then
-                                res.amount = res.amount + mod
-                            --else
-                                --table.insert(ingredients, {type = type1, name = ing[1], amount = ing[2] + mod})
-                                --break
-                            end
-                        end
-						]] --
-                        local rl = {}
-                        for _, res in pairs(ingredients) do rl[res.name] = true end
-                        if rl[ing[1]] then
-                            for _, res in pairs(ingredients) do
-                                -- log('hit')
-                                -- log(serpent.block(res))
-                                if res.name == ing[1] then
-                                    -- log(serpent.block(res))
-                                    if res.amount ~= nil then
-                                        res.amount = res.amount + mod
-                                    elseif res.probability ~= nil then
-                                        -- log(serpent.block(ing))
-                                        -- log(mod)
-                                        local num1, num2 = string.match(mod, '(%d+)/(%d+)')
-                                        -- log(num1)
-                                        -- log(num2)
-                                        if not tonumber(mod) then
-                                            mod = num1 / num2
-                                        end
-                                        -- log(mod)
-                                        res.probability = res.probability + mod
-                                        -- break
-                                    end
-                                end
-                            end
-                        else
-                            -- log(ing[1])
-                            -- log(mod)
-                            if item.amount ~= nil then
-                                table.insert(ingredients, {type = type1, name = ing[1], amount = ing[2] + mod})
-                                break
-                            elseif res.probability ~= nil then
-                                -- log(mod)
-                                local num1, num2 = string.match(mod, '(%d+)/(%d+)')
-                                -- log(num1)
-                                -- log(num2)
-                                mod = num1 / num2
-                                -- log(mod)
-                                res.probability = res.probability + mod
-                                break
-                            end
-                        end
-                    else
-                        table.insert(ingredients, {type = type1, name = ing[1], amount = ing[2] + mod})
-                    end
-                elseif sign == '-' then
-                    -- log("here")
-                    if next(ingredients) ~= nil then
-                        for _, res in pairs(ingredients) do
-                            if res.name == ing[1] then
-                                res.amount = res.amount - mod
-                            else
-                                table.insert(ingredients, {type = type1, name = ing[1], amount = ing[2] - mod})
-                                break
-                            end
-                        end
-                    else
-                        table.insert(ingredients, {type = type1, name = ing[1], amount = ing[2] - mod})
-                    end
-                elseif sign == '*' then
-                    -- log("here")
-                    if next(ingredients) ~= nil then
-                        for _, res in pairs(ingredients) do
-                            if res.name == ing[1] then
-                                res.amount = res.amount * mod
-                            else
-                                table.insert(ingredients, {type = type1, name = ing[1], amount = ing[2] * mod})
-                                break
-                            end
-                        end
-                    else
-                        table.insert(ingredients, {type = type1, name = ing[1], amount = ing[2] * mod})
-                    end
-                elseif sign == '/' then
-                    -- log("here")
-                    if next(ingredients) ~= nil then
-                        for _, res in pairs(ingredients) do
-                            if res.name == ing[1] then
-                                res.amount = res.amount / mod
-                            else
-                                table.insert(ingredients, {type = type1, name = ing[1], amount = ing[2] / mod})
-                                break
-                            end
-                        end
-                    else
-                        table.insert(ingredients, {type = type1, name = ing[1], amount = ing[2] / mod})
-                    end
-                elseif sign == 'R' then
-                    -- log("here")
-                    for z, ingz in pairs(ingredients) do
-                        if ingz.name == ing[1] then table.remove(ingredients, z) end
-                    end
-                end
-            end
-            -- log('hit')
-            if item.return_item ~= nil then
-                -- log('hit')
-                return_item = true
-                return_item_name = item.return_item.name
-                if item.return_item.amount ~= nil then
-                    return_amount = item.return_item.amount
-                else
-                    for _, ingred in pairs(ingredients) do
-                        if ingred.name == ing[1] then return_amount = ingred.amount end
-                    end
-                end
-                local type1
-                if data.raw.item[return_item_name] ~= nil then
-                    type1 = 'item'
-                elseif data.raw.fluid[return_item_name] ~= nil then
-                    type1 = 'fluid'
-                elseif data.raw.module[return_item_name] ~= nil then
-                    type1 = 'item'
-                else
-                    type1 = 'item'
-                end
-                return_item_type = type1
-
-                local returned_item = {type = return_item_type, name = return_item_name, amount = return_amount}
-                table.insert(return_items_table, returned_item)
-
-            end
-        end
-        -- log('hit')
-        -- log(serpent.block(return_items_table))
-        -- log(serpent.block(ingredients))
-
-        results = lastresults
-        -- log(serpent.block(results))
-        -- log(serpent.block(mat.results))
-
-        for i, item in pairs(mat.results) do
-            -- log('hit')
-            -- log(serpent.block(mat))
-            -- log(serpent.block(mat.results))
-            -- log(serpent.block(item))
-            -- log(serpent.block(item[1]))
-            -- log(serpent.block(items))
-            -- log(serpent.block(items.inputs))
-
-            -- local ing = items.outputs[string.sub(item[1], 1, 1)]
-            local ing = items.outputs[item.name]
-            local sign
-            local mod
-            local prod = false
-            local prodvalue
-            local a_min
-            local a_max
-            -- log('hit')
-            -- log(serpent.block(ing))
-            if data.raw.item[ing[1]] ~= nil or data.raw.fluid[ing[1]] ~= nil or data.raw.module[ing[1]] ~= nil then
-                -- log('hit')
-                -- log(serpent.block(item.amount))
-                if item.amount ~= nil then
-                    -- log('hit')
-                    -- log("hit")
-                    sign = string.sub(item.amount, 1, 1)
-                    mod = string.sub(item.amount, 2, 10)
-                    if sign ~= '+' and sign ~= '-' and sign ~= '*' and sign ~= '/' and sign ~= 'R' then
-                        sign = nil
-                        mod = item.amount
-                    end
-                elseif item.probability ~= nil then
-                    -- log("hit")
-                    sign = nil
-                    prod = true
-                    prodvalue = item.probability
-                    if item.amount_min ~= nil then
-                        a_min = item.amount_min
-                    else
-                        a_min = 1
-                    end
-                    if item.amount_max ~= nil then
-                        a_max = item.amount_max
-                    else
-                        a_max = 1
-                    end
-                else
-                    -- log("hit")
-                    sign = nil
-                    mod = nil
-                end
-                -- log('hit')
-                -- log(serpent.block(ing))
-                -- log(sign)
-                -- log(mod)
-
-                local type1
-
-                if data.raw.item[ing[1]] ~= nil then
-                    type1 = 'item'
-                elseif data.raw.fluid[ing[1]] ~= nil then
-                    type1 = 'fluid'
-                elseif data.raw.module[ing[1]] ~= nil then
-                    type1 = 'item'
-                else
-                    type1 = 'item'
-                end
-                -- log('hit')
-                if prod == true then
-                    for r, result in pairs(results) do
-                        if result.name == item.name then
-                            if result.amount ~= nil then
-                                -- log("hit")
-                                table.remove(results, r)
-                            end
-                        end
-                    end
-                end
-                -- log('hit')
-                if sign == nil then
-                    if next(results) ~= nil then
-                        -- log("hit")
-                        -- log(serpent.block(results))
-                        local rl = {}
-                        -- log('hit')
-                        for _, res in pairs(results) do rl[res.name] = true end
-                        -- log('hit')
-                        if rl[ing[1]] then
-                            for _, res in pairs(results) do
-                                if res.name == ing[1] then
-                                    -- log('hit')
-                                    -- log(res.name)
-                                    -- log(ing[1])
-                                    -- res.amount = res.amount + ing[2]
-                                    if prod == false then
-                                        -- log("hit")
-                                        res.amount = mod
-                                    elseif prod == true then
-                                        -- log("hit")
-                                        table.insert(results, {
-                                            type = type1,
-                                            name = ing[1],
-                                            amount_min = a_min,
-                                            amount_max = a_max,
-                                            probability = prodvalue
-                                        })
-                                    end
-                                end
-                            end
-                        else
-                            -- log("hit")
-                            -- log(mod)
-                            if mod ~= nil then
-                                table.insert(results, {type = type1, name = ing[1], amount = mod})
-                            elseif prod == true then
-                                -- log("hit")
-                                table.insert(results, {
-                                    type = type1,
-                                    name = ing[1],
-                                    amount_min = a_min,
-                                    amount_max = a_max,
-                                    probability = prodvalue
-                                })
-                            else
-                                -- log("hit")
-                                table.insert(results, {type = type1, name = ing[1], amount = ing[2]})
-                            end
-                        end
-                    elseif prod == true then
-                        -- log("hit")
-                        table.insert(results, {
-                            type = type1,
-                            name = ing[1],
-                            amount_min = a_min,
-                            amount_max = a_max,
-                            probability = prodvalue
-                        })
-                    elseif mod ~= nil then
-                        -- log('hit')
-                        table.insert(results, {type = type1, name = ing[1], amount = mod})
-                    else
-                        -- log("hit")
-                        table.insert(results, {type = type1, name = ing[1], amount = ing[2]})
-                    end
-                elseif sign == '+' then
-                    -- log('hit')
-                    if next(results) ~= nil then
-                        local rl = {}
-                        for _, res in pairs(results) do rl[res.name] = true end
-                        if rl[ing[1]] then
-                            for _, res in pairs(results) do
-                                -- log('hit')
-                                -- log(serpent.block(res))
-                                if res.name == ing[1] then
-                                    -- log(serpent.block(res))
-                                    if res.amount ~= nil then
-                                        res.amount = res.amount + mod
-                                    elseif res.probability ~= nil then
-                                        -- log(serpent.block(ing))
-                                        -- log(mod)
-                                        local num1, num2 = string.match(mod, '(%d+)/(%d+)')
-                                        -- log(num1)
-                                        -- log(num2)
-                                        if not tonumber(mod) then
-                                            mod = num1 / num2
-                                        end
-                                        -- log(mod)
-                                        res.probability = res.probability + mod
-                                        -- break
-                                    end
-                                end
-                            end
-                        else
-                            -- log('hit')
-                            -- log(ing[1])
-                            -- log(mod)
-                            if item.amount ~= nil then
-                                table.insert(results, {type = type1, name = ing[1], amount = ing[2] + mod})
-                                break
-                            elseif res.probability ~= nil then
-                                -- log(mod)
-                                local num1, num2 = string.match(mod, '(%d+)/(%d+)')
-                                -- log(num1)
-                                -- log(num2)
-                                mod = num1 / num2
-                                -- log(mod)
-                                res.probability = res.probability + mod
-                                break
-                            end
-                        end
-                    else
-                        table.insert(results, {type = type1, name = ing[1], amount = ing[2] + mod})
-                    end
-                elseif sign == '-' then
-                    if next(results) ~= nil then
-                        for _, res in pairs(results) do
-                            if res.name == ing[1] then
-                                res.amount = res.amount - mod
-                            else
-                                table.insert(results, {type = type1, name = ing[1], amount = ing[2] - mod})
-                                break
-                            end
-                        end
-                    else
-                        table.insert(results, {type = type1, name = ing[1], amount = ing[2] - mod})
-                    end
-                elseif sign == '*' then
-                    if next(results) ~= nil then
-                        for _, res in pairs(results) do
-                            if res.name == ing[1] then
-                                res.amount = res.amount * mod
-                            else
-                                table.insert(results, {type = type1, name = ing[1], amount = ing[2] * mod})
-                                break
-                            end
-                        end
-                    else
-                        table.insert(results, {type = type1, name = ing[1], amount = ing[2] * mod})
-                    end
-                elseif sign == '/' then
-                    if next(results) ~= nil then
-                        for _, res in pairs(results) do
-                            if res.name == ing[1] then
-                                res.amount = res.amount / mod
-                            else
-                                table.insert(results, {type = type1, name = ing[1], amount = ing[2] / mod})
-                                break
-                            end
-                        end
-                    else
-                        table.insert(results, {type = type1, name = ing[1], amount = ing[2] / mod})
-                    end
-                elseif sign == 'R' then
-                    for z, ingz in pairs(results) do
-                        if ingz.name == ing[1] then table.remove(results, z) end
-                    end
-                end
-            end
-            -- log('hit')
-            if item.require_item ~= nil then
-                require_item = true
-                require_item_name = item.require_item[1]
-                if item.require_item.amount ~= nil then
-                    require_amount = item.require_item.amount
-                else
-                    for _, r in pairs(results) do
-                        if r.name == ing[1] then require_amount = r.amount end
-                    end
-                end
-            end
-        end
-        -- log('hit')
-        crafting_speed = mat.crafting_speed
-        tech_unlock = mat.tech
-
-        -- log(serpent.block(ingredients))
-        -- log(serpent.block(results))
-        if data.raw.recipe[name .. number] ~= nil then
-            repeat number = number + 1 until data.raw.recipe[name .. number] == nil
-        end
-        -- log('hit')
+    --recipe building
+    for r, rec in pairs(mats) do
+        ingredients = rec.ingredients
+        results = rec.results
+        --variable to set if recipe is enabled
         local enabled
+        --tech name
+        local tech
 
-        if tech_unlock == nil then
+        if rec.tech == nil then
             enabled = true
         else
             enabled = false
+            tech = rec.tech
         end
-        -- log('hit')
-        lastings = table.deepcopy(ingredients)
-        lastresults = table.deepcopy(results)
 
-        -- log(serpent.block(lastings))
+        --log(serpent.block(ingredients))
+        --log(serpent.block(results))
+        --process ingredients and results get return version with changes
+        local fixed_ingredients, fixed_results = recipe_item_builder(ingredients, results, previous_ingredients, previous_results)
 
-        if singlerecipe then
-            -- log('hit')
-            local na = mat.name or name .. number
-            local order
-            if recipe.order ~= nil then order = recipe.order .. '-' .. string.char(number + 64) end
+        --log(serpent.block(fixed_ingredients))
+        --log(serpent.block(fixed_results))
 
-            -- log(serpent.block(order))
-            RECIPE{
-                type = 'recipe',
-                name = na,
-                category = category,
-                enabled = enabled,
-                energy_required = crafting_speed,
-                ingredients = ingredients,
-                results = results,
-                subgroup = recipe.subgroup,
-                order = order,
-                -- main_product = results[1].name,
-                -- icon = mat.icon
-                localised_name = mat.name
-            }
-            -- log('hit')
-            if return_item and return_item_name ~= nil then
-                for _, rit in pairs(return_items_table) do overrides.add_result(na, rit) end
+        --save ingredients and results for next recipe
+        previous_ingredients = fixed_ingredients
+        --log(serpent.block(previous_ingredients))
+        previous_results = fixed_results
+
+        local number
+        for i = 1, 50 do
+            number = i
+            numbered_name = name .. '-' .. number
+            if data.raw.recipe[numbered_name] == nil then
+                break
             end
+        end
 
-            for r, result in pairs(data.raw.recipe[na].results) do
-                -- log(serpent.block(result))
-                if string.match(result.name, 'barrel') ~= nil or result.name == 'cage' then
-                    table.insert(result, catalyst_amount)
-                    result.catalyst_amount = result.amount
-                end
-                -- log(serpent.block(result))
-            end
+        --build recipe with stdlib recipe builder
+        RECIPE{
+            type = 'recipe',
+            name = numbered_name,
+            category = category,
+            enabled = enabled,
+            energy_required = rec.crafting_speed,
+            ingredients = fixed_ingredients,
+            results = fixed_results,
+            subgroup = subgroup,
+            order = order,
+            -- main_product = results[1].name,
+            -- icon = mat.icon
+            --localised_name = rec.name
+        }
 
-            -- log('hit')
-            if mat.icon == nil then
-                -- log(serpent.block(data.raw.recipe[na]))
-                -- log(serpent.block(results))
-                data.raw.recipe[na].main_product = results[1].name
+        if rec.tech ~= nil then
+            RECIPE(numbered_name):add_unlock(rec.tech)
+        end
+        if rec.name ~= nil then
+            data.raw.recipe[numbered_name].localised_name = rec.name
+        end
+        if rec.icon ~= nil then
+            data.raw.recipe[numbered_name].icon = rec.icon
+            if rec.icon_size ~= nil then
+                data.raw.recipe[numbered_name].icon_size = rec.icon_size
             else
-                data.raw.recipe[na].icons = {{icon = mat.icon}}
-                if mat.icon_size == 64 then
-                    data.raw.recipe[na].icon_size = 64
-                elseif mat.icon_size == 32 then
-                    data.raw.recipe[na].icon_size = 32
-                end
+                data.raw.recipe[numbered_name].icon_size = 32
             end
-            -- log('hit')
-            if recipe.module_limitations ~= nil then
-                table.insert(data.raw.module[recipe.module_limitations].limitation, na)
-            end
-
-            -- log(serpent.block(name..number))
-            if tech_unlock ~= nil then RECIPE(na):add_unlock(tech_unlock) end
-            -- log('hit')
-            -- log(serpent.block(data.raw.recipe[na]))
-
-            number = number + 1
         end
+        if rec.main_product ~= nil then
+            data.raw.recipe[numbered_name].main_product = rec.main_product
+        elseif recipe.main_product ~= nil then
+            RECIPE(numbered_name):set_fields{main_product = recipe.main_product}
+        end
+        --log(serpent.block(data.raw.recipe[numbered_name]))
     end
-end
 
-function overrides.reprocess_recipes_core(recipes_to_check, upgrade)
-    -- log(serpent.block(recipes_to_check))
-    local items = require('prototypes/recipes/itemtables')
-    for r, recipe in pairs(recipes_to_check) do
-        local pre_ing = table.deepcopy(data.raw.recipe[upgrade[r]].ingredients)
-        local pre_res = table.deepcopy(data.raw.recipe[upgrade[r]].results)
-        -- log(serpent.block(data.raw.recipe[r]))
-        -- log(serpent.block(recipe))
-        -- log(serpent.block(recipe.name))
-        -- log(serpent.block(pre_ing))
-        -- log(serpent.block(pre_res))
-        for ing, ingred in pairs(pre_ing) do
-            -- log('hit')
-            -- log(serpent.block(r))
-            -- log(serpent.block(ing))
-            -- log(serpent.block(ingred.name))
-            -- log(serpent.block(ingred))
-            for ing2, ingred2 in pairs(recipe.ingredients) do
-                -- log('hit')
-                -- log(serpent.block(ing2))
-                -- log(serpent.block(ingred2))
-                -- log(serpent.block(ingred.name))
-                -- log(serpent.block(ingred2.name))
-                -- log(serpent.block(items.inputs[ingred2.name][1]))
-                if ingred.name == items.inputs[ingred2.name][1] then
-                    -- log('hit')
-                    if ingred2.amount ~= nil and string.match(ingred2.amount, '%+') ~= nil then
-                        -- log('hit')
-                        local amount = string.match(ingred2.amount, '%d+')
-                        -- log(amount)
-                        -- log(serpent.block(data.raw.recipe[upgrade .. up_num [r]]))
-                        -- log(serpent.block(data.raw.recipe[upgrade .. up_num [r]].ingredients))
-                        -- log(serpent.block(data.raw.recipe[upgrade .. up_num [r]].ingredients[ing]))
-                        -- log(serpent.block(data.raw.recipe[upgrade .. up_num [r]].ingredients[ing].amount))
-                        -- log(serpent.block(data.raw.recipe[r]))
-                        -- log(serpent.block(data.raw.recipe[r].ingredients))
-                        -- log(serpent.block(data.raw.recipe[r].ingredients[ing]))
-                        for k, v in pairs(data.raw.recipe[r].ingredients) do
-                            -- log('hit')
-                            if v.name == items.inputs[ingred2.name][1] then
-                                -- log('hit')
-                                data.raw.recipe[r].ingredients[k].amount =
-                                    data.raw.recipe[upgrade[r]].ingredients[ing].amount + amount
-                            end
-                        end
-                    end
-                end
-            end
-        end
-
-        for res, result in pairs(pre_res) do
-            -- log('hit')
-            -- log(serpent.block(r))
-            -- log(serpent.block(res))
-            -- log(serpent.block(result.name))
-            -- log(serpent.block(result))
-            for r2, res2 in pairs(recipe.results) do
-                -- log('hit')
-                -- log(serpent.block(r2))
-                -- log(serpent.block(res2))
-                -- log(serpent.block(result.name))
-                -- log(serpent.block(res2.name))
-                -- log(serpent.block(items.inputs[res2.name][1]))
-                if result.name == items.inputs[res2.name][1] then
-                    -- log('hit')
-                    if res2.amount ~= nil and string.match(res2.amount, '%+') ~= nil then
-                        -- log('hit')
-                        local amount = string.match(res2.amount, '%d+')
-                        -- log(amount)
-                        -- log(serpent.block(data.raw.recipe[upgrade .. up_num [r]]))
-                        -- log(serpent.block(data.raw.recipe[upgrade .. up_num [r]].results))
-                        -- log(serpent.block(data.raw.recipe[upgrade .. up_num [r]].results[res]))
-                        -- log(serpent.block(data.raw.recipe[upgrade .. up_num [r]].results[res].amount))
-                        -- log(serpent.block(data.raw.recipe[r]))
-                        -- log(serpent.block(data.raw.recipe[r].results))
-                        -- log(serpent.block(data.raw.recipe[r].results[res]))
-                        for k, v in pairs(data.raw.recipe[r].results) do
-                            -- log('hit')
-                            if v.name == items.inputs[res2.name][1] then
-                                -- log('hit')
-                                data.raw.recipe[r].results[k].amount =
-                                    data.raw.recipe[upgrade[r]].results[res].amount + amount
-                            end
-                        end
-                    end
-                end
-            end
-        end
-    end
-end
-
-function overrides.reprocess_recipes_1()
-    overrides.reprocess_recipes_core(reprocess_recipes_1, upgrade1)
-end
-
-function overrides.reprocess_recipes_2()
-    overrides.reprocess_recipes_core(reprocess_recipes_2, upgrade2)
 end
 
 function overrides.tech_upgrade(tech_upgrade)
