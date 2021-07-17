@@ -13,8 +13,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='ralesia-seeds'},
-					{name='water'},
+					{name='ralesia-seeds', amount = 4},
+					{name='water', amount = 100},
 				},
 			results =
 				{
@@ -27,6 +27,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
+					{name='ralesia-seeds', add_amount = 5},
 					{name='hydrogen', amount = 100},
 					{name='soil', amount = 15},
 				},
@@ -41,6 +42,7 @@ fun.autorecipes {
         {
 			ingredients =
 				{
+					{name='ralesia-seeds', add_amount = 5},
 					{name='fertilizer', amount = 5},
 					{name='ash', amount = 10},
                     {name='biomass', amount = 10},
@@ -56,6 +58,7 @@ fun.autorecipes {
         {
 			ingredients =
 				{
+					{name='ralesia-seeds', add_amount = 5},
 					{name='water',remove_item = true},
 					{name='hydrogen',remove_item = true},
                     {name='syngas', amount = 100},
@@ -72,6 +75,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
+					{name='ralesia-seeds', add_amount = 5},
 					{name='fertilizer', add_amount = 5},
 					{name='urea', amount = 15},
 					{name = 'biomass', add_amount = 15}

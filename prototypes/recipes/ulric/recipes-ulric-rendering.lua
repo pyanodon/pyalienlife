@@ -3,7 +3,7 @@ local fun = require("prototypes/functions/functions")
 ------------------RENDERING------------------
 
 fun.autorecipes {
-    name = 'rendering',
+    name = 'rendering-ulric',
 	category = 'slaughterhouse-ulric',
 	--module_limitations = 'ulric',
 	subgroup = 'py-alienlife-ulric',
@@ -17,14 +17,14 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bones', probability = 0.4, amount_min =1, amount_max =3},
-					{name='meat', probability = 0.4, amount_min =1, amount_max =3},
-					{name='skin', probability = 0.2, amount_min =1, amount_max =1},
-					{name='mukmoux-fat', probability = 0.3, amount_min =1, amount_max =1},
-					{name='guts', probability = 0.4, amount_min =1, amount_max =1},
+					{name='bones', amount_min =1, amount_max =3},
+					{name='meat', amount_min =1, amount_max =3},
+					{name='skin', amount_min =1, amount_max =1},
+					{name='mukmoux-fat', amount_min =1, amount_max =1},
+					{name='guts', amount_min =1, amount_max =1},
 					{name='blood', amount =50},
 					{name='cage', amount=1},
-					{name='brain', probability = 0.4, amount_min =1, amount_max =1},
+					{name='brain', amount_min =1, amount_max =1},
 				},
 			crafting_speed = 30,
 			tech = 'rendering',
@@ -174,6 +174,10 @@ fun.autorecipes {
 			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
 			icon_size = 64,
 		},
+	}
+}
+
+--[[
 		--brain ulric rendering
 		{
 			ingredients =
@@ -319,3 +323,4 @@ fun.autorecipes {
 		},
 	}
 }
+]]--

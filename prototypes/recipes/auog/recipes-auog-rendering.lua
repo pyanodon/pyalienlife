@@ -3,7 +3,7 @@ local fun = require("prototypes/functions/functions")
 ------------------RENDERING------------------
 
 fun.autorecipes {
-    name = 'rendering',
+    name = 'rendering-auog',
 	category = 'slaughterhouse-auog',
 	subgroup = 'py-alienlife-auog',
 	order = 'b',

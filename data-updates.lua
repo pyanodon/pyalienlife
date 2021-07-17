@@ -30,6 +30,8 @@ if mods["pypetroleumhandling"] then
     require("prototypes/updates/pypetroleumhandling-updates")
 end
 
+TECHNOLOGY("logistic-science-pack"):add_prereq("biotech-mk01")
+
 --ADAPTATIONS
 
 data.raw.fish.fish.minable.result = 'fish'

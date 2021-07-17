@@ -23,6 +23,10 @@ RECIPE('fawogae-plantation-mk04'):add_unlock('mycology-mk04'):subgroup_order("py
 data.raw['assembling-machine']['fawogae-plantation-mk04'].crafting_speed = 0.1
 data.raw['assembling-machine']['fawogae-plantation-mk04'].module_specification = {module_slots = 88}
 
+--RECIPES--
+RECIPE("ralesia"):remove_unlock('ralesia')
+RECIPE('bonemeal'):remove_unlock('ulric')
+
 RECIPE('botanical-nursery'):remove_unlock('coal-processing-1'):subgroup_order("py-alienlife-buildings-mk01", "b"):set_fields {enabled = true}--:add_unlock('botany-mk01')
 RECIPE('botanical-nursery-mk02'):remove_unlock('machines-mk02'):add_unlock('botany-mk02'):subgroup_order("py-alienlife-buildings-mk02", "b")
 RECIPE('botanical-nursery-mk03'):remove_unlock('machines-mk03'):add_unlock('botany-mk03'):subgroup_order("py-alienlife-buildings-mk03", "b")
@@ -56,7 +60,7 @@ RECIPE('log6'):change_category('fwf'):add_ingredient({type = "item", name = "woo
 RECIPE('log-wood'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('coal-processing-1'):add_unlock('botany-mk01')
 RECIPE('fawogae-substrate'):remove_ingredient("fawogae"):add_ingredient({type = "item", name = "petri-dish-bacteria", amount = 1}):add_ingredient({type = "item", name = "cellulose", amount = 1}):replace_ingredient("coke","moss"):subgroup_order("py-alienlife-recipes", "a")
 RECIPE('bio-sample01'):add_ingredient({type = "item", name = "petri-dish-bacteria", amount = 2}):add_ingredient({type = "item", name = "bio-sample", amount = 12})
-RECIPE('ralesia'):remove_unlock('coal-processing-1')
+
 RECIPE('ralesia-seeds'):remove_unlock('coal-processing-1'):add_unlock('ralesia'):subgroup_order("py-alienlife-ralesia", "a"):change_category('nursery'):replace_ingredient("ralesia","ralesias")
 RECIPE('chemical-science-pack'):add_ingredient({type = "item", name = "alien-sample-02", amount = 1})
 RECIPE('filtration-media'):add_ingredient({type = "item", name = "micro-fiber", amount = 2})
@@ -65,7 +69,6 @@ RECIPE('aromatics-to-plastic'):remove_unlock('methanol-processing-1'):add_unlock
 
 RECIPE('mukmoux-fat'):remove_unlock('coal-processing-2')
 RECIPE('log-organics'):remove_unlock('coal-processing-2')
-RECIPE('bonemeal'):remove_unlock('coal-processing-1')
 RECIPE('organics-from-wood'):remove_unlock('coal-processing-2')
 RECIPE('soil-separation'):remove_unlock('separation')
 
