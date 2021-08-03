@@ -6,6 +6,7 @@ script.on_init(function()
         caravan_networks = {},
         first_caravan = false
     }
+    global.last_elem_selected ={}
 end)
 
 script.on_load(function()
@@ -15,6 +16,38 @@ end)
 script.on_configuration_changed(function()
 
 end)
+
+local function caravan_scheduler_gui(event)
+    local player = game.players[event.player_index]
+    local scheduler = player.gui.relative.add({
+        type = "frame",
+        name = "outpost_gui",
+        caption = "lick thine balls",
+        anchor =
+            {
+            name = "outpost",
+            type = "container",
+            gui = defines.relative_gui_type.container_gui,
+            position = defines.relative_gui_position.left,
+            },
+        direction = "vertical"
+    })
+    scheduler.add({
+        type = "label",
+        name = "outpost-header",
+        caption = "Outpost Controller"
+    })
+    scheduler.add({
+        type = "switch",
+        name = "rp-switch",
+        switch_state = "none",
+        allow_none_state = "true",
+        left_label_caption = {'outpost-gui.requestor'},
+        left_label_tooltip = {'outpost-gui.requestor_info'},
+        right_label_caption = {'outpost-gui.provider'},
+        right_label_tooltip = {'outpost-gui.provider_info'}
+    })
+end
 
 script.on_event(defines.events.script_raised_built, function(event)
 
@@ -59,7 +92,13 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 end)
 
 script.on_event(defines.events.on_gui_opened, function(event)
+    local E = event
 
+        if E.entity ~= nil then
+            if E.entity.name == "outpost" then
+                caravan_scheduler_gui(E)
+            end
+        end
 end)
 
 script.on_event(defines.events.on_gui_selection_state_changed, function(event)
@@ -67,11 +106,55 @@ script.on_event(defines.events.on_gui_selection_state_changed, function(event)
 end)
 
 script.on_event(defines.events.on_gui_switch_state_changed, function(event)
-
+    if event.element.name == "rp-switch" then
+        if event.element.switch_state == "left" then
+            local frame = event.element.parent.add({
+                type = "frame",
+                name = "requestor_frame",
+                style = "invisible_frame",
+                direction = "vertical"
+            })
+            local table = frame.add({
+                type = "table",
+                name = "outpost_requests",
+                column_count = 10
+            })
+            for i = 1, 20 do
+                table.add({
+                    type = "choose-elem-button",
+                    name = "outpost_request_elem_" .. i,
+                    elem_type = "item"
+                })
+            end
+            local flow = frame.add({
+                type = "flow",
+                name = "num_flow"
+            })
+            flow.add({
+                type = "slider",
+                name = "outpost_request_slider",
+                minimum_value = 0,
+                maximum_value = 1000000000,
+                descrete_values = true
+            })
+            flow.add({
+                type = "textfield",
+                name = "outpost_request_slider_text",
+                text = flow.outpost_request_slider.slider_value,
+                numeric = true,
+                lose_focus_on_confirm = true
+            })
+        elseif event.element.switch_state == "right" then
+            --asd
+        end
+    end
 end)
 
-script.on_event(defines.events.on_gui_value_changed, function()
-
+script.on_event(defines.events.on_gui_value_changed, function(event)
+    if event.element.name == "outpost_request_slider" then
+        event.element.parent["outpost_request_slider_text"].text = tostring(event.element.slider_value)
+        global.last_elem_selected.number = event.element.slider_value
+    end
 end)
 
 script.on_event(defines.events.on_gui_confirmed, function(event)
@@ -79,15 +162,37 @@ script.on_event(defines.events.on_gui_confirmed, function(event)
 end)
 
 script.on_event(defines.events.on_gui_elem_changed, function(event)
-
+     if string.match(event.element.name, "outpost_request_elem_") ~= nil then
+        log(event.element.elem_value)
+        local parent = event.element.parent
+        local sp = parent.add({
+            type = "sprite-button",
+            name = event.element.name .. "_value",
+            sprite = "item/" .. event.element.elem_value,
+            number = 0,
+            index = event.element.get_index_in_parent()
+        })
+        global.last_elem_selected = sp
+        event.element.destroy()
+    end
 end)
 
 script.on_event(defines.events.on_gui_click, function(event)
-
+    if event.element.type == "sprite-button" and string.match(event.element.name, "outpost_request_elem_") ~= nil then
+        event.element.parent.parent["num_flow"]["outpost_request_slider"].slider_value = event.element.number
+        event.element.parent.parent["num_flow"]["outpost_request_slider_text"].text = tostring(event.element.number)
+    end
 end)
 
 script.on_event(defines.events.on_gui_closed, function(event)
 
+end)
+
+script.on_event(defines.events.on_gui_text_changed, function(event)
+    if event.element.name == "outpost_request_slider_text" then
+        event.element.parent["outpost_request_slider"].slider_value = tonumber(event.element.text)
+        global.last_elem_selected.number = tonumber(event.element.text)
+    end
 end)
 
 script.on_event(defines.events.on_rocket_launched, function(event)
@@ -119,5 +224,9 @@ script.on_event("tech-upgrades", function(event)
 end)
 
 script.on_event(defines.events.on_cutscene_cancelled, function(event)
+
+end)
+
+script.on_event(defines.events.on_selected_entity_changed, function(event)
 
 end)
