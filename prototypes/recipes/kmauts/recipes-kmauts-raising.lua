@@ -102,7 +102,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='kmauts-cub', amount ="+6"},
+					{name='kmauts-cub', add_amount = "6"},
 				},
 			crafting_speed = 50,
 			tech = 'pheromones'
@@ -115,7 +115,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='kmauts-cub', amount ="+1"},
+					{name='kmauts-cub', add_amount = "1"},
 				},
 			crafting_speed = 40,
 			tech = 'pheromones'
@@ -128,7 +128,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='kmauts-cub', amount ="+2"},
+					{name='kmauts-cub', add_amount = "2"},
 				},
 			crafting_speed = 35,
 			tech = 'pheromones'

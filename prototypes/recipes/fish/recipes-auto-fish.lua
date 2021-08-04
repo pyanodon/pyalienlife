@@ -98,7 +98,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='fish-egg', amount ="+5"},
+                    {name='fish-egg', add_amount = "5"},
 				},
 			crafting_speed = 40,
 			tech = 'pheromones'
@@ -111,7 +111,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='fish-egg', amount ="+2"},
+                    {name='fish-egg', add_amount = "2"},
 				},
 			crafting_speed = 30,
 			tech = 'pheromones'
@@ -127,7 +127,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='fish-egg', amount ="+5"},
+                    {name='fish-egg', add_amount = "5"},
 				},
 			crafting_speed = 20,
 			tech = 'pheromones'
@@ -140,7 +140,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='fish-egg', amount ="+2"},
+                    {name='fish-egg', add_amount = "2"},
 				},
 			crafting_speed = 15,
 			tech = 'pheromones'

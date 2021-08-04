@@ -584,3 +584,5 @@ local recipes_list =
 
 --adding to module limitation list
 FUN.productivity(recipes_list)
+
+log(serpent.block(data.raw.module["ralesias"]))

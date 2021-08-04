@@ -276,7 +276,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='xyhiphoe-cub', amount ="+2"},
+					{name='xyhiphoe-cub', add_amount = "2"},
 				},
 			crafting_speed = 140,
 			tech = 'assisted-embryology'
@@ -289,7 +289,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='xyhiphoe-cub', amount ="+3"},
+					{name='xyhiphoe-cub', add_amount = "3"},
 				},
 			crafting_speed = 130,
 			tech = 'assisted-embryology'
@@ -302,7 +302,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='xyhiphoe-cub', amount ="+3"},
+					{name='xyhiphoe-cub', add_amount = "3"},
 				},
 			crafting_speed = 100,
 			tech = 'assisted-embryology'
@@ -319,7 +319,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='xyhiphoe-cub', amount ="+12"},
+					{name='xyhiphoe-cub', add_amount = "12"},
 				},
 			crafting_speed = 130,
 			tech = 'assisted-embryology'
@@ -333,7 +333,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='xyhiphoe-cub', amount ="+4"},
+					{name='xyhiphoe-cub', add_amount = "4"},
 				},
 			crafting_speed = 120,
 			tech = 'assisted-embryology'
@@ -346,7 +346,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='xyhiphoe-cub', amount ="+3"},
+					{name='xyhiphoe-cub', add_amount = "3"},
 				},
 			crafting_speed = 110,
 			tech = 'assisted-embryology'
@@ -386,7 +386,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='xyhiphoe-cub', amount ='+2'},
+					{name='xyhiphoe-cub', add_amount = '2'},
 				},
 			crafting_speed = 120,
 			tech = 'pheromones'
@@ -399,7 +399,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='xyhiphoe-cub', amount ="+3"},
+					{name='xyhiphoe-cub', add_amount = "3"},
 				},
 			crafting_speed = 110,
 			tech = 'pheromones'
@@ -412,7 +412,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='xyhiphoe-cub', amount ="+3"},
+					{name='xyhiphoe-cub', add_amount = "3"},
 				},
 			crafting_speed = 100,
 			tech = 'pheromones'
@@ -429,7 +429,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='xyhiphoe-cub', amount ="+15"},
+					{name='xyhiphoe-cub', add_amount = "15"},
 				},
 			crafting_speed = 90,
 			tech = 'pheromones'
@@ -443,7 +443,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='xyhiphoe-cub', amount ="+4"},
+					{name='xyhiphoe-cub', add_amount = "4"},
 				},
 			crafting_speed = 80,
 			tech = 'pheromones'
@@ -456,7 +456,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='xyhiphoe-cub', amount ="+4"},
+					{name='xyhiphoe-cub', add_amount = "4"},
 				},
 			crafting_speed = 65,
 			tech = 'pheromones'

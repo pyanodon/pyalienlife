@@ -338,7 +338,7 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = 'item', name = 'fishmeal', amount = 20},
+        {type = 'item', name = 'fishmeal', amount = 10},
     },
     results = {
         {type = 'item', name = 'fertilizer', amount = 2}

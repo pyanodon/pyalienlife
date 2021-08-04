@@ -27,7 +27,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='bones', amount ='+3'},
+					{name='bones', add_amount = '3'},
 				},
                 crafting_speed = 15,
                 tech = 'hardened-bone',
@@ -45,7 +45,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', remove_item = true},
-					{name='bones', amount ='+5'},
+					{name='bones', add_amount = '5'},
 				},
 			crafting_speed = 15,
 			tech = 'hardened-bone',
@@ -83,7 +83,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='bones', amount ='+3'},
+					{name='bones', add_amount = '3'},
 				},
                 crafting_speed = 15,
                 tech = 'hardened-bone',
@@ -101,7 +101,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', remove_item = true},
-					{name='bones', amount ='+5'},
+					{name='bones', add_amount = '5'},
 				},
 			crafting_speed = 15,
 			tech = 'hardened-bone',
@@ -138,7 +138,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='bones', amount ='+2'},
+					{name='bones', add_amount = '2'},
 				},
                 crafting_speed = 15,
                 tech = 'hardened-bone',
@@ -156,7 +156,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', remove_item = true},
-					{name='bones', amount ='+2'},
+					{name='bones', add_amount = '2'},
 				},
 			crafting_speed = 15,
 			tech = 'hardened-bone',
@@ -193,7 +193,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='bones', amount ='+3'},
+					{name='bones', add_amount = '3'},
 				},
                 crafting_speed = 15,
                 tech = 'hardened-bone',
@@ -211,7 +211,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', remove_item = true},
-					{name='bones', amount ='+5'},
+					{name='bones', add_amount = '5'},
 				},
 			crafting_speed = 15,
 			tech = 'hardened-bone',
@@ -248,7 +248,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='bones', amount ='+3'},
+					{name='bones', add_amount = '3'},
 				},
                 crafting_speed = 15,
                 tech = 'hardened-bone',
@@ -266,7 +266,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', remove_item = true},
-					{name='bones', amount ='+5'},
+					{name='bones', add_amount = '5'},
 				},
 			crafting_speed = 15,
 			tech = 'hardened-bone',
@@ -303,7 +303,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='bones', amount ='+3'},
+					{name='bones', add_amount = '3'},
 				},
                 crafting_speed = 15,
                 tech = 'hardened-bone',
@@ -321,7 +321,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', remove_item = true},
-					{name='bones', amount ='+5'},
+					{name='bones', add_amount = '5'},
 				},
 			crafting_speed = 15,
 			tech = 'hardened-bone',
@@ -358,7 +358,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='bones', amount ='+3'},
+					{name='bones', add_amount = '3'},
 				},
                 crafting_speed = 15,
                 tech = 'hardened-bone',
@@ -376,7 +376,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', remove_item = true},
-					{name='bones', amount ='+5'},
+					{name='bones', add_amount = '5'},
 				},
 			crafting_speed = 15,
 			tech = 'hardened-bone',
@@ -413,7 +413,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='bones', amount ='+4'},
+					{name='bones', add_amount = '4'},
 				},
                 crafting_speed = 15,
                 tech = 'hardened-bone',
@@ -431,7 +431,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', remove_item = true},
-					{name='bones', amount ='+8'},
+					{name='bones', add_amount = '8'},
 				},
 			crafting_speed = 15,
 			tech = 'hardened-bone',
@@ -468,7 +468,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='bones', amount ='+3'},
+					{name='bones', add_amount = '3'},
 				},
                 crafting_speed = 15,
                 tech = 'hardened-bone',
@@ -486,7 +486,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', remove_item = true},
-					{name='bones', amount ='+5'},
+					{name='bones', add_amount = '5'},
 				},
 			crafting_speed = 15,
 			tech = 'hardened-bone',
@@ -523,7 +523,7 @@ fun.autorecipes {
 					{name='simik-blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='bones', amount ='+3'},
+					{name='bones', add_amount = '3'},
 				},
                 crafting_speed = 15,
                 tech = 'hardened-bone',
@@ -541,7 +541,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', remove_item = true},
-					{name='bones', amount ='+5'},
+					{name='bones', add_amount = '5'},
 				},
 			crafting_speed = 15,
 			tech = 'hardened-bone',
@@ -577,7 +577,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='bones', amount ='+3'},
+					{name='bones', add_amount = '3'},
 				},
                 crafting_speed = 15,
                 tech = 'hardened-bone',
@@ -595,7 +595,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', remove_item = true},
-					{name='bones', amount ='+5'},
+					{name='bones', add_amount = '5'},
 				},
 			crafting_speed = 15,
 			tech = 'hardened-bone',
@@ -632,7 +632,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='bones', amount ='+3'},
+					{name='bones', add_amount = '3'},
 				},
                 crafting_speed = 15,
                 tech = 'hardened-bone',
@@ -650,7 +650,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', remove_item = true},
-					{name='bones', amount ='+5'},
+					{name='bones', add_amount = '5'},
 				},
 			crafting_speed = 15,
 			tech = 'hardened-bone',
@@ -690,7 +690,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='bones', amount ='+3'},
+					{name='bones', add_amount = '3'},
 				},
                 crafting_speed = 15,
                 tech = 'hardened-bone',
@@ -710,7 +710,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain', remove_item = true},
-					{name='bones', amount ='+4'},
+					{name='bones', add_amount = '4'},
 				},
 			crafting_speed = 15,
 			tech = 'hardened-bone',

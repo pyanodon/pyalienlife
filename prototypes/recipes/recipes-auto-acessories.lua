@@ -68,7 +68,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='pelt', amount ='+1'},
+					{name='pelt', add_amount = '1'},
 				},
                 crafting_speed = 15,
                 tech = 'exo-insertion',

@@ -101,7 +101,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='xeno-egg', amount ="+1"},
+                    {name='xeno-egg', add_amount = "1"},
 				},
 			crafting_speed = 115,
 			tech = 'pheromones'
@@ -114,7 +114,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='xeno-egg', amount ="+1"},
+                    {name='xeno-egg', add_amount = "1"},
 				},
 			crafting_speed = 110,
 			tech = 'pheromones'
@@ -130,7 +130,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='xeno-egg', amount ="+3"},
+                    {name='xeno-egg', add_amount = "3"},
 				},
 			crafting_speed = 90,
 			tech = 'pheromones'
@@ -143,7 +143,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='xeno-egg', amount ="+1"},
+                    {name='xeno-egg', add_amount = "1"},
 				},
 			crafting_speed = 80,
 			tech = 'pheromones'

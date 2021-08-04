@@ -52,7 +52,7 @@ fun.autorecipes {
                     {name='fertilizer', add_amount = 3},
                     {name='blood-meal', amount = 3},
 					{name='carbon-dioxide', amount = 200},
-					{name='pesticide-mk02', amount ='+1'},
+					{name='pesticide-mk02', add_amount = '1'},
 				},
 			results =
 				{

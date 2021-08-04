@@ -104,7 +104,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='arthurian-egg', amount ="+1"},
+                    {name='arthurian-egg', add_amount = "1"},
 				},
 			crafting_speed = 60,
 			name = 'arthurian-egg-07',
@@ -118,7 +118,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='arthurian-egg', amount ="+1"},
+                    {name='arthurian-egg', add_amount = "1"},
 				},
 			crafting_speed = 50,
 			name = 'arthurian-egg-08',
@@ -135,7 +135,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='arthurian-egg', amount ="+1"},
+                    {name='arthurian-egg', add_amount = "1"},
 				},
 			crafting_speed = 50,
 			name = 'arthurian-egg-09',
@@ -149,7 +149,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='arthurian-egg', amount ="+1"},
+                    {name='arthurian-egg', add_amount = "1"},
 				},
 			crafting_speed = 40,
 			name = 'arthurian-egg-10',

@@ -33,7 +33,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='guano', amount ='+2'}
+					{name='guano', add_amount = '2'}
 				},
 			crafting_speed = 70,
 			tech = 'vrauks',
@@ -49,7 +49,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='guano', amount ='+6'}
+					{name='guano', add_amount = '6'}
 				},
 				crafting_speed = 50,
 				tech = 'vrauks-mk02',
@@ -63,7 +63,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='guano', amount ='+2'}
+					{name='guano', add_amount = '2'}
 				},
 				crafting_speed = 45,
 				tech = 'vrauks-mk03',
@@ -81,7 +81,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='guano', amount ='+6'}
+					{name='guano', add_amount = '6'}
 				},
 				crafting_speed = 40,
 				tech = 'vrauks-mk03',
@@ -96,7 +96,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='guano', amount ='+6'}
+					{name='guano', add_amount = '6'}
 				},
 				crafting_speed = 25,
 				tech = 'vrauks-mk04',
@@ -110,7 +110,7 @@ fun.autorecipes {
 			results =
 				{
 					--{'a','*5'}
-					{name='guano', amount ='+2'}
+					{name='guano', add_amount = '2'}
 				},
 				crafting_speed = 20,
 				tech = 'vrauks-mk04',

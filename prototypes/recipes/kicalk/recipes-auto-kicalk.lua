@@ -58,7 +58,7 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-					{name='pesticide-mk01', amount ='+1'},
+					{name='pesticide-mk01', add_amount = '1'},
 					{name='carbon-dioxide',remove_item = true},
                     {name='flue-gas', amount = 100},
 				},
@@ -73,11 +73,11 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fertilizer', amount = '+6'},
+					{name='fertilizer', add_amount = '6'},
 					{name='water',remove_item = true},
 					{name = 'phosphorous-acid', amount = 50, fallback = 'nitrogen'},
-					{name='biomass', amount = '+10'},
-					{name='clay', amount = '+11'},
+					{name='biomass', add_amount = '10'},
+					{name='clay', add_amount = '11'},
 				},
 			results =
 				{

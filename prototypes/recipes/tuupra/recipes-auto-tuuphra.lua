@@ -90,7 +90,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='tuuphra', amount ="+6"}
+					{name='tuuphra', add_amount = "6"}
 				},
 			crafting_speed = 50,
 			tech = 'growth-hormone'
@@ -106,7 +106,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='tuuphra', amount ="+2"}
+					{name='tuuphra', add_amount = "2"}
 				},
 			crafting_speed = 50,
 			tech = 'growth-hormone'
@@ -121,7 +121,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='tuuphra', amount ="+8"}
+					{name='tuuphra', add_amount = "8"}
 				},
 			crafting_speed = 45,
 			tech = 'growth-hormone'
@@ -136,7 +136,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='tuuphra', amount ="+10"}
+					{name='tuuphra', add_amount = "10"}
 				},
 			crafting_speed = 30,
 			tech = 'growth-hormone'

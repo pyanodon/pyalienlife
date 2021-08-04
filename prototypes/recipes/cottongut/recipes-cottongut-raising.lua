@@ -168,7 +168,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cottongut', amount = '+3'},
+					{name='cottongut', add_amount = '3'},
 				},
 			crafting_speed = 30,
 			tech = 'growth-hormone'
@@ -181,7 +181,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cottongut', amount = '+3'},
+					{name='cottongut', add_amount = '3'},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -195,7 +195,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cottongut', amount = '+3'},
+					{name='cottongut', add_amount = '3'},
 				},
 			crafting_speed = 90,
 			tech = 'antiviral'

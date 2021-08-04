@@ -5265,164 +5265,6 @@ ITEM {
     stack_size = 20
 }
 
-------RULES-----
-
----CREATURES---
-    local alien_life_limitations_tree =
-    {
-    }
-
-    local alien_life_limitations_seaweed =
-	{
-	}
-
-    local alien_life_limitations_moss =
-	{
-    }
-
-    local alien_life_limitations_sap =
-	{
-    }
-
-    local alien_life_limitations_ulric =
-	{
-	}
-
-    local alien_life_limitations_mukmoux =
-	{
-    }
-
-    local alien_life_limitations_korlex =
-	{
-    }
-
-    local alien_life_limitations_arthurian =
-	{
-    }
-
-    local alien_life_limitations_dhilmos =
-	{
-    }
-
-    local alien_life_limitations_scrondrix =
-	{
-    }
-
-    local alien_life_limitations_phadai =
-	{
-    }
-
-    local alien_life_limitations_auog =
-	{
-    }
-
-    local alien_life_limitations_fish =
-	{
-    }
-
-    local alien_life_limitations_phagnot =
-	{
-    }
-
-    local alien_life_limitations_kmauts =
-	{
-    }
-
-    local alien_life_limitations_dingrits =
-	{
-    }
-
-    local alien_life_limitations_xeno =
-	{
-    }
-
-    local alien_life_limitations_arqad =
-	{
-    }
-
-    local alien_life_limitations_cridren =
-	{
-    }
-
-    local alien_life_limitations_antelope =
-	{
-    }
-    local alien_life_limitations_zipir =
-	{
-    }
-    local alien_life_limitations_trits =
-	{
-    }
-
-    local alien_life_limitations_vonix =
-	{
-    }
-    local alien_life_limitations_vrauks =
-	{
-    }
-    local alien_life_limitations_xyhiphoe =
-	{
-    }
-
----PLANTS---
-local alien_life_limitations_sponge =
-	{
-    }
-
-    local alien_life_limitations_ralesia =
-	{
-    }
-
-    local alien_life_limitations_kicalk =
-    {
-    }
-
-    local alien_life_limitations_tuuphra =
-	{
-    }
-
-    local alien_life_limitations_navens =
-	{
-    }
-
-    local alien_life_limitations_yotoi =
-	{
-    }
-
-    local alien_life_limitations_rennea =
-	{
-    }
-
-    local alien_life_limitations_grod =
-	{
-    }
-
-    local alien_life_limitations_bhoddos =
-	{
-    }
-
-  local alien_life_limitations_cadaveric =
-	{
-    }
-
-local alien_life_limitations_yaedols =
-	{
-	}
-
-local alien_life_limitations_fawogae =
-	{
-    }
-
-local alien_life_limitations_moondrop =
-    {
-    }
-
-local alien_life_limitations_cottongut =
-    {
-    }
-
-local alien_life_limitations_guar = {}
-
 ----MODULES----
 
 ITEM {
@@ -5441,7 +5283,7 @@ ITEM {
     order = "t-a",
     stack_size = 300,
 	effect = { speed = {bonus = 0.4}},
-	limitation = alien_life_limitations_tree,
+	limitation = {},
 	limitation_message_key = "wood"
 }
 
@@ -5461,7 +5303,7 @@ ITEM {
     order = "t-b",
     stack_size = 300,
 	effect = { speed = {bonus = 0.8}},
-	limitation = alien_life_limitations_tree,
+	limitation = {},
 	limitation_message_key = "wood"
 }
 
@@ -5481,7 +5323,7 @@ ITEM {
     order = "t-c",
     stack_size = 300,
 	effect = { speed = {bonus = 1.2}},
-	limitation = alien_life_limitations_tree,
+	limitation = {},
 	limitation_message_key = "wood"
 }
 
@@ -5501,7 +5343,7 @@ ITEM {
     order = "t-d",
     stack_size = 300,
 	effect = { speed = {bonus = 1.6}},
-	limitation = alien_life_limitations_tree,
+	limitation = {},
 	limitation_message_key = "wood"
 }
 
@@ -5521,7 +5363,7 @@ ITEM {
     order = "s-a",
     stack_size = 300,
 	effect = { speed = {bonus = 1}},
-	limitation = alien_life_limitations_seaweed,
+	limitation = {},
 	limitation_message_key = "weed"
 }
 
@@ -5541,7 +5383,7 @@ ITEM {
     order = "s-b",
     stack_size = 300,
 	effect = { speed = {bonus = 2}},
-	limitation = alien_life_limitations_seaweed,
+	limitation = {},
 	limitation_message_key = "weed"
 }
 
@@ -5561,7 +5403,7 @@ ITEM {
     order = "s-c",
     stack_size = 300,
 	effect = { speed = {bonus = 3}},
-	limitation = alien_life_limitations_seaweed,
+	limitation = {},
 	limitation_message_key = "weed"
 }
 
@@ -5581,7 +5423,7 @@ ITEM {
     order = "s-d",
     stack_size = 300,
 	effect = { speed = {bonus = 4}},
-	limitation = alien_life_limitations_seaweed,
+	limitation = {},
 	limitation_message_key = "weed"
 }
 
@@ -5607,7 +5449,7 @@ ITEM {
     order = "m-a",
     stack_size = 300,
 	effect = { speed = {bonus = 0.65}},
-	limitation = alien_life_limitations_moss,
+	limitation = {},
 	limitation_message_key = "moss"
 }
 
@@ -5638,7 +5480,7 @@ ITEM {
     order = "m-b",
     stack_size = 300,
 	effect = { speed = {bonus = 1.3}},
-	limitation = alien_life_limitations_moss,
+	limitation = {},
 	limitation_message_key = "moss"
 }
 
@@ -5669,7 +5511,7 @@ ITEM {
     order = "m-c",
     stack_size = 300,
 	effect = { speed = {bonus = 1.95}},
-	limitation = alien_life_limitations_moss,
+	limitation = {},
 	limitation_message_key = "moss"
 }
 
@@ -5700,7 +5542,7 @@ ITEM {
     order = "m-d",
     stack_size = 300,
 	effect = { speed = {bonus = 2.6}},
-	limitation = alien_life_limitations_moss,
+	limitation = {},
 	limitation_message_key = "moss"
 }
 
@@ -5720,7 +5562,7 @@ ITEM {
     order = "m-a",
     stack_size = 300,
 	effect = { speed = {bonus = 5}},
-	limitation = alien_life_limitations_sap,
+	limitation = {},
 	limitation_message_key = "sap"
 }
 
@@ -5740,7 +5582,7 @@ ITEM {
     order = "m-b",
     stack_size = 300,
 	effect = { speed = {bonus = 10}},
-	limitation = alien_life_limitations_sap,
+	limitation = {},
 	limitation_message_key = "sap"
 }
 
@@ -5760,7 +5602,7 @@ ITEM {
     order = "m-c",
     stack_size = 300,
 	effect = { speed = {bonus = 15}},
-	limitation = alien_life_limitations_sap,
+	limitation = {},
 	limitation_message_key = "sap"
 }
 
@@ -5780,7 +5622,7 @@ ITEM {
     order = "m-d",
     stack_size = 300,
 	effect = { speed = {bonus = 20}},
-	limitation = alien_life_limitations_sap,
+	limitation = {},
 	limitation_message_key = "sap"
 }
 
@@ -5800,7 +5642,7 @@ ITEM {
     order = "u-a",
     stack_size = 300,
 	effect = { speed = {bonus = 2}},
-	limitation = alien_life_limitations_ulric,
+	limitation = {},
 	limitation_message_key = "ulric"
 }
 
@@ -5820,7 +5662,7 @@ ITEM {
     order = "u-b",
     stack_size = 300,
 	effect = { speed = {bonus = 3}},
-	limitation = alien_life_limitations_ulric,
+	limitation = {},
 	limitation_message_key = "ulric"
 }
 
@@ -5840,7 +5682,7 @@ ITEM {
     order = "u-c",
     stack_size = 300,
 	effect = { speed = {bonus = 4}},
-	limitation = alien_life_limitations_ulric,
+	limitation = {},
 	limitation_message_key = "ulric"
 }
 
@@ -5860,7 +5702,7 @@ ITEM {
     order = "u-d",
     stack_size = 300,
 	effect = { speed = {bonus = 5}},
-	limitation = alien_life_limitations_ulric,
+	limitation = {},
 	limitation_message_key = "ulric"
 }
 
@@ -5944,7 +5786,7 @@ ITEM {
     order = "sa",
     stack_size = 300,
 	effect = { speed = {bonus = 1.25}},
-	limitation = alien_life_limitations_sponge,
+	limitation = {},
 	limitation_message_key = "sponge"
 }
 
@@ -5964,7 +5806,7 @@ ITEM {
     order = "sb",
     stack_size = 300,
 	effect = { speed = {bonus = 2.5}},
-	limitation = alien_life_limitations_sponge,
+	limitation = {},
 	limitation_message_key = "sponge"
 }
 
@@ -5984,7 +5826,7 @@ ITEM {
     order = "sc",
     stack_size = 300,
 	effect = { speed = {bonus = 4}},
-	limitation = alien_life_limitations_sponge,
+	limitation = {},
 	limitation_message_key = "sponge"
 }
 
@@ -6004,7 +5846,7 @@ ITEM {
     order = "sd",
     stack_size = 300,
 	effect = { speed = {bonus = 5}},
-	limitation = alien_life_limitations_sponge,
+	limitation = {},
 	limitation_message_key = "sponge"
 }
 
@@ -6024,7 +5866,7 @@ ITEM {
     order = "ra",
     stack_size = 300,
 	effect = { speed = {bonus = 0.83}},
-	limitation = alien_life_limitations_ralesia,
+	limitation = {},
 	limitation_message_key = "ralesia"
 }
 
@@ -6044,7 +5886,7 @@ ITEM {
     order = "rb",
     stack_size = 300,
 	effect = { speed = {bonus = 1.66}},
-	limitation = alien_life_limitations_ralesia,
+	limitation = {},
 	limitation_message_key = "ralesia"
 }
 
@@ -6064,7 +5906,7 @@ ITEM {
     order = "rc",
     stack_size = 300,
 	effect = { speed = {bonus = 2.49}},
-	limitation = alien_life_limitations_ralesia,
+	limitation = {},
 	limitation_message_key = "ralesia"
 }
 
@@ -6084,7 +5926,7 @@ ITEM {
     order = "rd",
     stack_size = 300,
 	effect = { speed = {bonus = 3.33}},
-	limitation = alien_life_limitations_ralesia,
+	limitation = {},
 	limitation_message_key = "ralesia"
 }
 
@@ -6104,7 +5946,7 @@ ITEM {
     order = "m-a",
     stack_size = 300,
 	effect = { speed = {bonus = 5}},
-	limitation = alien_life_limitations_mukmoux,
+	limitation = {},
 	limitation_message_key = "mukmoux"
 }
 
@@ -6124,7 +5966,7 @@ ITEM {
     order = "m-b",
     stack_size = 300,
 	effect = { speed = {bonus = 6.25}},
-	limitation = alien_life_limitations_mukmoux,
+	limitation = {},
 	limitation_message_key = "mukmoux"
 }
 
@@ -6144,7 +5986,7 @@ ITEM {
     order = "m-c",
     stack_size = 300,
 	effect = { speed = {bonus = 7.5}},
-	limitation = alien_life_limitations_mukmoux,
+	limitation = {},
 	limitation_message_key = "mukmoux"
 }
 
@@ -6164,7 +6006,7 @@ ITEM {
     order = "m-d",
     stack_size = 300,
 	effect = { speed = {bonus = 8.75}},
-	limitation = alien_life_limitations_mukmoux,
+	limitation = {},
 	limitation_message_key = "mukmoux"
 }
 
@@ -6184,7 +6026,7 @@ ITEM {
     order = "aa",
     stack_size = 300,
 	effect = { speed = {bonus = 1.25}},
-	limitation = alien_life_limitations_arthurian,
+	limitation = {},
 	limitation_message_key = "arthurian"
 }
 
@@ -6204,7 +6046,7 @@ ITEM {
     order = "ab",
     stack_size = 300,
 	effect = { speed = {bonus = 2.5}},
-	limitation = alien_life_limitations_arthurian,
+	limitation = {},
 	limitation_message_key = "arthurian"
 }
 
@@ -6224,7 +6066,7 @@ ITEM {
     order = "ac",
     stack_size = 300,
 	effect = { speed = {bonus = 3.75}},
-	limitation = alien_life_limitations_arthurian,
+	limitation = {},
 	limitation_message_key = "arthurian"
 }
 
@@ -6244,7 +6086,7 @@ ITEM {
     order = "ad",
     stack_size = 300,
 	effect = { speed = {bonus = 5}},
-	limitation = alien_life_limitations_arthurian,
+	limitation = {},
 	limitation_message_key = "arthurian"
 }
 
@@ -6264,7 +6106,7 @@ ITEM {
     order = "ta",
     stack_size = 300,
 	effect = { speed = {bonus = 1}},
-	limitation = alien_life_limitations_tuuphra,
+	limitation = {},
 	limitation_message_key = "tuuphra"
 }
 
@@ -6284,7 +6126,7 @@ ITEM {
     order = "tb",
     stack_size = 300,
 	effect = { speed = {bonus = 2}},
-	limitation = alien_life_limitations_tuuphra,
+	limitation = {},
 	limitation_message_key = "tuuphra"
 }
 
@@ -6304,7 +6146,7 @@ ITEM {
     order = "tc",
     stack_size = 300,
 	effect = { speed = {bonus = 3}},
-	limitation = alien_life_limitations_tuuphra,
+	limitation = {},
 	limitation_message_key = "tuuphra"
 }
 
@@ -6324,7 +6166,7 @@ ITEM {
     order = "td",
     stack_size = 300,
 	effect = { speed = {bonus = 4}},
-	limitation = alien_life_limitations_tuuphra,
+	limitation = {},
 	limitation_message_key = "tuuphra"
 }
 
@@ -6344,7 +6186,7 @@ ITEM {
     order = "na",
     stack_size = 300,
 	effect = { speed = {bonus = 7.5}},
-	limitation = alien_life_limitations_navens,
+	limitation = {},
 	limitation_message_key = "navens"
 }
 
@@ -6364,7 +6206,7 @@ ITEM {
     order = "nb",
     stack_size = 300,
 	effect = { speed = {bonus = 10}},
-	limitation = alien_life_limitations_navens,
+	limitation = {},
 	limitation_message_key = "navens"
 }
 
@@ -6384,7 +6226,7 @@ ITEM {
     order = "nc",
     stack_size = 300,
 	effect = { speed = {bonus = 12.5}},
-	limitation = alien_life_limitations_navens,
+	limitation = {},
 	limitation_message_key = "navens"
 }
 
@@ -6404,7 +6246,7 @@ ITEM {
     order = "nd",
     stack_size = 300,
 	effect = { speed = {bonus = 15}},
-	limitation = alien_life_limitations_navens,
+	limitation = {},
 	limitation_message_key = "navens"
 }
 
@@ -6424,7 +6266,7 @@ ITEM {
     order = "ya",
     stack_size = 300,
 	effect = { speed = {bonus = 0.3}},
-	limitation = alien_life_limitations_yotoi,
+	limitation = {},
 	limitation_message_key = "yotoi"
 }
 
@@ -6444,7 +6286,7 @@ ITEM {
     order = "yb",
     stack_size = 300,
 	effect = { speed = {bonus = 0.6}},
-	limitation = alien_life_limitations_yotoi,
+	limitation = {},
 	limitation_message_key = "yotoi"
 }
 
@@ -6464,7 +6306,7 @@ ITEM {
     order = "yc",
     stack_size = 300,
 	effect = { speed = {bonus = 0.9}},
-	limitation = alien_life_limitations_yotoi,
+	limitation = {},
 	limitation_message_key = "yotoi"
 }
 
@@ -6484,7 +6326,7 @@ ITEM {
     order = "yd",
     stack_size = 300,
 	effect = { speed = {bonus = 1.2}},
-	limitation = alien_life_limitations_yotoi,
+	limitation = {},
 	limitation_message_key = "yotoi"
 }
 
@@ -6504,7 +6346,7 @@ ITEM {
     order = "da",
     stack_size = 300,
 	effect = { speed = {bonus = 3.75}},
-	limitation = alien_life_limitations_dhilmos,
+	limitation = {},
 	limitation_message_key = "dhilmos"
 }
 
@@ -6524,7 +6366,7 @@ ITEM {
     order = "db",
     stack_size = 300,
 	effect = { speed = {bonus = 5}},
-	limitation = alien_life_limitations_dhilmos,
+	limitation = {},
 	limitation_message_key = "dhilmos"
 }
 
@@ -6544,7 +6386,7 @@ ITEM {
     order = "dc",
     stack_size = 300,
 	effect = { speed = {bonus = 6.25}},
-	limitation = alien_life_limitations_dhilmos,
+	limitation = {},
 	limitation_message_key = "dhilmos"
 }
 
@@ -6564,7 +6406,7 @@ ITEM {
     order = "dd",
     stack_size = 300,
 	effect = { speed = {bonus = 7.5}},
-	limitation = alien_life_limitations_dhilmos,
+	limitation = {},
 	limitation_message_key = "dhilmos"
 }
 
@@ -6584,7 +6426,7 @@ ITEM {
     order = "sr-a",
     stack_size = 300,
 	effect = { speed = {bonus = 1.65}},
-	limitation = alien_life_limitations_scrondrix,
+	limitation = {},
 	limitation_message_key = "scrondrix"
 }
 
@@ -6604,7 +6446,7 @@ ITEM {
     order = "sr-b",
     stack_size = 300,
 	effect = { speed = {bonus = 3.3}},
-	limitation = alien_life_limitations_scrondrix,
+	limitation = {},
 	limitation_message_key = "scrondrix"
 }
 
@@ -6624,7 +6466,7 @@ ITEM {
     order = "sr-c",
     stack_size = 300,
 	effect = { speed = {bonus = 4.96}},
-	limitation = alien_life_limitations_scrondrix,
+	limitation = {},
 	limitation_message_key = "scrondrix"
 }
 
@@ -6644,7 +6486,7 @@ ITEM {
     order = "sr-d",
     stack_size = 300,
 	effect = { speed = {bonus = 6.6}},
-	limitation = alien_life_limitations_scrondrix,
+	limitation = {},
 	limitation_message_key = "scrondrix"
 }
 
@@ -6664,7 +6506,7 @@ ITEM {
     order = "ren-a",
     stack_size = 300,
 	effect = { speed = {bonus = 0.16}},
-	limitation = alien_life_limitations_rennea,
+	limitation = {},
 	limitation_message_key = "rennea"
 }
 
@@ -6684,7 +6526,7 @@ ITEM {
     order = "ren-b",
     stack_size = 300,
 	effect = { speed = {bonus = 0.32}},
-	limitation = alien_life_limitations_rennea,
+	limitation = {},
 	limitation_message_key = "rennea"
 }
 
@@ -6704,7 +6546,7 @@ ITEM {
     order = "ren-c",
     stack_size = 300,
 	effect = { speed = {bonus = 0.63}},
-	limitation = alien_life_limitations_rennea,
+	limitation = {},
 	limitation_message_key = "rennea"
 }
 
@@ -6724,7 +6566,7 @@ ITEM {
     order = "ren-d",
     stack_size = 300,
 	effect = { speed = {bonus = 1.25}},
-	limitation = alien_life_limitations_rennea,
+	limitation = {},
 	limitation_message_key = "rennea"
 }
 
@@ -6744,7 +6586,7 @@ ITEM {
     order = "ph-a",
     stack_size = 300,
 	effect = { speed = {bonus = 10}},
-	limitation = alien_life_limitations_phadai,
+	limitation = {},
 	limitation_message_key = "phadai"
 }
 
@@ -6764,7 +6606,7 @@ ITEM {
     order = "ph-b",
     stack_size = 300,
 	effect = { speed = {bonus = 12.5}},
-	limitation = alien_life_limitations_phadai,
+	limitation = {},
 	limitation_message_key = "phadai"
 }
 
@@ -6784,7 +6626,7 @@ ITEM {
     order = "ph-c",
     stack_size = 300,
 	effect = { speed = {bonus = 15}},
-	limitation = alien_life_limitations_phadai,
+	limitation = {},
 	limitation_message_key = "phadai"
 }
 
@@ -6804,7 +6646,7 @@ ITEM {
     order = "ph-d",
     stack_size = 300,
 	effect = { speed = {bonus = 17.5}},
-	limitation = alien_life_limitations_phadai,
+	limitation = {},
 	limitation_message_key = "phadai"
 }
 
@@ -6839,7 +6681,7 @@ ITEM {
     order = "a",
     stack_size = 300,
 	effect = { speed = {bonus = 6.7}},--16.75
-	limitation = alien_life_limitations_auog,
+	limitation = {},
     limitation_message_key = "auog",
     fuel_category = 'auog',
     fuel_value = '250MJ',
@@ -6862,7 +6704,7 @@ ITEM {
     order = "a-b",
     stack_size = 300,
 	effect = { speed = {bonus = 13.4}},
-	limitation = alien_life_limitations_auog,
+	limitation = {},
     limitation_message_key = "auog",
     fuel_category = 'auog',
     fuel_value = '350MJ',
@@ -6885,7 +6727,7 @@ ITEM {
     order = "a-c",
     stack_size = 300,
 	effect = { speed = {bonus = 20.1}},
-	limitation = alien_life_limitations_auog,
+	limitation = {},
     limitation_message_key = "auog",
     fuel_category = 'auog',
     fuel_value = '400MJ',
@@ -6908,7 +6750,7 @@ ITEM {
     order = "a-d",
     stack_size = 300,
 	effect = { speed = {bonus = 26.8}},
-	limitation = alien_life_limitations_auog,
+	limitation = {},
     limitation_message_key = "auog",
     fuel_category = 'auog',
     fuel_value = '450MJ',
@@ -7006,7 +6848,7 @@ ITEM {
     order = "fa",
     stack_size = 300,
 	effect = { speed = {bonus = 3.75}},
-	limitation = alien_life_limitations_fish,
+	limitation = {},
 	limitation_message_key = "fish"
 }
 
@@ -7042,7 +6884,7 @@ ITEM {
     order = "fb",
     stack_size = 300,
 	effect = { speed = {bonus = 5}},
-	limitation = alien_life_limitations_fish,
+	limitation = {},
 	limitation_message_key = "fish"
 }
 
@@ -7078,7 +6920,7 @@ ITEM {
     order = "fc",
     stack_size = 300,
 	effect = { speed = {bonus = 6.25}},
-	limitation = alien_life_limitations_fish,
+	limitation = {},
 	limitation_message_key = "fish"
 }
 
@@ -7114,7 +6956,7 @@ ITEM {
     order = "fd",
     stack_size = 300,
 	effect = { speed = {bonus = 7.5}},
-	limitation = alien_life_limitations_fish,
+	limitation = {},
 	limitation_message_key = "fish"
 }
 
@@ -7134,7 +6976,7 @@ ITEM {
     order = "yaed-a",
     stack_size = 300,
 	effect = { speed = {bonus = 10}},
-	limitation = alien_life_limitations_yaedols,
+	limitation = {},
 	limitation_message_key = "yaedols"
 }
 
@@ -7154,7 +6996,7 @@ ITEM {
     order = "yaed-b",
     stack_size = 300,
 	effect = { speed = {bonus = 12.5}},
-	limitation = alien_life_limitations_yaedols,
+	limitation = {},
 	limitation_message_key = "yaedols"
 }
 
@@ -7174,7 +7016,7 @@ ITEM {
     order = "yaed-c",
     stack_size = 300,
 	effect = { speed = {bonus = 15}},
-	limitation = alien_life_limitations_yaedols,
+	limitation = {},
 	limitation_message_key = "yaedols"
 }
 
@@ -7194,7 +7036,7 @@ ITEM {
     order = "yaed-d",
     stack_size = 300,
 	effect = { speed = {bonus = 17.5}},
-	limitation = alien_life_limitations_yaedols,
+	limitation = {},
 	limitation_message_key = "yaedols"
 }
 
@@ -7214,7 +7056,7 @@ ITEM {
     order = "d-a",
     stack_size = 300,
 	effect = { speed = {bonus = 0.4}},
-	limitation = alien_life_limitations_dingrits,
+	limitation = {},
     limitation_message_key = "dingrits",
     fuel_category = 'dingrits',
     fuel_value = '250MJ',
@@ -7237,7 +7079,7 @@ ITEM {
     order = "d-b",
     stack_size = 300,
 	effect = { speed = {bonus = 0.8}},
-	limitation = alien_life_limitations_dingrits,
+	limitation = {},
     limitation_message_key = "dingrits",
     fuel_category = 'dingrits',
     fuel_value = '320MJ',
@@ -7260,7 +7102,7 @@ ITEM {
     order = "d-c",
     stack_size = 300,
 	effect = { speed = {bonus = 1.6}},
-	limitation = alien_life_limitations_dingrits,
+	limitation = {},
     limitation_message_key = "dingrits",
     fuel_category = 'dingrits',
     fuel_value = '350MJ',
@@ -7283,7 +7125,7 @@ ITEM {
     order = "d-d",
     stack_size = 300,
 	effect = { speed = {bonus = 3.2}},
-	limitation = alien_life_limitations_dingrits,
+	limitation = {},
     limitation_message_key = "dingrits",
     fuel_category = 'dingrits',
     fuel_value = '480MJ',
@@ -7370,7 +7212,7 @@ ITEM {
     order = "k-a",
     stack_size = 300,
 	effect = { speed = {bonus = 0.2}},
-	limitation = alien_life_limitations_kmauts,
+	limitation = {},
 	limitation_message_key = "kmauts"
 }
 
@@ -7390,7 +7232,7 @@ ITEM {
     order = "k-b",
     stack_size = 300,
 	effect = { speed = {bonus = 0.4}},
-	limitation = alien_life_limitations_kmauts,
+	limitation = {},
 	limitation_message_key = "kmauts"
 }
 
@@ -7410,7 +7252,7 @@ ITEM {
     order = "k-c",
     stack_size = 300,
 	effect = { speed = {bonus = 0.6}},
-	limitation = alien_life_limitations_kmauts,
+	limitation = {},
 	limitation_message_key = "kmauts"
 }
 
@@ -7430,7 +7272,7 @@ ITEM {
     order = "k-d",
     stack_size = 300,
 	effect = { speed = {bonus = 0.8}},
-	limitation = alien_life_limitations_kmauts,
+	limitation = {},
 	limitation_message_key = "kmauts"
 }
 
@@ -7450,7 +7292,7 @@ ITEM {
     order = "v-a",
     stack_size = 300,
 	effect = { speed = {bonus = 50}},
-	limitation = alien_life_limitations_vonix,
+	limitation = {},
 	limitation_message_key = "vonix"
 }
 
@@ -7470,7 +7312,7 @@ ITEM {
     order = "v-b",
     stack_size = 300,
 	effect = { speed = {bonus = 55}},
-	limitation = alien_life_limitations_vonix,
+	limitation = {},
 	limitation_message_key = "vonix"
 }
 
@@ -7490,7 +7332,7 @@ ITEM {
     order = "v-c",
     stack_size = 300,
 	effect = { speed = {bonus = 60}},
-	limitation = alien_life_limitations_vonix,
+	limitation = {},
 	limitation_message_key = "vonix"
 }
 
@@ -7510,7 +7352,7 @@ ITEM {
     order = "v-d",
     stack_size = 300,
 	effect = { speed = {bonus = 65}},
-	limitation = alien_life_limitations_vonix,
+	limitation = {},
 	limitation_message_key = "vonix"
 }
 
@@ -7530,7 +7372,7 @@ ITEM {
     order = "ga",
     stack_size = 300,
 	effect = { speed = {bonus = 1.425}},
-	limitation = alien_life_limitations_grod,
+	limitation = {},
 	limitation_message_key = "grod"
 }
 
@@ -7550,7 +7392,7 @@ ITEM {
     order = "gb",
     stack_size = 300,
 	effect = { speed = {bonus = 2.85}},
-	limitation = alien_life_limitations_grod,
+	limitation = {},
 	limitation_message_key = "grod"
 }
 
@@ -7570,7 +7412,7 @@ ITEM {
     order = "gc",
     stack_size = 300,
 	effect = { speed = {bonus = 4.275}},
-	limitation = alien_life_limitations_grod,
+	limitation = {},
 	limitation_message_key = "grod"
 }
 
@@ -7590,7 +7432,7 @@ ITEM {
     order = "gd",
     stack_size = 300,
 	effect = { speed = {bonus = 5.7}},
-	limitation = alien_life_limitations_grod,
+	limitation = {},
 	limitation_message_key = "grod"
 }
 
@@ -7606,7 +7448,7 @@ ITEM {
     order = "p-a",
     stack_size = 300,
 	effect = { speed = {bonus = 1}},
-	limitation = alien_life_limitations_phagnot,
+	limitation = {},
 	limitation_message_key = "phagnot"
 }
 
@@ -7626,7 +7468,7 @@ ITEM {
     order = "p-b",
     stack_size = 300,
 	effect = { speed = {bonus = 2}},
-	limitation = alien_life_limitations_phagnot,
+	limitation = {},
 	limitation_message_key = "phagnot"
 }
 
@@ -7646,7 +7488,7 @@ ITEM {
     order = "p-c",
     stack_size = 300,
 	effect = { speed = {bonus = 3}},
-	limitation = alien_life_limitations_phagnot,
+	limitation = {},
 	limitation_message_key = "phagnot"
 }
 
@@ -7666,7 +7508,7 @@ ITEM {
     order = "p-d",
     stack_size = 300,
 	effect = { speed = {bonus = 4}},
-	limitation = alien_life_limitations_phagnot,
+	limitation = {},
 	limitation_message_key = "phagnot"
 }
 
@@ -7686,7 +7528,7 @@ ITEM {
     order = "b-a",
     stack_size = 300,
 	effect = { speed = {bonus = 45}},
-	limitation = alien_life_limitations_bhoddos,
+	limitation = {},
 	limitation_message_key = "bhoddos"
 }
 
@@ -7706,7 +7548,7 @@ ITEM {
     order = "b-b",
     stack_size = 300,
 	effect = { speed = {bonus = 50}},
-	limitation = alien_life_limitations_bhoddos,
+	limitation = {},
 	limitation_message_key = "bhoddos"
 }
 
@@ -7726,7 +7568,7 @@ ITEM {
     order = "b-c",
     stack_size = 300,
 	effect = { speed = {bonus = 55}},
-	limitation = alien_life_limitations_bhoddos,
+	limitation = {},
 	limitation_message_key = "bhoddos"
 }
 
@@ -7746,7 +7588,7 @@ ITEM {
     order = "b-d",
     stack_size = 300,
 	effect = { speed = {bonus = 60}},
-	limitation = alien_life_limitations_bhoddos,
+	limitation = {},
 	limitation_message_key = "bhoddos"
 }
 
@@ -7766,7 +7608,7 @@ ITEM {
     order = "x-a",
     stack_size = 300,
 	effect = { speed = {bonus = 1}},
-	limitation = alien_life_limitations_xeno,
+	limitation = {},
 	limitation_message_key = "xeno"
 }
 
@@ -7786,7 +7628,7 @@ ITEM {
     order = "x-b",
     stack_size = 300,
 	effect = { speed = {bonus = 2}},
-	limitation = alien_life_limitations_xeno,
+	limitation = {},
 	limitation_message_key = "xeno"
 }
 
@@ -7806,7 +7648,7 @@ ITEM {
     order = "x-c",
     stack_size = 300,
 	effect = { speed = {bonus = 3}},
-	limitation = alien_life_limitations_xeno,
+	limitation = {},
 	limitation_message_key = "xeno"
 }
 
@@ -7826,7 +7668,7 @@ ITEM {
     order = "x-d",
     stack_size = 300,
 	effect = { speed = {bonus = 4}},
-	limitation = alien_life_limitations_xeno,
+	limitation = {},
 	limitation_message_key = "xeno"
 }
 
@@ -7842,7 +7684,7 @@ ITEM {
     order = "a",
     stack_size = 300,
 	effect = { speed = {bonus = 35}},
-	limitation = alien_life_limitations_cridren,
+	limitation = {},
 	limitation_message_key = "cridren"
 }
 
@@ -7858,7 +7700,7 @@ ITEM {
     order = "a",
     stack_size = 300,
 	effect = { speed = {bonus = 20}},
-	limitation = alien_life_limitations_antelope,
+	limitation = {},
 	limitation_message_key = "antelope"
 }
 
@@ -7878,7 +7720,7 @@ ITEM {
     order = "za",
     stack_size = 300,
 	effect = { speed = {bonus = 1}},
-	limitation = alien_life_limitations_zipir,
+	limitation = {},
 	limitation_message_key = "zipir"
 }
 
@@ -7898,7 +7740,7 @@ ITEM {
     order = "zb",
     stack_size = 300,
 	effect = { speed = {bonus = 2}},
-	limitation = alien_life_limitations_zipir,
+	limitation = {},
 	limitation_message_key = "zipir"
 }
 
@@ -7918,7 +7760,7 @@ ITEM {
     order = "zc",
     stack_size = 300,
 	effect = { speed = {bonus = 3}},
-	limitation = alien_life_limitations_zipir,
+	limitation = {},
 	limitation_message_key = "zipir"
 }
 
@@ -7938,7 +7780,7 @@ ITEM {
     order = "zd",
     stack_size = 300,
 	effect = { speed = {bonus = 4}},
-	limitation = alien_life_limitations_zipir,
+	limitation = {},
 	limitation_message_key = "zipir"
 }
 
@@ -7958,7 +7800,7 @@ ITEM {
     order = "tr-a",
     stack_size = 300,
 	effect = { speed = {bonus = 40}},
-	limitation = alien_life_limitations_trits,
+	limitation = {},
 	limitation_message_key = "trits"
 }
 
@@ -7978,7 +7820,7 @@ ITEM {
     order = "tr-b",
     stack_size = 300,
 	effect = { speed = {bonus = 45}},
-	limitation = alien_life_limitations_trits,
+	limitation = {},
 	limitation_message_key = "trits"
 }
 
@@ -7998,7 +7840,7 @@ ITEM {
     order = "tr-c",
     stack_size = 300,
 	effect = { speed = {bonus = 50}},
-	limitation = alien_life_limitations_trits,
+	limitation = {},
 	limitation_message_key = "trits"
 }
 
@@ -8018,7 +7860,7 @@ ITEM {
     order = "tr-d",
     stack_size = 300,
 	effect = { speed = {bonus = 55}},
-	limitation = alien_life_limitations_trits,
+	limitation = {},
 	limitation_message_key = "trits"
 }
 
@@ -8038,7 +7880,7 @@ ITEM {
     order = "k-a",
     stack_size = 300,
 	effect = { speed = {bonus = 0.25}},
-	limitation = alien_life_limitations_kicalk,
+	limitation = {},
 	limitation_message_key = "kicalk"
 }
 
@@ -8058,7 +7900,7 @@ ITEM {
     order = "k-b",
     stack_size = 300,
 	effect = { speed = {bonus = 0.5}},
-	limitation = alien_life_limitations_kicalk,
+	limitation = {},
 	limitation_message_key = "kicalk"
 }
 
@@ -8078,7 +7920,7 @@ ITEM {
     order = "k-c",
     stack_size = 300,
 	effect = { speed = {bonus = 1}},
-	limitation = alien_life_limitations_kicalk,
+	limitation = {},
 	limitation_message_key = "kicalk"
 }
 
@@ -8098,7 +7940,7 @@ ITEM {
     order = "k-d",
     stack_size = 300,
 	effect = { speed = {bonus = 1.5}},
-	limitation = alien_life_limitations_kicalk,
+	limitation = {},
 	limitation_message_key = "kicalk"
 }
 
@@ -8118,7 +7960,7 @@ ITEM {
     order = "cad-a",
     stack_size = 300,
 	effect = { speed = {bonus = 6.25}},
-	limitation = alien_life_limitations_cadaveric,
+	limitation = {},
 	limitation_message_key = "cadaveric-arum"
 }
 
@@ -8138,7 +7980,7 @@ ITEM {
     order = "cad-b",
     stack_size = 300,
 	effect = { speed = {bonus = 8.75}},
-	limitation = alien_life_limitations_cadaveric,
+	limitation = {},
 	limitation_message_key = "cadaveric-arum"
 }
 
@@ -8158,7 +8000,7 @@ ITEM {
     order = "cad-c",
     stack_size = 300,
 	effect = { speed = {bonus = 11.25}},
-	limitation = alien_life_limitations_cadaveric,
+	limitation = {},
 	limitation_message_key = "cadaveric-arum"
 }
 
@@ -8178,7 +8020,7 @@ ITEM {
     order = "cad-d",
     stack_size = 300,
 	effect = { speed = {bonus = 15}},
-	limitation = alien_life_limitations_cadaveric,
+	limitation = {},
 	limitation_message_key = "cadaveric-arum"
 }
 
@@ -8198,7 +8040,7 @@ ITEM {
     order = "v-a",
     stack_size = 300,
 	effect = { speed = {bonus = 0.25}},
-	limitation = alien_life_limitations_vrauks,
+	limitation = {},
 	limitation_message_key = "vrauks"
 }
 
@@ -8218,7 +8060,7 @@ ITEM {
     order = "v-b",
     stack_size = 300,
 	effect = { speed = {bonus = 0.38}},
-	limitation = alien_life_limitations_vrauks,
+	limitation = {},
 	limitation_message_key = "vrauks"
 }
 
@@ -8238,7 +8080,7 @@ ITEM {
     order = "v-c",
     stack_size = 300,
 	effect = { speed = {bonus = 0.5}},
-	limitation = alien_life_limitations_vrauks,
+	limitation = {},
 	limitation_message_key = "vrauks"
 }
 
@@ -8258,7 +8100,7 @@ ITEM {
     order = "v-d",
     stack_size = 300,
 	effect = { speed = {bonus = 0.58}},
-	limitation = alien_life_limitations_vrauks,
+	limitation = {},
 	limitation_message_key = "vrauks"
 }
 
@@ -8278,7 +8120,7 @@ ITEM {
     order = "v-a",
     stack_size = 300,
 	effect = { speed = {bonus = 10}},
-	limitation = alien_life_limitations_xyhiphoe,
+	limitation = {},
 	limitation_message_key = "xyhiphoe"
 }
 ITEM {
@@ -8297,7 +8139,7 @@ ITEM {
     order = "v-b",
     stack_size = 300,
 	effect = { speed = {bonus = 20}},
-	limitation = alien_life_limitations_xyhiphoe,
+	limitation = {},
 	limitation_message_key = "xyhiphoe"
 }
 
@@ -8317,7 +8159,7 @@ ITEM {
     order = "v-c",
     stack_size = 300,
 	effect = { speed = {bonus = 30}},
-	limitation = alien_life_limitations_xyhiphoe,
+	limitation = {},
 	limitation_message_key = "xyhiphoe"
 }
 
@@ -8337,7 +8179,7 @@ ITEM {
     order = "v-d",
     stack_size = 300,
 	effect = { speed = {bonus = 40}},
-	limitation = alien_life_limitations_xyhiphoe,
+	limitation = {},
 	limitation_message_key = "xyhiphoe"
 }
 
@@ -8357,7 +8199,7 @@ ITEM {
     order = "k-a",
     stack_size = 300,
 	effect = { speed = {bonus = 2.5}},
-	limitation = alien_life_limitations_korlex,
+	limitation = {},
 	limitation_message_key = "korlex"
 }
 ITEM {
@@ -8376,7 +8218,7 @@ ITEM {
     order = "k-b",
     stack_size = 300,
 	effect = { speed = {bonus = 3.13}},
-	limitation = alien_life_limitations_korlex,
+	limitation = {},
 	limitation_message_key = "korlex"
 }
 
@@ -8396,7 +8238,7 @@ ITEM {
     order = "k-c",
     stack_size = 300,
 	effect = { speed = {bonus = 3.75}},
-	limitation = alien_life_limitations_korlex,
+	limitation = {},
 	limitation_message_key = "korlex"
 }
 
@@ -8416,7 +8258,7 @@ ITEM {
     order = "k-d",
     stack_size = 300,
 	effect = { speed = {bonus = 4.38}},
-	limitation = alien_life_limitations_korlex,
+	limitation = {},
 	limitation_message_key = "korlex"
 }
 
@@ -8435,7 +8277,7 @@ ITEM {
     order = "k-d",
     stack_size = 300,
 	effect = { speed = {bonus = 0.45}},
-	limitation = alien_life_limitations_fawogae,
+	limitation = {},
 	limitation_message_key = "fawogae"
 }
 
@@ -8454,7 +8296,7 @@ ITEM {
     order = "k-d",
     stack_size = 300,
 	effect = { speed = {bonus = 0.95}},
-	limitation = alien_life_limitations_fawogae,
+	limitation = {},
 	limitation_message_key = "fawogae"
 }
 
@@ -8474,7 +8316,7 @@ ITEM {
     order = "k-d",
     stack_size = 300,
 	effect = { speed = {bonus = 1.45}},
-	limitation = alien_life_limitations_fawogae,
+	limitation = {},
 	limitation_message_key = "fawogae"
 }
 
@@ -8494,7 +8336,7 @@ ITEM {
     order = "k-d",
     stack_size = 300,
 	effect = { speed = {bonus = 1.95}},
-	limitation = alien_life_limitations_fawogae,
+	limitation = {},
 	limitation_message_key = "fawogae"
 }
 
@@ -8514,7 +8356,7 @@ ITEM {
     order = "k-d",
     stack_size = 300,
 	effect = { speed = {bonus = 0.5}},
-	limitation = alien_life_limitations_moondrop,
+	limitation = {},
 	limitation_message_key = "moondrop"
 }
 
@@ -8534,7 +8376,7 @@ ITEM {
     order = "k-d",
     stack_size = 300,
 	effect = { speed = {bonus = 1}},
-	limitation = alien_life_limitations_moondrop,
+	limitation = {},
 	limitation_message_key = "moondrop"
 }
 
@@ -8554,7 +8396,7 @@ ITEM {
     order = "k-d",
     stack_size = 300,
 	effect = { speed = {bonus = 1.5}},
-	limitation = alien_life_limitations_moondrop,
+	limitation = {},
 	limitation_message_key = "moondrop"
 }
 
@@ -8574,7 +8416,7 @@ ITEM {
     order = "k-d",
     stack_size = 300,
 	effect = { speed = {bonus = 2}},
-	limitation = alien_life_limitations_moondrop,
+	limitation = {},
 	limitation_message_key = "moondrop"
 }
 
@@ -8638,7 +8480,7 @@ ITEM {
     order = "cg-a",
     stack_size = 300,
 	effect = { speed = {bonus = 0.5}},
-	limitation = alien_life_limitations_cottongut,
+	limitation = {},
 	limitation_message_key = "cottongut"
 }
 
@@ -8658,7 +8500,7 @@ ITEM {
     order = "cg-b",
     stack_size = 300,
 	effect = { speed = {bonus = 1}},
-	limitation = alien_life_limitations_cottongut,
+	limitation = {},
 	limitation_message_key = "cottongut"
 }
 
@@ -8678,7 +8520,7 @@ ITEM {
     order = "cg-c",
     stack_size = 300,
 	effect = { speed = {bonus = 1.5}},
-	limitation = alien_life_limitations_cottongut,
+	limitation = {},
 	limitation_message_key = "cottongut"
 }
 
@@ -8698,7 +8540,7 @@ ITEM {
     order = "cg-d",
     stack_size = 300,
 	effect = { speed = {bonus = 2}},
-	limitation = alien_life_limitations_cottongut,
+	limitation = {},
 	limitation_message_key = "cottongut"
 }
 
@@ -8722,7 +8564,7 @@ ITEM {
     order = "g-a",
     stack_size = 300,
 	effect = { speed = {bonus = 7.5}},
-	limitation = alien_life_limitations_guar,
+	limitation = {},
 	limitation_message_key = "guar"
 }
 
@@ -8742,7 +8584,7 @@ ITEM {
     order = "g-b",
     stack_size = 300,
 	effect = { speed = {bonus = 15}},
-	limitation = alien_life_limitations_guar,
+	limitation = {},
 	limitation_message_key = "guar"
 }
 
@@ -8762,7 +8604,7 @@ ITEM {
     order = "g-c",
     stack_size = 300,
 	effect = { speed = {bonus = 30}},
-	limitation = alien_life_limitations_guar,
+	limitation = {},
 	limitation_message_key = "guar"
 }
 
@@ -8782,7 +8624,7 @@ ITEM {
     order = "g-d",
     stack_size = 300,
 	effect = { speed = {bonus = 60}},
-	limitation = alien_life_limitations_guar,
+	limitation = {},
 	limitation_message_key = "guar"
 }
 
@@ -8804,7 +8646,7 @@ ITEM {
     order = "q-a",
     stack_size = 300,
 	effect = { speed = {bonus = 3.75}},
-	limitation = alien_life_limitations_arqad,
+	limitation = {},
 	limitation_message_key = "arqad"
 }
 
@@ -8824,7 +8666,7 @@ ITEM {
     order = "q-b",
     stack_size = 300,
 	effect = { speed = {bonus = 5}},
-	limitation = alien_life_limitations_arqad,
+	limitation = {},
 	limitation_message_key = "arqad"
 }
 
@@ -8844,7 +8686,7 @@ ITEM {
     order = "q-c",
     stack_size = 300,
 	effect = { speed = {bonus = 6.25}},
-	limitation = alien_life_limitations_arqad,
+	limitation = {},
 	limitation_message_key = "arqad"
 }
 
@@ -8864,7 +8706,7 @@ ITEM {
     order = "q-d",
     stack_size = 300,
 	effect = { speed = {bonus = 7.5}},
-	limitation = alien_life_limitations_arqad,
+	limitation = {},
 	limitation_message_key = "arqad"
 }
 

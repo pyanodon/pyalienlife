@@ -36,7 +36,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='dhilmos-egg', amount ="+1"},
+                    {name='dhilmos-egg', add_amount = "1"},
 				},
 			crafting_speed = 70,
 			tech = 'dhilmos-mk02'
@@ -52,7 +52,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='dhilmos-egg', amount ="+1"},
+                    {name='dhilmos-egg', add_amount = "1"},
 				},
 			crafting_speed = 55,
 			tech = 'dhilmos-mk03'
@@ -65,7 +65,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='dhilmos-egg', amount ="+1"},
+                    {name='dhilmos-egg', add_amount = "1"},
 				},
 			crafting_speed = 50,
 			tech = 'dhilmos-mk04'
@@ -129,7 +129,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='dhilmos-egg', amount ="+1"},
+                    {name='dhilmos-egg', add_amount = "1"},
 				},
 			crafting_speed = 40,
 			tech = 'pheromones'
@@ -142,7 +142,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='dhilmos-egg', amount ="+1"},
+                    {name='dhilmos-egg', add_amount = "1"},
 				},
 			crafting_speed = 30,
 			tech = 'pheromones'
@@ -158,7 +158,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='dhilmos-egg', amount ="+1"},
+                    {name='dhilmos-egg', add_amount = "1"},
 				},
 			crafting_speed = 20,
 			tech = 'pheromones'
@@ -171,7 +171,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='dhilmos-egg', amount ="+1"},
+                    {name='dhilmos-egg', add_amount = "1"},
 				},
 			crafting_speed = 15,
 			tech = 'pheromones'

@@ -114,7 +114,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='scrondrix-pup', amount ='+1'},
+					{name='scrondrix-pup', add_amount = '1'},
 				},
 			crafting_speed = 120,
 			tech = 'pheromones',
@@ -142,7 +142,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='scrondrix-pup', amount ='+2'},
+					{name='scrondrix-pup', add_amount = '2'},
 				},
 			crafting_speed =100,
 			tech = 'pheromones',
@@ -157,7 +157,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='scrondrix-pup', amount ='+2'},
+					{name='scrondrix-pup', add_amount = '2'},
 				},
 			crafting_speed = 100,
 			tech = 'pheromones',

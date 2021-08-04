@@ -86,7 +86,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='yotoi', amount ="+8"}
+					{name='yotoi', add_amount = "8"}
 				},
 			crafting_speed = 35,
 			tech = 'yotoi-mk04'
@@ -102,7 +102,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='yotoi', amount ="+2"}
+					{name='yotoi', add_amount = "2"}
 				},
 			crafting_speed = 35,
 			tech = 'yotoi-mk04'
@@ -117,7 +117,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='yotoi', amount ="+3"}
+					{name='yotoi', add_amount = "3"}
 				},
 			crafting_speed = 30,
 			tech = 'yotoi-mk04'
@@ -132,7 +132,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='yotoi', amount ="+10"}
+					{name='yotoi', add_amount = "10"}
 				},
 			crafting_speed = 20,
 			tech = 'yotoi-mk04'

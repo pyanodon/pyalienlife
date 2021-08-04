@@ -4,7 +4,7 @@ local fun = require("prototypes/functions/functions")
 fun.autorecipes {
     name = 'ralesias',
 	category = 'ralesia',
-	module_limitations = 'ralesias',
+	module_limitations = 'ralesia',
 	subgroup = 'py-alienlife-ralesia',
     order = 'a',
     mats =

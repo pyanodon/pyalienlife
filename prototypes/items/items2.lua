@@ -158,7 +158,7 @@ ITEM {
     order = "xa-a",
     stack_size = 300,
 	effect = { speed = {bonus = 2}},
-	limitation = alien_life_limitations_simik,
+	limitation = {},
 	limitation_message_key = "Simik"
 }
 
@@ -178,7 +178,7 @@ ITEM {
     order = "xa-b",
     stack_size = 300,
 	effect = { speed = {bonus = 4}},
-	limitation = alien_life_limitations_simik,
+	limitation = {},
 	limitation_message_key = "Simik"
 }
 
@@ -198,7 +198,7 @@ ITEM {
     order = "xa-c",
     stack_size = 300,
 	effect = { speed = {bonus = 6}},
-	limitation = alien_life_limitations_simik,
+	limitation = {},
 	limitation_message_key = "Simik"
 }
 
@@ -218,7 +218,7 @@ ITEM {
     order = "xa-d",
     stack_size = 300,
 	effect = { speed = {bonus = 8}},
-	limitation = alien_life_limitations_simik,
+	limitation = {},
 	limitation_message_key = "Simik"
 }
 
