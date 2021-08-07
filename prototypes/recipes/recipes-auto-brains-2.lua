@@ -26,7 +26,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
                     {name='cage', amount =1},
 				},
 			crafting_speed = 15,
@@ -44,7 +44,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -81,7 +81,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
                     {name='cage', amount =1},
 				},
 			crafting_speed = 15,
@@ -99,7 +99,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -136,7 +136,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -153,7 +153,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -189,7 +189,7 @@ fun.autorecipes {
 					{name='dingrit-spike', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
                     {name='cage', amount =1},
 				},
 			crafting_speed = 15,
@@ -207,7 +207,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -242,7 +242,7 @@ fun.autorecipes {
 					{name='tendon', remove_item = true},
 					{name='arthropod-blood', remove_item = true},
 					{name='brain', remove_item = true},
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
                     {name='cage', amount =1},
 				},
 			crafting_speed = 15,
@@ -260,7 +260,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -295,7 +295,7 @@ fun.autorecipes {
 					{name='tendon', remove_item = true},
 					{name='arthropod-blood', remove_item = true},
 					{name='brain', remove_item = true},
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
                     {name='cage', amount =1},
 				},
 			crafting_speed = 15,
@@ -313,7 +313,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -349,7 +349,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
                     {name='cage', amount =1},
 				},
 			crafting_speed = 15,
@@ -368,7 +368,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='mukmoux-fat', remove_item = true},
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -406,7 +406,7 @@ fun.autorecipes {
 					{name='carapace', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
                     {name='cage', amount =1},
 				},
 			crafting_speed = 15,
@@ -425,7 +425,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='carapace', remove_item = true},
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -461,7 +461,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
                     {name='cage', amount =1},
 				},
 			crafting_speed = 15,
@@ -479,7 +479,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -517,7 +517,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
                     {name='cage', amount =1},
 				},
 			crafting_speed = 15,
@@ -535,7 +535,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -572,7 +572,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -590,7 +590,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='mukmoux-fat', remove_item = true},
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -626,7 +626,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
                     {name='cage', amount =1},
 				},
 			crafting_speed = 15,
@@ -644,7 +644,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -680,7 +680,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='arthropod-blood', remove_item = true},
 					{name='brain', remove_item = true},
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -698,7 +698,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='mukmoux-fat', remove_item = true},
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
 
 				},
 			crafting_speed = 15,
@@ -733,7 +733,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='formic-acid', remove_item = true},
 					{name='brain', remove_item = true},
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
                     {name='cage', amount =1},
 				},
 			crafting_speed = 15,
@@ -751,7 +751,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -785,7 +785,7 @@ fun.autorecipes {
 					{name='sulfuric-acid', remove_item = true},
                     {name='meat', remove_item = true},
                     {name='brain', remove_item = true},
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
                     {name='cage', amount =1},
 				},
 			crafting_speed = 15,
@@ -810,7 +810,7 @@ fun.autorecipes {
 					{name='meat', remove_item = true},
 					{name='cage', remove_item = true},
                     {name='brain', remove_item = true},
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -845,7 +845,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='arthropod-blood', remove_item = true},
 					{name='brain', remove_item = true},
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',
@@ -863,7 +863,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='mukmoux-fat', remove_item = true},
-                    {name='brain', add_amount = '2'},
+                    {name='brain', add_amount = 2},
 				},
 			crafting_speed = 15,
 			tech = 'metamide5',

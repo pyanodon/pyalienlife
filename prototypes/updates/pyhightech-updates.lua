@@ -28,11 +28,11 @@ table.insert(data.raw['assembling-machine']['pulp-mill-mk04'].crafting_categorie
 
 --antelope
 require('prototypes/recipes/antelope/recipes-antelope')
---require('prototypes/recipes/antelope/recipes-auto-antelope')
+require('prototypes/recipes/antelope/recipes-auto-antelope')
 
 --Cadaveric-arum
 require('prototypes/recipes/cadaveric-arum/recipes-cadaveric')
---require('prototypes/recipes/cadaveric-arum/recipes-auto-cadaveric')
+require('prototypes/recipes/cadaveric-arum/recipes-auto-cadaveric')
 require('prototypes/recipes/cadaveric-arum/recipes-arum-megafarm')
 
 --kilcalk
@@ -43,7 +43,7 @@ require('prototypes/recipes/kicalk/recipes-auto-kicalk')
 --Moondrop
 require('prototypes/recipes/moondrop/recipes-moondrop')
 require('prototypes/recipes/moondrop/recipes-auto-moondrop')
---require('prototypes/recipes/moondrop/recipes-auto-moondrop-1')
+--require('prototypes/recipes/moondrop/recipes-moondrop-copper') TODO: SETUP TURD FARM TECHS AGAIN
 
 --(( ORES ))--
 require('prototypes/ores/kicalk')

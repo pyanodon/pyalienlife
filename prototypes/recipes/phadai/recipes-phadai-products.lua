@@ -54,7 +54,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'phadai', add_amount = 5},
-					{name='phadai-food-02'},
+					{name='phadai-food-02', amount = 2},
 					{name='bedding', amount =2},
 				},
 			results =

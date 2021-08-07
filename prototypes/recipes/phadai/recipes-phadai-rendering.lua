@@ -152,7 +152,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='mukmoux-fat', remove_item = true},
-					{name='carapace', amount ='*2'},
+					{name='carapace', amount = 2},
 				},
 			crafting_speed = 15,
 			tech = 'phadai',

@@ -942,15 +942,20 @@ function modify_recipe_tables(item,items_table,previous_item_names, result_table
     --process both result and ingredient tables
     --log(serpent.block(item))
     --log(serpent.block(items_table))
+    --log(serpent.block(previous_item_names))
 
         local name = item.name
         --log(name)
 
+        --[[
         if item.remove_item ~= nil and item.remove_item == true then
+            --log('hit')
             for i, it in pairs(items_table) do
-                it = nil
+                --it = nil
+                items_table[i] = nil
             end
-        elseif previous_item_names[name] ~= true then
+        ]]--
+        if previous_item_names[name] ~= true then
             --log('hit')
             --add new ingredient to table
 
@@ -999,14 +1004,30 @@ function modify_recipe_tables(item,items_table,previous_item_names, result_table
             elseif item.amount_min ~= nil and item.amount_max ~= nil then
                 table.insert(items_table, item)
             end
-        elseif previous_item_names[item.name] == true then
+            --log(serpent.block(items_table))
+        elseif previous_item_names[name] == true then
             --alter existing ingredient
-            if item.amount == nil then
+            if item.remove_item ~= nil and item.remove_item == true then
+                --log('hit')
+                for p, pre in pairs(items_table) do
+                    --log(serpent.block(pre))
+                    if pre.name == name then
+                        items_table[p] = nil
+                        previous_item_names[name] = nil
+                    end
+                end
+            elseif item.amount == nil then
                 if item.add_amount ~= nil then
                     --adding ingredient amount
                     for p, pre in pairs(items_table) do
                         if pre.name == name then
+                            if pre.amount ~= nil then
+                            --log(serpent.block(pre))
                             pre.amount = item.add_amount + pre.amount
+                            elseif pre.amount_min ~= nil and pre.amount_max ~= nil then
+                                pre.amount_min = pre.amount_min + item.add_amount
+                                pre.amount_max = pre.amount_max + item.add_amount
+                            end
                         end
                     end
                     --replace amount_min and amount_max with new values
@@ -1078,7 +1099,7 @@ function overrides.autorecipes(recipe)
     -- log('hit')
     --main details for all recipes
     local name = recipe.name
-    --log(name)
+    log(name)
         --default name for recipes if recipe doesnt provide an override
     local numbered_name
     local category = recipe.category

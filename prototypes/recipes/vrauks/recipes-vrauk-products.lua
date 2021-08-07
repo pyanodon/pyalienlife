@@ -28,12 +28,12 @@ fun.autorecipes {
 				{
                     {name='moss',remove_item = true},
                     {name='biomass',remove_item = true},
-					{name='vrauks-food-01'},
+					{name='vrauks-food-01', amount = 1},
 				},
 			results =
 				{
-					--{'a','*5'}
-					{name='guano', add_amount = '2'}
+
+					{name='guano', add_amount = 2},
 				},
 			crafting_speed = 70,
 			tech = 'vrauks',
@@ -48,8 +48,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					--{'a','*5'}
-					{name='guano', add_amount = '6'}
+
+					{name='guano', add_amount = 6},
 				},
 				crafting_speed = 50,
 				tech = 'vrauks-mk02',
@@ -62,8 +62,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					--{'a','*5'}
-					{name='guano', add_amount = '2'}
+
+					{name='guano', add_amount = 2},
 				},
 				crafting_speed = 45,
 				tech = 'vrauks-mk03',
@@ -76,12 +76,12 @@ fun.autorecipes {
 					{name='raw-fiber',remove_item = true},
 					{name='vrauks-food-01',remove_item = true},
 					{name='bedding',remove_item = true},
-					{name='vrauks-food-02'},
+					{name='vrauks-food-02', amount = 2},
 				},
 			results =
 				{
-					--{'a','*5'}
-					{name='guano', add_amount = '6'}
+
+					{name='guano', add_amount = 6},
 				},
 				crafting_speed = 40,
 				tech = 'vrauks-mk03',
@@ -95,8 +95,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					--{'a','*5'}
-					{name='guano', add_amount = '6'}
+
+					{name='guano', add_amount = 6},
 				},
 				crafting_speed = 25,
 				tech = 'vrauks-mk04',
@@ -109,8 +109,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					--{'a','*5'}
-					{name='guano', add_amount = '2'}
+
+					{name='guano', add_amount = 2},
 				},
 				crafting_speed = 20,
 				tech = 'vrauks-mk04',

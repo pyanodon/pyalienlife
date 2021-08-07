@@ -21,7 +21,7 @@ local fun = require("prototypes/functions/functions")
 			results =
 				{
 					{name='caged-auog', remove_item = true},
-					{name='brain-caged-auog',1},
+					{name='brain-caged-auog', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'nanochondria'
@@ -50,7 +50,7 @@ local fun = require("prototypes/functions/functions")
 			results =
 				{
 					{name='brain-caged-auog', remove_item = true},
-					{name='bone-caged-auog', 1},
+					{name='bone-caged-auog', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'bmp'
@@ -81,7 +81,7 @@ local fun = require("prototypes/functions/functions")
 			results =
 				{
 					{name='bone-caged-auog', remove_item = true},
-					{name='meat-caged-auog', 1},
+					{name='meat-caged-auog', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'anabolic-rna'
@@ -111,7 +111,7 @@ local fun = require("prototypes/functions/functions")
 			results =
 				{
 					{name='meat-caged-auog', remove_item = true},
-					{name='guts-caged-auog', 1},
+					{name='guts-caged-auog', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'antitumor'
@@ -141,7 +141,7 @@ local fun = require("prototypes/functions/functions")
 			results =
 				{
 					{name='guts-caged-auog', remove_item = true},
-					{name='blood-caged-auog', 1},
+					{name='blood-caged-auog', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'recombinant-ery'
@@ -170,7 +170,7 @@ local fun = require("prototypes/functions/functions")
 			results =
 				{
 					{name='blood-caged-auog', remove_item = true},
-					{name='skin-caged-auog', 1},
+					{name='skin-caged-auog', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'reca'
@@ -199,7 +199,7 @@ local fun = require("prototypes/functions/functions")
 			results =
 				{
 					{name='skin-caged-auog', remove_item = true},
-					{name='fat-caged-auog', 1},
+					{name='fat-caged-auog', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'orexigenic'

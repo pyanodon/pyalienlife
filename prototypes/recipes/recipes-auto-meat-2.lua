@@ -27,7 +27,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='meat', add_amount = '2'},
+					{name='meat', add_amount = 2},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -45,7 +45,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='mukmoux-fat', remove_item = true},
-					{name='meat', add_amount = '5'},
+					{name='meat', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -83,7 +83,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='arthropod-blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='meat', add_amount = '2'},
+					{name='meat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -101,7 +101,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bee-venom', remove_item = true},
-					{name='meat', add_amount = '4'},
+					{name='meat', add_amount = 4},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -139,7 +139,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='meat', add_amount = '2'},
+					{name='meat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -157,7 +157,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bonemeal', remove_item = true},
-					{name='meat', add_amount = '6'},
+					{name='meat', add_amount = 6},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -194,7 +194,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='meat', add_amount = '2'},
+					{name='meat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -213,7 +213,7 @@ fun.autorecipes {
 				{
 					{name='bonemeal', remove_item = true},
 					{name='mukmoux-fat', remove_item = true},
-					{name='meat', add_amount = '5'},
+					{name='meat', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -251,7 +251,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='meat', add_amount = '2'},
+					{name='meat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -269,7 +269,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='chitin', remove_item = true},
-					{name='meat', add_amount = '5'},
+					{name='meat', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -306,7 +306,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='meat', add_amount = '2'},
+					{name='meat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -324,7 +324,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', remove_item = true},
-					{name='meat', add_amount = '5'},
+					{name='meat', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -361,7 +361,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='meat', add_amount = '2'},
+					{name='meat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -379,7 +379,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='arthropod-blood', remove_item = true},
-					{name='meat', add_amount = '5'},
+					{name='meat', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -417,7 +417,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='meat', add_amount = '2'},
+					{name='meat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -435,7 +435,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='arthropod-blood', remove_item = true},
-					{name='meat', add_amount = '5'},
+					{name='meat', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -472,7 +472,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='meat', add_amount = '2'},
+					{name='meat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -490,7 +490,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bones', remove_item = true},
-					{name='meat', add_amount = '5'},
+					{name='meat', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -527,7 +527,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='meat', add_amount = '2'},
+					{name='meat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -545,7 +545,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', remove_item = true},
-					{name='meat', add_amount = '5'},
+					{name='meat', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -582,7 +582,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='meat', add_amount = '2'},
+					{name='meat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -600,7 +600,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', remove_item = true},
-					{name='meat', add_amount = '5'},
+					{name='meat', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -637,7 +637,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='meat', add_amount = '2'},
+					{name='meat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -655,7 +655,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='mukmoux-fat', remove_item = true},
-					{name='meat', add_amount = '5'},
+					{name='meat', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -692,7 +692,7 @@ fun.autorecipes {
 					{name='simik-blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='meat', add_amount = '2'},
+					{name='meat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -710,7 +710,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='mukmoux-fat', remove_item = true},
-					{name='meat', add_amount = '3'},
+					{name='meat', add_amount = 3},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -746,7 +746,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='meat', add_amount = '2'},
+					{name='meat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -764,7 +764,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bones', remove_item = true},
-					{name='meat', add_amount = '5'},
+					{name='meat', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -801,7 +801,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='meat', add_amount = '2'},
+					{name='meat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -820,7 +820,7 @@ fun.autorecipes {
 				{
 					{name='skin', remove_item = true},
 					{name='mukmoux-fat', remove_item = true},
-					{name='meat', add_amount = '5'},
+					{name='meat', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -859,7 +859,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='meat', add_amount = '2'},
+					{name='meat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -878,7 +878,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='mukmoux-fat', remove_item = true},
-					{name='meat', add_amount = '5'},
+					{name='meat', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -918,7 +918,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='meat', add_amount = '2'},
+					{name='meat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -937,7 +937,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bonemeal', remove_item = true},
-					{name='meat', add_amount = '5'},
+					{name='meat', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -977,7 +977,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='meat', add_amount = '2'},
+					{name='meat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -997,7 +997,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='chitin', remove_item = true},
-					{name='meat', add_amount = '5'},
+					{name='meat', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -1030,7 +1030,7 @@ fun.autorecipes {
 					{name='shell', remove_item = true},
 					{name='guts', remove_item = true},
 					{name='arthropod-blood', remove_item = true},
-					{name='meat', add_amount = '2'},
+					{name='meat', add_amount = 2},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -1048,7 +1048,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='arthropod-blood', remove_item = true},
-					{name='meat', add_amount = '5'},
+					{name='meat', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',
@@ -1087,7 +1087,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='meat', add_amount = '2'},
+					{name='meat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'myostatin',
@@ -1105,7 +1105,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='mukmoux-fat', remove_item = true},
-					{name='meat', add_amount = '5'},
+					{name='meat', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'myostatin',

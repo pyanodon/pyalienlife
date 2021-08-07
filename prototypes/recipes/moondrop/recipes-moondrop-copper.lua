@@ -12,9 +12,9 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='moondrop-seeds'},
+                    {name='moondrop-seeds', amount = 1},
                     {name='copper-ore', amount = 5},
-					{name='water'},
+					{name='water', amount = 100},
 				},
 			results =
 				{
@@ -27,13 +27,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='moondrop-seeds', add_amount = '1'},
-					{name='hydrogen', amount ='*10'},
+                    {name='moondrop-seeds', add_amount = 1},
+					{name='hydrogen', amount = 100},
 				},
 			results =
 				{
-					--{'a','*5'}
-					{name='moondrop', add_amount = '1'}
+					{name='moondrop', add_amount = 1}
 				},
                 crafting_speed = 120,
                 name = 'moondrop-2a',
@@ -42,13 +41,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='moondrop-seeds', add_amount = '1'},
-                    {name='soil', add_amount = '15'},
+                    {name='moondrop-seeds', add_amount = 1},
+                    {name='soil', add_amount = 15},
 				},
 			results =
 				{
-					--{'a','*7'},
-					{name='moondrop', add_amount = '2'}
+					{name='moondrop', add_amount = 2}
 				},
                 crafting_speed = 120,
                 name = 'moondrop-3a',
@@ -57,13 +55,12 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    {name='moondrop-seeds', add_amount = '2'},
+                    {name='moondrop-seeds', add_amount = 2},
                     {name='manure', amount =5},
 				},
 			results =
 				{
-					--{'a','*10'},
-					{name='moondrop', add_amount = '3'}
+					{name='moondrop', add_amount = 3}
 				},
                 crafting_speed = 100,
                 name = 'moondrop-4a',
@@ -72,13 +69,12 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    {name='moondrop-seeds', add_amount = '2'},
+                    {name='moondrop-seeds', add_amount = 2},
                     {name='ash', amount =10},
 				},
 			results =
 				{
-					--{'a','*12'},
-					{name='moondrop', add_amount = '3'}
+					{name='moondrop', add_amount = 3}
 				},
                 crafting_speed = 100,
                 name = 'moondrop-5a',
@@ -87,15 +83,13 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    {name='moondrop-seeds', add_amount = '2'},
+                    {name='moondrop-seeds', add_amount = 2},
 					{name='ash',remove_item = true},
-                    {name='biomass', amount ='*5'},
-                    --{'d'},
+                    {name='biomass', amount = 5},
 				},
 			results =
 				{
-					--{'a','*15'},
-					{name='moondrop', add_amount = '3'}
+					{name='moondrop', add_amount = 3}
 				},
                 crafting_speed = 100,
                 name = 'moondrop-6a',
@@ -104,15 +98,13 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    {name='moondrop-seeds', add_amount = '2'},
+                    {name='moondrop-seeds', add_amount = 2},
 					{name='hydrogen',remove_item = true},
-                    {name='syngas', amount ='*3'},
-                    --{'d'},
+                    {name='syngas', amount = 30},
 				},
 			results =
 				{
-					--{'a','*17'},
-					{name='moondrop', add_amount = '2'}
+					{name='moondrop', add_amount = 2}
 				},
                 crafting_speed = 100,
                 name = 'moondrop-7a',
@@ -130,14 +122,12 @@ fun.autorecipes {
                 {
 			ingredients =
 				{
-                    {name='moondrop-seeds', add_amount = '2'},
-                    {name='pesticide-mk01', add_amount = '1'},
-                    --{'d'},
+                    {name='moondrop-seeds', add_amount = 2},
+                    {name='pesticide-mk01', add_amount = 1},
                 },
 			results =
 				{
-					--{'a','*20'},
-					{name='moondrop', add_amount = '5'}
+					{name='moondrop', add_amount = 5}
 				},
                 crafting_speed = 100,
                 name = 'moondrop-8a',
@@ -152,15 +142,13 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    {name='moondrop-seeds', add_amount = '1'},
+                    {name='moondrop-seeds', add_amount = 1},
 				    {name='syngas',remove_item = true},
-					{name='flue-gas', amount ='*3'},
-                    --{'d'},
+					{name='flue-gas', amount = 30},
                 },
 			results =
 				{
-					--{'a','*20'},
-					{name='moondrop', add_amount = '3'}
+					{name='moondrop', add_amount = 3},
 				},
                 crafting_speed = 100,
                 name = 'moondrop-9a',
@@ -174,14 +162,13 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='pesticide-mk01',remove_item = true},
-                    {name='moondrop-seeds', add_amount = '2'},
-                    {name='pesticide-mk02', add_amount = '1'},
+                    {name='moondrop-seeds', add_amount = 2},
+                    {name='pesticide-mk02', add_amount = 1},
 
                 },
 			results =
 				{
-					--{'a','*20'},
-					{name='moondrop', add_amount = '10'}
+					{name='moondrop', add_amount = 10},
 				},
                 crafting_speed = 100,
                 name = 'moondrop-10a',
@@ -194,15 +181,13 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    {name='moondrop-seeds', add_amount = '2'},
+                    {name='moondrop-seeds', add_amount = 2},
 					{name='manure',remove_item = true},
-                    {name='fertilizer', add_amount = '4'},
+                    {name='fertilizer', add_amount = 4},
 				},
 			results =
 				{
-					--{'a','*25'},
-					--{'a','+3'}
-					{name='moondrop', add_amount = '12'}
+					{name='moondrop', add_amount = 12},
 				},
                 crafting_speed = 85,
                 name = 'moondrop-11a',
@@ -211,15 +196,13 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='moondrop-seeds', add_amount = '1'},
+                    {name='moondrop-seeds', add_amount = 1},
 					{name='flue-gas',remove_item = true},
-                    {name='syngas', amount ='*10'},
+                    {name='syngas', amount = 100},
 				},
 			results =
 				{
-					--{'a','*25'},
-					--{'a','+3'}
-					{name='moondrop', add_amount = '2'}
+					{name='moondrop', add_amount = 2},
 				},
                 crafting_speed = 75,
                 name = 'moondrop-12a',
@@ -237,7 +220,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='moondrop', add_amount = '3'}
+					{name='moondrop', add_amount = 3},
 				},
             crafting_speed = 35,
             name = 'moondrop-13a',
@@ -250,11 +233,11 @@ fun.autorecipes {
 					--{'nitrogen',remove_item = true},
 					--{'manure',remove_item = true},
 					--{'biomass',remove_item = true},
-					--{'gh',1},
+
 				},
 			results =
 				{
-					{name='moondrop', add_amount = '2'}
+					{name='moondrop', add_amount = 2},
 				},
             crafting_speed = 35,
             name = 'moondrop-14a',
@@ -263,14 +246,14 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='syngas', amount ='*10'},
+					{name='syngas', amount = 100},
 					{name='manure', amount =5},
 					--{'biomass',remove_item = true},
-					--{'gh',1},
+
 				},
 			results =
 				{
-					{name='moondrop', add_amount = '3'}
+					{name='moondrop', add_amount = 3},
 				},
             crafting_speed = 30,
             name = 'moondrop-15a',
@@ -282,11 +265,11 @@ fun.autorecipes {
 					{name='manure',remove_item = true},
 					{name='fertilizer', amount =1},
 					{name='urea', amount =5},
-					--{'gh',1},
+
 				},
 			results =
 				{
-					{name='moondrop', add_amount = '8'}
+					{name='moondrop', add_amount = 8},
 				},
             crafting_speed = 20,
             name = 'moondrop-16a',

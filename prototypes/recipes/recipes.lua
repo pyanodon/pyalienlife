@@ -2058,7 +2058,7 @@ RECIPE {
         {type = "item", name = "stopper", amount = 4},
     },
     results = {
-        {"flask", 4}
+        {type = "item", name = "flask", amount = 4}
     },
     icon = "__pycoalprocessinggraphics__/graphics/icons/mip/glassware-01.png",
     icon_size = 64,

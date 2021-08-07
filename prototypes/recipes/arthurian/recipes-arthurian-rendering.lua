@@ -3,7 +3,7 @@ local fun = require("prototypes/functions/functions")
 ------------------RENDERING------------------
 
 fun.autorecipes {
-    name = 'rendering',
+    name = 'rendering-arthurian',
 	category = 'slaughterhouse-arthurian',
 	--module_limitations = 'arthurian',
 	subgroup = 'py-alienlife-arthurian',

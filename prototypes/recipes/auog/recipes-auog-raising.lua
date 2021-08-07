@@ -22,7 +22,7 @@ fun.autorecipes {
 				{
 					{name= 'auog', amount=2},
 					{name= 'auog-pup', amount_min = 3, amount_max = 6},
-					{name = 'manure', amount_min = 5, amount_max = 12}
+					{name = 'manure', amount_min = 3, amount_max = 8}
 				},
 			crafting_speed = 160,
 			tech = 'auog',

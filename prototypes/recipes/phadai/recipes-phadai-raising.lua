@@ -200,7 +200,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fawogae', amount ='*5'},
+					{name='fawogae', amount = 5},
 				},
 			results =
 				{
@@ -355,7 +355,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='caged-phadai', remove_item = true},
-					{name='brain-caged-phadai',1},
+					{name='brain-caged-phadai', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'nanochondria'
@@ -385,7 +385,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain-caged-phadai', remove_item = true},
-					{name='bone-caged-phadai', 1},
+					{name='bone-caged-phadai', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'bmp'
@@ -416,7 +416,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bone-caged-phadai', remove_item = true},
-					{name='meat-caged-phadai', 1},
+					{name='meat-caged-phadai', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'anabolic-rna'
@@ -446,7 +446,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat-caged-phadai', remove_item = true},
-					{name='guts-caged-phadai', 1},
+					{name='guts-caged-phadai', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'antitumor'
@@ -476,7 +476,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts-caged-phadai', remove_item = true},
-					{name='blood-caged-phadai', 1},
+					{name='blood-caged-phadai', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'recombinant-ery'
@@ -505,7 +505,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood-caged-phadai', remove_item = true},
-					{name='skin-caged-phadai', 1},
+					{name='skin-caged-phadai', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'reca'
@@ -534,7 +534,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin-caged-phadai', remove_item = true},
-					{name='fat-caged-phadai', 1},
+					{name='fat-caged-phadai', amount = 1},
 				},
 			crafting_speed = 80,
 			tech = 'orexigenic'

@@ -3,7 +3,7 @@ local fun = require("prototypes/functions/functions")
 ------------------RENDERING------------------
 
 fun.autorecipes {
-    name = 'rendering',
+    name = 'rendering-arqad',
 	category = 'slaughterhouse-arqad',
 	--module_limitations = 'arqad',
 	subgroup = 'py-alienlife-arqad',

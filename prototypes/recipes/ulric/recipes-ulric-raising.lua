@@ -348,7 +348,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='caged-ulric', remove_item = true},
-					{name='brain-caged-ulric',1},
+					{name='brain-caged-ulric', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'nanochondria'
@@ -378,7 +378,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain-caged-ulric', remove_item = true},
-					{name='bone-caged-ulric', 1},
+					{name='bone-caged-ulric', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'bmp'
@@ -409,7 +409,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bone-caged-ulric', remove_item = true},
-					{name='meat-caged-ulric', 1},
+					{name='meat-caged-ulric', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'anabolic-rna'
@@ -439,7 +439,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat-caged-ulric', remove_item = true},
-					{name='guts-caged-ulric', 1},
+					{name='guts-caged-ulric', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'antitumor'
@@ -469,7 +469,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts-caged-ulric', remove_item = true},
-					{name='blood-caged-ulric', 1},
+					{name='blood-caged-ulric', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'recombinant-ery'
@@ -498,7 +498,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood-caged-ulric', remove_item = true},
-					{name='skin-caged-ulric', 1},
+					{name='skin-caged-ulric', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'reca'
@@ -527,7 +527,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin-caged-ulric', remove_item = true},
-					{name='fat-caged-ulric', 1},
+					{name='fat-caged-ulric', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'orexigenic'

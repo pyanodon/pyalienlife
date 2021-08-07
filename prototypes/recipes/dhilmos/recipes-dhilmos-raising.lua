@@ -309,7 +309,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='dhilmos', remove_item = true},
-					{name='meat-dhilmos', 1},
+					{name='meat-dhilmos', amount = 1},
 				},
 			crafting_speed = 80,
 			tech = 'anabolic-rna'
@@ -339,7 +339,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat-dhilmos', remove_item = true},
-					{name='guts-dhilmos', 1},
+					{name='guts-dhilmos', amount = 1},
 				},
 			crafting_speed = 80,
 			tech = 'antitumor'
@@ -369,7 +369,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts-dhilmos', remove_item = true},
-					{name='blood-dhilmos', 1},
+					{name='blood-dhilmos', amount = 1},
 				},
 			crafting_speed = 80,
 			tech = 'recombinant-ery'
@@ -398,7 +398,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood-dhilmos', remove_item = true},
-					{name='fat-dhilmos', 1},
+					{name='fat-dhilmos', amount = 1},
 				},
 			crafting_speed = 80,
 			tech = 'orexigenic'

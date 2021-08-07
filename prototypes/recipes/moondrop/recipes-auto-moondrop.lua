@@ -34,7 +34,6 @@ fun.autorecipes {
 				},
 			results =
 				{
-					--{'a','*7'},
 					{name='moondrop', add_amount = 4}
 				},
 				crafting_speed = 120,
@@ -49,11 +48,9 @@ fun.autorecipes {
 					{name='ash', amount = 10},
 					{name='fertilizer', amount = 10},
                     {name='biomass', amount = 8},
-                    --{'d'},
 				},
 			results =
 				{
-					--{'a','*15'},
 					{name='moondrop', add_amount = 8}
 				},
 				crafting_speed = 100,

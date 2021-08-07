@@ -168,7 +168,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cottongut', add_amount = '3'},
+					{name='cottongut', add_amount = 3},
 				},
 			crafting_speed = 30,
 			tech = 'growth-hormone'
@@ -181,7 +181,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cottongut', add_amount = '3'},
+					{name='cottongut', add_amount = 3},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -195,7 +195,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='cottongut', add_amount = '3'},
+					{name='cottongut', add_amount = 3},
 				},
 			crafting_speed = 90,
 			tech = 'antiviral'
@@ -389,7 +389,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin-cottongut', remove_item = true},
-					{name='fat-cottongut', 1},
+					{name='fat-cottongut', amount = 1},
 				},
 			crafting_speed = 80,
 			tech = 'orexigenic'
@@ -496,7 +496,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='salt', amount ='*10'},
+					{name='salt', amount = 10},
 				},
 			results =
 				{

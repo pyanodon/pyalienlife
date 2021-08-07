@@ -201,7 +201,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='brain-caged-mukmoux',remove_item = true},
-					{name='bonecaged-mukmoux', amount=1},
+					{name='bone-caged-mukmoux', amount=1},
 				},
 			results =
 				{
@@ -235,7 +235,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='bonecaged-mukmoux',remove_item = true},
+					{name='bone-caged-mukmoux',remove_item = true},
 					{name='meat-caged-mukmoux', amount=1},
 				},
 			results =

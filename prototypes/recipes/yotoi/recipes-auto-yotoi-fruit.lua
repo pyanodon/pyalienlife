@@ -99,7 +99,7 @@ fun.autorecipes {
 					--{'nitrogen',remove_item = true},
 					--{'manure',remove_item = true},
 					--{'biomass',remove_item = true},
-					--{'gh',1},
+
 				},
 			results =
 				{
@@ -111,10 +111,10 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='blood-meal', amount ='*1'},
+					{name='blood-meal', amount = 1},
 					{name='manure', amount =5},
 					--{'biomass',remove_item = true},
-					--{'gh',1},
+
 				},
 			results =
 				{
@@ -129,7 +129,7 @@ fun.autorecipes {
 					{name='manure',remove_item = true},
 					{name='fertilizer', amount =1},
 					{name='urea', amount =5},
-					--{'gh',1},
+
 				},
 			results =
 				{

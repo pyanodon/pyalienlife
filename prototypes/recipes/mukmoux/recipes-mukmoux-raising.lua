@@ -351,7 +351,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='caged-mukmoux', remove_item = true},
-					{name='brain-caged-mukmoux',1},
+					{name='brain-caged-mukmoux', amount = 1},
 				},
 			crafting_speed = 30,
 			tech = 'nanochondria'
@@ -381,7 +381,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain-caged-mukmoux', remove_item = true},
-					{name='bonecaged-mukmoux', 1},
+					{name='bone-caged-mukmoux', amount = 1},
 				},
 			crafting_speed = 30,
 			tech = 'bmp'
@@ -411,8 +411,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bonecaged-mukmoux', remove_item = true},
-					{name='meat-caged-mukmoux', 1},
+					{name='bone-caged-mukmoux', remove_item = true},
+					{name='meat-caged-mukmoux', amount = 1},
 				},
 			crafting_speed = 30,
 			tech = 'anabolic-rna'
@@ -442,7 +442,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat-caged-mukmoux', remove_item = true},
-					{name='guts-caged-mukmoux', 1},
+					{name='guts-caged-mukmoux', amount = 1},
 				},
 			crafting_speed = 30,
 			tech = 'antitumor'
@@ -472,7 +472,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts-caged-mukmoux', remove_item = true},
-					{name='blood-caged-mukmoux', 1},
+					{name='blood-caged-mukmoux', amount = 1},
 				},
 			crafting_speed = 30,
 			tech = 'recombinant-ery'
@@ -501,7 +501,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood-caged-mukmoux', remove_item = true},
-					{name='skin-caged-mukmoux', 1},
+					{name='skin-caged-mukmoux', amount = 1},
 				},
 			crafting_speed = 30,
 			tech = 'reca'
@@ -530,7 +530,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin-caged-mukmoux', remove_item = true},
-					{name='fat-caged-mukmoux', 1},
+					{name='fat-caged-mukmoux', amount = 1},
 				},
 			crafting_speed = 30,
 			tech = 'orexigenic'

@@ -149,7 +149,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='pelt', remove_item = true},
-					{name='dingrit-spike', amount ='*1'},
+					{name='dingrit-spike', amount = 1},
 				},
 			crafting_speed = 15,
 			tech = 'dingrits',

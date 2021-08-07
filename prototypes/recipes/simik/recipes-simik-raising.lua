@@ -322,7 +322,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='caged-simik', remove_item = true},
-					{name='brain-caged-simik',1},
+					{name='brain-caged-simik', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'nanochondria'
@@ -352,7 +352,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain-caged-simik', remove_item = true},
-					{name='bone-caged-simik', 1},
+					{name='bone-caged-simik', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'bmp'
@@ -383,7 +383,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bone-caged-simik', remove_item = true},
-					{name='meat-caged-simik', 1},
+					{name='meat-caged-simik', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'anabolic-rna'
@@ -413,7 +413,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat-caged-simik', remove_item = true},
-					{name='guts-caged-simik', 1},
+					{name='guts-caged-simik', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'antitumor'
@@ -443,7 +443,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts-caged-simik', remove_item = true},
-					{name='hotair-caged-simik', 1},
+					{name='hotair-caged-simik', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'antitumor'
@@ -474,7 +474,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='hotair-caged-simik', remove_item = true},
-					{name='blood-caged-simik', 1},
+					{name='blood-caged-simik', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'recombinant-ery'
@@ -503,7 +503,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood-caged-simik', remove_item = true},
-					{name='skin-caged-simik', 1},
+					{name='skin-caged-simik', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'reca'
@@ -530,7 +530,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin-caged-simik', remove_item = true},
-					{name='chitin-caged-simik', 1},
+					{name='chitin-caged-simik', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'reca'
@@ -557,7 +557,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='chitin-caged-simik', remove_item = true},
-					{name='keratin-caged-simik', 1},
+					{name='keratin-caged-simik', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'reca'
@@ -586,7 +586,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='keratin-caged-simik', remove_item = true},
-					{name='fat-caged-simik', 1},
+					{name='fat-caged-simik', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'orexigenic'

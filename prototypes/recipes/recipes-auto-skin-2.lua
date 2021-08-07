@@ -27,7 +27,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='skin', add_amount = '2'},
+					{name='skin', add_amount = 2},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -45,7 +45,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', remove_item = true},
-					{name='skin', add_amount = '5'},
+					{name='skin', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -83,7 +83,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='arthropod-blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='chitin', add_amount = '2'},
+					{name='chitin', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -101,7 +101,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='arthropod-blood', remove_item = true},
-					{name='chitin', add_amount = '4'},
+					{name='chitin', add_amount = 4},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -138,7 +138,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='skin', add_amount = '2'},
+					{name='skin', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -156,7 +156,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', remove_item = true},
-					{name='skin', add_amount = '5'},
+					{name='skin', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -192,7 +192,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='skin', add_amount = '1'},
+					{name='skin', add_amount = 1},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -210,7 +210,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', remove_item = true},
-					{name='skin', add_amount = '3'},
+					{name='skin', add_amount = 3},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -247,7 +247,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='pelt', add_amount = '1'},
+					{name='pelt', add_amount = 1},
 					{name='cage', amount=1},
 				},
                 crafting_speed = 15,
@@ -266,7 +266,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', remove_item = true},
-					{name='pelt', add_amount = '2'},
+					{name='pelt', add_amount = 2},
 					{name='cage', amount=1},
 				},
 			crafting_speed = 15,
@@ -307,7 +307,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='chitin', add_amount = '2'},
+					{name='chitin', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -344,7 +344,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='skin', add_amount = '2'},
+					{name='skin', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -362,7 +362,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', remove_item = true},
-					{name='skin', add_amount = '5'},
+					{name='skin', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -399,7 +399,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='skin', add_amount = '2'},
+					{name='skin', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -417,7 +417,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', remove_item = true},
-					{name='skin', add_amount = '5'},
+					{name='skin', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -455,7 +455,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='skin', add_amount = '2'},
+					{name='skin', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -473,7 +473,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', remove_item = true},
-					{name='skin', add_amount = '5'},
+					{name='skin', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -510,7 +510,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='skin', add_amount = '2'},
+					{name='skin', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -528,7 +528,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', remove_item = true},
-					{name='skin', add_amount = '5'},
+					{name='skin', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -565,7 +565,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='skin', add_amount = '3'},
+					{name='skin', add_amount = 3},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -583,7 +583,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', remove_item = true},
-					{name='skin', add_amount = '5'},
+					{name='skin', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -620,7 +620,7 @@ fun.autorecipes {
 					{name='simik-blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='skin', add_amount = '3'},
+					{name='skin', add_amount = 3},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -638,7 +638,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', remove_item = true},
-					{name='skin', add_amount = '5'},
+					{name='skin', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -676,7 +676,7 @@ fun.autorecipes {
 					{name='simik-blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='chitin', add_amount = '3'},
+					{name='chitin', add_amount = 3},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -694,7 +694,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', remove_item = true},
-					{name='chitin', add_amount = '4'},
+					{name='chitin', add_amount = 4},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -733,7 +733,7 @@ fun.autorecipes {
 					{name='simik-blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='keratin', add_amount = '3'},
+					{name='keratin', add_amount = 3},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -751,7 +751,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', remove_item = true},
-					{name='keratin', add_amount = '3'},
+					{name='keratin', add_amount = 3},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -787,7 +787,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='skin', add_amount = '2'},
+					{name='skin', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -805,7 +805,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', remove_item = true},
-					{name='skin', add_amount = '5'},
+					{name='skin', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -842,7 +842,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='skin', add_amount = '2'},
+					{name='skin', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -860,7 +860,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood', remove_item = true},
-					{name='skin', add_amount = '5'},
+					{name='skin', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -899,7 +899,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='skin', add_amount = '2'},
+					{name='skin', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -918,7 +918,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='arthropod-blood', remove_item = true},
-					{name='skin', add_amount = '5'},
+					{name='skin', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -958,7 +958,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='chitin', add_amount = '3'},
+					{name='chitin', add_amount = 3},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -972,12 +972,12 @@ fun.autorecipes {
 				{
 					{name='brain-caged-vrauks',remove_item = true},
 					{name='caged-vrauks',remove_item = true},
-					{name='skin-caged-vrauks', amount=1},
+					{name='chitin-caged-vrauks', amount=1},
 				},
 			results =
 				{
 					{name='formic-acid', remove_item = true},
-					{name='chitin', add_amount = '5'},
+					{name='chitin', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -1017,7 +1017,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='chitin', add_amount = '5'},
+					{name='chitin', add_amount = 5},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -1037,7 +1037,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='sulfuric-acid', remove_item = true},
-					{name='chitin', add_amount = '10'},
+					{name='chitin', add_amount = 10},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',
@@ -1075,7 +1075,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='skin', add_amount = '4'},
+					{name='skin', add_amount = 4},
 				},
                 crafting_speed = 15,
                 tech = 'double-skin',
@@ -1093,7 +1093,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='arthropod-blood', remove_item = true},
-					{name='skin', add_amount = '8'},
+					{name='skin', add_amount = 8},
 				},
 			crafting_speed = 15,
 			tech = 'double-skin',

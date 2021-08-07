@@ -63,7 +63,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='ash', add_amount = 5},
-                    {name='korlex-food-02'},
+                    {name='korlex-food-02', amount = 2},
                     {name='empty-barrel-milk', add_amount = 3},
 				},
 			results =

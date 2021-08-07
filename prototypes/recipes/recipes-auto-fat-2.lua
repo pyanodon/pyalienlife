@@ -27,7 +27,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='mukmoux-fat', add_amount = '2'},
+					{name='mukmoux-fat', add_amount = 2},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -45,7 +45,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', remove_item = true},
-					{name='mukmoux-fat', add_amount = '5'},
+					{name='mukmoux-fat', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -82,7 +82,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='mukmoux-fat', add_amount = '2'},
+					{name='mukmoux-fat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'fto4',
@@ -100,7 +100,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', remove_item = true},
-					{name='mukmoux-fat', add_amount = '5'},
+					{name='mukmoux-fat', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -136,7 +136,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='mukmoux-fat', add_amount = '2'},
+					{name='mukmoux-fat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'fto4',
@@ -154,7 +154,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', remove_item = true},
-					{name='mukmoux-fat', add_amount = '5'},
+					{name='mukmoux-fat', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -192,7 +192,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='mukmoux-fat', add_amount = '2'},
+					{name='mukmoux-fat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'fto4',
@@ -210,7 +210,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='arthropod-blood', remove_item = true},
-					{name='mukmoux-fat', add_amount = '6'},
+					{name='mukmoux-fat', add_amount = 6},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -247,7 +247,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='mukmoux-fat', add_amount = '2'},
+					{name='mukmoux-fat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'fto4',
@@ -265,7 +265,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', remove_item = true},
-					{name='mukmoux-fat', add_amount = '2'},
+					{name='mukmoux-fat', add_amount = 2},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -302,7 +302,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='mukmoux-fat', add_amount = '2'},
+					{name='mukmoux-fat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'fto4',
@@ -320,7 +320,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', remove_item = true},
-					{name='mukmoux-fat', add_amount = '3'},
+					{name='mukmoux-fat', add_amount = 3},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -357,7 +357,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='mukmoux-fat', add_amount = '2'},
+					{name='mukmoux-fat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'fto4',
@@ -375,7 +375,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', remove_item = true},
-					{name='mukmoux-fat', add_amount = '5'},
+					{name='mukmoux-fat', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -412,7 +412,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='mukmoux-fat', add_amount = '2'},
+					{name='mukmoux-fat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'fto4',
@@ -430,7 +430,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', remove_item = true},
-					{name='mukmoux-fat', add_amount = '4'},
+					{name='mukmoux-fat', add_amount = 4},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -467,7 +467,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='mukmoux-fat', add_amount = '2'},
+					{name='mukmoux-fat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'fto4',
@@ -485,7 +485,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', remove_item = true},
-					{name='mukmoux-fat', add_amount = '5'},
+					{name='mukmoux-fat', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -522,7 +522,7 @@ fun.autorecipes {
 					{name='simik-blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='mukmoux-fat', add_amount = '2'},
+					{name='mukmoux-fat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'fto4',
@@ -540,7 +540,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', remove_item = true},
-					{name='mukmoux-fat', add_amount = '5'},
+					{name='mukmoux-fat', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -576,7 +576,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='mukmoux-fat', add_amount = '3'},
+					{name='mukmoux-fat', add_amount = 3},
 				},
                 crafting_speed = 15,
                 tech = 'fto4',
@@ -594,7 +594,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', remove_item = true},
-					{name='mukmoux-fat', add_amount = '8'},
+					{name='mukmoux-fat', add_amount = 8},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -631,7 +631,7 @@ fun.autorecipes {
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
 					{name='cage', amount=1},
-					{name='mukmoux-fat', add_amount = '2'},
+					{name='mukmoux-fat', add_amount = 2},
 				},
                 crafting_speed = 15,
                 tech = 'fto4',
@@ -649,7 +649,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', remove_item = true},
-					{name='mukmoux-fat', add_amount = '5'},
+					{name='mukmoux-fat', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -688,7 +688,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='mukmoux-fat', add_amount = '3'},
+					{name='mukmoux-fat', add_amount = 3},
 				},
                 crafting_speed = 15,
                 tech = 'fto4',
@@ -707,7 +707,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', remove_item = true},
-					{name='mukmoux-fat', add_amount = '6'},
+					{name='mukmoux-fat', add_amount = 6},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',
@@ -748,7 +748,7 @@ fun.autorecipes {
 					{name='guts', remove_item = true},
 					{name='blood', remove_item = true},
 					{name='brain', remove_item = true},
-					{name='mukmoux-fat', add_amount = '3'},
+					{name='mukmoux-fat', add_amount = 3},
 				},
                 crafting_speed = 15,
                 tech = 'fto4',
@@ -766,7 +766,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin', remove_item = true},
-					{name='mukmoux-fat', add_amount = '5'},
+					{name='mukmoux-fat', add_amount = 5},
 				},
 			crafting_speed = 15,
 			tech = 'fto4',

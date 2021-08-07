@@ -33,8 +33,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='arthurian', remove_item = true},
-					{name='arthurian', probability = 1, amount_min =1, amount_max =2},
+					{name='arthurian', add_amount = 1},
 				},
 			crafting_speed = 30,
 			name = 'arthurian-09',
@@ -44,7 +43,6 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='antiviral', amount =1},
 					{name='gh',remove_item = true},
 				},
 			results =
@@ -60,12 +58,11 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='nanochondria', amount =1},
-					--{name='antiviral',remove_item = true},
 				},
 			results =
 				{
 					{name='arthurian', remove_item = true},
-					{name='brain-caged-arthurian',1},
+					{name='brain-caged-arthurian', amount = 1},
 				},
 			crafting_speed = 80,
 			name = 'arthurian-11',
@@ -75,7 +72,6 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='nanochondria', amount =1},
 					{name='gh', amount =1},
 				},
 			results =
@@ -97,7 +93,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain-caged-arthurian', remove_item = true},
-					{name='bone-caged-arthurian', 1},
+					{name='bone-caged-arthurian', amount = 1},
 				},
 			crafting_speed = 80,
 			name = 'arthurian-13',
@@ -130,7 +126,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bone-caged-arthurian', remove_item = true},
-					{name='meat-caged-arthurian', 1},
+					{name='meat-caged-arthurian', amount = 1},
 				},
 			crafting_speed = 80,
 			name = 'arthurian-15',
@@ -162,7 +158,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat-caged-arthurian', remove_item = true},
-					{name='guts-caged-arthurian', 1},
+					{name='guts-caged-arthurian', amount = 1},
 				},
 			crafting_speed = 80,
 			name = 'arthurian-17',
@@ -194,7 +190,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts-caged-arthurian', remove_item = true},
-					{name='blood-caged-arthurian', 1},
+					{name='blood-caged-arthurian', amount = 1},
 				},
 			crafting_speed = 80,
 			name = 'arthurian-19',
@@ -225,7 +221,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood-caged-arthurian', remove_item = true},
-					{name='skin-caged-arthurian', 1},
+					{name='skin-caged-arthurian', amount = 1},
 				},
 			crafting_speed = 80,
 			name = 'arthurian-21',
@@ -256,7 +252,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin-caged-arthurian', remove_item = true},
-					{name='fat-caged-arthurian', 1},
+					{name='fat-caged-arthurian', amount = 1},
 				},
 			crafting_speed = 80,
 			name = 'arthurian-23',

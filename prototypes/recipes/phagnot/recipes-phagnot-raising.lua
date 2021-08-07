@@ -162,7 +162,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='salt', amount ='*10'},
+					{name='salt', amount = 10},
 				},
 			results =
 				{
@@ -348,7 +348,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='caged-phagnot', remove_item = true},
-					{name='brain-caged-phagnot',1},
+					{name='brain-caged-phagnot', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'nanochondria'
@@ -378,7 +378,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain-caged-phagnot', remove_item = true},
-					{name='bone-caged-phagnot', 1},
+					{name='bone-caged-phagnot', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'bmp'
@@ -409,7 +409,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bone-caged-phagnot', remove_item = true},
-					{name='meat-caged-phagnot', 1},
+					{name='meat-caged-phagnot', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'anabolic-rna'
@@ -439,7 +439,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat-caged-phagnot', remove_item = true},
-					{name='guts-caged-phagnot', 1},
+					{name='guts-caged-phagnot', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'antitumor'
@@ -469,7 +469,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts-caged-phagnot', remove_item = true},
-					{name='blood-caged-phagnot', 1},
+					{name='blood-caged-phagnot', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'recombinant-ery'
@@ -498,7 +498,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood-caged-phagnot', remove_item = true},
-					{name='skin-caged-phagnot', 1},
+					{name='skin-caged-phagnot', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'reca'

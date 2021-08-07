@@ -13,7 +13,7 @@ fun.autorecipes {
 				{
                     {name='fish-food-01', amount =1},
                     {name='phytoplankton', amount =50},
-					{name='pressured-water', amount ='*3000',return_item={name='waste-water', amount= 200}},
+					{name='pressured-water', amount = 3000,return_item={name='waste-water', amount= 200}},
 				},
 			results =
 				{
@@ -159,7 +159,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='xyhiphoe', remove_item = true},
-					{name='meat-xyhiphoe', 1},
+					{name='meat-xyhiphoe', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'anabolic-rna'
@@ -189,7 +189,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat-xyhiphoe', remove_item = true},
-					{name='guts-xyhiphoe', 1},
+					{name='guts-xyhiphoe', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'antitumor'
@@ -219,7 +219,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts-xyhiphoe', remove_item = true},
-					{name='blood-xyhiphoe', 1},
+					{name='blood-xyhiphoe', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'recombinant-ery'
@@ -255,7 +255,7 @@ fun.autorecipes {
 				{
                     {name='fish-food-01', amount =2},
                     {name='phytoplankton', amount =150},
-					{name='pressured-water', amount ='*1000',return_item={name='waste-water', amount= 650}},
+					{name='pressured-water', amount = 1000,return_item={name='waste-water', amount= 650}},
 					--{name='cage', amount=1},
 					{name='saps', amount = 6},
 				},
@@ -329,7 +329,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='fish-food-01',remove_item = true},
-					{name='fish-food-02', amount ='*2'},
+					{name='fish-food-02', amount = 2},
 				},
 			results =
 				{
@@ -386,7 +386,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='xyhiphoe-cub', add_amount = '2'},
+					{name='xyhiphoe-cub', add_amount = 2},
 				},
 			crafting_speed = 120,
 			tech = 'pheromones'

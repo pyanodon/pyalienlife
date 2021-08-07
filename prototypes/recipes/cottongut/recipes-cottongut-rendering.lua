@@ -3,7 +3,7 @@ local fun = require("prototypes/functions/functions")
 ------------------RENDERING------------------
 
 fun.autorecipes {
-    name = 'rendering',
+    name = 'rendering-cottongut',
 	category = 'slaughterhouse-cottongut',
 	--module_limitations = 'cottongut',
 	subgroup = 'py-alienlife-cottongut',

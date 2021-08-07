@@ -280,7 +280,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='caged-xeno', remove_item = true},
-					{name='brain-xeno',1},
+					{name='brain-xeno', amount = 1},
 				},
 			crafting_speed = 80,
 			tech = 'nanochondria'
@@ -310,7 +310,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain-xeno', remove_item = true},
-					{name='bone-xeno', 1},
+					{name='bone-xeno', amount = 1},
 				},
 			crafting_speed = 80,
 			tech = 'bmp'
@@ -341,7 +341,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bone-xeno', remove_item = true},
-					{name='meat-xeno', 1},
+					{name='meat-xeno', amount = 1},
 				},
 			crafting_speed = 80,
 			tech = 'anabolic-rna'
@@ -371,7 +371,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat-xeno', remove_item = true},
-					{name='sulfuric-xeno', 1},
+					{name='sulfuric-xeno', amount = 1},
 				},
 			crafting_speed = 80,
 			tech = 'recombinant-ery'
@@ -400,7 +400,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='sulfuric-xeno', remove_item = true},
-					{name='chitin-xeno', 1},
+					{name='chitin-xeno', amount = 1},
 				},
 			crafting_speed = 80,
 			tech = 'reca'

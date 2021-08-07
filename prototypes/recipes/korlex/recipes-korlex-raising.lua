@@ -317,7 +317,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='caged-korlex', remove_item = true},
-					{name='brain-caged-korlex',1},
+					{name='brain-caged-korlex', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'nanochondria'
@@ -347,7 +347,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain-caged-korlex', remove_item = true},
-					{name='bone-caged-korlex', 1},
+					{name='bone-caged-korlex', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'bmp'
@@ -378,7 +378,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bone-caged-korlex', remove_item = true},
-					{name='meat-caged-korlex', 1},
+					{name='meat-caged-korlex', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'anabolic-rna'
@@ -408,7 +408,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat-caged-korlex', remove_item = true},
-					{name='guts-caged-korlex', 1},
+					{name='guts-caged-korlex', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'antitumor'
@@ -438,7 +438,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts-caged-korlex', remove_item = true},
-					{name='blood-caged-korlex', 1},
+					{name='blood-caged-korlex', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'recombinant-ery'
@@ -467,7 +467,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='blood-caged-korlex', remove_item = true},
-					{name='skin-caged-korlex', 1},
+					{name='skin-caged-korlex', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'reca'
@@ -496,7 +496,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='skin-caged-korlex', remove_item = true},
-					{name='fat-caged-korlex', 1},
+					{name='fat-caged-korlex', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'orexigenic'

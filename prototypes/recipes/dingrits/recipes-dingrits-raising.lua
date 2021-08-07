@@ -156,7 +156,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='yaedols', amount ='*3'},
+					{name='yaedols', amount = 3},
 				},
 			results =
 				{
@@ -310,7 +310,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='dingrits', remove_item = true},
-					{name='brain-caged-dingrits',1},
+					{name='brain-caged-dingrits', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'nanochondria'
@@ -340,7 +340,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='brain-caged-dingrits', remove_item = true},
-					{name='bone-caged-dingrits', 1},
+					{name='bone-caged-dingrits', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'bmp'
@@ -371,7 +371,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='bone-caged-dingrits', remove_item = true},
-					{name='meat-caged-dingrits', 1},
+					{name='meat-caged-dingrits', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'anabolic-rna'
@@ -401,7 +401,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat-caged-dingrits', remove_item = true},
-					{name='guts-caged-dingrits', 1},
+					{name='guts-caged-dingrits', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'antitumor'
@@ -431,7 +431,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts-caged-dingrits', remove_item = true},
-					{name='blood-caged-dingrits', 1},
+					{name='blood-caged-dingrits', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'recombinant-ery'
@@ -456,7 +456,7 @@ fun.autorecipes {
 					{name='gh',remove_item = true},
 					{name='recombinant-ery',remove_item = true},
 					{name='reca', amount =1},
-					{name='cage', add_amount = '1'},
+					{name='cage', add_amount = 1},
 				},
 			results =
 				{
