@@ -6,6 +6,7 @@ fun.autorecipes {
 	module_limitations = 'antelope',
 	subgroup = 'py-alienlife-antelope',
 	order = 'b',
+	main_product = "caged-antelope",
     mats =
 	{
 		{
@@ -55,7 +56,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='sponge', amount = 5},
+					{name='sea-sponge', amount = 5},
 				},
 			results =
 				{
