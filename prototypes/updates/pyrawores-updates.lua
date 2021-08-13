@@ -207,19 +207,54 @@ RECIPE {
     order = "a"
   }:add_unlock("iron-mk02"):add_ingredient({type = "item", name = "silicon", amount = 5}):add_ingredient({type = "item", name = "clay", amount = 1})
 
-RECIPE('casting-gear'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-pipe'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-pipe-ug'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-sticks'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-copper-cable'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-tin-cable'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-engine-unit'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-bolt'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-small-parts'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-niobium-pipe'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-niobium-pipe-underground'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-ht-pipe'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-ht-pipe-underground'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-drill-heads'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-equipment-chassi'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-lead-container'):replace_ingredient('sand-casting','mold')
+local function get_main_product(recipe)
+    if recipe['result'] then
+        return {
+            type = "item",
+            name = recipe['result'],
+            amount = recipe['result_count'] or 1
+        }
+    end
+    print(pairs( recipe ))
+    for _,p in ipairs(recipe['results']) do
+        if p['name'] == recipe['main_product'] then
+            return p
+        end
+    end
+    return recipe['results'][1]
+end
+
+no_mold_buff_recipes = {
+    'casting-gear',
+    'casting-copper-cable',
+    'casting-tin-cable',
+    'casting-small-parts',
+    'casting-equipment-chassi',
+    'casting-lead-container'
+}
+
+for _,r in ipairs(no_mold_buff_recipes) do
+    RECIPE(r):replace_ingredient('sand-casting', 'mold')
+end
+
+mold_buff_recipes = {
+    'casting-pipe',
+    'casting-pipe-ug',
+    'casting-sticks',
+    'casting-engine-unit',
+    'casting-bolt',
+    'casting-niobium-pipe',
+    'casting-niobium-pipe-underground',
+    'casting-ht-pipe',
+    'casting-ht-pipe-underground',
+    'casting-drill-heads'
+ }
+
+for _,r in ipairs(mold_buff_recipes) do
+    rec = RECIPE(r)
+    if rec and rec:is_valid() then
+        main_product = get_main_product(rec)
+        main_product['amount'] = math.ceil( main_product['amount'] * 1.5 )
+        rec:replace_ingredient(main_product['name'], main_product):replace_ingredient('sand-casting', 'mold')
+    end
+end
