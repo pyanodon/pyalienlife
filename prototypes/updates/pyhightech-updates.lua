@@ -155,6 +155,7 @@ data.raw['assembling-machine']['moondrop-greenhouse-mk04'].module_specification.
 RECIPE('harvester'):replace_ingredient("plastic-bar", "biopolymer"):add_ingredient({type = "item", name = "aerogel", amount = 20})
 
 RECIPE('harmonic-absorber'):add_ingredient({type = "item", name = "negasium", amount = 1})
+RECIPE('hyperelastic-material'):add_ingredient({type = "item", name = "hyaline", amount = 1})
 RECIPE('pressured-water'):remove_unlock('fusion-mk01'):add_unlock('coal-processing-1')
 RECIPE('arthurian-pen-mk03'):add_ingredient({type = "item", name = "carbon-nanotube", amount = 15})
 RECIPE('atomizer-mk03'):add_ingredient({type = "item", name = "carbon-nanotube", amount = 20}):add_ingredient({type = "item", name = "paramagnetic-material", amount = 20})
