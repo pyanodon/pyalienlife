@@ -61,6 +61,15 @@ for _, recipe in pairs(data.raw.recipe) do
     r:replace_ingredient('xyhiphoe-blood', 'arthropod-blood')
 end
 
+for _, recipe in pairs(data.raw.recipe) do
+    if recipe.category == "fwf" then
+        table.insert(data.raw.module['tree-mk01'].limitation, recipe.name)
+        table.insert(data.raw.module['tree-mk02'].limitation, recipe.name)
+        table.insert(data.raw.module['tree-mk03'].limitation, recipe.name)
+        table.insert(data.raw.module['tree-mk04'].limitation, recipe.name)
+    end
+end
+
 --remove steel barrel based milk
 data.raw.item['milk-barrel'] = nil
 --data.raw.recipe['fill-milk-barrel'] = nil

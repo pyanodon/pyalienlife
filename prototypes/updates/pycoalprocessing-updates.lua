@@ -24,6 +24,7 @@ data.raw['assembling-machine']['fawogae-plantation-mk04'].crafting_speed = 0.1
 data.raw['assembling-machine']['fawogae-plantation-mk04'].module_specification = {module_slots = 88}
 
 RECIPE("borax-mine"):remove_unlock('energy-1'):set_fields{enabled = true}
+RECIPE("washer"):remove_unlock('energy-1'):set_fields{enabled = true}
 
 --RECIPES--
 RECIPE("ralesia"):remove_unlock('ralesia')
