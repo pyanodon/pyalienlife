@@ -1,5 +1,33 @@
 
+local function create_sh_animal_table(sh_gui, player, event)
+
+end
+
+local function create_slaughterhouse_gui(event)
+    local player = game.players[event.player_index]
+    local sh_gui = player.gui.screen.add(
+        {
+            type = "frame",
+            name = "recipe_menu",
+            direction = "vertical",
+            caption = {'slaughterhouse_gui.gui_title'},
+            style = "inner_frame_in_outer_frame"
+        }
+    )
+    sh_gui.add(
+        {
+            type = "sprite-button",
+            name = "slaughterhouse_close",
+            sprite = "utility/close_fat"
+        }
+    )
+    sh_gui.force_auto_center()
+    create_sh_animal_table(sh_gui, player, event)
+    global.slaughterhouse_gui_open = true
+end
+
 script.on_init(function()
+    global.slaughterhouse_gui_open = false
     global.caravans = {
         outpost_buildings = {},
         caravan_units = {},
@@ -93,10 +121,19 @@ end)
 
 script.on_event(defines.events.on_gui_opened, function(event)
     local E = event
+    local p_index = event.player_index
+    local player = game.players[p_index]
 
         if E.entity ~= nil then
             if E.entity.name == "outpost" then
                 caravan_scheduler_gui(E)
+            elseif string.match(event.entity.name, "slaughterhouse") and E.entity.get_recipe() == nil and
+            global.slaughterhouse_gui_open == false then
+                table.insert(global.current_entity, p_index)
+                global.current_entity[p_index] = E.entity
+                log(serpent.block(player.opened))
+                player.opened[E.entity.name] = nil
+                create_slaughterhouse_gui(E)
             end
         end
 end)

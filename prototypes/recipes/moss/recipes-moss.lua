@@ -43,8 +43,7 @@ RECIPE {
     },
   }:add_unlock("selective-breeding"):add_ingredient({type = "item", name = "urea", amount = 1})
 
---Secondary Upgrade Recipes--
---SUR--
+--mk03--
 --WIP--
   --[[
   RECIPE {
@@ -64,6 +63,9 @@ RECIPE {
         {type = 'item', name = 'moss-mk02', amount = 1},
     },
   }:add_unlock("selective-breeding"):add_ingredient({type = "item", name = "urea", amount = 1})
+
+--mk04--
+--WIP--
 
   RECIPE {
     type = 'recipe',

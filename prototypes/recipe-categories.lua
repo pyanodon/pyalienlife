@@ -262,10 +262,12 @@ data:extend {
         name = "ore-bioreserve"
     },
 	------slaughterhouse------
+    --[[ nothing should be using the slaughterhouse category or it wont added properly to the gui
 	{
         type = "recipe-category",
         name = "slaughterhouse"
     },
+    ]]--
 	{
         type = "recipe-category",
         name = "slaughterhouse-auog"
