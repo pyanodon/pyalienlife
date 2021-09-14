@@ -363,7 +363,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cobalt-fluoride',
-    category = 'mixer',
+    category = 'chemistry',
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1540,7 +1540,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "energy-drink",
-    category = "mixer",
+    category = "chemistry",
     enabled = false,
     energy_required = 5,
     ingredients = {
