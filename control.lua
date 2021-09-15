@@ -127,6 +127,7 @@ script.on_event(defines.events.on_gui_opened, function(event)
         if E.entity ~= nil then
             if E.entity.name == "outpost" then
                 caravan_scheduler_gui(E)
+                --[[
             elseif string.match(event.entity.name, "slaughterhouse") and E.entity.get_recipe() == nil and
             global.slaughterhouse_gui_open == false then
                 table.insert(global.current_entity, p_index)
@@ -134,6 +135,7 @@ script.on_event(defines.events.on_gui_opened, function(event)
                 log(serpent.block(player.opened))
                 player.opened[E.entity.name] = nil
                 create_slaughterhouse_gui(E)
+            ]]--
             end
         end
 end)
