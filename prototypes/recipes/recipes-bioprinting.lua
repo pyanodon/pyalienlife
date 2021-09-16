@@ -995,7 +995,7 @@ RECIPE {
         {type = 'item', name = 'bio-scafold', amount = 1},
     },
     results = {
-        {type = 'item', name = 'carapace', amount = 8},
+        {type = 'item', name = 'carapace', amount = 4},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk02")
@@ -1097,7 +1097,7 @@ RECIPE {
         {type = 'item', name = 'bio-scafold', amount = 6},
     },
     results = {
-        {type = 'item', name = 'venon-gland', amount = 5},
+        {type = 'item', name = 'venon-gland', amount = 2},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk02")
@@ -1131,7 +1131,7 @@ RECIPE {
         {type = 'item', name = 'bio-scafold', amount = 1},
     },
     results = {
-        {type = 'item', name = 'adrenal-cortex', amount = 15},
+        {type = 'item', name = 'adrenal-cortex', amount = 8},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk02")
@@ -1170,7 +1170,7 @@ RECIPE {
         {type = 'item', name = 'immunosupressants', amount = 1},
     },
     results = {
-        {type = 'item', name = 'carapace', amount = 10},
+        {type = 'item', name = 'carapace', amount = 7},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk03")
@@ -1188,7 +1188,7 @@ RECIPE {
         {type = 'item', name = 'immunosupressants', amount = 1},
     },
     results = {
-        {type = 'item', name = 'pelt', amount = 16},
+        {type = 'item', name = 'pelt', amount = 12},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk03")
@@ -1224,7 +1224,7 @@ RECIPE {
         {type = 'item', name = 'immunosupressants', amount = 1},
     },
     results = {
-        {type = 'item', name = 'pineal-gland', amount = 30},
+        {type = 'item', name = 'pineal-gland', amount = 15},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk03")
@@ -1260,7 +1260,7 @@ RECIPE {
         {type = 'item', name = 'immunosupressants', amount = 1},
     },
     results = {
-        {type = 'item', name = 'gas-bladder', amount = 25},
+        {type = 'item', name = 'gas-bladder', amount = 15},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk03")
@@ -1278,7 +1278,7 @@ RECIPE {
         {type = 'item', name = 'immunosupressants', amount = 1},
     },
     results = {
-        {type = 'item', name = 'venon-gland', amount = 8},
+        {type = 'item', name = 'venon-gland', amount = 4},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk03")
