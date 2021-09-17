@@ -27,7 +27,11 @@ local function create_slaughterhouse_gui(event)
 end
 
 script.on_init(function()
+    --slaughterhouse
     global.slaughterhouse_gui_open = false
+    global.current_entity = {}
+
+    --caravan
     global.caravans = {
         outpost_buildings = {},
         caravan_units = {},
