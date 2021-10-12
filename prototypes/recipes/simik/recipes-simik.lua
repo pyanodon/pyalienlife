@@ -97,7 +97,7 @@ RECIPE {
         {type = 'item', name = 'skin', amount = 10},
         {type = 'item', name = 'sulfur', amount = 10},
         {type = 'item', name = 'navens', amount = 1},
-        {type = 'item', name = 'bio-sample', amount = 5},
+        {type = 'item', name = 'native-flora', amount = 10},
         {type = 'item', name = 'yaedols', amount = 2},
         {type = 'item', name = 'starch', amount = 4},
         {type = 'fluid', name = 'olefin', amount = 50},

@@ -10,7 +10,7 @@ RECIPE {
     ingredients =
         {
             {type = 'item', name = 'fawogae-substrate', amount = 10},
-            {type = 'item', name = 'bio-sample', amount = 2},
+            {type = 'item', name = 'native-flora', amount = 5},
             {type = 'item', name = 'plasmids', amount = 1},
             {type = "fluid", name = "depolymerized-organics", amount = 50},
             {type = "item", name = "cottongut", amount = 20}

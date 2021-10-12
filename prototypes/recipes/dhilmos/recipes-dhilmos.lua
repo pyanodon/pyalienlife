@@ -122,7 +122,7 @@ RECIPE {
         {type = 'item', name = 'guts', amount = 5},
         {type = 'item', name = 'skin', amount = 3},
         {type = 'item', name = 'guar-gum', amount = 1},
-        {type = 'item', name = 'biomass', amount = 10},
+        {type = 'item', name = 'native-flora', amount = 10},
         {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
     },
     results = {
@@ -141,7 +141,7 @@ RECIPE {
         {type = 'item', name = 'plastic-bar', amount = 2},
         {type = 'item', name = 'navens', amount = 1},
         {type = 'item', name = 'seaweed', amount = 3},
-        {type = 'item', name = 'bio-sample', amount = 5},
+        {type = 'item', name = 'native-flora', amount = 15},
         {type = 'item', name = 'yotoi-seeds', amount = 10},
         {type = 'item', name = 'guar-gum', amount = 1},
         {type = 'item', name = 'skin', amount = 3},

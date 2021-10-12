@@ -17,7 +17,7 @@ RECIPE {
     ingredients = {
         {type = 'fluid', name = 'water', amount = 50},
         {type = 'item', name = 'log', amount = 2},
-        {type = 'item', name = 'biomass', amount = 2},
+        {type = 'item', name = 'biomass', amount = 5},
     },
     results = {
         {type = 'item', name = 'fungal-substrate', amount = 10},
@@ -2712,3 +2712,18 @@ RECIPE {
         {type = 'item', name = 'earth-generic-sample', amount = 1},
     },
 }
+
+RECIPE {
+    type = 'recipe',
+    name = 'earth-generic-sample',
+    category = 'incubator',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'bio-container', amount = 1},
+        {type = 'item', name = 'native-flora', amount = 15},
+    },
+    results = {
+        {type = 'item', name = 'bio-sample', amount = 1},
+    },
+}:add_unlock("biotech-mk01")

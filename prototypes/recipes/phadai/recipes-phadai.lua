@@ -91,7 +91,7 @@ RECIPE {
         {type = 'item', name = 'plastic-bar', amount = 6},
         {type = 'item', name = 'meat', amount = 10},
         {type = 'item', name = 'bones', amount = 10},
-        {type = 'item', name = 'bio-sample', amount = 5},
+        {type = 'item', name = 'native-flora', amount = 5},
         {type = 'item', name = 'rennea-seeds', amount = 10},
         {type = 'item', name = 'guts', amount = 5},
         {type = 'item', name = 'yotoi-fruit', amount = 5},

@@ -47,15 +47,12 @@ ENTITY {
     },
     allowed_effects = {"consumption", "speed", "pollution"},
     mining_speed = 0.2,
-    energy_source =
-    {
-      type = "burner",
-      fuel_category = "bio-container",
-      effectivity = 1,
-      fuel_inventory_size = 1,
-      emissions_per_minute = 0.06,
+    energy_source = {
+        type = "electric",
+        usage_priority = "secondary-input",
+        emissions_per_minute = 1,
     },
-    energy_usage = "199999W",
+    energy_usage = "100kW",
     mining_power = 1,
     resource_searching_radius = 4.0,
     vector_to_place_result = {0, -3.85},

@@ -66,6 +66,7 @@ RECIPE {
         {type = 'item', name = 'fawogae', amount = 5},
         {type = 'item', name = 'ralesias', amount = 5},
         {type = 'item', name = 'wood-seeds', amount = 10},
+        {type = 'item', name = 'native-flora', amount = 10},
         {type = 'item', name = 'guar', amount = 3},
         {type = 'item', name = 'ash', amount = 10},
         {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
@@ -87,7 +88,7 @@ RECIPE {
         {type = 'item', name = 'ralesias', amount = 5},
         {type = 'item', name = 'wood-seeds', amount = 10},
         {type = 'item', name = 'ash', amount = 10},
-        {type = 'item', name = 'bio-sample', amount = 5},
+        {type = 'item', name = 'native-flora', amount = 15},
         {type = 'item', name = 'guar-gum', amount = 1},
         {type = 'fluid', name = 'arqad-honey', amount = 50},
         {type = 'item', name = 'seaweed', amount = 10},

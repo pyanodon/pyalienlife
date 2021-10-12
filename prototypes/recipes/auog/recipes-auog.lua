@@ -63,6 +63,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'plastic-bar', amount = 2},
+        {type = 'item', name = 'native-flora', amount = 5},
         {type = 'item', name = 'fawogae', amount = 5},
         {type = 'item', name = 'seaweed', amount = 5},
         {type = 'item', name = 'moss', amount = 5},
@@ -83,7 +84,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'plastic-bar', amount = 2},
         {type = 'item', name = 'fawogae', amount = 5},
-        {type = 'item', name = 'bio-sample', amount = 5},
+        {type = 'item', name = 'native-flora', amount = 10},
         {type = 'item', name = 'ralesias', amount = 5},
         {type = 'item', name = 'casein', amount = 10},
         {type = 'item', name = 'wood-seeds', amount = 1},
@@ -224,7 +225,7 @@ RECIPE {
     energy_required = 100,
     ingredients = {
         {type = 'item', name = 'auog', amount = 1},
-        {type = 'item', name = 'biomass', amount = 10},
+        {type = 'item', name = 'native-flora', amount = 10},
         {type = 'item', name = 'moss', amount = 8},
         {type = 'item', name = 'water-barrel', amount = 2},
         {type = 'item', name = 'bedding', amount = 1},

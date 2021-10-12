@@ -39,7 +39,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='empty-comb', amount = 5},
-                    {name='biomass', amount =10},
+                    {name='native-flora', amount =10},
 					{name='saps', amount =4},
 					{name='crude-oil-barrel', amount=2,return_barrel = true},
 				},

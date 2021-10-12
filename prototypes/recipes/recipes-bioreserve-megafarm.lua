@@ -85,7 +85,7 @@ RECIPE {
         {type = 'item', name = 'stone', amount = 1500},
         {type = 'item', name = 'alien-sample01', amount = 2},
         {type = 'item', name = 'lignin', amount = 200},
-        {type = 'item', name = 'biomass', amount = 400},
+        {type = 'item', name = 'native-flora', amount = 400},
     },
     results = {
         {type = 'item', name = 'bioreserve', amount = 1},
@@ -106,7 +106,7 @@ RECIPE {
         {type = 'item', name = 'stone', amount = 1500},
         {type = 'item', name = 'alien-sample-02', amount = 2},
         {type = 'item', name = 'lignin', amount = 200},
-        {type = 'item', name = 'biomass', amount = 400},
+        {type = 'item', name = 'native-flora', amount = 400},
     },
     results = {
         {type = 'item', name = 'bioreserve', amount = 1},

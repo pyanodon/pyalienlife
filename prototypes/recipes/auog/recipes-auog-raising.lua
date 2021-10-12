@@ -14,7 +14,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name= 'auog', amount=2},
-                    {name='biomass', amount =20},
+                    {name='native-flora', amount =20},
                     {name='moss', amount =10},
 					{name='water-barrel', amount=5,return_item={name='empty-barrel', amount=5}},
 				},
@@ -160,7 +160,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='auog-pup', amount=4},
-                    {name='biomass', amount =20},
+                    {name='native-flora', amount =20},
                     {name='moss', amount =10},
 					{name='water-barrel', amount=5,return_item={name='empty-barrel', amount=5}},
 				},

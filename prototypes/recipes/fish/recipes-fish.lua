@@ -14,7 +14,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'plastic-bar', amount = 6},
         {type = 'item', name = 'fawogae', amount = 10},
-        {type = 'item', name = 'bio-sample', amount = 2},
+        {type = 'item', name = 'native-flora', amount = 10},
         {type = 'item', name = 'mukmoux-fat', amount = 4},
         {type = 'item', name = 'seaweed', amount = 5},
         {type = 'item', name = 'skin', amount = 5},
@@ -38,7 +38,7 @@ RECIPE {
         {type = 'item', name = 'fawogae', amount = 10},
         {type = 'item', name = 'mukmoux-fat', amount = 4},
         {type = 'item', name = 'yotoi-fruit', amount = 3},
-        {type = 'item', name = 'bio-sample', amount = 5},
+        {type = 'item', name = 'native-flora', amount = 10},
         {type = 'item', name = 'ash', amount = 10},
         {type = 'item', name = 'seaweed', amount = 5},
         {type = 'item', name = 'skin', amount = 5},

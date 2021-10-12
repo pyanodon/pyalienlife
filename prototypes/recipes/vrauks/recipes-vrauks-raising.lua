@@ -14,7 +14,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'cocoon', amount = 4},
-                    {name='biomass', amount =15},
+                    {name='native-flora', amount =15},
                     {name='moss', amount =5},
 				},
 			results =
@@ -28,7 +28,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='biomass',remove_item = true},
+					{name='native-flora',remove_item = true},
 					{name = 'cocoon', add_amount = 3},
 					{name='moss', add_amount = 5},
 					{name='vrauks-food-01', amount = 3},
@@ -129,7 +129,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='vrauks', add_amount = 2},
-                    {name='biomass', amount = 10},
+                    {name='native-flora', amount = 10},
 					{name='vrauks-food-01', amount =2},
 				},
 			results =
