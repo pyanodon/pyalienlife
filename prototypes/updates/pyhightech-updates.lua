@@ -80,7 +80,8 @@ data.raw.item.satellite.rocket_launch_product =
 fun.add_ingredient('satellite', {type = 'item', name = 'cottongut', amount = 150})
 fun.add_ingredient('satellite', {type = 'item', name = 'antimatter', amount = 3})
 
-RECIPE('space-science-pack'):add_ingredient({type = "item", name = "destablilized-toxirus", amount = 1})
+RECIPE('space-science-pack'):add_ingredient({type = "item", name = "destablilized-toxirus", amount = 1}):add_ingredient({type = "item", name = "strangelets", amount = 5})
+
 RECIPE('cottongut-science-utility'):replace_ingredient("perfect-samples", "destablilized-toxirus"):add_ingredient({type = "item", name = "hormonal", amount = 1}):add_ingredient({type = "item", name = "dimensional-gastricorg", amount = 1}):add_ingredient({type = 'item', name = 'intelligent-unit', amount = 1})
 --RECIPE('satellite'):add_unlock('quantum')
 
@@ -297,7 +298,6 @@ RECIPE('antelope-codex'):replace_ingredient("glass", "phosphate-glass")
 RECIPE('nanochondria'):add_ingredient({type = "item", name = "paramagnetic-material", amount = 1}):add_ingredient({type = "item", name = "diamagnetic-material", amount = 1})
 RECIPE('quantum-vortex-storage-system'):add_ingredient({type = "item", name = "strangelets", amount = 2})
 RECIPE('nv-center'):add_ingredient({type = "item", name = "strangelets", amount = 2})
-RECIPE('space-science-pack'):add_ingredient({type = "item", name = "strangelets", amount = 5}):add_ingredient({type = "item", name = "yellow-cake", amount = 2})
 RECIPE('yag-laser-module'):add_ingredient({type = "item", name = "nanofibrils", amount = 3}):add_ingredient({type = "item", name = "cobalt-fluoride", amount = 3})
 RECIPE('parametric-oscilator'):add_ingredient({type = "item", name = "nanofibrils", amount = 3}):change_category('research')
 RECIPE('superconductor-servomechanims'):change_category('research')

@@ -1,3 +1,9 @@
+
+--TECHNOLOGY
+data.raw.technology['lead-mk02'].prerequisites = {}
+data.raw.technology['machines-mk02'].prerequisites = {}--TODO:sort out pyal tech tree issues with pyro
+--TECHNOLOGY("lead-mk02")
+
 --BUILDINDS--
 RECIPE('plankton-farm'):add_ingredient({type = "item", name = "glass", amount = 30})
 RECIPE('ralesia-plantation-mk02'):add_ingredient({type = "item", name = "duralumin", amount = 40}):add_ingredient({type = "item", name = "titanium-plate", amount = 50})
