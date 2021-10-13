@@ -6,7 +6,7 @@ RECIPE {
     enabled = true,
     energy_required = 300,
     ingredients = {
-        {type = 'item', name = 'bio-sample', amount = 10},
+        {type = 'item', name = 'native-flora', amount = 10},
         {type = 'item', name = 'moss-gen', amount = 3},
         {type = 'item', name = 'vrauks-codex', amount = 1},
         {type = 'item', name = 'earth-generic-sample', amount = 2},
