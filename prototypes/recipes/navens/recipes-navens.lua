@@ -57,7 +57,10 @@ RECIPE {
 -----SPORES----
 
 
----UPDATES---
+--Secondary Upgrade Recipes--
+--SUR--
+--WIP--
+
 RECIPE {
     type = 'recipe',
     name = 'navens-mk02',

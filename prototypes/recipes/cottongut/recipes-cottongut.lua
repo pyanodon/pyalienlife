@@ -147,6 +147,10 @@ RECIPE {
     order = 'a',
 }:add_unlock("cottongut-mk01")
 
+--Secondary Upgrade Recipes--
+--SUR--
+--WIP--
+
 RECIPE {
     type = 'recipe',
     name = 'cottongut-pup-mk02-raising',

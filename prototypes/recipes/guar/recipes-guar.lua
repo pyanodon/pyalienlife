@@ -41,7 +41,10 @@ RECIPE {
     },
 }:add_unlock("guar")
 
----UPDATES---
+--Secondary Upgrade Recipes--
+--SUR--
+--WIP--
+
 RECIPE {
     type = 'recipe',
     name = 'guar-mk02',

@@ -166,7 +166,10 @@ RECIPE {
     order = 'a',
 }:add_unlock("growth-hormone")
 
----UPDATES---
+--Secondary Upgrade Recipes--
+--SUR--
+--WIP--
+
 RECIPE {
     type = 'recipe',
     name = 'zipir-mk02',

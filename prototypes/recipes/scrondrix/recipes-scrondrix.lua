@@ -145,7 +145,10 @@ RECIPE {
     main_product = "scrondrix",
 }:add_unlock("scrondrix")
 
----UPDATES---
+--Secondary Upgrade Recipes--
+--SUR--
+--WIP--
+
 RECIPE {
     type = 'recipe',
     name = 'scrondrix-mk02',

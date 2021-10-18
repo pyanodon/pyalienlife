@@ -188,10 +188,10 @@ RECIPE {
     main_product = "dingrits",
 }:add_unlock("dingrits")
 
----charged---
+--Secondary Upgrade Recipes--
+--SUR--
+--WIP--
 
-
----UPDATES---
 RECIPE {
     type = 'recipe',
     name = 'dingrits-mk02',
@@ -268,4 +268,3 @@ RECIPE {
     subgroup = 'py-alienlife-dingrits',
     order = 'zc'
 }:add_unlock("biased-mutation")
-

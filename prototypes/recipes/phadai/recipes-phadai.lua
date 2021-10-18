@@ -197,7 +197,10 @@ RECIPE {
     main_product = "phadai",
 }:add_unlock("phadai")
 
----UPDATES---
+--Secondary Upgrade Recipes--
+--SUR--
+--WIP--
+
 RECIPE {
     type = 'recipe',
     name = 'phadai-mk02',

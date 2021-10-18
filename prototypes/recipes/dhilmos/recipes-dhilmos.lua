@@ -154,8 +154,10 @@ RECIPE {
     },
 }:add_unlock("food-mk02")
 
+--Secondary Upgrade Recipes--
+--SUR--
+--WIP--
 
----UPDATES---
 RECIPE {
     type = 'recipe',
     name = 'dhilmos-mk02',
@@ -232,4 +234,3 @@ RECIPE {
     subgroup = 'py-alienlife-dhilmos',
     order = 'zc'
 }:add_unlock("biased-mutation")
-

@@ -174,7 +174,10 @@ RECIPE {
 }:add_unlock("korlex")
 
 
----UPDATES---
+--Secondary Upgrade Recipes--
+--SUR--
+--WIP--
+
 RECIPE {
     type = 'recipe',
     name = 'korlex-mk02',

@@ -224,9 +224,10 @@ fun.autorecipes {
 	}
 }
 
+--Secondary Upgrade Recipes--
+--SUR--
+--WIP--
 
-
----UPDATES---
 RECIPE {
     type = 'recipe',
     name = 'fish-mk02',

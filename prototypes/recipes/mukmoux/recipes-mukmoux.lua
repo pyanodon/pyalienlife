@@ -189,7 +189,10 @@ RECIPE {
 }:add_unlock("mukmoux")
 
 
----UPDATES---
+--Secondary Upgrade Recipes--
+--SUR--
+--WIP--
+
 RECIPE {
     type = 'recipe',
     name = 'mukmoux-mk02',

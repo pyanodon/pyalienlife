@@ -57,7 +57,10 @@ RECIPE {
 ---breeding---
 
 
----UPDATES---
+--Secondary Upgrade Recipes--
+--SUR--
+--WIP--
+
 RECIPE {
     type = 'recipe',
     name = 'yaedols-mk02',

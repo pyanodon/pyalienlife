@@ -127,7 +127,10 @@ RECIPE {
 }:add_unlock("xeno")
 
 
----UPDATES---
+--Secondary Upgrade Recipes--
+--SUR--
+--WIP--
+
 RECIPE {
     type = 'recipe',
     name = 'xeno-mk02',

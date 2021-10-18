@@ -124,7 +124,10 @@ RECIPE {
     main_product = "kmauts",
 }:add_unlock("kmauts")
 
----UPDATES---
+--Secondary Upgrade Recipes--
+--SUR--
+--WIP--
+
 RECIPE {
     type = 'recipe',
     name = 'kmauts-mk02',

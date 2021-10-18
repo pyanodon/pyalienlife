@@ -185,7 +185,10 @@ RECIPE {
     },
 }:add_unlock("water-invertebrates-mk04")
 
----UPDATES---
+--Secondary Upgrade Recipes--
+--SUR--
+--WIP--
+
 RECIPE {
     type = 'recipe',
     name = 'sea-sponge-mk02',

@@ -1583,11 +1583,6 @@ script.on_event(
 		]]
 		local start_num = global.checked_farm_counter
 			for i = global.checked_farm_counter, global.farm_count_last do
-				--log('hit')
-				--log(i)
-				--log(serpent.block(global.farms))
-				--log(serpent.block(global.farms[global.farm_count[i]]))
-				--log(serpent.block(global.farms[global.farm_count[i]].name))
 				if global.farms[global.farm_count[i]] ~= nil and global.farms[global.farm_count[i]].valid == false then
 				--log('hit')
 					if global.rendered_icons[global.farm_count[i]] ~= nil then
@@ -1601,10 +1596,8 @@ script.on_event(
 						rendering.destroy(global.rendered_icons[global.farm_count[i]])
 						global.rendered_icons[global.farm_count[i]] = nil
 					end
-				elseif
-					global.farms[global.farm_count[i]] ~= nil and global.farms[global.farm_count[i]].valid == true and
-						global.farms[global.farm_count[i]].get_module_inventory().is_empty() == true
-				 then
+				elseif global.farms[global.farm_count[i]] ~= nil and global.farms[global.farm_count[i]].valid == true and
+						global.farms[global.farm_count[i]].get_module_inventory().is_empty() == true then
 					global.farms[global.farm_count[i]].active = false
 					--log(serpent.block(global.farm_count[i]))
 					--log(serpent.block(global.rendered_icons[global.farm_count[i]]))
