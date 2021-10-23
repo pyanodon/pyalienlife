@@ -8,10 +8,23 @@ on:
     branches:
     - master
 
-permissions: read-all
+permissions:
+  contents: read
 
 jobs:
-  test:
-    uses: pyanodon/pyanodontests/.github/workflows/pytest.yml@main
+  test-push:
+    if: ${{ github.event_name == 'push' }} 
+    uses: pyanodon/pyanodontests/.github/workflows/pytest.yml@v1
+    with:
+      repository: ${{ github.repository }}
+      ref: ${{ github.sha }}
+    secrets:
+      token: ${{ secrets.TESTUSER_TOKEN }}
+  test-pull-request:
+    if: ${{ github.event_name == 'pull_request_target' }} 
+    uses: pyanodon/pyanodontests/.github/workflows/pytest.yml@v1
+    with:
+      repository: ${{ github.repository }}
+      ref: ${{ github.event.pull_request.head.sha }}
     secrets:
       token: ${{ secrets.TESTUSER_TOKEN }}
