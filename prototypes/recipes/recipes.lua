@@ -2284,7 +2284,7 @@ RECIPE {
     name = 'pesticide-mk01',
     category = 'crafting-with-fluid',
     enabled = false,
-    energy_required = 5,
+    energy_required = 30,
     ingredients = {
         {type = 'fluid', name = 'pre-pesticide-01', amount = 100},
         {type = 'fluid', name = 'bee-venom', amount = 50},
@@ -2354,7 +2354,7 @@ RECIPE {
     name = 'pesticide-mk02',
     category = 'biofactory',
     enabled = false,
-    energy_required = 5,
+    energy_required = 30,
     ingredients = {
         {type = 'fluid', name = 'pre-pesticide-02', amount = 100},
         {type = 'fluid', name = 'bee-venom', amount = 50},
