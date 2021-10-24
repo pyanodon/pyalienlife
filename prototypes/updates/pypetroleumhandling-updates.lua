@@ -33,7 +33,8 @@ RECIPE('guar-03'):remove_unlock("oil-machines-mk02")
 RECIPE('guar-04'):remove_unlock("oil-machines-mk02")
 RECIPE('guar-05'):remove_unlock("oil-machines-mk02")
 
-
+RECIPE('guar-gum-plantation'):subgroup_order("py-alienlife-buildings-mk01", "a"):remove_unlock("oil-machines-mk01"):add_unlock('guar')
+RECIPE('guar-gum-plantation-mk02'):subgroup_order("py-alienlife-buildings-mk02", "a"):remove_unlock("oil-machines-mk02"):add_unlock('guar-mk02')
 
 RECIPE('retrovirus'):add_ingredient({type = "fluid", name = "hot-air", amount = 50})
 RECIPE('cobalt-fluoride'):remove_ingredient("steam"):add_ingredient({type = "fluid", name = "hot-air", amount = 100})
