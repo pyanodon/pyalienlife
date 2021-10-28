@@ -2714,7 +2714,7 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'earth-generic-sample',
+    name = 'bio-sample',
     category = 'incubator',
     enabled = false,
     energy_required = 10,
