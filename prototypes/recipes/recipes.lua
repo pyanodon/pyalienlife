@@ -2270,7 +2270,6 @@ RECIPE {
         {type = 'fluid', name = 'chloral', amount = 50},
         {type = 'fluid', name = 'sulfuric-acid', amount = 50},
         {type = 'item', name = 'sodium-hydroxide', amount = 4},
-        {type = 'item', name = 'phenol', amount = 10},
         {type = 'fluid', name = 'mcb', amount = 100},
     },
     results = {
@@ -2308,7 +2307,7 @@ RECIPE {
         {type = 'item', name = 'aluminium-plate', amount = 2},
         {type = 'fluid', name = 'ethanol', amount = 50},
         {type = 'fluid', name = 'acidgas', amount = 100},
-        {type = 'fluid', name = 'phosphorous-acid', amount = 100},
+        {type = 'fluid', name = 'nitrogen', amount = 100},
     },
     results = {
         {type = 'fluid', name = 'ethyl-mercaptan', amount = 200},
