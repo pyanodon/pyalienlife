@@ -7,7 +7,7 @@ RECIPE {
     ingredients = {
         {type = 'fluid', name = 'carbon-dioxide', amount = 100},
         {type = 'fluid', name = 'methanol', amount = 100},
-        {type = 'fluid', name = 'ammonia', amount = 100},
+        {type = 'fluid', name = 'nitrogen', amount = 100},
     },
     results = {
         {type = 'fluid', name = 'formamide', amount = 100},
