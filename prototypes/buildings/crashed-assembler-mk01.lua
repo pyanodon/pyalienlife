@@ -20,7 +20,8 @@ ENTITY{
         results =
         {
             {name = 'electronic-circuit', amount = 100},
-            {name = 'iron-plate', amount = 50}
+            {name = 'iron-plate', amount = 50},
+            {name = 'duralumin', amount = 50}
         }
     },
     alert_icon_shift = util.by_pixel(-3, -12),

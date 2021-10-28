@@ -47,7 +47,8 @@ fun.autorecipes {
                 {name='fungal-substrate-03', amount =2},
                 {name='manure', add_amount =5},
                 {name='moss', amount =10},
-                {name='ammonia', amount = 50, fallback = 'nitrogen'},
+-- TODO         {name='ammonia', amount = 50, fallback = 'nitrogen'},
+                {name='nitrogen', amount = 50},
                 {name='urea', amount =10},
             },
         results =
