@@ -2307,7 +2307,7 @@ RECIPE {
         {type = 'item', name = 'aluminium-plate', amount = 2},
         {type = 'fluid', name = 'ethanol', amount = 50},
         {type = 'fluid', name = 'acidgas', amount = 100},
-        {type = 'fluid', name = 'phosphorous-acid', amount = 100},
+        {type = 'fluid', name = 'nitrogen', amount = 100},
     },
     results = {
         {type = 'fluid', name = 'ethyl-mercaptan', amount = 200},
