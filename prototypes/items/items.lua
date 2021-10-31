@@ -5265,6 +5265,31 @@ ITEM {
     stack_size = 20
 }
 
+ITEM {
+    type = "item",
+    name = "raw-fiber",
+    fuel_category = "chemical",
+    fuel_value = "6MJ",
+    icon = "__pyalienlifegraphics__/graphics/icons/raw-fiber.png",
+	icon_size = 32,
+    flags = {},
+    subgroup = "py-alienlife-kicalk",
+    order = "a",
+    stack_size = 500
+}
+ITEM {
+    type = "item",
+    name = "fiber",
+    fuel_category = "chemical",
+    fuel_value = "8MJ",
+    icon = "__pyalienlifegraphics__/graphics/icons/fiber.png",
+	icon_size = 32,
+    flags = {},
+    subgroup = "py-alienlife-kicalk",
+    order = "h",
+    stack_size = 200
+}
+
 ----MODULES----
 
 ITEM {
