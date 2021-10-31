@@ -845,7 +845,7 @@ end
 
 --[[
 script.on_event(defines.events.script_raised_built, function(event)
-log('hit')
+--log('hit')
 
 end)
 ]]--

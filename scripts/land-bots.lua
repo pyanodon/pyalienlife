@@ -188,7 +188,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
                 end
             end
         end
-        log(serpent.block(landbots))
+        --log(serpent.block(landbots))
     end
 )
 

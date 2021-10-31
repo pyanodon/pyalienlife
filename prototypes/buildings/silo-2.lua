@@ -34,7 +34,7 @@ ENTITY {
   type = "rocket-silo",
   name = "silo-2",
   icon = "__base__/graphics/icons/rocket-silo.png",
-  icon_size = 64, icon_mipmaps = 4,
+  icon_size = 64,
   flags = {"placeable-player", "player-creation"},
   crafting_categories = {"rocket-mk01"},
   rocket_parts_required = 3,

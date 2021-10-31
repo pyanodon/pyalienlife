@@ -5,7 +5,7 @@ data:extend({
     type = "fish",
     name = "seaweed",
     icon = "__pyalienlifegraphics__/graphics/icons/seaweed.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     flags = {"placeable-neutral", "not-on-map"},
     minable = {mining_time = 0.4, result = "seaweed", count = 2},
     max_health = 20,

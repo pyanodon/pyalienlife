@@ -8,7 +8,6 @@ data:extend(
     width = 64,
     height = 64,
     --flags = {"gui-icon"},
-    --mipmap_count = 1,
     --scale = 0.5
   },
   {
@@ -19,7 +18,6 @@ data:extend(
     width = 64,
     height = 64,
     --flags = {"gui-icon"},
-    --mipmap_count = 1,
     --scale = 0.5
   },
   {
@@ -30,7 +28,6 @@ data:extend(
     width = 64,
     height = 64,
     --flags = {"gui-icon"},
-    --mipmap_count = 1,
     --scale = 0.5
   },
   {
@@ -41,7 +38,6 @@ data:extend(
     width = 437,
     height = 571,
     --flags = {"gui-icon"},
-    --mipmap_count = 1,
     --scale = 0.5
   },
 }
