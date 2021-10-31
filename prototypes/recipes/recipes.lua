@@ -964,7 +964,7 @@ RECIPE {
         {type = 'item', name = 'propeptides', amount = 10},
         {type = 'item', name = 'chitin', amount = 20},
         {type = 'item', name = 'alien-enzymes', amount = 2},
-        {type = 'item', name = 'pineal-gland', amount = 3},
+        {type = 'item', name = 'pineal-gland', amount = 7},
         {type = 'item', name = 'adrenal-cortex', amount = 10},
         {type = 'fluid', name = 'bacteria-1', amount = 100},
         {type = 'fluid', name = 'arqad-jelly', amount = 150},
