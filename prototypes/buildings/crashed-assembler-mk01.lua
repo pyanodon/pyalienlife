@@ -5,7 +5,7 @@ ENTITY{
     name = 'crash-site-assembling-machine-1-repaired',
     icon = '__pyalienlifegraphics3__/graphics/icons/crash-site-assembling-machine-1-repaired.png',
     icon_size = 64,
-    icon_mipmaps = 4,
+
     flags = {'not-deconstructable', 'hidden', 'not-rotatable'},
     map_color = {r = 0, g = 0.365, b = 0.58, a = 1},
     max_health = 300,

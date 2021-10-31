@@ -19,7 +19,6 @@ for _, ore in pairs(data.raw.resource) do
           x = x,
           y = y,
           --flags = {"gui-icon"},
-          --mipmap_count = 1,
           --scale = 0.5
         }
       })

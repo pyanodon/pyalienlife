@@ -1500,7 +1500,7 @@ data:extend(
 type = "character",
 name = 'ulric-man-mining',
 icon = "__base__/graphics/icons/character.png",
-icon_size = 64, icon_mipmaps = 4,
+icon_size = 64,
 flags = {"placeable-off-grid", "breaths-air", "not-repairable", "not-on-map", "not-flammable"},
 max_health = 250,
 alert_when_damaged = false,
@@ -1786,7 +1786,7 @@ ENTITY {
   type = "character-corpse",
   name = "ulric-man-corpse",
   icon = "__pyalienlifegraphics3__/graphics/entity/ulric-man/corpse.png",
-  icon_size = 64, icon_mipmaps = 4,
+  icon_size = 64,
   minable = {mining_time = 2},
   time_to_live = 15 * 60 * 60, -- 15 minutes
   selection_box = {{-0.7, -0.7}, {0.7, 0.7}},

@@ -944,7 +944,17 @@ function modify_recipe_tables(item,items_table,previous_item_names, result_table
     --log(serpent.block(items_table))
     --log(serpent.block(previous_item_names))
 
-        local name = item.name
+        local name
+        if data.raw.item[item.name] ~= nil then
+            name = item.name
+        elseif type(item.fallback) == string then
+            name = item.fallback
+        elseif type(item.fallback) == table and item.fallback.name ~= nil then
+            name = item.fallback.name
+            if item.fallback.amount ~= nil then
+                --item.amount = item.fallback.amount
+            end
+        end
         --log(name)
 
         --[[
@@ -988,7 +998,7 @@ function modify_recipe_tables(item,items_table,previous_item_names, result_table
             if item.return_barrel ~= nil and item.return_barrel == true then
                 local item_type = 'item'
                 local name = 'empty-barrel'
-                local amount = item.amount
+                local amount = item.amount or item.add_amount
                 return_barrel = {type = item_type, name = name, amount = amount}
                 for r, result in pairs(result_table) do
                     if result.name == name then
@@ -1008,9 +1018,7 @@ function modify_recipe_tables(item,items_table,previous_item_names, result_table
         elseif previous_item_names[name] == true then
             --alter existing ingredient
             if item.remove_item ~= nil and item.remove_item == true then
-                --log('hit')
                 for p, pre in pairs(items_table) do
-                    --log(serpent.block(pre))
                     if pre.name == name then
                         items_table[p] = nil
                         previous_item_names[name] = nil
@@ -1099,7 +1107,7 @@ function overrides.autorecipes(recipe)
     -- log('hit')
     --main details for all recipes
     local name = recipe.name
-    log(name)
+    --log(name)
         --default name for recipes if recipe doesnt provide an override
     local numbered_name
     local category = recipe.category
@@ -1236,7 +1244,6 @@ function overrides.tech_upgrade(tech_upgrade)
                         -- width = 64,
                         -- height = 64,
                         -- flags = {"gui-icon"},
-                        -- mipmap_count = 1,
                         -- scale = 0.5
                     }
                 })

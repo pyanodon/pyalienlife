@@ -62,7 +62,7 @@ fun.autorecipes {
                 {
                     {name='gh', amount =1},
                     {name='urea', add_amount =10},
-                    {name='bacteria-2', amount = 200},
+                    {name='bacteria-2', amount = 200,fallback = 'bacteria-1'},
                     {name='fertilizer', amount =10},
                     {name='biomass', amount =15},
                 },

@@ -452,7 +452,7 @@ require('prototypes/recipes/arqad/recipes-arqad-updates')
 require('prototypes/recipes/arthurian/recipes-arthurian')
 require('prototypes/recipes/arthurian/recipes-arthurian-raising')
 require('prototypes/recipes/arthurian/recipes-arthurian-rendering')
-require('prototypes/recipes/arthurian/recipes-arthurian-growth-enhancement')
+--require('prototypes/recipes/arthurian/recipes-arthurian-growth-enhancement')
 
 --auog
 require('prototypes/recipes/auog/recipes-auog')
@@ -565,7 +565,7 @@ require('prototypes/recipes/sap/recipes-sap-products')
 require('prototypes/recipes/scrondrix/recipes-scrondrix')
 require('prototypes/recipes/scrondrix/recipes-scrondrix-raising')
 require('prototypes/recipes/scrondrix/recipes-scrondrix-rendering')
-require('prototypes/recipes/scrondrix/recipes-scrondrix-growth-enhancement')
+--require('prototypes/recipes/scrondrix/recipes-scrondrix-growth-enhancement')
 
 --Sea-Sponge
 require("prototypes/recipes/sea-sponge/recipes-sea-sponge")
@@ -630,7 +630,7 @@ require('prototypes/recipes/yotoi/recipes-yotoi-fruit-megafarm')
 require('prototypes/recipes/zipir/recipes-zipir')
 require('prototypes/recipes/zipir/recipes-zipir-raising')
 require('prototypes/recipes/zipir/recipes-zipir-rendering')
-require('prototypes/recipes/zipir/recipes-zipir-growth-enhancement')
+--require('prototypes/recipes/zipir/recipes-zipir-growth-enhancement')
 
 require('prototypes/recipes/recipes-atomizer')
 require('prototypes/recipes/recipes-auto-acessories')
