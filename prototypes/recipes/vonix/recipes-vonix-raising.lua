@@ -8,6 +8,7 @@ fun.autorecipes {
 	module_limitations = 'vonix',
 	subgroup = 'py-alienlife-vonix',
 	order = 'c',
+	main_product = "vonix-eggs",
     mats =
 	{
 		--py
@@ -166,11 +167,12 @@ RECIPE {
 --Raising
 
 fun.autorecipes {
-    name = 'vonix',
+    name = 'vonix-raising',
 	category = 'vonix',
 	module_limitations = 'vonix',
 	subgroup = 'py-alienlife-vonix',
 	order = 'b',
+	main_product = "vonix",
     mats =
 	{
 		--py

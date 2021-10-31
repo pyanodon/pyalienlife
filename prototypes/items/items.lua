@@ -5290,6 +5290,17 @@ ITEM {
     stack_size = 200
 }
 
+ITEM {
+    type = "item",
+    name = "urea",
+    icon = "__pyalienlifegraphics__/graphics/icons/urea.png",
+	icon_size = 32,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "d",
+    stack_size = 100
+}
+
 ----MODULES----
 
 ITEM {
