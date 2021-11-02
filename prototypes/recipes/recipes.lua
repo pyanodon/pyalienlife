@@ -503,7 +503,7 @@ RECIPE {
         {type = 'item', name = 'pineal-gland', amount = 3}
     },
     results = {
-        {type = 'item', name = 'gh', amount = 60}
+        {type = 'item', name = 'gh', amount = 50}
     }
 }:add_unlock('growth-hormone')
 
@@ -526,7 +526,7 @@ RECIPE {
         {type = 'item', name = 'pineal-gland', amount = 3}
     },
     results = {
-        {type = 'item', name = 'gh', amount = 100}
+        {type = 'item', name = 'gh', amount = 80}
     }
 }:add_unlock('growth-hormone')
 
@@ -844,7 +844,7 @@ RECIPE {
     name = 'antiviral',
     category = 'vat',
     enabled = false,
-    energy_required = 800,
+    energy_required = 500,
     ingredients = {
         {type = 'item', name = 'alien-enzymes', amount = 1},
         {type = 'item', name = 'brain', amount = 20},
@@ -856,7 +856,7 @@ RECIPE {
         {type = 'fluid', name = 'bee-venom', amount = 50},
     },
     results = {
-        {type = 'item', name = 'antiviral', amount = 500}
+        {type = 'item', name = 'antiviral', amount = 200}
     }
 }:add_unlock('antiviral')
 
@@ -865,7 +865,7 @@ RECIPE {
     name = 'antiviral-02',
     category = 'vat',
     enabled = false,
-    energy_required = 800,
+    energy_required = 500,
     ingredients = {
         {type = 'item', name = 'alien-enzymes', amount = 1},
         {type = 'item', name = 'brain', amount = 20},
@@ -879,7 +879,7 @@ RECIPE {
         {type = 'fluid', name = 'bee-venom', amount = 50},
     },
     results = {
-        {type = 'item', name = 'antiviral', amount = 550}
+        {type = 'item', name = 'antiviral', amount = 250}
     }
 }:add_unlock('antiviral')
 
