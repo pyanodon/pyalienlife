@@ -2,34 +2,29 @@ local fun = require("prototypes/functions/functions")
 
 ------------------RENDERING------------------
 
-fun.autorecipes {
-    name = 'rendering-base',
+RECIPE {
+    name = 'smashing-vrauks',
 	category = 'vrauk-rendering',
 	--module_limitations = 'vrauks',
 	subgroup = 'py-alienlife-vrauks',
 	order = 'b',
-    mats =
-	{
+	ingredients =
 		{
-			ingredients =
-				{
-					{name='vrauks', amount=1},
-				},
-			results =
-				{
-					{name='meat', amount = 3},
-					{name='formic-acid', amount =200},
-					{name='biomass', amount=4},
-				},
-			crafting_speed = 6,
-			name = 'Smashing Vrauks',
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-vrauks.png",
-			icon_size = 64,
-		}
-	}
+			{name='vrauks', amount=1},
+		},
+	results =
+		{
+			{name='meat', amount = 3},
+			{name='formic-acid', amount =200},
+			{name='biomass', amount=4},
+		},
+	crafting_speed = 6,
+	icon = "__pyalienlifegraphics__/graphics/icons/rendering-vrauks.png",
+	icon_size = 64,
+	always_show_made_in = true
 }
 
-log(serpent.block(data.raw.recipe['Smashing Vrauks']))
+--log(serpent.block(data.raw.recipe['Smashing Vrauks']))
 
 fun.autorecipes {
     name = 'rendering',
