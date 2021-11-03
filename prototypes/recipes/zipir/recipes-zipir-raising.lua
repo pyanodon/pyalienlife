@@ -15,7 +15,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='pressured-water', amount = 60,return_item={name='waste-water', amount=200}},
-					{name='stone-wool', amount =2},
+					{name='stone-wool', amount =2, fallback = "fiber"},
 					{name='fish', amount =5},
                     {name='phytoplankton', amount = 100},
 				},
@@ -182,7 +182,7 @@ fun.autorecipes {
 	module_limitations = 'zipir1',
 	subgroup = 'py-alienlife-zipir',
 	order = 'b',
-	main_product = 'zipir',
+	main_product = 'zipir1',
     mats =
 	{
 		{
@@ -191,12 +191,12 @@ fun.autorecipes {
                     {name='pressured-water', amount = 300},
 					{name='zipir-eggs', amount =1},
 					{name='fish', amount =3},
-					{name='stone-wool', amount =3},
+					{name='stone-wool', amount =3, fallback = "fiber"},
                     {name='water', amount = 200,return_item={name='waste-water', amount=100}},
 				},
 			results =
 				{
-                    {name='zipir', probability = 0.7, amount_min =1, amount_max =1},
+                    {name = 'zipir1', probability = 0.7, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 150,
 			tech = 'zipir'
@@ -237,8 +237,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='zipir',remove_item = true},
-					{name='zipir', probability = 0.8, amount_min =1, amount_max =1},
+					{name = 'zipir1',remove_item = true},
+					{name = 'zipir1', probability = 0.8, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 120,
 			tech = 'zipir-mk03'
@@ -268,8 +268,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='zipir',remove_item = true},
-					{name='zipir', probability = 0.9, amount_min =1, amount_max =1},
+					{name = 'zipir1',remove_item = true},
+					{name = 'zipir1', probability = 0.9, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 90,
 			tech = 'zipir-mk04'

@@ -17,7 +17,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='zipir', probability = 1, amount = 1},
+					{name = 'zipir1', probability = 1, amount = 1},
 				},
 			crafting_speed = 30,
 			tech = 'growth-hormone'
@@ -30,8 +30,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='zipir', remove_item = true},
-					{name='zipir', probability = 1, amount_min =1, amount_max =2},
+					{name = 'zipir1', remove_item = true},
+					{name = 'zipir1', probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -59,7 +59,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='zipir', remove_item = true},
+					{name = 'zipir1', remove_item = true},
 					{name='brain-zipir', amount = 1},
 				},
 			crafting_speed = 90,

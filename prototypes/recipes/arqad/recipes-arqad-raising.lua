@@ -165,7 +165,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'arqad-maggot', add_amount = 5},
-                    {name='arqad-honey-barrel', amount = 7,return_barrel = true},
+                    {name='arqad-honey-barrel', add_amount = 3,return_barrel = true},
 				},
 			results =
 				{
@@ -179,7 +179,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'arqad-maggot', amount = 5},
-                    {name='arqad-honey-barrel', amount =10,return_barrel = true},
+                    {name='arqad-honey-barrel', add_amount = 4,return_barrel = true},
 				},
 			results =
 				{

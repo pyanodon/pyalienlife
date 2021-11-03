@@ -1006,7 +1006,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='zipir', amount=1},
+					{name = 'zipir1', amount=1},
 				},
 			results =
 				{
@@ -1032,7 +1032,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='zipir',remove_item = true},
+					{name = 'zipir1',remove_item = true},
 					{name='blood-zipir', amount=1},
 				},
 			results =

@@ -71,7 +71,7 @@ fun.autorecipes {
                     {name='pesticide-mk02', amount = 2},
 					{name = "carbon-dioxide", add_amount = 500},
 					{name = "soil", remove_item = true},
-					{name = "clay", amount = 8},
+					{name = "clay", amount = 8, fallback = "coarse"},
 					{name = "small-lamp", add_amount = 2},
 				},
 			results =

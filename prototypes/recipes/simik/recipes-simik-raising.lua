@@ -16,7 +16,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = "simik", amount = 4},
-                    {name='stone-wool', amount =3},
+                    {name='stone-wool', amount =3, fallback = "fiber"},
                     {name='sea-sponge', amount =1},
 					{name='simik-food-01', amount =2},
 					{name='olefin-barrel', amount=5, return_barrel = true},
@@ -203,7 +203,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = "simik-pup", amount = 5},
-                    {name='stone-wool', amount =3},
+                    {name='stone-wool', amount =3, fallback = "fiber"},
                     {name='sea-sponge', amount =1},
 					{name='simik-food-01', amount =1},
 					{name = 'iron-plate', amount = 10},

@@ -105,7 +105,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='energy-drink', amount = 6},
+					{name='energy-drink', add_amount = 6},
 				},
 			results =
 				{

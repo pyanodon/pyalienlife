@@ -3,7 +3,7 @@ local fun = require("prototypes/functions/functions")
 ------------------RENDERING------------------
 
 fun.autorecipes {
-    name = 'rendering',
+    name = 'rendering-zipir',
 	category = 'slaughterhouse-zipir',
 	--module_limitations = 'zipir',
 	subgroup = 'py-alienlife-zipir',
@@ -13,7 +13,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='zipir', amount=1},
+					{name = 'zipir1', amount=1},
 				},
 			results =
 				{
@@ -58,7 +58,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='zipir', amount=1},
+					--{name = 'zipir1', amount=1},
 				},
 			results =
 				{
@@ -75,7 +75,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='zipir', amount=1},
+					--{name = 'zipir1', amount=1},
 				},
 			results =
 				{
@@ -92,7 +92,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='zipir', amount=1},
+					--{name = 'zipir1', amount=1},
 				},
 			results =
 				{
@@ -109,7 +109,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='zipir', amount=1},
+					--{name = 'zipir1', amount=1},
 				},
 			results =
 				{
@@ -126,7 +126,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					--{name='zipir', amount=1},
+					--{name = 'zipir1', amount=1},
 				},
 			results =
 				{
@@ -143,7 +143,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='zipir',remove_item = true},
+					{name = 'zipir1',remove_item = true},
 					{name='brain-zipir', amount=1},
 				},
 			results =

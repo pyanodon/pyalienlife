@@ -48,7 +48,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='tuuphra-seeds', add_amount = 5},
-                    {name='blood-meal', amount = 2},
+                    {name='blood-meal', amount = 2, fallback = {name = 'blood', amount = 100}},
 					{name='nitrogen', amount = 50},
 					{name='pesticide-mk02', amount = 1},
 				},

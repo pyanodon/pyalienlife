@@ -721,7 +721,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='zipir', amount=1},
+					{name = 'zipir1', amount=1},
 				},
 			results =
 				{

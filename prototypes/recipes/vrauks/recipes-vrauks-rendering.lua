@@ -3,6 +3,7 @@ local fun = require("prototypes/functions/functions")
 ------------------RENDERING------------------
 
 RECIPE {
+	type = "recipe",
     name = 'smashing-vrauks',
 	category = 'vrauk-rendering',
 	--module_limitations = 'vrauks',
@@ -15,7 +16,7 @@ RECIPE {
 	results =
 		{
 			{name='meat', amount = 3},
-			{name='formic-acid', amount =200},
+			{type = "fluid", name='formic-acid', amount =200},
 			{name='biomass', amount=4},
 		},
 	crafting_speed = 6,

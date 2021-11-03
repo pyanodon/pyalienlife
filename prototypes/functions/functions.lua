@@ -945,14 +945,18 @@ function modify_recipe_tables(item,items_table,previous_item_names, result_table
     --log(serpent.block(previous_item_names))
 
         local name
-        if data.raw.item[item.name] ~= nil then
+        if data.raw.item[item.name] ~= nil or data.raw.module[item.name] ~= nil or data.raw.fluid[item.name] then
             name = item.name
-        elseif type(item.fallback) == string then
+        elseif type(item.fallback) == "string" then
+            --log('hit')
             name = item.fallback
-        elseif type(item.fallback) == table and item.fallback.name ~= nil then
+            item.name = name
+        elseif type(item.fallback) == "table" and item.fallback.name ~= nil then
+            --log('hit')
             name = item.fallback.name
+            item.name = name
             if item.fallback.amount ~= nil then
-                --item.amount = item.fallback.amount
+                item.amount = item.fallback.amount
             end
         end
         --log(name)
@@ -967,47 +971,19 @@ function modify_recipe_tables(item,items_table,previous_item_names, result_table
         ]]--
         if previous_item_names[name] ~= true then
             --log('hit')
+            --log(serpent.block(name))
             --add new ingredient to table
 
             --setting ingredient type
             local item_type
             if data.raw.item[name] ~= nil or data.raw.module[name] ~= nil then
+                --log('hit')
                 item_type = 'item'
             elseif data.raw.fluid[name] ~= nil then
+                --log('hit')
                 item_type = 'fluid'
             end
             item.type = item_type
-
-            --add return item to results if it exists
-            local return_item
-            if item.return_item ~= nil then
-                local item_type
-                local name = item.return_item.name
-                local amount = item.return_item.amount or item.amount
-                if data.raw.item[name] ~= nil or data.raw.module[name] ~= nil then
-                    item_type = 'item'
-                elseif data.raw.fluid[name] ~= nil then
-                    item_type = 'fluid'
-                end
-                return_item = {type = item_type, name = name, amount = amount}
-                table.insert(result_table, return_item)
-            end
-
-            --add empty barrels to results
-            local return_barrel
-            if item.return_barrel ~= nil and item.return_barrel == true then
-                local item_type = 'item'
-                local name = 'empty-barrel'
-                local amount = item.amount or item.add_amount
-                return_barrel = {type = item_type, name = name, amount = amount}
-                for r, result in pairs(result_table) do
-                    if result.name == name then
-                        result.amount = result.amount + amount
-                    elseif result.name ~= name then
-                        table.insert(result_table, return_barrel)
-                    end
-                end
-            end
 
            if item.amount ~= nil and type(item.amount) == "number" then
                 table.insert(items_table, item)
@@ -1062,6 +1038,37 @@ function modify_recipe_tables(item,items_table,previous_item_names, result_table
                 end
             end
         end
+
+        --add return item to results if it exists
+        local return_item
+        if item.return_item ~= nil then
+            local item_type
+            local name = item.return_item.name
+            local amount = item.return_item.amount or item.amount or item.add_amount
+            if data.raw.item[name] ~= nil or data.raw.module[name] ~= nil then
+                item_type = 'item'
+            elseif data.raw.fluid[name] ~= nil then
+                item_type = 'fluid'
+            end
+            return_item = {type = item_type, name = name, amount = amount}
+            table.insert(result_table, return_item)
+        end
+
+        --add empty barrels to results
+        local return_barrel
+        if item.return_barrel ~= nil and item.return_barrel == true then
+            local item_type = 'item'
+            local name = 'empty-barrel'
+            local amount = item.amount or item.add_amount
+            return_barrel = {type = item_type, name = name, amount = amount}
+            for r, result in pairs(result_table) do
+                if result.name == name then
+                    result.amount = result.amount + amount
+                elseif result.name ~= name then
+                    table.insert(result_table, return_barrel)
+                end
+            end
+        end
 end
 
 --handles all adjustments for each ingredient and result changes in autorecipe
@@ -1098,7 +1105,7 @@ function recipe_item_builder(ingredients,results,previous_ingredients,previous_r
     for r, result in pairs(results) do
        modify_recipe_tables(result, result_table,previous_result_names)
     end
-    --log(serpent.block(ing_table))
+    log(serpent.block(ing_table))
 
     return ing_table, result_table
 end
@@ -1107,7 +1114,7 @@ function overrides.autorecipes(recipe)
     -- log('hit')
     --main details for all recipes
     local name = recipe.name
-    --log(name)
+    log(name)
         --default name for recipes if recipe doesnt provide an override
     local numbered_name
     local category = recipe.category

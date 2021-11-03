@@ -585,5 +585,10 @@ local recipes_list =
 --adding to module limitation list
 FUN.productivity(recipes_list)
 
---log(serpent.block(data.raw.recipe["arthurian-growth-enhancement-3"]))
---log(serpent.block(data.raw.recipe["arthurian-growth-enhancement-4"]))
+--[[
+log(serpent.block(data.raw.recipe["arqad-egg-nests-1"]))
+log(serpent.block(data.raw.recipe["arqad-egg-nests-2"]))
+log(serpent.block(data.raw.recipe["arqad-egg-nests-3"]))
+log(serpent.block(data.raw.recipe["arqad-egg-nests-4"]))
+log(serpent.block(data.raw.recipe["arqad-egg-nests-5"]))
+]]--

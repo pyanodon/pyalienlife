@@ -77,9 +77,8 @@ RECIPE {
         {type = 'fluid', name = 'slacked-lime', amount = 100},
         {type = 'item', name = 'fertilizer', amount = 3},
         {type = 'item', name = 'iron-ore-dust', amount = 5},
-        {type = "item", name = "powdered-phosphate-rock", amount = 10},
     },
     results = {
         {type = 'item', name = 'seaweed', amount = 120},
     },
-}:add_unlock("botany-mk04")
+}:add_unlock("botany-mk04"):add_ingredient({type = "item", name = "powdered-phosphate-rock", amount = 10})

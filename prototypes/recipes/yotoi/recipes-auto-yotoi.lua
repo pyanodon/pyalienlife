@@ -45,7 +45,7 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    {name='blood-meal', amount = 5},
+                    {name='blood-meal', amount = 5, fallback = {name = 'blood', amount = 200}},
 					{name='carbon-dioxide', amount = 100},
 				},
 			results =

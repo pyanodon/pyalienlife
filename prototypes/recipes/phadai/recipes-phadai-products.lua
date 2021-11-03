@@ -71,7 +71,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'phadai', add_amount = 5},
-					{name='energy-drink', amount =4},
+					{name='energy-drink', add_amount =4},
 				},
 			results =
 				{
