@@ -720,7 +720,7 @@ RECIPE {
     enabled = false,
     energy_required = 8,
     ingredients = {
-        {type = 'item', name = 'grod', amount = 5},
+        {type = 'item', name = 'grod', amount = 8},
     },
     results = {
         {type = 'item', name = 'dried-grods', amount = 5},
