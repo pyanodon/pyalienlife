@@ -1166,14 +1166,11 @@ function overrides.autorecipes(recipe)
         --log(serpent.block(previous_ingredients))
         previous_results = fixed_results
 
-        local number
-        for i = 1, 50 do
-            number = i
-            numbered_name = name .. '-' .. number
-            if data.raw.recipe[numbered_name] == nil then
-                break
-            end
-        end
+        local int = 0
+        repeat
+            int = int + 1
+            numbered_name = name .. '-' .. int
+        until not data.raw.recipe[numbered_name]
 
         --build recipe with stdlib recipe builder
         RECIPE{
