@@ -45,7 +45,6 @@ ENTITY {
     module_specification = {
         module_slots = 8,
     },
-    draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     allowed_effects = {"speed","productivity",'consumption','pollution'},
     crafting_categories = {"ulric"},
