@@ -40,7 +40,6 @@ ENTITY {
     dying_explosion = "big-explosion",
     collision_box = {{-5.2, -5.2}, {5.2, 5.2}},
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
-    draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
         module_slots = 24
