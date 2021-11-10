@@ -1457,7 +1457,7 @@ local arqad_filled =
 	}
 
 for _, recipe in pairs(arqad_filled) do
-	RECIPE(recipe):replace_ingredient('crude-oil-barrel','tall-oil-barrel')
+	RECIPE(recipe):replace_ingredient('filled-canister-crude-oil','tall-oil-barrel')
 end
 
 fun.results_replacer('biofilm-pyht', 'biofilm', 'biofilm', 75)

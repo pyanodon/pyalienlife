@@ -161,6 +161,7 @@ fun.autorecipes {
 	module_limitations = 'xeno',
 	subgroup = 'py-alienlife-xeno',
 	order = 'b',
+	main_product = "caged-xeno",
     mats =
 	{
 		--py

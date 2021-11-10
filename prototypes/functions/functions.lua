@@ -943,6 +943,7 @@ function modify_recipe_tables(item,items_table,previous_item_names, result_table
     --log(serpent.block(item))
     --log(serpent.block(items_table))
     --log(serpent.block(previous_item_names))
+    --log(serpent.block(result_table))
 
         local name
         if data.raw.item[item.name] ~= nil or data.raw.module[item.name] ~= nil or data.raw.fluid[item.name] then
@@ -1057,18 +1058,35 @@ function modify_recipe_tables(item,items_table,previous_item_names, result_table
         --add empty barrels to results
         local return_barrel
         if item.return_barrel ~= nil and item.return_barrel == true then
+            --log('hit')
             local item_type = 'item'
-            local name = 'empty-barrel'
+            local name
+            if string.match(item.name, "barrel") ~= nil then
+                name = 'empty-barrel'
+            elseif string.match(item.name, "canister") ~= nil then
+                name = "empty-fuel-canister"
+            end
             local amount = item.amount or item.add_amount
             return_barrel = {type = item_type, name = name, amount = amount}
-            for r, result in pairs(result_table) do
-                if result.name == name then
-                    result.amount = result.amount + amount
-                elseif result.name ~= name then
+            if next(result_table) ~= nil then
+                local has_barrel = false
+                for r, result in pairs(result_table) do
+                    --log('hit')
+                    if result.name == name then
+                        --log('hit')
+                        result.amount = result.amount + amount
+                        has_barrel = true
+                    end
+                end
+                if has_barrel == false then
                     table.insert(result_table, return_barrel)
                 end
+            else
+                table.insert(result_table, return_barrel)
             end
         end
+
+    --log(serpent.block(result_table))
 end
 
 --handles all adjustments for each ingredient and result changes in autorecipe

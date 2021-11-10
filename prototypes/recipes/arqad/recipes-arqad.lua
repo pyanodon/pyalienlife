@@ -210,7 +210,7 @@ RECIPE {
         {type = 'item', name = 'rennea', amount = 1},
         {type = 'item', name = 'saps', amount = 10},
         {type = 'item', name = 'wax-barrel', amount = 1},
-        {type = 'item', name = 'naphtha-barrel', amount = 3},
+        {type = 'item', name = 'filled-canister-naphtha', amount = 3},
     },
     results = {
         {type = 'item', name = 'arqad-propolis', amount = 2},  --FUTURE USE IN PESTICIDE PRODUCTION--
@@ -370,7 +370,7 @@ RECIPE {
     energy_required = 100,
     ingredients = {
         {type = 'item', name = 'arqad-maggot', amount = 25},
-        {type = 'item', name = 'crude-oil-barrel', amount = 5},
+        {type = 'item', name = 'filled-canister-crude-oil', amount = 5},
         {type = 'item', name = 'raw-coal', amount = 5},
         {type = 'item', name = 'mutant-enzymes-barrel', amount = 2},
         },
@@ -506,7 +506,7 @@ RECIPE {
     energy_required = 100,
     ingredients = {
         {type = 'item', name = 'arqad-maggot-2', amount = 25},
-        {type = 'item', name = 'crude-oil-barrel', amount = 10},
+        {type = 'item', name = 'filled-canister-crude-oil', amount = 10},
         {type = 'item', name = 'coke', amount = 20},
         {type = 'item', name = 'mutant-enzymes-barrel', amount = 4},
         },
@@ -642,7 +642,7 @@ RECIPE {
     energy_required = 100,
     ingredients = {
         {type = 'item', name = 'arqad-maggot-3', amount = 25},
-        {type = 'item', name = 'crude-oil-barrel', amount = 20},
+        {type = 'item', name = 'filled-canister-crude-oil', amount = 20},
         {type = 'item', name = 'coke', amount = 20},
         {type = 'item', name = 'mutant-enzymes-barrel', amount = 8},
         },

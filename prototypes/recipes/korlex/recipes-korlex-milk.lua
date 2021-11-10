@@ -7,6 +7,7 @@ fun.autorecipes {
 	module_limitations = 'korlex',
 	subgroup = 'py-alienlife-korlex',
 	order = 'z',
+	main_product = "barrel-milk",
 	upgrades =
 		{
 			{

@@ -196,6 +196,7 @@ fun.autorecipes {
 	module_limitations = 'simik',
 	subgroup = 'py-alienlife-simik',
 	order = 'b',
+	main_product = "simik",
     mats =
 	{
 		--logistic

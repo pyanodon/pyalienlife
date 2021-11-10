@@ -18,7 +18,7 @@ fun.autorecipes {
 					{name = 'arqad-queen', amount =1},
 					{name = 'arqad', amount = 5},
                     {name='arqad-honey-barrel', amount =3,return_barrel = true},
-					{name='natural-gas-barrel', amount=10,return_barrel = true},
+					{name='filled-canister-natural-gas', amount=10,return_barrel = true},
 					{name='redhot-coke', amount = 2},
 				},
 			results =
@@ -62,8 +62,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='natural-gas-barrel', remove_item = true},
-					{name = 'refined-natural-gas-barrel', amount = 3,return_barrel = true},
+					{name='filled-canister-natural-gas', remove_item = true},
+					{name = 'filled-canister-refined-natural-gas', amount = 3,return_barrel = true},
 					{name = 'arqad', add_amount = 3},
 				},
 			results =
@@ -209,7 +209,7 @@ fun.autorecipes {
                     {name='arqad-egg-nest', amount =1},
                     {name='biomass', amount =15},
                     {name='ralesias', amount =5},
-					{name='natural-gas-barrel', amount=3,return_barrel = true},
+					{name='filled-canister-natural-gas', amount=3,return_barrel = true},
 				},
 			results =
 				{
@@ -298,7 +298,7 @@ fun.autorecipes {
 				{
                     {name='arqad-egg-nest', amount =1},
                     {name='arqad-jelly-barrel', amount = 5, return_barrel = true},
-					{name='natural-gas-barrel', amount=3,return_barrel = true},
+					{name='filled-canister-natural-gas', amount=3,return_barrel = true},
 				},
 			results =
 				{
