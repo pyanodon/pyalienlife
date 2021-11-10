@@ -1046,7 +1046,7 @@ RECIPE {
         {type = 'item', name = 'bio-scafold', amount = 1},
     },
     results = {
-        {type = 'item', name = 'pineal-gland', amount = 24},
+        {type = 'item', name = 'pineal-gland', amount = 5},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk02")
@@ -1224,7 +1224,7 @@ RECIPE {
         {type = 'item', name = 'immunosupressants', amount = 1},
     },
     results = {
-        {type = 'item', name = 'pineal-gland', amount = 15},
+        {type = 'item', name = 'pineal-gland', amount = 12},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk03")

@@ -1124,11 +1124,12 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'empty-neuromorphic-chip',
-    category = 'nmf',
+    category = 'bio-printer',
     enabled = false,
     energy_required = 15,
     ingredients = {
         {type = 'item', name = 'neuroprocessor', amount = 2},
+        {type = 'item', name = 'brain', amount = 5},
         {type = 'item', name = 'biofilm', amount = 1},
         {type = 'item', name = 'optical-fiber', amount = 10},
         {type = 'item', name = 'nano-cellulose', amount = 5},
@@ -1138,7 +1139,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'empty-neuromorphic-chip', amount = 1},
     },
-}:add_unlock("biotech-mk03"):change_category('nano')
+}:add_unlock("organ-printing-mk02")
 
 RECIPE {
     type = 'recipe',
