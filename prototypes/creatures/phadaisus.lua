@@ -208,7 +208,7 @@ data:extend(
         {
           {
             filename = "__pyalienlifegraphics3__/sounds/phadaisus-breath.ogg",
-            volume = 0.6
+            volume = 0.35
           }
         },
         sound_minimum_speed = 0.05;
@@ -219,7 +219,7 @@ data:extend(
           sound =
           {
             filename = "__pyalienlifegraphics3__/sounds/phadaisus-breath.ogg",
-            volume = 0.7
+            volume = 0.35
           },
           --activate_sound =
           --{
@@ -233,8 +233,8 @@ data:extend(
           --},
           match_speed_to_activity = false
         },
-        open_sound = { filename = "__pyalienlifegraphics3__/sounds/phadaisus-in.ogg", volume=0.9 },
-        close_sound = { filename = "__pyalienlifegraphics3__/sounds/phadaisus-out.ogg", volume = 0.75 },
+        open_sound = { filename = "__pyalienlifegraphics3__/sounds/phadaisus-in.ogg", volume=0.7 },
+        close_sound = { filename = "__pyalienlifegraphics3__/sounds/phadaisus-out.ogg", volume = 0.5 },
         rotation_speed = 0.015,
         --tank_driving = true,
         weight = 600,
