@@ -151,7 +151,7 @@ RECIPE {
     --icon_size = 64,
     subgroup = "py-alienlife-items",
     order = "a1"
-}:add_unlock("pharmagenomics"):change_category('nano'):add_ingredient({type = "item", name = "kicalk-seeds", amount = 20}):add_ingredient({type = "item", name = "nylon", amount = 10})
+}:add_unlock("pharmagenomics"):change_category('nano'):add_ingredient({type = "item", name = "kicalk-seeds", amount = 20})
 
 
 ----SCIENCE PACKS----
