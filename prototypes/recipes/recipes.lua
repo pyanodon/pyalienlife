@@ -2218,6 +2218,7 @@ RECIPE {
     energy_required = 120,
     ingredients = {
         {type = 'item', name = 'space-suit', amount = 1},
+        {type = 'item', name = 'nexelit-cartridge', amount = 1},
         {type = 'item', name = 'skin-caged-dingrits', amount = 1},
         {type = 'item', name = 'immunosupressants', amount = 2},
     },
