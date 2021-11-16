@@ -29,7 +29,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='bhoddos', amount =2},
+					{name='fish', amount =5},
                     {name='tuuphra', amount =5},
 					{name='korlex-food-01', amount = 1},
                     {name='empty-barrel-milk', amount = 3},
@@ -47,8 +47,8 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
+					{name='bhoddos', amount =2},
                     {name='ash', amount =10},
-					{name='fish', amount =5},
                     {name='empty-barrel-milk', add_amount = 3},
 				},
 			results =

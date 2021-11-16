@@ -45,7 +45,7 @@ ITEM {
     name = "biomass",
     icon = "__pyalienlifegraphics__/graphics/icons/biomass.png",
     icon_size = 64,
-    fuel_category = "chemical",
+    fuel_category = "biomass",
     fuel_value = "0.25MJ",
     flags = {},
     subgroup = "py-alienlife-items",

@@ -11,6 +11,10 @@ data:extend(
   {
     type = "fuel-category",
     name = "dingrits"
+  },
+  {
+    type = "fuel-category",
+    name = "biomass"
   }
 }
 )
