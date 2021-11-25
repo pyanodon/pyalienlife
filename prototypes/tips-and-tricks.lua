@@ -42,7 +42,7 @@ data:extend(
 		--starting_status = "suggested",
 		trigger =
 		{
-			type = "unlocked-recipe",
+			type = "unlock-recipe",
 			recipe = "caravan"
 		},
 	}
