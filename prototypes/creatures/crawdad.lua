@@ -45,6 +45,7 @@ data:extend(
         dying_explosion = "blood-explosion-huge",
         alert_icon_shift = util.by_pixel(-4, -13),
         immune_to_tree_impacts = true,
+        has_belt_immunity = true,
         immune_to_rock_impacts = true,
         energy_per_hit_point = 0.5,
         resistances =

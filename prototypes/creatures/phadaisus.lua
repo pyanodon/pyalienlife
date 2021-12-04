@@ -42,11 +42,11 @@ data:extend(
         minable = {mining_time = 0.5, result = "qaavi"},
         mined_sound = {filename = "__core__/sound/deconstruct-medium.ogg"},
         max_health = 5000,
-        has_belt_immunity = false,
         corpse = "big-biter-corpse",
         dying_explosion = "blood-explosion-huge",
         alert_icon_shift = util.by_pixel(-4, -13),
         immune_to_tree_impacts = true,
+        has_belt_immunity = true,
         immune_to_rock_impacts = true,
         energy_per_hit_point = 0.5,
         resistances =
@@ -219,7 +219,7 @@ data:extend(
           sound =
           {
             filename = "__pyalienlifegraphics3__/sounds/phadaisus-breath.ogg",
-            volume = 0.35
+            volume = 0.25
           },
           --activate_sound =
           --{
