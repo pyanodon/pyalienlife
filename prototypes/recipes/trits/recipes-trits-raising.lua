@@ -16,7 +16,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'trits', amount = 1},
-                    {name = 'seaweed', amount =15},
+                    {name = 'seaweed-mk01', amount =15},
 					{name = 'wood-seeds', amount =15},
 					{name = 'moondrop', amount =5},
 					{name = 'sea-sponge', amount = 2},
@@ -210,7 +210,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'trits-pup', amount = 1},
-                    {name = 'seaweed', amount =30},
+                    {name = 'seaweed-mk01', amount =30},
 					{name = 'wood-seeds', amount =30},
 					{name = 'moondrop', amount =15},
 					{name = 'filtration-media', amount =2},

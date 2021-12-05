@@ -260,7 +260,7 @@ RECIPE('pydrive'):add_ingredient({type = "item", name = "graphene-roll", amount 
 RECIPE('fungal-substrate'):add_ingredient({type = "item", name = "urea", amount = 3})
 RECIPE('alien-sample-03'):replace_ingredient("plastic-bar", "graphene-roll")
 RECIPE('log7-2'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a"):remove_unlock('basic-electronics'):add_unlock('botany-mk02')
---RECIPE('urea'):replace_ingredient("fawogae", "seaweed"):subgroup_order("py-alienlife-items", "a")
+--RECIPE('urea'):replace_ingredient("fawogae", "seaweed-mk01"):subgroup_order("py-alienlife-items", "a")
 RECIPE('bonemeal2'):remove_unlock('advanced-electronics'):subgroup_order("py-alienlife-items", "a")
 RECIPE('bonemeal3'):remove_unlock('advanced-electronics'):subgroup_order("py-alienlife-items", "a")
 RECIPE('bonemeal4'):remove_unlock('advanced-electronics'):subgroup_order("py-alienlife-items", "a")
@@ -354,7 +354,7 @@ fun.add_ingredient('simik-food-02a', {name = "cadaveric-arum", amount = 2})
 
 if mods['pyhightech'] then
 	data.raw.item['dried-meat'] = nil
-    RECIPE('dried-meat'):remove_unlock('advanced-rendering'):change_category('smelting')
+    RECIPE('dried-meat'):remove_unlock('placeholder'):change_category('smelting')
 end
 
 

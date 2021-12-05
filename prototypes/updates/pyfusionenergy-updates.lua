@@ -51,7 +51,7 @@ RECIPE('kmauts-enclosure-mk01'):remove_unlock('helium-processing') --substituir 
 RECIPE('kmauts-enclosure-mk02'):remove_unlock('machines-mk02')
 RECIPE('kmauts-enclosure-mk03'):remove_unlock('machines-mk03')
 RECIPE('kmauts-enclosure-mk04'):remove_unlock('machines-mk04')
-RECIPE('kmauts-ration'):subgroup_order('py-alienlife-food', 'b'):remove_unlock('helium-processing'):add_unlock('food-mk03'):add_ingredient({type = "item", name = "seaweed", amount = 10}):add_ingredient({type = "item", name = "meat", amount = 10}):add_ingredient({type = "item", name = "moss", amount = 10})
+RECIPE('kmauts-ration'):subgroup_order('py-alienlife-food', 'b'):remove_unlock('helium-processing'):add_unlock('food-mk03'):add_ingredient({type = "item", name = "seaweed-mk01", amount = 10}):add_ingredient({type = "item", name = "meat", amount = 10}):add_ingredient({type = "item", name = "moss", amount = 10})
 :add_ingredient({type = "item", name = "yotoi-seeds", amount = 10})
 RECIPE('control-unit'):add_ingredient({type = 'item', name = 'biobattery', amount = 2}):replace_ingredient("advanced-circuit", "processing-unit"):remove_unlock('advanced-mining-facilities'):add_unlock('chitin')
 RECIPE('production-science-pack'):add_ingredient({type = "item", name = "alien-enzymes", amount = 1})

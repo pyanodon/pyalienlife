@@ -27,6 +27,44 @@ local function create_slaughterhouse_gui(event)
 end
 
 script.on_init(function()
+    if remote.interfaces['freeplay'] then
+        local get_ship_parts = remote.call('freeplay', "get_ship_parts")
+        local crashed_ass_1 = {
+            name = 'crash-site-assembling-machine-1-repaired',
+            position = {-20, -7},
+            force = "player",
+            angle_deviation = 0,
+            max_distance = 30,
+            min_separation = 2,
+        }
+        local crashed_ass_2 = {
+            name = 'crash-site-assembling-machine-1-repaired',
+            position = {-12, 2},
+            force = "player",
+            angle_deviation = 0,
+            max_distance = 30,
+            min_separation = 2,
+        }
+        local crashed_lab = {
+            name = 'crash-site-lab-repaired',
+            position = {10, 10},
+            force = "player",
+            angle_deviation = 0.1,
+            max_distance = 30,
+            min_separation = 2,
+        }
+
+        if not game.active_mods['pyhightech'] then
+            table.insert(get_ship_parts,crashed_ass_1)
+            table.insert(get_ship_parts,crashed_ass_2)
+        end
+
+        table.insert(get_ship_parts, crashed_lab)
+
+        remote.call("freeplay", "set_ship_parts", get_ship_parts)
+
+    end
+
     --slaughterhouse
     global.slaughterhouse_gui_open = false
     global.current_entity = {}

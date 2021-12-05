@@ -315,19 +315,6 @@ ITEM {
     stack_size = 500
 }
 
---REMOVED FOR MODULE VERSION
---[[
-ITEM {
-    type = "item",
-    name = "seaweed",
-    icon = "__pyalienlifegraphics__/graphics/icons/seaweed.png",
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-plants",
-    order = "b",
-    stack_size = 500
-}
-]]--
 ITEM {
     type = "item",
     name = "agar",
@@ -5385,7 +5372,7 @@ ITEM {
 
 ITEM {
     type = "module",
-    name = "seaweed",
+    name = "seaweed-mk01",
     icons =
     {
         --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
@@ -5584,7 +5571,7 @@ ITEM {
 
 ITEM {
     type = "module",
-    name = "sap-tree",
+    name = "sap-tree-mk01",
     icons =
     {
         --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},

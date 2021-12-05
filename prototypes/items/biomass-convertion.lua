@@ -7,7 +7,7 @@ local biomass_convertion =
     ['moss'] = {item_amount = 3, biomass_amount = 13},
     ['wood-seedling'] = {item_amount = 10, biomass_amount = 10},
     ['wood-seeds'] = {item_amount = 4, biomass_amount = 30},
-    ['seaweed'] = {item_amount = 10, biomass_amount = 20},
+    ['seaweed-mk01'] = {item_amount = 10, biomass_amount = 20},
     ['ralesia-seeds'] = {item_amount = 3, biomass_amount = 4},
     ['saps'] = {item_amount = 10, biomass_amount = 23},
     ['sap-tree'] = {item_amount = 1, biomass_amount = 15},
