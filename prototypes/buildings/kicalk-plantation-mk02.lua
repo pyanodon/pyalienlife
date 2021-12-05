@@ -46,8 +46,8 @@ ENTITY {
     max_health = 100,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-3.2, -3.2}, {3.2, 3.2}},
-    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+    collision_box = {{-6.2, -6.2}, {6.2, 6.2}},
+    selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
     match_animation_speed_to_activity = false,
     module_specification = {
         module_slots = 50
@@ -64,35 +64,104 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/kicalk-plantation.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/left.png",
 				priority = "extra-high",
-                width = 229,
-                height = 235,
-                line_length = 8,
+                width = 128,
+                height = 448,
+                line_length = 16,
                 frame_count = 50,
                 animation_speed = 0.4,
-                shift = util.by_pixel(0, -5),
+                shift = util.by_pixel(-144, -5),
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/kicalk-plantation-mask.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/mid.png",
 				priority = "extra-high",
-                width = 229,
-                height = 235,
-                line_length = 8,
+                width = 128,
+                height = 448,
+                line_length = 16,
                 frame_count = 50,
                 animation_speed = 0.4,
-                shift = util.by_pixel(0, -5),
+                shift = util.by_pixel(-16, -5),
+            },
+            {
+                filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/mid-mask.png",
+				priority = "extra-high",
+                width = 128,
+                height = 448,
+                line_length = 16,
+                frame_count = 50,
+                animation_speed = 0.4,
+                shift = util.by_pixel(-16, -5),
                 tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/shadow.png",
+                filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/right.png",
 				priority = "extra-high",
-                width = 253,
-                height = 242,
-                line_length = 8,
+                width = 128,
+                height = 448,
+                line_length = 16,
                 frame_count = 50,
                 animation_speed = 0.4,
-                shift = util.by_pixel(18, -1),
+                shift = util.by_pixel(112, -5),
+            },
+            {
+                filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/right-mask.png",
+				priority = "extra-high",
+                width = 128,
+                height = 448,
+                line_length = 16,
+                frame_count = 50,
+                animation_speed = 0.4,
+                shift = util.by_pixel(112, -5),
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+            },
+            {
+                filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/far-right.png",
+				priority = "extra-high",
+                width = 32,
+                height = 448,
+                repeat_count = 50,
+                frame_count = 1,
+                line_length = 1,
+                animation_speed = 0.4,
+                shift = util.by_pixel(192, -5),
+            },
+            {
+                filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/glow.png",
+				priority = "extra-high",
+                width = 416,
+                height = 448,
+                repeat_count = 50,
+                frame_count = 1,
+                line_length = 1,
+                animation_speed = 0.4,
+                shift = util.by_pixel(0, -5),
+                --draw_as_glow = true,
+                draw_as_light = true,
+            },
+            {
+                filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/glow.png",
+				priority = "extra-high",
+                width = 416,
+                height = 448,
+                repeat_count = 50,
+                frame_count = 1,
+                line_length = 1,
+                animation_speed = 0.4,
+                shift = util.by_pixel(0, -5),
+                draw_as_glow = true,
+                --draw_as_light = true,
+            },
+            {
+                filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/sh.png",
+				priority = "extra-high",
+                width = 512,
+                height = 480,
+                repeat_count = 50,
+                frame_count = 1,
+                line_length = 1,
+                animation_speed = 0.4,
+                shift = util.by_pixel(16, 11),
                 draw_as_shadow = true,
             }
         }
@@ -105,7 +174,7 @@ ENTITY {
             pipe_covers = DATA.Pipes.covers(false, true, true, true),
             base_area = 10,
             base_level = -1,
-            pipe_connections = {{type = "input", position = {0.0, 4.0}}}
+            pipe_connections = {{type = "input", position = {0.0, 7.0}}}
         },
         {
             production_type = "input",
@@ -113,21 +182,21 @@ ENTITY {
             pipe_covers = DATA.Pipes.covers(false, true, true, true),
             base_area = 10,
             base_level = -1,
-            pipe_connections = {{type = "input", position = {0.0, -4.0}}}
+            pipe_connections = {{type = "input", position = {0.0, -7.0}}}
         },
         {
             production_type = "output",
             pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.1, -4.1}, nil, nil, pipe),
             pipe_covers = DATA.Pipes.covers(false, false, true, true),
             base_level = 1,
-            pipe_connections = {{type = "output", position = {-4.0, 0.0}}}
+            pipe_connections = {{type = "output", position = {-7.0, 0.0}}}
         },
         {
             production_type = "output",
             pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.1, -4.1}, nil, nil, pipe),
             pipe_covers = DATA.Pipes.covers(false, false, true, true),
             base_level = 1,
-            pipe_connections = {{type = "output", position = {4.0, 0.0}}}
+            pipe_connections = {{type = "output", position = {7.0, 0.0}}}
         },
         off_when_no_fluid_recipe = true
     },
