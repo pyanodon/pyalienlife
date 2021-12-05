@@ -32,7 +32,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='dhilmos-food-01', amount =1},
-					{name='seaweed', amount = 5},
+					{name = 'seaweed-mk01', amount = 5},
 				},
 			results =
 				{
@@ -46,7 +46,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='dhilmos-food-01',remove_item = true},
-                    {name='seaweed',remove_item = true},
+                    {name = 'seaweed-mk01',remove_item = true},
 					{name='dhilmos-food-02', amount =1},
 
 				},
@@ -61,7 +61,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='seaweed', amount = 5},
+					{name = 'seaweed-mk01', amount = 5},
 				},
 			results =
 				{
@@ -108,7 +108,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='seaweed',remove_item = true},
+					{name = 'seaweed-mk01',remove_item = true},
 					{name='dhilmos-food-02',remove_item = true},
 					{name='fawogae', amount =15},
 					{name='pheromones', amount =1},
@@ -138,7 +138,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='seaweed', amount = 5},
+					{name = 'seaweed-mk01', amount = 5},
 				},
 			results =
 				{
@@ -152,7 +152,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='dhilmos-food-01',remove_item = true},
-					{name='seaweed',remove_item = true},
+					{name = 'seaweed-mk01',remove_item = true},
 					{name='dhilmos-food-02', amount =1},
 
 				},
@@ -167,7 +167,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='seaweed', amount = 5},
+					{name = 'seaweed-mk01', amount = 5},
 				},
 			results =
 				{
@@ -227,7 +227,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='dhilmos-pup', add_amount = 3},
-					{name='seaweed', amount = 10},
+					{name = 'seaweed-mk01', amount = 10},
 					{name='dhilmos-food-02', amount = 3},
 				},
 			results =
@@ -243,7 +243,7 @@ fun.autorecipes {
 				{
 					{name='dhilmos-pup', add_amount = 3},
 					{name='filtration-media', add_amount = 2},
-					{name='seaweed', add_amount = 10},
+					{name = 'seaweed-mk01', add_amount = 10},
 				},
 			results =
 				{

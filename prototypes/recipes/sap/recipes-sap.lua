@@ -67,7 +67,7 @@ RECIPE {
         {type = "item", name = "sap-seeds", amount = 5},
     },
     results = {
-        {type = "item", name = "sap-tree", amount = 1}
+        {type = "item", name = "sap-tree-mk01", amount = 1}
     },
 }
 
@@ -90,7 +90,7 @@ RECIPE {
         {type = 'item', name = 'sodium-alginate', amount = 1},
         --{type = 'item', name = 'urea', amount = 1},
         {type = 'item', name = 'moss', amount = 5},
-        {type = 'item', name = 'sap-tree', amount = 5},
+        {type = 'item', name = 'sap-tree-mk01', amount = 5},
     },
     results = {
         {type = 'item', name = 'sap-seeds-mk02', amount = 1},

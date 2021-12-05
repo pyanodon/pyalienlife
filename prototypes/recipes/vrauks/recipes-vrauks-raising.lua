@@ -114,7 +114,6 @@ fun.autorecipes {
 				{
                     {name='vrauks', amount =2},
                     {name='moss', amount =10},
-					{name='water-barrel', amount=4, return_barrel = true},
 					{name='saps', amount = 3},
 				},
 			results =
@@ -131,6 +130,7 @@ fun.autorecipes {
 					{name='vrauks', add_amount = 2},
                     {name='native-flora', amount = 10},
 					{name='vrauks-food-01', amount =2},
+					{name='water-barrel', amount=4, return_barrel = true},
 				},
 			results =
 				{

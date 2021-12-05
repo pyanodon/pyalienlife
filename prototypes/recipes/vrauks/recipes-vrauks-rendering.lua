@@ -28,7 +28,7 @@ RECIPE {
 --log(serpent.block(data.raw.recipe['Smashing Vrauks']))
 
 fun.autorecipes {
-    name = 'rendering',
+    name = 'rendering-vrauks',
 	category = 'slaughterhouse-vrauks',
 	--module_limitations = 'vrauks',
 	subgroup = 'py-alienlife-vrauks',

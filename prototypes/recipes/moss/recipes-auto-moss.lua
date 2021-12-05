@@ -27,7 +27,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='water', amount = 100},
+					{name = 'dirty-water-light', amount = 100},
 					{name = 'carbon-dioxide', amount = 100},
 				},
 			results =

@@ -53,7 +53,7 @@ RECIPE {
         {type = 'item', name = 'meat', amount = 10},
         {type = 'item', name = 'wood-seeds', amount = 10},
         {type = 'item', name = 'native-flora', amount = 5},
-        {type = 'item', name = 'seaweed', amount = 10},
+        {type = 'item', name = "seaweed-mk01", amount = 10},
         {type = 'item', name = 'salt', amount = 10},
         {type = 'item', name = 'fawogae', amount = 10},
         {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165},

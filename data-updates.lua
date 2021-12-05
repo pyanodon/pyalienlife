@@ -34,6 +34,8 @@ TECHNOLOGY("logistic-science-pack"):add_prereq("biotech-mk01")
 
 --ADAPTATIONS
 
+data.raw.boiler.boiler.energy_source.fuel_categories = {"chemical", "biomass"}
+
 data.raw.fish.fish.minable.result = 'fish'
 --data.raw.fish.fish = nil
 
