@@ -1,0 +1,19 @@
+name: Test
+
+on:
+  pull_request_target:
+    branches:
+    - master
+
+permissions:
+  contents: read
+
+jobs:
+  test-pull-request:
+    name: PR
+    uses: pyanodon/pyanodontests/.github/workflows/pytest.yml@v1
+    with:
+      repository: ${{ github.repository }}
+      ref: ${{ github.event.pull_request.head.sha }}
+    secrets:
+      token: ${{ secrets.TESTUSER_TOKEN }}
