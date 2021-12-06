@@ -14,7 +14,7 @@ RECIPE {
     }
 }
 
-table.insert(data.raw.module["sap-tree-mk01"].limitation, "sap-01")
+table.insert(data.raw.module["sap-tree"].limitation, "sap-01")
 
 table.insert(data.raw.module["sap-tree-mk02"].limitation, "sap-01")
 

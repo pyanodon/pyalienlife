@@ -5,7 +5,7 @@ local fun = require("prototypes/functions/functions")
 fun.autorecipes {
     name = 'zipir-eggs',
 	category = 'zipir',
-	module_limitations = 'zipir1',
+	module_limitations = 'zipir',
 	subgroup = 'py-alienlife-zipir',
 	order = 'c',
 	main_product = 'zipir-eggs',

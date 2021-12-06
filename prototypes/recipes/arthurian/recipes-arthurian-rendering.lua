@@ -5,7 +5,6 @@ local fun = require("prototypes/functions/functions")
 fun.autorecipes {
     name = 'rendering-arthurian',
 	category = 'slaughterhouse-arthurian',
-	--module_limitations = 'arthurian',
 	subgroup = 'py-alienlife-arthurian',
 	order = 'b',
     mats =

@@ -4,7 +4,7 @@ local fun = require("prototypes/functions/functions")
 fun.autorecipes {
     name = 'cadaveric-arum',
 	category = 'arum',
-	module_limitations = 'cadaveric-arum',
+	module_limitations = 'arum',
 	subgroup = 'py-alienlife-cadaveric',
     order = 'a',
     mats =

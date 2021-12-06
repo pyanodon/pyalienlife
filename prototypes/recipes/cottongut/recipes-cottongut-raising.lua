@@ -5,7 +5,7 @@ local fun = require("prototypes/functions/functions")
 fun.autorecipes {
     name = 'cottongut-cub',
 	category = 'cottongut',
-	module_limitations = 'cottongut-mk01',
+	module_limitations = 'cottongut',
 	subgroup = 'py-alienlife-cottongut',
 	order = 'c',
 	main_product = "cottongut-pup",
@@ -83,7 +83,7 @@ fun.autorecipes {
 fun.autorecipes {
     name = 'caged-cottongut',
 	category = 'cottongut',
-	module_limitations = 'cottongut-mk01',
+	module_limitations = 'cottongut',
 	subgroup = 'py-alienlife-cottongut',
 	order = 'b',
 	main_product = "cottongut",

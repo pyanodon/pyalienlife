@@ -4,6 +4,7 @@ local fun = require("prototypes/functions/functions")
 fun.autorecipes {
     name = 'navens',
 	category = 'navens',
+    module_limitations = "navens",
 	subgroup = 'py-alienlife-navens',
 	order = 'b',
     mats =

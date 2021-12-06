@@ -98,7 +98,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'trits', amount = 2},
-        {type = 'item', name = "seaweed-mk01", amount = 10},
+        {type = 'item', name = "seaweed", amount = 10},
         {type = 'item', name = 'filtration-media', amount = 5},
         {type = 'item', name = 'sodium-alginate', amount = 10},
         {type = 'item', name = 'sea-sponge', amount = 4},
@@ -125,7 +125,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'trits', amount = 2},
         {type = 'item', name = 'alien-sample-03', amount = 1},
-        {type = 'item', name = "seaweed-mk01", amount = 10},
+        {type = 'item', name = "seaweed", amount = 10},
         {type = 'item', name = 'filtration-media', amount = 5},
         {type = 'item', name = 'sodium-alginate', amount = 10},
         {type = 'item', name = 'sea-sponge', amount = 4},
@@ -152,7 +152,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'trits', amount = 2},
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},
-        {type = 'item', name = "seaweed-mk01", amount = 10},
+        {type = 'item', name = "seaweed", amount = 10},
         {type = 'item', name = 'filtration-media', amount = 5},
         {type = 'item', name = 'sodium-alginate', amount = 10},
         {type = 'item', name = 'sea-sponge', amount = 4},

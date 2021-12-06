@@ -7,7 +7,7 @@ data:extend({
     icon = "__pyalienlifegraphics__/graphics/icons/seaweed.png",
     icon_size = 64,
     flags = {"placeable-neutral", "not-on-map"},
-    minable = {mining_time = 0.4, result = "seaweed-mk01", count = 2},
+    minable = {mining_time = 0.4, result = "seaweed", count = 2},
     max_health = 20,
     subgroup = "creatures",
     order = "b-a",
@@ -80,7 +80,7 @@ RECIPE {
       {type = 'fluid', name = 'water', amount = 200},
       {type = 'item', name = 'molybdenum-oxide', amount = 5},
       {type = 'item', name = 'fertilizer', amount = 1},
-      {type = 'item', name = "seaweed-mk01", amount = 5},
+      {type = 'item', name = "seaweed", amount = 5},
   },
   results = {
       {type = 'item', name = 'seaweed-mk02', amount = 1},

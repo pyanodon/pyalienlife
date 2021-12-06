@@ -260,7 +260,7 @@ RECIPE('pydrive'):add_ingredient({type = "item", name = "graphene-roll", amount 
 RECIPE('fungal-substrate'):add_ingredient({type = "item", name = "urea", amount = 3})
 RECIPE('alien-sample-03'):replace_ingredient("plastic-bar", "graphene-roll")
 RECIPE('log7-2'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a"):remove_unlock('basic-electronics'):add_unlock('botany-mk02')
---RECIPE('urea'):replace_ingredient("fawogae", "seaweed-mk01"):subgroup_order("py-alienlife-items", "a")
+--RECIPE('urea'):replace_ingredient("fawogae", "seaweed"):subgroup_order("py-alienlife-items", "a")
 RECIPE('bonemeal2'):remove_unlock('advanced-electronics'):subgroup_order("py-alienlife-items", "a")
 RECIPE('bonemeal3'):remove_unlock('advanced-electronics'):subgroup_order("py-alienlife-items", "a")
 RECIPE('bonemeal4'):remove_unlock('advanced-electronics'):subgroup_order("py-alienlife-items", "a")
@@ -271,10 +271,10 @@ RECIPE('formamide'):replace_ingredient("nitrogen", "ammonia"):change_category('f
 RECIPE('bacteria-2'):subgroup_order("py-alienlife-genetics", "a"):remove_unlock('nano-tech'):add_unlock('microbiology-mk03'):add_ingredient({type = "item", name = "petri-dish", amount = 3}):add_ingredient({type = "item", name = "nexelit-plate", amount = 2}):add_ingredient({type = "item", name = "flask", amount = 5}):add_ingredient({type = "item", name = "chitin", amount = 5})
 RECIPE('rendering'):remove_unlock('basic-electronics')
 RECIPE('crco-alloy'):remove_ingredient("tailings-dust"):add_ingredient({type = "item", name = "cobalt-nx", amount = 2})
-RECIPE('raw-fiber'):remove_unlock('basic-electronics')
-RECIPE('raw-fiber3'):remove_unlock('basic-electronics')
-RECIPE('raw-fiber2'):remove_unlock('basic-electronics'):set_fields {enabled = false}
-RECIPE('raw-fiber4'):remove_unlock('basic-electronics'):set_fields {enabled = false}
+RECIPE('raw-fiber'):remove_unlock('basic-electronics'):set_fields {enabled = false} --TODO:fix unlock
+RECIPE('raw-fiber2'):remove_unlock('basic-electronics'):set_fields {enabled = false} --TODO:fix unlock
+RECIPE('raw-fiber3'):remove_unlock('basic-electronics'):set_fields {enabled = false} --TODO:fix unlock
+RECIPE('raw-fiber4'):remove_unlock('basic-electronics'):set_fields {enabled = false} --TODO:fix unlock
 RECIPE('dms'):subgroup_order("py-alienlife-cadaveric", "a"):remove_unlock('basic-electronics')
 RECIPE('cobalt-fluoride'):replace_ingredient("chromium", "reo")
 RECIPE('micro-fiber'):remove_unlock('nano-tech'):add_unlock('botany-mk02')

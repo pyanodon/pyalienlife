@@ -5372,7 +5372,7 @@ ITEM {
 
 ITEM {
     type = "module",
-    name = "seaweed-mk01",
+    name = "seaweed",
     icons =
     {
         --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
@@ -5571,7 +5571,7 @@ ITEM {
 
 ITEM {
     type = "module",
-    name = "sap-tree-mk01",
+    name = "sap-tree",
     icons =
     {
         --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
@@ -8146,6 +8146,7 @@ ITEM {
 	limitation = {},
 	limitation_message_key = "xyhiphoe"
 }
+
 ITEM {
     type = "module",
     name = "xyhiphoe-mk02",
@@ -8372,7 +8373,7 @@ ITEM {
         --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
     },
     icon_size = 64,
-	category = "moon",
+	category = "moondrop",
 	tier = 1,
     flags = {},
     subgroup = "py-alienlife-modules",
@@ -8392,7 +8393,7 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
     },
     icon_size = 64,
-	category = "moon",
+	category = "moondrop",
 	tier = 2,
     flags = {},
     subgroup = "py-alienlife-modules",
@@ -8412,7 +8413,7 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
     },
     icon_size = 64,
-	category = "moon",
+	category = "moondrop",
 	tier = 3,
     flags = {},
     subgroup = "py-alienlife-modules",
@@ -8432,7 +8433,7 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
     },
     icon_size = 64,
-	category = "moon",
+	category = "moondrop",
 	tier = 4,
     flags = {},
     subgroup = "py-alienlife-modules",
@@ -9350,166 +9351,6 @@ ITEM {
 ------------------------------
 data:extend(
 {
-    {
-        type = "module-category",
-        name = "tree"
-    },
-    {
-        type = "module-category",
-        name = "seaweed"
-    },
-    {
-        type = "module-category",
-        name = "moss"
-    },
-    {
-        type = "module-category",
-        name = "sap"
-    },
-    {
-    type = "module-category",
-    name = "ulric"
-  },
-  {
-    type = "module-category",
-    name = "sponge"
-  },
-  {
-    type = "module-category",
-    name = "ralesia"
-  },
-  {
-    type = "module-category",
-    name = "mukmoux"
-  },
-  {
-    type = "module-category",
-    name = "tuuphra"
-  },
-  {
-    type = "module-category",
-    name = "arthurian"
-  },
-  {
-    type = "module-category",
-    name = "navens"
-  },
-  {
-    type = "module-category",
-    name = "yotoi"
-  },
-  {
-    type = "module-category",
-    name = "rennea"
-  },
-  {
-    type = "module-category",
-    name = "dhilmos"
-  },
-  {
-    type = "module-category",
-    name = "scrondrix"
-  },
-  {
-    type = "module-category",
-    name = "phadai"
-  },
-  {
-    type = "module-category",
-    name = "auog"
-  },
-  {
-    type = "module-category",
-    name = "fish"
-  },
-  {
-    type = "module-category",
-    name = "yaedols"
-  },
-  {
-    type = "module-category",
-    name = "dingrits"
-  },
-  {
-    type = "module-category",
-    name = "kmauts"
-  },
-  {
-    type = "module-category",
-    name = "vonix"
-  },
-  {
-    type = "module-category",
-    name = "grod"
-  },
-  {
-    type = "module-category",
-    name = "phagnot"
-  },
-  {
-    type = "module-category",
-    name = "bhoddos"
-  },
-  {
-    type = "module-category",
-    name = "arqad"
-  },
-  {
-    type = "module-category",
-    name = "xeno"
-  },
-  {
-    type = "module-category",
-    name = "kicalk"
-  },
-  {
-    type = "module-category",
-    name = "cridren"
-  },
-  {
-    type = "module-category",
-    name = "antelope"
-  },
-  {
-    type = "module-category",
-    name = "zipir"
-  },
-  {
-    type = "module-category",
-    name = "trits"
-  },
-  {
-    type = "module-category",
-    name = "arum"
-  },
-  {
-    type = "module-category",
-    name = "vrauks"
-  },
-  {
-    type = "module-category",
-    name = "xyhiphoe"
-  },
-  {
-    type = "module-category",
-    name = "korlex"
-  },
-  {
-    type = "module-category",
-    name = "fawogae"
-  },
-  {
-    type = "module-category",
-    name = "moon"
-  },
-  {
-    type = "module-category",
-    name = "cottongut"
-  },
-  {
-    type = "module-category",
-    name = "guar"
-  },
   --item used to select the creature and start and end points of the route
 	{
 		type = 'selection-tool',

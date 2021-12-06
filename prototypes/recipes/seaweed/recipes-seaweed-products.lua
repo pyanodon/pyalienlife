@@ -10,7 +10,7 @@ RECIPE {
         {type = 'fluid', name = 'water', amount = 200},
     },
     results = {
-        {type = 'item', name = "seaweed-mk01", amount = 10},
+        {type = 'item', name = "seaweed", amount = 10},
     },
 }
 
@@ -26,7 +26,7 @@ RECIPE {
         {type = 'item', name = 'limestone', amount = 2},
     },
     results = {
-        {type = 'item', name = "seaweed-mk01", amount = 20},
+        {type = 'item', name = "seaweed", amount = 20},
     },
 }:add_unlock("botany-mk01")
 
@@ -43,7 +43,7 @@ RECIPE {
         {type = 'item', name = 'fertilizer', amount = 1},
     },
     results = {
-        {type = 'item', name = "seaweed-mk01", amount = 30},
+        {type = 'item', name = "seaweed", amount = 30},
     },
 }:add_unlock("botany-mk02")
 
@@ -61,7 +61,7 @@ RECIPE {
         {type = 'item', name = 'iron-ore-dust', amount = 3},
     },
     results = {
-        {type = 'item', name = "seaweed-mk01", amount = 60},
+        {type = 'item', name = "seaweed", amount = 60},
     },
 }:add_unlock("botany-mk03")
 
@@ -79,15 +79,15 @@ RECIPE {
         {type = 'item', name = 'iron-ore-dust', amount = 5},
     },
     results = {
-        {type = 'item', name = "seaweed-mk01", amount = 120},
+        {type = 'item', name = "seaweed", amount = 120},
     },
 }:add_unlock("botany-mk04"):add_ingredient({type = "item", name = "powdered-phosphate-rock", amount = 10})
 
-table.insert(data.raw.module["seaweed-mk01"].limitation, "seaweed")
-table.insert(data.raw.module["seaweed-mk01"].limitation, "seaweed-2")
-table.insert(data.raw.module["seaweed-mk01"].limitation, "seaweed-3")
-table.insert(data.raw.module["seaweed-mk01"].limitation, "seaweed-4")
-table.insert(data.raw.module["seaweed-mk01"].limitation, "seaweed-5")
+table.insert(data.raw.module["seaweed"].limitation, "seaweed")
+table.insert(data.raw.module["seaweed"].limitation, "seaweed-2")
+table.insert(data.raw.module["seaweed"].limitation, "seaweed-3")
+table.insert(data.raw.module["seaweed"].limitation, "seaweed-4")
+table.insert(data.raw.module["seaweed"].limitation, "seaweed-5")
 
 table.insert(data.raw.module["seaweed-mk02"].limitation, "seaweed")
 table.insert(data.raw.module["seaweed-mk02"].limitation, "seaweed-2")

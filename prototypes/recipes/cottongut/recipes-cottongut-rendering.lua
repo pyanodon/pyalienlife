@@ -5,7 +5,6 @@ local fun = require("prototypes/functions/functions")
 fun.autorecipes {
     name = 'rendering-cottongut',
 	category = 'slaughterhouse-cottongut',
-	--module_limitations = 'cottongut',
 	subgroup = 'py-alienlife-cottongut',
 	order = 'b',
     mats =

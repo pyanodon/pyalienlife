@@ -67,7 +67,7 @@ RECIPE {
         {type = 'item', name = 'moss', amount = 5},
         {type = 'item', name = 'tuuphra', amount = 5},
         {type = 'item', name = 'native-flora', amount = 10},
-        {type = 'item', name = "seaweed-mk01", amount = 5},
+        {type = 'item', name = "seaweed", amount = 5},
         {type = 'item', name = 'salt', amount = 10},
         {type = 'item', name = 'saps', amount = 5},
         {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
@@ -87,7 +87,7 @@ RECIPE {
         {type = 'item', name = 'tin-plate', amount = 2},
         {type = 'item', name = 'moss', amount = 5},
         {type = 'item', name = 'native-flora', amount = 20},
-        {type = 'item', name = "seaweed-mk01", amount = 5},
+        {type = 'item', name = "seaweed", amount = 5},
         {type = 'item', name = 'rennea', amount = 8},
         {type = 'item', name = 'salt', amount = 10},
         {type = 'item', name = 'saps', amount = 5},

@@ -132,7 +132,7 @@ RECIPE {
     enabled = true,
     energy_required = 5,
     ingredients = {
-        {type = 'item', name = "seaweed-mk01", amount = 5},
+        {type = 'item', name = "seaweed", amount = 5},
         {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165},
     },
     results = {
@@ -401,7 +401,7 @@ RECIPE {
     enabled = false,
     energy_required = 15,
     ingredients = {
-        {type = 'item', name = "seaweed-mk01", amount = 20},
+        {type = 'item', name = "seaweed", amount = 20},
         {type = 'item', name = 'yaedols', amount = 4},
     },
     results = {
@@ -1282,7 +1282,7 @@ RECIPE {
     enabled = true,
     energy_required = 5,
     ingredients = {
-        {type = 'item', name = "seaweed-mk01", amount = 5},
+        {type = 'item', name = "seaweed", amount = 5},
         {type = 'item', name = 'stone', amount = 5},
         {type = 'fluid', name = 'water', amount = 100},
         {type = 'item', name = 'limestone', amount = 4},

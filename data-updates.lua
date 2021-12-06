@@ -72,6 +72,31 @@ for _, recipe in pairs(data.raw.recipe) do
     end
 end
 
+local blacklist = {}
+
+for m, module in pairs(data.raw.module) do
+    if module.subgroup:find("py%-alienlife%-modules") then
+        for l, limit in pairs(module.limitation) do
+            if blacklist[limit] ~= true then
+                blacklist[limit] = true
+            end
+            --table.insert(blacklist, limit)
+        end
+    end
+end
+
+for m, module in pairs(data.raw.module) do
+    if module.name:find("speed%-module") or module.name:find("productivity%-module") or module.name:find("effectivity%-module") then
+        if module.limitation_blacklist == nil then
+            module.limitation_blacklist = {}
+        end
+        for b,_ in pairs(blacklist) do
+            table.insert(module.limitation_blacklist, b)
+        end
+        --log(serpent.block(module))
+    end
+end
+
 --remove steel barrel based milk
 data.raw.item['milk-barrel'] = nil
 --data.raw.recipe['fill-milk-barrel'] = nil

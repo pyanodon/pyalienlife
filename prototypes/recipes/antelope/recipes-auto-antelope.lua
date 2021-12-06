@@ -69,7 +69,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'seaweed-mk01', amount =10},
+					{name = 'seaweed', amount =10},
 				},
 			results =
 				{

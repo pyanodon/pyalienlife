@@ -3,7 +3,7 @@ local fun = require("prototypes/functions/functions")
 fun.autorecipes {
     name = 'zipir-improved',
 	category = 'zipir',
-	module_limitations = 'zipir1',
+	module_limitations = 'zipir',
 	subgroup = 'py-alienlife-zipir',
 	order = 'b',
     mats =

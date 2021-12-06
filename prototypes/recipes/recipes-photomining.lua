@@ -84,7 +84,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = "seaweed-mk01", amount = 20},
+        {type = 'item', name = "seaweed", amount = 20},
         {type = 'item', name = 'moss', amount = 5},
     },
     results = {
@@ -179,7 +179,7 @@ RECIPE {
     energy_required = 50,
     ingredients = {
         {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
-        {type = 'item', name = "seaweed-mk01", amount = 40},
+        {type = 'item', name = "seaweed", amount = 40},
     },
     results = {
         {type = 'item', name = 'ag-biomass', amount = 10},
@@ -452,7 +452,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
-        {type = 'item', name = "seaweed-mk01", amount = 40},
+        {type = 'item', name = "seaweed", amount = 40},
         {type = 'fluid', name = 'chelator', amount = 50},
     },
     results = {
@@ -740,7 +740,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
-        {type = 'item', name = "seaweed-mk01", amount = 40},
+        {type = 'item', name = "seaweed", amount = 40},
         {type = 'item', name = 'hmas', amount = 1},
         {type = 'fluid', name = 'chelator', amount = 50},
     },

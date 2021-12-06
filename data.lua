@@ -7,6 +7,7 @@ require("__stdlib__/stdlib/data/data").Util.create_data_globals()
 require("prototypes/item-groups")
 require("prototypes/recipe-categories")
 require("prototypes/fuel-categories")
+require("prototypes/module-categories")
 
 --(( Technology ))--
 require("prototypes/technologies/xenobiology")
@@ -614,6 +615,9 @@ require('prototypes/recipes/xeno/recipes-xeno-raising')
 require('prototypes/recipes/xeno/recipes-xeno-rendering')
 
 --Xyhiphoe
+require("prototypes/recipes/xyhiphoe/recipes-xyhiphoe")
+require("prototypes/recipes/xyhiphoe/recipes-xyhiphoe-raising")
+require("prototypes/recipes/xyhiphoe/recipes-xyhiphoe-rendering")
 
 --Yaedols
 require('prototypes/recipes/yaedols/recipes-yaedols')

@@ -4,6 +4,7 @@ local fun = require("prototypes/functions/functions")
 fun.autorecipes {
     name = 'bhoddos',
 	category = 'bhoddos',
+    module_limitations = 'bhoddos',
 	subgroup = 'py-alienlife-bhoddos',
 	order = 'b',
     mats =

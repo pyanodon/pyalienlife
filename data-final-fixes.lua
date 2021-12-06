@@ -585,10 +585,48 @@ local recipes_list =
 --adding to module limitation list
 FUN.productivity(recipes_list)
 
---[[
-log(serpent.block(data.raw.recipe["arqad-egg-nests-1"]))
-log(serpent.block(data.raw.recipe["arqad-egg-nests-2"]))
-log(serpent.block(data.raw.recipe["arqad-egg-nests-3"]))
-log(serpent.block(data.raw.recipe["arqad-egg-nests-4"]))
-log(serpent.block(data.raw.recipe["arqad-egg-nests-5"]))
-]]--
+local mod_cats =
+  {
+    "tree",
+    "seaweed",
+    "moss",
+    "sap",
+    "ulric",
+    "sponge",
+    "ralesia",
+    "mukmoux",
+    "tuuphra",
+    "arthurian",
+    "navens",
+    "yotoi",
+    "rennea",
+    "dhilmos",
+    "scrondrix",
+    "phadai",
+    "auog",
+    "fish",
+    "yaedols",
+    "dingrits",
+    "kmauts",
+    "vonix",
+    "grod",
+    "phagnot",
+    "bhoddos",
+    "arqad",
+    "xeno",
+    "kicalk",
+    "cridren",
+    "antelope",
+    "zipir",
+    "trits",
+    "arum",
+    "vrauks",
+    "xyhiphoe",
+    "korlex",
+    "fawogae",
+    "moondrop",
+    "cottongut",
+    "guar"
+  }
+
+--log(serpent.block(data.raw.module['effectivity-module']))

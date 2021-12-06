@@ -45,7 +45,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'seaweed-mk01', amount = 10},
+					{name = 'seaweed', amount = 10},
 				},
 			results =
 				{
@@ -59,7 +59,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='fish-food-02', amount =1},
-					{name = 'seaweed-mk01', add_amount = 10},
+					{name = 'seaweed', add_amount = 10},
 
 				},
 			results =
@@ -77,7 +77,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'seaweed-mk01',remove_item = true},
+					{name = 'seaweed',remove_item = true},
 					{name='fish-food-02',remove_item = true},
 					{name='fawogae', amount =15},
 					{name='pheromones', amount =1},
@@ -107,7 +107,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'seaweed-mk01', amount = 5},
+					{name = 'seaweed', amount = 5},
 				},
 			results =
 				{
@@ -121,7 +121,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='fish-food-01',remove_item = true},
-					{name = 'seaweed-mk01',remove_item = true},
+					{name = 'seaweed',remove_item = true},
 					{name='fish-food-02', amount =1},
 
 				},
@@ -136,7 +136,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'seaweed-mk01', amount = 5},
+					{name = 'seaweed', amount = 5},
 				},
 			results =
 				{
@@ -196,7 +196,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'seaweed-mk01', amount = 10},
+					{name = 'seaweed', amount = 10},
 					{name='fish-food-02', amount =1},
 				},
 			results =
@@ -211,7 +211,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='filtration-media', add_amount = 1},
-					{name = 'seaweed-mk01', add_amount = 10},
+					{name = 'seaweed', add_amount = 10},
 				},
 			results =
 				{

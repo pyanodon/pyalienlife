@@ -64,7 +64,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'tin-plate', amount = 2},
         {type = 'item', name = 'ralesia-seeds', amount = 2},
-        {type = 'item', name = "seaweed-mk01", amount = 5},
+        {type = 'item', name = "seaweed", amount = 5},
         {type = 'item', name = 'wood-seeds', amount = 5},
         {type = 'item', name = 'starch', amount = 4},
         {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
@@ -85,7 +85,7 @@ RECIPE {
         {type = 'item', name = 'ralesia-seeds', amount = 5},
         {type = 'item', name = 'native-flora', amount = 15},
         {type = 'item', name = 'rennea-seeds', amount = 10},
-        {type = 'item', name = "seaweed-mk01", amount = 10},
+        {type = 'item', name = "seaweed", amount = 10},
         {type = 'item', name = 'wood-seeds', amount = 15},
         {type = 'item', name = 'ash', amount = 10},
         {type = 'item', name = 'moondrop', amount = 10},
@@ -109,7 +109,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'cottongut-mk01', amount = 2},
         {type = 'item', name = 'bedding', amount = 1},
-        {type = 'item', name = "seaweed-mk01", amount = 10},
+        {type = 'item', name = "seaweed", amount = 10},
         {type = 'item', name = 'sea-sponge-sprouts', amount = 5},
         {type = 'item', name = 'cottongut-food-01', amount = 1},
         },

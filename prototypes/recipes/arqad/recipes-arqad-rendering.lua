@@ -5,7 +5,6 @@ local fun = require("prototypes/functions/functions")
 fun.autorecipes {
     name = 'rendering-arqad',
 	category = 'slaughterhouse-arqad',
-	--module_limitations = 'arqad',
 	subgroup = 'py-alienlife-arqad',
 	order = 'b',
     mats =
