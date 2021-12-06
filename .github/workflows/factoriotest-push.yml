@@ -1,0 +1,19 @@
+name: Test
+
+on:
+  push:
+    branches:
+    - master
+
+permissions:
+  contents: read
+
+jobs:
+  test-push:
+    name: Push
+    uses: pyanodon/pyanodontests/.github/workflows/pytest.yml@v1
+    with:
+      repository: ${{ github.repository }}
+      ref: ${{ github.sha }}
+    secrets:
+      token: ${{ secrets.TESTUSER_TOKEN }}
