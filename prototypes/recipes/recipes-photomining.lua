@@ -4,7 +4,7 @@ RECIPE {
     name = 'hmas',
     category = 'genlab',
     enabled = false,
-    energy_required = 15,
+    energy_required = 10,
     ingredients = {
         {type = 'item', name = 'nano-cellulose', amount = 1},
         {type = 'item', name = 'lignin', amount = 3},
@@ -13,6 +13,7 @@ RECIPE {
         {type = 'item', name = 'chimeric-proteins', amount = 1},
         {type = 'item', name = 'magnetic-beads', amount = 5},
         {type = 'item', name = 'skin', amount = 10},
+        {type = 'item', name = 'flask', amount = 1},
         {type = 'fluid', name = 'diborane', amount = 100},
     },
     results = {
