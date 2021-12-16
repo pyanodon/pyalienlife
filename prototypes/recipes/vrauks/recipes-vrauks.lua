@@ -92,7 +92,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'caged-vrauks', amount = 1},
     },
-}
+}:add_unlock("vrauks")
 
 RECIPE {
     type = 'recipe',

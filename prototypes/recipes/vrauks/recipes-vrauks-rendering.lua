@@ -6,7 +6,6 @@ RECIPE {
 	type = "recipe",
     name = 'smashing-vrauks',
 	category = 'vrauk-rendering',
-	--module_limitations = 'vrauks',
 	subgroup = 'py-alienlife-vrauks',
 	order = 'b',
 	ingredients =
@@ -25,12 +24,9 @@ RECIPE {
 	always_show_made_in = true
 }
 
---log(serpent.block(data.raw.recipe['Smashing Vrauks']))
-
 fun.autorecipes {
     name = 'rendering-vrauks',
 	category = 'slaughterhouse-vrauks',
-	--module_limitations = 'vrauks',
 	subgroup = 'py-alienlife-vrauks',
 	order = 'b',
     mats =
@@ -38,7 +34,6 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='vrauks',remove_item = true},
 					{name='caged-vrauks', amount=1},
 				},
 			results =
