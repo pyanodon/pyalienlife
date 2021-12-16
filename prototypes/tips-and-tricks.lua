@@ -34,6 +34,7 @@ data:extend(
 		dependencies = {"farming"}
 		--is_title = true,
 	},
+	--[[
 	{
 		type = "tips-and-tricks-item",
 		name = "caravan-howto",
@@ -46,4 +47,5 @@ data:extend(
 			recipe = "caravan"
 		},
 	}
+	]]--
 })
