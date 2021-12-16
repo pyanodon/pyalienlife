@@ -83,7 +83,7 @@ RECIPE {
     type = 'recipe',
     name = 'caged-vrauks',
     category = 'crafting',
-    enabled = true,
+    enabled = false,
     energy_required = 0.5,
     ingredients = {
         {type = 'item', name = 'vrauks', amount = 1},
