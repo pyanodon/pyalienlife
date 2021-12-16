@@ -59,6 +59,8 @@ fun.results_replacer("crude-from-manure", "ash", "soot")
 fun.results_replacer("guar-separation", "organics", "biomass")
 fun.results_replacer("bitumen-comb", "tar", "bitumen")
 
+RECIPE('hotair-empty-petri-dish'):add_unlock('coal-processing-1'):set_fields{enabled = false}
+
 ----EXCLUSIVE RECIPES----
 
 RECIPE {

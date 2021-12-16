@@ -2436,7 +2436,7 @@ RECIPE {
         {type = 'item', name = 'ulric-infusion', amount = 1},
     },
     --main_product = "chloral",
-}:add_unlock("symbiosis-mk01")
+}--:add_unlock("symbiosis-mk01")
 
 RECIPE {
     type = 'recipe',
@@ -2702,7 +2702,7 @@ RECIPE {
     type = 'recipe',
     name = 'earth-generic-sample',
     category = 'data-array',
-    enabled = true,
+    enabled = false,
     energy_required = 25,
     ingredients = {
         {type = 'item', name = 'iron-chest', amount = 1},
@@ -2712,7 +2712,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'earth-generic-sample', amount = 1},
     },
-}
+}:add_unlock("biotech-mk01")
 
 RECIPE {
     type = 'recipe',

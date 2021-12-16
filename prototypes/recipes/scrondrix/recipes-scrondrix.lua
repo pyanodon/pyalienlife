@@ -48,7 +48,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'steel-chest', amount = 1},
+        {type = 'item', name = 'earth-generic-sample', amount = 1},
         {type = 'item', name = 'chemical-science-pack', amount = 5},
         {type = 'item', name = 'scrondrix-codex', amount = 1},
     },

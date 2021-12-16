@@ -47,7 +47,7 @@ RECIPE {
     enabled = false,
     energy_required = 300,
     ingredients = {
-        {type = 'item', name = 'steel-chest', amount = 1},
+        {type = 'item', name = 'earth-generic-sample', amount = 1},
         {type = 'item', name = 'logistic-science-pack', amount = 15},
         {type = 'item', name = 'zipir-codex', amount = 1},
     },

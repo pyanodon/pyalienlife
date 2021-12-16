@@ -45,7 +45,7 @@ RECIPE {
     enabled = false,
     energy_required = 25,
     ingredients = {
-        {type = 'item', name = 'steel-chest', amount = 1},
+        {type = 'item', name = 'earth-generic-sample', amount = 1},
         {type = 'item', name = 'automation-science-pack', amount = 15},
         {type = 'item', name = 'ulric-codex', amount = 5},
     },

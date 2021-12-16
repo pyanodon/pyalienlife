@@ -46,7 +46,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'steel-chest', amount = 1},
+        {type = 'item', name = 'earth-generic-sample', amount = 1},
         {type = 'item', name = 'py-science-pack-2', amount = 5},
         {type = 'item', name = 'antelope-codex', amount = 1},
     },
