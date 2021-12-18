@@ -104,12 +104,3 @@ RECIPE {
     subgroup = "py-items-class",
     order = "e"
 }:add_unlock("separation")
-
-if mods["pyhightech"] then
-
-    RECIPE('processing-unit'):remove_ingredient("microchip"):add_ingredient({type = "item", name = "neuromorphic-chip", amount = 1})
-
-    else
-
-    RECIPE('processing-unit'):add_ingredient({type = "item", name = "neuromorphic-chip", amount = 1})
-end
