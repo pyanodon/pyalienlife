@@ -215,6 +215,8 @@ RECIPE {
     order = "a"
   }:add_unlock("iron-mk02"):add_ingredient({type = "item", name = "silicon", amount = 5}):add_ingredient({type = "item", name = "clay", amount = 1})
 
+
+
 RECIPE('casting-gear'):replace_ingredient('sand-casting','mold')
 RECIPE('casting-pipe'):replace_ingredient('sand-casting','mold')
 RECIPE('casting-pipe-ug'):replace_ingredient('sand-casting','mold')
@@ -231,3 +233,20 @@ RECIPE('casting-ht-pipe-underground'):replace_ingredient('sand-casting','mold')
 RECIPE('casting-drill-heads'):replace_ingredient('sand-casting','mold')
 RECIPE('casting-equipment-chassi'):replace_ingredient('sand-casting','mold')
 RECIPE('casting-lead-container'):replace_ingredient('sand-casting','mold')
+
+RECIPE {
+    type = "recipe",
+    name = "starch-3",
+    category = "biofactory",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "fluid", name = "formic-acid", amount = 100},
+        {type = "item", name = "enzyme-pks", amount = 1},
+        {type = "item", name = "molybdenum-oxide", amount = 1},
+        {type = "item", name = "fiberboard", amount = 2},
+    },
+    results = {
+        {type = "item", name = "starch", amount = 20}
+    }
+}:add_unlock("pharmagenomics")
