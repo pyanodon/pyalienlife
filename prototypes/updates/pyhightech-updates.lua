@@ -1464,3 +1464,20 @@ fun.results_replacer('biofilm-pyht', 'biofilm', 'biofilm', 75)
 
 data.raw.recipe.biofilm.energy_required = 10
 fun.results_replacer('biofilm', 'biofilm', 'biofilm', 10)
+
+RECIPE {
+    type = "recipe",
+    name = "starch-3",
+    category = "biofactory",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "fluid", name = "formic-acid", amount = 100},
+        {type = "item", name = "enzyme-pks", amount = 1},
+        {type = "item", name = "molybdenum-oxide", amount = 1},
+        {type = "item", name = "fiberboard", amount = 2},
+    },
+    results = {
+        {type = "item", name = "starch", amount = 20}
+    }
+}:add_unlock("pharmagenomics")
