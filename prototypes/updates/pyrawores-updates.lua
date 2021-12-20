@@ -234,19 +234,3 @@ RECIPE('casting-drill-heads'):replace_ingredient('sand-casting','mold')
 RECIPE('casting-equipment-chassi'):replace_ingredient('sand-casting','mold')
 RECIPE('casting-lead-container'):replace_ingredient('sand-casting','mold')
 
-RECIPE {
-    type = "recipe",
-    name = "starch-3",
-    category = "biofactory",
-    enabled = false,
-    energy_required = 5,
-    ingredients = {
-        {type = "fluid", name = "formic-acid", amount = 100},
-        {type = "item", name = "enzyme-pks", amount = 1},
-        {type = "item", name = "molybdenum-oxide", amount = 1},
-        {type = "item", name = "fiberboard", amount = 2},
-    },
-    results = {
-        {type = "item", name = "starch", amount = 20}
-    }
-}:add_unlock("pharmagenomics")
