@@ -1131,7 +1131,7 @@ RECIPE {
         {type = 'item', name = 'bio-scafold', amount = 1},
     },
     results = {
-        {type = 'item', name = 'adrenal-cortex', amount = 8},
+        {type = 'item', name = 'adrenal-cortex', amount = 2},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk02")
@@ -1314,7 +1314,7 @@ RECIPE {
         {type = 'item', name = 'immunosupressants', amount = 1},
     },
     results = {
-        {type = 'item', name = 'adrenal-cortex', amount = 20},
+        {type = 'item', name = 'adrenal-cortex', amount = 8},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk03")
