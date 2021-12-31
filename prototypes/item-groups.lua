@@ -225,6 +225,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-numal",
+        group = "py-alienlife",
+        order = "e-u"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-plants",
         group = "py-alienlife",
         order = "f"

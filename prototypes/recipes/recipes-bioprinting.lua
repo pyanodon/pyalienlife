@@ -1452,7 +1452,7 @@ RECIPE {
     name = 'art-auog',
     category = 'creature-chamber',
     enabled = false,
-    energy_required = 20,
+    energy_required = 8,
     ingredients = {
         {type = 'fluid', name = 'artificial-blood', amount = 100},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
@@ -1474,7 +1474,7 @@ RECIPE {
     name = 'art-ulric',
     category = 'creature-chamber',
     enabled = false,
-    energy_required = 20,
+    energy_required = 8,
     ingredients = {
         {type = 'fluid', name = 'artificial-blood', amount = 100},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
@@ -1496,7 +1496,7 @@ RECIPE {
     name = 'art-mukmoux',
     category = 'creature-chamber',
     enabled = false,
-    energy_required = 20,
+    energy_required = 8,
     ingredients = {
         {type = 'fluid', name = 'artificial-blood', amount = 100},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
@@ -1518,7 +1518,7 @@ RECIPE {
     name = 'art-arqad',
     category = 'creature-chamber',
     enabled = false,
-    energy_required = 20,
+    energy_required = 8,
     ingredients = {
         {type = 'fluid', name = 'artificial-blood', amount = 100},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
@@ -1540,7 +1540,7 @@ RECIPE {
     name = 'art-cottongut',
     category = 'creature-chamber',
     enabled = false,
-    energy_required = 20,
+    energy_required = 8,
     ingredients = {
         {type = 'fluid', name = 'artificial-blood', amount = 100},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
@@ -1562,7 +1562,7 @@ RECIPE {
     name = 'art-vrauks',
     category = 'creature-chamber',
     enabled = false,
-    energy_required = 20,
+    energy_required = 8,
     ingredients = {
         {type = 'fluid', name = 'artificial-blood', amount = 100},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
@@ -1584,7 +1584,7 @@ RECIPE {
     name = 'art-arthurian',
     category = 'creature-chamber',
     enabled = false,
-    energy_required = 20,
+    energy_required = 8,
     ingredients = {
         {type = 'fluid', name = 'artificial-blood', amount = 100},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
@@ -1606,7 +1606,7 @@ RECIPE {
     name = 'art-dhilmos',
     category = 'creature-chamber',
     enabled = false,
-    energy_required = 20,
+    energy_required = 8,
     ingredients = {
         {type = 'fluid', name = 'artificial-blood', amount = 100},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
@@ -1628,7 +1628,7 @@ RECIPE {
     name = 'art-scrondrix',
     category = 'creature-chamber',
     enabled = false,
-    energy_required = 20,
+    energy_required = 8,
     ingredients = {
         {type = 'fluid', name = 'artificial-blood', amount = 100},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
@@ -1650,7 +1650,7 @@ RECIPE {
     name = 'art-phadai',
     category = 'creature-chamber',
     enabled = false,
-    energy_required = 20,
+    energy_required = 8,
     ingredients = {
         {type = 'fluid', name = 'artificial-blood', amount = 100},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
@@ -1672,7 +1672,7 @@ RECIPE {
     name = 'art-dingrits',
     category = 'creature-chamber',
     enabled = false,
-    energy_required = 20,
+    energy_required = 8,
     ingredients = {
         {type = 'fluid', name = 'artificial-blood', amount = 100},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
@@ -1694,7 +1694,7 @@ RECIPE {
     name = 'art-xenos',
     category = 'creature-chamber',
     enabled = false,
-    energy_required = 20,
+    energy_required = 8,
     ingredients = {
         {type = 'fluid', name = 'artificial-blood', amount = 100},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
@@ -1716,7 +1716,7 @@ RECIPE {
     name = 'art-vonix',
     category = 'creature-chamber',
     enabled = false,
-    energy_required = 20,
+    energy_required = 8,
     ingredients = {
         {type = 'fluid', name = 'artificial-blood', amount = 100},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
@@ -1738,7 +1738,7 @@ RECIPE {
     name = 'art-phagnot',
     category = 'creature-chamber',
     enabled = false,
-    energy_required = 20,
+    energy_required = 8,
     ingredients = {
         {type = 'fluid', name = 'artificial-blood', amount = 100},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
@@ -1760,7 +1760,7 @@ RECIPE {
     name = 'art-zipir',
     category = 'creature-chamber',
     enabled = false,
-    energy_required = 20,
+    energy_required = 8,
     ingredients = {
         {type = 'fluid', name = 'artificial-blood', amount = 100},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
@@ -1782,7 +1782,7 @@ RECIPE {
     name = 'art-trits',
     category = 'creature-chamber',
     enabled = false,
-    energy_required = 20,
+    energy_required = 8,
     ingredients = {
         {type = 'fluid', name = 'artificial-blood', amount = 100},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
@@ -1804,7 +1804,7 @@ RECIPE {
     name = 'art-xyhiphoe',
     category = 'creature-chamber',
     enabled = false,
-    energy_required = 20,
+    energy_required = 8,
     ingredients = {
         {type = 'fluid', name = 'artificial-blood', amount = 100},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
@@ -1826,7 +1826,7 @@ RECIPE {
     name = 'art-simik',
     category = 'creature-chamber',
     enabled = false,
-    energy_required = 20,
+    energy_required = 8,
     ingredients = {
         {type = 'fluid', name = 'artificial-blood', amount = 100},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
