@@ -8,13 +8,13 @@ RECIPE {
         {type = 'item', name = 'automation-science-pack', amount = 10},
         {type = 'item', name = 'brain', amount = 5},
         {type = 'fluid', name = 'water', amount = 1000},
-        {type = 'fluid', name = 'arqad-honey', amount = 100},
+        {type = 'fluid', name = 'arqad-honey', amount = 150},
         {type = 'item', name = 'nexelit-plate', amount = 5},
     },
     results = {
         {type = 'item', name = 'logistic-science-pack', amount = 1},
     },
-}:add_unlock("biotech-mk02"):add_ingredient({type = "item", name = "small-parts-01", amount = 10})
+}:add_unlock("biotech-mk02"):add_ingredient({type = "item", name = "small-parts-01", amount = 100})
 
 RECIPE {
     type = 'recipe',
@@ -34,7 +34,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'chemical-science-pack', amount = 1},
     },
-}:add_unlock("biotech-mk02"):add_ingredient({type = "item", name = "small-parts-01", amount = 10})
+}:add_unlock("biotech-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 100})
 
 RECIPE {
     type = 'recipe',
@@ -49,13 +49,13 @@ RECIPE {
         {type = 'item', name = 'brain', amount = 15},
         {type = 'fluid', name = 'water', amount = 1000},
         {type = 'fluid', name = 'fetal-serum', amount = 250},
-        {type = 'fluid', name = 'arqad-honey', amount = 100},
+        {type = 'fluid', name = 'arqad-honey', amount = 150},
         {type = 'item', name = 'nexelit-plate', amount = 15},
     },
     results = {
         {type = 'item', name = 'production-science-pack', amount = 1},
     },
-}:add_unlock("biotech-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 20})
+}:add_unlock("biotech-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 100})
 
 RECIPE {
     type = 'recipe',
@@ -70,10 +70,10 @@ RECIPE {
         {type = 'item', name = 'brain', amount = 30},
         {type = 'fluid', name = 'gta', amount = 250},
         {type = 'fluid', name = 'fetal-serum', amount = 500},
-        {type = 'fluid', name = 'arqad-honey', amount = 100},
+        {type = 'fluid', name = 'arqad-honey', amount = 150},
         {type = 'item', name = 'nexelit-plate', amount = 50},
     },
     results = {
         {type = 'item', name = 'utility-science-pack', amount = 1},
     },
-}:add_unlock("pharmagenomics"):add_ingredient({type = "item", name = "small-parts-03", amount = 20})
+}:add_unlock("pharmagenomics"):add_ingredient({type = "item", name = "small-parts-03", amount = 100})
