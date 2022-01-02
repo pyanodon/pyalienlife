@@ -277,7 +277,7 @@ RECIPE {
         {type = 'item', name = 'perfect-samples', amount = 1},
         },
     results = {
-        {type = 'item', name = 'utility-science-pack', amount = 4},
+        {type = 'item', name = 'utility-science-pack', amount = 2},
     },
     main_product = "utility-science-pack",
     --icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',

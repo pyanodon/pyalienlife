@@ -82,7 +82,7 @@ fun.add_ingredient('satellite', {type = 'item', name = 'antimatter', amount = 3}
 
 RECIPE('space-science-pack'):add_ingredient({type = "item", name = "destablilized-toxirus", amount = 1}):add_ingredient({type = "item", name = "strangelets", amount = 5})
 
-RECIPE('cottongut-science-utility'):replace_ingredient("perfect-samples", "destablilized-toxirus"):add_ingredient({type = "item", name = "hormonal", amount = 1}):add_ingredient({type = "item", name = "dimensional-gastricorg", amount = 1}):add_ingredient({type = 'item', name = 'intelligent-unit', amount = 1})
+RECIPE('cottongut-science-utility'):add_ingredient({type = "item", name = "destablilized-toxirus", amount = 1}):add_ingredient({type = "item", name = "hormonal", amount = 1}):add_ingredient({type = "item", name = "dimensional-gastricorg", amount = 1}):add_ingredient({type = 'item', name = 'intelligent-unit', amount = 1})
 --RECIPE('satellite'):add_unlock('quantum')
 
 ----KICALK-----
