@@ -2020,17 +2020,18 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'plastic-from-casein',
-    category = 'advanced-crafting',
+    category = 'chemistry',
     enabled = false,
     energy_required = 20,
     ingredients = {
         {type = 'item', name = 'casein', amount = 5},
+        {type = 'fluid', name = 'methanal', amount = 100},
     },
     results = {
         {type = 'item', name = 'plastic-bar', amount = 20},
     },
     --main_product = "casein-pulp-01",
-}:add_unlock("korlex"):add_ingredient({type = "fluid", name = "hot-air", amount = 25})
+}:add_unlock("korlex"):add_ingredient({type = "fluid", name = "hot-air", amount = 100})
 
 RECIPE {
     type = 'recipe',
