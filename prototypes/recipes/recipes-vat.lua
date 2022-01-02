@@ -64,9 +64,9 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = 'item', name = 'production-science-pack', amount = 5},
+        {type = 'item', name = 'production-science-pack', amount = 10},
         {type = 'item', name = 'py-science-pack-2', amount = 10},
-        {type = 'item', name = 'chemical-science-pack', amount = 15},
+        {type = 'item', name = 'chemical-science-pack', amount = 10},
         {type = 'item', name = 'brain', amount = 30},
         {type = 'fluid', name = 'gta', amount = 250},
         {type = 'fluid', name = 'fetal-serum', amount = 500},
