@@ -685,7 +685,7 @@ require('prototypes/tips-and-tricks')
 require('prototypes/sprites/sprites')
 --require('prototypes/ores/fake-plants')
 
-data.raw.fluid['bio-oil'].fuel_value = '0.13MJ'
+data.raw.fluid['bio-oil'].fuel_value = '0.8MJ'
 
 local bio_list = require('prototypes/items/biomass-convertion')
 
