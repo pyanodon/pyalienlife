@@ -5,7 +5,6 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 --RECIPES UPDATES
 
 RECIPE('exoskeleton-equipment'):add_ingredient({type = "item", name = "metallic-glass", amount = 30})
-RECIPE('plastic-bar'):remove_unlock('plastics')
 RECIPE('automation-science-pack'):change_category('research')
 RECIPE('logistic-science-pack'):change_category('research')
 RECIPE('chemical-science-pack'):change_category('research')

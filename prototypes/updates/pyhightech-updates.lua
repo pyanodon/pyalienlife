@@ -45,6 +45,9 @@ require('prototypes/recipes/moondrop/recipes-moondrop')
 require('prototypes/recipes/moondrop/recipes-auto-moondrop')
 --require('prototypes/recipes/moondrop/recipes-moondrop-copper') TODO: SETUP TURD FARM TECHS AGAIN
 
+RECIPE("plastic-from-melamine"):remove_unlock('plastics'):add_unlock('melamine')
+TECHNOLOGY("melamine"):remove_pack('logistic-science-pack')
+
 --(( ORES ))--
 require('prototypes/ores/kicalk')
 require('prototypes/ores/arum')
@@ -377,6 +380,8 @@ RECIPE('methane-py-fertilizer'):add_unlock('moondrop')
 RECIPE('methane-py-fertilizer'):add_ingredient('moondrop-seeds')
 RECIPE('methane-co2'):add_unlock('moondrop')
 RECIPE('methane-co2'):add_ingredient('moondrop-seeds')
+
+RECIPE("plastic-from-casein"):add_ingredient({type = 'fluid', name = 'methanal', amount = 100})
 
 ----EXCLUSIVE RECIPES----
 

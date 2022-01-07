@@ -472,7 +472,7 @@ require('prototypes/recipes/bhoddos/recipes-bhoddos-raising')
 require('prototypes/recipes/cottongut/recipes-cottongut')
 require('prototypes/recipes/cottongut/recipes-cottongut-raising')
 require('prototypes/recipes/cottongut/recipes-cottongut-rendering')
-require('prototypes/recipes/cottongut/recipes-cottongut-science')
+--require('prototypes/recipes/cottongut/recipes-cottongut-science')
 
 --Cridren
 require('prototypes/recipes/cridren/recipes-cridren')
@@ -658,7 +658,7 @@ require('prototypes/recipes/recipes-mo')
 require('prototypes/recipes/recipes-photomining')
 require('prototypes/recipes/recipes-phytoplankton')
 require('prototypes/recipes/recipes-recharge')
-require('prototypes/recipes/recipes-vat')
+--require('prototypes/recipes/recipes-vat')
 
 
 --gunpowder poo

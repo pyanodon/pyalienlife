@@ -2025,7 +2025,6 @@ RECIPE {
     energy_required = 20,
     ingredients = {
         {type = 'item', name = 'casein', amount = 5},
-        {type = 'fluid', name = 'methanal', amount = 100},
     },
     results = {
         {type = 'item', name = 'plastic-bar', amount = 20},
