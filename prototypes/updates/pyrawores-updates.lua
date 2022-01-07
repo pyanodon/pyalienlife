@@ -78,6 +78,8 @@ RECIPE('full-molten-stainless-steel-3'):add_ingredient({type = "item", name = "c
 RECIPE('molten-super-steel'):add_ingredient({type = "item", name = "cobalt-oxide", amount = 1})
 RECIPE('full-molten-super-steel-3'):add_ingredient({type = "item", name = "cobalt-oxide", amount = 1})
 
+RECIPE("centrifuge"):remove_unlock('nuclear-fuel-reprocessing'):add_unlock('basic-electronics')
+
 ----EXCLUSIVE RECIPES----
 
 RECIPE {
@@ -233,4 +235,3 @@ RECIPE('casting-ht-pipe-underground'):replace_ingredient('sand-casting','mold')
 RECIPE('casting-drill-heads'):replace_ingredient('sand-casting','mold')
 RECIPE('casting-equipment-chassi'):replace_ingredient('sand-casting','mold')
 RECIPE('casting-lead-container'):replace_ingredient('sand-casting','mold')
-
