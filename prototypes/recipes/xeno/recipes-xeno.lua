@@ -210,3 +210,18 @@ RECIPE {
     subgroup = 'py-alienlife-xeno',
     order = 'zc'
 }:add_unlock("biased-mutation")
+
+RECIPE {
+    type = 'recipe',
+    name = 'xeno-phosphoric',
+    category = 'biofactory',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'xeno-egg', amount = 1},
+    },
+    results = {
+        {type = 'fluid', name = 'phosphoric-acid', amount = 25},
+    },
+    --main_product = "xeno",
+}:add_unlock("xeno-mk03")

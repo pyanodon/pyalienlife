@@ -1080,7 +1080,7 @@ RECIPE {
         {type = 'item', name = 'bio-scafold', amount = 1},
     },
     results = {
-        {type = 'item', name = 'gas-bladder', amount = 20},
+        {type = 'item', name = 'gas-bladder', amount = 10},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk02")
@@ -1114,7 +1114,7 @@ RECIPE {
         {type = 'item', name = 'bio-scafold', amount = 1},
     },
     results = {
-        {type = 'item', name = 'shell', amount = 150}, --since it is effectively limestone atm
+        {type = 'item', name = 'shell', amount = 35},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk02")
@@ -1260,7 +1260,7 @@ RECIPE {
         {type = 'item', name = 'immunosupressants', amount = 1},
     },
     results = {
-        {type = 'item', name = 'gas-bladder', amount = 15},
+        {type = 'item', name = 'gas-bladder', amount = 16},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk03")
@@ -1296,7 +1296,7 @@ RECIPE {
         {type = 'item', name = 'immunosupressants', amount = 1},
     },
     results = {
-        {type = 'item', name = 'shell', amount = 200},   -- this is limestone it has to be HUGE
+        {type = 'item', name = 'shell', amount = 55},   -- this is limestone it has to be HUGE
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk03")

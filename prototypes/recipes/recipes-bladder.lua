@@ -15,6 +15,20 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
+    name = 'gas-bladder-to-phophine-gas',
+    category = 'gas-separator',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'gas-bladder', amount = 1},
+    },
+    results = {
+        {type = 'fluid', name = 'phosphine-gas', amount = 30}
+    }
+}:add_unlock('phagnot-mk02'):change_category('gas-refinery')
+
+RECIPE {
+    type = 'recipe',
     name = 'gas-bladder-to-rich-gas',
     category = 'gas-separator',
     enabled = false,
