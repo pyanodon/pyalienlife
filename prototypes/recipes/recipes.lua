@@ -479,6 +479,7 @@ RECIPE {
         {type = 'item', name = 'flask', amount = 2},
         {type = 'item', name = 'moss', amount = 20},
         {type = 'fluid', name = 'organic-solvent', amount = 100},
+        {type = 'fluid', name = 'flavonoids', amount = 30},
         {type = 'fluid', name = 'arqad-honey', amount = 100},
     },
     results = {
@@ -768,6 +769,7 @@ RECIPE {
     energy_required = 20,
     ingredients = {
         {type = 'item', name = 'bhoddos', amount = 1},
+        {type = 'item', name = 'pacifastin', amount = 1},
         {type = 'item', name = 'flask', amount = 3},
         {type = 'item', name = 'microcin-j25', amount = 1},
         {type = 'item', name = 'lab-instrument', amount = 1},
