@@ -2728,3 +2728,20 @@ RECIPE {
         {type = 'item', name = 'bio-sample', amount = 1},
     },
 }:add_unlock("biotech-mk01")
+
+RECIPE {
+    type = "recipe",
+    name = "fertilizer-3",
+    category = "bio-reactor",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "seaweed", amount = 10},
+        {type = "item", name = "urea", amount = 2},
+        {type = "item", name = "ash", amount = 20},
+        {type = "item", name = "biomass", amount = 20}
+    },
+    results = {
+        {type = "item", name = "py-fertilizer", amount = 10}
+    }
+}:add_unlock("botany-mk03")
