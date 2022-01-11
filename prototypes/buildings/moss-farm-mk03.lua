@@ -9,7 +9,6 @@ RECIPE {
         {"plastic-bar", 100},
         {"nichrome", 50},
         {"electric-engine-unit", 30},
-        {"electric-engine-unit", 4},
         {"processing-unit", 25}
     },
     results = {
