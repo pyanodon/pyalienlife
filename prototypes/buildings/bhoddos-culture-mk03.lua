@@ -9,6 +9,7 @@ RECIPE {
         {"super-alloy", 30},
         {"ticocr-alloy", 40},
         {"neuroprocessor", 20},
+        {"electric-engine-unit", 2},
         {"processing-unit", 35},
         {"stainless-steel", 50},
     },

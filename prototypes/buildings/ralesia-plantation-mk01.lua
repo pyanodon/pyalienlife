@@ -37,6 +37,7 @@ RECIPE {
         {"stone", 100}, --bob glass
         {"iron-plate", 30},
         {"duralumin", 10},
+        {"steam-engine", 1},
         {"treated-wood", 50},
         {"small-lamp", 20}
     },

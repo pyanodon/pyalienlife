@@ -6,6 +6,7 @@ RECIPE {
     ingredients = {
         {"navens-culture-mk01", 1},
         {"nexelit-plate", 20},
+        {"engine-unit", 3},
         {"latex", 25},
         {"neuroprocessor", 30},
         {"advanced-circuit", 15},

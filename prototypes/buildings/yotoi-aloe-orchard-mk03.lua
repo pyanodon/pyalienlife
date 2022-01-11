@@ -8,6 +8,7 @@ RECIPE {
         {"sc-unit", 10},
         {"neuromorphic-chip", 15},
         {"processing-unit", 30},
+        {"electric-engine-unit", 2},
         {"latex", 100},
     },
     results = {

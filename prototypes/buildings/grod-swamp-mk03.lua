@@ -8,6 +8,7 @@ RECIPE {
         {"molybdenum-plate", 15},
         {"super-alloy", 20},
         {"processing-unit", 40},
+        {"electric-engine-unit", 8},
         {"nexelit-plate", 40},
         {"nbti-alloy", 30},
     },

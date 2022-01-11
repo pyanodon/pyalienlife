@@ -7,7 +7,7 @@ RECIPE {
         {"stone-brick", 100},
         {"pipe", 20},
         {"titanium-plate", 40},
-        {"engine-unit", 10},
+        {"steam-engine", 10},
         {"electronic-circuit", 50},
         {"iron-gear-wheel", 70},
         {"glass", 50},

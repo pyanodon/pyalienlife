@@ -9,6 +9,7 @@ RECIPE {
         {"neuromorphic-chip", 20},
         {"processing-unit", 30},
         {"stainless-steel", 50},
+        {"electric-engine-unit", 10},
     },
     results = {
         {"seaweed-crop-mk03", 1}

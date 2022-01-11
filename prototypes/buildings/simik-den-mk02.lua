@@ -6,6 +6,7 @@ RECIPE {
     ingredients = {
         {"simik-den-mk01", 1},
         {"nbti-alloy", 30},
+        {"engine-unit", 2},
         {"nexelit-plate", 10},
         {"latex", 20},
         {"neuroprocessor", 30},

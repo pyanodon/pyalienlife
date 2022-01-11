@@ -9,6 +9,7 @@ RECIPE {
         {"advanced-circuit", 30},
         {"titanium-plate", 20},
         {"latex", 30},
+        {"engine-unit", 30},
         {"neuroprocessor", 20},
     },
     results = {

@@ -6,7 +6,7 @@ RECIPE {
     ingredients = {
         {"soil", 900},
         {"pump", 5},
-        {"engine-unit", 5},
+        {"steam-engine", 5},
         {"treated-wood", 50},
         {"pipe", 30},
         {"electronic-circuit", 50},

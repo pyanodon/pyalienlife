@@ -8,6 +8,7 @@ RECIPE {
         {"washer", 1},
         {"titanium-plate", 35},
         {"electronic-circuit", 10},
+        {"steam-engine", 5},
         {"glass", 50},
         {"nickel-plate", 25},
     },

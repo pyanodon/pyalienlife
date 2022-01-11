@@ -9,7 +9,7 @@ RECIPE {
         {"duralumin", 30},
         {"latex", 30},
         {"plastic-bar", 50},
-        {"electric-engine-unit", 5},
+        {"engine-unit", 5},
         {"advanced-circuit", 20},
     },
     results = {

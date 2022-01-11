@@ -8,6 +8,7 @@ RECIPE {
         {"glass", 100},
         {"duralumin", 30},
         {"latex", 30},
+        {"engine-unit", 4},
         {"neuroprocessor", 10},
         {"advanced-circuit", 30},
         {"nbti-alloy", 30},

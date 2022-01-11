@@ -8,6 +8,7 @@ RECIPE {
         {"arqad-hive-mk01", 1},
         {"concrete", 30},
         {"titanium-plate", 20},
+        {"engine-unit", 7},
         {"nickel-plate", 50},
         {"latex", 20},
         {"duralumin", 10},

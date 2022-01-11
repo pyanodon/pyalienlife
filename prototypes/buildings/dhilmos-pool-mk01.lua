@@ -5,6 +5,7 @@ RECIPE {
     enabled = false,
     ingredients = {
         {"nbti-alloy", 40},
+        {"steam-engine", 2},
         {"glass", 35},
         {"nexelit-plate", 20},
         {"duralumin", 50},

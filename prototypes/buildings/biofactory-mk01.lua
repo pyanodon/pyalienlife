@@ -5,6 +5,7 @@ RECIPE {
     enabled = false,
     ingredients = {
         {"steel-plate", 15},
+        {"steam-engine", 5},
         {"glass", 50},
         {"titanium-plate", 15},
         {"nexelit-plate", 15},

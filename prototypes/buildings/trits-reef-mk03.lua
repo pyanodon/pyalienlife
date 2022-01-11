@@ -6,6 +6,7 @@ RECIPE {
     ingredients = {
         {"ticocr-alloy", 50},
         {"nbti-alloy", 100},
+        {"electric-engine-unit", 10},
         {"stainless-steel", 50},
         {"trits-reef-mk02", 1},
         {"processing-unit", 50},

@@ -6,7 +6,7 @@ RECIPE {
     ingredients = {
         {"stone-brick", 50},
         {"steel-plate", 10},
-        {"engine-unit", 3},
+        {"steam-engine", 5},
         {"electronic-circuit", 10},
         {"iron-gear-wheel", 20},
     },

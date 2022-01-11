@@ -7,6 +7,7 @@ RECIPE {
         {"genlab-mk01", 1},
         {"plastic-bar", 30},
         {"advanced-circuit", 20},
+        {"engine-unit", 10},
         {"duralumin", 20},
         {"lead-plate", 40},
         {"latex", 30},

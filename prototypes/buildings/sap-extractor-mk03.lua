@@ -8,6 +8,7 @@ RECIPE {
         {"nexelit-plate", 100},
         {"molybdenum-plate", 20},
         {"stainless-steel", 50},
+        {"electric-engine-unit", 3},
         {"processing-unit", 30},
         {"nichrome", 40},
     },

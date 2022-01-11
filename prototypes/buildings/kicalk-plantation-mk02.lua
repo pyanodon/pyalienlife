@@ -15,6 +15,7 @@ RECIPE {
     ingredients = {
         {"kicalk-plantation-mk01", 1},
         {"advanced-circuit", 40},
+        {"engine-unit", 5},
         {"latex", 30},
         {"titanium-plate", 35},
     },

@@ -33,6 +33,7 @@ RECIPE {
     ingredients = {
         {"ralesia-plantation-mk01", 1},
         {"plastic-bar", 50},
+        {"engine-unit", 2},
         {"pump", 4},
         {"advanced-circuit", 15},
         {"latex", 50},

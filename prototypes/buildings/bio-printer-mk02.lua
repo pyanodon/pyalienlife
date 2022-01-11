@@ -8,6 +8,7 @@ RECIPE {
         {"stainless-steel", 60},
         {"glass", 40},
         {"advanced-circuit", 20},
+        {"engine-unit", 20},
         {"titanium-plate", 20},
         {"latex", 30},
         {"neuroprocessor", 20},

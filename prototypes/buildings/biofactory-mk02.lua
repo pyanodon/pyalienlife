@@ -9,6 +9,7 @@ RECIPE {
         {"nexelit-plate", 15},
         {"duralumin", 50},
         {"advanced-circuit", 20},
+        {"engine-unit", 10},
         {"latex", 25},
         {"neuroprocessor", 10},
     },

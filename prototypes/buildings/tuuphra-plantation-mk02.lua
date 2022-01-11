@@ -10,6 +10,7 @@ RECIPE {
         {"latex", 30},
         {"neuroprocessor", 20},
         {"advanced-circuit", 30},
+        {"engine-unit", 5},
     },
     results = {
         {"tuuphra-plantation-mk02", 1}

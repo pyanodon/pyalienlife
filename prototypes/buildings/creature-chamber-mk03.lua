@@ -7,6 +7,7 @@ RECIPE {
         {"creature-chamber-mk02", 1},
         {"ticocr-alloy", 30},
         {"nbti-alloy", 50},
+        {"electric-engine-unit", 12},
         {"nexelit-plate", 50},
         {"processing-unit", 40},
     },

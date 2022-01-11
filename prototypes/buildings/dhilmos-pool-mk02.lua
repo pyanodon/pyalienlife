@@ -9,6 +9,7 @@ RECIPE {
         {"nexelit-plate", 20},
         {"plastic-bar", 25},
         {"neuroprocessor", 50},
+        {"engine-unit", 10},
         {"neuromorphic-chip", 30},
         {"advanced-circuit", 50},
         {"tin-plate", 50},

@@ -10,6 +10,7 @@ RECIPE {
         {"advanced-circuit", 20},
         {"niobium-pipe", 35},
         {"latex", 30},
+        {"engine-unit", 4},
         {"neuroprocessor", 20},
     },
     results = {

@@ -7,6 +7,7 @@ RECIPE {
         {"titanium-plate", 100},
         {"iron-plate", 150},
         {"aluminium-plate", 50},
+        {"steam-engine", 5},
         {"pump", 3},
         {"glass", 200},
         {"electronic-circuit", 50},

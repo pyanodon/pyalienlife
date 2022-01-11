@@ -9,6 +9,7 @@ RECIPE {
         {"ticocr-alloy", 50},
         {"neuromorphic-chip", 20},
         {"processing-unit", 30},
+        {"electric-engine-unit", 8},
     },
     results = {
         {"tuuphra-plantation-mk03", 1}

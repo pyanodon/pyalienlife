@@ -8,6 +8,7 @@ RECIPE {
         {"neuromorphic-chip", 30},
         {"boron-carbide", 15},
         {"ticocr-alloy", 40},
+        {"electric-engine-unit", 15},
         {"processing-unit", 30},
         {"nichrome", 25},
     },

@@ -9,7 +9,6 @@ RECIPE {
         {"moss-farm-mk01", 1},
         {"steel-plate", 40},
         {"glass", 35}
-        --add glass
     },
     results = {
         {"bio-reactor-mk01", 1}

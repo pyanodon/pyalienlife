@@ -6,6 +6,7 @@ RECIPE {
     ingredients = {
         {"steel-plate", 15},
         {"sponge-culture-mk01", 1},
+        {"engine-unit", 4},
         {"titanium-plate", 15},
         {"duralumin", 50},
         {"latex", 30},

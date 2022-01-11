@@ -9,6 +9,7 @@ RECIPE {
         {"nichrome", 20},
         {"sc-unit", 10},
         {"ticocr-alloy", 40},
+        {"electric-engine-unit", 3},
         {"neuromorphic-chip", 40},
         {"stainless-steel", 40},
         {"molybdenum-plate", 20},

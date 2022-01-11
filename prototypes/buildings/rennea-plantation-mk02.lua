@@ -5,7 +5,7 @@ RECIPE {
     enabled = false,
     ingredients = {
         {"rennea-plantation-mk01", 1},
-        {"electric-engine-unit", 15},
+        {"engine-unit", 10},
         {"treated-wood", 20},
         {"niobium-pipe", 20},
         {"advanced-circuit", 50},

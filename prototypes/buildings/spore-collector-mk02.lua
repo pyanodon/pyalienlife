@@ -6,7 +6,7 @@ RECIPE {
     ingredients = {
         {"duralumin", 50},
         {"spore-collector-mk01", 1},
-        {"electric-engine-unit", 10},
+        {"engine-unit", 8},
         {"iron-plate", 80},
         {"advanced-circuit", 20},
         {"neuroprocessor", 30},

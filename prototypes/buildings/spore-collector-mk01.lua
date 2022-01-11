@@ -7,7 +7,7 @@ RECIPE {
         {"stone-brick", 50},
         {"steel-plate", 50},
         {"gasifier", 1},
-        {"engine-unit", 3},
+        {"steam-engine", 3},
         {"iron-plate", 20},
         {"electronic-circuit", 10},
         {"iron-gear-wheel", 20},

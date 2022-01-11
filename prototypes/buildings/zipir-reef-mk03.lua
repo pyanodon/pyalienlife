@@ -8,6 +8,7 @@ RECIPE {
         {"py-heat-exchanger", 1},
         {"processing-unit", 40},
         {"nbti-alloy", 35},
+        {"electric-engine-unit", 10},
         {"nichrome", 30},
     },
     results = {

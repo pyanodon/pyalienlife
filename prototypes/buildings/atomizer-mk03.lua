@@ -7,6 +7,7 @@ RECIPE {
         {"atomizer-mk02", 1},
         {"processing-unit", 30},
         {"stainless-steel", 30},
+        {"electric-engine-unit", 10},
         {"molybdenum-plate", 30},
         {"ticocr-alloy", 20},
     },

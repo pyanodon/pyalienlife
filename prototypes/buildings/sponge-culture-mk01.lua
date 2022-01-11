@@ -7,6 +7,7 @@ RECIPE {
         {"steel-plate", 15},
         {"glass", 100},
         {"titanium-plate", 15},
+        {"steam-engine", 2},
         {"duralumin", 50},
         {"iron-plate", 15},
         {"pipe", 15},

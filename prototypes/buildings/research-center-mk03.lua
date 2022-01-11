@@ -8,6 +8,7 @@ RECIPE {
         {"ticocr-alloy", 50},
         {"nbti-alloy", 100},
         {"stainless-steel", 50},
+        {"electric-engine-unit", 20},
         {"processing-unit", 50},
         {"molybdenum-plate", 100},
     },

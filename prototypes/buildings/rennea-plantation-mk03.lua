@@ -9,6 +9,7 @@ RECIPE {
         {"ticocr-alloy", 20},
         {"processing-unit", 50},
         {"molybdenum-plate", 40},
+        {"electric-engine-unit", 12},
         {"nexelit-plate", 40},
     },
     results = {

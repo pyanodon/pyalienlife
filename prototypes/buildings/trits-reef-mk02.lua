@@ -9,6 +9,7 @@ RECIPE {
         {"steel-plate", 100},
         {"latex", 50},
         {"trits-reef-mk01", 1},
+        {"engine-unit", 5},
         {"neuroprocessor", 30},
         {"advanced-circuit", 35},
     },

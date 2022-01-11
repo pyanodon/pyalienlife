@@ -5,6 +5,7 @@ RECIPE {
     enabled = false,
     ingredients = {
         {"duralumin", 35},
+        {"engine-unit", 5},
         {"seaweed-crop-mk01", 1},
         {"niobium-pipe", 20},
         {"advanced-circuit", 20},

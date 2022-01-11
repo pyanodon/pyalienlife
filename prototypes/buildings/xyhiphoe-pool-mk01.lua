@@ -8,6 +8,7 @@ RECIPE {
         {"pump", 4},
         {"electronic-circuit", 20}, --updated-bob electronic-circuit-board
         {"steel-plate", 40},
+        {"steam-engine", 4},
         {"pipe", 10},
         {"glass", 100}
     },

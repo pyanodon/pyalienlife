@@ -10,6 +10,7 @@ RECIPE {
         {"aluminium-plate", 10},
         {"electronic-circuit", 10},
         {"iron-gear-wheel", 10},
+        {"steam-engine", 2},
     },
     results = {
         {"moss-farm-mk01", 1}

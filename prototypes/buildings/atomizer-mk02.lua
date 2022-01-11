@@ -6,6 +6,7 @@ RECIPE {
     ingredients = {
         {"atomizer-mk01", 1},
         {"advanced-circuit", 10},
+        {"engine-unit", 6},
         {"lead-plate", 20},
         {"latex", 30},
         {"neuroprocessor", 20},

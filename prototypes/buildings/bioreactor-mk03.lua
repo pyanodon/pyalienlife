@@ -8,6 +8,7 @@ RECIPE {
         {"nbti-alloy", 20},
         {"super-alloy", 30},
         {"stainless-steel", 50},
+        {"electric-engine-unit", 15},
         {"processing-unit", 30},
         {"ticocr-alloy", 20},
     },

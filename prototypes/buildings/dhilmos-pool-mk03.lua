@@ -9,6 +9,7 @@ RECIPE {
         {"molybdenum-plate", 20},
         {"boron-carbide", 30},
         {"processing-unit", 50},
+        {"electric-engine-unit", 10},
     },
     results = {
         {"dhilmos-pool-mk03", 1}

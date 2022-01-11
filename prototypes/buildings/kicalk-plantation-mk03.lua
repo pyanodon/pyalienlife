@@ -14,6 +14,7 @@ RECIPE {
     enabled = false,
     ingredients = {
         {"kicalk-plantation-mk02", 1},
+        {"electric-engine-unit", 10},
         {"processing-unit", 40},
         {"neuromorphic-chip", 30},
         {"nichrome", 35},

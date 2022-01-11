@@ -6,6 +6,7 @@ RECIPE {
     ingredients = {
         {"molybdenum-plate", 50},
         {"spore-collector-mk02", 1},
+        {"electric-engine-unit", 15},
         {"sc-unit", 10},
         {"super-alloy", 80},
         {"processing-unit", 40},

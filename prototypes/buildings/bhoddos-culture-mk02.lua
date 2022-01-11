@@ -6,6 +6,7 @@ RECIPE {
     ingredients = {
         {"bhoddos-culture-mk01", 1},
         {"titanium-plate", 40},
+        {"engine-unit", 2},
         {"lead-plate", 50},
         {"latex", 40},
         {"neuroprocessor", 20},

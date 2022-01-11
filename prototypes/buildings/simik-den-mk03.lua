@@ -8,6 +8,7 @@ RECIPE {
         {"nexelit-plate", 50},
         {"super-alloy", 20},
         {"ticocr-alloy", 30},
+        {"electric-engine-unit", 4},
         {"processing-unit", 30}
     },
     results = {

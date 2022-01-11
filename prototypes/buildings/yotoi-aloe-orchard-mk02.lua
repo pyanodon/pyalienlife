@@ -6,6 +6,7 @@ RECIPE {
     ingredients = {
         {"yotoi-aloe-orchard-mk01", 1},
         {"stainless-steel", 50},
+        {"engine-unit", 2},
         {"niobium-pipe", 15},
         {"advanced-circuit", 20},
         {"plastic-bar", 40},

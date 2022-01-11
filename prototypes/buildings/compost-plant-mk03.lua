@@ -9,6 +9,7 @@ RECIPE {
         {"py-heat-exchanger", 1},
         {"stainless-steel", 30},
         {"processing-unit", 30},
+        {"electric-engine-unit", 20},
         {"ticocr-alloy", 20},
     },
     results = {

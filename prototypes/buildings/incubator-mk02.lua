@@ -17,6 +17,7 @@ RECIPE {
         {"incubator-mk01", 1},
         {"advanced-circuit", 30},
         {"nexelit-plate", 20},
+        {"engine-unit", 3},
         {"plastic-bar", 10},
         {"duralumin", 20},
         {"latex", 50},

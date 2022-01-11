@@ -7,6 +7,7 @@ RECIPE {
         {"fish-farm-mk02", 1},
         {"ticocr-alloy", 50},
         {"py-heat-exchanger", 1},
+        {"electric-engine-unit", 4},
         {"sc-unit", 20},
         {"neuromorphic-chip", 30},
         {"processing-unit", 50},

@@ -10,6 +10,7 @@ RECIPE {
                 {'nexelit-plate', 15},
                 {'advanced-circuit', 10},
                 {"neuroprocessor", 30},
+                {"engine-unit", 5},
                 {"latex", 30},
                 {"niobium-plate", 20},
             },

@@ -9,6 +9,7 @@ RECIPE {
         {"molybdenum-plate", 30},
         {"super-alloy", 30},
         {"boron-carbide", 50},
+        {"electric-engine-unit", 10},
         {"processing-unit", 40},
     },
     results = {

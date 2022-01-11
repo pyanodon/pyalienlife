@@ -14,7 +14,7 @@ RECIPE {
     enabled = false,
     ingredients = {
         {"glass", 50},
-        {"assembling-machine-1", 2},
+        {"steam-engine", 2},
         {"gasifier", 1},
         {"nexelit-plate", 30},
         {"plastic-bar", 30},

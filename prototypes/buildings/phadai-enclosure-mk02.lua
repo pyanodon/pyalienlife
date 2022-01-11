@@ -6,6 +6,7 @@ RECIPE {
     ingredients = {
         {"phadai-enclosure-mk01", 1},
         {"nbti-alloy", 40},
+        {"engine-unit", 3},
         {"neuromorphic-chip", 35},
         {"nenbit-matrix", 30},
         {"processing-unit", 50},

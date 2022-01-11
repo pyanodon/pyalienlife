@@ -17,6 +17,7 @@ RECIPE {
         {"incubator-mk02", 1},
         {"processing-unit", 30},
         {"super-alloy", 20},
+        {"electric-engine-unit", 5},
         {"nbti-alloy", 10},
         {"ticocr-alloy", 20},
         {"sc-unit", 15},

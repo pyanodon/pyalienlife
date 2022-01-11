@@ -6,6 +6,7 @@ RECIPE {
     ingredients = {
         {"sap-extractor-mk01", 1},
         {"treated-wood", 100},
+        {"engine-unit", 2},
         {"duralumin", 12},
         {"fast-inserter", 2},
         {"advanced-circuit", 15},

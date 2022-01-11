@@ -6,7 +6,7 @@ RECIPE {
     ingredients = {
         {"grods-swamp-mk01", 1},
         {"latex", 15},
-        {"electric-engine-unit", 20},
+        {"engine-unit", 20},
         {"treated-wood", 50},
         {"niobium-pipe", 20},
         {"advanced-circuit", 20},

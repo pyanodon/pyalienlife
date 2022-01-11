@@ -8,6 +8,7 @@ RECIPE {
         {"titanium-plate", 50},
         {"glass", 100},
         {"neuroprocessor", 25},
+        {"engine-unit", 10},
         {"nexelit-plate", 50},
         {"advanced-circuit", 80},
         {"optical-fiber", 100},

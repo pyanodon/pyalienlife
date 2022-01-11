@@ -8,6 +8,7 @@ RECIPE {
         {"py-heat-exchanger", 1},
         {"boron-carbide", 35},
         {"ticocr-alloy", 30},
+        {"electric-engine-unit", 4},
         {"processing-unit", 50},
         {"super-alloy", 50},
     },

@@ -8,6 +8,7 @@ RECIPE {
         {"py-heat-exchanger", 1},
         {"nichrome", 25},
         {"neuromorphic-chip", 30},
+        {"electric-engine-unit", 2},
         {"processing-unit", 35},
         {"ticocr-alloy", 20},
     },

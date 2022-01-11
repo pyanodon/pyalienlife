@@ -33,6 +33,7 @@ RECIPE {
     ingredients = {
         {"ralesia-plantation-mk02", 1},
         {"molybdenum-plate", 40},
+        {"electric-engine-unit", 10},
         {"processing-unit", 15},
         {"neuromorphic-chip", 10},
     },

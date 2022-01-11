@@ -7,7 +7,7 @@ RECIPE {
         {"duralumin", 50},
         {"niobium-pipe", 20},
         {"lead-plate", 40},
-        {"electric-engine-unit", 20},
+        {"engine-unit", 20},
         {"advanced-circuit", 30},
         {"slaughterhouse-mk01", 1},
         {"latex", 25},

@@ -9,6 +9,7 @@ RECIPE {
         {"pipe", 15},
         {"inserter", 2},
         {"electronic-circuit", 5},
+        {"steam-engine", 1},
         {"iron-plate", 30},
     },
     results = {

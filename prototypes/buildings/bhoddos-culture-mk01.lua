@@ -10,6 +10,7 @@ RECIPE {
         {"duralumin", 35},
         {"steel-plate", 50},
         {"electronic-circuit", 15},
+        {"steam-engine", 1},
         {"tin-plate", 50},
     },
     results = {

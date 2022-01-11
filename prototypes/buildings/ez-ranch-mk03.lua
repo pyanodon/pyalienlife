@@ -9,6 +9,7 @@ RECIPE {
         {"super-steel", 50},
         {"nbti-alloy", 50},
         {"nexelit-plate", 50},
+        {"electric-engine-unit", 12},
         {"processing-unit", 40},
     },
     results = {

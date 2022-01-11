@@ -7,6 +7,7 @@ RECIPE {
         {"concrete", 20},
         {"nbti-alloy", 40},
         {"iron-stick", 500},
+        {"steam-engine", 2},
         {"latex", 30},
         {"advanced-circuit", 50},
         {"super-steel", 50},
