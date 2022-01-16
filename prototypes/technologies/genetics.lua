@@ -46,7 +46,6 @@ TECHNOLOGY {
         ingredients = {
             {'automation-science-pack', 4},
             {'logistic-science-pack', 3},
-            {'chemical-science-pack', 2},
             {'py-science-pack-2', 1},
 
         },
@@ -67,8 +66,6 @@ TECHNOLOGY {
         ingredients = {
             {'automation-science-pack', 3},
             {'logistic-science-pack', 2},
-            {'chemical-science-pack', 1},
-            {'production-science-pack', 1},
             {'py-science-pack-2', 1},
         },
         time = 45

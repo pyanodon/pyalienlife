@@ -45,6 +45,13 @@ require('prototypes/recipes/moondrop/recipes-moondrop')
 require('prototypes/recipes/moondrop/recipes-auto-moondrop')
 --require('prototypes/recipes/moondrop/recipes-moondrop-copper') TODO: SETUP TURD FARM TECHS AGAIN
 
+table.insert(data.raw.module['moondrop'].limitation, "methane-co2")
+table.insert(data.raw.module['moondrop'].limitation, "methane-py-fertilizer")
+
+data.raw.module['moondrop-mk02'].limitation = table.deepcopy(data.raw.module['moondrop'].limitation)
+data.raw.module['moondrop-mk03'].limitation = table.deepcopy(data.raw.module['moondrop'].limitation)
+data.raw.module['moondrop-mk04'].limitation = table.deepcopy(data.raw.module['moondrop'].limitation)
+
 RECIPE("plastic-from-melamine"):remove_unlock('plastics'):add_unlock('melamine')
 TECHNOLOGY("melamine"):remove_pack('logistic-science-pack')
 
@@ -67,7 +74,7 @@ TECHNOLOGY('penrose'):add_pack('py-science-pack-2')
 TECHNOLOGY('quantum'):add_pack('py-science-pack-2')
 
 --RECIPES--
-RECIPE('kicalk-plantation'):remove_unlock('coal-processing-1')
+RECIPE('kicalk-plantation'):remove_unlock('kicalk')
 RECIPE('cadaveric-arum-mk01'):remove_unlock('basic-electronics')
 
 --adjusting win condition to need q computer
@@ -274,10 +281,10 @@ RECIPE('formamide'):replace_ingredient("nitrogen", "ammonia"):change_category('f
 RECIPE('bacteria-2'):subgroup_order("py-alienlife-genetics", "a"):remove_unlock('nano-tech'):add_unlock('microbiology-mk03'):add_ingredient({type = "item", name = "petri-dish", amount = 3}):add_ingredient({type = "item", name = "nexelit-plate", amount = 2}):add_ingredient({type = "item", name = "flask", amount = 5}):add_ingredient({type = "item", name = "chitin", amount = 5})
 RECIPE('rendering'):remove_unlock('basic-electronics')
 RECIPE('crco-alloy'):remove_ingredient("tailings-dust"):add_ingredient({type = "item", name = "cobalt-nx", amount = 2})
-RECIPE('raw-fiber'):remove_unlock('basic-electronics'):set_fields {enabled = false} --TODO:fix unlock
-RECIPE('raw-fiber2'):remove_unlock('basic-electronics'):set_fields {enabled = false} --TODO:fix unlock
-RECIPE('raw-fiber3'):remove_unlock('basic-electronics'):set_fields {enabled = false} --TODO:fix unlock
-RECIPE('raw-fiber4'):remove_unlock('basic-electronics'):set_fields {enabled = false} --TODO:fix unlock
+RECIPE('raw-fiber'):remove_unlock('fertilizer'):set_fields {enabled = false}
+RECIPE('raw-fiber2'):remove_unlock('basic-electronics'):set_fields {enabled = false}
+--RECIPE('raw-fiber3'):remove_unlock('basic-electronics'):set_fields {enabled = false}
+RECIPE('raw-fiber4'):remove_unlock('kicalk'):set_fields {enabled = false}
 RECIPE('dms'):subgroup_order("py-alienlife-cadaveric", "a"):remove_unlock('basic-electronics')
 RECIPE('cobalt-fluoride'):replace_ingredient("chromium", "reo")
 RECIPE('micro-fiber'):remove_unlock('nano-tech'):add_unlock('botany-mk02')
@@ -329,7 +336,7 @@ RECIPE('fertilizer'):remove_unlock('basic-electronics')
 RECIPE('advanced-circuit'):add_ingredient({type = 'item', name = 'battery', amount = 5}):add_ingredient({type = 'item', name = 'mosfet', amount = 5})
 RECIPE('processing-unit'):add_ingredient({type = 'item', name = 'mosfet', amount = 10}):add_ingredient({type = "item", name = "neuromorphic-chip", amount = 1})
 RECIPE('fault-current-inductor'):replace_ingredient("battery", "biobattery")
-RECIPE('pcb3-2'):replace_ingredient("battery", "biobattery")
+--RECIPE('pcb3-2'):replace_ingredient("battery", "biobattery")
 RECIPE('pcb4'):add_ingredient({type = 'item', name = 'biobattery', amount = 5})
 RECIPE('biobattery'):replace_ingredient("nexelit-plate", "lithium-niobate"):replace_ingredient("cobalt-nx", "crco-alloy"):replace_ingredient("glass", "glass-fiber")
 RECIPE('nxag-matrix'):add_ingredient({type = 'item', name = 'chitosan', amount = 2})
@@ -382,6 +389,22 @@ RECIPE('methane-co2'):add_unlock('moondrop')
 RECIPE('methane-co2'):add_ingredient('moondrop-seeds')
 
 RECIPE("plastic-from-casein"):add_ingredient({type = 'fluid', name = 'methanal', amount = 100})
+
+TECHNOLOGY("paramagnetic-material"):remove_pack('production-science-pack'):remove_prereq('production-science-pack')
+TECHNOLOGY("aerogel"):remove_pack('production-science-pack'):remove_prereq('production-science-pack')
+
+--need to remove all production sci from all techs leading to biobatteries
+--[[
+TECHNOLOGY("parametric-oscilator"):remove_pack('production-science-pack')
+TECHNOLOGY("re-magnet"):remove_pack('production-science-pack'):remove_prereq('production-science-pack')
+TECHNOLOGY("integrated-circuits-3"):remove_pack('production-science-pack')
+TECHNOLOGY("microfibers"):remove_pack('production-science-pack')
+TECHNOLOGY("biopolymer"):remove_pack('production-science-pack')
+TECHNOLOGY("collagen"):remove_pack('production-science-pack'):remove_prereq('production-science-pack')
+TECHNOLOGY("zno-nanoparticles"):remove_pack('production-science-pack')
+TECHNOLOGY("earnshaw-theorem"):remove_pack('production-science-pack')
+TECHNOLOGY("superconductor"):remove_pack('production-science-pack')
+]]--
 
 ----EXCLUSIVE RECIPES----
 

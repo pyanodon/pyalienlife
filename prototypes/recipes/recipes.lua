@@ -1875,7 +1875,7 @@ RECIPE {
     },
     subgroup = 'py-alienlife-fluids',
     order = 'b1',
-}:add_unlock("water-animals-mk02")
+}:add_unlock("water-animals-mk01")
 
 RECIPE {
     type = 'recipe',

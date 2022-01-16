@@ -310,3 +310,28 @@ fun.autorecipes {
 		},
 	}
 }
+
+fun.autorecipes {
+    name = 'special-arqad-guts',
+	category = "creature-chamber",
+	subgroup = 'py-alienlife-arqad',
+	order = 'b',
+    mats =
+	{
+		--base
+		{
+			ingredients =
+				{
+                    {name='arqad', amount = 5},
+                    {name='gh', amount = 5,},
+					{name='antitumor', amount = 3},
+				},
+			results =
+				{
+					{name='guts-arqad', amount = 4}
+				},
+			crafting_speed = 140,
+			tech = 'growth-hormone'
+		},
+	}
+}

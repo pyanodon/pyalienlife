@@ -155,7 +155,7 @@ RECIPE {
 
 
 ----SCIENCE PACKS----
-
+--[[
 RECIPE {
     type = 'recipe',
     name = 'cottongut-science-red',
@@ -285,3 +285,4 @@ RECIPE {
     subgroup = "py-alienlife-items",
     order = "a1"
 }:add_unlock("quantum")
+]]--

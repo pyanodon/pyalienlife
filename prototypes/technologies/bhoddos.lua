@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/bhoddos.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"mycology-mk01","genetics-mk01", "uranium-mk02"},
+    prerequisites = {"mycology-mk01","genetics-mk01", "uranium-mk01"},
     effects = {},
     unit = {
         count = 150,
@@ -49,7 +49,6 @@ TECHNOLOGY {
             {"automation-science-pack", 1},
             {"logistic-science-pack", 1},
             {'py-science-pack-2', 1},
-            {'chemical-science-pack', 1},
         },
         time = 50
     }
@@ -69,8 +68,6 @@ TECHNOLOGY {
             {"automation-science-pack", 1},
             {"logistic-science-pack", 1},
             {'py-science-pack-2', 1},
-            {'chemical-science-pack', 1},
-            {'production-science-pack', 1},
         },
         time = 50
     }

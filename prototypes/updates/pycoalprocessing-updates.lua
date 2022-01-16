@@ -4,7 +4,7 @@ local fun = require("prototypes/functions/functions")
 TECHNOLOGY('coal-processing-3'):add_pack('py-science-pack-2')
 TECHNOLOGY('energy-3'):add_pack('py-science-pack-2')
 TECHNOLOGY('excavation-2'):add_pack('py-science-pack-2')
-TECHNOLOGY('fuel-production'):add_pack('py-science-pack-2')
+--TECHNOLOGY('fuel-production'):add_pack('py-science-pack-2')
 
 --BUILDINDS--
 ITEM("fawogae-plantation-mk02"):set("icon", "__pyalienlifegraphics__/graphics/icons/fawogae-plantation-mk02.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-buildings-mk02", "d")
