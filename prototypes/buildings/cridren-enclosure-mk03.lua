@@ -78,9 +78,9 @@ ENTITY {
     working_visualisations = {
         {
             north_position = util.by_pixel(-96, -62),
-            west_position = util.by_pixel(0, -0),
-            south_position = util.by_pixel(0, -0),
-            east_position = util.by_pixel(0, -0),
+            west_position = util.by_pixel(-96, -62),
+            south_position = util.by_pixel(-96, -62),
+            east_position = util.by_pixel(-96, -62),
             animation = {
                 filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/a1.png",
                 frame_count = 182,
@@ -92,9 +92,9 @@ ENTITY {
         },
         {
             north_position = util.by_pixel(-32, -62),
-            west_position = util.by_pixel(0, -0),
-            south_position = util.by_pixel(0, -0),
-            east_position = util.by_pixel(0, -0),
+            west_position = util.by_pixel(-32, -62),
+            south_position = util.by_pixel(-32, -62),
+            east_position = util.by_pixel(-32, -62),
             animation = {
                 filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/a2.png",
                 frame_count = 182,
@@ -106,9 +106,9 @@ ENTITY {
         },
         {
             north_position = util.by_pixel(32, -62),
-            west_position = util.by_pixel(0, -0),
-            south_position = util.by_pixel(0, -0),
-            east_position = util.by_pixel(0, -0),
+            west_position = util.by_pixel(32, -62),
+            south_position = util.by_pixel(32, -62),
+            east_position = util.by_pixel(32, -62),
             animation = {
                 filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/a3.png",
                 frame_count = 182,
@@ -120,9 +120,9 @@ ENTITY {
         },
         {
             north_position = util.by_pixel(96, -62),
-            west_position = util.by_pixel(0, -0),
-            south_position = util.by_pixel(0, -0),
-            east_position = util.by_pixel(0, -0),
+            west_position = util.by_pixel(96, -62),
+            south_position = util.by_pixel(96, -62),
+            east_position = util.by_pixel(96, -62),
             animation = {
                 filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/a4.png",
                 frame_count = 182,
@@ -134,9 +134,9 @@ ENTITY {
         },
         {
             north_position = util.by_pixel(144, -62),
-            west_position = util.by_pixel(0, -0),
-            south_position = util.by_pixel(0, -0),
-            east_position = util.by_pixel(0, -0),
+            west_position = util.by_pixel(144, -62),
+            south_position = util.by_pixel(144, -62),
+            east_position = util.by_pixel(144, -62),
             animation = {
                 filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/a5.png",
                 frame_count = 182,

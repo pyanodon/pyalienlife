@@ -346,3 +346,146 @@ RECIPE {
         {type = 'item', name = 'dingrits-mk04', amount = 5},
     },
 }:add_unlock("biased-mutation")
+
+--------SIMIKS----------------------
+--mk01
+
+RECIPE {
+    type = 'recipe',
+    name = 'simik-recharge',
+    category = 'bay',
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'used-simik', amount = 2},
+        {type = 'item', name = 'bedding', amount = 1},
+        {type = 'item', name = 'simik-food-01', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'simik', amount = 2},
+    },
+}:add_unlock("domestication-mk03")
+
+RECIPE {
+    type = 'recipe',
+    name = 'simik-recharge-2',
+    category = 'bay',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'used-simik', amount = 4},
+        {type = 'item', name = 'bedding', amount = 1},
+        {type = 'item', name = 'simik-food-02', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'simik', amount = 4},
+    },
+}:add_unlock("domestication-mk03")
+
+--mk02
+
+RECIPE {
+    type = 'recipe',
+    name = 'simik-mk02-recharge',
+    category = 'bay',
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'used-simik-mk02', amount = 4},
+        {type = 'item', name = 'bedding', amount = 2},
+        {type = 'item', name = 'energy-drink', amount = 1},
+        {type = 'item', name = 'simik-food-01', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'simik-mk02', amount = 4},
+    },
+}:add_unlock("domestication-mk03")
+
+RECIPE {
+    type = 'recipe',
+    name = 'simik-mk02-recharge-2',
+    category = 'bay',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'used-simik-mk02', amount = 4},
+        {type = 'item', name = 'energy-drink', amount = 1},
+        {type = 'item', name = 'bedding', amount = 2},
+        {type = 'item', name = 'simik-food-02', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'simik-mk02', amount = 4},
+    },
+}:add_unlock("domestication-mk03")
+
+--mk03
+
+RECIPE {
+    type = 'recipe',
+    name = 'simik-mk03-recharge',
+    category = 'bay',
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'used-simik-mk03', amount = 4},
+        {type = 'item', name = 'energy-drink', amount = 1},
+        {type = 'item', name = 'bedding', amount = 2},
+        {type = 'item', name = 'simik-food-01', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'simik-mk03', amount = 4},
+    },
+}:add_unlock("simik-mk03")
+
+RECIPE {
+    type = 'recipe',
+    name = 'simik-mk03-recharge-2',
+    category = 'bay',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'used-simik-mk03', amount = 4},
+        {type = 'item', name = 'energy-drink', amount = 1},
+        {type = 'item', name = 'bedding', amount = 2},
+        {type = 'item', name = 'simik-food-02', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'simik-mk03', amount = 4},
+    },
+}:add_unlock("simik-mk03")
+
+--mk04
+
+RECIPE {
+    type = 'recipe',
+    name = 'simik-mk04-recharge',
+    category = 'bay',
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'used-simik-mk04', amount = 4},
+        {type = 'item', name = 'energy-drink', amount = 1},
+        {type = 'item', name = 'bedding', amount = 2},
+        {type = 'item', name = 'simik-food-01', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'simik-mk04', amount = 4},
+    },
+}:add_unlock("simik-mk04")
+
+RECIPE {
+    type = 'recipe',
+    name = 'simik-mk04-recharge-2',
+    category = 'bay',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'used-simik-mk04', amount = 4},
+        {type = 'item', name = 'energy-drink', amount = 1},
+        {type = 'item', name = 'bedding', amount = 2},
+        {type = 'item', name = 'simik-food-02', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'simik-mk04', amount = 4},
+    },
+}:add_unlock("simik-mk04")

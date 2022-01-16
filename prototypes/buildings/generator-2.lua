@@ -4,12 +4,12 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"super-steel", 15},
+        {"stainless-steel", 15},
         {"niobium-pipe", 10},
         {"nexelit-plate", 25},
-        {"processing-unit", 10},
+        {"advanced-circuit", 10},
         {"dingrits", 1},
-        {"electric-engine-unit", 5},
+        {"engine-unit", 5},
         {"nbfe-alloy", 20},
         {"iron-gear-wheel", 40}
     },

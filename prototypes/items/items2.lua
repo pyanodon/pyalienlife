@@ -159,7 +159,10 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 2}},
 	limitation = {},
-	limitation_message_key = "Simik"
+	limitation_message_key = "Simik",
+    fuel_category = 'simik',
+    fuel_value = '600MJ',
+    burnt_result = 'used-simik'
 }
 
 ITEM {
@@ -179,7 +182,10 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 4}},
 	limitation = {},
-	limitation_message_key = "Simik"
+	limitation_message_key = "Simik",
+    fuel_category = 'simik',
+    fuel_value = '800MJ',
+    burnt_result = 'used-simik-mk02'
 }
 
 ITEM {
@@ -199,7 +205,10 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 6}},
 	limitation = {},
-	limitation_message_key = "Simik"
+	limitation_message_key = "Simik",
+    fuel_category = 'simik',
+    fuel_value = '1100MJ',
+    burnt_result = 'used-simik-mk03'
 }
 
 ITEM {
@@ -219,7 +228,10 @@ ITEM {
     stack_size = 300,
 	effect = { speed = {bonus = 8}},
 	limitation = {},
-	limitation_message_key = "Simik"
+	limitation_message_key = "Simik",
+    fuel_category = 'simik',
+    fuel_value = '1500MJ',
+    burnt_result = 'used-simik-mk04'
 }
 
     {
@@ -475,4 +487,68 @@ ITEM {
     subgroup = "py-alienlife-items",
     order = "a",
     stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "used-simik",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 1
+}
+
+ITEM {
+    type = "item",
+    name = "used-simik-mk02",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 1
+}
+
+ITEM {
+    type = "item",
+    name = "used-simik-mk03",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 1
+}
+
+ITEM {
+    type = "item",
+    name = "used-simik-mk04",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 1
 }
