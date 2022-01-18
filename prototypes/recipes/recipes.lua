@@ -982,7 +982,7 @@ RECIPE {
     name = 'bmp',
     category = 'research',
     enabled = false,
-    energy_required = 20,
+    energy_required = 200,
     ingredients = {
         {type = 'item', name = 'hyaline', amount = 10},
         {type = 'item', name = 'sea-sponge', amount = 25},
@@ -1005,7 +1005,7 @@ RECIPE {
     name = 'bmp-2',
     category = 'research',
     enabled = false,
-    energy_required = 20,
+    energy_required = 150,
     ingredients = {
         {type = 'item', name = 'hyaline', amount = 10},
         {type = 'item', name = 'paragen', amount = 10},

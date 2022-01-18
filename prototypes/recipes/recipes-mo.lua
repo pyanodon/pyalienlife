@@ -528,7 +528,7 @@ RECIPE {
     name = 'recombinant-ery',
     category = 'genlab',
     enabled = false,
-    energy_required = 10,
+    energy_required = 120,
     ingredients = {
         {type = 'item', name = 'adam42-gen', amount = 1},
         {type = 'item', name = 'cysteine', amount = 1},
@@ -550,7 +550,7 @@ RECIPE {
     name = 'recombinant-ery-3',
     category = 'genlab',
     enabled = false,
-    energy_required = 10,
+    energy_required = 120,
     ingredients = {
         {type = 'item', name = 'adam42-gen', amount = 1},
         {type = 'item', name = 'cysteine', amount = 1},
@@ -574,7 +574,7 @@ RECIPE {
     name = 'orexigenic',
     category = 'research',
     enabled = false,
-    energy_required = 10,
+    energy_required = 120,
     ingredients = {
         {type = 'item', name = 'alien-enzymes', amount = 2},
         {type = 'item', name = 'guts', amount = 40},
@@ -598,7 +598,7 @@ RECIPE {
     name = 'orexigenic-2',
     category = 'research',
     enabled = false,
-    energy_required = 10,
+    energy_required = 120,
     ingredients = {
         {type = 'item', name = 'alien-enzymes', amount = 2},
         {type = 'item', name = 'guts', amount = 40},
