@@ -3,7 +3,7 @@ local pipe = {
         filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/bottom.png",
         priority = "extra-high",
         width = 229,
-        height = 235,
+        height = 235
     }
 }
 
@@ -207,3 +207,19 @@ ENTITY {
         apparent_volume = 2.5
     }
 }
+-- Swap to niobium pipes
+for _, fluid_box in pairs(data.raw["assembling-machine"]["kicalk-plantation-mk01"].fluid_boxes) do
+    -- Yeah let's just throw a boolean value in the list of fluid boxes - someone at Wube, probably
+    if type(fluid_box) == "boolean" then
+        break
+     end
+     if fluid_box.pipe_covers.south.layers then
+         fluid_box.pipe_covers.south.layers[1].filename = "__pyindustry__/graphics/entity/niobium-pipe/pipe-cover-south.png"
+         fluid_box.pipe_covers.south.layers[1].hr_version.filename = "__pyindustry__/graphics/entity/niobium-pipe/hr-pipe-cover-south.png"
+         fluid_box.pipe_covers.south.layers[2].filename = "__pyindustry__/graphics/entity/niobium-pipe/pipe-cover-south-shadow.png"
+         fluid_box.pipe_covers.south.layers[2].hr_version.filename = "__pyindustry__/graphics/entity/niobium-pipe/hr-pipe-cover-south-shadow.png"
+     end
+     -- Move cover up to compensate
+     fluid_box.pipe_picture.south.scale = 0.5
+     fluid_box.pipe_picture.south.shift = {0,-2.33}
+end
