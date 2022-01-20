@@ -4,82 +4,25 @@ local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
     name = 'arthurian-growth-enhancement',
-	category = 'arthurian',
-	module_limitations = 'arthurian',
+	category = "creature-chamber",
 	subgroup = 'py-alienlife-arthurian',
 	order = 'c',
     mats =
 	{
-		--gh
-		{
-			ingredients =
-				{
-					{name='gh', amount =1},
-
-				},
-			results =
-				{
-					{name='arthurian', amount =1},
-				},
-			crafting_speed = 30,
-			name = 'arthurian-08',
-			tech = 'growth-hormone'
-		},
-		--antiviral and gh
-		{
-			ingredients =
-				{
-					{name='antiviral', amount =1},
-				},
-			results =
-				{
-					{name='arthurian', add_amount = 1},
-				},
-			crafting_speed = 30,
-			name = 'arthurian-09',
-			tech = 'antiviral'
-		},
-		--antiviral
-		{
-			ingredients =
-				{
-					{name='gh',remove_item = true},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 80,
-			name = 'arthurian-10',
-			tech = 'antiviral'
-		},
 		--nanochondria
 		{
 			ingredients =
 				{
+					{name='arthurian', amount=1},
 					{name='nanochondria', amount =1},
-				},
-			results =
-				{
-					{name='arthurian', remove_item = true},
-					{name='brain-caged-arthurian', amount = 1},
-				},
-			crafting_speed = 80,
-			name = 'arthurian-11',
-			tech = 'nanochondria'
-		},
-		--nanochondria and gh
-		{
-			ingredients =
-				{
 					{name='gh', amount =1},
 				},
 			results =
 				{
-
+					{name='brain-caged-arthurian', amount = 1},
 				},
-			crafting_speed = 30,
-			name = 'arthurian-12',
+			crafting_speed = 80,
+			name = 'arthurian-11',
 			tech = 'nanochondria'
 		},
 		--bmp

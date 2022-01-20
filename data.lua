@@ -453,7 +453,7 @@ require('prototypes/recipes/arqad/recipes-arqad-updates')
 require('prototypes/recipes/arthurian/recipes-arthurian')
 require('prototypes/recipes/arthurian/recipes-arthurian-raising')
 require('prototypes/recipes/arthurian/recipes-arthurian-rendering')
---require('prototypes/recipes/arthurian/recipes-arthurian-growth-enhancement')
+require('prototypes/recipes/arthurian/recipes-arthurian-growth-enhancement')
 
 --auog
 require('prototypes/recipes/auog/recipes-auog')

@@ -11,12 +11,13 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'cdna', amount = 3},
-        {type = 'item', name = 'arqad-codex', amount = 1},
-        {type = 'item', name = 'earth-bee-sample', amount = 1},
-        {type = 'fluid', name = 'water', amount = 1000}, --add alien sample from pyALiens mod here.
+        {type = 'item', name = 'arqad-codex', amount = 2},
+        {type = 'item', name = 'earth-bee-sample', amount = 2},
+        {type = 'fluid', name = 'coke-oven-gas', amount = 1000}, --add alien sample from pyALiens mod here.
     },
     results = {
         {type = 'item', name = 'arqad-queen', amount = 1},
+        {type = 'item', name = 'arqad', amount = 6},
     },
 }:add_unlock("arqad")
 
@@ -316,7 +317,7 @@ RECIPE {
 ---pup maker---
 
 ---maturing---
-
+--[[
 RECIPE {
     type = 'recipe',
     name = 'arqad-mature-01',
@@ -354,6 +355,7 @@ RECIPE {
     subgroup = 'py-alienlife-arqad',
     order = 'a',
 }:add_unlock("growth-hormone")
+]]--
 
 --Secondary Upgrade Recipes--
 --SUR--

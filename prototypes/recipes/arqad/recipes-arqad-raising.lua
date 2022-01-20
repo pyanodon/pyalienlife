@@ -155,7 +155,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-
+					{name='arqad-egg-nest', add_amount = 1},
 				},
 			crafting_speed = 70,
 			tech = 'arqad-mk02'
@@ -169,7 +169,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-
+					{name='arqad-egg-nest', add_amount = 1},
 				},
 			crafting_speed = 50,
 			tech = 'arqad-mk03'
@@ -178,12 +178,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'arqad-maggot', amount = 5},
+					{name = 'arqad-maggot', add_amount = 5},
                     {name='arqad-honey-barrel', add_amount = 4,return_barrel = true},
 				},
 			results =
 				{
-
+					{name='arqad-egg-nest', add_amount = 2},
 				},
 			crafting_speed = 30,
 			tech = 'arqad-mk04'

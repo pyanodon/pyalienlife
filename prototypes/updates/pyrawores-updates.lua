@@ -80,6 +80,9 @@ RECIPE('full-molten-super-steel-3'):add_ingredient({type = "item", name = "cobal
 
 RECIPE("centrifuge"):remove_unlock('nuclear-fuel-reprocessing'):add_unlock('basic-electronics')
 
+RECIPE("starch"):remove_unlock('starch'):add_unlock('food-mk01')
+RECIPE("powdered-ralesia-seeds"):remove_unlock('starch'):add_unlock('food-mk01')
+
 ----EXCLUSIVE RECIPES----
 
 RECIPE {

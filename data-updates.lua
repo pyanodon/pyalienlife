@@ -255,3 +255,5 @@ if data.data_crawler then
         {type = "item", name = "earth-generic-sample"}
 	  }
   end
+
+  TECHNOLOGY('filtration-mk02'):remove_prereq('lithium-processing')
