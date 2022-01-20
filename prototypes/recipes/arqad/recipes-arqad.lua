@@ -19,6 +19,7 @@ RECIPE {
         {type = 'item', name = 'arqad-queen', amount = 1},
         {type = 'item', name = 'arqad', amount = 6},
     },
+    main_product = "arqad"
 }:add_unlock("arqad")
 
 RECIPE {
