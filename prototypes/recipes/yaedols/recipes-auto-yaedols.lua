@@ -5,6 +5,7 @@ fun.autorecipes {
     name = 'yaedols',
 	category = 'yaedols',
 	module_limitations = 'yaedols',
+    main_product = 'yaedols',
     mats =
 	{
     --logistic
