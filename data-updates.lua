@@ -37,6 +37,12 @@ TECHNOLOGY("logistic-science-pack"):add_prereq("biotech-mk01")
 data.raw.boiler.boiler.energy_source.fuel_categories = {"chemical", "biomass"}
 
 data.raw.fish.fish.minable.result = 'fish'
+data.raw.fish.fish.autoplace = {
+    influence = 0.0007,
+    min_influence = 0.0001,
+    max_influence = 0.01,
+    order = 'fish'
+  }
 --data.raw.fish.fish = nil
 
 data.raw.item.fawogae = nil

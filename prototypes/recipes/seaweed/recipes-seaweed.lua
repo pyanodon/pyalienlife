@@ -43,7 +43,12 @@ data:extend({
                 height = 32
             }
         },
-        autoplace = {influence = 0.02}
+        autoplace = {
+            influence = 0.0007,
+            min_influence = 0.0001,
+            max_influence = 0.01,
+            order = 'seaweed'
+        }
     }
 })
 
