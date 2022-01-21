@@ -66,7 +66,12 @@ TECHNOLOGY('uranium-mk03'):add_pack('py-science-pack-2')
 TECHNOLOGY('uranium-mk04'):add_pack('py-science-pack-2')
 TECHNOLOGY('zinc-mk03'):add_pack('py-science-pack-2')
 TECHNOLOGY('zinc-mk04'):add_pack('py-science-pack-2')
+
+TECHNOLOGY("nexelit-mk01"):remove_prereq('fluid-processing-machines-1'):add_prereq('machines-mk01'):remove_pack('logistic-science-pack')
 --RECIPES--
+
+RECIPE("chemical-plant-mk01"):remove_unlock('coal-processing-2'):add_unlock('machines-mk01')
+RECIPE("evaporator"):remove_unlock('fluid-processing-machines-1'):add_unlock('nexelit-mk01')
 
 RECIPE('mukmoux-fat-salt'):remove_unlock('machines-mk02')
 RECIPE('bonemeal-salt'):remove_unlock('machines-mk02')
