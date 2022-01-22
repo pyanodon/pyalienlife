@@ -13,7 +13,6 @@ RECIPE('production-science-pack'):change_category('research'):remove_unlock('dia
 RECIPE('utility-science-pack'):change_category('research'):add_ingredient({type = "item", name = "perfect-samples", amount = 1})
 
 RECIPE('hotair-empty-petri-dish'):add_unlock('coal-processing-1'):set_fields{enabled = false}
-RECIPE('hotair-molten-glass'):add_unlock('coal-processing-1'):set_fields{enabled = false}
 
 for _, drill in pairs(data.raw['mining-drill']) do
 	drill.allowed_effects = {"consumption", "speed", "pollution"}
