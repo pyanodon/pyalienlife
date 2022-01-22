@@ -208,7 +208,7 @@ ENTITY{
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
     crafting_categories = {"data-array", "creature-chamber", "vrauk-rendering", "latex"},
-    crafting_speed = 0.1,
+    crafting_speed = 1,
     energy_source =
     {
       type = "electric",

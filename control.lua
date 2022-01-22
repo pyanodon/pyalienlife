@@ -63,6 +63,19 @@ script.on_init(function()
 
         remote.call("freeplay", "set_ship_parts", get_ship_parts)
 
+        if remote.interfaces['freeplay'] then
+
+            local created_items = remote.call("freeplay", "get_created_items")
+              created_items["burner-mining-drill"] = 10
+              created_items["iron-plate"] = 500
+              created_items["copper-plate"] = 500
+              created_items["wood"] = 500
+              created_items["collector"] = 2
+
+              remote.call("freeplay", "set_created_items", created_items)
+
+        end
+
     end
 
     --slaughterhouse
