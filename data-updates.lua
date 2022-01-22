@@ -263,3 +263,7 @@ if data.data_crawler then
   end
 
   TECHNOLOGY('filtration-mk02'):remove_prereq('lithium-processing')
+
+-- Override crashed building resistances since we won't have the means to repair them immediately
+data.raw['assembling-machine']['crash-site-assembling-machine-1-repaired'].resistances = {{type = 'fire', percent = 100}}
+data.raw['assembling-machine']['crash-site-lab-repaired'].resistances = {{type = 'fire', percent = 100}}
