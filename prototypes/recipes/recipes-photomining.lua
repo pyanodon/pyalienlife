@@ -30,6 +30,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'yotoi', amount = 1},
+        {type = 'fluid', name = 'oleochemicals', amount = 50},
     },
     results = {
         {type = 'fluid', name = 'chelator', amount = 100},
@@ -44,6 +45,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'fawogae', amount = 5},
+        {type = 'fluid', name = 'oleochemicals', amount = 50},
     },
     results = {
         {type = 'fluid', name = 'chelator', amount = 50},
@@ -58,6 +60,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'yaedols', amount = 1},
+        {type = 'fluid', name = 'oleochemicals', amount = 50},
     },
     results = {
         {type = 'fluid', name = 'chelator', amount = 75},
@@ -72,6 +75,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'fluid', name = 'phytoplankton', amount = 50},
+        {type = 'fluid', name = 'oleochemicals', amount = 50},
     },
     results = {
         {type = 'fluid', name = 'chelator', amount = 50},
@@ -86,7 +90,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = "seaweed", amount = 20},
-        {type = 'item', name = 'moss', amount = 5},
+        {type = 'item', name = 'moss', amount = 10},
     },
     results = {
         {type = 'fluid', name = 'chelator', amount = 100},
