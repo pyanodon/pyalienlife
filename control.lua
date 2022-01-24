@@ -53,6 +53,14 @@ script.on_init(function()
             max_distance = 30,
             min_separation = 2,
         }
+        local crashed_lab_2 = {
+            name = 'crash-site-lab-repaired',
+            position = {20, 5},
+            force = "player",
+            angle_deviation = 0.1,
+            max_distance = 30,
+            min_separation = 2,
+        }
 
         if not game.active_mods['pyhightech'] then
             table.insert(get_ship_parts,crashed_ass_1)
@@ -60,6 +68,7 @@ script.on_init(function()
         end
 
         table.insert(get_ship_parts, crashed_lab)
+        table.insert(get_ship_parts, crashed_lab_2)
 
         remote.call("freeplay", "set_ship_parts", get_ship_parts)
 
