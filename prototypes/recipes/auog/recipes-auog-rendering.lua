@@ -16,164 +16,146 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount_min =2, amount_max =6},
-					{name='meat', amount_min =3, amount_max =7},
-					{name='skin', amount_min =1, amount_max =3},
-					{name='mukmoux-fat', amount_min =1, amount_max =5},
-					{name='guts', amount_min =1, amount_max =5},
-					{name='blood', amount =150},
-					{name='brain', amount_min =1, amount_max =3},
-					{name='biomass', amount_min = 2, amount_max = 5},
-					{name='cage', amount=3},
+					{name='bones',  6},
+					{name='meat', amount = 7},
+					{name='skin', amount = 3},
+					{name='mukmoux-fat', amount = 5},
+					{name='guts', amount = 5},
+					{name='blood', amount = 150},
+					{name='brain', amount = 3},
+					{name='biomass', amount = 5},
+					{name='cage', amount = 3},
 				},
 			crafting_speed = 10,
 			tech = 'rendering',
-			name = 'Full Render auogs',
+			name = 'full-render-auogs',
 			icon = "__pyalienlifegraphics__/graphics/icons/rendering-auog.png",
 			icon_size = 64,
 		},
-		--bonemeal
+		--brain auog rendering
 		{
 			ingredients =
 				{
-					--{name='caged-auog', amount=1},
+					{name='caged-auog', remove_item = true},
+					{name='brain-caged-auog', amount=3},
 				},
 			results =
 				{
-					{name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='bonemeal', amount = 8},
-					{name='biomass', remove_item = true},
-					{name='biomass', amount_min = 5, amount_max = 8},
+					{name='brain', amount = 6},
+					{name='glandular-myocluster', amount = 1},
 				},
-			crafting_speed = 10,
-			tech = 'rendering',
-			name = 'auogs to Bonemeal',
-			icon = "__pyalienlifegraphics__/graphics/icons/bonemeal.png",
+			crafting_speed = 30,
+			tech = 'nanochondria',
+			name = 'ex-bra-auog',
+			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-auog.png",
 			icon_size = 64,
 		},
-		--meat
+		--bone auog rendering
 		{
 			ingredients =
 				{
-					--{name='caged-auog', amount=1},
+					{name='brain-caged-auog',remove_item = true},
+					{name='bone-caged-auog',amount=3},
 				},
 			results =
 				{
-					{name='bonemeal', remove_item = true},
-					{name='meat', amount =12},
+					{name='brain', amount = 3},
+					{name='bones', amount = 12},
 				},
-			crafting_speed = 10,
-			tech = 'advanced-rendering',
-			name = 'Extract auog Meat',
-			icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
+			crafting_speed = 15,
+			tech = 'bmp',
+			name = 'ex-bon-auog',
+			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-auog.png",
 			icon_size = 64,
 		},
-		--brain
+		--meat auog rendering
 		{
 			ingredients =
 				{
-					--{name='caged-auog', amount=1},
+					{name='bone-caged-auog',remove_item = true},
+					{name='meat-caged-auog',amount=3},
 				},
 			results =
 				{
-					{name='meat', remove_item = true},
-					{name='brain', amount =3},
+					{name='bones', amount = 6},
+					{name='meat', amount =21},
 				},
-			crafting_speed = 10,
-			tech = 'advanced-rendering',
-			name = 'Extract auog brains',
-			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
+			crafting_speed = 15,
+			tech = 'anabolic-rna',
+			name = 'ex-me-auog',
+			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-auog.png",
 			icon_size = 64,
 		},
-		--skin
+		--guts auog rendering
 		{
 			ingredients =
 				{
-					--{name='caged-auog', amount=1},
+					{name='meat-caged-auog',remove_item = true},
+					{name='guts-caged-auog',amount=3},
 				},
 			results =
 				{
-					{name='brain', remove_item = true},
-					{name='skin', amount =5},
+					{name='meat', amount = 7},
+					{name='guts', amount = 13},
 				},
-			crafting_speed = 10,
-			tech = 'advanced-rendering',
-			name = 'Extract auog skin',
-			icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
-			icon_size = 32,
-		},
-		--bones
-		{
-			ingredients =
-				{
-					--{name='caged-auog', amount=1},
-				},
-			results =
-				{
-					{name='skin', remove_item = true},
-					{name='bones', amount =7},
-				},
-			crafting_speed = 10,
-			tech = 'advanced-rendering',
-			name = 'Extract auog bones',
-			icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
+			crafting_speed = 15,
+			tech = 'antitumor',
+			name = 'ex-gut-auog',
+			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-auog.png",
 			icon_size = 64,
 		},
-		--guts
+		--blood auog rendering
 		{
 			ingredients =
 				{
-					--{name='caged-auog', amount=1},
+					{name='guts-caged-auog',remove_item = true},
+					{name='blood-caged-auog',amount=3},
 				},
 			results =
 				{
-					{name='bones', remove_item = true},
-					{name='guts', amount =8},
+					{name='guts', amount = 5},
+					{name='blood', amount = 350},
 				},
-			crafting_speed = 10,
-			tech = 'advanced-rendering',
-			name = 'Extract auog guts',
-			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
+			crafting_speed = 15,
+			tech = 'recombinant-ery',
+			name = 'ex-blo-auog',
+			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-auog.png",
 			icon_size = 64,
 		},
-		--blood
+		--skin auog rendering
 		{
 			ingredients =
 				{
-					--{name='caged-auog', amount=1},
+					{name='blood-caged-auog',remove_item = true},
+					{name='skin-caged-auog',amount=3},
 				},
 			results =
 				{
-					{name='guts', remove_item = true},
-					{name='blood', amount =150},
+					{name='blood', amount = 150},
+					{name='skin', amount =10},
 				},
-			crafting_speed = 10,
-			tech = 'advanced-rendering',
-			name = 'Extract auog blood',
-			icon = "__pyalienlifegraphics__/graphics/icons/blood.png",
+			crafting_speed = 15,
+			tech = 'reca',
+			name = 'ex-ski-auog',
+			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-auog.png",
 			icon_size = 64,
 		},
-		--fat
+		--fat auog rendering
 		{
 			ingredients =
 				{
-					--{name='caged-auog', amount=1},
+					{name='skin-caged-auog',remove_item = true},
+					{name='fat-caged-auog',amount=3},
 				},
 			results =
 				{
-					{name='blood', remove_item = true},
-					{name='mukmoux-fat', amount =6},
+					{name='skin', amount = 3},
+					{name='mukmoux-fat', amount = 12},
 				},
-			crafting_speed = 10,
-			tech = 'advanced-rendering',
-			name = 'Extract auog lard',
-			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
+			crafting_speed = 15,
+			tech = 'orexigenic',
+			name = 'ex-fat-auog',
+			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-auog.png",
 			icon_size = 64,
 		},
 	}

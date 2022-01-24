@@ -107,8 +107,6 @@ fun.autorecipes {
 				{
 					{name = 'arqad-egg', amount = 30},
                     {name = 'honeycomb', amount = 5, return_item = {name = 'used-comb'}},
-					{name = 'vrauks', amount = 1},
-					{name = 'vrauks-food-01', amount = 1}
 				},
 			results =
 				{
@@ -138,6 +136,8 @@ fun.autorecipes {
 					{name = 'arqad-maggot', amount = 5},
                     {name='arqad-jelly-barrel', amount =1,return_barrel = true},
 					{name='empty-comb', amount =1},
+					{name = 'vrauks', amount = 1},
+					{name = 'vrauks-food-01', amount = 1}
 				},
 			results =
 				{
@@ -152,6 +152,8 @@ fun.autorecipes {
 				{
 					{name = 'arqad-maggot', add_amount = 5},
                     {name='arqad-honey-barrel', amount = 5,return_barrel = true},
+					{name = 'vrauks', add_amount = 2},
+					{name = 'vrauks-food-01', add_amount = 2}
 				},
 			results =
 				{
@@ -166,6 +168,8 @@ fun.autorecipes {
 				{
 					{name = 'arqad-maggot', add_amount = 5},
                     {name='arqad-honey-barrel', add_amount = 3,return_barrel = true},
+					{name = 'vrauks', add_amount = 1},
+					{name = 'vrauks-food-02', add_amount = 1}
 				},
 			results =
 				{
@@ -180,6 +184,8 @@ fun.autorecipes {
 				{
 					{name = 'arqad-maggot', add_amount = 5},
                     {name='arqad-honey-barrel', add_amount = 4,return_barrel = true},
+					{name = 'vrauks', add_amount = 1},
+					{name = 'vrauks-food-02', add_amount = 1}
 				},
 			results =
 				{

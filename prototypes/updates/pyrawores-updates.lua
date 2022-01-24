@@ -74,7 +74,7 @@ RECIPE("chemical-plant-mk01"):remove_unlock('coal-processing-2'):add_unlock('mac
 RECIPE("evaporator"):remove_unlock('fluid-processing-machines-1'):add_unlock('nexelit-mk01')
 
 RECIPE('mukmoux-fat-salt'):remove_unlock('machines-mk02')
-RECIPE('bonemeal-salt'):remove_unlock('machines-mk02')
+RECIPE('bonemeal-salt'):remove_unlock('ulric')
 RECIPE('starch'):remove_unlock('machines-mk02')
 RECIPE('starch-2'):remove_unlock('machines-mk02')
 RECIPE('fertilizer-2'):remove_unlock('basic-electronics')

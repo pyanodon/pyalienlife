@@ -130,7 +130,7 @@ RECIPE {
 }:add_unlock("assisted-embryology")
 
 ---maturing---
-
+--[[
 RECIPE {
     type = 'recipe',
     name = 'arthurian-mature-01',
@@ -170,7 +170,7 @@ RECIPE {
     subgroup = 'py-alienlife-arthurian',
     order = 'a',
 }:add_unlock("growth-hormone")
-
+]]--
 
 ----PROCESSING----
 

@@ -1190,10 +1190,12 @@ function overrides.autorecipes(recipe)
             numbered_name = name .. '-' .. int
         until not data.raw.recipe[numbered_name]
 
+        local recipe_name = rec.name or numbered_name
+
         --build recipe with stdlib recipe builder
         RECIPE{
             type = 'recipe',
-            name = numbered_name,
+            name = recipe_name,
             category = category,
             enabled = enabled,
             energy_required = rec.crafting_speed,
@@ -1207,32 +1209,29 @@ function overrides.autorecipes(recipe)
         }
 
         if rec.tech ~= nil then
-            RECIPE(numbered_name):add_unlock(rec.tech)
-        end
-        if rec.name ~= nil then
-            data.raw.recipe[numbered_name].localised_name = rec.name
+            RECIPE(recipe_name):add_unlock(rec.tech)
         end
         if rec.icon ~= nil then
-            data.raw.recipe[numbered_name].icon = rec.icon
+            data.raw.recipe[recipe_name].icon = rec.icon
             if rec.icon_size ~= nil then
-                data.raw.recipe[numbered_name].icon_size = rec.icon_size
+                data.raw.recipe[recipe_name].icon_size = rec.icon_size
             else
-                data.raw.recipe[numbered_name].icon_size = 32
+                data.raw.recipe[recipe_name].icon_size = 32
             end
         end
         if rec.main_product ~= nil then
-            data.raw.recipe[numbered_name].main_product = rec.main_product
+            data.raw.recipe[recipe_name].main_product = rec.main_product
         elseif recipe.main_product ~= nil then
-            RECIPE(numbered_name):set_fields{main_product = recipe.main_product}
+            RECIPE(recipe_name):set_fields{main_product = recipe.main_product}
         end
         if module_limitation ~= nil then
             for m, module in pairs(data.raw.module) do
                 if string.match(module.category, module_limitation) ~= nil then
-                    table.insert(module.limitation, numbered_name)
+                    table.insert(module.limitation, recipe_name)
                 end
             end
         end
-        --log(serpent.block(data.raw.recipe[numbered_name]))
+        --log(serpent.block(data.raw.recipe[recipe_name]))
     end
 
 end

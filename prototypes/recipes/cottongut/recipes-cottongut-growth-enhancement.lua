@@ -1,28 +1,26 @@
 local fun = require("prototypes/functions/functions")
 
---growth hormone and other trash that needs new uses. hulk growths
-
 fun.autorecipes {
-    name = 'arthurian-growth-enhancement',
-	category = "creature-chamber",
-	subgroup = 'py-alienlife-arthurian',
-	order = 'c',
+    name = 'cottongut-growth-enhancement',
+	category = 'creature-chamber',
+	subgroup = 'py-alienlife-cottongut',
+	order = 'b',
     mats =
 	{
 		--nanochondria
 		{
 			ingredients =
 				{
-					{name='arthurian', amount=1},
-					{name='nanochondria', amount =1},
+					{name = 'cottongut', amount = 4},
 					{name='gh', amount =1},
+					{name='nanochondria', amount =1},
 				},
 			results =
 				{
-					{name='brain-caged-arthurian', amount = 1},
+					{name='cottongut', remove_item = true},
+					{name='brain-cottongut', amount = 4},
 				},
-			crafting_speed = 80,
-			name = 'arthurian-11',
+			crafting_speed = 90,
 			tech = 'nanochondria'
 		},
 		--bmp
@@ -34,11 +32,10 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='brain-caged-arthurian', remove_item = true},
-					{name='bone-caged-arthurian', amount = 1},
+					{name='brain-cottongut', remove_item = true},
+					{name='bone-cottongut', amount = 4},
 				},
-			crafting_speed = 80,
-			name = 'arthurian-13',
+			crafting_speed = 90,
 			tech = 'bmp'
 		},
 		--rna anabolic
@@ -50,11 +47,10 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bone-caged-arthurian', remove_item = true},
-					{name='meat-caged-arthurian', amount = 1},
+					{name='bone-cottongut', remove_item = true},
+					{name='meat-cottongut', amount = 4},
 				},
-			crafting_speed = 80,
-			name = 'arthurian-15',
+			crafting_speed = 90,
 			tech = 'anabolic-rna'
 		},
 		--antitumor
@@ -66,11 +62,10 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat-caged-arthurian', remove_item = true},
-					{name='guts-caged-arthurian', amount = 1},
+					{name='meat-cottongut', remove_item = true},
+					{name='guts-cottongut', amount = 4},
 				},
-			crafting_speed = 80,
-			name = 'arthurian-17',
+			crafting_speed = 90,
 			tech = 'antitumor'
 		},
 		--Recombinant Ery
@@ -82,11 +77,10 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='guts-caged-arthurian', remove_item = true},
-					{name='blood-caged-arthurian', amount = 1},
+					{name='guts-cottongut', remove_item = true},
+					{name='blood-cottongut', amount = 4},
 				},
-			crafting_speed = 80,
-			name = 'arthurian-19',
+			crafting_speed = 90,
 			tech = 'recombinant-ery'
 		},
 		--reca
@@ -98,11 +92,10 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='blood-caged-arthurian', remove_item = true},
-					{name='skin-caged-arthurian', amount = 1},
+					{name='blood-cottongut', remove_item = true},
+					{name='skin-cottongut', amount = 4},
 				},
-			crafting_speed = 80,
-			name = 'arthurian-21',
+			crafting_speed = 90,
 			tech = 'reca'
 		},
 		--orexigenic
@@ -114,11 +107,10 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='skin-caged-arthurian', remove_item = true},
-					{name='fat-caged-arthurian', amount = 1},
+					{name='skin-cottongut', remove_item = true},
+					{name='fat-cottongut', amount = 1},
 				},
 			crafting_speed = 80,
-			name = 'arthurian-23',
 			tech = 'orexigenic'
 		},
 	}
