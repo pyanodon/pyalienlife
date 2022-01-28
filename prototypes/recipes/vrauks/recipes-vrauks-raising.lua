@@ -100,7 +100,7 @@ fun.autorecipes {
 ------------------CUB MAKER------------------
 
 fun.autorecipes {
-    name = 'vrauks-coccon',
+    name = 'vrauks-cocoon',
 	category = 'vrauks',
 	module_limitations = 'vrauks',
 	subgroup = 'py-alienlife-vrauks',

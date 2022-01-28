@@ -169,6 +169,10 @@ data:extend {
     },
     {
         type = "recipe-category",
+        name = "zungror"
+    },
+    {
+        type = "recipe-category",
         name = "ralesia-farm"
     },
     {
@@ -359,6 +363,10 @@ data:extend {
     {
         type = "recipe-category",
         name = "slaughterhouse-simik"
+    },
+    {
+        type = "recipe-category",
+        name = "slaughterhouse-zungror"
     },
     {
         type = "recipe-category",

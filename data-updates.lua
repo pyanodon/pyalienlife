@@ -30,6 +30,15 @@ if mods["pypetroleumhandling"] then
     require("prototypes/updates/pypetroleumhandling-updates")
 end
 
+if mods["pyalternativeenergy"] then
+    require("prototypes/technologies/zungror")
+    require("prototypes/buildings/zungror-lair-mk01")
+    require('prototypes/recipes/zungror/recipes-zungror')
+    require('prototypes/recipes/zungror/recipes-zungror-raising')
+    require('prototypes/recipes/zungror/recipes-zungror-rendering')
+
+end
+
 TECHNOLOGY("logistic-science-pack"):add_prereq("biotech-mk01")
 
 --ADAPTATIONS

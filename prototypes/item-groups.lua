@@ -231,6 +231,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-zungror",
+        group = "py-alienlife",
+        order = "e-v"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-plants",
         group = "py-alienlife",
         order = "f"
