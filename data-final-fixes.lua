@@ -2,17 +2,6 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 --ADAPTATIONS
 
---RECIPES UPDATES
-
-RECIPE('exoskeleton-equipment'):add_ingredient({type = "item", name = "metallic-glass", amount = 30})
-RECIPE('automation-science-pack'):change_category('research')
-RECIPE('logistic-science-pack'):change_category('research')
-RECIPE('chemical-science-pack'):change_category('research')
-RECIPE('military-science-pack'):change_category('research')
-RECIPE('production-science-pack'):change_category('research'):remove_unlock('diamond-mining'):add_unlock('pharmagenomics')
-RECIPE('utility-science-pack'):change_category('research'):add_ingredient({type = "item", name = "perfect-samples", amount = 1})
-
-RECIPE('hotair-empty-petri-dish'):add_unlock('coal-processing-1'):set_fields{enabled = false}
 
 for _, drill in pairs(data.raw['mining-drill']) do
 	drill.allowed_effects = {"consumption", "speed", "pollution"}

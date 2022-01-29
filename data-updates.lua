@@ -279,3 +279,15 @@ if data.data_crawler then
 -- Override crashed building resistances since we won't have the means to repair them immediately
 data.raw['assembling-machine']['crash-site-assembling-machine-1-repaired'].resistances = {{type = 'fire', percent = 100}}
 data.raw['assembling-machine']['crash-site-lab-repaired'].resistances = {{type = 'fire', percent = 100}}
+
+--RECIPES UPDATES
+
+RECIPE('exoskeleton-equipment'):add_ingredient({type = "item", name = "metallic-glass", amount = 30})
+RECIPE('automation-science-pack'):change_category('research')
+RECIPE('logistic-science-pack'):change_category('research')
+RECIPE('chemical-science-pack'):change_category('research')
+RECIPE('military-science-pack'):change_category('research')
+RECIPE('production-science-pack'):change_category('research'):remove_unlock('diamond-mining'):add_unlock('pharmagenomics')
+RECIPE('utility-science-pack'):change_category('research'):add_ingredient({type = "item", name = "perfect-samples", amount = 1})
+
+RECIPE('hotair-empty-petri-dish'):add_unlock('coal-processing-1'):set_fields{enabled = false}
