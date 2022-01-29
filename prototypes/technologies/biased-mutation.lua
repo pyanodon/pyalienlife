@@ -89,6 +89,29 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = "technology",
+    name = "mukmoux-breeding-3",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/technology/mukmoux.png"},
+        {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png', icon_size = 64, scale = 0.5,shift = {35,35}},
+    },
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {"biased-mutation","mukmoux-breeding-2"},
+    effects = {},
+    unit = {
+        count = 200,
+        ingredients = {
+            {"automation-science-pack", 3},
+            {'logistic-science-pack', 4},
+            {'py-science-pack-2', 1},
+        },
+        time = 50
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
     name = "bhoddos-breeding-3",
     icons =
     {

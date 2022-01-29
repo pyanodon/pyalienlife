@@ -573,6 +573,51 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "mukmoux-calf-mk02",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-calf.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-mukmoux",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "mukmoux-calf-mk03",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-calf.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-mukmoux",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "mukmoux-calf-mk04",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-calf.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-mukmoux",
+    order = "a",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "ulric-cub",
     icon = "__pyalienlifegraphics__/graphics/icons/ulric-cub.png",
     icon_size = 64,
