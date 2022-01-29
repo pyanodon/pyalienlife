@@ -33,6 +33,8 @@ end
 if mods["pyalternativeenergy"] then
     require("prototypes/technologies/zungror")
     require("prototypes/buildings/zungror-lair-mk01")
+    require("prototypes/buildings/zungror-lair-mk02")
+    require("prototypes/buildings/zungror-lair-mk03")
     require('prototypes/recipes/zungror/recipes-zungror')
     require('prototypes/recipes/zungror/recipes-zungror-raising')
     require('prototypes/recipes/zungror/recipes-zungror-rendering')

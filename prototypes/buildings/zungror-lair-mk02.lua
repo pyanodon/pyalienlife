@@ -44,7 +44,7 @@ ENTITY {
     selection_box = {{-9.0, -9.0}, {9.0, 9.0}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 1
+        module_slots = 2
     },
     allowed_effects = {"speed","productivity",'consumption','pollution'},
     crafting_categories = {"zungror"},
@@ -54,7 +54,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = 2,
     },
-    energy_usage = "700kW",
+    energy_usage = "900kW",
     animation = {
         layers = {
             {
@@ -176,6 +176,17 @@ ENTITY {
                 height = 64,
                 animation_speed = 0.25,
                 shift = util.by_pixel(224, 128)
+            },
+            {
+                filename = "__pyalienlifegraphics3__/graphics/entity/zungror-lair/cut-raw-mask.png",
+                width = 672,
+                priority = "high",
+                height = 736,
+                frame_count = 1,
+                repeat_count = 80,
+                animation_speed = 0.25,
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
+                shift = util.by_pixel(16, -48)
             },
         }
     },

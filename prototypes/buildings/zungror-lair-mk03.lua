@@ -1,45 +1,41 @@
 RECIPE {
     type = "recipe",
-    name = "zungror-lair-mk01",
+    name = "zungror-lair-mk03",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"stone", 300},
-        {"concrete", 200},
-        {"iron-plate", 200},
-        {"glass", 50},
-        {"gun-turret", 1},
-        {"laser-turret", 1},
-        {"automated-factory-mk01", 1},
-        {"stainless-steel", 100},
-        {"titanium-plate", 50},
-        {"latex", 100},
-        {"advanced-circuit", 200},
+        {"zungror-lair-mk02", 1},
+        {"super-alloy", 100},
+        {"low-density-structure", 10},
+        {"metallic-glass", 50},
+        {"science-coating", 50},
+        {"nbfe-alloy", 25},
+        {"intelligent-unit", 25},
     },
     results = {
-        {"zungror-lair-mk01", 1}
+        {"zungror-lair-mk03", 1}
     }
-}:add_unlock("zungror")
+}:add_unlock("zungror-mk03"):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 5}):add_ingredient({type = "item", name = "harmonic-absorber", amount = 10})
 
 ITEM {
     type = "item",
-    name = "zungror-lair-mk01",
-    icon = "__pyalienlifegraphics__/graphics/icons/zungror-lair-mk01.png",
+    name = "zungror-lair-mk03",
+    icon = "__pyalienlifegraphics__/graphics/icons/zungror-lair-mk03.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-buildings-mk03",
     order = "d",
-    place_result = "zungror-lair-mk01",
+    place_result = "zungror-lair-mk03",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "zungror-lair-mk01",
-    icon = "__pyalienlifegraphics__/graphics/icons/zungror-lair-mk01.png",
+    name = "zungror-lair-mk03",
+    icon = "__pyalienlifegraphics__/graphics/icons/zungror-lair-mk03.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "zungror-lair-mk01"},
+    minable = {mining_time = 0.5, result = "zungror-lair-mk03"},
     fast_replaceable_group = "zungror-lair",
     max_health = 100,
     corpse = "medium-remnants",
@@ -48,7 +44,7 @@ ENTITY {
     selection_box = {{-9.0, -9.0}, {9.0, 9.0}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 1
+        module_slots = 3
     },
     allowed_effects = {"speed","productivity",'consumption','pollution'},
     crafting_categories = {"zungror"},
@@ -58,7 +54,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = 2,
     },
-    energy_usage = "700kW",
+    energy_usage = "1300kW",
     animation = {
         layers = {
             {
@@ -189,7 +185,7 @@ ENTITY {
                 frame_count = 1,
                 repeat_count = 80,
                 animation_speed = 0.25,
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                 shift = util.by_pixel(16, -48)
             },
         }
