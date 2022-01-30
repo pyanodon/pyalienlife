@@ -1,3 +1,51 @@
+local mk_packable_properties = {'fuel_value', 'burnt-result', 'fuel_acceleration_multiplier', 'fuel_top_speed_multiplier', 'effect', 'tier', 'order'}
+local function unpack_mk(tab, mk)
+    for _, prop in ipairs(mk_packable_properties) do
+        local val = tab[prop];
+        if type(val) == 'table' and #val == 4 then
+            tab[prop] = val[mk]
+        end
+    end
+end
+
+local function ITEM_MK(original)
+    local basename = original.name
+    if string.sub(basename, -5) == '-mk01' then
+        basename = string.sub(basename, 1, -6)
+    end
+    if original.icons == nil then
+        original.icons = { {icon = original.icon} }
+        original.icon = nil
+    end
+    if original.type == 'module' then
+        original.tier = original.tier or { 1, 2, 3, 4 }
+    end
+    if type(original.order) == 'string' and string.sub(original.order, -1) == '-' then
+        original.order = {original.order .. 'a', original.order .. 'b', original.order .. 'c', original.order .. 'd'}
+    end
+
+    local copy = table.deepcopy(original)
+    unpack_mk(copy, 1)
+    ITEM(copy)
+
+    copy = table.deepcopy(original)
+    copy.name = basename .. '-mk02'
+    table.insert(copy.icons, {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64})
+    unpack_mk(copy, 2)
+    ITEM(copy)
+
+    copy = table.deepcopy(original)
+    copy.name = basename .. '-mk03'
+    table.insert(copy.icons, {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64})
+    unpack_mk(copy, 3)
+    ITEM(copy)
+
+    copy = table.deepcopy(original)
+    copy.name = basename .. '-mk04'
+    table.insert(copy.icons, {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64})
+    unpack_mk(copy, 4)
+    ITEM(copy)
+end
 
 ITEM {
     type = "item",
@@ -560,56 +608,11 @@ ITEM {
     stack_size = 50
 }
 
-ITEM {
+ITEM_MK {
     type = "item",
     name = "mukmoux-calf",
     icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-calf.png",
     icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-mukmoux",
-    order = "a",
-    stack_size = 50
-}
-
-ITEM {
-    type = "item",
-    name = "mukmoux-calf-mk02",
-    icons =
-    {
-        {icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-calf.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
-    },
-	icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-mukmoux",
-    order = "a",
-    stack_size = 50
-}
-
-ITEM {
-    type = "item",
-    name = "mukmoux-calf-mk03",
-    icons =
-    {
-        {icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-calf.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
-    },
-	icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-mukmoux",
-    order = "a",
-    stack_size = 50
-}
-
-ITEM {
-    type = "item",
-    name = "mukmoux-calf-mk04",
-    icons =
-    {
-        {icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-calf.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
-    },
-	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-mukmoux",
     order = "a",
@@ -5998,82 +6001,22 @@ ITEM {
 	limitation_message_key = "ralesia"
 }
 
-ITEM {
+ITEM_MK {
     type = "module",
     name = "mukmoux",
-    icons =
-	{
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/mukmoux.png"}
-    },
+    icon = "__pyalienlifegraphics__/graphics/icons/mukmoux.png",
     icon_size = 64,
 	category = "mukmoux",
-	tier = 1,
     flags = {},
     subgroup = "py-alienlife-modules",
-    order = "m-a",
+    order = "m-",
     stack_size = 300,
-	effect = { speed = {bonus = 5}},
-	limitation = {},
-	limitation_message_key = "mukmoux"
-}
-
-ITEM {
-    type = "module",
-    name = "mukmoux-mk02",
-    icons =
-	{
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/mukmoux.png"}
+    effect = {
+        { speed = {bonus = 5}},
+        { speed = {bonus = 6.25}},
+        { speed = {bonus = 7.5}},
+        { speed = {bonus = 8.75}},
     },
-    icon_size = 64,
-	category = "mukmoux",
-	tier = 2,
-    flags = {},
-    subgroup = "py-alienlife-modules",
-    order = "m-b",
-    stack_size = 300,
-	effect = { speed = {bonus = 6.25}},
-	limitation = {},
-	limitation_message_key = "mukmoux"
-}
-
-ITEM {
-    type = "module",
-    name = "mukmoux-mk03",
-    icons =
-	{
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/mukmoux.png"}
-    },
-    icon_size = 64,
-	category = "mukmoux",
-	tier = 3,
-    flags = {},
-    subgroup = "py-alienlife-modules",
-    order = "m-c",
-    stack_size = 300,
-	effect = { speed = {bonus = 7.5}},
-	limitation = {},
-	limitation_message_key = "mukmoux"
-}
-
-ITEM {
-    type = "module",
-    name = "mukmoux-mk04",
-    icons =
-	{
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/mukmoux.png"}
-    },
-    icon_size = 64,
-	category = "mukmoux",
-	tier = 4,
-    flags = {},
-    subgroup = "py-alienlife-modules",
-    order = "m-d",
-    stack_size = 300,
-	effect = { speed = {bonus = 8.75}},
 	limitation = {},
 	limitation_message_key = "mukmoux"
 }
