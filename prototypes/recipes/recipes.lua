@@ -1924,6 +1924,7 @@ RECIPE {
         {type = 'item', name = 'cryogland', amount = 1},
         {type = 'item', name = 'subdermal-chemosnare', amount = 1},
         {type = 'item', name = 'sternite-lung', amount = 1},
+        {type = 'item', name = 'vsk', amount = 1},
         {type = 'item', name = 'snarer-heart', amount = 1},
         {type = 'item', name = 'magnetic-organ', amount = 1},
         {type = 'item', name = 'glandular-myocluster', amount = 1},

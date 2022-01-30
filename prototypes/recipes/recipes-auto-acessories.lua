@@ -621,6 +621,23 @@ RECIPE {
     main_product = "hormonal",
 }:add_unlock("antitumor")
 
+------------------Variable Spinneret Kiloglider------------------
+
+RECIPE {
+    type = "recipe",
+    name = "vsk",
+    category = "genlab",
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'bone-zungror', amount = 1}
+    },
+    results = {
+		{type = 'item', name = 'vsk', amount = 1},
+    },
+    main_product = "vsk",
+}:add_unlock("bmp")
+
 ----AUOG food----
 RECIPE {
     type = 'recipe',

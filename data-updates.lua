@@ -32,6 +32,7 @@ end
 
 if mods["pyalternativeenergy"] then
     require("prototypes/technologies/zungror")
+    require("prototypes/technologies/xenocognitive")
     require("prototypes/buildings/zungror-lair-mk01")
     require("prototypes/buildings/zungror-lair-mk02")
     require("prototypes/buildings/zungror-lair-mk03")
