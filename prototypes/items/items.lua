@@ -25,14 +25,14 @@ local function ITEM_MK(original)
     end
 
     local copy = table.deepcopy(original)
-    copy.localised_name = {'item-name.' .. basename, '01'}
+    copy.localised_name = {'', {'item-name.' .. basename}, ' MK 01'}
     copy.localised_description = {'item-description.' .. basename}
     unpack_mk(copy, 1)
     ITEM(copy)
 
     copy = table.deepcopy(original)
     copy.name = basename .. '-mk02'
-    copy.localised_name = {'item-name.' .. basename, '02'}
+    copy.localised_name = {'', {'item-name.' .. basename}, ' MK 02'}
     copy.localised_description = {'item-description.' .. basename}
     table.insert(copy.icons, {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64})
     unpack_mk(copy, 2)
@@ -40,7 +40,7 @@ local function ITEM_MK(original)
 
     copy = table.deepcopy(original)
     copy.name = basename .. '-mk03'
-    copy.localised_name = {'item-name.' .. basename, '03'}
+    copy.localised_name = {'', {'item-name.' .. basename}, ' MK 03'}
     copy.localised_description = {'item-description.' .. basename}
     table.insert(copy.icons, {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64})
     unpack_mk(copy, 3)
@@ -48,7 +48,7 @@ local function ITEM_MK(original)
 
     copy = table.deepcopy(original)
     copy.name = basename .. '-mk04'
-    copy.localised_name = {'item-name.' .. basename, '04'}
+    copy.localised_name = {'', {'item-name.' .. basename}, ' MK 04'}
     copy.localised_description = {'item-description.' .. basename}
     table.insert(copy.icons, {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64})
     unpack_mk(copy, 4)
