@@ -69,7 +69,7 @@ RECIPE {
         {type = 'item', name = 'native-flora', amount = 10},
         {type = 'item', name = 'guar', amount = 3},
         {type = 'item', name = 'ash', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
+        {type = 'fluid', name = 'steam', amount = 100}
     },
     results = {
         {type = 'item', name = 'ulric-food-01', amount = 6},
@@ -93,7 +93,7 @@ RECIPE {
         {type = 'fluid', name = 'arqad-honey', amount = 50},
         {type = 'item', name = "seaweed", amount = 10},
         {type = 'item', name = 'starch', amount = 4},
-        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
+        {type = 'fluid', name = 'steam', amount = 100}
     },
     results = {
         {type = 'item', name = 'ulric-food-02', amount = 6},

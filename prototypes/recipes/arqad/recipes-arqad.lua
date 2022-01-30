@@ -143,7 +143,7 @@ RECIPE {
     energy_required = 4,
     ingredients = {
         {type = 'item', name = 'used-comb', amount = 5},
-        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
+        {type = 'fluid', name = 'steam', amount = 100}
     },
     results = {
         {type = 'fluid', name = 'wax', amount = 50},
@@ -158,7 +158,7 @@ RECIPE {
     energy_required = 4,
     ingredients = {
         {type = 'item', name = 'empty-honeycomb', amount = 5},
-        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
+        {type = 'fluid', name = 'steam', amount = 100}
     },
     results = {
         {type = 'fluid', name = 'wax', amount = 50},
