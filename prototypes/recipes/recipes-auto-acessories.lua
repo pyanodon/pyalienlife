@@ -630,7 +630,7 @@ RECIPE {
     enabled = false,
     energy_required = 40,
     ingredients = {
-        {type = 'item', name = 'bone-zungror', amount = 1}
+        {type = 'item', name = 'bone-caged-zungror', amount = 1}
     },
     results = {
 		{type = 'item', name = 'vsk', amount = 1},
