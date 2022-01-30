@@ -1,4 +1,5 @@
 require("__stdlib__/stdlib/data/data").Util.create_data_globals()
+local table = require('__stdlib__/stdlib/utils/table')
 --require("__pycoalprocessing__/prototypes/functions/functions")
 local fun = require("prototypes/functions/functions")
 
@@ -32,6 +33,7 @@ end
 
 if mods["pyalternativeenergy"] then
     require("prototypes/technologies/zungror")
+    require("prototypes/technologies/xenocognitive")
     require("prototypes/buildings/zungror-lair-mk01")
     require("prototypes/buildings/zungror-lair-mk02")
     require("prototypes/buildings/zungror-lair-mk03")
@@ -71,6 +73,7 @@ end
 for _, recipe in pairs(data.raw.recipe) do
     local r = RECIPE(recipe)
     r:replace_ingredient('organics', 'biomass')
+    fun.results_replacer(r.name, 'organics', 'biomass')
     r:replace_ingredient('ralesia', 'ralesias')
     r:replace_ingredient('raw-fish', 'fish')
 end
@@ -80,12 +83,30 @@ for _, recipe in pairs(data.raw.recipe) do
     r:replace_ingredient('xyhiphoe-blood', 'arthropod-blood')
 end
 
+local remove_list = {}
+
 for _, recipe in pairs(data.raw.recipe) do
     if recipe.category == "fwf" then
         table.insert(data.raw.module['tree-mk01'].limitation, recipe.name)
         table.insert(data.raw.module['tree-mk02'].limitation, recipe.name)
         table.insert(data.raw.module['tree-mk03'].limitation, recipe.name)
         table.insert(data.raw.module['tree-mk04'].limitation, recipe.name)
+        table.insert(remove_list, recipe.name)
+    end
+end
+
+-- Remove prod modules from fwf recipes
+for _, r in pairs(data.raw.module) do
+    if r.name:find("productivity%-module") and r.limitation then
+        local l = table.array_to_dictionary(r.limitation, true)
+
+        for _, recipe_name in pairs(remove_list) do
+            if l[recipe_name] then
+                l[recipe_name] = nil
+            end
+        end
+
+        r.limitation = table.keys(l)
     end
 end
 
@@ -103,7 +124,7 @@ for m, module in pairs(data.raw.module) do
 end
 
 for m, module in pairs(data.raw.module) do
-    if module.name:find("speed%-module") or module.name:find("productivity%-module") or module.name:find("effectivity%-module") then
+    if not module.subgroup:find("py%-alienlife%-modules") and not module.limitation then
         if module.limitation_blacklist == nil then
             module.limitation_blacklist = {}
         end
@@ -279,3 +300,15 @@ if data.data_crawler then
 -- Override crashed building resistances since we won't have the means to repair them immediately
 data.raw['assembling-machine']['crash-site-assembling-machine-1-repaired'].resistances = {{type = 'fire', percent = 100}}
 data.raw['assembling-machine']['crash-site-lab-repaired'].resistances = {{type = 'fire', percent = 100}}
+
+--RECIPES UPDATES
+
+RECIPE('exoskeleton-equipment'):add_ingredient({type = "item", name = "metallic-glass", amount = 30})
+RECIPE('automation-science-pack'):change_category('research')
+RECIPE('logistic-science-pack'):change_category('research')
+RECIPE('chemical-science-pack'):change_category('research')
+RECIPE('military-science-pack'):change_category('research')
+RECIPE('production-science-pack'):change_category('research'):remove_unlock('diamond-mining'):add_unlock('pharmagenomics')
+RECIPE('utility-science-pack'):change_category('research'):add_ingredient({type = "item", name = "perfect-samples", amount = 1})
+
+RECIPE('hotair-empty-petri-dish'):add_unlock('coal-processing-1'):set_fields{enabled = false}

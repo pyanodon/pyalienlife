@@ -314,7 +314,6 @@ ITEM {
     name = "wood-seedling",
     icon = "__pyalienlifegraphics__/graphics/icons/mip/seedling-1.png",
     icon_size = 64,
-
     pictures =
     {
       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/seedling-1.png",   scale = 0.25},
@@ -4361,6 +4360,36 @@ ITEM {
         {
             {icon = "__pyalienlifegraphics__/graphics/icons/sap-seeds.png"},
             {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-latex",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "sap-seeds-mk03",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/sap-seeds.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-latex",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "sap-seeds-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/sap-seeds.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
         },
 	icon_size = 64,
     flags = {},

@@ -668,6 +668,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "vsk",
+    icon = "__pyalienlifegraphics3__/graphics/icons/vsk.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-zungror",
+    order = "x",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
     name = "earth-goat-sample",
     icon = "__pyalienlifegraphics__/graphics/icons/earth-goat-sample.png",
 	icon_size = 64,
@@ -697,4 +708,78 @@ ITEM {
     subgroup = "py-alienlife-codex",
     order = "x",
     stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "guts-caged-zungror",
+    icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-zungror.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-zungror",
+    order = "b",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "blood-caged-zungror",
+    icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-zungror.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-zungror",
+    order = "b",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "brain-caged-zungror",
+    icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-zungror.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-zungror",
+    order = "b",
+    stack_size = 50
+}
+ITEM {
+    type = "item",
+    name = "fat-caged-zungror",
+    icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-zungror.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-zungror",
+    order = "b",
+    stack_size = 50
+}
+ITEM {
+    type = "item",
+    name = "meat-caged-zungror",
+    icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-zungror.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-zungror",
+    order = "b",
+    stack_size = 50
+}
+ITEM {
+    type = "item",
+    name = "skin-caged-zungror",
+    icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-zungror.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-zungror",
+    order = "b",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "bone-caged-zungror",
+    icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-zungror.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-zungror",
+    order = "b",
+    stack_size = 50
 }

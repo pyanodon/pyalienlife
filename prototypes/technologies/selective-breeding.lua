@@ -27,7 +27,7 @@ TECHNOLOGY {
         {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', icon_size = 64, scale = 0.5,shift = {35,35}},
     },
     icon_size = 128,
-    order = "c-a",
+    order = "arq",
     prerequisites = {"selective-breeding"},
     effects = {},
     unit = {
@@ -50,7 +50,7 @@ TECHNOLOGY {
         {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', icon_size = 64, scale = 0.5,shift = {35,35}},
     },
     icon_size = 128,
-    order = "c-a",
+    order = "art",
     prerequisites = {"selective-breeding"},
     effects = {},
     unit = {
@@ -73,7 +73,7 @@ TECHNOLOGY {
         {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', icon_size = 64, scale = 0.5,shift = {35,35}},
     },
     icon_size = 128,
-    order = "c-a",
+    order = "auo",
     prerequisites = {"selective-breeding"},
     effects = {},
     unit = {
@@ -96,7 +96,53 @@ TECHNOLOGY {
         {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', icon_size = 64, scale = 0.5,shift = {35,35}},
     },
     icon_size = 128,
-    order = "c-a",
+    order = "bho",
+    prerequisites = {"selective-breeding"},
+    effects = {},
+    unit = {
+        count = 200,
+        ingredients = {
+            {"automation-science-pack", 1},
+            {'logistic-science-pack', 2},
+            {'py-science-pack-2', 3},
+        },
+        time = 50
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "arum-breeding-1",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/technology/cadaveric-arum.png"},
+        {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', icon_size = 64, scale = 0.5,shift = {35,35}},
+    },
+    icon_size = 128,
+    order = "cad",
+    prerequisites = {"selective-breeding"},
+    effects = {},
+    unit = {
+        count = 200,
+        ingredients = {
+            {"automation-science-pack", 1},
+            {'logistic-science-pack', 2},
+            {'py-science-pack-2', 3},
+        },
+        time = 50
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "cottongut-breeding-1",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/technology/cottongut.png"},
+        {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', icon_size = 64, scale = 0.5,shift = {35,35}},
+    },
+    icon_size = 128,
+    order = "cad",
     prerequisites = {"selective-breeding"},
     effects = {},
     unit = {
