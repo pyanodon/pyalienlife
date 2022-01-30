@@ -17,6 +17,7 @@ fun.autorecipes {
 				{
 					{name = 'zungror', amount = 2},
                     {name = 'trits', amount =1},
+					{name = 'cdna', amount =1},
 					{name = 'barrel-milk', amount = 2},
 				},
 			results =
