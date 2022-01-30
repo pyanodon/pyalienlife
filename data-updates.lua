@@ -72,6 +72,7 @@ end
 for _, recipe in pairs(data.raw.recipe) do
     local r = RECIPE(recipe)
     r:replace_ingredient('organics', 'biomass')
+    fun.results_replacer(r.name, 'organics', 'biomass')
     r:replace_ingredient('ralesia', 'ralesias')
     r:replace_ingredient('raw-fish', 'fish')
 end
@@ -104,7 +105,7 @@ for m, module in pairs(data.raw.module) do
 end
 
 for m, module in pairs(data.raw.module) do
-    if module.name:find("speed%-module") or module.name:find("productivity%-module") or module.name:find("effectivity%-module") then
+    if not module.subgroup:find("py%-alienlife%-modules") and not module.limitation then
         if module.limitation_blacklist == nil then
             module.limitation_blacklist = {}
         end
