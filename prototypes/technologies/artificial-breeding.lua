@@ -109,3 +109,49 @@ TECHNOLOGY {
         time = 50
     }
 }
+
+TECHNOLOGY {
+    type = "technology",
+    name = "arum-breeding-2",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/technology/cadaveric-arum.png"},
+        {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png', icon_size = 64, scale = 0.5,shift = {35,35}},
+    },
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {"artificial-breeding","arum-breeding-1"},
+    effects = {},
+    unit = {
+        count = 200,
+        ingredients = {
+            {"automation-science-pack", 4},
+            {'logistic-science-pack', 3},
+            {'py-science-pack-2', 1},
+        },
+        time = 50
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "cottongut-breeding-2",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/technology/cottongut.png"},
+        {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png', icon_size = 64, scale = 0.5,shift = {35,35}},
+    },
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {"artificial-breeding","cottongut-breeding-1"},
+    effects = {},
+    unit = {
+        count = 200,
+        ingredients = {
+            {"automation-science-pack", 4},
+            {'logistic-science-pack', 3},
+            {'py-science-pack-2', 1},
+        },
+        time = 50
+    }
+}

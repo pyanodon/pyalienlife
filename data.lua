@@ -448,22 +448,26 @@ require('prototypes/recipes/arqad/recipes-arqad-products')
 require('prototypes/recipes/arqad/recipes-arqad-raising')
 require('prototypes/recipes/arqad/recipes-arqad-rendering')
 require('prototypes/recipes/arqad/recipes-arqad-updates')
+require('prototypes/recipes/arqad/recipes-arqad-modules')
 
 --arthurian
 require('prototypes/recipes/arthurian/recipes-arthurian')
 require('prototypes/recipes/arthurian/recipes-arthurian-raising')
 require('prototypes/recipes/arthurian/recipes-arthurian-rendering')
 require('prototypes/recipes/arthurian/recipes-arthurian-growth-enhancement')
+require('prototypes/recipes/arthurian/recipes-arthurian-modules')
 
 --auog
 require('prototypes/recipes/auog/recipes-auog')
 require('prototypes/recipes/auog/recipes-auog-raising')
 require('prototypes/recipes/auog/recipes-auog-rendering')
 require('prototypes/recipes/auog/recipes-auog-growth-enhancement')
+require('prototypes/recipes/auog/recipes-auog-modules')
 
 --Bhoddos
 require('prototypes/recipes/bhoddos/recipes-bhoddos')
 require('prototypes/recipes/bhoddos/recipes-bhoddos-raising')
+require('prototypes/recipes/bhoddos/recipes-bhoddos-modules')
 
 --Cadaveric-arum
 --see pyhightech updates for files
@@ -474,6 +478,7 @@ require('prototypes/recipes/cottongut/recipes-cottongut-raising')
 require('prototypes/recipes/cottongut/recipes-cottongut-rendering')
 require('prototypes/recipes/cottongut/recipes-cottongut-growth-enhancement')
 require('prototypes/recipes/cottongut/recipes-cottongut-science')
+require('prototypes/recipes/cottongut/recipes-cottongut-modules')
 
 --Cridren
 require('prototypes/recipes/cridren/recipes-cridren')

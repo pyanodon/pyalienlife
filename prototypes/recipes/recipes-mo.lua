@@ -4,7 +4,6 @@ RECIPE {
     name = 'petri-dish-bacteria',
     category = 'micro-mine',
     enabled = true,
-    hidden = true,
     energy_required = 20,
     ingredients = {
         {type = 'item', name = 'petri-dish', amount = 1},

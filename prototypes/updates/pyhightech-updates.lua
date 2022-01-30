@@ -34,6 +34,7 @@ require('prototypes/recipes/antelope/recipes-auto-antelope')
 require('prototypes/recipes/cadaveric-arum/recipes-cadaveric')
 require('prototypes/recipes/cadaveric-arum/recipes-auto-cadaveric')
 require('prototypes/recipes/cadaveric-arum/recipes-arum-megafarm')
+require('prototypes/recipes/cadaveric-arum/recipes-arum-modules')
 
 --kilcalk
 require('prototypes/recipes/kicalk/recipes-kicalk-megafarm')
@@ -1226,7 +1227,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 's-biomass', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165},
+        {type = 'fluid', name = 'steam', amount = 100},
     },
     results = {
         {type = 'item', name = 'sulfur', amount = 10},

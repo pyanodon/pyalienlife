@@ -232,8 +232,3 @@ RECIPE {
     },
     main_product = "simik",
 }:add_unlock("simik-mk01")
-
-
---Secondary Upgrade Recipes--
---SUR--
---WIP--
