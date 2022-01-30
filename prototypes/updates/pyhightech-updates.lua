@@ -34,6 +34,7 @@ require('prototypes/recipes/antelope/recipes-auto-antelope')
 require('prototypes/recipes/cadaveric-arum/recipes-cadaveric')
 require('prototypes/recipes/cadaveric-arum/recipes-auto-cadaveric')
 require('prototypes/recipes/cadaveric-arum/recipes-arum-megafarm')
+require('prototypes/recipes/cadaveric-arum/recipes-arum-modules')
 
 --kilcalk
 require('prototypes/recipes/kicalk/recipes-kicalk-megafarm')

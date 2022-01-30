@@ -51,23 +51,3 @@ data:extend({
         }
     }
 })
-
--- Secondary Upgrade Recipes--
--- SUR--
--- WIP--
-
--- mk02--
--- DONE--
-
-RECIPE{
-    type = 'recipe',
-    name = 'seaweed-mk02',
-    category = 'seaweed',
-    enabled = true,
-    energy_required = 25,
-    ingredients = {
-        {type = 'fluid', name = 'water', amount = 200}, {type = 'item', name = 'molybdenum-oxide', amount = 5},
-        {type = 'item', name = 'fertilizer', amount = 1}, {type = 'item', name = 'seaweed', amount = 5}
-    },
-    results = {{type = 'item', name = 'seaweed-mk02', amount = 1}}
-}:add_unlock('selective-breeding')
