@@ -538,6 +538,7 @@ require('prototypes/recipes/moss/recipes-auto-moss')
 require('prototypes/recipes/mukmoux/recipes-mukmoux')
 require('prototypes/recipes/mukmoux/recipes-mukmoux-raising')
 require('prototypes/recipes/mukmoux/recipes-mukmoux-rendering')
+require('prototypes/recipes/mukmoux/recipes-mukmoux-modules')
 
 --Navens
 require('prototypes/recipes/navens/recipes-navens')
