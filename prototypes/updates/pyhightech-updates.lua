@@ -1226,7 +1226,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 's-biomass', amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165},
+        {type = 'fluid', name = 'steam', amount = 100},
     },
     results = {
         {type = 'item', name = 'sulfur', amount = 10},

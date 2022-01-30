@@ -68,7 +68,7 @@ RECIPE {
         {type = 'item', name = "seaweed", amount = 5},
         {type = 'item', name = 'moss', amount = 5},
         {type = 'item', name = 'starch', amount = 4},
-        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
+        {type = 'fluid', name = 'steam', amount = 100}
     },
     results = {
         {type = 'item', name = 'auog-food-01', amount = 3},
@@ -92,7 +92,7 @@ RECIPE {
         {type = 'item', name = 'moss', amount = 10},
         {type = 'item', name = "seaweed", amount = 5},
         {type = 'item', name = 'starch', amount = 4},
-        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
+        {type = 'fluid', name = 'steam', amount = 100}
     },
     results = {
         {type = 'item', name = 'auog-food-02', amount = 5},

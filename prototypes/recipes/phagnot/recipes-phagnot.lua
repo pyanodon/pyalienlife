@@ -72,7 +72,7 @@ RECIPE {
         {type = 'item', name = 'tuuphra-seeds', amount = 15},
         {type = 'item', name = 'ash', amount = 10},
         {type = 'item', name = 'starch', amount = 4},
-        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
+        {type = 'fluid', name = 'steam', amount = 100}
     },
     results = {
         {type = 'item', name = 'phagnot-food-01', amount = 6},
@@ -98,7 +98,7 @@ RECIPE {
         {type = 'item', name = 'ash', amount = 10},
         {type = 'item', name = 'moss', amount = 15},
         {type = 'item', name = "seaweed", amount = 10},
-        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165}
+        {type = 'fluid', name = 'steam', amount = 100}
     },
     results = {
         {type = 'item', name = 'phagnot-food-02', amount = 6},

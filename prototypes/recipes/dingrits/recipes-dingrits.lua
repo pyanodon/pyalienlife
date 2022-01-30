@@ -72,7 +72,7 @@ RECIPE {
         {type = 'item', name = 'native-flora', amount = 5},
         {type = 'item', name = 'guts', amount = 10},
         {type = 'item', name = 'guar-gum', amount = 1},
-        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165},
+        {type = 'fluid', name = 'steam', amount = 100},
         {type = 'fluid', name = 'fish-oil', amount = 100},
     },
     results = {
@@ -97,7 +97,7 @@ RECIPE {
         {type = 'item', name = 'guts', amount = 10},
         {type = 'item', name = 'guar-gum', amount = 1},
         {type = 'item', name = 'skin', amount = 15},
-        {type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 165},
+        {type = 'fluid', name = 'steam', amount = 100},
         {type = 'fluid', name = 'fish-oil', amount = 100},
     },
     results = {
