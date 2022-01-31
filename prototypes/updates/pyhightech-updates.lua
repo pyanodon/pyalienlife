@@ -1411,7 +1411,7 @@ RECIPE {
     },
     main_product= "starch",
     icon = "__pyraworesgraphics__/graphics/icons/starch.png",
-    icon_size = 32,
+    icon_size = 64,
     subgroup = "py-rawores-recipes",
     order = "j"
 }:add_unlock("machines-mk02"):add_ingredient({type = 'item', name = 'fiberboard', amount = 1})
@@ -1432,7 +1432,7 @@ RECIPE {
     },
     main_product= "starch",
     icon = "__pyraworesgraphics__/graphics/icons/starch.png",
-    icon_size = 32,
+    icon_size = 64,
     subgroup = "py-rawores-recipes",
     order = "j"
 }:add_unlock("machines-mk02"):add_ingredient({type = 'item', name = 'fiberboard', amount = 1})
