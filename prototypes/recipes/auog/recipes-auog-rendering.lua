@@ -16,7 +16,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='bones',  6},
+					{name='bones', amount = 6},
 					{name='meat', amount = 7},
 					{name='skin', amount = 3},
 					{name='mukmoux-fat', amount = 5},
