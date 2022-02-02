@@ -6,11 +6,11 @@ ITEM{
     name = 'hidden-beacon',
     icon = '__pycoalprocessinggraphics__/graphics/empty.png',
     icon_size = 32,
-    flags = {},
+    flags = {"hidden"},
     subgroup = 'py-alienlife-antelope',
     order = 'x',
     place_result = 'hidden-beacon',
-    stack_size = 50
+    stack_size = 50,
 }
 
 ENTITY{
@@ -18,7 +18,7 @@ ENTITY{
     name = 'hidden-beacon',
     icon = '__pycoalprocessinggraphics__/graphics/empty.png',
     icon_size = 32,
-    flags = {'placeable-player', 'player-creation', 'hide-alt-info'},
+    flags = {'placeable-player', 'player-creation', 'hide-alt-info', 'hidden'},
     -- minable = {mining_time = 0.2, result = "hidden-beacon"},
     max_health = 200,
     corpse = 'beacon-remnants',
