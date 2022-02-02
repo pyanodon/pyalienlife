@@ -1,3 +1,4 @@
+local noise = require("noise")
 --------------------------SEA WEED-----------------------
 data:extend({
     {
@@ -44,9 +45,12 @@ data:extend({
             }
         },
         autoplace = {
-            influence = 0.0007,
-            min_influence = 0.0001,
-            max_influence = 0.01,
+            probability_expression = noise.define_noise_function( function(x, y, tile, map)
+                -- equiv to: limited_water < 0 and 0 or 1
+                local limited_water = noise.clamp(noise.var("wlc_elevation_minimum"), 0, 1)
+                -- 0.4% or 1.4%
+                return 0.004 + (0.01 * limited_water)
+              end),
             order = 'seaweed'
         }
     }

@@ -7,6 +7,8 @@ table.insert(data.raw.lab.lab.inputs, 'py-science-pack-1')
 table.insert(data.raw.lab.lab.inputs, 'py-science-pack-2')
 table.insert(data.raw.lab.lab.inputs, 'py-science-pack-3')
 
+require("prototypes/updates/autoplace-fish")
+
 if mods["pyfusionenergy"] then
     require("prototypes/updates/pyfusionenergy-updates")
 end
@@ -48,15 +50,6 @@ TECHNOLOGY("logistic-science-pack"):add_prereq("biotech-mk01")
 --ADAPTATIONS
 
 data.raw.boiler.boiler.energy_source.fuel_categories = {"chemical", "biomass"}
-
-data.raw.fish.fish.minable.result = 'fish'
-data.raw.fish.fish.autoplace = {
-    influence = 0.0007,
-    min_influence = 0.0001,
-    max_influence = 0.01,
-    order = 'fish'
-  }
---data.raw.fish.fish = nil
 
 data.raw.item.fawogae = nil
 
@@ -312,3 +305,86 @@ RECIPE('production-science-pack'):change_category('research'):remove_unlock('dia
 RECIPE('utility-science-pack'):change_category('research'):add_ingredient({type = "item", name = "perfect-samples", amount = 1})
 
 RECIPE('hotair-empty-petri-dish'):add_unlock('coal-processing-1'):set_fields{enabled = false}
+-- Add our next upgrades
+local searchtypes = {
+    'turret',
+    'fluid-turret',
+    'electric-turret',
+    'ammo-turret',
+    'accumulator',
+    'burner-generator',
+    'electric-energy-interface',
+    'artillery-turret',
+    'generator',
+    'lab',
+    'solar-panel',
+    'pump',
+    'lamp',
+    'heat-interface',
+    'gate',
+    'boiler',
+    'power-switch',
+    'pipe-to-ground',
+    'reactor',
+    'storage-tank',
+    'assembling-machine',
+    'rocket-silo',
+    'furnace',
+    'simple-entity-with-owner',
+    'linked-container',
+    'wall',
+    'simple-entity-with-force',
+    'simple-entity',
+    'inserter',
+    'constant-combinator',
+    'mining-drill',
+    'train-stop',
+    'underground-belt',
+    'splitter',
+    'loader',
+    'loader-1x1',
+    'linked-belt',
+    'transport-belt',
+    'decider-combinator',
+    'arithmetic-combinator',
+    'radar',
+    'pipe',
+    'container',
+    'logistic-container',
+    'infinity-container',
+    'electric-pole',
+    'roboport',
+    'beacon',
+    'offshore-pump',
+    'heat-pipe'
+}
+local function next_tier(prototype_name, prototype_category)
+    local tier_num = prototype_name:match("%-mk(%d%d)$")
+    if tier_num then
+        tier_num = tonumber(tier_num)
+        if tier_num then
+            tier_num = tier_num + 1
+            tier_num = string.format("%02d", tier_num)
+            return (prototype_category[prototype_name:gsub("%d%d$", tier_num)] or {}).name
+        end
+    end
+end
+for _, category in pairs(searchtypes) do
+    local raw_cat = data.raw[category]
+    if raw_cat then
+        for name, prototype in pairs(raw_cat) do
+            if not prototype.next_upgrade then
+                prototype.next_upgrade = next_tier(name, raw_cat)
+                if prototype.next_upgrade then
+                    --log(name .. ' -> ' .. prototype.next_upgrade)
+                    if serpent.block(prototype.collision_box) ~= serpent.block(raw_cat[prototype.next_upgrade].collision_box) then
+                        --log('Cancelled upgrade: ' .. name .. ' -> ' .. prototype.next_upgrade)
+                        prototype.next_upgrade = nil
+                    end
+                end
+            end
+        end
+    else
+        --log('Category ' .. category .. ' is empty!')
+    end
+end
