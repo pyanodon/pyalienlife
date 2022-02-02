@@ -41,14 +41,14 @@ fun.autorecipes {
 			results =
 				{
 					--{name='bones', remove_item = true},
-					{name='meat', remove_item = true},
+					--{name='meat', remove_item = true},
 					{name='venon-gland', remove_item = true},
-                    {name='meat', amount =6},
 					{name='skin', remove_item = true},
 					{name='mukmoux-fat', remove_item = true},
 					{name='guts', remove_item = true},
 					{name='arthropod-blood', remove_item = true},
 					{name='brain', remove_item = true},
+                    {name='meat', amount = 6},
 				},
 			crafting_speed = 15,
 			tech = 'vonix-mk02',
