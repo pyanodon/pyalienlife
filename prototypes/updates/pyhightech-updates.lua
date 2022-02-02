@@ -53,8 +53,8 @@ data.raw.module['moondrop-mk02'].limitation = table.deepcopy(data.raw.module['mo
 data.raw.module['moondrop-mk03'].limitation = table.deepcopy(data.raw.module['moondrop'].limitation)
 data.raw.module['moondrop-mk04'].limitation = table.deepcopy(data.raw.module['moondrop'].limitation)
 
-RECIPE("plastic-from-melamine"):remove_unlock('plastics'):add_unlock('melamine')
-TECHNOLOGY("melamine"):remove_pack('logistic-science-pack')
+--RECIPE("plastic-from-melamine"):remove_unlock('plastics'):add_unlock('melamine')
+--TECHNOLOGY("melamine"):remove_pack('logistic-science-pack')
 
 --(( ORES ))--
 require('prototypes/ores/kicalk')
