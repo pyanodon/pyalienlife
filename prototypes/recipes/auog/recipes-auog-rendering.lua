@@ -23,7 +23,6 @@ fun.autorecipes {
 					{name='guts', amount = 5},
 					{name='blood', amount = 150},
 					{name='brain', amount = 3},
-					{name='biomass', amount = 5},
 					{name='cage', amount = 3},
 				},
 			crafting_speed = 10,
