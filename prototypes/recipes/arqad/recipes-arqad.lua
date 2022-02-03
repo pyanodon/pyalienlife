@@ -295,7 +295,7 @@ RECIPE {
         {type = 'fluid', name = 'arqad-honey', amount = 100},
     },
     results = {
-        {type = 'item', name = 'sugar', amount = 10},
+        {type = 'item', name = 'sugar', amount = 8},
     },
 }:add_unlock("arqad-mk02")
 
