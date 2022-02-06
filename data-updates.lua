@@ -373,13 +373,19 @@ for _, category in pairs(searchtypes) do
     local raw_cat = data.raw[category]
     if raw_cat then
         for name, prototype in pairs(raw_cat) do
-            if not prototype.next_upgrade then
+            if not prototype.next_upgrade and prototype.minable then
                 prototype.next_upgrade = next_tier(name, raw_cat)
                 if prototype.next_upgrade then
                     --log(name .. ' -> ' .. prototype.next_upgrade)
                     if serpent.block(prototype.collision_box) ~= serpent.block(raw_cat[prototype.next_upgrade].collision_box) then
                         --log('Cancelled upgrade: ' .. name .. ' -> ' .. prototype.next_upgrade)
                         prototype.next_upgrade = nil
+                    else
+                        local next_proto = raw_cat[prototype.next_upgrade]
+                        if not prototype.fast_replaceable_group or prototype.fast_replaceable_group ~= next_proto.fast_replaceable_group then
+                            prototype.fast_replaceable_group = prototype.name:gsub("%-mk%d%d$", "")
+                            next_proto.fast_replaceable_group = prototype.fast_replaceable_group
+                        end
                     end
                 end
             end
