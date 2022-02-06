@@ -193,7 +193,7 @@ fun.autorecipes {
 			tech = 'advanced-rendering',
 			name = 'Extract simik hot air',
 			icon = "__pypetroleumhandlinggraphics__/graphics/icons/hot-air.png",
-			icon_size = 32,
+			icon_size = 64,
 		},
 		--fat
 		{
