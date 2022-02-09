@@ -14,10 +14,6 @@ data:extend(
   },
   {
     type = "fuel-category",
-    name = "biomass"
-  },
-  {
-    type = "fuel-category",
     name = "simik"
   },
 }
