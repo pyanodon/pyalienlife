@@ -29,8 +29,7 @@ RECIPE('xyhiphoe-pool-mk02'):remove_unlock('machines-mk02')
 RECIPE('xyhiphoe-pool-mk03'):remove_unlock('machines-mk03')
 RECIPE('xyhiphoe-pool-mk04'):remove_unlock('machines-mk04')
 RECIPE('bio-reactor'):remove_unlock('helium-processing'):remove_unlock('nano-tech')
--- Hide from requests
-ITEM('bio-reactor'):add_flag('hidden')
+
 RECIPE('chemical-plant-mk03'):add_ingredient({type = "item", name = "super-alloy", amount = 10}):add_ingredient({type = "item", name = "boron-carbide", amount = 20})
 RECIPE('chemical-plant-mk04'):add_ingredient({type = "item", name = "nbti-alloy", amount = 15}):add_ingredient({type = "item", name = "wall-shield", amount = 8})
 
