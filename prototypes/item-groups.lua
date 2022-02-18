@@ -303,6 +303,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-mova",
+        group = "py-alienlife",
+        order = "f-j"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-fungi",
         group = "py-alienlife",
         order = "g"
