@@ -1,4 +1,21 @@
 
+local farms = {
+	farm1 = require("scripts/crops/farm-ralesia"),
+	farm2 = require("scripts/crops/farm-rennea"),
+	farm3 = require("scripts/crops/farm-tuuphra"),
+	farm4 = require("scripts/crops/farm-grod"),
+	farm5 = require("scripts/crops/farm-yotoi"),
+	farm6 = require("scripts/crops/farm-kicalk"),
+	farm7 = require("scripts/crops/farm-arum"),
+	farm8 = require("scripts/crops/farm-yotoi-fruit"),
+	farm9 = require("scripts/crops/farm-bioreserve")
+}
+
+if script.active_mods["pyalternativeenergy"] then
+    local farm10 = require("__pyalternativeenergy__/scripts/crops/farm-mova")
+    table.insert(farms, farm10)
+end
+
 local function create_sh_animal_table(sh_gui, player, event)
 
 end
@@ -151,7 +168,32 @@ end)
 
 script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity}, function(event)
     local E = event.created_entity
-    if E.name == 'outpost' then
+
+    if E.name == "mega-farm" then
+        --script for placing down the farm
+        local posx = -13
+        local posy = -13
+        local rpos = E.position
+        repeat
+            --log(posx)
+            --log(posy)
+            if posx == -13 or posy == -13 or posx == 13 or posy == 13 then
+                game.surfaces["nauvis"].create_entity {
+                    name = "wood-fence",
+                    position = {rpos.x + posx, (rpos.y - 15) + posy},
+                    force = E.force
+                }
+            end
+            --create landfill
+            game.surfaces["nauvis"].set_tiles {{name = "landfill", position = {rpos.x + posx, (rpos.y - 15) + posy}}}
+
+            posx = posx + 1
+            if posx == 14 then
+                posx = -13
+                posy = posy + 1
+            end
+        until posy == 14
+    elseif E.name == 'outpost' then
         global.caravans.outpost_buildings[E.unit_number] = E
     elseif E.name == 'caravan' then
         global.caravans.caravan_units[E.unit_number] = E
@@ -299,7 +341,63 @@ script.on_event(defines.events.on_gui_text_changed, function(event)
 end)
 
 script.on_event(defines.events.on_rocket_launched, function(event)
+    if event.rocket_silo.name == "mega-farm" then
+        local item = event.rocket.get_inventory(defines.inventory.rocket).get_contents()
+        local items = {}
 
+        for k in pairs(item) do
+            items["item1"] = k
+        end
+
+        local rs = event.rocket_silo
+
+        for _, farm in pairs(farms) do
+            --log(serpent.block(farm))
+            if items["item1"] == farm.seed then
+                --log('hits')
+                local recipes = {}
+                local output = {}
+                for _, recipe in pairs(farm.recipes) do
+                    --log(serpent.block(recipe))
+                    recipes[recipe.recipe_name] = true
+                    output[recipe.recipe_name] = recipe.crop_output
+                end
+                --log(serpent.block(rs.get_recipe().name))
+                if recipes[rs.get_recipe().name] == true then
+                    --log('it did a thing')
+                    local posx = -11
+                    local posy = -11
+                    local rpos = event.rocket_silo.position
+                    repeat
+                        if game.surfaces["nauvis"].find_entity(farm.crop, {rpos.x + posx, (rpos.y - 15) + posy}) == nil then
+                            game.surfaces["nauvis"].create_entity {
+                                name = farm.crop,
+                                position = {rpos.x + posx, (rpos.y - 15) + posy},
+                                amount = output[rs.get_recipe().name]
+                            }
+                        else
+                            local ore = game.surfaces["nauvis"].find_entity(farm.crop, {rpos.x + posx, (rpos.y - 15) + posy})
+                            ore.amount = ore.amount + output[rs.get_recipe().name]
+                        end
+                        posx = posx + 1
+                        if posx == 12 then
+                            posx = -11
+                            posy = posy + 1
+                        end
+                    until posy == 12
+                end
+            end
+        end
+        local rpos = event.rocket_silo.position
+        local harvesters =
+            game.surfaces["nauvis"].find_entities_filtered {
+            area = {{rpos.x - 11, (rpos.y - 15) - 11}, {rpos.x + 11, (rpos.y - 15) + 11}},
+            name = {"harvester", "collector"}
+        }
+        for _, har in pairs(harvesters) do
+            har.update_connections()
+        end
+    end
 end)
 
 script.on_event(defines.events.on_player_selected_area, function(event)
