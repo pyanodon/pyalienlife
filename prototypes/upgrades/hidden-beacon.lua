@@ -18,7 +18,7 @@ ENTITY{
     name = 'hidden-beacon',
     icon = '__pycoalprocessinggraphics__/graphics/empty.png',
     icon_size = 32,
-    flags = {'placeable-player', 'player-creation', 'hide-alt-info', 'hidden'},
+    flags = {'placeable-player', 'hide-alt-info', 'hidden'},
     -- minable = {mining_time = 0.2, result = "hidden-beacon"},
     max_health = 200,
     corpse = 'beacon-remnants',
