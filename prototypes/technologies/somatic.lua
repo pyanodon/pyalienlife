@@ -24,6 +24,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"somatic","recombinant-ery"},
+    dependencies = {"somatic"},
     effects = {},
     unit = {
         count = 600,

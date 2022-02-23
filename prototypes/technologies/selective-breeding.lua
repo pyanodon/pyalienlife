@@ -6,6 +6,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"organic-breeding","biotech-mk02","domestication"},
+    dependencies = {"organic-breeding"},
     effects = {},
     unit = {
         count = 200,
@@ -29,6 +30,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "arq",
     prerequisites = {"selective-breeding"},
+    dependencies = {"selective-breeding"},
     effects = {},
     unit = {
         count = 200,
@@ -52,6 +54,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "art",
     prerequisites = {"selective-breeding"},
+    dependencies = {"selective-breeding"},
     effects = {},
     unit = {
         count = 200,
@@ -75,6 +78,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "auo",
     prerequisites = {"selective-breeding"},
+    dependencies = {"selective-breeding"},
     effects = {},
     unit = {
         count = 200,
@@ -98,6 +102,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "bho",
     prerequisites = {"selective-breeding"},
+    dependencies = {"selective-breeding"},
     effects = {},
     unit = {
         count = 200,
@@ -121,6 +126,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "cad",
     prerequisites = {"selective-breeding"},
+    dependencies = {"selective-breeding"},
     effects = {},
     unit = {
         count = 200,
@@ -144,6 +150,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "cad",
     prerequisites = {"selective-breeding"},
+    dependencies = {"selective-breeding"},
     effects = {},
     unit = {
         count = 200,

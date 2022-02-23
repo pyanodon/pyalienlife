@@ -31,7 +31,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='blood-meal', amount = 4, fallback = {name = 'blood', amount = 200}},
+					{name='blood-meal', amount = 4, fallback = {name = 'blood-barrel', amount = 4}},
 					{name='albumin', amount = 1}
 				},
 			results =
@@ -218,7 +218,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='blood-meal', amount = 5, fallback = {name = 'blood', amount = 200}},
+					{name='blood-meal', amount = 5, fallback = {name = 'blood-barrel', amount = 4}},
 					{name='saps', amount = 2},
 				},
 			results =
@@ -249,7 +249,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='blood-meal', amount =5, fallback = {name = 'blood', amount = 200}},
+					{name='blood-meal', amount =5, fallback = {name = 'blood-barrel', amount = 4}},
 					{name='saps', amount = 5},
 				},
 			results =

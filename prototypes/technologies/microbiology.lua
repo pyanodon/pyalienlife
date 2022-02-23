@@ -22,6 +22,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'microbiology-mk01'},
+    dependencies = {"microbiology-mk01"},
     effects = {},
     unit = {
         count = 100,
@@ -40,6 +41,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'microbiology-mk02'},
+    dependencies = {"microbiology-mk02"},
     effects = {},
     unit = {
         count = 100,

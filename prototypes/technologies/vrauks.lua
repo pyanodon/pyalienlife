@@ -22,6 +22,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"vrauks"},
+    dependencies = {"vrauks"},
     effects = {},
     unit = {
         count = 150,
@@ -40,6 +41,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"vrauks-mk02"},
+    dependencies = {"vrauks-mk02"},
     effects = {},
     unit = {
         count = 200,
@@ -59,6 +61,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"vrauks-mk03"},
+    dependencies = {"vrauks-mk03"},
     effects = {},
     unit = {
         count = 250,

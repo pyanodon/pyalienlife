@@ -23,6 +23,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"grod"},
+    dependencies = {"grod"},
     effects = {},
     unit = {
         count = 200,
@@ -42,6 +43,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"grod-mk02"},
+    dependencies = {"grod-mk02"},
     effects = {},
     unit = {
         count = 250,
@@ -61,6 +63,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"grod-mk03"},
+    dependencies = {"grod-mk03"},
     effects = {},
     unit = {
         count = 300,

@@ -24,6 +24,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"exercises","anabolic-rna"},
+    dependencies = {"exercises"},
     effects = {},
     unit = {
         count = 600,

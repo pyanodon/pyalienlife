@@ -24,6 +24,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"zungror"},
+    dependencies = {"zungror"},
     effects = {},
     unit = {
         count = 400,
@@ -43,6 +44,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"zungror-mk02"},
+    dependencies = {"zungror-mk02"},
     effects = {},
     unit = {
         count = 500,

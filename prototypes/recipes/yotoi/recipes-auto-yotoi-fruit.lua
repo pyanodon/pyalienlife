@@ -45,7 +45,7 @@ fun.autorecipes {
         {
 			ingredients =
 				{
-                    {name='blood-meal', amount = 2, fallback = {name = 'blood', amount = 200}},
+                    {name='blood-meal', amount = 2, fallback = {name = 'blood-barrel', amount = 4}},
 					{name='carbon-dioxide', amount = 60},
 					{name='pesticide-mk01', add_amount = 1},
 				},

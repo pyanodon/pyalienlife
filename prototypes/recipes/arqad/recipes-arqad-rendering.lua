@@ -12,7 +12,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='arqad', amount=3},
+					{name='arqad', amount=3}
 				},
 			results =
 				{

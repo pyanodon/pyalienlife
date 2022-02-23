@@ -23,6 +23,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"yaedols"},
+    dependencies = {"yaedols"},
     effects = {},
     unit = {
         count = 200,
@@ -42,6 +43,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"yaedols-mk02"},
+    dependencies = {"yaedols-mk02"},
     effects = {},
     unit = {
         count = 250,
@@ -61,6 +63,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"yaedols-mk03"},
+    dependencies = {"yaedols-mk03"},
     effects = {},
     unit = {
         count = 300,

@@ -64,7 +64,7 @@ fun.autorecipes {
             {
                 {name='gh', amount =1},
                 {name='urea', amount =10},
-                {name='bacteria-2', amount = 20, fallback = 'bacteria-1'},
+                {name='bacteria-2-barrel', amount = 1, fallback = 'bacteria-1-barrel'},
                 {name='manure', add_amount =10},
                 {name='moss', add_amount = 15},
             },

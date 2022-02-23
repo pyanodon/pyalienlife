@@ -81,7 +81,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'wood-seedling', amount = 3},
     },
-}:add_unlock("botany-mk01")
+}:add_unlock("wood-processing")
 
 RECIPE {
     type = 'recipe',
@@ -95,7 +95,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'wood-seeds', amount = 4},
     },
-}:add_unlock("botany-mk01")
+}:add_unlock("wood-processing")
 
 RECIPE {
     type = 'recipe',

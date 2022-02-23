@@ -22,6 +22,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"arqad"},
+    dependencies = {"arqad"},
     effects = {},
     unit = {
         count = 150,
@@ -41,6 +42,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"arqad-mk02"},
+    dependencies = {"arqad-mk02"},
     effects = {},
     unit = {
         count = 200,
@@ -60,6 +62,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"arqad-mk03"},
+    dependencies = {"arqad-mk03"},
     effects = {},
     unit = {
         count = 300,

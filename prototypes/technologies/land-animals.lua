@@ -22,6 +22,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"land-animals-mk01","botany-mk02","biotech-mk02"},
+    dependencies = {"land-animals-mk01"},
     effects = {},
     unit = {
         count = 200,
@@ -40,6 +41,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"land-animals-mk02","botany-mk03"},
+    dependencies = {"land-animals-mk02"},
     effects = {},
     unit = {
         count = 250,

@@ -24,6 +24,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"scrondrix"},
+    dependencies = {"scrondrix"},
     effects = {},
     unit = {
         count = 200,
@@ -43,6 +44,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"scrondrix-mk02"},
+    dependencies = {"scrondrix-mk02"},
     effects = {},
     unit = {
         count = 250,
@@ -62,6 +64,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"scrondrix-mk03"},
+    dependencies = {"scrondrix-mk03"},
     effects = {},
     unit = {
         count = 500,

@@ -23,6 +23,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"water-invertebrates-mk01","biotech-mk01","water-animals-mk01"},
+    dependencies = {"water-invertebrates-mk01"},
     effects = {},
     unit = {
         count = 100,
@@ -42,6 +43,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"water-invertebrates-mk02","biotech-mk02","water-animals-mk02"},
+    dependencies = {"water-invertebrates-mk02"},
     effects = {},
     unit = {
         count = 100,
@@ -61,6 +63,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"water-invertebrates-mk03","biotech-mk04","water-animals-mk03"},
+    dependencies = {"water-invertebrates-mk03"},
     effects = {},
     unit = {
         count = 200,

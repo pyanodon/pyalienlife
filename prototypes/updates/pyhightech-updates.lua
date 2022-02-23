@@ -270,7 +270,7 @@ RECIPE('pydrive'):add_ingredient({type = "item", name = "graphene-roll", amount 
 ----RECIPES----
 RECIPE('fungal-substrate'):add_ingredient({type = "item", name = "urea", amount = 3})
 RECIPE('alien-sample-03'):replace_ingredient("plastic-bar", "graphene-roll")
-RECIPE('log7-2'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a"):remove_unlock('basic-electronics'):add_unlock('botany-mk02')
+RECIPE('log7-2'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a")
 --RECIPE('urea'):replace_ingredient("fawogae", "seaweed"):subgroup_order("py-alienlife-items", "a")
 RECIPE('bonemeal2'):remove_unlock('advanced-electronics'):subgroup_order("py-alienlife-items", "a")
 RECIPE('bonemeal3'):remove_unlock('advanced-electronics'):subgroup_order("py-alienlife-items", "a")
@@ -323,7 +323,7 @@ RECIPE('myoglobin'):change_category('genlab')
 RECIPE('zipir-carcass'):remove_unlock('basic-electronics')
 RECIPE('capacitor-core'):add_ingredient({type = "item", name = "nano-cellulose", amount = 2})
 RECIPE('fawogae2'):remove_unlock('advanced-electronics')
-RECIPE('fiber'):remove_unlock('basic-electronics')
+--RECIPE('fiber'):remove_unlock('basic-electronics')
 --RECIPE('urea'):change_category('vrauks'):subgroup_order("py-alienlife-auog", "a")
 ITEM('urea'):subgroup_order("py-alienlife-auog", "a")
 ITEM('mosfet'):subgroup_order("py-hightech-tier-2", "f")
@@ -423,7 +423,7 @@ RECIPE {
         {type = 'item', name = 'biomass', amount = 3}
     },
     main_product = 'fiber'
-}:add_unlock('basic-electronics')
+}:add_unlock('kicalk-mk02')
 
 RECIPE {
     type = "recipe",

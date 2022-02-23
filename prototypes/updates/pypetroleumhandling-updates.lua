@@ -188,7 +188,7 @@ RECIPE {
     icon_size = 64,
     subgroup = "py-items",
     order = "o"
-}:add_unlock("engine")
+}:add_unlock("electric-engine")
 
 RECIPE('fawogae-mk04-breeder'):replace_ingredient("iron-plate", "nb-biomass")
 

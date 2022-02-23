@@ -24,6 +24,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'biotech-mk02','organ-printing','chitin'},
+    dependencies = {"organ-printing"},
     effects = {},
     unit = {
         count = 350,
@@ -43,6 +44,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'biotech-mk03','organ-printing-mk02','immunosupressants','growth-hormone'},
+    dependencies = {"organ-printing-mk02"},
     effects = {},
     unit = {
         count = 400,
@@ -62,6 +64,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'biotech-mk04','organ-printing-mk03','pharmagenomics'},
+    dependencies = {"organ-printing-mk03"},
     effects = {},
     unit = {
         count = 300,

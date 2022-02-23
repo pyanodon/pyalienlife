@@ -23,6 +23,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"mycology-mk03",'microfilters'},
+    dependencies = {"microfilters"},
     effects = {},
     unit = {
         count = 200,
