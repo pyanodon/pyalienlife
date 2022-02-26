@@ -567,20 +567,6 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'fiber-01',
-    category = 'wpu',
-    enabled = false,
-    energy_required = 10,
-    ingredients = {
-        {type = 'item', name = 'wood', amount = 10},
-    },
-    results = {
-        {type = 'item', name = 'raw-fiber', amount = 2}
-    }
-}:add_unlock('kicalk')
-
-RECIPE {
-    type = 'recipe',
     name = 'phenol-02',
     category = 'distilator',
     enabled = false,
@@ -627,20 +613,6 @@ RECIPE {
     },
     --main_product = "cocoon",
 }:add_unlock("biotech-mk01")
-
-RECIPE {
-    type = 'recipe',
-    name = 'yotoi-fiber',
-    category = 'pulp',
-    enabled = false,
-    energy_required = 5,
-    ingredients = {
-        {type = 'item', name = 'yotoi-leaves', amount = 5},
-     },
-    results = {
-        {type = 'item', name = 'raw-fiber', amount = 3},
-    },
-}:add_unlock("yotoi")
 
 RECIPE {
     type = 'recipe',

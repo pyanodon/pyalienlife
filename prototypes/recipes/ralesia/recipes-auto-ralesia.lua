@@ -77,7 +77,7 @@ fun.autorecipes {
 				{
 					{name='ralesia-seeds', add_amount = 5},
 					{name='fertilizer', add_amount = 5},
-					{name='urea', amount = 15},
+					{name='urea', amount = 15, fallback = 'manure'},
 					{name = 'biomass', add_amount = 15}
 				},
 			results =

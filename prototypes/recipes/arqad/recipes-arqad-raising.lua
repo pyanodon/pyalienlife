@@ -134,7 +134,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'arqad-maggot', amount = 5},
-                    {name='arqad-jelly-barrel', amount =1,return_barrel = true},
+                    {name='arqad-honey-barrel', amount =1,return_barrel = true},
 					{name='empty-comb', amount =1},
 					{name = 'vrauks', amount = 1},
 					{name = 'vrauks-food-01', amount = 1}
@@ -151,7 +151,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'arqad-maggot', add_amount = 5},
-                    {name='arqad-honey-barrel', amount = 5,return_barrel = true},
+                    {name='arqad-jelly-barrel', amount = 5,return_barrel = true},
 					{name = 'vrauks', add_amount = 2},
 					{name = 'vrauks-food-01', add_amount = 2}
 				},
@@ -167,7 +167,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'arqad-maggot', add_amount = 5},
-                    {name='arqad-honey-barrel', add_amount = 3,return_barrel = true},
+                    {name='arqad-jelly-barrel', add_amount = 3,return_barrel = true},
 					{name = 'vrauks', add_amount = 1},
 					{name = 'vrauks-food-02', add_amount = 1}
 				},
@@ -303,7 +303,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='arqad-egg-nest', amount =1},
-                    {name='arqad-jelly-barrel', amount = 5, return_barrel = true},
+                    {name='arqad-honey-barrel', amount = 5, return_barrel = true},
 					{name='filled-canister-natural-gas', amount=3,return_barrel = true},
 				},
 			results =

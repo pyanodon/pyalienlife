@@ -138,13 +138,13 @@ RECIPE {
         {type = 'fluid', name = 'coal-gas', amount = 1000},
         {type = 'item', name = 'sand', amount = 150},
         {type = 'item', name = 'coarse', amount = 100},
-        {type = 'item', name = 'urea', amount = 300},
+        {type = 'item', name = 'manure', amount = 300},
         {type = 'item', name = 'fertilizer', amount = 100},
     },
     results = {
         {type = 'item', name = 'cadaveric-arum', amount = 1},
     },
-}:add_unlock("mega-farm-cadaveric-arum")
+}:add_unlock("mega-farm-cadaveric-arum"):replace_ingredient("manure", "urea")
 
 RECIPE {
     type = 'recipe',
@@ -158,14 +158,14 @@ RECIPE {
         {type = 'fluid', name = 'coal-gas', amount = 1000},
         {type = 'item', name = 'sand', amount = 150},
         {type = 'item', name = 'coarse', amount = 100},
-        {type = 'item', name = 'urea', amount = 300},
+        {type = 'item', name = 'manure', amount = 300},
         {type = 'item', name = 'blood-meal', amount = 100},
         {type = 'item', name = 'fertilizer', amount = 100},
     },
     results = {
         {type = 'item', name = 'cadaveric-arum', amount = 1},
     },
-}:add_unlock("mega-farm-cadaveric-arum")
+}:add_unlock("mega-farm-cadaveric-arum"):replace_ingredient("manure", "urea")
 
 RECIPE {
     type = 'recipe',
@@ -178,7 +178,7 @@ RECIPE {
         {type = 'fluid', name = 'acidgas', amount = 1000},
         {type = 'fluid', name = 'coal-gas', amount = 1000},
         {type = 'item', name = 'sand', amount = 150},
-        {type = 'item', name = 'urea', amount = 300},
+        {type = 'item', name = 'manure', amount = 300},
         {type = 'item', name = 'blood-meal', amount = 100},
         {type = 'item', name = 'fertilizer', amount = 100},
         {type = 'item', name = 'gh', amount = 3},
@@ -186,4 +186,4 @@ RECIPE {
     results = {
         {type = 'item', name = 'cadaveric-arum', amount = 1},
     },
-}:add_unlock("mega-farm-cadaveric-arum")
+}:add_unlock("mega-farm-cadaveric-arum"):replace_ingredient("manure", "urea")

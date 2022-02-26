@@ -85,7 +85,7 @@ fun.autorecipes {
                     {name='syngas',remove_item = true},
 					{name = 'refsyngas', amount = 30},
 					{name='biomass', add_amount = 4},
-					{name='urea', amount = 12},
+					{name='urea', amount = 12, fallback = 'manure'},
 				},
 			results =
 				{

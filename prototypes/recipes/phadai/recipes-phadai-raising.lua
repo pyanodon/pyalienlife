@@ -27,7 +27,7 @@ fun.autorecipes {
 					{name='phadai-pup', amount =3},
 				},
 			crafting_speed = 140,
-			tech = 'assisted-embryology'
+			tech = 'phadai'
 		},
 		--food 1
 		{
@@ -43,7 +43,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 120,
-			tech = 'assisted-embryology'
+			tech = 'phadai'
 		},
 		--fawogae
 		{
@@ -56,7 +56,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 110,
-			tech = 'assisted-embryology'
+			tech = 'phadai-mk02'
 		},
 		--energy-drink
 		{
@@ -69,7 +69,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 100,
-			tech = 'assisted-embryology'
+			tech = 'phadai-mk02'
 		},
 		--food 2
 		{
@@ -86,7 +86,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 100,
-			tech = 'assisted-embryology'
+			tech = 'phadai-mk03'
 		},
 		--food 2 fawogae
 		{
@@ -99,7 +99,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 90,
-			tech = 'assisted-embryology'
+			tech = 'phadai-mk03'
 		},
 		--food 2 fawogae energy-drink
 		{
@@ -112,7 +112,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 80,
-			tech = 'assisted-embryology'
+			tech = 'phadai-mk04'
 		},
 	}
 }

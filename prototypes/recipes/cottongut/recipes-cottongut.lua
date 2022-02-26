@@ -88,13 +88,12 @@ RECIPE {
         {type = 'item', name = "seaweed", amount = 10},
         {type = 'item', name = 'wood-seeds', amount = 15},
         {type = 'item', name = 'ash', amount = 10},
-        {type = 'item', name = 'moondrop', amount = 10},
         {type = 'fluid', name = 'steam', amount = 100}
     },
     results = {
         {type = 'item', name = 'cottongut-food-02', amount = 6},
     },
-}:add_unlock("food-mk02")
+}:add_unlock("food-mk02"):add_ingredient{type = 'item', name = 'moondrop', amount = 10}
 
 ---breeding---
 
@@ -135,7 +134,6 @@ RECIPE {
     energy_required = 50,
     ingredients = {
         {type = 'item', name = 'cottongut-pup-mk01', amount = 1},
-        {type = 'item', name = 'moondrop', amount = 3},
         {type = 'item', name = 'wood', amount = 1},
         {type = 'item', name = 'cottongut-food-01', amount = 1},
     },
@@ -145,7 +143,7 @@ RECIPE {
     main_product = "cottongut-mk01",
     subgroup = 'py-alienlife-cottongut',
     order = 'a',
-}:add_unlock("cottongut-mk01")
+}:add_unlock("cottongut-mk01"):add_ingredient{type = 'item', name = 'moondrop', amount = 3}
 
 ---pup maker---
 

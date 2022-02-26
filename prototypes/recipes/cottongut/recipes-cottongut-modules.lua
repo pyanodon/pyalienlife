@@ -185,7 +185,6 @@ RECIPE {
         {type = 'item', name = 'cottongut-mk04', amount = 2},
         {type = 'item', name = 'bedding', amount = 1},
         {type = 'item', name = 'dhilmos-egg', amount = 2},
-        {type = 'item', name = 'moondrop', amount = 5},
         {type = 'item', name = 'cottongut-food-02', amount = 3},
         },
     results = {
@@ -198,7 +197,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-cottongut',
     order = 'za'
-}:add_unlock("cottongut-mk04")
+}:add_unlock("cottongut-mk04"):add_ingredient{type = 'item', name = 'moondrop', amount = 5}
 
 RECIPE {
     type = 'recipe',

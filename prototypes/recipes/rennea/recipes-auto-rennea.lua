@@ -70,7 +70,7 @@ fun.autorecipes {
 					{name='gh', amount = 1},
 					{name='lignin', add_amount = 5},
 					{name='blood-meal', add_amount = 2, fallback = {name = 'blood-barrel', amount = 2}},
-					{name='urea', amount = 8},
+					{name='urea', amount = 8, fallback = 'manure'},
 					{name='pesticide-mk02', amount = 1},
 				},
 			results =
