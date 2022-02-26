@@ -22,6 +22,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"food-mk01"},
+    dependencies = {"food-mk01"},
     effects = {},
     unit = {
         count = 400,
@@ -40,6 +41,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"food-mk02","biotech-mk03"},
+    dependencies = {"food-mk02"},
     effects = {},
     unit = {
         count = 200,

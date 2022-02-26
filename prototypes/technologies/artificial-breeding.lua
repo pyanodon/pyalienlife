@@ -29,6 +29,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"artificial-breeding","arqad-breeding-1"},
+    dependencies = {"artificial-breeding","arqad-breeding-1"},
     effects = {},
     unit = {
         count = 200,
@@ -52,6 +53,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"artificial-breeding","arthurian-breeding-1"},
+    dependencies = {"artificial-breeding","arthurian-breeding-1"},
     effects = {},
     unit = {
         count = 200,
@@ -75,6 +77,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"artificial-breeding","auog-breeding-1"},
+    dependencies = {"artificial-breeding","auog-breeding-1"},
     effects = {},
     unit = {
         count = 200,
@@ -98,6 +101,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"artificial-breeding","bhoddos-breeding-1"},
+    dependencies = {"artificial-breeding","bhoddos-breeding-1"},
     effects = {},
     unit = {
         count = 200,
@@ -121,6 +125,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"artificial-breeding","arum-breeding-1"},
+    dependencies = {"artificial-breeding","arum-breeding-1"},
     effects = {},
     unit = {
         count = 200,
@@ -144,6 +149,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"artificial-breeding","cottongut-breeding-1"},
+    dependencies = {"artificial-breeding","cottongut-breeding-1"},
     effects = {},
     unit = {
         count = 200,

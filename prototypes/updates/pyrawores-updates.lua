@@ -83,7 +83,7 @@ RECIPE('full-molten-stainless-steel-3'):add_ingredient({type = "item", name = "c
 RECIPE('molten-super-steel'):add_ingredient({type = "item", name = "cobalt-oxide", amount = 1})
 RECIPE('full-molten-super-steel-3'):add_ingredient({type = "item", name = "cobalt-oxide", amount = 1})
 
-RECIPE("centrifuge"):remove_unlock('nuclear-fuel-reprocessing'):add_unlock('basic-electronics')
+--RECIPE("centrifuge"):remove_unlock('nuclear-fuel-reprocessing'):add_unlock('basic-electronics')
 
 RECIPE("starch"):remove_unlock('starch'):add_unlock('food-mk01')
 RECIPE("powdered-ralesia-seeds"):remove_unlock('starch'):add_unlock('food-mk01')

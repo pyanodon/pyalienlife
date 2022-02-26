@@ -23,6 +23,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"kmauts"},
+    dependencies = {"kmauts"},
     effects = {},
     unit = {
         count = 200,
@@ -42,6 +43,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"kmauts-mk02"},
+    dependencies = {"kmauts-mk02"},
     effects = {},
     unit = {
         count = 250,
@@ -61,6 +63,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"kmauts-mk03"},
+    dependencies = {"kmauts-mk03"},
     effects = {},
     unit = {
         count = 300,

@@ -22,6 +22,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"fish-mk01"},
+    dependencies = {"fish-mk01"},
     effects = {},
     unit = {
         count = 100,
@@ -41,6 +42,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"fish-mk02"},
+    dependencies = {"fish-mk02"},
     effects = {},
     unit = {
         count = 100,
@@ -60,6 +62,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"fish-mk03"},
+    dependencies = {"fish-mk03"},
     effects = {},
     unit = {
         count = 200,

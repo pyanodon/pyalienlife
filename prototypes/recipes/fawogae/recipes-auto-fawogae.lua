@@ -91,7 +91,7 @@ fun.autorecipes {
         ingredients =
             {
 				{name='gh', amount =1},
-				{name='urea', amount = 10},
+				{name='urea', amount = 10, fallback = 'manure'},
                 {name='fertilizer', add_amount = 5},
 				{name='biomass', add_amount = 15},
             },

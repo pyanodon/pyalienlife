@@ -24,6 +24,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"force-feeding","orexigenic"},
+    dependencies = {"force-feeding"},
     effects = {},
     unit = {
         count = 600,

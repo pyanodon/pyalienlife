@@ -23,6 +23,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"yotoi"},
+    dependencies = {"yotoi"},
     effects = {},
     unit = {
         count = 200,
@@ -42,6 +43,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"yotoi-mk02"},
+    dependencies = {"yotoi-mk02"},
     effects = {},
     unit = {
         count = 250,
@@ -61,6 +63,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"yotoi-mk03"},
+    dependencies = {"yotoi-mk03"},
     effects = {},
     unit = {
         count = 300,

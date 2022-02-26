@@ -23,6 +23,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"phagnot"},
+    dependencies = {"phagnot"},
     effects = {},
     unit = {
         count = 250,
@@ -42,6 +43,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"phagnot-mk02"},
+    dependencies = {"phagnot-mk02"},
     effects = {},
     unit = {
         count = 300,
@@ -61,6 +63,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"phagnot-mk03"},
+    dependencies = {"phagnot-mk03"},
     effects = {},
     unit = {
         count = 350,

@@ -24,6 +24,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"pesticides-mk01","biotech-mk03"},
+    dependencies = {"pesticides-mk01"},
     effects = {},
     unit = {
         count = 300,

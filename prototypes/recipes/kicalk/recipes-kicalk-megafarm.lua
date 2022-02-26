@@ -137,13 +137,13 @@ RECIPE {
         {type = 'item', name = 'sand', amount = 150},
         {type = 'item', name = 'small-lamp', amount = 15},
         {type = 'item', name = 'coarse', amount = 100},
-        {type = 'item', name = 'urea', amount = 300},
+        {type = 'item', name = 'manure', amount = 300},
         {type = 'item', name = 'fertilizer', amount = 100},
     },
     results = {
         {type = 'item', name = 'kicalk', amount = 1},
     },
-}:add_unlock("mega-farm-kicalk")
+}:add_unlock("mega-farm-kicalk"):replace_ingredient("manure", "urea")
 
 RECIPE {
     type = 'recipe',
@@ -157,14 +157,14 @@ RECIPE {
         {type = 'item', name = 'sand', amount = 150},
         {type = 'item', name = 'small-lamp', amount = 15},
         {type = 'item', name = 'coarse', amount = 100},
-        {type = 'item', name = 'urea', amount = 300},
+        {type = 'item', name = 'manure', amount = 300},
         {type = 'item', name = 'blood-meal', amount = 100},
         {type = 'item', name = 'fertilizer', amount = 100},
     },
     results = {
         {type = 'item', name = 'kicalk', amount = 1},
     },
-}:add_unlock("mega-farm-kicalk")
+}:add_unlock("mega-farm-kicalk"):replace_ingredient("manure", "urea")
 
 RECIPE {
     type = 'recipe',
@@ -177,7 +177,7 @@ RECIPE {
         {type = 'fluid', name = 'water', amount = 3000},
         {type = 'item', name = 'sand', amount = 150},
         {type = 'item', name = 'small-lamp', amount = 15},
-        {type = 'item', name = 'urea', amount = 300},
+        {type = 'item', name = 'manure', amount = 300},
         {type = 'item', name = 'blood-meal', amount = 100},
         {type = 'item', name = 'fertilizer', amount = 100},
         {type = 'item', name = 'gh', amount = 3},
@@ -185,4 +185,4 @@ RECIPE {
     results = {
         {type = 'item', name = 'kicalk', amount = 1},
     },
-}:add_unlock("mega-farm-kicalk")
+}:add_unlock("mega-farm-kicalk"):replace_ingredient("manure", "urea")

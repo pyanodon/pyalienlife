@@ -25,4 +25,4 @@ RECIPE {
     results = {
         {type = "item", name = "tree-mk01", amount = 1}
     },
-}:add_unlock("botany-mk01")
+}:add_unlock("wood-processing")

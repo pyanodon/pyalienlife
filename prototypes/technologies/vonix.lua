@@ -24,6 +24,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"vonix"},
+    dependencies = {"vonix"},
     effects = {},
     unit = {
         count = 300,
@@ -43,6 +44,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"vonix-mk02"},
+    dependencies = {"vonix-mk02"},
     effects = {},
     unit = {
         count = 350,

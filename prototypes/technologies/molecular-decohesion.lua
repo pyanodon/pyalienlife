@@ -22,6 +22,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"molecular-decohesion"},
+    dependencies = {"molecular-decohesion"},
     effects = {},
     unit = {
         count = 150,
@@ -41,6 +42,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"molecular-decohesion-mk02"},
+    dependencies = {"molecular-decohesion-mk02"},
     effects = {},
     unit = {
         count = 200,
@@ -60,6 +62,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"molecular-decohesion-mk03"},
+    dependencies = {"molecular-decohesion-mk03"},
     effects = {},
     unit = {
         count = 300,

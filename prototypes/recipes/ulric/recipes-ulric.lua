@@ -67,7 +67,7 @@ RECIPE {
         {type = 'item', name = 'ralesias', amount = 5},
         {type = 'item', name = 'wood-seeds', amount = 10},
         {type = 'item', name = 'native-flora', amount = 10},
-        {type = 'item', name = 'guar', amount = 3},
+--        {type = 'item', name = 'guar', amount = 3},
         {type = 'item', name = 'ash', amount = 10},
         {type = 'fluid', name = 'steam', amount = 100}
     },

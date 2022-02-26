@@ -22,6 +22,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"domestication","biotech-mk02","land-animals-mk02"},
+    dependencies = {"domestication"},
     effects = {},
     unit = {
         count = 150,
@@ -41,6 +42,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"domestication-mk02","dingrits","chitin"},
+    dependencies = {"domestication-mk02"},
     effects = {},
     unit = {
         count = 200,

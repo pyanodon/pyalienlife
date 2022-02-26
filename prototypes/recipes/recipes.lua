@@ -81,7 +81,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'wood-seedling', amount = 3},
     },
-}:add_unlock("botany-mk01")
+}:add_unlock("wood-processing")
 
 RECIPE {
     type = 'recipe',
@@ -95,7 +95,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'wood-seeds', amount = 4},
     },
-}:add_unlock("botany-mk01")
+}:add_unlock("wood-processing")
 
 RECIPE {
     type = 'recipe',
@@ -2740,11 +2740,40 @@ RECIPE {
     energy_required = 5,
     ingredients = {
         {type = "item", name = "seaweed", amount = 10},
-        {type = "item", name = "urea", amount = 2},
+        {type = "item", name = "manure", amount = 2},
         {type = "item", name = "ash", amount = 20},
         {type = "item", name = "biomass", amount = 20}
     },
     results = {
         {type = "item", name = "py-fertilizer", amount = 10}
     }
-}:add_unlock("botany-mk03")
+}:add_unlock("botany-mk03"):replace_ingredient("manure", "urea")
+
+RECIPE {
+    type = 'recipe',
+    name = 'fiber-01',
+    category = 'wpu',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'wood', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'raw-fiber', amount = 2}
+    }
+}:add_unlock('wood-processing-2')
+
+RECIPE {
+    type = 'recipe',
+    name = 'yotoi-fiber',
+    category = 'wpu',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'yotoi-leaves', amount = 5},
+     },
+    results = {
+        {type = 'item', name = 'raw-fiber', amount = 3},
+    },
+}:add_unlock("yotoi"):change_category('pulp')
+

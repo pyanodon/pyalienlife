@@ -24,6 +24,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"interactive-cognition","nanochondria"},
+    dependencies = {"interactive-cognition"},
     effects = {},
     unit = {
         count = 600,

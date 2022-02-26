@@ -23,6 +23,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"navens"},
+    dependencies = {"navens"},
     effects = {},
     unit = {
         count = 150,
@@ -42,6 +43,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"navens-mk02"},
+    dependencies = {"navens-mk02"},
     effects = {},
     unit = {
         count = 200,
@@ -61,6 +63,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"navens-mk03"},
+    dependencies = {"navens-mk03"},
     effects = {},
     unit = {
         count = 250,

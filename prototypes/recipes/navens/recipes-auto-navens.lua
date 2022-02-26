@@ -48,7 +48,7 @@ fun.autorecipes {
                 {
                     {name='water', remove_item = true},
                     {name='nitrogen', amount = 100},
-                    {name='urea', amount =10},
+                    {name='urea', amount =10, fallback = 'manure'},
                 },
             results =
                 {
@@ -62,7 +62,7 @@ fun.autorecipes {
             ingredients =
                 {
                     {name='gh', amount =1},
-                    {name='urea', add_amount =10},
+                    {name='urea', add_amount =10, fallback = 'manure'},
                     {name='bacteria-2', amount = 200,fallback = 'bacteria-1'},
                     {name='fertilizer', amount =10},
                     {name='biomass', amount =15},

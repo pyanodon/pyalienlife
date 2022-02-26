@@ -15,7 +15,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='grod-seeds', amount = 5},
-                    {name='urea', amount = 10},
+                    {name='urea', amount = 10, fallback = 'manure'},
 					{name='water', amount = 500},
 					{name='limestone', amount = 5},
                     {name='soil', amount = 10},
@@ -69,7 +69,7 @@ fun.autorecipes {
 					{name='gh', amount = 1},
 					{name='biomass', amount =10},
 					{name='slacked-lime', add_amount = 50},
-					{name='urea', add_amount = 20},
+					{name='urea', add_amount = 20, fallback = 'manure'},
 				},
 			results =
 				{

@@ -6,6 +6,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"artificial-breeding","biotech-mk04"},
+    dependencies = {"artificial-breeding"},
     effects = {},
     unit = {
         count = 300,
@@ -29,6 +30,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"biased-mutation","arqad-breeding-2"},
+    dependencies = {"biased-mutation","arqad-breeding-2"},
     effects = {},
     unit = {
         count = 200,
@@ -52,6 +54,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"biased-mutation","arthurian-breeding-2"},
+    dependencies = {"biased-mutation","arthurian-breeding-2"},
     effects = {},
     unit = {
         count = 200,
@@ -75,6 +78,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"biased-mutation","auog-breeding-2"},
+    dependencies = {"biased-mutation","auog-breeding-2"},
     effects = {},
     unit = {
         count = 200,
@@ -98,6 +102,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"biased-mutation","bhoddos-breeding-2"},
+    dependencies = {"biased-mutation","bhoddos-breeding-2"},
     effects = {},
     unit = {
         count = 200,
@@ -121,6 +126,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"biased-mutation","arum-breeding-2"},
+    dependencies = {"biased-mutation","arum-breeding-2"},
     effects = {},
     unit = {
         count = 200,
@@ -144,6 +150,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"biased-mutation","cottongut-breeding-2"},
+    dependencies = {"biased-mutation","cottongut-breeding-2"},
     effects = {},
     unit = {
         count = 200,

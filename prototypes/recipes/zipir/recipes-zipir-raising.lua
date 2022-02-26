@@ -15,7 +15,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='pressured-water', amount = 60,return_item={name='waste-water', amount=200}},
-					{name='stone-wool', amount =2, fallback = "fiber"},
+					{name='stone-wool', amount =2, fallback = "raw-fiber"},
 					{name='fish', amount =5},
                     {name='phytoplankton', amount = 100},
 				},
@@ -191,7 +191,7 @@ fun.autorecipes {
                     {name='pressured-water', amount = 300},
 					{name='zipir-eggs', amount =1},
 					{name='fish', amount =3},
-					{name='stone-wool', amount =3, fallback = "fiber"},
+					{name='stone-wool', amount =3, fallback = "raw-fiber"},
                     {name='water', amount = 200,return_item={name='waste-water', amount=100}},
 				},
 			results =

@@ -22,6 +22,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"mycology-mk01","separation"},
+    dependencies = {"mycology-mk01"},
     effects = {},
     unit = {
         count = 150,
@@ -40,6 +41,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"mycology-mk02"},
+    dependencies = {"mycology-mk02"},
     effects = {},
     unit = {
         count = 200,
@@ -59,6 +61,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"mycology-mk03"},
+    dependencies = {"mycology-mk03"},
     effects = {},
     unit = {
         count = 250,

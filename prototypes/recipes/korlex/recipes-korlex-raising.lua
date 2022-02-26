@@ -203,7 +203,7 @@ fun.autorecipes {
 				{
 					{name = 'korlex-pup', amount = 2},
                     {name='tuuphra', amount =5},
-                    {name='kicalk', amount =1},
+                    {name='kicalk', amount =1, fallback = { name = 'raw-fiber', amount = 5 }},
                     {name='bhoddos', amount =1},
 					{name='korlex-food-01', amount =1},
 					{name='water-barrel', amount=8,return_barrel = true},

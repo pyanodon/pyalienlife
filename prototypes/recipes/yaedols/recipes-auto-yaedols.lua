@@ -47,7 +47,7 @@ fun.autorecipes {
                 {name='yaedols-spores', add_amount = 4},
                 {name='biomass', amount =10},
                 {name='nitrogen', amount = 150},
-                {name='urea', amount = 10},
+                {name='urea', amount = 10, fallback = 'manure'},
             },
         results =
             {
@@ -61,7 +61,7 @@ fun.autorecipes {
         ingredients =
             {
                 {name='yaedols-spores', add_amount = 8},
-                {name='urea', add_amount =10},
+                {name='urea', add_amount =10, fallback = 'manure'},
                 {name='bacteria-2-barrel', amount = 4, fallback = 'bacteria-1-barrel', return_barrel = true},
                 {name='fertilizer', add_amount = 5},
                 {name='biomass', add_amount = 15},

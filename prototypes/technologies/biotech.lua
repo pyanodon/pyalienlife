@@ -22,6 +22,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'biotech-mk01',"land-animals-mk01","water-animals-mk01","lead-mk02"},
+    dependencies = {'biotech-mk01'},
     effects = {},
     unit = {
         count = 200,
@@ -40,6 +41,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'chitin',"land-animals-mk02","water-animals-mk02","organ-printing-mk02"},
+    dependencies = {'biotech-mk02'},
     effects = {},
     unit = {
         count = 250,
@@ -59,6 +61,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"biotech-mk03","pharmagenomics"},
+    dependencies = {'biotech-mk03'},
     effects = {},
     unit = {
         count = 300,

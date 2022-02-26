@@ -24,6 +24,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"organ-replication","antitumor"},
+    dependencies = {"organ-replication"},
     effects = {},
     unit = {
         count = 600,

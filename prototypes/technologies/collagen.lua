@@ -24,6 +24,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"defective-collagen","reca"},
+    dependencies = {"defective-collagen"},
     effects = {},
     unit = {
         count = 600,

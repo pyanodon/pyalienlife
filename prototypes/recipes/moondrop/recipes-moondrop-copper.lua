@@ -264,7 +264,7 @@ fun.autorecipes {
 				{
 					{name='manure',remove_item = true},
 					{name='fertilizer', amount =1},
-					{name='urea', amount =5},
+					{name='urea', amount =5, fallback = 'manure'},
 
 				},
 			results =

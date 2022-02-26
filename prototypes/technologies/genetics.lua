@@ -22,6 +22,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'genetics-mk01',"machines-mk02","korlex"},
+    dependencies = {"genetics-mk01"},
     effects = {},
     unit = {
         count = 200,
@@ -40,6 +41,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'genetics-mk02'},
+    dependencies = {"genetics-mk02"},
     effects = {},
     unit = {
         count = 250,
@@ -60,6 +62,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"genetics-mk03","pharmagenomics"},
+    dependencies = {"genetics-mk03"},
     effects = {},
     unit = {
         count = 300,

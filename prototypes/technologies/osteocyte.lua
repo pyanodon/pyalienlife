@@ -24,6 +24,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"osteocyte","bmp"},
+    dependencies = {"osteocyte"},
     effects = {},
     unit = {
         count = 600,

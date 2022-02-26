@@ -50,7 +50,7 @@ fun.autorecipes {
 				{
 					{name='rennea-seeds', add_amount = 4},
                     {name='fertilizer', add_amount = 3},
-                    {name='blood-meal', amount = 3, fallback = {name = 'blood', amount = 100}},
+                    {name='blood-meal', amount = 3, fallback = {name = 'blood-barrel', amount = 2}},
 					{name='carbon-dioxide', amount = 200},
 					{name='pesticide-mk02', add_amount = 1},
 				},
@@ -69,8 +69,8 @@ fun.autorecipes {
                     {name='small-lamp', amount = 2},
 					{name='gh', amount = 1},
 					{name='lignin', add_amount = 5},
-					{name='blood-meal', add_amount = 2, fallback = {name = 'blood', amount = 100}},
-					{name='urea', amount = 8},
+					{name='blood-meal', add_amount = 2, fallback = {name = 'blood-barrel', amount = 2}},
+					{name='urea', amount = 8, fallback = 'manure'},
 					{name='pesticide-mk02', amount = 1},
 				},
 			results =
