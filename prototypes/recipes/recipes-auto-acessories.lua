@@ -356,6 +356,7 @@ RECIPE {
     main_product = "adrenal-cortex",
 }:add_unlock("stochastic-cortex")
 
+--[[
 ------------------MAGNETIC ORGAN------------------
 
 RECIPE {
@@ -569,6 +570,8 @@ RECIPE {
     main_product = "autoantigens",
 }:add_unlock("recombinant-ery")
 
+]]--
+
 ------------------dimensional-gastricorg------------------
 
 RECIPE {
@@ -587,6 +590,7 @@ RECIPE {
     main_product = "dimensional-gastricorg",
 }:add_unlock("nanochondria")
 
+--[[
 ------------------Sternite-lung------------------
 
 RECIPE {
@@ -637,6 +641,8 @@ RECIPE {
     },
     main_product = "vsk",
 }:add_unlock("bmp")
+
+]]--
 
 ----AUOG food----
 RECIPE {

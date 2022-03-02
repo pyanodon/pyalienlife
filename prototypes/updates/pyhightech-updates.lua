@@ -413,7 +413,7 @@ RECIPE {
     type = 'recipe',
     name = 'fiber-b',
     category = 'centrifuging',
-    enabled = false,
+    enabled = true,
     energy_required = 5,
     ingredients = {
         {type = 'item', name = 'raw-fiber', amount = 5}
@@ -423,7 +423,7 @@ RECIPE {
         {type = 'item', name = 'biomass', amount = 3}
     },
     main_product = 'fiber'
-}:add_unlock('kicalk-mk02')
+}--:add_unlock('kicalk-mk02')
 
 RECIPE {
     type = "recipe",

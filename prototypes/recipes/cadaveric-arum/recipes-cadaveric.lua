@@ -70,7 +70,7 @@ RECIPE {
         {type = "item", name = "cadaveric-arum-seeds", amount = 2}
     },
     main_product = "dms"
-}:add_unlock("cadaveric-arum")
+}:add_unlock("cadaveric-arum-mk02")
 
 RECIPE {
     type = "recipe",
@@ -87,7 +87,7 @@ RECIPE {
         {type = "item", name = "cadaveric-arum-seeds", amount = 2}
     },
      main_product = "dms"
-}:add_unlock("cadaveric-arum")
+}:add_unlock("cadaveric-arum-mk02")
 
 RECIPE {
     type = "recipe",
@@ -103,7 +103,7 @@ RECIPE {
         {type = "item", name = "biomass", amount = 3},
     },
     main_product = "dms",
-}:add_unlock("cadaveric-arum")
+}:add_unlock("cadaveric-arum-mk02")
 
 RECIPE {
     type = "recipe",

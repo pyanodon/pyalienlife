@@ -1,11 +1,14 @@
 local fun = require("prototypes/functions/functions")
 
+--Raising
+
 fun.autorecipes {
-    name = 'zipir-improved',
+    name = 'xeno-improved',
 	category = 'creature-chamber',
-	module_limitations = 'zipir',
-	subgroup = 'py-alienlife-zipir',
+	--module_limitations = 'xeno',
+	subgroup = 'py-alienlife-xeno',
 	order = 'b',
+	--main_product = "caged-xeno",
     mats =
 	{
 		--nanochondria
@@ -17,10 +20,10 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name = 'zipir1', remove_item = true},
-					{name='brain-zipir', amount = 1},
+					{name='caged-xeno', remove_item = true},
+					{name='brain-xeno', amount = 1},
 				},
-			crafting_speed = 90,
+			crafting_speed = 80,
 			tech = 'nanochondria'
 		},
 		--nanochondria and gh
@@ -37,20 +40,51 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'nanochondria'
 		},
-		--rna anabolic
+		--bmp
 		{
 			ingredients =
 				{
 					{name='gh',remove_item = true},
 					{name='nanochondria',remove_item = true},
+					{name='bmp', amount =1},
+				},
+			results =
+				{
+					{name='brain-xeno', remove_item = true},
+					{name='bone-xeno', amount = 1},
+				},
+			crafting_speed = 80,
+			tech = 'bmp'
+		},
+
+		--bmp and gh
+		{
+			ingredients =
+				{
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'bmp'
+		},
+		--rna anabolic
+		{
+			ingredients =
+				{
+					{name='gh',remove_item = true},
+					{name='bmp',remove_item = true},
 					{name='anabolic-rna', amount =1},
 				},
 			results =
 				{
-					{name='brain-zipir', remove_item = true},
-					{name='meat-zipir', amount = 1},
+					{name='bone-xeno', remove_item = true},
+					{name='meat-xeno', amount = 1},
 				},
-			crafting_speed = 90,
+			crafting_speed = 80,
 			tech = 'anabolic-rna'
 		},
 		--rna anabolic and gh
@@ -67,50 +101,20 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'anabolic-rna'
 		},
-		--antitumor
-		{
-			ingredients =
-				{
-					{name='gh',remove_item = true},
-					{name='anabolic-rna',remove_item = true},
-					{name='antitumor', amount =1},
-				},
-			results =
-				{
-					{name='meat-zipir', remove_item = true},
-					{name='guts-zipir', amount = 1},
-				},
-			crafting_speed = 90,
-			tech = 'antitumor'
-		},
-		--antitumor and gh
-		{
-			ingredients =
-				{
-					--{name='nanochondria', amount =1},
-					{name='gh', amount =1},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 30,
-			tech = 'antitumor'
-		},
 		--Recombinant Ery
 		{
 			ingredients =
 				{
 					{name='gh',remove_item = true},
-					{name='antitumor',remove_item = true},
+					{name='anabolic-rna',remove_item = true},
 					{name='recombinant-ery', amount =1},
 				},
 			results =
 				{
-					{name='guts-zipir', remove_item = true},
-					{name='blood-zipir', amount = 1},
+					{name='meat-xeno', remove_item = true},
+					{name='sulfuric-xeno', amount = 1},
 				},
-			crafting_speed = 90,
+			crafting_speed = 80,
 			tech = 'recombinant-ery'
 		},
 		--Recombinant Ery and gh
@@ -136,10 +140,10 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='blood-zipir', remove_item = true},
-					{name='skin-zipir', amount = 1},
+					{name='sulfuric-xeno', remove_item = true},
+					{name='chitin-xeno', amount = 1},
 				},
-			crafting_speed = 90,
+			crafting_speed = 80,
 			tech = 'reca'
 		},
 		--reca and gh
@@ -155,35 +159,5 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'reca'
 		},
-		--orexigenic
-		{
-			ingredients =
-				{
-					{name='gh',remove_item = true},
-					{name='reca',remove_item = true},
-					{name='orexigenic', amount =1},
-				},
-			results =
-				{
-					{name='skin-zipir', remove_item = true},
-					{name='fat-zipir', amount = 1},
-				},
-			crafting_speed = 90,
-			tech = 'orexigenic'
-		},
-		--orexigenic and gh
-		{
-			ingredients =
-				{
-					{name='gh', amount =1},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 30,
-			tech = 'orexigenic'
-		},
-
 	}
 }

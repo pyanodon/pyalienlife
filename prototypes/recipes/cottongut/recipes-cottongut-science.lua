@@ -23,7 +23,7 @@ RECIPE {
     --icon_size = 64,
     subgroup = "py-alienlife-items",
     order = "a1"
-}:add_unlock("cottongut-mk02")
+}:add_unlock("cottongut-mk01")
 
 ----GREEN SCIENCE----
 

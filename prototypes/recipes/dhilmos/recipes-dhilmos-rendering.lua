@@ -17,105 +17,16 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat', probability = 0.2, amount_min =1, amount_max =1},
-                    {name='mukmoux-fat', probability = 0.1, amount_min =1, amount_max =1},
-                    {name='chitin', probability = 0.5, amount_min =1, amount_max =2},
-					{name='guts', probability = 0.3, amount_min =1, amount_max =1},
+					{name='meat', amount_max =1},
+                    {name='mukmoux-fat', amount_max =1},
+                    {name='chitin', amount_max =2},
+					{name='guts', amount_max =1},
 					{name='arthropod-blood', amount =15},
 				},
 			crafting_speed = 30,
 			tech = 'dhilmos',
-			name = 'Full Render dhilmoss',
+			name = 'full-render-dhilmoss',
 			icon = "__pyalienlifegraphics__/graphics/icons/rendering-dhilmos.png",
-			icon_size = 64,
-		},
-		--meat
-		{
-			ingredients =
-				{
-
-				},
-			results =
-				{
-					{name='meat', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='arthropod-blood', remove_item = true},
-					{name='chitin', remove_item = true},
-					{name='meat', amount =1},
-				},
-			crafting_speed = 15,
-			tech = 'dhilmos',
-			name = 'Extract dhilmos Meat',
-			icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
-			icon_size = 64,
-		},
-		--guts
-		{
-			ingredients =
-				{
-					--{name='dhilmos', amount=1},
-				},
-			results =
-				{
-					{name='meat', remove_item = true},
-					{name='guts', amount =1},
-				},
-			crafting_speed = 15,
-			tech = 'dhilmos',
-			name = 'Extract dhilmos guts',
-			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
-			icon_size = 64,
-		},
-		--blood
-		{
-			ingredients =
-				{
-					--{name='dhilmos', amount=1},
-				},
-			results =
-				{
-					{name='guts', remove_item = true},
-					{name='arthropod-blood', amount =30}
-				},
-			crafting_speed = 15,
-			tech = 'dhilmos',
-			name = 'Extract dhilmos blood',
-			icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
-			icon_size = 32,
-		},
-		--fat
-		{
-			ingredients =
-				{
-					--{name='dhilmos', amount=1},
-				},
-			results =
-				{
-					{name='arthropod-blood', remove_item = true},
-					{name='mukmoux-fat', amount =1},
-				},
-			crafting_speed = 15,
-			tech = 'dhilmos',
-			name = 'Extract dhilmos lard',
-			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
-			icon_size = 64,
-        },
-		--chitin
-		{
-			ingredients =
-				{
-					--{name='dhilmos', amount=1},
-				},
-			results =
-				{
-					{name='mukmoux-fat', remove_item = true},
-					{name='chitin', amount =3},
-				},
-			crafting_speed = 15,
-			tech = 'dhilmos',
-			name = 'Extract dhilmos chitin',
-			icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",
 			icon_size = 64,
 		},
 		--meat dhilmos rendering
@@ -127,12 +38,12 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='chitin', remove_item = true},
+					{name = 'autoantigens', amount = 50},
 					{name='meat', amount =6},
 				},
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
-			name = 'Extract meat from Improved dhilmoss',
+			name = 'ex-me-dhi',
 			icon = "__pyalienlifegraphics__/graphics/icons/meat-dhilmos.png",
 			icon_size = 64,
 		},
@@ -145,12 +56,12 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat', remove_item = true},
+					{name='meat', amount = 1},
 					{name='guts', amount =6},
 				},
 			crafting_speed = 15,
 			tech = 'antitumor',
-			name = 'Extract guts from Improved dhilmoss',
+			name = 'ex-gut-dhi',
 			icon = "__pyalienlifegraphics__/graphics/icons/guts-dhilmos.png",
 			icon_size = 64,
 		},
@@ -163,12 +74,12 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='guts', remove_item = true},
+					{name='guts', amount = 1},
 					{name='arthropod-blood', amount =120},
 				},
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
-			name = 'Extract blood from Improved dhilmoss',
+			name = 'ex-blo-dhi',
 			icon = "__pyalienlifegraphics__/graphics/icons/blood-dhilmos.png",
 			icon_size = 64,
 		},
@@ -181,12 +92,12 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='arthropod-blood', remove_item = true},
+					{name='arthropod-blood', amount = 15},
 					{name='mukmoux-fat', amount =6},
 				},
 			crafting_speed = 15,
 			tech = 'orexigenic',
-			name = 'Extract fat from Improved dhilmoss',
+			name = 'ex-fat-dhi',
 			icon = "__pyalienlifegraphics__/graphics/icons/fat-dhilmos.png",
 			icon_size = 64,
 		},

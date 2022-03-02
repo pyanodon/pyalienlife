@@ -1,11 +1,12 @@
 local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
-    name = 'zipir-improved',
+    name = 'korlex-improved',
 	category = 'creature-chamber',
-	module_limitations = 'zipir',
-	subgroup = 'py-alienlife-zipir',
+	--module_limitations = 'korlex',
+	subgroup = 'py-alienlife-korlex',
 	order = 'b',
+	--main_product = "korlex",
     mats =
 	{
 		--nanochondria
@@ -13,12 +14,12 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='nanochondria', amount =1},
-					{name='antiviral', amount =1},
+					{name='antiviral', amount = 1},
 				},
 			results =
 				{
-					{name = 'zipir1', remove_item = true},
-					{name='brain-zipir', amount = 1},
+					{name='caged-korlex', remove_item = true},
+					{name='brain-caged-korlex', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'nanochondria'
@@ -37,18 +38,49 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'nanochondria'
 		},
-		--rna anabolic
+		--bmp
 		{
 			ingredients =
 				{
 					{name='gh',remove_item = true},
 					{name='nanochondria',remove_item = true},
+					{name='bmp', amount =1},
+				},
+			results =
+				{
+					{name='brain-caged-korlex', remove_item = true},
+					{name='bone-caged-korlex', amount = 1},
+				},
+			crafting_speed = 90,
+			tech = 'bmp'
+		},
+
+		--bmp and gh
+		{
+			ingredients =
+				{
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'bmp'
+		},
+		--rna anabolic
+		{
+			ingredients =
+				{
+					{name='gh',remove_item = true},
+					{name='bmp',remove_item = true},
 					{name='anabolic-rna', amount =1},
 				},
 			results =
 				{
-					{name='brain-zipir', remove_item = true},
-					{name='meat-zipir', amount = 1},
+					{name='bone-caged-korlex', remove_item = true},
+					{name='meat-caged-korlex', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'anabolic-rna'
@@ -77,8 +109,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat-zipir', remove_item = true},
-					{name='guts-zipir', amount = 1},
+					{name='meat-caged-korlex', remove_item = true},
+					{name='guts-caged-korlex', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'antitumor'
@@ -107,8 +139,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='guts-zipir', remove_item = true},
-					{name='blood-zipir', amount = 1},
+					{name='guts-caged-korlex', remove_item = true},
+					{name='blood-caged-korlex', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'recombinant-ery'
@@ -136,8 +168,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='blood-zipir', remove_item = true},
-					{name='skin-zipir', amount = 1},
+					{name='blood-caged-korlex', remove_item = true},
+					{name='skin-caged-korlex', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'reca'
@@ -165,8 +197,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='skin-zipir', remove_item = true},
-					{name='fat-zipir', amount = 1},
+					{name='skin-caged-korlex', remove_item = true},
+					{name='fat-caged-korlex', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'orexigenic'
@@ -184,6 +216,5 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'orexigenic'
 		},
-
 	}
 }

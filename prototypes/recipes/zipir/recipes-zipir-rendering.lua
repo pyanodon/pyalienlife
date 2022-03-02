@@ -17,126 +17,17 @@ fun.autorecipes {
 				},
 			results =
 				{
-					--{name='bones', probability = 0.5, amount_min =1, amount_max =2},
-					{name='meat', probability = 0.4, amount_min =1, amount_max =4},
-					{name='skin', probability = 0.5, amount_min =1, amount_max =6},
-					{name='mukmoux-fat', probability = 0.4, amount_min =1, amount_max =3},
-					{name='guts', probability = 0.4, amount_min =1, amount_max =4},
+					{name='meat', amount =4},
+					{name='skin', amount =6},
+					{name='mukmoux-fat', amount =3},
+					{name='guts', amount =4},
 					{name='arthropod-blood', amount =50},
-					{name='brain', probability = 0.3, amount_min =1, amount_max =1},
+					{name='brain', amount =1},
 				},
 			crafting_speed = 30,
 			tech = 'zipir',
-			name = 'Full Render zipir',
+			name = 'full-render-zipir',
 			icon = "__pyalienlifegraphics__/graphics/icons/rendering-zipir.png",
-			icon_size = 64,
-		},
-		--meat
-		{
-			ingredients =
-				{
-
-				},
-			results =
-				{
-					--{name='bones', remove_item = true},
-                    --{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='arthropod-blood', remove_item = true},
-					{name='brain', remove_item = true},
-                    {name='meat', amount =4},
-				},
-			crafting_speed = 15,
-			tech = 'zipir-mk02',
-			name = 'Extract zipir Meat',
-			icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
-			icon_size = 64,
-		},
-		--brain
-		{
-			ingredients =
-				{
-					--{name = 'zipir1', amount=1},
-				},
-			results =
-				{
-					{name='meat', remove_item = true},
-					{name='brain', amount =1},
-				},
-			crafting_speed = 15,
-			tech = 'zipir-mk02',
-			name = 'Extract zipir brain',
-			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
-			icon_size = 64,
-		},
-		--skin
-		{
-			ingredients =
-				{
-					--{name = 'zipir1', amount=1},
-				},
-			results =
-				{
-					{name='brain', remove_item = true},
-					{name='skin', amount =6},
-				},
-			crafting_speed = 15,
-			tech = 'zipir-mk02',
-			name = 'Extract zipir skin',
-			icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
-			icon_size = 32,
-		},
-		--guts
-		{
-			ingredients =
-				{
-					--{name = 'zipir1', amount=1},
-				},
-			results =
-				{
-					{name='skin', remove_item = true},
-					{name='guts', amount =4},
-				},
-			crafting_speed = 15,
-			tech = 'zipir-mk02',
-			name = 'Extract zipir guts',
-			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
-			icon_size = 64,
-		},
-		--blood
-		{
-			ingredients =
-				{
-					--{name = 'zipir1', amount=1},
-				},
-			results =
-				{
-					{name='guts', remove_item = true},
-					{name='arthropod-blood', amount =65},
-				},
-			crafting_speed = 15,
-			tech = 'zipir-mk02',
-			name = 'Extract zipir blood',
-			icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
-			icon_size = 32,
-		},
-		--fat
-		{
-			ingredients =
-				{
-					--{name = 'zipir1', amount=1},
-				},
-			results =
-				{
-					{name='arthropod-blood', remove_item = true},
-					{name='mukmoux-fat', amount =3},
-				},
-			crafting_speed = 15,
-			tech = 'zipir-mk02',
-			name = 'Extract zipir lard',
-			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
 			icon_size = 64,
 		},
 		--brain zipir rendering
@@ -148,12 +39,12 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='mukmoux-fat', remove_item = true},
+					{name = 'adaptable-automucosa', amount = 1},
 					{name='brain', amount =4},
 				},
 			crafting_speed = 15,
 			tech = 'nanochondria',
-			name = 'Extract brains from Improved Zipir',
+			name = 'ex-bra-zipir',
 			icon = "__pyalienlifegraphics__/graphics/icons/brain-zipir.png",
 			icon_size = 64,
 		},
@@ -166,12 +57,12 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='brain', remove_item = true},
+					{name='brain', amount = 1},
 					{name='guts', amount =13},
 				},
 			crafting_speed = 15,
 			tech = 'antitumor',
-			name = 'Extract guts from Improved Zipir',
+			name = 'ex-gut-zipir',
 			icon = "__pyalienlifegraphics__/graphics/icons/guts-zipir.png",
 			icon_size = 64,
 		},
@@ -184,12 +75,12 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='guts', remove_item = true},
+					{name='guts', amount = 4},
 					{name='arthropod-blood', amount =170},
 				},
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
-			name = 'Extract Arthropod blood from Improved Zipir',
+			name = 'ex-blo-zipir',
 			icon = "__pyalienlifegraphics__/graphics/icons/blood-zipir.png",
 			icon_size = 64,
 		},
@@ -202,12 +93,12 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='arthropod-blood', remove_item = true},
+					{name='arthropod-blood', amount = 50},
 					{name='skin', amount =17},
 				},
 			crafting_speed = 15,
 			tech = 'reca',
-			name = 'Extract skin from Improved Zipir',
+			name = 'ex-ski-zipir',
 			icon = "__pyalienlifegraphics__/graphics/icons/skin-zipir.png",
 			icon_size = 64,
 		},
@@ -220,12 +111,12 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='skin', remove_item = true},
+					{name='skin', amount = 6},
 					{name='mukmoux-fat', amount =15},
 				},
 			crafting_speed = 15,
 			tech = 'orexigenic',
-			name = 'Extract fat from Improved Zipir',
+			name = 'ex-fat-zipir',
 			icon = "__pyalienlifegraphics__/graphics/icons/fat-zipir.png",
 			icon_size = 64,
 		},
@@ -238,12 +129,12 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='mukmoux-fat', remove_item = true},
+					{name='mukmoux-fat', amount = 3},
 					{name='meat', amount =13},
 				},
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
-			name = 'Extract meat from Improved Zipir',
+			name = 'ex-me-zipir',
 			icon = "__pyalienlifegraphics__/graphics/icons/meat-zipir.png",
 			icon_size = 64,
 		},

@@ -1,11 +1,12 @@
 local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
-    name = 'zipir-improved',
+    name = 'caged-phadai',
 	category = 'creature-chamber',
-	module_limitations = 'zipir',
-	subgroup = 'py-alienlife-zipir',
+	--module_limitations = 'phadai',
+	subgroup = 'py-alienlife-phadai',
 	order = 'b',
+	--main_product = "phadai",
     mats =
 	{
 		--nanochondria
@@ -17,8 +18,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name = 'zipir1', remove_item = true},
-					{name='brain-zipir', amount = 1},
+					{name='caged-phadai', remove_item = true},
+					{name='brain-caged-phadai', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'nanochondria'
@@ -37,18 +38,49 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'nanochondria'
 		},
-		--rna anabolic
+		--bmp
 		{
 			ingredients =
 				{
 					{name='gh',remove_item = true},
 					{name='nanochondria',remove_item = true},
+					{name='bmp', amount =1},
+				},
+			results =
+				{
+					{name='brain-caged-phadai', remove_item = true},
+					{name='bone-caged-phadai', amount = 1},
+				},
+			crafting_speed = 90,
+			tech = 'bmp'
+		},
+
+		--bmp and gh
+		{
+			ingredients =
+				{
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'bmp'
+		},
+		--rna anabolic
+		{
+			ingredients =
+				{
+					{name='gh',remove_item = true},
+					{name='bmp',remove_item = true},
 					{name='anabolic-rna', amount =1},
 				},
 			results =
 				{
-					{name='brain-zipir', remove_item = true},
-					{name='meat-zipir', amount = 1},
+					{name='bone-caged-phadai', remove_item = true},
+					{name='meat-caged-phadai', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'anabolic-rna'
@@ -77,8 +109,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat-zipir', remove_item = true},
-					{name='guts-zipir', amount = 1},
+					{name='meat-caged-phadai', remove_item = true},
+					{name='guts-caged-phadai', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'antitumor'
@@ -107,8 +139,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='guts-zipir', remove_item = true},
-					{name='blood-zipir', amount = 1},
+					{name='guts-caged-phadai', remove_item = true},
+					{name='blood-caged-phadai', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'recombinant-ery'
@@ -125,7 +157,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 30,
 			tech = 'recombinant-ery'
-		},
+        },
 		--reca
 		{
 			ingredients =
@@ -136,8 +168,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='blood-zipir', remove_item = true},
-					{name='skin-zipir', amount = 1},
+					{name='blood-caged-phadai', remove_item = true},
+					{name='skin-caged-phadai', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'reca'
@@ -165,10 +197,10 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='skin-zipir', remove_item = true},
-					{name='fat-zipir', amount = 1},
+					{name='skin-caged-phadai', remove_item = true},
+					{name='fat-caged-phadai', amount = 1},
 				},
-			crafting_speed = 90,
+			crafting_speed = 80,
 			tech = 'orexigenic'
 		},
 		--orexigenic and gh
@@ -184,6 +216,5 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'orexigenic'
 		},
-
 	}
 }

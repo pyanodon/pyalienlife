@@ -1,11 +1,12 @@
 local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
-    name = 'zipir-improved',
+    name = 'dingrits-improved',
 	category = 'creature-chamber',
-	module_limitations = 'zipir',
-	subgroup = 'py-alienlife-zipir',
+	--module_limitations = 'dingrits',
+	subgroup = 'py-alienlife-dingrits',
 	order = 'b',
+	--main_product = "dingrits",
     mats =
 	{
 		--nanochondria
@@ -17,8 +18,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name = 'zipir1', remove_item = true},
-					{name='brain-zipir', amount = 1},
+					{name='dingrits', remove_item = true},
+					{name='brain-caged-dingrits', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'nanochondria'
@@ -37,18 +38,49 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'nanochondria'
 		},
-		--rna anabolic
+		--bmp
 		{
 			ingredients =
 				{
 					{name='gh',remove_item = true},
 					{name='nanochondria',remove_item = true},
+					{name='bmp', amount =1},
+				},
+			results =
+				{
+					{name='brain-caged-dingrits', remove_item = true},
+					{name='bone-caged-dingrits', amount = 1},
+				},
+			crafting_speed = 90,
+			tech = 'bmp'
+		},
+
+		--bmp and gh
+		{
+			ingredients =
+				{
+					--{name='nanochondria', amount =1},
+					{name='gh', amount =1},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'bmp'
+		},
+		--rna anabolic
+		{
+			ingredients =
+				{
+					{name='gh',remove_item = true},
+					{name='bmp',remove_item = true},
 					{name='anabolic-rna', amount =1},
 				},
 			results =
 				{
-					{name='brain-zipir', remove_item = true},
-					{name='meat-zipir', amount = 1},
+					{name='bone-caged-dingrits', remove_item = true},
+					{name='meat-caged-dingrits', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'anabolic-rna'
@@ -77,8 +109,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat-zipir', remove_item = true},
-					{name='guts-zipir', amount = 1},
+					{name='meat-caged-dingrits', remove_item = true},
+					{name='guts-caged-dingrits', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'antitumor'
@@ -107,8 +139,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='guts-zipir', remove_item = true},
-					{name='blood-zipir', amount = 1},
+					{name='guts-caged-dingrits', remove_item = true},
+					{name='blood-caged-dingrits', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'recombinant-ery'
@@ -133,11 +165,12 @@ fun.autorecipes {
 					{name='gh',remove_item = true},
 					{name='recombinant-ery',remove_item = true},
 					{name='reca', amount =1},
+					{name='cage', add_amount = 1},
 				},
 			results =
 				{
-					{name='blood-zipir', remove_item = true},
-					{name='skin-zipir', amount = 1},
+					{name='blood-caged-dingrits', remove_item = true},
+					{name='skin-caged-dingrits', amount = 2},
 				},
 			crafting_speed = 90,
 			tech = 'reca'
@@ -155,35 +188,5 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'reca'
 		},
-		--orexigenic
-		{
-			ingredients =
-				{
-					{name='gh',remove_item = true},
-					{name='reca',remove_item = true},
-					{name='orexigenic', amount =1},
-				},
-			results =
-				{
-					{name='skin-zipir', remove_item = true},
-					{name='fat-zipir', amount = 1},
-				},
-			crafting_speed = 90,
-			tech = 'orexigenic'
-		},
-		--orexigenic and gh
-		{
-			ingredients =
-				{
-					{name='gh', amount =1},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 30,
-			tech = 'orexigenic'
-		},
-
 	}
 }

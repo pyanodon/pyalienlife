@@ -488,11 +488,13 @@ require('prototypes/recipes/cridren/recipes-auto-cridren')
 require('prototypes/recipes/dhilmos/recipes-dhilmos')
 require('prototypes/recipes/dhilmos/recipes-dhilmos-raising')
 require('prototypes/recipes/dhilmos/recipes-dhilmos-rendering')
+require('prototypes/recipes/dhilmos/recipes-dhilmos-growth-enhancement')
 
 --Dingrits
 require('prototypes/recipes/dingrits/recipes-dingrits')
 require('prototypes/recipes/dingrits/recipes-dingrits-raising')
 require('prototypes/recipes/dingrits/recipes-dingrits-rendering')
+require('prototypes/recipes/dingrits/recipes-dingrits-growth-enhancement')
 
 --Fawogae
 require('prototypes/recipes/fawogae/recipes-fawogae')
@@ -525,6 +527,7 @@ require('prototypes/recipes/korlex/recipes-korlex')
 require('prototypes/recipes/korlex/recipes-korlex-raising')
 require('prototypes/recipes/korlex/recipes-korlex-rendering')
 require('prototypes/recipes/korlex/recipes-korlex-milk')
+require('prototypes/recipes/korlex/recipes-korlex-growth-enhancement')
 
 --Moondrop
 --see pyhightech updates for files
@@ -548,11 +551,13 @@ require('prototypes/recipes/phadai/recipes-phadai-raising')
 require('prototypes/recipes/phadai/recipes-phadai-rendering')
 require('prototypes/recipes/phadai/recipes-phadai-products')
 require('prototypes/recipes/phadai/recipes-phadai-recharge')
+require('prototypes/recipes/phadai/recipes-phadai-growth-enhancement')
 
 --Phagnot
 require('prototypes/recipes/phagnot/recipes-phagnot')
 require('prototypes/recipes/phagnot/recipes-phagnot-raising')
 require('prototypes/recipes/phagnot/recipes-phagnot-rendering')
+require('prototypes/recipes/phagnot/recipes-phagnot-growth-enhancement')
 
 --Ralesia
 require('prototypes/recipes/ralesia/recipes-ralesia')
@@ -572,7 +577,7 @@ require('prototypes/recipes/sap/recipes-sap-products')
 require('prototypes/recipes/scrondrix/recipes-scrondrix')
 require('prototypes/recipes/scrondrix/recipes-scrondrix-raising')
 require('prototypes/recipes/scrondrix/recipes-scrondrix-rendering')
---require('prototypes/recipes/scrondrix/recipes-scrondrix-growth-enhancement')
+require('prototypes/recipes/scrondrix/recipes-scrondrix-growth-enhancement')
 
 --Sea-Sponge
 require("prototypes/recipes/sea-sponge/recipes-sea-sponge")
@@ -586,6 +591,7 @@ require('prototypes/recipes/simik/recipes-simik')
 require('prototypes/recipes/simik/recipes-simik-raising')
 require('prototypes/recipes/simik/recipes-simik-rendering')
 require('prototypes/recipes/simik/recipes-simik-metals')
+require('prototypes/recipes/simik/recipes-simik-growth-enhancement')
 
 --Tree
 require('prototypes/recipes/tree/recipes-tree')
@@ -604,6 +610,7 @@ require('prototypes/recipes/tuupra/recipes-tuuphra-megafarm')
 require('prototypes/recipes/ulric/recipes-ulric')
 require('prototypes/recipes/ulric/recipes-ulric-raising')
 require('prototypes/recipes/ulric/recipes-ulric-rendering')
+require('prototypes/recipes/ulric/recipes-ulric-growth-enhancement')
 
 --Vonix
 require('prototypes/recipes/vonix/recipes-vonix')
@@ -619,6 +626,7 @@ require('prototypes/recipes/vrauks/recipes-vrauks-rendering')
 require('prototypes/recipes/xeno/recipes-xeno')
 require('prototypes/recipes/xeno/recipes-xeno-raising')
 require('prototypes/recipes/xeno/recipes-xeno-rendering')
+require('prototypes/recipes/xeno/recipes-xeno-growth-enhancement')
 
 --Xyhiphoe
 require("prototypes/recipes/xyhiphoe/recipes-xyhiphoe")
@@ -640,7 +648,7 @@ require('prototypes/recipes/yotoi/recipes-yotoi-fruit-megafarm')
 require('prototypes/recipes/zipir/recipes-zipir')
 require('prototypes/recipes/zipir/recipes-zipir-raising')
 require('prototypes/recipes/zipir/recipes-zipir-rendering')
---require('prototypes/recipes/zipir/recipes-zipir-growth-enhancement')
+require('prototypes/recipes/zipir/recipes-zipir-growth-enhancement')
 
 require('prototypes/recipes/recipes-atomizer')
 require('prototypes/recipes/recipes-auto-acessories')

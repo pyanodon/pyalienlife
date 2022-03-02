@@ -1,56 +1,27 @@
 local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
-    name = 'zipir-improved',
+    name = 'dhilmos-inproved',
 	category = 'creature-chamber',
-	module_limitations = 'zipir',
-	subgroup = 'py-alienlife-zipir',
+	--module_limitations = 'dhilmos',
+	subgroup = 'py-alienlife-dhilmos',
 	order = 'b',
+	--main_product = "dhilmos",
     mats =
 	{
-		--nanochondria
-		{
-			ingredients =
-				{
-					{name='nanochondria', amount =1},
-					{name='antiviral', amount =1},
-				},
-			results =
-				{
-					{name = 'zipir1', remove_item = true},
-					{name='brain-zipir', amount = 1},
-				},
-			crafting_speed = 90,
-			tech = 'nanochondria'
-		},
-		--nanochondria and gh
-		{
-			ingredients =
-				{
-					--{name='nanochondria', amount =1},
-					{name='gh', amount =1},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 30,
-			tech = 'nanochondria'
-		},
 		--rna anabolic
 		{
 			ingredients =
 				{
-					{name='gh',remove_item = true},
-					{name='nanochondria',remove_item = true},
+					{name='antiviral', amount =1},
 					{name='anabolic-rna', amount =1},
 				},
 			results =
 				{
-					{name='brain-zipir', remove_item = true},
-					{name='meat-zipir', amount = 1},
+					{name='dhilmos', remove_item = true},
+					{name='meat-dhilmos', amount = 1},
 				},
-			crafting_speed = 90,
+			crafting_speed = 80,
 			tech = 'anabolic-rna'
 		},
 		--rna anabolic and gh
@@ -77,10 +48,10 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat-zipir', remove_item = true},
-					{name='guts-zipir', amount = 1},
+					{name='meat-dhilmos', remove_item = true},
+					{name='guts-dhilmos', amount = 1},
 				},
-			crafting_speed = 90,
+			crafting_speed = 80,
 			tech = 'antitumor'
 		},
 		--antitumor and gh
@@ -107,10 +78,10 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='guts-zipir', remove_item = true},
-					{name='blood-zipir', amount = 1},
+					{name='guts-dhilmos', remove_item = true},
+					{name='blood-dhilmos', amount = 1},
 				},
-			crafting_speed = 90,
+			crafting_speed = 80,
 			tech = 'recombinant-ery'
 		},
 		--Recombinant Ery and gh
@@ -126,35 +97,6 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'recombinant-ery'
 		},
-		--reca
-		{
-			ingredients =
-				{
-					{name='gh',remove_item = true},
-					{name='recombinant-ery',remove_item = true},
-					{name='reca', amount =1},
-				},
-			results =
-				{
-					{name='blood-zipir', remove_item = true},
-					{name='skin-zipir', amount = 1},
-				},
-			crafting_speed = 90,
-			tech = 'reca'
-		},
-		--reca and gh
-		{
-			ingredients =
-				{
-					{name='gh', amount =1},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 30,
-			tech = 'reca'
-		},
 		--orexigenic
 		{
 			ingredients =
@@ -165,10 +107,10 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='skin-zipir', remove_item = true},
-					{name='fat-zipir', amount = 1},
+					{name='blood-dhilmos', remove_item = true},
+					{name='fat-dhilmos', amount = 1},
 				},
-			crafting_speed = 90,
+			crafting_speed = 80,
 			tech = 'orexigenic'
 		},
 		--orexigenic and gh
@@ -184,6 +126,5 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'orexigenic'
 		},
-
 	}
 }

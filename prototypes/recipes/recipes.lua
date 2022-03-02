@@ -214,18 +214,15 @@ RECIPE {
     energy_required = 15,
     ingredients = {
         {type = 'item', name = 'moss', amount = 20},
-        {type = 'item', name = 'alien-sample01', amount = 1},
-        {type = 'item', name = 'plastic-bar', amount = 15},
-        {type = 'item', name = 'paragen', amount = 1},
-        {type = 'item', name = 'solidified-sarcorus', amount = 2},
-        {type = 'item', name = 'neuroprocessor', amount = 2},
-        {type = 'item', name = 'flask', amount = 1},
-        {type = 'fluid', name = 'flavonoids', amount = 50},
+        {type = 'item', name = 's-biomass', amount = 20},
+        {type = 'item', name = 'fe-biomass', amount = 20},
+        {type = 'item', name = 'solidified-sarcorus', amount = 20},
+        {type = 'item', name = 'alien-sample-02', amount = 20},
     },
     results = {
         {type = 'item', name = 'py-science-pack-1', amount = 3},
     },
-}
+}:add_unlock("biotech-mk01")
 
 RECIPE {
     type = 'recipe',
@@ -242,6 +239,7 @@ RECIPE {
         {type = 'item', name = 'neuroprocessor', amount = 2},
         {type = 'item', name = 'flask', amount = 1},
         {type = 'fluid', name = 'flavonoids', amount = 50},
+        {type = 'item', name = 'alien-sample-03', amount = 1},
     },
     results = {
         {type = 'item', name = 'py-science-pack-2', amount = 3},
@@ -255,13 +253,7 @@ RECIPE {
     enabled = false,
     energy_required = 15,
     ingredients = {
-        {type = 'item', name = 'moss', amount = 20},
-        {type = 'item', name = 'alien-sample01', amount = 1},
-        {type = 'item', name = 'plastic-bar', amount = 15},
-        {type = 'item', name = 'paragen', amount = 1},
-        {type = 'item', name = 'solidified-sarcorus', amount = 2},
-        {type = 'item', name = 'neuroprocessor', amount = 2},
-        {type = 'item', name = 'flask', amount = 1},
+        {type = 'item', name = 'perfect-samples', amount = 1},
         {type = 'fluid', name = 'flavonoids', amount = 50},
     },
     results = {
@@ -2776,4 +2768,3 @@ RECIPE {
         {type = 'item', name = 'raw-fiber', amount = 3},
     },
 }:add_unlock("yotoi"):change_category('pulp')
-
