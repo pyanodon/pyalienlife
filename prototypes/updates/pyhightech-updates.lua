@@ -423,7 +423,7 @@ RECIPE {
         {type = 'item', name = 'biomass', amount = 3}
     },
     main_product = 'fiber'
-}--:add_unlock('kicalk-mk02')
+}:add_unlock('kicalk')
 
 RECIPE {
     type = "recipe",
