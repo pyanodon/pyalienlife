@@ -129,7 +129,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='blood-caged-simik',remove_item = true},
-					{name='hotair-caged-simik', amount=1},
+					{name='hot-air-caged-simik', amount=1},
 				},
 			results =
 				{
@@ -146,7 +146,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='hotair-caged-simik',remove_item = true},
+					{name='hot-air-caged-simik',remove_item = true},
 					{name='skin-caged-simik', amount=1},
 				},
 			results =

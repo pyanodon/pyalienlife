@@ -28,7 +28,8 @@ table.insert(data.raw['assembling-machine']['pulp-mill-mk04'].crafting_categorie
 
 --antelope
 require('prototypes/recipes/antelope/recipes-antelope')
-require('prototypes/recipes/antelope/recipes-auto-antelope')
+require('prototypes/recipes/antelope/recipes-antelope-raising')
+require('prototypes/recipes/antelope/recipes-antelope-rendering')
 
 --Cadaveric-arum
 require('prototypes/recipes/cadaveric-arum/recipes-cadaveric')

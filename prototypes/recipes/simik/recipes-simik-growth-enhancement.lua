@@ -140,7 +140,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts-caged-simik', remove_item = true},
-					{name='hotair-caged-simik', amount = 1},
+					{name='hot-air-caged-simik', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'antitumor'
@@ -170,7 +170,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='hotair-caged-simik', remove_item = true},
+					{name='hot-air-caged-simik', remove_item = true},
 					{name='blood-caged-simik', amount = 1},
 				},
 			crafting_speed = 90,

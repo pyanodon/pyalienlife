@@ -278,7 +278,7 @@ RECIPE {
 			results =
 				{
 					{name = 'zungror', remove_item = true},
-					{name = 'brain-zungror', amount = 2},
+					{name = 'brain-caged-zungror', amount = 2},
 				},
 			crafting_speed = 180,
 			tech = 'nanochondria'
@@ -307,8 +307,8 @@ RECIPE {
 				},
 			results =
 				{
-					{name = 'brain-zungror', remove_item = true},
-					{name = 'meat-zungror', amount = 2},
+					{name = 'brain-caged-zungror', remove_item = true},
+					{name = 'meat-caged-zungror', amount = 2},
 				},
 			crafting_speed = 180,
 			tech = 'anabolic-rna'
@@ -337,8 +337,8 @@ RECIPE {
 				},
 			results =
 				{
-					{name = 'meat-zungror', remove_item = true},
-					{name = 'guts-zungror', amount = 1},
+					{name = 'meat-caged-zungror', remove_item = true},
+					{name = 'guts-caged-zungror', amount = 1},
 				},
 			crafting_speed = 180,
 			tech = 'antitumor'
@@ -367,8 +367,8 @@ RECIPE {
 				},
 			results =
 				{
-					{name = 'guts-zungror', remove_item = true},
-					{name = 'blood-zungror', amount = 2},
+					{name = 'guts-caged-zungror', remove_item = true},
+					{name = 'blood-caged-zungror', amount = 2},
 				},
 			crafting_speed = 180,
 			tech = 'recombinant-ery'
@@ -396,8 +396,8 @@ RECIPE {
 				},
 			results =
 				{
-					{name = 'blood-zungror', remove_item = true},
-					{name = 'skin-zungror', amount = 2},
+					{name = 'blood-caged-zungror', remove_item = true},
+					{name = 'skin-caged-zungror', amount = 2},
 				},
 			crafting_speed = 180,
 			tech = 'reca'
@@ -425,8 +425,8 @@ RECIPE {
 				},
 			results =
 				{
-					{name = 'skin-zungror', remove_item = true},
-					{name = 'fat-zungror', amount = 2},
+					{name = 'skin-caged-zungror', remove_item = true},
+					{name = 'fat-caged-zungror', amount = 2},
 				},
 			crafting_speed = 180,
 			tech = 'orexigenic'
