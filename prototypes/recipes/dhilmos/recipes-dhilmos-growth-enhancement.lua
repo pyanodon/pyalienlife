@@ -13,12 +13,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
+					{name='dhilmos', amount=1},
 					{name='antiviral', amount =1},
 					{name='anabolic-rna', amount =1},
 				},
 			results =
 				{
-					{name='dhilmos', remove_item = true},
 					{name='meat-dhilmos', amount = 1},
 				},
 			crafting_speed = 80,

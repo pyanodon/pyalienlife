@@ -15,12 +15,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
+					{name='caged-xeno', amount=1},
 					{name='nanochondria', amount =1},
 					{name='antiviral', amount =1},
 				},
 			results =
 				{
-					{name='caged-xeno', remove_item = true},
 					{name='brain-xeno', amount = 1},
 				},
 			crafting_speed = 80,

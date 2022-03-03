@@ -13,7 +13,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='arthurian', amount=1},
+					{name='caged-arthurian', amount=1},
 					{name='nanochondria', amount =1},
 					{name='gh', amount =1},
 				},

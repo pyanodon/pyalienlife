@@ -12,12 +12,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
+					{name = 'zipir1', amount = 1},
 					{name='nanochondria', amount =1},
 					{name='antiviral', amount =1},
 				},
 			results =
 				{
-					{name = 'zipir1', remove_item = true},
 					{name='brain-zipir', amount = 1},
 				},
 			crafting_speed = 90,

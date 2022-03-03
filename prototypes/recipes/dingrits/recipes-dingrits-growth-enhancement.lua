@@ -13,12 +13,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
+					{name='caged-dingrits', amount=1},
 					{name='nanochondria', amount =1},
 					{name='antiviral', amount =1},
 				},
 			results =
 				{
-					{name='dingrits', remove_item = true},
 					{name='brain-caged-dingrits', amount = 1},
 				},
 			crafting_speed = 90,

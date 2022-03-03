@@ -13,12 +13,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
+					{name='caged-phadai', amount=1},
 					{name='nanochondria', amount =1},
 					{name='antiviral', amount =1},
 				},
 			results =
 				{
-					{name='caged-phadai', remove_item = true},
 					{name='brain-caged-phadai', amount = 1},
 				},
 			crafting_speed = 90,

@@ -13,12 +13,12 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
+					{name='caged-phagnot', amount=1},
 					{name='nanochondria', amount =1},
 					{name='antiviral', amount =1},
 				},
 			results =
 				{
-					{name='caged-phagnot', remove_item = true},
 					{name='brain-caged-phagnot', amount = 1},
 				},
 			crafting_speed = 90,
