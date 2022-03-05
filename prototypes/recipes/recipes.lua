@@ -40,9 +40,8 @@ RECIPE {
     },
     results = {
         {type = 'item', name = 'fungal-substrate-02', amount = 10},
-        {type = 'item', name = 'empty-petri-dish', amount = 1},
     },
-    main_product = "fungal-substrate-02",
+    --main_product = "fungal-substrate-02",
 }:add_unlock("mycology-mk02")
 
 RECIPE {
@@ -62,9 +61,8 @@ RECIPE {
     },
     results = {
         {type = 'item', name = 'fungal-substrate-03', amount = 10},
-        {type = 'item', name = 'empty-petri-dish', amount = 1},
     },
-    main_product = "fungal-substrate-03",
+    --main_product = "fungal-substrate-03",
 }:add_unlock("mycology-mk03"):add_ingredient({type = "item", name = "raw-fiber", amount = 5})
 
 RECIPE {
