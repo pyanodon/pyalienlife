@@ -82,12 +82,3 @@ RECIPE {
     subgroup = 'py-alienlife-sponge',
     order = 'zc'
 }:add_unlock("biased-mutation")
-
-data.raw.module['sea-sponge'].limitation =
-    {
-        "sea-sponge-1",
-        "sea-sponge-2"
-    }
-data.raw.module['sea-sponge-mk02'].limitation = table.deepcopy(data.raw.module['sea-sponge'].limitation)
-data.raw.module['sea-sponge-mk03'].limitation = table.deepcopy(data.raw.module['sea-sponge'].limitation)
-data.raw.module['sea-sponge-mk04'].limitation = table.deepcopy(data.raw.module['sea-sponge'].limitation)

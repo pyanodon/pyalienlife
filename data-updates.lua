@@ -76,57 +76,74 @@ for _, recipe in pairs(data.raw.recipe) do
     r:replace_ingredient('xyhiphoe-blood', 'arthropod-blood')
 end
 
-local remove_list = {}
+----------------------------------------------------------------------------------------------------
+-- MODULE LIMITATION SETUP
+----------------------------------------------------------------------------------------------------
+local module_categories = {}
+
+for _, cat in pairs(data.raw['recipe-category']) do
+    if cat.allowed_module_categories then
+        for _, module_category in pairs(cat.allowed_module_categories) do
+            module_categories[module_category] = true
+        end
+    end
+end
+
+for _, module in pairs(data.raw.module) do
+    if module_categories[module.category] and not module.limitation then
+        module.limitation = {}
+    end
+
+    if module.limitation then
+        module.dict_limitation = table.array_to_dictionary(module.limitation, true)
+    end
+end
 
 for _, recipe in pairs(data.raw.recipe) do
-    if recipe.category == "fwf" then
-        table.insert(data.raw.module['tree-mk01'].limitation, recipe.name)
-        table.insert(data.raw.module['tree-mk02'].limitation, recipe.name)
-        table.insert(data.raw.module['tree-mk03'].limitation, recipe.name)
-        table.insert(data.raw.module['tree-mk04'].limitation, recipe.name)
-        table.insert(remove_list, recipe.name)
-    end
-end
+    local cat = data.raw['recipe-category'][recipe.category or 'crafting']
 
--- Remove prod modules from fwf recipes
-for _, r in pairs(data.raw.module) do
-    if r.name:find("productivity%-module") and r.limitation then
-        local l = table.array_to_dictionary(r.limitation, true)
-
-        for _, recipe_name in pairs(remove_list) do
-            if l[recipe_name] then
-                l[recipe_name] = nil
+    --log('Recipe: ' .. recipe.name .. ', category: ' .. (recipe.category or ''))
+    if cat.allowed_module_categories then
+        for _, module_category in pairs(cat.allowed_module_categories) do
+            for _, module in pairs(data.raw.module) do
+                if module.category == module_category then
+                    module.dict_limitation[recipe.name] = true
+                end
             end
         end
-
-        r.limitation = table.keys(l)
     end
 end
 
-local blacklist = {}
+for _, recipe in pairs(data.raw.recipe) do
+    local cat = data.raw['recipe-category'][recipe.category or 'crafting']
 
-for m, module in pairs(data.raw.module) do
-    if module.subgroup:find("py%-alienlife%-modules") then
-        for l, limit in pairs(module.limitation) do
-            if blacklist[limit] ~= true then
-                blacklist[limit] = true
+    --log('Recipe: ' .. recipe.name .. ', category: ' .. (recipe.category or ''))
+    if cat.allowed_module_categories then
+        for _, module_category in pairs(cat.allowed_module_categories) do
+            for _, module in pairs(data.raw.module) do
+                if module.category ~= module_category then
+                    if not module.dict_limitation or table.is_empty(module.dict_limitation) then
+                        if module.limitation_blacklist == nil then
+                            module.limitation_blacklist = {}
+                        end
+                        table.insert(module.limitation_blacklist, recipe.name)
+                    else
+                        module.dict_limitation[recipe.name] = nil
+                    end
+                end
             end
-            --table.insert(blacklist, limit)
         end
     end
 end
 
-for m, module in pairs(data.raw.module) do
-    if not module.subgroup:find("py%-alienlife%-modules") and not module.limitation then
-        if module.limitation_blacklist == nil then
-            module.limitation_blacklist = {}
-        end
-        for b,_ in pairs(blacklist) do
-            table.insert(module.limitation_blacklist, b)
-        end
-        --log(serpent.block(module))
+for _, module in pairs(data.raw.module) do
+    if module.dict_limitation then
+        module.limitation = table.keys(module.dict_limitation)
+        module.dict_limitation = nil
     end
 end
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
 
 --remove steel barrel based milk
 data.raw.item['milk-barrel'] = nil

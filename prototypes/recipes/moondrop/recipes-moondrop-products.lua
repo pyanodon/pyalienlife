@@ -130,13 +130,3 @@ RECIPE {
     },
     main_product = 'fuel-oil',
 }:add_unlock("moondrop-mk02")
-
-
-table.insert(data.raw.module['moondrop'].limitation, "moonshine-gasoline-1")
-table.insert(data.raw.module['moondrop'].limitation, "moonshine-diesel-1")
-table.insert(data.raw.module['moondrop'].limitation, "moonshine-kerosene-1")
-table.insert(data.raw.module['moondrop'].limitation, "moonshine-fueloil-1")
-
-data.raw.module['moondrop-mk02'].limitation = table.deepcopy(data.raw.module['moondrop'].limitation)
-data.raw.module['moondrop-mk03'].limitation = table.deepcopy(data.raw.module['moondrop'].limitation)
-data.raw.module['moondrop-mk04'].limitation = table.deepcopy(data.raw.module['moondrop'].limitation)

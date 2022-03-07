@@ -47,12 +47,9 @@ require('prototypes/recipes/moondrop/recipes-moondrop')
 require('prototypes/recipes/moondrop/recipes-auto-moondrop')
 --require('prototypes/recipes/moondrop/recipes-moondrop-copper') TODO: SETUP TURD FARM TECHS AGAIN
 
-table.insert(data.raw.module['moondrop'].limitation, "methane-co2")
-table.insert(data.raw.module['moondrop'].limitation, "methane-py-fertilizer")
+data.raw["recipe-category"]["arum"].allowed_module_categories = { "arum" }
+data.raw["recipe-category"]["moon"].allowed_module_categories = { "moondrop" }
 
-data.raw.module['moondrop-mk02'].limitation = table.deepcopy(data.raw.module['moondrop'].limitation)
-data.raw.module['moondrop-mk03'].limitation = table.deepcopy(data.raw.module['moondrop'].limitation)
-data.raw.module['moondrop-mk04'].limitation = table.deepcopy(data.raw.module['moondrop'].limitation)
 
 --RECIPE("plastic-from-melamine"):remove_unlock('plastics'):add_unlock('melamine')
 --TECHNOLOGY("melamine"):remove_pack('logistic-science-pack')

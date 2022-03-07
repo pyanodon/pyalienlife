@@ -67,6 +67,8 @@ RECIPE('sc-wire'):change_category('research')
 
 RECIPE("nexelit-matrix"):remove_unlock('production-science-pack'):add_unlock('biotech-mk02')
 
+data.raw["recipe-category"]["xyhiphoe"].allowed_module_categories = { "xyhiphoe" }
+
 
 fun.results_replacer("log7", "log", "log",9)
 fun.results_replacer("log8", "log", "log",10)

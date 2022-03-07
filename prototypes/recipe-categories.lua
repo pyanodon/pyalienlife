@@ -1,11 +1,13 @@
 data:extend {
     {
         type = "recipe-category",
-        name = "moss"
+        name = "moss",
+        allowed_module_categories = { "moss" }
     },
     {
         type = "recipe-category",
-        name = "fwf"
+        name = "fwf",
+        allowed_module_categories = { "tree" }
     },
     {
         type = "recipe-category",
@@ -17,7 +19,8 @@ data:extend {
     },
     {
         type = "recipe-category",
-        name = "seaweed"
+        name = "seaweed",
+        allowed_module_categories = { "seaweed" }
     },
     {
         type = "recipe-category",
@@ -37,11 +40,13 @@ data:extend {
     },
     {
         type = "recipe-category",
-        name = "vrauks"
+        name = "vrauks",
+        allowed_module_categories = { "vrauks" }
     },
     {
         type = "recipe-category",
-        name = "sponge"
+        name = "sponge",
+        allowed_module_categories = { "sponge" }
     },
     {
         type = "recipe-category",
@@ -49,43 +54,53 @@ data:extend {
     },
     {
         type = "recipe-category",
-        name = "tuuphra"
+        name = "tuuphra",
+        allowed_module_categories = { "tuuphra" }
     },
     {
         type = "recipe-category",
-        name = "navens"
+        name = "navens",
+        allowed_module_categories = { "navens" }
     },
     {
         type = "recipe-category",
-        name = "yotoi"
+        name = "yotoi",
+        allowed_module_categories = { "yotoi" }
     },
     {
         type = "recipe-category",
-        name = "cottongut"
+        name = "cottongut",
+        allowed_module_categories = { "cottongut" }
     },
     {
         type = "recipe-category",
-        name = "dhilmos"
+        name = "dhilmos",
+        allowed_module_categories = { "dhilmos" }
     },
     {
         type = "recipe-category",
-        name = "arthurian"
+        name = "arthurian",
+        allowed_module_categories = { "arthurian" }
     },
     {
         type = "recipe-category",
-        name = "scrondrix"
+        name = "scrondrix",
+        allowed_module_categories = { "scrondrix" }
     },
     {
         type = "recipe-category",
-        name = "rennea"
+        name = "rennea",
+        allowed_module_categories = { "rennea" }
     },
     {
         type = "recipe-category",
-        name = "phadai"
+        name = "phadai",
+        allowed_module_categories = { "phadai" }
     },
     {
         type = "recipe-category",
-        name = "auog"
+        name = "auog",
+        allowed_module_categories = { "auog" }
     },
     {
         type = "recipe-category",
@@ -93,63 +108,78 @@ data:extend {
     },
     {
         type = "recipe-category",
-        name = "fish-farm"
+        name = "fish-farm",
+        allowed_module_categories = { "fish" }
     },
     {
         type = "recipe-category",
-        name = "yaedols"
+        name = "yaedols",
+        allowed_module_categories = { "yaedols" }
     },
     {
         type = "recipe-category",
-        name = "dingrits"
+        name = "dingrits",
+        allowed_module_categories = { "dingrits" }
     },
     {
         type = "recipe-category",
-        name = "kmauts"
+        name = "kmauts",
+        allowed_module_categories = { "kmauts" }
     },
     {
         type = "recipe-category",
-        name = "vonix"
+        name = "vonix",
+        allowed_module_categories = { "vonix" }
     },
     {
         type = "recipe-category",
-        name = "grod"
+        name = "grod",
+        allowed_module_categories = { "grod" }
     },
     {
         type = "recipe-category",
-        name = "phagnot"
+        name = "phagnot",
+        allowed_module_categories = { "phagnot" }
     },
     {
         type = "recipe-category",
-        name = "bhoddos"
+        name = "bhoddos",
+        allowed_module_categories = { "bhoddos" }
     },
     {
         type = "recipe-category",
-        name = "xeno"
+        name = "xeno",
+        allowed_module_categories = { "xeno" }
     },
     {
         type = "recipe-category",
-        name = "cridren"
+        name = "cridren",
+        allowed_module_categories = { "cridren" }
     },
     {
         type = "recipe-category",
-        name = "antelope"
+        name = "antelope",
+        allowed_module_categories = { "antelope" }
     },
     {
         type = "recipe-category",
-        name = "zipir"
+        name = "zipir",
+        allowed_module_categories = { "zipir" }
     },
     {
         type = "recipe-category",
-        name = "trits"
+        name = "trits",
+        allowed_module_categories = { "trits" }
     },
     {
         type = "recipe-category",
-        name = "arqad"
+        name = "arqad",
+        allowed_module_categories = { "arqad" }
     },
     {
         type = "recipe-category",
-        name = "korlex"
+        name = "korlex",
+        allowed_module_categories = { "korlex" }
     },
     {
         type = "recipe-category",
@@ -157,19 +187,23 @@ data:extend {
     },
     {
         type = "recipe-category",
-        name = "kicalk"
+        name = "kicalk",
+        allowed_module_categories = { "kicalk" }
     },
     {
         type = "recipe-category",
-        name = "sap"
+        name = "sap",
+        allowed_module_categories = { "sap" }
     },
     {
         type = "recipe-category",
-        name = "simik"
+        name = "simik",
+        allowed_module_categories = { "simik" }
     },
     {
         type = "recipe-category",
-        name = "zungror"
+        name = "zungror",
+        allowed_module_categories = { "zungror" }
     },
     {
         type = "recipe-category",

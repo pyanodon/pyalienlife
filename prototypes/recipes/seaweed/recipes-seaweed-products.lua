@@ -82,27 +82,3 @@ RECIPE {
         {type = 'item', name = "seaweed", amount = 120},
     },
 }:add_unlock("botany-mk04"):add_ingredient({type = "item", name = "powdered-phosphate-rock", amount = 10})
-
-table.insert(data.raw.module["seaweed"].limitation, "seaweed")
-table.insert(data.raw.module["seaweed"].limitation, "seaweed-2")
-table.insert(data.raw.module["seaweed"].limitation, "seaweed-3")
-table.insert(data.raw.module["seaweed"].limitation, "seaweed-4")
-table.insert(data.raw.module["seaweed"].limitation, "seaweed-5")
-
-table.insert(data.raw.module["seaweed-mk02"].limitation, "seaweed")
-table.insert(data.raw.module["seaweed-mk02"].limitation, "seaweed-2")
-table.insert(data.raw.module["seaweed-mk02"].limitation, "seaweed-3")
-table.insert(data.raw.module["seaweed-mk02"].limitation, "seaweed-4")
-table.insert(data.raw.module["seaweed-mk02"].limitation, "seaweed-5")
-
-table.insert(data.raw.module["seaweed-mk03"].limitation, "seaweed")
-table.insert(data.raw.module["seaweed-mk03"].limitation, "seaweed-2")
-table.insert(data.raw.module["seaweed-mk03"].limitation, "seaweed-3")
-table.insert(data.raw.module["seaweed-mk03"].limitation, "seaweed-4")
-table.insert(data.raw.module["seaweed-mk03"].limitation, "seaweed-5")
-
-table.insert(data.raw.module["seaweed-mk04"].limitation, "seaweed")
-table.insert(data.raw.module["seaweed-mk04"].limitation, "seaweed-2")
-table.insert(data.raw.module["seaweed-mk04"].limitation, "seaweed-3")
-table.insert(data.raw.module["seaweed-mk04"].limitation, "seaweed-4")
-table.insert(data.raw.module["seaweed-mk04"].limitation, "seaweed-5")

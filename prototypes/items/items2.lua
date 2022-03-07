@@ -234,11 +234,6 @@ ITEM {
     burnt_result = 'used-simik-mk04'
 }
 
-    {
-    type = "module-category",
-    name = "simik",
-    }
-
 ITEM {
     type = "item",
     name = "caged-simik",
@@ -638,11 +633,6 @@ ITEM {
 	limitation = {},
 	limitation_message_key = "zungror",
 }
-
-    {
-    type = "module-category",
-    name = "zungror",
-    }
 
 
 ITEM {

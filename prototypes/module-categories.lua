@@ -159,5 +159,13 @@ data:extend(
     {
         type = "module-category",
         name = "guar"
+    },
+    {
+        type = "module-category",
+        name = "simik",
+    },
+    {
+        type = "module-category",
+        name = "zungror",
     }
 })
