@@ -16,7 +16,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'cottongut', amount = 4},
-                    {name='moondrop', amount =2},
+                    {name='moondrop', amount =2, fallback = 'fawogae'},
                     {name='ralesia-seeds', amount =15},
 					{name='water-barrel', amount=3,return_barrel = true},
 				},
@@ -94,7 +94,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'cottongut-pup', amount = 7},
-					{name='moondrop', amount = 4},
+					{name='moondrop', amount = 4, fallback = 'fawogae'},
 					{name='wood-seeds', amount = 4},
 					{name='water-barrel', amount=2, return_barrel = true},
 					{name='ralesia-seeds', amount = 3},

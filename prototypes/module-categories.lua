@@ -18,7 +18,7 @@ data:extend(
     },
     {
         type = "module-category",
-        name = "ulric" --!!!
+        name = "ulric"
     },
     {
         type = "module-category",
@@ -26,11 +26,11 @@ data:extend(
     },
     {
         type = "module-category",
-        name = "ralesia" --!!!
+        name = "ralesia"
     },
     {
         type = "module-category",
-        name = "mukmoux" --!!!
+        name = "mukmoux"
     },
     {
         type = "module-category",
@@ -130,7 +130,7 @@ data:extend(
     },
     {
         type = "module-category",
-        name = "arum" --!!!
+        name = "arum"
     },
     {
         type = "module-category",
@@ -138,7 +138,7 @@ data:extend(
     },
     {
         type = "module-category",
-        name = "xyhiphoe" --!!!
+        name = "xyhiphoe"
     },
     {
         type = "module-category",
@@ -146,7 +146,7 @@ data:extend(
     },
     {
         type = "module-category",
-        name = "fawogae" --!!!
+        name = "fawogae"
     },
     {
         type = "module-category",
@@ -158,7 +158,7 @@ data:extend(
     },
     {
         type = "module-category",
-        name = "guar" --!!!
+        name = "guar"
     },
     {
         type = "module-category",

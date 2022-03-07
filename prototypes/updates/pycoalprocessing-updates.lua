@@ -82,6 +82,11 @@ fun.results_replacer("log3", "log", "log",6)
 fun.results_replacer("log5", "log", "log",7)
 fun.results_replacer("log6", "log", "log",8)
 
+data.raw["recipe-category"]["fawogae"].allowed_module_categories = { "fawogae" }
+data.raw["recipe-category"]["mukmoux"].allowed_module_categories = { "mukmoux" }
+data.raw["recipe-category"]["ralesia"].allowed_module_categories = { "ralesia" }
+data.raw["recipe-category"]["ulric"].allowed_module_categories = { "ulric" }
+
 ----EXCLUSIVE RECIPES----
 
 RECIPE {

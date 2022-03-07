@@ -1136,7 +1136,6 @@ function overrides.autorecipes(recipe)
         --default name for recipes if recipe doesnt provide an override
     local numbered_name
     local category = recipe.category
-    local module_limitation = recipe.module_limitations or nil
     local subgroup = recipe.subgroup
     local order = recipe.order
     local upgrades = {}
@@ -1223,13 +1222,6 @@ function overrides.autorecipes(recipe)
             data.raw.recipe[recipe_name].main_product = rec.main_product
         elseif recipe.main_product ~= nil then
             RECIPE(recipe_name):set_fields{main_product = recipe.main_product}
-        end
-        if module_limitation ~= nil then
-            for m, module in pairs(data.raw.module) do
-                if string.match(module.category, module_limitation) ~= nil then
-                    table.insert(module.limitation, recipe_name)
-                end
-            end
         end
         --log(serpent.block(data.raw.recipe[recipe_name]))
     end
