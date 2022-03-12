@@ -17,7 +17,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='brain-caged-vrauks',1},
+					{name='brain-caged-vrauks', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'nanochondria'
@@ -41,12 +41,12 @@ fun.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='nanochondria',remove_item = true},
-					{name='anabolicrna',amount =1},
+					{name='anabolic-rna',amount =1},
 				},
 			results =
 				{
 					{name='brain-caged-vrauks', remove_item = true},
-					{name='meat-caged-vrauks', 1},
+					{name='meat-caged-vrauks', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'anabolic-rna'
@@ -70,13 +70,13 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='gh',remove_item = true},
-					{name='anabolicrna',remove_item = true},
+					{name='anabolic-rna',remove_item = true},
 					{name='antitumor',amount =1},
 				},
 			results =
 				{
 					{name='meat-caged-vrauks', remove_item = true},
-					{name='guts-caged-vrauks', 1},
+					{name='guts-caged-vrauks', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'antitumor'
@@ -106,7 +106,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='guts-caged-vrauks', remove_item = true},
-					{name='skin-caged-vrauks', 1},
+					{name='chitin-caged-vrauks', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'reca'
