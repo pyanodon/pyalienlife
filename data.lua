@@ -621,6 +621,7 @@ require('prototypes/recipes/vonix/recipes-vonix-rendering')
 require('prototypes/recipes/vrauks/recipes-vrauks')
 require('prototypes/recipes/vrauks/recipes-vrauks-raising')
 require('prototypes/recipes/vrauks/recipes-vrauks-rendering')
+require('prototypes/recipes/vrauks/recipes-vrauk-growth-enhacement')
 
 --Xeno
 require('prototypes/recipes/xeno/recipes-xeno')
