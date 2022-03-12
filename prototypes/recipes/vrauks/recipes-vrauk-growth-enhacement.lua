@@ -1,7 +1,7 @@
 local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
-    name = 'vrauks-improvement',
+    name = 'vrauks-improved',
 	category = 'creature-chamber',
 	--module_limitations = 'vrauks',
 	subgroup = 'py-alienlife-vrauks',

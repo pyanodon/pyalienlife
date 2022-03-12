@@ -1,12 +1,12 @@
 local fun = require("prototypes/functions/functions")
 
 fun.autorecipes {
-    name = 'vonix-improved',
+    name = 'trits-improved',
 	category = 'creature-chamber',
-	--module_limitations = 'vonix',
-	subgroup = 'py-alienlife-vonix',
+	--module_limitations = 'trits',
+	subgroup = 'py-alienlife-trits',
 	order = 'b',
-	--main_product = "vonix",
+	--main_product = 'trits',
     mats =
 	{
 		--nanochondria
@@ -14,16 +14,46 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'nanochondria', amount =1},
-					{name = 'vonix', amount = 1},
+					{name = 'trits', amount = 1},
 				},
 			results =
 				{
-					{name = 'brain-vonix', amount = 2},
+					{name = 'brain-trits', amount = 2},
 				},
-			crafting_speed = 180,
+			crafting_speed = 160,
 			tech = 'nanochondria'
 		},
 		--nanochondria and gh
+		{
+			ingredients =
+				{
+					{name = 'gh', amount =1},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 50,
+			tech = 'nanochondria'
+		},
+		--bmp
+		{
+			ingredients =
+				{
+					{name = 'gh',remove_item = true},
+					{name = 'nanochondria',remove_item = true},
+					{name = 'bmp', amount =1},
+				},
+			results =
+				{
+					{name = 'brain-trits', remove_item = true},
+					{name = 'bone-trits', amount = 2},
+				},
+			crafting_speed = 160,
+			tech = 'bmp'
+		},
+
+		--bmp and gh
 		{
 			ingredients =
 				{
@@ -34,23 +64,23 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 60,
-			tech = 'nanochondria'
+			crafting_speed = 50,
+			tech = 'bmp'
 		},
 		--rna anabolic
 		{
 			ingredients =
 				{
 					{name = 'gh',remove_item = true},
-					{name = 'nanochondria',remove_item = true},
+					{name = 'bmp',remove_item = true},
 					{name = 'anabolic-rna', amount =1},
 				},
 			results =
 				{
-					{name = 'brain-vonix', remove_item = true},
-					{name = 'meat-vonix', amount = 2},
+					{name = 'bone-trits', remove_item = true},
+					{name = 'meat-trits', amount = 2},
 				},
-			crafting_speed = 180,
+			crafting_speed = 160,
 			tech = 'anabolic-rna'
 		},
 		--rna anabolic and gh
@@ -64,7 +94,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 50,
 			tech = 'anabolic-rna'
 		},
 		--antitumor
@@ -73,14 +103,14 @@ fun.autorecipes {
 				{
 					{name = 'gh',remove_item = true},
 					{name = 'anabolic-rna',remove_item = true},
-					{name = 'antitumor', amount =2},
+					{name = 'antitumor', amount =1},
 				},
 			results =
 				{
-					{name = 'meat-vonix', remove_item = true},
-					{name = 'guts-vonix', amount = 1},
+					{name = 'meat-trits', remove_item = true},
+					{name = 'guts-trits', amount = 2},
 				},
-			crafting_speed = 180,
+			crafting_speed = 160,
 			tech = 'antitumor'
 		},
 		--antitumor and gh
@@ -94,7 +124,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 50,
 			tech = 'antitumor'
 		},
 		--Recombinant Ery
@@ -107,10 +137,10 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name = 'guts-vonix', remove_item = true},
-					{name = 'blood-vonix', amount = 2},
+					{name = 'guts-trits', remove_item = true},
+					{name = 'blood-trits', amount = 2},
 				},
-			crafting_speed = 180,
+			crafting_speed = 160,
 			tech = 'recombinant-ery'
 		},
 		--Recombinant Ery and gh
@@ -123,7 +153,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 50,
 			tech = 'recombinant-ery'
 		},
 		--reca
@@ -136,10 +166,10 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name = 'blood-vonix', remove_item = true},
-					{name = 'skin-vonix', amount = 2},
+					{name = 'blood-trits', remove_item = true},
+					{name = 'skin-trits', amount = 2},
 				},
-			crafting_speed = 180,
+			crafting_speed = 160,
 			tech = 'reca'
 		},
 		--reca and gh
@@ -152,7 +182,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 50,
 			tech = 'reca'
 		},
 		--orexigenic
@@ -165,10 +195,10 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name = 'skin-vonix', remove_item = true},
-					{name = 'fat-vonix', amount = 2},
+					{name = 'skin-trits', remove_item = true},
+					{name = 'fat-trits', amount = 2},
 				},
-			crafting_speed = 180,
+			crafting_speed = 160,
 			tech = 'orexigenic'
 		},
 		--orexigenic and gh
@@ -181,7 +211,7 @@ fun.autorecipes {
 				{
 
 				},
-			crafting_speed = 60,
+			crafting_speed = 50,
 			tech = 'orexigenic'
 		},
 	}

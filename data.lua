@@ -600,6 +600,7 @@ require('prototypes/recipes/tree/recipes-tree')
 require('prototypes/recipes/trits/recipes-trits')
 require('prototypes/recipes/trits/recipes-trits-raising')
 require('prototypes/recipes/trits/recipes-trits-rendering')
+require('prototypes/recipes/trits/recipes-trits-growth-enhacement')
 
 --Tuupra
 require('prototypes/recipes/tuupra/recipes-tuuphra')
