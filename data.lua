@@ -616,6 +616,7 @@ require('prototypes/recipes/ulric/recipes-ulric-growth-enhancement')
 require('prototypes/recipes/vonix/recipes-vonix')
 require('prototypes/recipes/vonix/recipes-vonix-raising')
 require('prototypes/recipes/vonix/recipes-vonix-rendering')
+require('prototypes/recipes/vonix/recipes-vonix-growth-enchacement')
 
 --vrauks
 require('prototypes/recipes/vrauks/recipes-vrauks')
