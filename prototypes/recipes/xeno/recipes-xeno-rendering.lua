@@ -19,7 +19,7 @@ fun.autorecipes {
 				{
 					{name='bones', amount =3},
 					{name='meat', amount =3},
-					{name='chitin', amount =4},
+					{name='chitin', amount =5},
 					{name='sulfuric-acid', amount =60},
 					{name='cage', amount=1},
 					{name='brain', amount =1},
@@ -111,7 +111,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='chitin', amount = 4},
+					{name='chitin', amount = 5},
 					{name='meat', amount =10},
 				},
 			crafting_speed = 15,

@@ -17,7 +17,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', amount =3},
-					{name='chitin', amount =5},
+					{name='chitin', amount =2},
 					{name='guts', amount =3},
 					{name='arthropod-blood', amount =30},
 					{name = 'bee-venom', amount = 5}
@@ -71,7 +71,7 @@ fun.autorecipes {
 			results =
 				{
 					{name='meat', amount =3},
-					{name = 'chitin', amount = 14}
+					{name = 'chitin', amount = 10}
 				},
 			crafting_speed = 30,
 			tech = 'rendering',
@@ -88,7 +88,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='chitin', amount = 5},
+					{name='chitin', amount = 4},
 					{name='arthropod-blood', amount =100},
 					{name = 'sternite-lung', remove_item = true},
 				},
