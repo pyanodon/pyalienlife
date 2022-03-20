@@ -507,6 +507,7 @@ require('prototypes/recipes/fawogae/recipes-fawogae-modules')
 --Fish
 require('prototypes/recipes/fish/recipes-fish')
 require('prototypes/recipes/fish/recipes-auto-fish')
+require('prototypes/recipes/fish/recipes-fish-rendering')
 
 --Grod
 require('prototypes/recipes/grod/recipes-grod')
