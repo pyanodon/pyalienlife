@@ -27,9 +27,9 @@ table.insert(data.raw['assembling-machine']['pulp-mill-mk04'].crafting_categorie
 --(( RECIPES ))--
 
 --antelope
-require('prototypes/recipes/antelope/recipes-antelope')
-require('prototypes/recipes/antelope/recipes-antelope-raising')
-require('prototypes/recipes/antelope/recipes-antelope-rendering')
+--require('prototypes/recipes/antelope/recipes-antelope')
+--require('prototypes/recipes/antelope/recipes-antelope-raising')
+--require('prototypes/recipes/antelope/recipes-antelope-rendering')
 
 --Cadaveric-arum
 require('prototypes/recipes/cadaveric-arum/recipes-cadaveric')
@@ -134,6 +134,8 @@ ITEM {
 ITEM('dms'):subgroup_order("py-alienlife-gases", "b")
 ITEM('acidgas'):subgroup_order("py-alienlife-gases", "a")
 ----BUILDINDS----
+
+RECIPE("bio-reactor-mk01"):remove_ingredient('advanced-circuit')
 RECIPE('ralesia-plantation-mk03'):add_ingredient({type = "item", name = "biopolymer", amount = 15}):add_ingredient({type = "item", name = "carbon-aerogel", amount = 20})
 RECIPE('ralesia-plantation-mk04'):replace_ingredient("control-unit", "intelligent-unit"):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 5}):add_ingredient({type = "item", name = "nv-center", amount = 2})
 RECIPE('auog-paddock'):set_fields {enabled = false}

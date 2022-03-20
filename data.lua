@@ -439,7 +439,9 @@ require('prototypes/items/items2')
 require('prototypes/recipes/recipes')
 
 --antelope
---see pyhightech updates for files
+require('prototypes/recipes/antelope/recipes-antelope')
+require('prototypes/recipes/antelope/recipes-antelope-raising')
+require('prototypes/recipes/antelope/recipes-antelope-rendering')
 
 --arqad
 require('prototypes/recipes/arqad/recipes-arqad')
@@ -449,6 +451,7 @@ require('prototypes/recipes/arqad/recipes-arqad-raising')
 require('prototypes/recipes/arqad/recipes-arqad-rendering')
 require('prototypes/recipes/arqad/recipes-arqad-updates')
 require('prototypes/recipes/arqad/recipes-arqad-modules')
+require('prototypes/recipes/arqad/recipes-arqad-growth-enhancement')
 
 --arthurian
 require('prototypes/recipes/arthurian/recipes-arthurian')
@@ -499,6 +502,7 @@ require('prototypes/recipes/dingrits/recipes-dingrits-growth-enhancement')
 --Fawogae
 require('prototypes/recipes/fawogae/recipes-fawogae')
 require('prototypes/recipes/fawogae/recipes-auto-fawogae')
+require('prototypes/recipes/fawogae/recipes-fawogae-modules')
 
 --Fish
 require('prototypes/recipes/fish/recipes-fish')
@@ -558,6 +562,7 @@ require('prototypes/recipes/phagnot/recipes-phagnot')
 require('prototypes/recipes/phagnot/recipes-phagnot-raising')
 require('prototypes/recipes/phagnot/recipes-phagnot-rendering')
 require('prototypes/recipes/phagnot/recipes-phagnot-growth-enhancement')
+require('prototypes/recipes/phagnot/recipes-phagnot-modules')
 
 --Ralesia
 require('prototypes/recipes/ralesia/recipes-ralesia')
@@ -581,6 +586,7 @@ require('prototypes/recipes/scrondrix/recipes-scrondrix-growth-enhancement')
 
 --Sea-Sponge
 require("prototypes/recipes/sea-sponge/recipes-sea-sponge")
+require('prototypes/recipes/sea-sponge/recipes-sea-sponge-modules')
 
 --seaweed
 require('prototypes/recipes/seaweed/recipes-seaweed')
@@ -635,6 +641,7 @@ require('prototypes/recipes/xeno/recipes-xeno-growth-enhancement')
 require("prototypes/recipes/xyhiphoe/recipes-xyhiphoe")
 require("prototypes/recipes/xyhiphoe/recipes-xyhiphoe-raising")
 require("prototypes/recipes/xyhiphoe/recipes-xyhiphoe-rendering")
+require('prototypes/recipes/xyhiphoe/recipes-xyhiphoe-growth-enhancement')
 
 --Yaedols
 require('prototypes/recipes/yaedols/recipes-yaedols')
