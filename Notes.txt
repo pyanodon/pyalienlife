@@ -62,3 +62,5 @@ Tuuphra
 Yotoi
 Phytoplankton
 Moondrop
+
+Some animals don't have the full render changes, or some old style specific rendering have been left over:

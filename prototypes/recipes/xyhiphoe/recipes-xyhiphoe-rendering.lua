@@ -16,87 +16,16 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat', probability = 0.4, amount_min =1, amount_max =1},
-					{name='shell', probability = 0.4, amount_min =1, amount_max =3},
-					{name='guts', probability = 0.4, amount_min =1, amount_max =4},
+					{name='meat',  amount =1},
+					{name='shell',  amount =3},
+					{name='guts',  amount =4},
 					{name='arthropod-blood', amount =70},
 				},
 			crafting_speed = 30,
 			tech = 'rendering',
-			name = 'Full Render xyhiphoe',
+			name = 'full-render-xyhiphoe',
 			icon = "__pyalienlifegraphics__/graphics/icons/rendering-xyhiphoe.png",
 			icon_size = 64,
-		},
-		--meat
-		{
-			ingredients =
-				{
-					--{name='xyhiphoe', amount=1},
-				},
-			results =
-				{
-					{name='meat', remove_item = true},
-					{name='shell', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='arthropod-blood', remove_item = true},
-					{name='meat', amount =2},
-				},
-			crafting_speed = 15,
-			tech = 'advanced-rendering',
-			name = 'Extract xyhiphoe Meat',
-			icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
-			icon_size = 64,
-		},
-		--shell
-		{
-			ingredients =
-				{
-					--{name='xyhiphoe', amount=1},
-				},
-			results =
-				{
-					{name='meat', remove_item = true},
-					{name='shell', amount =4},
-				},
-			crafting_speed = 15,
-			tech = 'advanced-rendering',
-			name = 'Extract xyhiphoe shell',
-			icon = "__pyalienlifegraphics__/graphics/icons/shell.png",
-			icon_size = 64,
-		},
-		--guts
-		{
-			ingredients =
-				{
-					--{name='xyhiphoe', amount=1},
-				},
-			results =
-				{
-					{name='shell', remove_item = true},
-					{name='guts', amount =4},
-				},
-			crafting_speed = 15,
-			tech = 'advanced-rendering',
-			name = 'Extract xyhiphoe guts',
-			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
-			icon_size = 64,
-		},
-		--arthropod-blood
-		{
-			ingredients =
-				{
-					--{name='xyhiphoe', amount=1},
-				},
-			results =
-				{
-					{name='guts', remove_item = true},
-					{name='arthropod-blood', amount =80},
-				},
-			crafting_speed = 15,
-			tech = 'advanced-rendering',
-			name = 'Extract xyhiphoe blood',
-			icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
-			icon_size = 32,
 		},
 		--meat xyhiphoe rendering
 		{
@@ -107,12 +36,11 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='arthropod-blood', remove_item = true},
 					{name='meat', amount =8},
 				},
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
-			name = 'Extract meat from Improved xyhiphoe',
+			name = 'ex-me-xyh',
 			icon = "__pyalienlifegraphics__/graphics/icons/meat-xyhiphoe.png",
 			icon_size = 64,
 		},
@@ -125,12 +53,12 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat', remove_item = true},
+					{name='meat', amount = 1},
 					{name='guts', amount =11},
 				},
 			crafting_speed = 15,
 			tech = 'antitumor',
-			name = 'Extract guts from Improved xyhiphoe',
+			name = 'ex-gut-xyh',
 			icon = "__pyalienlifegraphics__/graphics/icons/guts-xyhiphoe.png",
 			icon_size = 64,
 		},
@@ -143,12 +71,12 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='guts', remove_item = true},
+					{name='guts', amount = 4},
 					{name='arthropod-blood', amount =300},
 				},
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
-			name = 'Extract blood from Improved xyhiphoe',
+			name = 'ex-blo-xyh',
 			icon = "__pyalienlifegraphics__/graphics/icons/blood-xyhiphoe.png",
 			icon_size = 64,
 		},

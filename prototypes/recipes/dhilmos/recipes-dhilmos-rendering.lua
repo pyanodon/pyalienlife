@@ -17,10 +17,10 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='meat', amount_max =1},
-                    {name='mukmoux-fat', amount_max =1},
-                    {name='chitin', amount_max =2},
-					{name='guts', amount_max =1},
+					{name='meat', amount =1},
+                    {name='mukmoux-fat', amount =1},
+                    {name='chitin', amount =2},
+					{name='guts', amount =1},
 					{name='arthropod-blood', amount =15},
 				},
 			crafting_speed = 30,

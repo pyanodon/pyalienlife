@@ -526,6 +526,7 @@ require('prototypes/recipes/guar/recipes-auto-guar')
 require('prototypes/recipes/kmauts/recipes-kmauts')
 require('prototypes/recipes/kmauts/recipes-kmauts-raising')
 require('prototypes/recipes/kmauts/recipes-kmauts-rendering')
+require('prototypes/recipes/kmauts/recipes-kmauts-growth-enhancement')
 
 --Korlex
 require('prototypes/recipes/korlex/recipes-korlex')
@@ -545,6 +546,7 @@ require('prototypes/recipes/moss/recipes-auto-moss')
 require('prototypes/recipes/mukmoux/recipes-mukmoux')
 require('prototypes/recipes/mukmoux/recipes-mukmoux-raising')
 require('prototypes/recipes/mukmoux/recipes-mukmoux-rendering')
+require('prototypes/recipes/mukmoux/recipes-mukmoux-growth-enhacement')
 
 --Navens
 require('prototypes/recipes/navens/recipes-navens')
