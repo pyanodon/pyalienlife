@@ -43,6 +43,130 @@ local function create_slaughterhouse_gui(event)
     global.slaughterhouse_gui_open = true
 end
 
+local farm_buildings = {
+    "antelope",
+    "arqad",
+    "arthurian",
+    "auog",
+    "bhoddos",
+    "cadaveric",
+    "cridren",
+    "dhilmos",
+    "dingrits",
+    "fawogae",
+    "fish",
+    "fwf",
+    "grod",
+    "guar",
+    "kicalk",
+    "kmauts",
+    "moondrop",
+    "moss",
+    "mukmoux",
+    "navens",
+    "phadai",
+    "phagnot",
+    "prandium",
+    "ralesia",
+    "ranch",
+    "rennea",
+    "sap",
+    "scrondrix",
+    "seaweed",
+    "seaweed",
+    "simik",
+    "simik",
+    "sponge",
+    "trits",
+    "tuuphra",
+    "ulric",
+    "vonix",
+    "vrauks",
+    "xenopen",
+    "xyhiphoe",
+    "yaedols",
+    "yotoi",
+    "zipir",
+}
+
+local animal_farm_buildings = {
+	["antelope"] = true,
+	["arqad"] = true,
+	["arthurian"] = true,
+	["auog"] = true,
+	["cridren"] = true,
+	["dhilmos"] = true,
+	["dingrits"] = true,
+	["fish"] = true,
+	["kmauts"] = true,
+	["mukmoux"] = true,
+	["phadai"] = true,
+	["phagnot"] = true,
+	["prandium"] = true,
+	["ranch"] = true,
+	["scrondrix"] = true,
+	["simik"] = true,
+	["trits"] = true,
+	["ulric"] = true,
+	["vonix"] = true,
+	["vrauks"] = true,
+	["xenopen"] = true,
+	["xyhiphoe"] = true,
+	["zipir"] = true,
+}
+
+local plant_farm_buildings = {
+	["cadaveric"] = true,
+	["fwf"] = true,
+	["grod"] = true,
+	["guar"] = true,
+	["kicalk"] = true,
+	["moondrop"] = true,
+	["moss"] = true,
+	["ralesia"] = true,
+	["rennea"] = true,
+	["sap"] = true,
+	["seaweed"] = true,
+	["sponge"] = true,
+	["tuuphra"] = true,
+	["yotoi"] = true,
+}
+
+local fungus_farm_buildings = {
+	["bhoddos"] = true,
+	["fawogae"] = true,
+	["navens"] = true,
+	["yaedols"] = true,
+}
+
+--add building to global list and disable it on placement
+local function disable_machine(entity)
+    local E = entity
+    global.total_farm_count = global.total_farm_count+1
+    global.farms[E.unit_number] = E
+    global.indexed_farm_list[global.total_farm_count] = E.unit_number
+    E.active = false
+    local stopsign
+    local signtype
+    for f,farm in pairs(farm_buildings) do
+        if animal_farm_buildings[string.match(E.name, farm)] then
+            signtype = "animal"
+        elseif plant_farm_buildings[string.match(E.name, farm)] then
+            signtype = "plant"
+        elseif fungus_farm_buildings[string.match(E.name, farm)] then
+            signtype = "fungi"
+        end
+    end
+    stopsign = rendering.draw_sprite{
+        sprite = "no_module_" .. signtype,
+        render_layer = "188",
+        target = E.position,
+        surface = E.surface.name
+    }
+    global.farm_rendered_icons[E.unit_number] = stopsign
+end
+
+
 script.on_init(function()
     if remote.interfaces['freeplay'] then
         local get_ship_parts = remote.call('freeplay', "get_ship_parts")
@@ -90,7 +214,6 @@ script.on_init(function()
         remote.call("freeplay", "set_ship_parts", get_ship_parts)
 
         if remote.interfaces['freeplay'] then
-
             local created_items = remote.call("freeplay", "get_created_items")
               created_items["burner-mining-drill"] = 10
               created_items["iron-plate"] = 500
@@ -99,9 +222,7 @@ script.on_init(function()
               created_items["collector"] = 2
 
               remote.call("freeplay", "set_created_items", created_items)
-
         end
-
     end
 
     --slaughterhouse
@@ -116,6 +237,13 @@ script.on_init(function()
         first_caravan = false
     }
     global.last_elem_selected ={}
+
+    --farm buildings
+    global.farms = {}
+    global.indexed_farm_list = {}
+    global.total_farm_count = 0
+    global.checked_farm_counter = 1
+    global.farm_rendered_icons = {}
 end)
 
 script.on_load(function()
@@ -200,6 +328,12 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
         if global.caravans.first_caravan == false then
             global.caravans.first_caravan = true
         end
+    else
+        for f, farm in pairs(farm_buildings) do
+            if string.match(E.name, farm) then
+                disable_machine(E)
+            end
+        end
     end
 end)
 
@@ -211,14 +345,42 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 
 end)
 
---[[
-script.on_nth_tick(__, function()
-
-end)
-]]--
-
-script.on_event(defines.events.on_tick, function()
-
+script.on_event(defines.events.on_tick, function(event)
+    local fcount = global.indexed_farm_list
+    local last = global.total_farm_count
+    if next(fcount) ~= nil and last > 0 then
+        local start_num = global.checked_farm_counter
+        for i = global.checked_farm_counter, last do
+            local farm = global.farms[fcount[i]]
+            local icon = global.farm_rendered_icons
+            if farm ~= nil then
+                if farm.valid == false then
+                    if icon[fcount[i]] ~= nil then
+                        rendering.destroy(icon[fcount[i]])
+                        icon[fcount[i]] = nil
+                    end
+                    farm = nil
+                elseif farm.valid == true then
+                    if farm.get_module_inventory().is_empty() == false then
+                        farm.active = true
+                        if icon[fcount[i]] ~= nil then
+                            rendering.destroy(icon[fcount[i]])
+                            icon[fcount[i]] = nil
+                        end
+                    elseif farm.get_module_inventory().is_empty() == true then
+                        disable_machine(farm)
+                    end
+                end
+            end
+            if i == start_num + 9 then
+                break
+            end
+        end
+        global.checked_farm_counter = start_num + 9
+        if global.checked_farm_counter > last + 10 then
+            global.checked_farm_counter = 1
+        end
+    end
 end)
 
 script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity}, function(event)

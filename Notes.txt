@@ -32,35 +32,3 @@ make arqad queen have a very low but not zero chance of no return- needs a recip
 add back organic matter to make animal remains into and biomass will be for plant materials
 
 fix return barrel isnt returning the right amount of barrels. use arqad raising for testing
-
-Cadavric arum
-Fawogae
-Navens
-Yaedols
-Arqads
-Auog
-Korlex
-Fish
-Kmaut
-mukmoux
-Phagnot
-Cottongut
-Simik
-Sea sponge
-Ulric
-Vrauk
-Xyhipoe
-Zipir
-Tree
-Grod
-Kicalk
-Moss
-Ralesia
-Sap
-Seaweed
-Tuuphra
-Yotoi
-Phytoplankton
-Moondrop
-
-Some animals don't have the full render changes, or some old style specific rendering have been left over:
