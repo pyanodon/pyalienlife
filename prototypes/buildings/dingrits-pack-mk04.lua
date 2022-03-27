@@ -5,7 +5,7 @@ RECIPE {
     enabled = false,
     ingredients = {
         {"dingrits-pack-mk03", 1},
-        {"super-steel", 50},
+        {"super-alloy", 50},
         {"boron-carbide", 50},
         {"metallic-glass", 40},
         {"science-coating", 15},
@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"dingrits-pack-mk04", 1}
     }
-}:add_unlock("dingrits-mk04")
+}:add_unlock("land-animals-mk04")
 
 ITEM {
     type = "item",

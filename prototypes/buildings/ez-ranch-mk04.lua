@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"ez-ranch-mk04", 1}
     }
-}:add_unlock("korlex-mk04")
+}:add_unlock("land-animals-mk04")
 
 ITEM {
     type = "item",

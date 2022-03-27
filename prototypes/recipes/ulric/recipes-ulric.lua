@@ -74,7 +74,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'ulric-food-01', amount = 6},
     },
-}:add_unlock("food-mk01")
+}:add_unlock("ulric")
 
 RECIPE {
     type = 'recipe',
@@ -98,7 +98,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'ulric-food-02', amount = 6},
     },
-}:add_unlock("food-mk02")
+}:add_unlock("ulric-mk03")
 
 ---maturing---
 
@@ -148,26 +148,6 @@ RECIPE {
 
 
 ----PROCESSING----
-
-
-
-if not mods["pyhightech"] then
-
-    RECIPE {
-        type = 'recipe',
-        name = 'bonemeal-from-bones',
-        category = 'crusher',
-        enabled = false,
-        energy_required = 4,
-        ingredients = {
-            {type = 'item', name = 'bones', amount = 5},
-        },
-        results = {
-            {type = 'item', name = 'bonemeal', amount = 4}
-        }
-    }:add_unlock('ulric')
-
-end
 
 
 ---caged---

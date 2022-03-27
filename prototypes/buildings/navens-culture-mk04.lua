@@ -13,7 +13,7 @@ RECIPE {
     results = {
         {"navens-culture-mk04", 1}
     }
-}:add_unlock("navens-mk04")
+}:add_unlock("mycology-mk05")
 
 ITEM {
     type = "item",

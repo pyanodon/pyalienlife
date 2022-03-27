@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"phagnot-corral-mk02", 1}
     }
-}:add_unlock("phagnot-mk02")
+}:add_unlock("land-animals-mk02")
 
 ITEM {
     type = "item",

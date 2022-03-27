@@ -48,7 +48,7 @@ TECHNOLOGY {
         ingredients = {
             {'automation-science-pack', 3},
             {'logistic-science-pack', 2},
-            {'py-science-pack-2', 1},
+            {'chemical-science-pack', 1},
         },
         time = 45
     }
@@ -68,7 +68,31 @@ TECHNOLOGY {
         ingredients = {
             {'automation-science-pack', 3},
             {'logistic-science-pack', 2},
-            {'py-science-pack-2', 3},
+            {'chemical-science-pack', 1},
+            {'production-science-pack', 1},
+        },
+        time = 45
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "mycology-mk05",
+    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {"mycology-mk03"},
+    dependencies = {"mycology-mk03"},
+    effects = {},
+    unit = {
+        count = 250,
+        ingredients = {
+            {'automation-science-pack', 3},
+            {'logistic-science-pack', 2},
+            {'military-science-pack', 1},
+            {'chemical-science-pack', 1},
+            {'production-science-pack', 1},
+            {'utility-science-pack', 1},
         },
         time = 45
     }

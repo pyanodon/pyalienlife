@@ -13,7 +13,7 @@ RECIPE {
     results = {
         {"mukmoux-pasture-mk04", 1}
     }
-}:add_unlock("mukmoux-mk04")
+}:add_unlock("land-animals-mk04")
 
 ITEM {
     type = "item",

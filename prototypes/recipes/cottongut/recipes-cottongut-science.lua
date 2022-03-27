@@ -23,7 +23,7 @@ RECIPE {
     --icon_size = 64,
     subgroup = "py-alienlife-items",
     order = "a1"
-}:add_unlock("cottongut-mk01")
+}:add_unlock("cottongut-science-mk01")
 
 ----GREEN SCIENCE----
 
@@ -51,7 +51,7 @@ RECIPE {
     --icon_size = 64,
     subgroup = "py-alienlife-items",
     order = "a1"
-}:add_unlock("cottongut-mk02")
+}:add_unlock("cottongut-science-mk02")
 
 ----Blue science----
 RECIPE {
@@ -83,7 +83,7 @@ RECIPE {
     --icon_size = 64,
     subgroup = "py-alienlife-items",
     order = "a1"
-}:add_unlock("cottongut-mk04"):change_category('nano'):add_ingredient({type = "item", name = "kicalk-seeds", amount = 1})
+}:add_unlock("cottongut-science-mk03"):change_category('nano'):add_ingredient({type = "item", name = "kicalk-seeds", amount = 1})
 
 ----py science----
 RECIPE {
@@ -116,7 +116,7 @@ RECIPE {
     --icon_size = 64,
     subgroup = "py-alienlife-items",
     order = "a1"
-}:add_unlock("cottongut-mk04")
+}:add_unlock("cottongut-science-mk04")
 
 ----production science----
 RECIPE {
@@ -151,7 +151,7 @@ RECIPE {
     --icon_size = 64,
     subgroup = "py-alienlife-items",
     order = "a1"
-}:add_unlock("pharmagenomics"):change_category('nano'):add_ingredient({type = "item", name = "kicalk-seeds", amount = 20})
+}:add_unlock("cottongut-science-mk05"):change_category('nano'):add_ingredient({type = "item", name = "kicalk-seeds", amount = 20})
 
 
 ----SCIENCE PACKS----

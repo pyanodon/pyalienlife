@@ -15,7 +15,7 @@ RECIPE {
     results = {
         {"ez-ranch-mk02", 1}
     }
-}:add_unlock("korlex-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 100})
+}:add_unlock("land-animals-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 100})
 
 ITEM {
     type = "item",

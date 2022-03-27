@@ -27,9 +27,9 @@ table.insert(data.raw['assembling-machine']['pulp-mill-mk04'].crafting_categorie
 --(( RECIPES ))--
 
 --antelope
---require('prototypes/recipes/antelope/recipes-antelope')
---require('prototypes/recipes/antelope/recipes-antelope-raising')
---require('prototypes/recipes/antelope/recipes-antelope-rendering')
+require('prototypes/recipes/antelope/recipes-antelope')
+require('prototypes/recipes/antelope/recipes-antelope-raising')
+require('prototypes/recipes/antelope/recipes-antelope-rendering')
 
 --Cadaveric-arum
 require('prototypes/recipes/cadaveric-arum/recipes-cadaveric')
@@ -48,7 +48,9 @@ require('prototypes/recipes/moondrop/recipes-auto-moondrop')
 --require('prototypes/recipes/moondrop/recipes-moondrop-copper') TODO: SETUP TURD FARM TECHS AGAIN
 
 data.raw["recipe-category"]["arum"].allowed_module_categories = { "arum" }
+data.raw["recipe-category"]["arum"].modules_required = true
 data.raw["recipe-category"]["moon"].allowed_module_categories = { "moondrop" }
+data.raw["recipe-category"]["moon"].modules_required = true
 
 
 --RECIPE("plastic-from-melamine"):remove_unlock('plastics'):add_unlock('melamine')
@@ -64,13 +66,13 @@ TECHNOLOGY('nano-tech'):add_prereq('microbiology-mk03')
 --TECHNOLOGY('bio-implants'):add_prereq('nano-tech')
 TECHNOLOGY('advanced-electronics'):add_prereq('chitin')
 TECHNOLOGY('antitumor'):add_prereq('earnshaw-theorem')
-TECHNOLOGY('advanced-electronics'):add_pack('py-science-pack-2')
-TECHNOLOGY('aerogel'):add_pack('py-science-pack-2')
-TECHNOLOGY('earnshaw-theorem'):add_pack('py-science-pack-2')
-TECHNOLOGY('graphene'):add_pack('py-science-pack-2')
-TECHNOLOGY('nano-tech'):add_pack('py-science-pack-2')
-TECHNOLOGY('penrose'):add_pack('py-science-pack-2')
-TECHNOLOGY('quantum'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('advanced-electronics'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('aerogel'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('earnshaw-theorem'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('graphene'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('nano-tech'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('penrose'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('quantum'):add_pack('py-science-pack-2')
 
 --RECIPES--
 RECIPE('kicalk-plantation'):remove_unlock('kicalk')
@@ -168,7 +170,6 @@ RECIPE('harvester'):replace_ingredient("plastic-bar", "biopolymer"):add_ingredie
 
 RECIPE('harmonic-absorber'):add_ingredient({type = "item", name = "negasium", amount = 1})
 RECIPE('hyperelastic-material'):add_ingredient({type = "item", name = "hyaline", amount = 1})
-RECIPE('pressured-water'):remove_unlock('fusion-mk01'):add_unlock('coal-processing-1')
 RECIPE('arthurian-pen-mk03'):add_ingredient({type = "item", name = "carbon-nanotube", amount = 15})
 RECIPE('atomizer-mk03'):add_ingredient({type = "item", name = "carbon-nanotube", amount = 20}):add_ingredient({type = "item", name = "paramagnetic-material", amount = 20})
 RECIPE('auog-paddock-mk03'):add_ingredient({type = "item", name = "phosphate-glass", amount = 40})
@@ -350,6 +351,7 @@ RECIPE('sic'):remove_unlock('bioprocessing'):add_unlock('basic-electronics')
 RECIPE('pesticide-mk02'):add_ingredient({type = 'fluid', name = 'carbon-sulfide', amount = 50})
 RECIPE('pre-pesticide-01'):add_ingredient({type = 'item', name = 'phenol', amount = 10})
 RECIPE('ethyl-mercaptan'):replace_ingredient("nitrogen", "phosphorous-acid")
+RECIPE("liquid-manure"):remove_unlock("cottongut-science-mk01"):add_unlock("melamine")
 
 RECIPE('simik-food-01'):add_ingredient({type = "item", name = "cadaveric-arum", amount = 2})
 fun.add_ingredient('simik-food-01', {name = "cadaveric-arum", amount = 2})
@@ -612,7 +614,7 @@ RECIPE {
         {type = 'item', name = 'urea', amount = 30},
     },
     --main_product = "cocoon",
-}:add_unlock("biotech-mk01")
+}:add_unlock("melamine")
 
 RECIPE {
     type = 'recipe',
@@ -641,7 +643,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'cellulose', amount = 5}
     },
-}:add_unlock("kicalk")
+}:add_unlock("cellulose-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -1386,7 +1388,7 @@ RECIPE {
     icon_size = 64,
     subgroup = "py-rawores-recipes",
     order = "j"
-}:add_unlock("machines-mk02"):add_ingredient({type = 'item', name = 'fiberboard', amount = 1})
+}:add_unlock("starch-mk01"):add_ingredient({type = 'item', name = 'fiberboard', amount = 1})
 
 RECIPE {
     type = "recipe",
@@ -1407,7 +1409,7 @@ RECIPE {
     icon_size = 64,
     subgroup = "py-rawores-recipes",
     order = "j"
-}:add_unlock("machines-mk02"):add_ingredient({type = 'item', name = 'fiberboard', amount = 1})
+}:add_unlock("starch-mk02"):add_ingredient({type = 'item', name = 'fiberboard', amount = 1})
 
 ITEM {
     type = "item",

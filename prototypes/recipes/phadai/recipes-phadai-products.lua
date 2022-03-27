@@ -45,7 +45,7 @@ fun.autorecipes {
 					{name = 'used-phadai', add_amount = 5},
 				},
 			crafting_speed = 60,
-			tech = 'phadai',
+			tech = 'phadai-mk02',
 			name = 'Phadai Dance Dance Revolution 2',
 			--icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk01.png"
 		},
@@ -63,7 +63,7 @@ fun.autorecipes {
 					{name = 'used-phadai', add_amount = 5},
 				},
 			crafting_speed = 60,
-			tech = 'phadai',
+			tech = 'phadai-mk03',
 			name = 'Phadai Dance Dance Revolution 3',
 		},
 		--utility
@@ -79,7 +79,7 @@ fun.autorecipes {
 					{name = 'used-phadai', add_amount = 5},
 				},
 			crafting_speed = 60,
-			tech = 'phadai',
+			tech = 'phadai-mk04',
 			name = 'Phadai Dance Dance Revolution 4',
 		},
 	}

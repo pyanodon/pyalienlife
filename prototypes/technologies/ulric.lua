@@ -17,7 +17,7 @@ TECHNOLOGY {
     }
 }
 ]]--
-TECHNOLOGY('ulric'):set_fields{icon = "__pyalienlifegraphics__/graphics/technology/ulric.png"}
+TECHNOLOGY('ulric'):add_pack('logistic-science-pack'):set_fields{icon = "__pyalienlifegraphics__/graphics/technology/ulric.png"}
 
 TECHNOLOGY {
     type = "technology",
@@ -33,7 +33,7 @@ TECHNOLOGY {
         ingredients = {
             {"automation-science-pack", 1},
             {"logistic-science-pack", 1},
-            {'py-science-pack-2', 1},
+            -- {'py-science-pack-2', 1},
         },
         time = 50
     }
@@ -53,7 +53,7 @@ TECHNOLOGY {
         ingredients = {
             {"automation-science-pack", 1},
             {"logistic-science-pack", 1},
-            {'py-science-pack-2', 1},
+            -- {'py-science-pack-2', 1},
         },
         time = 50
     }
@@ -73,7 +73,7 @@ TECHNOLOGY {
         ingredients = {
             {"automation-science-pack", 1},
             {"logistic-science-pack", 1},
-            {'py-science-pack-2', 1},
+            -- {'py-science-pack-2', 1},
         },
         time = 50
     }

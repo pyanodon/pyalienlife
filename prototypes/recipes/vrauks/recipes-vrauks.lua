@@ -51,7 +51,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'vrauks-food-01', amount = 4},
     },
-}:add_unlock("food-mk01"):add_ingredient({type = "item", name = "fiberboard", amount = 1})
+}:add_unlock("vrauks"):add_ingredient({type = "item", name = "fiberboard", amount = 1})
 
 RECIPE {
     type = 'recipe',
@@ -76,7 +76,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'vrauks-food-02', amount = 6},
     },
-}:add_unlock("food-mk02"):add_ingredient({type = "item", name = "fiberboard", amount = 2})
+}:add_unlock("vrauks-mk02"):add_ingredient({type = "item", name = "fiberboard", amount = 2})
 
 ---caged---
 RECIPE {

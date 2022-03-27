@@ -6,7 +6,7 @@ RECIPE {
     ingredients = {
         {"concrete", 100},
         {"ticocr-alloy", 50},
-        {"super-alloy", 50},
+        {"super-steel", 50},
         {"vonix-den-mk01", 1},
         {"metallic-glass", 100},
         {"processing-unit", 20},

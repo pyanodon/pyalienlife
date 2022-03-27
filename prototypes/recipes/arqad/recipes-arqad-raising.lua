@@ -337,7 +337,7 @@ fun.autorecipes {
 					{name='guts-arqad', amount = 4}
 				},
 			crafting_speed = 140,
-			tech = 'growth-hormone'
+			tech = 'antitumor'
 		},
 	}
 }

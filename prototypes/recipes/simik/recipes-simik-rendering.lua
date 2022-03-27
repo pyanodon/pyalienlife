@@ -29,7 +29,7 @@ fun.autorecipes {
 					{name='brain', amount = 1},
 				},
 			crafting_speed = 30,
-			tech = 'rendering',
+			tech = 'simik-mk01',
 			name = 'full-render-simik',
 			icon = "__pyalienlifegraphics2__/graphics/icons/rendering-simik.png",
 			icon_size = 64,

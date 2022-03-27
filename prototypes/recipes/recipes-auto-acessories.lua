@@ -574,21 +574,23 @@ RECIPE {
 
 ------------------dimensional-gastricorg------------------
 
-RECIPE {
-    type = "recipe",
-    name = "dimensional-gastricorg",
-    category = "genlab",
-    enabled = false,
-    energy_required = 10,
-    ingredients = {
-        {type = 'item', name = 'caged-antelope', amount = 1}
-    },
-    results = {
-		{type = 'item', name = 'dimensional-gastricorg', amount = 1, probability = 0.5},
-		{type = 'item', name = 'cage-antelope', amount = 1},
-    },
-    main_product = "dimensional-gastricorg",
-}:add_unlock("nanochondria")
+if mods['pyhightech'] then
+    RECIPE {
+        type = "recipe",
+        name = "dimensional-gastricorg",
+        category = "genlab",
+        enabled = false,
+        energy_required = 10,
+        ingredients = {
+            {type = 'item', name = 'caged-antelope', amount = 1}
+        },
+        results = {
+            {type = 'item', name = 'dimensional-gastricorg', amount = 1, probability = 0.5},
+            {type = 'item', name = 'cage-antelope', amount = 1},
+        },
+        main_product = "dimensional-gastricorg",
+    }:add_unlock("nanochondria")
+end
 
 --[[
 ------------------Sternite-lung------------------

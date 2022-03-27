@@ -10,12 +10,12 @@ RECIPE {
         {"ticocr-alloy", 30},
         {"electric-engine-unit", 4},
         {"processing-unit", 50},
-        {"super-alloy", 50},
+        {"low-density-structure", 50},
     },
     results = {
         {"phadai-enclosure-mk03", 1}
     }
-}:add_unlock("phadai-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 100})
+}:add_unlock("land-animals-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 100})
 
 ITEM {
     type = "item",

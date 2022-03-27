@@ -18,7 +18,6 @@ fun.autorecipes {
 					{name = 'korlex', amount = 1},
                     {name='tuuphra-seeds', amount = 10},
 					{name='korlex-food-01', amount = 2},
-					{name='bedding', amount = 1},
 					{name='fish-hydrolysate-barrel', amount=5,return_barrel = true},
 					{name='water-barrel', amount=20,return_barrel = true},
 				},
@@ -36,6 +35,7 @@ fun.autorecipes {
 					{name='ash', amount = 20},
 					{name='fish-hydrolysate-barrel',remove_item = true},
 					{name='fish-emulsion-barrel', amount=5,return_barrel = true},
+					{name='bedding', amount = 1},
 				},
 			results =
 				{
@@ -204,7 +204,6 @@ fun.autorecipes {
 					{name = 'korlex-pup', amount = 2},
                     {name='tuuphra', amount =5},
                     {name='kicalk', amount =1, fallback = { name = 'raw-fiber', amount = 5 }},
-                    {name='bhoddos', amount =1},
 					{name='korlex-food-01', amount =1},
 					{name='water-barrel', amount=8,return_barrel = true},
 				},
@@ -223,6 +222,7 @@ fun.autorecipes {
 					{name='ash', amount = 10},
 					{name='bedding', amount = 2},
 					{name='fish', amount = 5},
+                    {name='bhoddos', amount =1},
 				},
 			results =
 				{

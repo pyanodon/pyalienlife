@@ -16,7 +16,7 @@ RECIPE {
     results = {
         {"bhoddos-culture-mk03", 1}
     }
-}:add_unlock("mycology-mk03")
+}:add_unlock("mycology-mk04")
 
 ITEM {
     type = "item",

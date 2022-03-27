@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"micro-mine-mk03", 1}
     }
-}:add_unlock("microbiology-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
+}:add_unlock("biotech-machines-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
 
 ITEM {
     type = "item",

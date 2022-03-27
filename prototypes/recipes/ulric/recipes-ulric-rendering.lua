@@ -27,7 +27,7 @@ fun.autorecipes {
 					{name='brain', amount = 1},
 				},
 			crafting_speed = 30,
-			tech = 'rendering',
+			tech = 'ulric',
 			name = 'full-render-ulrics',
 			icon = "__pyalienlifegraphics__/graphics/icons/rendering-ulric.png",
 			icon_size = 64,

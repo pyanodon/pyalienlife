@@ -13,7 +13,7 @@ RECIPE {
     results = {
         {"auog-paddock-mk04", 1}
     }
-}:add_unlock("auog-mk04")
+}:add_unlock("land-animals-mk04")
 
 ITEM {
     type = "item",

@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"ulric-corral-mk03", 1}
     }
-}:add_unlock("ulric-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 25})
+}:add_unlock("land-animals-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 25})
 
 ITEM {
     type = "item",

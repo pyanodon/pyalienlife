@@ -13,7 +13,7 @@ RECIPE {
     results = {
         {"arqad-hive-mk04", 1}
     }
-}:add_unlock("arqad-mk04")
+}:add_unlock("land-animals-mk04")
 
 ITEM {
     type = "item",

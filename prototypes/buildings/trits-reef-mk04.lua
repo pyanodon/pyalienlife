@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"trits-reef-mk04", 1}
     }
-}:add_unlock("trits-mk04")
+}:add_unlock("water-animals-mk04")
 
 ITEM {
     type = "item",

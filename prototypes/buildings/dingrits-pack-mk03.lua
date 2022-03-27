@@ -5,7 +5,7 @@ RECIPE {
     enabled = false,
     ingredients = {
         {"dingrits-pack-mk02", 1},
-        {"super-alloy", 30},
+        {"low-density-structure", 30},
         {"molybdenum-plate", 50},
         {"stainless-steel", 40},
         {"nexelit-plate", 30},
@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"dingrits-pack-mk03", 1}
     }
-}:add_unlock("dingrits-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 40})
+}:add_unlock("land-animals-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 40})
 
 ITEM {
     type = "item",

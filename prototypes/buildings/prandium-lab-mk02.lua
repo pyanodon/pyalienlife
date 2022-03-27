@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"prandium-lab-mk02", 1}
     }
-}:add_unlock("cottongut-mk02"):add_ingredient('small-parts-02')
+}:add_unlock("land-animals-mk02"):add_ingredient('small-parts-02')
 
 ITEM {
     type = "item",

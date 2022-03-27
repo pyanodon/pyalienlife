@@ -13,7 +13,7 @@ RECIPE {
     results = {
         {"prandium-lab-mk03", 1}
     }
-}:add_unlock("cottongut-mk03")
+}:add_unlock("land-animals-mk03")
 
 ITEM {
     type = "item",

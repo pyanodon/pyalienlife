@@ -6,7 +6,7 @@ RECIPE {
     ingredients = {
         {"ticocr-alloy", 30},
         {"cridren-enclosure-mk02", 1},
-        {"super-alloy", 40},
+        {"low-density-structure", 40},
         {"py-heat-exchanger", 1},
         {"stainless-steel", 30},
         {"processing-unit", 30},

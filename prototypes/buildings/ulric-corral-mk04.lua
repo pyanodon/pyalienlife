@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"ulric-corral-mk04", 1}
     }
-}:add_unlock("ulric-mk04")
+}:add_unlock("land-animals-mk04")
 
 ITEM {
     type = "item",

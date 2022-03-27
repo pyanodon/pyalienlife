@@ -313,7 +313,7 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'ethanol', amount = 200},
     },
-}:add_unlock("arqad")
+}:add_unlock("arqad-mk02")
 
 ---pup maker---
 

@@ -6,7 +6,7 @@ RECIPE {
     ingredients = {
         {"grods-swamp-mk02", 1},
         {"molybdenum-plate", 15},
-        {"super-alloy", 20},
+        {"low-density-structure", 20},
         {"processing-unit", 40},
         {"electric-engine-unit", 8},
         {"nexelit-plate", 40},
@@ -15,7 +15,7 @@ RECIPE {
     results = {
         {"grods-swamp-mk03", 1}
     }
-}:add_unlock("grod-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
+}:add_unlock("botany-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
 
 ITEM {
     type = "item",

@@ -9,12 +9,12 @@ RECIPE {
         {"nenbit-matrix", 50},
         {"xenopen-mk03", 1},
         {"wall-shield", 15},
-        {"low-density-structure", 20},
+        {"super-alloy", 20},
     },
     results = {
         {"xenopen-mk04", 1}
     }
-}:add_unlock("xeno-mk04")
+}:add_unlock("land-animals-mk04")
 
 ITEM {
     type = "item",

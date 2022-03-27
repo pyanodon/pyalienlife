@@ -16,7 +16,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tree",
-    category = "fwf",
+    category = "nursery",
     enabled = false,
     energy_required = 30,
     ingredients = {

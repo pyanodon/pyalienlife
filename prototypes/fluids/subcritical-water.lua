@@ -11,7 +11,7 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'subcritical-water', amount = 50},
     },
-}:add_unlock("biotech-mk01")
+}:add_unlock("cottongut-science-mk01")
 
 RECIPE {
     type = 'recipe',

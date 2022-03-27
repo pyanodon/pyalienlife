@@ -16,7 +16,7 @@ RECIPE {
     results = {
         {"research-center-mk02", 1}
     }
-}:add_unlock("biotech-mk02")
+}:add_unlock("biotech-machines-mk02")
 
 ITEM {
     type = "item",

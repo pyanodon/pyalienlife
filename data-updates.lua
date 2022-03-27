@@ -321,7 +321,7 @@ RECIPE('military-science-pack'):change_category('research')
 RECIPE('production-science-pack'):change_category('research')
 RECIPE('utility-science-pack'):change_category('research'):add_ingredient({type = "item", name = "perfect-samples", amount = 1})
 
-RECIPE('hotair-empty-petri-dish'):add_unlock('coal-processing-1'):set_fields{enabled = false}
+RECIPE('hotair-empty-petri-dish'):add_unlock('hot-air-mk01'):set_fields{enabled = false}
 -- Add our next upgrades
 local searchtypes = {
     'turret',

@@ -15,7 +15,7 @@ RECIPE {
     results = {
         {"rennea-plantation-mk03", 1}
     }
-}:add_unlock("rennea-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
+}:add_unlock("botany-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
 
 ITEM {
     type = "item",

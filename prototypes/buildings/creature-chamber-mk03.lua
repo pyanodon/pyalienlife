@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"creature-chamber-mk03", 1}
     }
-}:add_unlock("biotech-mk03")
+}:add_unlock("biotech-machines-mk03")
 
 ITEM {
     type = "item",

@@ -9,12 +9,12 @@ RECIPE {
         {"ticocr-alloy", 20},
         {"processing-unit", 30},
         {"nexelit-plate", 50},
-        {"super-alloy", 40},
+        {"low-density-structure", 40},
     },
     results = {
         {"scrondrix-pen-mk03", 1}
     }
-}:add_unlock("scrondrix-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
+}:add_unlock("land-animals-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
 
 ITEM {
     type = "item",

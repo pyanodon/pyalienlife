@@ -124,7 +124,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'primers', amount = 1},
     },
-}:add_unlock("genetics-mk02")
+}:add_unlock("genetics-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -144,7 +144,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'primers', amount = 3},
     },
-}:add_unlock("genetics-mk02")
+}:add_unlock("genetics-mk04")
 
 RECIPE {
     type = 'recipe',

@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"rennea-plantation-mk04", 1}
     }
-}:add_unlock("rennea-mk04")
+}:add_unlock("botany-mk04")
 
 ITEM {
     type = "item",

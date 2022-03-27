@@ -23,7 +23,7 @@ RECIPE {
     results = {
         {"cadaveric-arum-mk04", 1}
     }
-}:add_unlock("cadaveric-arum-mk04")
+}:add_unlock("botany-mk04")
 
 ITEM {
     type = "item",

@@ -7,7 +7,7 @@ RECIPE {
         {"concrete", 20},
         {"gate", 1},
         {"nbfe-alloy", 20},
-        {"agzn-alloy", 20},
+        {"sncr-alloy", 20},
         {"big-electric-pole", 8},
         {"lens", 10},
         {"advanced-circuit", 20},

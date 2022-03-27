@@ -15,7 +15,7 @@ RECIPE {
     results = {
         {"tuuphra-plantation-mk02", 1}
     }
-}:add_unlock("tuuphra-mk02")
+}:add_unlock("botany-mk02")
 
 ITEM {
     type = "item",

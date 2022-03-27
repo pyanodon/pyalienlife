@@ -155,7 +155,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'sea-sponge-sprouts', amount = 4},
     },
-}:add_unlock("water-invertebrates-mk01")
+}:add_unlock("water-invertebrates-mk02")
 
 RECIPE {
     type = 'recipe',

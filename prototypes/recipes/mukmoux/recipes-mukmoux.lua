@@ -48,12 +48,12 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'earth-generic-sample', amount = 1},
         {type = 'item', name = 'logistic-science-pack', amount = 5},
-        {type = 'item', name = 'mukmoux-codex', amount = 1},
+        {type = 'item', name = 'korlex-codex', amount = 1},
     },
     results = {
         {type = 'item', name = 'earth-cow-sample', amount = 1},
     },
-}:add_unlock("mukmoux")
+}:add_unlock("korlex")
 
 ----food----
 RECIPE {
@@ -75,7 +75,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'mukmoux-food-01', amount = 3},
     },
-}:add_unlock("food-mk02")
+}:add_unlock("mukmoux")
 
 RECIPE {
     type = 'recipe',
@@ -98,7 +98,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'mukmoux-food-02', amount = 5},
     },
-}:add_unlock("food-mk03")
+}:add_unlock("mukmoux-mk03")
 
 ---breeding---
 

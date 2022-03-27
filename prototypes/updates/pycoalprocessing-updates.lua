@@ -1,9 +1,9 @@
 local fun = require("prototypes/functions/functions")
 
 --TECHNOLOGY--
-TECHNOLOGY('coal-processing-3'):add_pack('py-science-pack-2')
-TECHNOLOGY('energy-3'):add_pack('py-science-pack-2')
-TECHNOLOGY('excavation-2'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('coal-processing-3'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('energy-3'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('excavation-2'):add_pack('py-science-pack-2')
 --TECHNOLOGY('fuel-production'):add_pack('py-science-pack-2')
 
 --BUILDINDS--
@@ -11,15 +11,15 @@ ITEM("fawogae-plantation-mk02"):set("icon", "__pyalienlifegraphics__/graphics/ic
 ITEM("fawogae-plantation-mk03"):set("icon", "__pyalienlifegraphics__/graphics/icons/fawogae-plantation-mk03.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-buildings-mk03", "d")
 ITEM("fawogae-plantation-mk04"):set("icon", "__pyalienlifegraphics__/graphics/icons/fawogae-plantation-mk04.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-buildings-mk04", "d")
 RECIPE('fawogae-plantation-mk01'):set_fields {enabled = false}
-RECIPE('fawogae-plantation-mk02'):add_unlock('mycology-mk02'):subgroup_order("py-alienlife-buildings-mk02", "b")
+RECIPE('fawogae-plantation-mk02'):add_unlock('mycology-mk03'):subgroup_order("py-alienlife-buildings-mk02", "b")
 data.raw['assembling-machine']['fawogae-plantation-mk02'].crafting_speed = 0.1
 data.raw['assembling-machine']['fawogae-plantation-mk02'].module_specification = {module_slots = 45}
 
-RECIPE('fawogae-plantation-mk03'):add_unlock('mycology-mk03'):subgroup_order("py-alienlife-buildings-mk03", "b")
+RECIPE('fawogae-plantation-mk03'):add_unlock('mycology-mk04'):subgroup_order("py-alienlife-buildings-mk03", "b")
 data.raw['assembling-machine']['fawogae-plantation-mk03'].crafting_speed = 0.1
 data.raw['assembling-machine']['fawogae-plantation-mk03'].module_specification = {module_slots = 65}
 
-RECIPE('fawogae-plantation-mk04'):add_unlock('mycology-mk04'):subgroup_order("py-alienlife-buildings-mk04", "b")
+RECIPE('fawogae-plantation-mk04'):add_unlock('mycology-mk05'):subgroup_order("py-alienlife-buildings-mk04", "b")
 data.raw['assembling-machine']['fawogae-plantation-mk04'].crafting_speed = 0.1
 data.raw['assembling-machine']['fawogae-plantation-mk04'].module_specification = {module_slots = 88}
 
@@ -31,7 +31,7 @@ RECIPE("ralesia"):remove_unlock('ralesia')
 RECIPE('bonemeal'):remove_unlock('ulric')
 RECIPE('coal-fawogae'):remove_unlock('coal-processing-1'):add_unlock('fawogae')
 
-RECIPE('botanical-nursery'):remove_unlock('coal-processing-1'):subgroup_order("py-alienlife-buildings-mk01", "b"):set_fields {enabled = true}--:add_unlock('botany-mk01')
+RECIPE('botanical-nursery'):remove_unlock('wood-processing'):subgroup_order("py-alienlife-buildings-mk01", "b"):set_fields {enabled = true}--:add_unlock('botany-mk01')
 RECIPE('botanical-nursery-mk02'):remove_unlock('machines-mk02'):add_unlock('botany-mk02'):subgroup_order("py-alienlife-buildings-mk02", "b")
 RECIPE('botanical-nursery-mk03'):remove_unlock('machines-mk03'):add_unlock('botany-mk03'):subgroup_order("py-alienlife-buildings-mk03", "b")
 RECIPE('botanical-nursery-mk04'):remove_unlock('machines-mk04'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk04", "b")
@@ -75,6 +75,9 @@ RECIPE('mukmoux-fat'):remove_unlock('coal-processing-2')
 RECIPE('log-organics'):remove_unlock('coal-processing-2')
 RECIPE('organics-from-wood'):remove_unlock('coal-processing-2')
 RECIPE('soil-separation'):remove_unlock('separation')
+RECIPE("ground-sample01"):remove_unlock("logistic-science-pack"):add_unlock("mycology-mk01")
+RECIPE("oleochemicals"):remove_unlock("mukmoux"):add_unlock("coal-processing-2")
+RECIPE("dedicated-oleochemicals"):remove_unlock("mukmoux"):add_unlock("coal-processing-2")
 
 fun.results_replacer("log2", "log", "log",4)
 fun.results_replacer("log4", "log", "log",5)
@@ -83,9 +86,13 @@ fun.results_replacer("log5", "log", "log",7)
 fun.results_replacer("log6", "log", "log",8)
 
 data.raw["recipe-category"]["fawogae"].allowed_module_categories = { "fawogae" }
+data.raw["recipe-category"]["fawogae"].modules_required = true
 data.raw["recipe-category"]["mukmoux"].allowed_module_categories = { "mukmoux" }
+data.raw["recipe-category"]["mukmoux"].modules_required = true
 data.raw["recipe-category"]["ralesia"].allowed_module_categories = { "ralesia" }
+data.raw["recipe-category"]["ralesia"].modules_required = true
 data.raw["recipe-category"]["ulric"].allowed_module_categories = { "ulric" }
+data.raw["recipe-category"]["ulric"].modules_required = true
 
 ----EXCLUSIVE RECIPES----
 

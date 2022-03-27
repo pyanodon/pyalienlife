@@ -58,7 +58,7 @@ RECIPE {
         {type = 'item', name = 'copper-ore', amount = 20},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion")
+}:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = 'recipe',

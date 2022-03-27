@@ -16,7 +16,7 @@ RECIPE {
         {"glass", 50},
         {"steam-engine", 2},
         {"gasifier", 1},
-        {"nexelit-plate", 30},
+        {"titanium-plate", 30},
         --{"plastic-bar", 30},
         {"iron-gear-wheel", 30},
         {"duralumin", 15},

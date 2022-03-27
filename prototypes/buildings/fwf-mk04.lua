@@ -7,7 +7,7 @@ RECIPE {
         {"fwf-mk03", 1},
         {"science-coating", 30},
         {"wall-shield", 10},
-        {"low-density-structure", 30},
+        {"super-alloy", 30},
         {"kevlar", 100},
         {"control-unit", 40},
     },
