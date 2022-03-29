@@ -216,6 +216,8 @@ RECIPE {
         {type = 'item', name = 'fe-biomass', amount = 20},
         {type = 'item', name = 'solidified-sarcorus', amount = 20},
         {type = 'item', name = 'alien-sample-02', amount = 20},
+        {type = 'item', name = 'plastic-bar', amount = 10},
+        {type = 'item', name = 'steel-plate', amount = 10},
     },
     results = {
         {type = 'item', name = 'py-science-pack-1', amount = 3},

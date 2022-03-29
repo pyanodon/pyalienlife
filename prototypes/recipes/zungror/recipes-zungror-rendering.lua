@@ -33,7 +33,7 @@ fun.autorecipes {
 			crafting_speed = 30,
 			tech = 'zungror',
 			name = 'full-render-zun',
-			icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
+			icon = "__pyalienlifegraphics3__/graphics/icons/rendering-zungror.png",
 			icon_size = 64,
 		},
 		--brain zungror rendering
