@@ -148,22 +148,24 @@ local function disable_machine(entity)
     E.active = false
     local stopsign
     local signtype
-    for f,farm in pairs(farm_buildings) do
-        if animal_farm_buildings[string.match(E.name, farm)] then
-            signtype = "animal"
-        elseif plant_farm_buildings[string.match(E.name, farm)] then
-            signtype = "plant"
-        elseif fungus_farm_buildings[string.match(E.name, farm)] then
-            signtype = "fungi"
+    if global.farm_rendered_icons[E.unit_number] == nil then
+        for f,farm in pairs(farm_buildings) do
+            if animal_farm_buildings[string.match(E.name, farm)] then
+                signtype = "animal"
+            elseif plant_farm_buildings[string.match(E.name, farm)] then
+                signtype = "plant"
+            elseif fungus_farm_buildings[string.match(E.name, farm)] then
+                signtype = "fungi"
+            end
         end
+        stopsign = rendering.draw_sprite{
+            sprite = "no_module_" .. signtype,
+            render_layer = "188",
+            target = E.position,
+            surface = E.surface.name
+        }
+        global.farm_rendered_icons[E.unit_number] = stopsign
     end
-    stopsign = rendering.draw_sprite{
-        sprite = "no_module_" .. signtype,
-        render_layer = "188",
-        target = E.position,
-        surface = E.surface.name
-    }
-    global.farm_rendered_icons[E.unit_number] = stopsign
 end
 
 
