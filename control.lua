@@ -254,6 +254,40 @@ end)
 
 script.on_configuration_changed(function()
 
+    --[[
+    log(serpent.block(global.farms))
+    log(serpent.block(global.indexed_farm_list))
+    log(serpent.block(global.total_farm_count))
+    log(serpent.block(global.checked_farm_counter))
+    log(serpent.block(global.farm_rendered_icons))
+    ]]--
+
+    rendering.clear("pyalienlife")
+
+    global.farms = {}
+    global.indexed_farm_list = {}
+    global.total_farm_count = 0
+    global.checked_farm_counter = 1
+    global.farm_rendered_icons = {}
+
+    local stuff = game.surfaces['nauvis'].find_entities_filtered{type = "assembling-machine"}
+
+    for e, entity in pairs(stuff) do
+        for f, farm in pairs(farm_buildings) do
+            if string.match(entity.name, farm) then
+                disable_machine(entity)
+            end
+        end
+    end
+
+    --[[
+    log(serpent.block(global.farms))
+    log(serpent.block(global.indexed_farm_list))
+    log(serpent.block(global.total_farm_count))
+    log(serpent.block(global.checked_farm_counter))
+    log(serpent.block(global.farm_rendered_icons))
+    ]]--
+
 end)
 
 local function caravan_scheduler_gui(event)
