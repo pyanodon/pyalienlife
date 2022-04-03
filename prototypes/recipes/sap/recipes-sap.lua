@@ -15,8 +15,16 @@ for _, tree in pairs(data.raw.tree) do
                 amount = 5,
                 probability = 0.005
             }
+            local mine_results_3 =
+            {
+                type = 'item',
+                name = 'tree-mk01',
+                amount = 1,
+                probability = 0.25
+            }
         table.insert(tree.minable.results, mine_results_1)
         table.insert(tree.minable.results, mine_results_2)
+        table.insert(tree.minable.results, mine_results_3)
     elseif tree.minable ~= nil and tree.minable.result == 'wood' then
         tree.minable.result = nil
         tree.minable.results =
@@ -37,7 +45,13 @@ for _, tree in pairs(data.raw.tree) do
                     name = 'sap-seeds',
                     amount = 5,
                     probability = 0.005
-                }
+                },
+                {
+                    type = 'item',
+                    name = 'tree-mk01',
+                    amount = 1,
+                    probability = 0.25
+                },
             }
     end
 end
