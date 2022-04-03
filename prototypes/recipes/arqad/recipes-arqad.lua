@@ -212,7 +212,7 @@ RECIPE {
         {type = 'item', name = 'rennea', amount = 1},
         {type = 'item', name = 'saps', amount = 10},
         {type = 'item', name = 'wax-barrel', amount = 1},
-        {type = 'item', name = 'filled-canister-naphtha', amount = 3},
+        {type = 'item', name = 'naphtha-barrel', amount = 3},
     },
     results = {
         {type = 'item', name = 'arqad-propolis', amount = 2},  --FUTURE USE IN PESTICIDE PRODUCTION--
@@ -297,7 +297,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'sugar', amount = 4},
     },
-}:add_unlock("arqad-mk02")
+}:add_unlock("arqad-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -313,7 +313,7 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'ethanol', amount = 200},
     },
-}:add_unlock("arqad-mk02")
+}:add_unlock("arqad-mk03")
 
 ---pup maker---
 

@@ -41,6 +41,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
+        {type = 'item', name = 'tin-plate', amount = 1},
         {type = 'item', name = 'fawogae', amount = 5},
         {type = 'item', name = 'moss', amount = 10},
         {type = 'item', name = 'wood-seeds', amount = 10},
@@ -51,7 +52,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'vrauks-food-01', amount = 4},
     },
-}:add_unlock("vrauks"):add_ingredient({type = "item", name = "fiberboard", amount = 1})
+}:add_unlock("vrauks")
 
 RECIPE {
     type = 'recipe',

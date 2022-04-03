@@ -117,7 +117,7 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'arthurian-egg-mk02-gmo',
+    name = 'arthurian-egg-mk03-gmo',
     category = 'arthurian',
     enabled = false,
     energy_required = 30,

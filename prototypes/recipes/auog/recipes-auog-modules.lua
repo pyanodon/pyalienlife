@@ -14,7 +14,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'auog-pup', amount = 1},
-        {type = 'item', name = 'nanofibrils', amount = 2},
+        {type = 'item', name = 'casein', amount = 2},
         {type = 'item', name = 'energy-drink', amount =1},
         {type = 'item', name = 'albumin', amount =10},
         --{type = 'item', name = 'immunosupressants', amount =2},

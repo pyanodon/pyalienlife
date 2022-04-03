@@ -90,7 +90,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 30,
-			tech = 'growth-hormone'
+			tech = 'schrodinger-antelope'
 		},
 		--antiviral and gh
 		{
@@ -104,7 +104,7 @@ fun.autorecipes {
 					{name='caged-antelope', probability = 0.7, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 30,
-			tech = 'antiviral'
+			tech = 'schrodinger-antelope'
 		},
 		--antiviral
 		{
@@ -118,7 +118,7 @@ fun.autorecipes {
 
 				},
 			crafting_speed = 90,
-			tech = 'antiviral'
+			tech = 'schrodinger-antelope'
 		},
 	}
 }

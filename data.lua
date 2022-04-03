@@ -121,6 +121,8 @@ require('prototypes/technologies/silicon-carbide')
 require('prototypes/technologies/cobalt')
 require('prototypes/technologies/neuro-electronics')
 require('prototypes/technologies/biotech-machines')
+require('prototypes/technologies/biobattery')
+require('prototypes/technologies/seaweed')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")

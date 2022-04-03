@@ -28,7 +28,7 @@ RECIPE {
     results = {
         {type = 'item', name = "seaweed", amount = 20},
     },
-}:add_unlock("botany-mk01")
+}:add_unlock("seaweed-mk01")
 
 RECIPE {
     type = 'recipe',
@@ -45,7 +45,7 @@ RECIPE {
     results = {
         {type = 'item', name = "seaweed", amount = 30},
     },
-}:add_unlock("botany-mk02")
+}:add_unlock("seaweed-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -63,7 +63,7 @@ RECIPE {
     results = {
         {type = 'item', name = "seaweed", amount = 60},
     },
-}:add_unlock("botany-mk03")
+}:add_unlock("seaweed-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -81,4 +81,4 @@ RECIPE {
     results = {
         {type = 'item', name = "seaweed", amount = 120},
     },
-}:add_unlock("botany-mk04"):add_ingredient({type = "item", name = "powdered-phosphate-rock", amount = 10})
+}:add_unlock("seaweed-mk04"):add_ingredient({type = "item", name = "powdered-phosphate-rock", amount = 10})

@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/phagnot.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"land-animals-mk02","food-mk01","biotech-mk02"},
+    prerequisites = {"land-animals-mk02","biotech-mk02"},
     effects = {},
     unit = {
         count = 200,

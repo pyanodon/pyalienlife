@@ -41,7 +41,7 @@ fun.autorecipes {
                     {name='empty-comb', amount = 5},
                     {name='native-flora', amount =10},
 					{name='saps', amount =4},
-					{name='filled-canister-crude-oil', amount=2,return_barrel = true},
+					{name='crude-oil-barrel', amount=2,return_barrel = true},
 				},
 			results =
 				{

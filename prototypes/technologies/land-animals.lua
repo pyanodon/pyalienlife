@@ -59,7 +59,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "land-animals-mk04",
-    icon = "__pyalienlifegraphics__/graphics/technology/land-animals-mk03.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/land-animals-mk04.png",
     icon_size = 128,
     order = "c-a",
     dependencies = {"land-animals-mk03"},

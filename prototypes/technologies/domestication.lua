@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/domestication-1.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"auog","land-animals-mk01","food-mk01"},
+    prerequisites = {"auog","land-animals-mk01"},
     effects = {},
     unit = {
         count = 100,
@@ -49,7 +49,28 @@ TECHNOLOGY {
         ingredients = {
             {"automation-science-pack", 4},
             {"logistic-science-pack", 3},
-            -- {'py-science-pack-2', 1},
+            {"chemical-science-pack", 3},
+        },
+        time = 50
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "domestication-mk04",
+    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {"domestication-mk02","dingrits","chitin"},
+    dependencies = {"domestication-mk03"},
+    effects = {},
+    unit = {
+        count = 200,
+        ingredients = {
+            {"automation-science-pack", 4},
+            {"logistic-science-pack", 3},
+            {"chemical-science-pack", 3},
+            {"production-science-pack", 3},
         },
         time = 50
     }

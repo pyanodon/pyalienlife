@@ -1,11 +1,9 @@
---[[
 TECHNOLOGY {
     type = "technology",
-    name = "ralesia",
-    icon = "__pyalienlifegraphics__/graphics/technology/ralesia.png",
+    name = "seaweed-mk01",
+    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"botany-mk01"},
     effects = {},
     unit = {
         count = 150,
@@ -15,22 +13,21 @@ TECHNOLOGY {
         time = 50
     }
 }
-]]--
-TECHNOLOGY('ralesia'):set_fields{icon = "__pyalienlifegraphics__/graphics/technology/ralesia.png"}
 
 TECHNOLOGY {
     type = "technology",
-    name = "ralesia-mk02",
+    name = "seaweed-mk02",
     icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"ralesia"},
+    dependencies = {"seaweed-mk01"},
     effects = {},
     unit = {
-        count = 150,
+        count = 200,
         ingredients = {
             {"automation-science-pack", 1},
             {"logistic-science-pack", 1},
+            -- {'py-science-pack-2', 1}
         },
         time = 50
     }
@@ -38,17 +35,18 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = "technology",
-    name = "ralesia-mk03",
+    name = "seaweed-mk03",
     icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"ralesia-mk02"},
+    dependencies = {"seaweed-mk02"},
     effects = {},
     unit = {
-        count = 150,
+        count = 250,
         ingredients = {
-            {"automation-science-pack", 1},
+            {"automation-science-pack", 2},
             {"logistic-science-pack", 1},
+            -- {'py-science-pack-2', 1},
         },
         time = 50
     }
@@ -56,17 +54,18 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = "technology",
-    name = "ralesia-mk04",
+    name = "seaweed-mk04",
     icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"ralesia-mk03"},
+    dependencies = {"seaweed-mk03"},
     effects = {},
     unit = {
-        count = 150,
+        count = 350,
         ingredients = {
-            {"automation-science-pack", 1},
-            {"logistic-science-pack", 1},
+            {'automation-science-pack', 1},
+            {'logistic-science-pack', 1},
+            -- {'py-science-pack-2', 1},
         },
         time = 50
     }

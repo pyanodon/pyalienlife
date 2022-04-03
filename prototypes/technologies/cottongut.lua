@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/cottongut.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"land-animals-mk01","food-mk01","biotech-mk01"},
+    prerequisites = {"land-animals-mk01","biotech-mk01"},
     effects = {},
     unit = {
         count = 100,
@@ -30,7 +30,7 @@ TECHNOLOGY {
         ingredients = {
             {"automation-science-pack", 1},
             {"logistic-science-pack", 1},
-            -- {'py-science-pack-2', 1}
+            {"chemical-science-pack", 1},
         },
         time = 50
     }
@@ -50,7 +50,7 @@ TECHNOLOGY {
         ingredients = {
             {"automation-science-pack", 1},
             {"logistic-science-pack", 1},
-            -- {'py-science-pack-2', 1},
+            {"chemical-science-pack", 1},
         },
         time = 50
     }
@@ -70,7 +70,8 @@ TECHNOLOGY {
         ingredients = {
             {"automation-science-pack", 1},
             {"logistic-science-pack", 1},
-            -- {'py-science-pack-2', 1},
+            {"chemical-science-pack", 1},
+            {"production-science-pack", 1},
         },
         time = 50
     }

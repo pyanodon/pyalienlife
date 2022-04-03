@@ -1028,7 +1028,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'hyaline', amount = 1}
     }
-}:add_unlock('bmp'):add_ingredient({type = "item", name = "collagen", amount = 3})
+}:add_unlock('biotech-mk04'):add_ingredient({type = "item", name = "collagen", amount = 3})
 
 RECIPE {
     type = "recipe",
@@ -1195,7 +1195,7 @@ RECIPE {
         {type = 'item', name = 'filtration-media', amount = 3},
     },
     order = 'b'
-}:add_unlock("biotech-mk02")
+}:add_unlock("cellulose-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -1243,7 +1243,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'biofilm', amount = 4},
     },
-}:add_unlock("biotech-mk02")
+}:add_unlock("biofilm")
 
 RECIPE {
     type = 'recipe',
@@ -1610,7 +1610,7 @@ RECIPE {
         {type = 'fluid', name = 'b-molasse', amount = 100},
     },
     --main_product = "b-molasse",
-}:add_unlock("energy-drink")
+}:add_unlock("pesticides-mk01")
 
 RECIPE {
     type = "recipe",
@@ -1627,7 +1627,7 @@ RECIPE {
         {type = 'fluid', name = 'ethanol', amount = 100},
     },
     --main_product = "b-molasse",
-}:add_unlock("energy-drink")
+}:add_unlock("pesticides-mk01")
 
 RECIPE {
     type = "recipe",
@@ -1798,7 +1798,7 @@ RECIPE {
         {type = 'item', name = 'filtration-media', amount = 75},
     },
     order = 'c'
-}:add_unlock("chitin"):add_ingredient({type = "item", name = "micro-fiber", amount = 15})
+}:add_unlock("filtration-2"):add_ingredient({type = "item", name = "micro-fiber", amount = 15})
 
 RECIPE {
     type = 'recipe',
@@ -1817,7 +1817,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'biobattery', amount = 5},
     },
-}:add_unlock("chitin"):add_ingredient({type = "item", name = "ceramic", amount = 5})
+}:add_unlock("biobattery"):add_ingredient({type = "item", name = "ceramic", amount = 5})
 
 RECIPE {
     type = 'recipe',

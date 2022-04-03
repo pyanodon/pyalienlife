@@ -482,82 +482,82 @@ ITEM {
     stack_size = 50
 }
 
--- ITEM {
---     type = "item",
---     name = "brain-caged-mukmoux",
---     icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-mukmoux.png",
--- 	icon_size = 64,
---     flags = {},
---     subgroup = "py-alienlife-mukmoux",
---     order = "a",
---     stack_size = 50
--- }
+ITEM {
+    type = "item",
+    name = "brain-caged-mukmoux",
+    icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-mukmoux.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-mukmoux",
+    order = "a",
+    stack_size = 50
+}
 
--- ITEM {
---     type = "item",
---     name = "bone-caged-mukmoux",
---     icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-mukmoux.png",
--- 	icon_size = 64,
---     flags = {},
---     subgroup = "py-alienlife-mukmoux",
---     order = "a",
---     stack_size = 50
--- }
+ITEM {
+    type = "item",
+    name = "bone-caged-mukmoux",
+    icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-mukmoux.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-mukmoux",
+    order = "a",
+    stack_size = 50
+}
 
--- ITEM {
---     type = "item",
---     name = "meat-caged-mukmoux",
---     icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-mukmoux.png",
--- 	icon_size = 64,
---     flags = {},
---     subgroup = "py-alienlife-mukmoux",
---     order = "a",
---     stack_size = 50
--- }
+ITEM {
+    type = "item",
+    name = "meat-caged-mukmoux",
+    icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-mukmoux.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-mukmoux",
+    order = "a",
+    stack_size = 50
+}
 
--- ITEM {
---     type = "item",
---     name = "skin-caged-mukmoux",
---     icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-mukmoux.png",
--- 	icon_size = 64,
---     flags = {},
---     subgroup = "py-alienlife-mukmoux",
---     order = "a",
---     stack_size = 50
--- }
+ITEM {
+    type = "item",
+    name = "skin-caged-mukmoux",
+    icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-mukmoux.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-mukmoux",
+    order = "a",
+    stack_size = 50
+}
 
--- ITEM {
---     type = "item",
---     name = "blood-caged-mukmoux",
---     icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-mukmoux.png",
--- 	icon_size = 64,
---     flags = {},
---     subgroup = "py-alienlife-mukmoux",
---     order = "a",
---     stack_size = 50
--- }
+ITEM {
+    type = "item",
+    name = "blood-caged-mukmoux",
+    icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-mukmoux.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-mukmoux",
+    order = "a",
+    stack_size = 50
+}
 
--- ITEM {
---     type = "item",
---     name = "guts-caged-mukmoux",
---     icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-mukmoux.png",
--- 	icon_size = 64,
---     flags = {},
---     subgroup = "py-alienlife-mukmoux",
---     order = "a",
---     stack_size = 50
--- }
+ITEM {
+    type = "item",
+    name = "guts-caged-mukmoux",
+    icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-mukmoux.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-mukmoux",
+    order = "a",
+    stack_size = 50
+}
 
--- ITEM {
---     type = "item",
---     name = "fat-caged-mukmoux",
---     icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-mukmoux.png",
--- 	icon_size = 64,
---     flags = {},
---     subgroup = "py-alienlife-mukmoux",
---     order = "a",
---     stack_size = 50
--- }
+ITEM {
+    type = "item",
+    name = "fat-caged-mukmoux",
+    icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-mukmoux.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-mukmoux",
+    order = "a",
+    stack_size = 50
+}
 
 ITEM {
     type = "item",
@@ -3184,60 +3184,60 @@ ITEM {
     stack_size = 50
 }
 
--- ITEM {
---     type = "item",
---     name = "meat-caged-kmauts",
---     icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-kmauts.png",
---     icon_size = 64,
---     flags = {},
---     subgroup = "py-alienlife-kmauts",
---     order = "a",
---     stack_size = 50
--- }
+ITEM {
+    type = "item",
+    name = "meat-caged-kmauts",
+    icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-kmauts.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-kmauts",
+    order = "a",
+    stack_size = 50
+}
 
--- ITEM {
---     type = "item",
---     name = "blood-caged-kmauts",
---     icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-kmauts.png",
---     icon_size = 64,
---     flags = {},
---     subgroup = "py-alienlife-kmauts",
---     order = "a",
---     stack_size = 50
--- }
+ITEM {
+    type = "item",
+    name = "blood-caged-kmauts",
+    icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-kmauts.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-kmauts",
+    order = "a",
+    stack_size = 50
+}
 
--- ITEM {
---     type = "item",
---     name = "guts-caged-kmauts",
---     icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-kmauts.png",
---     icon_size = 64,
---     flags = {},
---     subgroup = "py-alienlife-kmauts",
---     order = "a",
---     stack_size = 50
--- }
+ITEM {
+    type = "item",
+    name = "guts-caged-kmauts",
+    icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-kmauts.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-kmauts",
+    order = "a",
+    stack_size = 50
+}
 
--- ITEM {
---     type = "item",
---     name = "fat-caged-kmauts",
---     icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-kmauts.png",
---     icon_size = 64,
---     flags = {},
---     subgroup = "py-alienlife-kmauts",
---     order = "a",
---     stack_size = 50
--- }
+ITEM {
+    type = "item",
+    name = "fat-caged-kmauts",
+    icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-kmauts.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-kmauts",
+    order = "a",
+    stack_size = 50
+}
 
--- ITEM {
---     type = "item",
---     name = "brain-caged-kmauts",
---     icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-kmauts.png",
---     icon_size = 64,
---     flags = {},
---     subgroup = "py-alienlife-kmauts",
---     order = "a",
---     stack_size = 50
--- }
+ITEM {
+    type = "item",
+    name = "brain-caged-kmauts",
+    icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-kmauts.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-kmauts",
+    order = "a",
+    stack_size = 50
+}
 
 ITEM {
     type = "item",

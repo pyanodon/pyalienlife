@@ -12,16 +12,19 @@ local fun = require("prototypes/functions/functions")
 -- TECHNOLOGY('regolite-mining'):add_pack('py-science-pack-2')
 -- TECHNOLOGY('vanadium-processing'):add_pack('py-science-pack-2'):add_prereq('water-invertebrates-mk02')
 
+TECHNOLOGY("vanadium-processing"):remove_prereq("xyhiphoe")
+TECHNOLOGY("wood-processing-3"):remove_prereq("xyhiphoe")
+
 --BUILDINDS--
 RECIPE('plankton-farm'):remove_unlock('vanadium-processing'):add_unlock('microbiology-mk01'):remove_ingredient("niobium-plate"):remove_ingredient("storage-tank"):add_ingredient({type = "item", name = "pipe", amount = 20}):add_ingredient({type = "item", name = "iron-gear-wheel", amount = 25}):subgroup_order('py-alienlife-buildings-mk01', 'p')
-RECIPE('plankton-farm-mk02'):remove_unlock("machines-mk03"):add_unlock('microbiology-mk02'):subgroup_order('py-alienlife-buildings-mk02', 'p')
-RECIPE('plankton-farm-mk03'):add_unlock('microbiology-mk03'):subgroup_order('py-alienlife-buildings-mk03', 'p')
-RECIPE('plankton-farm-mk04'):add_unlock('biotech-mk04'):subgroup_order('py-alienlife-buildings-mk04', 'p')
+RECIPE('plankton-farm-mk02'):remove_unlock("machines-mk03"):add_unlock('biotech-machines-mk02'):subgroup_order('py-alienlife-buildings-mk02', 'p')
+RECIPE('plankton-farm-mk03'):remove_unlock("macgines-mk04"):add_unlock('biotech-machines-mk03'):subgroup_order('py-alienlife-buildings-mk03', 'p')
+RECIPE('plankton-farm-mk04'):remove_unlock("machines-mk05"):add_unlock('biotech-machines-mk04'):subgroup_order('py-alienlife-buildings-mk04', 'p')
 ITEM('plankton-farm'):subgroup_order('py-alienlife-buildings-mk01', 'p')
 ITEM('plankton-farm-mk02'):subgroup_order('py-alienlife-buildings-mk02', 'p')
 ITEM('plankton-farm-mk03'):subgroup_order('py-alienlife-buildings-mk03', 'p')
 ITEM('plankton-farm-mk04'):subgroup_order('py-alienlife-buildings-mk04', 'p')
-RECIPE('genlab-mk01'):remove_unlock('fusion-mk01'):remove_unlock('nano-tech')
+RECIPE('genlab-mk01'):remove_unlock('ethanolamine'):remove_unlock('nano-tech')
 RECIPE('ralesia-plantation-mk03'):add_ingredient({type = "item", name = "super-alloy", amount = 10}):add_ingredient({type = "item", name = "boron-carbide", amount = 20})
 RECIPE('ralesia-plantation-mk04'):add_ingredient({type = "item", name = "nbti-alloy", amount = 15}):add_ingredient({type = "item", name = "wall-shield", amount = 8}):add_ingredient({type = "item", name = "science-coating", amount = 1})
 RECIPE('xyhiphoe-pool-mk01'):remove_unlock('xyhiphoe')
@@ -45,9 +48,10 @@ ITEM('kmauts-ration'):subgroup_order('py-alienlife-food', 'b')
 RECIPE('nenbit-matrix'):add_ingredient({type = "item", name = "nano-cellulose", amount = 3})
 RECIPE('science-coating'):add_ingredient({type = "item", name = "chitosan", amount = 5})
 RECIPE('xyhiphoe-hydrocyclone'):remove_unlock('xyhiphoe'):add_unlock('water-invertebrates-mk01')
-RECIPE('silver-foam'):remove_unlock('fusion-mk03'):add_unlock('alloys-mk04')
+RECIPE('silver-foam'):remove_unlock('fusion-mk03')
 RECIPE('steam-heating'):remove_unlock('fusion-mk01'):add_unlock('phytomining')
 RECIPE('sc-wire'):add_ingredient({type = 'item', name = 'agzn-alloy', amount = 1})
+RECIPE('bio-reactor-mk01'):remove_unlock('ethanolamine')
 
 RECIPE("wastewater-filtration"):add_unlock("fish-mk01")
 RECIPE("wastewater-recovery"):add_unlock("fish-mk01")
@@ -66,6 +70,7 @@ RECIPE('super-alloy'):add_ingredient({type = "item", name = "cobalt-oxide", amou
 RECIPE('control-unit'):change_category('research')
 RECIPE('sc-unit'):change_category('research')
 RECIPE('sc-wire'):change_category('research')
+
 
 RECIPE("nexelit-matrix"):remove_unlock('nenbit-matrix'):add_unlock('neuro-electronics-mk01')
 

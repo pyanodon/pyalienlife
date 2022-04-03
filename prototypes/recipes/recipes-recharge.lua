@@ -28,7 +28,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'charged-dingrit', amount = 1},
     },
-}:add_unlock("energy-drink")
+}:add_unlock("domestication-mk03")
 
 ---------------------MK LEVELS--------------
 

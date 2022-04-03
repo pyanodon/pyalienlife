@@ -26,50 +26,50 @@ ITEM {
     stack_size = 500
 }
 
-ITEM {
-    type = "item",
-    name = "kicalk-seeds-mk02",
-    icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/kicalk-seeds.png"},
-            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
-        },
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-kicalk",
-    order = "a",
-    stack_size = 500
-}
+-- ITEM {
+--     type = "item",
+--     name = "kicalk-seeds-mk02",
+--     icons =
+--         {
+--             {icon = "__pyalienlifegraphics__/graphics/icons/kicalk-seeds.png"},
+--             {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
+--         },
+--     icon_size = 64,
+--     flags = {},
+--     subgroup = "py-alienlife-kicalk",
+--     order = "a",
+--     stack_size = 500
+-- }
 
-ITEM {
-    type = "item",
-    name = "kicalk-seeds-mk03",
-    icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/kicalk-seeds.png"},
-            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
-        },
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-kicalk",
-    order = "a",
-    stack_size = 500
-}
+-- ITEM {
+--     type = "item",
+--     name = "kicalk-seeds-mk03",
+--     icons =
+--         {
+--             {icon = "__pyalienlifegraphics__/graphics/icons/kicalk-seeds.png"},
+--             {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
+--         },
+--     icon_size = 64,
+--     flags = {},
+--     subgroup = "py-alienlife-kicalk",
+--     order = "a",
+--     stack_size = 500
+-- }
 
-ITEM {
-    type = "item",
-    name = "kicalk-seeds-mk04",
-    icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/kicalk-seeds.png"},
-            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
-        },
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-kicalk",
-    order = "a",
-    stack_size = 500
-}
+-- ITEM {
+--     type = "item",
+--     name = "kicalk-seeds-mk04",
+--     icons =
+--         {
+--             {icon = "__pyalienlifegraphics__/graphics/icons/kicalk-seeds.png"},
+--             {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
+--         },
+--     icon_size = 64,
+--     flags = {},
+--     subgroup = "py-alienlife-kicalk",
+--     order = "a",
+--     stack_size = 500
+-- }
 
 ITEM {
     type = "item",
@@ -113,65 +113,65 @@ ITEM {
     limitation_message_key = "kicalk"
 }
 
-ITEM {
-    type = "module",
-    name = "kicalk-mk02",
-    icons =
-    {
-        {icon = "__pyalienlifegraphics__/graphics/icons/kicalk.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
-    },
-    icon_size = 64,
-    category = "kicalk",
-    tier = 2,
-    flags = {},
-    subgroup = "py-alienlife-modules",
-    order = "k-b",
-    stack_size = 300,
-    effect = { speed = {bonus = 0.5}},
-    limitation = {},
-    limitation_message_key = "kicalk"
-}
+-- ITEM {
+--     type = "module",
+--     name = "kicalk-mk02",
+--     icons =
+--     {
+--         {icon = "__pyalienlifegraphics__/graphics/icons/kicalk.png"},
+--         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+--     },
+--     icon_size = 64,
+--     category = "kicalk",
+--     tier = 2,
+--     flags = {},
+--     subgroup = "py-alienlife-modules",
+--     order = "k-b",
+--     stack_size = 300,
+--     effect = { speed = {bonus = 0.5}},
+--     limitation = {},
+--     limitation_message_key = "kicalk"
+-- }
 
-ITEM {
-    type = "module",
-    name = "kicalk-mk03",
-    icons =
-    {
-        {icon = "__pyalienlifegraphics__/graphics/icons/kicalk.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
-    },
-    icon_size = 64,
-    category = "kicalk",
-    tier = 3,
-    flags = {},
-    subgroup = "py-alienlife-modules",
-    order = "k-c",
-    stack_size = 300,
-    effect = { speed = {bonus = 1}},
-    limitation = {},
-    limitation_message_key = "kicalk"
-}
+-- ITEM {
+--     type = "module",
+--     name = "kicalk-mk03",
+--     icons =
+--     {
+--         {icon = "__pyalienlifegraphics__/graphics/icons/kicalk.png"},
+--         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+--     },
+--     icon_size = 64,
+--     category = "kicalk",
+--     tier = 3,
+--     flags = {},
+--     subgroup = "py-alienlife-modules",
+--     order = "k-c",
+--     stack_size = 300,
+--     effect = { speed = {bonus = 1}},
+--     limitation = {},
+--     limitation_message_key = "kicalk"
+-- }
 
-ITEM {
-    type = "module",
-    name = "kicalk-mk04",
-    icons =
-    {
-        {icon = "__pyalienlifegraphics__/graphics/icons/kicalk.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
-    },
-    icon_size = 64,
-    category = "kicalk",
-    tier = 4,
-    flags = {},
-    subgroup = "py-alienlife-modules",
-    order = "k-d",
-    stack_size = 300,
-    effect = { speed = {bonus = 1.5}},
-    limitation = {},
-    limitation_message_key = "kicalk"
-}
+-- ITEM {
+--     type = "module",
+--     name = "kicalk-mk04",
+--     icons =
+--     {
+--         {icon = "__pyalienlifegraphics__/graphics/icons/kicalk.png"},
+--         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+--     },
+--     icon_size = 64,
+--     category = "kicalk",
+--     tier = 4,
+--     flags = {},
+--     subgroup = "py-alienlife-modules",
+--     order = "k-d",
+--     stack_size = 300,
+--     effect = { speed = {bonus = 1.5}},
+--     limitation = {},
+--     limitation_message_key = "kicalk"
+-- }
 
 ITEM {
     type = "item",
@@ -226,65 +226,65 @@ ITEM {
     limitation_message_key = "moondrop"
 }
 
-ITEM {
-    type = "module",
-    name = "moondrop-mk02",
-    icons =
-    {
-        {icon = "__pyalienlifegraphics__/graphics/icons/moondrop.png", icon_size = 64},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
-    },
-    icon_size = 64,
-    category = "moondrop",
-    tier = 2,
-    flags = {},
-    subgroup = "py-alienlife-modules",
-    order = "k-d",
-    stack_size = 300,
-    effect = { speed = {bonus = 1}},
-    limitation = {},
-    limitation_message_key = "moondrop"
-}
+-- ITEM {
+--     type = "module",
+--     name = "moondrop-mk02",
+--     icons =
+--     {
+--         {icon = "__pyalienlifegraphics__/graphics/icons/moondrop.png", icon_size = 64},
+--         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+--     },
+--     icon_size = 64,
+--     category = "moondrop",
+--     tier = 2,
+--     flags = {},
+--     subgroup = "py-alienlife-modules",
+--     order = "k-d",
+--     stack_size = 300,
+--     effect = { speed = {bonus = 1}},
+--     limitation = {},
+--     limitation_message_key = "moondrop"
+-- }
 
-ITEM {
-    type = "module",
-    name = "moondrop-mk03",
-    icons =
-    {
-        {icon = "__pyalienlifegraphics__/graphics/icons/moondrop.png", icon_size = 64},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
-    },
-    icon_size = 64,
-    category = "moondrop",
-    tier = 3,
-    flags = {},
-    subgroup = "py-alienlife-modules",
-    order = "k-d",
-    stack_size = 300,
-    effect = { speed = {bonus = 1.5}},
-    limitation = {},
-    limitation_message_key = "moondrop"
-}
+-- ITEM {
+--     type = "module",
+--     name = "moondrop-mk03",
+--     icons =
+--     {
+--         {icon = "__pyalienlifegraphics__/graphics/icons/moondrop.png", icon_size = 64},
+--         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+--     },
+--     icon_size = 64,
+--     category = "moondrop",
+--     tier = 3,
+--     flags = {},
+--     subgroup = "py-alienlife-modules",
+--     order = "k-d",
+--     stack_size = 300,
+--     effect = { speed = {bonus = 1.5}},
+--     limitation = {},
+--     limitation_message_key = "moondrop"
+-- }
 
-ITEM {
-    type = "module",
-    name = "moondrop-mk04",
-    icons =
-    {
-        {icon = "__pyalienlifegraphics__/graphics/icons/moondrop.png", icon_size = 64},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
-    },
-    icon_size = 64,
-    category = "moondrop",
-    tier = 4,
-    flags = {},
-    subgroup = "py-alienlife-modules",
-    order = "k-d",
-    stack_size = 300,
-    effect = { speed = {bonus = 2}},
-    limitation = {},
-    limitation_message_key = "moondrop"
-}
+-- ITEM {
+--     type = "module",
+--     name = "moondrop-mk04",
+--     icons =
+--     {
+--         {icon = "__pyalienlifegraphics__/graphics/icons/moondrop.png", icon_size = 64},
+--         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+--     },
+--     icon_size = 64,
+--     category = "moondrop",
+--     tier = 4,
+--     flags = {},
+--     subgroup = "py-alienlife-modules",
+--     order = "k-d",
+--     stack_size = 300,
+--     effect = { speed = {bonus = 2}},
+--     limitation = {},
+--     limitation_message_key = "moondrop"
+-- }
 
 ITEM {
     type = "item",

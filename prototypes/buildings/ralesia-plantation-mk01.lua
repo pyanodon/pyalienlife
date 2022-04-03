@@ -44,7 +44,7 @@ RECIPE {
     results = {
         {"ralesia-plantation-mk01", 1}
     }
-}:add_unlock("ralesia")
+}:add_unlock("botany-mk01")
 
 ITEM {
     type = "item",
