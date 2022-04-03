@@ -64,7 +64,6 @@ RECIPE {
         {type = 'item', name = 'cottongut-pup-mk02', amount = 3},
         {type = 'item', name = 'dried-grods', amount = 3},
         {type = 'item', name = 'rennea', amount = 2},
-        {type = 'item', name = "cadaveric-arum", amount = 1},
         {type = 'item', name = 'cottongut-food-02', amount = 1},
     },
     results = {
@@ -73,7 +72,7 @@ RECIPE {
     main_product = "cottongut-mk02",
     subgroup = 'py-alienlife-cottongut',
     order = 'a',
-}:add_unlock("cottongut-mk02")
+}:add_unlock("cottongut-mk02"):add_ingredient{type = 'item', name = "cadaveric-arum", amount = 1}
 
 --mk03--
 --DONE--

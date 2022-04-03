@@ -41,7 +41,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='water', amount = 100},
-					{name='fertilizer', amount = 1},
+					{name='manure', amount = 3},
 					{name='fungal-substrate', amount = 1},
 				},
 			results =

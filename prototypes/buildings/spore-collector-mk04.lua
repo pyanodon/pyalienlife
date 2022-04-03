@@ -6,14 +6,14 @@ RECIPE {
     ingredients = {
         {"science-coating", 50},
         {"spore-collector-mk03", 1},
-        {"low-density-structure", 10},
+        {"super-alloy", 10},
         {"nenbit-matrix", 60},
         {"control-unit", 15},
     },
     results = {
         {"spore-collector-mk04", 1}
     }
-}:add_unlock("mycology-mk04")
+}:add_unlock("mycology-mk05")
 
 ITEM {
     type = "item",

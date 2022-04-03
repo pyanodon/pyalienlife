@@ -7,14 +7,14 @@ RECIPE {
         {"kmauts-enclosure-mk02", 1},
         {"py-heat-exchanger", 1},
         {"ticocr-alloy", 30},
-        {"super-alloy", 50},
+        {"low-density-structure", 50},
         {"molybdenum-plate", 30},
         {"processing-unit", 20},
     },
     results = {
         {"kmauts-enclosure-mk03", 1}
     }
-}:add_unlock("kmauts-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
+}:add_unlock("land-animals-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
 
 ITEM {
     type = "item",

@@ -293,8 +293,6 @@ local recipes_list =
   "zipir-food-02",
   "trits-codex",
   "xyhiphoe-codex",
-  "starch-b",
-  "starch-2-b",
   "fertilizer-3",
   "kicalk-sample",
   "kicalk-codex",

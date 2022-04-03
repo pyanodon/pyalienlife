@@ -6,7 +6,7 @@ RECIPE {
     ingredients = {
         {"zungror-lair-mk01", 1},
         {"ticocr-alloy", 50},
-        {"super-alloy", 100},
+        {"low-density-structure", 100},
         {"metallic-glass", 100},
         {"processing-unit", 50},
         {"control-unit", 20},

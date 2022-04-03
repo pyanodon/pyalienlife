@@ -19,7 +19,6 @@ fun.autorecipes {
                     {name='fawogae', amount =3},
 					{name='ulric-food-01', amount =2},
 					{name='water-barrel', amount=15, return_barrel = true},
-					{name='bedding', amount = 1},
 				},
 			results =
 				{
@@ -36,6 +35,7 @@ fun.autorecipes {
 					{name = 'ulric', add_amount = 1},
                     {name='ralesia-seeds', amount =30},
 					{name='salt', amount = 10},
+					{name='bedding', amount = 1},
 				},
 			results =
 				{

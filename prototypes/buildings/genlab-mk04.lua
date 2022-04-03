@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"genlab-mk04", 1}
     }
-}:add_unlock("genetics-mk04")
+}:add_unlock("biotech-machines-mk04")
 
 ITEM {
     type = "item",

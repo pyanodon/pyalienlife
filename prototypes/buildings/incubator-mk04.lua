@@ -17,14 +17,14 @@ RECIPE {
         {"incubator-mk03", 1},
         {"control-unit", 10},
         {"boron-carbide", 20},
-        {"low-density-structure", 20},
+        {"super-alloy", 20},
         {"blanket", 5},
         {"nbfe-alloy", 50},
     },
     results = {
         {"incubator-mk04", 1}
     }
-}:add_unlock("biotech-mk04")
+}:add_unlock("biotech-machines-mk04")
 
 ITEM {
     type = "item",

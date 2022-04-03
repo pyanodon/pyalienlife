@@ -12,7 +12,7 @@ RECIPE {
         {type = 'fluid', name = 'liquid-manure', amount = 100},
     },
     --main_product = "cocoon",
-}:add_unlock("biotech-mk01")
+}:add_unlock("cottongut-science-mk01")
 
 FLUID {
     type = "fluid",

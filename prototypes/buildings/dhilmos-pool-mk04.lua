@@ -6,14 +6,14 @@ RECIPE {
     ingredients = {
         {"metallic-glass", 20},
         {"dhilmos-pool-mk03", 1},
-        {"super-steel", 100},
+        {"super-alloy", 100},
         {"boron-carbide", 50},
         {"control-unit", 10},
     },
     results = {
         {"dhilmos-pool-mk04", 1}
     }
-}:add_unlock("dhilmos-mk04")
+}:add_unlock("water-animals-mk04")
 
 ITEM {
     type = "item",

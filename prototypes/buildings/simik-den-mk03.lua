@@ -6,7 +6,7 @@ RECIPE {
     ingredients = {
         {"simik-den-mk02", 1},
         {"nexelit-plate", 50},
-        {"super-alloy", 20},
+        {"low-density-structure", 20},
         {"ticocr-alloy", 30},
         {"electric-engine-unit", 4},
         {"processing-unit", 30}
@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"simik-den-mk03", 1}
     }
-}:add_unlock("simik-mk03")
+}:add_unlock("land-animals-mk03")
 
 ITEM {
     type = "item",

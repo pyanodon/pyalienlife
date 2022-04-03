@@ -5,7 +5,7 @@ RECIPE {
     enabled = false,
     ingredients = {
         {"simik-den-mk03", 1},
-        {"low-density-structure", 20},
+        {"super-alloy", 20},
         {"control-unit", 10},
         {"nenbit-matrix", 50},
         {"metallic-glass", 30},
@@ -13,7 +13,7 @@ RECIPE {
     results = {
         {"simik-den-mk04", 1}
     }
-}:add_unlock("simik-mk04")
+}:add_unlock("land-animals-mk04")
 
 ITEM {
     type = "item",

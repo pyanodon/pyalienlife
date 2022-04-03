@@ -79,4 +79,4 @@ RECIPE {
     --main_product = "caged-vonix",
     subgroup = 'py-alienlife-vonix',
     order = 'a',
-}:add_unlock("growth-hormone"):add_ingredient({type = "item", name = "biopolymer", amount = 5})
+}:add_unlock("vonix-mk02"):add_ingredient({type = "item", name = "biopolymer", amount = 5})

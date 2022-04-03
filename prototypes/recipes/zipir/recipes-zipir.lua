@@ -78,7 +78,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'zipir-food-01', amount = 6},
     },
-}:add_unlock("food-mk01")
+}:add_unlock("zipir-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -103,7 +103,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'zipir-food-02', amount = 6},
     },
-}:add_unlock("food-mk02")
+}:add_unlock("zipir-mk04")
 
 ---growing---
 

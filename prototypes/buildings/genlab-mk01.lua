@@ -5,9 +5,9 @@ RECIPE {
     enabled = false,
     ingredients = {
         {"electrolyzer-mk01", 1},
-        --{"plastic-bar", 20},
+        {"plastic-bar", 20},
         {"py-tank-3000", 2},
-        {"nexelit-plate", 15},
+        {"steel-plate", 15},
         {"electronic-circuit", 15},
         {"glass", 50},
         {"duralumin", 20},

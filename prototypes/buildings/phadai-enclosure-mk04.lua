@@ -7,14 +7,14 @@ RECIPE {
         {"phadai-enclosure-mk03", 1},
         {"divertor", 5},
         {"metallic-glass", 35},
-        {"low-density-structure", 10},
+        {"super-alloy", 10},
         {"control-unit", 50},
         {"nenbit-matrix", 50},
     },
     results = {
         {"phadai-enclosure-mk04", 1}
     }
-}:add_unlock("phadai-mk04")
+}:add_unlock("land-animals-mk04")
 
 ITEM {
     type = "item",

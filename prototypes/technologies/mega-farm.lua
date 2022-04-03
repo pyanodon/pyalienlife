@@ -11,7 +11,8 @@ TECHNOLOGY {
         ingredients = {
             {'automation-science-pack', 4},
             {'logistic-science-pack', 3},
-            {'py-science-pack-2', 4},
+            {"chemical-science-pack", 1},
+            {"production-science-pack", 1},
         },
         time = 45
     }
@@ -25,14 +26,15 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/mega-farm-ralesia.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"mega-farm"},
+    dependencies = {"mega-farm"},
     effects = {},
     unit = {
         count = 100,
         ingredients = {
             {'automation-science-pack', 4},
             {'logistic-science-pack', 3},
-            {'py-science-pack-2', 4},
+            {"chemical-science-pack", 1},
+            {"production-science-pack", 1},
         },
         time = 45
     }
@@ -44,14 +46,15 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/mega-farm-rennea.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"mega-farm"},
+    dependencies = {"mega-farm"},
     effects = {},
     unit = {
         count = 100,
         ingredients = {
             {'automation-science-pack', 4},
             {'logistic-science-pack', 3},
-            {'py-science-pack-2', 4},
+            {"chemical-science-pack", 1},
+            {"production-science-pack", 1},
         },
         time = 45
     }
@@ -63,14 +66,15 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/mega-farm-tuuphra.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"mega-farm"},
+    dependencies = {"mega-farm"},
     effects = {},
     unit = {
         count = 100,
         ingredients = {
             {'automation-science-pack', 4},
             {'logistic-science-pack', 3},
-            {'py-science-pack-2', 4},
+            {"chemical-science-pack", 1},
+            {"production-science-pack", 1},
         },
         time = 45
     }
@@ -82,14 +86,15 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/mega-farm-grod.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"mega-farm"},
+    dependencies = {"mega-farm"},
     effects = {},
     unit = {
         count = 100,
         ingredients = {
             {'automation-science-pack', 4},
             {'logistic-science-pack', 3},
-            {'py-science-pack-2', 4},
+            {"chemical-science-pack", 1},
+            {"production-science-pack", 1},
         },
         time = 45
     }
@@ -101,14 +106,15 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/mega-farm-yotoi.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"mega-farm"},
+    dependencies = {"mega-farm"},
     effects = {},
     unit = {
         count = 100,
         ingredients = {
             {'automation-science-pack', 4},
             {'logistic-science-pack', 3},
-            {'py-science-pack-2', 4},
+            {"chemical-science-pack", 1},
+            {"production-science-pack", 1},
         },
         time = 45
     }
@@ -120,14 +126,15 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/mega-farm-bioreserve.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"mega-farm"},
+    dependencies = {"mega-farm"},
     effects = {},
     unit = {
         count = 200,
         ingredients = {
             {'automation-science-pack', 4},
             {'logistic-science-pack', 3},
-            {'py-science-pack-2', 4},
+            {"chemical-science-pack", 1},
+            {"production-science-pack", 1},
         },
         time = 45
     }

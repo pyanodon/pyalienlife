@@ -8,7 +8,7 @@ RECIPE {
         {"sponge-culture-mk02", 1},
         {"nbti-alloy", 25},
         {"electric-engine-unit", 5},
-        {"super-alloy", 50},
+        {"low-density-structure", 50},
         {"processing-unit", 30},
     },
     results = {

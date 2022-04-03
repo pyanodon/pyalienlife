@@ -12,7 +12,7 @@ RECIPE {
     results = {
         {"prandium-lab-mk04", 1}
     }
-}:add_unlock("cottongut-mk04"):replace_ingredient('processing-unit', 'intelligent-unit')
+}:add_unlock("land-animals-mk04"):replace_ingredient('processing-unit', 'intelligent-unit')
 
 ITEM {
     type = "item",

@@ -5,7 +5,7 @@ RECIPE {
     enabled = false,
     ingredients = {
         {"grods-swamp-mk03", 1},
-        {"low-density-structure", 25},
+        {"super-alloy", 25},
         {"blanket", 5},
         {"control-unit", 10},
         {"metallic-glass", 40},
@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"grods-swamp-mk04", 1}
     }
-}:add_unlock("grod-mk04")
+}:add_unlock("botany-mk04")
 
 ITEM {
     type = "item",

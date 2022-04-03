@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"dhilmos-pool-mk03", 1}
     }
-}:add_unlock("dhilmos-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
+}:add_unlock("water-animals-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
 
 ITEM {
     type = "item",

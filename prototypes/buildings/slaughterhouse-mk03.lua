@@ -6,7 +6,7 @@ RECIPE {
     ingredients = {
         {"nexelit-plate", 50},
         {"stainless-steel", 30},
-        {"super-alloy", 40},
+        {"low-density-structure", 40},
         {"electric-engine-unit", 20},
         {"processing-unit", 30},
         {"slaughterhouse-mk02", 1},
@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"slaughterhouse-mk03", 1}
     }
-}:add_unlock("biotech-mk03")
+}:add_unlock("biotech-machines-mk03")
 
 ITEM {
     type = "item",

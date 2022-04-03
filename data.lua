@@ -26,7 +26,7 @@ require("prototypes/technologies/selective-breeding")
 require("prototypes/technologies/artificial-breeding")
 require("prototypes/technologies/biased-mutation")
 require("prototypes/technologies/molecular-decohesion")
-require("prototypes/technologies/food")
+-- require("prototypes/technologies/food")
 require("prototypes/technologies/ulric")
 require("prototypes/technologies/ralesia")
 require("prototypes/technologies/mukmoux")
@@ -112,6 +112,17 @@ require('prototypes/technologies/simik')
 require('prototypes/technologies/fish')
 require('prototypes/technologies/guar')
 require('prototypes/technologies/moss')
+require('prototypes/technologies/cottongut-science')
+require('prototypes/technologies/py-science-pack')
+require('prototypes/technologies/fertilizer')
+require('prototypes/technologies/cellulose')
+require('prototypes/technologies/starch')
+require('prototypes/technologies/silicon-carbide')
+require('prototypes/technologies/cobalt')
+require('prototypes/technologies/neuro-electronics')
+require('prototypes/technologies/biotech-machines')
+require('prototypes/technologies/biobattery')
+require('prototypes/technologies/seaweed')
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -414,10 +425,8 @@ require("prototypes/fluids/psc")
 require("prototypes/fluids/casein-mixture")
 require("prototypes/fluids/casein-pulp-01")
 require("prototypes/fluids/casein-pulp-02")
-require("prototypes/fluids/casein-solution")
 require("prototypes/fluids/milk")
 require("prototypes/fluids/autoantigens")
-require('prototypes/fluids/cadaveric-arum-cum')
 require('prototypes/fluids/wax')
 require('prototypes/fluids/arqad-jelly')
 require('prototypes/fluids/bee-venom')
@@ -431,17 +440,30 @@ require('prototypes/fluids/ethyl-mercaptan')
 require('prototypes/fluids/arqad-honey')
 require('prototypes/fluids/simik-blood')
 
+if mods['pyhightech'] then
+    require('prototypes/fluids/cadaveric-arum-cum')
+    require("prototypes/fluids/casein-solution")
+end
+
 --(( ITEMS ))--
 require('prototypes/items/items')
 require('prototypes/items/items2')
+
+if mods['pyhightech'] then
+    require('prototypes/items/pyhightech-items')
+end
+
+if mods['pyalternativeenergy'] then
+    require('prototypes/items/pyalternativeenergy-items')
+end
 
 --(( RECIPES ))--
 require('prototypes/recipes/recipes')
 
 --antelope
-require('prototypes/recipes/antelope/recipes-antelope')
-require('prototypes/recipes/antelope/recipes-antelope-raising')
-require('prototypes/recipes/antelope/recipes-antelope-rendering')
+-- require('prototypes/recipes/antelope/recipes-antelope')
+-- require('prototypes/recipes/antelope/recipes-antelope-raising')
+-- require('prototypes/recipes/antelope/recipes-antelope-rendering')
 
 --arqad
 require('prototypes/recipes/arqad/recipes-arqad')

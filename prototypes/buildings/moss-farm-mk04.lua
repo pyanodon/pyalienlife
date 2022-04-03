@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"moss-farm-mk04", 1}
     }
-}:add_unlock("biotech-mk04")
+}:add_unlock("botany-mk04")
 
 ITEM {
     type = "item",

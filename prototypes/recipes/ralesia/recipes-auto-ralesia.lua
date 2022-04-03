@@ -52,7 +52,7 @@ fun.autorecipes {
 					{name='ralesias', add_amount = 15}
 				},
 				crafting_speed = 100,
-				tech = 'botany-mk02'
+				tech = 'ralesia-mk02'
         },
 		--py
         {
@@ -69,7 +69,7 @@ fun.autorecipes {
 					{name='ralesias', add_amount = 25}
 				},
 				crafting_speed = 75,
-				tech = 'botany-mk03'
+				tech = 'ralesia-mk03'
 		},
 		--prod
 		{
@@ -85,7 +85,7 @@ fun.autorecipes {
 					{name='ralesias', add_amount = 35}
 				},
 			crafting_speed = 50,
-			tech = 'botany-mk04'
+			tech = 'ralesia-mk04'
 		},
 	}
 }

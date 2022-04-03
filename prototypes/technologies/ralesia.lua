@@ -17,3 +17,57 @@ TECHNOLOGY {
 }
 ]]--
 TECHNOLOGY('ralesia'):set_fields{icon = "__pyalienlifegraphics__/graphics/technology/ralesia.png"}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "ralesia-mk02",
+    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon_size = 128,
+    order = "c-a",
+    dependencies = {"ralesia"},
+    effects = {},
+    unit = {
+        count = 150,
+        ingredients = {
+            {"automation-science-pack", 1},
+            {"logistic-science-pack", 1},
+        },
+        time = 50
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "ralesia-mk03",
+    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon_size = 128,
+    order = "c-a",
+    dependencies = {"ralesia-mk02"},
+    effects = {},
+    unit = {
+        count = 150,
+        ingredients = {
+            {"automation-science-pack", 1},
+            {"logistic-science-pack", 1},
+        },
+        time = 50
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "ralesia-mk04",
+    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon_size = 128,
+    order = "c-a",
+    dependencies = {"ralesia-mk03"},
+    effects = {},
+    unit = {
+        count = 150,
+        ingredients = {
+            {"automation-science-pack", 1},
+            {"logistic-science-pack", 1},
+        },
+        time = 50
+    }
+}

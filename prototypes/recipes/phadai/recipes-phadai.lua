@@ -79,7 +79,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'phadai-food-01', amount = 6},
     },
-}:add_unlock("food-mk03")
+}:add_unlock("phadai")
 
 RECIPE {
     type = 'recipe',
@@ -105,7 +105,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'phadai-food-02', amount = 5},
     },
-}:add_unlock("food-mk03")
+}:add_unlock("phadai-mk03")
 
 ---breeding---
 

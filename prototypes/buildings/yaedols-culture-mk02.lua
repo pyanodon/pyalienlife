@@ -15,7 +15,7 @@ RECIPE {
     results = {
         {"yaedols-culture-mk02", 1}
     }
-}:add_unlock("yaedols-mk02")
+}:add_unlock("mycology-mk03")
 
 ITEM {
     type = "item",

@@ -13,7 +13,7 @@ RECIPE {
     results = {
         {"yotoi-aloe-orchard-mk04", 1}
     }
-}:add_unlock("yotoi-mk04")
+}:add_unlock("botany-mk04")
 
 ITEM {
     type = "item",

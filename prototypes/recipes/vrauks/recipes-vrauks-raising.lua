@@ -190,7 +190,7 @@ fun.autorecipes {
 					{name = 'cocoon', amount = 40}
 				},
 			crafting_speed = 40,
-			tech = 'assisted-embryology'
+			tech = 'vrauks-mk04'
 		},
 	}
 }

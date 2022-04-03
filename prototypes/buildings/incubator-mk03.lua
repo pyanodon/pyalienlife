@@ -16,7 +16,7 @@ RECIPE {
         {"molybdenum-plate", 50},
         {"incubator-mk02", 1},
         {"processing-unit", 30},
-        {"super-alloy", 20},
+        {"low-density-structure", 20},
         {"electric-engine-unit", 5},
         {"nbti-alloy", 10},
         {"ticocr-alloy", 20},
@@ -25,7 +25,7 @@ RECIPE {
     results = {
         {"incubator-mk03", 1}
     }
-}:add_unlock("microbiology-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
+}:add_unlock("biotech-machines-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
 
 ITEM {
     type = "item",

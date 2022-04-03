@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"spore-collector-mk02", 1}
     }
-}:add_unlock("mycology-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 25})
+}:add_unlock("mycology-mk03"):add_ingredient({type = "item", name = "small-parts-02", amount = 25})
 
 ITEM {
     type = "item",

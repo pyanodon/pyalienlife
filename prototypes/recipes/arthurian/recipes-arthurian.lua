@@ -47,7 +47,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'earth-generic-sample', amount = 1},
-        {type = 'item', name = 'py-science-pack-2', amount = 5},
+        {type = 'item', name = 'py-science-pack-1', amount = 5},
         {type = 'item', name = 'arthurian-codex', amount = 1},
     },
     results = {
@@ -76,7 +76,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'arthurian-food-01', amount = 3},
     },
-}:add_unlock("food-mk01")
+}:add_unlock("arthurian-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -102,7 +102,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'arthurian-food-02', amount = 6},
     },
-}:add_unlock("food-mk02")
+}:add_unlock("arthurian-mk03")
 
 
 ----adverse products----

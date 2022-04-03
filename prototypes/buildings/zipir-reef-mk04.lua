@@ -13,7 +13,7 @@ RECIPE {
     results = {
         {"zipir-reef-mk04", 1}
     }
-}:add_unlock("zipir-mk04")
+}:add_unlock("water-animals-mk04")
 
 ITEM {
     type = "item",

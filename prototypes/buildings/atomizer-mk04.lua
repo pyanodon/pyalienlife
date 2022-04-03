@@ -12,7 +12,7 @@ RECIPE {
     results = {
         {"atomizer-mk04", 1}
     }
-}:add_unlock("molecular-decohesion-mk04"):replace_ingredient("control-unit", "intelligent-unit")
+}:add_unlock("biotech-machines-mk04"):replace_ingredient("control-unit", "intelligent-unit")
 
 ITEM {
     type = "item",

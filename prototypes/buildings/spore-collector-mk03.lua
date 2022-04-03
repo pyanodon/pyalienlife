@@ -8,13 +8,13 @@ RECIPE {
         {"spore-collector-mk02", 1},
         {"electric-engine-unit", 15},
         {"sc-unit", 10},
-        {"super-alloy", 80},
+        {"super-steel", 80},
         {"processing-unit", 40},
     },
     results = {
         {"spore-collector-mk03", 1}
     }
-}:add_unlock("mycology-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
+}:add_unlock("mycology-mk04"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
 
 ITEM {
     type = "item",

@@ -15,7 +15,7 @@ RECIPE {
     results = {
         {"compost-plant-mk02", 1}
     }
-}:add_unlock("biotech-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
+}:add_unlock("biotech-machines-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 
 ITEM {
     type = "item",

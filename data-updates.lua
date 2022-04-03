@@ -159,12 +159,12 @@ TECHNOLOGY('exoskeleton-equipment'):add_pack('production-science-pack')
 ITEM("raw-fish", "capsule"):set("icon", "__pyalienlifegraphics__/graphics/icons/fish.png")
 ITEM("raw-fish", "capsule"):set("icon_size", 32)
 ITEM("raw-fish", "capsule"):set("icon_mipmaps", nil)
-RECIPE('modular-armor'):add_ingredient({type = "item", name = "pelt", amount = 1})
+RECIPE('power-armor'):add_ingredient({type = "item", name = "pelt", amount = 1})
 --RECIPE('low-density-structure'):add_ingredient({type = "item", name = "metallic-glass", amount = 3}):add_ingredient({type = "item", name = "ticocr-alloy", amount = 2})
 --RECIPE('rocket-silo'):add_ingredient({type = "item", name = "metallic-glass", amount = 30}):add_ingredient({type = "item", name = "ticocr-alloy", amount = 20})
 --TECHNOLOGY('rocket-silo'):add_pack('py-science-pack')
 --TECHNOLOGY('rocket-control-unit'):add_pack('py-science-pack')
-TECHNOLOGY('atomic-bomb'):remove_pack('utility-science-pack'):remove_pack('production-science-pack'):remove_prereq('rocket-control-unit'):remove_prereq('kovarex-enrichment-process'):remove_prereq('military-4'):remove_prereq('rocketry'):add_prereq('domestication-mk02'):add_prereq('uranium-mk03')
+TECHNOLOGY('atomic-bomb'):remove_prereq('rocket-control-unit'):remove_prereq('kovarex-enrichment-process'):remove_prereq('military-4'):remove_prereq('rocketry'):add_prereq('domestication-mk02'):add_prereq('uranium-mk03')
 RECIPE('atomic-bomb'):add_ingredient({type = "item", name = "titanium-plate", amount = 20}):add_ingredient({type = "item", name = "fuelrod-mk01", amount = 10}):remove_ingredient("rocket-control-unit"):remove_ingredient("yellow-cake"):add_ingredient({type = "item", name = "neuromorphic-chip", amount = 1})
 
 --RECIPES UPDATES
@@ -321,7 +321,7 @@ RECIPE('military-science-pack'):change_category('research')
 RECIPE('production-science-pack'):change_category('research')
 RECIPE('utility-science-pack'):change_category('research'):add_ingredient({type = "item", name = "perfect-samples", amount = 1})
 
-RECIPE('hotair-empty-petri-dish'):add_unlock('coal-processing-1'):set_fields{enabled = false}
+RECIPE('hotair-empty-petri-dish'):add_unlock('hot-air-mk01'):set_fields{enabled = false}
 -- Add our next upgrades
 local searchtypes = {
     'turret',

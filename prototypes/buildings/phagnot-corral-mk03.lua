@@ -6,7 +6,7 @@ RECIPE {
     ingredients = {
         {"phagnot-corral-mk02", 1},
         {"nichrome", 50},
-        {"super-alloy", 100},
+        {"low-density-structure", 100},
         {"sc-unit", 10},
         {"nexelit-plate", 80},
         {"processing-unit", 40},
@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"phagnot-corral-mk03", 1}
     }
-}:add_unlock("phagnot-mk03")
+}:add_unlock("land-animals-mk03")
 
 ITEM {
     type = "item",

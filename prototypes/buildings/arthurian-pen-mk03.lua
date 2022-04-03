@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"arthurian-pen-mk03", 1}
     }
-}:add_unlock("arthurian-mk03")
+}:add_unlock("land-animals-mk03")
 
 ITEM {
     type = "item",

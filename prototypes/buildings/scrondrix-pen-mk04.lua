@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"scrondrix-pen-mk04", 1}
     }
-}:add_unlock("scrondrix-mk04")
+}:add_unlock("land-animals-mk04")
 
 ITEM {
     type = "item",

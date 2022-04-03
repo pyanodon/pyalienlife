@@ -77,7 +77,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'phagnot-food-01', amount = 6},
     },
-}:add_unlock("food-mk01"):add_ingredient({type = "item", name = "raw-fiber", amount = 10})
+}:add_unlock("phagnot"):add_ingredient({type = "item", name = "raw-fiber", amount = 10})
 
 RECIPE {
     type = 'recipe',
@@ -103,7 +103,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'phagnot-food-02', amount = 6},
     },
-}:add_unlock("food-mk02"):add_ingredient({type = "item", name = "raw-fiber", amount = 10})
+}:add_unlock("phagnot-mk03"):add_ingredient({type = "item", name = "raw-fiber", amount = 10})
 
 ---maturing---
 

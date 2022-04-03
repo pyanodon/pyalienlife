@@ -22,7 +22,7 @@ fun.autorecipes {
 					{name='arthropod-blood', amount =70},
 				},
 			crafting_speed = 30,
-			tech = 'rendering',
+			tech = 'water-invertebrates-mk01',
 			name = 'full-render-xyhiphoe',
 			icon = "__pyalienlifegraphics__/graphics/icons/rendering-xyhiphoe.png",
 			icon_size = 64,

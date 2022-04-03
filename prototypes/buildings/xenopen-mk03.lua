@@ -5,7 +5,7 @@ RECIPE {
     enabled = false,
     ingredients = {
         {"processing-unit", 40},
-        {"super-alloy", 35},
+        {"super-steel", 35},
         {"neuromorphic-chip", 20},
         {"xenopen-mk02", 1},
         {"nbti-alloy", 30},
@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"xenopen-mk03", 1}
     }
-}:add_unlock("xeno-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
+}:add_unlock("land-animals-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
 
 ITEM {
     type = "item",

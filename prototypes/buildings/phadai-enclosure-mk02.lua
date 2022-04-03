@@ -15,7 +15,7 @@ RECIPE {
     results = {
         {"phadai-enclosure-mk02", 1}
     }
-}:add_unlock("phadai-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
+}:add_unlock("land-animals-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 
 ITEM {
     type = "item",

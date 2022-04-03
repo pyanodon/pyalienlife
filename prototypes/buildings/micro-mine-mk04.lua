@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"micro-mine-mk04", 1}
     }
-}:add_unlock("biotech-mk04")
+}:add_unlock("biotech-machines-mk04")
 
 ITEM {
     type = "item",

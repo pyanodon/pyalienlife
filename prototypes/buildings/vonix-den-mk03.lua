@@ -6,7 +6,7 @@ RECIPE {
     ingredients = {
         {"control-unit", 10},
         {"super-steel", 100},
-        {"low-density-structure", 100},
+        {"super-alloy", 100},
         {"vonix-den-mk02", 1},
         {"metallic-glass", 100},
         {"processing-unit", 50},

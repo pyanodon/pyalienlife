@@ -2,13 +2,13 @@ local fun = require("prototypes/functions/functions")
 
 if mods['pyhightech'] then
     require('prototypes/recipes/moondrop/recipes-moondrop-products')
-    RECIPE('arqad-mk02'):remove_ingredient('filled-canister-crude-oil'):add_ingredient({type = 'item', name = 'moondrop-fueloil', amount = 25}):add_ingredient({type = 'item', name = 'moondrop-diesel', amount = 5})
+    RECIPE('arqad-mk02'):remove_ingredient('crude-oil-barrel'):add_ingredient({type = 'item', name = 'moondrop-fueloil', amount = 25}):add_ingredient({type = 'item', name = 'moondrop-diesel', amount = 5})
     --data.raw.recipe['arqad-mk02'].results[3] = nil
     fun.results_replacer('arqad-mk02','empty-barrel','empty-barrel', 2)
-    RECIPE('arqad-mk03'):remove_ingredient('filled-canister-crude-oil'):add_ingredient({type = 'item', name = 'moondrop-diesel', amount = 40}):add_ingredient({type = 'item', name = 'moondrop-kerosene', amount = 10})
+    RECIPE('arqad-mk03'):remove_ingredient('crude-oil-barrel'):add_ingredient({type = 'item', name = 'moondrop-diesel', amount = 40}):add_ingredient({type = 'item', name = 'moondrop-kerosene', amount = 10})
     --data.raw.recipe['arqad-mk03'].results[4] = nil
     fun.results_replacer('arqad-mk03','empty-barrel','empty-barrel', 4)
-    RECIPE('arqad-mk04'):remove_ingredient('filled-canister-crude-oil'):add_ingredient({type = 'item', name = 'moondrop-kerosene', amount = 40}):add_ingredient({type = 'item', name = 'moondrop-gas', amount = 10})
+    RECIPE('arqad-mk04'):remove_ingredient('crude-oil-barrel'):add_ingredient({type = 'item', name = 'moondrop-kerosene', amount = 40}):add_ingredient({type = 'item', name = 'moondrop-gas', amount = 10})
     --data.raw.recipe['arqad-mk04'].results[5] = nil
     fun.results_replacer('arqad-mk04','empty-barrel','empty-barrel', 8)
 end
@@ -16,14 +16,14 @@ end
 --BUILDINDS--
 
 --TECHNOLOGIES--
-TECHNOLOGY('oil-machines-mk03'):add_pack('py-science-pack-2')
-TECHNOLOGY('oil-machines-mk04'):add_pack('py-science-pack-2')
-TECHNOLOGY('fracking'):add_pack('py-science-pack-2')
-TECHNOLOGY('kerogen'):add_pack('py-science-pack-2')
-TECHNOLOGY('light-oil-mk03'):add_pack('py-science-pack-2')
-TECHNOLOGY('petroleum-gas-mk03'):add_pack('py-science-pack-2')
-TECHNOLOGY('tholin-mk03'):add_pack('py-science-pack-2')
-TECHNOLOGY('tholin-mk04'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('oil-machines-mk03'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('oil-machines-mk04'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('fracking'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('kerogen'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('light-oil-mk03'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('petroleum-gas-mk03'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('tholin-mk03'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('tholin-mk04'):add_pack('py-science-pack-2')
 
 ----RECIPES----
 RECIPE('guar-separation'):remove_unlock("oil-machines-mk02")
@@ -35,9 +35,9 @@ RECIPE('guar-05'):remove_unlock("fertilizer")
 RECIPE('guar-gum'):add_unlock('guar')
 
 RECIPE('guar-gum-plantation'):subgroup_order("py-alienlife-buildings-mk01", "a"):remove_unlock("oil-machines-mk01"):add_unlock('guar')
-RECIPE('guar-gum-plantation-mk02'):subgroup_order("py-alienlife-buildings-mk02", "a"):remove_unlock("oil-machines-mk02"):add_unlock('guar-mk02'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20}):add_ingredient({type = "item", name = "latex", amount = 20})
-RECIPE('guar-gum-plantation-mk03'):subgroup_order("py-alienlife-buildings-mk03", "a"):remove_unlock("oil-machines-mk03"):add_unlock('guar-mk03')
-RECIPE('guar-gum-plantation-mk04'):subgroup_order("py-alienlife-buildings-mk04", "a"):remove_unlock("oil-machines-mk04"):add_unlock('guar-mk04')
+RECIPE('guar-gum-plantation-mk02'):subgroup_order("py-alienlife-buildings-mk02", "a"):remove_unlock("oil-machines-mk02"):add_unlock('botany-mk02'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20}):add_ingredient({type = "item", name = "latex", amount = 20})
+RECIPE('guar-gum-plantation-mk03'):subgroup_order("py-alienlife-buildings-mk03", "a"):remove_unlock("oil-machines-mk03"):add_unlock('botany-mk03')
+RECIPE('guar-gum-plantation-mk04'):subgroup_order("py-alienlife-buildings-mk04", "a"):remove_unlock("oil-machines-mk04"):add_unlock('botany-mk04')
 
 RECIPE('retrovirus'):add_ingredient({type = "fluid", name = "hot-air", amount = 50})
 RECIPE('cobalt-fluoride'):remove_ingredient("steam"):add_ingredient({type = "fluid", name = "hot-air", amount = 100})
@@ -56,6 +56,8 @@ RECIPE('seeds-extract-01'):add_ingredient({type = "item", name = "guar-seeds", a
 RECIPE('arqad-jelly-01'):replace_ingredient("active-carbon","carbon-black"):replace_ingredient("oleochemicals-barrel","btx-barrel")
 
 data.raw["recipe-category"]["guar"].allowed_module_categories = { "guar" }
+data.raw["recipe-category"]["guar"].modules_required = true
+
 
 fun.results_replacer("crude-from-manure", "crude-oil", "scrude")
 fun.results_replacer("crude-from-manure", "ash", "soot")

@@ -8,7 +8,6 @@ RECIPE {
         {"steam-engine", 5},
         {"glass", 50},
         {"titanium-plate", 15},
-        {"nexelit-plate", 15},
         {"duralumin", 50},
         {"electronic-circuit", 15},
         {"iron-gear-wheel", 20},
@@ -16,7 +15,7 @@ RECIPE {
     results = {
         {"biofactory-mk01", 1}
     }
-}:add_unlock("biotech-mk01"):add_unlock("plastics")
+}:add_unlock("plastics")
 
 ITEM {
     type = "item",

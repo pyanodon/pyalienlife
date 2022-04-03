@@ -202,7 +202,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'neuroprocessor', amount = 2},
     },
-}:add_unlock("biotech-mk02"):add_ingredient({type = "item", name = "cermet", amount = 5})
+}:add_unlock("neuro-electronics-mk01"):add_ingredient({type = "item", name = "cermet", amount = 5})
 
 RECIPE {
     type = 'recipe',
@@ -212,7 +212,6 @@ RECIPE {
     energy_required = 15,
     ingredients = {
         {type = 'item', name = 'moss', amount = 20},
-        {type = 'item', name = 's-biomass', amount = 20},
         {type = 'item', name = 'fe-biomass', amount = 20},
         {type = 'item', name = 'solidified-sarcorus', amount = 20},
         {type = 'item', name = 'alien-sample-02', amount = 20},
@@ -222,7 +221,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'py-science-pack-1', amount = 3},
     },
-}:add_unlock("biotech-mk01")
+}:add_unlock("py-science-pack-mk01"):add_ingredient{type = 'item', name = 's-biomass', amount = 20}
 
 RECIPE {
     type = 'recipe',
@@ -244,7 +243,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'py-science-pack-2', amount = 3},
     },
-}:add_unlock("biotech-mk02")
+}:add_unlock("py-science-pack-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -259,7 +258,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'py-science-pack-3', amount = 3},
     },
-}
+}:add_unlock("py-science-pack-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -277,7 +276,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'fertilizer', amount = 10}
     }
-}:add_unlock('biotech-mk02'):replace_ingredient("manure", "urea")
+}:add_unlock('fertilizer-mk02'):replace_ingredient("manure", "urea")
 
 RECIPE {
     type = 'recipe',
@@ -293,7 +292,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'fertilizer', amount = 5}
     }
-}:add_unlock('biotech-mk01')
+}:add_unlock('fertilizer-mk01')
 
 RECIPE {
     type = 'recipe',
@@ -307,7 +306,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'fertilizer', amount = 3}
     }
-}:add_unlock('fish-mk01')
+}:add_unlock('fertilizer-mk02')
 
 RECIPE {
     type = 'recipe',
@@ -321,7 +320,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'fertilizer', amount = 3}
     }
-}:add_unlock('fish-mk02')
+}:add_unlock('fertilizer-mk03')
 
 RECIPE {
     type = 'recipe',
@@ -335,7 +334,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'fertilizer', amount = 2}
     }
-}:add_unlock('fish-mk02')
+}:add_unlock('fertilizer-mk03')
 
 RECIPE {
     type = 'recipe',
@@ -367,7 +366,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'cobalt-fluoride', amount = 3}
     }
-}:add_unlock('biotech-mk02')
+}:add_unlock('cobalt-mk01')
 
 RECIPE {
     type = 'recipe',
@@ -399,7 +398,7 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'flavonoids', amount = 30}
     }
-}:add_unlock('mycology-mk02')
+}:add_unlock('yaedols')
 
 RECIPE {
     type = 'recipe',
@@ -436,7 +435,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'cytostatics', amount = 3}
     }
-}:add_unlock('genetics-mk02')
+}:add_unlock('genetics-mk03')
 
 RECIPE {
     type = 'recipe',
@@ -456,7 +455,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'microcin-j25', amount = 1}
     }
-}:add_unlock('genetics-mk02')
+}:add_unlock('genetics-mk03')
 
 RECIPE {
     type = 'recipe',
@@ -477,7 +476,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'resveratrol', amount = 10}
     }
-}:add_unlock('genetics-mk02')
+}:add_unlock('genetics-mk03')
 
 RECIPE {
     type = 'recipe',
@@ -623,7 +622,7 @@ RECIPE {
         {type = 'item', name = 'stone', amount = 1, probability = 0.5},
     },
     main_product = "mixed-ores",
-}:add_unlock('biotech-mk02'):add_ingredient({type = "item", name = "rare-earth-ore", amount = 4})
+}:add_unlock('cobalt-mk01'):add_ingredient({type = "item", name = "rare-earth-ore", amount = 4})
 
 RECIPE {
     type = 'recipe',
@@ -641,7 +640,7 @@ RECIPE {
         {type = 'fluid', name = 'dirty-water-heavy', amount = 50},
     },
     main_product = "cobalt-extract",
-}:add_unlock('biotech-mk02')
+}:add_unlock('cobalt-mk01')
 
 RECIPE {
     type = 'recipe',
@@ -657,7 +656,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'cobalt-sulfate', amount = 3},
     },
-}:add_unlock('biotech-mk03')
+}:add_unlock('cobalt-mk02')
 
 RECIPE {
     type = 'recipe',
@@ -672,7 +671,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'cobalt-sulfate-02', amount = 3},
     },
-}:add_unlock('biotech-mk03')
+}:add_unlock('cobalt-mk02')
 
 RECIPE {
     type = 'recipe',
@@ -689,7 +688,7 @@ RECIPE {
         {type = 'fluid', name = 'dirty-water-heavy', amount = 100},
     },
     main_product = "cobalt-oxide",
-}:add_unlock('biotech-mk03')
+}:add_unlock('cobalt-mk02')
 
 RECIPE {
     type = 'recipe',
@@ -704,7 +703,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'cobalt-nx', amount = 3},
     },
-}:add_unlock('biotech-mk03'):add_ingredient({type = "item", name = "ceramic", amount = 10})
+}:add_unlock('cobalt-mk02'):add_ingredient({type = "item", name = "ceramic", amount = 10})
 
 RECIPE {
     type = 'recipe',
@@ -1031,7 +1030,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'hyaline', amount = 1}
     }
-}:add_unlock('bmp'):add_ingredient({type = "item", name = "collagen", amount = 3})
+}:add_unlock('biotech-mk04'):add_ingredient({type = "item", name = "collagen", amount = 3})
 
 RECIPE {
     type = "recipe",
@@ -1061,7 +1060,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'cellulose', amount = 2}
     }
-}:add_unlock("biotech-mk01")
+}:add_unlock("cellulose-mk01")
 
 RECIPE {
     type = 'recipe',
@@ -1077,7 +1076,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'lignin', amount = 8},
     },
-}:add_unlock("microbiology-mk02"):change_category('cracker')
+}:add_unlock("cellulose-mk02"):change_category('cracker')
 
 RECIPE {
     type = 'recipe',
@@ -1091,7 +1090,7 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'aromatics', amount = 150},
     },
-}:add_unlock("biotech-mk02")
+}:add_unlock("cellulose-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -1133,7 +1132,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'empty-neuromorphic-chip', amount = 1},
     },
-}:add_unlock("organ-printing-mk02")
+}:add_unlock("neuro-electronics-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -1147,7 +1146,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'neuromorphic-chip', amount = 1},
     },
-}:add_unlock("biotech-mk03")
+}:add_unlock("neuro-electronics-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -1164,7 +1163,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'nano-cellulose', amount = 1},
     },
-}:add_unlock("biotech-mk03")
+}:add_unlock("cellulose-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -1198,7 +1197,7 @@ RECIPE {
         {type = 'item', name = 'filtration-media', amount = 3},
     },
     order = 'b'
-}:add_unlock("biotech-mk02")
+}:add_unlock("cellulose-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -1214,7 +1213,7 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'syngas', amount = 100},
     },
-}:add_unlock("biotech-mk01")
+}:add_unlock("cellulose-mk01")
 
 RECIPE {
     type = 'recipe',
@@ -1229,7 +1228,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'cellulose', amount = 3},
     },
-}:add_unlock("yotoi")
+}:add_unlock("cellulose-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -1246,7 +1245,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'biofilm', amount = 4},
     },
-}:add_unlock("biotech-mk02")
+}:add_unlock("biofilm")
 
 RECIPE {
     type = 'recipe',
@@ -1494,7 +1493,7 @@ RECIPE {
     --main_product = "combustion-mixture1",
     subgroup = "py-combustion",
     order = "a"
-}:add_unlock("energy-1")
+}:add_unlock("energy-2")
 
 ----energy drink----
 
@@ -1613,7 +1612,7 @@ RECIPE {
         {type = 'fluid', name = 'b-molasse', amount = 100},
     },
     --main_product = "b-molasse",
-}:add_unlock("energy-drink")
+}:add_unlock("pesticides-mk01")
 
 RECIPE {
     type = "recipe",
@@ -1630,7 +1629,7 @@ RECIPE {
         {type = 'fluid', name = 'ethanol', amount = 100},
     },
     --main_product = "b-molasse",
-}:add_unlock("energy-drink")
+}:add_unlock("pesticides-mk01")
 
 RECIPE {
     type = "recipe",
@@ -1718,7 +1717,7 @@ RECIPE {
         {type = 'item', name = 'ash', amount = 3},
     },
     main_product = "crude-oil",
-}:add_unlock("biotech-mk02"):change_category('lor')
+}:add_unlock("cottongut-science-mk01"):change_category('lor')
 
 RECIPE {
     type = 'recipe',
@@ -1801,7 +1800,7 @@ RECIPE {
         {type = 'item', name = 'filtration-media', amount = 75},
     },
     order = 'c'
-}:add_unlock("chitin"):add_ingredient({type = "item", name = "micro-fiber", amount = 15})
+}:add_unlock("filtration-2"):add_ingredient({type = "item", name = "micro-fiber", amount = 15})
 
 RECIPE {
     type = 'recipe',
@@ -1820,7 +1819,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'biobattery', amount = 5},
     },
-}:add_unlock("chitin"):add_ingredient({type = "item", name = "ceramic", amount = 5})
+}:add_unlock("biobattery"):add_ingredient({type = "item", name = "ceramic", amount = 5})
 
 RECIPE {
     type = 'recipe',
@@ -1867,7 +1866,7 @@ RECIPE {
     },
     subgroup = 'py-alienlife-fluids',
     order = 'b1',
-}:add_unlock("water-animals-mk01")
+}:add_unlock("fish-mk01")
 
 RECIPE {
     type = 'recipe',
@@ -1897,7 +1896,7 @@ RECIPE {
         {type = 'item', name = 'albumin', amount = 3},
     },
     --main_product = "cocoon",
-}:add_unlock("biotech-mk02")
+}:add_unlock("biotech-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -1920,13 +1919,12 @@ RECIPE {
         {type = 'item', name = 'magnetic-organ', amount = 1},
         {type = 'item', name = 'glandular-myocluster', amount = 1},
         {type = 'item', name = 'hormonal', amount = 1},
-        {type = 'item', name = 'dimensional-gastricorg', amount = 1},
         {type = 'fluid', name = 'autoantigens', amount = 50},
     },
     results = {
         {type = 'item', name = 'perfect-samples', amount = 10},
     },
-}:add_unlock("biotech-mk04"):add_ingredient{type = 'item', name = 'vsk', amount = 1}
+}:add_unlock("py-science-pack-mk03"):add_ingredient{type = 'item', name = 'vsk', amount = 1}:add_ingredient{type = 'item', name = 'dimensional-gastricorg', amount = 1}
 
 RECIPE {
     type = 'recipe',
@@ -2059,7 +2057,7 @@ RECIPE {
     icon_size = 64,
     subgroup = "py-items",
     order = "f"
-}:add_unlock("genetics-mk01")
+}:add_unlock("quartz-mk01")
 
 RECIPE {
     type = "recipe",
@@ -2081,7 +2079,7 @@ RECIPE {
     icon_size = 64,
     subgroup = "py-items",
     order = "f"
-}:add_unlock("genetics-mk02")
+}:add_unlock("quartz-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -2446,7 +2444,7 @@ RECIPE {
         {type = 'item', name = 'quartz-tube', amount = 3},
     },
     --main_product = "chloral",
-}:add_unlock("quartz-mk01"):add_ingredient({type = 'item', name = 'reo', amount = 5})
+}:add_unlock("quartz-mk02"):add_ingredient({type = 'item', name = 'reo', amount = 5})
 
 RECIPE {
     type = 'recipe',
@@ -2509,7 +2507,7 @@ RECIPE {
         {type = 'item', name = 'green-sic', amount = 4},
     },
     --main_product = "chloral",
-}:add_unlock("bioprocessing")
+}:add_unlock("silicon-carbide")
 
 RECIPE {
     type = 'recipe',
@@ -2528,7 +2526,7 @@ RECIPE {
 	icon_size = 64,
     subgroup = "py-alienlife-items",
     order = "h"
-}:add_unlock("bioprocessing")
+}:add_unlock("silicon-carbide")
 
 RECIPE {
     type = 'recipe',
@@ -2736,9 +2734,9 @@ RECIPE {
         {type = "item", name = "biomass", amount = 20}
     },
     results = {
-        {type = "item", name = "py-fertilizer", amount = 10}
+        {type = "item", name = "fertilizer", amount = 10}
     }
-}:add_unlock("botany-mk03"):replace_ingredient("manure", "urea")
+}:add_unlock("fertilizer-mk02"):replace_ingredient("manure", "urea")
 
 RECIPE {
     type = 'recipe',
@@ -2752,7 +2750,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'raw-fiber', amount = 2}
     }
-}:add_unlock('wood-processing-2')
+}:add_unlock('wood-processing')
 
 RECIPE {
     type = 'recipe',

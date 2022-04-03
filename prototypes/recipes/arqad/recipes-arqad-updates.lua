@@ -8,7 +8,7 @@ RECIPE {
         {type = 'item', name = 'rennea', amount = 2},
         {type = 'item', name = 'saps', amount = 10},
         {type = 'item', name = 'wax-barrel', amount = 1},
-        {type = 'item', name = 'filled-canister-naphtha', amount = 5},
+        {type = 'item', name = 'naphtha-barrel', amount = 5},
     },
     results = {
         {type = 'item', name = 'arqad-propolis', amount = 5},  --FUTURE USE IN PESTICIDE PRODUCTION--

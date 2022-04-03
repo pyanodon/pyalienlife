@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"simik-den-mk02", 1}
     }
-}:add_unlock("simik-mk02")
+}:add_unlock("land-animals-mk02")
 
 ITEM {
     type = "item",

@@ -23,7 +23,7 @@ RECIPE {
     results = {
         {"kicalk-plantation-mk04", 1}
     }
-}:add_unlock('kicalk-mk04')
+}:add_unlock('botany-mk04')
 
 ITEM {
     type = "item",

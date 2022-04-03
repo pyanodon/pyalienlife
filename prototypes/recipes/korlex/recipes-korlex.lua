@@ -62,7 +62,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'korlex-food-01', amount = 3},
     },
-}:add_unlock("food-mk02"):replace_ingredient("wood-seeds", "kicalk-seeds")
+}:add_unlock("korlex"):replace_ingredient("wood-seeds", "kicalk-seeds")
 
 RECIPE {
     type = 'recipe',
@@ -87,7 +87,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'korlex-food-02', amount = 6},
     },
-}:add_unlock("food-mk03"):add_ingredient({type = "item", name = "fiberboard", amount = 2})
+}:add_unlock("korlex-mk03"):add_ingredient({type = "item", name = "fiberboard", amount = 2})
 
 ---breeding---
 

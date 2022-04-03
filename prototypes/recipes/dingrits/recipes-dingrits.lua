@@ -78,7 +78,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'dingrits-food-01', amount = 6},
     },
-}:add_unlock("food-mk01")
+}:add_unlock("dingrits")
 
 RECIPE {
     type = 'recipe',
@@ -103,7 +103,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'dingrits-food-02', amount = 6},
     },
-}:add_unlock("food-mk02")
+}:add_unlock("dingrits-mk03")
 
 ---breeding---
 

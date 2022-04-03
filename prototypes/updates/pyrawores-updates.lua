@@ -36,47 +36,44 @@ RECIPE('nickel-mine'):add_ingredient({type = "item", name = "neuroprocessor", am
 RECIPE('phosphate-mine-02'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
 
 --TECHNOLOGIES--
-TECHNOLOGY('aluminium-mk03'):add_pack('py-science-pack-2')
-TECHNOLOGY('aluminium-mk04'):add_pack('py-science-pack-2')
-TECHNOLOGY('chromium-mk03'):add_pack('py-science-pack-2')
-TECHNOLOGY('chromium-mk04'):add_pack('py-science-pack-2')
-TECHNOLOGY('coal-mk03'):add_pack('py-science-pack-2')
-TECHNOLOGY('coal-mk04'):add_pack('py-science-pack-2')
-TECHNOLOGY('coke-mk03'):add_pack('py-science-pack-2')
-TECHNOLOGY('copper-mk03'):add_pack('py-science-pack-2')
-TECHNOLOGY('copper-mk04'):add_pack('py-science-pack-2')
-TECHNOLOGY('gold'):add_pack('py-science-pack-2')
-TECHNOLOGY('iron-mk03'):add_pack('py-science-pack-2')
-TECHNOLOGY('iron-mk04'):add_pack('py-science-pack-2')
-TECHNOLOGY('lead-mk03'):add_pack('py-science-pack-2')
-TECHNOLOGY('lead-mk04'):add_pack('py-science-pack-2')
-TECHNOLOGY('machines-mk03'):add_pack('py-science-pack-2')
-TECHNOLOGY('machines-mk04'):add_pack('py-science-pack-2')
-TECHNOLOGY('nexelit-mk03'):add_pack('py-science-pack-2')
-TECHNOLOGY('nexelit-mk04'):add_pack('py-science-pack-2')
-TECHNOLOGY('nickel-mk03'):add_pack('py-science-pack-2')
-TECHNOLOGY('nickel-mk04'):add_pack('py-science-pack-2')
-TECHNOLOGY('quartz-mk03'):add_pack('py-science-pack-2')
-TECHNOLOGY('quartz-mk04'):add_pack('py-science-pack-2')
-TECHNOLOGY('tin-mk03'):add_pack('py-science-pack-2')
-TECHNOLOGY('tin-mk04'):add_pack('py-science-pack-2')
-TECHNOLOGY('titanium-mk03'):add_pack('py-science-pack-2')
-TECHNOLOGY('titanium-mk04'):add_pack('py-science-pack-2')
-TECHNOLOGY('uranium-mk03'):add_pack('py-science-pack-2')
-TECHNOLOGY('uranium-mk04'):add_pack('py-science-pack-2')
-TECHNOLOGY('zinc-mk03'):add_pack('py-science-pack-2')
-TECHNOLOGY('zinc-mk04'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('aluminium-mk03'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('aluminium-mk04'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('chromium-mk03'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('chromium-mk04'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('coal-mk03'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('coal-mk04'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('coke-mk03'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('copper-mk03'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('copper-mk04'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('gold'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('iron-mk03'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('iron-mk04'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('lead-mk03'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('lead-mk04'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('machines-mk03'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('machines-mk04'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('nexelit-mk03'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('nexelit-mk04'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('nickel-mk03'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('nickel-mk04'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('quartz-mk03'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('quartz-mk04'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('tin-mk03'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('tin-mk04'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('titanium-mk03'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('titanium-mk04'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('uranium-mk03'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('uranium-mk04'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('zinc-mk03'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('zinc-mk04'):add_pack('py-science-pack-2')
 
-TECHNOLOGY("nexelit-mk01"):remove_prereq('fluid-processing-machines-1'):add_prereq('machines-mk01'):remove_pack('logistic-science-pack')
 --RECIPES--
 
-RECIPE("chemical-plant-mk01"):remove_unlock('coal-processing-2'):add_unlock('machines-mk01')
-RECIPE("evaporator"):remove_unlock('fluid-processing-machines-1'):add_unlock('nexelit-mk01')
+-- RECIPE("chemical-plant-mk01"):remove_unlock('coal-processing-2'):add_unlock('machines-mk01')
+-- RECIPE("evaporator"):remove_unlock('fluid-processing-machines-1'):add_unlock('nexelit-mk01')
 
 RECIPE('mukmoux-fat-salt'):remove_unlock('machines-mk02')
 RECIPE('bonemeal-salt'):remove_unlock('ulric')
-RECIPE('starch'):remove_unlock('machines-mk02')
-RECIPE('starch-2'):remove_unlock('machines-mk02')
 RECIPE('fertilizer-2'):remove_unlock('basic-electronics')
 RECIPE('molten-stainless-steel'):add_ingredient({type = "item", name = "cobalt-extract", amount = 1})
 RECIPE('full-molten-stainless-steel-3'):add_ingredient({type = "item", name = "cobalt-extract", amount = 1})
@@ -85,55 +82,15 @@ RECIPE('full-molten-super-steel-3'):add_ingredient({type = "item", name = "cobal
 
 --RECIPE("centrifuge"):remove_unlock('nuclear-fuel-reprocessing'):add_unlock('basic-electronics')
 
-RECIPE("starch"):remove_unlock('starch'):add_unlock('food-mk01')
-RECIPE("powdered-ralesia-seeds"):remove_unlock('starch'):add_unlock('food-mk01')
+RECIPE("starch"):add_unlock('starch-mk01')
+RECIPE("powdered-ralesia-seeds"):add_unlock('starch-mk01')
+RECIPE('starch-2'):add_unlock('starch-mk02')
 
 ----EXCLUSIVE RECIPES----
 
 RECIPE {
     type = "recipe",
-    name = "starch-b",
-    category = "solid-separator",
-    enabled = false,
-    energy_required = 3,
-    ingredients = {
-        {type = "item", name = "powdered-ralesia-seeds", amount = 1}
-    },
-    results = {
-        {type = "item", name = "starch", amount = 3},
-        {type = "item", name = "biomass", amount = 5},
-    },
-    main_product= "starch",
-    icon = "__pyraworesgraphics__/graphics/icons/starch.png",
-    icon_size = 64,
-    subgroup = "py-rawores-recipes",
-    order = "j"
-}:add_unlock("machines-mk02"):add_ingredient({type = 'item', name = 'fiberboard', amount = 1})
-
-RECIPE {
-    type = "recipe",
-    name = "starch-2-b",
-    category = "solid-separator",
-    enabled = false,
-    energy_required = 3,
-    ingredients = {
-        {type = "item", name = "powdered-ralesia-seeds", amount = 1},
-        {type = "item", name = "sodium-sulfate", amount = 1},
-    },
-    results = {
-        {type = "item", name = "starch", amount = 10},
-        {type = "item", name = "biomass", amount = 5},
-    },
-    main_product= "starch",
-    icon = "__pyraworesgraphics__/graphics/icons/starch.png",
-    icon_size = 64,
-    subgroup = "py-rawores-recipes",
-    order = "j"
-}:add_unlock("machines-mk02"):add_ingredient({type = 'item', name = 'fiberboard', amount = 1})
-
-RECIPE {
-    type = "recipe",
-    name = "fertilizer-3",
+    name = "fertilizer-5",
     category = "biofactory",
     enabled = false,
     energy_required = 5,
@@ -146,7 +103,7 @@ RECIPE {
     results = {
         {type = "item", name = "fertilizer", amount = 15}
     }
-}:add_unlock("biotech-mk02"):replace_ingredient("manure", "urea")
+}:add_unlock("fertilizer-mk03"):replace_ingredient("manure", "urea")
 
 RECIPE {
     type = 'recipe',
@@ -170,7 +127,7 @@ RECIPE {
     icon_size = 32,
     subgroup = "py-rawores-fluids",
     order = "cab"
-}:add_unlock("quartz-mk01")
+}:add_unlock("filtration-mk02")
 
 RECIPE {
     type = "recipe",
@@ -187,7 +144,7 @@ RECIPE {
     results = {
         {type = "item", name = "drill-head", amount = 8}
     }
-}:add_unlock("iron-mk02")
+}:add_unlock("drill-head-mk02")
 
 RECIPE {
     type = "recipe",
@@ -204,7 +161,7 @@ RECIPE {
     results = {
         {type = "item", name = "drill-head", amount = 7}
     }
-}:add_unlock("coal-processing-2")
+}:add_unlock("drill-head-mk02")
 
 
 RECIPE {
@@ -223,23 +180,4 @@ RECIPE {
     main_product= "mold",
     subgroup = "py-rawores-casting",
     order = "a"
-  }:add_unlock("iron-mk02"):add_ingredient({type = "item", name = "silicon", amount = 5}):add_ingredient({type = "item", name = "clay", amount = 1})
-
-
-
-RECIPE('casting-gear'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-pipe'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-pipe-ug'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-sticks'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-copper-cable'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-tin-cable'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-engine-unit'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-bolt'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-small-parts'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-niobium-pipe'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-niobium-pipe-underground'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-ht-pipe'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-ht-pipe-underground'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-drill-heads'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-equipment-chassi'):replace_ingredient('sand-casting','mold')
-RECIPE('casting-lead-container'):replace_ingredient('sand-casting','mold')
+  }:add_unlock("casting-mk02"):add_ingredient({type = "item", name = "silicon", amount = 5}):add_ingredient({type = "item", name = "clay", amount = 1})

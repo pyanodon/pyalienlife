@@ -64,16 +64,16 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'plastic-bar', amount = 2},
         {type = 'item', name = 'native-flora', amount = 5},
-        {type = 'item', name = 'fawogae', amount = 5},
+        {type = 'item', name = 'ralesias', amount = 5},
         {type = 'item', name = "seaweed", amount = 5},
         {type = 'item', name = 'moss', amount = 5},
-        {type = 'item', name = 'starch', amount = 4},
+        -- {type = 'item', name = 'starch', amount = 4},
         {type = 'fluid', name = 'steam', amount = 100}
     },
     results = {
         {type = 'item', name = 'auog-food-01', amount = 3},
     },
-}:add_unlock("food-mk01")
+}:add_unlock("auog")
 
 RECIPE {
     type = 'recipe',
@@ -97,7 +97,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'auog-food-02', amount = 5},
     },
-}:add_unlock("food-mk02")
+}:add_unlock("auog-mk02")
 
 ---breeding---
 
