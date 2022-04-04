@@ -1571,16 +1571,6 @@ script.on_event(
 			end
 		end
 		if next(global.farm_count) ~= nil and global.farm_count_last > 0 then
-			--log(serpent.block(global.farms))
-			--log(serpent.block(global.farm_count))
-			--log(serpent.block(global.farm_count_last))
-			--log(serpent.block(global.checked_farm_counter))
-			--[[
-		for k,v in pairs(global.farm_count) do
-			--log(k)
-			--log(v)
-		end
-		]]
 		local start_num = global.checked_farm_counter
 			for i = global.checked_farm_counter, global.farm_count_last do
 				if global.farms[global.farm_count[i]] ~= nil and global.farms[global.farm_count[i]].valid == false then

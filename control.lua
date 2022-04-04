@@ -404,7 +404,29 @@ script.on_event(defines.events.on_tick, function(event)
                             icon[fcount[i]] = nil
                         end
                     elseif farm.get_module_inventory().is_empty() == true then
-                        disable_machine(farm)
+                        --log(serpent.block(global.indexed_farm_list))
+                        local E = farm
+                        E.active = false
+                        local stopsign
+                        local signtype
+                        if global.farm_rendered_icons[E.unit_number] == nil then
+                            for f,farm_building in pairs(farm_buildings) do
+                                if animal_farm_buildings[string.match(E.name, farm_building)] then
+                                    signtype = "animal"
+                                elseif plant_farm_buildings[string.match(E.name, farm_building)] then
+                                    signtype = "plant"
+                                elseif fungus_farm_buildings[string.match(E.name, farm_building)] then
+                                    signtype = "fungi"
+                                end
+                            end
+                            stopsign = rendering.draw_sprite{
+                                sprite = "no_module_" .. signtype,
+                                render_layer = "188",
+                                target = E.position,
+                                surface = E.surface.name
+                            }
+                            global.farm_rendered_icons[E.unit_number] = stopsign
+                        end
                     end
                 end
             end
@@ -420,6 +442,16 @@ script.on_event(defines.events.on_tick, function(event)
 end)
 
 script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity}, function(event)
+    local E = event.entity
+    global.farms[E.unit_number] = nil
+    if global.farm_rendered_icons[E.unit_number] ~= nil then
+        if rendering.is_valid(global.farm_rendered_icons[E.unit_number]) == false then
+            global.farm_rendered_icons[E.unit_number] = nil
+        elseif rendering.is_valid(global.farm_rendered_icons[E.unit_number]) == true then
+            rendering.destroy(global.farm_rendered_icons[E.unit_number])
+            global.farm_rendered_icons[E.unit_number] = nil
+        end
+    end
 
 end)
 
