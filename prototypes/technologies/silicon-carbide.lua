@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "silicon-carbide",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/sic.png",
     icon_size = 128,
     order = "c-a",
     effects = {},

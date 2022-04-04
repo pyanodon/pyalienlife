@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "neuro-electronics-mk01",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/neuro-electronics-mk01.png",
     icon_size = 128,
     order = "c-a",
     effects = {},
@@ -18,7 +18,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "neuro-electronics-mk02",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/neuro-electronics-mk02.png",
     icon_size = 128,
     order = "c-a",
     dependencies = {"neuro-electronics-mk01"},

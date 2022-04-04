@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "cellulose-mk01",   -- solidified sarcorus
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/cellulose-mk01.png",
     icon_size = 128,
     order = "c-a",
     effects = {},
@@ -17,7 +17,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "cellulose-mk02",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/cellulose-mk02.png",
     icon_size = 128,
     order = "c-a",
     dependencies = {"cellulose-mk01"},
@@ -35,7 +35,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "cellulose-mk03",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/cellulose-mk03.png",
     icon_size = 128,
     order = "c-a",
     dependencies = {"cellulose-mk02"},

@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "biotech-machines-mk01",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/biotech-machines-mk01.png",
     icon_size = 128,
     order = "c-a",
     effects = {},
@@ -17,7 +17,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "biotech-machines-mk02",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/biotech-machines-mk02.png",
     icon_size = 128,
     order = "c-a",
     dependencies = {"biotech-machines-mk01"},
@@ -36,7 +36,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "biotech-machines-mk03",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/biotech-machines-mk03.png",
     icon_size = 128,
     order = "c-a",
     dependencies = {"biotech-machines-mk02"},
@@ -56,7 +56,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "biotech-machines-mk04",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/biotech-machines-mk04.png",
     icon_size = 128,
     order = "c-a",
     dependencies = {"biotech-machines-mk03"},

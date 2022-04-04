@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "cottongut-science-mk01",   -- solidified sarcorus
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/cottongut-science-mk01.png",
     icon_size = 128,
     order = "c-a",
     effects = {},
@@ -18,7 +18,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "cottongut-science-mk02",    -- paragen
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/cottongut-science-mk02.png",
     icon_size = 128,
     order = "c-a",
     dependencies = {"cottongut-science-mk01"},
@@ -37,7 +37,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "cottongut-science-mk03",    -- negasium
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/cottongut-science-mk03.png",
     icon_size = 128,
     order = "c-a",
     dependencies = {"cottongut-science-mk02"},
@@ -56,7 +56,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "cottongut-science-mk04",    -- non-conductive phazogen
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/cottongut-science-mk04.png",
     icon_size = 128,
     order = "c-a",
     dependencies = {"cottongut-science-mk03"},
@@ -75,7 +75,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "cottongut-science-mk05",    -- denatured seizmite
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/cottongut-science-mk05.png",
     icon_size = 128,
     order = "c-a",
     dependencies = {"cottongut-science-mk04"},

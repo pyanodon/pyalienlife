@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "fertilizer-mk01",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/fertilizer-mk01.png",
     icon_size = 128,
     order = "c-a",
     effects = {},
@@ -18,7 +18,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "fertilizer-mk02",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/fertilizer-mk02.png",
     icon_size = 128,
     order = "c-a",
     dependencies = {"fertilizer-mk01"},
@@ -36,7 +36,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "fertilizer-mk03",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/fertilizer-mk03.png",
     icon_size = 128,
     order = "c-a",
     dependencies = {"fertilizer-mk02"},

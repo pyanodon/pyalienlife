@@ -78,7 +78,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "mycology-mk05",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/mycology-mk05.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"mycology-mk03"},

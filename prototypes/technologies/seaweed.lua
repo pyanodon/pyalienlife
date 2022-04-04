@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "seaweed-mk01",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/seaweed-mk01.png",
     icon_size = 128,
     order = "c-a",
     effects = {},
@@ -17,7 +17,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "seaweed-mk02",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/seaweed-mk02.png",
     icon_size = 128,
     order = "c-a",
     dependencies = {"seaweed-mk01"},
@@ -36,7 +36,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "seaweed-mk03",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/seaweed-mk03.png",
     icon_size = 128,
     order = "c-a",
     dependencies = {"seaweed-mk02"},
@@ -55,7 +55,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "seaweed-mk04",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/seaweed-mk04.png",
     icon_size = 128,
     order = "c-a",
     dependencies = {"seaweed-mk03"},

@@ -58,7 +58,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "domestication-mk04",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/domestication-4.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"domestication-mk02","dingrits","chitin"},
