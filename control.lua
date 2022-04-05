@@ -443,13 +443,15 @@ end)
 
 script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity}, function(event)
     local E = event.entity
-    global.farms[E.unit_number] = nil
-    if global.farm_rendered_icons[E.unit_number] ~= nil then
-        if rendering.is_valid(global.farm_rendered_icons[E.unit_number]) == false then
-            global.farm_rendered_icons[E.unit_number] = nil
-        elseif rendering.is_valid(global.farm_rendered_icons[E.unit_number]) == true then
-            rendering.destroy(global.farm_rendered_icons[E.unit_number])
-            global.farm_rendered_icons[E.unit_number] = nil
+    if global.farms[E.unit_number] ~= nil then
+        global.farms[E.unit_number] = nil
+        if global.farm_rendered_icons[E.unit_number] ~= nil then
+            if rendering.is_valid(global.farm_rendered_icons[E.unit_number]) == false then
+                global.farm_rendered_icons[E.unit_number] = nil
+            elseif rendering.is_valid(global.farm_rendered_icons[E.unit_number]) == true then
+                rendering.destroy(global.farm_rendered_icons[E.unit_number])
+                global.farm_rendered_icons[E.unit_number] = nil
+            end
         end
     end
 
