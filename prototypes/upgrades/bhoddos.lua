@@ -116,7 +116,6 @@ local tech_upgrades =
                                 percent = -0.2, -- displayed machine speed
                                 module_amount = -48, -- actual module bonus
                             },
-                        speed = -0.2,
                         productivity = 0.3,
                         pollution = -0.1
                     },
