@@ -112,8 +112,8 @@ RECIPE {
     enabled = false,
     energy_required = 3,
     ingredients = {
-        {type = "fluid", name = "hydrogen", amount = 100},
         {type = "fluid", name = "chlorine", amount = 100},
+        {type = "fluid", name = "hydrogen", amount = 100},
         {type = 'item', name = 'quartz-tube', amount = 1},
         {type = "item", name = "small-lamp", amount = 1}
     },
