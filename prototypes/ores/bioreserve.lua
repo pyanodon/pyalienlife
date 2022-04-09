@@ -16,7 +16,7 @@ ENTITY {
     type = "resource",
     name = "ore-bioreserve",
     category = "ore-bioreserve",
-    icon = "__pyalienlifegraphics__/graphics/icons/biosample.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/mip/bio/30.png",
     icon_size = 64,
     flags = {"placeable-neutral"},
     order = "a-b-a",

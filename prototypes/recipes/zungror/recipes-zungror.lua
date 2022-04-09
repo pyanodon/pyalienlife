@@ -13,14 +13,47 @@ RECIPE {
         {type = 'item', name = 'cdna', amount = 15},
         {type = 'item', name = 'bio-sample', amount = 50},
         {type = 'item', name = 'cocoon', amount = 5},
-        {type = 'item', name = 'earth-spider-sample', amount = 1},
+        {type = 'item', name = 'earth-spider-sample', amount = 2},
         {type = 'item', name = 'strorix-unknown-sample', amount = 2},
         {type = 'item', name = 'earth-goat-sample', amount = 1},
         {type = 'fluid', name = 'fetal-serum', amount = 500},
         {type = 'fluid', name = 'artificial-blood', amount = 100},
+        {type = 'item', name = 'zungror-codex', amount = 1},
     },
     results = {
         {type = 'item', name = 'zungror', amount = 1},
+    },
+}:add_unlock("zungror")
+
+RECIPE {
+    type = 'recipe',
+    name = 'earth-spider-sample',
+    category = 'data-array',
+    enabled = false,
+    energy_required = 300,
+    ingredients = {
+        {type = 'item', name = 'earth-generic-sample', amount = 1},
+        {type = 'item', name = 'py-science-pack-02', amount = 25},
+        {type = 'item', name = 'neuromorphic-chip', amount = 4},
+    },
+    results = {
+        {type = 'item', name = 'earth-spider-sample', amount = 1},
+    },
+}:add_unlock("zungror")
+
+RECIPE {
+    type = 'recipe',
+    name = 'earth-goat-sample',
+    category = 'data-array',
+    enabled = false,
+    energy_required = 300,
+    ingredients = {
+        {type = 'item', name = 'earth-generic-sample', amount = 100},
+        {type = 'item', name = 'py-science-pack-02', amount = 25},
+        {type = 'item', name = 'processing-unit', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'earth-spider-sample', amount = 1},
     },
 }:add_unlock("zungror")
 
