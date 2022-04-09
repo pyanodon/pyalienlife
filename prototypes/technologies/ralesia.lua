@@ -21,7 +21,7 @@ TECHNOLOGY('ralesia'):set_fields{icon = "__pyalienlifegraphics__/graphics/techno
 TECHNOLOGY {
     type = "technology",
     name = "ralesia-mk02",
-    icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
+    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
     icon_size = 128,
     order = "c-a",
     dependencies = {"ralesia"},
@@ -39,7 +39,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "ralesia-mk03",
-    icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
+    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
     icon_size = 128,
     order = "c-a",
     dependencies = {"ralesia-mk02"},
@@ -57,7 +57,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "ralesia-mk04",
-    icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
+    icon = "__pycoalprocessinggraphics__/graphics/missing_icon.png",
     icon_size = 128,
     order = "c-a",
     dependencies = {"ralesia-mk03"},
