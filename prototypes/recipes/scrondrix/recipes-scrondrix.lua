@@ -46,7 +46,7 @@ RECIPE {
     name = 'earth-roadrunner-sample',
     category = 'data-array',
     enabled = false,
-    energy_required = 30,
+    energy_required = 300,
     ingredients = {
         {type = 'item', name = 'earth-generic-sample', amount = 1},
         {type = 'item', name = 'chemical-science-pack', amount = 5},

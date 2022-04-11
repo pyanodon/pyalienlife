@@ -44,7 +44,7 @@ RECIPE {
     name = 'earth-antelope-sample',
     category = 'data-array',
     enabled = false,
-    energy_required = 30,
+    energy_required = 300,
     ingredients = {
         {type = 'item', name = 'earth-generic-sample', amount = 1},
         {type = 'item', name = 'py-science-pack-2', amount = 5},

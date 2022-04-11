@@ -43,7 +43,7 @@ RECIPE {
     name = 'earth-giraffe-sample',
     category = 'data-array',
     enabled = false,
-    energy_required = 150,
+    energy_required = 300,
     ingredients = {
         {type = 'item', name = 'earth-generic-sample', amount = 1},
         {type = 'item', name = 'automation-science-pack', amount = 15},
