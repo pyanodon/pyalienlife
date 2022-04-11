@@ -1,4 +1,53 @@
 
+local bio_list = require('prototypes/items/biomass-convertion')
+
+remote.add_interface('data_puller',
+{order_biolist = function()
+
+    local bio = global.compostables.og_list
+        --log(serpent.block(bio))
+        local name_table = {}
+        local input_table = {}
+        local output_table = {}
+        for i, item in pairs(bio) do
+            --log(i)
+            --log(serpent.block(item))
+            table.insert(name_table, i)
+            if input_table[item.item_amount] == nil then
+                input_table[item.item_amount] = {i}
+            else
+                table.insert(input_table[item.item_amount], i)
+            end
+            if output_table[item.biomass_amount] == nil then
+                output_table[item.biomass_amount] = {i}
+            else
+                table.insert(output_table[item.biomass_amount], i)
+            end
+        end
+        --log(serpent.block(name_table))
+        --log(serpent.block(input_table))
+        --log(serpent.block(output_table))
+        table.sort(name_table)
+        for k,v in pairs(input_table) do
+            --log(k)
+            --log(serpent.block(v))
+            table.sort(v)
+        end
+        for k,v in pairs(output_table) do
+            --log(k)
+            --log(serpent.block(v))
+            table.sort(v)
+        end
+        --log(serpent.block(name_table))
+        --log(serpent.block(input_table))
+        --log(serpent.block(output_table))
+        --global.compostables.name_order = name_table
+        --global.compostables.input_order = input_table
+        --global.compostables.output_order = output_table
+        return bio, name_table, input_table, output_table
+    end
+})
+
 local farms = {
 	farm1 = require("scripts/crops/farm-ralesia"),
 	farm2 = require("scripts/crops/farm-rennea"),
@@ -246,6 +295,15 @@ script.on_init(function()
     global.total_farm_count = 0
     global.checked_farm_counter = 1
     global.farm_rendered_icons = {}
+
+    --wiki info
+    global.compostables =
+		{
+			og_list = bio_list,
+			name_order = {},
+			input_order = {},
+			output_order = {}
+		}
 end)
 
 script.on_load(function()

@@ -7,7 +7,7 @@ ENTITY{
     icon = '__pyalienlifegraphics3__/graphics/icons/crash-site-lab-repaired.png',
     icon_size = 64,
 
-    flags = {'not-deconstructable', 'hidden'},
+    flags = {'not-deconstructable'},
     map_color = {r = 0, g = 0.365, b = 0.58, a = 1},
     max_health = 150,
     corpse = 'big-remnants',
