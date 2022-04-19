@@ -27,7 +27,7 @@ ITEM {
     subgroup = "py-alienlife-generators",
     order = "a",
     place_result = "generator-1",
-    stack_size = 15
+    stack_size = 10
 }
 
 ENTITY {

@@ -1426,7 +1426,7 @@ ITEM {
     flags = {},
     subgroup = "py-hightech-tier-3",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 RECIPE('processing-unit'):add_ingredient({type = "item", name = "cooling-system", amount = 1})

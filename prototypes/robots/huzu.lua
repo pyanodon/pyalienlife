@@ -25,7 +25,7 @@ ITEM {
     subgroup = 'py-alienlife-special-creatures',
     order = 'x',
     place_result = 'huzu',
-    stack_size = 50
+    stack_size = 500
 }
 
 ENTITY {

@@ -1311,7 +1311,7 @@ function overrides.tech_upgrade(tech_upgrade)
                     flags = {},
                     subgroup = 'py-alienlife-modules',
                     order = 't-a',
-                    stack_size = 300,
+                    stack_size = 500,
                     effect = module_effects,
                     limitation = recipes,
                     -- limitation_message_key = "dicks"

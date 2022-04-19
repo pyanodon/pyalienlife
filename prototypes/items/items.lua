@@ -13,7 +13,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-auog",
     order = "a",
-    stack_size = 300,
+    stack_size = 500,
     fuel_category = 'auog',
     fuel_value = '400MJ',
     burnt_result = 'used-auog'
@@ -33,7 +33,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dingrits",
     order = "a",
-    stack_size = 300,
+    stack_size = 500,
     fuel_category = 'dingrits',
     fuel_value = '470MJ',
     burnt_result = 'used-dingrit'
@@ -61,7 +61,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -72,7 +72,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -83,7 +83,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -94,7 +94,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -105,7 +105,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -116,7 +116,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -127,7 +127,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -138,7 +138,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -149,7 +149,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 
@@ -161,7 +161,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -172,7 +172,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -186,7 +186,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 300
+    stack_size = 500
 }
 
 ITEM {
@@ -200,7 +200,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 300
+    stack_size = 500
 }
 
 ITEM {
@@ -214,7 +214,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 300
+    stack_size = 500
 }
 
 ITEM {
@@ -228,7 +228,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 300
+    stack_size = 500
 }
 
 ITEM {
@@ -239,7 +239,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 300
+    stack_size = 500
 }
 
 ITEM {
@@ -250,7 +250,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 300
+    stack_size = 500
 }
 
 ITEM {
@@ -333,7 +333,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "b",
-    stack_size = 200
+    stack_size = 500
 }
 
 ITEM {
@@ -344,7 +344,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "b",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -355,7 +355,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "b",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -366,7 +366,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "b",
-    stack_size = 100,
+    stack_size = 500,
     fuel_value = '1MJ',
     fuel_category = 'bio-container'
 }
@@ -379,7 +379,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "b",
-    stack_size = 100,
+    stack_size = 500,
 }
 
 ITEM {
@@ -390,7 +390,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-recipes",
     order = "b",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -405,7 +405,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-recipes",
     order = "b",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -420,7 +420,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-recipes",
     order = "b",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -435,7 +435,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-recipes",
     order = "b",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -446,7 +446,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "b",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -457,7 +457,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "b",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -468,7 +468,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "b",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -479,7 +479,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-mukmoux",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -490,7 +490,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-mukmoux",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -501,7 +501,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-mukmoux",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -512,7 +512,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-mukmoux",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -523,7 +523,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-mukmoux",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -534,7 +534,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-mukmoux",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -545,7 +545,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-mukmoux",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -556,7 +556,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-mukmoux",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -567,7 +567,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-mukmoux",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -578,7 +578,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-ulric",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -593,7 +593,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-ulric",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -608,7 +608,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-ulric",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -623,7 +623,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-ulric",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -634,7 +634,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arthurian",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -645,7 +645,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arthurian",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -656,7 +656,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arthurian",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -667,7 +667,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arthurian",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -678,7 +678,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arthurian",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -689,7 +689,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arthurian",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -700,7 +700,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arthurian",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -711,7 +711,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arthurian",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -744,7 +744,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 {
@@ -754,7 +754,7 @@ ITEM {
     icon_size = 64,
     subgroup = "py-alienlife-items",
     order = "a-a",
-    stack_size = 200,
+    stack_size = 500,
     durability = 1,
     durability_description_key = "description.science-pack-remaining-amount-key",
     durability_description_value = "description.science-pack-remaining-amount-value"
@@ -767,7 +767,7 @@ ITEM {
     icon_size = 64,
     subgroup = "py-alienlife-items",
     order = "a-a",
-    stack_size = 200,
+    stack_size = 500,
     durability = 1,
     durability_description_key = "description.science-pack-remaining-amount-key",
     durability_description_value = "description.science-pack-remaining-amount-value"
@@ -780,7 +780,7 @@ ITEM {
     icon_size = 64,
     subgroup = "science-pack",
     order = "a-a",
-    stack_size = 200,
+    stack_size = 500,
     durability = 1,
     durability_description_key = "description.science-pack-remaining-amount-key",
     durability_description_value = "description.science-pack-remaining-amount-value"
@@ -857,7 +857,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -882,7 +882,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 200
+    stack_size = 500
 }
 
 ITEM {
@@ -904,7 +904,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 200
+    stack_size = 500
 }
 
 ITEM {
@@ -915,7 +915,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -926,7 +926,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -939,7 +939,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -952,7 +952,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -963,7 +963,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -974,7 +974,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -985,7 +985,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1017,7 +1017,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 200
+    stack_size = 500
 }
 
 ITEM {
@@ -1028,7 +1028,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 200
+    stack_size = 500
 }
 
 ITEM {
@@ -1039,7 +1039,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1050,7 +1050,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1061,7 +1061,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "h",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1072,7 +1072,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1083,7 +1083,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "h",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1094,7 +1094,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "h",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1105,7 +1105,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "h",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1116,7 +1116,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "h",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1127,7 +1127,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1138,7 +1138,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1149,7 +1149,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -1160,7 +1160,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -1171,7 +1171,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -1182,7 +1182,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -1193,7 +1193,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -1204,7 +1204,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -1215,7 +1215,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -1237,7 +1237,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-ulric",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -1248,7 +1248,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-ulric",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -1259,7 +1259,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-ulric",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -1270,7 +1270,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-ulric",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -1281,7 +1281,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-ulric",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -1292,7 +1292,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-ulric",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -1303,7 +1303,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-ulric",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -1336,7 +1336,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1347,7 +1347,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1358,7 +1358,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1369,7 +1369,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 --[[
 ITEM {
@@ -1380,7 +1380,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 ]]--
 ITEM {
@@ -1391,7 +1391,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1402,7 +1402,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1413,7 +1413,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1424,7 +1424,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1435,7 +1435,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1446,7 +1446,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1457,7 +1457,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1468,7 +1468,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1479,7 +1479,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1490,7 +1490,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1501,7 +1501,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1512,7 +1512,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1523,7 +1523,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1534,7 +1534,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1545,7 +1545,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1556,7 +1556,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1567,7 +1567,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1578,7 +1578,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1589,7 +1589,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1600,7 +1600,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1611,7 +1611,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1622,7 +1622,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1633,7 +1633,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1644,7 +1644,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1655,7 +1655,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1666,7 +1666,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-creatures",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -1743,7 +1743,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arthurian",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -1758,7 +1758,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arthurian",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -1773,7 +1773,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arthurian",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -1788,7 +1788,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arthurian",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -1855,7 +1855,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-zipir",
     order = "h",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -1877,7 +1877,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "h",
-    stack_size = 200
+    stack_size = 500
 }
 
 ITEM {
@@ -1888,7 +1888,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 200
+    stack_size = 500
 }
 
 ITEM {
@@ -1899,7 +1899,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 200
+    stack_size = 500
 }
 
 ITEM {
@@ -1910,7 +1910,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 200
+    stack_size = 500
 }
 
 ITEM {
@@ -1921,7 +1921,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 200
+    stack_size = 500
 }
 
 ITEM {
@@ -1932,7 +1932,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 200
+    stack_size = 500
 }
 
 ITEM {
@@ -1943,7 +1943,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 200
+    stack_size = 500
 }
 
 ITEM {
@@ -1954,7 +1954,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 200
+    stack_size = 500
 }
 
 ITEM {
@@ -1965,7 +1965,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-yotoi",
     order = "h",
-    stack_size = 400
+    stack_size = 500
 }
 
 ITEM {
@@ -1980,7 +1980,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-yotoi",
     order = "h",
-    stack_size = 400
+    stack_size = 500
 }
 
 ITEM {
@@ -1995,7 +1995,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-yotoi",
     order = "h",
-    stack_size = 400
+    stack_size = 500
 }
 
 ITEM {
@@ -2010,7 +2010,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-yotoi",
     order = "h",
-    stack_size = 400
+    stack_size = 500
 }
 
 ITEM {
@@ -2021,7 +2021,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-yotoi",
     order = "h",
-    stack_size = 200
+    stack_size = 500
 }
 
 ITEM {
@@ -2032,7 +2032,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2043,7 +2043,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2054,7 +2054,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2065,7 +2065,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2076,7 +2076,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2087,7 +2087,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2098,7 +2098,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2165,7 +2165,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dhilmos",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2176,7 +2176,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dhilmos",
     order = "h",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -2187,7 +2187,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dhilmos",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2198,7 +2198,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dhilmos",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2209,7 +2209,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dhilmos",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2220,7 +2220,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dhilmos",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2231,7 +2231,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-scrondrix",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2242,7 +2242,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-scrondrix",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2253,7 +2253,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-scrondrix",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2264,7 +2264,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-scrondrix",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2275,7 +2275,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-scrondrix",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2286,7 +2286,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-scrondrix",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2297,7 +2297,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-scrondrix",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2308,7 +2308,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-scrondrix",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2319,7 +2319,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-scrondrix",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2330,7 +2330,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-scrondrix",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2341,7 +2341,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -2352,7 +2352,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -2486,7 +2486,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-phadai",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2497,7 +2497,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-phadai",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2508,7 +2508,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-phadai",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2519,7 +2519,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-phadai",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2530,7 +2530,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-phadai",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2541,7 +2541,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-phadai",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2552,7 +2552,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-phadai",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2563,7 +2563,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -2574,7 +2574,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-phadai",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2607,7 +2607,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -2629,7 +2629,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-auog",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2640,7 +2640,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-auog",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2651,7 +2651,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-auog",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2662,7 +2662,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-auog",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2673,7 +2673,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-auog",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2684,7 +2684,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-auog",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2695,7 +2695,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-auog",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2706,7 +2706,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -2717,7 +2717,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-auog",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2732,7 +2732,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-auog",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2747,7 +2747,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-auog",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2762,7 +2762,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-auog",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2795,7 +2795,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -2806,7 +2806,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "x",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2839,7 +2839,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -2850,7 +2850,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -2861,7 +2861,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -2872,7 +2872,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dingrits",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2883,7 +2883,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dingrits",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2894,7 +2894,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dingrits",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2905,7 +2905,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dingrits",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2916,7 +2916,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dingrits",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2927,7 +2927,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dingrits",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2938,7 +2938,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dingrits",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2949,7 +2949,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dingrits",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2960,7 +2960,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dingrits",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -2971,7 +2971,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dingrits",
     order = "x",
-    stack_size = 50
+    stack_size = 500
 }
 
 -------rich biomass------
@@ -2984,7 +2984,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -2995,7 +2995,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3006,7 +3006,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3017,7 +3017,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3028,7 +3028,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3039,7 +3039,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3050,7 +3050,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3061,7 +3061,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3072,7 +3072,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3083,7 +3083,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3094,7 +3094,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3105,7 +3105,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3116,7 +3116,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "h",
-    stack_size = 50
+    stack_size = 500
 }
 
 ---------------------------------------
@@ -3129,7 +3129,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "d",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3140,7 +3140,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dingrits",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -3181,7 +3181,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-kmauts",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3192,7 +3192,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-kmauts",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3203,7 +3203,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-kmauts",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3214,7 +3214,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-kmauts",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3225,7 +3225,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-kmauts",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3236,7 +3236,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-kmauts",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3247,7 +3247,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-kmauts",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3258,7 +3258,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -3269,7 +3269,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-kmauts",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -3280,7 +3280,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -3291,7 +3291,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -3302,7 +3302,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-xyhiphoe",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -3313,7 +3313,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-xyhiphoe",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -3324,7 +3324,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-xyhiphoe",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3335,7 +3335,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-xyhiphoe",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 -- ITEM {
@@ -3346,7 +3346,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-xyhiphoe",
 --     order = "a",
---     stack_size = 50
+--     stack_size = 500
 -- }
 
 ITEM {
@@ -3357,7 +3357,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-xyhiphoe",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3368,7 +3368,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-vonix",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -3379,7 +3379,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-vonix",
     order = "x",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3390,7 +3390,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-vonix",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -3401,7 +3401,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-zipir",
     order = "x",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3412,7 +3412,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -3434,7 +3434,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -3445,7 +3445,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-grod",
     order = "a",
-    stack_size = 20
+    stack_size = 500
 }
 
 ITEM {
@@ -3456,7 +3456,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -3467,7 +3467,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -3500,7 +3500,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-phagnot",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3511,7 +3511,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-phagnot",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3522,7 +3522,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-phagnot",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3533,7 +3533,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-phagnot",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3544,7 +3544,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-phagnot",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3555,7 +3555,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-phagnot",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3566,7 +3566,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-phagnot",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3577,7 +3577,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "k",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3588,7 +3588,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "k",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3599,7 +3599,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "k",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3610,7 +3610,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "k",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3621,7 +3621,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "k",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3632,7 +3632,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "k",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3643,7 +3643,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "k",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3654,7 +3654,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-phagnot",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3669,7 +3669,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-phagnot",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3684,7 +3684,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-phagnot",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3699,7 +3699,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-phagnot",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3710,7 +3710,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-phagnot",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3721,7 +3721,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -3732,7 +3732,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 300
+    stack_size = 500
 }
 
 ITEM {
@@ -3747,7 +3747,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 300
+    stack_size = 500
 }
 
 ITEM {
@@ -3762,7 +3762,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 300
+    stack_size = 500
 }
 
 ITEM {
@@ -3777,7 +3777,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 300
+    stack_size = 500
 }
 
 ITEM {
@@ -3788,7 +3788,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3799,7 +3799,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3810,7 +3810,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3821,7 +3821,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3832,7 +3832,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3843,7 +3843,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3854,7 +3854,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3865,7 +3865,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3876,7 +3876,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3887,7 +3887,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3898,7 +3898,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-xeno",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3909,7 +3909,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-xeno",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3920,7 +3920,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-xeno",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3931,7 +3931,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-xeno",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3942,7 +3942,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-xeno",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3953,7 +3953,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-xeno",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3964,7 +3964,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-xeno",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -3975,7 +3975,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -3986,7 +3986,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -4008,7 +4008,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -4019,7 +4019,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -4030,7 +4030,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -4041,7 +4041,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -4052,7 +4052,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -4063,7 +4063,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -4074,7 +4074,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-cridren",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -4151,7 +4151,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-trits",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -4162,7 +4162,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-latex",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -4229,7 +4229,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-latex",
     order = "d",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -4240,7 +4240,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-latex",
     order = "e",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -4251,7 +4251,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-latex",
     order = "f",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -4262,7 +4262,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "f",
-    stack_size = 100,
+    stack_size = 500,
 	capsule_action =
     {
       type = "use-on-self",
@@ -4332,7 +4332,7 @@ ITEM {
       }
     },
     order = "h",
-    stack_size = 200
+    stack_size = 500
 }
 
 ITEM {
@@ -4366,7 +4366,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-latex",
     order = "g",
-    stack_size = 200
+    stack_size = 500
 }
 
 ITEM {
@@ -4377,7 +4377,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-vonix",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4388,7 +4388,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-vonix",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4399,7 +4399,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-vonix",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4410,7 +4410,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-vonix",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4421,7 +4421,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-vonix",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4432,7 +4432,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-vonix",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4443,7 +4443,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-zipir",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4454,7 +4454,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-zipir",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4465,7 +4465,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-zipir",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4476,7 +4476,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-zipir",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4487,7 +4487,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-zipir",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4498,7 +4498,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-zipir",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4509,7 +4509,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-trits",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4520,7 +4520,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-trits",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4531,7 +4531,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-trits",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4542,7 +4542,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-trits",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4553,7 +4553,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-trits",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4564,7 +4564,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-trits",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4575,7 +4575,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-trits",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4586,7 +4586,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-vrauks",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4597,7 +4597,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-vrauks",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4608,7 +4608,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-vrauks",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4619,7 +4619,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-vrauks",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4630,7 +4630,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-vrauks",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4641,7 +4641,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-korlex",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4652,7 +4652,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-korlex",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4663,7 +4663,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-korlex",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4674,7 +4674,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-korlex",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4685,7 +4685,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-korlex",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4696,7 +4696,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-korlex",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4707,7 +4707,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-korlex",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4718,7 +4718,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-korlex",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4729,7 +4729,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-korlex",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4740,7 +4740,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -4751,7 +4751,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -4762,7 +4762,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -4773,7 +4773,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-cottongut",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -4877,7 +4877,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-cottongut",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4888,7 +4888,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-cottongut",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4899,7 +4899,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-cottongut",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4910,7 +4910,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-cottongut",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4921,7 +4921,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-cottongut",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4932,7 +4932,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-cottongut",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4943,7 +4943,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-cottongut",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -4954,7 +4954,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-science",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -4965,7 +4965,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-science",
     order = "b",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -4976,7 +4976,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-science",
     order = "c",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -4987,7 +4987,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-science",
     order = "d",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -4998,7 +4998,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-science",
     order = "d",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -5009,7 +5009,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-science",
     order = "d",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -5020,7 +5020,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "d",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -5031,7 +5031,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "d",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -5042,7 +5042,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "d",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -5053,7 +5053,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "d",
-    stack_size = 20
+    stack_size = 500
 }
 
 ITEM {
@@ -5064,7 +5064,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "d",
-    stack_size = 20
+    stack_size = 500
 }
 
 ITEM {
@@ -5096,7 +5096,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "t-a",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1}, speed = {bonus = 0.4}},
 	limitation = {},
 	limitation_message_key = "wood"
@@ -5116,7 +5116,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "t-b",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1}, speed = {bonus = 0.8}},
 	limitation = {},
 	limitation_message_key = "wood"
@@ -5136,7 +5136,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "t-c",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1}, speed = {bonus = 1.2}},
 	limitation = {},
 	limitation_message_key = "wood"
@@ -5156,7 +5156,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "t-d",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1}, speed = {bonus = 1.6}},
 	limitation = {},
 	limitation_message_key = "wood"
@@ -5176,7 +5176,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "s-a",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1}, speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "weed"
@@ -5196,7 +5196,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "s-b",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 2}},
 	limitation = {},
 	limitation_message_key = "weed"
@@ -5216,7 +5216,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "s-c",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 3}},
 	limitation = {},
 	limitation_message_key = "weed"
@@ -5236,7 +5236,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "s-d",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 4}},
 	limitation = {},
 	limitation_message_key = "weed"
@@ -5262,7 +5262,7 @@ ITEM {
 	tier = 1,
     subgroup = "py-alienlife-modules",
     order = "m-a",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 0.65}},
 	limitation = {},
 	limitation_message_key = "moss"
@@ -5293,7 +5293,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "m-b",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 1.3}},
 	limitation = {},
 	limitation_message_key = "moss"
@@ -5324,7 +5324,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "m-c",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 1.95}},
 	limitation = {},
 	limitation_message_key = "moss"
@@ -5355,7 +5355,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "m-d",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 2.6}},
 	limitation = {},
 	limitation_message_key = "moss"
@@ -5375,7 +5375,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "m-a",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 5}},
 	limitation = {},
 	limitation_message_key = "sap"
@@ -5395,7 +5395,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "m-b",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 10}},
 -- 	limitation = {},
 -- 	limitation_message_key = "sap"
@@ -5415,7 +5415,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "m-c",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 15}},
 -- 	limitation = {},
 -- 	limitation_message_key = "sap"
@@ -5435,7 +5435,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "m-d",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 20}},
 -- 	limitation = {},
 -- 	limitation_message_key = "sap"
@@ -5455,7 +5455,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "u-a",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 2}},
 	limitation = {},
 	limitation_message_key = "ulric"
@@ -5475,7 +5475,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "u-b",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 3}},
 -- 	limitation = {},
 -- 	limitation_message_key = "ulric"
@@ -5495,7 +5495,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "u-c",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 4}},
 -- 	limitation = {},
 -- 	limitation_message_key = "ulric"
@@ -5515,7 +5515,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "u-d",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 5}},
 -- 	limitation = {},
 -- 	limitation_message_key = "ulric"
@@ -5599,7 +5599,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "sa",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 1.25}},
 	limitation = {},
 	limitation_message_key = "sponge"
@@ -5619,7 +5619,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "sb",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 2.5}},
 	limitation = {},
 	limitation_message_key = "sponge"
@@ -5639,7 +5639,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "sc",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 4}},
 	limitation = {},
 	limitation_message_key = "sponge"
@@ -5659,7 +5659,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "sd",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 5}},
 	limitation = {},
 	limitation_message_key = "sponge"
@@ -5679,7 +5679,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "ra",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 0.83}},
 	limitation = {},
 	limitation_message_key = "ralesia"
@@ -5699,7 +5699,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "rb",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 1.66}},
 -- 	limitation = {},
 -- 	limitation_message_key = "ralesia"
@@ -5719,7 +5719,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "rc",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 2.49}},
 -- 	limitation = {},
 -- 	limitation_message_key = "ralesia"
@@ -5739,7 +5739,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "rd",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 3.33}},
 -- 	limitation = {},
 -- 	limitation_message_key = "ralesia"
@@ -5759,7 +5759,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "m-a",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 5}},
 	limitation = {},
 	limitation_message_key = "mukmoux"
@@ -5779,7 +5779,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "m-b",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 6.25}},
 -- 	limitation = {},
 -- 	limitation_message_key = "mukmoux"
@@ -5799,7 +5799,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "m-c",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 7.5}},
 -- 	limitation = {},
 -- 	limitation_message_key = "mukmoux"
@@ -5819,7 +5819,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "m-d",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 8.75}},
 -- 	limitation = {},
 -- 	limitation_message_key = "mukmoux"
@@ -5839,7 +5839,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "aa",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 1.25}},
 	limitation = {},
 	limitation_message_key = "arthurian"
@@ -5859,7 +5859,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "ab",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 2.5}},
 	limitation = {},
 	limitation_message_key = "arthurian"
@@ -5879,7 +5879,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "ac",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 3.75}},
 	limitation = {},
 	limitation_message_key = "arthurian"
@@ -5899,7 +5899,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "ad",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 5}},
 	limitation = {},
 	limitation_message_key = "arthurian"
@@ -5919,7 +5919,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "ta",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "tuuphra"
@@ -5939,7 +5939,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "tb",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 2}},
 -- 	limitation = {},
 -- 	limitation_message_key = "tuuphra"
@@ -5959,7 +5959,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "tc",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 3}},
 -- 	limitation = {},
 -- 	limitation_message_key = "tuuphra"
@@ -5979,7 +5979,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "td",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 4}},
 -- 	limitation = {},
 -- 	limitation_message_key = "tuuphra"
@@ -5999,7 +5999,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "na",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 7.5}},
 	limitation = {},
 	limitation_message_key = "navens"
@@ -6019,7 +6019,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "nb",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 10}},
 -- 	limitation = {},
 -- 	limitation_message_key = "navens"
@@ -6039,7 +6039,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "nc",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 12.5}},
 -- 	limitation = {},
 -- 	limitation_message_key = "navens"
@@ -6059,7 +6059,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "nd",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 15}},
 -- 	limitation = {},
 -- 	limitation_message_key = "navens"
@@ -6079,7 +6079,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "ya",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 0.3}},
 	limitation = {},
 	limitation_message_key = "yotoi"
@@ -6099,7 +6099,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "yb",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 0.6}},
 -- 	limitation = {},
 -- 	limitation_message_key = "yotoi"
@@ -6119,7 +6119,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "yc",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 0.9}},
 -- 	limitation = {},
 -- 	limitation_message_key = "yotoi"
@@ -6139,7 +6139,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "yd",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 1.2}},
 -- 	limitation = {},
 -- 	limitation_message_key = "yotoi"
@@ -6159,7 +6159,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "da",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 3.75}},
 	limitation = {},
 	limitation_message_key = "dhilmos"
@@ -6179,7 +6179,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "db",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 5}},
 -- 	limitation = {},
 -- 	limitation_message_key = "dhilmos"
@@ -6199,7 +6199,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "dc",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 6.25}},
 -- 	limitation = {},
 -- 	limitation_message_key = "dhilmos"
@@ -6219,7 +6219,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "dd",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 7.5}},
 -- 	limitation = {},
 -- 	limitation_message_key = "dhilmos"
@@ -6239,7 +6239,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "sr-a",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 1.65}},
 	limitation = {},
 	limitation_message_key = "scrondrix"
@@ -6259,7 +6259,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "sr-b",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 3.3}},
 -- 	limitation = {},
 -- 	limitation_message_key = "scrondrix"
@@ -6279,7 +6279,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "sr-c",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 4.96}},
 -- 	limitation = {},
 -- 	limitation_message_key = "scrondrix"
@@ -6299,7 +6299,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "sr-d",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 6.6}},
 -- 	limitation = {},
 -- 	limitation_message_key = "scrondrix"
@@ -6319,7 +6319,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "ren-a",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 0.16}},
 	limitation = {},
 	limitation_message_key = "rennea"
@@ -6339,7 +6339,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "ren-b",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 0.32}},
 -- 	limitation = {},
 -- 	limitation_message_key = "rennea"
@@ -6359,7 +6359,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "ren-c",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 0.63}},
 -- 	limitation = {},
 -- 	limitation_message_key = "rennea"
@@ -6379,7 +6379,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "ren-d",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 1.25}},
 -- 	limitation = {},
 -- 	limitation_message_key = "rennea"
@@ -6399,7 +6399,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "ph-a",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 10}},
 	limitation = {},
 	limitation_message_key = "phadai"
@@ -6419,7 +6419,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "ph-b",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 12.5}},
 -- 	limitation = {},
 -- 	limitation_message_key = "phadai"
@@ -6439,7 +6439,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "ph-c",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 15}},
 -- 	limitation = {},
 -- 	limitation_message_key = "phadai"
@@ -6459,7 +6459,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "ph-d",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 17.5}},
 -- 	limitation = {},
 -- 	limitation_message_key = "phadai"
@@ -6494,7 +6494,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "a",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 6.7}},--16.75
 	limitation = {},
     limitation_message_key = "auog",
@@ -6517,7 +6517,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "a-b",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 13.4}},
 	limitation = {},
     limitation_message_key = "auog",
@@ -6540,7 +6540,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "a-c",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 20.1}},
 	limitation = {},
     limitation_message_key = "auog",
@@ -6563,7 +6563,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "a-d",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 26.8}},
 	limitation = {},
     limitation_message_key = "auog",
@@ -6661,7 +6661,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "fa",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 3.75}},
 	limitation = {},
 	limitation_message_key = "fish"
@@ -6697,7 +6697,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "fb",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 5}},
 -- 	limitation = {},
 -- 	limitation_message_key = "fish"
@@ -6733,7 +6733,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "fc",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 6.25}},
 -- 	limitation = {},
 -- 	limitation_message_key = "fish"
@@ -6769,7 +6769,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "fd",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 7.5}},
 -- 	limitation = {},
 -- 	limitation_message_key = "fish"
@@ -6789,7 +6789,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "yaed-a",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 10}},
 	limitation = {},
 	limitation_message_key = "yaedols"
@@ -6809,7 +6809,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "yaed-b",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 12.5}},
 -- 	limitation = {},
 -- 	limitation_message_key = "yaedols"
@@ -6829,7 +6829,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "yaed-c",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 15}},
 -- 	limitation = {},
 -- 	limitation_message_key = "yaedols"
@@ -6849,7 +6849,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "yaed-d",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 17.5}},
 -- 	limitation = {},
 -- 	limitation_message_key = "yaedols"
@@ -6869,7 +6869,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "d-a",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 0.4}},
 	limitation = {},
     limitation_message_key = "dingrits",
@@ -6892,7 +6892,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "d-b",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 0.8}},
 -- 	limitation = {},
 --     limitation_message_key = "dingrits",
@@ -6915,7 +6915,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "d-c",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 1.6}},
 -- 	limitation = {},
 --     limitation_message_key = "dingrits",
@@ -6938,7 +6938,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "d-d",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 3.2}},
 -- 	limitation = {},
 --     limitation_message_key = "dingrits",
@@ -7025,7 +7025,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "k-a",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 0.2}},
 	limitation = {},
 	limitation_message_key = "kmauts"
@@ -7045,7 +7045,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "k-b",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 0.4}},
 -- 	limitation = {},
 -- 	limitation_message_key = "kmauts"
@@ -7065,7 +7065,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "k-c",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 0.6}},
 -- 	limitation = {},
 -- 	limitation_message_key = "kmauts"
@@ -7085,7 +7085,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "k-d",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 0.8}},
 -- 	limitation = {},
 -- 	limitation_message_key = "kmauts"
@@ -7105,7 +7105,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "v-a",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 50}},
 	limitation = {},
 	limitation_message_key = "vonix"
@@ -7125,7 +7125,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "v-b",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 55}},
 -- 	limitation = {},
 -- 	limitation_message_key = "vonix"
@@ -7145,7 +7145,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "v-c",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 60}},
 -- 	limitation = {},
 -- 	limitation_message_key = "vonix"
@@ -7165,7 +7165,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "v-d",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 65}},
 -- 	limitation = {},
 -- 	limitation_message_key = "vonix"
@@ -7185,7 +7185,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "ga",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 1.425}},
 	limitation = {},
 	limitation_message_key = "grod"
@@ -7205,7 +7205,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "gb",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 2.85}},
 -- 	limitation = {},
 -- 	limitation_message_key = "grod"
@@ -7225,7 +7225,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "gc",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 4.275}},
 -- 	limitation = {},
 -- 	limitation_message_key = "grod"
@@ -7245,7 +7245,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "gd",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 5.7}},
 -- 	limitation = {},
 -- 	limitation_message_key = "grod"
@@ -7261,7 +7261,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "p-a",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "phagnot"
@@ -7281,7 +7281,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "p-b",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 2}},
 	limitation = {},
 	limitation_message_key = "phagnot"
@@ -7301,7 +7301,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "p-c",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 3}},
 	limitation = {},
 	limitation_message_key = "phagnot"
@@ -7321,7 +7321,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "p-d",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 4}},
 	limitation = {},
 	limitation_message_key = "phagnot"
@@ -7341,7 +7341,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "b-a",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 45}},
 	limitation = {},
 	limitation_message_key = "bhoddos"
@@ -7361,7 +7361,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "b-b",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 50}},
 	limitation = {},
 	limitation_message_key = "bhoddos"
@@ -7381,7 +7381,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "b-c",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 55}},
 	limitation = {},
 	limitation_message_key = "bhoddos"
@@ -7401,7 +7401,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "b-d",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 60}},
 	limitation = {},
 	limitation_message_key = "bhoddos"
@@ -7421,7 +7421,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "x-a",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "xeno"
@@ -7441,7 +7441,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "x-b",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 2}},
 -- 	limitation = {},
 -- 	limitation_message_key = "xeno"
@@ -7461,7 +7461,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "x-c",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 3}},
 -- 	limitation = {},
 -- 	limitation_message_key = "xeno"
@@ -7481,7 +7481,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "x-d",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 4}},
 -- 	limitation = {},
 -- 	limitation_message_key = "xeno"
@@ -7497,7 +7497,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "a",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 35}},
 	limitation = {},
 	limitation_message_key = "cridren"
@@ -7517,7 +7517,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "za",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "zipir"
@@ -7537,7 +7537,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "zb",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 2}},
 -- 	limitation = {},
 -- 	limitation_message_key = "zipir"
@@ -7557,7 +7557,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "zc",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 3}},
 -- 	limitation = {},
 -- 	limitation_message_key = "zipir"
@@ -7577,7 +7577,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "zd",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 4}},
 -- 	limitation = {},
 -- 	limitation_message_key = "zipir"
@@ -7597,7 +7597,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "tr-a",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 40}},
 	limitation = {},
 	limitation_message_key = "trits"
@@ -7617,7 +7617,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "tr-b",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 45}},
 -- 	limitation = {},
 -- 	limitation_message_key = "trits"
@@ -7637,7 +7637,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "tr-c",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 50}},
 -- 	limitation = {},
 -- 	limitation_message_key = "trits"
@@ -7657,7 +7657,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "tr-d",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 55}},
 -- 	limitation = {},
 -- 	limitation_message_key = "trits"
@@ -7677,7 +7677,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "v-a",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 0.25}},
 	limitation = {},
 	limitation_message_key = "vrauks"
@@ -7697,7 +7697,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "v-b",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 0.38}},
 -- 	limitation = {},
 -- 	limitation_message_key = "vrauks"
@@ -7717,7 +7717,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "v-c",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 0.5}},
 -- 	limitation = {},
 -- 	limitation_message_key = "vrauks"
@@ -7737,7 +7737,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "v-d",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 0.58}},
 -- 	limitation = {},
 -- 	limitation_message_key = "vrauks"
@@ -7757,7 +7757,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "v-a",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 10}},
 	limitation = {},
 	limitation_message_key = "xyhiphoe"
@@ -7777,7 +7777,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "v-b",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 20}},
 -- 	limitation = {},
 -- 	limitation_message_key = "xyhiphoe"
@@ -7797,7 +7797,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "v-c",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 30}},
 -- 	limitation = {},
 -- 	limitation_message_key = "xyhiphoe"
@@ -7817,7 +7817,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "v-d",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 40}},
 -- 	limitation = {},
 -- 	limitation_message_key = "xyhiphoe"
@@ -7837,7 +7837,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "k-a",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 2.5}},
 	limitation = {},
 	limitation_message_key = "korlex"
@@ -7857,7 +7857,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "k-b",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 3.13}},
 -- 	limitation = {},
 -- 	limitation_message_key = "korlex"
@@ -7877,7 +7877,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "k-c",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 3.75}},
 -- 	limitation = {},
 -- 	limitation_message_key = "korlex"
@@ -7897,7 +7897,7 @@ ITEM {
 --     flags = {},
 --     subgroup = "py-alienlife-modules",
 --     order = "k-d",
---     stack_size = 300,
+--     stack_size = 500,
 -- 	effect = {productivity = {bonus = -1},speed = {bonus = 4.38}},
 -- 	limitation = {},
 -- 	limitation_message_key = "korlex"
@@ -7916,7 +7916,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "k-d",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 0.45}},
 	limitation = {},
 	limitation_message_key = "fawogae"
@@ -7935,7 +7935,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "k-d",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 0.95}},
 	limitation = {},
 	limitation_message_key = "fawogae"
@@ -7955,7 +7955,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "k-d",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 1.45}},
 	limitation = {},
 	limitation_message_key = "fawogae"
@@ -7975,7 +7975,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "k-d",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 1.95}},
 	limitation = {},
 	limitation_message_key = "fawogae"
@@ -7995,7 +7995,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "cg-a",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 0.5}},
 	limitation = {},
 	limitation_message_key = "cottongut"
@@ -8015,7 +8015,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "cg-b",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "cottongut"
@@ -8035,7 +8035,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "cg-c",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 1.5}},
 	limitation = {},
 	limitation_message_key = "cottongut"
@@ -8055,7 +8055,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "cg-d",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 2}},
 	limitation = {},
 	limitation_message_key = "cottongut"
@@ -8079,7 +8079,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "g-a",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 7.5}},
 	limitation = {},
 	limitation_message_key = "guar"
@@ -8099,7 +8099,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "g-b",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 15}},
 	limitation = {},
 	limitation_message_key = "guar"
@@ -8119,7 +8119,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "g-c",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 30}},
 	limitation = {},
 	limitation_message_key = "guar"
@@ -8139,7 +8139,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "g-d",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 60}},
 	limitation = {},
 	limitation_message_key = "guar"
@@ -8161,7 +8161,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "q-a",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 3.75}},
 	limitation = {},
 	limitation_message_key = "arqad"
@@ -8181,7 +8181,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "q-b",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 5}},
 	limitation = {},
 	limitation_message_key = "arqad"
@@ -8201,7 +8201,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "q-c",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 6.25}},
 	limitation = {},
 	limitation_message_key = "arqad"
@@ -8221,7 +8221,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "q-d",
-    stack_size = 300,
+    stack_size = 500,
 	effect = {productivity = {bonus = -1},speed = {bonus = 7.5}},
 	limitation = {},
 	limitation_message_key = "arqad"
@@ -8235,7 +8235,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arqad",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8251,7 +8251,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arqad",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8267,7 +8267,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arqad",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8283,7 +8283,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arqad",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8299,7 +8299,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arqad",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8310,7 +8310,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arqad",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 
@@ -8326,7 +8326,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arqad",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 
@@ -8342,7 +8342,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arqad",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8357,7 +8357,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arqad",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8381,7 +8381,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arqad",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8409,7 +8409,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arqad",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 
@@ -8438,7 +8438,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arqad",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8466,7 +8466,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arqad",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8477,7 +8477,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arqad",
     order = "t",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8488,7 +8488,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arqad",
     order = "t",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8499,7 +8499,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-samples",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -8510,7 +8510,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arqad",
     order = "t",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8521,7 +8521,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arqad",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8532,7 +8532,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arqad",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8543,7 +8543,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arqad",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8554,7 +8554,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arqad",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8565,7 +8565,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arqad",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8576,7 +8576,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arqad",
     order = "a",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8587,7 +8587,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
 
 ---replicators----
@@ -8679,7 +8679,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-scrondrix",
     order = "x",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8690,7 +8690,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-xeno",
     order = "x",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8701,7 +8701,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-zipir",
     order = "x",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8712,7 +8712,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-arthurian",
     order = "x",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8723,7 +8723,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-phagnot",
     order = "x",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8734,7 +8734,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-korlex",
     order = "x",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8745,7 +8745,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-phadai",
     order = "x",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8756,7 +8756,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-dingrits",
     order = "x",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8806,7 +8806,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-ulric",
     order = "x",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8817,7 +8817,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-auog",
     order = "x",
-    stack_size = 50
+    stack_size = 500
 }
 
 ITEM {
@@ -8828,7 +8828,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "x",
-    stack_size = 50
+    stack_size = 500
 }
 
 ------------------------------

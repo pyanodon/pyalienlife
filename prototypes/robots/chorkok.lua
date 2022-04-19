@@ -25,7 +25,7 @@ ITEM {
     subgroup = 'py-alienlife-special-creatures',
     order = 'z',
     place_result = 'chorkok',
-    stack_size = 50
+    stack_size = 500
 }
 
 ENTITY {

@@ -35,7 +35,7 @@ ITEM{
     subgroup = "py-alienlife-special-creatures",
     order = "a",
     place_result = "flyavan",
-    stack_size = 5
+    stack_size = 10
   }
 
 data:extend(

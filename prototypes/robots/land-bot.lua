@@ -20,7 +20,7 @@ ITEM{
     subgroup = "transport",
     order = "a",
     place_result = "land-bot",
-    stack_size = 5
+    stack_size = 10
   }
 
 data:extend(

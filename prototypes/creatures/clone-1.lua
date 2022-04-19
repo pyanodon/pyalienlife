@@ -27,7 +27,7 @@ ITEM{
     subgroup = "py-alienlife-buildings-others",
     order = "x",
     place_result = "clone-1",
-    stack_size = 5
+    stack_size = 10
   }
 
 data:extend(

@@ -27,7 +27,7 @@ ITEM{
     subgroup = "py-alienlife-special-creatures",
     order = "x",
     place_result = "ocula",
-    stack_size = 5
+    stack_size = 10
   }
 
   data:extend(
