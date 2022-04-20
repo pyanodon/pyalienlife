@@ -15,6 +15,7 @@ RECIPE {
         {type = 'item', name = 'wood-seedling', amount = 5},
         {type = 'item', name = 'yotoi-codex', amount = 1},
         {type = 'item', name = 'earth-tropical-tree-sample', amount = 1},
+        {type = 'item', name = 'planter-box', amount = 1},
         {type = 'fluid', name = 'water', amount = 1000},
     },
     results = {

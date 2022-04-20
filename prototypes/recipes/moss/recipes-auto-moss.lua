@@ -36,7 +36,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 100,
 			name = 'Moss 1',
-			--tech = 'moss-mk01'
+			tech = 'moss-mk01'
 		},
 		--red
 		{

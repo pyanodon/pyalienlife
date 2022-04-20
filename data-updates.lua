@@ -3,11 +3,12 @@ local table = require('__stdlib__/stdlib/utils/table')
 --require("__pycoalprocessing__/prototypes/functions/functions")
 local fun = require("prototypes/functions/functions")
 
-table.insert(data.raw.lab.lab.inputs, 'py-science-pack-1')
-table.insert(data.raw.lab.lab.inputs, 'py-science-pack-2')
-table.insert(data.raw.lab.lab.inputs, 'py-science-pack-3')
-
 require("prototypes/updates/autoplace-fish")
+require("prototypes/updates/base-updates")
+
+if mods["pycoalprocessing"] then
+    require("prototypes/updates/pycoalprocessing-updates")
+end
 
 if mods["pyfusionenergy"] then
     require("prototypes/updates/pyfusionenergy-updates")
@@ -22,11 +23,7 @@ if mods["pyhightech"] then
     require("prototypes/technologies/schrodinger-antelope")
     require("prototypes/buildings/antelope-enclosure-mk01")
     require("prototypes/updates/pyhightech-updates")
-    table.insert(data.raw['assembling-machine']['crash-site-assembling-machine-1-repaired'].crafting_categories, 'vrauk-rendering')
-end
-
-if mods["pycoalprocessing"] then
-    require("prototypes/updates/pycoalprocessing-updates")
+    -- table.insert(data.raw['assembling-machine']['crash-site-assembling-machine-1-repaired'].crafting_categories, 'vrauk-rendering')
 end
 
 if mods["pypetroleumhandling"] then
@@ -53,10 +50,10 @@ data.raw.boiler.boiler.energy_source.fuel_categories = {"chemical", "biomass"}
 
 data.raw.item.fawogae = nil
 
-table.insert(data.raw.character.character.mining_categories, "ore-bioreserve")
+-- table.insert(data.raw.character.character.mining_categories, "ore-bioreserve")
 
-table.insert(data.raw.character.character.crafting_categories, "genlab-handcrafting")
-table.insert(data.raw.character.character.crafting_categories, "research")
+table.insert(data.raw.character.character.crafting_categories, "wpu-handcrafting")
+table.insert(data.raw.character.character.crafting_categories, "research-handcrafting")
 
 for _, recipe in pairs(data.raw.recipe) do
     local r = RECIPE(recipe)
@@ -152,40 +149,7 @@ data.raw.item['milk-barrel'] = nil
 
 --fun.global_item_replacer('fawogae', 'fawogae-mk01')
 
-TECHNOLOGY('fluid-handling'):remove_pack('logistic-science-pack')
-TECHNOLOGY('automation-2'):remove_pack('logistic-science-pack'):remove_prereq('logistic-science-pack')
-TECHNOLOGY('exoskeleton-equipment'):remove_prereq('electric-engine'):remove_prereq('solar-panel-equipment'):add_prereq('bio-implants')
-TECHNOLOGY('exoskeleton-equipment'):add_pack('production-science-pack')
-ITEM("raw-fish", "capsule"):set("icon", "__pyalienlifegraphics__/graphics/icons/fish.png")
-ITEM("raw-fish", "capsule"):set("icon_size", 32)
-ITEM("raw-fish", "capsule"):set("icon_mipmaps", nil)
-RECIPE('power-armor'):add_ingredient({type = "item", name = "pelt", amount = 1})
---RECIPE('low-density-structure'):add_ingredient({type = "item", name = "metallic-glass", amount = 3}):add_ingredient({type = "item", name = "ticocr-alloy", amount = 2})
---RECIPE('rocket-silo'):add_ingredient({type = "item", name = "metallic-glass", amount = 30}):add_ingredient({type = "item", name = "ticocr-alloy", amount = 20})
---TECHNOLOGY('rocket-silo'):add_pack('py-science-pack')
---TECHNOLOGY('rocket-control-unit'):add_pack('py-science-pack')
-TECHNOLOGY('atomic-bomb'):remove_prereq('rocket-control-unit'):remove_prereq('kovarex-enrichment-process'):remove_prereq('military-4'):remove_prereq('rocketry'):add_prereq('domestication-mk02'):add_prereq('uranium-mk03')
-RECIPE('atomic-bomb'):add_ingredient({type = "item", name = "titanium-plate", amount = 20}):add_ingredient({type = "item", name = "fuelrod-mk01", amount = 10}):remove_ingredient("rocket-control-unit"):remove_ingredient("yellow-cake"):add_ingredient({type = "item", name = "neuromorphic-chip", amount = 1})
-
 --RECIPES UPDATES
-
-RECIPE {
-    type = 'recipe',
-    name = 'concrete-02',
-    category = 'advanced-crafting',
-    enabled = false,
-    energy_required = 8,
-    ingredients = {
-        {type = 'item', name = 'stone-brick', amount = 5},
-        {type = 'fluid', name = 'water', amount = 100},
-        {type = 'fluid', name = 'boric-acid', amount = 400},
-        {type = 'item', name = 'cellulose', amount = 4},
-    },
-    results = {
-        {type = 'item', name = 'concrete', amount = 20},
-    },
-    --main_product = "cocoon",
-}:add_unlock("biotech-mk02")
 
 --Updating base milk barrel with icons. replacing base recipes with py copies to use the right barrel
 
@@ -298,8 +262,8 @@ require('prototypes/upgrades/tech-upgrades')
 
 if data.data_crawler then
 	  data.script_enabled = {
-		{type = "entity", name = "crash-site-assembling-machine-1-repaired"},
-		{type = "entity", name = "crash-site-lab-repaired"},
+		-- {type = "entity", name = "crash-site-assembling-machine-1-repaired"},
+		-- {type = "entity", name = "crash-site-lab-repaired"},
 		{type = "entity", name = "tar-patch"},
         {type = "item", name = "earth-generic-sample"}
 	  }
@@ -308,20 +272,11 @@ if data.data_crawler then
   TECHNOLOGY('filtration-mk02'):remove_prereq('lithium-processing')
 
 -- Override crashed building resistances since we won't have the means to repair them immediately
-data.raw['assembling-machine']['crash-site-assembling-machine-1-repaired'].resistances = {{type = 'fire', percent = 100}}
-data.raw['assembling-machine']['crash-site-lab-repaired'].resistances = {{type = 'fire', percent = 100}}
+-- data.raw['assembling-machine']['crash-site-assembling-machine-1-repaired'].resistances = {{type = 'fire', percent = 100}}
+-- data.raw['assembling-machine']['crash-site-lab-repaired'].resistances = {{type = 'fire', percent = 100}}
 
 --RECIPES UPDATES
 
-RECIPE('exoskeleton-equipment'):add_ingredient({type = "item", name = "metallic-glass", amount = 30})
-RECIPE('automation-science-pack'):change_category('research')
-RECIPE('logistic-science-pack'):change_category('research')
-RECIPE('chemical-science-pack'):change_category('research')
-RECIPE('military-science-pack'):change_category('research')
-RECIPE('production-science-pack'):change_category('research')
-RECIPE('utility-science-pack'):change_category('research'):add_ingredient({type = "item", name = "perfect-samples", amount = 1})
-
-RECIPE('hotair-empty-petri-dish'):add_unlock('hot-air-mk01'):set_fields{enabled = false}
 -- Add our next upgrades
 local searchtypes = {
     'turret',

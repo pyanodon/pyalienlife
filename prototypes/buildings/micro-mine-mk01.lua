@@ -2,7 +2,7 @@ RECIPE {
     type = "recipe",
     name = "micro-mine-mk01",
     energy_required = 0.5,
-    enabled = true,
+    enabled = false,
     ingredients = {
         {"stone-brick", 50},
         {"electric-mining-drill", 1},
@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"micro-mine-mk01", 1}
     }
-}
+}:add_unlock("basic-substrate")
 
 ITEM {
     type = "item",

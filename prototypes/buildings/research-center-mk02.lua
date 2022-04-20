@@ -48,7 +48,7 @@ ENTITY {
         module_slots = 2
     },
     allowed_effects = {"speed","productivity",'consumption','pollution'},
-    crafting_categories = {"research"},
+    crafting_categories = {"research", "research-handcrafting"},
     crafting_speed = 2,
     energy_source = {
         type = "electric",

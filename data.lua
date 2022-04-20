@@ -123,6 +123,17 @@ require('prototypes/technologies/neuro-electronics')
 require('prototypes/technologies/biotech-machines')
 require('prototypes/technologies/biobattery')
 require('prototypes/technologies/seaweed')
+require('prototypes/technologies/glass')
+require('prototypes/technologies/petri-dish')
+require('prototypes/technologies/latex')
+require('prototypes/technologies/sap')
+require('prototypes/technologies/basic-substrate')
+require('prototypes/technologies/soil-washing')
+
+if mods["pyhightech"] then
+    require('prototypes/technologies/mining-with-fluid')
+    require('prototypes/technologies/electric-mining-drill')
+end
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
@@ -323,11 +334,18 @@ require('prototypes/buildings/simik-den-mk02')
 require('prototypes/buildings/simik-den-mk03')
 require('prototypes/buildings/simik-den-mk04')
 
---crashed data array
-require('prototypes/buildings/crashed-lab-mk01')
-if not mods["pyhightech"] then
-    require("prototypes/buildings/crashed-assembler-mk01")
+
+if mods["pyhightech"] then
+    require('prototypes/buildings/advanced-burner-drill')
 end
+
+require('prototypes.buildings.sap-tree')
+
+--crashed data array
+-- require('prototypes/buildings/crashed-lab-mk01')
+-- if not mods["pyhightech"] then
+--     require("prototypes/buildings/crashed-assembler-mk01")
+-- end
 
 --((SPACE BUILDINGS))--
 --[[

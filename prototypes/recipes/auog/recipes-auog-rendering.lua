@@ -26,7 +26,7 @@ fun.autorecipes {
 					{name='cage', amount = 3},
 				},
 			crafting_speed = 10,
-			tech = 'rendering',
+			tech = 'auog',
 			name = 'full-render-auogs',
 			icon = "__pyalienlifegraphics__/graphics/icons/rendering-auog.png",
 			icon_size = 64,

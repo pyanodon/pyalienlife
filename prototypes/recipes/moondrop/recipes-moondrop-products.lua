@@ -13,7 +13,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'moondrop-gas', amount = 15},
     },
-}:add_unlock("moondrop-mk04")
+}:add_unlock("moondrop-mk05")
 
 RECIPE {
     type = 'recipe',
@@ -29,7 +29,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'moondrop-diesel', amount = 15},
     },
-}:add_unlock("moondrop-mk03")
+}:add_unlock("moondrop-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -45,7 +45,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'moondrop-kerosene', amount = 15},
     },
-}:add_unlock("moondrop-mk03")
+}:add_unlock("moondrop-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -61,7 +61,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'moondrop-fueloil', amount = 15},
     },
-}:add_unlock("moondrop-mk02")
+}:add_unlock("moondrop-mk03")
 
 ------Pressing------
 
@@ -81,7 +81,7 @@ RECIPE {
         {type = 'item', name = 'ash', amount = 10},
     },
     main_product = 'gasoline',
-}:add_unlock("moondrop-mk04")
+}:add_unlock("moondrop-mk05")
 
 RECIPE {
     type = 'recipe',
@@ -97,7 +97,7 @@ RECIPE {
         {type = 'item', name = 'ash', amount = 10},
     },
     main_product = 'diesel',
-}:add_unlock("moondrop-mk03")
+}:add_unlock("moondrop-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -113,7 +113,7 @@ RECIPE {
         {type = 'item', name = 'ash', amount = 10},
     },
     main_product = 'kerosene',
-}:add_unlock("moondrop-mk03")
+}:add_unlock("moondrop-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -129,4 +129,4 @@ RECIPE {
         {type = 'item', name = 'ash', amount = 10},
     },
     main_product = 'fuel-oil',
-}:add_unlock("moondrop-mk02")
+}:add_unlock("moondrop-mk03")

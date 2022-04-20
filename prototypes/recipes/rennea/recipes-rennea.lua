@@ -15,6 +15,7 @@ RECIPE {
         {type = 'item', name = 'fertilizer', amount = 30},
         {type = 'item', name = 'rennea-codex', amount = 1},
         {type = 'item', name = 'earth-sunflower-sample', amount = 1},
+        {type = 'item', name = 'planter-box', amount = 1},
         {type = 'fluid', name = 'water', amount = 1000},
     },
     results = {

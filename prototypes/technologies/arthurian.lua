@@ -4,14 +4,14 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/arthurian.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"land-animals-mk02","biotech-mk02","genetics-mk02","organic-breeding","assisted-embryology"},
+    prerequisites = {"land-animals-mk02","biotech-mk02","genetics-mk03","organic-breeding","assisted-embryology"},
     effects = {},
     unit = {
         count = 150,
         ingredients = {
             {"automation-science-pack", 1},
             {"logistic-science-pack", 1},
-            -- {'py-science-pack-2', 1},
+            -- {'py-science-pack-3', 1},
         },
         time = 50
     }
@@ -31,7 +31,7 @@ TECHNOLOGY {
         ingredients = {
             {"automation-science-pack", 1},
             {"logistic-science-pack", 1},
-            -- {'py-science-pack-2', 1},
+            -- {'py-science-pack-3', 1},
         },
         time = 50
     }
@@ -51,7 +51,7 @@ TECHNOLOGY {
         ingredients = {
             {"automation-science-pack", 1},
             {"logistic-science-pack", 1},
-            -- {'py-science-pack-2', 1},
+            -- {'py-science-pack-3', 1},
         },
         time = 50
     }
@@ -71,7 +71,7 @@ TECHNOLOGY {
         ingredients = {
             {"automation-science-pack", 1},
             {"logistic-science-pack", 1},
-            -- {'py-science-pack-2', 1},
+            -- {'py-science-pack-3', 1},
         },
         time = 50
     }

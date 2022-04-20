@@ -9,7 +9,6 @@ TECHNOLOGY {
         count = 100,
         ingredients = {
             {"automation-science-pack", 1},
-            {"logistic-science-pack", 1}
         },
         time = 50
     }
@@ -28,7 +27,6 @@ TECHNOLOGY {
         ingredients = {
             {"automation-science-pack", 1},
             {"logistic-science-pack", 1},
-            {"chemical-science-pack", 1},
         },
         time = 50
     }
@@ -41,6 +39,25 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     dependencies = {"py-science-pack-mk02"},
+    effects = {},
+    unit = {
+        count = 150,
+        ingredients = {
+            {"automation-science-pack", 1},
+            {"logistic-science-pack", 1},
+            {"chemical-science-pack", 1},
+        },
+        time = 50
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "py-science-pack-mk04",
+    icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
+    icon_size = 128,
+    order = "c-a",
+    dependencies = {"py-science-pack-mk03"},
     effects = {},
     unit = {
         count = 150,

@@ -1,10 +1,20 @@
 local fun = require("prototypes/functions/functions")
 
 --TECHNOLOGY--
--- TECHNOLOGY('coal-processing-3'):add_pack('py-science-pack-2')
--- TECHNOLOGY('energy-3'):add_pack('py-science-pack-2')
--- TECHNOLOGY('excavation-2'):add_pack('py-science-pack-2')
---TECHNOLOGY('fuel-production'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('coal-processing-3'):add_pack('py-science-pack-3')
+-- TECHNOLOGY('energy-3'):add_pack('py-science-pack-3')
+-- TECHNOLOGY('excavation-2'):add_pack('py-science-pack-3')
+--TECHNOLOGY('fuel-production'):add_pack('py-science-pack-3')
+
+TECHNOLOGY("wood-processing"):set_fields{dependencies = {"moss-mk01"}}
+-- TECHNOLOGY("py-asphalt"):add_pack("py-science-pack-1")
+TECHNOLOGY("cooling-tower-1"):add_pack("py-science-pack-1")
+TECHNOLOGY("energy-1"):add_pack("py-science-pack-1")
+TECHNOLOGY("py-burner"):add_pack("py-science-pack-1")
+TECHNOLOGY("py-warehouse-research"):add_pack("py-science-pack-1")
+TECHNOLOGY("fluid-processing-machines-1"):add_pack("py-science-pack-1")
+TECHNOLOGY("lab-instrument"):add_pack("py-science-pack-1")
+TECHNOLOGY("railway-mk01"):add_pack("py-science-pack-1")
 
 --BUILDINDS--
 ITEM("fawogae-plantation-mk02"):set("icon", "__pyalienlifegraphics__/graphics/icons/fawogae-plantation-mk02.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-buildings-mk02", "d")
@@ -26,12 +36,15 @@ data.raw['assembling-machine']['fawogae-plantation-mk04'].module_specification =
 RECIPE("borax-mine"):remove_unlock('energy-1'):set_fields{enabled = true}
 RECIPE("washer"):remove_unlock('energy-1'):set_fields{enabled = true}
 
+RECIPE("py-gas-vent"):add_unlock("coal-processing-1"):set_enabled(false)
+RECIPE("tailings-pond"):add_unlock("coal-processing-1"):set_enabled(false)
+
 --RECIPES--
 RECIPE("ralesia"):remove_unlock('ralesia')
 RECIPE('bonemeal'):remove_unlock('ulric')
-RECIPE('coal-fawogae'):remove_unlock('coal-processing-1'):add_unlock('fawogae')
+RECIPE('coal-fawogae'):remove_unlock('coal-processing-1'):add_unlock('fawogae-mk01')
 
-RECIPE('botanical-nursery'):remove_unlock('wood-processing'):subgroup_order("py-alienlife-buildings-mk01", "b"):set_fields {enabled = true}--:add_unlock('botany-mk01')
+RECIPE('botanical-nursery'):remove_unlock('wood-processing'):subgroup_order("py-alienlife-buildings-mk01", "b"):add_unlock('botany-mk01')
 RECIPE('botanical-nursery-mk02'):remove_unlock('machines-mk02'):add_unlock('botany-mk02'):subgroup_order("py-alienlife-buildings-mk02", "b")
 RECIPE('botanical-nursery-mk03'):remove_unlock('machines-mk03'):add_unlock('botany-mk03'):subgroup_order("py-alienlife-buildings-mk03", "b")
 RECIPE('botanical-nursery-mk04'):remove_unlock('machines-mk04'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk04", "b")
@@ -64,6 +77,11 @@ RECIPE('log6'):change_category('fwf'):add_ingredient({type = "item", name = "woo
 RECIPE('log-wood'):subgroup_order("py-alienlife-recipes", "a")
 RECIPE('fawogae-substrate'):remove_ingredient("fawogae"):add_ingredient({type = "item", name = "petri-dish-bacteria", amount = 2}):add_ingredient({type = "item", name = "cellulose", amount = 3}):replace_ingredient("coke","moss"):subgroup_order("py-alienlife-recipes", "a")
 RECIPE('bio-sample01'):add_ingredient({type = "item", name = "petri-dish-bacteria", amount = 2}):add_ingredient({type = "item", name = "native-flora", amount = 12})
+RECIPE('fawogae-substrate'):add_unlock("basic-substrate"):set_enabled(false)
+
+RECIPE("wpu"):replace_ingredient("wood", {type = "item", name = "log", amount = "5"}):remove_unlock("wood-processing"):set_enabled(true)
+RECIPE("log-wood"):remove_unlock("wood-processing"):set_enabled(true):change_category("wpu-handcrafting")
+RECIPE("botanical-nursery"):replace_ingredient("wood", {type = "item", name = "planter-box", amount = "10"})
 
 RECIPE('ralesia-seeds'):subgroup_order("py-alienlife-ralesia", "a"):change_category('nursery'):replace_ingredient("ralesia","ralesias")
 --RECIPE('chemical-science-pack'):add_ingredient({type = "item", name = "alien-sample-02", amount = 1})
@@ -71,6 +89,8 @@ RECIPE('filtration-media'):add_ingredient({type = "item", name = "micro-fiber", 
 RECIPE('flask'):remove_ingredient("wood"):add_ingredient({type = "item", name = "stopper", amount = 4}):remove_ingredient("molten-glass"):add_ingredient({type = "fluid", name = "molten-glass", amount = 100})
 RECIPE('hotair-flask'):remove_ingredient("wood"):add_ingredient({type = "item", name = "stopper", amount = 4}):remove_ingredient("molten-glass"):add_ingredient({type = "fluid", name = "molten-glass", amount = 100})
 RECIPE('aromatics-to-plastic'):change_category('biofactory'):remove_ingredient("aromatics"):add_ingredient({type = "fluid", name = "aromatics", amount = 50}):remove_ingredient("syngas"):add_ingredient({type = "fluid", name = "syngas", amount = 100})
+RECIPE('oil-refinery'):remove_unlock('plastics')
+RECIPE("flask"):add_unlock("py-science-pack-mk01"):set_enabled(false)
 
 RECIPE('mukmoux-fat'):remove_unlock('coal-processing-2')
 RECIPE('log-organics'):remove_unlock('coal-processing-2')
@@ -79,6 +99,22 @@ RECIPE('soil-separation'):remove_unlock('separation')
 RECIPE("ground-sample01"):remove_unlock("logistic-science-pack"):add_unlock("mycology-mk01")
 RECIPE("oleochemicals"):remove_unlock("mukmoux"):add_unlock("coal-processing-2")
 RECIPE("dedicated-oleochemicals"):remove_unlock("mukmoux"):add_unlock("coal-processing-2")
+RECIPE("iron-oxide-smelting"):add_unlock("coal-processing-1"):set_enabled(false)
+RECIPE("extract-limestone-01"):add_unlock("coal-processing-1"):set_enabled(false)
+RECIPE("hpf"):add_unlock("coal-processing-1"):set_enabled(false)
+RECIPE("washer"):add_unlock("soil-washing"):set_enabled(false)
+RECIPE("muddy-sludge"):add_unlock("soil-washing"):set_enabled(false)
+RECIPE("soil-washing"):add_unlock("soil-washing"):set_enabled(false)
+
+RECIPE("automation-science-pack"):clear_ingredients():add_ingredient({type="item", name="planter-box", amount=1}):add_ingredient({type="item", name="electronic-circuit", amount=1})
+RECIPE("soil-extractormk01"):remove_ingredient("tinned-cable")
+
+
+RECIPE("distilator"):add_unlock("coal-processing-1"):set_enabled(false)
+RECIPE("coal-gas"):add_unlock("coal-processing-1"):set_enabled(false)
+RECIPE("coal-gas-from-wood"):add_unlock("coal-processing-1"):set_enabled(false)
+RECIPE("coal-gas-from-coke"):add_unlock("coal-processing-1"):set_enabled(false)
+RECIPE("distilled-raw-coal"):add_unlock("coal-processing-1"):set_enabled(false)
 
 fun.results_replacer("log2", "log", "log",4)
 fun.results_replacer("log4", "log", "log",5)
@@ -95,26 +131,3 @@ data.raw["recipe-category"]["ralesia"].modules_required = true
 data.raw["recipe-category"]["ulric"].allowed_module_categories = { "ulric" }
 data.raw["recipe-category"]["ulric"].modules_required = true
 
-----EXCLUSIVE RECIPES----
-
-RECIPE {
-    type = "recipe",
-    name = "soil-separation-2",
-    category = "solid-separator",
-    enabled = false,
-    energy_required = 3,
-    ingredients = {
-        {type = "item", name = "soil", amount = 20}
-    },
-    results = {
-        {type = "item", name = "sand", amount = 13},
-        {type = "item", name = "coarse", amount = 3},
-        {type = "item", name = "limestone", amount = 2},
-        {type = "item", name = "biomass", amount = 3}
-    },
-    main_product = "sand",
-    icon = "__pycoalprocessinggraphics__/graphics/icons/soil-separation.png",
-    icon_size = 32,
-    subgroup = "py-items-class",
-    order = "e"
-}:add_unlock("separation")

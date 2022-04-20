@@ -231,9 +231,9 @@ RECIPE {
 
         },
     results = {
-        {type = 'item', name = 'py-science-pack-2', amount = 1},
+        {type = 'item', name = 'py-science-pack-3', amount = 1},
     },
-    main_product = 'py-science-pack-2',
+    main_product = 'py-science-pack-3',
     --icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
     --icon_size = 64,
     subgroup = "py-alienlife-items",

@@ -34,7 +34,7 @@ fun.autorecipes {
 					{name='fawogae', amount = 7}
 				},
 			crafting_speed = 100,
-			tech = 'fawogae'
+			tech = 'fawogae-mk01'
         },
 		--first
         {
@@ -50,7 +50,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 80,
 			name = 'fawogae with manure',
-			tech = 'fawogae'
+			tech = 'fawogae-mk02'
         },
         --green
         {
@@ -67,7 +67,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 60,
 			name = 'fawogae with improved substrate',
-			tech = 'mycology-mk02'
+			tech = 'fawogae-mk03'
         },
     --blue
         {
@@ -84,7 +84,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 40,
 			name = 'fawogae with special substrate',
-			tech = 'mycology-mk03'
+			tech = 'fawogae-mk04'
 		},
     --GH
     {
@@ -101,7 +101,7 @@ fun.autorecipes {
             },
 		crafting_speed = 20,
 		name = 'fawogae with growth hormone',
-        tech = 'mycology-mk04'
+        tech = 'fawogae-mk05'
     },
 	}
 }

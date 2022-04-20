@@ -21,11 +21,6 @@ require("__pyhightech__/prototypes/buildings/moondrop-greenhouse-mk02")
 require("__pyhightech__/prototypes/buildings/moondrop-greenhouse-mk03")
 require("__pyhightech__/prototypes/buildings/moondrop-greenhouse-mk04")
 
-table.insert(data.raw['assembling-machine']['pulp-mill-mk01'].crafting_categories, 'latex')
-table.insert(data.raw['assembling-machine']['pulp-mill-mk02'].crafting_categories, 'latex')
-table.insert(data.raw['assembling-machine']['pulp-mill-mk03'].crafting_categories, 'latex')
-table.insert(data.raw['assembling-machine']['pulp-mill-mk04'].crafting_categories, 'latex')
-
 --(( RECIPES ))--
 
 --antelope
@@ -68,13 +63,16 @@ TECHNOLOGY('nano-tech'):add_prereq('microbiology-mk03')
 --TECHNOLOGY('bio-implants'):add_prereq('nano-tech')
 TECHNOLOGY('advanced-electronics'):add_prereq('chitin')
 TECHNOLOGY('antitumor'):add_prereq('earnshaw-theorem')
--- TECHNOLOGY('advanced-electronics'):add_pack('py-science-pack-2')
--- TECHNOLOGY('aerogel'):add_pack('py-science-pack-2')
--- TECHNOLOGY('earnshaw-theorem'):add_pack('py-science-pack-2')
--- TECHNOLOGY('graphene'):add_pack('py-science-pack-2')
--- TECHNOLOGY('nano-tech'):add_pack('py-science-pack-2')
--- TECHNOLOGY('penrose'):add_pack('py-science-pack-2')
--- TECHNOLOGY('quantum'):add_pack('py-science-pack-2')
+-- TECHNOLOGY('advanced-electronics'):add_pack('py-science-pack-3')
+-- TECHNOLOGY('aerogel'):add_pack('py-science-pack-3')
+-- TECHNOLOGY('earnshaw-theorem'):add_pack('py-science-pack-3')
+-- TECHNOLOGY('graphene'):add_pack('py-science-pack-3')
+-- TECHNOLOGY('nano-tech'):add_pack('py-science-pack-3')
+-- TECHNOLOGY('penrose'):add_pack('py-science-pack-3')
+-- TECHNOLOGY('quantum'):add_pack('py-science-pack-3')
+
+TECHNOLOGY("vacuum-tube-electronics"):set_fields{dependencies = {"sap"}}
+TECHNOLOGY("syngas"):set_fields{dependencies = {"vacuum-tube-electronics"}}
 
 --RECIPES--
 RECIPE('kicalk-plantation'):remove_unlock('kicalk')
@@ -97,6 +95,46 @@ RECIPE('space-science-pack'):add_ingredient({type = "item", name = "destablilize
 
 RECIPE('cottongut-science-utility'):add_ingredient({type = "item", name = "destablilized-toxirus", amount = 1}):add_ingredient({type = "item", name = "hormonal", amount = 1}):add_ingredient({type = "item", name = "dimensional-gastricorg", amount = 1}):add_ingredient({type = 'item', name = 'intelligent-unit', amount = 1})
 --RECIPE('satellite'):add_unlock('quantum')
+
+RECIPE("inductor1"):remove_unlock("vacuum-tube-electronics"):set_enabled(true):replace_ingredient("ceramic", "iron-stick"):change_category("crafting")
+RECIPE("automation-science-pack"):replace_ingredient("electronic-circuit", "inductor1")
+
+RECIPE("offshore-pump"):replace_ingredient("electronic-circuit", "inductor1")
+RECIPE("lab"):replace_ingredient("electronic-circuit", "inductor1")
+RECIPE("assembling-machine-1"):replace_ingredient("electronic-circuit", "inductor1")
+RECIPE("soil-extractormk01"):replace_ingredient("electronic-circuit", "inductor1")
+RECIPE("distilator"):replace_ingredient("electronic-circuit", "inductor1")
+RECIPE("electronics-factory-mk01"):replace_ingredient("electric-mining-drill", "advanced-burner-drill")
+RECIPE("hpf"):replace_ingredient("electronic-circuit", "inductor1")
+RECIPE("glassworks-mk01"):replace_ingredient("electronic-circuit", "inductor1")
+RECIPE("borax-mine"):replace_ingredient("electronic-circuit", "inductor1"):replace_ingredient("electric-mining-drill", "advanced-burner-drill")
+RECIPE("gasifier"):replace_ingredient("electronic-circuit", "inductor1")
+RECIPE("chipshooter-mk01"):replace_ingredient("inserter", "burner-inserter")
+RECIPE("tar-processing-unit"):replace_ingredient("electronic-circuit", "inductor1")
+RECIPE("moondrop-codex"):replace_ingredient("electronic-circuit", "inductor1")
+RECIPE("botanical-nursery"):replace_ingredient("electronic-circuit", "inductor1"):replace_ingredient("electric-mining-drill", "advanced-burner-drill")
+RECIPE("washer"):replace_ingredient("electronic-circuit", "inductor1")
+RECIPE("micro-mine-mk01"):replace_ingredient("electronic-circuit", "inductor1"):replace_ingredient("electric-mining-drill", "advanced-burner-drill"):replace_ingredient("inserter", "burner-inserter")
+RECIPE("fwf-mk01"):replace_ingredient("electronic-circuit", "inductor1")
+RECIPE("moss-farm-mk01"):replace_ingredient("electronic-circuit", "inductor1")
+RECIPE("seaweed-crop-mk01"):replace_ingredient("electronic-circuit", "inductor1")
+RECIPE("sap-extractor-mk01"):replace_ingredient("electronic-circuit", "inductor1"):replace_ingredient("inserter", "burner-inserter")
+RECIPE("repair-pack"):replace_ingredient("electronic-circuit", "inductor1")
+RECIPE("electric-mining-drill"):add_unlock("electric-mining-drill"):set_enabled(false)
+RECIPE("radar"):add_unlock("engine"):set_enabled(false)
+RECIPE("collector"):replace_ingredient("electric-mining-drill", "advanced-burner-drill")
+RECIPE("eaf-mk01"):replace_ingredient("electric-mining-drill", "advanced-burner-drill")
+RECIPE("impact-crusher-mk01"):replace_ingredient("electric-mining-drill", "advanced-burner-drill")
+RECIPE("hydroclassifier-mk01"):replace_ingredient("electric-mining-drill", "advanced-burner-drill")
+RECIPE("automated-screener-mk01"):replace_ingredient("electric-mining-drill", "advanced-burner-drill")
+RECIPE("salt-mine"):replace_ingredient("electric-mining-drill", "advanced-burner-drill")
+RECIPE("tin-plate-1"):add_unlock("mining-with-fluid"):set_enabled(false)
+RECIPE("tinned-cable"):add_unlock("mining-with-fluid"):set_enabled(false)
+RECIPE("aluminium-plate-1"):add_unlock("mining-with-fluid"):set_enabled(false)
+
+RECIPE("inserter"):add_unlock("logistics"):set_enabled(false)
+RECIPE("underground-belt"):remove_unlock("logistics"):set_enabled(true)
+RECIPE("long-handed-inserter"):remove_unlock("automation"):add_unlock("rubber"):add_ingredient{type = "item", name = "belt", amount = 1}
 
 ----KICALK-----
 
@@ -285,7 +323,7 @@ RECIPE('cobalt-extract'):replace_ingredient("sulfuric-acid", "cyanic-acid")
 RECIPE('neuroprocessor'):replace_ingredient("electronic-circuit", "pcb2"):add_ingredient({type = "item", name = "resistor1", amount = 5}):add_ingredient({type = "item", name = "capacitor1", amount = 5}):add_ingredient({type = "item", name = "inductor1", amount = 10})
 RECIPE('empty-neuromorphic-chip'):add_ingredient({type = "item", name = "bakelite", amount = 5}):add_ingredient({type = "item", name = "micro-fiber", amount = 4}):add_ingredient({type = "item", name = "capacitor2", amount = 5}):add_ingredient({type = "item", name = "melamine", amount = 10}):add_ingredient({type = "item", name = "paramagnetic-material", amount = 2}):add_ingredient({type = "item", name = "nylon-parts", amount = 10})--:add_ingredient({type = "item", name = "diamagnetic-material", amount = 4})
 RECIPE('formamide'):replace_ingredient("nitrogen", "ammonia"):change_category('fbreactor')
-RECIPE('bacteria-2'):remove_unlock('biopolymer'):add_unlock('microbiology-mk03'):add_ingredient({type = "item", name = "petri-dish", amount = 3}):add_ingredient({type = "item", name = "nexelit-plate", amount = 2}):add_ingredient({type = "item", name = "flask", amount = 5}):add_ingredient({type = "item", name = "chitin", amount = 5})
+RECIPE('bacteria-2'):remove_unlock('biopolymer'):add_unlock('microbiology-mk04'):add_ingredient({type = "item", name = "petri-dish", amount = 3}):add_ingredient({type = "item", name = "nexelit-plate", amount = 2}):add_ingredient({type = "item", name = "flask", amount = 5}):add_ingredient({type = "item", name = "chitin", amount = 5})
 RECIPE('rendering'):remove_unlock('basic-electronics')
 RECIPE('crco-alloy'):remove_ingredient("tailings-dust"):add_ingredient({type = "item", name = "cobalt-nx", amount = 2})
 RECIPE('raw-fiber'):remove_unlock('fertilizer'):set_fields {enabled = false}
@@ -395,7 +433,6 @@ RECIPE('methane'):add_unlock('coal-processing-1')
 RECIPE('methane'):add_ingredient('moondrop-seeds')
 RECIPE('methane-py-fertilizer'):add_unlock('moondrop-mk02')
 RECIPE('methane-py-fertilizer'):add_ingredient('moondrop-seeds')
-RECIPE('methane-co2'):add_unlock('moondrop')
 RECIPE('methane-co2'):add_ingredient('moondrop-seeds')
 
 RECIPE("plastic-from-casein"):add_ingredient({type = 'fluid', name = 'methanal', amount = 100})
@@ -451,7 +488,7 @@ RECIPE {
     main_product = "phytoplankton",
     subgroup = 'py-alienlife-plants',
     order = 'b'
-}:add_unlock("microbiology-mk03")
+}:add_unlock("microbiology-mk04")
 
 --scrondrix
 
@@ -558,7 +595,7 @@ RECIPE {
         {type = 'item', name = 'urea', amount = 10},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion")
+}:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = 'recipe',

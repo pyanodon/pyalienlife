@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"vrauks-paddock-mk01", 1}
     }
-}--:add_unlock("vrauks")
+}:add_unlock("vrauks")
 
 ITEM {
     type = "item",

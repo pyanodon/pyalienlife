@@ -13,7 +13,7 @@ RECIPE {
     results = {
         {"bio-reactor-mk01", 1}
     }
-}:add_unlock("biotech-machines-mk01")
+}:add_unlock("microbiology-mk02")
 
 ITEM {
     type = "item",

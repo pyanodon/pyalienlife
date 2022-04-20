@@ -14,6 +14,7 @@ RECIPE {
         {type = 'item', name = 'cdna', amount = 3},
         {type = 'item', name = 'kicalk-codex', amount = 1},
         {type = 'item', name = 'earth-palmtree-sample', amount = 1},
+        {type = 'item', name = 'planter-box', amount = 1},
         {type = 'fluid', name = 'water', amount = 1000},
     },
     results = {

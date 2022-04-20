@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/navens.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"mycology-mk02","genetics-mk02"},
+    prerequisites = {"mycology-mk02","genetics-mk03"},
     effects = {},
     unit = {
         count = 100,

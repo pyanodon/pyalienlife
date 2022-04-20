@@ -5,6 +5,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"microbiology-mk01"},
+    dependencies = {"moss-mk01"},
     effects = {},
     unit = {
         count = 150,
@@ -28,7 +29,7 @@ TECHNOLOGY {
         count = 200,
         ingredients = {
             {"automation-science-pack", 1},
-            {'logistic-science-pack', 1}
+            {'py-science-pack-1', 1}
         },
         time = 45
     }
@@ -40,8 +41,27 @@ TECHNOLOGY {
     icon = '__pyalienlifegraphics__/graphics/technology/genetics-mk03.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'genetics-mk02'},
+    prerequisites = {'genetics-mk01',"machines-mk02","korlex"},
     dependencies = {"genetics-mk02"},
+    effects = {},
+    unit = {
+        count = 200,
+        ingredients = {
+            {"automation-science-pack", 1},
+            {'logistic-science-pack', 1}
+        },
+        time = 45
+    }
+}
+
+TECHNOLOGY {
+    type = 'technology',
+    name = 'genetics-mk04',
+    icon = '__pyalienlifegraphics__/graphics/technology/genetics-mk04.png',
+    icon_size = 128,
+    order = 'c-a',
+    prerequisites = {'genetics-mk03'},
+    dependencies = {"genetics-mk03"},
     effects = {},
     unit = {
         count = 250,
@@ -56,12 +76,12 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = "technology",
-    name = "genetics-mk04",
-    icon = "__pyalienlifegraphics__/graphics/technology/genetics-mk04.png",
+    name = "genetics-mk05",
+    icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"genetics-mk03","pharmagenomics"},
-    dependencies = {"genetics-mk03"},
+    prerequisites = {"genetics-mk04","pharmagenomics"},
+    dependencies = {"genetics-mk04"},
     effects = {},
     unit = {
         count = 300,

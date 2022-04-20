@@ -4,7 +4,7 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"electrolyzer-mk01", 1},
+        {"biofactory-mk01", 1},
         {"plastic-bar", 20},
         {"py-tank-3000", 2},
         {"steel-plate", 15},
@@ -48,7 +48,7 @@ ENTITY {
         module_slots = 1
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-    crafting_categories = {"genlab", "genlab-handcrafting"},
+    crafting_categories = {"genlab"},
     crafting_speed = 1,
     energy_source = {
         type = "electric",
