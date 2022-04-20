@@ -22,7 +22,7 @@ fun.autorecipes {
 					{name='vrauks', amount = 4},
 				},
 			crafting_speed = 160,
-			--tech = 'vrauks'
+			tech = 'vrauks'
 		},
 		--red
 		{
@@ -41,7 +41,7 @@ fun.autorecipes {
 					{name='vrauks', add_amount = 3},
 				},
 			crafting_speed = 100,
-			tech = 'vrauks'
+			tech = 'vrauks-mk02'
 		},
 		--green
 		{
@@ -59,7 +59,7 @@ fun.autorecipes {
 					{name='vrauks', add_amount = 8},
 				},
 			crafting_speed = 80,
-			tech = 'vrauks-mk02'
+			tech = 'vrauks-mk03'
 		},
 
 		--py
@@ -76,7 +76,7 @@ fun.autorecipes {
 					{name='vrauks', add_amount = 10},
 				},
 			crafting_speed = 60,
-			tech = 'vrauks-mk03'
+			tech = 'vrauks-mk04'
 		},
 		--production
 		{
@@ -92,7 +92,7 @@ fun.autorecipes {
 					{name='vrauks', add_amount = 10},
 				},
 			crafting_speed = 40,
-			tech = 'vrauks-mk04'
+			tech = 'vrauks-mk05'
 		}
 	}
 }
@@ -121,7 +121,7 @@ fun.autorecipes {
 					{name='cocoon', amount_min =5, amount_max =7},
 				},
 			crafting_speed = 120,
-			--tech = 'vrauks'
+			tech = 'vrauks'
 		},
 		--red
 		{
@@ -137,7 +137,7 @@ fun.autorecipes {
 					{name='cocoon', amount_min =8, amount_max =12},
 				},
 			crafting_speed = 100,
-			tech = 'vrauks'
+			tech = 'vrauks-mk02'
 		},
 		--green
 		{
@@ -153,7 +153,7 @@ fun.autorecipes {
 					{name='cocoon', amount_min = 12, amount_max =18},
 				},
 			crafting_speed = 80,
-			tech = 'vrauks-mk02'
+			tech = 'vrauks-mk03'
 		},
 		--py
 		{
@@ -172,7 +172,7 @@ fun.autorecipes {
 					{name='cocoon', amount_min = 15, amount_max =25},
 				},
 			crafting_speed = 60,
-			tech = 'vrauks-mk03'
+			tech = 'vrauks-mk04'
 		},
 		--production
 		{
@@ -190,7 +190,7 @@ fun.autorecipes {
 					{name = 'cocoon', amount = 40}
 				},
 			crafting_speed = 40,
-			tech = 'vrauks-mk04'
+			tech = 'vrauks-mk05'
 		},
 	}
 }

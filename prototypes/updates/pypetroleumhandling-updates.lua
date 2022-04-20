@@ -16,14 +16,9 @@ end
 --BUILDINDS--
 
 --TECHNOLOGIES--
--- TECHNOLOGY('oil-machines-mk03'):add_pack('py-science-pack-2')
--- TECHNOLOGY('oil-machines-mk04'):add_pack('py-science-pack-2')
--- TECHNOLOGY('fracking'):add_pack('py-science-pack-2')
--- TECHNOLOGY('kerogen'):add_pack('py-science-pack-2')
--- TECHNOLOGY('light-oil-mk03'):add_pack('py-science-pack-2')
--- TECHNOLOGY('petroleum-gas-mk03'):add_pack('py-science-pack-2')
--- TECHNOLOGY('tholin-mk03'):add_pack('py-science-pack-2')
--- TECHNOLOGY('tholin-mk04'):add_pack('py-science-pack-2')
+TECHNOLOGY("drilling-fluid-mk01"):add_pack("py-science-pack-1")
+TECHNOLOGY("oil-machines-mk01"):add_pack("py-science-pack-1")
+TECHNOLOGY("rubber"):add_pack("py-science-pack-1")
 
 ----RECIPES----
 RECIPE('guar-separation'):remove_unlock("oil-machines-mk02")

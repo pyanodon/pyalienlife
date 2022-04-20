@@ -3,7 +3,7 @@ RECIPE {
     type = 'recipe',
     name = 'petri-dish-bacteria',
     category = 'micro-mine',
-    enabled = true,
+    enabled = false,
     energy_required = 20,
     ingredients = {
         {type = 'item', name = 'petri-dish', amount = 1},
@@ -11,7 +11,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'petri-dish-bacteria', amount = 1},
     },
-}
+}:add_unlock("basic-substrate")
 
 RECIPE {
     type = 'recipe',
@@ -29,7 +29,7 @@ RECIPE {
         {type = 'item', name = 'plasmids', amount = 1},
     },
     --main_product = "cocoon",
-}:add_unlock("genetics-mk01")
+}:add_unlock("genetics-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -47,7 +47,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'retrovirus', amount = 1},
     },
-}:add_unlock("genetics-mk01")
+}:add_unlock("genetics-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -66,7 +66,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'retrovirus', amount = 3},
     },
-}:add_unlock("genetics-mk02")
+}:add_unlock("genetics-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -87,7 +87,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'cdna', amount = 1},
     },
-}:add_unlock("biotech-mk01")
+}:add_unlock("genetics-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -105,7 +105,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'primers', amount = 1, probability = 0.7},
     },
-}:add_unlock("genetics-mk02")
+}:add_unlock("genetics-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -124,7 +124,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'primers', amount = 1},
     },
-}:add_unlock("genetics-mk03")
+}:add_unlock("genetics-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -144,7 +144,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'primers', amount = 3},
     },
-}:add_unlock("genetics-mk04")
+}:add_unlock("genetics-mk05")
 
 RECIPE {
     type = 'recipe',
@@ -162,7 +162,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'dna-polymerase', amount = 1},
     },
-}:add_unlock("genetics-mk02")
+}:add_unlock("genetics-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -180,7 +180,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'dna-polymerase', amount = 2},
     },
-}:add_unlock("genetics-mk03")
+}:add_unlock("genetics-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -201,7 +201,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'alien-sample-02', amount = 1},
     },
-}:add_unlock("genetics-mk02")
+}:add_unlock("genetics-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -224,7 +224,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'alien-sample-03', amount = 1},
     },
-}:add_unlock("genetics-mk03")
+}:add_unlock("genetics-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -246,7 +246,7 @@ RECIPE {
         {type = 'fluid', name = 'gta', amount = 50},
     },
     --main_product = "cocoon",
-}:add_unlock("genetics-mk04")
+}:add_unlock("genetics-mk05")
 
 RECIPE {
     type = 'recipe',
@@ -264,7 +264,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'cysteine', amount = 5},
     },
-}:add_unlock("genetics-mk04"):replace_ingredient("bacteria-1", "bacteria-2")
+}:add_unlock("genetics-mk05"):replace_ingredient("bacteria-1", "bacteria-2")
 
 RECIPE {
     type = 'recipe',
@@ -288,7 +288,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'adam42-gen', amount = 1},
     },
-}:add_unlock("genetics-mk04")
+}:add_unlock("genetics-mk05")
 
 RECIPE {
     type = 'recipe',
@@ -310,7 +310,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},
     },
-}:add_unlock("genetics-mk04")
+}:add_unlock("genetics-mk05")
 
 RECIPE {
     type = 'recipe',

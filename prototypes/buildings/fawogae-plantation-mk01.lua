@@ -29,7 +29,7 @@ RECIPE {
     results = {
         {"fawogae-plantation-mk01", 1}
     }
-}:add_unlock("fawogae")
+}:add_unlock("fawogae-mk01")
 
 ITEM {
     type = "item",

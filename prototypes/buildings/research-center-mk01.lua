@@ -2,7 +2,7 @@ RECIPE {
     type = "recipe",
     name = "research-center-mk01",
     energy_required = 0.5,
-    enabled = true,
+    enabled = false,
     ingredients = {
         {"iron-plate", 100},
         {"distilator", 1},
@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"research-center-mk01", 1}
     }
-}
+}:add_unlock("py-science-pack-mk01")
 
 ITEM {
     type = "item",
@@ -46,7 +46,7 @@ ENTITY {
         module_slots = 1
     },
     allowed_effects = {"speed","productivity",'consumption','pollution'},
-    crafting_categories = {"research"},
+    crafting_categories = {"research", "research-handcrafting"},
     crafting_speed = 1,
     energy_source = {
         type = "electric",

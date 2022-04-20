@@ -2,7 +2,7 @@ RECIPE {
     type = "recipe",
     name = "seaweed-crop-mk01",
     energy_required = 1,
-    enabled = true,
+    enabled = false,
     ingredients = {
         {"stone-brick", 30},
         {"limestone", 25},
@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"seaweed-crop-mk01", 1}
     }
-}
+}:add_unlock("seaweed-mk01")
 
 ITEM {
     type = "item",

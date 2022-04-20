@@ -45,7 +45,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'logistic-science-pack', amount = 10},
         {type = 'item', name = 'chemical-science-pack', amount = 10},
-        {type = 'item', name = 'py-science-pack-2', amount = 10},
+        {type = 'item', name = 'py-science-pack-3', amount = 10},
         {type = 'item', name = 'brain', amount = 15},
         {type = 'fluid', name = 'water', amount = 1000},
         {type = 'fluid', name = 'fetal-serum', amount = 250},
@@ -65,7 +65,7 @@ RECIPE {
     energy_required = 20,
     ingredients = {
         {type = 'item', name = 'production-science-pack', amount = 10},
-        {type = 'item', name = 'py-science-pack-2', amount = 10},
+        {type = 'item', name = 'py-science-pack-3', amount = 10},
         {type = 'item', name = 'chemical-science-pack', amount = 10},
         {type = 'item', name = 'destablilized-toxirus', amount = 6},
         {type = 'item', name = 'brain', amount = 30},

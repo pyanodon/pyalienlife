@@ -2,7 +2,7 @@ RECIPE {
     type = "recipe",
     name = "moss-farm-mk01",
     energy_required = 1,
-    enabled = true,
+    enabled = false,
     ingredients = {
         {"stone-brick", 50},
         {"soil", 50},
@@ -15,7 +15,7 @@ RECIPE {
     results = {
         {"moss-farm-mk01", 1}
     }
-}
+}:add_unlock("moss-mk01")
 
 ITEM {
     type = "item",

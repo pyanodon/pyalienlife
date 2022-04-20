@@ -16,4 +16,4 @@ RECIPE {
     main_product = "phytoplankton",
     subgroup = 'py-alienlife-plants',
     order = 'b'
-}:add_unlock("microbiology-mk02")
+}:add_unlock("microbiology-mk03")

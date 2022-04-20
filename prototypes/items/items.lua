@@ -778,6 +778,19 @@ ITEM {
     name = "py-science-pack-3",
     icon = "__pyalienlifegraphics__/graphics/icons/py-science-pack-3.png",
     icon_size = 64,
+    subgroup = "py-alienlife-items",
+    order = "a-a",
+    stack_size = 200,
+    durability = 1,
+    durability_description_key = "description.science-pack-remaining-amount-key",
+    durability_description_value = "description.science-pack-remaining-amount-value"
+}
+
+{
+    type = "tool",
+    name = "py-science-pack-4",
+    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
+    icon_size = 64,
     subgroup = "science-pack",
     order = "a-a",
     stack_size = 500,
@@ -8829,6 +8842,28 @@ ITEM {
     subgroup = "py-alienlife-items",
     order = "x",
     stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "empty-planter-box",
+    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "x",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "planter-box",
+    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "x",
+    stack_size = 50
 }
 
 ------------------------------

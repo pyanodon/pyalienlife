@@ -29,4 +29,4 @@ RECIPE {
         {type = 'fluid', name = 'creamy-latex', amount = 100},
     },
     main_product = "creamy-latex",
-}
+}:add_unlock("latex")

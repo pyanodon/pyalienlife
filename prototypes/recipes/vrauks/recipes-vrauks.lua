@@ -9,13 +9,13 @@ RECIPE {
         {type = 'item', name = 'native-flora', amount = 10},
         {type = 'item', name = 'moss-gen', amount = 3},
         {type = 'item', name = 'vrauks-codex', amount = 1},
-        --{type = 'item', name = 'earth-generic-sample', amount = 2},
+        {type = 'item', name = 'earth-generic-sample', amount = 2},
         {type = 'item', name = 'petri-dish', amount = 10},
     },
     results = {
         {type = 'item', name = 'vrauks', amount = 1},
     },
-}
+}:add_unlock("vrauks")
 
 RECIPE {
     type = 'recipe',
@@ -31,7 +31,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'vrauks-codex', amount = 1},
     },
-}
+}:add_unlock("vrauks")
 
 ----food----
 RECIPE {
@@ -52,7 +52,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'vrauks-food-01', amount = 4},
     },
-}:add_unlock("vrauks")
+}:add_unlock("vrauks-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -77,7 +77,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'vrauks-food-02', amount = 6},
     },
-}:add_unlock("vrauks-mk02"):add_ingredient({type = "item", name = "fiberboard", amount = 2})
+}:add_unlock("vrauks-mk03"):add_ingredient({type = "item", name = "fiberboard", amount = 2})
 
 ---caged---
 RECIPE {

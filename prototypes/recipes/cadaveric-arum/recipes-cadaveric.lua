@@ -14,6 +14,7 @@ RECIPE {
         {type = 'item', name = 'cadaveric-arum-codex', amount = 2},
         {type = 'item', name = 'earth-tropical-tree-sample', amount = 1},
         {type = 'item', name = 'earth-flower-sample', amount = 1},
+        {type = 'item', name = 'planter-box', amount = 1},
         {type = 'fluid', name = 'water', amount = 1000},
     },
     results = {

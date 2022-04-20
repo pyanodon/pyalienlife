@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/scrondrix.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"land-animals-mk03","genetics-mk03","genetic-design"},
+    prerequisites = {"land-animals-mk03","genetics-mk04","genetic-design"},
     effects = {},
     unit = {
         count = 150,

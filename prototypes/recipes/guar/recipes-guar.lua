@@ -15,6 +15,7 @@ RECIPE {
         {type = 'item', name = 'tuuphra-codex', amount = 1},
         {type = 'item', name = 'earth-flower-sample', amount = 1},
         {type = 'item', name = 'earth-potato-sample', amount = 1},
+        {type = 'item', name = 'planter-box', amount = 1},
         {type = 'fluid', name = 'water', amount = 100},
     },
     results = {

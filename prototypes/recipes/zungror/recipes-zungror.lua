@@ -33,7 +33,7 @@ RECIPE {
     energy_required = 300,
     ingredients = {
         {type = 'item', name = 'earth-generic-sample', amount = 1},
-        {type = 'item', name = 'py-science-pack-2', amount = 25},
+        {type = 'item', name = 'py-science-pack-3', amount = 25},
         {type = 'item', name = 'neuromorphic-chip', amount = 4},
     },
     results = {
@@ -49,7 +49,7 @@ RECIPE {
     energy_required = 300,
     ingredients = {
         {type = 'item', name = 'earth-generic-sample', amount = 100},
-        {type = 'item', name = 'py-science-pack-2', amount = 25},
+        {type = 'item', name = 'py-science-pack-3', amount = 25},
         {type = 'item', name = 'processing-unit', amount = 1},
     },
     results = {

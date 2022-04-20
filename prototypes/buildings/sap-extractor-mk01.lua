@@ -2,7 +2,7 @@ RECIPE {
     type = "recipe",
     name = "sap-extractor-mk01",
     energy_required = 0.5,
-    enabled = true,
+    enabled = false,
     ingredients = {
         {"stone-brick", 30},
         {"soil", 100},
@@ -15,7 +15,7 @@ RECIPE {
     results = {
         {"sap-extractor-mk01", 1}
     }
-}
+}:add_unlock("sap")
 
 ITEM {
     type = "item",

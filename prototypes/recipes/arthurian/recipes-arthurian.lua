@@ -47,7 +47,7 @@ RECIPE {
     energy_required = 300,
     ingredients = {
         {type = 'item', name = 'earth-generic-sample', amount = 1},
-        {type = 'item', name = 'py-science-pack-1', amount = 5},
+        {type = 'item', name = 'py-science-pack-2', amount = 5},
         {type = 'item', name = 'arthurian-codex', amount = 1},
     },
     results = {

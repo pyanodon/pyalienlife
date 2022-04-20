@@ -13,7 +13,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='moondrop-seeds', amount = 2},
+					{name='moondrop-seeds', amount = 4},
 					{name='water', amount = 100},
 				},
 			results =
@@ -21,7 +21,7 @@ fun.autorecipes {
 					{name='moondrop', amount = 4},
 				},
 			crafting_speed = 140,
-			name = 'moondrop 1',
+			name = 'moondrop-1',
 			tech = 'moondrop'
 		},
 		--red
@@ -37,8 +37,8 @@ fun.autorecipes {
 					{name='moondrop', add_amount = 4}
 				},
 				crafting_speed = 120,
-				name = 'moondrop 2',
-				tech = 'moondrop'
+				name = 'moondrop-2',
+				tech = 'moondrop-mk02'
         },
 		--py
         {
@@ -54,8 +54,8 @@ fun.autorecipes {
 					{name='moondrop', add_amount = 8}
 				},
 				crafting_speed = 100,
-				name = 'moondrop 3',
-				tech = 'moondrop-mk02'
+				name = 'moondrop-3',
+				tech = 'moondrop-mk03'
         },
 		--chem
         {
@@ -73,8 +73,8 @@ fun.autorecipes {
 					{name='moondrop', add_amount = 16}
 				},
 				crafting_speed = 80,
-				name = 'moondrop 4',
-				tech = 'moondrop-mk03'
+				name = 'moondrop-4',
+				tech = 'moondrop-mk04'
         },
 		--prod
         {
@@ -92,8 +92,8 @@ fun.autorecipes {
 					{name='moondrop', add_amount = 32}
 				},
 			crafting_speed = 60,
-			name = 'moondrop 5',
-			tech = 'moondrop-mk04'
+			name = 'moondrop-5',
+			tech = 'moondrop-mk05'
 		},
 	}
 }

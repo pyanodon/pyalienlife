@@ -13,7 +13,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'fawogae-spore', amount = 1, probability = 0.4},
     },
-}:add_unlock("fawogae")
+}:add_unlock("fawogae-mk01")
 
 RECIPE {
     type = 'recipe',
@@ -104,7 +104,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'fawogae', amount = 2},
     },
-}:add_unlock("fawogae")
+}:add_unlock("fawogae-mk01")
 
 RECIPE {
     type = 'recipe',
@@ -121,7 +121,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'fawogae-codex', amount = 1},
     },
-}:add_unlock("fawogae")
+}:add_unlock("fawogae-mk01")
 
 RECIPE {
     type = 'recipe',
@@ -137,7 +137,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'earth-shroom-sample', amount = 1},
     },
-}:add_unlock("fawogae")
+}:add_unlock("fawogae-mk01")
 
 --[[
 RECIPE {

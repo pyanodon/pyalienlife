@@ -27,7 +27,7 @@ TECHNOLOGY {
         ingredients = {
             {"automation-science-pack", 1},
             {"logistic-science-pack", 1},
-            -- {'py-science-pack-2', 1}
+            -- {'py-science-pack-3', 1}
         },
         time = 50
     }
@@ -46,7 +46,7 @@ TECHNOLOGY {
         ingredients = {
             {"automation-science-pack", 2},
             {"logistic-science-pack", 1},
-            -- {'py-science-pack-2', 1},
+            -- {'py-science-pack-3', 1},
         },
         time = 50
     }
@@ -65,7 +65,26 @@ TECHNOLOGY {
         ingredients = {
             {'automation-science-pack', 1},
             {'logistic-science-pack', 1},
-            -- {'py-science-pack-2', 1},
+            -- {'py-science-pack-3', 1},
+        },
+        time = 50
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "seaweed-mk05",
+    icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
+    icon_size = 128,
+    order = "c-a",
+    dependencies = {"seaweed-mk04"},
+    effects = {},
+    unit = {
+        count = 350,
+        ingredients = {
+            {'automation-science-pack', 1},
+            {'logistic-science-pack', 1},
+            -- {'py-science-pack-3', 1},
         },
         time = 50
     }

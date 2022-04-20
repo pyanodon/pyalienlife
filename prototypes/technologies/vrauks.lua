@@ -5,6 +5,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"land-animals-mk01"},
+    dependencies = {"sap"},
     effects = {},
     unit = {
         count = 100,
@@ -28,7 +29,7 @@ TECHNOLOGY {
         count = 150,
         ingredients = {
             {"automation-science-pack", 1},
-            {"logistic-science-pack", 1},
+            {"py-science-pack-1", 1},
         },
         time = 50
     }
@@ -48,7 +49,7 @@ TECHNOLOGY {
         ingredients = {
             {"automation-science-pack", 1},
             {"logistic-science-pack", 1},
-            -- {'py-science-pack-2', 1},
+            -- {'py-science-pack-3', 1},
         },
         time = 50
     }
@@ -68,7 +69,27 @@ TECHNOLOGY {
         ingredients = {
             {"automation-science-pack", 1},
             {"logistic-science-pack", 1},
-            -- {'py-science-pack-2', 1},
+            -- {'py-science-pack-3', 1},
+        },
+        time = 50
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "vrauks-mk05",
+    icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {"vrauks-mk04"},
+    dependencies = {"vrauks-mk04"},
+    effects = {},
+    unit = {
+        count = 250,
+        ingredients = {
+            {"automation-science-pack", 1},
+            {"logistic-science-pack", 1},
+            -- {'py-science-pack-3', 1},
         },
         time = 50
     }

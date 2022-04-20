@@ -10,10 +10,10 @@ RECIPE {
     energy_required = 200,
     ingredients = {
         --{type = 'item', name = 'alien-sample01', amount = 2},
-        {type = 'item', name = 'cdna', amount = 3},
-        {type = 'item', name = 'bio-sample', amount = 5},
+        -- {type = 'item', name = 'cdna', amount = 3},
         {type = 'item', name = 'moondrop-codex', amount = 1},
-        {type = 'item', name = 'earth-flower-sample', amount = 2},
+        {type = 'item', name = 'petri-dish', amount = 2},
+        {type = 'item', name = 'planter-box', amount = 1},
         {type = 'fluid', name = 'water', amount = 1000},
     },
     results = {
@@ -37,24 +37,6 @@ RECIPE {
         {type = 'item', name = 'moondrop-codex', amount = 1},
     },
 }:add_unlock("moondrop")
-
---[[
-RECIPE {
-    type = 'recipe',
-    name = 'earth-flower-sample',
-    category = 'data-array',
-    enabled = false,
-    energy_required = 300,
-    ingredients = {
-        {type = 'item', name = 'earth-generic-sample', amount = 1},
-        {type = 'item', name = 'automation-science-pack', amount = 100},
-        {type = 'item', name = 'ralesia-codex', amount = 1},
-    },
-    results = {
-        {type = 'item', name = 'earth-flower-sample', amount = 1},
-    },
-}:add_unlock("ralesia")
-]]--
 
 ---breeding---
 

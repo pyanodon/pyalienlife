@@ -24,7 +24,7 @@ RECIPE {
     results = {
         {"incubator-mk01", 1}
     }
-}:add_unlock("microbiology-mk01")
+}:add_unlock("biotech-mk01")
 
 ITEM {
     type = "item",

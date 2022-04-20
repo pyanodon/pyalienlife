@@ -2,27 +2,27 @@ local fun = require("prototypes/functions/functions")
 
 ------------------RENDERING------------------
 
-RECIPE {
-	type = "recipe",
-    name = 'smashing-vrauks',
-	category = 'vrauk-rendering',
-	subgroup = 'py-alienlife-vrauks',
-	order = 'b',
-	ingredients =
-		{
-			{name='vrauks', amount=1},
-		},
-	results =
-		{
-			{name='meat', amount = 3},
-			{type = "fluid", name='formic-acid', amount =200},
-			{name='biomass', amount=4},
-		},
-	crafting_speed = 6,
-	icon = "__pyalienlifegraphics__/graphics/icons/rendering-vrauks.png",
-	icon_size = 64,
-	always_show_made_in = true
-}
+-- RECIPE {
+-- 	type = "recipe",
+--     name = 'smashing-vrauks',
+-- 	category = 'vrauk-rendering',
+-- 	subgroup = 'py-alienlife-vrauks',
+-- 	order = 'b',
+-- 	ingredients =
+-- 		{
+-- 			{name='vrauks', amount=1},
+-- 		},
+-- 	results =
+-- 		{
+-- 			{name='meat', amount = 3},
+-- 			{type = "fluid", name='formic-acid', amount =200},
+-- 			{name='biomass', amount=4},
+-- 		},
+-- 	crafting_speed = 6,
+-- 	icon = "__pyalienlifegraphics__/graphics/icons/rendering-vrauks.png",
+-- 	icon_size = 64,
+-- 	always_show_made_in = true
+-- }
 
 fun.autorecipes {
     name = 'rendering-vrauks',

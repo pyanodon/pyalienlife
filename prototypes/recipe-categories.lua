@@ -440,17 +440,16 @@ data:extend {
         type = "recipe-category",
         name = "space-cottongut"
     },
-
-    {
-        type = "recipe-category",
-        name = "genlab-handcrafting"
-    },
     {
         type = "recipe-category",
         name = "vrauk-rendering"
     },
     {
         type = "recipe-category",
-        name = "latex"
+        name = "wpu-handcrafting"
+    },
+    {
+        type = "recipe-category",
+        name = "research-handcrafting"
     },
 }

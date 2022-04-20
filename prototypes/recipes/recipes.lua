@@ -74,6 +74,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'wood-seeds', amount = 1},
         {type = 'item', name = 'moss', amount = 5},
+        {type = 'item', name = 'planter-box', amount = 1},
         {type = 'fluid', name = 'water', amount = 100},
     },
     results = {
@@ -99,7 +100,7 @@ RECIPE {
     type = 'recipe',
     name = 'empty-petri-dish',
     category = 'glassworks',
-    enabled = true,
+    enabled = false,
     energy_required = 3,
     ingredients = {
         {type = 'fluid', name = 'molten-glass', amount = 50},
@@ -107,13 +108,13 @@ RECIPE {
     results = {
         {type = 'item', name = 'empty-petri-dish', amount = 1},
     },
-}
+}:add_unlock("petri-dish")
 
 RECIPE {
     type = 'recipe',
     name = 'coke-co2',
     category = 'hpf',
-    enabled = true,
+    enabled = false,
     energy_required = 5,
     ingredients = {
         {type = 'item', name = 'coke', amount = 2},
@@ -121,13 +122,13 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'carbon-dioxide', amount = 80},
     },
-}
+}:add_unlock("coal-processing-1")
 
 RECIPE {
     type = 'recipe',
     name = 'agar',
     category = 'hpf',
-    enabled = true,
+    enabled = false,
     energy_required = 5,
     ingredients = {
         {type = 'item', name = "seaweed", amount = 5},
@@ -136,13 +137,13 @@ RECIPE {
     results = {
         {type = 'item', name = 'agar', amount = 1},
     },
-}
+}:add_unlock("petri-dish")
 
 RECIPE {
     type = 'recipe',
     name = 'petri-dish',
     category = 'crafting',
-    enabled = true,
+    enabled = false,
     energy_required = 5,
     ingredients = {
         {type = 'item', name = 'agar', amount = 1},
@@ -151,13 +152,13 @@ RECIPE {
     results = {
         {type = 'item', name = 'petri-dish', amount = 1},
     },
-}
+}:add_unlock("petri-dish")
 
 RECIPE {
     type = 'recipe',
     name = 'moss-gen',
-    category = 'genlab-handcrafting',
-    enabled = true,
+    category = 'genlab',
+    enabled = false,
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'petri-dish', amount = 2},
@@ -166,7 +167,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'moss-gen', amount = 1},
     },
-}
+}:add_unlock("genetics-mk01")
 
 RECIPE {
     type = 'recipe',
@@ -211,6 +212,21 @@ RECIPE {
     enabled = false,
     energy_required = 15,
     ingredients = {
+        {type = "item", name = "fawogae-substrate", amount = 20},
+        {type = "item", name = "flask", amount = 4}
+    },
+    results = {
+        {type = 'item', name = 'py-science-pack-1', amount = 3},
+    },
+}:add_unlock("py-science-pack-mk01")
+
+RECIPE {
+    type = 'recipe',
+    name = 'py-science-pack-2',
+    category = 'research',
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
         {type = 'item', name = 'moss', amount = 20},
         {type = 'item', name = 'fe-biomass', amount = 20},
         {type = 'item', name = 'solidified-sarcorus', amount = 20},
@@ -219,13 +235,13 @@ RECIPE {
         {type = 'item', name = 'steel-plate', amount = 10},
     },
     results = {
-        {type = 'item', name = 'py-science-pack-1', amount = 3},
+        {type = 'item', name = 'py-science-pack-2', amount = 3},
     },
-}:add_unlock("py-science-pack-mk01"):add_ingredient{type = 'item', name = 's-biomass', amount = 20}
+}:add_unlock("py-science-pack-mk02"):add_ingredient{type = 'item', name = 's-biomass', amount = 20}
 
 RECIPE {
     type = 'recipe',
-    name = 'py-science-pack-2',
+    name = 'py-science-pack-3',
     category = 'research',
     enabled = false,
     energy_required = 15,
@@ -241,13 +257,13 @@ RECIPE {
         {type = 'item', name = 'alien-sample-03', amount = 1},
     },
     results = {
-        {type = 'item', name = 'py-science-pack-2', amount = 3},
+        {type = 'item', name = 'py-science-pack-3', amount = 3},
     },
-}:add_unlock("py-science-pack-mk02")
+}:add_unlock("py-science-pack-mk03")
 
 RECIPE {
     type = 'recipe',
-    name = 'py-science-pack-3',
+    name = 'py-science-pack-4',
     category = 'research',
     enabled = false,
     energy_required = 15,
@@ -256,9 +272,9 @@ RECIPE {
         {type = 'fluid', name = 'flavonoids', amount = 50},
     },
     results = {
-        {type = 'item', name = 'py-science-pack-3', amount = 3},
+        {type = 'item', name = 'py-science-pack-4', amount = 3},
     },
-}:add_unlock("py-science-pack-mk03")
+}:add_unlock("py-science-pack-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -416,7 +432,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'cytostatics', amount = 1}
     }
-}:add_unlock('genetics-mk02')
+}:add_unlock('genetics-mk03')
 
 RECIPE {
     type = 'recipe',
@@ -435,7 +451,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'cytostatics', amount = 3}
     }
-}:add_unlock('genetics-mk03')
+}:add_unlock('genetics-mk04')
 
 RECIPE {
     type = 'recipe',
@@ -455,7 +471,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'microcin-j25', amount = 1}
     }
-}:add_unlock('genetics-mk03')
+}:add_unlock('genetics-mk04')
 
 RECIPE {
     type = 'recipe',
@@ -476,7 +492,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'resveratrol', amount = 10}
     }
-}:add_unlock('genetics-mk03')
+}:add_unlock('genetics-mk04')
 
 RECIPE {
     type = 'recipe',
@@ -1032,20 +1048,20 @@ RECIPE {
     }
 }:add_unlock('biotech-mk04'):add_ingredient({type = "item", name = "collagen", amount = 3})
 
-RECIPE {
-    type = "recipe",
-    name = "cellulose-00",
-    category = "hpf",
-    enabled = true,
-    energy_required = 10,
-    ingredients = {
-        {type = 'item', name = 'wood', amount = 7},
-        {type = 'item', name = 'limestone', amount = 4},
-    },
-    results = {
-        {type = 'item', name = 'cellulose', amount = 1}
-    }
-}
+-- RECIPE {
+--     type = "recipe",
+--     name = "cellulose-00",
+--     category = "hpf",
+--     enabled = false,
+--     energy_required = 10,
+--     ingredients = {
+--         {type = 'item', name = 'wood', amount = 7},
+--         {type = 'item', name = 'limestone', amount = 4},
+--     },
+--     results = {
+--         {type = 'item', name = 'cellulose', amount = 1}
+--     }
+-- }:add_unlock("basic-substrate")
 
 RECIPE {
     type = "recipe",
@@ -1213,7 +1229,7 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'syngas', amount = 100},
     },
-}:add_unlock("cellulose-mk01")
+}:add_unlock("cellulose-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -1283,7 +1299,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'sodium-alginate', amount = 1}
     }
-}
+}:add_unlock("latex")
 
 RECIPE {
     type = "recipe",
@@ -1299,13 +1315,13 @@ RECIPE {
     results = {
         {type = 'item', name = 'latex-slab', amount = 1}
     }
-}
+}:add_unlock("latex")
 
 RECIPE {
     type = "recipe",
     name = "latex",
     category = "hpf",
-    enabled = true,
+    enabled = false,
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'latex-slab', amount = 1},
@@ -1314,13 +1330,13 @@ RECIPE {
     results = {
         {type = 'item', name = 'latex', amount = 1}
     }
-}:change_category('latex')
+}:add_unlock("latex")
 
 RECIPE {
     type = "recipe",
     name = "stopper",
     category = "crafting",
-    enabled = true,
+    enabled = false,
     energy_required = 5,
     ingredients = {
         {type = 'item', name = 'latex', amount = 2},
@@ -1329,7 +1345,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'stopper', amount = 4}
     }
-}
+}:add_unlock("py-science-pack-mk01")
 
 RECIPE {
     type = "recipe",
@@ -1733,7 +1749,7 @@ RECIPE {
         {type = 'item', name = 'bonemeal', amount = 5},
     },
     --main_product = "crude-oil",
-}:add_unlock("rendering"):change_category('fbreactor')
+}:add_unlock("logistic-science-pack"):change_category('fbreactor')
 
 RECIPE {
     type = 'recipe',
@@ -1800,7 +1816,7 @@ RECIPE {
         {type = 'item', name = 'filtration-media', amount = 75},
     },
     order = 'c'
-}:add_unlock("filtration-2"):add_ingredient({type = "item", name = "micro-fiber", amount = 15})
+}:add_unlock("filtration-mk02"):add_ingredient({type = "item", name = "micro-fiber", amount = 15})
 
 RECIPE {
     type = 'recipe',
@@ -1924,7 +1940,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'perfect-samples', amount = 10},
     },
-}:add_unlock("py-science-pack-mk03"):add_ingredient{type = 'item', name = 'vsk', amount = 1}:add_ingredient{type = 'item', name = 'dimensional-gastricorg', amount = 1}
+}:add_unlock("py-science-pack-mk04"):add_ingredient{type = 'item', name = 'vsk', amount = 1}:add_ingredient{type = 'item', name = 'dimensional-gastricorg', amount = 1}
 
 RECIPE {
     type = 'recipe',
@@ -2057,7 +2073,7 @@ RECIPE {
     icon_size = 64,
     subgroup = "py-items",
     order = "f"
-}:add_unlock("quartz-mk01")
+}:add_unlock("quartz-mk02")
 
 RECIPE {
     type = "recipe",
@@ -2125,7 +2141,7 @@ RECIPE {
         {type = 'fluid', name = 'flue-gas', amount = 150},
     },
     --main_product = "casein-pulp-01",
-}:add_unlock("compost"):change_category('gas-refinery')
+}:add_unlock("filtration"):change_category('gas-refinery')
 
 --[[
 RECIPE {
@@ -2704,7 +2720,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'earth-generic-sample', amount = 1},
     },
-}:add_unlock("biotech-mk01")
+}:add_unlock("xenobiology")
 
 RECIPE {
     type = 'recipe',
@@ -2765,3 +2781,72 @@ RECIPE {
         {type = 'item', name = 'raw-fiber', amount = 3},
     },
 }:add_unlock("yotoi"):change_category('pulp')
+
+RECIPE {
+    type = 'recipe',
+    name = 'concrete-02',
+    category = 'advanced-crafting',
+    enabled = false,
+    energy_required = 8,
+    ingredients = {
+        {type = 'item', name = 'stone-brick', amount = 5},
+        {type = 'fluid', name = 'water', amount = 100},
+        {type = 'fluid', name = 'boric-acid', amount = 400},
+        {type = 'item', name = 'cellulose', amount = 4},
+    },
+    results = {
+        {type = 'item', name = 'concrete', amount = 20},
+    },
+    --main_product = "cocoon",
+}:add_unlock("biotech-mk02")
+
+RECIPE {
+    type = "recipe",
+    name = "soil-separation-2",
+    category = "solid-separator",
+    enabled = false,
+    energy_required = 3,
+    ingredients = {
+        {type = "item", name = "soil", amount = 20}
+    },
+    results = {
+        {type = "item", name = "sand", amount = 13},
+        {type = "item", name = "coarse", amount = 3},
+        {type = "item", name = "limestone", amount = 2},
+        {type = "item", name = "biomass", amount = 3}
+    },
+    main_product = "sand",
+    icon = "__pycoalprocessinggraphics__/graphics/icons/soil-separation.png",
+    icon_size = 32,
+    subgroup = "py-items-class",
+    order = "e"
+}:add_unlock("separation")
+
+RECIPE {
+    type = 'recipe',
+    name = 'empty-planter-box',
+    enabled = true,
+    energy_required = 2,
+    ingredients = {
+        {type = 'item', name = 'stone-brick', amount = 4},
+        {type = 'item', name = 'wood', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'empty-planter-box', amount = 1},
+    },
+}
+
+RECIPE {
+    type = 'recipe',
+    name = 'planter-box',
+    enabled = true,
+    energy_required = 2,
+    ingredients = {
+        {type = 'item', name = 'empty-planter-box', amount = 1},
+        {type = 'item', name = 'soil', amount = 5},
+        {type = 'item', name = 'ash', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'planter-box', amount = 1},
+    },
+}
