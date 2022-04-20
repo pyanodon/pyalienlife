@@ -10,7 +10,7 @@ ITEM{
     subgroup = 'py-alienlife-antelope',
     order = 'x',
     place_result = 'hidden-beacon',
-    stack_size = 500,
+    stack_size = 10,
 }
 
 ENTITY{
