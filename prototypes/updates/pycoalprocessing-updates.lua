@@ -39,6 +39,11 @@ RECIPE("washer"):remove_unlock('energy-1'):set_fields{enabled = true}
 RECIPE("py-gas-vent"):add_unlock("coal-processing-1"):set_enabled(false)
 RECIPE("tailings-pond"):add_unlock("coal-processing-1"):set_enabled(false)
 
+table.insert(data.raw["assembling-machine"]["wpu"].crafting_categories, "wpu-handcrafting")
+table.insert(data.raw["assembling-machine"]["wpu-mk02"].crafting_categories, "wpu-handcrafting")
+table.insert(data.raw["assembling-machine"]["wpu-mk03"].crafting_categories, "wpu-handcrafting")
+table.insert(data.raw["assembling-machine"]["wpu-mk04"].crafting_categories, "wpu-handcrafting")
+
 --RECIPES--
 RECIPE("ralesia"):remove_unlock('ralesia')
 RECIPE('bonemeal'):remove_unlock('ulric')
