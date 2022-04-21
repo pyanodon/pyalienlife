@@ -16,13 +16,13 @@ TECHNOLOGY {
     }
 }
 ]]--
-TECHNOLOGY('ralesia'):set_fields{icon = "__pyalienlifegraphics__/graphics/technology/ralesia.png"}
+TECHNOLOGY('ralesia'):set_fields{icon = "__pyalienlifegraphics__/graphics/technology/ralesia-mk01.png"}
 TECHNOLOGY("ralesia"):add_pack("py-science-pack-1")
 
 TECHNOLOGY {
     type = "technology",
     name = "ralesia-mk02",
-    icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/ralesia-mk02.png",
     icon_size = 128,
     order = "c-a",
     dependencies = {"ralesia"},
@@ -40,7 +40,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "ralesia-mk03",
-    icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/ralesia-mk03.png",
     icon_size = 128,
     order = "c-a",
     dependencies = {"ralesia-mk02"},
@@ -58,7 +58,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "ralesia-mk04",
-    icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/ralesia-mk04.png",
     icon_size = 128,
     order = "c-a",
     dependencies = {"ralesia-mk03"},
