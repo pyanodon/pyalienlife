@@ -77,7 +77,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "genetics-mk05",
-    icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/genetics-mk05.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"genetics-mk04","pharmagenomics"},

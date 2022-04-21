@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "fawogae-mk01",
-    icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/fawogae-mk01.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"mycology-mk01"},
@@ -18,7 +18,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "fawogae-mk02",
-    icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/fawogae-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {},
@@ -37,7 +37,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "fawogae-mk03",
-    icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/fawogae-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {},
@@ -56,7 +56,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "fawogae-mk04",
-    icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/fawogae-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {},
@@ -75,7 +75,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "fawogae-mk05",
-    icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/fawogae-mk05.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {},

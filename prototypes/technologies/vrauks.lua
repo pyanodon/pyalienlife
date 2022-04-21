@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "vrauks",
-    icon = "__pyalienlifegraphics__/graphics/technology/vrauks.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/vrauks-mk01.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"land-animals-mk01"},
@@ -78,7 +78,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "vrauks-mk05",
-    icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/vrauks-mk05.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"vrauks-mk04"},
