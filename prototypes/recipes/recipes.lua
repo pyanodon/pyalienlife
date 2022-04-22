@@ -1940,7 +1940,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'perfect-samples', amount = 10},
     },
-}:add_unlock("py-science-pack-mk04"):add_ingredient{type = 'item', name = 'vsk', amount = 1}:add_ingredient{type = 'item', name = 'dimensional-gastricorg', amount = 1}
+}:add_unlock("py-science-pack-mk04")
 
 RECIPE {
     type = 'recipe',

@@ -17,7 +17,6 @@ TECHNOLOGY {
 }
 ]]--
 TECHNOLOGY('ralesia'):set_fields{icon = "__pyalienlifegraphics__/graphics/technology/ralesia-mk01.png"}
-TECHNOLOGY("ralesia"):add_pack("py-science-pack-1")
 
 TECHNOLOGY {
     type = "technology",

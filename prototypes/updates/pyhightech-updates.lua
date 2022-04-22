@@ -136,6 +136,8 @@ RECIPE("inserter"):add_unlock("logistics"):set_enabled(false)
 RECIPE("underground-belt"):remove_unlock("logistics"):set_enabled(true)
 RECIPE("long-handed-inserter"):remove_unlock("automation"):add_unlock("rubber"):add_ingredient{type = "item", name = "belt", amount = 1}
 
+RECIPE("perfect-samples"):add_ingredient{type = 'item', name = 'dimensional-gastricorg', amount = 1}
+
 ----KICALK-----
 
 ITEM {

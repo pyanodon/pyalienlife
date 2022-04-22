@@ -135,6 +135,11 @@ if mods["pyhightech"] then
     require('prototypes/technologies/electric-mining-drill')
 end
 
+if mods["pyalternativeenergy"] then
+    require("prototypes/technologies/zungror")
+    require("prototypes/technologies/xenocognitive")
+end
+
 --(( BUILDINGS ))--
 require("prototypes/buildings/moss-farm")
 require("prototypes/buildings/moss-farm-mk02")
@@ -334,9 +339,14 @@ require('prototypes/buildings/simik-den-mk02')
 require('prototypes/buildings/simik-den-mk03')
 require('prototypes/buildings/simik-den-mk04')
 
-
 if mods["pyhightech"] then
     require('prototypes/buildings/advanced-burner-drill')
+end
+
+if mods["pyalternativeenergy"] then
+    require("prototypes/buildings/zungror-lair-mk01")
+    require("prototypes/buildings/zungror-lair-mk02")
+    require("prototypes/buildings/zungror-lair-mk03")
 end
 
 require('prototypes.buildings.sap-tree')
@@ -461,6 +471,12 @@ require('prototypes/fluids/simik-blood')
 if mods['pyhightech'] then
     require('prototypes/fluids/cadaveric-arum-cum')
     require("prototypes/fluids/casein-solution")
+end
+
+if mods["pyalternativeenergy"] then
+    require('prototypes/recipes/zungror/recipes-zungror')
+    require('prototypes/recipes/zungror/recipes-zungror-raising')
+    -- require('prototypes/recipes/zungror/recipes-zungror-rendering')
 end
 
 --(( ITEMS ))--
