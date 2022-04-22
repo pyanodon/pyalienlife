@@ -30,19 +30,9 @@ if mods["pypetroleumhandling"] then
     require("prototypes/updates/pypetroleumhandling-updates")
 end
 
-if mods["pyalternativeenergy"] then
-    require("prototypes/technologies/zungror")
-    require("prototypes/technologies/xenocognitive")
-    require("prototypes/buildings/zungror-lair-mk01")
-    require("prototypes/buildings/zungror-lair-mk02")
-    require("prototypes/buildings/zungror-lair-mk03")
-    require('prototypes/recipes/zungror/recipes-zungror')
-    require('prototypes/recipes/zungror/recipes-zungror-raising')
-    require('prototypes/recipes/zungror/recipes-zungror-rendering')
-
-end
-
 TECHNOLOGY("logistic-science-pack"):add_prereq("biotech-mk01")
+
+TECHNOLOGY("ralesia"):add_pack("py-science-pack-1")
 
 --ADAPTATIONS
 
@@ -99,7 +89,7 @@ end
 for _, recipe in pairs(data.raw.recipe) do
     local cat = data.raw['recipe-category'][recipe.category or 'crafting']
 
-    --log('Recipe: ' .. recipe.name .. ', category: ' .. (recipe.category or ''))
+    -- log('Recipe: ' .. recipe.name .. ', category: ' .. (recipe.category or ''))
     if cat.allowed_module_categories then
         for _, module_category in pairs(cat.allowed_module_categories) do
             for _, module in pairs(data.raw.module) do
