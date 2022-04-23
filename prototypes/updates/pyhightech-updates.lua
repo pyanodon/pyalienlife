@@ -372,7 +372,7 @@ ITEM('urea'):subgroup_order("py-alienlife-auog", "a")
 ITEM('mosfet'):subgroup_order("py-hightech-tier-2", "f")
 RECIPE('waste-water-urea'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('fluid-separation'):add_unlock('fish-mk02')
 RECIPE('ammonia-urea'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('oil-processing'):add_unlock('biotech-mk02')
-RECIPE('urea2'):remove_unlock('coal-processing-1')
+RECIPE('urea2'):remove_unlock('auog-2')
 RECIPE('urea'):set_fields {enabled = false}
 RECIPE('mukmoux-fat2'):remove_unlock('advanced-electronics')
 RECIPE('mukmoux-fat3'):remove_unlock('advanced-electronics')
