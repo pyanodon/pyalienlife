@@ -437,7 +437,7 @@ RECIPE('methane-py-fertilizer'):add_unlock('moondrop-mk02')
 RECIPE('methane-py-fertilizer'):add_ingredient('moondrop-seeds')
 RECIPE('methane-co2'):add_ingredient('moondrop-seeds')
 
-RECIPE("plastic-from-casein"):add_ingredient({type = 'fluid', name = 'methanal', amount = 100})
+RECIPE("plastic-from-casein"):add_ingredient({type = 'fluid', name = 'methanal', amount = 100}):remove_unlock("korlex"):add_unlock("plastic-mk02")
 
 TECHNOLOGY("paramagnetic-material"):remove_pack('production-science-pack'):remove_prereq('production-science-pack')
 TECHNOLOGY("aerogel"):remove_pack('production-science-pack'):remove_prereq('production-science-pack')
@@ -507,7 +507,7 @@ RECIPE {
         {type = 'item', name = 'phosphate-rock', amount = 5},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk02")
+}:add_unlock("molecular-decohesion-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -911,7 +911,7 @@ RECIPE {
         {type = 'item', name = 'phosphate-rock', amount = 7},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk02")
+}:add_unlock("molecular-decohesion-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -926,7 +926,7 @@ RECIPE {
         {type = 'item', name = 'phosphate-rock', amount = 3},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion")
+}:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -941,7 +941,7 @@ RECIPE {
         {type = 'item', name = 'phosphate-rock', amount = 1},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk02")
+}:add_unlock("molecular-decohesion-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -956,7 +956,7 @@ RECIPE {
         {type = 'item', name = 'phosphate-rock', amount = 2},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion")
+}:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -971,7 +971,7 @@ RECIPE {
         {type = 'item', name = 'phosphate-rock', amount = 3},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk03")
+}:add_unlock("molecular-decohesion-mk04")
 
 RECIPE {
     type = 'recipe',

@@ -97,9 +97,9 @@ RECIPE('aromatics-to-plastic'):change_category('biofactory'):remove_ingredient("
 RECIPE('oil-refinery'):remove_unlock('plastics')
 RECIPE("flask"):add_unlock("py-science-pack-mk01"):set_enabled(false)
 
-RECIPE('mukmoux-fat'):remove_unlock('coal-processing-2')
-RECIPE('log-organics'):remove_unlock('coal-processing-2')
-RECIPE('organics-from-wood'):remove_unlock('coal-processing-2')
+RECIPE('mukmoux-fat'):remove_unlock('mukmoux')
+RECIPE('log-organics'):remove_unlock('wood-processing-2')
+RECIPE('organics-from-wood'):remove_unlock('wood-processing')
 RECIPE('soil-separation'):remove_unlock('separation')
 RECIPE("ground-sample01"):remove_unlock("logistic-science-pack"):add_unlock("mycology-mk01")
 RECIPE("oleochemicals"):remove_unlock("mukmoux"):add_unlock("coal-processing-2")
