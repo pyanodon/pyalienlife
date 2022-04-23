@@ -314,7 +314,7 @@ RECIPE {
         {type = 'item', name = 'sulfur', amount = 5},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion")
+}:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -584,4 +584,4 @@ RECIPE {
         {type = 'fluid', name = 'nitrogen', amount = 50},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion")
+}:add_unlock("molecular-decohesion-mk02")
