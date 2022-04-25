@@ -1048,20 +1048,20 @@ RECIPE {
     }
 }:add_unlock('biotech-mk04'):add_ingredient({type = "item", name = "collagen", amount = 3})
 
--- RECIPE {
---     type = "recipe",
---     name = "cellulose-00",
---     category = "hpf",
---     enabled = false,
---     energy_required = 10,
---     ingredients = {
---         {type = 'item', name = 'wood', amount = 7},
---         {type = 'item', name = 'limestone', amount = 4},
---     },
---     results = {
---         {type = 'item', name = 'cellulose', amount = 1}
---     }
--- }:add_unlock("basic-substrate")
+RECIPE {
+    type = "recipe",
+    name = "cellulose-00",
+    category = "hpf",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'wood', amount = 7},
+        {type = 'item', name = 'limestone', amount = 4},
+    },
+    results = {
+        {type = 'item', name = 'cellulose', amount = 1}
+    }
+}:add_unlock("cellulose-mk01")
 
 RECIPE {
     type = "recipe",
