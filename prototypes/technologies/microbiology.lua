@@ -58,7 +58,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = 'technology',
     name = 'microbiology-mk04',
-    icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/microbiology-mk04.png",
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'microbiology-mk03'},

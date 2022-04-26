@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "basic-substrate",
-    icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/basic-substrate.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {},
