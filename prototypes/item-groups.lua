@@ -81,7 +81,7 @@ data:extend {
     },
     {
         type = "item-subgroup",
-        name = "py-alienlife-creatures",
+        name = "py-alienlife-sea-sponge",
         group = "py-alienlife",
         order = "e"
     },

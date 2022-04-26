@@ -1678,6 +1678,7 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-creatures",
+    subgroup = "py-alienlife-sea-sponge",
     order = "a",
     stack_size = 500
 }
