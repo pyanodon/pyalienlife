@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "mining-with-fluid",
-    icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/mining-with-fluid.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {},

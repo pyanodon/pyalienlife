@@ -74,7 +74,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "seaweed-mk05",
-    icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/seaweed-mk05.png",
     icon_size = 128,
     order = "c-a",
     dependencies = {"seaweed-mk04"},
