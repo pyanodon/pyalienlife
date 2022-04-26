@@ -50,8 +50,8 @@ data.raw["recipe-category"]["moon"].allowed_module_categories = { "moondrop" }
 data.raw["recipe-category"]["moon"].modules_required = true
 
 
---RECIPE("plastic-from-melamine"):remove_unlock('plastics'):add_unlock('melamine')
---TECHNOLOGY("melamine"):remove_pack('logistic-science-pack')
+TECHNOLOGY("melamine"):remove_pack('logistic-science-pack'):add_pack("py-science-pack-1")
+TECHNOLOGY("fiberboard"):remove_pack('logistic-science-pack'):add_pack("py-science-pack-1")
 
 --(( ORES ))--
 require('prototypes/ores/kicalk')
@@ -179,7 +179,7 @@ ITEM('dms'):subgroup_order("py-alienlife-gases", "b")
 ITEM('acidgas'):subgroup_order("py-alienlife-gases", "a")
 ----BUILDINDS----
 
-RECIPE("bio-reactor-mk01"):remove_ingredient('advanced-circuit')
+RECIPE("bio-reactor-mk01"):remove_ingredient('advanced-circuit'):remove_unlock("microbiology-mk02"):add_unlock("melamine")
 RECIPE('ralesia-plantation-mk03'):add_ingredient({type = "item", name = "biopolymer", amount = 15}):add_ingredient({type = "item", name = "carbon-aerogel", amount = 20})
 RECIPE('ralesia-plantation-mk04'):replace_ingredient("control-unit", "intelligent-unit"):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 5}):add_ingredient({type = "item", name = "nv-center", amount = 2})
 RECIPE('auog-paddock'):set_fields {enabled = false}
@@ -437,7 +437,7 @@ RECIPE('methane-py-fertilizer'):add_unlock('moondrop-mk02')
 RECIPE('methane-py-fertilizer'):add_ingredient('moondrop-seeds')
 RECIPE('methane-co2'):add_ingredient('moondrop-seeds')
 
-RECIPE("plastic-from-casein"):add_ingredient({type = 'fluid', name = 'methanal', amount = 100}):remove_unlock("korlex"):add_unlock("plastic-mk02")
+RECIPE("plastic-from-casein"):add_ingredient({type = 'fluid', name = 'methanal', amount = 100}):remove_unlock("korlex"):add_unlock("plastics-mk02")
 
 TECHNOLOGY("paramagnetic-material"):remove_pack('production-science-pack'):remove_prereq('production-science-pack')
 TECHNOLOGY("aerogel"):remove_pack('production-science-pack'):remove_prereq('production-science-pack')
