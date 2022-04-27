@@ -114,6 +114,8 @@ RECIPE("soil-washing"):add_unlock("soil-washing"):set_enabled(false)
 RECIPE("automation-science-pack"):clear_ingredients():add_ingredient({type="item", name="planter-box", amount=1}):add_ingredient({type="item", name="electronic-circuit", amount=1})
 RECIPE("soil-extractormk01"):remove_ingredient("tinned-cable")
 
+RECIPE('py-construction-robot-01'):add_ingredient({type = 'fluid', name = 'fish-oil', amount = 50})
+RECIPE('py-logistic-robot-01'):add_ingredient({type = 'fluid', name = 'fish-oil', amount = 50})
 
 RECIPE("distilator"):add_unlock("coal-processing-1"):set_enabled(false)
 RECIPE("coal-gas"):add_unlock("coal-processing-1"):set_enabled(false)

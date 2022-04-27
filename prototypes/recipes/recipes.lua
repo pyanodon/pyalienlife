@@ -1195,7 +1195,7 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'gasoline', amount = 100},
     },
-}:add_unlock("microbiology-mk02")
+}:add_unlock("fuel-production")
 
 RECIPE {
     type = 'recipe',
@@ -1882,7 +1882,7 @@ RECIPE {
     },
     subgroup = 'py-alienlife-fluids',
     order = 'b1',
-}:add_unlock("fish-mk01")
+}:add_unlock("fish-mk02")
 
 RECIPE {
     type = 'recipe',

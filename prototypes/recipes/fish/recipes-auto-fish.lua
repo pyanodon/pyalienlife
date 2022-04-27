@@ -19,7 +19,6 @@ fun.autorecipes {
 					{name = 'fish', amount = 12},
                     {name='phytoplankton', amount =50},
 					{name='water-saline', amount=100, return_item = {name = 'waste-water'}},
-					{name='filtration-media', amount = 2},
 				},
 			results =
 				{
@@ -33,6 +32,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='fish-food-01', amount =1},
+					{name='filtration-media', amount = 2},
 				},
 			results =
 				{

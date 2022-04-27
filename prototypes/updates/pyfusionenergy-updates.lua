@@ -17,7 +17,7 @@ TECHNOLOGY("wood-processing-3"):remove_prereq("xyhiphoe")
 TECHNOLOGY("boron"):add_pack("py-science-pack-1")
 
 --BUILDINDS--
-RECIPE('plankton-farm'):remove_unlock('vanadium-processing'):add_unlock('microbiology-mk02'):remove_ingredient("niobium-plate"):add_ingredient({type = "item", name = "pipe", amount = 20}):add_ingredient({type = "item", name = "small-parts-01", amount = 25}):subgroup_order('py-alienlife-buildings-mk01', 'p')
+RECIPE('plankton-farm'):remove_unlock('vanadium-processing'):add_unlock('microbiology-mk01'):remove_ingredient("niobium-plate"):add_ingredient({type = "item", name = "pipe", amount = 20}):add_ingredient({type = "item", name = "small-parts-01", amount = 25}):subgroup_order('py-alienlife-buildings-mk01', 'p')
 RECIPE('plankton-farm-mk02'):remove_unlock("machines-mk03"):add_unlock('biotech-machines-mk02'):subgroup_order('py-alienlife-buildings-mk02', 'p')
 RECIPE('plankton-farm-mk03'):remove_unlock("macgines-mk04"):add_unlock('biotech-machines-mk03'):subgroup_order('py-alienlife-buildings-mk03', 'p')
 RECIPE('plankton-farm-mk04'):remove_unlock("machines-mk05"):add_unlock('biotech-machines-mk04'):subgroup_order('py-alienlife-buildings-mk04', 'p')
@@ -38,7 +38,7 @@ RECIPE('chemical-plant-mk03'):add_ingredient({type = "item", name = "super-alloy
 RECIPE('chemical-plant-mk04'):add_ingredient({type = "item", name = "nbti-alloy", amount = 15}):add_ingredient({type = "item", name = "wall-shield", amount = 8})
 
 ----RECIPES----
-RECIPE('phytoplankton'):remove_unlock('vanadium-processing'):add_unlock('microbiology-mk02'):subgroup_order('py-alienlife-plants', 'b')
+RECIPE('phytoplankton'):remove_unlock('vanadium-processing'):add_unlock('microbiology-mk01'):subgroup_order('py-alienlife-plants', 'b')
 RECIPE('log8'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a")
 RECIPE('log7'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a")
 RECIPE('zogna-bacteria'):add_ingredient({type = "fluid", name = "pressured-air", amount = 50})
@@ -48,12 +48,12 @@ ITEM('serine'):subgroup_order('py-alienlife-kmauts', 'b')
 ITEM('kmauts-ration'):subgroup_order('py-alienlife-food', 'b')
 RECIPE('nenbit-matrix'):add_ingredient({type = "item", name = "nano-cellulose", amount = 3})
 RECIPE('science-coating'):add_ingredient({type = "item", name = "chitosan", amount = 5})
-RECIPE('xyhiphoe-hydrocyclone'):remove_unlock('xyhiphoe'):add_unlock('water-invertebrates-mk01')
+RECIPE('xyhiphoe-hydrocyclone'):remove_unlock('xyhiphoe'):add_unlock("biotech-mk02")
 RECIPE('steam-heating'):remove_unlock('fusion-mk01'):add_unlock('phytomining')
 RECIPE('sc-wire'):add_ingredient({type = 'item', name = 'agzn-alloy', amount = 1})
 RECIPE('bio-reactor-mk01'):remove_unlock('ethanolamine')
 
-RECIPE("wastewater-filtration"):add_unlock("fish-mk01")
+RECIPE("wastewater-filtration"):add_unlock("filtration")
 RECIPE("wastewater-recovery"):add_unlock("fish-mk01")
 RECIPE('xyhiphoe-blood'):remove_unlock('xyhiphoe')
 RECIPE('vanabins'):remove_ingredient("xyhiphoe-blood"):add_ingredient({type = "fluid", name = "arthropod-blood", amount = 150})
