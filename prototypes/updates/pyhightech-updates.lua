@@ -80,6 +80,12 @@ RECIPE('cadaveric-arum-mk01'):remove_unlock('basic-electronics')
 
 --adjusting win condition to need q computer
 
+RECIPE("fiberboard"):set_fields{results = {
+    {type = 'item', name = 'fiberboard', amount = 4},
+    {type = 'fluid', name = 'tall-oil', amount = 15},
+    {type = 'fluid', name = 'black-liquor', amount = 10}
+}}
+
 --remove space science from satellite
 data.raw.item.satellite.rocket_launch_product =
     {
@@ -121,7 +127,6 @@ RECIPE("seaweed-crop-mk01"):replace_ingredient("electronic-circuit", "inductor1"
 RECIPE("sap-extractor-mk01"):replace_ingredient("electronic-circuit", "inductor1"):replace_ingredient("inserter", "burner-inserter")
 RECIPE("repair-pack"):replace_ingredient("electronic-circuit", "inductor1")
 RECIPE("electric-mining-drill"):add_unlock("electric-mining-drill"):set_enabled(false)
-RECIPE("radar"):add_unlock("engine"):set_enabled(false)
 RECIPE("collector"):replace_ingredient("electric-mining-drill", "advanced-burner-drill")
 RECIPE("eaf-mk01"):replace_ingredient("electric-mining-drill", "advanced-burner-drill")
 RECIPE("impact-crusher-mk01"):replace_ingredient("electric-mining-drill", "advanced-burner-drill")
@@ -131,7 +136,7 @@ RECIPE("salt-mine"):replace_ingredient("electric-mining-drill", "advanced-burner
 RECIPE("tin-plate-1"):add_unlock("mining-with-fluid"):set_enabled(false)
 RECIPE("tinned-cable"):add_unlock("mining-with-fluid"):set_enabled(false)
 RECIPE("aluminium-plate-1"):add_unlock("mining-with-fluid"):set_enabled(false)
-
+RECIPE("bio-sample01"):add_ingredient({type = "item", name = "urea", amount = 5})
 RECIPE("inserter"):add_unlock("logistics"):set_enabled(false)
 RECIPE("underground-belt"):remove_unlock("logistics"):set_enabled(true)
 RECIPE("long-handed-inserter"):remove_unlock("automation"):add_unlock("rubber"):add_ingredient{type = "item", name = "belt", amount = 1}
