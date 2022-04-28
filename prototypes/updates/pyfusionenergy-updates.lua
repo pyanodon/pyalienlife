@@ -54,7 +54,7 @@ RECIPE('sc-wire'):add_ingredient({type = 'item', name = 'agzn-alloy', amount = 1
 RECIPE('bio-reactor-mk01'):remove_unlock('ethanolamine')
 
 RECIPE("wastewater-filtration"):add_unlock("filtration")
-RECIPE("wastewater-recovery"):add_unlock("fish-mk01")
+RECIPE("wastewater-recovery"):add_unlock("filtration")
 RECIPE('xyhiphoe-blood'):remove_unlock('xyhiphoe')
 RECIPE('vanabins'):remove_ingredient("xyhiphoe-blood"):add_ingredient({type = "fluid", name = "arthropod-blood", amount = 150})
 RECIPE('kmauts-enclosure-mk01'):remove_unlock('helium-processing') --substituir por versao pyal
