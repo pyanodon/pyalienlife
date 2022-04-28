@@ -103,7 +103,8 @@ RECIPE('cottongut-science-utility'):add_ingredient({type = "item", name = "desta
 --RECIPE('satellite'):add_unlock('quantum')
 
 RECIPE("inductor1"):remove_unlock("vacuum-tube-electronics"):set_enabled(true):replace_ingredient("ceramic", "iron-stick"):change_category("crafting")
-RECIPE("automation-science-pack"):replace_ingredient("electronic-circuit", "inductor1")
+RECIPE("small-parts-01"):remove_ingredient("iron-stick"):replace_ingredient("copper-plate", "inductor1")
+RECIPE("automation-science-pack"):replace_ingredient("electronic-circuit", "small-parts-01")
 
 RECIPE("offshore-pump"):replace_ingredient("electronic-circuit", "inductor1")
 RECIPE("lab"):replace_ingredient("electronic-circuit", "inductor1")
