@@ -6019,65 +6019,65 @@ ITEM {
 	limitation_message_key = "navens"
 }
 
--- ITEM {
---     type = "module",
---     name = "navens-mk02",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/navens.png"}
---     },
---     icon_size = 64,
--- 	category = "navens",
--- 	tier = 2,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "nb",
---     stack_size = 500,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 10}},
--- 	limitation = {},
--- 	limitation_message_key = "navens"
--- }
+ ITEM {
+     type = "module",
+     name = "navens-mk02",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/navens.png"}
+     },
+     icon_size = 64,
+ 	category = "navens",
+ 	tier = 2,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "nb",
+     stack_size = 500,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 10}},
+ 	limitation = {},
+ 	limitation_message_key = "navens"
+ }
 
--- ITEM {
---     type = "module",
---     name = "navens-mk03",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/navens.png"}
---     },
---     icon_size = 64,
--- 	category = "navens",
--- 	tier = 3,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "nc",
---     stack_size = 500,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 12.5}},
--- 	limitation = {},
--- 	limitation_message_key = "navens"
--- }
+ ITEM {
+     type = "module",
+     name = "navens-mk03",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/navens.png"}
+     },
+     icon_size = 64,
+ 	category = "navens",
+ 	tier = 3,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "nc",
+     stack_size = 500,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 12.5}},
+ 	limitation = {},
+ 	limitation_message_key = "navens"
+ }
 
--- ITEM {
---     type = "module",
---     name = "navens-mk04",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/navens.png"}
---     },
---     icon_size = 64,
--- 	category = "navens",
--- 	tier = 4,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "nd",
---     stack_size = 500,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 15}},
--- 	limitation = {},
--- 	limitation_message_key = "navens"
--- }
+ ITEM {
+     type = "module",
+     name = "navens-mk04",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/navens.png"}
+     },
+     icon_size = 64,
+ 	category = "navens",
+ 	tier = 4,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "nd",
+     stack_size = 500,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 15}},
+ 	limitation = {},
+ 	limitation_message_key = "navens"
+ }
 
 ITEM {
     type = "module",
@@ -6339,65 +6339,65 @@ ITEM {
 	limitation_message_key = "rennea"
 }
 
--- ITEM {
---     type = "module",
---     name = "rennea-mk02",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/rennea.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
---     },
---     icon_size = 64,
--- 	category = "rennea",
--- 	tier = 2,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "ren-b",
---     stack_size = 500,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 0.32}},
--- 	limitation = {},
--- 	limitation_message_key = "rennea"
--- }
+ ITEM {
+     type = "module",
+     name = "rennea-mk02",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/rennea.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
+     },
+     icon_size = 64,
+ 	category = "rennea",
+ 	tier = 2,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "ren-b",
+     stack_size = 500,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 0.32}},
+ 	limitation = {},
+ 	limitation_message_key = "rennea"
+ }
 
--- ITEM {
---     type = "module",
---     name = "rennea-mk03",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/rennea.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
---     },
---     icon_size = 64,
--- 	category = "rennea",
--- 	tier = 3,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "ren-c",
---     stack_size = 500,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 0.63}},
--- 	limitation = {},
--- 	limitation_message_key = "rennea"
--- }
+ ITEM {
+     type = "module",
+     name = "rennea-mk03",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/rennea.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
+     },
+     icon_size = 64,
+ 	category = "rennea",
+ 	tier = 3,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "ren-c",
+     stack_size = 500,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 0.63}},
+ 	limitation = {},
+ 	limitation_message_key = "rennea"
+ }
 
--- ITEM {
---     type = "module",
---     name = "rennea-mk04",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/rennea.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
---     },
---     icon_size = 64,
--- 	category = "rennea",
--- 	tier = 4,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "ren-d",
---     stack_size = 500,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 1.25}},
--- 	limitation = {},
--- 	limitation_message_key = "rennea"
--- }
+ ITEM {
+     type = "module",
+     name = "rennea-mk04",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/rennea.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
+     },
+     icon_size = 64,
+ 	category = "rennea",
+ 	tier = 4,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "ren-d",
+     stack_size = 500,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 1.25}},
+ 	limitation = {},
+ 	limitation_message_key = "rennea"
+ }
 
 ITEM {
     type = "module",

@@ -1223,6 +1223,18 @@ function overrides.autorecipes(recipe)
         elseif recipe.main_product ~= nil then
             RECIPE(recipe_name):set_fields{main_product = recipe.main_product}
         end
+        --[[
+        for m, module in pairs(data.raw.module) do
+            log(module.name)
+            if string.match(module.name, "speed%-module") ~= nil or string.match(module.name, "effectivity%-module") ~= nil or string.match(module.name, "productivity%-module") ~= nil then
+                log('hit')
+                if module.limitation_blacklist == nil then
+                    module.limitation_blacklist = {}
+                end
+                table.insert(module.limitation_blacklist, recipe_name)
+            end
+        end
+        ]]
         --log(serpent.block(data.raw.recipe[recipe_name]))
     end
 

@@ -607,6 +607,7 @@ require('prototypes/recipes/mukmoux/recipes-mukmoux-growth-enhacement')
 --Navens
 require('prototypes/recipes/navens/recipes-navens')
 require('prototypes/recipes/navens/recipes-auto-navens')
+require('prototypes/recipes/navens/recipes-navens-modules')
 
 --Phadai
 require('prototypes/recipes/phadai/recipes-phadai')
@@ -632,6 +633,7 @@ require('prototypes/recipes/ralesia/recipes-ralesia-megafarm')
 require('prototypes/recipes/rennea/recipes-rennea')
 require('prototypes/recipes/rennea/recipes-auto-rennea')
 require('prototypes/recipes/rennea/recipes-rennea-megafarm')
+require('prototypes/recipes/rennea/recipes-rennea-modules')
 
 --Sap
 require('prototypes/recipes/sap/recipes-sap')
