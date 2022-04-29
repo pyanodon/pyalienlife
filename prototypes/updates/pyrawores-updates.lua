@@ -92,7 +92,7 @@ RECIPE("titanium-plate-1"):remove_unlock("coal-processing-1"):add_unlock("acetyl
 -- RECIPE("chemical-plant-mk01"):remove_unlock('coal-processing-2'):add_unlock('machines-mk01')
 -- RECIPE("evaporator"):remove_unlock('fluid-processing-machines-1'):add_unlock('nexelit-mk01')
 
-RECIPE('mukmoux-fat-salt'):remove_unlock('machines-mk02')
+RECIPE('mukmoux-fat-salt'):remove_unlock('mukmoux')
 RECIPE('bonemeal-salt'):remove_unlock('ulric')
 RECIPE('fertilizer-2'):remove_unlock('basic-electronics')
 RECIPE('molten-stainless-steel'):add_ingredient({type = "item", name = "cobalt-extract", amount = 1})
