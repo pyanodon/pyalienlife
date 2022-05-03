@@ -230,7 +230,7 @@ RECIPE {
         {type = 'item', name = 'moss', amount = 20},
         {type = 'item', name = 'fe-biomass', amount = 20},
         {type = 'item', name = 'solidified-sarcorus', amount = 20},
-        {type = 'item', name = 'alien-sample-02', amount = 20},
+        {type = 'item', name = 'alien-sample01', amount = 20},
         {type = 'item', name = 'plastic-bar', amount = 10},
         {type = 'item', name = 'steel-plate', amount = 10},
     },
@@ -254,7 +254,7 @@ RECIPE {
         {type = 'item', name = 'neuroprocessor', amount = 2},
         {type = 'item', name = 'flask', amount = 1},
         {type = 'fluid', name = 'flavonoids', amount = 50},
-        {type = 'item', name = 'alien-sample-03', amount = 1},
+        {type = 'item', name = 'alien-sample-02', amount = 1},
     },
     results = {
         {type = 'item', name = 'py-science-pack-3', amount = 3},

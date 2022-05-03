@@ -10,7 +10,7 @@ RECIPE {
         {"treated-wood", 50},
         {"control-unit", 10},
         {"boron-carbide", 30},
-        {"low-density-structure", 20},
+        {"super-alloy", 20},
         {"blanket", 5},
         {"nbfe-alloy", 50},
         {"kevlar", 100},

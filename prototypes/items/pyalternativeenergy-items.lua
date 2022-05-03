@@ -14,53 +14,53 @@ ITEM {
     stack_size = 50
 }
 
-ITEM {
-    type = "item",
-    name = "used-simik-mk02",
-    icons =
-    {
-        {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
-    },
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-used",
-    order = "x",
-    stack_size = 50
-}
+-- ITEM {
+--     type = "item",
+--     name = "used-simik-mk02",
+--     icons =
+--     {
+--         {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png"},
+--         {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+--         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+--     },
+--     icon_size = 64,
+--     flags = {},
+--     subgroup = "py-alienlife-used",
+--     order = "x",
+--     stack_size = 50
+-- }
 
-ITEM {
-    type = "item",
-    name = "used-simik-mk03",
-    icons =
-    {
-        {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
-    },
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-used",
-    order = "x",
-    stack_size = 50
-}
+-- ITEM {
+--     type = "item",
+--     name = "used-simik-mk03",
+--     icons =
+--     {
+--         {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png"},
+--         {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+--         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+--     },
+--     icon_size = 64,
+--     flags = {},
+--     subgroup = "py-alienlife-used",
+--     order = "x",
+--     stack_size = 50
+-- }
 
-ITEM {
-    type = "item",
-    name = "used-simik-mk04",
-    icons =
-    {
-        {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
-    },
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-used",
-    order = "x",
-    stack_size = 50
-}
+-- ITEM {
+--     type = "item",
+--     name = "used-simik-mk04",
+--     icons =
+--     {
+--         {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png"},
+--         {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+--         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+--     },
+--     icon_size = 64,
+--     flags = {},
+--     subgroup = "py-alienlife-used",
+--     order = "x",
+--     stack_size = 50
+-- }
 
 ---ZUNGROR---
 
