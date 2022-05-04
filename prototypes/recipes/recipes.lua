@@ -1579,7 +1579,7 @@ RECIPE {
         {type = 'item', name = 'biomass', amount = 8}
     },
     main_product = "a-molasse",
-}:add_unlock("energy-drink"):change_category('pulp')
+}:add_unlock("sugar"):change_category('pulp')
 
 RECIPE {
     type = "recipe",
@@ -1595,7 +1595,7 @@ RECIPE {
         {type = 'fluid', name = 'sweet-syrup', amount = 50},
     },
     --main_product = "a-molasse",
-}:add_unlock("energy-drink")
+}:add_unlock("sugar")
 
 RECIPE {
     type = "recipe",
@@ -1611,7 +1611,7 @@ RECIPE {
         {type = 'item', name = 'sugar', amount = 10},
     },
     --main_product = "a-molasse",
-}:add_unlock("energy-drink")
+}:add_unlock("sugar")
 
 RECIPE {
     type = "recipe",
@@ -1628,7 +1628,7 @@ RECIPE {
         {type = 'fluid', name = 'b-molasse', amount = 100},
     },
     --main_product = "b-molasse",
-}:add_unlock("pesticides-mk01")
+}:add_unlock("ethanol")
 
 RECIPE {
     type = "recipe",
@@ -1645,7 +1645,7 @@ RECIPE {
         {type = 'fluid', name = 'ethanol', amount = 100},
     },
     --main_product = "b-molasse",
-}:add_unlock("pesticides-mk01")
+}:add_unlock("ethanol")
 
 RECIPE {
     type = "recipe",
@@ -2798,7 +2798,7 @@ RECIPE {
         {type = 'item', name = 'concrete', amount = 20},
     },
     --main_product = "cocoon",
-}:add_unlock("biotech-mk02")
+}:add_unlock("cellulose-mk02")
 
 RECIPE {
     type = "recipe",
