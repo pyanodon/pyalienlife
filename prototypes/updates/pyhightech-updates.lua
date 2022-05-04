@@ -1298,7 +1298,7 @@ RECIPE {
         {type = 'fluid', name = 'casein-solution', amount = 50},
     },
     --main_product = "casein-pulp-01",
-}:add_unlock("energy-drink")
+}:add_unlock("biotech-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -1317,7 +1317,7 @@ RECIPE {
         {type = 'item', name = 'raw-fiber', amount = 40},
     },
     --main_product = "casein-pulp-01",
-}:add_unlock("energy-drink")
+}:add_unlock("biotech-mk03")
 
 RECIPE {
     type = 'recipe',

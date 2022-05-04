@@ -129,6 +129,8 @@ require('prototypes/technologies/latex')
 require('prototypes/technologies/sap')
 require('prototypes/technologies/basic-substrate')
 require('prototypes/technologies/soil-washing')
+require('prototypes/technologies/sugar')
+require('prototypes/technologies/ethanol')
 
 if mods["pyhightech"] then
     require('prototypes/technologies/mining-with-fluid')

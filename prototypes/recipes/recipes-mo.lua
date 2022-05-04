@@ -376,7 +376,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'propeptides', amount = 1}
     }
-}:add_unlock('immunosupressants')
+}:add_unlock('chitin')
 
 RECIPE {
     type = 'recipe',
