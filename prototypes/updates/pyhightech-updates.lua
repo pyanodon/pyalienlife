@@ -72,7 +72,10 @@ TECHNOLOGY('antitumor'):add_prereq('earnshaw-theorem')
 -- TECHNOLOGY('quantum'):add_pack('py-science-pack-3')
 
 TECHNOLOGY("vacuum-tube-electronics"):set_fields{dependencies = {"sap"}}
-TECHNOLOGY("syngas"):set_fields{dependencies = {"vacuum-tube-electronics"}}
+
+if not mods["omnimatter"] then
+    TECHNOLOGY("syngas"):set_fields{dependencies = {"vacuum-tube-electronics"}}
+end
 
 --RECIPES--
 RECIPE('kicalk-plantation'):remove_unlock('kicalk')
