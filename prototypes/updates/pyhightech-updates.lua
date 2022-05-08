@@ -414,11 +414,6 @@ fun.add_ingredient('simik-food-01a', {name = "cadaveric-arum", amount = 2})
 RECIPE('simik-food-02a'):add_ingredient({type = "item", name = "cadaveric-arum", amount = 2}):replace_ingredient("gravel", "phosphate-rock")
 fun.add_ingredient('simik-food-02a', {name = "cadaveric-arum", amount = 2})
 
-if mods['pyhightech'] then
-	data.raw.item['dried-meat'] = nil
-    RECIPE('dried-meat'):remove_unlock('placeholder'):change_category('smelting')
-end
-
 RECIPE("centrifuge"):add_unlock("kicalk-mk02")
 RECIPE("stone-wool"):add_unlock("zipir")
 RECIPE("stone-wool2"):add_unlock("zipir")
