@@ -471,3 +471,16 @@ ITEM {
     order = "a",
     stack_size = 50
 }
+
+ITEM {
+    type = "item",
+    name = "charcoal-briquette",
+    fuel_value = "180MJ",
+    fuel_category = "biomass",
+    icon = "__pyalienlifegraphics3__/graphics/icons/charcoal-briq.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-items",
+    --order = "g",
+    stack_size = 100
+}

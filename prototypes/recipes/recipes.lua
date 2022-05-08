@@ -2850,3 +2850,29 @@ RECIPE {
         {type = 'item', name = 'planter-box', amount = 1},
     },
 }
+
+RECIPE {
+    type = "recipe",
+    name = "charcoal-briquette",
+    category = "fts-reactor",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "dried-biomass", amount = 40},
+        {type = "item", name = "active-carbon", amount = 5},
+        {type = "item", name = "limestone", amount = 5},
+        {type = "item", name = "starch", amount = 10},
+        {type = "item", name = "borax", amount = 5},
+        {type = "item", name = "sodium-carbonate", amount = 5},
+        {type = "fluid", name = "nitrogen", amount = 50},
+        {type = "fluid", name = "wax", amount = 25},
+        {type = "fluid", name = "creosote", amount = 25},
+        {type = "item", name = "fiber", amount = 10}
+    },
+    results = {
+        {type = "item", name = "charcoal-briquette", amount = 10}
+    },
+    main_product = "charcoal-briquette",
+    --icon = "__pycoalprocessinggraphics__/graphics/icons/missing-icon.png",
+    --icon_size = 32
+}:add_unlock("energy-3")
