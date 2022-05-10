@@ -13,6 +13,7 @@ TECHNOLOGY {
             {'logistic-science-pack', 3},
             {"chemical-science-pack", 1},
             {"production-science-pack", 1},
+            {'utility-science-pack', 3},
         },
         time = 45
     }
@@ -35,6 +36,7 @@ TECHNOLOGY {
             {'logistic-science-pack', 3},
             {"chemical-science-pack", 1},
             {"production-science-pack", 1},
+            {'utility-science-pack', 3},
         },
         time = 45
     }
@@ -55,6 +57,7 @@ TECHNOLOGY {
             {'logistic-science-pack', 3},
             {"chemical-science-pack", 1},
             {"production-science-pack", 1},
+            {'utility-science-pack', 3},
         },
         time = 45
     }
@@ -75,6 +78,7 @@ TECHNOLOGY {
             {'logistic-science-pack', 3},
             {"chemical-science-pack", 1},
             {"production-science-pack", 1},
+            {'utility-science-pack', 3},
         },
         time = 45
     }
@@ -95,6 +99,7 @@ TECHNOLOGY {
             {'logistic-science-pack', 3},
             {"chemical-science-pack", 1},
             {"production-science-pack", 1},
+            {'utility-science-pack', 3},
         },
         time = 45
     }
@@ -115,6 +120,7 @@ TECHNOLOGY {
             {'logistic-science-pack', 3},
             {"chemical-science-pack", 1},
             {"production-science-pack", 1},
+            {'utility-science-pack', 3},
         },
         time = 45
     }
@@ -135,6 +141,7 @@ TECHNOLOGY {
             {'logistic-science-pack', 3},
             {"chemical-science-pack", 1},
             {"production-science-pack", 1},
+            {'utility-science-pack', 3},
         },
         time = 45
     }
