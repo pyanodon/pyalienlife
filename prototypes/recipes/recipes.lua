@@ -2867,7 +2867,7 @@ RECIPE {
         {type = "fluid", name = "nitrogen", amount = 50},
         {type = "fluid", name = "wax", amount = 25},
         {type = "fluid", name = "creosote", amount = 25},
-        {type = "item", name = "fiber", amount = 10}
+        {type = "item", name = "raw-fiber", amount = 10}
     },
     results = {
         {type = "item", name = "charcoal-briquette", amount = 10}

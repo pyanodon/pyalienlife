@@ -442,6 +442,7 @@ RECIPE('methane-py-fertilizer'):add_ingredient('moondrop-seeds')
 RECIPE('methane-co2'):add_ingredient('moondrop-seeds')
 
 RECIPE("plastic-from-casein"):add_ingredient({type = 'fluid', name = 'methanal', amount = 100}):remove_unlock("korlex"):add_unlock("plastics-mk02")
+RECIPE("charcoal-briquette"):replace_ingredient("raw-fiber", "fiber")
 
 TECHNOLOGY("paramagnetic-material"):remove_pack('production-science-pack'):remove_prereq('production-science-pack')
 TECHNOLOGY("aerogel"):remove_pack('production-science-pack'):remove_prereq('production-science-pack')
