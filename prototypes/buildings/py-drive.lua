@@ -4,18 +4,17 @@
         enabled = false,
         ingredients =
 			{
-        {type = 'item', name = 'neuromorphic-chip', amount = 10},
-        {type = 'item', name = 'super-steel', amount = 200},
+        {type = 'item', name = 'neuromorphic-chip', amount = 100},
+        {type = 'item', name = 'super-alloy', amount = 200},
+        {type = 'item', name = 'low-density-structure', amount = 100},
         {type = 'item', name = 'processing-unit', amount = 20},
         {type = 'item', name = 'small-parts-03', amount = 100},
-        {type = 'item', name = 'alien-sample-03', amount = 4},
+        {type = 'item', name = 'perfect-samples', amount = 4},
         {type = 'item', name = 'vonix', amount = 2},
         {type = 'item', name = 'earth-cow-sample', amount = 10},
-        {type = 'item', name = 'gh', amount = 4},
-        {type = 'item', name = 'enzyme-pks', amount = 2},
-        {type = 'item', name = 'upgrader-mk02', amount = 1},
-        {type = 'item', name = 'automated-factory-mk01', amount = 1},
-
+        {type = 'item', name = 'denatured-seismite', amount = 2},
+        {type = 'item', name = 'upgrader-mk03', amount = 1},
+        {type = 'item', name = 'automated-factory-mk03', amount = 1},
 			},
         results = {
             {'pydrive', 1}
@@ -56,7 +55,7 @@
         collision_box = {{-7.3, -7.3}, {7.3, 7.3}},
         selection_box = {{-7.5, -7.5}, {7.5, 7.5}},
         drawing_box = {{-3.0, -3.0}, {3.0, 3.0}},
-        inventory_size = 800,
+        inventory_size = 100,
         scale_info_icons = true,
 		picture = {
             filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/off.png",

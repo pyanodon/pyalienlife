@@ -496,6 +496,8 @@ end
 --(( RECIPES ))--
 require('prototypes/recipes/recipes')
 
+require('prototypes/recipes/recipes-bioreserve-megafarm')
+
 --antelope
 -- require('prototypes/recipes/antelope/recipes-antelope')
 -- require('prototypes/recipes/antelope/recipes-antelope-raising')
