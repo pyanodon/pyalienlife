@@ -72,7 +72,10 @@ TECHNOLOGY('antitumor'):add_prereq('earnshaw-theorem')
 -- TECHNOLOGY('quantum'):add_pack('py-science-pack-3')
 
 TECHNOLOGY("vacuum-tube-electronics"):set_fields{dependencies = {"sap"}}
-TECHNOLOGY("syngas"):set_fields{dependencies = {"vacuum-tube-electronics"}}
+
+if not mods["omnimatter"] then
+    TECHNOLOGY("syngas"):set_fields{dependencies = {"vacuum-tube-electronics"}}
+end
 
 --RECIPES--
 RECIPE('kicalk-plantation'):remove_unlock('kicalk')
@@ -439,6 +442,7 @@ RECIPE('methane-py-fertilizer'):add_ingredient('moondrop-seeds')
 RECIPE('methane-co2'):add_ingredient('moondrop-seeds')
 
 RECIPE("plastic-from-casein"):add_ingredient({type = 'fluid', name = 'methanal', amount = 100}):remove_unlock("korlex"):add_unlock("plastics-mk02")
+RECIPE("charcoal-briquette"):replace_ingredient("raw-fiber", "fiber")
 
 TECHNOLOGY("paramagnetic-material"):remove_pack('production-science-pack'):remove_prereq('production-science-pack')
 TECHNOLOGY("aerogel"):remove_pack('production-science-pack'):remove_prereq('production-science-pack')
