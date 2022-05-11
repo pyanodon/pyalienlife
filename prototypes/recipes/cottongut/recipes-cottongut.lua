@@ -107,9 +107,9 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'cottongut-mk01', amount = 2},
-        {type = 'item', name = 'bedding', amount = 1},
+        -- {type = 'item', name = 'bedding', amount = 1},
         {type = 'item', name = "seaweed", amount = 10},
-        {type = 'item', name = 'sea-sponge-sprouts', amount = 5},
+        {type = 'item', name = 'fish-egg', amount = 2},
         {type = 'item', name = 'cottongut-food-01', amount = 1},
         },
     results = {

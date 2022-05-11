@@ -26,10 +26,9 @@ TECHNOLOGY('atomic-bomb'):remove_prereq('rocket-control-unit'):remove_prereq('ko
 RECIPE('atomic-bomb'):add_ingredient({type = "item", name = "titanium-plate", amount = 20}):add_ingredient({type = "item", name = "fuelrod-mk01", amount = 10}):remove_ingredient("rocket-control-unit"):remove_ingredient("yellow-cake"):add_ingredient({type = "item", name = "neuromorphic-chip", amount = 1})
 RECIPE("small-electric-pole"):replace_ingredient("wood", "log")
 
-RECIPE('automated-factory-mk01'):remove_unlock("fast-inster"):add_unlock("automation-2")
 RECIPE('exoskeleton-equipment'):add_ingredient({type = "item", name = "metallic-glass", amount = 30})
 RECIPE('automation-science-pack'):change_category('research-handcrafting')
-RECIPE('logistic-science-pack'):change_category('research')
+RECIPE('logistic-science-pack'):change_category('research'):add_ingredient({type = "item", name = "solidified-sarcorus", amount = 1})
 RECIPE('chemical-science-pack'):change_category('research')
 RECIPE('military-science-pack'):change_category('research')
 RECIPE('production-science-pack'):change_category('research')

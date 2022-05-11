@@ -1720,7 +1720,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'crude-from-manure',
-    category = 'fts-reactor',
+    category = 'lor',
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -1733,7 +1733,7 @@ RECIPE {
         {type = 'item', name = 'ash', amount = 3},
     },
     main_product = "crude-oil",
-}:add_unlock("cottongut-science-mk01"):change_category('lor')
+}:add_unlock("scrude")
 
 RECIPE {
     type = 'recipe',

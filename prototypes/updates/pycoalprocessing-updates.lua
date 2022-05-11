@@ -49,6 +49,7 @@ RECIPE("ralesia"):remove_unlock('ralesia')
 RECIPE('bonemeal'):remove_unlock('ulric')
 RECIPE('coal-fawogae'):remove_unlock('coal-processing-1'):add_unlock('fawogae-mk01')
 
+RECIPE("automated-factory-mk01"):remove_unlock("fast-inserter"):add_unlock("automation-2")
 RECIPE('botanical-nursery'):remove_unlock('wood-processing'):subgroup_order("py-alienlife-buildings-mk01", "b"):add_unlock('botany-mk01')
 RECIPE('botanical-nursery-mk02'):remove_unlock('machines-mk02'):add_unlock('botany-mk02'):subgroup_order("py-alienlife-buildings-mk02", "b")
 RECIPE('botanical-nursery-mk03'):remove_unlock('machines-mk03'):add_unlock('botany-mk03'):subgroup_order("py-alienlife-buildings-mk03", "b")

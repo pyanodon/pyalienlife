@@ -139,7 +139,7 @@ RECIPE("automated-screener-mk01"):replace_ingredient("electric-mining-drill", "a
 RECIPE("salt-mine"):replace_ingredient("electric-mining-drill", "advanced-burner-drill")
 RECIPE("tin-plate-1"):add_unlock("mining-with-fluid"):set_enabled(false)
 RECIPE("tinned-cable"):add_unlock("mining-with-fluid"):set_enabled(false)
-RECIPE("aluminium-plate-1"):add_unlock("mining-with-fluid"):set_enabled(false)
+RECIPE("aluminium-plate-1"):remove_unlock("moss-mk01"):add_unlock("mining-with-fluid")
 RECIPE("bio-sample01"):add_ingredient({type = "item", name = "urea", amount = 5})
 RECIPE("inserter"):add_unlock("logistics"):set_enabled(false)
 RECIPE("underground-belt"):remove_unlock("logistics"):set_enabled(true)
