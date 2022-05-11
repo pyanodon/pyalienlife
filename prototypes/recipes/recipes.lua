@@ -2876,3 +2876,23 @@ RECIPE {
     --icon = "__pycoalprocessinggraphics__/graphics/icons/missing-icon.png",
     --icon_size = 32
 }:add_unlock("energy-3")
+
+RECIPE {
+    type = 'recipe',
+    name = 'animal-sample-01',
+    category = 'crafting-with-fluid',
+    enabled = true,
+    energy_required = 8,
+    ingredients = {
+        {type = 'item', name = 'bones', amount = 1},
+        {type = 'item', name = 'meat', amount = 1},
+        {type = 'item', name = 'skin', amount = 1},
+        {type = 'item', name = 'mukmoux-fat', amount = 1},
+        {type = 'item', name = 'guts', amount = 1},
+        {type = 'item', name = 'brain', amount = 1},
+        {type = 'fluid', name = 'blood', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'animal-sample-01', amount = 1},
+    },
+}:add_unlock("logistic-science-pack")
