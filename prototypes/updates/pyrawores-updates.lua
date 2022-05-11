@@ -53,6 +53,7 @@ RECIPE("borax-mine"):add_unlock("glass"):set_enabled(false)
 RECIPE("glassworks-mk01"):add_unlock("glass"):set_enabled(false)
 RECIPE("glass-1"):add_unlock("glass"):set_enabled(false)
 RECIPE("molten-glass"):add_unlock("glass"):set_enabled(false)
+RECIPE("aluminium-plate-1"):add_unlock("moss-mk01"):set_enabled(false)
 
 --TECHNOLOGIES--
 -- TECHNOLOGY('aluminium-mk03'):add_pack('py-science-pack-3')
