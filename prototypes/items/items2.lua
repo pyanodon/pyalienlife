@@ -484,3 +484,14 @@ ITEM {
     --order = "g",
     stack_size = 100
 }
+
+ITEM {
+    type = "item",
+    name = "animal-sample-01",
+    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-items",
+    --order = "g",
+    stack_size = 100
+}
