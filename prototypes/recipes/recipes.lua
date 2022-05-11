@@ -2890,6 +2890,7 @@ RECIPE {
         {type = 'item', name = 'mukmoux-fat', amount = 1},
         {type = 'item', name = 'guts', amount = 1},
         {type = 'item', name = 'brain', amount = 1},
+        {type = 'item', name = 'plasmids', amount = 1},
         {type = 'fluid', name = 'blood', amount = 50},
     },
     results = {
