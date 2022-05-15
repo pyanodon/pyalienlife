@@ -107,7 +107,7 @@ RECIPE('cottongut-science-utility'):add_ingredient({type = "item", name = "desta
 
 RECIPE("inductor1"):remove_unlock("vacuum-tube-electronics"):set_enabled(true):replace_ingredient("ceramic", "iron-stick"):change_category("crafting")
 RECIPE("small-parts-01"):remove_ingredient("iron-stick"):replace_ingredient("copper-plate", "inductor1")
---RECIPE("automation-science-pack"):replace_ingredient("electronic-circuit", "small-parts-01")
+RECIPE("automation-science-pack"):replace_ingredient("electronic-circuit", "small-parts-01")
 
 RECIPE("offshore-pump"):replace_ingredient("electronic-circuit", "inductor1")
 RECIPE("lab"):replace_ingredient("electronic-circuit", "inductor1")
@@ -131,7 +131,7 @@ RECIPE("seaweed-crop-mk01"):replace_ingredient("electronic-circuit", "inductor1"
 RECIPE("sap-extractor-mk01"):replace_ingredient("electronic-circuit", "inductor1"):replace_ingredient("inserter", "burner-inserter")
 RECIPE("repair-pack"):replace_ingredient("electronic-circuit", "inductor1")
 RECIPE("electric-mining-drill"):add_unlock("electric-mining-drill"):set_enabled(false)
-RECIPE("collector"):replace_ingredient("electric-mining-drill", "advanced-burner-drill")
+RECIPE("collector"):replace_ingredient("electronic-circuit", "inductor1"):replace_ingredient("electric-mining-drill", "burner-mining-drill")
 RECIPE("eaf-mk01"):replace_ingredient("electric-mining-drill", "advanced-burner-drill")
 RECIPE("impact-crusher-mk01"):replace_ingredient("electric-mining-drill", "advanced-burner-drill")
 RECIPE("hydroclassifier-mk01"):replace_ingredient("electric-mining-drill", "advanced-burner-drill")
