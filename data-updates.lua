@@ -8,6 +8,7 @@ require("prototypes/updates/base-updates")
 
 if mods["pycoalprocessing"] then
     require("prototypes/updates/pycoalprocessing-updates")
+    ITEM("automation-science-pack", "tool"):set("icon", "__pyalienlifegraphics3__/graphics/icons/automation-science-pack.png")
 end
 
 if mods["pyfusionenergy"] then

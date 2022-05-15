@@ -2,19 +2,19 @@ RECIPE {
     type = "recipe",
     name = "collector",
     energy_required = 0.5,
-    enabled = false,
+    enabled = true,
     ingredients = {
         {"electric-mining-drill", 2},
         {"soil-extractormk01", 1},
         {"electronic-circuit", 5},
         {"iron-gear-wheel", 60},
         {"iron-plate", 40},
-        {"titanium-plate", 30},
+        {"steam-engine", 1},
     },
     results = {
         {"collector", 1}
     }
-}:add_unlock("biotech-mk01")
+}--:add_unlock("biotech-mk01")
 
 ITEM {
     type = "item",

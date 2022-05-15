@@ -8848,7 +8848,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "empty-planter-box",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
+    icon = "__pyalienlifegraphics3__/graphics/icons/empty-planter-box.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-items",
@@ -8859,7 +8859,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "planter-box",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
+    icon = "__pyalienlifegraphics3__/graphics/icons/planter-box.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-items",

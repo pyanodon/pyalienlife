@@ -2828,6 +2828,7 @@ RECIPE {
     enabled = true,
     energy_required = 2,
     ingredients = {
+        {type = 'item', name = 'small-parts-01', amount = 3},
         {type = 'item', name = 'stone-brick', amount = 4},
         {type = 'item', name = 'wood', amount = 2},
     },
