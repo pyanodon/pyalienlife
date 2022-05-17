@@ -1,220 +1,308 @@
 local fun = require("prototypes/functions/functions")
 
 ------------------RENDERING------------------
-
--- RECIPE {
--- 	type = "recipe",
---     name = 'smashing-vrauks',
--- 	category = 'vrauk-rendering',
--- 	subgroup = 'py-alienlife-vrauks',
--- 	order = 'b',
--- 	ingredients =
--- 		{
--- 			{name='vrauks', amount=1},
--- 		},
--- 	results =
--- 		{
--- 			{name='meat', amount = 3},
--- 			{type = "fluid", name='formic-acid', amount =200},
--- 			{name='biomass', amount=4},
--- 		},
--- 	crafting_speed = 6,
--- 	icon = "__pyalienlifegraphics__/graphics/icons/rendering-vrauks.png",
--- 	icon_size = 64,
--- 	always_show_made_in = true
--- }
-
-fun.autorecipes {
-    name = 'rendering-vrauks',
-	category = 'slaughterhouse-vrauks',
+--[[
+RECIPE {
+	type = "recipe",
+    name = 'smashing-vrauks',
+	category = 'vrauk-rendering',
 	subgroup = 'py-alienlife-vrauks',
+	enabled = false,
 	order = 'b',
-    mats =
+	ingredients =
 	{
-		{
-			ingredients =
-				{
-					{name='caged-vrauks', amount=1},
-				},
-			results =
-				{
-					--{name='bones', probability = 0.3, amount_min =1, amount_max =4},
-					{name='meat', probability = 0.4, amount_min =1, amount_max =2},
-					{name='chitin', probability = 0.2, amount_min =1, amount_max =1},
-					--{name='mukmoux-fat', probability = 0.3, amount_min =1, amount_max =1},
-					{name='guts', probability = 0.4, amount_min =1, amount_max =2},
-					{name='formic-acid', amount =200},
-					{name='cage', amount=1},
-					{name='brain', probability = 0.4, amount_min =1, amount_max =1},
-				},
-			crafting_speed = 30,
-			tech = 'rendering',
-			name = 'Full Render Vrauks',
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-vrauks.png",
-			icon_size = 64,
-		},
-		--meat
-		{
-			ingredients =
-				{
-					--{name='caged-vrauks', amount=1},
-				},
-			results =
-				{
-                    --{name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='chitin', remove_item = true},
-					--{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='formic-acid', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='meat', amount =2},
-				},
-			crafting_speed = 15,
-			tech = 'advanced-rendering',
-			name = 'Extract Vrauks Meat',
-			icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
-			icon_size = 64,
-		},
-		--brain
-		{
-			ingredients =
-				{
-					--{name='caged-vrauks', amount=1},
-				},
-			results =
-				{
-					{name='meat', remove_item = true},
-					{name='brain', amount =1},
-				},
-			crafting_speed = 15,
-			tech = 'advanced-rendering',
-			name = 'Extract Vrauks brains',
-			icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
-			icon_size = 64,
-		},
-		--skin
-		{
-			ingredients =
-				{
-					--{name='caged-vrauks', amount=1},
-				},
-			results =
-				{
-					{name='brain', remove_item = true},
-					{name='chitin', amount =1},
-				},
-			crafting_speed = 15,
-			tech = 'advanced-rendering',
-			name = 'Extract Vrauks chithin',
-			icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",
-			icon_size = 64,
-		},
-		--guts
-		{
-			ingredients =
-				{
-					--{name='caged-vrauks', amount=1},
-				},
-			results =
-				{
-					{name='chitin', remove_item = true},
-					{name='guts', amount =2},
-				},
-			crafting_speed = 15,
-			tech = 'advanced-rendering',
-			name = 'Extract Vrauks guts',
-			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
-			icon_size = 64,
-		},
-		--formic-acid
-		{
-			ingredients =
-				{
-					--{name='caged-vrauks', amount=1},
-				},
-			results =
-				{
-					{name='guts', remove_item = true},
-					{name='formic-acid', amount =400},
-				},
-			crafting_speed = 15,
-			tech = 'advanced-rendering',
-			name = 'Extract Vrauks Formic Acid',
-			icon = "__pyalienlifegraphics__/graphics/icons/formic-acid.png",
-			icon_size = 64,
-		},
-		--brain vrauks rendering
-		{
-			ingredients =
-				{
-					{name='caged-vrauks',remove_item = true},
-					{name='brain-caged-vrauks', amount=1},
-				},
-			results =
-				{
-					{name='formic-acid', remove_item = true},
-					{name='brain', amount =4},
-				},
-			crafting_speed = 15,
-			tech = 'nanochondria',
-			name = 'Extract brains from Improved Vrauks',
-			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-vrauks.png",
-			icon_size = 64,
-		},
-		--meat vrauks rendering
-		{
-			ingredients =
-				{
-					{name='brain-caged-vrauks',remove_item = true},
-					{name='meat-caged-vrauks', amount=1},
-				},
-			results =
-				{
-					{name='brain', remove_item = true},
-					{name='meat', amount =10},
-				},
-			crafting_speed = 15,
-			tech = 'anabolic-rna',
-			name = 'Extract meat from Improved Vrauks',
-			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-vrauks.png",
-			icon_size = 64,
-		},
-		--guts vrauks rendering
-		{
-			ingredients =
-				{
-					{name='meat-caged-vrauks',remove_item = true},
-					{name='guts-caged-vrauks', amount=1},
-				},
-			results =
-				{
-					{name='meat', remove_item = true},
-					{name='guts', amount =11},
-				},
-			crafting_speed = 15,
-			tech = 'antitumor',
-			name = 'Extract guts from Improved Vrauks',
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-vrauks.png",
-			icon_size = 64,
-		},
-		--skin vrauks rendering
-		{
-			ingredients =
-				{
-					{name='guts-caged-vrauks',remove_item = true},
-					{name='chitin-caged-vrauks', amount=1},
-				},
-			results =
-				{
-					{name='guts', remove_item = true},
-					{name='chitin', amount =15},
-				},
-			crafting_speed = 15,
-			tech = 'reca',
-			name = 'Extract skin from Improved Vrauks',
-			icon = "__pyalienlifegraphics__/graphics/icons/chitin-caged-vrauks.png",
-			icon_size = 64,
-		},
-	}
+		{name='vrauks', amount=1},
+	},
+	results =
+	{
+		{name='meat', amount = 3},
+		{type = "fluid", name='formic-acid', amount =200},
+		{name='biomass', amount=4},
+	},
+	energy_required = 6,
+	icon = "__pyalienlifegraphics__/graphics/icons/rendering-vrauks.png",
+	icon_size = 64,
+	always_show_made_in = true
 }
+]]--
+RECIPE {
+    type = 'recipe',
+    name = 'full-render-vrauks',
+    category = 'slaughterhouse-vrauks',
+    subgroup = 'py-alienlife-vrauks',
+    enabled = false,
+    order = 'ba-a',
+    ingredients = {
+        {
+            name = 'caged-vrauks',
+            amount = 1
+        }
+    },
+    results = {
+        --[[{
+			name='bones', 
+			probability = 0.3,
+			amount_min = 1,
+			amount_max =4
+		},]]
+        {
+            name = 'meat',
+            probability = 0.4,
+            amount_min = 1,
+            amount_max = 2
+        },
+        {
+            name = 'chitin',
+            probability = 0.2,
+            amount_min = 1,
+            amount_max = 1
+        },
+        --[[{
+            name = 'mukmoux-fat',
+            probability = 0.3,
+            amount_min = 1,
+            amount_max = 1
+        },]]
+        {
+            name = 'guts',
+            probability = 0.4,
+            amount_min = 1,
+            amount_max = 2
+        },
+        {
+			type = 'fluid',
+            name = 'formic-acid',
+            amount = 200
+        },
+        {
+            name = 'cage',
+            amount = 1
+        },
+        {
+            name = 'brain',
+            probability = 0.4,
+            amount_min = 1,
+            amount_max = 1
+        }
+    },
+    energy_required = 30,
+    icon = "__pyalienlifegraphics__/graphics/icons/rendering-vrauks.png",
+    icon_size = 64
+}:add_unlock('rendering')
+
+RECIPE {
+    type = 'recipe',
+    name = 'ex-me-vra',
+    category = 'slaughterhouse-vrauks',
+    subgroup = 'py-alienlife-vrauks',
+    enabled = false,
+    order = 'ba-m',
+    ingredients = {
+        {
+            name = 'caged-vrauks',
+            amount = 1
+        }
+    },
+    results = {
+        {
+            name = 'meat',
+            amount = 2
+        }
+    },
+    energy_required = 15,
+    icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
+    icon_size = 64
+}:add_unlock('advanced-rendering')
+
+RECIPE {
+    type = 'recipe',
+    name = 'ex-bra-vra',
+    category = 'slaughterhouse-vrauks',
+    subgroup = 'py-alienlife-vrauks',
+    enabled = false,
+    order = 'ba-b',
+    ingredients = {
+        {
+            name = 'caged-vrauks',
+            amount = 1
+        }
+    },
+    results = {
+        {
+            name = 'brain',
+            amount = 1
+        }
+    },
+    energy_required = 15,
+    icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
+    icon_size = 64
+}:add_unlock('advanced-rendering')
+
+RECIPE {
+    type = 'recipe',
+    name = 'ex-chi-vra',
+    category = 'slaughterhouse-vrauks',
+    subgroup = 'py-alienlife-vrauks',
+    enabled = false,
+    order = 'ba-c',
+    ingredients = {
+        {
+            name = 'caged-vrauks',
+            amount = 1
+        }
+    },
+    results = {
+        {
+            name = 'chitin',
+            amount = 1
+        }
+    },
+    energy_required = 15,
+    icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",
+    icon_size = 64
+}:add_unlock('advanced-rendering')
+
+RECIPE {
+    type = 'recipe',
+    name = 'ex-gut-vra',
+    category = 'slaughterhouse-vrauks',
+    subgroup = 'py-alienlife-vrauks',
+    enabled = false,
+    order = 'ba-g',
+    ingredients = {
+        {
+            name = 'caged-vrauks',
+            amount = 1
+        }
+    },
+    results = {
+        {
+            name = 'guts',
+            amount = 2
+        }
+    },
+    energy_required = 15,
+    icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
+    icon_size = 64
+}:add_unlock('advanced-rendering')
+
+RECIPE {
+    type = 'recipe',
+    name = 'ex-frm-vra',
+    category = 'slaughterhouse-vrauks',
+    subgroup = 'py-alienlife-vrauks',
+    enabled = false,
+    order = 'ba-f',
+    ingredients = {
+        {
+            name = 'caged-vrauks',
+            amount = 1
+        }
+    },
+    results = {
+        {
+			type = 'fluid',
+            name = 'formic-acid',
+            amount = 400
+        }
+    },
+    energy_required = 15,
+    icon = "__pyalienlifegraphics__/graphics/icons/formic-acid.png",
+    icon_size = 64
+}:add_unlock('advanced-rendering')
+
+RECIPE {
+    type = 'recipe',
+    name = 'ex-bra-imp-vra',
+    category = 'slaughterhouse-vrauks',
+    subgroup = 'py-alienlife-vrauks',
+    enabled = false,
+    order = 'bb-b',
+    ingredients = {
+        {
+            name = 'brain-caged-vrauks',
+            amount = 1
+        }
+    },
+    results = {
+        {
+            name = 'brain',
+            amount = 4
+        }
+    },
+    energy_required = 15,
+    icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-vrauks.png",
+    icon_size = 64
+}:add_unlock('nanochondria')
+
+RECIPE {
+    type = 'recipe',
+    name = 'ex-me-imp-vra',
+    category = 'slaughterhouse-vrauks',
+    subgroup = 'py-alienlife-vrauks',
+    enabled = false,
+    order = 'bb-m',
+    ingredients = {
+        {
+            name = 'meat-caged-vrauks',
+            amount = 1
+        }
+    },
+    results = {
+        {
+            name = 'meat',
+            amount = 10
+        }
+    },
+    energy_required = 15,
+    icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-vrauks.png",
+    icon_size = 64
+}:add_unlock('anabolic-rna')
+
+RECIPE {
+    type = 'recipe',
+    name = 'ex-gut-imp-vra',
+    category = 'slaughterhouse-vrauks',
+    subgroup = 'py-alienlife-vrauks',
+    enabled = false,
+    order = 'bb-g',
+    ingredients = {
+        {
+            name = 'guts-caged-vrauks',
+            amount = 1
+        }
+    },
+    results = {
+        {
+            name = 'guts',
+            amount = 11
+        }
+    },
+    energy_required = 15,
+    icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-vrauks.png",
+    icon_size = 64
+}:add_unlock('antitumor')
+
+RECIPE {
+    type = 'recipe',
+    name = 'ex-chi-imp-vra',
+    category = 'slaughterhouse-vrauks',
+    subgroup = 'py-alienlife-vrauks',
+    enabled = false,
+    order = 'bb-c',
+    ingredients = {
+        {
+            name = 'chitin-caged-vrauks',
+            amount = 1
+        }
+    },
+    results = {
+        {
+            name = 'chitin',
+            amount = 15
+        }
+    },
+    energy_required = 15,
+    icon = "__pyalienlifegraphics__/graphics/icons/chitin-caged-vrauks.png",
+    icon_size = 64
+}:add_unlock('reca')
