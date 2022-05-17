@@ -1,5 +1,3 @@
-local fun = require("prototypes/functions/functions")
-
 ------------------RENDERING------------------
 --[[
 RECIPE {
@@ -40,7 +38,7 @@ RECIPE {
     },
     results = {
         --[[{
-			name='bones', 
+			name='bones',
 			probability = 0.3,
 			amount_min = 1,
 			amount_max =4
