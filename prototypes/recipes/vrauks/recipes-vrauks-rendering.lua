@@ -107,7 +107,11 @@ RECIPE {
         {
             name = 'meat',
             amount = 2
-        }
+        },
+		{
+            name = 'cage',
+            amount = 1
+        },
     },
     energy_required = 15,
     icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
@@ -131,7 +135,11 @@ RECIPE {
         {
             name = 'brain',
             amount = 1
-        }
+        },
+		{
+            name = 'cage',
+            amount = 1
+        },
     },
     energy_required = 15,
     icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png",
@@ -155,7 +163,11 @@ RECIPE {
         {
             name = 'chitin',
             amount = 1
-        }
+        },
+		{
+            name = 'cage',
+            amount = 1
+        },
     },
     energy_required = 15,
     icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",
@@ -179,7 +191,11 @@ RECIPE {
         {
             name = 'guts',
             amount = 2
-        }
+        },
+		{
+            name = 'cage',
+            amount = 1
+        },
     },
     energy_required = 15,
     icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
@@ -204,7 +220,11 @@ RECIPE {
 			type = 'fluid',
             name = 'formic-acid',
             amount = 400
-        }
+        },
+		{
+            name = 'cage',
+            amount = 1
+        },
     },
     energy_required = 15,
     icon = "__pyalienlifegraphics__/graphics/icons/formic-acid.png",
@@ -228,7 +248,11 @@ RECIPE {
         {
             name = 'brain',
             amount = 4
-        }
+        },
+		{
+            name = 'cage',
+            amount = 1
+        },
     },
     energy_required = 15,
     icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-vrauks.png",
@@ -252,7 +276,11 @@ RECIPE {
         {
             name = 'meat',
             amount = 10
-        }
+        },
+		{
+            name = 'cage',
+            amount = 1
+        },
     },
     energy_required = 15,
     icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-vrauks.png",
@@ -276,7 +304,11 @@ RECIPE {
         {
             name = 'guts',
             amount = 11
-        }
+        },
+		{
+            name = 'cage',
+            amount = 1
+        },
     },
     energy_required = 15,
     icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-vrauks.png",
@@ -300,7 +332,11 @@ RECIPE {
         {
             name = 'chitin',
             amount = 15
-        }
+        },
+		{
+            name = 'cage',
+            amount = 1
+        },
     },
     energy_required = 15,
     icon = "__pyalienlifegraphics__/graphics/icons/chitin-caged-vrauks.png",
