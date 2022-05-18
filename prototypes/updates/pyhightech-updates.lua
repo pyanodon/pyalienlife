@@ -7,6 +7,7 @@ require('prototypes/technologies/cadaveric-arum')
 require('prototypes/technologies/moondrop')
 
 TECHNOLOGY("epoxy"):remove_pack("chemical-science-pack")
+TECHNOLOGY("fertilizer"):set_fields{enabled = false, hidden = true}
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/cadavericarum-mk01")
@@ -144,6 +145,7 @@ RECIPE("bio-sample01"):add_ingredient({type = "item", name = "urea", amount = 5}
 RECIPE("inserter"):add_unlock("logistics"):set_enabled(false)
 RECIPE("underground-belt"):remove_unlock("logistics"):set_enabled(true)
 RECIPE("long-handed-inserter"):remove_unlock("automation"):add_unlock("rubber"):add_ingredient{type = "item", name = "belt", amount = 1}
+RECIPE("radar"):add_unlock("engine"):set_enabled(false)
 
 RECIPE("perfect-samples"):add_ingredient{type = 'item', name = 'dimensional-gastricorg', amount = 1}
 
@@ -199,7 +201,7 @@ ITEM('dms'):subgroup_order("py-alienlife-gases", "b")
 ITEM('acidgas'):subgroup_order("py-alienlife-gases", "a")
 ----BUILDINDS----
 
-RECIPE("bio-reactor-mk01"):remove_ingredient('advanced-circuit'):remove_unlock("microbiology-mk02"):add_unlock("melamine")
+RECIPE("bio-reactor-mk01"):remove_ingredient('advanced-circuit'):remove_unlock("cottongut-science-mk01"):add_unlock("melamine")
 RECIPE('ralesia-plantation-mk03'):add_ingredient({type = "item", name = "biopolymer", amount = 15}):add_ingredient({type = "item", name = "carbon-aerogel", amount = 20})
 RECIPE('ralesia-plantation-mk04'):replace_ingredient("control-unit", "intelligent-unit"):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 5}):add_ingredient({type = "item", name = "nv-center", amount = 2})
 RECIPE('auog-paddock'):set_fields {enabled = false}
@@ -235,8 +237,8 @@ RECIPE('hyperelastic-material'):add_ingredient({type = "item", name = "hyaline",
 RECIPE('arthurian-pen-mk03'):add_ingredient({type = "item", name = "carbon-nanotube", amount = 15})
 RECIPE('atomizer-mk03'):add_ingredient({type = "item", name = "carbon-nanotube", amount = 20}):add_ingredient({type = "item", name = "paramagnetic-material", amount = 20})
 RECIPE('auog-paddock-mk03'):add_ingredient({type = "item", name = "phosphate-glass", amount = 40})
-RECIPE('bhoddos-culture-mk03'):add_ingredient({type = "item", name = "diamagnetic-material", amount = 20})
-RECIPE('biofactory-mk03'):add_ingredient({type = "item", name = "diamagnetic-material", amount = 30}):add_ingredient({type = "item", name = "paramagnetic-material", amount = 20})
+RECIPE('bhoddos-culture-mk03'):add_ingredient({type = "item", name = "carbon-nanotube", amount = 20})
+RECIPE('biofactory-mk03'):add_ingredient({type = "item", name = "paramagnetic-material", amount = 20})
 RECIPE('bio-reactor-mk03'):add_ingredient({type = "item", name = "heavy-fermion", amount = 20}):add_ingredient({type = "item", name = "superconductor", amount = 10}):add_ingredient({type = "item", name = "phosphate-glass", amount = 50})
 RECIPE('cadaveric-arum-mk03'):add_ingredient({type = "item", name = "heavy-fermion", amount = 15}):add_ingredient({type = "item", name = "superconductor", amount = 10})
 RECIPE('creature-chamber-mk03'):add_ingredient({type = "item", name = "biopolymer", amount = 15}):add_ingredient({type = "item", name = "graphene-roll", amount = 20}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 15}):add_ingredient({type = "item", name = "superconductor", amount = 5})
@@ -245,16 +247,16 @@ RECIPE('dhilmos-pool-mk03'):add_ingredient({type = "item", name = "paramagnetic-
 RECIPE('dingrits-pack-mk03'):add_ingredient({type = "item", name = "phosphate-glass", amount = 50}):add_ingredient({type = "item", name = "biopolymer", amount = 20})
 RECIPE('fish-farm-mk03'):add_ingredient({type = "item", name = "graphene-roll", amount = 30}):add_ingredient({type = "item", name = "biopolymer", amount = 15})
 RECIPE('fwf-mk03'):add_ingredient({type = "item", name = "superconductor", amount = 10}):add_ingredient({type = "item", name = "phosphate-glass", amount = 40}):add_ingredient({type = "item", name = "paramagnetic-material", amount = 20})
-RECIPE('genlab-mk03'):add_ingredient({type = "item", name = "diamagnetic-material", amount = 20})
+-- RECIPE('genlab-mk03'):add_ingredient({type = "item", name = "diamagnetic-material", amount = 20})
 RECIPE('incubator-mk03'):add_ingredient({type = "item", name = "phosphate-glass", amount = 50}):add_ingredient({type = "item", name = "graphene-roll", amount = 30}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 20})
-RECIPE('kmauts-enclosure-mk03'):add_ingredient({type = "item", name = "diamagnetic-material", amount = 30}):add_ingredient({type = "item", name = "heavy-fermion", amount = 15}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10})
+RECIPE('kmauts-enclosure-mk03'):add_ingredient({type = "item", name = "heavy-fermion", amount = 15}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10})
 RECIPE('moss-farm-mk03'):add_ingredient({type = "item", name = "heavy-fermion", amount = 5}):add_ingredient({type = "item", name = "superconductor", amount = 10})
 RECIPE('mukmoux-pasture-mk03'):add_ingredient({type = "item", name = "paramagnetic-material", amount = 30}):add_ingredient({type = "item", name = "biopolymer", amount = 20})
-RECIPE('navens-culture-mk03'):add_ingredient({type = "item", name = "graphene-roll", amount = 50}):add_ingredient({type = "item", name = "diamagnetic-material", amount = 30})
+RECIPE('navens-culture-mk03'):add_ingredient({type = "item", name = "graphene-roll", amount = 50}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 30})
 RECIPE('phadai-enclosure-mk03'):add_ingredient({type = "item", name = "heavy-fermion", amount = 15})
 RECIPE('phagnot-corral-mk03'):add_ingredient({type = "item", name = "paramagnetic-material", amount = 25}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 20})
 RECIPE('ralesia-plantation-mk03'):add_ingredient({type = "item", name = "phosphate-glass", amount = 100}):add_ingredient({type = "item", name = "graphene-roll", amount = 30}):add_ingredient({type = "item", name = "superconductor", amount = 10})
-RECIPE('rennea-plantation-mk03'):add_ingredient({type = "item", name = "diamagnetic-material", amount = 20}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10})
+RECIPE('rennea-plantation-mk03'):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10})
 RECIPE('sap-extractor-mk03'):add_ingredient({type = "item", name = "graphene-roll", amount = 30})
 RECIPE('scrondrix-pen-mk03'):add_ingredient({type = "item", name = "carbon-nanotube", amount = 30})
 RECIPE('slaughterhouse-mk03'):add_ingredient({type = "item", name = "paramagnetic-material", amount = 20}):add_ingredient({type = "item", name = "graphene-roll", amount = 50})
@@ -267,7 +269,7 @@ RECIPE('vrauks-paddock-mk03'):add_ingredient({type = "item", name = "phosphate-g
 RECIPE('xenopen-mk03'):add_ingredient({type = "item", name = "superconductor", amount = 5}):add_ingredient({type = "item", name = "phosphate-glass", amount = 50}):add_ingredient({type = "item", name = "heavy-fermion", amount = 15})
 RECIPE('yaedols-culture-mk03'):add_ingredient({type = "item", name = "graphene-roll", amount = 50}):add_ingredient({type = "item", name = "superconductor", amount = 10})
 RECIPE('yotoi-aloe-orchard-mk03'):add_ingredient({type = "item", name = "graphene-roll", amount = 20}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 15})
-RECIPE('zipir-reef-mk03'):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10}):add_ingredient({type = "item", name = "diamagnetic-material", amount = 20})
+RECIPE('zipir-reef-mk03'):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10})
 RECIPE('bio-printer-mk03'):add_ingredient({type = "item", name = "graphene-roll", amount = 30}):add_ingredient({type = "item", name = "biopolymer", amount = 15})
 RECIPE('ez-ranch-mk03'):add_ingredient({type = "item", name = "paramagnetic-material", amount = 25}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 20})
 RECIPE('research-center-mk03'):add_ingredient({type = "item", name = "phosphate-glass", amount = 40}):add_ingredient({type = "item", name = "biopolymer", amount = 20})
@@ -336,7 +338,7 @@ RECIPE('pydrive'):replace_ingredient("processing-unit", "intelligent-unit"):add_
 ----RECIPES----
 RECIPE('fungal-substrate-02'):add_ingredient({type = "item", name = "urea", amount = 3})
 RECIPE('alien-sample-03'):replace_ingredient("plastic-bar", "graphene-roll")
-RECIPE('log7-2'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a")
+RECIPE('log7-2'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a"):add_unlock("wood-processing-3")
 --RECIPE('urea'):replace_ingredient("fawogae", "seaweed"):subgroup_order("py-alienlife-items", "a")
 RECIPE('bonemeal2'):remove_unlock('advanced-electronics'):subgroup_order("py-alienlife-items", "a")
 RECIPE('bonemeal3'):remove_unlock('advanced-electronics'):subgroup_order("py-alienlife-items", "a")
@@ -441,9 +443,9 @@ fun.results_replacer("log7-2", "log", "log",8)
 fun.results_replacer("rennea-mk02-seed-seperation", "light-oil", "tall-oil")
 fun.results_replacer("rennea-mk03-seed-seperation", "light-oil", "tall-oil")
 fun.results_replacer("rennea-mk04-seed-seperation", "light-oil", "tall-oil")
-fun.results_replacer("rennea-mk02-seed-seperation", "tar", "black-liquour")
-fun.results_replacer("rennea-mk03-seed-seperation", "tar", "black-liquour")
-fun.results_replacer("rennea-mk04-seed-seperation", "tar", "black-liquour")
+fun.results_replacer("rennea-mk02-seed-seperation", "tar", "black-liquor")
+fun.results_replacer("rennea-mk03-seed-seperation", "tar", "black-liquor")
+fun.results_replacer("rennea-mk04-seed-seperation", "tar", "black-liquor")
 
 
 RECIPE('methane'):add_unlock('coal-processing-1')

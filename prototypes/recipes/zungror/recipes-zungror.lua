@@ -114,7 +114,7 @@ RECIPE {
     --main_product = "caged-zungror",
     subgroup = 'py-alienlife-zungror',
     order = 'a',
-}:add_unlock("growth-hormone")
+}:add_unlock("zungror-mk02")
 
 ---caged---
 RECIPE {
