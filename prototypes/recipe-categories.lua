@@ -333,6 +333,10 @@ data:extend {
         type = "resource-category",
         name = "ore-bioreserve"
     },
+	{
+        type = "resource-category",
+        name = "basic-with-fluid"
+    },
 	------slaughterhouse------
     --[[ nothing should be using the slaughterhouse category or it wont added properly to the gui
 	{

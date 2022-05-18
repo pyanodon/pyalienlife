@@ -114,17 +114,17 @@ RECIPE("lab"):replace_ingredient("electronic-circuit", "inductor1")
 RECIPE("assembling-machine-1"):replace_ingredient("electronic-circuit", "inductor1")
 RECIPE("soil-extractormk01"):replace_ingredient("electronic-circuit", "inductor1")
 RECIPE("distilator"):replace_ingredient("electronic-circuit", "inductor1")
-RECIPE("electronics-factory-mk01"):replace_ingredient("electric-mining-drill", "advanced-burner-drill")
+RECIPE("electronics-factory-mk01"):replace_ingredient("electric-mining-drill", "fluid-drill-mk01")
 RECIPE("hpf"):replace_ingredient("electronic-circuit", "inductor1")
 RECIPE("glassworks-mk01"):replace_ingredient("electronic-circuit", "inductor1")
-RECIPE("borax-mine"):replace_ingredient("electronic-circuit", "inductor1"):replace_ingredient("electric-mining-drill", "advanced-burner-drill")
+RECIPE("borax-mine"):replace_ingredient("electronic-circuit", "inductor1"):replace_ingredient("electric-mining-drill", "fluid-drill-mk01")
 RECIPE("gasifier"):replace_ingredient("electronic-circuit", "inductor1")
 RECIPE("chipshooter-mk01"):replace_ingredient("inserter", "burner-inserter")
 RECIPE("tar-processing-unit"):replace_ingredient("electronic-circuit", "inductor1")
 RECIPE("moondrop-codex"):replace_ingredient("electronic-circuit", "inductor1")
-RECIPE("botanical-nursery"):replace_ingredient("electronic-circuit", "inductor1"):replace_ingredient("electric-mining-drill", "advanced-burner-drill")
+RECIPE("botanical-nursery"):replace_ingredient("electronic-circuit", "inductor1"):replace_ingredient("electric-mining-drill", "fluid-drill-mk01")
 RECIPE("washer"):replace_ingredient("electronic-circuit", "inductor1")
-RECIPE("micro-mine-mk01"):replace_ingredient("electronic-circuit", "inductor1"):replace_ingredient("electric-mining-drill", "advanced-burner-drill"):replace_ingredient("inserter", "burner-inserter")
+RECIPE("micro-mine-mk01"):replace_ingredient("electronic-circuit", "inductor1"):replace_ingredient("electric-mining-drill", "fluid-drill-mk01"):replace_ingredient("inserter", "burner-inserter")
 RECIPE("fwf-mk01"):replace_ingredient("electronic-circuit", "inductor1")
 RECIPE("moss-farm-mk01"):replace_ingredient("electronic-circuit", "inductor1")
 RECIPE("seaweed-crop-mk01"):replace_ingredient("electronic-circuit", "inductor1")
@@ -132,11 +132,11 @@ RECIPE("sap-extractor-mk01"):replace_ingredient("electronic-circuit", "inductor1
 RECIPE("repair-pack"):replace_ingredient("electronic-circuit", "inductor1")
 RECIPE("electric-mining-drill"):add_unlock("electric-mining-drill"):set_enabled(false)
 RECIPE("collector"):replace_ingredient("electronic-circuit", "inductor1"):replace_ingredient("electric-mining-drill", "burner-mining-drill")
-RECIPE("eaf-mk01"):replace_ingredient("electric-mining-drill", "advanced-burner-drill")
-RECIPE("impact-crusher-mk01"):replace_ingredient("electric-mining-drill", "advanced-burner-drill")
-RECIPE("hydroclassifier-mk01"):replace_ingredient("electric-mining-drill", "advanced-burner-drill")
-RECIPE("automated-screener-mk01"):replace_ingredient("electric-mining-drill", "advanced-burner-drill")
-RECIPE("salt-mine"):replace_ingredient("electric-mining-drill", "advanced-burner-drill")
+RECIPE("eaf-mk01"):replace_ingredient("electric-mining-drill", "fluid-drill-mk01")
+RECIPE("impact-crusher-mk01"):replace_ingredient("electric-mining-drill", "fluid-drill-mk01")
+RECIPE("hydroclassifier-mk01"):replace_ingredient("electric-mining-drill", "fluid-drill-mk01")
+RECIPE("automated-screener-mk01"):replace_ingredient("electric-mining-drill", "fluid-drill-mk01")
+RECIPE("salt-mine"):replace_ingredient("electric-mining-drill", "fluid-drill-mk01")
 RECIPE("tin-plate-1"):add_unlock("mining-with-fluid"):set_enabled(false)
 RECIPE("tinned-cable"):add_unlock("mining-with-fluid"):set_enabled(false)
 RECIPE("aluminium-plate-1"):remove_unlock("moss-mk01"):add_unlock("mining-with-fluid")
@@ -146,6 +146,17 @@ RECIPE("underground-belt"):remove_unlock("logistics"):set_enabled(true)
 RECIPE("long-handed-inserter"):remove_unlock("automation"):add_unlock("rubber"):add_ingredient{type = "item", name = "belt", amount = 1}
 
 RECIPE("perfect-samples"):add_ingredient{type = 'item', name = 'dimensional-gastricorg', amount = 1}
+
+-- Vanilla mining drill for non-fluid ores only
+data.raw["mining-drill"]["electric-mining-drill"].input_fluid_box = nil
+
+-- Change resource category for ores with fluid
+for _, ore in pairs(data.raw.resource) do
+    if (ore.category or "basic-solid") == "basic-solid" and ore.minable and ore.minable.required_fluid then
+        -- log("Changing category for ore " .. ore.name)
+        ore.category = "basic-with-fluid"
+    end
+end
 
 ----KICALK-----
 
