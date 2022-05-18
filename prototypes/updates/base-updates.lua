@@ -17,6 +17,7 @@ TECHNOLOGY("construction-robotics"):add_pack("py-science-pack-1")
 TECHNOLOGY("weapon-shooting-speed-1"):add_pack("py-science-pack-1")
 TECHNOLOGY("physical-projectile-damage-1"):add_pack("py-science-pack-1")
 TECHNOLOGY("fluid-wagon"):add_pack("py-science-pack-1")
+TECHNOLOGY("circuit-network"):remove_pack("logistic-science-pack"):add_pack("py-science-pack-1")
 
 ITEM("raw-fish", "capsule"):set("icon", "__pyalienlifegraphics__/graphics/icons/fish.png")
 ITEM("raw-fish", "capsule"):set("icon_size", 32)
