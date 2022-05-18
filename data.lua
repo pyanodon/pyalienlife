@@ -342,7 +342,10 @@ require('prototypes/buildings/simik-den-mk03')
 require('prototypes/buildings/simik-den-mk04')
 
 if mods["pyhightech"] then
-    require('prototypes/buildings/advanced-burner-drill')
+    require("prototypes/buildings/fluid-drill-mk01")
+    require("prototypes/buildings/fluid-drill-mk02")
+    require("prototypes/buildings/fluid-drill-mk03")
+    require("prototypes/buildings/fluid-drill-mk04")
 end
 
 if mods["pyalternativeenergy"] then
