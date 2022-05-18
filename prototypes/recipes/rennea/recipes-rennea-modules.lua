@@ -33,7 +33,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-rennea',
     order = 'za'
-}:add_unlock("selective-breeding"):replace_ingredient("filtration-media", "stone-wool")
+}:add_unlock("rennea-mk02"):replace_ingredient("filtration-media", "stone-wool")
 
 RECIPE{
     type = 'recipe',
@@ -59,7 +59,7 @@ RECIPE{
     icon_size = 64,
     subgroup = 'py-alienlife-rennea',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("rennea-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -85,7 +85,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-rennea',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("rennea-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -115,7 +115,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-rennea',
     order = 'za'
-}:add_unlock("selective-breeding"):replace_ingredient("filtration-media", "stone-wool")
+}:add_unlock("rennea-mk02"):replace_ingredient("filtration-media", "stone-wool")
 
 RECIPE {
     type = 'recipe',
@@ -140,7 +140,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-rennea',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("rennea-mk02")
 
 --mk03--
 --WIP--
@@ -172,7 +172,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-rennea',
     order = 'za'
-}:add_unlock("artificial-breeding"):replace_ingredient("filtration-media", "stone-wool")
+}:add_unlock("rennea-mk03"):replace_ingredient("filtration-media", "stone-wool")
 
 RECIPE{
     type = 'recipe',
@@ -198,7 +198,7 @@ RECIPE{
     icon_size = 64,
     subgroup = 'py-alienlife-rennea',
     order = 'za'
-}:add_unlock("artificial-breeding")
+}:add_unlock("rennea-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -224,7 +224,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-rennea',
     order = 'za'
-}:add_unlock("artificial-breeding")
+}:add_unlock("rennea-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -254,7 +254,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-rennea',
     order = 'za'
-}:add_unlock("artificial-breeding"):replace_ingredient("filtration-media", "stone-wool")
+}:add_unlock("rennea-mk03"):replace_ingredient("filtration-media", "stone-wool")
 
 RECIPE {
     type = 'recipe',
@@ -279,7 +279,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-rennea',
     order = 'za'
-}:add_unlock("artificial-breeding")
+}:add_unlock("rennea-mk03")
 
 --mk04--
 --WIP--
@@ -311,7 +311,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-rennea',
     order = 'za'
-}:add_unlock("biased-mutation"):replace_ingredient("filtration-media", "stone-wool")
+}:add_unlock("rennea-mk04"):replace_ingredient("filtration-media", "stone-wool")
 
 RECIPE{
     type = 'recipe',
@@ -337,7 +337,7 @@ RECIPE{
     icon_size = 64,
     subgroup = 'py-alienlife-rennea',
     order = 'za'
-}:add_unlock("biased-mutation")
+}:add_unlock("rennea-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -363,7 +363,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-rennea',
     order = 'za'
-}:add_unlock("biased-mutation")
+}:add_unlock("rennea-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -393,7 +393,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-rennea',
     order = 'za'
-}:add_unlock("biased-mutation"):replace_ingredient("filtration-media", "stone-wool")
+}:add_unlock("rennea-mk04"):replace_ingredient("filtration-media", "stone-wool")
 
 RECIPE {
     type = 'recipe',
@@ -418,4 +418,4 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-rennea',
     order = 'za'
-}:add_unlock("biased-mutation")
+}:add_unlock("rennea-mk04")

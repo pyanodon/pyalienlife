@@ -14,7 +14,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'bhoddos', amount = 2},
-        {type = 'item', name = 'fuelrod-mk03', amount = 1},
+        {type = 'item', name = 'fuelrod-mk02', amount = 1},
         {type = 'item', name = 'fungal-substrate-02', amount = 5},
         {type = 'item', name = 'biomass', amount = 15},
         {type = 'fluid', name = 'water', amount = 1000},
@@ -97,7 +97,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'bhoddos-mk02', amount = 2},
-        {type = 'item', name = 'fuelrod-mk04', amount = 1},
+        {type = 'item', name = 'fuelrod-mk03', amount = 1},
         {type = 'item', name = 'fungal-substrate-03', amount = 5},
         {type = 'item', name = 'biomass', amount = 15},
         {type = 'item', name = 'alien-sample-03', amount = 1},
@@ -181,7 +181,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'bhoddos-mk03', amount = 2},
-        {type = 'item', name = 'fuelrod-mk05', amount = 1},
+        {type = 'item', name = 'fuelrod-mk04', amount = 1},
         {type = 'item', name = 'fungal-substrate-03', amount = 10},
         {type = 'item', name = 'biomass', amount = 15},
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},

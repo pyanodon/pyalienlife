@@ -17,6 +17,7 @@ TECHNOLOGY("smelters-mk01"):add_pack("py-science-pack-1")
 TECHNOLOGY("tin-mk01"):add_pack("py-science-pack-1")
 TECHNOLOGY("titanium-mk01"):add_pack("py-science-pack-1")
 TECHNOLOGY("zinc-mk01"):add_pack("py-science-pack-1")
+TECHNOLOGY("machines-mk01"):add_pack("py-science-pack-1")
 
 --BUILDINDS--
 RECIPE('plankton-farm'):add_ingredient({type = "item", name = "glass", amount = 30})

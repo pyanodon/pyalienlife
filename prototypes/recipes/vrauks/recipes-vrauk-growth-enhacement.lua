@@ -100,7 +100,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='gh',remove_item = true},
-					{name='recombinantery',remove_item = true},
+					{name='antitumor',remove_item = true},
 					{name='reca',amount =1},
 				},
 			results =

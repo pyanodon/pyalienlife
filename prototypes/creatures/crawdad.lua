@@ -17,7 +17,7 @@ RECIPE{
       {type = 'fluid', name = 'water-saline', amount = 500},
     },
     result = "crawdad"
-  }:add_unlock("zoology")
+  }:add_unlock("domestication-mk02")
 
 ITEM{
     type = "item-with-entity-data",
