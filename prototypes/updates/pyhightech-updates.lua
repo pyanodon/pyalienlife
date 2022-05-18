@@ -8,6 +8,8 @@ require('prototypes/technologies/moondrop')
 
 TECHNOLOGY("epoxy"):remove_pack("chemical-science-pack")
 TECHNOLOGY("fertilizer"):set_fields{enabled = false, hidden = true}
+TECHNOLOGY("py-asphalt"):add_pack("py-science-pack-1")
+TECHNOLOGY("separation"):add_pack("py-science-pack-1")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/cadavericarum-mk01")
