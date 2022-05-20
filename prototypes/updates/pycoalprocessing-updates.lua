@@ -86,7 +86,7 @@ RECIPE('bio-sample01'):add_ingredient({type = "item", name = "petri-dish-bacteri
 RECIPE('fawogae-substrate'):add_unlock("basic-substrate"):set_enabled(false)
 
 RECIPE("wpu"):replace_ingredient("wood", {type = "item", name = "log", amount = "5"}):remove_unlock("wood-processing"):set_enabled(true)
-RECIPE("log-wood"):remove_unlock("wood-processing"):set_enabled(true):change_category("wpu-handcrafting")
+RECIPE("log-wood"):remove_unlock("wood-processing"):set_enabled(true):change_category("wpu-handcrafting"):set_fields{always_show_made_in = true}
 RECIPE("botanical-nursery"):replace_ingredient("wood", {type = "item", name = "planter-box", amount = "10"})
 
 RECIPE('ralesia-seeds'):subgroup_order("py-alienlife-ralesia", "a"):change_category('nursery'):replace_ingredient("ralesia","ralesias")
