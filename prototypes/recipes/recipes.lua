@@ -74,7 +74,6 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'wood-seeds', amount = 1},
         {type = 'item', name = 'moss', amount = 5},
-        {type = 'item', name = 'planter-box', amount = 1},
         {type = 'fluid', name = 'water', amount = 100},
     },
     results = {
