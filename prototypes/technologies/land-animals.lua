@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/land-animals-mk01.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"coal-processing-1","zoology"},
+    prerequisites = {"coal-processing-1"},
     effects = {},
     unit = {
         count = 150,

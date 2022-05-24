@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/water-invertebrates-mk01.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"microbiology-mk01","zoology"},
+    prerequisites = {"microbiology-mk01"},
     effects = {},
     unit = {
         count = 200,

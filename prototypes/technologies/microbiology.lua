@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/microbiology-mk01.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"xenobiology","zoology"},
+    prerequisites = {"xenobiology"},
     effects = {},
     unit = {
         count = 100,
