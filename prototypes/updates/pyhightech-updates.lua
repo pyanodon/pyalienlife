@@ -108,7 +108,6 @@ RECIPE('space-science-pack'):add_ingredient({type = "item", name = "destablilize
 RECIPE('cottongut-science-utility'):add_ingredient({type = "item", name = "destablilized-toxirus", amount = 1}):add_ingredient({type = "item", name = "hormonal", amount = 1}):add_ingredient({type = "item", name = "dimensional-gastricorg", amount = 1}):add_ingredient({type = 'item', name = 'intelligent-unit', amount = 1})
 --RECIPE('satellite'):add_unlock('quantum')
 
-RECIPE("inductor1"):remove_unlock("vacuum-tube-electronics"):set_enabled(true):replace_ingredient("ceramic", "iron-stick"):change_category("crafting")
 RECIPE("small-parts-01"):remove_ingredient("iron-stick"):replace_ingredient("copper-plate", "inductor1")
 RECIPE("automation-science-pack"):replace_ingredient("electronic-circuit", "small-parts-01")
 
@@ -161,6 +160,22 @@ for _, ore in pairs(data.raw.resource) do
         ore.category = "basic-with-fluid"
     end
 end
+
+RECIPE {
+    type = 'recipe',
+    name = 'inductor1-2',
+    category = 'crafting',
+    enabled = true,
+    energy_required = 2,
+    ingredients = {
+        {type = 'item', name = 'iron-stick', amount = 1},
+        {type = 'item', name = 'copper-cable', amount = 10}
+    },
+    results = {
+        {type = 'item', name = 'inductor1', amount = 1}
+    },
+    main_product = 'inductor1'
+}
 
 ----KICALK-----
 
