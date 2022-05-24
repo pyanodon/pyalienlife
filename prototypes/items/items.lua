@@ -750,7 +750,7 @@ ITEM {
 {
     type = "tool",
     name = "py-science-pack-1",
-    icon = "__pyalienlifegraphics__/graphics/icons/py-science-pack-1.png",
+    icon = "__pycoalprocessinggraphics__/graphics/icons/science-pack-1.png",
     icon_size = 64,
     subgroup = "py-alienlife-items",
     order = "a-a",
@@ -763,7 +763,7 @@ ITEM {
 {
     type = "tool",
     name = "py-science-pack-2",
-    icon = "__pyalienlifegraphics__/graphics/icons/py-science-pack-2.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/py-science-pack-1.png",
     icon_size = 64,
     subgroup = "py-alienlife-items",
     order = "a-a",
@@ -776,7 +776,7 @@ ITEM {
 {
     type = "tool",
     name = "py-science-pack-3",
-    icon = "__pyalienlifegraphics__/graphics/icons/py-science-pack-3.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/py-science-pack-2.png",
     icon_size = 64,
     subgroup = "py-alienlife-items",
     order = "a-a",
@@ -789,7 +789,7 @@ ITEM {
 {
     type = "tool",
     name = "py-science-pack-4",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
+    icon = "__pyalienlifegraphics__/graphics/icons/py-science-pack-3.png",
     icon_size = 64,
     subgroup = "science-pack",
     order = "a-a",
