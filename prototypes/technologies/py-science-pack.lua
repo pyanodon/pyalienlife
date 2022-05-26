@@ -54,7 +54,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "py-science-pack-mk04",
-    icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/py-science-pack-mk04.png",
     icon_size = 128,
     order = "c-a",
     dependencies = {"py-science-pack-mk03"},
