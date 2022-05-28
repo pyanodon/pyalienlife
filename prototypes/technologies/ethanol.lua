@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "ethanol",
-    icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/ethanol.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {},

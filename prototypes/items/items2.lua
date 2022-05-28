@@ -488,7 +488,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "animal-sample-01",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
+    icon = "__pyalienlifegraphics2__/graphics/icons/animal-sample-01.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-items",
