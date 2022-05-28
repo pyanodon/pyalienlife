@@ -11,6 +11,7 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'subcritical-water', amount = 50},
     },
+    main_product = "subcritical-water"
 }:add_unlock("cottongut-science-mk01")
 
 RECIPE {
@@ -26,6 +27,7 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'subcritical-water', amount = 200},
     },
+    main_product = "subcritical-water"
 }:add_unlock("biotech-mk03")
 
 FLUID {
