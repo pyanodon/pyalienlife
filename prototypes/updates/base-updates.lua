@@ -3,6 +3,8 @@ table.insert(data.raw.lab.lab.inputs, 'py-science-pack-2')
 table.insert(data.raw.lab.lab.inputs, 'py-science-pack-3')
 table.insert(data.raw.lab.lab.inputs, 'py-science-pack-4')
 
+TECHNOLOGY("automobilism"):remove_pack("logistic-science-pack")
+
 TECHNOLOGY('fluid-handling'):remove_pack('logistic-science-pack')
 TECHNOLOGY('automation-2'):remove_pack('logistic-science-pack'):remove_prereq('logistic-science-pack')
 TECHNOLOGY('exoskeleton-equipment'):remove_prereq('electric-engine'):remove_prereq('solar-panel-equipment'):add_prereq('bio-implants')
