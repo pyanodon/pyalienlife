@@ -210,8 +210,9 @@ for _,recipe in pairs(data.raw.recipe) do
                         --main_product = "combustion-mixture1",
                         subgroup = recipe_copy.subgroup,
                         order = recipe_copy.order,
-                        localised_name = {'', {type .. '-name.' .. locale}, ' with ',{'item-name.biomass'}, ' to combustion mixture (' .. temp .. '°C)' }
+                        localised_name = {"recipe-name.biomass-combustion", {type .. "-name." ..locale}, temp}
                     }
+                    log(serpent.block(data.raw.recipe[name .. "-biomass"]))
                     --log('hit')
                     for _, tech in pairs(data.raw.technology) do
                         --log('hit')
