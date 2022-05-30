@@ -8,7 +8,7 @@ RECIPE {
         {"soil-extractormk01", 1},
         {"electronic-circuit", 5},
         {"iron-gear-wheel", 10},
-        {"iron-plate", 40},
+        {"iron-plate", 20},
         {"steam-engine", 1},
     },
     results = {

@@ -123,7 +123,7 @@ RECIPE("borax-mine"):replace_ingredient("electronic-circuit", "inductor1"):repla
 RECIPE("gasifier"):replace_ingredient("electronic-circuit", "inductor1")
 RECIPE("chipshooter-mk01"):replace_ingredient("inserter", "burner-inserter")
 RECIPE("tar-processing-unit"):replace_ingredient("electronic-circuit", "inductor1")
-RECIPE("moondrop-codex"):replace_ingredient("electronic-circuit", "inductor1")
+RECIPE("moondrop-codex"):replace_ingredient("electronic-circuit", "inductor1"):remove_ingredient("small-lamp")
 RECIPE("botanical-nursery"):replace_ingredient("electronic-circuit", "inductor1"):replace_ingredient("electric-mining-drill", "fluid-drill-mk01")
 RECIPE("washer"):replace_ingredient("electronic-circuit", "inductor1")
 RECIPE("micro-mine-mk01"):replace_ingredient("electronic-circuit", "inductor1"):replace_ingredient("electric-mining-drill", "fluid-drill-mk01"):replace_ingredient("inserter", "burner-inserter")
@@ -146,7 +146,12 @@ RECIPE("bio-sample01"):add_ingredient({type = "item", name = "urea", amount = 5}
 RECIPE("inserter"):add_unlock("logistics"):set_enabled(false)
 RECIPE("underground-belt"):remove_unlock("logistics"):set_enabled(true)
 RECIPE("long-handed-inserter"):remove_unlock("automation"):add_unlock("rubber"):add_ingredient{type = "item", name = "belt", amount = 1}
-RECIPE("radar"):add_unlock("engine"):set_enabled(false)
+RECIPE("radar"):add_unlock("radars-mk01"):set_enabled(false)
+RECIPE("electronics-factory-mk01"):replace_ingredient("fbreactor-mk01", "distilator"):remove_unlock("vacuum-tube-electronics"):add_unlock("ceramic")
+RECIPE("inductor1"):remove_unlock("vacuum-tube-electronics"):add_unlock("ceramic")
+RECIPE("pulp-mill-mk01"):replace_ingredient("fbreactor-mk01", "distilator")
+RECIPE("pcb-factory-mk01"):replace_ingredient("fbreactor-mk01", "electronics-factory-mk01")
+RECIPE("fbreactor-mk01"):remove_unlock("vacuum-tube-electronics"):add_unlock("melamine")
 
 RECIPE("perfect-samples"):add_ingredient{type = 'item', name = 'dimensional-gastricorg', amount = 1}
 
@@ -166,7 +171,7 @@ RECIPE {
     name = 'inductor1-2',
     category = 'crafting',
     enabled = true,
-    energy_required = 2,
+    energy_required = 0.5,
     ingredients = {
         {type = 'item', name = 'iron-stick', amount = 1},
         {type = 'item', name = 'copper-cable', amount = 10}
