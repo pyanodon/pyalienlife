@@ -30,7 +30,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-guar',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("guar-mk02")
 
 --mk03--
 --WIP--
@@ -60,7 +60,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-guar',
     order = 'zb'
-}:add_unlock("artificial-breeding")
+}:add_unlock("guar-mk03")
 
 --mk04--
 --WIP--
@@ -90,4 +90,4 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-guar',
     order = 'zc'
-}:add_unlock("biased-mutation")
+}:add_unlock("guar-mk04")

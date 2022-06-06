@@ -32,7 +32,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-yotoi',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("yotoi-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -57,7 +57,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-yotoi',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("yotoi-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -83,7 +83,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-yotoi',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("yotoi-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -108,7 +108,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-yotoi',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("yotoi-mk02")
 
 --mk03--
 --WIP--
@@ -139,7 +139,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-yotoi',
     order = 'zb'
-}:add_unlock("artificial-breeding")
+}:add_unlock("yotoi-mk03")
 
 --mk04--
 --WIP--
@@ -170,4 +170,4 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-yotoi',
     order = 'zc'
-}:add_unlock("biased-mutation")
+}:add_unlock("yotoi-mk04")

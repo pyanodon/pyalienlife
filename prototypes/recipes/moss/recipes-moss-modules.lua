@@ -21,7 +21,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'moss-mk02', amount = 1},
     },
-  }:add_unlock("selective-breeding"):add_ingredient({type = "item", name = "urea", amount = 1})
+  }:add_unlock("moss-mk02"):add_ingredient({type = "item", name = "urea", amount = 1})
 
 RECIPE {
     type = 'recipe',
@@ -38,7 +38,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'moss-mk02', amount = 1},
     },
-  }:add_unlock("selective-breeding"):add_ingredient({type = "item", name = "urea", amount = 1})
+  }:add_unlock("moss-mk02"):add_ingredient({type = "item", name = "urea", amount = 1})
 
 --mk03--
 --WIP--
@@ -58,7 +58,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'moss-mk02', amount = 1},
     },
-  }:add_unlock("selective-breeding"):add_ingredient({type = "item", name = "urea", amount = 1})
+  }:add_unlock("moss-mk03"):add_ingredient({type = "item", name = "urea", amount = 1})
 
 --mk04--
 --WIP--
@@ -78,4 +78,4 @@ RECIPE {
     results = {
         {type = 'item', name = 'moss-mk02', amount = 1},
     },
-  }:add_unlock("selective-breeding"):add_ingredient({type = "item", name = "urea", amount = 1})
+  }:add_unlock("moss-mk04"):add_ingredient({type = "item", name = "urea", amount = 1})

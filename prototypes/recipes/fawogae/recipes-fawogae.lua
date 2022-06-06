@@ -55,7 +55,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'fawogae-spore-mk02', amount = 5},
     },
-}:add_unlock("selective-breeding")
+}:add_unlock("fawogae-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -69,7 +69,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'fawogae-spore-mk03', amount = 5},
     },
-}:add_unlock("artificial-breeding")
+}:add_unlock("fawogae-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -83,7 +83,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'fawogae-spore-mk04', amount = 5},
     },
-}:add_unlock("biased-mutation")
+}:add_unlock("fawogae-mk04")
 
 
 ----first----

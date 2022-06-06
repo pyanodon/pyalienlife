@@ -30,7 +30,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-grod',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("grod-mk02")
 
 --mk03--
 --WIP--
@@ -60,7 +60,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-grod',
     order = 'zb'
-}:add_unlock("artificial-breeding")
+}:add_unlock("grod-mk03")
 
 --mk04--
 --WIP--
@@ -90,4 +90,4 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-grod',
     order = 'zc'
-}:add_unlock("biased-mutation")
+}:add_unlock("grod-mk04")

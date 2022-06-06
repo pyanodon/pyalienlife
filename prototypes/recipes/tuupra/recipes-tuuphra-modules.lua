@@ -35,7 +35,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-tuuphra',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("tuuphra-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -63,7 +63,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-tuuphra',
     order = 'za'
-}:add_unlock("selective-breeding"):replace_ingredient("sulfuric-acid", "phosphoric-acid")
+}:add_unlock("tuuphra-mk02"):replace_ingredient("sulfuric-acid", "phosphoric-acid")
 
 --mk03--
 --WIP--
@@ -97,7 +97,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-tuuphra',
     order = 'zb'
-}:add_unlock("artificial-breeding")
+}:add_unlock("tuuphra-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -126,7 +126,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-tuuphra',
     order = 'zb'
-}:add_unlock("artificial-breeding"):replace_ingredient("sulfuric-acid", "phosphoric-acid")
+}:add_unlock("tuuphra-mk03"):replace_ingredient("sulfuric-acid", "phosphoric-acid")
 
 --mk04--
 --WIP--
@@ -161,7 +161,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-tuuphra',
     order = 'zc'
-}:add_unlock("biased-mutation")
+}:add_unlock("tuuphra-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -190,4 +190,4 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-tuuphra',
     order = 'zc'
-}:add_unlock("biased-mutation")
+}:add_unlock("tuuphra-mk04")

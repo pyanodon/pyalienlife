@@ -86,7 +86,7 @@ RECIPE {
 --     results = {
 --         {type = "item", name = "kicalk-seeds-mk02", amount = 5}
 --     },
--- }:add_unlock("selective-breeding")
+-- }:add_unlock("kicalk-mk02")
 
 -- RECIPE {
 --     type = "recipe",
@@ -100,7 +100,7 @@ RECIPE {
 --     results = {
 --         {type = "item", name = "kicalk-seeds-mk03", amount = 5}
 --     },
--- }:add_unlock("artificial-breeding")
+-- }:add_unlock("kicalk-mk03")
 
 -- RECIPE {
 --     type = "recipe",
@@ -114,7 +114,7 @@ RECIPE {
 --     results = {
 --         {type = "item", name = "kicalk-seeds-mk04", amount = 6}
 --     },
--- }:add_unlock("biased-mutation")
+-- }:add_unlock("kicalk-mk04")
 
 ---REPLICATOR---
 

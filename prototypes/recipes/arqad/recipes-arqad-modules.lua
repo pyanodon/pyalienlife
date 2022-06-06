@@ -32,7 +32,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arqad',
     order = 'za'
-}:add_unlock("arqad-breeding-1")
+}:add_unlock("arqad-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -59,7 +59,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arqad',
     order = 'za'
-}:add_unlock("arqad-breeding-1")
+}:add_unlock("arqad-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -86,7 +86,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arqad',
     order = 'za'
-}:add_unlock("arqad-breeding-1")
+}:add_unlock("arqad-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -111,7 +111,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arqad',
     order = 'za'
-}:add_unlock("arqad-breeding-1")
+}:add_unlock("arqad-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -137,7 +137,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arqad',
     order = 'za'
-}:add_unlock("arqad-breeding-1")
+}:add_unlock("arqad-mk02")
 
 --MK03--
 --DONE--
@@ -169,7 +169,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arqad',
     order = 'zb'
-}:add_unlock("arqad-breeding-2")
+}:add_unlock("arqad-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -196,7 +196,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arqad',
     order = 'zb'
-}:add_unlock("arqad-breeding-2")
+}:add_unlock("arqad-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -222,7 +222,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arqad',
     order = 'zb'
-}:add_unlock("arqad-breeding-2")
+}:add_unlock("arqad-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -247,7 +247,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arqad',
     order = 'zb'
-}:add_unlock("arqad-breeding-2")
+}:add_unlock("arqad-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -273,7 +273,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arqad',
     order = 'zb'
-}:add_unlock("arqad-breeding-2")
+}:add_unlock("arqad-mk03")
 
 --MK04--
 --DONE--
@@ -306,7 +306,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arqad',
     order = 'zb'
-}:add_unlock("arqad-breeding-3")
+}:add_unlock("arqad-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -333,7 +333,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arqad',
     order = 'zb'
-}:add_unlock("arqad-breeding-3")
+}:add_unlock("arqad-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -360,7 +360,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arqad',
     order = 'zb'
-}:add_unlock("arqad-breeding-3")
+}:add_unlock("arqad-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -385,7 +385,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arqad',
     order = 'zb'
-}:add_unlock("arqad-breeding-3")
+}:add_unlock("arqad-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -411,4 +411,4 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arqad',
     order = 'zb'
-}:add_unlock("arqad-breeding-3")
+}:add_unlock("arqad-mk04")

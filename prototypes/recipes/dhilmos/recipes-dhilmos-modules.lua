@@ -29,7 +29,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-dhilmos',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("dhilmos-mk02")
 
 --mk03--
 --WIP--
@@ -58,7 +58,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-dhilmos',
     order = 'zb'
-}:add_unlock("artificial-breeding")
+}:add_unlock("dhilmos-mk03")
 
 --mk04--
 --WIP--
@@ -87,4 +87,4 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-dhilmos',
     order = 'zc'
-}:add_unlock("biased-mutation")
+}:add_unlock("dhilmos-mk04")

@@ -33,7 +33,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
     order = 'za'
-}:add_unlock("auog-breeding-1")
+}:add_unlock("auog-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -61,7 +61,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
     order = 'za'
-}:add_unlock("auog-breeding-1")
+}:add_unlock("auog-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -90,7 +90,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
     order = 'za'
-}:add_unlock("auog-breeding-1")
+}:add_unlock("auog-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -121,7 +121,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
     order = 'za'
-}:add_unlock("auog-breeding-1")
+}:add_unlock("auog-mk02")
 
 --MK03--
 --DONE--
@@ -153,7 +153,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
     order = 'za'
-}:add_unlock("auog-breeding-2")
+}:add_unlock("auog-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -182,7 +182,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
     order = 'za'
-}:add_unlock("auog-breeding-2")
+}:add_unlock("auog-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -213,7 +213,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
     order = 'za'
-}:add_unlock("auog-breeding-2")
+}:add_unlock("auog-mk03")
 
 --MK04--
 --DONE--
@@ -245,7 +245,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
     order = 'za'
-}:add_unlock("auog-breeding-3")
+}:add_unlock("auog-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -274,7 +274,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
     order = 'za'
-}:add_unlock("auog-breeding-3")
+}:add_unlock("auog-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -305,4 +305,4 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
     order = 'za'
-}:add_unlock("auog-breeding-3")
+}:add_unlock("auog-mk04")

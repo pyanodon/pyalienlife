@@ -30,7 +30,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-vrauks',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("vrauks-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -62,7 +62,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-vrauks',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("vrauks-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -93,7 +93,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-vrauks',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("vrauks-mk02")
 
 --MK03--
 --WIP--
@@ -123,7 +123,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-vrauks',
     order = 'zb'
-}:add_unlock("artificial-breeding")
+}:add_unlock("vrauks-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -156,7 +156,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-vrauks',
     order = 'zb'
-}:add_unlock("artificial-breeding")
+}:add_unlock("vrauks-mk03")
 
 --MK04--
 --WIP--
@@ -186,7 +186,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-vrauks',
     order = 'zc'
-}:add_unlock("biased-mutation")
+}:add_unlock("vrauks-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -219,4 +219,4 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-vrauks',
     order = 'zc'
-}:add_unlock("biased-mutation")
+}:add_unlock("vrauks-mk04")

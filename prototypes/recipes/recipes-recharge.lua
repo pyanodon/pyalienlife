@@ -149,7 +149,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'auog-mk03', amount = 4},
     },
-}:add_unlock("auog-breeding-2")
+}:add_unlock("auog-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -166,7 +166,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'auog-mk03', amount = 4},
     },
-}:add_unlock("auog-breeding-2")
+}:add_unlock("auog-mk03")
 
 --mk04
 
@@ -185,7 +185,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'auog-mk04', amount = 4},
     },
-}:add_unlock("auog-breeding-3")
+}:add_unlock("auog-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -202,7 +202,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'auog-mk04', amount = 4},
     },
-}:add_unlock("auog-breeding-3")
+}:add_unlock("auog-mk04")
 
 
 -------DINGRTIS----------------
@@ -293,7 +293,7 @@ RECIPE {
 --     results = {
 --         {type = 'item', name = 'dingrits-mk03', amount = 5},
 --     },
--- }:add_unlock("artificial-breeding")
+-- }:add_unlock("dingrit-mk03")
 
 -- RECIPE {
 --     type = 'recipe',
@@ -310,7 +310,7 @@ RECIPE {
 --     results = {
 --         {type = 'item', name = 'dingrits-mk03', amount = 5},
 --     },
--- }:add_unlock("artificial-breeding")
+-- }:add_unlock("dingrit-mk03")
 
 -- --mk04
 
@@ -329,7 +329,7 @@ RECIPE {
 --     results = {
 --         {type = 'item', name = 'dingrits-mk04', amount = 5},
 --     },
--- }:add_unlock("biased-mutation")
+-- }:add_unlock("dingrit-mk04")
 
 -- RECIPE {
 --     type = 'recipe',
@@ -346,7 +346,7 @@ RECIPE {
 --     results = {
 --         {type = 'item', name = 'dingrits-mk04', amount = 5},
 --     },
--- }:add_unlock("biased-mutation")
+-- }:add_unlock("dingrit-mk04")
 
 --------SIMIKS----------------------
 --mk01

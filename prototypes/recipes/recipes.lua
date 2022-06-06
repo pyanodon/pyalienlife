@@ -450,7 +450,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'cytostatics', amount = 3}
     }
-}:add_unlock('genetics-mk04')
+}:add_unlock('genetics-mk05')
 
 RECIPE {
     type = 'recipe',

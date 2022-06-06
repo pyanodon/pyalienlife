@@ -33,7 +33,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arthurian',
     order = 'za'
-}:add_unlock("arthurian-breeding-1")
+}:add_unlock("arthurian-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -57,7 +57,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arthurian',
     order = 'za'
-}:add_unlock("arthurian-breeding-1")
+}:add_unlock("arthurian-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -67,7 +67,7 @@ RECIPE {
     energy_required = 50,
     ingredients = {
         {type = 'item', name = 'arthurian-pup-mk02', amount = 1},
-        {type = 'item', name = 'arthurian-food-02', amount = 3},
+        {type = 'item', name = 'arthurian-food-01', amount = 3},
         {type = 'item', name = 'dhilmos-pup', amount = 4},
         {type = 'item', name = 'syrup-01-barrel', amount = 3},
         },
@@ -84,7 +84,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arthurian',
     order = 'za'
-}:add_unlock("arthurian-breeding-1")
+}:add_unlock("arthurian-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -110,7 +110,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arthurian',
     order = 'za'
-}:add_unlock("arthurian-breeding-1")
+}:add_unlock("arthurian-mk02")
 
 --MK03--
 --DONE--
@@ -140,7 +140,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arthurian',
     order = 'zb'
-}:add_unlock("arthurian-breeding-2")
+}:add_unlock("arthurian-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -164,7 +164,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arthurian',
     order = 'za'
-}:add_unlock("arthurian-breeding-2")
+}:add_unlock("arthurian-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -191,7 +191,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arthurian',
     order = 'za'
-}:add_unlock("arthurian-breeding-2")
+}:add_unlock("arthurian-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -217,7 +217,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arthurian',
     order = 'za'
-}:add_unlock("arthurian-breeding-2")
+}:add_unlock("arthurian-mk03")
 
 --MK04--
 --DONE--
@@ -248,7 +248,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arthurian',
     order = 'zc'
-}:add_unlock("arthurian-breeding-3")
+}:add_unlock("arthurian-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -272,7 +272,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arthurian',
     order = 'za'
-}:add_unlock("arthurian-breeding-3")
+}:add_unlock("arthurian-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -299,7 +299,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arthurian',
     order = 'za'
-}:add_unlock("arthurian-breeding-3")
+}:add_unlock("arthurian-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -325,4 +325,4 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-arthurian',
     order = 'za'
-}:add_unlock("arthurian-breeding-3")
+}:add_unlock("arthurian-mk04")

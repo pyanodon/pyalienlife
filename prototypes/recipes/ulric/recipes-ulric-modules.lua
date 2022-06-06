@@ -32,7 +32,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-ulric',
     order = 'za'
-}:add_unlock("selective-breeding"):add_ingredient({type = 'item', name = 'raw-fiber', amount = 6})
+}:add_unlock("ulric-mk02"):add_ingredient({type = 'item', name = 'raw-fiber', amount = 6})
 
 RECIPE {
     type = 'recipe',
@@ -59,7 +59,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-ulric',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("ulric-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -87,7 +87,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-ulric',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("ulric-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -116,7 +116,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-ulric',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("ulric-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -144,7 +144,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-ulric',
     order = 'za'
-}:add_unlock("selective-breeding"):add_ingredient({type = 'item', name = 'raw-fiber', amount = 8})
+}:add_unlock("ulric-mk02"):add_ingredient({type = 'item', name = 'raw-fiber', amount = 8})
 
 RECIPE {
     type = 'recipe',
@@ -170,7 +170,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-ulric',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("ulric-mk02")
 
 --MK03--
 --WIP--
@@ -198,7 +198,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-ulric',
     order = 'zb'
-}:add_unlock("artificial-breeding"):add_ingredient({type = 'item', name = 'raw-fiber', amount = 6})
+}:add_unlock("ulric-mk03"):add_ingredient({type = 'item', name = 'raw-fiber', amount = 6})
 
 
 RECIPE {
@@ -221,7 +221,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-ulric',
     order = 'za'
-}:add_unlock("artificial-breeding")
+}:add_unlock("ulric-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -244,7 +244,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-ulric',
     order = 'za'
-}:add_unlock("artificial-breeding")
+}:add_unlock("ulric-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -269,7 +269,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-ulric',
     order = 'za'
-}:add_unlock("artificial-breeding")
+}:add_unlock("ulric-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -293,7 +293,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-ulric',
     order = 'za'
-}:add_unlock("artificial-breeding"):add_ingredient({type = 'item', name = 'raw-fiber', amount = 8})
+}:add_unlock("ulric-mk03"):add_ingredient({type = 'item', name = 'raw-fiber', amount = 8})
 
 RECIPE {
     type = 'recipe',
@@ -309,7 +309,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'ulric-mk03', amount = 1},
     },
-}:add_unlock("artificial-breeding")
+}:add_unlock("ulric-mk03")
 
 --MK04--
 --WIP--
@@ -337,7 +337,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-ulric',
     order = 'zc'
-}:add_unlock("biased-mutation"):add_ingredient({type = 'item', name = 'raw-fiber', amount = 6})
+}:add_unlock("ulric-mk04"):add_ingredient({type = 'item', name = 'raw-fiber', amount = 6})
 
 
 RECIPE {
@@ -359,7 +359,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-ulric',
     order = 'za'
-}:add_unlock("biased-mutation")
+}:add_unlock("ulric-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -382,7 +382,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-ulric',
     order = 'za'
-}:add_unlock("biased-mutation")
+}:add_unlock("ulric-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -407,7 +407,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-ulric',
     order = 'za'
-}:add_unlock("biased-mutation")
+}:add_unlock("ulric-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -431,7 +431,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-ulric',
     order = 'za'
-}:add_unlock("biased-mutation"):add_ingredient({type = 'item', name = 'raw-fiber', amount = 8})
+}:add_unlock("ulric-mk04"):add_ingredient({type = 'item', name = 'raw-fiber', amount = 8})
 
 RECIPE {
     type = 'recipe',
@@ -447,4 +447,4 @@ RECIPE {
     results = {
         {type = 'item', name = 'ulric-mk04', amount = 1},
     },
-}:add_unlock("biased-mutation")
+}:add_unlock("ulric-mk04")

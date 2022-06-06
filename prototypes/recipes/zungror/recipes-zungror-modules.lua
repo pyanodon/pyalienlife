@@ -29,7 +29,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-zungror',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("zungror-mk02")
 
 --mk03--
 --WIP--
@@ -58,7 +58,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-zungror',
     order = 'zb'
-}:add_unlock("artificial-breeding")
+}:add_unlock("zungror-mk03")
 
 --mk04--
 --WIP--
@@ -87,4 +87,4 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-zungror',
     order = 'zc'
-}:add_unlock("biased-mutation")
+}:add_unlock("zungror-mk04")

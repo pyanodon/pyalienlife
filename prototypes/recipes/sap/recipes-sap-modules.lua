@@ -21,7 +21,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'sap-seeds-mk02', amount = 1},
     },
-  }:add_unlock("selective-breeding"):add_ingredient({type = "item", name = "urea", amount = 1})
+  }:add_unlock("sap-mk02"):add_ingredient({type = "item", name = "urea", amount = 1})
 
   RECIPE {
     type = 'recipe',
@@ -38,7 +38,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'sap-tree-mk02', amount = 1},
     },
-  }:add_unlock("selective-breeding")
+  }:add_unlock("sap-mk02")
 
 --mk03--
 --WIP--
@@ -58,7 +58,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'sap-seeds-mk03', amount = 1},
     },
-  }:add_unlock("selective-breeding"):add_ingredient({type = "item", name = "urea", amount = 1})
+  }:add_unlock("sap-mk03"):add_ingredient({type = "item", name = "urea", amount = 1})
 
   RECIPE {
     type = 'recipe',
@@ -75,7 +75,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'sap-tree-mk03', amount = 1},
     },
-  }:add_unlock("selective-breeding")
+  }:add_unlock("sap-mk03")
 
 --mk04--
 --WIP--
@@ -95,7 +95,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'sap-seeds-mk04', amount = 1},
     },
-  }:add_unlock("selective-breeding"):add_ingredient({type = "item", name = "urea", amount = 1})
+  }:add_unlock("sap-mk04"):add_ingredient({type = "item", name = "urea", amount = 1})
 
   RECIPE {
     type = 'recipe',
@@ -112,4 +112,4 @@ RECIPE {
     results = {
         {type = 'item', name = 'sap-tree-mk04', amount = 1},
     },
-  }:add_unlock("selective-breeding")
+  }:add_unlock("sap-mk04")
