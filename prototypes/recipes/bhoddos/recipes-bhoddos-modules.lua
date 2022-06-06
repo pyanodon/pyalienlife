@@ -32,7 +32,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-bhoddos',
     order = 'za'
-}:add_unlock("bhoddos-breeding-1")
+}:add_unlock("bhoddos-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -59,7 +59,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-bhoddos',
     order = 'za'
-}:add_unlock("bhoddos-breeding-1")
+}:add_unlock("bhoddos-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -84,7 +84,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-bhoddos',
     order = 'za'
-}:add_unlock("bhoddos-breeding-1")
+}:add_unlock("bhoddos-mk02")
 
 --mk03--
 --DONE--
@@ -116,7 +116,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-bhoddos',
     order = 'za'
-}:add_unlock("bhoddos-breeding-2")
+}:add_unlock("bhoddos-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -143,7 +143,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-bhoddos',
     order = 'za'
-}:add_unlock("bhoddos-breeding-2")
+}:add_unlock("bhoddos-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -168,7 +168,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-bhoddos',
     order = 'za'
-}:add_unlock("bhoddos-breeding-2")
+}:add_unlock("bhoddos-mk03")
 
 --mk04--
 --DONE--
@@ -200,7 +200,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-bhoddos',
     order = 'za'
-}:add_unlock("bhoddos-breeding-3")
+}:add_unlock("bhoddos-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -227,7 +227,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-bhoddos',
     order = 'za'
-}:add_unlock("bhoddos-breeding-3")
+}:add_unlock("bhoddos-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -253,4 +253,4 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-bhoddos',
     order = 'za'
-}:add_unlock("bhoddos-breeding-3"):replace_ingredient("bacteria-1", "bacteria-2")
+}:add_unlock("bhoddos-mk04"):replace_ingredient("bacteria-1", "bacteria-2")

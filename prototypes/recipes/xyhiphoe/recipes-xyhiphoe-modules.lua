@@ -29,7 +29,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-xyhiphoe',
     order = 'za'
-}:add_unlock("selective-breeding"):replace_ingredient("saps", "blood-meal")
+}:add_unlock("water-invertebrates-mk02"):replace_ingredient("saps", "blood-meal")
 
 --mk03--
 --WIP--
@@ -58,7 +58,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-xyhiphoe',
     order = 'zb'
-}:add_unlock("artificial-breeding"):replace_ingredient("saps", "blood-meal")
+}:add_unlock("water-invertebrates-mk03"):replace_ingredient("saps", "blood-meal")
 
 --mk04--
 --WIP--
@@ -87,4 +87,4 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-xyhiphoe',
     order = 'zc'
-}:add_unlock("biased-mutation"):replace_ingredient("saps", "blood-meal")
+}:add_unlock("water-invertebrates-mk04"):replace_ingredient("saps", "blood-meal")

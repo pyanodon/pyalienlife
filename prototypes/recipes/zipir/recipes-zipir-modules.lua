@@ -29,7 +29,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-zipir',
     order = 'za'
-}:add_unlock("selective-breeding"):add_ingredient({type = "item", name = "stone-wool", amount = 4})
+}:add_unlock("zipir-mk02"):add_ingredient({type = "item", name = "stone-wool", amount = 4})
 
 --mk03--
 --WIP--
@@ -57,7 +57,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-zipir',
     order = 'zb'
-}:add_unlock("artificial-breeding"):replace_ingredient("saps", "blood-meal"):add_ingredient({type = "item", name = "stone-wool", amount = 4})
+}:add_unlock("zipir-mk03"):replace_ingredient("saps", "blood-meal"):add_ingredient({type = "item", name = "stone-wool", amount = 4})
 
 --mk04--
 --WIP--
@@ -85,4 +85,4 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-zipir',
     order = 'zc'
-}:add_unlock("biased-mutation"):replace_ingredient("saps", "blood-meal"):add_ingredient({type = "item", name = "stone-wool", amount = 4})
+}:add_unlock("zipir-mk04"):replace_ingredient("saps", "blood-meal"):add_ingredient({type = "item", name = "stone-wool", amount = 4})

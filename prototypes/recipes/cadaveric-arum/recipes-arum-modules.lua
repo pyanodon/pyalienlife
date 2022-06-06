@@ -32,7 +32,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-cadaveric',
     order = 'za'
-}:add_unlock("arum-breeding-1")
+}:add_unlock("cadaveric-arum-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -58,7 +58,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-cadaveric',
     order = 'za'
-}:add_unlock("arum-breeding-1")
+}:add_unlock("cadaveric-arum-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -85,7 +85,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-cadaveric',
     order = 'za'
-}:add_unlock("arum-breeding-1")
+}:add_unlock("cadaveric-arum-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -112,7 +112,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-cadaveric',
     order = 'za'
-}:add_unlock("arum-breeding-1")
+}:add_unlock("cadaveric-arum-mk02")
 
 --MK03--
 --WIP--
@@ -145,7 +145,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-cadaveric',
     order = 'zb'
-}:add_unlock("arum-breeding-2")
+}:add_unlock("cadaveric-arum-mk03")
 
 
 RECIPE {
@@ -172,7 +172,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-cadaveric',
     order = 'za'
-}:add_unlock("arum-breeding-2")
+}:add_unlock("cadaveric-arum-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -199,7 +199,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-cadaveric',
     order = 'za'
-}:add_unlock("arum-breeding-2")
+}:add_unlock("cadaveric-arum-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -226,7 +226,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-cadaveric',
     order = 'za'
-}:add_unlock("arum-breeding-2")
+}:add_unlock("cadaveric-arum-mk03")
 
 
 --MK04--
@@ -261,7 +261,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-cadaveric',
     order = 'zc'
-}:add_unlock("arum-breeding-3")
+}:add_unlock("cadaveric-arum-mk04")
 
 
 RECIPE {
@@ -288,7 +288,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-cadaveric',
     order = 'za'
-}:add_unlock("arum-breeding-3")
+}:add_unlock("cadaveric-arum-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -315,7 +315,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-cadaveric',
     order = 'za'
-}:add_unlock("arum-breeding-3")
+}:add_unlock("cadaveric-arum-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -342,4 +342,4 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-cadaveric',
     order = 'za'
-}:add_unlock("arum-breeding-3")
+}:add_unlock("cadaveric-arum-mk04")

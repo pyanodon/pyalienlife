@@ -168,7 +168,7 @@ RECIPE {
     main_product = "phagnot",
     subgroup = 'py-alienlife-phagnot',
     order = 'a',
-}:add_unlock("selective-breeding")
+}:add_unlock("phagnot")
 
 
 RECIPE {
@@ -190,7 +190,7 @@ RECIPE {
     main_product = "phagnot-mk02",
     subgroup = 'py-alienlife-phagnot',
     order = 'a',
-}:add_unlock("selective-breeding")
+}:add_unlock("phagnot-mk02")
 
 
 RECIPE {
@@ -212,7 +212,7 @@ RECIPE {
     main_product = "phagnot-mk03",
     subgroup = 'py-alienlife-phagnot',
     order = 'a',
-}:add_unlock("artificial-breeding")
+}:add_unlock("phagnot-mk03")
 
 
 RECIPE {
@@ -234,7 +234,7 @@ RECIPE {
     main_product = "phagnot-mk04",
     subgroup = 'py-alienlife-phagnot',
     order = 'a',
-}:add_unlock("biased-mutation")
+}:add_unlock("phagnot-mk04")
 
 ----adverse products----
 

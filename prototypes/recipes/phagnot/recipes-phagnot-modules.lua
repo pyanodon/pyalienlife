@@ -14,7 +14,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'phagnot', amount = 2},
-        {type = 'item', name = 'phagnot-food-02', amount = 2},
+        {type = 'item', name = 'phagnot-food-01', amount = 2},
         {type = 'item', name = 'bedding', amount = 4},
         {type = 'item', name = 'bhoddos', amount = 6},
         {type = 'item', name = 'water-barrel', amount = 5},
@@ -29,7 +29,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-phagnot',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("phagnot-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -56,7 +56,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-phagnot',
     order = 'za'
-}:add_unlock("selective-breeding")
+}:add_unlock("phagnot-mk02")
 
 --mk03--
 --WIP--
@@ -85,7 +85,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-phagnot',
     order = 'zb'
-}:add_unlock("artificial-breeding")
+}:add_unlock("phagnot-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -113,7 +113,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-phagnot',
     order = 'zb'
-}:add_unlock("artificial-breeding")
+}:add_unlock("phagnot-mk03")
 
 --mk04--
 --WIP--
@@ -142,7 +142,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-phagnot',
     order = 'zc'
-}:add_unlock("biased-mutation")
+}:add_unlock("phagnot-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -172,4 +172,4 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-phagnot',
     order = 'zc'
-}:add_unlock("biased-mutation")
+}:add_unlock("phagnot-mk04")

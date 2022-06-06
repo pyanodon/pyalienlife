@@ -19,7 +19,7 @@ RECIPE{
         {type = 'item', name = 'seaweed', amount = 5}
     },
     results = {{type = 'item', name = 'seaweed-mk02', amount = 1}}
-}:add_unlock('selective-breeding')
+}:add_unlock('seaweed-mk02')
 
 --mk03--
 --WIP--
@@ -37,7 +37,7 @@ RECIPE{
         {type = 'item', name = 'seaweed', amount = 5}
     },
     results = {{type = 'item', name = 'seaweed-mk03', amount = 1}}
-}:add_unlock('selective-breeding')
+}:add_unlock('seaweed-mk03')
 
 --mk04--
 --WIP--
@@ -55,4 +55,4 @@ RECIPE{
         {type = 'item', name = 'seaweed', amount = 5}
     },
     results = {{type = 'item', name = 'seaweed-mk04', amount = 1}}
-}:add_unlock('selective-breeding')
+}:add_unlock('seaweed-mk04')
