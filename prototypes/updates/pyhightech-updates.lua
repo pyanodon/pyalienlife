@@ -108,7 +108,8 @@ RECIPE('space-science-pack'):add_ingredient({type = "item", name = "destablilize
 RECIPE('cottongut-science-utility'):add_ingredient({type = "item", name = "destablilized-toxirus", amount = 1}):add_ingredient({type = "item", name = "hormonal", amount = 1}):add_ingredient({type = "item", name = "dimensional-gastricorg", amount = 1}):add_ingredient({type = 'item', name = 'intelligent-unit', amount = 1})
 --RECIPE('satellite'):add_unlock('quantum')
 
-RECIPE("small-parts-01"):remove_ingredient("iron-stick"):replace_ingredient("copper-plate", "inductor1")
+RECIPE("small-parts-01"):remove_ingredient("iron-stick"):replace_ingredient("copper-plate", "inductor1"):replace_ingredient("iron-gear-wheel", {"iron-gear-wheel", 2}):replace_ingredient("bolts", {"bolts", 5}):set_fields{energy_required = 0.4}
+RECIPE("small-parts-01").results[1].amount = 4
 RECIPE("automation-science-pack"):replace_ingredient("electronic-circuit", "small-parts-01")
 
 RECIPE("offshore-pump"):replace_ingredient("electronic-circuit", "inductor1")
@@ -174,7 +175,7 @@ RECIPE {
     energy_required = 0.5,
     ingredients = {
         {type = 'item', name = 'iron-stick', amount = 1},
-        {type = 'item', name = 'copper-cable', amount = 10}
+        {type = 'item', name = 'copper-cable', amount = 8}
     },
     results = {
         {type = 'item', name = 'inductor1', amount = 1}
