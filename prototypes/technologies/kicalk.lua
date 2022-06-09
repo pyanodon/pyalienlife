@@ -1,4 +1,4 @@
-if not mods['pyhightech'] then
+if not mods["pyhightech"] then
 TECHNOLOGY {
     type = "technology",
     name = "kicalk",
@@ -11,15 +11,17 @@ TECHNOLOGY {
         count = 100,
         ingredients = {
             {"automation-science-pack", 1},
-            {'logistic-science-pack', 1},
+            --{"logistic-science-pack", 1},
+            {"py-science-pack-1", 1},
         },
         time = 50
     }
 }
 else
-    TECHNOLOGY('kicalk'):set_fields{icon = "__pyalienlifegraphics__/graphics/technology/kicalk.png"}
-    TECHNOLOGY('kicalk'):add_prereq('botany-mk01')
-    TECHNOLOGY('kicalk'):add_pack("logistic-science-pack")
+    TECHNOLOGY("kicalk"):set_fields{icon = "__pyalienlifegraphics__/graphics/technology/kicalk.png"}
+    TECHNOLOGY("kicalk"):add_prereq("botany-mk01")
+    --TECHNOLOGY("kicalk"):add_pack("logistic-science-pack")
+    TECHNOLOGY("kicalk"):add_pack("py-science-pack-1")
 end
 
 TECHNOLOGY {
@@ -35,8 +37,9 @@ TECHNOLOGY {
         count = 150,
         ingredients = {
             {"automation-science-pack", 1},
-            {'logistic-science-pack', 1},
-            -- {'py-science-pack-3', 1},
+            --{"logistic-science-pack", 1},
+            {"py-science-pack-1", 1},
+            --{"py-science-pack-2", 1},
         },
         time = 50
     }
@@ -55,8 +58,11 @@ TECHNOLOGY {
         count = 200,
         ingredients = {
             {"automation-science-pack", 1},
-            {'logistic-science-pack', 1},
-            -- {'py-science-pack-3', 1},
+            --{"logistic-science-pack", 1},
+            {"py-science-pack-1", 1},
+            {"py-science-pack-2", 1},
+            {"py-science-pack-3", 1},
+
         },
         time = 50
     }
@@ -75,8 +81,11 @@ TECHNOLOGY {
         count = 250,
         ingredients = {
             {"automation-science-pack", 1},
-            {'logistic-science-pack', 1},
-            -- {'py-science-pack-3', 1},
+            --{"logistic-science-pack", 1},
+            {"py-science-pack-1", 1},
+            {"py-science-pack-2", 1},
+            {"py-science-pack-3", 1},
+            {"py-science-pack-4", 1},
         },
         time = 50
     }

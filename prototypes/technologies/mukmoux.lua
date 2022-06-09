@@ -11,13 +11,14 @@ TECHNOLOGY {
         count = 200,
         ingredients = {
             {"automation-science-pack", 1},
-            {"logistic-science-pack", 2},
+            --{"logistic-science-pack", 1},
+            {"py-science-pack-1", 1},
         },
         time = 50
     }
 }
-]]--
-TECHNOLOGY('mukmoux'):set_fields{icon = "__pyalienlifegraphics__/graphics/technology/mukmoux.png"}
+]]
+TECHNOLOGY("mukmoux"):set_fields{icon = "__pyalienlifegraphics__/graphics/technology/mukmoux.png"}
 
 TECHNOLOGY {
     type = "technology",
@@ -32,8 +33,9 @@ TECHNOLOGY {
         count = 250,
         ingredients = {
             {"automation-science-pack", 1},
-            {"logistic-science-pack", 1},
-            -- {'py-science-pack-3', 1},
+            --{"logistic-science-pack", 1},
+            {"py-science-pack-1", 1},
+             --{"py-science-pack-3", 1},
         },
         time = 50
     }
@@ -52,8 +54,9 @@ TECHNOLOGY {
         count = 300,
         ingredients = {
             {"automation-science-pack", 1},
-            {"logistic-science-pack", 1},
-            -- {'py-science-pack-3', 1},
+            --{"logistic-science-pack", 1},
+            {"py-science-pack-1", 1},
+            {"py-science-pack-2", 1},
         },
         time = 50
     }
@@ -72,8 +75,11 @@ TECHNOLOGY {
         count = 350,
         ingredients = {
             {"automation-science-pack", 1},
-            {"logistic-science-pack", 1},
-            -- {'py-science-pack-3', 1},
+            --{"logistic-science-pack", 1},
+            {"py-science-pack-1", 1},
+            {"py-science-pack-2", 1},
+            {"py-science-pack-3", 1},
+
         },
         time = 50
     }

@@ -15,8 +15,8 @@ TECHNOLOGY {
         time = 50
     }
 }
-]]--
-TECHNOLOGY('moondrop'):set_fields{icon = "__pyalienlifegraphics__/graphics/technology/moondrop-mk01.png"}
+]]
+TECHNOLOGY("moondrop"):set_fields{icon = "__pyalienlifegraphics__/graphics/technology/moondrop-mk01.png"}
 
 TECHNOLOGY {
     type = "technology",
@@ -31,7 +31,7 @@ TECHNOLOGY {
         count = 200,
         ingredients = {
             {"automation-science-pack", 1},
-            {'py-science-pack-1', 1}
+            {"py-science-pack-1", 1},
         },
         time = 50
     }
@@ -50,7 +50,9 @@ TECHNOLOGY {
         count = 250,
         ingredients = {
             {"automation-science-pack", 2},
-            {"logistic-science-pack", 1},
+            --{"logistic-science-pack", 1},
+            {"py-science-pack-1", 1},
+            {"py-science-pack-2", 1},
         },
         time = 50
     }
@@ -68,9 +70,12 @@ TECHNOLOGY {
     unit = {
         count = 350,
         ingredients = {
-            {'automation-science-pack', 1},
-            {'logistic-science-pack', 1},
-            {"chemical-science-pack", 1},
+            {"automation-science-pack", 1},
+            --{"logistic-science-pack", 1},
+            {"py-science-pack-1", 1},
+            --{"chemical-science-pack", 1},
+            {"py-science-pack-2", 1},
+            {"py-science-pack-3", 1},
         },
         time = 50
     }
@@ -88,10 +93,14 @@ TECHNOLOGY {
     unit = {
         count = 350,
         ingredients = {
-            {'automation-science-pack', 1},
-            {'logistic-science-pack', 1},
-            {"chemical-science-pack", 1},
-            {"production-science-pack", 1},
+            {"automation-science-pack", 1},
+            --{"logistic-science-pack", 1},
+            {"py-science-pack-1", 1},
+            --{"chemical-science-pack", 1},
+            {"py-science-pack-2", 1},
+            --{"production-science-pack", 1},
+            {"py-science-pack-3", 1},
+            {"py-science-pack-4", 1},
         },
         time = 50
     }
