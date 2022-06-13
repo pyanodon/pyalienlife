@@ -32,7 +32,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'glass', amount = 2},
         {type = 'item', name = 'small-lamp', amount = 5},
-        {type = 'item', name = 'advanced-circuit', amount = 30},
+        {type = 'item', name = 'electronic-circuit', amount = 30},
         {type = 'item', name = 'tinned-cable', amount = 20},
     },
     results = {

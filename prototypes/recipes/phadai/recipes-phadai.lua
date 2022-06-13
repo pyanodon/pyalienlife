@@ -48,7 +48,7 @@ RECIPE {
     energy_required = 300,
     ingredients = {
         {type = 'item', name = 'earth-generic-sample', amount = 1},
-        {type = 'item', name = 'py-science-pack-3', amount = 2},
+        {type = 'item', name = 'py-science-pack-2', amount = 2},
         {type = 'item', name = 'phadai-codex', amount = 1},
     },
     results = {

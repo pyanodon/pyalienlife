@@ -227,16 +227,21 @@ RECIPE {
     energy_required = 15,
     ingredients = {
         {type = 'item', name = 'moss', amount = 20},
-        {type = 'item', name = 'fe-biomass', amount = 20},
-        {type = 'item', name = 'solidified-sarcorus', amount = 20},
-        {type = 'item', name = 'alien-sample01', amount = 20},
+        {type = 'item', name = 'zipir-eggs', amount = 5},
+        {type = 'item', name = 'paragen', amount = 1},
+        {type = 'item', name = 'solidified-sarcorus', amount = 2},
+        {type = 'item', name = 'alien-sample-02', amount = 1},
+        {type = 'item', name = 'casein', amount = 3},
+        {type = 'fluid', name = 'ethanol', amount = 50},
+        {type = 'fluid', name = 'flavonoids', amount = 50},
         {type = 'item', name = 'plastic-bar', amount = 10},
-        {type = 'item', name = 'steel-plate', amount = 10},
+        {type = 'item', name = 'flask', amount = 1},
+        {type = 'item', name = 'stainless-steel', amount = 10},
     },
     results = {
         {type = 'item', name = 'py-science-pack-2', amount = 3},
     },
-}:add_unlock("py-science-pack-mk02"):add_ingredient{type = 'item', name = 's-biomass', amount = 20}
+}:add_unlock("py-science-pack-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -246,14 +251,15 @@ RECIPE {
     energy_required = 15,
     ingredients = {
         {type = 'item', name = 'moss', amount = 20},
-        {type = 'item', name = 'alien-sample01', amount = 1},
+        {type = 'item', name = 'alien-sample-03', amount = 1},
+        {type = 'item', name = 'chitosan', amount = 4},
+        {type = 'item', name = 'arqad-propolis', amount = 4},
         {type = 'item', name = 'plastic-bar', amount = 15},
-        {type = 'item', name = 'paragen', amount = 1},
-        {type = 'item', name = 'solidified-sarcorus', amount = 2},
-        {type = 'item', name = 'neuroprocessor', amount = 2},
-        {type = 'item', name = 'flask', amount = 1},
+        {type = 'item', name = 'negasium', amount = 1},
+        {type = 'item', name = 'paragen', amount = 2},
         {type = 'fluid', name = 'flavonoids', amount = 50},
-        {type = 'item', name = 'alien-sample-02', amount = 1},
+        {type = 'item', name = 'flask', amount = 1},
+        {type = 'item', name = 'super-steel', amount = 10},
     },
     results = {
         {type = 'item', name = 'py-science-pack-3', amount = 3},
@@ -267,8 +273,16 @@ RECIPE {
     enabled = false,
     energy_required = 15,
     ingredients = {
+        {type = 'item', name = 'moss', amount = 20},
         {type = 'item', name = 'perfect-samples', amount = 1},
+        {type = 'item', name = 'nonconductive-phazogen', amount = 1},
+        {type = 'item', name = 'negasium', amount = 2},
+        {type = 'item', name = 'zinc-finger-proteins', amount = 1},
+        {type = 'item', name = 'vonix-eggs', amount = 10},
         {type = 'fluid', name = 'flavonoids', amount = 50},
+        {type = 'item', name = 'biopolymer', amount = 10},
+        {type = 'item', name = 'flask', amount = 1},
+        {type = 'item', name = 'super-alloy', amount = 10},
     },
     results = {
         {type = 'item', name = 'py-science-pack-4', amount = 3},
