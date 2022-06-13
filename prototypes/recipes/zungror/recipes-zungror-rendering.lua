@@ -1,10 +1,5 @@
 local fun = require("prototypes/functions/functions")
 
-
---I have no idea how to use this new system to code the slaugter recipes
-
-
-
 ------------------RENDERING------------------
 
 fun.autorecipes {
@@ -18,7 +13,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='zungror', amount=1},
+					{name='caged-zungror', amount=1},
 				},
 			results =
 				{
@@ -29,6 +24,7 @@ fun.autorecipes {
 					{name='arthropod-blood', amount =80},
 					{name='venon-gland', amount = 1},
 					{name='brain', amount = 1},
+					{name='cage', amount = 1}
 				},
 			crafting_speed = 30,
 			tech = 'zungror',
@@ -40,7 +36,7 @@ fun.autorecipes {
 		{
 			ingredients =
 				{
-					{name='zungror',remove_item = true},
+					{name='caged-zungror',remove_item = true},
 					{name='brain-caged-zungror', amount=1},
 				},
 			results =
