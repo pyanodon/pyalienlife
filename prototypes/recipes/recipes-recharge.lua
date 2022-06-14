@@ -237,7 +237,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'dingrits', amount = 5},
     },
-}:add_unlock("domestication-mk03")
+}:add_unlock("dingrits-mk03")
 
 --mk02
 -- WIP // uncomment when mk02-4 modules are done

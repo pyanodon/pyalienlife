@@ -87,7 +87,7 @@ RECIPE {
         {type = 'item', name = 'gas-bladder', amount = 1},
     },
     results = {
-        {type = 'fluid', name = 'natural-gas', amount = 50}
+        {type = 'fluid', name = 'raw-gas', amount = 50}
     }
 }:add_unlock('phagnot-mk02'):change_category('gas-refinery')
 

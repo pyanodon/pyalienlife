@@ -41,7 +41,7 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'rich-gas', amount = 30}
     }
-}:add_unlock('phagnot-mk03'):change_category('gas-refinery')
+}:add_unlock('phagnot-mk04'):change_category('gas-refinery')
 
 RECIPE {
     type = 'recipe',
@@ -55,7 +55,7 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'helium', amount = 10}
     }
-}:add_unlock('phagnot-mk03'):change_category('gas-refinery')
+}:add_unlock('phagnot-mk04'):change_category('gas-refinery')
 
 RECIPE {
     type = 'recipe',
