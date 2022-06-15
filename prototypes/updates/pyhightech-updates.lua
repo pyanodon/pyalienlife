@@ -11,6 +11,7 @@ TECHNOLOGY("fertilizer"):set_fields{enabled = false, hidden = true}
 TECHNOLOGY("py-asphalt"):add_pack("py-science-pack-1")
 TECHNOLOGY("separation"):add_pack("py-science-pack-1")
 TECHNOLOGY("fertilizer-mk03"):remove_pack("chemical-science-pack")
+TECHNOLOGY("starch-mk02"):remove_pack("chemical-science-pack")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/cadavericarum-mk01")
@@ -65,7 +66,6 @@ TECHNOLOGY("discharge-defense-equipment"):add_pack("py-science-pack-2")
 TECHNOLOGY("speed-module-2"):add_pack("py-science-pack-2")
 TECHNOLOGY("productivity-module-2"):add_pack("py-science-pack-2")
 TECHNOLOGY("effectivity-module-2"):add_pack("py-science-pack-2")
-TECHNOLOGY("starch-mk02"):add_pack("py-science-pack-2")
 
 --(( ORES ))--
 require('prototypes/ores/kicalk')
@@ -1580,4 +1580,4 @@ RECIPE {
     results = {
         {type = "item", name = "starch", amount = 20}
     }
-}:add_unlock("starch-mk02")
+}:add_unlock("starch-mk03")

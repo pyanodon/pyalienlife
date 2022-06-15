@@ -36,6 +36,8 @@ TECHNOLOGY {
             {'logistic-science-pack', 1},
             {"py-science-pack-2", 2},
             {'chemical-science-pack', 1},
+            {"py-science-pack-3", 2},
+            {"production-science-pack", 1},
         },
         time = 45
     }
@@ -60,6 +62,7 @@ TECHNOLOGY {
             {"chemical-science-pack", 1},
             {"py-science-pack-3", 2},
             {"production-science-pack", 1},
+            {"py-science-pack-4", 1},
         },
         time = 45
     }

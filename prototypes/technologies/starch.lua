@@ -27,10 +27,35 @@ TECHNOLOGY {
         count = 150,
         ingredients = {
             {"automation-science-pack", 1},
+            {"py-science-pack-1", 1},
             {"logistic-science-pack", 1},
+            {"py-science-pack-2", 1},
             {"chemical-science-pack", 1},
-            -- {'py-science-pack-3', 1}
         },
         time = 50
     }
 }
+
+if mods["pyhightech"] then
+    TECHNOLOGY {
+        type = "technology",
+        name = "starch-mk03",
+        icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
+        icon_size = 128,
+        order = "c-a",
+        dependencies = {"starch-mk02"},
+        effects = {},
+        unit = {
+            count = 150,
+            ingredients = {
+                {"automation-science-pack", 1},
+                {"py-science-pack-1", 1},
+                {"logistic-science-pack", 1},
+                {"py-science-pack-2", 1},
+                {"chemical-science-pack", 1},
+                {'py-science-pack-3', 1}
+            },
+            time = 50
+        }
+    }
+end

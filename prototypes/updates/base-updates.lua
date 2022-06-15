@@ -23,8 +23,8 @@ TECHNOLOGY("circuit-network"):remove_pack("logistic-science-pack"):add_pack("py-
 TECHNOLOGY('power-armor'):add_pack("py-science-pack-2")
 TECHNOLOGY('power-armor-mk2'):add_pack("py-science-pack-2")
 TECHNOLOGY("nuclear-fuel-reprocessing"):add_pack("py-science-pack-2")
-TECHNOLOGY("production-science-pack"):add_pack("py-science-pack-2")
-TECHNOLOGY("utility-science-pack"):add_pack("py-science-pack-3")
+TECHNOLOGY("production-science-pack"):add_pack("py-science-pack-2"):add_pack("py-science-pack-3")
+TECHNOLOGY("utility-science-pack"):add_pack("py-science-pack-3"):add_pack("py-science-pack-4")
 
 ITEM("raw-fish", "capsule"):set("icon", "__pyalienlifegraphics__/graphics/icons/fish.png")
 ITEM("raw-fish", "capsule"):set("icon_size", 32)

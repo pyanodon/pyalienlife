@@ -382,7 +382,7 @@ if mods['pyalternativeenergy'] then
         results = {
             {type = 'item', name = 'simik', amount = 4},
         },
-    }:add_unlock("domestication-mk03")
+    }:add_unlock("simik-mk03")
 
     --mk02
 

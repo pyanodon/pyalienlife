@@ -1085,22 +1085,22 @@ RECIPE {
     --main_product = "psc",
 }:add_unlock("organ-printing-mk02")
 
-RECIPE {
-    type = 'recipe',
-    name = 'print-venon-fs',
-    category = 'bio-printer',
-    enabled = false,
-    energy_required = 60,
-    ingredients = {
-        {type = 'fluid', name = 'psc', amount = 250},
-        {type = 'fluid', name = 'fetal-serum', amount = 250},
-        {type = 'item', name = 'bio-scafold', amount = 6},
-    },
-    results = {
-        {type = 'item', name = 'venon-gland', amount = 2},
-    },
-    --main_product = "psc",
-}:add_unlock("organ-printing-mk02")
+-- RECIPE {
+--     type = 'recipe',
+--     name = 'print-venon-fs',
+--     category = 'bio-printer',
+--     enabled = false,
+--     energy_required = 60,
+--     ingredients = {
+--         {type = 'fluid', name = 'psc', amount = 250},
+--         {type = 'fluid', name = 'fetal-serum', amount = 250},
+--         {type = 'item', name = 'bio-scafold', amount = 6},
+--     },
+--     results = {
+--         {type = 'item', name = 'venon-gland', amount = 2},
+--     },
+--     --main_product = "psc",
+-- }:add_unlock("organ-printing-mk02")
 
 RECIPE {
     type = 'recipe',
