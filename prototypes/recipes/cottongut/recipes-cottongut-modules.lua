@@ -15,7 +15,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'cottongut-pup-mk01', amount = 1},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
-        {type = 'fluid', name = 'psc', amount = 25},
+        {type = 'item', name = 'dna-polymerase', amount = 1},
         {type = 'fluid', name = 'artificial-blood', amount = 20}
         },
     results = {

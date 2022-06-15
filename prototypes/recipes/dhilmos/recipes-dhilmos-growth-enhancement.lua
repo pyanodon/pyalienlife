@@ -102,7 +102,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='gh',remove_item = true},
-					{name='reca',remove_item = true},
+					{name='recombinant-ery',remove_item = true},
 					{name='orexigenic', amount =1},
 				},
 			results =

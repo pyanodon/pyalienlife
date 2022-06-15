@@ -89,7 +89,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='dhilmos-egg', amount = 20},
-                    {name='ralesia-powder', amount = 50, fallback = {name = "ralesia-seeds", amount = 10}},
+                    {name = "ralesia-seeds", amount = 80},
 					{name='water-saline', amount=100,return_item={name='waste-water'}},
 					{name='hot-air', amount = 50},
 				},

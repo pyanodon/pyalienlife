@@ -10,6 +10,8 @@ TECHNOLOGY("epoxy"):remove_pack("chemical-science-pack")
 TECHNOLOGY("fertilizer"):set_fields{enabled = false, hidden = true}
 TECHNOLOGY("py-asphalt"):add_pack("py-science-pack-1")
 TECHNOLOGY("separation"):add_pack("py-science-pack-1")
+TECHNOLOGY("fertilizer-mk03"):remove_pack("chemical-science-pack")
+TECHNOLOGY("starch-mk02"):remove_pack("chemical-science-pack")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/cadavericarum-mk01")
@@ -55,6 +57,15 @@ data.raw["recipe-category"]["moon"].modules_required = true
 
 TECHNOLOGY("melamine"):remove_pack('logistic-science-pack'):add_pack("py-science-pack-1")
 TECHNOLOGY("fiberboard"):remove_pack('logistic-science-pack'):add_pack("py-science-pack-1")
+TECHNOLOGY("integrated-circuits-2"):add_pack("py-science-pack-2")
+TECHNOLOGY("advanced-electronics"):add_pack("py-science-pack-2")
+TECHNOLOGY("energy-shield-mk2-equipment"):add_pack("py-science-pack-2")
+TECHNOLOGY("battery-mk2-equipment"):add_pack("py-science-pack-2")
+TECHNOLOGY("personal-laser-defense-equipment"):add_pack("py-science-pack-2")
+TECHNOLOGY("discharge-defense-equipment"):add_pack("py-science-pack-2")
+TECHNOLOGY("speed-module-2"):add_pack("py-science-pack-2")
+TECHNOLOGY("productivity-module-2"):add_pack("py-science-pack-2")
+TECHNOLOGY("effectivity-module-2"):add_pack("py-science-pack-2")
 
 --(( ORES ))--
 require('prototypes/ores/kicalk')
@@ -299,8 +310,6 @@ RECIPE('research-center-mk03'):add_ingredient({type = "item", name = "phosphate-
 RECIPE('arqad-hive-mk03'):add_ingredient({type = "item", name = "superconductor", amount = 5}):add_ingredient({type = "item", name = "phosphate-glass", amount = 50}):add_ingredient({type = "item", name = "heavy-fermion", amount = 15})
 RECIPE('simik-den-mk03'):add_ingredient({type = "item", name = "heavy-fermion", amount = 5}):add_ingredient({type = "item", name = "superconductor", amount = 10})
 RECIPE('chemical-plant-mk03'):add_ingredient({type = "item", name = "superconductor", amount = 5}):add_ingredient({type = "item", name = "phosphate-glass", amount = 50}):add_ingredient({type = "item", name = "heavy-fermion", amount = 15})
-RECIPE("dry-ralesia"):remove_unlock("zno-nanoparticles"):add_unlock("ralesia-mk03")
-RECIPE("ralesia-powder"):remove_unlock("zno-nanoparticles"):add_unlock("ralesia-mk03")
 
 
 --mk04--
@@ -440,6 +449,7 @@ RECIPE('ethyl-mercaptan'):replace_ingredient("nitrogen", "phosphorous-acid")
 RECIPE("liquid-manure"):remove_unlock("cottongut-science-mk01"):add_unlock("melamine")
 RECIPE("lithium-chloride"):remove_unlock("earnshaw-theorem"):add_unlock("biobattery")
 RECIPE("lithium-niobate"):remove_unlock("parametric-oscilator"):add_unlock("biobattery")
+RECIPE("py-science-pack-4"):replace_ingredient("plastic-bar", "biopolymer")
 
 RECIPE('simik-food-01'):add_ingredient({type = "item", name = "cadaveric-arum", amount = 2})
 fun.add_ingredient('simik-food-01', {name = "cadaveric-arum", amount = 2})
@@ -453,7 +463,7 @@ fun.add_ingredient('simik-food-01a', {name = "cadaveric-arum", amount = 2})
 RECIPE('simik-food-02a'):add_ingredient({type = "item", name = "cadaveric-arum", amount = 2}):replace_ingredient("gravel", "phosphate-rock")
 fun.add_ingredient('simik-food-02a', {name = "cadaveric-arum", amount = 2})
 
-RECIPE("centrifuge"):add_unlock("kicalk-mk02")
+RECIPE("centrifuge"):add_unlock("filtration")
 RECIPE("stone-wool"):add_unlock("zipir")
 RECIPE("stone-wool2"):add_unlock("zipir")
 RECIPE("agzn-alloy"):remove_unlock("alloys-mk04"):add_unlock("alloys-mk03")
@@ -512,7 +522,7 @@ RECIPE {
         {type = 'item', name = 'biomass', amount = 3}
     },
     main_product = 'fiber'
-}:add_unlock('kicalk-mk02')
+}:add_unlock('filtration')
 
 RECIPE {
     type = "recipe",
@@ -1068,7 +1078,7 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'ethylene', amount = 30}
     }
-}:add_unlock('phagnot-mk02'):change_category('gas-refinery')
+}:add_unlock('phagnot-mk03'):change_category('gas-refinery')
 
 RECIPE {
     type = 'recipe',
@@ -1570,4 +1580,4 @@ RECIPE {
     results = {
         {type = "item", name = "starch", amount = 20}
     }
-}:add_unlock("starch-mk02")
+}:add_unlock("starch-mk03")

@@ -34,7 +34,6 @@ fun.autorecipes {
                     {name='fertilizer', amount = 4},
 					{name='ash', amount =5},
 					{name='biomass', amount = 10},
-					{name='pesticide-mk01', amount = 2},
 				},
 			results =
 				{
@@ -50,7 +49,7 @@ fun.autorecipes {
 					{name='tuuphra-seeds', add_amount = 5},
                     {name='blood-meal', amount = 2, fallback = {name = 'blood-barrel', amount = 2}},
 					{name='nitrogen', amount = 50},
-					{name='pesticide-mk02', amount = 1},
+					{name='pesticide-mk01', amount = 2},
 				},
 			results =
 				{
@@ -65,6 +64,7 @@ fun.autorecipes {
 				{
 					{name='tuuphra-seeds', add_amount = 5},
                     {name='fertilizer', add_amount = 4},
+					{name='pesticide-mk02', amount = 1},
 					{name='small-lamp', amount = 1},
 				},
 			results =

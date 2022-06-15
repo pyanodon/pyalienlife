@@ -83,7 +83,7 @@ for _, recipe in pairs(data.raw.recipe) do
     local cat = data.raw['recipe-category'][recipe.category or 'crafting']
 
     -- log('Recipe: ' .. recipe.name .. ', category: ' .. (recipe.category or ''))
-    if cat.allowed_module_categories then
+    if cat and cat.allowed_module_categories then
         for _, module_category in pairs(cat.allowed_module_categories) do
             for _, module in pairs(data.raw.module) do
                 if module.category == module_category then
@@ -98,7 +98,7 @@ for _, recipe in pairs(data.raw.recipe) do
     local cat = data.raw['recipe-category'][recipe.category or 'crafting']
 
     --log('Recipe: ' .. recipe.name .. ', category: ' .. (recipe.category or ''))
-    if cat.allowed_module_categories then
+    if cat and cat.allowed_module_categories then
         for _, module_category in pairs(cat.allowed_module_categories) do
             for _, module in pairs(data.raw.module) do
                 if module.category ~= module_category then

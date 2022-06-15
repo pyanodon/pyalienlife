@@ -479,7 +479,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'dynemicin', amount = 1},
     },
-}:add_unlock("antitumor"):replace_ingredient("bacteria-1", "bacteria-2")
+}:add_unlock("genetics-mk05"):replace_ingredient("bacteria-1", "bacteria-2")
 
 RECIPE {
     type = 'recipe',
@@ -499,7 +499,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'enediyne', amount = 1},
     },
-}:add_unlock("antitumor")
+}:add_unlock("genetics-mk05")
 
 RECIPE {
     type = 'recipe',

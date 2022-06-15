@@ -32,7 +32,6 @@ fun.autorecipes {
                     {name='fertilizer', amount = 6},
 					{name='ash', amount =5},
                     {name='biomass', amount = 10},
-					{name='pesticide-mk01', amount = 1},
 				},
 			results =
 				{
@@ -47,6 +46,7 @@ fun.autorecipes {
 				{
                     {name='blood-meal', amount = 5, fallback = {name = 'blood-barrel', amount = 4}},
 					{name='carbon-dioxide', amount = 100},
+					{name='pesticide-mk01', amount = 1},
 				},
 			results =
 				{

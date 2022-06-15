@@ -15,6 +15,11 @@ TECHNOLOGY("py-warehouse-research"):add_pack("py-science-pack-1")
 TECHNOLOGY("fluid-processing-machines-1"):add_pack("py-science-pack-1")
 TECHNOLOGY("lab-instrument"):add_pack("py-science-pack-1")
 TECHNOLOGY("railway-mk01"):add_pack("py-science-pack-1")
+TECHNOLOGY("filtration-mk02"):add_pack("py-science-pack-2")
+
+if not mods["pyalternativeenergy"] then
+    TECHNOLOGY("energy-3"):add_pack("py-science-pack-2")
+end
 
 --BUILDINDS--
 ITEM("fawogae-plantation-mk02"):set("icon", "__pyalienlifegraphics__/graphics/icons/fawogae-plantation-mk02.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-buildings-mk02", "d")

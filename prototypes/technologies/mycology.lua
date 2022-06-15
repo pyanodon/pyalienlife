@@ -29,6 +29,7 @@ TECHNOLOGY {
         count = 150,
         ingredients = {
             {"automation-science-pack", 1},
+            {"py-science-pack-1", 1},
             {'logistic-science-pack', 2}
         },
         time = 45
@@ -48,8 +49,9 @@ TECHNOLOGY {
         count = 200,
         ingredients = {
             {'automation-science-pack', 3},
+            {"py-science-pack-1", 1},
             {'logistic-science-pack', 2},
-            {'chemical-science-pack', 1},
+            {"py-science-pack-2", 1},
         },
         time = 45
     }
@@ -68,7 +70,9 @@ TECHNOLOGY {
         count = 250,
         ingredients = {
             {'automation-science-pack', 3},
+            {"py-science-pack-1", 1},
             {'logistic-science-pack', 2},
+            {"py-science-pack-2", 1},
             {'chemical-science-pack', 1},
             {'production-science-pack', 1},
         },
@@ -89,7 +93,9 @@ TECHNOLOGY {
         count = 250,
         ingredients = {
             {'automation-science-pack', 3},
+            {"py-science-pack-1", 1},
             {'logistic-science-pack', 2},
+            {"py-science-pack-2", 1},
             {'military-science-pack', 1},
             {'chemical-science-pack', 1},
             {'production-science-pack', 1},

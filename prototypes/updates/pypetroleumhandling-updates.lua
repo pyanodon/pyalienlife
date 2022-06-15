@@ -2,7 +2,7 @@ local fun = require("prototypes/functions/functions")
 
 if mods['pyhightech'] then
     require('prototypes/recipes/moondrop/recipes-moondrop-products')
-    RECIPE('arqad-mk02'):remove_ingredient('crude-oil-barrel'):add_ingredient({type = 'item', name = 'moondrop-fueloil', amount = 25}):add_ingredient({type = 'item', name = 'moondrop-diesel', amount = 5})
+    RECIPE('arqad-mk02'):remove_ingredient('crude-oil-barrel'):add_ingredient({type = 'item', name = 'moondrop-fueloil', amount = 25})
     --data.raw.recipe['arqad-mk02'].results[3] = nil
     fun.results_replacer('arqad-mk02','empty-barrel','empty-barrel', 2)
     RECIPE('arqad-mk03'):remove_ingredient('crude-oil-barrel'):add_ingredient({type = 'item', name = 'moondrop-diesel', amount = 40}):add_ingredient({type = 'item', name = 'moondrop-kerosene', amount = 10})
@@ -19,6 +19,7 @@ end
 TECHNOLOGY("drilling-fluid-mk01"):add_pack("py-science-pack-1")
 TECHNOLOGY("oil-machines-mk01"):add_pack("py-science-pack-1")
 TECHNOLOGY("rubber"):add_pack("py-science-pack-1")
+TECHNOLOGY("kevlar-mk02"):add_pack("py-science-pack-1"):add_pack("py-science-pack-2")
 
 ----RECIPES----
 RECIPE('guar-separation'):remove_unlock("oil-machines-mk02")
@@ -86,7 +87,7 @@ RECIPE {
         {type = 'item', name = 'gas-bladder', amount = 1},
     },
     results = {
-        {type = 'fluid', name = 'natural-gas', amount = 50}
+        {type = 'fluid', name = 'raw-gas', amount = 50}
     }
 }:add_unlock('phagnot-mk02'):change_category('gas-refinery')
 
