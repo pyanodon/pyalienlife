@@ -2839,11 +2839,11 @@ RECIPE {
     type = 'recipe',
     name = 'empty-planter-box',
     enabled = true,
-    energy_required = 2,
+    energy_required = 1,
     ingredients = {
-        {type = 'item', name = 'small-parts-01', amount = 3},
         {type = 'item', name = 'stone-brick', amount = 4},
         {type = 'item', name = 'wood', amount = 2},
+        {type = 'item', name = 'iron-plate', amount = 1},
     },
     results = {
         {type = 'item', name = 'empty-planter-box', amount = 1},
