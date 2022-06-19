@@ -30,7 +30,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-ralesia',
     order = 'za'
-}:add_unlock("ralesias-mk02")
+}:add_unlock("ralesia-mk02")
 
 --mk03--
 --WIP--
@@ -60,7 +60,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-ralesia',
     order = 'zb'
-}:add_unlock("ralesias-mk03")
+}:add_unlock("ralesia-mk03")
 
 --mk04--
 --WIP--
@@ -90,4 +90,4 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-ralesia',
     order = 'zc'
-}:add_unlock("ralesias-mk04")
+}:add_unlock("ralesia-mk04")
