@@ -15,7 +15,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'cocoon', amount = 50},
         {type = 'item', name = 'vrauks-food-01', amount = 2},
-        {type = 'item', name = 'bedding', amount = 4},
+        --{type = 'item', name = 'bedding', amount = 4},
         {type = 'item', name = 'saps', amount = 8},
         {type = 'item', name = 'native-flora', amount = 15},
         {type = 'item', name = 'water-barrel', amount = 5},
@@ -42,10 +42,10 @@ RECIPE {
         {type = 'item', name = 'vrauks-mk02', amount = 1},
         {type = 'item', name = 'cocoon-mk02', amount = 8},
         {type = 'item', name = 'vrauks-food-01', amount = 4},
-        {type = 'item', name = 'bedding', amount = 2},
+        --{type = 'item', name = 'bedding', amount = 2},
         {type = 'item', name = 'saps', amount = 8},
         {type = 'item', name = 'native-flora', amount = 15},
-        {type = 'item', name = 'sea-sponge', amount = 5},
+        --{type = 'item', name = 'sea-sponge', amount = 5},
         {type = 'item', name = 'water-barrel', amount = 5},
         },
     results = {
@@ -66,17 +66,17 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'vrauks-mk02-cocoon-1',
+    name = 'vrauks-mk02-cocoon',
     category = 'vrauks',
     enabled = false,
     energy_required = 60,
     ingredients = {
         {type = 'item', name = 'vrauks-mk02', amount = 2},
         {type = 'item', name = 'vrauks-food-01', amount = 4},
-        {type = 'item', name = 'bedding', amount = 2},
+        --{type = 'item', name = 'bedding', amount = 2},
         {type = 'item', name = 'saps', amount = 8},
         {type = 'item', name = 'native-flora', amount = 15},
-        {type = 'item', name = 'sea-sponge', amount = 5},
+        --{type = 'item', name = 'sea-sponge', amount = 5},
         {type = 'item', name = 'water-barrel', amount = 5},
         },
     results = {
@@ -107,7 +107,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'cocoon-mk02', amount = 50},
         {type = 'item', name = 'vrauks-food-02', amount = 3},
-        {type = 'item', name = 'alien-sample-03', amount = 1},
+        {type = 'item', name = 'alien-sample-02', amount = 1},
         {type = 'item', name = 'bedding', amount = 4},
         {type = 'item', name = 'saps', amount = 8},
         {type = 'item', name = 'native-flora', amount = 15},
@@ -135,7 +135,7 @@ RECIPE {
         {type = 'item', name = 'vrauks-mk03', amount = 1},
         {type = 'item', name = 'cocoon-mk03', amount = 1},
         {type = 'item', name = 'vrauks-food-02', amount = 3},
-        {type = 'item', name = 'alien-sample-03', amount = 1},
+        {type = 'item', name = 'alien-sample-02', amount = 1},
         {type = 'item', name = 'bedding', amount = 4},
         {type = 'item', name = 'saps', amount = 8},
         {type = 'item', name = 'native-flora', amount = 15},
@@ -156,6 +156,37 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-vrauks',
     order = 'zb'
+}:add_unlock("vrauks-mk03")
+
+RECIPE {
+    type = 'recipe',
+    name = 'vrauks-mk03-cocoon',
+    category = 'vrauks',
+    enabled = false,
+    energy_required = 60,
+    ingredients = {
+        {type = 'item', name = 'vrauks-mk03', amount = 2},
+        {type = 'item', name = 'vrauks-food-01', amount = 4},
+        {type = 'item', name = 'bedding', amount = 2},
+        {type = 'item', name = 'saps', amount = 8},
+        {type = 'item', name = 'native-flora', amount = 15},
+        {type = 'item', name = 'sea-sponge', amount = 5},
+        {type = 'item', name = 'water-barrel', amount = 5},
+        },
+    results = {
+        {type = 'item', name = 'cocoon-mk03', amount_min = 4, amount_max = 7},
+        {type = 'item', name = 'vrauks-mk03', amount = 2, probability = 0.99},
+        {type = 'item', name = 'empty-barrel', amount = 5},
+    },
+    main_product = "cocoon-mk03",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/vrauks.png"},
+            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png', icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
+        },
+    icon_size = 64,
+    subgroup = 'py-alienlife-vrauks',
+    order = 'za'
 }:add_unlock("vrauks-mk03")
 
 --MK04--
@@ -219,4 +250,35 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-vrauks',
     order = 'zc'
+}:add_unlock("vrauks-mk04")
+
+RECIPE {
+    type = 'recipe',
+    name = 'vrauks-mk04-cocoon',
+    category = 'vrauks',
+    enabled = false,
+    energy_required = 60,
+    ingredients = {
+        {type = 'item', name = 'vrauks-mk04', amount = 2},
+        {type = 'item', name = 'vrauks-food-01', amount = 4},
+        {type = 'item', name = 'bedding', amount = 2},
+        {type = 'item', name = 'saps', amount = 8},
+        {type = 'item', name = 'native-flora', amount = 15},
+        {type = 'item', name = 'sea-sponge', amount = 5},
+        {type = 'item', name = 'water-barrel', amount = 5},
+        },
+    results = {
+        {type = 'item', name = 'cocoon-mk04', amount_min = 4, amount_max = 7},
+        {type = 'item', name = 'vrauks-mk04', amount = 2, probability = 0.99},
+        {type = 'item', name = 'empty-barrel', amount = 5},
+    },
+    main_product = "cocoon-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/vrauks.png"},
+            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png', icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
+        },
+    icon_size = 64,
+    subgroup = 'py-alienlife-vrauks',
+    order = 'za'
 }:add_unlock("vrauks-mk04")

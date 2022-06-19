@@ -14,7 +14,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'korlex', amount = 2},
-        {type = 'item', name = 'korlex-food-02', amount = 2},
+        {type = 'item', name = 'korlex-food-01', amount = 2},
         {type = 'item', name = 'bedding', amount = 4},
         {type = 'item', name = 'salt', amount = 10},
         {type = 'item', name = 'rennea', amount = 10},

@@ -23,7 +23,7 @@ fun.autorecipes {
 				{
 					{name='tuuphra', amount = 3},
 				},
-			crafting_speed = 140,
+			crafting_speed = 100,
 			tech = 'tuuphra'
 		},
 		--py
@@ -39,7 +39,7 @@ fun.autorecipes {
 				{
 					{name='tuuphra', add_amount = 5}
 				},
-				crafting_speed = 100,
+				crafting_speed = 75,
 				tech = 'tuuphra-mk02'
         },
 		--chem
@@ -55,7 +55,7 @@ fun.autorecipes {
 				{
 					{name='tuuphra', add_amount = 10}
 				},
-				crafting_speed = 100,
+				crafting_speed = 50,
 				tech = 'tuuphra-mk03'
         },
 		--prod
@@ -71,7 +71,7 @@ fun.autorecipes {
 				{
 					{name='tuuphra', add_amount = 15}
 				},
-				crafting_speed = 80,
+				crafting_speed = 25,
 				tech = 'tuuphra-mk04'
 		},
 	}

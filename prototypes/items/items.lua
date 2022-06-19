@@ -4,7 +4,7 @@ ITEM {
     name = "charged-auog",
     icons =
 	{
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+
         {icon = "__pyalienlifegraphics__/graphics/icons/charged-auog.png"}
     },
     icon_size = 64,
@@ -24,7 +24,7 @@ ITEM {
     name = "charged-dingrit",
     icons =
 	{
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+
         {icon = "__pyalienlifegraphics__/graphics/icons/charged-dingrit.png"}
     },
     icon_size = 64,
@@ -3352,16 +3352,16 @@ ITEM {
     stack_size = 100
 }
 
--- ITEM {
---     type = "item",
---     name = "shell-xyhiphoe",
---     icon = "__pyalienlifegraphics__/graphics/icons/shell-xyhiphoe.png",
--- 	icon_size = 64,
---     flags = {},
---     subgroup = "py-alienlife-xyhiphoe",
---     order = "a",
---     stack_size = 100
--- }
+ITEM {
+    type = "item",
+    name = "shell-xyhiphoe",
+    icon = "__pyalienlifegraphics__/graphics/icons/shell-xyhiphoe.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-xyhiphoe",
+    order = "a",
+    stack_size = 100
+}
 
 ITEM {
     type = "item",
@@ -5101,7 +5101,7 @@ ITEM {
     name = "tree-mk01",
     icons =
     {
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+
         {icon = "__pyalienlifegraphics2__/graphics/icons/forest-tree.png"}
     },
     icon_size = 64,
@@ -5181,7 +5181,7 @@ ITEM {
     name = "seaweed",
     icons =
     {
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+
         {icon = "__pyalienlifegraphics__/graphics/icons/seaweed.png"}
     },
     icon_size = 64,
@@ -5290,8 +5290,6 @@ ITEM {
         {icon = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png", icon_size = 64},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64, scale = 0.5}
     },
-    --icon_size = 64,
-
     pictures =
     {
       { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png",   scale = 0.25},
@@ -5321,8 +5319,6 @@ ITEM {
         {icon = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png", icon_size = 64},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64, scale = 0.5}
     },
-    --icon_size = 64,
-
     pictures =
     {
       { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png",   scale = 0.25},
@@ -5352,8 +5348,6 @@ ITEM {
         {icon = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png", icon_size = 64},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64, scale = 0.5}
     },
-    --icon_size = 64,
-
     pictures =
     {
       { size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png",   scale = 0.25},
@@ -5380,7 +5374,7 @@ ITEM {
     name = "sap-tree",
     icons =
     {
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+
         {icon = "__pyalienlifegraphics2__/graphics/icons/sap-tree.png"}
     },
     icon_size = 64,
@@ -5395,72 +5389,72 @@ ITEM {
 	limitation_message_key = "sap"
 }
 
--- ITEM {
---     type = "module",
---     name = "sap-tree-mk02",
---     icons =
---     {
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
---         {icon = "__pyalienlifegraphics2__/graphics/icons/sap-tree.png"}
---     },
---     icon_size = 64,
--- 	category = "sap",
--- 	tier = 2,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "m-b",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 10}},
--- 	limitation = {},
--- 	limitation_message_key = "sap"
--- }
+ ITEM {
+     type = "module",
+     name = "sap-tree-mk02",
+     icons =
+     {
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+         {icon = "__pyalienlifegraphics2__/graphics/icons/sap-tree.png"}
+     },
+     icon_size = 64,
+ 	category = "sap",
+ 	tier = 2,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "m-b",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 10}},
+ 	limitation = {},
+ 	limitation_message_key = "sap"
+ }
 
--- ITEM {
---     type = "module",
---     name = "sap-tree-mk03",
---     icons =
---     {
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
---         {icon = "__pyalienlifegraphics2__/graphics/icons/sap-tree.png"}
---     },
---     icon_size = 64,
--- 	category = "sap",
--- 	tier = 3,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "m-c",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 15}},
--- 	limitation = {},
--- 	limitation_message_key = "sap"
--- }
+ ITEM {
+     type = "module",
+     name = "sap-tree-mk03",
+     icons =
+     {
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+         {icon = "__pyalienlifegraphics2__/graphics/icons/sap-tree.png"}
+     },
+     icon_size = 64,
+ 	category = "sap",
+ 	tier = 3,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "m-c",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 15}},
+ 	limitation = {},
+ 	limitation_message_key = "sap"
+ }
 
--- ITEM {
---     type = "module",
---     name = "sap-tree-mk04",
---     icons =
---     {
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
---         {icon = "__pyalienlifegraphics2__/graphics/icons/sap-tree.png"}
---     },
---     icon_size = 64,
--- 	category = "sap",
--- 	tier = 4,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "m-d",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 20}},
--- 	limitation = {},
--- 	limitation_message_key = "sap"
--- }
+ ITEM {
+     type = "module",
+     name = "sap-tree-mk04",
+     icons =
+     {
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+         {icon = "__pyalienlifegraphics2__/graphics/icons/sap-tree.png"}
+     },
+     icon_size = 64,
+ 	category = "sap",
+ 	tier = 4,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "m-d",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 20}},
+ 	limitation = {},
+ 	limitation_message_key = "sap"
+ }
 
 ITEM {
     type = "module",
     name = "ulric",
     icons =
     {
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+
         {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"}
     },
     icon_size = 64,
@@ -5475,65 +5469,65 @@ ITEM {
 	limitation_message_key = "ulric"
 }
 
--- ITEM {
---     type = "module",
---     name = "ulric-mk02",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"}
---     },
---     icon_size = 64,
--- 	category = "ulric",
--- 	tier = 2,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "u-b",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 3}},
--- 	limitation = {},
--- 	limitation_message_key = "ulric"
--- }
+ ITEM {
+     type = "module",
+     name = "ulric-mk02",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"}
+     },
+     icon_size = 64,
+ 	category = "ulric",
+ 	tier = 2,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "u-b",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 3}},
+ 	limitation = {},
+ 	limitation_message_key = "ulric"
+ }
 
--- ITEM {
---     type = "module",
---     name = "ulric-mk03",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"}
---     },
---     icon_size = 64,
--- 	category = "ulric",
--- 	tier = 3,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "u-c",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 4}},
--- 	limitation = {},
--- 	limitation_message_key = "ulric"
--- }
+ ITEM {
+     type = "module",
+     name = "ulric-mk03",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"}
+     },
+     icon_size = 64,
+ 	category = "ulric",
+ 	tier = 3,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "u-c",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 4}},
+ 	limitation = {},
+ 	limitation_message_key = "ulric"
+ }
 
--- ITEM {
---     type = "module",
---     name = "ulric-mk04",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"}
---     },
---     icon_size = 64,
--- 	category = "ulric",
--- 	tier = 4,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "u-d",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 5}},
--- 	limitation = {},
--- 	limitation_message_key = "ulric"
--- }
+ ITEM {
+     type = "module",
+     name = "ulric-mk04",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"}
+     },
+     icon_size = 64,
+ 	category = "ulric",
+ 	tier = 4,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "u-d",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 5}},
+ 	limitation = {},
+ 	limitation_message_key = "ulric"
+ }
 
 ITEM {
     type = "item",
@@ -5542,7 +5536,6 @@ ITEM {
 	{
         {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
     },
 	icon_size = 64,
     flags = {},
@@ -5551,60 +5544,60 @@ ITEM {
     stack_size = 50
 }
 
--- ITEM {
---     type = "item",
---     name = "used-ulric-mk02",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
---     },
--- 	icon_size = 64,
---     flags = {},
---     subgroup = "py-alienlife-used",
---     order = "x",
---     stack_size = 50
--- }
+ ITEM {
+     type = "item",
+     name = "used-ulric-mk02",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+     },
+ 	icon_size = 64,
+     flags = {},
+     subgroup = "py-alienlife-used",
+     order = "x",
+     stack_size = 50
+ }
 
--- ITEM {
---     type = "item",
---     name = "used-ulric-mk03",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
---     },
--- 	icon_size = 64,
---     flags = {},
---     subgroup = "py-alienlife-used",
---     order = "x",
---     stack_size = 50
--- }
+ ITEM {
+     type = "item",
+     name = "used-ulric-mk03",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+     },
+ 	icon_size = 64,
+     flags = {},
+     subgroup = "py-alienlife-used",
+     order = "x",
+     stack_size = 50
+ }
 
--- ITEM {
---     type = "item",
---     name = "used-ulric-mk04",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
---     },
--- 	icon_size = 64,
---     flags = {},
---     subgroup = "py-alienlife-used",
---     order = "x",
---     stack_size = 50
--- }
+ ITEM {
+     type = "item",
+     name = "used-ulric-mk04",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+     },
+ 	icon_size = 64,
+     flags = {},
+     subgroup = "py-alienlife-used",
+     order = "x",
+     stack_size = 50
+ }
 
 ITEM {
     type = "module",
     name = "sea-sponge",
     icons =
 	{
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+
         {icon = "__pyalienlifegraphics__/graphics/icons/sea-sponge.png"}
     },
     icon_size = 64,
@@ -5684,7 +5677,7 @@ ITEM {
     name = "ralesias",
     icons =
 	{
-     --   {icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+
         {icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png"}
     },
     icon_size = 64,
@@ -5699,72 +5692,72 @@ ITEM {
 	limitation_message_key = "ralesia"
 }
 
--- ITEM {
---     type = "module",
---     name = "ralesias-mk02",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png"}
---     },
---     icon_size = 64,
---     category = "ralesia",
--- 	tier = 2,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "rb",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 1.66}},
--- 	limitation = {},
--- 	limitation_message_key = "ralesia"
--- }
+ ITEM {
+     type = "module",
+     name = "ralesias-mk02",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png"}
+     },
+     icon_size = 64,
+     category = "ralesia",
+ 	tier = 2,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "rb",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 1.66}},
+ 	limitation = {},
+ 	limitation_message_key = "ralesia"
+ }
 
--- ITEM {
---     type = "module",
---     name = "ralesias-mk03",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png"}
---     },
---     icon_size = 64,
---     category = "ralesia",
--- 	tier = 3,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "rc",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 2.49}},
--- 	limitation = {},
--- 	limitation_message_key = "ralesia"
--- }
+ ITEM {
+     type = "module",
+     name = "ralesias-mk03",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png"}
+     },
+     icon_size = 64,
+     category = "ralesia",
+ 	tier = 3,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "rc",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 2.49}},
+ 	limitation = {},
+ 	limitation_message_key = "ralesia"
+ }
 
--- ITEM {
---     type = "module",
---     name = "ralesias-mk04",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png"}
---     },
---     icon_size = 64,
---     category = "ralesia",
--- 	tier = 4,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "rd",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 3.33}},
--- 	limitation = {},
--- 	limitation_message_key = "ralesia"
--- }
+ ITEM {
+     type = "module",
+     name = "ralesias-mk04",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png"}
+     },
+     icon_size = 64,
+     category = "ralesia",
+ 	tier = 4,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "rd",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 3.33}},
+ 	limitation = {},
+ 	limitation_message_key = "ralesia"
+ }
 
 ITEM {
     type = "module",
     name = "mukmoux",
     icons =
 	{
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+
         {icon = "__pyalienlifegraphics__/graphics/icons/mukmoux.png"}
     },
     icon_size = 64,
@@ -5779,72 +5772,72 @@ ITEM {
 	limitation_message_key = "mukmoux"
 }
 
--- ITEM {
---     type = "module",
---     name = "mukmoux-mk02",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/mukmoux.png"}
---     },
---     icon_size = 64,
--- 	category = "mukmoux",
--- 	tier = 2,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "m-b",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 6.25}},
--- 	limitation = {},
--- 	limitation_message_key = "mukmoux"
--- }
+ ITEM {
+     type = "module",
+     name = "mukmoux-mk02",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/mukmoux.png"}
+     },
+     icon_size = 64,
+ 	category = "mukmoux",
+ 	tier = 2,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "m-b",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 6.25}},
+ 	limitation = {},
+ 	limitation_message_key = "mukmoux"
+ }
 
--- ITEM {
---     type = "module",
---     name = "mukmoux-mk03",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/mukmoux.png"}
---     },
---     icon_size = 64,
--- 	category = "mukmoux",
--- 	tier = 3,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "m-c",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 7.5}},
--- 	limitation = {},
--- 	limitation_message_key = "mukmoux"
--- }
+ ITEM {
+     type = "module",
+     name = "mukmoux-mk03",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/mukmoux.png"}
+     },
+     icon_size = 64,
+ 	category = "mukmoux",
+ 	tier = 3,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "m-c",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 7.5}},
+ 	limitation = {},
+ 	limitation_message_key = "mukmoux"
+ }
 
--- ITEM {
---     type = "module",
---     name = "mukmoux-mk04",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/mukmoux.png"}
---     },
---     icon_size = 64,
--- 	category = "mukmoux",
--- 	tier = 4,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "m-d",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 8.75}},
--- 	limitation = {},
--- 	limitation_message_key = "mukmoux"
--- }
+ ITEM {
+     type = "module",
+     name = "mukmoux-mk04",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/mukmoux.png"}
+     },
+     icon_size = 64,
+ 	category = "mukmoux",
+ 	tier = 4,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "m-d",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 8.75}},
+ 	limitation = {},
+ 	limitation_message_key = "mukmoux"
+ }
 
 ITEM {
     type = "module",
     name = "arthurian",
     icons =
 	{
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+
         {icon = "__pyalienlifegraphics__/graphics/icons/arthurian.png"}
     },
     icon_size = 64,
@@ -5924,7 +5917,7 @@ ITEM {
     name = "tuuphra",
     icons =
 	{
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+
         {icon = "__pyalienlifegraphics__/graphics/icons/tuuphra.png"}
     },
     icon_size = 64,
@@ -5939,72 +5932,72 @@ ITEM {
 	limitation_message_key = "tuuphra"
 }
 
--- ITEM {
---     type = "module",
---     name = "tuuphra-mk02",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/tuuphra.png"}
---     },
---     icon_size = 64,
--- 	category = "tuuphra",
--- 	tier = 2,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "tb",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 2}},
--- 	limitation = {},
--- 	limitation_message_key = "tuuphra"
--- }
+ ITEM {
+     type = "module",
+     name = "tuuphra-mk02",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/tuuphra.png"}
+     },
+     icon_size = 64,
+ 	category = "tuuphra",
+ 	tier = 2,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "tb",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 2}},
+ 	limitation = {},
+ 	limitation_message_key = "tuuphra"
+ }
 
--- ITEM {
---     type = "module",
---     name = "tuuphra-mk03",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/tuuphra.png"}
---     },
---     icon_size = 64,
--- 	category = "tuuphra",
--- 	tier = 3,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "tc",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 3}},
--- 	limitation = {},
--- 	limitation_message_key = "tuuphra"
--- }
+ ITEM {
+     type = "module",
+     name = "tuuphra-mk03",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/tuuphra.png"}
+     },
+     icon_size = 64,
+ 	category = "tuuphra",
+ 	tier = 3,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "tc",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 3}},
+ 	limitation = {},
+ 	limitation_message_key = "tuuphra"
+ }
 
--- ITEM {
---     type = "module",
---     name = "tuuphra-mk04",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/tuuphra.png"}
---     },
---     icon_size = 64,
--- 	category = "tuuphra",
--- 	tier = 4,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "td",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 4}},
--- 	limitation = {},
--- 	limitation_message_key = "tuuphra"
--- }
+ ITEM {
+     type = "module",
+     name = "tuuphra-mk04",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/tuuphra.png"}
+     },
+     icon_size = 64,
+ 	category = "tuuphra",
+ 	tier = 4,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "td",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 4}},
+ 	limitation = {},
+ 	limitation_message_key = "tuuphra"
+ }
 
 ITEM {
     type = "module",
     name = "navens",
     icons =
 	{
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+
         {icon = "__pyalienlifegraphics__/graphics/icons/navens.png"}
     },
     icon_size = 64,
@@ -6084,7 +6077,7 @@ ITEM {
     name = "yotoi",
     icons =
 	{
-  --      {icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+
         {icon = "__pyalienlifegraphics__/graphics/icons/yotoi.png"}
     },
     icon_size = 64,
@@ -6099,72 +6092,72 @@ ITEM {
 	limitation_message_key = "yotoi"
 }
 
--- ITEM {
---     type = "module",
---     name = "yotoi-mk02",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/yotoi.png"}
---     },
---     icon_size = 64,
--- 	category = "yotoi",
--- 	tier = 2,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "yb",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 0.6}},
--- 	limitation = {},
--- 	limitation_message_key = "yotoi"
--- }
+ ITEM {
+     type = "module",
+     name = "yotoi-mk02",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/yotoi.png"}
+     },
+     icon_size = 64,
+ 	category = "yotoi",
+ 	tier = 2,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "yb",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 0.6}},
+ 	limitation = {},
+ 	limitation_message_key = "yotoi"
+ }
 
--- ITEM {
---     type = "module",
---     name = "yotoi-mk03",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/yotoi.png"}
---     },
---     icon_size = 64,
--- 	category = "yotoi",
--- 	tier = 3,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "yc",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 0.9}},
--- 	limitation = {},
--- 	limitation_message_key = "yotoi"
--- }
+ ITEM {
+     type = "module",
+     name = "yotoi-mk03",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/yotoi.png"}
+     },
+     icon_size = 64,
+ 	category = "yotoi",
+ 	tier = 3,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "yc",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 0.9}},
+ 	limitation = {},
+ 	limitation_message_key = "yotoi"
+ }
 
--- ITEM {
---     type = "module",
---     name = "yotoi-mk04",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/yotoi.png"}
---     },
---     icon_size = 64,
--- 	category = "yotoi",
--- 	tier = 4,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "yd",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 1.2}},
--- 	limitation = {},
--- 	limitation_message_key = "yotoi"
--- }
+ ITEM {
+     type = "module",
+     name = "yotoi-mk04",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/yotoi.png"}
+     },
+     icon_size = 64,
+ 	category = "yotoi",
+ 	tier = 4,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "yd",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 1.2}},
+ 	limitation = {},
+ 	limitation_message_key = "yotoi"
+ }
 
 ITEM {
     type = "module",
     name = "dhilmos",
     icons =
 	{
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+
         {icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png"}
     },
     icon_size = 64,
@@ -6179,72 +6172,72 @@ ITEM {
 	limitation_message_key = "dhilmos"
 }
 
--- ITEM {
---     type = "module",
---     name = "dhilmos-mk02",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png"}
---     },
---     icon_size = 64,
--- 	category = "dhilmos",
--- 	tier = 2,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "db",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 5}},
--- 	limitation = {},
--- 	limitation_message_key = "dhilmos"
--- }
+ ITEM {
+     type = "module",
+     name = "dhilmos-mk02",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png"}
+     },
+     icon_size = 64,
+ 	category = "dhilmos",
+ 	tier = 2,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "db",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 5}},
+ 	limitation = {},
+ 	limitation_message_key = "dhilmos"
+ }
 
--- ITEM {
---     type = "module",
---     name = "dhilmos-mk03",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png"}
---     },
---     icon_size = 64,
--- 	category = "dhilmos",
--- 	tier = 3,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "dc",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 6.25}},
--- 	limitation = {},
--- 	limitation_message_key = "dhilmos"
--- }
+ ITEM {
+     type = "module",
+     name = "dhilmos-mk03",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png"}
+     },
+     icon_size = 64,
+ 	category = "dhilmos",
+ 	tier = 3,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "dc",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 6.25}},
+ 	limitation = {},
+ 	limitation_message_key = "dhilmos"
+ }
 
--- ITEM {
---     type = "module",
---     name = "dhilmos-mk04",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png"}
---     },
---     icon_size = 64,
--- 	category = "dhilmos",
--- 	tier = 4,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "dd",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 7.5}},
--- 	limitation = {},
--- 	limitation_message_key = "dhilmos"
--- }
+ ITEM {
+     type = "module",
+     name = "dhilmos-mk04",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png"}
+     },
+     icon_size = 64,
+ 	category = "dhilmos",
+ 	tier = 4,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "dd",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 7.5}},
+ 	limitation = {},
+ 	limitation_message_key = "dhilmos"
+ }
 
 ITEM {
     type = "module",
     name = "scrondrix",
     icons =
 	{
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+
         {icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png"}
     },
     icon_size = 64,
@@ -6259,72 +6252,72 @@ ITEM {
 	limitation_message_key = "scrondrix"
 }
 
--- ITEM {
---     type = "module",
---     name = "scrondrix-mk02",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
---     },
---     icon_size = 64,
--- 	category = "scrondrix",
--- 	tier = 2,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "sr-b",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 3.3}},
--- 	limitation = {},
--- 	limitation_message_key = "scrondrix"
--- }
+ ITEM {
+     type = "module",
+     name = "scrondrix-mk02",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
+     },
+     icon_size = 64,
+ 	category = "scrondrix",
+ 	tier = 2,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "sr-b",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 3.3}},
+ 	limitation = {},
+ 	limitation_message_key = "scrondrix"
+ }
 
--- ITEM {
---     type = "module",
---     name = "scrondrix-mk03",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
---     },
---     icon_size = 64,
--- 	category = "scrondrix",
--- 	tier = 3,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "sr-c",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 4.96}},
--- 	limitation = {},
--- 	limitation_message_key = "scrondrix"
--- }
+ ITEM {
+     type = "module",
+     name = "scrondrix-mk03",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
+     },
+     icon_size = 64,
+ 	category = "scrondrix",
+ 	tier = 3,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "sr-c",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 4.96}},
+ 	limitation = {},
+ 	limitation_message_key = "scrondrix"
+ }
 
--- ITEM {
---     type = "module",
---     name = "scrondrix-mk04",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
---     },
---     icon_size = 64,
--- 	category = "scrondrix",
--- 	tier = 4,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "sr-d",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 6.6}},
--- 	limitation = {},
--- 	limitation_message_key = "scrondrix"
--- }
+ ITEM {
+     type = "module",
+     name = "scrondrix-mk04",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
+     },
+     icon_size = 64,
+ 	category = "scrondrix",
+ 	tier = 4,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "sr-d",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 6.6}},
+ 	limitation = {},
+ 	limitation_message_key = "scrondrix"
+ }
 
 ITEM {
     type = "module",
     name = "rennea",
     icons =
 	{
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+
         {icon = "__pyalienlifegraphics__/graphics/icons/rennea.png"}
     },
     icon_size = 64,
@@ -6404,7 +6397,7 @@ ITEM {
     name = "phadai",
     icons =
 	{
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+
         {icon = "__pyalienlifegraphics__/graphics/icons/phadai.png"}
     },
     icon_size = 64,
@@ -6419,65 +6412,65 @@ ITEM {
 	limitation_message_key = "phadai"
 }
 
--- ITEM {
---     type = "module",
---     name = "phadai-mk02",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/phadai.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
---     },
---     icon_size = 64,
--- 	category = "phadai",
--- 	tier = 2,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "ph-b",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 12.5}},
--- 	limitation = {},
--- 	limitation_message_key = "phadai"
--- }
+ ITEM {
+     type = "module",
+     name = "phadai-mk02",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/phadai.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+     },
+     icon_size = 64,
+ 	category = "phadai",
+ 	tier = 2,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "ph-b",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 12.5}},
+ 	limitation = {},
+ 	limitation_message_key = "phadai"
+ }
 
--- ITEM {
---     type = "module",
---     name = "phadai-mk03",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/phadai.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
---     },
---     icon_size = 64,
--- 	category = "phadai",
--- 	tier = 3,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "ph-c",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 15}},
--- 	limitation = {},
--- 	limitation_message_key = "phadai"
--- }
+ ITEM {
+     type = "module",
+     name = "phadai-mk03",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/phadai.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
+     },
+     icon_size = 64,
+ 	category = "phadai",
+ 	tier = 3,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "ph-c",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 15}},
+ 	limitation = {},
+ 	limitation_message_key = "phadai"
+ }
 
--- ITEM {
---     type = "module",
---     name = "phadai-mk04",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/phadai.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
---     },
---     icon_size = 64,
--- 	category = "phadai",
--- 	tier = 4,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "ph-d",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 17.5}},
--- 	limitation = {},
--- 	limitation_message_key = "phadai"
--- }
+ ITEM {
+     type = "module",
+     name = "phadai-mk04",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/phadai.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
+     },
+     icon_size = 64,
+ 	category = "phadai",
+ 	tier = 4,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "ph-d",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 17.5}},
+ 	limitation = {},
+ 	limitation_message_key = "phadai"
+ }
 
 ITEM {
     type = "item",
@@ -6499,7 +6492,7 @@ ITEM {
     name = "auog",
     icons =
 	{
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+
         {icon = "__pyalienlifegraphics__/graphics/icons/auog.png"}
     },
     icon_size = 64,
@@ -6509,7 +6502,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "a",
     stack_size = 50,
-	effect = {productivity = {bonus = -1},speed = {bonus = 6.7}},--16.75
+	effect = {productivity = {bonus = -1},speed = {bonus = 6.7}},
 	limitation = {},
     limitation_message_key = "auog",
     fuel_category = 'auog',
@@ -6593,7 +6586,6 @@ ITEM {
 	{
         {icon = "__pyalienlifegraphics__/graphics/icons/auog.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
     },
 	icon_size = 64,
     flags = {},
@@ -6681,113 +6673,113 @@ ITEM {
 	limitation_message_key = "fish"
 }
 
--- ITEM {
---     type = "module",
---     name = "fish-mk02",
---     icon = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
---     },
---     icon_size = 64,
+ ITEM {
+     type = "module",
+     name = "fish-mk02",
+     icon = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+     },
+     icon_size = 64,
 
---     pictures =
---     {
---       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-01.png", scale = 0.25},
---       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-02.png", scale = 0.25},
---       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png", scale = 0.25},
---       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-04.png", scale = 0.25},
---       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-05.png", scale = 0.25},
---       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-06.png", scale = 0.25},
---       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-07.png", scale = 0.25},
---     },
--- 	category = "fish",
--- 	tier = 2,
--- 	fuel_category = 'food',
---     fuel_value = '2MJ',
---     fuel_acceleration_multiplier = 1.3,
---     fuel_top_speed_multiplier = 1.3,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "fb",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 5}},
--- 	limitation = {},
--- 	limitation_message_key = "fish"
--- }
+     pictures =
+     {
+       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-01.png", scale = 0.25},
+       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-02.png", scale = 0.25},
+       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png", scale = 0.25},
+       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-04.png", scale = 0.25},
+       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-05.png", scale = 0.25},
+       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-06.png", scale = 0.25},
+       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-07.png", scale = 0.25},
+     },
+ 	category = "fish",
+ 	tier = 2,
+ 	fuel_category = 'food',
+     fuel_value = '2MJ',
+     fuel_acceleration_multiplier = 1.3,
+     fuel_top_speed_multiplier = 1.3,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "fb",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 5}},
+ 	limitation = {},
+ 	limitation_message_key = "fish"
+ }
 
--- ITEM {
---     type = "module",
---     name = "fish-mk03",
---     icon = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
---     },
---     icon_size = 64,
+ ITEM {
+     type = "module",
+     name = "fish-mk03",
+     icon = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+     },
+     icon_size = 64,
 
---     pictures =
---     {
---       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-01.png", scale = 0.25},
---       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-02.png", scale = 0.25},
---       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png", scale = 0.25},
---       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-04.png", scale = 0.25},
---       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-05.png", scale = 0.25},
---       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-06.png", scale = 0.25},
---       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-07.png", scale = 0.25},
---     },
--- 	category = "fish",
--- 	tier = 3,
--- 	fuel_category = 'food',
---     fuel_value = '3MJ',
---     fuel_acceleration_multiplier = 1.4,
---     fuel_top_speed_multiplier = 1.4,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "fc",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 6.25}},
--- 	limitation = {},
--- 	limitation_message_key = "fish"
--- }
+     pictures =
+     {
+       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-01.png", scale = 0.25},
+       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-02.png", scale = 0.25},
+       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png", scale = 0.25},
+       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-04.png", scale = 0.25},
+       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-05.png", scale = 0.25},
+       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-06.png", scale = 0.25},
+       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-07.png", scale = 0.25},
+     },
+ 	category = "fish",
+ 	tier = 3,
+ 	fuel_category = 'food',
+     fuel_value = '3MJ',
+     fuel_acceleration_multiplier = 1.4,
+     fuel_top_speed_multiplier = 1.4,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "fc",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 6.25}},
+ 	limitation = {},
+ 	limitation_message_key = "fish"
+ }
 
--- ITEM {
---     type = "module",
---     name = "fish-mk04",
---     icon = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
---     },
---     icon_size = 64,
+ ITEM {
+     type = "module",
+     name = "fish-mk04",
+     icon = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+     },
+     icon_size = 64,
 
---     pictures =
---     {
---       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-01.png", scale = 0.25},
---       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-02.png", scale = 0.25},
---       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png", scale = 0.25},
---       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-04.png", scale = 0.25},
---       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-05.png", scale = 0.25},
---       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-06.png", scale = 0.25},
---       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-07.png", scale = 0.25},
---     },
--- 	category = "fish",
--- 	tier = 4,
--- 	fuel_category = 'food',
---     fuel_value = '4MJ',
---     fuel_acceleration_multiplier = 1.5,
---     fuel_top_speed_multiplier = 1.5,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "fd",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 7.5}},
--- 	limitation = {},
--- 	limitation_message_key = "fish"
--- }
+     pictures =
+     {
+       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-01.png", scale = 0.25},
+       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-02.png", scale = 0.25},
+       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png", scale = 0.25},
+       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-04.png", scale = 0.25},
+       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-05.png", scale = 0.25},
+       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-06.png", scale = 0.25},
+       { size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-07.png", scale = 0.25},
+     },
+ 	category = "fish",
+ 	tier = 4,
+ 	fuel_category = 'food',
+     fuel_value = '4MJ',
+     fuel_acceleration_multiplier = 1.5,
+     fuel_top_speed_multiplier = 1.5,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "fd",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 7.5}},
+ 	limitation = {},
+ 	limitation_message_key = "fish"
+ }
 
 ITEM {
     type = "module",
@@ -6795,7 +6787,7 @@ ITEM {
     icons =
 	{
         {icon = "__pyalienlifegraphics__/graphics/icons/yaedols.png"},
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+
     },
     icon_size = 64,
 	category = "yaedols",
@@ -6809,65 +6801,65 @@ ITEM {
 	limitation_message_key = "yaedols"
 }
 
--- ITEM {
---     type = "module",
---     name = "yaedols-mk02",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/yaedols.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
---     },
---     icon_size = 64,
--- 	category = "yaedols",
--- 	tier = 2,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "yaed-b",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 12.5}},
--- 	limitation = {},
--- 	limitation_message_key = "yaedols"
--- }
+ ITEM {
+     type = "module",
+     name = "yaedols-mk02",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/yaedols.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+     },
+     icon_size = 64,
+ 	category = "yaedols",
+ 	tier = 2,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "yaed-b",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 12.5}},
+ 	limitation = {},
+ 	limitation_message_key = "yaedols"
+ }
 
--- ITEM {
---     type = "module",
---     name = "yaedols-mk03",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/yaedols.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
---     },
---     icon_size = 64,
--- 	category = "yaedols",
--- 	tier = 3,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "yaed-c",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 15}},
--- 	limitation = {},
--- 	limitation_message_key = "yaedols"
--- }
+ ITEM {
+     type = "module",
+     name = "yaedols-mk03",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/yaedols.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+     },
+     icon_size = 64,
+ 	category = "yaedols",
+ 	tier = 3,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "yaed-c",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 15}},
+ 	limitation = {},
+ 	limitation_message_key = "yaedols"
+ }
 
--- ITEM {
---     type = "module",
---     name = "yaedols-mk04",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/yaedols.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
---     },
---     icon_size = 64,
--- 	category = "yaedols",
--- 	tier = 4,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "yaed-d",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 17.5}},
--- 	limitation = {},
--- 	limitation_message_key = "yaedols"
--- }
+ ITEM {
+     type = "module",
+     name = "yaedols-mk04",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/yaedols.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+     },
+     icon_size = 64,
+ 	category = "yaedols",
+ 	tier = 4,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "yaed-d",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 17.5}},
+ 	limitation = {},
+ 	limitation_message_key = "yaedols"
+ }
 
 ITEM {
     type = "module",
@@ -6875,7 +6867,7 @@ ITEM {
     icons =
 	{
         {icon = "__pyalienlifegraphics__/graphics/icons/dingrits.png"},
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+
     },
     icon_size = 64,
 	category = "dingrits",
@@ -6892,74 +6884,74 @@ ITEM {
     burnt_result = 'used-dingrit'
 }
 
--- ITEM {
---     type = "module",
---     name = "dingrits-mk02",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/dingrits.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
---     },
---     icon_size = 64,
--- 	category = "dingrits",
--- 	tier = 2,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "d-b",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 0.8}},
--- 	limitation = {},
---     limitation_message_key = "dingrits",
---     fuel_category = 'dingrits',
---     fuel_value = '320MJ',
---     burnt_result = 'used-dingrit-mk02'
--- }
+ ITEM {
+     type = "module",
+     name = "dingrits-mk02",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/dingrits.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+     },
+     icon_size = 64,
+ 	category = "dingrits",
+ 	tier = 2,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "d-b",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 0.8}},
+ 	limitation = {},
+     limitation_message_key = "dingrits",
+     fuel_category = 'dingrits',
+     fuel_value = '320MJ',
+     burnt_result = 'used-dingrit-mk02'
+ }
 
--- ITEM {
---     type = "module",
---     name = "dingrits-mk03",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/dingrits.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
---     },
---     icon_size = 64,
--- 	category = "dingrits",
--- 	tier = 3,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "d-c",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 1.6}},
--- 	limitation = {},
---     limitation_message_key = "dingrits",
---     fuel_category = 'dingrits',
---     fuel_value = '350MJ',
---     burnt_result = 'used-dingrit-mk03'
--- }
+ ITEM {
+     type = "module",
+     name = "dingrits-mk03",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/dingrits.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+     },
+     icon_size = 64,
+ 	category = "dingrits",
+ 	tier = 3,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "d-c",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 1.6}},
+ 	limitation = {},
+     limitation_message_key = "dingrits",
+     fuel_category = 'dingrits',
+     fuel_value = '350MJ',
+     burnt_result = 'used-dingrit-mk03'
+ }
 
--- ITEM {
---     type = "module",
---     name = "dingrits-mk04",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/dingrits.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
---     },
---     icon_size = 64,
--- 	category = "dingrits",
--- 	tier = 4,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "d-d",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 3.2}},
--- 	limitation = {},
---     limitation_message_key = "dingrits",
---     fuel_category = 'dingrits',
---     fuel_value = '480MJ',
---     burnt_result = 'used-dingrit-mk04'
--- }
+ ITEM {
+     type = "module",
+     name = "dingrits-mk04",
+     icons =
+ 	{
+         {icon = "__pyalienlifegraphics__/graphics/icons/dingrits.png"},
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+     },
+     icon_size = 64,
+ 	category = "dingrits",
+ 	tier = 4,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "d-d",
+     stack_size = 50,
+ 	effect = {productivity = {bonus = -1},speed = {bonus = 3.2}},
+ 	limitation = {},
+     limitation_message_key = "dingrits",
+     fuel_category = 'dingrits',
+     fuel_value = '480MJ',
+     burnt_result = 'used-dingrit-mk04'
+ }
 
 ITEM {
     type = "item",
@@ -6968,7 +6960,7 @@ ITEM {
 	{
         {icon = "__pyalienlifegraphics__/graphics/icons/dingrits.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+
     },
     icon_size = 64,
     flags = {},
@@ -6977,53 +6969,53 @@ ITEM {
     stack_size = 50
 }
 
--- ITEM {
---     type = "item",
---     name = "used-dingrit-mk02",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/dingrits.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
---     },
---     icon_size = 64,
---     flags = {},
---     subgroup = "py-alienlife-used",
---     order = "x",
---     stack_size = 50
--- }
+ITEM {
+    type = "item",
+    name = "used-dingrit-mk02",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/dingrits.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 50
+}
 
--- ITEM {
---     type = "item",
---     name = "used-dingrit-mk03",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/dingrits.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
---     },
---     icon_size = 64,
---     flags = {},
---     subgroup = "py-alienlife-used",
---     order = "x",
---     stack_size = 50
--- }
+ITEM {
+    type = "item",
+    name = "used-dingrit-mk03",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/dingrits.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 50
+}
 
--- ITEM {
---     type = "item",
---     name = "used-dingrit-mk04",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/dingrits.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
---     },
---     icon_size = 64,
---     flags = {},
---     subgroup = "py-alienlife-used",
---     order = "x",
---     stack_size = 50
--- }
+ITEM {
+    type = "item",
+    name = "used-dingrit-mk04",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/dingrits.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 50
+}
 
 ITEM {
     type = "module",
@@ -7031,7 +7023,6 @@ ITEM {
     icons =
 	{
         {icon = "__pyalienlifegraphics__/graphics/icons/kmauts.png"},
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
     },
     icon_size = 64,
 	category = "kmauts",
@@ -7045,65 +7036,65 @@ ITEM {
 	limitation_message_key = "kmauts"
 }
 
--- ITEM {
---     type = "module",
---     name = "kmauts-mk02",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/kmauts.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
---     },
---     icon_size = 64,
--- 	category = "kmauts",
--- 	tier = 2,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "k-b",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 0.4}},
--- 	limitation = {},
--- 	limitation_message_key = "kmauts"
--- }
+ITEM {
+    type = "module",
+    name = "kmauts-mk02",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/kmauts.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "kmauts",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-b",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 0.4}},
+	limitation = {},
+	limitation_message_key = "kmauts"
+}
 
--- ITEM {
---     type = "module",
---     name = "kmauts-mk03",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/kmauts.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
---     },
---     icon_size = 64,
--- 	category = "kmauts",
--- 	tier = 3,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "k-c",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 0.6}},
--- 	limitation = {},
--- 	limitation_message_key = "kmauts"
--- }
+ITEM {
+    type = "module",
+    name = "kmauts-mk03",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/kmauts.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "kmauts",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-c",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 0.6}},
+	limitation = {},
+	limitation_message_key = "kmauts"
+}
 
--- ITEM {
---     type = "module",
---     name = "kmauts-mk04",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/kmauts.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
---     },
---     icon_size = 64,
--- 	category = "kmauts",
--- 	tier = 4,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "k-d",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 0.8}},
--- 	limitation = {},
--- 	limitation_message_key = "kmauts"
--- }
+ITEM {
+    type = "module",
+    name = "kmauts-mk04",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/kmauts.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "kmauts",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-d",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 0.8}},
+	limitation = {},
+	limitation_message_key = "kmauts"
+}
 
 ITEM {
     type = "module",
@@ -7111,7 +7102,7 @@ ITEM {
     icons =
 	{
         {icon = "__pyalienlifegraphics__/graphics/icons/vonix.png"},
-       -- {icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+
     },
     icon_size = 64,
 	category = "vonix",
@@ -7125,65 +7116,65 @@ ITEM {
 	limitation_message_key = "vonix"
 }
 
--- ITEM {
---     type = "module",
---     name = "vonix-mk02",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/vonix.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
---     },
---     icon_size = 64,
--- 	category = "vonix",
--- 	tier = 2,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "v-b",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 55}},
--- 	limitation = {},
--- 	limitation_message_key = "vonix"
--- }
+ITEM {
+    type = "module",
+    name = "vonix-mk02",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/vonix.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "vonix",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "v-b",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 55}},
+	limitation = {},
+	limitation_message_key = "vonix"
+}
 
--- ITEM {
---     type = "module",
---     name = "vonix-mk03",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/vonix.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
---     },
---     icon_size = 64,
--- 	category = "vonix",
--- 	tier = 3,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "v-c",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 60}},
--- 	limitation = {},
--- 	limitation_message_key = "vonix"
--- }
+ITEM {
+    type = "module",
+    name = "vonix-mk03",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/vonix.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "vonix",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "v-c",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 60}},
+	limitation = {},
+	limitation_message_key = "vonix"
+}
 
--- ITEM {
---     type = "module",
---     name = "vonix-mk04",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/vonix.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
---     },
---     icon_size = 64,
--- 	category = "vonix",
--- 	tier = 4,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "v-d",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 65}},
--- 	limitation = {},
--- 	limitation_message_key = "vonix"
--- }
+ITEM {
+    type = "module",
+    name = "vonix-mk04",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/vonix.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "vonix",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "v-d",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 65}},
+	limitation = {},
+	limitation_message_key = "vonix"
+}
 
 ITEM {
     type = "module",
@@ -7205,65 +7196,65 @@ ITEM {
 	limitation_message_key = "grod"
 }
 
--- ITEM {
---     type = "module",
---     name = "grod-mk02",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/grod.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
---     },
---     icon_size = 64,
--- 	category = "grod",
--- 	tier = 2,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "gb",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 2.85}},
--- 	limitation = {},
--- 	limitation_message_key = "grod"
--- }
+ITEM {
+    type = "module",
+    name = "grod-mk02",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/grod.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "grod",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "gb",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 2.85}},
+	limitation = {},
+	limitation_message_key = "grod"
+}
 
--- ITEM {
---     type = "module",
---     name = "grod-mk03",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/grod.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
---     },
---     icon_size = 64,
--- 	category = "grod",
--- 	tier = 3,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "gc",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 4.275}},
--- 	limitation = {},
--- 	limitation_message_key = "grod"
--- }
+ITEM {
+    type = "module",
+    name = "grod-mk03",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/grod.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "grod",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "gc",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 4.275}},
+	limitation = {},
+	limitation_message_key = "grod"
+}
 
--- ITEM {
---     type = "module",
---     name = "grod-mk04",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/grod.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
---     },
---     icon_size = 64,
--- 	category = "grod",
--- 	tier = 4,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "gd",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 5.7}},
--- 	limitation = {},
--- 	limitation_message_key = "grod"
--- }
+ITEM {
+    type = "module",
+    name = "grod-mk04",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/grod.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "grod",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "gd",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 5.7}},
+	limitation = {},
+	limitation_message_key = "grod"
+}
 
 ITEM {
     type = "module",
@@ -7441,65 +7432,65 @@ ITEM {
 	limitation_message_key = "xeno"
 }
 
--- ITEM {
---     type = "module",
---     name = "xeno-mk02",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/xeno.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
---     },
---     icon_size = 64,
--- 	category = "xeno",
--- 	tier = 2,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "x-b",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 2}},
--- 	limitation = {},
--- 	limitation_message_key = "xeno"
--- }
+ITEM {
+    type = "module",
+    name = "xeno-mk02",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/xeno.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "xeno",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "x-b",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 2}},
+	limitation = {},
+	limitation_message_key = "xeno"
+}
 
--- ITEM {
---     type = "module",
---     name = "xeno-mk03",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/xeno.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
---     },
---     icon_size = 64,
--- 	category = "xeno",
--- 	tier = 3,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "x-c",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 3}},
--- 	limitation = {},
--- 	limitation_message_key = "xeno"
--- }
+ITEM {
+    type = "module",
+    name = "xeno-mk03",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/xeno.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "xeno",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "x-c",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 3}},
+	limitation = {},
+	limitation_message_key = "xeno"
+}
 
--- ITEM {
---     type = "module",
---     name = "xeno-mk04",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/xeno.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
---     },
---     icon_size = 64,
--- 	category = "xeno",
--- 	tier = 4,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "x-d",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 4}},
--- 	limitation = {},
--- 	limitation_message_key = "xeno"
--- }
+ITEM {
+    type = "module",
+    name = "xeno-mk04",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/xeno.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "xeno",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "x-d",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 4}},
+	limitation = {},
+	limitation_message_key = "xeno"
+}
 
 ITEM {
     type = "module",
@@ -7537,65 +7528,65 @@ ITEM {
 	limitation_message_key = "zipir"
 }
 
--- ITEM {
---     type = "module",
---     name = "zipir2",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
---     },
---     icon_size = 64,
--- 	category = "zipir",
--- 	tier = 2,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "zb",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 2}},
--- 	limitation = {},
--- 	limitation_message_key = "zipir"
--- }
+ITEM {
+    type = "module",
+    name = "zipir2",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "zipir",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "zb",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 2}},
+	limitation = {},
+	limitation_message_key = "zipir"
+}
 
--- ITEM {
---     type = "module",
---     name = "zipir3",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
---     },
---     icon_size = 64,
--- 	category = "zipir",
--- 	tier = 3,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "zc",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 3}},
--- 	limitation = {},
--- 	limitation_message_key = "zipir"
--- }
+ITEM {
+    type = "module",
+    name = "zipir3",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "zipir",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "zc",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 3}},
+	limitation = {},
+	limitation_message_key = "zipir"
+}
 
--- ITEM {
---     type = "module",
---     name = "zipir4",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
---     },
---     icon_size = 64,
--- 	category = "zipir",
--- 	tier = 4,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "zd",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 4}},
--- 	limitation = {},
--- 	limitation_message_key = "zipir"
--- }
+ITEM {
+    type = "module",
+    name = "zipir4",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "zipir",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "zd",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 4}},
+	limitation = {},
+	limitation_message_key = "zipir"
+}
 
 ITEM {
     type = "module",
@@ -7617,65 +7608,65 @@ ITEM {
 	limitation_message_key = "trits"
 }
 
--- ITEM {
---     type = "module",
---     name = "trits-mk02",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
---     },
---     icon_size = 64,
--- 	category = "trits",
--- 	tier = 2,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "tr-b",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 45}},
--- 	limitation = {},
--- 	limitation_message_key = "trits"
--- }
+ITEM {
+    type = "module",
+    name = "trits-mk02",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "trits",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "tr-b",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 45}},
+	limitation = {},
+	limitation_message_key = "trits"
+}
 
--- ITEM {
---     type = "module",
---     name = "trits-mk03",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
---     },
---     icon_size = 64,
--- 	category = "trits",
--- 	tier = 3,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "tr-c",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 50}},
--- 	limitation = {},
--- 	limitation_message_key = "trits"
--- }
+ITEM {
+    type = "module",
+    name = "trits-mk03",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "trits",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "tr-c",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 50}},
+	limitation = {},
+	limitation_message_key = "trits"
+}
 
--- ITEM {
---     type = "module",
---     name = "trits-mk04",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
---     },
---     icon_size = 64,
--- 	category = "trits",
--- 	tier = 4,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "tr-d",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 55}},
--- 	limitation = {},
--- 	limitation_message_key = "trits"
--- }
+ITEM {
+    type = "module",
+    name = "trits-mk04",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "trits",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "tr-d",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 55}},
+	limitation = {},
+	limitation_message_key = "trits"
+}
 
 ITEM {
     type = "module",
@@ -7697,65 +7688,65 @@ ITEM {
 	limitation_message_key = "vrauks"
 }
 
--- ITEM {
---     type = "module",
---     name = "vrauks-mk02",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/vrauks.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
---     },
---     icon_size = 64,
--- 	category = "vrauks",
--- 	tier = 2,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "v-b",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 0.38}},
--- 	limitation = {},
--- 	limitation_message_key = "vrauks"
--- }
+ITEM {
+    type = "module",
+    name = "vrauks-mk02",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/vrauks.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "vrauks",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "v-b",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 0.38}},
+	limitation = {},
+	limitation_message_key = "vrauks"
+}
 
--- ITEM {
---     type = "module",
---     name = "vrauks-mk03",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/vrauks.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
---     },
---     icon_size = 64,
--- 	category = "vrauks",
--- 	tier = 3,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "v-c",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 0.5}},
--- 	limitation = {},
--- 	limitation_message_key = "vrauks"
--- }
+ITEM {
+    type = "module",
+    name = "vrauks-mk03",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/vrauks.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "vrauks",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "v-c",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 0.5}},
+	limitation = {},
+	limitation_message_key = "vrauks"
+}
 
--- ITEM {
---     type = "module",
---     name = "vrauks-mk04",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/vrauks.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
---     },
---     icon_size = 64,
--- 	category = "vrauks",
--- 	tier = 4,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "v-d",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 0.58}},
--- 	limitation = {},
--- 	limitation_message_key = "vrauks"
--- }
+ITEM {
+    type = "module",
+    name = "vrauks-mk04",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/vrauks.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "vrauks",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "v-d",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 0.58}},
+	limitation = {},
+	limitation_message_key = "vrauks"
+}
 
 ITEM {
     type = "module",
@@ -7777,65 +7768,65 @@ ITEM {
 	limitation_message_key = "xyhiphoe"
 }
 
--- ITEM {
---     type = "module",
---     name = "xyhiphoe-mk02",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
---     },
---     icon_size = 64,
--- 	category = "xyhiphoe",
--- 	tier = 2,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "v-b",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 20}},
--- 	limitation = {},
--- 	limitation_message_key = "xyhiphoe"
--- }
+ITEM {
+    type = "module",
+    name = "xyhiphoe-mk02",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "xyhiphoe",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "v-b",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 20}},
+	limitation = {},
+	limitation_message_key = "xyhiphoe"
+}
 
--- ITEM {
---     type = "module",
---     name = "xyhiphoe-mk03",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
---     },
---     icon_size = 64,
--- 	category = "xyhiphoe",
--- 	tier = 3,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "v-c",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 30}},
--- 	limitation = {},
--- 	limitation_message_key = "xyhiphoe"
--- }
+ITEM {
+    type = "module",
+    name = "xyhiphoe-mk03",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "xyhiphoe",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "v-c",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 30}},
+	limitation = {},
+	limitation_message_key = "xyhiphoe"
+}
 
--- ITEM {
---     type = "module",
---     name = "xyhiphoe-mk04",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
---     },
---     icon_size = 64,
--- 	category = "xyhiphoe",
--- 	tier = 4,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "v-d",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 40}},
--- 	limitation = {},
--- 	limitation_message_key = "xyhiphoe"
--- }
+ITEM {
+    type = "module",
+    name = "xyhiphoe-mk04",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "xyhiphoe",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "v-d",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 40}},
+	limitation = {},
+	limitation_message_key = "xyhiphoe"
+}
 
 ITEM {
     type = "module",
@@ -7857,65 +7848,65 @@ ITEM {
 	limitation_message_key = "korlex"
 }
 
--- ITEM {
---     type = "module",
---     name = "korlex-mk02",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/korlex.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
---     },
---     icon_size = 64,
--- 	category = "korlex",
--- 	tier = 2,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "k-b",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 3.13}},
--- 	limitation = {},
--- 	limitation_message_key = "korlex"
--- }
+ITEM {
+    type = "module",
+    name = "korlex-mk02",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/korlex.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "korlex",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-b",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 3.13}},
+	limitation = {},
+	limitation_message_key = "korlex"
+}
 
--- ITEM {
---     type = "module",
---     name = "korlex-mk03",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/korlex.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
---     },
---     icon_size = 64,
--- 	category = "korlex",
--- 	tier = 3,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "k-c",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 3.75}},
--- 	limitation = {},
--- 	limitation_message_key = "korlex"
--- }
+ITEM {
+    type = "module",
+    name = "korlex-mk03",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/korlex.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "korlex",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-c",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 3.75}},
+	limitation = {},
+	limitation_message_key = "korlex"
+}
 
--- ITEM {
---     type = "module",
---     name = "korlex-mk04",
---     icons =
--- 	{
---         {icon = "__pyalienlifegraphics__/graphics/icons/korlex.png"},
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
---     },
---     icon_size = 64,
--- 	category = "korlex",
--- 	tier = 4,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "k-d",
---     stack_size = 50,
--- 	effect = {productivity = {bonus = -1},speed = {bonus = 4.38}},
--- 	limitation = {},
--- 	limitation_message_key = "korlex"
--- }
+ITEM {
+    type = "module",
+    name = "korlex-mk04",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics__/graphics/icons/korlex.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "korlex",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "k-d",
+    stack_size = 50,
+	effect = {productivity = {bonus = -1},speed = {bonus = 4.38}},
+	limitation = {},
+	limitation_message_key = "korlex"
+}
 
 ITEM {
     type = "module",

@@ -502,9 +502,7 @@ require('prototypes/recipes/recipes')
 require('prototypes/recipes/recipes-bioreserve-megafarm')
 
 --antelope
--- require('prototypes/recipes/antelope/recipes-antelope')
--- require('prototypes/recipes/antelope/recipes-antelope-raising')
--- require('prototypes/recipes/antelope/recipes-antelope-rendering')
+--see pyhightech updates for files
 
 --arqad
 require('prototypes/recipes/arqad/recipes-arqad')
@@ -555,12 +553,14 @@ require('prototypes/recipes/dhilmos/recipes-dhilmos')
 require('prototypes/recipes/dhilmos/recipes-dhilmos-raising')
 require('prototypes/recipes/dhilmos/recipes-dhilmos-rendering')
 require('prototypes/recipes/dhilmos/recipes-dhilmos-growth-enhancement')
+require('prototypes/recipes/dhilmos/recipes-dhilmos-modules')
 
 --Dingrits
 require('prototypes/recipes/dingrits/recipes-dingrits')
 require('prototypes/recipes/dingrits/recipes-dingrits-raising')
 require('prototypes/recipes/dingrits/recipes-dingrits-rendering')
 require('prototypes/recipes/dingrits/recipes-dingrits-growth-enhancement')
+require('prototypes/recipes/dingrits/recipes-dingrits-modules')
 
 --Fawogae
 require('prototypes/recipes/fawogae/recipes-fawogae')
@@ -571,15 +571,18 @@ require('prototypes/recipes/fawogae/recipes-fawogae-modules')
 require('prototypes/recipes/fish/recipes-fish')
 require('prototypes/recipes/fish/recipes-auto-fish')
 require('prototypes/recipes/fish/recipes-fish-rendering')
+require('prototypes/recipes/fish/recipes-fish-modules')
 
 --Grod
 require('prototypes/recipes/grod/recipes-grod')
 require('prototypes/recipes/grod/recipes-auto-grod')
 require('prototypes/recipes/grod/recipes-grod-megafarm')
+require('prototypes/recipes/grod/recipes-grod-modules')
 
 --guar
 require('prototypes/recipes/guar/recipes-guar')
 require('prototypes/recipes/guar/recipes-auto-guar')
+require('prototypes/recipes/guar/recipes-guar-modules')
 --need to disable guar recipes from pyph see pyph-updates
 
 --Kicalk
@@ -590,6 +593,7 @@ require('prototypes/recipes/kmauts/recipes-kmauts')
 require('prototypes/recipes/kmauts/recipes-kmauts-raising')
 require('prototypes/recipes/kmauts/recipes-kmauts-rendering')
 require('prototypes/recipes/kmauts/recipes-kmauts-growth-enhancement')
+require('prototypes/recipes/kmauts/recipes-kmauts-modules')
 
 --Korlex
 require('prototypes/recipes/korlex/recipes-korlex')
@@ -597,6 +601,7 @@ require('prototypes/recipes/korlex/recipes-korlex-raising')
 require('prototypes/recipes/korlex/recipes-korlex-rendering')
 require('prototypes/recipes/korlex/recipes-korlex-milk')
 require('prototypes/recipes/korlex/recipes-korlex-growth-enhancement')
+require('prototypes/recipes/korlex/recipes-korlex-modules')
 
 --Moondrop
 --see pyhightech updates for files
@@ -604,12 +609,14 @@ require('prototypes/recipes/korlex/recipes-korlex-growth-enhancement')
 --moss
 require('prototypes/recipes/moss/recipes-moss')
 require('prototypes/recipes/moss/recipes-auto-moss')
+require('prototypes/recipes/moss/recipes-moss-modules')
 
 --Mukmoux
 require('prototypes/recipes/mukmoux/recipes-mukmoux')
 require('prototypes/recipes/mukmoux/recipes-mukmoux-raising')
 require('prototypes/recipes/mukmoux/recipes-mukmoux-rendering')
 require('prototypes/recipes/mukmoux/recipes-mukmoux-growth-enhacement')
+require('prototypes/recipes/mukmoux/recipes-mukmoux-modules')
 
 --Navens
 require('prototypes/recipes/navens/recipes-navens')
@@ -623,6 +630,7 @@ require('prototypes/recipes/phadai/recipes-phadai-rendering')
 require('prototypes/recipes/phadai/recipes-phadai-products')
 require('prototypes/recipes/phadai/recipes-phadai-recharge')
 require('prototypes/recipes/phadai/recipes-phadai-growth-enhancement')
+require('prototypes/recipes/phadai/recipes-phadai-modules')
 
 --Phagnot
 require('prototypes/recipes/phagnot/recipes-phagnot')
@@ -635,6 +643,7 @@ require('prototypes/recipes/phagnot/recipes-phagnot-modules')
 require('prototypes/recipes/ralesia/recipes-ralesia')
 require('prototypes/recipes/ralesia/recipes-auto-ralesia')
 require('prototypes/recipes/ralesia/recipes-ralesia-megafarm')
+require('prototypes/recipes/ralesia/recipes-ralesia-modules')
 
 --Rennea
 require('prototypes/recipes/rennea/recipes-rennea')
@@ -645,12 +654,14 @@ require('prototypes/recipes/rennea/recipes-rennea-modules')
 --Sap
 require('prototypes/recipes/sap/recipes-sap')
 require('prototypes/recipes/sap/recipes-sap-products')
+require('prototypes/recipes/sap/recipes-sap-modules')
 
 --Scrondrix
 require('prototypes/recipes/scrondrix/recipes-scrondrix')
 require('prototypes/recipes/scrondrix/recipes-scrondrix-raising')
 require('prototypes/recipes/scrondrix/recipes-scrondrix-rendering')
 require('prototypes/recipes/scrondrix/recipes-scrondrix-growth-enhancement')
+require('prototypes/recipes/scrondrix/recipes-scrondrix-modules')
 
 --Sea-Sponge
 require("prototypes/recipes/sea-sponge/recipes-sea-sponge")
@@ -659,6 +670,7 @@ require('prototypes/recipes/sea-sponge/recipes-sea-sponge-modules')
 --seaweed
 require('prototypes/recipes/seaweed/recipes-seaweed')
 require('prototypes/recipes/seaweed/recipes-seaweed-products')
+require('prototypes/recipes/seaweed/recipes-seaweed-modules')
 
 --simik
 require('prototypes/recipes/simik/recipes-simik')
@@ -666,54 +678,64 @@ require('prototypes/recipes/simik/recipes-simik-raising')
 require('prototypes/recipes/simik/recipes-simik-rendering')
 require('prototypes/recipes/simik/recipes-simik-metals')
 require('prototypes/recipes/simik/recipes-simik-growth-enhancement')
+require('prototypes/recipes/simik/recipes-simik-modules')
 
 --Tree
 require('prototypes/recipes/tree/recipes-tree')
+--require('prototypes/recipes/tree/recipes-tree-modules')
 
 --Trits
 require('prototypes/recipes/trits/recipes-trits')
 require('prototypes/recipes/trits/recipes-trits-raising')
 require('prototypes/recipes/trits/recipes-trits-rendering')
 require('prototypes/recipes/trits/recipes-trits-growth-enhacement')
+require('prototypes/recipes/trits/recipes-trits-modules')
 
---Tuupra
-require('prototypes/recipes/tuupra/recipes-tuuphra')
-require('prototypes/recipes/tuupra/recipes-auto-tuuphra')
-require('prototypes/recipes/tuupra/recipes-tuuphra-megafarm')
+--Tuuphra
+require('prototypes/recipes/tuuphra/recipes-tuuphra')
+require('prototypes/recipes/tuuphra/recipes-auto-tuuphra')
+require('prototypes/recipes/tuuphra/recipes-tuuphra-megafarm')
+require('prototypes/recipes/tuuphra/recipes-tuuphra-modules')
 
 --Ulric
 require('prototypes/recipes/ulric/recipes-ulric')
 require('prototypes/recipes/ulric/recipes-ulric-raising')
 require('prototypes/recipes/ulric/recipes-ulric-rendering')
 require('prototypes/recipes/ulric/recipes-ulric-growth-enhancement')
+require('prototypes/recipes/ulric/recipes-ulric-modules')
 
 --Vonix
 require('prototypes/recipes/vonix/recipes-vonix')
 require('prototypes/recipes/vonix/recipes-vonix-raising')
 require('prototypes/recipes/vonix/recipes-vonix-rendering')
 require('prototypes/recipes/vonix/recipes-vonix-growth-enchacement')
+require('prototypes/recipes/vonix/recipes-vonix-modules')
 
 --vrauks
 require('prototypes/recipes/vrauks/recipes-vrauks')
 require('prototypes/recipes/vrauks/recipes-vrauks-raising')
 require('prototypes/recipes/vrauks/recipes-vrauks-rendering')
 require('prototypes/recipes/vrauks/recipes-vrauk-growth-enhacement')
+require('prototypes/recipes/vrauks/recipes-vrauk-modules')
 
 --Xeno
 require('prototypes/recipes/xeno/recipes-xeno')
 require('prototypes/recipes/xeno/recipes-xeno-raising')
 require('prototypes/recipes/xeno/recipes-xeno-rendering')
 require('prototypes/recipes/xeno/recipes-xeno-growth-enhancement')
+require('prototypes/recipes/xeno/recipes-xeno-modules')
 
 --Xyhiphoe
 require("prototypes/recipes/xyhiphoe/recipes-xyhiphoe")
 require("prototypes/recipes/xyhiphoe/recipes-xyhiphoe-raising")
 require("prototypes/recipes/xyhiphoe/recipes-xyhiphoe-rendering")
 require('prototypes/recipes/xyhiphoe/recipes-xyhiphoe-growth-enhancement')
+require('prototypes/recipes/xyhiphoe/recipes-xyhiphoe-modules')
 
 --Yaedols
 require('prototypes/recipes/yaedols/recipes-yaedols')
 require('prototypes/recipes/yaedols/recipes-auto-yaedols')
+require('prototypes/recipes/yaedols/recipes-yaedols-modules')
 
 --Yotoi
 require('prototypes/recipes/yotoi/recipes-yotoi')
@@ -721,12 +743,14 @@ require('prototypes/recipes/yotoi/recipes-auto-yotoi')
 require('prototypes/recipes/yotoi/recipes-auto-yotoi-fruit')
 require('prototypes/recipes/yotoi/recipes-yotoi-megafarm')
 require('prototypes/recipes/yotoi/recipes-yotoi-fruit-megafarm')
+require('prototypes/recipes/yotoi/recipes-yotoi-modules')
 
 --Zipir
 require('prototypes/recipes/zipir/recipes-zipir')
 require('prototypes/recipes/zipir/recipes-zipir-raising')
 require('prototypes/recipes/zipir/recipes-zipir-rendering')
 require('prototypes/recipes/zipir/recipes-zipir-growth-enhancement')
+require('prototypes/recipes/zipir/recipes-zipir-modules')
 
 require('prototypes/recipes/recipes-atomizer')
 require('prototypes/recipes/recipes-auto-acessories')

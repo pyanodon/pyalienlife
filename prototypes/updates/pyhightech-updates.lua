@@ -32,6 +32,7 @@ require("__pyhightech__/prototypes/buildings/moondrop-greenhouse-mk04")
 require('prototypes/recipes/antelope/recipes-antelope')
 require('prototypes/recipes/antelope/recipes-antelope-raising')
 require('prototypes/recipes/antelope/recipes-antelope-rendering')
+--require('prototypes/recipes/antelope/recipes-antelope-modules')
 
 --Cadaveric-arum
 require('prototypes/recipes/cadaveric-arum/recipes-cadaveric')
@@ -43,10 +44,12 @@ require('prototypes/recipes/cadaveric-arum/recipes-arum-modules')
 require('prototypes/recipes/kicalk/recipes-kicalk-megafarm')
 require('prototypes/recipes/kicalk/recipes-kicalk')
 require('prototypes/recipes/kicalk/recipes-auto-kicalk')
+require('prototypes/recipes/kicalk/recipes-kicalk-modules')
 
 --Moondrop
 require('prototypes/recipes/moondrop/recipes-moondrop')
 require('prototypes/recipes/moondrop/recipes-auto-moondrop')
+require('prototypes/recipes/moondrop/recipes-moondrop-modules')
 --require('prototypes/recipes/moondrop/recipes-moondrop-copper') TODO: SETUP TURD FARM TECHS AGAIN
 
 data.raw["recipe-category"]["arum"].allowed_module_categories = { "arum" }

@@ -14,7 +14,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'mukmoux', amount = 2},
-        {type = 'item', name = 'mukmoux-food-02', amount = 2},
+        {type = 'item', name = 'mukmoux-food-01', amount = 2},
         {type = 'item', name = 'bedding', amount = 4},
         {type = 'item', name = 'salt', amount = 10},
         {type = 'item', name = 'fawogae', amount = 10},

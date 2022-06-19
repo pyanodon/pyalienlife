@@ -14,7 +14,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'phadai', amount = 2},
-        {type = 'item', name = 'phadai-food-02', amount = 1},
+        {type = 'item', name = 'phadai-food-01', amount = 1},
         {type = 'item', name = 'programmable-speaker', amount = 3},
         {type = 'item', name = 'energy-drink', amount = 2},
         {type = 'item', name = 'small-lamp', amount = 5},

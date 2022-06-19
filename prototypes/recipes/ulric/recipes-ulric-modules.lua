@@ -14,7 +14,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'ulric', amount = 2},
-        {type = 'item', name = 'ulric-food-02', amount = 2},
+        {type = 'item', name = 'ulric-food-01', amount = 2},
         {type = 'item', name = 'bedding', amount = 4},
         {type = 'item', name = 'water-barrel', amount = 7},
         },
@@ -97,7 +97,7 @@ RECIPE {
     energy_required = 120,
     ingredients = {
         {type = 'item', name = 'ulric-mk02', amount = 1},
-        {type = 'item', name = 'ulric-food-02', amount = 4},
+        {type = 'item', name = 'ulric-food-01', amount = 4},
         {type = 'item', name = 'bedding', amount = 4},
         {type = 'item', name = 'water-barrel', amount = 7},
         {type = 'item', name = 'ulric-mk02-dna-sample', amount = 12},
@@ -154,8 +154,7 @@ RECIPE {
     energy_required = 60,
     ingredients = {
         {type = 'item', name = 'used-ulric-mk02', amount = 1},
-        {type = 'item', name = 'ulric-food-01', amount = 2},
-        {type = 'item', name = 'ulric-food-02', amount = 2},
+        {type = 'item', name = 'ulric-food-01', amount = 4},
     },
     results = {
         {type = 'item', name = 'ulric-mk02', amount = 1},

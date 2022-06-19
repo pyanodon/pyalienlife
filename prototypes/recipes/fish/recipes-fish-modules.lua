@@ -14,7 +14,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'fish', amount = 20},
-        {type = 'item', name = 'fish-food-02', amount = 2},
+        {type = 'item', name = 'fish-food-01', amount = 2},
         {type = 'item', name = 'filtration-media', amount = 5},
         {type = 'item', name = "seaweed", amount = 10},
         {type = 'fluid', name = 'phytoplankton', amount = 60},
