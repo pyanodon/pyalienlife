@@ -12,4 +12,4 @@ RECIPE {
     results = {
         {type = 'item', name = 'saps', amount = 1}
     }
-}:add_unlock("sap")
+}:add_unlock("sap-mk01")

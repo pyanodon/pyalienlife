@@ -88,7 +88,7 @@ TECHNOLOGY('antitumor'):add_prereq('earnshaw-theorem')
 -- TECHNOLOGY('penrose'):add_pack('py-science-pack-3')
 -- TECHNOLOGY('quantum'):add_pack('py-science-pack-3')
 
-TECHNOLOGY("vacuum-tube-electronics"):set_fields{dependencies = {"sap"}}
+TECHNOLOGY("vacuum-tube-electronics"):set_fields{dependencies = {"sap-mk01"}}
 
 if not mods["omnimatter"] then
     TECHNOLOGY("syngas"):set_fields{dependencies = {"vacuum-tube-electronics"}}

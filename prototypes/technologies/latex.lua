@@ -5,7 +5,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {},
-    dependencies = {"sap", "seaweed-mk01"},
+    dependencies = {"sap-mk01", "seaweed-mk01"},
     effects = {},
     unit = {
         count = 50,
@@ -15,4 +15,3 @@ TECHNOLOGY {
         time = 30
     }
 }
-

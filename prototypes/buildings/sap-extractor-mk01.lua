@@ -15,7 +15,7 @@ RECIPE {
     results = {
         {"sap-extractor-mk01", 1}
     }
-}:add_unlock("sap")
+}:add_unlock("sap-mk01")
 
 ITEM {
     type = "item",

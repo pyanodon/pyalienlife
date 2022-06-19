@@ -45,7 +45,7 @@ RECIPE {
     results = {
         {type = "item", name = "sap-seeds", amount = 2}
     },
-}:add_unlock("sap")
+}:add_unlock("sap-mk01")
 
 RECIPE {
     type = "recipe",
@@ -60,4 +60,4 @@ RECIPE {
     results = {
         {type = "item", name = "sap-tree", amount = 1}
     },
-}:add_unlock("sap")
+}:add_unlock("sap-mk01")
