@@ -65,13 +65,102 @@ if script.active_mods["pyalternativeenergy"] then
     table.insert(farms, farm10)
 end
 
-local function create_sh_animal_table(sh_gui, player, event)
-
+local function create_sh_animal_table(sh_gui, player)
+	local animals = {
+		"auog",
+		"ulric",
+		"mukmoux",
+		"arthurian",
+		"cottongut",
+		"dhilmos",
+		"scrondrix",
+		"phadai",
+		"fish",
+		"phagnot",
+		"kmauts",
+		"dingrits",
+		"xeno",
+		"arqad",
+		"cridren",
+		"antelope",
+		"trits",
+		"vonix",
+		"vrauks",
+		"xyhiphoe",
+		"zipir",
+		"korlex",
+		"simik",
+	}
+    if script.active_mods["pyalternativeenergy"] then
+        table.insert(animals, "zungror")
+        table.insert(animals, "numal")
+    end
+	local sg_table = sh_gui
+	sg_table.add({type = "table", name = "s_table", column_count = 6})
+	for _, recipe in pairs(player.force.recipes) do
+		if string.match(recipe.category, "slaughterhouse") then
+			--log('hit')
+			for _, animal in pairs(animals) do
+				--log('hit')
+				--log(animal)
+				if string.match(recipe.category, animal) and recipe.enabled == true then
+					--log('hit')
+					if next(sg_table.s_table.children) ~= nil then
+						local child_list = {}
+						for _, child in pairs(sg_table.s_table.children) do
+							--log(child.name)
+							child_list[child.name] = true
+						end
+						if child_list[animal] == nil then
+							--log('hit')
+							if animal == "zipir" then
+								sg_table.s_table.add(
+									{
+										type = "choose-elem-button",
+										name = animal,
+										elem_type = 'item',
+										item = animal .. "1",
+										style = "image_tab_slot",
+										--tooltip = animal
+									}
+								)
+							else
+								sg_table.s_table.add(
+									{
+										type = "choose-elem-button",
+										name = animal,
+										elem_type = 'item',
+										item = animal,
+										style = "image_tab_slot",
+										--tooltip = animal
+									}
+								)
+							end
+						end
+					elseif next(sg_table.s_table.children) == nil then
+						--log('hit')
+						sg_table.s_table.add(
+							{
+								type = "choose-elem-button",
+								name = animal,
+								elem_type = 'item',
+								item = animal,
+								style = "image_tab_slot",
+								--tooltip = animal
+							}
+						)
+					end
+				end
+			end
+		end
+	end
 end
+
+local sh_gui
 
 local function create_slaughterhouse_gui(event)
     local player = game.players[event.player_index]
-    local sh_gui = player.gui.screen.add(
+    sh_gui = player.gui.screen.add(
         {
             type = "frame",
             name = "recipe_menu",
@@ -281,6 +370,11 @@ script.on_init(function()
     --slaughterhouse
     global.slaughterhouse_gui_open = false
     global.current_entity = {}
+    global.watch_slaughterhouse = false
+		global.watched_slaughterhouse = {
+			entity = {},
+			player = ""
+		}
 
     --caravan
     global.caravans = {
@@ -313,6 +407,15 @@ script.on_load(function()
 end)
 
 script.on_configuration_changed(function()
+
+    --slaughterhouse
+    global.current_entity = {}
+	global.slaughterhouse_gui_open = false
+	global.watch_slaughterhouse = false
+	global.watched_slaughterhouse = {
+		entity = {},
+	    player = ""
+	}
 
     --[[
     log(serpent.block(global.farms))
@@ -441,7 +544,25 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 
 end)
 
-script.on_event(defines.events.on_tick, function(event)
+script.on_event(defines.events.on_tick, function()
+    if global.watch_slaughterhouse == true then
+        if global.watched_slaughterhouse.entity.valid and global.watched_slaughterhouse.entity.get_recipe() == nil then
+            --log('hit')
+            if global.slaughterhouse_gui_open == false then
+                --log('hit')
+                table.insert(global.current_entity, global.watched_slaughterhouse.player)
+                global.current_entity[global.watched_slaughterhouse.player] = global.watched_slaughterhouse.entity
+                --log(serpent.block(global.current_entity))
+                game.players[global.watched_slaughterhouse.player].opened = nil
+                local event = {
+                    player_index = global.watched_slaughterhouse.player,
+                    entity = global.watched_slaughterhouse.entity
+                }
+                create_slaughterhouse_gui(event)
+            --log(serpent.block(global.watched_slaughterhouse))
+            end
+        end
+    end
     local fcount = global.indexed_farm_list
     local last = global.total_farm_count
     if next(fcount) ~= nil and last > 0 then
@@ -525,15 +646,21 @@ script.on_event(defines.events.on_gui_opened, function(event)
         if E.entity ~= nil then
             if E.entity.name == "outpost" then
                 caravan_scheduler_gui(E)
-                --[[
-            elseif string.match(event.entity.name, "slaughterhouse") and E.entity.get_recipe() == nil and
-            global.slaughterhouse_gui_open == false then
-                table.insert(global.current_entity, p_index)
-                global.current_entity[p_index] = E.entity
-                log(serpent.block(player.opened))
-                player.opened[E.entity.name] = nil
-                create_slaughterhouse_gui(E)
-            ]]--
+            elseif string.match(event.entity.name, "slaughterhouse") and event.entity.get_recipe() == nil and
+                global.slaughterhouse_gui_open == false then
+                --log('hit')
+                table.insert(global.current_entity, event.player_index)
+                global.current_entity[event.player_index] = event.entity
+                game.players[event.player_index].opened = nil
+                create_slaughterhouse_gui(event)
+            elseif event.entity ~= nil and string.match(event.entity.name, "slaughterhouse") and event.entity.get_recipe() == nil and global.slaughterhouse_gui_open == true then
+                game.players[event.player_index].opened = nil
+            elseif event.entity ~= nil and string.match(event.entity.name, "slaughterhouse") and event.entity.get_recipe() ~= nil then
+                --log('hit')
+                global.watch_slaughterhouse = true
+                global.watched_slaughterhouse.entity = event.entity
+                global.watched_slaughterhouse.player = event.player_index
+            --global.current_entity[event.player_index] = event.entity
             end
         end
 end)
@@ -614,15 +741,111 @@ script.on_event(defines.events.on_gui_elem_changed, function(event)
     end
 end)
 
+--[[
+script.on_event(
+	defines.events.on_gui_elem_changed,
+	function(event)
+		--log(event.element.name)
+		if string.match(event.element.name, "recipe%-menu") ~= nil then
+			--log(serpent.block(global.current_entity))
+			--log('hit')
+			local entity = global.current_entity[event.player_index]
+			--log(serpent.block(global.current_entity))
+			--log(serpent.block(global.current_entity[event.player_index]))
+			--log(entity.name)
+			--log(serpent.block(entity))
+			--log(serpent.block(global.current_entity))
+			entity.set_recipe(string.match(event.element.name, "%_(.*)"))
+			event.element.parent.parent.parent.parent.destroy()
+			game.players[event.player_index].opened = global.current_entity[event.player_index]
+			global.scipt_opening_gui = true
+			global.current_entity[event.player_index] = nil
+			global.slaughterhouse_gui_open = false
+			--log('set recipe')
+		end
+	end
+)
+]]--
+local function create_slaughterhouse_recipe_gui(event)
+	local slaughterhouse_recipe_gui = event.element.parent
+	local button_name = event.element.name
+	slaughterhouse_recipe_gui.clear()
+	slaughterhouse_recipe_gui.add({type = "frame", name = "recipe_selection_frame", caption = "Select Recipe"})
+	slaughterhouse_recipe_gui.recipe_selection_frame.add(
+		{type = "sprite-button", name = "slaughterhouse_back", sprite = "utility/left_arrow"}
+	)
+	slaughterhouse_recipe_gui.recipe_selection_frame.add({type = "table", name = "recipe_table", column_count = 5})
+	for _, recipe in pairs(game.players[event.player_index].force.recipes) do
+		if
+			string.match(recipe.category, "slaughterhouse") and string.match(recipe.category, button_name) and
+				recipe.enabled == true
+		 then
+			--[[
+			slaughterhouse_recipe_gui.recipe_selection_frame.recipe_table.add(
+				{
+					type = "sprite-button",
+					name = "recipe-menu_" .. recipe.name,
+					sprite = "recipe/" .. recipe.name,
+					style = "recipe_slot_button",
+					tooltip = recipe.localised_name
+				}
+			)
+			]]--
+			slaughterhouse_recipe_gui.recipe_selection_frame.recipe_table.add(
+				{
+					type = "choose-elem-button",
+					name = "recipe-menu_" .. recipe.name,
+					elem_type = 'recipe',
+					recipe = recipe.name,
+					style = "recipe_slot_button",
+					--tooltip = recipe.localised_name .. 'elem test'
+				}
+			)
+		end
+	end
+end
+
 script.on_event(defines.events.on_gui_click, function(event)
     if event.element.type == "sprite-button" and string.match(event.element.name, "outpost_request_elem_") ~= nil then
         event.element.parent.parent["num_flow"]["outpost_request_slider"].slider_value = event.element.number
         event.element.parent.parent["num_flow"]["outpost_request_slider_text"].text = tostring(event.element.number)
+    elseif event.element.name == "slaughterhouse_close" then
+        sh_gui.destroy()
+        global.slaughterhouse_gui_open = false
+    elseif event.element.parent ~= nil and event.element.parent.name == "s_table" then
+        create_slaughterhouse_recipe_gui(event)
+    elseif event.element.name == "slaughterhouse_back" then
+        local player = game.players[event.player_index]
+        --log(event.element.parent.name)
+        --log(event.element.parent.parent.name)
+        --log(event.element.parent.parent.parent.name)
+        local elem_p2 = event.element.parent.parent.parent
+        event.element.parent.parent.destroy()
+        create_sh_animal_table(elem_p2, player)
+    elseif string.match(event.element.name, "recipe%-menu") ~= nil then
+        --log(serpent.block(global.current_entity))
+        --log('hit')
+        local entity = global.current_entity[event.player_index]
+        --log(serpent.block(global.current_entity))
+        --log(serpent.block(global.current_entity[event.player_index]))
+        --log(entity.name)
+        --log(serpent.block(entity))
+        --log(serpent.block(global.current_entity))
+        entity.set_recipe(string.match(event.element.name, "%_(.*)"))
+        event.element.parent.parent.parent.parent.destroy()
+        game.players[event.player_index].opened = global.current_entity[event.player_index]
+        global.current_entity[event.player_index] = nil
+        global.slaughterhouse_gui_open = false
+        --log('set recipe')
     end
 end)
 
 script.on_event(defines.events.on_gui_closed, function(event)
-
+    if event.entity ~= nil and string.match(event.entity.name, "slaughterhouse") and global.watch_slaughterhouse == true then
+        --log('hit')
+        global.watch_slaughterhouse = false
+    --global.current_entity[event.player_index] = nil
+    end
 end)
 
 script.on_event(defines.events.on_gui_text_changed, function(event)

@@ -32,6 +32,7 @@ fun.autorecipes {
 			icon = "__pyalienlifegraphics3__/graphics/icons/rendering-zungror.png",
 			icon_size = 64,
 		},
+		--[[
 		--brain zungror rendering
 		{
 			ingredients =
@@ -140,5 +141,6 @@ fun.autorecipes {
 			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-zungror.png",
 			icon_size = 64,
 		},
+		]]--
 	}
 }

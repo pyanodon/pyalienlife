@@ -478,12 +478,6 @@ if mods['pyhightech'] then
     require("prototypes/fluids/casein-solution")
 end
 
-if mods["pyalternativeenergy"] then
-    require('prototypes/recipes/zungror/recipes-zungror')
-    require('prototypes/recipes/zungror/recipes-zungror-raising')
-    -- require('prototypes/recipes/zungror/recipes-zungror-rendering')
-end
-
 --(( ITEMS ))--
 require('prototypes/items/items')
 require('prototypes/items/items2')
@@ -751,6 +745,14 @@ require('prototypes/recipes/zipir/recipes-zipir-raising')
 require('prototypes/recipes/zipir/recipes-zipir-rendering')
 require('prototypes/recipes/zipir/recipes-zipir-growth-enhancement')
 require('prototypes/recipes/zipir/recipes-zipir-modules')
+
+if mods["pyalternativeenergy"] then
+    require('prototypes/recipes/zungror/recipes-zungror')
+    require('prototypes/recipes/zungror/recipes-zungror-raising')
+    require('prototypes/recipes/zungror/recipes-zungror-rendering')
+    require('prototypes/recipes/zungror/recipes-zungror-modules')
+    require('prototypes/recipes/zungror/recipes-zungror-growth-enhancement')
+end
 
 require('prototypes/recipes/recipes-atomizer')
 require('prototypes/recipes/recipes-auto-acessories')
