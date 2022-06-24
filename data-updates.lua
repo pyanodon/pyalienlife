@@ -329,7 +329,10 @@ for _, category in pairs(searchtypes) do
     local raw_cat = data.raw[category]
     if raw_cat then
         for name, prototype in pairs(raw_cat) do
-            if not prototype.next_upgrade and prototype.minable then
+            if not prototype.next_upgrade and prototype.minable and prototype.minable.result
+                and data.raw.item[prototype.minable.result]
+                and data.raw.item[prototype.minable.result].place_result == name
+            then
                 prototype.next_upgrade = next_tier(name, raw_cat)
                 if prototype.next_upgrade then
                     --log(name .. ' -> ' .. prototype.next_upgrade)
