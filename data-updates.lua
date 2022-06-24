@@ -314,6 +314,7 @@ local searchtypes = {
     'offshore-pump',
     'heat-pipe'
 }
+
 local function next_tier(prototype_name, prototype_category)
     local tier_num = prototype_name:match("%-mk(%d%d)$")
     if tier_num then
@@ -325,13 +326,23 @@ local function next_tier(prototype_name, prototype_category)
         end
     end
 end
+
 for _, category in pairs(searchtypes) do
     local raw_cat = data.raw[category]
     if raw_cat then
         for name, prototype in pairs(raw_cat) do
-            if not prototype.next_upgrade and prototype.minable then
+            if not prototype.next_upgrade and prototype.minable and prototype.minable.result
+                and data.raw.item[prototype.minable.result]
+                and not ITEM(prototype.minable.result):has_flag("hidden")
+                and data.raw.item[prototype.minable.result].place_result == name
+            then
                 prototype.next_upgrade = next_tier(name, raw_cat)
-                if prototype.next_upgrade then
+                if prototype.next_upgrade and raw_cat[prototype.next_upgrade].minable
+                    and raw_cat[prototype.next_upgrade].minable.result
+                    and data.raw.item[raw_cat[prototype.next_upgrade].minable.result]
+                    and not ITEM(raw_cat[prototype.next_upgrade].minable.result):has_flag("hidden")
+                    and data.raw.item[raw_cat[prototype.next_upgrade].minable.result].place_result == prototype.next_upgrade
+                then
                     --log(name .. ' -> ' .. prototype.next_upgrade)
                     if serpent.block(prototype.collision_box) ~= serpent.block(raw_cat[prototype.next_upgrade].collision_box) then
                         --log('Cancelled upgrade: ' .. name .. ' -> ' .. prototype.next_upgrade)
@@ -343,6 +354,8 @@ for _, category in pairs(searchtypes) do
                             next_proto.fast_replaceable_group = prototype.fast_replaceable_group
                         end
                     end
+                else
+                    prototype.next_upgrade = nil
                 end
             end
         end
