@@ -40,7 +40,7 @@ if mods["pyhightech"] then
     TECHNOLOGY {
         type = "technology",
         name = "starch-mk03",
-        icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
+        icon = "__pyalienlifegraphics2__/graphics/technology/starch-mk03.png",
         icon_size = 128,
         order = "c-a",
         dependencies = {"starch-mk02"},

@@ -84,7 +84,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "moondrop-mk05",
-    icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
+    icon = "__pyalienlifegraphics__/graphics/technology/moondrop-mk05.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk04","moondrop-mk03","phytomining-mk03"},
