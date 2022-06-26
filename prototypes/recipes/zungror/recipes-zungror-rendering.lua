@@ -3,7 +3,7 @@ local fun = require("prototypes/functions/functions")
 ------------------RENDERING------------------
 
 fun.autorecipes {
-    name = 'rendering',
+    name = 'rendering-zungror',
 	category = 'slaughterhouse-zungror',
 	--module_limitations = 'zungror',
 	subgroup = 'py-alienlife-zungror',
@@ -32,7 +32,6 @@ fun.autorecipes {
 			icon = "__pyalienlifegraphics3__/graphics/icons/rendering-zungror.png",
 			icon_size = 64,
 		},
-		--[[
 		--brain zungror rendering
 		{
 			ingredients =
@@ -141,6 +140,5 @@ fun.autorecipes {
 			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-zungror.png",
 			icon_size = 64,
 		},
-		]]--
 	}
 }
