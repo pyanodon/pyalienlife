@@ -227,6 +227,12 @@ local farm_buildings = {
     "zipir",
 }
 
+if script.active_mods["pyalternativeenergy"] then
+    table.insert(farm_buildings
+    , "zungror")
+    table.insert(farm_buildings, "numal")
+end
+
 local animal_farm_buildings = {
 	["antelope"] = true,
 	["arqad"] = true,
@@ -252,6 +258,11 @@ local animal_farm_buildings = {
 	["xyhiphoe"] = true,
 	["zipir"] = true,
 }
+
+if script.active_mods["pyalternativeenergy"] then
+    animal_farm_buildings["zungror"] = true
+    animal_farm_buildings["numal"] = true
+end
 
 local plant_farm_buildings = {
 	["cadaveric"] = true,
