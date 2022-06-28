@@ -1577,7 +1577,7 @@ RECIPE {
     ingredients = {
         {type = "fluid", name = "formic-acid", amount = 100},
         {type = "item", name = "enzyme-pks", amount = 1},
-        {type = "item", name = "molybdenum-oxide", amount = 1},
+        {type = "item", name = "moondrop-seeds", amount = 80},
         {type = "item", name = "fiberboard", amount = 2},
     },
     results = {
