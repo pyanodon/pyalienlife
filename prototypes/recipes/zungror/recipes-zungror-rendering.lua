@@ -41,7 +41,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name = 'vsk', amount = 1},
+
 					{name='brain', amount =5},
 				},
 			crafting_speed = 15,
@@ -59,8 +59,8 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name='brain', amount = 1},
 					{name='guts', amount =20},
+					{name = 'vsk', amount = 1},
 				},
 			crafting_speed = 15,
 			tech = 'antitumor',
@@ -77,6 +77,7 @@ fun.autorecipes {
 				},
 			results =
 				{
+					{name='vsk',remove_item = true},
 					{name='guts', amount = 6},
 					{name='arthropod-blood', amount =230},
 				},
