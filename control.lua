@@ -497,7 +497,9 @@ local function caravan_scheduler_gui(event)
 end
 
 script.on_event(defines.events.script_raised_built, function(event)
-
+    if string.match(event.entity.name, "numal%-reef") and string.match(event.entity.name, "placer") == nil then
+        disable_machine(event.entity)
+    end
 end)
 
 script.on_event(defines.events.script_raised_revive, function(event)
@@ -540,7 +542,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
         end
     else
         for f, farm in pairs(farm_buildings) do
-            if string.match(E.name, farm) then
+            if string.match(E.name, farm) and string.match(E.name, "boiler") == nil then
                 disable_machine(E)
             end
         end
