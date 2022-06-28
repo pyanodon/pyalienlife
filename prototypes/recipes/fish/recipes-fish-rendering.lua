@@ -25,7 +25,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 30,
 			tech = 'water-animals-mk01',
-			name = 'Full Render Fish',
+			name = 'full-render-fish',
 			icon = "__pyalienlifegraphics__/graphics/icons/rendering-fish.png",
 			icon_size = 64,
 		},

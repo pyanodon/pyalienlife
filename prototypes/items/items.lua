@@ -840,7 +840,7 @@ ITEM {
     order = "f",
     stack_size = 100
 }
-
+--[[
 ITEM {
     type = "item",
     name = "guano",
@@ -851,6 +851,7 @@ ITEM {
     order = "f",
     stack_size = 100
 }
+]]--
 
 ITEM {
     type = "item",

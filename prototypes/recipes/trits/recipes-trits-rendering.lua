@@ -64,7 +64,7 @@ fun.autorecipes {
 				},
 			crafting_speed = 15,
 			tech = 'bmp',
-			name = 'ex-bro-trit',
+			name = 'ex-bon-trit',
 			icon = "__pyalienlifegraphics__/graphics/icons/bone-trits.png",
 			icon_size = 64,
 		},

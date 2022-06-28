@@ -23,7 +23,7 @@ RECIPE {
         {type = 'item', name = 'cadaveric-arum-mk02-a', amount = 1, probability = 0.005},
         {type = 'item', name = 'cadaveric-arum', amount = 1, probability = 0.5},
     },
-    --main_product = "cadaveric-arum-mk02",
+    main_product = "cadaveric-arum-mk02-a",
     icons =
         {
             {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png'},
@@ -136,7 +136,7 @@ RECIPE {
         {type = 'item', name = 'copper-ore', amount = 25, probability = 0.5},
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
-    --main_product = "cadaveric-arum-mk03",
+    main_product = "cadaveric-arum-mk03-a",
     icons =
         {
             {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png'},
@@ -252,7 +252,7 @@ RECIPE {
         {type = 'item', name = 'cadaveric-arum', amount = 1, probability = 0.7},
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
-    --main_product = "cadaveric-arum-mk04",
+    main_product = "cadaveric-arum-mk04-a",
     icons =
         {
             {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png'},

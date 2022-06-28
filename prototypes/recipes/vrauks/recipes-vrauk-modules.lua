@@ -53,7 +53,7 @@ RECIPE {
         {type = 'item', name = 'vrauks-mk02', amount = 1},
         {type = 'item', name = 'empty-barrel', amount = 5},
     },
-    --main_product = "vrauks-mk02",
+    main_product = "vrauks-mk02",
     icons =
         {
             {icon = "__pyalienlifegraphics__/graphics/icons/vrauks.png"},
@@ -118,7 +118,7 @@ RECIPE {
         {type = 'item', name = 'vrauks-mk02', amount_min = 1, amount_max = 50, probability = 0.1},
         {type = 'item', name = 'empty-barrel', amount = 5},
     },
-    --main_product = "vrauks-mk03",
+    main_product = "vrauks-mk03",
     icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png',
     icon_size = 64,
     subgroup = 'py-alienlife-vrauks',
@@ -147,7 +147,7 @@ RECIPE {
         {type = 'item', name = 'vrauks-mk03', amount = 1},
         {type = 'item', name = 'empty-barrel', amount = 5},
     },
-    --main_product = "vrauks-mk03",
+    main_product = "vrauks-mk03",
     icons =
         {
             {icon = "__pyalienlifegraphics__/graphics/icons/vrauks.png"},
@@ -241,7 +241,7 @@ RECIPE {
         {type = 'item', name = 'vrauks-mk04', amount = 1},
         {type = 'item', name = 'empty-barrel', amount = 5},
     },
-    --main_product = "vrauks-mk04",
+    main_product = "vrauks-mk04",
     icons =
         {
             {icon = "__pyalienlifegraphics__/graphics/icons/vrauks.png"},

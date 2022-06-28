@@ -49,7 +49,7 @@ RECIPE {
         {type = 'item', name = 'arqad-egg-nest-2', amount = 1},
         {type = 'item', name = 'empty-comb', amount = 5},
     },
-    --main_product = "arqad-mk02",
+    main_product = "arqad-egg-nest-2",
     icons =
         {
             {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
@@ -77,7 +77,7 @@ RECIPE {
         {type = 'item', name ='arqad-egg-2', amount = 20},
         {type = 'item', name = 'empty-barrel-milk', amount = 1},
     },
-    --main_product = "arqad-egg",
+    main_product = "arqad-egg-2",
     icons =
         {
             {icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png"},
@@ -101,7 +101,7 @@ RECIPE {
     results = {
         {type = 'item', name ='arqad-maggot-2', amount = 4},
     },
-    --main_product = "arqad-mk02",
+    main_product = "arqad-maggot-2",
     icons =
         {
             {icon = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png"},
@@ -127,7 +127,7 @@ RECIPE {
     results = {
         {type = 'item', name ='arqad-mk02', amount_min = 3, amount_max = 13},
     },
-    --main_product = "arqad-mk02",
+    main_product = "arqad-mk02",
     icons =
         {
             {icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png"},
@@ -186,7 +186,7 @@ RECIPE {
         {type = 'item', name = 'arqad-egg-nest-3', amount = 1},
         {type = 'item', name = 'empty-comb', amount = 5},
     },
-    --main_product = "arqad-mk03",
+    main_product = "arqad-egg-nest-3",
     icons =
         {
             {icon = "__pyalienlifegraphics__/graphics/icons/korlex.png"},
@@ -213,7 +213,7 @@ RECIPE {
     results = {
         {type = 'item', name ='arqad-egg-3', amount = 20},
     },
-    --main_product = "arqad-egg-3",
+    main_product = "arqad-egg-3",
     icons =
         {
             {icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png"},
@@ -237,7 +237,7 @@ RECIPE {
     results = {
         {type = 'item', name ='arqad-maggot-3', amount = 4},
     },
-    --main_product = "arqad-mk03",
+    main_product = "arqad-maggot-3",
     icons =
         {
             {icon = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png"},
@@ -263,7 +263,7 @@ RECIPE {
     results = {
         {type = 'item', name ='arqad-mk03', amount_min = 3, amount_max = 13},
     },
-    --main_product = "arqad-mk03",
+    main_product = "arqad-mk03",
     icons =
         {
             {icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png"},
@@ -323,7 +323,7 @@ RECIPE {
         {type = 'item', name = 'arqad-egg-nest-4', amount = 1},
         {type = 'item', name = 'empty-comb', amount = 5},
     },
-    --main_product = "arqad-mk04",
+    main_product = "arqad-egg-nest-4",
     icons =
         {
             {icon = "__pyalienlifegraphics__/graphics/icons/phadai.png"},
@@ -351,7 +351,7 @@ RECIPE {
         {type = 'item', name ='arqad-egg-4', amount = 20},
         {type = 'item', name = 'empty-barrel-milk', amount = 5},
     },
-    --main_product = "arqad-egg-4",
+    main_product = "arqad-egg-4",
     icons =
         {
             {icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png"},
@@ -375,7 +375,7 @@ RECIPE {
     results = {
         {type = 'item', name ='arqad-maggot-4', amount = 4},
     },
-    --main_product = "arqad-mk04",
+    main_product = "arqad-maggot-4",
     icons =
         {
             {icon = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png"},
@@ -401,7 +401,7 @@ RECIPE {
     results = {
         {type = 'item', name ='arqad-mk04', amount_min = 3, amount_max = 13},
     },
-    --main_product = "arqad-mk04",
+    main_product = "arqad-mk04",
     icons =
         {
             {icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png"},
