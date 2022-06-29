@@ -5,9 +5,11 @@ RECIPE {
     enabled = false,
     ingredients = {
         {"fluid-drill-mk02", 1},
-        {"iron-gear-wheel", 50},
-        {"iron-plate", 40},
-        {"steam-engine", 1},
+        {"small-parts-02", 20},
+        {"electric-engine-unit", 4},
+        {"advanced-circuit", 5},
+        {"stainless-steel", 40},
+        {"niobium-pipe", 20},
     },
     results = {
         {"fluid-drill-mk03", 1}
@@ -65,7 +67,7 @@ ENTITY {
       emissions_per_minute = 10,
       usage_priority = "secondary-input"
     },
-    energy_usage = "5MW",
+    energy_usage = "900kW",
     resource_searching_radius = 3.49,
     vector_to_place_result = {0, -2.65},
     radius_visualisation_picture = {

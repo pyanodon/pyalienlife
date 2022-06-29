@@ -4,8 +4,11 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"iron-gear-wheel", 50},
-        {"iron-plate", 40},
+        {"burner-mining-drill", 2},
+        {"iron-gear-wheel", 30},
+        {"pipe", 20},
+        {"inductor1", 10},
+        {"steel-plate", 5},
         {"steam-engine", 1},
     },
     results = {
@@ -86,7 +89,7 @@ ENTITY {
             }
         },
     },
-    energy_usage = "5MW",
+    energy_usage = "400kW",
     resource_searching_radius = 3.49,
     vector_to_place_result = {0, -2.65},
     radius_visualisation_picture = {
