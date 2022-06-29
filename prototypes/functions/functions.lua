@@ -1225,9 +1225,9 @@ function overrides.autorecipes(recipe)
         end
         --[[
         for m, module in pairs(data.raw.module) do
-            log(module.name)
+            --log(module.name)
             if string.match(module.name, "speed%-module") ~= nil or string.match(module.name, "effectivity%-module") ~= nil or string.match(module.name, "productivity%-module") ~= nil then
-                log('hit')
+              --log('hit')
                 if module.limitation_blacklist == nil then
                     module.limitation_blacklist = {}
                 end

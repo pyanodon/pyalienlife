@@ -429,11 +429,11 @@ script.on_configuration_changed(function()
 	}
 
     --[[
-    log(serpent.block(global.farms))
-    log(serpent.block(global.indexed_farm_list))
-    log(serpent.block(global.total_farm_count))
-    log(serpent.block(global.checked_farm_counter))
-    log(serpent.block(global.farm_rendered_icons))
+  --log(serpent.block(global.farms))
+  --log(serpent.block(global.indexed_farm_list))
+  --log(serpent.block(global.total_farm_count))
+  --log(serpent.block(global.checked_farm_counter))
+  --log(serpent.block(global.farm_rendered_icons))
     ]]--
 
     rendering.clear("pyalienlife")
@@ -455,11 +455,11 @@ script.on_configuration_changed(function()
     end
 
     --[[
-    log(serpent.block(global.farms))
-    log(serpent.block(global.indexed_farm_list))
-    log(serpent.block(global.total_farm_count))
-    log(serpent.block(global.checked_farm_counter))
-    log(serpent.block(global.farm_rendered_icons))
+  --log(serpent.block(global.farms))
+  --log(serpent.block(global.indexed_farm_list))
+  --log(serpent.block(global.total_farm_count))
+  --log(serpent.block(global.checked_farm_counter))
+  --log(serpent.block(global.farm_rendered_icons))
     ]]--
 
 end)
@@ -740,7 +740,7 @@ end)
 
 script.on_event(defines.events.on_gui_elem_changed, function(event)
      if string.match(event.element.name, "outpost_request_elem_") ~= nil then
-        log(event.element.elem_value)
+        --log(event.element.elem_value)
         local parent = event.element.parent
         local sp = parent.add({
             type = "sprite-button",

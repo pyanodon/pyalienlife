@@ -103,7 +103,7 @@ script.on_init(
 
 script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity}, function(event)
         local E = event.created_entity
-        log(E.name)
+      --log(E.name)
 		--log(serpent.block(landbots))
 
         --swap the roboport for the control tower entity
