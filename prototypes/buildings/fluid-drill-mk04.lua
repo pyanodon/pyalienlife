@@ -5,11 +5,9 @@ RECIPE {
     enabled = false,
     ingredients = {
         {"fluid-drill-mk03", 1},
-        {"ns-material", 5},
         {"small-parts-03", 20},
-        {"sc-engine", 4},
-        {"electronics-mk03", 2},
-        {"controler-mk03", 1},
+        {"electric-engine-unit", 4},
+        {"processing-unit", 5},
         {"low-density-structure", 40},
         {"niobium-pipe", 20},
         {"super-steel", 40},
