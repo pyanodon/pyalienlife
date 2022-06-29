@@ -6,7 +6,7 @@ RECIPE {
     ingredients = {
         {"fluid-drill-mk01", 1},
         {"electric-mining-drill", 2},
-        {"electronic-circuits", 10},
+        {"electronic-circuit", 10},
         {"iron-gear-wheel", 50},
         {"steel-plate", 10},
         {"aluminium-plate", 20},
