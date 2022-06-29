@@ -175,7 +175,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = "item", name = "lens", amount = 3},
-        {type = "item", name = "engine-unit", amount = 1},
+        {type = "item", name = "electric-engine-unit", amount = 1},
         {type = "item", name = "equipment-chassi", amount = 2},
         {type = "item", name = "electronic-circuit", amount = 1},
         {type = "item", name = "small-parts-01", amount = 5},
