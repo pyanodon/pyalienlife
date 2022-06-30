@@ -20,7 +20,7 @@ fun.autorecipes {
                     {name='sea-sponge', amount =1},
 					{name='simik-food-01', amount =2},
 					{name='olefin-barrel', amount=5, return_barrel = true},
-					{name= 'molten-iron-barrel', amount = 2, return_barrel = true},
+					{name= 'molten-iron-barrel', amount = 2, return_barrel = false},
 				},
 			results =
 				{
