@@ -60,7 +60,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-ralesia',
     order = 'zb'
-}:add_unlock("moondrop-mk03")
+}:add_unlock("moondrop-mk04")
 
 --mk04--
 --WIP--
@@ -90,4 +90,4 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-ralesia',
     order = 'zc'
-}:add_unlock("moondrop-mk04")
+}:add_unlock("moondrop-mk05")

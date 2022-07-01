@@ -201,7 +201,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'cocoon-mk03', amount = 50},
         {type = 'item', name = 'vrauks-food-02', amount = 3},
-        {type = 'item', name = 'zinc-finger-proteins', amount = 1},
+        {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'bedding', amount = 4},
         {type = 'item', name = 'saps', amount = 8},
         {type = 'item', name = 'native-flora', amount = 15},
@@ -229,7 +229,7 @@ RECIPE {
         {type = 'item', name = 'vrauks-mk04', amount = 1},
         {type = 'item', name = 'cocoon-mk04', amount = 1},
         {type = 'item', name = 'vrauks-food-02', amount = 3},
-        {type = 'item', name = 'zinc-finger-proteins', amount = 1},
+        {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'bedding', amount = 4},
         {type = 'item', name = 'saps', amount = 8},
         {type = 'item', name = 'native-flora', amount = 15},

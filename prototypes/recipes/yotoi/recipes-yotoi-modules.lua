@@ -93,7 +93,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'yotoi-mk02', amount = 1},
-        {type = 'fluid', name = 'cold-clean-air', amount = 50},
+        {type = 'fluid', name = 'nitrogen', amount = 50},
         },
     results = {
         {type = 'item', name = 'yotoi-fruit-mk02', amount = 2},

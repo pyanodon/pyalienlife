@@ -6,12 +6,10 @@ RECIPE {
     ingredients = {
                 {'xyhiphoe-pool-mk02', 1},
                 {'titanium-plate', 50},
-                {"sc-unit", 15},
                 {"nbti-alloy", 20},
                 {'stainless-steel', 20},
                 {"electric-engine-unit", 8},
                 {"molybdenum-plate", 20},
-                {"boron-carbide", 15},
                 {'processing-unit', 10}
             },
     results = {

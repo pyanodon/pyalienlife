@@ -16,6 +16,15 @@ TECHNOLOGY("fluid-processing-machines-1"):add_pack("py-science-pack-1")
 TECHNOLOGY("lab-instrument"):add_pack("py-science-pack-1")
 TECHNOLOGY("railway-mk01"):add_pack("py-science-pack-1")
 TECHNOLOGY("filtration-mk02"):add_pack("py-science-pack-2")
+TECHNOLOGY("mukmoux"):add_pack("py-science-pack-2")
+TECHNOLOGY("cooling-tower-2"):add_pack("py-science-pack-2")
+TECHNOLOGY("railway-mk02"):add_pack("py-science-pack-2")
+TECHNOLOGY("energy-2"):add_pack("py-science-pack-2")
+TECHNOLOGY("radars-mk02"):add_pack("py-science-pack-2")
+TECHNOLOGY("kevlar"):add_pack("py-science-pack-2")
+TECHNOLOGY("fine-electronics"):add_pack("py-science-pack-2")
+TECHNOLOGY("advanced-electronics"):add_pack("py-science-pack-2")
+
 
 if not mods["pyalternativeenergy"] then
     TECHNOLOGY("energy-3"):add_pack("py-science-pack-2")
@@ -116,6 +125,9 @@ RECIPE("hpf"):add_unlock("coal-processing-1"):set_enabled(false)
 RECIPE("washer"):add_unlock("soil-washing"):set_enabled(false)
 RECIPE("muddy-sludge"):add_unlock("soil-washing"):set_enabled(false)
 RECIPE("soil-washing"):add_unlock("soil-washing"):set_enabled(false)
+
+RECIPE("tpa"):replace_ingredient("nichrome", "cobalt-extract"):add_ingredient{type = "item", name = "yotoi-fruit", amount = 1}:add_ingredient{type = "fluid", name = "manure-bacteria", amount = 20}
+RECIPE("optical-fiber"):add_ingredient{type = "item", name = "photophore", amount = 1}
 
 RECIPE("automation-science-pack"):clear_ingredients():add_ingredient({type="item", name="planter-box", amount=1}):add_ingredient({type="item", name="native-flora", amount=5}):add_ingredient({type="item", name="electronic-circuit", amount=1})
 RECIPE("automation-science-pack"):set_fields{ energy_required = 5, results = {{type = "item", name = "automation-science-pack", amount = 1}} }

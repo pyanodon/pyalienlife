@@ -43,7 +43,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'fish', amount = 20},
         {type = 'item', name = 'fish-food-02', amount = 3},
-        {type = 'item', name = 'alien-sample-03', amount = 1},
+        {type = 'item', name = 'alien-sample-02', amount = 1},
         {type = 'item', name = 'filtration-media', amount = 5},
         {type = 'item', name = "seaweed", amount = 10},
         {type = 'fluid', name = 'phytoplankton', amount = 60},
@@ -72,7 +72,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'fish', amount = 20},
         {type = 'item', name = 'fish-food-02', amount = 3},
-        {type = 'item', name = 'zinc-finger-proteins', amount = 1},
+        {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'filtration-media', amount = 5},
         {type = 'item', name = "seaweed", amount = 10},
         {type = 'fluid', name = 'phytoplankton', amount = 60},
