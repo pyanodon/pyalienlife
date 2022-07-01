@@ -4,7 +4,7 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"ticocr-alloy", 15},
+        -- {"ticocr-alloy", 15},
         {"sponge-culture-mk02", 1},
         {"nbti-alloy", 25},
         {"electric-engine-unit", 5},

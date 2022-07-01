@@ -12,6 +12,10 @@ TECHNOLOGY("py-asphalt"):add_pack("py-science-pack-1")
 TECHNOLOGY("separation"):add_pack("py-science-pack-1")
 TECHNOLOGY("fertilizer-mk03"):remove_pack("chemical-science-pack")
 TECHNOLOGY("starch-mk02"):remove_pack("chemical-science-pack")
+TECHNOLOGY("ethylene"):add_pack("py-science-pack-2")
+TECHNOLOGY("semiconductor-doping"):add_pack("py-science-pack-2")
+TECHNOLOGY("integrated-circuits-1"):add_pack("py-science-pack-2")
+TECHNOLOGY("basic-electronics"):add_pack("py-science-pack-2")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/cadavericarum-mk01")
@@ -61,7 +65,6 @@ data.raw["recipe-category"]["moon"].modules_required = true
 TECHNOLOGY("melamine"):remove_pack('logistic-science-pack'):add_pack("py-science-pack-1")
 TECHNOLOGY("fiberboard"):remove_pack('logistic-science-pack'):add_pack("py-science-pack-1")
 TECHNOLOGY("integrated-circuits-2"):add_pack("py-science-pack-2")
-TECHNOLOGY("advanced-electronics"):add_pack("py-science-pack-2")
 TECHNOLOGY("energy-shield-mk2-equipment"):add_pack("py-science-pack-2")
 TECHNOLOGY("battery-mk2-equipment"):add_pack("py-science-pack-2")
 TECHNOLOGY("personal-laser-defense-equipment"):add_pack("py-science-pack-2")
@@ -69,6 +72,9 @@ TECHNOLOGY("discharge-defense-equipment"):add_pack("py-science-pack-2")
 TECHNOLOGY("speed-module-2"):add_pack("py-science-pack-2")
 TECHNOLOGY("productivity-module-2"):add_pack("py-science-pack-2")
 TECHNOLOGY("effectivity-module-2"):add_pack("py-science-pack-2")
+TECHNOLOGY("nylon"):add_pack("py-science-pack-2")
+TECHNOLOGY("phenol"):add_pack("py-science-pack-2")
+TECHNOLOGY("epoxy"):add_pack("py-science-pack-2")
 
 --(( ORES ))--
 require('prototypes/ores/kicalk')
@@ -297,7 +303,7 @@ RECIPE('rennea-plantation-mk03'):add_ingredient({type = "item", name = "carbon-n
 RECIPE('sap-extractor-mk03'):add_ingredient({type = "item", name = "graphene-roll", amount = 30})
 RECIPE('scrondrix-pen-mk03'):add_ingredient({type = "item", name = "carbon-nanotube", amount = 30})
 RECIPE('slaughterhouse-mk03'):add_ingredient({type = "item", name = "paramagnetic-material", amount = 20}):add_ingredient({type = "item", name = "graphene-roll", amount = 50})
-RECIPE('sponge-culture-mk03'):add_ingredient({type = "item", name = "phosphate-glass", amount = 40}):add_ingredient({type = "item", name = "biopolymer", amount = 20})
+RECIPE('sponge-culture-mk03'):add_ingredient({type = "item", name = "phosphate-glass", amount = 40})
 RECIPE('trits-reef-mk03'):add_ingredient({type = "item", name = "phosphate-glass", amount = 50}):add_ingredient({type = "item", name = "superconductor", amount = 10})
 RECIPE('tuuphra-plantation-mk03'):add_ingredient({type = "item", name = "paramagnetic-material", amount = 30}):add_ingredient({type = "item", name = "graphene-roll", amount = 50})
 RECIPE('ulric-corral-mk03'):add_ingredient({type = "item", name = "superconductor", amount = 5}):add_ingredient({type = "item", name = "biopolymer", amount = 15})
@@ -428,7 +434,7 @@ RECIPE('fawogae2'):remove_unlock('advanced-electronics')
 ITEM('urea'):subgroup_order("py-alienlife-auog", "a")
 ITEM('mosfet'):subgroup_order("py-hightech-tier-2", "f")
 RECIPE('waste-water-urea'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('fluid-separation'):add_unlock('fish-mk02')
-RECIPE('ammonia-urea'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('oil-processing'):add_unlock('biotech-mk02')
+RECIPE('ammonia-urea'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('basic-electronics'):add_unlock('biotech-mk02')
 RECIPE('urea2'):remove_unlock('auog-2')
 RECIPE('urea'):set_fields {enabled = false}
 RECIPE('mukmoux-fat2'):remove_unlock('advanced-electronics')
@@ -453,6 +459,8 @@ RECIPE("liquid-manure"):remove_unlock("cottongut-science-mk01"):add_unlock("mela
 RECIPE("lithium-chloride"):remove_unlock("earnshaw-theorem"):add_unlock("biobattery")
 RECIPE("lithium-niobate"):remove_unlock("parametric-oscilator"):add_unlock("biobattery")
 RECIPE("py-science-pack-4"):replace_ingredient("plastic-bar", "biopolymer")
+RECIPE("cumene"):remove_unlock("phenol"):add_unlock("light-oil-mk03")
+RECIPE("cumene-distilation"):remove_unlock("phenol"):add_unlock("light-oil-mk03")
 
 RECIPE('simik-food-01'):add_ingredient({type = "item", name = "cadaveric-arum", amount = 2})
 fun.add_ingredient('simik-food-01', {name = "cadaveric-arum", amount = 2})
@@ -492,6 +500,8 @@ RECIPE('methane-co2'):add_ingredient('moondrop-seeds')
 
 RECIPE("plastic-from-casein"):add_ingredient({type = 'fluid', name = 'methanal', amount = 100}):remove_unlock("korlex"):add_unlock("plastics-mk02")
 RECIPE("charcoal-briquette"):replace_ingredient("raw-fiber", "fiber")
+RECIPE("yotoi-fruit-mk02"):replace_ingredient("nitrogen", "cold-clean-air")
+
 
 TECHNOLOGY("paramagnetic-material"):remove_pack('production-science-pack'):remove_prereq('production-science-pack')
 TECHNOLOGY("aerogel"):remove_pack('production-science-pack'):remove_prereq('production-science-pack')
@@ -679,7 +689,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'phenol', amount = 5},
     },
-}:add_unlock("cellulose-mk02")
+}:add_unlock("phenol")
 
 RECIPE {
     type = 'recipe',
@@ -1115,7 +1125,7 @@ RECIPE {
         {type = 'item', name = 'phenol', amount = 6},
     },
     --main_product = "b-molasse",
-}:add_unlock("mycology-mk03")
+}:add_unlock("phenol")
 
 RECIPE {
     type = 'recipe',

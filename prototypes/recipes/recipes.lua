@@ -232,11 +232,11 @@ RECIPE {
         {type = 'item', name = 'solidified-sarcorus', amount = 2},
         {type = 'item', name = 'alien-sample-02', amount = 1},
         {type = 'item', name = 'casein', amount = 3},
-        {type = 'fluid', name = 'formic-acid', amount = 50},
+        {type = 'fluid', name = 'arqad-honey', amount = 50},
         {type = 'fluid', name = 'flavonoids', amount = 50},
         {type = 'item', name = 'plastic-bar', amount = 10},
         {type = 'item', name = 'flask', amount = 1},
-        {type = 'item', name = 'stainless-steel', amount = 10},
+        -- {type = 'item', name = 'stainless-steel', amount = 10},
     },
     results = {
         {type = 'item', name = 'py-science-pack-2', amount = 3},
@@ -1728,7 +1728,7 @@ RECIPE {
         {type = 'item', name = 'sporopollenin', amount = 5},
     },
     --main_product = "b-molasse",
-}:add_unlock("mycology-mk02")
+}:add_unlock("rennea")
 
 RECIPE {
     type = 'recipe',
@@ -2858,7 +2858,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'empty-planter-box', amount = 1},
         {type = 'item', name = 'soil', amount = 5},
-        {type = 'item', name = 'ash', amount = 1},
+        {type = 'item', name = 'ash', amount = 3},
     },
     results = {
         {type = 'item', name = 'planter-box', amount = 1},
