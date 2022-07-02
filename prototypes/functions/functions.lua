@@ -940,9 +940,9 @@ end
 
 function modify_recipe_tables(item,items_table,previous_item_names, result_table)
     --process both result and ingredient tables
-    log(serpent.block(item))
-    log(serpent.block(items_table))
-    log(serpent.block(previous_item_names))
+    --log(serpent.block(item))
+    --log(serpent.block(items_table))
+    --log(serpent.block(previous_item_names))
     --log(serpent.block(result_table))
 
     local barrel
@@ -952,14 +952,14 @@ function modify_recipe_tables(item,items_table,previous_item_names, result_table
 
         local name
         if data.raw.item[item.name] ~= nil or data.raw.module[item.name] ~= nil or data.raw.fluid[item.name] then
-            log("hit")
+            --log("hit")
             name = item.name
         elseif type(item.fallback) == "string" then
-            log('hit')
+            --log('hit')
             name = item.fallback
             item.name = name
         elseif type(item.fallback) == "table" and item.fallback.name ~= nil then
-            log('hit')
+            --log('hit')
             name = item.fallback.name
             item.name = name
             if item.fallback.amount ~= nil then
@@ -979,7 +979,7 @@ function modify_recipe_tables(item,items_table,previous_item_names, result_table
             end
         ]]--
         if previous_item_names[name] ~= true then
-            log('hit')
+            --log('hit')
             --log(serpent.block(name))
             --add new ingredient to table
 
@@ -1002,7 +1002,7 @@ function modify_recipe_tables(item,items_table,previous_item_names, result_table
             --log(serpent.block(items_table))
         elseif previous_item_names[name] == true then
             --alter existing ingredient
-            log("hit")
+            --log("hit")
             if item.remove_item ~= nil and item.remove_item == true then
                 for p, pre in pairs(items_table) do
                     if pre.name == name then
@@ -1013,12 +1013,12 @@ function modify_recipe_tables(item,items_table,previous_item_names, result_table
             elseif item.amount == nil then
                 if item.add_amount ~= nil then
                     --adding ingredient amount
-                    log("hit")
+                    --log("hit")
                     for p, pre in pairs(items_table) do
                         if pre.name == name then
                             if pre.amount ~= nil then
-                            log(serpent.block(pre))
-                            log(serpent.block(item))
+                            --log(serpent.block(pre))
+                            --log(serpent.block(item))
                             pre.amount = item.add_amount + pre.amount
                             elseif pre.amount_min ~= nil and pre.amount_max ~= nil then
                                 pre.amount_min = pre.amount_min + item.add_amount
@@ -1143,7 +1143,7 @@ function overrides.autorecipes(recipe)
     --log('hit')
     --main details for all recipes
     local name = recipe.name
-    log(name)
+    --log(name)
         --default name for recipes if recipe doesnt provide an override
     local numbered_name
     local category = recipe.category
