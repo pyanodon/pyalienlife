@@ -945,8 +945,13 @@ function modify_recipe_tables(item,items_table,previous_item_names, result_table
     log(serpent.block(previous_item_names))
     --log(serpent.block(result_table))
 
+    local barrel
+        if string.match(item.name, "%-barrel") ~= nil and string.match(item.name, "empty-barrel") == nil or string.match(item.name, "empty-milk-barrel") then
+            barrel = string.gsub(item.name, "%-barrel", "")
+        end
+
         local name
-        if data.raw.item[item.name] ~= nil or data.raw.module[item.name] ~= nil or data.raw.fluid[item.name] or string.match(item.name, "barrel") ~= nil then
+        if data.raw.item[item.name] ~= nil or data.raw.module[item.name] ~= nil or data.raw.fluid[item.name] then
             log("hit")
             name = item.name
         elseif type(item.fallback) == "string" then
@@ -960,6 +965,8 @@ function modify_recipe_tables(item,items_table,previous_item_names, result_table
             if item.fallback.amount ~= nil then
                 item.amount = item.fallback.amount
             end
+        elseif data.raw.fluid[barrel] ~= nil then
+            name = item.name
         end
         --log(name)
 
