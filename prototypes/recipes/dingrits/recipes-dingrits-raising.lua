@@ -83,7 +83,7 @@ fun.autorecipes {
 					{name='caged-scrondrix', amount =2},
 					{name='pheromones', amount =1},
                     {name='yotoi-seeds', amount =30},
-					--{name='water-barrel', amount=6,return_item={name='empty-barrel', amount=6}},
+					--{name='water-barrel', amount=6,return_barrel = true},
 					--{name='bedding', amount = 1},
 				},
 			results =

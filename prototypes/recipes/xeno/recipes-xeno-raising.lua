@@ -82,7 +82,7 @@ fun.autorecipes {
 					{name='caged-ulric',remove_item = true},
 					--{name='bones', amount =15},
 					{name='pheromones', amount =1},
-					--{name='water-barrel', amount=6,return_item={name='empty-barrel', amount=6}},
+					--{name='water-barrel', amount=6,return_barrel = true},
 					--{name='fish', amount = 1},
 				},
 			results =

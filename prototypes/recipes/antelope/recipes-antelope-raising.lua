@@ -15,7 +15,7 @@ fun.autorecipes {
                     {name='rennea', amount =15},
                     {name='navens', amount =10},
                     {name='tuuphra-seeds', amount =15},
-					{name='water-barrel', amount=6,return_item={name='empty-barrel', amount=6}},
+					{name='water-barrel', amount=6,return_barrel = true},
 					{name='cage-antelope', amount=1},
 				},
 			results =

@@ -16,7 +16,7 @@ fun.autorecipes {
 				{
                     {name='cottongut', amount =6},
                     {name='fawogae', amount =20},
-					{name='water-barrel', amount=15,return_item={name='empty-barrel', amount=15}},
+					{name='water-barrel', amount=15,return_barrel = true},
 					--{name='cage', amount=1},
                     {name='bedding', amount = 1},
                     {name='programmable-speaker', amount=1},
@@ -128,7 +128,7 @@ fun.autorecipes {
 					--{name='meat', amount =15},
 					{name='pheromones', amount =1},
                     {name='fawogae', amount =30},
-					--{name='water-barrel', amount=6,return_item={name='empty-barrel', amount=6}},
+					--{name='water-barrel', amount=6,return_barrel = true},
 					--{name='bedding', amount = 1},
 				},
 			results =

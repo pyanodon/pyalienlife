@@ -89,7 +89,7 @@ fun.autorecipes {
 					{name='simik-food-02',remove_item = true},
 					{name='stone-wool', amount =5},
 					{name='pheromones', amount =1},
-					--{name='olefin-barrel', amount=6,return_item={name='empty-barrel', amount=6}},
+					--{name='olefin-barrel', amount=6,return_barrel = true},
 					--{name='yotoi-leaves', amount = 3},
 				},
 			results =

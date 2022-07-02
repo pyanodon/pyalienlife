@@ -87,7 +87,7 @@ fun.autorecipes {
 					--{name='fish-food-01', amount =15},
 					{name='pheromones', amount =1},
                     --{name='phytoplankton', amount =15},
-					--{name='water-barrel', amount=6,return_item={name='empty-barrel', amount=6}},
+					--{name='water-barrel', amount=6,return_barrel = true},
 					--{name='saps', amount = 1},
 				},
 			results =

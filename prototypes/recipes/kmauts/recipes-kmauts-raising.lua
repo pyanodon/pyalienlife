@@ -81,7 +81,7 @@ fun.autorecipes {
 					{name='caged-ulric', amount =4},
 					{name='pheromones', amount =2},
                     {name='rennea', amount =15},
-					--{name='water-barrel', amount=6,return_item={name='empty-barrel', amount=6}},
+					--{name='water-barrel', amount=6,return_barrel = true},
 					--{name='bedding', amount = 1},
 				},
 			results =

@@ -84,7 +84,7 @@ fun.autorecipes {
 					{name='arthurian-food-02',remove_item = true},
 					{name='fawogae', amount =15},
 					{name='pheromones', amount =1},
-					--{name='water-barrel', amount=6,return_item={name='empty-barrel', amount=6}},
+					--{name='water-barrel', amount=6,return_barrel = true},
 					--{name='bedding', amount = 1},
 				},
 			results =

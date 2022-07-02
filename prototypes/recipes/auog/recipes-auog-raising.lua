@@ -16,7 +16,7 @@ fun.autorecipes {
 					{name= 'auog', amount=2},
                     {name='native-flora', amount =20},
                     {name='moss', amount =10},
-					{name='water-barrel', amount=5,return_item={name='empty-barrel', amount=5}},
+					{name='water-barrel', amount=5,return_barrel = true},
 				},
 			results =
 				{
@@ -162,7 +162,7 @@ fun.autorecipes {
 					{name='auog-pup', amount=4},
                     {name='native-flora', amount =20},
                     {name='moss', amount =10},
-					{name='water-barrel', amount=5,return_item={name='empty-barrel', amount=5}},
+					{name='water-barrel', amount=5,return_barrel = true},
 				},
 			results =
 				{

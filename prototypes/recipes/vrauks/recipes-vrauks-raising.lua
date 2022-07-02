@@ -69,7 +69,7 @@ fun.autorecipes {
 					{name='cocoon', add_amount = 10},
 					{name='bedding', add_amount = 5},
 					{name='honeycomb', amount = 4},
-					{name='syrup-01-barrel', amount=2,return_item={name='empty-barrel', amount=2}},
+					{name='syrup-01-barrel', amount=2,return_barrel = true},
 				},
 			results =
 				{
@@ -164,7 +164,7 @@ fun.autorecipes {
 					{name='vrauks-food-02', add_amount = 8},
 					{name='bedding', add_amount = 5},
 					{name='honeycomb', amount = 4},
-					{name='syrup-01-barrel', amount=2,return_item={name='empty-barrel', amount=2}},
+					{name='syrup-01-barrel', amount=2,return_barrel = true},
 					{name='fawogae', amount = 5},
 				},
 			results =
