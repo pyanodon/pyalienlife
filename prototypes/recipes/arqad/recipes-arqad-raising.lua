@@ -48,7 +48,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name='yaedols', amount =1},
-					{name='arqad-jelly-barrel', amount = 3, return_barrel = true},
+					{name = 'arqad-jelly-barrel', amount = 3, return_barrel = true},
 					{name = 'arqad', add_amount = 3},
 				},
 			results =
@@ -151,7 +151,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'arqad-maggot', add_amount = 5},
-                    {name='arqad-jelly-barrel', amount = 5,return_barrel = true},
+                    {name = 'arqad-jelly-barrel', amount = 5,return_barrel = true},
 					{name = 'vrauks', add_amount = 2},
 					{name = 'vrauks-food-01', add_amount = 2}
 				},
@@ -167,7 +167,7 @@ fun.autorecipes {
 			ingredients =
 				{
 					{name = 'arqad-maggot', add_amount = 5},
-                    {name='arqad-jelly-barrel', add_amount = 3,return_barrel = true},
+                    {name = 'arqad-jelly-barrel', add_amount = 3,return_barrel = true},
 					{name = 'vrauks', add_amount = 1},
 					{name = 'vrauks-food-02', add_amount = 1}
 				},
@@ -176,7 +176,7 @@ fun.autorecipes {
 					{name='arqad-egg-nest', add_amount = 1},
 				},
 			crafting_speed = 50,
-			tech = 'arqad-mk03'
+			tech = 'arqad-mk03',
 		},
 		--utility
 		{

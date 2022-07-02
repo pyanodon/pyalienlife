@@ -34,7 +34,7 @@ fun.autorecipes {
 				{
 					{name = 'zungror', add_amount = 2},
 					{name = 'bedding', amount = 3},
-					{name = 'water-barrel', add_amount = 5, return_barrel = true},
+					{name = 'water-barrel', amount = 5, return_barrel = true},
 				},
 			results =
 				{
