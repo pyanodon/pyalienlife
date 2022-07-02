@@ -22,6 +22,7 @@ TECHNOLOGY("aramid"):add_pack("py-science-pack-2")
 TECHNOLOGY("stainless-steel-mk01"):add_pack("py-science-pack-2")
 TECHNOLOGY("titanium-mk02"):add_pack("py-science-pack-2")
 TECHNOLOGY("uranium-mk01"):add_pack("py-science-pack-2")
+TECHNOLOGY("salts"):add_pack("py-science-pack-2")
 
 if not mods["pyalternativeenergy"] then
     TECHNOLOGY("uranium-mk02"):add_pack("py-science-pack-2")
