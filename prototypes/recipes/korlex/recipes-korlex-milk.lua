@@ -80,7 +80,7 @@ fun.autorecipes {
 			ingredients =
 				{
                     {name='fish', add_amount = 5},
-                    {name='empty-barrel-milk', amount = 3},
+                    {name='empty-barrel-milk', add_amount = 3},
 				},
 			results =
 				{
