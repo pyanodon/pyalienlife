@@ -75,6 +75,8 @@ TECHNOLOGY("effectivity-module-2"):add_pack("py-science-pack-2")
 TECHNOLOGY("nylon"):add_pack("py-science-pack-2")
 TECHNOLOGY("phenol"):add_pack("py-science-pack-2")
 TECHNOLOGY("epoxy"):add_pack("py-science-pack-2")
+TECHNOLOGY("rayon"):add_pack("py-science-pack-2")
+TECHNOLOGY("nitrobenzene"):add_pack("py-science-pack-2")
 
 --(( ORES ))--
 require('prototypes/ores/kicalk')
