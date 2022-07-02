@@ -78,11 +78,6 @@ TECHNOLOGY("epoxy"):add_pack("py-science-pack-2")
 TECHNOLOGY("rayon"):add_pack("py-science-pack-2")
 TECHNOLOGY("nitrobenzene"):add_pack("py-science-pack-2")
 
-if not mods["pyalternativeenergy"] then
-    TECHNOLOGY("battery"):add_pack("py-science-pack-2")
-    TECHNOLOGY("electric-energy-accumulators"):add_pack("py-science-pack-2")
-end
-
 --(( ORES ))--
 require('prototypes/ores/kicalk')
 require('prototypes/ores/arum')
