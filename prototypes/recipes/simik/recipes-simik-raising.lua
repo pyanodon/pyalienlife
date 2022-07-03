@@ -20,7 +20,7 @@ fun.autorecipes {
                     {name='sea-sponge', amount =1},
 					{name='simik-food-01', amount =2},
 					{name='olefin-barrel', amount=5, return_barrel = true},
-					{name= 'molten-iron-barrel', amount = 2, return_barrel = false},
+					{name= 'molten-iron-barrel', amount = 2, return_barrel = true},
 				},
 			results =
 				{
@@ -37,7 +37,7 @@ fun.autorecipes {
 					{name='arqad-maggot', amount = 4},
 					{name='stone', amount = 10},
 					{name = 'molten-iron-barrel', remove_item = true},
-					{name = 'molten-steel-barrel', amount = 2, return_barrel = false}
+					{name = 'molten-steel-barrel', amount = 2, return_barrel = true}
 				},
 			results =
 				{
@@ -52,7 +52,7 @@ fun.autorecipes {
 				{
 					{name='simik-food-02', amount =2},
 					{name = 'molten-steel-barrel', remove_item = true},
-					{name = 'molten-stainless-steel-barrel', amount = 2, return_barrel = false}
+					{name = 'molten-stainless-steel-barrel', amount = 2, return_barrel = true}
 				},
 			results =
 				{
@@ -67,7 +67,7 @@ fun.autorecipes {
 				{
 					{name='stone', add_amount = 10},
 					{name = 'molten-stainless-steel-barrel', remove_item = true},
-					{name = 'molten-super-steel-barrel', amount = 2, return_barrel = false}
+					{name = 'molten-super-steel-barrel', amount = 2, return_barrel = true}
 				},
 			results =
 				{

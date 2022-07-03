@@ -1004,8 +1004,35 @@ function modify_recipe_tables(item,items_table,previous_item_names, result_table
             --alter existing ingredient
             --log("hit")
             if item.remove_item ~= nil and item.remove_item == true then
+                --log("hit")
                 for p, pre in pairs(items_table) do
+                    --log("hit")
                     if pre.name == name then
+                        if string.match(item.name, "%-barrel") ~= nil and string.match(item.name, "empty%-barrel") == nil or string.match(item.name, "empty%-milk%-barrel") == nil then
+                            --log("hit")
+                            local barrel_name
+                            if string.match(item.name, "barrel") ~= nil then
+                                barrel_name = 'empty-barrel'
+                            elseif string.match(item.name, "canister") ~= nil then
+                                barrel_name = "empty-fuel-canister"
+                            end
+                            local amount = items_table[p].amount
+                            --log(amount)
+                            if result_table ~= nil and next(result_table) ~= nil then
+                                if result_table.no_returns == nil or result_table.no_returns ~= nil and result_table.no_returns[item.name] ~= true then
+                                    for r, result in pairs(result_table) do
+                                        --log("hit")
+                                        --log(serpent.block(r))
+                                        --log(serpent.block(result))
+                                        if result.name == barrel_name then
+                                            --log("hit")
+                                            result.amount = result.amount - amount
+                                            --log(serpent.block(result))
+                                        end
+                                    end
+                                end
+                            end
+                        end
                         items_table[p] = nil
                         previous_item_names[name] = nil
                     end
