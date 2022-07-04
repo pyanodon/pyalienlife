@@ -750,7 +750,7 @@ ITEM {
 {
     type = "tool",
     name = "py-science-pack-1",
-    icon = "__pycoalprocessinggraphics__/graphics/icons/science-pack-1.png",
+    icon = "__pycoalprocessinggraphics__/graphics/icons/py-science-pack-1.png",
     icon_size = 64,
     subgroup = "py-alienlife-items",
     order = "a-a",
