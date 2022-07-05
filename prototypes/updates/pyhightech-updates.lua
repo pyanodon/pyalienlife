@@ -180,6 +180,7 @@ RECIPE("inductor1"):remove_unlock("vacuum-tube-electronics"):add_unlock("ceramic
 RECIPE("pulp-mill-mk01"):replace_ingredient("fbreactor-mk01", "distilator")
 RECIPE("pcb-factory-mk01"):replace_ingredient("fbreactor-mk01", "electronics-factory-mk01")
 RECIPE("fbreactor-mk01"):remove_unlock("vacuum-tube-electronics"):add_unlock("melamine")
+RECIPE("solid-separator"):replace_ingredient("electronic-circuit", "inductor1")
 
 RECIPE("perfect-samples"):add_ingredient{type = 'item', name = 'dimensional-gastricorg', amount = 1}
 

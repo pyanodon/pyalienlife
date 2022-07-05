@@ -142,6 +142,10 @@ RECIPE("coal-gas-from-wood"):add_unlock("coal-processing-1"):set_enabled(false)
 RECIPE("coal-gas-from-coke"):add_unlock("coal-processing-1"):set_enabled(false)
 RECIPE("distilled-raw-coal"):add_unlock("coal-processing-1"):set_enabled(false)
 
+RECIPE("solid-separator"):remove_unlock("separation"):add_unlock("ash-separation")
+RECIPE("ash-separation"):remove_unlock("separation"):add_unlock("ash-separation")
+RECIPE("soot-separation"):remove_unlock("separation"):add_unlock("ash-separation")
+
 fun.results_replacer("log2", "log", "log",4)
 fun.results_replacer("log4", "log", "log",5)
 fun.results_replacer("log3", "log", "log",6)
