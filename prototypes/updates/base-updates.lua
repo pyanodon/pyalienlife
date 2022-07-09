@@ -44,6 +44,8 @@ TECHNOLOGY("production-science-pack"):add_pack("py-science-pack-2"):add_pack("py
 TECHNOLOGY("utility-science-pack"):add_pack("py-science-pack-3"):add_pack("py-science-pack-4")
 TECHNOLOGY("chemical-science-pack"):add_pack("py-science-pack-2")
 
+TECHNOLOGY("military-2"):remove_pack("logistic-science-pack"):add_pack("py-science-pack-1")
+
 ITEM("raw-fish", "capsule"):set("icon", "__pyalienlifegraphics__/graphics/icons/fish.png")
 ITEM("raw-fish", "capsule"):set("icon_size", 32)
 ITEM("raw-fish", "capsule"):set("icon_mipmaps", nil)
