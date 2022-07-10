@@ -52,7 +52,7 @@ ENTITY {
     {
       type = "burner",
       --fuel_category = "chemical",
-      fuel_categories = {"chemical", "biomass"},
+      fuel_categories = {"chemical", "biomass", "jerry"},
       effectivity = 1,
       fuel_inventory_size = 1,
       burnt_inventory_size = 1,
