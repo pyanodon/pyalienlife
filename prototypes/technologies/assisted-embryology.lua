@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/assisted-embryology.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"biotech-mk03","land-animals-mk03","diamond-mining","immunosupressants"},
+    prerequisites = {"biotech-mk03","land-animals-mk03","immunosupressants"},
     effects = {},
     unit = {
         count = 300,

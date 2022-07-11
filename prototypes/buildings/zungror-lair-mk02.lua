@@ -15,7 +15,7 @@ RECIPE {
     results = {
         {"zungror-lair-mk02", 1}
     }
-}:add_unlock("zungror-mk02")
+}:add_unlock("land-animals-mk03")
 
 ITEM {
     type = "item",

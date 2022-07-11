@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/bhoddos.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"mycology-mk01","genetics-mk01", "uranium-mk01"},
+    prerequisites = {"mycology-mk01","genetics-mk01"},
     effects = {},
     unit = {
         count = 150,

@@ -15,7 +15,7 @@ RECIPE {
     results = {
         {"zungror-lair-mk03", 1}
     }
-}:add_unlock("zungror-mk03"):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 5}):add_ingredient({type = "item", name = "harmonic-absorber", amount = 10})
+}:add_unlock("land-animals-mk04"):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 5}):add_ingredient({type = "item", name = "harmonic-absorber", amount = 10})
 
 ITEM {
     type = "item",

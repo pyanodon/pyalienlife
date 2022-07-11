@@ -22,7 +22,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/domestication-2.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"domestication","biotech-mk02","land-animals-mk02"},
+    prerequisites = {"domestication","biotech-mk02"},
     dependencies = {"domestication"},
     effects = {},
     unit = {
@@ -66,7 +66,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/domestication-4.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"domestication-mk02","dingrits","chitin"},
+    prerequisites = {"domestication-mk03"},
     dependencies = {"domestication-mk03"},
     effects = {},
     unit = {
