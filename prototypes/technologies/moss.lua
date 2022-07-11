@@ -21,7 +21,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/moss-mk02.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"botany-mk02","moss-mk01"},
+    prerequisites = {"moss-mk01"},
     dependencies = {"moss-mk01"},
     effects = {},
     unit = {
@@ -41,7 +41,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/moss-mk03.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"botany-mk03","moss-mk02"},
+    prerequisites = {"botany-mk02","moss-mk02"},
     dependencies = {"moss-mk02"},
     effects = {},
     unit = {
@@ -62,7 +62,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/moss-mk04.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"botany-mk04","moss-mk03"},
+    prerequisites = {"botany-mk03","moss-mk03"},
     dependencies = {"moss-mk03"},
     effects = {},
     unit = {
@@ -74,6 +74,7 @@ TECHNOLOGY {
             {"py-science-pack-2", 1},
             {"chemical-science-pack", 1},
             {"py-science-pack-3", 1},
+            {"production-science-pack", 1},
         },
         time = 50
     }

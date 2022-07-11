@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/arthurian.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"land-animals-mk02","biotech-mk02","genetics-mk03","organic-breeding","assisted-embryology"},
+    prerequisites = {"land-animals-mk02","biotech-mk02","genetics-mk03"},
     effects = {},
     unit = {
         count = 150,

@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/cridren.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"botany-mk03"},
+    prerequisites = {"botany-mk02"},
     effects = {},
     unit = {
         count = 200,

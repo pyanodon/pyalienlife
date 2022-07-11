@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/biotech-mk01.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"xenobiology","machines-mk01"},
+    prerequisites = {"xenobiology"},
     effects = {},
     unit = {
         count = 150,
@@ -21,7 +21,7 @@ TECHNOLOGY {
     icon = '__pyalienlifegraphics__/graphics/technology/biotech-mk02.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'biotech-mk01',"land-animals-mk01","water-animals-mk01","lead-mk02"},
+    prerequisites = {'biotech-mk01',"land-animals-mk01","water-animals-mk01"},
     dependencies = {'biotech-mk01'},
     effects = {},
     unit = {
@@ -40,7 +40,7 @@ TECHNOLOGY {
     icon = '__pyalienlifegraphics__/graphics/technology/biotech-mk03.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'chitin',"land-animals-mk02","water-animals-mk02","organ-printing-mk02"},
+    prerequisites = {'chitin',"land-animals-mk02","water-animals-mk02"},
     dependencies = {'biotech-mk02'},
     effects = {},
     unit = {

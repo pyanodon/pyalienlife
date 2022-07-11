@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics3__/graphics/technology/zungror.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"land-animals-mk03","biotech-mk03"},
+    prerequisites = {"land-animals-mk02","biotech-mk03"},
     effects = {},
     unit = {
         count = 300,
