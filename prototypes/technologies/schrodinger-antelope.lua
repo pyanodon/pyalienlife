@@ -11,7 +11,6 @@ TECHNOLOGY {
         ingredients = {
             {"automation-science-pack", 3},
             {"logistic-science-pack", 2},
-            {"military-science-pack", 2},
             {"chemical-science-pack", 2},
             {"production-science-pack", 2},
         },
