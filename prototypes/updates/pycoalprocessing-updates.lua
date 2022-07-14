@@ -25,6 +25,10 @@ TECHNOLOGY("kevlar"):add_pack("py-science-pack-2")
 TECHNOLOGY("fine-electronics"):add_pack("py-science-pack-2")
 TECHNOLOGY("advanced-electronics"):add_pack("py-science-pack-2")
 
+if not mods["pyhightech"] then
+    TECHNOLOGY("mining-productivity-1"):add_pack("py-science-pack-2")
+end
+
 
 if not mods["pyalternativeenergy"] then
     TECHNOLOGY("energy-3"):add_pack("py-science-pack-2")
