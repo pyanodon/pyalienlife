@@ -19,6 +19,8 @@ TECHNOLOGY("battery-equipment"):add_pack("py-science-pack-2")
 TECHNOLOGY("energy-shield-equipment"):add_pack("py-science-pack-2")
 TECHNOLOGY("advanced-material-processing"):remove_pack("logistic-science-pack"):remove_prereq("logistic-science-pack"):add_pack("py-science-pack-1")
 TECHNOLOGY("electric-engine"):add_pack("py-science-pack-2")
+TECHNOLOGY("fast-inserter"):add_pack("logistic-science-pack")
+TECHNOLOGY("fast-inserter-2"):add_pack("py-science-pack-2")
 
 
 TECHNOLOGY('fluid-handling'):remove_pack('logistic-science-pack')
