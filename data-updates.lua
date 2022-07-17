@@ -31,8 +31,6 @@ if mods["pypetroleumhandling"] then
     require("prototypes/updates/pypetroleumhandling-updates")
 end
 
-TECHNOLOGY("logistic-science-pack"):add_prereq("biotech-mk01")
-
 TECHNOLOGY("ralesia"):add_pack("py-science-pack-1")
 
 --ADAPTATIONS
