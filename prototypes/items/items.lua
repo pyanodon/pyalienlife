@@ -367,8 +367,6 @@ ITEM {
     subgroup = "py-alienlife-items",
     order = "b",
     stack_size = 100,
-    fuel_value = '1MJ',
-    fuel_category = 'bio-container'
 }
 
 ITEM {
