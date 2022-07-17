@@ -84,6 +84,8 @@ ITEM("botanical-nursery-mk02"):set("icon", "__pyalienlifegraphics__/graphics/ico
 ITEM("botanical-nursery-mk03"):set("icon", "__pyalienlifegraphics__/graphics/icons/botanical-nursery-mk03.png"):set_fields {icon_size = 64,}
 ITEM("botanical-nursery-mk04"):set("icon", "__pyalienlifegraphics__/graphics/icons/botanical-nursery-mk04.png"):set_fields {icon_size = 64,}
 
+RECIPE("automated-factory-mk01"):replace_ingredient("fast-inserter", "inserter")
+
 -----RECIPES-----
 FLUID('carbon-dioxide'):subgroup_order("py-alienlife-items", "a")
 ITEM('ralesia-seeds'):subgroup_order("py-alienlife-ralesia", "a")
