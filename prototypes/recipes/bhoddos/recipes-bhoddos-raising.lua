@@ -14,7 +14,7 @@ fun.autorecipes {
         ingredients =
             {
                 {name='bhoddos-spore', amount =5},
-                {name='fungal-substrate', amount =1},
+                {name='fungal-substrate-02', amount =1},
                 {name='biomass', amount =10},
                 {name='fuelrod-mk01', amount=1},
                 {name='water', amount = 100},
@@ -30,7 +30,7 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {name='fungal-substrate-02', amount =2},
+                {name='fungal-substrate-03', amount =2},
                 {name='ash', amount =10},
                 {name='manure', amount =5},
             },
@@ -45,7 +45,7 @@ fun.autorecipes {
     {
         ingredients =
             {
-                {name='fungal-substrate-03', amount =2},
+                {name='fungal-substrate-03', add_amount =2},
                 {name='manure', add_amount =5},
                 {name='moss', amount =10},
                 {name='ammonia', amount = 50, fallback = 'nitrogen'},

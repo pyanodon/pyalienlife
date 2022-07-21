@@ -22,7 +22,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'fungal-substrate', amount = 10},
     },
-}:add_unlock("mycology-mk01")
+}:add_unlock("mycology-mk02")
 
 RECIPE {
     type = 'recipe',

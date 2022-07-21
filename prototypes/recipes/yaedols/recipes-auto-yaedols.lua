@@ -15,7 +15,7 @@ fun.autorecipes {
                 {name='yaedols-spores', amount = 2},
                 {name='wood', amount = 10},
                 {name='water', amount = 80},
-                {name='fungal-substrate-02', amount =2},
+                {name='fungal-substrate', amount =2},
                 {name='fertilizer', amount = 5},
             },
         results =
