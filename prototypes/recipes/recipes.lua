@@ -1741,7 +1741,7 @@ RECIPE {
     },
     results = {
         {type = 'fluid', name = 'crude-oil', amount = 70},
-        {type = 'fluid', name = 'steam', amount = 50},
+        {type = 'fluid', name = 'steam', amount = 50, temperature = 150},
         {type = 'fluid', name = 'dirty-water-heavy', amount = 50},
         {type = 'item', name = 'ash', amount = 3},
     },
