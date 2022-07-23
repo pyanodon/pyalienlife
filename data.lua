@@ -3,6 +3,7 @@
 --module bonus is a whole number do to the size of the bonus amount
 
 require("__stdlib__/stdlib/data/data").Util.create_data_globals()
+local RECIPE = require("__stdlib__/stdlib/data/recipe")
 
 require("prototypes/item-groups")
 require("prototypes/recipe-categories")
