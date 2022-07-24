@@ -1,8 +1,8 @@
-local fun = require("prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 ------------------RENDERING------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-arqad',
 	category = 'slaughterhouse-arqad',
 	subgroup = 'py-alienlife-arqad',

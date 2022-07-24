@@ -1,7 +1,7 @@
-local fun = require("prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'cridren',
 	category = 'cridren',
 	module_limitations = 'cridren',

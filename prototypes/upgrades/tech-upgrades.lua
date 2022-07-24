@@ -1,4 +1,4 @@
-local FUN = require("prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 local tech_upgrade =
     {

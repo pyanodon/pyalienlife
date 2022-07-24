@@ -1,9 +1,9 @@
-local fun = require("prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 
 -- ------------------PHADAI CARAPACE------------------
 
--- fun.autorecipes {
+-- FUN.autorecipes {
 --     name = 'rendering-carapace-phadai',
 -- 	category = 'slaughterhouse-phadai',
 -- 	--module_limitations = 'auog',
@@ -41,7 +41,7 @@ local fun = require("prototypes/functions/functions")
 
 -- ------------------DINGRITS PELT------------------
 
--- fun.autorecipes {
+-- FUN.autorecipes {
 --     name = 'rendering-pelt-dingrits',
 -- 	category = 'slaughterhouse-dingrits',
 -- 	--module_limitations = 'auog',
@@ -81,7 +81,7 @@ local fun = require("prototypes/functions/functions")
 
 -- ------------------DINGRITS SPIKES------------------
 
--- fun.autorecipes {
+-- FUN.autorecipes {
 --     name = 'rendering-spikes-dingrits',
 -- 	category = 'slaughterhouse-dingrits',
 -- 	--module_limitations = 'auog',
@@ -121,7 +121,7 @@ local fun = require("prototypes/functions/functions")
 
 -- ------------------SCRONDRIX PINEAL------------------
 
--- fun.autorecipes {
+-- FUN.autorecipes {
 --     name = 'rendering-pineal-scrondrix',
 -- 	category = 'slaughterhouse-scrondrix',
 -- 	--module_limitations = 'auog',
@@ -159,7 +159,7 @@ local fun = require("prototypes/functions/functions")
 
 -- ------------------KMAUTS TENDONS------------------
 
--- fun.autorecipes {
+-- FUN.autorecipes {
 --     name = 'rendering-tendon-kmauts',
 -- 	category = 'slaughterhouse-kmauts',
 -- 	--module_limitations = 'auog',
@@ -197,7 +197,7 @@ local fun = require("prototypes/functions/functions")
 
 -- ------------------PHAGNOT BLADDER------------------
 
--- fun.autorecipes {
+-- FUN.autorecipes {
 --     name = 'rendering-bladder-phagnot',
 -- 	category = 'slaughterhouse-phagnot',
 -- 	--module_limitations = 'auog',
@@ -234,7 +234,7 @@ local fun = require("prototypes/functions/functions")
 
 -- ------------------VONIX VENON GLAND------------------
 
--- fun.autorecipes {
+-- FUN.autorecipes {
 --     name = 'rendering-venon-vonix',
 -- 	category = 'slaughterhouse-vonix',
 -- 	--module_limitations = 'auog',
@@ -274,7 +274,7 @@ local fun = require("prototypes/functions/functions")
 
 -- ------------------TRITS PHOTOPHORES------------------
 
--- fun.autorecipes {
+-- FUN.autorecipes {
 --     name = 'rendering-photophore-trits',
 -- 	category = 'slaughterhouse-trits',
 -- 	--module_limitations = 'auog',
@@ -308,7 +308,7 @@ local fun = require("prototypes/functions/functions")
 
 -- ------------------XYHIPHOE SHELL------------------
 
--- fun.autorecipes {
+-- FUN.autorecipes {
 --     name = 'rendering-shell-xyhiphoe',
 -- 	category = 'slaughterhouse-xyhiphoe',
 -- 	--module_limitations = 'auog',

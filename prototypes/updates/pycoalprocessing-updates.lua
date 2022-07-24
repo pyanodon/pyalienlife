@@ -1,4 +1,4 @@
-local fun = require("prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 --TECHNOLOGY--
 -- TECHNOLOGY('coal-processing-3'):add_pack('py-science-pack-3')
@@ -152,11 +152,11 @@ RECIPE("solid-separator"):remove_unlock("separation"):add_unlock("ash-separation
 RECIPE("ash-separation"):remove_unlock("separation"):add_unlock("ash-separation")
 RECIPE("soot-separation"):remove_unlock("separation"):add_unlock("ash-separation")
 
-fun.results_replacer("log2", "log", "log",4)
-fun.results_replacer("log4", "log", "log",5)
-fun.results_replacer("log3", "log", "log",6)
-fun.results_replacer("log5", "log", "log",7)
-fun.results_replacer("log6", "log", "log",8)
+FUN.results_replacer("log2", "log", "log",4)
+FUN.results_replacer("log4", "log", "log",5)
+FUN.results_replacer("log3", "log", "log",6)
+FUN.results_replacer("log5", "log", "log",7)
+FUN.results_replacer("log6", "log", "log",8)
 
 data.raw["recipe-category"]["fawogae"].allowed_module_categories = { "fawogae" }
 data.raw["recipe-category"]["fawogae"].modules_required = true

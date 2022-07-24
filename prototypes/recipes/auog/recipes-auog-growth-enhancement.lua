@@ -1,7 +1,7 @@
-local fun = require("prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 	--NOT STANDARD AOUGS
-	fun.autorecipes {
+	FUN.autorecipes {
 		name = 'auog-mods',
 		category = 'creature-chamber',
 		subgroup = 'py-alienlife-auog',

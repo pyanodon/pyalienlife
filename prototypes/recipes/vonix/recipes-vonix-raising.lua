@@ -1,8 +1,8 @@
-local fun = require("prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 ------------------EGG MAKER------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'vonix-cub',
 	category = 'vonix',
 	module_limitations = 'vonix',
@@ -166,7 +166,7 @@ RECIPE {
 
 --Raising
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'vonix-raising',
 	category = 'vonix',
 	module_limitations = 'vonix',

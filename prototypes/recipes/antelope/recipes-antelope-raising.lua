@@ -1,6 +1,6 @@
-local fun = require("prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'caged-antelope',
 	category = 'antelope',
 	module_limitations = 'antelope',

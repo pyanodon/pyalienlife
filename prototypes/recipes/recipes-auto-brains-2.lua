@@ -1,9 +1,9 @@
-local fun = require("prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 
 ------------------ARTHURIANS------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-brains-arthurians-2',
 	category = 'slaughterhouse-arthurian',
 	--module_limitations = 'arthurian',
@@ -57,7 +57,7 @@ fun.autorecipes {
 
 ------------------AUOGS------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-brains-auog-2',
 	category = 'slaughterhouse-auog',
 	--module_limitations = 'auog',
@@ -112,7 +112,7 @@ fun.autorecipes {
 
 ------------------COTTONGUT------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-brains-cottongut-2',
 	category = 'slaughterhouse-cottongut',
 	--module_limitations = 'cottongut',
@@ -166,7 +166,7 @@ fun.autorecipes {
 
 ------------------DINGRITS------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-brains-dingrits-2',
 	category = 'slaughterhouse-dingrits',
 	--module_limitations = 'dingrits',
@@ -220,7 +220,7 @@ fun.autorecipes {
 
 ------------------KMAUTS------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-brains-kmauts-2',
 	category = 'slaughterhouse-kmauts',
 	--module_limitations = 'kmauts',
@@ -273,7 +273,7 @@ fun.autorecipes {
 
 ------------------KORLEX------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-brains-korlex-2',
 	category = 'slaughterhouse-korlex',
 	--module_limitations = 'korlex',
@@ -326,7 +326,7 @@ fun.autorecipes {
 
 ------------------MUKMOUX------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-brain-mukmoux-2',
 	category = 'slaughterhouse-mukmoux',
 	--module_limitations = 'mukmoux',
@@ -381,7 +381,7 @@ fun.autorecipes {
 
 ------------------PHADAI------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-phadai-brain-2',
 	category = 'slaughterhouse-phadai',
 	--module_limitations = 'phadai',
@@ -438,7 +438,7 @@ fun.autorecipes {
 
 ------------------PHAGNOT------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-brains-phagnot-2',
 	category = 'slaughterhouse-phagnot',
 	--module_limitations = 'phagnot',
@@ -493,7 +493,7 @@ fun.autorecipes {
 
 ------------------SCRONDRIX------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-brains-scrondrix-2',
 	category = 'slaughterhouse-scrondrix',
 	--module_limitations = 'scrondrix',
@@ -548,7 +548,7 @@ fun.autorecipes {
 
 ------------------TRITS------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-brain-trits-2',
 	category = 'slaughterhouse-trits',
 	--module_limitations = 'trits',
@@ -603,7 +603,7 @@ fun.autorecipes {
 
 ------------------ULRIC------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-brain-ulric-2',
 	category = 'slaughterhouse-ulric',
 	--module_limitations = 'ulric',
@@ -657,7 +657,7 @@ fun.autorecipes {
 
 ------------------VONIX------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-brain-vonix-2',
 	category = 'slaughterhouse-vonix',
 	--module_limitations = 'vonix',
@@ -712,7 +712,7 @@ fun.autorecipes {
 
 ------------------VRAUKS------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-brain-vrauks-2',
 	category = 'slaughterhouse-vrauks',
 	--module_limitations = 'vrauks',
@@ -764,7 +764,7 @@ fun.autorecipes {
 
 ------------------RENDERING XENOS------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-brains-xenos-2',
 	category = 'slaughterhouse-xeno',
 	--module_limitations = 'xeno',
@@ -823,7 +823,7 @@ fun.autorecipes {
 
 ------------------ZIPIR------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-brain-zipir-2',
 	category = 'slaughterhouse-zipir',
 	--module_limitations = 'zipir',

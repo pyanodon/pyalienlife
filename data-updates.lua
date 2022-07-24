@@ -1,7 +1,7 @@
 require("__stdlib__/stdlib/data/data").Util.create_data_globals()
 local table = require('__stdlib__/stdlib/utils/table')
 --require("__pycoalprocessing__/prototypes/functions/functions")
-local fun = require("prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 require("prototypes/updates/autoplace-fish")
 require("prototypes/updates/base-updates")
@@ -48,7 +48,7 @@ for _, recipe in pairs(data.raw.recipe) do
     local r = RECIPE(recipe)
     r:replace_ingredient('py-fertilizer', 'fertilizer')
     r:replace_ingredient('organics', 'biomass')
-    fun.results_replacer(r.name, 'organics', 'biomass')
+    FUN.results_replacer(r.name, 'organics', 'biomass')
     r:replace_ingredient('ralesia', 'ralesias')
     r:replace_ingredient('raw-fish', 'fish')
     r:replace_ingredient('xyhiphoe-blood', 'arthropod-blood')
@@ -128,7 +128,7 @@ data.raw.item['milk-barrel'] = nil
 --data.raw.recipe['fill-milk-barrel'] = nil
 --data.raw.recipe['empty-milk-barrel'] = nil
 
---fun.global_item_replacer('fawogae', 'fawogae-mk01')
+--FUN.global_item_replacer('fawogae', 'fawogae-mk01')
 
 --RECIPES UPDATES
 

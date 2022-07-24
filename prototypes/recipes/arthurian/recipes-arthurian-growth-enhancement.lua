@@ -1,8 +1,8 @@
-local fun = require("prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 --growth hormone and other trash that needs new uses. hulk growths
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'arthurian-growth-enhancement',
 	category = "creature-chamber",
 	subgroup = 'py-alienlife-arthurian',

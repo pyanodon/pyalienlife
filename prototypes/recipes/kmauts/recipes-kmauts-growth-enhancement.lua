@@ -1,6 +1,6 @@
-local fun = require("prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'kmauts-improved',
 	category = 'creature-chamber',
 	--module_limitations = 'kmauts',

@@ -1,7 +1,7 @@
-local fun = require("prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 --Aoug breeding
-fun.autorecipes {
+FUN.autorecipes {
     name = 'auog-pup-breeding',
 	category = 'auog',
 	module_limitations = 'auog',
@@ -120,7 +120,7 @@ fun.autorecipes {
 }
 
 --Raising auog pups
-fun.autorecipes {
+FUN.autorecipes {
     name = 'auog-maturing',
 	category = 'auog',
 	module_limitations = 'auog',

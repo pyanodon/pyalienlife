@@ -1,6 +1,6 @@
-local fun = require("prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'xyhiphoe-improve',
 	category = 'creature-chamber',
 	--module_limitations = 'xyhiphoe',

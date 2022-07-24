@@ -1,9 +1,9 @@
-local fun = require("prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 
 ------------------ARTHURIANS------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-meats-arthurians',
 	category = 'slaughterhouse-arthurian',
 	--module_limitations = 'arthurian',
@@ -40,7 +40,7 @@ fun.autorecipes {
 
 ------------------ARQAD------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-meats-arqad',
 	category = 'slaughterhouse-arqad',
 	--module_limitations = 'arqad',
@@ -77,7 +77,7 @@ fun.autorecipes {
 
 ------------------AUOGS------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-meats-auog',
 	category = 'slaughterhouse-auog',
 	--module_limitations = 'auog',
@@ -114,7 +114,7 @@ fun.autorecipes {
 
 ------------------COTTONGUT------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-meats-cottongut',
 	category = 'slaughterhouse-cottongut',
 	--module_limitations = 'cottongut',
@@ -150,7 +150,7 @@ fun.autorecipes {
 
 ------------------DHILMOS------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-meats-dhilmos',
 	category = 'slaughterhouse-dhilmos',
 	--module_limitations = 'auog',
@@ -189,7 +189,7 @@ fun.autorecipes {
 
 ------------------DINGRITS------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-meats-dingrits',
 	category = 'slaughterhouse-dingrits',
 	--module_limitations = 'auog',
@@ -226,7 +226,7 @@ fun.autorecipes {
 
 ------------------KMAUTS------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-meats-kmauts',
 	category = 'slaughterhouse-kmauts',
 	--module_limitations = 'auog',
@@ -263,7 +263,7 @@ fun.autorecipes {
 
 ------------------KORLEX------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-meats-korlex',
 	category = 'slaughterhouse-korlex',
 	--module_limitations = 'auog',
@@ -300,7 +300,7 @@ fun.autorecipes {
 
 ------------------MUKMOUX------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-meats-mukmoux',
 	category = 'slaughterhouse-mukmoux',
 	--module_limitations = 'auog',
@@ -337,7 +337,7 @@ fun.autorecipes {
 
 ------------------PHADAI------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-meats-phadai',
 	category = 'slaughterhouse-phadai',
 	--module_limitations = 'auog',
@@ -374,7 +374,7 @@ fun.autorecipes {
 
 ------------------PHAGNOT------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-meats-phagnot',
 	category = 'slaughterhouse-phagnot',
 	--module_limitations = 'auog',
@@ -411,7 +411,7 @@ fun.autorecipes {
 
 ------------------SCRONDRIX------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-meats-scrondrix',
 	category = 'slaughterhouse-scrondrix',
 	--module_limitations = 'auog',
@@ -448,7 +448,7 @@ fun.autorecipes {
 
 ------------------SIMIKS------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-meats-simik',
 	category = 'slaughterhouse-simik',
 	--module_limitations = 'auog',
@@ -485,7 +485,7 @@ fun.autorecipes {
 
 ------------------TRITS------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-meats-trits',
 	category = 'slaughterhouse-trits',
 	--module_limitations = 'auog',
@@ -521,7 +521,7 @@ fun.autorecipes {
 
 ------------------ULRIC------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-meats-ulric',
 	category = 'slaughterhouse-ulric',
 	--module_limitations = 'auog',
@@ -558,7 +558,7 @@ fun.autorecipes {
 
 ------------------VONIX------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-meats-vonix',
 	category = 'slaughterhouse-vonix',
 	--module_limitations = 'auog',
@@ -597,7 +597,7 @@ fun.autorecipes {
 
 ------------------VRAUKS------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-meats-vrauks',
 	category = 'slaughterhouse-vrauks',
 	--module_limitations = 'auog',
@@ -637,7 +637,7 @@ fun.autorecipes {
 
 ------------------XENOS------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-meats-xeno',
 	category = 'slaughterhouse-xeno',
 	--module_limitations = 'auog',
@@ -677,7 +677,7 @@ fun.autorecipes {
 
 ------------------XYHIPHOE------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-meats-xyhiphoe',
 	category = 'slaughterhouse-xyhiphoe',
 	--module_limitations = 'auog',
@@ -709,7 +709,7 @@ fun.autorecipes {
 }
 ------------------ZIPIR------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'rendering-meats-zipir',
 	category = 'slaughterhouse-zipir',
 	--module_limitations = 'auog',

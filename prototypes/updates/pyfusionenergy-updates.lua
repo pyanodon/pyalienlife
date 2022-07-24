@@ -1,4 +1,4 @@
-local fun = require("prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 --TECHNOLOGY--
 --TECHNOLOGY('advanced-mining-facilities'):add_pack('py-science-pack-3')
@@ -78,7 +78,7 @@ RECIPE("nexelit-matrix"):remove_unlock('nenbit-matrix'):add_unlock('neuro-electr
 data.raw["recipe-category"]["xyhiphoe"].allowed_module_categories = { "xyhiphoe" }
 data.raw["recipe-category"]["xyhiphoe"].modules_required = true
 
-fun.results_replacer("log7", "log", "log",9)
-fun.results_replacer("log8", "log", "log",10)
+FUN.results_replacer("log7", "log", "log",9)
+FUN.results_replacer("log8", "log", "log",10)
 
 ----EXCLUSIVE RECIPES----

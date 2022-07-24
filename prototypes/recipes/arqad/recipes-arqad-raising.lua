@@ -1,8 +1,8 @@
-local fun = require("prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 ------------------EGG MAKER------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'arqad-egg',
 	category = 'arqad',
 	module_limitations = 'arqad',
@@ -92,7 +92,7 @@ fun.autorecipes {
 
 --eggs to maggots
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'arqad-maggots',
 	category = 'vrauks',
 	module_limitations = 'arqad',
@@ -120,7 +120,7 @@ fun.autorecipes {
 
 --maggots to cocoons
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'arqad-egg-nests',
 	category = 'arqad',
 	module_limitations = 'arqad',
@@ -199,7 +199,7 @@ fun.autorecipes {
 
 --Raising maggots to arqads
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'caged-arqad',
 	category = 'arqad',
 	module_limitations = 'arqad',
@@ -289,7 +289,7 @@ fun.autorecipes {
 	}
 }
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'arqad-queen',
 	category = 'arqad',
 	module_limitations = 'arqad',
@@ -317,7 +317,7 @@ fun.autorecipes {
 	}
 }
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'special-arqad-guts',
 	category = "creature-chamber",
 	subgroup = 'py-alienlife-arqad',

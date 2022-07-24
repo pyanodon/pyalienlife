@@ -1,6 +1,6 @@
-local fun = require("prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'vrauks',
 	category = 'vrauks',
 	module_limitations = 'vrauks',
@@ -99,7 +99,7 @@ fun.autorecipes {
 
 ------------------CUB MAKER------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'vrauks-cocoon',
 	category = 'vrauks',
 	module_limitations = 'vrauks',

@@ -1,4 +1,4 @@
-local fun = require("prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 --(( Technology ))--
 require('prototypes/technologies/mega-farm-kicalk')
@@ -127,8 +127,8 @@ data.raw.item.satellite.rocket_launch_product =
         amount = 6
     }
 
-fun.add_ingredient('satellite', {type = 'item', name = 'cottongut', amount = 150})
-fun.add_ingredient('satellite', {type = 'item', name = 'antimatter', amount = 3})
+FUN.add_ingredient('satellite', {type = 'item', name = 'cottongut', amount = 150})
+FUN.add_ingredient('satellite', {type = 'item', name = 'antimatter', amount = 3})
 
 RECIPE('space-science-pack'):add_ingredient({type = "item", name = "destablilized-toxirus", amount = 1}):add_ingredient({type = "item", name = "strangelets", amount = 5})
 
@@ -469,33 +469,33 @@ RECIPE("cumene"):remove_unlock("phenol"):add_unlock("light-oil-mk03")
 RECIPE("cumene-distilation"):remove_unlock("phenol"):add_unlock("light-oil-mk03")
 
 RECIPE('simik-food-01'):add_ingredient({type = "item", name = "cadaveric-arum", amount = 2})
-fun.add_ingredient('simik-food-01', {name = "cadaveric-arum", amount = 2})
+FUN.add_ingredient('simik-food-01', {name = "cadaveric-arum", amount = 2})
 
 RECIPE('simik-food-02'):add_ingredient({type = "item", name = "cadaveric-arum", amount = 2})
-fun.add_ingredient('simik-food-02', {name = "cadaveric-arum", amount = 2})
+FUN.add_ingredient('simik-food-02', {name = "cadaveric-arum", amount = 2})
 
 RECIPE('simik-food-01a'):add_ingredient({type = "item", name = "cadaveric-arum", amount = 2}):replace_ingredient("gravel", "phosphate-rock")
-fun.add_ingredient('simik-food-01a', {name = "cadaveric-arum", amount = 2})
+FUN.add_ingredient('simik-food-01a', {name = "cadaveric-arum", amount = 2})
 
 RECIPE('simik-food-02a'):add_ingredient({type = "item", name = "cadaveric-arum", amount = 2}):replace_ingredient("gravel", "phosphate-rock")
-fun.add_ingredient('simik-food-02a', {name = "cadaveric-arum", amount = 2})
+FUN.add_ingredient('simik-food-02a', {name = "cadaveric-arum", amount = 2})
 
 RECIPE("centrifuge"):add_unlock("filtration")
 RECIPE("stone-wool"):add_unlock("zipir")
 RECIPE("stone-wool2"):add_unlock("zipir")
 RECIPE("agzn-alloy"):remove_unlock("alloys-mk04"):add_unlock("alloys-mk03")
 
-fun.results_replacer("dhilmos-sex-01", "dirty-water-light", "waste-water")
+FUN.results_replacer("dhilmos-sex-01", "dirty-water-light", "waste-water")
 
-fun.results_replacer("fertilizer", "py-fertilizer", "fertilizer")
-fun.results_replacer("log7-2", "log", "log",8)
+FUN.results_replacer("fertilizer", "py-fertilizer", "fertilizer")
+FUN.results_replacer("log7-2", "log", "log",8)
 
-fun.results_replacer("rennea-mk02-seed-seperation", "light-oil", "tall-oil")
-fun.results_replacer("rennea-mk03-seed-seperation", "light-oil", "tall-oil")
-fun.results_replacer("rennea-mk04-seed-seperation", "light-oil", "tall-oil")
-fun.results_replacer("rennea-mk02-seed-seperation", "tar", "black-liquor")
-fun.results_replacer("rennea-mk03-seed-seperation", "tar", "black-liquor")
-fun.results_replacer("rennea-mk04-seed-seperation", "tar", "black-liquor")
+FUN.results_replacer("rennea-mk02-seed-seperation", "light-oil", "tall-oil")
+FUN.results_replacer("rennea-mk03-seed-seperation", "light-oil", "tall-oil")
+FUN.results_replacer("rennea-mk04-seed-seperation", "light-oil", "tall-oil")
+FUN.results_replacer("rennea-mk02-seed-seperation", "tar", "black-liquor")
+FUN.results_replacer("rennea-mk03-seed-seperation", "tar", "black-liquor")
+FUN.results_replacer("rennea-mk04-seed-seperation", "tar", "black-liquor")
 
 
 RECIPE('methane'):add_unlock('coal-processing-1')
@@ -1579,10 +1579,10 @@ for _, recipe in pairs(arqad_filled) do
 	RECIPE(recipe):replace_ingredient('crude-oil-barrel','tall-oil-barrel')
 end
 
-fun.results_replacer('biofilm-pyht', 'biofilm', 'biofilm', 75)
+FUN.results_replacer('biofilm-pyht', 'biofilm', 'biofilm', 75)
 
 data.raw.recipe.biofilm.energy_required = 10
-fun.results_replacer('biofilm', 'biofilm', 'biofilm', 10)
+FUN.results_replacer('biofilm', 'biofilm', 'biofilm', 10)
 
 RECIPE {
     type = "recipe",

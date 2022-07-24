@@ -1,8 +1,8 @@
-local fun = require("prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 ------------------larva MAKER------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'xyhiphoe-cub',
 	category = 'xyhiphoe',
 	module_limitations = 'xyhiphoe',
@@ -190,7 +190,7 @@ fun.autorecipes {
 
 --Raising
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'xyhiphoe',
 	category = 'xyhiphoe',
 	module_limitations = 'xyhiphoe',

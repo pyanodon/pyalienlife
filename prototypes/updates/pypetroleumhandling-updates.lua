@@ -1,16 +1,16 @@
-local fun = require("prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 if mods['pyhightech'] then
     require('prototypes/recipes/moondrop/recipes-moondrop-products')
     RECIPE('arqad-mk02'):remove_ingredient('crude-oil-barrel'):add_ingredient({type = 'item', name = 'moondrop-fueloil', amount = 25})
     --data.raw.recipe['arqad-mk02'].results[3] = nil
-    fun.results_replacer('arqad-mk02','empty-barrel','empty-barrel', 2)
+    FUN.results_replacer('arqad-mk02','empty-barrel','empty-barrel', 2)
     RECIPE('arqad-mk03'):remove_ingredient('crude-oil-barrel'):add_ingredient({type = 'item', name = 'moondrop-diesel', amount = 40}):add_ingredient({type = 'item', name = 'moondrop-kerosene', amount = 10})
     --data.raw.recipe['arqad-mk03'].results[4] = nil
-    fun.results_replacer('arqad-mk03','empty-barrel','empty-barrel', 4)
+    FUN.results_replacer('arqad-mk03','empty-barrel','empty-barrel', 4)
     RECIPE('arqad-mk04'):remove_ingredient('crude-oil-barrel'):add_ingredient({type = 'item', name = 'moondrop-kerosene', amount = 40}):add_ingredient({type = 'item', name = 'moondrop-gas', amount = 10})
     --data.raw.recipe['arqad-mk04'].results[5] = nil
-    fun.results_replacer('arqad-mk04','empty-barrel','empty-barrel', 8)
+    FUN.results_replacer('arqad-mk04','empty-barrel','empty-barrel', 8)
 end
 
 --BUILDINDS--
@@ -57,10 +57,10 @@ data.raw["recipe-category"]["guar"].allowed_module_categories = { "guar" }
 data.raw["recipe-category"]["guar"].modules_required = true
 
 
-fun.results_replacer("crude-from-manure", "crude-oil", "scrude")
-fun.results_replacer("crude-from-manure", "ash", "soot")
-fun.results_replacer("guar-separation", "organics", "biomass")
-fun.results_replacer("bitumen-comb", "tar", "bitumen")
+FUN.results_replacer("crude-from-manure", "crude-oil", "scrude")
+FUN.results_replacer("crude-from-manure", "ash", "soot")
+FUN.results_replacer("guar-separation", "organics", "biomass")
+FUN.results_replacer("bitumen-comb", "tar", "bitumen")
 
 ----EXCLUSIVE RECIPES----
 

@@ -1,6 +1,6 @@
-local fun = require("prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'cottongut-growth-enhancement',
 	category = 'creature-chamber',
 	subgroup = 'py-alienlife-cottongut',

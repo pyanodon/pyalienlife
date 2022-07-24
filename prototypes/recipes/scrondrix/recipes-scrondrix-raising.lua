@@ -1,8 +1,8 @@
-local fun = require("prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 ------------------CUB MAKER------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'scrondrix-cub',
 	category = 'scrondrix',
 	module_limitations = 'scrondrix',
@@ -169,7 +169,7 @@ fun.autorecipes {
 
 --raising
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'caged-scrondrix',
 	category = 'scrondrix',
 	module_limitations = 'scrondrix',

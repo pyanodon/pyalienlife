@@ -1,8 +1,8 @@
-local fun = require("prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 ------------------CUB MAKER------------------
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'dingrits-cub',
 	category = 'dingrits',
 	module_limitations = 'dingrits',
@@ -182,7 +182,7 @@ fun.autorecipes {
 }
 ]]--
 
-fun.autorecipes {
+FUN.autorecipes {
     name = 'dingrits',
 	category = 'dingrits',
 	module_limitations = 'dingrits',
