@@ -57,7 +57,16 @@ RECIPE("small-electric-pole"):replace_ingredient("wood", "log")
 
 RECIPE('exoskeleton-equipment'):add_ingredient({type = "item", name = "metallic-glass", amount = 30})
 -- RECIPE('automation-science-pack'):change_category('research-handcrafting')
-RECIPE('logistic-science-pack'):change_category('research'):add_ingredient({type = "item", name = "solidified-sarcorus", amount = 1}):add_ingredient({type = "item", name = "animal-sample-01", amount = 3}):remove_ingredient("lab-instrument")
+RECIPE('logistic-science-pack'):change_category('research')
+RECIPE('logistic-science-pack'):add_ingredient({type = "item", name = "solidified-sarcorus", amount = 1}):add_ingredient({type = "item", name = "animal-sample-01", amount = 2}):remove_ingredient("lab-instrument")
+RECIPE('logistic-science-pack'):replace_ingredient("alien-sample01", {type = "item", name = "alien-sample01", amount = 2})
+RECIPE('logistic-science-pack'):set_fields{
+    results = {
+        {type = "item", name = "logistic-science-pack", amount = 12}
+    },
+    energy_required = 90
+}
+
 RECIPE('chemical-science-pack'):change_category('research')
 RECIPE('military-science-pack'):change_category('research')
 RECIPE('production-science-pack'):change_category('research')

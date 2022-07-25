@@ -135,7 +135,7 @@ RECIPE("soil-washing"):add_unlock("soil-washing"):set_enabled(false)
 RECIPE("tpa"):replace_ingredient("nichrome", "cobalt-extract"):add_ingredient{type = "item", name = "yotoi-fruit", amount = 1}:add_ingredient{type = "fluid", name = "manure-bacteria", amount = 20}
 RECIPE("optical-fiber"):add_ingredient{type = "item", name = "photophore", amount = 1}
 
-RECIPE("automation-science-pack"):clear_ingredients():add_ingredient({type="item", name="planter-box", amount=1}):add_ingredient({type="item", name="native-flora", amount=5}):add_ingredient({type="item", name="electronic-circuit", amount=1})
+RECIPE("automation-science-pack"):clear_ingredients():add_ingredient({type="item", name="planter-box", amount=2}):add_ingredient({type="item", name="native-flora", amount=10}):add_ingredient({type="item", name="electronic-circuit", amount=2})
 RECIPE("automation-science-pack"):set_fields{ energy_required = 5, results = {{type = "item", name = "automation-science-pack", amount = 1}} }
 RECIPE("soil-extractormk01"):remove_ingredient("tinned-cable")
 
