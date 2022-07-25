@@ -211,8 +211,8 @@ RECIPE {
     enabled = false,
     energy_required = 15,
     ingredients = {
-        {type = "item", name = "fawogae-substrate", amount = 20},
-        {type = "item", name = "flask", amount = 4}
+        {type = "item", name = "fawogae-substrate", amount = 18},
+        {type = "item", name = "flask", amount = 3}
     },
     results = {
         {type = 'item', name = 'py-science-pack-1', amount = 3},
@@ -224,22 +224,22 @@ RECIPE {
     name = 'py-science-pack-2',
     category = 'research',
     enabled = false,
-    energy_required = 15,
+    energy_required = 180,
     ingredients = {
-        {type = 'item', name = 'moss', amount = 20},
-        {type = 'item', name = 'zipir-eggs', amount = 5},
+        {type = 'item', name = 'moss', amount = 400},
+        {type = 'item', name = 'zipir-eggs', amount = 15},
         {type = 'item', name = 'paragen', amount = 1},
         {type = 'item', name = 'solidified-sarcorus', amount = 2},
         {type = 'item', name = 'alien-sample-02', amount = 1},
-        {type = 'item', name = 'casein', amount = 3},
-        {type = 'fluid', name = 'arqad-honey', amount = 50},
-        {type = 'fluid', name = 'flavonoids', amount = 50},
-        {type = 'item', name = 'plastic-bar', amount = 10},
-        {type = 'item', name = 'flask', amount = 1},
+        {type = 'item', name = 'casein', amount = 30},
+        {type = 'fluid', name = 'arqad-honey', amount = 600},
+        {type = 'fluid', name = 'flavonoids', amount = 100},
+        {type = 'item', name = 'plastic-bar', amount = 36},
+        {type = 'item', name = 'flask', amount = 18},
         -- {type = 'item', name = 'stainless-steel', amount = 10},
     },
     results = {
-        {type = 'item', name = 'py-science-pack-2', amount = 3},
+        {type = 'item', name = 'py-science-pack-2', amount = 18},
     },
 }:add_unlock("py-science-pack-mk02")
 
