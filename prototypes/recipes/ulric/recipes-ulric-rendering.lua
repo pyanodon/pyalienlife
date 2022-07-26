@@ -17,7 +17,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount = 3},
+					{name='bonemeal', amount = 3},
 					{name='meat', amount = 3},
 					{name='skin', amount = 1},
 					{name='mukmoux-fat', amount = 1},
@@ -60,7 +60,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='brain', amount = 1},
-					{name='bones', amount =13},
+					{name='bonemeal', amount =13},
 				},
 			crafting_speed = 15,
 			tech = 'bmp',
@@ -77,7 +77,8 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount = 3},
+					{name='bones',remove_item = true},
+					{name='bonemeal', amount =3},
 					{name='guts', amount =12},
 				},
 			crafting_speed = 15,
