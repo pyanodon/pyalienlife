@@ -517,6 +517,7 @@ RECIPE {
     },
     main_product = "subdermal-chemosnare",
 }:add_unlock("reca")
+]]--
 
 ------------------snarer-heart------------------
 
@@ -535,6 +536,7 @@ RECIPE {
     main_product = "snarer-heart",
 }:add_unlock("laika")
 
+--[[
 ------------------glandular-myocluster------------------
 
 RECIPE {
