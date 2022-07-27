@@ -22,7 +22,7 @@ FUN.autorecipes {
 					{name='skin',  amount =3},
 					{name='mukmoux-fat',  amount =5},
 					{name='guts',  amount =4},
-					{name='photophore', amount =2},
+					{name='photophore', amount =1},
 					{name='blood', amount =60},
 					{name='brain',  amount =1},
 				},
@@ -41,7 +41,6 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='photophore', amount = 1},
 					{name='brain', amount =5},
 				},
 			crafting_speed = 15,
@@ -132,6 +131,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='blood', amount = 60},
+					{name='photophore', amount =4},
 					{name='skin', amount =13},
 				},
 			crafting_speed = 15,
@@ -149,6 +149,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
+					{name='photophore',remove_item = true},
 					{name='skin', amount = 3},
 					{name='mukmoux-fat', amount =30},
 				},

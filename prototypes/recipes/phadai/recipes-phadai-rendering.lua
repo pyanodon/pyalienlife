@@ -21,8 +21,7 @@ FUN.autorecipes {
 					{name='meat', amount =1},
                     {name='guts', amount =3},
                     {name='mukmoux-fat', amount =1},
-                    {name='skin', amount =1},
-					{name='carapace', amount =1},
+					{name='carapace', amount =2},
 					{name='blood', amount =30},
 					{name='cage', amount=1},
 					{name='brain', amount =1},
@@ -60,6 +59,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
+					{name='subdermal-chemosnare',remove_item = true},
 					{name='brain', amount = 1},
 					{name='bones', amount =10},
 				},
@@ -133,7 +133,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='meat', amount = 1},
-					{name='skin', amount =8},
+					{name='carapace', amount =8},
 				},
 			crafting_speed = 15,
 			tech = 'reca',
@@ -150,7 +150,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='skin', amount = 1},
+					{name='carapace', amount = 2},
 					{name='mukmoux-fat', amount =7},
 				},
 			crafting_speed = 15,

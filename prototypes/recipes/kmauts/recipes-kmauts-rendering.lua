@@ -40,6 +40,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
+					{name='tendon',remove_item = true},
 					{name='brain', amount =5},
 				},
 			crafting_speed = 15,
@@ -94,6 +95,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='arthropod-blood', amount = 10},
+					{name='tendon',  amount =5},
 					{name='meat', amount =8},
 				},
 			crafting_speed = 15,
@@ -112,6 +114,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='meat', amount = 2},
+					{name='tendon',remove_item = true},
 					{name='mukmoux-fat', amount =7},
 				},
 			crafting_speed = 15,

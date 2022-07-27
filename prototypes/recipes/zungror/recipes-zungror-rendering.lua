@@ -21,8 +21,7 @@ FUN.autorecipes {
 					{name='skin', amount = 4},
 					{name='mukmoux-fat', amount = 5},
 					{name='guts', amount = 6},
-					{name='arthropod-blood', amount =80},
-					{name='venon-gland', amount = 1},
+					{name='arthropod-blood', amount =300},
 					{name='brain', amount = 1},
 					{name='cage', amount = 1}
 				},
@@ -59,6 +58,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
+					{name='brain', amount =1},
 					{name='guts', amount =20},
 					{name = 'vsk', amount = 1},
 				},
@@ -79,7 +79,7 @@ FUN.autorecipes {
 				{
 					{name='vsk',remove_item = true},
 					{name='guts', amount = 6},
-					{name='arthropod-blood', amount =230},
+					{name='arthropod-blood', amount =450},
 				},
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
@@ -96,7 +96,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='arthropod-blood', amount = 80},
+					{name='arthropod-blood', amount = 300},
 					{name='skin', amount =13},
 				},
 			crafting_speed = 15,

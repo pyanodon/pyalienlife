@@ -59,6 +59,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
+					{name='polynuclear-gangliont', remove_item = true},
 					{name='brain', amount = 2},
 					{name='bones', amount =12},
 				},

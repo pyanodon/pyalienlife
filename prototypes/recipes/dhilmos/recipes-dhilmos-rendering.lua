@@ -38,7 +38,6 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name = 'autoantigens', amount = 50},
 					{name='meat', amount =6},
 				},
 			crafting_speed = 15,
@@ -94,6 +93,7 @@ FUN.autorecipes {
 				{
 					{name='arthropod-blood', amount = 15},
 					{name='mukmoux-fat', amount =6},
+					{name = 'autoantigens', amount = 50},
 				},
 			crafting_speed = 15,
 			tech = 'orexigenic',

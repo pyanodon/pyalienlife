@@ -41,7 +41,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name = 'magnetic-organ', amount = 1},
+					{name = 'magnetic-organ', amount = 2},
 					{name='brain', amount =5},
 				},
 			crafting_speed = 15,
@@ -59,6 +59,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
+					{name='magnetic-organ',remove_item = true},
 					{name='brain', amount = 1},
 					{name='bonemeal', amount =13},
 				},

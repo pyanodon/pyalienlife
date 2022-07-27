@@ -39,7 +39,6 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name = 'adaptable-automucosa', amount = 1},
 					{name='brain', amount =4},
 				},
 			crafting_speed = 15,
@@ -93,6 +92,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
+					{name = 'adaptable-automucosa', amount = 1},
 					{name='arthropod-blood', amount = 50},
 					{name='skin', amount =17},
 				},
@@ -111,6 +111,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
+					{name = 'adaptable-automucosa', remove_item = true},
 					{name='skin', amount = 6},
 					{name='mukmoux-fat', amount =15},
 				},

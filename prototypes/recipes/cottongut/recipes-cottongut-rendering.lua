@@ -40,7 +40,6 @@ FUN.autorecipes {
 			results =
 				{
 					{name='brain', amount =5},
-					{name = 'lcc', amount = 1}
 				},
 			crafting_speed = 15,
 			tech = 'nanochondria',
@@ -130,6 +129,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='skin', amount = 4},
+					{name = 'lcc', amount = 1},
 					{name='mukmoux-fat', amount =11},
 				},
 			crafting_speed = 15,
@@ -147,6 +147,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
+					{name='lcc',remove_item = true},
 					{name='mukmoux-fat', amount = 5},
 					{name='meat', amount =7},
 				},

@@ -41,7 +41,6 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name = 'snarer-heart', amount = 1},
 					{name='brain', amount =5},
 				},
 			crafting_speed = 15,
@@ -60,6 +59,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='brain', amount = 1},
+					{name='dingrit-spike', amount = 3},
 					{name='bones', amount =8},
 				},
 			crafting_speed = 15,
@@ -78,6 +78,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='bones', amount = 2},
+					{name='dingrit-spike', amount = 1},
 					{name='guts', amount =10},
 				},
 			crafting_speed = 15,

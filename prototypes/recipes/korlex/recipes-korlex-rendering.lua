@@ -41,7 +41,6 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name = 'cryogland', amount = 1},
 					{name='brain', amount =5},
 				},
 			crafting_speed = 15,
@@ -114,6 +113,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='guts', amount = 2},
+					{name = 'cryogland', amount = 1},
 					{name='blood', amount =100},
 				},
 			crafting_speed = 15,
@@ -132,6 +132,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='blood', amount = 20},
+					{name='cryogland',remove_item = true},
 					{name='skin', amount =13},
 				},
 			crafting_speed = 15,

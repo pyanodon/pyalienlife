@@ -43,7 +43,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='brain', amount =5},
-					{name = 'intestinal-ee', amount = 1},
+					{name='pineal-gland',  amount =5},
 				},
 			crafting_speed = 15,
 			tech = 'nanochondria',
@@ -61,6 +61,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='brain', amount = 1},
+					{name='pineal-gland',  amount =1},
 					{name='bones', amount = 13},
 				},
 			crafting_speed = 15,
@@ -79,6 +80,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='bones', amount = 2},
+					{name = 'intestinal-ee', amount = 1},
 					{name='guts', amount =12},
 				},
 			crafting_speed = 15,
@@ -96,6 +98,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
+					{name = 'intestinal-ee', remove_item = true},
 					{name='guts', amount = 2},
 					{name='blood', amount =170},
 				},

@@ -41,7 +41,6 @@ FUN.autorecipes {
 			results =
 				{
 					{name='brain', amount = 6},
-					{name='glandular-myocluster', amount = 1},
 				},
 			crafting_speed = 30,
 			tech = 'nanochondria',
@@ -78,6 +77,7 @@ FUN.autorecipes {
 				{
 					{name='bones', amount = 6},
 					{name='meat', amount =21},
+					{name='glandular-myocluster', amount = 1},
 				},
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
@@ -94,6 +94,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
+					{name='glandular-myocluster',remove_item = true},
 					{name='meat', amount = 7},
 					{name='guts', amount = 13},
 				},

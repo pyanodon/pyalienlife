@@ -17,11 +17,11 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount =2},
-					{name='meat', amount =2},
-					{name='skin', amount =3},
-					{name='guts', amount =5},
-					{name='fish-oil', amount =25},
+					{name='bones', amount =1},
+					{name='meat', amount =1},
+					{name='skin', amount =2},
+					{name='guts', amount =3},
+					{name='fish-oil', amount =30},
 				},
 			crafting_speed = 30,
 			tech = 'water-animals-mk01',

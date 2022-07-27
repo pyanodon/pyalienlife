@@ -39,7 +39,6 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='cognition-osteochain', amount = 1},
 					{name='brain', amount =4},
 				},
 			crafting_speed = 15,
@@ -57,6 +56,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
+					{name='cognition-osteochain', amount = 1},
 					{name='brain', amount = 1},
 					{name='bones', amount =11},
 				},
@@ -75,8 +75,9 @@ FUN.autorecipes {
 				},
 			results =
 				{
+					{name='cognition-osteochain',remove_item = true},
 					{name='bones', amount = 3},
-					{name='sulfuric-acid', amount =200},
+					{name='sulfuric-acid', amount =380},
 				},
 			crafting_speed = 15,
 			tech = 'recombinant-ery',

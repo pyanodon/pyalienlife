@@ -43,7 +43,6 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name = 'hormonal', amount = 1},
 					{name='brain', amount =6},
 				},
 			crafting_speed = 30,
@@ -97,6 +96,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
+					{name = 'hormonal', amount = 1},
 					{name='meat', amount = 5},
 					{name='guts', amount = 8},
 				},
@@ -116,6 +116,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='guts', amount = 1},
+					{name='hormonal',remove_item = true},
 					{name='simik-blood', amount =150},
 				},
 			crafting_speed = 15,
@@ -134,7 +135,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='simik-blood', amount = 30},
-					{name='hot-air', amount =250},
+					{name='hot-air', amount =300},
 				},
 			crafting_speed = 15,
 			tech = 'antitumor',

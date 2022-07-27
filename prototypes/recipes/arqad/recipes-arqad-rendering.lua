@@ -54,6 +54,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='meat', amount =10},
+					{name = 'sternite-lung', remove_item = true},
 					{name='guts', amount =3},
 				},
 			crafting_speed = 30,
@@ -76,7 +77,7 @@ FUN.autorecipes {
 			crafting_speed = 30,
 			tech = 'reca',
 			name = 'ex-chi-arq',
-			icon = "__pyalienlifegraphics3__/graphics/icons/rendering-arqad.png",
+			icon = "__pyalienlifegraphics3__/graphics/icons/chitin-arqad.png",
 			icon_size = 64,
 		},
 

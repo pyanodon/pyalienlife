@@ -59,6 +59,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
+					{name='geostabilization-tissue',remove_item = true},
 					{name='brain', amount = 1},
 					{name='bones', amount =30},
 				},
@@ -78,6 +79,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='bones', amount = 6},
+					{name='gas-bladder', amount =2},
 					{name='guts', amount =6},
 				},
 			crafting_speed = 15,
@@ -96,6 +98,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='guts', amount = 1},
+					{name='gas-bladder', amount =1},
 					{name='blood', amount =100},
 				},
 			crafting_speed = 15,

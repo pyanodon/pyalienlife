@@ -40,7 +40,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='venon-gland', amount =1},
+					{name='venon-gland',remove_item = true},
 					{name='brain', amount =5},
 				},
 			crafting_speed = 15,
@@ -58,6 +58,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
+					{name='venon-gland',  amount =2},
 					{name='brain', amount = 1},
 					{name='guts', amount =20},
 				},
@@ -77,7 +78,8 @@ FUN.autorecipes {
 			results =
 				{
 					{name='guts', amount = 6},
-					{name='arthropod-blood', amount =230},
+					{name='venon-gland',remove_item = true},
+					{name='arthropod-blood', amount =300},
 				},
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
