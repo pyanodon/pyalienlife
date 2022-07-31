@@ -64,8 +64,11 @@ TECHNOLOGY("rocket-silo"):add_pack("py-science-pack-3")
 TECHNOLOGY("rocket-control-unit"):add_pack("py-science-pack-3")
 TECHNOLOGY("rocket-fuel"):add_pack("py-science-pack-3")
 TECHNOLOGY("advanced-material-processing-2"):add_pack("py-science-pack-3")
-TECHNOLOGY("nuclear-power"):add_pack("py-science-pack-3")
 TECHNOLOGY("nuclear-fuel-reprocessing"):add_pack("py-science-pack-3")
+
+if not mods["pyalternativeenergy"] then
+    TECHNOLOGY("nuclear-power"):add_pack("py-science-pack-3")
+end
 
 TECHNOLOGY("military-2"):remove_pack("logistic-science-pack"):add_pack("py-science-pack-1")
 
