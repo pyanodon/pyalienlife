@@ -29,10 +29,13 @@ if not mods["pyhightech"] then
     TECHNOLOGY("mining-productivity-1"):add_pack("py-science-pack-2")
 end
 
-
 if not mods["pyalternativeenergy"] then
     TECHNOLOGY("energy-3"):add_pack("py-science-pack-2")
 end
+
+TECHNOLOGY("railway-mk03"):add_pack("py-science-pack-3")
+TECHNOLOGY("filtration-mk02"):add_pack("py-science-pack-3")
+TECHNOLOGY("methanol-processing-2"):add_pack("py-science-pack-3")
 
 --BUILDINDS--
 ITEM("fawogae-plantation-mk02"):set("icon", "__pyalienlifegraphics__/graphics/icons/fawogae-plantation-mk02.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-buildings-mk02", "d")

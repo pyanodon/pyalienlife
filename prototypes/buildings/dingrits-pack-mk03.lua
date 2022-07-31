@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"dingrits-pack-mk03", 1}
     }
-}:add_unlock("land-animals-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 40})
+}:add_unlock("land-animals-mk04"):add_ingredient({type = "item", name = "small-parts-03", amount = 40})
 
 ITEM {
     type = "item",

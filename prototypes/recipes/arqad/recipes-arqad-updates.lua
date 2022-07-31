@@ -6,6 +6,7 @@ RECIPE {
     energy_required = 60,
     ingredients = {
         {type = 'item', name = 'rennea', amount = 2},
+        {type = 'item', name = 'dhilmos-egg', amount = 1},
         {type = 'item', name = 'saps', amount = 10},
         {type = 'item', name = 'wax-barrel', amount = 1},
         {type = 'item', name = 'naphtha-barrel', amount = 5},

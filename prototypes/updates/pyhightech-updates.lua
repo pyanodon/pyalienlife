@@ -16,6 +16,9 @@ TECHNOLOGY("ethylene"):add_pack("py-science-pack-2")
 TECHNOLOGY("semiconductor-doping"):add_pack("py-science-pack-2")
 TECHNOLOGY("integrated-circuits-1"):add_pack("py-science-pack-2")
 TECHNOLOGY("basic-electronics"):add_pack("py-science-pack-2")
+TECHNOLOGY("semiconductor-doping-mk02"):add_pack("py-science-pack-3")
+TECHNOLOGY("integrated-circuits-2"):add_pack("py-science-pack-3")
+TECHNOLOGY("advanced-electronics"):add_pack("py-science-pack-3")
 
 --(( BUILDINGS ))--
 require("prototypes/buildings/cadavericarum-mk01")

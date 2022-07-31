@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"bio-printer-mk04", 1}
     }
-}:add_unlock("biotech-machines-mk04")
+}:add_unlock("mass-production")
 
 ITEM {
     type = "item",

@@ -28,6 +28,9 @@ if not mods["pyalternativeenergy"] then
     TECHNOLOGY("uranium-mk02"):add_pack("py-science-pack-2")
 end
 
+TECHNOLOGY("super-steel-mk01"):add_pack("py-science-pack-3")
+TECHNOLOGY("smelters-mk02"):add_pack("py-science-pack-3")
+
 --BUILDINDS--
 RECIPE('plankton-farm'):add_ingredient({type = "item", name = "glass", amount = 30})
 RECIPE('ralesia-plantation-mk02'):add_ingredient({type = "item", name = "duralumin", amount = 40}):add_ingredient({type = "item", name = "titanium-plate", amount = 50})
@@ -44,20 +47,20 @@ RECIPE("chemical-plant-mk03"):add_ingredient({type = "item", name = "neuroproces
 
 RECIPE("chemical-plant-mk04"):add_ingredient({type = "item", name = "metallic-glass", amount = 20})
 
-RECIPE('aluminium-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
-RECIPE('chromium-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
-RECIPE('coal-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
-RECIPE('copper-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
-RECIPE('iron-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
-RECIPE('zinc-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
-RECIPE('uranium-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
-RECIPE('titanium-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
-RECIPE('tin-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
-RECIPE('lead-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
-RECIPE('nexelit-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
-RECIPE('quartz-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
-RECIPE('nickel-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
-RECIPE('phosphate-mine-02'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20})
+RECIPE('aluminium-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20}):add_ingredient{type = "item", name = "fluid-drill-mk03", amount = 1}
+RECIPE('chromium-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20}):add_ingredient{type = "item", name = "fluid-drill-mk03", amount = 1}
+RECIPE('coal-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20}):add_ingredient{type = "item", name = "fluid-drill-mk03", amount = 1}
+RECIPE('copper-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20}):add_ingredient{type = "item", name = "fluid-drill-mk03", amount = 1}
+RECIPE('iron-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20}):add_ingredient{type = "item", name = "fluid-drill-mk03", amount = 1}
+RECIPE('zinc-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20}):add_ingredient{type = "item", name = "fluid-drill-mk03", amount = 1}
+RECIPE('uranium-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20}):add_ingredient{type = "item", name = "fluid-drill-mk03", amount = 1}
+RECIPE('titanium-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20}):add_ingredient{type = "item", name = "fluid-drill-mk03", amount = 1}
+RECIPE('tin-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20}):add_ingredient{type = "item", name = "fluid-drill-mk03", amount = 1}
+RECIPE('lead-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20}):add_ingredient{type = "item", name = "fluid-drill-mk03", amount = 1}
+RECIPE('nexelit-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20}):add_ingredient{type = "item", name = "fluid-drill-mk03", amount = 1}
+RECIPE('quartz-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20}):add_ingredient{type = "item", name = "fluid-drill-mk03", amount = 1}
+RECIPE('nickel-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20}):add_ingredient{type = "item", name = "fluid-drill-mk03", amount = 1}
+RECIPE('phosphate-mine-02'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20}):add_ingredient{type = "item", name = "fluid-drill-mk03", amount = 1}
 
 RECIPE("borax-mine"):add_unlock("glass"):set_enabled(false)
 RECIPE("glassworks-mk01"):add_unlock("glass"):set_enabled(false)

@@ -15,7 +15,8 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 TECHNOLOGY("vanadium-processing"):remove_prereq("xyhiphoe")
 TECHNOLOGY("wood-processing-3"):remove_prereq("xyhiphoe")
 TECHNOLOGY("boron"):add_pack("py-science-pack-1")
-TECHNOLOGY("coated-container"):add_pack("py-science-pack-1"):add_pack("py-science-pack-2")
+TECHNOLOGY("coated-container"):add_pack("py-science-pack-1"):add_pack("py-science-pack-2"):add_pack("py-science-pack-3")
+TECHNOLOGY("vanadium-processing"):add_pack("py-science-pack-3")
 
 --BUILDINDS--
 RECIPE('plankton-farm'):remove_unlock('vanadium-processing'):add_unlock('microbiology-mk01'):remove_ingredient("niobium-plate"):add_ingredient({type = "item", name = "pipe", amount = 20}):add_ingredient({type = "item", name = "small-parts-01", amount = 25}):subgroup_order('py-alienlife-buildings-mk01', 'p')

@@ -17,7 +17,7 @@ RECIPE {
     results = {
         {"dhilmos-pool-mk02", 1}
     }
-}:add_unlock("water-animals-mk02")
+}:add_unlock("dhilmos-mk02")
 
 ITEM {
     type = "item",
