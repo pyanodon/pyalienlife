@@ -22,6 +22,9 @@ TECHNOLOGY("rubber"):add_pack("py-science-pack-1")
 TECHNOLOGY("kevlar-mk02"):add_pack("py-science-pack-1"):add_pack("py-science-pack-2")
 TECHNOLOGY("drilling-fluid-mk03"):add_pack("py-science-pack-2")
 TECHNOLOGY("small-parts-mk02"):add_pack("py-science-pack-2")
+TECHNOLOGY("small-parts-mk03"):add_pack("py-science-pack-3")
+TECHNOLOGY("stack-inserter-2"):add_pack("py-science-pack-3")
+TECHNOLOGY("tholin-mk01"):add_pack("py-science-pack-3")
 
 ----RECIPES----
 RECIPE('guar-separation'):remove_unlock("oil-machines-mk02")

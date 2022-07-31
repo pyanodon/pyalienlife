@@ -122,7 +122,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'arqad-maggot-2', amount = 9},
         {type = 'item', name = 'meat', amount = 10},
-        {type = 'item', name = 'zipir-pup', amount = 2},
+        {type = 'item', name = 'dhilmos-pup', amount = 2},
         },
     results = {
         {type = 'item', name ='arqad-mk02', amount_min = 3, amount_max = 13},

@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {"xenopen-mk03", 1}
     }
-}:add_unlock("land-animals-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
+}:add_unlock("land-animals-mk04"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
 
 ITEM {
     type = "item",

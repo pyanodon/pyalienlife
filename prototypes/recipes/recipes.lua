@@ -252,14 +252,14 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'moss', amount = 20},
         {type = 'item', name = 'alien-sample-03', amount = 1},
-        {type = 'item', name = 'chitosan', amount = 4},
+        {type = 'item', name = 'nanofibrils', amount = 1},
         {type = 'item', name = 'arqad-propolis', amount = 4},
         {type = 'item', name = 'plastic-bar', amount = 15},
         {type = 'item', name = 'negasium', amount = 1},
         {type = 'item', name = 'paragen', amount = 2},
         {type = 'fluid', name = 'flavonoids', amount = 50},
         {type = 'item', name = 'flask', amount = 1},
-        {type = 'item', name = 'super-steel', amount = 10},
+        {type = 'item', name = 'diamond', amount = 1},
     },
     results = {
         {type = 'item', name = 'py-science-pack-3', amount = 3},
@@ -1373,7 +1373,7 @@ RECIPE {
         {type = 'item', name = 'adrenal-cortex', amount = 1}
     },
     main_product = "adrenal-cortex",
-}:add_unlock("biotech-mk03")
+}:add_unlock("cridren")
 
 RECIPE {
     type = "recipe",
@@ -1651,7 +1651,7 @@ RECIPE {
     energy_required = 5,
     ingredients = {
         {type = 'fluid', name = 'b-molasse', amount = 50},
-        {type = 'fluid', name = 'bacteria-1', amount = 20},
+        {type = 'fluid', name = 'zogna-bacteria', amount = 20},
         {type = 'item', name = 'fawogae', amount = 5},
     },
     results = {

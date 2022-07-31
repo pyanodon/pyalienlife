@@ -65,7 +65,7 @@ RECIPE {
             {type = 'item', name = 'alien-sample-02', amount = 1},
             {type = 'item', name = 'cottongut', amount = 60},
             {type = 'item', name = 'navens', amount = 1},
-            {type = 'item', name = 'neuromorphic-chip', amount = 1},
+            -- {type = 'item', name = 'neuromorphic-chip', amount = 1},
             {type = 'fluid', name = 'blood', amount = 200},
             {type = "item", name = "nano-cellulose", amount = 1},
             {type = "item", name = "adrenal-cortex", amount = 1},
