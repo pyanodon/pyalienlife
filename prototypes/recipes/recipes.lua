@@ -2604,7 +2604,7 @@ RECIPE {
         {type = 'item', name = 'raw-coal', amount = 15},
     },
     --main_product = "chloral",
-}:add_unlock("coal-mk02")
+}:add_unlock("bioprocessing")
 
 RECIPE {
     type = 'recipe',
