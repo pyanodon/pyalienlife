@@ -48,7 +48,7 @@ ENTITY {
         module_slots = 0
     },
     --allowed_effects = {"consumption", "speed", "pollution"},
-    mining_speed = 2,
+    mining_speed = 3,
     input_fluid_box =
     {
         production_type = "input-output",
