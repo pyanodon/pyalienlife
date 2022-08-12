@@ -102,7 +102,7 @@ RECIPE {
     enabled = false,
     energy_required = 3,
     ingredients = {
-        {type = 'fluid', name = 'molten-glass', amount = 50},
+        {type = 'fluid', name = 'molten-glass', amount = 50, fluidbox_index = 2},
     },
     results = {
         {type = 'item', name = 'empty-petri-dish', amount = 1},
@@ -2075,7 +2075,7 @@ RECIPE {
     enabled = false,
     energy_required = 3,
     ingredients = {
-        {type = "fluid", name = "molten-glass", amount = 120},
+        {type = "fluid", name = "molten-glass", amount = 120, fluidbox_index = 2},
         {type = "item", name = "boron-trioxide", amount = 5},
         {type = "item", name = "stopper", amount = 4},
     },
@@ -2095,8 +2095,8 @@ RECIPE {
     category = 'glassworks',
     energy_required = 5,
     ingredients = {
-        {type = "fluid", name = "molten-glass", amount = 140},
-        {type = "fluid", name = "refsyngas", amount = 300},
+        {type = "fluid", name = "molten-glass", amount = 140, fluidbox_index = 2},
+        {type = "fluid", name = "refsyngas", amount = 300, fluidbox_index = 1},
         {type = "item", name = "purified-quartz", amount = 1},
         {type = "item", name = "stopper", amount = 20},
         {type = "item", name = "boron-trioxide", amount = 10}
@@ -2466,7 +2466,7 @@ RECIPE {
     enabled = false,
     energy_required = 6,
     ingredients = {
-        {type = 'fluid', name = 'molten-glass', amount = 100},
+        {type = 'fluid', name = 'molten-glass', amount = 100, fluidbox_index = 2},
         {type = 'item', name = 'boron-trioxide', amount = 5},
     },
     results = {
