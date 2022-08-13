@@ -98,7 +98,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'empty-petri-dish',
-    category = 'glassworks',
+    category = "glassworks",
     enabled = false,
     energy_required = 3,
     ingredients = {
@@ -2071,7 +2071,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "flask-2",
-    category = 'glassworks',
+    category = "glassworks",
     enabled = false,
     energy_required = 3,
     ingredients = {
@@ -2092,7 +2092,7 @@ RECIPE {
     type = "recipe",
     name = "flask-3",
     enabled = false,
-    category = 'glassworks',
+    category = "glassworks",
     energy_required = 5,
     ingredients = {
         {type = "fluid", name = "molten-glass", amount = 140, fluidbox_index = 2},
@@ -2462,7 +2462,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'quartz-tube',
-    category = 'glassworks',
+    category = "glassworks",
     enabled = false,
     energy_required = 6,
     ingredients = {
