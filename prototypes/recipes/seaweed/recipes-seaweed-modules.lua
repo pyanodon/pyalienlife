@@ -52,7 +52,7 @@ RECIPE{
         {type = 'fluid', name = 'water', amount = 200},
         {type = 'item', name = 'molybdenum-oxide', amount = 5},
         {type = 'item', name = 'fertilizer', amount = 1},
-        {type = 'item', name = 'seaweed', amount = 5}
+        {type = 'item', name = 'seaweed-mk03', amount = 5}
     },
     results = {{type = 'item', name = 'seaweed-mk04', amount = 1}}
 }:add_unlock('seaweed-mk04')
