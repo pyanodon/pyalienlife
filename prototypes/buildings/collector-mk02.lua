@@ -1,40 +1,42 @@
 RECIPE {
     type = "recipe",
-    name = "collector",
+    name = "collector-mk02",
     energy_required = 0.5,
-    enabled = true,
+    enabled = false,
     ingredients = {
-        {"electric-mining-drill", 2},
-        {"soil-extractormk01", 1},
-        {"electronic-circuit", 5},
-        {"iron-gear-wheel", 10},
-        {"iron-plate", 20},
-        {"steam-engine", 1},
+        {"collector", 1},
+        {"glass", 30},
+        {"nexelit-plate", 15},
+        {"duralumin", 10},
+        {"advanced-circuit", 10},
+        {"engine-unit", 1},
+        {"latex", 10},
+        {"neuroprocessor", 5},
     },
     results = {
-        {"collector", 1}
+        {"collector-mk02", 1}
     }
-}--:add_unlock("biotech-mk01")
+}:add_unlock("biotech-machines-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 50})
 
 ITEM {
     type = "item",
-    name = "collector",
-    icon = "__pyalienlifegraphics__/graphics/icons/collector.png",
+    name = "collector-mk02",
+    icon = "__pyalienlifegraphics3__/graphics/icons/collector-mk02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-buildings-mk02",
     order = "x",
-    place_result = "collector",
+    place_result = "collector-mk02",
     stack_size = 10
 }
 
 ENTITY {
     type = "mining-drill",
-    name = "collector",
-    icon = "__pyalienlifegraphics__/graphics/icons/collector.png",
+    name = "collector-mk02",
+    icon = "__pyalienlifegraphics3__/graphics/icons/collector-mk02.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "collector"},
+    minable = {mining_time = 0.5, result = "collector-mk02"},
     fast_replaceable_group = "collector",
     max_health = 200,
     resource_categories = {"ore-bioreserve"},
@@ -46,13 +48,13 @@ ENTITY {
         module_slots = 1
     },
     allowed_effects = {"consumption", "speed", "pollution"},
-    mining_speed = 1,
+    mining_speed = 2,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
         emissions_per_minute = 1,
     },
-    energy_usage = "100kW",
+    energy_usage = "250kW",
     mining_power = 1,
     resource_searching_radius = 4.49,
     vector_to_place_result = {0, -3.85},
@@ -143,7 +145,7 @@ ENTITY {
                 line_length = 64,
                 frame_count = 255,
                 animation_speed = 0.2,
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
                 shift = util.by_pixel(-96, 0)
             },
             {
@@ -153,7 +155,7 @@ ENTITY {
                 line_length = 64,
                 frame_count = 255,
                 animation_speed = 0.2,
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
                 shift = util.by_pixel(-64, 0)
             },
             {
@@ -163,7 +165,7 @@ ENTITY {
                 line_length = 64,
                 frame_count = 255,
                 animation_speed = 0.2,
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
                 shift = util.by_pixel(-32, 0)
             },
             {
@@ -173,7 +175,7 @@ ENTITY {
                 line_length = 64,
                 frame_count = 255,
                 animation_speed = 0.2,
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
                 shift = util.by_pixel(0, 0)
             },
             {
@@ -183,7 +185,7 @@ ENTITY {
                 line_length = 64,
                 frame_count = 255,
                 animation_speed = 0.2,
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
                 shift = util.by_pixel(32, 0)
             },
             {
@@ -193,7 +195,7 @@ ENTITY {
                 line_length = 64,
                 frame_count = 255,
                 animation_speed = 0.2,
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
                 shift = util.by_pixel(64, 0)
             },
             {
@@ -203,7 +205,7 @@ ENTITY {
                 line_length = 64,
                 frame_count = 255,
                 animation_speed = 0.2,
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
                 shift = util.by_pixel(96, 0)
             },
         }

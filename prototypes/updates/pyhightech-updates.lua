@@ -328,7 +328,7 @@ RECIPE('research-center-mk03'):add_ingredient({type = "item", name = "phosphate-
 RECIPE('arqad-hive-mk03'):add_ingredient({type = "item", name = "superconductor", amount = 5}):add_ingredient({type = "item", name = "phosphate-glass", amount = 50}):add_ingredient({type = "item", name = "heavy-fermion", amount = 15})
 RECIPE('simik-den-mk03'):add_ingredient({type = "item", name = "heavy-fermion", amount = 5}):add_ingredient({type = "item", name = "superconductor", amount = 10})
 RECIPE('chemical-plant-mk03'):add_ingredient({type = "item", name = "superconductor", amount = 5}):add_ingredient({type = "item", name = "phosphate-glass", amount = 50}):add_ingredient({type = "item", name = "heavy-fermion", amount = 15})
-
+RECIPE('collector-mk03'):add_ingredient({type = "item", name = "superconductor", amount = 6}):add_ingredient({type = "item", name = "phosphate-glass", amount = 30}):add_ingredient({type = "item", name = "heavy-fermion", amount = 15})
 
 --mk04--
 RECIPE('arthurian-pen-mk04'):add_ingredient({type = "item", name = "intelligent-unit", amount = 5}):add_ingredient({type = "item", name = "aerogel", amount = 20}):add_ingredient({type = "item", name = "carbon-aerogel", amount = 10}):add_ingredient({type = "item", name = "quantum-dots", amount = 10})
@@ -377,6 +377,7 @@ RECIPE('research-center-mk04'):add_ingredient({type = "item", name = "quantum-vo
 RECIPE('arqad-hive-mk04'):add_ingredient({type = "item", name = "phosphate-glass", amount = 100}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 30})
 RECIPE('simik-den-mk04'):add_ingredient({type = "item", name = "intelligent-unit", amount = 50}):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 20})
 RECIPE('chemical-plant-mk04'):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 10}):add_ingredient({type = "item", name = "harmonic-absorber", amount = 30}):add_ingredient({type = "item", name = "intelligent-unit", amount = 50})
+RECIPE('collector-mk04'):add_ingredient({type = "item", name = "harmonic-absorber", amount = 8}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 10}):add_ingredient({type = "item", name = "intelligent-unit", amount = 2})
 
 
 RECIPE('simik-den-mk02'):add_ingredient({type = "item", name = "re-tin", amount = 10}):add_ingredient({type = "item", name = "cooling-system", amount = 10})
