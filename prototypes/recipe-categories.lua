@@ -17,6 +17,10 @@ data:extend {
     },
     {
         type = "recipe-category",
+        name = "rc"
+    },
+    {
+        type = "recipe-category",
         name = "micro-mine"
     },
     {

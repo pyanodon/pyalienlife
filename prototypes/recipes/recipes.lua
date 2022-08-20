@@ -2911,3 +2911,17 @@ RECIPE {
         {type = 'item', name = 'animal-sample-01', amount = 1},
     },
 }:add_unlock("logistic-science-pack")
+
+RECIPE {
+    type = 'recipe',
+    name = 'delete-later',
+    category = 'rc',
+    enabled = true,
+    energy_required = 50,
+    ingredients = {
+        {type = 'item', name = 'iron-plate', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'iron-plate', amount = 1},
+    },
+}

@@ -345,6 +345,7 @@ require('prototypes/buildings/simik-den-mk01')
 require('prototypes/buildings/simik-den-mk02')
 require('prototypes/buildings/simik-den-mk03')
 require('prototypes/buildings/simik-den-mk04')
+require('prototypes/buildings/rc-mk01')
 
 if mods["pyhightech"] then
     require("prototypes/buildings/fluid-drill-mk01")
