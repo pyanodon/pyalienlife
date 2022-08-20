@@ -138,9 +138,9 @@ ENTITY {
         },
         {
             north_position = util.by_pixel(-48, -192),
-            west_position = util.by_pixel(-0, -0),
-            south_position = util.by_pixel(-0, -0),
-            east_position = util.by_pixel(-0, -0),
+            west_position = util.by_pixel(-48, -192),
+            south_position = util.by_pixel(-48, -192),
+            east_position = util.by_pixel(-48, -192),
             animation = {
                 filename = "__pyalienlifegraphics2__/graphics/entity/rc/screen.png",
                 frame_count = 152,
