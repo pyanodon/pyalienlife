@@ -152,6 +152,22 @@ ENTITY {
                 priority = "medium"
             }
         },
+        {
+            north_position = util.by_pixel(-48, -192),
+            west_position = util.by_pixel(-48, -192),
+            south_position = util.by_pixel(-48, -192),
+            east_position = util.by_pixel(-48, -192),
+            animation = {
+                filename = "__pyalienlifegraphics2__/graphics/entity/rc/screen.png",
+                frame_count = 152,
+                width = 96,
+                height = 64,
+                line_length = 20,
+                animation_speed = 0.3,
+                draw_as_glow = true ,
+                priority = "medium"
+            }
+        },
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
