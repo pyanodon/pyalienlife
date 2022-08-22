@@ -35,8 +35,6 @@ TECHNOLOGY("ralesia"):add_pack("py-science-pack-1")
 
 --ADAPTATIONS
 
-data.raw.boiler.boiler.energy_source.fuel_categories = {"chemical", "biomass"}
-
 data.raw.item.fawogae = nil
 
 -- table.insert(data.raw.character.character.mining_categories, "ore-bioreserve")
