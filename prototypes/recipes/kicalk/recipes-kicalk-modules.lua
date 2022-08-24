@@ -62,6 +62,20 @@ RECIPE {
     order = 'za'
 }:add_unlock("kicalk-mk02")
 
+RECIPE {
+    type = "recipe",
+    name = "kicalk-seeds-mk02",
+    category = "nursery",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "kicalk-mk02", amount = 4},
+    },
+    results = {
+        {type = "item", name = "kicalk-seeds-mk02", amount = 5}
+    },
+}:add_unlock("kicalk-mk02")
+
 --mk03--
 --WIP--
 
@@ -124,6 +138,20 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-kicalk',
     order = 'zb'
+}:add_unlock("kicalk-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "kicalk-seeds-mk03",
+    category = "nursery",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "kicalk-mk03", amount = 5},
+    },
+    results = {
+        {type = "item", name = "kicalk-seeds-mk03", amount = 5}
+    },
 }:add_unlock("kicalk-mk03")
 
 --mk04--
@@ -192,4 +220,18 @@ RECIPE {
     --icon_size = 64,
     subgroup = 'py-alienlife-kicalk',
     order = 'zc'
+}:add_unlock("kicalk-mk04")
+
+RECIPE {
+    type = "recipe",
+    name = "kicalk-seeds-mk04",
+    category = "nursery",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "kicalk-mk04", amount = 6},
+    },
+    results = {
+        {type = "item", name = "kicalk-seeds-mk04", amount = 6}
+    },
 }:add_unlock("kicalk-mk04")
