@@ -1,11 +1,11 @@
 local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
-------------------CUB MAKER------------------
+------------------SPECIAL MAKER------------------
 
 FUN.autorecipes {
     name = 'scrondrix-improved',
-	category = 'creature-chamber',
-	--module_limitations = 'scrondrix',
+	category = 'scrondrix',
+	module_limitations = 'scrondrix',
 	subgroup = 'py-alienlife-scrondrix',
 	order = 'c',
 	--main_product = 'scrondrix-pup',
@@ -16,6 +16,7 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='caged-scrondrix', amount = 1},
+					{name='gh', amount =1},
 					{name='nanochondria', amount =1},
 				},
 			results =
@@ -26,7 +27,8 @@ FUN.autorecipes {
 			tech = 'nanochondria',
 			name = 'Caged scrondrix 9',
 		},
-		--nanochondria and gh
+		--[[
+			nanochondria and gh
 		{
 			ingredients =
 				{
@@ -40,11 +42,12 @@ FUN.autorecipes {
 			tech = 'nanochondria',
 			name = 'Caged scrondrix 10',
 		},
+		]]--
 		--bmp
 		{
 			ingredients =
 				{
-					{name='gh',remove_item = true},
+					--{name='gh',remove_item = true},
 					{name='nanochondria',remove_item = true},
 					{name='bmp', amount =1},
 				},
@@ -57,7 +60,7 @@ FUN.autorecipes {
 			tech = 'bmp',
 			name = 'Caged scrondrix 11',
 		},
-
+--[[
 		--bmp and gh
 		{
 			ingredients =
@@ -73,11 +76,12 @@ FUN.autorecipes {
 			tech = 'bmp',
 			name = 'Caged scrondrix 12',
 		},
+		]]--
 		--rna anabolic
 		{
 			ingredients =
 				{
-					{name='gh',remove_item = true},
+					--{name='gh',remove_item = true},
 					{name='bmp',remove_item = true},
 					{name='anabolic-rna', amount =1},
 				},
@@ -90,6 +94,7 @@ FUN.autorecipes {
 			tech = 'anabolic-rna',
 			name = 'Caged scrondrix 13',
 		},
+		--[[
 		--rna anabolic and gh
 		{
 			ingredients =
@@ -105,11 +110,12 @@ FUN.autorecipes {
 			tech = 'anabolic-rna',
 			name = 'Caged scrondrix 14',
 		},
+		]]--
 		--antitumor
 		{
 			ingredients =
 				{
-					{name='gh',remove_item = true},
+					--{name='gh',remove_item = true},
 					{name='anabolic-rna',remove_item = true},
 					{name='antitumor', amount =1},
 				},
@@ -122,6 +128,7 @@ FUN.autorecipes {
 			tech = 'antitumor',
 			name = 'Caged scrondrix 15',
 		},
+		--[[
 		--antitumor and gh
 		{
 			ingredients =
@@ -137,11 +144,12 @@ FUN.autorecipes {
 			tech = 'antitumor',
 			name = 'Caged scrondrix 16',
 		},
+		]]
 		--Recombinant Ery
 		{
 			ingredients =
 				{
-					{name='gh',remove_item = true},
+					--{name='gh',remove_item = true},
 					{name='antitumor',remove_item = true},
 					{name='recombinant-ery', amount =1},
 				},
@@ -154,6 +162,7 @@ FUN.autorecipes {
 			tech = 'recombinant-ery',
 			name = 'Caged scrondrix 17',
 		},
+		--[[
 		--Recombinant Ery and gh
 		{
 			ingredients =
@@ -167,12 +176,12 @@ FUN.autorecipes {
 			crafting_speed = 30,
 			tech = 'recombinant-ery',
 			name = 'Caged scrondrix 18',
-		},
+		},]]
 		--reca
 		{
 			ingredients =
 				{
-					{name='gh',remove_item = true},
+					--{name='gh',remove_item = true},
 					{name='recombinant-ery',remove_item = true},
 					{name='reca', amount =1},
 				},
@@ -185,6 +194,7 @@ FUN.autorecipes {
 			tech = 'reca',
 			name = 'Caged scrondrix 19',
 		},
+		--[[
 		--reca and gh
 		{
 			ingredients =
@@ -198,12 +208,12 @@ FUN.autorecipes {
 			crafting_speed = 30,
 			tech = 'reca',
 			name = 'Caged scrondrix 20',
-		},
+		},]]
 		--orexigenic
 		{
 			ingredients =
 				{
-					{name='gh',remove_item = true},
+					--{name='gh',remove_item = true},
 					{name='reca',remove_item = true},
 					{name='orexigenic', amount =1},
 				},
@@ -216,6 +226,7 @@ FUN.autorecipes {
 			tech = 'orexigenic',
 			name = 'Caged scrondrix 21',
 		},
+		--[[
 		--orexigenic and gh
 		{
 			ingredients =
@@ -229,6 +240,6 @@ FUN.autorecipes {
 			crafting_speed = 30,
 			tech = 'orexigenic',
 			name = 'Caged scrondrix 22',
-		},
+		},]]
 	}
 }

@@ -65,23 +65,24 @@ RECIPE {
 ---pup maker---
 
 
----maturing---
+--[[-maturing---
 
 RECIPE {
     type = 'recipe',
     name = 'scrondrix-mature-01',
-    category = 'creature-chamber',
+    category = 'scrondrix',
     enabled = false,
-    energy_required = 100,
+    energy_required = 150,
     ingredients = {
         {type = 'item', name = 'scrondrix-pup', amount = 10},
         {type = 'item', name = 'cage', amount = 10},
-        {type = 'fluid', name = 'fetal-serum', amount = 50},
+        {type = 'item', name = 'fetal-serum-barrel', amount = 1},
     },
     results = {
         {type = 'item', name = 'caged-scrondrix', amount = 10},
+        {type = 'item', name = 'empty-barrel', amount = 1},
     },
-    --main_product = "scrondrix",
+    main_product = "caged-scrondrix",
     subgroup = 'py-alienlife-scrondrix',
     order = 'a',
 }:add_unlock("assisted-embryology")
@@ -90,7 +91,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'scrondrix-mature-02',
-    category = 'creature-chamber',
+    category = 'scrondrix',
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -98,16 +99,17 @@ RECIPE {
         {type = 'item', name = 'gh', amount = 1},
         {type = 'item', name = 'resveratrol', amount = 3},
         {type = 'item', name = 'cage', amount = 20},
-        {type = 'fluid', name = 'fetal-serum', amount = 50},
+        {type = 'item', name = 'fetal-serum-barrel', amount = 1},
     },
     results = {
         {type = 'item', name = 'caged-scrondrix', amount = 20},
+        {type = 'item', name = 'empty-barrel', amount = 1},
     },
-    --main_product = "caged-scrondrix",
+    main_product = "caged-scrondrix",
     subgroup = 'py-alienlife-scrondrix',
     order = 'a',
 }:add_unlock("growth-hormone")
-
+]]--
 
 ----adverse products----
 

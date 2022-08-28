@@ -878,7 +878,7 @@ RECIPE {
         {type = 'fluid', name = 'bee-venom', amount = 50},
     },
     results = {
-        {type = 'item', name = 'antiviral', amount = 200}
+        {type = 'item', name = 'antiviral', amount = 50}
     }
 }:add_unlock('antiviral')
 
@@ -901,7 +901,7 @@ RECIPE {
         {type = 'fluid', name = 'bee-venom', amount = 50},
     },
     results = {
-        {type = 'item', name = 'antiviral', amount = 250}
+        {type = 'item', name = 'antiviral', amount = 70}
     }
 }:add_unlock('antiviral')
 
@@ -2911,17 +2911,3 @@ RECIPE {
         {type = 'item', name = 'animal-sample-01', amount = 1},
     },
 }:add_unlock("logistic-science-pack")
-
-RECIPE {
-    type = 'recipe',
-    name = 'delete-later',
-    category = 'rc',
-    enabled = true,
-    energy_required = 50,
-    ingredients = {
-        {type = 'item', name = 'iron-plate', amount = 1},
-    },
-    results = {
-        {type = 'item', name = 'iron-plate', amount = 1},
-    },
-}

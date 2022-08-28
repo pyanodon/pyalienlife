@@ -37,10 +37,14 @@ ENTITY {
     collision_box = {{-10.6, -10.6}, {10.6, 10.6}},
     selection_box = {{-11.0, -11.0}, {11.0, 11.0}},
     match_animation_speed_to_activity = false,
+    draw_entity_info_icon_background = false,
+    entity_info_icon_shift = util.by_pixel(165, 265),
     module_specification = {
-        module_slots = 1
+        module_info_icon_scale = 0.6,
+        module_info_icon_shift = util.by_pixel(160, 230),
+        module_slots = 1,
     },
-    allowed_effects = {"speed","productivity",'consumption','pollution'},
+    allowed_effects = {"speed",'consumption','pollution'},
     crafting_categories = {"rc"},
     crafting_speed = 1,
     energy_source = {
