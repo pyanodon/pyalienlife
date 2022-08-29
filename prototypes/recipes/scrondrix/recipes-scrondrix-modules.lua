@@ -29,7 +29,7 @@ RECIPE {
     icons =
     {
         {icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png", scale = 0.25},
-        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk02.png"}
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk02.png", scale = 0.5}
     },
     icon_size = 64,
     subgroup = 'py-alienlife-scrondrix',
@@ -63,7 +63,7 @@ RECIPE {
     icons =
     {
         {icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png", scale = 0.25},
-        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk03.png"}
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk03.png", scale = 0.5}
     },
     icon_size = 64,
     subgroup = 'py-alienlife-scrondrix',
@@ -97,7 +97,7 @@ RECIPE {
     icons =
     {
         {icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png", scale = 0.25},
-        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk04.png"}
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk04.png", scale = 0.5}
     },
     icon_size = 64,
     subgroup = 'py-alienlife-scrondrix',
