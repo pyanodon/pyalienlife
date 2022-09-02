@@ -2,6 +2,20 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 ------------------RENDERING------------------
 
+local INPUT_AMOUNT = 3
+
+local BASE_MEAT = 3
+local BASE_SKIN = 4
+local BASE_GUTS = 3
+local BASE_BLOOD = 40
+local BASE_SPECIAL = 30	-- venom
+
+local IMP_MEAT = 15
+local IMP_SKIN = 21
+local IMP_GUTS = 18
+local IMP_BLOOD = 130
+local IMP_SPECIAL = 80
+
 FUN.autorecipes {
     name = 'rendering-arqad',
 	category = 'slaughterhouse-arqad',
@@ -12,15 +26,15 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='arqad', amount=3}
+					{name = 'arqad', amount = INPUT_AMOUNT}
 				},
 			results =
 				{
-					{name='meat', amount =3},
-					{name='chitin', amount =2},
-					{name='guts', amount =3},
-					{name='arthropod-blood', amount =30},
-					{name = 'bee-venom', amount = 5}
+					{name = 'meat', amount = BASE_MEAT},
+					{name = 'chitin', amount = BASE_SKIN},
+					{name = 'guts', amount = BASE_GUTS},
+					{name = 'arthropod-blood', amount = BASE_BLOOD},
+					{name = 'bee-venom', amount = BASE_SPECIAL}
 				},
 			crafting_speed = 30,
 			tech = 'arqad',
@@ -32,14 +46,12 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name = 'arqad', remove_item = true},
-					{name='guts-arqad', amount=3},
+					{name = 'guts-arqad', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='guts', amount =10},
-					{name = 'sternite-lung', amount = 3},
+					{name = 'guts', amount = IMP_GUTS},
 				},
-			crafting_speed = 30,
 			tech = 'antitumor',
 			name = 'ex-gut-arq',
 			icon = "__pyalienlifegraphics3__/graphics/icons/guts-arqad.png",
@@ -49,15 +61,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name = 'guts-arqad', remove_item = true},
-					{name='meat-arqad', amount=3},
+					{name = 'meat-arqad', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='meat', amount =10},
-					{name = 'sternite-lung', remove_item = true},
-					{name='guts', amount =3},
+					{name = 'guts', amount = BASE_GUTS},
+					{name = 'meat', amount = IMP_MEAT},
 				},
-			crafting_speed = 30,
 			tech = 'anabolic-rna',
 			name = 'ex-me-arq',
 			icon = "__pyalienlifegraphics3__/graphics/icons/meat-arqad.png",
@@ -67,33 +77,30 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name = 'meat-arqad', remove_item = true},
-					{name='chitin-arqad', amount=3},
+					{name = 'chitin-arqad', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='meat', amount =3},
-					{name = 'chitin', amount = 10}
+					{name = 'meat', amount = BASE_MEAT},
+					{name = 'chitin', amount = IMP_SKIN}
 				},
-			crafting_speed = 30,
 			tech = 'reca',
 			name = 'ex-chi-arq',
 			icon = "__pyalienlifegraphics3__/graphics/icons/chitin-arqad.png",
 			icon_size = 64,
 		},
-
 		{
 			ingredients =
 				{
 					{name = 'chitin-arqad', remove_item = true},
-					{name='blood-arqad', amount=3},
+					{name = 'blood-arqad', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='chitin', amount = 4},
-					{name='arthropod-blood', amount =100},
-					{name = 'sternite-lung', remove_item = true},
+					{name = 'chitin', amount = BASE_SKIN},
+					{name = 'arthropod-blood', amount = IMP_BLOOD},
+					{name = 'bee-venom', amount = IMP_SPECIAL}
 				},
-			crafting_speed = 30,
 			tech = 'recombinant-ery',
 			name = 'ex-blo-arq',
 			icon = "__pyalienlifegraphics3__/graphics/icons/blood-arqad.png",

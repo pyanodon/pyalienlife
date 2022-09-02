@@ -2,6 +2,23 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 ------------------RENDERING------------------
 
+local INPUT_AMOUNT = 1
+
+local BASE_MEAT = 4
+local BASE_SKIN = 6
+local BASE_FAT = 3
+local BASE_GUTS = 4
+local BASE_BLOOD = 65
+local BASE_BRAIN = 1
+
+local IMP_MEAT = 13
+local IMP_SKIN = 17
+local IMP_FAT = 15
+local IMP_GUTS = 13
+local IMP_BLOOD = 170
+local IMP_BRAIN = 4
+
+
 FUN.autorecipes {
     name = 'rendering-zipir',
 	category = 'slaughterhouse-zipir',
@@ -13,16 +30,16 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'zipir1', amount=1},
+					{name = 'zipir1', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='meat', amount =4},
-					{name='skin', amount =6},
-					{name='mukmoux-fat', amount =3},
-					{name='guts', amount =4},
-					{name='arthropod-blood', amount =50},
-					{name='brain', amount =1},
+					{name='meat', amount = BASE_MEAT},
+					{name='skin', amount = BASE_SKIN},
+					{name='mukmoux-fat', amount = BASE_FAT},
+					{name='guts', amount = BASE_GUTS},
+					{name='arthropod-blood', amount = BASE_BLOOD},
+					{name='brain', amount = BASE_BRAIN},
 				},
 			crafting_speed = 30,
 			tech = 'zipir',
@@ -35,13 +52,12 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name = 'zipir1',remove_item = true},
-					{name='brain-zipir', amount=1},
+					{name='brain-zipir', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='brain', amount =4},
+					{name='brain', amount = IMP_BRAIN},
 				},
-			crafting_speed = 15,
 			tech = 'nanochondria',
 			name = 'ex-bra-zipir',
 			icon = "__pyalienlifegraphics__/graphics/icons/brain-zipir.png",
@@ -52,14 +68,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='brain-zipir',remove_item = true},
-					{name='guts-zipir', amount=1},
+					{name='guts-zipir', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='brain', amount = 1},
-					{name='guts', amount =13},
+					{name='brain', amount = BASE_BRAIN},
+					{name='guts', amount = IMP_GUTS},
 				},
-			crafting_speed = 15,
 			tech = 'antitumor',
 			name = 'ex-gut-zipir',
 			icon = "__pyalienlifegraphics__/graphics/icons/guts-zipir.png",
@@ -70,14 +85,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='guts-zipir',remove_item = true},
-					{name='blood-zipir', amount=1},
+					{name='blood-zipir', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='guts', amount = 4},
-					{name='arthropod-blood', amount =170},
+					{name='guts', amount = BASE_GUTS},
+					{name='arthropod-blood', amount = IMP_BLOOD},
 				},
-			crafting_speed = 15,
 			tech = 'recombinant-ery',
 			name = 'ex-blo-zipir',
 			icon = "__pyalienlifegraphics__/graphics/icons/blood-zipir.png",
@@ -88,15 +102,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='blood-zipir',remove_item = true},
-					{name='skin-zipir', amount=1},
+					{name='skin-zipir', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name = 'adaptable-automucosa', amount = 1},
-					{name='arthropod-blood', amount = 50},
-					{name='skin', amount =17},
+					{name='arthropod-blood', amount = BASE_BLOOD},
+					{name='skin', amount = IMP_SKIN},
 				},
-			crafting_speed = 15,
 			tech = 'reca',
 			name = 'ex-ski-zipir',
 			icon = "__pyalienlifegraphics__/graphics/icons/skin-zipir.png",
@@ -107,15 +119,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='skin-zipir',remove_item = true},
-					{name='fat-zipir', amount=1},
+					{name='fat-zipir', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name = 'adaptable-automucosa', remove_item = true},
-					{name='skin', amount = 6},
-					{name='mukmoux-fat', amount =15},
+					{name='skin', amount = BASE_SKIN},
+					{name='mukmoux-fat', amount = IMP_FAT},
 				},
-			crafting_speed = 15,
 			tech = 'orexigenic',
 			name = 'ex-fat-zipir',
 			icon = "__pyalienlifegraphics__/graphics/icons/fat-zipir.png",
@@ -126,14 +136,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='fat-zipir',remove_item = true},
-					{name='meat-zipir', amount=1},
+					{name='meat-zipir', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='mukmoux-fat', amount = 3},
-					{name='meat', amount =13},
+					{name='mukmoux-fat', amount = BASE_FAT},
+					{name='meat', amount = IMP_MEAT},
 				},
-			crafting_speed = 15,
 			tech = 'anabolic-rna',
 			name = 'ex-me-zipir',
 			icon = "__pyalienlifegraphics__/graphics/icons/meat-zipir.png",

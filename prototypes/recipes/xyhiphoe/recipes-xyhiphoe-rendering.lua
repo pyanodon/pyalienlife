@@ -2,6 +2,19 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 ------------------RENDERING------------------
 
+local INPUT_AMOUNT = 1
+
+local BASE_MEAT = 2
+local BASE_SKIN = 4		-- shell
+local BASE_GUTS = 4
+local BASE_BLOOD = 80
+
+local IMP_MEAT = 8
+local IMP_SKIN = 15
+local IMP_GUTS = 11
+local IMP_BLOOD = 300
+
+
 FUN.autorecipes {
     name = 'rendering',
 	category = 'slaughterhouse-xyhiphoe',
@@ -12,14 +25,14 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='xyhiphoe', amount=1},
+					{name='xyhiphoe', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='meat',  amount =1},
-					{name='shell',  amount =3},
-					{name='guts',  amount =4},
-					{name='arthropod-blood', amount =70},
+					{name='meat',  amount = BASE_MEAT},
+					{name='shell',  amount = BASE_SKIN},
+					{name='guts',  amount = BASE_GUTS},
+					{name='arthropod-blood', amount = BASE_BLOOD},
 				},
 			crafting_speed = 30,
 			tech = 'water-invertebrates-mk01',
@@ -32,13 +45,12 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='xyhiphoe',remove_item = true},
-					{name='meat-xyhiphoe', amount=1},
+					{name='meat-xyhiphoe', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='meat', amount =8},
+					{name='meat', amount = IMP_MEAT},
 				},
-			crafting_speed = 15,
 			tech = 'anabolic-rna',
 			name = 'ex-me-xyh',
 			icon = "__pyalienlifegraphics__/graphics/icons/meat-xyhiphoe.png",
@@ -49,14 +61,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='meat-xyhiphoe',remove_item = true},
-					{name='guts-xyhiphoe', amount=1},
+					{name='guts-xyhiphoe', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='meat', amount = 1},
-					{name='guts', amount =11},
+					{name='meat', amount = BASE_MEAT},
+					{name='guts', amount = IMP_GUTS},
 				},
-			crafting_speed = 15,
 			tech = 'antitumor',
 			name = 'ex-gut-xyh',
 			icon = "__pyalienlifegraphics__/graphics/icons/guts-xyhiphoe.png",
@@ -67,17 +78,33 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='guts-xyhiphoe',remove_item = true},
-					{name='blood-xyhiphoe', amount=1},
+					{name='blood-xyhiphoe', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='guts', amount = 4},
-					{name='arthropod-blood', amount =300},
+					{name='guts', amount = BASE_GUTS},
+					{name='arthropod-blood', amount = IMP_BLOOD},
 				},
-			crafting_speed = 15,
 			tech = 'recombinant-ery',
 			name = 'ex-blo-xyh',
 			icon = "__pyalienlifegraphics__/graphics/icons/blood-xyhiphoe.png",
+			icon_size = 64,
+		},
+		--skin xyhiphoe rendering
+		{
+			ingredients =
+				{
+					{name='blood-xyhiphoe',remove_item = true},
+					{name='shell-xyhiphoe', amount = INPUT_AMOUNT},
+				},
+			results =
+				{
+					{name='arthropod-blood', amount = BASE_BLOOD},
+					{name='shell', amount = IMP_SKIN},
+				},
+			tech = 'reca',
+			name = 'ex-ski-auog',
+			icon = "__pyalienlifegraphics__/graphics/icons/shell-xyhiphoe.png",
 			icon_size = 64,
 		},
 	}

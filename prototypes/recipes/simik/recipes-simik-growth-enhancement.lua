@@ -129,37 +129,6 @@ FUN.autorecipes {
 			crafting_speed = 30,
 			tech = 'antitumor'
 		},
-
-		--antitumor hot air
-		{
-			ingredients =
-				{
-					{name='gh',remove_item = true},
-
-				},
-			results =
-				{
-					{name='guts-caged-simik', remove_item = true},
-					{name='hot-air-caged-simik', amount = 1},
-				},
-			crafting_speed = 90,
-			tech = 'antitumor'
-		},
-		--antitumor and gh hot air
-		{
-			ingredients =
-				{
-					--{name='nanochondria', amount =1},
-					{name='gh', amount =1},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 30,
-			tech = 'antitumor'
-		},
-
 		--Recombinant Ery
 		{
 			ingredients =
@@ -170,7 +139,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='hot-air-caged-simik', remove_item = true},
+					{name='guts-caged-simik', remove_item = true},
 					{name='blood-caged-simik', amount = 1},
 				},
 			crafting_speed = 90,
@@ -218,60 +187,6 @@ FUN.autorecipes {
 			crafting_speed = 30,
 			tech = 'reca'
         },
-        --reca chitin
-		{
-			ingredients =
-				{
-					{name='gh',remove_item = true},
-				},
-			results =
-				{
-					{name='skin-caged-simik', remove_item = true},
-					{name='chitin-caged-simik', amount = 1},
-				},
-			crafting_speed = 90,
-			tech = 'reca'
-		},
-		--reca chitin and gh
-		{
-			ingredients =
-				{
-					{name='gh', amount =1},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 30,
-			tech = 'reca'
-        },
-        --reca keratin
-		{
-			ingredients =
-				{
-					{name='gh',remove_item = true},
-				},
-			results =
-				{
-					{name='chitin-caged-simik', remove_item = true},
-					{name='keratin-caged-simik', amount = 1},
-				},
-			crafting_speed = 90,
-			tech = 'reca'
-		},
-		--reca keratin and gh
-		{
-			ingredients =
-				{
-					{name='gh', amount =1},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 30,
-			tech = 'reca'
-		},
 		--orexigenic
 		{
 			ingredients =
@@ -282,7 +197,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='keratin-caged-simik', remove_item = true},
+					{name='skin-caged-simik', remove_item = true},
 					{name='fat-caged-simik', amount = 1},
 				},
 			crafting_speed = 90,

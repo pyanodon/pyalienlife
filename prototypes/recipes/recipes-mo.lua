@@ -195,7 +195,8 @@ RECIPE {
         {type = 'item', name = 'dna-polymerase', amount = 1},
         {type = 'fluid', name = 'milk', amount = 100},
         {type = 'item', name = 'plastic-bar', amount = 10},
-        {type = 'fluid', name = 'formamide', amount = 150},
+        {type = 'fluid', name = 'formamide', amount = 100},
+        {type = 'fluid', name = 'bee-venom', amount = 50},
         {type = 'item', name = 'flask', amount = 2},
     },
     results = {

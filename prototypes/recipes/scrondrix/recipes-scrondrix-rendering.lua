@@ -2,6 +2,27 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 ------------------RENDERING------------------
 
+local INPUT_AMOUNT = 1
+
+local BASE_BONES = 4
+local BASE_MEAT = 5
+local BASE_SKIN = 3
+local BASE_FAT = 3
+local BASE_GUTS = 4
+local BASE_BLOOD = 70
+local BASE_BRAIN = 1
+local BASE_SPECIAL = 1		-- pineal gland
+
+local IMP_BONES = 13
+local IMP_MEAT = 12
+local IMP_SKIN = 10
+local IMP_FAT = 10
+local IMP_GUTS = 12
+local IMP_BLOOD = 170
+local IMP_BRAIN = 5
+local IMP_SPECIAL = 4
+
+
 FUN.autorecipes {
     name = 'rendering',
 	category = 'slaughterhouse-scrondrix',
@@ -13,19 +34,19 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-scrondrix', amount=1},
+					{name='caged-scrondrix', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='bones', amount =2},
-					{name='meat',  amount =3},
-					{name='skin',  amount =1},
-					{name='mukmoux-fat',  amount =2},
-					{name='guts',  amount =2},
-					{name='blood', amount =60},
-					{name='pineal-gland',  amount =1},
-					{name='cage', amount=1},
-					{name='brain',  amount =1},
+					{name='bones', amount = BASE_BONES},
+					{name='meat',  amount = BASE_MEAT},
+					{name='skin',  amount = BASE_SKIN},
+					{name='mukmoux-fat',  amount = BASE_FAT},
+					{name='guts',  amount = BASE_GUTS},
+					{name='blood', amount = BASE_BLOOD},
+					{name='pineal-gland',  amount = BASE_SPECIAL},
+					{name='cage', amount = INPUT_AMOUNT},
+					{name='brain',  amount = BASE_BRAIN},
 				},
 			crafting_speed = 30,
 			tech = 'scrondrix',
@@ -38,14 +59,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='caged-scrondrix',remove_item = true},
-					{name='brain-caged-scrondrix', amount=1},
+					{name='brain-caged-scrondrix', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='brain', amount =5},
-					{name='pineal-gland',  amount =5},
+					{name='brain', amount = IMP_BRAIN},
+					{name='pineal-gland',  amount = IMP_SPECIAL},
 				},
-			crafting_speed = 15,
 			tech = 'nanochondria',
 			name = 'ex-bra-scro',
 			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-scrondrix.png",
@@ -56,15 +76,14 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='brain-caged-scrondrix',remove_item = true},
-					{name='bone-caged-scrondrix', amount=1},
+					{name='bone-caged-scrondrix', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='brain', amount = 1},
-					{name='pineal-gland',  amount =1},
-					{name='bones', amount = 13},
+					{name='brain', amount = BASE_BRAIN},
+					{name='pineal-gland', amount = BASE_SPECIAL},
+					{name='bones', amount = IMP_BONES},
 				},
-			crafting_speed = 15,
 			tech = 'bmp',
 			name = 'ex-bon-scro',
 			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-scrondrix.png",
@@ -75,15 +94,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='bone-caged-scrondrix',remove_item = true},
-					{name='guts-caged-scrondrix', amount=1},
+					{name='guts-caged-scrondrix', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='bones', amount = 2},
-					{name = 'intestinal-ee', amount = 1},
-					{name='guts', amount =12},
+					{name='bones', amount = BASE_BONES},
+					{name='guts', amount = IMP_GUTS},
 				},
-			crafting_speed = 15,
 			tech = 'antitumor',
 			name = 'ex-gut-scro',
 			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-scrondrix.png",
@@ -94,15 +111,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='guts-caged-scrondrix',remove_item = true},
-					{name='blood-caged-scrondrix', amount=1},
+					{name='blood-caged-scrondrix', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name = 'intestinal-ee', remove_item = true},
-					{name='guts', amount = 2},
-					{name='blood', amount =170},
+					{name='guts', amount = BASE_GUTS},
+					{name='blood', amount = IMP_BLOOD},
 				},
-			crafting_speed = 15,
 			tech = 'recombinant-ery',
 			name = 'ex-blo-scro',
 			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-scrondrix.png",
@@ -113,14 +128,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='blood-caged-scrondrix',remove_item = true},
-					{name='skin-caged-scrondrix', amount=1},
+					{name='skin-caged-scrondrix', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='blood', amount = 60},
-					{name='skin', amount =10},
+					{name='blood', amount = BASE_BLOOD},
+					{name='skin', amount = IMP_SKIN},
 				},
-			crafting_speed = 15,
 			tech = 'reca',
 			name = 'ex-ski-scro',
 			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-scrondrix.png",
@@ -131,14 +145,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='skin-caged-scrondrix',remove_item = true},
-					{name='fat-caged-scrondrix', amount=1},
+					{name='fat-caged-scrondrix', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='skin', amount = 1},
-					{name='mukmoux-fat', amount =10},
+					{name='skin', amount = BASE_SKIN},
+					{name='mukmoux-fat', amount = IMP_FAT},
 				},
-			crafting_speed = 15,
 			tech = 'orexigenic',
 			name = 'ex-fat-scro',
 			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-scrondrix.png",
@@ -149,14 +162,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='fat-caged-scrondrix',remove_item = true},
-					{name='meat-caged-scrondrix', amount=1},
+					{name='meat-caged-scrondrix', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='mukmoux-fat', amount = 2},
-					{name='meat', amount =12},
+					{name='mukmoux-fat', amount = BASE_FAT},
+					{name='meat', amount = IMP_MEAT},
 				},
-			crafting_speed = 15,
 			tech = 'anabolic-rna',
 			name = 'ex-me-scro',
 			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-scrondrix.png",

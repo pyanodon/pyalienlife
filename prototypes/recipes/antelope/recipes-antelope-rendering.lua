@@ -17,12 +17,12 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount = 4},
-					{name='meat', amount = 5},
-					{name='skin', amount = 2},
-					{name='mukmoux-fat', amount = 2},
-					{name='guts', amount = 4},
-					{name='brain', amount = 1},
+					{name='bones', amount = 5},
+					{name='meat', amount = 4},
+					{name='skin', amount = 3},
+					{name='mukmoux-fat', amount = 3},
+					{name='guts', amount = 5},
+					{name='brain', amount = 2},
 					{name='cage-antelope', amount=1},
 					{name='strangelets', amount = 1},
 				},

@@ -2,6 +2,25 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 ------------------RENDERING------------------
 
+local INPUT_AMOUNT = 5
+
+local BASE_BONES = 5
+local BASE_MEAT = 4
+local BASE_SKIN = 4
+local BASE_FAT = 5
+local BASE_GUTS = 5
+local BASE_BLOOD = 60
+local BASE_BRAIN = 2
+
+local IMP_BONES = 12
+local IMP_MEAT = 7
+local IMP_SKIN = 4
+local IMP_FAT = 6
+local IMP_GUTS = 10
+local IMP_BLOOD = 90
+local IMP_BRAIN = 5
+
+
 FUN.autorecipes {
     name = 'rendering-cottongut',
 	category = 'slaughterhouse-cottongut',
@@ -12,17 +31,17 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='cottongut', amount=6},
+					{name='cottongut', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='bones', amount =5},
-					{name='meat', amount =4},
-					{name='skin', amount =4},
-					{name='guts',  amount =5},
-					{name='mukmoux-fat',  amount =5},
-					{name='blood', amount = 60},
-					{name='brain', amount =2},
+					{name='bones', amount = BASE_BONES},
+					{name='meat', amount = BASE_MEAT},
+					{name='skin', amount = BASE_SKIN},
+					{name='guts',  amount = BASE_GUTS},
+					{name='mukmoux-fat',  amount = BASE_FAT},
+					{name='blood', amount = BASE_BLOOD},
+					{name='brain', amount = BASE_BRAIN},
 				},
 			crafting_speed = 30,
 			tech = 'cottongut-mk01',
@@ -35,13 +54,12 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='cottongut',remove_item = true},
-					{name='brain-cottongut', amount=5},
+					{name='brain-cottongut', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='brain', amount =5},
+					{name='brain', amount = IMP_BRAIN},
 				},
-			crafting_speed = 15,
 			tech = 'nanochondria',
 			name = 'ex-bra-cot',
 			icon = "__pyalienlifegraphics__/graphics/icons/brain-cottongut.png",
@@ -52,14 +70,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='brain-cottongut',remove_item = true},
-					{name='bone-cottongut', amount=5},
+					{name='bone-cottongut', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='brain', amount =2},
-					{name='bones', amount =12},
+					{name='brain', amount = BASE_BRAIN},
+					{name='bones', amount = IMP_BONES},
 				},
-			crafting_speed = 15,
 			tech = 'bmp',
 			name = 'ex-bon-cot',
 			icon = "__pyalienlifegraphics__/graphics/icons/bone-cottongut.png",
@@ -70,14 +87,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='bone-cottongut',remove_item = true},
-					{name='guts-cottongut', amount=5},
+					{name='guts-cottongut', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='bones', amount = 5},
-					{name='guts', amount =4},
+					{name='bones', amount = BASE_BONES},
+					{name='guts', amount = IMP_GUTS},
 				},
-			crafting_speed = 15,
 			tech = 'antitumor',
 			name = 'ex-gut-cot',
 			icon = "__pyalienlifegraphics__/graphics/icons/guts-cottongut.png",
@@ -87,15 +103,14 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='guts-cottongut',remove_item = true},
-					{name='blood-cottongut', amount=5},
+					{name='guts-cottongut', remove_item = true},
+					{name='blood-cottongut', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='guts', amount = 5},
-					{name='blood', amount =70},
+					{name='guts', amount = BASE_GUTS},
+					{name='blood', amount = IMP_BLOOD},
 				},
-			crafting_speed = 15,
 			tech = 'recombinant-ery',
 			name = 'ex-blo-cot',
 			icon = "__pyalienlifegraphics__/graphics/icons/blood-cottongut.png",
@@ -106,14 +121,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='blood-cottongut',remove_item = true},
-					{name='skin-cottongut', amount=5},
+					{name='skin-cottongut', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='blood', amount = 60},
-					{name='skin', amount =4},
+					{name='blood', amount = BASE_BLOOD},
+					{name='skin', amount = IMP_SKIN},
 				},
-			crafting_speed = 15,
 			tech = 'reca',
 			name = 'ex-ski-cot',
 			icon = "__pyalienlifegraphics__/graphics/icons/skin-cottongut.png",
@@ -124,15 +138,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='skin-cottongut',remove_item = true},
-					{name='fat-cottongut', amount=1},
+					{name='fat-cottongut', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='skin', amount = 4},
-					{name = 'lcc', amount = 1},
-					{name='mukmoux-fat', amount =11},
+					{name='skin', amount = BASE_SKIN},
+					{name='mukmoux-fat', amount = IMP_FAT},
 				},
-			crafting_speed = 15,
 			tech = 'orexigenic',
 			name = 'ex-fat-cot',
 			icon = "__pyalienlifegraphics__/graphics/icons/fat-cottongut.png",
@@ -143,15 +155,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='fat-cottongut',remove_item = true},
-					{name='meat-cottongut', amount=5},
+					{name='meat-cottongut', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='lcc',remove_item = true},
-					{name='mukmoux-fat', amount = 5},
-					{name='meat', amount =7},
+					{name='mukmoux-fat', amount = BASE_FAT},
+					{name='meat', amount = IMP_MEAT},
 				},
-			crafting_speed = 15,
 			tech = 'anabolic-rna',
 			name = 'ex-me-cot',
 			icon = "__pyalienlifegraphics__/graphics/icons/meat-cottongut.png",

@@ -2,6 +2,25 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 ------------------RENDERING------------------
 
+local INPUT_AMOUNT = 1
+
+local BASE_BONES = 6
+local BASE_MEAT = 2
+local BASE_SKIN = 1
+local BASE_GUTS = 1
+local BASE_BLOOD = 40
+local BASE_BRAIN = 1
+local BASE_SPECIAL = 1	-- bladder
+
+local IMP_BONES = 30
+local IMP_MEAT = 11
+local IMP_SKIN = 7
+local IMP_GUTS = 10
+local IMP_BLOOD = 100
+local IMP_BRAIN = 5
+local IMP_SPECIAL = 2
+
+
 FUN.autorecipes {
     name = 'rendering',
 	category = 'slaughterhouse-phagnot',
@@ -13,18 +32,18 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-phagnot', amount=1},
+					{name='caged-phagnot', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='bones', amount =6},
-					{name='meat', amount =2},
-					{name='skin', amount =1},
-                    {name='guts', amount =1},
-                    {name='gas-bladder', amount =1},
-					{name='blood', amount =20},
-					{name='cage', amount=1},
-					{name='brain', amount =1},
+					{name='bones', amount = BASE_BONES},
+					{name='meat', amount = BASE_MEAT},
+					{name='skin', amount = BASE_SKIN},
+                    {name='guts', amount = BASE_GUTS},
+                    {name='gas-bladder', amount = BASE_SPECIAL},
+					{name='blood', amount = BASE_BLOOD},
+					{name='cage', amount = INPUT_AMOUNT},
+					{name='brain', amount = BASE_BRAIN},
 				},
 			crafting_speed = 30,
 			tech = 'phagnot',
@@ -37,14 +56,12 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='caged-phagnot',remove_item = true},
-					{name='brain-caged-phagnot', amount=1},
+					{name='brain-caged-phagnot', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name = 'geostabilization-tissue', amount = 1},
-					{name='brain', amount =5},
+					{name='brain', amount = IMP_BRAIN},
 				},
-			crafting_speed = 15,
 			tech = 'nanochondria',
 			name = 'ex-bra-phag',
 			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-phagnot.png",
@@ -55,15 +72,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='brain-caged-phagnot',remove_item = true},
-					{name='bone-caged-phagnot', amount=1},
+					{name='bone-caged-phagnot', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='geostabilization-tissue',remove_item = true},
-					{name='brain', amount = 1},
-					{name='bones', amount =30},
+					{name='brain', amount = BASE_BRAIN},
+					{name='bones', amount = IMP_BONES},
 				},
-			crafting_speed = 15,
 			tech = 'bmp',
 			name = 'ex-bon-phag',
 			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-phagnot.png",
@@ -74,15 +89,14 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='bone-caged-phagnot',remove_item = true},
-					{name='guts-caged-phagnot', amount=1},
+					{name='guts-caged-phagnot', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='bones', amount = 6},
-					{name='gas-bladder', amount =2},
-					{name='guts', amount =6},
+					{name='bones', amount = BASE_BONES},
+					{name='gas-bladder', amount = IMP_SPECIAL},
+					{name='guts', amount = IMP_GUTS},
 				},
-			crafting_speed = 15,
 			tech = 'antitumor',
 			name = 'ex-gut-phag',
 			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-phagnot.png",
@@ -93,15 +107,14 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='guts-caged-phagnot',remove_item = true},
-					{name='blood-caged-phagnot', amount=1},
+					{name='blood-caged-phagnot', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='guts', amount = 1},
-					{name='gas-bladder', amount =1},
-					{name='blood', amount =100},
+					{name='guts', amount = BASE_GUTS},
+					{name='gas-bladder', amount = BASE_SPECIAL},
+					{name='blood', amount = IMP_BLOOD},
 				},
-			crafting_speed = 15,
 			tech = 'recombinant-ery',
 			name = 'ex-blo-phag',
 			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-phagnot.png",
@@ -112,14 +125,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='blood-caged-phagnot',remove_item = true},
-					{name='skin-caged-phagnot', amount=1},
+					{name='skin-caged-phagnot', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='blood', amount = 20},
-					{name='skin', amount =7},
+					{name='blood', amount = BASE_BLOOD},
+					{name='skin', amount = IMP_SKIN},
 				},
-			crafting_speed = 15,
 			tech = 'reca',
 			name = 'ex-ski-phag',
 			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-phagnot.png",
@@ -130,14 +142,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='skin-caged-phagnot',remove_item = true},
-					{name='meat-caged-phagnot', amount=1},
+					{name='meat-caged-phagnot', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='skin', amount = 1},
-					{name='meat', amount =11},
+					{name='skin', amount = BASE_SKIN},
+					{name='meat', amount = IMP_MEAT},
 				},
-			crafting_speed = 15,
 			tech = 'anabolic-rna',
 			name = 'ex-me-phag',
 			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-phagnot.png",

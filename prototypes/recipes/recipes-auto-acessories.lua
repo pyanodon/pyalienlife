@@ -356,13 +356,13 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 --     main_product = "adrenal-cortex",
 -- }:add_unlock("stochastic-cortex")
 
---[[
+
 ------------------MAGNETIC ORGAN------------------
 
 RECIPE {
     type = "recipe",
     name = "magnetic-organ",
-    category = "genlab",
+    category = "slaughterhouse-ulric",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -380,7 +380,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "intestinal-ee",
-    category = "genlab",
+    category = "slaughterhouse-scrondrix",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -398,7 +398,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cognition-osteochain",
-    category = "genlab",
+    category = "slaughterhouse-xeno",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -415,7 +415,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "adaptable-automucosa",
-    category = "genlab",
+    category = "slaughterhouse-zipir",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -432,7 +432,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "polynuclear-ganglion",
-    category = "genlab",
+    category = "slaughterhouse-arthurian",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -450,7 +450,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "geostabilization-tissue",
-    category = "genlab",
+    category = "slaughterhouse-phagnot",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -469,7 +469,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "lcc",
-    category = "genlab",
+    category = "slaughterhouse-cottongut",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -487,7 +487,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cryogland",
-    category = "genlab",
+    category = "slaughterhouse-korlex",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -505,7 +505,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "subdermal-chemosnare",
-    category = "genlab",
+    category = "slaughterhouse-phadai",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -517,7 +517,6 @@ RECIPE {
     },
     main_product = "subdermal-chemosnare",
 }:add_unlock("reca")
-]]--
 
 ------------------snarer-heart------------------
 
@@ -536,13 +535,12 @@ RECIPE {
     main_product = "snarer-heart",
 }:add_unlock("laika")
 
---[[
 ------------------glandular-myocluster------------------
 
 RECIPE {
     type = "recipe",
     name = "glandular-myocluster",
-    category = "genlab",
+    category = "slaughterhouse-auog",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -560,7 +558,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "autoantigens",
-    category = "genlab",
+    category = "slaughterhouse-dhilmos",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -572,15 +570,13 @@ RECIPE {
     main_product = "autoantigens",
 }:add_unlock("recombinant-ery")
 
-]]--
-
 ------------------dimensional-gastricorg------------------
 
 if mods['pyhightech'] then
     RECIPE {
         type = "recipe",
         name = "dimensional-gastricorg",
-        category = "genlab",
+        category = "slaughterhouse-antelope",
         enabled = false,
         energy_required = 10,
         ingredients = {
@@ -594,13 +590,12 @@ if mods['pyhightech'] then
     }:add_unlock("nanochondria")
 end
 
---[[
 ------------------Sternite-lung------------------
 
 RECIPE {
     type = "recipe",
     name = "sternite-lung",
-    category = "genlab",
+    category = "slaughterhouse-arqad",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -617,7 +612,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "hormonal",
-    category = "genlab",
+    category = "slaughterhouse-simik",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -625,6 +620,7 @@ RECIPE {
     },
     results = {
 		{type = 'item', name = 'hormonal', amount = 1},
+		{type = 'item', name = 'cage', amount = 1},
     },
     main_product = "hormonal",
 }:add_unlock("antitumor")
@@ -634,7 +630,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "vsk",
-    category = "genlab",
+    category = "slaughterhouse-zungror",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -646,7 +642,25 @@ RECIPE {
     main_product = "vsk",
 }:add_unlock("bmp")
 
-]]--
+
+
+if mods['pyalternativeenergy'] then
+    RECIPE {
+        type = "recipe",
+        name = "aeroorgan",
+        category = "slaughterhouse-numal",
+        enabled = false,
+        energy_required = 40,
+        ingredients = {
+            {type = 'item', name = 'guts-numal', amount = 1}
+        },
+        results = {
+            {type = 'item', name = 'aeroorgan', amount = 1},
+        },
+        main_product = "aeroorgan",
+    }:add_unlock("antitumor")
+end
+
 
 ----AUOG food----
 RECIPE {

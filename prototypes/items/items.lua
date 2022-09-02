@@ -4648,6 +4648,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "blood-caged-vrauks",
+    icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-vrauks.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-vrauks",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
     name = "caged-korlex",
     icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png",
     icon_size = 64,

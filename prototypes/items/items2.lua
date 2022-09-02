@@ -257,17 +257,6 @@ ITEM {
 
 ITEM {
     type = "item",
-    name = "chitin-caged-simik",
-    icon = "__pyalienlifegraphics2__/graphics/icons/chitin-caged-simik.png",
-	icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-simik",
-    order = "b",
-    stack_size = 100
-}
-
-ITEM {
-    type = "item",
     name = "meat-caged-simik",
     icon = "__pyalienlifegraphics2__/graphics/icons/meat-caged-simik.png",
 	icon_size = 64,
@@ -314,28 +303,6 @@ ITEM {
     type = "item",
     name = "fat-caged-simik",
     icon = "__pyalienlifegraphics2__/graphics/icons/fat-caged-simik.png",
-	icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-simik",
-    order = "b",
-    stack_size = 100
-}
-
-ITEM {
-    type = "item",
-    name = "hot-air-caged-simik",
-    icon = "__pyalienlifegraphics2__/graphics/icons/hot-air-caged-simik.png",
-	icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-simik",
-    order = "b",
-    stack_size = 100
-}
-
-ITEM {
-    type = "item",
-    name = "keratin-caged-simik",
-    icon = "__pyalienlifegraphics2__/graphics/icons/keratin-caged-simik.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-simik",
