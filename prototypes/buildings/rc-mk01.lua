@@ -1,15 +1,23 @@
 RECIPE {
     type = "recipe",
     name = "rc-mk01",
-    energy_required = 0.5,
-    enabled = true,
+    energy_required = 10,
+    enabled = false,
     ingredients = {
-        {"iron-gear-wheel", 50},
+        {"iron-gear-wheel", 200},
+        {"steel-plate", 100},
+        {"iron-plate", 200},
+        {"titanium-plate", 100},
+        {"glass", 50},
+        {"stone-brick", 400},
+        {"electronic-circuit", 20},
+        {"concrete", 100},
+        {"steam-engine", 3},
     },
     results = {
         {"rc-mk01", 1}
     }
-}
+}:add_unlock("biotech-machines-mk01")
 
 ITEM {
     type = "item",
