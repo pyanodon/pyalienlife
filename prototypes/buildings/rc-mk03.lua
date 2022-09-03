@@ -1,43 +1,44 @@
 RECIPE {
     type = "recipe",
-    name = "rc-mk01",
+    name = "rc-mk03",
     energy_required = 10,
     enabled = false,
     ingredients = {
-        {"iron-gear-wheel", 200},
-        {"steel-plate", 100},
-        {"iron-plate", 200},
-        {"titanium-plate", 100},
-        {"glass", 50},
-        {"stone-brick", 400},
-        {"electronic-circuit", 20},
-        {"concrete", 100},
-        {"steam-engine", 3},
+        {"rc-mk02", 1},
+        {"electric-engine-unit", 6},
+        {"niobium-plate", 50},
+        {"processing-unit", 20},
+        {"kevlar", 100},
+        {"super-steel", 100},
+        {"molybdenum-plate", 100},
+        {"ticocr-alloy", 50},
+        {"nbti-alloy", 100},
+        {"small-parts-03", 100},
     },
     results = {
-        {"rc-mk01", 1}
+        {"rc-mk03", 1}
     }
-}:add_unlock("biotech-machines-mk01")
+}:add_unlock("biotech-machines-mk03")
 
 ITEM {
     type = "item",
-    name = "rc-mk01",
-    icon = "__pyalienlifegraphics2__/graphics/icons/rc-mk01.png",
+    name = "rc-mk03",
+    icon = "__pyalienlifegraphics2__/graphics/icons/rc-mk03.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-buildings-mk03",
     order = "h",
-    place_result = "rc-mk01",
+    place_result = "rc-mk03",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "rc-mk01",
-    icon = "__pyalienlifegraphics2__/graphics/icons/rc-mk01.png",
+    name = "rc-mk03",
+    icon = "__pyalienlifegraphics2__/graphics/icons/rc-mk03.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "rc-mk01"},
+    minable = {mining_time = 0.5, result = "rc-mk03"},
     fast_replaceable_group = "rc",
     max_health = 400,
     corpse = "big-remnants",
@@ -54,13 +55,13 @@ ENTITY {
     },
     allowed_effects = {"speed",'consumption','pollution'},
     crafting_categories = {"rc"},
-    crafting_speed = 1,
+    crafting_speed = 2,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
         emissions_per_minute = 0.5,
     },
-    energy_usage = "500kW",
+    energy_usage = "1000kW",
     animation = {
         layers = {
             --TERRAIN
@@ -79,7 +80,7 @@ ENTITY {
                 frame_count = 1,
                 shift = util.by_pixel(0, 1),
                 priority = "low",
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
             },
             {
                 filename = "__pyalienlifegraphics2__/graphics/entity/rc/l.png",

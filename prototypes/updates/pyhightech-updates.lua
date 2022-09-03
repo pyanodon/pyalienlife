@@ -299,7 +299,7 @@ RECIPE('dhilmos-pool-mk03'):add_ingredient({type = "item", name = "paramagnetic-
 RECIPE('dingrits-pack-mk03'):add_ingredient({type = "item", name = "phosphate-glass", amount = 50}):add_ingredient({type = "item", name = "biopolymer", amount = 20})
 RECIPE('fish-farm-mk03'):add_ingredient({type = "item", name = "graphene-roll", amount = 30}):add_ingredient({type = "item", name = "biopolymer", amount = 15})
 RECIPE('fwf-mk03'):add_ingredient({type = "item", name = "superconductor", amount = 10}):add_ingredient({type = "item", name = "phosphate-glass", amount = 40}):add_ingredient({type = "item", name = "paramagnetic-material", amount = 20})
--- RECIPE('genlab-mk03'):add_ingredient({type = "item", name = "diamagnetic-material", amount = 20})
+RECIPE('rc-mk03'):add_ingredient({type = "item", name = "graphene-roll", amount = 30}):add_ingredient({type = "item", name = "biopolymer", amount = 30})
 RECIPE('incubator-mk03'):add_ingredient({type = "item", name = "phosphate-glass", amount = 50}):add_ingredient({type = "item", name = "graphene-roll", amount = 30}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 20})
 RECIPE('kmauts-enclosure-mk03'):add_ingredient({type = "item", name = "heavy-fermion", amount = 15}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10})
 RECIPE('moss-farm-mk03'):add_ingredient({type = "item", name = "heavy-fermion", amount = 5}):add_ingredient({type = "item", name = "superconductor", amount = 10})
@@ -378,6 +378,8 @@ RECIPE('arqad-hive-mk04'):add_ingredient({type = "item", name = "phosphate-glass
 RECIPE('simik-den-mk04'):add_ingredient({type = "item", name = "intelligent-unit", amount = 50}):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 20})
 RECIPE('chemical-plant-mk04'):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 10}):add_ingredient({type = "item", name = "harmonic-absorber", amount = 30}):add_ingredient({type = "item", name = "intelligent-unit", amount = 50})
 RECIPE('collector-mk04'):add_ingredient({type = "item", name = "harmonic-absorber", amount = 8}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 10}):add_ingredient({type = "item", name = "intelligent-unit", amount = 2})
+RECIPE('rc-mk04'):add_ingredient({type = "item", name = "intelligent-unit", amount = 20}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 50}):add_ingredient({type = "item", name = "phosphate-glass", amount = 150})
+
 
 
 RECIPE('simik-den-mk02'):add_ingredient({type = "item", name = "re-tin", amount = 10}):add_ingredient({type = "item", name = "cooling-system", amount = 10})
