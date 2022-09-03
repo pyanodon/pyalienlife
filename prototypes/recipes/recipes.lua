@@ -2894,13 +2894,13 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'animal-sample-01',
-    category = 'crafting-with-fluid',
+    category = 'genlab',
     enabled = true,
-    energy_required = 8,
+    energy_required = 10,
     ingredients = {
         {type = 'item', name = 'bones', amount = 5},
         {type = 'item', name = 'meat', amount = 7},
-        {type = 'item', name = 'skin', amount = 2},
+        {type = 'item', name = 'skin', amount = 3},
         {type = 'item', name = 'mukmoux-fat', amount = 1},
         {type = 'item', name = 'guts', amount = 3},
         {type = 'item', name = 'brain', amount = 3},
