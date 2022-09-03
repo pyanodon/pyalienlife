@@ -17,9 +17,8 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount = 4},
+					{name='bones', amount = 3},
 					{name='meat', amount = 5},
-                    {name='skin', amount = 2},
                     {name='chitin', amount = 1},
 					{name='mukmoux-fat', amount = 1},
                     {name='guts', amount = 1},
@@ -153,13 +152,16 @@ FUN.autorecipes {
 			results =
 				{
 					{name='hot-air', remove_item = true},
-					{name='skin', amount =8},
+					{name='simik-scales', amount =1},
 				},
 			crafting_speed = 15,
 			tech = 'reca',
 			name = 'ex-ski-sim',
-			icon = "__pyalienlifegraphics2__/graphics/icons/skin-caged-simik.png",
-			icon_size = 64,
+			icons =
+			{
+				{icon = "__pyalienlifegraphics2__/graphics/icons/caged-simik.png", icon_size = 64},
+				{icon = '__pyalienlifegraphics__/graphics/icons/skull.png', icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
+			},
 		},
 		--fat simik rendering
 		{
@@ -170,7 +172,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='skin', amount = 2},
+					{name='simik-scales',remove_item = true},
 					{name='mukmoux-fat', amount =8},
 				},
 			crafting_speed = 15,

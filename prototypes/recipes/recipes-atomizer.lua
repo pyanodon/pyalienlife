@@ -585,3 +585,18 @@ RECIPE {
     },
     --main_product = "cocoon",
 }:add_unlock("molecular-decohesion-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'simik-scales-to-uranium',
+    category = 'atomizer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'simik-scales', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'uranium-ore', amount = 8},
+    },
+    --main_product = "cocoon",
+}:add_unlock("molecular-decohesion-mk03")

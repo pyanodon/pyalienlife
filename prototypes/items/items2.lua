@@ -495,3 +495,14 @@ ITEM {
     --order = "g",
     stack_size = 100
 }
+
+ITEM {
+    type = "item",
+    name = "simik-scales",
+    icon = "__pyalienlifegraphics2__/graphics/icons/simik-scales.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-simik",
+    order = "z",
+    stack_size = 50
+}
