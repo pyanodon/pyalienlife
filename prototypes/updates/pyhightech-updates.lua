@@ -514,6 +514,7 @@ RECIPE("plastic-from-casein"):add_ingredient({type = 'fluid', name = 'methanal',
 RECIPE("charcoal-briquette"):replace_ingredient("raw-fiber", "fiber")
 RECIPE("yotoi-fruit-mk02"):replace_ingredient("nitrogen", "cold-clean-air")
 
+RECIPE("fiber"):remove_unlock("kicalk-2"):add_unlock("filtration")
 
 TECHNOLOGY("paramagnetic-material"):remove_pack('production-science-pack'):remove_prereq('production-science-pack')
 TECHNOLOGY("aerogel"):remove_pack('production-science-pack'):remove_prereq('production-science-pack')
@@ -532,22 +533,6 @@ TECHNOLOGY("superconductor"):remove_pack('production-science-pack')
 ]]--
 
 ----EXCLUSIVE RECIPES----
-
-RECIPE {
-    type = 'recipe',
-    name = 'fiber-b',
-    category = 'centrifuging',
-    enabled = true,
-    energy_required = 5,
-    ingredients = {
-        {type = 'item', name = 'raw-fiber', amount = 5}
-    },
-    results = {
-        {type = 'item', name = 'fiber', amount = 2},
-        {type = 'item', name = 'biomass', amount = 3}
-    },
-    main_product = 'fiber'
-}:add_unlock('filtration')
 
 RECIPE {
     type = "recipe",

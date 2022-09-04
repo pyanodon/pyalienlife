@@ -302,7 +302,6 @@ local recipes_list =
   "antelope",
   "antelope-codex",
   "earth-antelope-sample",
-  "fiber-b",
   "bones-to-phosphate",
   "carapace-to-re",
   "meat-to-cyanic",
