@@ -157,8 +157,11 @@ FUN.autorecipes {
 			crafting_speed = 15,
 			tech = 'reca',
 			name = 'ex-ski-sim',
-			icon = "__pyalienlifegraphics2__/graphics/icons/skin-caged-simik.png",
-			icon_size = 64,
+			icons =
+			{
+				{icon = "__pyalienlifegraphics2__/graphics/icons/caged-simik.png", icon_size = 64},
+				{icon = '__pyalienlifegraphics__/graphics/icons/skull.png', icon_size = 64, scale = 0.25, shift = {-7.5,-7.5}}},
+			},
 		},
 		--fat simik rendering
 		{
