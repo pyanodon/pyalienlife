@@ -64,7 +64,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='bone-caged-vrauks', remove_item = true},
+					{name='brain-caged-vrauks', remove_item = true},
 					{name='meat-caged-vrauks', amount = INPUT_AMOUNT},
 				},
 			results =
