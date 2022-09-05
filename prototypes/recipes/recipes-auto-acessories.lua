@@ -636,13 +636,13 @@ if mods['pyalternativeenergy'] then
         enabled = false,
         energy_required = 40,
         ingredients = {
-            {type = 'item', name = 'bone-caged-zungror', amount = 1}
+            {type = 'item', name = 'blood-caged-zungror', amount = 1}
         },
         results = {
             {type = 'item', name = 'vsk', amount = 1},
         },
         main_product = "vsk",
-    }:add_unlock("bmp")
+    }:add_unlock("recombinant-ery")
 
     RECIPE {
         type = "recipe",
