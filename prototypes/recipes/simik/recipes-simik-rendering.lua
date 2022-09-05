@@ -6,7 +6,7 @@ local INPUT_AMOUNT = 1
 
 local BASE_BONES = 4
 local BASE_MEAT = 3
-local BASE_SKIN = 1		-- scales
+local BASE_SKIN = 3		-- chitin
 local BASE_FAT = 3
 local BASE_GUTS = 3
 local BASE_BLOOD = 80
@@ -15,7 +15,7 @@ local BASE_SPECIAL = 3	-- keratin
 
 local IMP_BONES = 9
 local IMP_MEAT = 11
-local IMP_SKIN = 3
+local IMP_SKIN = 1		-- scales
 local IMP_FAT = 8
 local IMP_GUTS = 8
 local IMP_BLOOD = 150
@@ -40,7 +40,7 @@ FUN.autorecipes {
 				{
 					{name='bones', amount = BASE_BONES},
 					{name='meat', amount = BASE_MEAT},
-                    {name='simik-scales', amount = BASE_SKIN},
+                    {name='chitin', amount = BASE_SKIN},
 					{name='mukmoux-fat', amount = BASE_FAT},
                     {name='guts', amount = BASE_GUTS},
                     {name='keratin', amount = BASE_SPECIAL},
@@ -148,6 +148,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='simik-blood', amount = BASE_BLOOD},
+					{name='chitin', remove_item = true},
 					{name='simik-scales', amount = IMP_SKIN},
 					{name='keratin', amount = IMP_SPECIAL},
 				},
@@ -168,7 +169,8 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='simik-scales', amount = BASE_SKIN},
+					{name='simik-scales', remove_item = true},
+                    {name='chitin', amount = BASE_SKIN},
 					{name='keratin', amount = BASE_SPECIAL},
 					{name='mukmoux-fat', amount = IMP_FAT},
 				},
