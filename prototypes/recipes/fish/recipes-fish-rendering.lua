@@ -2,6 +2,16 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 ------------------RENDERING------------------
 
+local INPUT_AMOUNT = 8
+
+local BASE_BONES = 2
+local BASE_MEAT = 2
+local BASE_SKIN = 3
+local BASE_GUTS = 5
+local BASE_BLOOD = 40
+local BASE_SPECIAL = 100
+
+
 FUN.autorecipes {
     name = 'rendering',
 	category = 'slaughterhouse-fish',
@@ -13,15 +23,16 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fish', amount=8},
+					{name='fish', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='bones', amount =1},
-					{name='meat', amount =1},
-					{name='skin', amount =2},
-					{name='guts', amount =3},
-					{name='fish-oil', amount =30},
+					{name='bones', amount = BASE_BONES},
+					{name='meat', amount = BASE_MEAT},
+					{name='skin', amount = BASE_SKIN},
+					{name='guts', amount = BASE_GUTS},
+					{name='blood', amount = BASE_BLOOD},
+					{name='fish-oil', amount = BASE_SPECIAL},
 				},
 			crafting_speed = 30,
 			tech = 'water-animals-mk01',

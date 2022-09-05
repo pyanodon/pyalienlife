@@ -2,6 +2,25 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 ------------------RENDERING------------------
 
+local INPUT_AMOUNT = 1
+
+local BASE_BONES = 2
+local BASE_MEAT = 4
+local BASE_SKIN = 2
+local BASE_FAT = 1
+local BASE_GUTS = 3
+local BASE_BLOOD = 30
+local BASE_BRAIN = 1
+
+local IMP_BONES = 10
+local IMP_MEAT = 12
+local IMP_SKIN = 5
+local IMP_FAT = 7
+local IMP_GUTS = 12
+local IMP_BLOOD = 100
+local IMP_BRAIN = 6
+
+
 FUN.autorecipes {
     name = 'rendering',
 	category = 'slaughterhouse-phadai',
@@ -13,18 +32,18 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-phadai', amount=1},
+					{name='caged-phadai', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='bones', amount =3},
-					{name='meat', amount =1},
-                    {name='guts', amount =3},
-                    {name='mukmoux-fat', amount =1},
-					{name='carapace', amount =2},
-					{name='blood', amount =30},
-					{name='cage', amount=1},
-					{name='brain', amount =1},
+					{name='bones', amount = BASE_BONES},
+					{name='meat', amount = BASE_MEAT},
+                    {name='guts', amount = BASE_GUTS},
+                    {name='mukmoux-fat', amount = BASE_FAT},
+					{name='carapace', amount = BASE_SKIN},
+					{name='blood', amount = BASE_BLOOD},
+					{name='cage', amount = INPUT_AMOUNT},
+					{name='brain', amount = BASE_BRAIN},
 				},
 			crafting_speed = 30,
 			tech = 'phadai',
@@ -37,14 +56,12 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='caged-phadai',remove_item = true},
-					{name='brain-caged-phadai', amount=1},
+					{name='brain-caged-phadai', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name = 'subdermal-chemosnare', amount = 1},
-					{name='brain', amount =6},
+					{name='brain', amount = IMP_BRAIN},
 				},
-			crafting_speed = 15,
 			tech = 'nanochondria',
 			name = 'ex-bra-pha',
 			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-phadai.png",
@@ -55,15 +72,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='brain-caged-phadai',remove_item = true},
-					{name='bone-caged-phadai', amount=1},
+					{name='bone-caged-phadai', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='subdermal-chemosnare',remove_item = true},
-					{name='brain', amount = 1},
-					{name='bones', amount =10},
+					{name='brain', amount = BASE_BRAIN},
+					{name='bones', amount = IMP_BONES},
 				},
-			crafting_speed = 15,
 			tech = 'bmp',
 			name = 'ex-bon-pha',
 			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-phadai.png",
@@ -74,14 +89,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='bone-caged-phadai',remove_item = true},
-					{name='guts-caged-phadai', amount=1},
+					{name='guts-caged-phadai', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='bones', amount = 3},
-					{name='guts', amount =12},
+					{name='bones', amount = BASE_BONES},
+					{name='guts', amount = IMP_GUTS},
 				},
-			crafting_speed = 15,
 			tech = 'antitumor',
 			name = 'ex-gut-pha',
 			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-phadai.png",
@@ -92,14 +106,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='guts-caged-phadai',remove_item = true},
-					{name='blood-caged-phadai', amount=1},
+					{name='blood-caged-phadai', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='guts', amount = 3},
-					{name='blood', amount =100},
+					{name='guts', amount = BASE_GUTS},
+					{name='blood', amount = IMP_BLOOD},
 				},
-			crafting_speed = 15,
 			tech = 'recombinant-ery',
 			name = 'ex-blo-pha',
 			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-phadai.png",
@@ -110,14 +123,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='blood-caged-phadai',remove_item = true},
-					{name='meat-caged-phadai', amount=1},
+					{name='meat-caged-phadai', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='blood', amount = 30},
-					{name='meat', amount =12},
+					{name='blood', amount = BASE_BLOOD},
+					{name='meat', amount = IMP_MEAT},
 				},
-			crafting_speed = 15,
 			tech = 'anabolic-rna',
 			name = 'ex-me-pha',
 			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-phadai.png",
@@ -128,14 +140,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='meat-caged-phadai',remove_item = true},
-					{name='skin-caged-phadai', amount=1},
+					{name='skin-caged-phadai', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='meat', amount = 1},
-					{name='carapace', amount =8},
+					{name='meat', amount = BASE_MEAT},
+					{name='carapace', amount = IMP_SKIN},
 				},
-			crafting_speed = 15,
 			tech = 'reca',
 			name = 'ex-ski-pha',
 			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-phadai.png",
@@ -146,14 +157,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='skin-caged-phadai',remove_item = true},
-					{name='fat-caged-phadai', amount=1},
+					{name='fat-caged-phadai', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='carapace', amount = 2},
-					{name='mukmoux-fat', amount =7},
+					{name='carapace', amount = BASE_SKIN},
+					{name='mukmoux-fat', amount = IMP_FAT},
 				},
-			crafting_speed = 15,
 			tech = 'orexigenic',
 			name = 'ex-fat-pha',
 			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-phadai.png",

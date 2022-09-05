@@ -124,5 +124,34 @@ FUN.autorecipes {
 			crafting_speed = 30,
 			tech = 'reca'
 		},
+		--Recombinant Ery
+		{
+			ingredients =
+				{
+					{name='gh',remove_item = true},
+					{name='reca',remove_item = true},
+					{name='recombinant-ery', amount =1},
+				},
+			results =
+				{
+					{name='chitin-caged-vrauks', remove_item = true},
+					{name='blood-caged-vrauks', amount = 1},
+				},
+			crafting_speed = 90,
+			tech = 'recombinant-ery'
+		},
+		--Recombinant Ery and gh
+		{
+			ingredients =
+				{
+					{name='gh', amount =1},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'recombinant-ery'
+		},
 	}
 }

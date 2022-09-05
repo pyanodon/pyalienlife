@@ -96,5 +96,34 @@ FUN.autorecipes {
 			crafting_speed = 30,
 			tech = 'recombinant-ery'
 		},
+		--reca
+		{
+			ingredients =
+				{
+					{name='gh',remove_item = true},
+					{name='recombinant-ery',remove_item = true},
+					{name='reca', amount =1},
+				},
+			results =
+				{
+					{name='blood-xyhiphoe', remove_item = true},
+					{name='shell-xyhiphoe', amount = 1},
+				},
+			crafting_speed = 90,
+			tech = 'reca'
+		},
+		--reca and gh
+		{
+			ingredients =
+				{
+					{name='gh', amount =1},
+				},
+			results =
+				{
+
+				},
+			crafting_speed = 30,
+			tech = 'reca'
+		},
 	}
 }

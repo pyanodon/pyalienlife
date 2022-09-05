@@ -2,6 +2,27 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 ------------------RENDERING------------------
 
+local INPUT_AMOUNT = 1
+
+local BASE_BONES = 4
+local BASE_MEAT = 6
+local BASE_SKIN = 3
+local BASE_FAT = 7
+local BASE_GUTS = 4
+local BASE_BLOOD = 80
+local BASE_BRAIN = 1
+local BASE_SPECIAL = 2		-- photophore
+
+local IMP_BONES = 14
+local IMP_MEAT = 15
+local IMP_SKIN = 13
+local IMP_FAT = 30
+local IMP_GUTS = 15
+local IMP_BLOOD = 200
+local IMP_BRAIN = 5
+local IMP_SPECIAL = 4
+
+
 FUN.autorecipes {
     name = 'rendering',
 	category = 'slaughterhouse-trits',
@@ -13,18 +34,18 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='trits', amount=1},
+					{name='trits', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='bones', amount =4},
-					{name='meat',  amount =4},
-					{name='skin',  amount =3},
-					{name='mukmoux-fat',  amount =5},
-					{name='guts',  amount =4},
-					{name='photophore', amount =1},
-					{name='blood', amount =60},
-					{name='brain',  amount =1},
+					{name='bones', amount = BASE_BONES},
+					{name='meat',  amount = BASE_MEAT},
+					{name='skin',  amount = BASE_SKIN},
+					{name='mukmoux-fat',  amount = BASE_FAT},
+					{name='guts',  amount = BASE_GUTS},
+					{name='photophore', amount = BASE_SPECIAL},
+					{name='blood', amount = BASE_BLOOD},
+					{name='brain',  amount = BASE_BRAIN},
 				},
 			crafting_speed = 30,
 			tech = 'trits',
@@ -37,13 +58,12 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='trits',remove_item = true},
-					{name='brain-trits', amount=1},
+					{name='brain-trits', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='brain', amount =5},
+					{name='brain', amount = IMP_BRAIN},
 				},
-			crafting_speed = 15,
 			tech = 'nanochondria',
 			name = 'ex-bra-trit',
 			icon = "__pyalienlifegraphics__/graphics/icons/brain-trits.png",
@@ -54,14 +74,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='brain-trits',remove_item = true},
-					{name='bone-trits', amount=1},
+					{name='bone-trits', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='brain', amount = 1},
-					{name='bones', amount =14},
+					{name='brain', amount = BASE_BRAIN},
+					{name='bones', amount = IMP_BONES},
 				},
-			crafting_speed = 15,
 			tech = 'bmp',
 			name = 'ex-bon-trit',
 			icon = "__pyalienlifegraphics__/graphics/icons/bone-trits.png",
@@ -72,14 +91,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='bone-trits',remove_item = true},
-					{name='meat-trits', amount=1},
+					{name='meat-trits', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='bones', amount = 4},
-					{name='meat', amount =15},
+					{name='bones', amount = BASE_BONES},
+					{name='meat', amount = IMP_MEAT},
 				},
-			crafting_speed = 15,
 			tech = 'anabolic-rna',
 			name = 'ex-me-trit',
 			icon = "__pyalienlifegraphics__/graphics/icons/meat-trits.png",
@@ -90,14 +108,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='meat-trits',remove_item = true},
-					{name='guts-trits', amount=1},
+					{name='guts-trits', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='meat', amount = 4},
-					{name='guts', amount =15},
+					{name='meat', amount = BASE_MEAT},
+					{name='guts', amount = IMP_GUTS},
 				},
-			crafting_speed = 15,
 			tech = 'antitumor',
 			name = 'ex-gut-trit',
 			icon = "__pyalienlifegraphics__/graphics/icons/guts-trits.png",
@@ -108,14 +125,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='guts-trits',remove_item = true},
-					{name='blood-trits', amount=1},
+					{name='blood-trits', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='guts', amount = 4},
-					{name='blood', amount =200},
+					{name='guts', amount = BASE_GUTS},
+					{name='blood', amount = IMP_BLOOD},
 				},
-			crafting_speed = 15,
 			tech = 'recombinant-ery',
 			name = 'ex-blo-trit',
 			icon = "__pyalienlifegraphics__/graphics/icons/blood-trits.png",
@@ -126,15 +142,14 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='blood-trits',remove_item = true},
-					{name='skin-trits', amount=1},
+					{name='skin-trits', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='blood', amount = 60},
-					{name='photophore', amount =4},
-					{name='skin', amount =13},
+					{name='blood', amount = BASE_BLOOD},
+					{name='photophore', amount = IMP_SPECIAL},
+					{name='skin', amount = IMP_SKIN},
 				},
-			crafting_speed = 15,
 			tech = 'reca',
 			name = 'ex-ski-trit',
 			icon = "__pyalienlifegraphics__/graphics/icons/skin-trits.png",
@@ -145,15 +160,14 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='skin-trits',remove_item = true},
-					{name='fat-trits', amount=1},
+					{name='fat-trits', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='photophore',remove_item = true},
-					{name='skin', amount = 3},
-					{name='mukmoux-fat', amount =30},
+					{name='photophore', amount = BASE_SPECIAL},
+					{name='skin', amount = BASE_SKIN},
+					{name='mukmoux-fat', amount = IMP_FAT},
 				},
-			crafting_speed = 15,
 			tech = 'orexigenic',
 			name = 'ex-fat-trit',
 			icon = "__pyalienlifegraphics__/graphics/icons/fat-trits.png",

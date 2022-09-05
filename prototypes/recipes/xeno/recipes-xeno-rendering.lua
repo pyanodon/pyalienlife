@@ -2,6 +2,21 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 ------------------RENDERING------------------
 
+local INPUT_AMOUNT = 1
+
+local BASE_BONES = 3
+local BASE_MEAT = 4
+local BASE_SKIN = 4		-- chitin
+local BASE_BLOOD = 80	-- sulfuric-acid
+local BASE_BRAIN = 1
+
+local IMP_BONES = 11
+local IMP_MEAT = 10
+local IMP_SKIN = 23
+local IMP_BLOOD = 200
+local IMP_BRAIN = 4
+
+
 FUN.autorecipes {
     name = 'rendering-xeno',
 	category = 'slaughterhouse-xeno',
@@ -13,16 +28,16 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-xeno', amount=1},
+					{name='caged-xeno', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='bones', amount =3},
-					{name='meat', amount =3},
-					{name='chitin', amount =5},
-					{name='sulfuric-acid', amount =60},
-					{name='cage', amount=1},
-					{name='brain', amount =1},
+					{name='bones', amount = BASE_BONES},
+					{name='meat', amount = BASE_MEAT},
+					{name='chitin', amount = BASE_SKIN},
+					{name='sulfuric-acid', amount = BASE_BLOOD},
+					{name='cage', amount = INPUT_AMOUNT},
+					{name='brain', amount = BASE_BRAIN},
 				},
 			crafting_speed = 30,
 			tech = 'xeno',
@@ -35,13 +50,12 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='caged-xeno',remove_item = true},
-					{name='brain-xeno', amount=1},
+					{name='brain-xeno', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='brain', amount =4},
+					{name='brain', amount = IMP_BRAIN},
 				},
-			crafting_speed = 15,
 			tech = 'nanochondria',
 			name = 'ex-bra-xeno',
 			icon = "__pyalienlifegraphics__/graphics/icons/brain-xeno.png",
@@ -52,15 +66,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='brain-xeno',remove_item = true},
-					{name='bone-xeno', amount=1},
+					{name='bone-xeno', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='cognition-osteochain', amount = 1},
-					{name='brain', amount = 1},
-					{name='bones', amount =11},
+					{name='brain', amount = BASE_BRAIN},
+					{name='bones', amount = IMP_BONES},
 				},
-			crafting_speed = 15,
 			tech = 'bmp',
 			name = 'ex-bon-xeno',
 			icon = "__pyalienlifegraphics__/graphics/icons/bone-xeno.png",
@@ -75,11 +87,9 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='cognition-osteochain',remove_item = true},
-					{name='bones', amount = 3},
-					{name='sulfuric-acid', amount =380},
+					{name='bones', amount = BASE_BONES},
+					{name='sulfuric-acid', amount = IMP_BLOOD},
 				},
-			crafting_speed = 15,
 			tech = 'recombinant-ery',
 			name = 'ex-blo-xeno',
 			icon = "__pyalienlifegraphics__/graphics/icons/sulfuric-xeno.png",
@@ -94,10 +104,9 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='sulfuric-acid', amount = 60},
-					{name='chitin', amount =23},
+					{name='sulfuric-acid', amount = BASE_BLOOD},
+					{name='chitin', amount = IMP_SKIN},
 				},
-			crafting_speed = 15,
 			tech = 'reca',
 			name = 'ex-chi-xeno',
 			icon = "__pyalienlifegraphics__/graphics/icons/chitin-xeno.png",
@@ -112,10 +121,9 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='chitin', amount = 5},
-					{name='meat', amount =10},
+					{name='chitin', amount = BASE_SKIN},
+					{name='meat', amount = IMP_MEAT},
 				},
-			crafting_speed = 15,
 			tech = 'anabolic-rna',
 			name = 'ex-me-xeno',
 			icon = "__pyalienlifegraphics__/graphics/icons/meat-xeno.png",

@@ -2,6 +2,23 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 ------------------RENDERING------------------
 
+local INPUT_AMOUNT = 1
+
+local BASE_MEAT = 6
+local BASE_SKIN = 4
+local BASE_FAT = 5
+local BASE_GUTS = 6
+local BASE_BLOOD = 300
+local BASE_BRAIN = 1
+
+local IMP_MEAT = 13
+local IMP_SKIN = 13
+local IMP_FAT = 23
+local IMP_GUTS = 20
+local IMP_BLOOD = 450
+local IMP_BRAIN = 5
+
+
 FUN.autorecipes {
     name = 'rendering-zungror',
 	category = 'slaughterhouse-zungror',
@@ -13,17 +30,17 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-zungror', amount=1},
+					{name='caged-zungror', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='meat', amount = 6},
-					{name='skin', amount = 4},
-					{name='mukmoux-fat', amount = 5},
-					{name='guts', amount = 6},
-					{name='arthropod-blood', amount =300},
-					{name='brain', amount = 1},
-					{name='cage', amount = 1}
+					{name='meat', amount = BASE_MEAT},
+					{name='skin', amount = BASE_SKIN},
+					{name='mukmoux-fat', amount = BASE_FAT},
+					{name='guts', amount = BASE_GUTS},
+					{name='arthropod-blood', amount = BASE_BLOOD},
+					{name='brain', amount = BASE_BRAIN},
+					{name='cage', amount = INPUT_AMOUNT}
 				},
 			crafting_speed = 30,
 			tech = 'zungror',
@@ -36,14 +53,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='caged-zungror',remove_item = true},
-					{name='brain-caged-zungror', amount=1},
+					{name='brain-caged-zungror', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
 
-					{name='brain', amount =5},
+					{name='brain', amount = IMP_BRAIN},
 				},
-			crafting_speed = 15,
 			tech = 'nanochondria',
 			name = 'ex-bra-zun',
 			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-zungror.png",
@@ -54,15 +70,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='brain-caged-zungror',remove_item = true},
-					{name='guts-caged-zungror', amount=1},
+					{name='guts-caged-zungror', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='brain', amount =1},
-					{name='guts', amount =20},
-					{name = 'vsk', amount = 1},
+					{name='brain', amount = BASE_BRAIN},
+					{name='guts', amount = IMP_GUTS},
 				},
-			crafting_speed = 15,
 			tech = 'antitumor',
 			name = 'ex-gut-zun',
 			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-zungror.png",
@@ -73,15 +87,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='guts-caged-zungror',remove_item = true},
-					{name='blood-caged-zungror', amount=1},
+					{name='blood-caged-zungror', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='vsk',remove_item = true},
-					{name='guts', amount = 6},
-					{name='arthropod-blood', amount =450},
+					{name='guts', amount = BASE_GUTS},
+					{name='arthropod-blood', amount = IMP_BLOOD},
 				},
-			crafting_speed = 15,
 			tech = 'recombinant-ery',
 			name = 'ex-blo-zun',
 			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-zungror.png",
@@ -92,14 +104,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='blood-caged-zungror',remove_item = true},
-					{name='skin-caged-zungror', amount=1},
+					{name='skin-caged-zungror', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='arthropod-blood', amount = 300},
-					{name='skin', amount =13},
+					{name='arthropod-blood', amount = BASE_BLOOD},
+					{name='skin', amount = IMP_SKIN},
 				},
-			crafting_speed = 15,
 			tech = 'reca',
 			name = 'ex-ski-zun',
 			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-zungror.png",
@@ -110,14 +121,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='skin-caged-zungror',remove_item = true},
-					{name='fat-caged-zungror', amount=1},
+					{name='fat-caged-zungror', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='skin', amount = 4},
-					{name='mukmoux-fat', amount =23},
+					{name='skin', amount = BASE_SKIN},
+					{name='mukmoux-fat', amount = IMP_FAT},
 				},
-			crafting_speed = 15,
 			tech = 'orexigenic',
 			name = 'ex-fat-zun',
 			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-zungror.png",
@@ -128,14 +138,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='fat-caged-zungror',remove_item = true},
-					{name='meat-caged-zungror', amount=1},
+					{name='meat-caged-zungror', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='mukmoux-fat', amount = 5},
-					{name='meat', amount =13},
+					{name='mukmoux-fat', amount = BASE_FAT},
+					{name='meat', amount = IMP_MEAT},
 				},
-			crafting_speed = 15,
 			tech = 'anabolic-rna',
 			name = 'ex-me-zun',
 			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-zungror.png",

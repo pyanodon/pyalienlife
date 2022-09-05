@@ -2,6 +2,23 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 ------------------RENDERING------------------
 
+local INPUT_AMOUNT = 1
+
+local BASE_MEAT = 2
+local BASE_FAT = 2
+local BASE_GUTS = 2
+local BASE_BLOOD = 20
+local BASE_BRAIN = 1
+local BASE_SPECIAL = 2	-- tendon
+
+local IMP_MEAT = 8
+local IMP_FAT = 7
+local IMP_GUTS = 7
+local IMP_BLOOD = 80
+local IMP_BRAIN = 4
+local IMP_SPECIAL = 5
+
+
 FUN.autorecipes {
     name = 'rendering',
 	category = "slaughterhouse-kmauts",
@@ -13,17 +30,17 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-kmauts', amount=1},
+					{name='caged-kmauts', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='meat',  amount =2},
-                    {name='guts',  amount =2},
-                    {name='mukmoux-fat',  amount =2},
-					{name='tendon',  amount =1},
-					{name='arthropod-blood', amount =10},
-					{name='cage', amount=1},
-					{name='brain',  amount =1},
+					{name='meat', amount = BASE_MEAT},
+                    {name='guts', amount = BASE_GUTS},
+                    {name='mukmoux-fat', amount = BASE_FAT},
+					{name='tendon', amount = BASE_SPECIAL},
+					{name='arthropod-blood', amount = BASE_BLOOD},
+					{name='cage', amount = INPUT_AMOUNT},
+					{name='brain', amount = BASE_BRAIN},
 				},
 			crafting_speed = 30,
 			tech = 'kmauts',
@@ -36,14 +53,12 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='caged-kmauts',remove_item = true},
-					{name='brain-caged-kmauts', amount=1},
+					{name='brain-caged-kmauts', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='tendon',remove_item = true},
-					{name='brain', amount =5},
+					{name='brain', amount = IMP_BRAIN},
 				},
-			crafting_speed = 15,
 			tech = 'nanochondria',
 			name = 'ex-bra-kma',
 			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-kmauts.png",
@@ -54,14 +69,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='brain-caged-kmauts',remove_item = true},
-					{name='guts-caged-kmauts', amount=1},
+					{name='guts-caged-kmauts', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='brain', amount = 1},
-					{name='guts', amount =7},
+					{name='brain', amount = BASE_BRAIN},
+					{name='guts', amount = IMP_GUTS},
 				},
-			crafting_speed = 15,
 			tech = 'antitumor',
 			name = 'ex-gut-kma',
 			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-kmauts.png",
@@ -72,14 +86,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='guts-caged-kmauts',remove_item = true},
-					{name='blood-caged-kmauts', amount=1},
+					{name='blood-caged-kmauts', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='guts', amount = 2},
-					{name='arthropod-blood', amount =80},
+					{name='guts', amount = BASE_GUTS},
+					{name='arthropod-blood', amount = IMP_BLOOD},
 				},
-			crafting_speed = 15,
 			tech = 'recombinant-ery',
 			name = 'ex-blo-kma',
 			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-kmauts.png",
@@ -90,15 +103,14 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='blood-caged-kmauts',remove_item = true},
-					{name='meat-caged-kmauts', amount=1},
+					{name='meat-caged-kmauts', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='arthropod-blood', amount = 10},
-					{name='tendon',  amount =5},
-					{name='meat', amount =8},
+					{name='arthropod-blood', amount = BASE_BLOOD},
+					{name='tendon', amount = IMP_SPECIAL},
+					{name='meat', amount = IMP_MEAT},
 				},
-			crafting_speed = 15,
 			tech = 'anabolic-rna',
 			name = 'ex-me-kma',
 			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-kmauts.png",
@@ -109,15 +121,14 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='meat-caged-kmauts',remove_item = true},
-					{name='fat-caged-kmauts', amount=1},
+					{name='fat-caged-kmauts', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='meat', amount = 2},
-					{name='tendon',remove_item = true},
-					{name='mukmoux-fat', amount =7},
+					{name='meat', amount = BASE_MEAT},
+					{name='tendon', amount = BASE_SPECIAL},
+					{name='mukmoux-fat', amount = IMP_FAT},
 				},
-			crafting_speed = 15,
 			tech = 'orexigenic',
 			name = 'ex-fat-kma',
 			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-kmauts.png",

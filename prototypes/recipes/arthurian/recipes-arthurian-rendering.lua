@@ -2,6 +2,25 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 ------------------RENDERING------------------
 
+local INPUT_AMOUNT = 1
+
+local BASE_BONES = 4
+local BASE_MEAT = 5
+local BASE_SKIN = 2
+local BASE_FAT = 1
+local BASE_GUTS = 4
+local BASE_BLOOD = 50
+local BASE_BRAIN = 2
+
+local IMP_BONES = 12
+local IMP_MEAT = 10
+local IMP_SKIN = 7
+local IMP_FAT = 6
+local IMP_GUTS = 10
+local IMP_BLOOD = 160
+local IMP_BRAIN = 8
+
+
 FUN.autorecipes {
     name = 'rendering-arthurian',
 	category = 'slaughterhouse-arthurian',
@@ -12,18 +31,18 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-arthurian', amount=1},
+					{name='caged-arthurian', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='bones', amount = 4},
-					{name='meat', amount = 5},
-					{name='skin', amount = 2},
-					{name='mukmoux-fat', amount = 1},
-					{name='guts', amount = 4},
-					{name='blood', amount = 50},
-					{name='cage', amount=1},
-					{name='brain',amount = 2},
+					{name='bones', amount = BASE_BONES},
+					{name='meat', amount = BASE_MEAT},
+					{name='skin', amount = BASE_SKIN},
+					{name='mukmoux-fat', amount = BASE_FAT},
+					{name='guts', amount = BASE_GUTS},
+					{name='blood', amount = BASE_BLOOD},
+					{name='cage', amount = INPUT_AMOUNT},
+					{name='brain',amount = BASE_BRAIN},
 				},
 			crafting_speed = 30,
 			tech = 'arthurian',
@@ -35,16 +54,13 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='caged-arthurian',remove_item = true},
-					{name='brain-caged-arthurian', amount=1},
+					{name='caged-arthurian', remove_item = true},
+					{name='brain-caged-arthurian', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='mukmoux-fat', remove_item = true},
-					{name='brain', amount = 4},
-					{name = 'polynuclear-ganglion', amount = 1}
+					{name='brain', amount = IMP_BRAIN},
 				},
-			crafting_speed = 15,
 			tech = 'nanochondria',
 			name = 'ex-bra-art',
 			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-arthurian.png",
@@ -54,16 +70,14 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='brain-caged-arthurian',remove_item = true},
-					{name='bone-caged-arthurian', amount=1},
+					{name='brain-caged-arthurian', remove_item = true},
+					{name='bone-caged-arthurian', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='polynuclear-gangliont', remove_item = true},
-					{name='brain', amount = 2},
-					{name='bones', amount =12},
+					{name='brain', amount = BASE_BRAIN},
+					{name='bones', amount = IMP_BONES},
 				},
-			crafting_speed = 15,
 			tech = 'bmp',
 			name = 'ex-bon-art',
 			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-arthurian.png",
@@ -73,15 +87,14 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='bone-caged-arthurian',remove_item = true},
-					{name='guts-caged-arthurian', amount=1},
+					{name='bone-caged-arthurian', remove_item = true},
+					{name='guts-caged-arthurian', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='bones', amount = 4},
-					{name='guts', amount = 10},
+					{name='bones', amount = BASE_BONES},
+					{name='guts', amount = IMP_GUTS},
 				},
-			crafting_speed = 15,
 			tech = 'antitumor',
 			name = 'ex-gut-art',
 			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-arthurian.png",
@@ -91,15 +104,14 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='guts-caged-arthurian',remove_item = true},
-					{name='blood-caged-arthurian', amount=1},
+					{name='guts-caged-arthurian', remove_item = true},
+					{name='blood-caged-arthurian', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='guts', amount = 4},
-					{name='blood', amount =160},
+					{name='guts', amount = BASE_GUTS},
+					{name='blood', amount = IMP_BLOOD},
 				},
-			crafting_speed = 15,
 			tech = 'recombinant-ery',
 			name = 'ex-blo-art',
 			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-arthurian.png",
@@ -109,15 +121,14 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='blood-caged-arthurian',remove_item = true},
-					{name='skin-caged-arthurian', amount=1},
+					{name='blood-caged-arthurian', remove_item = true},
+					{name='skin-caged-arthurian', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='blood', amount = 50},
-					{name='skin', amount =7},
+					{name='blood', amount = BASE_BLOOD},
+					{name='skin', amount = IMP_SKIN},
 				},
-			crafting_speed = 15,
 			tech = 'reca',
 			name = 'ex-ski-art',
 			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-arthurian.png",
@@ -127,15 +138,14 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='skin-caged-arthurian',remove_item = true},
-					{name='fat-caged-arthurian', amount=1},
+					{name='skin-caged-arthurian', remove_item = true},
+					{name='fat-caged-arthurian', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='skin', amount = 2},
-					{name='mukmoux-fat', amount =6},
+					{name='skin', amount = BASE_SKIN},
+					{name='mukmoux-fat', amount = IMP_FAT},
 				},
-			crafting_speed = 15,
 			tech = 'orexigenic',
 			name = 'ex-fat-art',
 			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-arthurian.png",
@@ -145,15 +155,14 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='fat-caged-arthurian',remove_item = true},
-					{name='meat-caged-arthurian', amount=1},
+					{name='fat-caged-arthurian', remove_item = true},
+					{name='meat-caged-arthurian', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='mukmoux-fat', amount = 1},
-					{name='meat', amount =10},
+					{name='mukmoux-fat', amount = BASE_FAT},
+					{name='meat', amount = IMP_MEAT},
 				},
-			crafting_speed = 15,
 			tech = 'anabolic-rna',
 			name = 'ex-me-art',
 			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-arthurian.png",
