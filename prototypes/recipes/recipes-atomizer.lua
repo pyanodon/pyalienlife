@@ -599,4 +599,4 @@ RECIPE {
         {type = 'item', name = 'uranium-ore', amount = 8},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk03")
+}:add_unlock("molecular-decohesion-mk04")

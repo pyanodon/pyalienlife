@@ -12,7 +12,7 @@ RECIPE {
         {"concrete", 100},
         {"engine-unit", 3},
         {"small-parts-02", 150},
-        {"eva", 100},
+        -- {"eva", 100},
         {"neuroprocessor", 20},
     },
     results = {
