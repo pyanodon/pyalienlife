@@ -28,7 +28,7 @@ if not mods["pyalternativeenergy"] then
     TECHNOLOGY("uranium-mk02"):add_pack("py-science-pack-2")
 end
 
-TECHNOLOGY("super-steel-mk01"):add_pack("py-science-pack-3")
+--TECHNOLOGY("super-steel-mk01"):add_pack("py-science-pack-3")
 TECHNOLOGY("smelters-mk02"):add_pack("py-science-pack-3")
 
 --BUILDINDS--
