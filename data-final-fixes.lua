@@ -29,7 +29,10 @@ local recipes_list =
   "moss-gen",
   "cage",
   "neuroprocessor",
-  'py-science-pack-2',
+  "py-science-pack-1",
+  "py-science-pack-2",
+  "py-science-pack-3",
+  "py-science-pack-4",
   "fertilizer-1",
   "fertilizer-4",
   "flutec-pp6",
@@ -330,7 +333,9 @@ local recipes_list =
   "biomass-1-a",
   "dried-grods-02",
   "gas-bladder-to-natura-gas",
-  "concrete-02"
+  "concrete-02",
+  "planter-box",
+  "empty-planter-box",
 	}
 
 --adding to module limitation list
