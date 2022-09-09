@@ -31,7 +31,6 @@ FUN.autorecipes {
 					{name='meat', amount = BASE_MEAT},
 					{name='skin', amount = BASE_SKIN},
 					{name='guts', amount = BASE_GUTS},
-					{name='blood', amount = BASE_BLOOD},
 					{name='fish-oil', amount = BASE_SPECIAL},
 				},
 			crafting_speed = 30,
