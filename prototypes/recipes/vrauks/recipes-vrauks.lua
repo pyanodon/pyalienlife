@@ -44,9 +44,9 @@ RECIPE {
         {type = 'item', name = 'tin-plate', amount = 1},
         {type = 'item', name = 'fawogae', amount = 5},
         {type = 'item', name = 'moss', amount = 10},
-        {type = 'item', name = 'wood-seeds', amount = 10},
-        {type = 'item', name = 'agar', amount = 10},
-        {type = 'item', name = 'cellulose', amount = 5},
+        {type = 'item', name = 'wood-seeds', amount = 6},
+        {type = 'item', name = 'agar', amount = 4},
+        {type = 'item', name = 'cellulose', amount = 3},
         {type = 'fluid', name = 'steam', amount = 100}
     },
     results = {
@@ -61,17 +61,17 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'grod', amount = 4},
-        {type = 'item', name = 'tuuphra-seeds', amount = 1},
-        {type = 'item', name = 'ralesia', amount = 6},
+        {type = 'item', name = 'grod', amount = 1},
+        {type = 'item', name = 'tuuphra-seeds', amount = 3},
+        {type = 'item', name = 'ralesia', amount = 5},
         {type = 'item', name = 'wood-seeds', amount = 10},
-        {type = 'item', name = 'agar', amount = 10},
-        {type = 'item', name = 'casein', amount = 5},
+        {type = 'item', name = 'agar', amount = 6},
+        {type = 'item', name = 'casein', amount = 2},
         {type = 'item', name = 'native-flora', amount = 5},
         {type = 'item', name = 'moss', amount = 10},
-        {type = 'item', name = 'guts', amount = 5},
+        {type = 'item', name = 'guts', amount = 2},
         {type = 'item', name = 'starch', amount = 4},
-        {type = 'fluid', name = 'fish-oil', amount = 50},
+        {type = 'fluid', name = 'fish-oil', amount = 30},
         {type = 'fluid', name = 'steam', amount = 100}
     },
     results = {
