@@ -7,7 +7,7 @@ local INPUT_AMOUNT = 1
 local BASE_MEAT = 2
 local BASE_SKIN = 1         -- chitin
 local BASE_GUTS = 2
-local BASE_BLOOD = 400      -- formic-acid
+local BASE_BLOOD = 200      -- formic-acid
 local BASE_BRAIN = 1
 
 local IMP_MEAT = 10
@@ -22,6 +22,7 @@ FUN.autorecipes {
 	category = 'slaughterhouse-vrauks',
 	subgroup = 'py-alienlife-vrauks',
 	order = 'b',
+	crafting_speed = 10,
     mats =
 	{
 		{
@@ -38,7 +39,6 @@ FUN.autorecipes {
 					{name='brain', amount = BASE_BRAIN},
 					{name='cage', amount = INPUT_AMOUNT},
 				},
-			crafting_speed = 30,
 			tech = 'rendering',
 			name = 'full-render-vrauks',
 			icon = "__pyalienlifegraphics__/graphics/icons/rendering-vrauks.png",

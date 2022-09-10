@@ -6,7 +6,8 @@ FUN.autorecipes {
 	module_limitations = 'vrauks',
 	subgroup = 'py-alienlife-vrauks',
 	order = 'b',
-	main_product = 'vrauks',
+	main_product = 'caged-vrauks',
+	crafting_speed = 160,
     mats =
 	{
 		--base
@@ -16,53 +17,51 @@ FUN.autorecipes {
 					{name = 'cocoon', amount = 4},
                     {name='native-flora', amount =15},
                     {name='moss', amount =5},
+					{name='cage', amount = 4},
+					{name = 'water-barrel', amount = 3, return_barrel = true},
 				},
 			results =
 				{
-					{name='vrauks', amount = 4},
+					{name='caged-vrauks', amount_min = 0, amount_max = 4},
+					{name='cage', amount_min = 0, amount_max = 4}
 				},
-			crafting_speed = 160,
 			tech = 'vrauks'
 		},
-		--red
+		-- py science 1
 		{
 			ingredients =
 				{
 					{name='native-flora',remove_item = true},
-					{name = 'cocoon', add_amount = 3},
+					{name='cocoon', add_amount = 2},
+					{name='cage', add_amount = 2},
 					{name='moss', add_amount = 5},
-					{name='vrauks-food-01', amount = 3},
-					{name = 'water-barrel', amount = 3, return_barrel = true},
+					{name='vrauks-food-01', amount = 2},
 					{name='saps', amount = 10},
-					{name='fawogae', amount = 5},
 				},
 			results =
 				{
-					{name='vrauks', add_amount = 3},
+					{name='caged-vrauks', amount_min = 2, amount_max = 6},
 				},
-			crafting_speed = 100,
 			tech = 'vrauks-mk02'
 		},
-		--green
+		-- py science 2
 		{
 			ingredients =
 				{
-					{name = 'cocoon', add_amount = 8},
+					{name='cocoon', add_amount = 2},
+					{name='cage', add_amount = 2},
 					{name='bedding', amount = 1},
-					{name='vrauks-food-02', amount =4},
+					{name='vrauks-food-02', amount = 1},
 					{name='saps', add_amount = 10},
-					{name='fawogae', add_amount = 5},
-
 				},
 			results =
 				{
-					{name='vrauks', add_amount = 8},
+					{name='caged-vrauks', amount_min = 4, amount_max = 8},
 				},
-			crafting_speed = 80,
 			tech = 'vrauks-mk03'
 		},
 
-		--py
+		-- py science 3
 		{
 			ingredients =
 				{
@@ -75,10 +74,9 @@ FUN.autorecipes {
 				{
 					{name='vrauks', add_amount = 10},
 				},
-			crafting_speed = 60,
 			tech = 'vrauks-mk04'
 		},
-		--production
+		-- py science 4
 		{
 			ingredients =
 				{
@@ -91,7 +89,6 @@ FUN.autorecipes {
 				{
 					{name='vrauks', add_amount = 10},
 				},
-			crafting_speed = 40,
 			tech = 'vrauks-mk05'
 		}
 	}
@@ -101,58 +98,56 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'vrauks-cocoon',
-	category = 'vrauks',
-	module_limitations = 'vrauks',
+	category = 'rc',
+	-- module_limitations = 'vrauks',
 	subgroup = 'py-alienlife-vrauks',
 	order = 'c',
 	main_product = 'cocoon',
+	crafting_speed = 30,
     mats =
 	{
 		--base
 		{
 			ingredients =
 				{
-                    {name='vrauks', amount =2},
+                    {name='caged-vrauks', amount =2},
                     {name='moss', amount =10},
 					{name='saps', amount = 3},
+					{name='water-barrel', amount=4, return_barrel = true},
 				},
 			results =
 				{
 					{name='cocoon', amount_min =5, amount_max =7},
+                    {name='caged-vrauks', amount_min = 1, amount_max = 2},
+					{name='cage', amount_min = 0, amount_max = 1}
 				},
-			crafting_speed = 120,
 			tech = 'vrauks'
 		},
 		--red
 		{
 			ingredients =
 				{
-					{name='vrauks', add_amount = 2},
-                    {name='native-flora', amount = 10},
-					{name='vrauks-food-01', amount =2},
-					{name='water-barrel', amount=4, return_barrel = true},
+                    {name='native-flora', amount = 5},
+					{name='vrauks-food-01', amount = 1},
 				},
 			results =
 				{
 					{name='cocoon', amount_min =8, amount_max =12},
 				},
-			crafting_speed = 100,
 			tech = 'vrauks-mk02'
 		},
 		--green
 		{
 			ingredients =
 				{
-					{name='vrauks', add_amount = 2},
-					{name='bedding', amount = 3},
-					{name='vrauks-food-02', amount =4},
+					{name='bedding', amount = 1},
+					{name='vrauks-food-02', amount = 1},
 					{name='saps', add_amount = 7},
 				},
 			results =
 				{
 					{name='cocoon', amount_min = 12, amount_max =18},
 				},
-			crafting_speed = 80,
 			tech = 'vrauks-mk03'
 		},
 		--py
@@ -171,7 +166,6 @@ FUN.autorecipes {
 				{
 					{name='cocoon', amount_min = 15, amount_max =25},
 				},
-			crafting_speed = 60,
 			tech = 'vrauks-mk04'
 		},
 		--production
@@ -189,7 +183,6 @@ FUN.autorecipes {
 					{name = 'cocoon', remove_item = true},
 					{name = 'cocoon', amount = 40}
 				},
-			crafting_speed = 40,
 			tech = 'vrauks-mk05'
 		},
 	}
