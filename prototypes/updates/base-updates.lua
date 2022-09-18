@@ -96,3 +96,32 @@ RECIPE('chemical-science-pack'):change_category('research')
 RECIPE('military-science-pack'):change_category('research')
 RECIPE('production-science-pack'):change_category('research')
 RECIPE('utility-science-pack'):change_category('research'):add_ingredient({type = "item", name = "perfect-samples", amount = 1})
+
+ENTITY("beacon", "beacon"):set_fields{allowed_effects = {"consumption", "speed"} }
+
+ITEM("productivity-module"):set_fields{
+    effect =
+    {
+      productivity = {bonus = 0.1},
+      consumption = {bonus = 1},
+      speed = {bonus = -0.25}
+    }
+}
+
+ITEM("productivity-module-2"):set_fields{
+    effect =
+    {
+      productivity = {bonus = 0.2},
+      consumption = {bonus = 2},
+      speed = {bonus = -0.5}
+    }
+}
+
+ITEM("productivity-module-3"):set_fields{
+    effect =
+    {
+      productivity = {bonus = 0.3},
+      consumption = {bonus = 3},
+      speed = {bonus = -0.75}
+    }
+}

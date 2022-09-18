@@ -27,7 +27,7 @@ ENTITY{
     selection_box = {{0, 0}, {0, 0}},
     damaged_trigger_effect = hit_effects.entity(),
     -- drawing_box = {{-1.5, -2.2}, {1.5, 1.3}},
-    allowed_effects = {'consumption', 'speed', 'pollution', 'productivity'},
+    allowed_effects = {'consumption', 'speed', 'productivity'},
     --[[
     graphics_set = require("__base__.prototypes.entity.beacon-animations"),
     ]] --
