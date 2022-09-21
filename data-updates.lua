@@ -52,6 +52,12 @@ for _, recipe in pairs(data.raw.recipe) do
     r:replace_ingredient('xyhiphoe-blood', 'arthropod-blood')
 end
 
+ITEM("sap-tree"):serpent()
+
+local sap1_limits = data.raw.module["sap-tree"].limitation_blacklist
+local sap2_limits = data.raw.module["sap-tree-mk02"].limitation_blacklist
+local sap3_limits = data.raw.module["sap-tree-mk03"].limitation_blacklist
+local sap4_limits = data.raw.module["sap-tree-mk04"].limitation_blacklist
 ----------------------------------------------------------------------------------------------------
 -- MODULE LIMITATION SETUP
 ----------------------------------------------------------------------------------------------------
@@ -120,6 +126,20 @@ for _, module in pairs(data.raw.module) do
 end
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
+
+data.raw.module["sap-tree"].limitation_blacklist = sap1_limits
+data.raw.module["sap-tree"].limitation = nil
+
+data.raw.module["sap-tree-mk02"].limitation_blacklist = sap2_limits
+data.raw.module["sap-tree-mk02"].limitation = nil
+
+data.raw.module["sap-tree-mk03"].limitation_blacklist = sap3_limits
+data.raw.module["sap-tree-mk03"].limitation = nil
+
+data.raw.module["sap-tree-mk04"].limitation_blacklist = sap4_limits
+data.raw.module["sap-tree-mk04"].limitation = nil
+
+ITEM("sap-tree"):serpent()
 
 --remove steel barrel based milk
 data.raw.item['milk-barrel'] = nil

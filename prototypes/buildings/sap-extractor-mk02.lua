@@ -43,7 +43,7 @@ ENTITY {
     collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     match_animation_speed_to_activity = false,
-    fixed_recipe = "sap-01",
+    
     module_specification = {
         module_slots = 4
     },

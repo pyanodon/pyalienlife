@@ -8,7 +8,7 @@
 
 RECIPE {
     type = 'recipe',
-    name = 'sap-seeds-mk02',
+    name = 'sap-seeds-mk02-gen',
     category = 'nursery',
     enabled = false,
     energy_required = 25,
@@ -25,7 +25,7 @@ RECIPE {
 
   RECIPE {
     type = 'recipe',
-    name = 'sap-tree-mk02',
+    name = 'sap-tree-mk02-gen',
     category = 'nursery',
     enabled = false,
     energy_required = 40,
@@ -40,12 +40,59 @@ RECIPE {
     },
   }:add_unlock("sap-mk02")
 
+  RECIPE {
+    type = "recipe",
+    name = "sap-mk02",
+    category = "sap",
+    --hidden = true,
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+    },
+    results = {
+        {type = 'item', name = 'saps-mk02', amount = 1}
+    }
+}:add_unlock("sap-mk02")
+
+data.raw.module["sap-tree"].limitation_blacklist = {
+    "sap-mk02"
+}
+
+RECIPE {
+    type = "recipe",
+    name = "sap-seeds-mk02",
+    category = "nursery",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "saps-mk02", amount = 5},
+    },
+    results = {
+        {type = "item", name = "sap-seeds-mk02", amount = 2}
+    },
+}:add_unlock("sap-mk02")
+
+RECIPE {
+    type = "recipe",
+    name = "sap-tree-mk02",
+    category = "nursery",
+    enabled = false,
+    energy_required = 45,
+    ingredients = {
+        {type = "item", name = "sap-seeds-mk02", amount = 5},
+        {type = "item", name = "planter-box", amount = 1},
+    },
+    results = {
+        {type = "item", name = "sap-tree-mk02", amount = 1}
+    },
+}:add_unlock("sap-mk02")
+
 --mk03--
 --WIP--
 
 RECIPE {
     type = 'recipe',
-    name = 'sap-seeds-mk03',
+    name = 'sap-seeds-mk03-gen',
     category = 'nursery',
     enabled = false,
     energy_required = 25,
@@ -62,7 +109,7 @@ RECIPE {
 
   RECIPE {
     type = 'recipe',
-    name = 'sap-tree-mk03',
+    name = 'sap-tree-mk03-gen',
     category = 'nursery',
     enabled = false,
     energy_required = 40,
@@ -77,12 +124,58 @@ RECIPE {
     },
   }:add_unlock("sap-mk03")
 
+  RECIPE {
+    type = "recipe",
+    name = "sap-mk03",
+    category = "sap",
+    --hidden = true,
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+    },
+    results = {
+        {type = 'item', name = 'saps-mk03', amount = 1}
+    }
+}:add_unlock("sap-mk03")
+
+table.insert(data.raw.module["sap-tree"].limitation_blacklist, "sap-mk03")
+data.raw.module["sap-tree-mk02"].limitation_blacklist = {"sap-mk03"}
+
+RECIPE {
+    type = "recipe",
+    name = "sap-seeds-mk03",
+    category = "nursery",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "saps-mk03", amount = 5},
+    },
+    results = {
+        {type = "item", name = "sap-seeds-mk03", amount = 2}
+    },
+}:add_unlock("sap-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "sap-tree-mk03",
+    category = "nursery",
+    enabled = false,
+    energy_required = 45,
+    ingredients = {
+        {type = "item", name = "sap-seeds-mk03", amount = 5},
+        {type = "item", name = "planter-box", amount = 1},
+    },
+    results = {
+        {type = "item", name = "sap-tree-mk03", amount = 1}
+    },
+}:add_unlock("sap-mk03")
+
 --mk04--
 --WIP--
 
 RECIPE {
     type = 'recipe',
-    name = 'sap-seeds-mk04',
+    name = 'sap-seeds-mk04-gen',
     category = 'nursery',
     enabled = false,
     energy_required = 25,
@@ -99,7 +192,7 @@ RECIPE {
 
   RECIPE {
     type = 'recipe',
-    name = 'sap-tree-mk04',
+    name = 'sap-tree-mk04-gen',
     category = 'nursery',
     enabled = false,
     energy_required = 40,
@@ -113,3 +206,50 @@ RECIPE {
         {type = 'item', name = 'sap-tree-mk04', amount = 1},
     },
   }:add_unlock("sap-mk04")
+
+  RECIPE {
+    type = "recipe",
+    name = "sap-mk04",
+    category = "sap",
+    --hidden = true,
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+    },
+    results = {
+        {type = 'item', name = 'saps-mk04', amount = 1}
+    }
+}:add_unlock("sap-mk04")
+
+table.insert(data.raw.module["sap-tree"].limitation_blacklist, "sap-mk04")
+table.insert(data.raw.module["sap-tree-mk02"].limitation_blacklist, "sap-mk04")
+data.raw.module["sap-tree-mk03"].limitation_blacklist = {"sap-mk04"}
+
+RECIPE {
+    type = "recipe",
+    name = "sap-seeds-mk04",
+    category = "nursery",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "saps-mk04", amount = 5},
+    },
+    results = {
+        {type = "item", name = "sap-seeds-mk04", amount = 2}
+    },
+}:add_unlock("sap-mk04")
+
+RECIPE {
+    type = "recipe",
+    name = "sap-tree-mk04",
+    category = "nursery",
+    enabled = false,
+    energy_required = 45,
+    ingredients = {
+        {type = "item", name = "sap-seeds-mk04", amount = 5},
+        {type = "item", name = "planter-box", amount = 1},
+    },
+    results = {
+        {type = "item", name = "sap-tree-mk04", amount = 1}
+    },
+}:add_unlock("sap-mk04")

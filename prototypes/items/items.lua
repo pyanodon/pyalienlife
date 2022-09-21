@@ -4180,6 +4180,51 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "saps-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/sap.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-latex",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "saps-mk03",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/sap.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-latex",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "saps-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/sap.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-latex",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
     name = "sap-seeds",
     icon = "__pyalienlifegraphics__/graphics/icons/sap-seeds.png",
 	icon_size = 64,

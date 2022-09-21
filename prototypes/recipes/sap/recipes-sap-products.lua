@@ -4,7 +4,6 @@ RECIPE {
     type = "recipe",
     name = "sap-01",
     category = "sap",
-    hidden = true,
     enabled = false,
     energy_required = 20,
     ingredients = {
