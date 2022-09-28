@@ -105,7 +105,7 @@ RECIPE {
         {type = 'item', name = 'sea-sponge', amount = 1},
     },
     results = {
-        {type = 'item', name = 'raw-borax', amount = 8},
+        {type = 'item', name = 'ore-quartz', amount = 10},
     },
     subgroup = 'py-alienlife-items',
     order = 'c',
@@ -121,7 +121,7 @@ RECIPE {
         {type = 'item', name = 'sea-sponge-sprouts', amount = 1},
     },
     results = {
-        {type = 'item', name = 'raw-borax', amount = 3},
+        {type = 'item', name = 'ore-quartz', amount = 7},
     },
     subgroup = 'py-alienlife-items',
     order = 'c',
