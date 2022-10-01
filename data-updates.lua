@@ -1,6 +1,5 @@
 require("__stdlib__/stdlib/data/data").Util.create_data_globals()
 local table = require('__stdlib__/stdlib/utils/table')
---require("__pycoalprocessing__/prototypes/functions/functions")
 local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 require("prototypes/updates/autoplace-fish")
@@ -24,7 +23,6 @@ if mods["pyhightech"] then
     require("prototypes/technologies/schrodinger-antelope")
     require("prototypes/buildings/antelope-enclosure-mk01")
     require("prototypes/updates/pyhightech-updates")
-    -- table.insert(data.raw['assembling-machine']['crash-site-assembling-machine-1-repaired'].crafting_categories, 'vrauk-rendering')
 end
 
 if mods["pypetroleumhandling"] then
@@ -258,18 +256,12 @@ require('prototypes/upgrades/tech-upgrades')
 
 if data.data_crawler then
 	  data.script_enabled = {
-		-- {type = "entity", name = "crash-site-assembling-machine-1-repaired"},
-		-- {type = "entity", name = "crash-site-lab-repaired"},
 		{type = "entity", name = "tar-patch"},
         {type = "item", name = "earth-generic-sample"}
 	  }
   end
 
   TECHNOLOGY('filtration-mk02'):remove_prereq('lithium-processing')
-
--- Override crashed building resistances since we won't have the means to repair them immediately
--- data.raw['assembling-machine']['crash-site-assembling-machine-1-repaired'].resistances = {{type = 'fire', percent = 100}}
--- data.raw['assembling-machine']['crash-site-lab-repaired'].resistances = {{type = 'fire', percent = 100}}
 
 --RECIPES UPDATES
 

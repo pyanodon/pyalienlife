@@ -26,6 +26,11 @@ TECHNOLOGY("small-parts-mk03"):add_pack("py-science-pack-3")
 TECHNOLOGY("stack-inserter-2"):add_pack("py-science-pack-3")
 TECHNOLOGY("tholin-mk01"):add_pack("py-science-pack-3")
 
+--Guar--
+
+data.raw["recipe-category"]["guar"].allowed_module_categories = { "guar" }
+data.raw["recipe-category"]["guar"].modules_required = true
+
 ----RECIPES----
 RECIPE('guar-separation'):remove_unlock("oil-machines-mk02")
 RECIPE('guar-01'):remove_unlock("oil-machines-mk01")
@@ -35,7 +40,8 @@ RECIPE('guar-04'):remove_unlock("coal-processing-2")
 RECIPE('guar-05'):remove_unlock("fertilizer")
 RECIPE('guar-gum'):add_unlock('guar')
 
-RECIPE('guar-gum-plantation'):subgroup_order("py-alienlife-buildings-mk01", "a"):remove_unlock("oil-machines-mk01"):add_unlock('guar')
+RECIPE('guar-gum-plantation'):subgroup_order("py-alienlife-buildings-mk01", "a"):add_unlock("guar")
+
 RECIPE('guar-gum-plantation-mk02'):subgroup_order("py-alienlife-buildings-mk02", "a"):remove_unlock("oil-machines-mk02"):add_unlock('botany-mk02'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20}):add_ingredient({type = "item", name = "latex", amount = 20})
 RECIPE('guar-gum-plantation-mk03'):subgroup_order("py-alienlife-buildings-mk03", "a"):remove_unlock("oil-machines-mk03"):add_unlock('botany-mk03')
 RECIPE('guar-gum-plantation-mk04'):subgroup_order("py-alienlife-buildings-mk04", "a"):remove_unlock("oil-machines-mk04"):add_unlock('botany-mk04')
@@ -55,10 +61,6 @@ RECIPE('chemical-science-01'):replace_ingredient("water","crude-oil")
 RECIPE('harvester'):replace_ingredient("small-parts-01","small-parts-03")
 RECIPE('seeds-extract-01'):add_ingredient({type = "item", name = "guar-seeds", amount = 100})
 RECIPE('arqad-jelly-01'):replace_ingredient("active-carbon","carbon-black"):replace_ingredient("oleochemicals-barrel","btx-barrel")
-
-data.raw["recipe-category"]["guar"].allowed_module_categories = { "guar" }
-data.raw["recipe-category"]["guar"].modules_required = true
-
 
 FUN.results_replacer("crude-from-manure", "crude-oil", "scrude")
 FUN.results_replacer("crude-from-manure", "ash", "soot")

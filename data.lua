@@ -365,12 +365,6 @@ end
 
 require('prototypes.buildings.sap-tree')
 
---crashed data array
--- require('prototypes/buildings/crashed-lab-mk01')
--- if not mods["pyhightech"] then
---     require("prototypes/buildings/crashed-assembler-mk01")
--- end
-
 --((SPACE BUILDINGS))--
 --[[
 require('prototypes/buildings/space/space-arthurian-pen-mk01')
@@ -787,7 +781,6 @@ require('prototypes/recipes/recipes-phytoplankton')
 require('prototypes/recipes/recipes-recharge')
 --require('prototypes/recipes/recipes-vat')
 
-
 --gunpowder poo
 --require('prototypes/recipes/recipes-vrauk-products')
 
@@ -799,7 +792,6 @@ require('prototypes/ores/grod')
 require('prototypes/ores/yotoi')
 require('prototypes/ores/yotoi-fruit')
 require('prototypes/ores/bioreserve')
-
 
 --(( BACKGROUND ))--
 data.raw["utility-constants"].default.recipe_step_limit = 2000;
