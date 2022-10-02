@@ -94,6 +94,174 @@ ENTITY {
     },
     working_visualisations = {
         {
+            north_position = util.by_pixel(-192, -128),
+            west_position = util.by_pixel(-192, -128),
+            south_position = util.by_pixel(-192, -128),
+            east_position = util.by_pixel(-192, -128),
+            animation = {
+                filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/v1.png",
+                frame_count = 150,
+                line_length = 12,
+                width = 160,
+                height = 160,
+                draw_as_glow = true,
+                animation_speed = 0.25,
+            }
+        },
+        {
+            north_position = util.by_pixel(-32, -128),
+            west_position = util.by_pixel(-32, -128),
+            south_position = util.by_pixel(-32, -128),
+            east_position = util.by_pixel(-32, -128),
+            animation = {
+                filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/v2.png",
+                frame_count = 150,
+                line_length = 12,
+                width = 160,
+                height = 160,
+                draw_as_glow = true,
+                animation_speed = 0.25,
+            }
+        },
+        {
+            north_position = util.by_pixel(128, -128),
+            west_position = util.by_pixel(128, -128),
+            south_position = util.by_pixel(128, -128),
+            east_position = util.by_pixel(128, -128),
+            animation = {
+                filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/v3.png",
+                frame_count = 150,
+                line_length = 12,
+                width = 160,
+                height = 160,
+                draw_as_glow = true,
+                animation_speed = 0.25,
+            }
+        },
+        {
+            north_position = util.by_pixel(240, -128),
+            west_position = util.by_pixel(240, -128),
+            south_position = util.by_pixel(240, -128),
+            east_position = util.by_pixel(240, -128),
+            animation = {
+                filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/v4.png",
+                frame_count = 150,
+                line_length = 12,
+                width = 64,
+                height = 160,
+                draw_as_glow = true,
+                animation_speed = 0.25,
+            }
+        },
+        --circle
+        {
+            north_position = util.by_pixel(-288, -208),
+            west_position = util.by_pixel(-288, -208),
+            south_position = util.by_pixel(-288, -208),
+            east_position = util.by_pixel(-288, -208),
+            animation = {
+                filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/1.png",
+                frame_count = 100,
+                line_length = 20,
+                width = 96,
+                height = 512,
+                draw_as_glow = true,
+                animation_speed = 0.4,
+            }
+        },
+        {
+            north_position = util.by_pixel(-192, -208),
+            west_position = util.by_pixel(-192, -208),
+            south_position = util.by_pixel(-192, -208),
+            east_position = util.by_pixel(-192, -208),
+            animation = {
+                filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/2.png",
+                frame_count = 100,
+                line_length = 20,
+                width = 96,
+                height = 512,
+                draw_as_glow = true,
+                animation_speed = 0.4,
+            }
+        },
+        {
+            north_position = util.by_pixel(-96, -208),
+            west_position = util.by_pixel(-96, -208),
+            south_position = util.by_pixel(-96, -208),
+            east_position = util.by_pixel(-96, -208),
+            animation = {
+                filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/3.png",
+                frame_count = 100,
+                line_length = 20,
+                width = 96,
+                height = 512,
+                draw_as_glow = true,
+                animation_speed = 0.4,
+            }
+        },
+        {
+            north_position = util.by_pixel(0, -208),
+            west_position = util.by_pixel(-0, -208),
+            south_position = util.by_pixel(-0, -208),
+            east_position = util.by_pixel(-0, -208),
+            animation = {
+                filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/4.png",
+                frame_count = 100,
+                line_length = 20,
+                width = 96,
+                height = 512,
+                draw_as_glow = true,
+                animation_speed = 0.4,
+            }
+        },
+        {
+            north_position = util.by_pixel(96, -208),
+            west_position = util.by_pixel(96, -208),
+            south_position = util.by_pixel(96, -208),
+            east_position = util.by_pixel(96, -208),
+            animation = {
+                filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/5.png",
+                frame_count = 100,
+                line_length = 20,
+                width = 96,
+                height = 512,
+                draw_as_glow = true,
+                animation_speed = 0.4,
+            }
+        },
+        {
+            north_position = util.by_pixel(192, -208),
+            west_position = util.by_pixel(192, -208),
+            south_position = util.by_pixel(192, -208),
+            east_position = util.by_pixel(192, -208),
+            animation = {
+                filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/6.png",
+                frame_count = 100,
+                line_length = 20,
+                width = 96,
+                height = 512,
+                draw_as_glow = true,
+                animation_speed = 0.4,
+            }
+        },
+        {
+            north_position = util.by_pixel(288, -208),
+            west_position = util.by_pixel(288, -208),
+            south_position = util.by_pixel(288, -208),
+            east_position = util.by_pixel(288, -208),
+            animation = {
+                filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/7.png",
+                frame_count = 100,
+                line_length = 20,
+                width = 96,
+                height = 512,
+                draw_as_glow = true,
+                animation_speed = 0.4,
+            }
+        },
+
+        --gazels
+        {
             north_position = util.by_pixel(-192, -448),
             west_position = util.by_pixel(-192, -448),
             south_position = util.by_pixel(-192, -448),
@@ -198,66 +366,7 @@ ENTITY {
                 animation_speed = 0.25,
             }
         },
-        {
-            north_position = util.by_pixel(-192, -128),
-            west_position = util.by_pixel(-192, -128),
-            south_position = util.by_pixel(-192, -128),
-            east_position = util.by_pixel(-192, -128),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/v1.png",
-                frame_count = 150,
-                line_length = 12,
-                width = 160,
-                height = 160,
-                draw_as_glow = true,
-                animation_speed = 0.25,
-            }
-        },
-        {
-            north_position = util.by_pixel(-32, -128),
-            west_position = util.by_pixel(-32, -128),
-            south_position = util.by_pixel(-32, -128),
-            east_position = util.by_pixel(-32, -128),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/v2.png",
-                frame_count = 150,
-                line_length = 12,
-                width = 160,
-                height = 160,
-                draw_as_glow = true,
-                animation_speed = 0.25,
-            }
-        },
-        {
-            north_position = util.by_pixel(128, -128),
-            west_position = util.by_pixel(128, -128),
-            south_position = util.by_pixel(128, -128),
-            east_position = util.by_pixel(128, -128),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/v3.png",
-                frame_count = 150,
-                line_length = 12,
-                width = 160,
-                height = 160,
-                draw_as_glow = true,
-                animation_speed = 0.25,
-            }
-        },
-        {
-            north_position = util.by_pixel(240, -128),
-            west_position = util.by_pixel(240, -128),
-            south_position = util.by_pixel(240, -128),
-            east_position = util.by_pixel(240, -128),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/v4.png",
-                frame_count = 150,
-                line_length = 12,
-                width = 64,
-                height = 160,
-                draw_as_glow = true,
-                animation_speed = 0.25,
-            }
-        },
+
         {
             north_position = util.by_pixel(-192, -0),
             west_position = util.by_pixel(-192, -0),
