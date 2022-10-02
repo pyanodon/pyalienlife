@@ -608,3 +608,76 @@ FUN.autorecipes {
 	}
 }
 ]]--
+
+--poop
+
+FUN.autorecipes {
+    name = 'simik-poop',
+	category = 'simik',
+	module_limitations = 'simik',
+	subgroup = 'py-alienlife-simik',
+	order = 'b',
+	main_product = "simik-poop",
+    mats =
+	{
+		--logistic
+		{
+			ingredients =
+				{
+                    {name='stone-wool', amount =3, fallback = "raw-fiber"},
+					{name='simik-food-01', amount =1},
+					{name = 'stone', amount = 10},
+					{name='olefin-barrel', amount=2, return_barrel = true},
+				},
+			results =
+				{
+					{name='simik-poop', amount = 5},
+				},
+			crafting_speed = 80,
+			tech = 'simik-mk01'
+		},
+		--py
+		{
+			ingredients =
+				{
+					{name='arqad-maggot', amount = 2},
+				},
+			results =
+				{
+					{name='simik-poop', add_amount = 3},
+				},
+			crafting_speed = 80,
+			tech = 'simik-mk02'
+		},
+		--prod
+		{
+			ingredients =
+				{
+					{name = 'simik-food-01', remove_item = true},
+					{name='simik-food-02', amount =1},
+					{name = 'grod-seeds', amount = 5}
+				},
+			results =
+				{
+					{name='simik-poop', add_amount = 4},
+				},
+			crafting_speed = 80,
+			tech = 'simik-mk03'
+		},
+		--utility
+		{
+			ingredients =
+				{
+					{name='arqad-maggot', add_amount =3},
+					{name='stone', add_amount = 5},
+					{name = 'scrondrix', amount = 1}
+				},
+			results =
+				{
+					{name='simik-poop', add_amount = 10},
+				},
+			crafting_speed = 80,
+			tech = 'simik-mk04'
+		},
+	}
+}

@@ -600,3 +600,18 @@ RECIPE {
     },
     --main_product = "cocoon",
 }:add_unlock("molecular-decohesion-mk04")
+
+RECIPE {
+    type = 'recipe',
+    name = 'simik-poop-to-borax',
+    category = 'atomizer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'simik-poop', amount = 3},
+    },
+    results = {
+        {type = 'item', name = 'raw-borax', amount = 8},
+    },
+    --main_product = "cocoon",
+}:add_unlock("molecular-decohesion-mk03")

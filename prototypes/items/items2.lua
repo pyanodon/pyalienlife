@@ -473,3 +473,14 @@ ITEM {
     order = "z",
     stack_size = 50
 }
+
+ITEM {
+    type = "item",
+    name = "simik-poop",
+    icon = "__pyalienlifegraphics2__/graphics/icons/simik-poop.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-simik",
+    order = "z",
+    stack_size = 50
+}
