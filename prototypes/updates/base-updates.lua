@@ -24,7 +24,7 @@ TECHNOLOGY("fast-inserter-2"):add_pack("py-science-pack-2")
 
 
 TECHNOLOGY('fluid-handling'):remove_pack('logistic-science-pack')
-TECHNOLOGY('automation-2'):remove_pack('logistic-science-pack'):remove_prereq('logistic-science-pack')
+TECHNOLOGY('automation-2'):remove_pack('logistic-science-pack'):remove_prereq('logistic-science-pack'):remove_prereq("electronics")
 TECHNOLOGY('exoskeleton-equipment'):remove_prereq('electric-engine'):remove_prereq('solar-panel-equipment'):add_prereq('bio-implants')
 TECHNOLOGY('exoskeleton-equipment'):add_pack('production-science-pack')
 TECHNOLOGY("fast-inserter"):add_pack("py-science-pack-1")

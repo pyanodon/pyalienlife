@@ -26,6 +26,8 @@ TECHNOLOGY("small-parts-mk03"):add_pack("py-science-pack-3")
 TECHNOLOGY("stack-inserter-2"):add_pack("py-science-pack-3")
 TECHNOLOGY("tholin-mk01"):add_pack("py-science-pack-3")
 
+TECHNOLOGY("plastics"):set_fields{prerequisites = {}}
+
 --Guar--
 
 data.raw["recipe-category"]["guar"].allowed_module_categories = { "guar" }
@@ -220,7 +222,7 @@ RECIPE {
     type = "recipe",
     name = "stopper-2",
     category = "crafting",
-    enabled = true,
+    enabled = false,
     energy_required = 5,
     ingredients = {
         {type = 'item', name = 'rubber', amount = 1},
@@ -229,3 +231,31 @@ RECIPE {
         {type = 'item', name = 'stopper', amount = 2}
     }
 }:add_unlock("rubber")
+
+RECIPE {
+    type = "recipe",
+    name = "formic-from-nothing",
+    category = "crafting-with-fluid",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        --{type = 'item', name = 'rubber', amount = 1},
+    },
+    results = {
+        {type = 'fluid', name = 'formic-acid', amount = 2}
+    }
+}:add_unlock("latex")
+
+RECIPE {
+    type = "recipe",
+    name = "plastic-from-nothing",
+    category = "crafting-with-fluid",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        --{type = 'item', name = 'rubber', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'plastic-bar', amount = 2}
+    }
+}:add_unlock("plastics")

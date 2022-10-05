@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/genetics-mk01.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"microbiology-mk01"},
+    prerequisites = {},
     dependencies = {"moss-mk01"},
     effects = {},
     unit = {
@@ -22,7 +22,7 @@ TECHNOLOGY {
     icon = '__pyalienlifegraphics__/graphics/technology/genetics-mk02.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'genetics-mk01',"machines-mk02","korlex"},
+    prerequisites = {},
     dependencies = {"genetics-mk01"},
     effects = {},
     unit = {
@@ -41,7 +41,7 @@ TECHNOLOGY {
     icon = '__pyalienlifegraphics__/graphics/technology/genetics-mk03.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'genetics-mk01',"machines-mk02","korlex"},
+    prerequisites = {},
     dependencies = {"genetics-mk02"},
     effects = {},
     unit = {
