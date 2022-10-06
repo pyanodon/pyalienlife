@@ -13,8 +13,33 @@ data:extend(
 		--starting_status = "locked",
 		trigger =
 		{
-			type = "build-entity",
-			entity = "vrauks-paddock-mk01"
+			type = "or",
+			triggers = {
+				{
+					type = "build-entity",
+					entity = "fwf-mk01"
+				},
+				{
+					type = "build-entity",
+					entity = "seaweed-crop-mk01"
+				},
+				{
+					type = "build-entity",
+					entity = "sap-extractor-mk01"
+				},
+				{
+					type = "build-entity",
+					entity = "moss-farm-mk01"
+				},
+				{
+					type = "build-entity",
+					entity = "moondrop-greenhouse-mk01"
+				},
+				{
+					type = "build-entity",
+					entity = "vrauks-paddock-mk01"
+				},
+			},
 		},
 		--dependencies = {'introduction'},
 		is_title = true,
