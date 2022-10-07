@@ -49,7 +49,7 @@ local tech_upgrades =
                         consumption = 0.0, --energy usage
                         speed = 0.0, -- machine speed
                         productivity = 0.0, -- productivity. and yes i know you`ll never use this but I`ll make sure it works anyway
-                        pollution = 0.0 -- pollution this machine will produce while running
+                        pollution = 0.1 -- pollution this machine will produce while running
                     },
                 techs_to_lock = -- techs that should be locked and hidden if this tech is researched
                     {
@@ -82,7 +82,7 @@ local tech_upgrades =
                         consumption = 0.0,
                         speed = 0.0,
                         productivity = 0.0,
-                        pollution = 0.0
+                        pollution = 0.1
                     },
                 techs_to_lock =
                     {
@@ -114,9 +114,9 @@ local tech_upgrades =
                 upgrades =
                     {
                         consumption = 0,
-                        speed = -0.0,
+                        speed = 0.0,
                         productivity = 0.0,
-                        pollution = -0.0
+                        pollution = 0.1
                     },
                 techs_to_lock =
                     {
