@@ -23,7 +23,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='scrondrix-pup', amount = 4},
+					{name='scrondrix-pup', amount = 5},
 					{name='cage', amount = 2},
 					{name = 'manure', amount = 5},
 				},
@@ -41,7 +41,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='scrondrix-pup', add_amount = 2},
+					{name='scrondrix-pup', add_amount = 1},
 					{name = 'manure', add_amount = 3},
 				},
 			crafting_speed = 120,
@@ -219,7 +219,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='caged-scrondrix', amount = 4},
+					{name='caged-scrondrix', amount = 5},
 					{name = 'manure', amount = 5},
 				},
 			crafting_speed = 150,
