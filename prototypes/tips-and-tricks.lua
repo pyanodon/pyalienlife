@@ -33,10 +33,6 @@ data:extend(
 				},
 				{
 					type = "build-entity",
-					entity = "moondrop-greenhouse-mk01"
-				},
-				{
-					type = "build-entity",
 					entity = "vrauks-paddock-mk01"
 				},
 			},
@@ -74,3 +70,12 @@ data:extend(
 	}
 	]]--
 })
+
+if mods["pyhightech"] then
+	table.insert(data.raw["tips-and-tricks-item"]["farming"].trigger.triggers, {
+		type = "build-entity",
+		entity = "moondrop-greenhouse-mk01"
+	})
+
+	log(serpent.block(data.raw["tips-and-tricks-item"]["farming"]))
+end
