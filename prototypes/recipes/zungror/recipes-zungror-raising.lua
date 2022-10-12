@@ -22,7 +22,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name = 'zungror-cocoon', amount = 3},
+					{name = 'zungror-cocoon', amount = 4},
 					{name='empty-barrel-milk', amount = 2},
 				},
 			crafting_speed = 150,
@@ -38,7 +38,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name = 'zungror-cocoon', add_amount = 5},
+					{name = 'zungror-cocoon', add_amount = 6},
 				},
 			crafting_speed = 120,
 			tech = 'zungror-mk02'
