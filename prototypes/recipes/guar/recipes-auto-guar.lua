@@ -15,7 +15,7 @@ FUN.autorecipes {
 			ingredients =
 				{
                     {name='guar-seeds', amount = 5},
-                    {name = "water", amount = 200},
+                    {name = "water", amount = 200, fluidbox_index = 1},
 					{name = "sand", amount = 8},
 					{name = "soil", amount = 10},
 				},
@@ -50,7 +50,7 @@ FUN.autorecipes {
                     {name='coarse', amount =6},
 					{name='pesticide-mk01', amount = 2},
 					{name = "water", add_amount = 300},
-					{name = "carbon-dioxide", amount = 500},
+					{name = "carbon-dioxide", amount = 500, fluidbox_index = 2},
 					{name = "sand", add_amount = 40},
 					{name = "small-lamp", add_amount = 2},
 					{name = "soil", subtract_amount = 20},
@@ -69,7 +69,7 @@ FUN.autorecipes {
 					{name='guar-seeds', add_amount = 20},
                     {name='fertilizer', add_amount = 8},
                     {name='pesticide-mk02', amount = 2},
-					{name = "carbon-dioxide", add_amount = 500},
+					{name = "carbon-dioxide", add_amount = 500, fluidbox_index = 2},
 					{name = "soil", remove_item = true},
 					{name = "clay", amount = 8, fallback = "coarse"},
 					{name = "small-lamp", add_amount = 2},

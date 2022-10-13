@@ -123,7 +123,7 @@ RECIPE {
     enabled = false,
     energy_required = 50,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water-light', amount = 200},
+        {type = 'fluid', name = 'dirty-water-light', amount = 200, fluidbox_index = 1},
         {type = 'item', name = 'guar-seeds', amount = 40},
     },
     results = {
@@ -142,9 +142,9 @@ RECIPE {
     enabled = false,
     energy_required = 40,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water-light', amount = 200},
+        {type = 'fluid', name = 'dirty-water-light', amount = 200, fluidbox_index = 1},
         {type = 'item', name = 'guar-seeds', amount = 40},
-        {type = 'fluid', name = 'chelator', amount = 50},
+        {type = 'fluid', name = 'chelator', amount = 50, fluidbox_index = 2},
     },
     results = {
         {type = 'item', name = 'nb-biomass', amount = 20},
@@ -162,9 +162,9 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water-light', amount = 200},
+        {type = 'fluid', name = 'dirty-water-light', amount = 200, fluidbox_index = 1},
         {type = 'item', name = 'guar-seeds', amount = 40},
-        {type = 'fluid', name = 'chelator', amount = 50},
+        {type = 'fluid', name = 'chelator', amount = 50, fluidbox_index = 2},
         {type = 'item', name = 'hmas', amount = 1},
     },
     results = {

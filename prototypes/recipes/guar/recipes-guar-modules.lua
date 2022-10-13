@@ -15,10 +15,10 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'guar', amount = 2},
         {type = 'item', name = 'guar-seeds', amount = 10},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 300},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 300, fluidbox_index = 2},
         {type = 'item', name = 'fertilizer', amount = 10},
         {type = 'item', name = 'limestone', amount = 10},
-        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'fluid', name = 'water', amount = 1000, fluidbox_index = 1},
         },
     results = {
         {type = 'item', name = 'guar-mk02', amount = 1, probability = 0.005},
@@ -45,10 +45,10 @@ RECIPE {
         {type = 'item', name = 'guar', amount = 2},
         {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'guar-seeds', amount = 10},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 300},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 300, fluidbox_index = 2},
         {type = 'item', name = 'fertilizer', amount = 10},
         {type = 'item', name = 'limestone', amount = 10},
-        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'fluid', name = 'water', amount = 1000, fluidbox_index = 1},
         },
     results = {
         {type = 'item', name = 'guar-mk03', amount = 1, probability = 0.004},
@@ -75,10 +75,10 @@ RECIPE {
         {type = 'item', name = 'guar', amount = 2},
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},
         {type = 'item', name = 'guar-seeds', amount = 10},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 300},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 300, fluidbox_index = 2},
         {type = 'item', name = 'fertilizer', amount = 10},
         {type = 'item', name = 'limestone', amount = 10},
-        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'fluid', name = 'water', amount = 1000, fluidbox_index = 1},
         },
     results = {
         {type = 'item', name = 'guar-mk04', amount = 1, probability = 0.003},
