@@ -27,7 +27,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='water', amount = 500},
+                    {name='water', amount = 500, fluidbox_index = 1},
 					{name='sand', amount = 10},
                     {name='small-lamp', amount = 1},
 				},
@@ -45,7 +45,7 @@ FUN.autorecipes {
                     {name='fertilizer', amount = 5},
 					{name='ash', amount = 10},
 					{name='biomass', amount = 10},
-					{name='carbon-dioxide', amount = 150},
+					{name='carbon-dioxide', amount = 150, fluidbox_index = 2},
 				},
 			results =
 				{
@@ -60,7 +60,7 @@ FUN.autorecipes {
 				{
 					{name='pesticide-mk01', add_amount = 1},
 					{name='carbon-dioxide',remove_item = true},
-                    {name='flue-gas', amount = 100},
+                    {name='flue-gas', amount = 100, fluidbox_index = 2},
 				},
 			results =
 				{
@@ -75,7 +75,7 @@ FUN.autorecipes {
 				{
 					{name='fertilizer', add_amount = 6},
 					{name='water',remove_item = true},
-					{name = 'phosphorous-acid', amount = 50, fallback = 'nitrogen'},
+					{name = 'phosphorous-acid', amount = 50, fallback = 'nitrogen', fluidbox_index = 1},
 					{name='biomass', add_amount = 10},
 					{name='clay', add_amount = 11},
 				},

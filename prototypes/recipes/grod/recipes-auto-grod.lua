@@ -16,7 +16,7 @@ FUN.autorecipes {
 				{
                     {name='grod-seeds', amount = 5},
                     {name='urea', amount = 10, fallback = 'manure'},
-					{name='water', amount = 500},
+					{name='water', amount = 500, fluidbox_index = 1},
 					{name='limestone', amount = 5},
                     {name='soil', amount = 10},
 				},
@@ -48,7 +48,7 @@ FUN.autorecipes {
 				{
                     {name='coarse', amount =6},
 					{name='pesticide-mk01', amount = 2},
-					{name='slacked-lime', amount = 20},
+					{name='slacked-lime', amount = 20, fluidbox_index = 2},
 				},
 			results =
 				{
@@ -65,7 +65,7 @@ FUN.autorecipes {
                     {name='fertilizer', add_amount = 8},
                     {name='pesticide-mk02', amount = 2},
 					{name = 'water', remove_item = true},
-                    {name='flue-gas', amount = 40},
+                    {name='flue-gas', amount = 40, fluidbox_index = 1},
 					{name='gh', amount = 1},
 					{name='biomass', amount =10},
 					{name='slacked-lime', add_amount = 50},
