@@ -17,7 +17,7 @@ RECIPE {
         {type = 'item', name = 'dhilmos-food-01', amount = 2},
         {type = 'item', name = 'filtration-media', amount = 5},
         {type = 'item', name = "seaweed", amount = 10},
-        {type = 'fluid', name = 'phytoplankton', amount = 60},
+        {type = 'fluid', name = 'phytoplankton', amount = 60, fluidbox_index = 1},
         },
     results = {
         {type = 'item', name = 'dhilmos-mk02', amount = 1, probability = 0.005},
@@ -46,7 +46,7 @@ RECIPE {
         {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'filtration-media', amount = 5},
         {type = 'item', name = "seaweed", amount = 10},
-        {type = 'fluid', name = 'phytoplankton', amount = 60},
+        {type = 'fluid', name = 'phytoplankton', amount = 60, fluidbox_index = 1},
         },
     results = {
         {type = 'item', name = 'dhilmos-mk03', amount = 1, probability = 0.004},
@@ -75,7 +75,7 @@ RECIPE {
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},
         {type = 'item', name = 'filtration-media', amount = 5},
         {type = 'item', name = "seaweed", amount = 10},
-        {type = 'fluid', name = 'phytoplankton', amount = 60},
+        {type = 'fluid', name = 'phytoplankton', amount = 60, fluidbox_index = 1},
         },
     results = {
         {type = 'item', name = 'dhilmos-mk04', amount = 1, probability = 0.003},

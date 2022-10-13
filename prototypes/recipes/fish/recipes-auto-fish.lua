@@ -17,8 +17,8 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name = 'fish', amount = 12},
-                    {name='phytoplankton', amount =50},
-					{name='water-saline', amount=100, return_item = {name = 'waste-water'}},
+                    {name='phytoplankton', amount =50, fluidbox_index = 1},
+					{name='water-saline', amount=100, fluidbox_index = 2, return_item = {name = 'waste-water'}},
 				},
 			results =
 				{
@@ -166,10 +166,10 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name = 'fish-egg', amount = 10},
-                    {name='oxygen', amount =60},
+                    {name='oxygen', amount =60, fluidbox_index = 1},
                     {name='small-lamp', amount =3},
 					{name='biomass', amount =10},
-					{name='water-saline', amount=100,return_item={name='waste-water', amount=100}},
+					{name='water-saline', amount=100, fluidbox_index = 2,return_item={name='waste-water', amount=100}},
 				},
 			results =
 				{

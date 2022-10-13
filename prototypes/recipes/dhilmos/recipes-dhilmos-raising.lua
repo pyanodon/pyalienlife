@@ -16,8 +16,8 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name = 'dhilmos', amount = 1},
-                    {name='phytoplankton', amount =50},
-					{name='water-saline', amount=100,return_item={name='waste-water'}},
+                    {name='phytoplankton', amount =50, fluidbox_index = 1},
+					{name='water-saline', amount=100, fluidbox_index = 2, return_item={name='waste-water'}},
 					{name='filtration-media', amount = 2},
 				},
 			results =
@@ -90,8 +90,8 @@ FUN.autorecipes {
 				{
 					{name='dhilmos-egg', amount = 20},
                     {name = "ralesia-seeds", amount = 80},
-					{name='water-saline', amount=100,return_item={name='waste-water'}},
-					{name='hot-air', amount = 50},
+					{name='water-saline', amount=100, fluidbox_index = 2,return_item={name='waste-water'}},
+					{name='hot-air', amount = 50, fluidbox_index = 1},
 				},
 			results =
 				{
