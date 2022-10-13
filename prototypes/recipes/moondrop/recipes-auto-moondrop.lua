@@ -14,7 +14,7 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='moondrop-seeds', amount = 4},
-					{name='water', amount = 100},
+					{name='water', amount = 100, fluidbox_index = 1},
 				},
 			results =
 				{
@@ -29,7 +29,7 @@ FUN.autorecipes {
 			ingredients =
 				{
                     {name='moondrop-seeds', add_amount= 3},
-					{name='hydrogen', amount = 100},
+					{name='hydrogen', amount = 100, fluidbox_index = 2},
                     {name='soil', amount = 20},
 				},
 			results =
@@ -63,10 +63,10 @@ FUN.autorecipes {
 				{
                     {name='moondrop-seeds', add_amount = 6},
 					{name='water',remove_item = true},
-                    {name='syngas', amount = 60},
+                    {name='syngas', amount = 60, fluidbox_index = 1},
                     {name='pesticide-mk01', amount = 2},
 				    {name='hydrogen',remove_item = true},
-					{name='gasoline', amount = 40},
+					{name='gasoline', amount = 40, fluidbox_index = 2},
                 },
 			results =
 				{
@@ -83,7 +83,7 @@ FUN.autorecipes {
                     {name='moondrop-seeds', add_amount = 12},
                     {name='fertilizer', add_amount = 5},
                     {name='syngas',remove_item = true},
-					{name = 'refsyngas', amount = 30},
+					{name = 'refsyngas', amount = 30, fluidbox_index = 1},
 					{name='biomass', add_amount = 4},
 					{name='urea', amount = 12, fallback = 'manure'},
 				},

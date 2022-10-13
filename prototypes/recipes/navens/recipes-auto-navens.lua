@@ -15,7 +15,7 @@ FUN.autorecipes {
                 {
                     {name='navens-spore', amount =2},
                     {name='guts', amount =5},
-                    {name='water', amount = 100},
+                    {name='water', amount = 100, fluidbox_index = 2},
                     {name='fungal-substrate-02', amount =2},
                     {name='fertilizer', amount =5},
                 },
@@ -47,7 +47,7 @@ FUN.autorecipes {
             ingredients =
                 {
                     {name='water', remove_item = true},
-                    {name='nitrogen', amount = 100},
+                    {name='nitrogen', amount = 100, fluidbox_index = 1},
                     {name='urea', amount =10, fallback = 'manure'},
                 },
             results =
@@ -63,7 +63,7 @@ FUN.autorecipes {
                 {
                     {name='gh', amount =1},
                     {name='urea', add_amount =10, fallback = 'manure'},
-                    {name='bacteria-2', amount = 200,fallback = 'bacteria-1'},
+                    {name='bacteria-2', amount = 200,fallback = 'bacteria-1', fluidbox_index = 2},
                     {name='fertilizer', amount =10},
                     {name='biomass', amount =15},
                 },
