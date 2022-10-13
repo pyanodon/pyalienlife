@@ -17,7 +17,7 @@ FUN.autorecipes {
                 {name='fungal-substrate-02', amount =1},
                 {name='biomass', amount =10},
                 {name='fuelrod-mk01', amount=1},
-                {name='water', amount = 100},
+                {name='water', amount = 100, fluidbox_index = 1},
             },
         results =
             {
@@ -48,7 +48,7 @@ FUN.autorecipes {
                 {name='fungal-substrate-03', add_amount =2},
                 {name='manure', add_amount =5},
                 {name='moss', amount =10},
-                {name='ammonia', amount = 50, fallback = 'nitrogen'},
+                {name='ammonia', amount = 50, fallback = 'nitrogen', fluidbox_index = 2},
                 {name='urea', amount =10, fallback = 'manure'},
             },
         results =

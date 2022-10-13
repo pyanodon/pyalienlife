@@ -14,7 +14,7 @@ FUN.autorecipes {
             {
                 {name='yaedols-spores', amount = 2},
                 {name='wood', amount = 10},
-                {name='water', amount = 80},
+                {name='water', amount = 80, fluidbox_index = 1},
                 {name='fungal-substrate', amount =2},
                 {name='fertilizer', amount = 5},
             },
@@ -46,7 +46,7 @@ FUN.autorecipes {
             {
                 {name='yaedols-spores', add_amount = 4},
                 {name='biomass', amount =10},
-                {name='nitrogen', amount = 150},
+                {name='nitrogen', amount = 150, fluidbox_index = 2},
                 {name='urea', amount = 10, fallback = 'manure'},
             },
         results =
