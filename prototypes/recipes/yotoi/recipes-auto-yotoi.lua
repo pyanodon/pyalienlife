@@ -16,7 +16,7 @@ FUN.autorecipes {
 					{name='yotoi-seeds', amount = 1},
 					{name='sand', amount = 8},
 					{name='limestone', amount = 6},
-					{name='water', amount = 100},
+					{name='water', amount = 100, fluidbox_index = 1},
 				},
 			results =
 				{
@@ -45,7 +45,7 @@ FUN.autorecipes {
 			ingredients =
 				{
                     {name='blood-meal', amount = 5, fallback = {name = 'blood-barrel', amount = 4}},
-					{name='carbon-dioxide', amount = 100},
+					{name='carbon-dioxide', amount = 100, fluidbox_index = 2},
 					{name='pesticide-mk01', amount = 1},
 				},
 			results =

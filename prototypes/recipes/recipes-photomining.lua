@@ -354,7 +354,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200, fluidbox_index = 1},
         {type = 'item', name = 'yotoi', amount = 1},
     },
     results = {
@@ -636,9 +636,9 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200, fluidbox_index = 1},
         {type = 'item', name = 'yotoi', amount = 1},
-        {type = 'fluid', name = 'chelator', amount = 50},
+        {type = 'fluid', name = 'chelator', amount = 50, fluidbox_index = 2},
     },
     results = {
         {type = 'item', name = 'fe-biomass', amount = 30},
@@ -933,10 +933,10 @@ RECIPE {
     enabled = false,
     energy_required = 50,
     ingredients = {
-        {type = 'fluid', name = 'dirty-water-heavy', amount = 200},
+        {type = 'fluid', name = 'dirty-water-heavy', amount = 200, fluidbox_index = 1},
         {type = 'item', name = 'yotoi', amount = 1},
         {type = 'item', name = 'hmas', amount = 1},
-        {type = 'fluid', name = 'chelator', amount = 50},
+        {type = 'fluid', name = 'chelator', amount = 50, fluidbox_index = 2},
     },
     results = {
         {type = 'item', name = 'fe-biomass', amount = 90},

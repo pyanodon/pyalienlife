@@ -16,7 +16,7 @@ FUN.autorecipes {
 					{name='soil', amount = 4},
 					{name='gravel', amount = 10},
 					{name='limestone', amount = 5},
-					{name='water', amount = 100},
+					{name='water', amount = 100, fluidbox_index = 1},
 				},
 			results =
 				{
@@ -45,7 +45,7 @@ FUN.autorecipes {
 			ingredients =
 				{
                     {name='blood-meal', amount = 2, fallback = {name = 'blood-barrel', amount = 4}},
-					{name='carbon-dioxide', amount = 60},
+					{name='carbon-dioxide', amount = 60, fluidbox_index = 2},
 					{name='pesticide-mk01', add_amount = 2},
 				},
 			results =
