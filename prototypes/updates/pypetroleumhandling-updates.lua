@@ -69,6 +69,7 @@ FUN.results_replacer("crude-from-manure", "ash", "soot")
 FUN.results_replacer("guar-separation", "organics", "biomass")
 FUN.results_replacer("bitumen-comb", "tar", "bitumen")
 
+RECIPE('xyhiphoe-hydrocyclone'):remove_unlock('advanced-mining-facilities'):add_unlock("biotech-mk02")
 ----EXCLUSIVE RECIPES----
 
 RECIPE {

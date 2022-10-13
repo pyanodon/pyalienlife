@@ -50,7 +50,7 @@ ITEM('serine'):subgroup_order('py-alienlife-kmauts', 'b')
 ITEM('kmauts-ration'):subgroup_order('py-alienlife-food', 'b')
 RECIPE('nenbit-matrix'):add_ingredient({type = "item", name = "nano-cellulose", amount = 3})
 RECIPE('science-coating'):add_ingredient({type = "item", name = "chitosan", amount = 5})
-RECIPE('xyhiphoe-hydrocyclone'):remove_unlock('xyhiphoe'):add_unlock("biotech-mk02")
+
 RECIPE('steam-heating'):remove_unlock('fusion-mk01'):add_unlock('phytomining')
 RECIPE('sc-wire'):add_ingredient({type = 'item', name = 'agzn-alloy', amount = 1})
 RECIPE('bio-reactor-mk01'):remove_unlock('ethanolamine')
