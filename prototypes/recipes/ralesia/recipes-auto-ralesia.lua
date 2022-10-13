@@ -14,7 +14,7 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='ralesia-seeds', amount = 4},
-					{name='water', amount = 100},
+					{name='water', amount = 100, fluidbox_index = 1},
 				},
 			results =
 				{
@@ -28,7 +28,7 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='ralesia-seeds', add_amount = 5},
-					{name='hydrogen', amount = 100},
+					{name='hydrogen', amount = 100, fluidbox_index = 2},
 					{name='soil', amount = 15},
 				},
 			results =
@@ -61,8 +61,8 @@ FUN.autorecipes {
 					{name='ralesia-seeds', add_amount = 5},
 					{name='water',remove_item = true},
 					{name='hydrogen',remove_item = true},
-                    {name='syngas', amount = 100},
-					{name='flue-gas', amount = 50},
+                    {name='syngas', amount = 100, fluidbox_index = 1},
+					{name='flue-gas', amount = 50, fluidbox_index = 2},
 				},
 			results =
 				{

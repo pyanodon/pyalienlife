@@ -14,8 +14,8 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='rennea-seeds', amount = 4},
-					{name='water', amount = 100},
-					{name='manure-bacteria', amount = 50},
+					{name='water', amount = 100, fluidbox_index = 1},
+					{name='manure-bacteria', amount = 50, fluidbox_index = 2},
 					{name='soil', amount = 10},
                     {name='coarse', amount = 8},
                     {name='fertilizer', amount = 3},
@@ -51,7 +51,7 @@ FUN.autorecipes {
 					{name='rennea-seeds', add_amount = 4},
                     {name='fertilizer', add_amount = 3},
                     {name='blood-meal', amount = 3, fallback = {name = 'blood-barrel', amount = 2}},
-					{name='carbon-dioxide', amount = 200},
+					{name='carbon-dioxide', amount = 200, fluidbox_index = 3},
 					{name='pesticide-mk02', add_amount = 1},
 				},
 			results =

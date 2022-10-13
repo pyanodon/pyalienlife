@@ -14,11 +14,11 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'rennea', amount = 4},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 300},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 300, fluidbox_index = 3},
         {type = 'item', name = 'filtration-media', amount = 5},
         {type = 'item', name = 'manure', amount = 15},
         {type = 'item', name = 'coarse', amount = 10},
-        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'fluid', name = 'water', amount = 1000, fluidbox_index = 1},
         },
     results = {
         {type = 'item', name = 'rennea-seeds-mk02', amount_min = 1, amount_max = 20, probability = 0.005},
@@ -95,8 +95,8 @@ RECIPE {
     energy_required = 90,
     ingredients = {
         {type = 'item', name = 'abraded-rennea-seeds-mk02', amount = 6},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 300},
-        {type = 'fluid', name = 'nitrogen', amount = 100},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 300, fluidbox_index = 3},
+        {type = 'fluid', name = 'nitrogen', amount = 100, fluidbox_index = 2},
         {type = 'item', name = 'filtration-media', amount = 10},
         {type = 'item', name = 'sulfuric-acid-barrel', amount = 2},
         {type = 'item', name = 'coarse', amount = 10},
@@ -153,11 +153,11 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'rennea-mk02', amount = 4},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 300},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 300, fluidbox_index = 3},
         {type = 'item', name = 'filtration-media', amount = 5},
         {type = 'item', name = 'manure', amount = 15},
         {type = 'item', name = 'coarse', amount = 10},
-        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'fluid', name = 'water', amount = 1000, fluidbox_index = 1},
         },
     results = {
         {type = 'item', name = 'rennea-seeds-mk03', amount_min = 1, amount_max = 20, probability = 0.005},
@@ -234,8 +234,8 @@ RECIPE {
     energy_required = 90,
     ingredients = {
         {type = 'item', name = 'abraded-rennea-seeds-mk03', amount = 6},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 300},
-        {type = 'fluid', name = 'nitrogen', amount = 100},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 300, fluidbox_index = 3},
+        {type = 'fluid', name = 'nitrogen', amount = 100, fluidbox_index = 2},
         {type = 'item', name = 'filtration-media', amount = 10},
         {type = 'item', name = 'sulfuric-acid-barrel', amount = 2},
         {type = 'item', name = 'coarse', amount = 10},
@@ -292,11 +292,11 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'rennea-mk03', amount = 4},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 300},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 300, fluidbox_index = 3},
         {type = 'item', name = 'filtration-media', amount = 5},
         {type = 'item', name = 'manure', amount = 15},
         {type = 'item', name = 'coarse', amount = 10},
-        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'fluid', name = 'water', amount = 1000, fluidbox_index = 1},
         },
     results = {
         {type = 'item', name = 'rennea-seeds-mk04', amount_min = 1, amount_max = 20, probability = 0.005},
@@ -373,8 +373,8 @@ RECIPE {
     energy_required = 90,
     ingredients = {
         {type = 'item', name = 'abraded-rennea-seeds-mk04', amount = 6},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 300},
-        {type = 'fluid', name = 'nitrogen', amount = 100},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 300, fluidbox_index = 3},
+        {type = 'fluid', name = 'nitrogen', amount = 100, fluidbox_index = 2},
         {type = 'item', name = 'filtration-media', amount = 10},
         {type = 'item', name = 'sulfuric-acid-barrel', amount = 2},
         {type = 'item', name = 'coarse', amount = 10},

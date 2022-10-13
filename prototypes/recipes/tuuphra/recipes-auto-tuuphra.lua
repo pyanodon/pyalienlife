@@ -14,10 +14,10 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='tuuphra-seeds', amount = 5},
-					{name='manure-bacteria', amount = 50},
+					{name='manure-bacteria', amount = 50, fluidbox_index = 2},
 					{name='soil', amount = 20},
 					{name='coarse', amount = 10},
-					{name='water', amount =  100},
+					{name='water', amount =  100, fluidbox_index = 1},
 				},
 			results =
 				{
@@ -48,7 +48,7 @@ FUN.autorecipes {
 				{
 					{name='tuuphra-seeds', add_amount = 5},
                     {name='blood-meal', amount = 2, fallback = {name = 'blood-barrel', amount = 2}},
-					{name='nitrogen', amount = 50},
+					{name='nitrogen', amount = 50, fluidbox_index = 3},
 					{name='pesticide-mk01', amount = 2},
 				},
 			results =
