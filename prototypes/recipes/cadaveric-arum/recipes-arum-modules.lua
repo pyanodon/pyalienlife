@@ -14,10 +14,10 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'cadaveric-arum-seeds', amount = 5},
-        {type = 'fluid', name = 'refsyngas', amount = 100},
+        {type = 'fluid', name = 'refsyngas', amount = 100, fluidbox_index = 1},
         {type = 'item', name = 'fertilizer', amount = 10},
         {type = 'item', name = 'sulfur', amount = 20},
-        {type = 'fluid', name = 'acidgas', amount = 100},
+        {type = 'fluid', name = 'acidgas', amount = 100, fluidbox_index = 3},
         },
     results = {
         {type = 'item', name = 'cadaveric-arum-mk02-a', amount = 1, probability = 0.005},
@@ -42,9 +42,9 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'cadaveric-arum-mk02-a', amount = 1},
-        {type = 'fluid', name = 'coal-gas', amount = 500},
+        {type = 'fluid', name = 'coal-gas', amount = 500, fluidbox_index = 1},
         {type = 'item', name = 'sulfur', amount = 10},
-        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'fluid', name = 'water', amount = 1000, fluidbox_index = 2},
         },
     results = {
         {type = 'fluid', name = 'cadaveric-arum-mk02-seed-juice', amount = 200},
@@ -95,9 +95,9 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'cadaveric-arum-seeds-mk02', amount = 4},
-        {type = 'fluid', name = 'coalbed-gas', amount = 75},
+        {type = 'fluid', name = 'coalbed-gas', amount = 75, fluidbox_index = 1},
         {type = 'item', name = 'sulfur', amount = 10},
-        {type = 'fluid', name = 'outlet-gas-01', amount = 200},
+        {type = 'fluid', name = 'outlet-gas-01', amount = 200, fluidbox_index = 2},
         },
     results = {
         {type = 'item', name = 'cadaveric-arum-mk02-a', amount = 1},
@@ -126,10 +126,10 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'cadaveric-arum-seeds-mk02', amount = 5},
-        {type = 'fluid', name = 'coalbed-gas', amount = 500},
+        {type = 'fluid', name = 'coalbed-gas', amount = 500, fluidbox_index = 1},
         {type = 'item', name = 'fertilizer', amount = 10},
         {type = 'item', name = 'sulfur', amount = 10},
-        {type = 'fluid', name = 'natural-gas', amount = 500},
+        {type = 'fluid', name = 'natural-gas', amount = 500, fluidbox_index = 3},
         },
     results = {
         {type = 'item', name = 'cadaveric-arum-mk03-a', amount = 1, probability = 0.004},
@@ -156,9 +156,9 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'cadaveric-arum-mk03-a', amount = 1},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 500},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 500, fluidbox_index = 3},
         {type = 'item', name = 'sulfur', amount = 10},
-        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'fluid', name = 'water', amount = 1000, fluidbox_index = 2},
         },
     results = {
         {type = 'fluid', name = 'cadaveric-arum-mk03-seed-juice', amount = 225},
@@ -209,9 +209,9 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'cadaveric-arum-seeds-mk03', amount = 4},
-        {type = 'fluid', name = 'coalbed-gas', amount = 75},
+        {type = 'fluid', name = 'coalbed-gas', amount = 75, fluidbox_index = 1},
         {type = 'item', name = 'sulfur', amount = 10},
-        {type = 'fluid', name = 'outlet-gas-02', amount = 200},
+        {type = 'fluid', name = 'outlet-gas-02', amount = 200, fluidbox_index = 2},
         },
     results = {
         {type = 'item', name = 'cadaveric-arum-mk03-a', amount = 1},
@@ -242,10 +242,10 @@ RECIPE {
         {type = 'item', name = 'cadaveric-arum', amount = 2},
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},
         {type = 'item', name = 'cadaveric-arum-seeds', amount = 10},
-        {type = 'fluid', name = 'coal-gas', amount = 500},
+        {type = 'fluid', name = 'coal-gas', amount = 500, fluidbox_index = 1},
         {type = 'item', name = 'fertilizer', amount = 10},
         {type = 'item', name = 'ash', amount = 20},
-        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'fluid', name = 'water', amount = 1000, fluidbox_index = 2},
         },
     results = {
         {type = 'item', name = 'cadaveric-arum-mk04-a', amount = 1, probability = 0.003},
@@ -272,9 +272,9 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'cadaveric-arum-mk04-a', amount = 1},
-        {type = 'fluid', name = 'coal-gas', amount = 500},
+        {type = 'fluid', name = 'coal-gas', amount = 500, fluidbox_index = 1},
         {type = 'item', name = 'sulfur', amount = 10},
-        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'fluid', name = 'water', amount = 1000, fluidbox_index = 2},
         },
     results = {
         {type = 'fluid', name = 'cadaveric-arum-mk04-seed-juice', amount = 200},
@@ -325,9 +325,9 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'cadaveric-arum-seeds-mk04', amount = 4},
-        {type = 'fluid', name = 'coalbed-gas', amount = 75},
+        {type = 'fluid', name = 'coalbed-gas', amount = 75, fluidbox_index = 1},
         {type = 'item', name = 'sulfur', amount = 10},
-        {type = 'fluid', name = 'outlet-gas-03', amount = 200},
+        {type = 'fluid', name = 'outlet-gas-03', amount = 200, fluidbox_index = 2},
         },
     results = {
         {type = 'item', name = 'cadaveric-arum-mk04-a', amount = 1},

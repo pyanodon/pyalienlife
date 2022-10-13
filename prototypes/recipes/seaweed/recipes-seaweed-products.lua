@@ -7,7 +7,7 @@ RECIPE {
     enabled = false,
     energy_required = 50,
     ingredients = {
-        {type = 'fluid', name = 'water', amount = 200},
+        {type = 'fluid', name = 'water', amount = 200, fluidbox_index = 2},
     },
     results = {
         {type = 'item', name = "seaweed", amount = 10},
@@ -21,8 +21,8 @@ RECIPE {
     enabled = false,
     energy_required = 40,
     ingredients = {
-        {type = 'fluid', name = 'water-saline', amount = 100},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 100},
+        {type = 'fluid', name = 'water-saline', amount = 100, fluidbox_index = 1},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 100, fluidbox_index = 3},
         {type = 'item', name = 'limestone', amount = 2},
     },
     results = {
@@ -37,9 +37,9 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'fluid', name = 'water-saline', amount = 100},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 100},
-        {type = 'fluid', name = 'slacked-lime', amount = 50},
+        {type = 'fluid', name = 'water-saline', amount = 100, fluidbox_index = 1},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 100, fluidbox_index = 3},
+        {type = 'fluid', name = 'slacked-lime', amount = 50, fluidbox_index = 4},
         {type = 'item', name = 'fertilizer', amount = 1},
     },
     results = {
@@ -54,9 +54,9 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = 'fluid', name = 'water-saline', amount = 100},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 100},
-        {type = 'fluid', name = 'slacked-lime', amount = 100},
+        {type = 'fluid', name = 'water-saline', amount = 100, fluidbox_index = 1},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 100, fluidbox_index = 3},
+        {type = 'fluid', name = 'slacked-lime', amount = 100, fluidbox_index = 4},
         {type = 'item', name = 'fertilizer', amount = 1},
         {type = 'item', name = 'iron-ore-dust', amount = 3},
     },
@@ -72,9 +72,9 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'fluid', name = 'water-saline', amount = 200},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 200},
-        {type = 'fluid', name = 'slacked-lime', amount = 100},
+        {type = 'fluid', name = 'water-saline', amount = 200, fluidbox_index = 1},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 200, fluidbox_index = 3},
+        {type = 'fluid', name = 'slacked-lime', amount = 100, fluidbox_index = 4},
         {type = 'item', name = 'fertilizer', amount = 3},
         {type = 'item', name = 'iron-ore-dust', amount = 5},
     },

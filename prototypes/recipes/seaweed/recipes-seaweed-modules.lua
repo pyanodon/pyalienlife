@@ -13,7 +13,7 @@ RECIPE{
     enabled = true,
     energy_required = 25,
     ingredients = {
-        {type = 'fluid', name = 'water', amount = 200},
+        {type = 'fluid', name = 'water', amount = 200, fluidbox_index = 2},
         {type = 'item', name = 'molybdenum-oxide', amount = 5},
         {type = 'item', name = 'fertilizer', amount = 1},
         {type = 'item', name = 'seaweed', amount = 5}
