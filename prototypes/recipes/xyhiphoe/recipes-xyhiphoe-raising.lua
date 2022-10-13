@@ -15,8 +15,8 @@ FUN.autorecipes {
 			ingredients =
 				{
                     {name='fish-food-01', amount =2},
-                    {name='phytoplankton', amount =150},
-					{name='pressured-water', amount = 1000,return_item={name='waste-water', amount= 650}},
+                    {name='phytoplankton', amount =150, fluidbox_index = 1},
+					{name='pressured-water', amount = 1000, fluidbox_index = 2,return_item={name='waste-water', amount= 650}},
 					{name='saps', amount = 6},
 					{name='filtration-media', amount =2}
 				},
@@ -203,8 +203,8 @@ FUN.autorecipes {
 			ingredients =
 				{
                     {name='fish-food-01', amount =1},
-                    {name='phytoplankton', amount =50},
-					{name='pressured-water', amount = 3000,return_item={name='waste-water', amount= 200}},
+                    {name='phytoplankton', amount =50, fluidbox_index = 1},
+					{name='pressured-water', amount = 3000, fluidbox_index = 2,return_item={name='waste-water', amount= 200}},
 					{name='filtration-media', amount =1},
 				},
 			results =
