@@ -4,12 +4,11 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'dhilmos-egg',
-	category = 'rc',
-	--module_limitations = 'dhilmos',
+	category = 'dhilmos',
+	module_limitations = 'dhilmos',
 	subgroup = 'py-alienlife-dhilmos',
 	order = 'c',
 	main_product = "dhilmos-egg",
-	crafting_speed = 50,
     mats =
 	{
 		--chem
@@ -25,6 +24,7 @@ FUN.autorecipes {
 				{
 					{name='dhilmos-egg', amount = 2},
 				},
+			crafting_speed = 80,
 			tech = 'dhilmos'
 		},
 		--py
@@ -38,6 +38,7 @@ FUN.autorecipes {
 				{
                     {name='dhilmos-egg', add_amount = "1"},
 				},
+			crafting_speed = 70,
 			tech = 'dhilmos-mk02'
 		},
 		--prod
@@ -53,6 +54,7 @@ FUN.autorecipes {
 				{
                     {name='dhilmos-egg', add_amount = "1"},
 				},
+			crafting_speed = 55,
 			tech = 'dhilmos-mk03'
 		},
 		--utility
@@ -65,6 +67,7 @@ FUN.autorecipes {
 				{
                     {name='dhilmos-egg', add_amount = "1"},
 				},
+			crafting_speed = 50,
 			tech = 'dhilmos-mk04'
 		},
 	}
