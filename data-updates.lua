@@ -251,8 +251,8 @@ for _,recipe in pairs(data.raw.recipe) do
 end
 
 --Tech upgrade stuff--
-require('prototypes/upgrades/hidden-beacon')
-require('prototypes/upgrades/tech-upgrades')
+--require('prototypes/upgrades/hidden-beacon')
+--require('prototypes/upgrades/tech-upgrades')
 
 if data.data_crawler then
 	  data.script_enabled = {

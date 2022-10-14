@@ -11,7 +11,7 @@ RECIPE {
         {type = 'item', name = 'stone', amount = 100},
     },
     results = {
-        {type = 'item', name = 'ralesias', amount = 1},
+        {type = 'item', name = 'ralesias', amount = 576},
     },
 }:add_unlock("mega-farm-ralesia")
 
@@ -28,7 +28,7 @@ RECIPE {
         {type = 'fluid', name = 'hydrogen', amount = 2000},
     },
     results = {
-        {type = 'item', name = 'ralesias', amount = 1},
+        {type = 'item', name = 'ralesias', amount = 576*2},
     },
 }:add_unlock("mega-farm-ralesia")
 
@@ -45,7 +45,7 @@ RECIPE {
         {type = 'fluid', name = 'hydrogen', amount = 2000},
     },
     results = {
-        {type = 'item', name = 'ralesias', amount = 1},
+        {type = 'item', name = 'ralesias', amount = 576*3},
     },
 }:add_unlock("mega-farm-ralesia")
 
@@ -63,7 +63,7 @@ RECIPE {
         {type = 'fluid', name = 'hydrogen', amount = 2000},
     },
     results = {
-        {type = 'item', name = 'ralesias', amount = 1},
+        {type = 'item', name = 'ralesias', amount = 576*4},
     },
 }:add_unlock("mega-farm-ralesia")
 
@@ -81,7 +81,7 @@ RECIPE {
         {type = 'fluid', name = 'syngas', amount = 1500},
     },
     results = {
-        {type = 'item', name = 'ralesias', amount = 1},
+        {type = 'item', name = 'ralesias', amount = 576*5},
     },
 }:add_unlock("mega-farm-ralesia")
 
@@ -100,7 +100,7 @@ RECIPE {
         {type = 'item', name = 'lignin', amount = 300},
     },
     results = {
-        {type = 'item', name = 'ralesias', amount = 1},
+        {type = 'item', name = 'ralesias', amount = 576*6},
     },
 }:add_unlock("mega-farm-ralesia")
 
@@ -117,7 +117,7 @@ RECIPE {
         {type = 'fluid', name = 'syngas', amount = 1500},
     },
     results = {
-        {type = 'item', name = 'ralesias', amount = 1},
+        {type = 'item', name = 'ralesias', amount = 576*7},
     },
 }:add_unlock("mega-farm-ralesia")
 
@@ -137,6 +137,6 @@ RECIPE {
         {type = 'item', name = 'gh', amount = 3},
     },
     results = {
-        {type = 'item', name = 'ralesias', amount = 1},
+        {type = 'item', name = 'ralesias', amount = 576*10},
     },
 }:add_unlock("mega-farm-ralesia")
