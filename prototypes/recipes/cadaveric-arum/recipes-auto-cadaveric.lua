@@ -14,8 +14,8 @@ FUN.autorecipes {
 			ingredients =
 				{
                     {name='cadaveric-arum-seeds', amount = 5},
-                    {name='coal-gas', amount = 100, type = "fluid", fluidbox_index = 1},
-					{name='water', amount = 500, type = "fluid", fluidbox_index = 2},
+                    {name='coal-gas', amount = 100, fluidbox_index = 1},
+					{name='water', amount = 500, fluidbox_index = 2},
 					{name='sand', amount = 5},
                     {name='stone-wool', amount = 1},
 				},
@@ -48,7 +48,7 @@ FUN.autorecipes {
 				{
                     {name='cadaveric-arum-seeds', add_amount = 10},
                     {name='pesticide-mk01', amount = 2},
-					{name='acidgas', amount = 50, type = "fluid", fluidbox_index = 3},
+					{name='acidgas', amount = 50, fluidbox_index = 3},
 				},
 			results =
 				{
