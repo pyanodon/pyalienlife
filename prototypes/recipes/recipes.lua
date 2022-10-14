@@ -1408,7 +1408,6 @@ RECIPE {
     --main_product = "adrenal-cortex",
 }:add_unlock("navens")
 
---[[
 --oleochemicals to CM1
 RECIPE {
     type = "recipe",
@@ -1524,7 +1523,6 @@ RECIPE {
     subgroup = "py-combustion",
     order = "a"
 }:add_unlock("energy-2")
-]]--
 
 ----energy drink----
 
