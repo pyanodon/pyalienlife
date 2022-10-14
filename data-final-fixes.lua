@@ -317,6 +317,8 @@ local recipes_list =
   "concrete-02",
   "planter-box",
   "empty-planter-box",
+  "biobattery",
+  "cooling-system",
 	}
 
 --adding to module limitation list
