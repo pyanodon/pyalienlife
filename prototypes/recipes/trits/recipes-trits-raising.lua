@@ -4,11 +4,12 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'trits-cub',
-	category = 'trits',
-	module_limitations = 'trits',
+	category = 'rc',
+	--module_limitations = 'trits',
 	subgroup = 'py-alienlife-trits',
 	order = 'c',
 	main_product = 'trits-pup',
+	crafting_speed = 90,
     mats =
 	{
 		--py
@@ -27,7 +28,6 @@ FUN.autorecipes {
 				{
 					{name = 'trits-pup', amount =2},
 				},
-			crafting_speed = 120,
 			tech = 'trits'
 		},
 		--py/chem
@@ -42,7 +42,6 @@ FUN.autorecipes {
 				{
 					{name = 'trits-pup', add_amount =2},
 				},
-			crafting_speed = 110,
 			tech = 'trits-mk02'
 		},
 		--prod
@@ -56,7 +55,6 @@ FUN.autorecipes {
 				{
 					{name = 'trits-pup', add_amount =2},
 				},
-			crafting_speed = 100,
 			tech = 'trits-mk03'
 		},
 		--utility
@@ -71,7 +69,6 @@ FUN.autorecipes {
 				{
 					{name = 'trits-pup', add_amount =2},
 				},
-			crafting_speed = 90,
 			tech = 'trits-mk04'
 		},
 	}

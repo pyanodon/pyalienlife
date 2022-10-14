@@ -4,11 +4,12 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'korlex-pup',
-	category = 'korlex',
-	module_limitations = 'korlex',
+	category = 'rc',
+	--module_limitations = 'korlex',
 	subgroup = 'py-alienlife-korlex',
 	order = 'c',
 	main_product = "korlex-pup",
+	crafting_speed = 70,
     mats =
 	{
 		--logistic
@@ -25,7 +26,6 @@ FUN.autorecipes {
 				{
 					{name='korlex-pup', amount =3},
 				},
-			crafting_speed = 160,
 			tech = 'korlex'
 		},
 		--py
@@ -41,7 +41,6 @@ FUN.autorecipes {
 				{
 					{name='korlex-pup', add_amount = 3},
 				},
-			crafting_speed = 130,
 			tech = 'korlex-mk02'
 		},
 		--chem
@@ -55,7 +54,6 @@ FUN.autorecipes {
 				{
 					{name='korlex-pup', add_amount =3},
 				},
-			crafting_speed = 100,
 			tech = 'korlex-mk03'
 		},
 		--prod
@@ -68,7 +66,6 @@ FUN.autorecipes {
 				{
 					{name='korlex-pup', add_amount = 3},
 				},
-			crafting_speed = 70,
 			tech = 'korlex-mk04'
 		},
 	}

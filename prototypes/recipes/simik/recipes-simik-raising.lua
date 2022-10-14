@@ -4,11 +4,12 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'simik-cub',
-	category = 'simik',
-	module_limitations = 'simik',
+	category = 'rc',
+	--module_limitations = 'simik',
 	subgroup = 'py-alienlife-simik',
 	order = 'c',
 	main_product = "simik-pup",
+	crafting_speed = 80,
     mats =
 	{
 		--logistic
@@ -27,7 +28,6 @@ FUN.autorecipes {
 					{name = 'simik', amount_min = 1, amount_max = 4},
 					{name='simik-pup', amount = 2},
 				},
-			crafting_speed = 140,
 			tech = 'simik-mk01'
 		},
 		--py
@@ -43,7 +43,6 @@ FUN.autorecipes {
 				{
 					{name='simik-pup', add_amount = 2},
 				},
-			crafting_speed = 120,
 			tech = 'simik-mk02'
 		},
 		--prod
@@ -58,7 +57,6 @@ FUN.autorecipes {
 				{
 					{name='simik-pup', add_amount = 4},
 				},
-			crafting_speed = 100,
 			tech = 'simik-mk03'
 		},
 		--utility
@@ -73,7 +71,6 @@ FUN.autorecipes {
 				{
 					{name='simik-pup', add_amount = 8},
 				},
-			crafting_speed = 80,
 			tech = 'simik-mk04'
 		},
 	}

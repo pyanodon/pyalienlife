@@ -4,11 +4,12 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'mukmoux-calf',
-	category = 'mukmoux',
-	module_limitations = 'mukmoux',
+	category = 'rc',
+	--module_limitations = 'mukmoux',
 	main_product = 'mukmoux-calf',
 	subgroup = 'py-alienlife-mukmoux',
 	order = 'c',
+	crafting_speed = 30,
     mats =
 	{
 		--logistic
@@ -27,7 +28,6 @@ FUN.autorecipes {
 					{name='mukmoux-calf', amount =3},
 					{name = 'manure', amount = 5},
 				},
-			crafting_speed = 75,
 			tech = 'mukmoux'
 		},
 		--py
@@ -43,7 +43,6 @@ FUN.autorecipes {
 					{name='mukmoux-calf', add_amount =3},
 					{name = 'manure', add_amount = 5},
 				},
-			crafting_speed = 60,
 			tech = 'mukmoux-mk02'
 		},
 		--chem
@@ -59,7 +58,6 @@ FUN.autorecipes {
 					{name='mukmoux-calf', add_amount =3},
 					{name = 'manure', add_amount = 5},
 				},
-			crafting_speed = 45,
 			tech = 'mukmoux-mk03'
 		},
 		--prod
@@ -74,7 +72,6 @@ FUN.autorecipes {
 					{name='mukmoux-calf', add_amount =3},
 					{name = 'manure', add_amount = 5},
 				},
-			crafting_speed = 30,
 			tech = 'mukmoux-mk04'
 		},
 	}

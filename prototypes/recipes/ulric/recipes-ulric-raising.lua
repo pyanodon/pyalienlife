@@ -4,11 +4,12 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'ulric-cub',
-	category = 'ulric',
-	module_limitations = 'ulric',
+	category = 'rc',
+	--module_limitations = 'ulric',
 	subgroup = 'py-alienlife-ulric',
 	order = 'c',
 	main_product = 'ulric-cub',
+	crafting_speed = 90,
     mats =
 	{
 		--logistic
@@ -25,7 +26,6 @@ FUN.autorecipes {
 					{name='ulric-cub', amount = 3},
 					{name = 'manure', amount = 1}
 				},
-			crafting_speed = 140,
 			tech = 'ulric'
 		},
 		--py
@@ -42,7 +42,6 @@ FUN.autorecipes {
 					{name='ulric-cub', add_amount = 3},
 					{name = 'manure', add_amount = 1}
 				},
-			crafting_speed = 110,
 			tech = 'ulric-mk02'
 		},
 		--chem
@@ -58,7 +57,6 @@ FUN.autorecipes {
 					{name='ulric-cub', add_amount = 3},
 					{name = 'manure', add_amount = 1}
 				},
-			crafting_speed = 100,
 			tech = 'ulric-mk03'
 		},
 		--prod
@@ -73,7 +71,6 @@ FUN.autorecipes {
 					{name='ulric-cub', add_amount = 3},
 					{name = 'manure', add_amount = 1}
 				},
-			crafting_speed = 90,
 			tech = 'ulric-mk04'
 		},
 	}

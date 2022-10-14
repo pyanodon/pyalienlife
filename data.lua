@@ -898,7 +898,7 @@ for i, item in pairs(bio_list) do
         --log(serpent.block(data.raw.recipe['biomass-' .. i]))
     end
 end
-
+--[[
 --(( Shortcut keys ))--
 local recipeselect=
 	{
@@ -909,3 +909,4 @@ local recipeselect=
 	}
 
 data:extend{recipeselect}
+]]--

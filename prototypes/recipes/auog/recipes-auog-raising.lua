@@ -3,10 +3,11 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 --Aoug breeding
 FUN.autorecipes {
     name = 'auog-pup-breeding',
-	category = 'auog',
-	module_limitations = 'auog',
+	category = 'rc',
+	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-auog',
 	order = 'b',
+	crafting_speed = 40,
     mats =
 	{
 		--base
@@ -24,7 +25,6 @@ FUN.autorecipes {
 					{name= 'auog-pup', amount_min = 3, amount_max = 6},
 					{name = 'manure', amount_min = 3, amount_max = 8}
 				},
-			crafting_speed = 160,
 			tech = 'auog',
 			main_product = 'auog-pup'
 		},
@@ -41,7 +41,6 @@ FUN.autorecipes {
 					{name = 'manure', remove_item = true},
 					{name = 'manure', amount_min = 5, amount_max = 12}
 				},
-			crafting_speed = 130,
 			tech = 'auog',
 			main_product = 'auog-pup'
 		},
@@ -64,7 +63,6 @@ FUN.autorecipes {
 					{name = 'manure', remove_item = true},
 					{name = 'manure', amount_min = 7, amount_max = 14}
 				},
-			crafting_speed = 100,
 			tech = 'auog-mk02',
 			main_product = 'auog-pup'
 		},
@@ -90,7 +88,6 @@ FUN.autorecipes {
 					{name = 'manure', remove_item = true},
 					{name = 'manure', amount_min = 10, amount_max = 20}
 				},
-			crafting_speed = 70,
 			tech = 'auog-mk03',
 			main_product = 'auog-pup'
 		},
@@ -112,7 +109,6 @@ FUN.autorecipes {
 					{name = 'manure', remove_item = true},
 					{name = 'manure', amount_min = 20, amount_max = 30}
 				},
-			crafting_speed = 40,
 			tech = 'auog-mk04',
 			main_product = 'auog-pup'
 		},

@@ -9,6 +9,7 @@ FUN.autorecipes {
 	subgroup = 'py-alienlife-xyhiphoe',
 	order = 'c',
 	main_product = "xyhiphoe-cub",
+	crafting_speed = 120,
     mats =
 	{
 		{
@@ -24,7 +25,6 @@ FUN.autorecipes {
 				{
 					{name='xyhiphoe-cub', amount = 3},
 				},
-			crafting_speed = 160,
 			tech = 'water-invertebrates-mk01'
 		},
 		--blood-meal
@@ -38,7 +38,6 @@ FUN.autorecipes {
 				{
 					{name='xyhiphoe-cub', add_amount = 3},
 				},
-			crafting_speed = 130,
 			tech = 'water-invertebrates-mk02'
 		},
 		--food 2
@@ -51,7 +50,6 @@ FUN.autorecipes {
 				{
 					{name='xyhiphoe-cub', add_amount = 3},
 				},
-			crafting_speed = 130,
 			tech = 'water-invertebrates-mk03'
 		},
 		--food 2 blood-meal
@@ -66,7 +64,6 @@ FUN.autorecipes {
 				{
 					{name='xyhiphoe-cub', add_amount = 3},
 				},
-			crafting_speed = 120,
 			tech = 'water-invertebrates-mk04'
 		},
 	}

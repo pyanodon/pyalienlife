@@ -4,11 +4,12 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'kmauts-cub',
-	category = 'kmauts',
-	module_limitations = 'kmauts',
+	category = 'rc',
+	--module_limitations = 'kmauts',
 	subgroup = 'py-alienlife-kmauts',
 	order = 'c',
 	main_product = "kmauts-cub",
+	crafting_speed = 50,
     mats =
 	{
 		{
@@ -26,7 +27,6 @@ FUN.autorecipes {
 					{name='kmauts-cub', amount =2},
 					{name = 'cage', amount = 1},
 				},
-			crafting_speed = 80,
 			tech = 'kmauts'
 		},
 		--food 1
@@ -39,7 +39,6 @@ FUN.autorecipes {
 				{
 					{name='kmauts-cub', add_amount = 3},
 				},
-			crafting_speed = 70,
 			tech = 'kmauts-mk02'
 		},
 		--rennea
@@ -52,7 +51,6 @@ FUN.autorecipes {
 				{
 					{name='kmauts-cub', add_amount = 4},
 				},
-			crafting_speed = 60,
 			tech = 'kmauts-mk03'
 		},
 		--tuuphra
@@ -65,7 +63,6 @@ FUN.autorecipes {
 				{
 					{name='kmauts-cub', add_amount = 5},
 				},
-			crafting_speed = 50,
 			tech = 'kmauts-mk04'
 		},
 	}

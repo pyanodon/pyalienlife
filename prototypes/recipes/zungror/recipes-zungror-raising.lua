@@ -4,11 +4,12 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'zungror-cocoon',
-	category = 'zungror',
-	module_limitations = 'zungror',
+	category = 'rc',
+	--module_limitations = 'zungror',
 	subgroup = 'py-alienlife-zungror',
 	order = 'c',
 	main_product = "zungror-cocoon",
+	crafting_speed = 80,
     mats =
 	{
 		--py
@@ -25,7 +26,6 @@ FUN.autorecipes {
 					{name = 'zungror-cocoon', amount = 4},
 					{name='empty-barrel-milk', amount = 2},
 				},
-			crafting_speed = 150,
 			tech = 'zungror'
 		},
 		--prod
@@ -40,7 +40,6 @@ FUN.autorecipes {
 				{
 					{name = 'zungror-cocoon', add_amount = 6},
 				},
-			crafting_speed = 120,
 			tech = 'zungror-mk02'
 		},
 		--utility
@@ -55,7 +54,6 @@ FUN.autorecipes {
 				{
 					{name = 'zungror-cocoon', add_amount = 9},
 				},
-			crafting_speed = 80,
 			tech = 'zungror-mk03'
 		},
 	}

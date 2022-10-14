@@ -4,11 +4,12 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'cottongut-cub',
-	category = 'cottongut',
-	module_limitations = 'cottongut',
+	category = 'rc',
+	--module_limitations = 'cottongut',
 	subgroup = 'py-alienlife-cottongut',
 	order = 'c',
 	main_product = "cottongut-pup",
+	crafting_speed = 90,
     mats =
 	{
 		--red
@@ -24,7 +25,6 @@ FUN.autorecipes {
 				{
 					{name='cottongut-pup', amount = 10},
 				},
-			crafting_speed = 70,
 			tech = 'cottongut-mk01'
 		},
 		--green
@@ -43,7 +43,6 @@ FUN.autorecipes {
 					{name = 'empty-barrel-milk', amount = 2},
 					{name='cottongut-pup', add_amount = 6},
 				},
-			crafting_speed = 60,
 			tech = 'cottongut-mk02'
 		},
 		--py
@@ -59,7 +58,6 @@ FUN.autorecipes {
 				{
 					{name='cottongut-pup', add_amount = 12},
 				},
-			crafting_speed = 110,
 			tech = 'cottongut-mk03'
 		},
 		--prod
@@ -72,7 +70,6 @@ FUN.autorecipes {
 				{
 					{name='cottongut-pup', add_amount = 18},
 				},
-			crafting_speed = 90,
 			tech = 'cottongut-mk04'
 		},
 	}

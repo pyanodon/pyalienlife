@@ -4,11 +4,12 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'phagnot-cub',
-	category = 'phagnot',
-	module_limitations = 'phagnot',
+	category = 'rc',
+	--module_limitations = 'phagnot',
 	main_product = "phagnot-cub",
 	subgroup = 'py-alienlife-phagnot',
 	order = 'c',
+	crafting_speed = 20,
     mats =
 	{
 		--logistic
@@ -27,7 +28,6 @@ FUN.autorecipes {
 					{name='phagnot-cub', amount = 6},
 					{name = 'manure', amount = 2},
 				},
-			crafting_speed = 140,
 			tech = 'phagnot'
 		},
 		--py
@@ -42,7 +42,6 @@ FUN.autorecipes {
 					{name='phagnot-cub', add_amount = 2},
 					{name = 'manure', add_amount = 2},
 				},
-			crafting_speed = 100,
 			tech = 'phagnot-mk02'
 		},
 		--chem
@@ -58,7 +57,6 @@ FUN.autorecipes {
 					{name='phagnot-cub', add_amount = 2},
 					{name = 'manure', add_amount = 2},
 				},
-			crafting_speed = 60,
 			tech = 'phagnot-mk03'
 		},
 		--prod
@@ -72,7 +70,6 @@ FUN.autorecipes {
 					{name='phagnot-cub', add_amount = 2},
 					{name = 'manure', add_amount = 2},
 				},
-			crafting_speed = 20,
 			tech = 'phagnot-mk04'
 		},
 	}
