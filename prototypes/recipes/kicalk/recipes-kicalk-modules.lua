@@ -15,10 +15,10 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'kicalk', amount = 2},
         {type = 'item', name = 'kicalk-seeds', amount = 10},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 300},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 300, fluidbox_index = 2},
         {type = 'item', name = 'clay', amount = 10},
         {type = 'item', name = 'small-lamp', amount = 5},
-        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'fluid', name = 'water', amount = 1000, fluidbox_index = 1},
         },
     results = {
         {type = 'item', name = 'kicalk-mk02', amount = 1, probability = 0.005},
@@ -40,10 +40,10 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'kicalk-seeds-mk02', amount = 5},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 400},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 400, fluidbox_index = 2},
         {type = 'item', name = 'rich-clay', amount = 10},
         {type = 'item', name = 'small-lamp', amount = 5},
-        {type = 'fluid', name = 'flutec-pp6', amount = 50},
+        {type = 'fluid', name = 'flutec-pp6', amount = 50, fluidbox_index = 1},
         },
     results = {
         {type = 'item', name = 'kicalk-mk02', amount = 4},
@@ -89,10 +89,10 @@ RECIPE {
         {type = 'item', name = 'kicalk-mk02', amount = 2},
         {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'kicalk-seeds-mk02', amount = 10},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 300},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 300, fluidbox_index = 2},
         {type = 'item', name = 'clay', amount = 10},
         {type = 'item', name = 'small-lamp', amount = 5},
-        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'fluid', name = 'water', amount = 1000, fluidbox_index = 1},
         },
     results = {
         {type = 'item', name = 'kicalk-mk03', amount = 1, probability = 0.004},
@@ -116,10 +116,10 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'kicalk-seeds-mk03', amount = 5},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 300},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 300, fluidbox_index = 2},
         {type = 'item', name = 'retrovirus', amount = 5},
         {type = 'item', name = 'microcin-j25', amount = 1},
-        {type = 'fluid', name = 'mutant-enzymes', amount = 100},
+        {type = 'fluid', name = 'mutant-enzymes', amount = 100, fluidbox_index = 1},
         },
     results = {
         {type = 'item', name = 'kicalk-mk03', amount = 5},
@@ -167,10 +167,10 @@ RECIPE {
         {type = 'item', name = 'kicalk-mk03', amount = 2},
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},
         {type = 'item', name = 'kicalk-seeds-mk03', amount = 10},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 300},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 300, fluidbox_index = 2},
         {type = 'item', name = 'clay', amount = 10},
         {type = 'item', name = 'small-lamp', amount = 5},
-        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'fluid', name = 'water', amount = 1000, fluidbox_index = 1},
         },
     results = {
         {type = 'item', name = 'kicalk-mk04', amount = 1, probability = 0.003},
@@ -194,12 +194,12 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},
         {type = 'item', name = 'kicalk-seeds-mk04', amount = 6},
-        {type = 'fluid', name = 'carbon-dioxide', amount = 300},
+        {type = 'fluid', name = 'carbon-dioxide', amount = 300, fluidbox_index = 2},
         {type = 'item', name = 'laser-module', amount = 2},
         {type = 'item', name = 'retrovirus', amount = 2},
         {type = 'item', name = 'adam42-gen', amount = 4},
         {type = 'item', name = 'microcin-j25', amount = 1},
-        {type = 'fluid', name = 'mutant-enzymes', amount = 100},
+        {type = 'fluid', name = 'mutant-enzymes', amount = 100, fluidbox_index = 1},
         },
     results = {
         {type = 'item', name = 'kicalk-mk04', amount = 5},

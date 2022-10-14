@@ -17,7 +17,7 @@ RECIPE {
         {type = 'item', name = 'fish-food-02', amount = 2},
         {type = 'item', name = 'filtration-media', amount = 5},
         {type = 'item', name = 'saps', amount = 6},
-        {type = 'fluid', name = 'pressured-water', amount = 3000},
+        {type = 'fluid', name = 'pressured-water', amount = 3000, fluidbox_index = 2},
         },
     results = {
         {type = 'item', name = 'xyhiphoe-mk02', amount = 1, probability = 0.005},
@@ -46,7 +46,7 @@ RECIPE {
         {type = 'item', name = 'fish-food-02', amount = 2},
         {type = 'item', name = 'filtration-media', amount = 5},
         {type = 'item', name = 'saps', amount = 6},
-        {type = 'fluid', name = 'pressured-water', amount = 3000},
+        {type = 'fluid', name = 'pressured-water', amount = 3000, fluidbox_index = 2},
         },
     results = {
         {type = 'item', name = 'xyhiphoe-mk03', amount = 1, probability = 0.004},
@@ -75,7 +75,7 @@ RECIPE {
         {type = 'item', name = 'fish-food-02', amount = 2},
         {type = 'item', name = 'filtration-media', amount = 5},
         {type = 'item', name = 'saps', amount = 6},
-        {type = 'fluid', name = 'pressured-water', amount = 3000},
+        {type = 'fluid', name = 'pressured-water', amount = 3000, fluidbox_index = 2},
         },
     results = {
         {type = 'item', name = 'xyhiphoe-mk04', amount = 1, probability = 0.003},

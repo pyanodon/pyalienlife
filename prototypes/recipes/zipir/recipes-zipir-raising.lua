@@ -14,10 +14,10 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='pressured-water', amount = 60,return_item={name='waste-water', amount=200}},
+                    {name='pressured-water', amount = 60, fluidbox_index = 2,return_item={name='waste-water', amount=200}},
 					{name='stone-wool', amount =2, fallback = "raw-fiber"},
 					{name='fish', amount =5},
-                    {name='phytoplankton', amount = 100},
+                    {name='phytoplankton', amount = 100, fluidbox_index = 1},
 				},
 			results =
 				{
@@ -46,7 +46,7 @@ FUN.autorecipes {
 			ingredients =
 				{
                     {name='pressured-water',remove_item = true},
-					{name='water-saline', amount =  200},
+					{name='water-saline', amount =  200, fluidbox_index = 2},
 				},
 			results =
 				{
@@ -188,11 +188,11 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='pressured-water', amount = 300},
+                    {name='pressured-water', amount = 300, fluidbox_index = 2},
 					{name='zipir-eggs', amount =1},
 					{name='fish', amount =3},
 					{name='stone-wool', amount =3, fallback = "raw-fiber"},
-                    {name='water', amount = 200,return_item={name='waste-water', amount=100}},
+                    {name='water', amount = 200, fluidbox_index = 1,return_item={name='waste-water', amount=100}},
 				},
 			results =
 				{
@@ -220,7 +220,7 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='pressured-water',remove_item = true},
-					{name='water-saline', amount =  100},
+					{name='water-saline', amount =  100, fluidbox_index = 2},
 				},
 			results =
 				{
@@ -248,7 +248,7 @@ FUN.autorecipes {
 			ingredients =
 				{
                     {name='water',remove_item = true},
-					{name='phytoplankton', amount =50},
+					{name='phytoplankton', amount =50, fluidbox_index = 1},
 
 				},
 			results =
