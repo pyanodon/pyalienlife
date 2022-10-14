@@ -948,9 +948,9 @@ script.on_event(defines.events.on_research_finished, function(event)
 
 end)
 
-script.on_event("tech-upgrades", function(event)
+--script.on_event("tech-upgrades", function(event)
 
-end)
+--end)
 
 script.on_event(defines.events.on_cutscene_cancelled, function(event)
 
