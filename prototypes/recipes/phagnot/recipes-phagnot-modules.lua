@@ -9,7 +9,7 @@
 RECIPE {
     type = 'recipe',
     name = 'phagnot-mk02',
-    category = 'phagnot',
+    category = 'rc',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -25,7 +25,11 @@ RECIPE {
         {type = 'item', name = 'phagnot', amount = 1, probability = 0.5},
     },
     --main_product = "phagnot-mk02",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
+    icons =
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk02.png", icon_size = 64},
+        {icon = '__pyalienlifegraphics__/graphics/icons/phagnot.png', icon_size = 64, scale = 0.35},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-phagnot',
     order = 'za'
@@ -85,7 +89,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'phagnot-mk03',
-    category = 'phagnot',
+    category = 'rc',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -102,7 +106,11 @@ RECIPE {
         {type = 'item', name = 'phagnot', amount = 1, probability = 0.6},
     },
     --main_product = "phagnot-mk03",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png',
+    icons =
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk03.png", icon_size = 64},
+        {icon = '__pyalienlifegraphics__/graphics/icons/phagnot.png', icon_size = 64, scale = 0.35},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-phagnot',
     order = 'zb'
@@ -163,7 +171,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'phagnot-mk04',
-    category = 'phagnot',
+    category = 'rc',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -180,7 +188,11 @@ RECIPE {
         {type = 'item', name = 'phagnot', amount = 1, probability = 0.7},
     },
     --main_product = "phagnot-mk04",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
+    icons =
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk04.png", icon_size = 64},
+        {icon = '__pyalienlifegraphics__/graphics/icons/phagnot.png', icon_size = 64, scale = 0.35},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-phagnot',
     order = 'zc'

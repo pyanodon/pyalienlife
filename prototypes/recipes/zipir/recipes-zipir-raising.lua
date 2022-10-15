@@ -4,7 +4,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'zipir-eggs',
-	category = 'zipir',
+	category = 'rc',
 	module_limitations = 'zipir',
 	subgroup = 'py-alienlife-zipir',
 	order = 'c',

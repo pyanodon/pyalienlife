@@ -9,7 +9,7 @@
 RECIPE {
     type = 'recipe',
     name = 'auog-mk02',
-    category = 'auog',
+    category = 'rc',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -26,10 +26,10 @@ RECIPE {
     },
     --main_product = "auog-mk02",
     icons =
-        {
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png'},
-            {icon = "__pyalienlifegraphics__/graphics/icons/auog.png", scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk02.png", icon_size = 64},
+        {icon = '__pyalienlifegraphics__/graphics/icons/auog.png', icon_size = 64, scale = 0.35},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
     order = 'za'
@@ -129,7 +129,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'auog-mk03',
-    category = 'auog',
+    category = 'rc',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -146,10 +146,10 @@ RECIPE {
     },
     --main_product = "auog-mk02",
     icons =
-        {
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png'},
-            {icon = "__pyalienlifegraphics__/graphics/icons/auog.png", scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk03.png", icon_size = 64},
+        {icon = '__pyalienlifegraphics__/graphics/icons/auog.png', icon_size = 64, scale = 0.35},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
     order = 'za'
@@ -221,7 +221,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'auog-mk04',
-    category = 'auog',
+    category = 'rc',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -238,10 +238,10 @@ RECIPE {
     },
     --main_product = "auog-mk02",
     icons =
-        {
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png'},
-            {icon = "__pyalienlifegraphics__/graphics/icons/auog.png", scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk04.png", icon_size = 64},
+        {icon = '__pyalienlifegraphics__/graphics/icons/auog.png', icon_size = 64, scale = 0.35},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
     order = 'za'

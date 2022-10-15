@@ -9,7 +9,7 @@
 RECIPE {
     type = 'recipe',
     name = 'arqad-mk02',
-    category = 'arqad',
+    category = 'rc',
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -25,10 +25,10 @@ RECIPE {
     },
     --main_product = "arqad-mk02",
     icons =
-        {
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', icon_size = 64},
-            {icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk02.png", icon_size = 64},
+        {icon = '__pyalienlifegraphics3__/graphics/icons/arqad.png', icon_size = 64, scale = 0.35},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-arqad',
     order = 'za'
@@ -145,7 +145,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'arqad-mk03',
-    category = 'arqad',
+    category = 'rc',
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -162,10 +162,10 @@ RECIPE {
     },
     --main_product = "arqad-mk03",
     icons =
-        {
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png', icon_size = 64},
-            {icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk03.png", icon_size = 64},
+        {icon = '__pyalienlifegraphics3__/graphics/icons/arqad.png', icon_size = 64, scale = 0.35},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-arqad',
     order = 'zb'
@@ -281,7 +281,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'arqad-mk04',
-    category = 'arqad',
+    category = 'rc',
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -299,10 +299,10 @@ RECIPE {
     },
     --main_product = "arqad-mk04",
     icons =
-        {
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png', icon_size = 64},
-            {icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk04.png", icon_size = 64},
+        {icon = '__pyalienlifegraphics3__/graphics/icons/arqad.png', icon_size = 64, scale = 0.35},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-arqad',
     order = 'zb'

@@ -9,7 +9,7 @@
 RECIPE {
     type = 'recipe',
     name = 'kmauts-mk02',
-    category = 'kmauts',
+    category = 'rc',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -26,7 +26,11 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 4},
     },
     --main_product = "kmauts-mk02",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
+    icons =
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk02.png", icon_size = 64},
+        {icon = '__pyalienlifegraphics__/graphics/icons/kmauts.png', icon_size = 64, scale = 0.35},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-kmauts',
     order = 'za'
@@ -38,7 +42,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'kmauts-mk03',
-    category = 'kmauts',
+    category = 'rc',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -56,7 +60,11 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 4},
     },
     --main_product = "kmauts-mk03",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png',
+    icons =
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk03.png", icon_size = 64},
+        {icon = '__pyalienlifegraphics__/graphics/icons/kmauts.png', icon_size = 64, scale = 0.35},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-kmauts',
     order = 'zb'
@@ -68,7 +76,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'kmauts-mk04',
-    category = 'kmauts',
+    category = 'rc',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -86,7 +94,11 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 4},
     },
     --main_product = "kmauts-mk04",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
+    icons =
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk04.png", icon_size = 64},
+        {icon = '__pyalienlifegraphics__/graphics/icons/kmauts.png', icon_size = 64, scale = 0.35},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-kmauts',
     order = 'zc'

@@ -9,7 +9,7 @@
 RECIPE {
     type = 'recipe',
     name = 'cottongut-mk02',
-    category = 'creature-chamber',
+    category = 'rc',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -23,7 +23,11 @@ RECIPE {
         {type = 'item', name = 'cottongut-mk01', amount = 1, probability = 0.5},
     },
     --main_product = "cottongut-mk02",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
+    icons =
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk02.png", icon_size = 64},
+        {icon = '__pyalienlifegraphics__/graphics/icons/cottongut-module.png', icon_size = 64, scale = 0.35},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-cottongut',
     order = 'za'
@@ -80,7 +84,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-mk03',
-    category = 'creature-chamber',
+    category = 'rc',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -95,7 +99,11 @@ RECIPE {
         {type = 'item', name = 'cottongut-mk02', amount = 1, probability = 0.6},
     },
     --main_product = "cottongut-mk03",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png',
+    icons =
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk03.png", icon_size = 64},
+        {icon = '__pyalienlifegraphics__/graphics/icons/cottongut-module.png', icon_size = 64, scale = 0.35},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-cottongut',
     order = 'zb'
@@ -153,7 +161,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-mk04',
-    category = 'creature-chamber',
+    category = 'rc',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -168,7 +176,11 @@ RECIPE {
         {type = 'item', name = 'cottongut-mk03', amount = 1, probability = 0.7},
     },
     --main_product = "cottongut-mk04",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
+    icons =
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk04.png", icon_size = 64},
+        {icon = '__pyalienlifegraphics__/graphics/icons/cottongut-module.png', icon_size = 64, scale = 0.35},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-cottongut',
     order = 'zc'

@@ -4,7 +4,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'phadai-pup',
-	category = 'phadai',
+	category = 'rc',
 	module_limitations = 'phadai',
 	subgroup = 'py-alienlife-phadai',
 	order = 'c',

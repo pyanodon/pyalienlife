@@ -40,7 +40,7 @@ ENTITY {
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "rc-mk04"},
     fast_replaceable_group = "rc",
-    max_health = 400,
+    max_health = 800,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
     collision_box = {{-10.6, -10.6}, {10.6, 10.6}},
@@ -181,6 +181,41 @@ ENTITY {
                 priority = "medium"
             }
         },
+    },
+    fluid_boxes = {
+        --1
+        {
+            production_type = "input",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_covers = DATA.Pipes.covers(true, true, true, true),
+            base_area = 10,
+            base_level = -1,
+            pipe_connections = {{type = "input", position = {4.5, 11.5}}}
+        },
+        {
+            production_type = "input",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_covers = DATA.Pipes.covers(true, true, true, true),
+            base_area = 10,
+            base_level = -1,
+            pipe_connections = {{type = "input", position = {6.5, 11.5}}}
+        },
+        {
+            production_type = "input",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_covers = DATA.Pipes.covers(true, true, true, true),
+            base_area = 10,
+            base_level = -1,
+            pipe_connections = {{type = "input", position = {0.5, 11.5}}}
+        },
+        {
+            production_type = "output",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_covers = DATA.Pipes.covers(true, true, true, true),
+            base_level = 1,
+            pipe_connections = {{type = "output", position = {-1.5, 11.5}}}
+        },
+        off_when_no_fluid_recipe = true
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {

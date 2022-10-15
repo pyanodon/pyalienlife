@@ -9,7 +9,7 @@
 RECIPE {
     type = 'recipe',
     name = 'dhilmos-mk02',
-    category = 'dhilmos',
+    category = 'rc',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -25,7 +25,11 @@ RECIPE {
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "dhilmos-mk02",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
+    icons =
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk02.png", icon_size = 64},
+        {icon = '__pyalienlifegraphics__/graphics/icons/dhilmo.png', icon_size = 64, scale = 0.35},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-dhilmos',
     order = 'za'
@@ -37,7 +41,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'dhilmos-mk03',
-    category = 'dhilmos',
+    category = 'rc',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -54,7 +58,11 @@ RECIPE {
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "dhilmos-mk03",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png',
+    icons =
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk03.png", icon_size = 64},
+        {icon = '__pyalienlifegraphics__/graphics/icons/dhilmo.png', icon_size = 64, scale = 0.35},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-dhilmos',
     order = 'zb'
@@ -66,7 +74,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'dhilmos-mk04',
-    category = 'dhilmos',
+    category = 'rc',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -83,7 +91,11 @@ RECIPE {
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "dhilmos-mk04",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
+    icons =
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk04.png", icon_size = 64},
+        {icon = '__pyalienlifegraphics__/graphics/icons/dhilmo.png', icon_size = 64, scale = 0.35},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-dhilmos',
     order = 'zc'
