@@ -16,7 +16,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'ulric', amount = 1},
+					{name = 'ulric', amount = 2},
                     {name='fawogae', amount =3},
 					{name='ulric-food-01', amount =2},
 					{name='water-barrel', amount=15, return_barrel = true},

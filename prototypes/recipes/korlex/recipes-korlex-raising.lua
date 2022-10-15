@@ -16,7 +16,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'korlex', amount = 1},
+					{name = 'korlex', amount = 2},
                     {name='tuuphra-seeds', amount = 10},
 					{name='korlex-food-01', amount = 2},
 					{name='fish-hydrolysate-barrel', amount=5,return_barrel = true},
