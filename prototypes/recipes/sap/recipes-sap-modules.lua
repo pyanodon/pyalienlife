@@ -55,10 +55,6 @@ RECIPE {
     main_product = "saps-mk02"
 }:add_unlock("sap-mk02")
 
-data.raw.module["sap-tree"].limitation_blacklist = {
-    "sap-mk02"
-}
-
 RECIPE {
     type = "recipe",
     name = "sap-seeds-mk02",
@@ -140,9 +136,6 @@ RECIPE {
     main_product = "saps-mk03"
 }:add_unlock("sap-mk03")
 
-table.insert(data.raw.module["sap-tree"].limitation_blacklist, "sap-mk03")
-data.raw.module["sap-tree-mk02"].limitation_blacklist = {"sap-mk03"}
-
 RECIPE {
     type = "recipe",
     name = "sap-seeds-mk03",
@@ -223,10 +216,6 @@ RECIPE {
     },
     main_product = "saps-mk04"
 }:add_unlock("sap-mk04")
-
-table.insert(data.raw.module["sap-tree"].limitation_blacklist, "sap-mk04")
-table.insert(data.raw.module["sap-tree-mk02"].limitation_blacklist, "sap-mk04")
-data.raw.module["sap-tree-mk03"].limitation_blacklist = {"sap-mk04"}
 
 RECIPE {
     type = "recipe",

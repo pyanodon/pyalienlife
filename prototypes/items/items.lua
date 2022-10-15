@@ -5440,7 +5440,7 @@ ITEM {
     order = "m-a",
     stack_size = 50,
 	effect = {pollution = {bonus = 1},speed = {bonus = 5}},
-	limitation = {},
+	limitation = {"sap-01"},
 	limitation_message_key = "sap"
 }
 
@@ -5460,7 +5460,7 @@ ITEM {
      order = "m-b",
      stack_size = 50,
  	effect = {pollution = {bonus = 1},speed = {bonus = 10}},
- 	limitation = {},
+ 	limitation = {"sap-01", "sap-mk02"},
  	limitation_message_key = "sap"
  }
 
@@ -5480,7 +5480,7 @@ ITEM {
      order = "m-c",
      stack_size = 50,
  	effect = {pollution = {bonus = 1},speed = {bonus = 15}},
- 	limitation = {},
+ 	limitation = {"sap-01", "sap-mk02", "sap-mk03"},
  	limitation_message_key = "sap"
  }
 
@@ -5500,7 +5500,7 @@ ITEM {
      order = "m-d",
      stack_size = 50,
  	effect = {pollution = {bonus = 1},speed = {bonus = 20}},
- 	limitation = {},
+ 	limitation = {"sap-01", "sap-mk02", "sap-mk03", "sap-mk04"},
  	limitation_message_key = "sap"
  }
 
