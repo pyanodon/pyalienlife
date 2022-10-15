@@ -232,31 +232,3 @@ RECIPE {
         {type = 'item', name = 'stopper', amount = 2}
     }
 }:add_unlock("rubber")
-
-RECIPE {
-    type = "recipe",
-    name = "formic-from-nothing",
-    category = "crafting-with-fluid",
-    enabled = false,
-    energy_required = 5,
-    ingredients = {
-        --{type = 'item', name = 'rubber', amount = 1},
-    },
-    results = {
-        {type = 'fluid', name = 'formic-acid', amount = 2}
-    }
-}:add_unlock("latex")
-
-RECIPE {
-    type = "recipe",
-    name = "plastic-from-nothing",
-    category = "crafting-with-fluid",
-    enabled = false,
-    energy_required = 5,
-    ingredients = {
-        --{type = 'item', name = 'rubber', amount = 1},
-    },
-    results = {
-        {type = 'item', name = 'plastic-bar', amount = 2}
-    }
-}:add_unlock("plastics")
