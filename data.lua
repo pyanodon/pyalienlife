@@ -406,7 +406,7 @@ require('prototypes/buildings/space/space-zipir-reef-mk01')
 --require('prototypes/buildings/silo-2')
 --require('prototypes/buildings/rocket-mk02')
 
---require('prototypes/buildings/py-drive')
+require('prototypes/buildings/py-drive')
 
 --require('prototypes/buildings/outpost')
 --require('prototypes/buildings/outpost-mining')
