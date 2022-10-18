@@ -4,7 +4,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'scrondrix-cub',
-	category = 'rc',
+	category = 'rc-scrondrix',
 	module_limitations = 'scrondrix',
 	subgroup = 'py-alienlife-scrondrix',
 	order = 's',

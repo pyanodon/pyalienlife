@@ -3,7 +3,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 --Aoug breeding
 FUN.autorecipes {
     name = 'auog-pup-breeding',
-	category = 'rc',
+	category = 'rc-auog',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-auog',
 	order = 'b',
@@ -114,6 +114,19 @@ FUN.autorecipes {
 		},
 	}
 }
+
+-- data.raw.module["auog"].limitation = {
+-- 	"auog-pup-breeding-1"
+-- }
+-- data.raw.module["auog-mk02"].limitation = {
+-- 	"auog-pup-breeding-1"
+-- }
+-- data.raw.module["auog-mk03"].limitation = {
+-- 	"auog-pup-breeding-1"
+-- }
+-- data.raw.module["auog-mk04"].limitation = {
+-- 	"auog-pup-breeding-1"
+-- }
 
 --Raising auog pups
 FUN.autorecipes {

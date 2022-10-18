@@ -9,7 +9,7 @@
 RECIPE {
     type = 'recipe',
     name = 'mukmoux-mk02',
-    category = 'rc',
+    category = 'rc-mukmoux',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -42,7 +42,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'mukmoux-mk03',
-    category = 'rc',
+    category = 'rc-mukmoux',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -76,7 +76,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'mukmoux-mk04',
-    category = 'rc',
+    category = 'rc-mukmoux',
     enabled = false,
     energy_required = 30,
     ingredients = {

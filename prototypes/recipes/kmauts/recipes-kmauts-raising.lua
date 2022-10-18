@@ -4,7 +4,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'kmauts-cub',
-	category = 'rc',
+	category = 'rc-kmauts',
 	--module_limitations = 'kmauts',
 	subgroup = 'py-alienlife-kmauts',
 	order = 'c',

@@ -9,7 +9,7 @@
 RECIPE {
     type = 'recipe',
     name = 'auog-mk02',
-    category = 'rc',
+    category = 'rc-auog',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -129,7 +129,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'auog-mk03',
-    category = 'rc',
+    category = 'rc-auog',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -221,7 +221,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'auog-mk04',
-    category = 'rc',
+    category = 'rc-auog',
     enabled = false,
     energy_required = 30,
     ingredients = {

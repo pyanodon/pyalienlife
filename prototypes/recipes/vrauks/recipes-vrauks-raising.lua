@@ -82,7 +82,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = "vrauks-cocoon",
-    category = "rc",
+    category = "rc-vrauks",
     -- module_limitations = 'vrauks',
     subgroup = "py-alienlife-vrauks",
     order = "c",

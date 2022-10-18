@@ -4,7 +4,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'simik-cub',
-	category = 'rc',
+	category = 'rc-simik',
 	--module_limitations = 'simik',
 	subgroup = 'py-alienlife-simik',
 	order = 'c',

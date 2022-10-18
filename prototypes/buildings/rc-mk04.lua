@@ -54,7 +54,7 @@ ENTITY {
         module_slots = 4,
     },
     allowed_effects = {"speed",'consumption','pollution'},
-    crafting_categories = {"rc"},
+    crafting_categories = {}, -- Gets filled in by pyalienlife/data-updates.lua
     crafting_speed = 4.5,
     energy_source = {
         type = "electric",

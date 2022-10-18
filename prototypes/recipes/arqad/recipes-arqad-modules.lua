@@ -9,7 +9,7 @@
 RECIPE {
     type = 'recipe',
     name = 'arqad-mk02',
-    category = 'rc',
+    category = 'rc-arqad',
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -145,7 +145,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'arqad-mk03',
-    category = 'rc',
+    category = 'rc-arqad',
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -281,7 +281,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'arqad-mk04',
-    category = 'rc',
+    category = 'rc-arqad',
     enabled = false,
     energy_required = 100,
     ingredients = {

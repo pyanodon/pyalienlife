@@ -4,7 +4,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'phagnot-cub',
-	category = 'rc',
+	category = 'rc-phagnot',
 	--module_limitations = 'phagnot',
 	main_product = "phagnot-cub",
 	subgroup = 'py-alienlife-phagnot',
