@@ -1,3 +1,6 @@
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
+local MODULE_SLOTS = 52
+
 RECIPE {
     type = "recipe",
     name = "ez-ranch-mk04",
@@ -43,11 +46,11 @@ ENTITY {
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 52
+        module_slots = MODULE_SLOTS
     },
     allowed_effects = {"speed","productivity",'consumption','pollution'},
     crafting_categories = {"korlex"},
-    crafting_speed = 0.02,
+    crafting_speed = FUN.farm_speed_derived(MODULE_SLOTS, "ez-ranch-mk01"),
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

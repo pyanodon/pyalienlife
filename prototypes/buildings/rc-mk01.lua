@@ -50,11 +50,11 @@ ENTITY {
     module_specification = {
         module_info_icon_scale = 0.6,
         module_info_icon_shift = util.by_pixel(160, 230),
-        module_slots = 1,
+        module_slots = 2,
     },
     allowed_effects = {"speed",'consumption','pollution'},
     crafting_categories = {}, -- Gets filled in by pyalienlife/data-updates.lua
-    crafting_speed = 1.5,
+    crafting_speed = .333, -- 2 modules + 1 building = target speed of 1
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

@@ -5519,7 +5519,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "u-a",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "ulric"
 }
@@ -5539,7 +5539,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "u-b",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 3}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
  	limitation = {},
  	limitation_message_key = "ulric"
  }
@@ -5559,7 +5559,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "u-c",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 4}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 3}},
  	limitation = {},
  	limitation_message_key = "ulric"
  }
@@ -5579,7 +5579,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "u-d",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 5}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 4}},
  	limitation = {},
  	limitation_message_key = "ulric"
  }
@@ -5822,7 +5822,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "m-a",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 5}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "mukmoux"
 }
@@ -5842,7 +5842,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "m-b",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 6.25}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 1.5}},
  	limitation = {},
  	limitation_message_key = "mukmoux"
  }
@@ -5862,7 +5862,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "m-c",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 7.5}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
  	limitation = {},
  	limitation_message_key = "mukmoux"
  }
@@ -5882,7 +5882,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "m-d",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 8.75}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 2.5}},
  	limitation = {},
  	limitation_message_key = "mukmoux"
  }
@@ -5902,7 +5902,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "aa",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 1.25}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "arthurian"
 }
@@ -5922,7 +5922,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ab",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 2.5}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
 	limitation = {},
 	limitation_message_key = "arthurian"
 }
@@ -5942,7 +5942,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ac",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 3.75}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 3}},
 	limitation = {},
 	limitation_message_key = "arthurian"
 }
@@ -5962,7 +5962,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ad",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 5}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 4}},
 	limitation = {},
 	limitation_message_key = "arthurian"
 }
@@ -6222,7 +6222,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "da",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 3.75}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "dhilmos"
 }
@@ -6242,7 +6242,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "db",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 5}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 1.5}},
  	limitation = {},
  	limitation_message_key = "dhilmos"
  }
@@ -6262,7 +6262,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "dc",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 6.25}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
  	limitation = {},
  	limitation_message_key = "dhilmos"
  }
@@ -6282,7 +6282,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "dd",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 7.5}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 2.5}},
  	limitation = {},
  	limitation_message_key = "dhilmos"
  }
@@ -6302,7 +6302,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "sr-a",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 1.65}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "scrondrix"
 }
@@ -6322,7 +6322,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "sr-b",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 3.3}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
  	limitation = {},
  	limitation_message_key = "scrondrix"
  }
@@ -6342,7 +6342,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "sr-c",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 4.96}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 3}},
  	limitation = {},
  	limitation_message_key = "scrondrix"
  }
@@ -6362,7 +6362,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "sr-d",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 6.6}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 4}},
  	limitation = {},
  	limitation_message_key = "scrondrix"
  }
@@ -6462,7 +6462,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ph-a",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 10}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "phadai"
 }
@@ -6482,7 +6482,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "ph-b",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 12.5}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 1.25}},
  	limitation = {},
  	limitation_message_key = "phadai"
  }
@@ -6502,7 +6502,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "ph-c",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 15}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 1.5}},
  	limitation = {},
  	limitation_message_key = "phadai"
  }
@@ -6522,7 +6522,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "ph-d",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 17.5}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 1.75}},
  	limitation = {},
  	limitation_message_key = "phadai"
  }
@@ -6557,7 +6557,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "a",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 6.7}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
     limitation_message_key = "auog",
     fuel_category = 'auog',
@@ -6580,7 +6580,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "a-b",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 13.4}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
 	limitation = {},
     limitation_message_key = "auog",
     fuel_category = 'auog',
@@ -6603,7 +6603,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "a-c",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 20.1}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 3}},
 	limitation = {},
     limitation_message_key = "auog",
     fuel_category = 'auog',
@@ -6626,7 +6626,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "a-d",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 26.8}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 4}},
 	limitation = {},
     limitation_message_key = "auog",
     fuel_category = 'auog',
@@ -6723,7 +6723,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "fa",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 3.75}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "fish"
 }
@@ -6759,7 +6759,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "fb",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 5}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 1.5}},
  	limitation = {},
  	limitation_message_key = "fish"
  }
@@ -6795,7 +6795,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "fc",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 6.25}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
  	limitation = {},
  	limitation_message_key = "fish"
  }
@@ -6831,7 +6831,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "fd",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 7.5}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 2.5}},
  	limitation = {},
  	limitation_message_key = "fish"
  }
@@ -6931,7 +6931,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "d-a",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 0.4}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
     limitation_message_key = "dingrits",
     fuel_category = 'dingrits',
@@ -6954,7 +6954,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "d-b",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 0.8}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
  	limitation = {},
      limitation_message_key = "dingrits",
      fuel_category = 'dingrits',
@@ -6977,7 +6977,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "d-c",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 1.6}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 4}},
  	limitation = {},
      limitation_message_key = "dingrits",
      fuel_category = 'dingrits',
@@ -7000,7 +7000,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "d-d",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 3.2}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 8}},
  	limitation = {},
      limitation_message_key = "dingrits",
      fuel_category = 'dingrits',
@@ -7086,7 +7086,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-a",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 0.2}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "kmauts"
 }
@@ -7106,7 +7106,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-b",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 0.4}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
 	limitation = {},
 	limitation_message_key = "kmauts"
 }
@@ -7126,7 +7126,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-c",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 0.6}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 3}},
 	limitation = {},
 	limitation_message_key = "kmauts"
 }
@@ -7146,7 +7146,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 0.8}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 4}},
 	limitation = {},
 	limitation_message_key = "kmauts"
 }
@@ -7166,7 +7166,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-a",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 50}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "vonix"
 }
@@ -7186,7 +7186,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-b",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 55}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1.5}},
 	limitation = {},
 	limitation_message_key = "vonix"
 }
@@ -7206,7 +7206,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-c",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 60}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
 	limitation = {},
 	limitation_message_key = "vonix"
 }
@@ -7226,7 +7226,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-d",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 65}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 2.5}},
 	limitation = {},
 	limitation_message_key = "vonix"
 }
@@ -7658,7 +7658,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "tr-a",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 40}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "trits"
 }
@@ -7678,7 +7678,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "tr-b",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 45}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1.5}},
 	limitation = {},
 	limitation_message_key = "trits"
 }
@@ -7698,7 +7698,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "tr-c",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 50}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
 	limitation = {},
 	limitation_message_key = "trits"
 }
@@ -7718,7 +7718,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "tr-d",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 55}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 2.5}},
 	limitation = {},
 	limitation_message_key = "trits"
 }
@@ -7738,7 +7738,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-a",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 0.25}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "vrauks"
 }
@@ -7758,7 +7758,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-b",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 0.38}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1.5}},
 	limitation = {},
 	limitation_message_key = "vrauks"
 }
@@ -7778,7 +7778,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-c",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 0.5}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
 	limitation = {},
 	limitation_message_key = "vrauks"
 }
@@ -7798,7 +7798,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-d",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 0.58}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 2.5}},
 	limitation = {},
 	limitation_message_key = "vrauks"
 }
@@ -7818,7 +7818,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-a",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 10}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "xyhiphoe"
 }
@@ -7838,7 +7838,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-b",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 20}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
 	limitation = {},
 	limitation_message_key = "xyhiphoe"
 }
@@ -7858,7 +7858,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-c",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 30}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 3}},
 	limitation = {},
 	limitation_message_key = "xyhiphoe"
 }
@@ -7878,7 +7878,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "v-d",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 40}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 4}},
 	limitation = {},
 	limitation_message_key = "xyhiphoe"
 }
@@ -7898,7 +7898,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-a",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 2.5}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "korlex"
 }
@@ -7918,7 +7918,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-b",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 3.13}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1.25}},
 	limitation = {},
 	limitation_message_key = "korlex"
 }
@@ -7938,7 +7938,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-c",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 3.75}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1.5}},
 	limitation = {},
 	limitation_message_key = "korlex"
 }
@@ -7958,7 +7958,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 4.38}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
 	limitation = {},
 	limitation_message_key = "korlex"
 }
@@ -8056,7 +8056,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cg-a",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 0.5}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "cottongut"
 }
@@ -8076,7 +8076,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cg-b",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
 	limitation = {},
 	limitation_message_key = "cottongut"
 }
@@ -8096,7 +8096,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cg-c",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 1.5}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 3}},
 	limitation = {},
 	limitation_message_key = "cottongut"
 }
@@ -8116,7 +8116,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cg-d",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 4}},
 	limitation = {},
 	limitation_message_key = "cottongut"
 }
@@ -8222,7 +8222,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "q-a",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 3.75}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "arqad"
 }
@@ -8242,7 +8242,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "q-b",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 5}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
 	limitation = {},
 	limitation_message_key = "arqad"
 }
@@ -8262,7 +8262,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "q-c",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 6.25}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 3}},
 	limitation = {},
 	limitation_message_key = "arqad"
 }
@@ -8282,7 +8282,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "q-d",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 7.5}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 4}},
 	limitation = {},
 	limitation_message_key = "arqad"
 }

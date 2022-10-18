@@ -157,7 +157,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "xa-a",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "Simik"
 }
@@ -177,7 +177,7 @@ ITEM {
 --     subgroup = "py-alienlife-modules",
 --     order = "xa-b",
 --     stack_size = 50,
--- 	effect = {pollution = {bonus = 1},speed = {bonus = 4}},
+-- 	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
 -- 	limitation = {},
 -- 	limitation_message_key = "Simik",
 -- }
@@ -197,7 +197,7 @@ ITEM {
 --     subgroup = "py-alienlife-modules",
 --     order = "xa-c",
 --     stack_size = 50,
--- 	effect = {pollution = {bonus = 1},speed = {bonus = 6}},
+-- 	effect = {pollution = {bonus = 1},speed = {bonus = 3}},
 -- 	limitation = {},
 -- 	limitation_message_key = "Simik",
 -- }
@@ -217,7 +217,7 @@ ITEM {
 --     subgroup = "py-alienlife-modules",
 --     order = "xa-d",
 --     stack_size = 50,
--- 	effect = {pollution = {bonus = 1},speed = {bonus = 8}},
+-- 	effect = {pollution = {bonus = 1},speed = {bonus = 4}},
 -- 	limitation = {},
 -- 	limitation_message_key = "Simik",
 -- }

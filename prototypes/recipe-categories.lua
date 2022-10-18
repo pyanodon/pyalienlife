@@ -151,6 +151,7 @@ data:extend {
         type = "recipe-category",
         name = "rc-auog",
         allowed_module_categories = { "auog" },
+        modules_required = true
     },
     {
         type = "recipe-category",

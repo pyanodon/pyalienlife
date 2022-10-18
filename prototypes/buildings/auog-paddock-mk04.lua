@@ -1,3 +1,6 @@
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
+local MODULE_SLOTS = 10
+
 RECIPE {
     type = "recipe",
     name = "auog-paddock-mk04",
@@ -46,7 +49,7 @@ ENTITY {
     },
     allowed_effects = {"speed","productivity",'consumption','pollution'},
     crafting_categories = {"auog"},
-    crafting_speed = 0.075,
+    crafting_speed = FUN.farm_speed_derived(MODULE_SLOTS, "auog-paddock-mk01"),
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

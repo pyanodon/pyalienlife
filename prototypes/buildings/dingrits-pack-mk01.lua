@@ -1,3 +1,7 @@
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
+local MODULE_SLOTS = 20
+local FULL_CRAFTING_SPEED = 1.2 -- crafting speed when full of mk01 modules
+
 RECIPE {
     type = "recipe",
     name = "dingrits-pack-mk01",
@@ -43,11 +47,11 @@ ENTITY {
     selection_box = {{-7.0, -7.0}, {7.0, 7.0}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 20
+        module_slots = MODULE_SLOTS
     },
     allowed_effects = {"speed","productivity",'consumption','pollution'},
     crafting_categories = {"dingrits"},
-    crafting_speed = 0.15,
+    crafting_speed = FUN.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
