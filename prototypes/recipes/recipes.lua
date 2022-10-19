@@ -1746,7 +1746,7 @@ RECIPE {
         {type = 'item', name = 'ash', amount = 3},
     },
     main_product = "crude-oil",
-}:add_unlock("scrude")
+}:add_unlock("light-oil-mk01")
 
 RECIPE {
     type = 'recipe',
