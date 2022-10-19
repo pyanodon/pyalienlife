@@ -9,7 +9,7 @@ FUN.autorecipes {
 	subgroup = 'py-alienlife-xyhiphoe',
 	order = 'c',
 	main_product = "xyhiphoe-cub",
-	crafting_speed = 120,
+	crafting_speed = 20,
     mats =
 	{
 		{

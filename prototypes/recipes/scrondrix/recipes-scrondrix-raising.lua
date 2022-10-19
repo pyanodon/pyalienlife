@@ -9,7 +9,6 @@ FUN.autorecipes {
 	subgroup = 'py-alienlife-scrondrix',
 	order = 's',
 	main_product = 'scrondrix-pup',
-	crafting_speed = 80,
     mats =
 	{
 		--chem
@@ -29,6 +28,7 @@ FUN.autorecipes {
 					{name = 'manure', amount = 5},
 				},
 			tech = 'scrondrix',
+			crafting_speed = 12,
 			name = 'Scrondrix cub 1',
 		},
 		--py
@@ -44,6 +44,7 @@ FUN.autorecipes {
 					{name='scrondrix-pup', add_amount = 1},
 					{name = 'manure', add_amount = 3},
 				},
+			crafting_speed = 10,
 			tech = 'scrondrix-mk02',
 			name = 'Scrondrix cub 2',
 		},
@@ -59,6 +60,7 @@ FUN.autorecipes {
 					{name='scrondrix-pup', add_amount = 2},
 					{name = 'manure', add_amount = 3},
 				},
+			crafting_speed = 9,
 			tech = 'scrondrix-mk03',
 			name = 'Scrondrix cub 3',
 		},
@@ -73,6 +75,7 @@ FUN.autorecipes {
 					{name='scrondrix-pup', add_amount = 2},
 					{name = 'manure', add_amount = 3},
 				},
+			crafting_speed = 8,
 			tech = 'scrondrix-mk04',
 			name = 'Scrondrix cub 4',
 		},

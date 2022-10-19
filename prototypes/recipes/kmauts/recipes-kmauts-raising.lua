@@ -9,7 +9,7 @@ FUN.autorecipes {
 	subgroup = 'py-alienlife-kmauts',
 	order = 'c',
 	main_product = "kmauts-cub",
-	crafting_speed = 50,
+	crafting_speed = 25,
     mats =
 	{
 		{

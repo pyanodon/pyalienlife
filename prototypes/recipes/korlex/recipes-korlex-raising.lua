@@ -9,7 +9,7 @@ FUN.autorecipes {
 	subgroup = 'py-alienlife-korlex',
 	order = 'c',
 	main_product = "korlex-pup",
-	crafting_speed = 70,
+	crafting_speed = 20,
     mats =
 	{
 		--logistic

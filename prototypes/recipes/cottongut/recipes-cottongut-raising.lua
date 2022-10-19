@@ -9,7 +9,7 @@ FUN.autorecipes {
 	subgroup = 'py-alienlife-cottongut',
 	order = 'c',
 	main_product = "cottongut-pup",
-	crafting_speed = 90,
+	crafting_speed = 20,
     mats =
 	{
 		--red

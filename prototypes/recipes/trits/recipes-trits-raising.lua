@@ -27,7 +27,7 @@ FUN.autorecipes {
 				{
 					{name = 'trits-pup', amount =2},
 				},
-			crafting_speed = 120,
+			crafting_speed = 80,
 			tech = 'trits'
 		},
 		--py/chem
@@ -42,7 +42,7 @@ FUN.autorecipes {
 				{
 					{name = 'trits-pup', add_amount =2},
 				},
-			crafting_speed = 110,
+			crafting_speed = 60,
 			tech = 'trits-mk02'
 		},
 		--prod
@@ -56,7 +56,7 @@ FUN.autorecipes {
 				{
 					{name = 'trits-pup', add_amount =2},
 				},
-			crafting_speed = 100,
+			crafting_speed = 50,
 			tech = 'trits-mk03'
 		},
 		--utility
@@ -71,7 +71,7 @@ FUN.autorecipes {
 				{
 					{name = 'trits-pup', add_amount =2},
 				},
-			crafting_speed = 90,
+			crafting_speed = 40,
 			tech = 'trits-mk04'
 		},
 	}

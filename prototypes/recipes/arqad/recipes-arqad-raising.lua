@@ -9,7 +9,7 @@ FUN.autorecipes {
 	subgroup = 'py-alienlife-arqad',
 	order = 'c',
 	main_product = 'arqad-egg',
-	crafting_speed = 60,
+	crafting_speed = 20,
     mats =
 	{
 		--base

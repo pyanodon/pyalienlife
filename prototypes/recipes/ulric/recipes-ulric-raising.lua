@@ -9,7 +9,6 @@ FUN.autorecipes {
 	subgroup = 'py-alienlife-ulric',
 	order = 'c',
 	main_product = 'ulric-cub',
-	crafting_speed = 90,
     mats =
 	{
 		--logistic
@@ -26,6 +25,7 @@ FUN.autorecipes {
 					{name='ulric-cub', amount = 3},
 					{name = 'manure', amount = 1}
 				},
+			crafting_speed = 15,
 			tech = 'ulric'
 		},
 		--py
@@ -42,6 +42,7 @@ FUN.autorecipes {
 					{name='ulric-cub', add_amount = 3},
 					{name = 'manure', add_amount = 1}
 				},
+			crafting_speed = 12,
 			tech = 'ulric-mk02'
 		},
 		--chem
@@ -57,6 +58,7 @@ FUN.autorecipes {
 					{name='ulric-cub', add_amount = 3},
 					{name = 'manure', add_amount = 1}
 				},
+			crafting_speed = 10,
 			tech = 'ulric-mk03'
 		},
 		--prod
@@ -71,6 +73,7 @@ FUN.autorecipes {
 					{name='ulric-cub', add_amount = 3},
 					{name = 'manure', add_amount = 1}
 				},
+			crafting_speed = 8,
 			tech = 'ulric-mk04'
 		},
 	}

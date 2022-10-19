@@ -24,7 +24,7 @@ FUN.autorecipes {
 				{
 					{name='dhilmos-egg', amount = 2},
 				},
-			crafting_speed = 80,
+			crafting_speed = 25,
 			tech = 'dhilmos'
 		},
 		--py
@@ -38,7 +38,7 @@ FUN.autorecipes {
 				{
                     {name='dhilmos-egg', add_amount = "1"},
 				},
-			crafting_speed = 70,
+			crafting_speed = 20,
 			tech = 'dhilmos-mk02'
 		},
 		--prod
@@ -54,7 +54,7 @@ FUN.autorecipes {
 				{
                     {name='dhilmos-egg', add_amount = "1"},
 				},
-			crafting_speed = 55,
+			crafting_speed = 18,
 			tech = 'dhilmos-mk03'
 		},
 		--utility
@@ -67,7 +67,7 @@ FUN.autorecipes {
 				{
                     {name='dhilmos-egg', add_amount = "1"},
 				},
-			crafting_speed = 50,
+			crafting_speed = 16,
 			tech = 'dhilmos-mk04'
 		},
 	}
