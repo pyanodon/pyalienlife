@@ -9,7 +9,7 @@
 RECIPE {
     type = 'recipe',
     name = 'dingrits-mk02',
-    category = 'rc',
+    category = 'rc-dingrits',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -41,7 +41,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'dingrits-mk03',
-    category = 'rc',
+    category = 'rc-dingrits',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -74,7 +74,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'dingrits-mk04',
-    category = 'rc',
+    category = 'rc-dingrits',
     enabled = false,
     energy_required = 30,
     ingredients = {

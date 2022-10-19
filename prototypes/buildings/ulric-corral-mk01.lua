@@ -1,3 +1,7 @@
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
+local MODULE_SLOTS = 8
+local FULL_CRAFTING_SPEED = 2 -- crafting speed when full of mk01 modules
+
 RECIPE {
     type = "recipe",
     name = "ulric-corral-mk01",
@@ -41,12 +45,12 @@ ENTITY {
     collision_box = {{-5.8, -5.8}, {5.8, 5.8}},
     selection_box = {{-6.0, -6.0}, {6.0, 6.0}},
     module_specification = {
-        module_slots = 8,
+        module_slots = MODULE_SLOTS,
     },
     match_animation_speed_to_activity = false,
     allowed_effects = {"speed","productivity",'consumption','pollution'},
     crafting_categories = {"ulric"},
-    crafting_speed = 0.125,
+    crafting_speed = FUN.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

@@ -79,6 +79,14 @@ RECIPE("nexelit-matrix"):remove_unlock('nenbit-matrix'):add_unlock('neuro-electr
 data.raw["recipe-category"]["xyhiphoe"].allowed_module_categories = { "xyhiphoe" }
 data.raw["recipe-category"]["xyhiphoe"].modules_required = true
 
+data:extend {
+    {
+        type = "recipe-category",
+        name = "rc-xyhiphoe",
+        allowed_module_categories = { "xyhiphoe" },
+    },
+}
+
 FUN.results_replacer("log7", "log", "log",9)
 FUN.results_replacer("log8", "log", "log",10)
 

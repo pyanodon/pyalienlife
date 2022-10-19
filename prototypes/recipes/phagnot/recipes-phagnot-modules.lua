@@ -9,7 +9,7 @@
 RECIPE {
     type = 'recipe',
     name = 'phagnot-mk02',
-    category = 'rc',
+    category = 'rc-phagnot',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -89,7 +89,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'phagnot-mk03',
-    category = 'rc',
+    category = 'rc-phagnot',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -171,7 +171,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'phagnot-mk04',
-    category = 'rc',
+    category = 'rc-phagnot',
     enabled = false,
     energy_required = 30,
     ingredients = {

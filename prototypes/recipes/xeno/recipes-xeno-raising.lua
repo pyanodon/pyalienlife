@@ -4,7 +4,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'xeno-egg',
-	category = 'rc',
+	category = 'rc-xeno',
 	module_limitations = 'xeno',
 	subgroup = 'py-alienlife-xeno',
 	order = 'c',
@@ -26,7 +26,7 @@ FUN.autorecipes {
 					{name='xeno-egg', amount =3},
 					{name = 'cage', amount = 2}
 				},
-			crafting_speed = 200,
+			crafting_speed = 30,
 			tech = 'xeno'
 		},
 		--chem
@@ -39,7 +39,7 @@ FUN.autorecipes {
 				{
                     {name='xeno-egg', add_amount = 3},
 				},
-			crafting_speed = 170,
+			crafting_speed = 25,
 			tech = 'xeno-mk02'
 		},
 		--ulric
@@ -54,7 +54,7 @@ FUN.autorecipes {
                     {name='xeno-egg', add_amount = 3},
 					{name = 'cage', add_amount = 2}
 				},
-			crafting_speed = 140,
+			crafting_speed = 20,
 			tech = 'xeno-mk03'
 		},
 		--ulric salt fiber
@@ -67,7 +67,7 @@ FUN.autorecipes {
 				{
                     {name='xeno-egg', add_amount = 3},
 				},
-			crafting_speed = 130,
+			crafting_speed = 20,
 			tech = 'xeno-mk04'
 		},
 	}

@@ -9,7 +9,7 @@
 RECIPE {
     type = 'recipe',
     name = 'cottongut-mk02',
-    category = 'rc',
+    category = 'rc-cottongut',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -84,7 +84,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-mk03',
-    category = 'rc',
+    category = 'rc-cottongut',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -161,7 +161,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-mk04',
-    category = 'rc',
+    category = 'rc-cottongut',
     enabled = false,
     energy_required = 30,
     ingredients = {

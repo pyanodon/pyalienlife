@@ -82,12 +82,12 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = "vrauks-cocoon",
-    category = "rc",
+    category = "rc-vrauks",
     -- module_limitations = 'vrauks',
     subgroup = "py-alienlife-vrauks",
     order = "c",
     main_product = "cocoon",
-    crafting_speed = 30,
+    crafting_speed = 25,
     mats = {
         -- base
         {

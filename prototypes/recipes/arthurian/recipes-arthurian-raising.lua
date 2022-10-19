@@ -4,10 +4,10 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'arthurian-egg',
-	category = 'rc',
+	category = 'rc-arthurian',
 	--module_limitations = 'arthurian',
 	main_product = 'arthurian-egg',
-	crafting_speed = 40,
+	crafting_speed = 20,
 	subgroup = 'py-alienlife-arthurian',
 	order = 'c',
     mats =

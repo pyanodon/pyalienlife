@@ -4,12 +4,11 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'dingrits-cub',
-	category = 'rc',
+	category = 'rc-dingrits',
 	--module_limitations = 'dingrits',
 	subgroup = 'py-alienlife-dingrits',
 	order = 'c',
 	main_product = "dingrits-cub",
-	crafting_speed = 75,
     mats =
 	{
 		--chem
@@ -26,6 +25,7 @@ FUN.autorecipes {
 				{
 					{name='dingrits-cub', amount_min = 1, amount_max = 7},
 				},
+			crafting_speed = 15,
 			tech = 'dingrits'
 		},
 		--py
@@ -39,6 +39,7 @@ FUN.autorecipes {
 				{
 					{name='dingrits-cub', amount_min = 2, amount_max = 7},
 				},
+			crafting_speed = 14,
 			tech = 'dingrits-mk02'
 		},
 		--prod
@@ -52,6 +53,7 @@ FUN.autorecipes {
 				{
 					{name='dingrits-cub', amount_min = 4, amount_max = 7},
 				},
+			crafting_speed = 12,
 			tech = 'dingrits-mk03'
 		},
 		--utility
@@ -64,6 +66,7 @@ FUN.autorecipes {
 				{
 					{name='dingrits-cub', amount = 7},
 				},
+			crafting_speed = 10,
 			tech = 'dingrits-mk04'
 		},
 	}

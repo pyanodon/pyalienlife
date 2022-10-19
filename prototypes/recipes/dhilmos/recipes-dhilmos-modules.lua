@@ -9,7 +9,7 @@
 RECIPE {
     type = 'recipe',
     name = 'dhilmos-mk02',
-    category = 'rc',
+    category = 'rc-dhilmos',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -41,7 +41,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'dhilmos-mk03',
-    category = 'rc',
+    category = 'rc-dhilmos',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -74,7 +74,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'dhilmos-mk04',
-    category = 'rc',
+    category = 'rc-dhilmos',
     enabled = false,
     energy_required = 30,
     ingredients = {

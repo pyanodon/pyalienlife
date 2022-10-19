@@ -4,12 +4,11 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'vonix-cub',
-	category = 'rc',
+	category = 'rc-vonix',
 	--module_limitations = 'vonix',
 	subgroup = 'py-alienlife-vonix',
 	order = 'c',
 	main_product = "vonix-eggs",
-	crafting_speed = 100,
     mats =
 	{
 		--py
@@ -27,6 +26,7 @@ FUN.autorecipes {
 				{
 					{name = 'vonix-eggs', amount = 6},
 				},
+			crafting_speed = 45,
 			tech = 'vonix'
 		},
 		--prod
@@ -41,6 +41,7 @@ FUN.autorecipes {
 				{
 					{name = 'vonix-eggs', add_amount = 12},
 				},
+			crafting_speed = 40,
 			tech = 'vonix-mk02'
 		},
 		--utility
@@ -56,6 +57,7 @@ FUN.autorecipes {
 				{
 					{name = 'vonix-eggs', add_amount = 18},
 				},
+			crafting_speed = 30,
 			tech = 'vonix-mk03'
 		},
 	}

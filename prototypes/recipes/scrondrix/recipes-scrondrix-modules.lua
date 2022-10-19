@@ -9,7 +9,7 @@
 RECIPE {
     type = 'recipe',
     name = 'scrondrix-mk02',
-    category = 'rc',
+    category = 'rc-scrondrix',
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -42,7 +42,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'scrondrix-mk03',
-    category = 'rc',
+    category = 'rc-scrondrix',
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -75,7 +75,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'scrondrix-mk04',
-    category = 'rc',
+    category = 'rc-scrondrix',
     enabled = false,
     energy_required = 100,
     ingredients = {

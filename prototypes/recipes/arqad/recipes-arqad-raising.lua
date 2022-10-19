@@ -4,12 +4,12 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'arqad-egg',
-	category = 'rc',
+	category = 'rc-arqad',
 	--module_limitations = 'arqad',
 	subgroup = 'py-alienlife-arqad',
 	order = 'c',
 	main_product = 'arqad-egg',
-	crafting_speed = 60,
+	crafting_speed = 20,
     mats =
 	{
 		--base

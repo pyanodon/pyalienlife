@@ -4,7 +4,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'phadai-pup',
-	category = 'rc',
+	category = 'rc-phadai',
 	module_limitations = 'phadai',
 	subgroup = 'py-alienlife-phadai',
 	order = 'c',
@@ -26,7 +26,7 @@ FUN.autorecipes {
 				{
 					{name='phadai-pup', amount =3},
 				},
-			crafting_speed = 140,
+			crafting_speed = 10,
 			tech = 'phadai'
 		},
 		--food 1
@@ -42,7 +42,7 @@ FUN.autorecipes {
 				{
 
 				},
-			crafting_speed = 120,
+			crafting_speed = 9,
 			tech = 'phadai'
 		},
 		--fawogae
@@ -55,7 +55,7 @@ FUN.autorecipes {
 				{
 
 				},
-			crafting_speed = 110,
+			crafting_speed = 8,
 			tech = 'phadai-mk02'
 		},
 		--energy-drink
@@ -68,7 +68,7 @@ FUN.autorecipes {
 				{
 
 				},
-			crafting_speed = 100,
+			crafting_speed = 7,
 			tech = 'phadai-mk02'
 		},
 		--food 2
@@ -85,7 +85,7 @@ FUN.autorecipes {
 				{
 
 				},
-			crafting_speed = 100,
+			crafting_speed = 6,
 			tech = 'phadai-mk03'
 		},
 		--food 2 fawogae
@@ -98,7 +98,7 @@ FUN.autorecipes {
 				{
 
 				},
-			crafting_speed = 90,
+			crafting_speed = 5,
 			tech = 'phadai-mk03'
 		},
 		--food 2 fawogae energy-drink
@@ -111,7 +111,7 @@ FUN.autorecipes {
 				{
 
 				},
-			crafting_speed = 80,
+			crafting_speed = 5,
 			tech = 'phadai-mk04'
 		},
 	}

@@ -9,7 +9,7 @@
 RECIPE {
     type = 'recipe',
     name = 'arthurian-egg-mk02-gmo',
-    category = 'rc',
+    category = 'rc-arthurian',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -118,7 +118,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'arthurian-egg-mk03-gmo',
-    category = 'rc',
+    category = 'rc-arthurian',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -229,7 +229,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'arthurian-egg-mk04-gmo',
-    category = 'rc',
+    category = 'rc-arthurian',
     enabled = false,
     energy_required = 30,
     ingredients = {

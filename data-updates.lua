@@ -120,6 +120,19 @@ for _, module in pairs(data.raw.module) do
         module.dict_limitation = nil
     end
 end
+
+----------------------------------------------------------------------------------------------------
+-- RC CATEGORIES SETUP
+----------------------------------------------------------------------------------------------------
+for _, cat in pairs(data.raw['recipe-category']) do
+    if cat.name:find("^rc%-") then
+        table.insert(data.raw["assembling-machine"]["rc-mk01"].crafting_categories, cat.name)
+        table.insert(data.raw["assembling-machine"]["rc-mk02"].crafting_categories, cat.name)
+        table.insert(data.raw["assembling-machine"]["rc-mk03"].crafting_categories, cat.name)
+        table.insert(data.raw["assembling-machine"]["rc-mk04"].crafting_categories, cat.name)
+    end
+end
+
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 

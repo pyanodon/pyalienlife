@@ -4,12 +4,11 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'zungror-cocoon',
-	category = 'rc',
-	--module_limitations = 'zungror',
+	category = 'rc-zungror',
+	-- module_limitations = 'zungror',
 	subgroup = 'py-alienlife-zungror',
 	order = 'c',
 	main_product = "zungror-cocoon",
-	crafting_speed = 80,
     mats =
 	{
 		--py
@@ -26,6 +25,7 @@ FUN.autorecipes {
 					{name = 'zungror-cocoon', amount = 4},
 					{name='empty-barrel-milk', amount = 2},
 				},
+			crafting_speed = 50,
 			tech = 'zungror'
 		},
 		--prod
@@ -40,6 +40,7 @@ FUN.autorecipes {
 				{
 					{name = 'zungror-cocoon', add_amount = 6},
 				},
+			crafting_speed = 40,
 			tech = 'zungror-mk02'
 		},
 		--utility
@@ -54,10 +55,50 @@ FUN.autorecipes {
 				{
 					{name = 'zungror-cocoon', add_amount = 9},
 				},
+			crafting_speed = 30,
 			tech = 'zungror-mk03'
 		},
 	}
 }
+
+
+-- data.raw.module["speed-module"].limitation_blacklist = {
+-- 	"zungror-cocoon-1",
+-- 	"auog-pup-breeding-1"
+-- }
+-- data.raw.module["speed-module-2"].limitation_blacklist = {
+-- 	"zungror-cocoon-1",
+-- 	"auog-pup-breeding-1"
+-- }
+-- data.raw.module["speed-module-3"].limitation_blacklist = {
+-- 	"zungror-cocoon-1",
+-- 	"auog-pup-breeding-1"
+-- }
+-- data.raw.module["effectivity-module"].limitation_blacklist = {
+-- 	"zungror-cocoon-1",
+-- 	"auog-pup-breeding-1"
+-- }
+-- data.raw.module["effectivity-module-2"].limitation_blacklist = {
+-- 	"zungror-cocoon-1",
+-- 	"auog-pup-breeding-1"
+-- }
+-- data.raw.module["effectivity-module-3"].limitation_blacklist = {
+-- 	"zungror-cocoon-1",
+-- 	"auog-pup-breeding-1"
+-- }
+
+-- data.raw.module["zungror"].limitation = {
+-- 	"zungror-cocoon-1"
+-- }
+-- data.raw.module["zungror-mk02"].limitation = {
+-- 	"zungror-cocoon-1"
+-- }
+-- data.raw.module["zungror-mk03"].limitation = {
+-- 	"zungror-cocoon-1"
+-- }
+-- data.raw.module["zungror-mk04"].limitation = {
+-- 	"zungror-cocoon-1"
+-- }
 
 --[[
 		-----------------------PHEROMONES-----------------------------

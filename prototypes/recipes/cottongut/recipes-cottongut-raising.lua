@@ -4,12 +4,12 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'cottongut-cub',
-	category = 'rc',
+	category = 'rc-cottongut',
 	--module_limitations = 'cottongut',
 	subgroup = 'py-alienlife-cottongut',
 	order = 'c',
 	main_product = "cottongut-pup",
-	crafting_speed = 90,
+	crafting_speed = 20,
     mats =
 	{
 		--red

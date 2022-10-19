@@ -4,7 +4,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'zipir-eggs',
-	category = 'rc',
+	category = 'rc-zipir',
 	module_limitations = 'zipir',
 	subgroup = 'py-alienlife-zipir',
 	order = 'c',
@@ -23,7 +23,7 @@ FUN.autorecipes {
 				{
                     {name='zipir-eggs', probability = 1, amount_min =5, amount_max =7},  -- maybe 8 for the max if you feel generous
 				},
-			crafting_speed = 140,
+			crafting_speed = 40,
 			tech = 'zipir'
 		},
 		--fawogae
@@ -38,7 +38,7 @@ FUN.autorecipes {
 				{
 
 				},
-			crafting_speed = 120,
+			crafting_speed = 30,
 			tech = 'zipir-mk02'
 		},
 		--water saline
@@ -52,7 +52,7 @@ FUN.autorecipes {
 				{
 
 				},
-			crafting_speed = 110,
+			crafting_speed = 25,
 			tech = 'zipir-mk03'
 		},
 		--food1
@@ -65,7 +65,7 @@ FUN.autorecipes {
 				{
 
 				},
-			crafting_speed = 100,
+			crafting_speed = 22,
 			tech = 'zipir-mk03'
 		},
 		--food 2
@@ -80,7 +80,7 @@ FUN.autorecipes {
 				{
 
 				},
-			crafting_speed = 80,
+			crafting_speed = 20,
 			tech = 'zipir-mk04'
 		},
 	}

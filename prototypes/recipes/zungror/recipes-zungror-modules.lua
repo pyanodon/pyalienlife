@@ -9,7 +9,7 @@
 RECIPE {
     type = 'recipe',
     name = 'zungror-mk02',
-    category = 'rc',
+    category = 'rc-zungror',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -41,7 +41,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'zungror-mk03',
-    category = 'rc',
+    category = 'rc-zungror',
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -74,7 +74,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'zungror-mk04',
-    category = 'rc',
+    category = 'rc-zungror',
     enabled = false,
     energy_required = 30,
     ingredients = {
