@@ -1,7 +1,21 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.12.5
-Date: ????
+Version: 2.0.1
+Date: 2022-10-20
   Changes:
+    - doubled the number of korlex, mukmoux, and ulric in thier respective breeding recipes from 1 to 2.
+    - removed free stuff debug recipes.
+    - fixed that sap made everything go brrrrrrrrrrr
+    - slight speed increase to love shack.
+    - a number of module breeding recipes moved to reproductive complex
+    - py drive re added.
+    - reproductive complex now requires modules.
+    - adjustments to all farming modules in relation to reproductive complex getting modules
+    - moved manure to oil from shale oil tech to light oil mk01 tech
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 2022-10-14
+  Changes:
+    - all the animals got loose and there was carnage everywhere.
 ---------------------------------------------------------------------------------------------------
 Version: 1.12.4
 Date: 2021-03-18
