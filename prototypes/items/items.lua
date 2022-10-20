@@ -7072,6 +7072,8 @@ ITEM {
     stack_size = 50
 }
 
+-- Kmauts can have up to 200 kmaut modules per farm, so the bonus can't be 100%
+-- like every other animal
 ITEM {
     type = "module",
     name = "kmauts",
@@ -7086,7 +7088,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-a",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
+	effect = {pollution = {bonus = 1},speed = {bonus = .25}},
 	limitation = {},
 	limitation_message_key = "kmauts"
 }
@@ -7106,7 +7108,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-b",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
+	effect = {pollution = {bonus = 1},speed = {bonus = .5}},
 	limitation = {},
 	limitation_message_key = "kmauts"
 }
@@ -7126,7 +7128,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-c",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 3}},
+	effect = {pollution = {bonus = 1},speed = {bonus = .75}},
 	limitation = {},
 	limitation_message_key = "kmauts"
 }
@@ -7146,7 +7148,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 4}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "kmauts"
 }
