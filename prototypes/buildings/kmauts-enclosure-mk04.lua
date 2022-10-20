@@ -1,6 +1,3 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-local MODULE_SLOTS = 200
-
 RECIPE {
     type = "recipe",
     name = "kmauts-enclosure-mk04",
@@ -46,11 +43,11 @@ ENTITY {
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = MODULE_SLOTS
+        module_slots = 200
     },
     allowed_effects = {"speed","productivity",'consumption','pollution'},
     crafting_categories = {"kmauts"},
-    crafting_speed = FUN.farm_speed_derived(MODULE_SLOTS, "kmauts-enclosure-mk01"),
+    crafting_speed = .0636,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

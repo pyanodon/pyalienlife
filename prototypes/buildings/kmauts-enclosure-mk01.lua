@@ -1,7 +1,3 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-local MODULE_SLOTS = 50
-local FULL_CRAFTING_SPEED = .8 -- crafting speed when full of mk01 modules
-
 RECIPE {
     type = "recipe",
     name = "kmauts-enclosure-mk01",
@@ -48,11 +44,11 @@ ENTITY {
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = MODULE_SLOTS
+        module_slots = 50
     },
     allowed_effects = {"speed","productivity",'consumption','pollution'},
     crafting_categories = {"kmauts"},
-    crafting_speed = FUN.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
+    crafting_speed = .0627,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
