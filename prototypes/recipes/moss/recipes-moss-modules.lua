@@ -19,7 +19,7 @@ RECIPE {
         {type = 'item', name = 'wood', amount = 5},
     },
     results = {
-        {type = 'item', name = 'moss-mk02', amount = 1},
+        {type = 'item', name = 'moss-mk02', amount = 1, probability = 0.02},
     },
   }:add_unlock("moss-mk02"):add_ingredient({type = "item", name = "urea", amount = 1})
 
@@ -39,7 +39,7 @@ RECIPE {
         {type = 'item', name = 'tuuphra-seeds', amount = 5},
     },
     results = {
-        {type = 'item', name = 'moss-mk03', amount = 1},
+        {type = 'item', name = 'moss-mk03', amount = 1, probability = 0.02},
     },
   }:add_unlock("moss-mk03")
 
@@ -59,6 +59,6 @@ RECIPE {
         {type = 'item', name = 'bhoddos', amount = 5},
     },
     results = {
-        {type = 'item', name = 'moss-mk04', amount = 1},
+        {type = 'item', name = 'moss-mk04', amount = 1, probability = 0.02},
     },
   }:add_unlock("moss-mk04")
