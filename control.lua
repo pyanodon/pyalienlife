@@ -317,6 +317,15 @@ local function disable_machine(entity)
     end
 end
 
+local function init_discoscience()
+    if remote.interfaces["DiscoScience"] and remote.interfaces["DiscoScience"]["setIngredientColor"] then
+        remote.call("DiscoScience", "setIngredientColor", "py-science-pack-1", {r = 178, g = 88, b = 1})
+        remote.call("DiscoScience", "setIngredientColor", "py-science-pack-2", {r = 246, g = 125, b = 45})
+        remote.call("DiscoScience", "setIngredientColor", "py-science-pack-3", {r = 213, g = 134, b = 23})
+        remote.call("DiscoScience", "setIngredientColor", "py-science-pack-4", {r = 192, g = 75, b = 23})
+        remote.call("DiscoScience", "setIngredientColor", "automation-secience-pack", {r = 158, g = 129, b = 100})
+    end
+end
 
 script.on_init(function()
     if remote.interfaces['freeplay'] then
@@ -411,6 +420,8 @@ script.on_init(function()
 			input_order = {},
 			output_order = {}
 		}
+    
+        init_discoscience()
 end)
 
 script.on_load(function()
@@ -461,6 +472,8 @@ script.on_configuration_changed(function()
   --log(serpent.block(global.checked_farm_counter))
   --log(serpent.block(global.farm_rendered_icons))
     ]]--
+
+    init_discoscience()
 
 end)
 
