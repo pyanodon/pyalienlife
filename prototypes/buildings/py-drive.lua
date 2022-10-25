@@ -57,7 +57,7 @@
         drawing_box = {{-3.0, -3.0}, {3.0, 3.0}},
         inventory_size = 100,
         scale_info_icons = true,
-		picture = {
+        picture = {
             filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/off.png",
             priority = "low",
             width = 512,
@@ -65,7 +65,19 @@
             --scale = 0.5,
             shift = util.by_pixel(16, -48),
         },
-        gui_mode = 'all'
+        inventory_type = "with_filters_and_bar",
+        gui_mode = 'all',
+        circuit_wire_connection_point = {
+          shadow = {
+              red = {-0.484375, -6.10938},
+              green = {-0.390625, -6.10938}
+          },
+          wire = {
+              red = {-0.1875, -5.59375},
+              green = {-0.1875, -5.71875}
+          }
+      },
+        circuit_wire_max_distance = _G.default_circuit_wire_max_distance,
     }
 --[[
     ENTITY {
