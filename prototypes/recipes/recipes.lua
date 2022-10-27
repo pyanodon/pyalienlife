@@ -603,7 +603,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'pelt', amount = 1},
         {type = 'fluid', name = 'soda-ash', amount = 100},
-        {type = 'item', name = 'sodium-aluminate', amount = 1},
+        {type = 'item', name = 'sodium-aluminate', amount = 4},
         {type = 'item', name = 'salt', amount = 10},
     },
     results = {
