@@ -15,7 +15,8 @@
     "pypetroleumhandling >= 1.3.4",
     "(?) pyhightech >= 1.5.0",
     "! pyveganism >= 0.0.1",
-    "! omnimatter_wood"
+    "! omnimatter_wood",
+    "! pychinese"
   ],
   "package": {
     "ignore": [],
