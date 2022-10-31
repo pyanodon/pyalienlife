@@ -162,7 +162,7 @@ data.raw.item['milk-barrel'] = nil
 RECIPE {
     type = 'recipe',
     name = 'fill-milk-barrel',
-    category = 'crafting-with-fluid',
+    category = 'py-barreling',
     enabled = false,
     energy_required = 1,
     ingredients = {
@@ -177,7 +177,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'empty-milk-barrel',
-    category = 'crafting-with-fluid',
+    category = 'py-unbarreling',
     enabled = false,
     energy_required = 1,
     ingredients = {
