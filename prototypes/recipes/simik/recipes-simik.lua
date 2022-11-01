@@ -171,6 +171,13 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'tar', amount = 45},
     },
+    crafting_machine_tint =
+    {
+        primary = {r = 0.290, g = 0.388, b = 0.172},
+        secondary = {r = 1, g = 1, b = 1},
+        tertiary = {r = 0.290, g = 0.388, b = 0.172},
+        quaternary = {r = 0.290, g = 0.388, b = 0.172},
+    }
 }:add_unlock("simik-mk01")
 
 RECIPE {

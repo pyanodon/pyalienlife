@@ -38,7 +38,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'auog-pup-01',
-    category = 'auog',
+    category = 'rc-auog',
     enabled = false,
     energy_required = 100,
     ingredients = {

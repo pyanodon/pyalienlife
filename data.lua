@@ -614,6 +614,7 @@ require('prototypes/recipes/mukmoux/recipes-mukmoux-raising')
 require('prototypes/recipes/mukmoux/recipes-mukmoux-rendering')
 require('prototypes/recipes/mukmoux/recipes-mukmoux-growth-enhacement')
 require('prototypes/recipes/mukmoux/recipes-mukmoux-modules')
+require('prototypes/recipes/mukmoux/recipes-mukmoux-products')
 
 --Navens
 require('prototypes/recipes/navens/recipes-navens')

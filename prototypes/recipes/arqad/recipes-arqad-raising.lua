@@ -102,11 +102,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name = 'arqad-egg', amount = 30},
+					{name = "caged-vrauks", amount = 10},
                     {name = 'honeycomb', amount = 5, return_item = {name = 'used-comb'}},
 				},
 			results =
 				{
 					{name='arqad-maggot', amount = 30},
+					{name = "cage", amount = 10},
 				},
 			crafting_speed = 70,
 			tech = 'arqad'
