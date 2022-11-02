@@ -524,6 +524,7 @@ require('prototypes/recipes/auog/recipes-auog-raising')
 require('prototypes/recipes/auog/recipes-auog-rendering')
 require('prototypes/recipes/auog/recipes-auog-growth-enhancement')
 require('prototypes/recipes/auog/recipes-auog-modules')
+require('prototypes/recipes/auog/recipes-auog-products')
 
 --Bhoddos
 require('prototypes/recipes/bhoddos/recipes-bhoddos')
