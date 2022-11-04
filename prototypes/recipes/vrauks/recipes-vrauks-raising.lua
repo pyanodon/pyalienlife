@@ -86,7 +86,7 @@ FUN.autorecipes {
     subgroup = "py-alienlife-vrauks",
     order = "c",
     main_product = "cocoon",
-    crafting_speed = 25,
+    crafting_speed = 40,
     mats = {
         -- base
         {

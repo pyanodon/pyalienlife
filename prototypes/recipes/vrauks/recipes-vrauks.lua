@@ -4,7 +4,7 @@ RECIPE {
     name = 'vrauks',
     category = 'creature-chamber',
     enabled = true,
-    energy_required = 300,
+    energy_required = 400,
     ingredients = {
         {type = 'item', name = 'native-flora', amount = 10},
         {type = 'item', name = 'moss-gen', amount = 3},
@@ -112,7 +112,7 @@ RECIPE {
 }:add_unlock("vrauks")
 
 ---maturing---
-
+--[[
 RECIPE {
     type = 'recipe',
     name = 'vrauks-mature-01',
@@ -152,3 +152,4 @@ RECIPE {
     subgroup = 'py-alienlife-vrauks',
     order = 'a',
 }:add_unlock("growth-hormone")
+]]--
