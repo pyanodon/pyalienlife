@@ -1,4 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: 2022-11-03
+  Changes:
+    - reduced output of moss mk2-mk4.
+    - added russian translation.
+    - fixed that py science packs didnt work with disco science.
+    - moved milk barreling and unbarreling from assembling machine to barreling machine.
+    - added missing caged vrauks to arqad rasing recipe.
+    - added mukmoux manure recipes.
+    - removed manure from mukmoux bredding recipes.
+    - removed cage probability from vrauks and increased output on most recipes.
+    - removed the poo from auog pup breeding.
+    - added aoug manure recipes.
+---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: 2022-10-20
   Changes:
