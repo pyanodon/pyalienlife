@@ -5791,7 +5791,7 @@ ITEM {
      type = "module",
      name = "ralesias-mk04",
      icons =
- 	{
+ 	 {
          {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
          {icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png"}
      },
@@ -5806,6 +5806,51 @@ ITEM {
  	limitation = {},
  	limitation_message_key = "ralesia"
  }
+
+ITEM {
+    type = "item",
+    name = "ralesia-seeds-mk02",
+    icons =
+ 	 {
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+         {icon = "__pycoalprocessinggraphics__/graphics/icons/ralesia-seeds.png"}
+     },
+    icon_size = 32,
+    flags = {},
+    subgroup = "py-items",
+    order = "rd",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "ralesia-seeds-mk03",
+    icons =
+ 	 {
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+         {icon = "__pycoalprocessinggraphics__/graphics/icons/ralesia-seeds.png"}
+     },
+    icon_size = 32,
+    flags = {},
+    subgroup = "py-items",
+    order = "rd",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "ralesia-seeds-mk04",
+    icons =
+ 	 {
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+         {icon = "__pycoalprocessinggraphics__/graphics/icons/ralesia-seeds.png"}
+     },
+    icon_size = 32,
+    flags = {},
+    subgroup = "py-items",
+    order = "rd",
+    stack_size = 100
+}
 
 ITEM {
     type = "module",
