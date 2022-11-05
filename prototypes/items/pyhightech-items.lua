@@ -206,6 +206,51 @@ ITEM {
 }
 
 ITEM {
+    type = "item",
+    name = "moondrop-seeds-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/moondrop-seeds.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-moon",
+    order = "x",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "moondrop-seeds-mk03",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/moondrop-seeds.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-moon",
+    order = "x",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "moondrop-seeds-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/moondrop-seeds.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-moon",
+    order = "x",
+    stack_size = 100
+}
+
+ITEM {
     type = "module",
     name = "moondrop",
     icons =
