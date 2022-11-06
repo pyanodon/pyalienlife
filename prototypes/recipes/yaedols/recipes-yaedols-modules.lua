@@ -215,5 +215,5 @@ RECIPE {
     results = {
         {type = 'item', name = 'yaedols-spores-mk04', amount = 5},
     },
-    main_product = "yaedols-spores-mk03",
+    main_product = "yaedols-spores-mk04",
 }--:add_unlock("yaedols-mk03")
