@@ -245,8 +245,53 @@ ITEM {
 ITEM {
     type = "item",
     name = "yaedols-spores",
-    icon = "__pyalienlifegraphics__/graphics/icons/yaedols-spores.png",
-    icon_size = 64,
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/yaedols-spores.png", icon_size = 32,},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png", icon_size = 64},
+        },
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "yaedols-spores-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/yaedols-spores.png", icon_size = 32,},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
+        },
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "yaedols-spores-mk03",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/yaedols-spores.png", icon_size = 32,},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
+        },
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "yaedols-spores-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/yaedols-spores.png", icon_size = 32,},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
+        },
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
