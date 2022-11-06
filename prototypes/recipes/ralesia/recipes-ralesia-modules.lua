@@ -47,7 +47,7 @@ RECIPE {
         {type = 'item', name = 'ralesia-seeds-mk02', amount = 2, probability = 0.5},
         {type = 'item', name = 'fawogae-spore-mk02', amount = 2, probability = 0.5},
     },
-    main_product = "ralesia-mk02",
+    main_product = "ralesias-mk02",
     icons =
         {
             {icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png", icon_size = 64},
