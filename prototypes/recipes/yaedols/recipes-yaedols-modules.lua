@@ -28,7 +28,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-yaedols',
     order = 'za'
-}:add_unlock("yaedols-mk02")
+}--:add_unlock("yaedols-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -57,7 +57,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-yaedols',
     order = 'za'
-}:add_unlock("yaedols-mk02")
+}--:add_unlock("yaedols-mk02")
 
 RECIPE {
     type = 'recipe',
@@ -72,7 +72,7 @@ RECIPE {
         {type = 'item', name = 'yaedols-spores-mk02', amount = 5},
     },
     main_product = "yaedols-spores-mk02",
-}:add_unlock("yaedols-mk02")
+}--:add_unlock("yaedols-mk02")
 
 --mk03--
 
@@ -100,7 +100,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-yaedols',
     order = 'zb'
-}:add_unlock("yaedols-mk03")
+}--:add_unlock("yaedols-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -129,7 +129,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-yaedols',
     order = 'za'
-}:add_unlock("yaedols-mk03")
+}--:add_unlock("yaedols-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -144,7 +144,7 @@ RECIPE {
         {type = 'item', name = 'yaedols-spores-mk03', amount = 5},
     },
     main_product = "yaedols-spores-mk03",
-}:add_unlock("yaedols-mk03")
+}--:add_unlock("yaedols-mk03")
 
 --mk04--
 
@@ -172,7 +172,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-yaedols',
     order = 'zc'
-}:add_unlock("yaedols-mk04")
+}--:add_unlock("yaedols-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -201,7 +201,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-yaedols',
     order = 'za'
-}:add_unlock("yaedols-mk04")
+}--:add_unlock("yaedols-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -216,4 +216,4 @@ RECIPE {
         {type = 'item', name = 'yaedols-spores-mk04', amount = 5},
     },
     main_product = "yaedols-spores-mk03",
-}:add_unlock("yaedols-mk03")
+}--:add_unlock("yaedols-mk03")
