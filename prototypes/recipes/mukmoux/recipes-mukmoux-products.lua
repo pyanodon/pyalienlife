@@ -26,7 +26,7 @@ FUN.autorecipes {
 				{
 					{name = 'manure', amount = 5},
 				},
-			crafting_speed = 10,
+			crafting_speed = 90,
 			tech = 'mukmoux'
 		},
 		--py
@@ -40,7 +40,7 @@ FUN.autorecipes {
 				{
 					{name = 'manure', add_amount = 5},
 				},
-			crafting_speed = 7,
+			crafting_speed = 80,
 			tech = 'mukmoux-mk02'
 		},
 		--chem
@@ -54,7 +54,7 @@ FUN.autorecipes {
 				{
 					{name = 'manure', add_amount = 5},
 				},
-			crafting_speed = 6,
+			crafting_speed = 60,
 			tech = 'mukmoux-mk03'
 		},
 		--prod
@@ -67,7 +67,7 @@ FUN.autorecipes {
 				{
 					{name = 'manure', add_amount = 5},
 				},
-			crafting_speed = 5,
+			crafting_speed = 50,
 			tech = 'mukmoux-mk04'
 		},
 	}

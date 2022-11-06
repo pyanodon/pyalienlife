@@ -21,7 +21,7 @@ FUN.autorecipes {
 				{
 					{name = 'manure', amount_min = 3, amount_max = 8}
 				},
-			crafting_speed = 15,
+			crafting_speed = 100,
 			tech = 'auog',
 			main_product = 'manure'
 		},
@@ -36,7 +36,7 @@ FUN.autorecipes {
 					{name = 'manure', remove_item = true},
 					{name = 'manure', amount_min = 5, amount_max = 12}
 				},
-			crafting_speed = 15,
+			crafting_speed = 80,
 			tech = 'auog',
 			main_product = 'manure'
 		},
@@ -53,7 +53,7 @@ FUN.autorecipes {
 					{name = 'manure', remove_item = true},
 					{name = 'manure', amount_min = 7, amount_max = 14}
 				},
-			crafting_speed = 12,
+			crafting_speed = 60,
 			tech = 'auog-mk02',
 			main_product = 'manure'
 		},
@@ -73,7 +73,7 @@ FUN.autorecipes {
 					{name = 'manure', remove_item = true},
 					{name = 'manure', amount_min = 10, amount_max = 20}
 				},
-			crafting_speed = 12,
+			crafting_speed = 30,
 			tech = 'auog-mk03',
 			main_product = 'manure'
 		},
@@ -89,7 +89,7 @@ FUN.autorecipes {
 					{name = 'manure', remove_item = true},
 					{name = 'manure', amount_min = 20, amount_max = 30}
 				},
-			crafting_speed = 10,
+			crafting_speed = 20,
 			tech = 'auog-mk04',
 			main_product = 'manure'
 		},
