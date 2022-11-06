@@ -403,6 +403,7 @@ RECIPE('formamide'):replace_ingredient("nitrogen", "ammonia"):change_category('f
 RECIPE('bacteria-2'):remove_unlock('biopolymer'):add_unlock('microbiology-mk04'):add_ingredient({type = "item", name = "petri-dish", amount = 3}):add_ingredient({type = "item", name = "nexelit-plate", amount = 2}):add_ingredient({type = "item", name = "flask", amount = 5}):add_ingredient({type = "item", name = "chitin", amount = 5})
 RECIPE('rendering'):remove_unlock('basic-electronics')
 RECIPE('crco-alloy'):remove_ingredient("tailings-dust"):add_ingredient({type = "item", name = "cobalt-nx", amount = 2})
+RECIPE('hotair-crco-alloy'):remove_ingredient("tailings-dust"):add_ingredient({type = "item", name = "cobalt-nx", amount = 2})
 RECIPE('raw-fiber'):remove_unlock('fertilizer'):set_fields {enabled = false}
 RECIPE('raw-fiber2'):remove_unlock('basic-electronics'):set_fields {enabled = false}
 --RECIPE('raw-fiber3'):remove_unlock('basic-electronics'):set_fields {enabled = false}
