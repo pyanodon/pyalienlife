@@ -15,6 +15,8 @@ end
 
 RECIPE("mixer-mk01"):remove_unlock("drilling-fluid-mk01"):add_unlock("machines-mk01")
 
+RECIPE("reformer-mk01"):remove_unlock('oil-machines-mk01'):add_unlock('scrude')
+
 --BUILDINDS--
 
 --TECHNOLOGIES--
