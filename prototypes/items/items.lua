@@ -234,7 +234,56 @@ ITEM {
 ITEM {
     type = "item",
     name = "navens-spore",
-    icon = "__pyalienlifegraphics__/graphics/icons/navens-spore.png",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/navens-spore.png", icon_size = 32,},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png", icon_size = 64},
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "navens-spore-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/navens-spore.png", icon_size = 32,},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "navens-spore-mk03",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/navens-spore.png", icon_size = 32,},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
+        },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "navens-spore-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/navens-spore.png", icon_size = 32,},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
+        },
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-items",
@@ -2869,6 +2918,51 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "fish-egg-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/fish-eggs.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "x",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "fish-egg-mk03",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/fish-eggs.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "x",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "fish-egg-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/fish-eggs.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-items",
+    order = "x",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
     name = "fish-food-01",
     icon = "__pyalienlifegraphics__/graphics/icons/fish-food-01.png",
 	icon_size = 64,
@@ -3361,6 +3455,51 @@ ITEM {
     subgroup = "py-alienlife-xyhiphoe",
     order = "x",
     stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "xyhiphoe-cub-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe-cub.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-xyhiphoe",
+    order = "x",
+    stack_size = 100,
+}
+
+ITEM {
+    type = "item",
+    name = "xyhiphoe-cub-mk03",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe-cub.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-xyhiphoe",
+    order = "x",
+    stack_size = 100,
+}
+
+ITEM {
+    type = "item",
+    name = "xyhiphoe-cub-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe-cub.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-xyhiphoe",
+    order = "x",
+    stack_size = 100,
 }
 
 ITEM {
@@ -6821,7 +6960,6 @@ ITEM {
  ITEM {
      type = "module",
      name = "fish-mk02",
-     icon = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png",
      icons =
  	{
          {icon = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png"},
@@ -6857,7 +6995,6 @@ ITEM {
  ITEM {
      type = "module",
      name = "fish-mk03",
-     icon = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png",
      icons =
  	{
          {icon = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png"},
@@ -6893,7 +7030,6 @@ ITEM {
  ITEM {
      type = "module",
      name = "fish-mk04",
-     icon = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png",
      icons =
  	{
          {icon = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png"},
