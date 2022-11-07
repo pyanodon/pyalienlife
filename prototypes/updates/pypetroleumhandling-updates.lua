@@ -13,6 +13,8 @@ if mods['pyhightech'] then
     FUN.results_replacer('arqad-mk04','empty-barrel','empty-barrel', 8)
 end
 
+RECIPE("mixer-mk01"):remove_unlock("drilling-fluid-mk01"):add_unlock("machines-mk01")
+
 --BUILDINDS--
 
 --TECHNOLOGIES--
