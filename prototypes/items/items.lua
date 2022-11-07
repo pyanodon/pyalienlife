@@ -1721,7 +1721,51 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/sea-sponge-sprouts.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-creatures",
+    subgroup = "py-alienlife-sea-sponge",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "sea-sponge-sprouts-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/sea-sponge-sprouts.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-sea-sponge",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "sea-sponge-sprouts-mk03",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/sea-sponge-sprouts.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-sea-sponge",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "sea-sponge-sprouts-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/sea-sponge-sprouts.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
+        },
+	icon_size = 64,
+    flags = {},
     subgroup = "py-alienlife-sea-sponge",
     order = "a",
     stack_size = 100
@@ -3476,7 +3520,101 @@ ITEM {
 ITEM {
     type = "item",
     name = "grod-seeds",
-    icon = "__pyalienlifegraphics__/graphics/icons/grod-seeds.png",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/grod-seeds.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-grod",
+    order = "x",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "grod-seeds-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/grod-seeds.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-grod",
+    order = "x",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "grod-seeds-pod-mk02",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk02.png", icon_size = 64},
+            {icon = "__pyalienlifegraphics__/graphics/icons/grod-seeds.png", icon_size = 64, scale = 0.35},
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-grod",
+    order = "x",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "grod-seeds-mk03",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/grod-seeds.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-grod",
+    order = "x",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "grod-seeds-pod-mk03",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk03.png", icon_size = 64},
+            {icon = "__pyalienlifegraphics__/graphics/icons/grod-seeds.png", icon_size = 64, scale = 0.35},
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-grod",
+    order = "x",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "grod-seeds-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics__/graphics/icons/grod-seeds.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-grod",
+    order = "x",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "grod-seeds-pod-mk04",
+    icons =
+        {
+            {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk04.png", icon_size = 64},
+            {icon = "__pyalienlifegraphics__/graphics/icons/grod-seeds.png", icon_size = 64, scale = 0.35},
+        },
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-grod",
@@ -8258,6 +8396,21 @@ ITEM {
 }
 
 ITEM {
+    type = "item",
+    name = "guar-seeds-mk02",
+    icons =
+        {
+            {icon = "__pypetroleumhandlinggraphics__/graphics/icons/guar-seeds.png", icon_size = 32},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "g-b",
+    stack_size = 100
+}
+
+ITEM {
     type = "module",
     name = "guar-mk03",
     icons =
@@ -8278,6 +8431,21 @@ ITEM {
 }
 
 ITEM {
+    type = "item",
+    name = "guar-seeds-mk03",
+    icons =
+        {
+            {icon = "__pypetroleumhandlinggraphics__/graphics/icons/guar-seeds.png", icon_size = 32},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "g-c",
+    stack_size = 100
+}
+
+ITEM {
     type = "module",
     name = "guar-mk04",
     icons =
@@ -8295,6 +8463,21 @@ ITEM {
 	effect = {pollution = {bonus = 1},speed = {bonus = 60}},
 	limitation = {},
 	limitation_message_key = "guar"
+}
+
+ITEM {
+    type = "item",
+    name = "guar-seeds-mk04",
+    icons =
+        {
+            {icon = "__pypetroleumhandlinggraphics__/graphics/icons/guar-seeds.png", icon_size = 32},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
+        },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "g-d",
+    stack_size = 100
 }
 
 ----ARQAD
