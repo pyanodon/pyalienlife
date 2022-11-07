@@ -103,7 +103,6 @@ RECIPE("aluminium-plate-1"):add_unlock("moss-mk01"):set_enabled(false)
 --RECIPES--
 
 -- RECIPE("chemical-plant-mk01"):remove_unlock('coal-processing-2'):add_unlock('machines-mk01')
--- RECIPE("evaporator"):remove_unlock('fluid-processing-machines-1'):add_unlock('nexelit-mk01')
 
 RECIPE('mukmoux-fat-salt'):remove_unlock('mukmoux')
 RECIPE('bonemeal-salt'):remove_unlock('ulric')

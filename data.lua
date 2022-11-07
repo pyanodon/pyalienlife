@@ -134,6 +134,8 @@ require('prototypes/technologies/sugar')
 require('prototypes/technologies/ethanol')
 require('prototypes/technologies/ash-separation')
 
+require("prototypes/technologies/crusher")
+
 if mods["pyhightech"] then
     require('prototypes/technologies/mining-with-fluid')
     require('prototypes/technologies/electric-mining-drill')

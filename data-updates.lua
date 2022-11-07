@@ -389,14 +389,16 @@ RECIPE("concrete"):remove_unlock("separation"):add_unlock("concrete")
 
 RECIPE("hazard-concrete"):remove_unlock("separation"):add_unlock("concrete")
 
-RECIPE("quenching-tower"):remove_unlock('nexelit-mk01'):add_unlock("tar-processing"):remove_ingredient("electronic-circuit")
+RECIPE("quenching-tower"):remove_unlock('machines-mk01'):remove_unlock("separation"):add_unlock("tar-processing"):remove_ingredient("electronic-circuit")
 
 RECIPE("lime"):remove_unlock('separation'):add_unlock("concrete")
 
 RECIPE("extract-sulfur"):remove_unlock("fluid-processing-machines-1"):add_unlock("tar-processing")
 
-RECIPE("evaporator"):remove_unlock('fluid-processing-machines-2'):add_unlock("tar-processing")
+RECIPE("evaporator"):remove_unlock('fluid-processing-machines-1'):add_unlock("tar-processing")
 
 RECIPE("tailings-dust"):remove_unlock('fluid-processing-machines-1'):add_unlock("tar-processing")
 
 RECIPE("sand-brick"):remove_unlock("concrete"):add_unlock("tar-processing")
+
+RECIPE("ball-mill-mk01"):remove_unlock("crusher"):add_unlock("crusher-2")
