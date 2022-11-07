@@ -14,6 +14,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
+					{name = 'zipir1', amount = 3,},
                     {name='pressured-water', amount = 60, fluidbox_index = 2,return_item={name='waste-water', amount=200}},
 					{name='stone-wool', amount =2, fallback = "raw-fiber"},
 					{name='fish', amount =5},
@@ -22,8 +23,9 @@ FUN.autorecipes {
 			results =
 				{
                     {name='zipir-eggs', probability = 1, amount_min =5, amount_max =7},  -- maybe 8 for the max if you feel generous
+					{name = 'zipir1', amount = 3,},
 				},
-			crafting_speed = 40,
+			crafting_speed = 60,
 			tech = 'zipir'
 		},
 		--fawogae
@@ -38,7 +40,7 @@ FUN.autorecipes {
 				{
 
 				},
-			crafting_speed = 30,
+			crafting_speed = 45,
 			tech = 'zipir-mk02'
 		},
 		--water saline
@@ -52,7 +54,7 @@ FUN.autorecipes {
 				{
 
 				},
-			crafting_speed = 25,
+			crafting_speed = 30,
 			tech = 'zipir-mk03'
 		},
 		--food1
@@ -63,9 +65,10 @@ FUN.autorecipes {
 				},
 			results =
 				{
-
+					{name='zipir-eggs',remove_item = true},
+					{name='zipir-eggs', probability = 1, amount_min =8, amount_max =15},
 				},
-			crafting_speed = 22,
+			crafting_speed = 20,
 			tech = 'zipir-mk03'
 		},
 		--food 2
@@ -78,7 +81,8 @@ FUN.autorecipes {
 				},
 			results =
 				{
-
+					{name='zipir-eggs',remove_item = true},
+					{name='zipir-eggs', probability = 1, amount_min =14, amount_max =20},
 				},
 			crafting_speed = 20,
 			tech = 'zipir-mk04'
