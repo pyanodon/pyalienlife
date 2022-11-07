@@ -381,8 +381,6 @@ for _, category in pairs(searchtypes) do
     end
 end
 
---TODO UNFUCK PYAL +PYHT WITH NEW GUNPOWDER
-
 RECIPE("tar-quenching"):remove_unlock('nexelit-mk01'):add_unlock("tar-processing")
 
 RECIPE("concrete"):remove_unlock("separation"):add_unlock("concrete")
