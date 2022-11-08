@@ -19,7 +19,7 @@ FUN.autorecipes {
                 {name = "water-barrel", amount = 3, return_barrel = true}
             },
             results = {
-                {name = "caged-vrauks", amount = 4},
+                {name = "caged-vrauks", amount = 2},
             },
             tech = "vrauks"
         },
@@ -33,7 +33,7 @@ FUN.autorecipes {
                 {name = "vrauks-food-01", amount = 2},
                 {name = "saps", amount = 10}
             },
-            results = {{name = "caged-vrauks", amount = 10},},
+            results = {{name = "caged-vrauks", amount = 4},},
             tech = "vrauks-mk02"
         },
         -- py science 2
@@ -45,7 +45,7 @@ FUN.autorecipes {
                 {name = "vrauks-food-02", amount = 1},
                 {name = "saps", add_amount = 10}
             },
-            results = {{name = "caged-vrauks", amount = 18}},
+            results = {{name = "caged-vrauks", amount = 8}},
             tech = "vrauks-mk03"
         },
         -- py science 3
@@ -58,7 +58,7 @@ FUN.autorecipes {
                 {name = "syrup-01-barrel", amount = 2, return_barrel = true},
                 {name = "gh", amount = 1}
             },
-            results = {{name = "caged-vrauks", amount = 29}},
+            results = {{name = "caged-vrauks", amount = 12}},
             tech = "vrauks-mk04"
         },
         -- py science 4
@@ -71,7 +71,7 @@ FUN.autorecipes {
                 {name = "vrauks-food-02", add_amount = 6},
                 {name = "antiviral", amount = 1}
             },
-            results = {{name = "caged-vrauks", remove_item = true}, {name = "caged-vrauks", amount = 46}},
+            results = {{name = "caged-vrauks", remove_item = true}, {name = "caged-vrauks", amount = 20}},
             tech = "vrauks-mk05"
         }
     }
