@@ -284,7 +284,7 @@ RECIPE {
         {type = 'fluid', name = 'liquid-manure', amount = 70},
         {type = 'item', name = 'pure-sand', amount = 10},
         {type = 'item', name = 'ag-biomass', amount = 10},
-        {type = 'item', name = 's-biomass', amount = 10},
+        {type = 'item', name = 'nacl-biomass', amount = 10},
         {type = 'item', name = 'antiviral', amount = 2},
         
         },
