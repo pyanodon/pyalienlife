@@ -215,7 +215,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-sponge',
     order = 'zc'
-}:add_unlock("water-invertebrates-mk04")
+}:add_unlock("water-invertebrates-mk04"):replace_ingredient("bacteria-1", "bacteria-2")
 
 RECIPE {
     type = 'recipe',
