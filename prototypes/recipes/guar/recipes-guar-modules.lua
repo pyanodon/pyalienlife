@@ -132,7 +132,6 @@ RECIPE {
         {type = 'item', name = 'fertilizer', amount = 10},
         {type = 'item', name = 'pesticide-mk01', amount = 10},
         {type = 'item', name = 'dried-grods', amount = 10},
-        {type = 'fluid', name = 'raw-ralesia-extract', amount = 100, fluidbox_index = 1},
         {type = 'fluid', name = 'carbon-dioxide', amount = 200, fluidbox_index = 2},
         },
     results = {
@@ -147,7 +146,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-guar',
     order = 'zb'
-}:add_unlock("guar-mk03")
+}:add_unlock("guar-mk03"):add_ingredient({type = 'fluid', name = 'raw-ralesia-extract', amount = 100, fluidbox_index = 1})
 
 RECIPE {
     type = "recipe",
@@ -219,7 +218,6 @@ RECIPE {
         {type = 'item', name = 'pesticide-mk02', amount = 10},
         {type = 'item', name = 'dried-grods', amount = 10},
         {type = 'item', name = 'sternite-lung', amount = 2},
-        {type = 'fluid', name = 'raw-ralesia-extract', amount = 100, fluidbox_index = 1},
         {type = 'fluid', name = 'carbon-dioxide', amount = 200, fluidbox_index = 2},
         },
     results = {
@@ -234,7 +232,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-guar',
     order = 'zc'
-}:add_unlock("guar-mk04")
+}:add_unlock("guar-mk04"):add_ingredient({type = 'fluid', name = 'raw-ralesia-extract', amount = 100, fluidbox_index = 1})
 
 RECIPE {
     type = "recipe",
