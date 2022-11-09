@@ -89,7 +89,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'grod-seeds-mk02-soaker',
-    category = 'centrifuging',
+    category = 'chemistry',
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -195,7 +195,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'grod-seeds-mk03-soaker',
-    category = 'centrifuging',
+    category = 'chemistry',
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -301,7 +301,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'grod-seeds-mk04-soaker',
-    category = 'centrifuging',
+    category = 'chemistry',
     enabled = false,
     energy_required = 40,
     ingredients = {
