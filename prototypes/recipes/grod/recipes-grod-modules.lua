@@ -45,7 +45,6 @@ RECIPE {
         {type = 'fluid', name = 'carbon-dioxide', amount = 300, fluidbox_index = 2},
         {type = 'item', name = 'fertilizer', amount = 10},
         {type = 'item', name = 'limestone', amount = 10},
-        {type = 'item', name = 'urea', amount = 10},
         {type = 'fluid', name = 'water', amount = 1000, fluidbox_index = 1},
         },
     results = {
@@ -62,7 +61,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-grod',
     order = 'za'
-}:add_unlock("grod-mk02")
+}:add_unlock("grod-mk02"):add_ingredient({type = 'item', name = 'urea', amount = 10})
 
 RECIPE {
     type = 'recipe',
@@ -150,7 +149,6 @@ RECIPE {
         {type = 'fluid', name = 'slacked-lime', amount = 300, fluidbox_index = 2},
         {type = 'item', name = 'fertilizer', amount = 10},
         {type = 'item', name = 'limestone', amount = 10},
-        {type = 'item', name = 'urea', amount = 10},
         {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'pesticide-mk01', amount = 1},
         {type = 'fluid', name = 'water', amount = 1000, fluidbox_index = 1},
@@ -169,7 +167,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-grod',
     order = 'zb'
-}:add_unlock("grod-mk03")
+}:add_unlock("grod-mk03"):add_ingredient({type = 'item', name = 'urea', amount = 10})
 
 RECIPE {
     type = 'recipe',
@@ -257,7 +255,6 @@ RECIPE {
         {type = 'fluid', name = 'slacked-lime', amount = 300, fluidbox_index = 2},
         {type = 'item', name = 'fertilizer', amount = 10},
         {type = 'item', name = 'limestone', amount = 10},
-        {type = 'item', name = 'urea', amount = 10},
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},
         {type = 'item', name = 'pesticide-mk02', amount = 1},
         {type = 'fluid', name = 'water', amount = 1000, fluidbox_index = 1},
@@ -276,7 +273,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-grod',
     order = 'zc'
-}:add_unlock("grod-mk04")
+}:add_unlock("grod-mk04"):add_ingredient({type = 'item', name = 'urea', amount = 10})
 
 RECIPE {
     type = 'recipe',
