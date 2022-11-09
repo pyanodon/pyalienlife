@@ -212,7 +212,7 @@ RECIPE {
         {type = 'item', name = 'navens-spore-mk04', amount = 10},
         {type = 'item', name = 'xyhiphoe-mk04', amount = 1},
         {type = 'item', name = 'fungal-substrate-03', amount = 10},
-        {type = 'fluid', name = 'bacteria-2', amount = 500, fluidbox_index = 2},
+        {type = 'fluid', name = 'bacteria-1', amount = 500, fluidbox_index = 2},
         },
     results = {
         {type = 'item', name = 'navens-mk04', amount = 8},
@@ -227,7 +227,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-navens',
     order = 'zc'
-}:add_unlock("navens-mk04"):add_ingredient({type = 'item', name = 'urea', amount = 25})
+}:add_unlock("navens-mk04"):add_ingredient({type = 'item', name = 'urea', amount = 25}):replace_ingredient("bacteria-1", "bacteria-2")
 
 RECIPE {
     type = 'recipe',
