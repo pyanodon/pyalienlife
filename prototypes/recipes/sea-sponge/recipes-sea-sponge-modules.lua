@@ -200,7 +200,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'sea-sponge-sprouts-mk04', amount = 1},
         {type = 'fluid', name = 'high-grade-quartz-pulp', amount = 50},
-        {type = 'fluid', name = 'bacteria-2', amount = 50},
+        {type = 'fluid', name = 'bacteria-1', amount = 50},
         },
     results = {
         {type = 'item', name = 'sea-sponge-mk04', amount = 1, probability = 0.6},
