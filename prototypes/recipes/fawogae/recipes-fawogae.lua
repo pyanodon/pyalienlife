@@ -11,7 +11,7 @@ RECIPE {
     ingredients = {
     },
     results = {
-        {type = 'item', name = 'fawogae-spore', amount = 1, probability = 0.4},
+        {type = 'item', name = 'fawogae-spore', amount = 1},
     },
 }:add_unlock("fawogae-mk01")
 
