@@ -264,6 +264,6 @@ ENTITY {
     working_sound = {
         sound = {filename = "__pyalienlifegraphics__/sounds/seaweed-crop.ogg", volume = 1.5},
         idle_sound = {filename = "__pyalienlifegraphics__/sounds/seaweed-crop.ogg", volume = 0.3},
-        apparent_volume = 2.5
+        audible_distance_modifier = 0.22,
     }
 }
