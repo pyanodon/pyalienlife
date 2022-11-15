@@ -510,7 +510,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'gh',
-    category = 'vat',
+    category = "vat",
     enabled = false,
     energy_required = 70,
     ingredients = {
@@ -531,7 +531,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'gh-2',
-    category = 'vat',
+    category = "vat",
     enabled = false,
     energy_required = 70,
     ingredients = {
@@ -864,7 +864,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'antiviral',
-    category = 'vat',
+    category = "vat",
     enabled = false,
     energy_required = 500,
     ingredients = {
@@ -885,7 +885,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'antiviral-02',
-    category = 'vat',
+    category = "vat",
     enabled = false,
     energy_required = 500,
     ingredients = {

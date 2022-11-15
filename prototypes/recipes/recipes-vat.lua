@@ -1,7 +1,8 @@
+--[[
 RECIPE {
     type = 'recipe',
     name = 'logistic-science-01',
-    category = 'vat',
+    category = "vat",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -19,7 +20,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'chemical-science-01',
-    category = 'vat',
+    category = "vat",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -39,7 +40,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'production-science-01',
-    category = 'vat',
+    category = "vat",
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -60,7 +61,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'utility-science-01',
-    category = 'vat',
+    category = "vat",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -78,3 +79,20 @@ RECIPE {
         {type = 'item', name = 'utility-science-pack', amount = 1},
     },
 }:add_unlock("pharmagenomics"):add_ingredient({type = "item", name = "small-parts-03", amount = 100})
+]]--
+
+RECIPE {
+    type = 'recipe',
+    name = 'brain-food-1',
+    category = "vat",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'brain', amount = 10},
+    },
+    results = {},
+    icon = '__pycoalprocessinggraphics__/graphics/empty.png',
+    icon_size = 32,
+    subgroup = 'py-alienlife-yotoi',
+    order = 'zc'
+}:add_unlock("vatbrain")

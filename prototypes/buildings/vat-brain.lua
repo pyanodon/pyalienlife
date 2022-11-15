@@ -15,7 +15,7 @@ RECIPE {
     results = {
         {"vat-brain", 1}
     }
-}:add_unlock("biotech-machines-mk02")
+}:add_unlock("vatbrain")
 
 ITEM {
     type = "item",

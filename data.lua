@@ -136,6 +136,8 @@ require('prototypes/technologies/ash-separation')
 
 require("prototypes/technologies/crusher")
 
+require("prototypes/technologies/vatbrain")
+
 if mods["pyhightech"] then
     require('prototypes/technologies/mining-with-fluid')
     require('prototypes/technologies/electric-mining-drill')
@@ -351,6 +353,8 @@ require('prototypes/buildings/rc-mk01')
 require('prototypes/buildings/rc-mk02')
 require('prototypes/buildings/rc-mk03')
 require('prototypes/buildings/rc-mk04')
+
+require("prototypes/buildings/hidden-beacon")
 
 if mods["pyhightech"] then
     require("prototypes/buildings/fluid-drill-mk01")
@@ -783,7 +787,7 @@ require('prototypes/recipes/recipes-mo')
 require('prototypes/recipes/recipes-photomining')
 require('prototypes/recipes/recipes-phytoplankton')
 require('prototypes/recipes/recipes-recharge')
---require('prototypes/recipes/recipes-vat')
+require('prototypes/recipes/recipes-vat')
 
 --gunpowder poo
 --require('prototypes/recipes/recipes-vrauk-products')

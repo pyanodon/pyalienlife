@@ -9376,3 +9376,28 @@ data:extend(
     },
 }
 )
+
+ITEM {
+    type = "module",
+    name = "vatbrain-1",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/forest-tree.png"}
+    },
+    icon_size = 64,
+	category = "vatbrain",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "t-a",
+    stack_size = 1,
+	effect =
+    {
+      productivity = {bonus = 0.1},
+      consumption = {bonus = 1},
+      pollution = {bonus = -0.1},
+      speed = {bonus = -1}
+    },
+	limitation = {},
+	limitation_message_key = "vatbrain"
+}
