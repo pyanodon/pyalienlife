@@ -555,6 +555,16 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
         if global.caravans.first_caravan == false then
             global.caravans.first_caravan = true
         end
+    elseif E.name == "vat-brain" then
+        log("hit")
+        local beacon = game.surfaces["nauvis"].create_entity{
+            name = "hidden-beacon",
+            position = E.position,
+            force = E.force,
+        }
+        log(beacon.position)
+        local module_slot = beacon.get_inventory(defines.inventory.beacon_modules)
+        local module = module_slot.insert({name = "vatbrain-1", count = 1})
     else
         for f, farm in pairs(farm_buildings) do
             if string.match(E.name, farm) and string.match(E.name, "boiler") == nil then

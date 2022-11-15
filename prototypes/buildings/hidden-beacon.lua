@@ -27,11 +27,11 @@ ENTITY{
     selection_box = {{0, 0}, {0, 0}},
     damaged_trigger_effect = hit_effects.entity(),
     -- drawing_box = {{-1.5, -2.2}, {1.5, 1.3}},
-    allowed_effects = {'consumption', 'speed', 'productivity'},
+    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     --[[
     graphics_set = require("__base__.prototypes.entity.beacon-animations"),
     ]] --
-    supply_area_distance = 1,
+    supply_area_distance = 25,
     energy_source = {type = 'void'},
     vehicle_impact_sound = sounds.generic_impact,
     open_sound = sounds.machine_open,

@@ -167,5 +167,9 @@ data:extend(
     {
         type = "module-category",
         name = "zungror",
+    },
+    {
+        type = "module-category",
+        name = "vatbrain",
     }
 })
