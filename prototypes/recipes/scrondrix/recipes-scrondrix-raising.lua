@@ -24,7 +24,6 @@ FUN.autorecipes {
 			results =
 				{
 					{name='scrondrix-pup', amount = 5},
-					{name = 'manure', amount = 5},
 				},
 			tech = 'scrondrix',
 			crafting_speed = 12,
@@ -41,7 +40,6 @@ FUN.autorecipes {
 			results =
 				{
 					{name='scrondrix-pup', add_amount = 1},
-					{name = 'manure', add_amount = 3},
 				},
 			crafting_speed = 10,
 			tech = 'scrondrix-mk02',
@@ -57,7 +55,6 @@ FUN.autorecipes {
 			results =
 				{
 					{name='scrondrix-pup', add_amount = 2},
-					{name = 'manure', add_amount = 3},
 				},
 			crafting_speed = 9,
 			tech = 'scrondrix-mk03',
@@ -72,7 +69,6 @@ FUN.autorecipes {
 			results =
 				{
 					{name='scrondrix-pup', add_amount = 2},
-					{name = 'manure', add_amount = 3},
 				},
 			crafting_speed = 8,
 			tech = 'scrondrix-mk04',
@@ -218,7 +214,6 @@ FUN.autorecipes {
 			results =
 				{
 					{name='scrondrix', amount = 5},
-					{name = 'manure', amount = 5},
 				},
 			crafting_speed = 150,
 			tech = 'scrondrix',
@@ -235,7 +230,6 @@ FUN.autorecipes {
 			results =
 				{
 					{name='scrondrix', add_amount = 1},
-					{name = 'manure', add_amount = 3},
 				},
 			crafting_speed = 130,
 			tech = 'scrondrix-mk02',
@@ -252,7 +246,6 @@ FUN.autorecipes {
 			results =
 				{
 					{name='scrondrix', add_amount = 2},
-					{name = 'manure', add_amount = 3},
 				},
 			crafting_speed = 90,
 			tech = 'scrondrix-mk03',
@@ -269,11 +262,10 @@ FUN.autorecipes {
 			results =
 				{
 					{name='scrondrix', add_amount = 3},
-					{name = 'manure', add_amount = 3},
 				},
 			crafting_speed = 90,
 			tech = 'scrondrix-mk04',
-			name = 'scrondrix 4',
+			name = 'Scrondrix 4',
 		},
 	}
 }

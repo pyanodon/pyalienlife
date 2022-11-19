@@ -48,6 +48,7 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='mukmoux-food-02', amount =2},
+					{name='mukmoux-food-01', remove_item = true},
 					{name='salt', amount = 4},
 				},
 			results =

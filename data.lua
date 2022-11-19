@@ -667,6 +667,7 @@ require('prototypes/recipes/scrondrix/recipes-scrondrix-raising')
 require('prototypes/recipes/scrondrix/recipes-scrondrix-rendering')
 require('prototypes/recipes/scrondrix/recipes-scrondrix-growth-enhancement')
 require('prototypes/recipes/scrondrix/recipes-scrondrix-modules')
+require('prototypes/recipes/scrondrix/recipes-scrondrix-products')
 
 --Sea-Sponge
 require("prototypes/recipes/sea-sponge/recipes-sea-sponge")
@@ -708,6 +709,7 @@ require('prototypes/recipes/ulric/recipes-ulric-raising')
 require('prototypes/recipes/ulric/recipes-ulric-rendering')
 require('prototypes/recipes/ulric/recipes-ulric-growth-enhancement')
 require('prototypes/recipes/ulric/recipes-ulric-modules')
+require('prototypes/recipes/ulric/recipes-ulric-products')
 
 --Vonix
 require('prototypes/recipes/vonix/recipes-vonix')
