@@ -62,6 +62,12 @@ ENTITY {
         width = 4,
         height = 4
     },
+
+    require ("__pyalienlife__/prototypes/circuit-connector-definitions-pyal"),
+    circuit_wire_connection_points = collector_connector_definitions.points,
+    circuit_connector_sprites = collector_connector_definitions.sprites,
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
+
     animations = {
         layers = {
             {
