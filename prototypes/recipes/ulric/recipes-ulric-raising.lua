@@ -192,7 +192,7 @@ FUN.autorecipes {
 --raising
 
 FUN.autorecipes {
-    name = 'caged-ulric',
+    name = 'ulric',
 	category = 'ulric',
 	module_limitations = 'ulric',
 	subgroup = 'py-alienlife-ulric',

@@ -191,7 +191,7 @@ FUN.autorecipes {
 --raising
 
 FUN.autorecipes {
-    name = 'caged-phagnot',
+    name = 'phagnot',
 	category = 'phagnot',
 	module_limitations = 'phagnot',
 	main_product = "phagnot",

@@ -4,7 +4,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'arthurian-growth-enhancement',
-	category = "creature-chamber",
+	category = "arthurian",
 	subgroup = 'py-alienlife-arthurian',
 	order = 'c',
     mats =

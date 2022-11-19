@@ -2,7 +2,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'arqad-improve',
-	category = 'creature-chamber',
+	category = 'arqad',
 	--module_limitations = 'arqad',
 	subgroup = 'py-alienlife-arqad',
 	order = 'b',

@@ -186,7 +186,7 @@ FUN.autorecipes {
 
 --raising
 FUN.autorecipes {
-    name = 'caged-korlex',
+    name = 'korlex',
 	category = 'korlex',
 	module_limitations = 'korlex',
 	subgroup = 'py-alienlife-korlex',

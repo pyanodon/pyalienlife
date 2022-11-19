@@ -15,7 +15,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'caged-scrondrix', amount = 2},
+					{name = 'scrondrix', amount = 2},
                     {name='fawogae', amount =20},
 					{name='wood-seeds', amount =20},
 					{name='meat', amount =10},
@@ -24,7 +24,6 @@ FUN.autorecipes {
 			results =
 				{
 					{name='scrondrix-pup', amount = 5},
-					{name='cage', amount = 2},
 					{name = 'manure', amount = 5},
 				},
 			tech = 'scrondrix',
@@ -171,7 +170,7 @@ FUN.autorecipes {
 --raising
 
 FUN.autorecipes {
-    name = 'caged-scrondrix',
+    name = 'scrondrix',
 	category = 'scrondrix',
 	module_limitations = 'scrondrix',
 	upgrades =
@@ -203,7 +202,7 @@ FUN.autorecipes {
 			},
 	subgroup = 'py-alienlife-scrondrix',
 	order = 'b',
-	main_product = 'caged-scrondrix',
+	main_product = 'scrondrix',
     mats =
 	{
 		--chem
@@ -213,18 +212,17 @@ FUN.autorecipes {
 					{name='scrondrix-pup', amount = 10},
 					{name='wood-seeds', amount =15},
 					{name='meat', amount =5},
-					{name='cage', amount =4},
 					{name='yotoi-leaves', amount =10},
 					{name='water-barrel', amount=5, return_barrel = true},
 				},
 			results =
 				{
-					{name='caged-scrondrix', amount = 5},
+					{name='scrondrix', amount = 5},
 					{name = 'manure', amount = 5},
 				},
 			crafting_speed = 150,
 			tech = 'scrondrix',
-			name = 'Caged scrondrix 1',
+			name = 'Scrondrix 1',
 		},
 		--py
 		--salt
@@ -233,16 +231,15 @@ FUN.autorecipes {
 				{
 					{name='salt', amount = 5},
 					{name='bedding', amount = 1},
-					{name='cage', add_amount = 1},
 				},
 			results =
 				{
-					{name='caged-scrondrix', add_amount = 1},
+					{name='scrondrix', add_amount = 1},
 					{name = 'manure', add_amount = 3},
 				},
 			crafting_speed = 130,
 			tech = 'scrondrix-mk02',
-			name = 'Caged scrondrix 2',
+			name = 'Scrondrix 2',
 		},
 		--prod
 		--fiber
@@ -251,16 +248,15 @@ FUN.autorecipes {
 				{
 					{name='raw-fiber', amount = 5},
 					{name='gh', amount = 1},
-					{name='cage', add_amount = 2},
 				},
 			results =
 				{
-					{name='caged-scrondrix', add_amount = 2},
+					{name='scrondrix', add_amount = 2},
 					{name = 'manure', add_amount = 3},
 				},
 			crafting_speed = 90,
 			tech = 'scrondrix-mk03',
-			name = 'Caged scrondrix 4',
+			name = 'Scrondrix 3',
 		},
 		--prod
 		--navens
@@ -269,16 +265,15 @@ FUN.autorecipes {
 				{
 					{name='navens', amount =5},
 					{name='antiviral', amount = 1},
-					{name='cage', add_amount = 3},
 				},
 			results =
 				{
-					{name='caged-scrondrix', add_amount = 3},
+					{name='scrondrix', add_amount = 3},
 					{name = 'manure', add_amount = 3},
 				},
 			crafting_speed = 90,
 			tech = 'scrondrix-mk04',
-			name = 'Caged scrondrix 5',
+			name = 'scrondrix 4',
 		},
 	}
 }

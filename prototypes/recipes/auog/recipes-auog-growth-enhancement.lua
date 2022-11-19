@@ -3,7 +3,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 	--NOT STANDARD AOUGS
 	FUN.autorecipes {
 		name = 'auog-mods',
-		category = 'creature-chamber',
+		category = 'auog',
 		subgroup = 'py-alienlife-auog',
 		order = 'c',
 		mats =

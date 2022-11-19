@@ -190,7 +190,7 @@ FUN.autorecipes {
 --raising
 
 FUN.autorecipes {
-    name = 'caged-mukmoux',
+    name = 'mukmoux',
 	category = 'mukmoux',
 	module_limitations = 'mukmoux',
 	subgroup = 'py-alienlife-mukmoux',

@@ -2,7 +2,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'phagnot-improved',
-	category = 'creature-chamber',
+	category = 'phagnot',
 	--module_limitations = 'phagnot',
 	--main_product = "phagnot",
 	subgroup = 'py-alienlife-phagnot',

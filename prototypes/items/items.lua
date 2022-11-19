@@ -9393,10 +9393,85 @@ ITEM {
     stack_size = 1,
 	effect =
     {
-      productivity = {bonus = 0.1},
+      productivity = {bonus = 0.25},
       consumption = {bonus = 1},
       pollution = {bonus = -0.1},
-      speed = {bonus = -1}
+      speed = {bonus = -0.1}
+    },
+	limitation = {},
+	limitation_message_key = "vatbrain"
+}
+
+ITEM {
+    type = "module",
+    name = "vatbrain-2",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/forest-tree.png"}
+    },
+    icon_size = 64,
+	category = "vatbrain",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "t-a",
+    stack_size = 1,
+	effect =
+    {
+      productivity = {bonus = 0.5},
+      consumption = {bonus = 2},
+      pollution = {bonus = -0.1},
+      speed = {bonus = -0.1}
+    },
+	limitation = {},
+	limitation_message_key = "vatbrain"
+}
+
+ITEM {
+    type = "module",
+    name = "vatbrain-3",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/forest-tree.png"}
+    },
+    icon_size = 64,
+	category = "vatbrain",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "t-a",
+    stack_size = 1,
+	effect =
+    {
+      productivity = {bonus = 0.75},
+      consumption = {bonus = 3},
+      pollution = {bonus = -0.1},
+      speed = {bonus = -0.15}
+    },
+	limitation = {},
+	limitation_message_key = "vatbrain"
+}
+
+ITEM {
+    type = "module",
+    name = "vatbrain-4",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/forest-tree.png"}
+    },
+    icon_size = 64,
+	category = "vatbrain",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-modules",
+    order = "t-a",
+    stack_size = 1,
+	effect =
+    {
+      productivity = {bonus = 1},
+      consumption = {bonus = 4},
+      pollution = {bonus = -0.1},
+      speed = {bonus = -0.15}
     },
 	limitation = {},
 	limitation_message_key = "vatbrain"

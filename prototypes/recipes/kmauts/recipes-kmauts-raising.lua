@@ -140,7 +140,7 @@ FUN.autorecipes {
 --raising
 
 FUN.autorecipes {
-    name = 'caged-kmauts',
+    name = 'kmauts',
 	category = 'kmauts',
 	module_limitations = 'kmauts',
 	subgroup = 'py-alienlife-kmauts',
@@ -188,7 +188,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='caged-kmauts', add_amount = 2},
+					{name='kmauts', add_amount = 2},
 				},
 			crafting_speed = 110,
 			tech = 'kmauts-mk03'

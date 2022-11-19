@@ -17,7 +17,6 @@ FUN.autorecipes {
                     {name='cottongut', amount =6},
                     {name='fawogae', amount =20},
 					{name='water-barrel', amount=15,return_barrel = true},
-					--{name='cage', amount=1},
                     {name='bedding', amount = 1},
                     {name='programmable-speaker', amount=1},
                     {name='small-lamp', amount=2},
@@ -229,7 +228,7 @@ FUN.autorecipes {
 --raising
 
 FUN.autorecipes {
-    name = 'caged-phadai',
+    name = 'phadai',
 	category = 'phadai',
 	module_limitations = 'phadai',
 	subgroup = 'py-alienlife-phadai',
@@ -280,8 +279,8 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='caged-phadai',remove_item = true},
-					{name='caged-phadai', probability = 0.9, amount_min =1, amount_max =1},
+					{name='phadai',remove_item = true},
+					{name='phadai', probability = 0.9, amount_min =1, amount_max =1},
 				},
 			crafting_speed = 110,
 			tech = 'phadai-mk03'

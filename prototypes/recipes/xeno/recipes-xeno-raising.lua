@@ -186,6 +186,7 @@ FUN.autorecipes {
 				{
 					{name='xeno-egg', add_amount = 1},
 					{name='fish', amount = 8},
+					{name='caged-mukmoux', add_amount = 1},
 					{name='guts', amount = 5},
 				},
 			results =
@@ -217,6 +218,7 @@ FUN.autorecipes {
 				{
 					{name='xeno-egg', add_amount = 1},
 					{name='guts', add_amount = 5},
+					{name='cage', amount = 1},
 				},
 			results =
 				{

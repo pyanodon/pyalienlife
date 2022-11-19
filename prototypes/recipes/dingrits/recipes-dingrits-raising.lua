@@ -24,6 +24,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='dingrits-cub', amount_min = 1, amount_max = 7},
+					{name = 'cage', amount = 3},
 				},
 			crafting_speed = 15,
 			tech = 'dingrits'
@@ -204,6 +205,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='dingrits', amount_min = 1, amount_max =3},
+					{name = 'cage', amount = 1},
 				},
 			crafting_speed = 150,
 			tech = 'dingrits'
