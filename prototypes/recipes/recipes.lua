@@ -2205,7 +2205,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'sample-cup', amount = 4}
     }
-}:add_unlock("selective-breeding")
+}:add_unlock("ulric-mk02")
 
 RECIPE {
     type = 'recipe',
