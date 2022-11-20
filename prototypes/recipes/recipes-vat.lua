@@ -176,3 +176,51 @@ RECIPE {
     subgroup = 'py-alienlife-used',
     order = 'aa'
 }:add_unlock("vatbrain")
+
+RECIPE {
+    type = 'recipe',
+    name = 'brain-food-2',
+    category = "vat",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'brain-cartridge-02', amount = 1},
+    },
+    results = {},
+    icon = '__pyalienlifegraphics2__/graphics/icons/brain-cartridge-02.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-used',
+    order = 'ab'
+}:add_unlock("vatbrain-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'brain-food-3',
+    category = "vat",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'brain-cartridge-03', amount = 1},
+    },
+    results = {},
+    icon = '__pyalienlifegraphics2__/graphics/icons/brain-cartridge-03.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-used',
+    order = 'ac'
+}:add_unlock("vatbrain-mk03")
+
+RECIPE {
+    type = 'recipe',
+    name = 'brain-food-4',
+    category = "vat",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'brain-cartridge-04', amount = 1},
+    },
+    results = {},
+    icon = '__pyalienlifegraphics2__/graphics/icons/brain-cartridge-04.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-used',
+    order = 'ad'
+}:add_unlock("vatbrain-mk04")
