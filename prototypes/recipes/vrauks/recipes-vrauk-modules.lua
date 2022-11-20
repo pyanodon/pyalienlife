@@ -91,7 +91,7 @@ RECIPE {
     main_product = "cocoon-mk02",
     icons =
         {
-            {icon = "__pyalienlifegraphics__/graphics/icons/vrauks.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/cocoon.png"},
             {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
         },
     icon_size = 64,
@@ -189,7 +189,7 @@ RECIPE {
     main_product = "cocoon-mk03",
     icons =
         {
-            {icon = "__pyalienlifegraphics__/graphics/icons/vrauks.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/cocoon.png"},
             {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png', icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
         },
     icon_size = 64,
@@ -287,7 +287,7 @@ RECIPE {
     main_product = "cocoon-mk04",
     icons =
         {
-            {icon = "__pyalienlifegraphics__/graphics/icons/vrauks.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/cocoon.png"},
             {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png', icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
         },
     icon_size = 64,

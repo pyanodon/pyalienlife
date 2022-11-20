@@ -9323,7 +9323,7 @@ ITEM {
     order = "x",
     stack_size = 100
 }
-
+--[[
 ------------------------------
 data:extend(
 {
@@ -9376,6 +9376,7 @@ data:extend(
     },
 }
 )
+]]--
 
 ITEM {
     type = "module",

@@ -422,6 +422,8 @@ script.on_init(function()
 			input_order = {},
 			output_order = {}
 		}
+
+    global.vatbrains = {}
     
         init_discoscience()
 end)
