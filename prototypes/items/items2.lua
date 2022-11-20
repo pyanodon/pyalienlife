@@ -484,3 +484,47 @@ ITEM {
     order = "z",
     stack_size = 50
 }
+
+ITEM {
+    type = "item",
+    name = "brain-cartridge-01",
+    icon = "__pyalienlifegraphics2__/graphics/icons/brain-cartridge-01.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "aa",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "brain-cartridge-02",
+    icon = "__pyalienlifegraphics2__/graphics/icons/brain-cartridge-02.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "ab",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "brain-cartridge-03",
+    icon = "__pyalienlifegraphics2__/graphics/icons/brain-cartridge-03.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "ac",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "brain-cartridge-04",
+    icon = "__pyalienlifegraphics2__/graphics/icons/brain-cartridge-04.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "ad",
+    stack_size = 50
+}

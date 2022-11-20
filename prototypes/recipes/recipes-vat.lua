@@ -83,16 +83,96 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
+    name = 'brain-cartridge-01',
+    category = "genlab",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'brain', amount = 15},
+        {type = 'item', name = 'nbalti', amount = 1},
+        {type = 'fluid', name = 'scrude', amount = 50},
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'brain-cartridge-01', amount = 1},
+    },
+
+}:add_unlock("vatbrain")
+
+RECIPE {
+    type = 'recipe',
+    name = 'brain-cartridge-02',
+    category = "genlab",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'brain-cartridge-01', amount = 1},
+        {type = 'item', name = 'brain', amount = 15},
+        {type = 'item', name = 'glass', amount = 2},
+        {type = 'item', name = 'navens', amount = 1},
+        {type = 'fluid', name = 'oleochemicals', amount = 50},
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'brain-cartridge-02', amount = 2},
+    },
+
+}:add_unlock("vatbrain-mk02")
+
+RECIPE {
+    type = 'recipe',
+    name = 'brain-cartridge-03',
+    category = "genlab",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'brain-cartridge-02', amount = 1},
+        {type = 'item', name = 'brain', amount = 15},
+        {type = 'item', name = 'rayon', amount = 1},
+        {type = 'item', name = 'eva', amount = 1},
+        {type = 'item', name = 'phosphate-glass', amount = 2},
+        {type = 'fluid', name = 'flavonoids', amount = 50},
+        {type = 'fluid', name = 'psc', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'brain-cartridge-03', amount = 2},
+    },
+
+}:add_unlock("vatbrain-mk03")
+
+RECIPE {
+    type = 'recipe',
+    name = 'brain-cartridge-04',
+    category = "genlab",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'brain-cartridge-03', amount = 1},
+        {type = 'item', name = 'brain', amount = 15},
+        {type = 'item', name = 'enzyme-pks', amount = 2},
+        {type = 'item', name = 'low-density-structure', amount = 1},
+        {type = 'item', name = 'acrylic', amount = 2},
+        {type = 'fluid', name = 'psc', amount = 50},
+        {type = 'fluid', name = 'numal-ink', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'brain-cartridge-04', amount = 3},
+    },
+
+}:add_unlock("vatbrain-mk04")
+
+RECIPE {
+    type = 'recipe',
     name = 'brain-food-1',
     category = "vat",
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = 'item', name = 'brain', amount = 10},
+        {type = 'item', name = 'brain-cartridge-01', amount = 1},
     },
     results = {},
-    icon = '__pycoalprocessinggraphics__/graphics/empty.png',
-    icon_size = 32,
-    subgroup = 'py-alienlife-yotoi',
-    order = 'zc'
+    icon = '__pyalienlifegraphics2__/graphics/icons/brain-cartridge-01.png',
+    icon_size = 64,
+    subgroup = 'py-alienlife-used',
+    order = 'aa'
 }:add_unlock("vatbrain")
