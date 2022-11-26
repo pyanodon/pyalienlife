@@ -168,5 +168,28 @@ FUN.autorecipes {
 			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-auog.png",
 			icon_size = 64,
 		},
+		--USED auog rendering
+		{
+			ingredients =
+				{
+					{name='fat-caged-auog',remove_item = true},
+					{name='used-auog', amount = INPUT_AMOUNT},
+				},
+			results =
+				{
+					{name='bones', amount = BASE_BONES},
+					{name='meat', amount = 4},
+					{name='skin', amount = BASE_SKIN},
+					{name='mukmoux-fat', remove_item = true},
+					{name='guts', amount = BASE_GUTS},
+					{name='blood', amount = 50},
+					{name='brain', amount = BASE_BRAIN},
+					{name='cage', remove_item = true},
+				},
+			tech = 'domestication',
+			name = 'ex-used-auog',
+			icon = "__pyalienlifegraphics__/graphics/icons/used-auog.png",
+			icon_size = 64,
+		},
 	}
 }

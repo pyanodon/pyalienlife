@@ -45,7 +45,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'auog', amount = 1},
     },
-}:add_unlock("domestication"):add_ingredient({type = "item", name = "raw-fiber", amount = 5})
+}:add_unlock("domestication"):add_ingredient({type = "item", name = "moss", amount = 5})
 
 RECIPE {
     type = 'recipe',
@@ -60,7 +60,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'auog', amount = 1},
     },
-}:add_unlock("domestication"):add_ingredient({type = "item", name = "raw-fiber", amount = 5})
+}:add_unlock("domestication"):add_ingredient({type = "item", name = "moss", amount = 5})
 
 --mk01
 
