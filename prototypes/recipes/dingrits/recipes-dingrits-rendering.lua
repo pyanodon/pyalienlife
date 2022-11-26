@@ -154,5 +154,29 @@ FUN.autorecipes {
 			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-dingrits.png",
 			icon_size = 64,
 		},
+		--USED dingrit rendering
+		{
+			ingredients =
+				{
+					{name='skin-caged-dingrits',remove_item = true},
+					{name='used-dingrit', amount = INPUT_AMOUNT},
+				},
+			results =
+				{
+					{name='bones', amount = BASE_BONES},
+					{name='meat', remove_item = true},
+					{name='skin', amount = BASE_SKIN},
+					{name='pelt', amount = BASE_SKIN},
+					{name='dingrit-spike', amount = BASE_SPECIAL},
+					{name='guts', amount = BASE_GUTS},
+					{name='blood', remove_item = true},
+					{name='brain', amount = BASE_BRAIN},
+					{name='cage', remove_item = true},
+				},
+			tech = 'domestication-mk03',
+			name = 'ex-used-dingrits',
+			icon = "__pyalienlifegraphics__/graphics/icons/used-dingrit.png",
+			icon_size = 64,
+		},
 	}
 }
