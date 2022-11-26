@@ -533,6 +533,8 @@ TECHNOLOGY("earnshaw-theorem"):remove_pack('production-science-pack')
 TECHNOLOGY("superconductor"):remove_pack('production-science-pack')
 ]]--
 
+RECIPE("brain-cartridge-03"):add_ingredient({type = 'item', name = 'rayon', amount = 1})
+
 ----EXCLUSIVE RECIPES----
 
 RECIPE {
