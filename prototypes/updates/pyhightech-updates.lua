@@ -533,7 +533,7 @@ TECHNOLOGY("earnshaw-theorem"):remove_pack('production-science-pack')
 TECHNOLOGY("superconductor"):remove_pack('production-science-pack')
 ]]--
 
-RECIPE("brain-cartridge-03"):add_ingredient({type = 'item', name = 'rayon', amount = 1})
+RECIPE("brain-cartridge-03"):add_ingredient({type = 'item', name = 'rayon', amount = 1}):add_ingredient({type = 'item', name = 'phosphate-glass', amount = 2})
 
 ----EXCLUSIVE RECIPES----
 

@@ -127,7 +127,6 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'brain-cartridge-02', amount = 1},
         {type = 'item', name = 'brain', amount = 15},
-        {type = 'item', name = 'phosphate-glass', amount = 2},
         {type = 'fluid', name = 'flavonoids', amount = 50},
         {type = 'fluid', name = 'psc', amount = 100},
     },
@@ -148,7 +147,6 @@ RECIPE {
         {type = 'item', name = 'brain', amount = 15},
         {type = 'item', name = 'enzyme-pks', amount = 2},
         {type = 'item', name = 'low-density-structure', amount = 1},
-        {type = 'item', name = 'acrylic', amount = 2},
         {type = 'fluid', name = 'psc', amount = 50},
         {type = 'fluid', name = 'numal-ink', amount = 10},
     },
