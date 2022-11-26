@@ -89,7 +89,6 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'brain', amount = 15},
-        {type = 'item', name = 'nbalti', amount = 1},
         {type = 'fluid', name = 'scrude', amount = 50},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
     },
