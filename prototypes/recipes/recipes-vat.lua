@@ -148,7 +148,6 @@ RECIPE {
         {type = 'item', name = 'enzyme-pks', amount = 2},
         {type = 'item', name = 'low-density-structure', amount = 1},
         {type = 'fluid', name = 'psc', amount = 50},
-        {type = 'fluid', name = 'numal-ink', amount = 10},
     },
     results = {
         {type = 'item', name = 'brain-cartridge-04', amount = 3},
