@@ -45,7 +45,7 @@ RECIPE {
 
 ---breeding---
 
-
+--[[
 RECIPE {
     type = 'recipe',
     name = 'trits-mature-01',
@@ -83,3 +83,4 @@ RECIPE {
     subgroup = 'py-alienlife-trits',
     order = 'a',
 }:add_unlock("growth-hormone")
+]]--

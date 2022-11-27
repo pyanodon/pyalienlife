@@ -43,7 +43,7 @@ RECIPE {
 ----food----
 
 ---maturing---
-
+--[[
 RECIPE {
     type = 'recipe',
     name = 'xeno-mature-01',
@@ -84,7 +84,7 @@ RECIPE {
     subgroup = 'py-alienlife-xeno',
     order = 'a',
 }:add_unlock("growth-hormone")
-
+]]--
 ----adverse products----
 
 
@@ -137,7 +137,7 @@ if mods['pyhightech'] then
             {type = 'item', name = 'xeno-egg', amount = 1},
         },
         results = {
-            {type = 'fluid', name = 'phosphoric-acid', amount = 25},
+            {type = 'fluid', name = 'phosphoric-acid', amount = 35},
         },
         --main_product = "xeno",
     }:add_unlock("xeno-mk03")

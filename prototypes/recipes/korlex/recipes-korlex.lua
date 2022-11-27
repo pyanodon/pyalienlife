@@ -94,7 +94,7 @@ RECIPE {
 
 
 ---maturing---
-
+--[[
 RECIPE {
     type = 'recipe',
     name = 'korlex-mature-01',
@@ -134,7 +134,7 @@ RECIPE {
     subgroup = 'py-alienlife-korlex',
     order = 'a',
 }:add_unlock("growth-hormone")
-
+]]--
 ----adverse products----
 
 

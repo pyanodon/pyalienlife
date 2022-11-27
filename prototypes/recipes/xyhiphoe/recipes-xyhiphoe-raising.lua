@@ -15,6 +15,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
+					{name='xyhiphoe', amount =2},
                     {name='fish-food-01', amount =2},
                     {name='phytoplankton', amount =150, fluidbox_index = 1},
 					{name='pressured-water', amount = 1000, fluidbox_index = 2,return_item={name='waste-water', amount= 650}},
@@ -24,6 +25,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='xyhiphoe-cub', amount = 3},
+					{name='xyhiphoe', amount =2},
 				},
 			tech = 'water-invertebrates-mk01'
 		},
@@ -203,6 +205,7 @@ FUN.autorecipes {
                     {name='phytoplankton', amount =50, fluidbox_index = 1},
 					{name='pressured-water', amount = 3000, fluidbox_index = 2,return_item={name='waste-water', amount= 200}},
 					{name='filtration-media', amount =1},
+					{name='xyhiphoe-cub', amount = 2},
 				},
 			results =
 				{

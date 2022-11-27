@@ -115,6 +115,7 @@ RECIPE {
 
 
 ---maturing---
+--[[
 
 RECIPE {
     type = 'recipe',
@@ -155,7 +156,7 @@ RECIPE {
     subgroup = 'py-alienlife-phadai',
     order = 'a',
 }:add_unlock("growth-hormone")
-
+]]--
 
 ----adverse products----
 

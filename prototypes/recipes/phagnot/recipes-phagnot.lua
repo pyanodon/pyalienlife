@@ -106,7 +106,7 @@ RECIPE {
 }:add_unlock("phagnot-mk03"):add_ingredient({type = "item", name = "raw-fiber", amount = 10})
 
 ---maturing---
-
+--[[
 RECIPE {
     type = 'recipe',
     name = 'phagnot-mature-01',
@@ -146,6 +146,7 @@ RECIPE {
     subgroup = 'py-alienlife-phagnot',
     order = 'a',
 }:add_unlock("growth-hormone")
+--]]--
 
 ---BASIC-MATURING---
 

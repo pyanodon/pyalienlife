@@ -101,7 +101,7 @@ RECIPE {
 }:add_unlock("ulric-mk03")
 
 ---maturing---
-
+--[[
 RECIPE {
     type = 'recipe',
     name = 'ulric-mature-01',
@@ -141,7 +141,7 @@ RECIPE {
     subgroup = 'py-alienlife-ulric',
     order = 'a',
 }:add_unlock("growth-hormone")
-
+]]--
 ----adverse products----
 
 

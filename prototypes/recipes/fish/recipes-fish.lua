@@ -61,7 +61,7 @@ RECIPE {
 
 
 ---maturing---
-
+--[[
 RECIPE {
     type = 'recipe',
     name = 'fish-mature-01',
@@ -82,3 +82,4 @@ RECIPE {
     subgroup = 'py-alienlife-fish',
     order = 'a',
 }:add_unlock("assisted-embryology")
+]]--

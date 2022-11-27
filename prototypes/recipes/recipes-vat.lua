@@ -127,6 +127,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'brain-cartridge-02', amount = 1},
         {type = 'item', name = 'brain', amount = 15},
+        {type = 'item', name = 'molybdenum-plate', amount = 1},
         {type = 'fluid', name = 'flavonoids', amount = 50},
         {type = 'fluid', name = 'psc', amount = 100},
     },

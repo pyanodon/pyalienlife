@@ -148,7 +148,7 @@ RECIPE {
 ---pup maker---
 
 ---maturing---
-
+--[[
 RECIPE {
     type = 'recipe',
     name = 'cottongut-mature-01',
@@ -190,3 +190,4 @@ RECIPE {
     subgroup = 'py-alienlife-cottongut',
     order = 'a',
 }:add_unlock("growth-hormone")
+]]--

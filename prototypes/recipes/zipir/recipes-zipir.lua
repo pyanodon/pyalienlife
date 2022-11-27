@@ -112,7 +112,7 @@ RECIPE {
     name = 'zipir-grow-01',
     category = 'incubator',
     enabled = false,
-    energy_required = 20,
+    energy_required = 40,
     ingredients = {
         {type = 'item', name = 'zipir-eggs', amount = 10},
         {type = 'item', name = 'rennea-seeds', amount = 4},
@@ -127,7 +127,7 @@ RECIPE {
 }:add_unlock("assisted-embryology")
 
 ---maturing---
-
+--[[
 RECIPE {
     type = 'recipe',
     name = 'zipir-mature-01',
@@ -165,3 +165,4 @@ RECIPE {
     subgroup = 'py-alienlife-zipir',
     order = 'a',
 }:add_unlock("growth-hormone")
+]]--

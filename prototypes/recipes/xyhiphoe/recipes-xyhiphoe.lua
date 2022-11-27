@@ -46,7 +46,7 @@ RECIPE {
 
 
 ---maturing---
-
+--[[
 RECIPE {
     type = 'recipe',
     name = 'xyhiphoe-mature-01',
@@ -84,3 +84,4 @@ RECIPE {
     subgroup = 'py-alienlife-xyhiphoe',
     order = 'a',
 }:add_unlock("growth-hormone")
+]]--

@@ -41,9 +41,7 @@ RECIPE {
 ----food----
 
 ---maturing---
-
-
-
+--[[
 RECIPE {
     type = 'recipe',
     name = 'kmauts-mature-01',
@@ -85,7 +83,7 @@ RECIPE {
     subgroup = 'py-alienlife-kmauts',
     order = 'a',
 }:add_unlock("growth-hormone")
-
+]]--
 
 
 

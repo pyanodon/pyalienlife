@@ -67,7 +67,7 @@ RECIPE {
 }:add_unlock("assisted-embryology")
 
 ---maturing---
-
+--[[
 RECIPE {
     type = 'recipe',
     name = 'dhilmos-mature-01',
@@ -105,6 +105,7 @@ RECIPE {
     subgroup = 'py-alienlife-dhilmos',
     order = 'a',
 }:add_unlock("growth-hormone")
+]]--
 
 ----food----
 

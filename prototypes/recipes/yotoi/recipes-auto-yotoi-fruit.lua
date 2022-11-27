@@ -46,7 +46,7 @@ FUN.autorecipes {
 				{
                     {name='blood-meal', amount = 2, fallback = {name = 'blood-barrel', amount = 4}},
 					{name='carbon-dioxide', amount = 60, fluidbox_index = 2},
-					{name='pesticide-mk01', add_amount = 2},
+					{name='pesticide-mk01', amount = 1},
 				},
 			results =
 				{

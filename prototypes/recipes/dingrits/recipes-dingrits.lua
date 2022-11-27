@@ -109,6 +109,7 @@ RECIPE {
 
 
 ---maturing---
+--[[
 
 RECIPE {
     type = 'recipe',
@@ -149,7 +150,7 @@ RECIPE {
     subgroup = 'py-alienlife-dingrits',
     order = 'a',
 }:add_unlock("growth-hormone")
-
+]]--
 
 
 

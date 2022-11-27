@@ -52,8 +52,9 @@ RECIPE {
     results = {
         {type = 'item', name = 'bhoddos-spore', amount = 1, probability = 0.4},
     },
-}:add_unlock("bhoddos")
+}:add_unlock("microfilters")
 
+--[[
 RECIPE {
     type = 'recipe',
     name = 'bhoddos-spore-2',
@@ -66,7 +67,7 @@ RECIPE {
         {type = 'item', name = 'bhoddos-spore', amount = 1, probability = 0.6},
     },
 }:add_unlock("microfilters")
-
+]]--
 RECIPE {
     type = 'recipe',
     name = 'bhoddos-spore-3',

@@ -108,7 +108,7 @@ RECIPE {
 
 
 ---maturing---
-
+--[[
 RECIPE {
     type = 'recipe',
     name = 'mukmoux-mature-01',
@@ -148,7 +148,7 @@ RECIPE {
     subgroup = 'py-alienlife-mukmoux',
     order = 'a',
 }:add_unlock("growth-hormone")
-
+]]--
 ----adverse products----
 
 
