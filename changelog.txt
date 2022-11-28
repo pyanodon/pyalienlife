@@ -1,4 +1,22 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.3
+Date: 2022-11-28
+  Changes:
+    - balance to vrauks.
+    - tweak to pelt processing.
+    - added love shack to farm disable script so it only works when you have modules.
+    - playing with auog and mukmoux poop.
+    - added moondrop, ralesia, veadols, fish, navens, xyhiphoe, grod, guar, kitchen sponge, yotoi breeding.
+    - tweaks to zipir.
+    - vrauks raising nerfed.
+    - reduced seaweed noise.
+    - tweaks to scrondrix raising.
+    - sllow ulric potty breaks.
+    - removed unused caravan controller.
+    - disabled unused techs.
+    - added circuit connections to collectors.
+    - added rendering tired slaves.
+---------------------------------------------------------------------------------------------------
 Version: 2.0.2
 Date: 2022-11-03
   Changes:
