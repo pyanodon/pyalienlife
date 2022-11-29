@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.4
+Date: 2022-11-29
+  Changes:
+    - added steel furnace to basic oxygen furnace and casting unit mk01.
+    - fixed that lab could have farming modules in it.
+---------------------------------------------------------------------------------------------------
 Version: 2.0.3
 Date: 2022-11-28
   Changes:
