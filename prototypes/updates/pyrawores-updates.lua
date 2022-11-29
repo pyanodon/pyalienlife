@@ -62,6 +62,9 @@ RECIPE('quartz-mine'):add_ingredient({type = "item", name = "neuroprocessor", am
 RECIPE('nickel-mine'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20}):add_ingredient{type = "item", name = "fluid-drill-mk03", amount = 1}
 RECIPE('phosphate-mine-02'):add_ingredient({type = "item", name = "neuroprocessor", amount = 20}):add_ingredient{type = "item", name = "fluid-drill-mk03", amount = 1}
 
+RECIPE("bof-mk01"):remove_ingredient("steam-engine"):replace_ingredient("washer", "steel-furnace")
+RECIPE("casting-unit-mk01"):replace_ingredient("steam-engine", "steel-furnace")
+
 RECIPE("borax-mine"):add_unlock("glass"):set_enabled(false)
 RECIPE("glassworks-mk01"):add_unlock("glass"):set_enabled(false)
 RECIPE("glass-1"):add_unlock("glass"):set_enabled(false)
