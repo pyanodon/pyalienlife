@@ -26,6 +26,7 @@ FUN.autorecipes {
 	category = 'slaughterhouse-cottongut',
 	subgroup = 'py-alienlife-cottongut',
 	order = 'b',
+	crafting_speed = 30,
     mats =
 	{
 		{

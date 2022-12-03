@@ -27,6 +27,7 @@ FUN.autorecipes {
 	--module_limitations = 'mukmoux',
 	subgroup = 'py-alienlife-mukmoux',
 	order = 'b',
+	crafting_speed = 30,
     mats =
 	{
 		{

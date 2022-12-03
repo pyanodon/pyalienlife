@@ -25,6 +25,7 @@ FUN.autorecipes {
 	--module_limitations = 'kmauts',
 	subgroup = 'py-alienlife-kmauts',
 	order = 'b',
+	crafting_speed = 30,
     mats =
 	{
 		{

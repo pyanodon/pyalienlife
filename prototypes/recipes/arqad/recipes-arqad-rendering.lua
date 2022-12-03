@@ -21,6 +21,7 @@ FUN.autorecipes {
 	category = 'slaughterhouse-arqad',
 	subgroup = 'py-alienlife-arqad',
 	order = 'b',
+	crafting_speed = 30,
     mats =
 	{
 		{

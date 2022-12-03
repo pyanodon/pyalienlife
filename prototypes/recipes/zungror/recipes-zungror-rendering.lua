@@ -25,6 +25,7 @@ FUN.autorecipes {
 	--module_limitations = 'zungror',
 	subgroup = 'py-alienlife-zungror',
 	order = 'b',
+	crafting_speed = 50,
     mats =
 	{
 		{

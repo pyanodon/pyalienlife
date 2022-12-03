@@ -27,6 +27,7 @@ FUN.autorecipes {
 	--module_limitations = 'phadai',
 	subgroup = 'py-alienlife-phadai',
 	order = 'b',
+	crafting_speed = 30,
     mats =
 	{
 		{

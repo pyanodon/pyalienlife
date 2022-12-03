@@ -27,6 +27,7 @@ FUN.autorecipes {
 	--module_limitations = 'phagnot',
 	subgroup = 'py-alienlife-phagnot',
 	order = 'b',
+	crafting_speed = 30,
     mats =
 	{
 		{

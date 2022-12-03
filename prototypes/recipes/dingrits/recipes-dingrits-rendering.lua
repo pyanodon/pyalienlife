@@ -27,6 +27,7 @@ FUN.autorecipes {
 	--module_limitations = 'dingrits',
 	subgroup = 'py-alienlife-dingrits',
 	order = 'b',
+	crafting_speed = 30,
     mats =
 	{
 		{

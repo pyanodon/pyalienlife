@@ -27,6 +27,7 @@ FUN.autorecipes {
 	--module_limitations = 'vonix',
 	subgroup = 'py-alienlife-vonix',
 	order = 'b',
+	crafting_speed = 30,
     mats =
 	{
 		{

@@ -27,6 +27,7 @@ FUN.autorecipes {
 	--module_limitations = 'korlex',
 	subgroup = 'py-alienlife-korlex',
 	order = 'b',
+	crafting_speed = 30,
     mats =
 	{
 		{

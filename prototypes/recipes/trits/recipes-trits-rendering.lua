@@ -29,6 +29,7 @@ FUN.autorecipes {
 	--module_limitations = 'trits',
 	subgroup = 'py-alienlife-trits',
 	order = 'b',
+	crafting_speed = 30,
     mats =
 	{
 		{

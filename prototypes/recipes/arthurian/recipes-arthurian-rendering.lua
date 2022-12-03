@@ -26,6 +26,7 @@ FUN.autorecipes {
 	category = 'slaughterhouse-arthurian',
 	subgroup = 'py-alienlife-arthurian',
 	order = 'b',
+	crafting_speed = 30,
     mats =
 	{
 		{

@@ -26,7 +26,7 @@ FUN.autorecipes {
 					{name='cage-antelope', amount=1},
 					{name='strangelets', amount = 1},
 				},
-			crafting_speed = 30,
+			crafting_speed = 40,
 			tech = 'schrodinger-antelope',
 			name = 'full-render-antelope',
 			icon = "__pyalienlifegraphics__/graphics/icons/rendering-antelope.png",

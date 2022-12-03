@@ -22,6 +22,7 @@ FUN.autorecipes {
 	--module_limitations = 'dhilmos',
 	subgroup = 'py-alienlife-dhilmos',
 	order = 'b',
+	crafting_speed = 30,
     mats =
 	{
 		{

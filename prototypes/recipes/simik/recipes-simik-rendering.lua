@@ -29,6 +29,7 @@ FUN.autorecipes {
 	--module_limitations = 'simik',
 	subgroup = 'py-alienlife-simik',
 	order = 'b',
+	crafting_speed = 30,
     mats =
 	{
 		{

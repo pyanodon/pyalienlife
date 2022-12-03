@@ -20,6 +20,7 @@ FUN.autorecipes {
 	category = 'slaughterhouse-xyhiphoe',
 	subgroup = 'py-alienlife-xyhiphoe',
 	order = 'b',
+	crafting_speed = 30,
     mats =
 	{
 		{

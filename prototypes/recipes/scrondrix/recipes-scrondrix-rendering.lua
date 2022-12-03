@@ -29,6 +29,7 @@ FUN.autorecipes {
 	--module_limitations = 'scrondrix',
 	subgroup = 'py-alienlife-scrondrix',
 	order = 'b',
+	crafting_speed = 30,
     mats =
 	{
 		{

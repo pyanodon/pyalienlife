@@ -25,6 +25,7 @@ FUN.autorecipes {
 	--module_limitations = 'zipir',
 	subgroup = 'py-alienlife-zipir',
 	order = 'b',
+	crafting_speed = 30,
     mats =
 	{
 		{

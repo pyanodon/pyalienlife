@@ -27,6 +27,7 @@ FUN.autorecipes {
 	--module_limitations = 'ulric',
 	subgroup = 'py-alienlife-ulric',
 	order = 'b',
+	crafting_speed = 30,
     mats =
 	{
 		{
