@@ -381,7 +381,7 @@ for _, category in pairs(searchtypes) do
     end
 end
 
-RECIPE("tar-quenching"):remove_unlock('nexelit-mk01'):add_unlock("tar-processing")
+RECIPE("tar-quenching"):remove_unlock('separation'):add_unlock("tar-processing")
 
 RECIPE("concrete"):remove_unlock("separation"):add_unlock("concrete")
 
