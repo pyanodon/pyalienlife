@@ -72,6 +72,8 @@ end
 
 TECHNOLOGY("military-2"):remove_pack("logistic-science-pack"):add_pack("py-science-pack-1")
 
+TECHNOLOGY("military-4"):add_pack("py-science-pack-4")
+
 ITEM("raw-fish", "capsule"):set("icon", "__pyalienlifegraphics__/graphics/icons/fish.png")
 ITEM("raw-fish", "capsule"):set("icon_size", 32)
 ITEM("raw-fish", "capsule"):set("icon_mipmaps", nil)
