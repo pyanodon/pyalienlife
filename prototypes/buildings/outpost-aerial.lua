@@ -7,7 +7,15 @@ RECIPE {
     category = 'crafting',
     enabled = false,
 	ingredients = {
-        {type = 'item', name = 'iron-plate', amount = 5}
+        {type = 'item', name = 'super-steel', amount = 15},
+		{type = 'item', name = 'electric-engine-unit', amount = 10},
+		{type = 'item', name = 'small-parts-02', amount = 30},
+		{type = 'item', name = 'advanced-circuit', amount = 10},
+		{type = 'item', name = 'niobium-plate', amount = 10},
+		{type = 'item', name = 'titanium-plate', amount = 10},
+		{type = 'item', name = 'concrete', amount = 50},
+		{type = 'item', name = 'zipir-reef-mk01', amount = 1},
+		{type = 'item', name = 'neuroprocessor', amount = 10},
     },
     result = 'outpost-aerial'
 }:add_unlock('domestication-mk02')
@@ -35,12 +43,12 @@ data:extend{{
 	},
 	collision_box = {
 		{
-			-0.35,
-			-0.35
+			-6.3,
+			-6.3
 		},
 		{
-			0.35,
-			0.35
+			6.3,
+			6.3
 		}
 	},
 	corpse = 'steel-chest-remnants',
@@ -87,49 +95,12 @@ data:extend{{
 	picture = {
 		layers = {
 			{
-				filename = '__base__/graphics/entity/steel-chest/steel-chest.png',
-				height = 40,
-				hr_version = {
-					filename = '__base__/graphics/entity/steel-chest/hr-steel-chest.png',
-					height = 80,
-					priority = 'extra-high',
-					scale = 0.5,
-					shift = {
-						-0.0078125,
-						-0.015625
-					},
-					width = 64
-				},
+				filename = '__pyalienlifegraphics2__/graphics/entity/flyavan/outpost.png',
+				height = 512,
+				width = 480,
 				priority = 'extra-high',
-				shift = {
-					0,
-					-0.015625
-				},
-				width = 32
+				shift = util.by_pixel(32, -48),
 			},
-			{
-				draw_as_shadow = true,
-				filename = '__base__/graphics/entity/steel-chest/steel-chest-shadow.png',
-				height = 22,
-				hr_version = {
-					draw_as_shadow = true,
-					filename = '__base__/graphics/entity/steel-chest/hr-steel-chest-shadow.png',
-					height = 46,
-					priority = 'extra-high',
-					scale = 0.5,
-					shift = {
-						0.3828125,
-						0.25
-					},
-					width = 110
-				},
-				priority = 'extra-high',
-				shift = {
-					0.375,
-					0.234375
-				},
-				width = 56
-			}
 		}
 	},
 	resistances = {
@@ -144,12 +115,17 @@ data:extend{{
 	},
 	selection_box = {
 		{
-			-0.5,
-			-0.5
+			-6.5,
+			-6.5
 		},
 		{
-			0.5,
-			0.5
+			6.5,
+			6.5
 		}
-	}
+	},
+	working_sound = {
+        sound = {filename = "__pyalienlifegraphics3__/sounds/flyavan.ogg", volume = 0.8},
+        idle_sound = {filename = "__pyalienlifegraphics3__/sounds/flyavan.ogg", volume = 0.2},
+		audible_distance_modifier = 0.35,
+    }
 }}

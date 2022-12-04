@@ -22,8 +22,8 @@ local prototypes = {
 		fuel_size = 4,
 		outpost = 'outpost-aerial',
 		favorite_foods = {
-			['fish-food-01'] = 10,
-			['fish-food-02'] = 30
+			['fish-food-02'] = 2,
+			['gastrocapacitor'] = 50
 		},
 		actions = {
 			'time-passed',
@@ -104,7 +104,7 @@ Caravan.actions = {
 		local outpost_inventory = get_outpost_inventory(chest)
 		if not outpost_inventory then return true end
 		local inventory = caravan_data.inventory
-		
+
 		transfer_all_items(outpost_inventory, inventory)
 		return inventory.find_empty_stack() == nil
 	end,
@@ -115,7 +115,7 @@ Caravan.actions = {
 		local outpost_inventory = get_outpost_inventory(chest)
 		if not outpost_inventory then return true end
 		local inventory = caravan_data.inventory
-		
+
 		transfer_all_items(inventory, outpost_inventory)
 		return inventory.is_empty()
 	end,
@@ -161,7 +161,7 @@ Caravan.actions = {
 		return 'nuke'
 	end
 }
-	
+
 Caravan.free_actions = { -- actions that don't use fuel
 	['time-passed'] = true,
 	['store-food'] = true,

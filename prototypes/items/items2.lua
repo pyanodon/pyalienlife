@@ -528,3 +528,14 @@ ITEM {
     order = "ad",
     stack_size = 50
 }
+
+ITEM {
+    type = "item",
+    name = "gastrocapacitor",
+    icon = "__pyalienlifegraphics2__/graphics/icons/gastrocapacitor.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-special-creatures",
+    order = "z",
+    stack_size = 50
+}

@@ -10,6 +10,7 @@ RECIPE {
         {type = 'item', name = 'alien-sample01', amount = 5},
         {type = 'item', name = 'bio-sample', amount = 20},
         {type = 'item', name = 'auog', amount = 1},
+		{type = 'item', name = 'animal-sample-01', amount = 2},
         {type = 'item', name = 'moss-gen', amount = 15},
         {type = 'item', name = 'earth-bear-sample', amount = 1},
         {type = 'fluid', name = 'water-saline', amount = 100}
@@ -62,6 +63,27 @@ data:extend{{
 						'__pyalienlifegraphics2__/graphics/entity/caravan/caravan-walk-08.png'
 					},
 					slice = 8,
+					lines_per_file = 8,
+					line_length = 8,
+					width = 256,
+					height = 224,
+					frame_count = 30,
+					direction_count = 16,
+					shift = util.mul_shift(util.by_pixel(-0, -0), 0.5)
+				},
+				{
+					filenames = {
+						'__pyalienlifegraphics2__/graphics/entity/caravan/caravan-walk-01-mask.png',
+						'__pyalienlifegraphics2__/graphics/entity/caravan/caravan-walk-02-mask.png',
+						'__pyalienlifegraphics2__/graphics/entity/caravan/caravan-walk-03-mask.png',
+						'__pyalienlifegraphics2__/graphics/entity/caravan/caravan-walk-04-mask.png',
+						'__pyalienlifegraphics2__/graphics/entity/caravan/caravan-walk-05-mask.png',
+						'__pyalienlifegraphics2__/graphics/entity/caravan/caravan-walk-06-mask.png',
+						'__pyalienlifegraphics2__/graphics/entity/caravan/caravan-walk-07-mask.png',
+						'__pyalienlifegraphics2__/graphics/entity/caravan/caravan-walk-08-mask.png'
+					},
+					slice = 8,
+					tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
 					lines_per_file = 8,
 					line_length = 8,
 					width = 256,
@@ -126,6 +148,28 @@ data:extend{{
 				frame_count = 30,
 				direction_count = 16,
 				shift = util.mul_shift(util.by_pixel(-0, -0)),
+				scale = _G.scale
+			},
+			{
+				filenames = {
+					'__pyalienlifegraphics2__/graphics/entity/caravan/caravan-walk-01-mask.png',
+					'__pyalienlifegraphics2__/graphics/entity/caravan/caravan-walk-02-mask.png',
+					'__pyalienlifegraphics2__/graphics/entity/caravan/caravan-walk-03-mask.png',
+					'__pyalienlifegraphics2__/graphics/entity/caravan/caravan-walk-04-mask.png',
+					'__pyalienlifegraphics2__/graphics/entity/caravan/caravan-walk-05-mask.png',
+					'__pyalienlifegraphics2__/graphics/entity/caravan/caravan-walk-06-mask.png',
+					'__pyalienlifegraphics2__/graphics/entity/caravan/caravan-walk-07-mask.png',
+					'__pyalienlifegraphics2__/graphics/entity/caravan/caravan-walk-08-mask.png'
+				},
+				slice = 8,
+				tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+				lines_per_file = 8,
+				line_length = 8,
+				width = 256,
+				height = 224,
+				frame_count = 30,
+				direction_count = 16,
+				shift = util.mul_shift(util.by_pixel(-0, -0), 0.5),
 				scale = _G.scale
 			},
 			{

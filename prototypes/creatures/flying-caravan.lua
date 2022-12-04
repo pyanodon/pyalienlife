@@ -134,9 +134,9 @@ data:extend
 			width = 480,
 			height = 410,
 			frame_count = 50,
-			shift = util.mul_shift(util.by_pixel(150, 130)),
+			shift = util.mul_shift(util.by_pixel(170, 150)),
 			direction_count = 16,
-			--scale = scale,
+			scale = 0.8,
 			draw_as_shadow = true,
 		  }
 		}
@@ -216,9 +216,9 @@ data:extend
 			width = 480,
 			height = 410,
 			frame_count = 50,
-			shift = util.mul_shift(util.by_pixel(150, 130)),
+			shift = util.mul_shift(util.by_pixel(170, 150)),
 			direction_count = 16,
-			--scale = scale,
+			scale = 0.8,
 			draw_as_shadow = true,
 		  },
 		}

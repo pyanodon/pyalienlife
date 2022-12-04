@@ -2895,7 +2895,7 @@ RECIPE {
     type = 'recipe',
     name = 'animal-sample-01',
     category = 'genlab',
-    enabled = true,
+    enabled = false,
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'bones', amount = 5},
@@ -2911,3 +2911,25 @@ RECIPE {
         {type = 'item', name = 'animal-sample-01', amount = 1},
     },
 }:add_unlock("logistic-science-pack")
+
+RECIPE {
+    type = 'recipe',
+    name = 'gastrocapacitor',
+    category = 'research',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'animal-sample-01', amount = 3},
+        {type = 'item', name = 'nexelit-battery', amount = 1},
+        {type = 'item', name = 'stainless-steel', amount = 2},
+        {type = 'item', name = 'electronic-circuit', amount = 2},
+        {type = 'item', name = 'phosphate-glass', amount = 1},
+        {type = 'item', name = 'zipir-food-01', amount = 1},
+        {type = 'fluid', name = 'phytoplankton', amount = 100},
+        {type = 'fluid', name = 'blood', amount = 100},
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'gastrocapacitor', amount = 1},
+    },
+}:add_unlock("domestication-mk02")

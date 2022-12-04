@@ -7,7 +7,12 @@ RECIPE {
     category = 'crafting',
 	enabled = false,
     ingredients = {
-        {type = 'item', name = 'iron-plate', amount = 5}
+        {type = 'item', name = 'steel-plate', amount = 5},
+		{type = 'item', name = 'small-parts-01', amount = 50},
+		{type = 'item', name = 'duralumin', amount = 10},
+		{type = 'item', name = 'concrete', amount = 20},
+		{type = 'item', name = 'electronic-circuit', amount = 3},
+		{type = 'item', name = 'glass', amount = 5},
     },
     result = 'outpost'
 }:add_unlock('domestication')
@@ -35,12 +40,12 @@ data:extend{{
 	},
 	collision_box = {
 		{
-			-0.35,
-			-0.35
+			-2.9,
+			-2.9
 		},
 		{
-			0.35,
-			0.35
+			2.9,
+			2.9
 		}
 	},
 	corpse = 'steel-chest-remnants',
@@ -87,49 +92,12 @@ data:extend{{
 	picture = {
 		layers = {
 			{
-				filename = '__base__/graphics/entity/steel-chest/steel-chest.png',
-				height = 40,
-				hr_version = {
-					filename = '__base__/graphics/entity/steel-chest/hr-steel-chest.png',
-					height = 80,
-					priority = 'extra-high',
-					scale = 0.5,
-					shift = {
-						-0.0078125,
-						-0.015625
-					},
-					width = 64
-				},
+				filename = '__pyalienlifegraphics2__/graphics/entity/outpost/off.png',
+				height = 224,
+				width = 224,
 				priority = 'extra-high',
-				shift = {
-					0,
-					-0.015625
-				},
-				width = 32
+				shift = util.by_pixel(16, -16),
 			},
-			{
-				draw_as_shadow = true,
-				filename = '__base__/graphics/entity/steel-chest/steel-chest-shadow.png',
-				height = 22,
-				hr_version = {
-					draw_as_shadow = true,
-					filename = '__base__/graphics/entity/steel-chest/hr-steel-chest-shadow.png',
-					height = 46,
-					priority = 'extra-high',
-					scale = 0.5,
-					shift = {
-						0.3828125,
-						0.25
-					},
-					width = 110
-				},
-				priority = 'extra-high',
-				shift = {
-					0.375,
-					0.234375
-				},
-				width = 56
-			}
 		}
 	},
 	resistances = {
@@ -144,12 +112,12 @@ data:extend{{
 	},
 	selection_box = {
 		{
-			-0.5,
-			-0.5
+			-3.0,
+			-3.0
 		},
 		{
-			0.5,
-			0.5
+			3.0,
+			3.0
 		}
 	}
 }}
