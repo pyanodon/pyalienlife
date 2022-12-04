@@ -29,6 +29,7 @@ ITEM {
 }
 
 data:extend{{
+	scale_info_icons = true,
 	name = 'outpost',
 	type = 'container',
 	circuit_connector_sprites = table.deepcopy(data.raw.container['steel-chest'].circuit_connector_sprites),
@@ -48,7 +49,7 @@ data:extend{{
 			2.9
 		}
 	},
-	corpse = 'steel-chest-remnants',
+	corpse = 'big-remnants',
 	damaged_trigger_effect = {
 		damage_type_filters = 'fire',
 		entity_name = 'spark-explosion',
@@ -71,19 +72,17 @@ data:extend{{
 		type = 'create-entity'
 	},
 	dying_explosion = 'steel-chest-explosion',
-	fast_replaceable_group = 'container',
 	flags = {
 		'placeable-neutral',
 		'player-creation'
 	},
-	icon = '__base__/graphics/icons/steel-chest.png',
-	icon_mipmaps = 4,
+	icon = '__pyalienlifegraphics2__/graphics/icons/outpost.png',
 	icon_size = 64,
-	inventory_size = 48,
-	max_health = 350,
+	inventory_size = 30,
+	max_health = 600,
 	minable = {
 		mining_time = 0.2,
-		result = 'steel-chest'
+		result = 'outpost'
 	},
 	open_sound = {
 		filename = '__base__/sound/metallic-chest-open.ogg',
