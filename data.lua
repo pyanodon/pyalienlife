@@ -414,14 +414,14 @@ require('prototypes/buildings/space/space-zipir-reef-mk01')
 
 require('prototypes/buildings/py-drive')
 
---require('prototypes/buildings/outpost')
 --require('prototypes/buildings/outpost-mining')
---require('prototypes/buildings/flyavan-outpost')
 
 --Creature
---require('prototypes/creatures/caravan')
---require('prototypes/creatures/nuka-caravan')
---require('prototypes/creatures/flying-caravan')
+require 'prototypes/creatures/caravan'
+require 'prototypes/creatures/flying-caravan'
+require 'prototypes/creatures/nuka-caravan'
+require 'prototypes/buildings/outpost'
+require 'prototypes/buildings/outpost-aerial'
 require('prototypes/creatures/dingrido')
 require('prototypes/creatures/crawdad')
 require('prototypes/creatures/phadaisus')

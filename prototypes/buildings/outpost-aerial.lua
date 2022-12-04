@@ -2,29 +2,29 @@ local util = require('util')
 
 RECIPE {
     type = 'recipe',
-    name = 'outpost',
+    name = 'outpost-aerial',
     energy_required = 50,
     category = 'crafting',
-	enabled = false,
-    ingredients = {
+    enabled = false,
+	ingredients = {
         {type = 'item', name = 'iron-plate', amount = 5}
     },
-    result = 'outpost'
-}:add_unlock('domestication')
+    result = 'outpost-aerial'
+}:add_unlock('domestication-mk02')
 
 ITEM {
     type = 'item',
-    name = 'outpost',
-    icon = '__pyalienlifegraphics2__/graphics/icons/outpost.png',
+    name = 'outpost-aerial',
+    icon = '__pyalienlifegraphics2__/graphics/icons/flyavan-outpost.png',
     icon_size = 64,
     subgroup = 'py-alienlife-special-creatures',
     order = 'a',
-    place_result = 'outpost',
+    place_result = 'outpost-aerial',
     stack_size = 10
 }
 
 data:extend{{
-	name = 'outpost',
+	name = 'outpost-aerial',
 	type = 'container',
 	circuit_connector_sprites = table.deepcopy(data.raw.container['steel-chest'].circuit_connector_sprites),
 	circuit_wire_connection_point = table.deepcopy(data.raw.container['steel-chest'].circuit_wire_connection_point),

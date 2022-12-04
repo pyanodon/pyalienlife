@@ -1,9 +1,9 @@
 local util = require('util')
-local sounds = require("__base__/prototypes/entity/sounds")
+local sounds = require('__base__/prototypes/entity/sounds')
 
-RECIPE{
-    type = "recipe",
-    name = "nuka-caravan",
+RECIPE {
+    type = 'recipe',
+    name = 'nukavan',
 	energy_required = 50,
 	category = 'creature-chamber',
     enabled = false,
@@ -17,36 +17,37 @@ RECIPE{
 		{type = 'fluid', name = 'water-saline', amount = 100},
 		{type = 'item', name = 'atomic-bomb', amount = 1},
     },
-    result = "nuka-caravan"
-  }:add_unlock("domestication-mk03")
+    result = 'nukavan'
+}:add_unlock('domestication-mk03')
 
 ITEM{
-    type = "item-with-entity-data",
-    name = "nuka-caravan",
-    icon = "__pyalienlifegraphics__/graphics/icons/nuka-van.png",
+    type = 'item-with-tags',
+    name = 'nukavan',
+    icon = '__pyalienlifegraphics2__/graphics/icons/nuka-van.png',
     icon_size = 64,
-    subgroup = "py-alienlife-special-creatures",
-    order = "a",
-    place_result = "nuka-caravan",
-    stack_size = 10
+    subgroup = 'py-alienlife-special-creatures',
+    order = 'a',
+    place_result = 'nukavan',
+    stack_size = 1,
+	flags = {'not-stackable'}
   }
 
 data:extend(
 {
   {
-    type = "unit",
-    name = "nuka-caravan",
-    icon = "__pyalienlifegraphics__/graphics/icons/nuka-van.png",
+    type = 'unit',
+    name = 'nukavan',
+    icon = '__pyalienlifegraphics2__/graphics/icons/nuka-van.png',
     icon_size = 64,
-    flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "not-repairable", "breaths-air"},
-	minable = {mining_time = 0.1, result = 'caravan'},
+    flags = {'placeable-player', 'placeable-off-grid', 'not-repairable', 'breaths-air', 'building-direction-8-way'},
+	minable = {mining_time = 0.1, result = 'nukavan'},
     max_health = 300,
-    order = "b-b-a",
-    subgroup="enemies",
+    order = 'b-b-a',
+    subgroup='enemies',
     resistances =
 		{
 			{
-				type = "physical",
+				type = 'physical',
 				percent = 50
 			},
 		},
@@ -60,17 +61,17 @@ data:extend(
         {
           count_max = 1,
           count_min = 1,
-          item = "iron-ore",
+          item = 'iron-ore',
           probability = 1
         }
       },
 	]]--
     attack_parameters =
     {
-      type = "projectile",
-      range = 0.5,
-      cooldown = 35,
-      ammo_type = _G.make_unit_melee_ammo_type(7),
+      type = 'projectile',
+      range = 0,
+      cooldown = 0,
+      ammo_type = _G.make_unit_melee_ammo_type(0),
       --sound = make_biter_roars(0.4),
 	animation =
 	{
@@ -79,13 +80,13 @@ data:extend(
 			{
 			filenames =
 				{
-					  "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-01.png",
-					  "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-02.png",
-					  "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-03.png",
-					  "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-04.png",
-					  "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-05.png",
-					  "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-06.png",
-					  "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-07.png",
+					  '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-01.png',
+					  '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-02.png',
+					  '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-03.png',
+					  '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-04.png',
+					  '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-05.png',
+					  '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-06.png',
+					  '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-07.png',
 				},
 			slice = 8,
 			lines_per_file = 8,
@@ -100,13 +101,13 @@ data:extend(
 			{
 			filenames =
 			{
-			  "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-01.png",
-			  "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-02.png",
-			  "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-03.png",
-			  "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-04.png",
-			  "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-05.png",
-			  "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-06.png",
-			  "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-07.png",
+			  '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-01.png',
+			  '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-02.png',
+			  '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-03.png',
+			  '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-04.png',
+			  '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-05.png',
+			  '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-06.png',
+			  '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-07.png',
 			},
 			slice = 8,
 			lines_per_file = 8,
@@ -123,14 +124,14 @@ data:extend(
 	},
 	},
 	vision_distance = 50,
-	movement_speed = 0.12,
+	movement_speed = 0.24,
 	distance_per_frame = 0.15,
 	pollution_to_join_attack = 4,
 	distraction_cooldown = 300,
 	min_pursue_time = 10 * 60,
 	max_pursue_distance = 50,
-	--corpse = "arthurian-corpse",
-	dying_explosion = "nuka-bomb-baby",
+	--corpse = 'arthurian-corpse',
+	dying_explosion = 'nuka-bomb-baby',
 	--dying_sound =  make_biter_dying_sounds(0.4),
 	--working_sound =  make_biter_calls(0.3),
 	--run_animation = biterrunanimation(small_biter_scale, small_biter_tint1, small_biter_tint2),
@@ -143,13 +144,13 @@ data:extend(
 			{
 			filenames =
 				{
-					  "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-01.png",
-					  "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-02.png",
-					  "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-03.png",
-					  "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-04.png",
-					  "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-05.png",
-					  "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-06.png",
-					  "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-07.png",
+					  '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-01.png',
+					  '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-02.png',
+					  '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-03.png',
+					  '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-04.png',
+					  '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-05.png',
+					  '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-06.png',
+					  '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-07.png',
 				},
 			slice = 8,
 			lines_per_file = 8,
@@ -164,13 +165,13 @@ data:extend(
 			{
 			filenames =
 			{
-			  "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-01.png",
-			  "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-02.png",
-			  "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-03.png",
-			  "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-04.png",
-			  "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-05.png",
-			  "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-06.png",
-			  "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-07.png",
+			  '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-01.png',
+			  '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-02.png',
+			  '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-03.png',
+			  '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-04.png',
+			  '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-05.png',
+			  '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-06.png',
+			  '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-07.png',
 			},
 			slice = 8,
 			lines_per_file = 8,
@@ -189,15 +190,15 @@ data:extend(
 --[[
 	caravan.add_arthur_die_animation(scale, --small_biter_tint1, small_biter_tint2,
 	{
-		type = "corpse",
-		name = "caravan-corpse",
-		icon = "__base__/graphics/icons/small-biter-corpse.png",
+		type = 'corpse',
+		name = 'caravan-corpse',
+		icon = '__base__/graphics/icons/small-biter-corpse.png',
 		icon_size = 32,
 		selection_box = {{-0.8, -0.8}, {0.8, 0.8}},
 		selectable_in_game = false,
-		subgroup="corpses",
-		order = "c[corpse]-a[biter]-a[small]",
-		flags = {"placeable-neutral", "placeable-off-grid", "building-direction-8-way", "not-repairable", "not-on-map"}
+		subgroup='corpses',
+		order = 'c[corpse]-a[biter]-a[small]',
+		flags = {'placeable-neutral', 'placeable-off-grid', 'building-direction-8-way', 'not-repairable', 'not-on-map'}
 	}
 	)
 	]]--
@@ -217,12 +218,12 @@ data:extend(
 	  stripes =
 	  {
 		{
-		  filename = "__base__/graphics/entity/massive-explosion/massive-explosion-1.png",
+		  filename = '__base__/graphics/entity/massive-explosion/massive-explosion-1.png',
 		  width_in_frames = 6,
 		  height_in_frames = 5,
 		},
 		{
-		  filename = "__base__/graphics/entity/massive-explosion/massive-explosion-2.png",
+		  filename = '__base__/graphics/entity/massive-explosion/massive-explosion-2.png',
 		  width_in_frames = 6,
 		  height_in_frames = 5,
 		}
@@ -240,12 +241,12 @@ data:extend(
 		stripes =
 		{
 		  {
-			filename = "__base__/graphics/entity/massive-explosion/hr-massive-explosion-1.png",
+			filename = '__base__/graphics/entity/massive-explosion/hr-massive-explosion-1.png',
 			width_in_frames = 6,
 			height_in_frames = 5,
 		  },
 		  {
-			filename = "__base__/graphics/entity/massive-explosion/hr-massive-explosion-2.png",
+			filename = '__base__/graphics/entity/massive-explosion/hr-massive-explosion-2.png',
 			width_in_frames = 6,
 			height_in_frames = 5,
 		  }
@@ -257,25 +258,25 @@ data:extend(
 data:extend(
 	{
 		{
-			type = "explosion",
-			name = "nuka-bomb-baby",
-			flags = {"not-on-map"},
-			subgroup = "explosions",
+			type = 'explosion',
+			name = 'nuka-bomb-baby',
+			flags = {'not-on-map'},
+			subgroup = 'explosions',
 			animations = massive_explosion(),
 			light = {intensity = 1, size = 50, color = {r=1.0, g=1.0, b=1.0}},
 			sound = sounds.large_explosion(0.8),
 			created_effect =
 			{
-			  type = "direct",
+			  type = 'direct',
 			  action_delivery =
 			  {
-				type = "instant",
+				type = 'instant',
 				target_effects =
 				{
 				  {
 					  repeat_count = 100,
-					  type = "create-trivial-smoke",
-					  smoke_name = "nuclear-smoke",
+					  type = 'create-trivial-smoke',
+					  smoke_name = 'nuclear-smoke',
 					  offset_deviation = {{-1, -1}, {1, 1}},
 					  starting_frame = 3,
 					  starting_frame_deviation = 5,
@@ -284,31 +285,31 @@ data:extend(
 					  speed_from_center = 0.5
 				  },
 				  {
-					type = "create-entity",
-					entity_name = "explosion"
+					type = 'create-entity',
+					entity_name = 'explosion'
 				  },
 				  {
-					type = "damage",
-					damage = {amount = 400, type = "explosion"}
+					type = 'damage',
+					damage = {amount = 400, type = 'explosion'}
 				  },
 				  {
-					type = "create-entity",
-					entity_name = "big-scorchmark",
+					type = 'create-entity',
+					entity_name = 'big-scorchmark',
 					check_buildability = true
 				  },
 				  {
-					type = "nested-result",
+					type = 'nested-result',
 					action =
 					{
-					  type = "area",
+					  type = 'area',
 					  target_entities = false,
 					  trigger_from_target = true,
 					  repeat_count = 2000,
 					  radius = 35,
 					  action_delivery =
 					  {
-						type = "projectile",
-						projectile = "atomic-bomb-wave",
+						type = 'projectile',
+						projectile = 'atomic-bomb-wave',
 						starting_speed = 0.5
 					  }
 					}

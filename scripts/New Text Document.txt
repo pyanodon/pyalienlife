@@ -1,9 +1,9 @@
 
 1. Roboport and logistic area display needs fixed. Just image replacement issues so no real problems just hasn't been done yet. -- DONE
 2. Beetle request gui still doesn't reload the set requests when its closed then opened. 
-3. Need to still check that everything is removed correctly when things get killed. Beetles and caravans. 
+3. Need to still check that everything is removed correctly when things get killed. Beetles
 4. Farms spawn a fence perimeter and that currently gives free fence pieces.
-5. Attempt to Add the food system to the caravans. It shouldn't be to involved now that I've got everything else figured out. 
+5. Attempt to Add the food system to the caravans. It shouldn't be to involved now that I've got everything else figured out. -- DONE
 6. Keep messing with the speed on the mega farm. I changed it buts it still feels to slow. 
 7. Add the new victory condition triggers for the quantum computer and victory message. I've already disabled it on the rocket. 
 8. Idk something will pop up
@@ -13,4 +13,4 @@
 
 --TODO: LATER STUFF
 
-caravan menu with pip windows to show the current location like the train menu
+caravan menu with pip windows to show the current location like the train menu -- DONE
