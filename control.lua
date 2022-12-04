@@ -139,16 +139,29 @@ local function create_sh_animal_table(sh_gui, player)
 						end
 					elseif next(sg_table.s_table.children) == nil then
 						--log('hit')
-						sg_table.s_table.add(
-							{
-								type = "choose-elem-button",
-								name = animal,
-								elem_type = 'item',
-								item = animal,
-								style = "image_tab_slot",
-								--tooltip = animal
-							}
-						)
+                        if animal == "zipir" then
+                            sg_table.s_table.add(
+                                {
+                                    type = "choose-elem-button",
+                                    name = animal,
+                                    elem_type = 'item',
+                                    item = animal .. "1",
+                                    style = "image_tab_slot",
+                                    --tooltip = animal
+                                }
+                            )
+                        else
+                            sg_table.s_table.add(
+                                {
+                                    type = "choose-elem-button",
+                                    name = animal,
+                                    elem_type = 'item',
+                                    item = animal,
+                                    style = "image_tab_slot",
+                                    --tooltip = animal
+                                }
+                            )
+                        end
 					end
 				end
 			end
