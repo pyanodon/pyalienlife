@@ -9,10 +9,12 @@ RECIPE {
   enabled = false,
   ingredients = {
     {type = 'item', name = 'alien-sample01', amount = 10},
-    {type = 'item', name = 'cdna', amount = 10},
+    {type = 'item', name = 'cdna', amount = 5},
     {type = 'item', name = 'moss-gen', amount = 30},
     {type = 'item', name = 'bio-sample', amount = 100},
+    {type = 'item', name = 'animal-sample-01', amount = 5},
     {type = 'item', name = 'earth-generic-sample', amount = 20},
+    {type = 'item', name = 'earth-lizard-sample', amount = 1},
     {type = 'fluid', name = 'blood', amount = 300},
     {type = 'fluid', name = 'water-saline', amount = 500},
   },
