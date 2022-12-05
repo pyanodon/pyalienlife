@@ -71,8 +71,6 @@ function Digosaurus.update_gui(gui)
 			element.sprite = nil
 		end
 	end
-
-	content_flow.mining_prod.caption = {'digosaurus-gui.mining-prod', 0}
 end
 
 Digosaurus.events.on_gui_opened = function(event)
@@ -133,10 +131,6 @@ Digosaurus.events.on_gui_opened = function(event)
 		slot.tags = {unit_number = dig_data.unit_number, i = i}
 		slot.tooltip = {'digosaurus-gui.digosaurus-slot', '[item=digosaurus]', game.item_prototypes['digosaurus'].localised_name}
 	end
-
-	content_flow.add{type = 'line'}
-
-	content_flow.add{type = 'label', name = 'mining_prod'}
 
 	Digosaurus.update_gui(main_frame)
 end

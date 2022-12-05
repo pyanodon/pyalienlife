@@ -29,6 +29,7 @@ ITEM {
 }
 
 data:extend{{
+	inventory_type = 'with_filters_and_bar',
 	scale_info_icons = true,
 	name = 'outpost',
 	type = 'container',

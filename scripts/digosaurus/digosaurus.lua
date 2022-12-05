@@ -60,11 +60,15 @@ local function draw_error_sprite(dig_data, sprite)
 end
 
 function Digosaurus.find_random_scanned_ore(dig_data)
-    while table_size(dig_data.scanned_ores) ~= 0 do
-        local rng = math.random(1, #dig_data.scanned_ores)
-        local ore = dig_data.scanned_ores[rng]
-        if ore.valid then return ore, rng end
-        dig_data.scanned_ores[rng] = nil
+    local scanned_ores = dig_data.scanned_ores
+    local max_index = 0
+    for i, _ in pairs(scanned_ores) do max_index = math.max(max_index, i) end
+
+    while table_size(scanned_ores) ~= 0 do
+        local rng = math.random(1, max_index)
+        local ore = scanned_ores[rng]
+        if ore and ore.valid then return ore, rng end
+        scanned_ores[rng] = nil
     end
     return nil
 end
