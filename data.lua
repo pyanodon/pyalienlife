@@ -5,6 +5,7 @@
 require("__stdlib__/stdlib/data/data").Util.create_data_globals()
 local RECIPE = require("__stdlib__/stdlib/data/recipe")
 
+require "prototypes/gui-style"
 require("prototypes/item-groups")
 require("prototypes/recipe-categories")
 require("prototypes/fuel-categories")
@@ -18,7 +19,7 @@ require("prototypes/technologies/microbiology")
 require("prototypes/technologies/botany")
 require("prototypes/technologies/biotech")
 require("prototypes/technologies/genetics")
--- require("prototypes/technologies/zoology")
+require("prototypes/technologies/zoology") -- Digosaurus tech
 require("prototypes/technologies/land-animals")
 require("prototypes/technologies/water-animals")
 require("prototypes/technologies/water-invertebrates")
@@ -414,17 +415,16 @@ require('prototypes/buildings/space/space-zipir-reef-mk01')
 
 require('prototypes/buildings/py-drive')
 
---require('prototypes/buildings/outpost-mining')
-
 --Creature
 require 'prototypes/creatures/caravan'
 require 'prototypes/creatures/flying-caravan'
 require 'prototypes/creatures/nuka-caravan'
 require 'prototypes/buildings/outpost'
 require 'prototypes/buildings/outpost-aerial'
-require('prototypes/creatures/dingrido')
-require('prototypes/creatures/crawdad')
-require('prototypes/creatures/phadaisus')
+require 'prototypes/creatures/digosaurus'
+require 'prototypes/creatures/dingrido'
+require 'prototypes/creatures/crawdad'
+require 'prototypes/creatures/phadaisus'
 --require('prototypes/creatures/ocula')
 --require('prototypes/robots/gobachov')
 --require('prototypes/robots/huzu')
@@ -432,7 +432,6 @@ require('prototypes/creatures/phadaisus')
 --require('prototypes/creatures/ulric-man-mining')
 --require('prototypes/creatures/ulric-man-attack')
 --require('prototypes/creatures/clone-1')
---require('prototypes/creatures/dig-osaurus')
 
 --(( FLUIDS ))--
 require("prototypes/fluids/zogna-bacteria")

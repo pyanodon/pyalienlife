@@ -1,4 +1,5 @@
 require 'scripts/caravan/caravan'
+require 'scripts/digosaurus/digosaurus'
 
 local bio_list = require('prototypes/items/biomass-convertion')
 
@@ -377,6 +378,7 @@ local function init()
     init_discoscience()
 
     Caravan.events.init()
+    Digosaurus.events.init()
 end
 
 script.on_init(function()
@@ -402,7 +404,9 @@ end)
 local on_built = {defines.events.on_built_entity, defines.events.on_robot_built_entity, defines.events.script_raised_revive, defines.events.script_raised_built}
 script.on_event(on_built, function(event)
     Caravan.events.on_built(event)
-    local E = event.created_entity
+    Digosaurus.events.on_built(event)
+
+    local E = event.created_entity or event.entity
 
     if string.match(E.name, 'numal%-reef') and not string.match(E.name, 'placer') then
         disable_machine(E)
@@ -451,6 +455,7 @@ end)
 
 script.on_event(defines.events.on_ai_command_completed, function(event)
     Caravan.events.ai_command_completed(event)
+    Digosaurus.events.on_ai_command_completed(event)
 end)
 
 script.on_event(defines.events.on_tick, function()
@@ -534,6 +539,8 @@ end)
 local on_destroyed = {defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity, defines.events.script_raised_destroy, defines.events.on_entity_died}
 script.on_event(on_destroyed, function(event)
     Caravan.events.on_destroyed(event)
+    Digosaurus.events.on_destroyed(event)
+
     local E = event.entity
     if global.farms[E.unit_number] ~= nil then
         global.farms[E.unit_number] = nil
@@ -549,6 +556,8 @@ script.on_event(on_destroyed, function(event)
 end)
 
 script.on_event(defines.events.on_gui_opened, function(event)
+    Digosaurus.events.on_gui_opened(event)
+
     local E = event
     local p_index = event.player_index
     local player = game.players[p_index]
@@ -754,6 +763,8 @@ end)
 
 script.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
     Caravan.events.close_gui(event)
+    Digosaurus.events.close_gui(event)
+
     if event.entity ~= nil and string.match(event.entity.name, 'slaughterhouse') and global.watch_slaughterhouse == true then
         --log('hit')
         global.watch_slaughterhouse = false
@@ -865,4 +876,9 @@ script.on_event(defines.events.on_entity_destroyed, function(event)
 	Caravan.events.on_entity_destroyed(event)
 end)
 
-script.on_nth_tick(60, Caravan.events[60])
+script.on_nth_tick(60, function()
+    Caravan.events[60]()
+    Digosaurus.events[60]()
+end)
+
+script.on_nth_tick(3, Digosaurus.events[3])

@@ -1439,38 +1439,6 @@ local character_animations =
   },
 }
 
---[[
-RECIPE{
-    type = "recipe",
-    name = "digosaurus",
-    energy_required = 120,
-    category = 'creature-chamber',
-    enabled = true,
-    ingredients =
-    {
-      {type = 'item', name = 'alien-sample01', amount = 10},
-      {type = 'item', name = 'cdna', amount = 10},
-      {type = 'item', name = 'moss-gen', amount = 30},
-      {type = 'item', name = 'bio-sample', amount = 100},
-      {type = 'item', name = 'earth-generic-sample', amount = 20},
-      {type = 'fluid', name = 'blood', amount = 300},
-      {type = 'fluid', name = 'water-saline', amount = 500},
-    },
-    result = "digosaurus"
-  }--:add_unlock("zoology")
-]]--
---[[
-ITEM{
-    type = "item-with-entity-data",
-    name = "digosaurus",
-    icon = "__pyalienlifegraphics__/graphics/icons/crawdad.png",
-    icon_size = 64,
-    subgroup = "py-alienlife-buildings-others",
-    order = "x",
-    place_result = "digosaurus",
-    stack_size = 10
-  }
-]]--
 data:extend(
     {
       {
