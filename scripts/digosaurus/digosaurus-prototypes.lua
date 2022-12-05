@@ -4,7 +4,7 @@ Digosaurus.minable_categories = {
 	['basic-solid'] = true
 }
 
-Digosaurus.ores_gained_per_trip = 25
+Digosaurus.ores_gained_per_trip = 5
 
 Digosaurus.dino_dig_site_creature_limit = 4
 

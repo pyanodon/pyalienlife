@@ -1,5 +1,5 @@
-local item_icon = '__pyalienlifegraphics__/graphics/icons/crawdad.png' -- change this!
-local time_taken_for_digosaurus_to_mine = 10 -- seconds
+local item_icon = '__pyalienlifegraphics3__/graphics/icons/dig-osaur.png' -- change this!
+local time_taken_for_digosaurus_to_mine = 15 -- seconds
 
 RECIPE {
   type = 'recipe',
@@ -70,7 +70,7 @@ local running_animation = {layers = {
     frame_count = 18,
     direction_count = 8,
     animation_speed = 1,
-    scale = 0.7
+    scale = 1
   },
   {
     filename = '__pyalienlifegraphics3__/graphics/entity/dig-osaur/walk-sh.png',
@@ -81,7 +81,7 @@ local running_animation = {layers = {
     direction_count = 8,
     animation_speed = 1,
     draw_as_shadow = true,
-    scale = 0.7
+    scale = 1
   }
 }}
 
@@ -105,7 +105,7 @@ local mining_animation = {layers = {
     frame_count = 35,
     direction_count = 8,
     animation_speed = 1,
-    scale = 0.7
+    scale = 1
   },
   {
     stripes = {
@@ -127,7 +127,7 @@ local mining_animation = {layers = {
     direction_count = 8,
     animation_speed = 1,
     draw_as_shadow = true,
-    scale = 0.7
+    scale = 1
   }
 }}
 
@@ -145,13 +145,13 @@ ENTITY {
 	attack_parameters = {
 		type = 'projectile',
 		range = 1,
-		cooldown = 60,
+		cooldown = 30,
 		ammo_type = _G.make_unit_melee_ammo_type(1),
 		animation = mining_animation
 	},
   selectable_in_game = false,
 	vision_distance = 30,
-	movement_speed = 0.075,
+	movement_speed = 0.076,
 	distance_per_frame = 0.13,
 	pollution_to_join_attack = 4,
 	distraction_cooldown = 300,
@@ -178,7 +178,7 @@ ENTITY {
   vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},
   collision_box = {{-3.3, -3.3}, {3.3, 3.3}},
   selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-  inventory_size = 40,
+  inventory_size = 20,
   scale_info_icons = true,
   enable_inventory_bar = false,
   circuit_wire_connection_point = table.deepcopy(data.raw.container['steel-chest']).circuit_wire_connection_point,
