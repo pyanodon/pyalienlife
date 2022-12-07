@@ -395,8 +395,10 @@ script.on_configuration_changed(function()
     rendering.clear('pyalienlife')
 
     for _, entity in pairs(game.surfaces['nauvis'].find_entities_filtered{type = 'assembling-machine'}) do
-        if string.match(entity.name, farm) then
-            disable_machine(entity)
+        for _, farm in pairs(farm_buildings) do
+            if string.match(entity.name, farm) then
+                disable_machine(entity)
+            end
         end
     end
 end)

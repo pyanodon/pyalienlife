@@ -78,11 +78,13 @@ function Digosaurus.start_mining_command(dig_data, i)
     if not ore then return false end
 
     local entity = dig_data.entity
+    local spawn_point = Digosaurus.digosaurus_spawn_point[entity.direction]
     local digosaur = entity.surface.create_entity{
         name = 'digosaurus',
-        position = {entity.position.x, entity.position.y - 1},
+        position = {entity.position.x + spawn_point.x, entity.position.y + spawn_point.y},
         force = entity.force,
-        create_build_effect_smoke = false
+        create_build_effect_smoke = false,
+        direction = entity.direction
     }
     local proxy = entity.surface.create_entity{
         name = 'digosaurus-mineable-proxy',
@@ -126,9 +128,8 @@ Digosaurus.events[60] = function(event)
         elseif powersource.energy < powersource.electric_buffer_size * 0.9 then
             draw_error_sprite(dig_data, 'utility.electricity_icon')
         else
-            dig_data.inventory.sort_and_merge()
-            if dig_data.inventory.count_empty_stacks() < #dig_data.inventory / 2 then
-                goto continue -- only mine until half of the inventory is filled
+            if dig_data.inventory.get_item_count() > 1000 then
+                goto continue -- only mine until 1000 ores
             end
 
             for i = 1, #dig_data.digosaur_inventory do
@@ -177,17 +178,17 @@ Digosaurus.events.on_ai_command_completed = function(event)
         for _, product in pairs(ore.prototype.mineable_properties.products) do
             if product.type == 'item' then
                 local to_insert = math.min(ore.amount, Digosaurus.ores_gained_per_trip) * product.amount
-                if to_insert == 0 then goto continue end
+                if to_insert == 0 then return end
                 local ore_removed = dig_data.inventory.insert{name = product.name, count = to_insert} / product.amount
-                if ore_removed == 0 then goto continue end
+                if not dig_data.inventory[1].valid_for_read or ore_removed == 0 then return end
                 if ore.amount > ore_removed then
                     ore.amount = ore.amount - ore_removed
                 else
                     ore.deplete()
                     dig_data.scanned_ores[digosaur_data.ore_id] = nil
                 end
+                return
             end
-            ::continue::
         end
     end
 end
@@ -195,6 +196,7 @@ end
 Digosaurus.events.on_built = function(event)
     local entity = event.created_entity or event.entity
     if entity.name ~= 'dino-dig-site' then return end
+    entity.active = false
     local surface = entity.surface
     local force = force
     local position = entity.position
@@ -206,7 +208,7 @@ Digosaurus.events.on_built = function(event)
     global.dig_sites[entity.unit_number] = {
         unit_number = entity.unit_number,
         entity = entity,
-        inventory = entity.get_inventory(defines.inventory.chest),
+        inventory = entity.get_inventory(defines.inventory.assembling_machine_output),
         powersource = powersource,
         food_input = food_input,
         food_inventory = food_inventory,
@@ -286,7 +288,7 @@ function Digosaurus.scan_ores(dig_data)
     local entity = dig_data.entity
     local position = entity.position
     local range = Digosaurus.mining_range
-    local offset = Digosaurus.mining_range_offset
+    local offset = Digosaurus.mining_range_offset[entity.direction]
 
     local area = {
         {position.x - range + offset.x, position.y - range + offset.y},
@@ -298,5 +300,6 @@ function Digosaurus.scan_ores(dig_data)
         function(ore) return Digosaurus.minable_categories[ore.prototype.resource_category] end
     )
 
+    --rendering.clear('pyalienlife')
     --for _, ore in pairs(dig_data.scanned_ores) do rendering.draw_circle{color = {1, 1, 1}, radius = 0.2, filled = true, target = ore, surface = ore.surface} end
 end

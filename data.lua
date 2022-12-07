@@ -19,7 +19,7 @@ require("prototypes/technologies/microbiology")
 require("prototypes/technologies/botany")
 require("prototypes/technologies/biotech")
 require("prototypes/technologies/genetics")
-require("prototypes/technologies/zoology") -- Digosaurus tech
+--require("prototypes/technologies/zoology")
 require("prototypes/technologies/land-animals")
 require("prototypes/technologies/water-animals")
 require("prototypes/technologies/water-invertebrates")

@@ -83,7 +83,7 @@ Digosaurus.events.on_gui_opened = function(event)
 	local main_frame = player.gui.relative.add{
 		type = 'frame', name = 'digosaurus_gui', caption = {'entity-name.dino-dig-site'}, direction = 'vertical', tags = {unit_number = entity.unit_number},
 		anchor = {
-			gui = defines.relative_gui_type.container_gui,
+			gui = defines.relative_gui_type.assembling_machine_gui,
 			position = defines.relative_gui_position.left
 		}
 	}

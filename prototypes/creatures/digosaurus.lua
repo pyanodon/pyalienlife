@@ -19,7 +19,7 @@ RECIPE {
     {type = 'fluid', name = 'water-saline', amount = 500},
   },
   result = 'digosaurus'
-}:add_unlock('zoology')
+}
 
 ITEM {
   type = 'item',
@@ -49,7 +49,7 @@ RECIPE {
   results = {
       {'dino-dig-site', 1}
   }
-}:add_unlock('zoology')
+}
 
 ITEM {
   type = 'item',
@@ -165,8 +165,42 @@ ENTITY {
 	run_animation = running_animation
 }
 
+data:extend{{
+  type = 'recipe-category',
+  name = 'dino-dig-site'
+}}
+
+local dig_site_graphic = {layers = {
+  {
+    filename = '__pyalienlifegraphics3__/graphics/entity/outpost-mining/outpost-mining.png',
+    priority = 'high',
+    width = 224,
+    height = 320,
+    shift = util.by_pixel(0, -48)
+  },
+  {
+    filename = '__pyalienlifegraphics3__/graphics/entity/outpost-mining/outpost-mining-mask.png',
+    priority = 'high',
+    width = 224,
+    height = 320,
+    shift = util.by_pixel(0, -48),
+    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+  }
+}}
+
+RECIPE {
+  type = 'recipe',
+  name = 'digosaurus-hidden-recipe',
+  ingredients = {},
+  results = {{'nexelit-ore', 20000}},
+  category = 'dino-dig-site',
+  enabled = false
+}:add_unlock{'nexelit-mk02'}
+
 ENTITY {
-  type = 'container',
+  fixed_recipe = 'digosaurus-hidden-recipe',
+  gui_title_key = 'digosaurus-gui.empty',
+  type = 'assembling-machine',
   name = 'dino-dig-site',
   icon = '__pyalienlifegraphics3__/graphics/icons/outpost-mining.png',
   icon_size = 64,
@@ -178,41 +212,26 @@ ENTITY {
   open_sound = {filename = '__base__/sound/machine-open.ogg', volume = 0.85},
   close_sound = {filename = '__base__/sound/machine-close.ogg', volume = 0.75},
   vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},
-  collision_box = {{-3.3, -3.3}, {3.3, 3.3}},
+  collision_box = {{-3.3, -3.2}, {3.3, 3.2}},
   selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-  inventory_size = 20,
-  scale_info_icons = true,
-  enable_inventory_bar = false,
-  circuit_wire_connection_point = table.deepcopy(data.raw.container['steel-chest']).circuit_wire_connection_point,
-  circuit_connector_sprites = table.deepcopy(data.raw.container['steel-chest']).circuit_connector_sprites,
-  circuit_wire_max_distance = 7,
-  picture = {
-      layers = {
-          {
-              filename = '__pyalienlifegraphics3__/graphics/entity/outpost-mining/outpost-mining.png',
-              priority = 'high',
-              width = 224,
-              height = 320,
-              shift = util.by_pixel(0, -48)
-          },
-          {
-              filename = '__pyalienlifegraphics3__/graphics/entity/outpost-mining/outpost-mining-mask.png',
-              priority = 'high',
-              width = 224,
-              height = 320,
-              shift = util.by_pixel(0, -48),
-              tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-          }
-      }
+  energy_usage = '1W',
+  crafting_speed = 40,
+  crafting_categories = {'dino-dig-site'},
+  energy_source = {type = 'void'},
+  animation = {
+    north = dig_site_graphic,
+    east = dig_site_graphic,
+    south = dig_site_graphic,
+    west = dig_site_graphic,
   },
   radius_visualisation_specification = {
-      sprite = {
-          filename = '__base__/graphics/entity/electric-mining-drill/electric-mining-drill-radius-visualization.png',
-          width = 10,
-          height = 10
-      },
-      distance = 12.5,
-      offset = {0, -16}
+    sprite = {
+      filename = '__base__/graphics/entity/electric-mining-drill/electric-mining-drill-radius-visualization.png',
+      width = 10,
+      height = 10
+    },
+    distance = 12.5,
+    offset = {0, -16}
   }
 }
 
