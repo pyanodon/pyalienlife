@@ -2,8 +2,8 @@
 Version: 2.0.5
 Date: ?
   Changes:
-    - Added digosaurus. New mining creature that can gather nexelit.
-    - Caravan rework. They are really good now, I promise!
+    - added digosaurus. new mining creature that can gather nexelit.
+    - caravan rework
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.4
 Date: 2022-11-29

@@ -1,6 +1,9 @@
+local Position = require('__stdlib__/stdlib/area/position')
+
 local prototypes = {
 	caravan = {
 		inventory_size = 30,
+		opens_player_inventory = true,
 		fuel_size = 2,
 		outpost = 'outpost',
 		favorite_foods = {
@@ -19,6 +22,7 @@ local prototypes = {
 	},
 	flyavan = {
 		inventory_size = 60,
+		opens_player_inventory = true,
 		fuel_size = 4,
 		outpost = 'outpost-aerial',
 		favorite_foods = {
@@ -33,10 +37,12 @@ local prototypes = {
 			'item-count'
 		},
 		camera_zoom = 0.5,
-		placeable_by = 'flyavan'
+		placeable_by = 'flyavan',
+		can_fly = true
 	},
 	nukavan = {
 		inventory_size = 10,
+		opens_player_inventory = true,
 		fuel_size = 2,
 		outpost = 'outpost',
 		favorite_foods = {
@@ -47,20 +53,86 @@ local prototypes = {
 			'detonate'
 		},
 		placeable_by = 'nukavan'
+	},
+	-- pyalternativeenergy caravans
+	['aerial-blimp-mk01'] = {
+		opens_player_inventory = false,
+		outpost = 'aerial-base',
+		only_allow_outpost_as_destination = true,
+		actions = {
+			'time-passed',
+			'store-energy'
+		},
+		placeable_by = 'aerial-blimp-mk01',
+		energy_per_distance_formula = function(distance) return distance * 180000 end,
+		is_aerial = true,
+		can_fly = true
+	},
+	['aerial-blimp-mk02'] = {
+		opens_player_inventory = false,
+		outpost = 'aerial-base',
+		only_allow_outpost_as_destination = true,
+		actions = {
+			'time-passed',
+			'store-energy'
+		},
+		placeable_by = 'aerial-blimp-mk01',
+		energy_per_distance_formula = function(distance) return distance * 360000 end,
+		is_aerial = true,
+		can_fly = true
+	},
+	['aerial-blimp-mk03'] = {
+		opens_player_inventory = false,
+		outpost = 'aerial-base',
+		only_allow_outpost_as_destination = true,
+		actions = {
+			'time-passed',
+			'store-energy'
+		},
+		placeable_by = 'aerial-blimp-mk01',
+		energy_per_distance_formula = function(distance) return distance * 600000 end,
+		is_aerial = true,
+		can_fly = true
+	},
+	['aerial-blimp-mk04'] = {
+		opens_player_inventory = false,
+		outpost = 'aerial-base',
+		only_allow_outpost_as_destination = true,
+		actions = {
+			'time-passed',
+			'store-energy'
+		},
+		placeable_by = 'aerial-blimp-mk01',
+		energy_per_distance_formula = function(distance) return distance * 1200000 end,
+		is_aerial = true,
+		can_fly = true
+	},
+	['aerial-blimp-ht'] = {
+		opens_player_inventory = false,
+		outpost = 'aerial-base',
+		only_allow_outpost_as_destination = true,
+		actions = {
+			'time-passed',
+			'store-energy'
+		},
+		placeable_by = 'aerial-blimp-mk01',
+		energy_per_distance_formula = function(distance) return distance * 480000 end,
+		is_aerial = true,
+		can_fly = true
 	}
 }
 
 local function get_outpost_inventory(outpost)
-		local type = outpost.type
-		if type == 'character' then
-			return outpost.get_main_inventory()
-		elseif type == 'container' then
-			return outpost.get_inventory(defines.inventory.chest)
-		elseif prototypes[outpost.name] then
-			local caravan_data = global.caravans[outpost.unit_number]
-			return caravan_data.inventory
-		end
+	local type = outpost.type
+	if type == 'character' then
+		return outpost.get_main_inventory()
+	elseif type == 'container' then
+		return outpost.get_inventory(defines.inventory.chest)
+	elseif prototypes[outpost.name] then
+		local caravan_data = global.caravans[outpost.unit_number]
+		return caravan_data.inventory
 	end
+end
 
 local function transfer_all_items(input_inventory, output_inventory) -- TODO: make it work with complex items
 	for item, count in pairs(input_inventory.get_contents()) do
@@ -159,13 +231,39 @@ Caravan.actions = {
 			max_range = 0.1
 		}
 		return 'nuke'
+	end,
+
+	['store-energy'] = function(caravan_data, schedule, action)
+		local outpost = schedule.entity
+		if not outpost or not outpost.valid then return 'error' end
+		local entity = caravan_data.entity
+
+		local energy = caravan_data.stored_energy
+		if not energy then
+			local formula = prototypes[entity.name].energy_per_distance_formula
+			energy = formula(Position.distance(caravan_data.last_outpost_location, entity.position))
+		end
+
+		if energy == 0 then return true end
+
+		local buffer_capacity = outpost.prototype.electric_energy_source_prototype.buffer_capacity
+		local goal = outpost.energy + energy
+		if buffer_capacity < goal then
+			caravan_data.stored_energy = goal - buffer_capacity
+			outpost.energy = buffer_capacity
+			return false
+		else
+			outpost.energy = goal
+			return true
+		end
 	end
 }
 
 Caravan.free_actions = { -- actions that don't use fuel
 	['time-passed'] = true,
 	['store-food'] = true,
-	['detonate'] = true
+	['detonate'] = true,
+	['store-energy'] = true
 }
 
 return prototypes

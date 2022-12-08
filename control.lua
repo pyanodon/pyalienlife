@@ -883,4 +883,12 @@ script.on_nth_tick(60, function()
     Digosaurus.events[60]()
 end)
 
-script.on_nth_tick(3, Digosaurus.events[3])
+script.on_nth_tick(4, function()
+    for _, player in pairs(game.connected_players) do
+		local gui = player.gui.relative.digosaurus_gui
+		if gui then Digosaurus.update_gui(gui); goto continue end
+        gui = Caravan.get_caravan_gui(player)
+        if gui then Caravan.update_gui(gui, true) end
+        ::continue::
+	end
+end)

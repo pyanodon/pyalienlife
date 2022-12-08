@@ -142,10 +142,3 @@ Digosaurus.events.close_gui = function(event)
 		if gui then gui.destroy() end
 	end
 end
-
-Digosaurus.events[3] = function(event)
-    for _, player in pairs(game.connected_players) do
-		local gui = player.gui.relative.digosaurus_gui
-		if gui then Digosaurus.update_gui(gui) end
-	end
-end

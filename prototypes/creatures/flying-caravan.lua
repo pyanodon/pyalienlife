@@ -53,20 +53,9 @@ data:extend
     healing_per_tick = 0.1,
 	collision_box = {{0,0}, {0,0}},
 	render_layer = 'air-object',
-	collision_mask = {},
+	collision_mask = {'not-colliding-with-itself'},
     selection_box = {{-1.5, -3}, {1.5, 3}},
-	--[[
-    --handles enemy loot dropping
-    loot =
-      {
-        {
-          count_max = 1,
-          count_min = 1,
-          item = 'iron-ore',
-          probability = 1
-        }
-      },
-	]]--
+	selection_priority = 51,
     attack_parameters =
     {
       type = 'projectile',

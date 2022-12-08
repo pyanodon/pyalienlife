@@ -26,12 +26,21 @@ local prototypes = require 'caravan-prototypes'
 local Table = require('__stdlib__/stdlib/utils/table')
 local Position = require('__stdlib__/stdlib/area/position')
 
+local function get_pathfind_flags(caravan_data)
+	local flags = {}
+	if prototypes[caravan_data.entity.name].can_fly then
+		flags.allow_paths_through_own_entities = true
+		flags.allow_destroy_friendly_entities = true
+	end
+	return flags
+end
+
 local function goto_entity(caravan_data, entity)
 	caravan_data.entity.set_command{
 		type = defines.command.go_to_location,
 		destination_entity = entity,
 		distraction = defines.distraction.none,
-		pathfind_flags = {}
+		pathfind_flags = get_pathfind_flags(caravan_data)
 	}
 end
 
@@ -40,7 +49,7 @@ local function goto_position(caravan_data, position)
 		type = defines.command.go_to_location,
 		destination = position,
 		distraction = defines.distraction.none,
-		pathfind_flags = {}
+		pathfind_flags = get_pathfind_flags(caravan_data)
 	}
 end
 
@@ -48,7 +57,7 @@ local function wander(caravan_data)
 	caravan_data.entity.set_command{
 		type = defines.command.wander,
 		distraction = defines.distraction.none,
-		pathfind_flags = {}
+		pathfind_flags = get_pathfind_flags(caravan_data)
 	}
 end
 
@@ -57,12 +66,17 @@ Caravan.events.init = function()
 	global.last_opened_caravan = global.last_opened_caravan or {}
 end
 
+local function exists_and_valid(v) return v and v.valid end
 function Caravan.validity_check(caravan_data)
 	if not caravan_data or caravan_data.itemised then return false end
-	if not caravan_data.entity.valid or not caravan_data.inventory.valid or not caravan_data.fuel_inventory.valid then
+	if
+		not caravan_data.entity.valid or
+		(caravan_data.inventory and not exists_and_valid(caravan_data.inventory)) or
+		(caravan_data.fuel_inventory and not exists_and_valid(caravan_data.fuel_inventory))
+	then
 		if caravan_data.entity.valid then caravan_data.entity.destroy() end
-		if caravan_data.inventory.valid then caravan_data.inventory.destroy() end
-		if caravan_data.fuel_inventory.valid then caravan_data.fuel_inventory.destroy() end
+		if exists_and_valid(caravan_data.inventory) then caravan_data.inventory.destroy() end
+		if exists_and_valid(caravan_data.fuel_inventory) then caravan_data.fuel_inventory.destroy() end
 		global.caravans[caravan_data.unit_number] = nil
 		return false
 	end
@@ -75,24 +89,27 @@ Caravan.events.used_capsule = function(event)
 	local caravan_data = global.last_opened_caravan[player.index]
 	if not Caravan.validity_check(caravan_data) then return end
 	local schedule = caravan_data.schedule
+	local prototype = prototypes[caravan_data.entity.name]
+	local only_outpost = prototype.only_allow_outpost_as_destination
 
 	local entity = player.surface.find_entity('character', event.position) or player.selected
 	if entity then
+		if only_outpost and entity.name ~= prototype.outpost then return end
 		if entity == caravan_data.entity or entity.surface ~= caravan_data.entity.surface then return end
 		schedule[#schedule + 1] = {
 			localised_name = {'caravan-gui.entity-position', entity.prototype.localised_name, math.floor(entity.position.x), math.floor(entity.position.y)},
 			entity = entity,
 			position = entity.position,
-			actions = {prefer_straight_paths = true}
+			actions = {}
 		}
-	else
+	elseif not only_outpost then
 		local position = event.position
 		schedule[#schedule + 1] = {
 			localised_name = {'caravan-gui.map-position', math.floor(position.x), math.floor(position.y)},
 			position = position,
-			actions = {prefer_straight_paths = true}
+			actions = {}
 		}
-	end
+	else return end
 	Caravan.build_gui(player, caravan_data.entity)
 end
 
@@ -114,15 +131,9 @@ end
 local function stop_actions(caravan_data)
 	caravan_data.schedule_id = -1
 	caravan_data.action_id = -1
+	caravan_data.stored_energy = nil
+	caravan_data.last_outpost_location = nil
 	wander(caravan_data)
-end
-
-Caravan.events.close_gui = function(event)
-	local player = game.get_player(event.player_index)
-	if event.gui_type == defines.gui_type.script_inventory then
-		local gui = player.gui.relative.caravan_gui
-		if gui then gui.destroy() end
-	end
 end
 
 gui_events[defines.events.on_gui_click]['py_add_outpost'] = function(event)
@@ -135,7 +146,7 @@ gui_events[defines.events.on_gui_click]['py_add_outpost'] = function(event)
 		stack.clear()
 	end
 	stack.set_stack{name = 'caravan-control'}
-	global.last_opened_caravan[player.index] = global.caravans[player.gui.relative.caravan_gui.tags.unit_number]
+	global.last_opened_caravan[player.index] = global.caravans[Caravan.get_caravan_gui(player).tags.unit_number]
 	player.opened = nil
 end
 
@@ -152,7 +163,7 @@ gui_events[defines.events.on_gui_selection_state_changed]['py_add_action'] = fun
 		type = element.get_item(element.selected_index)[2],
 		localised_name = element.get_item(element.selected_index)
 	}
-	Caravan.update_caravan_gui(player.gui.relative.caravan_gui)
+	Caravan.update_gui(Caravan.get_caravan_gui(player))
 end
 
 gui_events[defines.events.on_gui_click]['py_delete_schedule'] = function(event)
@@ -167,7 +178,7 @@ gui_events[defines.events.on_gui_click]['py_delete_schedule'] = function(event)
 	table.remove(schedule, id)
 
 	stop_actions(caravan_data)
-	Caravan.update_caravan_gui(player.gui.relative.caravan_gui)
+	Caravan.update_gui(Caravan.get_caravan_gui(player))
 end
 
 gui_events[defines.events.on_gui_click]['py_shuffle_schedule_.'] = function(event)
@@ -186,7 +197,7 @@ gui_events[defines.events.on_gui_click]['py_shuffle_schedule_.'] = function(even
 	schedule[id + offset] = a
 
 	stop_actions(caravan_data)
-	Caravan.update_caravan_gui(player.gui.relative.caravan_gui)
+	Caravan.update_gui(Caravan.get_caravan_gui(player))
 end
 
 gui_events[defines.events.on_gui_click]['py_outpost_name'] = function(event)
@@ -195,8 +206,8 @@ gui_events[defines.events.on_gui_click]['py_outpost_name'] = function(event)
 	local tags = element.tags
 	local caravan_data = global.caravans[tags.unit_number]
 	local schedule = caravan_data.schedule[tags.schedule_id]
-	local camera = player.gui.relative.caravan_gui.content_frame.content_flow.camera_frame.camera
-	local refocus = player.gui.relative.caravan_gui.content_frame.content_flow.status_flow.py_refocus
+	local camera = Caravan.get_caravan_gui(player).content_frame.content_flow.camera_frame.camera
+	local refocus = Caravan.get_caravan_gui(player).content_frame.content_flow.status_flow.py_refocus
 
 	if schedule.entity and schedule.entity.valid then
 		camera.entity = schedule.entity
@@ -213,26 +224,35 @@ gui_events[defines.events.on_gui_click]['py_refocus'] = function(event)
 	local element = event.element
 	local tags = element.tags
 	local caravan_data = global.caravans[tags.unit_number]
-	local camera = player.gui.relative.caravan_gui.content_frame.content_flow.camera_frame.camera
-	local refocus = player.gui.relative.caravan_gui.content_frame.content_flow.status_flow.py_refocus
+	local camera = Caravan.get_caravan_gui(player).content_frame.content_flow.camera_frame.camera
+	local refocus = Caravan.get_caravan_gui(player).content_frame.content_flow.status_flow.py_refocus
 
 	camera.entity = caravan_data.entity
 	refocus.visible = false
 	camera.zoom = prototypes[caravan_data.entity.name].camera_zoom or 1
 end
 
-local function begin_schedule(caravan_data, schedule_id, skip_eating)
+local function begin_schedule(caravan_data, schedule_id, skip_eating, is_retry)
 	local entity = caravan_data.entity
 	local schedule = caravan_data.schedule[schedule_id]
-	if not skip_eating and not eat(caravan_data) then stop_actions(caravan_data); return end
+	if caravan_data.fuel_inventory then
+		if not skip_eating and not eat(caravan_data) then stop_actions(caravan_data); return end
+	end
 	if not schedule then stop_actions(caravan_data); return end
 
 	caravan_data.schedule_id = schedule_id
 	caravan_data.action_id = -1
-	if schedule.entity and schedule.entity.valid then
+	if caravan_data.is_aerial then
+		goto_position(caravan_data, Position.random(schedule.position, 0, 2, true))
+	elseif schedule.entity and schedule.entity.valid then
 		goto_entity(caravan_data, schedule.entity)
 	else
 		goto_position(caravan_data, schedule.position)
+	end
+
+	if caravan_data.is_aerial and not is_retry then
+		caravan_data.last_outpost_location = caravan_data.entity.position
+		caravan_data.stored_energy = nil
 	end
 end
 
@@ -249,7 +269,7 @@ local function begin_action(caravan_data, action_id)
 		action.timer = action.wait_time or 5
 	end
 
-	if not Caravan.free_actions[action.type] then eat(caravan_data) end
+	if caravan_data.fuel_inventory and not Caravan.free_actions[action.type] then eat(caravan_data) end
 end
 
 gui_events[defines.events.on_gui_click]['py_schedule_play'] = function(event)
@@ -263,7 +283,8 @@ gui_events[defines.events.on_gui_click]['py_schedule_play'] = function(event)
 	else
 		begin_schedule(caravan_data, tags.schedule_id)
 	end
-	Caravan.update_caravan_gui(player.gui.relative.caravan_gui)
+
+	Caravan.update_gui(Caravan.get_caravan_gui(player))
 end
 
 gui_events[defines.events.on_gui_click]['py_action_play'] = function(event)
@@ -286,7 +307,7 @@ gui_events[defines.events.on_gui_click]['py_action_play'] = function(event)
 		begin_schedule(caravan_data, tags.schedule_id)
 	end
 
-	Caravan.update_caravan_gui(player.gui.relative.caravan_gui)
+	Caravan.update_gui(Caravan.get_caravan_gui(player))
 end
 
 gui_events[defines.events.on_gui_click]['py_fuel_slot_.'] = function(event)
@@ -301,7 +322,7 @@ gui_events[defines.events.on_gui_click]['py_fuel_slot_.'] = function(event)
 
 	cursor_stack.swap_stack(fuel_stack)
 	if eat(caravan_data) then caravan_data.fuel_bar = caravan_data.fuel_bar + 1 end
-	Caravan.update_caravan_gui(player.gui.relative.caravan_gui)
+	Caravan.update_gui(Caravan.get_caravan_gui(player))
 end
 
 gui_events[defines.events.on_gui_elem_changed]['py_item_count'] = function(event)
@@ -375,8 +396,8 @@ Caravan.events.ai_command_completed = function(event)
 
 	::update_gui::
 	for _, player in pairs(game.connected_players) do
-		local gui = player.gui.relative.caravan_gui
-		if gui and gui.tags.unit_number == unit_number then Caravan.update_caravan_gui(gui); return end
+		local gui = Caravan.get_caravan_gui(player)
+		if gui and gui.tags.unit_number == unit_number then Caravan.update_gui(gui); return end
 	end
 end
 
@@ -386,7 +407,7 @@ Caravan.events[60] = function(event)
 	for _, caravan_data in pairs(global.caravans) do
 		if not Caravan.validity_check(caravan_data) then goto continue end
 
-		if caravan_data.fuel_bar == 0 and caravan_data.fuel_inventory.is_empty() then
+		if caravan_data.fuel_inventory and caravan_data.fuel_bar == 0 and caravan_data.fuel_inventory.is_empty() then
 			rendering.draw_sprite{
 				sprite = 'utility.fuel_icon',
 				x_scale = 0.5,
@@ -400,7 +421,7 @@ Caravan.events[60] = function(event)
 		end
 
 		if caravan_data.retry_pathfinder_on_next_tick then
-			begin_schedule(caravan_data, caravan_data.schedule_id, true)
+			begin_schedule(caravan_data, caravan_data.schedule_id, true, true)
 			caravan_data.retry_pathfinder_on_next_tick = false
 			goto continue
 		end
@@ -410,6 +431,9 @@ Caravan.events[60] = function(event)
 		local action = schedule.actions[caravan_data.action_id]
 		local result = Caravan.actions[action.type](caravan_data, schedule, action)
 		if result == 'nuke' then goto continue
+		elseif result == 'error' then
+			stop_actions(caravan_data)
+			guis_to_update[caravan_data.unit_number] = true
 		elseif result then
 			if #schedule.actions == caravan_data.action_id then
 				if caravan_data.schedule_id == #caravan_data.schedule then
@@ -438,26 +462,43 @@ Caravan.events[60] = function(event)
 
 	if next(guis_to_update) then
 		for _, player in pairs(game.connected_players) do
-			local gui = player.gui.relative.caravan_gui
-			if gui and guis_to_update[gui.tags.unit_number] then Caravan.update_caravan_gui(gui) end
+			local gui = Caravan.get_caravan_gui(player)
+			if gui and guis_to_update[gui.tags.unit_number] then Caravan.update_gui(gui) end
 		end
 	end
 end
 
 function Caravan.instantiate_caravan(entity)
-	if not global.caravans[entity.unit_number] then
-		global.caravans[entity.unit_number] = {
-			unit_number = entity.unit_number,
-			entity = entity,
-			inventory = game.create_inventory(prototypes[entity.name].inventory_size),
-			fuel_inventory = game.create_inventory(prototypes[entity.name].fuel_size),
-			schedule = {},
-			schedule_id = -1,
-			action_id = -1,
-			fuel_bar = 0,
-			last_eaten_fuel_value = 1
-		}
+	local existing = global.caravans[entity.unit_number]
+	if existing then return existing end
+
+	local prototype = prototypes[entity.name]
+	local caravan_data = {
+		unit_number = entity.unit_number,
+		entity = entity,
+		schedule = {},
+		schedule_id = -1,
+		action_id = -1
+	}
+
+	if prototype.favorite_foods and prototype.fuel_size then
+		caravan_data.fuel_inventory = game.create_inventory(prototype.fuel_size)
+		caravan_data.fuel_bar = 0
+		caravan_data.last_eaten_fuel_value = 1
 	end
+
+	if prototype.inventory_size then
+		caravan_data.inventory = game.create_inventory(prototype.inventory_size)
+	end
+
+	if prototype.is_aerial then
+		caravan_data.stored_energy = nil
+		caravan_data.last_outpost_location = nil
+		caravan_data.is_aerial = true
+	end
+
+	global.caravans[entity.unit_number] = caravan_data
+	return caravan_data
 end
 
 Caravan.events.on_built = function(event)
@@ -498,7 +539,7 @@ Caravan.events.on_entity_destroyed = function(event)
 
 	global.caravans[unit_number].itemised = true
 	for _, player in pairs(game.connected_players) do
-		local gui = player.gui.relative.caravan_gui
+		local gui = Caravan.get_caravan_gui(player)
 		if gui and gui.tags.unit_number == unit_number then gui.destroy(); player.opened = nil end
 	end
 end

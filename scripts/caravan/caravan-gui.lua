@@ -1,5 +1,10 @@
 local prototypes = require 'caravan-prototypes'
 local Table = require('__stdlib__/stdlib/utils/table')
+local Position = require('__stdlib__/stdlib/area/position')
+
+local function format_energy(energy)
+	return string.format('%.2f', energy / 1000000) .. 'MJ'
+end
 
 local function generate_button_status(caravan_data, schedule_id, action_id)
 	local style = 'train_schedule_action_button'
@@ -134,15 +139,23 @@ end
 
 function Caravan.build_gui(player, entity)
 	local caravan_data = global.caravans[entity.unit_number]
-	player.opened = caravan_data.inventory
-
-	local main_frame = player.gui.relative.add{
-		type = 'frame', name = 'caravan_gui', caption = entity.prototype.localised_name, direction = 'vertical',
-		anchor = {
-			gui = defines.relative_gui_type.script_inventory_gui,
-			position = defines.relative_gui_position.right
+	local prototype = prototypes[entity.name]
+	
+	local main_frame
+	if prototype.opens_player_inventory then
+		player.opened = caravan_data.inventory
+		main_frame = player.gui.relative.add{
+			type = 'frame', name = 'caravan_gui', caption = entity.prototype.localised_name, direction = 'vertical',
+			anchor = {
+				gui = defines.relative_gui_type.script_inventory_gui,
+				position = defines.relative_gui_position.right
+			}
 		}
-	}
+	else
+		main_frame = player.gui.screen.add{type = 'frame', name = 'caravan_gui', caption = entity.prototype.localised_name, direction = 'vertical'}
+		main_frame.auto_center = true
+		player.opened = main_frame
+	end
 	main_frame.style.width = 436
 	main_frame.style.minimal_height = 710
 	main_frame.tags = {unit_number = entity.unit_number}
@@ -159,7 +172,7 @@ function Caravan.build_gui(player, entity)
 	local status_sprite = status_flow.add{type = 'sprite', name = 'status_sprite'}
 	status_sprite.resize_to_sprite = false
 	status_sprite.style.size = {16, 16}
-	local status_text = status_flow.add{type = 'label', name = 'status_text'}
+	status_flow.add{type = 'label', name = 'status_text'}
 	status_flow.add{type = 'empty-widget', style = 'py_empty_widget'}
 	local refocus = status_flow.add{type = 'sprite-button', name = 'py_refocus', style = 'tool_button', sprite = 'utility/import_slot', tooltip = {'caravan-gui.refocus'}, tags = {unit_number = caravan_data.unit_number}}
 	refocus.style.size = {26, 26}
@@ -167,31 +180,38 @@ function Caravan.build_gui(player, entity)
 	refocus.style.bottom_margin = -4
 	refocus.visible = false
 
-	local camera_frame = content_flow.add{type = 'frame', name = 'camera_frame', style = 'inside_shallow_frame'}
+	local camera_frame = content_flow.add{type = 'frame', name = 'camera_frame', style = 'py_nice_frame'}
 	local camera = camera_frame.add{type = 'camera', name = 'camera', style = 'py_caravan_camera', position = entity.position, surface_index = entity.surface.index}
 	camera.entity = entity
 	camera.visible = true
 	camera.style.height = 155
-	camera.zoom = prototypes[entity.name].camera_zoom or 1
+	camera.zoom = prototype.camera_zoom or 1
 
-	local fuel_flow = content_flow.add{type = 'flow', name = 'fuel_flow', direction = 'horizontal'}
-	fuel_flow.style.vertical_align = 'center'
-	local favorite_food_tooltip = generate_favorite_food_tooltip(caravan_data)
-	for i = 1, prototypes[entity.name].fuel_size do
-		local fuel_slot = fuel_flow.add{type = 'sprite-button', name = 'py_fuel_slot_' .. i, style = 'inventory_slot', tags = {unit_number = caravan_data.unit_number, i = i}}
-		fuel_slot.sprite = 'utility/slot_icon_fuel'
-		fuel_slot.tooltip = favorite_food_tooltip
+	if caravan_data.is_aerial then
+		content_flow.add{type = 'label', name = 'stored_energy'}
 	end
-	fuel_flow.add{type = 'progressbar', name = 'fuel_bar', style = 'burning_progressbar'}.style.horizontally_stretchable = true
 
-	local schedule_frame = content_flow.add{type = 'frame', name = 'schedule_frame', direction = 'vertical', style = 'inside_shallow_frame'}
+	if caravan_data.fuel_inventory then
+		local fuel_flow = content_flow.add{type = 'flow', name = 'fuel_flow', direction = 'horizontal'}
+		fuel_flow.style.vertical_align = 'center'
+		local favorite_food_tooltip = generate_favorite_food_tooltip(caravan_data)
+		for i = 1, prototype.fuel_size do
+			local fuel_slot = fuel_flow.add{type = 'sprite-button', name = 'py_fuel_slot_' .. i, style = 'inventory_slot', tags = {unit_number = caravan_data.unit_number, i = i}}
+			fuel_slot.sprite = 'utility/slot_icon_fuel'
+			fuel_slot.tooltip = favorite_food_tooltip
+		end
+		fuel_flow.add{type = 'progressbar', name = 'fuel_bar', style = 'burning_progressbar'}.style.horizontally_stretchable = true
+	end
+
+	local schedule_frame = content_flow.add{type = 'frame', name = 'schedule_frame', direction = 'vertical', style = 'py_nice_frame'}
+	schedule_frame.style.vertically_stretchable = true
 
 	local schedule_pane = schedule_frame.add{type = 'scroll-pane', name = 'schedule_pane', style = 'train_schedule_scroll_pane'}
 	schedule_pane.horizontal_scroll_policy = 'never'
 	schedule_pane.vertical_scroll_policy = 'auto-and-reserve-space'
 	schedule_pane.style.horizontally_stretchable = true
 	schedule_pane.style.vertically_stretchable = true
-	Caravan.update_caravan_gui(main_frame)
+	Caravan.update_gui(main_frame)
 end
 
 script.on_event('open-caravan-gui', function(event)
@@ -199,18 +219,29 @@ script.on_event('open-caravan-gui', function(event)
 	if player.cursor_stack.valid_for_read then return end
 	local entity = player.selected
 	if not entity or not prototypes[entity.name] then return end
-	Caravan.instantiate_caravan(entity)
+	local caravan_data = Caravan.instantiate_caravan(entity)
+	local existing = Caravan.get_caravan_gui(player)
+	if existing then
+		if existing.tags.unit_number == caravan_data.unit_number then
+			return
+		else
+			player.opened = nil
+		end
+	end
 	Caravan.build_gui(player, entity)
 end)
 
-function Caravan.update_caravan_gui(gui)
+function Caravan.update_gui(gui, weak)
 	local caravan_data = global.caravans[gui.tags.unit_number]
 	if not Caravan.validity_check(caravan_data) then gui.destroy() return end
 	local content_flow = gui.content_frame.content_flow
 	local entity = caravan_data.entity
 
 	local status, img
-	if caravan_data.fuel_bar == 0 and caravan_data.fuel_inventory.is_empty() then
+	if caravan_data.is_aerial then
+		status = {'entity-status.working'}
+		img = 'utility/status_working'
+	elseif caravan_data.fuel_bar == 0 and caravan_data.fuel_inventory.is_empty() then
 		status = {'entity-status.starved'}
 		img = 'utility/status_not_working'
 	elseif entity.health ~= entity.prototype.max_health then
@@ -223,20 +254,46 @@ function Caravan.update_caravan_gui(gui)
 	content_flow.status_flow.status_text.caption = status
 	content_flow.status_flow.status_sprite.sprite = img
 
-	for i = 1, #caravan_data.fuel_inventory do
-		local stack = caravan_data.fuel_inventory[i]
-		local element = content_flow.fuel_flow['py_fuel_slot_' .. i]
-		if stack.valid_for_read then
-			element.sprite = 'item/' .. stack.name
-			element.number = stack.count
-		else
-			element.sprite = 'utility/slot_icon_fuel'
-			element.number = nil
+	if caravan_data.fuel_inventory then
+		for i = 1, #caravan_data.fuel_inventory do
+			local stack = caravan_data.fuel_inventory[i]
+			local element = content_flow.fuel_flow['py_fuel_slot_' .. i]
+			if stack.valid_for_read then
+				element.sprite = 'item/' .. stack.name
+				element.number = stack.count
+			else
+				element.sprite = 'utility/slot_icon_fuel'
+				element.number = nil
+			end
 		end
+		content_flow.fuel_flow.fuel_bar.value = caravan_data.fuel_bar / caravan_data.last_eaten_fuel_value
 	end
-	content_flow.fuel_flow.fuel_bar.value = caravan_data.fuel_bar / caravan_data.last_eaten_fuel_value
 
-	local schedule_pane = gui.content_frame.content_flow.schedule_frame.schedule_pane
-	schedule_pane.clear()
-	Caravan.build_schedule_gui(schedule_pane, caravan_data)
+	if caravan_data.is_aerial then
+		local energy = caravan_data.stored_energy or 0
+		if not caravan_data.stored_energy and caravan_data.last_outpost_location then
+			local formula = prototypes[entity.name].energy_per_distance_formula
+			energy = formula(Position.distance(caravan_data.last_outpost_location, entity.position))
+		end
+		content_flow.stored_energy.caption = {'caravan-gui.stored-energy', format_energy(energy)}
+	end
+
+	if not weak then
+		local schedule_pane = gui.content_frame.content_flow.schedule_frame.schedule_pane
+		schedule_pane.clear()
+		Caravan.build_schedule_gui(schedule_pane, caravan_data)
+	end
+end
+
+Caravan.events.close_gui = function(event)
+	local player = game.get_player(event.player_index)
+	if event.gui_type == defines.gui_type.script_inventory or event.gui_type == defines.gui_type.custom then
+		local gui = Caravan.get_caravan_gui(player)
+		if gui then gui.destroy() end
+	end
+end
+
+function Caravan.get_caravan_gui(player)
+	local gui = player.gui.relative.caravan_gui or player.gui.screen.caravan_gui
+	if gui then return gui end
 end
