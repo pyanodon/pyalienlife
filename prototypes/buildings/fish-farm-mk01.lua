@@ -21,7 +21,7 @@ RECIPE {
     results = {
         {"fish-farm-mk01", 1}
     }
-}:add_unlock("water-animals-mk01")
+}:add_unlock("fish-mk01")
 
 ITEM {
     type = "item",
