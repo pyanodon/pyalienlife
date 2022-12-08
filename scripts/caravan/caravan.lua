@@ -30,7 +30,6 @@ local function get_pathfind_flags(caravan_data)
 	local flags = {}
 	if prototypes[caravan_data.entity.name].can_fly then
 		flags.allow_paths_through_own_entities = true
-		flags.allow_destroy_friendly_entities = true
 	end
 	return flags
 end
@@ -243,7 +242,7 @@ local function begin_schedule(caravan_data, schedule_id, skip_eating, is_retry)
 	caravan_data.schedule_id = schedule_id
 	caravan_data.action_id = -1
 	if caravan_data.is_aerial then
-		goto_position(caravan_data, Position.random(schedule.position, 0, 2, true))
+		goto_position(caravan_data, Position.random(schedule.position, 0, 1, true))
 	elseif schedule.entity and schedule.entity.valid then
 		goto_entity(caravan_data, schedule.entity)
 	else

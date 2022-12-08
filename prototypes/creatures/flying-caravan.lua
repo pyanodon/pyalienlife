@@ -41,6 +41,7 @@ ITEM {
 data:extend
 {
   {
+	ai_settings = {do_separation = false},
     type = 'unit',
     name = 'flyavan',
     icon = '__pyalienlifegraphics2__/graphics/icons/flyavan.png',
