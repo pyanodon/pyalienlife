@@ -1,6 +1,3 @@
-require 'scripts/caravan/caravan'
-require 'scripts/digosaurus/digosaurus'
-
 _G.gui_events = {
 	[defines.events.on_gui_click] = {},
 	[defines.events.on_gui_confirmed] = {},
@@ -21,6 +18,9 @@ local function process_gui_event(event)
 		end
 	end
 end
+
+require 'scripts/caravan/caravan'
+require 'scripts/digosaurus/digosaurus'
 
 local bio_list = require('prototypes/items/biomass-convertion')
 
