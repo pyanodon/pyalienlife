@@ -41,7 +41,7 @@ data:extend(
     icon_size = 64,
     flags = {'placeable-player', 'placeable-off-grid', 'not-repairable', 'breaths-air', 'building-direction-8-way'},
 	minable = {mining_time = 0.1, result = 'nukavan'},
-    max_health = 300,
+    max_health = 1000,
     order = 'b-b-a',
     subgroup='enemies',
     resistances =
@@ -124,7 +124,7 @@ data:extend(
 	},
 	},
 	vision_distance = 50,
-	movement_speed = 0.24,
+	movement_speed = 0.10,
 	distance_per_frame = 0.15,
 	pollution_to_join_attack = 4,
 	distraction_cooldown = 300,

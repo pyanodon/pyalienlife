@@ -103,7 +103,7 @@ local prototypes = {
 			'store-energy'
 		},
 		placeable_by = 'aerial-blimp-mk01',
-		energy_per_distance_formula = function(distance) return distance * 1200000 end,
+		energy_per_distance_formula = function(distance) return distance * 800000 end,
 		is_aerial = true,
 		can_fly = true
 	},
@@ -116,7 +116,7 @@ local prototypes = {
 			'store-energy'
 		},
 		placeable_by = 'aerial-blimp-mk01',
-		energy_per_distance_formula = function(distance) return distance * 480000 end,
+		energy_per_distance_formula = function(distance) return distance * 400000 end,
 		is_aerial = true,
 		can_fly = true
 	}
