@@ -1,6 +1,27 @@
 require 'scripts/caravan/caravan'
 require 'scripts/digosaurus/digosaurus'
 
+_G.gui_events = {
+	[defines.events.on_gui_click] = {},
+	[defines.events.on_gui_confirmed] = {},
+	[defines.events.on_gui_text_changed] = {},
+	[defines.events.on_gui_checked_state_changed] = {},
+	[defines.events.on_gui_selection_state_changed] = {},
+	[defines.events.on_gui_checked_state_changed] = {},
+	[defines.events.on_gui_elem_changed] = {},
+	[defines.events.on_gui_value_changed] = {},
+	[defines.events.on_gui_location_changed] = {},
+	[defines.events.on_gui_selected_tab_changed] = {},
+	[defines.events.on_gui_switch_state_changed] = {}
+}
+local function process_gui_event(event)
+	if event.element and event.element.valid then
+		for pattern, f in pairs(gui_events[event.name]) do
+			if event.element.name:match(pattern) then f(event); return end
+		end
+	end
+end
+
 local bio_list = require('prototypes/items/biomass-convertion')
 
 remote.add_interface('data_puller',
