@@ -438,6 +438,10 @@ data:extend {
         type = "resource-category",
         name = "basic-with-fluid"
     },
+    {
+        type = "resource-category",
+        name = "ore-nexelit"
+    },
 	------slaughterhouse------
     --[[ nothing should be using the slaughterhouse category or it wont added properly to the gui
 	{
