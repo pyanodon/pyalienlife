@@ -1,4 +1,4 @@
-Digosaurus.favorite_food = 'meat' -- can be anything
+Digosaurus.favorite_food = 'workers-food' -- can be anything
 
 Digosaurus.minable_categories = {
 	['ore-nexelit'] = true

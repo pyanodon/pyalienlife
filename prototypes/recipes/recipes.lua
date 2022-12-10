@@ -2931,3 +2931,25 @@ RECIPE {
         {type = 'item', name = 'gastrocapacitor', amount = 1},
     },
 }:add_unlock("domestication-mk02"):add_ingredient({type = 'item', name = 'nexelit-battery', amount = 1}):add_ingredient({type = 'item', name = 'phosphate-glass', amount = 1})
+
+RECIPE {
+    type = 'recipe',
+    name = 'workers-food',
+    category = 'advanced-crafting',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'tin-plate', amount = 2},
+        {type = 'item', name = 'seaweed', amount = 5},
+        {type = 'item', name = 'starch', amount = 1},
+        {type = 'item', name = 'guts', amount = 4},
+        {type = 'item', name = 'skin', amount = 3},
+        {type = 'item', name = 'mukmoux-fat', amount = 1},
+        {type = 'item', name = 'native-flora', amount = 5},
+        {type = 'fluid', name = 'water', amount = 100},
+        {type = 'fluid', name = 'blood', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'workers-food', amount = 2},
+    },
+}:add_unlock("domestication")

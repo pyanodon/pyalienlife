@@ -57,8 +57,8 @@ ITEM {
   icon = '__pyalienlifegraphics3__/graphics/icons/outpost-mining.png',
   icon_size = 64,
   flags = {},
-  subgroup = 'py-alienlife-buildings-others',
-  order = 'a',
+  subgroup = 'py-alienlife-special-creatures',
+  order = 'z-a',
   place_result = 'dino-dig-site',
   stack_size = 10
 }

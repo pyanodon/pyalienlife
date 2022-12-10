@@ -7,8 +7,8 @@ local prototypes = {
 		fuel_size = 2,
 		outpost = 'outpost',
 		favorite_foods = {
-			['auog-food-01'] = 20,
-			['auog-food-02'] = 50
+			['auog-food-01'] = 10,
+			['workers-food'] = 20
 		},
 		actions = {
 			'time-passed',
@@ -26,7 +26,7 @@ local prototypes = {
 		fuel_size = 4,
 		outpost = 'outpost-aerial',
 		favorite_foods = {
-			['fish-food-02'] = 2,
+			['workers-food'] = 5,
 			['gastrocapacitor'] = 50
 		},
 		actions = {
@@ -46,8 +46,7 @@ local prototypes = {
 		fuel_size = 2,
 		outpost = 'outpost',
 		favorite_foods = {
-			['auog-food-01'] = 20,
-			['auog-food-02'] = 50
+			['workers-food'] = 5,
 		},
 		actions = {
 			'detonate'

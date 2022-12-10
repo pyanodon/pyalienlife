@@ -41,7 +41,7 @@ data:extend(
     icon_size = 64,
     flags = {'placeable-player', 'placeable-off-grid', 'not-repairable', 'breaths-air', 'building-direction-8-way'},
 	minable = {mining_time = 0.1, result = 'nukavan'},
-    max_health = 1000,
+    max_health = 100000,
     order = 'b-b-a',
     subgroup='enemies',
     resistances =

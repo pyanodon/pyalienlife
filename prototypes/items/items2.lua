@@ -539,3 +539,14 @@ ITEM {
     order = "z",
     stack_size = 50
 }
+
+ITEM {
+    type = "item",
+    name = "workers-food",
+    icon = "__pyalienlifegraphics3__/graphics/icons/workers-food.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-food",
+    order = "x",
+    stack_size = 100
+}
