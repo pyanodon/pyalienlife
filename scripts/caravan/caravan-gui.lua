@@ -69,6 +69,7 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 			action_frame.style.vertically_stretchable = true
 			action_frame.style.height = 36
 			action_frame.style.right_padding = 12
+			action_frame.style.width = 340
 
 			local playbutton = action_frame.add{type = 'sprite-button', name = 'py_action_play', tags = tags}
 			playbutton.style, playbutton.sprite = generate_button_status(caravan_data, i, j)
@@ -82,8 +83,6 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 				textfield.allow_negative = false
 				action_frame.add{type = 'label', caption = 's'}.style.left_margin = -5
 			elseif action.type == 'item-count' then
-				label.style.right_margin = -20
-				label.style.left_margin = -5
 				action_frame.add{type = 'empty-widget', style = 'py_empty_widget'}
 				local itemselect = action_frame.add{
 					type = 'choose-elem-button', name = 'py_item_count', style = 'train_schedule_item_select_button',

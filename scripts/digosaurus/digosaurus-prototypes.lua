@@ -1,7 +1,7 @@
 Digosaurus.favorite_food = 'meat' -- can be anything
 
 Digosaurus.minable_categories = {
-	['basic-solid'] = true
+	['ore-nexelit'] = true
 }
 
 Digosaurus.ores_gained_per_trip = 5
