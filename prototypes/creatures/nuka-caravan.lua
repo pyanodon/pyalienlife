@@ -45,12 +45,33 @@ data:extend(
     order = 'b-b-a',
     subgroup='enemies',
     resistances =
+	{
 		{
-			{
-				type = 'physical',
-				percent = 50
-			},
+		  type = "fire",
+		  decrease = 0,
+		  percent = 100
 		},
+		{
+		  type = "physical",
+		  decrease = 0,
+		  percent = 100
+		},
+		{
+		  type = "impact",
+		  decrease = 0,
+		  percent = 100
+		},
+		{
+		  type = "explosion",
+		  decrease = 0,
+		  percent = 100
+		},
+		{
+		  type = "acid",
+		  decrease = 0,
+		  percent = 100
+		}
+	  },
     healing_per_tick = 0.01,
     collision_box = {{-0.6, -0.6}, {0.6, 0.6}},
     selection_box = {{-1, -1}, {1, 1}},
