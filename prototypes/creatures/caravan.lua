@@ -32,6 +32,7 @@ ITEM {
 
 data:extend{{
 	type = 'unit',
+	additional_pastable_entities = {'caravan'},
 	name = 'caravan',
 	icon = '__pyalienlifegraphics2__/graphics/icons/caravan.png',
 	icon_size = 64,
@@ -197,18 +198,10 @@ data:extend{{
 	}
 }}
 
-data:extend{
-	{
-		type = 'custom-input',
-		name = 'open-caravan-gui',
-		key_sequence = '',
-		linked_game_control = 'open-gui'
-	},
-	{
-        type = 'ammo-category',
-        name = 'caravan-control',
-    }
-}
+data:extend{{
+	type = 'ammo-category',
+	name = 'caravan-control',
+}}
 
 ITEM {
     type = 'capsule',

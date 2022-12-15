@@ -213,7 +213,7 @@ function Caravan.build_gui(player, entity)
 	Caravan.update_gui(main_frame)
 end
 
-script.on_event('open-caravan-gui', function(event)
+script.on_event('open-gui', function(event)
 	local player = game.players[event.player_index]
 	if player.cursor_stack.valid_for_read then return end
 	local entity = player.selected

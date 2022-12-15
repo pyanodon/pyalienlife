@@ -20,23 +20,24 @@ RECIPE {
     result = 'nukavan'
 }:add_unlock('domestication-mk03')
 
-ITEM{
-    type = 'item-with-tags',
-    name = 'nukavan',
-    icon = '__pyalienlifegraphics2__/graphics/icons/nuka-van.png',
-    icon_size = 64,
-    subgroup = 'py-alienlife-special-creatures',
-    order = 'a',
-    place_result = 'nukavan',
-    stack_size = 1,
+ITEM {
+	type = 'item-with-tags',
+	name = 'nukavan',
+	icon = '__pyalienlifegraphics2__/graphics/icons/nuka-van.png',
+	icon_size = 64,
+	subgroup = 'py-alienlife-special-creatures',
+	order = 'a',
+	place_result = 'nukavan',
+	stack_size = 1,
 	flags = {'not-stackable'}
-  }
+}
 
 data:extend(
 {
   {
     type = 'unit',
     name = 'nukavan',
+	additional_pastable_entities = {'nukavan'},
     icon = '__pyalienlifegraphics2__/graphics/icons/nuka-van.png',
     icon_size = 64,
     flags = {'placeable-player', 'placeable-off-grid', 'not-repairable', 'breaths-air', 'building-direction-8-way'},
@@ -75,18 +76,6 @@ data:extend(
     healing_per_tick = 0.01,
     collision_box = {{-0.6, -0.6}, {0.6, 0.6}},
     selection_box = {{-1, -1}, {1, 1}},
-	--[[
-    --handles enemy loot dropping
-    loot =
-      {
-        {
-          count_max = 1,
-          count_min = 1,
-          item = 'iron-ore',
-          probability = 1
-        }
-      },
-	]]--
     attack_parameters =
     {
       type = 'projectile',
@@ -152,7 +141,6 @@ data:extend(
 	min_pursue_time = 10 * 60,
 	max_pursue_distance = 50,
 	--corpse = 'arthurian-corpse',
-	dying_explosion = 'nuka-bomb-baby',
 	--dying_sound =  make_biter_dying_sounds(0.4),
 	--working_sound =  make_biter_calls(0.3),
 	--run_animation = biterrunanimation(small_biter_scale, small_biter_tint1, small_biter_tint2),
@@ -275,69 +263,3 @@ data:extend(
 	  }
 	}
   end
-
-data:extend(
-	{
-		{
-			type = 'explosion',
-			name = 'nuka-bomb-baby',
-			flags = {'not-on-map'},
-			subgroup = 'explosions',
-			animations = massive_explosion(),
-			light = {intensity = 1, size = 50, color = {r=1.0, g=1.0, b=1.0}},
-			sound = sounds.large_explosion(0.8),
-			created_effect =
-			{
-			  type = 'direct',
-			  action_delivery =
-			  {
-				type = 'instant',
-				target_effects =
-				{
-				  {
-					  repeat_count = 100,
-					  type = 'create-trivial-smoke',
-					  smoke_name = 'nuclear-smoke',
-					  offset_deviation = {{-1, -1}, {1, 1}},
-					  starting_frame = 3,
-					  starting_frame_deviation = 5,
-					  starting_frame_speed = 0,
-					  starting_frame_speed_deviation = 5,
-					  speed_from_center = 0.5
-				  },
-				  {
-					type = 'create-entity',
-					entity_name = 'explosion'
-				  },
-				  {
-					type = 'damage',
-					damage = {amount = 400, type = 'explosion'}
-				  },
-				  {
-					type = 'create-entity',
-					entity_name = 'big-scorchmark',
-					check_buildability = true
-				  },
-				  {
-					type = 'nested-result',
-					action =
-					{
-					  type = 'area',
-					  target_entities = false,
-					  trigger_from_target = true,
-					  repeat_count = 2000,
-					  radius = 35,
-					  action_delivery =
-					  {
-						type = 'projectile',
-						projectile = 'atomic-bomb-wave',
-						starting_speed = 0.5
-					  }
-					}
-				  }
-				}
-			  }
-			}
-		  },
-	}
-)

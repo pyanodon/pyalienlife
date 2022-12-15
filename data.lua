@@ -5,7 +5,6 @@
 require("__stdlib__/stdlib/data/data").Util.create_data_globals()
 local RECIPE = require("__stdlib__/stdlib/data/recipe")
 
-require "prototypes/gui-style"
 require("prototypes/item-groups")
 require("prototypes/recipe-categories")
 require("prototypes/fuel-categories")

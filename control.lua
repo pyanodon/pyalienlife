@@ -913,3 +913,5 @@ script.on_nth_tick(4, function()
         ::continue::
 	end
 end)
+
+script.on_event(defines.events.on_entity_settings_pasted, Caravan.events.on_entity_settings_pasted)
