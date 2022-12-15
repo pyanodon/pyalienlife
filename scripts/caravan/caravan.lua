@@ -4,6 +4,7 @@ Caravan.events = {}
 require 'caravan-gui'
 local prototypes = require 'caravan-prototypes'
 local Position = require('__stdlib__/stdlib/area/position')
+local Table = require('__stdlib__/stdlib/utils/table')
 
 local function get_pathfind_flags(caravan_data)
 	local flags = {}
@@ -519,5 +520,24 @@ Caravan.events.on_entity_destroyed = function(event)
 	for _, player in pairs(game.connected_players) do
 		local gui = Caravan.get_caravan_gui(player)
 		if gui and gui.tags.unit_number == unit_number then gui.destroy(); player.opened = nil end
+	end
+end
+
+Caravan.events.on_entity_settings_pasted = function(event)
+    local source, destination = event.source, event.destination
+	local source_data, destination_data = global.caravans[source.unit_number], global.caravans[destination.unit_number]
+	if not source_data or not destination_data then return end
+
+	for _, prototype in pairs(source.prototype.additional_pastable_entities) do
+		if prototype.name == destination.name then goto continue end
+	end
+	do return end
+	::continue::
+
+	stop_actions(destination_data)
+	destination_data.schedule = Table.deep_copy(source_data.schedule)
+	for _, player in pairs(game.connected_players) do
+		local gui = Caravan.get_caravan_gui(player)
+		if gui and gui.tags.unit_number == destination.unit_number then Caravan.update_gui(gui) end
 	end
 end

@@ -43,6 +43,7 @@ data:extend
   {
 	ai_settings = {do_separation = false},
     type = 'unit',
+	additional_pastable_entities = {'flyavan'},
     name = 'flyavan',
     icon = '__pyalienlifegraphics2__/graphics/icons/flyavan.png',
     icon_size = 64,
