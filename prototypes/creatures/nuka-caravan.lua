@@ -37,6 +37,7 @@ data:extend(
   {
     type = 'unit',
     name = 'nukavan',
+	can_open_gates = true,
 	additional_pastable_entities = {'nukavan'},
     icon = '__pyalienlifegraphics2__/graphics/icons/nuka-van.png',
     icon_size = 64,
