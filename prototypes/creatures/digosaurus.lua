@@ -8,18 +8,16 @@ RECIPE {
   category = 'creature-chamber',
   enabled = false,
   ingredients = {
-    {type = 'item', name = 'alien-sample01', amount = 10},
-    {type = 'item', name = 'cdna', amount = 5},
     {type = 'item', name = 'moss-gen', amount = 30},
-    {type = 'item', name = 'bio-sample', amount = 100},
-    {type = 'item', name = 'animal-sample-01', amount = 5},
-    {type = 'item', name = 'earth-generic-sample', amount = 20},
-    {type = 'item', name = 'earth-lizard-sample', amount = 1},
-    {type = 'fluid', name = 'blood', amount = 300},
-    {type = 'fluid', name = 'water-saline', amount = 500},
+    {type = 'item', name = 'earth-generic-sample', amount = 10},
+    {type = 'item', name = 'petri-dish', amount = 10},
+    {type = 'item', name = 'titanium-plate', amount = 50},
+    {type = 'fluid', name = 'water-saline', amount = 1000},
   },
   result = 'digosaurus'
-}
+}:add_unlock{'nexelit-mk01'}
+
+data.raw.recipe['nexelit-ore-1'].localised_description = 'This recipe may be removed in the future. Recommended to use digosaurus'
 
 ITEM {
   type = 'item',
@@ -44,12 +42,12 @@ RECIPE {
       {'electronic-circuit', 10},
       {'lead-plate', 50},
       {'titanium-plate', 100},
-      {'small-parts-01', 100}
+      {'small-parts-01', 100},
   },
   results = {
       {'dino-dig-site', 1}
   }
-}
+}:add_unlock{'nexelit-mk01'}
 
 ITEM {
   type = 'item',
@@ -195,7 +193,7 @@ RECIPE {
   results = {{'nexelit-ore', 20000}},
   category = 'dino-dig-site',
   enabled = false
-}:add_unlock{'nexelit-mk02'}
+}:add_unlock{'nexelit-mk01'}
 
 ENTITY {
   fixed_recipe = 'digosaurus-hidden-recipe',
