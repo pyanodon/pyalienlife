@@ -274,7 +274,7 @@ if data.data_crawler then
 	  }
   end
 
-  TECHNOLOGY('filtration-mk02'):remove_prereq('lithium-processing')
+TECHNOLOGY('filtration-mk02'):remove_prereq('lithium-processing')
 
 --RECIPES UPDATES
 

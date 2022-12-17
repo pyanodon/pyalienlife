@@ -54,7 +54,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = 2,
     },
-    energy_usage = "200kW",
+    energy_usage = "400kW",
     fluid_boxes = {
         --1
         {

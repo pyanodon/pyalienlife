@@ -9,13 +9,12 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'steel-plate', amount = 5},
 		{type = 'item', name = 'small-parts-01', amount = 50},
-		{type = 'item', name = 'duralumin', amount = 10},
+		{type = 'item', name = 'wooden-chest', amount = 6},
 		{type = 'item', name = 'concrete', amount = 20},
-		{type = 'item', name = 'electronic-circuit', amount = 3},
 		{type = 'item', name = 'glass', amount = 5},
     },
     result = 'outpost'
-}:add_unlock('domestication')
+}:add_unlock('zoology')
 
 ITEM {
     type = 'item',

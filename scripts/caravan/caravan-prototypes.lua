@@ -7,8 +7,9 @@ local prototypes = {
 		fuel_size = 2,
 		outpost = 'outpost',
 		favorite_foods = {
+			['brain'] = 5,
 			['auog-food-01'] = 10,
-			['workers-food'] = 20
+			['workers-food'] = 30
 		},
 		actions = {
 			'time-passed',

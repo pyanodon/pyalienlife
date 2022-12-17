@@ -68,7 +68,7 @@ ENTITY {
       emissions_per_minute = 10,
       usage_priority = "secondary-input"
     },
-    energy_usage = "600kW",
+    energy_usage = "900kW",
     resource_searching_radius = 3.49,
     vector_to_place_result = {0, -2.65},
     radius_visualisation_picture = {

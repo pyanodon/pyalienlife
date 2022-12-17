@@ -7,16 +7,16 @@ RECIPE {
     category = 'creature-chamber',
     enabled = false,
     ingredients = {
-        {type = 'item', name = 'alien-sample01', amount = 5},
+        {type = 'item', name = 'cocoon', amount = 10},
         {type = 'item', name = 'bio-sample', amount = 20},
-        {type = 'item', name = 'auog', amount = 1},
-		{type = 'item', name = 'animal-sample-01', amount = 2},
+        --{type = 'item', name = 'auog', amount = 1},
+		--{type = 'item', name = 'animal-sample-01', amount = 2},
         {type = 'item', name = 'moss-gen', amount = 15},
-        {type = 'item', name = 'earth-bear-sample', amount = 1},
+        {type = 'item', name = 'earth-generic-sample', amount = 5},
         {type = 'fluid', name = 'water-saline', amount = 100}
     },
     result = 'caravan'
-}:add_unlock('domestication')
+}:add_unlock('zoology')
 
 ITEM {
     type = 'item-with-tags',

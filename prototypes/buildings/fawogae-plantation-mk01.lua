@@ -69,7 +69,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = -5,
     },
-    energy_usage = "200kW",
+    energy_usage = "1000kW",
     animation = {
         filename = "__pycoalprocessinggraphics__/graphics/entity/fawogae-plantation/fawogae.png",
         width = 200,

@@ -5,6 +5,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"auog","land-animals-mk01"},
+    dependencies = {},
     effects = {},
     unit = {
         count = 100,
