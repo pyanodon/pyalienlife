@@ -1,9 +1,14 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.5
-Date: ?
+Date: 2022-12-19
   Changes:
     - added digosaurus. new mining creature that can gather nexelit.
-    - caravan rework
+    - caravan rework.
+    - add missing py sci 1 pack to crusher 2 tech.
+    - fixed several techs that were missing science packs based on prereqs.
+    - fixed crafting times on a number of rendering recipes.
+    - fixed graphic error and crash in slaughterhouse gui.
+    - readded caravan and nukavan.
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.4
 Date: 2022-11-29
