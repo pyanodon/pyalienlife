@@ -78,7 +78,6 @@ local recipes_list =
   "filtration-media-3",
   "cellulose-gasification",
   "yotoi-cellulose",
-  "biofilm-3",
   "manure-to-biomass",
   "manure-to-crude",
   "sodium-alginate",
