@@ -9,6 +9,7 @@ Date: 2022-12-19
     - fixed crafting times on a number of rendering recipes.
     - fixed graphic error and crash in slaughterhouse gui.
     - readded caravan and nukavan.
+    - increased energy usage on mk01 of antelope encloser, auog paddock, biofactory, compost plant, cridren encloser,dhilmos pool, dingrit pack, fawogae plantaion, fast wood forestry, genlab, grod swamp, tuuphra plantation, ulric corral, xyhiphoe pool, kmauts encloser mk01-mk04, smart farm, mukmoux pasture mk01-mk04, vonix den mk01-mk03, zungror lair mk01-mk03, fluid drill mk02-mk04
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.4
 Date: 2022-11-29
