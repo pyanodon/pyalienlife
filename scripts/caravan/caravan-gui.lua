@@ -16,13 +16,6 @@ local function generate_button_status(caravan_data, schedule_id, action_id)
 	return style, sprite
 end
 
-local impossible_without_outpost = {
-	['store-food'] = true,
-	['fill-inventory'] = true,
-	['empty-inventory'] = true,
-	['item-count'] = true
-}
-
 local elem_filters = {
 	'item-with-entity-data', 'ammo', 'item-with-label', 'item-with-inventory', 'blueprint-book', 'item-with-tags',
 	'selection-tool', 'blueprint', 'copy-paste-tool', 'deconstruction-item', 'upgrade-item', 'spidertron-remote', 'tool', 'armor', 'repair-tool'
@@ -31,6 +24,8 @@ elem_filters = Table.map(elem_filters, function(v) return {filter = 'type', type
 
 function Caravan.build_schedule_gui(gui, caravan_data)
 	for i, schedule in ipairs(caravan_data.schedule) do
+		local prototype = prototypes[caravan_data.entity.name]
+
 		local schedule_flow = gui.add{type = 'flow', direction = 'vertical'}
 		schedule_flow.style.horizontal_align = 'right'
 		schedule_flow.style.vertically_stretchable = false
@@ -115,10 +110,14 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 
 		local add_action = schedule_flow.add{type = 'button', name = 'action_frame_button', style = 'train_schedule_add_wait_condition_button', caption = {'caravan-gui.add-action'}}
 		add_action.style.horizontal_align = 'right'
-		local actions = prototypes[caravan_data.entity.name].actions
+		local actions = prototype.actions.default
 		local entity = schedule.entity
-		if not entity or not entity.valid or (entity.name ~= 'character' and not prototypes[entity.name] and prototypes[caravan_data.entity.name].outpost ~= entity.name) then
-			actions = Table.filter(actions, function(v) return not impossible_without_outpost[v] end)
+		if entity and entity.valid then
+			if entity.name == prototype.outpost then
+				actions = prototype.actions.outpost
+			elseif prototype.actions[entity.type] then
+				actions = prototype.actions[entity.type]
+			end
 		end
 		actions = Table.map(actions, function(v) return {'caravan-actions.' .. v, v} end)
 		add_action.add{type = 'drop-down', name = 'py_add_action', items = actions, caption = {'caravan-gui.add-action'}, tags = tags}

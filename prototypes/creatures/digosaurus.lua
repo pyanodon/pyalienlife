@@ -17,8 +17,6 @@ RECIPE {
   result = 'digosaurus'
 }:add_unlock{'nexelit-mk01'}
 
-data.raw.recipe['nexelit-ore-1'].localised_description = 'This recipe may be removed in the future. Recommended to use digosaurus'
-
 ITEM {
   type = 'item',
   name = 'digosaurus',

@@ -1,5 +1,47 @@
 local Position = require('__stdlib__/stdlib/area/position')
 
+local caravan_actions = {
+	['outpost'] = {
+		'time-passed',
+		'store-food',
+		'fill-inventory',
+		'empty-inventory',
+		'item-count'
+	},
+	['character'] = {
+		'time-passed',
+		'store-food',
+		'fill-inventory',
+		'empty-inventory',
+		'item-count'
+	},
+	['unit'] = {
+		'time-passed',
+		'store-food',
+		'fill-inventory',
+		'empty-inventory',
+		'item-count'
+	},
+	['cargo-wagon'] = {
+		'time-passed',
+		'fill-inventory',
+		'empty-inventory'
+	},
+	['default'] = {
+		'time-passed'
+	}
+}
+
+local aerial_actions = {
+	['outpost'] = {
+		'time-passed',
+		'store-energy'
+	},
+	['default'] = {
+		'time-passed'
+	}
+}
+
 local prototypes = {
 	caravan = {
 		inventory_size = 30,
@@ -11,13 +53,7 @@ local prototypes = {
 			['auog-food-01'] = 10,
 			['workers-food'] = 30
 		},
-		actions = {
-			'time-passed',
-			'store-food',
-			'fill-inventory',
-			'empty-inventory',
-			'item-count'
-		},
+		actions = caravan_actions,
 		camera_zoom = 0.8,
 		placeable_by = 'caravan'
 	},
@@ -30,13 +66,7 @@ local prototypes = {
 			['workers-food'] = 5,
 			['gastrocapacitor'] = 50
 		},
-		actions = {
-			'time-passed',
-			'store-food',
-			'fill-inventory',
-			'empty-inventory',
-			'item-count'
-		},
+		actions = caravan_actions,
 		camera_zoom = 0.5,
 		placeable_by = 'flyavan',
 		can_fly = true
@@ -50,7 +80,7 @@ local prototypes = {
 			['workers-food'] = 5,
 		},
 		actions = {
-			'detonate'
+			{['default'] = 'detonate'}
 		},
 		placeable_by = 'nukavan'
 	},
@@ -59,10 +89,7 @@ local prototypes = {
 		opens_player_inventory = false,
 		outpost = 'aerial-base',
 		only_allow_outpost_as_destination = true,
-		actions = {
-			'time-passed',
-			'store-energy'
-		},
+		actions = aerial_actions,
 		placeable_by = 'aerial-blimp-mk01',
 		energy_per_distance_formula = function(distance) return distance * 180000 end,
 		is_aerial = true,
@@ -72,10 +99,7 @@ local prototypes = {
 		opens_player_inventory = false,
 		outpost = 'aerial-base',
 		only_allow_outpost_as_destination = true,
-		actions = {
-			'time-passed',
-			'store-energy'
-		},
+		actions = aerial_actions,
 		placeable_by = 'aerial-blimp-mk01',
 		energy_per_distance_formula = function(distance) return distance * 360000 end,
 		is_aerial = true,
@@ -85,10 +109,7 @@ local prototypes = {
 		opens_player_inventory = false,
 		outpost = 'aerial-base',
 		only_allow_outpost_as_destination = true,
-		actions = {
-			'time-passed',
-			'store-energy'
-		},
+		actions = aerial_actions,
 		placeable_by = 'aerial-blimp-mk01',
 		energy_per_distance_formula = function(distance) return distance * 600000 end,
 		is_aerial = true,
@@ -98,10 +119,7 @@ local prototypes = {
 		opens_player_inventory = false,
 		outpost = 'aerial-base',
 		only_allow_outpost_as_destination = true,
-		actions = {
-			'time-passed',
-			'store-energy'
-		},
+		actions = aerial_actions,
 		placeable_by = 'aerial-blimp-mk01',
 		energy_per_distance_formula = function(distance) return distance * 800000 end,
 		is_aerial = true,
@@ -111,10 +129,7 @@ local prototypes = {
 		opens_player_inventory = false,
 		outpost = 'aerial-base',
 		only_allow_outpost_as_destination = true,
-		actions = {
-			'time-passed',
-			'store-energy'
-		},
+		actions = aerial_actions,
 		placeable_by = 'aerial-blimp-mk01',
 		energy_per_distance_formula = function(distance) return distance * 400000 end,
 		is_aerial = true,
@@ -128,6 +143,8 @@ local function get_outpost_inventory(outpost)
 		return outpost.get_main_inventory()
 	elseif type == 'container' then
 		return outpost.get_inventory(defines.inventory.chest)
+	elseif type == 'cargo-wagon' then
+		return outpost.get_inventory(defines.inventory.cargo_wagon)
 	elseif prototypes[outpost.name] then
 		local caravan_data = global.caravans[outpost.unit_number]
 		return caravan_data.inventory
