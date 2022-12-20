@@ -10,7 +10,7 @@ RECIPE{
     {
       {type = 'item', name = 'alien-sample-02', amount = 10},
       {type = 'item', name = 'cdna', amount = 30},
-      {type = 'item', name = 'cbp', amount = 10},
+      {type = 'item', name = 'lens', amount = 2},
       {type = 'item', name = 'bio-sample', amount = 100},
       {type = 'item', name = 'earth-generic-sample', amount = 10},
       {type = 'fluid', name = 'fetal-serum', amount = 100},

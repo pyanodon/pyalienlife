@@ -2922,7 +2922,7 @@ RECIPE {
         {type = 'item', name = 'animal-sample-01', amount = 3},
         {type = 'item', name = 'stainless-steel', amount = 2},
         {type = 'item', name = 'electronic-circuit', amount = 2},
-        {type = 'item', name = 'zipir-food-01', amount = 1},
+        {type = 'item', name = 'zipir-eggs', amount = 1},
         {type = 'fluid', name = 'phytoplankton', amount = 100},
         {type = 'fluid', name = 'blood', amount = 100},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
@@ -2930,7 +2930,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'gastrocapacitor', amount = 1},
     },
-}:add_unlock("domestication-mk02"):add_ingredient({type = 'item', name = 'nexelit-battery', amount = 1}):add_ingredient({type = 'item', name = 'phosphate-glass', amount = 1})
+}:add_unlock("domestication-mk02"):add_ingredient({type = 'item', name = 'nexelit-battery', amount = 1})
 
 RECIPE {
     type = 'recipe',

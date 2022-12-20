@@ -7,7 +7,7 @@ RECIPE {
     category = 'crafting',
     enabled = false,
 	ingredients = {
-        {type = 'item', name = 'super-steel', amount = 15},
+        {type = 'item', name = 'stainless-steel', amount = 15},
 		{type = 'item', name = 'electric-engine-unit', amount = 10},
 		{type = 'item', name = 'small-parts-02', amount = 30},
 		{type = 'item', name = 'advanced-circuit', amount = 10},
