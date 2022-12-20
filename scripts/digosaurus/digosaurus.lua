@@ -10,17 +10,6 @@ Digosaurus.events.init = function(event)
     global.digosaurs = global.digosaurs or {}
 end
 
-function Digosaurus.set_filter(inventory, filter_item, spill_position)
-	for i = 1, #inventory do
-		local stack = inventory[i]
-		if not inventory.set_filter(i, filter_item) or (stack.valid_for_read and stack.name ~= filter_item) then
-			entity.surface.spill_item_stack(spill_position, stack)
-			stack.clear()
-			inventory.set_filter(i, filter_item)
-		end
-	end
-end
-
 function Digosaurus.validity_check(dig_data)
     if not dig_data then return false end
 
@@ -102,13 +91,15 @@ function Digosaurus.start_mining_command(dig_data, i)
     local digosaur_data = {i = i, entity = digosaur, proxy = proxy, ore_id = rng, ore = ore, parent = entity.unit_number, state = 'mining'}
     dig_data.active_digosaurs[i] = digosaur_data
     global.digosaurs[digosaur.unit_number] = digosaur_data
-    return true
+    return digosaur_data
 end
 
 function Digosaurus.eat(food_inventory)
     for food, _ in pairs(food_inventory.get_contents()) do
-        food_inventory.remove{name = food, count = 1}
-        return
+        if Digosaurus.favorite_foods[food] then
+            food_inventory.remove{name = food, count = 1}
+            return food
+        end
     end
 end
 
@@ -135,8 +126,9 @@ Digosaurus.events[60] = function(event)
             for i = 1, #dig_data.digosaur_inventory do
                 local digosaur_data = dig_data.active_digosaurs[i]
                 if not digosaur_data and dig_data.digosaur_inventory[i].valid_for_read then
-                    if Digosaurus.start_mining_command(dig_data, i) then
-                        Digosaurus.eat(dig_data.food_inventory)
+                    digosaur_data = Digosaurus.start_mining_command(dig_data, i)
+                    if digosaur_data then
+                        digosaur_data.ores_gained_per_trip = Digosaurus.favorite_foods[Digosaurus.eat(dig_data.food_inventory)]
                         goto continue
                     end
                 end
@@ -177,7 +169,7 @@ Digosaurus.events.on_ai_command_completed = function(event)
 
         for _, product in pairs(ore.prototype.mineable_properties.products) do
             if product.type == 'item' then
-                local to_insert = math.min(ore.amount, Digosaurus.ores_gained_per_trip) * product.amount
+                local to_insert = math.min(ore.amount, digosaur_data.ores_gained_per_trip or 1) * product.amount
                 if to_insert == 0 then return end
                 local ore_removed = dig_data.inventory.insert{name = product.name, count = to_insert} / product.amount
                 if not dig_data.inventory[1].valid_for_read or ore_removed == 0 then return end
@@ -217,7 +209,6 @@ Digosaurus.events.on_built = function(event)
         scanned_ores = {}
     }
 
-    Digosaurus.set_filter(food_inventory, Digosaurus.favorite_food, entity.position)
     Digosaurus.scan_ores(global.dig_sites[entity.unit_number])
 end
 
@@ -258,7 +249,7 @@ gui_events[defines.events.on_gui_click]['dig_food_.'] = function(event)
 	local dig_data = global.dig_sites[tags.unit_number]
 	local cursor_stack = player.cursor_stack
 
-	if cursor_stack.valid_for_read and Digosaurus.favorite_food ~= cursor_stack.name then return end
+	if cursor_stack.valid_for_read and not Digosaurus.favorite_foods[cursor_stack.name] then return end
 
 	cursor_stack.swap_stack(dig_data.food_inventory[tags.i])
 	Digosaurus.update_gui(player.gui.relative.digosaurus_gui)

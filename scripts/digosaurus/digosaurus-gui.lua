@@ -2,11 +2,14 @@ local function format_energy(energy)
 	return string.format('%.0f', energy * 60 / 1000) .. 'kW'
 end
 
-local function generate_favorite_food_tooltip()
-	return {'digosaurus-gui.favorite-foods-main', {
-		'digosaurus-gui.favorite-foods-sub', '[item=' .. Digosaurus.favorite_food .. ']',
-		game.item_prototypes[Digosaurus.favorite_food].localised_name, Digosaurus.ores_gained_per_trip
-	}}
+local function generate_favorite_food_tooltip(caravan_data)
+	local favorites = {''}
+	for food, actions in pairs(Digosaurus.favorite_foods) do
+		favorites[#favorites + 1] = {'digosaurus-gui.favorite-foods-sub', '[item=' .. food .. ']', game.item_prototypes[food].localised_name, actions}
+		favorites[#favorites + 1] = '\n'
+	end
+	favorites[#favorites] = nil
+	return {'digosaurus-gui.favorite-foods-main', favorites}
 end
 
 function Digosaurus.update_gui(gui)

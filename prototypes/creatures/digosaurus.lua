@@ -1,4 +1,4 @@
-local item_icon = '__pyalienlifegraphics3__/graphics/icons/dig-osaur.png' -- change this!
+local item_icon = '__pyalienlifegraphics3__/graphics/icons/dig-osaur.png'
 local time_taken_for_digosaurus_to_mine = 15 -- seconds
 
 RECIPE {

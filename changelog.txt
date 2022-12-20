@@ -3,6 +3,9 @@ Version: 2.0.6
 Date: ?
   Changes:
     - readded oculua
+    - made aerial caravan and nukavan cheaper
+    - buffed caravan HP. 825->3125
+    - meat can now be used as digosaurs food
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.5
 Date: 2022-12-19

@@ -1,10 +1,11 @@
-Digosaurus.favorite_food = 'workers-food' -- can be anything
+Digosaurus.favorite_foods = {
+	['meat'] = 1,
+	['workers-food'] = 5
+}
 
 Digosaurus.minable_categories = {
 	['ore-nexelit'] = true
 }
-
-Digosaurus.ores_gained_per_trip = 5
 
 Digosaurus.dino_dig_site_creature_limit = 4
 
