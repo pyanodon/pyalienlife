@@ -54,6 +54,7 @@ function Oculua.find_ipod(player, item)
 		if ipod.force ~= player.force or ipod.surface ~= player.surface then goto continue end
 		if ipod_data.active_oculua >= #ipod_data.inventory then goto continue end
 		if ipod_data.inventory.get_item_count('ocula') == 0 then goto continue end
+
 		local network = ipod.force.find_logistic_network_by_position(ipod.position, ipod.surface)
 		if not network or checked_logistic_networks[network] then goto continue end
 		if network.get_item_count(item) > 0 then return ipod_data, network end
@@ -73,16 +74,20 @@ function Oculua.process_player(player)
 		local request_slot = player.character.get_request_slot(i)
 		if not request_slot then goto continue end
 		local item = request_slot.name
+
 		if not check_for_basic_item(item) then goto continue end -- Cannot transfer blueprint books, item-with-tags, ect. Otherwise it would wipe data
 		local needed = request_slot.count - (incoming[item] or 0) - (inventory[item] or 0) - (logistic_network_incoming[item] or 0)
 		if needed <= 0 then goto continue end
+
 		local insertable_count = player.get_main_inventory().get_insertable_count(item)
 		if insertable_count == 0 then goto continue end
+
 		local ipod_data, network = Oculua.find_ipod(player, item)
 		if not ipod_data then goto continue end
 		local pickup_point = network.select_pickup_point{name = item, position = ipod_data.entity.position, include_buffers = true}
 		if not pickup_point then goto continue end
 		pickup_point = pickup_point.owner
+
 		local target_count = math.min(insertable_count, needed, pickup_point.get_inventory(CHEST).get_item_count(item), game.item_prototypes[item].stack_size * Oculua.inventory_size)
 		if target_count <= 0 then goto continue end
 		local oculua_data = Oculua.spawn_oculua(ipod_data, player)
@@ -90,6 +95,7 @@ function Oculua.process_player(player)
 		oculua_data.target_count = target_count
 		Oculua.set_target(oculua_data, pickup_point)
 		incoming[item] = (incoming[item] or 0) + oculua_data.target_count
+
 		::continue::
 	end
 end
@@ -106,7 +112,7 @@ Oculua.events[221] = function()
 		local ipod = ipod_data.entity
 		if ipod_data.active_oculua == 0 and ipod_data.inventory.is_empty() then
 			rendering.draw_sprite{
-				sprite = 'utility.not_enough_construction_robots_icon',
+				sprite = 'no_module_animal',
 				x_scale = 0.5,
 				y_scale = 0.5,
 				target = ipod,
@@ -134,7 +140,8 @@ function Oculua.clear_incoming_oculua_items(oculua_data)
 	local oculua = oculua_data.entity
 	if oculua_data.count and oculua_data.count > 0 then
 		-- Somehow it still contains items. Need to find somewhere to put them.
-		local network = oculua.force.find_logistic_network_by_position(oculua.position, oculua.surface)
+		local network_target = (oculua_data.ipod and oculua_data.ipod.valid) and oculua_data.ipod or oculua
+		local network = network_target.force.find_logistic_network_by_position(network_target.position, network_target.surface)
 		local items = {name = oculua_data.item, count = oculua_data.count}
 		if network then
 			network.insert(items)
@@ -187,8 +194,10 @@ Oculua.events.on_ai_command_completed = function(event)
 			local player = oculua_data.player
 			if not target or not target.valid then Oculua.go_home(oculua_data); return end
 			if not player or not player.valid then Oculua.go_home(oculua_data); return end
+
 			oculua_data.count = target.get_inventory(CHEST).remove{name = oculua_data.item, count = oculua_data.target_count}
 			if oculua_data.count == 0 then Oculua.go_home(oculua_data); return end
+
 			Oculua.fire_laser_beam(oculua_data)
 			Oculua.set_target(oculua_data, player.character)
 			oculua_data.status = DROPPING_OFF
@@ -206,6 +215,7 @@ Oculua.events.on_ai_command_completed = function(event)
 			if not ipod or not ipod.valid then Oculua.wander(oculua_data); return end
 			local ipod_data = global.ipods[ipod.unit_number]
 			if not ipod_data then Oculua.wander(oculua_data); return end
+			
 			local inventory = ipod_data.inventory
 			local inserted_count = inventory.insert{name = 'ocula', count = 1}
 			if inserted_count == 0 then Oculua.wander(oculua_data); return end

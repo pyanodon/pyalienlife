@@ -1,10 +1,16 @@
 Digosaurus.favorite_foods = {
-	['meat'] = 1,
-	['workers-food'] = 5
+	['guts'] = 1,
+	['meat'] = 2,
+	['workers-food'] = 8
 }
 
 Digosaurus.minable_categories = {
 	['ore-nexelit'] = true
+}
+
+Digosaurus.valid_creatures = {
+	['digosaurus'] = 1,
+	['digosaurus-mk02'] = 2
 }
 
 Digosaurus.dino_dig_site_creature_limit = 4

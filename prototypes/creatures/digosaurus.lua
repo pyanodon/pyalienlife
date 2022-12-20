@@ -190,7 +190,8 @@ RECIPE {
   ingredients = {},
   results = {{'nexelit-ore', 20000}},
   category = 'dino-dig-site',
-  enabled = false
+  enabled = false,
+  hidden = true
 }:add_unlock{'nexelit-mk01'}
 
 ENTITY {

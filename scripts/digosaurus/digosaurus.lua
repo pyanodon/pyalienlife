@@ -69,7 +69,7 @@ function Digosaurus.start_mining_command(dig_data, i)
     local entity = dig_data.entity
     local spawn_point = Digosaurus.digosaurus_spawn_point[entity.direction]
     local digosaur = entity.surface.create_entity{
-        name = 'digosaurus',
+        name = dig_data.digosaur_inventory[i].name,
         position = {entity.position.x + spawn_point.x, entity.position.y + spawn_point.y},
         force = entity.force,
         create_build_effect_smoke = false,
@@ -159,6 +159,7 @@ Digosaurus.events.on_ai_command_completed = function(event)
             }
         }
     elseif digosaur_data.state == 'returning' then
+        local creature_bonus = Digosaurus.valid_creatures[digosaur.name]
         digosaur.destroy()
         global.digosaurs[unit_number] = nil
         local dig_data = global.dig_sites[digosaur_data.parent]
@@ -169,9 +170,9 @@ Digosaurus.events.on_ai_command_completed = function(event)
 
         for _, product in pairs(ore.prototype.mineable_properties.products) do
             if product.type == 'item' then
-                local to_insert = math.min(ore.amount, digosaur_data.ores_gained_per_trip or 1) * product.amount
+                local to_insert = math.min(ore.amount, digosaur_data.ores_gained_per_trip or 1) * product.amount * creature_bonus
                 if to_insert == 0 then return end
-                local ore_removed = dig_data.inventory.insert{name = product.name, count = to_insert} / product.amount
+                local ore_removed = dig_data.inventory.insert{name = product.name, count = to_insert} / product.amount / creature_bonus
                 if not dig_data.inventory[1].valid_for_read or ore_removed == 0 then return end
                 if ore.amount > ore_removed then
                     ore.amount = ore.amount - ore_removed
@@ -262,7 +263,7 @@ gui_events[defines.events.on_gui_click]['dig_creature_.'] = function(event)
 	local dig_data = global.dig_sites[tags.unit_number]
 	local cursor_stack = player.cursor_stack
 
-	if cursor_stack.valid_for_read and cursor_stack.name ~= 'digosaurus' then return end
+	if cursor_stack.valid_for_read and not Digosaurus.valid_creatures[cursor_stack.name] then return end
     local digosaur_data = dig_data.active_digosaurs[tags.i]
     if digosaur_data then
         if digosaur_data.proxy and digosaur_data.proxy.valid then digosaur_data.proxy.destroy() end

@@ -2,7 +2,7 @@ local function format_energy(energy)
 	return string.format('%.0f', energy * 60 / 1000) .. 'kW'
 end
 
-local function generate_favorite_food_tooltip(caravan_data)
+local function generate_favorite_food_tooltip()
 	local favorites = {''}
 	for food, actions in pairs(Digosaurus.favorite_foods) do
 		favorites[#favorites + 1] = {'digosaurus-gui.favorite-foods-sub', '[item=' .. food .. ']', game.item_prototypes[food].localised_name, actions}
@@ -10,6 +10,16 @@ local function generate_favorite_food_tooltip(caravan_data)
 	end
 	favorites[#favorites] = nil
 	return {'digosaurus-gui.favorite-foods-main', favorites}
+end
+
+local function generate_digosaurus_slot_tooltip()
+	local favorites = {''}
+	for creature, productivity in pairs(Digosaurus.valid_creatures) do
+		favorites[#favorites + 1] = {'digosaurus-gui.digosaurus-slot-sub', '[item=' .. creature .. ']', game.item_prototypes[creature].localised_name, productivity * 100}
+		favorites[#favorites + 1] = '\n'
+	end
+	favorites[#favorites] = nil
+	return {'digosaurus-gui.digosaurus-slot-main', favorites}
 end
 
 function Digosaurus.update_gui(gui)
@@ -132,7 +142,7 @@ Digosaurus.events.on_gui_opened = function(event)
 	for i = 1, #dig_data.digosaur_inventory do
 		local slot = creature_flow.add{type = 'sprite-button', name = 'dig_creature_' .. i, style = 'inventory_slot'}
 		slot.tags = {unit_number = dig_data.unit_number, i = i}
-		slot.tooltip = {'digosaurus-gui.digosaurus-slot', '[item=digosaurus]', game.item_prototypes['digosaurus'].localised_name}
+		slot.tooltip = generate_digosaurus_slot_tooltip()
 	end
 
 	Digosaurus.update_gui(main_frame)
