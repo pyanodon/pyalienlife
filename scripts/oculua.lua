@@ -160,8 +160,9 @@ function Oculua.clear_incoming_oculua_items(oculua_data)
 end
 
 function Oculua.wander(oculua_data)
-	game.print('wandering')
-	oculua_data.entity.set_command{
+	local oculua = oculua_data.entity
+	game.print{'oculua.wandering', math.floor(oculua.position.x * 10) / 10, math.floor(oculua.position.y * 10) / 10}
+	oculua.set_command{
 		type = defines.command.wander,
 		distraction = defines.distraction.none
 	}
