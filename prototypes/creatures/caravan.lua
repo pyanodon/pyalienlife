@@ -39,7 +39,7 @@ data:extend{{
 	icon_size = 64,
 	flags = {'placeable-player', 'placeable-off-grid', 'not-repairable', 'breaths-air', 'building-direction-8-way'},
 	minable = {mining_time = 0.1, result = 'caravan'},
-	max_health = 825,
+	max_health = 3125,
 	order = 'b-b-a',
 	subgroup = 'enemies',
 	healing_per_tick = 0.03,
