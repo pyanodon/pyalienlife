@@ -424,7 +424,7 @@ require 'prototypes/creatures/digosaurus'
 require 'prototypes/creatures/dingrido'
 require 'prototypes/creatures/crawdad'
 require 'prototypes/creatures/phadaisus'
---require('prototypes/creatures/ocula')
+require('prototypes/creatures/ocula')
 --require('prototypes/robots/gobachov')
 --require('prototypes/robots/huzu')
 --require('prototypes/robots/chorkok')

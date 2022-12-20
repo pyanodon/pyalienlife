@@ -1,26 +1,7 @@
-_G.gui_events = {
-	[defines.events.on_gui_click] = {},
-	[defines.events.on_gui_confirmed] = {},
-	[defines.events.on_gui_text_changed] = {},
-	[defines.events.on_gui_checked_state_changed] = {},
-	[defines.events.on_gui_selection_state_changed] = {},
-	[defines.events.on_gui_checked_state_changed] = {},
-	[defines.events.on_gui_elem_changed] = {},
-	[defines.events.on_gui_value_changed] = {},
-	[defines.events.on_gui_location_changed] = {},
-	[defines.events.on_gui_selected_tab_changed] = {},
-	[defines.events.on_gui_switch_state_changed] = {}
-}
-local function process_gui_event(event)
-	if event.element and event.element.valid then
-		for pattern, f in pairs(gui_events[event.name]) do
-			if event.element.name:match(pattern) then f(event); return end
-		end
-	end
-end
-
+require 'scripts/lib'
 require 'scripts/caravan/caravan'
 require 'scripts/digosaurus/digosaurus'
+require 'scripts/oculua'
 
 local bio_list = require('prototypes/items/biomass-convertion')
 
@@ -400,6 +381,7 @@ local function init()
 
     Caravan.events.init()
     Digosaurus.events.init()
+    Oculua.events.on_init()
 end
 
 script.on_init(function()
@@ -426,6 +408,7 @@ end)
 
 local on_built = {defines.events.on_built_entity, defines.events.on_robot_built_entity, defines.events.script_raised_revive, defines.events.script_raised_built}
 script.on_event(on_built, function(event)
+    Oculua.events.on_built(event)
     Caravan.events.on_built(event)
     Digosaurus.events.on_built(event)
 
@@ -479,6 +462,7 @@ end)
 script.on_event(defines.events.on_ai_command_completed, function(event)
     Caravan.events.ai_command_completed(event)
     Digosaurus.events.on_ai_command_completed(event)
+    Oculua.events.on_ai_command_completed(event)
 end)
 
 script.on_event(defines.events.on_tick, function()
@@ -563,6 +547,7 @@ local on_destroyed = {defines.events.on_player_mined_entity, defines.events.on_r
 script.on_event(on_destroyed, function(event)
     Caravan.events.on_destroyed(event)
     Digosaurus.events.on_destroyed(event)
+    Oculua.events.on_destroyed(event)
 
     local E = event.entity
     if global.farms[E.unit_number] ~= nil then
@@ -579,11 +564,12 @@ script.on_event(on_destroyed, function(event)
 end)
 
 script.on_event(defines.events.on_gui_opened, function(event)
+    Oculua.events.on_gui_opened(event)
     Digosaurus.events.on_gui_opened(event)
 
     local E = event
     local p_index = event.player_index
-    local player = game.players[p_index]
+    local player = game.players[p_index]    
 
     if E.entity ~= nil then
         if string.match(event.entity.name, 'slaughterhouse') and event.entity.get_recipe() == nil and
@@ -605,110 +591,6 @@ script.on_event(defines.events.on_gui_opened, function(event)
     end
 end)
 
-script.on_event(defines.events.on_gui_selection_state_changed, function(event)
-    process_gui_event(event)
-end)
-
-script.on_event(defines.events.on_gui_switch_state_changed, function(event)
-    if event.element.name == 'rp-switch' then
-        if event.element.switch_state == 'left' then
-            local frame = event.element.parent.add({
-                type = 'frame',
-                name = 'requestor_frame',
-                style = 'invisible_frame',
-                direction = 'vertical'
-            })
-            local table = frame.add({
-                type = 'table',
-                name = 'outpost_requests',
-                column_count = 10
-            })
-            for i = 1, 20 do
-                table.add({
-                    type = 'choose-elem-button',
-                    name = 'outpost_request_elem_' .. i,
-                    elem_type = 'item'
-                })
-            end
-            local flow = frame.add({
-                type = 'flow',
-                name = 'num_flow'
-            })
-            flow.add({
-                type = 'slider',
-                name = 'outpost_request_slider',
-                minimum_value = 0,
-                maximum_value = 1000000000,
-                descrete_values = true
-            })
-            flow.add({
-                type = 'textfield',
-                name = 'outpost_request_slider_text',
-                text = flow.outpost_request_slider.slider_value,
-                numeric = true,
-                lose_focus_on_confirm = true
-            })
-        elseif event.element.switch_state == 'right' then
-            --asd
-        end
-    end
-    process_gui_event(event)
-end)
-
-script.on_event(defines.events.on_gui_value_changed, function(event)
-    if event.element.name == 'outpost_request_slider' then
-        event.element.parent['outpost_request_slider_text'].text = tostring(event.element.slider_value)
-        global.last_elem_selected.number = event.element.slider_value
-    end
-    process_gui_event(event)
-end)
-
-script.on_event(defines.events.on_gui_confirmed, function(event)
-    process_gui_event(event)
-end)
-
-script.on_event(defines.events.on_gui_elem_changed, function(event)
-    if string.match(event.element.name, 'outpost_request_elem_') ~= nil then
-        --log(event.element.elem_value)
-        local parent = event.element.parent
-        local sp = parent.add({
-            type = 'sprite-button',
-            name = event.element.name .. '_value',
-            sprite = 'item/' .. event.element.elem_value,
-            number = 0,
-            index = event.element.get_index_in_parent()
-        })
-        global.last_elem_selected = sp
-        event.element.destroy()
-    end
-    process_gui_event(event)
-end)
-
---[[
-script.on_event(
-	defines.events.on_gui_elem_changed,
-	function(event)
-		--log(event.element.name)
-		if string.match(event.element.name, 'recipe%-menu') ~= nil then
-			--log(serpent.block(global.current_entity))
-			--log('hit')
-			local entity = global.current_entity[event.player_index]
-			--log(serpent.block(global.current_entity))
-			--log(serpent.block(global.current_entity[event.player_index]))
-			--log(entity.name)
-			--log(serpent.block(entity))
-			--log(serpent.block(global.current_entity))
-			entity.set_recipe(string.match(event.element.name, '%_(.*)'))
-			event.element.parent.parent.parent.parent.destroy()
-			game.players[event.player_index].opened = global.current_entity[event.player_index]
-			global.scipt_opening_gui = true
-			global.current_entity[event.player_index] = nil
-			global.slaughterhouse_gui_open = false
-			--log('set recipe')
-		end
-	end
-)
-]]--
 local function create_slaughterhouse_recipe_gui(event)
 	local slaughterhouse_recipe_gui = event.element.parent
 	local button_name = event.element.name
@@ -723,25 +605,13 @@ local function create_slaughterhouse_recipe_gui(event)
 			string.match(recipe.category, 'slaughterhouse') and string.match(recipe.category, button_name) and
 				recipe.enabled == true
 		 then
-			--[[
-			slaughterhouse_recipe_gui.recipe_selection_frame.recipe_table.add(
-				{
-					type = 'sprite-button',
-					name = 'recipe-menu_' .. recipe.name,
-					sprite = 'recipe/' .. recipe.name,
-					style = 'recipe_slot_button',
-					tooltip = recipe.localised_name
-				}
-			)
-			]]--
 			slaughterhouse_recipe_gui.recipe_selection_frame.recipe_table.add(
 				{
 					type = 'choose-elem-button',
 					name = 'recipe-menu_' .. recipe.name,
 					elem_type = 'recipe',
 					recipe = recipe.name,
-					style = 'recipe_slot_button',
-					--tooltip = recipe.localised_name .. 'elem test'
+					style = 'recipe_slot_button'
 				}
 			)
 		end
@@ -749,37 +619,23 @@ local function create_slaughterhouse_recipe_gui(event)
 end
 
 script.on_event(defines.events.on_gui_click, function(event)
-    if event.element.type == 'sprite-button' and string.match(event.element.name, 'outpost_request_elem_') ~= nil then
-        event.element.parent.parent['num_flow']['outpost_request_slider'].slider_value = event.element.number
-        event.element.parent.parent['num_flow']['outpost_request_slider_text'].text = tostring(event.element.number)
-    elseif event.element.name == 'slaughterhouse_close' then
+    if event.element.name == 'slaughterhouse_close' then
         sh_gui.destroy()
         global.slaughterhouse_gui_open = false
     elseif event.element.parent ~= nil and event.element.parent.name == 's_table' then
         create_slaughterhouse_recipe_gui(event)
     elseif event.element.name == 'slaughterhouse_back' then
         local player = game.players[event.player_index]
-        --log(event.element.parent.name)
-        --log(event.element.parent.parent.name)
-        --log(event.element.parent.parent.parent.name)
         local elem_p2 = event.element.parent.parent.parent
         event.element.parent.parent.destroy()
         create_sh_animal_table(elem_p2, player)
     elseif string.match(event.element.name, 'recipe%-menu') ~= nil then
-        --log(serpent.block(global.current_entity))
-        --log('hit')
         local entity = global.current_entity[event.player_index]
-        --log(serpent.block(global.current_entity))
-        --log(serpent.block(global.current_entity[event.player_index]))
-        --log(entity.name)
-        --log(serpent.block(entity))
-        --log(serpent.block(global.current_entity))
         entity.set_recipe(string.match(event.element.name, '%_(.*)'))
         event.element.parent.parent.parent.parent.destroy()
         game.players[event.player_index].opened = global.current_entity[event.player_index]
         global.current_entity[event.player_index] = nil
         global.slaughterhouse_gui_open = false
-        --log('set recipe')
     end
     process_gui_event(event)
 end)
@@ -789,18 +645,8 @@ script.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_
     Digosaurus.events.close_gui(event)
 
     if event.entity ~= nil and string.match(event.entity.name, 'slaughterhouse') and global.watch_slaughterhouse == true then
-        --log('hit')
         global.watch_slaughterhouse = false
-    --global.current_entity[event.player_index] = nil
     end
-end)
-
-script.on_event(defines.events.on_gui_text_changed, function(event)
-    if event.element.name == 'outpost_request_slider_text' then
-        event.element.parent['outpost_request_slider'].slider_value = tonumber(event.element.text)
-        global.last_elem_selected.number = tonumber(event.element.text)
-    end
-    process_gui_event(event)
 end)
 
 script.on_event(defines.events.on_rocket_launched, function(event)
@@ -863,36 +709,8 @@ script.on_event(defines.events.on_rocket_launched, function(event)
     end
 end)
 
-script.on_event(defines.events.on_player_selected_area, function(event)
-
-end)
-
-script.on_event(defines.events.on_resource_depleted, function(event)
-
-end)
-
-script.on_event(defines.events.on_player_cursor_stack_changed, function(event)
-
-end)
-
 script.on_event(defines.events.on_player_used_capsule, function(event)
     Caravan.events.used_capsule(event)
-end)
-
-script.on_event(defines.events.on_research_finished, function(event)
-
-end)
-
---script.on_event('tech-upgrades', function(event)
-
---end)
-
-script.on_event(defines.events.on_cutscene_cancelled, function(event)
-
-end)
-
-script.on_event(defines.events.on_selected_entity_changed, function(event)
-
 end)
 
 script.on_event(defines.events.on_entity_destroyed, function(event)
@@ -903,6 +721,8 @@ script.on_nth_tick(60, function()
     Caravan.events[60]()
     Digosaurus.events[60]()
 end)
+
+script.on_nth_tick(221, Oculua.events[221])
 
 script.on_nth_tick(4, function()
     for _, player in pairs(game.connected_players) do

@@ -25,8 +25,8 @@ ITEM {
     name = 'outpost-aerial',
     icon = '__pyalienlifegraphics2__/graphics/icons/flyavan-outpost.png',
     icon_size = 64,
-    subgroup = 'py-alienlife-special-creatures',
-    order = 'a',
+    subgroup = 'py-alienlife-buildings-others',
+    order = 'b-b',
     place_result = 'outpost-aerial',
     stack_size = 10
 }

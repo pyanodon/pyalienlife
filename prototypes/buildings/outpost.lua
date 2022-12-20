@@ -21,8 +21,8 @@ ITEM {
     name = 'outpost',
     icon = '__pyalienlifegraphics2__/graphics/icons/outpost.png',
     icon_size = 64,
-    subgroup = 'py-alienlife-special-creatures',
-    order = 'a',
+    subgroup = 'py-alienlife-buildings-others',
+    order = 'b-a',
     place_result = 'outpost',
     stack_size = 10
 }

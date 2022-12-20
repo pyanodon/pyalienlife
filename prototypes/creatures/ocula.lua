@@ -1,8 +1,8 @@
 local util = require('util')
 
 RECIPE{
-    type = "recipe",
-    name = "ocula",
+    type = 'recipe',
+    name = 'ocula',
     energy_required = 90,
     category = 'creature-chamber',
     enabled = false,
@@ -16,55 +16,45 @@ RECIPE{
       {type = 'fluid', name = 'fetal-serum', amount = 100},
       {type = 'fluid', name = 'artificial-blood', amount = 200},
     },
-    result = "ocula"
-  }:add_unlock("domestication-mk02")
+    result = 'ocula'
+  }:add_unlock('domestication-mk02')
 
 ITEM{
-    type = "item-with-entity-data",
-    name = "ocula",
-    icon = "__pyalienlifegraphics__/graphics/icons/ocula.png",
+    type = 'item',
+    name = 'ocula',
+    icon = '__pyalienlifegraphics__/graphics/icons/ocula.png',
     icon_size = 64,
-    subgroup = "py-alienlife-special-creatures",
-    order = "x",
-    place_result = "ocula",
-    stack_size = 10
+    subgroup = 'py-alienlife-special-creatures',
+    order = 'x',
+    stack_size = 1,
+    flags = {'not-stackable'},
+    place_result = 'ocula'
   }
 
   data:extend(
     {
       {
-        type = "unit",
-        name = "ocula",
-        icon = "__pyalienlifegraphics__/graphics/icons/ocula.png",
+        ai_settings = {do_separation = false},
+        type = 'unit',
+        name = 'ocula',
+        icon = '__pyalienlifegraphics__/graphics/icons/ocula.png',
         icon_size = 64,
-        flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "not-repairable", "breaths-air"},
-        minable = {mining_time = 0.1, result = 'ocula'},
-        max_health = 25,
-        order = "b-b-a",
-        subgroup="enemies",
+        flags = {'placeable-player', 'placeable-off-grid', 'not-repairable', 'breaths-air', 'building-direction-8-way'},
+        minable = {mining_time = 0.2, result = 'ocula'},
+        max_health = 250,
+        order = 'b-b-a',
+        subgroup='enemies',
         resistances = {},
         healing_per_tick = 0.01,
         collision_box = {{0,0}, {0,0}},
         collision_mask = {},
-        selection_box = {{-1, -1}, {1, 1}},
-      --[[
-        --handles enemy loot dropping
-        loot =
-          {
-            {
-              count_max = 1,
-              count_min = 1,
-              item = "iron-ore",
-              probability = 1
-            }
-          },
-      ]]--
+        selection_box = {{-0.8, -0.8}, {0.8, 0.8}},
         attack_parameters =
         {
-          type = "projectile",
-          range = 0.5,
-          cooldown = 35,
-          ammo_type = _G.make_unit_melee_ammo_type(7),
+          type = 'projectile',
+          range = 0,
+          cooldown = 0,
+          ammo_type = _G.make_unit_melee_ammo_type(0),
           --sound = make_biter_roars(0.4),
       animation =
       {
@@ -73,9 +63,9 @@ ITEM{
           {
           filenames =
             {
-                "__pyalienlifegraphics2__/graphics/entity/ocula/ocula-01.png",
-                "__pyalienlifegraphics2__/graphics/entity/ocula/ocula-02.png",
-                "__pyalienlifegraphics2__/graphics/entity/ocula/ocula-03.png",
+                '__pyalienlifegraphics2__/graphics/entity/ocula/ocula-01.png',
+                '__pyalienlifegraphics2__/graphics/entity/ocula/ocula-02.png',
+                '__pyalienlifegraphics2__/graphics/entity/ocula/ocula-03.png',
             },
           slice = 12,
           lines_per_file = 12,
@@ -91,9 +81,9 @@ ITEM{
           {
           filenames =
           {
-            "__pyalienlifegraphics2__/graphics/entity/ocula/ocula-sh-01.png",
-            "__pyalienlifegraphics2__/graphics/entity/ocula/ocula-sh-02.png",
-            "__pyalienlifegraphics2__/graphics/entity/ocula/ocula-sh-03.png",
+            '__pyalienlifegraphics2__/graphics/entity/ocula/ocula-sh-01.png',
+            '__pyalienlifegraphics2__/graphics/entity/ocula/ocula-sh-02.png',
+            '__pyalienlifegraphics2__/graphics/entity/ocula/ocula-sh-03.png',
           },
           slice = 12,
           lines_per_file = 12,
@@ -117,8 +107,8 @@ ITEM{
       distraction_cooldown = 300,
       min_pursue_time = 10 * 60,
       max_pursue_distance = 50,
-      --corpse = "arthurian-corpse",
-      dying_explosion = "blood-explosion-small",
+      --corpse = 'arthurian-corpse',
+      dying_explosion = 'blood-explosion-small',
       --dying_sound =  make_biter_dying_sounds(0.4),
       --working_sound =  make_biter_calls(0.3),
       --run_animation = biterrunanimation(small_biter_scale, small_biter_tint1, small_biter_tint2),
@@ -130,9 +120,9 @@ ITEM{
           {
           filenames =
             {
-                "__pyalienlifegraphics2__/graphics/entity/ocula/ocula-01.png",
-                "__pyalienlifegraphics2__/graphics/entity/ocula/ocula-02.png",
-                "__pyalienlifegraphics2__/graphics/entity/ocula/ocula-03.png",
+                '__pyalienlifegraphics2__/graphics/entity/ocula/ocula-01.png',
+                '__pyalienlifegraphics2__/graphics/entity/ocula/ocula-02.png',
+                '__pyalienlifegraphics2__/graphics/entity/ocula/ocula-03.png',
             },
           slice = 12,
           lines_per_file = 12,
@@ -148,9 +138,9 @@ ITEM{
           {
           filenames =
           {
-            "__pyalienlifegraphics2__/graphics/entity/ocula/ocula-sh-01.png",
-            "__pyalienlifegraphics2__/graphics/entity/ocula/ocula-sh-02.png",
-            "__pyalienlifegraphics2__/graphics/entity/ocula/ocula-sh-03.png",
+            '__pyalienlifegraphics2__/graphics/entity/ocula/ocula-sh-01.png',
+            '__pyalienlifegraphics2__/graphics/entity/ocula/ocula-sh-02.png',
+            '__pyalienlifegraphics2__/graphics/entity/ocula/ocula-sh-03.png',
           },
           slice = 12,
           lines_per_file = 12,
@@ -174,8 +164,24 @@ ITEM{
           max_count = 2,
           remove = true
         },
-        filename = "__pyalienlifegraphics3__/sounds/ocula-walk.ogg",
+        filename = '__pyalienlifegraphics3__/sounds/ocula-walk.ogg',
         volume = 0.65
       }
       }
 })
+
+local beam = table.deepcopy(data.raw.beam['laser-beam'])
+beam.working_sound = nil
+beam.damage_interval = 10000
+beam.name = 'ocula-beam'
+beam.action = {
+  type = 'direct',
+  action_delivery = {
+    type = 'instant',
+    target_effects = {{
+      type = 'damage',
+      damage = {amount = 0, type = 'impact'}
+    }}
+  }
+}
+data:extend{beam}

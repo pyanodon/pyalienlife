@@ -536,7 +536,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-special-creatures",
-    order = "z",
+    order = "z-b",
     stack_size = 50
 }
 
@@ -546,7 +546,7 @@ ITEM {
     icon = "__pyalienlifegraphics3__/graphics/icons/workers-food.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-food",
-    order = "x",
+    subgroup = "py-alienlife-special-creatures",
+    order = "z-a",
     stack_size = 100
 }
