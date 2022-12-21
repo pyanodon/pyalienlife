@@ -68,7 +68,9 @@ function Oculua.process_player(player)
 	local inventory = player.get_main_inventory().get_contents()
 	global.incoming_oculua_items[player.index] = global.incoming_oculua_items[player.index] or {}
 	local incoming = global.incoming_oculua_items[player.index]
-	local logistic_network_incoming = player.character.get_logistic_point(defines.logistic_member_index.character_requester).targeted_items_deliver
+	local logistic_point = player.character.get_logistic_point(defines.logistic_member_index.character_requester)
+	if not logistic_point then return end
+	local logistic_network_incoming = logistic_point.targeted_items_deliver
 
 	for i = 1, player.character.request_slot_count do
 		local request_slot = player.character.get_request_slot(i)
