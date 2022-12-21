@@ -68,7 +68,7 @@ local running_animation = {layers = {
     frame_count = 18,
     direction_count = 8,
     animation_speed = 1,
-    scale = 1
+    scale = 0.8
   },
   {
     filename = '__pyalienlifegraphics3__/graphics/entity/dig-osaur/walk-sh.png',
@@ -79,7 +79,7 @@ local running_animation = {layers = {
     direction_count = 8,
     animation_speed = 1,
     draw_as_shadow = true,
-    scale = 1
+    scale = 0.8
   }
 }}
 
@@ -103,7 +103,7 @@ local mining_animation = {layers = {
     frame_count = 35,
     direction_count = 8,
     animation_speed = 1,
-    scale = 1
+    scale = 0.8
   },
   {
     stripes = {
@@ -125,7 +125,7 @@ local mining_animation = {layers = {
     direction_count = 8,
     animation_speed = 1,
     draw_as_shadow = true,
-    scale = 1
+    scale = 0.8
   }
 }}
 
