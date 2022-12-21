@@ -9,6 +9,8 @@ Date: ?
     - meat and guts can now be used as digosaurs food
     - caravan can now insert directly into cargo wagons. "item count" function is still only for outposts
     - removed to be removed text on tailings recipe for nexelit
+    - fix crash with abandoned ruins mod
+    - dig site no longer shows as a electric producer
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.5
 Date: 2022-12-19

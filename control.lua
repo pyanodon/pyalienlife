@@ -310,6 +310,7 @@ local fungus_farm_buildings = {
 --add building to global list and disable it on placement
 local function disable_machine(entity)
     local E = entity
+    if not E.unit_number then return end
     global.total_farm_count = global.total_farm_count+1
     global.farms[E.unit_number] = E
     global.indexed_farm_list[global.total_farm_count] = E.unit_number
