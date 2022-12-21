@@ -262,7 +262,8 @@ ENTITY {
   energy_source = {
     type = 'electric',
     usage_priority = 'secondary-input',
-    buffer_capacity = (400/60) .. 'kJ'
+    buffer_capacity = (400/60) .. 'kJ',
+    output_flow_limit = '0W'
   },
   energy_usage = '400kW',
   collision_box = {{-3.3, -3.3}, {3.3, 3.3}},
