@@ -49,6 +49,27 @@ local running_animation = {layers = {
 				},
         {
 					filenames = {
+						'__pyalienlifegraphics3__/graphics/entity/thikat/wao1.png',
+						'__pyalienlifegraphics3__/graphics/entity/thikat/wao2.png',
+						'__pyalienlifegraphics3__/graphics/entity/thikat/wao3.png',
+						'__pyalienlifegraphics3__/graphics/entity/thikat/wao4.png',
+						'__pyalienlifegraphics3__/graphics/entity/thikat/wao5.png',
+						'__pyalienlifegraphics3__/graphics/entity/thikat/wao6.png',
+						'__pyalienlifegraphics3__/graphics/entity/thikat/wao7.png',
+						'__pyalienlifegraphics3__/graphics/entity/thikat/wao8.png'
+					},
+					slice = 6,
+					lines_per_file = 5,
+					line_length = 6,
+					width = 288,
+					height = 256,
+					frame_count = 30,
+					direction_count = 8,
+          scale = 1.15,
+					shift = util.mul_shift(util.by_pixel(-0, -0), 0.5)
+				},
+        {
+					filenames = {
 						'__pyalienlifegraphics3__/graphics/entity/thikat/ws1.png',
 						'__pyalienlifegraphics3__/graphics/entity/thikat/ws2.png',
 						'__pyalienlifegraphics3__/graphics/entity/thikat/ws3.png',
@@ -82,6 +103,28 @@ local mining_animation = {layers = {
 						'__pyalienlifegraphics3__/graphics/entity/thikat/a6.png',
 						'__pyalienlifegraphics3__/graphics/entity/thikat/a7.png',
 						'__pyalienlifegraphics3__/graphics/entity/thikat/a8.png'
+					},
+					slice = 7,
+					lines_per_file = 7,
+					line_length = 7,
+					width = 288,
+					height = 256,
+					frame_count = 49,
+					direction_count = 8,
+          animation_speed = 1/2,
+          scale = 1.15,
+					shift = util.mul_shift(util.by_pixel(-0, -0), 0.5)
+				},
+        {
+					filenames = {
+						'__pyalienlifegraphics3__/graphics/entity/thikat/aao1.png',
+						'__pyalienlifegraphics3__/graphics/entity/thikat/aao2.png',
+						'__pyalienlifegraphics3__/graphics/entity/thikat/aao3.png',
+						'__pyalienlifegraphics3__/graphics/entity/thikat/aao4.png',
+						'__pyalienlifegraphics3__/graphics/entity/thikat/aao5.png',
+						'__pyalienlifegraphics3__/graphics/entity/thikat/aao6.png',
+						'__pyalienlifegraphics3__/graphics/entity/thikat/aao7.png',
+						'__pyalienlifegraphics3__/graphics/entity/thikat/aao8.png'
 					},
 					slice = 7,
 					lines_per_file = 7,
