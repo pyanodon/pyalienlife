@@ -7,7 +7,14 @@ RECIPE {
   category = 'creature-chamber',
   enabled = false,
   ingredients = {
-    {type = 'item', name = 'iron-plate', amount = 1},
+    {type = 'item', name = 'bio-sample', amount = 30},
+    {type = 'item', name = 'earth-generic-sample', amount = 5},
+	{type = 'item', name = 'earth-potato-sample', amount = 1},
+	{type = 'item', name = 'earth-bear-sample', amount = 2},
+    {type = 'item', name = 'alien-sample-02', amount = 4},
+	{type = 'item', name = 'animal-sample-01', amount = 20},
+    {type = 'item', name = 'cdna', amount = 3},
+    {type = 'fluid', name = 'fetal-serum', amount = 300},
   },
   result = 'thikat'
 }:add_unlock{'nexelit-mk02'}
