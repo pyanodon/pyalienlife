@@ -10,7 +10,7 @@ Digosaurus.minable_categories = {
 
 Digosaurus.valid_creatures = {
 	['digosaurus'] = 1,
-	['digosaurus-mk02'] = 2
+	['thikat-mk02'] = 2
 }
 
 Digosaurus.dino_dig_site_creature_limit = 4
