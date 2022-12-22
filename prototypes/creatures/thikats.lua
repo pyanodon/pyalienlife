@@ -188,7 +188,8 @@ ENTITY {
 		ammo_type = _G.make_unit_melee_ammo_type(1),
 		animation = mining_animation
 	},
-  selectable_in_game = false,
+ --selectable_in_game = false,
+ selection_box = {{-1,-1}, {1,1}},
 	vision_distance = 30,
 	movement_speed = 0.070,
 	distance_per_frame = 0.10,

@@ -126,5 +126,6 @@ data:extend{{
         sound = {filename = "__pyalienlifegraphics3__/sounds/flyavan.ogg", volume = 0.8},
         idle_sound = {filename = "__pyalienlifegraphics3__/sounds/flyavan.ogg", volume = 0.2},
 		audible_distance_modifier = 0.35,
-    }
+    },
+	inventory_type = 'with_filters_and_bar'
 }}

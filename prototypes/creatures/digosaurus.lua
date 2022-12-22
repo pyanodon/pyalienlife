@@ -147,7 +147,8 @@ ENTITY {
 		ammo_type = _G.make_unit_melee_ammo_type(1),
 		animation = mining_animation
 	},
-  selectable_in_game = false,
+  --selectable_in_game = false,
+	selection_box = {{-0.5,-0.5}, {0.5,0.5}},
 	vision_distance = 30,
 	movement_speed = 0.076,
 	distance_per_frame = 0.13,
@@ -341,3 +342,17 @@ ENTITY {
     }
   }}
 }
+
+data:extend{{
+	type = 'tips-and-tricks-item',
+	name = 'digosaurus',
+	category = 'wiki-py',
+	indent = 1,
+	trigger = {
+    type = 'build-entity',
+    entity = 'dino-dig-site'
+	},
+	starting_status = 'unlocked',
+	tag = '[item=digosaurus]',
+  order = 'a-b'
+}}

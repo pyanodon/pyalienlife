@@ -245,5 +245,6 @@ data:extend{{
 		}
 	},
 	starting_status = 'unlocked',
-	tag = '[item=caravan]'
+	tag = '[item=caravan]',
+	order = 'a-a'
 }}
