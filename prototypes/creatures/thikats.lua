@@ -1,4 +1,5 @@
 local item_icon = '__pyalienlifegraphics3__/graphics/icons/thikat.png'
+local time_taken_for_thikats_to_mine = 8
 
 RECIPE {
   type = 'recipe',
@@ -199,4 +200,83 @@ ENTITY {
 	has_belt_immunity = true,
 	affected_by_tiles = true,
 	run_animation = running_animation
+}
+
+local sound =
+{
+  type = "play-sound",
+  sound =
+  {
+    aggregation =
+    {
+      max_count = 3,
+      remove = true
+    },
+    variations =
+    {
+      {
+        filename = "__core__/sound/axe-mining-ore-1.ogg",
+        volume = 0.8
+      },
+      {
+        filename = "__core__/sound/axe-mining-ore-2.ogg",
+        volume = 0.8
+      },
+      {
+        filename = "__core__/sound/axe-mining-ore-3.ogg",
+        volume = 0.8
+      },
+      {
+        filename = "__core__/sound/axe-mining-ore-4.ogg",
+        volume = 0.8
+      },
+      {
+        filename = "__core__/sound/axe-mining-ore-5.ogg",
+        volume = 0.8
+      }
+    }
+  }
+}
+
+local particle = {
+  type = "create-particle",
+  repeat_count = 15,
+  particle_name = 'iron-ore-particle',
+  entity_name = 'iron-ore-particle',
+  initial_height = 0,
+  speed_from_center = 0.1,
+  speed_from_center_deviation = 0.035,
+  initial_vertical_speed = 0.045,
+  initial_vertical_speed_deviation = 0.035,
+  offset_deviation = {{-0.4, -0.4}, {0.4, 0.4}}
+}
+
+ENTITY {
+  type = 'simple-entity',
+  name = 'thikats-mineable-proxy',
+  localised_name = '',
+  localised_description = '',
+  icon = item_icon,
+  icon_size = 64,
+  collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
+  selectable_in_game = false,
+  remove_decoratives = false,
+  collision_mask = {},
+  flags = {'placeable-neutral', 'hidden', 'not-selectable-in-game', 'not-rotatable', 'not-flammable', 'placeable-off-grid', 'hide-alt-info'},
+  max_health = time_taken_for_thikats_to_mine,
+  picture = {
+    filename = '__core__/graphics/empty.png',
+    width = 1,
+    height = 1
+  },
+  attack_reaction = {{
+    range = 150,
+    action = {
+      action_delivery = {
+        source_effects = {sound, particle},
+        type = "instant"
+      },
+      type = "direct"
+    }
+  }}
 }

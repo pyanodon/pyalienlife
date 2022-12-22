@@ -76,7 +76,7 @@ function Digosaurus.start_mining_command(dig_data, i)
         direction = entity.direction
     }
     local proxy = entity.surface.create_entity{
-        name = 'digosaurus-mineable-proxy',
+        name = Digosaurus.mining_proxies[digosaur.name],
         position = ore.position,
         force = entity.force,
         create_build_effect_smoke = false

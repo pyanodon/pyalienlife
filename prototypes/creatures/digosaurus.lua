@@ -276,6 +276,42 @@ ENTITY {
   flags = {'placeable-neutral', 'hidden', 'not-selectable-in-game', 'not-rotatable', 'not-flammable', 'placeable-off-grid', 'hide-alt-info'}
 }
 
+local sound =
+{
+  type = "play-sound",
+  sound =
+  {
+    aggregation =
+    {
+      max_count = 3,
+      remove = true
+    },
+    variations =
+    {
+      {
+        filename = "__core__/sound/axe-mining-ore-1.ogg",
+        volume = 0.4
+      },
+      {
+        filename = "__core__/sound/axe-mining-ore-2.ogg",
+        volume = 0.4
+      },
+      {
+        filename = "__core__/sound/axe-mining-ore-3.ogg",
+        volume = 0.4
+      },
+      {
+        filename = "__core__/sound/axe-mining-ore-4.ogg",
+        volume = 0.4
+      },
+      {
+        filename = "__core__/sound/axe-mining-ore-5.ogg",
+        volume = 0.4
+      }
+    }
+  }
+}
+
 ENTITY {
   type = 'simple-entity',
   name = 'digosaurus-mineable-proxy',
@@ -286,11 +322,22 @@ ENTITY {
   collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
   selectable_in_game = false,
   remove_decoratives = false,
+  collision_mask = {},
   flags = {'placeable-neutral', 'hidden', 'not-selectable-in-game', 'not-rotatable', 'not-flammable', 'placeable-off-grid', 'hide-alt-info'},
   max_health = time_taken_for_digosaurus_to_mine,
   picture = {
     filename = '__core__/graphics/empty.png',
     width = 1,
     height = 1
-  }
+  },
+  attack_reaction = {{
+    range = 150,
+    action = {
+      action_delivery = {
+        source_effects = {sound},
+        type = "instant"
+      },
+      type = "direct"
+    }
+  }}
 }

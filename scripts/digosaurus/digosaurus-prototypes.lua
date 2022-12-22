@@ -13,6 +13,11 @@ Digosaurus.valid_creatures = {
 	['thikat'] = 2
 }
 
+Digosaurus.mining_proxies = {
+	['digosaurus'] = 'digosaurus-mineable-proxy',
+	['thikat'] = 'thikats-mineable-proxy'
+}
+
 Digosaurus.dino_dig_site_creature_limit = 4
 
 Digosaurus.mining_range = 12.5
