@@ -77,6 +77,7 @@ data:extend(
             percent = 70
           }
         },
+        selection_priority = 51,
         collision_box = {{0,0}, {0,0}},
         collision_mask = {},
         selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
