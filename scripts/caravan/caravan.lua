@@ -483,6 +483,7 @@ end
 Caravan.events.on_built = function(event)
 	local entity = event.created_entity or event.entity
 	if not prototypes[entity.name] then return end
+	entity.destructible = false
 	local stack = event.stack
 	local tags = stack and stack.valid_for_read and stack.type == 'item-with-tags' and stack.tags
 
