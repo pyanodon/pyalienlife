@@ -16,8 +16,8 @@ RECIPE {
         {type = 'fluid', name = 'coke-oven-gas', amount = 1000}, --add alien sample from pyALiens mod here.
     },
     results = {
-        {type = 'item', name = 'arqad-queen', amount = 1},
-        {type = 'item', name = 'arqad', amount = 6},
+        {type = 'item', name = 'arqad-egg', amount = 10},
+        {type = 'item', name = 'arqad', amount = 1},
     },
     main_product = "arqad"
 }:add_unlock("arqad")
