@@ -211,6 +211,7 @@ data:extend{{
 data:extend{{
 	type = 'ammo-category',
 	name = 'caravan-control',
+	localised_name = ''
 }}
 
 ITEM {
