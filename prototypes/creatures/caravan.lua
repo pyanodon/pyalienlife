@@ -52,6 +52,7 @@ data:extend{{
 	subgroup = 'enemies',
 	healing_per_tick = 0.03,
 	collision_box = {{-0.6, -0.6}, {0.6, 0.6}},
+	selection_priority = 49,
 	selection_box = {{-1.1, -1.1}, {1.1, 1.1}},
 	attack_parameters = {
 		type = 'projectile',
