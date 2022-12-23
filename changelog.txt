@@ -9,6 +9,9 @@ Date: ?
     - added a wiki page for digosaurus and thikats
     - fixed crash with nuka caravan
     - fixed graphical issue with the "add-action" button for caravans
+    - farm buildings now work with nanobots
+    - error icons on farm buildings now flash
+    - UPS improvement for farm building checking
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.6
 Date: 2022-12-20
