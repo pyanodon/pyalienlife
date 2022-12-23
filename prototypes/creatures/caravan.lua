@@ -42,6 +42,7 @@ data:extend{{
 	additional_pastable_entities = {'caravan'},
 	name = 'caravan',
 	can_open_gates = true,
+	map_color = {1, 1, 1},
 	icon = '__pyalienlifegraphics2__/graphics/icons/caravan.png',
 	icon_size = 64,
 	flags = {'placeable-player', 'placeable-off-grid', 'not-repairable', 'breaths-air', 'building-direction-8-way'},
