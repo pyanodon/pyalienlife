@@ -12,6 +12,9 @@ Date: ?
     - farm buildings now work with nanobots
     - error icons on farm buildings now flash
     - UPS improvement for farm building checking
+    - Fixed that plant/animal modules could be used in the composter
+    - Fixed some unknown key errors
+    - Arqad queen is no longer craftable in the creature chamber
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.6
 Date: 2022-12-20
