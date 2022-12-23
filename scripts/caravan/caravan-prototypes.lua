@@ -26,7 +26,8 @@ local caravan_actions = {
 	['cargo-wagon'] = {
 		'time-passed',
 		'fill-inventory',
-		'empty-inventory'
+		'empty-inventory',
+		'item-count'
 	},
 	['electric-pole'] = {
 		'time-passed',
