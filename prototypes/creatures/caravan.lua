@@ -1,7 +1,7 @@
 local util = require('util')
 local collision_mask_util = require '__core__/lualib/collision-mask-util'
 local anti_tree = collision_mask_util.get_first_unused_layer()
-_G.grounded_caravan_collision_mask = {'item-layer', 'object-layer', 'player-layer', 'water-tile', anti_tree, 'not-colliding-with-itself'}
+_G.grounded_caravan_collision_mask = {'train-layer', 'player-layer', anti_tree, 'not-colliding-with-itself'}
 
 for _, tree in pairs(data.raw.tree) do
 	tree.collision_mask = _G.grounded_caravan_collision_mask
