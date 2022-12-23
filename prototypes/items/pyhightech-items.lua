@@ -14,10 +14,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "kicalk-seeds",
-    icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/kicalk-seeds.png"}
-        },
+    icon = "__pyalienlifegraphics__/graphics/icons/kicalk-seeds.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-kicalk",
@@ -95,10 +92,7 @@ ITEM {
 ITEM {
     type = "module",
     name = "kicalk",
-    icons =
-    {
-        {icon = "__pyalienlifegraphics__/graphics/icons/kicalk.png"},
-    },
+    icon = "__pyalienlifegraphics__/graphics/icons/kicalk.png",
     icon_size = 64,
     category = "kicalk",
     tier = 1,

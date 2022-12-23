@@ -178,11 +178,8 @@ ITEM {
 ITEM {
     type = "item",
     name = "fawogae-spore",
-    icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/fawogae-spore.png", icon_size = 32,},
-            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png", icon_size = 64},
-        },
+    icon = "__pyalienlifegraphics__/graphics/icons/fawogae-spore.png",
+    icon_size = 32,
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
@@ -234,11 +231,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "navens-spore",
-    icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/navens-spore.png", icon_size = 32,},
-            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png", icon_size = 64},
-        },
+    icon = "__pyalienlifegraphics__/graphics/icons/navens-spore.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-items",
@@ -251,7 +244,7 @@ ITEM {
     name = "navens-spore-mk02",
     icons =
         {
-            {icon = "__pyalienlifegraphics__/graphics/icons/navens-spore.png", icon_size = 32,},
+            {icon = "__pyalienlifegraphics__/graphics/icons/navens-spore.png", icon_size = 64,},
             {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
         },
     icon_size = 64,
@@ -266,7 +259,7 @@ ITEM {
     name = "navens-spore-mk03",
     icons =
         {
-            {icon = "__pyalienlifegraphics__/graphics/icons/navens-spore.png", icon_size = 32,},
+            {icon = "__pyalienlifegraphics__/graphics/icons/navens-spore.png", icon_size = 64,},
             {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
         },
     icon_size = 64,
@@ -281,7 +274,7 @@ ITEM {
     name = "navens-spore-mk04",
     icons =
         {
-            {icon = "__pyalienlifegraphics__/graphics/icons/navens-spore.png", icon_size = 32,},
+            {icon = "__pyalienlifegraphics__/graphics/icons/navens-spore.png", icon_size = 64,},
             {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
         },
     icon_size = 64,
@@ -294,11 +287,8 @@ ITEM {
 ITEM {
     type = "item",
     name = "yaedols-spores",
-    icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/yaedols-spores.png", icon_size = 32,},
-            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png", icon_size = 64},
-        },
+    icon = "__pyalienlifegraphics__/graphics/icons/yaedols-spores.png",
+    icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-items",
     order = "a",
@@ -310,7 +300,7 @@ ITEM {
     name = "yaedols-spores-mk02",
     icons =
         {
-            {icon = "__pyalienlifegraphics__/graphics/icons/yaedols-spores.png", icon_size = 32,},
+            {icon = "__pyalienlifegraphics__/graphics/icons/yaedols-spores.png", icon_size = 64,},
             {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
         },
     flags = {},
@@ -324,7 +314,7 @@ ITEM {
     name = "yaedols-spores-mk03",
     icons =
         {
-            {icon = "__pyalienlifegraphics__/graphics/icons/yaedols-spores.png", icon_size = 32,},
+            {icon = "__pyalienlifegraphics__/graphics/icons/yaedols-spores.png", icon_size = 64,},
             {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
         },
     flags = {},
@@ -338,7 +328,7 @@ ITEM {
     name = "yaedols-spores-mk04",
     icons =
         {
-            {icon = "__pyalienlifegraphics__/graphics/icons/yaedols-spores.png", icon_size = 32,},
+            {icon = "__pyalienlifegraphics__/graphics/icons/yaedols-spores.png", icon_size = 64,},
             {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
         },
     flags = {},
@@ -3659,11 +3649,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "grod-seeds",
-    icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/grod-seeds.png"},
-            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"}
-        },
+    icon = "__pyalienlifegraphics__/graphics/icons/grod-seeds.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-grod",
@@ -8496,8 +8482,7 @@ ITEM {
     name = "guar",
     icons =
 	{
-        {icon = "__pyalienlifegraphics__/graphics/icons/guar.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/guar.png"}
     },
     icon_size = 64,
 	category = "guar",
