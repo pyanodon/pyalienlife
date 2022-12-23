@@ -16,8 +16,7 @@ ITEM {
     name = "kicalk-seeds",
     icons =
         {
-            {icon = "__pyalienlifegraphics__/graphics/icons/kicalk-seeds.png"},
-            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png", icon_size = 64},
+            {icon = "__pyalienlifegraphics__/graphics/icons/kicalk-seeds.png"}
         },
     icon_size = 64,
     flags = {},
