@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.7
+Date: ?
+  Changes:
+    - updated thikats graphics+recipe
+    - caravans are now immune to biters and trains
+    - caravans have a new action "circuit condition"
+    - caravans can navigate forests with 100% reliability
+    - added a wiki page for digosaurus and thikats
+    - fixed crash with nuka caravan
+    - fixed graphical issue with the "add-action" button for caravans
+---------------------------------------------------------------------------------------------------
 Version: 2.0.6
 Date: 2022-12-20
   Changes:

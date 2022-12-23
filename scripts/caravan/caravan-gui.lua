@@ -89,6 +89,19 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 				textfield.numeric = true
 				textfield.allow_decimal = false
 				textfield.allow_negative = false
+			elseif action.type == 'circuit-condition' then
+				action_frame.add{type = 'empty-widget', style = 'py_empty_widget'}
+				local circuit_condition_right = action_frame.add{
+					type = 'choose-elem-button', name = 'py_circuit_condition_right', style = 'train_schedule_item_select_button',
+					tags = tags, elem_type = 'signal', elem_filters = elem_filters
+				}
+				circuit_condition_right.elem_value = action.circuit_condition_right
+				action_frame.add{type = 'label', caption = '='}
+				local circuit_condition_left = action_frame.add{
+					type = 'choose-elem-button', name = 'py_circuit_condition_left', style = 'train_schedule_item_select_button',
+					tags = tags, elem_type = 'signal', elem_filters = elem_filters
+				}
+				circuit_condition_left.elem_value = action.circuit_condition_left
 			else
 				action_frame.add{type = 'empty-widget', style = 'py_empty_widget'}
 			end
@@ -108,8 +121,6 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 			}
 		end
 
-		local add_action = schedule_flow.add{type = 'button', name = 'action_frame_button', style = 'train_schedule_add_wait_condition_button', caption = {'caravan-gui.add-action'}}
-		add_action.style.horizontal_align = 'right'
 		local actions = prototype.actions.default
 		local entity = schedule.entity
 		if entity and entity.valid then
@@ -120,7 +131,9 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 			end
 		end
 		actions = Table.map(actions, function(v) return {'caravan-actions.' .. v, v} end)
-		add_action.add{type = 'drop-down', name = 'py_add_action', items = actions, caption = {'caravan-gui.add-action'}, tags = tags}
+		local py_add_action = schedule_flow.add{type = 'drop-down', name = 'py_add_action', items = actions, tags = tags}
+		py_add_action.style.width = 340
+		py_add_action.style.height = 36
 	end
 	local add_outpost = gui.add{type = 'button', name = 'py_add_outpost', style = 'train_schedule_add_station_button', caption = {'caravan-gui.add-outpost'}}
 end

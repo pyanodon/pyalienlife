@@ -212,6 +212,16 @@ gui_events[defines.events.on_gui_click]['py_refocus'] = function(event)
 end
 
 local function begin_schedule(caravan_data, schedule_id, skip_eating, is_retry)
+	if caravan_data.last_scheduled_tick and caravan_data.last_scheduled_tick + 30 > game.tick then
+		if caravan_data.schedule_id ~= schedule_id then
+			if not skip_eating and not eat(caravan_data) then stop_actions(caravan_data); return end
+		end
+		caravan_data.schedule_id = schedule_id
+		caravan_data.action_id = -1
+		caravan_data.retry_pathfinder = 1
+		return
+	end
+
 	local entity = caravan_data.entity
 	local schedule = caravan_data.schedule[schedule_id]
 	if caravan_data.fuel_inventory then
@@ -233,6 +243,8 @@ local function begin_schedule(caravan_data, schedule_id, skip_eating, is_retry)
 		caravan_data.last_outpost_location = caravan_data.entity.position
 		caravan_data.stored_energy = nil
 	end
+
+	caravan_data.last_scheduled_tick = game.tick
 end
 
 local function begin_action(caravan_data, action_id)
@@ -330,6 +342,24 @@ gui_events[defines.events.on_gui_text_changed]['py_item_count_text'] = function(
 	end
 end
 
+gui_events[defines.events.on_gui_elem_changed]['py_circuit_condition_right'] = function(event)
+	local element = event.element
+	local tags = element.tags
+	local caravan_data = global.caravans[tags.unit_number]
+	local action = caravan_data.schedule[tags.schedule_id].actions[tags.action_id]
+
+	action.circuit_condition_right = element.elem_value
+end
+
+gui_events[defines.events.on_gui_elem_changed]['py_circuit_condition_left'] = function(event)
+	local element = event.element
+	local tags = element.tags
+	local caravan_data = global.caravans[tags.unit_number]
+	local action = caravan_data.schedule[tags.schedule_id].actions[tags.action_id]
+
+	action.circuit_condition_left = element.elem_value
+end
+
 gui_events[defines.events.on_gui_text_changed]['py_time_passed_text'] = function(event)
 	local element = event.element
 	local tags = element.tags
@@ -349,7 +379,7 @@ Caravan.events.ai_command_completed = function(event)
 
 	if status == defines.behavior_result.in_progress then return end
 	if status == defines.behavior_result.fail or status == defines.behavior_result.deleted then
-		caravan_data.retry_pathfinder_on_next_tick = true
+		caravan_data.retry_pathfinder = 10
 		caravan_data.action_id = -1
 		return
 	end
@@ -357,7 +387,7 @@ Caravan.events.ai_command_completed = function(event)
 	if #schedule.actions == 0 then
 		local schedule_num = #caravan_data.schedule
 		if schedule_num == 1 then
-			caravan_data.retry_pathfinder_on_next_tick = true
+			caravan_data.retry_pathfinder = 2
 			return
 		elseif caravan_data.schedule_id == schedule_num then
 			begin_schedule(caravan_data, 1)
@@ -399,9 +429,14 @@ Caravan.events[60] = function(event)
 			goto continue
 		end
 
-		if caravan_data.retry_pathfinder_on_next_tick then
-			begin_schedule(caravan_data, caravan_data.schedule_id, true, true)
-			caravan_data.retry_pathfinder_on_next_tick = false
+		if caravan_data.retry_pathfinder then
+			caravan_data.retry_pathfinder = caravan_data.retry_pathfinder - 1
+			if caravan_data.retry_pathfinder == 0 then
+				begin_schedule(caravan_data, caravan_data.schedule_id, true, true)
+			end
+			if caravan_data.retry_pathfinder == 0 then
+				caravan_data.retry_pathfinder = nil
+			end
 			goto continue
 		end
 
@@ -482,8 +517,10 @@ end
 
 Caravan.events.on_built = function(event)
 	local entity = event.created_entity or event.entity
-	if not prototypes[entity.name] then return end
-	entity.destructible = false
+	local prototype = prototypes[entity.name]
+	if not prototype then return end
+	if prototype.destructible == false then entity.destructible = false end
+	
 	local stack = event.stack
 	local tags = stack and stack.valid_for_read and stack.type == 'item-with-tags' and stack.tags
 

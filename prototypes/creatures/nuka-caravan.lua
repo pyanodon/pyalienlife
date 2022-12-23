@@ -43,9 +43,10 @@ data:extend(
     icon_size = 64,
     flags = {'placeable-player', 'placeable-off-grid', 'not-repairable', 'breaths-air', 'building-direction-8-way'},
 	minable = {mining_time = 0.1, result = 'nukavan'},
-    max_health = 100000,
+    max_health = 6125,
     order = 'b-b-a',
     subgroup='enemies',
+	collision_mask = _G.grounded_caravan_collision_mask,
     resistances =
 	{
 		{

@@ -6,7 +6,8 @@ local caravan_actions = {
 		'store-food',
 		'fill-inventory',
 		'empty-inventory',
-		'item-count'
+		'item-count',
+		'circuit-condition'
 	},
 	['character'] = {
 		'time-passed',
@@ -26,6 +27,10 @@ local caravan_actions = {
 		'time-passed',
 		'fill-inventory',
 		'empty-inventory'
+	},
+	['electric-pole'] = {
+		'time-passed',
+		'circuit-condition'
 	},
 	['default'] = {
 		'time-passed'
@@ -47,6 +52,7 @@ local prototypes = {
 		inventory_size = 30,
 		opens_player_inventory = true,
 		fuel_size = 2,
+		destructible = false,
 		outpost = 'outpost',
 		favorite_foods = {
 			['brain'] = 5,
@@ -61,6 +67,7 @@ local prototypes = {
 		inventory_size = 60,
 		opens_player_inventory = true,
 		fuel_size = 4,
+		destructible = false,
 		outpost = 'outpost-aerial',
 		favorite_foods = {
 			['workers-food'] = 5,
@@ -77,10 +84,12 @@ local prototypes = {
 		fuel_size = 2,
 		outpost = 'outpost',
 		favorite_foods = {
-			['workers-food'] = 5,
+			['brain'] = 5,
+			['auog-food-01'] = 10,
+			['workers-food'] = 30
 		},
 		actions = {
-			{['default'] = 'detonate'}
+			['default'] = {'detonate'}
 		},
 		placeable_by = 'nukavan'
 	},
@@ -156,6 +165,14 @@ local function transfer_all_items(input_inventory, output_inventory) -- TODO: ma
 		local inserted_count = output_inventory.insert{name = item, count = count}
 		if inserted_count ~= 0 then input_inventory.remove{name = item, count = inserted_count} end
 	end
+end
+
+local function evaluate_signal(entity, signal)
+	local result = entity.get_merged_signal(signal)
+	if result == 0 and entity.type == 'container' and signal.type == 'item' then
+		return entity.get_inventory(defines.inventory.chest).get_item_count(signal.name)
+	end
+	return result
 end
 
 Caravan.actions = {
@@ -238,7 +255,6 @@ Caravan.actions = {
 	end,
 
 	['detonate'] = function(caravan_data, schedule, action)
-		--caravan_data.entity.surface.create_entity{name = 'nuka-bomb-baby', position = caravan_data.entity.position}
 		local entity = caravan_data.entity
 		entity.surface.create_entity{
 			name = 'atomic-rocket',
@@ -247,6 +263,7 @@ Caravan.actions = {
 			speed = 1,
 			max_range = 0.1
 		}
+		entity.die('enemy', entity)
 		return 'nuke'
 	end,
 
@@ -273,6 +290,17 @@ Caravan.actions = {
 			outpost.energy = goal
 			return true
 		end
+	end,
+
+	['circuit-condition'] = function(caravan_data, schedule, action)
+		local outpost = schedule.entity
+		if not outpost or not outpost.valid then return true end
+
+		local right = action.circuit_condition_right
+		local left = action.circuit_condition_left
+		if not right or not left then return false end
+
+		return evaluate_signal(outpost, right) == evaluate_signal(outpost, left)
 	end
 }
 
@@ -280,7 +308,8 @@ Caravan.free_actions = { -- actions that don't use fuel
 	['time-passed'] = true,
 	['store-food'] = true,
 	['detonate'] = true,
-	['store-energy'] = true
+	['store-energy'] = true,
+	['circuit-condition'] = true
 }
 
 return prototypes
