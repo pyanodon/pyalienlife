@@ -62,11 +62,11 @@ Farming.events[30] = function(event)
 	end
 end
 
--- every 2 seconds, check up to 30 farm buildings for empty module inventory
+-- every 2 seconds, check up to 60 farm buildings for empty module inventory
 Farming.events[121] = function()
 	if #global.enabled_farm_buildings == 0 then return end
 	local first_index_checked_this_tick = global.next_farm_index
-	for i = 1, 30 do
+	for i = 1, 60 do
 		local farm = global.enabled_farm_buildings[global.next_farm_index]
 		if not farm.valid then
 			table.remove(global.enabled_farm_buildings, global.next_farm_index)
