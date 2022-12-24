@@ -303,6 +303,11 @@ data:extend {
         allowed_module_categories = { "korlex" },
     },
     {
+        type = 'recipe-category',
+        name = 'dino-dig-site',
+        allowed_module_categories = { "digosaurus" },
+    },
+    {
         type = "recipe-category",
         name = "bay"
     },

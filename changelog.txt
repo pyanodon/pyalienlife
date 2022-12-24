@@ -16,6 +16,8 @@ Date: ?
     - Fixed some unknown key errors
     - Arqad queen is no longer craftable in the creature chamber
     - Updated item icons for guar, navens spore, yaedols spore, fawogae spore, kicalk-seeds, arqad-egg-nest-mk03, grod seeds
+    - Digosaurus items are now modules
+    - Fixed that any item could be used as digosaurus food
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.6
 Date: 2022-12-20

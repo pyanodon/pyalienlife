@@ -171,5 +171,9 @@ data:extend(
     {
         type = "module-category",
         name = "vatbrain",
-    }
+    },
+    {
+        type = "module-category",
+        name = "digosaurus"
+    },
 })

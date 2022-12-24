@@ -21,13 +21,11 @@ function Digosaurus.validity_check(dig_data)
 	if
         not dig_data.entity.valid or
         not dig_data.inventory.valid or
-        not dig_data.powersource.valid or
         not dig_data.food_input.valid or
         not dig_data.food_inventory.valid or
         not dig_data.digosaur_inventory.valid
     then
         if dig_data.entity.valid then dig_data.entity.destroy() end
-        if dig_data.powersource.valid then dig_data.powersource.destroy() end
         if dig_data.food_input.valid then dig_data.food_input.destroy() end
         if dig_data.digosaur_inventory.valid then dig_data.digosaur_inventory.destroy() end
 
@@ -94,8 +92,15 @@ function Digosaurus.start_mining_command(dig_data, i)
     return digosaur_data
 end
 
-function Digosaurus.eat(food_inventory)
-    for food, _ in pairs(food_inventory.get_contents()) do
+function Digosaurus.has_food(food_inventory_contents)
+    for food, _ in pairs(Digosaurus.favorite_foods) do
+        if food_inventory_contents[food] then return true end
+    end
+    return false
+end
+
+function Digosaurus.eat(food_inventory, food_inventory_contents)
+    for food, _ in pairs(food_inventory_contents) do
         if Digosaurus.favorite_foods[food] then
             food_inventory.remove{name = food, count = 1}
             return food
@@ -106,17 +111,18 @@ end
 Digosaurus.events[60] = function(event)
     for _, dig_data in pairs(global.dig_sites) do
         if not Digosaurus.validity_check(dig_data) then goto continue end
-        local powersource = dig_data.powersource
+        local entity = dig_data.entity
+        local food_inventory_contents = dig_data.food_inventory.get_contents()
 
         if table_size(dig_data.scanned_ores) == 0 then
             draw_error_sprite(dig_data, 'utility.warning_icon')
-        elseif dig_data.food_inventory.is_empty() then
+        elseif not Digosaurus.has_food(food_inventory_contents) then
             draw_error_sprite(dig_data, 'utility.fuel_icon')
-        elseif powersource.energy == 0 then
+        elseif entity.energy == 0 then
             draw_error_sprite(dig_data, 'utility.electricity_icon_unplugged')
         elseif dig_data.digosaur_inventory.is_empty() then
             draw_error_sprite(dig_data, 'no_module_animal')
-        elseif powersource.energy < powersource.electric_buffer_size * 0.9 then
+        elseif entity.energy < entity.electric_buffer_size * 0.9 then
             draw_error_sprite(dig_data, 'utility.electricity_icon')
         else
             if dig_data.inventory.get_item_count() > 1000 then
@@ -128,7 +134,7 @@ Digosaurus.events[60] = function(event)
                 if not digosaur_data and dig_data.digosaur_inventory[i].valid_for_read then
                     digosaur_data = Digosaurus.start_mining_command(dig_data, i)
                     if digosaur_data then
-                        digosaur_data.ores_gained_per_trip = Digosaurus.favorite_foods[Digosaurus.eat(dig_data.food_inventory)]
+                        digosaur_data.ores_gained_per_trip = Digosaurus.favorite_foods[Digosaurus.eat(dig_data.food_inventory, food_inventory_contents)]
                         goto continue
                     end
                 end
@@ -180,6 +186,7 @@ Digosaurus.events.on_ai_command_completed = function(event)
                     ore.deplete()
                     dig_data.scanned_ores[digosaur_data.ore_id] = nil
                 end
+                dig_data.entity.products_finished = dig_data.entity.products_finished + 1
                 return
             end
         end
@@ -194,7 +201,6 @@ Digosaurus.events.on_built = function(event)
     local force = force
     local position = entity.position
 
-    local powersource = surface.create_entity{name = 'dino-dig-site-powersource', force = force, position = position}
     local food_input = surface.create_entity{name = 'dino-dig-site-food-input', force = force, position = position}
     local food_inventory = food_input.get_inventory(defines.inventory.chest)
 
@@ -202,10 +208,9 @@ Digosaurus.events.on_built = function(event)
         unit_number = entity.unit_number,
         entity = entity,
         inventory = entity.get_inventory(defines.inventory.assembling_machine_output),
-        powersource = powersource,
         food_input = food_input,
         food_inventory = food_inventory,
-        digosaur_inventory = game.create_inventory(Digosaurus.dino_dig_site_creature_limit),
+        digosaur_inventory = entity.get_module_inventory(),
         active_digosaurs = {},
         scanned_ores = {}
     }
@@ -238,7 +243,6 @@ Digosaurus.events.on_destroyed = function(event)
         end
     end
 
-	dig_data.powersource.destroy()
 	dig_data.food_input.destroy()
 	dig_data.digosaur_inventory.destroy()
 end
@@ -253,26 +257,6 @@ gui_events[defines.events.on_gui_click]['dig_food_.'] = function(event)
 	if cursor_stack.valid_for_read and not Digosaurus.favorite_foods[cursor_stack.name] then return end
 
 	cursor_stack.swap_stack(dig_data.food_inventory[tags.i])
-	Digosaurus.update_gui(player.gui.relative.digosaurus_gui)
-end
-
-gui_events[defines.events.on_gui_click]['dig_creature_.'] = function(event)
-	local player = game.get_player(event.player_index)
-	local element = event.element
-	local tags = element.tags
-	local dig_data = global.dig_sites[tags.unit_number]
-	local cursor_stack = player.cursor_stack
-
-	if cursor_stack.valid_for_read and not Digosaurus.valid_creatures[cursor_stack.name] then return end
-    local digosaur_data = dig_data.active_digosaurs[tags.i]
-    if digosaur_data then
-        if digosaur_data.proxy and digosaur_data.proxy.valid then digosaur_data.proxy.destroy() end
-        if digosaur_data.entity and digosaur_data.entity.valid then digosaur_data.entity.destroy() end
-        dig_data.active_digosaurs[tags.i] = nil
-        global.digosaurs[tags.i] = nil
-    end
-
-	cursor_stack.swap_stack(dig_data.digosaur_inventory[tags.i])
 	Digosaurus.update_gui(player.gui.relative.digosaurus_gui)
 end
 

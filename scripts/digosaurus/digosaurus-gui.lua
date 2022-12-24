@@ -12,25 +12,14 @@ local function generate_favorite_food_tooltip()
 	return {'digosaurus-gui.favorite-foods-main', favorites}
 end
 
-local function generate_digosaurus_slot_tooltip()
-	local favorites = {''}
-	for creature, productivity in pairs(Digosaurus.valid_creatures) do
-		favorites[#favorites + 1] = {'digosaurus-gui.digosaurus-slot-sub', '[item=' .. creature .. ']', game.item_prototypes[creature].localised_name, productivity * 100}
-		favorites[#favorites + 1] = '\n'
-	end
-	favorites[#favorites] = nil
-	return {'digosaurus-gui.digosaurus-slot-main', favorites}
-end
-
 function Digosaurus.update_gui(gui)
 	local dig_data = global.dig_sites[gui.tags.unit_number]
 	if not Digosaurus.validity_check(dig_data) then gui.destroy() return end
 	local content_flow = gui.content_frame.content_flow
 	local entity = dig_data.entity
-	local powersource = dig_data.powersource
 
-	content_flow.status_flow.electricity.value = powersource.energy / powersource.electric_buffer_size
-	content_flow.status_flow.consumption.caption = format_energy(powersource.energy) .. '/' .. format_energy(powersource.electric_buffer_size)
+	content_flow.status_flow.electricity.value = entity.energy / entity.electric_buffer_size
+	content_flow.status_flow.consumption.caption = format_energy(entity.energy) .. '/' .. format_energy(entity.electric_buffer_size)
 
 	local status, img
 	if entity.to_be_deconstructed() then
@@ -43,13 +32,13 @@ function Digosaurus.update_gui(gui)
 	elseif dig_data.food_inventory.is_empty() then
 		status = {'entity-status.no-food'}
 		img = 'utility/status_not_working'
-	elseif powersource.energy == 0 then
+	elseif entity.energy == 0 then
 		status = {'entity-status.no-power'}
 		img = 'utility/status_not_working'
 	elseif dig_data.digosaur_inventory.is_empty() then
 		status = {'entity-status.no-creature'}
 		img = 'utility/status_not_working'
-	elseif powersource.energy < powersource.electric_buffer_size * 0.9 then
+	elseif entity.energy < entity.electric_buffer_size * 0.9 then
 		status = {'entity-status.low-power'}
 		img = 'utility/status_yellow'
 	else
@@ -72,17 +61,6 @@ function Digosaurus.update_gui(gui)
 			element.number = nil
 		end
 		element.tooltip = generate_favorite_food_tooltip()
-	end
-
-	local creature_flow = content_flow.creature_flow
-	for j = 1, #dig_data.digosaur_inventory do
-		local slot = dig_data.digosaur_inventory[j]
-		local element = creature_flow['dig_creature_' .. j]
-		if slot.valid_for_read then
-			element.sprite = 'item/' .. slot.name
-		else
-			element.sprite = nil
-		end
 	end
 end
 
@@ -133,16 +111,6 @@ Digosaurus.events.on_gui_opened = function(event)
 	for i = 1, #dig_data.food_inventory do
 		local slot = food_flow.add{type = 'sprite-button', name = 'dig_food_' .. i, style = 'inventory_slot'}
 		slot.tags = {unit_number = dig_data.unit_number, i = i}
-	end
-
-	content_flow.add{type = 'line'}
-
-	content_flow.add{type = 'label', caption = {'digosaurus-gui.creature'}, style = 'heading_2_label'}
-	local creature_flow = content_flow.add{type = 'flow', name = 'creature_flow', direction = 'horizontal'}
-	for i = 1, #dig_data.digosaur_inventory do
-		local slot = creature_flow.add{type = 'sprite-button', name = 'dig_creature_' .. i, style = 'inventory_slot'}
-		slot.tags = {unit_number = dig_data.unit_number, i = i}
-		slot.tooltip = generate_digosaurus_slot_tooltip()
 	end
 
 	Digosaurus.update_gui(main_frame)

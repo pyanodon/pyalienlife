@@ -18,8 +18,6 @@ Digosaurus.mining_proxies = {
 	['thikat'] = 'thikats-mineable-proxy'
 }
 
-Digosaurus.dino_dig_site_creature_limit = 4
-
 Digosaurus.mining_range = 12.5
 Digosaurus.mining_range_offset = {
 	[defines.direction.north] = {x = 0, y = -16},

@@ -1,5 +1,5 @@
 local item_icon = '__pyalienlifegraphics3__/graphics/icons/thikat.png'
-local time_taken_for_thikats_to_mine = 8
+local time_taken_for_thikats_to_mine = 4
 
 RECIPE {
   type = 'recipe',
@@ -21,17 +21,22 @@ RECIPE {
 }:add_unlock{'nexelit-mk02'}
 
 ITEM {
-  type = 'item',
-  name = 'thikat',
-  icon = item_icon,
-  icon_size = 64,
-  subgroup = 'py-alienlife-special-creatures',
-  order = 'xb',
-  stack_size = 1,
-  flags = {'not-stackable'},
-  localised_name = {'entity-name.thikat'},
-  localised_description = {'entity-description.thikat'}
-}
+	type = 'module',
+	name = 'thikat',
+	icon = item_icon,
+	icon_size = 64,
+	subgroup = 'py-alienlife-special-creatures',
+	order = 'x',
+	stack_size = 10,
+	flags = {},
+	localised_name = {'entity-name.thikat'},
+	localised_description = {'entity-description.thikat'},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
+	limitation = {},
+	limitation_message_key = "digosaurus",
+	category = "digosaurus",
+	tier = 2,
+  }
 
 local running_animation = {layers = {
         {
@@ -175,6 +180,7 @@ ENTITY {
 	name = 'thikat',
 	icon = item_icon,
 	icon_size = 64,
+	ai_settings = {do_separation = false},
 	flags = {'placeable-neutral', 'placeable-player', 'player-creation', 'placeable-off-grid', 'breaths-air', 'not-repairable', 'not-on-map', 'not-flammable'},
 	max_health = 900,
 	subgroup = 'creatures',

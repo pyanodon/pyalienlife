@@ -18,16 +18,21 @@ RECIPE {
 }:add_unlock{'nexelit-mk01'}
 
 ITEM {
-  type = 'item',
-  name = 'digosaurus',
-  icon = item_icon,
-  icon_size = 64,
-  subgroup = 'py-alienlife-special-creatures',
-  order = 'x',
-  stack_size = 1,
-  flags = {'not-stackable'},
-  localised_name = {'entity-name.digosaurus'},
-  localised_description = {'entity-description.digosaurus'}
+	type = 'module',
+	name = 'digosaurus',
+	icon = item_icon,
+	icon_size = 64,
+	subgroup = 'py-alienlife-special-creatures',
+	order = 'x',
+	stack_size = 10,
+	flags = {},
+	localised_name = {'entity-name.digosaurus'},
+	localised_description = {'entity-description.digosaurus'},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
+  limitation = {},
+  limitation_message_key = "digosaurus",
+  category = "digosaurus",
+  tier = 1,
 }
 
 RECIPE {
@@ -134,6 +139,7 @@ ENTITY {
 	name = 'digosaurus',
 	icon = item_icon,
 	icon_size = 64,
+	ai_settings = {do_separation = false},
 	flags = {'placeable-neutral', 'placeable-player', 'player-creation', 'placeable-off-grid', 'breaths-air', 'not-repairable', 'not-on-map', 'not-flammable'},
 	max_health = 300,
 	subgroup = 'creatures',
@@ -162,11 +168,6 @@ ENTITY {
 	run_animation = running_animation
 }
 
-data:extend{{
-  type = 'recipe-category',
-  name = 'dino-dig-site'
-}}
-
 local dig_site_graphic = {layers = {
   {
     filename = '__pyalienlifegraphics3__/graphics/entity/outpost-mining/outpost-mining.png',
@@ -189,17 +190,20 @@ RECIPE {
   type = 'recipe',
   name = 'digosaurus-hidden-recipe',
   ingredients = {},
-  results = {{'nexelit-ore', 20000}},
+  results = {{'nexelit-ore', 4000}},
   category = 'dino-dig-site',
-  enabled = false,
-  hidden = true
-}:add_unlock{'nexelit-mk01'}
+  enabled = true,
+  hidden = true,
+  unlock_results = false,
+  energy_required = 1
+}
 
 ENTITY {
-  fixed_recipe = 'digosaurus-hidden-recipe',
-  gui_title_key = 'digosaurus-gui.empty',
   type = 'assembling-machine',
   name = 'dino-dig-site',
+  crafting_speed = 1,
+  fixed_recipe = 'digosaurus-hidden-recipe',
+  gui_title_key = 'digosaurus-gui.empty',
   icon = '__pyalienlifegraphics3__/graphics/icons/outpost-mining.png',
   icon_size = 64,
   flags = {'placeable-neutral', 'placeable-player', 'player-creation', 'no-automated-item-insertion'},
@@ -213,9 +217,13 @@ ENTITY {
   collision_box = {{-3.3, -3.2}, {3.3, 3.2}},
   selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
   energy_usage = '1W',
-  crafting_speed = 40,
   crafting_categories = {'dino-dig-site'},
-  energy_source = {type = 'void'},
+  energy_source = {
+    type = 'electric',
+    usage_priority = 'primary-input',
+    buffer_capacity = '400kJ',
+    drain = '400kW'
+  },
   animation = {
     north = dig_site_graphic,
     east = dig_site_graphic,
@@ -230,7 +238,11 @@ ENTITY {
     },
     distance = 12.5,
     offset = {0, -16}
-  }
+  },
+  module_specification = {
+    module_slots = 4
+  },
+  allowed_effects = {"speed","productivity",'consumption','pollution'},
 }
 
 ENTITY {
@@ -254,27 +266,6 @@ ENTITY {
   selectable_in_game = false,
   remove_decoratives = false,
   inventory_type = 'with_filters_and_bar'
-}
-
-ENTITY {
-  type = 'electric-energy-interface',
-  localised_name = {'entity-name.dino-dig-site'},
-  localised_description = {'entity-description.dino-dig-site'},
-  energy_source = {
-    type = 'electric',
-    usage_priority = 'secondary-input',
-    buffer_capacity = (400/60) .. 'kJ',
-    output_flow_limit = '0W'
-  },
-  energy_usage = '400kW',
-  collision_box = {{-3.3, -3.3}, {3.3, 3.3}},
-  icon = '__pyalienlifegraphics3__/graphics/icons/outpost-mining.png',
-  icon_size = 64,
-  collision_mask = {},
-  selectable_in_game = false,
-  remove_decoratives = false,
-  name = 'dino-dig-site-powersource',
-  flags = {'placeable-neutral', 'hidden', 'not-selectable-in-game', 'not-rotatable', 'not-flammable', 'placeable-off-grid', 'hide-alt-info'}
 }
 
 local sound =
