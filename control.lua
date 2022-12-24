@@ -233,14 +233,14 @@ script.on_event(on_built, function(event)
         local rpos = E.position
         repeat
             if posx == -13 or posy == -13 or posx == 13 or posy == 13 then
-                game.surfaces['nauvis'].create_entity {
+                E.surface.create_entity {
                     name = 'wood-fence',
                     position = {rpos.x + posx, (rpos.y - 15) + posy},
                     force = E.force
                 }
             end
             --create landfill
-            game.surfaces['nauvis'].set_tiles {{name = 'landfill', position = {rpos.x + posx, (rpos.y - 15) + posy}}}
+            E.surface.set_tiles{{name = 'landfill', position = {rpos.x + posx, (rpos.y - 15) + posy}}}
 
             posx = posx + 1
             if posx == 14 then
@@ -363,6 +363,7 @@ script.on_event(defines.events.on_rocket_launched, function(event)
         end
 
         local rs = event.rocket_silo
+        local surface = rs.surface
 
         for _, farm in pairs(farms) do
             if items['item1'] == farm.seed then
@@ -377,14 +378,14 @@ script.on_event(defines.events.on_rocket_launched, function(event)
                     local posy = -11
                     local rpos = event.rocket_silo.position
                     repeat
-                        if game.surfaces['nauvis'].find_entity(farm.crop, {rpos.x + posx, (rpos.y - 15) + posy}) == nil then
-                            game.surfaces['nauvis'].create_entity {
+                        if surface.find_entity(farm.crop, {rpos.x + posx, (rpos.y - 15) + posy}) == nil then
+                            surface.create_entity {
                                 name = farm.crop,
                                 position = {rpos.x + posx, (rpos.y - 15) + posy},
                                 amount = output[rs.get_recipe().name]
                             }
                         else
-                            local ore = game.surfaces['nauvis'].find_entity(farm.crop, {rpos.x + posx, (rpos.y - 15) + posy})
+                            local ore = surface.find_entity(farm.crop, {rpos.x + posx, (rpos.y - 15) + posy})
                             ore.amount = ore.amount + output[rs.get_recipe().name]
                         end
                         posx = posx + 1
@@ -398,7 +399,7 @@ script.on_event(defines.events.on_rocket_launched, function(event)
         end
         local rpos = event.rocket_silo.position
         local harvesters =
-            game.surfaces['nauvis'].find_entities_filtered {
+            surface.find_entities_filtered {
             area = {{rpos.x - 11, (rpos.y - 15) - 11}, {rpos.x + 11, (rpos.y - 15) + 11}},
             name = {'harvester', 'collector'}
         }
