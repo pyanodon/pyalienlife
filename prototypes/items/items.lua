@@ -6047,7 +6047,7 @@ ITEM {
     category = "ralesia",
 	tier = 1,
     flags = {},
-    subgroup = "py-alienlife-modules",
+    subgroup = "py-alienlife-ralesia",
     order = "ra",
     stack_size = 50,
 	effect = {pollution = {bonus = 1},speed = {bonus = 0.83}},
@@ -6067,7 +6067,7 @@ ITEM {
      category = "ralesia",
  	tier = 2,
      flags = {},
-     subgroup = "py-alienlife-modules",
+     subgroup = "py-alienlife-ralesia",
      order = "rb",
      stack_size = 50,
  	effect = {pollution = {bonus = 1},speed = {bonus = 1.66}},
@@ -6087,7 +6087,7 @@ ITEM {
      category = "ralesia",
  	tier = 3,
      flags = {},
-     subgroup = "py-alienlife-modules",
+     subgroup = "py-alienlife-ralesia",
      order = "rc",
      stack_size = 50,
  	effect = {pollution = {bonus = 1},speed = {bonus = 2.49}},
@@ -6107,7 +6107,7 @@ ITEM {
      category = "ralesia",
  	tier = 4,
      flags = {},
-     subgroup = "py-alienlife-modules",
+     subgroup = "py-alienlife-ralesia",
      order = "rd",
      stack_size = 50,
  	effect = {pollution = {bonus = 1},speed = {bonus = 3.33}},
@@ -6120,13 +6120,12 @@ ITEM {
     name = "ralesia-seeds-mk02",
     icons =
  	 {
-         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
-         {icon = "__pycoalprocessinggraphics__/graphics/icons/ralesia-seeds.png"}
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
+         {icon = "__pycoalprocessinggraphics__/graphics/icons/ralesia-seeds.png", icon_size = 32}
      },
-    icon_size = 32,
     flags = {},
-    subgroup = "py-items",
-    order = "rd",
+    subgroup = "py-alienlife-ralesia",
+    order = "ab",
     stack_size = 100
 }
 
@@ -6135,13 +6134,12 @@ ITEM {
     name = "ralesia-seeds-mk03",
     icons =
  	 {
-         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
-         {icon = "__pycoalprocessinggraphics__/graphics/icons/ralesia-seeds.png"}
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
+         {icon = "__pycoalprocessinggraphics__/graphics/icons/ralesia-seeds.png", icon_size = 32}
      },
-    icon_size = 32,
     flags = {},
-    subgroup = "py-items",
-    order = "rd",
+    subgroup = "py-alienlife-ralesia",
+    order = "ac",
     stack_size = 100
 }
 
@@ -6150,13 +6148,13 @@ ITEM {
     name = "ralesia-seeds-mk04",
     icons =
  	 {
-         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
-         {icon = "__pycoalprocessinggraphics__/graphics/icons/ralesia-seeds.png"}
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
+         {icon = "__pycoalprocessinggraphics__/graphics/icons/ralesia-seeds.png", icon_size = 32}
      },
-    icon_size = 32,
+    
     flags = {},
-    subgroup = "py-items",
-    order = "rd",
+    subgroup = "py-alienlife-ralesia",
+    order = "ad",
     stack_size = 100
 }
 
