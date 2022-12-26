@@ -8,7 +8,7 @@ RECIPE {
     energy_required = 15,
     ingredients = {
         {type = 'item', name = 'sodium-alginate', amount = 1},
-        {type = 'item', name = 'keratin', amount = 1},
+        {type = 'item', name = 'keratin', amount = 20},
         {type = 'item', name = 'bonemeal', amount = 5},
         {type = 'fluid', name = 'boric-acid', amount = 200},
     },
@@ -32,10 +32,10 @@ RECIPE {
 
     },
     results = {
-        {type = 'item', name = 'bio-scafold', amount = 1},
+        {type = 'item', name = 'bio-scafold', amount = 5},
     },
     --main_product = "cocoon",
-}:add_unlock("organ-printing"):replace_ingredient("guts", "collagen")
+}:add_unlock("organ-printing-mk02"):replace_ingredient("guts", "collagen")
 
 RECIPE {
     type = 'recipe',
@@ -54,7 +54,7 @@ RECIPE {
         {type = 'item', name = 'bio-scafold', amount = 8},
     },
     --main_product = "cocoon",
-}:add_unlock("organ-printing-mk02")
+}:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = 'recipe',
@@ -550,7 +550,7 @@ RECIPE {
         {type = 'item', name = 'primers', amount = 1},
     },
     results = {
-        {type = 'fluid', name = 'psc', amount = 75},
+        {type = 'fluid', name = 'psc', amount = 50},
         {type = 'fluid', name = 'carbon-dioxide', amount = 50},
     },
     main_product = "psc",
@@ -571,7 +571,7 @@ RECIPE {
         {type = 'item', name = 'cbp', amount = 1},
     },
     results = {
-        {type = 'fluid', name = 'psc', amount = 130},
+        {type = 'fluid', name = 'psc', amount = 100},
         {type = 'fluid', name = 'carbon-dioxide', amount = 50},
     },
     main_product = "psc",

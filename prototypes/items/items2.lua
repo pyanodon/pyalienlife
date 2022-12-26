@@ -550,3 +550,16 @@ ITEM {
     order = "z-a",
     stack_size = 100
 }
+
+---codexes mk02--
+
+ITEM {
+    type = "item",
+    name = "korlex-codex-mk02",
+    icon = "__pyalienlifegraphics3__/graphics/icons/korlex-codex-mk02.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk02",
+    order = "k",
+    stack_size = 50
+}

@@ -19,7 +19,7 @@ RECIPE {
 FLUID {
     type = "fluid",
     name = "fish-emulsion",
-    icon = "__pyalienlifegraphics3__/graphics/icons/wax.png",
+    icon = "__pyalienlifegraphics3__/graphics/icons/fish-emulsion.png",
 	icon_size = 64,
     default_temperature = 10,
     base_color = {r = 0.321, g = 0.274, b = 0.274},

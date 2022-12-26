@@ -351,6 +351,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-codex-mk02",
+        group = "py-alienlife",
+        order = "hb"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-samples",
         group = "py-alienlife",
         order = "i"

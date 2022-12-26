@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = '__pyalienlifegraphics__/graphics/technology/organ-printing.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'biotech-mk01','energy-drink'},
+    prerequisites = {'biotech-mk01'},
     effects = {},
     unit = {
         count = 300,
@@ -13,8 +13,6 @@ TECHNOLOGY {
             {"py-science-pack-1", 1},
             {'logistic-science-pack', 1},
             {"py-science-pack-2", 2},
-            {'chemical-science-pack', 1},
-            {"py-science-pack-3", 2},
         },
         time = 45
     }
