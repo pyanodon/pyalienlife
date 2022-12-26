@@ -8,7 +8,7 @@ RECIPE {
     energy_required = 15,
     ingredients = {
         {type = 'item', name = 'sodium-alginate', amount = 1},
-        {type = 'item', name = 'keratin', amount = 20},
+        {type = 'item', name = 'chitin', amount = 20},
         {type = 'item', name = 'bonemeal', amount = 5},
         {type = 'fluid', name = 'boric-acid', amount = 200},
     },
