@@ -524,7 +524,7 @@ Caravan.events.on_built = function(event)
 	local stack = event.stack
 	local tags = stack and stack.valid_for_read and stack.type == 'item-with-tags' and stack.tags
 
-	if tags and tags.unit_number then
+	if tags and tags.unit_number and global.caravans[tags.unit_number] then
 		local caravan_data = global.caravans[tags.unit_number]
 		caravan_data.itemised = nil
 		caravan_data.unit_number = entity.unit_number
