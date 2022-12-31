@@ -24,7 +24,8 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='mukmoux-calf', amount =3},
+					{name='mukmoux-calf', amount =2},
+					{name = 'mukmoux', amount = 2},
 				},
 			crafting_speed = 10,
 			tech = 'mukmoux'
@@ -39,7 +40,8 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='mukmoux-calf', add_amount =3},
+					{name='mukmoux-calf', add_amount =1},
+					{name = 'mukmoux', add_amount = 1},
 				},
 			crafting_speed = 7,
 			tech = 'mukmoux-mk02'
@@ -54,7 +56,8 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='mukmoux-calf', add_amount =3},
+					{name='mukmoux-calf', add_amount =2},
+					{name = 'mukmoux', add_amount = 1},
 				},
 			crafting_speed = 6,
 			tech = 'mukmoux-mk03'
@@ -68,7 +71,8 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='mukmoux-calf', add_amount =3},
+					{name='mukmoux-calf', add_amount =1},
+					{name = 'mukmoux', add_amount = 1},
 				},
 			crafting_speed = 5,
 			tech = 'mukmoux-mk04'
