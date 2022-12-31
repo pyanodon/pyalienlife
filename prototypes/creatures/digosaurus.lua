@@ -192,11 +192,10 @@ RECIPE {
   ingredients = {},
   results = {{'nexelit-ore', 4000}},
   category = 'dino-dig-site',
-  enabled = true,
+  enabled = false,
   hidden = true,
-  unlock_results = false,
   energy_required = 1
-}
+}:add_unlock{'nexelit-mk01'}
 
 ENTITY {
   type = 'assembling-machine',

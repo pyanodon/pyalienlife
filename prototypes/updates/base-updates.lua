@@ -22,7 +22,7 @@ TECHNOLOGY("electric-engine"):add_pack("py-science-pack-2")
 TECHNOLOGY("fast-inserter"):add_pack("logistic-science-pack")
 TECHNOLOGY("fast-inserter-2"):add_pack("py-science-pack-2")
 
-
+TECHNOLOGY('personal-roboport-equipment'):remove_pack('logistic-science-pack'):remove_pack('logistic-science-pack'):add_pack('py-science-pack-1')
 TECHNOLOGY('fluid-handling'):remove_pack('logistic-science-pack')
 TECHNOLOGY('automation-2'):remove_pack('logistic-science-pack'):remove_prereq('logistic-science-pack'):remove_prereq("electronics")
 TECHNOLOGY('exoskeleton-equipment'):remove_prereq('electric-engine'):remove_prereq('solar-panel-equipment'):add_prereq('bio-implants')
