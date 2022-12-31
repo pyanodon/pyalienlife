@@ -8,7 +8,7 @@ local mine_results_1 =
 
 --log(serpent.block(data.raw.tree['temperate-tree'].minable.results))
 for _, tree in pairs(data.raw.tree) do
-    if tree.minable ~= nil  and tree.minable.results ~= nil and tree.minable.results[1].name == 'wood' then
+    if tree.minable and tree.minable.results and tree.minable.results[1] and tree.minable.results[1].name == 'wood' then
         tree.minable.results[1].name = 'log'
         tree.minable.results[1].amount = tree.minable.results[1].amount / 4.0
 

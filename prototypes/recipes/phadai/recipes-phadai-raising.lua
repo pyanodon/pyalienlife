@@ -274,13 +274,12 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='phadai-food-02', amount =1},{name='fawogae', add_amount = 5},
+					{name='phadai-food-01',remove_item = true},{name='phadai-food-02', amount =1},{name='fawogae', add_amount = 5},
 
 				},
 			results =
 				{
-					{name='phadai',remove_item = true},
-					{name='phadai', probability = 0.9, amount_min =1, amount_max =1},
+					{name='phadai', add_amount = 1},
 				},
 			crafting_speed = 110,
 			tech = 'phadai-mk03'
@@ -289,11 +288,11 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='energy-drink', add_amount = 5},
+					{name='phadai-food-01', amount =1},
 				},
 			results =
 				{
-
+					{name='phadai', add_amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'phadai-mk04'

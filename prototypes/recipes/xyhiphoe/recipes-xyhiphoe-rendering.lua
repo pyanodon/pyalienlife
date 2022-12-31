@@ -104,7 +104,7 @@ FUN.autorecipes {
 					{name='shell', amount = IMP_SKIN},
 				},
 			tech = 'reca',
-			name = 'ex-ski-auog',
+			name = 'ex-ski-xyh',
 			icon = "__pyalienlifegraphics__/graphics/icons/shell-xyhiphoe.png",
 			icon_size = 64,
 		},
