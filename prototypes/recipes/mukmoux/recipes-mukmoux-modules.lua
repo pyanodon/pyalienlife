@@ -161,7 +161,7 @@ RECIPE {
     enabled = false,
     energy_required = 150,
     ingredients = {
-        {type = 'item', name = 'mukmoux-mk02', amount = 3},
+        {type = 'item', name = 'mukmoux-mk03', amount = 3},
         {type = 'item', name = 'mukmoux-codex-mk03', amount = 1},
         {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'cdna', amount = 2},
@@ -210,7 +210,7 @@ RECIPE {
     enabled = false,
     energy_required = 200,
     ingredients = {
-        {type = 'item', name = 'mukmoux-mk03', amount = 4},
+        {type = 'item', name = 'mukmoux-mk04', amount = 4},
         {type = 'item', name = 'mukmoux-codex-mk04', amount = 1},
         {type = 'item', name = 'cdna', amount = 2},
         {type = 'item', name = 'bio-scafold', amount = 8},

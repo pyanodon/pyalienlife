@@ -159,7 +159,7 @@ RECIPE {
     enabled = false,
     energy_required = 150,
     ingredients = {
-        {type = 'item', name = 'korlex-mk02', amount = 4},
+        {type = 'item', name = 'korlex-mk03', amount = 4},
         {type = 'item', name = 'korlex-codex-mk03', amount = 1},
         {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'propeptides', amount = 1},
@@ -208,7 +208,7 @@ RECIPE {
     enabled = false,
     energy_required = 200,
     ingredients = {
-        {type = 'item', name = 'korlex-mk03', amount = 4},
+        {type = 'item', name = 'korlex-mk04', amount = 4},
         {type = 'item', name = 'korlex-codex-mk04', amount = 1},
         {type = 'item', name = 'cdna', amount = 2},
         {type = 'item', name = 'mpa', amount = 1},
