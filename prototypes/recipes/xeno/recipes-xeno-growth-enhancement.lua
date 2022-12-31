@@ -4,7 +4,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'xeno-improved',
-	category = 'creature-chamber',
+	category = 'xeno',
 	--module_limitations = 'xeno',
 	subgroup = 'py-alienlife-xeno',
 	order = 'b',

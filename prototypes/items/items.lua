@@ -1430,7 +1430,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/sample-cup.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-codex",
+    subgroup = "py-alienlife-genetics",
     order = "x",
     stack_size = 100
 }
@@ -1441,7 +1441,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/syringe.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-codex",
+    subgroup = "py-alienlife-genetics",
     order = "x",
     stack_size = 100
 }
@@ -1452,7 +1452,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/syringe.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-codex",
+    subgroup = "py-alienlife-genetics",
     order = "x",
     stack_size = 100
 }
@@ -1463,7 +1463,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/syringe.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-codex",
+    subgroup = "py-alienlife-genetics",
     order = "x",
     stack_size = 100
 }
@@ -5373,7 +5373,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/denatured-seismite.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-science",
+    subgroup = "py-alienlife-genetics",
     order = "d",
     stack_size = 100
 }
@@ -6151,7 +6151,7 @@ ITEM {
          {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
          {icon = "__pycoalprocessinggraphics__/graphics/icons/ralesia-seeds.png", icon_size = 32}
      },
-    
+
     flags = {},
     subgroup = "py-alienlife-ralesia",
     order = "ad",

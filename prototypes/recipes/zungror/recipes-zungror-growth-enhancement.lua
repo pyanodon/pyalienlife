@@ -2,7 +2,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 	FUN.autorecipes {
     name = 'zungror-improved',
-	category = 'creature-chamber',
+	category = 'zungror',
 	--module_limitations = 'zungror',
 	subgroup = 'py-alienlife-zungror',
 	order = 'b',

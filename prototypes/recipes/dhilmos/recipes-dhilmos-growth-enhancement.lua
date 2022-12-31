@@ -2,7 +2,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'dhilmos-inproved',
-	category = 'creature-chamber',
+	category = 'dhilmos',
 	--module_limitations = 'dhilmos',
 	subgroup = 'py-alienlife-dhilmos',
 	order = 'b',

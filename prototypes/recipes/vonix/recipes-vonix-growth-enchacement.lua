@@ -2,7 +2,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'vonix-improved',
-	category = 'creature-chamber',
+	category = 'vonix',
 	--module_limitations = 'vonix',
 	subgroup = 'py-alienlife-vonix',
 	order = 'b',

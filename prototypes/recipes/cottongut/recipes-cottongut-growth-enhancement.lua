@@ -2,7 +2,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'cottongut-growth-enhancement',
-	category = 'creature-chamber',
+	category = 'cottongut',
 	subgroup = 'py-alienlife-cottongut',
 	order = 'b',
     mats =

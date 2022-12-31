@@ -556,10 +556,48 @@ ITEM {
 ITEM {
     type = "item",
     name = "korlex-codex-mk02",
-    icon = "__pyalienlifegraphics3__/graphics/icons/korlex-codex-mk02.png",
-	icon_size = 64,
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk02.png",},
+         {icon = "__pyalienlifegraphics__/graphics/icons/korlex.png", scale = 0.22},
+    },
+    icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-codex-mk02",
+    order = "k",
+    stack_size = 50
+}
+
+---codexes mk03--
+
+ITEM {
+    type = "item",
+    name = "korlex-codex-mk03",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk03.png",},
+         {icon = "__pyalienlifegraphics__/graphics/icons/korlex.png", scale = 0.2},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk03",
+    order = "k",
+    stack_size = 50
+}
+
+---codexes mk04--
+
+ITEM {
+    type = "item",
+    name = "korlex-codex-mk04",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk04.png",},
+         {icon = "__pyalienlifegraphics__/graphics/icons/korlex.png", scale = 0.2},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk04",
     order = "k",
     stack_size = 50
 }

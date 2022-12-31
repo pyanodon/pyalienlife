@@ -5,7 +5,7 @@ FUN.autorecipes {
     name = 'moss',
 	category = 'moss',
 	module_limitations = 'moss',
-	subgroup = 'py-alienlife-moon',
+	subgroup = 'py-alienlife-moss',
     order = 'a',
 	upgrades =
 		{
@@ -56,7 +56,7 @@ FUN.autorecipes {
         {
 			ingredients =
 				{
-                    {name='coarse', amount = 10},
+                    {name='coarse', amount = 5},
 				},
 			results =
 				{

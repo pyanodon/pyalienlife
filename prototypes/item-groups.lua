@@ -341,7 +341,13 @@ data:extend {
         type = "item-subgroup",
         name = "py-alienlife-moon",
         group = "py-alienlife",
-        order = "g-e"
+        order = "g-ea"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-moss",
+        group = "py-alienlife",
+        order = "g-eb"
     },
     {
         type = "item-subgroup",
@@ -354,6 +360,18 @@ data:extend {
         name = "py-alienlife-codex-mk02",
         group = "py-alienlife",
         order = "hb"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-codex-mk03",
+        group = "py-alienlife",
+        order = "hc"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-codex-mk04",
+        group = "py-alienlife",
+        order = "hd"
     },
     {
         type = "item-subgroup",

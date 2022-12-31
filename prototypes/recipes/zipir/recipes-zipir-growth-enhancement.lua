@@ -2,7 +2,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'zipir-improved',
-	category = 'creature-chamber',
+	category = 'zipir',
 	module_limitations = 'zipir',
 	subgroup = 'py-alienlife-zipir',
 	order = 'b',

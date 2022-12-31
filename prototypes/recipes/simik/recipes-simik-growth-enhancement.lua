@@ -2,7 +2,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'simik-improved',
-	category = 'creature-chamber',
+	category = 'simik',
 	--module_limitations = 'simik',
 	subgroup = 'py-alienlife-simik',
 	order = 'b',

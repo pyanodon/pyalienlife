@@ -315,6 +315,7 @@ FUN.autorecipes {
 	}
 }
 
+--[[
 FUN.autorecipes {
     name = 'special-arqad-guts',
 	category = "creature-chamber",
@@ -339,3 +340,4 @@ FUN.autorecipes {
 		},
 	}
 }
+]]--

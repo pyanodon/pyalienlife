@@ -2,7 +2,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'xyhiphoe-improve',
-	category = 'creature-chamber',
+	category = 'xyhiphoe',
 	--module_limitations = 'xyhiphoe',
 	subgroup = 'py-alienlife-xyhiphoe',
 	order = 'b',
