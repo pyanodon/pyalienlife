@@ -12,9 +12,12 @@ RECIPE {
         {type = 'item', name = 'alien-sample-02', amount = 2},
         {type = 'item', name = 'bio-sample', amount = 20},
         {type = 'item', name = 'earth-generic-sample', amount = 5},
+        {type = 'item', name = 'strorix-unknown-sample', amount = 2},
         {type = 'item', name = 'cdna', amount = 3},
         {type = 'item', name = 'xeno-codex', amount = 1},
-        {type = 'fluid', name = 'artificial-blood', amount = 1000}, --add alien sample from pyALiens mod here.
+        {type = 'fluid', name = 'artificial-blood', amount = 1000},
+        {type = 'fluid', name = 'fetal-serum', amount = 100},
+        {type = 'fluid', name = 'sulfuric-acid', amount = 150},
     },
     results = {
         {type = 'item', name = 'xeno', amount = 1},
@@ -137,7 +140,7 @@ if mods['pyhightech'] then
             {type = 'item', name = 'xeno-egg', amount = 1},
         },
         results = {
-            {type = 'fluid', name = 'phosphoric-acid', amount = 35},
+            {type = 'fluid', name = 'phosphoric-acid', amount = 45},
         },
         --main_product = "xeno",
     }:add_unlock("xeno-mk03")

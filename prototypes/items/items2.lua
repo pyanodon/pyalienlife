@@ -613,6 +613,111 @@ ITEM {
     stack_size = 50
 }
 
+ITEM {
+    type = "item",
+    name = "phadai-codex-mk02",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk02.png",},
+         {icon = "__pyalienlifegraphics__/graphics/icons/phadai.png", scale = 0.22},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk02",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "dingrits-codex-mk02",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk02.png",},
+         {icon = "__pyalienlifegraphics__/graphics/icons/dingrits.png", scale = 0.22},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk02",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "kmauts-codex-mk02",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk02.png",},
+         {icon = "__pyalienlifegraphics__/graphics/icons/kmauts.png", scale = 0.22},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk02",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "vonix-codex-mk02",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk02.png",},
+         {icon = "__pyalienlifegraphics__/graphics/icons/vonix.png", scale = 0.22},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk02",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "xeno-codex-mk02",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk02.png",},
+         {icon = "__pyalienlifegraphics__/graphics/icons/xeno.png", scale = 0.22},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk02",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "zipir-codex-mk02",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk02.png",},
+         {icon = "__pyalienlifegraphics__/graphics/icons/zipir.png", scale = 0.22},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk02",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "trits-codex-mk02",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk02.png",},
+         {icon = "__pyalienlifegraphics__/graphics/icons/trits.png", scale = 0.22},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk02",
+    order = "k",
+    stack_size = 50
+}
+
 ---codexes mk03--
 
 ITEM {
@@ -675,6 +780,110 @@ ITEM {
     stack_size = 50
 }
 
+ITEM {
+    type = "item",
+    name = "phadai-codex-mk03",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk03.png",},
+         {icon = "__pyalienlifegraphics__/graphics/icons/phadai.png", scale = 0.2},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk03",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "dingrits-codex-mk03",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk03.png",},
+         {icon = "__pyalienlifegraphics__/graphics/icons/dingrits.png", scale = 0.2},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk03",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "kmauts-codex-mk03",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk03.png",},
+         {icon = "__pyalienlifegraphics__/graphics/icons/kmauts.png", scale = 0.2},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk03",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "vonix-codex-mk03",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk03.png",},
+         {icon = "__pyalienlifegraphics__/graphics/icons/vonix.png", scale = 0.2},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk03",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "xeno-codex-mk03",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk03.png",},
+         {icon = "__pyalienlifegraphics__/graphics/icons/xeno.png", scale = 0.2},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk03",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "zipir-codex-mk03",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk03.png",},
+         {icon = "__pyalienlifegraphics__/graphics/icons/zipir.png", scale = 0.2},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk03",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "trits-codex-mk03",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk03.png",},
+         {icon = "__pyalienlifegraphics__/graphics/icons/trits.png", scale = 0.2},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk03",
+    order = "k",
+    stack_size = 50
+}
 
 ---codexes mk04--
 
@@ -730,6 +939,96 @@ ITEM {
     {
          {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk04.png",},
          {icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png", scale = 0.2},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk04",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "phadai-codex-mk04",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk04.png",},
+         {icon = "__pyalienlifegraphics__/graphics/icons/phadai.png", scale = 0.2},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk04",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "dingrits-codex-mk04",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk04.png",},
+         {icon = "__pyalienlifegraphics__/graphics/icons/dingrits.png", scale = 0.2},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk04",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "kmauts-codex-mk04",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk04.png",},
+         {icon = "__pyalienlifegraphics__/graphics/icons/kmauts.png", scale = 0.2},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk04",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "xeno-codex-mk04",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk04.png",},
+         {icon = "__pyalienlifegraphics__/graphics/icons/xeno.png", scale = 0.2},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk04",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "zipir-codex-mk04",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk04.png",},
+         {icon = "__pyalienlifegraphics__/graphics/icons/zipir.png", scale = 0.2},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk04",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "trits-codex-mk04",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk04.png",},
+         {icon = "__pyalienlifegraphics__/graphics/icons/trits.png", scale = 0.2},
     },
     icon_size = 64,
     flags = {},
