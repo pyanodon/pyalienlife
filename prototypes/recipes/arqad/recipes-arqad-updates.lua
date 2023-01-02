@@ -66,5 +66,6 @@ RECIPE {
     results = {
         {type = 'item', name = 'arqad-jelly-barrel', amount = 6},  --FUTURE USE IN PESTICIDE PRODUCTION--
     },
+    subgroup = 'py-alienlife-arqad'
     --main_product = "arqad-jelly-barrel",
 }:add_unlock("chromasome-infocrystalization")

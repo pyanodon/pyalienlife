@@ -199,6 +199,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'arqad-jelly-barrel', amount = 3},  --FUTURE USE IN PESTICIDE PRODUCTION--
     },
+    subgroup = 'py-alienlife-arqad'
     --main_product = "arqad-jelly-barrel",
 }:add_unlock("arqad-mk02")
 
@@ -267,8 +268,6 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'lubricant', amount = 120},
     },
-    subgroup = 'py-alienlife-fluids',
-    order = 'b1',
 }:add_unlock("arqad-mk02")
 
 RECIPE {
