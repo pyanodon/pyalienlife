@@ -718,6 +718,21 @@ ITEM {
     stack_size = 50
 }
 
+ITEM {
+    type = "item",
+    name = "zungror-codex-mk02",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk02.png",},
+         {icon = "__pyalienlifegraphics__/graphics/icons/zungror.png", scale = 0.22},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk02",
+    order = "k",
+    stack_size = 50
+}
+
 ---codexes mk03--
 
 ITEM {
@@ -885,6 +900,21 @@ ITEM {
     stack_size = 50
 }
 
+ITEM {
+    type = "item",
+    name = "zungror-codex-mk03",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk03.png",},
+         {icon = "__pyalienlifegraphics__/graphics/icons/zungror.png", scale = 0.2},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk03",
+    order = "k",
+    stack_size = 50
+}
+
 ---codexes mk04--
 
 ITEM {
@@ -1029,6 +1059,21 @@ ITEM {
     {
          {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk04.png",},
          {icon = "__pyalienlifegraphics__/graphics/icons/trits.png", scale = 0.2},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk04",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "zungror-codex-mk04",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk04.png",},
+         {icon = "__pyalienlifegraphics__/graphics/icons/zungror.png", scale = 0.2},
     },
     icon_size = 64,
     flags = {},
