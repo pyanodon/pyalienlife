@@ -6,6 +6,7 @@ Date: ?
     - caravans are now immune to biters and trains
     - caravans have a new action "circuit condition"
     - caravans can navigate forests with 100% reliability
+    - UPS improvement for caravans
     - added a wiki page for digosaurus and thikats
     - fixed crash with nuka caravan
     - fixed graphical issue with the "add-action" button for caravans

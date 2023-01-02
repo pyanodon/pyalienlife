@@ -217,7 +217,6 @@ local function begin_schedule(caravan_data, schedule_id, skip_eating, is_retry)
 			if not skip_eating and not eat(caravan_data) then stop_actions(caravan_data); return end
 		end
 		caravan_data.schedule_id = schedule_id
-		caravan_data.action_id = -1
 		caravan_data.retry_pathfinder = 1
 		return
 	end
@@ -235,6 +234,11 @@ local function begin_schedule(caravan_data, schedule_id, skip_eating, is_retry)
 		goto_position(caravan_data, Position.random(schedule.position, 0, 1, true))
 	elseif schedule.entity and schedule.entity.valid then
 		goto_entity(caravan_data, schedule.entity)
+	elseif schedule.entity and not schedule.entity.valid then
+		game.print{'caravan-warnings.no-destination', entity.name, math.floor(entity.position.x*10)/10, math.floor(entity.position.y*10)/10}
+		table.remove(caravan_data.schedule, schedule_id)
+		stop_actions(caravan_data)
+		return
 	else
 		goto_position(caravan_data, schedule.position)
 	end
@@ -290,7 +294,7 @@ gui_events[defines.events.on_gui_click]['py_action_play'] = function(event)
 			stop_actions(caravan_data)
 		else
 			local position; if schedule.entity then position = schedule.entity.position else position = schedule.position end
-			if Position.distance_squared(position, caravan_data.entity.position) < 100 then
+			if Position.distance_squared(position, caravan_data.entity.position) < 1000 then
 				begin_action(caravan_data, tags.action_id)
 			end
 		end
@@ -387,7 +391,7 @@ Caravan.events.ai_command_completed = function(event)
 	if #schedule.actions == 0 then
 		local schedule_num = #caravan_data.schedule
 		if schedule_num == 1 then
-			caravan_data.retry_pathfinder = 2
+			caravan_data.retry_pathfinder = 3
 			return
 		elseif caravan_data.schedule_id == schedule_num then
 			begin_schedule(caravan_data, 1)
@@ -461,11 +465,11 @@ Caravan.events[60] = function(event)
 			guis_to_update[caravan_data.unit_number] = true
 		else
 			if schedule.entity and schedule.entity.valid then
-				if Position.distance_squared(schedule.entity.position, caravan_data.entity.position) > 100 then
+				if Position.distance_squared(schedule.entity.position, caravan_data.entity.position) > 1000 then
 					goto_entity(caravan_data, schedule.entity)
 				end
 			else
-				if Position.distance_squared(schedule.position, caravan_data.entity.position) > 100 then
+				if Position.distance_squared(schedule.position, caravan_data.entity.position) > 1000 then
 					goto_position(caravan_data, schedule.position)
 				end
 			end
