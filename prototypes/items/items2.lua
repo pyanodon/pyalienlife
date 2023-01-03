@@ -162,65 +162,65 @@ ITEM {
 	limitation_message_key = "Simik"
 }
 
--- ITEM {
---     type = "module",
---     name = "simik-mk02",
---     icons =
---     {
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
---         {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png"}
---     },
---     icon_size = 64,
--- 	category = "simik",
--- 	tier = 2,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "xa-b",
---     stack_size = 50,
--- 	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
--- 	limitation = {},
--- 	limitation_message_key = "Simik",
--- }
+ITEM {
+     type = "module",
+     name = "simik-mk02",
+     icons =
+     {
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+         {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png"}
+     },
+     icon_size = 64,
+ 	category = "simik",
+ 	tier = 2,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "xa-b",
+     stack_size = 50,
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
+ 	limitation = {},
+ 	limitation_message_key = "Simik",
+}
 
--- ITEM {
---     type = "module",
---     name = "simik-mk03",
---     icons =
---     {
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
---         {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png"}
---     },
---     icon_size = 64,
--- 	category = "simik",
--- 	tier = 3,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "xa-c",
---     stack_size = 50,
--- 	effect = {pollution = {bonus = 1},speed = {bonus = 3}},
--- 	limitation = {},
--- 	limitation_message_key = "Simik",
--- }
+ ITEM {
+     type = "module",
+     name = "simik-mk03",
+     icons =
+     {
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+         {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png"}
+     },
+     icon_size = 64,
+ 	category = "simik",
+ 	tier = 3,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "xa-c",
+     stack_size = 50,
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 3}},
+ 	limitation = {},
+ 	limitation_message_key = "Simik",
+ }
 
--- ITEM {
---     type = "module",
---     name = "simik-mk04",
---     icons =
---     {
---         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
---         {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png"}
---     },
---     icon_size = 64,
--- 	category = "simik",
--- 	tier = 4,
---     flags = {},
---     subgroup = "py-alienlife-modules",
---     order = "xa-d",
---     stack_size = 50,
--- 	effect = {pollution = {bonus = 1},speed = {bonus = 4}},
--- 	limitation = {},
--- 	limitation_message_key = "Simik",
--- }
+ ITEM {
+     type = "module",
+     name = "simik-mk04",
+     icons =
+     {
+         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+         {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png"}
+     },
+     icon_size = 64,
+ 	category = "simik",
+ 	tier = 4,
+     flags = {},
+     subgroup = "py-alienlife-modules",
+     order = "xa-d",
+     stack_size = 50,
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 4}},
+ 	limitation = {},
+ 	limitation_message_key = "Simik",
+ }
 
 ITEM {
     type = "item",
@@ -733,6 +733,21 @@ ITEM {
     stack_size = 50
 }
 
+ITEM {
+    type = "item",
+    name = "simik-codex-mk02",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk02.png",},
+         {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png", scale = 0.2},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk02",
+    order = "k",
+    stack_size = 50
+}
+
 ---codexes mk03--
 
 ITEM {
@@ -915,6 +930,21 @@ ITEM {
     stack_size = 50
 }
 
+ITEM {
+    type = "item",
+    name = "simik-codex-mk03",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk03.png",},
+         {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png", scale = 0.2},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk03",
+    order = "k",
+    stack_size = 50
+}
+
 ---codexes mk04--
 
 ITEM {
@@ -1079,5 +1109,83 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex-mk04",
     order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "simik-codex-mk04",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk04.png",},
+         {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png", scale = 0.2},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk04",
+    order = "k",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "used-simik",
+    icons =
+	{
+        {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+    },
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "used-simik-mk02",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "used-simik-mk03",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
+    stack_size = 50
+}
+
+ITEM {
+    type = "item",
+    name = "used-simik-mk04",
+    icons =
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/simik.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/tired.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-used",
+    order = "x",
     stack_size = 50
 }
