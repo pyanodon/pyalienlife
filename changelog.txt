@@ -2,6 +2,8 @@
 Version: 2.0.7
 Date: ?
   Changes:
+    - Added a new way to get mk2, mk3, mk4 versions of animal modules
+    - Reorganized some of the recipe subgroups
     - updated thikats graphics+recipe
     - caravans are now immune to biters and trains
     - caravans have a new action "circuit condition"
