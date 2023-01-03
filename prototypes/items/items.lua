@@ -1204,15 +1204,38 @@ ITEM {
     stack_size = 100
 }
 
+data:extend{{
+    type = 'battery-equipment',
+    categories = {'armor'},
+    shape = {width = 1, height = 3, type = 'full'},
+    name = 'biobattery',
+    sprite = {
+        width = 22,
+        height = 82,
+        filename = '__pyalienlifegraphics__/graphics/icons/biobattery-equipment.png',
+        scale = 1.2
+    },
+    energy_source = {
+        type = 'electric',
+        buffer_capacity = '180MJ',
+        usage_priority = 'tertiary'
+    },
+    localised_name = {'item-name.biobattery'},
+    localised_description = {'item-description.biobattery'}
+}}
+
 ITEM {
     type = "item",
     name = "biobattery",
     icon = "__pyalienlifegraphics__/graphics/icons/biobattery.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
-    order = "h",
-    stack_size = 100
+    subgroup = "py-battery-equipment",
+    order = "c",
+    stack_size = 100,
+    localised_name = {'item-name.biobattery'},
+    localised_description = {'item-description.biobattery'},
+    placed_as_equipment_result = 'biobattery'
 }
 
 ITEM {
