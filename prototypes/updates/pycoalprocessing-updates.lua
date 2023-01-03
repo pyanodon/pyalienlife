@@ -75,10 +75,10 @@ RECIPE('bonemeal'):remove_unlock('ulric')
 RECIPE('coal-fawogae'):remove_unlock('coal-processing-1'):add_unlock('fawogae-mk01')
 
 RECIPE("automated-factory-mk01"):remove_unlock("fast-inserter"):add_unlock("automation-2")
-RECIPE('botanical-nursery'):remove_unlock('wood-processing'):subgroup_order("py-alienlife-buildings-mk01", "b"):add_unlock('botany-mk01')
-RECIPE('botanical-nursery-mk02'):remove_unlock('machines-mk02'):add_unlock('botany-mk02'):subgroup_order("py-alienlife-buildings-mk02", "b")
-RECIPE('botanical-nursery-mk03'):remove_unlock('machines-mk03'):add_unlock('botany-mk03'):subgroup_order("py-alienlife-buildings-mk03", "b")
-RECIPE('botanical-nursery-mk04'):remove_unlock('machines-mk04'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk04", "b")
+RECIPE('botanical-nursery'):remove_unlock('wood-processing'):add_unlock('botany-mk01')
+RECIPE('botanical-nursery-mk02'):remove_unlock('machines-mk02'):add_unlock('botany-mk02')
+RECIPE('botanical-nursery-mk03'):remove_unlock('machines-mk03'):add_unlock('botany-mk03')
+RECIPE('botanical-nursery-mk04'):remove_unlock('machines-mk04'):add_unlock('botany-mk04')
 RECIPE('hpf'):remove_unlock('coal-processing-1'):set_fields {enabled = true}
 RECIPE('ralesia-plantation-mk01'):remove_unlock('ralesia')
 --RECIPE('ralesia-plantation-mk02'):add_unlock('botany-mk02'):subgroup_order("py-alienlife-buildings-mk02", "e")
@@ -86,10 +86,10 @@ RECIPE('ralesia-plantation-mk01'):remove_unlock('ralesia')
 --RECIPE('ralesia-plantation-mk04'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk04", "e")
 RECIPE('ulric-corral-mk01'):remove_unlock('coal-processing-1')
 RECIPE('mukmoux-pasture'):remove_unlock('mukmoux')
-ITEM("botanical-nursery"):set("icon", "__pyalienlifegraphics__/graphics/icons/botanical-nursery-mk01.png"):set_fields {icon_size = 64,}
-ITEM("botanical-nursery-mk02"):set("icon", "__pyalienlifegraphics__/graphics/icons/botanical-nursery-mk02.png"):set_fields {icon_size = 64,}
-ITEM("botanical-nursery-mk03"):set("icon", "__pyalienlifegraphics__/graphics/icons/botanical-nursery-mk03.png"):set_fields {icon_size = 64,}
-ITEM("botanical-nursery-mk04"):set("icon", "__pyalienlifegraphics__/graphics/icons/botanical-nursery-mk04.png"):set_fields {icon_size = 64,}
+ITEM("botanical-nursery"):set("icon", "__pyalienlifegraphics__/graphics/icons/botanical-nursery-mk01.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-buildings-mk01", "b")
+ITEM("botanical-nursery-mk02"):set("icon", "__pyalienlifegraphics__/graphics/icons/botanical-nursery-mk02.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-buildings-mk02", "b")
+ITEM("botanical-nursery-mk03"):set("icon", "__pyalienlifegraphics__/graphics/icons/botanical-nursery-mk03.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-buildings-mk03", "b")
+ITEM("botanical-nursery-mk04"):set("icon", "__pyalienlifegraphics__/graphics/icons/botanical-nursery-mk04.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-buildings-mk04", "b")
 
 RECIPE("automated-factory-mk01"):replace_ingredient("fast-inserter", "inserter")
 

@@ -23,6 +23,7 @@ Date: ?
     - Fixed smart farm crash when used on a diffrent surface
     - Smart farm bioreserve output is now 20x higher
     - Fixed phadai stage 3/4 breeding being worse than stage 1/2
+    - Auog and dingrit generators now have low output priority than pYAE renewables
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.6
 Date: 2022-12-20
