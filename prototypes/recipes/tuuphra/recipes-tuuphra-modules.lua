@@ -29,8 +29,8 @@ RECIPE {
     --main_product = "tuuphra-mk02",
     icons =
         {
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png'},
-            {icon = "__pyalienlifegraphics__/graphics/icons/tuuphra.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}}
+            {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk02.png", icon_size = 64},
+            {icon = "__pyalienlifegraphics__/graphics/icons/tuuphra.png", icon_size = 64, scale = 0.35},
         },
     icon_size = 64,
     subgroup = 'py-alienlife-tuuphra',
@@ -56,10 +56,10 @@ RECIPE {
     },
     --main_product = "tuuphra-mk02",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/tuuphra.png", icon_size = 64},
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/tuuphra.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-tuuphra',
     order = 'za'
@@ -92,8 +92,8 @@ RECIPE {
     --main_product = "tuuphra-mk03",
     icons =
         {
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png'},
-            {icon = "__pyalienlifegraphics__/graphics/icons/tuuphra.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
+            {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk03.png", icon_size = 64},
+            {icon = "__pyalienlifegraphics__/graphics/icons/tuuphra.png", icon_size = 64, scale = 0.35},
         },
     icon_size = 64,
     subgroup = 'py-alienlife-tuuphra',
@@ -120,10 +120,10 @@ RECIPE {
     },
     --main_product = "tuuphra-mk03",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/tuuphra.png", icon_size = 64},
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png', icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/tuuphra.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-tuuphra',
     order = 'zb'
@@ -156,8 +156,8 @@ RECIPE {
     --main_product = "tuuphra-mk04",
     icons =
         {
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png'},
-            {icon = "__pyalienlifegraphics__/graphics/icons/tuuphra.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
+            {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk04.png", icon_size = 64},
+            {icon = "__pyalienlifegraphics__/graphics/icons/tuuphra.png", icon_size = 64, scale = 0.35},
         },
     icon_size = 64,
     subgroup = 'py-alienlife-tuuphra',
@@ -184,10 +184,10 @@ RECIPE {
     },
     --main_product = "tuuphra-mk04",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/tuuphra.png", icon_size = 64},
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png', icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/tuuphra.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-tuuphra',
     order = 'zc'

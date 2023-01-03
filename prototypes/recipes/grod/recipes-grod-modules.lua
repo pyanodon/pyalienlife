@@ -54,10 +54,10 @@ RECIPE {
     },
     main_product = "grod-mk02",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/grod.png", icon_size = 64},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk02.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/grod.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-grod',
     order = 'za'
@@ -101,10 +101,10 @@ RECIPE {
     },
     main_product = "grod-seeds-mk02",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/grod-seeds.png", icon_size = 64},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk02.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/grod-seeds.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-grod',
     order = 'za'
@@ -132,7 +132,11 @@ RECIPE {
         {type = 'item', name = 'grod', amount = 1, probability = 0.6},
     },
     main_product = "grod-mk03",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png',
+    icons =
+        {
+            {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk03.png", icon_size = 64},
+            {icon = "__pyalienlifegraphics__/graphics/icons/grod.png", icon_size = 64, scale = 0.35},
+        },
     icon_size = 64,
     subgroup = 'py-alienlife-grod',
     order = 'zb'
@@ -160,10 +164,10 @@ RECIPE {
     },
     main_product = "grod-mk03",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/grod.png", icon_size = 64},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk03.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/grod.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-grod',
     order = 'zb'
@@ -207,10 +211,10 @@ RECIPE {
     },
     main_product = "grod-seeds-mk03",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/grod-seeds.png", icon_size = 64},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk03.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/grod-seeds.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-grod',
     order = 'zc'
@@ -238,7 +242,11 @@ RECIPE {
         {type = 'item', name = 'grod', amount = 1, probability = 0.7},
     },
     main_product = "grod-mk04",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
+    icons =
+        {
+            {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk04.png", icon_size = 64},
+            {icon = "__pyalienlifegraphics__/graphics/icons/grod.png", icon_size = 64, scale = 0.35},
+        },
     icon_size = 64,
     subgroup = 'py-alienlife-grod',
     order = 'zc'
@@ -266,10 +274,10 @@ RECIPE {
     },
     main_product = "grod-mk04",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/grod.png", icon_size = 64},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk04.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/grod.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-grod',
     order = 'zc'
@@ -313,10 +321,10 @@ RECIPE {
     },
     main_product = "grod-seeds-mk04",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/grod-seeds.png", icon_size = 64},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk04.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/grod-seeds.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-grod',
     order = 'zc'

@@ -50,10 +50,10 @@ RECIPE {
     },
     main_product = "yotoi-seeds-mk02",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/yotoi-seeds.png", icon_size = 64},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk02.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/yotoi-seeds.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-yotoi',
     order = 'za'
@@ -76,10 +76,10 @@ RECIPE {
     },
     main_product = "yotoi-mk02",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/yotoi.png", icon_size = 64},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk02.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/yotoi.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-yotoi',
     order = 'za'
@@ -101,10 +101,10 @@ RECIPE {
     },
     main_product = "yotoi-fruit-mk02",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/yotoi-fruit.png", icon_size = 64},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk02.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/yotoi-fruit.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-yotoi',
     order = 'za'
@@ -156,10 +156,10 @@ RECIPE {
     },
     main_product = "yotoi-seeds-mk03",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/yotoi-seeds.png", icon_size = 64},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk03.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/yotoi-seeds.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-yotoi',
     order = 'zb'
@@ -183,10 +183,10 @@ RECIPE {
     },
     main_product = "yotoi-mk03",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/yotoi.png", icon_size = 64},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk03.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/yotoi.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-yotoi',
     order = 'zb'
@@ -208,10 +208,10 @@ RECIPE {
     },
     main_product = "yotoi-fruit-mk03",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/yotoi-fruit.png", icon_size = 64},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk03.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/yotoi-fruit.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-yotoi',
     order = 'zb'
@@ -264,10 +264,10 @@ RECIPE {
     },
     main_product = "yotoi-seeds-mk04",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/yotoi-seeds.png", icon_size = 64},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk04.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/yotoi-seeds.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-yotoi',
     order = 'zc'
@@ -286,17 +286,17 @@ RECIPE {
         {type = 'item', name = 'ag-biomass', amount = 10},
         {type = 'item', name = 'nacl-biomass', amount = 10},
         {type = 'item', name = 'antiviral', amount = 2},
-        
+
         },
     results = {
         {type = 'item', name = 'yotoi-mk04', amount = 2},
     },
     main_product = "yotoi-mk04",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/yotoi.png", icon_size = 64},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk04.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/yotoi.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-yotoi',
     order = 'zc'
@@ -318,10 +318,10 @@ RECIPE {
     },
     main_product = "yotoi-fruit-mk04",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/yotoi-fruit.png", icon_size = 64},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk04.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/yotoi-fruit.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-yotoi',
     order = 'zc'

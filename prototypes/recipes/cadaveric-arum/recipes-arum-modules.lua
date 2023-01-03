@@ -25,10 +25,11 @@ RECIPE {
     },
     main_product = "cadaveric-arum-mk02-a",
     icons =
-        {
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png'},
-            {icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}}
-        },
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk02.png", icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum.png", icon_size = 64, scale = 0.35},
+
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-cadaveric',
     order = 'za'
@@ -78,10 +79,10 @@ RECIPE {
     },
     --main_product = "cadaveric-arum-mk02",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum-seeds.png"},
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}}
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/cadaveric-arum-seeds.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-cadaveric',
     order = 'za'
@@ -105,10 +106,10 @@ RECIPE {
     },
     --main_product = "cadaveric-arum-mk02",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum.png"},
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}}
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/cadaveric-arum.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-cadaveric',
     order = 'za'
@@ -138,10 +139,11 @@ RECIPE {
     },
     main_product = "cadaveric-arum-mk03-a",
     icons =
-        {
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png'},
-            {icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}}
-        },
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk03.png", icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum.png", icon_size = 64, scale = 0.35},
+
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-cadaveric',
     order = 'zb'
@@ -192,10 +194,10 @@ RECIPE {
     },
     --main_product = "cadaveric-arum-mk03",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum-seeds.png"},
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png', icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}}
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/cadaveric-arum-seeds.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-cadaveric',
     order = 'za'
@@ -219,10 +221,10 @@ RECIPE {
     },
     --main_product = "cadaveric-arum-mk03",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum.png"},
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png', icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}}
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/cadaveric-arum.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-cadaveric',
     order = 'za'
@@ -254,10 +256,11 @@ RECIPE {
     },
     main_product = "cadaveric-arum-mk04-a",
     icons =
-        {
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png'},
-            {icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}}
-        },
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk04.png", icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum.png", icon_size = 64, scale = 0.35},
+
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-cadaveric',
     order = 'zc'
@@ -308,10 +311,10 @@ RECIPE {
     },
     --main_product = "cadaveric-arum-mk04",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum-seeds.png"},
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png', icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}}
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/cadaveric-arum-seeds.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-cadaveric',
     order = 'za'
@@ -335,10 +338,10 @@ RECIPE {
     },
     --main_product = "cadaveric-arum-mk04",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum.png"},
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png', icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}}
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/cadaveric-arum.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-cadaveric',
     order = 'za'

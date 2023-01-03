@@ -26,7 +26,11 @@ RECIPE {
         {type = 'item', name = 'kicalk', amount = 1, probability = 0.5},
     },
     main_product = "kicalk-seeds-mk02",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
+    icons =
+        {
+            {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk02.png", icon_size = 64},
+            {icon = "__pyalienlifegraphics__/graphics/icons/kicalk.png", icon_size = 64, scale = 0.35},
+        },
     icon_size = 64,
     subgroup = 'py-alienlife-kicalk',
     order = 'za'
@@ -101,7 +105,11 @@ RECIPE {
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "kicalk-mk03",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png',
+    icons =
+        {
+            {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk03.png", icon_size = 64},
+            {icon = "__pyalienlifegraphics__/graphics/icons/kicalk.png", icon_size = 64, scale = 0.35},
+        },
     icon_size = 64,
     subgroup = 'py-alienlife-kicalk',
     order = 'zb'
@@ -179,7 +187,11 @@ RECIPE {
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "kicalk-mk04",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
+    icons =
+        {
+            {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk04.png", icon_size = 64},
+            {icon = "__pyalienlifegraphics__/graphics/icons/kicalk.png", icon_size = 64, scale = 0.35},
+        },
     icon_size = 64,
     subgroup = 'py-alienlife-kicalk',
     order = 'zc'

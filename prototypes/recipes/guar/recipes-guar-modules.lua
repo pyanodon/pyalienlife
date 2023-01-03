@@ -53,10 +53,10 @@ RECIPE {
     },
     main_product = "guar-mk02",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/guar.png", icon_size = 64},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk02.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/guar.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-guar',
     order = 'za'
@@ -77,10 +77,10 @@ RECIPE {
     },
     main_product = "guar-seeds-mk02",
     icons =
-        {
-            {icon = "__pypetroleumhandlinggraphics__/graphics/icons/guar-seeds.png", icon_size = 32},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk02.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = '__pypetroleumhandlinggraphics__/graphics/icons/guar-seeds.png', icon_size = 32},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-guar',
     order = 'za'
@@ -139,10 +139,10 @@ RECIPE {
     },
     main_product = "guar-mk03",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/guar.png", icon_size = 64},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk03.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/guar.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-guar',
     order = 'zb'
@@ -163,10 +163,10 @@ RECIPE {
     },
     main_product = "guar-seeds-mk03",
     icons =
-        {
-            {icon = "__pypetroleumhandlinggraphics__/graphics/icons/guar-seeds.png", icon_size = 32},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk03.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = '__pypetroleumhandlinggraphics__/graphics/icons/guar-seeds.png', icon_size = 32},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-guar',
     order = 'zb'
@@ -225,10 +225,10 @@ RECIPE {
     },
     main_product = "guar-mk04",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/guar.png", icon_size = 64},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk04.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/guar.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-guar',
     order = 'zc'
@@ -250,8 +250,8 @@ RECIPE {
     main_product = "guar-seeds-mk04",
     icons =
         {
-            {icon = "__pypetroleumhandlinggraphics__/graphics/icons/guar-seeds.png", icon_size = 32},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk04.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
+            {icon = '__pypetroleumhandlinggraphics__/graphics/icons/guar-seeds.png', icon_size = 32},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
         },
     icon_size = 64,
     subgroup = 'py-alienlife-guar',

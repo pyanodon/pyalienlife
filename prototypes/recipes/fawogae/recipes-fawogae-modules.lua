@@ -26,7 +26,11 @@ RECIPE {
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     main_product = "fawogae-mk02",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
+    icons =
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk02.png", icon_size = 64},
+        {icon = '__pycoalprocessinggraphics__/graphics/icons/fawogae-icon.png', icon_size = 32, scale = 0.7},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-fawogae',
     order = 'za'
@@ -50,7 +54,11 @@ RECIPE {
         {type = 'item', name = 'fawogae-mk02', amount = 1, probability = 0.25},
     },
     main_product = "fawogae-mk02",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
+    icons =
+    {
+        {icon = '__pycoalprocessinggraphics__/graphics/icons/fawogae-icon.png', icon_size = 32},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-fawogae',
     order = 'za'
@@ -80,7 +88,11 @@ RECIPE {
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     main_product = "fawogae-mk03",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png',
+    icons =
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk03.png", icon_size = 64},
+        {icon = '__pycoalprocessinggraphics__/graphics/icons/fawogae-icon.png', icon_size = 32, scale = 0.7},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-fawogae',
     order = 'zb'
@@ -106,7 +118,11 @@ RECIPE {
         {type = 'item', name = 'fawogae-mk03', amount = 1, probability = 0.25},
     },
     main_product = "fawogae-mk03",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png',
+    icons =
+    {
+        {icon = '__pycoalprocessinggraphics__/graphics/icons/fawogae-icon.png', icon_size = 32},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-fawogae',
     order = 'zb'
@@ -136,7 +152,11 @@ RECIPE {
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     main_product = "fawogae-mk04",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
+    icons =
+    {
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk04.png", icon_size = 64},
+        {icon = '__pycoalprocessinggraphics__/graphics/icons/fawogae-icon.png', icon_size = 32, scale = 0.7},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-fawogae',
     order = 'zc'
@@ -162,7 +182,11 @@ RECIPE {
         {type = 'item', name = 'fawogae-mk04', amount = 1, probability = 0.25},
     },
     main_product = "fawogae-mk04",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
+    icons =
+    {
+        {icon = '__pycoalprocessinggraphics__/graphics/icons/fawogae-icon.png', icon_size = 32},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-fawogae',
     order = 'zc'

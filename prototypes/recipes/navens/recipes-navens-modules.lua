@@ -76,10 +76,10 @@ RECIPE {
     },
     main_product = "navens-spore-mk02",
     icons =
-        {
-            {icon = '__pyalienlifegraphics__/graphics/icons/navens-spore.png', icon_size = 64},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk02.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/navens-spore.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-navens',
     order = 'za'
@@ -160,10 +160,10 @@ RECIPE {
     },
     main_product = "navens-spore-mk03",
     icons =
-        {
-            {icon = '__pyalienlifegraphics__/graphics/icons/navens-spore.png', icon_size = 64},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk03.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/navens-spore.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-navens',
     order = 'zb'
@@ -243,10 +243,10 @@ RECIPE {
     },
     main_product = "navens-spore-mk04",
     icons =
-        {
-            {icon = '__pyalienlifegraphics__/graphics/icons/navens-spore.png', icon_size = 64},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk04.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = '__pyalienlifegraphics__/graphics/icons/navens-spore.png', icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-navens',
     order = 'zc'
