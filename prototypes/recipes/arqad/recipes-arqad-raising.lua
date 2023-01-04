@@ -34,7 +34,7 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='ralesias', amount = 15},
-					{name = 'arqad', add_amount = 3},
+					{name = 'arqad', add_amount = 2},
 				},
 			results =
 				{
@@ -150,7 +150,7 @@ FUN.autorecipes {
 				{
 					{name = 'arqad-maggot', add_amount = 5},
                     {name = 'arqad-jelly-barrel', amount = 5,return_barrel = true},
-					{name = 'vrauks', add_amount = 2},
+					{name = 'vrauks', add_amount = 1},
 					{name = 'vrauks-food-01', add_amount = 2}
 				},
 			results =
@@ -248,7 +248,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='arqad', amount_min = 7, amount_max = 12},
+					{name='arqad', amount_min = 8, amount_max = 16},
 					{name='used-comb', add_amount = 1},
 				},
 			crafting_speed = 100,
@@ -263,7 +263,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='arqad', amount_min = 12, amount_max = 16},
+					{name='arqad', amount_min = 13, amount_max = 20},
 					{name='used-comb', add_amount = 1},
 				},
 			crafting_speed = 80,
@@ -278,7 +278,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='arqad', amount = 22},
+					{name='arqad', amount_min = 17, amount_max = 27},
 					{name='used-comb', add_amount = 1},
 				},
 			crafting_speed = 60,
