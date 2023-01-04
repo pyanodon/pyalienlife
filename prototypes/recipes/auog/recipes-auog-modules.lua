@@ -35,7 +35,8 @@ RECIPE {
     order = 'za'
 }:add_unlock("auog-mk02")
 
-RECIPE {
+--[[
+    RECIPE {
     type = 'recipe',
     name = 'auog-pup-01',
     category = 'rc-auog',
@@ -62,6 +63,7 @@ RECIPE {
     subgroup = 'py-alienlife-auog',
     order = 'za'
 }:add_unlock("auog-mk02")
+]]--
 
 RECIPE {
     type = 'recipe',
@@ -84,8 +86,8 @@ RECIPE {
     --main_product = "auog-mk02",
     icons =
         {
-            {icon = "__pyalienlifegraphics__/graphics/icons/auog.png"},
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', scale = 0.25,shift = {-7.5,-7.5}},
+            {icon = "__pyalienlifegraphics__/graphics/icons/auog-pup.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
         },
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
@@ -115,8 +117,8 @@ RECIPE {
     --main_product = "auog-mk02",
     icons =
         {
-            {icon = "__pyalienlifegraphics__/graphics/icons/auog-pup.png"},
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', scale = 0.25,shift = {-7.5,-7.5}},
+            {icon = "__pyalienlifegraphics__/graphics/icons/auog.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
         },
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
@@ -176,8 +178,8 @@ RECIPE {
     --main_product = "auog-mk02",
     icons =
         {
-            {icon = "__pyalienlifegraphics__/graphics/icons/auog.png"},
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', scale = 0.25,shift = {-7.5,-7.5}},
+            {icon = "__pyalienlifegraphics__/graphics/icons/auog-pup.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
         },
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
@@ -207,8 +209,8 @@ RECIPE {
     --main_product = "auog-mk02",
     icons =
         {
-            {icon = "__pyalienlifegraphics__/graphics/icons/auog-pup.png"},
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png', scale = 0.25,shift = {-7.5,-7.5}},
+            {icon = "__pyalienlifegraphics__/graphics/icons/auog.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
         },
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
@@ -268,8 +270,8 @@ RECIPE {
     --main_product = "auog-mk02",
     icons =
         {
-            {icon = "__pyalienlifegraphics__/graphics/icons/auog.png"},
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png', scale = 0.25,shift = {-7.5,-7.5}},
+            {icon = "__pyalienlifegraphics__/graphics/icons/auog-pup.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
         },
     icon_size = 64,
     subgroup = 'py-alienlife-auog',
@@ -299,8 +301,8 @@ RECIPE {
     --main_product = "auog-mk02",
     icons =
         {
-            {icon = "__pyalienlifegraphics__/graphics/icons/auog-pup.png"},
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png', scale = 0.25,shift = {-7.5,-7.5}},
+            {icon = "__pyalienlifegraphics__/graphics/icons/auog.png"},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
         },
     icon_size = 64,
     subgroup = 'py-alienlife-auog',

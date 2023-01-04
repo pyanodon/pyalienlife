@@ -79,7 +79,7 @@ RECIPE {
     icons =
         {
             {icon = "__pyalienlifegraphics__/graphics/icons/arthurian.png"},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk02.png", scale = 0.25, shift = {-7.5,-7.5}}
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
         },
     icon_size = 64,
     subgroup = 'py-alienlife-arthurian',
@@ -105,7 +105,7 @@ RECIPE {
     icons =
         {
             {icon = "__pyalienlifegraphics__/graphics/icons/arthurian-egg.png"},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk02.png", scale = 0.25, shift = {-7.5,-7.5}}
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
         },
     icon_size = 64,
     subgroup = 'py-alienlife-arthurian',
@@ -190,7 +190,7 @@ RECIPE {
     icons =
         {
             {icon = "__pyalienlifegraphics__/graphics/icons/arthurian.png"},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk03.png", scale = 0.25, shift = {-7.5,-7.5}}
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
         },
     icon_size = 64,
     subgroup = 'py-alienlife-arthurian',
@@ -216,7 +216,7 @@ RECIPE {
     icons =
         {
             {icon = "__pyalienlifegraphics__/graphics/icons/arthurian-egg.png"},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk03.png", scale = 0.25, shift = {-7.5,-7.5}}
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
         },
     icon_size = 64,
     subgroup = 'py-alienlife-arthurian',
@@ -302,7 +302,7 @@ RECIPE {
     icons =
         {
             {icon = "__pyalienlifegraphics__/graphics/icons/arthurian.png"},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk04.png", scale = 0.25, shift = {-7.5,-7.5}}
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
         },
     icon_size = 64,
     subgroup = 'py-alienlife-arthurian',
@@ -328,7 +328,7 @@ RECIPE {
     icons =
         {
             {icon = "__pyalienlifegraphics__/graphics/icons/arthurian-egg.png"},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk04.png", scale = 0.25, shift = {-7.5,-7.5}}
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
         },
     icon_size = 64,
     subgroup = 'py-alienlife-arthurian',

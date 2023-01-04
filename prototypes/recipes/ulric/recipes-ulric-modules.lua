@@ -109,10 +109,10 @@ RECIPE {
     },
     --main_product = "ulric-mk02",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/ulric-cub.png"},
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/ulric-cub.png", icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-ulric',
     order = 'za'
@@ -137,10 +137,10 @@ RECIPE {
     },
     --main_product = "ulric-mk02",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png", icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-ulric',
     order = 'za'
@@ -268,7 +268,11 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "ulric-mk03",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png',
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/ulric-cub.png", icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-ulric',
     order = 'za'
@@ -292,7 +296,11 @@ RECIPE {
         {type = 'item', name = 'empty-barrel-milk', amount = 2},
     },
     --main_product = "ulric-mk03",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png',
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png", icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-ulric',
     order = 'za'
@@ -410,7 +418,11 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "ulric-mk04",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/ulric-cub.png", icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-ulric',
     order = 'za'
@@ -434,7 +446,11 @@ RECIPE {
         {type = 'item', name = 'empty-barrel-milk', amount = 2},
     },
     --main_product = "ulric-mk04",
-    icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
+    icons =
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/ulric.png", icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
     icon_size = 64,
     subgroup = 'py-alienlife-ulric',
     order = 'za'

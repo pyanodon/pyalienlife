@@ -105,8 +105,7 @@ RECIPE {
     icons =
         {
             {icon = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png"},
-            --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', scale = 0.25,shift = {-7.5,-7.5}},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
         },
     icon_size = 64,
     subgroup = 'py-alienlife-arqad',
@@ -131,8 +130,8 @@ RECIPE {
     icons =
         {
             {icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png"},
-            --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', scale = 0.25,shift = {-7.5,-7.5}},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+            --{icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png', scale = 0.25,shift = {-7.5,-7.5}},
         },
     icon_size = 64,
     subgroup = 'py-alienlife-arqad',
@@ -241,8 +240,8 @@ RECIPE {
     icons =
         {
             {icon = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png"},
-            --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png', scale = 0.25,shift = {-7.5,-7.5}},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+            --{icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png', scale = 0.25,shift = {-7.5,-7.5}},
         },
     icon_size = 64,
     subgroup = 'py-alienlife-arqad',
@@ -267,8 +266,8 @@ RECIPE {
     icons =
         {
             {icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png"},
-            --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png', scale = 0.25,shift = {-7.5,-7.5}},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+            --{icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png', scale = 0.25,shift = {-7.5,-7.5}},
         },
     icon_size = 64,
     subgroup = 'py-alienlife-arqad',
@@ -379,8 +378,8 @@ RECIPE {
     icons =
         {
             {icon = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png"},
-            --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png', scale = 0.25,shift = {-7.5,-7.5}},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+            --{icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png', scale = 0.25,shift = {-7.5,-7.5}},
         },
     icon_size = 64,
     subgroup = 'py-alienlife-arqad',
@@ -405,8 +404,8 @@ RECIPE {
     icons =
         {
             {icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png"},
-            --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
-            {icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png', scale = 0.25,shift = {-7.5,-7.5}},
+            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+            --{icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png', scale = 0.25,shift = {-7.5,-7.5}},
         },
     icon_size = 64,
     subgroup = 'py-alienlife-arqad',
