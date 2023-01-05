@@ -81,7 +81,6 @@ RECIPE {
         {type = 'item', name = 'bedding', amount = 4},
         {type = 'item', name = 'bhoddos', amount = 3},
         {type = 'fluid', name = 'olefin', amount = 50},
-        {type = 'fluid', name = 'fluorine-gas', amount = 10},
         },
     results = {
         {type = 'item', name = 'simik-mk04', amount = 1, probability = 0.003},
@@ -97,7 +96,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-simik',
     order = 'zc'
-}:add_unlock("simik-mk04"):add_ingredient({type = 'item', name = 'advanced-substrate', amount = 1})
+}:add_unlock("simik-mk04"):add_ingredient({type = 'item', name = 'advanced-substrate', amount = 1}):add_ingredient({type = 'fluid', name = 'fluorine-gas', amount = 10})
 
 --MK02 REPLICATOR---
 
