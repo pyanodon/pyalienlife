@@ -111,7 +111,6 @@ RECIPE {
         {type = 'item', name = 'simik-codex-mk02', amount = 1},
         {type = 'item', name = 'bio-scafold', amount = 5},
         {type = 'item', name = 'strorix-unknown-sample', amount = 3},
-        {type = 'item', name = 'urea', amount = 50},
         {type = 'item', name = 'cdna', amount = 5},
         {type = 'item', name = 'uranium-ore', amount = 50},
         {type = 'fluid', name = 'fetal-serum', amount = 80},
@@ -131,7 +130,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-simik',
     order = 'za'
-}:add_unlock("simik-mk02")
+}:add_unlock("simik-mk02"):add_ingredient({type = 'item', name = 'urea', amount = 50})
 
 RECIPE {
     type = 'recipe',
