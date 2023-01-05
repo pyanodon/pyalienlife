@@ -37,10 +37,10 @@ RECIPE {
     name = 'auog-recharge-0',
     category = 'bay',
     enabled = false,
-    energy_required = 40,
+    energy_required = 5,
     ingredients = {
         {type = 'item', name = 'used-auog', amount = 1},
-        {type = 'item', name = 'auog-food-01', amount = 2},
+        {type = 'item', name = 'auog-food-01', amount = 1},
     },
     results = {
         {type = 'item', name = 'auog', amount = 1},
@@ -52,10 +52,10 @@ RECIPE {
     name = 'auog-recharge-00',
     category = 'bay',
     enabled = false,
-    energy_required = 30,
+    energy_required = 15,
     ingredients = {
         {type = 'item', name = 'used-auog', amount = 1},
-        {type = 'item', name = 'meat', amount = 5},
+        {type = 'item', name = 'meat', amount = 10},
     },
     results = {
         {type = 'item', name = 'auog', amount = 1},
@@ -69,27 +69,11 @@ RECIPE {
     name = 'auog-recharge',
     category = 'bay',
     enabled = false,
-    energy_required = 40,
-    ingredients = {
-        {type = 'item', name = 'used-auog', amount = 2},
-        {type = 'item', name = 'bedding', amount = 1},
-        {type = 'item', name = 'auog-food-02', amount = 2},
-    },
-    results = {
-        {type = 'item', name = 'auog', amount = 2},
-    },
-}:add_unlock("domestication-mk02")
-
-RECIPE {
-    type = 'recipe',
-    name = 'auog-recharge-2',
-    category = 'bay',
-    enabled = false,
-    energy_required = 30,
+    energy_required = 10,
     ingredients = {
         {type = 'item', name = 'used-auog', amount = 4},
         {type = 'item', name = 'bedding', amount = 1},
-        {type = 'item', name = 'auog-food-02', amount = 2},
+        {type = 'item', name = 'auog-food-02', amount = 1},
     },
     results = {
         {type = 'item', name = 'auog', amount = 4},
@@ -103,29 +87,12 @@ RECIPE {
     name = 'auog-mk02-recharge',
     category = 'bay',
     enabled = false,
-    energy_required = 40,
+    energy_required = 5,
     ingredients = {
         {type = 'item', name = 'used-auog-mk02', amount = 4},
         {type = 'item', name = 'bedding', amount = 2},
         {type = 'item', name = 'energy-drink', amount = 1},
-        {type = 'item', name = 'auog-food-01', amount = 2},
-    },
-    results = {
-        {type = 'item', name = 'auog-mk02', amount = 4},
-    },
-}:add_unlock("domestication-mk02")
-
-RECIPE {
-    type = 'recipe',
-    name = 'auog-mk02-recharge-2',
-    category = 'bay',
-    enabled = false,
-    energy_required = 30,
-    ingredients = {
-        {type = 'item', name = 'used-auog-mk02', amount = 4},
-        {type = 'item', name = 'energy-drink', amount = 1},
-        {type = 'item', name = 'bedding', amount = 2},
-        {type = 'item', name = 'auog-food-01', amount = 2},
+        {type = 'item', name = 'auog-food-01', amount = 1},
     },
     results = {
         {type = 'item', name = 'auog-mk02', amount = 4},
@@ -139,29 +106,12 @@ RECIPE {
     name = 'auog-mk03-recharge',
     category = 'bay',
     enabled = false,
-    energy_required = 40,
+    energy_required = 10,
     ingredients = {
         {type = 'item', name = 'used-auog-mk03', amount = 4},
         {type = 'item', name = 'energy-drink', amount = 1},
         {type = 'item', name = 'bedding', amount = 2},
-        {type = 'item', name = 'auog-food-01', amount = 2},
-    },
-    results = {
-        {type = 'item', name = 'auog-mk03', amount = 4},
-    },
-}:add_unlock("auog-mk03")
-
-RECIPE {
-    type = 'recipe',
-    name = 'auog-mk03-recharge-2',
-    category = 'bay',
-    enabled = false,
-    energy_required = 30,
-    ingredients = {
-        {type = 'item', name = 'used-auog-mk03', amount = 4},
-        {type = 'item', name = 'energy-drink', amount = 1},
-        {type = 'item', name = 'bedding', amount = 2},
-        {type = 'item', name = 'auog-food-02', amount = 2},
+        {type = 'item', name = 'auog-food-01', amount = 1},
     },
     results = {
         {type = 'item', name = 'auog-mk03', amount = 4},
@@ -187,24 +137,6 @@ RECIPE {
     },
 }:add_unlock("auog-mk04")
 
-RECIPE {
-    type = 'recipe',
-    name = 'auog-mk04-recharge-2',
-    category = 'bay',
-    enabled = false,
-    energy_required = 30,
-    ingredients = {
-        {type = 'item', name = 'used-auog-mk04', amount = 4},
-        {type = 'item', name = 'energy-drink', amount = 1},
-        {type = 'item', name = 'bedding', amount = 2},
-        {type = 'item', name = 'auog-food-02', amount = 2},
-    },
-    results = {
-        {type = 'item', name = 'auog-mk04', amount = 4},
-    },
-}:add_unlock("auog-mk04")
-
-
 -------DINGRTIS----------------
 
 RECIPE {
@@ -212,11 +144,11 @@ RECIPE {
     name = 'dingrit-recharge',
     category = 'bay',
     enabled = false,
-    energy_required = 40,
+    energy_required = 10,
     ingredients = {
         {type = 'item', name = 'used-dingrit', amount = 5},
         {type = 'item', name = 'bedding', amount = 1},
-        {type = 'item', name = 'dingrits-food-01', amount = 2},
+        {type = 'item', name = 'dingrits-food-01', amount = 1},
     },
     results = {
         {type = 'item', name = 'dingrits', amount = 5},
@@ -228,11 +160,11 @@ RECIPE {
     name = 'dingrit-recharge-2',
     category = 'bay',
     enabled = false,
-    energy_required = 30,
+    energy_required = 5,
     ingredients = {
         {type = 'item', name = 'used-dingrit', amount = 5},
         {type = 'item', name = 'bedding', amount = 1},
-        {type = 'item', name = 'dingrits-food-02', amount = 2},
+        {type = 'item', name = 'dingrits-food-02', amount = 1},
     },
     results = {
         {type = 'item', name = 'dingrits', amount = 5},
@@ -357,11 +289,11 @@ if mods['pyalternativeenergy'] then
         name = 'simik-recharge',
         category = 'bay',
         enabled = false,
-        energy_required = 40,
+        energy_required = 10,
         ingredients = {
             {type = 'item', name = 'used-simik', amount = 2},
             {type = 'item', name = 'bedding', amount = 1},
-            {type = 'item', name = 'simik-food-01', amount = 2},
+            {type = 'item', name = 'simik-food-01', amount = 1},
         },
         results = {
             {type = 'item', name = 'simik', amount = 2},
@@ -373,11 +305,11 @@ if mods['pyalternativeenergy'] then
         name = 'simik-recharge-2',
         category = 'bay',
         enabled = false,
-        energy_required = 30,
+        energy_required = 5,
         ingredients = {
             {type = 'item', name = 'used-simik', amount = 4},
             {type = 'item', name = 'bedding', amount = 1},
-            {type = 'item', name = 'simik-food-02', amount = 2},
+            {type = 'item', name = 'simik-food-02', amount = 1},
         },
         results = {
             {type = 'item', name = 'simik', amount = 4},
