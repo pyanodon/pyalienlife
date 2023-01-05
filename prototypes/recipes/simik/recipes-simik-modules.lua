@@ -16,7 +16,6 @@ RECIPE {
         {type = 'item', name = 'bedding', amount = 4},
         {type = 'item', name = 'navens', amount = 6},
         {type = 'fluid', name = 'olefin', amount = 50},
-        {type = 'fluid', name = 'reactor-waste-1', amount = 10},
         },
     results = {
         {type = 'item', name = 'simik-mk02', amount = 1, probability = 0.005},
@@ -32,7 +31,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-simik',
     order = 'za'
-}:add_unlock("simik-mk02"):add_ingredient({type = 'item', name = 'stone-wool', amount = 1})
+}:add_unlock("simik-mk02"):add_ingredient({type = 'item', name = 'stone-wool', amount = 1}):add_ingredient({type = 'fluid', name = 'reactor-waste-1', amount = 10})
 
 --mk03--
 --WIP--
