@@ -48,7 +48,6 @@ RECIPE {
         {type = 'item', name = 'strangelets', amount = 1},
         {type = 'item', name = 'scrondrix', amount = 1},
         {type = 'fluid', name = 'olefin', amount = 50},
-        {type = 'fluid', name = 'plutonium-peroxide', amount = 10},
         },
     results = {
         {type = 'item', name = 'simik-mk03', amount = 1, probability = 0.004},
@@ -64,7 +63,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-simik',
     order = 'zb'
-}:add_unlock("simik-mk03"):add_ingredient({type = 'item', name = 'advanced-substrate', amount = 1}):add_ingredient({type = 'item', name = 'biopolymer', amount = 1})
+}:add_unlock("simik-mk03"):add_ingredient({type = 'item', name = 'advanced-substrate', amount = 1}):add_ingredient({type = 'item', name = 'biopolymer', amount = 1}):add_ingredient({type = 'fluid', name = 'plutonium-peroxide', amount = 10})
 
 --mk04--
 --WIP--
