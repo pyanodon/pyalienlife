@@ -17,7 +17,6 @@ Date: ?
     - UPS improvement for farm building checking
     - Fixed that plant/animal modules could be used in the composter
     - Fixed some unknown key errors
-    - Arqad queen is no longer craftable in the creature chamber
     - Updated item icons for guar, navens spore, yaedols spore, fawogae spore, kicalk-seeds, arqad-egg-nest-mk03, grod seeds
     - Digosaurus items are now modules
     - Fixed that any item could be used as digosaurus food
@@ -26,6 +25,9 @@ Date: ?
     - Smart farm bioreserve output is now 20x higher
     - Fixed phadai stage 3/4 breeding being worse than stage 1/2
     - Auog and dingrit generators now have low output priority than pYAE renewables
+    - Arqad queen is no longer craftable in the creature chamber
+    - Improved arqad egg and nest recipes for arqad stage 2 and 3
+    - Reduced # of arqads in arqad egg stage 2 recipe from 8 to 7
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.6
 Date: 2022-12-20
