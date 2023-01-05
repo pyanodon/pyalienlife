@@ -169,7 +169,6 @@ RECIPE {
         {type = 'item', name = 'purine-analogues', amount = 1},
         {type = 'item', name = 'negasium', amount = 1},
         {type = 'fluid', name = 'mutant-enzymes', amount = 50},
-        {type = 'fluid', name = 'fatty-acids', amount = 100},
         {type = 'fluid', name = 'artificial-blood', amount = 50},
         },
     results = {
@@ -183,7 +182,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-zungror',
     order = 'za'
-}:add_unlock("zungror-mk03")
+}:add_unlock("zungror-mk03"):add_ingredient({type = 'fluid', name = 'fatty-acids', amount = 100})
 
 
 RECIPE {

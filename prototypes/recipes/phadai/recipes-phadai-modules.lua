@@ -121,7 +121,6 @@ RECIPE {
         {type = 'item', name = 'animal-sample-01', amount = 2},
         {type = 'item', name = 'cdna', amount = 2},
         {type = 'fluid', name = 'fetal-serum', amount = 80},
-        {type = 'fluid', name = 'fatty-acids', amount = 20},
         {type = 'fluid', name = 'xenogenic-cells', amount = 150},
         {type = 'item', name = 'bio-scafold', amount = 5},
         {type = 'item', name = 'bio-sample', amount = 2},
@@ -137,7 +136,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-phadai',
     order = 'za'
-}:add_unlock("phadai-mk02")
+}:add_unlock("phadai-mk02"):add_ingredient({type = 'fluid', name = 'fatty-acids', amount = 20})
 
 RECIPE {
     type = 'recipe',
@@ -171,7 +170,6 @@ RECIPE {
         {type = 'item', name = 'albumin', amount = 1},
         {type = 'item', name = 'cdna', amount = 2},
         {type = 'fluid', name = 'psc', amount = 100},
-        {type = 'fluid', name = 'fatty-acids', amount = 50},
         {type = 'fluid', name = 'arqad-honey', amount = 50},
 
         },
@@ -186,7 +184,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-phadai',
     order = 'za'
-}:add_unlock("phadai-mk03")
+}:add_unlock("phadai-mk03"):add_ingredient({type = 'fluid', name = 'fatty-acids', amount = 50})
 
 
 RECIPE {

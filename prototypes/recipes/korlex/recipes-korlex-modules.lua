@@ -118,7 +118,6 @@ RECIPE {
         {type = 'item', name = 'animal-sample-01', amount = 1},
         {type = 'item', name = 'cdna', amount = 2},
         {type = 'fluid', name = 'psc', amount = 100},
-        {type = 'fluid', name = 'fatty-acids', amount = 20},
         {type = 'fluid', name = 'xenogenic-cells', amount = 100},
         {type = 'item', name = 'bio-scafold', amount = 5},
         },
@@ -133,7 +132,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-korlex',
     order = 'za'
-}:add_unlock("korlex-mk02")
+}:add_unlock("korlex-mk02"):add_ingredient({type = 'fluid', name = 'fatty-acids', amount = 20})
 
 RECIPE {
     type = 'recipe',
@@ -166,7 +165,6 @@ RECIPE {
         {type = 'item', name = 'adrenal-cortex', amount = 1},
         {type = 'item', name = 'cdna', amount = 2},
         {type = 'fluid', name = 'psc', amount = 100},
-        {type = 'fluid', name = 'fatty-acids', amount = 50},
         {type = 'fluid', name = 'artificial-blood', amount = 50},
         {type = 'item', name = 'bio-scafold', amount = 8},
         },
@@ -181,7 +179,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-korlex',
     order = 'za'
-}:add_unlock("korlex-mk03")
+}:add_unlock("korlex-mk03"):add_ingredient({type = 'fluid', name = 'fatty-acids', amount = 50})
 
 
 RECIPE {

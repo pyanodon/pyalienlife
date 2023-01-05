@@ -165,7 +165,6 @@ RECIPE {
         {type = 'item', name = 'cdna', amount = 2},
         {type = 'item', name = 'bio-scafold', amount = 5},
         {type = 'fluid', name = 'psc', amount = 100},
-        {type = 'fluid', name = 'fatty-acids', amount = 50},
         {type = 'fluid', name = 'artificial-blood', amount = 50},
         {type = 'item', name = 'cbp', amount = 1},
         {type = 'item', name = 'resveratrol', amount = 1},
@@ -181,7 +180,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-dhilmos',
     order = 'za'
-}:add_unlock("dhilmos-mk03")
+}:add_unlock("dhilmos-mk03"):add_ingredient({type = 'fluid', name = 'fatty-acids', amount = 50})
 
 
 RECIPE {

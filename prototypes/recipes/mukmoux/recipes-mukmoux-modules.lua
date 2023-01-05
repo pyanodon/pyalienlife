@@ -120,7 +120,6 @@ RECIPE {
         {type = 'item', name = 'cdna', amount = 2},
         {type = 'item', name = 'bio-scafold', amount = 3},
         {type = 'fluid', name = 'depolymerized-organics', amount = 100},
-        {type = 'fluid', name = 'fatty-acids', amount = 20},
         {type = 'fluid', name = 'xenogenic-cells', amount = 100},
         {type = 'item', name = 'bio-sample', amount = 1},
         },
@@ -135,7 +134,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-mukmoux',
     order = 'za'
-}:add_unlock("mukmoux-mk02")
+}:add_unlock("mukmoux-mk02"):add_ingredient({type = 'fluid', name = 'fatty-acids', amount = 20})
 
 RECIPE {
     type = 'recipe',

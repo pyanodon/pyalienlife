@@ -163,7 +163,6 @@ RECIPE {
         {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'cbp', amount = 1},
         {type = 'item', name = 'purine-analogues', amount = 1},
-        {type = 'fluid', name = 'fatty-acids', amount = 40},
         {type = 'fluid', name = 'mutant-enzymes', amount = 30},
         {type = 'fluid', name = 'tholins', amount = 50},
         },
@@ -178,7 +177,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-zipir',
     order = 'za'
-}:add_unlock("zipir-mk03")
+}:add_unlock("zipir-mk03"):add_ingredient({type = 'fluid', name = 'fatty-acids', amount = 40})
 
 
 RECIPE {
