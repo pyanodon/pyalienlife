@@ -12,7 +12,6 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'simik', amount = 2},
         {type = 'item', name = 'simik-food-01', amount = 1},
-        {type = 'item', name = 'stone-wool', amount = 1},
         {type = 'item', name = 'bio-sample', amount = 1},
         {type = 'item', name = 'bedding', amount = 4},
         {type = 'item', name = 'navens', amount = 6},
@@ -33,7 +32,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-simik',
     order = 'za'
-}:add_unlock("simik-mk02")
+}:add_unlock("simik-mk02"):add_ingredient({type = 'item', name = 'stone-wool', amount = 1})
 
 --mk03--
 --WIP--
