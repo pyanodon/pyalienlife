@@ -95,7 +95,6 @@ RECIPE {
       {type = 'item', name = 'cdna', amount = 2},
       {type = 'item', name = 'moss-gen', amount = 3},
       {type = 'fluid', name = 'liquid-manure', amount = 50},
-      {type = 'fluid', name = 'xenogenic-cells', amount = 100},
       {type = 'item', name = 'ground-sample01', amount = 5},
       {type = 'item', name = 'solidified-sarcorus', amount = 1},
       },
