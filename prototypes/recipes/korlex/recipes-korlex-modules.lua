@@ -209,7 +209,6 @@ RECIPE {
         {type = 'item', name = 'korlex-mk04', amount = 4},
         {type = 'item', name = 'korlex-codex-mk04', amount = 1},
         {type = 'item', name = 'cdna', amount = 2},
-        {type = 'item', name = 'mpa', amount = 1},
         {type = 'item', name = 'mmp', amount = 1},
         {type = 'item', name = 'nonconductive-phazogen', amount = 1},
         {type = 'item', name = 'enediyne', amount = 1},
@@ -229,7 +228,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-korlex',
     order = 'za'
-}:add_unlock("korlex-mk04")
+}:add_unlock("korlex-mk04"):add_ingredient({type = 'item', name = 'mpa', amount = 1})
 
 RECIPE {
     type = 'recipe',

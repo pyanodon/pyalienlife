@@ -216,7 +216,6 @@ RECIPE {
         {type = 'item', name = 'cdna', amount = 2},
         {type = 'item', name = 'bio-scafold', amount = 8},
         {type = 'item', name = 'enzyme-pks', amount = 1},
-        {type = 'item', name = 'mpa', amount = 1},
         {type = 'item', name = 'denatured-seismite', amount = 1},
         {type = 'item', name = 'resilin', amount = 1},
         {type = 'fluid', name = 'psc', amount = 100},
@@ -233,7 +232,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-phadai',
     order = 'za'
-}:add_unlock("phadai-mk04"):add_ingredient({type = 'fluid', name = 'crude-enzyme', amount = 50})
+}:add_unlock("phadai-mk04"):add_ingredient({type = 'fluid', name = 'crude-enzyme', amount = 50}):add_ingredient({type = 'item', name = 'mpa', amount = 1})
 
 RECIPE {
     type = 'recipe',
