@@ -215,7 +215,6 @@ RECIPE {
         {type = 'item', name = 'cdna', amount = 2},
         {type = 'item', name = 'bio-scafold', amount = 8},
         {type = 'item', name = 'cysteine', amount = 1},
-        {type = 'item', name = 'nanocarrier', amount = 1},
         {type = 'item', name = 'denatured-seismite', amount = 1},
         {type = 'item', name = 'bmp', amount = 1},
         {type = 'fluid', name = 'psc', amount = 100},
@@ -233,7 +232,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-trits',
     order = 'za'
-}:add_unlock("trits-mk04")
+}:add_unlock("trits-mk04"):add_ingredient({type = 'item', name = 'nanocarrier', amount = 1})
 
 RECIPE {
     type = 'recipe',

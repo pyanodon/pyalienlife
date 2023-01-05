@@ -217,7 +217,6 @@ RECIPE {
         {type = 'item', name = 'mmp', amount = 1},
         {type = 'item', name = 'antitumor', amount = 1},
         {type = 'item', name = 'bmp', amount = 1},
-        {type = 'item', name = 'nanocarrier', amount = 1},
         {type = 'fluid', name = 'gta', amount = 50},
         {type = 'fluid', name = 'tholins', amount = 500},
         },
@@ -232,7 +231,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-zungror',
     order = 'za'
-}:add_unlock("zungror-mk04"):add_ingredient({type = 'fluid', name = 'crude-enzyme', amount = 50})
+}:add_unlock("zungror-mk04"):add_ingredient({type = 'fluid', name = 'crude-enzyme', amount = 50}):add_ingredient({type = 'item', name = 'nanocarrier', amount = 1})
 
 RECIPE {
     type = 'recipe',

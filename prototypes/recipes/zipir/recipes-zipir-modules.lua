@@ -210,7 +210,6 @@ RECIPE {
         {type = 'item', name = 'bio-scafold', amount = 8},
         {type = 'item', name = 'adam42-gen', amount = 1},
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},
-        {type = 'item', name = 'nanocarrier', amount = 1},
         {type = 'item', name = 'zymogens', amount = 1},
         {type = 'fluid', name = 'psc', amount = 100},
         {type = 'fluid', name = 'gta', amount = 50},
@@ -226,7 +225,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-zipir',
     order = 'za'
-}:add_unlock("zipir-mk04"):add_ingredient({type = 'fluid', name = 'clean-organic-pulp', amount = 50})
+}:add_unlock("zipir-mk04"):add_ingredient({type = 'fluid', name = 'clean-organic-pulp', amount = 50}):add_ingredient({type = 'item', name = 'nanocarrier', amount = 1})
 
 RECIPE {
     type = 'recipe',

@@ -220,7 +220,6 @@ RECIPE {
         {type = 'item', name = 'strorix-unknown-sample', amount = 3},
         {type = 'item', name = 'bio-scafold', amount = 8},
         {type = 'item', name = 'destablilized-toxirus', amount = 1},
-        {type = 'item', name = 'nanocarrier', amount = 1},
         {type = 'item', name = 'regolite-rock', amount = 50},
         {type = 'item', name = 'bmp', amount = 1},
         {type = 'fluid', name = 'psc', amount = 500},
@@ -238,7 +237,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-simik',
     order = 'za'
-}:add_unlock("simik-mk04")
+}:add_unlock("simik-mk04"):add_ingredient({type = 'item', name = 'nanocarrier', amount = 1})
 
 RECIPE {
     type = 'recipe',

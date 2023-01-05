@@ -215,7 +215,6 @@ RECIPE {
         {type = 'item', name = 'bio-scafold', amount = 8},
         {type = 'item', name = 'enzyme-pks', amount = 1},
         {type = 'item', name = 'denatured-seismite', amount = 1},
-        {type = 'item', name = 'nanocarrier', amount = 1},
         {type = 'fluid', name = 'psc', amount = 100},
         {type = 'fluid', name = 'gta', amount = 50},
         },
@@ -230,7 +229,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-mukmoux',
     order = 'za'
-}:add_unlock("mukmoux-mk04"):add_ingredient({type = 'fluid', name = 'clean-organic-pulp', amount = 50}):add_ingredient({type = 'item', name = 'resilin', amount = 1})
+}:add_unlock("mukmoux-mk04"):add_ingredient({type = 'fluid', name = 'clean-organic-pulp', amount = 50}):add_ingredient({type = 'item', name = 'resilin', amount = 1}):add_ingredient({type = 'item', name = 'nanocarrier', amount = 1})
 
 RECIPE {
     type = 'recipe',
