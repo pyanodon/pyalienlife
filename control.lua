@@ -211,8 +211,10 @@ script.on_init(function()
     init()
     if remote.interfaces['freeplay'] then
         local created_items = remote.call("freeplay", "get_created_items")
-        created_items["firearm-magazine"] = 500
-        remote.call("freeplay", "set_created_items", created_items)
+	if created_items then
+            created_items["firearm-magazine"] = 500
+            remote.call("freeplay", "set_created_items", created_items)
+	end
 
         local ship_items = remote.call('freeplay', 'get_ship_items')
         ship_items['iron-chest'] = 5
