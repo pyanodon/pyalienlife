@@ -45,7 +45,6 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'simik-mk02', amount = 2},
         {type = 'item', name = 'simik-food-02', amount = 1},
-        {type = 'item', name = 'advanced-substrate', amount = 1},
         {type = 'item', name = 'biopolymer', amount = 1},
         {type = 'item', name = 'strangelets', amount = 1},
         {type = 'item', name = 'scrondrix', amount = 1},
@@ -66,7 +65,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-simik',
     order = 'zb'
-}:add_unlock("simik-mk03")
+}:add_unlock("simik-mk03"):add_ingredient({type = 'item', name = 'advanced-substrate', amount = 1})
 
 --mk04--
 --WIP--
@@ -80,7 +79,6 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'simik-mk03', amount = 2},
         {type = 'item', name = 'simik-food-02', amount = 1},
-        {type = 'item', name = 'advanced-substrate', amount = 1},
         {type = 'item', name = 'py-science-pack-3', amount = 1},
         {type = 'item', name = 'bedding', amount = 4},
         {type = 'item', name = 'bhoddos', amount = 3},
@@ -101,7 +99,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-simik',
     order = 'zc'
-}:add_unlock("simik-mk04")
+}:add_unlock("simik-mk04"):add_ingredient({type = 'item', name = 'advanced-substrate', amount = 1})
 
 --MK02 REPLICATOR---
 
