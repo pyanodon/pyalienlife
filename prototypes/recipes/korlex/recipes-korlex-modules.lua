@@ -214,7 +214,6 @@ RECIPE {
         {type = 'item', name = 'enediyne', amount = 1},
         {type = 'item', name = 'bio-scafold', amount = 8},
         {type = 'fluid', name = 'psc', amount = 100},
-        {type = 'fluid', name = 'clean-organic-pulp', amount = 50},
         {type = 'fluid', name = 'gta', amount = 50},
         },
     results = {
@@ -228,7 +227,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-korlex',
     order = 'za'
-}:add_unlock("korlex-mk04"):add_ingredient({type = 'item', name = 'mpa', amount = 1})
+}:add_unlock("korlex-mk04"):add_ingredient({type = 'item', name = 'mpa', amount = 1}):add_ingredient({type = 'fluid', name = 'clean-organic-pulp', amount = 50})
 
 RECIPE {
     type = 'recipe',

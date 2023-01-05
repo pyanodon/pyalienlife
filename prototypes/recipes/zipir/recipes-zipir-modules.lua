@@ -214,7 +214,6 @@ RECIPE {
         {type = 'item', name = 'zymogens', amount = 1},
         {type = 'fluid', name = 'psc', amount = 100},
         {type = 'fluid', name = 'gta', amount = 50},
-        {type = 'fluid', name = 'clean-organic-pulp', amount = 50},
         },
     results = {
         {type = 'item', name = 'zipir4', amount = 5},
@@ -227,7 +226,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-zipir',
     order = 'za'
-}:add_unlock("zipir-mk04")
+}:add_unlock("zipir-mk04"):add_ingredient({type = 'fluid', name = 'clean-organic-pulp', amount = 50})
 
 RECIPE {
     type = 'recipe',
