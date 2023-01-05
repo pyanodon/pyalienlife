@@ -217,7 +217,6 @@ RECIPE {
         {type = 'item', name = 'cysteine', amount = 1},
         {type = 'fluid', name = 'psc', amount = 100},
         {type = 'fluid', name = 'tholins', amount = 50},
-        {type = 'fluid', name = 'crude-enzyme', amount = 50},
         },
     results = {
         {type = 'item', name = 'dingrits-mk04', amount = 5},
@@ -230,7 +229,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-dingrits',
     order = 'za'
-}:add_unlock("dingrits-mk04")
+}:add_unlock("dingrits-mk04"):add_ingredient({type = 'fluid', name = 'crude-enzyme', amount = 50})
 
 RECIPE {
     type = 'recipe',

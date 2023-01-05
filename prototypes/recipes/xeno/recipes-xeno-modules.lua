@@ -221,7 +221,6 @@ RECIPE {
         {type = 'item', name = 'immunosupressants', amount = 1},
         {type = 'fluid', name = 'psc', amount = 100},
         {type = 'fluid', name = 'sulfuric-acid', amount = 250},
-        {type = 'fluid', name = 'crude-enzyme', amount = 50},
         },
     results = {
         {type = 'item', name = 'xeno-mk04', amount = 5},
@@ -234,7 +233,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-xeno',
     order = 'za'
-}:add_unlock("xeno-mk04")
+}:add_unlock("xeno-mk04"):add_ingredient({type = 'fluid', name = 'crude-enzyme', amount = 50})
 
 RECIPE {
     type = 'recipe',

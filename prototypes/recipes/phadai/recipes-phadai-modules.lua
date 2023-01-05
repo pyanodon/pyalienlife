@@ -221,7 +221,6 @@ RECIPE {
         {type = 'item', name = 'resilin', amount = 1},
         {type = 'fluid', name = 'psc', amount = 100},
         {type = 'fluid', name = 'clean-organic-pulp', amount = 50},
-        {type = 'fluid', name = 'crude-enzyme', amount = 50},
         },
     results = {
         {type = 'item', name = 'phadai-mk04', amount = 5},
@@ -234,7 +233,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-phadai',
     order = 'za'
-}:add_unlock("phadai-mk04")
+}:add_unlock("phadai-mk04"):add_ingredient({type = 'fluid', name = 'crude-enzyme', amount = 50})
 
 RECIPE {
     type = 'recipe',
