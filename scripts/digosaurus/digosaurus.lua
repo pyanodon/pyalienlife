@@ -253,6 +253,7 @@ gui_events[defines.events.on_gui_click]['dig_food_.'] = function(event)
 	local tags = element.tags
 	local dig_data = global.dig_sites[tags.unit_number]
 	local cursor_stack = player.cursor_stack
+    if not stack then return end
 
 	if cursor_stack.valid_for_read and not Digosaurus.favorite_foods[cursor_stack.name] then return end
 

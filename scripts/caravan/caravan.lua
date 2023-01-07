@@ -118,6 +118,7 @@ end
 gui_events[defines.events.on_gui_click]['py_add_outpost'] = function(event)
 	local player = game.get_player(event.player_index)
 	local stack = player.cursor_stack
+	if not stack then return end
 	if stack.valid_for_read then
 		if player.insert(stack) == 0 then
 			player.surface.spill_item_stack(player.position, stack, true, player.force)
@@ -311,6 +312,7 @@ gui_events[defines.events.on_gui_click]['py_fuel_slot_.'] = function(event)
 	local tags = element.tags
 	local caravan_data = global.caravans[tags.unit_number]
 	local cursor_stack = player.cursor_stack
+	if not stack then return end
 	local fuel_stack = caravan_data.fuel_inventory[tags.i]
 
 	if cursor_stack.valid_for_read and not prototypes[caravan_data.entity.name].favorite_foods[cursor_stack.name] then return end
