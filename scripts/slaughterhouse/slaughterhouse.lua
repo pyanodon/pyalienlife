@@ -126,6 +126,7 @@ Slaughterhouse.events.on_gui_closed = function(event)
 end
 
 gui_events[defines.events.on_gui_click]['py_slaughterhouse_animal_.+'] = function(event)
+	local player = game.get_player(event.player_index)
 	local element = event.element
 	local content_frame = element.parent.parent
 	local main_frame = content_frame.parent
@@ -135,8 +136,10 @@ gui_events[defines.events.on_gui_click]['py_slaughterhouse_animal_.+'] = functio
 	local recipe_flow = content_frame.add{type = 'flow', direction = 'horizontal'}
 	recipe_flow.add{type = 'sprite-button', name = 'py_slaughterhouse_back', sprite = 'utility/left_arrow'}
 	local recipe_table = recipe_flow.add{type = 'table', column_count = 5}
-	for _, recipe in pairs(game.players[event.player_index].force.recipes) do
+	local recipe_count, avalible_recipe = 0, nil
+	for _, recipe in pairs(player.force.recipes) do
 		if main_frame.tags.categories[recipe.category] and string.match(recipe.subgroup.name, animal) and recipe.enabled then
+			recipe_count, avalible_recipe = recipe_count + 1, recipe.name
 			recipe_table.add{
                 type = 'choose-elem-button',
                 name = 'py_slaughterhouse_recipe_' .. recipe.name,
@@ -146,6 +149,13 @@ gui_events[defines.events.on_gui_click]['py_slaughterhouse_animal_.+'] = functio
 				tags = {recipe = recipe.name}
 			}
 		end
+	end
+
+	if recipe_count == 1 then
+		local entity = global.opened_slaughterhouses[main_frame.tags.entity]
+		if not entity or not entity.valid then return end
+		entity.set_recipe(avalible_recipe)
+		player.opened = entity
 	end
 end
 
@@ -161,7 +171,6 @@ gui_events[defines.events.on_gui_click]['py_slaughterhouse_recipe_.+'] = functio
 	local main_frame = element.parent.parent.parent.parent
 	local entity = global.opened_slaughterhouses[main_frame.tags.entity]
 	local recipe = element.tags.recipe
-	main_frame.destroy()
 	if not entity or not entity.valid then return end
 	entity.set_recipe(recipe)
 	player.opened = entity
