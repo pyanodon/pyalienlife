@@ -18,7 +18,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name = 'brain-vonix', amount = 2},
+					{name = 'brain-vonix', amount = 1},
 				},
 			crafting_speed = 180,
 			tech = 'nanochondria'
@@ -48,7 +48,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name = 'brain-vonix', remove_item = true},
-					{name = 'meat-vonix', amount = 2},
+					{name = 'meat-vonix', amount = 1},
 				},
 			crafting_speed = 180,
 			tech = 'anabolic-rna'
@@ -73,7 +73,7 @@ FUN.autorecipes {
 				{
 					{name = 'gh',remove_item = true},
 					{name = 'anabolic-rna',remove_item = true},
-					{name = 'antitumor', amount =2},
+					{name = 'antitumor', amount =1},
 				},
 			results =
 				{
@@ -108,7 +108,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name = 'guts-vonix', remove_item = true},
-					{name = 'blood-vonix', amount = 2},
+					{name = 'blood-vonix', amount = 1},
 				},
 			crafting_speed = 180,
 			tech = 'recombinant-ery'
@@ -137,7 +137,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name = 'blood-vonix', remove_item = true},
-					{name = 'skin-vonix', amount = 2},
+					{name = 'skin-vonix', amount = 1},
 				},
 			crafting_speed = 180,
 			tech = 'reca'
@@ -166,7 +166,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name = 'skin-vonix', remove_item = true},
-					{name = 'fat-vonix', amount = 2},
+					{name = 'fat-vonix', amount = 1},
 				},
 			crafting_speed = 180,
 			tech = 'orexigenic'

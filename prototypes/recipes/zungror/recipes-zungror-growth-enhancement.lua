@@ -13,7 +13,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 		{
 			ingredients =
 				{
-					{name = 'caged-zungror', amount = 1},
+					{name = 'caged-zungror', amount = 2},
 					{name = 'nanochondria', amount =1},
 					{name = 'antiviral', amount =1},
 				},
@@ -79,7 +79,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 			results =
 				{
 					{name = 'meat-caged-zungror', remove_item = true},
-					{name = 'guts-caged-zungror', amount = 1},
+					{name = 'guts-caged-zungror', amount = 2},
 				},
 			crafting_speed = 180,
 			tech = 'antitumor'

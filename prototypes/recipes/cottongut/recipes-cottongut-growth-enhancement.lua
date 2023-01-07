@@ -108,7 +108,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='skin-cottongut', remove_item = true},
-					{name='fat-cottongut', amount = 1},
+					{name='fat-cottongut', amount = 4},
 				},
 			crafting_speed = 80,
 			tech = 'orexigenic'

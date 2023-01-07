@@ -18,7 +18,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name = 'brain-trits', amount = 2},
+					{name = 'brain-trits', amount = 1},
 				},
 			crafting_speed = 160,
 			tech = 'nanochondria'
@@ -47,7 +47,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name = 'brain-trits', remove_item = true},
-					{name = 'bone-trits', amount = 2},
+					{name = 'bone-trits', amount = 1},
 				},
 			crafting_speed = 160,
 			tech = 'bmp'
@@ -78,7 +78,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name = 'bone-trits', remove_item = true},
-					{name = 'meat-trits', amount = 2},
+					{name = 'meat-trits', amount = 1},
 				},
 			crafting_speed = 160,
 			tech = 'anabolic-rna'
@@ -108,7 +108,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name = 'meat-trits', remove_item = true},
-					{name = 'guts-trits', amount = 2},
+					{name = 'guts-trits', amount = 1},
 				},
 			crafting_speed = 160,
 			tech = 'antitumor'
@@ -138,7 +138,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name = 'guts-trits', remove_item = true},
-					{name = 'blood-trits', amount = 2},
+					{name = 'blood-trits', amount = 1},
 				},
 			crafting_speed = 160,
 			tech = 'recombinant-ery'
@@ -167,7 +167,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name = 'blood-trits', remove_item = true},
-					{name = 'skin-trits', amount = 2},
+					{name = 'skin-trits', amount = 1},
 				},
 			crafting_speed = 160,
 			tech = 'reca'
@@ -196,7 +196,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name = 'skin-trits', remove_item = true},
-					{name = 'fat-trits', amount = 2},
+					{name = 'fat-trits', amount = 1},
 				},
 			crafting_speed = 160,
 			tech = 'orexigenic'

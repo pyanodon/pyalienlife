@@ -170,7 +170,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='blood-caged-dingrits', remove_item = true},
-					{name='skin-caged-dingrits', amount = 2},
+					{name='skin-caged-dingrits', amount = 1},
 				},
 			crafting_speed = 90,
 			tech = 'reca'

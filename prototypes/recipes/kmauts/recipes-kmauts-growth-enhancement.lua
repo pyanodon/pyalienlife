@@ -13,12 +13,12 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='nanochondria', amount =2},
+					{name='nanochondria', amount =1},
 					{name='caged-kmauts', amount = 1},
 				},
 			results =
 				{
-					{name='brain-caged-kmauts', amount = 3},
+					{name='brain-caged-kmauts', amount = 1},
 				},
 			crafting_speed = 70,
 			tech = 'nanochondria'
@@ -28,7 +28,7 @@ FUN.autorecipes {
 			ingredients =
 				{
 					--{name='nanochondria', amount =1},
-					{name='gh', amount =2},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -43,12 +43,12 @@ FUN.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='nanochondria',remove_item = true},
-					{name='anabolic-rna', amount =2},
+					{name='anabolic-rna', amount =1},
 				},
 			results =
 				{
 					{name='brain-caged-kmauts', remove_item = true},
-					{name='meat-caged-kmauts', amount = 3},
+					{name='meat-caged-kmauts', amount = 1},
 				},
 			crafting_speed = 70,
 			tech = 'anabolic-rna'
@@ -58,7 +58,7 @@ FUN.autorecipes {
 			ingredients =
 				{
 					--{name='nanochondria', amount =1},
-					{name='gh', amount =2},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -73,12 +73,12 @@ FUN.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='anabolic-rna',remove_item = true},
-					{name='antitumor', amount =2},
+					{name='antitumor', amount =1},
 				},
 			results =
 				{
 					{name='meat-caged-kmauts', remove_item = true},
-					{name='guts-caged-kmauts', amount = 3},
+					{name='guts-caged-kmauts', amount = 1},
 				},
 			crafting_speed = 70,
 			tech = 'antitumor'
@@ -88,7 +88,7 @@ FUN.autorecipes {
 			ingredients =
 				{
 					--{name='nanochondria', amount =1},
-					{name='gh', amount =2},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -103,12 +103,12 @@ FUN.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='antitumor',remove_item = true},
-					{name='recombinant-ery', amount =2},
+					{name='recombinant-ery', amount =1},
 				},
 			results =
 				{
 					{name='guts-caged-kmauts', remove_item = true},
-					{name='blood-caged-kmauts', amount = 3},
+					{name='blood-caged-kmauts', amount = 1},
 				},
 			crafting_speed = 70,
 			tech = 'recombinant-ery'
@@ -117,7 +117,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh', amount =2},
+					{name='gh', amount =1},
 				},
 			results =
 				{
@@ -132,12 +132,12 @@ FUN.autorecipes {
 				{
 					{name='gh',remove_item = true},
 					{name='recombinant-ery',remove_item = true},
-					{name='orexigenic', amount =2},
+					{name='orexigenic', amount =1},
 				},
 			results =
 				{
 					{name='blood-caged-kmauts', remove_item = true},
-					{name='fat-caged-kmauts', amount = 3},
+					{name='fat-caged-kmauts', amount = 1},
 				},
 			crafting_speed = 70,
 			tech = 'orexigenic'
@@ -146,7 +146,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='gh', amount =2},
+					{name='gh', amount =1},
 				},
 			results =
 				{
