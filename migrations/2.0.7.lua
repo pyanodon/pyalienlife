@@ -1,5 +1,5 @@
 if global.farms then
-	game.print('pYAL: Migrated ' .. #global.indexed_farm_list .. ' farm buildings')
+	game.print('pYAL: Migrated ' .. #(global.indexed_farm_list or {}) .. ' farm buildings')
 	global.farms = nil
 	global.indexed_farm_list = nil
 	rendering.clear('pyalienlife')
