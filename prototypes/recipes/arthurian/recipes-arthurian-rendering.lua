@@ -23,7 +23,7 @@ local IMP_BRAIN = 8
 
 FUN.autorecipes {
     name = 'rendering-arthurian',
-	category = 'slaughterhouse-arthurian',
+	category = 'slaughterhouse',
 	subgroup = 'py-alienlife-arthurian',
 	order = 'b',
 	crafting_speed = 30,

@@ -4,7 +4,8 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'zungror-cocoon',
-	category = 'rc-zungror',
+	category = 'rc',
+	allowed_module_categories = {'zungror'},
 	-- module_limitations = 'zungror',
 	subgroup = 'py-alienlife-zungror',
 	order = 'c',

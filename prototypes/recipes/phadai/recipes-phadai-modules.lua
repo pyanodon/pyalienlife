@@ -9,7 +9,8 @@
 RECIPE {
     type = 'recipe',
     name = 'phadai-mk02',
-    category = 'rc-phadai',
+    category = 'rc',
+	allowed_module_categories = {'phadai'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -43,7 +44,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'phadai-mk03',
-    category = 'rc-phadai',
+    category = 'rc',
+	allowed_module_categories = {'phadai'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -78,7 +80,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'phadai-mk04',
-    category = 'rc-phadai',
+    category = 'rc',
+	allowed_module_categories = {'phadai'},
     enabled = false,
     energy_required = 30,
     ingredients = {

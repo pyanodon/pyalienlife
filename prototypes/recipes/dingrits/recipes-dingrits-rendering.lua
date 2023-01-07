@@ -23,7 +23,7 @@ local IMP_SPECIAL = 2
 
 FUN.autorecipes {
     name = 'rendering',
-	category = 'slaughterhouse-dingrits',
+	category = 'slaughterhouse',
 	--module_limitations = 'dingrits',
 	subgroup = 'py-alienlife-dingrits',
 	order = 'b',

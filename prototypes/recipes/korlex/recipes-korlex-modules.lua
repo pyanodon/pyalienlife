@@ -9,7 +9,8 @@
 RECIPE {
     type = 'recipe',
     name = 'korlex-mk02',
-    category = 'rc-korlex',
+    category = 'rc',
+	allowed_module_categories = {'korlex'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -42,7 +43,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'korlex-mk03',
-    category = 'rc-korlex',
+    category = 'rc',
+	allowed_module_categories = {'korlex'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -76,7 +78,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'korlex-mk04',
-    category = 'rc-korlex',
+    category = 'rc',
+	allowed_module_categories = {'korlex'},
     enabled = false,
     energy_required = 30,
     ingredients = {

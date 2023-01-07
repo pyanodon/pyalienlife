@@ -21,7 +21,7 @@ local IMP_SPECIAL = 5
 
 FUN.autorecipes {
     name = 'rendering',
-	category = "slaughterhouse-kmauts",
+	category = "slaughterhouse",
 	--module_limitations = 'kmauts',
 	subgroup = 'py-alienlife-kmauts',
 	order = 'b',

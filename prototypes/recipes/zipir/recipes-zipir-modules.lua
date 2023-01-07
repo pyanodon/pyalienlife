@@ -9,7 +9,8 @@
 RECIPE {
     type = 'recipe',
     name = 'zipir-mk02',
-    category = 'rc-zipir',
+    category = 'rc',
+	allowed_module_categories = {'zipir'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -41,7 +42,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'zipir-mk03',
-    category = 'rc-zipir',
+    category = 'rc',
+	allowed_module_categories = {'zipir'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -73,7 +75,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'zipir-mk04',
-    category = 'rc-zipir',
+    category = 'rc',
+	allowed_module_categories = {'zipir'},
     enabled = false,
     energy_required = 30,
     ingredients = {

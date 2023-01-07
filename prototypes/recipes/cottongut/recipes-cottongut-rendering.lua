@@ -23,7 +23,7 @@ local IMP_BRAIN = 5
 
 FUN.autorecipes {
     name = 'rendering-cottongut',
-	category = 'slaughterhouse-cottongut',
+	category = 'slaughterhouse',
 	subgroup = 'py-alienlife-cottongut',
 	order = 'b',
 	crafting_speed = 30,

@@ -23,7 +23,7 @@ local IMP_BRAIN = 4
 
 FUN.autorecipes {
     name = 'rendering-auog',
-	category = 'slaughterhouse-auog',
+	category = 'slaughterhouse',
 	subgroup = 'py-alienlife-auog',
 	order = 'b',
     mats =

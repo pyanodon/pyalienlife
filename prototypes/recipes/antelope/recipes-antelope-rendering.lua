@@ -4,7 +4,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'rendering-antelope',
-	category = 'slaughterhouse-antelope',
+	category = 'slaughterhouse',
 	--module_limitations = 'antelope',
 	subgroup = 'py-alienlife-antelope',
 	order = 'b',

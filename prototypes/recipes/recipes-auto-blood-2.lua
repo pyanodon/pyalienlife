@@ -5,7 +5,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'rendering-blood-arthurians-2',
-	category = 'slaughterhouse-arthurian',
+	category = 'slaughterhouse',
 	--module_limitations = 'arthurian',
 	subgroup = 'py-alienlife-arthurian',
 	order = 'b',
@@ -60,7 +60,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-blood-arqad-2',
-	category = 'slaughterhouse-arqad',
+	category = 'slaughterhouse',
 	--module_limitations = 'arqad',
 	subgroup = 'py-alienlife-arqad',
 	order = 'b',
@@ -116,7 +116,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-blood-auog-2',
-	category = 'slaughterhouse-auog',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-auog',
 	order = 'b',
@@ -171,7 +171,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-blood-cottongut-2',
-	category = 'slaughterhouse-cottongut',
+	category = 'slaughterhouse',
 	--module_limitations = 'cottongut',
 	subgroup = 'py-alienlife-cottongut',
 	order = 'b',
@@ -225,7 +225,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-blood-dhilmos-2',
-	category = 'slaughterhouse-dhilmos',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-dhilmos',
 	order = 'b',
@@ -282,7 +282,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-blood-dingrits-2',
-	category = 'slaughterhouse-dingrits',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-dingrits',
 	order = 'b',
@@ -337,7 +337,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-blood-kmauts-2',
-	category = 'slaughterhouse-kmauts',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-kmauts',
 	order = 'b',
@@ -393,7 +393,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-blood-korlex-2',
-	category = 'slaughterhouse-korlex',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-korlex',
 	order = 'b',
@@ -449,7 +449,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-blood-mukmoux-2',
-	category = 'slaughterhouse-mukmoux',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-mukmoux',
 	order = 'b',
@@ -504,7 +504,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-blood-phadai-2',
-	category = 'slaughterhouse-phadai',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-phadai',
 	order = 'b',
@@ -559,7 +559,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-blood-phagnot-2',
-	category = 'slaughterhouse-phagnot',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-phagnot',
 	order = 'b',
@@ -614,7 +614,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-blood-scrondrix-2',
-	category = 'slaughterhouse-scrondrix',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-scrondrix',
 	order = 'b',
@@ -669,7 +669,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-blood-simik-2',
-	category = 'slaughterhouse-simik',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-simik',
 	order = 'b',
@@ -724,7 +724,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-blood-trits-2',
-	category = 'slaughterhouse-trits',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-trits',
 	order = 'b',
@@ -778,7 +778,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-blood-ulric-2',
-	category = 'slaughterhouse-ulric',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-ulric',
 	order = 'b',
@@ -833,7 +833,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-blood-vonix-2',
-	category = 'slaughterhouse-vonix',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-vonix',
 	order = 'b',
@@ -891,7 +891,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-blood-xenos-2',
-	category = 'slaughterhouse-xeno',
+	category = 'slaughterhouse',
 	--module_limitations = 'xeno',
 	subgroup = 'py-alienlife-xeno',
 	order = 'b',
@@ -945,7 +945,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-blood-xyhiphoe-2',
-	category = 'slaughterhouse-xyhiphoe',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-xyhiphoe',
 	order = 'b',
@@ -996,7 +996,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-blood-zipir-2',
-	category = 'slaughterhouse-zipir',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-zipir',
 	order = 'b',

@@ -6,7 +6,8 @@
 RECIPE {
     type = 'recipe',
     name = 'simik-mk02',
-    category = 'rc-simik',
+    category = 'rc',
+	allowed_module_categories = {'simik'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -39,7 +40,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'simik-mk03',
-    category = 'rc-simik',
+    category = 'rc',
+	allowed_module_categories = {'simik'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -71,7 +73,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'simik-mk04',
-    category = 'rc-simik',
+    category = 'rc',
+	allowed_module_categories = {'simik'},
     enabled = false,
     energy_required = 30,
     ingredients = {

@@ -4,7 +4,8 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'korlex-pup',
-	category = 'rc-korlex',
+	category = 'rc',
+	allowed_module_categories = {'korlex'},
 	--module_limitations = 'korlex',
 	subgroup = 'py-alienlife-korlex',
 	order = 'c',

@@ -9,7 +9,8 @@
 RECIPE {
     type = 'recipe',
     name = 'vonix-mk02',
-    category = 'rc-vonix',
+    category = 'rc',
+	allowed_module_categories = {'vonix'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -41,7 +42,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'vonix-mk03',
-    category = 'rc-vonix',
+    category = 'rc',
+	allowed_module_categories = {'vonix'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -74,7 +76,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'vonix-mk04',
-    category = 'rc-vonix',
+    category = 'rc',
+	allowed_module_categories = {'vonix'},
     enabled = false,
     energy_required = 30,
     ingredients = {

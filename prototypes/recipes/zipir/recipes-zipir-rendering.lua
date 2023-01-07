@@ -21,7 +21,7 @@ local IMP_BRAIN = 4
 
 FUN.autorecipes {
     name = 'rendering-zipir',
-	category = 'slaughterhouse-zipir',
+	category = 'slaughterhouse',
 	--module_limitations = 'zipir',
 	subgroup = 'py-alienlife-zipir',
 	order = 'b',

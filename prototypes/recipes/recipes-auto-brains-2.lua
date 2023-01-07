@@ -5,7 +5,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'rendering-brains-arthurians-2',
-	category = 'slaughterhouse-arthurian',
+	category = 'slaughterhouse',
 	--module_limitations = 'arthurian',
 	subgroup = 'py-alienlife-arthurian',
 	order = 'b',
@@ -59,7 +59,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-brains-auog-2',
-	category = 'slaughterhouse-auog',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-auog',
 	order = 'b',
@@ -114,7 +114,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-brains-cottongut-2',
-	category = 'slaughterhouse-cottongut',
+	category = 'slaughterhouse',
 	--module_limitations = 'cottongut',
 	subgroup = 'py-alienlife-cottongut',
 	order = 'b',
@@ -168,7 +168,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-brains-dingrits-2',
-	category = 'slaughterhouse-dingrits',
+	category = 'slaughterhouse',
 	--module_limitations = 'dingrits',
 	subgroup = 'py-alienlife-dingrits',
 	order = 'b',
@@ -222,7 +222,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-brains-kmauts-2',
-	category = 'slaughterhouse-kmauts',
+	category = 'slaughterhouse',
 	--module_limitations = 'kmauts',
 	subgroup = 'py-alienlife-kmauts',
 	order = 'b',
@@ -275,7 +275,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-brains-korlex-2',
-	category = 'slaughterhouse-korlex',
+	category = 'slaughterhouse',
 	--module_limitations = 'korlex',
 	subgroup = 'py-alienlife-korlex',
 	order = 'b',
@@ -328,7 +328,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-brain-mukmoux-2',
-	category = 'slaughterhouse-mukmoux',
+	category = 'slaughterhouse',
 	--module_limitations = 'mukmoux',
 	subgroup = 'py-alienlife-mukmoux',
 	order = 'b',
@@ -383,7 +383,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-phadai-brain-2',
-	category = 'slaughterhouse-phadai',
+	category = 'slaughterhouse',
 	--module_limitations = 'phadai',
 	subgroup = 'py-alienlife-phadai',
 	order = 'b',
@@ -440,7 +440,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-brains-phagnot-2',
-	category = 'slaughterhouse-phagnot',
+	category = 'slaughterhouse',
 	--module_limitations = 'phagnot',
 	subgroup = 'py-alienlife-phagnot',
 	order = 'b',
@@ -495,7 +495,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-brains-scrondrix-2',
-	category = 'slaughterhouse-scrondrix',
+	category = 'slaughterhouse',
 	--module_limitations = 'scrondrix',
 	subgroup = 'py-alienlife-scrondrix',
 	order = 'b',
@@ -550,7 +550,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-brain-trits-2',
-	category = 'slaughterhouse-trits',
+	category = 'slaughterhouse',
 	--module_limitations = 'trits',
 	subgroup = 'py-alienlife-trits',
 	order = 'b',
@@ -605,7 +605,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-brain-ulric-2',
-	category = 'slaughterhouse-ulric',
+	category = 'slaughterhouse',
 	--module_limitations = 'ulric',
 	subgroup = 'py-alienlife-ulric',
 	order = 'b',
@@ -659,7 +659,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-brain-vonix-2',
-	category = 'slaughterhouse-vonix',
+	category = 'slaughterhouse',
 	--module_limitations = 'vonix',
 	subgroup = 'py-alienlife-vonix',
 	order = 'b',
@@ -714,7 +714,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-brain-vrauks-2',
-	category = 'slaughterhouse-vrauks',
+	category = 'slaughterhouse',
 	--module_limitations = 'vrauks',
 	subgroup = 'py-alienlife-vrauks',
 	order = 'b',
@@ -766,7 +766,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-brains-xenos-2',
-	category = 'slaughterhouse-xeno',
+	category = 'slaughterhouse',
 	--module_limitations = 'xeno',
 	subgroup = 'py-alienlife-xeno',
 	order = 'b',
@@ -825,7 +825,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-brain-zipir-2',
-	category = 'slaughterhouse-zipir',
+	category = 'slaughterhouse',
 	--module_limitations = 'zipir',
 	subgroup = 'py-alienlife-zipir',
 	order = 'b',

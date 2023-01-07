@@ -18,7 +18,7 @@ local IMP_BLOOD = 120
 
 FUN.autorecipes {
     name = 'rendering',
-	category = 'slaughterhouse-dhilmos',
+	category = 'slaughterhouse',
 	--module_limitations = 'dhilmos',
 	subgroup = 'py-alienlife-dhilmos',
 	order = 'b',

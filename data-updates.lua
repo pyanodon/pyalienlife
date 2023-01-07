@@ -57,12 +57,25 @@ end
 ----------------------------------------------------------------------------------------------------
 -- MODULE LIMITATION SETUP
 ----------------------------------------------------------------------------------------------------
+local function get_allowed_module_categories(recipe)
+    local allowed_module_categories = recipe.allowed_module_categories
+    if not allowed_module_categories then
+        local cat = data.raw['recipe-category'][recipe.category or 'crafting']
+        if cat and cat.allowed_module_categories then
+            allowed_module_categories = cat.allowed_module_categories
+        end
+    end
+    return allowed_module_categories or {}
+end
+
 local module_categories = {}
 
-for _, cat in pairs(data.raw['recipe-category']) do
-    if cat.allowed_module_categories then
-        for _, module_category in pairs(cat.allowed_module_categories) do
-            module_categories[module_category] = true
+for _, type in pairs{'recipe-category', 'recipe'} do
+    for _, cat in pairs(data.raw[type]) do
+        if cat.allowed_module_categories then
+            for _, module_category in pairs(cat.allowed_module_categories) do
+                module_categories[module_category] = true
+            end
         end
     end
 end
@@ -78,36 +91,26 @@ for _, module in pairs(data.raw.module) do
 end
 
 for _, recipe in pairs(data.raw.recipe) do
-    local cat = data.raw['recipe-category'][recipe.category or 'crafting']
-
-    -- log('Recipe: ' .. recipe.name .. ', category: ' .. (recipe.category or ''))
-    if cat and cat.allowed_module_categories then
-        for _, module_category in pairs(cat.allowed_module_categories) do
-            for _, module in pairs(data.raw.module) do
-                if module.category == module_category then
-                    module.dict_limitation[recipe.name] = true
-                end
+    for _, module_category in pairs(get_allowed_module_categories(recipe)) do
+        for _, module in pairs(data.raw.module) do
+            if module.category == module_category then
+                module.dict_limitation[recipe.name] = true
             end
         end
     end
 end
 
 for _, recipe in pairs(data.raw.recipe) do
-    local cat = data.raw['recipe-category'][recipe.category or 'crafting']
-
-    --log('Recipe: ' .. recipe.name .. ', category: ' .. (recipe.category or ''))
-    if cat and cat.allowed_module_categories then
-        for _, module_category in pairs(cat.allowed_module_categories) do
-            for _, module in pairs(data.raw.module) do
-                if module.category ~= module_category then
-                    if not module.dict_limitation or table.is_empty(module.dict_limitation) then
-                        if module.limitation_blacklist == nil then
-                            module.limitation_blacklist = {}
-                        end
-                        table.insert(module.limitation_blacklist, recipe.name)
-                    else
-                        module.dict_limitation[recipe.name] = nil
+    for _, module_category in pairs(get_allowed_module_categories(recipe)) do
+        for _, module in pairs(data.raw.module) do
+            if module.category ~= module_category then
+                if not module.dict_limitation or table.is_empty(module.dict_limitation) then
+                    if module.limitation_blacklist == nil then
+                        module.limitation_blacklist = {}
                     end
+                    table.insert(module.limitation_blacklist, recipe.name)
+                else
+                    module.dict_limitation[recipe.name] = nil
                 end
             end
         end
@@ -118,18 +121,6 @@ for _, module in pairs(data.raw.module) do
     if module.dict_limitation then
         module.limitation = table.keys(module.dict_limitation)
         module.dict_limitation = nil
-    end
-end
-
-----------------------------------------------------------------------------------------------------
--- RC CATEGORIES SETUP
-----------------------------------------------------------------------------------------------------
-for _, cat in pairs(data.raw['recipe-category']) do
-    if cat.name:find("^rc%-") then
-        table.insert(data.raw["assembling-machine"]["rc-mk01"].crafting_categories, cat.name)
-        table.insert(data.raw["assembling-machine"]["rc-mk02"].crafting_categories, cat.name)
-        table.insert(data.raw["assembling-machine"]["rc-mk03"].crafting_categories, cat.name)
-        table.insert(data.raw["assembling-machine"]["rc-mk04"].crafting_categories, cat.name)
     end
 end
 

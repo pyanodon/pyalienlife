@@ -4,7 +4,8 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'ulric-cub',
-	category = 'rc-ulric',
+	category = 'rc',
+	allowed_module_categories = {'ulric'},
 	--module_limitations = 'ulric',
 	subgroup = 'py-alienlife-ulric',
 	order = 'c',

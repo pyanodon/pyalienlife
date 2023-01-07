@@ -4,7 +4,8 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'cottongut-cub',
-	category = 'rc-cottongut',
+	category = 'rc',
+	allowed_module_categories = {'cottongut'},
 	--module_limitations = 'cottongut',
 	subgroup = 'py-alienlife-cottongut',
 	order = 'c',

@@ -19,12 +19,9 @@ function _G.process_gui_event(event)
 	end
 end
 
-script.on_event(defines.events.on_gui_selection_state_changed, process_gui_event)
-script.on_event(defines.events.on_gui_switch_state_changed, process_gui_event)
-script.on_event(defines.events.on_gui_value_changed, process_gui_event)
-script.on_event(defines.events.on_gui_confirmed, process_gui_event)
-script.on_event(defines.events.on_gui_elem_changed, process_gui_event)
-script.on_event(defines.events.on_gui_text_changed, process_gui_event)
+for event, _ in pairs(gui_events) do
+	script.on_event(event, process_gui_event)
+end
 
 local basic_item_types = {['item'] = true, ['capsule'] = true, ['gun'] = true, ['rail-planner'] = true, ['module'] = true}
 function _G.check_for_basic_item(item)

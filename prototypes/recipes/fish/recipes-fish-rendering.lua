@@ -14,7 +14,7 @@ local BASE_SPECIAL = 100
 
 FUN.autorecipes {
     name = 'rendering',
-	category = 'slaughterhouse-fish',
+	category = 'slaughterhouse',
 	--module_limitations = 'fish',
 	subgroup = 'py-alienlife-fish',
 	order = 'b',

@@ -1,4 +1,4 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
+	local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 ------------------RENDERING------------------
 
@@ -23,7 +23,7 @@ local IMP_BRAIN = 4
 
 FUN.autorecipes {
     name = 'rendering',
-	category = 'slaughterhouse-mukmoux',
+	category = 'slaughterhouse',
 	--module_limitations = 'mukmoux',
 	subgroup = 'py-alienlife-mukmoux',
 	order = 'b',

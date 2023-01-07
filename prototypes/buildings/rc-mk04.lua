@@ -54,7 +54,7 @@ ENTITY {
         module_slots = 8,
     },
     allowed_effects = {"speed",'consumption','pollution'},
-    crafting_categories = {}, -- Gets filled in by pyalienlife/data-updates.lua
+    crafting_categories = {'rc'},
     crafting_speed = .444, -- 8 modules + 1 building = target speed of 4
     energy_source = {
         type = "electric",

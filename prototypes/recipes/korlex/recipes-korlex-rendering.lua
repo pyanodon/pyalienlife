@@ -23,7 +23,7 @@ local IMP_BRAIN = 4
 
 FUN.autorecipes {
     name = 'rendering',
-	category = 'slaughterhouse-korlex',
+	category = 'slaughterhouse',
 	--module_limitations = 'korlex',
 	subgroup = 'py-alienlife-korlex',
 	order = 'b',

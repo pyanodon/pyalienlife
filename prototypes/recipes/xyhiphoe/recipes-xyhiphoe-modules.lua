@@ -8,7 +8,8 @@
 RECIPE {
     type = 'recipe',
     name = 'xyhiphoe-mk02',
-    category = 'rc-xyhiphoe',
+    category = 'rc',
+	allowed_module_categories = {'xyhiphoe'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -36,7 +37,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'xyhiphoe-cub-mk02-breeder',
-    category = 'rc-xyhiphoe',
+    category = 'rc',
+	allowed_module_categories = {'xyhiphoe'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -92,7 +94,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'xyhiphoe-mk03',
-    category = 'rc-xyhiphoe',
+    category = 'rc',
+	allowed_module_categories = {'xyhiphoe'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -121,7 +124,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'xyhiphoe-cub-mk03-breeder',
-    category = 'rc-xyhiphoe',
+    category = 'rc',
+	allowed_module_categories = {'xyhiphoe'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -179,7 +183,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'xyhiphoe-mk04',
-    category = 'rc-xyhiphoe',
+    category = 'rc',
+	allowed_module_categories = {'xyhiphoe'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -208,7 +213,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'xyhiphoe-cub-mk04-breeder',
-    category = 'rc-xyhiphoe',
+    category = 'rc',
+	allowed_module_categories = {'xyhiphoe'},
     enabled = false,
     energy_required = 30,
     ingredients = {

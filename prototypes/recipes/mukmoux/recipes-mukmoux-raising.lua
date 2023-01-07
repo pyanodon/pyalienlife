@@ -4,7 +4,8 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'mukmoux-calf',
-	category = 'rc-mukmoux',
+	category = 'rc',
+	allowed_module_categories = {'mukmoux'},
 	--module_limitations = 'mukmoux',
 	main_product = 'mukmoux-calf',
 	subgroup = 'py-alienlife-mukmoux',

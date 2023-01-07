@@ -23,7 +23,7 @@ local IMP_SPECIAL = 2
 
 FUN.autorecipes {
     name = 'rendering',
-	category = 'slaughterhouse-vonix',
+	category = 'slaughterhouse',
 	--module_limitations = 'vonix',
 	subgroup = 'py-alienlife-vonix',
 	order = 'b',

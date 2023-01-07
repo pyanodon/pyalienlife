@@ -9,7 +9,8 @@
 RECIPE {
     type = 'recipe',
     name = 'xeno-mk02',
-    category = 'rc-xeno',
+    category = 'rc',
+	allowed_module_categories = {'xeno'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -42,7 +43,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'xeno-mk03',
-    category = 'rc-xeno',
+    category = 'rc',
+	allowed_module_categories = {'xeno'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -76,7 +78,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'xeno-mk04',
-    category = 'rc-xeno',
+    category = 'rc',
+	allowed_module_categories = {'xeno'},
     enabled = false,
     energy_required = 30,
     ingredients = {

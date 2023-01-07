@@ -5,7 +5,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'rendering-fat-arthurians',
-	category = 'slaughterhouse-arthurian',
+	category = 'slaughterhouse',
 	--module_limitations = 'arthurian',
 	subgroup = 'py-alienlife-arthurian',
 	order = 'b',
@@ -42,7 +42,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-fat-auog',
-	category = 'slaughterhouse-auog',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-auog',
 	order = 'b',
@@ -79,7 +79,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-fat-cottongut',
-	category = 'slaughterhouse-cottongut',
+	category = 'slaughterhouse',
 	--module_limitations = 'cottongut',
 	subgroup = 'py-alienlife-cottongut',
 	order = 'b',
@@ -115,7 +115,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-fat-dhilmos',
-	category = 'slaughterhouse-dhilmos',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-dhilmos',
 	order = 'b',
@@ -154,7 +154,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-fat-kmauts',
-	category = 'slaughterhouse-kmauts',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-kmauts',
 	order = 'b',
@@ -191,7 +191,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-fat-korlex',
-	category = 'slaughterhouse-korlex',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-korlex',
 	order = 'b',
@@ -228,7 +228,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-fat-mukmoux',
-	category = 'slaughterhouse-mukmoux',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-mukmoux',
 	order = 'b',
@@ -265,7 +265,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-fat-phadai',
-	category = 'slaughterhouse-phadai',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-phadai',
 	order = 'b',
@@ -302,7 +302,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-fat-scrondrix',
-	category = 'slaughterhouse-scrondrix',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-scrondrix',
 	order = 'b',
@@ -339,7 +339,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-fat-simik',
-	category = 'slaughterhouse-simik',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-simik',
 	order = 'b',
@@ -376,7 +376,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-fat-trits',
-	category = 'slaughterhouse-trits',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-trits',
 	order = 'b',
@@ -412,7 +412,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-fat-ulric',
-	category = 'slaughterhouse-ulric',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-ulric',
 	order = 'b',
@@ -449,7 +449,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-fat-vonix',
-	category = 'slaughterhouse-vonix',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-vonix',
 	order = 'b',
@@ -488,7 +488,7 @@ FUN.autorecipes {
 
 FUN.autorecipes {
     name = 'rendering-fat-zipir',
-	category = 'slaughterhouse-zipir',
+	category = 'slaughterhouse',
 	--module_limitations = 'auog',
 	subgroup = 'py-alienlife-zipir',
 	order = 'b',

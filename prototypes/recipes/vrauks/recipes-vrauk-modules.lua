@@ -9,7 +9,8 @@
 RECIPE {
     type = 'recipe',
     name = 'vrauks-mk02',
-    category = 'rc-vrauks',
+    category = 'rc',
+	allowed_module_categories = {'vrauks'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -105,7 +106,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'vrauks-mk03',
-    category = 'rc-vrauks',
+    category = 'rc',
+	allowed_module_categories = {'vrauks'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -203,7 +205,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'vrauks-mk04',
-    category = 'rc-vrauks',
+    category = 'rc',
+	allowed_module_categories = {'vrauks'},
     enabled = false,
     energy_required = 30,
     ingredients = {

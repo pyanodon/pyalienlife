@@ -9,7 +9,8 @@
 RECIPE {
     type = 'recipe',
     name = 'kmauts-mk02',
-    category = 'rc-kmauts',
+    category = 'rc',
+	allowed_module_categories = {'kmauts'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -42,7 +43,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'kmauts-mk03',
-    category = 'rc-kmauts',
+    category = 'rc',
+	allowed_module_categories = {'kmauts'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -76,7 +78,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'kmauts-mk04',
-    category = 'rc-kmauts',
+    category = 'rc',
+	allowed_module_categories = {'kmauts'},
     enabled = false,
     energy_required = 30,
     ingredients = {

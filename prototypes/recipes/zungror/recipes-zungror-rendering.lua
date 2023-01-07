@@ -21,7 +21,7 @@ local IMP_BRAIN = 5
 
 FUN.autorecipes {
     name = 'rendering-zungror',
-	category = 'slaughterhouse-zungror',
+	category = 'slaughterhouse',
 	--module_limitations = 'zungror',
 	subgroup = 'py-alienlife-zungror',
 	order = 'b',

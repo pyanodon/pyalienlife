@@ -23,7 +23,7 @@ local IMP_BRAIN = 4
 
 FUN.autorecipes {
     name = 'rendering-ulric',
-	category = 'slaughterhouse-ulric',
+	category = 'slaughterhouse',
 	--module_limitations = 'ulric',
 	subgroup = 'py-alienlife-ulric',
 	order = 'b',

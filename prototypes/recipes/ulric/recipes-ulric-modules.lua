@@ -9,7 +9,8 @@
 RECIPE {
     type = 'recipe',
     name = 'ulric-mk02',
-    category = 'rc-ulric',
+    category = 'rc',
+	allowed_module_categories = {'ulric'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -177,7 +178,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'ulric-mk03',
-    category = 'rc-ulric',
+    category = 'rc',
+	allowed_module_categories = {'ulric'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -328,7 +330,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'ulric-mk04',
-    category = 'rc-ulric',
+    category = 'rc',
+	allowed_module_categories = {'ulric'},
     enabled = false,
     energy_required = 30,
     ingredients = {

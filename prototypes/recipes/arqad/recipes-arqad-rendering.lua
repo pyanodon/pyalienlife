@@ -18,7 +18,7 @@ local IMP_SPECIAL = 80
 
 FUN.autorecipes {
     name = 'rendering-arqad',
-	category = 'slaughterhouse-arqad',
+	category = 'slaughterhouse',
 	subgroup = 'py-alienlife-arqad',
 	order = 'b',
 	crafting_speed = 30,

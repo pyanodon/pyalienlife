@@ -25,7 +25,7 @@ local IMP_SPECIAL = 4
 
 FUN.autorecipes {
     name = 'rendering',
-	category = 'slaughterhouse-scrondrix',
+	category = 'slaughterhouse',
 	--module_limitations = 'scrondrix',
 	subgroup = 'py-alienlife-scrondrix',
 	order = 'b',

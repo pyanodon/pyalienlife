@@ -46,7 +46,7 @@ ENTITY {
         module_slots = 3
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-    crafting_categories = data.raw["assembling-machine"]["slaughterhouse-mk01"].crafting_categories,
+    crafting_categories = {"slaughterhouse"},
     crafting_speed = 3,
     energy_source = {
         type = "electric",

@@ -25,7 +25,7 @@ local IMP_SPECIAL = 4
 
 FUN.autorecipes {
     name = 'rendering',
-	category = 'slaughterhouse-trits',
+	category = 'slaughterhouse',
 	--module_limitations = 'trits',
 	subgroup = 'py-alienlife-trits',
 	order = 'b',

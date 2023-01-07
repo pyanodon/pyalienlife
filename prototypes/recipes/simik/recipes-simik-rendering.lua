@@ -25,7 +25,7 @@ local IMP_SPECIAL = 10
 
 FUN.autorecipes {
     name = 'rendering',
-	category = 'slaughterhouse-simik',
+	category = 'slaughterhouse',
 	--module_limitations = 'simik',
 	subgroup = 'py-alienlife-simik',
 	order = 'b',

@@ -5,7 +5,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 -- FUN.autorecipes {
 --     name = 'rendering-carapace-phadai',
--- 	category = 'slaughterhouse-phadai',
+-- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',
 -- 	subgroup = 'py-alienlife-phadai',
 -- 	order = 'b',
@@ -43,7 +43,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 -- FUN.autorecipes {
 --     name = 'rendering-pelt-dingrits',
--- 	category = 'slaughterhouse-dingrits',
+-- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',
 -- 	subgroup = 'py-alienlife-dingrits',
 -- 	order = 'b',
@@ -83,7 +83,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 -- FUN.autorecipes {
 --     name = 'rendering-spikes-dingrits',
--- 	category = 'slaughterhouse-dingrits',
+-- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',
 -- 	subgroup = 'py-alienlife-dingrits',
 -- 	order = 'b',
@@ -123,7 +123,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 -- FUN.autorecipes {
 --     name = 'rendering-pineal-scrondrix',
--- 	category = 'slaughterhouse-scrondrix',
+-- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',
 -- 	subgroup = 'py-alienlife-scrondrix',
 -- 	order = 'b',
@@ -161,7 +161,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 -- FUN.autorecipes {
 --     name = 'rendering-tendon-kmauts',
--- 	category = 'slaughterhouse-kmauts',
+-- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',
 -- 	subgroup = 'py-alienlife-kmauts',
 -- 	order = 'b',
@@ -199,7 +199,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 -- FUN.autorecipes {
 --     name = 'rendering-bladder-phagnot',
--- 	category = 'slaughterhouse-phagnot',
+-- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',
 -- 	subgroup = 'py-alienlife-phagnot',
 -- 	order = 'b',
@@ -236,7 +236,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 -- FUN.autorecipes {
 --     name = 'rendering-venon-vonix',
--- 	category = 'slaughterhouse-vonix',
+-- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',
 -- 	subgroup = 'py-alienlife-vonix',
 -- 	order = 'b',
@@ -276,7 +276,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 -- FUN.autorecipes {
 --     name = 'rendering-photophore-trits',
--- 	category = 'slaughterhouse-trits',
+-- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',
 -- 	subgroup = 'py-alienlife-trits',
 -- 	order = 'b',
@@ -310,7 +310,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 -- FUN.autorecipes {
 --     name = 'rendering-shell-xyhiphoe',
--- 	category = 'slaughterhouse-xyhiphoe',
+-- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',
 -- 	subgroup = 'py-alienlife-xyhiphoe',
 -- 	order = 'b',
@@ -344,7 +344,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 -- RECIPE {
 --     type = "recipe",
 --     name = "adrenal-cortex-2",
---     category = "slaughterhouse-cridren",
+--     category = "slaughterhouse",
 --     enabled = false,
 --     energy_required = 15,
 --     ingredients = {
@@ -362,7 +362,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 RECIPE {
     type = "recipe",
     name = "magnetic-organ",
-    category = "slaughterhouse-ulric",
+    category = "slaughterhouse",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -380,7 +380,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "intestinal-ee",
-    category = "slaughterhouse-scrondrix",
+    category = "slaughterhouse",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -398,7 +398,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cognition-osteochain",
-    category = "slaughterhouse-xeno",
+    category = "slaughterhouse",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -415,7 +415,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "adaptable-automucosa",
-    category = "slaughterhouse-zipir",
+    category = "slaughterhouse",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -432,7 +432,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "polynuclear-ganglion",
-    category = "slaughterhouse-arthurian",
+    category = "slaughterhouse",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -450,7 +450,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "geostabilization-tissue",
-    category = "slaughterhouse-phagnot",
+    category = "slaughterhouse",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -469,7 +469,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "lcc",
-    category = "slaughterhouse-cottongut",
+    category = "slaughterhouse",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -487,7 +487,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cryogland",
-    category = "slaughterhouse-korlex",
+    category = "slaughterhouse",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -505,7 +505,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "subdermal-chemosnare",
-    category = "slaughterhouse-phadai",
+    category = "slaughterhouse",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -540,7 +540,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "glandular-myocluster",
-    category = "slaughterhouse-auog",
+    category = "slaughterhouse",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -558,7 +558,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "autoantigens",
-    category = "slaughterhouse-dhilmos",
+    category = "slaughterhouse",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -568,6 +568,7 @@ RECIPE {
 		{type = 'fluid', name = 'autoantigens', amount = 50},
     },
     main_product = "autoantigens",
+    subgroup = 'py-alienlife-dhilmos'
 }:add_unlock("recombinant-ery")
 
 ------------------dimensional-gastricorg------------------
@@ -576,7 +577,7 @@ if mods['pyhightech'] then
     RECIPE {
         type = "recipe",
         name = "dimensional-gastricorg",
-        category = "slaughterhouse-antelope",
+        category = "slaughterhouse",
         enabled = false,
         energy_required = 10,
         ingredients = {
@@ -595,7 +596,7 @@ end
 RECIPE {
     type = "recipe",
     name = "sternite-lung",
-    category = "slaughterhouse-arqad",
+    category = "slaughterhouse",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -612,7 +613,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "hormonal",
-    category = "slaughterhouse-simik",
+    category = "slaughterhouse",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -632,7 +633,7 @@ if mods['pyalternativeenergy'] then
     RECIPE {
         type = "recipe",
         name = "vsk",
-        category = "slaughterhouse-zungror",
+        category = "slaughterhouse",
         enabled = false,
         energy_required = 40,
         ingredients = {
@@ -647,7 +648,7 @@ if mods['pyalternativeenergy'] then
     RECIPE {
         type = "recipe",
         name = "aeroorgan",
-        category = "slaughterhouse-numal",
+        category = "slaughterhouse",
         enabled = false,
         energy_required = 40,
         ingredients = {

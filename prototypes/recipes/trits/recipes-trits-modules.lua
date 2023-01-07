@@ -9,7 +9,8 @@
 RECIPE {
     type = 'recipe',
     name = 'trits-mk02',
-    category = 'rc-trits',
+    category = 'rc',
+	allowed_module_categories = {'trits'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -42,7 +43,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'trits-mk03',
-    category = 'rc-trits',
+    category = 'rc',
+	allowed_module_categories = {'trits'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -76,7 +78,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'trits-mk04',
-    category = 'rc-trits',
+    category = 'rc',
+	allowed_module_categories = {'trits'},
     enabled = false,
     energy_required = 30,
     ingredients = {

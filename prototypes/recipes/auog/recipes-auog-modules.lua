@@ -9,7 +9,8 @@
 RECIPE {
     type = 'recipe',
     name = 'auog-mk02',
-    category = 'rc-auog',
+    category = 'rc',
+	allowed_module_categories = {'auog'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -39,7 +40,8 @@ RECIPE {
     RECIPE {
     type = 'recipe',
     name = 'auog-pup-01',
-    category = 'rc-auog',
+    category = 'rc',
+	allowed_module_categories = {'auog'},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -131,7 +133,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'auog-mk03',
-    category = 'rc-auog',
+    category = 'rc',
+	allowed_module_categories = {'auog'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -223,7 +226,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'auog-mk04',
-    category = 'rc-auog',
+    category = 'rc',
+	allowed_module_categories = {'auog'},
     enabled = false,
     energy_required = 30,
     ingredients = {

@@ -23,7 +23,7 @@ local IMP_SPECIAL = 2
 
 FUN.autorecipes {
     name = 'rendering',
-	category = 'slaughterhouse-phagnot',
+	category = 'slaughterhouse',
 	--module_limitations = 'phagnot',
 	subgroup = 'py-alienlife-phagnot',
 	order = 'b',

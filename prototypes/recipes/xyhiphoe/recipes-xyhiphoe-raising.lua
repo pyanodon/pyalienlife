@@ -4,7 +4,8 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'xyhiphoe-cub',
-	category = 'rc-xyhiphoe',
+	category = 'rc',
+	allowed_module_categories = {'xyhiphoe'},
 	module_limitations = 'xyhiphoe',
 	subgroup = 'py-alienlife-xyhiphoe',
 	order = 'c',

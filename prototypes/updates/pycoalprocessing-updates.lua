@@ -173,16 +173,3 @@ data.raw["recipe-category"]["ralesia"].allowed_module_categories = { "ralesia" }
 data.raw["recipe-category"]["ralesia"].modules_required = true
 data.raw["recipe-category"]["ulric"].allowed_module_categories = { "ulric" }
 data.raw["recipe-category"]["ulric"].modules_required = true
-
-data:extend {
-    {
-        type = "recipe-category",
-        name = "rc-mukmoux",
-        allowed_module_categories = { "mukmoux" },
-    },
-    {
-        type = "recipe-category",
-        name = "rc-ulric",
-        allowed_module_categories = { "ulric" },
-    },
-}

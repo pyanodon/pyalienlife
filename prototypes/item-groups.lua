@@ -83,157 +83,183 @@ data:extend {
         type = "item-subgroup",
         name = "py-alienlife-sea-sponge",
         group = "py-alienlife",
-        order = "e"
+        order = "e",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-ulric",
         group = "py-alienlife",
-        order = "e-a"
+        order = "e-a",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-auog",
         group = "py-alienlife",
-        order = "e-aa"
+        order = "e-aa",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-mukmoux",
         group = "py-alienlife",
-        order = "e-b"
+        order = "e-b",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-vrauks",
         group = "py-alienlife",
-        order = "e-ba"
+        order = "e-ba",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-arthurian",
         group = "py-alienlife",
-        order = "e-c"
+        order = "e-c",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-dhilmos",
         group = "py-alienlife",
-        order = "e-d"
+        order = "e-d",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-scrondrix",
         group = "py-alienlife",
-        order = "e-e"
+        order = "e-e",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-phadai",
         group = "py-alienlife",
-        order = "e-f"
+        order = "e-f",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-fish",
         group = "py-alienlife",
-        order = "e-g"
+        order = "e-g",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-dingrits",
         group = "py-alienlife",
-        order = "e-h"
+        order = "e-h",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-kmauts",
         group = "py-alienlife",
-        order = "e-i"
+        order = "e-i",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-vonix",
         group = "py-alienlife",
-        order = "e-j"
+        order = "e-j",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-phagnot",
         group = "py-alienlife",
-        order = "e-k"
+        order = "e-k",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-xeno",
         group = "py-alienlife",
-        order = "e-l"
+        order = "e-l",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-antelope",
         group = "py-alienlife",
-        order = "e-m"
+        order = "e-m",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-zipir",
         group = "py-alienlife",
-        order = "e-n"
+        order = "e-n",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-trits",
         group = "py-alienlife",
-        order = "e-o"
+        order = "e-o",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-xyhiphoe",
         group = "py-alienlife",
-        order = "e-p"
+        order = "e-p",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-sponge",
         group = "py-alienlife",
-        order = "e-qa"
+        order = "e-qa",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-simik",
         group = "py-alienlife",
-        order = "e-qb"
+        order = "e-qb",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-korlex",
         group = "py-alienlife",
-        order = "e-r"
+        order = "e-r",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-cottongut",
         group = "py-alienlife",
-        order = "e-s"
+        order = "e-s",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-arqad",
         group = "py-alienlife",
-        order = "e-t"
+        order = "e-t",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-numal",
         group = "py-alienlife",
-        order = "e-u"
+        order = "e-u",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-zungror",
         group = "py-alienlife",
-        order = "e-v"
+        order = "e-v",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
@@ -251,61 +277,71 @@ data:extend {
         type = "item-subgroup",
         name = "py-alienlife-ralesia",
         group = "py-alienlife",
-        order = "f-a"
+        order = "f-a",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-rennea",
         group = "py-alienlife",
-        order = "f-b"
+        order = "f-b",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-yotoi",
         group = "py-alienlife",
-        order = "f-c"
+        order = "f-c",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-tuuphra",
         group = "py-alienlife",
-        order = "f-d"
+        order = "f-d",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-grod",
         group = "py-alienlife",
-        order = "f-e"
+        order = "f-e",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-cridren",
         group = "py-alienlife",
-        order = "f-f"
+        order = "f-f",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-kicalk",
         group = "py-alienlife",
-        order = "f-g"
+        order = "f-g",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-cadaveric",
         group = "py-alienlife",
-        order = "f-h"
+        order = "f-h",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-guar",
         group = "py-alienlife",
-        order = "f-i"
+        order = "f-i",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-mova",
         group = "py-alienlife",
-        order = "f-j"
+        order = "f-j",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
@@ -317,25 +353,29 @@ data:extend {
         type = "item-subgroup",
         name = "py-alienlife-bhoddos",
         group = "py-alienlife",
-        order = "g-a"
+        order = "g-a",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-fawogae",
         group = "py-alienlife",
-        order = "g-b"
+        order = "g-b",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-navens",
         group = "py-alienlife",
-        order = "g-c"
+        order = "g-c",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-yaedols",
         group = "py-alienlife",
-        order = "g-d"
+        order = "g-d",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",
@@ -347,7 +387,8 @@ data:extend {
         type = "item-subgroup",
         name = "py-alienlife-moss",
         group = "py-alienlife",
-        order = "g-eb"
+        order = "g-eb",
+        hide_from_player_crafting = true
     },
     {
         type = "item-subgroup",

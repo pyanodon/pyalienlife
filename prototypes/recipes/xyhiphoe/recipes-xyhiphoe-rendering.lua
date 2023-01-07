@@ -17,7 +17,7 @@ local IMP_BLOOD = 300
 
 FUN.autorecipes {
     name = 'rendering',
-	category = 'slaughterhouse-xyhiphoe',
+	category = 'slaughterhouse',
 	subgroup = 'py-alienlife-xyhiphoe',
 	order = 'b',
 	crafting_speed = 30,

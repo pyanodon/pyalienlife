@@ -23,7 +23,7 @@ local IMP_BRAIN = 6
 
 FUN.autorecipes {
     name = 'rendering',
-	category = 'slaughterhouse-phadai',
+	category = 'slaughterhouse',
 	--module_limitations = 'phadai',
 	subgroup = 'py-alienlife-phadai',
 	order = 'b',
