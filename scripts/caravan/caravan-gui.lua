@@ -229,7 +229,7 @@ script.on_event('open-gui', function(event)
 	local player = game.players[event.player_index]
 	if player.cursor_stack and player.cursor_stack.valid_for_read then return end
 	local entity = player.selected
-	if not entity or not prototypes[entity.name] then return end
+	if not entity or not prototypes[entity.name] or not player.can_reach_entity(entity) then return end
 	local caravan_data = Caravan.instantiate_caravan(entity)
 	local existing = Caravan.get_caravan_gui(player)
 	if existing then

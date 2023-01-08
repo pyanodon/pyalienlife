@@ -9,6 +9,7 @@ Date: ?
     - Locale fix for zungror, dhilmos
     - workers-food stack size nerfed from 100->50
     - Reordered recipe subgroups
+    - Fixed that caravans could be opened from anywhere on the map
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.8
 Date: 2023-1-5
