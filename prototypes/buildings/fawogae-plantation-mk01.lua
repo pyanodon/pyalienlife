@@ -37,8 +37,8 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/fawogae-plantation-mk01.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
-    order = "b",
+    subgroup = "py-alienlife-farm-buildings-mk01",
+    order = "d",
     place_result = "fawogae-plantation-mk01",
     stack_size = 10
 }

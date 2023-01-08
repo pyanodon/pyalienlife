@@ -22,7 +22,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/moss-farm-mk02.png",
     icon_size = 32,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk02",
+    subgroup = "py-alienlife-farm-buildings-mk02",
     order = "e",
     place_result = "moss-farm-mk02",
     stack_size = 10

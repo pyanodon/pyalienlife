@@ -39,19 +39,19 @@ TECHNOLOGY("filtration-mk02"):add_pack("py-science-pack-3")
 TECHNOLOGY("methanol-processing-2"):add_pack("py-science-pack-3")
 
 --BUILDINDS--
-ITEM("fawogae-plantation-mk02"):set("icon", "__pyalienlifegraphics__/graphics/icons/fawogae-plantation-mk02.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-buildings-mk02", "d")
-ITEM("fawogae-plantation-mk03"):set("icon", "__pyalienlifegraphics__/graphics/icons/fawogae-plantation-mk03.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-buildings-mk03", "d")
-ITEM("fawogae-plantation-mk04"):set("icon", "__pyalienlifegraphics__/graphics/icons/fawogae-plantation-mk04.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-buildings-mk04", "d")
+ITEM("fawogae-plantation-mk02"):set("icon", "__pyalienlifegraphics__/graphics/icons/fawogae-plantation-mk02.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-farm-buildings-mk02", "d")
+ITEM("fawogae-plantation-mk03"):set("icon", "__pyalienlifegraphics__/graphics/icons/fawogae-plantation-mk03.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-farm-buildings-mk03", "d")
+ITEM("fawogae-plantation-mk04"):set("icon", "__pyalienlifegraphics__/graphics/icons/fawogae-plantation-mk04.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-farm-buildings-mk04", "d")
 RECIPE('fawogae-plantation-mk01'):set_fields {enabled = false}
-RECIPE('fawogae-plantation-mk02'):add_unlock('mycology-mk03'):subgroup_order("py-alienlife-buildings-mk02", "b")
+RECIPE('fawogae-plantation-mk02'):add_unlock('mycology-mk03')
 data.raw['assembling-machine']['fawogae-plantation-mk02'].crafting_speed = 0.1
 data.raw['assembling-machine']['fawogae-plantation-mk02'].module_specification = {module_slots = 45}
 
-RECIPE('fawogae-plantation-mk03'):add_unlock('mycology-mk04'):subgroup_order("py-alienlife-buildings-mk03", "b")
+RECIPE('fawogae-plantation-mk03'):add_unlock('mycology-mk04')
 data.raw['assembling-machine']['fawogae-plantation-mk03'].crafting_speed = 0.1
 data.raw['assembling-machine']['fawogae-plantation-mk03'].module_specification = {module_slots = 65}
 
-RECIPE('fawogae-plantation-mk04'):add_unlock('mycology-mk05'):subgroup_order("py-alienlife-buildings-mk04", "b")
+RECIPE('fawogae-plantation-mk04'):add_unlock('mycology-mk05')
 data.raw['assembling-machine']['fawogae-plantation-mk04'].crafting_speed = 0.1
 data.raw['assembling-machine']['fawogae-plantation-mk04'].module_specification = {module_slots = 88}
 

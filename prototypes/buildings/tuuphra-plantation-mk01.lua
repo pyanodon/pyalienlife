@@ -23,7 +23,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/tuuphra-plantation-mk01.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-farm-buildings-mk01",
     order = "e",
     place_result = "tuuphra-plantation-mk01",
     stack_size = 10

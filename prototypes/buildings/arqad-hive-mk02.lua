@@ -28,7 +28,7 @@ ITEM {
     icon = "__pyalienlifegraphics3__/graphics/icons/arqad-hive-mk02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk02",
+    subgroup = "py-alienlife-farm-buildings-mk02",
     order = "d",
     place_result = "arqad-hive-mk02",
     stack_size = 10

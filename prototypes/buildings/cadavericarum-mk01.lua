@@ -30,7 +30,7 @@ ITEM {
     icon = "__pyhightechgraphics__/graphics/icons/cadaveric-arum-mk01.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-farm-buildings-mk01",
     order = "b",
     place_result = "cadaveric-arum-mk01",
     stack_size = 10

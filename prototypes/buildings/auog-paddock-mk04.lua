@@ -24,7 +24,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/auog-paddock-mk04.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk04",
+    subgroup = "py-alienlife-farm-buildings-mk04",
     order = "d",
     place_result = "auog-paddock-mk04",
     stack_size = 10

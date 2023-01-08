@@ -22,7 +22,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/harvester.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-farms",
+    subgroup = "py-alienlife-buildings-others",
     order = "z",
     place_result = "harvester",
     stack_size = 10

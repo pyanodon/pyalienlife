@@ -25,7 +25,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/ulric-corral-mk02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk02",
+    subgroup = "py-alienlife-farm-buildings-mk02",
     order = "d",
     place_result = "ulric-corral-mk02",
     stack_size = 10

@@ -262,22 +262,22 @@ RECIPE('cadaveric-arum-mk01'):remove_unlock('basic-electronics')
 RECIPE('cadaveric-arum-mk02'):remove_unlock('basic-electronics')
 RECIPE('cadaveric-arum-mk03'):remove_unlock('basic-electronics')
 RECIPE('cadaveric-arum-mk04'):remove_unlock('basic-electronics')
-RECIPE('moondrop-greenhouse-mk01'):subgroup_order("py-alienlife-buildings-mk01", "b")
+RECIPE('moondrop-greenhouse-mk01'):subgroup_order("py-alienlife-farm-buildings-mk01", "b")
 --ENTITY('moondrop-greenhouse-mk01'):set('crafting_speed', 0.01)
 data.raw['assembling-machine']['moondrop-greenhouse-mk01'].crafting_speed = 0.1
 data.raw['assembling-machine']['moondrop-greenhouse-mk01'].module_specification.module_slots = 20
 
-RECIPE('moondrop-greenhouse-mk02'):add_unlock('botany-mk02'):subgroup_order("py-alienlife-buildings-mk02", "b")
+RECIPE('moondrop-greenhouse-mk02'):add_unlock('botany-mk02'):subgroup_order("py-alienlife-farm-buildings-mk02", "b")
 --ENTITY('moondrop-greenhouse-mk02'):set_field('crafting_speed', 0.01)
 data.raw['assembling-machine']['moondrop-greenhouse-mk02'].crafting_speed = 0.1
 data.raw['assembling-machine']['moondrop-greenhouse-mk02'].module_specification.module_slots = 40
 
-RECIPE('moondrop-greenhouse-mk03'):add_unlock('botany-mk03'):subgroup_order("py-alienlife-buildings-mk03", "b")
+RECIPE('moondrop-greenhouse-mk03'):add_unlock('botany-mk03'):subgroup_order("py-alienlife-farm-buildings-mk03", "b")
 --ENTITY('moondrop-greenhouse-mk03'):set_field('crafting_speed', 0.01)
 data.raw['assembling-machine']['moondrop-greenhouse-mk03'].crafting_speed = 0.1
 data.raw['assembling-machine']['moondrop-greenhouse-mk03'].module_specification.module_slots = 60
 
-RECIPE('moondrop-greenhouse-mk04'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-buildings-mk04", "b")
+RECIPE('moondrop-greenhouse-mk04'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-farm-buildings-mk04", "b")
 --ENTITY('moondrop-greenhouse-mk04'):set_field('crafting_speed', 0.01)
 data.raw['assembling-machine']['moondrop-greenhouse-mk04'].crafting_speed = 0.1
 data.raw['assembling-machine']['moondrop-greenhouse-mk04'].module_specification.module_slots = 80

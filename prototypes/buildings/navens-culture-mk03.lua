@@ -23,7 +23,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk03.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk03",
+    subgroup = "py-alienlife-farm-buildings-mk03",
     order = "b",
     place_result = "navens-culture-mk03",
     stack_size = 10

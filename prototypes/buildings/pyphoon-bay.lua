@@ -23,7 +23,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/pyphoon-bay.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-generators",
+    subgroup = "py-alienlife-buildings-others",
     order = "z",
     place_result = "pyphoon-bay",
     stack_size = 10

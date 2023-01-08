@@ -27,7 +27,7 @@ ITEM {
     icon = "__pyfusionenergygraphics__/graphics/icons/xyhiphoe-pool-mk01.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-farm-buildings-mk01",
     order = "d",
     place_result = "xyhiphoe-pool-mk01",
     stack_size = 10

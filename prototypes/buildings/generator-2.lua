@@ -24,7 +24,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/generator-2.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-generators",
+    subgroup = "py-alienlife-buildings-others",
     order = "a",
     place_result = "generator-2",
     stack_size = 10

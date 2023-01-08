@@ -26,7 +26,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/phadai-enclosure-mk03.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk03",
+    subgroup = "py-alienlife-farm-buildings-mk03",
     order = "d",
     place_result = "phadai-enclosure-mk03",
     stack_size = 10

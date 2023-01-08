@@ -29,7 +29,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/mega-farm-ralesia.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-farms",
+    subgroup = "py-alienlife-buildings-others",
     order = "a",
     place_result = "mega-farm",
     stack_size = 10

@@ -30,7 +30,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/kicalk-plantation-mk03.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk03",
+    subgroup = "py-alienlife-farm-buildings-mk03",
     order = "e",
     place_result = "kicalk-plantation-mk03",
     stack_size = 10

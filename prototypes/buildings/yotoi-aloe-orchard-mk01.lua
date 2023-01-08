@@ -23,7 +23,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/yotoi-aloe-orchard-mk01.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-farm-buildings-mk01",
     order = "e",
     place_result = "yotoi-aloe-orchard-mk01",
     stack_size = 10

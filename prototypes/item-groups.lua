@@ -7,11 +7,18 @@ data:extend {
         icon = "__pyalienlifegraphics__/graphics/technology/item-group.png",
         icon_size = 64
     },
+    -- buildings
     {
         type = "item-subgroup",
         name = "py-alienlife-buildings-mk01",
         group = "py-alienlife",
         order = "a-a"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-farm-buildings-mk01",
+        group = "py-alienlife",
+        order = "a-a-b"
     },
     {
         type = "item-subgroup",
@@ -21,15 +28,33 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-farm-buildings-mk02",
+        group = "py-alienlife",
+        order = "a-b-b"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-buildings-mk03",
         group = "py-alienlife",
         order = "a-c"
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-farm-buildings-mk03",
+        group = "py-alienlife",
+        order = "a-c-b"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-buildings-mk04",
         group = "py-alienlife",
         order = "a-d"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-farm-buildings-mk04",
+        group = "py-alienlife",
+        order = "a-d-b"
     },
     {
         type = "item-subgroup",
@@ -43,42 +68,98 @@ data:extend {
         group = "py-alienlife",
         order = "a-ef"
     },
+    -- solids
     {
         type = "item-subgroup",
-        name = "py-alienlife-generators",
+        name = "py-alienlife-science",
         group = "py-alienlife",
-        order = "a-f"
-    },
-    {
-        type = "item-subgroup",
-        name = "py-alienlife-farms",
-        group = "py-alienlife",
-        order = "a-g"
+        order = "ba"
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-items",
         group = "py-alienlife",
-        order = "d"
+        order = "bb"
     },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-replicators",
+        group = "py-alienlife",
+        order = "bc"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-genetics",
+        group = "py-alienlife",
+        order = "bd"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-food",
+        group = "py-alienlife",
+        order = "be"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-used",
+        group = "py-alienlife",
+        order = "bf"
+    },
+
+    
+    -- fluids
     {
         type = "item-subgroup",
         name = "py-alienlife-fluids",
         group = "py-alienlife",
-        order = "c"
+        order = "ca"
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-recipes",
         group = "py-alienlife",
-        order = "b"
+        order = "cb"
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-gases",
         group = "py-alienlife",
-        order = "u"
+        order = "cc"
     },
+
+    -- codex
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-samples",
+        group = "py-alienlife",
+        order = "da"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-codex",
+        group = "py-alienlife",
+        order = "db"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-codex-mk02",
+        group = "py-alienlife",
+        order = "dc"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-codex-mk03",
+        group = "py-alienlife",
+        order = "dd"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-codex-mk04",
+        group = "py-alienlife",
+        order = "df"
+    },
+
+    -- animals
     {
         type = "item-subgroup",
         name = "py-alienlife-sea-sponge",
@@ -351,67 +432,7 @@ data:extend {
     },
     {
         type = "item-subgroup",
-        name = "py-alienlife-codex",
-        group = "py-alienlife",
-        order = "h"
-    },
-    {
-        type = "item-subgroup",
-        name = "py-alienlife-codex-mk02",
-        group = "py-alienlife",
-        order = "hb"
-    },
-    {
-        type = "item-subgroup",
-        name = "py-alienlife-codex-mk03",
-        group = "py-alienlife",
-        order = "hc"
-    },
-    {
-        type = "item-subgroup",
-        name = "py-alienlife-codex-mk04",
-        group = "py-alienlife",
-        order = "hd"
-    },
-    {
-        type = "item-subgroup",
-        name = "py-alienlife-samples",
-        group = "py-alienlife",
-        order = "i"
-    },
-    {
-        type = "item-subgroup",
-        name = "py-alienlife-genetics",
-        group = "py-alienlife",
-        order = "j"
-    },
-    {
-        type = "item-subgroup",
-        name = "py-alienlife-food",
-        group = "py-alienlife",
-        order = "k"
-    },
-    {
-        type = "item-subgroup",
-        name = "py-alienlife-replicators",
-        group = "py-alienlife",
-        order = "l"
-    },
-    {
-        type = "item-subgroup",
-        name = "py-alienlife-used",
-        group = "py-alienlife",
-        order = "x"
-    },
-    {
-        type = "item-subgroup",
         name = "py-alienlife-modules",
-        group = "py-alienlife",
-        order = "z"
-    },
-    {
-        type = "item-subgroup",
-        name = "py-alienlife-science",
         group = "py-alienlife",
         order = "z"
     },
