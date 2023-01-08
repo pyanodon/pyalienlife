@@ -4,10 +4,11 @@ Date: ?
   Changes:
     - Reproduction complex now has the same gui as the slaughterhouse
     - Slaughterhouse gui can now be closed with E or ESC
-    - Slaughterhouse and RC recipes are now hidden from the handcrafting menu
     - Slaughterhouse gui no longer crashes in multiplayer
     - Fixed that RC could craft without modules
     - Locale fix for zungror, dhilmos
+    - workers-food stack size nerfed from 100->50
+    - Reordered recipe subgroups
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.8
 Date: 2023-1-5

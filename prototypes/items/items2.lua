@@ -548,7 +548,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-special-creatures",
     order = "z-a",
-    stack_size = 100
+    stack_size = 50
 }
 
 ---codexes mk02--
