@@ -1,44 +1,45 @@
-require("__stdlib__/stdlib/data/data").Util.create_data_globals()
+require('__stdlib__/stdlib/data/data').Util.create_data_globals()
 local table = require('__stdlib__/stdlib/utils/table')
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
+local FUN = require('__pycoalprocessing__/prototypes/functions/functions')
 
-require("prototypes/updates/autoplace-fish")
-require("prototypes/updates/base-updates")
+require('prototypes/updates/autoplace-fish')
+require('prototypes/updates/base-updates')
+local collision_mask_util = require '__core__/lualib/collision-mask-util'
 
-if mods["pycoalprocessing"] then
-    require("prototypes/updates/pycoalprocessing-updates")
-    ITEM("automation-science-pack", "tool"):set("icon", "__pyalienlifegraphics3__/graphics/icons/automation-science-pack.png")
+if mods['pycoalprocessing'] then
+    require('prototypes/updates/pycoalprocessing-updates')
+    ITEM('automation-science-pack', 'tool'):set('icon', '__pyalienlifegraphics3__/graphics/icons/automation-science-pack.png')
 end
 
-if mods["pyfusionenergy"] then
-    require("prototypes/updates/pyfusionenergy-updates")
+if mods['pyfusionenergy'] then
+    require('prototypes/updates/pyfusionenergy-updates')
 end
 
-if mods["pyrawores"] then
-    require("prototypes/updates/pyrawores-updates")
+if mods['pyrawores'] then
+    require('prototypes/updates/pyrawores-updates')
 end
 
-if mods["pyhightech"] then
-    require("prototypes/technologies/kicalk")
-    require("prototypes/technologies/schrodinger-antelope")
-    require("prototypes/buildings/antelope-enclosure-mk01")
-    require("prototypes/updates/pyhightech-updates")
+if mods['pyhightech'] then
+    require('prototypes/technologies/kicalk')
+    require('prototypes/technologies/schrodinger-antelope')
+    require('prototypes/buildings/antelope-enclosure-mk01')
+    require('prototypes/updates/pyhightech-updates')
 end
 
-if mods["pypetroleumhandling"] then
-    require("prototypes/updates/pypetroleumhandling-updates")
+if mods['pypetroleumhandling'] then
+    require('prototypes/updates/pypetroleumhandling-updates')
 end
 
-TECHNOLOGY("ralesia"):add_pack("py-science-pack-1")
+TECHNOLOGY('ralesia'):add_pack('py-science-pack-1')
 
 --ADAPTATIONS
 
 data.raw.item.fawogae = nil
 
--- table.insert(data.raw.character.character.mining_categories, "ore-bioreserve")
+-- table.insert(data.raw.character.character.mining_categories, 'ore-bioreserve')
 
-table.insert(data.raw.character.character.crafting_categories, "wpu-handcrafting")
-table.insert(data.raw.character.character.crafting_categories, "research-handcrafting")
+table.insert(data.raw.character.character.crafting_categories, 'wpu-handcrafting')
+table.insert(data.raw.character.character.crafting_categories, 'research-handcrafting')
 
 for _, recipe in pairs(data.raw.recipe) do
     local r = RECIPE(recipe)
@@ -50,10 +51,10 @@ for _, recipe in pairs(data.raw.recipe) do
     r:replace_ingredient('xyhiphoe-blood', 'arthropod-blood')
 end
 
---local sap1_limits = data.raw.module["sap-tree"].limitation_blacklist
---local sap2_limits = data.raw.module["sap-tree-mk02"].limitation_blacklist
---local sap3_limits = data.raw.module["sap-tree-mk03"].limitation_blacklist
---local sap4_limits = data.raw.module["sap-tree-mk04"].limitation_blacklist
+--local sap1_limits = data.raw.module['sap-tree'].limitation_blacklist
+--local sap2_limits = data.raw.module['sap-tree-mk02'].limitation_blacklist
+--local sap3_limits = data.raw.module['sap-tree-mk03'].limitation_blacklist
+--local sap4_limits = data.raw.module['sap-tree-mk04'].limitation_blacklist
 ----------------------------------------------------------------------------------------------------
 -- MODULE LIMITATION SETUP
 ----------------------------------------------------------------------------------------------------
@@ -127,17 +128,17 @@ end
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
---data.raw.module["sap-tree"].limitation_blacklist = sap1_limits
-data.raw.module["sap-tree"].limitation = {"sap-01"}
+--data.raw.module['sap-tree'].limitation_blacklist = sap1_limits
+data.raw.module['sap-tree'].limitation = {'sap-01'}
 
---data.raw.module["sap-tree-mk02"].limitation_blacklist = sap2_limits
-data.raw.module["sap-tree-mk02"].limitation = {"sap-01", "sap-mk02"}
+--data.raw.module['sap-tree-mk02'].limitation_blacklist = sap2_limits
+data.raw.module['sap-tree-mk02'].limitation = {'sap-01', 'sap-mk02'}
 
---data.raw.module["sap-tree-mk03"].limitation_blacklist = sap3_limits
-data.raw.module["sap-tree-mk03"].limitation = {"sap-01", "sap-mk02", "sap-mk03"}
+--data.raw.module['sap-tree-mk03'].limitation_blacklist = sap3_limits
+data.raw.module['sap-tree-mk03'].limitation = {'sap-01', 'sap-mk02', 'sap-mk03'}
 
---data.raw.module["sap-tree-mk04"].limitation_blacklist = sap4_limits
-data.raw.module["sap-tree-mk04"].limitation = {"sap-01", "sap-mk02", "sap-mk03", "sap-mk04"}
+--data.raw.module['sap-tree-mk04'].limitation_blacklist = sap4_limits
+data.raw.module['sap-tree-mk04'].limitation = {'sap-01', 'sap-mk02', 'sap-mk03', 'sap-mk04'}
 
 --remove steel barrel based milk
 data.raw.item['milk-barrel'] = nil
@@ -163,7 +164,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'barrel-milk', amount = 1},
     },
-}:remove_unlock("fluid-handling"):add_unlock("korlex")
+}:remove_unlock('fluid-handling'):add_unlock('korlex')
 
 RECIPE {
     type = 'recipe',
@@ -178,10 +179,10 @@ RECIPE {
         {type = 'item', name = 'empty-barrel-milk', amount = 1},
         {type = 'fluid', name = 'milk', amount = 50},
     },
-    main_product = "milk",
+    main_product = 'milk',
     icon = '__pyalienlifegraphics__/graphics/icons/empty-barrel-milk-recipe.png',
     icon_size = 64,
-}:remove_unlock("fluid-handling"):add_unlock("korlex")
+}:remove_unlock('fluid-handling'):add_unlock('korlex')
 
 --copy`s of combustion recipes with biomass
 for _,recipe in pairs(data.raw.recipe) do
@@ -207,26 +208,26 @@ for _,recipe in pairs(data.raw.recipe) do
                     --log(serpent.block(recipe.ingredients))
                     --log(locale)
                     for _, result in pairs(recipe.results) do
-                        if result.name == "combustion-mixture1" then
+                        if result.name == 'combustion-mixture1' then
                             temp = result.temperature
                         end
                     end
                     RECIPE {
-                        type = "recipe",
+                        type = 'recipe',
                         name = name .. '-biomass',
-                        category = "combustion",
+                        category = 'combustion',
                         enabled = false,
                         energy_required = 3,
                         ingredients = recipe_copy.ingredients,
                         results = recipe_copy.results,
                         icon = recipe_copy.icon,
                         icon_size = recipe_copy.icon_size,
-                        --main_product = "combustion-mixture1",
+                        --main_product = 'combustion-mixture1',
                         subgroup = recipe_copy.subgroup,
                         order = recipe_copy.order,
-                        localised_name = {"recipe-name.biomass-combustion", {type .. "-name." ..locale}, temp}
+                        localised_name = {'recipe-name.biomass-combustion', {type .. '-name.' ..locale}, temp}
                     }
-                    -- log(serpent.block(data.raw.recipe[name .. "-biomass"]))
+                    -- log(serpent.block(data.raw.recipe[name .. '-biomass']))
                     --log('hit')
                     for _, tech in pairs(data.raw.technology) do
                         --log('hit')
@@ -260,8 +261,8 @@ end
 
 if data.data_crawler then
 	  data.script_enabled = {
-		{type = "entity", name = "tar-patch"},
-        {type = "item", name = "earth-generic-sample"}
+		{type = 'entity', name = 'tar-patch'},
+        {type = 'item', name = 'earth-generic-sample'}
 	  }
   end
 
@@ -324,13 +325,13 @@ local searchtypes = {
 }
 
 local function next_tier(prototype_name, prototype_category)
-    local tier_num = prototype_name:match("%-mk(%d%d)$")
+    local tier_num = prototype_name:match('%-mk(%d%d)$')
     if tier_num then
         tier_num = tonumber(tier_num)
         if tier_num then
             tier_num = tier_num + 1
-            tier_num = string.format("%02d", tier_num)
-            return (prototype_category[prototype_name:gsub("%d%d$", tier_num)] or {}).name
+            tier_num = string.format('%02d', tier_num)
+            return (prototype_category[prototype_name:gsub('%d%d$', tier_num)] or {}).name
         end
     end
 end
@@ -341,14 +342,14 @@ for _, category in pairs(searchtypes) do
         for name, prototype in pairs(raw_cat) do
             if not prototype.next_upgrade and prototype.minable and prototype.minable.result
                 and data.raw.item[prototype.minable.result]
-                and not ITEM(prototype.minable.result):has_flag("hidden")
+                and not ITEM(prototype.minable.result):has_flag('hidden')
                 and data.raw.item[prototype.minable.result].place_result == name
             then
                 prototype.next_upgrade = next_tier(name, raw_cat)
                 if prototype.next_upgrade and raw_cat[prototype.next_upgrade].minable
                     and raw_cat[prototype.next_upgrade].minable.result
                     and data.raw.item[raw_cat[prototype.next_upgrade].minable.result]
-                    and not ITEM(raw_cat[prototype.next_upgrade].minable.result):has_flag("hidden")
+                    and not ITEM(raw_cat[prototype.next_upgrade].minable.result):has_flag('hidden')
                     and data.raw.item[raw_cat[prototype.next_upgrade].minable.result].place_result == prototype.next_upgrade
                 then
                     --log(name .. ' -> ' .. prototype.next_upgrade)
@@ -358,7 +359,7 @@ for _, category in pairs(searchtypes) do
                     else
                         local next_proto = raw_cat[prototype.next_upgrade]
                         if not prototype.fast_replaceable_group or prototype.fast_replaceable_group ~= next_proto.fast_replaceable_group then
-                            prototype.fast_replaceable_group = prototype.name:gsub("%-mk%d%d$", "")
+                            prototype.fast_replaceable_group = prototype.name:gsub('%-mk%d%d$', '')
                             next_proto.fast_replaceable_group = prototype.fast_replaceable_group
                         end
                     end
@@ -372,25 +373,25 @@ for _, category in pairs(searchtypes) do
     end
 end
 
-RECIPE("tar-quenching"):remove_unlock('separation'):add_unlock("tar-processing")
+RECIPE('tar-quenching'):remove_unlock('separation'):add_unlock('tar-processing')
 
-RECIPE("concrete"):remove_unlock("separation"):add_unlock("concrete")
+RECIPE('concrete'):remove_unlock('separation'):add_unlock('concrete')
 
-RECIPE("hazard-concrete"):remove_unlock("separation"):add_unlock("concrete")
+RECIPE('hazard-concrete'):remove_unlock('separation'):add_unlock('concrete')
 
-RECIPE("quenching-tower"):remove_unlock('machines-mk01'):remove_unlock("separation"):add_unlock("tar-processing"):remove_ingredient("electronic-circuit")
+RECIPE('quenching-tower'):remove_unlock('machines-mk01'):remove_unlock('separation'):add_unlock('tar-processing'):remove_ingredient('electronic-circuit')
 
-RECIPE("lime"):remove_unlock('separation'):add_unlock("concrete")
+RECIPE('lime'):remove_unlock('separation'):add_unlock('concrete')
 
-RECIPE("extract-sulfur"):remove_unlock("fluid-processing-machines-1"):add_unlock("tar-processing")
+RECIPE('extract-sulfur'):remove_unlock('fluid-processing-machines-1'):add_unlock('tar-processing')
 
-RECIPE("evaporator"):remove_unlock('fluid-processing-machines-1'):add_unlock("tar-processing")
+RECIPE('evaporator'):remove_unlock('fluid-processing-machines-1'):add_unlock('tar-processing')
 
-RECIPE("tailings-dust"):remove_unlock('fluid-processing-machines-1'):add_unlock("tar-processing")
+RECIPE('tailings-dust'):remove_unlock('fluid-processing-machines-1'):add_unlock('tar-processing')
 
-RECIPE("sand-brick"):remove_unlock("concrete"):add_unlock("tar-processing")
+RECIPE('sand-brick'):remove_unlock('concrete'):add_unlock('tar-processing')
 
-RECIPE("ball-mill-mk01"):remove_unlock("crusher"):add_unlock("crusher-2")
+RECIPE('ball-mill-mk01'):remove_unlock('crusher'):add_unlock('crusher-2')
 
 local farm_building_order = {
 	['antelope-enclosure'] = 'c[animal]',
@@ -446,5 +447,12 @@ for building, order in pairs(farm_building_order) do
         if data.raw.recipe[name] then
             data.raw.recipe[name].order = nil
         end
+    end
+end
+
+for _, prototype in pairs(collision_mask_util.collect_prototypes_colliding_with_mask{'train-layer', 'player-layer'}) do
+    if prototype.type ~= 'tree' and prototype.type ~= 'simple-entity' then
+        prototype.collision_mask = collision_mask_util.get_mask(prototype)
+        collision_mask_util.add_layer(prototype.collision_mask, caravan_collision_mask)
     end
 end

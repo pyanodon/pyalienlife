@@ -47,7 +47,7 @@ data:extend(
 	map_color = {1, 1, 1},
     order = 'b-b-a',
     subgroup='enemies',
-	collision_mask = _G.grounded_caravan_collision_mask,
+	collision_mask = {caravan_collision_mask},
     resistances =
 	{
 		{

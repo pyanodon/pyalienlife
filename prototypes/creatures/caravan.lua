@@ -1,11 +1,7 @@
 local util = require('util')
 local collision_mask_util = require '__core__/lualib/collision-mask-util'
-local anti_tree = collision_mask_util.get_first_unused_layer()
-_G.grounded_caravan_collision_mask = {'train-layer', 'player-layer', anti_tree, 'not-colliding-with-itself'}
 
-for _, tree in pairs(data.raw.tree) do
-	tree.collision_mask = _G.grounded_caravan_collision_mask
-end
+_G.caravan_collision_mask = collision_mask_util.get_first_unused_layer()
 
 RECIPE {
     type = 'recipe',
@@ -49,7 +45,7 @@ data:extend{{
 	minable = {mining_time = 0.1, result = 'caravan'},
 	max_health = 3125,
 	order = 'b-b-a',
-	collision_mask = _G.grounded_caravan_collision_mask,
+	collision_mask = {caravan_collision_mask},
 	subgroup = 'enemies',
 	healing_per_tick = 0.03,
 	collision_box = {{-0.6, -0.6}, {0.6, 0.6}},
