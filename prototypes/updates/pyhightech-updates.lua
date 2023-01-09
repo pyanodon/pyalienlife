@@ -475,6 +475,11 @@ RECIPE("py-science-pack-4"):replace_ingredient("plastic-bar", "biopolymer")
 RECIPE("cumene"):remove_unlock("phenol"):add_unlock("light-oil-mk03")
 RECIPE("cumene-distilation"):remove_unlock("phenol"):add_unlock("light-oil-mk03")
 
+RECIPE("dry-ralesia"):remove_unlock("zno-nanoparticles"):add_unlock("ralesia-mk03")
+RECIPE("ralesia-powder"):remove_unlock("zno-nanoparticles"):add_unlock("ralesia-mk03")
+RECIPE("raw-ralesia-extract"):remove_unlock("zno-nanoparticles"):add_unlock("ralesia-mk03")
+RECIPE("ralesia-extract"):remove_unlock("zno-nanoparticles"):add_unlock("ralesia-mk03")
+
 RECIPE('simik-food-01'):add_ingredient({type = "item", name = "cadaveric-arum", amount = 2})
 FUN.add_ingredient('simik-food-01', {name = "cadaveric-arum", amount = 2})
 
