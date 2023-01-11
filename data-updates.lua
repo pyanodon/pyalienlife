@@ -450,9 +450,18 @@ for building, order in pairs(farm_building_order) do
     end
 end
 
-for _, prototype in pairs(collision_mask_util.collect_prototypes_colliding_with_mask{'train-layer', 'player-layer'}) do
+for _, prototype in pairs(collision_mask_util.collect_prototypes_with_layer('object-layer')) do
     if prototype.type ~= 'tree' and prototype.type ~= 'simple-entity' then
         prototype.collision_mask = collision_mask_util.get_mask(prototype)
-        collision_mask_util.add_layer(prototype.collision_mask, caravan_collision_mask)
+        if not collision_mask_util.mask_contains_layer(prototype.collision_mask, 'floor-layer') then
+            collision_mask_util.add_layer(prototype.collision_mask, caravan_collision_mask)
+        end
+    end
+end
+
+for _, tile in pairs(data.raw.tile) do
+    if tile.name:find('water') then
+        tile.collision_mask = collision_mask_util.get_mask(tile)
+        collision_mask_util.add_layer(tile.collision_mask, caravan_collision_mask)
     end
 end
