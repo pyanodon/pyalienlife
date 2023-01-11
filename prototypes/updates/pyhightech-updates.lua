@@ -446,7 +446,7 @@ RECIPE('fawogae2'):remove_unlock('advanced-electronics')
 --RECIPE('urea'):change_category('vrauks'):subgroup_order("py-alienlife-auog", "a")
 ITEM('urea'):subgroup_order("py-alienlife-auog", "a")
 ITEM('mosfet'):subgroup_order("py-hightech-tier-2", "f")
-RECIPE('waste-water-urea'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('fluid-separation'):add_unlock('fish-mk02')
+RECIPE('waste-water-urea'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('fluid-separation'):add_unlock('water-invertebrates-mk01')
 RECIPE('ammonia-urea'):subgroup_order("py-alienlife-recipes", "a"):remove_unlock('basic-electronics'):add_unlock('biotech-mk02')
 RECIPE('urea2'):remove_unlock('auog-2')
 RECIPE('urea'):set_fields {enabled = false}
