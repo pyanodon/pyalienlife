@@ -59,8 +59,8 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='salt', amount =5},
-					{name='raw-fiber', amount = 5},
+					{name='salt', add_amount =3},
+					{name='raw-fiber', add_amount = 3},
 				},
 			results =
 				{

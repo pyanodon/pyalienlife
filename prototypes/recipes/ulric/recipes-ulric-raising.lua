@@ -24,7 +24,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='ulric-cub', amount = 3},
-					{name = 'manure', amount = 1}
+					--{name = 'manure', amount = 1}
 				},
 			crafting_speed = 15,
 			tech = 'ulric'
@@ -41,7 +41,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='ulric-cub', add_amount = 3},
-					{name = 'manure', add_amount = 1}
+					--{name = 'manure', add_amount = 1}
 				},
 			crafting_speed = 12,
 			tech = 'ulric-mk02'
@@ -52,12 +52,13 @@ FUN.autorecipes {
 				{
 					{name = 'ulric', add_amount = 1},
 					{name='raw-fiber', amount =10},
+					{name='ulric-food-01', remove_item = true},
 					{name='ulric-food-02', amount =2},
 				},
 			results =
 				{
 					{name='ulric-cub', add_amount = 3},
-					{name = 'manure', add_amount = 1}
+					--{name = 'manure', add_amount = 1}
 				},
 			crafting_speed = 10,
 			tech = 'ulric-mk03'
@@ -72,7 +73,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='ulric-cub', add_amount = 3},
-					{name = 'manure', add_amount = 1}
+					--{name = 'manure', add_amount = 1}
 				},
 			crafting_speed = 8,
 			tech = 'ulric-mk04'
@@ -240,7 +241,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='ulric', amount = 3},
-					{name = 'manure', amount = 3}
+					--{name = 'manure', amount = 3}
 				},
 			crafting_speed = 150,
 			tech = 'ulric'
@@ -256,7 +257,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='ulric', add_amount = 3},
-					{name = 'manure', add_amount = 3}
+					--{name = 'manure', add_amount = 3}
 				},
 			crafting_speed = 130,
 			tech = 'ulric-mk02'
@@ -267,12 +268,13 @@ FUN.autorecipes {
 				{
 					{name='ulric-cub', add_amount = 3},
 					{name='raw-fiber', amount = 5},
+					{name='ulric-food-01', remove_item = true},
 					{name='ulric-food-02', amount =1},
 				},
 			results =
 				{
 					{name='ulric', add_amount = 3},
-					{name = 'manure', add_amount = 3}
+					--{name = 'manure', add_amount = 3}
 				},
 			crafting_speed = 120,
 			tech = 'ulric-mk03'
@@ -288,7 +290,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='ulric', add_amount = 3},
-					{name = 'manure', add_amount = 3}
+					--{name = 'manure', add_amount = 3}
 				},
 			crafting_speed = 100,
 			tech = 'ulric-mk04'
