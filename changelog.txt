@@ -4,14 +4,18 @@ Date: ?
   Changes:
     - Reproduction complex now has the same gui as the slaughterhouse
     - Slaughterhouse gui can now be closed with E or ESC
+    - workers-food stack size nerfed from 100->50
+    - Reordered recipe subgroups
+    - Caravan GUI can now be opened with an item in your cursor
+  Bugfixes:
+    - Caravan:
+      - Fixed crash when picking caravan destination in some cases
+      - Fix caravan GUI becoming unusable if the player dies/disconnects/etc with it open
+      - Fixed that caravans could be opened from anywhere on the map
+      - Fixed caravan collision masks
     - Slaughterhouse gui no longer crashes in multiplayer
     - Fixed that RC could craft without modules
     - Locale fix for zungror, dhilmos
-    - workers-food stack size nerfed from 100->50
-    - Reordered recipe subgroups
-    - Fixed that caravans could be opened from anywhere on the map
-    - Fixed caravan collision masks
-    - Fixed crash when picking caravan destination in some cases
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.8
 Date: 2023-1-5

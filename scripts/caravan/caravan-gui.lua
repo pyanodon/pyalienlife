@@ -228,7 +228,12 @@ end
 
 script.on_event('open-gui', function(event)
 	local player = game.players[event.player_index]
-	if player.cursor_stack and player.cursor_stack.valid_for_read then return end
+	-- If the player has a temporary item in their cursor, we don't let them open the GUI
+	-- This includes the caravan controller, blueprint tool, etc
+	local stack = player.cursor_stack
+	if stack.valid_for_read and stack.prototype.has_flag('only-in-cursor') then
+		return
+	end
 	local entity = player.selected
 	if not entity or not prototypes[entity.name] or not player.can_reach_entity(entity) then return end
 	local caravan_data = Caravan.instantiate_caravan(entity)
