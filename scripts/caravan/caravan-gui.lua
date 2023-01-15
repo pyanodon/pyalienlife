@@ -235,7 +235,7 @@ script.on_event('open-gui', function(event)
 	local existing = Caravan.get_caravan_gui(player)
 	if existing then
 		if existing.tags.unit_number == caravan_data.unit_number then
-			return
+			existing.destroy()
 		else
 			player.opened = nil
 		end
