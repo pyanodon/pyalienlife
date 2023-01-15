@@ -1,3 +1,5 @@
+local tile_count = 529
+
 RECIPE {
     type = 'recipe',
     name = 'kicalk-super-1',
@@ -9,7 +11,7 @@ RECIPE {
         {type = 'fluid', name = 'water', amount = 3000},
     },
     results = {
-        {type = 'item', name = 'kicalk', amount = 1},
+        {type = 'item', name = 'kicalk', amount = tile_count * 1},
     },
 }:add_unlock("mega-farm-kicalk")
 
@@ -25,7 +27,7 @@ RECIPE {
         {type = 'item', name = 'sand', amount = 150},
     },
     results = {
-        {type = 'item', name = 'kicalk', amount = 1},
+        {type = 'item', name = 'kicalk', amount = tile_count * 2},
     },
 }:add_unlock("mega-farm-kicalk")
 
@@ -42,7 +44,7 @@ RECIPE {
         {type = 'item', name = 'small-lamp', amount = 15},
     },
     results = {
-        {type = 'item', name = 'kicalk', amount = 1},
+        {type = 'item', name = 'kicalk', amount = tile_count * 3},
     },
 }:add_unlock("mega-farm-kicalk")
 
@@ -61,7 +63,7 @@ RECIPE {
 
     },
     results = {
-        {type = 'item', name = 'kicalk', amount = 1},
+        {type = 'item', name = 'kicalk', amount = tile_count * 4},
     },
 }:add_unlock("mega-farm-kicalk")
 
@@ -81,7 +83,7 @@ RECIPE {
 
     },
     results = {
-        {type = 'item', name = 'kicalk', amount = 1},
+        {type = 'item', name = 'kicalk', amount = tile_count * 5},
     },
 }:add_unlock("mega-farm-kicalk")
 
@@ -101,7 +103,7 @@ RECIPE {
         {type = 'item', name = 'lignin', amount = 200},
     },
     results = {
-        {type = 'item', name = 'kicalk', amount = 1},
+        {type = 'item', name = 'kicalk', amount = tile_count * 6},
     },
 }:add_unlock("mega-farm-kicalk")
 
@@ -121,7 +123,7 @@ RECIPE {
         {type = 'item', name = 'lignin', amount = 200},
     },
     results = {
-        {type = 'item', name = 'kicalk', amount = 1},
+        {type = 'item', name = 'kicalk', amount = tile_count * 7},
     },
 }:add_unlock("mega-farm-kicalk")
 
@@ -141,7 +143,7 @@ RECIPE {
         {type = 'item', name = 'fertilizer', amount = 100},
     },
     results = {
-        {type = 'item', name = 'kicalk', amount = 1},
+        {type = 'item', name = 'kicalk', amount = tile_count * 8},
     },
 }:add_unlock("mega-farm-kicalk"):replace_ingredient("manure", "urea")
 
@@ -162,7 +164,7 @@ RECIPE {
         {type = 'item', name = 'fertilizer', amount = 100},
     },
     results = {
-        {type = 'item', name = 'kicalk', amount = 1},
+        {type = 'item', name = 'kicalk', amount = tile_count * 9},
     },
 }:add_unlock("mega-farm-kicalk"):replace_ingredient("manure", "urea")
 
@@ -183,6 +185,6 @@ RECIPE {
         {type = 'item', name = 'gh', amount = 3},
     },
     results = {
-        {type = 'item', name = 'kicalk', amount = 1},
+        {type = 'item', name = 'kicalk', amount = tile_count * 10},
     },
 }:add_unlock("mega-farm-kicalk"):replace_ingredient("manure", "urea")

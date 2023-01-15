@@ -1,3 +1,5 @@
+local tile_count = 529
+
 RECIPE {
     type = 'recipe',
     name = 'rennea-super-1',
@@ -11,7 +13,7 @@ RECIPE {
         {type = 'item', name = 'coarse', amount = 100},
     },
     results = {
-        {type = 'item', name = 'rennea', amount = 1},
+        {type = 'item', name = 'rennea', amount = tile_count * 1},
     },
 }:add_unlock("mega-farm-rennea")
 
@@ -29,7 +31,7 @@ RECIPE {
         {type = 'item', name = 'coarse', amount = 100},
     },
     results = {
-        {type = 'item', name = 'rennea', amount = 1},
+        {type = 'item', name = 'rennea', amount = tile_count * 2},
     },
 }:add_unlock("mega-farm-rennea")
 
@@ -48,7 +50,7 @@ RECIPE {
         {type = 'item', name = 'coarse', amount = 100},
     },
     results = {
-        {type = 'item', name = 'rennea', amount = 1},
+        {type = 'item', name = 'rennea', amount = tile_count * 3},
     },
 }:add_unlock("mega-farm-rennea")
 
@@ -67,7 +69,7 @@ RECIPE {
         {type = 'item', name = 'coarse', amount = 100},
     },
     results = {
-        {type = 'item', name = 'rennea', amount = 1},
+        {type = 'item', name = 'rennea', amount = tile_count * 4},
     },
 }:add_unlock("mega-farm-rennea")
 
@@ -87,7 +89,7 @@ RECIPE {
         {type = 'item', name = 'fawogae', amount = 300},
     },
     results = {
-        {type = 'item', name = 'rennea', amount = 1},
+        {type = 'item', name = 'rennea', amount = tile_count * 5},
     },
 }:add_unlock("mega-farm-rennea")
 
@@ -107,7 +109,7 @@ RECIPE {
         {type = 'item', name = 'lignin', amount = 200},
     },
     results = {
-        {type = 'item', name = 'rennea', amount = 1},
+        {type = 'item', name = 'rennea', amount = tile_count * 6},
     },
 }:add_unlock("mega-farm-rennea")
 
@@ -125,7 +127,7 @@ RECIPE {
         {type = 'item', name = 'fertilizer', amount = 100},
     },
     results = {
-        {type = 'item', name = 'rennea', amount = 1},
+        {type = 'item', name = 'rennea', amount = tile_count * 7},
     },
 }:add_unlock("mega-farm-rennea")
 
@@ -145,6 +147,6 @@ RECIPE {
         {type = 'item', name = 'gh', amount = 3},
     },
     results = {
-        {type = 'item', name = 'rennea', amount = 1},
+        {type = 'item', name = 'rennea', amount = tile_count * 10},
     },
 }:add_unlock("mega-farm-rennea")

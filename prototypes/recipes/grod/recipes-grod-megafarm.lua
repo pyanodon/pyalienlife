@@ -1,3 +1,5 @@
+local tile_count = 529
+
 RECIPE {
     type = 'recipe',
     name = 'grod-super-1',
@@ -8,7 +10,7 @@ RECIPE {
         {type = 'item', name = 'limestone', amount = 150},
     },
     results = {
-        {type = 'item', name = 'grod', amount = 1},
+        {type = 'item', name = 'grod', amount = tile_count * 1},
     },
 }:add_unlock("mega-farm-grod"):add_ingredient({type = "item", name = "urea", amount = 300})
 
@@ -23,7 +25,7 @@ RECIPE {
         {type = 'item', name = 'limestone', amount = 150},
     },
     results = {
-        {type = 'item', name = 'grod', amount = 1},
+        {type = 'item', name = 'grod', amount = tile_count * 2},
     },
 }:add_unlock("mega-farm-grod"):add_ingredient({type = "item", name = "urea", amount = 300})
 
@@ -39,7 +41,7 @@ RECIPE {
         {type = 'item', name = 'limestone', amount = 150},
     },
     results = {
-        {type = 'item', name = 'grod', amount = 1},
+        {type = 'item', name = 'grod', amount = tile_count * 3},
     },
 }:add_unlock("mega-farm-grod"):add_ingredient({type = "item", name = "urea", amount = 300})
 
@@ -56,7 +58,7 @@ RECIPE {
         {type = 'item', name = 'manure', amount = 150},
     },
     results = {
-        {type = 'item', name = 'grod', amount = 1},
+        {type = 'item', name = 'grod', amount = tile_count * 4},
     },
 }:add_unlock("mega-farm-grod")
 
@@ -74,7 +76,7 @@ RECIPE {
         {type = 'item', name = 'ash', amount = 200},
     },
     results = {
-        {type = 'item', name = 'grod', amount = 1},
+        {type = 'item', name = 'grod', amount = tile_count * 5},
     },
 }:add_unlock("mega-farm-grod")
 
@@ -93,7 +95,7 @@ RECIPE {
         {type = 'item', name = 'lignin', amount = 200},
     },
     results = {
-        {type = 'item', name = 'grod', amount = 1},
+        {type = 'item', name = 'grod', amount = tile_count * 6},
     },
 }:add_unlock("mega-farm-grod")
 
@@ -113,7 +115,7 @@ RECIPE {
         {type = 'item', name = 'biomass', amount = 300},
     },
     results = {
-        {type = 'item', name = 'grod', amount = 1},
+        {type = 'item', name = 'grod', amount = tile_count * 7},
     },
 }:add_unlock("mega-farm-grod")
 
@@ -134,7 +136,7 @@ RECIPE {
         {type = 'item', name = 'biomass', amount = 300},
     },
     results = {
-        {type = 'item', name = 'grod', amount = 1},
+        {type = 'item', name = 'grod', amount = tile_count * 8},
     },
 }:add_unlock("mega-farm-grod")
 
@@ -155,6 +157,6 @@ RECIPE {
         {type = 'item', name = 'gh', amount = 3},
     },
     results = {
-        {type = 'item', name = 'grod', amount = 1},
+        {type = 'item', name = 'grod', amount = tile_count * 10},
     },
 }:add_unlock("mega-farm-grod"):add_ingredient({type = "item", name = "urea", amount = 300})

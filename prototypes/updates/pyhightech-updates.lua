@@ -776,7 +776,7 @@ RECIPE {
     --main_product = "cocoon",
 }:add_unlock("kmauts")
 
-
+local tile_count = 529
 --------------------------ralesia mega farm----------------
 
 RECIPE {
@@ -793,7 +793,7 @@ RECIPE {
         {type = 'fluid', name = 'syngas', amount = 1500},
     },
     results = {
-        {type = 'item', name = 'ralesias', amount = 1},
+        {type = 'item', name = 'ralesias', amount = tile_count * 8},
     },
 }:add_unlock("mega-farm-ralesia")
 
@@ -812,7 +812,7 @@ RECIPE {
         {type = 'fluid', name = 'syngas', amount = 1500},
     },
     results = {
-        {type = 'item', name = 'ralesias', amount = 1},
+        {type = 'item', name = 'ralesias', amount = tile_count * 9},
     },
 }:add_unlock("mega-farm-ralesia")
 
@@ -832,7 +832,7 @@ RECIPE {
         {type = 'item', name = 'fertilizer', amount = 100},
     },
     results = {
-        {type = 'item', name = 'rennea', amount = 1},
+        {type = 'item', name = 'rennea', amount = tile_count * 8},
     },
 }:add_unlock("mega-farm-rennea")
 
@@ -851,7 +851,7 @@ RECIPE {
         {type = 'item', name = 'fertilizer', amount = 100},
     },
     results = {
-        {type = 'item', name = 'rennea', amount = 1},
+        {type = 'item', name = 'rennea', amount = tile_count * 9},
     },
 }:add_unlock("mega-farm-rennea")
 
@@ -872,7 +872,7 @@ RECIPE {
         {type = 'item', name = 'fertilizer', amount = 100},
     },
     results = {
-        {type = 'item', name = 'tuuphra', amount = 1},
+        {type = 'item', name = 'tuuphra', amount = tile_count * 8},
     },
 }:add_unlock("mega-farm-tuuphra")
 
@@ -892,7 +892,7 @@ RECIPE {
         {type = 'item', name = 'fertilizer', amount = 100},
     },
     results = {
-        {type = 'item', name = 'tuuphra', amount = 1},
+        {type = 'item', name = 'tuuphra', amount = tile_count * 9},
     },
 }:add_unlock("mega-farm-tuuphra")
 
@@ -914,7 +914,7 @@ RECIPE {
         {type = 'item', name = 'fertilizer', amount = 100},
     },
     results = {
-        {type = 'item', name = 'grod', amount = 1},
+        {type = 'item', name = 'grod', amount = tile_count * 9},
     },
 }:add_unlock("mega-farm-grod")
 
@@ -938,7 +938,7 @@ RECIPE {
         {type = 'item', name = 'fertilizer', amount = 100},
     },
     results = {
-        {type = 'item', name = 'yotoi', amount = 1},
+        {type = 'item', name = 'yotoi', amount = tile_count * 9},
     },
 }:add_unlock("mega-farm-yotoi")
 
@@ -962,7 +962,7 @@ RECIPE {
         {type = 'item', name = 'fertilizer', amount = 100},
     },
     results = {
-        {type = 'item', name = 'yotoi-fruit', amount = 1},
+        {type = 'item', name = 'yotoi-fruit', amount = tile_count * 9},
     },
 }:add_unlock("mega-farm-yotoi")
 
