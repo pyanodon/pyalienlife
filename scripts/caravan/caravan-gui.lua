@@ -121,8 +121,8 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 			}
 		end
 
-		local actions = prototype.actions.default
 		local entity = schedule.entity
+		local actions
 		if entity and entity.valid then
 			if entity.name == prototype.outpost then
 				actions = prototype.actions.outpost
@@ -130,6 +130,7 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 				actions = prototype.actions[entity.type]
 			end
 		end
+		actions = actions or prototype.actions.default
 		actions = Table.map(actions, function(v) return {'caravan-actions.' .. v, v} end)
 		local py_add_action = schedule_flow.add{type = 'drop-down', name = 'py_add_action', items = actions, tags = tags}
 		py_add_action.style.width = 340

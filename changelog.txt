@@ -11,6 +11,7 @@ Date: ?
     - Reordered recipe subgroups
     - Fixed that caravans could be opened from anywhere on the map
     - Fixed caravan collision masks
+    - Fixed crash when picking caravan destination in some cases
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.8
 Date: 2023-1-5
