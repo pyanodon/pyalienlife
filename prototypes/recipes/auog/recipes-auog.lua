@@ -65,7 +65,7 @@ RECIPE {
         {type = 'item', name = 'plastic-bar', amount = 2},
         {type = 'item', name = 'native-flora', amount = 5},
         {type = 'item', name = 'ralesias', amount = 5},
-        {type = 'item', name = "seaweed", amount = 5},
+        {type = 'item', name = "seaweed", amount = 3},
         {type = 'item', name = 'moss', amount = 5},
         -- {type = 'item', name = 'starch', amount = 4},
         {type = 'fluid', name = 'steam', amount = 100}
