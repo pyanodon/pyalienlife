@@ -121,8 +121,8 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 			}
 		end
 
-		local actions = prototype.actions.default
 		local entity = schedule.entity
+		local actions
 		if entity and entity.valid then
 			if entity.name == prototype.outpost then
 				actions = prototype.actions.outpost
@@ -130,6 +130,7 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 				actions = prototype.actions[entity.type]
 			end
 		end
+		actions = actions or prototype.actions.default
 		actions = Table.map(actions, function(v) return {'caravan-actions.' .. v, v} end)
 		local py_add_action = schedule_flow.add{type = 'drop-down', name = 'py_add_action', items = actions, tags = tags}
 		py_add_action.style.width = 340
@@ -227,14 +228,19 @@ end
 
 script.on_event('open-gui', function(event)
 	local player = game.players[event.player_index]
-	if player.cursor_stack and player.cursor_stack.valid_for_read then return end
+	-- If the player has a temporary item in their cursor, we don't let them open the GUI
+	-- This includes the caravan controller, blueprint tool, etc
+	local stack = player.cursor_stack
+	if stack.valid_for_read and stack.prototype.has_flag('only-in-cursor') then
+		return
+	end
 	local entity = player.selected
 	if not entity or not prototypes[entity.name] or not player.can_reach_entity(entity) then return end
 	local caravan_data = Caravan.instantiate_caravan(entity)
 	local existing = Caravan.get_caravan_gui(player)
 	if existing then
 		if existing.tags.unit_number == caravan_data.unit_number then
-			return
+			existing.destroy()
 		else
 			player.opened = nil
 		end
