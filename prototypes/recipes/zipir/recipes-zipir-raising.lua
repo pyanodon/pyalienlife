@@ -24,7 +24,7 @@ FUN.autorecipes {
 			results =
 				{
                     {name='zipir-eggs', probability = 1, amount_min =3, amount_max =5},  -- maybe 8 for the max if you feel generous
-					{name = 'zipir1', amount = 3,},
+					{name = 'zipir1', amount = 3, probability = 1, amount_min =2, amount_max =3},
 				},
 			crafting_speed = 60,
 			tech = 'zipir'

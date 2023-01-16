@@ -25,6 +25,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='scrondrix-pup', amount = 5},
+					{name = 'scrondrix', amount = 2},
 				},
 			tech = 'scrondrix',
 			crafting_speed = 12,

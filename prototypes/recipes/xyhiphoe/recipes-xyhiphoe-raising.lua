@@ -26,7 +26,6 @@ FUN.autorecipes {
 			results =
 				{
 					{name='xyhiphoe-cub', amount = 3},
-					{name='xyhiphoe', amount =2},
 				},
 			tech = 'water-invertebrates-mk01'
 		},

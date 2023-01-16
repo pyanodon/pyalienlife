@@ -23,6 +23,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
+					{name = 'ulric', amount = 2,},
 					{name='ulric-cub', amount = 3},
 					--{name = 'manure', amount = 1}
 				},
@@ -41,7 +42,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='ulric-cub', add_amount = 3},
-					--{name = 'manure', add_amount = 1}
+					{name = 'ulric', add_amount = 1},
 				},
 			crafting_speed = 12,
 			tech = 'ulric-mk02'
@@ -58,7 +59,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='ulric-cub', add_amount = 3},
-					--{name = 'manure', add_amount = 1}
+					{name = 'ulric', add_amount = 1},
 				},
 			crafting_speed = 10,
 			tech = 'ulric-mk03'
@@ -73,6 +74,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='ulric-cub', add_amount = 3},
+					{name = 'ulric', add_amount = 1},
 					--{name = 'manure', add_amount = 1}
 				},
 			crafting_speed = 8,

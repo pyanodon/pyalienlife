@@ -33,6 +33,7 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='dhilmos-food-01', amount =1},
+					{name = 'dhilmos', add_amount = 1},
 					{name = 'seaweed', amount = 5},
 				},
 			results =
@@ -47,6 +48,7 @@ FUN.autorecipes {
 			ingredients =
 				{
                     {name='dhilmos-food-01',remove_item = true},
+					{name = 'dhilmos', add_amount = 2},
                     {name = 'seaweed',remove_item = true},
 					{name='dhilmos-food-02', amount =1},
 
@@ -63,6 +65,7 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name = 'seaweed', amount = 5},
+					{name = 'dhilmos', add_amount = 3},
 				},
 			results =
 				{

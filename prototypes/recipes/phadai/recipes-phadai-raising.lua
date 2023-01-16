@@ -21,6 +21,7 @@ FUN.autorecipes {
                     {name='bedding', amount = 1},
                     {name='programmable-speaker', amount=1},
                     {name='small-lamp', amount=2},
+					{name = 'phadai', amount = 3},
 				},
 			results =
 				{
@@ -266,7 +267,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-
+					{name='phadai', add_amount = 1},
 				},
 			crafting_speed = 130,
 			tech = 'phadai-mk02'
