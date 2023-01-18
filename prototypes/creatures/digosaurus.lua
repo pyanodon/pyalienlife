@@ -332,17 +332,3 @@ ENTITY {
     }
   }}
 }
-
-data:extend{{
-	type = 'tips-and-tricks-item',
-	name = 'digosaurus',
-	category = 'wiki-py',
-	indent = 1,
-	trigger = {
-    type = 'build-entity',
-    entity = 'dino-dig-site'
-	},
-	starting_status = 'unlocked',
-	tag = '[item=digosaurus]',
-  order = 'a-b'
-}}

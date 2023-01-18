@@ -232,26 +232,3 @@ ITEM {
 		}
 	}
 }
-
-data:extend{{
-	type = 'tips-and-tricks-item',
-	name = 'caravans',
-	category = 'wiki-py',
-	indent = 1,
-	trigger = {
-		type = 'or',
-		triggers = {
-			{
-				type = 'build-entity',
-				entity = 'caravan'
-			},
-			{
-				type = 'build-entity',
-				entity = 'outpost'
-			}
-		}
-	},
-	starting_status = 'unlocked',
-	tag = '[item=caravan]',
-	order = 'a-a'
-}}
