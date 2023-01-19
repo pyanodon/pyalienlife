@@ -8,14 +8,19 @@ Date: ?
     - Reordered recipe subgroups
     - Caravan GUI can now be opened with an item in your cursor
   Bugfixes:
-    - Caravan:
-      - Fixed crash when picking caravan destination in some cases
-      - Fix caravan GUI becoming unusable if the player dies/disconnects/etc with it open
-      - Fixed that caravans could be opened from anywhere on the map
-      - Fixed caravan collision masks
     - Slaughterhouse gui no longer crashes in multiplayer
     - Fixed that RC could craft without modules
     - Locale fix for zungror, dhilmos
+  Caravan:
+    - Fixed crash when picking caravan destination in some cases
+    - Fix caravan GUI becoming unusable if the player dies/disconnects/etc with it open
+    - Fixed that caravans could be opened from anywhere on the map
+    - Fixed caravan collision masks
+    - Increased selection priority of caravans
+    - Carrot on a stick now works on the map view
+    - Caravans now have a max wander distance
+    - nerfed action values of brains and auog food
+    - caravans are much more visible on the map
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.8
 Date: 2023-1-5

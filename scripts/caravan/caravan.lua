@@ -36,13 +36,15 @@ local function wander(caravan_data)
 	caravan_data.entity.set_command{
 		type = defines.command.wander,
 		distraction = defines.distraction.none,
-		pathfind_flags = get_pathfind_flags(caravan_data)
+		pathfind_flags = get_pathfind_flags(caravan_data),
+		radius = 10
 	}
 end
 
 Caravan.events.init = function()
 	global.caravans = global.caravans or {}
 	global.last_opened_caravan = global.last_opened_caravan or {}
+	global.make_operable_next_tick = global.make_operable_next_tick or {}
 end
 
 local function exists_and_valid(v) return v and v.valid end
@@ -64,15 +66,24 @@ end
 
 Caravan.events.used_capsule = function(event)
 	local player = game.get_player(event.player_index)
-	if event.item.name ~= 'caravan-control' then return end
+	local cursor_stack = player.cursor_stack
+	if not cursor_stack or not cursor_stack.valid_for_read or cursor_stack.name ~= 'caravan-control' then return end
+	cursor_stack.clear()
+
 	local caravan_data = global.last_opened_caravan[player.index]
 	if not Caravan.validity_check(caravan_data) then return end
 	local schedule = caravan_data.schedule
 	local prototype = prototypes[caravan_data.entity.name]
 	local only_outpost = prototype.only_allow_outpost_as_destination
 
-	local entity = player.surface.find_entity('character', event.position) or player.selected
+	local entity = player.selected or player.surface.find_entities_filtered{
+		position = event.cursor_position,
+		limit = 1,
+		collision_mask = {'object-layer', 'player-layer', 'train-layer', 'resource-layer', 'floor-layer', 'transport-belt-layer', 'ghost-layer'}
+	}[1]
 	if entity then
+		if entity.operable then global.make_operable_next_tick[#global.make_operable_next_tick + 1] = entity end
+		entity.operable = false
 		if only_outpost and entity.name ~= prototype.outpost then return end
 		if entity == caravan_data.entity or entity.surface ~= caravan_data.entity.surface then return end
 		schedule[#schedule + 1] = {
@@ -82,7 +93,7 @@ Caravan.events.used_capsule = function(event)
 			actions = {}
 		}
 	elseif not only_outpost then
-		local position = event.position
+		local position = event.cursor_position
 		schedule[#schedule + 1] = {
 			localised_name = {'caravan-gui.map-position', math.floor(position.x), math.floor(position.y)},
 			position = position,
@@ -312,9 +323,8 @@ gui_events[defines.events.on_gui_click]['py_fuel_slot_.'] = function(event)
 	local tags = element.tags
 	local caravan_data = global.caravans[tags.unit_number]
 	local cursor_stack = player.cursor_stack
-	if not stack then return end
+	if not cursor_stack then return end
 	local fuel_stack = caravan_data.fuel_inventory[tags.i]
-
 	if cursor_stack.valid_for_read and not prototypes[caravan_data.entity.name].favorite_foods[cursor_stack.name] then return end
 
 	cursor_stack.swap_stack(fuel_stack)
@@ -416,19 +426,36 @@ Caravan.events.ai_command_completed = function(event)
 	end
 end
 
+local caravan_map_tag = {
+	type = 'virtual',
+	name = 'caravan-map-tag'
+}
+
 Caravan.events[60] = function(event)
 	local guis_to_update = {}
 
 	for _, caravan_data in pairs(global.caravans) do
 		if not Caravan.validity_check(caravan_data) then goto continue end
+		local entity = caravan_data.entity
+
+		local map_tag = caravan_data.map_tag
+		if map_tag and map_tag.valid then
+			if map_tag.position.x == entity.position.x and map_tag.position.y == entity.position.y then goto didnt_move end
+			map_tag.destroy()
+		end
+		caravan_data.map_tag = entity.force.add_chart_tag(entity.surface, {
+			position = entity.position,
+			icon = caravan_map_tag
+		})
+		::didnt_move::
 
 		if caravan_data.fuel_inventory and caravan_data.fuel_bar == 0 and caravan_data.fuel_inventory.is_empty() then
 			rendering.draw_sprite{
 				sprite = 'utility.fuel_icon',
 				x_scale = 0.5,
 				y_scale = 0.5,
-				target = caravan_data.entity,
-				surface = caravan_data.entity.surface,
+				target = entity,
+				surface = entity.surface,
 				time_to_live = 30,
 				render_layer = 'air-entity-info-icon'
 			}
@@ -467,11 +494,11 @@ Caravan.events[60] = function(event)
 			guis_to_update[caravan_data.unit_number] = true
 		else
 			if schedule.entity and schedule.entity.valid then
-				if Position.distance_squared(schedule.entity.position, caravan_data.entity.position) > 1000 then
+				if Position.distance_squared(schedule.entity.position, entity.position) > 1000 then
 					goto_entity(caravan_data, schedule.entity)
 				end
 			else
-				if Position.distance_squared(schedule.position, caravan_data.entity.position) > 1000 then
+				if Position.distance_squared(schedule.position, entity.position) > 1000 then
 					goto_position(caravan_data, schedule.position)
 				end
 			end
@@ -485,6 +512,13 @@ Caravan.events[60] = function(event)
 			local gui = Caravan.get_caravan_gui(player)
 			if gui and guis_to_update[gui.tags.unit_number] then Caravan.update_gui(gui) end
 		end
+	end
+
+	if next(global.make_operable_next_tick) then
+		for _, entity in pairs(global.make_operable_next_tick) do
+			if entity.valid then entity.operable = true end
+		end
+		global.make_operable_next_tick = {}
 	end
 end
 

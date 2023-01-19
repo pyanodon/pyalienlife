@@ -112,8 +112,6 @@ end)
 
 script.on_event(defines.events.on_rocket_launched, Smart_Farm.events.on_rocket_launched)
 
-script.on_event(defines.events.on_player_used_capsule, Caravan.events.used_capsule)
-
 script.on_event(defines.events.on_entity_destroyed, function(event)
 	Caravan.events.on_entity_destroyed(event)
 	Farming.events.on_entity_destroyed(event)
@@ -139,4 +137,9 @@ script.on_nth_tick(4, function()
         if gui then Caravan.update_gui(gui, true) end
         ::continue::
 	end
+end)
+
+script.on_event('open-gui', function(event)
+    Caravan.events.on_open_gui(event)
+    Caravan.events.used_capsule(event)
 end)

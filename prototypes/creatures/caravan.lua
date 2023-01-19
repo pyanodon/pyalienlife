@@ -49,7 +49,7 @@ data:extend{{
 	subgroup = 'enemies',
 	healing_per_tick = 0.03,
 	collision_box = {{-0.6, -0.6}, {0.6, 0.6}},
-	selection_priority = 49,
+	selection_priority = 51,
 	selection_box = {{-1.1, -1.1}, {1.1, 1.1}},
 	attack_parameters = {
 		type = 'projectile',
@@ -212,25 +212,13 @@ data:extend{{
 }}
 
 ITEM {
-    type = 'capsule',
+    type = 'item',
     name = 'caravan-control',
     icon = '__pyalienlifegraphics2__/graphics/icons/carrot-on-a-stick.png',
     icon_size = 64,
     order = 'a',
     stack_size = 1,
 	flags = {'hidden', 'not-stackable', 'only-in-cursor'},
-	capsule_action = {
-		type = 'throw',
-		attack_parameters = {
-			type = 'stream',
-			range = 99999,
-			cooldown = 1,
-			ammo_type = {
-				category = 'caravan-control',
-				target_type = 'position',
-			}
-		}
-	}
 }
 
 data:extend{{
@@ -254,4 +242,12 @@ data:extend{{
 	starting_status = 'unlocked',
 	tag = '[item=caravan]',
 	order = 'a-a'
+}}
+
+data:extend{{
+	type = 'virtual-signal',
+	icon = '__pyalienlifegraphics2__/graphics/icons/caravan-map-tag.png',
+	name = 'caravan-map-tag',
+	subgroup = 'py-alienlife-special-creatures',
+	icon_size = 64
 }}

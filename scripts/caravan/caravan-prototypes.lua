@@ -56,9 +56,9 @@ local prototypes = {
 		destructible = false,
 		outpost = 'outpost',
 		favorite_foods = {
-			['brain'] = 5,
-			['auog-food-01'] = 10,
-			['workers-food'] = 30
+			['brain'] = 2,
+			['auog-food-01'] = 4,
+			['workers-food'] = 10
 		},
 		actions = caravan_actions,
 		camera_zoom = 0.8,
@@ -85,9 +85,9 @@ local prototypes = {
 		fuel_size = 2,
 		outpost = 'outpost',
 		favorite_foods = {
-			['brain'] = 5,
-			['auog-food-01'] = 10,
-			['workers-food'] = 30
+			['brain'] = 2,
+			['auog-food-01'] = 4,
+			['workers-food'] = 10
 		},
 		actions = {
 			['default'] = {'detonate'}
