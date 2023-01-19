@@ -7,6 +7,7 @@ Date: ?
     - workers-food stack size nerfed from 100->50
     - Reordered recipe subgroups
     - Caravan GUI can now be opened with an item in your cursor
+    - Added xenogenic-cells to moss mk2 recipe
   Bugfixes:
     - Slaughterhouse gui no longer crashes in multiplayer
     - Fixed that RC could craft without modules
