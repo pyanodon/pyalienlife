@@ -1,81 +1,105 @@
 data:extend(
 {
 	{
-		type = "tips-and-tricks-item-category",
-		name = "pyanodon-wiki",
-		order = "a"
-	},
-	{
 		type = "tips-and-tricks-item",
-		name = "farming",
-		category = "pyanodon-farms",
-		order = "a",
-		--starting_status = "locked",
-		trigger =
-		{
-			type = "or",
-			triggers = {
-				{
-					type = "build-entity",
-					entity = "fwf-mk01"
-				},
-				{
-					type = "build-entity",
-					entity = "seaweed-crop-mk01"
-				},
-				{
-					type = "build-entity",
-					entity = "sap-extractor-mk01"
-				},
-				{
-					type = "build-entity",
-					entity = "moss-farm-mk01"
-				},
-				{
-					type = "build-entity",
-					entity = "vrauks-paddock-mk01"
-				},
-			},
-		},
-		--dependencies = {'introduction'},
+		name = "pyalienlife",
+		category = "wiki-py",
+		indent = 1,
+		order = "g",
 		is_title = true,
 	},
 	{
 		type = "tips-and-tricks-item",
-		name = "farming-vrauks",
-		category = "pyanodon-farms",
-		indent = 1,
-		order = "vrauks",
-		--starting_status = "locked",
-		trigger =
-		{
-			type = "set-recipe",
-			recipe = "vrauks-1"
-		},
-		dependencies = {"farming"}
-		--is_title = true,
+		name = "farming",
+		category = "wiki-py",
+		indent = 2,
+		order = "ga",
+        tag = '[item=sap-tree]',
+        trigger =
+        {
+			type = "or",
+			triggers = {
+				{
+                    type = "unlock-recipe",
+                    recipe = "sap-extractor-mk01"
+				},
+				{
+                    type = "unlock-recipe",
+                    recipe = "seaweed-crop-mk01"
+				},
+				{
+                    type = "unlock-recipe",
+                    recipe = "moss-farm-mk01"
+				},
+				{
+                    type = "unlock-recipe",
+                    recipe = "fwf-mk01"
+				},
+				{
+                    type = "unlock-recipe",
+                    recipe = "vrauks-paddock-mk01"
+				},
+			},
+        },
 	},
-	--[[
 	{
 		type = "tips-and-tricks-item",
-		name = "caravan-howto",
-		category = "pyanodon-wiki",
-		order = "a",
-		--starting_status = "suggested",
-		trigger =
-		{
-			type = "unlock-recipe",
-			recipe = "caravan"
-		},
-	}
-	]]--
+		name = "caravans",
+		category = "wiki-py",
+		indent = 2,
+		order = "gb",
+        tag = '[item=caravan]',
+        trigger =
+        {
+            type = "unlock-recipe",
+            recipe = "caravan"
+        },
+	},
+	{
+		type = "tips-and-tricks-item",
+		name = "digosaurus",
+		category = "wiki-py",
+		indent = 2,
+		order = "gc",
+        tag = '[item=digosaurus]',
+        trigger =
+        {
+            type = "unlock-recipe",
+            recipe = "digosaurus"
+        },
+	},
+	{
+		type = "tips-and-tricks-item",
+		name = "mega-farm",
+		category = "wiki-py",
+		indent = 2,
+		order = "gd",
+        tag = '[item=mega-farm]',
+        trigger =
+        {
+            type = "unlock-recipe",
+            recipe = "mega-farm"
+        },
+	},
+	{
+		type = "tips-and-tricks-item",
+		name = "pydrive",
+		category = "wiki-py",
+		indent = 2,
+		order = "ge",
+        tag = '[item=pydrive]',
+        trigger =
+        {
+            type = "unlock-recipe",
+            recipe = "pydrive"
+        },
+	},
 })
 
 if mods["pyhightech"] then
-	table.insert(data.raw["tips-and-tricks-item"]["farming"].trigger.triggers, {
-		type = "build-entity",
-		entity = "moondrop-greenhouse-mk01"
-	})
-
-	log(serpent.block(data.raw["tips-and-tricks-item"]["farming"]))
+	table.insert(data.raw["tips-and-tricks-item"]["farming"].trigger.triggers, 
+    {
+        type = "unlock-recipe",
+        recipe = "moondrop-greenhouse-mk01"
+    })
 end

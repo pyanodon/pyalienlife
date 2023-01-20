@@ -222,29 +222,6 @@ ITEM {
 }
 
 data:extend{{
-	type = 'tips-and-tricks-item',
-	name = 'caravans',
-	category = 'wiki-py',
-	indent = 1,
-	trigger = {
-		type = 'or',
-		triggers = {
-			{
-				type = 'build-entity',
-				entity = 'caravan'
-			},
-			{
-				type = 'build-entity',
-				entity = 'outpost'
-			}
-		}
-	},
-	starting_status = 'unlocked',
-	tag = '[item=caravan]',
-	order = 'a-a'
-}}
-
-data:extend{{
 	type = 'virtual-signal',
 	icon = '__pyalienlifegraphics2__/graphics/icons/caravan-map-tag.png',
 	name = 'caravan-map-tag',
