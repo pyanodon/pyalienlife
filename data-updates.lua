@@ -460,7 +460,7 @@ for _, prototype in pairs(collision_mask_util.collect_prototypes_with_layer('obj
 end
 
 for _, tile in pairs(data.raw.tile) do
-    if tile.name:find('water') then
+    if tile.name == 'out-of-map' or tile.name:find('water') then
         tile.collision_mask = collision_mask_util.get_mask(tile)
         collision_mask_util.add_layer(tile.collision_mask, caravan_collision_mask)
     end

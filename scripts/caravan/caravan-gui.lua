@@ -226,12 +226,12 @@ function Caravan.build_gui(player, entity)
 	Caravan.update_gui(main_frame)
 end
 
-script.on_event('open-gui', function(event)
-	local player = game.players[event.player_index]
+Caravan.events.on_open_gui = function(event)
+	local player = game.get_player(event.player_index)
 	-- If the player has a temporary item in their cursor, we don't let them open the GUI
 	-- This includes the caravan controller, blueprint tool, etc
 	local stack = player.cursor_stack
-	if stack.valid_for_read and stack.prototype.has_flag('only-in-cursor') then
+	if stack and stack.valid_for_read and stack.prototype.has_flag('only-in-cursor') then
 		return
 	end
 	local entity = player.selected
@@ -246,7 +246,7 @@ script.on_event('open-gui', function(event)
 		end
 	end
 	Caravan.build_gui(player, entity)
-end)
+end
 
 function Caravan.update_gui(gui, weak)
 	local caravan_data = global.caravans[gui.tags.unit_number]

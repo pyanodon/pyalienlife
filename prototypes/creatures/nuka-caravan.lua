@@ -78,6 +78,7 @@ data:extend(
 	  },
     healing_per_tick = 0.01,
     collision_box = {{-0.6, -0.6}, {0.6, 0.6}},
+	selection_priority = 51,
     selection_box = {{-1, -1}, {1, 1}},
     attack_parameters =
     {
