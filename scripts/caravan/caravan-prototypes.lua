@@ -48,6 +48,11 @@ local aerial_actions = {
 	}
 }
 
+local ln = math.log
+local function distance_effectivity(distance, toughness)
+	return 1 - 1 / (ln(distance / toughness + 1) + 1)
+end
+
 local prototypes = {
 	caravan = {
 		inventory_size = 30,
@@ -101,7 +106,8 @@ local prototypes = {
 		only_allow_outpost_as_destination = true,
 		actions = aerial_actions,
 		placeable_by = 'aerial-blimp-mk01',
-		energy_per_distance_formula = function(distance) return distance * 180000 end,
+		energy_per_distance_formula = function(distance) return distance_effectivity(distance, 60) * distance * 1800000 end,
+		distance_bonus_formula = function(distance) return distance_effectivity(distance, 60) end,
 		is_aerial = true,
 		can_fly = true
 	},
@@ -111,7 +117,8 @@ local prototypes = {
 		only_allow_outpost_as_destination = true,
 		actions = aerial_actions,
 		placeable_by = 'aerial-blimp-mk01',
-		energy_per_distance_formula = function(distance) return distance * 360000 end,
+		energy_per_distance_formula = function(distance) return distance_effectivity(distance, 80) * distance * 3600000 end,
+		distance_bonus_formula = function(distance) return distance_effectivity(distance, 80) end,
 		is_aerial = true,
 		can_fly = true
 	},
@@ -121,7 +128,8 @@ local prototypes = {
 		only_allow_outpost_as_destination = true,
 		actions = aerial_actions,
 		placeable_by = 'aerial-blimp-mk01',
-		energy_per_distance_formula = function(distance) return distance * 600000 end,
+		energy_per_distance_formula = function(distance) return distance_effectivity(distance, 120) * distance * 6000000 end,
+		distance_bonus_formula = function(distance) return distance_effectivity(distance, 120) end,
 		is_aerial = true,
 		can_fly = true
 	},
@@ -131,7 +139,8 @@ local prototypes = {
 		only_allow_outpost_as_destination = true,
 		actions = aerial_actions,
 		placeable_by = 'aerial-blimp-mk01',
-		energy_per_distance_formula = function(distance) return distance * 800000 end,
+		energy_per_distance_formula = function(distance) return distance_effectivity(distance, 140) * distance * 8000000 end,
+		distance_bonus_formula = function(distance) return distance_effectivity(distance, 140) end,
 		is_aerial = true,
 		can_fly = true
 	},
@@ -141,7 +150,8 @@ local prototypes = {
 		only_allow_outpost_as_destination = true,
 		actions = aerial_actions,
 		placeable_by = 'aerial-blimp-mk01',
-		energy_per_distance_formula = function(distance) return distance * 400000 end,
+		energy_per_distance_formula = function(distance) return distance_effectivity(distance, 40) * distance * 4000000 end,
+		distance_bonus_formula = function(distance) return distance_effectivity(distance, 40) end,
 		is_aerial = true,
 		can_fly = true
 	}
