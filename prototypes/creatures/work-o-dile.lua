@@ -8,7 +8,15 @@ RECIPE {
   category = 'creature-chamber',
   enabled = false,
   ingredients = {
-	{type = 'item', name = 'earth-potato-sample', amount = 1},
+	{type = 'item', name = 'mega-drill-head', amount = 1},
+	{type = 'item', name = 'earth-lizard-sample', amount = 1},
+	{type = 'item', name = 'alien-sample-03', amount = 5},
+	{type = 'fluid', name = 'artificial-blood', amount = 100},
+	{type = 'fluid', name = 'fetal-serum', amount = 50},
+	{type = 'item', name = 'electric-engine-unit', amount = 4},
+	{type = 'item', name = 'bio-sample', amount = 20},
+	{type = 'item', name = 'cdna', amount = 5},
+	{type = 'item', name = 'anabolic-rna', amount = 1},
   },
   result = 'work-o-dile'
 }:add_unlock{'nexelit-mk03'}
