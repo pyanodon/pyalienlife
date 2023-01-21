@@ -554,7 +554,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "workers-food-02",
-    icon = "__pyalienlifegraphics3__/graphics/icons/workers-food.png",
+    icon = "__pyalienlifegraphics3__/graphics/icons/quality-workers-food.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-special-creatures",
