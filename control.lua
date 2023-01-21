@@ -5,6 +5,7 @@ require 'scripts/ocula/ocula'
 require 'scripts/farming/farming'
 require 'scripts/slaughterhouse/slaughterhouse'
 require 'scripts/smart-farm/smart-farm'
+require 'scripts/worm/worm'
 
 local bio_list = require('prototypes/items/biomass-convertion')
 
@@ -60,6 +61,7 @@ local function init()
     Oculua.events.on_init()
     Farming.events.on_init()
     Slaughterhouse.events.on_init()
+    Worm.events.on_init()
 end
 
 script.on_init(function()
@@ -83,6 +85,7 @@ script.on_event(on_built, function(event)
     Digosaurus.events.on_built(event)
     Farming.events.on_built(event)
     Smart_Farm.events.on_built(event)
+    Worm.events.on_built(event)
 end)
 
 script.on_event(defines.events.on_ai_command_completed, function(event)
@@ -116,6 +119,7 @@ script.on_event(defines.events.on_entity_destroyed, function(event)
 	Caravan.events.on_entity_destroyed(event)
 	Farming.events.on_entity_destroyed(event)
     Slaughterhouse.events.on_entity_destroyed(event)
+    Worm.events.on_entity_destroyed(event)
 end)
 
 script.on_event(defines.events.on_entity_settings_pasted, Caravan.events.on_entity_settings_pasted)

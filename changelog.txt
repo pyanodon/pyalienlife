@@ -14,6 +14,7 @@ Date: ?
     - Slaughterhouse gui no longer crashes in multiplayer
     - Fixed that RC could craft without modules
     - Locale fix for zungror, dhilmos
+    - Fix animation for worms
   Caravan:
     - Fixed crash when picking caravan destination in some cases
     - Fix caravan GUI becoming unusable if the player dies/disconnects/etc with it open
