@@ -201,6 +201,7 @@ function Caravan.build_gui(player, entity)
 
 	if caravan_data.is_aerial then
 		content_flow.add{type = 'label', name = 'stored_energy'}
+		content_flow.add{type = 'label', name = 'distance_bonus'}
 	end
 
 	if caravan_data.fuel_inventory then
@@ -287,12 +288,16 @@ function Caravan.update_gui(gui, weak)
 	end
 
 	if caravan_data.is_aerial then
-		local energy = caravan_data.stored_energy or 0
-		if not caravan_data.stored_energy and caravan_data.last_outpost_location then
-			local formula = prototypes[entity.name].energy_per_distance_formula
-			energy = formula(Position.distance(caravan_data.last_outpost_location, entity.position))
+		local energy, distance_bonus = 0, 0
+		if caravan_data.last_outpost_location then
+			local distance = Position.distance(caravan_data.last_outpost_location, entity.position)
+			local energy_per_distance_formula = prototypes[entity.name].energy_per_distance_formula
+			energy = energy_per_distance_formula(distance)
+			local distance_bonus_formula = prototypes[entity.name].distance_bonus_formula
+			distance_bonus = distance_bonus_formula(distance)
 		end
 		content_flow.stored_energy.caption = {'caravan-gui.stored-energy', format_energy(energy)}
+		content_flow.distance_bonus.caption = {'caravan-gui.distance-bonus', math.floor(distance_bonus * 1000) / 10}
 	end
 
 	if not weak then
