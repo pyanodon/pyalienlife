@@ -35,7 +35,7 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name = 'ulric', add_amount = 1},
-                    {name='ralesia-seeds', amount =30},
+                    {name='ralesia-seeds', amount =15},
 					{name='salt', amount = 10},
 					{name='bedding', amount = 1},
 				},
