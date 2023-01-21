@@ -23,7 +23,7 @@ ITEM {
 	icon = item_icon,
 	icon_size = 64,
 	subgroup = 'py-alienlife-special-creatures',
-	order = 'x',
+	order = 'xx',
 	stack_size = 10,
 	flags = {},
 	localised_name = {'entity-name.digosaurus'},

@@ -551,6 +551,17 @@ ITEM {
     stack_size = 50
 }
 
+ITEM {
+    type = "item",
+    name = "workers-food-02",
+    icon = "__pyalienlifegraphics3__/graphics/icons/workers-food.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-special-creatures",
+    order = "z-a",
+    stack_size = 50
+}
+
 ---codexes mk02--
 
 ITEM {

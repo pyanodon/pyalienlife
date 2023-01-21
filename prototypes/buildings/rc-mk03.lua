@@ -219,8 +219,8 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics2__/sounds/rc.ogg", volume = 0.70},
-        idle_sound = {filename = "__pyalienlifegraphics2__/sounds/rc.ogg", volume = 0.0},
-        audible_distance_modifier = 0.22,
+        sound = {filename = "__pyalienlifegraphics2__/sounds/rc.ogg", volume = 0.85},
+        idle_sound = {filename = "__pyalienlifegraphics2__/sounds/rc.ogg", volume = 0.85},
+        audible_distance_modifier = 1,
     }
 }

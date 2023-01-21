@@ -1,7 +1,8 @@
 Digosaurus.favorite_foods = {
 	['guts'] = 1,
 	['meat'] = 2,
-	['workers-food'] = 8
+	['workers-food'] = 8,
+	['workers-food-02'] = 16,
 }
 
 Digosaurus.minable_categories = {
@@ -10,12 +11,14 @@ Digosaurus.minable_categories = {
 
 Digosaurus.valid_creatures = {
 	['digosaurus'] = 1,
-	['thikat'] = 2
+	['thikat'] = 2,
+	['work-o-dile'] = 3
 }
 
 Digosaurus.mining_proxies = {
 	['digosaurus'] = 'digosaurus-mineable-proxy',
-	['thikat'] = 'thikats-mineable-proxy'
+	['thikat'] = 'thikats-mineable-proxy',
+	['work-o-dile'] = 'work-o-dile-mineable-proxy'
 }
 
 Digosaurus.mining_range = 12.5

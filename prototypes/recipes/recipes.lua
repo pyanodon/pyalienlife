@@ -2951,3 +2951,17 @@ RECIPE {
         {type = 'item', name = 'workers-food', amount = 2},
     },
 }:add_unlock("domestication")
+
+RECIPE {
+    type = 'recipe',
+    name = 'workers-food-02',
+    category = 'advanced-crafting',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'tin-plate', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'workers-food-02', amount = 2},
+    },
+}:add_unlock("nexelit-mk03")
