@@ -4,7 +4,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 
 for _, drill in pairs(data.raw['mining-drill']) do
-	drill.allowed_effects = {"consumption", "speed"}
+	drill.allowed_effects = {"consumption", "speed", "productivity"}
 end
 
 local recipes_list =
