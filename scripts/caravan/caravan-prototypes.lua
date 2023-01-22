@@ -63,7 +63,8 @@ local prototypes = {
 		favorite_foods = {
 			['brain'] = 2,
 			['auog-food-01'] = 4,
-			['workers-food'] = 10
+			['workers-food'] = 10,
+			['workers-food-02'] = 30
 		},
 		actions = caravan_actions,
 		camera_zoom = 0.8,
@@ -92,7 +93,8 @@ local prototypes = {
 		favorite_foods = {
 			['brain'] = 2,
 			['auog-food-01'] = 4,
-			['workers-food'] = 10
+			['workers-food'] = 10,
+			['workers-food-02'] = 30
 		},
 		actions = {
 			['default'] = {'detonate'}
