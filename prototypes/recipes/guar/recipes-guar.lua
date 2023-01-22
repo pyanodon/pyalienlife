@@ -38,6 +38,6 @@ RECIPE {
         {type = "item", name = "guar", amount = 2},
     },
     results = {
-        {type = "item", name = "guar-seeds", amount = 4}
+        {type = "item", name = "guar-seeds", amount = 8}
     },
 }:add_unlock("guar")
