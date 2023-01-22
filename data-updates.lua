@@ -37,9 +37,13 @@ TECHNOLOGY('ralesia'):add_pack('py-science-pack-1')
 data.raw.item.fawogae = nil
 
 -- table.insert(data.raw.character.character.mining_categories, 'ore-bioreserve')
+for _, player in DATA:pairs('character') do
+    player.crafting_categories = player.String_Array(player.crafting_categories or {}) + 'wpu-handcrafting' + 'research-handcrafting'
+end
 
-table.insert(data.raw.character.character.crafting_categories, 'wpu-handcrafting')
-table.insert(data.raw.character.character.crafting_categories, 'research-handcrafting')
+for _, controller in DATA:pairs('god-controller') do
+    controller.crafting_categories = controller.String_Array(controller.crafting_categories or {}) + 'wpu-handcrafting' + 'research-handcrafting'
+end
 
 for _, recipe in pairs(data.raw.recipe) do
     local r = RECIPE(recipe)
