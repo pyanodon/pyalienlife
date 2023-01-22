@@ -63,7 +63,7 @@ ENTITY {
         width = 4,
         height = 4
     },
-
+    collision_mask = {"item-layer", "object-layer", "water-tile"},
     require ("__pyalienlife__/prototypes/circuit-connector-definitions-pyal"),
     circuit_wire_connection_points = collector_connector_definitions.points,
     circuit_connector_sprites = collector_connector_definitions.sprites,

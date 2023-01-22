@@ -15,6 +15,7 @@ Date: ?
     - Fixed that RC could craft without modules
     - Locale fix for zungror, dhilmos
     - Fix animation for worms
+    - Allowed walking and driving on bioreserve collectors
   Caravan:
     - Fixed crash when picking caravan destination in some cases
     - Fix caravan GUI becoming unusable if the player dies/disconnects/etc with it open
