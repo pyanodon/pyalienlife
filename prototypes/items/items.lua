@@ -4726,17 +4726,6 @@ ITEM {
 
 ITEM {
     type = "item",
-    name = "bioreserve",
-    icon = "__pyalienlifegraphics__/graphics/icons/replicator-bioreserve.png",
-	icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-items",
-    order = "x",
-    stack_size = 100
-}
-
-ITEM {
-    type = "item",
     name = "stopper",
     icon = "__pyalienlifegraphics__/graphics/icons/mip/stopper-02.png",
     icon_size = 64,

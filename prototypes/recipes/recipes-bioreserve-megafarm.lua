@@ -12,7 +12,7 @@ RECIPE {
         {type = 'item', name = 'soil', amount = 1000},
     },
     results = {
-        {type = 'item', name = 'bioreserve', amount = tile_count * 1},
+        {type = 'item', name = 'native-flora', amount = tile_count * 1},
     },
 }:add_unlock("mega-farm-bioreserve")
 
@@ -30,7 +30,7 @@ RECIPE {
         {type = 'item', name = 'stone', amount = 1500},
     },
     results = {
-        {type = 'item', name = 'bioreserve', amount = tile_count * 2},
+        {type = 'item', name = 'native-flora', amount = tile_count * 2},
     },
 }:add_unlock("mega-farm-bioreserve")
 
@@ -49,7 +49,7 @@ RECIPE {
         {type = 'item', name = 'alien-sample01', amount = 2},
     },
     results = {
-        {type = 'item', name = 'bioreserve', amount = tile_count * 3},
+        {type = 'item', name = 'native-flora', amount = tile_count * 3},
     },
 }:add_unlock("mega-farm-bioreserve")
 
@@ -69,7 +69,7 @@ RECIPE {
         {type = 'item', name = 'lignin', amount = 200},
     },
     results = {
-        {type = 'item', name = 'bioreserve', amount = tile_count * 4},
+        {type = 'item', name = 'native-flora', amount = tile_count * 4},
     },
 }:add_unlock("mega-farm-bioreserve")
 
@@ -90,7 +90,7 @@ RECIPE {
         {type = 'item', name = 'native-flora', amount = 400},
     },
     results = {
-        {type = 'item', name = 'bioreserve', amount = tile_count * 5},
+        {type = 'item', name = 'native-flora', amount = tile_count * 5},
     },
 }:add_unlock("mega-farm-bioreserve")
 
@@ -111,7 +111,7 @@ RECIPE {
         {type = 'item', name = 'native-flora', amount = 400},
     },
     results = {
-        {type = 'item', name = 'bioreserve', amount = tile_count * 6},
+        {type = 'item', name = 'native-flora', amount = tile_count * 6},
     },
 }:add_unlock("mega-farm-bioreserve")
 
@@ -133,6 +133,6 @@ RECIPE {
         {type = 'item', name = 'gh', amount = 3},
     },
     results = {
-        {type = 'item', name = 'bioreserve', amount = tile_count * 7},
+        {type = 'item', name = 'native-flora', amount = tile_count * 7},
     },
 }:add_unlock("mega-farm-bioreserve")
