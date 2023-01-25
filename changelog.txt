@@ -10,6 +10,9 @@ Date: ?
     - Added big muscular crocodile
     - Caravan GUI can now be opened with an item in your cursor
     - Sex machine is now louder
+    - Improved animal slaughterhouse recipes now only output the main ingredients
+    - Added nex plates to chemical science recipe
+    - Increased nex plate amount in biobattery, resveratrol, nexelit-power-pole, and decalin
   Bugfixes:
     - Slaughterhouse gui no longer crashes in multiplayer
     - Fixed that RC could craft without modules
