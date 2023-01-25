@@ -406,7 +406,7 @@ RECIPE {
     ingredients = {
         {type = 'fluid', name = 'aromatics', amount = 100},
         {type = 'fluid', name = 'hydrogen', amount = 200},
-        {type = 'item', name = 'nexelit-plate', amount = 2},
+        {type = 'item', name = 'nexelit-plate', amount = 3},
         {type = 'item', name = 'titanium-plate', amount = 2},
     },
     results = {
@@ -494,7 +494,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = 'item', name = 'yotoi-fruit', amount = 10},
-        {type = 'item', name = 'nexelit-plate', amount = 4},
+        {type = 'item', name = 'nexelit-plate', amount = 5},
         {type = 'item', name = 'chromium', amount = 5},
         {type = 'item', name = 'flask', amount = 2},
         {type = 'item', name = 'moss', amount = 20},
@@ -1838,7 +1838,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'nexelit-plate', amount = 5},
+        {type = 'item', name = 'nexelit-plate', amount = 6},
         {type = 'item', name = 'plastic-bar', amount = 15},
         {type = 'item', name = 'nanofibrils', amount = 2},
         {type = 'item', name = 'cobalt-nx', amount = 3},
