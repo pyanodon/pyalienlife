@@ -59,6 +59,12 @@ FUN.autorecipes {
 				},
 			results =
 				{
+					{name = 'bones', remove_item = true},
+					{name = 'meat', remove_item = true},
+					{name = 'mukmoux-fat', remove_item = true},
+					{name = 'skin', remove_item = true},
+					{name = 'guts', remove_item = true},
+					{name = 'blood', remove_item = true},
 					{name='brain', amount = IMP_BRAIN},
 				},
 			tech = 'nanochondria',
@@ -75,7 +81,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='brain', amount = BASE_BRAIN},
+					{name = 'brain', remove_item = true},
 					{name='bones', amount = IMP_BONES},
 				},
 			tech = 'bmp',
@@ -92,7 +98,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount = BASE_BONES},
+					{name = 'bones', remove_item = true},
 					{name='guts', amount = IMP_GUTS},
 				},
 			tech = 'antitumor',
@@ -109,7 +115,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='guts', amount = BASE_GUTS},
+					{name = 'guts', remove_item = true},
 					{name='blood', amount = IMP_BLOOD},
 				},
 			tech = 'recombinant-ery',
@@ -126,7 +132,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='blood', amount = BASE_BLOOD},
+					{name = 'blood', remove_item = true},
 					{name='skin', amount = IMP_SKIN},
 				},
 			tech = 'reca',
@@ -143,7 +149,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='skin', amount = BASE_SKIN},
+					{name = 'skin', remove_item = true},
 					{name='mukmoux-fat', amount = IMP_FAT},
 				},
 			tech = 'orexigenic',
@@ -160,7 +166,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='mukmoux-fat', amount = BASE_FAT},
+					{name = 'mukmoux-fat', remove_item = true},
 					{name='meat', amount = IMP_MEAT},
 				},
 			tech = 'anabolic-rna',

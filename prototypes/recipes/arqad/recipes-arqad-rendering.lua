@@ -52,6 +52,10 @@ FUN.autorecipes {
 			results =
 				{
 					{name = 'guts', amount = IMP_GUTS},
+					{name = 'meat', remove_item = true},
+					{name = 'chitin', remove_item = true},
+					{name = 'arthropod-blood', remove_item = true},
+					{name = 'bee-venom', remove_item = true},
 				},
 			tech = 'antitumor',
 			name = 'ex-gut-arq',
@@ -66,7 +70,8 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name = 'guts', amount = BASE_GUTS},
+					{name = 'guts', remove_item = true},
+					--{name = 'guts', amount = BASE_GUTS},
 					{name = 'meat', amount = IMP_MEAT},
 				},
 			tech = 'anabolic-rna',
@@ -82,7 +87,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name = 'meat', amount = BASE_MEAT},
+					{name = 'meat', remove_item = true},
 					{name = 'chitin', amount = IMP_SKIN}
 				},
 			tech = 'reca',
@@ -98,13 +103,27 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name = 'chitin', amount = BASE_SKIN},
+					{name = 'chitin', remove_item = true},
 					{name = 'arthropod-blood', amount = IMP_BLOOD},
-					{name = 'bee-venom', amount = IMP_SPECIAL}
 				},
 			tech = 'recombinant-ery',
 			name = 'ex-blo-arq',
 			icon = "__pyalienlifegraphics3__/graphics/icons/blood-arqad.png",
+			icon_size = 64,
+		},
+				{
+			ingredients =
+				{
+					--{name = 'blood-arqad', amount = INPUT_AMOUNT},
+				},
+			results =
+				{
+					{name = 'arthropod-blood', remove_item = true},
+					{name = 'bee-venom', amount = IMP_SPECIAL}
+				},
+			tech = 'recombinant-ery',
+			name = 'ex-venom-arq',
+			icon = "__pyalienlifegraphics3__/graphics/icons/bee-venom.png",
 			icon_size = 64,
 		},
 	}

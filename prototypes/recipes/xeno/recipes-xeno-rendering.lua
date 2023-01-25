@@ -55,6 +55,11 @@ FUN.autorecipes {
 				},
 			results =
 				{
+					{name = 'bones', remove_item = true},
+					--{name = 'cage', remove_item = true},
+					{name = 'meat', remove_item = true},
+					{name = 'chitin', remove_item = true},
+					{name = 'sulfuric-acid', remove_item = true},
 					{name='brain', amount = IMP_BRAIN},
 				},
 			tech = 'nanochondria',
@@ -71,7 +76,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='brain', amount = BASE_BRAIN},
+					{name = 'brain', remove_item = true},
 					{name='bones', amount = IMP_BONES},
 				},
 			tech = 'bmp',
@@ -88,7 +93,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount = BASE_BONES},
+					{name = 'bones', remove_item = true},
 					{name='sulfuric-acid', amount = IMP_BLOOD},
 				},
 			tech = 'recombinant-ery',
@@ -105,7 +110,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='sulfuric-acid', amount = BASE_BLOOD},
+					{name = 'sulfuric-acid', remove_item = true},
 					{name='chitin', amount = IMP_SKIN},
 				},
 			tech = 'reca',
@@ -122,7 +127,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='chitin', amount = BASE_SKIN},
+					{name = 'chitin', remove_item = true},
 					{name='meat', amount = IMP_MEAT},
 				},
 			tech = 'anabolic-rna',

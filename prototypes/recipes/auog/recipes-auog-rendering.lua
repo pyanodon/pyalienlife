@@ -59,6 +59,12 @@ FUN.autorecipes {
 				},
 			results =
 				{
+					{name = 'bones', remove_item = true},
+					{name = 'meat', remove_item = true},
+					{name = 'mukmoux-fat', remove_item = true},
+					{name = 'skin', remove_item = true},
+					{name = 'guts', remove_item = true},
+					{name = 'blood', remove_item = true},
 					{name='brain', amount = IMP_BRAIN},
 				},
 			crafting_speed = 30,
@@ -76,7 +82,8 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='brain', amount = BASE_BRAIN},
+					{name = 'brain', remove_item = true},
+					--{name='brain', amount = BASE_BRAIN},
 					{name='bones', amount = IMP_BONES},
 				},
 				crafting_speed = 30,
@@ -94,7 +101,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='bones', amount = BASE_BONES},
+					{name = 'bones', remove_item = true},
 					{name='meat', amount = IMP_MEAT},
 				},
 				crafting_speed = 30,
@@ -112,7 +119,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='meat', amount = BASE_MEAT},
+					{name = 'meat', remove_item = true},
 					{name='guts', amount = IMP_GUTS},
 				},
 				crafting_speed = 30,
@@ -130,7 +137,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='guts', amount = BASE_GUTS},
+					{name = 'guts', remove_item = true},
 					{name='blood', amount = IMP_BLOOD},
 				},
 				crafting_speed = 30,
@@ -148,7 +155,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='blood', amount = BASE_BLOOD},
+					{name = 'blood', remove_item = true},
 					{name='skin', amount = IMP_SKIN},
 				},
 				crafting_speed = 30,
@@ -166,7 +173,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='skin', amount = BASE_SKIN},
+					{name = 'skin', remove_item = true},
 					{name='mukmoux-fat', amount = IMP_FAT},
 				},
 				crafting_speed = 30,

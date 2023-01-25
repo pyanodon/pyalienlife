@@ -53,6 +53,10 @@ FUN.autorecipes {
 				},
 			results =
 				{
+					{name = 'mukmoux-fat', remove_item = true},
+					{name = 'chitin', remove_item = true},
+					{name = 'guts', remove_item = true},
+					{name = 'arthropod-blood', remove_item = true},
 					{name='meat', amount = IMP_MEAT},
 				},
 			tech = 'anabolic-rna',
@@ -69,7 +73,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='meat', amount = BASE_MEAT},
+					{name = 'meat', remove_item = true},
 					{name='guts', amount = IMP_GUTS},
 				},
 			tech = 'antitumor',
@@ -86,7 +90,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='guts', amount = BASE_GUTS},
+					{name = 'guts', remove_item = true},
 					{name='arthropod-blood', amount = IMP_BLOOD},
 				},
 			tech = 'recombinant-ery',
@@ -103,7 +107,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='arthropod-blood', amount = BASE_BLOOD},
+					{name = 'arthropod-blood', remove_item = true},
 					{name='mukmoux-fat', amount = IMP_FAT},
 				},
 			tech = 'orexigenic',

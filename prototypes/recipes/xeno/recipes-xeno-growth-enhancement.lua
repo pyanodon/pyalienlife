@@ -22,6 +22,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='brain-xeno', amount = 1},
+					--{name='cage', amount=1},
 				},
 			crafting_speed = 80,
 			tech = 'nanochondria'

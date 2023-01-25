@@ -53,6 +53,10 @@ FUN.autorecipes {
 				},
 			results =
 				{
+					{name = 'meat', remove_item = true},
+					{name = 'chitin', remove_item = true},
+					{name = 'formic-acid', remove_item = true},
+					{name = 'guts', remove_item = true},
 					{name='brain', amount = IMP_BRAIN},
 				},
 			tech = 'nanochondria',
@@ -69,7 +73,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='brain', amount = BASE_BRAIN},
+					{name = 'brain', remove_item = true},
 					{name='meat', amount = IMP_MEAT},
 				},
 			tech = 'anabolic-rna',
@@ -86,7 +90,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='meat', amount = BASE_MEAT},
+					{name = 'meat', remove_item = true},
 					{name='guts', amount = IMP_GUTS},
 				},
 			tech = 'antitumor',
@@ -103,7 +107,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='guts', amount = BASE_GUTS},
+					{name = 'guts', remove_item = true},
 					{name='formic-acid', amount = IMP_BLOOD},
 				},
 			tech = 'recombinant-ery',
@@ -120,7 +124,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='formic-acid', amount = BASE_BLOOD},
+					{name = 'formic-acid', remove_item = true},
 					{name='chitin', amount = IMP_SKIN},
 				},
 			tech = 'reca',
