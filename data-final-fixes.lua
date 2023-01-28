@@ -167,6 +167,7 @@ local recipes_list =
   "recombinant-ery-2",
   "orexigenic",
   "phytoplankton-2",
+  "phytoplankton-3",
   "fetal-serum-01",
   "vrauks",
   "vrauks-codex",

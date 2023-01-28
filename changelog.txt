@@ -13,6 +13,7 @@ Date: ?
     - Improved animal slaughterhouse recipes now only output the main ingredients
     - Added nex plates to chemical science recipe
     - Increased nex plate amount in biobattery, resveratrol, nexelit-power-pole, and decalin
+    - Added compost biomass amount to some tooltips
   Bugfixes:
     - Slaughterhouse gui no longer crashes in multiplayer
     - Fixed that RC could craft without modules
