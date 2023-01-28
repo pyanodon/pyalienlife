@@ -4,6 +4,7 @@
 
 require("__stdlib__/stdlib/data/data").Util.create_data_globals()
 local RECIPE = require("__stdlib__/stdlib/data/recipe")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 require("prototypes/item-groups")
 require("prototypes/recipe-categories")
@@ -821,30 +822,18 @@ local type
 local local_name_type
 
 for i, item in pairs(bio_list) do
-
---local name = ''
---log(i)
     if item.type == nil or item.type ~= 'fluid' then
         type = 'item'
         local_name_type = 'item'
-        --if data.raw.item[i] ~= nil then
-           --name = data.raw.item[i].localised_name
-        --end
     elseif item.type == 'fluid' then
         type = 'fluid'
         local_name_type = 'fluid'
-        --if data.raw.fluid[i] ~= nil then
-            --name = data.raw.fluid[i].localised_name
-        --end
     end
-    --log(serpent.block(data.raw.item[i]))
     local icon
     if type == 'item' and data.raw.item[i] ~= nil then
         if data.raw.item[i].icon ~= nil then
-            --log('hit')
             icon = {icon = data.raw.item[i].icon, icon_size = data.raw.item[i].icon_size}
         elseif data.raw.item[i].icons ~= nil then
-            --log('hit')
             icon = data.raw.item[i].icons[1]
             if data.raw.item[i].icon_size ~= nil then
                 icon.icon_size = data.raw.item[i].icon_size
@@ -854,18 +843,14 @@ for i, item in pairs(bio_list) do
         end
     elseif type == 'fluid' then
         if data.raw.fluid[i] ~= nil and data.raw.fluid[i].icon ~= nil then
-            --log('hit')
             icon = {icon = data.raw.fluid[i].icon, icon_size = data.raw.fluid[i].icon_size}
         elseif data.raw.fluid[i] ~= nil and data.raw.fluid[i].icons ~= nil then
-            --log('hit')
             icon = data.raw.fluid[i].icons[1]
         end
     elseif type == 'item' and data.raw.module[i] ~= nil then
         if data.raw.module[i].icon ~= nil then
-            --log('hit')
             icon = {icon = data.raw.module[i].icon, icon_size = data.raw.module[i].icon_size}
         elseif data.raw.module[i].icons ~= nil then
-            --log('hit')
             if string.match(data.raw.module[i].icons[1].icon, 'over') ~= nil then
                 icon = data.raw.module[i].icons[2]
             else
@@ -878,7 +863,9 @@ for i, item in pairs(bio_list) do
             end
         end
     end
-    if data.raw.item[i] ~= nil or data.raw.fluid[i] ~= nil or data.raw.module[i] ~= nil then
+
+    local prototype = data.raw.item[i] or data.raw.fluid[i] or data.raw.module[i]
+    if prototype then
         RECIPE {
             type = 'recipe',
             name = 'biomass-' .. i,
@@ -893,7 +880,6 @@ for i, item in pairs(bio_list) do
             results = {
                 {type = 'item', name = 'biomass', amount = item.biomass_amount},
             },
-            --main_product = 'biomass',
             icons =
                 {
                     icon,
@@ -903,18 +889,6 @@ for i, item in pairs(bio_list) do
             order = i,
             localised_name = {'', 'Compost ' .. item.item_amount .. ' x ', {local_name_type .. '-name.' .. i}}
         }:add_unlock("compost")
-        --log(serpent.block(data.raw.recipe['biomass-' .. i]))
+        FUN.add_to_description(type, prototype, {'item-description.compost-amount', math.floor(item.biomass_amount / item.item_amount * 10) / 10})
     end
 end
---[[
---(( Shortcut keys ))--
-local recipeselect=
-	{
-	type = "custom-input",
-	name = "tech-upgrades",
-	key_sequence = "CONTROL + T",
-	consuming = "none"
-	}
-
-data:extend{recipeselect}
-]]--
