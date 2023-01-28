@@ -1,3 +1,5 @@
+local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
+
 Oculua = {}
 Oculua.events = {}
 
@@ -49,7 +51,7 @@ end
 
 function Oculua.find_ipod(player, item)
 	local checked_logistic_networks = {}
-	for _, ipod_data in shuffled_pairs(global.ipods) do
+	for _, ipod_data in FUN.shuffled_pairs(global.ipods) do
 		local ipod = ipod_data.entity
 		if ipod.force ~= player.force or ipod.surface ~= player.surface then goto continue end
 		if ipod_data.active_oculua >= #ipod_data.inventory then goto continue end
@@ -77,7 +79,7 @@ function Oculua.process_player(player)
 		if not request_slot then goto continue end
 		local item = request_slot.name
 
-		if not check_for_basic_item(item) then goto continue end -- Cannot transfer blueprint books, item-with-tags, ect. Otherwise it would wipe data
+		if not FUN.check_for_basic_item(item) then goto continue end -- Cannot transfer blueprint books, item-with-tags, ect. Otherwise it would wipe data
 		local needed = request_slot.count - (incoming[item] or 0) - (inventory[item] or 0) - (logistic_network_incoming[item] or 0)
 		if needed <= 0 then goto continue end
 

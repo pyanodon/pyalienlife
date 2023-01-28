@@ -1,6 +1,4 @@
-local function format_energy(energy)
-	return string.format('%.0f', energy * 60 / 1000) .. 'kW'
-end
+local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
 local function generate_favorite_food_tooltip()
 	local favorites = {''}
@@ -19,7 +17,7 @@ function Digosaurus.update_gui(gui)
 	local entity = dig_data.entity
 
 	content_flow.status_flow.electricity.value = entity.energy / entity.electric_buffer_size
-	content_flow.status_flow.consumption.caption = format_energy(entity.energy) .. '/' .. format_energy(entity.electric_buffer_size)
+	content_flow.status_flow.consumption.caption = {'', FUN.format_energy(entity.energy, 'W'), '/', FUN.format_energy(entity.electric_buffer_size, 'W')}
 
 	local status, img
 	if entity.to_be_deconstructed() then
@@ -98,7 +96,7 @@ Digosaurus.events.on_gui_opened = function(event)
     status_flow.add{type = 'empty-widget', style = 'py_empty_widget'}
 	status_flow.add{type = 'label', name = 'consumption'}.style.right_margin = 4
 	local electricity = status_flow.add{type = 'progressbar', name = 'electricity', style = 'electric_satisfaction_progressbar'}
-    electricity.style.width = 150
+    electricity.style.horizontally_squashable = true
 
     local deep_frame_in_shallow_frame = content_flow.add{type = 'frame', direction = 'vertical', style = 'py_nice_frame'}
 	local entity_preview = deep_frame_in_shallow_frame.add{type = 'entity-preview', name = 'entity_preview', style = 'py_entity_preview'}

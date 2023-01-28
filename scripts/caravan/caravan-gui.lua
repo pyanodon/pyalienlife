@@ -1,10 +1,7 @@
 local prototypes = require 'caravan-prototypes'
 local Table = require('__stdlib__/stdlib/utils/table')
 local Position = require('__stdlib__/stdlib/area/position')
-
-local function format_energy(energy)
-	return string.format('%.2f', energy / 1000000) .. 'MJ'
-end
+local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
 local function generate_button_status(caravan_data, schedule_id, action_id)
 	local style = 'train_schedule_action_button'
@@ -296,7 +293,7 @@ function Caravan.update_gui(gui, weak)
 			local distance_bonus_formula = prototypes[entity.name].distance_bonus_formula
 			distance_bonus = distance_bonus_formula(distance)
 		end
-		content_flow.stored_energy.caption = {'caravan-gui.stored-energy', format_energy(energy)}
+		content_flow.stored_energy.caption = {'caravan-gui.stored-energy', FUN.format_energy(energy, 'J')}
 		content_flow.distance_bonus.caption = {'caravan-gui.distance-bonus', math.floor(distance_bonus * 1000) / 10}
 	end
 
