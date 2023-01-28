@@ -1,4 +1,5 @@
 require 'scripts/lib'
+require 'scripts/wiki/text-pages'
 require 'scripts/caravan/caravan'
 require 'scripts/digosaurus/digosaurus'
 require 'scripts/ocula/ocula'
@@ -7,33 +8,7 @@ require 'scripts/slaughterhouse/slaughterhouse'
 require 'scripts/smart-farm/smart-farm'
 require 'scripts/worm/worm'
 
-local bio_list = require('prototypes/items/biomass-convertion')
-
-remote.add_interface('data_puller', {order_biolist = function()
-    local bio = global.compostables.og_list
-    local name_table = {}
-    local input_table = {}
-    local output_table = {}
-    for i, item in pairs(bio) do
-        table.insert(name_table, i)
-        if input_table[item.item_amount] == nil then
-            input_table[item.item_amount] = {i}
-        else
-            table.insert(input_table[item.item_amount], i)
-        end
-        if output_table[item.biomass_amount] == nil then
-            output_table[item.biomass_amount] = {i}
-        else
-            table.insert(output_table[item.biomass_amount], i)
-        end
-    end
-    table.sort(name_table)
-    for k, v in pairs(input_table) do table.sort(v) end
-    for k, v in pairs(output_table) do table.sort(v) end
-    return bio, name_table, input_table, output_table
-end})
-
-local function init_discoscience()
+local function discoscience()
     if remote.interfaces['DiscoScience'] and remote.interfaces['DiscoScience']['setIngredientColor'] then
         remote.call('DiscoScience', 'setIngredientColor', 'py-science-pack-1', {r = 178, g = 88, b = 1})
         remote.call('DiscoScience', 'setIngredientColor', 'py-science-pack-2', {r = 246, g = 125, b = 45})
@@ -44,24 +19,16 @@ local function init_discoscience()
 end
 
 local function init()
-    --wiki info
-    global.compostables = global.compostables or {
-        og_list = bio_list,
-        name_order = {},
-        input_order = {},
-        output_order = {}
-    }
-
     global.vatbrains = global.vatbrains or {}
 
-    init_discoscience()
-
+    discoscience()
     Caravan.events.init()
     Digosaurus.events.init()
     Oculua.events.on_init()
     Farming.events.on_init()
     Slaughterhouse.events.on_init()
     Worm.events.on_init()
+    Wiki.events.on_init()
 end
 
 script.on_init(function()

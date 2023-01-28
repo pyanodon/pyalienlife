@@ -808,9 +808,6 @@ require('prototypes/ores/nexelit')
 data.raw["utility-constants"].default.recipe_step_limit = 2000;
 data.raw["utility-constants"].default.main_menu_background_image_location = "__pyalienlifegraphics3__/graphics/pyal-wall.jpg"
 
---(( TIPS AND TRICKS ))--
-require('prototypes/tips-and-tricks')
-
 --sprities
 require('prototypes/sprites/sprites')
 --require('prototypes/ores/fake-plants')

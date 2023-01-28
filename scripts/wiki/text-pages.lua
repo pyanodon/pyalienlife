@@ -1,4 +1,7 @@
-Event.register(Event.core_events.init_and_config, function()
+Wiki = {}
+Wiki.events = {}
+
+Wiki.events.on_init = function()
     remote.call('pywiki', 'add_section', 'alienlife')
 
     remote.call('pywiki', 'add_page', {
@@ -36,4 +39,4 @@ Event.register(Event.core_events.init_and_config, function()
         section = 'alienlife',
         text_only = true
     })
-end)
+end

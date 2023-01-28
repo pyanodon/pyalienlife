@@ -619,3 +619,15 @@ Caravan.events.on_entity_settings_pasted = function(event)
 		if gui and gui.tags.unit_number == destination.unit_number then Caravan.update_gui(gui) end
 	end
 end
+
+remote.add_interface('caravans', {
+	get_caravan_count = function()
+		local result = 0
+		for _, caravan_data in pairs(global.caravans) do
+			if caravan_data.entity and caravan_data.entity.valid and not caravan_data.itemised and not caravan_data.is_aerial then
+				result = result + 1
+			end
+		end
+		return result
+	end
+})
