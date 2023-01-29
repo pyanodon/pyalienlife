@@ -148,7 +148,7 @@ ENTITY {
           width = 1,
           height = 1
         },
-        distance = 10.5,
+        distance = 11.5,
         offset = {0, 0}
       },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
