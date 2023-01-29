@@ -71,6 +71,15 @@ ENTITY {
         percent = 60
       }
     },
+    radius_visualisation_specification = {
+      sprite = {
+        filename = '__base__/graphics/entity/electric-mining-drill/electric-mining-drill-radius-visualization.png',
+        width = 1,
+        height = 1
+      },
+      distance = 13,
+      offset = {0, -15}
+    },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
 	fluid_boxes = {
         --1
