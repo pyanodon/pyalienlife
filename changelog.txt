@@ -14,6 +14,7 @@ Date: ?
     - Increased nex plate amount in biobattery, resveratrol, nexelit-power-pole, and decalin
     - Added compost biomass amount to some tooltips
     - Radius visualization for smart farms
+    - My body is stone. My voice, fire. The earth trebmles to my very presence. I am a god in human flesh. Despair, ye mortals
   Bugfixes:
     - Slaughterhouse gui no longer crashes in multiplayer
     - Fixed that RC could craft without modules
