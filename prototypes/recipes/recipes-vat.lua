@@ -96,7 +96,7 @@ RECIPE {
         {type = 'item', name = 'brain-cartridge-01', amount = 1},
     },
 
-}:add_unlock("vatbrain")
+}:add_unlock("vatbrain-mk01")
 
 RECIPE {
     type = 'recipe',
@@ -158,7 +158,7 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'brain-food-1',
+    name = 'brain-food-01',
     category = "vat",
     enabled = false,
     energy_required = 20,
@@ -170,11 +170,11 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-used',
     order = 'aa'
-}:add_unlock("vatbrain")
+}:add_unlock("vatbrain-mk01")
 
 RECIPE {
     type = 'recipe',
-    name = 'brain-food-2',
+    name = 'brain-food-02',
     category = "vat",
     enabled = false,
     energy_required = 20,
@@ -190,7 +190,7 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'brain-food-3',
+    name = 'brain-food-03',
     category = "vat",
     enabled = false,
     energy_required = 20,
@@ -206,7 +206,7 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'brain-food-4',
+    name = 'brain-food-04',
     category = "vat",
     enabled = false,
     energy_required = 20,

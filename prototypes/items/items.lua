@@ -9391,8 +9391,8 @@ ITEM {
     {
       productivity = {bonus = 0.25},
       consumption = {bonus = 1},
-      pollution = {bonus = -0.1},
-      speed = {bonus = -0.1}
+      --pollution = {bonus = -0.1},
+      --speed = {bonus = -0.1}
     },
 	limitation = {},
 	limitation_message_key = "vatbrain"
@@ -9416,8 +9416,8 @@ ITEM {
     {
       productivity = {bonus = 0.5},
       consumption = {bonus = 2},
-      pollution = {bonus = -0.1},
-      speed = {bonus = -0.1}
+      --pollution = {bonus = -0.1},
+      --speed = {bonus = -0.1}
     },
 	limitation = {},
 	limitation_message_key = "vatbrain"
@@ -9441,8 +9441,8 @@ ITEM {
     {
       productivity = {bonus = 0.75},
       consumption = {bonus = 3},
-      pollution = {bonus = -0.1},
-      speed = {bonus = -0.15}
+      --pollution = {bonus = -0.1},
+      --speed = {bonus = -0.15}
     },
 	limitation = {},
 	limitation_message_key = "vatbrain"
@@ -9466,8 +9466,8 @@ ITEM {
     {
       productivity = {bonus = 1},
       consumption = {bonus = 4},
-      pollution = {bonus = -0.1},
-      speed = {bonus = -0.15}
+      --pollution = {bonus = -0.1},
+      --speed = {bonus = -0.15}
     },
 	limitation = {},
 	limitation_message_key = "vatbrain"

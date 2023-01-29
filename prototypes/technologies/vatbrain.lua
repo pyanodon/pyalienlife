@@ -1,6 +1,6 @@
 TECHNOLOGY {
     type = "technology",
-    name = "vatbrain",
+    name = "vatbrain-mk01",
     icon = "__pyalienlifegraphics2__/graphics/technology/vatbrain-mk01.png",
     icon_size = 128,
     order = "c-a",
@@ -24,8 +24,8 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/vatbrain-mk02.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"vatbrain"},
-    dependencies = {"vatbrain"},
+    prerequisites = {"vatbrain-nk01"},
+    dependencies = {"vatbrain-mk01"},
     effects = {},
     unit = {
         count = 350,

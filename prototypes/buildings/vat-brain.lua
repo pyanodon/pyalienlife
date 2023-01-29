@@ -15,7 +15,7 @@ RECIPE {
     results = {
         {"vat-brain", 1}
     }
-}:add_unlock("vatbrain")
+}:add_unlock("vatbrain-mk01")
 
 ITEM {
     type = "item",
@@ -146,6 +146,15 @@ ENTITY {
         },
         off_when_no_fluid_recipe = true
     },
+    radius_visualisation_specification = {
+        sprite = {
+          filename = '__base__/graphics/entity/electric-mining-drill/electric-mining-drill-radius-visualization.png',
+          width = 1,
+          height = 1
+        },
+        distance = 12,
+        offset = {0, 0}
+      },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
         sound = {filename = "__pyalienlifegraphics__/sounds/vat-brain.ogg", volume = 1.5},
