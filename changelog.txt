@@ -8,7 +8,6 @@ Date: ?
     - Reordered recipe subgroups
     - Added xenogenic-cells to moss mk2 recipe
     - Added big muscular crocodile
-    - Caravan GUI can now be opened with an item in your cursor
     - Sex machine is now louder
     - Improved animal slaughterhouse recipes now only output the main ingredients
     - Added nex plates to chemical science recipe
@@ -32,6 +31,7 @@ Date: ?
     - Caravans now have a max wander distance
     - nerfed action values of brains and auog food
     - caravans are much more visible on the map
+    - Caravan GUI can now be opened with an item in your cursor
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.8
 Date: 2023-1-5
