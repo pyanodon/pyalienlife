@@ -31,7 +31,7 @@ ENTITY{
     --[[
     graphics_set = require("__base__.prototypes.entity.beacon-animations"),
     ]] --
-    supply_area_distance = 12,
+    supply_area_distance = 11,
     energy_source = {type = 'void'},
     vehicle_impact_sound = sounds.generic_impact,
     open_sound = sounds.machine_open,

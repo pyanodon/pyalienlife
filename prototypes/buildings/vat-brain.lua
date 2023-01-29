@@ -43,10 +43,6 @@ ENTITY {
     collision_box = {{-3.3, -3.3}, {3.3, 3.3}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = 3
-    },
-    allowed_effects = {"speed","consumption"},
     crafting_categories = {"vat"},
     crafting_speed = 1,
     energy_source = {
@@ -152,7 +148,7 @@ ENTITY {
           width = 1,
           height = 1
         },
-        distance = 12,
+        distance = 10.5,
         offset = {0, 0}
       },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
