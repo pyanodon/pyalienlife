@@ -116,6 +116,7 @@ Slaughterhouse.events.on_gui_opened = function(event)
 end
 
 Slaughterhouse.events.on_gui_closed = function(event)
+	if not global.watched_slaughterhouses then return end
 	local player = game.get_player(event.player_index)
 	if event.gui_type == defines.gui_type.custom then
 		local gui = player.gui.screen.slaughterhouse
