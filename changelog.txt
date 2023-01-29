@@ -21,6 +21,7 @@ Date: ?
     - Locale fix for zungror, dhilmos
     - Fix animation for worms
     - Allowed walking and driving on bioreserve collectors
+    - Fix vrauk paddock mk4 having too many module slots
   Caravan:
     - Fixed crash when picking caravan destination in some cases
     - Fix caravan GUI becoming unusable if the player dies/disconnects/etc with it open
