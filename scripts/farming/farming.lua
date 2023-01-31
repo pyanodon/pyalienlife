@@ -8,7 +8,7 @@ function Farming.draw_error(kingdom, entity)
         sprite = 'no_module_' .. kingdom,
 		x_scale = 0.5,
 		y_scale = 0.5,
-        target = entity.position,
+        target = entity,
         surface = entity.surface,
 		time_to_live = 30
     }
@@ -51,11 +51,13 @@ end
 -- render warning icons
 Farming.events[30] = function(event)
 	if event.tick % 60 == 0 then return end
-	for _, farm in pairs(global.disabled_farm_buildings) do
-		if farm.get_module_inventory().is_empty() then
+	for unit_number, farm in pairs(global.disabled_farm_buildings) do
+		if not farm.valid then
+			global.disabled_farm_buildings[unit_number] = nil
+		elseif farm.get_module_inventory().is_empty() then
 			Farming.draw_error(Farming.get_kingdom(farm), farm)
 		else
-			global.disabled_farm_buildings[farm.unit_number] = nil
+			global.disabled_farm_buildings[unit_number] = nil
 			farm.active = true
 			global.enabled_farm_buildings[#global.enabled_farm_buildings + 1] = farm
 		end
