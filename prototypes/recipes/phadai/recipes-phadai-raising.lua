@@ -26,8 +26,9 @@ FUN.autorecipes {
 			results =
 				{
 					{name='phadai-pup', amount =3},
+					{name = 'phadai', amount = 2},
 				},
-			crafting_speed = 10,
+			crafting_speed = 70,
 			tech = 'phadai'
 		},
 		--food 1
@@ -43,7 +44,7 @@ FUN.autorecipes {
 				{
 
 				},
-			crafting_speed = 9,
+			crafting_speed = 60,
 			tech = 'phadai'
 		},
 		--fawogae
@@ -56,7 +57,7 @@ FUN.autorecipes {
 				{
 
 				},
-			crafting_speed = 8,
+			crafting_speed = 50,
 			tech = 'phadai-mk02'
 		},
 		--energy-drink
@@ -69,7 +70,7 @@ FUN.autorecipes {
 				{
 
 				},
-			crafting_speed = 7,
+			crafting_speed = 40,
 			tech = 'phadai-mk02'
 		},
 		--food 2
@@ -86,7 +87,7 @@ FUN.autorecipes {
 				{
 
 				},
-			crafting_speed = 6,
+			crafting_speed = 30,
 			tech = 'phadai-mk03'
 		},
 		--food 2 fawogae
@@ -99,7 +100,7 @@ FUN.autorecipes {
 				{
 
 				},
-			crafting_speed = 5,
+			crafting_speed = 20,
 			tech = 'phadai-mk03'
 		},
 		--food 2 fawogae energy-drink
@@ -112,7 +113,7 @@ FUN.autorecipes {
 				{
 
 				},
-			crafting_speed = 5,
+			crafting_speed = 10,
 			tech = 'phadai-mk04'
 		},
 	}
