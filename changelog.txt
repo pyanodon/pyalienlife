@@ -4,6 +4,8 @@ Date: ?
   Changes:
     - Fixed that the phadai chain was negative
     - Fixed crash with the crafting combinator mod
+    - Fixed that digosaurs products did not show up in the production tab
+    - Fixed that digosaurs minable proxy was showing up in the kills tab
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.9
 Date: 2023-1-31
