@@ -187,7 +187,7 @@ Digosaurus.events.on_ai_command_completed = function(event)
                     dig_data.scanned_ores[digosaur_data.ore_id] = nil
                 end
                 dig_data.entity.products_finished = dig_data.entity.products_finished + 1
-                dig_data.entity.force.item_production_statistics.on_flow(product.name, ore_removed)
+                dig_data.entity.force.item_production_statistics.on_flow(product.name, to_insert)
                 return
             end
         end
