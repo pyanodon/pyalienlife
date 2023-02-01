@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.10
+Date: ?
+  Changes:
+    - Fixed that the phadai chain was negative
+    - Fixed crash with the crafting combinator mod
+---------------------------------------------------------------------------------------------------
 Version: 2.0.9
 Date: 2023-1-31
   Changes:
