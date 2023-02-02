@@ -223,7 +223,8 @@ FUN.autorecipes {
 				},
 			results =
 				{
-
+					{name='xyhiphoe',remove_item = true},
+					{name='xyhiphoe', probability = 0.8, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 130,
 			tech = 'water-invertebrates-mk02'
@@ -240,7 +241,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='xyhiphoe',remove_item = true},
-					{name='xyhiphoe', probability = 0.9, amount_min =1, amount_max =1},
+					{name='xyhiphoe', probability = 0.9, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 110,
 			tech = 'water-invertebrates-mk03'
@@ -254,7 +255,8 @@ FUN.autorecipes {
 				},
 			results =
 				{
-
+					{name='xyhiphoe',remove_item = true},
+					{name='xyhiphoe', amount =2},
 				},
 			crafting_speed = 100,
 			tech = 'water-invertebrates-mk04'
