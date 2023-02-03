@@ -8,6 +8,7 @@ Date: ?
     - Fixed that digosaurs minable proxy was showing up in the kills tab
     - Fixed that caravans could not pickup science packs or other items with data
     - Fixed that caravans did not delete their map tag when being mined
+    - Fixed that vatbrain was affecting composters, barreling machines, and other entities
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.9
 Date: 2023-1-31

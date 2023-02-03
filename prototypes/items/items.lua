@@ -9318,60 +9318,6 @@ ITEM {
     order = "x",
     stack_size = 100
 }
---[[
-------------------------------
-data:extend(
-{
-  --item used to select the creature and start and end points of the route
-	{
-		type = 'selection-tool',
-		name = 'unit-controller',
-		icon = '__pyalienlifegraphics__/graphics/icons/carrot_on_a_stick.png',
-		icon_size = 64,
-		flags = {"spawnable", "only-in-cursor"},
-		subgroup = "tool",
-		order = "a",
-		stack_size = 1,
-		stackable = false,
-		selection_color = {r = 0.3, g = 0.9, b = 0.3},
-		alt_selection_color = {r = 0.9, g = 0.9, b = 0.3},
-		selection_mode = {"any-entity"},
-		alt_selection_mode = {"same-force"},
-		selection_cursor_box_type = "copy",
-		alt_selection_cursor_box_type = "entity"
-	},
-	{
-        type = 'shortcut',
-        name = 'auog-selector',
-        order = "a[yarm]",
-        action = 'spawn-item',
-        item_to_spawn = 'unit-controller',
-        style = 'green',
-        icon = {
-            filename = '__pyalienlifegraphics__/graphics/icons/carrot_on_a_stick.png',
-            priority = 'extra-high-no-scale',
-            size = 64,
-            scale = 1,
-            flags = {'icon'},
-        },
-        small_icon = {
-            filename = '__pyalienlifegraphics__/graphics/icons/carrot_on_a_stick.png',
-            priority = 'extra-high-no-scale',
-            size = 64,
-            scale = 1,
-            flags = {'icon'},
-        },
-        disabled_small_icon = {
-            filename = '__pyalienlifegraphics__/graphics/icons/carrot_on_a_stick.png',
-            priority = 'extra-high-no-scale',
-            size = 64,
-            scale = 1,
-            flags = {'icon'},
-        },
-    },
-}
-)
-]]--
 
 ITEM {
     type = "module",
@@ -9391,7 +9337,7 @@ ITEM {
     {
       productivity = {bonus = 0.25},
       consumption = {bonus = 1},
-      --pollution = {bonus = -0.1},
+      pollution = {bonus = 0.1},
       --speed = {bonus = -0.1}
     },
 	limitation = {},
@@ -9416,7 +9362,7 @@ ITEM {
     {
       productivity = {bonus = 0.5},
       consumption = {bonus = 2},
-      --pollution = {bonus = -0.1},
+      pollution = {bonus = 0.1},
       --speed = {bonus = -0.1}
     },
 	limitation = {},
@@ -9441,7 +9387,7 @@ ITEM {
     {
       productivity = {bonus = 0.75},
       consumption = {bonus = 3},
-      --pollution = {bonus = -0.1},
+      pollution = {bonus = 0.1},
       --speed = {bonus = -0.15}
     },
 	limitation = {},
@@ -9466,7 +9412,7 @@ ITEM {
     {
       productivity = {bonus = 1},
       consumption = {bonus = 4},
-      --pollution = {bonus = -0.1},
+      pollution = {bonus = 0.1},
       --speed = {bonus = -0.15}
     },
 	limitation = {},
