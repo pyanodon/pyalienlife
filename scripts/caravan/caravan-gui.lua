@@ -13,12 +13,6 @@ local function generate_button_status(caravan_data, schedule_id, action_id)
 	return style, sprite
 end
 
-local elem_filters = {
-	'item-with-entity-data', 'ammo', 'item-with-label', 'item-with-inventory', 'blueprint-book', 'item-with-tags',
-	'selection-tool', 'blueprint', 'copy-paste-tool', 'deconstruction-item', 'upgrade-item', 'spidertron-remote', 'tool', 'armor', 'repair-tool'
-}
-elem_filters = Table.map(elem_filters, function(v) return {filter = 'type', type = v, invert = true, mode = 'and'} end)
-
 function Caravan.build_schedule_gui(gui, caravan_data)
 	for i, schedule in ipairs(caravan_data.schedule) do
 		local prototype = prototypes[caravan_data.entity.name]
@@ -78,7 +72,7 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 				action_frame.add{type = 'empty-widget', style = 'py_empty_widget'}
 				local itemselect = action_frame.add{
 					type = 'choose-elem-button', name = 'py_item_count', style = 'train_schedule_item_select_button',
-					tags = tags, elem_type = 'item', elem_filters = elem_filters
+					tags = tags, elem_type = 'item'
 				}
 				itemselect.elem_value = action.elem_value
 				action_frame.add{type = 'label', caption = '='}
@@ -90,13 +84,13 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 				action_frame.add{type = 'empty-widget', style = 'py_empty_widget'}
 				local circuit_condition_right = action_frame.add{
 					type = 'choose-elem-button', name = 'py_circuit_condition_right', style = 'train_schedule_item_select_button',
-					tags = tags, elem_type = 'signal', elem_filters = elem_filters
+					tags = tags, elem_type = 'signal'
 				}
 				circuit_condition_right.elem_value = action.circuit_condition_right
 				action_frame.add{type = 'label', caption = '='}
 				local circuit_condition_left = action_frame.add{
 					type = 'choose-elem-button', name = 'py_circuit_condition_left', style = 'train_schedule_item_select_button',
-					tags = tags, elem_type = 'signal', elem_filters = elem_filters
+					tags = tags, elem_type = 'signal'
 				}
 				circuit_condition_left.elem_value = action.circuit_condition_left
 			else

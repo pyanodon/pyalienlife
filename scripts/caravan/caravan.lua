@@ -599,6 +599,9 @@ Caravan.events.on_entity_destroyed = function(event)
 		local gui = Caravan.get_caravan_gui(player)
 		if gui and gui.tags.unit_number == unit_number then gui.destroy(); player.opened = nil end
 	end
+
+	local map_tag = caravan_data.map_tag
+	if map_tag and map_tag.valid then map_tag.destroy() end
 end
 
 Caravan.events.on_entity_settings_pasted = function(event)

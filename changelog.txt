@@ -2,10 +2,12 @@
 Version: 2.0.10
 Date: ?
   Changes:
-    - Fixed that the phadai chain was negative
+    - Fixed that phadai and xyhiphoe chains were net negative
     - Fixed crash with the crafting combinator mod
     - Fixed that digosaurs products did not show up in the production tab
     - Fixed that digosaurs minable proxy was showing up in the kills tab
+    - Fixed that caravans could not pickup science packs or other items with data
+    - Fixed that caravans did not delete their map tag when being mined
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.9
 Date: 2023-1-31
