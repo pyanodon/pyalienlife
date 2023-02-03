@@ -67,7 +67,7 @@ table.insert(data.raw["assembling-machine"]["wpu-mk03"].crafting_categories, "wp
 table.insert(data.raw["assembling-machine"]["wpu-mk04"].crafting_categories, "wpu-handcrafting")
 
 data.raw.lab.lab.module_specification.module_slots = 0
-data.raw.lab.lab.allowed_effects = {"consumption", "speed", "productivity"},
+data.raw.lab.lab.allowed_effects = {"consumption", "speed", "productivity", "pollution"},
 
 --RECIPES--
 RECIPE("ralesia"):remove_unlock('ralesia')
