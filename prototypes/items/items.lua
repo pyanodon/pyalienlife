@@ -9322,10 +9322,7 @@ ITEM {
 ITEM {
     type = "module",
     name = "vatbrain-1",
-    icons =
-    {
-        {icon = "__pyalienlifegraphics2__/graphics/icons/forest-tree.png"}
-    },
+    icon = "__pyalienlifegraphics2__/graphics/icons/brain-cartridge-01.png",
     icon_size = 64,
 	category = "vatbrain",
 	tier = 1,
@@ -9340,17 +9337,14 @@ ITEM {
       pollution = {bonus = 0.1},
       --speed = {bonus = -0.1}
     },
-	limitation = {},
+	limitation = {'electric-energy-interface'},
 	limitation_message_key = "vatbrain"
 }
 
 ITEM {
     type = "module",
     name = "vatbrain-2",
-    icons =
-    {
-        {icon = "__pyalienlifegraphics2__/graphics/icons/forest-tree.png"}
-    },
+    icon = "__pyalienlifegraphics2__/graphics/icons/brain-cartridge-02.png",
     icon_size = 64,
 	category = "vatbrain",
 	tier = 2,
@@ -9365,17 +9359,14 @@ ITEM {
       pollution = {bonus = 0.1},
       --speed = {bonus = -0.1}
     },
-	limitation = {},
+	limitation = {'electric-energy-interface'},
 	limitation_message_key = "vatbrain"
 }
 
 ITEM {
     type = "module",
     name = "vatbrain-3",
-    icons =
-    {
-        {icon = "__pyalienlifegraphics2__/graphics/icons/forest-tree.png"}
-    },
+    icon = "__pyalienlifegraphics2__/graphics/icons/brain-cartridge-03.png",
     icon_size = 64,
 	category = "vatbrain",
 	tier = 3,
@@ -9390,17 +9381,14 @@ ITEM {
       pollution = {bonus = 0.1},
       --speed = {bonus = -0.15}
     },
-	limitation = {},
+	limitation = {'electric-energy-interface'},
 	limitation_message_key = "vatbrain"
 }
 
 ITEM {
     type = "module",
     name = "vatbrain-4",
-    icons =
-    {
-        {icon = "__pyalienlifegraphics2__/graphics/icons/forest-tree.png"}
-    },
+    icon = "__pyalienlifegraphics2__/graphics/icons/brain-cartridge-04.png",
     icon_size = 64,
 	category = "vatbrain",
 	tier = 4,
@@ -9415,6 +9403,6 @@ ITEM {
       pollution = {bonus = 0.1},
       --speed = {bonus = -0.15}
     },
-	limitation = {},
+	limitation = {'electric-energy-interface'},
 	limitation_message_key = "vatbrain"
 }
