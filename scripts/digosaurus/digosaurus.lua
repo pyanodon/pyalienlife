@@ -53,7 +53,7 @@ end
 function Digosaurus.find_random_scanned_ore(dig_data)
     local scanned_ores = dig_data.scanned_ores
     local max_index = 0
-    for i, _ in pairs(scanned_ores) do max_index = math.max(max_index, i) end
+    for i in pairs(scanned_ores) do max_index = math.max(max_index, i) end
 
     while table_size(scanned_ores) ~= 0 do
         local rng = math.random(1, max_index)
@@ -97,7 +97,7 @@ function Digosaurus.start_mining_command(dig_data, i)
 end
 
 function Digosaurus.has_food(food_inventory_contents)
-    for food, _ in pairs(Digosaurus.favorite_foods) do
+    for food in pairs(Digosaurus.favorite_foods) do
         if food_inventory_contents[food] then return true end
     end
     return false
