@@ -2,9 +2,12 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 --ADAPTATIONS
 
-
 for _, drill in pairs(data.raw['mining-drill']) do
-	drill.allowed_effects = {"consumption", "speed", "productivity"}
+  if drill.module_specification then
+	  drill.allowed_effects = {"consumption", "speed", "productivity"}
+  else
+    drill.allowed_effects = {"consumption", "productivity"}
+  end
 end
 
 local recipes_list =
