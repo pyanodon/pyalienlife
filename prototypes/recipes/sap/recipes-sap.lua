@@ -24,11 +24,13 @@ for _, tree in pairs(data.raw.tree) do
             }
     end
 
-    if tree.minable.results[1].amount >= 1 then -- no sap from dead trees
-        table.insert(tree.minable.results, mine_results_1)
-    else
-        tree.minable.results[1].probability = tree.minable.results[1].amount
-        tree.minable.results[1].amount = 1
+    if tree.minable ~= nil then
+        if tree.minable.results[1].amount >= 1 then -- no sap from dead trees
+            table.insert(tree.minable.results, mine_results_1)
+        else
+            tree.minable.results[1].probability = tree.minable.results[1].amount
+            tree.minable.results[1].amount = 1
+        end
     end
 end
 --log(serpent.block(data.raw.tree['temperate-tree'].minable.results))
