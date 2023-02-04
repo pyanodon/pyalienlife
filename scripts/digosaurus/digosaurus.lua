@@ -13,9 +13,13 @@ end
 function Digosaurus.validity_check(dig_data)
     if not dig_data then return false end
 
-    for i = 1, #dig_data.digosaur_inventory do
-        local digosaur_data = dig_data.active_digosaurs[i]
-        if digosaur_data and not digosaur_data.entity.valid then dig_data.active_digosaurs[i] = nil end
+    -- An inventory object can be independently invalid, irregardless of the entity.valid state
+    -- This includes operations like indexing
+    if dig_data.digosaur_inventory.valid then
+        for i = 1, #dig_data.digosaur_inventory do
+            local digosaur_data = dig_data.active_digosaurs[i]
+            if digosaur_data and not digosaur_data.entity.valid then dig_data.active_digosaurs[i] = nil end
+        end
     end
 
 	if
@@ -100,7 +104,7 @@ function Digosaurus.has_food(food_inventory_contents)
 end
 
 function Digosaurus.eat(food_inventory, food_inventory_contents)
-    for food, _ in pairs(food_inventory_contents) do
+    for food in pairs(food_inventory_contents) do
         if Digosaurus.favorite_foods[food] then
             food_inventory.remove{name = food, count = 1}
             return food
@@ -199,7 +203,7 @@ Digosaurus.events.on_built = function(event)
     if entity.name ~= 'dino-dig-site' then return end
     entity.active = false
     local surface = entity.surface
-    local force = force
+    local force = entity.force
     local position = entity.position
 
     local food_input = surface.create_entity{name = 'dino-dig-site-food-input', force = force, position = position}
@@ -223,7 +227,9 @@ Digosaurus.events.on_destroyed = function(event)
     local entity = event.entity
 	if entity.name ~= 'dino-dig-site' then return end
 
+    -- Move to local to keep object handle, remove from global, return if invalid/nil
 	local dig_data = global.dig_sites[entity.unit_number]
+    if not dig_data then return end
 	global.dig_sites[entity.unit_number] = nil
 
     local buffer = event.buffer

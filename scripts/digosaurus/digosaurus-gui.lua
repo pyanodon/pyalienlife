@@ -69,6 +69,13 @@ Digosaurus.events.on_gui_opened = function(event)
 	local entity = event.entity
 	local dig_data = global.dig_sites[entity.unit_number]
 
+	-- Since we never really do a search for dig sites this can happen with a weird migration or players doing editor things
+	if not dig_data then
+		log('diggy diggy gui found no diggy diggy data')
+		Digosaurus.events.on_built(event)
+		return
+	end
+
 	local main_frame = player.gui.relative.add{
 		type = 'frame', name = 'digosaurus_gui', caption = {'entity-name.dino-dig-site'}, direction = 'vertical', tags = {unit_number = entity.unit_number},
 		anchor = {

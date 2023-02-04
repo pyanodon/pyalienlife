@@ -114,7 +114,7 @@ Oculua.events[221] = function()
 
 	for _, ipod_data in pairs(global.ipods) do
 		local ipod = ipod_data.entity
-		if ipod_data.active_oculua == 0 and ipod_data.inventory.is_empty() then
+		if ipod_data.active_oculua == 0 and (not ipod_data.inventory.valid or ipod_data.inventory.is_empty()) then
 			rendering.draw_sprite{
 				sprite = 'no_module_animal',
 				x_scale = 0.5,
