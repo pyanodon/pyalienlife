@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.10
-Date: ?
+Date: 2023-2-3
   Changes:
     - Fixed that phadai and xyhiphoe chains were net negative
     - Fixed crash with the crafting combinator mod
