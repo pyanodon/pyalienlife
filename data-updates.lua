@@ -260,8 +260,8 @@ for _,recipe in pairs(data.raw.recipe) do
 end
 
 --Tech upgrade stuff--
---require('prototypes/upgrades/hidden-beacon')
---require('prototypes/upgrades/tech-upgrades')
+require('prototypes/buildings/hidden-beacon')
+require('prototypes/upgrades/tech-upgrades')
 
 if data.data_crawler then
 	  data.script_enabled = {
@@ -454,10 +454,18 @@ for building, order in pairs(farm_building_order) do
     end
 end
 
+local walkable_types = {
+    ['tree'] = true,
+    ['simple-entity'] = true,
+    ['pipe'] = true,
+    ['pipe-to-ground'] = true,
+    ['electric-pole'] = true
+}
+
 for _, prototype in pairs(collision_mask_util.collect_prototypes_with_layer('object-layer')) do
-    if prototype.type ~= 'tree' and prototype.type ~= 'simple-entity' then
+    if not walkable_types[prototype.type] then
         prototype.collision_mask = collision_mask_util.get_mask(prototype)
-        if not collision_mask_util.mask_contains_layer(prototype.collision_mask, 'floor-layer') then
+        if not collision_mask_util.mask_contains_layer(prototype.collision_mask, 'floor-layer') and collision_mask_util.mask_contains_layer(prototype.collision_mask, 'player-layer') then
             collision_mask_util.add_layer(prototype.collision_mask, caravan_collision_mask)
         end
     end
