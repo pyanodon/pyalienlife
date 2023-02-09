@@ -45,4 +45,11 @@ Wiki.events.on_init = function()
         section = 'alienlife',
         text_only = true
     })
+
+    remote.call('pywiki', 'add_page', {
+        name = 'turd',
+        title = 'turd-title',
+        section = 'alienlife',
+        remote = {'create_turd_page', 'create_turd_page'}
+    })
 end

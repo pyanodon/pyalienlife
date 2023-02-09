@@ -31,6 +31,7 @@ require 'scripts/farming/farming'
 require 'scripts/slaughterhouse/slaughterhouse'
 require 'scripts/smart-farm/smart-farm'
 require 'scripts/worm/worm'
+require 'scripts/turd/turd'
 
 local function discoscience()
     if remote.interfaces['DiscoScience'] and remote.interfaces['DiscoScience']['setIngredientColor'] then
