@@ -27,7 +27,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/ethanol-boost.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
                 {consumption = 0.0, speed = 0.15, productivity = -0.12, type = 'module-effects'}
             },
         },
@@ -36,7 +36,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/piezoelectric-floor.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
                 {consumption = -0.1, speed = 0, productivity = -0.1, type = 'module-effects'}
             }
         },
@@ -45,7 +45,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/dubstep-track.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
                 {consumption = 0.25, speed = 0, productivity = 0.2, type = 'module-effects'}
             }
         }

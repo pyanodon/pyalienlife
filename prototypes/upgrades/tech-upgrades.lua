@@ -1,41 +1,44 @@
 local tech_upgrades = {
-    auog = require('prototypes/upgrades/auog'),
-    arqad = require('prototypes/upgrades/arqad'),
-    arthurian = require('prototypes/upgrades/arthurian'),
+    -- pyAL non-organics
     atomizer = require('prototypes/upgrades/atomizer'),
-    bhoddos = require('prototypes/upgrades/bhoddos'),
     bioprinting = require('prototypes/upgrades/bioprinting'),
     biofactory = require('prototypes/upgrades/biofactory'),
     bioreactor = require('prototypes/upgrades/bioreactor'),
     compost = require('prototypes/upgrades/compost'),
-    cottongut = require('prototypes/upgrades/cottongut'),
-    --creature = require('prototypes/upgrades/creature'),
-    cridren = require('prototypes/upgrades/cridren'),
+    creature = require('prototypes/upgrades/creature'),
     dataarray = require('prototypes/upgrades/data-array'),
+    genlab = require('prototypes/upgrades/genlab'),
+    incubator = require('prototypes/upgrades/incubator'),
+    micromine = require('prototypes/upgrades/micromine'),
+    research = require('prototypes/upgrades/research'),
+    slaughterhouse = require('prototypes/upgrades/slaughterhouse'),
+
+    -- pYAL organics
+    auog = require('prototypes/upgrades/auog'),
+    arqad = require('prototypes/upgrades/arqad'),
+    arthurian = require('prototypes/upgrades/arthurian'),
+    bhoddos = require('prototypes/upgrades/bhoddos'),
+    cottongut = require('prototypes/upgrades/cottongut'),
+    cridren = require('prototypes/upgrades/cridren'),
     dhilmos = require('prototypes/upgrades/dhilmos'),
     dingrits = require('prototypes/upgrades/dingrits'),
     korlex = require('prototypes/upgrades/korlex'),
     fawogae = require('prototypes/upgrades/fawogae'),
     fish = require('prototypes/upgrades/fish'),
     fwf = require('prototypes/upgrades/fwf'),
-    genlab = require('prototypes/upgrades/genlab'),
     grod = require('prototypes/upgrades/grod'),
-    incubator = require('prototypes/upgrades/incubator'),
     kmauts = require('prototypes/upgrades/kmauts'),
-    micromine = require('prototypes/upgrades/micromine'),
     moss = require('prototypes/upgrades/moss'),
     mukmoux = require('prototypes/upgrades/mukmoux'),
     navens = require('prototypes/upgrades/navens'),
     phadai = require('prototypes/upgrades/phadai'),
     phagnot = require('prototypes/upgrades/phagnot'),
     ralesia = require('prototypes/upgrades/ralesia'),
-    rennea = require('prototypes/upgrades/rennea'),--[[
-    research = require('prototypes/upgrades/research'),
+    rennea = require('prototypes/upgrades/rennea'),
     sap = require('prototypes/upgrades/sap'),
     seaweed = require('prototypes/upgrades/seaweed'),
     scrondrix = require('prototypes/upgrades/scrondrix'),
-    simik = require('prototypes/upgrades/simik'),
-    slaughterhouse = require('prototypes/upgrades/slaughterhouse'),
+    --simik = require('prototypes/upgrades/simik'),    better to use simik metal 1-6
     sponge = require('prototypes/upgrades/sponge'),
     trits = require('prototypes/upgrades/trits'),
     tuuphra = require('prototypes/upgrades/tuuphra'),
@@ -48,13 +51,13 @@ local tech_upgrades = {
     yotoi = require('prototypes/upgrades/yotoi'),
     zipir = require('prototypes/upgrades/zipir'),
 
-    ----pyht techs
+    -- pyHT organics
     antelope = require('prototypes/upgrades/antelope'),
     cadaveric = require('prototypes/upgrades/cadaveric'),
     kicalk = require('prototypes/upgrades/kicalk'),
-    moondrop = require('prototypes/upgrades/moondrop'),--]]
+    moondrop = require('prototypes/upgrades/moondrop'),
 
-    ----simik metals
+    -- simik metals
     simikmetalMK01 = require('prototypes/upgrades/simikmetalMK01'),
     simikmetalMK02 = require('prototypes/upgrades/simikmetalMK02'),
     simikmetalMK03 = require('prototypes/upgrades/simikmetalMK03'),

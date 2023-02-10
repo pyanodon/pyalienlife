@@ -3,8 +3,8 @@ local tech_upgrades =
     {
         master_tech = -- This is the tech that is displayed in the tech tree
             {
-                name = "simik-upgrade",
-                icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-simik.png",
+                name = "simik-upgrade", -- this is the tech name. duh
+                icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-simik.png", -- do i really need to spell it out for you
                 icon_size = 128,
                 order = "c-a",
                 prerequisites = {"simik-mk02"},
@@ -24,8 +24,8 @@ local tech_upgrades =
             {
             technology = -- no touchy
                 {
-                name = "unstable",
-                icon = "__pyalienlifegraphics3__/graphics/technology/unstable.png",
+                name = "unstable", -- this is the tech name. duh
+                icon = "__pyalienlifegraphics3__/graphics/technology/unstable.png", -- do i really need to spell it out for you
                 icon_size = 128,
                 order = "c-a",
                 },
