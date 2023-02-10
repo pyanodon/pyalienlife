@@ -3,7 +3,7 @@ local tech_upgrades =
     {
         master_tech =
             {
-            name = "cadaveric-upgrade", -- this is the tech name. duh
+            name = "cadaveric-upgrade",
             icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-cadaveric.png",
             icon_size = 128,
             order = "c-a",
@@ -26,7 +26,7 @@ local tech_upgrades =
                 {
                 technology = -- no touchy
                     {
-                    name = "acid-comtemplator", -- this is the tech name. duh
+                    name = "acid-comtemplator",
                     icon = "__pyalienlifegraphics3__/graphics/technology/acid-comtemplator.png",
                     icon_size = 128,
                     order = "c-a",

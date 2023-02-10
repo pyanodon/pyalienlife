@@ -3,8 +3,8 @@ local tech_upgrades =
     {
         master_tech = -- This is the tech that is displayed in the tech tree
             {
-                name = "tuuphra-upgrade", -- this is the tech name. duh
-                icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-tuuphra.png", -- do i really need to spell it out for you
+                name = "tuuphra-upgrade",
+                icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-tuuphra.png",
                 icon_size = 128,
                 order = "c-a",
                 prerequisites = {"tuuphra-mk02"},
@@ -24,8 +24,8 @@ local tech_upgrades =
             {
             technology = -- no touchy
                 {
-                name = "fi", -- this is the tech name. duh
-                icon = "__pyalienlifegraphics3__/graphics/technology/fi.png", -- do i really need to spell it out for you
+                name = "fi",
+                icon = "__pyalienlifegraphics3__/graphics/technology/fi.png",
                 icon_size = 128,
                 order = "c-a",
                 },

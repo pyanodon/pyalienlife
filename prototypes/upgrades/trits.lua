@@ -3,7 +3,7 @@ local tech_upgrades =
     {
         master_tech =
             {
-            name = "trits-upgrade", -- this is the tech name. duh
+            name = "trits-upgrade",
             icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-trits.png",
             icon_size = 128,
             order = "c-a",
@@ -25,7 +25,7 @@ local tech_upgrades =
                 {
                 technology = -- no touchy
                     {
-                    name = "mgo", -- this is the tech name. duh
+                    name = "mgo",
                     icon = "__pyalienlifegraphics3__/graphics/technology/mgo.png",
                     icon_size = 128,
                     order = "c-a",

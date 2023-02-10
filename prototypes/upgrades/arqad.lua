@@ -6,7 +6,7 @@ return {
         'arqad-hive-mk04',
     },
     master_tech = { -- tech that is shown in the tech tree
-        name = 'arqad-upgrade', -- this is the tech name. duh
+        name = 'arqad-upgrade',
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-arqad.png',
         icon_size = 128,
         order = 'c-a',

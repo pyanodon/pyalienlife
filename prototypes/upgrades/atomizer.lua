@@ -6,7 +6,7 @@ return {
         'atomizer-mk04',
     },
     master_tech = { -- tech that is shown in the tech tree
-        name = 'atomizer-upgrade', -- this is the tech name. duh
+        name = 'atomizer-upgrade',
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-atomizer.png',
         icon_size = 128,
         order = 'c-a',
@@ -24,7 +24,7 @@ return {
     },
     sub_techs = {
         {
-            name = 'sc-core', -- this is the tech name. duh
+            name = 'sc-core',
             icon = '__pyalienlifegraphics3__/graphics/technology/sc-core.png',
             icon_size = 128,
             order = 'c-a',

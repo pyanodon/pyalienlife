@@ -3,8 +3,8 @@ local tech_upgrades =
     {
         master_tech = -- This is the tech that is displayed in the tech tree
             {
-                name = "phadai-upgrade", -- this is the tech name. duh
-                icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-phadai.png", -- do i really need to spell it out for you
+                name = "phadai-upgrade",
+                icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-phadai.png",
                 icon_size = 128,
                 order = "c-a",
                 prerequisites = {"phadai-mk02"},
@@ -24,8 +24,8 @@ local tech_upgrades =
             {
             technology = -- no touchy
                 {
-                name = "ethanol-boost", -- this is the tech name. duh
-                icon = "__pyalienlifegraphics3__/graphics/technology/ethanol-boost.png", -- do i really need to spell it out for you
+                name = "ethanol-boost",
+                icon = "__pyalienlifegraphics3__/graphics/technology/ethanol-boost.png",
                 icon_size = 128,
                 order = "c-a",
                 },

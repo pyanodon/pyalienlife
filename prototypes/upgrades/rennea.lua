@@ -3,7 +3,7 @@ local tech_upgrades =
     {
         master_tech =
             {
-            name = "rennea-upgrade", -- this is the tech name. duh
+            name = "rennea-upgrade",
             icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-rennea.png",
             icon_size = 128,
             order = "c-a",
@@ -25,7 +25,7 @@ local tech_upgrades =
                 {
                 technology = -- no touchy
                     {
-                    name = "deadheading", -- this is the tech name. duh
+                    name = "deadheading",
                     icon = "__pyalienlifegraphics3__/graphics/technology/deadheading.png",
                     icon_size = 128,
                     order = "c-a",

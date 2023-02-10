@@ -3,7 +3,7 @@ local tech_upgrades =
     {
         master_tech =
             {
-            name = "kmauts-upgrade", -- this is the tech name. duh
+            name = "kmauts-upgrade",
             icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-kmauts.png",
             icon_size = 128,
             order = "c-a",
@@ -25,7 +25,7 @@ local tech_upgrades =
                 {
                 technology = -- no touchy
                     {
-                    name = "sex-ratio", -- this is the tech name. duh
+                    name = "sex-ratio",
                     icon = "__pyalienlifegraphics3__/graphics/technology/sex-ratio.png",
                     icon_size = 128,
                     order = "c-a",

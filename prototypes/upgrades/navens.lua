@@ -3,7 +3,7 @@ local tech_upgrades =
     {
         master_tech =
             {
-            name = "navens-upgrade", -- this is the tech name. duh
+            name = "navens-upgrade",
             icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-navens.png",
             icon_size = 128,
             order = "c-a",
@@ -25,7 +25,7 @@ local tech_upgrades =
                 {
                 technology = -- no touchy
                     {
-                    name = "cytotoxicity", -- this is the tech name. duh
+                    name = "cytotoxicity",
                     icon = "__pyalienlifegraphics3__/graphics/technology/cytotoxicity.png",
                     icon_size = 128,
                     order = "c-a",

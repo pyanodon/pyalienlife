@@ -3,8 +3,8 @@ local tech_upgrades =
     {
         master_tech = -- This is the tech that is displayed in the tech tree
             {
-                name = "phagnot-upgrade", -- this is the tech name. duh
-                icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-phagnot.png", -- do i really need to spell it out for you
+                name = "phagnot-upgrade",
+                icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-phagnot.png",
                 icon_size = 128,
                 order = "c-a",
                 prerequisites = {"phagnot-mk02"},
@@ -24,8 +24,8 @@ local tech_upgrades =
             {
             technology = -- no touchy
                 {
-                name = "leader", -- this is the tech name. duh
-                icon = "__pyalienlifegraphics3__/graphics/technology/leader.png", -- do i really need to spell it out for you
+                name = "leader",
+                icon = "__pyalienlifegraphics3__/graphics/technology/leader.png",
                 icon_size = 128,
                 order = "c-a",
                 },

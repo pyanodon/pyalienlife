@@ -3,7 +3,7 @@ local tech_upgrades =
     {
         master_tech =
             {
-            name = "seaweed-upgrade", -- this is the tech name. duh
+            name = "seaweed-upgrade",
             icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-seaweed.png",
             icon_size = 128,
             order = "c-a",
@@ -24,7 +24,7 @@ local tech_upgrades =
                 {
                 technology = -- no touchy
                     {
-                    name = "improved-pathfinding", -- this is the tech name. duh
+                    name = "improved-pathfinding",
                     icon = "__pyalienlifegraphics3__/graphics/technology/improved-pathfinding.png",
                     icon_size = 128,
                     order = "c-a",

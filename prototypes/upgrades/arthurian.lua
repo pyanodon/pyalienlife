@@ -6,7 +6,7 @@ return {
         'arthurian-pen-mk04',
     },
     master_tech = { -- tech that is shown in the tech tree
-        name = 'arthurian-upgrade', -- this is the tech name. duh
+        name = 'arthurian-upgrade',
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-arthurian.png',
         icon_size = 128,
         order = 'c-a',
@@ -24,7 +24,7 @@ return {
     },
     sub_techs = {
         {
-            name = 'abacus', -- this is the tech name. duh
+            name = 'abacus',
             icon = '__pyalienlifegraphics3__/graphics/technology/abacus.png',
             icon_size = 128,
             order = 'c-a',

@@ -3,8 +3,8 @@ local tech_upgrades =
     {
         master_tech = -- This is the tech that is displayed in the tech tree
             {
-                name = "zungror-upgrade", -- this is the tech name. duh
-                icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-zungror.png", -- do i really need to spell it out for you
+                name = "zungror-upgrade",
+                icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-zungror.png",
                 icon_size = 128,
                 order = "c-a",
                 prerequisites = {"zungror-mk02"},
@@ -25,8 +25,8 @@ local tech_upgrades =
             {
             technology = -- no touchy
                 {
-                name = "geooxidation", -- this is the tech name. duh
-                icon = "__pyalienlifegraphics3__/graphics/technology/geooxidation.png", -- do i really need to spell it out for you
+                name = "geooxidation",
+                icon = "__pyalienlifegraphics3__/graphics/technology/geooxidation.png",
                 icon_size = 128,
                 order = "c-a",
                 },

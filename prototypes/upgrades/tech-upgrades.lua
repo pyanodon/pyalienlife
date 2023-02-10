@@ -3,13 +3,13 @@ local tech_upgrades = {
     arqad = require('prototypes/upgrades/arqad'),
     arthurian = require('prototypes/upgrades/arthurian'),
     atomizer = require('prototypes/upgrades/atomizer'),
-    bhoddos = require('prototypes/upgrades/bhoddos'),--[[
+    bhoddos = require('prototypes/upgrades/bhoddos'),
     bioprinting = require('prototypes/upgrades/bioprinting'),
     biofactory = require('prototypes/upgrades/biofactory'),
     bioreactor = require('prototypes/upgrades/bioreactor'),
     compost = require('prototypes/upgrades/compost'),
     cottongut = require('prototypes/upgrades/cottongut'),
-    creature = require('prototypes/upgrades/creature'),
+    --creature = require('prototypes/upgrades/creature'),
     cridren = require('prototypes/upgrades/cridren'),
     dataarray = require('prototypes/upgrades/data-array'),
     dhilmos = require('prototypes/upgrades/dhilmos'),
@@ -19,7 +19,7 @@ local tech_upgrades = {
     fish = require('prototypes/upgrades/fish'),
     fwf = require('prototypes/upgrades/fwf'),
     genlab = require('prototypes/upgrades/genlab'),
-    grod = require('prototypes/upgrades/grod'),
+    grod = require('prototypes/upgrades/grod'),--[[
     incubator = require('prototypes/upgrades/incubator'),
     kmauts = require('prototypes/upgrades/kmauts'),
     micromine = require('prototypes/upgrades/micromine'),
@@ -52,7 +52,7 @@ local tech_upgrades = {
     antelope = require('prototypes/upgrades/antelope'),
     cadaveric = require('prototypes/upgrades/cadaveric'),
     kicalk = require('prototypes/upgrades/kicalk'),
-    moondrop = require('prototypes/upgrades/moondrop'),
+    moondrop = require('prototypes/upgrades/moondrop'),--]]
 
     ----simik metals
     simikmetalMK01 = require('prototypes/upgrades/simikmetalMK01'),
@@ -60,7 +60,7 @@ local tech_upgrades = {
     simikmetalMK03 = require('prototypes/upgrades/simikmetalMK03'),
     simikmetalMK04 = require('prototypes/upgrades/simikmetalMK04'),
     simikmetalMK05 = require('prototypes/upgrades/simikmetalMK05'),
-    simikmetalMK06 = require('prototypes/upgrades/simikmetalMK06'),--]]
+    simikmetalMK06 = require('prototypes/upgrades/simikmetalMK06'),
 }
 
 if data then

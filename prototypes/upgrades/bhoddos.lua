@@ -6,7 +6,7 @@ return {
         'bhoddos-culture-mk04',
     },
     master_tech = { -- tech that is shown in the tech tree
-        name = 'bhoddos-upgrade', -- this is the tech name. duh
+        name = 'bhoddos-upgrade',
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-bhoddos.png',
         icon_size = 128,
         order = 'c-a',
@@ -24,7 +24,7 @@ return {
     },
     sub_techs = {
         {
-            name = 'extra-drones', -- this is the tech name. duh
+            name = 'extra-drones',
             icon = '__pyalienlifegraphics3__/graphics/technology/extra-drones.png',
             icon_size = 128,
             order = 'c-a',

@@ -3,7 +3,7 @@ local tech_upgrades =
     {
         master_tech =
             {
-            name = "micromine-upgrade", -- this is the tech name. duh
+            name = "micromine-upgrade",
             icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-micromine.png",
             icon_size = 128,
             order = "c-a",
@@ -25,7 +25,7 @@ local tech_upgrades =
                 {
                 technology = -- no touchy
                     {
-                    name = "adv", -- this is the tech name. duh
+                    name = "adv",
                     icon = "__pyalienlifegraphics3__/graphics/technology/adv.png",
                     icon_size = 128,
                     order = "c-a",

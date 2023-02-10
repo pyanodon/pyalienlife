@@ -3,7 +3,7 @@ local tech_upgrades =
     {
         master_tech =
             {
-            name = "zipir-upgrade", -- this is the tech name. duh
+            name = "zipir-upgrade",
             icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-zipir.png",
             icon_size = 128,
             order = "c-a",
@@ -25,7 +25,7 @@ local tech_upgrades =
                 {
                 technology = -- no touchy
                     {
-                    name = "suicide", -- this is the tech name. duh
+                    name = "suicide",
                     icon = "__pyalienlifegraphics3__/graphics/technology/suicide.png",
                     icon_size = 128,
                     order = "c-a",

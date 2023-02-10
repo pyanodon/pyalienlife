@@ -7,8 +7,8 @@ local tech_upgrades =
             {
             technology = -- no touchy
                 {
-                name = "parthenogenesis", -- this is the tech name. duh
-                icon = "__pyalienlifegraphics3__/graphics/technology/parthenogenesis.png", -- do i really need to spell it out for you
+                name = "parthenogenesis",
+                icon = "__pyalienlifegraphics3__/graphics/technology/parthenogenesis.png",
                 icon_size = 128,
                 order = "c-a",
                 prerequisites = {"vrauks-mk02"},

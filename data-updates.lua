@@ -32,11 +32,12 @@ end
 
 TECHNOLOGY('ralesia'):add_pack('py-science-pack-1')
 
---ADAPTATIONS
+----------------------------------------------------------------------------------------------------
+-- crafting_categories
+----------------------------------------------------------------------------------------------------
 
 data.raw.item.fawogae = nil
 
--- table.insert(data.raw.character.character.mining_categories, 'ore-bioreserve')
 for _, player in DATA:pairs('character') do
     player.crafting_categories = player.String_Array(player.crafting_categories or {}) + 'wpu-handcrafting' + 'research-handcrafting'
 end
@@ -44,6 +45,17 @@ end
 for _, controller in DATA:pairs('god-controller') do
     controller.crafting_categories = controller.String_Array(controller.crafting_categories or {}) + 'wpu-handcrafting' + 'research-handcrafting'
 end
+
+----------------------------------------------------------------------------------------------------
+-- TURD
+----------------------------------------------------------------------------------------------------
+
+require('prototypes/buildings/hidden-beacon')
+require('prototypes/upgrades/tech-upgrades')
+
+----------------------------------------------------------------------------------------------------
+-- replace_ingredient
+----------------------------------------------------------------------------------------------------
 
 for _, recipe in pairs(data.raw.recipe) do
     local r = RECIPE(recipe)
@@ -55,13 +67,10 @@ for _, recipe in pairs(data.raw.recipe) do
     r:replace_ingredient('xyhiphoe-blood', 'arthropod-blood')
 end
 
---local sap1_limits = data.raw.module['sap-tree'].limitation_blacklist
---local sap2_limits = data.raw.module['sap-tree-mk02'].limitation_blacklist
---local sap3_limits = data.raw.module['sap-tree-mk03'].limitation_blacklist
---local sap4_limits = data.raw.module['sap-tree-mk04'].limitation_blacklist
 ----------------------------------------------------------------------------------------------------
 -- MODULE LIMITATION SETUP
 ----------------------------------------------------------------------------------------------------
+
 local function get_allowed_module_categories(recipe)
     local allowed_module_categories = recipe.allowed_module_categories
     if not allowed_module_categories then
@@ -259,10 +268,6 @@ for _,recipe in pairs(data.raw.recipe) do
     end
 end
 
---Tech upgrade stuff--
-require('prototypes/buildings/hidden-beacon')
-require('prototypes/upgrades/tech-upgrades')
-
 if data.data_crawler then
 	  data.script_enabled = {
 		{type = 'entity', name = 'tar-patch'},
@@ -356,9 +361,7 @@ for _, category in pairs(searchtypes) do
                     and not ITEM(raw_cat[prototype.next_upgrade].minable.result):has_flag('hidden')
                     and data.raw.item[raw_cat[prototype.next_upgrade].minable.result].place_result == prototype.next_upgrade
                 then
-                    --log(name .. ' -> ' .. prototype.next_upgrade)
                     if serpent.block(prototype.collision_box) ~= serpent.block(raw_cat[prototype.next_upgrade].collision_box) then
-                        --log('Cancelled upgrade: ' .. name .. ' -> ' .. prototype.next_upgrade)
                         prototype.next_upgrade = nil
                     else
                         local next_proto = raw_cat[prototype.next_upgrade]
@@ -372,29 +375,18 @@ for _, category in pairs(searchtypes) do
                 end
             end
         end
-    else
-        --log('Category ' .. category .. ' is empty!')
     end
 end
 
 RECIPE('tar-quenching'):remove_unlock('separation'):add_unlock('tar-processing')
-
 RECIPE('concrete'):remove_unlock('separation'):add_unlock('concrete')
-
 RECIPE('hazard-concrete'):remove_unlock('separation'):add_unlock('concrete')
-
 RECIPE('quenching-tower'):remove_unlock('machines-mk01'):remove_unlock('separation'):add_unlock('tar-processing'):remove_ingredient('electronic-circuit')
-
 RECIPE('lime'):remove_unlock('separation'):add_unlock('concrete')
-
 RECIPE('extract-sulfur'):remove_unlock('fluid-processing-machines-1'):add_unlock('tar-processing')
-
 RECIPE('evaporator'):remove_unlock('fluid-processing-machines-1'):add_unlock('tar-processing')
-
 RECIPE('tailings-dust'):remove_unlock('fluid-processing-machines-1'):add_unlock('tar-processing')
-
 RECIPE('sand-brick'):remove_unlock('concrete'):add_unlock('tar-processing')
-
 RECIPE('ball-mill-mk01'):remove_unlock('crusher'):add_unlock('crusher-2')
 
 local farm_building_order = {

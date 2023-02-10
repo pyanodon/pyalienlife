@@ -3,7 +3,7 @@ local tech_upgrades =
     {
         master_tech =
             {
-            name = "incubator-upgrade", -- this is the tech name. duh
+            name = "incubator-upgrade",
             icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-incubator.png",
             icon_size = 128,
             order = "c-a",
@@ -25,7 +25,7 @@ local tech_upgrades =
                 {
                 technology = -- no touchy
                     {
-                    name = "gs", -- this is the tech name. duh
+                    name = "gs",
                     icon = "__pyalienlifegraphics3__/graphics/technology/gs.png",
                     icon_size = 128,
                     order = "c-a",

@@ -3,7 +3,7 @@ local tech_upgrades =
     {
         master_tech =
             {
-            name = "creature-upgrade", -- this is the tech name. duh
+            name = "creature-upgrade",
             icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-creature.png",
             icon_size = 128,
             order = "c-a",
@@ -25,7 +25,7 @@ local tech_upgrades =
                 {
                 technology = -- no touchy
                     {
-                    name = "respiratory", -- this is the tech name. duh
+                    name = "respiratory",
                     icon = "__pyalienlifegraphics3__/graphics/technology/respiratory.png",
                     icon_size = 128,
                     order = "c-a",

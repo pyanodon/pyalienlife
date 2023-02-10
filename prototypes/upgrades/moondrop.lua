@@ -3,8 +3,8 @@ local tech_upgrades =
     {
         master_tech = -- This is the tech that is displayed in the tech tree
             {
-                name = "moondrop-upgrade", -- this is the tech name. duh
-                icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-moondrop.png", -- do i really need to spell it out for you
+                name = "moondrop-upgrade",
+                icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-moondrop.png",
                 icon_size = 128,
                 order = "c-a",
                 prerequisites = {"moondrop-mk02"},
@@ -25,8 +25,8 @@ local tech_upgrades =
             {
             technology = -- no touchy
                 {
-                name = "cu", -- this is the tech name. duh
-                icon = "__pyalienlifegraphics3__/graphics/technology/cu.png", -- do i really need to spell it out for you
+                name = "cu",
+                icon = "__pyalienlifegraphics3__/graphics/technology/cu.png",
                 icon_size = 128,
                 order = "c-a",
                 },

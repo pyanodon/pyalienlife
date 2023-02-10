@@ -3,7 +3,7 @@ local tech_upgrades =
     {
         master_tech =
             {
-            name = "kicalk-upgrade", -- this is the tech name. duh
+            name = "kicalk-upgrade",
             icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-kicalk.png",
             icon_size = 128,
             order = "c-a",
@@ -26,7 +26,7 @@ local tech_upgrades =
                 {
                 technology = -- no touchy
                     {
-                    name = "wire-netting", -- this is the tech name. duh
+                    name = "wire-netting",
                     icon = "__pyalienlifegraphics3__/graphics/technology/wire-netting.png",
                     icon_size = 128,
                     order = "c-a",

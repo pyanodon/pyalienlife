@@ -15,8 +15,8 @@ RECIPE {
         {type = 'item', name = 'unslimed-iron', amount = 5},
         {type = 'item', name = 'empty-barrel', amount = 6},
     },
-    main_product = "unslimed-iron",
-}:add_unlock("simik-iron")
+    main_product = 'unslimed-iron',
+}
 
 ----copper----
 
@@ -28,16 +28,14 @@ RECIPE {
     energy_required = 60,
     ingredients = {
         {type = 'item', name = 'olefin-barrel', amount = 2},
-       -- {type = 'item', name = 'empty-barrel', amount = 1},
         {type = 'item', name = 'copper-ore', amount = 15},
         {type = 'item', name = 'bio-sample', amount = 1},
     },
     results = {
         {type = 'item', name = 'copper-solution-barrel', amount = 2},
-       -- {type = 'item', name = 'empty-barrel', amount = 2},
     },
-    main_product = "copper-solution-barrel",
-}:add_unlock("simik-copper")
+    main_product = 'copper-solution-barrel',
+}
 
 ----quartz----
 
@@ -49,16 +47,15 @@ RECIPE {
     energy_required = 60,
     ingredients = {
         {type = 'item', name = 'olefin-barrel', amount = 2},
-        {type = 'item', name = 'empty-barrel', amount = 1},
         {type = 'item', name = 'ore-quartz', amount = 30},
         {type = 'item', name = 'bio-sample', amount = 1},
     },
     results = {
         {type = 'item', name = 'quartz-pulp-02-barrel', amount = 1},
-        {type = 'item', name = 'empty-barrel', amount = 2},
+        {type = 'item', name = 'empty-barrel', amount = 1},
     },
-    main_product = "quartz-pulp-02-barrel",
-}:add_unlock("simik-quartz")
+    main_product = 'quartz-pulp-02-barrel',
+}
 
 ----coal----
 
@@ -70,16 +67,15 @@ RECIPE {
     energy_required = 60,
     ingredients = {
         {type = 'item', name = 'olefin-barrel', amount = 2},
-        {type = 'item', name = 'empty-barrel', amount = 1},
         {type = 'item', name = 'raw-coal', amount = 10},
         {type = 'item', name = 'bio-sample', amount = 1},
     },
     results = {
         {type = 'item', name = 'coal-pulp-03-barrel', amount = 1},    --30 coal
-        {type = 'item', name = 'empty-barrel', amount = 2},
+        {type = 'item', name = 'empty-barrel', amount = 1},
     },
-    main_product = "coal-pulp-03-barrel",
-}:add_unlock("simik-coal")
+    main_product = 'coal-pulp-03-barrel',
+}
 
 ----tin----
 
@@ -98,8 +94,8 @@ RECIPE {
         {type = 'item', name = 'tin-concentrate', amount = 1},
         {type = 'item', name = 'empty-barrel', amount = 2},
     },
-    main_product = "tin-concentrate",
-}:add_unlock("simik-tin")
+    main_product = 'tin-concentrate',
+}
 
 ----aluminium----
 
@@ -118,8 +114,8 @@ RECIPE {
         {type = 'item', name = 'crystalized-sodium-aluminate', amount = 1},
         {type = 'item', name = 'empty-barrel', amount = 6},
     },
-    main_product = "crystalized-sodium-aluminate",
-}:add_unlock("simik-aluminium")
+    main_product = 'crystalized-sodium-aluminate',
+}
 
 ----boron----
 
@@ -138,8 +134,8 @@ RECIPE {
         {type = 'item', name = 'boron-trioxide', amount = 7},
         {type = 'item', name = 'empty-barrel', amount = 6},
     },
-    main_product = "boron-trioxide",
-}:add_unlock("simik-boron")
+    main_product = 'boron-trioxide',
+}
 
 ----chromium----
 
@@ -158,8 +154,8 @@ RECIPE {
         {type = 'item', name = 'chromite-sand', amount = 20},
         {type = 'item', name = 'empty-barrel', amount = 2},
     },
-    main_product = "chromite-sand",
-}:add_unlock("simik-chromium")
+    main_product = 'chromite-sand',
+}
 
 ----molybdenum----
 
@@ -178,8 +174,8 @@ RECIPE {
         {type = 'item', name = 'molybdenum-sulfide', amount = 3},
         {type = 'item', name = 'empty-barrel', amount = 2},
     },
-    main_product = "molybdenum-sulfide",
-}:add_unlock("simik-molybdenum")
+    main_product = 'molybdenum-sulfide',
+}
 
 ----zinc----
 
@@ -198,8 +194,8 @@ RECIPE {
         {type = 'item', name = 'concentrated-zinc', amount = 2},
         {type = 'item', name = 'empty-barrel', amount = 2},
     },
-    main_product = "concentrated-zinc",
-}:add_unlock("simik-zinc")
+    main_product = 'concentrated-zinc',
+}
 
 ----nickel----
 
@@ -211,16 +207,14 @@ RECIPE {
     energy_required = 60,
     ingredients = {
         {type = 'item', name = 'olefin-barrel', amount = 2},
-       -- {type = 'item', name = 'empty-barrel', amount = 1},
         {type = 'item', name = 'ore-nickel', amount = 25},   --20 can also do but we use some expensive stuff in this chain
         {type = 'item', name = 'bio-sample', amount = 1},
     },
     results = {
         {type = 'item', name = 'nickel-pulp-03-barrel', amount = 2},
-       -- {type = 'item', name = 'empty-barrel', amount = 2},
     },
-    main_product = "nickel-pulp-03-barrel",
-}:add_unlock("simik-nickel")
+    main_product = 'nickel-pulp-03-barrel',
+}
 
 ----lead----
 
@@ -232,16 +226,14 @@ RECIPE {
     energy_required = 60,
     ingredients = {
         {type = 'item', name = 'olefin-barrel', amount = 2},
-        {type = 'item', name = 'empty-barrel', amount = 2},
         {type = 'item', name = 'ore-lead', amount = 10},
         {type = 'item', name = 'bio-sample', amount = 1},
     },
     results = {
         {type = 'item', name = 'molten-lead-barrel', amount = 2},
-        {type = 'item', name = 'empty-barrel', amount = 2},
     },
-    main_product = "molten-lead-barrel",
-}:add_unlock("simik-lead")
+    main_product = 'molten-lead-barrel',
+}
 
 ----titanium----
 
@@ -260,8 +252,8 @@ RECIPE {
         {type = 'item', name = 'high-grade-ti', amount = 2},
         {type = 'item', name = 'empty-barrel', amount = 2},
     },
-    main_product = "high-grade-ti",
-}:add_unlock("simik-titanium")
+    main_product = 'high-grade-ti',
+}
 
 ----niobium----
 
@@ -273,16 +265,15 @@ RECIPE {
     energy_required = 60,
     ingredients = {
         {type = 'item', name = 'olefin-barrel', amount = 2},
-        {type = 'item', name = 'empty-barrel', amount = 1},
         {type = 'item', name = 'niobium-ore', amount = 15},
         {type = 'item', name = 'bio-sample', amount = 1},
     },
     results = {
         {type = 'item', name = 'niobium-complex-barrel', amount = 1},
-        {type = 'item', name = 'empty-barrel', amount = 2},
+        {type = 'item', name = 'empty-barrel', amount = 1},
     },
-    main_product = "niobium-complex-barrel",
-}:add_unlock("simik-niobium")
+    main_product = 'niobium-complex-barrel',
+}
 
 ----nexelit----
 
@@ -294,16 +285,14 @@ RECIPE {
     energy_required = 60,
     ingredients = {
         {type = 'item', name = 'olefin-barrel', amount = 2},
-      --  {type = 'item', name = 'empty-barrel', amount = 1},
         {type = 'item', name = 'nexelit-ore', amount = 13},
         {type = 'item', name = 'bio-sample', amount = 1},
     },
     results = {
         {type = 'item', name = 'molten-nexelit-barrel', amount = 2},
-        --{type = 'item', name = 'empty-barrel', amount = 2},
     },
-    main_product = "molten-nexelit-barrel",
-}:add_unlock("simik-nexelit")
+    main_product = 'molten-nexelit-barrel',
+}
 
 ----silver----
 
@@ -322,8 +311,8 @@ RECIPE {
         {type = 'item', name = 'high-grade-silver', amount = 1},
         {type = 'item', name = 'empty-barrel', amount = 8},
     },
-    main_product = "high-grade-silver",
-}:add_unlock("simik-silver")
+    main_product = 'high-grade-silver',
+}
 
 ----gold----
 
@@ -342,8 +331,8 @@ RECIPE {
         {type = 'item', name = 'gold-concentrate', amount = 2},
         {type = 'item', name = 'empty-barrel', amount = 2},
     },
-    main_product = "gold-concentrate",
-}:add_unlock("simik-gold")
+    main_product = 'gold-concentrate',
+}
 
 ----uranium----
 
@@ -362,5 +351,5 @@ RECIPE {
         {type = 'item', name = '70-u-powder', amount = 11},
         {type = 'item', name = 'empty-barrel', amount = 8},
     },
-    main_product = "70-u-powder",
-}:add_unlock("simik-uranium")
+    main_product = '70-u-powder',
+}
