@@ -2666,12 +2666,11 @@ RECIPE {
     results = {
         {type = 'item', name = 'abacus', amount = 2},
     },
-    --main_product = "chloral",
-}:add_unlock("abacus")--not a real tech
+}--not a real tech
 
 RECIPE {
     type = 'recipe',
-    name = 'chlorinated water',
+    name = 'chlorinated-water',
     category = 'chemistry',
     enabled = false,
     energy_required = 3,
@@ -2682,8 +2681,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'chlorinated-water', amount = 1},
     },
-    --main_product = "chloral",
-}:add_unlock("moss")--not a real tech
+}
 
 RECIPE {
     type = 'recipe',
