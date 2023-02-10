@@ -76,6 +76,7 @@ local function create_turd_page(gui, player)
 
 			local info_flow = content_frame.add{type = 'flow', direction = 'horizontal', name = 'info_flow'}
 			local effects_flow = info_flow.add{type = 'flow', direction = 'horizontal'}
+			effects_flow.style.vertical_align = 'center'
 			for _, effect in pairs(sub_tech.effects) do
 				if effect.type == 'module-effects' then
 					local sprite = effects_flow.add{type = 'choose-elem-button', elem_type = 'item', style = 'transparent_slot'}
@@ -85,6 +86,16 @@ local function create_turd_page(gui, player)
 					local sprite = effects_flow.add{type = 'choose-elem-button', elem_type = 'recipe', style = 'transparent_slot'}
 					sprite.elem_value = effect.recipe
 					sprite.locked = true
+				elseif effect.type == 'recipe-replacement' then
+					local old = effects_flow.add{type = 'choose-elem-button', elem_type = 'recipe', style = 'transparent_slot'}
+					old.elem_value = effect.old
+					old.locked = true
+
+					effects_flow.add{type = 'label', caption = '[font=default-semibold]➜[/font]', ignored_by_interaction = true}.style.margin = {0, -10, 0, -10}
+
+					local new = effects_flow.add{type = 'choose-elem-button', elem_type = 'recipe', style = 'transparent_slot'}
+					new.elem_value = effect.new
+					new.locked = true
 				end
 			end
 
@@ -157,3 +168,36 @@ remote.add_interface('pywiki_turd_page', {
 	create_turd_page = create_turd_page,
 	on_search = on_search
 })
+
+local function reapply_turd_bonuses(force)
+
+end
+
+Turd.events.on_init = function()
+	global.turd_bonuses = global.turd_bonuses or {}
+	global.turd_beaconed_machines = global.turd_beaconed_machines or {}
+	for _, force in pairs(game.forces) do reapply_turd_bonuses(force) end
+end
+
+local function on_researched(event, type)
+	local technology = event.research
+	local force = technology.force
+	reapply_turd_bonuses(force)
+end
+
+Turd.events.on_research_finished = function(event) on_researched(event, 'finished') end
+Turd.events.on_research_reversed = function(event) on_researched(event, 'reversed') end
+
+Turd.events.on_built = function(event)
+    local entity = event.created_entity or event.entity
+	if not entity.valid or not entity.unit_number then return end
+end
+
+Turd.events.on_destroyed = function(event)
+    local entity = event.entity
+	if not entity.valid or not entity.unit_number then return end
+	local beacon = global.turd_beaconed_machines[entity.unit_number]
+	global.turd_beaconed_machines[entity.unit_number] = nil
+	if not beacon or not beacon.valid then return end
+	beacon.destory()
+end

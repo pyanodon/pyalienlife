@@ -72,22 +72,21 @@ script.on_configuration_changed(init)
 
 local on_built = {defines.events.on_built_entity, defines.events.on_robot_built_entity, defines.events.script_raised_revive, defines.events.script_raised_built}
 script.on_event(on_built, function(event)
-    
     Oculua.events.on_built(event)
     Caravan.events.on_built(event)
     Digosaurus.events.on_built(event)
     Farming.events.on_built(event)
     Smart_Farm.events.on_built(event)
     Worm.events.on_built(event)
+    Turd.events.on_built(event)
+
     local E = event.created_entity or event.entity
     if E.name == 'vat-brain' then
-        --log('hit')
         local beacon = game.surfaces['nauvis'].create_entity{
             name = 'hidden-beacon',
             position = E.position,
             force = E.force,
         }
-        --log(beacon.position)
         --local mk_num = global.vatbrains.unlocked_lvl
         --local module_slot = beacon.get_inventory(defines.inventory.beacon_modules)
         --local module = module_slot.insert({name = 'vatbrain-' .. mk_num, count = 1})
@@ -95,7 +94,6 @@ script.on_event(on_built, function(event)
             global.vatbrains.brains = {}
         end
         global.vatbrains.brains[beacon.unit_number] = {beacon = beacon, current_lvl = mk_num, vatbrain = E}
-        --log(serpent.block(global.vatbrains))
     end
 end)
 
@@ -107,12 +105,12 @@ end)
 
 local function vatbrain_broken(event)
     local E = event.entity
-    if E.name == "vat-brain" then
-        local beacon = game.surfaces[E.surface.name].find_entities_filtered{position=E.position, radius = 3, type = "beacon", limit = 1}
-        if next(beacon) ~= nil then
-            global.vatbrains.brains[beacon[1].unit_number] = nil
-            beacon[1].destroy()
-        end
+    if E.name ~= 'vat-brain' then return end
+
+    local beacon = E.surface.find_entities_filtered{position = E.position, radius = 3, type = 'beacon', limit = 1}[1]
+    if beacon then
+        global.vatbrains.brains[beacon.unit_number] = nil
+        beacon.destroy()
     end
 end
 
@@ -121,6 +119,7 @@ script.on_event(on_destroyed, function(event)
     Caravan.events.on_destroyed(event)
     Digosaurus.events.on_destroyed(event)
     Oculua.events.on_destroyed(event)
+    Turd.events.on_destroyed(event)
     vatbrain_broken(event)
 end)
 
@@ -167,16 +166,15 @@ script.on_nth_tick(4, function()
 end)
 
 script.on_nth_tick(10, function(event)
-    if global.vatbrains.brains ~= nil and next(global.vatbrains.brains) ~= nil then
-        --log(serpent.block(global.vatbrains))
-        for b, beacon in pairs(global.vatbrains.brains) do
-            if beacon.vatbrain ~= nil then
-                if beacon.vatbrain.get_recipe() ~= nil then
-                    if string.match(beacon.vatbrain.get_recipe().name, "brain%-food") ~= nil then
+    if global.vatbrains.brains and next(global.vatbrains.brains) then
+        for _, beacon in pairs(global.vatbrains.brains) do
+            if beacon.vatbrain then
+                if beacon.vatbrain.get_recipe() then
+                    if string.match(beacon.vatbrain.get_recipe().name, 'brain%-food') then
                         if beacon.current_lvl ~= beacon.vatbrain.get_recipe().name:match('%d$') then
                             local module_slot = beacon.beacon.get_inventory(defines.inventory.beacon_modules)
                             module_slot.clear()
-                            module_slot.insert({name = 'vatbrain-' .. beacon.vatbrain.get_recipe().name:match('%d$'), count = 1})
+                            module_slot.insert{name = 'vatbrain-' .. beacon.vatbrain.get_recipe().name:match('%d$'), count = 1}
                             beacon.current_lvl = beacon.vatbrain.get_recipe().name:match('%d$')
                         end
                         if beacon.vatbrain.status == defines.entity_status.working then
@@ -188,11 +186,14 @@ script.on_nth_tick(10, function(event)
                 beacon.beacon.active = false
             end
             ::bottom::
-        end 
-    end                    
+        end
+    end
 end)
 
 script.on_event('open-gui', function(event)
     Caravan.events.on_open_gui(event)
     Caravan.events.used_capsule(event)
 end)
+
+script.on_event(defines.events.on_research_finished, function(event) Turd.events.on_research_finished(event) end)
+script.on_event(defines.events.on_research_reversed, function(event) Turd.events.on_research_reversed(event) end)

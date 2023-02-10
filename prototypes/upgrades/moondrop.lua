@@ -1,3 +1,35 @@
+local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
+
+if data then
+    for _, recipe in pairs({
+        table.deepcopy(data.raw.recipe['moondrop-1']),
+        table.deepcopy(data.raw.recipe['moondrop-2']),
+        table.deepcopy(data.raw.recipe['moondrop-3']),
+        table.deepcopy(data.raw.recipe['moondrop-4']),
+        table.deepcopy(data.raw.recipe['moondrop-5']),
+    }) do
+        recipe.name = recipe.name .. '-cu'
+        FUN.add_ingredient(recipe, {name = 'copper-ore', amount = 20, type = 'item'})
+        FUN.multiply_result_amount(recipe, 'moondrop', 1.1)
+        data:extend{recipe}
+    end
+
+    data:extend{{
+        name = 'moondrop-co2',
+        results = {{type = 'fluid', amount = 120, name = 'carbon-dioxide'}},
+        energy_required = 5,
+        ingredients = {},
+        category = 'moon',
+        enabled = false,
+        type = 'recipe'
+    }}
+
+    local machine_recipe = table.deepcopy(data.raw.recipe['moondrop-greenhouse-mk01'])
+    machine_recipe.name = machine_recipe.name .. '-with-lamp'
+    FUN.add_ingredient(machine_recipe, {name = 'small-lamp', amount = 10, type = 'item'})
+    data:extend{machine_recipe}
+end
+
 return {
     affected_entities = { -- the entities that should be effected by this tech upgrade
         'moondrop-greenhouse-mk01',
@@ -10,13 +42,11 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-moondrop.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'moondrop-mk02'},
+        prerequisites = {'moondrop'},
         unit = {
             count = 500,
             ingredients = {
                 {'automation-science-pack', 1},
-                {'logistic-science-pack', 1},
-                {'chemical-science-pack', 1},
             },
             time = 45
         }
@@ -28,7 +58,11 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.0, speed = 0.15, productivity = -0.12, type = 'module-effects'}
+                {old = 'moondrop-1', new = 'moondrop-1-cu', type = 'recipe-replacement'},
+                {old = 'moondrop-2', new = 'moondrop-2-cu', type = 'recipe-replacement'},
+                {old = 'moondrop-3', new = 'moondrop-3-cu', type = 'recipe-replacement'},
+                {old = 'moondrop-4', new = 'moondrop-4-cu', type = 'recipe-replacement'},
+                {old = 'moondrop-5', new = 'moondrop-5-cu', type = 'recipe-replacement'},
             },
         },
         {
@@ -37,7 +71,8 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.1, speed = 0, productivity = -0.1, type = 'module-effects'}
+                {consumption = 2, speed = 0.3, type = 'module-effects'},
+                {old = 'moondrop-greenhouse-mk01', new = 'moondrop-greenhouse-mk01-with-lamp', type = 'recipe-replacement'},
             }
         },
         {
@@ -46,7 +81,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.25, speed = 0, productivity = 0.2, type = 'module-effects'}
+                {recipe = 'moondrop-co2', type = 'unlock-recipe'}
             }
         }
     },
