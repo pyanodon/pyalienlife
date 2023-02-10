@@ -4,12 +4,20 @@ Turd.events = {}
 local tech_upgrades = require 'prototypes/upgrades/tech-upgrades'
 
 local function create_turd_page(gui, player)
+	local textbox_frame = gui.add{type = 'frame', direction = 'vertical'}
+    textbox_frame.style.horizontally_stretchable = true
+	local label = textbox_frame.add{type = 'label', caption = {'pywiki-descriptions.turd'}, style = 'label_with_left_padding'}
+	label.style.single_line = false
+	local researched_technologies = player.force.technologies
+
 	for i, tech_upgrade in pairs(tech_upgrades) do
+		local master_tech = tech_upgrade.master_tech
+		if not researched_technologies[master_tech.name].researched then goto continue end
+
 		local frame = gui.add{type = 'frame', direction = 'vertical'}
 		frame.style.horizontally_stretchable = true
 		frame.tags = {index = i}
 
-		local master_tech = tech_upgrade.master_tech
 		local header_flow = frame.add{type = 'flow', direction = 'horizontal', name = 'header_flow'}
 		header_flow.style.vertical_align = 'center'
 		header_flow.style.horizontal_spacing = 10
@@ -47,7 +55,8 @@ local function create_turd_page(gui, player)
 			content_frame.add{type = 'line', direction = 'horizontal'}.style.margin = {5, 0, 5, 0}
 			content_frame.add{type = 'label', caption = {'', '[font=default-semibold][color=255,230,192]', {'gui-technology-preview.effects'}, '[/color][/font]'}}
 
-			local effects_flow = content_frame.add{type = 'flow', direction = 'horizontal'}
+			local info_flow = content_frame.add{type = 'flow', direction = 'horizontal', name = 'info_flow'}
+			local effects_flow = info_flow.add{type = 'flow', direction = 'horizontal'}
 			for _, effect in pairs(sub_tech.effects) do
 				if effect.type == 'module-effects' then
 					local sprite = effects_flow.add{type = 'choose-elem-button', elem_type = 'item'}
@@ -59,7 +68,12 @@ local function create_turd_page(gui, player)
 					sprite.locked = true
 				end
 			end
+
+			info_flow.add{type = 'empty-widget', style = 'py_empty_widget'}
+			info_flow.add{type = 'button', style = 'confirm_button_without_tooltip', name = 'py_turd_confirm_button', caption = {'turd.select'}}
 		end
+
+		::continue::
 	end
 end
 
@@ -76,23 +90,43 @@ gui_events[defines.events.on_gui_click]['py_minimize_turd'] = function(event)
 
 	for _, tech_upgrade_element in pairs(gui.children) do
 		local sub_tech_flow = tech_upgrade_element.sub_tech_flow
-		if tech_upgrade_element == frame then
-			sub_tech_flow.visible = not sub_tech_flow.visible
-		else
-			sub_tech_flow.visible = false
-		end
+		if sub_tech_flow then
+			if tech_upgrade_element == frame then
+				sub_tech_flow.visible = not sub_tech_flow.visible
+			else
+				sub_tech_flow.visible = false
+			end
 
-		local button = tech_upgrade_element.header_flow.py_minimize_turd
-		if sub_tech_flow.visible then
-			button.sprite = 'up-black'
-			button.hovered_sprite = 'up-black'
-			button.clicked_sprite = 'up-black'
-			button.style = 'frame_action_button_always_on'
+			local button = tech_upgrade_element.header_flow.py_minimize_turd
+			if sub_tech_flow.visible then
+				button.sprite = 'up-black'
+				button.hovered_sprite = 'up-black'
+				button.clicked_sprite = 'up-black'
+				button.style = 'frame_action_button_always_on'
+			else
+				button.sprite = 'down-white'
+				button.hovered_sprite = 'down-black'
+				button.clicked_sprite = 'down-black'
+				button.style = 'frame_action_button'
+			end
+		end
+	end
+end
+
+gui_events[defines.events.on_gui_click]['py_turd_confirm_button'] = function(event)
+	local element = event.element
+	if element.caption[1] ~= 'turd.select' then return end
+	local sub_tech_flow = element.parent.parent.parent
+
+	for _, sub_tech in pairs(sub_tech_flow.children) do
+		local confirm_button = sub_tech.info_flow.py_turd_confirm_button
+
+		if confirm_button == element then
+			confirm_button.style = 'confirm_button_without_tooltip'
+			confirm_button.caption = {'turd.selected'}
 		else
-			button.sprite = 'down-white'
-			button.hovered_sprite = 'down-black'
-			button.clicked_sprite = 'down-black'
-			button.style = 'frame_action_button'
+			confirm_button.style = 'red_back_button'
+			confirm_button.caption = {'turd.unavalible'}
 		end
 	end
 end
