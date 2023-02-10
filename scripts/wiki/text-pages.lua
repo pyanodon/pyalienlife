@@ -50,6 +50,7 @@ Wiki.events.on_init = function()
         name = 'turd',
         title = 'turd-title',
         section = 'alienlife',
-        remote = {'create_turd_page', 'create_turd_page'}
+        remote = {'pywiki_turd_page', 'create_turd_page'},
+        searchable = {'pywiki_turd_page', 'on_search'}
     })
 end
