@@ -54,6 +54,7 @@ local function init()
     Slaughterhouse.events.on_init()
     Worm.events.on_init()
     Wiki.events.on_init()
+    Turd.events.on_init()
 end
 
 script.on_init(function()

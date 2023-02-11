@@ -1,3 +1,47 @@
+local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
+
+if data then
+    for i, recipe in pairs({
+        table.deepcopy(data.raw.recipe['Scrondrix cub 1']),
+        table.deepcopy(data.raw.recipe['Scrondrix cub 2']),
+        table.deepcopy(data.raw.recipe['Scrondrix cub 3']),
+        table.deepcopy(data.raw.recipe['Scrondrix cub 4']),
+    }) do
+        recipe.name = recipe.name .. '-boron'
+        FUN.add_ingredient(recipe, {name = 'boron-trioxide', amount = i * 5, type = 'item'})
+        FUN.add_result_amount(recipe, 'scrondrix-pup', 1)
+        data:extend{recipe}
+    end
+
+    for i, recipe in pairs({
+        table.deepcopy(data.raw.recipe['Scrondrix 1']),
+        table.deepcopy(data.raw.recipe['Scrondrix 2']),
+        table.deepcopy(data.raw.recipe['Scrondrix 3']),
+        table.deepcopy(data.raw.recipe['Scrondrix 4']),
+    }) do
+        recipe.name = recipe.name .. '-vegan'
+        FUN.remove_ingredient(recipe, 'meat')
+        data:extend{recipe}
+    end
+
+    local brains = table.deepcopy(data.raw.recipe['ex-bra-scro'])
+    brains.name = 'scrondrix-brain-slaughterhouse-ex'
+    brains.localised_name = {'recipe-name.ex-bra-scro'}
+    FUN.multiply_result_amount(brains, 'brain', 8)
+
+    local experimental = table.deepcopy(data.raw.recipe['Caged scrondrix 9'])
+    experimental.name = 'scrondrix-experimental-treatment'
+    FUN.add_ingredient(experimental, {name = 'arthurian-codex', amount = 1, type = 'item'})
+    experimental.results = {
+        {name = 'bones', amount = 1, type = 'item', probability = 0.6},
+        {name = 'cage', amount = 1, type = 'item', probability = 0.6},
+        {name = 'brain-caged-scrondrix', amount = 1, type = 'item', probability = 0.4},
+    }
+    experimental.main_product = 'brain-caged-scrondrix'
+
+    data:extend{brains, experimental}
+end
+
 return {
     affected_entities = { -- the entities that should be effected by this tech upgrade
         'scrondrix-pen-mk01',
@@ -10,7 +54,7 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-scrondrix.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'scrondrix-mk02'},
+        prerequisites = {'scrondrix'},
         unit = {
             count = 500,
             ingredients = {
@@ -28,7 +72,11 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.0, speed = 0.15, productivity = -0.12, type = 'module-effects'}
+                {speed = 0.2, type = 'module-effects'},
+                {old = 'Scrondrix cub 1', new = 'Scrondrix cub 1-boron', type = 'recipe-replacement'},
+                {old = 'Scrondrix cub 2', new = 'Scrondrix cub 2-boron', type = 'recipe-replacement'},
+                {old = 'Scrondrix cub 3', new = 'Scrondrix cub 3-boron', type = 'recipe-replacement'},
+                {old = 'Scrondrix cub 4', new = 'Scrondrix cub 4-boron', type = 'recipe-replacement'},
             },
         },
         {
@@ -37,7 +85,11 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.1, speed = 0, productivity = -0.1, type = 'module-effects'}
+                {consumption = -0.7, type = 'module-effects'},
+                {old = 'Scrondrix 1', new = 'Scrondrix 1-vegan', type = 'recipe-replacement'},
+                {old = 'Scrondrix 2', new = 'Scrondrix 2-vegan', type = 'recipe-replacement'},
+                {old = 'Scrondrix 3', new = 'Scrondrix 3-vegan', type = 'recipe-replacement'},
+                {old = 'Scrondrix 4', new = 'Scrondrix 4-vegan', type = 'recipe-replacement'},
             }
         },
         {
@@ -46,7 +98,8 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.25, speed = 0, productivity = 0.2, type = 'module-effects'}
+                {old = 'ex-bra-scro', new = 'scrondrix-brain-slaughterhouse-ex', type = 'recipe-replacement'},
+                {old = 'Caged scrondrix 9', new = 'scrondrix-experimental-treatment', type = 'recipe-replacement'},
             }
         }
     },
