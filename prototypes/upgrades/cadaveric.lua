@@ -1,3 +1,37 @@
+local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
+
+if data then
+    for i, recipe in pairs({
+        table.deepcopy(data.raw.recipe['cadaveric-arum-1']),
+        table.deepcopy(data.raw.recipe['cadaveric-arum-2']),
+        table.deepcopy(data.raw.recipe['cadaveric-arum-3']),
+        table.deepcopy(data.raw.recipe['cadaveric-arum-4']),
+    }) do
+        recipe.name = recipe.name .. '-soil'
+        FUN.add_ingredient(recipe, {name = 'soil', amount = 20 * i, type = 'item'})
+        FUN.multiply_result_amount(recipe, 'cadaveric-arum', 1.21)
+        recipe.energy_required = math.ceil(recipe.energy_required * 1.1)
+        data:extend{recipe}
+    end
+
+    local machine_recipe = table.deepcopy(data.raw.recipe['cadaveric-arum-mk01'])
+    machine_recipe.name = machine_recipe.name .. '-with-nanofibrils'
+    FUN.add_ingredient(machine_recipe, {name = 'nanofibrils', amount = 10, type = 'item'})
+    data:extend{machine_recipe}
+
+    for i, recipe in pairs({
+        table.deepcopy(data.raw.recipe['cadaveric-arum-1']),
+        table.deepcopy(data.raw.recipe['cadaveric-arum-2']),
+        table.deepcopy(data.raw.recipe['cadaveric-arum-3']),
+        table.deepcopy(data.raw.recipe['cadaveric-arum-4']),
+    }) do
+        recipe.name = recipe.name .. '-msa'
+        recipe.main_product = 'cadaveric-arum'
+        FUN.add_result(recipe, {name = 'msa', amount = 20 * i, type = 'fluid'})
+        data:extend{recipe}
+    end
+end
+
 return {
     affected_entities = { -- the entities that should be effected by this tech upgrade
         'cadaveric-arum-mk01',
@@ -10,7 +44,7 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-cadaveric.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'cadaveric-arum-mk02'},
+        prerequisites = {'cadaveric-arum-mk02', 'chitin'},
         unit = {
             count = 500,
             ingredients = {
@@ -29,7 +63,10 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.0, speed = 0.15, productivity = -0.12, type = 'module-effects'}
+                {old = 'cadaveric-arum-1', new = 'cadaveric-arum-1-soil', type = 'recipe-replacement'},
+                {old = 'cadaveric-arum-2', new = 'cadaveric-arum-2-soil', type = 'recipe-replacement'},
+                {old = 'cadaveric-arum-3', new = 'cadaveric-arum-3-soil', type = 'recipe-replacement'},
+                {old = 'cadaveric-arum-4', new = 'cadaveric-arum-4-soil', type = 'recipe-replacement'},
             },
         },
         {
@@ -38,7 +75,8 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.1, speed = 0, productivity = -0.1, type = 'module-effects'}
+                {consumption = -0.5, speed = 0.2, productivity = -0.04, type = 'module-effects'},
+                {old = 'cadaveric-arum-mk01', new = 'cadaveric-arum-mk01-with-nanofibrils', type = 'recipe-replacement'},
             }
         },
         {
@@ -47,7 +85,11 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.25, speed = 0, productivity = 0.2, type = 'module-effects'}
+                {consumption = 2, type = 'module-effects'},
+                {old = 'cadaveric-arum-1', new = 'cadaveric-arum-1-msa', type = 'recipe-replacement'},
+                {old = 'cadaveric-arum-2', new = 'cadaveric-arum-2-msa', type = 'recipe-replacement'},
+                {old = 'cadaveric-arum-3', new = 'cadaveric-arum-3-msa', type = 'recipe-replacement'},
+                {old = 'cadaveric-arum-4', new = 'cadaveric-arum-4-msa', type = 'recipe-replacement'},
             }
         }
     },
