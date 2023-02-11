@@ -47,6 +47,67 @@ for _, controller in DATA:pairs('god-controller') do
 end
 
 ----------------------------------------------------------------------------------------------------
+-- farm_building_order
+----------------------------------------------------------------------------------------------------
+
+local farm_building_order = {
+	['antelope-enclosure'] = 'c[animal]',
+	['arqad-hive'] = 'c[animal]',
+	['arthurian-pen'] = 'c[animal]',
+	['auog-paddock'] = 'c[animal]',
+	['cridren-enclosure'] = 'c[animal]',
+	['dhilmos-pool'] = 'd[aquatic]',
+	['dingrits-pack'] = 'c[animal]',
+	['fish-farm'] = 'd[aquatic]',
+	['kmauts-enclosure'] = 'c[animal]',
+	['mukmoux-pasture'] = 'c[animal]',
+	['phadai-enclosure'] = 'c[animal]',
+	['phagnot-corral'] = 'c[animal]',
+	['prandium-lab'] = 'c[animal]',
+	['ez-ranch'] = 'c[animal]-zz[other]',
+	['scrondrix-pen'] = 'c[animal]',
+	['simik-den'] = 'c[animal]',
+	['trits-reef'] = 'd[aquatic]',
+	['ulric-corral'] = 'c[animal]',
+	['vonix-den'] = 'c[animal]',
+	['vrauks-paddock'] = 'c[animal]',
+	['xenopen'] = 'c[animal]',
+	['xyhiphoe-pool'] = 'd[aquatic]',
+	['zipir-reef'] = 'd[aquatic]',
+	['cadaveric-arum'] = 'a[plant]',
+	['fwf'] = 'a[plant]-ab[other]',
+	['grods-swamp'] = 'a[plant]',
+	['guar-gum-plantation'] = 'a[plant]-aa[other]',
+	['kicalk-plantation'] = 'a[plant]',
+	['moondrop-greenhouse'] = 'a[plant]',
+	['moss-farm'] = 'd[aquatic]-zy[other]',
+	['ralesia-plantation'] = 'a[plant]',
+	['rennea-plantation'] = 'a[plant]',
+	['sap-extractor'] = 'a[plant]',
+	['seaweed-crop'] = 'd[aquatic]-zx[other]',
+	['sponge-culture'] = 'd[aquatic]-zz[other]',
+	['tuuphra-plantation'] = 'a[plant]',
+	['yotoi-aloe-orchard'] = 'a[plant]',
+	['bhoddos-culture'] = 'b[fungi]',
+	['fawogae-plantation'] = 'b[fungi]',
+	['navens-culture'] = 'b[fungi]',
+	['yaedols-culture'] = 'b[fungi]',
+    ['zungror-lair'] = 'c[animal]',
+    ['numal-reef'] = 'd[aquatic]'
+}
+
+for building, order in pairs(farm_building_order) do
+    for _, name in pairs{building, building .. '-mk01', building .. '-mk02', building .. '-mk03', building .. '-mk04'} do
+        if data.raw.item[name] then
+            data.raw.item[name].order = order .. '-b[' .. building .. ']'
+        end
+        if data.raw.recipe[name] then
+            data.raw.recipe[name].order = nil
+        end
+    end
+end
+
+----------------------------------------------------------------------------------------------------
 -- TURD
 ----------------------------------------------------------------------------------------------------
 
@@ -387,63 +448,6 @@ RECIPE('evaporator'):remove_unlock('fluid-processing-machines-1'):add_unlock('ta
 RECIPE('tailings-dust'):remove_unlock('fluid-processing-machines-1'):add_unlock('tar-processing')
 RECIPE('sand-brick'):remove_unlock('concrete'):add_unlock('tar-processing')
 RECIPE('ball-mill-mk01'):remove_unlock('crusher'):add_unlock('crusher-2')
-
-local farm_building_order = {
-	['antelope-enclosure'] = 'c[animal]',
-	['arqad-hive'] = 'c[animal]',
-	['arthurian-pen'] = 'c[animal]',
-	['auog-paddock'] = 'c[animal]',
-	['cridren-enclosure'] = 'c[animal]',
-	['dhilmos-pool'] = 'd[aquatic]',
-	['dingrits-pack'] = 'c[animal]',
-	['fish-farm'] = 'd[aquatic]',
-	['kmauts-enclosure'] = 'c[animal]',
-	['mukmoux-pasture'] = 'c[animal]',
-	['phadai-enclosure'] = 'c[animal]',
-	['phagnot-corral'] = 'c[animal]',
-	['prandium-lab'] = 'c[animal]',
-	['ez-ranch'] = 'c[animal]-zz[other]',
-	['scrondrix-pen'] = 'c[animal]',
-	['simik-den'] = 'c[animal]',
-	['trits-reef'] = 'd[aquatic]',
-	['ulric-corral'] = 'c[animal]',
-	['vonix-den'] = 'c[animal]',
-	['vrauks-paddock'] = 'c[animal]',
-	['xenopen'] = 'c[animal]',
-	['xyhiphoe-pool'] = 'd[aquatic]',
-	['zipir-reef'] = 'd[aquatic]',
-	['cadaveric-arum'] = 'a[plant]',
-	['fwf'] = 'a[plant]-ab[other]',
-	['grods-swamp'] = 'a[plant]',
-	['guar-gum-plantation'] = 'a[plant]-aa[other]',
-	['kicalk-plantation'] = 'a[plant]',
-	['moondrop-greenhouse'] = 'a[plant]',
-	['moss-farm'] = 'd[aquatic]-zy[other]',
-	['ralesia-plantation'] = 'a[plant]',
-	['rennea-plantation'] = 'a[plant]',
-	['sap-extractor'] = 'a[plant]',
-	['seaweed-crop'] = 'd[aquatic]-zx[other]',
-	['sponge-culture'] = 'd[aquatic]-zz[other]',
-	['tuuphra-plantation'] = 'a[plant]',
-	['yotoi-aloe-orchard'] = 'a[plant]',
-	['bhoddos-culture'] = 'b[fungi]',
-	['fawogae-plantation'] = 'b[fungi]',
-	['navens-culture'] = 'b[fungi]',
-	['yaedols-culture'] = 'b[fungi]',
-    ['zungror-lair'] = 'c[animal]',
-    ['numal-reef'] = 'd[aquatic]'
-}
-
-for building, order in pairs(farm_building_order) do
-    for _, name in pairs{building, building .. '-mk01', building .. '-mk02', building .. '-mk03', building .. '-mk04'} do
-        if data.raw.item[name] then
-            data.raw.item[name].order = order .. '-b[' .. building .. ']'
-        end
-        if data.raw.recipe[name] then
-            data.raw.recipe[name].order = nil
-        end
-    end
-end
 
 local walkable_types = {
     ['tree'] = true,
