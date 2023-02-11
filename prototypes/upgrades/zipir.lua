@@ -27,7 +27,7 @@ if data then
     rendering.subgroup = 'py-alienlife-zipir'
     rendering.results = table.deepcopy(data.raw.recipe['full-render-zipir'].results)
     for _, result in pairs(rendering.results) do
-        result.amount = math.ceil(result.amount / 3)
+        result.amount = math.ceil(result.amount / 2)
     end
     FUN.remove_result(rendering, 'brain')
     rendering.hidden = false
@@ -40,7 +40,7 @@ if data then
         table.deepcopy(data.raw.recipe['zipir-eggs-5']),
     }) do
         recipe.name = recipe.name .. '-trits-gen'
-        recipe.energy_required = recipe.energy_required * 2
+        recipe.energy_required = recipe.energy_required * 3
         FUN.add_ingredient(recipe, {name = 'trits-codex', type = 'item', amount = 1})
         for _, result in pairs(recipe.results) do
             if result.name == 'zipir-eggs' then
