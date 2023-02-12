@@ -3,6 +3,7 @@ Version: 2.0.11
 Date: 2023-2-3
   Changes:
     - Caravan can now walk over pipes and electric poles
+    - Xy chain is now positive (t1)
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.10
 Date: 2023-2-3
