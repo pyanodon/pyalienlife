@@ -35,7 +35,8 @@ if data then
             name = 'cags',
             icon = '__pyalienlifegraphics3__/graphics/icons/cags.png',
             icon_size = 64,
-            stack_size = 50
+            stack_size = 50,
+            subgroup = 'py-alienlife-arqad'
         },
         {
             type = 'recipe',
@@ -53,7 +54,8 @@ if data then
                 {type = 'fluid', name = 'creamy-latex', amount = 50},
             },
             category = 'crafting-with-fluid',
-            energy_required = 10
+            energy_required = 10,
+            enabled = false
         }
     }
 

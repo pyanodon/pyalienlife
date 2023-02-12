@@ -3,6 +3,8 @@ Turd.events = {}
 
 local tech_upgrades = require 'prototypes/upgrades/tech-upgrades'
 
+local NOT_SELECTED = 333 -- enum
+
 local function on_search(search_key, gui)
 	if search_key == '' then
 		for _, tech_upgrade_element in pairs(gui.children) do
@@ -14,10 +16,27 @@ local function on_search(search_key, gui)
 	for _, tech_upgrade_element in pairs(gui.children) do
 		local sub_tech_flow = tech_upgrade_element.sub_tech_flow
 		if sub_tech_flow then
-			local tech_upgrade = tech_upgrades[tech_upgrade_element.tags.index]
+			local tech_upgrade = tech_upgrades[tech_upgrade_element.tags.name]
 			local name = tech_upgrade.module_category or tech_upgrade.master_tech.name
 			tech_upgrade_element.visible = name:find(search_key, 1, true)
 		end
+	end
+end
+
+local function update_confirm_button(element, player)
+	local force_index = player.force_index
+	global.turd_bonuses[force_index] = global.turd_bonuses[force_index] or {}
+	local selected_upgrade = global.turd_bonuses[force_index][element.tags.master_tech_name] or NOT_SELECTED
+
+	if selected_upgrade == NOT_SELECTED then
+		element.style = 'confirm_button_without_tooltip'
+		element.caption = {'turd.select'}
+	elseif selected_upgrade == element.tags.sub_tech_name then
+		element.style = 'confirm_button_without_tooltip_unhoverable'
+		element.caption = {'turd.selected'}
+	else
+		element.style = 'red_back_button_unhoverable'
+		element.caption = {'turd.unavalible'}
 	end
 end
 
@@ -28,24 +47,23 @@ local function create_turd_page(gui, player)
 	label.style.single_line = false
 	local researched_technologies = player.force.technologies
 
-	for i, tech_upgrade in pairs(tech_upgrades) do
-		local master_tech = tech_upgrade.master_tech
-		if not researched_technologies[master_tech.name].researched then goto continue end
+	for name, tech_upgrade in pairs(tech_upgrades) do
+		if not researched_technologies[name].researched then goto continue end
 
 		local frame = gui.add{type = 'frame', direction = 'vertical'}
 		frame.style.horizontally_stretchable = true
-		frame.tags = {index = i}
+		frame.tags = {name = name}
 
 		local header_flow = frame.add{type = 'flow', direction = 'horizontal', name = 'header_flow'}
 		header_flow.style.vertical_align = 'center'
 		header_flow.style.horizontal_spacing = 10
 		local sprite = header_flow.add{type = 'choose-elem-button', elem_type = 'technology', style = 'transparent_slot'}
-		sprite.elem_value = master_tech.name
+		sprite.elem_value = name
 		sprite.locked = true
-		header_flow.add{type = 'label', caption = {'', '[font=default-semibold][color=255,230,192]', {'technology-name.' .. master_tech.name}, '[/color][/font]'}}
+		header_flow.add{type = 'label', caption = {'', '[font=default-semibold][color=255,230,192]', {'technology-name.' .. name}, '[/color][/font]'}}
 		header_flow.add{type = 'empty-widget', style = 'py_empty_widget'}
 
-		for _, affected_entity in pairs(tech_upgrade.affected_entities) do
+		for affected_entity in pairs(tech_upgrade.affected_entities) do
 			local sprite = header_flow.add{type = 'choose-elem-button', elem_type = 'entity', style = 'transparent_slot'}
 			sprite.elem_value = affected_entity
 			sprite.locked = true
@@ -100,7 +118,12 @@ local function create_turd_page(gui, player)
 			end
 
 			info_flow.add{type = 'empty-widget', style = 'py_empty_widget'}
-			info_flow.add{type = 'button', style = 'confirm_button_without_tooltip', name = 'py_turd_confirm_button', caption = {'turd.select'}}
+			local confirm_button = info_flow.add{type = 'button', name = 'py_turd_confirm_button'}
+			confirm_button.tags = {
+				master_tech_name = name,
+				sub_tech_name = sub_tech.name
+			}
+			update_confirm_button(confirm_button, player)
 		end
 
 		::continue::
@@ -112,9 +135,9 @@ end
 
 gui_events[defines.events.on_gui_click]['py_open_turd_techtree'] = function(event)
 	local player = game.get_player(event.player_index)
-	local master_tech = tech_upgrades[event.element.parent.parent.tags.index].master_tech.name
+	local master_tech_name = event.element.parent.parent.tags.name
 	player.opened = nil
-	player.open_technology_gui(master_tech)
+	player.open_technology_gui(master_tech_name)
 end
 
 gui_events[defines.events.on_gui_click]['py_minimize_turd'] = function(event)
@@ -146,31 +169,97 @@ gui_events[defines.events.on_gui_click]['py_minimize_turd'] = function(event)
 	end
 end
 
-gui_events[defines.events.on_gui_click]['py_turd_confirm_button'] = function(event)
-	local element = event.element
-	if element.caption[1] ~= 'turd.select' then return end
-	local sub_tech_flow = element.parent.parent.parent
-
-	for _, sub_tech in pairs(sub_tech_flow.children) do
-		local confirm_button = sub_tech.info_flow.py_turd_confirm_button
-
-		if confirm_button == element then
-			confirm_button.style = 'confirm_button_without_tooltip'
-			confirm_button.caption = {'turd.selected'}
-		else
-			confirm_button.style = 'red_back_button'
-			confirm_button.caption = {'turd.unavalible'}
-		end
-	end
-end
-
 remote.add_interface('pywiki_turd_page', {
 	create_turd_page = create_turd_page,
 	on_search = on_search
 })
 
-local function reapply_turd_bonuses(force)
+local function handle_removed_items(surface, force, machine, removed_items)
+	for name, count in pairs(removed_items) do
+		local cannot_insert = count - machine.insert{name = name, count = count}
+		if cannot_insert ~= 0 then
+			surface.spill_item_stack(machine.position, {name = name, count = cannot_insert}, true, force, false)
+		end
+	end
+end
 
+local function recipe_replacement(old, new, force, assembling_machine_list)
+	old.enabled = false
+	if new then new.enabled = true end
+
+	for _, machine in pairs(assembling_machine_list) do
+		if machine.get_recipe() == old then
+			local removed_items = machine.set_recipe(new)
+			handle_removed_items(machine.surface, force, machine, removed_items)
+		end
+	end
+end
+
+local function reapply_turd_bonuses(force)
+	local recipes = force.recipes
+	local turd_bonuses = global.turd_bonuses[force.index] or {}
+
+	local assembling_machine_list = {}
+	for _, surface in pairs(game.surfaces) do
+		for _, machine in pairs(surface.find_entities_filtered{type = {'assembling-machine', 'furnace'}, force = force}) do
+			assembling_machine_list[#assembling_machine_list+1] = machine
+		end
+	end
+
+	for master_tech_name, tech_upgrade in pairs(tech_upgrades) do
+		local selection = turd_bonuses[master_tech_name] or NOT_SELECTED
+		if selection == NOT_SELECTED then goto continue end
+		local prototype = tech_upgrade.sub_techs[selection]
+
+		for _, effect in pairs(prototype.effects) do
+			if effect.type == 'unlock-recipe' then
+				recipes[effect.recipe].enabled = true
+			elseif effect.type == 'recipe-replacement' then
+				local old, new = recipes[effect.old], recipes[effect.new]
+				if old.enabled then recipe_replacement(old, new, force, assembling_machine_list) end
+			elseif effect.type == 'lock-recipe' then
+				local recipe = recipes[effect.recipe]
+				if recipe.enabled then recipe_replacement(recipe, nil, force, assembling_machine_list) end
+			elseif effect.type == 'module-effects' then
+				for _, machine in pairs(assembling_machine_list) do
+					if tech_upgrade.affected_entities[machine.name] then
+						local beacon = global.turd_beaconed_machines[machine.unit_number]
+						if not beacon or not beacon.valid then
+							beacon = machine.surface.create_entity{name = 'hidden-beacon', position = machine.position, force = force}
+						end
+
+						local inventory = beacon.get_module_inventory()
+						inventory.clear()
+						inventory.insert{name = prototype.name .. '-module', count = 1}
+						global.turd_beaconed_machines[machine.unit_number] = beacon
+					end
+				end
+			end
+		end
+
+		::continue::
+	end
+end
+
+gui_events[defines.events.on_gui_click]['py_turd_confirm_button'] = function(event)
+	local element = event.element
+	local master_tech_name = element.tags.master_tech_name
+	local sub_tech_flow = element.parent.parent.parent
+	local player = game.get_player(event.player_index)
+	local force = player.force
+
+	local turd_bonuses = global.turd_bonuses[force.index] or {}
+	global.turd_bonuses[force.index] = turd_bonuses
+	local selection = turd_bonuses[master_tech_name] or NOT_SELECTED
+	if selection ~= NOT_SELECTED then return end
+	turd_bonuses[master_tech_name] = element.tags.sub_tech_name
+
+	for _, sub_tech in pairs(sub_tech_flow.children) do
+		local confirm_button = sub_tech.info_flow.py_turd_confirm_button
+		update_confirm_button(confirm_button, player)
+	end
+
+	reapply_turd_bonuses(force)
 end
 
 Turd.events.on_init = function()
@@ -179,14 +268,20 @@ Turd.events.on_init = function()
 	for _, force in pairs(game.forces) do reapply_turd_bonuses(force) end
 end
 
-local function on_researched(event, type)
+local function on_researched(event)
 	local technology = event.research
 	local force = technology.force
+
+	if tech_upgrades[technology.name] then
+		global.turd_bonuses[force.index] = global.turd_bonuses[force.index] or {}
+		global.turd_bonuses[force.index][technology.name] = NOT_SELECTED
+	end
+
 	reapply_turd_bonuses(force)
 end
 
-Turd.events.on_research_finished = function(event) on_researched(event, 'finished') end
-Turd.events.on_research_reversed = function(event) on_researched(event, 'reversed') end
+Turd.events.on_research_finished = on_researched
+Turd.events.on_research_reversed = on_researched
 
 Turd.events.on_built = function(event)
     local entity = event.created_entity or event.entity
@@ -199,5 +294,5 @@ Turd.events.on_destroyed = function(event)
 	local beacon = global.turd_beaconed_machines[entity.unit_number]
 	global.turd_beaconed_machines[entity.unit_number] = nil
 	if not beacon or not beacon.valid then return end
-	beacon.destory()
+	beacon.destroy()
 end
