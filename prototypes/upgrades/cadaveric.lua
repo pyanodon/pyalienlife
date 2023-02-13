@@ -75,7 +75,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.5, speed = 0.2, productivity = -0.04, type = 'module-effects'},
+                {consumption = -0.5, speed = 0.1, type = 'module-effects'},
                 {old = 'cadaveric-arum-mk01', new = 'cadaveric-arum-mk01-with-nanofibrils', type = 'recipe-replacement'},
             }
         },
