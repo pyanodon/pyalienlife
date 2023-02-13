@@ -44,7 +44,7 @@ if data then
         table.deepcopy(data.raw.recipe['rennea-4']),
     }) do
         recipe.name = recipe.name .. '-hydrophile'
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.85)
+        recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         FUN.multiply_ingredient_amount(recipe, 'water', 10)
         --error(serpent.block(recipe.ingredients))
         data:extend{recipe}
