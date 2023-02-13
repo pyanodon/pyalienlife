@@ -51,7 +51,7 @@ if data then
                 {'melamine', 10},
                 {'glass', 10},
                 {'silver-plate', 10},
-                {type = 'fluid', name = 'creamy-latex', amount = 50},
+                {type = 'fluid', name = 'creamy-latex', amount = 10},
             },
             category = 'crafting-with-fluid',
             energy_required = 10,
