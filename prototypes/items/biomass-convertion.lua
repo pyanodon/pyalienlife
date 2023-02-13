@@ -443,6 +443,7 @@ local biomass_convertion =
     ['crawdad'] = {item_amount = 1, biomass_amount = 100},
     ['dingrido'] = {item_amount = 1, biomass_amount = 200},
     ['qaavi'] = {item_amount = 1, biomass_amount = 300},
+    ['deadhead'] = {item_amount = 10, biomass_amount = 20},
     ['blood'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'},
     ['tar'] = {item_amount = 20, biomass_amount = 4, type = 'fluid'},
     ['aromatics'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'},

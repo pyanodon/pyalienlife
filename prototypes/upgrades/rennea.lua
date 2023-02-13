@@ -7,8 +7,8 @@ if data then
             name = 'deadhead',
             stack_size = 50,
             subgroup = 'py-alienlife-rennea',
-            icon = '__pyalienlifegraphics3__/graphics/icons/cags.png',
-            icon_size = 64,
+            icon = '__pyalienlifegraphics__/graphics/icons/deadhead.png',
+            icon_size = 28,
         },
         {
             type = 'recipe',
@@ -34,6 +34,18 @@ if data then
         recipe.name = recipe.name .. '-deadhead'
         FUN.add_result(recipe, {'deadhead', amount})
         recipe.main_product = 'deadhead'
+        data:extend{recipe}
+    end
+
+    for _, recipe in pairs({
+        table.deepcopy(data.raw.recipe['rennea-1']),
+        table.deepcopy(data.raw.recipe['rennea-2']),
+        table.deepcopy(data.raw.recipe['rennea-3']),
+        table.deepcopy(data.raw.recipe['rennea-4']),
+    }) do
+        recipe.name = recipe.name .. '-hydrophile'
+        FUN.multiply_ingredient_amount(recipe, 'water', 50)
+        --error(serpent.block(recipe.ingredients))
         data:extend{recipe}
     end
 end
@@ -81,7 +93,11 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.1, speed = 0, productivity = -0.1, type = 'module-effects'}
+                {consumption = 0.5, speed = 0.1, type = 'module-effects'},
+                {old = 'rennea-1', new = 'rennea-1-hydrophile', type = 'recipe-replacement'},
+                {old = 'rennea-2', new = 'rennea-2-hydrophile', type = 'recipe-replacement'},
+                {old = 'rennea-3', new = 'rennea-3-hydrophile', type = 'recipe-replacement'},
+                {old = 'rennea-4', new = 'rennea-4-hydrophile', type = 'recipe-replacement'},
             }
         },
         {
