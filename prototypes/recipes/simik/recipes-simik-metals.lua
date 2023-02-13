@@ -16,6 +16,8 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 6},
     },
     main_product = 'unslimed-iron',
+    subgroup = 'py-alienlife-simik',
+    order = 'c'
 }
 
 ----copper----
@@ -35,6 +37,8 @@ RECIPE {
         {type = 'item', name = 'copper-solution-barrel', amount = 2},
     },
     main_product = 'copper-solution-barrel',
+    subgroup = 'py-alienlife-simik',
+    order = 'c'
 }
 
 ----quartz----
@@ -55,6 +59,8 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 1},
     },
     main_product = 'quartz-pulp-02-barrel',
+    subgroup = 'py-alienlife-simik',
+    order = 'c'
 }
 
 ----coal----
@@ -75,6 +81,8 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 1},
     },
     main_product = 'coal-pulp-03-barrel',
+    subgroup = 'py-alienlife-simik',
+    order = 'c'
 }
 
 ----tin----
@@ -95,6 +103,8 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 2},
     },
     main_product = 'tin-concentrate',
+    subgroup = 'py-alienlife-simik',
+    order = 'c'
 }
 
 ----aluminium----
@@ -115,6 +125,8 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 6},
     },
     main_product = 'crystalized-sodium-aluminate',
+    subgroup = 'py-alienlife-simik',
+    order = 'c'
 }
 
 ----boron----
@@ -135,6 +147,8 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 6},
     },
     main_product = 'boron-trioxide',
+    subgroup = 'py-alienlife-simik',
+    order = 'c'
 }
 
 ----chromium----
@@ -155,6 +169,8 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 2},
     },
     main_product = 'chromite-sand',
+    subgroup = 'py-alienlife-simik',
+    order = 'c'
 }
 
 ----molybdenum----
@@ -175,6 +191,8 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 2},
     },
     main_product = 'molybdenum-sulfide',
+    subgroup = 'py-alienlife-simik',
+    order = 'c'
 }
 
 ----zinc----
@@ -195,6 +213,8 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 2},
     },
     main_product = 'concentrated-zinc',
+    subgroup = 'py-alienlife-simik',
+    order = 'c'
 }
 
 ----nickel----
@@ -214,6 +234,8 @@ RECIPE {
         {type = 'item', name = 'nickel-pulp-03-barrel', amount = 2},
     },
     main_product = 'nickel-pulp-03-barrel',
+    subgroup = 'py-alienlife-simik',
+    order = 'c'
 }
 
 ----lead----
@@ -233,6 +255,8 @@ RECIPE {
         {type = 'item', name = 'molten-lead-barrel', amount = 2},
     },
     main_product = 'molten-lead-barrel',
+    subgroup = 'py-alienlife-simik',
+    order = 'c'
 }
 
 ----titanium----
@@ -253,6 +277,8 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 2},
     },
     main_product = 'high-grade-ti',
+    subgroup = 'py-alienlife-simik',
+    order = 'c'
 }
 
 ----niobium----
@@ -273,6 +299,8 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 1},
     },
     main_product = 'niobium-complex-barrel',
+    subgroup = 'py-alienlife-simik',
+    order = 'c'
 }
 
 ----nexelit----
@@ -292,6 +320,8 @@ RECIPE {
         {type = 'item', name = 'molten-nexelit-barrel', amount = 2},
     },
     main_product = 'molten-nexelit-barrel',
+    subgroup = 'py-alienlife-simik',
+    order = 'c'
 }
 
 ----silver----
@@ -312,6 +342,8 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 8},
     },
     main_product = 'high-grade-silver',
+    subgroup = 'py-alienlife-simik',
+    order = 'c'
 }
 
 ----gold----
@@ -332,6 +364,8 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 2},
     },
     main_product = 'gold-concentrate',
+    subgroup = 'py-alienlife-simik',
+    order = 'c'
 }
 
 ----uranium----
@@ -352,4 +386,6 @@ RECIPE {
         {type = 'item', name = 'empty-barrel', amount = 8},
     },
     main_product = '70-u-powder',
+    subgroup = 'py-alienlife-simik',
+    order = 'c'
 }
