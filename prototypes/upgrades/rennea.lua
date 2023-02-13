@@ -1,3 +1,43 @@
+local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
+
+if data then
+    data:extend{
+        {
+            type = 'item',
+            name = 'deadhead',
+            stack_size = 50,
+            subgroup = 'py-alienlife-rennea',
+            icon = '__pyalienlifegraphics3__/graphics/icons/cags.png',
+            icon_size = 64,
+        },
+        {
+            type = 'recipe',
+            name = 'deadhead-recycle',
+            ingredients = {
+                {'deadhead', 8},
+                {type = 'fluid', name = 'water', amount = 100},
+                {'coarse', 2}
+            },
+            results = {{'native-flora', 10}},
+            enabled = false,
+            category = 'rennea',
+            energy_required = 10
+        }
+    }
+
+    for amount, recipe in pairs({
+        [15] = table.deepcopy(data.raw.recipe['rennea-1']),
+        [34] = table.deepcopy(data.raw.recipe['rennea-2']),
+        [66] = table.deepcopy(data.raw.recipe['rennea-3']),
+        [108] = table.deepcopy(data.raw.recipe['rennea-4']),
+    }) do
+        recipe.name = recipe.name .. '-deadhead'
+        FUN.add_result(recipe, {'deadhead', amount})
+        recipe.main_product = 'deadhead'
+        data:extend{recipe}
+    end
+end
+
 return {
     affected_entities = { -- the entities that should be effected by this tech upgrade
         'rennea-plantation-mk01',
@@ -10,14 +50,13 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-rennea.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'water-animals-mk02'},
+        prerequisites = {'rennea'},
         unit = {
             count = 500,
             ingredients = {
                 {'automation-science-pack', 1},
                 {'logistic-science-pack', 1},
-                -- {'py-science-pack-3', 1},
-                {'chemical-science-pack', 1},
+                {'py-science-pack-2', 1},
             },
             time = 45
         }
@@ -29,7 +68,11 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.0, speed = 0.15, productivity = -0.12, type = 'module-effects'}
+                {recipe = 'deadhead-recycle', type = 'unlock-recipe'},
+                {old = 'rennea-1', new = 'rennea-1-deadhead', type = 'recipe-replacement'},
+                {old = 'rennea-2', new = 'rennea-2-deadhead', type = 'recipe-replacement'},
+                {old = 'rennea-3', new = 'rennea-3-deadhead', type = 'recipe-replacement'},
+                {old = 'rennea-4', new = 'rennea-4-deadhead', type = 'recipe-replacement'},
             },
         },
         {

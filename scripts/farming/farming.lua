@@ -49,8 +49,7 @@ Farming.events.on_entity_destroyed = function(event)
 end
 
 -- render warning icons
-Farming.events[30] = function(event)
-	if event.tick % 60 == 0 then return end
+Farming.events[59] = function(event)
 	for unit_number, farm in pairs(global.disabled_farm_buildings) do
 		if not farm.valid then
 			global.disabled_farm_buildings[unit_number] = nil

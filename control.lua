@@ -153,7 +153,7 @@ script.on_nth_tick(60, function()
 end)
 
 script.on_nth_tick(121, Farming.events[121])
-script.on_nth_tick(30, Farming.events[30])
+script.on_nth_tick(59, Farming.events[59])
 script.on_nth_tick(221, Oculua.events[221])
 
 script.on_nth_tick(4, function()
