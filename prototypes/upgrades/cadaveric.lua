@@ -14,10 +14,16 @@ if data then
         data:extend{recipe}
     end
 
-    local machine_recipe = table.deepcopy(data.raw.recipe['cadaveric-arum-mk01'])
-    machine_recipe.name = machine_recipe.name .. '-with-nanofibrils'
-    FUN.add_ingredient(machine_recipe, {name = 'nanofibrils', amount = 10, type = 'item'})
-    data:extend{machine_recipe}
+    for i, recipe in pairs({
+        table.deepcopy(data.raw.recipe['cadaveric-arum-mk01']),
+        table.deepcopy(data.raw.recipe['cadaveric-arum-mk02']),
+        table.deepcopy(data.raw.recipe['cadaveric-arum-mk03']),
+        table.deepcopy(data.raw.recipe['cadaveric-arum-mk04']),
+    }) do
+        recipe.name = recipe.name .. '-with-nanofibrils'
+        FUN.add_ingredient(recipe, {name = 'nanofibrils', amount = 10 * (2 ^ (i - 1)), type = 'item'})
+        data:extend{recipe}
+    end
 
     for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['cadaveric-arum-1']),
@@ -77,6 +83,9 @@ return {
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
                 {consumption = -0.5, speed = 0.1, type = 'module-effects'},
                 {old = 'cadaveric-arum-mk01', new = 'cadaveric-arum-mk01-with-nanofibrils', type = 'recipe-replacement'},
+                {old = 'cadaveric-arum-mk02', new = 'cadaveric-arum-mk02-with-nanofibrils', type = 'recipe-replacement'},
+                {old = 'cadaveric-arum-mk03', new = 'cadaveric-arum-mk03-with-nanofibrils', type = 'recipe-replacement'},
+                {old = 'cadaveric-arum-mk04', new = 'cadaveric-arum-mk04-with-nanofibrils', type = 'recipe-replacement'},
             }
         },
         {

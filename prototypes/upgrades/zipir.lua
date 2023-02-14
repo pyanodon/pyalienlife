@@ -9,11 +9,11 @@ if data then
         table.deepcopy(data.raw.recipe['zipir-eggs-5']),
     }) do
         recipe.name = recipe.name .. '-suicide'
-        local death_count = FUN.remove_result(recipe, 'zipir1')
-        FUN.add_result(recipe, {name = 'zipir-carcass', type = 'item', amount = death_count})
+        FUN.remove_result(recipe, 'zipir1')
+        FUN.add_result(recipe, {name = 'zipir1', amount_min = 2, amount_max = 3, type = 'item'})
         for _, result in pairs(recipe.results) do
             if result.name == 'zipir-eggs' then
-                result.amount = result.amount_max + 2
+                result.amount = result.amount_max
                 result.amount_max = nil
                 result.amount_min = nil
                 break
@@ -21,16 +21,6 @@ if data then
         end
         data:extend{recipe}
     end
-
-    local rendering = data.raw.recipe['rendering']
-    rendering.category = 'slaughterhouse'
-    rendering.subgroup = 'py-alienlife-zipir'
-    rendering.results = table.deepcopy(data.raw.recipe['full-render-zipir'].results)
-    for _, result in pairs(rendering.results) do
-        result.amount = math.ceil(result.amount / 2)
-    end
-    FUN.remove_result(rendering, 'brain')
-    rendering.hidden = false
 
     for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['zipir-eggs-1']),
@@ -88,7 +78,6 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {recipe = 'rendering', type = 'unlock-recipe'},
                 {old = 'zipir-eggs-1', new = 'zipir-eggs-1-suicide', type = 'recipe-replacement'},
                 {old = 'zipir-eggs-2', new = 'zipir-eggs-2-suicide', type = 'recipe-replacement'},
                 {old = 'zipir-eggs-3', new = 'zipir-eggs-3-suicide', type = 'recipe-replacement'},
