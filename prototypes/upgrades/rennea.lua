@@ -25,30 +25,35 @@ if data then
         }
     }
 
-    for amount, recipe in pairs({
+    for amount, recipe in pairs{
         [15] = table.deepcopy(data.raw.recipe['rennea-1']),
         [34] = table.deepcopy(data.raw.recipe['rennea-2']),
         [66] = table.deepcopy(data.raw.recipe['rennea-3']),
         [108] = table.deepcopy(data.raw.recipe['rennea-4']),
-    }) do
+    } do
         recipe.name = recipe.name .. '-deadhead'
         FUN.add_result(recipe, {'deadhead', amount})
         recipe.main_product = 'deadhead'
         data:extend{recipe}
     end
 
-    for _, recipe in pairs({
+    for _, recipe in pairs{
         table.deepcopy(data.raw.recipe['rennea-1']),
         table.deepcopy(data.raw.recipe['rennea-2']),
         table.deepcopy(data.raw.recipe['rennea-3']),
         table.deepcopy(data.raw.recipe['rennea-4']),
-    }) do
+    } do
         recipe.name = recipe.name .. '-hydrophile'
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         FUN.multiply_ingredient_amount(recipe, 'water', 10)
-        --error(serpent.block(recipe.ingredients))
         data:extend{recipe}
     end
+
+    local anti_aphid = table.deepcopy(data.raw.recipe['rennea-seeds'])
+    FUN.add_ingredient(anti_aphid, {name = 'bee-venom', amount = 10, type = 'fluid'})
+    FUN.add_result_amount(anti_aphid, 'rennea-seeds', 2)
+    anti_aphid.name = 'rennea-seeds-venom'
+    data:extend{anti_aphid}
 end
 
 return {
@@ -107,7 +112,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.25, speed = 0, productivity = 0.2, type = 'module-effects'}
+                {old = 'rennea-seeds', new = 'rennea-seeds-venom', type = 'recipe-replacement'}
             }
         }
     },
