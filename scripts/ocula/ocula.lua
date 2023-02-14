@@ -92,8 +92,10 @@ function Oculua.process_player(player)
 		local pickup_point = network.select_pickup_point{name = item, position = ipod_data.entity.position, include_buffers = true}
 		if not pickup_point then goto continue end
 		pickup_point = pickup_point.owner
+		local inventory = pickup_point.get_inventory(CHEST)
+		if not inventory then goto continue end
 
-		local target_count = math.min(insertable_count, needed, pickup_point.get_inventory(CHEST).get_item_count(item), game.item_prototypes[item].stack_size * Oculua.inventory_size)
+		local target_count = math.min(insertable_count, needed, inventory.get_item_count(item), game.item_prototypes[item].stack_size * Oculua.inventory_size)
 		if target_count <= 0 then goto continue end
 		local oculua_data = Oculua.spawn_oculua(ipod_data, player)
 		oculua_data.item = item
