@@ -661,54 +661,6 @@ if mods['pyalternativeenergy'] then
     }:add_unlock("antitumor")
 end
 
-
-----AUOG food----
-RECIPE {
-    type = 'recipe',
-    name = 'auog-food-01b',
-    category = 'crafting-with-fluid',
-    enabled = false,
-    energy_required = 10,
-    ingredients = {
-        {type = 'item', name = 'plastic-bar', amount = 2},
-        {type = 'item', name = 'fawogae', amount = 5},
-        {type = 'item', name = 'wood', amount = 3},
-        {type = 'item', name = 'native-flora', amount = 10},
-        {type = 'item', name = "seaweed", amount = 5},
-        {type = 'item', name = 'moss', amount = 5},
-        {type = 'item', name = 'starch', amount = 4},
-        {type = 'fluid', name = 'steam', amount = 100}
-    },
-    results = {
-        {type = 'item', name = 'auog-food-01', amount = 3},
-    },
-}:add_unlock("sawdust")
-
-RECIPE {
-    type = 'recipe',
-    name = 'auog-food-02b',
-    category = 'crafting-with-fluid',
-    enabled = false,
-    energy_required = 10,
-    ingredients = {
-        {type = 'item', name = 'plastic-bar', amount = 2},
-        {type = 'item', name = 'fawogae', amount = 5},
-        {type = 'item', name = 'native-flora', amount = 15},
-        {type = 'item', name = 'wood', amount = 3},
-        {type = 'item', name = 'ralesias', amount = 5},
-        {type = 'item', name = 'casein', amount = 10},
-        {type = 'item', name = 'wood-seeds', amount = 1},
-        {type = 'item', name = 'ash', amount = 10},
-        {type = 'item', name = 'moss', amount = 10},
-        {type = 'item', name = 'starch', amount = 4},
-        {type = 'item', name = "seaweed", amount = 5},
-        {type = 'fluid', name = 'steam', amount = 100}
-    },
-    results = {
-        {type = 'item', name = 'auog-food-02', amount = 5},
-    },
-}:add_unlock("sawdust")
-
 ----SIMIK food----
 RECIPE {
     type = 'recipe',
