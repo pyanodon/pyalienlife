@@ -308,6 +308,8 @@ local recipes_list =
   "empty-planter-box",
   "biobattery",
   "cooling-system",
+  "fiber-dry-storage",
+  "log-wood-fast",
 	}
 
 --adding to module limitation list
