@@ -1,3 +1,31 @@
+local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
+
+if data then
+    for recipe, ingredient in pairs({
+        [table.deepcopy(data.raw.recipe['seaweed-crop-mk01'])] = {'decider-combinator', 10},
+        [table.deepcopy(data.raw.recipe['seaweed-crop-mk02'])] = {'arithmetic-combinator', 20},
+        [table.deepcopy(data.raw.recipe['seaweed-crop-mk03'])] = {'decider-combinator', 30},
+        [table.deepcopy(data.raw.recipe['seaweed-crop-mk04'])] = {'arithmetic-combinator', 40},
+    }) do
+        recipe.name = recipe.name .. '-with-ai'
+        FUN.add_ingredient(recipe, ingredient)
+        data:extend{recipe}
+    end
+
+    for _, recipe in pairs({
+        table.deepcopy(data.raw.recipe['seaweed']),
+        table.deepcopy(data.raw.recipe['seaweed-2']),
+        table.deepcopy(data.raw.recipe['seaweed-3']),
+        table.deepcopy(data.raw.recipe['seaweed-4']),
+        table.deepcopy(data.raw.recipe['seaweed-5']),
+    }) do
+        recipe.name = recipe.name .. '-dry'
+        FUN.remove_ingredient(recipe, 'water')
+        FUN.remove_ingredient(recipe, 'water-saline')
+        data:extend{recipe}
+    end
+end
+
 return {
     affected_entities = { -- the entities that should be effected by this tech upgrade
         'seaweed-crop-mk01',
@@ -10,13 +38,12 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-seaweed.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'botany-mk02'},
+        prerequisites = {'seaweed-mk02'},
         unit = {
             count = 500,
             ingredients = {
                 {'automation-science-pack', 1},
                 {'logistic-science-pack', 1},
-                -- {'py-science-pack-3', 1},
             },
             time = 45
         }
@@ -28,7 +55,11 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.0, speed = 0.15, productivity = -0.12, type = 'module-effects'}
+                {consumption = 0.5, speed = 0.25, type = 'module-effects'},
+                {old = 'seaweed-crop-mk01', new = 'seaweed-crop-mk01-with-ai', type = 'recipe-replacement'},
+                {old = 'seaweed-crop-mk02', new = 'seaweed-crop-mk02-with-ai', type = 'recipe-replacement'},
+                {old = 'seaweed-crop-mk03', new = 'seaweed-crop-mk03-with-ai', type = 'recipe-replacement'},
+                {old = 'seaweed-crop-mk04', new = 'seaweed-crop-mk04-with-ai', type = 'recipe-replacement'},
             },
         },
         {
@@ -37,7 +68,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.1, speed = 0, productivity = -0.1, type = 'module-effects'}
+                {speed = -0.2, productivity = 0.1, type = 'module-effects'}
             }
         },
         {
@@ -46,7 +77,11 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.25, speed = 0, productivity = 0.2, type = 'module-effects'}
+                {old = 'seaweed', new = 'seaweed-dry', type = 'recipe-replacement'},
+                {old = 'seaweed-2', new = 'seaweed-2-dry', type = 'recipe-replacement'},
+                {old = 'seaweed-3', new = 'seaweed-3-dry', type = 'recipe-replacement'},
+                {old = 'seaweed-4', new = 'seaweed-4-dry', type = 'recipe-replacement'},
+                {old = 'seaweed-5', new = 'seaweed-5-dry', type = 'recipe-replacement'}
             }
         }
     },
