@@ -1,3 +1,61 @@
+local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
+
+if data then
+    for _, recipe in pairs{
+        table.deepcopy(data.raw.recipe['bio-scafold']),
+        table.deepcopy(data.raw.recipe['bio-scafold-2']),
+        table.deepcopy(data.raw.recipe['bio-scafold-3']),
+        table.deepcopy(data.raw.recipe['bio-scafold-4']),
+    } do
+        recipe.name = recipe.name .. '-with-lamp'
+        FUN.add_ingredient(recipe, {'small-lamp', 2})
+        FUN.multiply_result_amount(recipe, 'bio-scafold', 1.5)
+        data:extend{recipe}
+    end
+
+    data:extend{
+        {
+            type = 'recipe',
+            name = 'stem-cell-recycle-1',
+            enabled = false,
+            category = 'atomizer',
+            results = {{type = 'fluid', name = 'psc', amount = 10}},
+            ingredients = {
+                {'bones', 3},
+                {'chitin', 20},
+                {'mukmoux-fat', 5},
+            },
+            energy_required = 20
+        },
+        {
+            type = 'recipe',
+            name = 'stem-cell-recycle-2',
+            enabled = false,
+            category = 'atomizer',
+            results = {{type = 'fluid', name = 'psc', amount = 10}},
+            ingredients = {
+                {'bonemeal', 3},
+                {'skin', 5},
+                {'brain', 2},
+            },
+            energy_required = 20
+        },
+        {
+            type = 'recipe',
+            name = 'stem-cell-recycle-3',
+            enabled = false,
+            category = 'atomizer',
+            results = {{type = 'fluid', name = 'psc', amount = 10}},
+            ingredients = {
+                {'guts', 6},
+                {'meat', 4},
+                {type = 'fluid', name = 'blood', amount = 20},
+            },
+            energy_required = 20
+        }
+    }
+end
+
 return {
     affected_entities = { -- the entities that should be effected by this tech upgrade
         'bio-printer-mk01',
@@ -32,7 +90,10 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.0, speed = 0.15, productivity = -0.12, type = 'module-effects'}
+                {old = 'bio-scafold', new = 'bio-scafold-with-lamp', type = 'recipe-replacement'},
+                {old = 'bio-scafold-2', new = 'bio-scafold-2-with-lamp', type = 'recipe-replacement'},
+                {old = 'bio-scafold-3', new = 'bio-scafold-3-with-lamp', type = 'recipe-replacement'},
+                {old = 'bio-scafold-4', new = 'bio-scafold-4-with-lamp', type = 'recipe-replacement'},
             },
         },
         {
@@ -41,7 +102,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.1, speed = 0, productivity = -0.1, type = 'module-effects'}
+                {consumption = 2, speed = -0.5, productivity = 0.1, type = 'module-effects'}
             }
         },
         {
@@ -50,7 +111,9 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.25, speed = 0, productivity = 0.2, type = 'module-effects'}
+                {type = 'unlock-recipe', recipe = 'stem-cell-recycle-1'},
+                {type = 'unlock-recipe', recipe = 'stem-cell-recycle-2'},
+                {type = 'unlock-recipe', recipe = 'stem-cell-recycle-3'}
             }
         }
     }
