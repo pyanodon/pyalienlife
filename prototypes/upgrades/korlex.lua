@@ -25,7 +25,7 @@ if data then
         recipe.name = recipe.name .. '-slowed'
         FUN.add_ingredient(recipe, {'barrel-milk', 1})
         FUN.add_result(recipe, {'empty-barrel-milk', 1})
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
+        recipe.energy_required = math.ceil(recipe.energy_required * 1.1)
         data:extend{recipe}
     end
 
