@@ -1,3 +1,31 @@
+local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
+
+if data then
+    local recipe = data.raw.recipe['petri-dish-bacteria']
+
+    local with_agar = table.deepcopy(recipe)
+    local with_collagen = table.deepcopy(recipe)
+    local with_enz = table.deepcopy(recipe)
+
+    with_agar.name = 'petri-dish-bacteria-with-agar'
+    with_collagen.name = 'petri-dish-bacteria-with-collagen'
+    with_enz.name = 'petri-dish-bacteria-with-enzyme'
+
+    FUN.multiply_ingredient_amount(with_agar, 'petri-dish', 2)
+    FUN.multiply_ingredient_amount(with_collagen, 'petri-dish', 10)
+    FUN.multiply_ingredient_amount(with_enz, 'petri-dish', 50)
+
+    FUN.multiply_result_amount(with_agar, 'petri-dish-bacteria', 2)
+    FUN.multiply_result_amount(with_collagen, 'petri-dish-bacteria', 10)
+    FUN.multiply_result_amount(with_enz, 'petri-dish-bacteria', 50)
+
+    FUN.add_ingredient(with_agar, {'agar', 1})
+    FUN.add_ingredient(with_collagen, {'collagen', 1})
+    FUN.add_ingredient(with_enz, {'enzyme-pks', 1})
+
+    data:extend{with_agar, with_collagen, with_enz}
+end
+
 return {
     affected_entities = { -- the entities that should be effected by this tech upgrade
         'micro-mine-mk01',
@@ -10,14 +38,13 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-micromine.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'microbiology-mk02'},
+        prerequisites = {'microfilters-mk02'},
         unit = {
             count = 500,
             ingredients = {
                 {'automation-science-pack', 1},
                 {'logistic-science-pack', 1},
-                -- {'py-science-pack-3', 1},
-                {'chemical-science-pack', 1},
+                {'py-science-pack-2', 1},
             },
             time = 45
         }
@@ -29,7 +56,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.0, speed = 0.15, productivity = -0.12, type = 'module-effects'}
+                {recipe = 'petri-dish-bacteria-with-agar', type = 'unlock-recipe'}
             },
         },
         {
@@ -38,7 +65,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.1, speed = 0, productivity = -0.1, type = 'module-effects'}
+                {recipe = 'petri-dish-bacteria-with-collagen', type = 'unlock-recipe'}
             }
         },
         {
@@ -47,7 +74,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.25, speed = 0, productivity = 0.2, type = 'module-effects'}
+               {recipe = 'petri-dish-bacteria-with-enzyme', type = 'unlock-recipe'}
             }
         }
     }
