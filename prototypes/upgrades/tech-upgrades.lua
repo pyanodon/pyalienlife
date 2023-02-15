@@ -70,6 +70,8 @@ if (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalter
     table.insert(tech_upgrades, require('prototypes/upgrades/zungror'))
 end
 
+table.sort(tech_upgrades, function(a, b) return a.master_tech.name < b.master_tech.name end)
+
 if data then
     local FUN = require('__pycoalprocessing__/prototypes/functions/functions')
     for _, tech_upgrade in pairs(tech_upgrades) do

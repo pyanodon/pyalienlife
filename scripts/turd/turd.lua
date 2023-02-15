@@ -2,7 +2,6 @@ Turd = {}
 Turd.events = {}
 
 local tech_upgrades = require 'prototypes/upgrades/tech-upgrades'
-table.sort(tech_upgrades, function(a, b) return a.master_tech.name < b.master_tech.name end)
 
 local NOT_SELECTED = 333 -- enum
 
@@ -19,8 +18,8 @@ local function on_search(search_key, gui)
 		local sub_tech_flow = tech_upgrade_element.sub_tech_flow
 		if sub_tech_flow then
 			local tech_upgrade = tech_upgrades[tech_upgrade_element.tags.name]
-			local name = tech_upgrade.module_category or tech_upgrade.master_tech.name
-			tech_upgrade_element.visible = name:lower():find(search_key, 1, true)
+			local name = tech_upgrade.master_tech.name:lower()
+			tech_upgrade_element.visible = name:find(search_key, 1, true)
 		end
 	end
 end
