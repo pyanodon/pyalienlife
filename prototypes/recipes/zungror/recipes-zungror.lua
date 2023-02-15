@@ -74,48 +74,6 @@ RECIPE {
     },
 }:add_unlock("zungror")
 
----maturing---
-
-RECIPE {
-    type = 'recipe',
-    name = 'zungror-mature-01',
-    category = 'creature-chamber',
-    enabled = false,
-    energy_required = 80,
-    ingredients = {
-        {type = 'item', name = 'zungror-cocoon', amount = 1},
-        {type = 'fluid', name = 'fetal-serum', amount = 100},
-        {type = 'fluid', name = 'arqad-jelly', amount = 100},
-    },
-    results = {
-        {type = 'item', name = 'zungror', amount = 1},
-    },
-    main_product = "zungror",
-    subgroup = 'py-alienlife-zungror',
-    order = 'a',
-}:add_unlock("zungror")
-
-RECIPE {
-    type = 'recipe',
-    name = 'zungror-mature-02',
-    category = 'creature-chamber',
-    enabled = false,
-    energy_required = 10,
-    ingredients = {
-        {type = 'item', name = 'zungror-cocoon', amount = 1},
-        {type = 'item', name = 'gh', amount = 2},
-        {type = 'item', name = 'resveratrol', amount = 3},
-        {type = 'fluid', name = 'fetal-serum', amount = 100},
-        {type = 'fluid', name = 'arqad-jelly', amount = 100},
-    },
-    results = {
-        {type = 'item', name = 'zungror', amount = 1},
-    },
-    --main_product = "caged-zungror",
-    subgroup = 'py-alienlife-zungror',
-    order = 'a',
-}:add_unlock("zungror-mk02")
-
 ---caged---
 RECIPE {
     type = 'recipe',
