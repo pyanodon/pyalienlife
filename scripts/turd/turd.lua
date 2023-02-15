@@ -94,7 +94,8 @@ local function create_turd_page(gui, player)
 			content_frame.add{type = 'label', caption = {'', '[font=default-semibold][color=255,230,192]', {'gui-technology-preview.effects'}, '[/color][/font]'}}
 
 			local info_flow = content_frame.add{type = 'flow', direction = 'horizontal', name = 'info_flow'}
-			local effects_flow = info_flow.add{type = 'flow', direction = 'horizontal'}
+			local effects_scroll_pane = info_flow.add{type = 'scroll-pane', style = 'scroll_pane_under_subheader', vertical_scroll_policy = 'never', horizontal_scroll_policy = 'dont-show-but-allow-scrolling'}
+			local effects_flow = effects_scroll_pane.add{type = 'flow', direction = 'horizontal'}
 			effects_flow.style.vertical_align = 'center'
 			for _, effect in pairs(sub_tech.effects) do
 				if effect.type == 'module-effects' then
