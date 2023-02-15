@@ -10,7 +10,7 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/simik-digestion-mk06.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'simik-digestion-mk05','simik-mk04'},
+        prerequisites = {'simik-digestion-mk05', 'quantum'},
         unit = {
             count = 500,
             ingredients = {
@@ -24,9 +24,11 @@ return {
                 {'production-science-pack', 1},
                 {'py-science-pack-4', 1},
                 {'utility-science-pack', 1},
+                {'space-science-pack', 1},
             },
-            time = 45
-        }
+            time = 45,
+        },
+        effects = {{type = 'unlock-recipe', recipe = 'simik-den-mk04'}}
     },
     sub_techs = {
         {

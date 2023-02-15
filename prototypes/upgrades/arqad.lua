@@ -25,7 +25,7 @@ if data then
         [table.deepcopy(data.raw.recipe['honey-comb'])] = 'arqad-honey',
     }) do
         recipe.name = recipe.name .. '-buffed'
-        FUN.multiply_result_amount(recipe, result_name, 2)
+        FUN.multiply_result_amount(recipe, result_name, 3)
         data:extend{recipe}
     end
 

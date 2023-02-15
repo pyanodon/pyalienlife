@@ -10,7 +10,7 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/simik-digestion-mk05.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'simik-mk04'},
+        prerequisites = {'simik-digestion-mk04', 'simik-mk04'},
         unit = {
             count = 500,
             ingredients = {
