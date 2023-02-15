@@ -38,7 +38,7 @@ return {
         'fwf-mk04',
     },
     master_tech = { -- tech that is shown in the tech tree
-        name = 'fwf-upgrade',
+        name = 'fast-wood-forestry-upgrade',
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-fwf.png',
         icon_size = 128,
         order = 'c-a',

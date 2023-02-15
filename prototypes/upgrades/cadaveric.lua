@@ -46,7 +46,7 @@ return {
         'cadaveric-arum-mk04',
     },
     master_tech = { -- tech that is shown in the tech tree
-        name = 'cadaveric-upgrade',
+        name = 'cadaveric-arum-upgrade',
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-cadaveric.png',
         icon_size = 128,
         order = 'c-a',

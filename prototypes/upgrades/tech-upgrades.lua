@@ -66,6 +66,10 @@ local tech_upgrades = {
     require('prototypes/upgrades/simikmetalMK06'),
 }
 
+if (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalternativeenergy) then -- is pyAE installed?
+    table.insert(tech_upgrades, require('prototypes/upgrades/zungror'))
+end
+
 if data then
     local FUN = require('__pycoalprocessing__/prototypes/functions/functions')
     for _, tech_upgrade in pairs(tech_upgrades) do

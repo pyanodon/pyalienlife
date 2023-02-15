@@ -3,7 +3,7 @@ return {
         'antelope-enclosure-mk01'
     },
     master_tech = { -- tech that is shown in the tech tree
-        name = 'antelope-upgrade',
+        name = 'schrodinger-antelope-upgrade',
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-antelope.png',
         icon_size = 128,
         order = 'c-a',

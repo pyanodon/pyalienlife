@@ -1,120 +1,92 @@
+local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
-local tech_upgrades =
-    {
-        master_tech = -- This is the tech that is displayed in the tech tree
-            {
-                name = "zungror-upgrade",
-                icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-zungror.png",
-                icon_size = 128,
-                order = "c-a",
-                prerequisites = {"zungror-mk02"},
-                unit = {
-                    count = 500,
-                    ingredients = {
-                        {"automation-science-pack", 1},
-                        {"logistic-science-pack", 1},
-                        -- {"py-science-pack-3", 1},
-                        {"production-science-pack", 1},
-                    },
-                    time = 45
-                    }
+if data then
+    for i, recipe in pairs({
+        table.deepcopy(data.raw.recipe['zungror-lair-mk01']),
+        table.deepcopy(data.raw.recipe['zungror-lair-mk02']),
+        table.deepcopy(data.raw.recipe['zungror-lair-mk03']),
+    }) do
+        recipe.name = recipe.name .. '-with-dna'
+        FUN.add_ingredient(recipe, {name = 'yaedols-codex', amount = 6 * i, type = 'item'})
+        data:extend{recipe}
+    end
+
+    local duplicated_spinner = table.deepcopy(data.raw.recipe['vsk'])
+    duplicated_spinner.name = 'vsk-duplicated'
+    FUN.multiply_ingredient_amount(duplicated_spinner, 'vsk', 2)
+    data:extend{duplicated_spinner}
+
+    local buffed_fiber = table.deepcopy(data.raw.recipe['pre-fiber-1'])
+    buffed_fiber.name = 'pre-fiber-1-buffed'
+    FUN.multiply_ingredient_amount(buffed_fiber, 'zungror-cocoon', 0.5)
+    data:extend{buffed_fiber}
+
+    for isotope, recipe in pairs({
+        [{'pu-239', 10}] = table.deepcopy(data.raw.recipe['zungror-raising-1']),
+        [{'pu-240', 10}] = table.deepcopy(data.raw.recipe['zungror-raising-2']),
+        [{'pu-238', 10}] = table.deepcopy(data.raw.recipe['zungror-raising-3']),
+    }) do
+        recipe.name = recipe.name .. '-with-funny-rock'
+        FUN.add_ingredient(recipe, isotope)
+        data:extend{recipe}
+    end
+end
+
+return {
+    affected_entities = { -- the entities that should be effected by this tech upgrade
+        'zungror-lair-mk01',
+        'zungror-lair-mk02',
+        'zungror-lair-mk03',
+    },
+    master_tech = { -- tech that is shown in the tech tree
+        name = 'zungror-upgrade',
+        icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-zungror.png',
+        icon_size = 128,
+        order = 'c-a',
+        prerequisites = {'zungror-mk03'},
+        unit = {
+            count = 500,
+            ingredients = {
+                {'production-science-pack', 1},
+                {'py-science-pack-4', 1},
             },
-        sub_techs =
-            {
-            example_1 = -- can be whatever just used to identify this table
-            {
-            technology = -- no touchy
-                {
-                name = "geooxidation",
-                icon = "__pyalienlifegraphics3__/graphics/technology/geooxidation.png",
-                icon_size = 128,
-                order = "c-a",
-                },
-                entities =
-                {
-                    'zungror-lair-mk01',
-                    'zungror-lair-mk02',
-                    'zungror-lair-mk03',
-                    'zungror-lair-mk04',
-                },-- the entities that should be effected by this tech upgrade. can be a single entity or a table of entities
-            upgrades = -- the effects the tech will have on the building. 1 = 100%
-                {
-                    consumption = 0.0, --energy usage
-                    speed = 0.25,
-                    productivity = -0.0, -- productivity. and yes i know you`ll never use this but I`ll make sure it works anyway
-                    pollution = 0.4 -- pollution this machine will produce while running
-                },
-            techs_to_lock = -- techs that should be locked and hidden if this tech is researched
-                {
-                    'genooscillation',
-                    'oviduct-bombardment',
-                },
-            is_upgrade = true,
-            },
-        example_2 =
-            {
-            technology =
-                {
-                name = "genooscillation",
-                icon = "__pyalienlifegraphics3__/graphics/technology/genooscillation.png",
-                icon_size = 128,
-                order = "c-a",
-                },
-                entities =
-                {
-                    'zungror-lair-mk01',
-                    'zungror-lair-mk02',
-                    'zungror-lair-mk03',
-                    'zungror-lair-mk04',
-                },
-            upgrades =
-                {
-                    consumption = 0.0,
-                    speed = -0.2,
-                    productivity = 0.35,
-                    pollution = 0.45
-                },
-            techs_to_lock =
-                {
-                    'geooxidation',
-                    'oviduct-bombardment',
-                },
-            is_upgrade = false, -- tell this its an upgrade of other techs
-            prerequisites = -- table of all techs that are replaced by this one.
-                {
-                    --'example-1'
-                }
-            },
-        example_3 =
-            {
-            technology =
-                {
-                name = "oviduct-bombardment",
-                icon = "__pyalienlifegraphics3__/graphics/technology/oviduct-bombardment.png",
-                icon_size = 128,
-                order = "c-a",
-                },
-            entities =
-                {
-                    'zungror-lair-mk01',
-                    'zungror-lair-mk02',
-                    'zungror-lair-mk03',
-                    'zungror-lair-mk04',
-                },
-            upgrades =
-                {
-                    consumption = 0.3,
-                    speed = -0.5,
-                    productivity = 0.5,
-                    pollution = -0.0
-                },
-            techs_to_lock =
-                {
-                    'geooxidation',
-                    'genooscillation'
-                }
-            },
+            time = 45
         }
-    }
-
-return(tech_upgrades)
+    },
+    sub_techs = {
+        {
+            name = 'geooxidation',
+            icon = '__pyalienlifegraphics3__/graphics/technology/geooxidation.png',
+            icon_size = 128,
+            order = 'c-a',
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+                {productivity = 0.05, speed = 0.05, type = 'module-effects'},
+                {old = 'zungror-lair-mk01', new = 'zungror-lair-mk01-with-dna', type = 'recipe-replacement'},
+                {old = 'zungror-lair-mk02', new = 'zungror-lair-mk02-with-dna', type = 'recipe-replacement'},
+                {old = 'zungror-lair-mk03', new = 'zungror-lair-mk03-with-dna', type = 'recipe-replacement'},
+            },
+        },
+        {
+            name = 'genooscillation',
+            icon = '__pyalienlifegraphics3__/graphics/technology/genooscillation.png',
+            icon_size = 128,
+            order = 'c-a',
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+                {old = 'vsk', new = 'vsk-duplicated', type = 'recipe-replacement'},
+            }
+        },
+        {
+            name = 'oviduct-bombardment',
+            icon = '__pyalienlifegraphics3__/graphics/technology/oviduct-bombardment.png',
+            icon_size = 128,
+            order = 'c-a',
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+                {old = 'pre-fiber-1', new = 'pre-fiber-1-buffed', type = 'recipe-replacement'},
+                {old = 'zungror-raising-1', new = 'zungror-raising-1-with-funny-rock', type = 'recipe-replacement'},
+                {old = 'zungror-raising-2', new = 'zungror-raising-2-with-funny-rock', type = 'recipe-replacement'},
+                {old = 'zungror-raising-3', new = 'zungror-raising-3-with-funny-rock', type = 'recipe-replacement'},
+            }
+        }
+    },
+    module_category = 'zungror'
+}
