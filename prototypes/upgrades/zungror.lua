@@ -13,7 +13,7 @@ if data then
 
     local duplicated_spinner = table.deepcopy(data.raw.recipe['vsk'])
     duplicated_spinner.name = 'vsk-duplicated'
-    FUN.multiply_ingredient_amount(duplicated_spinner, 'vsk', 2)
+    FUN.multiply_result_amount(duplicated_spinner, 'vsk', 2)
     data:extend{duplicated_spinner}
 
     local buffed_fiber = table.deepcopy(data.raw.recipe['pre-fiber-1'])
@@ -47,6 +47,13 @@ return {
         unit = {
             count = 500,
             ingredients = {
+                {'automation-science-pack', 1},
+                {'py-science-pack-1', 1},
+                {'logistic-science-pack', 1},
+                {'military-science-pack', 1},
+                {'py-science-pack-2', 1},
+                {'chemical-science-pack', 1},
+                {'py-science-pack-3', 1},
                 {'production-science-pack', 1},
                 {'py-science-pack-4', 1},
             },
