@@ -28,7 +28,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.0, speed = 0.15, productivity = -0.12, type = 'module-effects'}
+                --{consumption = 0.0, speed = 0.15, productivity = -0.12, type = 'module-effects'}
             },
         },
         {

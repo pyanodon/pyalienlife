@@ -171,11 +171,6 @@ gui_events[defines.events.on_gui_click]['py_minimize_turd'] = function(event)
 	end
 end
 
-remote.add_interface('pywiki_turd_page', {
-	create_turd_page = create_turd_page,
-	on_search = on_search
-})
-
 local function handle_removed_items(surface, force, machine, removed_items)
 	for name, count in pairs(removed_items) do
 		local cannot_insert = count - machine.insert{name = name, count = count}
@@ -281,7 +276,6 @@ Turd.events.on_init = function()
 	global.turd_bonuses = global.turd_bonuses or {}
 	global.turd_beaconed_machines = global.turd_beaconed_machines or {}
 	global.turd_unlocked_modules = global.turd_unlocked_modules or {}
-	for _, force in pairs(game.forces) do reapply_turd_bonuses(force) end
 end
 
 local function on_researched(event)
@@ -326,3 +320,9 @@ Turd.events.on_destroyed = function(event)
 	if not beacon or not beacon.valid then return end
 	beacon.destroy()
 end
+
+remote.add_interface('pywiki_turd_page', {
+	create_turd_page = create_turd_page,
+	on_search = on_search,
+	reapply_turd_bonuses = reapply_turd_bonuses
+})

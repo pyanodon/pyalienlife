@@ -70,24 +70,6 @@ RECIPE {
 }:add_unlock("sap-mk02")
 
 RECIPE {
-    type = "recipe",
-    name = "sap-tree-mk02",
-    category = "nursery",
-    enabled = false,
-    energy_required = 45,
-    ingredients = {
-        {type = "item", name = "sap-seeds-mk02", amount = 5},
-        {type = "item", name = "planter-box", amount = 1},
-    },
-    results = {
-        {type = "item", name = "sap-tree-mk02", amount = 1}
-    },
-}:add_unlock("sap-mk02")
-
---mk03--
---WIP--
-
-RECIPE {
     type = 'recipe',
     name = 'sap-seeds-mk03-gen',
     category = 'nursery',
@@ -151,24 +133,6 @@ RECIPE {
 }:add_unlock("sap-mk03")
 
 RECIPE {
-    type = "recipe",
-    name = "sap-tree-mk03",
-    category = "nursery",
-    enabled = false,
-    energy_required = 45,
-    ingredients = {
-        {type = "item", name = "sap-seeds-mk03", amount = 5},
-        {type = "item", name = "planter-box", amount = 1},
-    },
-    results = {
-        {type = "item", name = "sap-tree-mk03", amount = 1}
-    },
-}:add_unlock("sap-mk03")
-
---mk04--
---WIP--
-
-RECIPE {
     type = 'recipe',
     name = 'sap-seeds-mk04-gen',
     category = 'nursery',
@@ -228,20 +192,5 @@ RECIPE {
     },
     results = {
         {type = "item", name = "sap-seeds-mk04", amount = 2}
-    },
-}:add_unlock("sap-mk04")
-
-RECIPE {
-    type = "recipe",
-    name = "sap-tree-mk04",
-    category = "nursery",
-    enabled = false,
-    energy_required = 45,
-    ingredients = {
-        {type = "item", name = "sap-seeds-mk04", amount = 5},
-        {type = "item", name = "planter-box", amount = 1},
-    },
-    results = {
-        {type = "item", name = "sap-tree-mk04", amount = 1}
     },
 }:add_unlock("sap-mk04")
