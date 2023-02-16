@@ -1946,6 +1946,7 @@ RECIPE {
         {type = 'item', name = 'magnetic-organ', amount = 1},
         {type = 'item', name = 'glandular-myocluster', amount = 1},
         {type = 'item', name = 'hormonal', amount = 1},
+        {type = 'item', name = 'venon-gland', amount = 1},
         {type = 'fluid', name = 'autoantigens', amount = 50},
     },
     results = {

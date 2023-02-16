@@ -1,3 +1,40 @@
+local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
+
+if data then
+    local creature_recipe = table.deepcopy(data.raw.recipe['vonix'])
+    FUN.add_ingredient(creature_recipe, {'strorix-unknown-sample', 5})
+    creature_recipe.name = 'vonix-with-cancer'
+    data:extend{creature_recipe}
+
+    for _, recipe in pairs({
+        table.deepcopy(data.raw.recipe['vonix-raising-1']),
+        table.deepcopy(data.raw.recipe['vonix-raising-2']),
+        table.deepcopy(data.raw.recipe['vonix-raising-3']),
+    }) do
+        recipe.name = recipe.name .. '-cancer'
+        local barrel_count = FUN.remove_result(recipe, 'empty-barrel')
+        FUN.add_result(recipe, {'mutant-enzymes-barrel', barrel_count})
+        recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
+        data:extend{recipe}
+    end
+
+    for _, recipe in pairs({
+        table.deepcopy(data.raw.recipe['vonix-den-mk01']),
+        table.deepcopy(data.raw.recipe['vonix-den-mk02']),
+        table.deepcopy(data.raw.recipe['vonix-den-mk03']),
+    }) do
+        recipe.name = recipe.name .. '-cheap'
+        for _, ingredient in pairs(recipe.ingredients) do
+            ingredient.name = ingredient[1] or ingredient.name
+            ingredient.type = ingredient.type or 'item'
+            ingredient.amount = math.ceil((ingredient[2] or ingredient.amount) / 4)
+            ingredient[1] = nil
+            ingredient[2] = nil
+        end
+        data:extend{recipe}
+    end
+end
+
 return {
     affected_entities = { -- the entities that should be effected by this tech upgrade
         'vonix-den-mk01',
@@ -9,14 +46,14 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-vonix.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'vonix'},
+        prerequisites = {'simik-mk01', 'vonix'},
         unit = {
             count = 500,
             ingredients = {
                 {'automation-science-pack', 1},
                 {'logistic-science-pack', 1},
                 {'chemical-science-pack', 1},
-                -- {'py-science-pack-3', 1},
+                {'py-science-pack-3', 1},
                 {'production-science-pack', 1},
             },
             time = 45
@@ -29,7 +66,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.0, speed = 0.15, productivity = -0.12, type = 'module-effects'}
+                
             },
         },
         {
@@ -38,7 +75,10 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.1, speed = 0, productivity = -0.1, type = 'module-effects'}
+                {old = 'vonix', new = 'vonix-with-cancer', type = 'recipe-replacement'},
+                {old = 'vonix-raising-1', new = 'vonix-raising-1-cancer', type = 'recipe-replacement'},
+                {old = 'vonix-raising-2', new = 'vonix-raising-2-cancer', type = 'recipe-replacement'},
+                {old = 'vonix-raising-3', new = 'vonix-raising-3-cancer', type = 'recipe-replacement'},
             }
         },
         {
@@ -47,7 +87,10 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.25, speed = 0, productivity = 0.2, type = 'module-effects'}
+                {consumption = -0.5, type = 'module-effects'},
+                {old = 'vonix-den-mk01', new = 'vonix-den-mk01-cheap', type = 'recipe-replacement'},
+                {old = 'vonix-den-mk02', new = 'vonix-den-mk02-cheap', type = 'recipe-replacement'},
+                {old = 'vonix-den-mk03', new = 'vonix-den-mk03-cheap', type = 'recipe-replacement'},
             }
         }
     },
