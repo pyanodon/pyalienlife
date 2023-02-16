@@ -43,6 +43,7 @@ if data then
         FUN.add_ingredient(recipe, {name = victims[i], amount = 1, type = 'item'})
         recipe.main_product = 'fawogae-abomination'
         recipe.results = {{'fawogae-abomination', profit[i]}}
+        recipe.energy_required = math.ceil(recipe.energy_required * 1.5)
         data:extend{recipe}
     end
 

@@ -10,6 +10,7 @@ if data then
         ingredients = {
             {type = 'fluid', name = 'pressured-water', amount = 100},
             {type = 'fluid', name = 'chlorine', amount = 20},
+            {'plastic-bar', 1}
         },
         results = {
             {type = 'item', name = 'chlorinated-water', amount = 1},
