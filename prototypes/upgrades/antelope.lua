@@ -26,24 +26,119 @@ if data then
     FUN.add_result(strangelets, {type = 'item', name = 'strangelets', probability = 0.25, amount = 1})
     data:extend{strangelets}
 
-    data:extend{{
-        type = 'recipe',
-        name = 'quantum-dots-antelope',
-        ingredients = {{'dimensional-gastricorg', 1}},
-        enabled = false,
-        category = 'antelope',
-        results = {
-            {type = 'item', name = 'quantum-dots', amount = 1},
-            {type = 'item', name = 'quantum-dots', probability = 0.333, amount = 8},
-            {type = 'item', name = 'quantum-dots', amount_min = 7, amount_max = 11},
-            {type = 'item', name = 'quantum-dots', amount = 2},
-            {type = 'item', name = 'quantum-dots', probability = 0.5, amount = 5},
-            {type = 'item', name = 'quantum-dots', amount_min = 1, amount_max = 2},
+    data:extend{
+        {
+            type = 'module',
+            name = 'pos-tilope',
+            stack_size = 50,
+            subgroup = 'py-alienlife-antelope',
+            icon = '__pyalienlifegraphics3__/graphics/icons/pos-tilope.png',
+            icon_size = 64,
+            limitation_message_key = 'antelope',
+            effect = {pollution = {bonus = 1}, speed = {bonus = 1}},
+            tier = 1,
+            order = 'r',
+            category = 'antelope'
         },
-        main_product = 'quantum-dots',
-        energy_required = 60,
-        subgroup = 'py-alienlife-antelope'
-    }}
+        {
+            type = 'module',
+            name = 'neutra-lope',
+            stack_size = 50,
+            subgroup = 'py-alienlife-antelope',
+            icon = '__pyalienlifegraphics3__/graphics/icons/neutra-lope.png',
+            icon_size = 64,
+            limitation_message_key = 'antelope',
+            effect = {pollution = {bonus = 1}, speed = {bonus = 1}},
+            tier = 1,
+            order = 'r',
+            category = 'antelope'
+        },
+        {
+            type = 'module',
+            name = 'anti-lope',
+            stack_size = 50,
+            subgroup = 'py-alienlife-antelope',
+            icon = '__pyalienlifegraphics3__/graphics/icons/anti-lope.png',
+            icon_size = 64,
+            limitation_message_key = 'antelope',
+            effect = {pollution = {bonus = 1}, speed = {bonus = 1}},
+            tier = 1,
+            order = 'r',
+            category = 'antelope'
+        },
+        {
+            type = 'recipe',
+            name = 'quantum-dots-folding-1',
+            ingredients = {
+                {type = 'item', name = 'antelope', amount = 1},
+            },
+            enabled = false,
+            category = 'antelope',
+            results = {
+                {type = 'item', name = 'pos-tilope', probability = 0.5, amount = 1},
+                {type = 'item', name = 'anti-lope', probability = 0.5, amount = 1},
+                {type = 'item', name = 'quantum-dots', probability = 0.5, amount = 1},
+            },
+            energy_required = 10,
+            subgroup = 'py-alienlife-antelope',
+            icon = '__pyalienlifegraphics__/graphics/icons/antelope.png',
+            icon_size = 64
+        },
+        {
+            type = 'recipe',
+            name = 'quantum-dots-folding-2',
+            ingredients = {
+                {type = 'item', name = 'antelope', amount = 1},
+                {type = 'item', name = 'anti-lope', amount = 1},
+            },
+            enabled = false,
+            category = 'antelope',
+            results = {
+                {type = 'item', name = 'neutra-lope', amount = 2},
+                {type = 'item', name = 'quantum-dots', probability = 0.5, amount = 1},
+            },
+            energy_required = 10,
+            subgroup = 'py-alienlife-antelope',
+            icon = '__pyalienlifegraphics3__/graphics/icons/anti-lope.png',
+            icon_size = 64
+        },
+        {
+            type = 'recipe',
+            name = 'quantum-dots-folding-3',
+            ingredients = {
+                {type = 'item', name = 'pos-tilope', amount = 1},
+                {type = 'item', name = 'neutra-lope', amount = 1},
+            },
+            enabled = false,
+            category = 'antelope',
+            results = {
+                {type = 'item', name = 'anti-lope', amount = 1},
+                {type = 'item', name = 'antelope', amount = 1},
+                {type = 'item', name = 'quantum-dots', probability = 0.5, amount = 1},
+            },
+            energy_required = 10,
+            subgroup = 'py-alienlife-antelope',
+            icon = '__pyalienlifegraphics3__/graphics/icons/pos-tilope.png',
+            icon_size = 64
+        },
+        {
+            type = 'recipe',
+            name = 'quantum-dots-folding-4',
+            ingredients = {
+                {type = 'item', name = 'neutra-lope', amount = 1},
+            },
+            enabled = false,
+            category = 'antelope',
+            results = {
+                {type = 'item', name = 'antelope', amount = 1},
+                {type = 'item', name = 'quantum-dots', probability = 0.5, amount = 1},
+            },
+            energy_required = 10,
+            subgroup = 'py-alienlife-antelope',
+            icon = '__pyalienlifegraphics3__/graphics/icons/neutra-lope.png',
+            icon_size = 64
+        },
+    }
 end
 
 return {
@@ -107,7 +202,10 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {recipe = 'quantum-dots-antelope', type = 'unlock-recipe'}
+                {recipe = 'quantum-dots-folding-1', type = 'unlock-recipe'},
+                {recipe = 'quantum-dots-folding-2', type = 'unlock-recipe'},
+                {recipe = 'quantum-dots-folding-3', type = 'unlock-recipe'},
+                {recipe = 'quantum-dots-folding-4', type = 'unlock-recipe'},
             }
         }
     },
