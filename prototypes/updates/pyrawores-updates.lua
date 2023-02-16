@@ -4,14 +4,15 @@ data.raw.technology['lead-mk02'].prerequisites = {}
 data.raw.technology['machines-mk02'].prerequisites = {}--TODO:sort out pyal tech tree issues with pyro
 --TECHNOLOGY("lead-mk02")
 
-TECHNOLOGY("coke-mk01"):add_pack("py-science-pack-1")
 TECHNOLOGY("aluminium-mk01"):add_pack("py-science-pack-1")
 TECHNOLOGY("casting-mk01"):add_pack("py-science-pack-1")
 TECHNOLOGY("chromium-mk01"):add_pack("py-science-pack-1")
 TECHNOLOGY("coal-mk01"):add_pack("py-science-pack-1")
+TECHNOLOGY("coke-mk01"):add_pack("py-science-pack-1")
 TECHNOLOGY("hot-air-mk01"):add_pack("py-science-pack-1")
 TECHNOLOGY("iron-mk01"):add_pack("py-science-pack-1")
 TECHNOLOGY("lead-mk01"):add_pack("py-science-pack-1")
+TECHNOLOGY("quartz-mk01"):add_pack("py-science-pack-1")
 TECHNOLOGY("nickel-mk01"):add_pack("py-science-pack-1")
 TECHNOLOGY("smelters-mk01"):add_pack("py-science-pack-1")
 TECHNOLOGY("tin-mk01"):add_pack("py-science-pack-1")
