@@ -1,6 +1,33 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
 if data then
+    data:extend{{
+        type = 'recipe',
+        name = 'vonix-direct-raising',
+        enabled = false,
+        subgroup = 'py-alienlife-vonix',
+        ingredients = {
+            {type = 'item', name = 'vonix', amount = 2},
+            {type = 'item', name = 'meat', amount = 5},
+            {type = 'item', name = 'guts', amount = 10},
+            {type = 'item', name = 'caged-mukmoux', amount = 1},
+            {type = 'item', name = 'caged-auog', amount = 1},
+            {type = 'item', name = 'arqad-honey-barrel', amount = 3},
+            {type = 'item', name = 'water-barrel', amount = 3},
+            {type = 'item', name = 'bedding', amount = 1},
+        },
+        results = {
+            {type = 'item', name = 'vonix-cub', amount_min = 4, amount_max = 6},
+            {type = 'item', name = 'vonix', amount = 1},
+            {type = 'item', name = 'vonix', amount = 1, probability = 0.95},
+            {type = 'item', name = 'cage', amount = 2},
+            {type = 'item', name = 'empty-barrel', amount = 6},
+        },
+        energy_required = 70,
+        category = 'rc',
+        main_product = 'vonix-cub'
+    }}
+
     local creature_recipe = table.deepcopy(data.raw.recipe['vonix'])
     FUN.add_ingredient(creature_recipe, {'strorix-unknown-sample', 5})
     creature_recipe.name = 'vonix-with-cancer'
@@ -56,7 +83,6 @@ return {
                 {'logistic-science-pack', 1},
                 {'chemical-science-pack', 1},
                 {'py-science-pack-3', 1},
-                {'production-science-pack', 1},
             },
             time = 45
         }
@@ -68,7 +94,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                
+                {type = 'unlock-recipe', recipe = 'vonix-direct-raising'}
             },
         },
         {

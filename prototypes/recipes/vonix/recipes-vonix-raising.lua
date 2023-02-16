@@ -26,6 +26,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name = 'vonix-eggs', amount = 6},
+					{name = 'cage', amount = 2},
 				},
 			crafting_speed = 45,
 			tech = 'vonix'
