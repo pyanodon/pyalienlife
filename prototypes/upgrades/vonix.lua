@@ -15,6 +15,8 @@ if data then
         local barrel_count = FUN.remove_result(recipe, 'empty-barrel')
         FUN.add_result(recipe, {'mutant-enzymes-barrel', barrel_count})
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
+        recipe.icon = '__pyalienlifegraphics__/graphics/icons/mutant-enzymes.png'
+        recipe.icon_size = 64
         data:extend{recipe}
     end
 
