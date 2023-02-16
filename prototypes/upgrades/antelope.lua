@@ -130,7 +130,8 @@ if data then
             enabled = false,
             category = 'antelope',
             results = {
-                {type = 'item', name = 'antelope', amount = 1},
+                {type = 'item', name = 'antelope', amount = 1, probability = 0.5},
+                {type = 'item', name = 'pos-tilope', amount = 1, probability = 0.5},
                 {type = 'item', name = 'quantum-dots', probability = 0.5, amount = 1},
             },
             energy_required = 10,
