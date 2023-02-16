@@ -6,7 +6,6 @@ RECIPE {
     ingredients = {
         {"mixer-mk01", 1},
         {"tailings-pond", 1},
-        {"moss-farm-mk01", 1},
         {"steel-plate", 40},
         --{"glass", 35}
     },

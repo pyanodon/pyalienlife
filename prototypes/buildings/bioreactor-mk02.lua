@@ -5,7 +5,6 @@ RECIPE {
     enabled = false,
     ingredients = {
         {"bio-reactor-mk01", 1},
-        {"moss-farm-mk02", 1},
         {"steel-plate", 50},
         {"glass", 50},
         {"advanced-circuit", 10},

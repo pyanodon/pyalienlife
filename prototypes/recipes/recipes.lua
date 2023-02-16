@@ -2670,21 +2670,6 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'chlorinated-water',
-    category = 'chemistry',
-    enabled = false,
-    energy_required = 3,
-    ingredients = {
-        {type = 'fluid', name = 'water', amount = 100},
-        {type = 'fluid', name = 'chlorine', amount = 10},
-    },
-    results = {
-        {type = 'item', name = 'chlorinated-water', amount = 1},
-    },
-}
-
-RECIPE {
-    type = 'recipe',
     name = 'arthropod-blood-to-organic-solvent',
     category = 'rectisol',
     enabled = false,
