@@ -33,7 +33,7 @@ if data then
     }) do
         recipe.name = recipe.name .. '-doused'
         FUN.remove_result(recipe, 'waste-water')
-        FUN.add_result(recipe, {type = 'fluid', name = 'pressured-water', amount = 10})
+        FUN.add_result(recipe, {type = 'fluid', name = 'pressured-water', amount = 100})
         FUN.multiply_result_amount(recipe, 'fish-egg', 1.15)
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         data:extend{recipe}
