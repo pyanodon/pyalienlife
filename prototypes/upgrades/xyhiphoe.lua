@@ -46,7 +46,7 @@ if data then
             {'xyhiphoe', 1}
         },
         main_product = 'xyhiphoe',
-        enabled = true,
+        enabled = false,
         category = 'xyhiphoe',
         energy_required = 170
     }}

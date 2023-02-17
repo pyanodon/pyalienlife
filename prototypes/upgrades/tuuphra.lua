@@ -4,7 +4,7 @@ if data then
     local recipe = table.deepcopy(data.raw.recipe['tuuphra-seeds'])
     recipe.name = recipe.name .. '-with-water'
     FUN.add_ingredient(recipe, {type = 'fluid', name = 'water', amount = 1000})
-    FUN.multiply_result_amount(recipe, 'tuuphra-seeds', 1.2)
+    FUN.add_result_amount(recipe, 'tuuphra-seeds', 1)
     data:extend{recipe}
 
     data:extend{
