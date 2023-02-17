@@ -434,12 +434,18 @@ data:extend {
         type = "item-subgroup",
         name = "py-alienlife-modules",
         group = "py-alienlife",
-        order = "z"
+        order = "z-a"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-turd-modules",
+        group = "py-alienlife",
+        order = "z-b"
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-compost",
         group = "py-alienlife",
-        order = "zz"
+        order = "z-c"
     },
 }
