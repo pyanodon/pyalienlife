@@ -2655,22 +2655,6 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'abacus',
-    category = 'crafting',
-    enabled = false,
-    energy_required = 3,
-    ingredients = {
-        {type = 'item', name = 'iron-stick', amount = 2},
-        {type = 'item', name = 'plastic-bar', amount = 2},
-        {type = 'item', name = 'wood', amount = 1},
-    },
-    results = {
-        {type = 'item', name = 'abacus', amount = 2},
-    },
-}--not a real tech
-
-RECIPE {
-    type = 'recipe',
     name = 'arthropod-blood-to-organic-solvent',
     category = 'rectisol',
     enabled = false,
