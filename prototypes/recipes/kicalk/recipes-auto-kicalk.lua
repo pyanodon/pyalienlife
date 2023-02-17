@@ -23,7 +23,7 @@ FUN.autorecipes {
 			crafting_speed = 150,
 			tech = 'kicalk'
 		},
-		--red
+		--base
 		{
 			ingredients =
 				{
@@ -38,7 +38,7 @@ FUN.autorecipes {
 				crafting_speed = 120,
 				tech = 'kicalk'
         },
-		--py
+		--py2
         {
 			ingredients =
 				{
@@ -54,7 +54,7 @@ FUN.autorecipes {
 				crafting_speed = 90,
 				tech = 'kicalk-mk02'
         },
-        --also py? fix this
+        --py3
         {
 			ingredients =
 				{
@@ -69,22 +69,23 @@ FUN.autorecipes {
 				crafting_speed = 60,
 				tech = 'kicalk-mk03'
         },
-		--production
+		--py4
 		{
 			ingredients =
 				{
 					{name='fertilizer', add_amount = 6},
-					{name='water',remove_item = true},
-					{name = 'phosphorous-acid', amount = 50, fallback = 'nitrogen', fluidbox_index = 1},
+					{name = 'phosphorous-acid-barrel', amount = 1, fallback = 'nitrogen-barrel'},
 					{name='biomass', add_amount = 10},
 					{name='clay', add_amount = 11},
 				},
 			results =
 				{
-					{name='kicalk', amount = 50}
+					{name='kicalk', amount = 50},
+					{name='empty-barrel', amount = 1}
 				},
 			crafting_speed = 30,
-			tech = 'kicalk-mk04'
+			tech = 'kicalk-mk04',
+			main_product = 'kicalk'
 		},
 	}
 }

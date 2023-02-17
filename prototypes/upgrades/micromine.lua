@@ -23,6 +23,9 @@ if data then
     FUN.add_ingredient(with_collagen, {'collagen', 1})
     FUN.add_ingredient(with_enz, {'enzyme-pks', 1})
 
+    with_collagen.energy_required = 100
+    with_enz.energy_required = 500
+
     data:extend{with_agar, with_collagen, with_enz}
 end
 
