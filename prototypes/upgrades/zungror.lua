@@ -1,15 +1,10 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
 if data then
-    for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['zungror-lair-mk01']),
-        table.deepcopy(data.raw.recipe['zungror-lair-mk02']),
-        table.deepcopy(data.raw.recipe['zungror-lair-mk03']),
-    }) do
-        recipe.name = recipe.name .. '-with-dna'
-        FUN.add_ingredient(recipe, {name = 'yaedols-codex', amount = 6 * i, type = 'item'})
-        data:extend{recipe}
-    end
+    local zungror = table.deepcopy(data.raw.recipe['zungror'])
+    zungror.name = 'zungror-with-yaedols-codex'
+    FUN.add_ingredient(zungror, {name = 'yaedols-codex', amount = 6, type = 'item'})
+    data:extend{zungror}
 
     local duplicated_spinner = table.deepcopy(data.raw.recipe['vsk'])
     duplicated_spinner.name = 'vsk-duplicated'
@@ -68,9 +63,7 @@ return {
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
                 {productivity = 0.05, speed = 0.05, type = 'module-effects'},
-                {old = 'zungror-lair-mk01', new = 'zungror-lair-mk01-with-dna', type = 'recipe-replacement'},
-                {old = 'zungror-lair-mk02', new = 'zungror-lair-mk02-with-dna', type = 'recipe-replacement'},
-                {old = 'zungror-lair-mk03', new = 'zungror-lair-mk03-with-dna', type = 'recipe-replacement'},
+                {old = 'zungror', new = 'zungror-with-yaedols-codex', type = 'recipe-replacement'},
             },
         },
         {
