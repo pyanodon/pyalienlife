@@ -70,10 +70,12 @@ FUN.autorecipes {
             },
         results =
             {
-                {name='bhoddos', add_amount = 10}
+                {name='bhoddos', add_amount = 10},
+                {name='empty-barrel', amount = 1}
             },
         crafting_speed = 40,
-        tech = 'bhoddos-mk04'
+        tech = 'bhoddos-mk04',
+        main_product = 'bhoddos'
     },
 	}
 }
