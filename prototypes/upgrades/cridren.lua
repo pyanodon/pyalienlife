@@ -59,7 +59,7 @@ if data then
         data:extend{recipe}
     end
 
-    local mufflers = {mods.pyalternativeenergy and 'czts-slab' or 'melamine', mods.pyalternativeenergy and 'alag-grid' or 'stone-wool', 'wall-shield', 'reinforced-wall-shield'}
+    local mufflers = {mods.pyalternativeenergy and 'polycrystalline-slab' or 'melamine', mods.pyalternativeenergy and 'alag-grid' or 'stone-wool', 'wall-shield', 'reinforced-wall-shield'}
     for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['cridren-enclosure-mk01']),
         table.deepcopy(data.raw.recipe['cridren-enclosure-mk02']),
@@ -90,8 +90,8 @@ return {
             ingredients = {
                 {'automation-science-pack', 1},
                 {'logistic-science-pack', 1},
-                -- {'py-science-pack-3', 1},
                 {'chemical-science-pack', 1},
+                {'py-science-pack-3', 1},
             },
             time = 45
         }
@@ -126,7 +126,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {speed = 0.1, type = 'module-effects'},
+                {speed = 0.1, consumption = -0.25, type = 'module-effects'},
                 {old = 'cridren-enclosure-mk01', new = 'cridren-enclosure-mk01-with-mufflers', type = 'recipe-replacement'},
                 {old = 'cridren-enclosure-mk02', new = 'cridren-enclosure-mk02-with-mufflers', type = 'recipe-replacement'},
                 {old = 'cridren-enclosure-mk03', new = 'cridren-enclosure-mk03-with-mufflers', type = 'recipe-replacement'},
