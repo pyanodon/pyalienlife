@@ -1,3 +1,77 @@
+local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
+
+local pyAE = (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalternativeenergy)
+
+if data then
+    data:extend{{
+        type = 'recipe',
+        name = 'cridren-sixth-layer-ethylene-chlorohydrin',
+        enabled = false,
+        category = 'cridren',
+        ingredients = {
+            {'caged-phadai', 1},
+            {'silver-plate', 2},
+            {'water-barrel', 8},
+        },
+        results = {
+            {'cage', 1},
+            {'ethylene-chlorohydrin-barrel',  8},
+            {'bones', 2}
+        },
+        energy_required = 40,
+        main_product = 'ethylene-chlorohydrin-barrel',
+        icon = '__pypetroleumhandlinggraphics__/graphics/icons/ethylene-chlorohydrin.png',
+        icon_size = 32
+    }}
+
+    if pyAE then
+        data:extend{{
+            type = 'recipe',
+            name = 'cridren-sixth-layer-organic-acid-anhydride',
+            enabled = false,
+            category = 'cridren',
+            ingredients = {
+                {'caged-vrauks', 1},
+                {'geothermal-water-barrel', 8},
+                {'p2s5', 1}
+            },
+            results = {
+                {'chitin', 3},
+                {'organic-acid-anhydride-barrel',  8},
+                {'cage', 1},
+            },
+            energy_required = 40,
+            main_product = 'organic-acid-anhydride-barrel',
+            icon = '__pyalternativeenergygraphics__/graphics/icons/organic-acid-anhydride.png',
+            icon_size = 64
+        }}
+    end
+
+    for _, recipe in pairs({
+        table.deepcopy(data.raw.recipe['cridren-1']),
+        table.deepcopy(data.raw.recipe['cridren-2']),
+        table.deepcopy(data.raw.recipe['cridren-3']),
+        table.deepcopy(data.raw.recipe['cridren-4']),
+    }) do
+        recipe.name = recipe.name .. '-neural-cranio'
+        FUN.multiply_ingredient_amount(recipe, 'caged-arthurian', 2)
+        FUN.multiply_result_amount(recipe, 'cage', 2)
+        data:extend{recipe}
+    end
+
+    local mufflers = {mods.pyalternativeenergy and 'czts-slab' or 'melamine', mods.pyalternativeenergy and 'alag-grid' or 'stone-wool', 'wall-shield', 'reinforced-wall-shield'}
+    for i, recipe in pairs({
+        table.deepcopy(data.raw.recipe['cridren-enclosure-mk01']),
+        table.deepcopy(data.raw.recipe['cridren-enclosure-mk02']),
+        table.deepcopy(data.raw.recipe['cridren-enclosure-mk03']),
+        table.deepcopy(data.raw.recipe['cridren-enclosure-mk04']),
+    }) do
+        recipe.name = recipe.name .. '-with-mufflers'
+        FUN.add_ingredient(recipe, {mufflers[i], i * 35})
+        data:extend{recipe}
+    end
+end
+
 return {
     affected_entities = { -- the entities that should be effected by this tech upgrade
         'cridren-enclosure-mk01',
@@ -29,7 +103,8 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.0, speed = 0.15, productivity = -0.12, type = 'module-effects'}
+                {type = 'unlock-recipe', recipe = 'cridren-sixth-layer-ethylene-chlorohydrin'},
+                pyAE and {type = 'unlock-recipe', recipe = 'cridren-sixth-layer-organic-acid-anhydride'}
             },
         },
         {
@@ -38,7 +113,11 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.1, speed = 0, productivity = -0.1, type = 'module-effects'}
+                {productivity = 0.2, type = 'module-effects'},
+                {old = 'cridren-1', new = 'cridren-1-neural-cranio', type = 'recipe-replacement'},
+                {old = 'cridren-2', new = 'cridren-2-neural-cranio', type = 'recipe-replacement'},
+                {old = 'cridren-3', new = 'cridren-3-neural-cranio', type = 'recipe-replacement'},
+                {old = 'cridren-4', new = 'cridren-4-neural-cranio', type = 'recipe-replacement'},
             }
         },
         {
@@ -47,7 +126,11 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.25, speed = 0, productivity = 0.2, type = 'module-effects'}
+                {speed = 0.1, type = 'module-effects'},
+                {old = 'cridren-enclosure-mk01', new = 'cridren-enclosure-mk01-with-mufflers', type = 'recipe-replacement'},
+                {old = 'cridren-enclosure-mk02', new = 'cridren-enclosure-mk02-with-mufflers', type = 'recipe-replacement'},
+                {old = 'cridren-enclosure-mk03', new = 'cridren-enclosure-mk03-with-mufflers', type = 'recipe-replacement'},
+                {old = 'cridren-enclosure-mk04', new = 'cridren-enclosure-mk04-with-mufflers', type = 'recipe-replacement'},
             }
         }
     },

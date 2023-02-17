@@ -139,10 +139,6 @@ local kicalk = {
     module_category = 'kicalk'
 }
 
-if (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalternativeenergy) then -- is pyAE installed?
-    -- pass
-else
-    table.remove(kicalk.sub_techs, 1)
-end
-
+local pyAE = (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalternativeenergy)
+if not pyAE then table.remove(kicalk.sub_techs, 1) end
 return kicalk

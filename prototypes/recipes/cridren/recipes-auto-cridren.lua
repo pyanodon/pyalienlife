@@ -21,9 +21,11 @@ FUN.autorecipes {
 			results =
 				{
 					{name='cridren', amount = 3},
+					{name = 'cage', amount = 1}
 				},
 			crafting_speed = 120,
-			tech = 'cridren'
+			tech = 'cridren',
+			main_product = 'cridren'
 		},
 		--py
         {
@@ -38,45 +40,52 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='cridren', add_amount = 3}
+					{name='cridren', add_amount = 3},
+					{name = 'cage', add_amount = 1}
 				},
 				crafting_speed = 90,
-				tech = 'cridren-mk02'
+				tech = 'cridren-mk02',
+				main_product = 'cridren'
         },
 		--prod
         {
 			ingredients =
 				{
 					{name='cridren-seeds', add_amount = 3},
+                    {name='caged-arthurian', add_amount = 1},
 					{name='soil', remove_item = true},
                     {name='native-flora', amount = 30},
 					{name='bones', amount = 20},
 				},
 			results =
 				{
-					{name='cridren', add_amount = 3}
+					{name='cridren', add_amount = 3},
+					{name = 'cage', add_amount = 1}
 				},
 				crafting_speed = 60,
-				tech = 'cridren-mk03'
+				tech = 'cridren-mk03',
+				main_product = 'cridren'
         },
 		--utility
         {
 			ingredients =
 				{
                     {name='cridren-seeds', add_amount = 3},
-                    {name='caged-arthurian', add_amount = 2},
+                    {name='caged-arthurian', add_amount = 1},
                     {name='fish', add_amount = 5},
 					{name='bones', add_amount = 10},
                     {name='fertilizer', add_amount = 10},
 					{name='gh', amount = 1},
-					{name='antiviral', amount = 1},
+					{name='antiviral', amount = 1}
 				},
 			results =
 				{
-					{name='cridren', add_amount = 3}
+					{name='cridren', add_amount = 3},
+					{name = 'cage', add_amount = 1}
 				},
 				crafting_speed = 30,
-				tech = 'cridren-mk04'
+				tech = 'cridren-mk04',
+				main_product = 'cridren'
 		},
 	}
 }

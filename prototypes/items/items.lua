@@ -7920,7 +7920,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "a",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 35}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "cridren"
 }
