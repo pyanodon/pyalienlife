@@ -59,8 +59,9 @@ if data then
     } do
         recipe.name = recipe.name .. '-acetone'
         FUN.remove_result(recipe, 'waste-water')
-        FUN.add_ingredient(recipe, {type = 'fluid', name = 'waste-water', amount = 250, fluidbox_index = 3})
+        FUN.add_ingredient(recipe, {type = 'fluid', name = 'waste-water', amount = 250, fluidbox_index = 2})
         FUN.add_result_amount(recipe, 'xyhiphoe-cub', 2)
+        FUN.remove_ingredient(recipe, 'pressured-water')
         FUN.add_result(recipe, {type = 'fluid', name = 'acetone', amount = 100})
         data:extend{recipe}
     end
