@@ -198,8 +198,8 @@ RECIPE {
         {type = 'fluid', name = 'phytoplankton', amount = 60, fluidbox_index = 1},
         },
     results = {
-        {type = 'item', name = 'fish-mk04', amount = 10, probability = 0.003},
-        {type = 'item', name = 'fish', amount = 1, probability = 0.7},
+        {type = 'item', name = 'fish-mk04', amount = 1, probability = 0.003},
+        {type = 'item', name = 'fish', amount = 10, probability = 0.7},
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     --main_product = "fish-mk04",
