@@ -59,11 +59,16 @@ if data then
         }
     }
 
-    local machine_recipe = table.deepcopy(data.raw.recipe['arqad-hive-mk01'])
-    machine_recipe.name = machine_recipe.name .. '-with-cags'
-    FUN.add_ingredient(machine_recipe, {name = 'cags', amount = 10, type = 'item'})
-    FUN.remove_ingredient(machine_recipe, 'glass')
-    data:extend{machine_recipe}
+    for i, machine_recipe in pairs({
+        table.deepcopy(data.raw.recipe['arqad-hive-mk01']),
+        table.deepcopy(data.raw.recipe['arqad-hive-mk02']),
+        table.deepcopy(data.raw.recipe['arqad-hive-mk03']),
+        table.deepcopy(data.raw.recipe['arqad-hive-mk04']),
+    }) do
+        machine_recipe.name = machine_recipe.name .. '-with-cags'
+        FUN.add_ingredient(machine_recipe, {name = 'cags', amount = 10 * i, type = 'item'})
+        data:extend{machine_recipe}
+    end
 
     local ez_queen = table.deepcopy(data.raw.recipe['arqad'])
     ez_queen.name = 'ez-queen'
@@ -122,6 +127,9 @@ return {
                 {productivity = 0.03, type = 'module-effects'},
                 {recipe = 'cags', type = 'unlock-recipe'},
                 {old = 'arqad-hive-mk01', new = 'arqad-hive-mk01-with-cags', type = 'recipe-replacement'},
+                {old = 'arqad-hive-mk02', new = 'arqad-hive-mk02-with-cags', type = 'recipe-replacement'},
+                {old = 'arqad-hive-mk03', new = 'arqad-hive-mk03-with-cags', type = 'recipe-replacement'},
+                {old = 'arqad-hive-mk04', new = 'arqad-hive-mk04-with-cags', type = 'recipe-replacement'},
             }
         },
         {

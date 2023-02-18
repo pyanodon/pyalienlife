@@ -42,10 +42,16 @@ if data then
         data:extend{recipe}
     end
 
-    local machine_recipe = table.deepcopy(data.raw.recipe['zipir-reef-mk01'])
-    machine_recipe.name = machine_recipe.name .. '-with-rc'
-    FUN.add_ingredient(machine_recipe, {name = 'rc-mk01', amount = 1, type = 'item'})
-    data:extend{machine_recipe}
+    for i, machine_recipe in pairs({
+        table.deepcopy(data.raw.recipe['zipir-reef-mk01']),
+        table.deepcopy(data.raw.recipe['zipir-reef-mk02']),
+        table.deepcopy(data.raw.recipe['zipir-reef-mk03']),
+        table.deepcopy(data.raw.recipe['zipir-reef-mk04']),
+    }) do
+        machine_recipe.name = machine_recipe.name .. '-with-rc'
+        FUN.add_ingredient(machine_recipe, {name = 'rc-mk0'..i, amount = 1, type = 'item'})
+        data:extend{machine_recipe}
+    end
 end
 
 return {
@@ -106,6 +112,9 @@ return {
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
                 {consumption = -0.40, speed = 0.1, type = 'module-effects'},
                 {old = 'zipir-reef-mk01', new = 'zipir-reef-mk01-with-rc', type = 'recipe-replacement'},
+                {old = 'zipir-reef-mk02', new = 'zipir-reef-mk02-with-rc', type = 'recipe-replacement'},
+                {old = 'zipir-reef-mk03', new = 'zipir-reef-mk03-with-rc', type = 'recipe-replacement'},
+                {old = 'zipir-reef-mk04', new = 'zipir-reef-mk04-with-rc', type = 'recipe-replacement'},
             }
         }
     },

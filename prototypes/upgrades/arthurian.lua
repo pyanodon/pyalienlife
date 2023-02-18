@@ -23,7 +23,7 @@ if data then
                 {type = 'item', name = 'wood', amount = 1},
             },
             results = {
-                {type = 'item', name = 'abacus', amount = 2},
+                {type = 'item', name = 'abacus', amount = 1},
             },
         }
     }
