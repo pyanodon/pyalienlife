@@ -1,10 +1,10 @@
 local tech_upgrades = {
     -- pyAL non-organics
-    require('prototypes/upgrades/atomizer'),
+    --require('prototypes/upgrades/atomizer'),
     require('prototypes/upgrades/bioprinting'),
     require('prototypes/upgrades/biofactory'),
     require('prototypes/upgrades/bioreactor'),
-    require('prototypes/upgrades/compost'),
+    --require('prototypes/upgrades/compost'),
     require('prototypes/upgrades/creature'),
     require('prototypes/upgrades/data-array'),
     require('prototypes/upgrades/genlab'),
