@@ -153,6 +153,7 @@ local recipes_list =
   "gta",
   "cysteine",
   "adam42-gen",
+  "adam42-gen-laser",
   "zinc-finger-proteins",
   "anabolic-rna",
   "propeptides",
