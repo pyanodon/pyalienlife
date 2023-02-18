@@ -659,7 +659,6 @@ require('prototypes/recipes/rennea/recipes-rennea-modules')
 
 --Sap
 require('prototypes/recipes/sap/recipes-sap')
-require('prototypes/recipes/sap/recipes-sap-products')
 require('prototypes/recipes/sap/recipes-sap-modules')
 
 --Scrondrix

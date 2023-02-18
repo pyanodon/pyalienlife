@@ -113,7 +113,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {productivity = 0.2, type = 'module-effects'},
+                {productivity = 0.15, type = 'module-effects'},
                 {old = 'cridren-1', new = 'cridren-1-neural-cranio', type = 'recipe-replacement'},
                 {old = 'cridren-2', new = 'cridren-2-neural-cranio', type = 'recipe-replacement'},
                 {old = 'cridren-3', new = 'cridren-3-neural-cranio', type = 'recipe-replacement'},

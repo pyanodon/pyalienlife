@@ -3,6 +3,21 @@
 --SUR--
 --WIP--
 
+RECIPE {
+    type = "recipe",
+    name = "sap-01",
+    category = "sap",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+    },
+    results = {
+        {type = 'item', name = 'saps', amount = 1}
+    },
+    main_product = 'saps'
+}:add_unlock("sap-mk01")
+
+
 --mk02--
 --WIP--
 

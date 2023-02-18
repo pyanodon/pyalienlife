@@ -5189,6 +5189,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "cottongut-food-03",
+    icon = "__pyalienlifegraphics__/graphics/icons/cottongut-food-03.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-food",
+    order = "h",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
     name = "cottongut-pup",
     icon = "__pyalienlifegraphics__/graphics/icons/cottongut-pup.png",
 	icon_size = 64,
@@ -5759,7 +5770,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "m-a",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 5}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {"sap-01"},
 	limitation_message_key = "sap"
 }
@@ -5779,7 +5790,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "m-b",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 10}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
  	limitation = {"sap-01", "sap-mk02"},
  	limitation_message_key = "sap"
  }
@@ -5799,7 +5810,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "m-c",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 15}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 3}},
  	limitation = {"sap-01", "sap-mk02", "sap-mk03"},
  	limitation_message_key = "sap"
  }
@@ -5819,7 +5830,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "m-d",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 20}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 4}},
  	limitation = {"sap-01", "sap-mk02", "sap-mk03", "sap-mk04"},
  	limitation_message_key = "sap"
  }

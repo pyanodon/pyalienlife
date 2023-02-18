@@ -291,6 +291,7 @@ local biomass_convertion =
     ['auog-food-02'] = {item_amount = 1, biomass_amount = 5},
     ['cottongut-food-01'] = {item_amount = 1, biomass_amount = 5},
     ['cottongut-food-02'] = {item_amount = 1, biomass_amount = 5},
+    ['cottongut-food-03'] = {item_amount = 1, biomass_amount = 5},
     ['dhilmos-food-01'] = {item_amount = 1, biomass_amount = 5},
     ['dhilmos-food-02'] = {item_amount = 1, biomass_amount = 5},
     ['mukmoux-food-01'] = {item_amount = 1, biomass_amount = 5},
