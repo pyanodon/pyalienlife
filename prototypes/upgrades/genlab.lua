@@ -32,7 +32,7 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-genlab.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'biotech-mk03'},
+        prerequisites = {'biotech-machines-mk03'},
         unit = {
             count = 500,
             ingredients = {
@@ -64,7 +64,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {speed = -0.7, productivity = 0.05, type = 'module-effects'}
+                {speed = -0.8, productivity = 0.05, type = 'module-effects'}
             }
         },
         {
