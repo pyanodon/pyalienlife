@@ -32,6 +32,7 @@ if data then
     local experimental = table.deepcopy(data.raw.recipe['Caged scrondrix 9'])
     experimental.name = 'scrondrix-experimental-treatment'
     FUN.add_ingredient(experimental, {name = 'arthurian-codex', amount = 1, type = 'item'})
+    FUN.multiply_result_amount(experimental, 'pineal-gland', 0.5)
     experimental.results = {
         {name = 'bones', amount = 1, type = 'item', probability = 0.6},
         {name = 'cage', amount = 1, type = 'item', probability = 0.6},
