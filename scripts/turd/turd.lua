@@ -196,6 +196,9 @@ local function create_hidden_beacon(machine, module_name)
 	local beacon = global.turd_beaconed_machines[machine.unit_number]
 	if not beacon or not beacon.valid then
 		beacon = machine.surface.create_entity{name = 'hidden-beacon', position = machine.position, force = force}
+		beacon.destructible = false
+		beacon.operable = false
+		beacon.minable = false
 	end
 
 	local inventory = beacon.get_module_inventory()

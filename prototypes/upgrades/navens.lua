@@ -1,3 +1,74 @@
+local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
+
+if data then
+    local recipe = table.deepcopy(data.raw.recipe['navens-sample'])
+    recipe.name = 'navens-sample-with-vonix-gen'
+    FUN.add_ingredient(recipe, {'vonix-codex', 5})
+    data:extend{recipe}
+
+    data:extend{{
+        type = 'recipe',
+        name = 'pre-pesticide-01',
+        ingredients = {
+            {name = 'navens', type = 'item', amount = 12},
+            {name = 'mcb', type = 'fluid', amount = 100},
+            {name = 'phenol', type = 'item', amount = 1},
+        },
+        results = {
+            {name = 'pre-pesticide-01', type = 'fluid', amount = 100},
+        },
+        energy_required = 20,
+        enabled = false,
+        category = 'biofactory'
+    }}
+
+    data:extend{
+        {
+            type = 'item',
+            name = 'navens-abomination',
+            icon = '__pyalienlifegraphics2__/graphics/icons/abomination.png',
+            icon_size = 64,
+            stack_size = 50,
+            subgroup = 'py-alienlife-auog'
+        },
+        {
+            type = 'recipe',
+            name = 'full-render-navens-abomination',
+            category = 'slaughterhouse',
+            subgroup = 'py-alienlife-auog',
+            ingredients = {{'navens-abomination', 1}},
+            results = {
+                {name = 'navens', type = 'item', amount_min = 13, amount_max = 16},
+                {name = 'dirty-water-light', type = 'fluid', amount = 10},
+                {'guts', 1}
+            },
+            enabled = false,
+            icon = '__pyalienlifegraphics2__/graphics/icons/rendering-abomination.png',
+            icon_size = 64,
+            localised_name = {'recipe-name.full-render-navens-abomination'},
+            energy_required = 10
+        }
+    }
+
+    local victims = {'auog', 'mukmoux', 'scrondrix', 'zungror'}
+    local profit = {1, 2, 4, 6}
+    if not mods.pyalternativeenergy then victims[4] = 'antelope' end
+    for i, recipe in pairs({
+        table.deepcopy(data.raw.recipe['navens-1']),
+        table.deepcopy(data.raw.recipe['navens-2']),
+        table.deepcopy(data.raw.recipe['navens-3']),
+        table.deepcopy(data.raw.recipe['navens-4']),
+    }) do
+        recipe.name = recipe.name .. '-abomination'
+        FUN.add_ingredient(recipe, {name = victims[i], amount = 1, type = 'item'})
+        FUN.remove_ingredient(recipe, 'guts')
+        recipe.main_product = 'navens-abomination'
+        recipe.results = {{'navens-abomination', profit[i]}}
+        recipe.energy_required = math.ceil(recipe.energy_required * 1.5)
+        data:extend{recipe}
+    end
+end
+
 return {
     affected_entities = { -- the entities that should be effected by this tech upgrade
         'navens-culture-mk01',
@@ -10,14 +81,14 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-navens.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'navens-mk02'},
+        prerequisites = {'navens-mk03', 'vonix'},
         unit = {
             count = 500,
             ingredients = {
                 {'automation-science-pack', 1},
                 {'logistic-science-pack', 1},
-                -- {'py-science-pack-3', 1},
                 {'chemical-science-pack', 1},
+                {'py-science-pack-3', 1},
             },
             time = 45
         }
@@ -29,7 +100,9 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.0, speed = 0.15, productivity = -0.12, type = 'module-effects'}
+                {speed = 0.1, type = 'module-effects'},
+                {recipe = 'pre-pesticide-01', type = 'unlock-recipe'},
+                {old = 'navens-sample', new = 'navens-sample-with-vonix-gen', type = 'recipe-replacement'}
             },
         },
         {
@@ -38,18 +111,22 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.1, speed = 0, productivity = -0.1, type = 'module-effects'}
+                {consumption = 5, productivity = 0.03, type = 'module-effects'}
             }
         },
         {
-            name = 'n2-ferti',
-            icon = '__pyalienlifegraphics3__/graphics/technology/n2-ferti.png',
+            name = 'lichen',
+            icon = '__pyalienlifegraphics3__/graphics/technology/lichen.png',
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.25, speed = 0, productivity = 0.2, type = 'module-effects'}
-            }
-        }
+                {recipe = 'full-render-navens-abomination', type = 'unlock-recipe'},
+                {old = 'navens-1', new = 'navens-1-abomination', type = 'recipe-replacement'},
+                {old = 'navens-2', new = 'navens-2-abomination', type = 'recipe-replacement'},
+                {old = 'navens-3', new = 'navens-3-abomination', type = 'recipe-replacement'},
+                {old = 'navens-4', new = 'navens-4-abomination', type = 'recipe-replacement'},
+            },
+        },
     },
     module_category = 'navens'
 }

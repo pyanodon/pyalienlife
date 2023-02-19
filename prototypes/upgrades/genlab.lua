@@ -8,7 +8,7 @@ if data then
     FUN.add_ingredient(adam, {name = 'personal-laser-defense-equipment', amount = 1, type = 'item'})
     FUN.add_result(adam, {name = 'personal-laser-defense-equipment', amount = 1, type = 'item', probability = 0.75, catalyst_amount = 1})
     FUN.remove_result(adam, 'adam42-gen')
-    FUN.add_result(adam, {name = 'adam42-gen', type = 'item', amount_min = 1, amount_max = 2})
+    FUN.add_result(adam, {name = 'adam42-gen', type = 'item', amount = 2})
     adam.energy_required = adam.energy_required * 4
     adam.main_product = 'adam42-gen'
 

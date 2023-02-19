@@ -3,7 +3,7 @@ ENTITY{
     name = 'hidden-beacon',
     icon = '__pycoalprocessinggraphics__/graphics/empty.png',
     icon_size = 32,
-    flags = {'placeable-player', 'hide-alt-info', 'hidden'},
+    flags = {'placeable-player', 'hide-alt-info', 'hidden', 'not-on-map'},
     max_health = 200,
     corpse = 'beacon-remnants',
     dying_explosion = 'beacon-explosion',

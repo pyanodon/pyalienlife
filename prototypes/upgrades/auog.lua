@@ -6,8 +6,7 @@ if data then
         table.deepcopy(data.raw.recipe['auog-food-02']),
     } do
         recipe.name = recipe.name .. '-sawdust'
-        FUN.remove_ingredient(recipe, 'wood-seeds')
-        FUN.add_ingredient(recipe, {'wood-seeds', 10 * i})
+        FUN.add_ingredient(recipe, {'wood', 4 * i})
         FUN.multiply_result_amount(recipe, 'auog-food-0'..i, 2)
         data:extend{recipe}
     end

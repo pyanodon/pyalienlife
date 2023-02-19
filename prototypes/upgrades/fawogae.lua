@@ -1,37 +1,6 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
 if data then
-    data:extend{
-        {
-            type = 'item',
-            name = 'fawogae-abomination',
-            icon = '__pyalienlifegraphics2__/graphics/icons/abomination.png',
-            icon_size = 64,
-            stack_size = 50,
-            subgroup = 'py-alienlife-auog'
-        },
-        {
-            type = 'recipe',
-            name = 'full-render-fawogae-abomination',
-            category = 'slaughterhouse',
-            subgroup = 'py-alienlife-auog',
-            ingredients = {{'fawogae-abomination', 1}},
-            results = {
-                {name = 'fawogae', type = 'item', amount_min = 15, amount_max = 23},
-                {name = 'dirty-water-light', type = 'fluid', amount = 10},
-                {'meat', 1}
-            },
-            enabled = false,
-            icon = '__pyalienlifegraphics2__/graphics/icons/rendering-abomination.png',
-            icon_size = 64,
-            localised_name = {'recipe-name.full-render-fawogae-abomination'},
-            energy_required = 10
-        }
-    }
-
-    local victims = {'auog', 'mukmoux', 'scrondrix', 'simik', 'zungror'}
-    local profit = {1, 2, 4, 6, 10}
-    if not mods.pyalternativeenergy then victims[5] = 'antelope' end
     for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['fawogae-1']),
         table.deepcopy(data.raw.recipe['fawogae with manure']),
@@ -39,11 +8,10 @@ if data then
         table.deepcopy(data.raw.recipe['fawogae with special substrate']),
         table.deepcopy(data.raw.recipe['fawogae with growth hormone']),
     }) do
-        recipe.name = recipe.name .. '-abomination'
-        FUN.add_ingredient(recipe, {name = victims[i], amount = 1, type = 'item'})
-        recipe.main_product = 'fawogae-abomination'
-        recipe.results = {{'fawogae-abomination', profit[i]}}
-        recipe.energy_required = math.ceil(recipe.energy_required * 1.5)
+        recipe.name = recipe.name .. '-nitrogen'
+        FUN.add_ingredient(recipe, {type = 'fluid', name = 'purest-nitrogen-gas', amount = 40 * i})
+        FUN.multiply_result_amount(recipe, 'fawogae', 1.1)
+        recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         data:extend{recipe}
     end
 
@@ -88,30 +56,29 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-fawogae.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'circuit-network', 'fawogae-mk01'},
+        prerequisites = {'fawogae-mk02'},
         unit = {
             count = 500,
             ingredients = {
                 {'automation-science-pack', 1},
-                {'py-science-pack-1', 1},
+                {'py-science-pack-2', 1},
             },
             time = 45
         }
     },
     sub_techs = {
         {
-            name = 'lichen',
-            icon = '__pyalienlifegraphics3__/graphics/technology/lichen.png',
+            name = 'n2-ferti',
+            icon = '__pyalienlifegraphics3__/graphics/technology/n2-ferti.png',
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {recipe = 'full-render-fawogae-abomination', type = 'unlock-recipe'},
-                {old = 'fawogae-1', new = 'fawogae-1-abomination', type = 'recipe-replacement'},
-                {old = 'fawogae with manure', new = 'fawogae with manure-abomination', type = 'recipe-replacement'},
-                {old = 'fawogae with improved substrate', new = 'fawogae with improved substrate-abomination', type = 'recipe-replacement'},
-                {old = 'fawogae with special substrate', new = 'fawogae with special substrate-abomination', type = 'recipe-replacement'},
-                {old = 'fawogae with growth hormone', new = 'fawogae with growth hormone-abomination', type = 'recipe-replacement'},
-            },
+            {old = 'fawogae-1', new = 'fawogae-1-nitrogen', type = 'recipe-replacement'},
+            {old = 'fawogae with manure', new = 'fawogae with manure-nitrogen', type = 'recipe-replacement'},
+            {old = 'fawogae with improved substrate', new = 'fawogae with improved substrate-nitrogen', type = 'recipe-replacement'},
+            {old = 'fawogae with special substrate', new = 'fawogae with special substrate-nitrogen', type = 'recipe-replacement'},
+            {old = 'fawogae with growth hormone', new = 'fawogae with growth hormone-nitrogen', type = 'recipe-replacement'},
+            }
         },
         {
             name = 'acidosis',
