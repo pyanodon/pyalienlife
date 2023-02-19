@@ -16,7 +16,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'dingrits', amount = 2},
+					--{name = 'dingrits', amount = 2},
                     {name='caged-scrondrix', amount =3},
                     {name='yotoi-seeds', amount =30},
 					{name='water-barrel', amount=15,return_barrel = true},

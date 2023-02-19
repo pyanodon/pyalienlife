@@ -16,7 +16,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'phagnot', amount = 2},
+					--{name = 'phagnot', amount = 2},
                     {name='bhoddos', amount =3},
                     {name='yotoi-seeds', amount =30},
 					{name='phagnot-food-01', amount =2},
@@ -26,7 +26,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='phagnot-cub', amount = 6},
-					{name = 'manure', amount = 2},
+					--{name = 'manure', amount = 2},
 				},
 			crafting_speed = 20,
 			tech = 'phagnot'
@@ -50,6 +50,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
+					{name='phagnot-food-01',remove_item = true},
 					{name='phagnot-food-02', amount =2},
 					{name='salt', add_amount =10},
 
@@ -239,7 +240,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='phagnot', amount =3},
-					{name = 'manure', amount = 4},
+					--{name = 'manure', amount = 4},
 				},
 			crafting_speed = 150,
 			tech = 'phagnot'
@@ -266,6 +267,7 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='phagnot-cub', add_amount = 4},
+					{name='phagnot-food-01',remove_item = true},
 					{name='phagnot-food-02', amount =1},
 					{name='salt', amount =3},
 

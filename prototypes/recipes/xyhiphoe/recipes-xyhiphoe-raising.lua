@@ -16,7 +16,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='xyhiphoe', amount =2},
+					--{name='xyhiphoe', amount =2},
                     {name='fish-food-01', amount =2},
                     {name='phytoplankton', amount =150, fluidbox_index = 1},
 					{name='pressured-water', amount = 1000, fluidbox_index = 2,return_item={name='waste-water', amount= 650}},

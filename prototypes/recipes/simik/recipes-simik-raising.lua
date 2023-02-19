@@ -17,7 +17,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name = "simik", amount = 4},
+					--{name = "simik", amount = 4},
                     {name='stone-wool', amount =3, fallback = "raw-fiber"},
                     {name='sea-sponge', amount =1},
 					{name='simik-food-01', amount =2},
@@ -26,7 +26,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name = 'simik', amount_min = 1, amount_max = 4},
+					--{name = 'simik', amount_min = 1, amount_max = 4},
 					{name='simik-pup', amount = 2},
 				},
 			tech = 'simik-mk01'
@@ -237,6 +237,7 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name = "simik-pup", add_amount = 5},
+					{name='simik-food-01',remove_item = true},
 					{name='simik-food-02', amount =1},
 					{name = 'steel-plate', remove_item = true},
 					{name = 'stainless-steel', amount = 5}

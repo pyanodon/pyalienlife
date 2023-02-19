@@ -16,7 +16,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'mukmoux', amount = 2},
+					--{name = 'mukmoux', amount = 2},
                     {name='fawogae', amount =30},
                     {name='ralesia-seeds', amount =30},
 					{name='mukmoux-food-01', amount =2},
@@ -26,7 +26,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='mukmoux-calf', amount =2},
-					{name = 'mukmoux', amount = 2},
+					--{name = 'mukmoux', amount = 2},
 				},
 			crafting_speed = 10,
 			tech = 'mukmoux'

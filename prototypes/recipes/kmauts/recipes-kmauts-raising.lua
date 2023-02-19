@@ -15,7 +15,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='kmauts', amount = 2},
+                    --{name='kmauts', amount = 2},
 					{name='caged-ulric', amount =1},
                     {name='rennea', amount =10},
 					{name='water-barrel', amount = 4,return_barrel = true},
@@ -23,7 +23,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='kmauts', amount = 2, probability = 0.999},
+					--{name='kmauts', amount = 2, probability = 0.999},
 					{name='kmauts-cub', amount =2},
 					{name = 'cage', amount = 1},
 				},

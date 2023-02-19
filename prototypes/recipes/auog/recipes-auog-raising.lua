@@ -14,15 +14,15 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name= 'auog', amount=2},
+					--{name= 'auog', amount=2},
                     {name='native-flora', amount =20},
                     {name='moss', amount =10},
 					{name='water-barrel', amount=5,return_barrel = true},
 				},
 			results =
 				{
-					{name= 'auog', amount=2},
-					{name= 'auog-pup', amount_min = 3, amount_max = 6},
+					--{name= 'auog', amount=2},
+					{name= 'auog-pup', amount_min = 2, amount_max = 5},
 				},
 			crafting_speed = 15,
 			tech = 'auog',
@@ -48,7 +48,7 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='auog', remove_item = true},
-					{name='auog', amount=4},
+					--{name='auog', amount=4},
 					{name='saps', amount = 12},
 					{name='bedding', amount = 3},
 					{name='raw-fiber', amount = 15},
@@ -56,7 +56,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='auog', remove_item = true},
-					{name='auog', amount=4},
+					--{name='auog', amount=4},
 					{name= 'auog-pup',remove_item = true},
 					{name= 'auog-pup', amount_min = 4, amount_max = 20},
 				},
@@ -69,7 +69,7 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='auog', remove_item = true},
-					{name='auog', amount=8},
+					--{name='auog', amount=8},
 					{name='saps', add_amount = 5},
 					{name='bedding',add_amount = 5},
 					{name='raw-fiber',add_amount = 5},
@@ -80,7 +80,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='auog', remove_item = true},
-					{name='auog', amount=8},
+					--{name='auog', amount=8},
 					{name= 'auog-pup',remove_item = true},
 					{name= 'auog-pup', amount_min = 8, amount_max = 30},
 				},
@@ -93,14 +93,14 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='auog', remove_item = true},
-					{name='auog', amount=14},
+					--{name='auog', amount=14},
 					{name='saps', add_amount = 10},
 					{name='raw-fiber', add_amount = 10},
 				},
 			results =
 				{
 					{name='auog', remove_item = true},
-					{name='auog', amount=14},
+					--{name='auog', amount=14},
 					{name= 'auog-pup',remove_item = true},
 					{name= 'auog-pup', amount_min = 14, amount_max = 50},
 				},

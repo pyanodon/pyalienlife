@@ -21,12 +21,12 @@ FUN.autorecipes {
                     {name='bedding', amount = 1},
                     {name='programmable-speaker', amount=1},
                     {name='small-lamp', amount=2},
-					{name = 'phadai', amount = 3},
+					--{name = 'phadai', amount = 3},
 				},
 			results =
 				{
 					{name='phadai-pup', amount =3},
-					{name = 'phadai', amount = 2},
+					--{name = 'phadai', amount = 2},
 				},
 			crafting_speed = 70,
 			tech = 'phadai'
@@ -42,7 +42,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-
+					{name='phadai-pup', add_amount = 1},
 				},
 			crafting_speed = 60,
 			tech = 'phadai'
@@ -55,7 +55,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-
+					{name='phadai-pup', add_amount = 1},
 				},
 			crafting_speed = 50,
 			tech = 'phadai-mk02'
@@ -68,7 +68,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-
+					{name='phadai-pup', add_amount = 1},
 				},
 			crafting_speed = 40,
 			tech = 'phadai-mk02'
@@ -85,7 +85,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-
+					{name='phadai-pup', add_amount = 1},
 				},
 			crafting_speed = 30,
 			tech = 'phadai-mk03'
@@ -98,7 +98,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-
+					{name='phadai-pup', add_amount = 1},
 				},
 			crafting_speed = 20,
 			tech = 'phadai-mk03'
@@ -111,7 +111,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-
+					{name='phadai-pup', add_amount = 1},
 				},
 			crafting_speed = 10,
 			tech = 'phadai-mk04'

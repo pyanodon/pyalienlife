@@ -88,7 +88,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name = 'brain', remove_item = true},
-					{name='bones', amount = IMP_BONES},
+					{name='keratin', amount = IMP_SPECIAL},
 				},
 			tech = 'bmp',
 			name = 'ex-bon-sim',
@@ -156,8 +156,9 @@ FUN.autorecipes {
 			results =
 				{
 					{name = 'simik-blood', remove_item = true},
+					{name = 'keratin', remove_item = true},
 					{name='simik-scales', amount = IMP_SKIN},
-					{name='keratin', amount = IMP_SPECIAL},
+					--{name='keratin', amount = IMP_SPECIAL},
 				},
 			tech = 'reca',
 			name = 'ex-ski-sim',

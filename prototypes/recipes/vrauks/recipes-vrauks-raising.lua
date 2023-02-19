@@ -87,14 +87,14 @@ FUN.autorecipes {
         -- base
         {
             ingredients = {
-                {name = "vrauks", amount = 2},
+                --{name = "vrauks", amount = 2},
                 {name = "moss", amount = 10},
                 {name = "saps", amount = 3},
                 {name = "water-barrel", amount = 4, return_barrel = true}
             },
             results = {
                 {name = "cocoon", amount_min = 5, amount_max = 8},
-                {name = "vrauks", amount = 2},
+                --{name = "vrauks", amount = 2},
             },
             tech = "vrauks"
         },
@@ -108,6 +108,7 @@ FUN.autorecipes {
         {
             ingredients = {
                 {name = "bedding", amount = 1},
+                {name='vrauks-food-01',remove_item = true},
                 {name = "vrauks-food-02", amount = 1},
                 {name = "saps", add_amount = 7}
             },
@@ -117,7 +118,6 @@ FUN.autorecipes {
         -- -- py science 3
         {
             ingredients = {
-                {name = "vrauks-food-01", add_amount = 5},
                 {name = "vrauks-food-02", add_amount = 8},
                 {name = "bedding", add_amount = 5},
                 {name = "honeycomb", amount = 4},
@@ -130,7 +130,6 @@ FUN.autorecipes {
         -- -- py science 4
         {
             ingredients = {
-                {name = "vrauks-food-01", add_amount = 5},
                 {name = "vrauks-food-02", add_amount = 8},
                 {name = "bedding", add_amount = 5},
 				{name = "pheromones", amount = 1},

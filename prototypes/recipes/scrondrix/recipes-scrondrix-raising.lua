@@ -16,7 +16,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'scrondrix', amount = 2},
+					--{name = 'scrondrix', amount = 2},
                     {name='fawogae', amount =20},
 					{name='wood-seeds', amount =20},
 					{name='meat', amount =10},
@@ -25,7 +25,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='scrondrix-pup', amount = 5},
-					{name = 'scrondrix', amount = 2},
+					--{name = 'scrondrix', amount = 2},
 				},
 			tech = 'scrondrix',
 			crafting_speed = 12,

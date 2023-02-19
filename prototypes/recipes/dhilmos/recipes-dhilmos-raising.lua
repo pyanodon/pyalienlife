@@ -16,7 +16,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'dhilmos', amount = 1},
+					--{name = 'dhilmos', amount = 1},
                     {name='phytoplankton', amount =50, fluidbox_index = 1},
 					{name='water-saline', amount=100, fluidbox_index = 2, return_item={name='waste-water'}},
 					{name='filtration-media', amount = 2},
@@ -33,7 +33,7 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='dhilmos-food-01', amount =1},
-					{name = 'dhilmos', add_amount = 1},
+					--{name = 'dhilmos', add_amount = 1},
 					{name = 'seaweed', amount = 5},
 				},
 			results =

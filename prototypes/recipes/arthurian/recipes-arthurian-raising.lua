@@ -17,7 +17,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'arthurian', amount = 2},
+					--{name = 'arthurian', amount = 2},
                     {name='cottongut', amount =2},
                     {name='cocoon', amount =1},
 					{name='water-barrel', amount=5,return_barrel = true},
@@ -25,7 +25,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name = 'arthurian', amount = 2},
+					--{name = 'arthurian', amount = 2},
 					{name='arthurian-egg', amount =3},
 				},
 			name = 'arthurian egg 1',
