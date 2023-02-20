@@ -64,7 +64,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.5, speed = 0.1, type = 'module-effects'},
+                {consumption = 0.5, speed = 0.06, type = 'module-effects'},
                 {old = 'bhoddos-culture-mk01', new = 'bhoddos-culture-mk01-with-pybot', type = 'recipe-replacement'},
                 {old = 'bhoddos-culture-mk02', new = 'bhoddos-culture-mk02-with-pybot', type = 'recipe-replacement'},
                 {old = 'bhoddos-culture-mk03', new = 'bhoddos-culture-mk03-with-pybot', type = 'recipe-replacement'},

@@ -34,9 +34,9 @@ if data then
     experimental.name = 'scrondrix-experimental-treatment'
     FUN.add_ingredient(experimental, {name = 'arthurian-codex', amount = 1, type = 'item'})
     experimental.results = {
-        {name = 'bones', amount = 1, type = 'item', probability = 0.6},
-        {name = 'cage', amount = 1, type = 'item', probability = 0.6},
-        {name = 'brain-caged-scrondrix', amount = 1, type = 'item', probability = 0.4},
+        {name = 'bones', amount = 1, type = 'item', probability = 0.7},
+        {name = 'cage', amount = 1, type = 'item', probability = 0.7},
+        {name = 'brain-caged-scrondrix', amount = 1, type = 'item', probability = 0.3},
     }
     experimental.main_product = 'brain-caged-scrondrix'
 

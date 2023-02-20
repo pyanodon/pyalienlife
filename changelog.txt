@@ -3,8 +3,8 @@ Version: 2.0.11
 Date: ?
   Changes:
     - Added the technological upgrade and research device
+    - All RC recipes no longer have parents an inputs/output (does not effect vonix, arqad, xeno)
     - Caravan can now walk over pipes and electric poles
-    - Xy chain is now positive (t1)
     - Fix ocula crash in multiplayer
     - Digosaurus now supports ore.infinite_resource
     - Removed creature chamber zungror raising recipes
