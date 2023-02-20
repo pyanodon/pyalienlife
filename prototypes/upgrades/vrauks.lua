@@ -52,7 +52,7 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-vrauk.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'vrauks-mk01'},
+        prerequisites = {'vrauks'},
         unit = {
             count = 500,
             ingredients = {
