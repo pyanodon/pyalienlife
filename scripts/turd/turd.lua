@@ -290,7 +290,7 @@ local function on_researched(event)
 		global.turd_bonuses[force.index][technology.name] = NOT_SELECTED
 	end
 
-	reapply_turd_bonuses(force)
+	if game.tick ~= 0 then reapply_turd_bonuses(force) end
 end
 
 local function on_unresearched(event)

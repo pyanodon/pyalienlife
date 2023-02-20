@@ -7766,7 +7766,6 @@ ITEM {
     icons =
 	{
         {icon = "__pyalienlifegraphics__/graphics/icons/bhoddos.png"},
-        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
     },
     icon_size = 64,
 	category = "bhoddos",
@@ -7775,7 +7774,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "b-a",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 45}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "bhoddos"
 }
@@ -7795,7 +7794,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "b-b",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 50}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1.25}},
 	limitation = {},
 	limitation_message_key = "bhoddos"
 }
@@ -7815,7 +7814,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "b-c",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 55}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1.5}},
 	limitation = {},
 	limitation_message_key = "bhoddos"
 }
@@ -7835,7 +7834,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "b-d",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 60}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1.75}},
 	limitation = {},
 	limitation_message_key = "bhoddos"
 }

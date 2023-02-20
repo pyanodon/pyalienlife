@@ -19,7 +19,7 @@ if data then
             name = 'stem-cell-recycle-1',
             enabled = false,
             category = 'atomizer',
-            results = {{type = 'fluid', name = 'psc', amount = 10}},
+            results = {{type = 'fluid', name = 'psc', amount = 100}},
             ingredients = {
                 {'bones', 3},
                 {'chitin', 20},
@@ -32,7 +32,7 @@ if data then
             name = 'stem-cell-recycle-2',
             enabled = false,
             category = 'atomizer',
-            results = {{type = 'fluid', name = 'psc', amount = 10}},
+            results = {{type = 'fluid', name = 'psc', amount = 100}},
             ingredients = {
                 {'bonemeal', 3},
                 {'skin', 5},
@@ -45,7 +45,7 @@ if data then
             name = 'stem-cell-recycle-3',
             enabled = false,
             category = 'atomizer',
-            results = {{type = 'fluid', name = 'psc', amount = 10}},
+            results = {{type = 'fluid', name = 'psc', amount = 100}},
             ingredients = {
                 {'guts', 6},
                 {'meat', 4},
