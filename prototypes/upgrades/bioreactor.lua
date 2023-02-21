@@ -61,15 +61,14 @@ if data then
             category = 'bio-reactor',
             energy_required = 200,
             ingredients = {
-                {type = 'item', name = 'coal', amount = 80},
-                {type = 'item', name = 'biofet', amount = 1},
+                {type = 'item', name = 'nanozymes', amount = 1},
                 {type = 'item', name = 'magnetic-beads', amount = 2},
                 {type = 'fluid', name = 'hydrogen', amount = 250},
+                {type = 'fluid', name = 'benzene', amount = 100},
                 {type = 'item', name = 'advanced-substrate', amount = 1},
             },
             results = {
-                {type = 'item', name = 'bio-ore', amount = 80},
-                {type = 'item', name = 'magnetic-beads', amount_min = 1, amount_max = 2},
+                {type = 'item', name = 'bio-ore', amount = 45},
             },
             main_product = 'bio-ore'
         },
@@ -80,36 +79,16 @@ if data then
             category = 'bio-reactor',
             energy_required = 200,
             ingredients = {
-                {type = 'fluid', name = 'scrude', amount = 1250},
-                {type = 'item', name = 'biofet', amount = 1},
+                {type = 'item', name = 'nanozymes', amount = 1},
                 {type = 'item', name = 'magnetic-beads', amount = 2},
                 {type = 'fluid', name = 'hydrogen', amount = 250},
+                {type = 'fluid', name = 'aromatics', amount = 100},
                 {type = 'item', name = 'advanced-substrate', amount = 1},
             },
             results = {
-                {type = 'fluid', name = 'bio-oil', amount = 1250},
-                {type = 'item', name = 'magnetic-beads', amount_min = 1, amount_max = 2},
+                {type = 'fluid', name = 'bio-oil', amount = 650},
             },
             main_product = 'bio-oil'
-        },
-        {
-            type = 'recipe',
-            name = 'jacket-collagen',
-            enabled = false,
-            category = 'bio-reactor',
-            energy_required = 200,
-            ingredients = {
-                {type = 'item', name = 'raw-coal', amount = 220},
-                {type = 'item', name = 'biofet', amount = 1},
-                {type = 'item', name = 'magnetic-beads', amount = 2},
-                {type = 'fluid', name = 'hydrogen', amount = 250},
-                {type = 'item', name = 'advanced-substrate', amount = 1},
-            },
-            results = {
-                {type = 'item', name = 'collagen', amount = 220},
-                {type = 'item', name = 'magnetic-beads', amount_min = 1, amount_max = 2},
-            },
-            main_product = 'collagen'
         }
     }
 end
@@ -176,7 +155,6 @@ return {
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
                 {recipe = 'jacket-bio-ore', type = 'unlock-recipe'},
                 {recipe = 'jacket-bio-oil', type = 'unlock-recipe'},
-                {recipe = 'jacket-collagen', type = 'unlock-recipe'},
             }
         }
     }
