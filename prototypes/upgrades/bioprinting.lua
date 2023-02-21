@@ -19,11 +19,12 @@ if data then
             name = 'stem-cell-recycle-1',
             enabled = false,
             category = 'atomizer',
-            results = {{type = 'fluid', name = 'psc', amount = 100}},
+            results = {{type = 'fluid', name = 'psc', amount = 10}},
             ingredients = {
                 {'bones', 3},
                 {'chitin', 20},
                 {'mukmoux-fat', 5},
+                {name = 'oxygen', amount = 150, type = 'fluid'}
             },
             energy_required = 20
         },
@@ -32,11 +33,12 @@ if data then
             name = 'stem-cell-recycle-2',
             enabled = false,
             category = 'atomizer',
-            results = {{type = 'fluid', name = 'psc', amount = 100}},
+            results = {{type = 'fluid', name = 'psc', amount = 10}},
             ingredients = {
                 {'bonemeal', 3},
                 {'skin', 5},
                 {'brain', 2},
+                {name = 'oxygen', amount = 150, type = 'fluid'}
             },
             energy_required = 20
         },
@@ -45,11 +47,12 @@ if data then
             name = 'stem-cell-recycle-3',
             enabled = false,
             category = 'atomizer',
-            results = {{type = 'fluid', name = 'psc', amount = 100}},
+            results = {{type = 'fluid', name = 'psc', amount = 10}},
             ingredients = {
                 {'guts', 6},
                 {'meat', 4},
                 {type = 'fluid', name = 'blood', amount = 20},
+                {name = 'oxygen', amount = 150, type = 'fluid'}
             },
             energy_required = 20
         }

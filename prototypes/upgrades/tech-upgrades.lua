@@ -3,7 +3,6 @@ local tech_upgrades = {
     --require('prototypes/upgrades/atomizer'),
     require('prototypes/upgrades/bioprinting'),
     require('prototypes/upgrades/biofactory'),
-    require('prototypes/upgrades/bioreactor'),
     --require('prototypes/upgrades/compost'),
     require('prototypes/upgrades/creature'),
     require('prototypes/upgrades/data-array'),
@@ -67,6 +66,7 @@ local tech_upgrades = {
 }
 
 if (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalternativeenergy) then -- is pyAE installed?
+    table.insert(tech_upgrades, require('prototypes/upgrades/bioreactor'))
     table.insert(tech_upgrades, require('prototypes/upgrades/zungror'))
 end
 
