@@ -10,7 +10,7 @@ Date: ?
     - Removed creature chamber zungror raising recipes
     - Removed duplicate sap tree mk2-4 recipes
     - Added cages to the output of vonix raising recipes
-    - Bhoddos, sap, and cridren module speed bonus nerfed to match other modules (+100). Building base speeds increased to compensate
+    - Bhoddos, sap, grod, and cridren module speed bonus nerfed to match other modules (+100%). Building base speeds increased to compensate
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.10
 Date: 2023-2-3

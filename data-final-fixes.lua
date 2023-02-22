@@ -218,6 +218,7 @@ local recipes_list =
   "yotoi-codex",
   "earth-tropical-tree-sample",
   "yotoi-seeds",
+  "yotoi-seeds-cold",
   "yotoi-leaves",
   "replicator-yotoi",
   "replicator-yotoi-fruit",
