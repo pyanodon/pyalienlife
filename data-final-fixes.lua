@@ -296,6 +296,7 @@ local recipes_list =
   "fiber-01",
   "phenol-02",
   "filtration-media-4",
+  "kmauts-ration-chitin",
   "urea-from-liquid-manure",
   "kicalk-fiber",
   "methane-from-liquid-manure",
