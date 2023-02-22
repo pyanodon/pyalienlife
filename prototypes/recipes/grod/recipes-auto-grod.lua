@@ -64,8 +64,7 @@ FUN.autorecipes {
 
                     {name='fertilizer', add_amount = 8},
                     {name='pesticide-mk02', amount = 2},
-					{name = 'water', remove_item = true},
-                    {name='flue-gas', amount = 40, fluidbox_index = 1},
+                    {name='flue-gas', amount = 40, fluidbox_index = 3},
 					{name='gh', amount = 1},
 					{name='biomass', amount =10},
 					{name='slacked-lime', add_amount = 50},

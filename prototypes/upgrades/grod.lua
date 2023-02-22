@@ -1,3 +1,48 @@
+local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
+
+if data then
+    for _, recipe in pairs({
+        table.deepcopy(data.raw.recipe['grod-1']),
+        table.deepcopy(data.raw.recipe['grod-2']),
+        table.deepcopy(data.raw.recipe['grod-3']),
+        table.deepcopy(data.raw.recipe['grod-4']),
+    }) do
+        recipe.name = recipe.name .. '-pressured'
+        FUN.remove_ingredient(recipe, 'water')
+        FUN.add_ingredient(recipe, {name = 'pressured-water', amount = 1000, type = 'fluid', fluidbox_index = 1})
+        FUN.multiply_result_amount(recipe, 'grod', 1.2)
+        data:extend{recipe}
+    end
+
+    for recipe, result in pairs({
+        [table.deepcopy(data.raw.recipe['grod-al'])] = 'al-biomass',
+        [table.deepcopy(data.raw.recipe['grod-al-2'])] = 'al-biomass',
+        [table.deepcopy(data.raw.recipe['grod-al-3'])] = 'al-biomass',
+        [table.deepcopy(data.raw.recipe['grod-pb'])] = 'pb-biomass',
+        [table.deepcopy(data.raw.recipe['grod-pb-2'])] = 'pb-biomass',
+        [table.deepcopy(data.raw.recipe['grod-pb-3'])] = 'pb-biomass',
+        [table.deepcopy(data.raw.recipe['grod-sn'])] = 'sn-biomass',
+        [table.deepcopy(data.raw.recipe['grod-sn-2'])] = 'sn-biomass',
+        [table.deepcopy(data.raw.recipe['grod-sn-3'])] = 'sn-biomass',
+    }) do
+        recipe.name = recipe.name .. '-tailings'
+        FUN.add_ingredient_amount(recipe, 'dirty-water-heavy', 100)
+        FUN.multiply_result_amount(recipe, result, 1.5)
+        data:extend{recipe}
+    end
+
+    for _, recipe in pairs({
+        table.deepcopy(data.raw.recipe['grod-1']),
+        table.deepcopy(data.raw.recipe['grod-2']),
+        table.deepcopy(data.raw.recipe['grod-3']),
+        table.deepcopy(data.raw.recipe['grod-4']),
+    }) do
+        recipe.name = recipe.name .. '-dry'
+        FUN.remove_ingredient(recipe, 'water')
+        data:extend{recipe}
+    end
+end
+
 return {
     affected_entities = { -- the entities that should be effected by this tech upgrade
         'grods-swamp-mk01',
@@ -10,14 +55,14 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-grod.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'grod-mk02'},
+        prerequisites = {'grod'},
         unit = {
             count = 500,
             ingredients = {
                 {'automation-science-pack', 1},
+                {'py-science-pack-1', 1},
                 {'logistic-science-pack', 1},
-                -- {'py-science-pack-3', 1},
-                {'chemical-science-pack', 1},
+                {'py-science-pack-2', 1},
             },
             time = 45
         }
@@ -29,7 +74,10 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.0, speed = 0.15, productivity = -0.12, type = 'module-effects'}
+                {old = 'grod-1', new = 'grod-1-pressured', type = 'recipe-replacement'},
+                {old = 'grod-2', new = 'grod-2-pressured', type = 'recipe-replacement'},
+                {old = 'grod-3', new = 'grod-3-pressured', type = 'recipe-replacement'},
+                {old = 'grod-4', new = 'grod-4-pressured', type = 'recipe-replacement'},
             },
         },
         {
@@ -38,7 +86,15 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.1, speed = 0, productivity = -0.1, type = 'module-effects'}
+                {old = 'grod-al', new = 'grod-al-tailings', type = 'recipe-replacement'},
+                {old = 'grod-pb', new = 'grod-pb-tailings', type = 'recipe-replacement'},
+                {old = 'grod-sn', new = 'grod-sn-tailings', type = 'recipe-replacement'},
+                {old = 'grod-al-2', new = 'grod-al-2-tailings', type = 'recipe-replacement'},
+                {old = 'grod-pb-2', new = 'grod-pb-2-tailings', type = 'recipe-replacement'},
+                {old = 'grod-sn-2', new = 'grod-sn-2-tailings', type = 'recipe-replacement'},
+                {old = 'grod-al-3', new = 'grod-al-3-tailings', type = 'recipe-replacement'},
+                {old = 'grod-pb-3', new = 'grod-pb-3-tailings', type = 'recipe-replacement'},
+                {old = 'grod-sn-3', new = 'grod-sn-3-tailings', type = 'recipe-replacement'},
             }
         },
         {
@@ -47,7 +103,11 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.25, speed = 0, productivity = 0.2, type = 'module-effects'}
+                {consumption = -0.5, type = 'module-effects'},
+                {old = 'grod-1', new = 'grod-1-dry', type = 'recipe-replacement'},
+                {old = 'grod-2', new = 'grod-2-dry', type = 'recipe-replacement'},
+                {old = 'grod-3', new = 'grod-3-dry', type = 'recipe-replacement'},
+                {old = 'grod-4', new = 'grod-4-dry', type = 'recipe-replacement'},
             }
         }
     },

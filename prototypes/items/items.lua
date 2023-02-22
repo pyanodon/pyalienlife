@@ -7619,7 +7619,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "ga",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 1.425}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "grod"
 }
@@ -7639,7 +7639,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "gb",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 2.85}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
 	limitation = {},
 	limitation_message_key = "grod"
 }
@@ -7659,7 +7659,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "gc",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 4.275}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 3}},
 	limitation = {},
 	limitation_message_key = "grod"
 }
@@ -7679,7 +7679,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "gd",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 5.7}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 4}},
 	limitation = {},
 	limitation_message_key = "grod"
 }
