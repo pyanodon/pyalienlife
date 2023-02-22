@@ -93,6 +93,7 @@ local recipes_list =
   "ethanol-combustion",
   "syrup-01",
   "energy-drink",
+  "energy-drinkb",
   "sweet-syrup",
   "sugar",
   "ethanol",
