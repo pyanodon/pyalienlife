@@ -17,6 +17,7 @@ if data then
         table.deepcopy(data.raw.recipe['yotoi-4']),
     }) do
         recipe.name = recipe.name .. '-free-leaves'
+        FUN.add_ingredient(recipe, {'burner-inserter', 1})
         FUN.add_result(recipe, {name = 'yotoi-leaves', amount = i * 2, type = 'item'})
         recipe.main_product = 'yotoi-leaves'
         data:extend{recipe}
@@ -28,7 +29,8 @@ if data then
             name = 'nutrient',
             icon_size = 64,
             icon = '__pyalienlifegraphics__/graphics/icons/nutrient.png',
-            stack_size = 50
+            stack_size = 50,
+            subgroup = 'py-alienlife-items'
         },
         {
             type = 'recipe',
