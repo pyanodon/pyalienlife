@@ -68,6 +68,7 @@ local tech_upgrades = {
 if (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalternativeenergy) then -- is pyAE installed?
     table.insert(tech_upgrades, require('prototypes/upgrades/bioreactor'))
     table.insert(tech_upgrades, require('prototypes/upgrades/zungror'))
+    table.insert(tech_upgrades, require('prototypes/upgrades/numal'))
 end
 
 table.sort(tech_upgrades, function(a, b) return a.master_tech.name < b.master_tech.name end)
