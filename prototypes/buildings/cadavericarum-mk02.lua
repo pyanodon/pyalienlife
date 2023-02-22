@@ -1,3 +1,6 @@
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
+local MODULE_SLOTS = 6
+
 local pipe = {
     south = {
         filename = "__pyhightechgraphics__/graphics/entity/cadaveric-arum/bottom.png",
@@ -53,11 +56,11 @@ ENTITY {
     selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 6
+        module_slots = MODULE_SLOTS
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"arum"},
-    crafting_speed = 0.04,
+    crafting_speed = FUN.farm_speed_derived(MODULE_SLOTS, "cadaveric-arum-mk01"),
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

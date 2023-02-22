@@ -479,7 +479,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cad-a",
     stack_size = 50,
-    effect = {pollution = {bonus = 1},speed = {bonus = 6.25}},
+    effect = {pollution = {bonus = 1},speed = {bonus = 1}},
     limitation = {},
     limitation_message_key = "cadaveric-arum"
 }
@@ -499,7 +499,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cad-b",
     stack_size = 50,
-    effect = {pollution = {bonus = 1},speed = {bonus = 8.75}},
+    effect = {pollution = {bonus = 1},speed = {bonus = 1.25}},
     limitation = {},
     limitation_message_key = "cadaveric-arum"
 }
@@ -519,7 +519,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cad-c",
     stack_size = 50,
-    effect = {pollution = {bonus = 1},speed = {bonus = 11.25}},
+    effect = {pollution = {bonus = 1},speed = {bonus = 1.5}},
     limitation = {},
     limitation_message_key = "cadaveric-arum"
 }
@@ -539,7 +539,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "cad-d",
     stack_size = 50,
-    effect = {pollution = {bonus = 1},speed = {bonus = 15}},
+    effect = {pollution = {bonus = 1},speed = {bonus = 1.75}},
     limitation = {},
     limitation_message_key = "cadaveric-arum"
 }
