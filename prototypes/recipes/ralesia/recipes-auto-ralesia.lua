@@ -59,10 +59,9 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='ralesia-seeds', add_amount = 5},
-					{name='water',remove_item = true},
 					{name='hydrogen',remove_item = true},
-                    {name='syngas', amount = 100, fluidbox_index = 1},
-					{name='flue-gas', amount = 50, fluidbox_index = 2},
+                    {name='syngas', amount = 100, fluidbox_index = 2},
+					{name='flue-gas', amount = 50, fluidbox_index = 3},
 				},
 			results =
 				{

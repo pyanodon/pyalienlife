@@ -193,6 +193,7 @@ local recipes_list =
   "sea-sponge-sprouts-4",
   "ralesia-sample",
   "ralesia-codex",
+  "ralesia-seeds-paper-towel",
   "earth-flower-sample",
   "replicator-ralesia",
   "mukmoux",
@@ -320,6 +321,7 @@ local recipes_list =
   "cooling-system",
   "fiber-dry-storage",
   "log-wood-fast",
+  "paper-towel",
 	}
 
 --adding to module limitation list
