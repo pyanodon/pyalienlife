@@ -8,7 +8,7 @@ if data then
             stack_size = 50,
             subgroup = 'py-alienlife-rennea',
             icon = '__pyalienlifegraphics__/graphics/icons/deadhead.png',
-            icon_size = 28,
+            icon_size = 64,
         },
         {
             type = 'recipe',

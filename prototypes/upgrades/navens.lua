@@ -26,7 +26,7 @@ if data then
         {
             type = 'item',
             name = 'navens-abomination',
-            icon = '__pyalienlifegraphics2__/graphics/icons/abomination.png',
+            icon = '__pyalienlifegraphics__/graphics/icons/abomination.png',
             icon_size = 64,
             stack_size = 50,
             subgroup = 'py-alienlife-auog'
@@ -43,7 +43,7 @@ if data then
                 {'guts', 1}
             },
             enabled = false,
-            icon = '__pyalienlifegraphics2__/graphics/icons/rendering-abomination.png',
+            icon = '__pyalienlifegraphics__/graphics/icons/rendering-abomination.png',
             icon_size = 64,
             localised_name = {'recipe-name.full-render-navens-abomination'},
             energy_required = 10
