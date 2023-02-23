@@ -151,7 +151,7 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-antelope.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'schrodinger-antelope'},
+        prerequisites = {'schrodinger-antelope', 'fusion-mk04'},
         unit = {
             count = 500,
             ingredients = {

@@ -45,13 +45,14 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-bhoddos.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'bhoddos-mk02', 'phytomining'},
+        prerequisites = {'bhoddos-mk02', 'phytomining', 'effectivity-module-2'},
         unit = {
             count = 500,
             ingredients = {
                 {'automation-science-pack', 1},
                 {'logistic-science-pack', 1},
                 {'py-science-pack-2', 1},
+                {'chemical-science-pack', 1},
                 {'py-science-pack-3', 1},
             },
             time = 45

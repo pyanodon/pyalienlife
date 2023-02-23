@@ -50,7 +50,6 @@ FUN.autorecipes {
 			ingredients =
 				{
                     {name='pressured-water',remove_item = true},
-					{name='zipir-food-01', amount = 5},
 					{name='water-saline', amount =  200, fluidbox_index = 2},
 				},
 			results =
@@ -65,8 +64,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-                    {name='zipir-food-01',remove_item = true},
-                    {name='zipir-food-02', amount = 3},
+                    {name='zipir-food-01', amount = 6},
 				},
 			results =
 				{

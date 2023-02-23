@@ -75,7 +75,7 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-vonix.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'simik-mk01', 'vonix'},
+        prerequisites = {'simik-mk01', 'vonix', 'speed-module-3'},
         unit = {
             count = 500,
             ingredients = {
