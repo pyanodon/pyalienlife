@@ -15,7 +15,7 @@ if data then
     icd.name = 'bio-sample-icd'
     FUN.add_ingredient(icd, {name = 'pressured-air', type = 'fluid', amount = 50})
     FUN.add_ingredient(icd, {name = 'pressured-water', type = 'fluid', amount = 50})
-    FUN.multiply_result_amount(icd, 'bio-sample', 2)
+    icd.results = {{name = 'bio-sample', amount_max = 2, type = 'item', amount_min = 1}}
 
     data:extend{darkness, manure, icd}
 end
