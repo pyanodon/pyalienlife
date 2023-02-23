@@ -1,3 +1,25 @@
+local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
+
+if data then
+    local manure = table.deepcopy(data.raw.recipe['manure-bacteria'])
+    manure.name = 'manure-bacteria-fish'
+    FUN.add_ingredient(manure, {name = 'fish-hydrolysate', type = 'fluid', amount = 10})
+    FUN.multiply_result_amount(manure, 'manure-bacteria', 1.5)
+
+    local darkness = table.deepcopy(data.raw.recipe['zogna-bacteria'])
+    FUN.remove_ingredient(darkness, 'small-lamp')
+    darkness.name = 'zogna-bacteria-darkness'
+    darkness.energy_required = darkness.energy_required * 2
+
+    local icd = table.deepcopy(data.raw.recipe['bio-sample'])
+    icd.name = 'bio-sample-icd'
+    FUN.add_ingredient(icd, {name = 'pressured-air', type = 'fluid', amount = 50})
+    FUN.add_ingredient(icd, {name = 'pressured-water', type = 'fluid', amount = 50})
+    FUN.multiply_result_amount(icd, 'bio-sample', 2)
+
+    data:extend{darkness, manure, icd}
+end
+
 return {
     affected_entities = { -- the entities that should be effected by this tech upgrade
         'incubator-mk01',
@@ -10,14 +32,13 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-incubator.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'microbiology-mk02'},
+        prerequisites = {'microbiology-mk02', 'fertilizer-mk02'},
         unit = {
             count = 500,
             ingredients = {
                 {'automation-science-pack', 1},
+                {'py-science-pack-1', 1},
                 {'logistic-science-pack', 1},
-                -- {'py-science-pack-3', 1},
-                {'chemical-science-pack', 1},
             },
             time = 45
         }
@@ -29,7 +50,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.0, speed = 0.15, productivity = -0.12, type = 'module-effects'}
+                {old = 'manure-bacteria', new = 'manure-bacteria-fish', type = 'recipe-replacement'}
             },
         },
         {
@@ -38,7 +59,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.1, speed = 0, productivity = -0.1, type = 'module-effects'}
+                {old = 'zogna-bacteria', new = 'zogna-bacteria-darkness', type = 'recipe-replacement'}
             }
         },
         {
@@ -47,7 +68,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.25, speed = 0, productivity = 0.2, type = 'module-effects'}
+                {old = 'bio-sample', new = 'bio-sample-icd', type = 'recipe-replacement'}
             }
         }
     }

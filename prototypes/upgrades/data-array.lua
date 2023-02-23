@@ -63,7 +63,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 10, productivity = 0.05, type = 'module-effects'}
+                {consumption = 20, productivity = 0.1, type = 'module-effects'}
             },
         },
         {
@@ -81,7 +81,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.2, speed = 0.2, type = 'module-effects'},
+                {consumption = -0.3, speed = 0.3, type = 'module-effects'},
                 {recipe = 'solar-panel-equipment-cheap', type = 'unlock-recipe'},
                 {old = 'data-array', new = 'data-array-with-solar', type = 'recipe-replacement'},
             }

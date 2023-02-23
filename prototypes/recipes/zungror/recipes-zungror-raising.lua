@@ -181,28 +181,6 @@ FUN.autorecipes {
 }
 ]]--
 
---hatching
-
-RECIPE {
-    type = 'recipe',
-    name = 'zungror-grow-01',
-    category = 'incubator',
-    enabled = false,
-    energy_required = 24,
-    ingredients = {
-        {type = 'item', name = 'zungror-cocoon', amount = 3},
-        {type = 'item', name = 'meat', amount = 15},
-		{type = 'item', name = 'caged-ulric', amount = 1},
-        {type = 'fluid', name = 'hot-air', amount = 200},
-    },
-    results = {
-        {type = 'item', name = 'caged-zungror', amount_min = 1, amount_max = 3},
-    },
-    --main_product = "zungror",
-    subgroup = 'py-alienlife-zungror',
-    order = 'a',
-}:add_unlock("zungror")
-
 --Raising
 
 	FUN.autorecipes {

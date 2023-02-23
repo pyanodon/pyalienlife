@@ -14,10 +14,12 @@ local recipes_list =
 	{
   "mosfet",
   "zogna-bacteria",
+  "zogna-bacteria-darkness",
   "formamide",
   "artificial-blood",
   "fish-oil",
   "manure-bacteria",
+  "manure-bacteria-fish",
   "liquid-manure",
   "formic-acid",
   "biomass-1",
