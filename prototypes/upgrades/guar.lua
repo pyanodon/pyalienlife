@@ -21,7 +21,7 @@ if data then
         recipe.name = recipe.name .. '-aquaguar'
         local water = FUN.remove_ingredient(recipe, 'water')
 		FUN.add_ingredient(recipe, {type = 'fluid', name = 'water-saline', amount = water, fluidbox_index = 1})
-        FUN.multiply_result_amount(recipe, 'guar', 1.15)
+        FUN.multiply_result_amount(recipe, 'guar', 1.1)
         data:extend{recipe}
     end
 
