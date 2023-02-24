@@ -261,6 +261,11 @@ gui_events[defines.events.on_gui_click]['py_turd_confirm_button'] = function(eve
 	local player = game.get_player(event.player_index)
 	local force = player.force
 
+	if not player.admin then
+		force.print{'turd.font', {'turd.admin-needed'}}
+		return
+	end
+
 	local turd_bonuses = global.turd_bonuses[force.index] or {}
 	global.turd_bonuses[force.index] = turd_bonuses
 	local selection = turd_bonuses[master_tech_name] or NOT_SELECTED
