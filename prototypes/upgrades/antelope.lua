@@ -151,7 +151,7 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-antelope.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'schrodinger-antelope', 'fusion-mk04'},
+        prerequisites = {'simik-digestion-mk06', 'nuclear-power-mk04'},
         unit = {
             count = 500,
             ingredients = {
@@ -165,6 +165,7 @@ return {
                 {'production-science-pack', 1},
                 {'py-science-pack-4', 1},
                 {'utility-science-pack', 1},
+                {'space-science-pack', 1},
             },
             time = 45
         }

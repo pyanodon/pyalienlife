@@ -55,7 +55,7 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-grod.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'grod'},
+        prerequisites = {'grod-mk02'},
         unit = {
             count = 500,
             ingredients = {
@@ -63,6 +63,7 @@ return {
                 {'py-science-pack-1', 1},
                 {'logistic-science-pack', 1},
                 {'py-science-pack-2', 1},
+                {'chemical-science-pack', 1},
             },
             time = 45
         }
