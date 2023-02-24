@@ -1,3 +1,52 @@
+local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
+
+if data then
+    for _, recipe in pairs({
+        table.deepcopy(data.raw.recipe['dhilmos-1']),
+        table.deepcopy(data.raw.recipe['dhilmos-2']),
+        table.deepcopy(data.raw.recipe['dhilmos-3']),
+        table.deepcopy(data.raw.recipe['dhilmos-4']),
+    }) do
+        recipe.name = recipe.name .. '-cover'
+        FUN.multiply_ingredient_amount(recipe, 'dhilmos-pup', 2)
+        FUN.multiply_result_amount(recipe, 'dhilmos', 2)
+        local bacteria = FUN.remove_ingredient(recipe, 'phytoplankton')
+        FUN.add_ingredient(recipe, {name = 'bacteria-1', amount = bacteria, type = 'fluid'})
+        data:extend{recipe}
+    end
+
+    for _, recipe in pairs({
+        table.deepcopy(data.raw.recipe['dhilmos-1']),
+        table.deepcopy(data.raw.recipe['dhilmos-2']),
+        table.deepcopy(data.raw.recipe['dhilmos-3']),
+        table.deepcopy(data.raw.recipe['dhilmos-4']),
+        table.deepcopy(data.raw.recipe['dhilmos-egg-1']),
+        table.deepcopy(data.raw.recipe['dhilmos-egg-2']),
+        table.deepcopy(data.raw.recipe['dhilmos-egg-3']),
+        table.deepcopy(data.raw.recipe['dhilmos-egg-4']),
+    }) do
+        recipe.name = recipe.name .. '-skimmer'
+        FUN.remove_result(recipe, 'waste-water')
+        data:extend{recipe}
+    end
+
+    for _, recipe in pairs({
+        table.deepcopy(data.raw.recipe['dhilmos-1']),
+        table.deepcopy(data.raw.recipe['dhilmos-2']),
+        table.deepcopy(data.raw.recipe['dhilmos-3']),
+        table.deepcopy(data.raw.recipe['dhilmos-4']),
+        table.deepcopy(data.raw.recipe['dhilmos-egg-1']),
+        table.deepcopy(data.raw.recipe['dhilmos-egg-2']),
+        table.deepcopy(data.raw.recipe['dhilmos-egg-3']),
+        table.deepcopy(data.raw.recipe['dhilmos-egg-4']),
+    }) do
+        recipe.name = recipe.name .. '-double-intake'
+        FUN.multiply_ingredient_amount(recipe, 'water-saline', 2)
+        FUN.multiply_result_amount(recipe, 'waste-water', 2)
+        data:extend{recipe}
+    end
+end
+
 return {
     affected_entities = { -- the entities that should be effected by this tech upgrade
         'dhilmos-pool-mk01',
@@ -10,14 +59,20 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-dhilmos.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'dhilmos-mk02'},
+        prerequisites = {'dhilmos-mk04'},
         unit = {
             count = 500,
             ingredients = {
                 {'automation-science-pack', 1},
+                {'py-science-pack-1', 1},
                 {'logistic-science-pack', 1},
-                -- {'py-science-pack-3', 1},
+                {'military-science-pack', 1},
+                {'py-science-pack-2', 1},
                 {'chemical-science-pack', 1},
+                {'py-science-pack-3', 1},
+                {'production-science-pack', 1},
+                {'py-science-pack-4', 1},
+                {'utility-science-pack', 1},
             },
             time = 45
         }
@@ -29,7 +84,10 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.0, speed = 0.15, productivity = -0.12, type = 'module-effects'}
+                {old = 'dhilmos-1', new = 'dhilmos-1-cover', type = 'recipe-replacement'},
+                {old = 'dhilmos-2', new = 'dhilmos-2-cover', type = 'recipe-replacement'},
+                {old = 'dhilmos-3', new = 'dhilmos-3-cover', type = 'recipe-replacement'},
+                {old = 'dhilmos-4', new = 'dhilmos-4-cover', type = 'recipe-replacement'},
             },
         },
         {
@@ -38,7 +96,15 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.1, speed = 0, productivity = -0.1, type = 'module-effects'}
+                {consumption = 0.2, speed = 0.2, type = 'module-effects'},
+                {old = 'dhilmos-1', new = 'dhilmos-1-skimmer', type = 'recipe-replacement'},
+                {old = 'dhilmos-2', new = 'dhilmos-2-skimmer', type = 'recipe-replacement'},
+                {old = 'dhilmos-3', new = 'dhilmos-3-skimmer', type = 'recipe-replacement'},
+                {old = 'dhilmos-4', new = 'dhilmos-4-skimmer', type = 'recipe-replacement'},
+                {old = 'dhilmos-egg-1', new = 'dhilmos-egg-1-skimmer', type = 'recipe-replacement'},
+                {old = 'dhilmos-egg-2', new = 'dhilmos-egg-2-skimmer', type = 'recipe-replacement'},
+                {old = 'dhilmos-egg-3', new = 'dhilmos-egg-3-skimmer', type = 'recipe-replacement'},
+                {old = 'dhilmos-egg-4', new = 'dhilmos-egg-4-skimmer', type = 'recipe-replacement'},
             }
         },
         {
@@ -47,7 +113,15 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.25, speed = 0, productivity = 0.2, type = 'module-effects'}
+                {consumption = -0.25, type = 'module-effects'},
+                {old = 'dhilmos-1', new = 'dhilmos-1-double-intake', type = 'recipe-replacement'},
+                {old = 'dhilmos-2', new = 'dhilmos-2-double-intake', type = 'recipe-replacement'},
+                {old = 'dhilmos-3', new = 'dhilmos-3-double-intake', type = 'recipe-replacement'},
+                {old = 'dhilmos-4', new = 'dhilmos-4-double-intake', type = 'recipe-replacement'},
+                {old = 'dhilmos-egg-1', new = 'dhilmos-egg-1-double-intake', type = 'recipe-replacement'},
+                {old = 'dhilmos-egg-2', new = 'dhilmos-egg-2-double-intake', type = 'recipe-replacement'},
+                {old = 'dhilmos-egg-3', new = 'dhilmos-egg-3-double-intake', type = 'recipe-replacement'},
+                {old = 'dhilmos-egg-4', new = 'dhilmos-egg-4-double-intake', type = 'recipe-replacement'},
             }
         }
     },
