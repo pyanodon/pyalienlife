@@ -372,7 +372,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/s-biomass.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-phytomining",
     order = "h",
     stack_size = 100
 }
