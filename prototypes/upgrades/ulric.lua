@@ -1,6 +1,21 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
 if data then
+    for _, recipe in pairs({
+        table.deepcopy(data.raw.recipe['ulric-mk02']),
+        table.deepcopy(data.raw.recipe['ulric-mk03']),
+        table.deepcopy(data.raw.recipe['ulric-mk04']),
+    }) do
+        recipe.localised_name = {'recipe-name.'..recipe.name}
+        for _, result in pairs(recipe.results) do
+            if result.name == recipe.name then
+                result.probability = result.probability * 2
+            end
+        end
+        recipe.name = recipe.name .. '-being turned into glue is sexy'
+        data:extend{recipe}
+    end
+
     data:extend{
         {
             type = 'item',
@@ -22,6 +37,19 @@ if data then
                 {name = 'flue-gas', amount = 250, type = 'fluid'},
             },
             result = 'saddle'
+        },
+        {
+            type = 'recipe',
+            name = 'saddle-b',
+            energy_required = 2,
+            category = 'crafting-with-fluid',
+            enabled = false,
+            ingredients = {
+                {name = 'skin', amount = 4, type = 'item'},
+                {name = 'nichrome', amount = 1, type = 'item'},
+                {name = 'micro-fiber', amount = 1, type = 'item'},
+            },
+            results = {{'saddle', 2}}
         },
         {
             type = 'recipe',
@@ -80,13 +108,14 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-ulric.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'ulric', 'niobium'},
+        prerequisites = {'ulric-mk02'},
         unit = {
             count = 500,
             ingredients = {
                 {'automation-science-pack', 1},
                 {'py-science-pack-1', 1},
                 {'logistic-science-pack', 1},
+                {'py-science-pack-2', 1},
             },
             time = 45
         }
@@ -98,7 +127,10 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {recipe = 'noooo dont turn that horse into glue', type = 'unlock-recipe'}
+                {recipe = 'noooo dont turn that horse into glue', type = 'unlock-recipe'},
+                {old = 'ulric-mk02', new = 'ulric-mk02-being turned into glue is sexy', type = 'recipe-replacement'},
+                {old = 'ulric-mk03', new = 'ulric-mk03-being turned into glue is sexy', type = 'recipe-replacement'},
+                {old = 'ulric-mk04', new = 'ulric-mk04-being turned into glue is sexy', type = 'recipe-replacement'},
             },
         },
         {
@@ -109,6 +141,7 @@ return {
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
                 {speed = 0.3, productivity = 0.15, type = 'module-effects'},
                 {recipe = 'saddle', type = 'unlock-recipe'},
+                {recipe = 'saddle-b', type = 'unlock-recipe'},
                 {old = 'ulric-cub-1', new = 'ulric-cub-1-saddle', type = 'recipe-replacement'},
                 {old = 'ulric-cub-2', new = 'ulric-cub-2-saddle', type = 'recipe-replacement'},
                 {old = 'ulric-cub-3', new = 'ulric-cub-3-saddle', type = 'recipe-replacement'},
