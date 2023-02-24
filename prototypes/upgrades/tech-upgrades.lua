@@ -26,6 +26,7 @@ local tech_upgrades = {
     require('prototypes/upgrades/fish'),
     require('prototypes/upgrades/fwf'),
     require('prototypes/upgrades/grod'),
+    require('prototypes/upgrades/guar'),
     require('prototypes/upgrades/kmauts'),
     require('prototypes/upgrades/moss'),
     require('prototypes/upgrades/mukmoux'),
