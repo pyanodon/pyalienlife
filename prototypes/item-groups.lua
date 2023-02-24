@@ -83,6 +83,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-phytomining",
+        group = "py-rawores",
+        order = "xd"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-replicators",
         group = "py-alienlife",
         order = "bc"

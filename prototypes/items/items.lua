@@ -3191,7 +3191,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/pb-biomass.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-phytomining",
     order = "h",
     stack_size = 100
 }
@@ -3202,7 +3202,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/ni-biomass.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-phytomining",
     order = "h",
     stack_size = 100
 }
@@ -3213,7 +3213,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/au-biomass.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-phytomining",
     order = "h",
     stack_size = 100
 }
@@ -3224,7 +3224,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/sn-biomass.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-phytomining",
     order = "h",
     stack_size = 100
 }
@@ -3235,7 +3235,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/zn-biomass.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-phytomining",
     order = "h",
     stack_size = 100
 }
@@ -3246,7 +3246,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/al-biomass.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-phytomining",
     order = "h",
     stack_size = 100
 }
@@ -3257,7 +3257,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/cu-biomass.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-phytomining",
     order = "h",
     stack_size = 100
 }
@@ -3268,7 +3268,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/co-biomass.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-phytomining",
     order = "h",
     stack_size = 100
 }
@@ -3279,7 +3279,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/ti-biomass.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-phytomining",
     order = "h",
     stack_size = 100
 }
@@ -3290,7 +3290,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/nacl-biomass.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-phytomining",
     order = "h",
     stack_size = 100
 }
@@ -3301,7 +3301,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/fe-biomass.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-phytomining",
     order = "h",
     stack_size = 100
 }
@@ -3312,7 +3312,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/nb-biomass.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-phytomining",
     order = "h",
     stack_size = 100
 }
@@ -3323,7 +3323,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/ag-biomass.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-phytomining",
     order = "h",
     stack_size = 100
 }
