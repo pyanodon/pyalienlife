@@ -92,7 +92,8 @@ return {
                 {'utility-science-pack', 1},
             },
             time = 45
-        }
+        },
+        effects = {{type = 'unlock-recipe', recipe = 'dingrits-pack-mk04'}}
     },
     sub_techs = {
         {

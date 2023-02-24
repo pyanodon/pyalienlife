@@ -334,3 +334,28 @@ remote.add_interface('pywiki_turd_page', {
 	on_search = on_search,
 	reapply_turd_bonuses = reapply_turd_bonuses
 })
+
+commands.add_command('view_turd_selections', nil, function(command)
+	if not command.player_index then game.print{'turd.font', {'turd.file-failure'}}; return end
+	local player = game.get_player(command.player_index)
+	local force = player.force
+	local selections = global.turd_bonuses[force.index] or {}
+
+	local data = {''}
+	local i = 1
+	for name, tech_upgrade in pairs(tech_upgrades) do
+		if i % 18 == 0 then data = {'', data} end
+		local row = {
+			'',
+			{tech_upgrade.master_tech.localised_name or ('technology-name.' .. name)},
+			': ',
+			(selections[name] == NOT_SELECTED and {'turd.not-selected'} or {'technology-name.' .. selections[name]}),
+			'\n'
+		}
+		table.insert(data, row)
+		i = i + 1
+	end
+
+	game.write_file('turd-selections-'..game.tick..'.txt', data, false, command.player_index)
+	player.print{'turd.font', {'turd.file-success'}}
+end)
