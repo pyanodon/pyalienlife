@@ -27,16 +27,6 @@ if data then
         }
     }
 
-    if pyAE then
-        local recipe = table.deepcopy(data.raw.recipe['mirror-mk01'])
-        recipe.name = 'mirror-mk01-poor'
-        FUN.remove_ingredient(recipe, 'crucible')
-        FUN.add_ingredient(recipe, {'ceramic', 5})
-        recipe.results[1].probability = 0.5
-        recipe.energy_required = recipe.energy_required * 2
-        data:extend{recipe}
-    end
-
     local recipe = table.deepcopy(data.raw.recipe['ralesia-seeds'])
     FUN.add_ingredient(recipe, {'paper-towel', 1})
     FUN.add_result_amount(recipe, 'ralesia-seeds', 4)
@@ -50,7 +40,7 @@ if data then
         table.deepcopy(data.raw.recipe['ralesia-plantation-mk04']),
     }) do
         recipe.name = recipe.name .. '-with-ceramic'
-        FUN.add_ingredient(recipe, {name = pyAE and 'mirror-mk01' or 'ceramic', amount = 50 * i, type = 'item'})
+        FUN.add_ingredient(recipe, {name = pyAE and ('mirror-mk0'..i) or 'ceramic', amount = 50 * i, type = 'item'})
         data:extend{recipe}
     end
 
@@ -82,12 +72,19 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-ralesia.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'ralesia'},
+        prerequisites = {'ralesia-mk04'},
         unit = {
             count = 500,
             ingredients = {
                 {'automation-science-pack', 1},
                 {'py-science-pack-1', 1},
+                {'logistic-science-pack', 1},
+                {'military-science-pack', 1},
+                {'py-science-pack-2', 1},
+                {'chemical-science-pack', 1},
+                {'py-science-pack-3', 1},
+                {'production-science-pack', 1},
+                {'py-science-pack-4', 1},
             },
             time = 45
         }
@@ -110,7 +107,6 @@ return {
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
                 {speed = 0.08, type = 'module-effects'},
-                {recipe = 'mirror-mk01-poor', type = 'unlock-recipe'},
                 {old = 'ralesia-plantation-mk01', new = 'ralesia-plantation-mk01-with-ceramic', type = 'recipe-replacement'},
                 {old = 'ralesia-plantation-mk02', new = 'ralesia-plantation-mk02-with-ceramic', type = 'recipe-replacement'},
                 {old = 'ralesia-plantation-mk03', new = 'ralesia-plantation-mk03-with-ceramic', type = 'recipe-replacement'},

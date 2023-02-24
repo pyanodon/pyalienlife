@@ -46,12 +46,13 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-data-array.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'genetics-mk02'},
+        prerequisites = {'genetics-mk03'},
         unit = {
             count = 500,
             ingredients = {
                 {'automation-science-pack', 1},
                 {'py-science-pack-1', 1},
+                {'logistic-science-pack', 1},
             },
             time = 45
         }

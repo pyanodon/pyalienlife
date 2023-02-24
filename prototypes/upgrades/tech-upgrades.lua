@@ -35,7 +35,7 @@ local tech_upgrades = {
     require('prototypes/upgrades/phagnot'),
     require('prototypes/upgrades/ralesia'),
     require('prototypes/upgrades/rennea'),
-    --require('prototypes/upgrades/sap'),
+    require('prototypes/upgrades/sap'),
     require('prototypes/upgrades/seaweed'),
     require('prototypes/upgrades/scrondrix'),
     --require('prototypes/upgrades/simik'),    better to use simik metal 1-6

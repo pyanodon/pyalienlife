@@ -1,3 +1,21 @@
+local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
+
+if data then
+    local water = table.deepcopy(data.raw.recipe['sap-01'])
+    local co2 = table.deepcopy(data.raw.recipe['sap-01'])
+    local air = table.deepcopy(data.raw.recipe['sap-01'])
+
+    water.name = 'sap-01-water'
+    co2.name = 'sap-01-co2'
+    air.name = 'sap-01-air'
+
+    FUN.add_ingredient(water, {type = 'fluid', name = 'water', amount = 100})
+    FUN.add_ingredient(co2, {type = 'fluid', name = 'carbon-dioxide', amount = 50})
+    FUN.add_ingredient(air, {type = 'fluid', name = 'pressured-air', amount = 200})
+
+    data:extend{water, co2, air}
+end
+
 return {
     affected_entities = { -- the entities that should be effected by this tech upgrade
         'sap-extractor-mk01',
@@ -10,13 +28,14 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-sap.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'botany-mk02'},
+        prerequisites = {'sap-mk03'},
         unit = {
             count = 500,
             ingredients = {
                 {'automation-science-pack', 1},
+                {'py-science-pack-1', 1},
                 {'logistic-science-pack', 1},
-                -- {'py-science-pack-3', 1},
+                {'py-science-pack-2', 1},
             },
             time = 45
         }
@@ -28,7 +47,8 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 1, speed = 0.05, type = 'module-effects'}
+                {speed = 0.5, type = 'module-effects'},
+                {old = 'sap-01', new = 'sap-01-water', type = 'recipe-replacement'},
             },
         },
         {
@@ -37,7 +57,8 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 2, productivity = 0.03, type = 'module-effects'}
+                {productivity = 0.5, type = 'module-effects'},
+                {old = 'sap-01', new = 'sap-01-co2', type = 'recipe-replacement'},
             }
         },
         {
@@ -46,7 +67,8 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 4, speed = -0.5, productivity = 0.1, type = 'module-effects'}
+                {speed = 0.25, productivity = 0.25, type = 'module-effects'},
+                {old = 'sap-01', new = 'sap-01-air', type = 'recipe-replacement'},
             }
         }
     },
