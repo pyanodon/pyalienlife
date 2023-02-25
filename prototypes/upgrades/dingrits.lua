@@ -8,7 +8,7 @@ if data then
             stack_size = 50,
             subgroup = 'py-alienlife-modules',
             category = 'dingrits',
-            icon = '__pyalienlifegraphics__/graphics/icons/dingrits.png',
+            icon = '__pyalienlifegraphics__/graphics/icons/alpha-dingrit.png',
             icon_size = 64,
             tier = 5,
             order = 'd-e',
@@ -24,7 +24,7 @@ if data then
             name = 'dingrits-alpha',
             enabled = false,
             energy_required = 36000,
-            ingredients = {{'dingrits-mk04', 1}},
+            ingredients = {{'dingrits-mk04', 2}},
             results = {{name = 'dingrits-alpha', probability = 0.5, type = 'item', amount = 1}},
             category = 'dingrits'
         }
