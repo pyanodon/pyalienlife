@@ -2,7 +2,7 @@
 Version: 2.0.11
 Date: ?
   Changes:
-    - Added the technological upgrade and research device
+    - Re-added the technological upgrade and research device
     - All RC recipes no longer have parents an inputs/output (does not effect vonix, arqad, xeno)
     - Caravan can now walk over pipes and electric poles
     - Fix ocula crash in multiplayer
@@ -11,10 +11,13 @@ Date: ?
     - Removed duplicate sap tree mk2-4 recipes
     - Added cages to the output of vonix raising recipes
     - Bhoddos, sap, grod, arum, and cridren module speed bonus nerfed to match other modules (+100%). Building base speeds increased to compensate
-    - Productivity modules nerfed from 10/20/30 to 4/7/10
+    - Productivity modules nerfed from 10/20/30 to 4/7/10. Reasoning: We now have many other strong upgrades such as TURD and vatbrain.
     - New recipe subgroup for phytomining
     - Added map tags for aerial turbines
     - Fixed #251 https://github.com/pyanodon/pybugreports/issues/251
+    - Labs are no longer affected by speed beacons. Use vatbrains instead.
+    - Growth hormones and antiviral recipe moved to research center (from vatbrain)
+    - Metastable quasicrystal recipe moved to PA (from vatbrain)
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.10
 Date: 2023-2-3
