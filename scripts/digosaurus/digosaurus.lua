@@ -173,6 +173,7 @@ Digosaurus.events.on_ai_command_completed = function(event)
         digosaur.destroy()
         global.digosaurs[unit_number] = nil
         local dig_data = global.dig_sites[digosaur_data.parent]
+        if not dig_data then return end
         dig_data.active_digosaurs[digosaur_data.i] = nil
 
         local ore = digosaur_data.ore
