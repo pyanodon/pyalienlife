@@ -68,7 +68,11 @@ local prototypes = {
 		},
 		actions = caravan_actions,
 		camera_zoom = 0.8,
-		placeable_by = 'caravan'
+		placeable_by = 'caravan',
+		map_tag = {
+			type = 'virtual',
+			name = 'caravan-map-tag'
+		}
 	},
 	flyavan = {
 		inventory_size = 60,
@@ -83,7 +87,11 @@ local prototypes = {
 		actions = caravan_actions,
 		camera_zoom = 0.5,
 		placeable_by = 'flyavan',
-		can_fly = true
+		can_fly = true,
+		map_tag = {
+			type = 'virtual',
+			name = 'caravan-map-tag'
+		}
 	},
 	nukavan = {
 		inventory_size = 10,
@@ -99,7 +107,11 @@ local prototypes = {
 		actions = {
 			['default'] = {'detonate'}
 		},
-		placeable_by = 'nukavan'
+		placeable_by = 'nukavan',
+		map_tag = {
+			type = 'virtual',
+			name = 'caravan-map-tag'
+		}
 	},
 	-- pyalternativeenergy caravans
 	['aerial-blimp-mk01'] = {
@@ -111,7 +123,11 @@ local prototypes = {
 		energy_per_distance_formula = function(distance) return distance_effectivity(distance, 60) * distance * 1800000 end,
 		distance_bonus_formula = function(distance) return distance_effectivity(distance, 60) end,
 		is_aerial = true,
-		can_fly = true
+		can_fly = true,
+		map_tag = {
+			type = 'item',
+			name = 'aerial-blimp-mk01'
+		}
 	},
 	['aerial-blimp-mk02'] = {
 		opens_player_inventory = false,
@@ -122,7 +138,11 @@ local prototypes = {
 		energy_per_distance_formula = function(distance) return distance_effectivity(distance, 80) * distance * 3600000 end,
 		distance_bonus_formula = function(distance) return distance_effectivity(distance, 80) end,
 		is_aerial = true,
-		can_fly = true
+		can_fly = true,
+		map_tag = {
+			type = 'item',
+			name = 'aerial-blimp-mk02'
+		}
 	},
 	['aerial-blimp-mk03'] = {
 		opens_player_inventory = false,
@@ -133,7 +153,11 @@ local prototypes = {
 		energy_per_distance_formula = function(distance) return distance_effectivity(distance, 120) * distance * 6000000 end,
 		distance_bonus_formula = function(distance) return distance_effectivity(distance, 120) end,
 		is_aerial = true,
-		can_fly = true
+		can_fly = true,
+		map_tag = {
+			type = 'item',
+			name = 'aerial-blimp-mk03'
+		}
 	},
 	['aerial-blimp-mk04'] = {
 		opens_player_inventory = false,
@@ -144,7 +168,11 @@ local prototypes = {
 		energy_per_distance_formula = function(distance) return distance_effectivity(distance, 140) * distance * 8000000 end,
 		distance_bonus_formula = function(distance) return distance_effectivity(distance, 140) end,
 		is_aerial = true,
-		can_fly = true
+		can_fly = true,
+		map_tag = {
+			type = 'item',
+			name = 'aerial-blimp-mk04'
+		}
 	},
 	['aerial-blimp-ht'] = {
 		opens_player_inventory = false,
@@ -155,7 +183,11 @@ local prototypes = {
 		energy_per_distance_formula = function(distance) return distance_effectivity(distance, 40) * distance * 4000000 end,
 		distance_bonus_formula = function(distance) return distance_effectivity(distance, 40) end,
 		is_aerial = true,
-		can_fly = true
+		can_fly = true,
+		map_tag = {
+			type = 'item',
+			name = 'aerial-blimp-ht'
+		}
 	}
 }
 

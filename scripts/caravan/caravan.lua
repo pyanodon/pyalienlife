@@ -426,11 +426,6 @@ Caravan.events.ai_command_completed = function(event)
 	end
 end
 
-local caravan_map_tag = {
-	type = 'virtual',
-	name = 'caravan-map-tag'
-}
-
 Caravan.events[60] = function(event)
 	local guis_to_update = {}
 
@@ -445,7 +440,7 @@ Caravan.events[60] = function(event)
 		end
 		caravan_data.map_tag = entity.force.add_chart_tag(entity.surface, {
 			position = entity.position,
-			icon = caravan_map_tag
+			icon = prototypes[entity.name].map_tag
 		})
 		::didnt_move::
 

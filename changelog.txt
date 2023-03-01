@@ -13,6 +13,7 @@ Date: ?
     - Bhoddos, sap, grod, arum, and cridren module speed bonus nerfed to match other modules (+100%). Building base speeds increased to compensate
     - Productivity modules nerfed from 10/20/30 to 4/7/10
     - New recipe subgroup for phytomining
+    - Added map tags for aerial turbines
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.10
 Date: 2023-2-3
