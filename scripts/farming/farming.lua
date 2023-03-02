@@ -16,7 +16,7 @@ end
 
 -- animal, plant, or fungi?
 function Farming.get_kingdom(entity)
-	local name = entity.name:gsub('%-mk..$', '')
+	local name = entity.name:gsub('%-mk..+', '')
 	return farm_buildings[name]
 end
 
