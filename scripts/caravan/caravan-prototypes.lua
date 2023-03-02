@@ -71,7 +71,7 @@ local prototypes = {
 		placeable_by = 'caravan',
 		map_tag = {
 			type = 'virtual',
-			name = 'caravan-map-tag'
+			name = 'caravan-map-tag-mk01'
 		}
 	},
 	flyavan = {
@@ -90,7 +90,7 @@ local prototypes = {
 		can_fly = true,
 		map_tag = {
 			type = 'virtual',
-			name = 'caravan-map-tag'
+			name = 'caravan-map-tag-mk02'
 		}
 	},
 	nukavan = {
@@ -110,7 +110,7 @@ local prototypes = {
 		placeable_by = 'nukavan',
 		map_tag = {
 			type = 'virtual',
-			name = 'caravan-map-tag'
+			name = 'caravan-map-tag-mk03'
 		}
 	},
 	-- pyalternativeenergy caravans
@@ -125,7 +125,7 @@ local prototypes = {
 		is_aerial = true,
 		can_fly = true,
 		map_tag = {
-			type = 'item',
+			type = 'virtual',
 			name = 'aerial-blimp-mk01'
 		}
 	},
@@ -140,7 +140,7 @@ local prototypes = {
 		is_aerial = true,
 		can_fly = true,
 		map_tag = {
-			type = 'item',
+			type = 'virtual',
 			name = 'aerial-blimp-mk02'
 		}
 	},
@@ -155,7 +155,7 @@ local prototypes = {
 		is_aerial = true,
 		can_fly = true,
 		map_tag = {
-			type = 'item',
+			type = 'virtual',
 			name = 'aerial-blimp-mk03'
 		}
 	},
@@ -170,7 +170,7 @@ local prototypes = {
 		is_aerial = true,
 		can_fly = true,
 		map_tag = {
-			type = 'item',
+			type = 'virtual',
 			name = 'aerial-blimp-mk04'
 		}
 	},

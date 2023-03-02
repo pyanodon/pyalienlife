@@ -221,10 +221,29 @@ ITEM {
 	flags = {'hidden', 'not-stackable', 'only-in-cursor'},
 }
 
-data:extend{{
-	type = 'virtual-signal',
-	icon = '__pyalienlifegraphics2__/graphics/icons/caravan-map-tag.png',
-	name = 'caravan-map-tag',
-	subgroup = 'py-alienlife-special-creatures',
-	icon_size = 64
-}}
+data:extend{
+	{
+		type = 'virtual-signal',
+		icon = '__pyalienlifegraphics2__/graphics/icons/caravan-map-tag-mk01.png',
+		name = 'caravan-map-tag-mk01',
+		subgroup = 'py-alienlife-special-creatures',
+		icon_size = 64,
+		localised_name = {'virtual-signal-name.caravan-map-tag'}
+	},
+	{
+		type = 'virtual-signal',
+		icon = '__pyalienlifegraphics2__/graphics/icons/caravan-map-tag-mk02.png',
+		name = 'caravan-map-tag-mk02',
+		subgroup = 'py-alienlife-special-creatures',
+		icon_size = 64,
+		localised_name = {'virtual-signal-name.caravan-map-tag'}
+	},
+	{
+		type = 'virtual-signal',
+		icon = '__pyalienlifegraphics2__/graphics/icons/caravan-map-tag-mk03.png',
+		name = 'caravan-map-tag-mk03',
+		subgroup = 'py-alienlife-special-creatures',
+		icon_size = 64,
+		localised_name = {'virtual-signal-name.caravan-map-tag'}
+	},
+}
