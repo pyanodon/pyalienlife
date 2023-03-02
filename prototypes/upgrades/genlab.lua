@@ -1,7 +1,5 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
-local pyAE = (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalternativeenergy)
-
 if data then
     local adam = table.deepcopy(data.raw.recipe['adam42-gen'])
     adam.name = 'adam42-gen-laser'
@@ -21,7 +19,7 @@ if data then
 
     local hmas = table.deepcopy(data.raw.recipe['hmas'])
     hmas.name = 'hmas-pvp'
-    FUN.add_ingredient(hmas, {name = pyAE and 'pvp' or 'stone', amount = 2, type = 'item'})
+    FUN.add_ingredient(hmas, {name = 'pvp', amount = 2, type = 'item'})
     FUN.multiply_result_amount(hmas, 'hmas', 2.5)
     hmas.energy_required = hmas.energy_required * 3
 

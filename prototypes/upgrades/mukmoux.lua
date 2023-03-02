@@ -1,7 +1,5 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
-local pyAE = (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalternativeenergy)
-
 if data then
     data:extend{{
         name = 'artifical-insemination',
@@ -40,12 +38,7 @@ if data then
         data:extend{recipe}
     end
 
-    local electronics
-    if pyAE then
-        electronics = {'controler-mk01', 'controler-mk02', 'controler-mk03', 'controler-mk04'}
-    else
-        electronics = {'electronic-circuit', 'advanced-circuit', 'processing-unit', 'intelligent-unit'}
-    end
+    local electronics = {'controler-mk01', 'controler-mk02', 'controler-mk03', 'controler-mk04'}
     for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['mukmoux-pasture-mk01']),
         table.deepcopy(data.raw.recipe['mukmoux-pasture-mk02']),

@@ -1,7 +1,5 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
-local pyAE = (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalternativeenergy)
-
 if data then
     data:extend{
         {
@@ -40,7 +38,7 @@ if data then
         table.deepcopy(data.raw.recipe['ralesia-plantation-mk04']),
     }) do
         recipe.name = recipe.name .. '-with-ceramic'
-        FUN.add_ingredient(recipe, {name = pyAE and ('mirror-mk0'..i) or 'ceramic', amount = 50 * i, type = 'item'})
+        FUN.add_ingredient(recipe, {name = 'mirror-mk0'..i, amount = 50 * i, type = 'item'})
         data:extend{recipe}
     end
 

@@ -1,7 +1,5 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
-local pyAE = (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalternativeenergy)
-
 if data then
     data:extend{{
         type = 'recipe',
@@ -24,28 +22,26 @@ if data then
         icon_size = 32
     }}
 
-    if pyAE then
-        data:extend{{
-            type = 'recipe',
-            name = 'cridren-sixth-layer-organic-acid-anhydride',
-            enabled = false,
-            category = 'cridren',
-            ingredients = {
-                {'caged-vrauks', 1},
-                {'geothermal-water-barrel', 8},
-                {'p2s5', 1}
-            },
-            results = {
-                {'chitin', 3},
-                {'organic-acid-anhydride-barrel',  8},
-                {'cage', 1},
-            },
-            energy_required = 40,
-            main_product = 'organic-acid-anhydride-barrel',
-            icon = '__pyalternativeenergygraphics__/graphics/icons/organic-acid-anhydride.png',
-            icon_size = 64
-        }}
-    end
+    data:extend{{
+        type = 'recipe',
+        name = 'cridren-sixth-layer-organic-acid-anhydride',
+        enabled = false,
+        category = 'cridren',
+        ingredients = {
+            {'caged-vrauks', 1},
+            {'geothermal-water-barrel', 8},
+            {'p2s5', 1}
+        },
+        results = {
+            {'chitin', 3},
+            {'organic-acid-anhydride-barrel',  8},
+            {'cage', 1},
+        },
+        energy_required = 40,
+        main_product = 'organic-acid-anhydride-barrel',
+        icon = '__pyalternativeenergygraphics__/graphics/icons/organic-acid-anhydride.png',
+        icon_size = 64
+    }}
 
     for _, recipe in pairs({
         table.deepcopy(data.raw.recipe['cridren-1']),
@@ -59,7 +55,7 @@ if data then
         data:extend{recipe}
     end
 
-    local mufflers = {mods.pyalternativeenergy and 'polycrystalline-slab' or 'melamine', mods.pyalternativeenergy and 'alag-grid' or 'stone-wool', 'wall-shield', 'reinforced-wall-shield'}
+    local mufflers = {'polycrystalline-slab', 'alag-grid', 'wall-shield', 'reinforced-wall-shield'}
     for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['cridren-enclosure-mk01']),
         table.deepcopy(data.raw.recipe['cridren-enclosure-mk02']),
@@ -104,7 +100,7 @@ return {
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
                 {type = 'unlock-recipe', recipe = 'cridren-sixth-layer-ethylene-chlorohydrin'},
-                pyAE and {type = 'unlock-recipe', recipe = 'cridren-sixth-layer-organic-acid-anhydride'}
+                {type = 'unlock-recipe', recipe = 'cridren-sixth-layer-organic-acid-anhydride'}
             },
         },
         {

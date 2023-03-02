@@ -1,7 +1,5 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
-local pyAE = (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalternativeenergy)
-
 if data then
     for _, recipe in pairs({
         table.deepcopy(data.raw.recipe['kmauts-cub-1']),
@@ -10,12 +8,10 @@ if data then
         table.deepcopy(data.raw.recipe['kmauts-cub-4']),
     }) do
         recipe.name = recipe.name .. '-eye-out'
-        if pyAE then
-            for _, result in pairs(recipe.results) do
-                if result.name == 'kmauts-cub' then
-                    FUN.add_result(recipe, {type = 'item', name = 'animal-eye', amount = result.amount})
-                    break
-                end
+        for _, result in pairs(recipe.results) do
+            if result.name == 'kmauts-cub' then
+                FUN.add_result(recipe, {type = 'item', name = 'animal-eye', amount = result.amount})
+                break
             end
         end
         data:extend{recipe}

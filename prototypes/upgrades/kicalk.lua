@@ -70,7 +70,7 @@ if data then
     end
 end
 
-local kicalk = {
+return {
     affected_entities = { -- the entities that should be effected by this tech upgrade
         'kicalk-plantation-mk01',
         'kicalk-plantation-mk02',
@@ -138,7 +138,3 @@ local kicalk = {
     },
     module_category = 'kicalk'
 }
-
-local pyAE = (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalternativeenergy)
-if not pyAE then table.remove(kicalk.sub_techs, 1) end
-return kicalk

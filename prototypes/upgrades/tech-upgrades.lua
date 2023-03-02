@@ -6,55 +6,40 @@ local tech_upgrades = {
     --require('prototypes/upgrades/compost'),
     --require('prototypes/upgrades/creature'),
     require('prototypes/upgrades/data-array'),
-    require('prototypes/upgrades/genlab'),
     require('prototypes/upgrades/incubator'),
     require('prototypes/upgrades/micromine'),
-    require('prototypes/upgrades/research'),
     require('prototypes/upgrades/slaughterhouse'),
 
     -- pYAL organics
     require('prototypes/upgrades/auog'),
     require('prototypes/upgrades/arqad'),
     require('prototypes/upgrades/arthurian'),
-    require('prototypes/upgrades/bhoddos'),
     require('prototypes/upgrades/cottongut'),
-    require('prototypes/upgrades/cridren'),
     require('prototypes/upgrades/dhilmos'),
     require('prototypes/upgrades/dingrits'),
     require('prototypes/upgrades/korlex'),
     require('prototypes/upgrades/fawogae'),
-    require('prototypes/upgrades/fish'),
     require('prototypes/upgrades/fwf'),
     require('prototypes/upgrades/grod'),
-    require('prototypes/upgrades/guar'),
-    require('prototypes/upgrades/kmauts'),
     require('prototypes/upgrades/moss'),
-    require('prototypes/upgrades/mukmoux'),
     require('prototypes/upgrades/navens'),
     require('prototypes/upgrades/phadai'),
     require('prototypes/upgrades/phagnot'),
-    require('prototypes/upgrades/ralesia'),
-    require('prototypes/upgrades/rennea'),
     require('prototypes/upgrades/sap'),
     require('prototypes/upgrades/seaweed'),
     require('prototypes/upgrades/scrondrix'),
     --require('prototypes/upgrades/simik'),    better to use simik metal 1-6
     require('prototypes/upgrades/sponge'),
-    require('prototypes/upgrades/trits'),
     require('prototypes/upgrades/tuuphra'),
     require('prototypes/upgrades/ulric'),
     require('prototypes/upgrades/vonix'),
     require('prototypes/upgrades/vrauks'),
-    require('prototypes/upgrades/xeno'),
     require('prototypes/upgrades/xyhiphoe'),
     require('prototypes/upgrades/yaedols'),
-    require('prototypes/upgrades/yotoi'),
     require('prototypes/upgrades/zipir'),
 
     -- pyHT organics
-    require('prototypes/upgrades/antelope'),
     require('prototypes/upgrades/cadaveric'),
-    require('prototypes/upgrades/kicalk'),
     require('prototypes/upgrades/moondrop'),
 
     -- simik metals
@@ -67,9 +52,28 @@ local tech_upgrades = {
 }
 
 if (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalternativeenergy) then -- is pyAE installed?
-    table.insert(tech_upgrades, require('prototypes/upgrades/bioreactor'))
-    table.insert(tech_upgrades, require('prototypes/upgrades/zungror'))
-    table.insert(tech_upgrades, require('prototypes/upgrades/numal'))
+    for _, upgrade in pairs{
+        'prototypes/upgrades/bioreactor',
+        'prototypes/upgrades/zungror',
+        'prototypes/upgrades/numal',
+        'prototypes/upgrades/xeno',
+        'prototypes/upgrades/fish',
+        'prototypes/upgrades/guar',
+        'prototypes/upgrades/kicalk',
+        'prototypes/upgrades/rennea',
+        'prototypes/upgrades/antelope',
+        'prototypes/upgrades/bhoddos',
+        'prototypes/upgrades/genlab',
+        'prototypes/upgrades/research',
+        'prototypes/upgrades/yotoi',
+        'prototypes/upgrades/cridren',
+        'prototypes/upgrades/kmauts',
+        'prototypes/upgrades/trits',
+        'prototypes/upgrades/ralesia',
+        'prototypes/upgrades/mukmoux',
+    } do
+        table.insert(tech_upgrades, require(upgrade))
+    end
 end
 
 table.sort(tech_upgrades, function(a, b) return a.master_tech.name < b.master_tech.name end)

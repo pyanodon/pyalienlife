@@ -1,7 +1,5 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
-local pyAE = (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalternativeenergy)
-
 if data then
     for _, recipe in pairs({
         table.deepcopy(data.raw.recipe['trits-cub-1']),
@@ -49,7 +47,7 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-trits.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = pyAE and {'photonics', 'nexelit-mk03'} or {'nexelit-mk03'},
+        prerequisites = {'photonics', 'nexelit-mk03'},
         unit = {
             count = 500,
             ingredients = {

@@ -1,7 +1,5 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
-local pyAE = (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalternativeenergy)
-
 if data then
     local recipe = table.deepcopy(data.raw.recipe['yotoi-seeds'])
     recipe.name = 'yotoi-seeds-cold'
@@ -40,14 +38,14 @@ if data then
             name = 'nutrient',
             category = 'electronic',
             ingredients = {
-                {type = 'item', name = 'soil', amount = 100},
                 {type = 'fluid', name = 'manure-bacteria', amount = 100},
                 {type = 'fluid', name = 'etching', amount = 100},
-                {type = 'item', name = (pyAE and 'silica-shell' or 'stone'), amount = 15},
-                {type = 'item', name = (pyAE and 'polycrystalline-plate' or 'stone'), amount = 40},
-                {type = 'item', name = (pyAE and 'electronics-mk03' or 'stone'), amount = 10},
-                {type = 'item', name = (pyAE and 'controler-mk03' or 'stone'), amount = 1},
-                {type = 'item', name = (pyAE and 'polycrystalline-cell' or 'stone'), amount = 12},
+                {type = 'item', name = 'soil', amount = 100},
+                {type = 'item', name = 'silica-shell', amount = 15},
+                {type = 'item', name = 'polycrystalline-plate', amount = 40},
+                {type = 'item', name = 'electronics-mk03', amount = 10},
+                {type = 'item', name = 'controler-mk03', amount = 1},
+                {type = 'item', name = 'polycrystalline-cell', amount = 12},
                 {type = 'item', name = 'processing-unit', amount = 40},
             }
         }
