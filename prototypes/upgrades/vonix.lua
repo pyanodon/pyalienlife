@@ -28,11 +28,6 @@ if data then
         main_product = 'vonix-cub'
     }}
 
-    local creature_recipe = table.deepcopy(data.raw.recipe['vonix'])
-    FUN.add_ingredient(creature_recipe, {'strorix-unknown-sample', 5})
-    creature_recipe.name = 'vonix-with-cancer'
-    data:extend{creature_recipe}
-
     for _, recipe in pairs({
         table.deepcopy(data.raw.recipe['vonix-raising-1']),
         table.deepcopy(data.raw.recipe['vonix-raising-2']),
@@ -41,6 +36,7 @@ if data then
         recipe.name = recipe.name .. '-cancer'
         local barrel_count = FUN.remove_result(recipe, 'empty-barrel')
         FUN.add_result(recipe, {'mutant-enzymes-barrel', barrel_count})
+        FUN.add_ingredient(recipe, {'cbp', 1})
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         recipe.icon = '__pyalienlifegraphics__/graphics/icons/mutant-enzymes.png'
         recipe.icon_size = 64
@@ -104,7 +100,6 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {old = 'vonix', new = 'vonix-with-cancer', type = 'recipe-replacement'},
                 {old = 'vonix-raising-1', new = 'vonix-raising-1-cancer', type = 'recipe-replacement'},
                 {old = 'vonix-raising-2', new = 'vonix-raising-2-cancer', type = 'recipe-replacement'},
                 {old = 'vonix-raising-3', new = 'vonix-raising-3-cancer', type = 'recipe-replacement'},
