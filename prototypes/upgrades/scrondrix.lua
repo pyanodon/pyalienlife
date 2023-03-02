@@ -27,7 +27,7 @@ if data then
     local brains = table.deepcopy(data.raw.recipe['ex-bra-scro'])
     brains.name = 'scrondrix-brain-slaughterhouse-ex'
     brains.localised_name = {'recipe-name.ex-bra-scro'}
-    FUN.multiply_result_amount(brains, 'brain', 8)
+    FUN.multiply_result_amount(brains, 'brain', 12)
     FUN.multiply_result_amount(brains, 'pineal-gland', 0.5)
 
     local experimental = table.deepcopy(data.raw.recipe['Caged scrondrix 9'])
