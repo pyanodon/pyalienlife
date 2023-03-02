@@ -32,6 +32,7 @@ require 'scripts/slaughterhouse/slaughterhouse'
 require 'scripts/smart-farm/smart-farm'
 require 'scripts/worm/worm'
 require 'scripts/turd/turd'
+require 'scripts/vatbrain/vatbrain'
 
 local function discoscience()
     if remote.interfaces['DiscoScience'] and remote.interfaces['DiscoScience']['setIngredientColor'] then
@@ -44,8 +45,6 @@ local function discoscience()
 end
 
 local function init()
-    global.vatbrains = global.vatbrains or {}
-
     discoscience()
     Caravan.events.init()
     Digosaurus.events.init()
@@ -55,6 +54,7 @@ local function init()
     Worm.events.on_init()
     Wiki.events.on_init()
     Turd.events.on_init()
+    Vatbrain.events.on_init()
 end
 
 script.on_init(function()
@@ -80,22 +80,7 @@ script.on_event(on_built, function(event)
     Smart_Farm.events.on_built(event)
     Worm.events.on_built(event)
     Turd.events.on_built(event)
-
-    local E = event.created_entity or event.entity
-    if E.name == 'vat-brain' then
-        local beacon = game.surfaces['nauvis'].create_entity{
-            name = 'hidden-beacon',
-            position = E.position,
-            force = E.force,
-        }
-        --local mk_num = global.vatbrains.unlocked_lvl
-        --local module_slot = beacon.get_inventory(defines.inventory.beacon_modules)
-        --local module = module_slot.insert({name = 'vatbrain-' .. mk_num, count = 1})
-        if global.vatbrains.brains == nil then
-            global.vatbrains.brains = {}
-        end
-        global.vatbrains.brains[beacon.unit_number] = {beacon = beacon, current_lvl = mk_num, vatbrain = E}
-    end
+    Vatbrain.events.on_built(event)
 end)
 
 script.on_event(defines.events.on_ai_command_completed, function(event)
@@ -104,24 +89,13 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
     Oculua.events.on_ai_command_completed(event)
 end)
 
-local function vatbrain_broken(event)
-    local E = event.entity
-    if E.name ~= 'vat-brain' then return end
-
-    local beacon = E.surface.find_entities_filtered{position = E.position, radius = 3, type = 'beacon', limit = 1}[1]
-    if beacon then
-        global.vatbrains.brains[beacon.unit_number] = nil
-        beacon.destroy()
-    end
-end
-
 local on_destroyed = {defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity, defines.events.script_raised_destroy, defines.events.on_entity_died}
 script.on_event(on_destroyed, function(event)
     Caravan.events.on_destroyed(event)
     Digosaurus.events.on_destroyed(event)
     Oculua.events.on_destroyed(event)
     Turd.events.on_destroyed(event)
-    vatbrain_broken(event)
+    Vatbrain.events.on_destroyed(event)
 end)
 
 script.on_event(defines.events.on_gui_opened, function(event)
@@ -151,10 +125,10 @@ script.on_nth_tick(60, function()
     Caravan.events[60]()
     Digosaurus.events[60]()
 end)
-
 script.on_nth_tick(121, Farming.events[121])
 script.on_nth_tick(59, Farming.events[59])
 script.on_nth_tick(221, Oculua.events[221])
+script.on_nth_tick(41, Vatbrain.events[41])
 
 script.on_nth_tick(4, function()
     for _, player in pairs(game.connected_players) do
@@ -164,31 +138,6 @@ script.on_nth_tick(4, function()
         if gui then Caravan.update_gui(gui, true) end
         ::continue::
 	end
-end)
-
-script.on_nth_tick(10, function(event)
-    if global.vatbrains.brains and next(global.vatbrains.brains) then
-        for _, beacon in pairs(global.vatbrains.brains) do
-            if beacon.vatbrain then
-                if beacon.vatbrain.get_recipe() then
-                    if string.match(beacon.vatbrain.get_recipe().name, 'brain%-food') then
-                        if beacon.current_lvl ~= beacon.vatbrain.get_recipe().name:match('%d$') then
-                            local module_slot = beacon.beacon.get_inventory(defines.inventory.beacon_modules)
-                            module_slot.clear()
-                            module_slot.insert{name = 'vatbrain-' .. beacon.vatbrain.get_recipe().name:match('%d$'), count = 1}
-                            beacon.current_lvl = beacon.vatbrain.get_recipe().name:match('%d$')
-                        end
-                        if beacon.vatbrain.status == defines.entity_status.working then
-                            beacon.beacon.active = true
-                            goto bottom
-                        end
-                    end
-                end
-                beacon.beacon.active = false
-            end
-            ::bottom::
-        end
-    end
 end)
 
 script.on_event('open-gui', function(event)
