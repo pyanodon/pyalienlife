@@ -185,7 +185,7 @@ Digosaurus.events.on_ai_command_completed = function(event)
                 if to_insert == 0 then return end
                 local ore_removed = dig_data.inventory.insert{name = product.name, count = to_insert} / product.amount / creature_bonus
                 if not dig_data.inventory[1].valid_for_read or ore_removed == 0 then return end
-                if ore.infinite_resource then
+                if ore.prototype.infinite_resource then
                     -- pass
                 elseif ore.amount > ore_removed then
                     ore.amount = ore.amount - ore_removed
