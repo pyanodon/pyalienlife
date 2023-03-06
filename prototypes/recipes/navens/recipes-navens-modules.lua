@@ -78,7 +78,7 @@ RECIPE {
     icons =
     {
         {icon = '__pyalienlifegraphics__/graphics/icons/navens-spore.png', icon_size = 64},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
     },
     icon_size = 64,
     subgroup = 'py-alienlife-navens',
