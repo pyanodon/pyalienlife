@@ -49,6 +49,7 @@ Vatbrain.events[41] = function()
         if vatbrain_data.current_lvl ~= module_tier then
             local module_slot = beacon.get_inventory(defines.inventory.beacon_modules)
             module_slot.clear()
+            module_slot.insert{name = module, amount = 1}
             vatbrain_data.current_lvl = module_tier
         end
 
