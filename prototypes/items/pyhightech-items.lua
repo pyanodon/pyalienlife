@@ -257,7 +257,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 50,
-    effect = {pollution = {bonus = 1},speed = {bonus = 0.5}},
+    effect = {pollution = {bonus = 1},speed = {bonus = 1}},
     limitation = {},
     limitation_message_key = "moondrop"
 }
@@ -277,7 +277,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 50,
-    effect = {pollution = {bonus = 1},speed = {bonus = 1}},
+    effect = {pollution = {bonus = 1},speed = {bonus = 2}},
     limitation = {},
     limitation_message_key = "moondrop"
 }
@@ -297,7 +297,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 50,
-    effect = {pollution = {bonus = 1},speed = {bonus = 1.5}},
+    effect = {pollution = {bonus = 1},speed = {bonus = 3}},
     limitation = {},
     limitation_message_key = "moondrop"
 }
@@ -317,7 +317,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "k-d",
     stack_size = 50,
-    effect = {pollution = {bonus = 1},speed = {bonus = 2}},
+    effect = {pollution = {bonus = 1},speed = {bonus = 4}},
     limitation = {},
     limitation_message_key = "moondrop"
 }

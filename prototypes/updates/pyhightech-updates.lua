@@ -262,28 +262,25 @@ RECIPE('cadaveric-arum-mk01'):remove_unlock('basic-electronics')
 RECIPE('cadaveric-arum-mk02'):remove_unlock('basic-electronics')
 RECIPE('cadaveric-arum-mk03'):remove_unlock('basic-electronics')
 RECIPE('cadaveric-arum-mk04'):remove_unlock('basic-electronics')
+
+local FULL_CRAFTING_SPEED = 1 -- crafting speed when full of mk01 modules
 RECIPE('moondrop-greenhouse-mk01'):subgroup_order("py-alienlife-farm-buildings-mk01", "b")
---ENTITY('moondrop-greenhouse-mk01'):set('crafting_speed', 0.01)
-data.raw['assembling-machine']['moondrop-greenhouse-mk01'].crafting_speed = 0.1
 data.raw['assembling-machine']['moondrop-greenhouse-mk01'].module_specification.module_slots = 20
+data.raw['assembling-machine']['moondrop-greenhouse-mk01'].crafting_speed = FUN.farm_speed(20, FULL_CRAFTING_SPEED)
 
 RECIPE('moondrop-greenhouse-mk02'):add_unlock('botany-mk02'):subgroup_order("py-alienlife-farm-buildings-mk02", "b")
---ENTITY('moondrop-greenhouse-mk02'):set_field('crafting_speed', 0.01)
-data.raw['assembling-machine']['moondrop-greenhouse-mk02'].crafting_speed = 0.1
 data.raw['assembling-machine']['moondrop-greenhouse-mk02'].module_specification.module_slots = 40
+data.raw['assembling-machine']['moondrop-greenhouse-mk02'].crafting_speed = FUN.farm_speed_derived(40, "moondrop-greenhouse-mk01")
 
 RECIPE('moondrop-greenhouse-mk03'):add_unlock('botany-mk03'):subgroup_order("py-alienlife-farm-buildings-mk03", "b")
---ENTITY('moondrop-greenhouse-mk03'):set_field('crafting_speed', 0.01)
-data.raw['assembling-machine']['moondrop-greenhouse-mk03'].crafting_speed = 0.1
 data.raw['assembling-machine']['moondrop-greenhouse-mk03'].module_specification.module_slots = 60
+data.raw['assembling-machine']['moondrop-greenhouse-mk03'].crafting_speed = FUN.farm_speed_derived(60, "moondrop-greenhouse-mk01")
 
 RECIPE('moondrop-greenhouse-mk04'):add_unlock('botany-mk04'):subgroup_order("py-alienlife-farm-buildings-mk04", "b")
---ENTITY('moondrop-greenhouse-mk04'):set_field('crafting_speed', 0.01)
-data.raw['assembling-machine']['moondrop-greenhouse-mk04'].crafting_speed = 0.1
 data.raw['assembling-machine']['moondrop-greenhouse-mk04'].module_specification.module_slots = 80
+data.raw['assembling-machine']['moondrop-greenhouse-mk04'].crafting_speed = FUN.farm_speed_derived(80, "moondrop-greenhouse-mk01")
 
 RECIPE('harvester'):replace_ingredient("plastic-bar", "biopolymer"):add_ingredient({type = "item", name = "aerogel", amount = 20})
-
 RECIPE('harmonic-absorber'):add_ingredient({type = "item", name = "negasium", amount = 1})
 RECIPE('hyperelastic-material'):add_ingredient({type = "item", name = "hyaline", amount = 1})
 RECIPE('arthurian-pen-mk03'):add_ingredient({type = "item", name = "carbon-nanotube", amount = 15})

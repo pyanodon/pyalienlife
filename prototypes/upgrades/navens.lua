@@ -8,7 +8,7 @@ if data then
 
     data:extend{{
         type = 'recipe',
-        name = 'pre-pesticide-01',
+        name = 'pre-pesticide-01-navens',
         ingredients = {
             {name = 'navens', type = 'item', amount = 12},
             {name = 'mcb', type = 'fluid', amount = 100},
@@ -101,7 +101,7 @@ return {
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
                 {speed = 0.1, type = 'module-effects'},
-                {recipe = 'pre-pesticide-01', type = 'unlock-recipe'},
+                {recipe = 'pre-pesticide-01-navens', type = 'unlock-recipe'},
                 {old = 'navens-sample', new = 'navens-sample-with-vonix-gen', type = 'recipe-replacement'}
             },
         },

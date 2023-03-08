@@ -75,11 +75,11 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-            {old = 'fawogae-1', new = 'fawogae-1-nitrogen', type = 'recipe-replacement'},
-            {old = 'fawogae with manure', new = 'fawogae with manure-nitrogen', type = 'recipe-replacement'},
-            {old = 'fawogae with improved substrate', new = 'fawogae with improved substrate-nitrogen', type = 'recipe-replacement'},
-            {old = 'fawogae with special substrate', new = 'fawogae with special substrate-nitrogen', type = 'recipe-replacement'},
-            {old = 'fawogae with growth hormone', new = 'fawogae with growth hormone-nitrogen', type = 'recipe-replacement'},
+                {old = 'fawogae-1', new = 'fawogae-1-nitrogen', type = 'recipe-replacement'},
+                {old = 'fawogae with manure', new = 'fawogae with manure-nitrogen', type = 'recipe-replacement'},
+                {old = 'fawogae with improved substrate', new = 'fawogae with improved substrate-nitrogen', type = 'recipe-replacement'},
+                {old = 'fawogae with special substrate', new = 'fawogae with special substrate-nitrogen', type = 'recipe-replacement'},
+                {old = 'fawogae with growth hormone', new = 'fawogae with growth hormone-nitrogen', type = 'recipe-replacement'},
             }
         },
         {
@@ -89,7 +89,7 @@ return {
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
                 {speed = 0.15, type = 'module-effects'},
-                {recipe = 'xeno-codex', type = 'unlock-recipe'},
+                {recipe = 'xeno-codex', type = 'unlock-recipe', also_unlocked_by_techs = true},
                 {old = 'fawogae-sample', new = 'fawogae-sample-with-xeno-codex', type = 'recipe-replacement'},
                 {old = 'fawogae-mk02', new = 'fawogae-mk02-with-xeno-codex', type = 'recipe-replacement'},
                 {old = 'fawogae-mk03', new = 'fawogae-mk03-with-xeno-codex', type = 'recipe-replacement'},

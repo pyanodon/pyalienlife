@@ -11,23 +11,31 @@ if data then
         recipe.name = recipe.name .. '-cu'
         FUN.add_ingredient(recipe, {name = 'copper-ore', amount = 20, type = 'item'})
         FUN.multiply_result_amount(recipe, 'moondrop', 1.1)
+        recipe.energy_required = math.ceil(recipe.energy_required * 0.97)
         data:extend{recipe}
     end
 
     data:extend{{
         name = 'moondrop-co2',
-        results = {{type = 'fluid', amount = 100, name = 'carbon-dioxide'}},
-        energy_required = 5,
+        results = {{type = 'fluid', amount = 80, name = 'carbon-dioxide'}},
+        energy_required = 6,
         ingredients = {},
         category = 'moon',
         enabled = false,
         type = 'recipe'
     }}
 
-    local machine_recipe = table.deepcopy(data.raw.recipe['moondrop-greenhouse-mk01'])
-    machine_recipe.name = machine_recipe.name .. '-with-lamp'
-    FUN.add_ingredient(machine_recipe, {name = 'small-lamp', amount = 10, type = 'item'})
-    data:extend{machine_recipe}
+    local lights = {'small-lamp', 'personal-laser-defense-equipment', 'csle-diode', 'parametric-oscilator'}
+    for i, machine_recipe in pairs({
+        table.deepcopy(data.raw.recipe['moondrop-greenhouse-mk01']),
+        table.deepcopy(data.raw.recipe['moondrop-greenhouse-mk02']),
+        table.deepcopy(data.raw.recipe['moondrop-greenhouse-mk03']),
+        table.deepcopy(data.raw.recipe['moondrop-greenhouse-mk04']),
+    }) do
+        machine_recipe.name = machine_recipe.name .. '-with-lamp'
+        FUN.add_ingredient(machine_recipe, {name = lights[i], amount = 20 * i, type = 'item'})
+        data:extend{machine_recipe}
+    end
 end
 
 return {
@@ -71,8 +79,11 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 2, speed = 0.1, type = 'module-effects'},
+                {consumption = 6, speed = 0.2, type = 'module-effects'},
                 {old = 'moondrop-greenhouse-mk01', new = 'moondrop-greenhouse-mk01-with-lamp', type = 'recipe-replacement'},
+                {old = 'moondrop-greenhouse-mk02', new = 'moondrop-greenhouse-mk02-with-lamp', type = 'recipe-replacement'},
+                {old = 'moondrop-greenhouse-mk03', new = 'moondrop-greenhouse-mk03-with-lamp', type = 'recipe-replacement'},
+                {old = 'moondrop-greenhouse-mk04', new = 'moondrop-greenhouse-mk04-with-lamp', type = 'recipe-replacement'},
             }
         },
         {

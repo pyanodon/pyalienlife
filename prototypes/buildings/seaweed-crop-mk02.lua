@@ -1,3 +1,6 @@
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
+local MODULE_SLOTS = 20
+
 RECIPE {
     type = "recipe",
     name = "seaweed-crop-mk02",
@@ -43,11 +46,11 @@ ENTITY {
     selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 20
+        module_slots = MODULE_SLOTS
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"seaweed"},
-    crafting_speed = 0.1,
+    crafting_speed = FUN.farm_speed_derived(MODULE_SLOTS, "seaweed-crop-mk01"),
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
