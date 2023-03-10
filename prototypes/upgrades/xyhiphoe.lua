@@ -96,7 +96,6 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-            {consumption = 2, type = 'module-effects'},
                 {old = 'xyhiphoe-1', new = 'xyhiphoe-1-hot-cold', type = 'recipe-replacement'},
                 {old = 'xyhiphoe-2', new = 'xyhiphoe-2-hot-cold', type = 'recipe-replacement'},
                 {old = 'xyhiphoe-3', new = 'xyhiphoe-3-hot-cold', type = 'recipe-replacement'},

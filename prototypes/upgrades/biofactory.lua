@@ -13,7 +13,7 @@ if data then
                 {type = 'item', name = 'arqad-maggot', amount = 10}
             },
             results = {
-                {type = 'fluid', name = 'naphtha', amount = 250},
+                {type = 'fluid', name = 'naphtha', amount = 350},
                 {type = 'fluid', name = 'condensed-distillate', amount = 50},
                 {type = 'item', name = 'arqad-maggot', amount_min = 9, amount_max = 10, catalyst_amount = 10}
             },

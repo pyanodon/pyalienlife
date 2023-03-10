@@ -2,22 +2,17 @@ local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
 if data then
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['zipir-eggs-1']),
-        table.deepcopy(data.raw.recipe['zipir-eggs-2']),
-        table.deepcopy(data.raw.recipe['zipir-eggs-3']),
-        table.deepcopy(data.raw.recipe['zipir-eggs-4']),
-        table.deepcopy(data.raw.recipe['zipir-eggs-5']),
+        table.deepcopy(data.raw.recipe['zipir-a-1']),
+        table.deepcopy(data.raw.recipe['zipir-a-2']),
+        table.deepcopy(data.raw.recipe['zipir-a-3']),
+        table.deepcopy(data.raw.recipe['zipir-a-4']),
+        table.deepcopy(data.raw.recipe['zipir-a-5']),
     }) do
         recipe.name = recipe.name .. '-suicide'
-        FUN.remove_result(recipe, 'zipir1')
-        FUN.add_result(recipe, {name = 'zipir1', amount_min = 2, amount_max = 3, type = 'item'})
+        FUN.add_result(recipe, {name = 'zipir-eggs', amount = 2, type = 'item'})
+        FUN.add_result(recipe, {name = 'guts', amount = 1, type = 'item'})
         for _, result in pairs(recipe.results) do
-            if result.name == 'zipir-eggs' then
-                result.amount = result.amount_max
-                result.amount_max = nil
-                result.amount_min = nil
-                break
-            end
+            if result.name == 'zipir1' then result.probability = 0.5 end
         end
         data:extend{recipe}
     end
@@ -30,12 +25,12 @@ if data then
         table.deepcopy(data.raw.recipe['zipir-eggs-5']),
     }) do
         recipe.name = recipe.name .. '-trits-gen'
-        recipe.energy_required = recipe.energy_required * 3
+        recipe.energy_required = recipe.energy_required * 1.5
         FUN.add_ingredient(recipe, {name = 'trits-codex', type = 'item', amount = 1})
+        FUN.add_result(recipe, {name = 'trits-codex', type = 'item', amount = 1, probability = 0.5})
         for _, result in pairs(recipe.results) do
             if result.name == 'zipir-eggs' then
-                result.amount_max = result.amount_max * 3
-                result.amount_min = result.amount_min * 3
+                result.amount_max = result.amount_max * 2
                 break
             end
         end
@@ -84,11 +79,11 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {old = 'zipir-eggs-1', new = 'zipir-eggs-1-suicide', type = 'recipe-replacement'},
-                {old = 'zipir-eggs-2', new = 'zipir-eggs-2-suicide', type = 'recipe-replacement'},
-                {old = 'zipir-eggs-3', new = 'zipir-eggs-3-suicide', type = 'recipe-replacement'},
-                {old = 'zipir-eggs-4', new = 'zipir-eggs-4-suicide', type = 'recipe-replacement'},
-                {old = 'zipir-eggs-5', new = 'zipir-eggs-5-suicide', type = 'recipe-replacement'},
+                {old = 'zipir-a-1', new = 'zipir-a-1-suicide', type = 'recipe-replacement'},
+                {old = 'zipir-a-2', new = 'zipir-a-2-suicide', type = 'recipe-replacement'},
+                {old = 'zipir-a-3', new = 'zipir-a-3-suicide', type = 'recipe-replacement'},
+                {old = 'zipir-a-4', new = 'zipir-a-4-suicide', type = 'recipe-replacement'},
+                {old = 'zipir-a-5', new = 'zipir-a-5-suicide', type = 'recipe-replacement'},
             },
         },
         {
@@ -110,7 +105,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.40, speed = 0.1, type = 'module-effects'},
+                {consumption = -0.40, speed = 0.08, type = 'module-effects'},
                 {old = 'zipir-reef-mk01', new = 'zipir-reef-mk01-with-rc', type = 'recipe-replacement'},
                 {old = 'zipir-reef-mk02', new = 'zipir-reef-mk02-with-rc', type = 'recipe-replacement'},
                 {old = 'zipir-reef-mk03', new = 'zipir-reef-mk03-with-rc', type = 'recipe-replacement'},

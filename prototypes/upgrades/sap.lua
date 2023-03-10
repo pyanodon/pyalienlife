@@ -9,9 +9,9 @@ if data then
     co2.name = 'sap-01-co2'
     air.name = 'sap-01-air'
 
-    FUN.add_ingredient(water, {type = 'fluid', name = 'water', amount = 100})
+    FUN.add_ingredient(water, {type = 'fluid', name = 'water', amount = 200})
     FUN.add_ingredient(co2, {type = 'fluid', name = 'carbon-dioxide', amount = 50})
-    FUN.add_ingredient(air, {type = 'fluid', name = 'pressured-air', amount = 200})
+    FUN.add_ingredient(air, {type = 'fluid', name = 'pressured-air', amount = 400})
 
     data:extend{water, co2, air}
 end
@@ -47,7 +47,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {speed = 0.5, type = 'module-effects'},
+                {productivity = 0.45, type = 'module-effects'},
                 {old = 'sap-01', new = 'sap-01-water', type = 'recipe-replacement'},
             },
         },
@@ -67,7 +67,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {speed = 0.25, productivity = 0.25, type = 'module-effects'},
+                {productivity = 0.55, type = 'module-effects'},
                 {old = 'sap-01', new = 'sap-01-air', type = 'recipe-replacement'},
             }
         }

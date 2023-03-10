@@ -9,7 +9,7 @@ if data then
     local darkness = table.deepcopy(data.raw.recipe['zogna-bacteria'])
     FUN.remove_ingredient(darkness, 'small-lamp')
     darkness.name = 'zogna-bacteria-darkness'
-    darkness.energy_required = darkness.energy_required * 2
+    darkness.energy_required = 8
 
     local icd = table.deepcopy(data.raw.recipe['bio-sample'])
     icd.name = 'bio-sample-icd'

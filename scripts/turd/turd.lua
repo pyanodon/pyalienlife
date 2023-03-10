@@ -1,7 +1,7 @@
 Turd = {}
 Turd.events = {}
 
-local tech_upgrades = require 'prototypes/upgrades/tech-upgrades'
+local tech_upgrades, farm_building_tiers = table.unpack(require 'prototypes/upgrades/tech-upgrades')
 
 local NOT_SELECTED = 333 -- enum
 
@@ -47,6 +47,7 @@ local function create_turd_page(gui, player)
 	local label = textbox_frame.add{type = 'label', caption = {'pywiki-descriptions.turd'}, style = 'label_with_left_padding'}
 	label.style.single_line = false
 	local researched_technologies = player.force.technologies
+	local item_prototypes = game.item_prototypes
 
 	for name, tech_upgrade in pairs(tech_upgrades) do
 		if not researched_technologies[name].researched then goto continue end
@@ -100,7 +101,9 @@ local function create_turd_page(gui, player)
 			for _, effect in pairs(sub_tech.effects) do
 				if effect.type == 'module-effects' then
 					local sprite = effects_flow.add{type = 'choose-elem-button', elem_type = 'item', style = 'transparent_slot'}
-					sprite.elem_value = sub_tech.name .. '-module'
+					local module_name = sub_tech.name .. '-module'
+					if not item_prototypes[module_name] then module_name = module_name .. '-mk01' end
+					sprite.elem_value = module_name
 					sprite.locked = true
 				elseif effect.type == 'unlock-recipe' then
 					local sprite = effects_flow.add{type = 'choose-elem-button', elem_type = 'recipe', style = 'transparent_slot'}
@@ -203,6 +206,7 @@ local function create_hidden_beacon(machine, module_name)
 
 	local inventory = beacon.get_module_inventory()
 	inventory.clear()
+	if farm_building_tiers[machine.name] then module_name = module_name .. '-mk0' .. farm_building_tiers[machine.name] end
 	inventory.insert{name = module_name, count = 1}
 	global.turd_beaconed_machines[machine.unit_number] = beacon
 end
@@ -210,9 +214,8 @@ end
 local function module_effects(tech_upgrade, sub_tech, assembling_machine_list, force)
 	local module_name = sub_tech.name .. '-module'
 	for _, machine in pairs(assembling_machine_list) do
-		if tech_upgrade.affected_entities[machine.name] then
-			create_hidden_beacon(machine, module_name)
-		end
+		local i = tech_upgrade.affected_entities[machine.name]
+		if i then create_hidden_beacon(machine, module_name) end
 	end
 	for entity in pairs(tech_upgrade.affected_entities) do
 		global.turd_unlocked_modules[force.index][entity] = module_name

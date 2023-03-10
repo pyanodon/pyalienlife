@@ -8,8 +8,8 @@ if data then
         enabled = false,
         energy_required = 3,
         ingredients = {
-            {type = 'fluid', name = 'pressured-water', amount = 100},
-            {type = 'fluid', name = 'chlorine', amount = 20},
+            {type = 'fluid', name = 'pressured-water', amount = 50},
+            {type = 'fluid', name = 'chlorine', amount = 10},
             {'plastic-bar', 1}
         },
         results = {
@@ -26,7 +26,7 @@ if data then
     }) do
         recipe.name = recipe.name .. '-chlorinated'
         FUN.add_ingredient(recipe, {name = 'chlorinated-water', amount = i, type = 'item'})
-        FUN.multiply_result_amount(recipe, 'moss', 1.1)
+        FUN.multiply_result_amount(recipe, 'moss', 1.2)
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         data:extend{recipe}
     end
@@ -56,7 +56,7 @@ if data then
                 {type = 'fluid', name = 'dirty-water-light', amount = 50},
             },
             results = {
-                {type = 'fluid', name = 'syngas', amount = 80}
+                {type = 'fluid', name = 'syngas', amount = 90}
             },
             enabled = false
         },
@@ -71,7 +71,7 @@ if data then
                 {type = 'fluid', name = 'carbon-dioxide', amount = 50},
             },
             results = {
-                {type = 'fluid', name = 'natural-gas', amount = 70}
+                {type = 'fluid', name = 'natural-gas', amount = 90}
             },
             enabled = false
         },

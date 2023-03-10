@@ -9,7 +9,7 @@ if data then
         table.deepcopy(data.raw.recipe['moondrop-5']),
     }) do
         recipe.name = recipe.name .. '-cu'
-        FUN.add_ingredient(recipe, {name = 'copper-ore', amount = 20, type = 'item'})
+        FUN.add_ingredient(recipe, {name = 'copper-ore', amount = 10, type = 'item'})
         FUN.multiply_result_amount(recipe, 'moondrop', 1.1)
         recipe.energy_required = math.ceil(recipe.energy_required * 0.97)
         data:extend{recipe}

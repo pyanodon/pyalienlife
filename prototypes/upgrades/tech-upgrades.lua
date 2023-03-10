@@ -1,3 +1,5 @@
+local FUN = require('__pycoalprocessing__/prototypes/functions/functions')
+
 local tech_upgrades = {
     -- pyAL non-organics
     --require('prototypes/upgrades/atomizer'),
@@ -78,13 +80,136 @@ end
 
 table.sort(tech_upgrades, function(a, b) return a.master_tech.name < b.master_tech.name end)
 
-if data then
-    local FUN = require('__pycoalprocessing__/prototypes/functions/functions')
-    for _, tech_upgrade in pairs(tech_upgrades) do
-        FUN.tech_upgrade(tech_upgrade)
+local recipes_with_turd_description = {}
+local function build_tech_upgrade(tech_upgrade)
+    local master_tech = tech_upgrade.master_tech
+    local effects = master_tech.effects or {}
+
+    for _, tech in pairs(tech_upgrade.sub_techs) do
+        data:extend{{
+            type = 'sprite',
+            name = tech.name,
+            filename = tech.icon,
+            size = tech.icon_size
+        }}
+
+        effects[#effects + 1] = {
+            type = 'nothing',
+            icon = tech.icon,
+            icon_size = tech.icon_size,
+            effect_description = {'', '[font=default-semibold][color=255,230,192]', {'technology-name.' .. tech.name}, '[/color][/font]\n', {'technology-description.' .. tech.name}}
+        }
+
+        for _, effect in pairs(tech.effects) do
+            if effect.type == 'module-effects' then
+                local mk1, mk1_module_slots
+                if tech_upgrade.affected_entities then
+                    mk1 = tech_upgrade.affected_entities[1]
+                    mk1 = data.raw.furnace[mk1] or data.raw['assembling-machine'][mk1]
+                    mk1_module_slots = mk1.module_specification.module_slots
+                end
+
+
+                if mk1 and mk1.type ~= 'assembling-machine' then
+                    effect.pollution = nil
+                elseif effect.pollution == 0 then
+                    effect.pollution = 0.01 -- prevent use in mines, composter, ect
+                end
+
+                local effective_speed
+                if tech_upgrade.module_category and tech_upgrade.affected_entities and effect.speed and effect.speed ~= 0 then
+                    local desired_mk1_speed = mk1.crafting_speed * (mk1_module_slots + 1)
+                    effective_speed = (desired_mk1_speed / mk1.crafting_speed) * effect.speed
+                end
+
+                local module = {
+                    type = 'module',
+                    name = tech.name .. '-module',
+                    icon = tech.icon,
+                    icon_size = tech.icon_size,
+                    scale = 0.5,
+                    category = tech_upgrade.module_category or 'speed',
+                    tier = 1,
+                    flags = {'not-stackable', 'hidden'},
+                    subgroup = 'py-alienlife-turd-modules',
+                    order = 'z',
+                    stack_size = 1,
+                    effect = {
+                        consumption = {bonus = effect.consumption or 0},
+                        speed = {bonus = effective_speed or effect.speed or 0},
+                        productivity = {bonus = effect.productivity or 0},
+                        pollution = {bonus = -1 * (effect.pollution or 0.01)}
+                    },
+                    localised_name = {'technology-name.' .. tech.name},
+                    localised_description = {'turd.font', {'turd.module'}},
+                    not_voidable = true
+                }
+
+                if not tech_upgrade.module_category and tech_upgrade.affected_entities then
+                    local categories = {}
+                    for _, category in pairs(mk1.crafting_categories) do
+                        categories[category] = true
+                    end
+
+                    module.limitation = {}
+                    for _, recipe in pairs(data.raw.recipe) do
+                        if categories[recipe.category or 'crafting'] then
+                            table.insert(module.limitation, recipe.name)
+                        end
+                    end
+                end
+
+                if effective_speed then
+                    local adjusted_speed = effect.speed * 100
+                    if adjusted_speed >= 0 then adjusted_speed = '+' .. adjusted_speed end
+                    FUN.add_to_description('module', module, {'turd.adjusted-speed', adjusted_speed})
+                end
+
+                if tech_upgrade.module_category then
+                    for i, entity in pairs(tech_upgrade.affected_entities or {}) do
+                        entity = data.raw.furnace[entity] or data.raw['assembling-machine'][entity]
+                        local module = table.deepcopy(module)
+                        module.name = module.name .. '-mk0' .. i
+                        module.tier = i
+                        if i ~= 1 and entity.module_specification and mk1.module_specification then
+                            local module_slots = entity.module_specification.module_slots
+                            local module_slot_growth = module_slots / (1 + mk1_module_slots)
+                            module.effect.speed.bonus = module.effect.speed.bonus * i * module_slot_growth
+                        end
+                        data:extend{module}
+                    end
+                else
+                    data:extend{module}
+                end
+            elseif effect.type == 'unlock-recipe' and not effect.also_unlocked_by_techs and data.raw.recipe[effect.recipe] and not recipes_with_turd_description[effect.recipe] then
+                FUN.add_to_description('recipe', data.raw.recipe[effect.recipe], {'turd.font', {'turd.recipe'}})
+                recipes_with_turd_description[effect.recipe] = true
+            elseif effect.type == 'recipe-replacement' then
+                if not data.raw.recipe[effect.new] then error('Invalid recipe replacement: ' .. effect.new) end
+                FUN.add_to_description('recipe', data.raw.recipe[effect.new], {'turd.font', {'turd.recipe-replacement'}})
+            end
+        end
     end
+
+    TECHNOLOGY {
+        type = 'technology',
+        name = master_tech.name,
+        icon = master_tech.icon,
+        icon_size = master_tech.icon_size,
+        order = master_tech.order,
+        prerequisites = master_tech.prerequisites,
+        effects = effects,
+        unit = master_tech.unit,
+        is_turd = true,
+        localised_description = {'', {'turd.font', {'turd.tech'}}, '\n', {'turd.tech-2'}}
+    }
+end
+
+if data then
+    for _, tech_upgrade in pairs(tech_upgrades) do build_tech_upgrade(tech_upgrade) end
 else
     local indexed_tech_upgrades = {}
+    local farm_building_tiers = {}
     for _, upgrade in pairs(tech_upgrades) do
         local indexed_sub_techs = {}
         for _, sub_tech in pairs(upgrade.sub_techs) do
@@ -95,11 +220,12 @@ else
         indexed_tech_upgrades[upgrade.master_tech.name] = upgrade
 
         local indexed_affected_entities = {}
-        for _, affected_entity in pairs(upgrade.affected_entities) do
-            indexed_affected_entities[affected_entity] = true
+        for i, affected_entity in pairs(upgrade.affected_entities) do
+            indexed_affected_entities[affected_entity] = i
+            farm_building_tiers[affected_entity] = i
         end
         upgrade.affected_entities = indexed_affected_entities
     end
 
-    return indexed_tech_upgrades
+    return {indexed_tech_upgrades, farm_building_tiers}
 end
