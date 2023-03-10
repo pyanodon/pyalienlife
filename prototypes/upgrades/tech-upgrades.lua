@@ -165,7 +165,7 @@ local function build_tech_upgrade(tech_upgrade)
                     FUN.add_to_description('module', module, {'turd.adjusted-speed', adjusted_speed})
                 end
 
-                if tech_upgrade.module_category then
+                if tech_upgrade.module_category and effect.speed and effect.speed ~= 0 then
                     for i, entity in pairs(tech_upgrade.affected_entities or {}) do
                         entity = data.raw.furnace[entity] or data.raw['assembling-machine'][entity]
                         local module = table.deepcopy(module)
@@ -222,7 +222,7 @@ else
         local indexed_affected_entities = {}
         for i, affected_entity in pairs(upgrade.affected_entities) do
             indexed_affected_entities[affected_entity] = i
-            farm_building_tiers[affected_entity] = i
+            if upgrade.module_category then farm_building_tiers[affected_entity] = i end
         end
         upgrade.affected_entities = indexed_affected_entities
     end

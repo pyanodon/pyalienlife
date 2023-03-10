@@ -195,7 +195,7 @@ local function recipe_replacement(old, new, force, assembling_machine_list)
 	end
 end
 
-local function create_hidden_beacon(machine, module_name)
+local function create_hidden_beacon(machine, module_name, item_prototypes)
 	local beacon = global.turd_beaconed_machines[machine.unit_number]
 	if not beacon or not beacon.valid then
 		beacon = machine.surface.create_entity{name = 'hidden-beacon-turd', position = machine.position, force = machine.force}
@@ -206,16 +206,16 @@ local function create_hidden_beacon(machine, module_name)
 
 	local inventory = beacon.get_module_inventory()
 	inventory.clear()
-	if farm_building_tiers[machine.name] then module_name = module_name .. '-mk0' .. farm_building_tiers[machine.name] end
+	if not item_prototypes[module_name] then module_name = module_name .. '-mk0' .. farm_building_tiers[machine.name] end
 	inventory.insert{name = module_name, count = 1}
 	global.turd_beaconed_machines[machine.unit_number] = beacon
 end
 
-local function module_effects(tech_upgrade, sub_tech, assembling_machine_list, force)
+local function module_effects(tech_upgrade, sub_tech, assembling_machine_list, force, item_prototypes)
 	local module_name = sub_tech.name .. '-module'
 	for _, machine in pairs(assembling_machine_list) do
 		local i = tech_upgrade.affected_entities[machine.name]
-		if i then create_hidden_beacon(machine, module_name) end
+		if i then create_hidden_beacon(machine, module_name, item_prototypes) end
 	end
 	for entity in pairs(tech_upgrade.affected_entities) do
 		global.turd_unlocked_modules[force.index][entity] = module_name
@@ -237,6 +237,7 @@ local function reapply_turd_bonuses(force)
 	local recipes = force.recipes
 	local turd_bonuses = global.turd_bonuses[force.index] or {}
 	local assembling_machine_list = find_all_assembling_machines(force)
+	local item_prototypes = game.item_prototypes
 
 	for master_tech_name, tech_upgrade in pairs(tech_upgrades) do
 		local selection = turd_bonuses[master_tech_name] or NOT_SELECTED
@@ -253,7 +254,7 @@ local function reapply_turd_bonuses(force)
 				local recipe = recipes[effect.recipe]
 				if recipe.enabled then recipe_replacement(recipe, nil, force, assembling_machine_list) end
 			elseif effect.type == 'module-effects' then
-				module_effects(tech_upgrade, sub_tech, assembling_machine_list, force)
+				module_effects(tech_upgrade, sub_tech, assembling_machine_list, force, item_prototypes)
 			end
 		end
 
@@ -363,7 +364,7 @@ Turd.events.on_built = function(event)
 	if not global.turd_unlocked_modules[force.index] then return end
 	local module_name = global.turd_unlocked_modules[force.index][entity.name]
 	if not module_name then return end
-	create_hidden_beacon(entity, module_name)
+	create_hidden_beacon(entity, module_name, game.item_prototypes)
 end
 
 Turd.events.on_destroyed = function(event)
