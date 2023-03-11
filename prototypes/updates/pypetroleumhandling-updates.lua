@@ -19,6 +19,16 @@ RECIPE("reformer-mk01"):remove_unlock('oil-machines-mk01'):add_unlock('scrude')
 
 --BUILDINDS--
 
+local FULL_CRAFTING_SPEED = 1 -- crafting speed when full of mk01 modules
+data.raw['assembling-machine']['guar-gum-plantation'].module_specification.module_slots = 16
+data.raw['assembling-machine']['guar-gum-plantation'].crafting_speed = FUN.farm_speed(16, FULL_CRAFTING_SPEED)
+data.raw['assembling-machine']['guar-gum-plantation-mk02'].module_specification.module_slots = 32
+data.raw['assembling-machine']['guar-gum-plantation-mk02'].crafting_speed = FUN.farm_speed_derived(32, "guar-gum-plantation")
+data.raw['assembling-machine']['guar-gum-plantation-mk03'].module_specification.module_slots = 48
+data.raw['assembling-machine']['guar-gum-plantation-mk03'].crafting_speed = FUN.farm_speed_derived(48, "guar-gum-plantation")
+data.raw['assembling-machine']['guar-gum-plantation-mk04'].module_specification.module_slots = 64
+data.raw['assembling-machine']['guar-gum-plantation-mk04'].crafting_speed = FUN.farm_speed_derived(64, "guar-gum-plantation")
+
 --TECHNOLOGIES--
 TECHNOLOGY("drilling-fluid-mk01"):add_pack("py-science-pack-1")
 TECHNOLOGY("oil-machines-mk01"):add_pack("py-science-pack-1")

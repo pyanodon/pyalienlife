@@ -20,6 +20,7 @@ Date: ?
     - Metastable quasicrystal recipe moved to PA (from vatbrain)
     - New icon for navens spore mk2
     - Reduced audio volume for advanced foundry
+    - Fixed that guar gum plantations had extreme high crafting speeds. 964x -> 16x @mk4
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.10
 Date: 2023-2-3

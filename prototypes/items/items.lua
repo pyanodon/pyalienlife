@@ -8511,7 +8511,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "g-a",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 7.5}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "guar"
 }
@@ -8531,7 +8531,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "g-b",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 15}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
 	limitation = {},
 	limitation_message_key = "guar"
 }
@@ -8566,7 +8566,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "g-c",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 30}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 3}},
 	limitation = {},
 	limitation_message_key = "guar"
 }
@@ -8601,7 +8601,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "g-d",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 60}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 4}},
 	limitation = {},
 	limitation_message_key = "guar"
 }

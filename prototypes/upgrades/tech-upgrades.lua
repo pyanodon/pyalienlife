@@ -171,10 +171,10 @@ local function build_tech_upgrade(tech_upgrade)
                         local module = table.deepcopy(module)
                         module.name = module.name .. '-mk0' .. i
                         module.tier = i
-                        if i ~= 1 and entity.module_specification and mk1.module_specification then
+                        if i ~= 1 and entity.module_specification then
                             local module_slots = entity.module_specification.module_slots
-                            local module_slot_growth = module_slots / (1 + mk1_module_slots)
-                            module.effect.speed.bonus = module.effect.speed.bonus * i * module_slot_growth
+                            local desired_speed = entity.crafting_speed * (module_slots + 1/i) * i
+                            module.effect.speed.bonus = (desired_speed / entity.crafting_speed) * effect.speed
                         end
                         data:extend{module}
                     end
