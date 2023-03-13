@@ -9,11 +9,12 @@ if data then
         table.deepcopy(data.raw.recipe['zipir-a-5']),
     }) do
         recipe.name = recipe.name .. '-suicide'
-        FUN.add_result(recipe, {name = 'zipir-eggs', amount = 2, type = 'item'})
+        FUN.add_result(recipe, {name = 'zipir-eggs', amount_min = 2, amount_max = 3, type = 'item'})
         FUN.add_result(recipe, {name = 'guts', amount = 1, type = 'item'})
         for _, result in pairs(recipe.results) do
             if result.name == 'zipir1' then result.probability = 0.5 end
         end
+        recipe.energy_required = math.ceil(recipe.energy_required * 0.8)
         data:extend{recipe}
     end
 
@@ -27,7 +28,7 @@ if data then
         recipe.name = recipe.name .. '-trits-gen'
         recipe.energy_required = recipe.energy_required * 1.5
         FUN.add_ingredient(recipe, {name = 'trits-codex', type = 'item', amount = 1})
-        FUN.add_result(recipe, {name = 'trits-codex', type = 'item', amount = 1, probability = 0.5})
+        FUN.add_result(recipe, {name = 'trits-codex', type = 'item', amount = 1, probability = 0.95})
         for _, result in pairs(recipe.results) do
             if result.name == 'zipir-eggs' then
                 result.amount_max = result.amount_max * 2
@@ -105,7 +106,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.40, speed = 0.08, type = 'module-effects'},
+                {consumption = -0.40, speed = 0.12, type = 'module-effects'},
                 {old = 'zipir-reef-mk01', new = 'zipir-reef-mk01-with-rc', type = 'recipe-replacement'},
                 {old = 'zipir-reef-mk02', new = 'zipir-reef-mk02-with-rc', type = 'recipe-replacement'},
                 {old = 'zipir-reef-mk03', new = 'zipir-reef-mk03-with-rc', type = 'recipe-replacement'},

@@ -21,13 +21,15 @@ if data then
                 {name = 'water', type = 'fluid', amount = 25},
                 {name = 'hot-air', type = 'fluid', amount = 25},
             },
-            result = 'paper-towel'
+            result = 'paper-towel',
+            result_count = 4
         }
     }
 
     local recipe = table.deepcopy(data.raw.recipe['ralesia-seeds'])
     FUN.add_ingredient(recipe, {'paper-towel', 1})
-    FUN.add_result_amount(recipe, 'ralesia-seeds', 4)
+    recipe.energy_required = 3
+    FUN.multiply_result_amount(recipe, 'ralesia-seeds', 2)
     recipe.name = 'ralesia-seeds-paper-towel'
     data:extend{recipe}
 
@@ -54,6 +56,8 @@ if data then
         FUN.remove_ingredient(recipe, 'water')
         local old_hydrogen = FUN.remove_ingredient(recipe, 'hydrogen')
         FUN.add_ingredient(recipe, {name = 'hydrogen', amount = old_hydrogen + 50, type = 'fluid', fluidbox_index = fluidbox_indexs[i]})
+        FUN.add_result(recipe, {name = 'helium', type = 'fluid', amount = i})
+        recipe.main_product = 'helium'
         data:extend{recipe}
     end
 end
@@ -104,7 +108,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {speed = 0.08, type = 'module-effects'},
+                {speed = 0.12, type = 'module-effects'},
                 {old = 'ralesia-plantation-mk01', new = 'ralesia-plantation-mk01-with-ceramic', type = 'recipe-replacement'},
                 {old = 'ralesia-plantation-mk02', new = 'ralesia-plantation-mk02-with-ceramic', type = 'recipe-replacement'},
                 {old = 'ralesia-plantation-mk03', new = 'ralesia-plantation-mk03-with-ceramic', type = 'recipe-replacement'},

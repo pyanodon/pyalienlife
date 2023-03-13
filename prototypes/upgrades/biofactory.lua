@@ -13,7 +13,7 @@ if data then
                 {type = 'item', name = 'arqad-maggot', amount = 10}
             },
             results = {
-                {type = 'fluid', name = 'naphtha', amount = 350},
+                {type = 'fluid', name = 'naphtha', amount = 650},
                 {type = 'fluid', name = 'condensed-distillate', amount = 50},
                 {type = 'item', name = 'arqad-maggot', amount_min = 9, amount_max = 10, catalyst_amount = 10}
             },
@@ -32,7 +32,8 @@ if data then
                 {type = 'fluid', name = 'water-saline', amount = 10}
             },
             results = {
-                {type = 'fluid', name = 'outlet-gas-01', amount = 40},
+                {type = 'fluid', name = 'phytoplankton', amount = 45, fluidbox_index = 1},
+                {type = 'fluid', name = 'outlet-gas-01', amount = 40, fluidbox_index = 2},
                 {type = 'item', name = 'carbon-black', amount = 20},
                 {type = 'item', name = 'kerogen', amount = 10},
             },
@@ -43,15 +44,15 @@ if data then
             name = 'nanofibrils-xyhiphoe',
             enabled = false,
             category = 'biofactory',
-            energy_required = 20,
+            energy_required = 90,
             ingredients = {
-                {type = 'item', name = 'xyhiphoe-cub', amount = 3},
+                {type = 'item', name = 'xyhiphoe-cub', amount = 5},
                 {type = 'fluid', name = 'hot-air', amount = 50},
                 {type = 'fluid', name = 'chloroethanol', amount = 50},
                 {type = 'fluid', name = 'water', amount = 100},
             },
             results = {
-                {type = 'item', name = 'nanofibrils', amount = 3},
+                {type = 'item', name = 'nanofibrils', amount = 2},
                 {type = 'item', name = 'dried-biomass', amount = 1},
                 {type = 'fluid', name = 'waste-water', amount = 100},
             },

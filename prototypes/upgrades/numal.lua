@@ -1,6 +1,24 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
 if data then
+    data:extend{{
+        type = 'recipe',
+        name = 'aeroorgan-ink',
+        enabled = false,
+        category = 'jig',
+        energy_required = 50,
+        ingredients = {
+            {'aeroorgan', 1},
+            {type = 'fluid', name = 'sb-low-conc', amount = 20},
+        },
+        results = {
+            {type = 'fluid', name = 'numal-ink', amount = 15},
+            {type = 'fluid', name = 'sb-final-conc', amount = 1},
+            {type = 'item', name = 'guts', amount = 1}
+        },
+        main_product = 'sb-final-conc'
+    }}
+
 	local aeroorgan = table.deepcopy(data.raw.recipe['aeroorgan'])
 	aeroorgan.name = 'aeroorgan-buffed'
 	FUN.multiply_result_amount(aeroorgan, 'aeroorgan', 3)
@@ -44,7 +62,7 @@ if data then
 				local amount = result.amount
 				result.amount = nil
 				result.amount_min = math.ceil(amount / 2)
-				result.amount_max = math.ceil(amount * 1.65)
+				result.amount_max = math.ceil(amount * 2)
 			end
 		end
         data:extend{recipe}
@@ -53,8 +71,8 @@ if data then
 	local recipe = table.deepcopy(data.raw.recipe['ex-gut-num'])
 	recipe.name = 'ex-gut-num-neodymium'
 	recipe.localised_name = {'recipe-name.ex-gut-num'}
-	FUN.add_ingredient(recipe, {'neodymium-nitrate', 8})
-	FUN.multiply_result_amount(recipe, 'numal-ink', 1.5)
+	FUN.add_ingredient(recipe, {'neodymium-nitrate', 4})
+	FUN.multiply_result_amount(recipe, 'numal-ink', 2)
 	data:extend{recipe}
 end
 
@@ -66,10 +84,10 @@ return {
         'numal-reef-mk04',
     },
     master_tech = { -- tech that is shown in the tech tree
-        name = 'numal-upgrade',
-        icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-numal.png',
-        icon_size = 128,
-        order = 'c-a',
+    name = 'numal-upgrade',
+    icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-numal.png',
+    icon_size = 128,
+    order = 'c-a',
 	prerequisites = {'numal-mk03'},
         unit = {
             count = 500,
@@ -94,7 +112,8 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-				{old = 'aeroorgan', new = 'aeroorgan-buffed', type = 'recipe-replacement'},
+				{recipe = 'aeroorgan-ink', type = 'unlock-recipe'},
+                {old = 'aeroorgan', new = 'aeroorgan-buffed', type = 'recipe-replacement'},
 				{old = 'numal-raising-1', new = 'numal-raising-1-deuterium', type = 'recipe-replacement'},
 				{old = 'numal-raising-2', new = 'numal-raising-2-deuterium', type = 'recipe-replacement'},
 				{old = 'numal-raising-3', new = 'numal-raising-3-deuterium', type = 'recipe-replacement'},

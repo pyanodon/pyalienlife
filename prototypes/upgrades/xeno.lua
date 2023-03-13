@@ -1,14 +1,19 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
 if data then
-    for _, recipe in pairs({
+    for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['caged-xeno-1']),
         table.deepcopy(data.raw.recipe['caged-xeno-2']),
         table.deepcopy(data.raw.recipe['caged-xeno-3']),
         table.deepcopy(data.raw.recipe['caged-xeno-4']),
     }) do
+        recipe.energy_required = math.ceil(recipe.energy_required * 1.3)
         recipe.name = recipe.name .. '-dna-polymerase'
-        FUN.add_ingredient(recipe, {name = 'dna-polymerase', amount = 1, type = 'item'})
+        if i == 1 or i == 3 then
+            FUN.add_result(recipe, {name = 'dna-polymerase', amount = i, type = 'item'})
+        else
+            FUN.add_result(recipe, {name = 'chimeric-proteins', amount = i, type = 'item'})
+        end
         data:extend{recipe}
     end
 
@@ -16,7 +21,7 @@ if data then
         type = 'recipe',
         name = 'xeno-rc-breeding',
         enabled = false,
-        energy_required = 120,
+        energy_required = 150,
         category = 'rc',
         main_product = 'caged-xeno',
         ingredients = {
@@ -28,8 +33,10 @@ if data then
         },
         results = {
             {'caged-xeno', 1},
+            {'xeno-egg', 4},
             {'empty-barrel', 6}
-        }
+        },
+        allowed_module_categories = {'xeno'},
     }}
 
     for _, recipe in pairs({
@@ -80,7 +87,6 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {productivity = 0.10, type = 'module-effects'},
                 {old = 'caged-xeno-1', new = 'caged-xeno-1-dna-polymerase', type = 'recipe-replacement'},
                 {old = 'caged-xeno-2', new = 'caged-xeno-2-dna-polymerase', type = 'recipe-replacement'},
                 {old = 'caged-xeno-3', new = 'caged-xeno-3-dna-polymerase', type = 'recipe-replacement'},

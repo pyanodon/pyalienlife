@@ -14,7 +14,7 @@ if data then
         recipe.name = recipe.name .. '-5th-dimension'
         for _, result in pairs(recipe.results) do
             if result.name == 'caged-antelope' then
-                result.probability = result.probability + 0.1
+                result.probability = result.probability + 0.2
             end
         end
         data:extend{recipe}
@@ -23,7 +23,7 @@ if data then
     local strangelets = table.deepcopy(data.raw.recipe['full-render-antelope'])
     strangelets.name = 'full-render-antelope-existential'
     strangelets.main_product = 'strangelets'
-    FUN.add_result(strangelets, {type = 'item', name = 'strangelets', probability = 0.25, amount = 1})
+    FUN.add_result(strangelets, {type = 'item', name = 'strangelets', probability = 0.5, amount = 1})
     data:extend{strangelets}
 
     data:extend{
@@ -79,7 +79,7 @@ if data then
                 {type = 'item', name = 'anti-lope', probability = 0.5, amount = 1},
                 {type = 'item', name = 'quantum-dots', probability = 0.5, amount = 1},
             },
-            energy_required = 10,
+            energy_required = 40,
             subgroup = 'py-alienlife-antelope',
             icon = '__pyalienlifegraphics__/graphics/icons/antelope.png',
             icon_size = 64
@@ -97,7 +97,7 @@ if data then
                 {type = 'item', name = 'neutra-lope', amount = 2},
                 {type = 'item', name = 'quantum-dots', probability = 0.5, amount = 1},
             },
-            energy_required = 10,
+            energy_required = 40,
             subgroup = 'py-alienlife-antelope',
             icon = '__pyalienlifegraphics3__/graphics/icons/anti-lope.png',
             icon_size = 64
@@ -116,7 +116,7 @@ if data then
                 {type = 'item', name = 'antelope', amount = 1},
                 {type = 'item', name = 'quantum-dots', probability = 0.5, amount = 1},
             },
-            energy_required = 10,
+            energy_required = 40,
             subgroup = 'py-alienlife-antelope',
             icon = '__pyalienlifegraphics3__/graphics/icons/pos-tilope.png',
             icon_size = 64
@@ -134,7 +134,7 @@ if data then
                 {type = 'item', name = 'pos-tilope', amount = 1, probability = 0.5},
                 {type = 'item', name = 'quantum-dots', probability = 0.5, amount = 1},
             },
-            energy_required = 10,
+            energy_required = 40,
             subgroup = 'py-alienlife-antelope',
             icon = '__pyalienlifegraphics3__/graphics/icons/neutra-lope.png',
             icon_size = 64

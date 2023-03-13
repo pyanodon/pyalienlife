@@ -15,7 +15,7 @@ if data then
             {name = 'phenol', type = 'item', amount = 1},
         },
         results = {
-            {name = 'pre-pesticide-01', type = 'fluid', amount = 100},
+            {name = 'pre-pesticide-01', type = 'fluid', amount = 350},
         },
         energy_required = 20,
         enabled = false,
@@ -100,7 +100,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {speed = 0.1, type = 'module-effects'},
+                {speed = 0.08, type = 'module-effects'},
                 {recipe = 'pre-pesticide-01-navens', type = 'unlock-recipe'},
                 {old = 'navens-sample', new = 'navens-sample-with-vonix-gen', type = 'recipe-replacement'}
             },

@@ -9,11 +9,11 @@ if data then
         ingredients = {
             {'caged-phadai', 1},
             {'silver-plate', 2},
-            {'water-barrel', 8},
+            {'water-barrel', 20},
         },
         results = {
             {'cage', 1},
-            {'ethylene-chlorohydrin-barrel',  8},
+            {'ethylene-chlorohydrin-barrel',  20},
             {'bones', 2}
         },
         energy_required = 40,
@@ -29,12 +29,12 @@ if data then
         category = 'cridren',
         ingredients = {
             {'caged-vrauks', 1},
-            {'geothermal-water-barrel', 8},
+            {'geothermal-water-barrel', 20},
             {'p2s5', 1}
         },
         results = {
             {'chitin', 3},
-            {'organic-acid-anhydride-barrel',  8},
+            {'organic-acid-anhydride-barrel',  20},
             {'cage', 1},
         },
         energy_required = 40,
@@ -43,7 +43,7 @@ if data then
         icon_size = 64
     }}
 
-    for _, recipe in pairs({
+    for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['cridren-1']),
         table.deepcopy(data.raw.recipe['cridren-2']),
         table.deepcopy(data.raw.recipe['cridren-3']),
@@ -51,6 +51,9 @@ if data then
     }) do
         recipe.name = recipe.name .. '-neural-cranio'
         FUN.multiply_ingredient_amount(recipe, 'caged-arthurian', 2)
+        FUN.multiply_result_amount(recipe, 'cridren', 2)
+        FUN.add_result_amount(recipe, 'cridren', i * 2)
+        recipe.energy_required = recipe.energy_required * 2
         FUN.multiply_result_amount(recipe, 'cage', 2)
         data:extend{recipe}
     end
@@ -109,7 +112,6 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {productivity = 0.15, type = 'module-effects'},
                 {old = 'cridren-1', new = 'cridren-1-neural-cranio', type = 'recipe-replacement'},
                 {old = 'cridren-2', new = 'cridren-2-neural-cranio', type = 'recipe-replacement'},
                 {old = 'cridren-3', new = 'cridren-3-neural-cranio', type = 'recipe-replacement'},
@@ -122,7 +124,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {speed = 0.1, consumption = -0.25, type = 'module-effects'},
+                {speed = 0.1, productivity = 0.1, consumption = -0.25, type = 'module-effects'},
                 {old = 'cridren-enclosure-mk01', new = 'cridren-enclosure-mk01-with-mufflers', type = 'recipe-replacement'},
                 {old = 'cridren-enclosure-mk02', new = 'cridren-enclosure-mk02-with-mufflers', type = 'recipe-replacement'},
                 {old = 'cridren-enclosure-mk03', new = 'cridren-enclosure-mk03-with-mufflers', type = 'recipe-replacement'},

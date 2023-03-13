@@ -10,7 +10,7 @@ if data then
         recipe.name = recipe.name .. '-pressured'
         FUN.remove_ingredient(recipe, 'water')
         FUN.add_ingredient(recipe, {name = 'pressured-water', amount = 1000, type = 'fluid', fluidbox_index = 1})
-        FUN.multiply_result_amount(recipe, 'grod', 1.2)
+        FUN.multiply_result_amount(recipe, 'grod', 1.25)
         data:extend{recipe}
     end
 
@@ -27,7 +27,7 @@ if data then
     }) do
         recipe.name = recipe.name .. '-tailings'
         FUN.add_ingredient_amount(recipe, 'dirty-water-heavy', 100)
-        FUN.multiply_result_amount(recipe, result, 1.5)
+        FUN.multiply_result_amount(recipe, result, 3)
         data:extend{recipe}
     end
 
@@ -39,6 +39,7 @@ if data then
     }) do
         recipe.name = recipe.name .. '-dry'
         FUN.remove_ingredient(recipe, 'water')
+        recipe.energy_required = math.ceil(recipe.energy_required * 0.85)
         data:extend{recipe}
     end
 end

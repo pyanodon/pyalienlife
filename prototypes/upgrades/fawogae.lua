@@ -10,26 +10,45 @@ if data then
     }) do
         recipe.name = recipe.name .. '-nitrogen'
         FUN.add_ingredient(recipe, {type = 'fluid', name = 'purest-nitrogen-gas', amount = 40 * i})
-        FUN.multiply_result_amount(recipe, 'fawogae', 1.1)
+        FUN.multiply_result_amount(recipe, 'fawogae', 1.35)
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         data:extend{recipe}
     end
 
-    for codex, recipe in pairs({
-        ['xeno-codex'] = table.deepcopy(data.raw.recipe['fawogae-sample']),
-        ['xeno-codex-mk02'] = table.deepcopy(data.raw.recipe['fawogae-mk02']),
-        ['xeno-codex-mk03'] = table.deepcopy(data.raw.recipe['fawogae-mk03']),
-        ['xeno-codex-mk04'] = table.deepcopy(data.raw.recipe['fawogae-mk04']),
-    }) do
+    data:extend{{
+        type = 'recipe',
+        name = 'acid-gas-fawogae',
+        enabled = false,
+        category = 'flotation',
+        energy_required = 8,
+        ingredients = {
+            {'fawogae', 2},
+            {type = 'fluid', name = 'oxygen', amount = 50},
+        },
+        results = {
+            {type = 'fluid', name = 'acidgas', amount = 150},
+        }
+    }}
+
+    for _, recipe in pairs{
+        table.deepcopy(data.raw.recipe['fawogae-sample']),
+        table.deepcopy(data.raw.recipe['fawogae-mk02']),
+        table.deepcopy(data.raw.recipe['fawogae-mk03']),
+        table.deepcopy(data.raw.recipe['fawogae-mk04']),
+    } do
         recipe.name = recipe.name .. '-with-xeno-codex'
-        FUN.add_ingredient(recipe, {codex, 1})
+        FUN.add_ingredient(recipe, {'xeno-codex', 1})
         data:extend{recipe}
     end
 
     local coal_fawogae = table.deepcopy(data.raw.recipe['coal-fawogae'])
     coal_fawogae.name = 'coal-fawogae-buffed'
     coal_fawogae.energy_required = coal_fawogae.energy_required * 4
-    FUN.multiply_result_amount(coal_fawogae, 'raw-coal', 5)
+    FUN.remove_result(coal_fawogae, 'raw-coal')
+    FUN.add_result(coal_fawogae, {'active-carbon', 3})
+    coal_fawogae.icons = nil
+    coal_fawogae.icon = nil
+    coal_fawogae.main_product = 'active-carbon'
     data:extend{coal_fawogae}
 
     for i, recipe in pairs({
@@ -89,6 +108,7 @@ return {
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
                 {speed = 0.15, type = 'module-effects'},
+                {recipe = 'acid-gas-fawogae', type = 'unlock-recipe'},
                 {recipe = 'xeno-codex', type = 'unlock-recipe', also_unlocked_by_techs = true},
                 {old = 'fawogae-sample', new = 'fawogae-sample-with-xeno-codex', type = 'recipe-replacement'},
                 {old = 'fawogae-mk02', new = 'fawogae-mk02-with-xeno-codex', type = 'recipe-replacement'},

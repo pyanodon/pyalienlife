@@ -24,7 +24,7 @@ if data then
 
     local spore = table.deepcopy(data.raw.recipe['yaedols-spores'])
     spore.energy_required = 3
-    spore.results = {{type = 'item', probability = 0.9, name = 'yaedols-spores', amount = 1}}
+    spore.results = {{type = 'item', probability = 0.9, name = 'yaedols-spores', amount = 12}}
     spore.name = 'yaedols-spore-4'
     data:extend{spore}
 end
@@ -59,7 +59,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 9.5, speed = 0.15, productivity = 0.01, type = 'module-effects'}
+                {consumption = 9.5, speed = 0.15, productivity = 0.1, type = 'module-effects'}
             },
         },
         {

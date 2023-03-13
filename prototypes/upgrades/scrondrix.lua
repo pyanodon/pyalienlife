@@ -8,8 +8,8 @@ if data then
         table.deepcopy(data.raw.recipe['Scrondrix cub 4']),
     }) do
         recipe.name = recipe.name .. '-boron'
-        FUN.add_ingredient(recipe, {name = 'boron-trioxide', amount = i * 5, type = 'item'})
-        FUN.add_result_amount(recipe, 'scrondrix-pup', 1)
+        FUN.add_ingredient(recipe, {name = 'boron-trioxide', amount = i, type = 'item'})
+        FUN.add_result_amount(recipe, 'scrondrix-pup', i)
         data:extend{recipe}
     end
 
@@ -18,6 +18,10 @@ if data then
         table.deepcopy(data.raw.recipe['Scrondrix 2']),
         table.deepcopy(data.raw.recipe['Scrondrix 3']),
         table.deepcopy(data.raw.recipe['Scrondrix 4']),
+        table.deepcopy(data.raw.recipe['Scrondrix cub 1']),
+        table.deepcopy(data.raw.recipe['Scrondrix cub 2']),
+        table.deepcopy(data.raw.recipe['Scrondrix cub 3']),
+        table.deepcopy(data.raw.recipe['Scrondrix cub 4']),
     }) do
         recipe.name = recipe.name .. '-vegan'
         FUN.remove_ingredient(recipe, 'meat')
@@ -27,16 +31,17 @@ if data then
     local brains = table.deepcopy(data.raw.recipe['ex-bra-scro'])
     brains.name = 'scrondrix-brain-slaughterhouse-ex'
     brains.localised_name = {'recipe-name.ex-bra-scro'}
-    FUN.multiply_result_amount(brains, 'brain', 12)
+    FUN.multiply_result_amount(brains, 'brain', 26)
     FUN.multiply_result_amount(brains, 'pineal-gland', 0.5)
 
     local experimental = table.deepcopy(data.raw.recipe['Caged scrondrix 9'])
     experimental.name = 'scrondrix-experimental-treatment'
     FUN.add_ingredient(experimental, {name = 'arthurian-codex', amount = 1, type = 'item'})
     experimental.results = {
-        {name = 'bones', amount = 1, type = 'item', probability = 0.7},
-        {name = 'cage', amount = 1, type = 'item', probability = 0.7},
-        {name = 'brain-caged-scrondrix', amount = 1, type = 'item', probability = 0.3},
+        {name = 'bones', amount = 1, type = 'item', probability = 0.6},
+        {name = 'cage', amount = 1, type = 'item', probability = 0.6},
+        {name = 'electronic-circuit', amount = 5, type = 'item'},
+        {name = 'brain-caged-scrondrix', amount = 1, type = 'item', probability = 0.4},
     }
     experimental.main_product = 'brain-caged-scrondrix'
 
@@ -87,6 +92,10 @@ return {
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
                 {consumption = -0.7, type = 'module-effects'},
+                {old = 'Scrondrix cub 1', new = 'Scrondrix cub 1-vegan', type = 'recipe-replacement'},
+                {old = 'Scrondrix cub 2', new = 'Scrondrix cub 2-vegan', type = 'recipe-replacement'},
+                {old = 'Scrondrix cub 3', new = 'Scrondrix cub 3-vegan', type = 'recipe-replacement'},
+                {old = 'Scrondrix cub 4', new = 'Scrondrix cub 4-vegan', type = 'recipe-replacement'},
                 {old = 'Scrondrix 1', new = 'Scrondrix 1-vegan', type = 'recipe-replacement'},
                 {old = 'Scrondrix 2', new = 'Scrondrix 2-vegan', type = 'recipe-replacement'},
                 {old = 'Scrondrix 3', new = 'Scrondrix 3-vegan', type = 'recipe-replacement'},

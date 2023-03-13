@@ -1,16 +1,20 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
 if data then
-    local weird_research_things = {'solidified-sarcorus', 'paragen', 'negasium', 'nonconductive-phazogen', 'denatured-seismite'}
     for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['cottongut-science-red-seeds']),
         table.deepcopy(data.raw.recipe['cottongut-science-green-seeds']),
         table.deepcopy(data.raw.recipe['cottongut-science-blue-seeds']),
         table.deepcopy(data.raw.recipe['cottongut-science-py-seeds']),
         table.deepcopy(data.raw.recipe['cottongut-science-prod-seeds']),
+        table.deepcopy(data.raw.recipe['denatured-seismite-2']),
     }) do
         recipe.name = recipe.name .. '-80-20'
-        FUN.add_result_amount(recipe, weird_research_things[i], 1)
+        FUN.add_result_amount(recipe, 'solidified-sarcorus', 1)
+        FUN.add_result_amount(recipe, 'paragen', 1)
+        FUN.add_result_amount(recipe, 'negasium', 1)
+        FUN.add_result_amount(recipe, 'nonconductive-phazogen', 1)
+        FUN.add_result_amount(recipe, 'denatured-seismite', 1)
         recipe.energy_required = recipe.energy_required * 5
         data:extend{recipe}
     end
@@ -42,7 +46,7 @@ if data then
     }) do
         recipe.name = recipe.name .. '-cannibal'
         FUN.add_ingredient(recipe, {name = 'cottongut-food-03', amount = 1, type = 'item'})
-        FUN.multiply_result_amount(recipe, 'cottongut', 1.1)
+        FUN.multiply_result_amount(recipe, 'cottongut', 1.35)
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         data:extend{recipe}
     end
@@ -95,6 +99,7 @@ return {
                 {old = 'cottongut-science-blue-seeds', new = 'cottongut-science-blue-seeds-80-20', type = 'recipe-replacement'},
                 {old = 'cottongut-science-py-seeds', new = 'cottongut-science-py-seeds-80-20', type = 'recipe-replacement'},
                 {old = 'cottongut-science-prod-seeds', new = 'cottongut-science-prod-seeds-80-20', type = 'recipe-replacement'},
+                {old = 'denatured-seismite-2', new = 'denatured-seismite-2-80-20', type = 'recipe-replacement'},
             },
         },
         {
@@ -116,7 +121,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.25, speed = 0.1, type = 'module-effects'},
+                {consumption = 0.25, speed = 0.4, type = 'module-effects'},
                 {old = 'prandium-lab-mk01', new = 'prandium-lab-mk01-ultrasound', type = 'recipe-replacement'},
                 {old = 'prandium-lab-mk02', new = 'prandium-lab-mk02-ultrasound', type = 'recipe-replacement'},
                 {old = 'prandium-lab-mk03', new = 'prandium-lab-mk03-ultrasound', type = 'recipe-replacement'},

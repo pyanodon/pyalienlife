@@ -30,6 +30,7 @@ if data then
     }) do
         recipe.name = recipe.name .. '-fast'
         recipe.energy_required = math.ceil(recipe.energy_required * 0.7)
+        FUN.add_result_amount(recipe, 'phagnot-cub', 1)
         data:extend{recipe}
     end
 
@@ -45,6 +46,15 @@ if data then
     }) do
         recipe.name = recipe.name .. '-kicalk'
         FUN.add_ingredient(recipe, {name = 'kicalk', amount = 1, type = 'item'})
+        FUN.remove_ingredient(recipe, 'raw-fiber')
+        data:extend{recipe}
+    end
+
+    for _, recipe in pairs({
+        table.deepcopy(data.raw.recipe['phagnot-food-01']),
+        table.deepcopy(data.raw.recipe['phagnot-food-02']),
+    }) do
+        recipe.name = recipe.name .. '-kicalk'
         FUN.remove_ingredient(recipe, 'raw-fiber')
         data:extend{recipe}
     end
@@ -110,6 +120,8 @@ return {
                 {old = 'phagnot-cub-2', new = 'phagnot-cub-2-kicalk', type = 'recipe-replacement'},
                 {old = 'phagnot-cub-3', new = 'phagnot-cub-3-kicalk', type = 'recipe-replacement'},
                 {old = 'phagnot-cub-4', new = 'phagnot-cub-4-kicalk', type = 'recipe-replacement'},
+                {old = 'phagnot-food-01', new = 'phagnot-food-01-kicalk', type = 'recipe-replacement'},
+                {old = 'phagnot-food-02', new = 'phagnot-food-02-kicalk', type = 'recipe-replacement'},
             }
         }
     },

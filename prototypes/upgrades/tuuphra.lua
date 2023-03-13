@@ -4,7 +4,7 @@ if data then
     local recipe = table.deepcopy(data.raw.recipe['tuuphra-seeds'])
     recipe.name = recipe.name .. '-with-water'
     FUN.add_ingredient(recipe, {type = 'fluid', name = 'water', amount = 1000})
-    FUN.add_result_amount(recipe, 'tuuphra-seeds', 1)
+    FUN.add_result_amount(recipe, 'tuuphra-seeds', 2)
     data:extend{recipe}
 
     data:extend{
@@ -32,15 +32,17 @@ if data then
         }
     }
 
-    for _, recipe in pairs({
+    for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['tuuphra-1']),
         table.deepcopy(data.raw.recipe['tuuphra-2']),
         table.deepcopy(data.raw.recipe['tuuphra-3']),
         table.deepcopy(data.raw.recipe['tuuphra-4']),
     }) do
         recipe.name = recipe.name .. '-fungicide'
-        FUN.add_ingredient(recipe, {'fungicide', 1})
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.7)
+        FUN.add_ingredient(recipe, {'fungicide', i})
+        FUN.remove_ingredient(recipe, 'pesticide-mk01')
+        FUN.remove_ingredient(recipe, 'pesticide-mk02')
+        recipe.energy_required = math.ceil(recipe.energy_required * 0.85)
         data:extend{recipe}
     end
 

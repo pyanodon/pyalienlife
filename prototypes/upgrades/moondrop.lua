@@ -25,7 +25,6 @@ if data then
         type = 'recipe'
     }}
 
-    local lights = {'small-lamp', 'personal-laser-defense-equipment', 'csle-diode', 'parametric-oscilator'}
     for i, machine_recipe in pairs({
         table.deepcopy(data.raw.recipe['moondrop-greenhouse-mk01']),
         table.deepcopy(data.raw.recipe['moondrop-greenhouse-mk02']),
@@ -33,7 +32,7 @@ if data then
         table.deepcopy(data.raw.recipe['moondrop-greenhouse-mk04']),
     }) do
         machine_recipe.name = machine_recipe.name .. '-with-lamp'
-        FUN.add_ingredient(machine_recipe, {name = lights[i], amount = 20 * i, type = 'item'})
+        FUN.add_ingredient(machine_recipe, {name = 'small-lamp', amount = 20 * i, type = 'item'})
         data:extend{machine_recipe}
     end
 end

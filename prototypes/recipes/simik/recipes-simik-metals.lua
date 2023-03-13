@@ -382,10 +382,10 @@ RECIPE {
         {type = 'item', name = 'bio-sample', amount = 1},
     },
     results = {
-        {type = 'item', name = '70-u-powder', amount = 11},
+        {type = 'item', name = 'yellow-cake', amount = 11},
         {type = 'item', name = 'empty-barrel', amount = 8},
     },
-    main_product = '70-u-powder',
+    main_product = 'yellow-cake',
     subgroup = 'py-alienlife-simik',
     order = 'c'
 }

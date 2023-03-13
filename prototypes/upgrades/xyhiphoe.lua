@@ -48,7 +48,7 @@ if data then
         main_product = 'xyhiphoe',
         enabled = false,
         category = 'xyhiphoe',
-        energy_required = 170
+        energy_required = 140
     }}
 
     for i, recipe in pairs{
@@ -62,7 +62,7 @@ if data then
         FUN.add_ingredient(recipe, {type = 'fluid', name = 'waste-water', amount = 250, fluidbox_index = 2})
         FUN.add_result_amount(recipe, 'xyhiphoe-cub', 2)
         FUN.remove_ingredient(recipe, 'pressured-water')
-        FUN.add_result(recipe, {type = 'fluid', name = 'acetone', amount = 100})
+        FUN.add_result(recipe, {type = 'fluid', name = 'acetone', amount = i*150})
         data:extend{recipe}
     end
 end

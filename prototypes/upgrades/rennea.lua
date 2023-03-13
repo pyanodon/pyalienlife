@@ -46,12 +46,13 @@ if data then
         recipe.name = recipe.name .. '-hydrophile'
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         FUN.multiply_ingredient_amount(recipe, 'water', 10)
+        FUN.add_result_amount(recipe, 'rennea', 1)
         data:extend{recipe}
     end
 
     local anti_aphid = table.deepcopy(data.raw.recipe['rennea-seeds'])
-    FUN.add_ingredient(anti_aphid, {name = 'bee-venom', amount = 10, type = 'fluid'})
-    FUN.add_result_amount(anti_aphid, 'rennea-seeds', 2)
+    FUN.add_ingredient(anti_aphid, {name = 'bee-venom', amount = 1, type = 'fluid'})
+    FUN.add_result_amount(anti_aphid, 'rennea-seeds', 4)
     anti_aphid.name = 'rennea-seeds-venom'
     data:extend{anti_aphid}
 end

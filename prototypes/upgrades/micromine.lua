@@ -15,16 +15,17 @@ if data then
     FUN.multiply_ingredient_amount(with_collagen, 'petri-dish', 10)
     FUN.multiply_ingredient_amount(with_enz, 'petri-dish', 50)
 
-    FUN.multiply_result_amount(with_agar, 'petri-dish-bacteria', 2)
-    FUN.multiply_result_amount(with_collagen, 'petri-dish-bacteria', 10)
-    FUN.multiply_result_amount(with_enz, 'petri-dish-bacteria', 50)
+    FUN.multiply_result_amount(with_agar, 'petri-dish-bacteria', 3)
+    FUN.multiply_result_amount(with_collagen, 'petri-dish-bacteria', 15)
+    FUN.multiply_result_amount(with_enz, 'petri-dish-bacteria', 100)
 
     FUN.add_ingredient(with_agar, {'agar', 1})
     FUN.add_ingredient(with_collagen, {'collagen', 1})
     FUN.add_ingredient(with_enz, {'enzyme-pks', 1})
 
-    with_collagen.energy_required = 100
-    with_enz.energy_required = 500
+    with_agar.energy_required = 40
+    with_collagen.energy_required = 200
+    with_enz.energy_required = 1000
 
     data:extend{with_agar, with_collagen, with_enz}
 end

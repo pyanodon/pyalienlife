@@ -8,9 +8,9 @@ if data then
         table.deepcopy(data.raw.recipe['cadaveric-arum-4']),
     }) do
         recipe.name = recipe.name .. '-soil'
-        FUN.add_ingredient(recipe, {name = 'soil', amount = 20 * i, type = 'item'})
-        FUN.multiply_result_amount(recipe, 'cadaveric-arum', 1.21)
-        recipe.energy_required = math.ceil(recipe.energy_required * 1.1)
+        FUN.add_ingredient(recipe, {name = 'soil', amount = 40 * i, type = 'item'})
+        FUN.multiply_result_amount(recipe, 'cadaveric-arum', 1.35)
+        recipe.energy_required = math.ceil(recipe.energy_required * 1.15)
         data:extend{recipe}
     end
 
@@ -33,7 +33,7 @@ if data then
     }) do
         recipe.name = recipe.name .. '-msa'
         recipe.main_product = 'cadaveric-arum'
-        FUN.add_result(recipe, {name = 'msa', amount = 20 * i, type = 'fluid'})
+        FUN.add_result(recipe, {name = 'msa', amount = 55 * i, type = 'fluid'})
         data:extend{recipe}
     end
 end
@@ -81,7 +81,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.5, speed = 0.1, type = 'module-effects'},
+                {consumption = -0.5, speed = 0.1, productivity = 0.2, type = 'module-effects'},
                 {old = 'cadaveric-arum-mk01', new = 'cadaveric-arum-mk01-with-nanofibrils', type = 'recipe-replacement'},
                 {old = 'cadaveric-arum-mk02', new = 'cadaveric-arum-mk02-with-nanofibrils', type = 'recipe-replacement'},
                 {old = 'cadaveric-arum-mk03', new = 'cadaveric-arum-mk03-with-nanofibrils', type = 'recipe-replacement'},

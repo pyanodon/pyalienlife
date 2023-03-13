@@ -26,14 +26,14 @@ if data then
         name = 'ammonia-from-cyanic',
         category = 'distilator',
         enabled = false,
-        energy_required = 8,
+        energy_required = 16,
         ingredients = {
             {type = 'fluid', name = 'cyanic-acid', amount = 60},
-            {type = 'fluid', name = 'hydrogen', amount = 10},
+            {type = 'fluid', name = 'hydrogen', amount = 300},
             {type = 'fluid', name = 'formic-acid', amount = 30},
         },
         results = {
-            {type = 'fluid', name = 'ammonia', amount = 60},
+            {type = 'fluid', name = 'ammonia', amount = 350},
             {type = 'fluid', name = 'carbon-dioxide', amount = 30},
         },
         main_product = 'ammonia',

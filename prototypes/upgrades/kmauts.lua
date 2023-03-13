@@ -18,8 +18,8 @@ if data then
     end
 
     local food = table.deepcopy(data.raw.recipe['kmauts-ration'])
-    FUN.add_ingredient(food, {type = 'item', name = 'chitin', amount = 10})
-    FUN.add_result_amount(food, 'kmauts-ration', 1)
+    FUN.add_ingredient(food, {type = 'item', name = 'chitin', amount = 3})
+    FUN.add_result_amount(food, 'kmauts-ration', 2)
     food.name = 'kmauts-ration-chitin'
     data:extend{food}
 end
@@ -60,7 +60,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {productivity = 0.03, type = 'module-effects'}
+                {productivity = 0.03, speed = 0.03, type = 'module-effects'}
             },
         },
         {

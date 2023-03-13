@@ -10,8 +10,8 @@ if data then
         table.deepcopy(data.raw.recipe['Phadai Dance Dance Revolution 4']),
     }) do
         recipe.name = recipe.name .. '-piezoelectric'
-        FUN.add_ingredient(recipe, {name = 'crystallographic-substrate', amount = 4 * i, type = 'item'})
-        FUN.add_result(recipe, {name = 'proton-donor', amount = 4 * i, type = 'item'})
+        FUN.add_ingredient(recipe, {name = 'crystallographic-substrate', amount = 2 * i, type = 'item'})
+        FUN.add_result(recipe, {name = 'proton-donor', amount = 6 * i, type = 'item'})
         recipe.main_product = 'proton-donor'
         data:extend{recipe}
     end
@@ -24,7 +24,7 @@ if data then
     }) do
         recipe.name = recipe.name .. '-dubstep'
         FUN.multiply_result_amount(recipe, 'carapace', 2)
-        FUN.multiply_result_amount(recipe, 'used-phadai', 0.75)
+        FUN.add_result_amount(recipe, 'used-phadai', -2)
         data:extend{recipe}
     end
 end
@@ -62,7 +62,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {speed = 0.25, type = 'module-effects'},
+                {speed = 0.25, productivity = 0.1, type = 'module-effects'},
                 {old = 'energy-drink', new = 'energy-drinkb', type = 'recipe-replacement'}
             },
         },

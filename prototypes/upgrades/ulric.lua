@@ -1,7 +1,7 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
 if data then
-    for _, recipe in pairs({
+    --[[for _, recipe in pairs({
         table.deepcopy(data.raw.recipe['ulric-mk02']),
         table.deepcopy(data.raw.recipe['ulric-mk03']),
         table.deepcopy(data.raw.recipe['ulric-mk04']),
@@ -14,7 +14,7 @@ if data then
         end
         recipe.name = recipe.name .. '-being turned into glue is sexy'
         data:extend{recipe}
-    end
+    end--]]
 
     data:extend{
         {
@@ -59,8 +59,8 @@ if data then
             category = 'impact-crusher',
             ingredients = {{name = 'caged-ulric', amount = 1, type = 'item'}},
             results = {
-                {name = 'epoxy', amount = 2, type = 'item'},
-                {name = 'grade-4-ti', amount = 1, type = 'item'},
+                {name = 'epoxy', amount = 3, type = 'item'},
+                {name = 'cage', amount = 1, type = 'item'},
             },
             main_product = 'epoxy',
             subgroup = 'py-rawores-titanium'
@@ -128,9 +128,9 @@ return {
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
                 {recipe = 'noooo dont turn that horse into glue', type = 'unlock-recipe'},
-                {old = 'ulric-mk02', new = 'ulric-mk02-being turned into glue is sexy', type = 'recipe-replacement'},
+                --[[{old = 'ulric-mk02', new = 'ulric-mk02-being turned into glue is sexy', type = 'recipe-replacement'},
                 {old = 'ulric-mk03', new = 'ulric-mk03-being turned into glue is sexy', type = 'recipe-replacement'},
-                {old = 'ulric-mk04', new = 'ulric-mk04-being turned into glue is sexy', type = 'recipe-replacement'},
+                {old = 'ulric-mk04', new = 'ulric-mk04-being turned into glue is sexy', type = 'recipe-replacement'},--]]
             },
         },
         {

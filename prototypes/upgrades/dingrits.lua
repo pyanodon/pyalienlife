@@ -44,7 +44,7 @@ if data then
             if result.name ~= 'cage' then
                 local amount = result.amount or ((result.amount_min + result.amount_max) / 2)
                 result.amount_min = math.ceil(amount / 2)
-                result.amount_max = math.ceil(amount * 2)
+                result.amount_max = math.ceil(amount * 5)
                 result.amount = nil
             end
         end
@@ -58,8 +58,8 @@ if data then
         table.deepcopy(data.raw.recipe['dingrits-4']),
     }) do
         recipe.name = recipe.name .. '-training'
-        FUN.add_result(recipe, {type = 'item', amount = 1, probability = 0.5, name = 'dingrits-food-01'})
-        if i > 2 then FUN.add_result(recipe, {type = 'item', amount = 1, probability = 0.5, name = 'dingrits-food-02'}) end
+        FUN.add_result(recipe, {type = 'item', amount = 1, probability = 0.75, name = 'dingrits-food-01'})
+        if i > 2 then FUN.add_result(recipe, {type = 'item', amount = 1, probability = 0.75, name = 'dingrits-food-02'}) end
         data:extend{recipe}
     end
 end

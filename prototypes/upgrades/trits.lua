@@ -19,6 +19,7 @@ if data then
         table.deepcopy(data.raw.recipe['trits-4']),
     }) do
         recipe.name = recipe.name .. '-dc'
+        recipe.energy_required = recipe.energy_required * 2
         FUN.multiply_result_amount(recipe, 'trits', 1.5)
         data:extend{recipe}
     end
@@ -94,7 +95,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.2, productivity = 0.15, type = 'module-effects'},
+                {consumption = -0.2, productivity = 0.2, speed = 0.1, type = 'module-effects'},
                 {old = 'trits-reef-mk01', new = 'trits-reef-mk01-with-nexelit', type = 'recipe-replacement'},
                 {old = 'trits-reef-mk02', new = 'trits-reef-mk02-with-nexelit', type = 'recipe-replacement'},
                 {old = 'trits-reef-mk03', new = 'trits-reef-mk03-with-nexelit', type = 'recipe-replacement'},

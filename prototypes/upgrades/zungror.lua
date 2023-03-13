@@ -17,9 +17,9 @@ if data then
     data:extend{buffed_fiber}
 
     for isotope, recipe in pairs({
-        [{'pu-239', 10}] = table.deepcopy(data.raw.recipe['zungror-raising-1']),
-        [{'pu-240', 10}] = table.deepcopy(data.raw.recipe['zungror-raising-2']),
-        [{'pu-238', 10}] = table.deepcopy(data.raw.recipe['zungror-raising-3']),
+        [{'pu-239', 2}] = table.deepcopy(data.raw.recipe['zungror-raising-1']),
+        [{'pu-240', 2}] = table.deepcopy(data.raw.recipe['zungror-raising-2']),
+        [{'pu-238', 2}] = table.deepcopy(data.raw.recipe['zungror-raising-3']),
     }) do
         recipe.name = recipe.name .. '-with-funny-rock'
         FUN.add_ingredient(recipe, isotope)

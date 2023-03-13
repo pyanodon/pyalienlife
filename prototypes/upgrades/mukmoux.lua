@@ -5,7 +5,7 @@ if data then
         name = 'artifical-insemination',
         type = 'recipe',
         enabled = false,
-        energy_required = 30,
+        energy_required = 150,
         category = 'incubator',
         ingredients = {
             {name = 'mukmoux', amount = 1, type = 'item'},
@@ -16,7 +16,7 @@ if data then
             {name = 'water', amount = 650, type = 'fluid'},
         },
         results = {
-            {name = 'mukmoux-calf', amount_min = 22, amount_max = 26, type = 'item'},
+            {name = 'mukmoux-calf', amount_min = 166, amount_max = 253, type = 'item'},
             {name = 'quartz-tube', amount = 1, type = 'item', probability = 0.5},
             {name = 'meat', amount = 3, type = 'item'},
             {name = 'guts', amount = 5, type = 'item'},
@@ -91,7 +91,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {speed = 0.1, type = 'module-effects'},
+                {speed = 1, type = 'module-effects'},
                 {old = 'mukmoux-pasture-mk01', new = 'mukmoux-pasture-mk01-with-electronics', type = 'recipe-replacement'},
                 {old = 'mukmoux-pasture-mk02', new = 'mukmoux-pasture-mk02-with-electronics', type = 'recipe-replacement'},
                 {old = 'mukmoux-pasture-mk03', new = 'mukmoux-pasture-mk03-with-electronics', type = 'recipe-replacement'},
@@ -104,7 +104,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {productivity = 0.1, type = 'module-effects'},
+                {productivity = 0.25, type = 'module-effects'},
                 {old = 'mukmoux-calf-1', new = 'mukmoux-calf-1-microchip', type = 'recipe-replacement'},
                 {old = 'mukmoux-calf-2', new = 'mukmoux-calf-2-microchip', type = 'recipe-replacement'},
                 {old = 'mukmoux-calf-3', new = 'mukmoux-calf-3-microchip', type = 'recipe-replacement'},

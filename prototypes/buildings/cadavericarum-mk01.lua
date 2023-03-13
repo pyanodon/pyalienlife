@@ -1,6 +1,6 @@
 local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 local MODULE_SLOTS = 4
-local FULL_CRAFTING_SPEED = 1 -- crafting speed when full of mk01 modules
+local FULL_CRAFTING_SPEED = 0.5 -- crafting speed when full of mk01 modules
 
 local pipe = {
     south = {

@@ -1,15 +1,15 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
 if data then
-    for _, recipe in pairs({
+    for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['breed-fish-1']),
         table.deepcopy(data.raw.recipe['breed-fish-2']),
         table.deepcopy(data.raw.recipe['breed-fish-3']),
         table.deepcopy(data.raw.recipe['breed-fish-4']),
     }) do
         recipe.name = recipe.name .. '-agressive-selection'
-        FUN.multiply_result_amount(recipe, 'fish', 0.9)
-        FUN.add_result(recipe, {'fish-food-01', 1})
+        FUN.add_result_amount(recipe, 'fish', -i)
+        FUN.add_result(recipe, {'fish-food-01', i})
         data:extend{recipe}
     end
 
@@ -34,7 +34,7 @@ if data then
         recipe.name = recipe.name .. '-doused'
         FUN.remove_result(recipe, 'waste-water')
         FUN.add_result(recipe, {type = 'fluid', name = 'pressured-water', amount = 100})
-        FUN.multiply_result_amount(recipe, 'fish-egg', 1.15)
+        FUN.multiply_result_amount(recipe, 'fish-egg', 1.2)
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         data:extend{recipe}
     end
@@ -81,7 +81,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 1, speed = 0.1, type = 'module-effects'},
+                {consumption = -0.2, speed = 0.35, type = 'module-effects'},
                 {old = 'fish-farm-mk01', new = 'fish-farm-mk01-heating-cooling', type = 'recipe-replacement'},
                 {old = 'fish-farm-mk02', new = 'fish-farm-mk02-heating-cooling', type = 'recipe-replacement'},
                 {old = 'fish-farm-mk03', new = 'fish-farm-mk03-heating-cooling', type = 'recipe-replacement'},

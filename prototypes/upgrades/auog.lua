@@ -6,7 +6,7 @@ if data then
         table.deepcopy(data.raw.recipe['auog-food-02']),
     } do
         recipe.name = recipe.name .. '-sawdust'
-        FUN.add_ingredient(recipe, {'wood', 4 * i})
+        FUN.add_ingredient(recipe, {'wood', 3 * i})
         FUN.multiply_result_amount(recipe, 'auog-food-0'..i, 2)
         data:extend{recipe}
     end
@@ -18,7 +18,11 @@ if data then
         table.deepcopy(data.raw.recipe['auog-pup-breeding-5']),
     } do
         recipe.name = recipe.name .. '-glowing-mushroom'
-        FUN.add_result_amount(recipe, 'auog-pup', 1)
+        for _, result in pairs(recipe.results) do
+            if result.name == 'auog-pup' and result.amount_min then
+                result.amount_min = result.amount_min * 2
+            end
+        end
         data:extend{recipe}
     end
 
@@ -75,7 +79,6 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {speed = -0.1, type = 'module-effects'},
                 {old = 'auog-food-01', new = 'auog-food-01-sawdust', type = 'recipe-replacement'},
                 {old = 'auog-food-02', new = 'auog-food-02-sawdust', type = 'recipe-replacement'},
             },
@@ -99,7 +102,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.25, speed = 0.1, type = 'module-effects'},
+                {consumption = 3, productivity = 0.12, type = 'module-effects'},
                 {old = 'auog-paddock-mk01', new = 'auog-paddock-mk01-with-dirt', type = 'recipe-replacement'},
                 {old = 'auog-paddock-mk02', new = 'auog-paddock-mk02-with-dirt', type = 'recipe-replacement'},
                 {old = 'auog-paddock-mk03', new = 'auog-paddock-mk03-with-dirt', type = 'recipe-replacement'},

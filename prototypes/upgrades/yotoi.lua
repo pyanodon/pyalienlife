@@ -4,6 +4,7 @@ if data then
     local recipe = table.deepcopy(data.raw.recipe['yotoi-seeds'])
     recipe.name = 'yotoi-seeds-cold'
     FUN.add_ingredient(recipe, {type = 'fluid', name = 'cold-air', amount = 30})
+    FUN.add_ingredient(recipe, {type = 'item', name = 'yotoi-leaves', amount = 1})
     FUN.multiply_result_amount(recipe, 'yotoi-seeds', 2)
     recipe.energy_required = recipe.energy_required * 4
     data:extend{recipe}
@@ -43,10 +44,10 @@ if data then
                 {type = 'item', name = 'soil', amount = 100},
                 {type = 'item', name = 'silica-shell', amount = 15},
                 {type = 'item', name = 'polycrystalline-plate', amount = 40},
-                {type = 'item', name = 'electronics-mk03', amount = 10},
+                {type = 'item', name = 'electronics-mk03', amount = 2},
                 {type = 'item', name = 'controler-mk03', amount = 1},
                 {type = 'item', name = 'polycrystalline-cell', amount = 12},
-                {type = 'item', name = 'processing-unit', amount = 40},
+                {type = 'item', name = 'processing-unit', amount = 20},
             }
         }
     }
@@ -73,7 +74,7 @@ if data then
         table.deepcopy(data.raw.recipe['yotoi-aloe-orchard-mk04']),
     }) do
         recipe.name = recipe.name .. '-with-nutrient'
-        FUN.add_ingredient(recipe, {'nutrient', 10 * i})
+        FUN.add_ingredient(recipe, {'nutrient', i})
         data:extend{recipe}
     end
 end

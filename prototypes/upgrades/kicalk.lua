@@ -21,11 +21,11 @@ if data then
         table.deepcopy(data.raw.recipe['kicalk-5']),
     }) do
         recipe.name = recipe.name .. '-saline'
-        FUN.add_result(recipe, {type = 'item', name = 'kicalk-seeds', amount_min = i, amount_max = i * 2})
+        FUN.add_result(recipe, {type = 'item', name = 'kicalk-seeds', amount = i * 2})
         FUN.remove_ingredient(recipe, 'water')
-        FUN.add_ingredient(recipe, {type = 'fluid', amount = 800, name = 'water-saline', fluidbox_index = 1})
+        FUN.add_ingredient(recipe, {type = 'fluid', amount = 200, name = 'water-saline', fluidbox_index = 1})
         recipe.main_product = 'kicalk'
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
+        recipe.energy_required = math.ceil(recipe.energy_required * 0.8)
         data:extend{recipe}
     end
 
@@ -62,10 +62,7 @@ if data then
         for _, other in pairs(other_species[i]) do
             FUN.add_ingredient(recipe, other[1]); FUN.add_result(recipe, other[2])
         end
-        if i == 5 then
-            FUN.add_ingredient(recipe, {'caged-arthurian', 1})
-            FUN.add_result(recipe, {'cage', 1})
-        end
+        FUN.multiply_result_amount(recipe, 'kicalk', 1.35)
         data:extend{recipe}
     end
 end
@@ -101,7 +98,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {productivity = 0.04, type = 'module-effects'},
+                {productivity = 0.12, type = 'module-effects'},
                 {old = 'kicalk-plantation-mk01', new = 'kicalk-plantation-mk01-with-mesh', type = 'recipe-replacement'},
                 {old = 'kicalk-plantation-mk02', new = 'kicalk-plantation-mk02-with-mesh', type = 'recipe-replacement'},
                 {old = 'kicalk-plantation-mk03', new = 'kicalk-plantation-mk03-with-mesh', type = 'recipe-replacement'},
@@ -127,7 +124,6 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.25, speed = 0.2, productivity = 0.02, type = 'module-effects'},
                 {old = 'kicalk-1', new = 'kicalk-1-rotation', type = 'recipe-replacement'},
                 {old = 'kicalk-2', new = 'kicalk-2-rotation', type = 'recipe-replacement'},
                 {old = 'kicalk-3', new = 'kicalk-3-rotation', type = 'recipe-replacement'},

@@ -26,11 +26,14 @@ if data then
         data:extend{recipe}
     end
 
-    local spore = table.deepcopy(data.raw.recipe['bhoddos-spore'])
-    spore.energy_required = 3
-    spore.results = {{type = 'item', probability = 0.9, name = 'bhoddos-spore', amount = 1}}
-    spore.name = 'bhoddos-spore-4'
-    data:extend{spore}
+    for i, spore in pairs({
+        table.deepcopy(data.raw.recipe['bhoddos-spore']),
+        table.deepcopy(data.raw.recipe['bhoddos-spore-3']),
+    }) do
+        spore.name = spore.name .. '-upgraded'
+        spore.results = {{name = 'bhoddos-spore', amount = i*6, type = 'item', probability = 0.9}}
+        data:extend{spore}
+    end
 end
 
 return {
@@ -65,7 +68,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.5, speed = 0.06, type = 'module-effects'},
+                {consumption = 0.5, speed = 0.25, type = 'module-effects'},
                 {old = 'bhoddos-culture-mk01', new = 'bhoddos-culture-mk01-with-pybot', type = 'recipe-replacement'},
                 {old = 'bhoddos-culture-mk02', new = 'bhoddos-culture-mk02-with-pybot', type = 'recipe-replacement'},
                 {old = 'bhoddos-culture-mk03', new = 'bhoddos-culture-mk03-with-pybot', type = 'recipe-replacement'},
@@ -90,7 +93,8 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {recipe = 'bhoddos-spore-4', type = 'unlock-recipe'}
+                {old = 'bhoddos-spore', new = 'bhoddos-spore-upgraded', type = 'recipe-replacement'},
+                {old = 'bhoddos-spore-3', new = 'bhoddos-spore-3-upgraded', type = 'recipe-replacement'},
             }
         }
     },
