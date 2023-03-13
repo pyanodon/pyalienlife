@@ -123,6 +123,7 @@ return {
                 {old = 'Moss 2', new = 'Moss 2-chlorinated', type = 'recipe-replacement'},
                 {old = 'Moss 3', new = 'Moss 3-chlorinated', type = 'recipe-replacement'},
                 {old = 'Moss 4', new = 'Moss 4-chlorinated', type = 'recipe-replacement'},
+                {old = 'Moss 5', new = 'Moss 5-chlorinated', type = 'recipe-replacement'},
             },
         },
         {
@@ -136,6 +137,7 @@ return {
                 {old = 'Moss 2', new = 'Moss 2-without-sludge', type = 'recipe-replacement'},
                 {old = 'Moss 3', new = 'Moss 3-without-sludge', type = 'recipe-replacement'},
                 {old = 'Moss 4', new = 'Moss 4-without-sludge', type = 'recipe-replacement'},
+                {old = 'Moss 5', new = 'Moss 5-without-sludge', type = 'recipe-replacement'},
             }
         },
         {
