@@ -50,7 +50,7 @@ if data then
         type = 'recipe',
         name = 'tuuphra-grease',
         energy_required = 4,
-        ingredients = {{'tuuphra', 2}},
+        ingredients = {{'tuuphra', 1}},
         results = {
             {type = 'item', name = 'starch', amount = 1, probability = 0.2},
             {type = 'fluid', name = 'grease', amount = 8}
