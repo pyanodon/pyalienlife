@@ -102,7 +102,7 @@ ENTITY {
       usage_priority = "secondary-input",
       emissions_per_minute = 3,
       render_no_power_icon = true,
-      input_flow_limit = "0W",
+      energy_production = '0MW',
   },
   localised_name = {'entity-name.pydrive'},
   localised_description = {'entity-description.pydrive'},
