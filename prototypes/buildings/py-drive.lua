@@ -101,9 +101,11 @@ ENTITY {
       type = "electric",
       usage_priority = "secondary-input",
       emissions_per_minute = 3,
-      buffer_capacity = '20MW',
-      render_no_power_icon = true
+      render_no_power_icon = true,
+      input_flow_limit = "0W",
   },
+  localised_name = {'entity-name.pydrive'},
+  localised_description = {'entity-description.pydrive'},
   energy_usage = "1000kW",
   continuous_animation = true,
   animations =

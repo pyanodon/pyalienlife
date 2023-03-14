@@ -1,6 +1,7 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
 if data then
+    local cottongut_sciences = {'solidified-sarcorus', 'paragen', 'negasium', 'nonconductive-phazogen', 'denatured-seismite', 'denatured-seismite'}
     for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['cottongut-science-red-seeds']),
         table.deepcopy(data.raw.recipe['cottongut-science-green-seeds']),
@@ -10,11 +11,7 @@ if data then
         table.deepcopy(data.raw.recipe['denatured-seismite-2']),
     }) do
         recipe.name = recipe.name .. '-80-20'
-        FUN.add_result_amount(recipe, 'solidified-sarcorus', 1)
-        FUN.add_result_amount(recipe, 'paragen', 1)
-        FUN.add_result_amount(recipe, 'negasium', 1)
-        FUN.add_result_amount(recipe, 'nonconductive-phazogen', 1)
-        FUN.add_result_amount(recipe, 'denatured-seismite', 1)
+        FUN.add_result_amount(recipe, cottongut_sciences[i], 1)
         recipe.energy_required = recipe.energy_required * 5
         data:extend{recipe}
     end

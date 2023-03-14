@@ -52,7 +52,7 @@ if data then
         recipe.name = recipe.name .. '-neural-cranio'
         FUN.multiply_ingredient_amount(recipe, 'caged-arthurian', 2)
         FUN.multiply_result_amount(recipe, 'cridren', 2)
-        FUN.add_result_amount(recipe, 'cridren', i * 2)
+        FUN.add_result_amount(recipe, 'cridren', i)
         recipe.energy_required = recipe.energy_required * 2
         FUN.multiply_result_amount(recipe, 'cage', 2)
         data:extend{recipe}

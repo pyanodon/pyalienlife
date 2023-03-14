@@ -7,6 +7,11 @@ if data then
         table.deepcopy(data.raw.recipe['vrauks-3']),
         table.deepcopy(data.raw.recipe['vrauks-4']),
         table.deepcopy(data.raw.recipe['vrauks-5']),
+        table.deepcopy(data.raw.recipe['vrauks-cocoon-1']),
+        table.deepcopy(data.raw.recipe['vrauks-cocoon-2']),
+        table.deepcopy(data.raw.recipe['vrauks-cocoon-3']),
+        table.deepcopy(data.raw.recipe['vrauks-cocoon-4']),
+        table.deepcopy(data.raw.recipe['vrauks-cocoon-5']),
     }) do
         recipe.name = recipe.name .. '-no-water'
         local barrel_number = FUN.remove_ingredient(recipe, 'water-barrel')
@@ -17,7 +22,6 @@ if data then
                 break
             end
         end
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         data:extend{recipe}
     end
 
@@ -75,6 +79,11 @@ return {
                 {old = 'vrauks-3', new = 'vrauks-3-no-water', type = 'recipe-replacement'},
                 {old = 'vrauks-4', new = 'vrauks-4-no-water', type = 'recipe-replacement'},
                 {old = 'vrauks-5', new = 'vrauks-5-no-water', type = 'recipe-replacement'},
+                {old = 'vrauks-cocoon-1', new = 'vrauks-cocoon-1-no-water', type = 'recipe-replacement'},
+                {old = 'vrauks-cocoon-2', new = 'vrauks-cocoon-2-no-water', type = 'recipe-replacement'},
+                {old = 'vrauks-cocoon-3', new = 'vrauks-cocoon-3-no-water', type = 'recipe-replacement'},
+                {old = 'vrauks-cocoon-4', new = 'vrauks-cocoon-4-no-water', type = 'recipe-replacement'},
+                {old = 'vrauks-cocoon-5', new = 'vrauks-cocoon-5-no-water', type = 'recipe-replacement'},
             },
         },
         {
@@ -83,7 +92,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.5, speed = -0.1, productivity = 0.25, type = 'module-effects'}
+                {consumption = -0.5, speed = -0.25, productivity = 0.25, type = 'module-effects'}
             }
         },
         {
