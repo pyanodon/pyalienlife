@@ -17,7 +17,7 @@ if data then
                 break
             end
         end
-        recipe.energy_required = math.ceil(recipe.energy_required * 1.04)
+        recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         data:extend{recipe}
     end
 
@@ -26,7 +26,7 @@ if data then
         name = 'ammonia-from-cyanic',
         category = 'distilator',
         enabled = false,
-        energy_required = 16,
+        energy_required = 24,
         ingredients = {
             {type = 'fluid', name = 'cyanic-acid', amount = 60},
             {type = 'fluid', name = 'hydrogen', amount = 300},
@@ -83,7 +83,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.5, speed = -0.2, productivity = 0.1, type = 'module-effects'}
+                {consumption = -0.5, speed = -0.1, productivity = 0.25, type = 'module-effects'}
             }
         },
         {
