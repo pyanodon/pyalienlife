@@ -17,7 +17,7 @@ if data then
         },
     }}
 
-    for i, recipe in pairs({
+    for _, recipe in pairs({
         table.deepcopy(data.raw.recipe['Moss 1']),
         table.deepcopy(data.raw.recipe['Moss 2']),
         table.deepcopy(data.raw.recipe['Moss 3']),
@@ -25,8 +25,8 @@ if data then
         table.deepcopy(data.raw.recipe['Moss 5']),
     }) do
         recipe.name = recipe.name .. '-chlorinated'
-        FUN.add_ingredient(recipe, {name = 'chlorinated-water', amount = i, type = 'item'})
-        FUN.multiply_result_amount(recipe, 'moss', 1.4)
+        FUN.add_ingredient(recipe, {name = 'chlorinated-water', amount = 1, type = 'item'})
+        FUN.multiply_result_amount(recipe, 'moss', 1.3)
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         data:extend{recipe}
     end

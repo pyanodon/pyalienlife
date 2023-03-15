@@ -22,7 +22,7 @@ if data then
             results = {{type = 'fluid', name = 'psc', amount = 10}},
             ingredients = {
                 {'bones', 3},
-                {'chitin', 20},
+                {'chitin', 3},
                 {'mukmoux-fat', 5},
                 {name = 'oxygen', amount = 150, type = 'fluid'}
             },
@@ -51,7 +51,7 @@ if data then
             ingredients = {
                 {'guts', 6},
                 {'meat', 4},
-                {type = 'fluid', name = 'blood', amount = 20},
+                {type = 'fluid', name = 'blood', amount = 40},
                 {name = 'oxygen', amount = 150, type = 'fluid'}
             },
             energy_required = 20
@@ -105,7 +105,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 2, speed = -0.5, productivity = 0.05, type = 'module-effects'}
+                {consumption = 2, speed = -0.5, productivity = 0.08, type = 'module-effects'}
             }
         },
         {

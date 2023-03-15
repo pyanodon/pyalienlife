@@ -5,7 +5,7 @@ if data then
         name = 'artifical-insemination',
         type = 'recipe',
         enabled = false,
-        energy_required = 150,
+        energy_required = 450,
         category = 'incubator',
         ingredients = {
             {name = 'mukmoux', amount = 1, type = 'item'},

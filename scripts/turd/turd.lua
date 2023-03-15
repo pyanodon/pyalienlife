@@ -1,35 +1,64 @@
 Turd = {}
 Turd.events = {}
-
+local Table = require('__stdlib__/stdlib/utils/table')
 local tech_upgrades, farm_building_tiers = table.unpack(require 'prototypes/upgrades/tech-upgrades')
 
 local NOT_SELECTED = 333 -- enum
 
-local function on_search(search_key, gui)
+local views = {'all', 'researched', 'selected', 'unselected'}
+views = Table.map(views, function(v) return {'turd.visible-' .. v, v} end)
+
+local function check_viewable(element, player, researched_technologies)
+	local name = element.tags.name
+	local view_type = views[global.turd_views[player.index] or 1][2]
+	if view_type == 'all' then
+		return true
+	elseif not researched_technologies[name].researched then
+		return false
+	elseif view_type == 'researched' then
+		return true
+	end
+	local selection = global.turd_bonuses[player.force.index][name] or NOT_SELECTED
+	if view_type == 'selected' then
+		return selection ~= NOT_SELECTED
+	elseif view_type == 'unselected' then
+		return selection == NOT_SELECTED
+	else return true end
+end
+
+local function on_search(search_key, gui, player)
+	local researched_technologies = player.force.technologies
 	if search_key == '' then
-		for _, tech_upgrade_element in pairs(gui.children) do
-			tech_upgrade_element.visible = true
+		for _, element in pairs(gui.children) do
+			if element.sub_tech_flow then
+				element.visible = check_viewable(element, player, researched_technologies)
+			end
 		end
 		return
 	end
 
 	search_key = search_key:lower()
-	for _, tech_upgrade_element in pairs(gui.children) do
-		local sub_tech_flow = tech_upgrade_element.sub_tech_flow
+	for _, element in pairs(gui.children) do
+		local sub_tech_flow = element.sub_tech_flow
 		if sub_tech_flow then
-			local tech_upgrade = tech_upgrades[tech_upgrade_element.tags.name]
+			local tech_upgrade = tech_upgrades[element.tags.name]
 			local name = tech_upgrade.master_tech.name:lower()
-			tech_upgrade_element.visible = name:find(search_key, 1, true)
+			element.visible = check_viewable(element, player, researched_technologies) and name:find(search_key, 1, true)
 		end
 	end
 end
 
-local function update_confirm_button(element, player)
+local function update_confirm_button(element, player, researched_technologies)
 	local force_index = player.force_index
 	global.turd_bonuses[force_index] = global.turd_bonuses[force_index] or {}
-	local selected_upgrade = global.turd_bonuses[force_index][element.tags.master_tech_name] or NOT_SELECTED
+	local name = element.tags.master_tech_name
+	local selected_upgrade = global.turd_bonuses[force_index][name] or NOT_SELECTED
+	researched_technologies = researched_technologies or player.force.technologies
 
-	if selected_upgrade == NOT_SELECTED then
+	if not researched_technologies[name].researched then
+		element.style = 'red_back_button_unhoverable'
+		element.caption = {'turd.no-research'}
+	elseif selected_upgrade == NOT_SELECTED then
 		element.style = 'confirm_button_without_tooltip'
 		element.caption = {'turd.select'}
 	elseif selected_upgrade == element.tags.sub_tech_name then
@@ -46,12 +75,15 @@ local function create_turd_page(gui, player)
     textbox_frame.style.horizontally_stretchable = true
 	local label = textbox_frame.add{type = 'label', caption = {'pywiki-descriptions.turd'}, style = 'label_with_left_padding'}
 	label.style.single_line = false
-	local researched_technologies = player.force.technologies
+
+	local py_select_view = textbox_frame.add{type = 'drop-down', name = 'py_select_view', items = views, selected_index = global.turd_views[player.index] or 1}
+	py_select_view.style.width = 200
+	py_select_view.style.top_margin = 10
+
 	local item_prototypes = game.item_prototypes
+	local researched_technologies = player.force.technologies
 
 	for name, tech_upgrade in pairs(tech_upgrades) do
-		if not researched_technologies[name].researched then goto continue end
-
 		local frame = gui.add{type = 'frame', direction = 'vertical'}
 		frame.style.horizontally_stretchable = true
 		frame.tags = {name = name}
@@ -128,14 +160,22 @@ local function create_turd_page(gui, player)
 				master_tech_name = name,
 				sub_tech_name = sub_tech.name
 			}
-			update_confirm_button(confirm_button, player)
+			update_confirm_button(confirm_button, player, researched_technologies)
 		end
 
 		::continue::
 	end
 
 	local search_key = remote.call('pywiki', 'get_page_searchbar', player).text
-	on_search(search_key, gui)
+	on_search(search_key, gui, player)
+end
+
+gui_events[defines.events.on_gui_selection_state_changed]['py_select_view'] = function(event)
+	local player = game.get_player(event.player_index)
+	local element = event.element
+	global.turd_views[event.player_index] = element.selected_index
+	local search_key = remote.call('pywiki', 'get_page_searchbar', player).text
+	on_search(search_key, element.parent.parent, player)
 end
 
 gui_events[defines.events.on_gui_click]['py_open_turd_techtree'] = function(event)
@@ -270,6 +310,8 @@ gui_events[defines.events.on_gui_click]['py_turd_confirm_button'] = function(eve
 	local player = game.get_player(event.player_index)
 	local force = player.force
 
+	if not force.technologies[master_tech_name].researched then return end
+
 	if not player.admin then
 		force.print{'turd.font', {'turd.admin-needed'}}
 		return
@@ -294,6 +336,7 @@ Turd.events.on_init = function()
 	global.turd_bonuses = global.turd_bonuses or {}
 	global.turd_beaconed_machines = global.turd_beaconed_machines or {}
 	global.turd_unlocked_modules = global.turd_unlocked_modules or {}
+	global.turd_views = global.turd_views or {}
 end
 
 local function respec(force)

@@ -37,25 +37,19 @@ if data then
         recipe.name = recipe.name .. '-cancer'
         local barrel_count = FUN.remove_result(recipe, 'empty-barrel')
         FUN.add_result(recipe, {'mutant-enzymes-barrel', barrel_count})
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         recipe.icon = '__pyalienlifegraphics__/graphics/icons/mutant-enzymes.png'
         recipe.icon_size = 64
         data:extend{recipe}
     end
 
-    for _, recipe in pairs({
+    local previous = {{'soil', 20}, {'vonix-den-mk01', 1}, {'vonix-den-mk02', 1}}
+    for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['vonix-den-mk01']),
         table.deepcopy(data.raw.recipe['vonix-den-mk02']),
         table.deepcopy(data.raw.recipe['vonix-den-mk03']),
     }) do
-        recipe.name = recipe.name .. '-cheap'
-        for _, ingredient in pairs(recipe.ingredients) do
-            ingredient.name = ingredient[1] or ingredient.name
-            ingredient.type = ingredient.type or 'item'
-            ingredient.amount = math.ceil((ingredient[2] or ingredient.amount) / 4)
-            ingredient[1] = nil
-            ingredient[2] = nil
-        end
+        recipe.name = recipe.name .. '-free'
+        recipe.ingredients = {previous[i]}
         data:extend{recipe}
     end
 end
@@ -112,9 +106,9 @@ return {
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
                 {consumption = -0.5, speed = 0.2, type = 'module-effects'},
-                {old = 'vonix-den-mk01', new = 'vonix-den-mk01-cheap', type = 'recipe-replacement'},
-                {old = 'vonix-den-mk02', new = 'vonix-den-mk02-cheap', type = 'recipe-replacement'},
-                {old = 'vonix-den-mk03', new = 'vonix-den-mk03-cheap', type = 'recipe-replacement'},
+                {old = 'vonix-den-mk01', new = 'vonix-den-mk01-free', type = 'recipe-replacement'},
+                {old = 'vonix-den-mk02', new = 'vonix-den-mk02-free', type = 'recipe-replacement'},
+                {old = 'vonix-den-mk03', new = 'vonix-den-mk03-free', type = 'recipe-replacement'},
             }
         }
     },

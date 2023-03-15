@@ -14,7 +14,8 @@ if data then
         results = {
             {'cage', 1},
             {'ethylene-chlorohydrin-barrel',  20},
-            {'bones', 2}
+            {'bones', 2},
+            {'cridren-seeds', 1},
         },
         energy_required = 40,
         main_product = 'ethylene-chlorohydrin-barrel',
@@ -36,6 +37,7 @@ if data then
             {'chitin', 3},
             {'organic-acid-anhydride-barrel',  20},
             {'cage', 1},
+            {'cridren-seeds', 1},
         },
         energy_required = 40,
         main_product = 'organic-acid-anhydride-barrel',
@@ -52,7 +54,7 @@ if data then
         recipe.name = recipe.name .. '-neural-cranio'
         FUN.multiply_ingredient_amount(recipe, 'caged-arthurian', 2)
         FUN.multiply_result_amount(recipe, 'cridren', 2)
-        FUN.add_result_amount(recipe, 'cridren', i)
+        FUN.add_result_amount(recipe, 'cridren', 1)
         recipe.energy_required = recipe.energy_required * 2
         FUN.multiply_result_amount(recipe, 'cage', 2)
         data:extend{recipe}

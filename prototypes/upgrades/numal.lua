@@ -12,9 +12,9 @@ if data then
             {type = 'fluid', name = 'sb-low-conc', amount = 20},
         },
         results = {
-            {type = 'fluid', name = 'numal-ink', amount = 15},
+            {type = 'fluid', name = 'numal-ink', amount = 10},
             {type = 'fluid', name = 'sb-final-conc', amount = 1},
-            {type = 'item', name = 'guts', amount = 1}
+            {type = 'item', name = 'mukmoux-fat', amount = 2}
         },
         main_product = 'sb-final-conc'
     }}

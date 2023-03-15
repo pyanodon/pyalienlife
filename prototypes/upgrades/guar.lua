@@ -1,7 +1,22 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
 if data then
-	for _, recipe in pairs({
+    data:extend{{
+        type = 'recipe',
+        name = 'fungicide-zinc',
+        enabled = false,
+        category = 'biofactory',
+        ingredients = {
+            {type = 'item', name = 'copper-plate', amount = 1},
+            {type = 'item', name = 'plastic-bar', amount = 2},
+            {type = 'item', name = 'ore-zinc', amount = 1},
+            {type = 'fluid', name = 'phosphorous-acid', amount = 10},
+        },
+        results = {{'fungicide', 1}},
+        energy_required = 10
+    }}
+
+	for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['guar-1']),
         table.deepcopy(data.raw.recipe['guar-2']),
         table.deepcopy(data.raw.recipe['guar-3']),
@@ -9,7 +24,9 @@ if data then
     }) do
         recipe.name = recipe.name .. '-guarpulse'
 		FUN.add_ingredient(recipe, {'fungicide', 1})
-        FUN.multiply_result_amount(recipe, 'guar', 1.3)
+        FUN.add_result(recipe, {'zinc-nanocomplex', i})
+        recipe.main_product = 'zinc-nanocomplex'
+        FUN.multiply_result_amount(recipe, 'guar', 1.15)
         data:extend{recipe}
     end
 
@@ -21,8 +38,8 @@ if data then
     }) do
         recipe.name = recipe.name .. '-aquaguar'
         local water = FUN.remove_ingredient(recipe, 'water')
-		FUN.add_ingredient(recipe, {type = 'fluid', name = 'water-saline', amount = math.ceil(water/2), fluidbox_index = 1})
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.95)
+		FUN.add_ingredient(recipe, {type = 'fluid', name = 'water-saline', amount = math.ceil(water/5), fluidbox_index = 1})
+        recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         FUN.remove_ingredient(recipe, 'pesticide-mk01')
         FUN.remove_ingredient(recipe, 'pesticide-mk02')
         data:extend{recipe}
@@ -36,7 +53,7 @@ if data then
         table.deepcopy(data.raw.recipe['guar-gum-plantation-mk04']),
     }) do
         recipe.name = recipe.name .. '-with-bots'
-		FUN.add_ingredient(recipe, {type = 'item', name = bots[i], amount = 2 * i})
+		FUN.add_ingredient(recipe, {type = 'item', name = bots[i], amount = 4 * i})
         data:extend{recipe}
     end
 end
@@ -74,7 +91,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-				{recipe = 'fungicide', type = 'unlock-recipe'},
+				{recipe = 'fungicide-zinc', type = 'unlock-recipe'},
 				{old = 'guar-1', new = 'guar-1-guarpulse', type = 'recipe-replacement'},
                 {old = 'guar-2', new = 'guar-2-guarpulse', type = 'recipe-replacement'},
                 {old = 'guar-3', new = 'guar-3-guarpulse', type = 'recipe-replacement'},
@@ -99,7 +116,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-				{speed = 0.3, type = 'module-effects'},
+				{speed = 0.35, type = 'module-effects'},
                 {old = 'guar-gum-plantation', new = 'guar-gum-plantation-with-bots', type = 'recipe-replacement'},
                 {old = 'guar-gum-plantation-mk02', new = 'guar-gum-plantation-mk02-with-bots', type = 'recipe-replacement'},
                 {old = 'guar-gum-plantation-mk03', new = 'guar-gum-plantation-mk03-with-bots', type = 'recipe-replacement'},

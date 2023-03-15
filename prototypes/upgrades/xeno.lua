@@ -33,7 +33,7 @@ if data then
         },
         results = {
             {'caged-xeno', 1},
-            {'xeno-egg', 4},
+            {'xeno-egg', 6},
             {'empty-barrel', 6}
         },
         allowed_module_categories = {'xeno'},
@@ -47,7 +47,7 @@ if data then
     }) do
         recipe.name = recipe.name .. '-cheap'
         FUN.remove_ingredient(recipe, 'bones')
-        FUN.add_ingredient_amount(recipe, 'fish', -15)
+        FUN.remove_ingredient(recipe, 'fish')
         FUN.add_ingredient(recipe, {'hydrofluoric-acid-barrel', 1})
         FUN.add_result_amount(recipe, 'empty-barrel', 1)
         data:extend{recipe}
@@ -108,7 +108,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 3.33, speed = 0.1, type = 'module-effects'},
+                {consumption = 3.33, type = 'module-effects'},
                 {old = 'xeno-egg-1', new = 'xeno-egg-1-cheap', type = 'recipe-replacement'},
                 {old = 'xeno-egg-2', new = 'xeno-egg-2-cheap', type = 'recipe-replacement'},
                 {old = 'xeno-egg-3', new = 'xeno-egg-3-cheap', type = 'recipe-replacement'},

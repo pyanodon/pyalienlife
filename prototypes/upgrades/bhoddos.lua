@@ -21,7 +21,7 @@ if data then
         table.deepcopy(data.raw.recipe['bhoddos-4']),
     }) do
         recipe.name = recipe.name .. '-exoenzymes'
-        FUN.add_ingredient(recipe, {name = biomass[i], amount = 5, type = 'item'})
+        FUN.add_ingredient(recipe, {name = biomass[i], amount = 3, type = 'item'})
         FUN.multiply_result_amount(recipe, 'bhoddos', 1.2)
         data:extend{recipe}
     end

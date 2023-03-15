@@ -25,6 +25,18 @@ if data then
         data:extend{recipe}
     end
 
+    for i, recipe in pairs({
+        table.deepcopy(data.raw.recipe['vrauks-paddock-mk01']),
+        table.deepcopy(data.raw.recipe['vrauks-paddock-mk02']),
+        table.deepcopy(data.raw.recipe['vrauks-paddock-mk03']),
+        table.deepcopy(data.raw.recipe['vrauks-paddock-mk04']),
+    }) do
+        recipe.main_product = recipe.name
+        recipe.name = recipe.name .. '-with-lamp'
+        FUN.add_result(recipe, {'small-lamp', i*32})
+        data:extend{recipe}
+    end
+
     data:extend{{
         type = 'recipe',
         name = 'ammonia-from-cyanic',
@@ -92,7 +104,11 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.5, speed = -0.25, productivity = 0.25, type = 'module-effects'}
+                {consumption = -0.5, speed = -0.25, productivity = 0.25, type = 'module-effects'},
+                {old = 'vrauks-paddock-mk01', new = 'vrauks-paddock-mk01-with-lamp', type = 'recipe-replacement'},
+                {old = 'vrauks-paddock-mk02', new = 'vrauks-paddock-mk02-with-lamp', type = 'recipe-replacement'},
+                {old = 'vrauks-paddock-mk03', new = 'vrauks-paddock-mk03-with-lamp', type = 'recipe-replacement'},
+                {old = 'vrauks-paddock-mk04', new = 'vrauks-paddock-mk04-with-lamp', type = 'recipe-replacement'},
             }
         },
         {

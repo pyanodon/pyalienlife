@@ -21,7 +21,7 @@ if data then
         table.deepcopy(data.raw.recipe['kicalk-5']),
     }) do
         recipe.name = recipe.name .. '-saline'
-        FUN.add_result(recipe, {type = 'item', name = 'kicalk-seeds', amount = i * 2})
+        FUN.add_result(recipe, {type = 'item', name = 'kicalk-seeds', amount = i * 4})
         FUN.remove_ingredient(recipe, 'water')
         FUN.add_ingredient(recipe, {type = 'fluid', amount = 200, name = 'water-saline', fluidbox_index = 1})
         recipe.main_product = 'kicalk'
@@ -98,7 +98,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {productivity = 0.12, type = 'module-effects'},
+                {productivity = 0.15, speed = 0.05, type = 'module-effects'},
                 {old = 'kicalk-plantation-mk01', new = 'kicalk-plantation-mk01-with-mesh', type = 'recipe-replacement'},
                 {old = 'kicalk-plantation-mk02', new = 'kicalk-plantation-mk02-with-mesh', type = 'recipe-replacement'},
                 {old = 'kicalk-plantation-mk03', new = 'kicalk-plantation-mk03-with-mesh', type = 'recipe-replacement'},

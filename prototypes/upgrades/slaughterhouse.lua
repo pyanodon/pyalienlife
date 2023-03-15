@@ -41,7 +41,7 @@ if data then
     local products_to_buff = {
         laser = {'blood', 'mukmoux-fat', 'sulfuric-acid', 'bones', 'photophore'},
         music = {'skin', 'carapace', 'pelt', 'chitin', 'shell', 'fish-oil'},
-        lard = {'meat', 'arthropod-blood', 'guts', 'brain', 'bonemeal', 'tendon', 'keratin'}
+        lard = {'meat', 'arthropod-blood', 'guts', 'formic-acid', 'bonemeal', 'tendon', 'keratin'}
     }
 
     for _, path in pairs{'laser', 'music', 'lard'} do

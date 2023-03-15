@@ -8,10 +8,8 @@ if data then
         table.deepcopy(data.raw.recipe['dhilmos-4']),
     }) do
         recipe.name = recipe.name .. '-cover'
-        FUN.multiply_ingredient_amount(recipe, 'dhilmos-pup', 2)
-        FUN.multiply_result_amount(recipe, 'dhilmos', 2)
-        local bacteria = FUN.remove_ingredient(recipe, 'phytoplankton')
-        FUN.add_ingredient(recipe, {name = 'bacteria-1', amount = bacteria, type = 'fluid'})
+        FUN.remove_ingredient(recipe, 'phytoplankton')
+        FUN.add_ingredient(recipe, {name = 'bacteria-1', amount = 1, type = 'fluid'})
         data:extend{recipe}
     end
 
@@ -27,6 +25,7 @@ if data then
     }) do
         recipe.name = recipe.name .. '-skimmer'
         FUN.remove_result(recipe, 'waste-water')
+        FUN.remove_ingredient(recipe, 'filtration-media')
         data:extend{recipe}
     end
 
@@ -35,14 +34,12 @@ if data then
         table.deepcopy(data.raw.recipe['dhilmos-2']),
         table.deepcopy(data.raw.recipe['dhilmos-3']),
         table.deepcopy(data.raw.recipe['dhilmos-4']),
-        table.deepcopy(data.raw.recipe['dhilmos-egg-1']),
-        table.deepcopy(data.raw.recipe['dhilmos-egg-2']),
-        table.deepcopy(data.raw.recipe['dhilmos-egg-3']),
-        table.deepcopy(data.raw.recipe['dhilmos-egg-4']),
     }) do
         recipe.name = recipe.name .. '-double-intake'
-        FUN.multiply_ingredient_amount(recipe, 'water-saline', 2)
-        FUN.multiply_result_amount(recipe, 'waste-water', 2)
+        FUN.remove_ingredient(recipe, 'water-saline')
+        FUN.add_ingredient(recipe, {'salt', 2})
+        FUN.add_ingredient(recipe, {type = 'fluid', name = 'water', amount = 600})
+        FUN.multiply_result_amount(recipe, 'waste-water', 6)
         data:extend{recipe}
     end
 end
@@ -84,6 +81,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+                {productivity = 0.2, type = 'module-effects'},
                 {old = 'dhilmos-1', new = 'dhilmos-1-cover', type = 'recipe-replacement'},
                 {old = 'dhilmos-2', new = 'dhilmos-2-cover', type = 'recipe-replacement'},
                 {old = 'dhilmos-3', new = 'dhilmos-3-cover', type = 'recipe-replacement'},
@@ -113,15 +111,11 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.25, type = 'module-effects'},
+                {consumption = -0.5, type = 'module-effects'},
                 {old = 'dhilmos-1', new = 'dhilmos-1-double-intake', type = 'recipe-replacement'},
                 {old = 'dhilmos-2', new = 'dhilmos-2-double-intake', type = 'recipe-replacement'},
                 {old = 'dhilmos-3', new = 'dhilmos-3-double-intake', type = 'recipe-replacement'},
                 {old = 'dhilmos-4', new = 'dhilmos-4-double-intake', type = 'recipe-replacement'},
-                {old = 'dhilmos-egg-1', new = 'dhilmos-egg-1-double-intake', type = 'recipe-replacement'},
-                {old = 'dhilmos-egg-2', new = 'dhilmos-egg-2-double-intake', type = 'recipe-replacement'},
-                {old = 'dhilmos-egg-3', new = 'dhilmos-egg-3-double-intake', type = 'recipe-replacement'},
-                {old = 'dhilmos-egg-4', new = 'dhilmos-egg-4-double-intake', type = 'recipe-replacement'},
             }
         }
     },

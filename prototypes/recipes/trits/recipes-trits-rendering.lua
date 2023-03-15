@@ -155,7 +155,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name = 'blood', remove_item = true},
-					{name='photophore', amount = IMP_SPECIAL},
+					{name='photophore', amount = IMP_SPECIAL * 2},
 					{name='skin', amount = IMP_SKIN},
 				},
 			tech = 'reca',

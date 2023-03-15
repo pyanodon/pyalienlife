@@ -16,14 +16,14 @@ if data then
             name = 'abacus',
             category = 'crafting',
             enabled = false,
-            energy_required = 3,
+            energy_required = 12,
             ingredients = {
                 {type = 'item', name = 'iron-stick', amount = 2},
                 {type = 'item', name = 'plastic-bar', amount = 2},
                 {type = 'item', name = 'wood', amount = 1},
             },
             results = {
-                {type = 'item', name = 'abacus', amount = 1},
+                {type = 'item', name = 'abacus', amount = 2},
             },
         }
     }
@@ -39,7 +39,7 @@ if data then
         data:extend{recipe}
     end
 
-    for _, recipe in pairs({
+    for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['arthurian egg 1']),
         table.deepcopy(data.raw.recipe['arthurian egg 2']),
         table.deepcopy(data.raw.recipe['arthurian egg 3']),
@@ -48,7 +48,9 @@ if data then
         recipe.name = recipe.name .. '-hot-stones'
         FUN.add_ingredient(recipe, {name = 'hot-stone-brick', amount = 2, type = 'item'})
         FUN.add_result(recipe, {name = 'warmer-stone-brick', amount = 2, type = 'item'})
-        FUN.add_result_amount(recipe, 'arthurian-egg', 1)
+        FUN.add_result_amount(recipe, 'arthurian-egg', i)
+        local barrels = FUN.remove_result(recipe, 'empty-barrel')
+        FUN.add_result(recipe, {'hot-air-barrel', barrels})
         data:extend{recipe}
     end
 
@@ -107,7 +109,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {productivity = 0.1, type = 'module-effects'},
+                {productivity = 0.15, type = 'module-effects'},
                 {recipe = 'abacus', type = 'unlock-recipe'},
                 {old = 'arthurian maturing 1', new = 'arthurian maturing 1-abacus', type = 'recipe-replacement'},
                 {old = 'arthurian maturing 2', new = 'arthurian maturing 2-abacus', type = 'recipe-replacement'},

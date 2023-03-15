@@ -8,7 +8,7 @@ if data then
         table.deepcopy(data.raw.recipe['bio-reactor-mk04']),
     }) do
         recipe.name = recipe.name .. '-with-baffles'
-        FUN.add_ingredient(recipe, {name = 'baffles', amount = 20 * i, type = 'item'})
+        FUN.add_ingredient(recipe, {name = 'baffles', amount = 10 * i, type = 'item'})
         data:extend{recipe}
     end
 
@@ -41,6 +41,7 @@ if data then
             name = 'liquid-manure-oxygen',
             ingredients = {
                 {type = 'item', name = 'manure', amount = 8},
+                {type = 'item', name = 'soil', amount = 8},
                 {type = 'fluid', name = 'water', amount = 900},
                 {type = 'fluid', name = 'oxygen', amount = 100},
                 {type = 'fluid', name = 'manure-bacteria', amount = 30},
@@ -48,6 +49,7 @@ if data then
             results = {
                 {type = 'fluid', name = 'liquid-manure', amount = 350},
                 {type = 'fluid', name = 'black-liquor', amount = 350},
+                {type = 'item', name = 're-precipitate-02', amount = 3},
             },
             enabled = false,
             category = 'bio-reactor',
@@ -59,16 +61,16 @@ if data then
             name = 'jacket-bio-ore',
             enabled = false,
             category = 'bio-reactor',
-            energy_required = 200,
+            energy_required = 450,
             ingredients = {
                 {type = 'item', name = 'nanozymes', amount = 1},
                 {type = 'item', name = 'magnetic-beads', amount = 2},
                 {type = 'fluid', name = 'hydrogen', amount = 250},
                 {type = 'fluid', name = 'benzene', amount = 100},
-                {type = 'item', name = 'advanced-substrate', amount = 1},
+                {type = 'item', name = 'advanced-substrate', amount = 2},
             },
             results = {
-                {type = 'item', name = 'bio-ore', amount = 45},
+                {type = 'item', name = 'bio-ore', amount = 250},
             },
             main_product = 'bio-ore'
         },
@@ -77,16 +79,16 @@ if data then
             name = 'jacket-bio-oil',
             enabled = false,
             category = 'bio-reactor',
-            energy_required = 200,
+            energy_required = 450,
             ingredients = {
                 {type = 'item', name = 'nanozymes', amount = 1},
                 {type = 'item', name = 'magnetic-beads', amount = 2},
                 {type = 'fluid', name = 'hydrogen', amount = 250},
                 {type = 'fluid', name = 'aromatics', amount = 100},
-                {type = 'item', name = 'advanced-substrate', amount = 1},
+                {type = 'item', name = 'advanced-substrate', amount = 4},
             },
             results = {
-                {type = 'fluid', name = 'bio-oil', amount = 650},
+                {type = 'fluid', name = 'bio-oil', amount = 4000},
             },
             main_product = 'bio-oil'
         }
@@ -139,7 +141,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.25, speed = 0.1, type = 'module-effects'},
+                {consumption = -0.25, speed = 0.1, productivity = 0.03, type = 'module-effects'},
                 {recipe = 'baffles', type = 'unlock-recipe'},
                 {old = 'bio-reactor-mk01', new = 'bio-reactor-mk01-with-baffles', type = 'recipe-replacement'},
                 {old = 'bio-reactor-mk02', new = 'bio-reactor-mk02-with-baffles', type = 'recipe-replacement'},
