@@ -43,14 +43,6 @@ local tech_upgrades = {
     -- pyHT organics
     require('prototypes/upgrades/cadaveric'),
     require('prototypes/upgrades/moondrop'),
-
-    -- simik metals
-    require('prototypes/upgrades/simikmetalMK01'),
-    require('prototypes/upgrades/simikmetalMK02'),
-    require('prototypes/upgrades/simikmetalMK03'),
-    require('prototypes/upgrades/simikmetalMK04'),
-    require('prototypes/upgrades/simikmetalMK05'),
-    require('prototypes/upgrades/simikmetalMK06'),
 }
 
 if (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalternativeenergy) then -- is pyAE installed?
@@ -73,6 +65,12 @@ if (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalter
         'prototypes/upgrades/trits',
         'prototypes/upgrades/ralesia',
         'prototypes/upgrades/mukmoux',
+        'prototypes/upgrades/simikmetalMK01',
+        'prototypes/upgrades/simikmetalMK02',
+        'prototypes/upgrades/simikmetalMK03',
+        'prototypes/upgrades/simikmetalMK04',
+        'prototypes/upgrades/simikmetalMK05',
+        'prototypes/upgrades/simikmetalMK06',
     } do
         table.insert(tech_upgrades, require(upgrade))
     end

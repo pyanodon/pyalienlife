@@ -681,7 +681,7 @@ require('prototypes/recipes/seaweed/recipes-seaweed-modules')
 require('prototypes/recipes/simik/recipes-simik')
 require('prototypes/recipes/simik/recipes-simik-raising')
 require('prototypes/recipes/simik/recipes-simik-rendering')
-require('prototypes/recipes/simik/recipes-simik-metals')
+if mods.pyalternativeenergy then require('prototypes/recipes/simik/recipes-simik-metals') end
 require('prototypes/recipes/simik/recipes-simik-growth-enhancement')
 require('prototypes/recipes/simik/recipes-simik-modules')
 
