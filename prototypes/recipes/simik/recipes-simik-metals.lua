@@ -5,11 +5,12 @@ RECIPE {
     name = 'simik-iron',
     category = 'simik',
     enabled = false,
-    energy_required = 120,
+    energy_required = 80,
     ingredients = {
         {type = 'item', name = 'geothermal-water-barrel', amount = 4},
         {type = 'item', name = 'iron-ore', amount = 50},
         {type = 'item', name = 'bio-sample', amount = 1},
+        {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
         {type = 'item', name = 'sponge-iron', amount = 1},
@@ -28,11 +29,12 @@ RECIPE {
     name = 'simik-copper',
     category = 'simik',
     enabled = false,
-    energy_required = 120,
+    energy_required = 80,
     ingredients = {
         {type = 'item', name = 'geothermal-water-barrel', amount = 4},
         {type = 'item', name = 'copper-ore', amount = 50},
         {type = 'item', name = 'bio-sample', amount = 1},
+        {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
         {type = 'item', name = 'copper-solution-barrel', amount = 2},
@@ -51,11 +53,12 @@ RECIPE {
     name = 'simik-quartz',
     category = 'simik',
     enabled = false,
-    energy_required = 120,
+    energy_required = 80,
     ingredients = {
         {type = 'item', name = 'geothermal-water-barrel', amount = 4},
         {type = 'item', name = 'ore-quartz', amount = 50},
         {type = 'item', name = 'bio-sample', amount = 1},
+        {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
         {type = 'item', name = 'glass-core', amount = 4},
@@ -77,12 +80,13 @@ RECIPE {
     name = 'simik-coal',
     category = 'simik',
     enabled = false,
-    energy_required = 120,
+    energy_required = 80,
     ingredients = {
         {type = 'item', name = 'mother-liquor-barrel', amount = 2},
         {type = 'item', name = 'geothermal-water-barrel', amount = 2},
         {type = 'item', name = 'raw-coal', amount = 60},
         {type = 'item', name = 'bio-sample', amount = 1},
+        {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
         {type = 'item', name = 'coal-pulp-03-barrel', amount = 2},
@@ -102,11 +106,12 @@ RECIPE {
     name = 'simik-tin',
     category = 'simik',
     enabled = false,
-    energy_required = 120,
+    energy_required = 80,
     ingredients = {
         {type = 'item', name = 'mother-liquor-barrel', amount = 3},
         {type = 'item', name = 'ore-tin', amount = 60},
         {type = 'item', name = 'bio-sample', amount = 1},
+        {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
         {type = 'item', name = 'tin-concentrate', amount = 4},
@@ -126,12 +131,13 @@ RECIPE {
     name = 'simik-aluminium',
     category = 'simik',
     enabled = false,
-    energy_required = 120,
+    energy_required = 80,
     ingredients = {
         {type = 'item', name = 'mother-liquor-barrel', amount = 3},
         {type = 'item', name = 'anolyte-barrel', amount = 1},
         {type = 'item', name = 'ore-aluminium', amount = 60},
         {type = 'item', name = 'bio-sample', amount = 1},
+        {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
         {type = 'item', name = 'crystalized-sodium-aluminate', amount = 2},
@@ -151,11 +157,12 @@ RECIPE {
     name = 'simik-boron',
     category = 'simik',
     enabled = false,
-    energy_required = 120,
+    energy_required = 80,
     ingredients = {
         {type = 'item', name = 'gd-stripped-solution-barrel', amount = 3},
         {type = 'item', name = 'raw-borax', amount = 70},
         {type = 'item', name = 'bio-sample', amount = 1},
+        {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
         {type = 'item', name = 'boron-trioxide', amount = 45},
@@ -176,12 +183,13 @@ RECIPE {
     name = 'simik-chromium',
     category = 'simik',
     enabled = false,
-    energy_required = 120,
+    energy_required = 80,
     ingredients = {
         {type = 'item', name = 'gd-stripped-solution-barrel', amount = 2},
         {type = 'item', name = 'geothermal-water-barrel', amount = 3},
         {type = 'item', name = 'ore-chromium', amount = 70},
         {type = 'item', name = 'bio-sample', amount = 1},
+        {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
         {type = 'item', name = 'high-chromite', amount = 9},
@@ -202,11 +210,12 @@ RECIPE {
     name = 'simik-molybdenum',
     category = 'simik',
     enabled = false,
-    energy_required = 120,
+    energy_required = 80,
     ingredients = {
         {type = 'item', name = 'gd-stripped-solution-barrel', amount = 5},
         {type = 'item', name = 'molybdenum-ore', amount = 70},
         {type = 'item', name = 'bio-sample', amount = 1},
+        {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
         {type = 'item', name = 'molybdenite-dust', amount = 5},
@@ -226,12 +235,13 @@ RECIPE {
     name = 'simik-zinc',
     category = 'simik',
     enabled = false,
-    energy_required = 120,
+    energy_required = 80,
     ingredients = {
         {type = 'item', name = 'crude-oil-barrel', amount = 6},
         {type = 'item', name = 'bio-ore', amount = 1},
         {type = 'item', name = 'ore-zinc', amount = 80},
         {type = 'item', name = 'bio-sample', amount = 1},
+        {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
         {type = 'item', name = 'agzn-alloy', amount = 5},
@@ -253,12 +263,13 @@ RECIPE {
     name = 'simik-nickel',
     category = 'simik',
     enabled = false,
-    energy_required = 120,
+    energy_required = 80,
     ingredients = {
         {type = 'item', name = 'crude-oil-barrel', amount = 7},
         {type = 'item', name = 'bio-ore', amount = 1},
         {type = 'item', name = 'ore-nickel', amount = 80},
         {type = 'item', name = 'bio-sample', amount = 1},
+        {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
         {type = 'item', name = 'nickel-carbonyl-barrel', amount = 2},
@@ -279,12 +290,13 @@ RECIPE {
     name = 'simik-lead',
     category = 'simik',
     enabled = false,
-    energy_required = 120,
+    energy_required = 80,
     ingredients = {
         {type = 'item', name = 'crude-oil-barrel', amount = 4},
         {type = 'item', name = 'bio-ore', amount = 1},
         {type = 'item', name = 'ore-lead', amount = 80},
         {type = 'item', name = 'bio-sample', amount = 1},
+        {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
         {type = 'item', name = 'sl-01-barrel', amount = 2},
@@ -306,11 +318,12 @@ RECIPE {
     name = 'simik-titanium',
     category = 'simik',
     enabled = false,
-    energy_required = 120,
+    energy_required = 80,
     ingredients = {
         {type = 'item', name = 'vanabins-barrel', amount = 2},
         {type = 'item', name = 'ore-titanium', amount = 90},
         {type = 'item', name = 'bio-sample', amount = 1},
+        {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
         {type = 'item', name = 'ticl4', amount = 12},
@@ -330,12 +343,13 @@ RECIPE {
     name = 'simik-niobium',
     category = 'simik',
     enabled = false,
-    energy_required = 120,
+    energy_required = 80,
     ingredients = {
         {type = 'item', name = 'lithium-chloride', amount = 1},
         {type = 'item', name = 'vanabins-barrel', amount = 4},
         {type = 'item', name = 'niobium-ore', amount = 90},
         {type = 'item', name = 'bio-sample', amount = 1},
+        {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
         {type = 'item', name = 'niobium-concentrate', amount = 6},
@@ -355,11 +369,12 @@ RECIPE {
     name = 'simik-nexelit',
     category = 'simik',
     enabled = false,
-    energy_required = 120,
+    energy_required = 80,
     ingredients = {
         {type = 'item', name = 'vanabins-barrel', amount = 5},
         {type = 'item', name = 'nexelit-ore', amount = 90},
         {type = 'item', name = 'bio-sample', amount = 1},
+        {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
         {type = 'item', name = 'nexelit-matrix', amount = 6},
@@ -379,12 +394,13 @@ RECIPE {
     name = 'simik-silver',
     category = 'simik',
     enabled = false,
-    energy_required = 120,
+    energy_required = 80,
     ingredients = {
         {type = 'item', name = 'zogna-bacteria-barrel', amount = 2},
         {type = 'item', name = 'tendon', amount = 2},
         {type = 'item', name = 'ore-lead', amount = 100},
         {type = 'item', name = 'bio-sample', amount = 1},
+        {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
         {type = 'item', name = 'silver-foam', amount = 3},
@@ -404,12 +420,13 @@ RECIPE {
     name = 'simik-gold',
     category = 'simik',
     enabled = false,
-    energy_required = 120,
+    energy_required = 80,
     ingredients = {
         {type = 'item', name = 'zogna-bacteria-barrel', amount = 4},
         {type = 'item', name = 'tendon', amount = 4},
         {type = 'item', name = 'ore-chromium', amount = 100},
         {type = 'item', name = 'bio-sample', amount = 1},
+        {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
         {type = 'item', name = 'heavy-fermion', amount = 1},
@@ -429,13 +446,14 @@ RECIPE {
     name = 'simik-uranium',
     category = 'simik',
     enabled = false,
-    energy_required = 120,
+    energy_required = 80,
     ingredients = {
         {type = 'item', name = 'zogna-bacteria-barrel', amount = 3},
         {type = 'item', name = 'geothermal-water-barrel', amount = 4},
         {type = 'item', name = 'tendon', amount = 2},
         {type = 'item', name = 'uranium-ore', amount = 100},
         {type = 'item', name = 'bio-sample', amount = 1},
+        {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
         {type = 'item', name = 'purex-u-concentrate-2-barrel', amount = 2},
