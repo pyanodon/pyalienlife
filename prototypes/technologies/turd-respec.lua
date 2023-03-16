@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = 'technology',
     name = 'turd-respec-1',
-    icon = '__pyalienlifegraphics2__/graphics/technology/ash-separation.png',
+    icon = '__pyalienlifegraphics3__/graphics/technology/updates/restart.png',
     icon_size = 128,
     prerequisites = {'dhilmos-upgrade', 'dingrits-upgrade', 'bioreactor-upgrade'},
     effects = {},
@@ -29,9 +29,9 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = 'technology',
     name = 'turd-respec-2',
-    icon = '__pyalienlifegraphics2__/graphics/technology/ash-separation.png',
+    icon = '__pyalienlifegraphics3__/graphics/technology/updates/restart.png',
     icon_size = 128,
-    prerequisites = {'turd-respec-1', 'simik-digestion-mk06', 'schrodinger-antelope-upgrade'},
+    prerequisites = {'turd-respec-1', 'schrodinger-antelope-upgrade'},
     effects = {},
     unit = {
         count_formula = '2^(L-1)*15000',

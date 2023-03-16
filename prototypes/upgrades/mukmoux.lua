@@ -91,7 +91,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {speed = 0.8, type = 'module-effects'},
+                {speed = 0.65, type = 'module-effects'},
                 {old = 'mukmoux-pasture-mk01', new = 'mukmoux-pasture-mk01-with-electronics', type = 'recipe-replacement'},
                 {old = 'mukmoux-pasture-mk02', new = 'mukmoux-pasture-mk02-with-electronics', type = 'recipe-replacement'},
                 {old = 'mukmoux-pasture-mk03', new = 'mukmoux-pasture-mk03-with-electronics', type = 'recipe-replacement'},
