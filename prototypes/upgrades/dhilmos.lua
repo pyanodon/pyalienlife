@@ -38,8 +38,8 @@ if data then
         recipe.name = recipe.name .. '-double-intake'
         FUN.remove_ingredient(recipe, 'water-saline')
         FUN.add_ingredient(recipe, {'salt', 2})
-        FUN.add_ingredient(recipe, {type = 'fluid', name = 'water', amount = 600})
-        FUN.multiply_result_amount(recipe, 'waste-water', 6)
+        FUN.add_ingredient(recipe, {type = 'fluid', name = 'water', amount = 400})
+        FUN.multiply_result_amount(recipe, 'waste-water', 4)
         data:extend{recipe}
     end
 end
@@ -81,7 +81,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {productivity = 0.2, type = 'module-effects'},
+                {productivity = 0.16, type = 'module-effects'},
                 {old = 'dhilmos-1', new = 'dhilmos-1-cover', type = 'recipe-replacement'},
                 {old = 'dhilmos-2', new = 'dhilmos-2-cover', type = 'recipe-replacement'},
                 {old = 'dhilmos-3', new = 'dhilmos-3-cover', type = 'recipe-replacement'},

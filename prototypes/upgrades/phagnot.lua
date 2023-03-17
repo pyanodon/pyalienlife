@@ -30,6 +30,7 @@ if data then
     }) do
         recipe.name = recipe.name .. '-fast'
         recipe.energy_required = math.ceil(recipe.energy_required * 0.7)
+        FUN.multiply_ingredient_amount(recipe, 'yotoi-seeds', 2/3)
         FUN.add_result_amount(recipe, 'phagnot-cub', 1)
         data:extend{recipe}
     end

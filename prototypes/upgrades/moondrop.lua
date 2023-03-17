@@ -11,14 +11,14 @@ if data then
         recipe.name = recipe.name .. '-cu'
         FUN.add_ingredient(recipe, {name = 'copper-ore', amount = 10, type = 'item'})
         FUN.multiply_result_amount(recipe, 'moondrop', 1.1)
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.97)
+        recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         data:extend{recipe}
     end
 
     data:extend{{
         name = 'moondrop-co2',
-        results = {{type = 'fluid', amount = 80, name = 'carbon-dioxide'}},
-        energy_required = 6,
+        results = {{type = 'fluid', amount = 100, name = 'carbon-dioxide'}},
+        energy_required = 10,
         ingredients = {},
         category = 'moon',
         enabled = false,

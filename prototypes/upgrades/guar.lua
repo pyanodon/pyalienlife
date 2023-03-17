@@ -24,7 +24,7 @@ if data then
     }) do
         recipe.name = recipe.name .. '-guarpulse'
 		FUN.add_ingredient(recipe, {'fungicide', 1})
-        FUN.add_result(recipe, {'zinc-nanocomplex', i*2})
+        FUN.add_result(recipe, {'zinc-nanocomplex', 2^(i-1)})
         recipe.main_product = 'zinc-nanocomplex'
         data:extend{recipe}
     end

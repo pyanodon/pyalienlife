@@ -67,6 +67,19 @@ if data then
         recipe.energy_required = math.ceil(recipe.energy_required * 1.5)
         data:extend{recipe}
     end
+
+    for i, recipe in pairs({
+        table.deepcopy(data.raw.recipe['navens-spore']),
+        table.deepcopy(data.raw.recipe['navens-spore-2']),
+        table.deepcopy(data.raw.recipe['navens-spore-3']),
+        table.deepcopy(data.raw.recipe['navens-spore-mk02']),
+        table.deepcopy(data.raw.recipe['navens-spore-mk03']),
+        table.deepcopy(data.raw.recipe['navens-spore-mk04']),
+    }) do
+        recipe.name = recipe.name .. '-sterilization'
+        FUN.add_ingredient(recipe, {type = 'fluid', name = 'phosphorus-tricloride', amount = 1})
+        data:extend{recipe}
+    end
 end
 
 return {
@@ -81,7 +94,7 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-navens.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'navens-mk03', 'vonix'},
+        prerequisites = {'navens-mk03', 'vonix', 'nuclear-power'},
         unit = {
             count = 500,
             ingredients = {
@@ -111,7 +124,13 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 5, productivity = 0.03, type = 'module-effects'}
+                {consumption = 5, productivity = 0.2, type = 'module-effects'},
+                {old = 'navens-spore', new = 'navens-spore-sterilization', type = 'recipe-replacement'},
+                {old = 'navens-spore-2', new = 'navens-spore-2-sterilization', type = 'recipe-replacement'},
+                {old = 'navens-spore-3', new = 'navens-spore-3-sterilization', type = 'recipe-replacement'},
+                {old = 'navens-spore-mk02', new = 'navens-spore-mk02-sterilization', type = 'recipe-replacement'},
+                {old = 'navens-spore-mk03', new = 'navens-spore-mk03-sterilization', type = 'recipe-replacement'},
+                {old = 'navens-spore-mk04', new = 'navens-spore-mk04-sterilization', type = 'recipe-replacement'},
             }
         },
         {

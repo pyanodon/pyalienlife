@@ -136,11 +136,6 @@ RECIPE {
         {type = 'item', name = 'navens-mk03', amount = 4, probability = 0.375},
     },
     main_product = "navens-mk03",
-    icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/navens.png", icon_size = 64},
-            {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk03.png", icon_size = 64, scale = 0.25,shift = {-7.5,-7.5}},
-        },
     icon_size = 64,
     subgroup = 'py-alienlife-navens',
     order = 'zb'

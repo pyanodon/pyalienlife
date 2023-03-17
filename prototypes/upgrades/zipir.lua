@@ -28,7 +28,7 @@ if data then
         recipe.name = recipe.name .. '-trits-gen'
         recipe.energy_required = recipe.energy_required * 1.5
         FUN.add_ingredient(recipe, {name = 'trits-codex', type = 'item', amount = 1})
-        FUN.add_result(recipe, {name = 'trits-codex', type = 'item', amount = 1, probability = 0.95})
+        FUN.add_result(recipe, {name = 'trits-codex', type = 'item', amount = 1, probability = 0.9})
         for _, result in pairs(recipe.results) do
             if result.name == 'zipir-eggs' then
                 result.amount_max = result.amount_max * 2

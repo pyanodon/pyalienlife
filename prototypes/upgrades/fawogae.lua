@@ -9,7 +9,8 @@ if data then
         table.deepcopy(data.raw.recipe['fawogae with growth hormone']),
     }) do
         recipe.name = recipe.name .. '-nitrogen'
-        FUN.add_ingredient(recipe, {type = 'fluid', name = 'purest-nitrogen-gas', amount = 40 * i})
+        FUN.remove_ingredient(recipe, 'water')
+        FUN.add_ingredient(recipe, {type = 'fluid', name = 'purest-nitrogen-gas', amount = 20 + 20 * i})
         FUN.multiply_result_amount(recipe, 'fawogae', 1.35)
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         data:extend{recipe}
@@ -23,6 +24,7 @@ if data then
         energy_required = 8,
         ingredients = {
             {'fawogae', 2},
+            {'sulfur', 2},
             {type = 'fluid', name = 'oxygen', amount = 50},
         },
         results = {
