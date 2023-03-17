@@ -24,9 +24,8 @@ if data then
     }) do
         recipe.name = recipe.name .. '-guarpulse'
 		FUN.add_ingredient(recipe, {'fungicide', 1})
-        FUN.add_result(recipe, {'zinc-nanocomplex', i})
+        FUN.add_result(recipe, {'zinc-nanocomplex', i*2})
         recipe.main_product = 'zinc-nanocomplex'
-        FUN.multiply_result_amount(recipe, 'guar', 1.15)
         data:extend{recipe}
     end
 
@@ -40,6 +39,7 @@ if data then
         local water = FUN.remove_ingredient(recipe, 'water')
 		FUN.add_ingredient(recipe, {type = 'fluid', name = 'water-saline', amount = math.ceil(water/5), fluidbox_index = 1})
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
+        FUN.multiply_ingredient_amount(recipe, 'guar-seeds', 0.65)
         FUN.remove_ingredient(recipe, 'pesticide-mk01')
         FUN.remove_ingredient(recipe, 'pesticide-mk02')
         data:extend{recipe}
@@ -116,7 +116,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-				{speed = 0.35, type = 'module-effects'},
+				{speed = 0.35, productivity = 0.05, type = 'module-effects'},
                 {old = 'guar-gum-plantation', new = 'guar-gum-plantation-with-bots', type = 'recipe-replacement'},
                 {old = 'guar-gum-plantation-mk02', new = 'guar-gum-plantation-mk02-with-bots', type = 'recipe-replacement'},
                 {old = 'guar-gum-plantation-mk03', new = 'guar-gum-plantation-mk03-with-bots', type = 'recipe-replacement'},

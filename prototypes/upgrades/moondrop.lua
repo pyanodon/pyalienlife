@@ -78,7 +78,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 6, speed = 0.2, type = 'module-effects'},
+                {consumption = 0.5, speed = 0.2, productivity = 0.02, type = 'module-effects'},
                 {old = 'moondrop-greenhouse-mk01', new = 'moondrop-greenhouse-mk01-with-lamp', type = 'recipe-replacement'},
                 {old = 'moondrop-greenhouse-mk02', new = 'moondrop-greenhouse-mk02-with-lamp', type = 'recipe-replacement'},
                 {old = 'moondrop-greenhouse-mk03', new = 'moondrop-greenhouse-mk03-with-lamp', type = 'recipe-replacement'},

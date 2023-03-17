@@ -3,10 +3,15 @@ local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 if data then
     local fiber = table.deepcopy(data.raw.recipe['fiber-01'])
     fiber.name = 'fiber-dry-storage'
-    fiber.energy_required = fiber.energy_required * 6
+    fiber.energy_required = fiber.energy_required * 3
     FUN.multiply_result_amount(fiber, 'raw-fiber', 2)
     FUN.add_result(fiber, {'biomass', 1})
     fiber.main_product = 'raw-fiber'
+    data:extend{fiber}
+
+    local fiber = table.deepcopy(data.raw.recipe['fiber'])
+    fiber.name = 'fiber-dry-storage-2'
+    FUN.add_result_amount(fiber, 'fiber', 1)
     data:extend{fiber}
 
     local wood_fast = table.deepcopy(data.raw.recipe['log-wood'])
@@ -58,7 +63,8 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {old = 'fiber-01', new = 'fiber-dry-storage', type = 'recipe-replacement'}
+                {old = 'fiber-01', new = 'fiber-dry-storage', type = 'recipe-replacement'},
+                {old = 'fiber', new = 'fiber-dry-storage-2', type = 'recipe-replacement'}
             },
         },
         {
@@ -76,7 +82,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.30, type = 'module-effects'},
+                {consumption = -0.30, speed = 0.08, type = 'module-effects'},
                 {old = 'fwf-mk01', new = 'fwf-mk01-with-furnace', type = 'recipe-replacement'},
                 {old = 'log3', new = 'log3-cheap', type = 'recipe-replacement'},
                 {old = 'log6', new = 'log6-cheap', type = 'recipe-replacement'}

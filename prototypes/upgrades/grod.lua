@@ -39,9 +39,14 @@ if data then
     }) do
         recipe.name = recipe.name .. '-dry'
         FUN.remove_ingredient(recipe, 'water')
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.85)
         data:extend{recipe}
     end
+
+    local seeds = table.deepcopy(data.raw.recipe['grod-seeds'])
+    seeds.name = 'grod-seeds-heavy-water'
+    seeds.main_product = 'grod-seeds'
+    FUN.add_result(seeds, {type = 'fluid', name = 'heavy-water', amount = 12})
+    data:extend{seeds}
 end
 
 return {
@@ -106,6 +111,7 @@ return {
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
                 {consumption = -0.5, type = 'module-effects'},
+                {old = 'grod-seeds', new = 'grod-seeds-heavy-water', type = 'recipe-replacement'},
                 {old = 'grod-1', new = 'grod-1-dry', type = 'recipe-replacement'},
                 {old = 'grod-2', new = 'grod-2-dry', type = 'recipe-replacement'},
                 {old = 'grod-3', new = 'grod-3-dry', type = 'recipe-replacement'},

@@ -56,7 +56,7 @@ if data then
         FUN.remove_ingredient(recipe, 'water')
         local old_hydrogen = FUN.remove_ingredient(recipe, 'hydrogen')
         FUN.add_ingredient(recipe, {name = 'hydrogen', amount = old_hydrogen + 50, type = 'fluid', fluidbox_index = fluidbox_indexs[i]})
-        FUN.add_result(recipe, {name = 'helium', type = 'fluid', amount = i})
+        FUN.add_result(recipe, {name = 'helium', type = 'fluid', amount = i*2})
         recipe.main_product = 'helium'
         data:extend{recipe}
     end

@@ -21,6 +21,7 @@ if data then
         for _, result in pairs(recipe.results) do
             if result.name == 'auog-pup' and result.amount_min then
                 result.amount_min = result.amount_min * 2
+                result.amount_max = result.amount_max + 2
             end
         end
         data:extend{recipe}
@@ -102,7 +103,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 3, productivity = 0.12, type = 'module-effects'},
+                {consumption = 3, productivity = 0.10, type = 'module-effects'},
                 {old = 'auog-paddock-mk01', new = 'auog-paddock-mk01-with-dirt', type = 'recipe-replacement'},
                 {old = 'auog-paddock-mk02', new = 'auog-paddock-mk02-with-dirt', type = 'recipe-replacement'},
                 {old = 'auog-paddock-mk03', new = 'auog-paddock-mk03-with-dirt', type = 'recipe-replacement'},

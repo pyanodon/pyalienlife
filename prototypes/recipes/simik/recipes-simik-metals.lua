@@ -246,7 +246,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'agzn-alloy', amount = 5},
         {type = 'item', name = 'concentrated-zinc', amount = 3},
-        {type = 'item', name = 'zinc-pulp-04-barrel', amount = 4},
+        {type = 'item', name = 'zinc-waste-barrel', amount = 4},
         {type = 'item', name = 'bio-oil-barrel', amount = 1},
         {type = 'item', name = 'bio-ore', amount = 1, probability = 0.65},
         {type = 'item', name = 'hot-air-barrel', amount = 1},

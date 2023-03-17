@@ -43,8 +43,8 @@ if data then
     }) do
         recipe.name = recipe.name .. '-cannibal'
         FUN.add_ingredient(recipe, {name = 'cottongut-food-03', amount = 1, type = 'item'})
-        FUN.multiply_result_amount(recipe, 'cottongut', 1.35)
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
+        FUN.multiply_result_amount(recipe, 'cottongut', 1.5)
+        recipe.energy_required = math.ceil(recipe.energy_required * 0.85)
         data:extend{recipe}
     end
 
@@ -118,7 +118,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.25, speed = 0.4, type = 'module-effects'},
+                {consumption = 0.25, speed = 0.3, productivity = 0.1, type = 'module-effects'},
                 {old = 'prandium-lab-mk01', new = 'prandium-lab-mk01-ultrasound', type = 'recipe-replacement'},
                 {old = 'prandium-lab-mk02', new = 'prandium-lab-mk02-ultrasound', type = 'recipe-replacement'},
                 {old = 'prandium-lab-mk03', new = 'prandium-lab-mk03-ultrasound', type = 'recipe-replacement'},
