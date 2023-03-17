@@ -104,25 +104,26 @@ ITEM("productivity-module"):set_fields{
     effect =
     {
       productivity = {bonus = 0.1},
+      productivity = {bonus = 0.1},
       consumption = {bonus = 1},
-      speed = {bonus = -0.16}
+      speed = {bonus = -0.25}
     }
 }
 
 ITEM("productivity-module-2"):set_fields{
     effect =
     {
-      productivity = {bonus = 0.15},
+      productivity = {bonus = 0.2},
       consumption = {bonus = 2},
-      speed = {bonus = -0.32}
+      speed = {bonus = -0.5}
     }
 }
 
 ITEM("productivity-module-3"):set_fields{
     effect =
     {
-      productivity = {bonus = 0.2},
+      productivity = {bonus = 0.3},
       consumption = {bonus = 3},
-      speed = {bonus = -0.48}
+      speed = {bonus = -0.75}
     }
 }
