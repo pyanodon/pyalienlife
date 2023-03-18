@@ -11,11 +11,9 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = 'item', name = 'cocoon', amount = 10},
-        {type = 'item', name = 'bio-sample', amount = 20},
-        --{type = 'item', name = 'auog', amount = 1},
-		--{type = 'item', name = 'animal-sample-01', amount = 2},
+        {type = 'item', name = 'bio-sample', amount = 10},
         {type = 'item', name = 'moss-gen', amount = 15},
-        {type = 'item', name = 'earth-generic-sample', amount = 5},
+        {type = 'item', name = 'earth-generic-sample', amount = 1},
         {type = 'fluid', name = 'water-saline', amount = 100}
     },
     result = 'caravan'
