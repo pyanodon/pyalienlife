@@ -10,7 +10,7 @@ Date: ?
     - Removed creature chamber zungror raising recipes
     - Removed duplicate sap tree mk2-4 recipes
     - Added cages to the output of vonix raising recipes
-    - Bhoddos, sap, grod, arum, seaweed, moondrop, cridren module speed bonus nerfed to match other modules (+100%). Building base speeds increased to compensate
+    - Bhoddos, sap, grod, arum, seaweed, moondrop, cridren, tree module speed bonus nerfed to match other modules (+100%). Building base speeds increased to compensate
     - Productivity modules nerfed from 10/20/30 to 10/15/20
     - New recipe subgroup for phytomining
     - Added map tags for aerial turbines

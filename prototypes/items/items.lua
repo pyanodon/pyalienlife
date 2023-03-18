@@ -5497,7 +5497,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "t-a",
     stack_size = 50,
-	effect = {pollution = {bonus = 1}, speed = {bonus = 0.4}},
+	effect = {pollution = {bonus = 1}, speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "wood"
 }
@@ -5517,7 +5517,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "t-b",
     stack_size = 50,
-	effect = {pollution = {bonus = 1}, speed = {bonus = 0.8}},
+	effect = {pollution = {bonus = 1}, speed = {bonus = 2}},
 	limitation = {},
 	limitation_message_key = "wood"
 }
@@ -5537,7 +5537,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "t-c",
     stack_size = 50,
-	effect = {pollution = {bonus = 1}, speed = {bonus = 1.2}},
+	effect = {pollution = {bonus = 1}, speed = {bonus = 3}},
 	limitation = {},
 	limitation_message_key = "wood"
 }
@@ -5557,7 +5557,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "t-d",
     stack_size = 50,
-	effect = {pollution = {bonus = 1}, speed = {bonus = 1.6}},
+	effect = {pollution = {bonus = 1}, speed = {bonus = 4}},
 	limitation = {},
 	limitation_message_key = "wood"
 }
