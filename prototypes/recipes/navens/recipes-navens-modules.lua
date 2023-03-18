@@ -154,11 +154,6 @@ RECIPE {
         {type = 'item', name = 'navens-spore-mk03', amount = 10},
     },
     main_product = "navens-spore-mk03",
-    icons =
-    {
-        {icon = '__pyalienlifegraphics__/graphics/icons/navens-spore.png', icon_size = 64},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
-    },
     icon_size = 64,
     subgroup = 'py-alienlife-navens',
     order = 'zb'
