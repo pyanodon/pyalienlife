@@ -24,7 +24,7 @@ if data then
     }) do
         recipe.name = recipe.name .. '-dubstep'
         FUN.multiply_result_amount(recipe, 'carapace', 2)
-        FUN.add_result_amount(recipe, 'used-phadai', -2)
+        FUN.add_result_amount(recipe, 'used-phadai', -1)
         data:extend{recipe}
     end
 end

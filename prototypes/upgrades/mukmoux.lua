@@ -35,6 +35,8 @@ if data then
     }) do
         recipe.name = recipe.name .. '-microchip'
         FUN.add_ingredient(recipe, {name = 'microchip', amount = 1, type = 'item'})
+        FUN.add_result(recipe, {name = 'microchip', amount = 1, type = 'item', probability = 0.5})
+        FUN.add_result(recipe, {name = 'fetal-serum', amount = 10, type = 'fluid'})
         data:extend{recipe}
     end
 

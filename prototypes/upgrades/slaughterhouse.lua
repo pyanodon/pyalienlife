@@ -39,7 +39,7 @@ if data then
     }
 
     local products_to_buff = {
-        laser = {'blood', 'mukmoux-fat', 'sulfuric-acid', 'bones', 'photophore'},
+        laser = {'blood', 'mukmoux-fat', 'sulfuric-acid', 'bones', 'photophore', 'brain'},
         music = {'skin', 'carapace', 'pelt', 'chitin', 'shell', 'fish-oil'},
         lard = {'meat', 'arthropod-blood', 'guts', 'formic-acid', 'bonemeal', 'tendon', 'keratin'}
     }
@@ -57,7 +57,16 @@ if data then
                 FUN.add_result(recipe, result)
             end
             for _, product in pairs(products_to_buff[path]) do
-                FUN.multiply_result_amount(recipe, product, 2)
+                if product == 'brain' then
+                    for _, result in pairs(recipe.results) do
+                        if (result[1] or result.name) == 'brain' then
+                            FUN.add_result(recipe, {name = 'brain', amount = 1, type = 'item', probability = 0.05})
+                            break
+                        end
+                    end
+                else
+                    FUN.multiply_result_amount(recipe, product, 2)
+                end
             end
             data:extend{recipe}
             table.insert(effects[path], {old = recipe_name, new = recipe.name, type = 'recipe-replacement'})
