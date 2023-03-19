@@ -39,7 +39,7 @@ if data then
         table.deepcopy(data.raw.recipe['tuuphra-4']),
     }) do
         recipe.name = recipe.name .. '-fungicide'
-        FUN.add_ingredient(recipe, {'fungicide', i})
+        FUN.add_ingredient(recipe, {'fungicide', 1})
         FUN.add_result_amount(recipe, 'tuuphra', 1)
         FUN.remove_ingredient(recipe, 'pesticide-mk01')
         FUN.remove_ingredient(recipe, 'pesticide-mk02')
@@ -50,7 +50,7 @@ if data then
     data:extend{{
         type = 'recipe',
         name = 'tuuphra-grease',
-        energy_required = 4,
+        energy_required = 2,
         ingredients = {{'tuuphra', 1}},
         results = {
             {type = 'item', name = 'starch', amount = 1, probability = 0.2},

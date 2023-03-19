@@ -45,7 +45,7 @@ if data then
     local seeds = table.deepcopy(data.raw.recipe['grod-seeds'])
     seeds.name = 'grod-seeds-heavy-water'
     seeds.main_product = 'grod-seeds'
-    FUN.add_result(seeds, {type = 'fluid', name = 'heavy-water', amount = 12})
+    FUN.add_result(seeds, {type = 'fluid', name = 'geothermal-water', amount = 60})
     data:extend{seeds}
 end
 

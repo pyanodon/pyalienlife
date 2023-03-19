@@ -13,7 +13,7 @@ if data then
 
     FUN.add_ingredient(py_science_1, {name = 'chitin', amount = 3, type = 'item'})
     FUN.add_ingredient(py_science_2, {name = 'sl-concentrate', amount = 2, type = 'item'})
-    if mods.pyalternativeenergy then FUN.add_ingredient(py_science_3, {name = 'passivation-layer', amount = 4, type = 'item'}) end
+    if mods.pyalternativeenergy then FUN.add_ingredient(py_science_3, {name = 'passivation-layer', amount = 2, type = 'item'}) end
     FUN.add_ingredient(py_science_4, {name = 'mova-pulp3', amount = 100, type = 'fluid'})
 
     FUN.add_result_amount(py_science_1, 'py-science-pack-1', 1)

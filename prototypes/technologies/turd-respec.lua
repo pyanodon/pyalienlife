@@ -6,7 +6,7 @@ TECHNOLOGY {
     prerequisites = {'dhilmos-upgrade', 'dingrits-upgrade', 'bioreactor-upgrade'},
     effects = {},
     unit = {
-        count_formula = '2^(L-1)*15000',
+        count_formula = '2^(L-1)*5000',
         ingredients = {
             {'automation-science-pack', 100},
             {'py-science-pack-1', 60},
@@ -34,7 +34,7 @@ TECHNOLOGY {
     prerequisites = {'turd-respec-1', 'schrodinger-antelope-upgrade'},
     effects = {},
     unit = {
-        count_formula = '2^(L-1)*15000',
+        count_formula = '2^(L-1)*2500',
         ingredients = {
             {'automation-science-pack', 200},
             {'py-science-pack-1', 100},

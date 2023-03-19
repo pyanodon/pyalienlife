@@ -13,7 +13,7 @@ RECIPE {
         {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
-        {type = 'item', name = 'sponge-iron', amount = 1},
+        {type = 'item', name = 'sponge-iron', amount = 2},
         {type = 'item', name = 'unslimed-iron', amount = 4},
         {type = 'item', name = 'hot-air-barrel', amount = 4},
     },
@@ -61,7 +61,7 @@ RECIPE {
         {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
-        {type = 'item', name = 'glass-core', amount = 4},
+        {type = 'item', name = 'glass-core', amount = 8},
         {type = 'item', name = 'quartz-pulp-02-barrel', amount = 2},
         {type = 'item', name = 'quartz-pulp-01-barrel', amount = 1},
         {type = 'item', name = 'hot-air-barrel', amount = 1},
@@ -89,8 +89,8 @@ RECIPE {
         {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
-        {type = 'item', name = 'coal-pulp-03-barrel', amount = 2},
-        {type = 'item', name = 'cf1', amount = 4},
+        {type = 'item', name = 'coal-pulp-03-barrel', amount = 4},
+        {type = 'item', name = 'cf1', amount = 1},
         {type = 'item', name = 'r1-barrel', amount = 1},
         {type = 'item', name = 'r2-barrel', amount = 1},
     },

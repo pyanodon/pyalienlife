@@ -15,7 +15,7 @@ if data then
             results = {
                 {type = 'fluid', name = 'naphtha', amount = 650},
                 {type = 'fluid', name = 'condensed-distillate', amount = 50},
-                {type = 'item', name = 'arqad-maggot', amount_min = 9, amount_max = 10, catalyst_amount = 10}
+                {type = 'item', name = 'arqad-maggot', amount_min = 10, amount_max = 11, catalyst_amount = 10}
             },
             main_product = 'naphtha'
         },
@@ -33,7 +33,7 @@ if data then
             },
             results = {
                 {type = 'fluid', name = 'phytoplankton', amount = 45, fluidbox_index = 1},
-                {type = 'fluid', name = 'outlet-gas-01', amount = 40, fluidbox_index = 2},
+                {type = 'fluid', name = 'outlet-gas-04', amount = 80, fluidbox_index = 2},
                 {type = 'item', name = 'carbon-black', amount = 20},
                 {type = 'item', name = 'kerogen', amount = 10},
             },

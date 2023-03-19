@@ -11,7 +11,7 @@ if data then
                 {type = 'fluid', name = 'water-saline', amount = 20}
             },
             results = {
-                {'pure-sand', 10}
+                {'pure-sand', 16}
             },
             category = 'sponge',
             subgroup = 'py-alienlife-sponge',
@@ -27,7 +27,7 @@ if data then
                 {type = 'fluid', name = 'water-saline', amount = 20}
             },
             results = {
-                {'stone-brick', 5}
+                {'stone-brick', 9}
             },
             category = 'sponge',
             subgroup = 'py-alienlife-sponge',
@@ -43,7 +43,7 @@ if data then
                 {type = 'fluid', name = 'water-saline', amount = 20}
             },
             results = {
-                {'rich-clay', 8}
+                {'rich-clay', 12}
             },
             category = 'sponge',
             subgroup = 'py-alienlife-sponge',
@@ -58,8 +58,8 @@ if data then
     }) do
         recipe.name = recipe.name .. '-no-zonga'
         FUN.remove_ingredient(recipe, 'zogna-bacteria')
-        FUN.multiply_ingredient_amount(recipe, 'dirty-water-light', 2)
-        FUN.multiply_ingredient_amount(recipe, 'phytoplankton', 2)
+        FUN.multiply_ingredient_amount(recipe, 'dirty-water-light', 3)
+        FUN.multiply_ingredient_amount(recipe, 'phytoplankton', 3)
         recipe.energy_required = math.ceil(recipe.energy_required * 1.5)
         data:extend{recipe}
     end
