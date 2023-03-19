@@ -2942,3 +2942,18 @@ RECIPE {
         {type = 'item', name = 'workers-food-02', amount = 8},
     },
 }:add_unlock("nexelit-mk03")
+
+RECIPE {
+    type = 'recipe',
+    name = 'alcl3',
+    category = 'mixer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'aluminium-plate', amount = 5},
+        {type = 'fluid', name = 'hydrogen-chloride', amount = 100},
+    },
+    results = {
+        {type = 'item', name = 'alcl3', amount = 2},
+    },
+}
