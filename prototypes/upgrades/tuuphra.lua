@@ -10,11 +10,35 @@ if data then
     data:extend{
         {
             type = 'item',
+            name = 'alcl3',
+            icon = '__pyalienlifegraphics3__/graphics/icons/alcl3.png',
+            icon_size = 64,
+            subgroup = 'py-alienlife-genetics',
+            order = 'xx',
+            stack_size = 50
+        },
+        {
+            type = 'recipe',
+            name = 'alcl3',
+            category = 'mixer',
+            enabled = false,
+            energy_required = 10,
+            ingredients = {
+                {type = 'item', name = 'aluminium-plate', amount = 5},
+                {type = 'fluid', name = 'hydrogen-chloride', amount = 100},
+            },
+            results = {
+                {type = 'item', name = 'alcl3', amount = 2},
+            },
+        },
+        {
+            type = 'item',
             name = 'fungicide',
             icon = '__pyalienlifegraphics__/graphics/icons/fungicide.png',
             icon_size = 64,
+            subgroup = 'py-alienlife-genetics',
+            order = 'xx',
             stack_size = 50,
-            subgroup = 'py-alienlife-genetics'
         },
         {
             type = 'recipe',
@@ -29,8 +53,8 @@ if data then
                 {type = 'fluid', name = 'liquid-nitrogen', amount = 20},
                 {type = 'fluid', name = 'methanol', amount = 30},
             },
-            results = {{'fungicide', 1}},
-            energy_required = 10
+            results = {{'fungicide', 50}},
+            energy_required = 250
         }
     }
 
@@ -105,6 +129,7 @@ return {
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
                 {pollution = 2, type = 'module-effects'},
+                {recipe = 'alcl3', type = 'unlock-recipe'},
                 {recipe = 'fungicide', type = 'unlock-recipe'},
                 {old = 'tuuphra-1', new = 'tuuphra-1-fungicide', type = 'recipe-replacement'},
                 {old = 'tuuphra-2', new = 'tuuphra-2-fungicide', type = 'recipe-replacement'},

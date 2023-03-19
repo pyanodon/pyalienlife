@@ -1189,14 +1189,3 @@ ITEM {
     order = "x",
     stack_size = 50
 }
-
-ITEM {
-    type = "item",
-    name = "alcl3",
-    icon = "__pyalienlifegraphics3__/graphics/icons/alcl3.png",
-	icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-items",
-    order = "x",
-    stack_size = 50
-}
