@@ -22,10 +22,12 @@ if data then
             enabled = false,
             category = 'biofactory',
             ingredients = {
-                {type = 'item', name = 'copper-plate', amount = 1},
+                {type = 'item', name = 'phenol', amount = 10},
                 {type = 'item', name = 'plastic-bar', amount = 2},
-                {type = 'item', name = 'sulfur', amount = 1},
-                {type = 'fluid', name = 'phosphorous-acid', amount = 10},
+                {type = 'item', name = 'alcl3', amount = 1},
+                {type = 'fluid', name = 'chlorine', amount = 30},
+                {type = 'fluid', name = 'liquid-nitrogen', amount = 20},
+                {type = 'fluid', name = 'methanol', amount = 30},
             },
             results = {{'fungicide', 1}},
             energy_required = 10
