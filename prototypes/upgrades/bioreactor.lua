@@ -141,7 +141,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.25, speed = 0.12, productivity = 0.04, type = 'module-effects'},
+                {consumption = -0.25, speed = 0.25, productivity = 0.04, type = 'module-effects'},
                 {recipe = 'baffles', type = 'unlock-recipe'},
                 {old = 'bio-reactor-mk01', new = 'bio-reactor-mk01-with-baffles', type = 'recipe-replacement'},
                 {old = 'bio-reactor-mk02', new = 'bio-reactor-mk02-with-baffles', type = 'recipe-replacement'},
