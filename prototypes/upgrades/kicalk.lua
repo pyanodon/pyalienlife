@@ -62,6 +62,9 @@ if data then
         for _, other in pairs(other_species[i]) do
             FUN.add_ingredient(recipe, other[1]); FUN.add_result(recipe, other[2])
         end
+        if i == 5 then
+            FUN.add_ingredient(recipe, {'ulric-cub', 1})
+        end
         FUN.multiply_result_amount(recipe, 'kicalk', 1.35)
         data:extend{recipe}
     end

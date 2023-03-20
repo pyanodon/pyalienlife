@@ -7,12 +7,19 @@ if data then
         table.deepcopy(data.raw.recipe['zipir-a-3']),
         table.deepcopy(data.raw.recipe['zipir-a-4']),
         table.deepcopy(data.raw.recipe['zipir-a-5']),
+        table.deepcopy(data.raw.recipe['zipir-a-6']),
     }) do
         recipe.name = recipe.name .. '-suicide'
         FUN.add_result(recipe, {name = 'zipir-eggs', amount_min = 2, amount_max = 3, type = 'item'})
         FUN.add_result(recipe, {name = 'guts', amount = 1, type = 'item'})
         for _, result in pairs(recipe.results) do
-            if result.name == 'zipir1' then result.probability = 0.5 end
+            if result.name == 'zipir1' then
+                if result.probability then
+                    result.probability = result.probability - 0.15
+                else
+                    result.probability = 0.85
+                end
+            end
         end
         recipe.energy_required = math.ceil(recipe.energy_required * 0.8)
         data:extend{recipe}
@@ -85,6 +92,7 @@ return {
                 {old = 'zipir-a-3', new = 'zipir-a-3-suicide', type = 'recipe-replacement'},
                 {old = 'zipir-a-4', new = 'zipir-a-4-suicide', type = 'recipe-replacement'},
                 {old = 'zipir-a-5', new = 'zipir-a-5-suicide', type = 'recipe-replacement'},
+                {old = 'zipir-a-6', new = 'zipir-a-6-suicide', type = 'recipe-replacement'},
             },
         },
         {
