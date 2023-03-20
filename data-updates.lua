@@ -32,6 +32,24 @@ end
 
 TECHNOLOGY('ralesia'):add_pack('py-science-pack-1')
 
+-- Compatibility fix for Cargo Ships mod (issue 254)
+if mods['cargo-ships'] then
+    if data.raw["straight-rail"]["straight-water-way"] then
+    data.raw["straight-rail"]["straight-water-way"].collision_mask = {'floor-layer', 'ground-tile', "object-layer", waterway_layer}
+    end
+    if data.raw["curved-rail"]["curved-water-way"] then
+    data.raw["curved-rail"]["curved-water-way"].collision_mask = {'floor-layer', 'ground-tile', "object-layer", waterway_layer}
+    end
+
+-- Additional fix if Cargo Ships is used with Logistic Train Network
+    if data.raw["train-stop"]["port"] then
+    data.raw["train-stop"]["port"].collision_mask = {'floor-layer', "object-layer", waterway_layer}
+    end
+    if data.raw["train-stop"]["ltn-port"] then
+    data.raw["train-stop"]["ltn-port"].collision_mask = {'floor-layer', "object-layer", waterway_layer}
+    end
+end
+
 ----------------------------------------------------------------------------------------------------
 -- crafting_categories
 ----------------------------------------------------------------------------------------------------
