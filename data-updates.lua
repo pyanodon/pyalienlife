@@ -32,12 +32,29 @@ end
 
 TECHNOLOGY('ralesia'):add_pack('py-science-pack-1')
 
-----------------------------------------------------------------------------------------------------
--- crafting_categories
-----------------------------------------------------------------------------------------------------
+--ADAPTATIONS
 
 data.raw.item.fawogae = nil
 
+-- Compatibility fix for Cargo Ships mod (issue 254)
+if mods['cargo-ships'] then
+    if data.raw["straight-rail"]["straight-water-way"] then
+    data.raw["straight-rail"]["straight-water-way"].collision_mask = {'floor-layer', 'ground-tile', "object-layer", waterway_layer}
+    end
+    if data.raw["curved-rail"]["curved-water-way"] then
+    data.raw["curved-rail"]["curved-water-way"].collision_mask = {'floor-layer', 'ground-tile', "object-layer", waterway_layer}
+    end
+
+-- Additional fix if Cargo Ships is used with Logistic Train Network
+    if data.raw["train-stop"]["port"] then
+    data.raw["train-stop"]["port"].collision_mask = {'floor-layer', "object-layer", waterway_layer}
+    end
+    if data.raw["train-stop"]["ltn-port"] then
+    data.raw["train-stop"]["ltn-port"].collision_mask = {'floor-layer', "object-layer", waterway_layer}
+    end
+end
+
+-- table.insert(data.raw.character.character.mining_categories, 'ore-bioreserve')
 for _, player in DATA:pairs('character') do
     player.crafting_categories = player.String_Array(player.crafting_categories or {}) + 'wpu-handcrafting' + 'research-handcrafting'
 end
@@ -45,77 +62,6 @@ end
 for _, controller in DATA:pairs('god-controller') do
     controller.crafting_categories = controller.String_Array(controller.crafting_categories or {}) + 'wpu-handcrafting' + 'research-handcrafting'
 end
-
-----------------------------------------------------------------------------------------------------
--- farm_building_order
-----------------------------------------------------------------------------------------------------
-
-local farm_building_order = {
-	['antelope-enclosure'] = 'c[animal]',
-	['arqad-hive'] = 'c[animal]',
-	['arthurian-pen'] = 'c[animal]',
-	['auog-paddock'] = 'c[animal]',
-	['cridren-enclosure'] = 'c[animal]',
-	['dhilmos-pool'] = 'd[aquatic]',
-	['dingrits-pack'] = 'c[animal]',
-	['fish-farm'] = 'd[aquatic]',
-	['kmauts-enclosure'] = 'c[animal]',
-	['mukmoux-pasture'] = 'c[animal]',
-	['phadai-enclosure'] = 'c[animal]',
-	['phagnot-corral'] = 'c[animal]',
-	['prandium-lab'] = 'c[animal]',
-	['ez-ranch'] = 'c[animal]-zz[other]',
-	['scrondrix-pen'] = 'c[animal]',
-	['simik-den'] = 'c[animal]',
-	['trits-reef'] = 'd[aquatic]',
-	['ulric-corral'] = 'c[animal]',
-	['vonix-den'] = 'c[animal]',
-	['vrauks-paddock'] = 'c[animal]',
-	['xenopen'] = 'c[animal]',
-	['xyhiphoe-pool'] = 'd[aquatic]',
-	['zipir-reef'] = 'd[aquatic]',
-	['cadaveric-arum'] = 'a[plant]',
-	['fwf'] = 'a[plant]-ab[other]',
-	['grods-swamp'] = 'a[plant]',
-	['guar-gum-plantation'] = 'a[plant]-aa[other]',
-	['kicalk-plantation'] = 'a[plant]',
-	['moondrop-greenhouse'] = 'a[plant]',
-	['moss-farm'] = 'd[aquatic]-zy[other]',
-	['ralesia-plantation'] = 'a[plant]',
-	['rennea-plantation'] = 'a[plant]',
-	['sap-extractor'] = 'a[plant]',
-	['seaweed-crop'] = 'd[aquatic]-zx[other]',
-	['sponge-culture'] = 'd[aquatic]-zz[other]',
-	['tuuphra-plantation'] = 'a[plant]',
-	['yotoi-aloe-orchard'] = 'a[plant]',
-	['bhoddos-culture'] = 'b[fungi]',
-	['fawogae-plantation'] = 'b[fungi]',
-	['navens-culture'] = 'b[fungi]',
-	['yaedols-culture'] = 'b[fungi]',
-    ['zungror-lair'] = 'c[animal]',
-    ['numal-reef'] = 'd[aquatic]'
-}
-
-for building, order in pairs(farm_building_order) do
-    for _, name in pairs{building, building .. '-mk01', building .. '-mk02', building .. '-mk03', building .. '-mk04'} do
-        if data.raw.item[name] then
-            data.raw.item[name].order = order .. '-b[' .. building .. ']'
-        end
-        if data.raw.recipe[name] then
-            data.raw.recipe[name].order = nil
-        end
-    end
-end
-
-----------------------------------------------------------------------------------------------------
--- TURD
-----------------------------------------------------------------------------------------------------
-
-require('prototypes/upgrades/tech-upgrades')
-
-----------------------------------------------------------------------------------------------------
--- replace_ingredient
-----------------------------------------------------------------------------------------------------
 
 for _, recipe in pairs(data.raw.recipe) do
     local r = RECIPE(recipe)
@@ -127,10 +73,13 @@ for _, recipe in pairs(data.raw.recipe) do
     r:replace_ingredient('xyhiphoe-blood', 'arthropod-blood')
 end
 
+--local sap1_limits = data.raw.module['sap-tree'].limitation_blacklist
+--local sap2_limits = data.raw.module['sap-tree-mk02'].limitation_blacklist
+--local sap3_limits = data.raw.module['sap-tree-mk03'].limitation_blacklist
+--local sap4_limits = data.raw.module['sap-tree-mk04'].limitation_blacklist
 ----------------------------------------------------------------------------------------------------
 -- MODULE LIMITATION SETUP
 ----------------------------------------------------------------------------------------------------
-
 local function get_allowed_module_categories(recipe)
     local allowed_module_categories = recipe.allowed_module_categories
     if not allowed_module_categories then
@@ -202,16 +151,16 @@ end
 ----------------------------------------------------------------------------------------------------
 
 --data.raw.module['sap-tree'].limitation_blacklist = sap1_limits
-data.raw.module['sap-tree'].limitation = {'sap-01', 'sap-01-water', 'sap-01-co2', 'sap-01-air'}
+data.raw.module['sap-tree'].limitation = {'sap-01'}
 
 --data.raw.module['sap-tree-mk02'].limitation_blacklist = sap2_limits
-data.raw.module['sap-tree-mk02'].limitation = {'sap-01', 'sap-mk02', 'sap-01-water', 'sap-01-co2', 'sap-01-air'}
+data.raw.module['sap-tree-mk02'].limitation = {'sap-01', 'sap-mk02'}
 
 --data.raw.module['sap-tree-mk03'].limitation_blacklist = sap3_limits
-data.raw.module['sap-tree-mk03'].limitation = {'sap-01', 'sap-mk02', 'sap-mk03', 'sap-01-water', 'sap-01-co2', 'sap-01-air'}
+data.raw.module['sap-tree-mk03'].limitation = {'sap-01', 'sap-mk02', 'sap-mk03'}
 
 --data.raw.module['sap-tree-mk04'].limitation_blacklist = sap4_limits
-data.raw.module['sap-tree-mk04'].limitation = {'sap-01', 'sap-mk02', 'sap-mk03', 'sap-mk04', 'sap-01-water', 'sap-01-co2', 'sap-01-air'}
+data.raw.module['sap-tree-mk04'].limitation = {'sap-01', 'sap-mk02', 'sap-mk03', 'sap-mk04'}
 
 --remove steel barrel based milk
 data.raw.item['milk-barrel'] = nil
@@ -328,6 +277,10 @@ for _,recipe in pairs(data.raw.recipe) do
     end
 end
 
+--Tech upgrade stuff--
+--require('prototypes/upgrades/hidden-beacon')
+--require('prototypes/upgrades/tech-upgrades')
+
 if data.data_crawler then
 	  data.script_enabled = {
 		{type = 'entity', name = 'tar-patch'},
@@ -421,7 +374,9 @@ for _, category in pairs(searchtypes) do
                     and not ITEM(raw_cat[prototype.next_upgrade].minable.result):has_flag('hidden')
                     and data.raw.item[raw_cat[prototype.next_upgrade].minable.result].place_result == prototype.next_upgrade
                 then
+                    --log(name .. ' -> ' .. prototype.next_upgrade)
                     if serpent.block(prototype.collision_box) ~= serpent.block(raw_cat[prototype.next_upgrade].collision_box) then
+                        --log('Cancelled upgrade: ' .. name .. ' -> ' .. prototype.next_upgrade)
                         prototype.next_upgrade = nil
                     else
                         local next_proto = raw_cat[prototype.next_upgrade]
@@ -435,32 +390,92 @@ for _, category in pairs(searchtypes) do
                 end
             end
         end
+    else
+        --log('Category ' .. category .. ' is empty!')
     end
 end
 
 RECIPE('tar-quenching'):remove_unlock('separation'):add_unlock('tar-processing')
+
 RECIPE('concrete'):remove_unlock('separation'):add_unlock('concrete')
+
 RECIPE('hazard-concrete'):remove_unlock('separation'):add_unlock('concrete')
+
 RECIPE('quenching-tower'):remove_unlock('machines-mk01'):remove_unlock('separation'):add_unlock('tar-processing'):remove_ingredient('electronic-circuit')
+
 RECIPE('lime'):remove_unlock('separation'):add_unlock('concrete')
+
 RECIPE('extract-sulfur'):remove_unlock('fluid-processing-machines-1'):add_unlock('tar-processing')
+
 RECIPE('evaporator'):remove_unlock('fluid-processing-machines-1'):add_unlock('tar-processing')
+
 RECIPE('tailings-dust'):remove_unlock('fluid-processing-machines-1'):add_unlock('tar-processing')
+
 RECIPE('sand-brick'):remove_unlock('concrete'):add_unlock('tar-processing')
+
 RECIPE('ball-mill-mk01'):remove_unlock('crusher'):add_unlock('crusher-2')
 
-local walkable_types = {
-    ['tree'] = true,
-    ['simple-entity'] = true,
-    ['pipe'] = true,
-    ['pipe-to-ground'] = true,
-    ['electric-pole'] = true
+local farm_building_order = {
+	['antelope-enclosure'] = 'c[animal]',
+	['arqad-hive'] = 'c[animal]',
+	['arthurian-pen'] = 'c[animal]',
+	['auog-paddock'] = 'c[animal]',
+	['cridren-enclosure'] = 'c[animal]',
+	['dhilmos-pool'] = 'd[aquatic]',
+	['dingrits-pack'] = 'c[animal]',
+	['fish-farm'] = 'd[aquatic]',
+	['kmauts-enclosure'] = 'c[animal]',
+	['mukmoux-pasture'] = 'c[animal]',
+	['phadai-enclosure'] = 'c[animal]',
+	['phagnot-corral'] = 'c[animal]',
+	['prandium-lab'] = 'c[animal]',
+	['ez-ranch'] = 'c[animal]-zz[other]',
+	['scrondrix-pen'] = 'c[animal]',
+	['simik-den'] = 'c[animal]',
+	['trits-reef'] = 'd[aquatic]',
+	['ulric-corral'] = 'c[animal]',
+	['vonix-den'] = 'c[animal]',
+	['vrauks-paddock'] = 'c[animal]',
+	['xenopen'] = 'c[animal]',
+	['xyhiphoe-pool'] = 'd[aquatic]',
+	['zipir-reef'] = 'd[aquatic]',
+	['cadaveric-arum'] = 'a[plant]',
+	['fwf'] = 'a[plant]-ab[other]',
+	['grods-swamp'] = 'a[plant]',
+	['guar-gum-plantation'] = 'a[plant]-aa[other]',
+	['kicalk-plantation'] = 'a[plant]',
+	['moondrop-greenhouse'] = 'a[plant]',
+	['moss-farm'] = 'd[aquatic]-zy[other]',
+	['ralesia-plantation'] = 'a[plant]',
+	['rennea-plantation'] = 'a[plant]',
+	['sap-extractor'] = 'a[plant]',
+	['seaweed-crop'] = 'd[aquatic]-zx[other]',
+	['sponge-culture'] = 'd[aquatic]-zz[other]',
+	['tuuphra-plantation'] = 'a[plant]',
+	['yotoi-aloe-orchard'] = 'a[plant]',
+	['bhoddos-culture'] = 'b[fungi]',
+	['fawogae-plantation'] = 'b[fungi]',
+	['navens-culture'] = 'b[fungi]',
+	['yaedols-culture'] = 'b[fungi]',
+    ['zungror-lair'] = 'c[animal]',
+    ['numal-reef'] = 'd[aquatic]'
 }
 
+for building, order in pairs(farm_building_order) do
+    for _, name in pairs{building, building .. '-mk01', building .. '-mk02', building .. '-mk03', building .. '-mk04'} do
+        if data.raw.item[name] then
+            data.raw.item[name].order = order .. '-b[' .. building .. ']'
+        end
+        if data.raw.recipe[name] then
+            data.raw.recipe[name].order = nil
+        end
+    end
+end
+
 for _, prototype in pairs(collision_mask_util.collect_prototypes_with_layer('object-layer')) do
-    if not walkable_types[prototype.type] then
+    if prototype.type ~= 'tree' and prototype.type ~= 'simple-entity' then
         prototype.collision_mask = collision_mask_util.get_mask(prototype)
-        if not collision_mask_util.mask_contains_layer(prototype.collision_mask, 'floor-layer') and collision_mask_util.mask_contains_layer(prototype.collision_mask, 'player-layer') then
+        if not collision_mask_util.mask_contains_layer(prototype.collision_mask, 'floor-layer') then
             collision_mask_util.add_layer(prototype.collision_mask, caravan_collision_mask)
         end
     end
