@@ -52,6 +52,21 @@ if data then
         }
     }
 
+    local sponges = {'sea-sponge', 'sea-sponge-mk02', 'sea-sponge-mk03', 'sea-sponge-mk04'}
+    for i, recipe in pairs({
+        table.deepcopy(data.raw.recipe['sea-sponge-sprouts']),
+        table.deepcopy(data.raw.recipe['sea-sponge-sprouts-2']),
+        table.deepcopy(data.raw.recipe['sea-sponge-sprouts-3']),
+        table.deepcopy(data.raw.recipe['sea-sponge-sprouts-4']),
+    }) do
+        recipe.name = recipe.name .. '-flagellum'
+        FUN.add_result(recipe, {name = sponges[i], probability = 0.15 + i * 0.2, type = 'item', amount = 1})
+        FUN.add_ingredient(recipe, {name = 'limestone', type = 'item', amount = 2})
+        recipe.energy_required = recipe.energy_required * 1.5
+        recipe.main_product = sponges[i]
+        data:extend{recipe}
+    end
+
     for _, recipe in pairs({
         table.deepcopy(data.raw.recipe['sea-sponge-1']),
         table.deepcopy(data.raw.recipe['sea-sponge-2']),
@@ -60,7 +75,6 @@ if data then
         FUN.remove_ingredient(recipe, 'zogna-bacteria')
         FUN.multiply_ingredient_amount(recipe, 'dirty-water-light', 3)
         FUN.multiply_ingredient_amount(recipe, 'phytoplankton', 3)
-        recipe.energy_required = math.ceil(recipe.energy_required * 1.5)
         data:extend{recipe}
     end
 end
@@ -106,7 +120,10 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {productivity = 0.1, type = 'module-effects'}
+                {old = 'sea-sponge-sprouts', new = 'sea-sponge-sprouts-flagellum', type = 'recipe-replacement'},
+                {old = 'sea-sponge-sprouts-2', new = 'sea-sponge-sprouts-2-flagellum', type = 'recipe-replacement'},
+                {old = 'sea-sponge-sprouts-3', new = 'sea-sponge-sprouts-3-flagellum', type = 'recipe-replacement'},
+                {old = 'sea-sponge-sprouts-4', new = 'sea-sponge-sprouts-4-flagellum', type = 'recipe-replacement'},
             }
         },
         {

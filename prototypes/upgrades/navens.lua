@@ -64,7 +64,7 @@ if data then
         FUN.remove_ingredient(recipe, 'guts')
         recipe.main_product = 'navens-abomination'
         recipe.results = {{'navens-abomination', profit[i]}}
-        recipe.energy_required = math.ceil(recipe.energy_required * 1.5)
+        recipe.energy_required = recipe.energy_required * 1.5
         data:extend{recipe}
     end
 
