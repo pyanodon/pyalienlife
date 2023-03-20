@@ -33,6 +33,34 @@ end
 TECHNOLOGY('ralesia'):add_pack('py-science-pack-1')
 
 ----------------------------------------------------------------------------------------------------
+-- digosaurus recipes
+----------------------------------------------------------------------------------------------------
+
+Digosaurus = Digosaurus or {}
+require '__pyalienlife__/scripts/digosaurus/digosaurus-prototypes'
+for food, value in pairs(Digosaurus.favorite_foods) do
+    RECIPE {
+        type = 'recipe',
+        name = 'digosaurus-helmod-recipe-' .. food,
+        enabled = false,
+        energy_required = 10,
+        ingredients = {
+            {food, 1}
+        },
+        results = {
+            {'nexelit-ore', value}
+        },
+        category = 'dino-dig-site',
+        hide_from_player_crafting = true
+    }
+end
+
+RECIPE('digosaurus-helmod-recipe-guts'):add_unlock{'nexelit-mk01'}
+RECIPE('digosaurus-helmod-recipe-meat'):add_unlock{'nexelit-mk01'}
+RECIPE('digosaurus-helmod-recipe-workers-food'):add_unlock{'nexelit-mk01'}
+RECIPE('digosaurus-helmod-recipe-workers-food-02'):add_unlock{'nexelit-mk03'}
+
+----------------------------------------------------------------------------------------------------
 -- crafting_categories
 ----------------------------------------------------------------------------------------------------
 
