@@ -182,8 +182,7 @@ local function build_tech_upgrade(tech_upgrade)
             elseif effect.type == 'unlock-recipe' and not effect.also_unlocked_by_techs and data.raw.recipe[effect.recipe] and not recipes_with_turd_description[effect.recipe] then
                 FUN.add_to_description('recipe', data.raw.recipe[effect.recipe], {'turd.font', {'turd.recipe'}})
                 recipes_with_turd_description[effect.recipe] = true
-            elseif effect.type == 'recipe-replacement' then
-                if not data.raw.recipe[effect.new] then error('Invalid recipe replacement: ' .. effect.new) end
+            elseif effect.type == 'recipe-replacement' and data.raw.recipe[effect.new] then
                 FUN.add_to_description('recipe', data.raw.recipe[effect.new], {'turd.font', {'turd.recipe-replacement'}})
             end
         end

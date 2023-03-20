@@ -1,5 +1,15 @@
 local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
+if mods.pyalternativeenergy then -- used in turd upgrade zipir path 3
+  local recipe = table.deepcopy(data.raw.recipe['zipir1-pyvoid'])
+  recipe.name = 'zipir1-pyvoid-hatchery'
+  recipe.icons = nil
+  recipe.icon = '__pyhightechgraphics__/graphics/icons/rendering.png'
+  recipe.icon_size = 32
+  recipe.results = {{type = 'item', name = 'processed-ash', probability = 0.8, amount = 1}}
+  data:extend{recipe}
+end
+
 --ADAPTATIONS
 
 for _, drill in pairs(data.raw['mining-drill']) do

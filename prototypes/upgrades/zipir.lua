@@ -12,6 +12,8 @@ if data then
         recipe.name = recipe.name .. '-suicide'
         FUN.add_result(recipe, {name = 'zipir-eggs', amount_min = 2, amount_max = 3, type = 'item'})
         FUN.add_result(recipe, {name = 'guts', amount = 1, type = 'item'})
+        FUN.multiply_ingredient_amount(recipe, 'zipir-food-01', 0.5)
+        FUN.multiply_ingredient_amount(recipe, 'zipir-food-02', 0.5)
         for _, result in pairs(recipe.results) do
             if result.name == 'zipir1' then
                 if result.probability then
@@ -35,7 +37,7 @@ if data then
         recipe.name = recipe.name .. '-trits-gen'
         recipe.energy_required = recipe.energy_required * 1.5
         FUN.add_ingredient(recipe, {name = 'trits-codex', type = 'item', amount = 1})
-        FUN.add_result(recipe, {name = 'trits-codex', type = 'item', amount = 1, probability = 0.9})
+        FUN.add_result(recipe, {name = 'trits-codex', type = 'item', amount = 1, probability = 0.95})
         for _, result in pairs(recipe.results) do
             if result.name == 'zipir-eggs' then
                 result.amount_max = result.amount_max * 2
@@ -114,7 +116,8 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.40, speed = 0.4, type = 'module-effects'},
+                {consumption = -0.40, speed = 0.15, type = 'module-effects'},
+                {old = 'zipir1-pyvoid', new = 'zipir1-pyvoid-hatchery', type = 'recipe-replacement'},
                 {old = 'zipir-reef-mk01', new = 'zipir-reef-mk01-with-rc', type = 'recipe-replacement'},
                 {old = 'zipir-reef-mk02', new = 'zipir-reef-mk02-with-rc', type = 'recipe-replacement'},
                 {old = 'zipir-reef-mk03', new = 'zipir-reef-mk03-with-rc', type = 'recipe-replacement'},

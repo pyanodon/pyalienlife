@@ -17,7 +17,7 @@ if data then
     }) do
         recipe.name = recipe.name .. '-free-leaves'
         FUN.add_ingredient(recipe, {'burner-inserter', 1})
-        FUN.add_result(recipe, {name = 'yotoi-leaves', amount = i*2, type = 'item'})
+        FUN.add_result(recipe, {name = 'yotoi-leaves', amount = i*4, type = 'item'})
         recipe.main_product = 'yotoi-leaves'
         data:extend{recipe}
     end
