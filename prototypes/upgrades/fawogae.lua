@@ -20,7 +20,7 @@ if data then
         type = 'recipe',
         name = 'acid-gas-fawogae',
         enabled = false,
-        category = 'flotation',
+        category = 'desulfurization',
         energy_required = 8,
         ingredients = {
             {'fawogae', 2},
