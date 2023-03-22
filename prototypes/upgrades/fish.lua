@@ -81,7 +81,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.2, speed = 0.35, type = 'module-effects'},
+                {consumption = -0.2, speed = 0.35, productivity = 0.05, type = 'module-effects'},
                 {old = 'fish-farm-mk01', new = 'fish-farm-mk01-heating-cooling', type = 'recipe-replacement'},
                 {old = 'fish-farm-mk02', new = 'fish-farm-mk02-heating-cooling', type = 'recipe-replacement'},
                 {old = 'fish-farm-mk03', new = 'fish-farm-mk03-heating-cooling', type = 'recipe-replacement'},
