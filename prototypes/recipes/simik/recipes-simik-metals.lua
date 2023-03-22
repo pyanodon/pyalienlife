@@ -90,7 +90,7 @@ RECIPE {
     },
     results = {
         {type = 'item', name = 'coal-pulp-03-barrel', amount = 4},
-        {type = 'item', name = 'cf1', amount = 1},
+        {type = 'item', name = 'cf1', amount = 2},
         {type = 'item', name = 'r1-barrel', amount = 1},
         {type = 'item', name = 'r2-barrel', amount = 1},
     },
@@ -380,7 +380,7 @@ RECIPE {
         {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
-        {type = 'item', name = 'nexelit-matrix', amount = 6},
+        {type = 'item', name = 'nexelit-matrix', amount = 12},
         {type = 'item', name = 'nexelit-pulp-02-barrel', amount = 2},
         {type = 'item', name = 'depolymerized-organics-barrel', amount = 2},
         {type = 'item', name = 'hot-air-barrel', amount = 1},

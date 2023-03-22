@@ -42,9 +42,12 @@ if data then
             energy_required = 8,
             enabled = false,
             category = 'impact-crusher',
-            ingredients = {{name = 'caged-ulric', amount = 1, type = 'item'}},
+            ingredients = {
+                {name = 'caged-ulric', amount = 1, type = 'item'},
+                {name = 'collagen', amount = 1, type = 'item'},
+            },
             results = {
-                {name = 'epoxy', amount = 3, type = 'item'},
+                {name = 'epoxy', amount = 2, type = 'item'},
                 {name = 'cage', amount = 1, type = 'item'},
             },
             main_product = 'epoxy',

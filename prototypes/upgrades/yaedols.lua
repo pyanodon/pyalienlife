@@ -1,15 +1,28 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
 if data then
-    for i, recipe in pairs({
+    for _, recipe in pairs({
+        table.deepcopy(data.raw.recipe['yaedols-spores']),
+        table.deepcopy(data.raw.recipe['yaedols-spores-2']),
+        table.deepcopy(data.raw.recipe['yaedols-spores-3']),
+        table.deepcopy(data.raw.recipe['yaedols-spore-mk02']),
+        table.deepcopy(data.raw.recipe['yaedols-spore-mk03']),
+        table.deepcopy(data.raw.recipe['yaedols-spore-mk04']),
+    }) do
+        recipe.name = recipe.name .. '-coke-oven-gas'
+        FUN.add_ingredient(recipe, {minimum_temperature = 100, name = 'coke-oven-gas', type = 'fluid', amount = 1})
+        data:extend{recipe}
+    end
+
+    for _, recipe in pairs({
         table.deepcopy(data.raw.recipe['yaedols-1']),
         table.deepcopy(data.raw.recipe['yaedols-2']),
         table.deepcopy(data.raw.recipe['yaedols-3']),
         table.deepcopy(data.raw.recipe['yaedols-4']),
     }) do
         recipe.name = recipe.name .. '-hot-air'
-        FUN.add_ingredient(recipe, {name = 'hot-air', amount = 40 * i, type = 'fluid', fluidbox_index = 2})
-        FUN.add_result(recipe, {name = 'cold-air', amount = 40 * i, type = 'fluid'})
+        FUN.add_ingredient(recipe, {name = 'hot-air', amount = 60, type = 'fluid', fluidbox_index = 2})
+        FUN.add_result(recipe, {name = 'cold-air', amount = 60, type = 'fluid'})
         recipe.main_product = 'cold-air'
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
 
@@ -23,8 +36,12 @@ if data then
     end
 
     local spore = table.deepcopy(data.raw.recipe['yaedols-spores'])
-    spore.energy_required = 3
-    spore.results = {{type = 'item', probability = 0.9, name = 'yaedols-spores', amount = 12}}
+    spore.energy_required = 2
+    spore.results = {
+        {type = 'item', probability = 0.9, name = 'yaedols-spores', amount = 12},
+        {type = 'fluid', name = 'waste-water', amount = 1}
+    }
+    spore.main_product = 'yaedols-spores'
     spore.name = 'yaedols-spore-4'
     data:extend{spore}
 end
@@ -59,7 +76,13 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 9.5, speed = 0.15, productivity = 0.1, type = 'module-effects'}
+                {speed = 0.1, productivity = 0.2, type = 'module-effects'},
+                {old = 'yaedols-spores', new = 'yaedols-spores-coke-oven-gas', type = 'recipe-replacement'},
+                {old = 'yaedols-spores-2', new = 'yaedols-spores-2-coke-oven-gas', type = 'recipe-replacement'},
+                {old = 'yaedols-spores-3', new = 'yaedols-spores-3-coke-oven-gas', type = 'recipe-replacement'},
+                {old = 'yaedols-spore-mk02', new = 'yaedols-spore-mk02-coke-oven-gas', type = 'recipe-replacement'},
+                {old = 'yaedols-spore-mk03', new = 'yaedols-spore-mk03-coke-oven-gas', type = 'recipe-replacement'},
+                {old = 'yaedols-spore-mk04', new = 'yaedols-spore-mk04-coke-oven-gas', type = 'recipe-replacement'},
             },
         },
         {

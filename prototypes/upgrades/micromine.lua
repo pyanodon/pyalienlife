@@ -17,7 +17,7 @@ if data then
 
     FUN.multiply_result_amount(with_agar, 'petri-dish-bacteria', 3)
     FUN.multiply_result_amount(with_collagen, 'petri-dish-bacteria', 15)
-    FUN.multiply_result_amount(with_enz, 'petri-dish-bacteria', 100)
+    FUN.multiply_result_amount(with_enz, 'petri-dish-bacteria', 125)
 
     FUN.add_ingredient(with_agar, {'agar', 1})
     FUN.add_ingredient(with_collagen, {'collagen', 1})
