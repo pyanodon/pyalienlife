@@ -33,7 +33,7 @@ if data then
         spore.name = spore.name .. '-upgraded'
         spore.main_product = 'bhoddos-spore'
         spore.ingredients = {
-            {'soil', 1}
+            {'sand', 1}
         }
         spore.results = {
             {name = 'bhoddos-spore', amount = i*6, type = 'item', probability = 0.9},
