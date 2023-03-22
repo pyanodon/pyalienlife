@@ -114,6 +114,7 @@ require('prototypes/technologies/simik')
 require('prototypes/technologies/fish')
 require('prototypes/technologies/guar')
 require('prototypes/technologies/moss')
+require('prototypes/technologies/wood-processing-4')
 require('prototypes/technologies/cottongut-science')
 require('prototypes/technologies/py-science-pack')
 require('prototypes/technologies/fertilizer')
@@ -688,7 +689,7 @@ require('prototypes/recipes/simik/recipes-simik-modules')
 
 --Tree
 require('prototypes/recipes/tree/recipes-tree')
---require('prototypes/recipes/tree/recipes-tree-modules')
+require('prototypes/recipes/tree/recipes-tree-modules')
 
 --Trits
 require('prototypes/recipes/trits/recipes-trits')

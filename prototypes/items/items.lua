@@ -5563,6 +5563,90 @@ ITEM {
 }
 
 ITEM {
+    type = "item",
+    name = "wood-seedling-mk02",
+    icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/mip/seedling-1.png"}
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-plants",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "wood-seeds-mk02",
+    icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/wood-seeds.png"}
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-plants",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "wood-seedling-mk03",
+    icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/mip/seedling-1.png"}
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-plants",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "wood-seeds-mk03",
+    icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/wood-seeds.png"}
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-plants",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "wood-seedling-mk04",
+    icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/mip/seedling-1.png"}
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-plants",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "wood-seeds-mk04",
+    icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/wood-seeds.png"}
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-plants",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
     type = "module",
     name = "seaweed",
     icons =

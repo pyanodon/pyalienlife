@@ -23,6 +23,7 @@ Date: ?
     - Fixed that guar gum plantations had extreme high crafting speeds. 964x -> 16x @mk4
     - Updated wiki page for digosaurs
     - Reduced biosample amount in caravan recipe
+    - Added new recipes for tree modules mk2, mk3, mk4
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.10
 Date: 2023-2-3
