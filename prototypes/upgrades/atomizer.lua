@@ -1,3 +1,52 @@
+local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
+
+if data then
+    RECIPE {
+        type = 'recipe',
+        name = 'venom-gland-to-dynemicin',
+        category = 'atomizer',
+        enabled = false,
+        energy_required = 90,
+        ingredients = {
+            {type = 'item', name = 'venon-gland', amount = 10},
+        },
+        results = {
+            {type = 'item', name = 'dynemicin', amount = 1},
+        },
+        --main_product = "cocoon",
+    }
+
+    RECIPE {
+        type = 'recipe',
+        name = 'cognition-osteochain-to-kondo-substrate',
+        category = 'atomizer',
+        enabled = false,
+        energy_required = 90,
+        ingredients = {
+            {type = 'item', name = 'cognition-osteochain', amount = 5},
+        },
+        results = {
+            {type = 'item', name = 'kondo-substrate', amount = 1},
+        },
+        --main_product = "cocoon",
+    }
+
+    RECIPE {
+        type = 'recipe',
+        name = 'dimensional-gastricorg-to-inverse-opal',
+        category = 'atomizer',
+        enabled = false,
+        energy_required = 90,
+        ingredients = {
+            {type = 'item', name = 'dimensional-gastricorg', amount = 1},
+        },
+        results = {
+            {type = 'item', name = 'inverse-opal', amount = 1},
+        },
+        --main_product = "cocoon",
+    }
+end
+
 return {
     affected_entities = { -- the entities that should be effected by this tech upgrade
         'atomizer-mk01',
@@ -10,14 +59,20 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-atomizer.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'molecular-decohesion-mk02'},
+        prerequisites = {'molecular-decohesion-mk04', 'biotech-machines-mk04'},
         unit = {
             count = 500,
             ingredients = {
                 {'automation-science-pack', 1},
+                {'py-science-pack-1', 1},
                 {'logistic-science-pack', 1},
-                -- {'py-science-pack-3', 1},
+                {'military-science-pack', 1},
+                {'py-science-pack-2', 1},
                 {'chemical-science-pack', 1},
+                {'py-science-pack-3', 1},
+                {'production-science-pack', 1},
+                {'py-science-pack-4', 1},
+                {'utility-science-pack', 1},
             },
             time = 45
         }
@@ -29,7 +84,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.0, speed = 0.15, productivity = -0.12, type = 'module-effects'}
+                {recipe = 'venom-gland-to-dynemicin', type = 'unlock-recipe'}
             },
         },
         {
@@ -38,7 +93,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.1, speed = 0, productivity = -0.1, type = 'module-effects'}
+                {recipe = 'cognition-osteochain-to-kondo-substrate', type = 'unlock-recipe'}
             }
         },
         {
@@ -47,7 +102,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.25, speed = 0, productivity = 0.2, type = 'module-effects'}
+                {recipe = 'dimensional-gastricorg-to-inverse-opal', type = 'unlock-recipe'}
             }
         }
     }

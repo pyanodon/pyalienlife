@@ -1,7 +1,6 @@
 local FUN = require('__pycoalprocessing__/prototypes/functions/functions')
 
 local tech_upgrades = {
-    require('prototypes/upgrades/atomizer'),
     require('prototypes/upgrades/bioprinting'),
     require('prototypes/upgrades/biofactory'),
     --require('prototypes/upgrades/compost'),
@@ -39,6 +38,7 @@ local tech_upgrades = {
 
 if (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalternativeenergy) then -- is pyAE installed?
     for _, upgrade in pairs{
+        'prototypes/upgrades/atomizer',
         'prototypes/upgrades/bioreactor',
         'prototypes/upgrades/zungror',
         'prototypes/upgrades/numal',

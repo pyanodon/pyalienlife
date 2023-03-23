@@ -24,7 +24,7 @@ TECHNOLOGY {
     max_level = 1,
     is_turd = true,
     localised_description = {'', {'turd.font', {'turd.tech'}}, '\n', {'technology-description.turd-respec'}}
-}:add_prereq('bioreactor-upgrade')
+}:add_prereq('bioreactor-upgrade'):add_prereq('atomizer-upgrade')
 
 TECHNOLOGY {
     type = 'technology',
