@@ -17,7 +17,7 @@ if data then
 
     data:extend{{
         name = 'moondrop-co2',
-        results = {{type = 'fluid', amount = 100, name = 'carbon-dioxide'}},
+        results = {{type = 'fluid', amount = 100, name = 'carbon-dioxide', fluidbox_index = 1}},
         energy_required = 10,
         ingredients = {},
         category = 'moon',
