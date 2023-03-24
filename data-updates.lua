@@ -55,10 +55,10 @@ for food, value in pairs(Digosaurus.favorite_foods) do
     }
 end
 
-RECIPE('digosaurus-helmod-recipe-guts'):add_unlock{'nexelit-mk01'}
-RECIPE('digosaurus-helmod-recipe-meat'):add_unlock{'nexelit-mk01'}
-RECIPE('digosaurus-helmod-recipe-workers-food'):add_unlock{'nexelit-mk01'}
-RECIPE('digosaurus-helmod-recipe-workers-food-02'):add_unlock{'nexelit-mk03'}
+--RECIPE('digosaurus-helmod-recipe-guts'):add_unlock('nexelit-mk01')
+--RECIPE('digosaurus-helmod-recipe-meat'):add_unlock('nexelit-mk01')
+--RECIPE('digosaurus-helmod-recipe-workers-food'):add_unlock('nexelit-mk01')
+--RECIPE('digosaurus-helmod-recipe-workers-food-02'):add_unlock('nexelit-mk03')
 
 ----------------------------------------------------------------------------------------------------
 -- crafting_categories
@@ -140,6 +140,8 @@ end
 ----------------------------------------------------------------------------------------------------
 
 require('prototypes/upgrades/tech-upgrades')
+TECHNOLOGY('turd-respec-1'):add_prereq('bioreactor-upgrade'):add_prereq('atomizer-upgrade')
+TECHNOLOGY('turd-respec-2'):add_prereq('schrodinger-antelope-upgrade')
 
 ----------------------------------------------------------------------------------------------------
 -- replace_ingredient
