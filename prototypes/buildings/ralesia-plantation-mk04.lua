@@ -1,3 +1,6 @@
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
+local MODULE_SLOTS = 48
+
 local pipes = {
     north = {
         filename = "__pycoalprocessinggraphics__/graphics/entity/ralesia-plantation/top.png",
@@ -70,11 +73,11 @@ ENTITY {
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 48
+        module_slots = MODULE_SLOTS
     },
     allowed_effects = {"speed","productivity",'consumption','pollution'},
     crafting_categories = {"ralesia"},
-    crafting_speed = 0.12,
+    crafting_speed = FUN.farm_speed_derived(MODULE_SLOTS, "ralesia-plantation-mk01"),
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

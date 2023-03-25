@@ -6157,7 +6157,7 @@ ITEM {
     subgroup = "py-alienlife-ralesia",
     order = "ra",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 0.83}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "ralesia"
 }
@@ -6177,7 +6177,7 @@ ITEM {
      subgroup = "py-alienlife-ralesia",
      order = "rb",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 1.66}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
  	limitation = {},
  	limitation_message_key = "ralesia"
  }
@@ -6197,7 +6197,7 @@ ITEM {
      subgroup = "py-alienlife-ralesia",
      order = "rc",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 2.49}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 3}},
  	limitation = {},
  	limitation_message_key = "ralesia"
  }
@@ -6217,7 +6217,7 @@ ITEM {
      subgroup = "py-alienlife-ralesia",
      order = "rd",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 3.33}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 4}},
  	limitation = {},
  	limitation_message_key = "ralesia"
  }
