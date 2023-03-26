@@ -46,7 +46,7 @@ data:extend{{
 	collision_mask = {caravan_collision_mask},
 	subgroup = 'enemies',
 	healing_per_tick = 0.03,
-	collision_box = {{-0.6, -0.6}, {0.6, 0.6}},
+	collision_box = {{-0.45, -0.45}, {0.45, 0.45}},
 	selection_priority = 51,
 	selection_box = {{-1.1, -1.1}, {1.1, 1.1}},
 	attack_parameters = {
