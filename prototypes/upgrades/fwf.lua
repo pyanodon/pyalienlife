@@ -31,7 +31,7 @@ if data then
         table.deepcopy(data.raw.recipe['log6']),
     }) do
         recipe.name = recipe.name .. '-cheap'
-        FUN.multiply_ingredient_amount(recipe, 'ash', 0.5)
+        FUN.multiply_ingredient_amount(recipe, 'ash', 1/3)
         data:extend{recipe}
     end
 end
