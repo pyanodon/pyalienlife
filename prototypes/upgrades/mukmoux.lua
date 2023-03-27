@@ -16,12 +16,14 @@ if data then
             {name = 'water', amount = 650, type = 'fluid'},
         },
         results = {
-            {name = 'mukmoux-calf', amount_min = 166, amount_max = 253, type = 'item'},
+            {name = 'mukmoux-calf', amount_min = 150, amount_max = 250, type = 'item'},
             {name = 'quartz-tube', amount = 1, type = 'item', probability = 0.5},
+            {name = 'immunosupressants', amount = 1, type = 'item', probability = 0.5},
             {name = 'meat', amount = 3, type = 'item'},
             {name = 'guts', amount = 5, type = 'item'},
             {name = 'mukmoux-fat', amount = 5, type = 'item'},
             {name = 'bones', amount = 1, type = 'item'},
+            {name = 'artificial-blood', amount = 100, type = 'fluid'},
         },
         main_product = 'mukmoux-calf',
         localised_name = {'technology-name.zero-cross'}
@@ -35,6 +37,27 @@ if data then
     }) do
         recipe.name = recipe.name .. '-microchip'
         FUN.add_ingredient(recipe, {name = 'microchip', amount = 1, type = 'item'})
+        FUN.add_result(recipe, {name = 'microchip', amount = 1, type = 'item', probability = 0.5})
+        FUN.add_result(recipe, {name = 'fetal-serum', amount = 10, type = 'fluid'})
+        data:extend{recipe}
+    end
+
+    for _, recipe in pairs({
+        table.deepcopy(data.raw.recipe['mukmoux-1']),
+        table.deepcopy(data.raw.recipe['mukmoux-2']),
+        table.deepcopy(data.raw.recipe['mukmoux-3']),
+        table.deepcopy(data.raw.recipe['mukmoux-4']),
+    }) do
+        recipe.name = recipe.name .. '-bip'
+        for _, ingredient in pairs(recipe.ingredients) do
+            if ingredient.name == 'mukmoux-food-01' or ingredient.name == 'mukmoux-food-02' then
+                FUN.add_result(recipe, {name = ingredient.name, amount = 1, type = 'item', probability = 0.5})
+            end
+        end
+        FUN.add_ingredient_amount(recipe, 'mukmoux-food-01', 1)
+        FUN.add_ingredient_amount(recipe, 'mukmoux-food-02', 1)
+        FUN.multiply_result_amount(recipe, 'mukmoux', 1.5)
+        recipe.energy_required = recipe.energy_required * 1.5
         data:extend{recipe}
     end
 
@@ -91,7 +114,10 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {speed = 0.65, type = 'module-effects'},
+                {old = 'mukmoux-1', new = 'mukmoux-1-bip', type = 'recipe-replacement'},
+                {old = 'mukmoux-2', new = 'mukmoux-2-bip', type = 'recipe-replacement'},
+                {old = 'mukmoux-3', new = 'mukmoux-3-bip', type = 'recipe-replacement'},
+                {old = 'mukmoux-4', new = 'mukmoux-4-bip', type = 'recipe-replacement'},
                 {old = 'mukmoux-pasture-mk01', new = 'mukmoux-pasture-mk01-with-electronics', type = 'recipe-replacement'},
                 {old = 'mukmoux-pasture-mk02', new = 'mukmoux-pasture-mk02-with-electronics', type = 'recipe-replacement'},
                 {old = 'mukmoux-pasture-mk03', new = 'mukmoux-pasture-mk03-with-electronics', type = 'recipe-replacement'},

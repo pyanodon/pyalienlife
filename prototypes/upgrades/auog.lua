@@ -27,11 +27,16 @@ if data then
         data:extend{recipe}
     end
 
-    do
-        local machine_recipe = table.deepcopy(data.raw.recipe['auog-paddock-mk01'])
-        machine_recipe.name = machine_recipe.name .. '-with-moondrop'
-        FUN.add_ingredient(machine_recipe, {name = 'moondrop', amount = 30, type = 'item'})
-        data:extend{machine_recipe}
+    local mushrooms = {'moondrop', 'moondrop-mk02', 'moondrop-mk03', 'moondrop-mk04'}
+    for i, recipe in pairs{
+        table.deepcopy(data.raw.recipe['auog-paddock-mk01']),
+        table.deepcopy(data.raw.recipe['auog-paddock-mk02']),
+        table.deepcopy(data.raw.recipe['auog-paddock-mk03']),
+        table.deepcopy(data.raw.recipe['auog-paddock-mk04']),
+    } do
+        recipe.name = recipe.name .. '-with-moondrop'
+        FUN.add_ingredient(recipe, {name = mushrooms[i], amount = 30, type = 'item'})
+        data:extend{recipe}
     end
 
     for recipe, dirt in pairs{
@@ -90,11 +95,14 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {old = 'auog-paddock-mk01', new = 'auog-paddock-mk01-with-moondrop', type = 'recipe-replacement'},
                 {old = 'auog-pup-breeding-2', new = 'auog-pup-breeding-2-glowing-mushroom', type = 'recipe-replacement'},
                 {old = 'auog-pup-breeding-3', new = 'auog-pup-breeding-3-glowing-mushroom', type = 'recipe-replacement'},
                 {old = 'auog-pup-breeding-4', new = 'auog-pup-breeding-4-glowing-mushroom', type = 'recipe-replacement'},
                 {old = 'auog-pup-breeding-5', new = 'auog-pup-breeding-5-glowing-mushroom', type = 'recipe-replacement'},
+                {old = 'auog-paddock-mk01', new = 'auog-paddock-mk01-with-moondrop', type = 'recipe-replacement'},
+                {old = 'auog-paddock-mk02', new = 'auog-paddock-mk02-with-moondrop', type = 'recipe-replacement'},
+                {old = 'auog-paddock-mk03', new = 'auog-paddock-mk03-with-moondrop', type = 'recipe-replacement'},
+                {old = 'auog-paddock-mk04', new = 'auog-paddock-mk04-with-moondrop', type = 'recipe-replacement'},
             }
         },
         {

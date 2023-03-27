@@ -22,7 +22,7 @@ if data then
     }) do
         recipe.name = recipe.name .. '-exoenzymes'
         FUN.add_ingredient(recipe, {name = biomass[i], amount = 3, type = 'item'})
-        FUN.multiply_result_amount(recipe, 'bhoddos', 1.2)
+        FUN.multiply_result_amount(recipe, 'bhoddos', 1.3)
         data:extend{recipe}
     end
 
@@ -31,7 +31,14 @@ if data then
         table.deepcopy(data.raw.recipe['bhoddos-spore-3']),
     }) do
         spore.name = spore.name .. '-upgraded'
-        spore.results = {{name = 'bhoddos-spore', amount = i*6, type = 'item', probability = 0.9}}
+        spore.main_product = 'bhoddos-spore'
+        spore.ingredients = {
+            {'sand', 1}
+        }
+        spore.results = {
+            {name = 'bhoddos-spore', amount = i*6, type = 'item', probability = 0.9},
+            {name = 'fungal-substrate', amount = 1, type = 'item'}
+        }
         data:extend{spore}
     end
 end
@@ -68,7 +75,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.5, speed = 0.25, type = 'module-effects'},
+                {consumption = 0.5, speed = 0.45, type = 'module-effects'},
                 {old = 'bhoddos-culture-mk01', new = 'bhoddos-culture-mk01-with-pybot', type = 'recipe-replacement'},
                 {old = 'bhoddos-culture-mk02', new = 'bhoddos-culture-mk02-with-pybot', type = 'recipe-replacement'},
                 {old = 'bhoddos-culture-mk03', new = 'bhoddos-culture-mk03-with-pybot', type = 'recipe-replacement'},

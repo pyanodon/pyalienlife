@@ -1,21 +1,6 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
 if data then
-    --[[for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['ulric-mk02']),
-        table.deepcopy(data.raw.recipe['ulric-mk03']),
-        table.deepcopy(data.raw.recipe['ulric-mk04']),
-    }) do
-        recipe.localised_name = {'recipe-name.'..recipe.name}
-        for _, result in pairs(recipe.results) do
-            if result.name == recipe.name then
-                result.probability = result.probability * 2
-            end
-        end
-        recipe.name = recipe.name .. '-being turned into glue is sexy'
-        data:extend{recipe}
-    end--]]
-
     data:extend{
         {
             type = 'item',
@@ -28,7 +13,7 @@ if data then
         {
             type = 'recipe',
             name = 'saddle',
-            energy_required = 2,
+            energy_required = 4,
             category = 'crafting-with-fluid',
             enabled = false,
             ingredients = {
@@ -36,12 +21,12 @@ if data then
                 {name = 'niobium-plate', amount = 1, type = 'item'},
                 {name = 'flue-gas', amount = 250, type = 'fluid'},
             },
-            result = 'saddle'
+            results = {{'saddle', 2}}
         },
         {
             type = 'recipe',
             name = 'saddle-b',
-            energy_required = 2,
+            energy_required = 4,
             category = 'crafting-with-fluid',
             enabled = false,
             ingredients = {
@@ -49,7 +34,7 @@ if data then
                 {name = 'nichrome', amount = 1, type = 'item'},
                 {name = 'micro-fiber', amount = 1, type = 'item'},
             },
-            results = {{'saddle', 2}}
+            results = {{'saddle', 4}}
         },
         {
             type = 'recipe',
@@ -57,9 +42,12 @@ if data then
             energy_required = 8,
             enabled = false,
             category = 'impact-crusher',
-            ingredients = {{name = 'caged-ulric', amount = 1, type = 'item'}},
+            ingredients = {
+                {name = 'caged-ulric', amount = 1, type = 'item'},
+                {name = 'collagen', amount = 1, type = 'item'},
+            },
             results = {
-                {name = 'epoxy', amount = 3, type = 'item'},
+                {name = 'epoxy', amount = 2, type = 'item'},
                 {name = 'cage', amount = 1, type = 'item'},
             },
             main_product = 'epoxy',
@@ -74,12 +62,7 @@ if data then
         table.deepcopy(data.raw.recipe['ulric-cub-4']),
     }) do
         recipe.name = recipe.name .. '-saddle'
-        for _, result in pairs(recipe.results) do
-            if result.name == 'ulric-cub' then
-                FUN.add_ingredient(recipe, {name = 'saddle', amount = result.amount, type = 'item'})
-                break
-            end
-        end
+        FUN.add_ingredient(recipe, {name = 'saddle', amount = 1, type = 'item'})
         data:extend{recipe}
     end
 
@@ -128,9 +111,6 @@ return {
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
                 {recipe = 'noooo dont turn that horse into glue', type = 'unlock-recipe'},
-                --[[{old = 'ulric-mk02', new = 'ulric-mk02-being turned into glue is sexy', type = 'recipe-replacement'},
-                {old = 'ulric-mk03', new = 'ulric-mk03-being turned into glue is sexy', type = 'recipe-replacement'},
-                {old = 'ulric-mk04', new = 'ulric-mk04-being turned into glue is sexy', type = 'recipe-replacement'},--]]
             },
         },
         {

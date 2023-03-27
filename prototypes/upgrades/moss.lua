@@ -39,8 +39,7 @@ if data then
         table.deepcopy(data.raw.recipe['Moss 5']),
     }) do
         recipe.name = recipe.name .. '-without-sludge'
-        local amount = FUN.remove_ingredient(recipe, 'dirty-water-light')
-        FUN.add_ingredient(recipe, {name = 'water', amount = amount, type = 'fluid'})
+        FUN.remove_ingredient(recipe, 'dirty-water-light')
         data:extend{recipe}
     end
 

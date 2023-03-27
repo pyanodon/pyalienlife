@@ -45,7 +45,7 @@ if data then
     } do
         recipe.name = recipe.name .. '-hydrophile'
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
-        FUN.multiply_ingredient_amount(recipe, 'water', 10)
+        FUN.multiply_ingredient_amount(recipe, 'water', 20)
         FUN.add_result_amount(recipe, 'rennea', 1)
         data:extend{recipe}
     end

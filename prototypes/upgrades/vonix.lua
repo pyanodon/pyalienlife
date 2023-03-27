@@ -17,13 +17,13 @@ if data then
             {type = 'item', name = 'bedding', amount = 1},
         },
         results = {
-            {type = 'item', name = 'vonix-cub', amount_min = 4, amount_max = 6},
+            {type = 'item', name = 'vonix-cub', amount_min = 7, amount_max = 8},
             {type = 'item', name = 'vonix', amount = 1},
             {type = 'item', name = 'vonix', amount = 1, probability = 0.95},
             {type = 'item', name = 'cage', amount = 2},
             {type = 'item', name = 'empty-barrel', amount = 6},
         },
-        energy_required = 70,
+        energy_required = 85,
         category = 'rc',
         allowed_module_categories = {'vonix'},
         main_product = 'vonix-cub'
@@ -52,6 +52,15 @@ if data then
         recipe.ingredients = {previous[i]}
         data:extend{recipe}
     end
+
+    data:extend{{
+        type = 'recipe',
+        enabled = false,
+        energy_required = 1,
+        name = 'vonix-den-mk04-free',
+        ingredients = {{'vonix-den-mk03', 1}},
+        results = {{'vonix-den-mk04', 1}}
+    }}
 end
 
 return {
@@ -59,6 +68,7 @@ return {
         'vonix-den-mk01',
         'vonix-den-mk02',
         'vonix-den-mk03',
+        'vonix-den-mk04',
     },
     master_tech = { -- tech that is shown in the tech tree
         name = 'vonix-upgrade',
@@ -105,10 +115,11 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.5, speed = 0.2, type = 'module-effects'},
+                {productivity = 0.05, type = 'module-effects'},
                 {old = 'vonix-den-mk01', new = 'vonix-den-mk01-free', type = 'recipe-replacement'},
                 {old = 'vonix-den-mk02', new = 'vonix-den-mk02-free', type = 'recipe-replacement'},
                 {old = 'vonix-den-mk03', new = 'vonix-den-mk03-free', type = 'recipe-replacement'},
+                {recipe = 'vonix-den-mk04-free', type = 'unlock-recipe'},
             }
         }
     },

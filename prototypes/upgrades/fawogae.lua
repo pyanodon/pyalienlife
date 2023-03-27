@@ -9,7 +9,8 @@ if data then
         table.deepcopy(data.raw.recipe['fawogae with growth hormone']),
     }) do
         recipe.name = recipe.name .. '-nitrogen'
-        FUN.add_ingredient(recipe, {type = 'fluid', name = 'purest-nitrogen-gas', amount = 40 * i})
+        FUN.remove_ingredient(recipe, 'water')
+        FUN.add_ingredient(recipe, {type = 'fluid', name = 'purest-nitrogen-gas', amount = 20 + 20 * i})
         FUN.multiply_result_amount(recipe, 'fawogae', 1.35)
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         data:extend{recipe}
@@ -19,10 +20,11 @@ if data then
         type = 'recipe',
         name = 'acid-gas-fawogae',
         enabled = false,
-        category = 'flotation',
+        category = 'desulfurization',
         energy_required = 8,
         ingredients = {
             {'fawogae', 2},
+            {'sulfur', 2},
             {type = 'fluid', name = 'oxygen', amount = 50},
         },
         results = {
@@ -107,7 +109,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {speed = 0.15, type = 'module-effects'},
+                {speed = 0.1, type = 'module-effects'},
                 {recipe = 'acid-gas-fawogae', type = 'unlock-recipe'},
                 {recipe = 'xeno-codex', type = 'unlock-recipe', also_unlocked_by_techs = true},
                 {old = 'fawogae-sample', new = 'fawogae-sample-with-xeno-codex', type = 'recipe-replacement'},

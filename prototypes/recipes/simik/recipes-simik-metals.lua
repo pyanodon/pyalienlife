@@ -13,7 +13,7 @@ RECIPE {
         {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
-        {type = 'item', name = 'sponge-iron', amount = 1},
+        {type = 'item', name = 'sponge-iron', amount = 2},
         {type = 'item', name = 'unslimed-iron', amount = 4},
         {type = 'item', name = 'hot-air-barrel', amount = 4},
     },
@@ -61,7 +61,7 @@ RECIPE {
         {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
-        {type = 'item', name = 'glass-core', amount = 4},
+        {type = 'item', name = 'glass-core', amount = 8},
         {type = 'item', name = 'quartz-pulp-02-barrel', amount = 2},
         {type = 'item', name = 'quartz-pulp-01-barrel', amount = 1},
         {type = 'item', name = 'hot-air-barrel', amount = 1},
@@ -89,8 +89,8 @@ RECIPE {
         {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
-        {type = 'item', name = 'coal-pulp-03-barrel', amount = 2},
-        {type = 'item', name = 'cf1', amount = 4},
+        {type = 'item', name = 'coal-pulp-03-barrel', amount = 4},
+        {type = 'item', name = 'cf1', amount = 2},
         {type = 'item', name = 'r1-barrel', amount = 1},
         {type = 'item', name = 'r2-barrel', amount = 1},
     },
@@ -140,7 +140,8 @@ RECIPE {
         {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
-        {type = 'item', name = 'crystalized-sodium-aluminate', amount = 2},
+        {type = 'item', name = 'crystalized-sodium-aluminate', amount = 3},
+        {type = 'item', name = 'py-aluminium', amount = 12},
         {type = 'item', name = 'r1-barrel', amount = 1},
         {type = 'item', name = 'r2-barrel', amount = 2},
         {type = 'item', name = 'r4-barrel', amount = 1},
@@ -244,8 +245,8 @@ RECIPE {
         {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
-        {type = 'item', name = 'agzn-alloy', amount = 5},
-        {type = 'item', name = 'concentrated-zinc', amount = 3},
+        {type = 'item', name = 'agzn-alloy', amount = 6},
+        {type = 'item', name = 'concentrated-zinc', amount = 2},
         {type = 'item', name = 'zinc-waste-barrel', amount = 4},
         {type = 'item', name = 'bio-oil-barrel', amount = 1},
         {type = 'item', name = 'bio-ore', amount = 1, probability = 0.65},
@@ -322,12 +323,13 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'vanabins-barrel', amount = 2},
         {type = 'item', name = 'ore-titanium', amount = 90},
+        {type = 'item', name = 'coal-dust', amount = 1},
         {type = 'item', name = 'bio-sample', amount = 1},
         {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
         {type = 'item', name = 'ticl4', amount = 12},
-        {type = 'item', name = 'high-grade-ti', amount = 4},
+        {type = 'item', name = 'high-grade-ti', amount = 3},
         {type = 'item', name = 'depolymerized-organics-barrel', amount = 1},
         {type = 'item', name = 'hot-air-barrel', amount = 1},
     },
@@ -372,12 +374,13 @@ RECIPE {
     energy_required = 80,
     ingredients = {
         {type = 'item', name = 'vanabins-barrel', amount = 5},
+        {type = 'item', name = 'b2o3-dust', amount = 1},
         {type = 'item', name = 'nexelit-ore', amount = 90},
         {type = 'item', name = 'bio-sample', amount = 1},
         {type = 'fluid', name = 'pressured-air', amount = 30},
     },
     results = {
-        {type = 'item', name = 'nexelit-matrix', amount = 6},
+        {type = 'item', name = 'nexelit-matrix', amount = 12},
         {type = 'item', name = 'nexelit-pulp-02-barrel', amount = 2},
         {type = 'item', name = 'depolymerized-organics-barrel', amount = 2},
         {type = 'item', name = 'hot-air-barrel', amount = 1},

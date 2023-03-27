@@ -33,6 +33,34 @@ end
 TECHNOLOGY('ralesia'):add_pack('py-science-pack-1')
 
 ----------------------------------------------------------------------------------------------------
+-- digosaurus recipes
+----------------------------------------------------------------------------------------------------
+
+Digosaurus = Digosaurus or {}
+require '__pyalienlife__/scripts/digosaurus/digosaurus-prototypes'
+for food, value in pairs(Digosaurus.favorite_foods) do
+    RECIPE {
+        type = 'recipe',
+        name = 'digosaurus-helmod-recipe-' .. food,
+        enabled = false,
+        energy_required = 10,
+        ingredients = {
+            {food, 1}
+        },
+        results = {
+            {'nexelit-ore', value}
+        },
+        category = 'dino-dig-site',
+        hide_from_player_crafting = true
+    }
+end
+
+--RECIPE('digosaurus-helmod-recipe-guts'):add_unlock('nexelit-mk01')
+--RECIPE('digosaurus-helmod-recipe-meat'):add_unlock('nexelit-mk01')
+--RECIPE('digosaurus-helmod-recipe-workers-food'):add_unlock('nexelit-mk01')
+--RECIPE('digosaurus-helmod-recipe-workers-food-02'):add_unlock('nexelit-mk03')
+
+----------------------------------------------------------------------------------------------------
 -- crafting_categories
 ----------------------------------------------------------------------------------------------------
 
@@ -112,6 +140,8 @@ end
 ----------------------------------------------------------------------------------------------------
 
 require('prototypes/upgrades/tech-upgrades')
+TECHNOLOGY('turd-respec-1'):add_prereq('bioreactor-upgrade'):add_prereq('atomizer-upgrade')
+TECHNOLOGY('turd-respec-2'):add_prereq('schrodinger-antelope-upgrade')
 
 ----------------------------------------------------------------------------------------------------
 -- replace_ingredient
@@ -202,16 +232,16 @@ end
 ----------------------------------------------------------------------------------------------------
 
 --data.raw.module['sap-tree'].limitation_blacklist = sap1_limits
-data.raw.module['sap-tree'].limitation = {'sap-01'}
+data.raw.module['sap-tree'].limitation = {'sap-01', 'sap-01-water', 'sap-01-co2', 'sap-01-air'}
 
 --data.raw.module['sap-tree-mk02'].limitation_blacklist = sap2_limits
-data.raw.module['sap-tree-mk02'].limitation = {'sap-01', 'sap-mk02'}
+data.raw.module['sap-tree-mk02'].limitation = {'sap-01', 'sap-mk02', 'sap-01-water', 'sap-01-co2', 'sap-01-air'}
 
 --data.raw.module['sap-tree-mk03'].limitation_blacklist = sap3_limits
-data.raw.module['sap-tree-mk03'].limitation = {'sap-01', 'sap-mk02', 'sap-mk03'}
+data.raw.module['sap-tree-mk03'].limitation = {'sap-01', 'sap-mk02', 'sap-mk03', 'sap-01-water', 'sap-01-co2', 'sap-01-air'}
 
 --data.raw.module['sap-tree-mk04'].limitation_blacklist = sap4_limits
-data.raw.module['sap-tree-mk04'].limitation = {'sap-01', 'sap-mk02', 'sap-mk03', 'sap-mk04'}
+data.raw.module['sap-tree-mk04'].limitation = {'sap-01', 'sap-mk02', 'sap-mk03', 'sap-mk04', 'sap-01-water', 'sap-01-co2', 'sap-01-air'}
 
 --remove steel barrel based milk
 data.raw.item['milk-barrel'] = nil

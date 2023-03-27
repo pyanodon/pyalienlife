@@ -1,21 +1,6 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
 if data then
-    data:extend{{
-        type = 'recipe',
-        name = 'fungicide-zinc',
-        enabled = false,
-        category = 'biofactory',
-        ingredients = {
-            {type = 'item', name = 'copper-plate', amount = 1},
-            {type = 'item', name = 'plastic-bar', amount = 2},
-            {type = 'item', name = 'ore-zinc', amount = 1},
-            {type = 'fluid', name = 'phosphorous-acid', amount = 10},
-        },
-        results = {{'fungicide', 1}},
-        energy_required = 10
-    }}
-
 	for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['guar-1']),
         table.deepcopy(data.raw.recipe['guar-2']),
@@ -24,7 +9,7 @@ if data then
     }) do
         recipe.name = recipe.name .. '-guarpulse'
 		FUN.add_ingredient(recipe, {'fungicide', 1})
-        FUN.add_result(recipe, {'zinc-nanocomplex', i*2})
+        FUN.add_result(recipe, {'zinc-nanocomplex', 2^(i-1)})
         recipe.main_product = 'zinc-nanocomplex'
         data:extend{recipe}
     end
@@ -91,7 +76,8 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-				{recipe = 'fungicide-zinc', type = 'unlock-recipe'},
+				{recipe = 'alcl3', type = 'unlock-recipe'},
+				{recipe = 'fungicide', type = 'unlock-recipe'},
 				{old = 'guar-1', new = 'guar-1-guarpulse', type = 'recipe-replacement'},
                 {old = 'guar-2', new = 'guar-2-guarpulse', type = 'recipe-replacement'},
                 {old = 'guar-3', new = 'guar-3-guarpulse', type = 'recipe-replacement'},

@@ -1,8 +1,6 @@
 local FUN = require('__pycoalprocessing__/prototypes/functions/functions')
 
 local tech_upgrades = {
-    -- pyAL non-organics
-    --require('prototypes/upgrades/atomizer'),
     require('prototypes/upgrades/bioprinting'),
     require('prototypes/upgrades/biofactory'),
     --require('prototypes/upgrades/compost'),
@@ -11,8 +9,6 @@ local tech_upgrades = {
     require('prototypes/upgrades/incubator'),
     require('prototypes/upgrades/micromine'),
     require('prototypes/upgrades/slaughterhouse'),
-
-    -- pYAL organics
     require('prototypes/upgrades/auog'),
     require('prototypes/upgrades/arqad'),
     require('prototypes/upgrades/arthurian'),
@@ -22,15 +18,12 @@ local tech_upgrades = {
     require('prototypes/upgrades/korlex'),
     require('prototypes/upgrades/fawogae'),
     require('prototypes/upgrades/fwf'),
-    require('prototypes/upgrades/grod'),
     require('prototypes/upgrades/moss'),
-    require('prototypes/upgrades/navens'),
     require('prototypes/upgrades/phadai'),
     require('prototypes/upgrades/phagnot'),
     require('prototypes/upgrades/sap'),
     require('prototypes/upgrades/seaweed'),
     require('prototypes/upgrades/scrondrix'),
-    --require('prototypes/upgrades/simik'),    better to use simik metal 1-6
     require('prototypes/upgrades/sponge'),
     require('prototypes/upgrades/tuuphra'),
     require('prototypes/upgrades/ulric'),
@@ -39,14 +32,13 @@ local tech_upgrades = {
     require('prototypes/upgrades/xyhiphoe'),
     require('prototypes/upgrades/yaedols'),
     require('prototypes/upgrades/zipir'),
-
-    -- pyHT organics
     require('prototypes/upgrades/cadaveric'),
     require('prototypes/upgrades/moondrop'),
 }
 
 if (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalternativeenergy) then -- is pyAE installed?
     for _, upgrade in pairs{
+        'prototypes/upgrades/atomizer',
         'prototypes/upgrades/bioreactor',
         'prototypes/upgrades/zungror',
         'prototypes/upgrades/numal',
@@ -55,9 +47,11 @@ if (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalter
         'prototypes/upgrades/guar',
         'prototypes/upgrades/kicalk',
         'prototypes/upgrades/rennea',
+        'prototypes/upgrades/navens',
         'prototypes/upgrades/antelope',
         'prototypes/upgrades/bhoddos',
         'prototypes/upgrades/genlab',
+        'prototypes/upgrades/grod',
         'prototypes/upgrades/research',
         'prototypes/upgrades/yotoi',
         'prototypes/upgrades/cridren',
@@ -182,8 +176,7 @@ local function build_tech_upgrade(tech_upgrade)
             elseif effect.type == 'unlock-recipe' and not effect.also_unlocked_by_techs and data.raw.recipe[effect.recipe] and not recipes_with_turd_description[effect.recipe] then
                 FUN.add_to_description('recipe', data.raw.recipe[effect.recipe], {'turd.font', {'turd.recipe'}})
                 recipes_with_turd_description[effect.recipe] = true
-            elseif effect.type == 'recipe-replacement' then
-                if not data.raw.recipe[effect.new] then error('Invalid recipe replacement: ' .. effect.new) end
+            elseif effect.type == 'recipe-replacement' and data.raw.recipe[effect.new] then
                 FUN.add_to_description('recipe', data.raw.recipe[effect.new], {'turd.font', {'turd.recipe-replacement'}})
             end
         end

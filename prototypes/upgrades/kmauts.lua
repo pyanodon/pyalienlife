@@ -7,6 +7,35 @@ if data then
         table.deepcopy(data.raw.recipe['kmauts-cub-3']),
         table.deepcopy(data.raw.recipe['kmauts-cub-4']),
     }) do
+        recipe.name = recipe.name .. '-ratio'
+        FUN.multiply_result_amount(recipe, 'kmauts-cub', 1.35)
+        data:extend{recipe}
+    end
+
+    for _, recipe in pairs({
+        table.deepcopy(data.raw.recipe['kmauts-1']),
+        table.deepcopy(data.raw.recipe['kmauts-2']),
+        table.deepcopy(data.raw.recipe['kmauts-3']),
+        table.deepcopy(data.raw.recipe['kmauts-4']),
+    }) do
+        recipe.name = recipe.name .. '-ratio'
+        for _, result in pairs(recipe.results) do
+            if result.name == 'kmauts' then
+                result.probability = 0.65
+                break
+            end
+        end
+        local amount = FUN.remove_result(recipe, 'empty-barrel')
+        FUN.add_result(recipe, {'soaked-gel-barrel', amount})
+        data:extend{recipe}
+    end
+
+    for _, recipe in pairs({
+        table.deepcopy(data.raw.recipe['kmauts-cub-1']),
+        table.deepcopy(data.raw.recipe['kmauts-cub-2']),
+        table.deepcopy(data.raw.recipe['kmauts-cub-3']),
+        table.deepcopy(data.raw.recipe['kmauts-cub-4']),
+    }) do
         recipe.name = recipe.name .. '-eye-out'
         for _, result in pairs(recipe.results) do
             if result.name == 'kmauts-cub' then
@@ -19,7 +48,7 @@ if data then
 
     local food = table.deepcopy(data.raw.recipe['kmauts-ration'])
     FUN.add_ingredient(food, {type = 'item', name = 'chitin', amount = 3})
-    FUN.add_result_amount(food, 'kmauts-ration', 2)
+    FUN.add_result_amount(food, 'kmauts-ration', 4)
     food.name = 'kmauts-ration-chitin'
     data:extend{food}
 end
@@ -60,7 +89,14 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {productivity = 0.03, speed = 0.03, type = 'module-effects'}
+                {old = 'kmauts-cub-1', new = 'kmauts-cub-1-ratio', type = 'recipe-replacement'},
+                {old = 'kmauts-cub-2', new = 'kmauts-cub-2-ratio', type = 'recipe-replacement'},
+                {old = 'kmauts-cub-3', new = 'kmauts-cub-3-ratio', type = 'recipe-replacement'},
+                {old = 'kmauts-cub-4', new = 'kmauts-cub-4-ratio', type = 'recipe-replacement'},
+                {old = 'kmauts-1', new = 'kmauts-1-ratio', type = 'recipe-replacement'},
+                {old = 'kmauts-2', new = 'kmauts-2-ratio', type = 'recipe-replacement'},
+                {old = 'kmauts-3', new = 'kmauts-3-ratio', type = 'recipe-replacement'},
+                {old = 'kmauts-4', new = 'kmauts-4-ratio', type = 'recipe-replacement'},
             },
         },
         {

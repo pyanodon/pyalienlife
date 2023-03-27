@@ -1,5 +1,15 @@
 local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
+if mods.pyalternativeenergy then -- used in turd upgrade zipir path 3
+  local recipe = table.deepcopy(data.raw.recipe['zipir1-pyvoid'])
+  recipe.name = 'zipir1-pyvoid-hatchery'
+  recipe.icons = nil
+  recipe.icon = '__pyhightechgraphics__/graphics/icons/rendering.png'
+  recipe.icon_size = 32
+  recipe.results = {{type = 'item', name = 'processed-ash', probability = 0.8, amount = 1}}
+  data:extend{recipe}
+end
+
 --ADAPTATIONS
 
 for _, drill in pairs(data.raw['mining-drill']) do
@@ -48,12 +58,10 @@ local recipes_list =
   "flavonoids",
   "cytostatics",
   "microcin-j25",
-  "gh",
   "lard-from-brains",
   "hcl-from-guts",
   "olechemicals-from-skin",
   "pelt-processing",
-  "reca",
   "mixed-ores",
   "cobalt-extract",
   "cobalt-sulfate",
@@ -65,10 +73,8 @@ local recipes_list =
   "mmp",
   "peptidase-m58",
   "alien-enzymes",
-  "antiviral",
   "nitrogen-mustard",
   "pacifastin",
-  "bmp",
   "hyaline",
   "cellulose-00",
   "cellulose-02",
@@ -155,7 +161,6 @@ local recipes_list =
   "adam42-gen",
   "adam42-gen-laser",
   "zinc-finger-proteins",
-  "anabolic-rna",
   "propeptides",
   "purine-analogues",
   "immunosupressants",
@@ -164,7 +169,6 @@ local recipes_list =
   "enzyme-pks",
   "recombinant-ery",
   "recombinant-ery-2",
-  "orexigenic",
   "fetal-serum-01",
   "vrauks",
   "vrauks-codex",

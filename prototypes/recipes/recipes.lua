@@ -638,6 +638,30 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
+    name = 'reca-2',
+    category = 'research',
+    enabled = false,
+    energy_required = 70,
+    ingredients = {
+        {type = 'item', name = 'alien-sample-03', amount = 1},
+        {type = 'item', name = 'alien-enzymes', amount = 1},
+        {type = 'fluid', name = 'fetal-serum', amount = 100},
+        {type = 'item', name = 'adrenal-cortex', amount = 30},
+        {type = 'item', name = 'bones', amount = 40},
+        {type = 'item', name = 'navens', amount = 30},
+        {type = 'item', name = 'cysteine', amount = 3},
+        {type = 'item', name = 'lab-instrument', amount = 50},
+        {type = 'fluid', name = 'gta', amount = 50},
+        {type = 'item', name = 'flask', amount = 50},
+        {type = 'item', name = 'denatured-seismite', amount = 2},
+    },
+    results = {
+        {type = 'item', name = 'reca', amount = 300}
+    }
+}:add_unlock('reca')
+
+RECIPE {
+    type = 'recipe',
     name = 'mixed-ores',
     category = 'ball-mill',
     enabled = false,
@@ -1025,7 +1049,7 @@ RECIPE {
     name = 'bmp-2',
     category = 'research',
     enabled = false,
-    energy_required = 150,
+    energy_required = 200,
     ingredients = {
         {type = 'item', name = 'hyaline', amount = 10},
         {type = 'item', name = 'paragen', amount = 10},

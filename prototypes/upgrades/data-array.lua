@@ -25,7 +25,7 @@ if data then
             {'small-electric-pole', 1},
             {'water-barrel', 1},
         },
-        results = {{name = 'solar-panel-equipment', amount = 1, type = 'item'}},
+        results = {{name = 'solar-panel-equipment', amount = 2, type = 'item'}},
         enabled = false,
         energy_required = 40,
         category = 'crafting'

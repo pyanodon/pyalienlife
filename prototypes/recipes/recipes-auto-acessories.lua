@@ -729,7 +729,7 @@ RECIPE {
         {type = 'fluid', name = 'carbon-dioxide', amount = 100},
     },
     results = {
-        {type = 'item', name = 'energy-drink', amount = 7}
+        {type = 'item', name = 'energy-drink', amount = 10}
     },
     --main_product = "adrenal-cortex",
 }:add_unlock("ethanol-boost")

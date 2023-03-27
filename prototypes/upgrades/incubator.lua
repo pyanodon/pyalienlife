@@ -3,7 +3,7 @@ local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 if data then
     local manure = table.deepcopy(data.raw.recipe['manure-bacteria'])
     manure.name = 'manure-bacteria-fish'
-    FUN.add_ingredient(manure, {name = 'fish-hydrolysate', type = 'fluid', amount = 10})
+    FUN.add_ingredient(manure, {name = 'fish-hydrolysate', type = 'fluid', amount = 5})
     FUN.multiply_result_amount(manure, 'manure-bacteria', 1.5)
 
     local darkness = table.deepcopy(data.raw.recipe['zogna-bacteria'])

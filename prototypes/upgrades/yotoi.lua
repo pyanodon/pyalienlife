@@ -5,7 +5,7 @@ if data then
     recipe.name = 'yotoi-seeds-cold'
     FUN.add_ingredient(recipe, {type = 'fluid', name = 'cold-air', amount = 30})
     FUN.add_ingredient(recipe, {type = 'item', name = 'yotoi-leaves', amount = 1})
-    FUN.multiply_result_amount(recipe, 'yotoi-seeds', 2)
+    FUN.multiply_result_amount(recipe, 'yotoi-seeds', 3)
     recipe.energy_required = recipe.energy_required * 4
     data:extend{recipe}
 
@@ -17,7 +17,7 @@ if data then
     }) do
         recipe.name = recipe.name .. '-free-leaves'
         FUN.add_ingredient(recipe, {'burner-inserter', 1})
-        FUN.add_result(recipe, {name = 'yotoi-leaves', amount = i * 2, type = 'item'})
+        FUN.add_result(recipe, {name = 'yotoi-leaves', amount = i*4, type = 'item'})
         recipe.main_product = 'yotoi-leaves'
         data:extend{recipe}
     end
@@ -61,9 +61,11 @@ if data then
         table.deepcopy(data.raw.recipe['yotoi-fruit-4']),
     }) do
         recipe.name = recipe.name .. '-nutrient'
-        FUN.remove_ingredient(recipe, 'fertilizer')
+        local amount = FUN.remove_ingredient(recipe, 'fertilizer')
+        FUN.add_result(recipe, {'fertilizer', amount})
         FUN.add_result_amount(recipe, 'yotoi', 1)
         FUN.add_result_amount(recipe, 'yotoi-fruit', 1)
+        recipe.main_product = 'fertilizer'
         data:extend{recipe}
     end
 
@@ -74,7 +76,7 @@ if data then
         table.deepcopy(data.raw.recipe['yotoi-aloe-orchard-mk04']),
     }) do
         recipe.name = recipe.name .. '-with-nutrient'
-        FUN.add_ingredient(recipe, {'nutrient', i})
+        FUN.add_ingredient(recipe, {'nutrient', 2^(i-1)})
         data:extend{recipe}
     end
 end

@@ -11,11 +11,9 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = 'item', name = 'cocoon', amount = 10},
-        {type = 'item', name = 'bio-sample', amount = 20},
-        --{type = 'item', name = 'auog', amount = 1},
-		--{type = 'item', name = 'animal-sample-01', amount = 2},
+        {type = 'item', name = 'bio-sample', amount = 10},
         {type = 'item', name = 'moss-gen', amount = 15},
-        {type = 'item', name = 'earth-generic-sample', amount = 5},
+        {type = 'item', name = 'earth-generic-sample', amount = 1},
         {type = 'fluid', name = 'water-saline', amount = 100}
     },
     result = 'caravan'
@@ -48,7 +46,7 @@ data:extend{{
 	collision_mask = {caravan_collision_mask},
 	subgroup = 'enemies',
 	healing_per_tick = 0.03,
-	collision_box = {{-0.6, -0.6}, {0.6, 0.6}},
+	collision_box = {{-0.45, -0.45}, {0.45, 0.45}},
 	selection_priority = 51,
 	selection_box = {{-1.1, -1.1}, {1.1, 1.1}},
 	attack_parameters = {

@@ -9,7 +9,7 @@ if data then
     } do
         recipe.name = recipe.name .. '-with-lamp'
         FUN.add_ingredient(recipe, {'small-lamp', 2})
-        FUN.multiply_result_amount(recipe, 'bio-scafold', 1.5)
+        FUN.multiply_result_amount(recipe, 'bio-scafold', 2)
         data:extend{recipe}
     end
 
@@ -105,7 +105,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 2, speed = -0.5, productivity = 0.08, type = 'module-effects'}
+                {consumption = 2, speed = -1, productivity = 0.1, type = 'module-effects'}
             }
         },
         {

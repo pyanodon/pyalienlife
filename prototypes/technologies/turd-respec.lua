@@ -3,10 +3,10 @@ TECHNOLOGY {
     name = 'turd-respec-1',
     icon = '__pyalienlifegraphics3__/graphics/technology/updates/restart.png',
     icon_size = 128,
-    prerequisites = {'dhilmos-upgrade', 'dingrits-upgrade', 'bioreactor-upgrade'},
+    prerequisites = {'dhilmos-upgrade', 'dingrits-upgrade'},
     effects = {},
     unit = {
-        count_formula = '2^(L-1)*15000',
+        count_formula = '2^(L-1)*5000',
         ingredients = {
             {'automation-science-pack', 100},
             {'py-science-pack-1', 60},
@@ -31,10 +31,10 @@ TECHNOLOGY {
     name = 'turd-respec-2',
     icon = '__pyalienlifegraphics3__/graphics/technology/updates/restart.png',
     icon_size = 128,
-    prerequisites = {'turd-respec-1', 'schrodinger-antelope-upgrade'},
+    prerequisites = {'turd-respec-1'},
     effects = {},
     unit = {
-        count_formula = '2^(L-1)*15000',
+        count_formula = '2^(L-1)*2500',
         ingredients = {
             {'automation-science-pack', 200},
             {'py-science-pack-1', 100},

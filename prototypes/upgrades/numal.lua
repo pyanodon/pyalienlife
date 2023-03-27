@@ -12,7 +12,7 @@ if data then
             {type = 'fluid', name = 'sb-low-conc', amount = 20},
         },
         results = {
-            {type = 'fluid', name = 'numal-ink', amount = 10},
+            {type = 'fluid', name = 'numal-ink', amount = 12},
             {type = 'fluid', name = 'sb-final-conc', amount = 1},
             {type = 'item', name = 'mukmoux-fat', amount = 2}
         },

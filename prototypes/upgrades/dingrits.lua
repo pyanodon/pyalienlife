@@ -24,7 +24,7 @@ if data then
             name = 'dingrits-alpha',
             enabled = false,
             energy_required = 36000,
-            ingredients = {{'dingrits-mk04', 2}},
+            ingredients = {{'dingrits-mk04', 1}},
             results = {{name = 'dingrits-alpha', probability = 0.5, type = 'item', amount = 1}},
             category = 'dingrits'
         }
@@ -44,7 +44,7 @@ if data then
             if result.name ~= 'cage' then
                 local amount = result.amount or ((result.amount_min + result.amount_max) / 2)
                 result.amount_min = math.ceil(amount / 2)
-                result.amount_max = math.ceil(amount * 5)
+                result.amount_max = math.ceil(amount * 2)
                 result.amount = nil
             end
         end

@@ -5497,7 +5497,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "t-a",
     stack_size = 50,
-	effect = {pollution = {bonus = 1}, speed = {bonus = 0.4}},
+	effect = {pollution = {bonus = 1}, speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "wood"
 }
@@ -5517,7 +5517,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "t-b",
     stack_size = 50,
-	effect = {pollution = {bonus = 1}, speed = {bonus = 0.8}},
+	effect = {pollution = {bonus = 1}, speed = {bonus = 2}},
 	limitation = {},
 	limitation_message_key = "wood"
 }
@@ -5537,7 +5537,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "t-c",
     stack_size = 50,
-	effect = {pollution = {bonus = 1}, speed = {bonus = 1.2}},
+	effect = {pollution = {bonus = 1}, speed = {bonus = 3}},
 	limitation = {},
 	limitation_message_key = "wood"
 }
@@ -5557,9 +5557,93 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "t-d",
     stack_size = 50,
-	effect = {pollution = {bonus = 1}, speed = {bonus = 1.6}},
+	effect = {pollution = {bonus = 1}, speed = {bonus = 4}},
 	limitation = {},
 	limitation_message_key = "wood"
+}
+
+ITEM {
+    type = "item",
+    name = "wood-seedling-mk02",
+    icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/mip/seedling-1.png"}
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-plants",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "wood-seeds-mk02",
+    icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/wood-seeds.png"}
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-plants",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "wood-seedling-mk03",
+    icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/mip/seedling-1.png"}
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-plants",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "wood-seeds-mk03",
+    icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/wood-seeds.png"}
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-plants",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "wood-seedling-mk04",
+    icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/mip/seedling-1.png"}
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-plants",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "wood-seeds-mk04",
+    icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/wood-seeds.png"}
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-plants",
+    order = "a",
+    stack_size = 100
 }
 
 ITEM {
@@ -6073,7 +6157,7 @@ ITEM {
     subgroup = "py-alienlife-ralesia",
     order = "ra",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 0.83}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "ralesia"
 }
@@ -6093,7 +6177,7 @@ ITEM {
      subgroup = "py-alienlife-ralesia",
      order = "rb",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 1.66}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
  	limitation = {},
  	limitation_message_key = "ralesia"
  }
@@ -6113,7 +6197,7 @@ ITEM {
      subgroup = "py-alienlife-ralesia",
      order = "rc",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 2.49}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 3}},
  	limitation = {},
  	limitation_message_key = "ralesia"
  }
@@ -6133,7 +6217,7 @@ ITEM {
      subgroup = "py-alienlife-ralesia",
      order = "rd",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 3.33}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 4}},
  	limitation = {},
  	limitation_message_key = "ralesia"
  }
@@ -8526,7 +8610,7 @@ ITEM {
     },
     icon_size = 64,
 	category = "guar",
-	tier = 1,
+	tier = 2,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "g-b",
@@ -8561,7 +8645,7 @@ ITEM {
     },
     icon_size = 64,
 	category = "guar",
-	tier = 1,
+	tier = 3,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "g-c",
@@ -8596,7 +8680,7 @@ ITEM {
     },
     icon_size = 64,
 	category = "guar",
-	tier = 1,
+	tier = 4,
     flags = {},
     subgroup = "py-alienlife-modules",
     order = "g-d",
