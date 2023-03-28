@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
-Version: 2.0.11
-Date: ?
+Version: 2.1.0
+Date: 2023-3-28
   Changes:
     - Re-added the technological upgrade and research device
     - All RC recipes no longer have parents an inputs/output (does not effect vonix, arqad, xeno, trit, cottongut)
@@ -11,7 +11,7 @@ Date: ?
     - Removed duplicate sap tree mk2-4 recipes
     - Added cages to the output of vonix raising recipes
     - Bhoddos, sap, grod, arum, seaweed, moondrop, cridren, tree, ralesia module speed bonus nerfed to match other modules (+100%). Building base speeds increased to compensate
-    - Productivity modules nerfed from 10/20/30 to 10/15/20
+    - Productivity modules changes removed. *see pycoalprocessing for more info
     - New recipe subgroup for phytomining
     - Added map tags for aerial turbines
     - Fixed #251 https://github.com/pyanodon/pybugreports/issues/251
