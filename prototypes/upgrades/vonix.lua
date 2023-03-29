@@ -18,6 +18,7 @@ if data then
         },
         results = {
             {type = 'item', name = 'vonix-cub', amount_min = 7, amount_max = 8},
+            {type = 'item', name = 'vonix-eggs', amount_min = 4, amount_max = 5},
             {type = 'item', name = 'vonix', amount = 1},
             {type = 'item', name = 'vonix', amount = 1, probability = 0.95},
             {type = 'item', name = 'cage', amount = 2},

@@ -14,14 +14,9 @@ if data then
         table.deepcopy(data.raw.recipe['vrauks-cocoon-5']),
     }) do
         recipe.name = recipe.name .. '-no-water'
-        local barrel_number = FUN.remove_ingredient(recipe, 'water-barrel')
-        FUN.add_result_amount(recipe, 'empty-barrel', -barrel_number)
-        for i, result in pairs(recipe.results) do
-            if result.name == 'empty-barrel' and result.amount == 0 then
-                table.remove(recipe.results, i)
-                break
-            end
-        end
+        FUN.remove_ingredient(recipe, 'syrup-01-barrel')
+        FUN.remove_ingredient(recipe, 'water-barrel')
+        FUN.remove_result(recipe, 'empty-barrel')
         data:extend{recipe}
     end
 
