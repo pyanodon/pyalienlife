@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.2
+Date: ?
+  Changes:
+    - space-dingrits only give 1 snarer-heart instead of 10
+    - snarer-heart recipe moved to slaughterhouse (from genlab)
+---------------------------------------------------------------------------------------------------
 Version: 2.1.1
 Date: 2023-3-29
   Changes:

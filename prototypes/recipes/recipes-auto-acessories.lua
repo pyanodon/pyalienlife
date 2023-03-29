@@ -523,14 +523,14 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "snarer-heart",
-    category = "genlab",
+    category = "slaughterhouse",
     enabled = false,
     energy_required = 40,
     ingredients = {
         {type = 'item', name = 'space-dingrit-return', amount = 1}
     },
     results = {
-		{type = 'item', name = 'snarer-heart', amount = 10},
+		{type = 'item', name = 'snarer-heart', amount = 1},
     },
     main_product = "snarer-heart",
 }:add_unlock("laika")
