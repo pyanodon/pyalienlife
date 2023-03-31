@@ -347,7 +347,7 @@ local function respec(force)
 			for _, effect in pairs(sub_tech.effects) do
 				if (effect.type == 'unlock-recipe' or effect.type == 'recipe-replacement') and not effect.also_unlocked_by_techs then
 					local recipe = recipes[effect.new or effect.recipe]
-					if recipe.enabled then
+					if recipe and recipe.enabled then
 						recipe_replacement(recipe, effect.old and recipes[effect.old], force, assembling_machine_list)
 					end
 				end

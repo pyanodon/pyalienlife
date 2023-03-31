@@ -12,7 +12,7 @@ if data then
             icon_size = 64,
             tier = 5,
             order = 'd-e',
-            effect = {pollution = {bonus = 1},speed = {bonus = 8},productivity={bonus = 0.08}},
+            effect = {pollution = {bonus = 1},speed = {bonus = 4},productivity={bonus = 0.08}},
             limitation = {},
             limitation_message_key = 'dingrits',
             fuel_category = 'dingrits',
@@ -30,26 +30,23 @@ if data then
         }
     }
 
-    for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['ex-blo-din']),
-        table.deepcopy(data.raw.recipe['ex-bon-din']),
-        table.deepcopy(data.raw.recipe['ex-bra-din']),
-        table.deepcopy(data.raw.recipe['ex-gut-din']),
-        table.deepcopy(data.raw.recipe['ex-me-din']),
-        table.deepcopy(data.raw.recipe['ex-pelt-din']),
-    }) do
-        recipe.localised_name = {'recipe-name.'..recipe.name}
-        recipe.name = recipe.name .. '-mutation'
-        for _, result in pairs(recipe.results) do
-            if result.name ~= 'cage' then
-                local amount = result.amount or ((result.amount_min + result.amount_max) / 2)
-                result.amount_min = math.ceil(amount / 2)
-                result.amount_max = math.ceil(amount * 2)
-                result.amount = nil
-            end
-        end
-        data:extend{recipe}
-    end
+    local recipe = table.deepcopy(data.raw.recipe['snarer-heart'])
+    recipe.name = 'snarer-heart-mutation'
+    recipe.results = {
+        {type = 'item', probability = 0.99, name = 'snarer-heart', amount = 1},
+        {type = 'item', probability = 0.099, name = 'snarer-heart', amount = 1}
+    }
+    data:extend{recipe}
+
+    recipe = table.deepcopy(data.raw.recipe['space-suit'])
+    FUN.remove_ingredient(recipe, 'science-coating')
+    recipe.name = 'space-suit-mutation'
+    data:extend{recipe}
+
+    recipe = table.deepcopy(data.raw.recipe['space-dingrit'])
+    FUN.multiply_ingredient_amount(recipe, 'immunosupressants', 0.5)
+    recipe.name = 'space-dingrit-mutation'
+    data:extend{recipe}
 
     for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['dingrits-1']),
@@ -58,8 +55,8 @@ if data then
         table.deepcopy(data.raw.recipe['dingrits-4']),
     }) do
         recipe.name = recipe.name .. '-training'
-        FUN.add_result(recipe, {type = 'item', amount = 1, probability = 0.75, name = 'dingrits-food-01'})
-        if i > 2 then FUN.add_result(recipe, {type = 'item', amount = 1, probability = 0.75, name = 'dingrits-food-02'}) end
+        FUN.add_result(recipe, {type = 'item', amount = 1, probability = 0.8, name = 'dingrits-food-01'})
+        if i > 2 then FUN.add_result(recipe, {type = 'item', amount = 1, probability = 0.8, name = 'dingrits-food-02'}) end
         data:extend{recipe}
     end
 end
@@ -111,12 +108,9 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {old = 'ex-blo-din', new = 'ex-blo-din-mutation', type = 'recipe-replacement'},
-                {old = 'ex-me-din', new = 'ex-me-din-mutation', type = 'recipe-replacement'},
-                {old = 'ex-bra-din', new = 'ex-bra-din-mutation', type = 'recipe-replacement'},
-                {old = 'ex-gut-din', new = 'ex-gut-din-mutation', type = 'recipe-replacement'},
-                {old = 'ex-pelt-din', new = 'ex-pelt-din-mutation', type = 'recipe-replacement'},
-                {old = 'ex-bon-din', new = 'ex-bon-din-mutation', type = 'recipe-replacement'},
+                {old = 'snarer-heart', new = 'snarer-heart-mutation', type = 'recipe-replacement'},
+                {old = 'space-suit', new = 'space-suit-mutation', type = 'recipe-replacement'},
+                {old = 'space-dingrit', new = 'space-dingrit-mutation', type = 'recipe-replacement'},
             }
         },
         {

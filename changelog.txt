@@ -4,6 +4,11 @@ Date: ?
   Changes:
     - space-dingrits only give 1 snarer-heart instead of 10
     - snarer-heart recipe moved to slaughterhouse (from genlab)
+    - dingrits path 2 now buffs snarer hearts instead of blood,meat,brains,ect
+    - fixed a wax duplication glitch with arqad turd path 1
+    - fixed that dingrits building was reaching +32767% speed cap with mk4 or mk5 modules
+    - fixed several grammar bugs in TURD descriptions
+    - fixed crash when pyHT wasn't active
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.1
 Date: 2023-3-29

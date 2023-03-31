@@ -21,7 +21,7 @@ if data then
 
     for recipe, result_name in pairs({
         [table.deepcopy(data.raw.recipe['wax'])] = 'wax',
-        [table.deepcopy(data.raw.recipe['wax-honeycomb'])] = 'wax',
+        [table.deepcopy(data.raw.recipe['wax-to-lube'])] = 'lubricant',
         [table.deepcopy(data.raw.recipe['honey-comb'])] = 'arqad-honey',
     }) do
         recipe.name = recipe.name .. '-buffed'
@@ -114,7 +114,7 @@ return {
                 {old = 'arqad-egg-4', new = 'arqad-egg-4-cold', type = 'recipe-replacement'},
                 {old = 'arqad-egg-5', new = 'arqad-egg-5-cold', type = 'recipe-replacement'},
                 {old = 'wax', new = 'wax-buffed', type = 'recipe-replacement'},
-                {old = 'wax-honeycomb', new = 'wax-honeycomb-buffed', type = 'recipe-replacement'},
+                {old = 'wax-to-lube', new = 'wax-to-lube-buffed', type = 'recipe-replacement'},
                 {old = 'honey-comb', new = 'honey-comb-buffed', type = 'recipe-replacement'},
             },
         },
@@ -124,7 +124,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {productivity = 0.03, type = 'module-effects'},
+                {productivity = 0.04, type = 'module-effects'},
                 {recipe = 'cags', type = 'unlock-recipe'},
                 {old = 'arqad-hive-mk01', new = 'arqad-hive-mk01-with-cags', type = 'recipe-replacement'},
                 {old = 'arqad-hive-mk02', new = 'arqad-hive-mk02-with-cags', type = 'recipe-replacement'},

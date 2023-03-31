@@ -42,12 +42,11 @@ RECIPE {
         {type = 'item', name = 'wood-seedling-mk04', amount = 3},
         {type = 'item', name = 'sodium-alginate', amount = 1},
         {type = 'fluid', name = 'dirty-water-light', amount = 200},
-        {type = "item", name = 'urea', amount = 3},
     },
     results = {
         {type = 'item', name = 'tree-mk04', amount = 1},
     },
-}:add_unlock('wood-processing-4')
+}:add_unlock('wood-processing-4'):add_ingredient{type = 'item', name = 'urea', amount = 3}
 
 RECIPE {
     type = 'recipe',

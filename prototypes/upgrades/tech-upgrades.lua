@@ -5,36 +5,42 @@ local tech_upgrades = {
     require('prototypes/upgrades/biofactory'),
     --require('prototypes/upgrades/compost'),
     --require('prototypes/upgrades/creature'),
-    require('prototypes/upgrades/data-array'),
     require('prototypes/upgrades/incubator'),
-    require('prototypes/upgrades/micromine'),
     require('prototypes/upgrades/slaughterhouse'),
-    require('prototypes/upgrades/auog'),
-    require('prototypes/upgrades/arqad'),
     require('prototypes/upgrades/arthurian'),
-    require('prototypes/upgrades/cottongut'),
     require('prototypes/upgrades/dhilmos'),
     require('prototypes/upgrades/dingrits'),
     require('prototypes/upgrades/korlex'),
     require('prototypes/upgrades/fawogae'),
-    require('prototypes/upgrades/fwf'),
     require('prototypes/upgrades/moss'),
-    require('prototypes/upgrades/phadai'),
-    require('prototypes/upgrades/phagnot'),
     require('prototypes/upgrades/sap'),
     require('prototypes/upgrades/seaweed'),
     require('prototypes/upgrades/scrondrix'),
-    require('prototypes/upgrades/sponge'),
-    require('prototypes/upgrades/tuuphra'),
-    require('prototypes/upgrades/ulric'),
     require('prototypes/upgrades/vonix'),
-    require('prototypes/upgrades/vrauks'),
-    require('prototypes/upgrades/xyhiphoe'),
     require('prototypes/upgrades/yaedols'),
-    require('prototypes/upgrades/zipir'),
-    require('prototypes/upgrades/cadaveric'),
-    require('prototypes/upgrades/moondrop'),
 }
+
+if (data and mods.pyhightech) or (script and script.active_mods.pyhightech) then -- is pyHT installed?
+    for _, upgrade in pairs{
+        'prototypes/upgrades/fwf',
+        'prototypes/upgrades/cadaveric',
+        'prototypes/upgrades/moondrop',
+        'prototypes/upgrades/data-array',
+        'prototypes/upgrades/micromine',
+        'prototypes/upgrades/auog',
+        'prototypes/upgrades/arqad',
+        'prototypes/upgrades/phadai',
+        'prototypes/upgrades/phagnot',
+        'prototypes/upgrades/sponge',
+        'prototypes/upgrades/tuuphra',
+        'prototypes/upgrades/ulric',
+        'prototypes/upgrades/vrauks',
+        'prototypes/upgrades/xyhiphoe',
+        'prototypes/upgrades/zipir',
+    } do
+        table.insert(tech_upgrades, require(upgrade))
+    end
+end
 
 if (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalternativeenergy) then -- is pyAE installed?
     for _, upgrade in pairs{
@@ -44,6 +50,7 @@ if (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalter
         'prototypes/upgrades/numal',
         'prototypes/upgrades/xeno',
         'prototypes/upgrades/fish',
+        'prototypes/upgrades/cottongut',
         'prototypes/upgrades/guar',
         'prototypes/upgrades/kicalk',
         'prototypes/upgrades/rennea',
@@ -96,8 +103,9 @@ local function build_tech_upgrade(tech_upgrade)
             if effect.type == 'module-effects' then
                 local mk1, mk1_module_slots
                 if tech_upgrade.affected_entities then
-                    mk1 = tech_upgrade.affected_entities[1]
-                    mk1 = data.raw.furnace[mk1] or data.raw['assembling-machine'][mk1]
+                    local mk1_name = tech_upgrade.affected_entities[1]
+                    mk1 = data.raw.furnace[mk1_name] or data.raw['assembling-machine'][mk1_name]
+                    if not mk1 then error('TURD ERROR: No mk1 building found: ' .. mk1_name) end
                     mk1_module_slots = mk1.module_specification.module_slots
                 end
 
