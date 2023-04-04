@@ -11,8 +11,8 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'bio-sample', amount = 5},
         {type = 'item', name = 'cdna', amount = 3},
-        {type = 'item', name = 'arqad-codex', amount = 2},
-        {type = 'item', name = 'earth-bee-sample', amount = 2},
+        {type = 'item', name = 'arqad-codex', amount = 1},
+        {type = 'item', name = 'earth-bee-sample', amount = 1},
         {type = 'fluid', name = 'coke-oven-gas', amount = 1000}, --add alien sample from pyALiens mod here.
     },
     results = {
