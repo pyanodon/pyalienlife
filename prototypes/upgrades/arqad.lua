@@ -124,7 +124,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {productivity = 0.04, type = 'module-effects'},
+                {productivity = 0.05, type = 'module-effects'},
                 {recipe = 'cags', type = 'unlock-recipe'},
                 {old = 'arqad-hive-mk01', new = 'arqad-hive-mk01-with-cags', type = 'recipe-replacement'},
                 {old = 'arqad-hive-mk02', new = 'arqad-hive-mk02-with-cags', type = 'recipe-replacement'},
