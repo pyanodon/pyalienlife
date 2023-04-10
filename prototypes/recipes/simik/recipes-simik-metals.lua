@@ -82,7 +82,7 @@ RECIPE {
     enabled = false,
     energy_required = 80,
     ingredients = {
-        {type = 'item', name = 'mother-liquor-barrel', amount = 2},
+        {type = 'item', name = 'mother-liquor-barrel', amount = 4},
         {type = 'item', name = 'geothermal-water-barrel', amount = 2},
         {type = 'item', name = 'raw-coal', amount = 60},
         {type = 'item', name = 'bio-sample', amount = 1},

@@ -4,11 +4,15 @@ Date: ?
   Changes:
     - space-dingrits only give 1 snarer-heart instead of 10
     - snarer-heart recipe moved to slaughterhouse (from genlab)
+    - fixed that dingrits building was reaching +32767% speed cap with mk4 or mk5 modules
+    - fixed crash when pyHT wasn't active
+    - change dry carbonfiber recipe to be made in the evaporator instead of the washer
+  TURD:
     - dingrits path 2 now buffs snarer hearts instead of blood,meat,brains,ect
     - fixed a wax duplication glitch with arqad turd path 1
-    - fixed that dingrits building was reaching +32767% speed cap with mk4 or mk5 modules
     - fixed several grammar bugs in TURD descriptions
-    - fixed crash when pyHT wasn't active
+    - buffed arqad path 2 productivity from 3% to 5%
+    - fixed that simik 2 path 1 was producing more barrels and consumed
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.1
 Date: 2023-3-29
