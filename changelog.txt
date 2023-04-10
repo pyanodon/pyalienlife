@@ -13,6 +13,7 @@ Date: ?
     - fixed several grammar bugs in TURD descriptions
     - buffed arqad path 2 productivity from 3% to 5%
     - fixed that simik 2 path 1 was producing more barrels and consumed
+    - fixed that auog-food and denatured-seismitite TURD recipes did not allow prod, even though the unupgraded recipe allowed it
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.1
 Date: 2023-3-29

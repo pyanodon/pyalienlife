@@ -248,6 +248,7 @@ local recipes_list =
   "auog-codex",
   "earth-bear-sample",
   "auog-food-01",
+  "auog-food-01-sawdust",
   "auog-food-02",
   "charged-auog",
   "fish-food-01",
