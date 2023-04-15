@@ -68,7 +68,7 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 				textfield.allow_decimal = false
 				textfield.allow_negative = false
 				action_frame.add{type = 'label', caption = 's'}.style.left_margin = -5
-			elseif action.type == 'item-count' then
+			elseif action.type == 'item-count' or action.type == 'inverse-item-count' then
 				action_frame.add{type = 'empty-widget', style = 'py_empty_widget'}
 				local itemselect = action_frame.add{
 					type = 'choose-elem-button', name = 'py_item_count', style = 'train_schedule_item_select_button',

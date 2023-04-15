@@ -7,6 +7,7 @@ local caravan_actions = {
 		'fill-inventory',
 		'empty-inventory',
 		'item-count',
+		'inverse-item-count',
 		'circuit-condition'
 	},
 	['character'] = {
@@ -14,20 +15,23 @@ local caravan_actions = {
 		'store-food',
 		'fill-inventory',
 		'empty-inventory',
-		'item-count'
+		'item-count',
+		'inverse-item-count',
 	},
 	['unit'] = {
 		'time-passed',
 		'store-food',
 		'fill-inventory',
 		'empty-inventory',
-		'item-count'
+		'item-count',
+		'inverse-item-count',
 	},
 	['cargo-wagon'] = {
 		'time-passed',
 		'fill-inventory',
 		'empty-inventory',
-		'item-count'
+		'item-count',
+		'inverse-item-count',
 	},
 	['electric-pole'] = {
 		'time-passed',
@@ -212,6 +216,26 @@ local function transfer_all_items(input_inventory, output_inventory) -- TODO: ma
 	end
 end
 
+local function transfer_filtered_items(input_inventory, output_inventory, item, goal) -- TODO: make it work with complex items
+	local inventory_count = input_inventory.get_item_count(item)
+
+	if inventory_count == goal then
+		return true
+	elseif inventory_count > goal then
+		local inserted_count = output_inventory.insert{name = item, count = inventory_count - goal}
+		if inserted_count ~= 0 then input_inventory.remove{name = item, count = inserted_count} end
+		return inserted_count == inventory_count - goal
+	elseif inventory_count < goal then
+		local removed_count = output_inventory.remove{name = item, count = goal - inventory_count}
+		if removed_count ~= 0 then
+			local inserted_count = input_inventory.insert{name = item, count = removed_count}
+			local couldnt_fit = removed_count - inserted_count
+			if couldnt_fit ~= 0 then output_inventory.insert{name = item, count = couldnt_fit}; return false end
+		end
+		return removed_count == goal - inventory_count
+	end
+end
+
 local function evaluate_signal(entity, signal)
 	local result = entity.get_merged_signal(signal)
 	if result == 0 and entity.type == 'container' and signal.type == 'item' then
@@ -276,27 +300,25 @@ Caravan.actions = {
 		if not chest or not chest.valid then return false end
 		local outpost_inventory = get_outpost_inventory(chest)
 		if not outpost_inventory then return false end
-		local inventory = caravan_data.inventory
+		local caravan_inventory = caravan_data.inventory
 		local goal = action.item_count
 		local item = action.elem_value
 		if not goal or not item then return false end
-		local inventory_count = inventory.get_item_count(item)
+		
+		return transfer_filtered_items(caravan_inventory, outpost_inventory, item, goal)
+	end,
 
-		if inventory_count == goal then
-			return true
-		elseif inventory_count > goal then
-			local inserted_count = outpost_inventory.insert{name = item, count = inventory_count - goal}
-			if inserted_count ~= 0 then inventory.remove{name = item, count = inserted_count} end
-			return inserted_count == inventory_count - goal
-		elseif inventory_count < goal then
-			local removed_count = outpost_inventory.remove{name = item, count = goal - inventory_count}
-			if removed_count ~= 0 then
-				local inserted_count = inventory.insert{name = item, count = removed_count}
-				local couldnt_fit = removed_count - inserted_count
-				if couldnt_fit ~= 0 then outpost_inventory.insert{name = item, count = couldnt_fit}; return false end
-			end
-			return removed_count == goal - inventory_count
-		end
+	['inverse-item-count'] = function(caravan_data, schedule, action)
+		local chest = schedule.entity
+		if not chest or not chest.valid then return false end
+		local outpost_inventory = get_outpost_inventory(chest)
+		if not outpost_inventory then return false end
+		local caravan_inventory = caravan_data.inventory
+		local goal = action.item_count
+		local item = action.elem_value
+		if not goal or not item then return false end
+		
+		return transfer_filtered_items(outpost_inventory, caravan_inventory, item, goal)
 	end,
 
 	['detonate'] = function(caravan_data, schedule, action)
