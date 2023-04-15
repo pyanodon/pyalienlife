@@ -25,7 +25,7 @@ if data then
             {'small-electric-pole', 1},
             {'water-barrel', 1},
         },
-        results = {{name = 'solar-panel-equipment', amount = 2, type = 'item'}},
+        results = {{name = 'solar-panel-mk01', amount = 1, type = 'item'}},
         enabled = false,
         energy_required = 40,
         category = 'crafting'
@@ -84,6 +84,7 @@ return {
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
                 {consumption = -0.3, speed = 0.3, type = 'module-effects'},
                 {recipe = 'solar-panel-equipment-cheap', type = 'unlock-recipe'},
+                {recipe = 'solar-panel-equipment', type = 'unlock-recipe', also_unlocked_by_techs = true},
                 {old = 'data-array', new = 'data-array-with-solar', type = 'recipe-replacement'},
             }
         }

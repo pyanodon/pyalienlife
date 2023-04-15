@@ -17,6 +17,7 @@ if data then
 
     local wood_fast = table.deepcopy(data.raw.recipe['log-wood'])
     wood_fast.name = 'log-wood-fast'
+    FUN.add_result_amount(wood_fast, 'wood', 1)
     wood_fast.energy_required = 1
     wood_fast.enabled = false
     data:extend{wood_fast}

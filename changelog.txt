@@ -8,12 +8,14 @@ Date: ?
     - fixed crash when pyHT wasn't active
     - change dry carbonfiber recipe to be made in the evaporator instead of the washer
   TURD:
-    - dingrits path 2 now buffs snarer hearts instead of blood,meat,brains,ect
+    - reworked dingrits path 2. now buffs snarer hearts instead of blood,meat,brains,ect
     - fixed a wax duplication glitch with arqad turd path 1
     - fixed several grammar bugs in TURD descriptions
-    - buffed arqad path 2 productivity from 3% to 5%
     - fixed that simik 2 path 1 was producing more barrels and consumed
     - fixed that auog-food and denatured-seismitite TURD recipes did not allow prod, even though the unupgraded recipe allowed it
+    - buffed arqad path 2 productivity from 3% to 5%
+    - buffed data array path 3. this path now allows an alt recipe for solar panels mk1
+    - buffed fast wood forestry path 2. gives +1 wood (20->21)
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.1
 Date: 2023-3-29
