@@ -25,6 +25,7 @@ TECHNOLOGY("kevlar"):add_pack("py-science-pack-2")
 TECHNOLOGY("fine-electronics"):add_pack("py-science-pack-2")
 TECHNOLOGY("advanced-electronics"):add_pack("py-science-pack-2")
 TECHNOLOGY("nexelit-mk01"):add_prereq("titanium-mk01"):add_prereq("lead-mk01")
+TECHNOLOGY("artillery-2"):add_pack("py-science-pack-3")
 
 if not mods["pyhightech"] then
     TECHNOLOGY("mining-productivity-1"):add_pack("py-science-pack-2")
