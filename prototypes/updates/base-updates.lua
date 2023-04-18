@@ -19,7 +19,7 @@ TECHNOLOGY("electric-engine"):add_pack("py-science-pack-2")
 TECHNOLOGY("fast-inserter"):add_pack("logistic-science-pack")
 TECHNOLOGY("fast-inserter-2"):add_pack("py-science-pack-2")
 
-TECHNOLOGY("night-vision-equipment"):add_prereq("personal-roboport-equipment"):remove_prereq('modular-armor')
+TECHNOLOGY("night-vision-equipment"):add_prereq("personal-roboport-equipment"):remove_prereq('modular-armor'):add_pack("py-science-pack-2")
 TECHNOLOGY("belt-immunity-equipment"):add_prereq("personal-roboport-equipment"):remove_prereq('modular-armor'):add_pack("py-science-pack-2")
 TECHNOLOGY('personal-roboport-equipment'):remove_pack('chemical-science-pack'):remove_pack('logistic-science-pack'):add_pack('py-science-pack-1')
 TECHNOLOGY("fusion-reactor-equipment"):add_pack("py-science-pack-3")

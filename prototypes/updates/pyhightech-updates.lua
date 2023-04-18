@@ -185,6 +185,8 @@ RECIPE("solid-separator"):replace_ingredient("electronic-circuit", "inductor1")
 
 RECIPE("perfect-samples"):add_ingredient{type = 'item', name = 'dimensional-gastricorg', amount = 1}
 
+RECIPE("simik-mk03"):add_ingredient({type = 'item', name = 'strangelets', amount = 1})
+
 -- Vanilla mining drill for non-fluid ores only
 data.raw["mining-drill"]["electric-mining-drill"].input_fluid_box = nil
 
