@@ -64,7 +64,7 @@ RECIPE {
     icon_size = 64,
     subgroup = 'py-alienlife-simik',
     order = 'zb'
-}:add_unlock("simik-mk03"):add_ingredient({type = 'item', name = 'advanced-substrate', amount = 1}):add_ingredient({type = 'item', name = 'biopolymer', amount = 1}):add_ingredient({type = 'fluid', name = 'plutonium-peroxide', amount = 10}):add_ingredient({{type = 'item', name = 'strangelets', amount = 1}})
+}:add_unlock("simik-mk03"):add_ingredient({type = 'item', name = 'advanced-substrate', amount = 1}):add_ingredient({type = 'item', name = 'biopolymer', amount = 1}):add_ingredient({type = 'fluid', name = 'plutonium-peroxide', amount = 10}):add_ingredient({type = 'item', name = 'strangelets', amount = 1})
 
 --mk04--
 --WIP--
