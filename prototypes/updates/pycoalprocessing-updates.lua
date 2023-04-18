@@ -38,6 +38,10 @@ TECHNOLOGY("railway-mk03"):add_pack("py-science-pack-3")
 TECHNOLOGY("filtration-mk02"):add_pack("py-science-pack-3")
 TECHNOLOGY("methanol-processing-2"):add_pack("py-science-pack-3")
 
+TECHNOLOGY("electric-energy-accumulators"):set_fields{prerequisites = {}}:set_fields{dependencies = {}}:add_pack("py-science-pack-1"):remove_pack("logistic-science-pack")
+
+RECIPE("accumulator"):remove_ingredient("battery"):add_ingredient({type = "item", name = "battery", amount = 30})
+
 --BUILDINDS--
 ITEM("fawogae-plantation-mk02"):set("icon", "__pyalienlifegraphics__/graphics/icons/fawogae-plantation-mk02.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-farm-buildings-mk02", "d")
 ITEM("fawogae-plantation-mk03"):set("icon", "__pyalienlifegraphics__/graphics/icons/fawogae-plantation-mk03.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-farm-buildings-mk03", "d")

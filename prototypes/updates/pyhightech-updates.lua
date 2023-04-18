@@ -83,7 +83,7 @@ TECHNOLOGY("nitrobenzene"):add_pack("py-science-pack-2")
 
 if not mods["pyalternativeenergy"] then
     TECHNOLOGY("battery"):add_pack("py-science-pack-2")
-    TECHNOLOGY("electric-energy-accumulators"):add_pack("py-science-pack-2")
+    --TECHNOLOGY("electric-energy-accumulators"):add_pack("py-science-pack-2")
 end
 
 --(( ORES ))--

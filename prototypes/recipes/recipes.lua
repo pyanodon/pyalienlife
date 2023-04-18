@@ -2966,3 +2966,19 @@ RECIPE {
         {type = 'item', name = 'workers-food-02', amount = 8},
     },
 }:add_unlock("nexelit-mk03")
+
+RECIPE {
+    type = 'recipe',
+    name = 'crapttey',
+    category = 'chemistry',
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = 'item', name = 'lead-plate', amount = 20},
+        {type = 'item', name = 'plastic-bar', amount = 20},
+        {type = 'fluid', name = 'sulfuric-acid', amount = 200},
+    },
+    results = {
+        {type = 'item', name = 'battery', amount = 1},
+    },
+}:add_unlock("fluid-processing-machines-1")
