@@ -32,7 +32,7 @@ TECHNOLOGY("energy-shield-equipment"):add_pack("py-science-pack-2")
 
 TECHNOLOGY('fluid-handling'):remove_pack('logistic-science-pack')
 TECHNOLOGY('automation-2'):add_pack("py-science-pack-1"):remove_pack('logistic-science-pack'):remove_prereq('logistic-science-pack'):remove_prereq("electronics")
-TECHNOLOGY("automation-3"):remove_pack("chemical-science-pack"):remove_pack("production-science-pack")add_pack("py-science-pack-2"):set_fields{prerequisites = {}}
+TECHNOLOGY("automation-3"):remove_pack("chemical-science-pack"):remove_pack("production-science-pack"):add_pack("py-science-pack-2"):set_fields{prerequisites = {}}
 TECHNOLOGY("fast-inserter"):add_pack("py-science-pack-1")
 TECHNOLOGY("heavy-armor"):add_pack("py-science-pack-1")
 TECHNOLOGY("logistic-science-pack"):add_pack("py-science-pack-1")
