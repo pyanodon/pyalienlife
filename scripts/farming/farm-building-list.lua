@@ -43,9 +43,4 @@ local farm_buildings = {
 	['yaedols-culture'] = 'fungi'
 }
 
-if script.active_mods['pyalternativeenergy'] then
-    farm_buildings['zungror-lair'] = 'animal'
-    farm_buildings['numal-reef'] = 'animal'
-end
-
 return farm_buildings
