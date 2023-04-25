@@ -1,6 +1,9 @@
 Farming = {}
 Farming.events = {}
 
+---@type table<string, string>
+---Contains key-value pairs of `{farm_name = farm_domain}`
+---|See `scripts/farming/farm-build-list.lua` for an example
 local farm_buildings = require 'farm-building-list'
 
 function Farming.draw_error(kingdom, entity)
@@ -13,6 +16,26 @@ function Farming.draw_error(kingdom, entity)
 		time_to_live = 30
     }
 end
+
+---register_type registers a farm for module restrictions
+---@param farm_name string name of farm building without -mkxx suffix
+---@param kingdom_name 'animal' | 'plant' | 'fungi'
+function Farming.register_type(farm_name, kingdom_name)
+	log('remote registered farm \'' .. farm_name .. '\' (' .. kingdom_name .. ')')
+	farm_buildings[farm_name] = kingdom_name
+end
+
+---unregister_type unregisters a farm for module restrictions
+---@param farm_name string name of farm building without -mkxx suffix
+function Farming.unregister_type(farm_name)
+	log('remote unregistered farm \'' .. farm_name .. '\'')
+	farm_buildings[farm_name] = nil	
+end
+
+remote.add_interface('pyfarm', {
+	register = Farming.register_type,
+	unregister = Farming.unregister_type
+})
 
 -- animal, plant, or fungi?
 function Farming.get_kingdom(entity)
