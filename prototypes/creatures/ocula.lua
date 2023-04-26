@@ -101,17 +101,13 @@ ITEM{
       },
       },
       vision_distance = 30,
-      movement_speed = 0.17,
+      movement_speed = 0.28,
       distance_per_frame = 0.13,
       pollution_to_join_attack = 4,
       distraction_cooldown = 300,
       min_pursue_time = 10 * 60,
       max_pursue_distance = 50,
-      --corpse = 'arthurian-corpse',
       dying_explosion = 'blood-explosion-small',
-      --dying_sound =  make_biter_dying_sounds(0.4),
-      --working_sound =  make_biter_calls(0.3),
-      --run_animation = biterrunanimation(small_biter_scale, small_biter_tint1, small_biter_tint2),
 
       run_animation =
       {
@@ -185,3 +181,14 @@ beam.action = {
   }
 }
 data:extend{beam}
+
+data:extend{
+	{
+		type = 'virtual-signal',
+		icon = '__pyalienlifegraphics2__/graphics/icons/ocula-map-tag.png',
+		name = 'ocula-map-tag',
+		subgroup = 'py-alienlife-special-creatures',
+		icon_size = 64,
+		localised_name = {'virtual-signal-name.ocula-map-tag'}
+	}
+}

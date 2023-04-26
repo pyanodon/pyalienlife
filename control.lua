@@ -128,6 +128,7 @@ end)
 script.on_nth_tick(121, Farming.events[121])
 script.on_nth_tick(59, Farming.events[59])
 script.on_nth_tick(221, Oculua.events[221])
+script.on_nth_tick(71, Oculua.events[71])
 script.on_nth_tick(41, Vatbrain.events[41])
 
 script.on_nth_tick(4, function()

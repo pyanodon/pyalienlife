@@ -141,6 +141,26 @@ Oculua.events[221] = function()
 	end
 end
 
+Oculua.events[71] = function()
+	if not global.should_run_oculua_code then return end
+	for _, oculua_data in pairs(global.oculuas) do
+		local map_tag = oculua_data.map_tag
+		local oculua = oculua_data.entity
+		if map_tag and map_tag.valid then
+			if map_tag.position.x == oculua.position.x and map_tag.position.y == oculua.position.y then goto didnt_move end
+			map_tag.destroy()
+		end
+		oculua_data.map_tag = oculua.force.add_chart_tag(oculua.surface, {
+			position = oculua.position,
+			icon = {
+				type = 'virtual',
+				name = 'ocula-map-tag'
+			}
+		})
+		::didnt_move::
+	end
+end
+
 function Oculua.clear_incoming_oculua_items(oculua_data)
 	local item = oculua_data.item
 	if not item then return end
@@ -230,6 +250,7 @@ Oculua.events.on_ai_command_completed = function(event)
 			local inserted_count = inventory.insert{name = 'ocula', count = 1}
 			if inserted_count == 0 then Oculua.wander(oculua_data); return end
 			ipod_data.active_oculua = ipod_data.active_oculua - 1
+			if oculua_data.map_tag then oculua_data.map_tag.destroy() end
 			global.oculuas[oculua.unit_number] = nil
 			oculua.destroy()
 		end
@@ -291,6 +312,9 @@ Oculua.events.on_destroyed = function(event)
 		global.should_run_oculua_code = not not next(global.ipods)
 	elseif entity.name == 'ocula' then
 		local oculua_data = global.oculuas[entity.unit_number]
+		if oculua_data and oculua_data.map_tag then
+			oculua_data.map_tag.destroy()
+		end
 		if oculua_data and event.buffer and oculua_data.item and oculua_data.count and oculua_data.count > 0 then
 			event.buffer.insert{name = oculua_data.item, count = oculua_data.count}
 			oculua_data.count = 0
