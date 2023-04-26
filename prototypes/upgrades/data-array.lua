@@ -33,7 +33,7 @@ if data then
 
     local machine_recipe = table.deepcopy(data.raw.recipe['data-array'])
     machine_recipe.name = machine_recipe.name .. '-with-solar'
-    FUN.add_ingredient(machine_recipe, {name = 'solar-panel-equipment', amount = 2, type = 'item'})
+    FUN.add_ingredient(machine_recipe, {name = 'solar-panel-mk01', amount = 2, type = 'item'})
     data:extend{machine_recipe}
 end
 
@@ -84,7 +84,6 @@ return {
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
                 {consumption = -0.3, speed = 0.3, type = 'module-effects'},
                 {recipe = 'solar-panel-equipment-cheap', type = 'unlock-recipe'},
-                {recipe = 'solar-panel-equipment', type = 'unlock-recipe', also_unlocked_by_techs = true},
                 {old = 'data-array', new = 'data-array-with-solar', type = 'recipe-replacement'},
             }
         }

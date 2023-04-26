@@ -4,6 +4,7 @@ Date: ?
   Changes:
     - increased speed of oculas by 60%
     - oculas are now visible on the map
+    - fix softlock caused by TURD data array path 3
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.4
 Date: 2023-4-17
