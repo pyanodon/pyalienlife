@@ -108,7 +108,7 @@ require('prototypes/technologies/chromasome-infocrystalization')
 require('prototypes/technologies/laika')
 --require('prototypes/technologies/space-program')
 require('prototypes/technologies/pesticides')
---require('prototypes/technologies/symbiosis')
+require('prototypes/technologies/symbiosis')
 require('prototypes/technologies/bioprocessing')
 require('prototypes/technologies/simik')
 require('prototypes/technologies/fish')
@@ -428,13 +428,11 @@ require 'prototypes/creatures/work-o-dile'
 require 'prototypes/creatures/dingrido'
 require 'prototypes/creatures/crawdad'
 require 'prototypes/creatures/phadaisus'
-require('prototypes/creatures/ocula')
+require 'prototypes/creatures/ocula'
 --require('prototypes/robots/gobachov')
 --require('prototypes/robots/huzu')
 --require('prototypes/robots/chorkok')
---require('prototypes/creatures/ulric-man-mining')
---require('prototypes/creatures/ulric-man-attack')
---require('prototypes/creatures/clone-1')
+require 'prototypes/creatures/ulric-man'
 
 --(( FLUIDS ))--
 require("prototypes/fluids/zogna-bacteria")

@@ -5,6 +5,8 @@ Date: ?
     - increased speed of oculas by 60%
     - oculas are now visible on the map
     - fix softlock caused by TURD data array path 3
+    - added the mutagenic infusion
+    - biofactory turd moved from chemical science -> py science 3
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.4
 Date: 2023-4-17

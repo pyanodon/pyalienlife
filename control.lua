@@ -33,6 +33,7 @@ require 'scripts/smart-farm/smart-farm'
 require 'scripts/worm/worm'
 require 'scripts/turd/turd'
 require 'scripts/vatbrain/vatbrain'
+require 'scripts/ulric/ulric'
 
 local function discoscience()
     if remote.interfaces['DiscoScience'] and remote.interfaces['DiscoScience']['setIngredientColor'] then
@@ -55,6 +56,7 @@ local function init()
     Wiki.events.on_init()
     Turd.events.on_init()
     Vatbrain.events.on_init()
+    Ulric.events.on_init()
 end
 
 script.on_init(function()
@@ -130,6 +132,7 @@ script.on_nth_tick(59, Farming.events[59])
 script.on_nth_tick(221, Oculua.events[221])
 script.on_nth_tick(71, Oculua.events[71])
 script.on_nth_tick(41, Vatbrain.events[41])
+script.on_nth_tick(397, Ulric.events[397])
 
 script.on_nth_tick(4, function()
     for _, player in pairs(game.connected_players) do
@@ -148,3 +151,7 @@ end)
 
 script.on_event(defines.events.on_research_finished, function(event) Turd.events.on_research_finished(event) end)
 script.on_event(defines.events.on_research_reversed, function(event) Turd.events.on_research_reversed(event) end)
+
+script.on_event(defines.events.on_player_used_capsule, function(event)
+    Ulric.events.used_capsule(event)
+end)
