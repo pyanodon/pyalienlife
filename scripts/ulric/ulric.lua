@@ -1,7 +1,7 @@
 Ulric = {}
 Ulric.events = {}
 
-Ulric.transformation_time = 60 * 5 -- ticks
+Ulric.transformation_time = 60 * 60 * 10 -- ticks
 
 Ulric.events.on_init = function()
 	global.ulricman_timers = global.ulricman_timers or {}
