@@ -188,6 +188,7 @@ RECIPE("perfect-samples"):add_ingredient{type = 'item', name = 'dimensional-gast
 RECIPE("simik-mk03"):add_ingredient({type = 'item', name = 'strangelets', amount = 1})
 RECIPE("simik-mk04r"):add_ingredient({type = 'item', name = 'destablilized-toxirus', amount = 1})
 
+RECIPE("battery-mk01"):replace_ingredient("plastic-bar", "melamine"):replace_ingredient("formic-acid", "cyanic-acid"):replace_ingredient("coke", {type = "item", name = "graphite", amount = 3})
 -- Vanilla mining drill for non-fluid ores only
 data.raw["mining-drill"]["electric-mining-drill"].input_fluid_box = nil
 

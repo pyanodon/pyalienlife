@@ -106,10 +106,8 @@ TECHNOLOGY('nexelit-mk03'):add_pack('military-science-pack')
 
 --RECIPES--
 
-RECIPE("sulfuric-acid-01"):remove_unlock("sulfur-processing"):add_unlock("fluid-processing-machines-1")
-RECIPE("acidgas-2"):remove_unlock("sulfur-processing"):add_unlock("fluid-processing-machines-1")
-RECIPE("chemical-plant-mk01"):remove_unlock('filtration'):add_unlock('fluid-processing-machines-1')
-RECIPE("compressor-mk01"):remove_unlock('fluid-processing-machines-2'):add_unlock('fluid-processing-machines-1'):replace_ingredient("niobium-pipe", "pipe"):remove_unlock("nitrogen-mk02")
+RECIPE("chemical-plant-mk01"):remove_unlock('filtration'):add_unlock('electric-energy-accumulators')
+RECIPE("compressor-mk01"):remove_unlock("nitrogen-mk02")
 
 RECIPE('mukmoux-fat-salt'):remove_unlock('mukmoux')
 RECIPE('bonemeal-salt'):remove_unlock('ulric')

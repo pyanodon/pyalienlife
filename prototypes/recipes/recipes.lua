@@ -2940,17 +2940,24 @@ RECIPE {
 }:add_unlock("nexelit-mk03")
 
 RECIPE {
-    type = 'recipe',
-    name = 'crapttey',
-    category = 'chemistry',
+    type = "recipe",
+    name = "battery-mk01",
+    category = "chemistry",
     enabled = false,
-    energy_required = 40,
+    energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'lead-plate', amount = 20},
-        {type = 'item', name = 'plastic-bar', amount = 20},
-        {type = 'fluid', name = 'sulfuric-acid', amount = 200},
+        {type = "item", name = "glass", amount = 1},
+        {type = "item", name = "plastic-bar", amount = 2},  -- melamine
+        {type = "item", name = "lead-plate", amount = 1},
+        {type = "item", name = "bolts", amount = 3},
+        {type = "item", name = "coke", amount = 10},         -- 3 graphite
+        {type = "item", name = "zinc-plate", amount = 3},
+        {type = "fluid", name = "formic-acid", amount = 30}, -- cyanic-acid
     },
     results = {
-        {type = 'item', name = 'battery', amount = 1},
+        {type = "item", name = "battery", amount = 1},
     },
-}:add_unlock("fluid-processing-machines-1")
+    --main_product = "eg-si",
+}:add_unlock("electric-energy-accumulators")
+
+
