@@ -25,7 +25,9 @@ for _, tree in pairs(data.raw.tree) do
     end
 
     if tree.minable ~= nil then
-        if tree.minable.results[1].amount >= 1 then -- no sap from dead trees
+        if tree.minable.result ~= nil then
+            --do nothing for now as i dont think the "trees" are the kind we want giving sap
+        elseif tree.minable.results[1].amount >= 1 then -- no sap from dead trees
             table.insert(tree.minable.results, mine_results_1)
         else
             tree.minable.results[1].probability = tree.minable.results[1].amount
