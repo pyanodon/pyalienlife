@@ -59,7 +59,7 @@ data:extend(
             ticks_to_stay_in_combat = 600,
             damage_hit_tint = {r = 1, g = 0, b = 0, a = 0},
             running_speed = data.raw.character.character.running_speed * 1.4,
-            distance_per_frame = 0.16,
+            distance_per_frame = 0.23,
             maximum_corner_sliding_distance = 0.7,
             subgroup = 'creatures',
             order = 'a',
