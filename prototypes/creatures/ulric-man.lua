@@ -34,6 +34,10 @@ data:extend(
                 {
                     type = 'impact',
                     percent = 100
+                },
+                {
+                    type = 'acid',
+                    percent = 80
                 }
             },
             max_health = data.raw.character.character.max_health * 5,
@@ -56,7 +60,7 @@ data:extend(
             ticks_to_keep_gun = 600,
             ticks_to_keep_aiming_direction = 100,
             --ticks you need to wait after firing a weapon or taking damage to get out of combat and get healed
-            ticks_to_stay_in_combat = 600,
+            ticks_to_stay_in_combat = 0,
             damage_hit_tint = {r = 1, g = 0, b = 0, a = 0},
             running_speed = data.raw.character.character.running_speed * 1.4,
             distance_per_frame = 0.23,
@@ -75,13 +79,26 @@ data:extend(
                 }
             },
             tool_attack_result = {
-                type = 'direct',
-                action_delivery = {
-                    type = 'instant',
-                    target_effects = {
-                        type = 'damage',
-                        damage = {amount = 400, type = 'physical'}
+                {
+                    radius = 3.5,
+                    type = 'area',
+                    action_delivery = {
+                        type = 'instant',
+                        target_effects = {
+                            type = 'damage',
+                            damage = {amount = 1400, type = 'impact'}
+                        },
                     }
+                },
+                {
+                    action_delivery = {
+                        target_effects = {{
+                            sound = data.raw.capsule['cluster-grenade'].capsule_action.attack_parameters.ammo_type.action[2].action_delivery.target_effects[1].sound,
+                            type = 'play-sound'
+                        }},
+                        type = 'instant'
+                    },
+                    type = 'direct'
                 }
             },
             animations = {
