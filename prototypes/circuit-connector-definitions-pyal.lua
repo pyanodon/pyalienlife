@@ -11,3 +11,14 @@ collector_connector_definitions = circuit_connector_definitions.create
     { variation = 26, main_offset = util.by_pixel(-105, 100), shadow_offset = util.by_pixel(-111, 112), show_shadow = false }
   }
 )
+
+fluid_drill_connector_definitions = circuit_connector_definitions.create
+(
+  universal_connector_template,
+  {
+    { variation = 18, main_offset = util.by_pixel(30, 50), shadow_offset = util.by_pixel(24, 62), show_shadow = false }, 
+    { variation = 18, main_offset = util.by_pixel(30, 50), shadow_offset = util.by_pixel(24, 62), show_shadow = false },
+    { variation = 18, main_offset = util.by_pixel(30, 50), shadow_offset = util.by_pixel(24, 62), show_shadow = false },
+    { variation = 18, main_offset = util.by_pixel(30, 50), shadow_offset = util.by_pixel(24, 62), show_shadow = false }
+  }
+)
