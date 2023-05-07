@@ -10,7 +10,7 @@ require("prototypes/item-groups")
 require("prototypes/recipe-categories")
 require("prototypes/fuel-categories")
 require("prototypes/module-categories")
-require("prototypes/circuit-connector-definitions-pyal")
+require("prototypes/circuit-connector-definitions")
 
 --(( Technology ))--
 require("prototypes/technologies/xenobiology")
