@@ -63,10 +63,10 @@ function Digosaurus.update_gui(gui)
 end
 
 Digosaurus.events.on_gui_opened = function(event)
-	if event.gui_type ~= defines.gui_type.entity or event.entity.name ~= 'dino-dig-site' then return end
-
 	local player = game.get_player(event.player_index)
 	local entity = event.entity
+	if event.gui_type ~= defines.gui_type.entity or not entity or entity.name ~= 'dino-dig-site' then return end
+
 	local dig_data = global.dig_sites[entity.unit_number]
 
 	-- Since we never really do a search for dig sites this can happen with a weird migration or players doing editor things
