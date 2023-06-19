@@ -8,6 +8,7 @@ Date: ?
     - added the mutagenic infusion
     - biofactory turd moved from chemical science -> py science 3
     - added flag not-colliding-with-itself to caravans
+    - fixed a crash with the digosaurus GUI
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.4
 Date: 2023-4-17
