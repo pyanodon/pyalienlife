@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.5
-Date: ?
+Date: 2023-6-23
   Changes:
     - increased speed of oculas by 60%
     - oculas are now visible on the map
