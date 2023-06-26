@@ -3,6 +3,7 @@ Version: 2.1.6
 Date: ?
   Changes:
     - fix ocula crash with the trainsaver mod
+    - update chinese translation. credit sdqwo
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.5
 Date: 2023-6-23
