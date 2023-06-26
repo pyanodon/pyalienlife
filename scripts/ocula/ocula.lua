@@ -233,7 +233,7 @@ Oculua.events.on_ai_command_completed = function(event)
 			oculua_data.status = DROPPING_OFF
 		elseif oculua_data.status == DROPPING_OFF then
 			local player = oculua_data.player
-			if player and player.valid and oculua_data.count ~= 0 then
+			if player and player.valid and oculua_data.count ~= 0 and player.get_main_inventory() then
 				local item = oculua_data.item
 				local inserted_count = player.get_main_inventory().insert{name = item, count = oculua_data.count}
 				oculua_data.count = oculua_data.count - inserted_count
