@@ -5,6 +5,7 @@ Date: ?
     - fix ocula crash with the trainsaver mod
     - update chinese translation. credit sdqwo
     - fixed that the quality cottongut food was referencing moondrop in the item tooltip even though it had no moondrop in the crafting recipe
+    - fixed that thikats and workodile where showing up in kill statistics
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.5
 Date: 2023-6-23
