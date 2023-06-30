@@ -8,7 +8,7 @@ RECIPE {
     ingredients = {
         {"ralesia-plantation-mk01", 1},
         {"pump", 4},
-        {"electronic-circuit", 20}, --updated-bob electronic-circuit-board
+        {"electronic-circuit", 20},
         {"steel-plate", 40},
         {"pipe", 10},
         {"glass", 100}
