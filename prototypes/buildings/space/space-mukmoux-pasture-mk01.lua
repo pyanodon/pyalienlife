@@ -10,7 +10,7 @@ RECIPE {
         {"steel-plate", 100},
         {"duralumin", 30},
         {"storage-tank", 5},
-        {"electronic-circuit", 10} --bob electronic-logic-board
+        {"electronic-circuit", 10}
     },
     results = {
         {"space-mukmoux-pasture-mk01", 1}

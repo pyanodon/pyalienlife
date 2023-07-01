@@ -34,9 +34,9 @@ RECIPE {
     enabled = false,
     ingredients = {
         {"soil", 300},
-        {"pipe", 15}, --bob steel pipe
-        {"electronic-circuit", 25}, --bob basic-electronic-circuit-board
-        {"stone", 100}, --bob glass
+        {"pipe", 15},
+        {"electronic-circuit", 25},
+        {"stone", 100},
         {"iron-plate", 30},
         {"duralumin", 10},
         {"treated-wood", 50},
