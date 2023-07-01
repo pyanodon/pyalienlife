@@ -68,6 +68,7 @@ end
 
 function Oculua.process_player(player)
 	local inventory = player.get_main_inventory().get_contents()
+	local cursor_stack = player.cursor_stack
 	global.incoming_oculua_items[player.index] = global.incoming_oculua_items[player.index] or {}
 	local incoming = global.incoming_oculua_items[player.index]
 	local character = player.character
@@ -82,6 +83,7 @@ function Oculua.process_player(player)
 
 		if not FUN.check_for_basic_item(item) then goto continue end -- Cannot transfer blueprint books, item-with-tags, ect. Otherwise it would wipe data
 		local needed = request_slot.count - (incoming[item] or 0) - (inventory[item] or 0) - (logistic_network_incoming[item] or 0)
+		if cursor_stack and cursor_stack.valid_for_read and cursor_stack.name == item then needed = needed - cursor_stack.count end
 		if needed <= 0 then goto continue end
 
 		local insertable_count = player.get_main_inventory().get_insertable_count(item)
@@ -104,6 +106,35 @@ function Oculua.process_player(player)
 		incoming[item] = (incoming[item] or 0) + oculua_data.target_count
 
 		::continue::
+	end
+end
+
+function Oculua.render_altmode_icon(oculua_data)
+	local target_offset = {0, -0.3}
+	oculua_data.alt_mode_light = rendering.draw_sprite{
+		sprite = 'utility/entity_info_dark_background',
+		target = oculua_data.entity,
+		target_offset = target_offset,
+		surface = oculua_data.entity.surface,
+		only_in_alt_mode = true,
+		x_scale = 0.9,
+		y_scale = 0.9
+	}
+	oculua_data.alt_mode = rendering.draw_sprite{
+		sprite = 'item/' .. oculua_data.item,
+		target = oculua_data.entity,
+		target_offset = target_offset,
+		surface = oculua_data.entity.surface,
+		only_in_alt_mode = true,
+		x_scale = 1.2,
+		y_scale = 1.2
+	}
+end
+
+function Oculua.destroy_altmode_icon(oculua_data)
+	if oculua_data.count == 0 then
+		if oculua_data.alt_mode then rendering.destroy(oculua_data.alt_mode) end
+		if oculua_data.alt_mode_light then rendering.destroy(oculua_data.alt_mode_light) end
 	end
 end
 
@@ -229,6 +260,7 @@ Oculua.events.on_ai_command_completed = function(event)
 			if oculua_data.count == 0 then Oculua.go_home(oculua_data); return end
 
 			Oculua.fire_laser_beam(oculua_data)
+			Oculua.render_altmode_icon(oculua_data)
 			Oculua.set_target(oculua_data, character)
 			oculua_data.status = DROPPING_OFF
 		elseif oculua_data.status == DROPPING_OFF then
@@ -237,6 +269,7 @@ Oculua.events.on_ai_command_completed = function(event)
 				local item = oculua_data.item
 				local inserted_count = player.get_main_inventory().insert{name = item, count = oculua_data.count}
 				oculua_data.count = oculua_data.count - inserted_count
+				Oculua.destroy_altmode_icon(oculua_data)
 				Oculua.fire_laser_beam(oculua_data)
 			end
 			Oculua.go_home(oculua_data)

@@ -7,6 +7,8 @@ Date: ?
     - fixed that the quality cottongut food was referencing moondrop in the item tooltip even though it had no moondrop in the crafting recipe
     - fixed that thikats and workodile where showing up in kill statistics
     - fixed the blood upgraded slaughter recipe for vrauks shows arthropod blood in the recipe icon, even though it produced formic acid
+    - fixed that oculas would not consider your cursor stack when delivering items
+    - added alt mode support to see what the ocula is carrying
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.5
 Date: 2023-6-23
