@@ -9,6 +9,7 @@ Date: ?
     - fixed the blood upgraded slaughter recipe for vrauks shows arthropod blood in the recipe icon, even though it produced formic acid
     - fixed that oculas would not consider your cursor stack when delivering items
     - added alt mode support to see what the ocula is carrying
+    - reworked sap turd to be more intresting. if you already have sap turd selected it will automatically unselect. choose something new!
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.5
 Date: 2023-6-23

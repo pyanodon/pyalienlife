@@ -13,7 +13,6 @@ local tech_upgrades = {
     require('prototypes/upgrades/korlex'),
     require('prototypes/upgrades/fawogae'),
     require('prototypes/upgrades/moss'),
-    require('prototypes/upgrades/sap'),
     require('prototypes/upgrades/seaweed'),
     require('prototypes/upgrades/scrondrix'),
     require('prototypes/upgrades/vonix'),
@@ -72,6 +71,7 @@ if (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalter
         'prototypes/upgrades/simikmetalMK04',
         'prototypes/upgrades/simikmetalMK05',
         'prototypes/upgrades/simikmetalMK06',
+        'prototypes/upgrades/sap',
     } do
         table.insert(tech_upgrades, require(upgrade))
     end

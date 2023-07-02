@@ -232,16 +232,16 @@ end
 ----------------------------------------------------------------------------------------------------
 
 --data.raw.module['sap-tree'].limitation_blacklist = sap1_limits
-data.raw.module['sap-tree'].limitation = {'sap-01', 'sap-01-water', 'sap-01-co2', 'sap-01-air'}
+data.raw.module['sap-tree'].limitation = {'sap-01', 'nano-cellulose-sap'}
 
 --data.raw.module['sap-tree-mk02'].limitation_blacklist = sap2_limits
-data.raw.module['sap-tree-mk02'].limitation = {'sap-01', 'sap-mk02', 'sap-01-water', 'sap-01-co2', 'sap-01-air'}
+data.raw.module['sap-tree-mk02'].limitation = {'sap-01', 'sap-mk02', 'nano-cellulose-sap'}
 
 --data.raw.module['sap-tree-mk03'].limitation_blacklist = sap3_limits
-data.raw.module['sap-tree-mk03'].limitation = {'sap-01', 'sap-mk02', 'sap-mk03', 'sap-01-water', 'sap-01-co2', 'sap-01-air'}
+data.raw.module['sap-tree-mk03'].limitation = {'sap-01', 'sap-mk02', 'sap-mk03', 'nano-cellulose-sap'}
 
 --data.raw.module['sap-tree-mk04'].limitation_blacklist = sap4_limits
-data.raw.module['sap-tree-mk04'].limitation = {'sap-01', 'sap-mk02', 'sap-mk03', 'sap-mk04', 'sap-01-water', 'sap-01-co2', 'sap-01-air'}
+data.raw.module['sap-tree-mk04'].limitation = {'sap-01', 'sap-mk02', 'sap-mk03', 'sap-mk04', 'nano-cellulose-sap'}
 
 --remove steel barrel based milk
 data.raw.item['milk-barrel'] = nil
