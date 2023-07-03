@@ -139,6 +139,7 @@ require('prototypes/technologies/ash-separation')
 require("prototypes/technologies/crusher")
 require("prototypes/technologies/vatbrain")
 require("prototypes/technologies/turd-respec")
+require("prototypes/technologies/biofluid")
 
 if mods["pyhightech"] then
     require('prototypes/technologies/mining-with-fluid')
@@ -430,10 +431,14 @@ require 'prototypes/creatures/dingrido'
 require 'prototypes/creatures/crawdad'
 require 'prototypes/creatures/phadaisus'
 require 'prototypes/creatures/ocula'
---require('prototypes/robots/gobachov')
---require('prototypes/robots/huzu')
---require('prototypes/robots/chorkok')
 require 'prototypes/creatures/ulric-man'
+
+require 'prototypes/biofluid/gobachov'
+require 'prototypes/biofluid/huzu'
+require 'prototypes/biofluid/chorkok'
+require 'prototypes/biofluid/bioport'
+require 'prototypes/biofluid/requester-tank'
+require 'prototypes/biofluid/provider-tank'
 
 --(( FLUIDS ))--
 require("prototypes/fluids/zogna-bacteria")

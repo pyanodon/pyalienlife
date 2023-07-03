@@ -34,6 +34,7 @@ require 'scripts/worm/worm'
 require 'scripts/turd/turd'
 require 'scripts/vatbrain/vatbrain'
 require 'scripts/ulric/ulric'
+require 'scripts/biofluid/biofluid'
 
 local function discoscience()
     if remote.interfaces['DiscoScience'] and remote.interfaces['DiscoScience']['setIngredientColor'] then
@@ -83,6 +84,7 @@ script.on_event(on_built, function(event)
     Worm.events.on_built(event)
     Turd.events.on_built(event)
     Vatbrain.events.on_built(event)
+    Biofluid.events.on_built(event)
 end)
 
 script.on_event(defines.events.on_ai_command_completed, function(event)

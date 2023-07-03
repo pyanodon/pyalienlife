@@ -68,6 +68,12 @@ data:extend {
         group = "py-alienlife",
         order = "a-ef"
     },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-biofluid-network",
+        group = "py-alienlife",
+        order = "a-eg"
+    },
     -- solids
     {
         type = "item-subgroup",
