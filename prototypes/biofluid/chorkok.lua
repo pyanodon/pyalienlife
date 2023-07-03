@@ -1,11 +1,11 @@
-local sounds = require("__base__/prototypes/entity/sounds")
+local sounds = require('__base__/prototypes/entity/sounds')
 
 RECIPE {
     type = 'recipe',
     name = 'chorkok',
-    energy_required = 10,
-    category = 'crafting',
-    enabled = true,
+    energy_required = 120,
+    category = 'creature-chamber',
+    enabled = false,
     ingredients = {
         {'iron-plate', 1},
     },
@@ -26,77 +26,72 @@ ITEM {
     stack_size = 50
 }
 
-ENTITY {
-    type = 'logistic-robot',
-    name = 'chorkok',
-    icon = '__pyalienlifegraphics2__/graphics/icons/chorkok.png',
-    icon_size = 64,
-    flags = {'placeable-player', 'player-creation', 'placeable-off-grid', 'not-on-map'},
-    minable = {mining_time = 0.1, result = 'chorkok'},
-    resistances = {{type = 'fire', percent = 85}},
-    max_health = 100,
-    collision_box = {{0, 0}, {0, 0}},
-    selection_box = {{-0.5, -1.5}, {0.5, -0.5}},
-    max_payload_size = 3,
-    speed = 0.04,
-    transfer_distance = 0.5,
-    max_energy = '1J',
-    energy_per_tick = '0J',
-    speed_multiplier_when_out_of_energy = 1,
-    energy_per_move = '0J',
-    min_to_charge = 0.2,
-    max_to_charge = 0.95,
-    working_sound = sounds.flying_robot(0.5),
-    cargo_centered = {0.0, 0.2}
-}
-
-data:extend{{
-    name = 'chorkok-animation',
-    type = 'animation',
+local animation = {
     layers = {
         {
-            filename = '__pyalienlifegraphics2__/graphics/entity/bots/chorkok/sh.png',
+            filename = '__pyalienlifegraphics2__/graphics/entity/bots/chorkok/hr-sh.png',
             priority = 'high',
             line_length = 25,
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             frame_count = 25,
             shift = util.by_pixel(33.5, 18.75),
             draw_as_shadow = true,
-            direction_count = 16,
-            hr_version = {
-                filename = '__pyalienlifegraphics2__/graphics/entity/bots/chorkok/hr-sh.png',
-                priority = 'high',
-                line_length = 25,
-                width = 128,
-                height = 128,
-                frame_count = 25,
-                shift = util.by_pixel(33.5, 18.75),
-                draw_as_shadow = true,
-                direction_count = 16,
-                scale = 1
-            }
+            direction_count = 16
         },
         {
-            filename = '__pyalienlifegraphics2__/graphics/entity/bots/chorkok/carry.png',
+            filename = '__pyalienlifegraphics2__/graphics/entity/bots/chorkok/hr-carry.png',
             priority = 'high',
             line_length = 25,
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             frame_count = 25,
             shift = util.by_pixel(0, 0),
             direction_count = 16,
-            hr_version = {
-                filename = '__pyalienlifegraphics2__/graphics/entity/bots/chorkok/hr-carry.png',
-                priority = 'high',
-                line_length = 25,
-                width = 128,
-                height = 128,
-                frame_count = 25,
-                shift = util.by_pixel(0, 0),
-                direction_count = 16,
-                scale = 1
-            }
         }
     }
+}
+
+data:extend{{
+    ai_settings = {do_separation = false},
+    type = 'unit',
+    name = 'chorkok',
+    icon = '__pyalienlifegraphics2__/graphics/icons/chorkok.png',
+    icon_size = 64,
+    flags = {'placeable-player', 'placeable-off-grid', 'not-repairable', 'breaths-air', 'building-direction-8-way'},
+    minable = {mining_time = 0.2, result = 'chorkok'},
+    max_health = 250,
+    order = 'z',
+    subgroup = 'py-alienlife-biofluid-network',
+    healing_per_tick = 0.01,
+    collision_box = {{0,0}, {0,0}},
+    resistances = {{type = 'fire', percent = 100}},
+    collision_mask = {},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    attack_parameters = {
+        type = 'projectile',
+        range = 0,
+        cooldown = 0,
+        ammo_type = _G.make_unit_melee_ammo_type(0),
+        animation = animation
+    },
+    vision_distance = 30,
+    movement_speed = 0.28,
+    distance_per_frame = 0.13,
+    pollution_to_join_attack = 4,
+    distraction_cooldown = 300,
+    max_pursue_distance = 50,
+    dying_explosion = 'blood-explosion-small',
+    run_animation = animation,
+    render_layer = 'air-object',
+    working_sound = {
+        aggregation = {
+            max_count = 2,
+            remove = true
+        },
+        filename = '__pyalienlifegraphics3__/sounds/ocula-walk.ogg',
+        volume = 0.65
+    },
+    map_color = {0, 0.5, 0},
+    selection_priority = 51
 }}

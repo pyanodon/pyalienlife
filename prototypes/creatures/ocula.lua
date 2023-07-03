@@ -39,7 +39,7 @@ ITEM{
         name = 'ocula',
         icon = '__pyalienlifegraphics__/graphics/icons/ocula.png',
         icon_size = 64,
-        flags = {'placeable-player', 'placeable-off-grid', 'not-repairable', 'breaths-air', 'building-direction-8-way'},
+        flags = {'placeable-player', 'placeable-off-grid', 'not-repairable', 'breaths-air', 'building-direction-8-way', 'not-on-map'},
         minable = {mining_time = 0.2, result = 'ocula'},
         max_health = 250,
         order = 'b-b-a',
