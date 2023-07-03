@@ -439,6 +439,7 @@ require 'prototypes/biofluid/chorkok'
 require 'prototypes/biofluid/bioport'
 require 'prototypes/biofluid/requester-tank'
 require 'prototypes/biofluid/provider-tank'
+require 'prototypes/biofluid/biopipe'
 
 --(( FLUIDS ))--
 require("prototypes/fluids/zogna-bacteria")
