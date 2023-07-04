@@ -30,7 +30,7 @@ ITEM {
 
 ENTITY {
     name = 'provider-tank',
-    type = 'storage-tank',
+    type = 'pump',
     minable = {mining_time = 0.2, result = 'provider-tank'},
     icon = '__pyindustry__/graphics/icons/overflow-valve.png',
     icon_size = 32,
@@ -41,61 +41,70 @@ ENTITY {
     fast_replaceable_group = data.raw['pipe']['pipe'].fast_replaceable_group,
     collision_box = data.raw['pipe']['pipe'].collision_box,
     selection_box = data.raw['pipe']['pipe'].selection_box,
-    window_bounding_box = {{0, 0}, {0, 0}},
-    flow_length_in_ticks = data.raw['storage-tank']['storage-tank'].flow_length_in_ticks,
-    two_direction_only = false,
-    working_sound = nil,
+    working_sound = nil, -- TODO
     fluid_box = {
-        base_area = 2500,
+        base_area = 25,
         base_level = -1001,
         pipe_covers = _G.pipecoverspictures(),
         pipe_connections = {
             {position = {0, 1}},
-            {position = {0, -1}, type = 'input'}
         }
     },
-    pictures = {
-        gas_flow = ENTITY.Sprites.empty_pictures(),
-        fluid_background = ENTITY.Sprites.empty_pictures(),
-        window_background = ENTITY.Sprites.empty_pictures(),
-        flow_sprite = ENTITY.Sprites.empty_pictures(),
-        picture = {
-            sheets = {
-                {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/bots/tanks/provider-tank.png',
+    energy_source = {
+        connections = {
+          {
+            direction = 4,
+            position = {
+              0,
+              -1
+            }
+          }
+        },
+        max_temperature = 1,
+        default_temperature = 0,
+        min_working_temperature = 0,
+        max_transfer = '1W',
+        specific_heat = '1W',
+        type = 'heat'
+    },
+    energy_usage = '0W',
+    pumping_speed = 0,
+    animations = {
+        layers = {
+            {
+                filename = '__pyalienlifegraphics2__/graphics/entity/bots/tanks/provider-tank.png',
+                priority = 'extra-high',
+                frames = 4,
+                width = 32,
+                height = 64,
+                shift = util.by_pixel(0, -18),
+                hr_version = {
+                    filename = '__pyalienlifegraphics2__/graphics/entity/bots/tanks/hr-provider-tank.png',
                     priority = 'extra-high',
                     frames = 4,
-                    width = 32,
-                    height = 64,
-                    shift = util.by_pixel(0, -18),
-                    hr_version = {
-                        filename = '__pyalienlifegraphics2__/graphics/entity/bots/tanks/hr-provider-tank.png',
-                        priority = 'extra-high',
-                        frames = 4,
-                        width = 64,
-                        height = 128,
-                        shift = util.by_pixel(0, -16),
-                        scale = 0.5
-                    }
-                },
-                {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/bots/tanks/provider-tank-shadow.png',
+                    width = 64,
+                    height = 128,
+                    shift = util.by_pixel(0, -16),
+                    scale = 0.5
+                }
+            },
+            {
+                filename = '__pyalienlifegraphics2__/graphics/entity/bots/tanks/provider-tank-shadow.png',
+                priority = 'extra-high',
+                draw_as_shadow = true,
+                frames = 2,
+                width = 45,
+                height = 24,
+                shift = util.by_pixel(0, -0),
+                hr_version = {
+                    filename = '__pyalienlifegraphics2__/graphics/entity/bots/tanks/hr-provider-tank-shadow.png',
                     priority = 'extra-high',
                     draw_as_shadow = true,
                     frames = 2,
-                    width = 45,
-                    height = 24,
-                    shift = util.by_pixel(0, -0),
-                    hr_version = {
-                        filename = '__pyalienlifegraphics2__/graphics/entity/bots/tanks/hr-provider-tank-shadow.png',
-                        priority = 'extra-high',
-                        draw_as_shadow = true,
-                        frames = 2,
-                        width = 90,
-                        height = 48,
-                        shift = util.by_pixel(14, -0),
-                        scale = 0.5
-                    }
+                    width = 90,
+                    height = 48,
+                    shift = util.by_pixel(14, -0),
+                    scale = 0.5
                 }
             }
         }

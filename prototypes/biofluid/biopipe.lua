@@ -48,18 +48,15 @@ ITEM {
     stack_size = 10
 }
 
-local pipe = table.deepcopy(data.raw.pipe.pipe)
+local pipe = table.deepcopy(data.raw['heat-pipe']['heat-pipe'])
 pipe.name = 'biopipe'
 pipe.minable = {mining_time = 0.2, result = 'biopipe'}
-pipe.fluid_box = {
-    base_area = 0.01,
-    base_level = 1999,
-    pipe_connections = {
-        {position = {0, -1}},
-        {position = {1, 0}},
-        {position = {0, 1}},
-        {position = {-1, 0}}
-    }
+pipe.heat_buffer = {
+    max_temperature = 1,
+    default_temperature = 0,
+    min_working_temperature = 0,
+    max_transfer = '1W',
+    specific_heat = '1W',
 }
 
 local underground_pipe = table.deepcopy(data.raw['pipe-to-ground']['pipe-to-ground'])
@@ -74,7 +71,7 @@ underground_pipe.fluid_box = {
         },
         {
             position = {0, 1},
-            max_underground_distance = 7
+            max_underground_distance = 8
         }
     }
 }
