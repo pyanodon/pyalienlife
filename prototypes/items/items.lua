@@ -1735,6 +1735,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "earth-bat-sample",
+    icon = "__pyalienlifegraphics2__/graphics/icons/earth-bat-sample.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-samples",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
     name = "earth-sea-sponge-sample",
     icon = "__pyalienlifegraphics__/graphics/icons/earth-sea-sponge-sample.png",
 	icon_size = 64,
@@ -2501,6 +2512,17 @@ ITEM {
     type = "item",
     name = "scrondrix-codex",
     icon = "__pyalienlifegraphics__/graphics/icons/scrondrix-codex.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "bat-codex",
+    icon = "__pyalienlifegraphics2__/graphics/icons/bat-codex.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-codex",

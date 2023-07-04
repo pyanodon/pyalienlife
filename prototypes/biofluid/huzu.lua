@@ -7,7 +7,14 @@ RECIPE {
     category = 'creature-chamber',
     enabled = false,
     ingredients = {
-        {'iron-plate', 1},
+        {'earth-generic-sample', 2},
+        {'earth-potato-sample', 1},
+        {'cdna', 2},
+        {'alien-sample-03', 3},
+        {'bio-sample', 10},
+        {type = 'fluid', name = 'water-saline', amount = 50},
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
+        {type = 'fluid', name = 'coal-slurry', amount = 100},
     },
     results = {
         {'huzu', 1}
@@ -99,7 +106,7 @@ data:extend{{
         animation = animation
     },
     vision_distance = 30,
-    movement_speed = 0.28,
+    movement_speed = 0.35,
     distance_per_frame = 0.13,
     pollution_to_join_attack = 4,
     distraction_cooldown = 300,

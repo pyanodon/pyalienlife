@@ -1,15 +1,17 @@
 RECIPE {
     type = 'recipe',
     name = 'requester-tank',
-    energy_required = 1,
+    energy_required = 40,
+    category = 'creature-chamber',
     enabled = false,
     ingredients = {
-        {'steel-plate', 50},
-        {'glass', 40},
-        {'titanium-plate', 100},
-        {'duralumin', 50},
-        {'electronic-circuit', 30},
-        {'iron-gear-wheel', 50},
+        {'earth-generic-sample', 1},
+        {'cdna', 1},
+        {'alien-sample01', 2},
+        {'green-wire', 2},
+        {type = 'fluid', name = 'water-saline', amount = 50},
+        {type = 'fluid', name = 'fetal-serum', amount = 10},
+        {type = 'fluid', name = 'coal-slurry', amount = 50},
     },
     results = {
         {'requester-tank', 1}
@@ -25,7 +27,7 @@ ITEM {
     subgroup = 'py-alienlife-biofluid-network',
     order = 'c',
     place_result = 'requester-tank',
-    stack_size = 10
+    stack_size = 50
 }
 
 ENTITY {

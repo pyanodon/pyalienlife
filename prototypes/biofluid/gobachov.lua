@@ -7,7 +7,13 @@ RECIPE {
     category = 'creature-chamber',
     enabled = false,
     ingredients = {
-        {'iron-plate', 1},
+        {'earth-generic-sample', 2},
+        {'cdna', 1},
+        {'alien-sample-02', 3},
+        {'bio-sample', 5},
+        {type = 'fluid', name = 'water-saline', amount = 50},
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
+        {type = 'fluid', name = 'coal-slurry', amount = 100},
     },
     results = {
         {'gobachov', 1}
