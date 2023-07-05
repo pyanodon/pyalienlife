@@ -32,9 +32,9 @@ ITEM {
 
 ENTITY {
     name = 'requester-tank',
-    type = 'storage-tank',
+    type = 'furnace',
     minable = {mining_time = 0.2, result = 'requester-tank'},
-    icon = '__pyindustry__/graphics/icons/check-valve.png',
+    icon = '__pyindustry__/graphics/icons/overflow-valve.png',
     icon_size = 32,
     flags = {'placeable-player', 'player-creation', 'placeable-neutral', 'placeable-enemy'},
     corpse = 'small-remnants',
@@ -43,65 +43,39 @@ ENTITY {
     fast_replaceable_group = data.raw['pipe']['pipe'].fast_replaceable_group,
     collision_box = data.raw['pipe']['pipe'].collision_box,
     selection_box = data.raw['pipe']['pipe'].selection_box,
-    window_bounding_box = {{0, 0}, {0, 0}},
-    flow_length_in_ticks = data.raw['storage-tank']['storage-tank'].flow_length_in_ticks,
-    two_direction_only = false,
-    working_sound = nil,
-    fluid_box = {
+    working_sound = nil, -- TODO
+    fluid_boxes = {{
         base_area = 25,
-        base_level = 999,
+        base_level = -1001,
         pipe_covers = _G.pipecoverspictures(),
         pipe_connections = {
-            {position = {0, 1}},
-            {position = {0, -1}, type = 'output'}
-        }
+            {position = {0, -1}, type = 'output'},
+        },
+        production_type = 'output'
+    }},
+    show_recipe_icon = false,
+    crafting_speed = 1,
+    result_inventory_size = 0,
+    source_inventory_size = 0,
+    crafting_categories = {'biofluid'},
+    energy_source = {
+        connections = {
+          {
+            direction = 4,
+            position = {0, 0}
+          }
+        },
+        max_temperature = 0,
+        default_temperature = 0,
+        min_working_temperature = 0,
+        max_transfer = '1W',
+        specific_heat = '1W',
+        type = 'heat',
+        pipe_covers = require('__pyalienlife__/prototypes/biofluid/pipe-cover'),
+        heat_pipe_covers = require('__pyalienlife__/prototypes/biofluid/pipe-cover'),
     },
-    pictures = {
-        gas_flow = ENTITY.Sprites.empty_pictures(),
-        fluid_background = ENTITY.Sprites.empty_pictures(),
-        window_background = ENTITY.Sprites.empty_pictures(),
-        flow_sprite = ENTITY.Sprites.empty_pictures(),
-        picture = {
-            sheets = {
-                {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/bots/tanks/requester-tank.png',
-                    priority = 'extra-high',
-                    frames = 4,
-                    width = 32,
-                    height = 64,
-                    shift = {0.0, -0.5},
-                    hr_version = {
-                        filename = '__pyalienlifegraphics2__/graphics/entity/bots/tanks/hr-requester-tank.png',
-                        priority = 'extra-high',
-                        frames = 4,
-                        width = 64,
-                        height = 128,
-                        shift = {0.0, -0.5},
-                        scale = 0.5
-                    }
-                },
-                {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/bots/tanks/requester-tank-shadow.png',
-                    priority = 'extra-high',
-                    draw_as_shadow = true,
-                    frames = 4,
-                    width = 64,
-                    height = 35,
-                    shift = {0.5, -0.0},
-                    hr_version = {
-                        filename = '__pyalienlifegraphics2__/graphics/entity/bots/tanks/hr-requester-tank-shadow.png',
-                        priority = 'extra-high',
-                        frames = 4,
-                        draw_as_shadow = true,
-                        width = 128,
-                        height = 70,
-                        shift = {0.5, -0.0},
-                        scale = 0.5
-                    }
-                }
-            }
-        }
-    },
+    energy_usage = '1W',
+    show_recipe_icon_on_map = false,
     circuit_wire_connection_points = {
         {
             shadow = {red = {0.171875, 0.140625}, green = {0.171875, 0.265625}},

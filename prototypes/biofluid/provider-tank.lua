@@ -32,7 +32,7 @@ ITEM {
 
 ENTITY {
     name = 'provider-tank',
-    type = 'pump',
+    type = 'furnace',
     minable = {mining_time = 0.2, result = 'provider-tank'},
     icon = '__pyindustry__/graphics/icons/overflow-valve.png',
     icon_size = 32,
@@ -44,14 +44,20 @@ ENTITY {
     collision_box = data.raw['pipe']['pipe'].collision_box,
     selection_box = data.raw['pipe']['pipe'].selection_box,
     working_sound = nil, -- TODO
-    fluid_box = {
+    fluid_boxes = {{
         base_area = 25,
         base_level = -1001,
         pipe_covers = _G.pipecoverspictures(),
         pipe_connections = {
-            {position = {0, -1}},
-        }
-    },
+            {position = {0, -1}, type = 'input'},
+        },
+        production_type = 'input'
+    }},
+    show_recipe_icon = false,
+    crafting_speed = 1,
+    result_inventory_size = 0,
+    source_inventory_size = 0,
+    crafting_categories = {'biofluid'},
     energy_source = {
         connections = {
           {
@@ -64,50 +70,12 @@ ENTITY {
         min_working_temperature = 0,
         max_transfer = '1W',
         specific_heat = '1W',
-        type = 'heat'
+        type = 'heat',
+        pipe_covers = require('__pyalienlife__/prototypes/biofluid/pipe-cover'),
+        heat_pipe_covers = require('__pyalienlife__/prototypes/biofluid/pipe-cover'),
     },
-    energy_usage = '0W',
-    pumping_speed = 0,
-    animations = {
-        layers = {
-            {
-                filename = '__pyalienlifegraphics2__/graphics/entity/bots/tanks/provider-tank.png',
-                priority = 'extra-high',
-                frames = 4,
-                width = 32,
-                height = 64,
-                shift = util.by_pixel(0, -18),
-                hr_version = {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/bots/tanks/hr-provider-tank.png',
-                    priority = 'extra-high',
-                    frames = 4,
-                    width = 64,
-                    height = 128,
-                    shift = util.by_pixel(0, -16),
-                    scale = 0.5
-                }
-            },
-            {
-                filename = '__pyalienlifegraphics2__/graphics/entity/bots/tanks/provider-tank-shadow.png',
-                priority = 'extra-high',
-                draw_as_shadow = true,
-                frames = 2,
-                width = 45,
-                height = 24,
-                shift = util.by_pixel(0, -0),
-                hr_version = {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/bots/tanks/hr-provider-tank-shadow.png',
-                    priority = 'extra-high',
-                    draw_as_shadow = true,
-                    frames = 2,
-                    width = 90,
-                    height = 48,
-                    shift = util.by_pixel(14, -0),
-                    scale = 0.5
-                }
-            }
-        }
-    },
+    energy_usage = '1W',
+    show_recipe_icon_on_map = false,
     circuit_wire_connection_points = {
         {
             shadow = {red = {0.171875, 0.140625}, green = {0.171875, 0.265625}},

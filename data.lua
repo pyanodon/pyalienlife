@@ -418,29 +418,6 @@ require('prototypes/buildings/space/space-zipir-reef-mk01')
 
 require('prototypes/buildings/py-drive')
 
---Creature
-require 'prototypes/creatures/caravan'
-require 'prototypes/creatures/flying-caravan'
-require 'prototypes/creatures/nuka-caravan'
-require 'prototypes/buildings/outpost'
-require 'prototypes/buildings/outpost-aerial'
-require 'prototypes/creatures/digosaurus'
-require 'prototypes/creatures/thikats'
-require 'prototypes/creatures/work-o-dile'
-require 'prototypes/creatures/dingrido'
-require 'prototypes/creatures/crawdad'
-require 'prototypes/creatures/phadaisus'
-require 'prototypes/creatures/ocula'
-require 'prototypes/creatures/ulric-man'
-
-require 'prototypes/biofluid/gobachov'
-require 'prototypes/biofluid/huzu'
-require 'prototypes/biofluid/chorkok'
-require 'prototypes/biofluid/bioport'
-require 'prototypes/biofluid/requester-tank'
-require 'prototypes/biofluid/provider-tank'
-require 'prototypes/biofluid/vessel'
-
 --(( FLUIDS ))--
 require("prototypes/fluids/zogna-bacteria")
 require("prototypes/fluids/blood")
@@ -505,6 +482,29 @@ end
 if mods['pyalternativeenergy'] then
     require('prototypes/items/pyalternativeenergy-items')
 end
+
+--Creature
+require 'prototypes/creatures/caravan'
+require 'prototypes/creatures/flying-caravan'
+require 'prototypes/creatures/nuka-caravan'
+require 'prototypes/buildings/outpost'
+require 'prototypes/buildings/outpost-aerial'
+require 'prototypes/creatures/digosaurus'
+require 'prototypes/creatures/thikats'
+require 'prototypes/creatures/work-o-dile'
+require 'prototypes/creatures/dingrido'
+require 'prototypes/creatures/crawdad'
+require 'prototypes/creatures/phadaisus'
+require 'prototypes/creatures/ocula'
+require 'prototypes/creatures/ulric-man'
+
+require 'prototypes/biofluid/gobachov'
+require 'prototypes/biofluid/huzu'
+require 'prototypes/biofluid/chorkok'
+require 'prototypes/biofluid/bioport'
+require 'prototypes/biofluid/requester-tank'
+require 'prototypes/biofluid/provider-tank'
+require 'prototypes/biofluid/vessel'
 
 --(( RECIPES ))--
 require('prototypes/recipes/recipes')

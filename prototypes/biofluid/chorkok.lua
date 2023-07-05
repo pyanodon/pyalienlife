@@ -117,7 +117,7 @@ data:extend{{
         animation = animation
     },
     vision_distance = 30,
-    movement_speed = 0.5,
+    movement_speed = 0.25,
     distance_per_frame = 0.13,
     pollution_to_join_attack = 4,
     distraction_cooldown = 300,
