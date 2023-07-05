@@ -12,6 +12,7 @@ Date: ?
     - reworked sap turd to be more intresting. if you already have sap turd selected it will automatically unselect. choose something new!
     - fixed that oculas were rendering on the map twice.
     - fixed that dingrits turd path 1 was giving too much productivity. 400% -> 40%
+    - yaedols turd wastewater buffed 1->5. spores nerfed 12->4.
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.5
 Date: 2023-6-23
