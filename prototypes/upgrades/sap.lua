@@ -70,7 +70,7 @@ if data then
                 {type = 'item', name = 'saps', amount_min = 26 * i, amount_max = 31 * i},
                 {type = 'item', name = 'saps-mk0' .. i, amount_min = 5, amount_max = 10},
                 {type = 'item', name = 'sap-seeds-mk0' .. i, amount = 2},
-                {'fertilizer', 7},
+                {'fertilizer', 9},
                 {'biomass', 4}
             },
             icons = {
