@@ -1,5 +1,5 @@
 local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-local MODULE_SLOTS = 30
+local MODULE_SLOTS = 20
 
 RECIPE {
     type = "recipe",

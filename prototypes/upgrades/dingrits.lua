@@ -12,7 +12,7 @@ if data then
             icon_size = 64,
             tier = 5,
             order = 'd-e',
-            effect = {pollution = {bonus = 1},speed = {bonus = 4},productivity={bonus = 0.008}},
+            effect = {pollution = {bonus = 1},speed = {bonus = 4},productivity={bonus = 0.01}},
             limitation = {},
             limitation_message_key = 'dingrits',
             fuel_category = 'dingrits',

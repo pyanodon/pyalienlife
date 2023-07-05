@@ -1,6 +1,6 @@
 local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-local MODULE_SLOTS = 20
-local FULL_CRAFTING_SPEED = 1.2 -- crafting speed when full of mk01 modules
+local MODULE_SLOTS = 10
+local FULL_CRAFTING_SPEED = 1 -- crafting speed when full of mk01 modules
 
 RECIPE {
     type = "recipe",
