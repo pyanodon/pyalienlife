@@ -101,6 +101,7 @@ script.on_event(on_destroyed, function(event)
     Oculua.events.on_destroyed(event)
     Turd.events.on_destroyed(event)
     Vatbrain.events.on_destroyed(event)
+    Biofluid.events.on_destroyed(event)
 end)
 
 script.on_event(defines.events.on_gui_opened, function(event)

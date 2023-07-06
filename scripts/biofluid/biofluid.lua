@@ -24,3 +24,10 @@ Biofluid.events.on_built = function(event)
 		Biofluid.built_pipe(entity)
 	end
 end
+
+Biofluid.events.on_destroyed = function(event)
+	local entity = event.entity
+	if Biofluid.connectable[entity.name] then
+		Biofluid.destroyed_pipe(entity)
+	end
+end
