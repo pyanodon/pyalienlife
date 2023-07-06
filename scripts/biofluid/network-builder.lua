@@ -13,6 +13,21 @@ Biofluid.connectable = {
 	['requester-tank'] = REQUESTER,
 }
 
+local TO_GROUND = 'pipe-to-ground'
+local TO_GROUND_CONNECTION = {{
+	position = {0, 0},
+	direction = defines.direction.north
+}}
+
+function Biofluid.network_positions(surface_index)
+	local network_positions = global.network_positions[surface_index]
+	if not network_positions then
+		network_positions = {}
+		global.network_positions[surface_index] = network_positions
+	end
+	return network_positions
+end
+
 function Biofluid.heat_connection_facing_offset(entity_direction, connection)
 	local direction = (connection.direction + entity_direction) % 8
 	if direction == defines.direction.north then
@@ -25,12 +40,6 @@ function Biofluid.heat_connection_facing_offset(entity_direction, connection)
 		return {-1, 0}
 	end
 end
-
-local TO_GROUND = 'pipe-to-ground'
-local TO_GROUND_CONNECTION = {{
-	position = {0, 0},
-	direction = defines.direction.north
-}}
 
 function Biofluid.find_heat_connections(entity, previous_direction)
 	local heat_prototype
@@ -69,7 +78,7 @@ function Biofluid.find_underground_neighbour(entity)
 	local neighbor = neighbours[1]
 	if not Biofluid.connectable[neighbor.name] then return end
 	if neighbor.force_index ~= entity.force_index then return end
-	local network_positions = global.network_positions
+	local network_positions = Biofluid.network_positions(entity.surface_index)
 	local position = neighbor.position
 	local x = math.floor(position.x)
 	local y = math.floor(position.y)
@@ -83,7 +92,7 @@ function Biofluid.find_nearby_pipes(entity, connections)
 	local force_index = entity.force_index
 	local nearby_pipes = {}
 	local network_ids = {}
-	local network_positions = global.network_positions
+	local network_positions = Biofluid.network_positions(entity.surface_index)
 
 	for _, connection in pairs(connections) do
 		local facing_x, facing_y = connection.facing_x, connection.facing_y
@@ -128,7 +137,7 @@ end
 function Biofluid.built_pipe(entity)
 	local connections = Biofluid.find_heat_connections(entity)
 	if #connections == 0 then return end
-	local network_positions = global.network_positions
+	local network_positions = Biofluid.network_positions(entity.surface_index)
 
 	for _, connection in pairs(connections) do
 		local facing_x, facing_y = connection.facing_x, connection.facing_y
@@ -152,7 +161,7 @@ function Biofluid.built_pipe(entity)
 	else
 		for k, _ in pairs(network_ids) do
 			if network_id then
-				Biofluid.join_networks(network_id, k)
+				Biofluid.join_networks(network_id, k, network_positions)
 			else
 				network_id = k
 			end
@@ -162,7 +171,7 @@ function Biofluid.built_pipe(entity)
 	Biofluid.add_to_network(network_id, entity, connections)
 end
 
-function Biofluid.join_networks(new_id, old_id)
+function Biofluid.join_networks(new_id, old_id, network_positions)
 	local new = global.biofluid_networks[new_id]
 	local old = global.biofluid_networks[old_id]
 	if new.force_index ~= old.force_index then
@@ -170,7 +179,6 @@ function Biofluid.join_networks(new_id, old_id)
 		return
 	end
 	game.print('joining networks ' .. new_id .. ' ' .. old_id)
-	local network_positions = global.network_positions
 	for x, column in pairs(old.positions) do
 		for y, _ in pairs(column) do
 			network_positions[x][y].network_id = new_id
@@ -201,7 +209,7 @@ end
 
 function Biofluid.add_to_network(network_id, entity, connections)
 	local network = global.biofluid_networks[network_id]
-	local network_positions = global.network_positions
+	local network_positions = Biofluid.network_positions(entity.surface_index)
 	if not network then
 		game.print('ERROR: Invalid biofluid network with ID ' .. network_id)
 		return
@@ -231,7 +239,7 @@ end
 function Biofluid.destroyed_pipe(entity, previous_direction)
 	local connections = Biofluid.find_heat_connections(entity, previous_direction)
 	if #connections == 0 then return end
-	local network_positions = global.network_positions
+	local network_positions = Biofluid.network_positions(entity.surface_index)
 	local network_id
 	local network
 
@@ -261,13 +269,12 @@ function Biofluid.destroyed_pipe(entity, previous_direction)
 	if #nearby_pipes == 0 then
 		Biofluid.delete_network(network_id)
 	elseif #nearby_pipes > 1 then
-		Biofluid.split_network(network_id)
+		Biofluid.split_network(network_id, network_positions)
 	end
 end
 
-function Biofluid.split_network(network_id, starting_point, nearby_pipes)
+function Biofluid.split_network(network_id, starting_point, nearby_pipes, network_positions)
 	local network = global.biofluid_networks[network_id]
-	local network_positions = global.network_positions
 	local positions = network.positions
 	local entities = {}
 	Biofluid.delete_network(network_id)
@@ -293,7 +300,7 @@ end
 
 function Biofluid.remove_from_network(network_id, entity, connections)
 	local network = global.biofluid_networks[network_id]
-	local network_positions = global.network_positions
+	local network_positions = Biofluid.network_positions(entity.surface_index)
 	if not network then
 		game.print('ERROR: Invalid biofluid network with ID ' .. network_id)
 		return
