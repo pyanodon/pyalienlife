@@ -250,6 +250,7 @@ local recipes_list =
   "auog-food-01",
   "auog-food-01-sawdust",
   "auog-food-02",
+  "auog-food-02-sawdust",
   "charged-auog",
   "fish-food-01",
   "fish-food-02",
