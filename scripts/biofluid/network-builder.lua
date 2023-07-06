@@ -13,8 +13,8 @@ Biofluid.connectable = {
 	['requester-tank'] = REQUESTER,
 }
 
-function Biofluid.heat_connection_facing_offset(entity, connection)
-	local direction = (connection.direction + entity.direction) % 8
+function Biofluid.heat_connection_facing_offset(entity_direction, connection)
+	local direction = (connection.direction + entity_direction) % 8
 	if direction == defines.direction.north then
 		return {0, -1}
 	elseif direction == defines.direction.south then
@@ -57,7 +57,7 @@ function Biofluid.find_heat_connections(entity, previous_direction)
 		end
 		local x = math.floor(connection_x + position.x)
 		local y = math.floor(connection_y + position.y)
-		local offset = Biofluid.heat_connection_facing_offset(entity, connection)
+		local offset = Biofluid.heat_connection_facing_offset(previous_direction or entity.direction, connection)
 		if offset then connections[#connections+1] = {x = x, y = y, facing_x = x + offset[1], facing_y = y + offset[2]} end
 	end
 	return connections
