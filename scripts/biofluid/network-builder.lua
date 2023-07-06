@@ -178,7 +178,6 @@ function Biofluid.join_networks(new_id, old_id, network_positions)
 		game.print('ERROR: Attempt to join two biofluid networks with diffrent forces. ' .. new_id .. ' ' .. old_id)
 		return
 	end
-	game.print('joining networks ' .. new_id .. ' ' .. old_id)
 	for x, column in pairs(old.positions) do
 		for y, _ in pairs(column) do
 			network_positions[x][y].network_id = new_id
@@ -203,17 +202,12 @@ function Biofluid.create_network(force_index)
 		positions = {},
 	}
 	global.biofluid_networks[network_id] = network
-	game.print('new network '..network_id)
 	return network_id
 end
 
 function Biofluid.add_to_network(network_id, entity, connections)
 	local network = global.biofluid_networks[network_id]
 	local network_positions = Biofluid.network_positions(entity.surface_index)
-	if not network then
-		game.print('ERROR: Invalid biofluid network with ID ' .. network_id)
-		return
-	end
 
 	for _, connection in pairs(connections) do
 		local x, y = connection.x, connection.y
@@ -222,7 +216,6 @@ function Biofluid.add_to_network(network_id, entity, connections)
 		network.positions[x][y] = true
 	end
 
-	game.print('added to network ' .. network_id)
 	local entity_type = Biofluid.connectable[entity.name]
 	if entity_type == PIPE then return end
 	local unit_number = entity.unit_number
@@ -295,16 +288,11 @@ end
 
 function Biofluid.delete_network(network_id)
 	global.biofluid_networks[network_id] = nil
-	game.print('deleted network '..network_id)
 end
 
 function Biofluid.remove_from_network(network_id, entity, connections)
 	local network = global.biofluid_networks[network_id]
 	local network_positions = Biofluid.network_positions(entity.surface_index)
-	if not network then
-		game.print('ERROR: Invalid biofluid network with ID ' .. network_id)
-		return
-	end
 
 	for _, connection in pairs(connections) do
 		local x, y = connection.x, connection.y
