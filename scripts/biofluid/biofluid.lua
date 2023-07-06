@@ -31,3 +31,10 @@ Biofluid.events.on_destroyed = function(event)
 		Biofluid.destroyed_pipe(entity)
 	end
 end
+
+Biofluid.events.on_player_rotated_entity = function(event)
+	local entity = event.entity
+	if Biofluid.connectable[entity.name] then
+		Biofluid.rotated_pipe(entity, event.previous_direction)
+	end
+end

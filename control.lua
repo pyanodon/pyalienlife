@@ -153,9 +153,7 @@ script.on_event('open-gui', function(event)
     Caravan.events.used_capsule(event)
 end)
 
-script.on_event(defines.events.on_research_finished, function(event) Turd.events.on_research_finished(event) end)
-script.on_event(defines.events.on_research_reversed, function(event) Turd.events.on_research_reversed(event) end)
-
-script.on_event(defines.events.on_player_used_capsule, function(event)
-    Ulric.events.used_capsule(event)
-end)
+script.on_event(defines.events.on_research_finished, Turd.events.on_research_finished)
+script.on_event(defines.events.on_research_reversed, Turd.events.on_research_reversed)
+script.on_event(defines.events.on_player_used_capsule, Ulric.events.used_capsule)
+script.on_event(defines.events.on_player_rotated_entity, Biofluid.events.on_player_rotated_entity)

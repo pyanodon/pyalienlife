@@ -32,7 +32,7 @@ local TO_GROUND_CONNECTION = {{
 	direction = defines.direction.north
 }}
 
-function Biofluid.find_heat_connections(entity)
+function Biofluid.find_heat_connections(entity, previous_direction)
 	local heat_prototype
 	if entity.type == TO_GROUND then
 		heat_prototype = TO_GROUND_CONNECTION
@@ -43,7 +43,7 @@ function Biofluid.find_heat_connections(entity)
 	end
 
 	local position = entity.position
-	local direction = entity.direction
+	local direction = previous_direction or entity.direction
 	local connections = {}
 	for _, connection in pairs(heat_prototype) do
 		local connection_x = connection.position[1]
@@ -228,8 +228,8 @@ function Biofluid.add_to_network(network_id, entity, connections)
 end
 
 -- DESTRUCTIVE
-function Biofluid.destroyed_pipe(entity)
-	local connections = Biofluid.find_heat_connections(entity)
+function Biofluid.destroyed_pipe(entity, previous_direction)
+	local connections = Biofluid.find_heat_connections(entity, previous_direction)
 	if #connections == 0 then return end
 	local network_positions = global.network_positions
 	local network_id
@@ -314,7 +314,7 @@ function Biofluid.remove_from_network(network_id, entity, connections)
 end
 
 -- MIXED
-function Biofluid.rotated_pipe(entity)
-	Biofluid.destroyed_pipe(entity)
+function Biofluid.rotated_pipe(entity, previous_direction)
+	Biofluid.destroyed_pipe(entity, previous_direction)
 	Biofluid.built_pipe(entity)
 end
