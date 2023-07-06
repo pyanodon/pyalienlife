@@ -273,7 +273,7 @@ function Biofluid.destroyed_pipe(entity, previous_direction)
 	end
 end
 
-function Biofluid.split_network(network_id, starting_point, nearby_pipes, network_positions)
+function Biofluid.split_network(network_id, network_positions)
 	local network = global.biofluid_networks[network_id]
 	local positions = network.positions
 	local entities = {}
