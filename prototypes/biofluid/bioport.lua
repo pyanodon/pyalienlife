@@ -64,7 +64,7 @@ ENTITY {
     name = 'bioport',
     icon = '__pyalienlifegraphics2__/graphics/icons/o-roboport.png',
     icon_size = 64,
-    flags = {'placeable-player', 'player-creation'},
+    flags = {'placeable-player', 'player-creation', 'not-rotatable'},
     minable = {mining_time = 1, result = 'bioport'},
     selection_priority = 49,
     fixed_recipe = 'bioport-hidden-recipe',

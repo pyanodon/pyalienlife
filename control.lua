@@ -58,6 +58,7 @@ local function init()
     Turd.events.on_init()
     Vatbrain.events.on_init()
     Ulric.events.on_init()
+    Biofluid.events.on_init()
 end
 
 script.on_init(function()

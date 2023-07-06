@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = 'technology',
     name = 'biofluid-mk01',
-    icon = '__pyalienlifegraphics__/graphics/technology/domestication-1.png',
+    icon = '__pyalienlifegraphics2__/graphics/technology/robooport-mk01.png',
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'genetics-mk04'},
@@ -23,7 +23,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = 'technology',
     name = 'biofluid-mk02',
-    icon = '__pyalienlifegraphics__/graphics/technology/domestication-2.png',
+    icon = '__pyalienlifegraphics2__/graphics/technology/robooport-mk02.png',
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'biofluid-mk01'},
@@ -46,7 +46,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = 'technology',
     name = 'biofluid-mk03',
-    icon = '__pyalienlifegraphics__/graphics/technology/domestication-3.png',
+    icon = '__pyalienlifegraphics2__/graphics/technology/robooport-mk03.png',
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'biofluid-mk02'},
