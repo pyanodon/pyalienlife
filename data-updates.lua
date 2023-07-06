@@ -136,6 +136,20 @@ for building, order in pairs(farm_building_order) do
 end
 
 ----------------------------------------------------------------------------------------------------
+-- PYAE updates
+----------------------------------------------------------------------------------------------------
+
+if mods['pyalternativeenergy'] then
+    require('__pyalternativeenergy__/prototypes/updates/base-updates')
+    if mods['pycoalprocessing'] then require('__pyalternativeenergy__/prototypes/updates/pycoalprocessing-updates') end
+    if mods['pyalienlife'] then require('__pyalternativeenergy__/prototypes/updates/pyalienlife-updates') end
+    if mods['pyfusionenergy'] then require('__pyalternativeenergy__/prototypes/updates/pyfusionenergy-updates') end
+    if mods['pyhightech'] then require('__pyalternativeenergy__/prototypes/updates/pyhightech-updates') end
+    if mods['pyrawores'] then require('__pyalternativeenergy__/prototypes/updates/pyrawores-updates') end
+    if mods['pypetroleumhandling'] then require('__pyalternativeenergy__/prototypes/updates/pypetroleumhandling-updates') end
+end
+
+----------------------------------------------------------------------------------------------------
 -- TURD
 ----------------------------------------------------------------------------------------------------
 
