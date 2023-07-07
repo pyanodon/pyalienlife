@@ -135,6 +135,14 @@ for building, order in pairs(farm_building_order) do
     end
 end
 
+RECIPE('tar-quenching'):remove_unlock('separation'):add_unlock('tar-processing')
+RECIPE('concrete'):remove_unlock('separation'):add_unlock('concrete')
+RECIPE('hazard-concrete'):remove_unlock('separation'):add_unlock('concrete')
+RECIPE('quenching-tower'):remove_unlock('machines-mk01'):remove_unlock('separation'):add_unlock('tar-processing'):remove_ingredient('electronic-circuit')
+RECIPE('lime'):remove_unlock('separation'):add_unlock('concrete')
+RECIPE('sand-brick'):remove_unlock('concrete'):add_unlock('tar-processing')
+RECIPE('ball-mill-mk01'):remove_unlock('crusher'):add_unlock('crusher-2')
+
 ----------------------------------------------------------------------------------------------------
 -- PYAE updates
 ----------------------------------------------------------------------------------------------------
@@ -481,14 +489,6 @@ for _, category in pairs(searchtypes) do
         end
     end
 end
-
-RECIPE('tar-quenching'):remove_unlock('separation'):add_unlock('tar-processing')
-RECIPE('concrete'):remove_unlock('separation'):add_unlock('concrete')
-RECIPE('hazard-concrete'):remove_unlock('separation'):add_unlock('concrete')
-RECIPE('quenching-tower'):remove_unlock('machines-mk01'):remove_unlock('separation'):add_unlock('tar-processing'):remove_ingredient('electronic-circuit')
-RECIPE('lime'):remove_unlock('separation'):add_unlock('concrete')
-RECIPE('sand-brick'):remove_unlock('concrete'):add_unlock('tar-processing')
-RECIPE('ball-mill-mk01'):remove_unlock('crusher'):add_unlock('crusher-2')
 
 local walkable_types = {
     ['tree'] = true,

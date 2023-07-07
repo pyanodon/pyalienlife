@@ -59,13 +59,12 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'glass', amount = 4},
         {type = 'item', name = 'small-lamp', amount = 2},
-        {type = 'item', name = 'intelligent-unit', amount = 1},
         {type = 'item', name = mods['pyalternativeenergy'] and 'hts-coil' or 'tinned-cable', amount = 5},
     },
     results = {
         {type = 'item', name = 'bat-codex', amount = 2},
     },
-}:add_unlock{'biofluid-mk03'}
+}:add_unlock{'biofluid-mk03'}:add_ingredient{type = 'item', name = 'intelligent-unit', amount = 1}
 
 local animation = {
     layers = {
