@@ -16,7 +16,7 @@ RECIPE {
     results = {
         {"generator-2", 1}
     }
-}:add_unlock("domestication-mk03")
+}:add_unlock("domestication-mk04")
 
 ITEM {
     type = "item",

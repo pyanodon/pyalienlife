@@ -79,7 +79,7 @@ local prototypes = {
 		}
 	},
 	flyavan = {
-		inventory_size = 60,
+		inventory_size = 90,
 		opens_player_inventory = true,
 		fuel_size = 4,
 		destructible = false,

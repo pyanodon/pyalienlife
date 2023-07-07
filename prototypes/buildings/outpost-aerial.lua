@@ -18,7 +18,7 @@ RECIPE {
 		{type = 'item', name = 'neuroprocessor', amount = 10},
     },
     result = 'outpost-aerial'
-}:add_unlock('domestication-mk02')
+}:add_unlock('domestication-mk03')
 
 ITEM {
     type = 'item',

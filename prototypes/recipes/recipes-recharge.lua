@@ -28,7 +28,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'charged-dingrit', amount = 1},
     },
-}:add_unlock("domestication-mk03")
+}:add_unlock("domestication-mk04")
 
 ---------------------MK LEVELS--------------
 
@@ -153,7 +153,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'dingrits', amount = 5},
     },
-}:add_unlock("domestication-mk03")
+}:add_unlock("domestication-mk04")
 
 RECIPE {
     type = 'recipe',
@@ -189,7 +189,7 @@ RECIPE {
 --     results = {
 --         {type = 'item', name = 'dingrits-mk02', amount = 5},
 --     },
--- }:add_unlock("domestication-mk03")
+-- }:add_unlock("domestication-mk04")
 
 -- RECIPE {
 --     type = 'recipe',
@@ -206,7 +206,7 @@ RECIPE {
 --     results = {
 --         {type = 'item', name = 'dingrits-mk02', amount = 5},
 --     },
--- }:add_unlock("domestication-mk03")
+-- }:add_unlock("domestication-mk04")
 
 -- --mk03
 
@@ -298,7 +298,7 @@ if mods['pyalternativeenergy'] then
         results = {
             {type = 'item', name = 'simik', amount = 2},
         },
-    }:add_unlock("domestication-mk03")
+    }:add_unlock("domestication-mk04")
 
     RECIPE {
         type = 'recipe',
@@ -333,7 +333,7 @@ if mods['pyalternativeenergy'] then
     --     results = {
     --         {type = 'item', name = 'simik-mk02', amount = 4},
     --     },
-    -- }:add_unlock("domestication-mk03")
+    -- }:add_unlock("domestication-mk04")
 
     -- RECIPE {
     --     type = 'recipe',
@@ -350,7 +350,7 @@ if mods['pyalternativeenergy'] then
     --     results = {
     --         {type = 'item', name = 'simik-mk02', amount = 4},
     --     },
-    -- }:add_unlock("domestication-mk03")
+    -- }:add_unlock("domestication-mk04")
 
     -- --mk03
 

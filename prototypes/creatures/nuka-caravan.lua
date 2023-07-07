@@ -18,7 +18,7 @@ RECIPE {
 		{type = 'item', name = 'explosive-rocket', amount = 1},
     },
     result = 'nukavan'
-}:add_unlock('domestication-mk03')
+}:add_unlock('domestication-mk04')
 
 ITEM {
 	type = 'item-with-tags',

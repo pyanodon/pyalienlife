@@ -24,7 +24,7 @@ RECIPE{
 		{type = 'item', name = 'green-wire', amount = 10},
     },
     result = 'flyavan'
-}:add_unlock('domestication-mk02')
+}:add_unlock('domestication-mk03')
 
 ITEM {
 	type = 'item-with-tags',

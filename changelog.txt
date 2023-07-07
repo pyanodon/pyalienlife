@@ -15,6 +15,8 @@ Date: ?
     - yaedols turd wastewater buffed 1->5. spores nerfed 12->4.
     - fixed that the auog food turd upgrade did not allow for productivity when the base recipe did
     - allow many entities to work with the upgrade planner
+    - increased aerial caravan inventory size 60 -> 90. moved from py2 to chemical science
+    - added a 5th tier of domestication tech.
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.5
 Date: 2023-6-23
