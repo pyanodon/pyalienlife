@@ -81,7 +81,7 @@ data:extend{{
 	},
 	icon = '__pyalienlifegraphics2__/graphics/icons/flyavan-outpost.png',
 	icon_size = 64,
-	inventory_size = 60,
+	inventory_size = 90,
 	max_health = 1200,
 	minable = {
 		mining_time = 0.2,
