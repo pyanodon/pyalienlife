@@ -23,3 +23,14 @@ circuit_connector_definitions["fluid-drill-mkxx"] = circuit_connector_definition
     { variation = 18, main_offset = util.by_pixel(30, 50), shadow_offset = util.by_pixel(24, 62), show_shadow = false }
   }
 )
+
+circuit_connector_definitions["harvester"] = circuit_connector_definitions.create
+(
+  universal_connector_template,
+  {
+    { variation = 25, main_offset = util.by_pixel(106, -12), shadow_offset = util.by_pixel(100, 0), show_shadow = false }, 
+    { variation = 25, main_offset = util.by_pixel(106, -12), shadow_offset = util.by_pixel(100, 0), show_shadow = false },
+    { variation = 25, main_offset = util.by_pixel(106, -12), shadow_offset = util.by_pixel(100, 0), show_shadow = false },
+    { variation = 25, main_offset = util.by_pixel(106, -12), shadow_offset = util.by_pixel(100, 0), show_shadow = false }
+  }
+)

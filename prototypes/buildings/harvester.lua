@@ -76,6 +76,9 @@ ENTITY {
         width = 4,
         height = 4
     },
+    circuit_wire_connection_points = circuit_connector_definitions["harvester"].points,
+    circuit_connector_sprites = circuit_connector_definitions["harvester"].sprites,
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     animations = {
         layers = {
             {
