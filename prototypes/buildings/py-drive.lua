@@ -103,10 +103,11 @@ ENTITY {
       emissions_per_minute = 3,
       render_no_power_icon = true,
       output_flow_limit = "0W",
+      buffer_capacity = '10MW'
   },
   localised_name = {'entity-name.pydrive'},
   localised_description = {'entity-description.pydrive'},
-  energy_usage = "1000kW",
+  energy_usage = "10MW",
   continuous_animation = true,
   animations =
   {

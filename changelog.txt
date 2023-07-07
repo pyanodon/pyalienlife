@@ -17,6 +17,7 @@ Date: ?
     - allow many entities to work with the upgrade planner
     - increased aerial caravan inventory size 60 -> 90. moved from py2 to chemical science
     - added a 5th tier of domestication tech.
+    - fixed that logistic stations would always flash a red "no power" icon. energy usage increased 1mW -> 10mW
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.5
 Date: 2023-6-23
