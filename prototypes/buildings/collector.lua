@@ -218,5 +218,6 @@ ENTITY {
         sound = {filename = "__pyalienlifegraphics__/sounds/collector.ogg", volume = 0.9},
         idle_sound = {filename = "__pyalienlifegraphics__/sounds/collector.ogg", volume = 0.3},
         apparent_volume = 2.5
-    }
+    },
+    next_upgrade = 'collector-mk02'
 }
