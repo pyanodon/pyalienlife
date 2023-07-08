@@ -19,7 +19,7 @@ function Biofluid.update_bioport_gui(entity, player, gui)
 	end
 	if not network then gui.destroy() return end
 
-	local inventory = Biofluid.get_bioport_inventory(entity)
+	local inventory = entity.get_inventory(defines.inventory.assembling_machine_input)
 	local contents = inventory.get_contents()
 	local status = Biofluid.why_isnt_my_bioport_working(network, contents)
 	local img = Biofluid.failure_reasons[status]
@@ -29,7 +29,7 @@ function Biofluid.update_bioport_gui(entity, player, gui)
 
 	local fuel_flow = content_flow.fuel_flow
 	for _, element in pairs(fuel_flow.children) do
-		if element.type == 'sprite-button' then
+		if element.type == 'sprite-button' and element.name ~= 'py_guano_output' then
 			local tags = element.tags
 			element.sprite = 'utility/slot_icon_fuel'
 			element.number = nil
@@ -73,6 +73,10 @@ function Biofluid.update_bioport_gui(entity, player, gui)
 	end
 
 	if i == 1 then fuel_flow['py_biofluid_food_1'].visible = true end
+
+	local slot = entity.get_inventory(defines.inventory.assembling_machine_output)[1]
+	local element = fuel_flow['py_guano_output']
+	element.number = slot.valid_for_read and slot.count or 0
 end
 
 function Biofluid.build_bioport_gui(entity, player)
@@ -116,6 +120,7 @@ function Biofluid.build_bioport_gui(entity, player)
         fuel_slot.tooltip = favorite_food_tooltip
     end
     fuel_flow.add{type = 'progressbar', name = 'fuel_bar', style = 'burning_progressbar'}.style.horizontally_stretchable = true
+	fuel_flow.add{type = 'sprite-button', name = 'py_guano_output', style = 'inventory_slot', tags = {unit_number = entity.unit_number, slot_index = 1}, sprite = 'item/guano'}
 
     content_flow.add{type = 'line'}
 
@@ -139,7 +144,7 @@ Biofluid.events.on_gui_closed = function(event)
 	end
 end
 
-local function gui_click(event)
+local function gui_click(event, inventory_index)
 	local player = game.get_player(event.player_index)
 	local cursor_stack = player.cursor_stack
     if not cursor_stack then return end
@@ -156,7 +161,7 @@ local function gui_click(event)
 	end
 	if not entity then return end
 
-	local inventory = Biofluid.get_bioport_inventory(entity)
+	local inventory = entity.get_inventory(inventory_index)
 	
 	if cursor_stack.valid_for_read then
 		local actually_inserted = inventory.insert(cursor_stack)
@@ -169,5 +174,6 @@ local function gui_click(event)
 	Biofluid.update_bioport_gui(entity, player, player.gui.relative.bioport_gui)
 end
 
-gui_events[defines.events.on_gui_click]['py_biofluid_food_.'] = gui_click
-gui_events[defines.events.on_gui_click]['py_biofluid_module_.'] = gui_click
+gui_events[defines.events.on_gui_click]['py_biofluid_food_.'] = function(event) gui_click(event, defines.inventory.assembling_machine_input) end
+gui_events[defines.events.on_gui_click]['py_biofluid_module_.'] = function(event) gui_click(event, defines.inventory.assembling_machine_input) end
+gui_events[defines.events.on_gui_click]['py_guano_output'] = function(event) gui_click(event, defines.inventory.assembling_machine_output) end

@@ -62,10 +62,6 @@ function Biofluid.get_unfulfilled_requests()
 	return result
 end
 
-function Biofluid.get_bioport_inventory(entity)
-	return entity.get_inventory(defines.inventory.assembling_machine_input)
-end
-
 function Biofluid.why_isnt_my_bioport_working(network, inventory_contents)
 	local has_food, has_creature = false
 	for item, _ in pairs(inventory_contents) do

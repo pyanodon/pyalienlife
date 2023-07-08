@@ -48,7 +48,9 @@ local recipe = RECIPE {
         {'huzu', data.raw.item['huzu'].stack_size},
         {'chorkok', data.raw.item['chorkok'].stack_size},
     },
-    results = {},
+    results = {
+        {'guano', data.raw.item['guano'].stack_size},
+    },
     energy_required = 100,
     category = 'biofluid',
     icon = '__pyalienlifegraphics2__/graphics/icons/o-roboport.png',

@@ -1,5 +1,5 @@
 Biofluid.favorite_foods = {
-	['gastrocapacitor'] = 400,
+	['workers-food'] = 100,
 	['workers-food-02'] = 500,
 	['workers-food-03'] = 1200,
 }
@@ -37,10 +37,11 @@ Biofluid.failure_reasons = {
 }
 
 Biofluid.bioport_slot_indexes = {
-	['workers-food-02'] = 1,
-	['workers-food-03'] = 2,
-	['gastrocapacitor'] = 3,
+	['guano'] = 1,
+	['workers-food'] = 1,
+	['workers-food-02'] = 2,
+	['workers-food-03'] = 3,
 	['gobachov'] = 4,
 	['huzu'] = 5,
-	['chorkok'] = 6,
+	['chorkok'] = 6
 }
