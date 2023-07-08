@@ -65,6 +65,8 @@ ITEM {
 local pipe = table.deepcopy(data.raw['heat-pipe']['heat-pipe'])
 pipe.name = 'vessel'
 pipe.minable = {mining_time = 0.2, result = 'vessel'}
+pipe.fast_replaceable_group = 'vessel'
+pipe.next_upgrade = nil
 pipe.heat_buffer = {
     max_temperature = 0,
     default_temperature = 0,
@@ -106,6 +108,8 @@ pipe.heat_buffer = {
 local underground_pipe = table.deepcopy(data.raw['pipe-to-ground']['pipe-to-ground'])
 underground_pipe.name = 'vessel-to-ground'
 underground_pipe.minable = {mining_time = 0.2, result = 'vessel-to-ground'}
+underground_pipe.fast_replaceable_group = 'vessel'
+underground_pipe.next_upgrade = nil
 underground_pipe.fluid_box = {
     base_area = 0.01,
     base_level = 1999,
@@ -121,3 +125,38 @@ underground_pipe.fluid_box = {
 }
 
 data:extend{pipe, underground_pipe}
+
+data:extend{{
+    name = 'vessel-to-ground-heat-connection',
+    type = 'furnace',
+    icon = underground_pipe.icon,
+    icon_size = underground_pipe.icon_size,
+    localised_name = {'entity-name.vessel-to-ground'},
+    localised_description = {'entity-description.vessel-to-ground'},
+    flags = {'hidden', 'placeable-neutral', 'no-automated-item-insertion', 'no-automated-item-removal', 'not-flammable'},
+    collision_box = underground_pipe.collision_box,
+    collision_mask = {},
+    show_recipe_icon = false,
+    crafting_speed = 1,
+    result_inventory_size = 0,
+    source_inventory_size = 0,
+    crafting_categories = {'biofluid'},
+    energy_source = {
+        connections = {
+          {
+            direction = 0,
+            position = {0, 0}
+          }
+        },
+        max_temperature = 0,
+        default_temperature = 0,
+        min_working_temperature = 0,
+        max_transfer = '1W',
+        specific_heat = '1W',
+        type = 'heat',
+        pipe_covers = require('__pyalienlife__/prototypes/biofluid/pipe-cover'),
+        heat_pipe_covers = require('__pyalienlife__/prototypes/biofluid/pipe-cover'),
+    },
+    energy_usage = '1W',
+    show_recipe_icon_on_map = false,
+}}

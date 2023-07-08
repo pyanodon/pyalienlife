@@ -168,7 +168,6 @@ script.on_nth_tick(60, Caravan.events[60])
 script.on_nth_tick(61, Digosaurus.events[61])
 script.on_nth_tick(79, Biofluid.events[79])
 script.on_nth_tick(121, Farming.events[121])
-script.on_nth_tick(127, Biofluid.events[127])
 script.on_nth_tick(221, Oculua.events[221])
 script.on_nth_tick(397, Ulric.events[397])
 

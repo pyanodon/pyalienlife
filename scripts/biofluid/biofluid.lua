@@ -13,6 +13,7 @@ Biofluid.events.on_init = function()
 	global.biofluid_robots = global.biofluid_robots or {}
 	global.biofluid_requesters = global.biofluid_requesters or {}
 	global.biofluid_bioports = global.biofluid_bioports or {}
+	global.biofluid_undergrounds = global.biofluid_undergrounds or {}
 	global.biofluid_networks = global.biofluid_networks or {}
 	global.network_positions = global.network_positions or {}
 end
@@ -25,9 +26,7 @@ Biofluid.events.on_built = function(event)
 	local network_id = Biofluid.built_pipe(entity)
 	if not network_id then return end
 	local unit_number = entity.unit_number
-	if connection_type == Biofluid.PIPE then
-		entity.operable = false
-	elseif connection_type == Biofluid.REQUESTER then
+	if connection_type == Biofluid.REQUESTER then
 		global.biofluid_requesters[unit_number] = {
 			entity = entity,
 			requested_fluid = NO_REQUEST,
@@ -44,7 +43,30 @@ Biofluid.events.on_built = function(event)
 		}
 		Biofluid.reset_guano_bar(bioport_data)
 		global.biofluid_bioports[unit_number] = bioport_data
+	elseif entity.type == 'pipe-to-ground' then
+		entity.operable = false
+		global.biofluid_undergrounds[unit_number] = {entity = entity}
+		Biofluid.spawn_underground_pipe_heat_connection(global.biofluid_undergrounds[unit_number])
 	end
+end
+
+function Biofluid.spawn_underground_pipe_heat_connection(underground_data)
+	if underground_data.heat_connection and underground_data.heat_connection.valid then
+		underground_data.heat_connection.destroy()
+	end
+	local entity = underground_data.entity
+	local heat_connection = entity.surface.create_entity{
+		direction = entity.direction,
+		name = 'vessel-to-ground-heat-connection',
+		force = entity.force_index,
+		position = entity.position
+	}
+	heat_connection.destructible = false
+	heat_connection.minable = false
+	heat_connection.operable = false
+	heat_connection.active = false
+	heat_connection.rotatable = false
+	underground_data.heat_connection = heat_connection
 end
 
 Biofluid.events.on_destroyed = function(event)
@@ -52,8 +74,17 @@ Biofluid.events.on_destroyed = function(event)
 	if Biofluid.connectable[entity.name] then
 		Biofluid.destroyed_pipe(entity)
 		local unit_number = entity.unit_number
-		global.biofluid_requesters[unit_number] = nil
-		global.biofluid_bioports[unit_number] = nil
+		if entity.type == 'pipe-to-ground' then
+			local underground_data = global.biofluid_undergrounds[unit_number]
+			if not underground_data then return end
+			local heat_connection = underground_data.heat_connection
+			if not heat_connection or not heat_connection.valid then return end
+			heat_connection.destroy()
+			global.biofluid_undergrounds[unit_number] = nil
+		else
+			global.biofluid_requesters[unit_number] = nil
+			global.biofluid_bioports[unit_number] = nil
+		end
 	end
 end
 
@@ -61,13 +92,12 @@ Biofluid.events.on_player_rotated_entity = function(event)
 	local entity = event.entity
 	if Biofluid.connectable[entity.name] then
 		Biofluid.rotated_pipe(entity, event.previous_direction)
+		if entity.type == 'pipe-to-ground' then
+			local underground_data = global.biofluid_undergrounds[entity.unit_number]
+			if not underground_data then return end
+			Biofluid.spawn_underground_pipe_heat_connection(underground_data)
+		end
 	end
-end
-
-Biofluid.events[127] = function(event)
-	local networks = global.biofluid_networks
-	if #networks == 0 then return end
-	local unfulfilled_requests = Biofluid.get_unfulfilled_requests()
 end
 
 Biofluid.events[79] = function(event)
@@ -87,6 +117,10 @@ Biofluid.events[79] = function(event)
 		end
 		::continue::
 	end
+
+	local networks = global.biofluid_networks
+	if #networks == 0 then return end
+	local unfulfilled_requests = Biofluid.get_unfulfilled_requests()
 end
 
 function Biofluid.get_unfulfilled_requests()
