@@ -39,17 +39,6 @@ function Digosaurus.validity_check(dig_data)
 	return true
 end
 
-local function draw_error_sprite(dig_data, sprite)
-    rendering.draw_sprite{
-        sprite = sprite,
-        x_scale = 0.5,
-        y_scale = 0.5,
-        target = dig_data.entity,
-        surface = dig_data.entity.surface,
-        time_to_live = 30
-    }
-end
-
 function Digosaurus.find_random_scanned_ore(dig_data)
     local scanned_ores = dig_data.scanned_ores
     local max_index = 0
@@ -112,6 +101,7 @@ function Digosaurus.eat(food_inventory, food_inventory_contents)
     end
 end
 
+local time_to_live = 30
 Digosaurus.events[61] = function(event)
     for _, dig_data in pairs(global.dig_sites) do
         if not Digosaurus.validity_check(dig_data) then goto continue end
@@ -119,15 +109,15 @@ Digosaurus.events[61] = function(event)
         local food_inventory_contents = dig_data.food_inventory.get_contents()
 
         if table_size(dig_data.scanned_ores) == 0 then
-            draw_error_sprite(dig_data, 'utility.warning_icon')
+            draw_error_sprite(entity, 'utility.warning_icon', time_to_live)
         elseif not Digosaurus.has_food(food_inventory_contents) then
-            draw_error_sprite(dig_data, 'utility.fuel_icon')
+            draw_error_sprite(entity, 'utility.fuel_icon', time_to_live)
         elseif entity.energy == 0 then
-            draw_error_sprite(dig_data, 'utility.electricity_icon_unplugged')
+            draw_error_sprite(entity, 'utility.electricity_icon_unplugged', time_to_live)
         elseif dig_data.digosaur_inventory.is_empty() then
-            draw_error_sprite(dig_data, 'no_module_animal')
+            draw_error_sprite(entity, 'no_module_animal', time_to_live)
         elseif entity.energy < entity.electric_buffer_size * 0.9 then
-            draw_error_sprite(dig_data, 'utility.electricity_icon')
+            draw_error_sprite(entity, 'utility.electricity_icon', time_to_live)
         else
             if dig_data.inventory.get_item_count() > 1000 then
                 goto continue -- only mine until 1000 ores

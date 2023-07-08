@@ -445,15 +445,7 @@ Caravan.events[60] = function(event)
 		::didnt_move::
 
 		if caravan_data.fuel_inventory and caravan_data.fuel_bar == 0 and caravan_data.fuel_inventory.is_empty() then
-			rendering.draw_sprite{
-				sprite = 'utility.fuel_icon',
-				x_scale = 0.5,
-				y_scale = 0.5,
-				target = entity,
-				surface = entity.surface,
-				time_to_live = 30,
-				render_layer = 'air-entity-info-icon'
-			}
+			draw_error_sprite(entity, 'utility.fuel_icon', 30)
 			goto continue
 		end
 

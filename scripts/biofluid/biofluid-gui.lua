@@ -17,7 +17,7 @@ function Biofluid.update_bioport_gui(entity, player, gui)
 
 	local inventory = entity.get_inventory(defines.inventory.assembling_machine_input)
 	local contents = inventory.get_contents()
-	local status = Biofluid.why_isnt_my_bioport_working(network, contents)
+	local status = Biofluid.why_isnt_my_bioport_working(bioport_data)
 	local img = Biofluid.failure_reasons[status]
 	local content_flow = gui.content_frame.content_flow
 	content_flow.status_flow.status_text.caption = {status}

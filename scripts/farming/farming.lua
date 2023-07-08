@@ -6,17 +6,6 @@ Farming.events = {}
 ---|See `scripts/farming/farm-build-list.lua` for an example
 local farm_buildings = require 'farm-building-list'
 
-function Farming.draw_error(kingdom, entity)
-	return rendering.draw_sprite{
-        sprite = 'no_module_' .. kingdom,
-		x_scale = 0.5,
-		y_scale = 0.5,
-        target = entity,
-        surface = entity.surface,
-		time_to_live = 30
-    }
-end
-
 ---register_type registers a farm for module restrictions
 ---@param farm_name string name of farm building without -mkxx suffix
 ---@param kingdom_name 'animal' | 'plant' | 'fungi'
@@ -44,14 +33,14 @@ function Farming.get_kingdom(entity)
 end
 
 function Farming.disable_machine(entity)
-    local signtype = Farming.get_kingdom(entity)
-	if not signtype then return end
+    local kingdom = Farming.get_kingdom(entity)
+	if not kingdom then return end
     entity.active = false
 	global.disabled_farm_buildings[entity.unit_number] = entity
 	script.register_on_entity_destroyed(entity)
 	entity.crafting_progress = 0
 	entity.bonus_progress = 0
-	Farming.draw_error(signtype, entity)
+	draw_error_sprite(entity, 'no_module_' .. kingdom, 30)
 end
 
 Farming.events.on_init = function()
@@ -77,7 +66,7 @@ Farming.events[59] = function(event)
 		if not farm.valid then
 			global.disabled_farm_buildings[unit_number] = nil
 		elseif farm.get_module_inventory().is_empty() then
-			Farming.draw_error(Farming.get_kingdom(farm), farm)
+			draw_error_sprite(farm, 'no_module_' .. Farming.get_kingdom(farm), 30)
 		else
 			global.disabled_farm_buildings[unit_number] = nil
 			farm.active = true

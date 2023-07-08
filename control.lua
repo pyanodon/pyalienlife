@@ -43,6 +43,18 @@ _G.generate_allowed_module_tooltip = function(allowed_modules)
 	return favorites
 end
 
+_G.draw_error_sprite = function(entity, sprite, time_to_live)
+    rendering.draw_sprite{
+        sprite = sprite,
+        x_scale = 0.5,
+        y_scale = 0.5,
+        target = entity,
+        surface = entity.surface,
+        time_to_live = 30,
+        render_layer = 'air-entity-info-icon'
+    }
+end
+
 require 'scripts/wiki/text-pages'
 require 'scripts/caravan/caravan'
 require 'scripts/digosaurus/digosaurus'
@@ -154,6 +166,7 @@ script.on_nth_tick(43, Oculua.events[43])
 script.on_nth_tick(59, Farming.events[59])
 script.on_nth_tick(60, Caravan.events[60])
 script.on_nth_tick(61, Digosaurus.events[61])
+script.on_nth_tick(79, Biofluid.events[79])
 script.on_nth_tick(121, Farming.events[121])
 script.on_nth_tick(127, Biofluid.events[127])
 script.on_nth_tick(221, Oculua.events[221])

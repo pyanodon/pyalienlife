@@ -39,7 +39,8 @@ Biofluid.events.on_built = function(event)
 		local bioport_data = {
 			entity = entity,
 			network_id = network_id,
-			fuel_remaning = 0
+			fuel_remaning = 0,
+			active = false
 		}
 		Biofluid.reset_guano_bar(bioport_data)
 		global.biofluid_bioports[unit_number] = bioport_data
@@ -69,14 +70,38 @@ Biofluid.events[127] = function(event)
 	local unfulfilled_requests = Biofluid.get_unfulfilled_requests()
 end
 
+Biofluid.events[79] = function(event)
+	for unit_number, bioport_data in pairs(global.biofluid_bioports) do
+		local entity = bioport_data.entity
+		if not entity or not entity.valid then
+			global.biofluid_bioports[unit_number] = nil
+			goto continue
+		end
+		local failure_reason = Biofluid.why_isnt_my_bioport_working(bioport_data)
+		local status_icon = Biofluid.status_icons[failure_reason]
+		if status_icon then
+			draw_error_sprite(entity, status_icon, 40)
+			bioport_data.active = false
+		else
+			bioport_data.active = true
+		end
+		::continue::
+	end
+end
+
 function Biofluid.get_unfulfilled_requests()
 	local result = {}
 	return result
 end
 
-function Biofluid.why_isnt_my_bioport_working(network, inventory_contents)
+function Biofluid.why_isnt_my_bioport_working(bioport_data)
+	local entity = bioport_data.entity
+	if not entity or not entity.valid then return 'entity-status.working' end
+	local network = global.biofluid_networks[bioport_data.network_id]
+	if not network then return 'entity-status.working' end
+	
 	local has_food, has_creature = false
-	for item, _ in pairs(inventory_contents) do
+	for item, _ in pairs(entity.get_inventory(defines.inventory.assembling_machine_input).get_contents()) do
 		if Biofluid.favorite_foods[item] then
 			has_food = true
 		elseif Biofluid.biorobots[item] then
@@ -90,8 +115,13 @@ function Biofluid.why_isnt_my_bioport_working(network, inventory_contents)
 		return 'entity-status.no-creature'
 	elseif not next(network.requesters) and not next(network.providers) then
 		return 'entity-status.no-biofluid-network'
+	else
+		local inventory = entity.get_inventory(defines.inventory.assembling_machine_output)
+		if inventory.can_insert('guano') then
+			return 'entity-status.working'
+		end
+		return 'entity-status.full-output'
 	end
-	return 'entity-status.working'
 end
 
 function Biofluid.open_inventory(player)
@@ -108,6 +138,6 @@ end
 
 function Biofluid.reset_guano_bar(bioport_data)
 	local rng = math.random(4, 7)
-	bioport.current_delivery = 0
-	bioport.deliveries_til_guano = rng
+	bioport_data.current_delivery = 0
+	bioport_data.deliveries_til_guano = rng
 end

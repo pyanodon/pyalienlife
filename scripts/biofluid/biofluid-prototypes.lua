@@ -33,7 +33,15 @@ Biofluid.failure_reasons = {
 	['entity-status.no-food'] = 'utility/status_not_working',
 	['entity-status.no-creature'] = 'utility/status_not_working',
 	['entity-status.no-biofluid-network'] = 'utility/status_yellow',
+	['entity-status.full-output'] = 'utility/status_yellow',
 	['entity-status.working'] = 'utility/status_working',
+}
+
+Biofluid.status_icons = {
+	['entity-status.no-food'] = 'utility.fuel_icon',
+	['entity-status.no-creature'] = 'no_module_animal',
+	['entity-status.no-biofluid-network'] = 'utility.too_far_from_roboport_icon',
+	['entity-status.full-output'] = 'utility.warning_icon'
 }
 
 Biofluid.bioport_slot_indexes = {
