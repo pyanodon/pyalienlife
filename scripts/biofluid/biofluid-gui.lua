@@ -10,13 +10,9 @@ end
 
 function Biofluid.update_bioport_gui(entity, player, gui)
 	local unit_number = entity.unit_number
-	local network
-	for _, n in pairs(global.biofluid_networks) do
-		if n.bioports[unit_number] then
-			network = n
-			break
-		end
-	end
+	local bioport_data = global.biofluid_bioports[unit_number]
+	if not bioport_data then gui.destroy() return end
+	local network = global.biofluid_networks[bioport_data.network_id]
 	if not network then gui.destroy() return end
 
 	local inventory = entity.get_inventory(defines.inventory.assembling_machine_input)
@@ -119,7 +115,9 @@ function Biofluid.build_bioport_gui(entity, player)
         fuel_slot.sprite = 'utility/slot_icon_fuel'
         fuel_slot.tooltip = favorite_food_tooltip
     end
-    fuel_flow.add{type = 'progressbar', name = 'fuel_bar', style = 'burning_progressbar'}.style.horizontally_stretchable = true
+	local bar_flow = fuel_flow.add{type = 'flow', name = 'bar_flow', direction = 'vertical'}
+    bar_flow.add{type = 'progressbar', name = 'fuel_bar', style = 'burning_progressbar'}.style.horizontally_stretchable = true
+    bar_flow.add{type = 'progressbar', name = 'guano_bar', style = 'bonus_progressbar'}.style.horizontally_stretchable = true
 	fuel_flow.add{type = 'sprite-button', name = 'py_guano_output', style = 'inventory_slot', tags = {unit_number = entity.unit_number, slot_index = 1}, sprite = 'item/guano'}
 
     content_flow.add{type = 'line'}
@@ -151,16 +149,10 @@ local function gui_click(event, inventory_index)
 	local element = event.element
 	local unit_number = element.tags.unit_number
 	local slot_index = element.tags.slot_index
-
-	local entity
-	for _, n in pairs(global.biofluid_networks) do
-		if n.bioports[unit_number] then
-			entity = n.bioports[unit_number]
-			break
-		end
-	end
-	if not entity then return end
-
+	local bioport_data = global.biofluid_bioports[unit_number]
+	if not bioport_data then return end
+	local entity = bioport_data.entity
+	if not entity or not entity.valid then return end
 	local inventory = entity.get_inventory(inventory_index)
 	
 	if cursor_stack.valid_for_read then

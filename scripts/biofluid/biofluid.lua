@@ -12,6 +12,7 @@ local NO_REQUEST = nil
 Biofluid.events.on_init = function()
 	global.biofluid_robots = global.biofluid_robots or {}
 	global.biofluid_requesters = global.biofluid_requesters or {}
+	global.biofluid_bioports = global.biofluid_bioports or {}
 	global.biofluid_networks = global.biofluid_networks or {}
 	global.network_positions = global.network_positions or {}
 end
@@ -34,6 +35,14 @@ Biofluid.events.on_built = function(event)
 			network_id = network_id,
 			incoming = 0
 		}
+	elseif connection_type == Biofluid.ROBOPORT then
+		local bioport_data = {
+			entity = entity,
+			network_id = network_id,
+			fuel_remaning = 0
+		}
+		Biofluid.reset_guano_bar(bioport_data)
+		global.biofluid_bioports[unit_number] = bioport_data
 	end
 end
 
@@ -41,6 +50,9 @@ Biofluid.events.on_destroyed = function(event)
 	local entity = event.entity
 	if Biofluid.connectable[entity.name] then
 		Biofluid.destroyed_pipe(entity)
+		local unit_number = entity.unit_number
+		global.biofluid_requesters[unit_number] = nil
+		global.biofluid_bioports[unit_number] = nil
 	end
 end
 
@@ -92,4 +104,10 @@ function Biofluid.open_inventory(player)
 	player.opened = nil
 	player.opened = global.empty_gui_item
 	return player.opened
+end
+
+function Biofluid.reset_guano_bar(bioport_data)
+	local rng = math.random(4, 7)
+	bioport.current_delivery = 0
+	bioport.deliveries_til_guano = rng
 end

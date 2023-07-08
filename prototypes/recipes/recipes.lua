@@ -2944,7 +2944,7 @@ RECIPE {
     name = 'workers-food-03',
     category = 'advanced-crafting',
     enabled = false,
-    energy_required = 20,
+    energy_required = 160,
     ingredients = {
         {type = 'item', name = 'workers-food-02', amount = 2},
         {type = 'item', name = 'plastic-bar', amount = 4},
