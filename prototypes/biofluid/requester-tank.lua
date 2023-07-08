@@ -40,7 +40,7 @@ ENTITY {
     corpse = 'small-remnants',
     max_health = data.raw['pipe']['pipe'].max_health,
     resistances = data.raw['pipe']['pipe'].resistances,
-    fast_replaceable_group = data.raw['pipe']['pipe'].fast_replaceable_group,
+    fast_replaceable_group = 'vessel',
     collision_box = data.raw['pipe']['pipe'].collision_box,
     selection_box = data.raw['pipe']['pipe'].selection_box,
     working_sound = nil, -- TODO
