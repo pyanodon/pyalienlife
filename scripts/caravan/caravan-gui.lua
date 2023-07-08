@@ -130,16 +130,6 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 	local add_outpost = gui.add{type = 'button', name = 'py_add_outpost', style = 'train_schedule_add_station_button', caption = {'caravan-gui.add-outpost'}}
 end
 
-local function generate_favorite_food_tooltip(caravan_data)
-	local favorites = {''}
-	for food, actions in pairs(prototypes[caravan_data.entity.name].favorite_foods) do
-		favorites[#favorites + 1] = {'caravan-gui.favorite-foods-sub', '[item=' .. food .. ']', game.item_prototypes[food].localised_name, actions}
-		favorites[#favorites + 1] = '\n'
-	end
-	favorites[#favorites] = nil
-	return {'caravan-gui.favorite-foods-main', favorites}
-end
-
 function Caravan.build_gui(player, entity)
 	local caravan_data = global.caravans[entity.unit_number]
 	local prototype = prototypes[entity.name]
@@ -198,7 +188,7 @@ function Caravan.build_gui(player, entity)
 	if caravan_data.fuel_inventory then
 		local fuel_flow = content_flow.add{type = 'flow', name = 'fuel_flow', direction = 'horizontal'}
 		fuel_flow.style.vertical_align = 'center'
-		local favorite_food_tooltip = generate_favorite_food_tooltip(caravan_data)
+		local favorite_food_tooltip = generate_favorite_food_tooltip(prototypes[entity.name].favorite_foods, 'caravan-gui')
 		for i = 1, prototype.fuel_size do
 			local fuel_slot = fuel_flow.add{type = 'sprite-button', name = 'py_fuel_slot_' .. i, style = 'inventory_slot', tags = {unit_number = caravan_data.unit_number, i = i}}
 			fuel_slot.sprite = 'utility/slot_icon_fuel'

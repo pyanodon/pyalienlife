@@ -1,18 +1,5 @@
 --rendering.draw_circle{color = {1, 1, 1}, radius = 0.5, filled = true, target = {x, y}, surface = entity.surface}
 
-local PIPE = 1
-local ROBOPORT = 2
-local PROVIDER = 3
-local REQUESTER = 4
-
-Biofluid.connectable = {
-	['vessel'] = PIPE,
-	['vessel-to-ground'] = PIPE,
-	['bioport'] = ROBOPORT,
-	['provider-tank'] = PROVIDER,
-	['requester-tank'] = REQUESTER,
-}
-
 local TO_GROUND = 'pipe-to-ground'
 local TO_GROUND_CONNECTION = {{
 	position = {0, 0},
@@ -169,6 +156,7 @@ function Biofluid.built_pipe(entity)
 	end
 
 	Biofluid.add_to_network(network_id, entity, connections)
+	return network_id
 end
 
 function Biofluid.join_networks(new_id, old_id, network_positions)
@@ -217,13 +205,13 @@ function Biofluid.add_to_network(network_id, entity, connections)
 	end
 
 	local entity_type = Biofluid.connectable[entity.name]
-	if entity_type == PIPE then return end
+	if entity_type == Biofluid.PIPE then return end
 	local unit_number = entity.unit_number
-	if entity_type == ROBOPORT then
+	if entity_type == Biofluid.ROBOPORT then
 		network.bioports[unit_number] = entity
-	elseif entity_type == REQUESTER then
+	elseif entity_type == Biofluid.REQUESTER then
 		network.requesters[unit_number] = entity
-	elseif entity_type == PROVIDER then
+	elseif entity_type == Biofluid.PROVIDER then
 		network.providers[unit_number] = entity
 	end
 end
@@ -303,9 +291,9 @@ function Biofluid.remove_from_network(network_id, entity, connections)
 	local entity_type = Biofluid.connectable[entity.name]
 	if entity_type == PIPE then return end
 	local unit_number = entity.unit_number
-	network.bioports[unit_number] = entity
-	network.requesters[unit_number] = entity
-	network.providers[unit_number] = entity
+	network.bioports[unit_number] = nil
+	network.requesters[unit_number] = nil
+	network.providers[unit_number] = nil
 end
 
 -- MIXED

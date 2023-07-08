@@ -11,6 +11,7 @@ Date: ?
     - fixed that dingrits turd path 1 was giving too much productivity. 400% -> 40%
     - fixed that the auog food turd upgrade did not allow for productivity when the base recipe did
     - fixed that logistic stations would always flash a red "no power" icon. energy usage increased 1mW -> 10mW
+    - fixed that the symbiosis technology had no prereqs
   Changes:
     - added gobachov, huzu, and chorkok. new creatures that can help with your fluid logistics. think of a biological alternative to pyanobots
     - update chinese translation. credit sdqwo

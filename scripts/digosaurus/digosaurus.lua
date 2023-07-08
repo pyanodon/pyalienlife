@@ -112,7 +112,7 @@ function Digosaurus.eat(food_inventory, food_inventory_contents)
     end
 end
 
-Digosaurus.events[60] = function(event)
+Digosaurus.events[61] = function(event)
     for _, dig_data in pairs(global.dig_sites) do
         if not Digosaurus.validity_check(dig_data) then goto continue end
         local entity = dig_data.entity

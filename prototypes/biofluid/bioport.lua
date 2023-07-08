@@ -38,7 +38,7 @@ data:extend{{
     hidden = true
 }}
 
-RECIPE {
+local recipe = RECIPE {
     type = 'recipe',
     name = 'bioport-hidden-recipe',
     enabled = false,
@@ -47,17 +47,18 @@ RECIPE {
         {'gobachov', data.raw.item['gobachov'].stack_size},
         {'huzu', data.raw.item['huzu'].stack_size},
         {'chorkok', data.raw.item['chorkok'].stack_size},
-        {'workers-food', data.raw.item['workers-food'].stack_size},
-        {'workers-food-02', data.raw.item['workers-food-02'].stack_size},
     },
     results = {},
     energy_required = 100,
     category = 'biofluid',
-    allow_inserter_overload = false,
     icon = '__pyalienlifegraphics2__/graphics/icons/o-roboport.png',
     icon_size = 64,
     subgroup = 'py-alienlife-biofluid-network',
-}--:add_unlock{'biofluid-mk01'}
+}
+
+for name, _ in pairs(Biofluid.favorite_foods) do
+    recipe:add_ingredient{name = name, amount = data.raw.item[name].stack_size, type = 'item'}
+end
 
 ENTITY {
     type = 'assembling-machine',

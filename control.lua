@@ -23,6 +23,26 @@ for event, _ in pairs(gui_events) do
 	script.on_event(event, process_gui_event)
 end
 
+_G.generate_favorite_food_tooltip = function(favorite_foods, locale)
+	local favorites = {''}
+	for food, actions in pairs(favorite_foods) do
+		favorites[#favorites + 1] = {locale .. '.favorite-foods-sub', '[item=' .. food .. ']', game.item_prototypes[food].localised_name, actions}
+		favorites[#favorites + 1] = '\n'
+	end
+	favorites[#favorites] = nil
+	return {locale .. '.favorite-foods-main', favorites}
+end
+
+_G.generate_allowed_module_tooltip = function(allowed_modules)
+	local favorites = {'', {'gui.module-description'}, '\n'}
+	for module, _ in pairs(allowed_modules) do
+		favorites[#favorites + 1] = {'', '[font=heading-2][item=' .. module .. '][/font]', ' ', game.item_prototypes[module].localised_name}
+		favorites[#favorites + 1] = '\n'
+	end
+	favorites[#favorites] = nil
+	return favorites
+end
+
 require 'scripts/wiki/text-pages'
 require 'scripts/caravan/caravan'
 require 'scripts/digosaurus/digosaurus'
@@ -108,12 +128,14 @@ script.on_event(defines.events.on_gui_opened, function(event)
     Oculua.events.on_gui_opened(event)
     Digosaurus.events.on_gui_opened(event)
     Slaughterhouse.events.on_gui_opened(event)
+    Biofluid.events.on_gui_opened(event)
 end)
 
 script.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
     Caravan.events.close_gui(event)
     Digosaurus.events.close_gui(event)
     Slaughterhouse.events.on_gui_closed(event)
+    Biofluid.events.on_gui_closed(event)
 end)
 
 script.on_event(defines.events.on_rocket_launched, Smart_Farm.events.on_rocket_launched)
@@ -127,18 +149,17 @@ end)
 
 script.on_event(defines.events.on_entity_settings_pasted, Caravan.events.on_entity_settings_pasted)
 
-script.on_nth_tick(60, function()
-    Caravan.events[60]()
-    Digosaurus.events[60]()
-end)
-script.on_nth_tick(121, Farming.events[121])
-script.on_nth_tick(59, Farming.events[59])
-script.on_nth_tick(221, Oculua.events[221])
-script.on_nth_tick(71, Oculua.events[71])
 script.on_nth_tick(41, Vatbrain.events[41])
+script.on_nth_tick(43, Oculua.events[43])
+script.on_nth_tick(59, Farming.events[59])
+script.on_nth_tick(60, Caravan.events[60])
+script.on_nth_tick(61, Digosaurus.events[61])
+script.on_nth_tick(121, Farming.events[121])
+script.on_nth_tick(127, Biofluid.events[127])
+script.on_nth_tick(221, Oculua.events[221])
 script.on_nth_tick(397, Ulric.events[397])
 
-script.on_nth_tick(4, function()
+script.on_nth_tick(7, function()
     for _, player in pairs(game.connected_players) do
 		local gui = player.gui.relative.digosaurus_gui
 		if gui then Digosaurus.update_gui(gui); goto continue end

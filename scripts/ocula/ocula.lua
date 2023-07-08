@@ -172,7 +172,7 @@ Oculua.events[221] = function()
 	end
 end
 
-Oculua.events[71] = function()
+Oculua.events[43] = function()
 	if not global.should_run_oculua_code then return end
 	for _, oculua_data in pairs(global.oculuas) do
 		local map_tag = oculua_data.map_tag

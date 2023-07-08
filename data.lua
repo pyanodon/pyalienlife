@@ -498,6 +498,8 @@ require 'prototypes/creatures/phadaisus'
 require 'prototypes/creatures/ocula'
 require 'prototypes/creatures/ulric-man'
 
+Biofluid = {}
+require 'scripts/biofluid/biofluid-prototypes'
 require 'prototypes/biofluid/gobachov'
 require 'prototypes/biofluid/huzu'
 require 'prototypes/biofluid/chorkok'
