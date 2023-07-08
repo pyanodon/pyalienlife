@@ -20,10 +20,13 @@ Biofluid.events.on_built = function(event)
 	local entity = event.created_entity or event.entity
 	local connection_type = Biofluid.connectable[entity.name]
 	if not connection_type then return end
+	entity.active = false
 	local network_id = Biofluid.built_pipe(entity)
 	if not network_id then return end
 	local unit_number = entity.unit_number
-	if connection_type == Biofluid.REQUESTER then
+	if connection_type == Biofluid.PIPE then
+		entity.operable = false
+	elseif connection_type == Biofluid.REQUESTER then
 		global.biofluid_requesters[unit_number] = {
 			entity = entity,
 			requested_fluid = NO_REQUEST,
@@ -81,4 +84,16 @@ function Biofluid.why_isnt_my_bioport_working(network, inventory_contents)
 		return 'entity-status.no-biofluid-network'
 	end
 	return 'entity-status.working'
+end
+
+function Biofluid.open_inventory(player)
+	if not global.blank_gui_item then
+		local inventory = game.create_inventory(1)
+		inventory[1].set_stack('blank-gui-item')
+		inventory[1].allow_manual_label_change = false
+		global.empty_gui_item = inventory[1]
+	end
+	player.opened = nil
+	player.opened = global.empty_gui_item
+	return player.opened
 end

@@ -30,21 +30,28 @@ function Biofluid.update_bioport_gui(entity, player, gui)
 	local fuel_flow = content_flow.fuel_flow
 	for _, element in pairs(fuel_flow.children) do
 		if element.type == 'sprite-button' then
+			local tags = element.tags
 			element.sprite = 'utility/slot_icon_fuel'
 			element.number = nil
 			element.visible = false
+			tags.slot_index = nil
+			element.tags = tags
 		end
 	end
 	local module_flow = content_flow.module_flow
 	for _, element in pairs(module_flow.children) do
+		local tags = element.tags
 		element.sprite = 'utility/slot_icon_module'
 		element.number = nil
+		tags.slot_index = nil
+		element.tags = tags
 	end
 
 	local i = 1
 	local j = 1
 	for name, count in pairs(contents) do
-		local slot = inventory[Biofluid.bioport_slot_indexes[name]]
+		local slot_index = Biofluid.bioport_slot_indexes[name]
+		local slot = inventory[slot_index]
 		if slot.valid_for_read then
 			local element
 			if Biofluid.favorite_foods[name] then
@@ -55,24 +62,30 @@ function Biofluid.update_bioport_gui(entity, player, gui)
 				j = j + 1
 			end
 			if element then
+				local tags = element.tags
 				element.sprite = 'item/' .. slot.name
 				element.number = slot.count
 				element.visible = true
+				tags.slot_index = slot_index
+				element.tags = tags
 			end
 		end
 	end
 
-	if i == 1 then
-		fuel_flow['py_biofluid_food_1'].visible = true
-	end
+	if i == 1 then fuel_flow['py_biofluid_food_1'].visible = true end
 end
 
 function Biofluid.build_bioport_gui(entity, player)
-	local main_frame = player.gui.screen.add{type = 'frame', name = 'bioport_gui', caption = entity.prototype.localised_name, direction = 'vertical'}
-    main_frame.auto_center = true
-    player.opened = main_frame
-	main_frame.style.width = 436
-	main_frame.style.minimal_height = 710
+	Biofluid.open_inventory(player)
+
+	local main_frame = player.gui.relative.add{
+		type = 'frame', name = 'bioport_gui', caption = entity.prototype.localised_name, direction = 'vertical', tags = {unit_number = entity.unit_number},
+		anchor = {
+			gui = defines.relative_gui_type.item_with_inventory_gui,
+			position = defines.relative_gui_position.left
+		}
+	}
+	main_frame.style.width = 448
 
 	local content_frame = main_frame.add{type = 'frame', name = 'content_frame', direction = 'vertical', style = 'inside_shallow_frame_with_padding'}
 	content_frame.style.vertically_stretchable = true
@@ -120,8 +133,41 @@ end
 
 Biofluid.events.on_gui_closed = function(event)
 	local player = game.get_player(event.player_index)
-	if event.gui_type == defines.gui_type.custom then
-		local gui = player.gui.screen.bioport_gui
+	if event.gui_type == defines.gui_type.item then
+		local gui = player.gui.relative.bioport_gui
 		if gui then gui.destroy() end
 	end
 end
+
+local function gui_click(event)
+	local player = game.get_player(event.player_index)
+	local cursor_stack = player.cursor_stack
+    if not cursor_stack then return end
+	local element = event.element
+	local unit_number = element.tags.unit_number
+	local slot_index = element.tags.slot_index
+
+	local entity
+	for _, n in pairs(global.biofluid_networks) do
+		if n.bioports[unit_number] then
+			entity = n.bioports[unit_number]
+			break
+		end
+	end
+	if not entity then return end
+
+	local inventory = Biofluid.get_bioport_inventory(entity)
+	
+	if cursor_stack.valid_for_read then
+		local actually_inserted = inventory.insert(cursor_stack)
+		if actually_inserted == 0 then return end
+		cursor_stack.count = cursor_stack.count - actually_inserted
+	elseif slot_index then
+		if not cursor_stack.swap_stack(inventory[slot_index]) then return end
+	else return end
+	
+	Biofluid.update_bioport_gui(entity, player, player.gui.relative.bioport_gui)
+end
+
+gui_events[defines.events.on_gui_click]['py_biofluid_food_.'] = gui_click
+gui_events[defines.events.on_gui_click]['py_biofluid_module_.'] = gui_click
