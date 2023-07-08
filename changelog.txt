@@ -14,6 +14,7 @@ Date: ?
     - fixed that the symbiosis technology had no prereqs
   Changes:
     - added gobachov, huzu, and chorkok. new creatures that can help with your fluid logistics. think of a biological alternative to pyanobots
+    - added guano. a valuable waste product. used in manure, explosives, nitrous oxide, and worker food mk3.
     - update chinese translation. credit sdqwo
     - added alt mode support to see what the ocula is carrying
     - reworked sap turd to be more interesting. if you already have sap turd selected it will automatically unselect. choose something new!

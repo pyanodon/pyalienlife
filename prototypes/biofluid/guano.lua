@@ -42,23 +42,6 @@ RECIPE {
     }
 }:add_unlock{'biofluid-mk02'}
 
-RECIPE {
-    type = 'recipe',
-    name = 'guano-explosives',
-    energy_required = 4,
-    enabled = false,
-    category = 'chemistry',
-    ingredients = {
-        {type = 'fluid', name = 'glycerol', amount = 100},
-        {type = 'fluid', name = 'sulfuric-acid', amount = 50},
-        {'plastic-bar', 1},
-        {'guano', 2},
-    },
-    results = {
-        {'explosives', 8},
-    }
-}:add_unlock{'biofluid-mk02'}
-
 data:extend{{
     type = 'item',
     name = 'ammonium-nitrate',
@@ -83,7 +66,23 @@ RECIPE {
     results = {
         {type = 'item', name = 'ammonium-nitrate', amount = 1}
     }
-}:add_unlock{'biofluid-mk03'}
+}:add_unlock{'biofluid-mk02'}
+
+RECIPE {
+    type = 'recipe',
+    name = 'guano-explosives',
+    energy_required = 4,
+    enabled = false,
+    category = 'chemistry',
+    ingredients = {
+        {type = 'fluid', name = 'glycerol', amount = 100},
+        {type = 'fluid', name = 'sulfuric-acid', amount = 50},
+        {'ammonium-nitrate', 1}
+    },
+    results = {
+        {'explosives', 8},
+    }
+}:add_unlock{'biofluid-mk02'}
 
 FLUID {
     type = 'fluid',

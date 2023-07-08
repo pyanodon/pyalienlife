@@ -3,6 +3,7 @@ Digosaurus.favorite_foods = {
 	['meat'] = 2,
 	['workers-food'] = 8,
 	['workers-food-02'] = 16,
+	['workers-food-03'] = 32,
 }
 
 Digosaurus.minable_categories = {

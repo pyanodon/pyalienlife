@@ -1,6 +1,7 @@
 Biofluid.favorite_foods = {
 	['gastrocapacitor'] = 400,
 	['workers-food-02'] = 500,
+	['workers-food-03'] = 900,
 }
 
 Biofluid.PIPE = 1

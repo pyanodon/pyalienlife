@@ -2923,11 +2923,11 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
+        {type = 'item', name = 'workers-food', amount = 2},
         {type = 'item', name = 'tin-plate', amount = 2},
         {type = 'item', name = 'sugar', amount = 2},
         {type = 'item', name = 'fine-powdered-biomass', amount = 5},
         {type = 'item', name = 'wood-seeds', amount = 5},
-        {type = 'item', name = 'guts', amount = 10},
         {type = 'item', name = 'skin', amount = 10},
         {type = 'item', name = 'ash', amount = 10},
         {type = 'item', name = 'bonemeal', amount = 2},
@@ -2938,6 +2938,27 @@ RECIPE {
         {type = 'item', name = 'workers-food-02', amount = 8},
     },
 }:add_unlock("nexelit-mk03")
+
+RECIPE {
+    type = 'recipe',
+    name = 'workers-food-03',
+    category = 'advanced-crafting',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'workers-food-02', amount = 2},
+        {type = 'item', name = 'plastic-bar', amount = 4},
+        {type = 'item', name = 'ammonium-nitrate', amount = 10},
+        {type = 'item', name = 'guano', amount = 2},
+        {type = 'item', name = 'yotoi-fruit', amount = 10},
+        {type = 'item', name = 'fishmeal', amount = 5},
+        {type = 'item', name = 'wood-seeds-mk04', amount = 1},
+        {type = 'fluid', name = 'molten-salt', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'workers-food-03', amount = 8},
+    },
+}:add_unlock('biofluid-mk03')
 
 RECIPE {
     type = "recipe",

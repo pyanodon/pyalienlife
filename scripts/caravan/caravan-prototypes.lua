@@ -68,7 +68,8 @@ local prototypes = {
 			['brain'] = 2,
 			['auog-food-01'] = 4,
 			['workers-food'] = 10,
-			['workers-food-02'] = 30
+			['workers-food-02'] = 30,
+			['workers-food-03'] = 50
 		},
 		actions = caravan_actions,
 		camera_zoom = 0.8,
