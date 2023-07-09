@@ -7,8 +7,6 @@ require 'biofluid-prototypes'
 require 'network-builder'
 require 'biofluid-gui'
 
-local NO_REQUEST = nil
-
 Biofluid.events.on_init = function()
 	global.biofluid_robots = global.biofluid_robots or {}
 	global.biofluid_requesters = global.biofluid_requesters or {}
@@ -23,31 +21,31 @@ Biofluid.events.on_built = function(event)
 	local connection_type = Biofluid.connectable[entity.name]
 	if not connection_type then return end
 	entity.active = false
-	local network_id = Biofluid.built_pipe(entity)
-	if not network_id then return end
 	local unit_number = entity.unit_number
 	if connection_type == Biofluid.REQUESTER then
 		global.biofluid_requesters[unit_number] = {
 			entity = entity,
-			requested_fluid = NO_REQUEST,
-			request_amount = 0,
-			network_id = network_id,
-			incoming = 0
+			name = nil,
+			amount = 0,
+			incoming = 0,
+			care_about_temperature = false,
+			target_temperature = 0,
+			priority = 0
 		}
 	elseif connection_type == Biofluid.ROBOPORT then
-		local bioport_data = {
+		global.biofluid_bioports[unit_number] = {
 			entity = entity,
-			network_id = network_id,
 			fuel_remaning = 0,
-			active = false
+			active = false,
+			guano = 0
 		}
-		Biofluid.reset_guano_bar(bioport_data)
-		global.biofluid_bioports[unit_number] = bioport_data
 	elseif entity.type == 'pipe-to-ground' then
 		entity.operable = false
-		global.biofluid_undergrounds[unit_number] = {entity = entity}
-		Biofluid.spawn_underground_pipe_heat_connection(global.biofluid_undergrounds[unit_number])
+		local underground_data = {entity = entity}
+		global.biofluid_undergrounds[unit_number] = underground_data
+		Biofluid.spawn_underground_pipe_heat_connection(underground_data)
 	end
+	Biofluid.built_pipe(entity)
 end
 
 function Biofluid.spawn_underground_pipe_heat_connection(underground_data)
@@ -123,8 +121,46 @@ Biofluid.events[79] = function(event)
 	local unfulfilled_requests = Biofluid.get_unfulfilled_requests()
 end
 
+local function requester_sort_function(a, b)
+	return a.priority > b.priority or a.amount > b.amount
+end
+
 function Biofluid.get_unfulfilled_requests()
 	local result = {}
+	for unit_number, requester_data in pairs(global.biofluid_requesters) do
+		local fluid_name = requester_data.name
+		if not fluid_name then goto continue end
+		local request_size = requester_data.amount
+		if request_size == 0 then goto continue end
+		local requester = requester_data.entity
+		if not requester or not requester.valid then
+			global.biofluid_requesters[unit_number] = nil
+			goto continue
+		end
+		local contents = requester.fluidbox[1]
+		local already_stored = requester_data.incoming
+		if not contents then
+			-- pass
+		elseif contents.name ~= fluid_name then
+			goto continue
+		else
+			already_stored = already_stored + contents.amount
+		end
+		local request_size = request_size - already_stored
+		if request_size < Biofluid.min_delivery_size then goto continue end
+		result[#result+1] = {
+			name = fluid_name,
+			amount = request_size,
+			entity = requester,
+			priority = requester_data.priority,
+			network_id = requester_data.network_id
+		}
+		::continue::
+	end
+	table.sort(result, requester_sort_function)
+	for _, request_data in pairs(result) do
+		game.print(request_data.name ..' '.. request_data.amount)
+	end
 	return result
 end
 
@@ -168,10 +204,4 @@ function Biofluid.open_inventory(player)
 	player.opened = nil
 	player.opened = global.empty_gui_item
 	return player.opened
-end
-
-function Biofluid.reset_guano_bar(bioport_data)
-	local rng = math.random(4, 7)
-	bioport_data.current_delivery = 0
-	bioport_data.deliveries_til_guano = rng
 end

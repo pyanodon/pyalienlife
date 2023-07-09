@@ -1,19 +1,24 @@
 Biofluid.events.on_gui_opened = function(event)
 	local entity = event.entity
 	if event.gui_type ~= defines.gui_type.entity or not entity then return end
+	local connection_type = Biofluid.connectable[entity.name]
+	if not connection_type then return end
     local player = game.get_player(event.player_index)
-
-    if Biofluid.connectable[entity.name] == Biofluid.ROBOPORT then
-        Biofluid.build_bioport_gui(entity, player) 
-    end
+    if connection_type == Biofluid.ROBOPORT then
+        Biofluid.build_bioport_gui(entity, player)
+	elseif connection_type == Biofluid.REQUESTER then
+        Biofluid.build_requester_gui(entity, player)
+	end
 end
 
-function Biofluid.update_bioport_gui(entity, player, gui)
-	local unit_number = entity.unit_number
+function Biofluid.update_bioport_gui(player, gui)
+	local unit_number = gui.tags.unit_number
 	local bioport_data = global.biofluid_bioports[unit_number]
-	if not bioport_data then gui.destroy() return end
+	if not bioport_data then player.opened = nil; return end
+	local entity = bioport_data.entity
+	if not entity or not entity.valid then player.opened = nil; return end
 	local network = global.biofluid_networks[bioport_data.network_id]
-	if not network then gui.destroy() return end
+	if not network then player.opened = nil; return end
 
 	local inventory = entity.get_inventory(defines.inventory.assembling_machine_input)
 	local contents = inventory.get_contents()
@@ -131,13 +136,90 @@ function Biofluid.build_bioport_gui(entity, player)
         module_slot.tooltip = allowed_module_tooltip
     end
 
-	Biofluid.update_bioport_gui(entity, player, main_frame)
+	Biofluid.update_bioport_gui(player, main_frame)
+end
+
+function Biofluid.build_requester_gui(entity, player)
+	main_frame = player.gui.screen.add{type = 'frame', name = 'biofluid_requester_gui', caption = entity.prototype.localised_name, direction = 'vertical'}
+	main_frame.auto_center = true
+	player.opened = main_frame
+	main_frame.style.width = 436
+	main_frame.tags = {unit_number = entity.unit_number}
+
+	local content_frame = main_frame.add{type = 'frame', name = 'content_frame', direction = 'vertical', style = 'inside_shallow_frame_with_padding'}
+	content_frame.style.vertically_stretchable = true
+	local content_flow = content_frame.add{type = 'flow', name = 'content_flow', direction = 'vertical'}
+	content_flow.style.vertical_spacing = 8
+	content_flow.style.margin = {-4, 0, -4, 0}
+	content_flow.style.vertical_align = 'center'
+
+	local status_flow = content_flow.add{type = 'flow', name = 'status_flow', direction = 'horizontal'}
+	status_flow.style.vertical_align = 'center'
+	local status_sprite = status_flow.add{type = 'sprite', name = 'status_sprite'}
+	status_sprite.resize_to_sprite = false
+	status_sprite.style.size = {16, 16}
+	status_flow.add{type = 'label', name = 'status_text'}
+	status_flow.add{type = 'empty-widget', style = 'py_empty_widget'}
+
+	local camera_frame = content_flow.add{type = 'frame', name = 'camera_frame', style = 'py_nice_frame'}
+	local camera = camera_frame.add{type = 'camera', name = 'camera', position = entity.position, style = 'py_caravan_camera', surface_index = entity.surface.index}
+	camera.visible = true
+	camera.style.height = 155
+	camera.zoom = 2
+
+	local label_flow = content_flow.add{type = 'flow', direction = 'horizontal'}
+	label_flow.add{type = 'label', caption = {'gui-logistic.title-request'}}.style.font = 'heading-3'
+	label_flow.add{type = 'empty-widget', style = 'py_empty_widget'}
+	label_flow.add{type = 'label', caption = {'gui.priority'}}.style.font = 'heading-3'
+
+	local config_flow = content_flow.add{type = 'flow', direction = 'horizontal'}
+	config_flow.style.vertical_align = 'center'
+	config_flow.add{type = 'choose-elem-button', name = 'request-signal', elem_type = 'fluid'}
+	config_flow.add{type = 'label', caption = '×'}.style.font = 'heading-2'
+	local request_amount = config_flow.add{type = 'textfield', name = 'request-amount'}
+	request_amount.numeric = true
+	request_amount.allow_decimal = false
+	request_amount.allow_negative = false
+	request_amount.style.width = 55
+
+	config_flow.add{type = 'empty-widget', style = 'py_empty_widget'}
+	
+	config_flow.add{
+		type = 'sprite-button', name = 'py_change_priority_1', style = 'py_schedule_move_button',
+		tags = {unit_number = entity.unit_number, up = false},
+		sprite = 'down-white', hovered_sprite = 'down-black', clicked_sprite = 'down-black'
+	}.style.height = 35
+	local priority = config_flow.add{type = 'textfield', name = 'priority'}
+	priority.numeric = true
+	priority.allow_decimal = false
+	priority.allow_negative = false
+	priority.style.width = 55
+	priority.style.height = 35
+	config_flow.add{
+		type = 'sprite-button', name = 'py_change_priority_2', style = 'py_schedule_move_button',
+		tags = {unit_number = entity.unit_number, up = true},
+		sprite = 'up-white', hovered_sprite = 'up-black', clicked_sprite = 'up-black'
+	}.style.height = 35
+
+	content_flow.add{type = 'line'}
+	content_flow.add{type = 'label', caption = {'gui.temperature-filter'}}.style.font = 'heading-3'
+	local temperature_flow = content_flow.add{type = 'flow', direction = 'horizontal'}
+	temperature_flow.style.vertical_align = 'center'
+	temperature_flow.add{type = 'switch', allow_none_state = false, left_label_caption = {'gui-constant.off'}, right_label_caption = {'gui-constant.on'}}
+	local request_amount = temperature_flow.add{type = 'textfield', name = 'temperature'}
+	request_amount.numeric = true
+	request_amount.style.width = 55
+	request_amount.enabled = false
+	request_amount.style.left_margin = 10
 end
 
 Biofluid.events.on_gui_closed = function(event)
 	local player = game.get_player(event.player_index)
 	if event.gui_type == defines.gui_type.item then
 		local gui = player.gui.relative.bioport_gui
+		if gui then gui.destroy() end
+	elseif event.gui_type == defines.gui_type.custom then
+		local gui = player.gui.screen.biofluid_requester_gui
 		if gui then gui.destroy() end
 	end
 end
@@ -163,7 +245,7 @@ local function gui_click(event, inventory_index)
 		if not cursor_stack.swap_stack(inventory[slot_index]) then return end
 	else return end
 	
-	Biofluid.update_bioport_gui(entity, player, player.gui.relative.bioport_gui)
+	Biofluid.update_bioport_gui(player, player.gui.relative.bioport_gui)
 end
 
 gui_events[defines.events.on_gui_click]['py_biofluid_food_.'] = function(event) gui_click(event, defines.inventory.assembling_machine_input) end

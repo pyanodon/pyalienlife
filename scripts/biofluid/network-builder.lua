@@ -123,7 +123,7 @@ end
 -- CONSTRUCTIVE
 function Biofluid.built_pipe(entity)
 	local connections = Biofluid.find_heat_connections(entity)
-	if #connections == 0 then return end
+	if #connections == 0 then error() end
 	local network_positions = Biofluid.network_positions(entity.surface_index)
 
 	for _, connection in pairs(connections) do
@@ -173,9 +173,21 @@ function Biofluid.join_networks(new_id, old_id, network_positions)
 			new.positions[x][y] = true
 		end
 	end
-	for k, entity in pairs(old.bioports) do new.bioports[k] = entity end
-	for k, entity in pairs(old.requesters) do new.requesters[k] = entity end
-	for k, entity in pairs(old.providers) do new.providers[k] = entity end
+	for unit_number, entity in pairs(old.bioports) do
+		new.bioports[unit_number] = entity
+		if global.biofluid_bioports[unit_number] then
+			global.biofluid_bioports[unit_number].network_id = new_id
+		end
+	end
+	for unit_number, entity in pairs(old.requesters) do
+		new.requesters[unit_number] = entity
+		if global.biofluid_requesters[unit_number] then
+			global.biofluid_requesters[unit_number].network_id = new_id
+		end
+	end
+	for unit_number, entity in pairs(old.providers) do
+		new.providers[unit_number] = entity
+	end
 	global.biofluid_networks[old_id] = nil
 end
 
@@ -209,8 +221,14 @@ function Biofluid.add_to_network(network_id, entity, connections)
 	local unit_number = entity.unit_number
 	if entity_type == Biofluid.ROBOPORT then
 		network.bioports[unit_number] = entity
+		if global.biofluid_bioports[unit_number] then
+			global.biofluid_bioports[unit_number].network_id = network_id
+		end
 	elseif entity_type == Biofluid.REQUESTER then
 		network.requesters[unit_number] = entity
+		if global.biofluid_requesters[unit_number] then
+			global.biofluid_requesters[unit_number].network_id = network_id
+		end
 	elseif entity_type == Biofluid.PROVIDER then
 		network.providers[unit_number] = entity
 	end
@@ -289,7 +307,7 @@ function Biofluid.remove_from_network(network_id, entity, connections)
 	end
 
 	local entity_type = Biofluid.connectable[entity.name]
-	if entity_type == PIPE then return end
+	if entity_type == Biofluid.PIPE then return end
 	local unit_number = entity.unit_number
 	network.bioports[unit_number] = nil
 	network.requesters[unit_number] = nil

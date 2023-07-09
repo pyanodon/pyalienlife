@@ -53,3 +53,16 @@ Biofluid.bioport_slot_indexes = {
 	['huzu'] = 5,
 	['chorkok'] = 6
 }
+
+Biofluid.delivery_sizes = {
+	['gobachov'] = 1000,
+	['huzu'] = 2000,
+	['chorkok'] = 5000,
+}
+
+Biofluid.min_delivery_size = 999999
+for _, v in pairs(Biofluid.delivery_sizes) do
+	Biofluid.min_delivery_size = math.min(Biofluid.min_delivery_size, v)
+end
+
+Biofluid.tank_size = 10000

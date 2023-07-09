@@ -45,7 +45,7 @@ ENTITY {
     selection_box = data.raw['pipe']['pipe'].selection_box,
     working_sound = nil, -- TODO
     fluid_boxes = {{
-        base_area = 25,
+        base_area = Biofluid.tank_size / 100,
         base_level = -1001,
         pipe_covers = _G.pipecoverspictures(),
         pipe_connections = {
