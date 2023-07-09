@@ -28,7 +28,7 @@ function Biofluid.heat_connection_facing_offset(entity_direction, connection)
 	end
 end
 
-function Biofluid.find_heat_connections(entity, previous_direction)
+function Biofluid.find_heat_connections(entity)
 	local heat_prototype
 	if entity.type == TO_GROUND then
 		heat_prototype = TO_GROUND_CONNECTION
@@ -39,7 +39,7 @@ function Biofluid.find_heat_connections(entity, previous_direction)
 	end
 
 	local position = entity.position
-	local direction = previous_direction or entity.direction
+	local direction = entity.direction
 	local connections = {}
 	for _, connection in pairs(heat_prototype) do
 		local connection_x = connection.position[1]
@@ -53,7 +53,7 @@ function Biofluid.find_heat_connections(entity, previous_direction)
 		end
 		local x = math.floor(connection_x + position.x)
 		local y = math.floor(connection_y + position.y)
-		local offset = Biofluid.heat_connection_facing_offset(previous_direction or entity.direction, connection)
+		local offset = Biofluid.heat_connection_facing_offset(entity.direction, connection)
 		if offset then connections[#connections+1] = {x = x, y = y, facing_x = x + offset[1], facing_y = y + offset[2]} end
 	end
 	return connections
@@ -235,9 +235,9 @@ function Biofluid.add_to_network(network_id, entity, connections)
 end
 
 -- DESTRUCTIVE
-function Biofluid.destroyed_pipe(entity, previous_direction)
-	local connections = Biofluid.find_heat_connections(entity, previous_direction)
-	if #connections == 0 then return end
+function Biofluid.destroyed_pipe(entity)
+	local connections = Biofluid.find_heat_connections(entity)
+	if #connections == 0 then error() end
 	local network_positions = Biofluid.network_positions(entity.surface_index)
 	local network_id
 	local network
@@ -316,6 +316,9 @@ end
 
 -- MIXED
 function Biofluid.rotated_pipe(entity, previous_direction)
-	Biofluid.destroyed_pipe(entity, previous_direction)
+	local new_direction = entity.direction
+	entity.direction = previous_direction
+	Biofluid.destroyed_pipe(entity)
+	entity.direction = new_direction
 	Biofluid.built_pipe(entity)
 end
