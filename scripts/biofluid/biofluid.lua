@@ -128,15 +128,21 @@ end
 function Biofluid.get_unfulfilled_requests()
 	local result = {}
 	for unit_number, requester_data in pairs(global.biofluid_requesters) do
-		local fluid_name = requester_data.name
-		if not fluid_name then goto continue end
-		local request_size = requester_data.amount
-		if request_size == 0 then goto continue end
 		local requester = requester_data.entity
 		if not requester or not requester.valid then
 			global.biofluid_requesters[unit_number] = nil
 			goto continue
 		end
+		local network_id = requester_data.network_id
+		local network = global.biofluid_networks[network_id]
+		if not network or not next(network.bioports) then
+			draw_error_sprite(requester, 'utility.too_far_from_roboport_icon', 40)
+			goto continue
+		end
+		local fluid_name = requester_data.name
+		if not fluid_name then goto continue end
+		local request_size = requester_data.amount
+		if request_size == 0 then goto continue end
 		local contents = requester.fluidbox[1]
 		local already_stored = requester_data.incoming
 		if not contents then
@@ -153,7 +159,7 @@ function Biofluid.get_unfulfilled_requests()
 			amount = request_size,
 			entity = requester,
 			priority = requester_data.priority,
-			network_id = requester_data.network_id
+			network_id = network_id
 		}
 		::continue::
 	end
@@ -192,16 +198,4 @@ function Biofluid.why_isnt_my_bioport_working(bioport_data)
 		end
 		return 'entity-status.full-output'
 	end
-end
-
-function Biofluid.open_inventory(player)
-	if not global.blank_gui_item then
-		local inventory = game.create_inventory(1)
-		inventory[1].set_stack('blank-gui-item')
-		inventory[1].allow_manual_label_change = false
-		global.empty_gui_item = inventory[1]
-	end
-	player.opened = nil
-	player.opened = global.empty_gui_item
-	return player.opened
 end

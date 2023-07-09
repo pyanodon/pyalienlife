@@ -20,8 +20,6 @@ function Biofluid.update_bioport_gui(player, gui)
 	local network = global.biofluid_networks[bioport_data.network_id]
 	if not network then player.opened = nil; return end
 
-	local inventory = entity.get_inventory(defines.inventory.assembling_machine_input)
-	local contents = inventory.get_contents()
 	local status = Biofluid.why_isnt_my_bioport_working(bioport_data)
 	local img = Biofluid.failure_reasons[status]
 	local content_flow = gui.content_frame.content_flow
@@ -48,6 +46,8 @@ function Biofluid.update_bioport_gui(player, gui)
 		element.tags = tags
 	end
 
+	local inventory = entity.get_inventory(defines.inventory.assembling_machine_input)
+	local contents = inventory.get_contents()
 	local i = 1
 	local j = 1
 	for name, count in pairs(contents) do
@@ -81,12 +81,10 @@ function Biofluid.update_bioport_gui(player, gui)
 end
 
 function Biofluid.build_bioport_gui(entity, player)
-	Biofluid.open_inventory(player)
-
 	local main_frame = player.gui.relative.add{
 		type = 'frame', name = 'bioport_gui', caption = entity.prototype.localised_name, direction = 'vertical', tags = {unit_number = entity.unit_number},
 		anchor = {
-			gui = defines.relative_gui_type.item_with_inventory_gui,
+			gui = defines.relative_gui_type.assembling_machine_gui,
 			position = defines.relative_gui_position.left
 		}
 	}
@@ -139,12 +137,36 @@ function Biofluid.build_bioport_gui(entity, player)
 	Biofluid.update_bioport_gui(player, main_frame)
 end
 
+function Biofluid.update_requester_gui(player, gui)
+	local unit_number = gui.tags.unit_number
+	local requester_data = global.biofluid_requesters[unit_number]
+	if not requester_data then player.opened = nil; return end
+	local entity = requester_data.entity
+	if not entity or not entity.valid then player.opened = nil; return end
+	local network = global.biofluid_networks[requester_data.network_id]
+	if not network then player.opened = nil; return end
+
+	local status = 'entity-status.working'
+	if not next(network.bioports) then status = 'entity-status.no-biofluid-network' end
+	local img = Biofluid.failure_reasons[status]
+	local content_flow = gui.content_frame.content_flow
+	content_flow.status_flow.status_text.caption = {status}
+	content_flow.status_flow.status_sprite.sprite = img
+
+	local config_flow = content_flow.config_flow
+	config_flow.py_request_type.elem_value = requester_data.name
+	config_flow.py_request_amount.text = tostring(requester_data.amount)
+	config_flow.py_requester_priority_input.text = tostring(requester_data.priority)
+end
+
 function Biofluid.build_requester_gui(entity, player)
+	local unit_number = entity.unit_number
 	main_frame = player.gui.screen.add{type = 'frame', name = 'biofluid_requester_gui', caption = entity.prototype.localised_name, direction = 'vertical'}
 	main_frame.auto_center = true
 	player.opened = main_frame
 	main_frame.style.width = 436
-	main_frame.tags = {unit_number = entity.unit_number}
+	local tags = {unit_number = unit_number}
+	main_frame.tags = tags
 
 	local content_frame = main_frame.add{type = 'frame', name = 'content_frame', direction = 'vertical', style = 'inside_shallow_frame_with_padding'}
 	content_frame.style.vertically_stretchable = true
@@ -172,11 +194,11 @@ function Biofluid.build_requester_gui(entity, player)
 	label_flow.add{type = 'empty-widget', style = 'py_empty_widget'}
 	label_flow.add{type = 'label', caption = {'gui.priority'}}.style.font = 'heading-3'
 
-	local config_flow = content_flow.add{type = 'flow', direction = 'horizontal'}
+	local config_flow = content_flow.add{type = 'flow', direction = 'horizontal', name = 'config_flow'}
 	config_flow.style.vertical_align = 'center'
-	config_flow.add{type = 'choose-elem-button', name = 'request-signal', elem_type = 'fluid'}
+	config_flow.add{type = 'choose-elem-button', name = 'py_request_type', elem_type = 'fluid', tags = tags}
 	config_flow.add{type = 'label', caption = '×'}.style.font = 'heading-2'
-	local request_amount = config_flow.add{type = 'textfield', name = 'request-amount'}
+	local request_amount = config_flow.add{type = 'textfield', name = 'py_request_amount', tags = tags}
 	request_amount.numeric = true
 	request_amount.allow_decimal = false
 	request_amount.allow_negative = false
@@ -186,10 +208,10 @@ function Biofluid.build_requester_gui(entity, player)
 	
 	config_flow.add{
 		type = 'sprite-button', name = 'py_change_priority_1', style = 'py_schedule_move_button',
-		tags = {unit_number = entity.unit_number, up = false},
+		tags = {unit_number = unit_number, up = false},
 		sprite = 'down-white', hovered_sprite = 'down-black', clicked_sprite = 'down-black'
 	}.style.height = 35
-	local priority = config_flow.add{type = 'textfield', name = 'priority'}
+	local priority = config_flow.add{type = 'textfield', name = 'py_requester_priority_input', tags = tags}
 	priority.numeric = true
 	priority.allow_decimal = false
 	priority.allow_negative = false
@@ -197,7 +219,7 @@ function Biofluid.build_requester_gui(entity, player)
 	priority.style.height = 35
 	config_flow.add{
 		type = 'sprite-button', name = 'py_change_priority_2', style = 'py_schedule_move_button',
-		tags = {unit_number = entity.unit_number, up = true},
+		tags = {unit_number = unit_number, up = true},
 		sprite = 'up-white', hovered_sprite = 'up-black', clicked_sprite = 'up-black'
 	}.style.height = 35
 
@@ -211,11 +233,13 @@ function Biofluid.build_requester_gui(entity, player)
 	request_amount.style.width = 55
 	request_amount.enabled = false
 	request_amount.style.left_margin = 10
+
+	Biofluid.update_requester_gui(player, main_frame)
 end
 
 Biofluid.events.on_gui_closed = function(event)
 	local player = game.get_player(event.player_index)
-	if event.gui_type == defines.gui_type.item then
+	if event.gui_type == defines.gui_type.entity then
 		local gui = player.gui.relative.bioport_gui
 		if gui then gui.destroy() end
 	elseif event.gui_type == defines.gui_type.custom then
@@ -251,3 +275,42 @@ end
 gui_events[defines.events.on_gui_click]['py_biofluid_food_.'] = function(event) gui_click(event, defines.inventory.assembling_machine_input) end
 gui_events[defines.events.on_gui_click]['py_biofluid_module_.'] = function(event) gui_click(event, defines.inventory.assembling_machine_input) end
 gui_events[defines.events.on_gui_click]['py_guano_output'] = function(event) gui_click(event, defines.inventory.assembling_machine_output) end
+
+gui_events[defines.events.on_gui_elem_changed]['py_request_type'] = function(event)
+	local element = event.element
+	local unit_number = element.tags.unit_number
+	local requester_data = global.biofluid_requesters[unit_number]
+	if not requester_data then return end
+	requester_data.name = element.elem_value
+end
+
+gui_events[defines.events.on_gui_text_changed]['py_request_amount'] = function(event)
+	local element = event.element
+	local number = tonumber(element.text) or 0
+	if number > Biofluid.tank_size then
+		element.text = tostring(Biofluid.tank_size)
+		return
+	end
+	local unit_number = element.tags.unit_number
+	local requester_data = global.biofluid_requesters[unit_number]
+	if not requester_data then return end
+	requester_data.amount = number
+end
+
+gui_events[defines.events.on_gui_click]['py_change_priority_.'] = function(event)
+	local element = event.element
+	local unit_number = element.tags.unit_number
+	local requester_data = global.biofluid_requesters[unit_number]
+	if not requester_data then return end
+	local change = element.tags.up and 1 or -1
+	requester_data.priority = requester_data.priority + change
+	element.parent.py_requester_priority_input.text = tostring(requester_data.priority)
+end
+
+gui_events[defines.events.on_gui_text_changed]['py_requester_priority_input'] = function(event)
+	local element = event.element
+	local unit_number = element.tags.unit_number
+	local requester_data = global.biofluid_requesters[unit_number]
+	if not requester_data then return end
+	requester_data.priority = tonumber(element.text) or 0
+end

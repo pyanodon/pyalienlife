@@ -60,9 +60,6 @@ Biofluid.delivery_sizes = {
 	['chorkok'] = 5000,
 }
 
-Biofluid.min_delivery_size = 999999
-for _, v in pairs(Biofluid.delivery_sizes) do
-	Biofluid.min_delivery_size = math.min(Biofluid.min_delivery_size, v)
-end
+Biofluid.min_delivery_size = 10
 
 Biofluid.tank_size = 10000

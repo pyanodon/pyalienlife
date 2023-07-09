@@ -139,15 +139,3 @@ ENTITY {
 }
 
 data.raw['utility-sprites'].default.heat_exchange_indication.filename = '__pyalienlifegraphics2__/graphics/entity/bots/connection-icon.png'
-
-data:extend{{
-    type = 'item-with-inventory', -- this is a hack to show the player's inventory gui.
-    name = 'blank-gui-item',
-    inventory_size = 1,
-    item_filters = {'blank-gui-item'},
-    stack_size = 1,
-    icon = '__core__/graphics/empty.png',
-    icon_size = 1,
-    localised_name = '',
-    flags = {'hidden', 'not-stackable'}
-}}
