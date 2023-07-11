@@ -406,3 +406,23 @@ function Biofluid.why_isnt_my_bioport_working(bioport_data)
 		return 'entity-status.full-output'
 	end
 end
+
+Biofluid.events.on_entity_settings_pasted = function(event)
+    local source, destination = event.source, event.destination
+	local requesters = global.biofluid_requesters
+	local source_data, destination_data = requesters[source.unit_number], requesters[destination.unit_number]
+	if not source_data or not destination_data then return end
+
+	destination_data.name = source_data.name
+	destination_data.amount = source_data.amount
+	destination_data.care_about_temperature = source_data.care_about_temperature
+	destination_data.target_temperature = source_data.target_temperature
+	destination_data.priority = source_data.priority
+
+	for _, player in pairs(game.connected_players) do
+		local gui = player.gui.screen.biofluid_requester_gui
+		if gui and gui.tags.unit_number == destination.unit_number then
+			Biofluid.update_requester_gui(player, gui)
+		end
+	end
+end

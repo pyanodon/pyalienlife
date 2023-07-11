@@ -159,7 +159,10 @@ script.on_event(defines.events.on_entity_destroyed, function(event)
     Worm.events.on_entity_destroyed(event)
 end)
 
-script.on_event(defines.events.on_entity_settings_pasted, Caravan.events.on_entity_settings_pasted)
+script.on_event(defines.events.on_entity_settings_pasted, function(event)
+    Caravan.events.on_entity_settings_pasted(event)
+    Biofluid.events.on_entity_settings_pasted(event)
+end)
 
 script.on_nth_tick(41, Vatbrain.events[41])
 script.on_nth_tick(43, Oculua.events[43])
