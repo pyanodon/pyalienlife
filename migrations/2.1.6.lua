@@ -7,4 +7,11 @@ for _, force in pairs(game.forces) do
 			global.turd_bonuses[force.index]['sap-upgrade'] = nil
 		end
 	end
+
+	force.kill_count_statistics.set_input_count('digosaurus', 0)
+	force.kill_count_statistics.set_output_count('digosaurus', 0)
+	force.kill_count_statistics.set_input_count('thikat', 0)
+	force.kill_count_statistics.set_output_count('thikat', 0)
+	force.kill_count_statistics.set_input_count('work-o-dile', 0)
+	force.kill_count_statistics.set_output_count('work-o-dile', 0)
 end

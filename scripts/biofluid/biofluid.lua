@@ -239,6 +239,7 @@ function Biofluid.eat(bioport_data)
 			if removed ~= 0 then
 				bioport_data.fuel_remaning = calories
 				bioport_data.last_eaten_fuel_value = calories
+				bioport.force.item_production_statistics.on_flow(food, -1)
 				return true
 			end
 		end
@@ -248,13 +249,17 @@ function Biofluid.eat(bioport_data)
 	return true
 end
 
-local special_delivery = {name = 'guano', count = 3}
+local batch_size = 3
+local special_delivery = {name = 'guano', count = batch_size}
 function Biofluid.poop(bioport_data, robot_name)
 	local poop_amount = Biofluid.taco_bell[robot_name]
 	bioport_data.guano = bioport_data.guano + poop_amount
-	if bioport_data.guano >= 3 then
-		bioport_data.guano = bioport_data.guano - 3
-		bioport_data.entity.get_inventory(output_inventory).insert(special_delivery)
+	if bioport_data.guano >= batch_size then
+		bioport_data.guano = bioport_data.guano - batch_size
+		local entity = bioport_data.entity
+		entity.get_inventory(output_inventory).insert(special_delivery)
+		entity.products_finished = entity.products_finished + batch_size
+        entity.force.item_production_statistics.on_flow('guano', batch_size)
 	end
 end
 
@@ -266,6 +271,11 @@ function Biofluid.set_target(biorobot_data, target)
 		distraction = defines.distraction.none
 	}
 	biorobot_data.target = target
+end
+
+function Biofluid.go_home(biorobot_data)
+	biorobot_data.status = RETURNING
+	Biofluid.set_target(biorobot_data, biorobot_data.bioport)
 end
 
 --[[Biofluid.events.on_ai_command_completed = function(event)

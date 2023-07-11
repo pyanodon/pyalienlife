@@ -92,10 +92,11 @@ function Digosaurus.has_food(food_inventory_contents)
     return false
 end
 
-function Digosaurus.eat(food_inventory, food_inventory_contents)
+function Digosaurus.eat(food_inventory, food_inventory_contents, force)
     for food in pairs(food_inventory_contents) do
         if Digosaurus.favorite_foods[food] then
             food_inventory.remove{name = food, count = 1}
+            force.item_production_statistics.on_flow(food, -1)
             return food
         end
     end
@@ -128,7 +129,8 @@ Digosaurus.events[61] = function(event)
                 if not digosaur_data and dig_data.digosaur_inventory[i].valid_for_read then
                     digosaur_data = Digosaurus.start_mining_command(dig_data, i)
                     if digosaur_data then
-                        digosaur_data.ores_gained_per_trip = Digosaurus.favorite_foods[Digosaurus.eat(dig_data.food_inventory, food_inventory_contents)]
+                        local food = Digosaurus.eat(dig_data.food_inventory, food_inventory_contents, entity.force)
+                        digosaur_data.ores_gained_per_trip = Digosaurus.favorite_foods[food]
                         goto continue
                     end
                 end

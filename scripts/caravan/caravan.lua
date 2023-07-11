@@ -110,6 +110,7 @@ local function eat(caravan_data)
 			fuel.remove{name = item, count = 1}
 			caravan_data.fuel_bar = prototypes[caravan_data.entity.name].favorite_foods[item]
 			caravan_data.last_eaten_fuel_value = caravan_data.fuel_bar
+			caravan_data.entity.force.item_production_statistics.on_flow(item, -1)
 			return true
 		end
 		return false

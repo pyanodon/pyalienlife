@@ -13,6 +13,7 @@ Date: ?
     - fixed that logistic stations would always flash a red "no power" icon. energy usage increased 1mW -> 10mW
     - fixed that the symbiosis technology had no prereqs
     - fix mispelling of aggressive in zungror techs
+    - fixed that guts, meat, worker food ect did not show in production stats for caravans and digosaur
   Changes:
     - added gobachov, huzu, and chorkok. new creatures that can help with your fluid logistics. think of a biological alternative to pyanobots
     - added guano. a valuable waste product. used in manure, explosives, nitrous oxide, and worker food mk3.
