@@ -130,7 +130,7 @@ data:extend{{
             remove = true
         },
         filename = '__pyalienlifegraphics3__/sounds/ocula-walk.ogg',
-        volume = 0.65
+        volume = 0.4
     },
     map_color = {0, 0.5, 0},
     selection_priority = 51

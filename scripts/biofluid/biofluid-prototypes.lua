@@ -1,7 +1,7 @@
 Biofluid.favorite_foods = {
-	['workers-food'] = 100,
-	['workers-food-02'] = 500,
-	['workers-food-03'] = 1200,
+	['workers-food'] = 50,
+	['workers-food-02'] = 300,
+	['workers-food-03'] = 1500,
 }
 
 Biofluid.PIPE = 1
@@ -21,9 +21,9 @@ Biofluid.fuel_size = 0
 for _, _ in pairs(Biofluid.favorite_foods) do Biofluid.fuel_size = Biofluid.fuel_size + 1 end
 
 Biofluid.biorobots = {
-	['gobachov'] = true,
-	['huzu'] = true,
 	['chorkok'] = true,
+	['huzu'] = true,
+	['gobachov'] = true,
 }
 
 Biofluid.module_size = 0
@@ -55,11 +55,15 @@ Biofluid.bioport_slot_indexes = {
 }
 
 Biofluid.delivery_sizes = {
-	['gobachov'] = 1000,
-	['huzu'] = 2000,
 	['chorkok'] = 5000,
+	['huzu'] = 2000,
+	['gobachov'] = 1000,
 }
 
-Biofluid.min_delivery_size = 10
-
 Biofluid.tank_size = 10000
+
+Biofluid.taco_bell = {
+	['chorkok'] = 0.3,
+	['huzu'] = 0.2,
+	['gobachov'] = 0.15,
+}

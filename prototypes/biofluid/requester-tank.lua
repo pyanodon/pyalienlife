@@ -46,7 +46,7 @@ ENTITY {
     working_sound = nil, -- TODO
     fluid_boxes = {{
         base_area = Biofluid.tank_size / 100,
-        base_level = -1001,
+        base_level = 999,
         pipe_covers = _G.pipecoverspictures(),
         pipe_connections = {
             {position = {0, -1}, type = 'output'},

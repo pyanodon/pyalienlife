@@ -111,7 +111,7 @@ RECIPE {
         {type = 'item', name = 'urea', amount = 1},
         {type = 'fluid', name = 'subcritical-water', amount = 100},
         {type = 'fluid', name = 'oxygen', amount = 200},
-        {type = 'fluid', name = 'purest-nitrogen-gas', amount = 60},
+        {type = 'fluid', name = 'purest-nitrogen-gas', amount = 400},
     },
     results = {
         {type = 'fluid', name = 'nitrous-oxide', amount = 60}

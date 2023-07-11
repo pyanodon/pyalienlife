@@ -78,6 +78,12 @@ function Biofluid.update_bioport_gui(player, gui)
 	local slot = entity.get_inventory(defines.inventory.assembling_machine_output)[1]
 	local element = fuel_flow['py_guano_output']
 	element.number = slot.valid_for_read and slot.count or 0
+
+	local bar_flow = fuel_flow.bar_flow
+	if bioport_data.last_eaten_fuel_value then
+		bar_flow.fuel_bar.value = bioport_data.fuel_remaning / bioport_data.last_eaten_fuel_value
+	end
+	bar_flow.guano_bar.value = bioport_data.guano / 3
 end
 
 function Biofluid.build_bioport_gui(entity, player)
@@ -157,11 +163,17 @@ function Biofluid.update_requester_gui(player, gui)
 	config_flow.py_request_type.elem_value = requester_data.name
 	config_flow.py_request_amount.text = tostring(requester_data.amount)
 	config_flow.py_requester_priority_input.text = tostring(requester_data.priority)
+
+	local temperature_flow = content_flow.temperature_flow
+	local enabled = requester_data.care_about_temperature
+	temperature_flow.py_biofluid_temperature_switch.switch_state = enabled and 'right' or 'left'
+	temperature_flow.py_biofluid_temperature.text = tostring(requester_data.target_temperature)
+	temperature_flow.py_biofluid_temperature.enabled = enabled
 end
 
 function Biofluid.build_requester_gui(entity, player)
 	local unit_number = entity.unit_number
-	main_frame = player.gui.screen.add{type = 'frame', name = 'biofluid_requester_gui', caption = entity.prototype.localised_name, direction = 'vertical'}
+	local main_frame = player.gui.screen.add{type = 'frame', name = 'biofluid_requester_gui', caption = entity.prototype.localised_name, direction = 'vertical'}
 	main_frame.auto_center = true
 	player.opened = main_frame
 	main_frame.style.width = 436
@@ -225,14 +237,15 @@ function Biofluid.build_requester_gui(entity, player)
 
 	content_flow.add{type = 'line'}
 	content_flow.add{type = 'label', caption = {'gui.temperature-filter'}}.style.font = 'heading-3'
-	local temperature_flow = content_flow.add{type = 'flow', direction = 'horizontal'}
+	local temperature_flow = content_flow.add{type = 'flow', direction = 'horizontal', name = 'temperature_flow'}
 	temperature_flow.style.vertical_align = 'center'
-	temperature_flow.add{type = 'switch', allow_none_state = false, left_label_caption = {'gui-constant.off'}, right_label_caption = {'gui-constant.on'}}
-	local request_amount = temperature_flow.add{type = 'textfield', name = 'temperature'}
-	request_amount.numeric = true
-	request_amount.style.width = 55
-	request_amount.enabled = false
-	request_amount.style.left_margin = 10
+	temperature_flow.add{type = 'switch', allow_none_state = false, left_label_caption = {'gui-constant.off'}, right_label_caption = {'gui-constant.on'}, name = 'py_biofluid_temperature_switch', tags = tags}
+	local temperature = temperature_flow.add{type = 'textfield', name = 'py_biofluid_temperature', tags = tags}
+	temperature.numeric = true
+	temperature.style.width = 55
+	temperature.enabled = false
+	temperature.allow_negative = true
+	temperature.style.left_margin = 10
 
 	Biofluid.update_requester_gui(player, main_frame)
 end
@@ -260,7 +273,7 @@ local function gui_click(event, inventory_index)
 	local entity = bioport_data.entity
 	if not entity or not entity.valid then return end
 	local inventory = entity.get_inventory(inventory_index)
-	
+
 	if cursor_stack.valid_for_read then
 		local actually_inserted = inventory.insert(cursor_stack)
 		if actually_inserted == 0 then return end
@@ -268,7 +281,7 @@ local function gui_click(event, inventory_index)
 	elseif slot_index then
 		if not cursor_stack.swap_stack(inventory[slot_index]) then return end
 	else return end
-	
+
 	Biofluid.update_bioport_gui(player, player.gui.relative.bioport_gui)
 end
 
@@ -288,8 +301,8 @@ gui_events[defines.events.on_gui_text_changed]['py_request_amount'] = function(e
 	local element = event.element
 	local number = tonumber(element.text) or 0
 	if number > Biofluid.tank_size then
-		element.text = tostring(Biofluid.tank_size)
-		return
+		number = Biofluid.tank_size
+		element.text = tostring(number)
 	end
 	local unit_number = element.tags.unit_number
 	local requester_data = global.biofluid_requesters[unit_number]
@@ -313,4 +326,27 @@ gui_events[defines.events.on_gui_text_changed]['py_requester_priority_input'] = 
 	local requester_data = global.biofluid_requesters[unit_number]
 	if not requester_data then return end
 	requester_data.priority = tonumber(element.text) or 0
+end
+
+gui_events[defines.events.on_gui_switch_state_changed]['py_biofluid_temperature_switch'] = function(event)
+	local element = event.element
+	local unit_number = element.tags.unit_number
+	local requester_data = global.biofluid_requesters[unit_number]
+	if not requester_data then return end
+	requester_data.care_about_temperature = element.switch_state == 'right'
+	local textfield = element.parent.py_biofluid_temperature
+	if requester_data.care_about_temperature then
+		textfield.enabled = true
+		textfield.text = tostring(requester_data.target_temperature)
+	else
+		textfield.enabled = false
+	end
+end
+
+gui_events[defines.events.on_gui_text_changed]['py_biofluid_temperature'] = function(event)
+	local element = event.element
+	local unit_number = element.tags.unit_number
+	local requester_data = global.biofluid_requesters[unit_number]
+	if not requester_data then return end
+	requester_data.target_temperature = tonumber(element.text) or 15
 end

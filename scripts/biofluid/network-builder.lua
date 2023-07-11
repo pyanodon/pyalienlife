@@ -185,8 +185,10 @@ function Biofluid.join_networks(new_id, old_id, network_positions)
 			global.biofluid_requesters[unit_number].network_id = new_id
 		end
 	end
-	for unit_number, entity in pairs(old.providers) do
-		new.providers[unit_number] = entity
+	for _, entity in pairs(old.providers) do
+		if entity.valid then
+			new.providers[#new.providers+1] = entity
+		end
 	end
 	global.biofluid_networks[old_id] = nil
 end
@@ -200,6 +202,7 @@ function Biofluid.create_network(force_index)
 		requesters = {},
 		providers = {},
 		positions = {},
+		allocated_fluids_from_providers = {}
 	}
 	global.biofluid_networks[network_id] = network
 	return network_id
@@ -230,7 +233,7 @@ function Biofluid.add_to_network(network_id, entity, connections)
 			global.biofluid_requesters[unit_number].network_id = network_id
 		end
 	elseif entity_type == Biofluid.PROVIDER then
-		network.providers[unit_number] = entity
+		network.providers[#network.providers+1] = entity
 	end
 end
 
@@ -307,11 +310,21 @@ function Biofluid.remove_from_network(network_id, entity, connections)
 	end
 
 	local entity_type = Biofluid.connectable[entity.name]
-	if entity_type == Biofluid.PIPE then return end
-	local unit_number = entity.unit_number
-	network.bioports[unit_number] = nil
-	network.requesters[unit_number] = nil
-	network.providers[unit_number] = nil
+	if entity_type == Biofluid.PIPE then
+		-- pass
+	elseif entity_type == Biofluid.PROVIDER then
+		local new_provider_array = {}
+		for _, provider in pairs(network.providers) do
+			if provider.valid and provider ~= entity then
+				new_provider_array[#new_provider_array+1] = provider
+			end
+		end
+		network.providers = new_provider_array
+	else
+		local unit_number = entity.unit_number
+		network.bioports[unit_number] = nil
+		network.requesters[unit_number] = nil
+	end
 end
 
 -- MIXED

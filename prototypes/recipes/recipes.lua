@@ -2954,10 +2954,13 @@ RECIPE {
         {type = 'item', name = 'fishmeal', amount = 5},
         {type = 'item', name = 'wood-seeds-mk04', amount = 1},
         {type = 'fluid', name = 'molten-salt', amount = 50},
+        {type = 'item', name = 'caged-vrauks', amount = 1},
     },
     results = {
         {type = 'item', name = 'workers-food-03', amount = 8},
+        {type = 'item', name = 'cage', amount = 1},
     },
+    main_product = 'workers-food-03'
 }:add_unlock('biofluid-mk03')
 
 RECIPE {
