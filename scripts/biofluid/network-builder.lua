@@ -1,5 +1,3 @@
---rendering.draw_circle{color = {1, 1, 1}, radius = 0.5, filled = true, target = {x, y}, surface = entity.surface}
-
 local TO_GROUND = 'pipe-to-ground'
 local TO_GROUND_CONNECTION = {{
 	position = {0, 0},
@@ -320,6 +318,7 @@ function Biofluid.remove_from_network(network_id, entity, connections)
 			end
 		end
 		network.providers = new_provider_array
+		network.allocated_fluids_from_providers[entity.unit_number] = nil
 	else
 		local unit_number = entity.unit_number
 		network.bioports[unit_number] = nil

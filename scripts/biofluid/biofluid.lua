@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 Biofluid = {}
 Biofluid.events = {}
 
@@ -11,12 +9,16 @@ local PICKING_UP = 1
 local DROPPING_OFF = 2
 local RETURNING = 3
 
-local sort = table.sort
-local random = math.random
-local insert = table.insert
+local INPUT_INVENTORY = defines.inventory.assembling_machine_input
+local OUTPUT_INVENTORY = defines.inventory.assembling_machine_output
 
-local input_inventory = defines.inventory.assembling_machine_input
-local output_inventory = defines.inventory.assembling_machine_output
+local sort = table.sort
+local insert = table.insert
+local random = math.random
+local min = math.min
+local floor = math.floor
+local atan2 = math.atan2
+local pi = math.pi
 
 Biofluid.events.on_init = function()
 	global.biofluid_robots = global.biofluid_robots or {}
@@ -121,7 +123,7 @@ function Biofluid.render_error_icons()
 		local status_icon = Biofluid.status_icons[failure_reason]
 		if status_icon then
 			draw_error_sprite(entity, status_icon, 71)
-			bioport_data.active = false
+			bioport_data.active = nil
 		else
 			bioport_data.active = true
 		end
@@ -131,10 +133,10 @@ end
 
 local function provider_sort_function(a, b)
 	a = a.fluidbox[1]
+	if not a then a = 0 else a = a.amount end
 	b = b.fluidbox[1]
-	if not b then return true end
-	if not a then return false end
-	return a.amount > b.amount
+	if not b then b = 0 else b = b.amount end
+	return a > b
 end
 
 local function random_order(l)
@@ -170,38 +172,59 @@ Biofluid.events[143] = function()
 			if not contents or contents.name ~= name then goto continue end
 			if target_temperature and contents.temperature ~= target_temperature then goto continue end
 			local already_allocated = network_data.allocated_fluids_from_providers[p.unit_number] or 0
-			if contents.amount - already_allocated >= amount then provider = p end
+			local can_give = contents.amount - already_allocated
+			if can_give >= 100 then
+				provider = p
+				unfulfilled_request.amount = min(amount, can_give)
+			end
 			break
 			::continue::
 		end
 		if provider then
+			local requester_data = global.biofluid_requesters[unfulfilled_request.entity.unit_number]
 			for _, bioport in random_order(network_data.bioports) do
 				local bioport_data = global.biofluid_bioports[bioport.unit_number]
 				if bioport_data and bioport_data.active then
 					local delivery_amount = Biofluid.start_journey(unfulfilled_request, provider, bioport_data)
 					local allocated = network_data.allocated_fluids_from_providers
 					allocated[provider.unit_number] = (allocated[provider.unit_number] or 0) + delivery_amount
+					requester_data.incoming = requester_data.incoming + delivery_amount
+					bioport_data.active = nil
 					break
 				end
 			end
 		end
 	end
 
+	for _, network_data in pairs(global.biofluid_networks) do
+		for _,p in pairs(network_data.providers) do
+			rendering.draw_text{color = {1, 1, 1}, target = p.position, surface = p.surface, time_to_live = 144, text = tostring(network_data.allocated_fluids_from_providers[p.unit_number] or 0)}
+		end
+	end
 	for _, network_data in pairs(global.biofluid_networks) do network_data.sorted = nil end
+end
+
+local function set_target(biorobot_data, target)
+	biorobot_data.entity.set_command{
+		type = defines.command.go_to_location,
+		destination_entity = target,
+		radius = 1,
+		distraction = defines.distraction.none
+	}
 end
 
 function Biofluid.start_journey(unfulfilled_request, provider, bioport_data)
 	if not Biofluid.eat(bioport_data) then return 0 end
-	local name, delivery_amount = unfulfilled_request.name, unfulfilled_request.amount
+	local delivery_amount = unfulfilled_request.amount
 	local requester = unfulfilled_request.entity
 	local bioport = bioport_data.entity
-	local bioport_input_inventory = bioport.get_inventory(input_inventory)
+	local bioport_input_inventory = bioport.get_inventory(INPUT_INVENTORY)
 	local robot_name
 	for robot, delivery_size in pairs(Biofluid.delivery_sizes) do
 		local removed = bioport_input_inventory.remove{name = robot, count = 1}
 		if removed ~= 0 then
 			robot_name = robot
-			delivery_amount = math.min(delivery_amount, delivery_size)
+			delivery_amount = min(delivery_amount, delivery_size)
 			break
 		end
 	end
@@ -215,25 +238,28 @@ function Biofluid.start_journey(unfulfilled_request, provider, bioport_data)
 		force = bioport.force_index,
 		position = position,
 		create_build_effect_smoke = false,
-		direction = math.floor((math.atan2(position[2] - requester_position.y, position[1] - requester_position.x) / math.pi - 0.5) / 2 % 1)
+		direction = floor((atan2(position[2] - requester_position.y, position[1] - requester_position.x) / pi - 0.5) / 2 % 1)
 	}
 	local biorobot_data = {
 		entity = robot,
 		status = PICKING_UP,
 		requester = requester.unit_number,
-		provider = provider.unit_number,
+		provider = provider,
+		provider_unit_number = provider.unit_number,
 		bioport = bioport.unit_number,
 		delivery_amount = delivery_amount,
+		name = unfulfilled_request.name,
+		network_id = bioport_data.network_id
 	}
-	Biofluid.set_target(biorobot_data, provider)
-	global.biofluid_bioports[robot.unit_number] = biorobot_data
+	set_target(biorobot_data, provider)
+	global.biofluid_robots[robot.unit_number] = biorobot_data
 	return delivery_amount
 end
 
 function Biofluid.eat(bioport_data)
 	local bioport = bioport_data.entity
 	if bioport_data.fuel_remaning == 0 then
-		local bioport_input_inventory = bioport.get_inventory(input_inventory)
+		local bioport_input_inventory = bioport.get_inventory(INPUT_INVENTORY)
 		for food, calories in pairs(Biofluid.favorite_foods) do
 			local removed = bioport_input_inventory.remove{name = food, count = 1}
 			if removed ~= 0 then
@@ -257,73 +283,97 @@ function Biofluid.poop(bioport_data, robot_name)
 	if bioport_data.guano >= batch_size then
 		bioport_data.guano = bioport_data.guano - batch_size
 		local entity = bioport_data.entity
-		entity.get_inventory(output_inventory).insert(special_delivery)
+		entity.get_inventory(OUTPUT_INVENTORY).insert(special_delivery)
 		entity.products_finished = entity.products_finished + batch_size
         entity.force.item_production_statistics.on_flow('guano', batch_size)
 	end
 end
 
-function Biofluid.set_target(biorobot_data, target)
-	biorobot_data.entity.set_command{
-		type = defines.command.go_to_location,
-		destination_entity = target,
-		radius = 1,
-		distraction = defines.distraction.none
-	}
-	biorobot_data.target = target
+local function reset_provider_allocations(biorobot_data)
+	local delivery_amount = biorobot_data.delivery_amount
+	local network_data = global.biofluid_networks[biorobot_data.network_id]
+	if not network_data then return end
+	local provider_unit_number = biorobot_data.provider_unit_number
+	local allocated = network_data.allocated_fluids_from_providers
+	if not allocated[provider_unit_number] then return end
+	local new = allocated[provider_unit_number] - delivery_amount
+	if new == 0 then new = nil end
+	allocated[provider_unit_number] = new
 end
 
-function Biofluid.go_home(biorobot_data)
+local function reset_requester_allocations(biorobot_data)
+	local requester_data = global.biofluid_requesters[biorobot_data.requester]
+	if requester_data then
+		requester_data.incoming = requester_data.incoming - biorobot_data.delivery_amount
+	end
+end
+
+local function go_home(biorobot_data)
+	local status = biorobot_data.status
+	if status == PICKING_UP then
+		reset_provider_allocations(biorobot_data)
+		reset_requester_allocations(biorobot_data)
+	elseif status == DROPPING_OFF then
+		reset_requester_allocations(biorobot_data)
+	end
 	biorobot_data.status = RETURNING
-	Biofluid.set_target(biorobot_data, biorobot_data.bioport)
+	local bioport_data = global.biofluid_bioports[biorobot_data.bioport]
+	if not bioport_data or not bioport_data.entity then
+		global.biofluid_robots[biorobot_data.entity.unit_number] = nil
+		return
+	end
+	set_target(biorobot_data, bioport_data.entity)
 end
 
---[[Biofluid.events.on_ai_command_completed = function(event)
-	local oculua_data = global.oculuas[event.unit_number]
-	if not oculua_data then return end
-	local oculua = oculua_data.entity
+Biofluid.events.on_ai_command_completed = function(event)
+	local biorobot_data = global.biofluid_robots[event.unit_number]
+	if not biorobot_data then return end
 	if event.result == defines.behavior_result.success then
-		if oculua_data.status == PICKING_UP then
-			local target = oculua_data.target
-			local player = oculua_data.player
-			if not target or not target.valid then Oculua.go_home(oculua_data); return end
-			if not player or not player.valid then Oculua.go_home(oculua_data); return end
-			local character = player.character
-			if not character then Oculua.go_home(oculua_data); return end
-
-			oculua_data.count = target.get_inventory(CHEST).remove{name = oculua_data.item, count = oculua_data.target_count}
-			if oculua_data.count == 0 then Oculua.go_home(oculua_data); return end
-
-			Oculua.fire_laser_beam(oculua_data)
-			Oculua.render_altmode_icon(oculua_data)
-			Oculua.set_target(oculua_data, character)
-			oculua_data.status = DROPPING_OFF
-		elseif oculua_data.status == DROPPING_OFF then
-			local player = oculua_data.player
-			if player and player.valid and oculua_data.count ~= 0 and player.get_main_inventory() then
-				local item = oculua_data.item
-				local inserted_count = player.get_main_inventory().insert{name = item, count = oculua_data.count}
-				oculua_data.count = oculua_data.count - inserted_count
-				Oculua.destroy_altmode_icon(oculua_data)
-				Oculua.fire_laser_beam(oculua_data)
+		if biorobot_data.status == PICKING_UP then
+			local provider = biorobot_data.provider
+			if not provider.valid then go_home(biorobot_data); return end
+			local contents = provider.fluidbox[1]
+			if not contents or contents.name ~= biorobot_data.name then go_home(biorobot_data); return end
+			local delivery_amount = min(contents.amount, biorobot_data.delivery_amount)
+			if delivery_amount == 0 then go_home(biorobot_data); return end
+			local requester_data = global.biofluid_requesters[biorobot_data.requester]
+			if not requester_data or not requester_data.entity.valid then go_home(biorobot_data); return end
+			local new_amount = contents.amount - delivery_amount
+			if new_amount == 0 then
+				provider.fluidbox[1] = nil
+			else
+				provider.fluidbox[1] = {name = contents.name, amount = new_amount}
 			end
-			Oculua.go_home(oculua_data)
-		elseif oculua_data.status == RETURNING then
-			local ipod = oculua_data.ipod
-			if not ipod or not ipod.valid then Oculua.wander(oculua_data); return end
-			local ipod_data = global.ipods[ipod.unit_number]
-			if not ipod_data then Oculua.wander(oculua_data); return end
-			
-			local inventory = ipod_data.inventory
-			local inserted_count = inventory.insert{name = 'ocula', count = 1}
-			if inserted_count == 0 then Oculua.wander(oculua_data); return end
-			ipod_data.active_oculua = ipod_data.active_oculua - 1
-			if oculua_data.map_tag then oculua_data.map_tag.destroy() end
-			global.oculuas[oculua.unit_number] = nil
-			oculua.destroy()
+			set_target(biorobot_data, requester_data.entity)
+			reset_provider_allocations(biorobot_data)
+			requester_data.incoming = requester_data.incoming - biorobot_data.delivery_amount + delivery_amount
+			biorobot_data.delivery_amount = delivery_amount
+			biorobot_data.status = DROPPING_OFF
+		elseif biorobot_data.status == DROPPING_OFF then
+			local requester_data = global.biofluid_requesters[biorobot_data.requester]
+			if not requester_data or not requester_data.entity.valid then go_home(biorobot_data); return end
+			local requester = requester_data.entity
+			local name = biorobot_data.name
+			local contents = requester.fluidbox[1]
+			if contents then
+				if contents.name ~= name then go_home(biorobot_data); return end
+				requester.fluidbox[1] = {name = name, amount = contents.amount + biorobot_data.delivery_amount}
+			else
+				requester.fluidbox[1] = {name = name, amount = biorobot_data.delivery_amount}
+			end
+			go_home(biorobot_data)
+		elseif biorobot_data.status == RETURNING then
+			local bioport_data = global.biofluid_bioports[biorobot_data.bioport]
+			if not bioport_data then return end
+			local bioport = bioport_data.entity
+			if not bioport.valid then return end
+			local biorobot = biorobot_data.entity
+			local inventory = bioport.get_inventory(INPUT_INVENTORY)
+			inventory.insert{name = biorobot.name, count = 1}
+			biorobot.destroy()
 		end
-	else Oculua.go_home(oculua_data) end
-end--]]
+	else go_home(biorobot_data) end
+end
 
 local function requester_sort_function(a, b)
 	local a_priority, b_priority = a.priority, b.priority
@@ -359,7 +409,7 @@ function Biofluid.get_unfulfilled_requests()
 			already_stored = already_stored + contents.amount
 		end
 		local request_size = goal - already_stored
-		if request_size * 2 < goal then goto continue end
+		if request_size < 100 then goto continue end
 		result[#result+1] = {
 			name = fluid_name,
 			amount = request_size,
@@ -372,19 +422,24 @@ function Biofluid.get_unfulfilled_requests()
 		end
 		::continue::
 	end
+
+	for _,unfulfilled_request in pairs(result) do
+		local entity = unfulfilled_request.entity
+		rendering.draw_text{color = {1, 1, 1}, target = entity.position, surface = entity.surface, time_to_live = 144, text = unfulfilled_request.name .. ' ' .. unfulfilled_request.amount}
+	end
 	sort(result, requester_sort_function)
 	return result
 end
 
 function Biofluid.why_isnt_my_bioport_working(bioport_data)
 	local entity = bioport_data.entity
-	if not entity or not entity.valid then return 'entity-status.working' end
+	if not entity.valid then return 'entity-status.working' end
 	local network = global.biofluid_networks[bioport_data.network_id]
 	if not network then return 'entity-status.working' end
 
 	local has_food = bioport_data.fuel_remaning ~= 0
 	local has_creature = false
-	for item, _ in pairs(entity.get_inventory(input_inventory).get_contents()) do
+	for item, _ in pairs(entity.get_inventory(INPUT_INVENTORY).get_contents()) do
 		if not has_food and Biofluid.favorite_foods[item] then
 			has_food = true
 		elseif not has_creature and Biofluid.biorobots[item] then
@@ -399,7 +454,7 @@ function Biofluid.why_isnt_my_bioport_working(bioport_data)
 	elseif not next(network.requesters) and not next(network.providers) then
 		return 'entity-status.no-biofluid-network'
 	else
-		local inventory = entity.get_inventory(output_inventory)
+		local inventory = entity.get_inventory(OUTPUT_INVENTORY)
 		if inventory.can_insert('guano') then
 			return 'entity-status.working'
 		end

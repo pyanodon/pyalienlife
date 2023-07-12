@@ -124,6 +124,7 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
     Caravan.events.ai_command_completed(event)
     Digosaurus.events.on_ai_command_completed(event)
     Oculua.events.on_ai_command_completed(event)
+    Biofluid.events.on_ai_command_completed(event)
 end)
 
 local on_destroyed = {defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity, defines.events.script_raised_destroy, defines.events.on_entity_died}
