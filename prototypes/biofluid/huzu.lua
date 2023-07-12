@@ -83,7 +83,7 @@ local animation = {
 }
 
 data:extend{{
-    ai_settings = {do_separation = false},
+    ai_settings = {do_separation = false, path_resolution_modifier = -2},
     type = 'unit',
     name = 'huzu',
     icon = '__pyalienlifegraphics2__/graphics/icons/huzu.png',
@@ -106,7 +106,7 @@ data:extend{{
         animation = animation
     },
     vision_distance = 30,
-    movement_speed = 0.9,
+    movement_speed = 0.09,
     distance_per_frame = 0.13,
     pollution_to_join_attack = 4,
     distraction_cooldown = 300,

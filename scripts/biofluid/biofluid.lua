@@ -207,8 +207,14 @@ end
 local function set_target(biorobot_data, target)
 	biorobot_data.entity.set_command{
 		type = defines.command.go_to_location,
-		destination_entity = target,
-		radius = 1,
+		destination = target,
+		radius = 0.5,
+		pathfind_flags = {
+			prefer_straight_paths = true,
+			low_priority = true,
+			allow_paths_through_own_entities = true,
+			allow_destroy_friendly_entities = true
+		},
 		distraction = defines.distraction.none
 	}
 end
@@ -251,7 +257,7 @@ function Biofluid.start_journey(unfulfilled_request, provider, bioport_data)
 		name = unfulfilled_request.name,
 		network_id = bioport_data.network_id
 	}
-	set_target(biorobot_data, provider)
+	set_target(biorobot_data, provider.position)
 	global.biofluid_robots[robot.unit_number] = biorobot_data
 	return delivery_amount
 end
@@ -322,7 +328,8 @@ local function go_home(biorobot_data)
 		global.biofluid_robots[biorobot_data.entity.unit_number] = nil
 		return
 	end
-	set_target(biorobot_data, bioport_data.entity)
+	local position = bioport_data.entity.position
+	set_target(biorobot_data, {position.x, position.y - 2.5})
 end
 
 Biofluid.events.on_ai_command_completed = function(event)
@@ -344,7 +351,7 @@ Biofluid.events.on_ai_command_completed = function(event)
 			else
 				provider.fluidbox[1] = {name = contents.name, amount = new_amount}
 			end
-			set_target(biorobot_data, requester_data.entity)
+			set_target(biorobot_data, requester_data.entity.position)
 			reset_provider_allocations(biorobot_data)
 			requester_data.incoming = requester_data.incoming - biorobot_data.delivery_amount + delivery_amount
 			biorobot_data.delivery_amount = delivery_amount

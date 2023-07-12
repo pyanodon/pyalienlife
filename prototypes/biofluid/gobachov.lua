@@ -82,7 +82,7 @@ local animation = {
 }
 
 data:extend{{
-    ai_settings = {do_separation = false},
+    ai_settings = {do_separation = false, path_resolution_modifier = -2},
     type = 'unit',
     name = 'gobachov',
     icon = '__pyalienlifegraphics2__/graphics/icons/gobachov.png',
@@ -105,7 +105,7 @@ data:extend{{
         animation = animation
     },
     vision_distance = 30,
-    movement_speed = 0.7,
+    movement_speed = 0.07,
     distance_per_frame = 0.13,
     pollution_to_join_attack = 4,
     distraction_cooldown = 300,

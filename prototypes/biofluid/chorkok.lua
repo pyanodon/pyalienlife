@@ -93,7 +93,7 @@ local animation = {
 }
 
 data:extend{{
-    ai_settings = {do_separation = false},
+    ai_settings = {do_separation = false, path_resolution_modifier = -2},
     type = 'unit',
     name = 'chorkok',
     icon = '__pyalienlifegraphics2__/graphics/icons/chorkok.png',
