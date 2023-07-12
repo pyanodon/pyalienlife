@@ -42,6 +42,7 @@ local recipe = RECIPE {
     type = 'recipe',
     name = 'bioport-hidden-recipe',
     enabled = false,
+    allow_inserter_overload = false,
     hidden = true,
     ingredients = {
         {'gobachov', data.raw.item['gobachov'].stack_size},

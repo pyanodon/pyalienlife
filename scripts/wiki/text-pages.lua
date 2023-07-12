@@ -41,6 +41,12 @@ Wiki.events.on_init = function()
     })
 
     remote.call('pywiki', 'add_page', {
+        name = 'biofluid',
+        section = 'alienlife',
+        text_only = true
+    })
+
+    remote.call('pywiki', 'add_page', {
         name = 'mega-farm',
         section = 'alienlife',
         text_only = true
