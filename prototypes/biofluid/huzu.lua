@@ -30,7 +30,7 @@ ITEM {
     subgroup = 'py-alienlife-biofluid-network',
     order = 'y',
     place_result = 'huzu',
-    stack_size = 50
+    stack_size = 10
 }
 
 local animation = {

@@ -31,7 +31,7 @@ ITEM {
     subgroup = 'py-alienlife-biofluid-network',
     order = 'z',
     place_result = 'chorkok',
-    stack_size = 50
+    stack_size = 10
 }
 
 RECIPE {

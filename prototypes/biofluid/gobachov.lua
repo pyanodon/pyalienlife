@@ -29,7 +29,7 @@ ITEM {
     subgroup = 'py-alienlife-biofluid-network',
     order = 'x',
     place_result = 'gobachov',
-    stack_size = 50
+    stack_size = 10
 }
 
 local animation = {
