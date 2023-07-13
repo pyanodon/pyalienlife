@@ -36,14 +36,15 @@ Biofluid.events.on_built = function(event)
 	entity.active = false
 	local unit_number = entity.unit_number
 	if connection_type == Biofluid.REQUESTER then
+		local tags = event.tags or {}
 		global.biofluid_requesters[unit_number] = {
 			entity = entity,
-			name = nil,
-			amount = 0,
+			name = tags.name,
+			amount = tags.amount or 0,
 			incoming = 0,
-			care_about_temperature = false,
-			target_temperature = 15,
-			priority = 0
+			care_about_temperature = tags.care_about_temperature or false,
+			target_temperature = tags.target_temperature or 15,
+			priority = tags.priority or 0
 		}
 	elseif connection_type == Biofluid.ROBOPORT then
 		global.biofluid_bioports[unit_number] = {
@@ -57,6 +58,8 @@ Biofluid.events.on_built = function(event)
 		local underground_data = {entity = entity}
 		global.biofluid_undergrounds[unit_number] = underground_data
 		Biofluid.spawn_underground_pipe_heat_connection(underground_data)
+	elseif connection_type == Biofluid.PROVIDER then
+		entity.operable = false
 	end
 	Biofluid.built_pipe(entity)
 end
@@ -196,11 +199,6 @@ Biofluid.events[143] = function()
 		end
 	end
 
-	for _, network_data in pairs(global.biofluid_networks) do
-		for _,p in pairs(network_data.providers) do
-			rendering.draw_text{color = {1, 1, 1}, target = p.position, surface = p.surface, time_to_live = 144, text = tostring(network_data.allocated_fluids_from_providers[p.unit_number] or 0)}
-		end
-	end
 	for _, network_data in pairs(global.biofluid_networks) do network_data.sorted = nil end
 end
 
@@ -486,10 +484,6 @@ function Biofluid.get_unfulfilled_requests()
 		::continue::
 	end
 
-	for _,unfulfilled_request in pairs(result) do
-		local entity = unfulfilled_request.entity
-		rendering.draw_text{color = {1, 1, 1}, target = entity.position, surface = entity.surface, time_to_live = 144, text = unfulfilled_request.name .. ' ' .. unfulfilled_request.amount}
-	end
 	sort(result, requester_sort_function)
 	return result
 end
@@ -539,6 +533,29 @@ Biofluid.events.on_entity_settings_pasted = function(event)
 		local gui = player.gui.screen.biofluid_requester_gui
 		if gui and gui.tags.unit_number == destination.unit_number then
 			Biofluid.update_requester_gui(player, gui)
+		end
+	end
+end
+
+Biofluid.events.on_player_setup_blueprint = function(event)
+	local player = game.get_player(event.player_index)
+	local blueprint = player.blueprint_to_setup
+	if not blueprint.valid_for_read then blueprint = player.cursor_stack end
+	if not blueprint or not blueprint.valid_for_read then return end
+
+	local requesters = global.biofluid_requesters
+	local max_index = blueprint.get_blueprint_entity_count()
+	for index, entity in pairs(event.mapping.get()) do
+		if index > max_index then return end
+		local requester_data = requesters[entity.unit_number]
+		if requester_data then
+			blueprint.set_blueprint_entity_tags(index, {
+				name = requester_data.name,
+				amount = requester_data.amount,
+				care_about_temperature = requester_data.care_about_temperature,
+				target_temperature = requester_data.target_temperature,
+				priority = requester_data.priority
+			})
 		end
 	end
 end
