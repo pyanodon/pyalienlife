@@ -57,7 +57,7 @@ Biofluid.bioport_slot_indexes = {
 Biofluid.tank_size = 10000
 
 Biofluid.delivery_sizes = {
-	['chorkok'] = 5000,
+	['chorkok'] = 10000,
 	['huzu'] = 2000,
 	['gobachov'] = 1000,
 }

@@ -155,7 +155,7 @@ Biofluid.events[143] = function()
 	Biofluid.render_error_icons()
 
 	local networks = global.biofluid_networks
-	if #networks == 0 then return end
+	if not next(networks) then return end
 	for _, unfulfilled_request in pairs(Biofluid.get_unfulfilled_requests()) do
 		local network_data = global.biofluid_networks[unfulfilled_request.network_id]
 		local providers = network_data.providers
@@ -314,6 +314,40 @@ local function reset_requester_allocations(biorobot_data)
 	end
 end
 
+local function find_new_home(biorobot_data, network_data)
+	if not network_data then
+		network_data = global.biofluid_networks[biorobot_data.network_id]
+		if not network_data then
+			global.biofluid_robots[biorobot_data.entity.unit_number] = nil
+			return
+		end
+	end
+	local old_home = biorobot_data.bioport
+	local home
+	local min_robot_count = 20
+	for unit_number, bioport in pairs(network_data.bioports) do
+		local bioport_data = global.biofluid_bioports[bioport.unit_number]
+		if unit_number ~= old_home and bioport.valid and bioport_data then
+			local robot_count = bioport.get_inventory(OUTPUT_INVENTORY).get_item_count(bioport_data.entity.name)
+			if robot_count == 0 then
+				home = bioport
+				biorobot_data.bioport = unit_number
+				break
+			elseif robot_count < min_robot_count then
+				min_robot_count = robot_count
+				home = bioport
+				biorobot_data.bioport = unit_number
+			end
+		end
+	end
+	if not home then
+		global.biofluid_robots[biorobot_data.entity.unit_number] = nil
+		return
+	end
+	local position = home.position
+	set_target(biorobot_data, {position.x, position.y - 2.5})
+end
+
 local function go_home(biorobot_data)
 	local status = biorobot_data.status
 	if status == PICKING_UP then
@@ -324,8 +358,14 @@ local function go_home(biorobot_data)
 	end
 	biorobot_data.status = RETURNING
 	local bioport_data = global.biofluid_bioports[biorobot_data.bioport]
-	if not bioport_data or not bioport_data.entity then
-		global.biofluid_robots[biorobot_data.entity.unit_number] = nil
+	local network_id = bioport_data and bioport_data.network_id or biorobot_data.network_id
+	local network_data = global.biofluid_networks[network_id]
+	if not bioport_data or not bioport_data.entity or (network_data and random() > 0.85) then
+		if network_data then
+			find_new_home(biorobot_data, network_data)
+		else
+			global.biofluid_robots[biorobot_data.entity.unit_number] = nil
+		end
 		return
 	end
 	local position = bioport_data.entity.position
@@ -383,13 +423,17 @@ Biofluid.events.on_ai_command_completed = function(event)
 			go_home(biorobot_data)
 		elseif biorobot_data.status == RETURNING then
 			local bioport_data = global.biofluid_bioports[biorobot_data.bioport]
-			if not bioport_data then return end
+			if not bioport_data then find_new_home(biorobot_data); return end
 			local bioport = bioport_data.entity
-			if not bioport.valid then return end
+			if not bioport.valid then find_new_home(biorobot_data); return end
 			local biorobot = biorobot_data.entity
 			local inventory = bioport.get_inventory(INPUT_INVENTORY)
-			inventory.insert{name = biorobot.name, count = 1}
-			biorobot.destroy()
+			if inventory.insert{name = biorobot.name, count = 1} == 1 then
+				biorobot.destroy()
+				global.biofluid_robots[event.unit_number] = nil
+			else
+				find_new_home(biorobot_data)
+			end
 		end
 	else go_home(biorobot_data) end
 end
@@ -472,12 +516,10 @@ function Biofluid.why_isnt_my_bioport_working(bioport_data)
 		return 'entity-status.no-creature'
 	elseif not next(network.requesters) and not next(network.providers) then
 		return 'entity-status.no-biofluid-network'
-	else
-		local inventory = entity.get_inventory(OUTPUT_INVENTORY)
-		if inventory.can_insert('guano') then
-			return 'entity-status.working'
-		end
+	elseif entity.get_inventory(OUTPUT_INVENTORY).get_item_count('guano') > 97 then
 		return 'entity-status.full-output'
+	else
+		return 'entity-status.working'
 	end
 end
 

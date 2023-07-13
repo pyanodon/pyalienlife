@@ -91,10 +91,12 @@ function Biofluid.build_bioport_gui(entity, player)
 		type = 'frame', name = 'bioport_gui', caption = entity.prototype.localised_name, direction = 'vertical', tags = {unit_number = entity.unit_number},
 		anchor = {
 			gui = defines.relative_gui_type.assembling_machine_gui,
-			position = defines.relative_gui_position.left
+			position = defines.relative_gui_position.right
 		}
 	}
 	main_frame.style.width = 448
+	main_frame.style.vertically_stretchable = false
+	main_frame.style.vertically_squashable = true
 
 	local content_frame = main_frame.add{type = 'frame', name = 'content_frame', direction = 'vertical', style = 'inside_shallow_frame_with_padding'}
 	content_frame.style.vertically_stretchable = true
