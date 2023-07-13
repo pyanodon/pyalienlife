@@ -332,6 +332,13 @@ local function go_home(biorobot_data)
 	set_target(biorobot_data, {position.x, position.y - 2.5})
 end
 
+local function combine_tempatures(first_count, first_tempature, second_count, second_tempature)
+	if not first_tempature and not second_tempature then return end
+	if not second_tempature or first_tempature == second_tempature then return first_tempature end
+	if not first_tempature then return second_tempature end
+	return ((first_tempature * first_count) + (second_tempature * second_count)) / (first_count + second_count)
+end
+
 Biofluid.events.on_ai_command_completed = function(event)
 	local biorobot_data = global.biofluid_robots[event.unit_number]
 	if not biorobot_data then return end
@@ -349,24 +356,29 @@ Biofluid.events.on_ai_command_completed = function(event)
 			if new_amount == 0 then
 				provider.fluidbox[1] = nil
 			else
-				provider.fluidbox[1] = {name = contents.name, amount = new_amount}
+				provider.fluidbox[1] = {name = contents.name, amount = new_amount, temperature = contents.temperature}
 			end
 			set_target(biorobot_data, requester_data.entity.position)
 			reset_provider_allocations(biorobot_data)
 			requester_data.incoming = requester_data.incoming - biorobot_data.delivery_amount + delivery_amount
 			biorobot_data.delivery_amount = delivery_amount
 			biorobot_data.status = DROPPING_OFF
+			if contents then biorobot_data.temperature = contents.temperature end
 		elseif biorobot_data.status == DROPPING_OFF then
 			local requester_data = global.biofluid_requesters[biorobot_data.requester]
 			if not requester_data or not requester_data.entity.valid then go_home(biorobot_data); return end
 			local requester = requester_data.entity
-			local name = biorobot_data.name
+			local name, amount, temperature = biorobot_data.name, biorobot_data.delivery_amount, biorobot_data.temperature
 			local contents = requester.fluidbox[1]
 			if contents then
 				if contents.name ~= name then go_home(biorobot_data); return end
-				requester.fluidbox[1] = {name = name, amount = contents.amount + biorobot_data.delivery_amount}
+				requester.fluidbox[1] = {
+					name = name,
+					amount = contents.amount + amount,
+					temperature = combine_tempatures(contents.amount, contents.temperature, amount, temperature)
+				}
 			else
-				requester.fluidbox[1] = {name = name, amount = biorobot_data.delivery_amount}
+				requester.fluidbox[1] = {name = name, amount = amount, temperature = temperature}
 			end
 			go_home(biorobot_data)
 		elseif biorobot_data.status == RETURNING then
