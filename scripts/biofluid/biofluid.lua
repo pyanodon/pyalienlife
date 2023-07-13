@@ -303,7 +303,7 @@ local function reset_provider_allocations(biorobot_data)
 	local allocated = network_data.allocated_fluids_from_providers
 	if not allocated[provider_unit_number] then return end
 	local new = allocated[provider_unit_number] - delivery_amount
-	if new == 0 then new = nil end
+	if new < 0.001 then new = nil end
 	allocated[provider_unit_number] = new
 end
 
