@@ -14,6 +14,8 @@ Date: ?
     - fixed that the symbiosis technology had no prereqs
     - fix mispelling of aggressive in zungror techs
     - fixed that guts, meat, worker food ect did not show in production stats for caravans and digosaur
+    - fixed that botanical nursery mk02,mk03,mk04 was unlocked by both mining machines & botany techs. now only botany
+    - fixed that ulric corral was unlocked twice from ulric tech
   Changes:
     - added gobachov, huzu, and chorkok. new creatures that can help with your fluid logistics. think of a biological alternative to pyanobots
     - added guano. a valuable waste product. used in manure, explosives, nitrous oxide, and worker food mk3.

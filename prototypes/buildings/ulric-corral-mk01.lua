@@ -2,22 +2,13 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 local MODULE_SLOTS = 8
 local FULL_CRAFTING_SPEED = 2 -- crafting speed when full of mk01 modules
 
-RECIPE {
-    type = "recipe",
-    name = "ulric-corral-mk01",
-    energy_required = 1,
-    enabled = false,
-    ingredients = {
-        {"steel-plate", 20},
-        {"titanium-plate", 20},
-        {"iron-gear-wheel", 20}, --bob steel-bearing
-        {"iron-plate", 10},
-        {"electronic-circuit", 10}
-    },
-    results = {
-        {"ulric-corral-mk01", 1}
-    }
-}:add_unlock("ulric")
+data.raw.recipe['ulric-corral-mk01'].ingredients = {
+    {"steel-plate", 20},
+    {"titanium-plate", 20},
+    {"iron-gear-wheel", 20}, --bob steel-bearing
+    {"iron-plate", 10},
+    {"electronic-circuit", 10}
+}
 
 ITEM {
     type = "item",
