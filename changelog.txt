@@ -8,8 +8,6 @@ Date: ?
     - fixed the blood upgraded slaughter recipe for vrauks shows arthropod blood in the recipe icon, even though it produced formic acid
     - fixed that oculas would not consider your cursor stack when delivering items
     - fixed that oculas were rendering on the map twice.
-    - fixed that dingrits turd path 1 was giving too much productivity. 400% -> 40%
-    - fixed that the auog food turd upgrade did not allow for productivity when the base recipe did
     - fixed that logistic stations would always flash a red "no power" icon. energy usage increased 1mW -> 10mW
     - fixed that the symbiosis technology had no prereqs
     - fix mispelling of aggressive in zungror techs
@@ -21,12 +19,16 @@ Date: ?
     - added guano. a valuable waste product. used in manure, explosives, nitrous oxide, and worker food mk3.
     - update chinese translation. credit sdqwo
     - added alt mode support to see what the ocula is carrying
-    - reworked sap turd to be more interesting. if you already have sap turd selected it will automatically unselect. choose something new!
-    - yaedols turd wastewater buffed 1->5. spores nerfed 12->4.
     - allow many entities to work with the upgrade planner
     - increased aerial caravan inventory size 60 -> 90. moved from py2 to chemical science
     - added a 5th tier of domestication tech.
     - added circuit connection to Harvester (credit: JStMorgan).
+  TURD:
+    - reworked sap turd to be more interesting. if you already have sap turd selected it will automatically unselect. choose something new!
+    - yaedols turd wastewater buffed 1->5. spores nerfed 12->4.
+    - reworked seaweed turd path 2. previously it was +15% productivity. now it can add a new use for slacked lime
+    - fixed that dingrits turd path 1 was giving too much productivity. 400% -> 40%
+    - fixed that the auog food turd upgrade did not allow for productivity when the base recipe did
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.5
 Date: 2023-6-23

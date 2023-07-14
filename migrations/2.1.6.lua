@@ -1,10 +1,12 @@
 for _, force in pairs(game.forces) do
-	if force.technologies['sap-upgrade'].researched and global.turd_bonuses[force.index] then
-		global.turd_unlocked_modules[force.index]['inoculator-module'] = nil
-		global.turd_unlocked_modules[force.index]['patch-module'] = nil
-		global.turd_unlocked_modules[force.index]['bark-module'] = nil
-		if global.turd_bonuses[force.index] then
-			global.turd_bonuses[force.index]['sap-upgrade'] = nil
+	if global.turd_bonuses[force.index] then
+		if force.technologies['sap-upgrade'].researched then
+			force.technologies['seaweed-upgrade'].researched = false
+			force.technologies['seaweed-upgrade'].researched = true
+		end
+		if force.technologies['seaweed-upgrade'].researched then
+			force.technologies['seaweed-upgrade'].researched = false
+			force.technologies['seaweed-upgrade'].researched = true
 		end
 	end
 

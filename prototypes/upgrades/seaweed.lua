@@ -24,6 +24,23 @@ if data then
         FUN.remove_ingredient(recipe, 'water-saline')
         data:extend{recipe}
     end
+
+    data:extend{{
+        name = 'slacked-lime-seaweed-recycle',
+        energy_required = 16,
+        category = 'seaweed',
+        ingredients = {
+            {type = 'fluid', name = 'slacked-lime', amount = 200},
+            {type = 'item', name = 'carbon-dust', amount = 2},
+        },
+        results = {
+            {'calcium-carbide', 16},
+            {type = 'fluid', name = 'oxygen', amount = 100},
+        },
+        enabled = false,
+        type = 'recipe',
+        main_product = 'calcium-carbide'
+    }}
 end
 
 return {
@@ -68,7 +85,8 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {productivity = 0.15, type = 'module-effects'}
+                {recipe = 'carbon-dust', type = 'unlock-recipe', also_unlocked_by_techs = true},
+                {recipe = 'slacked-lime-seaweed-recycle', type = 'unlock-recipe'},
             }
         },
         {

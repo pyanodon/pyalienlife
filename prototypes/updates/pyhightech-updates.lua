@@ -1600,3 +1600,16 @@ RECIPE {
         {type = "item", name = "starch", amount = 20}
     }
 }:add_unlock("starch-mk03")
+
+data.raw['assembling-machine']['kicalk-plantation'] = nil
+data.raw['item']['kicalk-plantation'] = nil
+data.raw['recipe']['kicalk-plantation'] = nil
+data.raw['assembling-machine']['auog-paddock'] = nil
+data.raw['item']['auog-paddock'] = nil
+data.raw['recipe']['auog-paddock'] = nil
+data.raw['assembling-machine']['zipir'] = nil
+data.raw['item']['zipir'] = nil
+data.raw['recipe']['zipir'] = nil
+data.raw['assembling-machine']['mukmoux-pasture'] = nil
+data.raw['item']['mukmoux-pasture'] = nil
+data.raw['recipe']['mukmoux-pasture'] = nil
