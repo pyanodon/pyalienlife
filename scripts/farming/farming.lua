@@ -18,9 +18,10 @@ end
 ---@param farm_name string name of farm building without -mkxx suffix
 function Farming.unregister_type(farm_name)
 	log('remote unregistered farm \'' .. farm_name .. '\'')
-	farm_buildings[farm_name] = nil	
+	farm_buildings[farm_name] = nil
 end
 
+remote.remove_interface('pyfarm')
 remote.add_interface('pyfarm', {
 	register = Farming.register_type,
 	unregister = Farming.unregister_type
