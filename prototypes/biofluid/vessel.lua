@@ -8,12 +8,11 @@ RECIPE {
         {'earth-generic-sample', 1},
         {'microcin-j25', 1},
         {'alien-sample01', 2},
-        {'bio-sample', 2},
         {type = 'fluid', name = 'water-saline', amount = 20},
         {type = 'fluid', name = 'coal-slurry', amount = 20},
     },
     results = {
-        {'vessel', 9}
+        {'vessel', 40}
     }
 }:add_unlock('biofluid-mk01')
 
@@ -24,7 +23,7 @@ RECIPE {
     enabled = false,
     category = 'creature-chamber',
     ingredients = {
-        {'vessel', 9},
+        {'vessel', 10},
         {'earth-generic-sample', 1},
         {'peptidase-m58', 1},
         {'alien-sample-02', 2},
@@ -34,7 +33,7 @@ RECIPE {
         {type = 'fluid', name = 'coal-slurry', amount = 40},
     },
     results = {
-        {'vessel-to-ground', 4}
+        {'vessel-to-ground', 10}
     }
 }:add_unlock('biofluid-mk02')
 

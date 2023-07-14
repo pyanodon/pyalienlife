@@ -327,6 +327,7 @@ local recipes_list =
   "fiber-dry-storage",
   "log-wood-fast",
   "paper-towel",
+  "lab-instrument-2"
 	}
 
 --adding to module limitation list

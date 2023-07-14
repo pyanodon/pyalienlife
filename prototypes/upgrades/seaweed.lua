@@ -45,13 +45,14 @@ if data then
     data:extend{{
         name = 'slacked-lime-from-seaweed',
         energy_required = 4,
-        category = 'thickener',
+        category = 'bof',
         ingredients = {
             {type = 'fluid', name = 'water', amount = 100},
+            {type = 'fluid', name = 'oxygen', amount = 50},
             {type = 'item', name = 'seaweed', amount = 2},
         },
         results = {
-            {type = 'fluid', name = 'slacked-lime', amount = 80},
+            {type = 'fluid', name = 'slacked-lime', amount = 100},
             {type = 'fluid', name = 'chlorine', amount = 20},
         },
         enabled = false,
