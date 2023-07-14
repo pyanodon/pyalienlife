@@ -2953,7 +2953,7 @@ RECIPE {
         {type = 'item', name = 'yotoi-fruit', amount = 10},
         {type = 'item', name = 'fishmeal', amount = 5},
         {type = 'item', name = 'wood-seeds-mk04', amount = 1},
-        {type = 'fluid', name = 'molten-salt', amount = 50},
+        {type = 'fluid', name = mods['pyalternativeenergy'] and 'molten-salt' or 'water', amount = 50},
         {type = 'item', name = 'caged-vrauks', amount = 1},
     },
     results = {
