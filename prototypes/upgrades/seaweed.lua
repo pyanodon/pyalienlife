@@ -41,6 +41,23 @@ if data then
         type = 'recipe',
         main_product = 'calcium-carbide'
     }}
+
+    data:extend{{
+        name = 'slacked-lime-from-seaweed',
+        energy_required = 4,
+        category = 'thickener',
+        ingredients = {
+            {type = 'fluid', name = 'water', amount = 100},
+            {type = 'item', name = 'seaweed', amount = 2},
+        },
+        results = {
+            {type = 'fluid', name = 'slacked-lime', amount = 80},
+            {type = 'fluid', name = 'chlorine', amount = 20},
+        },
+        enabled = false,
+        type = 'recipe',
+        main_product = 'slacked-lime'
+    }}
 end
 
 return {
@@ -87,6 +104,7 @@ return {
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
                 {recipe = 'carbon-dust', type = 'unlock-recipe', also_unlocked_by_techs = true},
                 {recipe = 'slacked-lime-seaweed-recycle', type = 'unlock-recipe'},
+                {recipe = 'slacked-lime-from-seaweed', type = 'unlock-recipe'},
             }
         },
         {
