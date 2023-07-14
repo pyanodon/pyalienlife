@@ -13,7 +13,6 @@ local tech_upgrades = {
     require('prototypes/upgrades/korlex'),
     require('prototypes/upgrades/fawogae'),
     require('prototypes/upgrades/moss'),
-    require('prototypes/upgrades/seaweed'),
     require('prototypes/upgrades/scrondrix'),
     require('prototypes/upgrades/vonix'),
     require('prototypes/upgrades/yaedols'),
@@ -35,6 +34,7 @@ if (data and mods.pyhightech) or (script and script.active_mods.pyhightech) then
         'prototypes/upgrades/vrauks',
         'prototypes/upgrades/xyhiphoe',
         'prototypes/upgrades/zipir',
+        'prototypes/upgrades/seaweed',
     } do
         table.insert(tech_upgrades, require(upgrade))
     end
