@@ -108,7 +108,6 @@ RECIPE {
     category = 'gasifier',
     ingredients = {
         {type = 'item', name = 'ammonium-nitrate', amount = 2},
-        {type = 'item', name = 'urea', amount = 1},
         {type = 'fluid', name = 'subcritical-water', amount = 100},
         {type = 'fluid', name = 'oxygen', amount = 200},
         {type = 'fluid', name = 'purest-nitrogen-gas', amount = 400},
@@ -116,6 +115,6 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'nitrous-oxide', amount = 60}
     }
-}:add_unlock{'biofluid-mk03'}
+}:add_unlock{'biofluid-mk03'}:add_ingredient{type = 'item', name = 'urea', amount = 1}
 
 RECIPE('utility-science-pack'):add_ingredient{type = 'fluid', name = 'nitrous-oxide', amount = 200}
