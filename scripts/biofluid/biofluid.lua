@@ -134,11 +134,14 @@ function Biofluid.render_error_icons()
 	end
 end
 
-local function provider_sort_function(a, b)
-	a = a.fluidbox[1]
+local allocated_fluids_from_providers
+local function provider_sort_function(entity_a, entity_b)
+	local a = entity_a.fluidbox[1]
 	if not a then a = 0 else a = a.amount end
-	b = b.fluidbox[1]
+	a = a - (allocated_fluids_from_providers[entity_a.unit_number] or 0)
+	local b = entity_b.fluidbox[1]
 	if not b then b = 0 else b = b.amount end
+	b = b - (allocated_fluids_from_providers[entity_b.unit_number] or 0)
 	return a > b
 end
 
@@ -163,6 +166,7 @@ Biofluid.events[143] = function()
 		local network_data = global.biofluid_networks[unfulfilled_request.network_id]
 		local providers = network_data.providers
 		if not network_data.sorted then
+			allocated_fluids_from_providers = network_data.allocated_fluids_from_providers
 			sort(providers, provider_sort_function)
 			network_data.sorted = true
 		end
@@ -172,15 +176,17 @@ Biofluid.events[143] = function()
 		for _, p in pairs(providers) do
 			if not p.valid then goto continue end
 			local contents = p.fluidbox[1]
-			if not contents or contents.name ~= name then goto continue end
-			if target_temperature and contents.temperature ~= target_temperature then goto continue end
+			if not contents then break end
+			if contents.name ~= name or target_temperature and contents.temperature ~= target_temperature then goto continue end
+			local has = contents.amount
+			if has < 100 then break end
 			local already_allocated = network_data.allocated_fluids_from_providers[p.unit_number] or 0
-			local can_give = contents.amount - already_allocated
+			local can_give = has - already_allocated
 			if can_give >= 100 then
 				provider = p
 				unfulfilled_request.amount = min(amount, can_give)
+				break
 			end
-			break
 			::continue::
 		end
 		if provider then
@@ -211,7 +217,7 @@ local function set_target(biorobot_data, target)
 			prefer_straight_paths = true,
 			low_priority = true,
 			allow_paths_through_own_entities = true,
-			allow_destroy_friendly_entities = true
+			allow_destroy_friendly_entities = true,
 		},
 		distraction = defines.distraction.none
 	}
@@ -312,13 +318,21 @@ local function reset_requester_allocations(biorobot_data)
 	end
 end
 
+local function make_homeless(biorobot_data)
+	global.biofluid_robots[biorobot_data.entity.unit_number] = nil
+	rendering.draw_sprite{
+		target = biorobot_data.entity,
+		sprite = 'utility.no_storage_space_icon',
+		surface = biorobot_data.entity.surface,
+		x_scale = 0.4,
+		y_scale = 0.4
+	}
+end
+
 local function find_new_home(biorobot_data, network_data)
 	if not network_data then
 		network_data = global.biofluid_networks[biorobot_data.network_id]
-		if not network_data then
-			global.biofluid_robots[biorobot_data.entity.unit_number] = nil
-			return
-		end
+		if not network_data then make_homeless(biorobot_data); return end
 	end
 	local old_home = biorobot_data.bioport
 	local home
@@ -326,8 +340,8 @@ local function find_new_home(biorobot_data, network_data)
 	for unit_number, bioport in pairs(network_data.bioports) do
 		local bioport_data = global.biofluid_bioports[bioport.unit_number]
 		if unit_number ~= old_home and bioport.valid and bioport_data then
-			local robot_count = bioport.get_inventory(OUTPUT_INVENTORY).get_item_count(bioport_data.entity.name)
-			if robot_count == 0 then
+			local robot_count = bioport.get_inventory(INPUT_INVENTORY).get_item_count(biorobot_data.entity.name)
+			if robot_count < 6 then
 				home = bioport
 				biorobot_data.bioport = unit_number
 				break
@@ -338,10 +352,7 @@ local function find_new_home(biorobot_data, network_data)
 			end
 		end
 	end
-	if not home then
-		global.biofluid_robots[biorobot_data.entity.unit_number] = nil
-		return
-	end
+	if not home then make_homeless(biorobot_data); return end
 	local position = home.position
 	set_target(biorobot_data, {position.x, position.y - 2.5})
 end
@@ -358,11 +369,11 @@ local function go_home(biorobot_data)
 	local bioport_data = global.biofluid_bioports[biorobot_data.bioport]
 	local network_id = bioport_data and bioport_data.network_id or biorobot_data.network_id
 	local network_data = global.biofluid_networks[network_id]
-	if not bioport_data or not bioport_data.entity or (network_data and random() > 0.85) then
+	if not bioport_data or not bioport_data.entity or (network_data and random() > 0.9 and table_size(network_data.bioports) > 1) then
 		if network_data then
 			find_new_home(biorobot_data, network_data)
 		else
-			global.biofluid_robots[biorobot_data.entity.unit_number] = nil
+			make_homeless(biorobot_data)
 		end
 		return
 	end
@@ -377,63 +388,99 @@ local function combine_tempatures(first_count, first_tempature, second_count, se
 	return ((first_tempature * first_count) + (second_tempature * second_count)) / (first_count + second_count)
 end
 
+local function pickup(biorobot_data)
+	local provider = biorobot_data.provider
+	if not provider.valid then go_home(biorobot_data); return end
+	local name = biorobot_data.name
+	local contents = provider.fluidbox[1]
+	if not contents or contents.name ~= name then go_home(biorobot_data); return end
+	local delivery_amount = min(contents.amount, biorobot_data.delivery_amount)
+	if delivery_amount == 0 then go_home(biorobot_data); return end
+	local requester_data = global.biofluid_requesters[biorobot_data.requester]
+	if not requester_data or not requester_data.entity.valid then go_home(biorobot_data); return end
+	local new_amount = contents.amount - delivery_amount
+	if new_amount == 0 then
+		provider.fluidbox[1] = nil
+	else
+		provider.fluidbox[1] = {name = name, amount = new_amount, temperature = contents.temperature}
+	end
+	set_target(biorobot_data, requester_data.entity.position)
+	reset_provider_allocations(biorobot_data)
+	requester_data.incoming = requester_data.incoming - biorobot_data.delivery_amount + delivery_amount
+	biorobot_data.delivery_amount = delivery_amount
+	biorobot_data.status = DROPPING_OFF
+	if contents then biorobot_data.temperature = contents.temperature end
+	local entity = biorobot_data.entity
+	biorobot_data.alt_mode_shadow = rendering.draw_sprite{
+		sprite = 'utility/entity_info_dark_background',
+		target = entity,
+		surface = entity.surface,
+		only_in_alt_mode = true,
+		x_scale = 0.5,
+		y_scale = 0.5,
+	}
+	biorobot_data.alt_mode_sprite = rendering.draw_sprite{
+		sprite = 'fluid/' .. name,
+		target = entity,
+		surface = entity.surface,
+		only_in_alt_mode = true,
+		x_scale = 0.8,
+		y_scale = 0.8,
+	}
+end
+
+local function dropoff(biorobot_data)
+	local requester_data = global.biofluid_requesters[biorobot_data.requester]
+	if not requester_data or not requester_data.entity.valid then go_home(biorobot_data); return end
+	local requester = requester_data.entity
+	local name, amount, temperature = biorobot_data.name, biorobot_data.delivery_amount, biorobot_data.temperature
+	local contents = requester.fluidbox[1]
+	if contents then
+		if contents.name ~= name then go_home(biorobot_data); return end
+		requester.fluidbox[1] = {
+			name = name,
+			amount = contents.amount + amount,
+			temperature = combine_tempatures(contents.amount, contents.temperature, amount, temperature)
+		}
+	else
+		requester.fluidbox[1] = {name = name, amount = amount, temperature = temperature}
+	end
+	go_home(biorobot_data)
+	if biorobot_data.alt_mode_sprite then
+		rendering.destroy(biorobot_data.alt_mode_sprite)
+	end
+	if biorobot_data.alt_mode_shadow then
+		rendering.destroy(biorobot_data.alt_mode_shadow)
+	end
+end
+
+local function returning(biorobot_data)
+	local bioport_data = global.biofluid_bioports[biorobot_data.bioport]
+	if not bioport_data then find_new_home(biorobot_data); return end
+	local bioport = bioport_data.entity
+	if not bioport.valid then find_new_home(biorobot_data); return end
+	local biorobot = biorobot_data.entity
+	local inventory = bioport.get_inventory(INPUT_INVENTORY)
+	if inventory.insert{name = biorobot.name, count = 1} == 1 then
+		global.biofluid_robots[biorobot.unit_number] = nil
+		biorobot.destroy()
+	else
+		find_new_home(biorobot_data)
+	end
+end
+
 Biofluid.events.on_ai_command_completed = function(event)
 	local biorobot_data = global.biofluid_robots[event.unit_number]
 	if not biorobot_data then return end
-	if event.result == defines.behavior_result.success then
-		if biorobot_data.status == PICKING_UP then
-			local provider = biorobot_data.provider
-			if not provider.valid then go_home(biorobot_data); return end
-			local contents = provider.fluidbox[1]
-			if not contents or contents.name ~= biorobot_data.name then go_home(biorobot_data); return end
-			local delivery_amount = min(contents.amount, biorobot_data.delivery_amount)
-			if delivery_amount == 0 then go_home(biorobot_data); return end
-			local requester_data = global.biofluid_requesters[biorobot_data.requester]
-			if not requester_data or not requester_data.entity.valid then go_home(biorobot_data); return end
-			local new_amount = contents.amount - delivery_amount
-			if new_amount == 0 then
-				provider.fluidbox[1] = nil
-			else
-				provider.fluidbox[1] = {name = contents.name, amount = new_amount, temperature = contents.temperature}
-			end
-			set_target(biorobot_data, requester_data.entity.position)
-			reset_provider_allocations(biorobot_data)
-			requester_data.incoming = requester_data.incoming - biorobot_data.delivery_amount + delivery_amount
-			biorobot_data.delivery_amount = delivery_amount
-			biorobot_data.status = DROPPING_OFF
-			if contents then biorobot_data.temperature = contents.temperature end
-		elseif biorobot_data.status == DROPPING_OFF then
-			local requester_data = global.biofluid_requesters[biorobot_data.requester]
-			if not requester_data or not requester_data.entity.valid then go_home(biorobot_data); return end
-			local requester = requester_data.entity
-			local name, amount, temperature = biorobot_data.name, biorobot_data.delivery_amount, biorobot_data.temperature
-			local contents = requester.fluidbox[1]
-			if contents then
-				if contents.name ~= name then go_home(biorobot_data); return end
-				requester.fluidbox[1] = {
-					name = name,
-					amount = contents.amount + amount,
-					temperature = combine_tempatures(contents.amount, contents.temperature, amount, temperature)
-				}
-			else
-				requester.fluidbox[1] = {name = name, amount = amount, temperature = temperature}
-			end
-			go_home(biorobot_data)
-		elseif biorobot_data.status == RETURNING then
-			local bioport_data = global.biofluid_bioports[biorobot_data.bioport]
-			if not bioport_data then find_new_home(biorobot_data); return end
-			local bioport = bioport_data.entity
-			if not bioport.valid then find_new_home(biorobot_data); return end
-			local biorobot = biorobot_data.entity
-			local inventory = bioport.get_inventory(INPUT_INVENTORY)
-			if inventory.insert{name = biorobot.name, count = 1} == 1 then
-				biorobot.destroy()
-				global.biofluid_robots[event.unit_number] = nil
-			else
-				find_new_home(biorobot_data)
-			end
-		end
-	else go_home(biorobot_data) end
+	if event.result ~= defines.behavior_result.success then go_home(biorobot_data); return end
+
+	if biorobot_data.status == PICKING_UP then
+		pickup(biorobot_data)
+	elseif biorobot_data.status == DROPPING_OFF then
+		dropoff(biorobot_data)
+	elseif biorobot_data.status == RETURNING then
+		returning(biorobot_data)
+	end
 end
 
 local function requester_sort_function(a, b)
@@ -470,7 +517,7 @@ function Biofluid.get_unfulfilled_requests()
 			already_stored = already_stored + contents.amount
 		end
 		local request_size = goal - already_stored
-		if request_size < 100 then goto continue end
+		if request_size < goal / 3 then goto continue end
 		result[#result+1] = {
 			name = fluid_name,
 			amount = request_size,

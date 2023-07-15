@@ -66,6 +66,7 @@ end
 ENTITY {
     type = 'assembling-machine',
     name = 'bioport',
+    bottleneck_ignore = true,
     icon = '__pyalienlifegraphics2__/graphics/icons/o-roboport.png',
     icon_size = 64,
     flags = {'placeable-player', 'player-creation'},

@@ -33,6 +33,7 @@ ITEM {
 ENTITY {
     name = 'requester-tank',
     type = 'furnace',
+    bottleneck_ignore = true,
     additional_pastable_entities = {'requester-tank'},
     minable = {mining_time = 0.2, result = 'requester-tank'},
     icon = '__pyindustry__/graphics/icons/overflow-valve.png',

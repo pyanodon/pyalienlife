@@ -33,6 +33,7 @@ ITEM {
 ENTITY {
     name = 'provider-tank',
     type = 'furnace',
+    bottleneck_ignore = true,
     minable = {mining_time = 0.2, result = 'provider-tank'},
     icon = '__pyindustry__/graphics/icons/overflow-valve.png',
     icon_size = 32,

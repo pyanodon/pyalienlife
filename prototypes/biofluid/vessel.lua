@@ -118,7 +118,7 @@ underground_pipe.fluid_box = {
         },
         {
             position = {0, 1},
-            max_underground_distance = 8
+            max_underground_distance = 48
         }
     }
 }
@@ -128,6 +128,7 @@ data:extend{pipe, underground_pipe}
 data:extend{{
     name = 'vessel-to-ground-heat-connection',
     type = 'furnace',
+    bottleneck_ignore = true,
     icon = underground_pipe.icon,
     icon_size = underground_pipe.icon_size,
     localised_name = {'entity-name.vessel-to-ground'},

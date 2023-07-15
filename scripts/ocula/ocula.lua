@@ -109,8 +109,8 @@ function Oculua.process_player(player)
 	end
 end
 
+local target_offset = {0, -0.3}
 function Oculua.render_altmode_icon(oculua_data)
-	local target_offset = {0, -0.3}
 	oculua_data.alt_mode_light = rendering.draw_sprite{
 		sprite = 'utility/entity_info_dark_background',
 		target = oculua_data.entity,
