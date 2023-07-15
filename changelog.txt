@@ -25,6 +25,7 @@ Date: ?
     - increased aerial caravan inventory size 60 -> 90. moved from py2 to chemical science
     - added a 5th tier of domestication tech.
     - added circuit connection to Harvester (credit: JStMorgan).
+    - allowed caravans to walk on inserters
   TURD:
     - reworked sap turd to be more interesting. if you already have sap turd selected it will automatically unselect. choose something new!
     - yaedols turd wastewater buffed 1->5. spores nerfed 12->4.

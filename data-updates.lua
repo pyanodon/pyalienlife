@@ -495,7 +495,8 @@ local walkable_types = {
     ['simple-entity'] = true,
     ['pipe'] = true,
     ['pipe-to-ground'] = true,
-    ['electric-pole'] = true
+    ['electric-pole'] = true,
+    ['inserter'] = true
 }
 
 for _, prototype in pairs(collision_mask_util.collect_prototypes_with_layer('object-layer')) do
