@@ -63,7 +63,7 @@ Biofluid.delivery_sizes = {
 }
 
 Biofluid.taco_bell = {
-	['chorkok'] = 0.6,
-	['huzu'] = 0.4,
-	['gobachov'] = 0.3,
+	['chorkok'] = 1.3,
+	['huzu'] = 0.8,
+	['gobachov'] = 0.6,
 }
