@@ -83,26 +83,6 @@ function Biofluid.spawn_underground_pipe_heat_connection(underground_data)
 	underground_data.heat_connection = heat_connection
 end
 
-Biofluid.events.on_destroyed = function(event)
-	local entity = event.entity
-	if Biofluid.connectable[entity.name] then
-		Biofluid.destroyed_pipe(entity)
-		local unit_number = entity.unit_number
-		if entity.type == 'pipe-to-ground' then
-			local underground_data = global.biofluid_undergrounds[unit_number]
-			if not underground_data then return end
-			local heat_connection = underground_data.heat_connection
-			if not heat_connection or not heat_connection.valid then return end
-			heat_connection.destroy()
-			global.biofluid_undergrounds[unit_number] = nil
-		else
-			global.biofluid_requesters[unit_number] = nil
-			global.biofluid_bioports[unit_number] = nil
-			global.biofluid_robots[unit_number] = nil
-		end
-	end
-end
-
 Biofluid.events.on_player_rotated_entity = function(event)
 	local entity = event.entity
 	if Biofluid.connectable[entity.name] then
@@ -242,13 +222,13 @@ function Biofluid.start_journey(unfulfilled_request, provider, bioport_data)
 	Biofluid.poop(bioport_data, robot_name)
 	local bioport_position = bioport.position
 	local position = {bioport_position.x, bioport_position.y - 2.5}
-	local requester_position = requester.position
+	local provider_position = provider.position
 	local robot = bioport.surface.create_entity{
 		name = robot_name,
 		force = bioport.force_index,
 		position = position,
 		create_build_effect_smoke = false,
-		direction = floor((atan2(position[2] - requester_position.y, position[1] - requester_position.x) / pi - 0.5) / 2 % 1)
+		direction = floor((atan2(position[2] - provider_position.y, position[1] - provider_position.x) / pi - 0.5) / 2 % 1 * 8)
 	}
 	local biorobot_data = {
 		entity = robot,
@@ -336,7 +316,7 @@ local function find_new_home(biorobot_data, network_data)
 	end
 	local old_home = biorobot_data.bioport
 	local home
-	local min_robot_count = 20
+	local min_robot_count = 999
 	for unit_number, bioport in pairs(network_data.bioports) do
 		local bioport_data = global.biofluid_bioports[bioport.unit_number]
 		if unit_number ~= old_home and bioport.valid and bioport_data then
@@ -604,5 +584,37 @@ Biofluid.events.on_player_setup_blueprint = function(event)
 				priority = requester_data.priority
 			})
 		end
+	end
+end
+
+Biofluid.events.on_destroyed = function(event)
+	local entity = event.entity
+	local name = entity.name
+	if Biofluid.connectable[name] then
+		Biofluid.destroyed_pipe(entity)
+		local unit_number = entity.unit_number
+		if entity.type == 'pipe-to-ground' then
+			local underground_data = global.biofluid_undergrounds[unit_number]
+			if not underground_data then return end
+			local heat_connection = underground_data.heat_connection
+			if not heat_connection or not heat_connection.valid then return end
+			heat_connection.destroy()
+			global.biofluid_undergrounds[unit_number] = nil
+		else
+			global.biofluid_requesters[unit_number] = nil
+			global.biofluid_bioports[unit_number] = nil
+		end
+	elseif Biofluid.biorobots[name] then
+		local unit_number = entity.unit_number
+		local biorobot_data = global.biofluid_robots[unit_number]
+		if not biorobot_data then return end
+		local status = biorobot_data.status
+		if status == PICKING_UP then
+			reset_provider_allocations(biorobot_data)
+			reset_requester_allocations(biorobot_data)
+		elseif status == DROPPING_OFF then
+			reset_requester_allocations(biorobot_data)
+		end
+		global.biofluid_robots[unit_number] = nil
 	end
 end
