@@ -26,6 +26,7 @@ Date: ?
     - added a 5th tier of domestication tech.
     - added circuit connection to Harvester (credit: JStMorgan).
     - allowed caravans to walk on inserters
+    - made vatbrain cartridge mk2,mk3,mk4 a bit more expensive to craft
   TURD:
     - reworked sap turd to be more interesting. if you already have sap turd selected it will automatically unselect. choose something new!
     - yaedols turd wastewater buffed 1->5. spores nerfed 12->4.

@@ -113,7 +113,7 @@ RECIPE {
         {type = 'fluid', name = 'fetal-serum', amount = 50},
     },
     results = {
-        {type = 'item', name = 'brain-cartridge-02', amount = 2},
+        {type = 'item', name = 'brain-cartridge-02', amount = 1},
     },
 
 }:add_unlock("vatbrain-mk02")
@@ -132,7 +132,7 @@ RECIPE {
         {type = 'fluid', name = 'psc', amount = 100},
     },
     results = {
-        {type = 'item', name = 'brain-cartridge-03', amount = 2},
+        {type = 'item', name = 'brain-cartridge-03', amount = 1},
     },
 
 }:add_unlock("vatbrain-mk03")
@@ -149,9 +149,10 @@ RECIPE {
         {type = 'item', name = 'enzyme-pks', amount = 2},
         {type = 'item', name = 'low-density-structure', amount = 1},
         {type = 'fluid', name = 'psc', amount = 50},
+        {type = 'fluid', name = 'nitrous-oxide', amount = 100}
     },
     results = {
-        {type = 'item', name = 'brain-cartridge-04', amount = 3},
+        {type = 'item', name = 'brain-cartridge-04', amount = 2},
     },
 
 }:add_unlock("vatbrain-mk04")

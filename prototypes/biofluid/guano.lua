@@ -117,4 +117,4 @@ RECIPE {
     }
 }:add_unlock{'biofluid-mk03'}:add_ingredient{type = 'item', name = 'urea', amount = 1}
 
-RECIPE('utility-science-pack'):add_ingredient{type = 'fluid', name = 'nitrous-oxide', amount = 200}
+RECIPE('utility-science-pack'):add_ingredient{type = 'item', name = 'workers-food-03', amount = 3}
