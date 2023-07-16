@@ -51,7 +51,11 @@ Biofluid.events.on_built = function(event)
 			entity = entity,
 			fuel_remaning = 0,
 			active = false,
-			guano = 0
+			guano = 0,
+			animation = {
+				gobachov = {stage = 0, id = nil},
+				chorkok = {stage = 0, id = nil}
+			}
 		}
 	elseif entity.type == 'pipe-to-ground' then
 		entity.operable = false
@@ -62,6 +66,31 @@ Biofluid.events.on_built = function(event)
 		entity.operable = false
 	end
 	Biofluid.built_pipe(entity)
+end
+
+function Biofluid.update_bioport_animation(bioport_data)
+	local entity = bioport_data.entity
+	local input = entity.get_inventory(INPUT_INVENTORY)
+	for creature_name, animation_data in pairs(bioport_data.animation) do
+		local new_stage = floor(input.get_item_count(creature_name) / 2)
+		if new_stage ~= animation_data.stage then
+			animation_data.stage = new_stage
+			if animation_data.id then
+				rendering.destroy(animation_data.id)
+			end
+			if new_stage == 0 then
+				animation_data.id = nil
+			else
+				animation_data.id = rendering.draw_animation{
+					animation = 'bioport-animation-' .. creature_name .. '-' .. new_stage,
+					render_layer = 'higher-object-above',
+					target = entity,
+					surface = entity.surface,
+					animation_speed = creature_name == 'chorkok' and 0.25 or 0.5
+				}
+			end
+		end
+	end
 end
 
 function Biofluid.spawn_underground_pipe_heat_connection(underground_data)
@@ -243,6 +272,7 @@ function Biofluid.start_journey(unfulfilled_request, provider, bioport_data)
 	}
 	set_target(biorobot_data, provider.position)
 	global.biofluid_robots[robot.unit_number] = biorobot_data
+	Biofluid.update_bioport_animation(bioport_data)
 	return delivery_amount
 end
 
@@ -444,6 +474,7 @@ local function returning(biorobot_data)
 	if inventory.insert{name = biorobot.name, count = 1} == 1 then
 		global.biofluid_robots[biorobot.unit_number] = nil
 		biorobot.destroy()
+		Biofluid.update_bioport_animation(bioport_data)
 	else
 		find_new_home(biorobot_data)
 	end

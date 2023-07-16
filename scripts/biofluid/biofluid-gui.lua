@@ -19,6 +19,7 @@ function Biofluid.update_bioport_gui(player, gui)
 	if not entity or not entity.valid then player.opened = nil; return end
 	local network = global.biofluid_networks[bioport_data.network_id]
 	if not network then player.opened = nil; return end
+	Biofluid.update_bioport_animation(bioport_data)
 
 	local status = Biofluid.why_isnt_my_bioport_working(bioport_data)
 	local img = Biofluid.failure_reasons[status]
