@@ -132,7 +132,7 @@ RECIPE {
         {type = 'fluid', name = 'psc', amount = 100},
     },
     results = {
-        {type = 'item', name = 'brain-cartridge-03', amount = 1},
+        {type = 'item', name = 'brain-cartridge-03', amount = 2},
     },
 
 }:add_unlock("vatbrain-mk03")
