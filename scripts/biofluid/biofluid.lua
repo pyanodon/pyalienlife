@@ -75,19 +75,24 @@ function Biofluid.update_bioport_animation(bioport_data)
 		local new_stage = floor(input.get_item_count(creature_name) / 2)
 		if new_stage ~= animation_data.stage then
 			animation_data.stage = new_stage
-			if animation_data.id then
-				rendering.destroy(animation_data.id)
-			end
 			if new_stage == 0 then
-				animation_data.id = nil
+				if animation_data.id then
+					rendering.destroy(animation_data.id)
+					animation_data.id = nil
+				end
 			else
-				animation_data.id = rendering.draw_animation{
-					animation = 'bioport-animation-' .. creature_name .. '-' .. new_stage,
-					render_layer = 'higher-object-above',
-					target = entity,
-					surface = entity.surface,
-					animation_speed = creature_name == 'chorkok' and 0.25 or 0.5
-				}
+				local new_animation_name = 'bioport-animation-' .. creature_name .. '-' .. new_stage
+				if animation_data.id then
+					rendering.set_animation(animation_data.id, new_animation_name)
+				else
+					animation_data.id = rendering.draw_animation{
+						animation = new_animation_name,
+						render_layer = 'higher-object-above',
+						target = entity,
+						surface = entity.surface,
+						animation_speed = creature_name == 'chorkok' and 0.25 or 0.5
+					}
+				end
 			end
 		end
 	end
