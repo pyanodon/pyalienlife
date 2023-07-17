@@ -251,7 +251,6 @@ local recipes_list =
   "auog-food-01-sawdust",
   "auog-food-02",
   "auog-food-02-sawdust",
-  "charged-auog",
   "fish-food-01",
   "fish-food-02",
   "yaedols-sample",
@@ -327,7 +326,8 @@ local recipes_list =
   "fiber-dry-storage",
   "log-wood-fast",
   "paper-towel",
-  "lab-instrument-2"
+  "lab-instrument-2",
+  "workers-food-03"
 	}
 
 --adding to module limitation list

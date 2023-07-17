@@ -2942,9 +2942,9 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'workers-food-03',
-    category = 'advanced-crafting',
+    category = 'crafting-with-fluid',
     enabled = false,
-    energy_required = 160,
+    energy_required = 320,
     ingredients = {
         {type = 'item', name = 'workers-food-02', amount = 2},
         {type = 'item', name = 'plastic-bar', amount = 4},
@@ -2953,8 +2953,11 @@ RECIPE {
         {type = 'item', name = 'yotoi-fruit', amount = 10},
         {type = 'item', name = 'fishmeal', amount = 5},
         {type = 'item', name = 'wood-seeds-mk04', amount = 1},
-        {type = 'fluid', name = mods['pyalternativeenergy'] and 'molten-salt' or 'water', amount = 50},
+        {type = 'fluid', name = mods['pyalternativeenergy'] and 'molten-salt' or 'water', amount = 25},
+        {type = 'fluid', name = 'cadaveric-arum-mk04-seed-juice', amount = 25},
         {type = 'item', name = 'caged-vrauks', amount = 1},
+        {type = 'item', name = 'digested-rennea-seeds-mk04', amount = 3},
+        {type = 'item', name = 'arqad-maggot-4', amount = 1},
     },
     results = {
         {type = 'item', name = 'workers-food-03', amount = 8},
