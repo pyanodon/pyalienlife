@@ -2914,7 +2914,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'workers-food', amount = 2},
     },
-}:add_unlock("domestication")
+}:add_unlock("starch-mk01")
 
 RECIPE {
     type = 'recipe',
