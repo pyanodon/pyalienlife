@@ -649,3 +649,9 @@ Biofluid.events.on_destroyed = function(event)
 		global.biofluid_robots[unit_number] = nil
 	end
 end
+
+Biofluid.events.on_player_fast_transferred = function(event)
+	local bioport_data = global.biofluid_bioports[event.entity.unit_number]
+	if not bioport_data then return end
+	Biofluid.update_bioport_animation(bioport_data)
+end

@@ -197,3 +197,4 @@ script.on_event(defines.events.on_research_reversed, Turd.events.on_research_rev
 script.on_event(defines.events.on_player_used_capsule, Ulric.events.used_capsule)
 script.on_event(defines.events.on_player_rotated_entity, Biofluid.events.on_player_rotated_entity)
 script.on_event(defines.events.on_player_setup_blueprint, Biofluid.events.on_player_setup_blueprint)
+script.on_event(defines.events.on_player_fast_transferred, Biofluid.events.on_player_fast_transferred)
