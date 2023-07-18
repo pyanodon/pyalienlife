@@ -10,7 +10,7 @@ local farm =
                         },
 						{
 						recipe_name = 'arum-super-2', -- recipe name
-						crop_output = 1.5 -- crop yield
+						crop_output = 2 -- crop yield
                         },
 						{
 						recipe_name = 'arum-super-3', -- recipe name
