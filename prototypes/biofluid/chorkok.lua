@@ -75,7 +75,7 @@ local animation = {
             width = 128,
             height = 128,
             frame_count = 25,
-            shift = util.by_pixel(33.5, 18.75),
+            shift = util.by_pixel(39.5, 23.75),
             draw_as_shadow = true,
             direction_count = 16
         },
