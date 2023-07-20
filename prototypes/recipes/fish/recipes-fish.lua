@@ -25,7 +25,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'fish-food-01', amount = 3},
     },
-}:add_unlock("fish-mk01")
+}:add_unlock("fish-mk02")
 
 RECIPE {
     type = 'recipe',
