@@ -2954,7 +2954,7 @@ RECIPE {
         {type = 'item', name = 'fishmeal', amount = 5},
         {type = 'item', name = 'wood-seeds-mk04', amount = 1},
         {type = 'fluid', name = mods['pyalternativeenergy'] and 'molten-salt' or 'water', amount = 25},
-        {type = 'fluid', name = 'cadaveric-arum-mk04-seed-juice', amount = 25},
+        {type = 'fluid', name = mods["pyhightech"] and 'cadaveric-arum-mk04-seed-juice' or 'milk', amount = 25},
         {type = 'item', name = 'caged-vrauks', amount = 1},
         {type = 'item', name = 'digested-rennea-seeds-mk04', amount = 3},
         {type = 'item', name = 'arqad-maggot-4', amount = 1},
