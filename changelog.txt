@@ -18,6 +18,7 @@ Date: ?
     - fixed that dingrits turd path 1 was giving too much productivity. 400% -> 40%
     - fixed that the auog food turd upgrade did not allow for productivity when the base recipe did
     - fixed that the wood turd's "fiber-dry-storage-2" recipe was much slower than intended. 24sec -> 6sec
+    - increased the number of saddles from ulric path 2 by 10x. reduced speed bonus from 30% -> 15%
   Caravans:
     - allowed caravans to walk on inserters
     - removed path caching from land-based caravans. this hurt UPS a bit, but they will respond better to changes in the environment. upgrade to aerial caravans for better UPS

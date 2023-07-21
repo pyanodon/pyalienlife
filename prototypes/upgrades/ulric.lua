@@ -21,7 +21,7 @@ if data then
                 {name = 'niobium-plate', amount = 1, type = 'item'},
                 {name = 'flue-gas', amount = 250, type = 'fluid'},
             },
-            results = {{'saddle', 2}}
+            results = {{'saddle', 20}}
         },
         {
             type = 'recipe',
@@ -34,7 +34,7 @@ if data then
                 {name = 'nichrome', amount = 1, type = 'item'},
                 {name = 'micro-fiber', amount = 1, type = 'item'},
             },
-            results = {{'saddle', 4}}
+            results = {{'saddle', 40}}
         },
         {
             type = 'recipe',
@@ -119,7 +119,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {speed = 0.3, productivity = 0.15, type = 'module-effects'},
+                {speed = 0.15, productivity = 0.15, type = 'module-effects'},
                 {recipe = 'saddle', type = 'unlock-recipe'},
                 {recipe = 'saddle-b', type = 'unlock-recipe'},
                 {old = 'ulric-cub-1', new = 'ulric-cub-1-saddle', type = 'recipe-replacement'},
