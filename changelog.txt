@@ -1,6 +1,29 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.6
 Date: ?
+  Changes:
+    - added gobachov, huzu, and chorkok. new creatures that can help with your fluid logistics. think of a biological alternative to pyanobots
+    - added guano. a valuable waste product. used in manure, explosives, nitrous oxide, and worker food mk3.
+    - update chinese translation. credit sdqwo
+    - added alt mode support to see what the ocula is carrying
+    - allow many entities to work with the upgrade planner
+    - added a 5th tier of domestication tech.
+    - added circuit connection to Harvester (credit: JStMorgan).
+    - made vatbrain cartridge mk2,mk4 a bit more expensive to craft
+    - moved workers food recipe from domestication tech to starch tech
+  TURD:
+    - reworked sap turd to be more interesting. if you already have sap turd selected it will automatically unselect. choose something new!
+    - yaedols turd wastewater buffed 1->5. spores nerfed 12->4.
+    - reworked seaweed turd path 2. previously it was +15% productivity. now it can add a new use for slacked lime
+    - fixed that dingrits turd path 1 was giving too much productivity. 400% -> 40%
+    - fixed that the auog food turd upgrade did not allow for productivity when the base recipe did
+  Caravans:
+    - allowed caravans to walk on inserters
+    - removed path caching from land-based caravans. this hurt UPS a bit, but they will respond better to changes in the environment. upgrade to aerial caravans for better UPS
+    - added new action to caravans: "Collect all autotrash". This will extract all items from your player's autotrash. Combine this with oculas for an infinite range logistic system.
+    - caravans will now have higher priority based on when they arrive at a destination. previously it was based on the order when the caravan was built
+    - increased aerial caravan inventory size 60 -> 90. moved from py2 to chemical science
+    - fixed that caravans using the "fill cargo action" would count as full even if stacks only had 1 item. now all stacks need to be at max stack size
   Bugfixes:
     - fixed an ocula crash with the trainsaver mod
     - fixed that the quality cottongut food was referencing moondrop in the item tooltip even though it had no moondrop in the crafting recipe
@@ -17,24 +40,6 @@ Date: ?
     - fixed that the lab-instrument-2 didn't use productivity modules when the t1 recipe allowed it.
     - fix crash casued by AL 2.0.7 migration
     - fixed an auog duplication bug caused by productivity modules in the ablaze auog recipe
-  Changes:
-    - added gobachov, huzu, and chorkok. new creatures that can help with your fluid logistics. think of a biological alternative to pyanobots
-    - added guano. a valuable waste product. used in manure, explosives, nitrous oxide, and worker food mk3.
-    - update chinese translation. credit sdqwo
-    - added alt mode support to see what the ocula is carrying
-    - allow many entities to work with the upgrade planner
-    - increased aerial caravan inventory size 60 -> 90. moved from py2 to chemical science
-    - added a 5th tier of domestication tech.
-    - added circuit connection to Harvester (credit: JStMorgan).
-    - allowed caravans to walk on inserters
-    - made vatbrain cartridge mk2,mk4 a bit more expensive to craft
-    - moved workers food recipe from domestication tech to starch tech
-  TURD:
-    - reworked sap turd to be more interesting. if you already have sap turd selected it will automatically unselect. choose something new!
-    - yaedols turd wastewater buffed 1->5. spores nerfed 12->4.
-    - reworked seaweed turd path 2. previously it was +15% productivity. now it can add a new use for slacked lime
-    - fixed that dingrits turd path 1 was giving too much productivity. 400% -> 40%
-    - fixed that the auog food turd upgrade did not allow for productivity when the base recipe did
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.5
 Date: 2023-6-23
