@@ -130,7 +130,7 @@ local function build_tech_upgrade(tech_upgrade)
                     scale = 0.5,
                     category = tech_upgrade.module_category or 'speed',
                     tier = 1,
-                    flags = {'not-stackable', 'hidden'},
+                    flags = {'not-stackable'},
                     subgroup = 'py-alienlife-turd-modules',
                     order = 'z',
                     stack_size = 1,
@@ -175,6 +175,9 @@ local function build_tech_upgrade(tech_upgrade)
                             local module_slots = entity.module_specification.module_slots
                             local desired_speed = entity.crafting_speed * (module_slots + 1/i) * i
                             module.effect.speed.bonus = (desired_speed / entity.crafting_speed) * effect.speed
+                        end
+                        if i ~= 1 then
+                            module.localised_name = {'', {'technology-name.' .. tech.name}, ' MK0' .. i}
                         end
                         data:extend{module}
                     end
