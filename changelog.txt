@@ -12,6 +12,7 @@ Date: ?
     - made vatbrain cartridge mk2,mk4 a bit more expensive to craft
     - moved workers food recipe from domestication tech to starch tech
     - moved fish food recipe from fish mk1 to fish mk2
+    - allow productivity in workers food mk1, mk2, mk3
   TURD:
     - TURD beacons & modules are now avalible in factory planner/helmod
     - reworked sap turd to be more interesting. if you already have sap turd selected it will automatically unselect. choose something new!
@@ -21,6 +22,7 @@ Date: ?
     - fixed that the auog food turd upgrade did not allow for productivity when the base recipe did
     - fixed that the wood turd's "fiber-dry-storage-2" recipe was much slower than intended. 24sec -> 6sec
     - increased the number of saddles from ulric path 2 by 10x. reduced speed bonus from 30% -> 15%
+    - buff fish turd path 3
   Caravans:
     - allowed caravans to walk on inserters
     - removed path caching from land-based caravans. this hurt UPS a bit, but they will respond better to changes in the environment. upgrade to aerial caravans for better UPS

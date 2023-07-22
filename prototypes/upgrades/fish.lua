@@ -35,6 +35,12 @@ if data then
         FUN.remove_result(recipe, 'waste-water')
         FUN.add_result(recipe, {type = 'fluid', name = 'pressured-water', amount = 100})
         FUN.multiply_result_amount(recipe, 'fish-egg', 1.2)
+        for _, ingredient in pairs(recipe.ingredients) do
+            if ingredient.name == 'water-saline' then
+                ingredient.name = 'water'
+                break
+            end
+        end
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         data:extend{recipe}
     end

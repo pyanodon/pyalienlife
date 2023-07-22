@@ -327,6 +327,8 @@ local recipes_list =
   "log-wood-fast",
   "paper-towel",
   "lab-instrument-2",
+  "workers-food",
+  "workers-food-02",
   "workers-food-03"
 	}
 

@@ -2923,7 +2923,7 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = 'item', name = 'workers-food', amount = 2},
+        {type = 'item', name = 'workers-food', amount = 4},
         {type = 'item', name = 'tin-plate', amount = 2},
         {type = 'item', name = 'sugar', amount = 2},
         {type = 'item', name = 'fine-powdered-biomass', amount = 5},
@@ -2946,7 +2946,7 @@ RECIPE {
     enabled = false,
     energy_required = 320,
     ingredients = {
-        {type = 'item', name = 'workers-food-02', amount = 2},
+        {type = 'item', name = 'workers-food-02', amount = 4},
         {type = 'item', name = 'plastic-bar', amount = 4},
         {type = 'item', name = 'ammonium-nitrate', amount = 10},
         {type = 'item', name = 'guano', amount = 2},
