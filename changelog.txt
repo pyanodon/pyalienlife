@@ -30,6 +30,7 @@ Date: ?
     - caravans will now have higher priority based on when they arrive at a destination. previously it was based on the order when the caravan was built
     - increased aerial caravan inventory size 60 -> 90. moved from py2 to chemical science
     - fixed that caravans using the "fill cargo action" would count as full even if stacks only had 1 item. now all stacks need to be at max stack size
+    - zoology tech now adds +20 logistic trash slots.
   Bugfixes:
     - fixed an ocula crash with the trainsaver mod
     - fixed that the quality cottongut food was referencing moondrop in the item tooltip even though it had no moondrop in the crafting recipe
