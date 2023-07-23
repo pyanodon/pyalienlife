@@ -13,6 +13,7 @@ Date: ?
     - moved workers food recipe from domestication tech to starch tech
     - moved fish food recipe from fish mk1 to fish mk2
     - allow productivity in workers food mk1, mk2, mk3
+    - rewrote the wiki page for plant/animal/fungi farming
   TURD:
     - TURD beacons & modules are now avalible in factory planner/helmod
     - reworked sap turd to be more interesting. if you already have sap turd selected it will automatically unselect. choose something new!
