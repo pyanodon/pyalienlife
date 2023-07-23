@@ -526,7 +526,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-special-creatures",
     order = "z-b",
-    stack_size = 50
+    stack_size = 10
 }
 
 ITEM {
@@ -537,7 +537,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-special-creatures",
     order = "z-a",
-    stack_size = 50
+    stack_size = 10
 }
 
 ITEM {
@@ -548,7 +548,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-special-creatures",
     order = "z-a",
-    stack_size = 50
+    stack_size = 10
 }
 
 ITEM {
@@ -559,7 +559,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-special-creatures",
     order = "z-a",
-    stack_size = 50
+    stack_size = 10
 }
 
 ---codexes mk02--
