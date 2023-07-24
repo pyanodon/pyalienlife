@@ -1,7 +1,7 @@
 Biofluid.favorite_foods = {
-	['workers-food'] = 50,
-	['workers-food-02'] = 300,
-	['workers-food-03'] = 1500,
+	['workers-food'] = 20,
+	['workers-food-02'] = 100,
+	['workers-food-03'] = 500
 }
 
 Biofluid.PIPE = 1

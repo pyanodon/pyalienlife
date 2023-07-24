@@ -283,7 +283,7 @@ end
 
 function Biofluid.eat(bioport_data)
 	local bioport = bioport_data.entity
-	if bioport_data.fuel_remaning == 0 then
+	if bioport_data.fuel_remaning <= 0 then
 		local bioport_input_inventory = bioport.get_inventory(INPUT_INVENTORY)
 		for food, calories in pairs(Biofluid.favorite_foods) do
 			local removed = bioport_input_inventory.remove{name = food, count = 1}
@@ -296,7 +296,12 @@ function Biofluid.eat(bioport_data)
 		end
 		return false
 	end
-	bioport_data.fuel_remaning = bioport_data.fuel_remaning - 1
+	local effects = bioport.effects
+	if effects and effects.consumption then
+		bioport_data.fuel_remaning = bioport_data.fuel_remaning - 1 - (effects.consumption.bonus or 0)
+	else
+		bioport_data.fuel_remaning = bioport_data.fuel_remaning - 1
+	end
 	return true
 end
 
