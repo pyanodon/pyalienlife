@@ -2413,49 +2413,6 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'rocket-mk01-part',
-    category = 'rocket-mk01',
-    enabled = false,
-    hidden = true,
-    energy_required = 20,
-    ingredients = {
-        {type = 'item', name = 'lubricant-barrel', amount = 50},
-        {type = 'item', name = 'super-alloy', amount = 5},
-        {type = 'item', name = 'low-density-structure', amount = 2},
-        {type = 'item', name = 'fuelrod-mk03', amount = 1},
-        {type = 'item', name = 'control-unit', amount = 1},
-        {type = 'item', name = 'negasium', amount = 1},
-        {type = 'item', name = 'science-coating', amount = 1},
-        {type = 'item', name = 'combustion-tank', amount = 1},
-
-    },
-    results = {
-        {type = 'item', name = 'rocket-mk01-part', amount = 1},
-    },
-    --main_product = "chloral",
-}:add_unlock("space-program-mk01")
-
-RECIPE {
-    type = 'recipe',
-    name = 'combustion-tank',
-    category = 'advanced-crafting',
-    enabled = false,
-    energy_required = 5,
-    ingredients = {
-        {type = 'fluid', name = 'combustion-mixture1', amount = 1000},
-        {type = 'item', name = 'super-steel', amount = 1},
-        {type = 'item', name = 'sponge-iron', amount = 4},
-        {type = 'item', name = 'solder', amount = 2},
-        {type = 'item', name = 'science-coating', amount = 1},
-    },
-    results = {
-        {type = 'item', name = 'combustion-tank', amount = 1},
-    },
-    --main_product = "chloral",
-}:add_unlock("space-program-mk01")
-
-RECIPE {
-    type = 'recipe',
     name = 'quartz-tube',
     category = "glassworks",
     enabled = false,

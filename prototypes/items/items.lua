@@ -5461,28 +5461,6 @@ ITEM {
 
 ITEM {
     type = "item",
-    name = "combustion-tank",
-    icon = "__pyalienlifegraphics2__/graphics/icons/combustion-tank.png",
-	icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-items",
-    order = "d",
-    stack_size = 100
-}
-
-ITEM {
-    type = "item",
-    name = "rocket-mk01-part",
-    icon = "__pyalienlifegraphics2__/graphics/icons/rocket-mk01-part.png",
-	icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-items",
-    order = "d",
-    stack_size = 100
-}
-
-ITEM {
-    type = "item",
     name = "raw-fiber",
     fuel_category = "biomass",
     fuel_value = "6MJ",
