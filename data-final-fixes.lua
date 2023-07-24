@@ -210,7 +210,6 @@ local recipes_list =
   "tuuphra-seeds",
   "replicator-tuuphra",
   "arthurian",
-  "arthurian-codex",
   "earth-lizard-sample",
   "arthurian-food-01",
   "arthurian-food-02",
