@@ -372,8 +372,6 @@ if mods["pyalternativeenergy"] then
     require("prototypes/buildings/zungror-lair-mk03")
 end
 
-require('prototypes.buildings.sap-tree')
-
 --((SPACE BUILDINGS))--
 --[[
 require('prototypes/buildings/space/space-arthurian-pen-mk01')

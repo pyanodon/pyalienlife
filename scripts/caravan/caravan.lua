@@ -241,13 +241,16 @@ local function begin_schedule(caravan_data, schedule_id, skip_eating, is_retry)
 	caravan_data.action_id = -1
 	if caravan_data.is_aerial then
 		goto_position(caravan_data, Position.random(schedule.position, 0, 1, true))
-	elseif schedule.entity and schedule.entity.valid then
-		goto_entity(caravan_data, schedule.entity)
-	elseif schedule.entity and not schedule.entity.valid then
-		game.print{'caravan-warnings.no-destination', entity.name, math.floor(entity.position.x*10)/10, math.floor(entity.position.y*10)/10}
-		table.remove(caravan_data.schedule, schedule_id)
-		stop_actions(caravan_data)
-		return
+	elseif schedule.entity then
+		local schedule_entity = schedule.entity
+		if schedule_entity.valid and schedule_entity.surface == entity.surface then
+			goto_entity(caravan_data, schedule.entity)
+		else
+			game.print{'caravan-warnings.no-destination', entity.name, math.floor(entity.position.x*10)/10, math.floor(entity.position.y*10)/10}
+			table.remove(caravan_data.schedule, schedule_id)
+			stop_actions(caravan_data)
+			return
+		end
 	else
 		goto_position(caravan_data, schedule.position)
 	end
