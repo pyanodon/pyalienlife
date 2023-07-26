@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.6
-Date: ?
+Date: 2023-7-25
   Changes:
     - added gobachov, huzu, and chorkok. new creatures that can help with your fluid logistics. think of a biological alternative to pyanobots
     - added guano. a valuable waste product. used in manure, explosives, nitrous oxide, and worker food mk3.
