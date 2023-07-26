@@ -1,5 +1,5 @@
 for _, force in pairs(game.forces) do
-	if global.turd_bonuses[force.index] then
+	if global.turd_bonuses and global.turd_bonuses[force.index] then
 		if force.technologies['sap-upgrade'].researched then
 			force.technologies['sap-upgrade'].researched = false
 			force.technologies['sap-upgrade'].researched = true
