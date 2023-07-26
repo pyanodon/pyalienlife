@@ -40,8 +40,11 @@ RECIPE {
 ITEM {
     type = 'item',
     name = 'vessel',
-    icon = '__pyindustry__/graphics/icons/niobium-pipe.png',
-    icon_size = 32,
+    icons = {{
+        icon = '__pyindustry__/graphics/icons/niobium-pipe.png',
+        icon_size = 32,
+        tint = {0.5, 0.5, 1}
+    }},
     flags = {},
     subgroup = 'py-alienlife-biofluid-network',
     order = 'da',
@@ -52,8 +55,11 @@ ITEM {
 ITEM {
     type = 'item',
     name = 'vessel-to-ground',
-    icon = '__pyindustry__/graphics/icons/niobium-pipe-to-ground.png',
-    icon_size = 32,
+    icons = {{
+        icon = '__pyindustry__/graphics/icons/niobium-pipe-to-ground.png',
+        icon_size = 32,
+        tint = {0.5, 0.5, 1}
+    }},
     flags = {},
     subgroup = 'py-alienlife-biofluid-network',
     order = 'db',
