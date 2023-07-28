@@ -34,6 +34,7 @@ Ulric.events.used_capsule = function(event)
 
 	Ulric.transfer_character_inventory(character, ulric)
 	player.character = ulric
+	Caravan.entity_changed_unit_number(character, ulric)
 	character.destroy()
 	player.play_sound{path = 'ulric-man-transform'}
 

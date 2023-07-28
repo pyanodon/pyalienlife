@@ -650,3 +650,16 @@ remote.add_interface('caravans', {
 		return result
 	end
 })
+
+function Caravan.entity_changed_unit_number(old, new)
+	if not old.valid then error('Don\'t call this with an invalid entity') end
+	for _, caravan_data in pairs(global.caravans) do
+		for _, schedule in pairs(caravan_data.schedule) do
+			if schedule.entity == old then
+				schedule.localised_name = {'caravan-gui.entity-position', new.prototype.localised_name, math.floor(new.position.x), math.floor(new.position.y)}
+				schedule.entity = new
+				schedule.position = new.position
+			end
+		end
+	end
+end

@@ -21,7 +21,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'cadaveric-arum-mk02-a', amount = 1, probability = 0.005},
-        {type = 'item', name = 'cadaveric-arum', amount = 1, probability = 0.5},
+        {type = 'item', name = 'cadaveric-arum', amount = 1, probability = 0.7},
     },
     main_product = "cadaveric-arum-mk02-a",
     icons =
@@ -134,7 +134,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'cadaveric-arum-mk03-a', amount = 1, probability = 0.004},
-        {type = 'item', name = 'copper-ore', amount = 25, probability = 0.5},
+        {type = 'item', name = 'cadaveric-arum-mk02-a', amount = 1, probability = 0.7},
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     main_product = "cadaveric-arum-mk03-a",
@@ -243,7 +243,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'cadaveric-arum', amount = 2},
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},
-        {type = 'item', name = 'cadaveric-arum-seeds', amount = 10},
+        {type = 'item', name = 'cadaveric-arum-seeds-mk03', amount = 10},
         {type = 'fluid', name = 'coal-gas', amount = 500, fluidbox_index = 1},
         {type = 'item', name = 'fertilizer', amount = 10},
         {type = 'item', name = 'ash', amount = 20},
@@ -251,7 +251,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'cadaveric-arum-mk04-a', amount = 1, probability = 0.003},
-        {type = 'item', name = 'cadaveric-arum', amount = 1, probability = 0.7},
+        {type = 'item', name = 'cadaveric-arum-mk03-a', amount = 1, probability = 0.7},
         --{type = 'item', name = 'empty-barrel', amount = 7},
     },
     main_product = "cadaveric-arum-mk04-a",
