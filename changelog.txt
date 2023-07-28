@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.7
-Date: ?
+Date: 2023-7-27
   Changes:
     - fixed a crash with ulric infusion when used in combination with certian inventory size increasing mods
     - fixed crash with 2.1.6 migration when migrating from pre-TURD saves
