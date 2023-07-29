@@ -21,14 +21,23 @@ RECIPE {
 ITEM {
     type = 'item',
     name = 'provider-tank',
-    icon = '__pyindustry__/graphics/icons/underflow-valve.png',
-    icon_size = 32,
+    icon = '__pyalienlifegraphics__/graphics/icons/chest-provider.png',
+    icon_size = 64,
     flags = {},
     subgroup = 'py-alienlife-biofluid-network',
     order = 'c',
     place_result = 'provider-tank',
     stack_size = 50
 }
+
+local graphic = {layers = {{
+    filename = '__pyalienlifegraphics2__/graphics/entity/bots/tank/provider-tank.png',
+    priority = 'high',
+    width = 69,
+    height = 67,
+    shift = util.by_pixel(1.75, 0),
+    scale = 0.5
+}}}
 
 ENTITY {
     name = 'provider-tank',
@@ -54,6 +63,12 @@ ENTITY {
         },
         production_type = 'input'
     }},
+    animation = {
+        north = graphic,
+        east = graphic,
+        south = graphic,
+        west = graphic,
+    },
     show_recipe_icon = false,
     crafting_speed = 1,
     result_inventory_size = 0,

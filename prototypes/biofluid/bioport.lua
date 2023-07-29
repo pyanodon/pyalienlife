@@ -74,6 +74,8 @@ ENTITY {
     selection_priority = 49,
     fixed_recipe = 'bioport-hidden-recipe',
     max_health = 500,
+    allowed_effects = {'consumption', 'pollution'},
+    module_specification = {module_slots = 1},
     corpse = 'big-remnants',
     collision_box = {{-2.3, -2.3}, {2.3, 2.3}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},

@@ -3,6 +3,16 @@ local collision_mask_util = require '__core__/lualib/collision-mask-util'
 
 _G.caravan_collision_mask = collision_mask_util.get_first_unused_layer()
 
+local zoology = data.raw.technology['zoology']
+zoology.effects[#zoology.effects+1] = {
+	modifier = true,
+	type = 'character-logistic-requests'
+}
+zoology.effects[#zoology.effects+1] = {
+	modifier = 20,
+	type = 'character-logistic-trash-slots'
+}
+
 RECIPE {
     type = 'recipe',
     name = 'caravan',

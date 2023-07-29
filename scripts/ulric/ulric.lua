@@ -34,6 +34,7 @@ Ulric.events.used_capsule = function(event)
 
 	Ulric.transfer_character_inventory(character, ulric)
 	player.character = ulric
+	Caravan.entity_changed_unit_number(character, ulric)
 	character.destroy()
 	player.play_sound{path = 'ulric-man-transform'}
 
@@ -103,15 +104,11 @@ Ulric.transfer_character_inventory = function(old, new)
 			for i = 1, #old_inventory do
 				local old_stack = old_inventory[i]
 				if old_stack.valid_for_read then
-					if #new_inventory <= i and not new_inventory[i].valid_for_read then
-						new_inventory[i].transfer_stack(old_stack)
-					else
-						local original_count = old_stack.count
-						local inserted_count = new_inventory.insert(old_stack)
-						if original_count ~= inserted_count then
-							old_stack.count = original_count - inserted_count
-							new.surface.spill_item_stack(new.position, old_stack, true, nil, false)
-						end
+					local original_count = old_stack.count
+					local inserted_count = new_inventory.insert(old_stack)
+					if original_count ~= inserted_count then
+						old_stack.count = original_count - inserted_count
+						new.surface.spill_item_stack(new.position, old_stack, true, nil, false)
 					end
 				end
 				old_stack.clear()

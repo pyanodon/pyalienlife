@@ -6,37 +6,32 @@ local prototypes = require 'caravan-prototypes'
 local Position = require('__stdlib__/stdlib/area/position')
 local Table = require('__stdlib__/stdlib/utils/table')
 
-local function get_pathfind_flags(caravan_data)
-	local flags = {}
-	if prototypes[caravan_data.entity.name].can_fly then
-		flags.allow_paths_through_own_entities = true
-	end
-	return flags
-end
-
 local function goto_entity(caravan_data, entity)
-	caravan_data.entity.set_command{
+	local caravan = caravan_data.entity
+	caravan.set_command{
 		type = defines.command.go_to_location,
 		destination_entity = entity,
 		distraction = defines.distraction.none,
-		pathfind_flags = get_pathfind_flags(caravan_data)
+		pathfind_flags = prototypes[caravan.name].pathfinder_flags
 	}
+	caravan_data.arrival_tick = nil
 end
 
 local function goto_position(caravan_data, position)
-	caravan_data.entity.set_command{
+	local caravan = caravan_data.entity
+	caravan.set_command{
 		type = defines.command.go_to_location,
 		destination = position,
 		distraction = defines.distraction.none,
-		pathfind_flags = get_pathfind_flags(caravan_data)
+		pathfind_flags = prototypes[caravan.name].pathfinder_flags
 	}
+	caravan_data.arrival_tick = nil
 end
 
 local function wander(caravan_data)
 	caravan_data.entity.set_command{
 		type = defines.command.wander,
 		distraction = defines.distraction.none,
-		pathfind_flags = get_pathfind_flags(caravan_data),
 		radius = 10
 	}
 end
@@ -124,6 +119,7 @@ local function stop_actions(caravan_data)
 	caravan_data.action_id = -1
 	caravan_data.stored_energy = nil
 	caravan_data.last_outpost_location = nil
+	caravan_data.arrival_tick = nil
 	wander(caravan_data)
 end
 
@@ -245,13 +241,16 @@ local function begin_schedule(caravan_data, schedule_id, skip_eating, is_retry)
 	caravan_data.action_id = -1
 	if caravan_data.is_aerial then
 		goto_position(caravan_data, Position.random(schedule.position, 0, 1, true))
-	elseif schedule.entity and schedule.entity.valid then
-		goto_entity(caravan_data, schedule.entity)
-	elseif schedule.entity and not schedule.entity.valid then
-		game.print{'caravan-warnings.no-destination', entity.name, math.floor(entity.position.x*10)/10, math.floor(entity.position.y*10)/10}
-		table.remove(caravan_data.schedule, schedule_id)
-		stop_actions(caravan_data)
-		return
+	elseif schedule.entity then
+		local schedule_entity = schedule.entity
+		if schedule_entity.valid and schedule_entity.surface == entity.surface then
+			goto_entity(caravan_data, schedule.entity)
+		else
+			game.print{'caravan-warnings.no-destination', entity.name, math.floor(entity.position.x*10)/10, math.floor(entity.position.y*10)/10}
+			table.remove(caravan_data.schedule, schedule_id)
+			stop_actions(caravan_data)
+			return
+		end
 	else
 		goto_position(caravan_data, schedule.position)
 	end
@@ -412,12 +411,18 @@ Caravan.events.ai_command_completed = function(event)
 			begin_schedule(caravan_data, caravan_data.schedule_id + 1)
 		end
 	else
+		local entity = caravan_data.entity
 		begin_action(caravan_data, 1)
-		caravan_data.entity.set_command{
+		entity.set_command{
 			type = defines.command.stop,
 			distraction = defines.distraction.none,
 			pathfind_flags = {}
 		}
+		local prototype = prototypes[entity.name]
+		if prototype.requeue_required then
+			Caravan.requeue(prototype)
+			caravan_data.arrival_tick = game.tick
+		end
 	end
 
 	::update_gui::
@@ -427,10 +432,29 @@ Caravan.events.ai_command_completed = function(event)
 	end
 end
 
+function Caravan.requeue(prototype)
+	if prototype and prototype.requeue_required then global.caravan_queue = nil end
+end
+
+local function caravan_sort_function(a, b)
+	return (a.arrival_tick or 0) < (b.arrival_tick or 0)
+end
+
 Caravan.events[60] = function(event)
 	local guis_to_update = {}
 
-	for _, caravan_data in pairs(global.caravans) do
+	if not global.caravan_queue then
+		local queue = {}
+		for _, caravan_data in pairs(global.caravans) do
+			if Caravan.validity_check(caravan_data) then
+				queue[#queue+1] = caravan_data
+			end
+		end
+		table.sort(queue, caravan_sort_function)
+		global.caravan_queue = queue
+	end
+
+	for _, caravan_data in pairs(global.caravan_queue) do
 		if not Caravan.validity_check(caravan_data) then goto continue end
 		local entity = caravan_data.entity
 
@@ -548,7 +572,7 @@ Caravan.events.on_built = function(event)
 	local prototype = prototypes[entity.name]
 	if not prototype then return end
 	if prototype.destructible == false then entity.destructible = false end
-	
+
 	local stack = event.stack
 	local tags = stack and stack.valid_for_read and stack.type == 'item-with-tags' and stack.tags
 
@@ -564,16 +588,20 @@ Caravan.events.on_built = function(event)
 		Caravan.instantiate_caravan(entity)
 	end
 	script.register_on_entity_destroyed(entity)
+	Caravan.requeue(prototype)
 end
 
 Caravan.events.on_destroyed = function(event)
 	local entity = event.entity
-	if not prototypes[entity.name] then return end
+	local prototype = prototypes[entity.name]
+	if not prototype then return end
 
 	local buffer = event.buffer
 	if buffer then
 		buffer[1].tags = {unit_number = entity.unit_number}
 	end
+
+	Caravan.requeue(prototype)
 end
 
 Caravan.events.on_entity_destroyed = function(event)
@@ -622,3 +650,16 @@ remote.add_interface('caravans', {
 		return result
 	end
 })
+
+function Caravan.entity_changed_unit_number(old, new)
+	if not old.valid then error('Don\'t call this with an invalid entity') end
+	for _, caravan_data in pairs(global.caravans) do
+		for _, schedule in pairs(caravan_data.schedule) do
+			if schedule.entity == old then
+				schedule.localised_name = {'caravan-gui.entity-position', new.prototype.localised_name, math.floor(new.position.x), math.floor(new.position.y)}
+				schedule.entity = new
+				schedule.position = new.position
+			end
+		end
+	end
+end

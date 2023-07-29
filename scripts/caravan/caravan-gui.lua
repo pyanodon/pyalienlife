@@ -59,7 +59,7 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 
 			local playbutton = action_frame.add{type = 'sprite-button', name = 'py_action_play', tags = tags}
 			playbutton.style, playbutton.sprite = generate_button_status(caravan_data, i, j)
-			local label = action_frame.add{type = 'label', style = 'squashable_label_with_left_padding', caption = action.localised_name}
+			action_frame.add{type = 'label', style = 'squashable_label_with_left_padding', caption = action.localised_name}
 
 			if action.type == 'time-passed' then
 				action_frame.add{type = 'empty-widget', style = 'py_empty_widget'}
@@ -127,7 +127,7 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 		py_add_action.style.width = 340
 		py_add_action.style.height = 36
 	end
-	local add_outpost = gui.add{type = 'button', name = 'py_add_outpost', style = 'train_schedule_add_station_button', caption = {'caravan-gui.add-outpost'}}
+	gui.add{type = 'button', name = 'py_add_outpost', style = 'train_schedule_add_station_button', caption = {'caravan-gui.add-outpost'}}
 end
 
 function Caravan.build_gui(player, entity)
@@ -189,7 +189,7 @@ function Caravan.build_gui(player, entity)
 		local fuel_flow = content_flow.add{type = 'flow', name = 'fuel_flow', direction = 'horizontal'}
 		fuel_flow.style.vertical_align = 'center'
 		local favorite_food_tooltip = generate_favorite_food_tooltip(prototypes[entity.name].favorite_foods, 'caravan-gui')
-		for i = 1, prototype.fuel_size do
+		for i = 1, #caravan_data.fuel_inventory do
 			local fuel_slot = fuel_flow.add{type = 'sprite-button', name = 'py_fuel_slot_' .. i, style = 'inventory_slot', tags = {unit_number = caravan_data.unit_number, i = i}}
 			fuel_slot.sprite = 'utility/slot_icon_fuel'
 			fuel_slot.tooltip = favorite_food_tooltip

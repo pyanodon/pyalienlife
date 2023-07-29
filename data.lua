@@ -107,7 +107,6 @@ require('prototypes/technologies/cardial-hypopharynx')
 require('prototypes/technologies/chromasome-infocrystalization')
 --require('prototypes/technologies/pheromone-transition')
 require('prototypes/technologies/laika')
---require('prototypes/technologies/space-program')
 require('prototypes/technologies/pesticides')
 require('prototypes/technologies/symbiosis')
 require('prototypes/technologies/bioprocessing')
@@ -373,8 +372,6 @@ if mods["pyalternativeenergy"] then
     require("prototypes/buildings/zungror-lair-mk03")
 end
 
-require('prototypes.buildings.sap-tree')
-
 --((SPACE BUILDINGS))--
 --[[
 require('prototypes/buildings/space/space-arthurian-pen-mk01')
@@ -412,9 +409,6 @@ require('prototypes/buildings/space/space-yaedols-culture-mk01')
 require('prototypes/buildings/space/space-yotoi-aloe-orchard-mk01')
 require('prototypes/buildings/space/space-zipir-reef-mk01')
 ]]--
---((ROCKET))--
---require('prototypes/buildings/silo-2')
---require('prototypes/buildings/rocket-mk02')
 
 require('prototypes/buildings/py-drive')
 

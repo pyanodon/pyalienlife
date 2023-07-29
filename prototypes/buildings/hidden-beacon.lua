@@ -23,15 +23,17 @@ ENTITY{
     rotate = false,
     orientation_to_variation = false,
     selectable_in_game = false,
-    collision_mask = {}
+    collision_mask = {},
+    subgroup = data.raw.item.beacon.subgroup,
+    order = 'a',
 }
 
 ENTITY{
     type = 'beacon',
     name = 'hidden-beacon-turd',
-    icon = '__pycoalprocessinggraphics__/graphics/empty.png',
-    icon_size = 32,
-    flags = {'placeable-player', 'hide-alt-info', 'hidden', 'not-on-map'},
+    icon = '__pyalienlifegraphics3__/graphics/technology/updates/restart.png',
+    icon_size = 128,
+    flags = {'placeable-player', 'hide-alt-info', 'not-on-map'},
     max_health = 200,
     corpse = 'beacon-remnants',
     dying_explosion = 'beacon-explosion',
@@ -52,5 +54,6 @@ ENTITY{
     orientation_to_variation = false,
     selectable_in_game = false,
     collision_mask = {},
-    localised_name = {'entity-name.hidden-beacon'}
+    subgroup = data.raw.item.beacon.subgroup,
+    order = 'a',
 }

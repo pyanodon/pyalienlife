@@ -210,7 +210,6 @@ local recipes_list =
   "tuuphra-seeds",
   "replicator-tuuphra",
   "arthurian",
-  "arthurian-codex",
   "earth-lizard-sample",
   "arthurian-food-01",
   "arthurian-food-02",
@@ -327,6 +326,8 @@ local recipes_list =
   "log-wood-fast",
   "paper-towel",
   "lab-instrument-2",
+  "workers-food",
+  "workers-food-02",
   "workers-food-03"
 	}
 

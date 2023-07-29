@@ -1,6 +1,48 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.7
+Date: 2023-7-27
+  Changes:
+    - fixed a crash with ulric infusion when used in combination with certian inventory size increasing mods
+    - fixed crash with 2.1.6 migration when migrating from pre-TURD saves
+    - fixed that turing into an ulric would reset all connected caravan schedules
+    - fixed that you could skip cadaveric-arum-mk03 when seeding cadaveric-arum-mk04
+---------------------------------------------------------------------------------------------------
 Version: 2.1.6
-Date: ?
+Date: 2023-7-25
+  Changes:
+    - added gobachov, huzu, and chorkok. new creatures that can help with your fluid logistics. think of a biological alternative to pyanobots
+    - added guano. a valuable waste product. used in manure, explosives, nitrous oxide, and worker food mk3.
+    - update chinese translation. credit sdqwo
+    - added alt mode support to see what the ocula is carrying
+    - allow many entities to work with the upgrade planner
+    - added a 5th tier of domestication tech.
+    - added circuit connection to Harvester (credit: JStMorgan).
+    - made vatbrain cartridge mk2,mk4 a bit more expensive to craft
+    - moved workers food recipe from domestication tech to starch tech
+    - moved fish food recipe from fish mk1 to fish mk2
+    - allow productivity in workers food mk1, mk2, mk3
+    - rewrote the wiki page for plant/animal/fungi farming
+  TURD:
+    - TURD beacons & modules are now avalible in factory planner/helmod
+    - reworked sap turd to be more interesting. if you already have sap turd selected it will automatically unselect. choose something new!
+    - yaedols turd wastewater buffed 1->5. spores nerfed 12->4.
+    - reworked seaweed turd path 2. previously it was +15% productivity. now it can add a new use for slacked lime
+    - fixed that dingrits turd path 1 was giving too much productivity. 400% -> 40%
+    - fixed that the auog food turd upgrade did not allow for productivity when the base recipe did
+    - fixed that the wood turd's "fiber-dry-storage-2" recipe was much slower than intended. 24sec -> 6sec
+    - increased the number of saddles from ulric path 2 by 10x. reduced speed bonus from 30% -> 15%
+    - buff fish turd path 3
+    - fix green circuit duplication glitch caused by scrondrix path 3
+  Caravans:
+    - allowed caravans to walk on inserters
+    - removed path caching from land-based caravans. this hurt UPS a bit, but they will respond better to changes in the environment. upgrade to aerial caravans for better UPS
+    - added new action to caravans: "Collect all autotrash". This will extract all items from your player's autotrash. Combine this with oculas for an infinite range logistic system.
+    - caravans will now have higher priority based on when they arrive at a destination. previously it was based on the order when the caravan was built
+    - increased aerial caravan inventory size 60 -> 90. moved from py2 to chemical science
+    - fixed that caravans using the "fill cargo action" would count as full even if stacks only had 1 item. now all stacks need to be at max stack size
+    - zoology tech now adds +20 logistic trash slots.
+    - fixed extreme high fuel buffer size. reduce stack size of gastrocapacitor 50->10. aerial caravan fuel size 4->2. standard & nuclear caravan fuel size 2->1
+    - reduce stack size of workers food mk1, mk2 from 50->10
   Bugfixes:
     - fixed an ocula crash with the trainsaver mod
     - fixed that the quality cottongut food was referencing moondrop in the item tooltip even though it had no moondrop in the crafting recipe
@@ -17,24 +59,6 @@ Date: ?
     - fixed that the lab-instrument-2 didn't use productivity modules when the t1 recipe allowed it.
     - fix crash casued by AL 2.0.7 migration
     - fixed an auog duplication bug caused by productivity modules in the ablaze auog recipe
-  Changes:
-    - added gobachov, huzu, and chorkok. new creatures that can help with your fluid logistics. think of a biological alternative to pyanobots
-    - added guano. a valuable waste product. used in manure, explosives, nitrous oxide, and worker food mk3.
-    - update chinese translation. credit sdqwo
-    - added alt mode support to see what the ocula is carrying
-    - allow many entities to work with the upgrade planner
-    - increased aerial caravan inventory size 60 -> 90. moved from py2 to chemical science
-    - added a 5th tier of domestication tech.
-    - added circuit connection to Harvester (credit: JStMorgan).
-    - allowed caravans to walk on inserters
-    - made vatbrain cartridge mk2,mk4 a bit more expensive to craft
-    - moved workers food recipe from domestication tech to starch tech
-  TURD:
-    - reworked sap turd to be more interesting. if you already have sap turd selected it will automatically unselect. choose something new!
-    - yaedols turd wastewater buffed 1->5. spores nerfed 12->4.
-    - reworked seaweed turd path 2. previously it was +15% productivity. now it can add a new use for slacked lime
-    - fixed that dingrits turd path 1 was giving too much productivity. 400% -> 40%
-    - fixed that the auog food turd upgrade did not allow for productivity when the base recipe did
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.5
 Date: 2023-6-23

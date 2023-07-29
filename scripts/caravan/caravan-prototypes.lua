@@ -17,6 +17,7 @@ local caravan_actions = {
 		'empty-inventory',
 		'item-count',
 		'inverse-item-count',
+		'empty-autotrash'
 	},
 	['unit'] = {
 		'time-passed',
@@ -61,7 +62,7 @@ local prototypes = {
 	caravan = {
 		inventory_size = 30,
 		opens_player_inventory = true,
-		fuel_size = 2,
+		fuel_size = 1,
 		destructible = false,
 		outpost = 'outpost',
 		favorite_foods = {
@@ -77,12 +78,16 @@ local prototypes = {
 		map_tag = {
 			type = 'virtual',
 			name = 'caravan-map-tag-mk01'
+		},
+		requeue_required = true,
+		pathfinder_flags = {
+			cache = false
 		}
 	},
 	flyavan = {
 		inventory_size = 90,
 		opens_player_inventory = true,
-		fuel_size = 4,
+		fuel_size = 2,
 		destructible = false,
 		outpost = 'outpost-aerial',
 		favorite_foods = {
@@ -92,22 +97,27 @@ local prototypes = {
 		actions = caravan_actions,
 		camera_zoom = 0.5,
 		placeable_by = 'flyavan',
-		can_fly = true,
 		map_tag = {
 			type = 'virtual',
 			name = 'caravan-map-tag-mk02'
+		},
+		requeue_required = true,
+		pathfinder_flags = {
+			allow_destroy_friendly_entities = true,
+			allow_paths_through_own_entities = true
 		}
 	},
 	nukavan = {
 		inventory_size = 10,
 		opens_player_inventory = true,
-		fuel_size = 2,
+		fuel_size = 1,
 		outpost = 'outpost',
 		favorite_foods = {
 			['brain'] = 2,
 			['auog-food-01'] = 4,
 			['workers-food'] = 10,
-			['workers-food-02'] = 30
+			['workers-food-02'] = 30,
+			['workers-food-03'] = 50
 		},
 		actions = {
 			['default'] = {'detonate'}
@@ -116,6 +126,9 @@ local prototypes = {
 		map_tag = {
 			type = 'virtual',
 			name = 'caravan-map-tag-mk03'
+		},
+		pathfinder_flags = {
+			cache = false
 		}
 	},
 	-- pyalternativeenergy caravans
@@ -128,10 +141,15 @@ local prototypes = {
 		energy_per_distance_formula = function(distance) return distance_effectivity(distance, 60) * distance * 1800000 end,
 		distance_bonus_formula = function(distance) return distance_effectivity(distance, 60) end,
 		is_aerial = true,
-		can_fly = true,
 		map_tag = {
 			type = 'virtual',
 			name = 'aerial-blimp-mk01'
+		},
+		pathfinder_flags = {
+			allow_destroy_friendly_entities = true,
+			allow_paths_through_own_entities = true,
+			prefer_straight_paths = true,
+			low_priority = true
 		}
 	},
 	['aerial-blimp-mk02'] = {
@@ -143,10 +161,15 @@ local prototypes = {
 		energy_per_distance_formula = function(distance) return distance_effectivity(distance, 80) * distance * 3600000 end,
 		distance_bonus_formula = function(distance) return distance_effectivity(distance, 80) end,
 		is_aerial = true,
-		can_fly = true,
 		map_tag = {
 			type = 'virtual',
 			name = 'aerial-blimp-mk02'
+		},
+		pathfinder_flags = {
+			allow_destroy_friendly_entities = true,
+			allow_paths_through_own_entities = true,
+			prefer_straight_paths = true,
+			low_priority = true
 		}
 	},
 	['aerial-blimp-mk03'] = {
@@ -158,10 +181,15 @@ local prototypes = {
 		energy_per_distance_formula = function(distance) return distance_effectivity(distance, 120) * distance * 6000000 end,
 		distance_bonus_formula = function(distance) return distance_effectivity(distance, 120) end,
 		is_aerial = true,
-		can_fly = true,
 		map_tag = {
 			type = 'virtual',
 			name = 'aerial-blimp-mk03'
+		},
+		pathfinder_flags = {
+			allow_destroy_friendly_entities = true,
+			allow_paths_through_own_entities = true,
+			prefer_straight_paths = true,
+			low_priority = true
 		}
 	},
 	['aerial-blimp-mk04'] = {
@@ -173,10 +201,15 @@ local prototypes = {
 		energy_per_distance_formula = function(distance) return distance_effectivity(distance, 140) * distance * 8000000 end,
 		distance_bonus_formula = function(distance) return distance_effectivity(distance, 140) end,
 		is_aerial = true,
-		can_fly = true,
 		map_tag = {
 			type = 'virtual',
 			name = 'aerial-blimp-mk04'
+		},
+		pathfinder_flags = {
+			allow_destroy_friendly_entities = true,
+			allow_paths_through_own_entities = true,
+			prefer_straight_paths = true,
+			low_priority = true
 		}
 	},
 	['aerial-blimp-ht'] = {
@@ -188,10 +221,15 @@ local prototypes = {
 		energy_per_distance_formula = function(distance) return distance_effectivity(distance, 40) * distance * 4000000 end,
 		distance_bonus_formula = function(distance) return distance_effectivity(distance, 40) end,
 		is_aerial = true,
-		can_fly = true,
 		map_tag = {
 			type = 'item',
 			name = 'aerial-blimp-ht'
+		},
+		pathfinder_flags = {
+			allow_destroy_friendly_entities = true,
+			allow_paths_through_own_entities = true,
+			prefer_straight_paths = true,
+			low_priority = true
 		}
 	}
 }
@@ -210,10 +248,15 @@ local function get_outpost_inventory(outpost)
 	end
 end
 
-local function transfer_all_items(input_inventory, output_inventory) -- TODO: make it work with complex items
-	for item, count in pairs(input_inventory.get_contents()) do
-		local inserted_count = output_inventory.insert{name = item, count = count}
-		if inserted_count ~= 0 then input_inventory.remove{name = item, count = inserted_count} end
+local function transfer_all_items(input_inventory, output_inventory)
+	for i = 1, #input_inventory do
+		local slot = input_inventory[i]
+		if slot.valid_for_read then
+			local inserted_count = output_inventory.insert(slot)
+			if inserted_count == slot.count then
+				slot.clear()
+			elseif inserted_count ~= 0 then input_inventory.remove{name = slot.name, count = inserted_count} end
+		end
 	end
 end
 
@@ -260,7 +303,6 @@ Caravan.actions = {
 		if not chest or not chest.valid then return true end
 		local outpost_inventory = get_outpost_inventory(chest)
 		if not outpost_inventory then return true end
-		local inventory = caravan_data.inventory
 		local entity = caravan_data.entity
 		local fuel = caravan_data.fuel_inventory
 
@@ -282,7 +324,7 @@ Caravan.actions = {
 		local inventory = caravan_data.inventory
 
 		transfer_all_items(outpost_inventory, inventory)
-		return inventory.find_empty_stack() == nil
+		return inventory.is_full()
 	end,
 
 	['empty-inventory'] = function(caravan_data, schedule, action)
@@ -294,6 +336,17 @@ Caravan.actions = {
 
 		transfer_all_items(inventory, outpost_inventory)
 		return inventory.is_empty()
+	end,
+
+	['empty-autotrash'] = function(caravan_data, schedule, action)
+		local character = schedule.entity
+		if not character or not character.valid then return true end
+		local autotrash_inventory = character.get_inventory(defines.inventory.character_trash)
+		if not autotrash_inventory then return true end
+		local inventory = caravan_data.inventory
+
+		transfer_all_items(autotrash_inventory, inventory)
+		return autotrash_inventory.is_empty() or not inventory.find_empty_stack()
 	end,
 
 	['item-count'] = function(caravan_data, schedule, action)
