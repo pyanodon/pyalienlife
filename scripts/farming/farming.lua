@@ -39,8 +39,10 @@ function Farming.disable_machine(entity)
     entity.active = false
 	global.disabled_farm_buildings[entity.unit_number] = entity
 	script.register_on_entity_destroyed(entity)
-	entity.crafting_progress = 0
-	entity.bonus_progress = 0
+	if entity.is_crafting() then
+		entity.crafting_progress = 0.0001
+		entity.bonus_progress = 0
+	end
 	draw_error_sprite(entity, 'no_module_' .. kingdom, 30)
 end
 

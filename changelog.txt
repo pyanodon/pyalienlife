@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.8
+Date: ?
+  Changes:
+    - fixed that crafting ingredients could sometimes be deleted when removing modules in a farm building
+---------------------------------------------------------------------------------------------------
 Version: 2.1.7
 Date: 2023-7-27
   Changes:
