@@ -1,4 +1,5 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
+local is_pyse = (data and mods['pystellarexpedition']) or (script and script.active_mods['pystellarexpedition'])
 
 if data then
     for i, recipe in pairs({
@@ -67,6 +68,12 @@ if data then
     }) do
         machine_recipe.name = machine_recipe.name .. '-with-cags'
         FUN.add_ingredient(machine_recipe, {name = 'cags', amount = 10 * i, type = 'item'})
+        if i == 1 and is_pyse then
+            FUN.add_ingredient(machine_recipe, {name = 'hydrangeaceae', amount = 1, type = 'item'})
+        end
+        if is_pyse then
+            machine_recipe.results = {{'arqad-hive-mk0' .. i .. '-with-cags', 1}}
+        end
         data:extend{machine_recipe}
     end
 
@@ -123,8 +130,8 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/cags.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {productivity = 0.05, type = 'module-effects'},
+            effects = {
+                is_pyse and {recipe = 'hydrangeaceae', type = 'unlock-recipe'} or {productivity = 0.05, type = 'module-effects'},
                 {recipe = 'cags', type = 'unlock-recipe'},
                 {old = 'arqad-hive-mk01', new = 'arqad-hive-mk01-with-cags', type = 'recipe-replacement'},
                 {old = 'arqad-hive-mk02', new = 'arqad-hive-mk02-with-cags', type = 'recipe-replacement'},
