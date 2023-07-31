@@ -254,4 +254,12 @@ data:extend{
 		icon_size = 64,
 		localised_name = {'virtual-signal-name.caravan-map-tag'}
 	},
+	{
+		type = 'virtual-signal',
+		icon = '__core__/graphics/icons/alerts/fuel-icon-red.png',
+		name = 'no-fuel',
+		subgroup = 'virtual-signal',
+		icon_size = 64,
+		localised_name = {'virtual-signal-name.no-fuel'}
+	},
 }

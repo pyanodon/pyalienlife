@@ -440,6 +440,11 @@ local function caravan_sort_function(a, b)
 	return (a.arrival_tick or 0) < (b.arrival_tick or 0)
 end
 
+local no_fuel_map_tag = {
+	type = 'virtual',
+	name = 'no-fuel'
+}
+
 Caravan.events[60] = function(event)
 	local guis_to_update = {}
 
@@ -457,19 +462,22 @@ Caravan.events[60] = function(event)
 	for _, caravan_data in pairs(global.caravan_queue) do
 		if not Caravan.validity_check(caravan_data) then goto continue end
 		local entity = caravan_data.entity
+		local needs_fuel = caravan_data.fuel_inventory and caravan_data.fuel_bar == 0 and caravan_data.fuel_inventory.is_empty()
 
+		local icon
+		if needs_fuel then icon = no_fuel_map_tag else icon = prototypes[entity.name].map_tag end
 		local map_tag = caravan_data.map_tag
 		if map_tag and map_tag.valid then
-			if map_tag.position.x == entity.position.x and map_tag.position.y == entity.position.y then goto didnt_move end
+			if icon == map_tag.icon and map_tag.position.x == entity.position.x and map_tag.position.y == entity.position.y then goto didnt_move end
 			map_tag.destroy()
 		end
 		caravan_data.map_tag = entity.force.add_chart_tag(entity.surface, {
 			position = entity.position,
-			icon = prototypes[entity.name].map_tag
+			icon = icon
 		})
 		::didnt_move::
 
-		if caravan_data.fuel_inventory and caravan_data.fuel_bar == 0 and caravan_data.fuel_inventory.is_empty() then
+		if needs_fuel then
 			draw_error_sprite(entity, 'utility.fuel_icon', 30)
 			goto continue
 		end
