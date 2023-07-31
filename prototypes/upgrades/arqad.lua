@@ -1,6 +1,27 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 local is_pyse = (data and mods['pystellarexpedition']) or (script and script.active_mods['pystellarexpedition'])
 
+local cags_effects
+if is_pyse then cags_effects = {
+    {recipe = 'hydrangeaceae', type = 'unlock-recipe'},
+    {recipe = 'cags', type = 'unlock-recipe'},
+    {recipe = 'arqad-hive-mk01-with-cags', type = 'unlock-recipe'},
+    {recipe = 'arqad-hive-mk02-with-cags', type = 'unlock-recipe'},
+    {recipe = 'arqad-hive-mk03-with-cags', type = 'unlock-recipe'},
+    {recipe = 'arqad-hive-mk04-with-cags', type = 'unlock-recipe'},
+    {recipe = 'arqad-hive-mk01-with-cags-recycle', type = 'unlock-recipe'},
+    {recipe = 'arqad-hive-mk02-with-cags-recycle', type = 'unlock-recipe'},
+    {recipe = 'arqad-hive-mk03-with-cags-recycle', type = 'unlock-recipe'},
+    {recipe = 'arqad-hive-mk04-with-cags-recycle', type = 'unlock-recipe'},
+} else cags_effects = {
+    {productivity = 0.05, type = 'module-effects'},
+    {recipe = 'cags', type = 'unlock-recipe'},
+    {old = 'arqad-hive-mk01', new = 'arqad-hive-mk01-with-cags', type = 'recipe-replacement'},
+    {old = 'arqad-hive-mk02', new = 'arqad-hive-mk02-with-cags', type = 'recipe-replacement'},
+    {old = 'arqad-hive-mk03', new = 'arqad-hive-mk03-with-cags', type = 'recipe-replacement'},
+    {old = 'arqad-hive-mk04', new = 'arqad-hive-mk04-with-cags', type = 'recipe-replacement'},
+} end
+
 if data then
     for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['arqad-egg-1']),
@@ -60,21 +81,47 @@ if data then
         }
     }
 
-    for i, machine_recipe in pairs({
-        table.deepcopy(data.raw.recipe['arqad-hive-mk01']),
-        table.deepcopy(data.raw.recipe['arqad-hive-mk02']),
-        table.deepcopy(data.raw.recipe['arqad-hive-mk03']),
-        table.deepcopy(data.raw.recipe['arqad-hive-mk04']),
-    }) do
-        machine_recipe.name = machine_recipe.name .. '-with-cags'
-        FUN.add_ingredient(machine_recipe, {name = 'cags', amount = 10 * i, type = 'item'})
-        if i == 1 and is_pyse then
-            FUN.add_ingredient(machine_recipe, {name = 'hydrangeaceae', amount = 1, type = 'item'})
+    if is_pyse then
+        for i = 1, 4 do
+            data:extend{{
+                type = 'recipe',
+                name = 'arqad-hive-mk0' .. i .. '-with-cags',
+                energy_required = 0.5,
+                category = 'crafting',
+                ingredients = {
+                    {name = 'cags', amount = 10 * i, type = 'item'},
+                    {name = 'arqad-hive-mk0' .. i, amount = 1, type = 'item'},
+                    {name = 'hydrangeaceae', amount = 1, type = 'item'}
+                },
+                results = {{'arqad-hive-mk0' .. i .. '-with-cags', 1}}
+            }}
+            data:extend{{
+                type = 'recipe',
+                name = 'arqad-hive-mk0' .. i .. '-with-cags-recycle',
+                energy_required = 0.5,
+                category = 'crafting',
+                ingredients = {
+                    {'arqad-hive-mk0' .. i .. '-with-cags', 1}
+                },
+                results = {
+                    {name = 'cags', amount = 10 * i, type = 'item'},
+                    {name = 'arqad-hive-mk0' .. i, amount = 1, type = 'item'},
+                    {name = 'hydrangeaceae', amount = 1, type = 'item'}
+                },
+                main_product = 'hydrangeaceae'
+            }}
         end
-        if is_pyse then
-            machine_recipe.results = {{'arqad-hive-mk0' .. i .. '-with-cags', 1}}
+    else
+        for i, machine_recipe in pairs({
+            table.deepcopy(data.raw.recipe['arqad-hive-mk01']),
+            table.deepcopy(data.raw.recipe['arqad-hive-mk02']),
+            table.deepcopy(data.raw.recipe['arqad-hive-mk03']),
+            table.deepcopy(data.raw.recipe['arqad-hive-mk04']),
+        }) do
+            machine_recipe.name = machine_recipe.name .. '-with-cags'
+            FUN.add_ingredient(machine_recipe, {name = 'cags', amount = 10 * i, type = 'item'})
+            data:extend{machine_recipe}
         end
-        data:extend{machine_recipe}
     end
 
     local ez_queen = table.deepcopy(data.raw.recipe['arqad'])
@@ -130,14 +177,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/cags.png',
             icon_size = 128,
             order = 'c-a',
-            effects = {
-                is_pyse and {recipe = 'hydrangeaceae', type = 'unlock-recipe'} or {productivity = 0.05, type = 'module-effects'},
-                {recipe = 'cags', type = 'unlock-recipe'},
-                {old = 'arqad-hive-mk01', new = 'arqad-hive-mk01-with-cags', type = 'recipe-replacement'},
-                {old = 'arqad-hive-mk02', new = 'arqad-hive-mk02-with-cags', type = 'recipe-replacement'},
-                {old = 'arqad-hive-mk03', new = 'arqad-hive-mk03-with-cags', type = 'recipe-replacement'},
-                {old = 'arqad-hive-mk04', new = 'arqad-hive-mk04-with-cags', type = 'recipe-replacement'},
-            }
+            effects = cags_effects
         },
         {
             name = 'drone',
