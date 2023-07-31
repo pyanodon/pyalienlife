@@ -93,7 +93,8 @@ if data then
                     {name = 'arqad-hive-mk0' .. i, amount = 1, type = 'item'},
                     {name = 'hydrangeaceae', amount = 1, type = 'item'}
                 },
-                results = {{'arqad-hive-mk0' .. i .. '-with-cags', 1}}
+                results = {{'arqad-hive-mk0' .. i .. '-with-cags', 1}},
+                enabled = false
             }}
             data:extend{{
                 type = 'recipe',
@@ -108,7 +109,8 @@ if data then
                     {name = 'arqad-hive-mk0' .. i, amount = 1, type = 'item'},
                     {name = 'hydrangeaceae', amount = 1, type = 'item'}
                 },
-                main_product = 'hydrangeaceae'
+                main_product = 'hydrangeaceae',
+                enabled = false
             }}
         end
     else
