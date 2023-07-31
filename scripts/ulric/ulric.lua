@@ -72,6 +72,7 @@ Ulric.events[update_rate] = function()
 
 				Ulric.transfer_character_inventory(ulric, character)
 				player.character = character
+				Caravan.entity_changed_unit_number(ulric, character)
 				ulric.destroy()
 				player.play_sound{path = 'ulric-man-untransform'}
 			end
