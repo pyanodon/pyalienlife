@@ -5,6 +5,7 @@ Date: ?
     - fixed that crafting ingredients could sometimes be deleted when removing modules in a farm building
     - fixed that whenever your ulric transformation expired it would reset all connected caravan schedules
     - added out of fuel map icons for caravans and aerial caravans
+    - added fallback icon sprites for vessel to ground
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.7
 Date: 2023-7-27
