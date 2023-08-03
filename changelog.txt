@@ -8,6 +8,7 @@ Date: ?
     - removed caravan map tags. this results in a 15x UPS improvement. for some reason that API call is extremely laggy
   TURD:
     - auog path 2 is now unethical
+    - fish path 2 now can improve your hydrolysate production
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.7
 Date: 2023-7-27
