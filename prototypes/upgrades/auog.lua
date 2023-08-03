@@ -6,37 +6,34 @@ if data then
         table.deepcopy(data.raw.recipe['auog-food-02']),
     } do
         recipe.name = recipe.name .. '-sawdust'
-        FUN.add_ingredient(recipe, {'wood', 3 * i})
+        FUN.add_ingredient(recipe, {'wood', 10 * i})
         FUN.multiply_result_amount(recipe, 'auog-food-0'..i, 2)
         data:extend{recipe}
     end
 
-    for _, recipe in pairs{
-        table.deepcopy(data.raw.recipe['auog-pup-breeding-2']),
-        table.deepcopy(data.raw.recipe['auog-pup-breeding-3']),
-        table.deepcopy(data.raw.recipe['auog-pup-breeding-4']),
-        table.deepcopy(data.raw.recipe['auog-pup-breeding-5']),
-    } do
-        recipe.name = recipe.name .. '-glowing-mushroom'
-        for _, result in pairs(recipe.results) do
-            if result.name == 'auog-pup' and result.amount_min then
-                result.amount_min = result.amount_min * 2
-                result.amount_max = result.amount_max + 2
-            end
+    for i = 1, 4 do
+        local results = {
+            {name = i == 1 and 'auog' or 'auog-mk0' .. i, amount = 1, type = 'item', probability = 0.95},
+            {name = 'yaedols', amount = 1, type = 'item', probability = 0.75},
+        }
+        for _, result in pairs(data.raw.recipe['ex-used-auog'].results) do
+            result = table.deepcopy(result)
+            result.probability = 0.05
+            table.insert(results, result)
         end
-        data:extend{recipe}
-    end
-
-    local mushrooms = {'moondrop', 'moondrop-mk02', 'moondrop-mk03', 'moondrop-mk04'}
-    for i, recipe in pairs{
-        table.deepcopy(data.raw.recipe['auog-paddock-mk01']),
-        table.deepcopy(data.raw.recipe['auog-paddock-mk02']),
-        table.deepcopy(data.raw.recipe['auog-paddock-mk03']),
-        table.deepcopy(data.raw.recipe['auog-paddock-mk04']),
-    } do
-        recipe.name = recipe.name .. '-with-moondrop'
-        FUN.add_ingredient(recipe, {name = mushrooms[i], amount = 30, type = 'item'})
-        data:extend{recipe}
+        data:extend{{
+            name = 'auog-recharge-glowing-mushroom-mk0' .. i,
+            enabled = false,
+            type = 'recipe',
+            energy_required = 5,
+            ingredients = {
+                {'yaedols', 1},
+                {i == 1 and 'used-auog' or 'used-auog-mk0' .. i, 1}
+            },
+            results = results,
+            main_product = i == 1 and 'auog' or 'auog-mk0' .. i,
+            category = 'bay'
+        }}
     end
 
     for recipe, dirt in pairs{
@@ -95,14 +92,10 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {old = 'auog-pup-breeding-2', new = 'auog-pup-breeding-2-glowing-mushroom', type = 'recipe-replacement'},
-                {old = 'auog-pup-breeding-3', new = 'auog-pup-breeding-3-glowing-mushroom', type = 'recipe-replacement'},
-                {old = 'auog-pup-breeding-4', new = 'auog-pup-breeding-4-glowing-mushroom', type = 'recipe-replacement'},
-                {old = 'auog-pup-breeding-5', new = 'auog-pup-breeding-5-glowing-mushroom', type = 'recipe-replacement'},
-                {old = 'auog-paddock-mk01', new = 'auog-paddock-mk01-with-moondrop', type = 'recipe-replacement'},
-                {old = 'auog-paddock-mk02', new = 'auog-paddock-mk02-with-moondrop', type = 'recipe-replacement'},
-                {old = 'auog-paddock-mk03', new = 'auog-paddock-mk03-with-moondrop', type = 'recipe-replacement'},
-                {old = 'auog-paddock-mk04', new = 'auog-paddock-mk04-with-moondrop', type = 'recipe-replacement'},
+                {recipe = 'auog-recharge-glowing-mushroom-mk01', type = 'unlock-recipe'},
+                {recipe = 'auog-recharge-glowing-mushroom-mk02', type = 'unlock-recipe'},
+                {recipe = 'auog-recharge-glowing-mushroom-mk03', type = 'unlock-recipe'},
+                {recipe = 'auog-recharge-glowing-mushroom-mk04', type = 'unlock-recipe'},
             }
         },
         {

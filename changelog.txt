@@ -6,6 +6,8 @@ Date: ?
     - fixed that whenever your ulric transformation expired it would reset all connected caravan schedules
     - added fallback icon sprites for vessel to ground
     - removed caravan map tags. this results in a 15x UPS improvement. for some reason that API call is extremely laggy
+  TURD:
+    - auog path 2 is now unethical
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.7
 Date: 2023-7-27
