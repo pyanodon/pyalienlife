@@ -249,15 +249,19 @@ local function get_outpost_inventory(outpost)
 end
 
 local function transfer_all_items(input_inventory, output_inventory)
-	for i = 1, #input_inventory do
-		local slot = input_inventory[i]
-		if slot.valid_for_read then
-			local inserted_count = output_inventory.insert(slot)
-			if inserted_count == slot.count then
-				slot.clear()
-			elseif inserted_count ~= 0 then input_inventory.remove{name = slot.name, count = inserted_count} end
+	if not output_inventory.find_empty_stack() then return false end
+	local changed = false
+	for item, count in pairs(input_inventory.get_contents()) do
+		local stack = {name = item, count = count}
+		if output_inventory.can_insert(stack) then
+			local inserted_count = output_inventory.insert{name = item, count = count}
+			if inserted_count ~= 0 then
+				input_inventory.remove{name = item, count = inserted_count}
+				changed = true
+			end
 		end
 	end
+	return changed
 end
 
 local function transfer_filtered_items(input_inventory, output_inventory, item, goal) -- TODO: make it work with complex items
@@ -323,8 +327,8 @@ Caravan.actions = {
 		if not outpost_inventory then return true end
 		local inventory = caravan_data.inventory
 
-		transfer_all_items(outpost_inventory, inventory)
-		return inventory.is_full()
+		local changed = transfer_all_items(outpost_inventory, inventory)
+		return changed and inventory.is_full()
 	end,
 
 	['empty-inventory'] = function(caravan_data, schedule, action)
@@ -334,8 +338,8 @@ Caravan.actions = {
 		if not outpost_inventory then return true end
 		local inventory = caravan_data.inventory
 
-		transfer_all_items(inventory, outpost_inventory)
-		return inventory.is_empty()
+		local changed = transfer_all_items(inventory, outpost_inventory)
+		return changed and inventory.is_empty()
 	end,
 
 	['empty-autotrash'] = function(caravan_data, schedule, action)
@@ -346,7 +350,7 @@ Caravan.actions = {
 		local inventory = caravan_data.inventory
 
 		transfer_all_items(autotrash_inventory, inventory)
-		return autotrash_inventory.is_empty() or not inventory.find_empty_stack()
+		return true
 	end,
 
 	['item-count'] = function(caravan_data, schedule, action)

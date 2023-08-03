@@ -45,14 +45,15 @@ end
 local function exists_and_valid(v) return v and v.valid end
 function Caravan.validity_check(caravan_data)
 	if not caravan_data or caravan_data.itemised then return false end
+	local inventory, fuel_inventory = caravan_data.inventory, caravan_data.fuel_inventory
 	if
 		not caravan_data.entity.valid or
-		(caravan_data.inventory and not exists_and_valid(caravan_data.inventory)) or
-		(caravan_data.fuel_inventory and not exists_and_valid(caravan_data.fuel_inventory))
+		(inventory and not inventory.valid) or
+		(fuel_inventory and not fuel_inventory.valid)
 	then
 		if caravan_data.entity.valid then caravan_data.entity.destroy() end
-		if exists_and_valid(caravan_data.inventory) then caravan_data.inventory.destroy() end
-		if exists_and_valid(caravan_data.fuel_inventory) then caravan_data.fuel_inventory.destroy() end
+		if exists_and_valid(inventory) then inventory.destroy() end
+		if exists_and_valid(fuel_inventory) then fuel_inventory.destroy() end
 		global.caravans[caravan_data.unit_number] = nil
 		return false
 	end
@@ -464,7 +465,8 @@ Caravan.events[60] = function(event)
 		local entity = caravan_data.entity
 		local needs_fuel = caravan_data.fuel_inventory and caravan_data.fuel_bar == 0 and caravan_data.fuel_inventory.is_empty()
 
-		local icon
+		-- this was causing too much lag. waiting on a new API feature that will help
+		--[[local icon
 		if needs_fuel then icon = no_fuel_map_tag else icon = prototypes[entity.name].map_tag end
 		local map_tag = caravan_data.map_tag
 		if map_tag and map_tag.valid then
@@ -475,7 +477,7 @@ Caravan.events[60] = function(event)
 			position = entity.position,
 			icon = icon
 		})
-		::didnt_move::
+		::didnt_move::--]]
 
 		if needs_fuel then
 			draw_error_sprite(entity, 'utility.fuel_icon', 30)
