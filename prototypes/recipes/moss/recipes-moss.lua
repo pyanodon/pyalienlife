@@ -1,5 +1,7 @@
 --MOSS--
 
+if mods['pystellarexpedition'] then return end
+
 for _, rock in pairs(data.raw['simple-entity']) do
     --log('hit')
     if rock.minable ~= nil and rock.minable.result == 'stone' then
