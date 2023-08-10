@@ -84,7 +84,8 @@ Farming.events[121] = function()
 	local first_index_checked_this_tick = global.next_farm_index
 	for i = 1, 60 do
 		local farm = global.enabled_farm_buildings[global.next_farm_index]
-		if not farm.valid then
+
+		if not farm or not farm.valid then
 			table.remove(global.enabled_farm_buildings, global.next_farm_index)
 		elseif farm.get_module_inventory().is_empty() then
 			Farming.disable_machine(farm)
