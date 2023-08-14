@@ -1181,6 +1181,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'kicalk', amount = 1},
+        {type = 'fluid', name = 'oleochemicals', amount = 50},
     },
     results = {
         {type = 'fluid', name = 'chelator', amount = 50},
