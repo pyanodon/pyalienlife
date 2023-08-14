@@ -6,7 +6,7 @@ if data then
         table.deepcopy(data.raw.recipe['auog-food-02']),
     } do
         recipe.name = recipe.name .. '-sawdust'
-        FUN.add_ingredient(recipe, {'wood', 10 * i})
+        FUN.add_ingredient(recipe, {'wood', 6 * i})
         FUN.multiply_result_amount(recipe, 'auog-food-0'..i, 2)
         data:extend{recipe}
     end
@@ -14,7 +14,7 @@ if data then
     for i = 1, 4 do
         local results = {
             {name = i == 1 and 'auog' or 'auog-mk0' .. i, amount = 1, type = 'item', probability = 0.95},
-            {name = 'yaedols', amount = 1, type = 'item', probability = 0.75},
+            {name = 'yaedols', amount = 1, type = 'item', probability = 0.85},
         }
         for _, result in pairs(data.raw.recipe['ex-used-auog'].results) do
             result = table.deepcopy(result)
