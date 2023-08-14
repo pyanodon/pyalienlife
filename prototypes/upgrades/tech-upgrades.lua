@@ -207,7 +207,7 @@ local function build_tech_upgrade(tech_upgrade)
     }
 end
 
-if data then
+if data and not yafc_turd_integration then
     for _, tech_upgrade in pairs(tech_upgrades) do build_tech_upgrade(tech_upgrade) end
 else
     local indexed_tech_upgrades = {}
