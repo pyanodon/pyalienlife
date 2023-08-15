@@ -39,8 +39,8 @@ if data then
     }
 
     local products_to_buff = {
-        laser = {'blood', 'mukmoux-fat', 'sulfuric-acid', 'bones', 'photophore', 'brain'},
-        music = {'skin', 'carapace', 'pelt', 'chitin', 'shell', 'fish-oil'},
+        laser = {'blood', 'mukmoux-fat', 'sulfuric-acid', 'bones', 'brain'},
+        music = {'skin', 'carapace', 'pelt', 'chitin', 'shell', 'fish-oil', 'photophore'},
         lard = {'meat', 'arthropod-blood', 'guts', 'formic-acid', 'bonemeal', 'tendon', 'keratin'}
     }
 
