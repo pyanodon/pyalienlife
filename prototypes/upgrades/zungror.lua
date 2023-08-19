@@ -43,6 +43,7 @@ return {
         'zungror-lair-mk01',
         'zungror-lair-mk02',
         'zungror-lair-mk03',
+        'zungror-lair-mk04',
     },
     master_tech = { -- tech that is shown in the tech tree
         name = 'zungror-upgrade',
