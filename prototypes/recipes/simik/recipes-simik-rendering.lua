@@ -13,7 +13,7 @@ local BASE_BLOOD = 80
 local BASE_BRAIN = 1
 local BASE_SPECIAL = 3	-- keratin
 
-local IMP_BONES = 9
+local IMP_BONES = 12
 local IMP_MEAT = 11
 local IMP_SKIN = 1		-- scales
 local IMP_FAT = 8
@@ -89,6 +89,7 @@ FUN.autorecipes {
 				{
 					{name = 'brain', remove_item = true},
 					{name='keratin', amount = IMP_SPECIAL},
+					{name='bones', amount = IMP_BONES},
 				},
 			tech = 'bmp',
 			name = 'ex-bon-sim',

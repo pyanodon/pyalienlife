@@ -11,6 +11,7 @@ Date: ?
     - fixed that recombinant-ery-3 did not allow prod when recombinant-ery-1 and recombinant-ery-2 allowed it. (https://github.com/pyanodon/pybugreports/issues/313)
     - fixed that vonix mk2 and mk3 module recipes were negative loops. (https://github.com/pyanodon/pybugreports/issues/312)
     - fixed that certian mk2 mk3 spore collector recipes were worse than the mk1 recipes. no longer % based (https://github.com/pyanodon/pybugreports/issues/311)
+    - fixed that "bone improved simik" recipes didn't actually give any bones (https://github.com/pyanodon/pybugreports/issues/309)
   TURD:
     - auog path 2 is now unethical
     - fish path 2 now can improve your hydrolysate production
