@@ -14,6 +14,7 @@ Date: ?
     - fixed that "bone improved simik" recipes didn't actually give any bones (https://github.com/pyanodon/pybugreports/issues/309)
     - blocked all scriped entities from working with picker dollies (https://github.com/pyanodon/pybugreports/issues/300)
     - remove duplicated items from pyHT (ralesia, fertilizer) (https://github.com/pyanodon/pybugreports/issues/303)
+    - added a new guano based fertilizer recipe
   TURD:
     - auog path 2 is now unethical
     - fish path 2 now can improve your hydrolysate production
