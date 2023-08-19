@@ -7,6 +7,8 @@ Date: ?
     - added fallback icon sprites for vessel to ground
     - removed caravan map tags. this results in a 15x UPS improvement. for some reason that API call is extremely laggy
     - fix crash with farm buildings & deconstruction planner
+    - fixed that recombinant-ery-2 was too fast. 13sec -> 120sec
+    - fixed that recombinant-ery-3 did not allow prod when recombinant-ery-1 and recombinant-ery-2 allowed it.
   TURD:
     - auog path 2 is now unethical
     - fish path 2 now can improve your hydrolysate production

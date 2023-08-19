@@ -1138,7 +1138,7 @@ RECIPE {
     name = 'recombinant-ery-2',
     category = 'genlab',
     enabled = false,
-    energy_required = 13,
+    energy_required = 120,
     ingredients = {
         {type = 'item', name = 'adam42-gen', amount = 1},
         {type = 'item', name = 'cysteine', amount = 1},

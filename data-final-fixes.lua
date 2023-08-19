@@ -169,6 +169,7 @@ local recipes_list =
   "enzyme-pks",
   "recombinant-ery",
   "recombinant-ery-2",
+  "recombinant-ery-3",
   "fetal-serum-01",
   "vrauks",
   "vrauks-codex",
