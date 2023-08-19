@@ -20,11 +20,11 @@ RECIPE {
     name = 'fawogae-spore-2',
     category = 'spore',
     enabled = false,
-    energy_required = 5,
+    energy_required = 7,
     ingredients = {
     },
     results = {
-        {type = 'item', name = 'fawogae-spore', amount = 1, probability = 0.6},
+        {type = 'item', name = 'fawogae-spore', amount = 1},
     },
 }:add_unlock("microfilters")
 
@@ -33,11 +33,11 @@ RECIPE {
     name = 'fawogae-spore-3',
     category = 'spore',
     enabled = false,
-    energy_required = 5,
+    energy_required = 6,
     ingredients = {
     },
     results = {
-        {type = 'item', name = 'fawogae-spore', amount = 1, probability = 0.8},
+        {type = 'item', name = 'fawogae-spore', amount = 1},
     },
 }:add_unlock("microfilters-mk02")
 

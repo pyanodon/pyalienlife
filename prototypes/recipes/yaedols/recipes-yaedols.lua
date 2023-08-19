@@ -46,11 +46,11 @@ RECIPE {
     name = 'yaedols-spores',
     category = 'spore',
     enabled = false,
-    energy_required = 8,
+    energy_required = 20,
     ingredients = {
     },
     results = {
-        {type = 'item', name = 'yaedols-spores', amount = 1, probability = 0.4},
+        {type = 'item', name = 'yaedols-spores', amount = 1},
     },
 }:add_unlock("yaedols")
 
@@ -59,11 +59,11 @@ RECIPE {
     name = 'yaedols-spores-2',
     category = 'spore',
     enabled = false,
-    energy_required = 5,
+    energy_required = 15,
     ingredients = {
     },
     results = {
-        {type = 'item', name = 'yaedols-spores', amount = 1, probability = 0.6},
+        {type = 'item', name = 'yaedols-spores', amount = 1},
     },
 }:add_unlock("microfilters")
 
@@ -72,11 +72,11 @@ RECIPE {
     name = 'yaedols-spores-3',
     category = 'spore',
     enabled = false,
-    energy_required = 5,
+    energy_required = 10,
     ingredients = {
     },
     results = {
-        {type = 'item', name = 'yaedols-spores', amount = 1, probability = 0.8},
+        {type = 'item', name = 'yaedols-spores', amount = 1},
     },
 }:add_unlock("microfilters-mk02")
 

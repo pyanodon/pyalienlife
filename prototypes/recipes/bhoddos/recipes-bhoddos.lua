@@ -46,11 +46,11 @@ RECIPE {
     name = 'bhoddos-spore',
     category = 'spore',
     enabled = false,
-    energy_required = 8,
+    energy_required = 20,
     ingredients = {
     },
     results = {
-        {type = 'item', name = 'bhoddos-spore', amount = 1, probability = 0.4},
+        {type = 'item', name = 'bhoddos-spore', amount = 1},
     },
 }:add_unlock("microfilters")
 
@@ -73,10 +73,10 @@ RECIPE {
     name = 'bhoddos-spore-3',
     category = 'spore',
     enabled = false,
-    energy_required = 5,
+    energy_required = 10,
     ingredients = {
     },
     results = {
-        {type = 'item', name = 'bhoddos-spore', amount = 1, probability = 0.8},
+        {type = 'item', name = 'bhoddos-spore', amount = 1},
     },
 }:add_unlock("microfilters-mk02")
