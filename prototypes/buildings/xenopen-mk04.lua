@@ -17,7 +17,7 @@ RECIPE {
     results = {
         {"xenopen-mk04", 1}
     }
-}--:add_unlock("land-animals-mk04")
+}:add_unlock("land-animals-mk05")
 
 ITEM {
     type = "item",

@@ -84,3 +84,31 @@ TECHNOLOGY {
         time = 45
     }
 }
+
+TECHNOLOGY {
+    type = "technology",
+    name = "land-animals-mk05",
+    icon = "__pyalienlifegraphics__/graphics/technology/land-animals-mk05.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {"land-animals-mk04", "schrodinger-antelope-upgrade", "dingrits-upgrade"},
+    dependencies = {"land-animals-mk04", "schrodinger-antelope-upgrade", "dingrits-upgrade"},
+    effects = {},
+    unit = {
+        count = 700,
+        ingredients = {
+            {'automation-science-pack', 200},
+            {"py-science-pack-1", 100},
+            {"logistic-science-pack", 60},
+            {"py-science-pack-2", 30},
+            {'military-science-pack', 30},
+            {'chemical-science-pack', 20},
+            {"py-science-pack-3", 10},
+            {'production-science-pack', 6},
+            {"py-science-pack-4", 3},
+            {'utility-science-pack', 2},
+            {'space-science-pack', 1},
+        },
+        time = 1200
+    }
+}

@@ -370,6 +370,7 @@ if mods["pyalternativeenergy"] then
     require("prototypes/buildings/zungror-lair-mk01")
     require("prototypes/buildings/zungror-lair-mk02")
     require("prototypes/buildings/zungror-lair-mk03")
+    require("prototypes/buildings/zungror-lair-mk04")
 end
 
 --((SPACE BUILDINGS))--
