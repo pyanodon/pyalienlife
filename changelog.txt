@@ -13,6 +13,7 @@ Date: ?
     - fixed that certian mk2 mk3 spore collector recipes were worse than the mk1 recipes. no longer % based (https://github.com/pyanodon/pybugreports/issues/311)
     - fixed that "bone improved simik" recipes didn't actually give any bones (https://github.com/pyanodon/pybugreports/issues/309)
     - blocked all scriped entities from working with picker dollies (https://github.com/pyanodon/pybugreports/issues/300)
+    - remove duplicated items from pyHT (ralesia, fertilizer) (https://github.com/pyanodon/pybugreports/issues/303)
   TURD:
     - auog path 2 is now unethical
     - fish path 2 now can improve your hydrolysate production

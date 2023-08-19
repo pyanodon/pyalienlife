@@ -1614,3 +1614,9 @@ data.raw['recipe']['zipir'] = nil
 data.raw['assembling-machine']['mukmoux-pasture'] = nil
 data.raw['item']['mukmoux-pasture'] = nil
 data.raw['recipe']['mukmoux-pasture'] = nil
+data.raw['recipe']['ralesia'] = nil
+data.raw['item']['ralesia'] = nil
+data.raw['item']['py-fertilizer'] = nil
+
+data.raw['recipe']['fertilizer-2'].results = {{'fertilizer', 15}}
+RECIPE('fertilizer-2'):add_unlock('biofluid-mk01'):add_ingredient{type = 'item', name = 'guano', amount = 3}
