@@ -78,8 +78,39 @@ local function discoscience()
     end
 end
 
+local function pickerdollies()
+    if remote.interfaces['PickerDollies'] then
+		remote.call('PickerDollies', 'add_blacklist_name', 'caravan', true)
+		remote.call('PickerDollies', 'add_blacklist_name', 'flyavan', true)
+		remote.call('PickerDollies', 'add_blacklist_name', 'outpost', true)
+		remote.call('PickerDollies', 'add_blacklist_name', 'outpost-aerial', true)
+		remote.call('PickerDollies', 'add_blacklist_name', 'mega-farm', true)
+		remote.call('PickerDollies', 'add_blacklist_name', 'pydrive', true)
+		remote.call('PickerDollies', 'add_blacklist_name', 'ipod', true)
+		remote.call('PickerDollies', 'add_blacklist_name', 'vat-brain', true)
+		remote.call('PickerDollies', 'add_blacklist_name', 'dino-dig-site', true)
+		remote.call('PickerDollies', 'add_blacklist_name', 'bioport', true)
+		remote.call('PickerDollies', 'add_blacklist_name', 'provider-tank', true)
+		remote.call('PickerDollies', 'add_blacklist_name', 'requester-tank', true)
+		remote.call('PickerDollies', 'add_blacklist_name', 'vessel', true)
+		remote.call('PickerDollies', 'add_blacklist_name', 'vessel-to-ground', true)
+		remote.call('PickerDollies', 'add_blacklist_name', 'gobachov', true)
+		remote.call('PickerDollies', 'add_blacklist_name', 'huzu', true)
+		remote.call('PickerDollies', 'add_blacklist_name', 'chorkok', true)
+		remote.call('PickerDollies', 'add_blacklist_name', 'tailings-pond', true)
+
+        for i = 1, 5 do
+            for j = 1, 5 do
+                remote.call('PickerDollies', 'add_blacklist_name', 'beacon-AM' .. i .. '-FM' .. j, true)
+                remote.call('PickerDollies', 'add_blacklist_name', 'diet-beacon-AM' .. i .. '-FM' .. j, true)
+            end
+        end
+	end
+end
+
 local function init()
     discoscience()
+    pickerdollies()
     Caravan.events.init()
     Digosaurus.events.init()
     Oculua.events.on_init()
