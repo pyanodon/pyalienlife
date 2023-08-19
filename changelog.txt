@@ -4,11 +4,12 @@ Date: ?
   Changes:
     - fixed that crafting ingredients could sometimes be deleted when removing modules in a farm building
     - fixed that whenever your ulric transformation expired it would reset all connected caravan schedules
-    - added fallback icon sprites for vessel to ground
+    - added fallback icon sprites for vessel to ground (https://mods.factorio.com/mod/pyalienlife/discussion/64c80a8ae2f20be03aaa0264)
     - removed caravan map tags. this results in a 15x UPS improvement. for some reason that API call is extremely laggy
-    - fix crash with farm buildings & deconstruction planner
-    - fixed that recombinant-ery-2 was too fast. 13sec -> 120sec
-    - fixed that recombinant-ery-3 did not allow prod when recombinant-ery-1 and recombinant-ery-2 allowed it.
+    - fix crash with farm buildings & deconstruction planner (https://mods.factorio.com/mod/pyalienlife/discussion/64d40bef94481fe7fb916810)
+    - fixed that recombinant-ery-2 was too fast. 13sec -> 120sec (https://github.com/pyanodon/pybugreports/issues/313)
+    - fixed that recombinant-ery-3 did not allow prod when recombinant-ery-1 and recombinant-ery-2 allowed it. (https://github.com/pyanodon/pybugreports/issues/313)
+    - fixed that vonix mk2 and mk3 module recipes were negative loops. (https://github.com/pyanodon/pybugreports/issues/312)
   TURD:
     - auog path 2 is now unethical
     - fish path 2 now can improve your hydrolysate production

@@ -126,7 +126,7 @@ RECIPE {
         {type = 'item', name = 'microcin-j25', amount = 1},
         },
     results = {
-        {type = 'item', name = 'vonix-mk02', amount = 3, probability = 0.5},
+        {type = 'item', name = 'vonix-mk02', amount = 3},
     },
     icons =
     {
@@ -174,7 +174,7 @@ RECIPE {
         {type = 'fluid', name = 'fetal-serum', amount = 50},
         },
     results = {
-        {type = 'item', name = 'vonix-mk03', amount = 3, probability = 0.5},
+        {type = 'item', name = 'vonix-mk03', amount = 3},
     },
     icons =
     {
