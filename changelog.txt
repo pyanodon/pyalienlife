@@ -17,6 +17,7 @@ Date: ?
     - added a new guano based fertilizer recipe
     - added land animals mk05 tech. contains all the missing animal mk04 machines
     - fixed that ulric transformation would delete logistic requests and inventory filters (https://github.com/pyanodon/pybugreports/issues/305)
+    - big nexelit mines is now a hidden recipe. use digosaurus instead
   TURD:
     - auog path 2 is now unethical
     - fish path 2 now can improve your hydrolysate production

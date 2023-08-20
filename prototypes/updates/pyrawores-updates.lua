@@ -218,3 +218,8 @@ RECIPE {
     subgroup = "py-rawores-casting",
     order = "a"
   }:add_unlock("casting-mk02"):add_ingredient({type = "item", name = "silicon", amount = 5}):add_ingredient({type = "item", name = "clay", amount = 1})
+
+RECIPE('nexelit-mine'):remove_unlock('big-mines').hidden = true
+data.raw['resource']['nexelit-rock'].autoplace = nil
+data.raw['autoplace-control']['nexelit-rock'] = nil
+data.raw['noise-layer']['nexelit-rock'] = nil
