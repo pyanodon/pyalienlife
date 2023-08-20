@@ -7,7 +7,7 @@ data:extend(
             name = 'ulric-character-footprint-particle',
             render_layer = 'decals',
             render_layer_when_on_ground = 'decals',
-            life_time = 600, --300
+            life_time = 600,
             fade_away_duration = 125,
             pictures = {
                 sheet = {
@@ -375,7 +375,8 @@ data:extend(
                         'red-desert-0',
                         'red-desert-1',
                         'red-desert-2',
-                        'red-desert-3'
+                        'red-desert-3',
+                        'landfill'
                     },
                     particle_name = 'ulric-character-footprint-particle'
                 },
@@ -538,7 +539,8 @@ data:extend{{
         max_count = 1,
         remove = false
     },
-    category = 'alert'
+    category = 'alert',
+    volume = 2
 }}
 
 data:extend{{

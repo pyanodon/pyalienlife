@@ -114,10 +114,22 @@ Ulric.transfer_character_inventory = function(old, new)
 				end
 				old_stack.clear()
 			end
+			if old_inventory.is_filtered() and new_inventory.supports_filters() then
+				for i = 1, math.min(#old_inventory, #new_inventory) do
+					local filter = old_inventory.get_filter(i)
+					if filter then
+						new_inventory.set_filter(i, filter)
+					end
+				end
+			end
 		end
 	end
 
 	if old.cursor_stack and old.cursor_stack.valid_for_read and new.cursor_stack then
 		new.cursor_stack.transfer_stack(old.cursor_stack)
+	end
+
+	for i = 1, 1000 do -- no way to find the max # of logistic requests. lets just put a high number like 1000 and pray it works
+		new.set_personal_logistic_slot(i, old.get_personal_logistic_slot(i))
 	end
 end
