@@ -1620,3 +1620,8 @@ data.raw['item']['py-fertilizer'] = nil
 
 data.raw['recipe']['fertilizer-2'].results = {{'fertilizer', 15}}
 RECIPE('fertilizer-2'):add_unlock('biofluid-mk01'):add_ingredient{type = 'item', name = 'guano', amount = 3}
+
+--add cellulose to prod
+
+local recipes_list = {"cellulose-01"}
+FUN.productivity(recipes_list)
