@@ -30,6 +30,11 @@ if script.active_mods['pyalternativeenergy'] then
     table.insert(animals, 'zungror')
     table.insert(animals, 'numal')
 end
+if script.active_mods['pystellarexpedition'] then
+    --table.insert(animals, 'tuls')
+    --table.insert(animals, 'riga')
+    table.insert(animals, 'kakkalakki')
+end
 
 local machines_with_gui = {
 	['slaughterhouse-mk01'] = true,
@@ -73,6 +78,15 @@ function Slaughterhouse.create_slaughterhouse_gui(player_index, entity)
 	global.watch_slaughterhouse = not not next(global.watched_slaughterhouses)
 end
 
+function Slaughterhouse.get_animal_item(animal)
+	if animal == 'zipir' then
+		return 'zipir1'
+	elseif animal == 'kakkalakki' then
+		return 'kakkalakki-f'
+	end
+	return animal
+end
+
 function Slaughterhouse.build_animal_table(content_frame, player)
 	content_frame.clear()
 	local main_frame = content_frame.parent
@@ -88,7 +102,7 @@ function Slaughterhouse.build_animal_table(content_frame, player)
 							type = 'choose-elem-button',
 							name = name,
 							elem_type = 'item',
-							item = animal == 'zipir' and 'zipir1' or animal,
+							item = Slaughterhouse.get_animal_item(animal),
 							style = 'image_tab_slot',
 							tags = {animal = animal}
 						}

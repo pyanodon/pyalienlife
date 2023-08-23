@@ -1,6 +1,7 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
 local pyAE = (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalternativeenergy)
+local pySE = (data and mods.pystellarexpedition) or (script and script.active_mods.pystellarexpedition)
 
 local rendering_recipes = {
     'full-render-zipir',
@@ -27,8 +28,15 @@ local rendering_recipes = {
     'full-render-xyhiphoe',
     'full-render-fish',
 }
-if pyAE then table.insert(rendering_recipes, 'full-render-num'); table.insert(rendering_recipes, 'full-render-zun') end
-
+if pyAE then
+    table.insert(rendering_recipes, 'full-render-num')
+    table.insert(rendering_recipes, 'full-render-zun')
+end
+if pySE then
+    table.insert(rendering_recipes, 'full-render-kakkalakki')
+    --table.insert(rendering_recipes, 'full-render-riga')
+    --table.insert(rendering_recipes, 'full-render-tuls')
+end
 local effects = {laser = {}, music = {}, lard = {}}
 
 if data then
