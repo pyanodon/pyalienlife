@@ -157,6 +157,13 @@ if mods['pyalternativeenergy'] then
     if mods['pypetroleumhandling'] then require('__pyalternativeenergy__/prototypes/updates/pypetroleumhandling-updates') end
 end
 
+if mods.pystellarexpedition then
+    require '__pystellarexpedition__.prototypes.updates.base-updates'
+    require '__pystellarexpedition__.prototypes.updates.pyalternativeenergy-updates'
+    require '__pystellarexpedition__.prototypes.updates.pyhightech-updates'
+    require '__pystellarexpedition__.prototypes.updates.pyalienlife-updates'
+end
+
 ----------------------------------------------------------------------------------------------------
 -- TURD
 ----------------------------------------------------------------------------------------------------
