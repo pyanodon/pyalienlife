@@ -23,6 +23,7 @@ Date: ?
     - auog path 2 is now unethical
     - fish path 2 now can improve your hydrolysate production
     - slaughterhouse turd path 1 no longer buffs photophores. moved to path 2
+    - tuuphra path 3 now gives 2x output
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.7
 Date: 2023-7-27

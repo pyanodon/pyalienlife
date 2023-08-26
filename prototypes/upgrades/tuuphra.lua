@@ -79,8 +79,8 @@ if data then
         energy_required = 2,
         ingredients = {{'tuuphra', 1}},
         results = {
-            {type = 'item', name = 'starch', amount = 1, probability = 0.2},
-            {type = 'fluid', name = 'grease', amount = 8}
+            {type = 'item', name = 'starch', amount = 1, probability = 0.4},
+            {type = 'fluid', name = 'grease', amount = 16}
         },
         enabled = false,
         category = 'biofactory',
