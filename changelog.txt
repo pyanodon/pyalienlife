@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.8
-Date: ?
+Date: 2023-9-3
   Changes:
     - fixed that crafting ingredients could sometimes be deleted when removing modules in a farm building
     - fixed that whenever your ulric transformation expired it would reset all connected caravan schedules
