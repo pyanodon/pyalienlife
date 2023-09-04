@@ -249,7 +249,7 @@ local function get_outpost_inventory(outpost)
 end
 
 local function transfer_all_items(input_inventory, output_inventory)
-	if not output_inventory.find_empty_stack() then return false end
+	if input_inventory.is_empty() or output_inventory.is_full() then return false end
 	local changed = false
 	for item, count in pairs(input_inventory.get_contents()) do
 		local stack = {name = item, count = count}
