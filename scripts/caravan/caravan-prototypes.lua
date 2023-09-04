@@ -148,8 +148,6 @@ local prototypes = {
 		pathfinder_flags = {
 			allow_destroy_friendly_entities = true,
 			allow_paths_through_own_entities = true,
-			prefer_straight_paths = true,
-			low_priority = true
 		}
 	},
 	['aerial-blimp-mk02'] = {
@@ -168,8 +166,6 @@ local prototypes = {
 		pathfinder_flags = {
 			allow_destroy_friendly_entities = true,
 			allow_paths_through_own_entities = true,
-			prefer_straight_paths = true,
-			low_priority = true
 		}
 	},
 	['aerial-blimp-mk03'] = {
@@ -188,8 +184,6 @@ local prototypes = {
 		pathfinder_flags = {
 			allow_destroy_friendly_entities = true,
 			allow_paths_through_own_entities = true,
-			prefer_straight_paths = true,
-			low_priority = true
 		}
 	},
 	['aerial-blimp-mk04'] = {
@@ -208,8 +202,6 @@ local prototypes = {
 		pathfinder_flags = {
 			allow_destroy_friendly_entities = true,
 			allow_paths_through_own_entities = true,
-			prefer_straight_paths = true,
-			low_priority = true
 		}
 	},
 	['aerial-blimp-ht'] = {
@@ -228,8 +220,6 @@ local prototypes = {
 		pathfinder_flags = {
 			allow_destroy_friendly_entities = true,
 			allow_paths_through_own_entities = true,
-			prefer_straight_paths = true,
-			low_priority = true
 		}
 	}
 }
@@ -249,19 +239,16 @@ local function get_outpost_inventory(outpost)
 end
 
 local function transfer_all_items(input_inventory, output_inventory)
-	if input_inventory.is_empty() or output_inventory.is_full() then return false end
-	local changed = false
+	if input_inventory.is_empty() or output_inventory.is_full() then return end
 	for item, count in pairs(input_inventory.get_contents()) do
 		local stack = {name = item, count = count}
 		if output_inventory.can_insert(stack) then
 			local inserted_count = output_inventory.insert{name = item, count = count}
 			if inserted_count ~= 0 then
 				input_inventory.remove{name = item, count = inserted_count}
-				changed = true
 			end
 		end
 	end
-	return changed
 end
 
 local function transfer_filtered_items(input_inventory, output_inventory, item, goal) -- TODO: make it work with complex items
@@ -327,8 +314,8 @@ Caravan.actions = {
 		if not outpost_inventory then return true end
 		local inventory = caravan_data.inventory
 
-		local changed = transfer_all_items(outpost_inventory, inventory)
-		return changed and inventory.is_full()
+		transfer_all_items(outpost_inventory, inventory)
+		return inventory.is_full()
 	end,
 
 	['empty-inventory'] = function(caravan_data, schedule, action)
@@ -338,8 +325,8 @@ Caravan.actions = {
 		if not outpost_inventory then return true end
 		local inventory = caravan_data.inventory
 
-		local changed = transfer_all_items(inventory, outpost_inventory)
-		return changed and inventory.is_empty()
+		transfer_all_items(inventory, outpost_inventory)
+		return inventory.is_empty()
 	end,
 
 	['empty-autotrash'] = function(caravan_data, schedule, action)
