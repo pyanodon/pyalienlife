@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.10
+Date: 2023-9-4
+  Changes:
+    - added check to ocula so that they don't transfer more items than requested.
+    - Allowed ocula to work within logistic networks.
+---------------------------------------------------------------------------------------------------
 Version: 2.1.9
 Date: 2023-9-4
   Changes:
