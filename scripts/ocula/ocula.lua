@@ -75,7 +75,6 @@ function Oculua.process_player(player)
 	local character = player.character
 	local logistic_point = character.get_logistic_point(defines.logistic_member_index.character_requester)
 	if not logistic_point then return end
-	local logistic_network_incoming = logistic_point.targeted_items_deliver
 
 	for i = 1, character.request_slot_count do
 		local request_slot = character.get_request_slot(i)
@@ -83,7 +82,7 @@ function Oculua.process_player(player)
 		local item = request_slot.name
 
 		local target_count = Oculua.get_player_request_item_count(player,request_slot, inventory)
-		target_count = target_count - (logistic_network_incoming[item] or 0) 
+		
 		target_count = target_count - (incoming[item] or 0)
 		local ipod_data, network = Oculua.find_ipod(player, item)
 		if not ipod_data then goto continue end
