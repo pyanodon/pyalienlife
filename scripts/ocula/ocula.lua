@@ -1,4 +1,5 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
+local Position = require('__stdlib__/stdlib/area/position')
 
 Oculua = {}
 Oculua.events = {}
@@ -74,34 +75,31 @@ function Oculua.process_player(player)
 	local character = player.character
 	local logistic_point = character.get_logistic_point(defines.logistic_member_index.character_requester)
 	if not logistic_point then return end
-	local logistic_network_incoming = logistic_point.targeted_items_deliver
 
 	for i = 1, character.request_slot_count do
 		local request_slot = character.get_request_slot(i)
 		if not request_slot then goto continue end
 		local item = request_slot.name
 
-		if not FUN.check_for_basic_item(item) then goto continue end -- Cannot transfer blueprint books, item-with-tags, ect. Otherwise it would wipe data
-		local needed = request_slot.count - (incoming[item] or 0) - (inventory[item] or 0) - (logistic_network_incoming[item] or 0)
-		if cursor_stack and cursor_stack.valid_for_read and cursor_stack.name == item then needed = needed - cursor_stack.count end
-		if needed <= 0 then goto continue end
-
-		local insertable_count = player.get_main_inventory().get_insertable_count(item)
-		if insertable_count == 0 then goto continue end
-
+		local target_count = Oculua.get_player_request_item_count(player,request_slot, inventory)
+		
+		target_count = target_count - (incoming[item] or 0)
 		local ipod_data, network = Oculua.find_ipod(player, item)
 		if not ipod_data then goto continue end
 		local pickup_point = network.select_pickup_point{name = item, position = ipod_data.entity.position, include_buffers = true}
 		if not pickup_point then goto continue end
 		pickup_point = pickup_point.owner
-		local inventory = pickup_point.get_inventory(CHEST)
-		if not inventory then goto continue end
-
-		local target_count = math.min(insertable_count, needed, inventory.get_item_count(item), game.item_prototypes[item].stack_size * Oculua.inventory_size)
+		local pickup_inventory = pickup_point.get_inventory(CHEST)
+		if not pickup_inventory then goto continue end
+		target_count = math.min(target_count, pickup_inventory.get_item_count(item))
 		if target_count <= 0 then goto continue end
+
+		target_count = math.min(game.item_prototypes[item].stack_size * Oculua.inventory_size, pickup_inventory.get_item_count(item))
+
 		local oculua_data = Oculua.spawn_oculua(ipod_data, player)
 		oculua_data.item = item
 		oculua_data.target_count = target_count
+		oculua_data.pickup_point = pickup_point
 		Oculua.set_target(oculua_data, pickup_point)
 		incoming[item] = (incoming[item] or 0) + oculua_data.target_count
 
@@ -109,6 +107,35 @@ function Oculua.process_player(player)
 	end
 end
 
+function Oculua.get_player_request_item_count(player, request_slot, inventory)
+		local item = request_slot.name
+		if not FUN.check_for_basic_item(item) then return 0 end -- Cannot transfer blueprint books, item-with-tags, ect. Otherwise it would wipe data
+		local needed = request_slot.count  - (inventory[item] or 0)
+		if cursor_stack and cursor_stack.valid_for_read and cursor_stack.name == item then needed = needed - cursor_stack.count end		
+		local insertable_count = player.get_main_inventory().get_insertable_count(item)
+		return math.min(insertable_count,  needed)
+end
+
+function Oculua.dropoff_player(oculua_data)
+	local player = oculua_data.player
+	local inventory = player.get_main_inventory().get_contents()
+	local character = player.character
+	local target_count = oculua_data.count
+	for i = 1, character.request_slot_count do
+		local request_slot = character.get_request_slot(i)
+		if not request_slot then goto continue end
+		if oculua_data.item == request_slot.name then		
+			target_count = math.min(target_count, Oculua.get_player_request_item_count(player,request_slot, inventory))
+			if target_count <= 0 then
+				return 0
+			end
+			return oculua_data.player.get_main_inventory().insert{name = oculua_data.item, count = target_count}
+		end
+		::continue::
+	end
+	return 0
+
+end
 local target_offset = {0, -0.3}
 function Oculua.render_altmode_icon(oculua_data)
 	oculua_data.alt_mode_light = rendering.draw_sprite{
@@ -141,7 +168,7 @@ end
 Oculua.events[221] = function()
 	if not global.should_run_oculua_code then return end -- Save on UPS if no ipods are built
 	for _, player in pairs(game.connected_players) do
-		if player.character and player.character_personal_logistic_requests_enabled and not player.force.find_logistic_network_by_position(player.position, player.surface) then
+		if player.character and player.character_personal_logistic_requests_enabled then
 			Oculua.process_player(player)
 		end
 	end
@@ -178,7 +205,6 @@ Oculua.events[43] = function()
 		local map_tag = oculua_data.map_tag
 		local oculua = oculua_data.entity
 		if map_tag and map_tag.valid then
-			if map_tag.position.x == oculua.position.x and map_tag.position.y == oculua.position.y then goto didnt_move end
 			map_tag.destroy()
 		end
 		oculua_data.map_tag = oculua.force.add_chart_tag(oculua.surface, {
@@ -266,12 +292,21 @@ Oculua.events.on_ai_command_completed = function(event)
 		elseif oculua_data.status == DROPPING_OFF then
 			local player = oculua_data.player
 			if player and player.valid and oculua_data.count ~= 0 and player.get_main_inventory() then
-				local item = oculua_data.item
-				local inserted_count = player.get_main_inventory().insert{name = item, count = oculua_data.count}
+				local inserted_count = Oculua.dropoff_player(oculua_data)
 				oculua_data.count = oculua_data.count - inserted_count
 				Oculua.destroy_altmode_icon(oculua_data)
 				Oculua.fire_laser_beam(oculua_data)
 			end
+			if oculua_data.count and oculua_data.count > 0 and oculua_data.pickup_point and oculua_data.pickup_point.valid then				
+				Oculua.set_target(oculua_data, oculua_data.pickup_point)
+				oculua_data.status = RETURN_ITEMS
+			else
+				Oculua.go_home(oculua_data)
+			end
+		elseif oculua_data.status == RETURN_ITEMS then
+			if not oculua_data.pickup_point or not oculua_data.pickup_point.valid then Oculua.go_home(oculua_data); return end
+			
+			oculua_data.count = oculua_data.count - oculua_data.pickup_point.get_inventory(CHEST).insert{name = oculua_data.item, count = oculua_data.count}			
 			Oculua.go_home(oculua_data)
 		elseif oculua_data.status == RETURNING then
 			local ipod = oculua_data.ipod
