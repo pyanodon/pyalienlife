@@ -80,7 +80,7 @@ ENTITY {
     collision_box = {{-2.3, -2.3}, {2.3, 2.3}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     dying_explosion = 'medium-explosion',
-    collision_mask = {'object-layer'},
+    collision_mask = {vessel_collision_mask},
     crafting_speed = 1,
     energy_usage = '1W',
     crafting_categories = {'biofluid'},
@@ -100,7 +100,7 @@ ENTITY {
     },
     show_recipe_icon = false,
     vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},
-    animation = {
+    integration_patch = {
         layers = {
             {
                 filename = '__pyalienlifegraphics2__/graphics/entity/bots/roboport/raw.png',
@@ -139,7 +139,8 @@ ENTITY {
                 frame_count = 1
             }
         }
-    }
+    },
+    integration_patch_render_layer = 'higher-object-under'
 }
 
 data.raw['utility-sprites'].default.heat_exchange_indication.filename = '__pyalienlifegraphics2__/graphics/entity/bots/connection-icon.png'

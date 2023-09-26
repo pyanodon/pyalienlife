@@ -501,10 +501,10 @@ require 'scripts/biofluid/biofluid-prototypes'
 require 'prototypes/biofluid/gobachov'
 require 'prototypes/biofluid/huzu'
 require 'prototypes/biofluid/chorkok'
+require 'prototypes/biofluid/vessel'
 require 'prototypes/biofluid/bioport'
 require 'prototypes/biofluid/requester-tank'
 require 'prototypes/biofluid/provider-tank'
-require 'prototypes/biofluid/vessel'
 
 --(( RECIPES ))--
 require('prototypes/recipes/recipes')

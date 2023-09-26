@@ -1,3 +1,7 @@
+local collision_mask_util = require '__core__/lualib/collision-mask-util'
+
+_G.vessel_collision_mask = collision_mask_util.get_first_unused_layer()
+
 RECIPE {
     type = 'recipe',
     name = 'vessel',
@@ -109,6 +113,7 @@ pipe.heat_buffer = {
         }
     },
 }
+pipe.collision_mask = {vessel_collision_mask}
 
 local underground_pipe = table.deepcopy(data.raw['pipe-to-ground']['pipe-to-ground'])
 underground_pipe.name = 'vessel-to-ground'
@@ -128,6 +133,7 @@ underground_pipe.fluid_box = {
         }
     }
 }
+underground_pipe.collision_mask = {vessel_collision_mask}
 
 data:extend{pipe, underground_pipe}
 

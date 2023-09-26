@@ -1,3 +1,5 @@
+local collision_mask_util = require '__core__/lualib/collision-mask-util'
+
 RECIPE {
     type = 'recipe',
     name = 'provider-tank',
@@ -111,5 +113,8 @@ ENTITY {
         }
     },
     circuit_connector_sprites = _G.circuit_connector_definitions['inserter'].sprites,
-    circuit_wire_max_distance = data.raw['storage-tank']['storage-tank'].circuit_wire_max_distance
+    circuit_wire_max_distance = data.raw['storage-tank']['storage-tank'].circuit_wire_max_distance,
+    collision_mask = collision_mask_util.get_default_mask('furnace')
 }
+
+collision_mask_util.add_layer(data.raw.furnace['provider-tank'].collision_mask, vessel_collision_mask)

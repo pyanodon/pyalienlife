@@ -506,6 +506,12 @@ local walkable_types = {
     ['inserter'] = true
 }
 
+local vessel_placeable_entities = {
+    ['pipe'] = true,
+    ['pipe-to-ground'] = true,
+    ['inserter'] = true
+}
+
 for _, prototype in pairs(collision_mask_util.collect_prototypes_with_layer('object-layer')) do
     if not walkable_types[prototype.type] then
         prototype.collision_mask = collision_mask_util.get_mask(prototype)
@@ -513,11 +519,18 @@ for _, prototype in pairs(collision_mask_util.collect_prototypes_with_layer('obj
             collision_mask_util.add_layer(prototype.collision_mask, caravan_collision_mask)
         end
     end
+    if not vessel_placeable_entities[prototype.type] then
+        prototype.collision_mask = collision_mask_util.get_mask(prototype)
+        if prototype.type == 'splitter' or (not collision_mask_util.mask_contains_layer(prototype.collision_mask, 'floor-layer') and collision_mask_util.mask_contains_layer(prototype.collision_mask, 'player-layer')) then
+            collision_mask_util.add_layer(prototype.collision_mask, vessel_collision_mask)
+        end
+    end
 end
 
 for _, tile in pairs(data.raw.tile) do
-    if tile.name == 'out-of-map' or tile.name:find('water') then
-        tile.collision_mask = collision_mask_util.get_mask(tile)
+    tile.collision_mask = collision_mask_util.get_mask(tile)
+    if collision_mask_util.mask_contains_layer(tile.collision_mask, 'water-tile') then
         collision_mask_util.add_layer(tile.collision_mask, caravan_collision_mask)
+        collision_mask_util.add_layer(tile.collision_mask, vessel_collision_mask)
     end
 end

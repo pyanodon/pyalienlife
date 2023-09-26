@@ -5,6 +5,7 @@ Date: 2023-9-4
     - added check to ocula so that they don't transfer more items than requested.
     - Allowed ocula to work within logistic networks.
     - Prevented caravans & flying caravans from being boosted by ground tiles
+    - Allowed vessel, vessel to ground, and floating biopyanoport to be placed on the same location as belts, pipes, or rail
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.9
 Date: 2023-9-4
