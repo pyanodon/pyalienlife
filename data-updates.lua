@@ -534,3 +534,8 @@ for _, tile in pairs(data.raw.tile) do
         collision_mask_util.add_layer(tile.collision_mask, vessel_collision_mask)
     end
 end
+
+if register_cache_file ~= nil then
+    register_cache_file({"pycoalprocessing","pyfusionenergy","pyindustry","pyrawores","pypetroleumhandling","pyalienlife"}, "__pyalienlife__/cached-configs/pyalienlife+pycoalprocessing+pyfusionenergy+pyindustry+pypetroleumhandling+pyrawores")
+    register_cache_file({"pycoalprocessing","pyfusionenergy","pyindustry","pyrawores","pyhightech","pypetroleumhandling","pyalienlife"}, "__pyalienlife__/cached-configs/pyalienlife+pycoalprocessing+pyfusionenergy+pyhightech+pyindustry+pypetroleumhandling+pyrawores")
+end
