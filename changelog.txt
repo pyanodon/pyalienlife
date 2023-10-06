@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - added decentralised PyPP cache file
     - Removed tar, aromatics, glycerol, oleochemicals, depolymerized organics, ethonal, fish oil, liquid manure, black liquor, and tall oil from compostables list.
+    - fixed multiple mispellings
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.10
 Date: 2023-9-4
