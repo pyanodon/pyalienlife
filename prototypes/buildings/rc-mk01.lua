@@ -36,7 +36,7 @@ ENTITY {
     name = "rc-mk01",
     icon = "__pyalienlifegraphics2__/graphics/icons/rc-mk01.png",
 	icon_size = 64,
-    flags = {"placeable-neutral", "player-creation", "not-rotatable"},
+    flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "rc-mk01"},
     fast_replaceable_group = "rc",
     max_health = 800,
