@@ -2,6 +2,8 @@
 Version: 2.1.10
 Date: ???
   Changes:
+    - fixed hot molten salt, nexelit slurry, combustion mixture, molten nexelit-zinc-gadolinium being labed as gases when they should have been labeled as fluids (https://github.com/pyanodon/pybugreports/issues/319)
+    - removed ralestia mk1 recipe. all ralesia recipes now require hydrogen 
     - added decentralised PyPP cache file
     - Removed tar, aromatics, glycerol, oleochemicals, depolymerized organics, ethonal, fish oil, liquid manure, black liquor, and tall oil from compostables list.
     - fixed multiple mispellings
