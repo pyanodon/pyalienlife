@@ -13,14 +13,14 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='ralesia-seeds', amount = 9},
+					{name='ralesia-seeds', amount = 8},
 					{name='water', amount = 100, fluidbox_index = 1},
 					{name='hydrogen', amount = 100, fluidbox_index = 2},
 					{name='soil', amount = 15},
 				},
 			results =
 				{
-					{name='ralesias', amount = 9},
+					{name='ralesias', amount = 10},
 				},
 			crafting_speed = 125,
 			tech = 'ralesia'
