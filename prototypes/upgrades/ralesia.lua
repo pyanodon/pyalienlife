@@ -50,7 +50,6 @@ if data then
         table.deepcopy(data.raw.recipe['ralesias-2']),
         table.deepcopy(data.raw.recipe['ralesias-3']),
         table.deepcopy(data.raw.recipe['ralesias-4']),
-        table.deepcopy(data.raw.recipe['ralesias-5']),
     }) do
         recipe.name = recipe.name .. '-hydrogen-burn'
         FUN.remove_ingredient(recipe, 'water')
@@ -126,7 +125,6 @@ return {
                 {old = 'ralesias-2', new = 'ralesias-2-hydrogen-burn', type = 'recipe-replacement'},
                 {old = 'ralesias-3', new = 'ralesias-3-hydrogen-burn', type = 'recipe-replacement'},
                 {old = 'ralesias-4', new = 'ralesias-4-hydrogen-burn', type = 'recipe-replacement'},
-                {old = 'ralesias-5', new = 'ralesias-5-hydrogen-burn', type = 'recipe-replacement'},
             }
         }
     },
