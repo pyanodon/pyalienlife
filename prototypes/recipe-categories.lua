@@ -296,10 +296,6 @@ data:extend {
         type = "recipe-category",
         name = "compost"
     },
-    {
-        type = "recipe-category",
-        name = "rocket-mk01"
-    },
     ------crops------
 	{
         type = "resource-category",
