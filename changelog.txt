@@ -12,6 +12,7 @@ Date: ???
     - Allowed ocula to work within logistic networks.
     - Prevented caravans & flying caravans from being boosted by ground tiles
     - Allowed vessel, vessel to ground, and floating biopyanoport to be placed on the same location as belts, pipes, or rail
+    - Fixed crash when opening TURD when pyAE is not installed
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.9
 Date: 2023-9-4
