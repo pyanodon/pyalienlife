@@ -24,6 +24,7 @@ RECIPE {
         {type = 'item', name = 'dingrits-mk02', amount = 1, probability = 0.005},
         {type = 'item', name = 'dingrits', amount = 1, probability = 0.5},
         {type = 'item', name = 'empty-barrel', amount = 5},
+        {type = 'item', name = 'cage', amount = 1},
     },
     --main_product = "dingrits-mk02",
     icons =
@@ -58,6 +59,7 @@ RECIPE {
         {type = 'item', name = 'dingrits-mk03', amount = 1, probability = 0.004},
         {type = 'item', name = 'dingrits', amount = 1, probability = 0.6},
         {type = 'item', name = 'empty-barrel', amount = 5},
+        {type = 'item', name = 'cage', amount = 1},
     },
     --main_product = "dingrits-mk03",
     icons =
@@ -92,6 +94,7 @@ RECIPE {
         {type = 'item', name = 'dingrits-mk04', amount = 1, probability = 0.003},
         {type = 'item', name = 'dingrits', amount = 1, probability = 0.7},
         {type = 'item', name = 'empty-barrel', amount = 5},
+        {type = 'item', name = 'cage', amount = 1},
     },
     --main_product = "dingrits-mk04",
     icons =
