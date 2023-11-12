@@ -81,6 +81,7 @@ local function create_turd_page(gui, player)
 	py_select_view.style.top_margin = 10
 
 	local item_prototypes = game.item_prototypes
+	local recipe_prototypes = game.recipe_prototypes
 	local researched_technologies = player.force.technologies
 
 	for name, tech_upgrade in pairs(tech_upgrades) do
@@ -135,13 +136,30 @@ local function create_turd_page(gui, player)
 					local sprite = effects_flow.add{type = 'choose-elem-button', elem_type = 'item', style = 'transparent_slot'}
 					local module_name = sub_tech.name .. '-module'
 					if not item_prototypes[module_name] then module_name = module_name .. '-mk01' end
+					if not item_prototypes[module_name] then
+						game.print('Turd: Module ' .. module_name .. ' does not exist!')
+						goto continue
+					end
 					sprite.elem_value = module_name
 					sprite.locked = true
 				elseif effect.type == 'unlock-recipe' then
 					local sprite = effects_flow.add{type = 'choose-elem-button', elem_type = 'recipe', style = 'transparent_slot'}
+					if not recipe_prototypes[effect.recipe] then
+						game.print('Turd: Recipe ' .. effect.recipe .. ' does not exist!')
+						goto continue
+					end
 					sprite.elem_value = effect.recipe
 					sprite.locked = true
 				elseif effect.type == 'recipe-replacement' then
+					if not recipe_prototypes[effect.old] then
+						game.print('Turd: Recipe ' .. effect.old .. ' does not exist!')
+						goto continue
+					end
+					if not recipe_prototypes[effect.new] then
+						game.print('Turd: Recipe ' .. effect.new .. ' does not exist!')
+						goto continue
+					end
+
 					local old = effects_flow.add{type = 'choose-elem-button', elem_type = 'recipe', style = 'transparent_slot'}
 					old.elem_value = effect.old
 					old.locked = true
@@ -152,6 +170,7 @@ local function create_turd_page(gui, player)
 					new.elem_value = effect.new
 					new.locked = true
 				end
+				::continue::
 			end
 
 			info_flow.add{type = 'empty-widget', style = 'py_empty_widget'}
