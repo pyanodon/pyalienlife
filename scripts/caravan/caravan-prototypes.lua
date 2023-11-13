@@ -43,21 +43,6 @@ local caravan_actions = {
 	}
 }
 
-local aerial_actions = {
-	['outpost'] = {
-		'time-passed',
-		'store-energy'
-	},
-	['default'] = {
-		'time-passed'
-	}
-}
-
-local ln = math.log
-local function distance_effectivity(distance, toughness)
-	return 1 - 1 / (ln(distance / toughness + 1) + 1)
-end
-
 local prototypes = {
 	caravan = {
 		inventory_size = 30,
@@ -129,97 +114,6 @@ local prototypes = {
 		},
 		pathfinder_flags = {
 			cache = false
-		}
-	},
-	-- pyalternativeenergy caravans
-	['aerial-blimp-mk01'] = {
-		opens_player_inventory = false,
-		outpost = 'aerial-base',
-		only_allow_outpost_as_destination = true,
-		actions = aerial_actions,
-		placeable_by = 'aerial-blimp-mk01',
-		energy_per_distance_formula = function(distance) return distance_effectivity(distance, 60) * distance * 1800000 end,
-		distance_bonus_formula = function(distance) return distance_effectivity(distance, 60) end,
-		is_aerial = true,
-		map_tag = {
-			type = 'virtual',
-			name = 'aerial-blimp-mk01'
-		},
-		pathfinder_flags = {
-			allow_destroy_friendly_entities = true,
-			allow_paths_through_own_entities = true,
-		}
-	},
-	['aerial-blimp-mk02'] = {
-		opens_player_inventory = false,
-		outpost = 'aerial-base',
-		only_allow_outpost_as_destination = true,
-		actions = aerial_actions,
-		placeable_by = 'aerial-blimp-mk01',
-		energy_per_distance_formula = function(distance) return distance_effectivity(distance, 80) * distance * 3600000 end,
-		distance_bonus_formula = function(distance) return distance_effectivity(distance, 80) end,
-		is_aerial = true,
-		map_tag = {
-			type = 'virtual',
-			name = 'aerial-blimp-mk02'
-		},
-		pathfinder_flags = {
-			allow_destroy_friendly_entities = true,
-			allow_paths_through_own_entities = true,
-		}
-	},
-	['aerial-blimp-mk03'] = {
-		opens_player_inventory = false,
-		outpost = 'aerial-base',
-		only_allow_outpost_as_destination = true,
-		actions = aerial_actions,
-		placeable_by = 'aerial-blimp-mk01',
-		energy_per_distance_formula = function(distance) return distance_effectivity(distance, 120) * distance * 6000000 end,
-		distance_bonus_formula = function(distance) return distance_effectivity(distance, 120) end,
-		is_aerial = true,
-		map_tag = {
-			type = 'virtual',
-			name = 'aerial-blimp-mk03'
-		},
-		pathfinder_flags = {
-			allow_destroy_friendly_entities = true,
-			allow_paths_through_own_entities = true,
-		}
-	},
-	['aerial-blimp-mk04'] = {
-		opens_player_inventory = false,
-		outpost = 'aerial-base',
-		only_allow_outpost_as_destination = true,
-		actions = aerial_actions,
-		placeable_by = 'aerial-blimp-mk01',
-		energy_per_distance_formula = function(distance) return distance_effectivity(distance, 140) * distance * 8000000 end,
-		distance_bonus_formula = function(distance) return distance_effectivity(distance, 140) end,
-		is_aerial = true,
-		map_tag = {
-			type = 'virtual',
-			name = 'aerial-blimp-mk04'
-		},
-		pathfinder_flags = {
-			allow_destroy_friendly_entities = true,
-			allow_paths_through_own_entities = true,
-		}
-	},
-	['aerial-blimp-ht'] = {
-		opens_player_inventory = false,
-		outpost = 'aerial-base',
-		only_allow_outpost_as_destination = true,
-		actions = aerial_actions,
-		placeable_by = 'aerial-blimp-mk01',
-		energy_per_distance_formula = function(distance) return distance_effectivity(distance, 40) * distance * 4000000 end,
-		distance_bonus_formula = function(distance) return distance_effectivity(distance, 40) end,
-		is_aerial = true,
-		map_tag = {
-			type = 'item',
-			name = 'aerial-blimp-ht'
-		},
-		pathfinder_flags = {
-			allow_destroy_friendly_entities = true,
-			allow_paths_through_own_entities = true,
 		}
 	}
 }
@@ -379,31 +273,6 @@ Caravan.actions = {
 		return 'nuke'
 	end,
 
-	['store-energy'] = function(caravan_data, schedule, action)
-		local outpost = schedule.entity
-		if not outpost or not outpost.valid then return 'error' end
-		local entity = caravan_data.entity
-
-		local energy = caravan_data.stored_energy
-		if not energy then
-			local formula = prototypes[entity.name].energy_per_distance_formula
-			energy = formula(Position.distance(caravan_data.last_outpost_location, entity.position))
-		end
-
-		if energy == 0 then return true end
-
-		local buffer_capacity = outpost.prototype.electric_energy_source_prototype.buffer_capacity
-		local goal = outpost.energy + energy
-		if buffer_capacity < goal then
-			caravan_data.stored_energy = goal - buffer_capacity
-			outpost.energy = buffer_capacity
-			return false
-		else
-			outpost.energy = goal
-			return true
-		end
-	end,
-
 	['circuit-condition'] = function(caravan_data, schedule, action)
 		local outpost = schedule.entity
 		if not outpost or not outpost.valid then return true end
@@ -420,7 +289,6 @@ Caravan.free_actions = { -- actions that don't use fuel
 	['time-passed'] = true,
 	['store-food'] = true,
 	['detonate'] = true,
-	['store-energy'] = true,
 	['circuit-condition'] = true
 }
 

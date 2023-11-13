@@ -240,9 +240,7 @@ local function begin_schedule(caravan_data, schedule_id, skip_eating, is_retry)
 
 	caravan_data.schedule_id = schedule_id
 	caravan_data.action_id = -1
-	if caravan_data.is_aerial then
-		goto_position(caravan_data, Position.random(schedule.position, 0, 1, true))
-	elseif schedule.entity then
+	if schedule.entity then
 		local schedule_entity = schedule.entity
 		if schedule_entity.valid and schedule_entity.surface == entity.surface then
 			goto_entity(caravan_data, schedule.entity)
@@ -254,11 +252,6 @@ local function begin_schedule(caravan_data, schedule_id, skip_eating, is_retry)
 		end
 	else
 		goto_position(caravan_data, schedule.position)
-	end
-
-	if caravan_data.is_aerial and not is_retry then
-		caravan_data.last_outpost_location = caravan_data.entity.position
-		caravan_data.stored_energy = nil
 	end
 
 	caravan_data.last_scheduled_tick = game.tick
@@ -567,12 +560,6 @@ function Caravan.instantiate_caravan(entity)
 		caravan_data.inventory = game.create_inventory(prototype.inventory_size)
 	end
 
-	if prototype.is_aerial then
-		caravan_data.stored_energy = nil
-		caravan_data.last_outpost_location = nil
-		caravan_data.is_aerial = true
-	end
-
 	global.caravans[entity.unit_number] = caravan_data
 	return caravan_data
 end
@@ -653,7 +640,7 @@ remote.add_interface('caravans', {
 	get_caravan_count = function()
 		local result = 0
 		for _, caravan_data in pairs(global.caravans) do
-			if caravan_data.entity and caravan_data.entity.valid and not caravan_data.itemised and not caravan_data.is_aerial then
+			if caravan_data.entity and caravan_data.entity.valid and not caravan_data.itemised then
 				result = result + 1
 			end
 		end

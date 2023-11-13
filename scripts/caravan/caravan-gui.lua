@@ -180,11 +180,6 @@ function Caravan.build_gui(player, entity)
 	camera.style.height = 155
 	camera.zoom = prototype.camera_zoom or 1
 
-	if caravan_data.is_aerial then
-		content_flow.add{type = 'label', name = 'stored_energy'}
-		content_flow.add{type = 'label', name = 'distance_bonus'}
-	end
-
 	if caravan_data.fuel_inventory then
 		local fuel_flow = content_flow.add{type = 'flow', name = 'fuel_flow', direction = 'horizontal'}
 		fuel_flow.style.vertical_align = 'center'
@@ -266,19 +261,6 @@ function Caravan.update_gui(gui, weak)
 			end
 		end
 		content_flow.fuel_flow.fuel_bar.value = caravan_data.fuel_bar / caravan_data.last_eaten_fuel_value
-	end
-
-	if caravan_data.is_aerial then
-		local energy, distance_bonus = 0, 0
-		if caravan_data.last_outpost_location then
-			local distance = Position.distance(caravan_data.last_outpost_location, entity.position)
-			local energy_per_distance_formula = prototypes[entity.name].energy_per_distance_formula
-			energy = energy_per_distance_formula(distance)
-			local distance_bonus_formula = prototypes[entity.name].distance_bonus_formula
-			distance_bonus = distance_bonus_formula(distance)
-		end
-		content_flow.stored_energy.caption = {'caravan-gui.stored-energy', FUN.format_energy(energy, 'J')}
-		content_flow.distance_bonus.caption = {'caravan-gui.distance-bonus', math.floor(distance_bonus * 1000) / 10}
 	end
 
 	if not weak then
