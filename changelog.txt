@@ -13,6 +13,7 @@ Date: ???
     - Fixed that dingrit mk2,mk3,mk4 module recipes were not outputting any empty cages
     - Moved all aerial turbine code to pyAE
     - fixed digosaurus being recorded in kill statistics
+    - fixed crash when mixing oculas and factorissimo 2 (https://github.com/pyanodon/pybugreports/issues/336)
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.9
 Date: 2023-9-4

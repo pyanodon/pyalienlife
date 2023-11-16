@@ -21,7 +21,12 @@ Oculua.events.on_init = function()
 end
 
 function Oculua.set_target(oculua_data, target)
-	oculua_data.entity.set_command{
+	local entity = oculua_data.entity
+	if entity.surface_index ~= target.surface_index then
+		Oculua.go_home(oculua_data)
+		return
+	end
+	entity.set_command{
 		type = defines.command.go_to_location,
 		destination_entity = target,
 		radius = Oculua.range,
@@ -232,7 +237,12 @@ end
 function Oculua.go_home(oculua_data)
 	local ipod = oculua_data.ipod
 	if not ipod or not ipod.valid then Oculua.wander(oculua_data); return end
-	oculua_data.entity.set_command{
+	local entity = oculua_data.entity
+	if not ipod or not ipod.valid or ipod.surface_index ~= entity.surface_index then
+		Oculua.wander(oculua_data)
+		return
+	end
+	entity.set_command{
 		type = defines.command.go_to_location,
 		destination_entity = ipod,
 		radius = 0.5,
