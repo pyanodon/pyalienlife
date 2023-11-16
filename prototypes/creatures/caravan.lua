@@ -43,6 +43,7 @@ ITEM {
 
 data:extend{{
 	type = 'unit',
+	ai_settings = {do_separation = false},
 	additional_pastable_entities = {'caravan'},
 	name = 'caravan',
 	can_open_gates = true,

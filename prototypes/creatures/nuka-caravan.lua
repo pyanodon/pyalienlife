@@ -41,13 +41,14 @@ data:extend(
 	additional_pastable_entities = {'nukavan'},
     icon = '__pyalienlifegraphics2__/graphics/icons/nuka-van.png',
     icon_size = 64,
+	ai_settings = {do_separation = false},
     flags = {'placeable-player', 'placeable-off-grid', 'not-repairable', 'breaths-air', 'building-direction-8-way'},
 	minable = {mining_time = 0.1, result = 'nukavan'},
     max_health = 6125,
 	map_color = {1, 1, 1},
     order = 'b-b-a',
     subgroup='enemies',
-	collision_mask = {caravan_collision_mask},
+	collision_mask = {caravan_collision_mask, 'not-colliding-with-itself'},
     resistances =
 	{
 		{
