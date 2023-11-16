@@ -183,7 +183,6 @@ Oculua.events[43] = function()
 		local map_tag = oculua_data.map_tag
 		local oculua = oculua_data.entity
 		if map_tag and map_tag.valid then
-			if map_tag.position.x == oculua.position.x and map_tag.position.y == oculua.position.y then goto didnt_move end
 			map_tag.destroy()
 		end
 		oculua_data.map_tag = oculua.force.add_chart_tag(oculua.surface, {
@@ -193,7 +192,6 @@ Oculua.events[43] = function()
 				name = 'ocula-map-tag'
 			}
 		})
-		::didnt_move::
 	end
 end
 
