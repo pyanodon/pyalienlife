@@ -181,7 +181,7 @@ ENTITY {
 	icon = item_icon,
 	icon_size = 64,
 	ai_settings = {do_separation = false},
-	flags = {'placeable-neutral', 'placeable-player', 'player-creation', 'placeable-off-grid', 'breaths-air', 'not-repairable', 'not-on-map', 'not-flammable'},
+	flags = {'placeable-neutral', 'placeable-player', 'player-creation', 'placeable-off-grid', 'breaths-air', 'not-repairable', 'not-on-map', 'not-flammable', 'not-in-kill-statistics'},
 	max_health = 900,
 	subgroup = 'creatures',
 	healing_per_tick = 0.01,
