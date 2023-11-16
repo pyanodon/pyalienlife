@@ -14,6 +14,7 @@ Date: ???
     - Fixed crash when opening TURD when pyAE is not installed
     - Fixed that dingrit mk2,mk3,mk4 module recipes were not outputting any empty cages
     - Moved all aerial turbine code to pyAE
+    - fixed digosaurus being recorded in kill statistics
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.9
 Date: 2023-9-4
