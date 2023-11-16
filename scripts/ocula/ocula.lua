@@ -75,14 +75,14 @@ function Oculua.process_player(player)
 	local character = player.character
 	local logistic_point = character.get_logistic_point(defines.logistic_member_index.character_requester)
 	if not logistic_point then return end
-    local logistic_network_incoming = logistic_point.targeted_items_deliver
+
 	for i = 1, character.request_slot_count do
 		local request_slot = character.get_request_slot(i)
 		if not request_slot then goto continue end
 		local item = request_slot.name
 
 		local target_count = Oculua.get_player_request_item_count(player,request_slot, inventory)
-		target_count = target_count - (logistic_network_incoming[item] or 0) 
+		
 		target_count = target_count - (incoming[item] or 0)
 		local ipod_data, network = Oculua.find_ipod(player, item)
 		if not ipod_data then goto continue end
@@ -227,10 +227,9 @@ function Oculua.clear_incoming_oculua_items(oculua_data)
 		local network_target = (oculua_data.ipod and oculua_data.ipod.valid) and oculua_data.ipod or oculua
 		local network = network_target.force.find_logistic_network_by_position(network_target.position, network_target.surface)
 		local items = {name = oculua_data.item, count = oculua_data.count}
-		if network then		
-			oculua_data.count = oculua_data.count - network.insert(items,"storage")
-		end
-		if oculua_data.count > 0 then
+		if network then
+			network.insert(items)
+		else
 			oculua.surface.spill_item_stack(oculua.position, items, false, oculua.force, false)
 		end
 		oculua_data.count = 0
