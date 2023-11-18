@@ -15,6 +15,7 @@ Date: ???
     - fixed digosaurus being recorded in kill statistics
     - caravans no longer collide with other caravans
     - fixed crash when mixing oculas and factorissimo 2 (https://github.com/pyanodon/pybugreports/issues/336)
+    - removed unused xyhiphoe blood prototype (https://github.com/pyanodon/pybugreports/issues/341)
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.9
 Date: 2023-9-4

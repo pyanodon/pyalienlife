@@ -183,7 +183,6 @@ for _, recipe in pairs(data.raw.recipe) do
     FUN.results_replacer(r.name, 'organics', 'biomass')
     r:replace_ingredient('ralesia', 'ralesias')
     r:replace_ingredient('raw-fish', 'fish')
-    r:replace_ingredient('xyhiphoe-blood', 'arthropod-blood')
 end
 
 ----------------------------------------------------------------------------------------------------
