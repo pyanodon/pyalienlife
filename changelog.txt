@@ -18,6 +18,7 @@ Date: ???
     - removed unused xyhiphoe blood prototype (https://github.com/pyanodon/pybugreports/issues/341)
     - fixed the logistic station to display units in megawatts instead of milliwatts
     - fixed that fawogae spores name did not have mk numbers
+    - fixed nuclear caravans (https://github.com/pyanodon/pybugreports/issues/334)
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.9
 Date: 2023-9-4

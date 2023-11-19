@@ -382,7 +382,7 @@ end
 Caravan.events.ai_command_completed = function(event)
 	local unit_number = event.unit_number
 	local caravan_data = global.caravans[unit_number]
-	if not Caravan.validity_check(caravan_data) then return end
+	if not caravan_data or not Caravan.validity_check(caravan_data) then return end
 	local schedule = caravan_data.schedule[caravan_data.schedule_id]
 	local status = event.result
 	if not schedule then stop_actions(caravan_data); goto update_gui end
@@ -414,7 +414,7 @@ Caravan.events.ai_command_completed = function(event)
 		}
 		local prototype = prototypes[entity.name]
 		if prototype.requeue_required then
-			Caravan.requeue(prototype)
+			global.caravan_queue = nil
 			caravan_data.arrival_tick = game.tick
 		end
 	end
@@ -424,10 +424,6 @@ Caravan.events.ai_command_completed = function(event)
 		local gui = Caravan.get_caravan_gui(player)
 		if gui and gui.tags.unit_number == unit_number then Caravan.update_gui(gui); return end
 	end
-end
-
-function Caravan.requeue(prototype)
-	if prototype and prototype.requeue_required then global.caravan_queue = nil end
 end
 
 local function caravan_sort_function(a, b)
@@ -585,7 +581,7 @@ Caravan.events.on_built = function(event)
 		Caravan.instantiate_caravan(entity)
 	end
 	script.register_on_entity_destroyed(entity)
-	Caravan.requeue(prototype)
+	global.caravan_queue = nil
 end
 
 Caravan.events.on_destroyed = function(event)
@@ -597,8 +593,7 @@ Caravan.events.on_destroyed = function(event)
 	if buffer then
 		buffer[1].tags = {unit_number = entity.unit_number}
 	end
-
-	Caravan.requeue(prototype)
+	global.caravan_queue = nil
 end
 
 Caravan.events.on_entity_destroyed = function(event)
