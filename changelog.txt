@@ -16,7 +16,8 @@ Date: ???
     - caravans no longer collide with other caravans
     - fixed crash when mixing oculas and factorissimo 2 (https://github.com/pyanodon/pybugreports/issues/336)
     - removed unused xyhiphoe blood prototype (https://github.com/pyanodon/pybugreports/issues/341)
-    - fixed the logistic station to display units in megawatts instead of miliwattss
+    - fixed the logistic station to display units in megawatts instead of milliwatts
+    - fixed that fawogae spores name did not have mk numbers
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.9
 Date: 2023-9-4
