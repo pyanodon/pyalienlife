@@ -8,7 +8,7 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"gasifier", 1},
+        {"nuclear-reactor", 1},
         {"glass", 30},
         {"nexelit-plate", 20},
         {"duralumin", 35},

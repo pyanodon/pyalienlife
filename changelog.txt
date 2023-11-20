@@ -20,12 +20,18 @@ Date: ???
     - fixed nuclear caravans (https://github.com/pyanodon/pybugreports/issues/334)
     - fixed reproductive complex sometimes eating your modules (https://github.com/pyanodon/pybugreports/issues/322)
     - changed the item description for navens (https://github.com/pyanodon/pybugreports/issues/308)
-    - removed fuel rods from bhoddos recipes
-    - the bhoddos machine now consumes fuel rods directly. no longer requires electricity
     - moved the arqad used comb recycling recipe from arqad stage 2 to arqad stage 1
     - added new recipes for creating wax from sugar and honey
+  Bhoddos:
+    - bhoddos chain was completely reworked. previously this fungus suffered from 'lack of identity'. its changed to be a biological version of a fission reactor
+    - added nuclear reactor to bhoddos culture building recipe
+    - removed fuel rods from bhoddos recipes
+    - the bhoddos machine now consumes fuel rods directly. no longer requires electricity
+    - changed item & tech descriptions for bhoddos
+    - reworked bhoddos turd path 1 to cause nuclear explosions every 2 hrs. high risk high rewards
   TURD:
     - fixed crash when opening TURD when pyAE is not installed
+    - removed /view_turd_selections
     - buffed moondrop turd path 1 speed increase from 10% to 20%
     - reworked moondrop turd path 2
     - added a 100% energy penalty to moondrop path 3

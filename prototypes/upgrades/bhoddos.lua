@@ -1,15 +1,23 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
 if data then
-    local bots = {'py-construction-robot-01', 'py-construction-robot-02', 'c-pynobot-mk03', 'construction-robot-ht'}
+    local biomass = {'nacl-biomass', 's-biomass', 'ni-biomass', 'ti-biomass'}
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['bhoddos-culture-mk01']),
-        table.deepcopy(data.raw.recipe['bhoddos-culture-mk02']),
-        table.deepcopy(data.raw.recipe['bhoddos-culture-mk03']),
-        table.deepcopy(data.raw.recipe['bhoddos-culture-mk04']),
+        table.deepcopy(data.raw.recipe['bhoddos-1']),
+        table.deepcopy(data.raw.recipe['bhoddos-2']),
+        table.deepcopy(data.raw.recipe['bhoddos-3']),
+        table.deepcopy(data.raw.recipe['bhoddos-4']),
     }) do
-        recipe.name = recipe.name .. '-with-pybot'
-        FUN.add_ingredient(recipe, {name = bots[i], amount = 2 * i, type = 'item'})
+        recipe.name = recipe.name .. '-meltdown'
+        recipe.energy_required = math.ceil(recipe.energy_required * 0.3333)
+        FUN.remove_ingredient(recipe, 'fungal-substrate')
+        FUN.remove_ingredient(recipe, 'fungal-substrate-02')
+        FUN.remove_ingredient(recipe, 'fungal-substrate-03')
+        FUN.remove_ingredient(recipe, 'biomass')
+        FUN.remove_ingredient(recipe, 'moss')
+        FUN.remove_ingredient(recipe, 'manure')
+        FUN.remove_ingredient(recipe, 'bacteria-1-barrel')
+        FUN.remove_result(recipe, 'empty-barrel')
         data:extend{recipe}
     end
 
@@ -75,11 +83,10 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.5, speed = 0.45, type = 'module-effects'},
-                {old = 'bhoddos-culture-mk01', new = 'bhoddos-culture-mk01-with-pybot', type = 'recipe-replacement'},
-                {old = 'bhoddos-culture-mk02', new = 'bhoddos-culture-mk02-with-pybot', type = 'recipe-replacement'},
-                {old = 'bhoddos-culture-mk03', new = 'bhoddos-culture-mk03-with-pybot', type = 'recipe-replacement'},
-                {old = 'bhoddos-culture-mk04', new = 'bhoddos-culture-mk04-with-pybot', type = 'recipe-replacement'},
+                {old = 'bhoddos-1', new = 'bhoddos-1-meltdown', type = 'recipe-replacement'},
+                {old = 'bhoddos-2', new = 'bhoddos-2-meltdown', type = 'recipe-replacement'},
+                {old = 'bhoddos-3', new = 'bhoddos-3-meltdown', type = 'recipe-replacement'},
+                {old = 'bhoddos-4', new = 'bhoddos-4-meltdown', type = 'recipe-replacement'},
             },
         },
         {
