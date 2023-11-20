@@ -17,7 +17,10 @@ if data then
 
     data:extend{{
         name = 'methane-co2-with-lamp',
-        results = {{type = 'fluid', amount = 60, name = 'methane'}},
+        results = {
+            {type = 'fluid', amount = 60, name = 'methane'},
+            {type = 'fluid', amount = 30, name = 'oxygen'},
+        },
         energy_required = 15,
         ingredients = {
             {type = 'item', amount = 1, name = 'small-lamp'},
@@ -25,7 +28,8 @@ if data then
         },
         category = 'moon',
         enabled = false,
-        type = 'recipe'
+        type = 'recipe',
+        main_product = 'methane'
     }}
 
     data:extend{{
