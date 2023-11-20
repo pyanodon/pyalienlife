@@ -29,6 +29,7 @@ Date: ???
     - the bhoddos machine now consumes fuel rods directly. no longer requires electricity
     - changed item & tech descriptions for bhoddos
     - reworked bhoddos turd path 1 to cause nuclear explosions every 2 hrs. high risk high rewards
+    - fixed the speed bonus of bhoddos modules to match the pattern of 1,2,3,4 (previously 1, 1.25, 1.5, 1.75)
   TURD:
     - fixed crash when opening TURD when pyAE is not installed
     - removed /view_turd_selections

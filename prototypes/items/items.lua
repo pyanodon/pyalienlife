@@ -7870,7 +7870,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "b-b",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 1.25}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
 	limitation = {},
 	limitation_message_key = "bhoddos"
 }
@@ -7890,7 +7890,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "b-c",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 1.5}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 3}},
 	limitation = {},
 	limitation_message_key = "bhoddos"
 }
@@ -7910,7 +7910,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "b-d",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 1.75}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 4}},
 	limitation = {},
 	limitation_message_key = "bhoddos"
 }
