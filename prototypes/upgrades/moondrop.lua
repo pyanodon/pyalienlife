@@ -11,9 +11,22 @@ if data then
         recipe.name = recipe.name .. '-cu'
         FUN.add_ingredient(recipe, {name = 'copper-ore', amount = 10, type = 'item'})
         FUN.multiply_result_amount(recipe, 'moondrop', 1.1)
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
+        recipe.energy_required = math.ceil(recipe.energy_required * 0.8)
         data:extend{recipe}
     end
+
+    data:extend{{
+        name = 'methane-co2-with-lamp',
+        results = {{type = 'fluid', amount = 60, name = 'methane', fluidbox_index = 1}},
+        energy_required = 15,
+        ingredients = {
+            {type = 'item', amount = 1, name = 'small-lamp'},
+            {type = 'fluid', amount = 100, name = 'water', fluidbox_index = 3},
+        },
+        category = 'moon',
+        enabled = false,
+        type = 'recipe'
+    }}
 
     data:extend{{
         name = 'moondrop-co2',
@@ -24,17 +37,6 @@ if data then
         enabled = false,
         type = 'recipe'
     }}
-
-    for i, machine_recipe in pairs({
-        table.deepcopy(data.raw.recipe['moondrop-greenhouse-mk01']),
-        table.deepcopy(data.raw.recipe['moondrop-greenhouse-mk02']),
-        table.deepcopy(data.raw.recipe['moondrop-greenhouse-mk03']),
-        table.deepcopy(data.raw.recipe['moondrop-greenhouse-mk04']),
-    }) do
-        machine_recipe.name = machine_recipe.name .. '-with-lamp'
-        FUN.add_ingredient(machine_recipe, {name = 'small-lamp', amount = 20 * i, type = 'item'})
-        data:extend{machine_recipe}
-    end
 end
 
 return {
@@ -78,11 +80,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = 0.5, speed = 0.2, productivity = 0.02, type = 'module-effects'},
-                {old = 'moondrop-greenhouse-mk01', new = 'moondrop-greenhouse-mk01-with-lamp', type = 'recipe-replacement'},
-                {old = 'moondrop-greenhouse-mk02', new = 'moondrop-greenhouse-mk02-with-lamp', type = 'recipe-replacement'},
-                {old = 'moondrop-greenhouse-mk03', new = 'moondrop-greenhouse-mk03-with-lamp', type = 'recipe-replacement'},
-                {old = 'moondrop-greenhouse-mk04', new = 'moondrop-greenhouse-mk04-with-lamp', type = 'recipe-replacement'},
+                {old = 'methane-co2', new = 'methane-co2-with-lamp', type = 'recipe-replacement'},
             }
         },
         {
@@ -91,6 +89,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+                {consumption = 1, type = 'module-effects'},
                 {recipe = 'moondrop-co2', type = 'unlock-recipe'}
             }
         }

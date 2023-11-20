@@ -21,6 +21,8 @@ Date: ???
     - fixed nuclear caravans (https://github.com/pyanodon/pybugreports/issues/334)
     - fixed reproductive complex sometimes eating your modules (https://github.com/pyanodon/pybugreports/issues/322)
     - changed the item description for navens (https://github.com/pyanodon/pybugreports/issues/308)
+    - reworked moondrop turd path 2 & added a 100% energy penalty to path 3
+    - buffed moondrop turd path 3 speed increase from 10% to 20%
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.9
 Date: 2023-9-4
