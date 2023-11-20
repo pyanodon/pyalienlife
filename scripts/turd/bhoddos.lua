@@ -5,12 +5,22 @@ local cultures = {
     'bhoddos-culture-mk04',
 }
 
+local is_bhoddos_culture = {}
+for _, name in pairs(cultures) do
+    is_bhoddos_culture[name] = true
+end
+
+local function has_picked_bhoodos_path_1(force_index)
+    local bonuses = global.turd_bonuses[force_index]
+    return bonuses and bonuses['bhoddos-upgrade'] == 'extra-drones'
+end
+
 Turd.events[432000] = function()
     local forces_with_bhoddos_path_1 = {}
     for _, force in pairs(game.forces) do
-        local bonuses = global.turd_bonuses[force.index]
-        if bonuses and bonuses['bhoddos-upgrade'] == 'extra-drones' then
-            table.insert(forces_with_bhoddos_path_1, force.index)
+        local force_index = force.index
+        if has_picked_bhoodos_path_1(force_index) then
+            table.insert(forces_with_bhoddos_path_1, force_index)
         end
     end
 
@@ -63,4 +73,33 @@ Turd.events[432000] = function()
         end
         script.on_nth_tick(future, nil)
     end)
+end
+
+local radius = 76 / 2
+
+local function draw_circle(entity)
+    global.bhoddos_circles[entity.unit_number] = rendering.draw_circle{
+        draw_on_ground = true, color = {r = 100, g = 53.3, b = 0, a = 0.5}, radius = radius,
+        target = entity, filled = true, surface = entity.surface
+    }
+end
+
+Turd.events.on_selected_entity_changed = function(event)
+    local circles = global.bhoddos_circles
+    if not circles then
+        circles = {}
+        global.bhoddos_circles = circles
+    end
+    local player = game.get_player(event.player_index)
+    local selected = player.selected
+    local previous_selected = event.last_entity
+    local previous_selected_unit_number = previous_selected and previous_selected.unit_number
+
+    if previous_selected_unit_number and circles[previous_selected_unit_number] then
+        rendering.destroy(circles[previous_selected_unit_number])
+        circles[previous_selected_unit_number] = nil
+    end
+    if selected and is_bhoddos_culture[selected.name] then
+        if has_picked_bhoodos_path_1(player.force_index) then draw_circle(selected) end
+    end
 end
