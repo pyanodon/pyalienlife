@@ -148,7 +148,7 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'wax', amount = 50},
     },
-}:add_unlock("arqad-mk02"):remove_ingredient("steam"):add_ingredient({type = "fluid", name = "hot-air", amount = 25})
+}:add_unlock("arqad-mk01"):remove_ingredient("steam"):add_ingredient({type = "fluid", name = "hot-air", amount = 25})
 
 RECIPE {
     type = 'recipe',
@@ -169,10 +169,41 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
+    name = 'sugar-wax',
+    category = 'arqad',
+    enabled = false,
+    energy_required = 50,
+    ingredients = {
+        {type = 'item', name = 'sugar', amount = 5},
+    },
+    results = {
+        {type = 'item', name = 'wax-barrel', amount = 1},
+    },
+    main_product = "wax-barrel",
+}:add_unlock("arqad")
+
+RECIPE {
+    type = 'recipe',
+    name = 'honey-wax',
+    category = 'arqad',
+    enabled = false,
+    energy_required = 50,
+    ingredients = {
+        {type = 'item', name = 'arqad-honey-barrel', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'wax-barrel', amount = 1},
+    },
+    main_product = "wax-barrel",
+}:add_unlock("arqad")
+
+--[[
+RECIPE {
+    type = 'recipe',
     name = 'wax-2',
     category = 'arqad',
     enabled = false,
-    energy_required = 50,    --i think this one is a bit slow but atm not sure , this is a reminder [same for wax1]
+    energy_required = 50,
     ingredients = {
         {type = 'item', name = 'ralesia', amount = 3},
         {type = 'item', name = 'bhoddos-spore', amount = 2},
@@ -184,6 +215,7 @@ RECIPE {
     },
     main_product = "empty-honeycomb",
 }:add_unlock("arqad")
+]]--
 
 RECIPE {
     type = 'recipe',

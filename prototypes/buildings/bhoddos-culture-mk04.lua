@@ -52,11 +52,14 @@ ENTITY {
     crafting_categories = {"bhoddos"},
     crafting_speed = FUN.farm_speed_derived(MODULE_SLOTS, "bhoddos-culture-mk01"),
     energy_source = {
-        type = "electric",
-        usage_priority = "secondary-input",
-        emissions_per_minute = 1,
+        type = "burner",
+        fuel_category = "fuelrod",
+        effectivity = 1,
+        fuel_inventory_size = 1,
+        burnt_inventory_size = 1,
+        emissions_per_minute = 0,
     },
-    energy_usage = "1000kW",
+    energy_usage = "4MW",
     animation = {
         layers = {
             {

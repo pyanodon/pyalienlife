@@ -16,7 +16,6 @@ FUN.autorecipes {
                 {name='bhoddos-spore', amount =5},
                 {name='fungal-substrate-02', amount =1},
                 {name='biomass', amount =10},
-                {name='fuelrod-mk01', amount=1},
                 {name='water', amount = 100, fluidbox_index = 1},
             },
         results =
