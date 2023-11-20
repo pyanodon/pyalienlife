@@ -140,6 +140,13 @@ Slaughterhouse.events.on_gui_closed = function(event)
 	global.watch_slaughterhouse = not not next(global.watched_slaughterhouses)
 end
 
+function Slaughterhouse.set_recipe(player, entity, recipe)
+	for item, count in pairs(entity.set_recipe(recipe)) do
+		player.insert{name = item, count = count}
+	end
+	player.opened = entity
+end
+
 gui_events[defines.events.on_gui_click]['py_slaughterhouse_animal_.+'] = function(event)
 	local player = game.get_player(event.player_index)
 	local element = event.element
@@ -169,8 +176,7 @@ gui_events[defines.events.on_gui_click]['py_slaughterhouse_animal_.+'] = functio
 	if recipe_count == 1 then
 		local entity = global.opened_slaughterhouses[main_frame.tags.entity]
 		if not entity or not entity.valid then return end
-		entity.set_recipe(avalible_recipe)
-		player.opened = entity
+		Slaughterhouse.set_recipe(player, entity, avalible_recipe)
 	end
 end
 
@@ -187,8 +193,7 @@ gui_events[defines.events.on_gui_click]['py_slaughterhouse_recipe_.+'] = functio
 	local entity = global.opened_slaughterhouses[main_frame.tags.entity]
 	local recipe = element.tags.recipe
 	if not entity or not entity.valid then return end
-	entity.set_recipe(recipe)
-	player.opened = entity
+	Slaughterhouse.set_recipe(player, entity, recipe)
 end
 
 Slaughterhouse.events.on_init = function()
