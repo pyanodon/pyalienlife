@@ -9,7 +9,6 @@ Date: ???
     - fixed reproductive complex mk1 was not rotatable when other mks were rotatable (https://github.com/pyanodon/pybugreports/issues/330)
     - Prevented caravans & flying caravans from being boosted by ground tiles
     - Allowed vessel, vessel to ground, and floating biopyanoport to be placed on the same location as belts, pipes, or rail
-    - Fixed crash when opening TURD when pyAE is not installed
     - Fixed that dingrit mk2,mk3,mk4 module recipes were not outputting any empty cages
     - Moved all aerial turbine code to pyAE
     - fixed digosaurus being recorded in kill statistics
@@ -21,8 +20,15 @@ Date: ???
     - fixed nuclear caravans (https://github.com/pyanodon/pybugreports/issues/334)
     - fixed reproductive complex sometimes eating your modules (https://github.com/pyanodon/pybugreports/issues/322)
     - changed the item description for navens (https://github.com/pyanodon/pybugreports/issues/308)
-    - reworked moondrop turd path 2 & added a 100% energy penalty to path 3
-    - buffed moondrop turd path 3 speed increase from 10% to 20%
+    - removed fuel rods from bhoddos recipes
+    - the bhoddos machine now consumes fuel rods directly. no longer requires electricity
+    - moved the arqad used comb recycling recipe from arqad stage 2 to arqad stage 1
+    - added new recipes for creating wax from sugar and honey
+  TURD:
+    - fixed crash when opening TURD when pyAE is not installed
+    - buffed moondrop turd path 1 speed increase from 10% to 20%
+    - reworked moondrop turd path 2
+    - added a 100% energy penalty to moondrop path 3
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.9
 Date: 2023-9-4
