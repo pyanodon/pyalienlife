@@ -17,11 +17,11 @@ if data then
 
     data:extend{{
         name = 'methane-co2-with-lamp',
-        results = {{type = 'fluid', amount = 60, name = 'methane', fluidbox_index = 1}},
+        results = {{type = 'fluid', amount = 60, name = 'methane'}},
         energy_required = 15,
         ingredients = {
             {type = 'item', amount = 1, name = 'small-lamp'},
-            {type = 'fluid', amount = 100, name = 'water', fluidbox_index = 3},
+            {type = 'fluid', amount = 100, name = 'water'},
         },
         category = 'moon',
         enabled = false,
