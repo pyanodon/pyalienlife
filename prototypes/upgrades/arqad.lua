@@ -22,7 +22,7 @@ if is_pyse then cags_effects = {
     {old = 'arqad-hive-mk04', new = 'arqad-hive-mk04-with-cags', type = 'recipe-replacement'},
 } end
 
-if data then
+if data and not yafc_turd_integration then
     for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['arqad-egg-1']),
         table.deepcopy(data.raw.recipe['arqad-egg-2']),

@@ -1,4 +1,4 @@
-if data then
+if data and not yafc_turd_integration then
     data:extend{
         {
             type = 'recipe',

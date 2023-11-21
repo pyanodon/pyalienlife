@@ -1,6 +1,6 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
-if data then
+if data and not yafc_turd_integration then
     local recipe = data.raw.recipe['petri-dish-bacteria']
 
     local with_agar = table.deepcopy(recipe)

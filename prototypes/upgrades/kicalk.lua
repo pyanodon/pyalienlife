@@ -1,6 +1,6 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
-if data then
+if data and not yafc_turd_integration then
     local mesh = {'dry-cf', 'passivation-layer', 'rpc-mesh', 'nano-mesh'}
     for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['kicalk-plantation-mk01']),

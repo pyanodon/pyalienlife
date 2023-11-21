@@ -1,6 +1,6 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
-if data then
+if data and not yafc_turd_integration then
     local zungror = table.deepcopy(data.raw.recipe['zungror'])
     zungror.name = 'zungror-with-yaedols-codex'
     FUN.add_ingredient(zungror, {name = 'yaedols-codex', amount = 6, type = 'item'})

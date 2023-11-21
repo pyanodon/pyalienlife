@@ -39,7 +39,7 @@ if pySE then
 end
 local effects = {laser = {}, music = {}, lard = {}}
 
-if data then
+if data and not yafc_turd_integration then
     local things_to_add = {
         laser = {ingredients = {{type = 'item', name = 'laser-turret', amount = 1}}, results = {{type = 'item', name = 'laser-turret', amount = 1, probability = 0.999}}},
         music = {ingredients = {{type = 'item', name = 'programmable-speaker', amount = 1}}, results = {{type = 'item', name = 'programmable-speaker', amount = 1, probability = 0.99}}},

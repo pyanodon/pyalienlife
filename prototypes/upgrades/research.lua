@@ -1,6 +1,6 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
-if data then
+if data and not yafc_turd_integration then
     local py_science_1 = table.deepcopy(data.raw.recipe['py-science-pack-1'])
     local py_science_2 = table.deepcopy(data.raw.recipe['py-science-pack-2'])
     local py_science_3 = table.deepcopy(data.raw.recipe['py-science-pack-3'])

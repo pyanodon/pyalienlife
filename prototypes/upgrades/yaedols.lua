@@ -1,6 +1,6 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
-if data then
+if data and not yafc_turd_integration then
     for _, recipe in pairs({
         table.deepcopy(data.raw.recipe['yaedols-spores']),
         table.deepcopy(data.raw.recipe['yaedols-spores-2']),

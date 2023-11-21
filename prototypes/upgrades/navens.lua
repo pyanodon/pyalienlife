@@ -1,6 +1,6 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
-if data then
+if data and not yafc_turd_integration then
     local recipe = table.deepcopy(data.raw.recipe['navens-sample'])
     recipe.name = 'navens-sample-with-vonix-gen'
     FUN.add_ingredient(recipe, {'vonix-codex', 5})

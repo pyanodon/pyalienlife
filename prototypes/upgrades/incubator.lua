@@ -1,6 +1,6 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
-if data then
+if data and not yafc_turd_integration then
     local manure = table.deepcopy(data.raw.recipe['manure-bacteria'])
     manure.name = 'manure-bacteria-fish'
     FUN.add_ingredient(manure, {name = 'fish-hydrolysate', type = 'fluid', amount = 5})

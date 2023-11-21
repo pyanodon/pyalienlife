@@ -1,6 +1,6 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
-if data then
+if data and not yafc_turd_integration then
     local fiber = table.deepcopy(data.raw.recipe['fiber-01'])
     fiber.name = 'fiber-dry-storage'
     fiber.energy_required = fiber.energy_required * 3

@@ -1,6 +1,6 @@
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
-if data then
+if data and not yafc_turd_integration then
     data.raw.recipe['energy-drinkb'].category = 'chemistry'
 
     for i, recipe in pairs({
