@@ -20,6 +20,7 @@ if data and not yafc_turd_integration then
         results = {
             {type = 'fluid', amount = 60, name = 'methane'},
             {type = 'fluid', amount = 30, name = 'oxygen'},
+            {type = 'item', amount = 1, name = 'small-lamp', probability = 0.5},
         },
         energy_required = 15,
         ingredients = {
