@@ -1,16 +1,3 @@
-for _, force in pairs(game.forces) do
-	if global.turd_bonuses and global.turd_bonuses[force.index] then
-		if force.technologies['bhoddos-upgrade'].researched then
-			force.technologies['bhoddos-upgrade'].researched = false
-			force.technologies['bhoddos-upgrade'].researched = true
-		end
-		if global.turd_bonuses[force.index]['moondrop-upgrade'] == 'moon' then
-			force.technologies['moondrop-upgrade'].researched = false
-			force.technologies['moondrop-upgrade'].researched = true			
-		end
-	end
-end
-
 local function exists_and_valid(v) return v and v.valid end
 
 if not global.caravans then return end
