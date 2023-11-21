@@ -21,7 +21,6 @@ if data then
         data:extend{recipe}
     end
 
-    local biomass = {'nacl-biomass', 's-biomass', 'ni-biomass', 'ti-biomass'}
     for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['bhoddos-1']),
         table.deepcopy(data.raw.recipe['bhoddos-2']),
@@ -29,8 +28,9 @@ if data then
         table.deepcopy(data.raw.recipe['bhoddos-4']),
     }) do
         recipe.name = recipe.name .. '-exoenzymes'
-        FUN.add_ingredient(recipe, {name = biomass[i], amount = 3, type = 'item'})
-        FUN.multiply_result_amount(recipe, 'bhoddos', 1.3)
+        FUN.add_ingredient(recipe, {type = 'item', name = 'soil', amount = i})
+        FUN.add_result(recipe, {type = 'item', name = 'plutonium-oxide', amount = i})
+        recipe.main_product = 'plutonium-oxide'
         data:extend{recipe}
     end
 
@@ -41,14 +41,29 @@ if data then
         spore.name = spore.name .. '-upgraded'
         spore.main_product = 'bhoddos-spore'
         spore.ingredients = {
-            {'sand', 1}
+            {'rich-dust', 1}
         }
-        spore.results = {
-            {name = 'bhoddos-spore', amount = i*6, type = 'item', probability = 0.9},
-            {name = 'fungal-substrate', amount = 1, type = 'item'}
-        }
+        FUN.multiply_result_amount(spore, 'bhoddos-spore', 10)
         data:extend{spore}
     end
+
+    local sporopollenin = table.deepcopy(data.raw.recipe['sporopollenin'])
+    sporopollenin.name = 'sporopollenin-gills'
+    FUN.remove_ingredient(sporopollenin, 'navens-spore')
+    FUN.remove_ingredient(sporopollenin, 'rennea')
+    data:extend{sporopollenin}
+
+    local biomass_sporopollenin = table.deepcopy(data.raw.recipe['biomass-sporopollenin'])
+    biomass_sporopollenin.name = biomass_sporopollenin.name .. '-nerfed'
+    FUN.multiply_ingredient_amount(biomass_sporopollenin, 'sporopollenin', 3)
+    biomass_sporopollenin.results = {
+        {type = 'item', name = 'fungal-substrate', amount = 2}
+    }
+    biomass_sporopollenin.icons = nil
+    biomass_sporopollenin.icon = nil
+    biomass_sporopollenin.icon_size = nil
+    biomass_sporopollenin.icon_mipmaps = nil
+    data:extend{biomass_sporopollenin}
 end
 
 return {
@@ -95,6 +110,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+                {type = 'module-effects', consumption = 0.3},
                 {old = 'bhoddos-1', new = 'bhoddos-1-exoenzymes', type = 'recipe-replacement'},
                 {old = 'bhoddos-2', new = 'bhoddos-2-exoenzymes', type = 'recipe-replacement'},
                 {old = 'bhoddos-3', new = 'bhoddos-3-exoenzymes', type = 'recipe-replacement'},
@@ -109,6 +125,8 @@ return {
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
                 {old = 'bhoddos-spore', new = 'bhoddos-spore-upgraded', type = 'recipe-replacement'},
                 {old = 'bhoddos-spore-3', new = 'bhoddos-spore-3-upgraded', type = 'recipe-replacement'},
+                {type = 'recipe-replacement', old = 'sporopollenin', new = 'sporopollenin-gills'},
+                {type = 'recipe-replacement', old = 'biomass-sporopollenin', new = 'biomass-sporopollenin-nerfed'}
             }
         }
     },
