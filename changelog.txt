@@ -22,6 +22,7 @@ Date: ???
     - changed the item description for navens (https://github.com/pyanodon/pybugreports/issues/308)
     - moved the arqad used comb recycling recipe from arqad stage 2 to arqad stage 1
     - added new recipes for creating wax from sugar and honey
+    - updated the locale for caravan gui to better explain what the actions do
   Bhoddos:
     - bhoddos chain was completely reworked. previously this fungus suffered from 'lack of identity'. its changed to be a biological version of a fission reactor
     - added nuclear reactor to bhoddos culture building recipe
