@@ -468,6 +468,7 @@ end
 --(( ITEMS ))--
 require('prototypes/items/items')
 require('prototypes/items/items2')
+require('prototypes/items/energy-drink')
 require('prototypes/biofluid/guano')
 
 if mods['pyhightech'] then

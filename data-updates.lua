@@ -538,3 +538,16 @@ if register_cache_file ~= nil then
     register_cache_file({"pycoalprocessing","pyfusionenergy","pyindustry","pyrawores","pypetroleumhandling","pyalienlife"}, "__pyalienlife__/cached-configs/pyalienlife+pycoalprocessing+pyfusionenergy+pyindustry+pypetroleumhandling+pyrawores")
     register_cache_file({"pycoalprocessing","pyfusionenergy","pyindustry","pyrawores","pyhightech","pypetroleumhandling","pyalienlife"}, "__pyalienlife__/cached-configs/pyalienlife+pycoalprocessing+pyfusionenergy+pyhightech+pyindustry+pypetroleumhandling+pyrawores")
 end
+
+-- make players flammable
+for _, character in pairs(data.raw.character) do
+    if character.flags then
+        local new_flags = {}
+        for _, flag in pairs(character.flags) do
+            if flag ~= 'not-flammable' then
+                table.insert(new_flags, flag)
+            end
+        end
+        character.flags = new_flags  
+    end
+end

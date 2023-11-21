@@ -23,6 +23,7 @@ Date: ???
     - moved the arqad used comb recycling recipe from arqad stage 2 to arqad stage 1
     - added new recipes for creating wax from sugar and honey
     - updated the locale for caravan gui to better explain what the actions do
+    - added a very nice, very safe, very healthy effect when drinking an energy drink
   Bhoddos:
     - bhoddos chain was completely reworked. previously this fungus suffered from 'lack of identity'. its changed to be a biological version of a fission reactor
     - added nuclear reactor to bhoddos culture building recipe

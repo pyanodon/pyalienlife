@@ -4667,47 +4667,6 @@ ITEM {
 
 ITEM {
     type = "capsule",
-    name = "energy-drink",
-    icon = "__pyalienlifegraphics__/graphics/icons/energy-drink.png",
-	icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-items",
-    order = "f",
-    stack_size = 100,
-	capsule_action =
-    {
-      type = "use-on-self",
-      attack_parameters =
-      {
-        type = "projectile",
-        ammo_category = "capsule",
-        cooldown = 30,
-        range = 0,
-
-		ammo_type =
-        {
-          category = "capsule",
-          target_type = "position",
-          action =
-          {
-            type = "direct",
-            action_delivery =
-            {
-              type = "instant",
-              target_effects =
-              {
-                type = "damage",
-                damage = {type = "physical", amount = 0}
-              }
-            }
-          }
-        }
-      }
-    },
-}
-
-ITEM {
-    type = "capsule",
     name = "dried-meat",
     icon = "__pyalienlifegraphics__/graphics/icons/dried-meat.png",
     icon_size = 32,
