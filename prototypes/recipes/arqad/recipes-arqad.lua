@@ -148,7 +148,7 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'wax', amount = 50},
     },
-}:add_unlock("arqad-mk01"):remove_ingredient("steam"):add_ingredient({type = "fluid", name = "hot-air", amount = 25})
+}:add_unlock("arqad"):remove_ingredient("steam"):add_ingredient({type = "fluid", name = "hot-air", amount = 25})
 
 RECIPE {
     type = 'recipe',

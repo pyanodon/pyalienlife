@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.11
+Date: ?
+  Changes:
+    - fixed crash with 2.1.10 migration
+    - fixed that the arqad used comb recycling recipe was not unlockable by research
+---------------------------------------------------------------------------------------------------
 Version: 2.1.10
 Date: 2023-11-21
   Changes:

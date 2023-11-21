@@ -19,7 +19,7 @@ local new = {}
 local migrated = 0
 
 for _, caravan_data in pairs(global.caravans) do
-	if caravan_data.is_aerial and script.active_mods.pyalternativeenergy then
+	if caravan_data.is_aerial and script.active_mods.pyalternativeenergy and exists_and_valid(caravan_data.entity) then
 		local entity = caravan_data.entity
 		local _, player = next(game.connected_players)
 		player = player or game.players[1]
@@ -31,7 +31,7 @@ for _, caravan_data in pairs(global.caravans) do
 			create_build_effect_smoke = false,
 			raise_built = true
 		}
-		if entity.valid then entity.destroy() end
+		entity.destroy()
 		migrated = migrated + 1
 	end
 
