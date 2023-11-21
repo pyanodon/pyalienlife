@@ -5,6 +5,7 @@ Date: ?
     - fixed crash with 2.1.10 migration
     - fixed that the arqad used comb recycling recipe was not unlockable by research
     - fixed that moondrop and bhoddos turds weren't reset properly on migration
+    - added empty barrel to sugar->wax recipe
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.10
 Date: 2023-11-21

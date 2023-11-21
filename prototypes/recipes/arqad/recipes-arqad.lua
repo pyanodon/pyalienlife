@@ -175,6 +175,7 @@ RECIPE {
     energy_required = 50,
     ingredients = {
         {type = 'item', name = 'sugar', amount = 5},
+        {type = 'item', name = 'empty-barrel', amount = 1},
     },
     results = {
         {type = 'item', name = 'wax-barrel', amount = 1},
