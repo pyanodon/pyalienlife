@@ -1,9 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.12
-Date: ?
+Date: 2023-11-22
   Changes:
     - added empty barrel to sugar->wax recipe
     - fixed 2.1.11 migration crash caused by not installing pyAE
+    - moved wax to empty comb recipe from arqad 2 to arqad 1 tech
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.11
 Date: 2023-11-11
@@ -15,7 +16,7 @@ Date: 2023-11-11
 Version: 2.1.10
 Date: 2023-11-21
   Changes:
-    - removed ralestia mk1 recipe. all ralesia recipes now require hydrogen 
+    - removed ralestia mk1 recipe. all ralesia recipes now require hydrogen
     - added decentralised PyPP cache file
     - Removed tar, aromatics, glycerol, oleochemicals, depolymerized organics, ethonal, fish oil, liquid manure, black liquor, and tall oil from compostables list.
     - fixed multiple mispellings

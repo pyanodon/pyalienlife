@@ -119,7 +119,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'empty-comb', amount = 8},
     },
-}:add_unlock("arqad-mk02")
+}:add_unlock("arqad")
 
 RECIPE {
     type = 'recipe',
