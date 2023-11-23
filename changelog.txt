@@ -7,7 +7,7 @@ Date: 2023-11-22
     - moved wax to empty comb recipe from arqad 2 to arqad 1 tech
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.11
-Date: 2023-11-11
+Date: 2023-11-21
   Changes:
     - fixed crash with 2.1.10 migration
     - fixed that the arqad used comb recycling recipe was not unlockable by research
@@ -18,8 +18,8 @@ Date: 2023-11-21
   Changes:
     - removed ralestia mk1 recipe. all ralesia recipes now require hydrogen
     - added decentralised PyPP cache file
-    - Removed tar, aromatics, glycerol, oleochemicals, depolymerized organics, ethonal, fish oil, liquid manure, black liquor, and tall oil from compostables list.
-    - fixed multiple mispellings
+    - Removed tar, aromatics, glycerol, oleochemicals, depolymerized organics, ethanol, fish oil, liquid manure, black liquor, and tall oil from compostables list.
+    - fixed multiple misspellings
     - fixed reproductive complex mk1 was not rotatable when other mks were rotatable (https://github.com/pyanodon/pybugreports/issues/330)
     - Prevented caravans & flying caravans from being boosted by ground tiles
     - Allowed vessel, vessel to ground, and floating biopyanoport to be placed on the same location as belts, pipes, or rail
@@ -48,7 +48,7 @@ Date: 2023-11-21
     - fixed the speed bonus of bhoddos modules to match the pattern of 1,2,3,4 (previously 1, 1.25, 1.5, 1.75)
     - reworked bhoddos turd path 1 to cause nuclear explosions every 2 hrs. high risk high rewards
     - reworked bhoddos turd path 2 to increase fuel rod energy usage with the benefit of plutonium oxide recycling
-    - reworked bhoddos turd path 3 to allow ZI of sporopollenin and fungal substrate
+    - reworked bhoddos turd path 3 to allow ZI(Zero Input) of sporopollenin and fungal substrate
   TURD:
     - fixed crash when opening TURD when pyAE is not installed
     - removed /view_turd_selections
@@ -140,7 +140,7 @@ Date: 2023-7-25
     - fixed that oculas were rendering on the map twice.
     - fixed that logistic stations would always flash a red "no power" icon. energy usage increased 1mW -> 10mW
     - fixed that the symbiosis technology had no prereqs
-    - fix mispelling of aggressive in zungror techs
+    - fix misspelling of aggressive in zungror techs
     - fixed that guts, meat, worker food ect did not show in production stats for caravans and digosaur
     - fixed that botanical nursery mk02,mk03,mk04 was unlocked by both mining machines & botany techs. now only botany
     - fixed that ulric corral was unlocked twice from ulric tech
