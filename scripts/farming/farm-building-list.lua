@@ -41,8 +41,6 @@ local farm_buildings = {
 	['fawogae-plantation'] = 'fungi',
 	['navens-culture'] = 'fungi',
 	['yaedols-culture'] = 'fungi',
-	['zungror-lair'] = 'animal',
-	['numal-reef'] = 'animal'
 }
 
 return farm_buildings
