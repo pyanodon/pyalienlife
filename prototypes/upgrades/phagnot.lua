@@ -90,7 +90,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/leader.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'gas-bladder-to-deuterium', type = 'unlock-recipe'},
                 {recipe = 'gas-bladder-to-dry-gas-stream', type = 'unlock-recipe'},
             },
@@ -100,7 +100,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/socialization.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
             {old = 'phagnot-cub-1', new = 'phagnot-cub-1-fast', type = 'recipe-replacement'},
             {old = 'phagnot-cub-2', new = 'phagnot-cub-2-fast', type = 'recipe-replacement'},
             {old = 'phagnot-cub-3', new = 'phagnot-cub-3-fast', type = 'recipe-replacement'},
@@ -112,7 +112,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/hr.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'phagnot-1', new = 'phagnot-1-kicalk', type = 'recipe-replacement'},
                 {old = 'phagnot-2', new = 'phagnot-2-kicalk', type = 'recipe-replacement'},
                 {old = 'phagnot-3', new = 'phagnot-3-kicalk', type = 'recipe-replacement'},

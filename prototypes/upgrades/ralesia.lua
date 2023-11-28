@@ -96,7 +96,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/improved-burst.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'paper-towel', type = 'unlock-recipe'},
                 {old = 'ralesia-seeds', new = 'ralesia-seeds-paper-towel', type = 'recipe-replacement'}
             },
@@ -106,7 +106,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/sun-concentration.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {speed = 0.12, type = 'module-effects'},
                 {old = 'ralesia-plantation-mk01', new = 'ralesia-plantation-mk01-with-ceramic', type = 'recipe-replacement'},
                 {old = 'ralesia-plantation-mk02', new = 'ralesia-plantation-mk02-with-ceramic', type = 'recipe-replacement'},
@@ -119,7 +119,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/h2-recycle.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {consumption = -0.8, type = 'module-effects'},
                 {old = 'ralesias-1', new = 'ralesias-1-hydrogen-burn', type = 'recipe-replacement'},
                 {old = 'ralesias-2', new = 'ralesias-2-hydrogen-burn', type = 'recipe-replacement'},

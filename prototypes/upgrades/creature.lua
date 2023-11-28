@@ -28,7 +28,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/respiratory.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {consumption = 0.0, speed = 0.15, productivity = -0.12, type = 'module-effects'}
             },
         },
@@ -37,7 +37,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/neural-fusion.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {consumption = -0.1, speed = 0, productivity = -0.1, type = 'module-effects'}
             }
         },
@@ -46,7 +46,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/cc.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {consumption = 0.25, speed = 0, productivity = 0.2, type = 'module-effects'}
             }
         }

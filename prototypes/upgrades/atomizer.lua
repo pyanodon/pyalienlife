@@ -83,7 +83,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/sc-core.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'venom-gland-to-dynemicin', type = 'unlock-recipe'}
             },
         },
@@ -92,7 +92,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/sub-atomic.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'cognition-osteochain-to-kondo-substrate', type = 'unlock-recipe'}
             }
         },
@@ -101,7 +101,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/d-core.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'dimensional-gastricorg-to-inverse-opal', type = 'unlock-recipe'}
             }
         }

@@ -73,7 +73,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/geooxidation.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {productivity = 0.1, speed = 0.05, type = 'module-effects'},
                 {old = 'zungror', new = 'zungror-with-yaedols-codex', type = 'recipe-replacement'},
                 {old = 'zungror-cocoon-1', new = 'zungror-cocoon-1-rich-clay', type = 'recipe-replacement'},
@@ -86,7 +86,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/genooscillation.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'vsk', new = 'vsk-duplicated', type = 'recipe-replacement'},
             }
         },
@@ -95,7 +95,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/oviduct-bombardment.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'pre-fiber-1', new = 'pre-fiber-1-buffed', type = 'recipe-replacement'},
                 {old = 'zungror-raising-1', new = 'zungror-raising-1-with-funny-rock', type = 'recipe-replacement'},
                 {old = 'zungror-raising-2', new = 'zungror-raising-2-with-funny-rock', type = 'recipe-replacement'},

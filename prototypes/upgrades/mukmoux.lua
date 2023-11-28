@@ -104,7 +104,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/zero-cross.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'artifical-insemination', type = 'unlock-recipe'}
             },
         },
@@ -113,7 +113,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/bip.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'mukmoux-1', new = 'mukmoux-1-bip', type = 'recipe-replacement'},
                 {old = 'mukmoux-2', new = 'mukmoux-2-bip', type = 'recipe-replacement'},
                 {old = 'mukmoux-3', new = 'mukmoux-3-bip', type = 'recipe-replacement'},
@@ -129,7 +129,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/think-collar.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {productivity = 0.25, type = 'module-effects'},
                 {old = 'mukmoux-calf-1', new = 'mukmoux-calf-1-microchip', type = 'recipe-replacement'},
                 {old = 'mukmoux-calf-2', new = 'mukmoux-calf-2-microchip', type = 'recipe-replacement'},

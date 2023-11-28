@@ -90,7 +90,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/igm.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'cottongut-science-red-seeds', new = 'cottongut-science-red-seeds-80-20', type = 'recipe-replacement'},
                 {old = 'cottongut-science-green-seeds', new = 'cottongut-science-green-seeds-80-20', type = 'recipe-replacement'},
                 {old = 'cottongut-science-blue-seeds', new = 'cottongut-science-blue-seeds-80-20', type = 'recipe-replacement'},
@@ -104,7 +104,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/ts.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'cottongut-food-03', type = 'unlock-recipe'},
                 {old = 'caged-cottongut-1', new = 'caged-cottongut-1-cannibal', type = 'recipe-replacement'},
                 {old = 'caged-cottongut-2', new = 'caged-cottongut-2-cannibal', type = 'recipe-replacement'},
@@ -117,7 +117,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/ud.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {consumption = 0.25, speed = 0.3, productivity = 0.1, type = 'module-effects'},
                 {old = 'prandium-lab-mk01', new = 'prandium-lab-mk01-ultrasound', type = 'recipe-replacement'},
                 {old = 'prandium-lab-mk02', new = 'prandium-lab-mk02-ultrasound', type = 'recipe-replacement'},

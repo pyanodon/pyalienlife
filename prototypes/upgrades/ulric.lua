@@ -109,7 +109,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/dummy-ulric.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'noooo dont turn that horse into glue', type = 'unlock-recipe'},
             },
         },
@@ -118,7 +118,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/heating-pad.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {speed = 0.15, productivity = 0.15, type = 'module-effects'},
                 {recipe = 'saddle', type = 'unlock-recipe'},
                 {recipe = 'saddle-b', type = 'unlock-recipe'},
@@ -133,7 +133,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/scraping-bots.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'ulric-1', new = 'ulric-1-manure', type = 'recipe-replacement'},
                 {old = 'ulric-2', new = 'ulric-2-manure', type = 'recipe-replacement'},
                 {old = 'ulric-3', new = 'ulric-3-manure', type = 'recipe-replacement'},

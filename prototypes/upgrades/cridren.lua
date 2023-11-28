@@ -103,7 +103,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/sixth-layer.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {type = 'unlock-recipe', recipe = 'cridren-sixth-layer-ethylene-chlorohydrin'},
                 {type = 'unlock-recipe', recipe = 'cridren-sixth-layer-organic-acid-anhydride'}
             },
@@ -113,7 +113,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/neural-cranio.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'cridren-1', new = 'cridren-1-neural-cranio', type = 'recipe-replacement'},
                 {old = 'cridren-2', new = 'cridren-2-neural-cranio', type = 'recipe-replacement'},
                 {old = 'cridren-3', new = 'cridren-3-neural-cranio', type = 'recipe-replacement'},
@@ -125,7 +125,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/mufflers.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {speed = 0.1, productivity = 0.1, consumption = -0.25, type = 'module-effects'},
                 {old = 'cridren-enclosure-mk01', new = 'cridren-enclosure-mk01-with-mufflers', type = 'recipe-replacement'},
                 {old = 'cridren-enclosure-mk02', new = 'cridren-enclosure-mk02-with-mufflers', type = 'recipe-replacement'},

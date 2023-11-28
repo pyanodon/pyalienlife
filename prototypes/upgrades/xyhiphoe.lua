@@ -95,7 +95,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/temp-c.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'xyhiphoe-1', new = 'xyhiphoe-1-hot-cold', type = 'recipe-replacement'},
                 {old = 'xyhiphoe-2', new = 'xyhiphoe-2-hot-cold', type = 'recipe-replacement'},
                 {old = 'xyhiphoe-3', new = 'xyhiphoe-3-hot-cold', type = 'recipe-replacement'},
@@ -107,7 +107,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/rst.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'xyhiphoe-single', type = 'unlock-recipe'}
             }
         },
@@ -116,7 +116,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/reuse-ev.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'xyhiphoe-cub-1', new = 'xyhiphoe-cub-1-acetone', type = 'recipe-replacement'},
                 {old = 'xyhiphoe-cub-2', new = 'xyhiphoe-cub-2-acetone', type = 'recipe-replacement'},
                 {old = 'xyhiphoe-cub-3', new = 'xyhiphoe-cub-3-acetone', type = 'recipe-replacement'},

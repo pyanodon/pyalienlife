@@ -116,7 +116,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/spores.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'chlorinated-water', type = 'unlock-recipe'},
                 {old = 'Moss 1', new = 'Moss 1-chlorinated', type = 'recipe-replacement'},
                 {old = 'Moss 2', new = 'Moss 2-chlorinated', type = 'recipe-replacement'},
@@ -130,7 +130,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/hd-moss.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {consumption = 1.5, type = 'module-effects'},
                 {old = 'Moss 1', new = 'Moss 1-without-sludge', type = 'recipe-replacement'},
                 {old = 'Moss 2', new = 'Moss 2-without-sludge', type = 'recipe-replacement'},
@@ -144,7 +144,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/inbuilt-moss.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {pollution = -2.5, type = 'module-effects'},
                 {recipe = 'unrefine-refsyngas', type = 'unlock-recipe'},
                 {recipe = 'unrefine-refined-natural-gas', type = 'unlock-recipe'},

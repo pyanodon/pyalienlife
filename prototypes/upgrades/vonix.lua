@@ -95,7 +95,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/evoa.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {type = 'unlock-recipe', recipe = 'vonix-direct-raising'}
             },
         },
@@ -104,7 +104,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/uge.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'vonix-raising-1', new = 'vonix-raising-1-cancer', type = 'recipe-replacement'},
                 {old = 'vonix-raising-2', new = 'vonix-raising-2-cancer', type = 'recipe-replacement'},
                 {old = 'vonix-raising-3', new = 'vonix-raising-3-cancer', type = 'recipe-replacement'},
@@ -115,7 +115,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/dermal.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {productivity = 0.05, type = 'module-effects'},
                 {old = 'vonix-den-mk01', new = 'vonix-den-mk01-free', type = 'recipe-replacement'},
                 {old = 'vonix-den-mk02', new = 'vonix-den-mk02-free', type = 'recipe-replacement'},

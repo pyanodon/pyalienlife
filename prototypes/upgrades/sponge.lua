@@ -108,7 +108,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/flagellum.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'sponge-pure-sand', type = 'unlock-recipe'},
                 {recipe = 'sponge-stone-brick', type = 'unlock-recipe'},
                 {recipe = 'sponge-rich-clay', type = 'unlock-recipe'}
@@ -119,7 +119,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/fragmentation.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'sea-sponge-sprouts', new = 'sea-sponge-sprouts-flagellum', type = 'recipe-replacement'},
                 {old = 'sea-sponge-sprouts-2', new = 'sea-sponge-sprouts-2-flagellum', type = 'recipe-replacement'},
                 {old = 'sea-sponge-sprouts-3', new = 'sea-sponge-sprouts-3-flagellum', type = 'recipe-replacement'},
@@ -131,7 +131,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/bacterial.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'sea-sponge-1', new = 'sea-sponge-1-no-zonga', type = 'recipe-replacement'},
                 {old = 'sea-sponge-2', new = 'sea-sponge-2-no-zonga', type = 'recipe-replacement'}
             }

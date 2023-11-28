@@ -81,7 +81,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/sawdust.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'auog-food-01', new = 'auog-food-01-sawdust', type = 'recipe-replacement'},
                 {old = 'auog-food-02', new = 'auog-food-02-sawdust', type = 'recipe-replacement'},
             },
@@ -91,7 +91,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/glowing-mushroom.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'auog-recharge-glowing-mushroom-mk01', type = 'unlock-recipe'},
                 {recipe = 'auog-recharge-glowing-mushroom-mk02', type = 'unlock-recipe'},
                 {recipe = 'auog-recharge-glowing-mushroom-mk03', type = 'unlock-recipe'},
@@ -103,7 +103,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/underground-chambers.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {consumption = 3, productivity = 0.10, type = 'module-effects'},
                 {old = 'auog-paddock-mk01', new = 'auog-paddock-mk01-with-dirt', type = 'recipe-replacement'},
                 {old = 'auog-paddock-mk02', new = 'auog-paddock-mk02-with-dirt', type = 'recipe-replacement'},

@@ -30,7 +30,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/simik-coal.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'simik-coal', type = 'unlock-recipe'}
             },
         },
@@ -39,7 +39,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/simik-tin.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'simik-tin', type = 'unlock-recipe'}
             }
         },
@@ -48,7 +48,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/simik-aluminium.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'simik-aluminium', type = 'unlock-recipe'}
             }
         }

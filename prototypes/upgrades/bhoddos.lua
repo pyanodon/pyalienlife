@@ -97,7 +97,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/extra-drones.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'bhoddos-1', new = 'bhoddos-1-meltdown', type = 'recipe-replacement'},
                 {old = 'bhoddos-2', new = 'bhoddos-2-meltdown', type = 'recipe-replacement'},
                 {old = 'bhoddos-3', new = 'bhoddos-3-meltdown', type = 'recipe-replacement'},
@@ -109,7 +109,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/exoenzymes.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {type = 'module-effects', consumption = 0.3},
                 {old = 'bhoddos-1', new = 'bhoddos-1-exoenzymes', type = 'recipe-replacement'},
                 {old = 'bhoddos-2', new = 'bhoddos-2-exoenzymes', type = 'recipe-replacement'},
@@ -122,7 +122,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/gills.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'bhoddos-spore', new = 'bhoddos-spore-upgraded', type = 'recipe-replacement'},
                 {old = 'bhoddos-spore-3', new = 'bhoddos-spore-3-upgraded', type = 'recipe-replacement'},
                 {type = 'recipe-replacement', old = 'sporopollenin', new = 'sporopollenin-gills'},

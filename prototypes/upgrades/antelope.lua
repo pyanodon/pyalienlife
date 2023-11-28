@@ -176,7 +176,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/pentadimensional.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {consumption = 55.55, type = 'module-effects'},
                 {old = 'caged-antelope-1', new = 'caged-antelope-1-5th-dimension', type = 'recipe-replacement'},
                 {old = 'caged-antelope-2', new = 'caged-antelope-2-5th-dimension', type = 'recipe-replacement'},
@@ -193,7 +193,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/existential-hazard.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {speed = -0.1, type = 'module-effects'},
                 {old = 'full-render-antelope', new = 'full-render-antelope-existential', type = 'recipe-replacement'},
             }
@@ -203,7 +203,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/higgs-field.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'quantum-dots-folding-1', type = 'unlock-recipe'},
                 {recipe = 'quantum-dots-folding-2', type = 'unlock-recipe'},
                 {recipe = 'quantum-dots-folding-3', type = 'unlock-recipe'},

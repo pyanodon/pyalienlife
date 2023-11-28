@@ -113,7 +113,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/inoculator.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'ash-sap', type = 'unlock-recipe'},
                 {old = 'fts-reactor', new = 'fts-reactor-with-centrifuge', type = 'recipe-replacement'},
                 {old = 'fts-reactor-mk02', new = 'fts-reactor-mk02-with-centrifuge', type = 'recipe-replacement'},
@@ -126,7 +126,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/patch.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'nano-cellulose-sap', type = 'unlock-recipe'},
             }
         },
@@ -135,7 +135,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/bark.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'sap-tree-mulch-mk01', type = 'unlock-recipe'},
                 {recipe = 'sap-tree-mulch-mk02', type = 'unlock-recipe'},
                 {recipe = 'sap-tree-mulch-mk03', type = 'unlock-recipe'},

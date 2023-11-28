@@ -80,7 +80,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/hi-sprinkler.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'grod-1', new = 'grod-1-pressured', type = 'recipe-replacement'},
                 {old = 'grod-2', new = 'grod-2-pressured', type = 'recipe-replacement'},
                 {old = 'grod-3', new = 'grod-3-pressured', type = 'recipe-replacement'},
@@ -92,7 +92,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/ground-irrigation.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'grod-al', new = 'grod-al-tailings', type = 'recipe-replacement'},
                 {old = 'grod-pb', new = 'grod-pb-tailings', type = 'recipe-replacement'},
                 {old = 'grod-sn', new = 'grod-sn-tailings', type = 'recipe-replacement'},
@@ -109,7 +109,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/carbide-c.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {consumption = -0.5, type = 'module-effects'},
                 {old = 'grod-seeds', new = 'grod-seeds-heavy-water', type = 'recipe-replacement'},
                 {old = 'grod-1', new = 'grod-1-dry', type = 'recipe-replacement'},

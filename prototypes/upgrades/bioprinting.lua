@@ -92,7 +92,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/high-viability.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'bio-scafold', new = 'bio-scafold-with-lamp', type = 'recipe-replacement'},
                 {old = 'bio-scafold-2', new = 'bio-scafold-2-with-lamp', type = 'recipe-replacement'},
                 {old = 'bio-scafold-3', new = 'bio-scafold-3-with-lamp', type = 'recipe-replacement'},
@@ -104,7 +104,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/biomimetics.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {consumption = 2, speed = -1, productivity = 0.1, type = 'module-effects'}
             }
         },
@@ -113,7 +113,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/covalent.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {type = 'unlock-recipe', recipe = 'stem-cell-recycle-1'},
                 {type = 'unlock-recipe', recipe = 'stem-cell-recycle-2'},
                 {type = 'unlock-recipe', recipe = 'stem-cell-recycle-3'}

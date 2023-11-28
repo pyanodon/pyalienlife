@@ -77,7 +77,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/boronb.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {speed = 0.2, productivity = 0.05, type = 'module-effects'},
                 {old = 'Scrondrix cub 1', new = 'Scrondrix cub 1-boron', type = 'recipe-replacement'},
                 {old = 'Scrondrix cub 2', new = 'Scrondrix cub 2-boron', type = 'recipe-replacement'},
@@ -90,7 +90,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/hspa.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {consumption = -0.7, type = 'module-effects'},
                 {old = 'Scrondrix cub 1', new = 'Scrondrix cub 1-vegan', type = 'recipe-replacement'},
                 {old = 'Scrondrix cub 2', new = 'Scrondrix cub 2-vegan', type = 'recipe-replacement'},
@@ -107,7 +107,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/neuron.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'ex-bra-scro', new = 'scrondrix-brain-slaughterhouse-ex', type = 'recipe-replacement'},
                 {old = 'Caged scrondrix 9', new = 'scrondrix-experimental-treatment', type = 'recipe-replacement'},
             }

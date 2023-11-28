@@ -92,7 +92,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/molecular-polyentomology.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'naphtha-arqad', type = 'unlock-recipe'}
             },
         },
@@ -101,7 +101,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/compusun.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'carbon-black-phytoplankton', type = 'unlock-recipe'}
             }
         },
@@ -110,7 +110,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/resonant.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'nanofibrils-xyhiphoe', type = 'unlock-recipe'}
             }
         }

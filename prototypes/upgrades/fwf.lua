@@ -64,7 +64,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/dry-storage.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'fiber-01', new = 'fiber-dry-storage', type = 'recipe-replacement'},
                 {old = 'fiber', new = 'fiber-dry-storage-2', type = 'recipe-replacement'}
             },
@@ -74,7 +74,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/selective-heads.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'log-wood', new = 'log-wood-fast', type = 'recipe-replacement'}
             }
         },
@@ -83,7 +83,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/self-generation.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {consumption = -0.30, speed = 0.08, type = 'module-effects'},
                 {old = 'fwf-mk01', new = 'fwf-mk01-with-furnace', type = 'recipe-replacement'},
                 {old = 'log3', new = 'log3-cheap', type = 'recipe-replacement'},

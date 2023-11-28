@@ -80,7 +80,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/reuse-water.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'vrauks-1', new = 'vrauks-1-no-water', type = 'recipe-replacement'},
                 {old = 'vrauks-2', new = 'vrauks-2-no-water', type = 'recipe-replacement'},
                 {old = 'vrauks-3', new = 'vrauks-3-no-water', type = 'recipe-replacement'},
@@ -98,7 +98,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/natural-cycle.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {consumption = -0.5, speed = -0.25, productivity = 0.15, type = 'module-effects'},
                 {old = 'vrauks-paddock-mk01', new = 'vrauks-paddock-mk01-with-lamp', type = 'recipe-replacement'},
                 {old = 'vrauks-paddock-mk02', new = 'vrauks-paddock-mk02-with-lamp', type = 'recipe-replacement'},
@@ -111,7 +111,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/cyanic-recycling.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'ammonia-from-cyanic', type = 'unlock-recipe'}
             }
         }

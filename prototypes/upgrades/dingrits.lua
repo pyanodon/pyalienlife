@@ -98,7 +98,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/alpha.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'dingrits-alpha', type = 'unlock-recipe'}
             },
         },
@@ -107,7 +107,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/c-mutation.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'snarer-heart', new = 'snarer-heart-mutation', type = 'recipe-replacement'},
                 {old = 'space-suit', new = 'space-suit-mutation', type = 'recipe-replacement'},
                 {old = 'space-dingrit', new = 'space-dingrit-mutation', type = 'recipe-replacement'},
@@ -118,7 +118,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/training.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'dingrits-1', new = 'dingrits-1-training', type = 'recipe-replacement'},
                 {old = 'dingrits-2', new = 'dingrits-2-training', type = 'recipe-replacement'},
                 {old = 'dingrits-3', new = 'dingrits-3-training', type = 'recipe-replacement'},

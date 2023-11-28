@@ -34,7 +34,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/simik-titanium.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'simik-titanium', type = 'unlock-recipe'}
             },
         },
@@ -43,7 +43,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/simik-niobium.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'simik-niobium', type = 'unlock-recipe'}
             }
         },
@@ -52,7 +52,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/simik-nexelit.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'simik-nexelit', type = 'unlock-recipe'}
             }
         }

@@ -88,7 +88,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/suicide.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'zipir-a-1', new = 'zipir-a-1-suicide', type = 'recipe-replacement'},
                 {old = 'zipir-a-2', new = 'zipir-a-2-suicide', type = 'recipe-replacement'},
                 {old = 'zipir-a-3', new = 'zipir-a-3-suicide', type = 'recipe-replacement'},
@@ -102,7 +102,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/sr.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'zipir-eggs-1', new = 'zipir-eggs-1-trits-gen', type = 'recipe-replacement'},
                 {old = 'zipir-eggs-2', new = 'zipir-eggs-2-trits-gen', type = 'recipe-replacement'},
                 {old = 'zipir-eggs-3', new = 'zipir-eggs-3-trits-gen', type = 'recipe-replacement'},
@@ -115,7 +115,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/hatchery.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {consumption = -0.40, speed = 0.15, type = 'module-effects'},
                 {old = 'zipir1-pyvoid', new = 'zipir1-pyvoid-hatchery', type = 'recipe-replacement'},
                 {old = 'zipir-reef-mk01', new = 'zipir-reef-mk01-with-rc', type = 'recipe-replacement'},

@@ -60,7 +60,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/hsn.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'adam42-gen', new = 'adam42-gen-laser', type = 'recipe-replacement'}
             },
         },
@@ -69,7 +69,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/enn.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'enzyme-pks', new = 'enzyme-pks-nickel-carbonyl', type = 'recipe-replacement'}
             }
         },
@@ -78,7 +78,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/dwx.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'hmas', new = 'hmas-pvp', type = 'recipe-replacement'}
             }
         }

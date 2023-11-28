@@ -89,7 +89,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/improved-pathfinding.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {consumption = 0.5, speed = 0.3, type = 'module-effects'},
                 {old = 'seaweed-crop-mk01', new = 'seaweed-crop-mk01-with-ai', type = 'recipe-replacement'},
                 {old = 'seaweed-crop-mk02', new = 'seaweed-crop-mk02-with-ai', type = 'recipe-replacement'},
@@ -102,7 +102,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/precise-cutting.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'carbon-dust', type = 'unlock-recipe', also_unlocked_by_techs = true},
                 {recipe = 'slacked-lime-seaweed-recycle', type = 'unlock-recipe'},
                 {recipe = 'slacked-lime-from-seaweed', type = 'unlock-recipe'},
@@ -113,7 +113,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/recirculation-pump.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'seaweed', new = 'seaweed-dry', type = 'recipe-replacement'},
                 {old = 'seaweed-2', new = 'seaweed-2-dry', type = 'recipe-replacement'},
                 {old = 'seaweed-3', new = 'seaweed-3-dry', type = 'recipe-replacement'},

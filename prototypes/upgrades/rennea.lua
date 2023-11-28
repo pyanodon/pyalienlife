@@ -87,7 +87,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/deadheading.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'deadhead-recycle', type = 'unlock-recipe'},
                 {old = 'rennea-1', new = 'rennea-1-deadhead', type = 'recipe-replacement'},
                 {old = 'rennea-2', new = 'rennea-2-deadhead', type = 'recipe-replacement'},
@@ -100,7 +100,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/alltime.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {consumption = 0.5, type = 'module-effects'},
                 {old = 'rennea-1', new = 'rennea-1-hydrophile', type = 'recipe-replacement'},
                 {old = 'rennea-2', new = 'rennea-2-hydrophile', type = 'recipe-replacement'},
@@ -113,7 +113,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/aphid-cleaning.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'rennea-seeds', new = 'rennea-seeds-venom', type = 'recipe-replacement'}
             }
         }

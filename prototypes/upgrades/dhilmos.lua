@@ -80,7 +80,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/cover.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {productivity = 0.16, type = 'module-effects'},
                 {old = 'dhilmos-1', new = 'dhilmos-1-cover', type = 'recipe-replacement'},
                 {old = 'dhilmos-2', new = 'dhilmos-2-cover', type = 'recipe-replacement'},
@@ -93,7 +93,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/skimmer.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {consumption = 0.2, speed = 0.2, type = 'module-effects'},
                 {old = 'dhilmos-1', new = 'dhilmos-1-skimmer', type = 'recipe-replacement'},
                 {old = 'dhilmos-2', new = 'dhilmos-2-skimmer', type = 'recipe-replacement'},
@@ -110,7 +110,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/double-intake.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {consumption = -0.5, type = 'module-effects'},
                 {old = 'dhilmos-1', new = 'dhilmos-1-double-intake', type = 'recipe-replacement'},
                 {old = 'dhilmos-2', new = 'dhilmos-2-double-intake', type = 'recipe-replacement'},

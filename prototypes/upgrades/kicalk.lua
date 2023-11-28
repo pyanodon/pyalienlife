@@ -100,7 +100,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/wire-netting.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {productivity = 0.15, speed = 0.05, type = 'module-effects'},
                 {old = 'kicalk-plantation-mk01', new = 'kicalk-plantation-mk01-with-mesh', type = 'recipe-replacement'},
                 {old = 'kicalk-plantation-mk02', new = 'kicalk-plantation-mk02-with-mesh', type = 'recipe-replacement'},
@@ -113,7 +113,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/extra-water.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'kicalk-1', new = 'kicalk-1-saline', type = 'recipe-replacement'},
                 {old = 'kicalk-2', new = 'kicalk-2-saline', type = 'recipe-replacement'},
                 {old = 'kicalk-3', new = 'kicalk-3-saline', type = 'recipe-replacement'},
@@ -126,7 +126,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/crop-rotation.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'kicalk-1', new = 'kicalk-1-rotation', type = 'recipe-replacement'},
                 {old = 'kicalk-2', new = 'kicalk-2-rotation', type = 'recipe-replacement'},
                 {old = 'kicalk-3', new = 'kicalk-3-rotation', type = 'recipe-replacement'},

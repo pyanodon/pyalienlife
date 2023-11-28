@@ -70,7 +70,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/mgo.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'trits-cub-1', new = 'trits-cub-1-mgo', type = 'recipe-replacement'},
                 {old = 'trits-cub-2', new = 'trits-cub-2-mgo', type = 'recipe-replacement'},
                 {old = 'trits-cub-3', new = 'trits-cub-3-mgo', type = 'recipe-replacement'},
@@ -82,7 +82,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/dc.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'trits-1', new = 'trits-1-dc', type = 'recipe-replacement'},
                 {old = 'trits-2', new = 'trits-2-dc', type = 'recipe-replacement'},
                 {old = 'trits-3', new = 'trits-3-dc', type = 'recipe-replacement'},
@@ -94,7 +94,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/nexelit-axis.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {consumption = -0.2, productivity = 0.25, speed = 0.25, type = 'module-effects'},
                 {old = 'trits-reef-mk01', new = 'trits-reef-mk01-with-nexelit', type = 'recipe-replacement'},
                 {old = 'trits-reef-mk02', new = 'trits-reef-mk02-with-nexelit', type = 'recipe-replacement'},

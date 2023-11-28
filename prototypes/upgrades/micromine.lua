@@ -59,7 +59,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/adv.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'petri-dish-bacteria-with-agar', type = 'unlock-recipe'}
             },
         },
@@ -68,7 +68,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/4D.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'petri-dish-bacteria-with-collagen', type = 'unlock-recipe'}
             }
         },
@@ -77,7 +77,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/dna-damage.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                {recipe = 'petri-dish-bacteria-with-enzyme', type = 'unlock-recipe'}
             }
         }

@@ -112,7 +112,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/cytotoxicity.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {speed = 0.08, type = 'module-effects'},
                 {recipe = 'pre-pesticide-01-navens', type = 'unlock-recipe'},
                 {old = 'navens-sample', new = 'navens-sample-with-vonix-gen', type = 'recipe-replacement'}
@@ -123,7 +123,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/pre-sterilization.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {consumption = 5, productivity = 0.2, type = 'module-effects'},
                 {old = 'navens-spore', new = 'navens-spore-sterilization', type = 'recipe-replacement'},
                 {old = 'navens-spore-2', new = 'navens-spore-2-sterilization', type = 'recipe-replacement'},
@@ -138,7 +138,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/lichen.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'full-render-navens-abomination', type = 'unlock-recipe'},
                 {old = 'navens-1', new = 'navens-1-abomination', type = 'recipe-replacement'},
                 {old = 'navens-2', new = 'navens-2-abomination', type = 'recipe-replacement'},

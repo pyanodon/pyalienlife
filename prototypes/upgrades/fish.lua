@@ -78,7 +78,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/a-select.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'breed-fish-1', new = 'breed-fish-1-agressive-selection', type = 'recipe-replacement'},
                 {old = 'breed-fish-2', new = 'breed-fish-2-agressive-selection', type = 'recipe-replacement'},
                 {old = 'breed-fish-3', new = 'breed-fish-3-agressive-selection', type = 'recipe-replacement'},
@@ -90,7 +90,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/temp-control.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {type = 'recipe-replacement', old = 'fish-hydrolysate', new = 'fish-hydrolysate-cooling'}
             }
         },
@@ -99,7 +99,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/dosing-pump.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'breed-fish-egg-1', new = 'breed-fish-egg-1-doused', type = 'recipe-replacement'},
                 {old = 'breed-fish-egg-2', new = 'breed-fish-egg-2-doused', type = 'recipe-replacement'},
                 {old = 'breed-fish-egg-3', new = 'breed-fish-egg-3-doused', type = 'recipe-replacement'},

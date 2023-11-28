@@ -53,7 +53,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/unstable.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'py-science-pack-1', new = 'py-science-pack-1-turd', type = 'recipe-replacement'}
             },
         },
@@ -62,7 +62,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/ms.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'py-science-pack-2', new = 'py-science-pack-2-turd', type = 'recipe-replacement'}
             },
         },
@@ -71,7 +71,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/spg.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'py-science-pack-3', new = 'py-science-pack-3-turd', type = 'recipe-replacement'}
             }
         },
@@ -80,7 +80,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/mci.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'py-science-pack-4', new = 'py-science-pack-4-turd', type = 'recipe-replacement'}
             }
         },

@@ -117,7 +117,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/fi.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {consumption = 0.5, type = 'module-effects'},
                 {old = 'tuuphra-seeds', new = 'tuuphra-seeds-with-water', type = 'recipe-replacement'}
             },
@@ -127,7 +127,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/fungicide.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {pollution = 2, type = 'module-effects'},
                 {recipe = 'alcl3', type = 'unlock-recipe'},
                 {recipe = 'fungicide', type = 'unlock-recipe'},
@@ -142,7 +142,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/tr.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'tuuphra-grease', type = 'unlock-recipe'}
             }
         }

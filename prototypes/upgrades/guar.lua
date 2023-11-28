@@ -75,7 +75,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/guar-pulse.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
 				{recipe = 'alcl3', type = 'unlock-recipe'},
 				{recipe = 'fungicide', type = 'unlock-recipe'},
 				{old = 'guar-1', new = 'guar-1-guarpulse', type = 'recipe-replacement'},
@@ -89,7 +89,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/aquaguar.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'guar-1', new = 'guar-1-aquaguar', type = 'recipe-replacement'},
                 {old = 'guar-2', new = 'guar-2-aquaguar', type = 'recipe-replacement'},
                 {old = 'guar-3', new = 'guar-3-aquaguar', type = 'recipe-replacement'},
@@ -101,7 +101,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/hh.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
 				{speed = 0.35, productivity = 0.05, type = 'module-effects'},
                 {old = 'guar-gum-plantation', new = 'guar-gum-plantation-with-bots', type = 'recipe-replacement'},
                 {old = 'guar-gum-plantation-mk02', new = 'guar-gum-plantation-mk02-with-bots', type = 'recipe-replacement'},

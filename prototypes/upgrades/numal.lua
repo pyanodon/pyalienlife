@@ -111,7 +111,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/d2o.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
 				{recipe = 'aeroorgan-ink', type = 'unlock-recipe'},
                 {old = 'aeroorgan', new = 'aeroorgan-buffed', type = 'recipe-replacement'},
 				{old = 'numal-raising-1', new = 'numal-raising-1-deuterium', type = 'recipe-replacement'},
@@ -127,7 +127,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/nc.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
 				{old = 'numal', new = 'numal-neutron', type = 'recipe-replacement'},
 				{old = 'numal-mk02', new = 'numal-mk02-neutron', type = 'recipe-replacement'},
 				{old = 'numal-mk03', new = 'numal-mk03-neutron', type = 'recipe-replacement'},
@@ -145,7 +145,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/neutron-bombardment.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
 				{old = 'ex-gut-num', new = 'ex-gut-num-neodymium', type = 'recipe-replacement'},
             }
         }

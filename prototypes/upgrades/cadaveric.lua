@@ -68,7 +68,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/acid-comtemplator.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'cadaveric-arum-1', new = 'cadaveric-arum-1-soil', type = 'recipe-replacement'},
                 {old = 'cadaveric-arum-2', new = 'cadaveric-arum-2-soil', type = 'recipe-replacement'},
                 {old = 'cadaveric-arum-3', new = 'cadaveric-arum-3-soil', type = 'recipe-replacement'},
@@ -80,7 +80,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/solar-scope.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {consumption = -0.5, speed = 0.1, productivity = 0.14, type = 'module-effects'},
                 {old = 'cadaveric-arum-mk01', new = 'cadaveric-arum-mk01-with-nanofibrils', type = 'recipe-replacement'},
                 {old = 'cadaveric-arum-mk02', new = 'cadaveric-arum-mk02-with-nanofibrils', type = 'recipe-replacement'},
@@ -93,7 +93,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/e-photo.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {consumption = 2, type = 'module-effects'},
                 {old = 'cadaveric-arum-1', new = 'cadaveric-arum-1-msa', type = 'recipe-replacement'},
                 {old = 'cadaveric-arum-2', new = 'cadaveric-arum-2-msa', type = 'recipe-replacement'},

@@ -49,7 +49,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/gs.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'manure-bacteria', new = 'manure-bacteria-fish', type = 'recipe-replacement'}
             },
         },
@@ -58,7 +58,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/zero.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'zogna-bacteria', new = 'zogna-bacteria-darkness', type = 'recipe-replacement'}
             }
         },
@@ -67,7 +67,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/icd.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'bio-sample', new = 'bio-sample-icd', type = 'recipe-replacement'}
             }
         }

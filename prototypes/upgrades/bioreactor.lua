@@ -131,7 +131,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/aerators.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'liquid-manure-oxygen', type = 'unlock-recipe'}
             },
         },
@@ -140,7 +140,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/baffles.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {consumption = -0.25, speed = 0.25, productivity = 0.04, type = 'module-effects'},
                 {recipe = 'baffles', type = 'unlock-recipe'},
                 {old = 'bio-reactor-mk01', new = 'bio-reactor-mk01-with-baffles', type = 'recipe-replacement'},
@@ -154,7 +154,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/jacket.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'jacket-bio-ore', type = 'unlock-recipe'},
                 {recipe = 'jacket-bio-oil', type = 'unlock-recipe'},
             }

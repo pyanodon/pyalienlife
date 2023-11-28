@@ -114,7 +114,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/cryopreservation.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'yotoi-seeds', new = 'yotoi-seeds-cold', type = 'recipe-replacement'}
             },
         },
@@ -123,7 +123,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/harvest.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'yotoi-1', new = 'yotoi-1-free-leaves', type = 'recipe-replacement'},
                 {old = 'yotoi-2', new = 'yotoi-2-free-leaves', type = 'recipe-replacement'},
                 {old = 'yotoi-3', new = 'yotoi-3-free-leaves', type = 'recipe-replacement'},
@@ -135,7 +135,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/nutrinet.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'nutrient', type = 'unlock-recipe'},
                 {old = 'yotoi-aloe-orchard-mk01', new = 'yotoi-aloe-orchard-mk01-with-nutrient', type = 'recipe-replacement'},
                 {old = 'yotoi-aloe-orchard-mk02', new = 'yotoi-aloe-orchard-mk02-with-nutrient', type = 'recipe-replacement'},

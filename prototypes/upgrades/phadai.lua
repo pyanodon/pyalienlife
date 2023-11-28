@@ -61,7 +61,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/ethanol-boost.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {speed = 0.25, productivity = 0.1, type = 'module-effects'},
                 {old = 'energy-drink', new = 'energy-drinkb', type = 'recipe-replacement'}
             },
@@ -71,7 +71,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/piezoelectric-floor.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'Phadai Dance Dance Revolution 1', new = 'Phadai Dance Dance Revolution 1-piezoelectric', type = 'recipe-replacement'},
                 {old = 'Phadai Dance Dance Revolution 2', new = 'Phadai Dance Dance Revolution 2-piezoelectric', type = 'recipe-replacement'},
                 {old = 'Phadai Dance Dance Revolution 3', new = 'Phadai Dance Dance Revolution 3-piezoelectric', type = 'recipe-replacement'},
@@ -83,7 +83,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/dubstep-track.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'Phadai Dance Dance Revolution 1', new = 'Phadai Dance Dance Revolution 1-dubstep', type = 'recipe-replacement'},
                 {old = 'Phadai Dance Dance Revolution 2', new = 'Phadai Dance Dance Revolution 2-dubstep', type = 'recipe-replacement'},
                 {old = 'Phadai Dance Dance Revolution 3', new = 'Phadai Dance Dance Revolution 3-dubstep', type = 'recipe-replacement'},

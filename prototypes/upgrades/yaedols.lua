@@ -75,7 +75,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/sub-s.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {speed = 0.1, productivity = 0.2, type = 'module-effects'},
                 {old = 'yaedols-spores', new = 'yaedols-spores-coke-oven-gas', type = 'recipe-replacement'},
                 {old = 'yaedols-spores-2', new = 'yaedols-spores-2-coke-oven-gas', type = 'recipe-replacement'},
@@ -90,7 +90,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/duct.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'yaedols-1', new = 'yaedols-1-hot-air', type = 'recipe-replacement'},
                 {old = 'yaedols-2', new = 'yaedols-2-hot-air', type = 'recipe-replacement'},
                 {old = 'yaedols-3', new = 'yaedols-3-hot-air', type = 'recipe-replacement'},
@@ -102,7 +102,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/humidity-control.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'yaedols-spore-4', type = 'unlock-recipe'}
             }
         }

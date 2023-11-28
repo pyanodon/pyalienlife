@@ -108,7 +108,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/abacus.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {productivity = 0.15, type = 'module-effects'},
                 {recipe = 'abacus', type = 'unlock-recipe'},
                 {old = 'arthurian maturing 1', new = 'arthurian maturing 1-abacus', type = 'recipe-replacement'},
@@ -122,7 +122,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/heated-stone.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'arthurian egg 1', new = 'arthurian egg 1-hot-stones', type = 'recipe-replacement'},
                 {old = 'arthurian egg 2', new = 'arthurian egg 2-hot-stones', type = 'recipe-replacement'},
                 {old = 'arthurian egg 3', new = 'arthurian egg 3-hot-stones', type = 'recipe-replacement'},
@@ -134,7 +134,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/cannibalism.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'arthurian-cannibalism', type = 'unlock-recipe'}
             }
         }

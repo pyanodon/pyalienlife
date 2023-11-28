@@ -88,7 +88,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/sex-ratio.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'kmauts-cub-1', new = 'kmauts-cub-1-ratio', type = 'recipe-replacement'},
                 {old = 'kmauts-cub-2', new = 'kmauts-cub-2-ratio', type = 'recipe-replacement'},
                 {old = 'kmauts-cub-3', new = 'kmauts-cub-3-ratio', type = 'recipe-replacement'},
@@ -104,7 +104,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/eye-out.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'kmauts-cub-1', new = 'kmauts-cub-1-eye-out', type = 'recipe-replacement'},
                 {old = 'kmauts-cub-2', new = 'kmauts-cub-2-eye-out', type = 'recipe-replacement'},
                 {old = 'kmauts-cub-3', new = 'kmauts-cub-3-eye-out', type = 'recipe-replacement'},
@@ -116,7 +116,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/moult-recycle.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'kmauts-ration', new = 'kmauts-ration-chitin', type = 'recipe-replacement'}
             }
         }

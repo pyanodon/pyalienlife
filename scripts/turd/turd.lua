@@ -310,9 +310,6 @@ local function reapply_turd_bonuses(force)
 			elseif effect.type == 'recipe-replacement' then
 				local old, new = recipes[effect.old], recipes[effect.new]
 				if old.enabled then recipe_replacement(old, new, force, assembling_machine_list) end
-			elseif effect.type == 'lock-recipe' then
-				local recipe = recipes[effect.recipe]
-				if recipe.enabled then recipe_replacement(recipe, nil, force, assembling_machine_list) end
 			elseif effect.type == 'module-effects' then
 				module_effects(tech_upgrade, sub_tech, assembling_machine_list, force, item_prototypes)
 			end

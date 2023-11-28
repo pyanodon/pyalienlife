@@ -84,7 +84,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/multi-tit.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'korlex-milk-1', new = 'korlex-milk-1-doubled', type = 'recipe-replacement'},
                 {old = 'korlex-milk-2', new = 'korlex-milk-2-doubled', type = 'recipe-replacement'},
                 {old = 'korlex-milk-3', new = 'korlex-milk-3-doubled', type = 'recipe-replacement'},
@@ -100,7 +100,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/high-pressure.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'korlex-milk-1', new = 'korlex-milk-1-pressured', type = 'recipe-replacement'},
                 {old = 'korlex-milk-2', new = 'korlex-milk-2-pressured', type = 'recipe-replacement'},
                 {old = 'korlex-milk-3', new = 'korlex-milk-3-pressured', type = 'recipe-replacement'},
@@ -112,7 +112,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/nx-heat-pump.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {consumption = -0.25, speed = 0.3, productivity = 0.1, type = 'module-effects'},
                 {old = 'ez-ranch-mk01', new = 'ez-ranch-mk01-with-nexelit', type = 'recipe-replacement'},
                 {old = 'ez-ranch-mk02', new = 'ez-ranch-mk02-with-nexelit', type = 'recipe-replacement'},

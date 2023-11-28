@@ -163,7 +163,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/air-con.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {old = 'arqad-egg-1', new = 'arqad-egg-1-cold', type = 'recipe-replacement'},
                 {old = 'arqad-egg-2', new = 'arqad-egg-2-cold', type = 'recipe-replacement'},
                 {old = 'arqad-egg-3', new = 'arqad-egg-3-cold', type = 'recipe-replacement'},
@@ -186,7 +186,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/drone.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
                 {recipe = 'ez-queen', type = 'unlock-recipe'}
             }
         }
