@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - fix zungrugor and numals not registering farms 
     - fixed that fawogae mk4 and fawogae mk5 were both unlocked at the same science tier (py4)
+    - buffed the useless coal->fawogae recipe by 10X (its still not great)
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.12
 Date: 2023-11-22
