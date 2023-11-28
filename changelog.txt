@@ -3,6 +3,7 @@ Version: 2.1.13
 Date: ???
   Changes:
     - fix zungrugor and numals not registering farms 
+    - fixed that fawogae mk4 and fawogae mk5 were both unlocked at the same science tier (py4)
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.12
 Date: 2023-11-22
