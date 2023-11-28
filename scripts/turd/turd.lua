@@ -403,6 +403,8 @@ local function on_researched(event)
 		return
 	end
 
+	-- this is for recipe replacement. if a non turd tech unlocks a recipe that is replaced by a turd tech, run reapply_turd_bonuses
+	-- TODO: optimize this to not run if the tech doesn't need recipe replacements (maybe a table of all turd replacable recipes is needed)
 	if game.tick ~= 0 then reapply_turd_bonuses(force) end
 end
 
