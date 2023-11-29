@@ -46,6 +46,7 @@ if data and not yafc_turd_integration then
     local coal_fawogae = table.deepcopy(data.raw.recipe['coal-fawogae'])
     coal_fawogae.name = 'coal-fawogae-buffed'
     coal_fawogae.energy_required = coal_fawogae.energy_required * 4
+    coal_fawogae.ingredients[1].amount = 10
     FUN.remove_result(coal_fawogae, 'raw-coal')
     FUN.add_result(coal_fawogae, {'active-carbon', 3})
     coal_fawogae.icons = nil
