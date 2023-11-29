@@ -54,3 +54,50 @@ TECHNOLOGY {
     is_turd = true,
     localised_description = {'', {'turd.font', {'turd.tech'}}, '\n', {'technology-description.turd-respec'}}
 }
+
+TECHNOLOGY {
+    type = 'technology',
+    name = 'turd-partial-respec-1',
+    icon = '__pyalienlifegraphics3__/graphics/technology/updates/restart.png',
+    icon_size = 128,
+    prerequisites = {'chemical-science-pack'},
+    effects = {},
+    unit = {
+        count_formula = '2^(L-1)*5000',
+        ingredients = {
+            {'automation-science-pack', 10},
+            {'py-science-pack-1', 6},
+            {'logistic-science-pack', 3},
+            {'py-science-pack-2', 2},
+            {'chemical-science-pack', 1},
+        },
+        time = 1200,
+    },
+    max_level = 1,
+    is_turd = true,
+    localised_description = {'', {'turd.font', {'turd.tech'}}, '\n', {'technology-description.turd-partial-respec'}}
+}
+
+TECHNOLOGY {
+    type = 'technology',
+    name = 'turd-partial-respec-2',
+    icon = '__pyalienlifegraphics3__/graphics/technology/updates/restart.png',
+    icon_size = 128,
+    prerequisites = {'turd-partial-respec-1'},
+    effects = {},
+    unit = {
+        count_formula = '2^(L-1)*2500',
+        ingredients = {
+            {'automation-science-pack', 20},
+            {'py-science-pack-1', 10},
+            {'logistic-science-pack', 6},
+            {'py-science-pack-2', 3},
+            {'chemical-science-pack', 2},
+            {'production-science-pack', 1},
+        },
+        time = 1200,
+    },
+    max_level = 'infinite',
+    is_turd = true,
+    localised_description = {'', {'turd.font', {'turd.tech'}}, '\n', {'technology-description.turd-partial-respec'}}
+}
