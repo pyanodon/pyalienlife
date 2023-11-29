@@ -112,6 +112,7 @@ local recipes_list =
   "meat-to-iron",
   "meat-and-gut-to-copper",
   "arthropod-blood-to-copper",
+  "arthropod-blood-to-organic-solvent",
   "tuuphra-to-copper",
   "meat-to-copper",
   "guts-to-copper",
