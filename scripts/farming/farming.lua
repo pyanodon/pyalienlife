@@ -11,6 +11,7 @@ local farm_buildings = require 'farm-building-list'
 ---@param kingdom_name 'animal' | 'plant' | 'fungi'
 function Farming.register_type(farm_name, kingdom_name)
 	log('remote registered farm \'' .. farm_name .. '\' (' .. kingdom_name .. ')')
+	global.farm_prototypes = global.farm_prototypes or farm_buildings
 	global.farm_prototypes[farm_name] = kingdom_name
 end
 
