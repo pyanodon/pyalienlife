@@ -86,9 +86,10 @@ FUN.results_replacer("log8", "log", "log",10)
 
 RECIPE('fill-xyhiphoe-blood-barrel'):remove_unlock('fluid-handling')
 RECIPE('empty-xyhiphoe-blood-barrel'):remove_unlock('fluid-handling')
-RECIPE('xyhiphoe-hydrocyclone'):remove_unlock('advanced-mining-facilities')
 data.raw.fluid['xyhiphoe-blood'] = nil
 data.raw.recipe['xyhiphoe-blood'] = nil
-data.raw.recipe['xyhiphoe-hydrocyclone'] = nil
 data.raw.recipe['fill-xyhiphoe-blood-barrel'] = nil
 data.raw.recipe['empty-xyhiphoe-blood-barrel'] = nil
+data.raw.recipe['xyhiphoe-hydrocyclone'].ingredients[2].name = 'arthropod-blood'
+data.raw.item['xyhiphoe-blood-barrel'] = nil
+data.raw.recipe['xyhiphoe-blood-barrel-pyvoid'] = nil
