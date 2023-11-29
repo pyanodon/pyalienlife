@@ -46,10 +46,10 @@ if data and not yafc_turd_integration then
             {type = 'item', name = 'stack-filter-inserter', amount = 1},
         },
         results = {
-            {type = 'item', name = 'nano-cellulose', amount_min = 1, amount_max = 3},
+            {type = 'item', name = 'resveratrol', amount_min = 1, amount_max = 3},
             {type = 'item', name = 'stack-filter-inserter', amount = 1, probability = 0.999},
         },
-        main_product = 'nano-cellulose'
+        main_product = 'resveratrol'
     }}
 
     for i = 1, 4 do
