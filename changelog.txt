@@ -4,7 +4,7 @@ Date: ???
   Changes:
     - fix zungrugor and numals not registering farms 
     - fixed that fawogae mk4 and fawogae mk5 were both unlocked at the same science tier (py4)
-    - buffed the useless coal->fawogae recipe by 10X (its still not great)
+    - buffed the fawogae->coal recipe by requiring 1 fawogae input instead of 10 
     - buffed sap turd path 2 to give resveratrol instead of cellulose
     - readded the xyhiphoe blood hydrocyclone recipe that was accidently removed last update
     - buffed 2ed tier of xyhiphoe blood -> organic solvent recipe by 50%. also allowed productivity in this recipe
