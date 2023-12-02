@@ -464,7 +464,6 @@ RECIPE {
         {type = 'fluid', name = 'xenogenic-cells', amount = 150},
         {type = 'item', name = 'sugar', amount = 3},
         {type = 'item', name = 'retrovirus', amount = 1},
-        {type = 'item', name = 'primers', amount = 1},
     },
     results = {
         {type = 'fluid', name = 'psc', amount = 50},
@@ -484,7 +483,6 @@ RECIPE {
         {type = 'fluid', name = 'xenogenic-cells', amount = 150},
         {type = 'item', name = 'sugar', amount = 4},
         {type = 'item', name = 'retrovirus', amount = 1},
-        {type = 'item', name = 'primers', amount = 1},
         {type = 'item', name = 'cbp', amount = 1},
     },
     results = {
@@ -506,7 +504,6 @@ RECIPE {
         {type = 'item', name = 'sugar', amount = 4},
         {type = 'item', name = 'cbp', amount = 1},
         {type = 'item', name = 'retrovirus', amount = 1},
-        {type = 'item', name = 'primers', amount = 1},
     },
     results = {
         {type = 'fluid', name = 'psc', amount = 200},
@@ -527,7 +524,6 @@ RECIPE {
         {type = 'item', name = 'sugar', amount = 4},
         {type = 'item', name = 'retrovirus', amount = 1},
         {type = 'item', name = 'gh', amount = 1},
-        {type = 'item', name = 'primers', amount = 1},
     },
     results = {
         {type = 'fluid', name = 'psc', amount = 275},

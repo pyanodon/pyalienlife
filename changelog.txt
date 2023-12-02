@@ -8,6 +8,7 @@ Date: ???
     - buffed sap turd path 2 to give resveratrol instead of cellulose
     - readded the xyhiphoe blood hydrocyclone recipe that was accidently removed last update
     - buffed 2ed tier of xyhiphoe blood -> organic solvent recipe by 50%. also allowed productivity in this recipe
+    - buffed bioprinting by removing primers from the pluripotent stem cells recipes
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.12
 Date: 2023-11-22
