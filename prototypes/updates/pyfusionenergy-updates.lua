@@ -89,7 +89,7 @@ data.raw.recipe['xyhiphoe-blood'] = nil
 data.raw.recipe['fill-xyhiphoe-blood-barrel'] = nil
 data.raw.recipe['empty-xyhiphoe-blood-barrel'] = nil
 data.raw.recipe['xyhiphoe-hydrocyclone'].ingredients[2].name = 'arthropod-blood'
-RECIPE('xyhiphoe-hydrocyclone'):remove_unlock('biotech-mk02'):add_unlock('biotech-mk04')
+RECIPE('xyhiphoe-hydrocyclone'):remove_unlock('advanced-mining-facilities'):add_unlock('biotech-mk04')
 RECIPE('arthropod-blood-to-organic-solvent'):remove_unlock('biotech-mk03'):add_unlock('biotech-mk02')
 data.raw.item['xyhiphoe-blood-barrel'] = nil
 data.raw.recipe['xyhiphoe-blood-barrel-pyvoid'] = nil
