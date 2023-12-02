@@ -2617,7 +2617,7 @@ RECIPE {
         {type = 'item', name = 'nickel-plate', amount = 1},
     },
     results = {
-        {type = 'fluid', name = 'organic-solvent', amount = 150},
+        {type = 'fluid', name = 'organic-solvent', amount = 130},
     }
 }:add_unlock('biotech-mk03'):add_ingredient({type = 'fluid', name = 'cumene', amount = 20})
 

@@ -82,8 +82,6 @@ data.raw["recipe-category"]["xyhiphoe"].modules_required = true
 FUN.results_replacer("log7", "log", "log",9)
 FUN.results_replacer("log8", "log", "log",10)
 
-----EXCLUSIVE RECIPES----
-
 RECIPE('fill-xyhiphoe-blood-barrel'):remove_unlock('fluid-handling')
 RECIPE('empty-xyhiphoe-blood-barrel'):remove_unlock('fluid-handling')
 data.raw.fluid['xyhiphoe-blood'] = nil
@@ -91,5 +89,7 @@ data.raw.recipe['xyhiphoe-blood'] = nil
 data.raw.recipe['fill-xyhiphoe-blood-barrel'] = nil
 data.raw.recipe['empty-xyhiphoe-blood-barrel'] = nil
 data.raw.recipe['xyhiphoe-hydrocyclone'].ingredients[2].name = 'arthropod-blood'
+RECIPE('xyhiphoe-hydrocyclone'):remove_unlock('biotech-mk02'):add_unlock('biotech-mk04')
+RECIPE('arthropod-blood-to-organic-solvent'):remove_unlock('biotech-mk03'):add_unlock('biotech-mk02')
 data.raw.item['xyhiphoe-blood-barrel'] = nil
 data.raw.recipe['xyhiphoe-blood-barrel-pyvoid'] = nil

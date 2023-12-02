@@ -6,9 +6,9 @@ Date: ???
     - fixed that fawogae mk4 and fawogae mk5 were both unlocked at the same science tier (py4)
     - buffed the fawogae->coal recipe by requiring 1 fawogae input instead of 10 
     - buffed sap turd path 2 to give resveratrol instead of cellulose
-    - readded the xyhiphoe blood hydrocyclone recipe that was accidently removed last update
-    - buffed 2ed tier of xyhiphoe blood -> organic solvent recipe by 50%. also allowed productivity in this recipe
+    - added a new recipe for cumene+nickel+arthropod blood into organic solvent
     - buffed bioprinting by removing primers from the pluripotent stem cells recipes
+    - fixed that bioprinting stage 2 unlocked both mk1 and mk2 of brain printing. mk1 recipe moved down to bioprinting stage 1
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.12
 Date: 2023-11-22

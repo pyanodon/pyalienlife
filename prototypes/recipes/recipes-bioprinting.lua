@@ -616,7 +616,7 @@ RECIPE {
         {type = 'item', name = 'brain', amount = 2},
     },
     --main_product = "psc",
-}:add_unlock("organ-printing-mk02")
+}:add_unlock("organ-printing")
 
 RECIPE {
     type = 'recipe',
