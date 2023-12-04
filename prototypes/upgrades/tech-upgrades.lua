@@ -3,7 +3,7 @@ local FUN = require('__pycoalprocessing__/prototypes/functions/functions')
 local tech_upgrades = {
     require('prototypes/upgrades/bioprinting'),
     require('prototypes/upgrades/biofactory'),
-    --require('prototypes/upgrades/compost'),
+    require('prototypes/upgrades/compost'),
     --require('prototypes/upgrades/creature'),
     require('prototypes/upgrades/incubator'),
     require('prototypes/upgrades/slaughterhouse'),
