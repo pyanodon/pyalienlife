@@ -58,7 +58,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = 'technology',
     name = 'turd-partial-respec-1',
-    icon = '__pyalienlifegraphics3__/graphics/technology/updates/restart.png',
+    icon = '__pyalienlifegraphics3__/graphics/technology/updates/single-restart.png',
     icon_size = 128,
     prerequisites = {'chemical-science-pack'},
     effects = {},
@@ -81,7 +81,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = 'technology',
     name = 'turd-partial-respec-2',
-    icon = '__pyalienlifegraphics3__/graphics/technology/updates/restart.png',
+    icon = '__pyalienlifegraphics3__/graphics/technology/updates/single-restart.png',
     icon_size = 128,
     prerequisites = {'turd-partial-respec-1'},
     effects = {},
