@@ -63,7 +63,7 @@ local function update_confirm_button(element, player, researched_technologies)
 		element.style = 'confirm_button_without_tooltip'
 		element.caption = {'turd.select'}
 	elseif selected_upgrade == element.tags.sub_tech_name then
-		if global.turd_reset_remaining > 0 then
+		if (global.turd_reset_remaining[force_index] or 0) > 0 then
 			element.style = 'confirm_button_without_tooltip'
 			element.caption = {'turd.unselect'}
 		else
@@ -82,8 +82,9 @@ local function create_turd_page(gui, player)
 	local label = textbox_frame.add{type = 'label', caption = {'pywiki-descriptions.turd'}, style = 'label_with_left_padding'}
 	label.style.single_line = false
 
-	if global.turd_reset_remaining ~= 0 then
-		local reset_label = textbox_frame.add{type = 'label', caption = {'turd.resets-left', global.turd_reset_remaining}, style = 'label_with_left_padding', name = 'py_resets_left'}
+	local resets = global.turd_reset_remaining[player.force_index] or 0
+	if resets ~= 0 then
+		local reset_label = textbox_frame.add{type = 'label', caption = {'turd.resets-left', resets}, style = 'label_with_left_padding', name = 'py_resets_left'}
 		reset_label.style.single_line = false
 	end
 
@@ -362,6 +363,7 @@ gui_events[defines.events.on_gui_click]['py_turd_confirm_button'] = function(eve
 	local sub_tech_flow = element.parent.parent.parent
 	local player = game.get_player(event.player_index)
 	local force = player.force
+	local force_index = force.index
 
 	if not force.technologies[master_tech_name].researched then return end
 
@@ -370,25 +372,31 @@ gui_events[defines.events.on_gui_click]['py_turd_confirm_button'] = function(eve
 		return
 	end
 
-	local turd_bonuses = global.turd_bonuses[force.index] or {}
-	global.turd_bonuses[force.index] = turd_bonuses
+	local turd_bonuses = global.turd_bonuses[force_index] or {}
+	global.turd_bonuses[force_index] = turd_bonuses
 	local selection = turd_bonuses[master_tech_name] or NOT_SELECTED
 	if selection == NOT_SELECTED then
 		force.print{'turd.font', {'turd.selected-alert', {'technology-name.'..master_tech_name}, {'technology-name.'..sub_tech_name}, player.name, player.color.r, player.color.g, player.color.b}}
 		turd_bonuses[master_tech_name] = sub_tech_name
 		apply_turd_bonus(force, master_tech_name, tech_upgrades[master_tech_name], find_all_assembling_machines(force))
 	else
-		if global.turd_reset_remaining <= 0 then
+		if (global.turd_reset_remaining[force_index] or 0) <= 0 then
 			return
 		end
 		force.print{'turd.font', {'turd.unselected-alert', {'technology-name.'..master_tech_name}, {'technology-name.'..sub_tech_name}, player.name, player.color.r, player.color.g, player.color.b}}
 		turd_bonuses[master_tech_name] = NOT_SELECTED
-		global.turd_reset_remaining = global.turd_reset_remaining - 1
+		global.turd_reset_remaining[force_index] = global.turd_reset_remaining[force_index] - 1
 		unselect_recipes_for_subtech(tech_upgrades[master_tech_name].sub_techs[selection], force, find_all_assembling_machines(force))
 		destroy_all_hidden_beacons(force)
 		reapply_turd_bonuses(force)
 
-		sub_tech_flow.parent.parent.textbox_frame.py_resets_left.caption = {'turd.resets-left', global.turd_reset_remaining}
+		local resets_left = global.turd_reset_remaining[force_index]
+		local reset_label = sub_tech_flow.parent.parent.textbox_frame.py_resets_left
+		if resets_left == 0 and reset_label then
+			reset_label.destroy()
+		elseif resets_left > 0 and reset_label then
+			reset_label.caption = {'turd.resets-left', resets_left}
+		end
 	end
 
 	for _, sub_tech in pairs(sub_tech_flow.children) do
@@ -402,7 +410,7 @@ Turd.events.on_init = function()
 	global.turd_beaconed_machines = global.turd_beaconed_machines or {}
 	global.turd_unlocked_modules = global.turd_unlocked_modules or {}
 	global.turd_views = global.turd_views or {}
-	global.turd_reset_remaining = global.turd_reset_remaining or 0
+	global.turd_reset_remaining = global.turd_reset_remaining or {}
 end
 
 local function respec_all(force)
@@ -424,12 +432,13 @@ end
 local function on_researched(event)
 	local technology = event.research
 	local force = technology.force
+	local force_index = force.index
 
 	if tech_upgrades[technology.name] then
-		global.turd_bonuses[force.index] = global.turd_bonuses[force.index] or {}
-		global.turd_bonuses[force.index][technology.name] = NOT_SELECTED
-	elseif starts_with(technology.name, 'turd-partial-respec') and game.tick ~= 0 then
-		global.turd_reset_remaining = global.turd_reset_remaining + 1
+		global.turd_bonuses[force_index] = global.turd_bonuses[force_index] or {}
+		global.turd_bonuses[force_index][technology.name] = NOT_SELECTED
+	elseif starts_with(technology.name, 'turd-partial-respec') then
+		global.turd_reset_remaining[force_index] = (global.turd_reset_remaining[force_index] or 0) + 1
 		return
 	elseif starts_with(technology.name, 'turd-respec') and game.tick ~= 0 then
 		respec_all(force)
