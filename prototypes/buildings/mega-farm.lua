@@ -8,15 +8,15 @@ RECIPE {
     ingredients = {
         {"concrete", 200},
         {"treated-wood", 50},
-        {"control-unit", 10},
+        --{"control-unit", 10},
         {"boron-carbide", 30},
-        {"super-alloy", 20},
-        {"blanket", 5},
+        --{"super-alloy", 20},
+        --{"blanket", 5},
         {"nbfe-alloy", 50},
         {"kevlar", 100},
-        {"divertor", 10},
-        {"metallic-glass", 30},
-        {"processing-unit", 50},
+        --{"divertor", 10},
+        --{"metallic-glass", 30},
+        --{"advanced-circuit", 50},
     },
     results = {
         {"mega-farm", 1}

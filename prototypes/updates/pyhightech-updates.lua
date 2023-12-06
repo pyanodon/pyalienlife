@@ -284,7 +284,7 @@ RECIPE('moondrop-greenhouse-mk04'):add_unlock('botany-mk04'):subgroup_order("py-
 data.raw['assembling-machine']['moondrop-greenhouse-mk04'].module_specification.module_slots = 64
 data.raw['assembling-machine']['moondrop-greenhouse-mk04'].crafting_speed = FUN.farm_speed_derived(64, "moondrop-greenhouse-mk01")
 
-RECIPE('harvester'):replace_ingredient("plastic-bar", "biopolymer"):add_ingredient({type = "item", name = "aerogel", amount = 20})
+RECIPE('harvester'):add_ingredient({type = "item", name = "aerogel", amount = 20})--:replace_ingredient("plastic-bar", "biopolymer")
 RECIPE('harmonic-absorber'):add_ingredient({type = "item", name = "negasium", amount = 1})
 RECIPE('hyperelastic-material'):add_ingredient({type = "item", name = "hyaline", amount = 1})
 RECIPE('arthurian-pen-mk03'):add_ingredient({type = "item", name = "carbon-nanotube", amount = 15})
@@ -373,7 +373,6 @@ RECIPE('yotoi-aloe-orchard-mk04'):add_ingredient({type = "item", name = "aerogel
 RECIPE('zipir-reef-mk04'):add_ingredient({type = "item", name = "hyperelastic-material", amount = 50})
 RECIPE('bio-printer-mk04'):add_ingredient({type = "item", name = "harmonic-absorber", amount = 20}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 50}):add_ingredient({type = "item", name = "intelligent-unit", amount = 15})
 RECIPE('ez-ranch-mk04'):add_ingredient({type = "item", name = "intelligent-unit", amount = 30}):add_ingredient({type = "item", name = "quantum-vortex-storage-system", amount = 10}):add_ingredient({type = "item", name = "phosphate-glass", amount = 100})
-RECIPE('mega-farm'):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 10}):add_ingredient({type = "item", name = "harmonic-absorber", amount = 30}):add_ingredient({type = "item", name = "intelligent-unit", amount = 50})
 RECIPE('research-center-mk04'):add_ingredient({type = "item", name = "quantum-vortex-storage-system", amount = 10}):add_ingredient({type = "item", name = "aerogel", amount = 100}):add_ingredient({type = "item", name = "intelligent-unit", amount = 50})
 RECIPE('arqad-hive-mk04'):add_ingredient({type = "item", name = "phosphate-glass", amount = 100}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 30})
 RECIPE('simik-den-mk04'):add_ingredient({type = "item", name = "intelligent-unit", amount = 50}):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 20})

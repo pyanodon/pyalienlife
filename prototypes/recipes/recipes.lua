@@ -1708,16 +1708,16 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'earth-generic-sample', amount = 5},
         {type = 'item', name = 'titanium-plate', amount = 100},
-        {type = 'item', name = 'metallic-glass', amount = 2},
+        --{type = 'item', name = 'metallic-glass', amount = 2},
         {type = 'item', name = 'biofilm', amount = 20},
         {type = 'item', name = 'plastic-bar', amount = 100},
-        {type = 'item', name = 'blanket-chassi', amount = 1},
+        --{type = 'item', name = 'blanket-chassi', amount = 1},
         {type = 'item', name = 'fertilizer', amount = 40},
     },
     results = {
         {type = 'item', name = 'replicator-bioreserve', amount = 1},
     },
-}:add_unlock("mega-farm-bioreserve"):add_ingredient({type = "item", name = "nems", amount = 10}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10})
+}:add_unlock("mega-farm-bioreserve")--:add_ingredient({type = "item", name = "nems", amount = 10}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 10})
 
 
 RECIPE {
