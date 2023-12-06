@@ -181,6 +181,16 @@ local function create_turd_page(gui, player)
 					local new = effects_flow.add{type = 'choose-elem-button', elem_type = 'recipe', style = 'transparent_slot'}
 					new.elem_value = effect.new
 					new.locked = true
+				elseif effect.type == 'machine-replacement' then
+					local old = effects_flow.add{type = 'choose-elem-button', elem_type = 'entity', style = 'transparent_slot'}
+					old.elem_value = effect.old
+					old.locked = true
+
+					effects_flow.add{type = 'label', caption = '[font=default-semibold]➜[/font]', ignored_by_interaction = true}.style.margin = {0, -10, 0, -10}
+
+					local new = effects_flow.add{type = 'choose-elem-button', elem_type = 'entity', style = 'transparent_slot'}
+					new.elem_value = effect.new
+					new.locked = true
 				end
 				::continue::
 			end
@@ -259,7 +269,7 @@ local function recipe_replacement(old, new, force, assembling_machine_list)
 	if new then new.enabled = true end
 
 	for _, machine in pairs(assembling_machine_list) do
-		if machine.get_recipe() == old then
+		if machine.get_recipe() == old and machine.type == 'assembling-machine' then
 			local removed_items = machine.set_recipe(new)
 			handle_removed_items(machine.surface, force, machine, removed_items)
 		end
@@ -293,6 +303,38 @@ local function module_effects(tech_upgrade, sub_tech, assembling_machine_list, f
 	end
 end
 
+local function machine_replacement(old, new, assembling_machine_list)
+	local temp_inventory = game.create_inventory(9999)
+	local new_machine_list = {}
+	for _, machine in pairs(assembling_machine_list) do
+		if machine.name == old then
+			local position = machine.position
+			local crafting_progress = machine.crafting_progress
+			local bonus_progress = machine.bonus_progress
+			local recipe = machine.get_recipe()
+			local force_index = machine.force_index
+			local surface = machine.surface
+			local items_to_place_this = machine.prototype.items_to_place_this
+			local direction = machine.direction
+			machine.mine{inventory = temp_inventory, force = true, raise_destroyed = false, ignore_minable = true}
+			for _, item_to_place in pairs(items_to_place_this) do
+				temp_inventory.remove(item_to_place)
+			end
+			local new_machine = surface.create_entity{name = new, position = position, force = force_index}
+			if new_machine.type == 'assembling-machine' then new_machine.set_recipe(recipe) end
+			handle_removed_items(surface, force, new_machine, temp_inventory.get_contents())
+			new_machine.crafting_progress = crafting_progress
+			new_machine.bonus_progress = bonus_progress
+			new_machine.direction = direction
+			temp_inventory.clear()
+			machine = new_machine
+		end
+		new_machine_list[#new_machine_list+1] = machine
+	end
+	temp_inventory.destroy()
+	return new_machine_list
+end
+
 local function find_all_assembling_machines(force)
 	local assembling_machine_list = {}
 	for _, surface in pairs(game.surfaces) do
@@ -319,6 +361,10 @@ local function apply_turd_bonus(force, master_tech_name, tech_upgrade, assemblin
 			if old.enabled then recipe_replacement(old, new, force, assembling_machine_list) end
 		elseif effect.type == 'module-effects' then
 			module_effects(tech_upgrade, sub_tech, assembling_machine_list, force, item_prototypes)
+		elseif effect.type == 'machine-replacement' then
+			assembling_machine_list = machine_replacement(effect.old, effect.new, assembling_machine_list)
+			global.turd_machine_replacements[force.index] = global.turd_machine_replacements[force.index] or {}
+			global.turd_machine_replacements[force.index][effect.old] = effect.new
 		end
 	end
 end
@@ -339,6 +385,11 @@ local function unselect_recipes_for_subtech(sub_tech, force, assembling_machine_
 			local recipe = recipes[effect.new or effect.recipe]
 			if recipe and recipe.enabled then
 				recipe_replacement(recipe, effect.old and recipes[effect.old], force, assembling_machine_list)
+			end
+		elseif effect.type == 'machine-replacement' then
+			assembling_machine_list = machine_replacement(effect.new, effect.old, assembling_machine_list)
+			if global.turd_machine_replacements[force.index] then
+				global.turd_machine_replacements[force.index][effect.old] = nil
 			end
 		end
 	end
@@ -411,6 +462,7 @@ Turd.events.on_init = function()
 	global.turd_unlocked_modules = global.turd_unlocked_modules or {}
 	global.turd_views = global.turd_views or {}
 	global.turd_reset_remaining = global.turd_reset_remaining or {}
+	global.turd_machine_replacements = global.turd_machine_replacements or {}
 end
 
 local function respec_all(force)
@@ -465,11 +517,21 @@ Turd.events.on_research_reversed = on_unresearched
 Turd.events.on_built = function(event)
     local entity = event.created_entity or event.entity
 	if not entity.valid or not entity.unit_number then return end
-	local force = entity.force
-	if not global.turd_unlocked_modules[force.index] then return end
-	local module_name = global.turd_unlocked_modules[force.index][entity.name]
-	if not module_name then return end
-	create_hidden_beacon(entity, module_name, game.item_prototypes)
+	local force_index = entity.force_index
+
+	if global.turd_unlocked_modules[force_index] then
+		local module_name = global.turd_unlocked_modules[force_index][entity.name]
+		if module_name then
+			create_hidden_beacon(entity, module_name, game.item_prototypes)
+		end
+	end
+
+	if global.turd_machine_replacements[force_index] then
+		local new = global.turd_machine_replacements[force_index][entity.name]
+		if new then
+			machine_replacement(entity.name, new, {entity})
+		end
+	end
 end
 
 Turd.events.on_destroyed = function(event)

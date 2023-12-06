@@ -2,7 +2,7 @@
 Version: 2.1.13
 Date: ???
   Changes:
-    - fix zungrugor and numals not registering farms 
+    - fix zungrugor and numals not being disabled even when they had no animal modules
     - fixed that fawogae mk4 and fawogae mk5 were both unlocked at the same science tier (py4)
     - buffed the fawogae->coal recipe by requiring 1 fawogae input instead of 10 
     - buffed sap turd path 2 to give resveratrol instead of cellulose
@@ -10,6 +10,8 @@ Date: ???
     - buffed bioprinting by removing primers from the pluripotent stem cells recipes
     - fixed that bioprinting stage 2 unlocked both mk1 and mk2 of brain printing. mk1 recipe moved down to bioprinting stage 1
     - added T.U.R.D unselect infinite tech to allow the indecisive to revert a single T.U.R.D selection
+    - added a new T.U.R.D: the composter turd. why is it unlocked at military science? don't ask too many questions
+    - moved native flora smart farming down to chemical science 
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.12
 Date: 2023-11-22

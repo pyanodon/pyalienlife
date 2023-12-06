@@ -9,6 +9,8 @@ if data and not yafc_turd_integration then
         local entity = table.deepcopy(data.raw['furnace'][name])
         entity.name = name .. '-turd'
         entity.localised_name = {'entity-name.' .. name}
+        entity.placeable_by = {item = name, count = 1}
+        entity.base_productivity = i * 0.05
         entity.localised_description = entity.localised_description or {'entity-description.' .. name}
         entity.energy_source = {
             type = 'fluid',
@@ -108,7 +110,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/constant.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {consumption = 0.0, speed = 0.15, productivity = -0.12, type = 'module-effects'}
             },
         },
@@ -117,7 +119,11 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/humus.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
+                {type = 'machine-replacement', old = 'compost-plant-mk01', new = 'compost-plant-mk01-turd'},
+                {type = 'machine-replacement', old = 'compost-plant-mk02', new = 'compost-plant-mk02-turd'},
+                {type = 'machine-replacement', old = 'compost-plant-mk03', new = 'compost-plant-mk03-turd'},
+                {type = 'machine-replacement', old = 'compost-plant-mk04', new = 'compost-plant-mk04-turd'},
                 {type = 'unlock-recipe', recipe = 'free-manure-bacteria'},
                 {type = 'unlock-recipe', recipe = 'manure-bacteria-to-manure'},
                 {recipe = 'sweet-syrup', type = 'unlock-recipe', also_unlocked_by_techs = true},
@@ -129,7 +135,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/worm-hotel.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {consumption = 0.25, speed = 0, productivity = 0.2, type = 'module-effects'}
             }
         }
