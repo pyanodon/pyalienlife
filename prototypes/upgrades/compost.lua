@@ -112,13 +112,13 @@ if data and not yafc_turd_integration then
         name = 'worm-stone',
         category = 'bio-reactor',
         enabled = false,
-        energy_required = 0.5,
+        energy_required = 1,
         ingredients = {
             {type = 'item', name = 'worm', amount = 1},
-            {type = 'item', name = 'stone-brick', amount = 1},
+            {type = 'item', name = 'stone-brick', amount = 2},
         },
         results = {
-            {type = 'item', name = 'stone', amount = 2},
+            {type = 'item', name = 'stone', amount = 4},
         },
     }}
 
@@ -127,13 +127,13 @@ if data and not yafc_turd_integration then
         name = 'worm-wood',
         category = 'bio-reactor',
         enabled = false,
-        energy_required = 0.5,
+        energy_required = 2,
         ingredients = {
-            {type = 'item', name = 'worm', amount = 1},
+            {type = 'item', name = 'worm', amount = 2},
             {type = 'item', name = 'wood', amount = 1},
         },
         results = {
-            {type = 'item', name = 'wood-seeds', amount = 1},
+            {type = 'item', name = 'wood-seeds', amount = 2},
         },
     }}
 
@@ -142,7 +142,7 @@ if data and not yafc_turd_integration then
         name = 'worm-coarse',
         category = 'bio-reactor',
         enabled = false,
-        energy_required = 0.5,
+        energy_required = 3,
         ingredients = {
             {type = 'item', name = 'worm', amount = 1},
             {type = 'item', name = 'gravel', amount = 1},
@@ -157,7 +157,7 @@ if data and not yafc_turd_integration then
         name = 'worm-manure',
         category = 'bio-reactor',
         enabled = false,
-        energy_required = 0.5,
+        energy_required = 4,
         ingredients = {
             {type = 'item', name = 'worm', amount = 1},
             {type = 'item', name = 'guts', amount = 2},
