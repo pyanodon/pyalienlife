@@ -41,7 +41,7 @@ if data and not yafc_turd_integration then
             pipe_covers = DATA.Pipes.covers(false, true, true, true),
             pipe_picture = DATA.Pipes.pictures('assembling-machine-3', nil, {0.0, -0.88}, nil, nil),
             base_area = 1,
-            base_level = -1,
+            base_level = 1,
             pipe_connections = {{type = 'output', position = {0.0, 6.0}}},
             secondary_draw_orders = { north = -1 }
         })
@@ -78,6 +78,93 @@ if data and not yafc_turd_integration then
             {type = 'fluid', name = 'water', amount = 50},
         },
         main_product = 'manure',
+    }}
+
+    data:extend{{
+        type = 'item',
+        name = 'worm',
+        icon = '__pyalienlifegraphics2__/graphics/icons/worm.png',
+        icon_size = 64,
+        flags = {},
+        subgroup = 'py-alienlife-items',
+        order = 'q',
+        stack_size = 500
+    }}
+
+    data:extend{{
+        type = 'recipe',
+        name = 'worm',
+        category = 'biofactory',
+        enabled = false,
+        energy_required = 10,
+        ingredients = {
+            {type = 'item', name = 'biomass', amount = 1},
+        },
+        results = {
+            {type = 'item', name = 'worm', amount_min = 15, amount_max = 22},
+            {type = 'item', name = 'powdered-biomass', amount = 1},
+        },
+        main_product = 'worm',
+    }}
+
+    data:extend{{
+        type = 'recipe',
+        name = 'worm-stone',
+        category = 'bio-reactor',
+        enabled = false,
+        energy_required = 0.5,
+        ingredients = {
+            {type = 'item', name = 'worm', amount = 1},
+            {type = 'item', name = 'stone-brick', amount = 1},
+        },
+        results = {
+            {type = 'item', name = 'stone', amount = 2},
+        },
+    }}
+
+    data:extend{{
+        type = 'recipe',
+        name = 'worm-wood',
+        category = 'bio-reactor',
+        enabled = false,
+        energy_required = 0.5,
+        ingredients = {
+            {type = 'item', name = 'worm', amount = 1},
+            {type = 'item', name = 'wood', amount = 1},
+        },
+        results = {
+            {type = 'item', name = 'wood-seeds', amount = 1},
+        },
+    }}
+
+    data:extend{{
+        type = 'recipe',
+        name = 'worm-coarse',
+        category = 'bio-reactor',
+        enabled = false,
+        energy_required = 0.5,
+        ingredients = {
+            {type = 'item', name = 'worm', amount = 1},
+            {type = 'item', name = 'gravel', amount = 1},
+        },
+        results = {
+            {type = 'item', name = 'coarse', amount = 2},
+        },
+    }}
+
+    data:extend{{
+        type = 'recipe',
+        name = 'worm-manure',
+        category = 'bio-reactor',
+        enabled = false,
+        energy_required = 0.5,
+        ingredients = {
+            {type = 'item', name = 'worm', amount = 1},
+            {type = 'item', name = 'guts', amount = 2},
+        },
+        results = {
+            {type = 'item', name = 'manure', amount = 1},
+        },
     }}
 end
 
@@ -136,7 +223,11 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {consumption = 0.25, speed = 0, productivity = 0.2, type = 'module-effects'}
+                {type = 'unlock-recipe', recipe = 'worm'},
+                {type = 'unlock-recipe', recipe = 'worm-stone'},
+                {type = 'unlock-recipe', recipe = 'worm-wood'},
+                {type = 'unlock-recipe', recipe = 'worm-coarse'},
+                {type = 'unlock-recipe', recipe = 'worm-manure'},
             }
         }
     }
