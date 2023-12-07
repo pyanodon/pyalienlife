@@ -129,8 +129,8 @@ if data and not yafc_turd_integration then
         enabled = false,
         energy_required = 2,
         ingredients = {
-            {type = 'item', name = 'worm', amount = 2},
-            {type = 'item', name = 'wood', amount = 1},
+            {type = 'item', name = 'worm', amount = 1},
+            {type = 'item', name = 'wood', amount = 2},
         },
         results = {
             {type = 'item', name = 'wood-seeds', amount = 2},
