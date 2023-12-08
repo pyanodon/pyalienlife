@@ -71,49 +71,37 @@ ITEM {
     stack_size = 100
 }
 
-local pipe = table.deepcopy(data.raw['heat-pipe']['heat-pipe'])
-pipe.name = 'vessel'
-pipe.minable = {mining_time = 0.2, result = 'vessel'}
-pipe.fast_replaceable_group = 'vessel'
-pipe.next_upgrade = nil
-pipe.heat_buffer = {
-    max_temperature = 0,
-    default_temperature = 0,
-    min_working_temperature = 0,
-    max_transfer = '1W',
-    specific_heat = '1W',
-    connections = {
-        {
-            direction = 0,
-            position = {
-                0,
-                0
-            }
-        },
-        {
-            direction = 2,
-            position = {
-                0,
-                0
-            }
-        },
-        {
-            direction = 4,
-            position = {
-                0,
-                0
-            }
-        },
-        {
-            direction = 6,
-            position = {
-                0,
-                0
+data:extend{{
+    name = 'vessel',
+    type = 'simple-entity-with-owner',
+    icons = data.raw.item['vessel'].icons,
+    icon_size = 64,
+    flags = {'placeable-neutral', 'player-creation'},
+    minable = {mining_time = 0.2, result = 'vessel'},
+    max_health = 100,
+    corpse = 'small-remnants',
+    collision_box = table.deepcopy(data.raw['pipe']['pipe'].collision_box),
+    selection_box = table.deepcopy(data.raw['pipe']['pipe'].selection_box),
+    collision_mask = {vessel_collision_mask},
+    animations = {
+        layers = {
+            {
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-straight-horizontal.png',
+                priority = 'high',
+                width = 640/5,
+                height = 768/6,
+                frame_count = 5*6,
+                line_length = 5,
+                shift = {0, 0},
+                scale = 0.35,
+                animation_speed = 0.3
             }
         }
     },
-}
-pipe.collision_mask = {vessel_collision_mask}
+    fast_replaceable_group = 'vessel',
+    next_upgrade = nil,
+    vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},
+}}
 
 local underground_pipe = table.deepcopy(data.raw['pipe-to-ground']['pipe-to-ground'])
 underground_pipe.name = 'vessel-to-ground'
@@ -134,8 +122,7 @@ underground_pipe.fluid_box = {
     }
 }
 underground_pipe.collision_mask = {vessel_collision_mask}
-
-data:extend{pipe, underground_pipe}
+data:extend{underground_pipe}
 
 data:extend{{
     name = 'vessel-to-ground-heat-connection',

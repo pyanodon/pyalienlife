@@ -4,6 +4,38 @@ local TO_GROUND_CONNECTION = {{
 	direction = defines.direction.north
 }}
 
+local VESSEL = 'vessel'
+local VESSEL_CONNECTION = {
+	{
+		direction = 0,
+		position = {
+			0,
+			0
+		}
+	},
+	{
+		direction = 2,
+		position = {
+			0,
+			0
+		}
+	},
+	{
+		direction = 4,
+		position = {
+			0,
+			0
+		}
+	},
+	{
+		direction = 6,
+		position = {
+			0,
+			0
+		}
+	}
+}
+
 function Biofluid.network_positions(surface_index)
 	local network_positions = global.network_positions[surface_index]
 	if not network_positions then
@@ -28,7 +60,9 @@ end
 
 function Biofluid.find_heat_connections(entity)
 	local heat_prototype
-	if entity.type == TO_GROUND then
+	if entity.name == VESSEL then
+		heat_prototype = VESSEL_CONNECTION
+	elseif entity.type == TO_GROUND then
 		heat_prototype = TO_GROUND_CONNECTION
 	else
 		local buffer = entity.prototype.heat_buffer_prototype or entity.prototype.heat_energy_source_prototype
