@@ -92,6 +92,13 @@ if data and not yafc_turd_integration then
     }}
 
     data:extend{{
+        type = 'item-subgroup',
+        name = 'py-alienlife-worm',
+        group = 'py-alienlife',
+        order = 'bc'
+    }}
+
+    data:extend{{
         type = 'recipe',
         name = 'worm',
         category = 'biofactory',
@@ -105,12 +112,14 @@ if data and not yafc_turd_integration then
             {type = 'item', name = 'powdered-biomass', amount = 1},
         },
         main_product = 'worm',
+        subgroup = 'py-alienlife-worm',
+        order = 'a'
     }}
 
     data:extend{{
         type = 'recipe',
         name = 'worm-stone',
-        category = 'bio-reactor',
+        category = 'agitator',
         enabled = false,
         energy_required = 1,
         ingredients = {
@@ -120,12 +129,14 @@ if data and not yafc_turd_integration then
         results = {
             {type = 'item', name = 'stone', amount = 4},
         },
+        subgroup = 'py-alienlife-worm',
+        order = 'ba'
     }}
 
     data:extend{{
         type = 'recipe',
         name = 'worm-wood',
-        category = 'bio-reactor',
+        category = 'agitator',
         enabled = false,
         energy_required = 2,
         ingredients = {
@@ -135,12 +146,14 @@ if data and not yafc_turd_integration then
         results = {
             {type = 'item', name = 'wood-seeds', amount = 2},
         },
+        subgroup = 'py-alienlife-worm',
+        order = 'bb'
     }}
 
     data:extend{{
         type = 'recipe',
         name = 'worm-coarse',
-        category = 'bio-reactor',
+        category = 'agitator',
         enabled = false,
         energy_required = 3,
         ingredients = {
@@ -150,22 +163,47 @@ if data and not yafc_turd_integration then
         results = {
             {type = 'item', name = 'coarse', amount = 2},
         },
+        subgroup = 'py-alienlife-worm',
+        order = 'bc'
     }}
 
     data:extend{{
         type = 'recipe',
         name = 'worm-manure',
-        category = 'bio-reactor',
+        category = 'agitator',
         enabled = false,
         energy_required = 4,
         ingredients = {
             {type = 'item', name = 'worm', amount = 1},
-            {type = 'item', name = 'guts', amount = 2},
+            {type = 'item', name = 'guts', amount = 5},
         },
         results = {
             {type = 'item', name = 'manure', amount = 1},
         },
+        subgroup = 'py-alienlife-worm',
+        order = 'bd'
     }}
+
+    for i, recipe in pairs({
+        table.deepcopy(data.raw.recipe['compost-plant-mk01']),
+        table.deepcopy(data.raw.recipe['compost-plant-mk02']),
+        table.deepcopy(data.raw.recipe['compost-plant-mk03']),
+        table.deepcopy(data.raw.recipe['compost-plant-mk04']),
+    }) do
+        recipe.name = recipe.name .. '-with-pump'
+		FUN.add_ingredient(recipe, {type = 'item', name = 'offshore-pump', amount = 2*i})
+        data:extend{recipe}
+    end
+
+    local fine_powdered_biomass = table.deepcopy(data.raw.recipe['fine-powdered-biomass'])
+    fine_powdered_biomass.name = 'fine-powdered-biomass-irragration'
+    FUN.add_ingredient(fine_powdered_biomass, {type = 'fluid', name = 'water', amount = 250})
+    fine_powdered_biomass.category = 'washer'
+    fine_powdered_biomass.energy_required = 3
+    fine_powdered_biomass.main_product = 'steam'
+    FUN.add_result(fine_powdered_biomass, {type = 'fluid', name = 'steam', amount = 250, temperature = 250})
+    FUN.add_result(fine_powdered_biomass, {type = 'item', name = 'dried-biomass', amount = 12})
+    data:extend{fine_powdered_biomass}
 end
 
 return {
@@ -198,7 +236,12 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {consumption = 0.0, speed = 0.15, productivity = -0.12, type = 'module-effects'}
+                {consumption = 0.45, speed = 0.3, productivity = 0, type = 'module-effects'},
+                {type = 'recipe-replacement', old = 'fine-powdered-biomass', new = 'fine-powdered-biomass-irragration'},
+                {type = 'recipe-replacement', old = 'compost-plant-mk01', new = 'compost-plant-mk01-with-pump'},
+                {type = 'recipe-replacement', old = 'compost-plant-mk02', new = 'compost-plant-mk02-with-pump'},
+                {type = 'recipe-replacement', old = 'compost-plant-mk03', new = 'compost-plant-mk03-with-pump'},
+                {type = 'recipe-replacement', old = 'compost-plant-mk04', new = 'compost-plant-mk04-with-pump'},
             },
         },
         {
