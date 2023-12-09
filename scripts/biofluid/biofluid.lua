@@ -66,7 +66,7 @@ Biofluid.events.on_built = function(event)
 	elseif connection_type == Biofluid.PROVIDER then
 		entity.operable = false
 	end
-	Biofluid.built_pipe(entity)
+	Biofluid.built_pipe(entity, true)
 end
 
 function Biofluid.update_bioport_animation(bioport_data)

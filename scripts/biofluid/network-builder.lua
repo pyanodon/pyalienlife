@@ -86,7 +86,7 @@ function Biofluid.find_heat_connections(entity)
 		local x = math.floor(connection_x + position.x)
 		local y = math.floor(connection_y + position.y)
 		local offset = Biofluid.heat_connection_facing_offset(entity.direction, connection)
-		if offset then connections[#connections+1] = {x = x, y = y, facing_x = x + offset[1], facing_y = y + offset[2]} end
+		if offset then connections[#connections+1] = {x = x, y = y, facing_x = x + offset[1], facing_y = y + offset[2], direction = connection.direction} end
 	end
 	return connections
 end
@@ -153,7 +153,7 @@ function Biofluid.find_nearby_pipes(entity, connections)
 end
 
 -- CONSTRUCTIVE
-function Biofluid.built_pipe(entity)
+function Biofluid.built_pipe(entity, update_graphics)
 	local connections = Biofluid.find_heat_connections(entity)
 	if #connections == 0 then error() end
 	local network_positions = Biofluid.network_positions(entity.surface_index)
@@ -187,8 +187,60 @@ function Biofluid.built_pipe(entity)
 		end
 	end
 
+	if update_graphics then
+		Biofluid.update_graphics(entity)
+		for _, pipe in pairs(nearby_pipes) do
+			pipe = pipe.entity
+			if pipe.name == VESSEL then
+				Biofluid.update_graphics(pipe)
+			end
+		end
+	end
+
 	Biofluid.add_to_network(network_id, entity, connections)
 	return network_id
+end
+
+local animations = {
+	['N'] = 1,
+	['E'] = 2,
+	['S'] = 3,
+	['W'] = 2,
+	['NE'] = 5,
+	['ES'] = 6,
+	['SW'] = 7,
+	['NW'] = 8,
+	['NS'] = 3,
+	['EW'] = 4,
+	['NEW'] = 9,
+	['NES'] = 10,
+	['ESW'] = 11,
+	['NSW'] = 12,
+	['NESW'] = 13
+}
+
+local directions = {
+	[0] = 'N',
+	[2] = 'E',
+	[4] = 'S',
+	[6] = 'W'
+}
+
+function Biofluid.update_graphics(entity)
+	local connections = Biofluid.find_heat_connections(entity)
+	local network_positions = Biofluid.network_positions(entity.surface_index)
+	local animation_index = ''
+	for _, connection in pairs(connections) do
+		local facing_x, facing_y = connection.facing_x, connection.facing_y
+		local x, y = connection.x, connection.y
+		local network_position = (network_positions[facing_x] or {})[facing_y]
+		if not network_position then goto continue end
+		local other_pipe = network_position.entity
+		if not other_pipe then goto continue end
+		animation_index = animation_index .. directions[connection.direction]
+		::continue::
+	end
+	entity.graphics_variation = animations[animation_index] or 1
 end
 
 function Biofluid.join_networks(new_id, old_id, network_positions)
@@ -305,6 +357,13 @@ function Biofluid.destroyed_pipe(entity)
 	elseif #nearby_pipes > 1 then
 		Biofluid.split_network(network_id, network_positions)
 	end
+
+	for _, pipe in pairs(nearby_pipes) do
+		pipe = pipe.entity
+		if pipe.name == VESSEL then
+			Biofluid.update_graphics(pipe)
+		end
+	end
 end
 
 function Biofluid.split_network(network_id, network_positions)
@@ -324,7 +383,7 @@ function Biofluid.split_network(network_id, network_positions)
 		end
 	end
 
-	for _, entity in pairs(entities) do Biofluid.built_pipe(entity) end
+	for _, entity in pairs(entities) do Biofluid.built_pipe(entity, false) end
 end
 
 function Biofluid.delete_network(network_id)
@@ -366,5 +425,5 @@ function Biofluid.rotated_pipe(entity, previous_direction)
 	entity.direction = previous_direction
 	Biofluid.destroyed_pipe(entity)
 	entity.direction = new_direction
-	Biofluid.built_pipe(entity)
+	Biofluid.built_pipe(entity, true)
 end

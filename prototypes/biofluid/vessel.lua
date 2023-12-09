@@ -71,33 +71,65 @@ ITEM {
     stack_size = 100
 }
 
+local variants = {
+    'straight-base-vertical',
+    'straight-base-horizontal',
+    'straight-vertical',
+    'straight-horizontal',
+    'curved-right-up',
+    'curved-right-down',
+    'curved-left-down',
+    'curved-left-up',
+    'junction-down',
+    'junction-left',
+    'junction-up',
+    'junction-right',
+    'full-junction',
+}
+
+local animations = {}
+for _, variant in pairs(variants) do
+    animations[#animations+1] = {
+        layers = {
+            {
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-'..variant..'.png',
+                priority = 'high',
+                width = 640/5/2,
+                height = 768/6/2,
+                frame_count = 5*6,
+                line_length = 5,
+                shift = {0, 0},
+                scale = 0.335*2,
+                animation_speed = 0.3,
+                hr_version = {
+                    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-'..variant..'.png',
+                    priority = 'high',
+                    width = 640/5,
+                    height = 768/6,
+                    frame_count = 5*6,
+                    line_length = 5,
+                    shift = {0, 0},
+                    scale = 0.335,
+                    animation_speed = 0.3
+                }
+            }
+        }
+    }
+end
+
 data:extend{{
     name = 'vessel',
     type = 'simple-entity-with-owner',
     icons = data.raw.item['vessel'].icons,
     icon_size = 64,
-    flags = {'placeable-neutral', 'player-creation'},
+    flags = {'placeable-neutral', 'player-creation', 'not-rotatable'},
     minable = {mining_time = 0.2, result = 'vessel'},
     max_health = 100,
     corpse = 'small-remnants',
     collision_box = table.deepcopy(data.raw['pipe']['pipe'].collision_box),
     selection_box = table.deepcopy(data.raw['pipe']['pipe'].selection_box),
     collision_mask = {vessel_collision_mask},
-    animations = {
-        layers = {
-            {
-                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-straight-horizontal.png',
-                priority = 'high',
-                width = 640/5,
-                height = 768/6,
-                frame_count = 5*6,
-                line_length = 5,
-                shift = {0, 0},
-                scale = 0.35,
-                animation_speed = 0.3
-            }
-        }
-    },
+    animations = animations,
     fast_replaceable_group = 'vessel',
     next_upgrade = nil,
     vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},
