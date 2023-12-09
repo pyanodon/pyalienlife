@@ -74,7 +74,7 @@ ITEM {
 local variants = {
     'straight-base-vertical',
     'straight-base-horizontal',
-    'straight-vertical',
+    'straight-base-vertical',
     'straight-horizontal',
     'curved-right-up',
     'curved-right-down',
@@ -116,6 +116,41 @@ for _, variant in pairs(variants) do
         }
     }
 end
+
+local gap = {
+    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-straight-vertical.png',
+    priority = 'high',
+    width = 640/5/2,
+    height = 768/6/2,
+    frame_count = 5*6,
+    line_length = 5,
+    shift = util.by_pixel(0, 8),
+    scale = 0.335*2,
+    animation_speed = 0.3,
+    hr_version = {
+        filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-straight-vertical.png',
+        priority = 'high',
+        width = 640/5,
+        height = 768/6,
+        frame_count = 5*6,
+        line_length = 5,
+        shift = util.by_pixel(0, 8),
+        scale = 0.335,
+        animation_speed = 0.3
+    }
+}
+
+local function fix_gap(index)
+    animations[index].layers[2] = gap
+end
+
+fix_gap(3)
+fix_gap(6)
+fix_gap(7)
+fix_gap(10)
+fix_gap(11)
+fix_gap(12)
+fix_gap(13)
 
 data:extend{{
     name = 'vessel',
