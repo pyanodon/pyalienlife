@@ -44,11 +44,8 @@ RECIPE {
 ITEM {
     type = 'item',
     name = 'vessel',
-    icons = {{
-        icon = '__pyindustry__/graphics/icons/niobium-pipe.png',
-        icon_size = 32,
-        tint = {0.5, 0.5, 1}
-    }},
+    icon = '__pyalienlifegraphics2__/graphics/icons/vessel.png',
+    icon_size = 64,
     flags = {},
     subgroup = 'py-alienlife-biofluid-network',
     order = 'da',
@@ -155,7 +152,7 @@ fix_gap(13)
 data:extend{{
     name = 'vessel',
     type = 'simple-entity-with-owner',
-    icons = data.raw.item['vessel'].icons,
+    icon = data.raw.item['vessel'].icon,
     icon_size = 64,
     flags = {'placeable-neutral', 'player-creation', 'not-rotatable'},
     minable = {mining_time = 0.2, result = 'vessel'},
