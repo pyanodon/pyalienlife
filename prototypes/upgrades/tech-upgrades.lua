@@ -4,7 +4,7 @@ local tech_upgrades = {
     require('prototypes/upgrades/bioprinting'),
     require('prototypes/upgrades/biofactory'),
     require('prototypes/upgrades/compost'),
-    --require('prototypes/upgrades/creature'),
+    require('prototypes/upgrades/creature'),
     require('prototypes/upgrades/incubator'),
     require('prototypes/upgrades/slaughterhouse'),
     require('prototypes/upgrades/arthurian'),

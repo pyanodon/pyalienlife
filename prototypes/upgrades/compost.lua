@@ -50,34 +50,18 @@ if data and not yafc_turd_integration then
 
     data:extend{{
         type = 'recipe',
-        name = 'free-manure-bacteria',
-        category = 'compost',
-        enabled = false,
-        energy_required = 1,
+        name = 'cheap-retrovirus',
+        category = 'incubator',
         ingredients = {
-            {type = 'item', name = 'biomass', amount = 4},
-            {type = 'fluid', name = 'water', amount = 60},
+            {'retrovirus', 1},
+            {'biomass', 2},
+            {type = 'fluid', name = 'hot-air', amount = 30},
         },
         results = {
-            {type = 'fluid', name = 'manure-bacteria', amount = 60},
+            {type = 'item', name = 'retrovirus', amount = 2, catalyst_amount = 1},
         },
-        main_product = 'manure-bacteria',
-    }}
-
-    data:extend{{
-        type = 'recipe',
-        name = 'manure-bacteria-to-manure',
-        category = 'bio-reactor',
+        energy_required = 5,
         enabled = false,
-        energy_required = 2,
-        ingredients = {
-            {type = 'fluid', name = 'manure-bacteria', amount = 60},
-        },
-        results = {
-            {type = 'item', name = 'manure', amount = 1},
-            {type = 'fluid', name = 'water', amount = 50},
-        },
-        main_product = 'manure',
     }}
 
     data:extend{{
@@ -254,8 +238,7 @@ return {
                 {type = 'machine-replacement', old = 'compost-plant-mk02', new = 'compost-plant-mk02-turd'},
                 {type = 'machine-replacement', old = 'compost-plant-mk03', new = 'compost-plant-mk03-turd'},
                 {type = 'machine-replacement', old = 'compost-plant-mk04', new = 'compost-plant-mk04-turd'},
-                {type = 'unlock-recipe', recipe = 'free-manure-bacteria'},
-                {type = 'unlock-recipe', recipe = 'manure-bacteria-to-manure'},
+                {type = 'unlock-recipe', recipe = 'cheap-retrovirus'},
                 {recipe = 'sweet-syrup', type = 'unlock-recipe', also_unlocked_by_techs = true},
                 {recipe = 'a-molasse', type = 'unlock-recipe', also_unlocked_by_techs = true},
             }

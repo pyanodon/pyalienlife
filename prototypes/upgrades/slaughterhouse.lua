@@ -80,7 +80,7 @@ if data and not yafc_turd_integration then
             table.insert(effects[path], {old = recipe_name, new = recipe.name, type = 'recipe-replacement'})
         end
     end
-else
+elseif script then
     for _, path in pairs{'laser', 'music', 'lard'} do
         for _, recipe_name in pairs(rendering_recipes) do
             table.insert(effects[path], {old = recipe_name, new = recipe_name .. '-' .. path, type = 'recipe-replacement'})

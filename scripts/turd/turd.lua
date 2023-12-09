@@ -76,6 +76,12 @@ local function update_confirm_button(element, player, researched_technologies)
 	end
 end
 
+local function defunctionize_effect_table(sub_tech)
+	if type(sub_tech.effects) == 'function' then
+		sub_tech.effects = sub_tech.effects()
+	end
+end
+
 local function create_turd_page(gui, player)
 	local textbox_frame = gui.add{type = 'frame', direction = 'vertical', name = 'textbox_frame'}
     textbox_frame.style.horizontally_stretchable = true
@@ -143,6 +149,7 @@ local function create_turd_page(gui, player)
 			local effects_scroll_pane = info_flow.add{type = 'scroll-pane', style = 'scroll_pane_under_subheader', vertical_scroll_policy = 'never', horizontal_scroll_policy = 'dont-show-but-allow-scrolling'}
 			local effects_flow = effects_scroll_pane.add{type = 'flow', direction = 'horizontal'}
 			effects_flow.style.vertical_align = 'center'
+			defunctionize_effect_table(sub_tech)
 			for _, effect in pairs(sub_tech.effects) do
 				if effect.type == 'module-effects' then
 					local sprite = effects_flow.add{type = 'choose-elem-button', elem_type = 'item', style = 'transparent_slot'}
@@ -353,6 +360,7 @@ local function apply_turd_bonus(force, master_tech_name, tech_upgrade, assemblin
 
 	local recipes = force.recipes
 	local item_prototypes = game.item_prototypes
+	defunctionize_effect_table(sub_tech)
 	for _, effect in pairs(sub_tech.effects) do
 		if effect.type == 'unlock-recipe' then
 			recipes[effect.recipe].enabled = true
@@ -380,6 +388,7 @@ end
 
 local function unselect_recipes_for_subtech(sub_tech, force, assembling_machine_list)
 	local recipes = force.recipes
+	defunctionize_effect_table(sub_tech)
 	for _, effect in pairs(sub_tech.effects) do
 		if (effect.type == 'unlock-recipe' or effect.type == 'recipe-replacement') and not effect.also_unlocked_by_techs then
 			local recipe = recipes[effect.new or effect.recipe]
@@ -465,18 +474,6 @@ Turd.events.on_init = function()
 	global.turd_machine_replacements = global.turd_machine_replacements or {}
 end
 
-local function respec_all(force)
-	local assembling_machine_list = find_all_assembling_machines(force)
-	for _, tech_upgrade in pairs(tech_upgrades) do
-		for _, sub_tech in pairs(tech_upgrade.sub_techs) do
-			unselect_recipes_for_subtech(sub_tech, force, assembling_machine_list)
-		end
-	end
-
-	global.turd_bonuses[force.index] = {}
-	destroy_all_hidden_beacons(force)
-end
-
 local function starts_with(str, start)
 	return str:sub(1, #start) == start
 end
@@ -491,9 +488,6 @@ local function on_researched(event)
 		global.turd_bonuses[force_index][technology.name] = NOT_SELECTED
 	elseif starts_with(technology.name, 'turd-partial-respec') then
 		global.turd_reset_remaining[force_index] = (global.turd_reset_remaining[force_index] or 0) + 1
-		return
-	elseif starts_with(technology.name, 'turd-respec') and game.tick ~= 0 then
-		respec_all(force)
 		return
 	end
 

@@ -118,6 +118,13 @@ local prototypes = {
 	}
 }
 
+prototypes['caravan-turd'] = prototypes['caravan']
+prototypes['flyavan-turd'] = prototypes['flyavan']
+prototypes['nukavan-turd'] = prototypes['nukavan']
+prototypes['caravan-turd'].placeable_by = 'caravan-turd'
+prototypes['flyavan-turd'].placeable_by = 'flyavan-turd'
+prototypes['nukavan-turd'].placeable_by = 'nukavan-turd'
+
 local function get_outpost_inventory(outpost)
 	local type = outpost.type
 	if type == 'character' then
