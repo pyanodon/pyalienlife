@@ -135,4 +135,5 @@ RECIPE {
     results = {
         {type = 'item', name = 'native-flora', amount = tile_count * 7},
     },
+    ignore_for_dependencies = true,
 }:add_unlock("mega-farm-bioreserve")
