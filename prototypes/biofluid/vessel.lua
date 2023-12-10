@@ -56,11 +56,8 @@ ITEM {
 ITEM {
     type = 'item',
     name = 'vessel-to-ground',
-    icons = {{
-        icon = '__pyindustry__/graphics/icons/niobium-pipe-to-ground.png',
-        icon_size = 32,
-        tint = {0.5, 0.5, 1}
-    }},
+    icon = '__pyalienlifegraphics2__/graphics/icons/vessel-to-ground.png',
+    icon_size = 64,
     flags = {},
     subgroup = 'py-alienlife-biofluid-network',
     order = 'db',
@@ -168,11 +165,46 @@ data:extend{{
     vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},
 }}
 
+local ug_pipe_animation = {}
+local ug_pipe_integration = {}
+for cardinal, direction in pairs{['north'] = 'up', ['east'] = 'right', ['south'] = 'down', ['west'] = 'left'} do
+    ug_pipe_animation[#ug_pipe_animation + 1] = {
+        layers = {
+            {
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-to-ground-' .. direction .. '.png',
+                priority = 'high',
+                width = 640/5/2,
+                height = 768/6/2,
+                frame_count = 5*6,
+                line_length = 5,
+                shift = {0, 0},
+                scale = 0.335*2,
+                animation_speed = 0.3,
+                hr_version = {
+                    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-to-ground-' .. direction .. '.png',
+                    priority = 'high',
+                    width = 640/5,
+                    height = 768/6,
+                    frame_count = 5*6,
+                    line_length = 5,
+                    shift = {0, 0},
+                    scale = 0.335,
+                    animation_speed = 0.3
+                }
+            }
+        }
+    }
+    ug_pipe_integration[cardinal] = ug_pipe_animation[#ug_pipe_animation]
+end
+
 local underground_pipe = table.deepcopy(data.raw['pipe-to-ground']['pipe-to-ground'])
 underground_pipe.name = 'vessel-to-ground'
 underground_pipe.minable = {mining_time = 0.2, result = 'vessel-to-ground'}
 underground_pipe.fast_replaceable_group = 'vessel'
 underground_pipe.next_upgrade = nil
+underground_pipe.icon = data.raw.item['vessel-to-ground'].icon
+underground_pipe.icon_size = 64
+underground_pipe.icon_mipmaps = nil
 underground_pipe.fluid_box = {
     base_area = 0.01,
     base_level = 1999,
@@ -187,40 +219,34 @@ underground_pipe.fluid_box = {
     }
 }
 underground_pipe.collision_mask = {vessel_collision_mask}
+local function blank()
+	return {
+		filename = '__core__/graphics/empty.png',
+		priority = 'high',
+		width = 1,
+		height = 1,
+	}
+end
+underground_pipe.pictures = {
+    up = blank(),
+    down = blank(),
+    left = blank(),
+    right = blank(),
+}
+underground_pipe.integration_patch = ug_pipe_integration
+underground_pipe.integration_patch_render_layer = 'lower-object'
 data:extend{underground_pipe}
 
 data:extend{{
     name = 'vessel-to-ground-heat-connection',
-    type = 'furnace',
-    bottleneck_ignore = true,
-    icon = underground_pipe.icon or '__base__/graphics/icons/pipe-to-ground.png',
-    icon_size = underground_pipe.icon_size or 64,
+    type = 'simple-entity-with-owner',
+    icon = underground_pipe.icon,
+    icon_size = underground_pipe.icon_size,
     localised_name = {'entity-name.vessel-to-ground'},
     localised_description = {'entity-description.vessel-to-ground'},
     flags = {'hidden', 'placeable-neutral', 'no-automated-item-insertion', 'no-automated-item-removal', 'not-flammable'},
     collision_box = underground_pipe.collision_box,
     collision_mask = {},
-    show_recipe_icon = false,
-    crafting_speed = 1,
-    result_inventory_size = 0,
-    source_inventory_size = 0,
-    crafting_categories = {'biofluid'},
-    energy_source = {
-        connections = {
-          {
-            direction = 0,
-            position = {0, 0}
-          }
-        },
-        max_temperature = 0,
-        default_temperature = 0,
-        min_working_temperature = 0,
-        max_transfer = '1W',
-        specific_heat = '1W',
-        type = 'heat',
-        pipe_covers = require('__pyalienlife__/prototypes/biofluid/pipe-cover'),
-        heat_pipe_covers = require('__pyalienlife__/prototypes/biofluid/pipe-cover'),
-    },
-    energy_usage = '1W',
-    show_recipe_icon_on_map = false,
+    render_layer = 'lower-object-above-shadow',
+    animations = ug_pipe_animation,
 }}

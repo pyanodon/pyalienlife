@@ -105,11 +105,11 @@ function Biofluid.spawn_underground_pipe_heat_connection(underground_data)
 	end
 	local entity = underground_data.entity
 	local heat_connection = entity.surface.create_entity{
-		direction = entity.direction,
 		name = 'vessel-to-ground-heat-connection',
 		force = entity.force_index,
 		position = entity.position
 	}
+	heat_connection.graphics_variation = entity.direction / 2 + 1
 	heat_connection.destructible = false
 	heat_connection.minable = false
 	heat_connection.operable = false

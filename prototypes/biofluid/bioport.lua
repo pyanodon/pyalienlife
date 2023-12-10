@@ -143,8 +143,6 @@ ENTITY {
     integration_patch_render_layer = 'higher-object-under'
 }
 
-data.raw['utility-sprites'].default.heat_exchange_indication.filename = '__pyalienlifegraphics2__/graphics/entity/bots/connection-icon.png'
-
 local function random_order(l)
 	local order = {}
 	local i = 1
