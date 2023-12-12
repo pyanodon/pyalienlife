@@ -81,6 +81,12 @@ local variants = {
     'full-junction',
 }
 
+local glow_translations = {
+    ['straight-horizontal'] = 'straight-base-horizontal',
+    ['junction-up'] = 'junction-down',
+    ['junction-down'] = 'junction-up',
+}
+
 local animations = {}
 for _, variant in pairs(variants) do
     animations[#animations+1] = {
@@ -105,6 +111,30 @@ for _, variant in pairs(variants) do
                     shift = {0, 0},
                     scale = 0.335,
                     animation_speed = 0.3
+                }
+            },
+            {
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-'.. (glow_translations[variant] or variant) ..'-glow.png',
+                priority = 'high',
+                width = 640/5/2,
+                height = 768/6/2,
+                frame_count = 5*6,
+                line_length = 5,
+                shift = {0, 0},
+                scale = 0.335*2,
+                animation_speed = 0.3,
+                draw_as_glow = true,
+                hr_version = {
+                    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-'.. (glow_translations[variant] or variant) ..'-glow.png',
+                    priority = 'high',
+                    width = 640/5,
+                    height = 768/6,
+                    frame_count = 5*6,
+                    line_length = 5,
+                    shift = {0, 0},
+                    scale = 0.335,
+                    animation_speed = 0.3,
+                    draw_as_glow = true
                 }
             }
         }
@@ -134,8 +164,34 @@ local gap = {
     }
 }
 
+local gap_glow = {
+    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-straight-vertical-glow.png',
+    priority = 'high',
+    width = 640/5/2,
+    height = 768/6/2,
+    frame_count = 5*6,
+    line_length = 5,
+    shift = util.by_pixel(0, 8),
+    scale = 0.335*2,
+    animation_speed = 0.3,
+    draw_as_glow = true,
+    hr_version = {
+        filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-straight-vertical-glow.png',
+        priority = 'high',
+        width = 640/5,
+        height = 768/6,
+        frame_count = 5*6,
+        line_length = 5,
+        shift = util.by_pixel(0, 8),
+        scale = 0.335,
+        animation_speed = 0.3,
+        draw_as_glow = true,
+    }
+}
+
 local function fix_gap(index)
-    animations[index].layers[2] = gap
+    table.insert(animations[index].layers, 2, gap)
+    table.insert(animations[index].layers, gap_glow)
 end
 
 fix_gap(3)
@@ -190,6 +246,54 @@ for cardinal, direction in pairs{['north'] = 'up', ['east'] = 'right', ['south']
                     shift = {0, 0},
                     scale = 0.335,
                     animation_speed = 0.3
+                }
+            },
+            {
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-to-ground-' .. direction .. '-glow.png',
+                priority = 'high',
+                width = 640/5/2,
+                height = 768/6/2,
+                frame_count = 5*6,
+                line_length = 5,
+                shift = {0, 0},
+                scale = 0.335*2,
+                animation_speed = 0.3,
+                draw_as_glow = true,
+                hr_version = {
+                    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-to-ground-' .. direction .. '-glow.png',
+                    priority = 'high',
+                    width = 640/5,
+                    height = 768/6,
+                    frame_count = 5*6,
+                    line_length = 5,
+                    shift = {0, 0},
+                    scale = 0.335,
+                    animation_speed = 0.3,
+                    draw_as_glow = true,
+                }
+            },
+            {
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-to-ground-' .. direction .. '-shadow.png',
+                priority = 'high',
+                width = 640/5/2,
+                height = 768/6/2,
+                frame_count = 5*6,
+                line_length = 5,
+                shift = {0, 0},
+                scale = 0.335*2,
+                animation_speed = 0.3,
+                draw_as_shadow = true,
+                hr_version = {
+                    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-to-ground-' .. direction .. '-shadow.png',
+                    priority = 'high',
+                    width = 640/5,
+                    height = 768/6,
+                    frame_count = 5*6,
+                    line_length = 5,
+                    shift = {0, 0},
+                    scale = 0.335,
+                    animation_speed = 0.3,
+                    draw_as_shadow = true,
                 }
             }
         }

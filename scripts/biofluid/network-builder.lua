@@ -202,6 +202,7 @@ function Biofluid.built_pipe(entity, update_graphics)
 end
 
 local animations = {
+	[''] = 1,
 	['N'] = 1,
 	['E'] = 2,
 	['S'] = 3,
