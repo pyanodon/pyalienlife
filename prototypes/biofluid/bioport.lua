@@ -120,6 +120,25 @@ ENTITY {
                 frame_count = 1
             },
             {
+                filename = '__pyalienlifegraphics2__/graphics/entity/bots/roboport/glow.png',
+                priority = 'extra-high',
+                width = 175,
+                height = 182,
+                shift = util.by_pixel(16.75, -38.75 - 32),
+                draw_as_glow = true,
+                hr_version = {
+                    filename = '__pyalienlifegraphics2__/graphics/entity/bots/roboport/hr-glow.png',
+                    priority = 'extra-high',
+                    width = 351,
+                    height = 365,
+                    shift = util.by_pixel(16.75, -38.75 - 32),
+                    draw_as_glow = true,
+                    scale = 0.5,
+                    frame_count = 1
+                },
+                frame_count = 1
+            },
+            {
                 filename = '__pyalienlifegraphics2__/graphics/entity/bots/roboport/sh.png',
                 priority = 'extra-high',
                 draw_as_shadow = true,
