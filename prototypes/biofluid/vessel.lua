@@ -68,7 +68,7 @@ ITEM {
 local variants = {
     'straight-base-vertical',
     'straight-base-horizontal',
-    'straight-base-vertical',
+    'alone',
     'straight-horizontal',
     'curved-right-up',
     'curved-right-down',
@@ -92,7 +92,7 @@ for _, variant in pairs(variants) do
     animations[#animations+1] = {
         layers = {
             {
-                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-'..variant..'.png',
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-'..(variant=='alone' and 'straight-base-vertical' or variant)..'.png',
                 priority = 'high',
                 width = 640/5/2,
                 height = 768/6/2,
@@ -102,7 +102,7 @@ for _, variant in pairs(variants) do
                 scale = 0.335*2,
                 animation_speed = 0.3,
                 hr_version = {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-'..variant..'.png',
+                    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-'..(variant=='alone' and 'straight-base-vertical' or variant)..'.png',
                     priority = 'high',
                     width = 640/5,
                     height = 768/6,
@@ -136,6 +136,17 @@ for _, variant in pairs(variants) do
                     animation_speed = 0.3,
                     draw_as_glow = true
                 }
+            },
+            {
+                filename = '__core__/graphics/light-small.png',
+                priority = 'high',
+                width = 150,
+                height = 150,
+                shift = {0, 0},
+                frame_count = 1,
+                repeat_count = 30,
+                draw_as_light = true,
+                tint = {0.5, 0.5, 1, 0.4}
             }
         }
     }
@@ -295,6 +306,17 @@ for cardinal, direction in pairs{['north'] = 'up', ['east'] = 'right', ['south']
                     animation_speed = 0.3,
                     draw_as_shadow = true,
                 }
+            },
+            {
+                filename = '__core__/graphics/light-small.png',
+                priority = 'high',
+                width = 150,
+                height = 150,
+                shift = {0, 0},
+                frame_count = 1,
+                repeat_count = 30,
+                draw_as_light = true,
+                tint = {0.5, 0.5, 1, 0.4}
             }
         }
     }
