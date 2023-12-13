@@ -13,6 +13,7 @@ Date: ???
     - added T.U.R.D unselect infinite tech to allow the indecisive to revert a single T.U.R.D selection
     - added a new T.U.R.D: the composter turd. why is it unlocked at military science? don't ask too many questions
     - buffed all three paths of bioprinter turd
+    - buffed all three paths of rennea turd
     - added creature chamber turd (avalible at py science pack 2) credit: soren
     - buffed sap turd path 2 to give resveratrol instead of cellulose
 ---------------------------------------------------------------------------------------------------
