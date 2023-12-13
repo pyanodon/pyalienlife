@@ -108,36 +108,15 @@ function Biofluid.find_underground_neighbour(entity)
 end
 
 function Biofluid.find_nearby_pipes(entity, connections)
-	local force_index = entity.force_index
 	local nearby_pipes = {}
 	local network_ids = {}
-	local network_positions = Biofluid.network_positions(entity.surface_index)
 
 	for _, connection in pairs(connections) do
-		local facing_x, facing_y = connection.facing_x, connection.facing_y
-		local x, y = connection.x, connection.y
-
-		if not network_positions[facing_x] then goto continue end
-		local network_position = network_positions[facing_x][facing_y]
-		if not network_position then goto continue end
-		local is_looking_at_us = false
-		for _, facing in pairs(network_position.facing) do
-			if facing[1] == x and facing[2] == y then
-				is_looking_at_us = true
-				break
-			end
+		local network_position = Biofluid.is_looking_at_us(entity, connection, network_positions)
+		if network_position then
+			nearby_pipes[#nearby_pipes+1] = network_position
+			network_ids[network_position.network_id] = true
 		end
-		if not is_looking_at_us then goto continue end
-		local other_pipe = network_position.entity
-		if not other_pipe then goto continue end
-		if not other_pipe.valid then
-			network_positions[facing_x][facing_y] = nil
-			if not next(network_positions[facing_x]) then network_positions[facing_x] = nil end
-			goto continue
-		end
-		if other_pipe.force_index ~= force_index then goto continue end
-		nearby_pipes[#nearby_pipes+1] = network_position
-		network_ids[network_position.network_id] = true
 		::continue::
 	end
 
@@ -190,10 +169,7 @@ function Biofluid.built_pipe(entity, update_graphics)
 	if update_graphics then
 		Biofluid.update_graphics(entity)
 		for _, pipe in pairs(nearby_pipes) do
-			pipe = pipe.entity
-			if pipe.name == VESSEL then
-				Biofluid.update_graphics(pipe)
-			end
+			Biofluid.update_graphics(pipe.entity)
 		end
 	end
 
@@ -201,47 +177,28 @@ function Biofluid.built_pipe(entity, update_graphics)
 	return network_id
 end
 
-local animations = {
-	[''] = 1,
-	['N'] = 1,
-	['E'] = 2,
-	['S'] = 3,
-	['W'] = 2,
-	['NE'] = 5,
-	['ES'] = 6,
-	['SW'] = 7,
-	['NW'] = 8,
-	['NS'] = 3,
-	['EW'] = 4,
-	['NEW'] = 9,
-	['NES'] = 10,
-	['ESW'] = 11,
-	['NSW'] = 12,
-	['NESW'] = 13
-}
-
-local directions = {
-	[0] = 'N',
-	[2] = 'E',
-	[4] = 'S',
-	[6] = 'W'
-}
-
-function Biofluid.update_graphics(entity)
-	local connections = Biofluid.find_heat_connections(entity)
-	local network_positions = Biofluid.network_positions(entity.surface_index)
-	local animation_index = ''
-	for _, connection in pairs(connections) do
-		local facing_x, facing_y = connection.facing_x, connection.facing_y
-		local x, y = connection.x, connection.y
-		local network_position = (network_positions[facing_x] or {})[facing_y]
-		if not network_position then goto continue end
-		local other_pipe = network_position.entity
-		if not other_pipe then goto continue end
-		animation_index = animation_index .. directions[connection.direction]
-		::continue::
+function Biofluid.is_looking_at_us(entity, connection, network_positions)
+	if not network_positions then
+		network_positions = Biofluid.network_positions(entity.surface_index)
 	end
-	entity.graphics_variation = animations[animation_index] or 1
+	local facing_x, facing_y = connection.facing_x, connection.facing_y
+	local network_position = (network_positions[facing_x] or {})[facing_y]
+	local x, y = connection.x, connection.y
+
+	if not network_position then return nil end
+	local other_pipe = network_position.entity
+	if not other_pipe or not other_pipe.valid then
+		network_positions[facing_x][facing_y] = nil
+		if not next(network_positions[facing_x]) then network_positions[facing_x] = nil end
+		return nil
+	end
+	if other_pipe.force_index ~= entity.force_index then return nil end
+	for _, facing in pairs(network_position.facing) do
+		if facing[1] == x and facing[2] == y then
+			return network_position
+		end
+	end
+	return nil
 end
 
 function Biofluid.join_networks(new_id, old_id, network_positions)
@@ -360,10 +317,7 @@ function Biofluid.destroyed_pipe(entity)
 	end
 
 	for _, pipe in pairs(nearby_pipes) do
-		pipe = pipe.entity
-		if pipe.name == VESSEL then
-			Biofluid.update_graphics(pipe)
-		end
+		Biofluid.update_graphics(pipe.entity)
 	end
 end
 

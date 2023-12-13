@@ -1,3 +1,6 @@
+local TO_GROUND = 'pipe-to-ground'
+local VESSEL = 'vessel'
+
 Biofluid = {}
 Biofluid.events = {}
 
@@ -109,13 +112,14 @@ function Biofluid.spawn_underground_pipe_heat_connection(underground_data)
 		force = entity.force_index,
 		position = entity.position
 	}
-	heat_connection.graphics_variation = entity.direction / 2 + 1
+
 	heat_connection.destructible = false
 	heat_connection.minable = false
 	heat_connection.operable = false
 	heat_connection.active = false
 	heat_connection.rotatable = false
 	underground_data.heat_connection = heat_connection
+	Biofluid.update_graphics(entity)
 end
 
 Biofluid.events.on_player_rotated_entity = function(event)
@@ -665,4 +669,58 @@ Biofluid.events.on_player_fast_transferred = function(event)
 	local bioport_data = global.biofluid_bioports[event.entity.unit_number]
 	if not bioport_data then return end
 	Biofluid.update_bioport_animation(bioport_data)
+end
+
+local animations = {
+	[''] = 1,
+	['N'] = 1,
+	['E'] = 2,
+	['S'] = 3,
+	['W'] = 2,
+	['NE'] = 5,
+	['ES'] = 6,
+	['SW'] = 7,
+	['NW'] = 8,
+	['NS'] = 3,
+	['EW'] = 4,
+	['NEW'] = 9,
+	['NES'] = 10,
+	['ESW'] = 11,
+	['NSW'] = 12,
+	['NESW'] = 13
+}
+
+local directions = {
+	[0] = 'N',
+	[2] = 'E',
+	[4] = 'S',
+	[6] = 'W'
+}
+
+function Biofluid.update_graphics(entity)
+	if entity.type == TO_GROUND then
+		local graphics_variation = entity.direction / 2 + 1
+		if graphics_variation == 3 then
+			local connection = Biofluid.find_heat_connections(entity)[1]
+			if Biofluid.is_looking_at_us(entity, connection) then
+				graphics_variation = 5
+			end
+		end
+		local underground_data = global.biofluid_undergrounds[entity.unit_number]
+		if not underground_data then return end
+		local heat_connection = underground_data.heat_connection
+		if heat_connection and heat_connection.valid then
+			heat_connection.graphics_variation = graphics_variation
+		end
+	elseif entity.name == VESSEL then
+		local connections = Biofluid.find_heat_connections(entity)
+		local network_positions = Biofluid.network_positions(entity.surface_index)
+		local animation_index = ''
+		for _, connection in pairs(connections) do
+			if Biofluid.is_looking_at_us(entity, connection) then
+				animation_index = animation_index .. directions[connection.direction]
+			end
+		end
+		entity.graphics_variation = animations[animation_index] or 1
+	end
 end
