@@ -1,3 +1,6 @@
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
+local MODULE_SLOTS = 6
+
 RECIPE {
     type = "recipe",
     name = "yaedols-culture-mk02",
@@ -44,11 +47,11 @@ ENTITY {
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 5
+        module_slots = MODULE_SLOTS
     },
     allowed_effects = {"speed","productivity",'consumption','pollution'},
     crafting_categories = {"yaedols"},
-    crafting_speed = 0.02,
+    crafting_speed = FUN.farm_speed_derived(MODULE_SLOTS, "yaedols-culture-mk01"),
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

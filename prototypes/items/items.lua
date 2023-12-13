@@ -7257,7 +7257,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "yaed-a",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 10}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "yaedols"
 }
@@ -7277,7 +7277,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "yaed-b",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 12.5}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
  	limitation = {},
  	limitation_message_key = "yaedols"
  }
@@ -7297,7 +7297,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "yaed-c",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 15}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 3}},
  	limitation = {},
  	limitation_message_key = "yaedols"
  }
@@ -7317,7 +7317,7 @@ ITEM {
      subgroup = "py-alienlife-modules",
      order = "yaed-d",
      stack_size = 50,
- 	effect = {pollution = {bonus = 1},speed = {bonus = 17.5}},
+ 	effect = {pollution = {bonus = 1},speed = {bonus = 4}},
  	limitation = {},
  	limitation_message_key = "yaedols"
  }
