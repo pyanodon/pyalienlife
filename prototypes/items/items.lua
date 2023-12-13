@@ -5698,7 +5698,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "m-a",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 0.65}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
 	limitation = {},
 	limitation_message_key = "moss"
 }
@@ -5727,7 +5727,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "m-b",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 1.3}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 2}},
 	limitation = {},
 	limitation_message_key = "moss"
 }
@@ -5756,7 +5756,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "m-c",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 1.95}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 3}},
 	limitation = {},
 	limitation_message_key = "moss"
 }
@@ -5785,7 +5785,7 @@ ITEM {
     subgroup = "py-alienlife-modules",
     order = "m-d",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 2.6}},
+	effect = {pollution = {bonus = 1},speed = {bonus = 4}},
 	limitation = {},
 	limitation_message_key = "moss"
 }
