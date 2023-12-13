@@ -10,6 +10,7 @@ Date: ???
     - fixed that bioprinting stage 2 unlocked both mk1 and mk2 of brain printing. mk1 recipe moved down to bioprinting stage 1
     - moved native flora smart farming down to chemical science
     - standardized moss+yaedols module speed bonuses to +100% +200% +300% +400%. no more weird floating point building crafting speeds
+    - buffed caravan & aerial caravan speed by 40% in order to compensate for previous update
   TURD:
     - added T.U.R.D unselect infinite tech to allow the indecisive to revert a single T.U.R.D selection
     - added a new T.U.R.D: the composter turd. why is it unlocked at military science? don't ask too many questions
