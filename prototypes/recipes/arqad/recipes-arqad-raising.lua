@@ -235,7 +235,6 @@ FUN.autorecipes {
 			results =
 				{
 					{name='arqad', amount_min = 5, amount_max = 10},
-					{name='used-comb', add_amount = 1},
 				},
 			crafting_speed = 120,
 			tech = 'arqad'
@@ -250,7 +249,6 @@ FUN.autorecipes {
 			results =
 				{
 					{name='arqad', amount_min = 8, amount_max = 16},
-					{name='used-comb', add_amount = 1},
 				},
 			crafting_speed = 100,
 			tech = 'arqad-mk02'
@@ -265,7 +263,6 @@ FUN.autorecipes {
 			results =
 				{
 					{name='arqad', amount_min = 13, amount_max = 20},
-					{name='used-comb', add_amount = 1},
 				},
 			crafting_speed = 80,
 			tech = 'arqad-mk03'
@@ -280,7 +277,6 @@ FUN.autorecipes {
 			results =
 				{
 					{name='arqad', amount_min = 17, amount_max = 27},
-					{name='used-comb', add_amount = 1},
 				},
 			crafting_speed = 60,
 			tech = 'arqad-mk04'
