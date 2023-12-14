@@ -8,13 +8,19 @@ Date: ???
     - added a new recipe for cumene+nickel+arthropod blood into organic solvent
     - buffed bioprinting by removing primers from the pluripotent stem cells recipes
     - fixed that bioprinting stage 2 unlocked both mk1 and mk2 of brain printing. mk1 recipe moved down to bioprinting stage 1
-    - moved native flora smart farming down to chemical science 
+    - moved native flora smart farming down to chemical science
+    - standardized moss+yaedols module speed bonuses to +100% +200% +300% +400%. no more weird floating point building crafting speeds
+    - buffed caravan & aerial caravan speed by 40% in order to compensate for previous update
   TURD:
     - added T.U.R.D unselect infinite tech to allow the indecisive to revert a single T.U.R.D selection
     - added a new T.U.R.D: the composter turd. why is it unlocked at military science? don't ask too many questions
     - buffed all three paths of bioprinter turd
-    - added creature chamber turd (avalible at py science pack 2) credit: soren
+    - buffed all three paths of rennea turd
+    - buffed all three paths of arthurian turd (path 1: abacus crafting time halfed, prod allowed in abacus recipe, prod module boost increased 15% -> 25%) (path 2: now also removes bedding from egg recipes & speeds egg recipes by 2x) (path 3: agar amount increased from 2 -> 5)
+    - buffed atomizer turd path 2; cognition-osteochain requirement reduced from 5 -> 2
     - buffed sap turd path 2 to give resveratrol instead of cellulose
+    - added creature chamber turd (avalible at py science pack 2) credit: soren
+    - reworked scrondrix turd path 1 & 2
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.12
 Date: 2023-11-22
