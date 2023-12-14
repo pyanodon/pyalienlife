@@ -87,6 +87,15 @@ local glow_translations = {
     ['junction-down'] = 'junction-up',
 }
 
+local shadow_translations = {
+    ['alone'] = 'straight-base-vertical',
+    ['straight-horizontal'] = 'straight-base-horizontal',
+    ['junction-down'] = 'junction-up',
+    ['junction-up'] = 'junction-down',
+    ['junction-left'] = 'junction-right',
+    ['junction-right'] = 'junction-left',
+}
+
 local animations = {}
 for _, variant in pairs(variants) do
     animations[#animations+1] = {
@@ -135,6 +144,30 @@ for _, variant in pairs(variants) do
                     scale = 0.335,
                     animation_speed = 0.3,
                     draw_as_glow = true
+                }
+            },
+            {
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-'.. (shadow_translations[variant] or variant) ..'-shadow.png',
+                priority = 'high',
+                width = 640/5/2,
+                height = 768/6/2,
+                frame_count = 5*6,
+                line_length = 5,
+                shift = {0, 0},
+                scale = 0.335*2,
+                animation_speed = 0.3,
+                draw_as_shadow = true,
+                hr_version = {
+                    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-'.. (shadow_translations[variant] or variant) ..'-shadow.png',
+                    priority = 'high',
+                    width = 640/5,
+                    height = 768/6,
+                    frame_count = 5*6,
+                    line_length = 5,
+                    shift = {0, 0},
+                    scale = 0.335,
+                    animation_speed = 0.3,
+                    draw_as_shadow = true
                 }
             },
             {
