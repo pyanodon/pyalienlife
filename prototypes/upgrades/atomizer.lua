@@ -13,7 +13,6 @@ if data and not yafc_turd_integration then
         results = {
             {type = 'item', name = 'dynemicin', amount = 1},
         },
-        --main_product = "cocoon",
     }
 
     RECIPE {
@@ -23,12 +22,11 @@ if data and not yafc_turd_integration then
         enabled = false,
         energy_required = 90,
         ingredients = {
-            {type = 'item', name = 'cognition-osteochain', amount = 5},
+            {type = 'item', name = 'cognition-osteochain', amount = 2},
         },
         results = {
             {type = 'item', name = 'kondo-substrate', amount = 1},
         },
-        --main_product = "cocoon",
     }
 
     RECIPE {
@@ -43,7 +41,6 @@ if data and not yafc_turd_integration then
         results = {
             {type = 'item', name = 'inverse-opal', amount = 1},
         },
-        --main_product = "cocoon",
     }
 end
 
