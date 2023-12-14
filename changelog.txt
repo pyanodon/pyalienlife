@@ -18,6 +18,7 @@ Date: ???
     - buffed all three paths of rennea turd
     - added creature chamber turd (avalible at py science pack 2) credit: soren
     - buffed sap turd path 2 to give resveratrol instead of cellulose
+    - reworked scrondrix turd path 1 & 2
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.12
 Date: 2023-11-22
