@@ -39,7 +39,7 @@ if data and not yafc_turd_integration then
                     if amount >= 5 then
                         FUN.multiply_ingredient_amount(replacement, name, 0.1)
                     else
-                        FUN.add_result(replacement, {type = 'item', name = name, amount = amount, probability = 0.9})
+                        FUN.add_result(replacement, {type = 'item', name = name, amount = amount, probability = 0.8})
                     end
                 end
                 to_add[#to_add + 1] = replacement
