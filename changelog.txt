@@ -22,6 +22,7 @@ Date: ???
     - buffed sap turd path 2 to give resveratrol instead of cellulose
     - added creature chamber turd (avalible at py science pack 2) credit: soren
     - reworked scrondrix turd path 1 & 2
+    - fixed that tuuphra path 2 would just softlock you. lol
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.12
 Date: 2023-11-22

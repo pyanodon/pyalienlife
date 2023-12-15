@@ -100,7 +100,7 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-tuuphra.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'tuuphra-mk02'},
+        prerequisites = {'tuuphra-mk02', 'phenol'},
         unit = {
             count = 500,
             ingredients = {
