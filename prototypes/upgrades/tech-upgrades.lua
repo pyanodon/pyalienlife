@@ -1,7 +1,6 @@
 local FUN = require('__pycoalprocessing__/prototypes/functions/functions')
 
 local tech_upgrades = {
-    require('prototypes/upgrades/bioprinting'),
     require('prototypes/upgrades/biofactory'),
     require('prototypes/upgrades/compost'),
     require('prototypes/upgrades/creature'),
@@ -33,7 +32,6 @@ if (data and mods.pyhightech) or (script and script.active_mods.pyhightech) then
         'prototypes/upgrades/ulric',
         'prototypes/upgrades/vrauks',
         'prototypes/upgrades/xyhiphoe',
-        'prototypes/upgrades/zipir',
         'prototypes/upgrades/seaweed',
     } do
         table.insert(tech_upgrades, require(upgrade))
@@ -72,6 +70,8 @@ if (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalter
         'prototypes/upgrades/simikmetalMK05',
         'prototypes/upgrades/simikmetalMK06',
         'prototypes/upgrades/sap',
+        'prototypes/upgrades/bioprinting',
+        'prototypes/upgrades/zipir',
     } do
         table.insert(tech_upgrades, require(upgrade))
     end
