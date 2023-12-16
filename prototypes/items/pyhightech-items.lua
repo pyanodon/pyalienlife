@@ -165,6 +165,17 @@ ITEM {
     limitation_message_key = "kicalk"
 }
 
+data:extend{{
+    type = 'item',
+    name = 'kicalk-dry',
+    icon = '__pyalienlifegraphics__/graphics/icons/kicalk-dry.png',
+    icon_size = 64,
+    flags = {},
+    subgroup = 'py-alienlife-kicalk',
+    order = 'b',
+    stack_size = data.raw.module['kicalk'].stack_size * 2,
+}}
+
 ITEM {
     type = "item",
     name = "urea",
