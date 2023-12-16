@@ -103,7 +103,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {productivity = 1, type = 'module-effects'},
+                {speed = -0.5, productivity = 1, type = 'module-effects'},
                 {old = 'Scrondrix cub 1', new = 'Scrondrix cub 1-boron', type = 'recipe-replacement'},
                 {old = 'Scrondrix cub 2', new = 'Scrondrix cub 2-boron', type = 'recipe-replacement'},
                 {old = 'Scrondrix cub 3', new = 'Scrondrix cub 3-boron', type = 'recipe-replacement'},
