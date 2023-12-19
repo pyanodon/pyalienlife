@@ -17,6 +17,8 @@ if data and not yafc_turd_integration then
         },
     }}
 
+    FUN.productivity{'chlorinated-water'}
+
     for _, recipe in pairs({
         table.deepcopy(data.raw.recipe['Moss 1']),
         table.deepcopy(data.raw.recipe['Moss 2']),
@@ -31,7 +33,7 @@ if data and not yafc_turd_integration then
         data:extend{recipe}
     end
 
-    for _, recipe in pairs({
+    for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['Moss 1']),
         table.deepcopy(data.raw.recipe['Moss 2']),
         table.deepcopy(data.raw.recipe['Moss 3']),
@@ -40,6 +42,8 @@ if data and not yafc_turd_integration then
     }) do
         recipe.name = recipe.name .. '-without-sludge'
         FUN.remove_ingredient(recipe, 'dirty-water-light')
+        if i ~= 1 then FUN.add_result(recipe, {type = 'item', name = 'stone', amount_min = 0, amount_max = 5}) end
+        recipe.main_product = 'moss'
         data:extend{recipe}
     end
 
@@ -48,14 +52,14 @@ if data and not yafc_turd_integration then
             type = 'recipe',
             name = 'unrefine-refsyngas',
             category = 'moss',
-            energy_required = 16,
+            energy_required = 8,
             ingredients = {
-                {type = 'fluid', name = 'refsyngas', amount = 100},
-                {type = 'item', name = 'moss', amount = 2},
+                {type = 'fluid', name = 'refsyngas', amount = 50},
+                {type = 'item', name = 'moss', amount = 1},
                 {type = 'fluid', name = 'dirty-water-light', amount = 50},
             },
             results = {
-                {type = 'fluid', name = 'syngas', amount = 90}
+                {type = 'fluid', name = 'syngas', amount = 100}
             },
             enabled = false
         },
@@ -63,7 +67,7 @@ if data and not yafc_turd_integration then
             type = 'recipe',
             name = 'unrefine-refined-natural-gas',
             category = 'moss',
-            energy_required = 16,
+            energy_required = 8,
             ingredients = {
                 {type = 'fluid', name = 'refined-natural-gas', amount = 100},
                 {type = 'item', name = 'moss', amount = 2},

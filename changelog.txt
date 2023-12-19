@@ -20,6 +20,7 @@ Date: ???
     - buffed all three paths of arthurian turd (path 1: abacus crafting time halfed, prod allowed in abacus recipe, prod module boost increased 15% -> 25%) (path 2: now also removes bedding from egg recipes & speeds egg recipes by 2x) (path 3: agar amount increased from 2 -> 5)
     - buffed atomizer turd path 2; cognition-osteochain requirement reduced from 5 -> 2
     - buffed sap turd path 2 to give resveratrol instead of cellulose
+    - buffed all three paths of moss turd (chlorinated water is effected by productivity, path 2 gives 10% stone back, path 3 refined syngas recipe is now useable)
     - added creature chamber turd (avalible at py science pack 2) credit: soren
     - reworked scrondrix turd path 1 & 2
     - reworked kicalk path 1
