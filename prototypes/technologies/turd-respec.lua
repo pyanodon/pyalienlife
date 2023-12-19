@@ -31,7 +31,7 @@ else
     }
 end
 
-local offset = 5
+local offset = 4
 
 local ingredients = {}
 for i = offset, #science_packs - 1 do
