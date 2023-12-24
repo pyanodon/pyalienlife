@@ -709,7 +709,6 @@ RECIPE {
     results = {
         {type = 'item', name = 'filtration-media', amount = 100},
     },
-    order = 'd'
 }:add_unlock("microfibers")
 
 RECIPE {

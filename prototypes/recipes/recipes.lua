@@ -1249,7 +1249,6 @@ RECIPE {
     results = {
         {type = 'item', name = 'filtration-media', amount = 3},
     },
-    order = 'b'
 }:add_unlock("cellulose-mk02")
 
 RECIPE {
@@ -1852,7 +1851,6 @@ RECIPE {
     results = {
         {type = 'item', name = 'filtration-media', amount = 75},
     },
-    order = 'c'
 }:add_unlock("filtration-mk02"):add_ingredient({type = "item", name = "micro-fiber", amount = 15})
 
 RECIPE {
