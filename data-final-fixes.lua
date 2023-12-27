@@ -223,6 +223,8 @@ local recipes_list =
   "planter-box",
   "plasmids",
   "primers",
+  "primers-02",
+  "primers-03",
   "propeptides",
   "purine-analogues",
   "py-science-pack-1-turd",
