@@ -301,7 +301,9 @@ local recipes_list =
   "lab-instrument-2",
   "workers-food",
   "workers-food-02",
-  "workers-food-03"
+  "workers-food-03",
+  "simik-food-01",
+  "simik-food-02"
 	}
 
 --adding to module limitation list
