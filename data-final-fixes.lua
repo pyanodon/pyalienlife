@@ -261,7 +261,7 @@ local recipes_list =
   "sea-sponge-sprouts",
   "sea-sponge",
   "simik-food-01",
-  "simik-food-02"
+  "simik-food-02",
   "sodium-alginate",
   "soil-separation-2",
   "spikes-to-mo",
