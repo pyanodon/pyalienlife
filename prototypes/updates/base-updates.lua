@@ -70,7 +70,7 @@ if not mods["pyalternativeenergy"] then
     TECHNOLOGY("nuclear-power"):add_pack("py-science-pack-3")
 end
 
-TECHNOLOGY("military-2"):remove_pack("logistic-science-pack"):add_pack("py-science-pack-1")
+TECHNOLOGY("military-2"):remove_pack("logistic-science-pack"):add_pack("py-science-pack-1"):remove_prereq("logistic-science-pack")
 
 TECHNOLOGY("military-4"):add_pack("py-science-pack-4")
 
