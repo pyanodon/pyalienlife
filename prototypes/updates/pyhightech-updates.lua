@@ -3,7 +3,6 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 --(( Technology ))--
 require('prototypes/technologies/mega-farm-kicalk')
 require('prototypes/technologies/mega-farm-cadaveric-arum')
-require('prototypes/technologies/cadaveric-arum')
 require('prototypes/technologies/moondrop')
 
 TECHNOLOGY("epoxy"):remove_pack("chemical-science-pack")
