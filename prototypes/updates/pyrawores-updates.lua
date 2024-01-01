@@ -224,4 +224,5 @@ data.raw['resource']['nexelit-rock'].autoplace = nil
 data.raw['autoplace-control']['nexelit-rock'] = nil
 data.raw['noise-layer']['nexelit-rock'] = nil
 
-data.raw.recipe['coal-fawogae'].ingredients[1].amount = 1
+data.raw.recipe['coal-fawogae'].ingredients[1].amount = 2
+data.raw.resource['coal-rock'].minable.results[1][1] = 'coarse-coal'
