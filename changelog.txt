@@ -4,8 +4,7 @@ Date: ???
   Changes:
     - fix zungrugor and numals not being disabled even when they had no animal modules
     - fixed that fawogae mk4 and fawogae mk5 were both unlocked at the same science tier (py4)
-    - buffed the fawogae->coal recipe by requiring 2 fawogae inputs instead of 10
-    - buffed the raw coal big mine by changing its output to coarse coal instead of raw coal
+    - buffed the fawogae->coal recipe by requiring 1 fawogae input instead of 10
     - added a new recipe for cumene+nickel+arthropod blood into organic solvent
     - buffed bioprinting by removing primers from the pluripotent stem cells recipes
     - fixed that bioprinting stage 2 unlocked both mk1 and mk2 of brain printing. mk1 recipe moved down to bioprinting stage 1
