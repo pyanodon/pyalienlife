@@ -106,6 +106,10 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 				type = 'sprite-button', name = 'py_shuffle_schedule_2', style = 'py_schedule_move_button', tags = tags,
 				sprite = 'down-white', hovered_sprite = 'down-black', clicked_sprite = 'down-black'
 			}
+
+			action_frame.add{type = 'checkbox', name = 'py_blocking_caravan',state=	not action.async,
+							   tags = tags
+			}
 			action_frame.add{
 				type = 'sprite-button', name = 'py_delete_schedule', style = 'py_schedule_move_button', tags = tags,
 				sprite = 'utility/close_white', hovered_sprite = 'utility/close_black', clicked_sprite = 'utility/close_black'

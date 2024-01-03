@@ -209,7 +209,7 @@ Caravan.actions = {
 		local inventory = caravan_data.inventory
 
 		transfer_all_items(outpost_inventory, inventory)
-		return inventory.is_full()
+		return action.async or  inventory.is_full()
 	end,
 
 	['empty-inventory'] = function(caravan_data, schedule, action)
@@ -220,7 +220,7 @@ Caravan.actions = {
 		local inventory = caravan_data.inventory
 
 		transfer_all_items(inventory, outpost_inventory)
-		return inventory.is_empty()
+		return action.async or inventory.is_empty()
 	end,
 
 	['empty-autotrash'] = function(caravan_data, schedule, action)
@@ -243,8 +243,8 @@ Caravan.actions = {
 		local goal = action.item_count
 		local item = action.elem_value
 		if not goal or not item then return false end
-		
-		return transfer_filtered_items(caravan_inventory, outpost_inventory, item, goal)
+		local result= transfer_filtered_items(caravan_inventory, outpost_inventory, item, goal)
+		return action.async or result
 	end,
 
 	['inverse-item-count'] = function(caravan_data, schedule, action)
@@ -256,8 +256,8 @@ Caravan.actions = {
 		local goal = action.item_count
 		local item = action.elem_value
 		if not goal or not item then return false end
-		
-		return transfer_filtered_items(outpost_inventory, caravan_inventory, item, goal)
+		local  result =transfer_filtered_items(outpost_inventory, caravan_inventory, item, goal)
+		return action.async or result
 	end,
 
 	['detonate'] = function(caravan_data, schedule, action)
