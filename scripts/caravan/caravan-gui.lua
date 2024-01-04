@@ -96,6 +96,11 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 			else
 				action_frame.add{type = 'empty-widget', style = 'py_empty_widget'}
 			end
+			if action.type == 'item-count' or action.type == 'inverse-item-count' or action.type== 'fill-inventory' or action.type == 'empty-inventory' then
+				action_frame.add{type = 'checkbox', name = 'py_blocking_caravan',state=	not action.async,
+								 tooltip= {'caravan-gui.wait'},
+								 tags = tags}
+			end
 
 			action_frame.add{
 				type = 'sprite-button', name = 'py_shuffle_schedule_1', style = 'py_schedule_move_button',
@@ -107,9 +112,6 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 				sprite = 'down-white', hovered_sprite = 'down-black', clicked_sprite = 'down-black'
 			}
 
-			action_frame.add{type = 'checkbox', name = 'py_blocking_caravan',state=	not action.async,
-							   tags = tags
-			}
 			action_frame.add{
 				type = 'sprite-button', name = 'py_delete_schedule', style = 'py_schedule_move_button', tags = tags,
 				sprite = 'utility/close_white', hovered_sprite = 'utility/close_black', clicked_sprite = 'utility/close_black'
