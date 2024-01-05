@@ -71,6 +71,7 @@ local biomass_convertion =
     ['kicalk-mk02'] = {item_amount = 4, biomass_amount = 300},
     ['kicalk-mk03'] = {item_amount = 4, biomass_amount = 320},
     ['kicalk-mk04'] = {item_amount = 4, biomass_amount = 340},
+    ['kicalk-dry'] = {item_amount = 2, biomass_amount = 280},
     ['phytoplankton'] = {item_amount = 50, biomass_amount = 45, type = 'fluid'},
     ['moondrop'] = {item_amount = 5, biomass_amount = 35},
     ['fawogae-spore'] = {item_amount = 10, biomass_amount = 10},

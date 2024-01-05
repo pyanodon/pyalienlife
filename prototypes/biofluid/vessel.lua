@@ -44,11 +44,8 @@ RECIPE {
 ITEM {
     type = 'item',
     name = 'vessel',
-    icons = {{
-        icon = '__pyindustry__/graphics/icons/niobium-pipe.png',
-        icon_size = 32,
-        tint = {0.5, 0.5, 1}
-    }},
+    icon = '__pyalienlifegraphics2__/graphics/icons/vessel.png',
+    icon_size = 64,
     flags = {},
     subgroup = 'py-alienlife-biofluid-network',
     order = 'da',
@@ -59,11 +56,8 @@ ITEM {
 ITEM {
     type = 'item',
     name = 'vessel-to-ground',
-    icons = {{
-        icon = '__pyindustry__/graphics/icons/niobium-pipe-to-ground.png',
-        icon_size = 32,
-        tint = {0.5, 0.5, 1}
-    }},
+    icon = '__pyalienlifegraphics2__/graphics/icons/vessel-to-ground.png',
+    icon_size = 64,
     flags = {},
     subgroup = 'py-alienlife-biofluid-network',
     order = 'db',
@@ -71,55 +65,393 @@ ITEM {
     stack_size = 100
 }
 
-local pipe = table.deepcopy(data.raw['heat-pipe']['heat-pipe'])
-pipe.name = 'vessel'
-pipe.minable = {mining_time = 0.2, result = 'vessel'}
-pipe.fast_replaceable_group = 'vessel'
-pipe.next_upgrade = nil
-pipe.heat_buffer = {
-    max_temperature = 0,
-    default_temperature = 0,
-    min_working_temperature = 0,
-    max_transfer = '1W',
-    specific_heat = '1W',
-    connections = {
-        {
-            direction = 0,
-            position = {
-                0,
-                0
-            }
-        },
-        {
-            direction = 2,
-            position = {
-                0,
-                0
-            }
-        },
-        {
-            direction = 4,
-            position = {
-                0,
-                0
-            }
-        },
-        {
-            direction = 6,
-            position = {
-                0,
-                0
+local variants = {
+    'straight-base-vertical',
+    'straight-base-horizontal',
+    'alone',
+    'straight-horizontal',
+    'curved-right-up',
+    'curved-right-down',
+    'curved-left-down',
+    'curved-left-up',
+    'junction-down',
+    'junction-left',
+    'junction-up',
+    'junction-right',
+    'full-junction',
+}
+
+local glow_translations = {
+    ['straight-horizontal'] = 'straight-base-horizontal',
+    ['junction-up'] = 'junction-down',
+    ['junction-down'] = 'junction-up',
+}
+
+local shadow_translations = {
+    ['alone'] = 'straight-base-vertical',
+    ['straight-horizontal'] = 'straight-base-horizontal',
+    ['junction-down'] = 'junction-up',
+    ['junction-up'] = 'junction-down',
+    ['junction-left'] = 'junction-right',
+    ['junction-right'] = 'junction-left',
+}
+
+local animations = {}
+for _, variant in pairs(variants) do
+    animations[#animations+1] = {
+        layers = {
+            {
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-'..(variant=='alone' and 'straight-base-vertical' or variant)..'.png',
+                priority = 'high',
+                width = 640/5/2,
+                height = 768/6/2,
+                frame_count = 5*6,
+                line_length = 5,
+                shift = {0, 0},
+                scale = 0.335*2,
+                animation_speed = 0.3,
+                hr_version = {
+                    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-'..(variant=='alone' and 'straight-base-vertical' or variant)..'.png',
+                    priority = 'high',
+                    width = 640/5,
+                    height = 768/6,
+                    frame_count = 5*6,
+                    line_length = 5,
+                    shift = {0, 0},
+                    scale = 0.335,
+                    animation_speed = 0.3
+                }
+            },
+            {
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-'.. (glow_translations[variant] or variant) ..'-glow.png',
+                priority = 'high',
+                width = 640/5/2,
+                height = 768/6/2,
+                frame_count = 5*6,
+                line_length = 5,
+                shift = {0, 0},
+                scale = 0.335*2,
+                animation_speed = 0.3,
+                draw_as_glow = true,
+                hr_version = {
+                    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-'.. (glow_translations[variant] or variant) ..'-glow.png',
+                    priority = 'high',
+                    width = 640/5,
+                    height = 768/6,
+                    frame_count = 5*6,
+                    line_length = 5,
+                    shift = {0, 0},
+                    scale = 0.335,
+                    animation_speed = 0.3,
+                    draw_as_glow = true
+                }
+            },
+            {
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-'.. (shadow_translations[variant] or variant) ..'-shadow.png',
+                priority = 'high',
+                width = 640/5/2,
+                height = 768/6/2,
+                frame_count = 5*6,
+                line_length = 5,
+                shift = {0, 0},
+                scale = 0.335*2,
+                animation_speed = 0.3,
+                draw_as_shadow = true,
+                hr_version = {
+                    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-'.. (shadow_translations[variant] or variant) ..'-shadow.png',
+                    priority = 'high',
+                    width = 640/5,
+                    height = 768/6,
+                    frame_count = 5*6,
+                    line_length = 5,
+                    shift = {0, 0},
+                    scale = 0.335,
+                    animation_speed = 0.3,
+                    draw_as_shadow = true
+                }
+            },
+            {
+                filename = '__core__/graphics/light-small.png',
+                priority = 'high',
+                width = 150,
+                height = 150,
+                shift = {0, 0},
+                frame_count = 1,
+                repeat_count = 30,
+                draw_as_light = true,
+                tint = {0.5, 0.5, 1, 0.4}
             }
         }
-    },
+    }
+end
+
+local gap = {
+    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-straight-vertical.png',
+    priority = 'high',
+    width = 640/5/2,
+    height = 768/6/2,
+    frame_count = 5*6,
+    line_length = 5,
+    shift = util.by_pixel(0, 8),
+    scale = 0.335*2,
+    animation_speed = 0.3,
+    hr_version = {
+        filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-straight-vertical.png',
+        priority = 'high',
+        width = 640/5,
+        height = 768/6,
+        frame_count = 5*6,
+        line_length = 5,
+        shift = util.by_pixel(0, 8),
+        scale = 0.335,
+        animation_speed = 0.3
+    }
 }
-pipe.collision_mask = {vessel_collision_mask}
+
+local gap_glow = {
+    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-straight-vertical-glow.png',
+    priority = 'high',
+    width = 640/5/2,
+    height = 768/6/2,
+    frame_count = 5*6,
+    line_length = 5,
+    shift = util.by_pixel(0, 8),
+    scale = 0.335*2,
+    animation_speed = 0.3,
+    draw_as_glow = true,
+    hr_version = {
+        filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-straight-vertical-glow.png',
+        priority = 'high',
+        width = 640/5,
+        height = 768/6,
+        frame_count = 5*6,
+        line_length = 5,
+        shift = util.by_pixel(0, 8),
+        scale = 0.335,
+        animation_speed = 0.3,
+        draw_as_glow = true,
+    }
+}
+
+local function fix_gap(index)
+    table.insert(animations[index].layers, 2, gap)
+    table.insert(animations[index].layers, gap_glow)
+end
+
+fix_gap(3)
+fix_gap(6)
+fix_gap(7)
+fix_gap(10)
+fix_gap(11)
+fix_gap(12)
+fix_gap(13)
+
+data:extend{{
+    name = 'vessel',
+    type = 'simple-entity-with-owner',
+    icon = data.raw.item['vessel'].icon,
+    icon_size = 64,
+    flags = {'placeable-neutral', 'player-creation', 'not-rotatable'},
+    minable = {mining_time = 0.2, result = 'vessel'},
+    max_health = 100,
+    corpse = 'small-remnants',
+    collision_box = table.deepcopy(data.raw['pipe']['pipe'].collision_box),
+    selection_box = table.deepcopy(data.raw['pipe']['pipe'].selection_box),
+    collision_mask = {vessel_collision_mask},
+    animations = animations,
+    fast_replaceable_group = 'vessel',
+    next_upgrade = nil,
+    render_layer = 'lower-object-above-shadow',
+    vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},
+}}
+
+local ug_pipe_animation = {}
+local ug_pipe_integration = {}
+for cardinal, direction in pairs{['north'] = 'up', ['east'] = 'right', ['south'] = 'down', ['west'] = 'left'} do
+    ug_pipe_animation[#ug_pipe_animation + 1] = {
+        layers = {
+            {
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-to-ground-' .. direction .. '.png',
+                priority = 'high',
+                width = 640/5/2,
+                height = 768/6/2,
+                frame_count = 5*6,
+                line_length = 5,
+                shift = {0, 0},
+                scale = 0.335*2,
+                animation_speed = 0.3,
+                hr_version = {
+                    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-to-ground-' .. direction .. '.png',
+                    priority = 'high',
+                    width = 640/5,
+                    height = 768/6,
+                    frame_count = 5*6,
+                    line_length = 5,
+                    shift = {0, 0},
+                    scale = 0.335,
+                    animation_speed = 0.3
+                }
+            },
+            {
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-to-ground-' .. direction .. '-glow.png',
+                priority = 'high',
+                width = 640/5/2,
+                height = 768/6/2,
+                frame_count = 5*6,
+                line_length = 5,
+                shift = {0, 0},
+                scale = 0.335*2,
+                animation_speed = 0.3,
+                draw_as_glow = true,
+                hr_version = {
+                    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-to-ground-' .. direction .. '-glow.png',
+                    priority = 'high',
+                    width = 640/5,
+                    height = 768/6,
+                    frame_count = 5*6,
+                    line_length = 5,
+                    shift = {0, 0},
+                    scale = 0.335,
+                    animation_speed = 0.3,
+                    draw_as_glow = true,
+                }
+            },
+            {
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-to-ground-' .. direction .. '-shadow.png',
+                priority = 'high',
+                width = 640/5/2,
+                height = 768/6/2,
+                frame_count = 5*6,
+                line_length = 5,
+                shift = {0, 0},
+                scale = 0.335*2,
+                animation_speed = 0.3,
+                draw_as_shadow = true,
+                hr_version = {
+                    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-to-ground-' .. direction .. '-shadow.png',
+                    priority = 'high',
+                    width = 640/5,
+                    height = 768/6,
+                    frame_count = 5*6,
+                    line_length = 5,
+                    shift = {0, 0},
+                    scale = 0.335,
+                    animation_speed = 0.3,
+                    draw_as_shadow = true,
+                }
+            },
+            {
+                filename = '__core__/graphics/light-small.png',
+                priority = 'high',
+                width = 150,
+                height = 150,
+                shift = {0, 0},
+                frame_count = 1,
+                repeat_count = 30,
+                draw_as_light = true,
+                tint = {0.5, 0.5, 1, 0.4}
+            }
+        }
+    }
+    ug_pipe_integration[cardinal] = ug_pipe_animation[#ug_pipe_animation]
+end
+
+ug_pipe_animation[#ug_pipe_animation + 1] = {
+    layers = {
+        {
+            filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-to-ground-down.png',
+            priority = 'high',
+            width = 640/5/2,
+            height = 768/6/2,
+            frame_count = 5*6,
+            line_length = 5,
+            shift = {0, 0},
+            scale = 0.335*2,
+            animation_speed = 0.3,
+            hr_version = {
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-to-ground-down.png',
+                priority = 'high',
+                width = 640/5,
+                height = 768/6,
+                frame_count = 5*6,
+                line_length = 5,
+                shift = {0, 0},
+                scale = 0.335,
+                animation_speed = 0.3
+            }
+        },
+        {
+            filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-to-ground-down-alone-glow.png',
+            priority = 'high',
+            width = 640/5/2,
+            height = 768/6/2,
+            frame_count = 5*6,
+            line_length = 5,
+            shift = {0, 0},
+            scale = 0.335*2,
+            animation_speed = 0.3,
+            draw_as_glow = true,
+            hr_version = {
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-to-ground-down-alone-glow.png',
+                priority = 'high',
+                width = 640/5,
+                height = 768/6,
+                frame_count = 5*6,
+                line_length = 5,
+                shift = {0, 0},
+                scale = 0.335,
+                animation_speed = 0.3,
+                draw_as_glow = true,
+            }
+        },
+        gap,
+        gap_glow,
+        {
+            filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-to-ground-down-shadow.png',
+            priority = 'high',
+            width = 640/5/2,
+            height = 768/6/2,
+            frame_count = 5*6,
+            line_length = 5,
+            shift = {0, 0},
+            scale = 0.335*2,
+            animation_speed = 0.3,
+            draw_as_shadow = true,
+            hr_version = {
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-to-ground-down-shadow.png',
+                priority = 'high',
+                width = 640/5,
+                height = 768/6,
+                frame_count = 5*6,
+                line_length = 5,
+                shift = {0, 0},
+                scale = 0.335,
+                animation_speed = 0.3,
+                draw_as_shadow = true,
+            }
+        },
+        {
+            filename = '__core__/graphics/light-small.png',
+            priority = 'high',
+            width = 150,
+            height = 150,
+            shift = {0, 0},
+            frame_count = 1,
+            repeat_count = 30,
+            draw_as_light = true,
+            tint = {0.5, 0.5, 1, 0.4}
+        }
+    }
+}
 
 local underground_pipe = table.deepcopy(data.raw['pipe-to-ground']['pipe-to-ground'])
 underground_pipe.name = 'vessel-to-ground'
 underground_pipe.minable = {mining_time = 0.2, result = 'vessel-to-ground'}
 underground_pipe.fast_replaceable_group = 'vessel'
 underground_pipe.next_upgrade = nil
+underground_pipe.icon = data.raw.item['vessel-to-ground'].icon
+underground_pipe.icon_size = 64
+underground_pipe.icon_mipmaps = nil
 underground_pipe.fluid_box = {
     base_area = 0.01,
     base_level = 1999,
@@ -134,41 +466,34 @@ underground_pipe.fluid_box = {
     }
 }
 underground_pipe.collision_mask = {vessel_collision_mask}
-
-data:extend{pipe, underground_pipe}
+local function blank()
+	return {
+		filename = '__core__/graphics/empty.png',
+		priority = 'high',
+		width = 1,
+		height = 1,
+	}
+end
+underground_pipe.pictures = {
+    up = blank(),
+    down = blank(),
+    left = blank(),
+    right = blank(),
+}
+underground_pipe.integration_patch = ug_pipe_integration
+underground_pipe.integration_patch_render_layer = 'lower-object'
+data:extend{underground_pipe}
 
 data:extend{{
     name = 'vessel-to-ground-heat-connection',
-    type = 'furnace',
-    bottleneck_ignore = true,
-    icon = underground_pipe.icon or '__base__/graphics/icons/pipe-to-ground.png',
-    icon_size = underground_pipe.icon_size or 64,
+    type = 'simple-entity-with-owner',
+    icon = underground_pipe.icon,
+    icon_size = underground_pipe.icon_size,
     localised_name = {'entity-name.vessel-to-ground'},
     localised_description = {'entity-description.vessel-to-ground'},
     flags = {'hidden', 'placeable-neutral', 'no-automated-item-insertion', 'no-automated-item-removal', 'not-flammable'},
     collision_box = underground_pipe.collision_box,
     collision_mask = {},
-    show_recipe_icon = false,
-    crafting_speed = 1,
-    result_inventory_size = 0,
-    source_inventory_size = 0,
-    crafting_categories = {'biofluid'},
-    energy_source = {
-        connections = {
-          {
-            direction = 0,
-            position = {0, 0}
-          }
-        },
-        max_temperature = 0,
-        default_temperature = 0,
-        min_working_temperature = 0,
-        max_transfer = '1W',
-        specific_heat = '1W',
-        type = 'heat',
-        pipe_covers = require('__pyalienlife__/prototypes/biofluid/pipe-cover'),
-        heat_pipe_covers = require('__pyalienlife__/prototypes/biofluid/pipe-cover'),
-    },
-    energy_usage = '1W',
-    show_recipe_icon_on_map = false,
+    render_layer = 'lower-object-above-shadow',
+    animations = ug_pipe_animation,
 }}

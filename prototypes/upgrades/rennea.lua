@@ -18,10 +18,10 @@ if data and not yafc_turd_integration then
                 {type = 'fluid', name = 'water', amount = 100},
                 {'coarse', 2}
             },
-            results = {{'native-flora', 10}},
+            results = {{'native-flora', 55}},
             enabled = false,
             category = 'rennea',
-            energy_required = 10
+            energy_required = 15
         }
     }
 
@@ -45,14 +45,17 @@ if data and not yafc_turd_integration then
     } do
         recipe.name = recipe.name .. '-hydrophile'
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
-        FUN.multiply_ingredient_amount(recipe, 'water', 20)
+        FUN.multiply_ingredient_amount(recipe, 'water', 200)
         FUN.add_result_amount(recipe, 'rennea', 1)
+        FUN.remove_ingredient(recipe, 'coarse')
+        FUN.remove_ingredient(recipe, 'soil')
         data:extend{recipe}
     end
 
     local anti_aphid = table.deepcopy(data.raw.recipe['rennea-seeds'])
-    FUN.add_ingredient(anti_aphid, {name = 'bee-venom', amount = 1, type = 'fluid'})
-    FUN.add_result_amount(anti_aphid, 'rennea-seeds', 4)
+    FUN.add_ingredient(anti_aphid, {name = 'bee-venom', amount = 1.5, type = 'fluid'})
+    FUN.multiply_result_amount(anti_aphid, 'rennea-seeds', 3)
+    anti_aphid.energy_required = 3
     anti_aphid.name = 'rennea-seeds-venom'
     data:extend{anti_aphid}
 end
@@ -87,7 +90,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/deadheading.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {recipe = 'deadhead-recycle', type = 'unlock-recipe'},
                 {old = 'rennea-1', new = 'rennea-1-deadhead', type = 'recipe-replacement'},
                 {old = 'rennea-2', new = 'rennea-2-deadhead', type = 'recipe-replacement'},
@@ -100,7 +103,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/alltime.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {consumption = 0.5, type = 'module-effects'},
                 {old = 'rennea-1', new = 'rennea-1-hydrophile', type = 'recipe-replacement'},
                 {old = 'rennea-2', new = 'rennea-2-hydrophile', type = 'recipe-replacement'},
@@ -113,7 +116,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/aphid-cleaning.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {old = 'rennea-seeds', new = 'rennea-seeds-venom', type = 'recipe-replacement'}
             }
         }

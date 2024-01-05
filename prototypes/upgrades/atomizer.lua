@@ -13,7 +13,6 @@ if data and not yafc_turd_integration then
         results = {
             {type = 'item', name = 'dynemicin', amount = 1},
         },
-        --main_product = "cocoon",
     }
 
     RECIPE {
@@ -23,12 +22,11 @@ if data and not yafc_turd_integration then
         enabled = false,
         energy_required = 90,
         ingredients = {
-            {type = 'item', name = 'cognition-osteochain', amount = 5},
+            {type = 'item', name = 'cognition-osteochain', amount = 2},
         },
         results = {
             {type = 'item', name = 'kondo-substrate', amount = 1},
         },
-        --main_product = "cocoon",
     }
 
     RECIPE {
@@ -43,7 +41,6 @@ if data and not yafc_turd_integration then
         results = {
             {type = 'item', name = 'inverse-opal', amount = 1},
         },
-        --main_product = "cocoon",
     }
 end
 
@@ -83,7 +80,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/sc-core.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {recipe = 'venom-gland-to-dynemicin', type = 'unlock-recipe'}
             },
         },
@@ -92,7 +89,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/sub-atomic.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {recipe = 'cognition-osteochain-to-kondo-substrate', type = 'unlock-recipe'}
             }
         },
@@ -101,7 +98,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/d-core.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {recipe = 'dimensional-gastricorg-to-inverse-opal', type = 'unlock-recipe'}
             }
         }

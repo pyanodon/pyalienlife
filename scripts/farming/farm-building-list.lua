@@ -40,7 +40,7 @@ local farm_buildings = {
 	['bhoddos-culture'] = 'fungi',
 	['fawogae-plantation'] = 'fungi',
 	['navens-culture'] = 'fungi',
-	['yaedols-culture'] = 'fungi'
+	['yaedols-culture'] = 'fungi',
 }
 
 return farm_buildings

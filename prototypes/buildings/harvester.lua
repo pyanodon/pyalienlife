@@ -4,12 +4,12 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"botanical-nursery-mk03", 2},
-        {"soil-extractormk03", 1},
-        {"processing-unit", 20},
+        {"botanical-nursery-mk02", 2},
+        {"soil-extractormk02", 1},
+        {"advanced-circuit", 20},
         {"iron-gear-wheel", 100},
         {"plastic-bar", 80},
-        {"control-unit", 5},
+        --{"control-unit", 5},
     },
     results = {
         {"harvester", 1}

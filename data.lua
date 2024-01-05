@@ -462,6 +462,7 @@ require('prototypes/fluids/simik-blood')
 
 if mods['pyhightech'] then
     require('prototypes/fluids/cadaveric-arum-cum')
+    require('prototypes/technologies/cadaveric-arum')
     require("prototypes/fluids/casein-solution")
 end
 

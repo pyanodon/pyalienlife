@@ -10,7 +10,7 @@ if data and not yafc_turd_integration then
     }) do
         recipe.name = recipe.name .. '-cu'
         FUN.add_ingredient(recipe, {name = 'copper-ore', amount = 10, type = 'item'})
-        FUN.multiply_result_amount(recipe, 'moondrop', 1.1)
+        FUN.multiply_result_amount(recipe, 'moondrop', 1.2)
         recipe.energy_required = math.ceil(recipe.energy_required * 0.8)
         data:extend{recipe}
     end
@@ -19,10 +19,10 @@ if data and not yafc_turd_integration then
         name = 'methane-co2-with-lamp',
         results = {
             {type = 'fluid', amount = 60, name = 'methane'},
-            {type = 'fluid', amount = 30, name = 'oxygen'},
-            {type = 'item', amount = 1, name = 'small-lamp', probability = 0.5},
+            {type = 'fluid', amount = 40, name = 'oxygen'},
+            {type = 'item', amount = 1, name = 'small-lamp', probability = 0.75},
         },
-        energy_required = 15,
+        energy_required = 8,
         ingredients = {
             {type = 'item', amount = 1, name = 'small-lamp'},
             {type = 'fluid', amount = 100, name = 'water'},
@@ -71,7 +71,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/cu.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {old = 'moondrop-1', new = 'moondrop-1-cu', type = 'recipe-replacement'},
                 {old = 'moondrop-2', new = 'moondrop-2-cu', type = 'recipe-replacement'},
                 {old = 'moondrop-3', new = 'moondrop-3-cu', type = 'recipe-replacement'},
@@ -84,7 +84,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/moon.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {old = 'methane-co2', new = 'methane-co2-with-lamp', type = 'recipe-replacement'},
             }
         },
@@ -93,7 +93,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/carbon-capture.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {consumption = 1, type = 'module-effects'},
                 {recipe = 'moondrop-co2', type = 'unlock-recipe'}
             }

@@ -77,7 +77,7 @@ RECIPE('chemical-science-01'):replace_ingredient("water","crude-oil")
 RECIPE('production-science-01'):replace_ingredient("water","crude-oil")
 RECIPE('production-science-pack'):add_ingredient({type = "item", name = "small-parts-03", amount = 10})
 RECIPE('chemical-science-01'):replace_ingredient("water","crude-oil")
-RECIPE('harvester'):replace_ingredient("small-parts-01","small-parts-03")
+RECIPE('harvester'):replace_ingredient("small-parts-01","small-parts-02")
 RECIPE('seeds-extract-01'):add_ingredient({type = "item", name = "guar-seeds", amount = 100})
 RECIPE('arqad-jelly-01'):replace_ingredient("active-carbon","carbon-black"):replace_ingredient("oleochemicals-barrel","btx-barrel")
 
@@ -86,7 +86,6 @@ FUN.results_replacer("crude-from-manure", "ash", "soot")
 FUN.results_replacer("guar-separation", "organics", "biomass")
 FUN.results_replacer("bitumen-comb", "tar", "bitumen")
 
-RECIPE('xyhiphoe-hydrocyclone'):remove_unlock('advanced-mining-facilities'):add_unlock("biotech-mk02")
 ----EXCLUSIVE RECIPES----
 
 RECIPE {

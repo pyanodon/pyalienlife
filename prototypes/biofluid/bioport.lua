@@ -107,13 +107,32 @@ ENTITY {
                 priority = 'extra-high',
                 width = 175,
                 height = 182,
-                shift = util.by_pixel(16.75, -38.75),
+                shift = util.by_pixel(16.75, -38.75 - 32),
                 hr_version = {
                     filename = '__pyalienlifegraphics2__/graphics/entity/bots/roboport/hr-raw.png',
                     priority = 'extra-high',
                     width = 351,
                     height = 365,
-                    shift = util.by_pixel(16.75, -38.75),
+                    shift = util.by_pixel(16.75, -38.75 - 32),
+                    scale = 0.5,
+                    frame_count = 1
+                },
+                frame_count = 1
+            },
+            {
+                filename = '__pyalienlifegraphics2__/graphics/entity/bots/roboport/glow.png',
+                priority = 'extra-high',
+                width = 175,
+                height = 182,
+                shift = util.by_pixel(16.75, -38.75 - 32),
+                draw_as_glow = true,
+                hr_version = {
+                    filename = '__pyalienlifegraphics2__/graphics/entity/bots/roboport/hr-glow.png',
+                    priority = 'extra-high',
+                    width = 351,
+                    height = 365,
+                    shift = util.by_pixel(16.75, -38.75 - 32),
+                    draw_as_glow = true,
                     scale = 0.5,
                     frame_count = 1
                 },
@@ -125,14 +144,14 @@ ENTITY {
                 draw_as_shadow = true,
                 width = 176,
                 height = 116,
-                shift = {1, 2},
+                shift = {1.5, 1.5},
                 hr_version = {
                     filename = '__pyalienlifegraphics2__/graphics/entity/bots/roboport/hr-sh.png',
                     priority = 'extra-high',
                     draw_as_shadow = true,
                     width = 352,
                     height = 232,
-                    shift = {1, 2},
+                    shift = {1.5, 1.5},
                     scale = 0.5,
                     frame_count = 1
                 },
@@ -142,8 +161,6 @@ ENTITY {
     },
     integration_patch_render_layer = 'higher-object-under'
 }
-
-data.raw['utility-sprites'].default.heat_exchange_indication.filename = '__pyalienlifegraphics2__/graphics/entity/bots/connection-icon.png'
 
 local function random_order(l)
 	local order = {}
@@ -162,7 +179,7 @@ local function add_creature_animations(animations, animation_order, name)
         local layers = {}
         for j = 1, i do
             local layer_data = animation_order[j]
-            local shift = util.by_pixel(layer_data[1] / 2 - 62, layer_data[2] / 2 - 113.75)
+            local shift = util.by_pixel(layer_data[1] / 2 - 62, layer_data[2] / 2 - 113.75 - 32)
             if name == 'chorkok' then shift[2] = shift[2] + 0.16 end
             layers[#layers+1] = table.deepcopy(animations[layer_data[3]])
             layers[#layers].shift = shift

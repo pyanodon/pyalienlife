@@ -1,56 +1,76 @@
-TECHNOLOGY {
-    type = 'technology',
-    name = 'turd-respec-1',
-    icon = '__pyalienlifegraphics3__/graphics/technology/updates/restart.png',
-    icon_size = 128,
-    prerequisites = {'dhilmos-upgrade', 'dingrits-upgrade'},
-    effects = {},
-    unit = {
-        count_formula = '2^(L-1)*5000',
-        ingredients = {
-            {'automation-science-pack', 100},
-            {'py-science-pack-1', 60},
-            {'logistic-science-pack', 30},
-            {'military-science-pack', 20},
-            {'py-science-pack-2', 20},
-            {'chemical-science-pack', 10},
-            {'py-science-pack-3', 6},
-            {'production-science-pack', 3},
-            {'py-science-pack-4', 2},
-            {'utility-science-pack', 1},
+local description = {'', {'turd.font', {'turd.tech'}}, '\n', {'technology-description.turd-partial-respec'}}
+
+local science_packs
+if mods.pystellarexpedition then
+    science_packs = {
+        'automation-science-pack',
+        'py-science-pack-1',
+        'logistic-science-pack',
+        'military-science-pack',
+        'py-science-pack-2',
+        'chemical-science-pack',
+        'space-science-pack-2',
+        'py-science-pack-3',
+        'production-science-pack',
+        'py-science-pack-4',
+        'utility-science-pack',
+        'space-science-pack',
+    }
+else
+    science_packs = {
+        'automation-science-pack',
+        'py-science-pack-1',
+        'logistic-science-pack',
+        'py-science-pack-2',
+        'chemical-science-pack',
+        'py-science-pack-3',
+        'production-science-pack',
+        'py-science-pack-4',
+        'utility-science-pack',
+        'space-science-pack',
+    }
+end
+
+local offset = 5
+
+local ingredients = {}
+for i = offset, #science_packs - 1 do
+    pack = science_packs[i]
+    ingredients[i] = {pack, 1}
+    TECHNOLOGY {
+        type = 'technology',
+        name = 'turd-partial-respec-' .. (i-offset+1),
+        icon = '__pyalienlifegraphics3__/graphics/technology/updates/restart.png',
+        icon_size = 128,
+        prerequisites = i ~= offset and {'turd-partial-respec-' .. (i-offset)} or {'ulric-upgrade'},    
+        effects = {},
+        unit = {
+            count = 50,
+            ingredients = table.deepcopy(ingredients),
+            time = 30,
         },
-        time = 1200,
-    },
-    max_level = 1,
-    is_turd = true,
-    localised_description = {'', {'turd.font', {'turd.tech'}}, '\n', {'technology-description.turd-respec'}}
-}
+        upgrade = true,
+        is_turd = true,
+        localised_description = {'', {'turd.font', {'turd.tech'}}, '\n', {'technology-description.turd-partial-respec'}}
+    }
+end
+
+ingredients[#science_packs] = {science_packs[#science_packs], 1}
 
 TECHNOLOGY {
     type = 'technology',
-    name = 'turd-respec-2',
+    name = 'turd-partial-respec-' .. (#science_packs - offset),
     icon = '__pyalienlifegraphics3__/graphics/technology/updates/restart.png',
     icon_size = 128,
-    prerequisites = {'turd-respec-1'},
+    prerequisites = {'turd-partial-respec-' .. (#science_packs - 1 - offset)},
     effects = {},
     unit = {
-        count_formula = '2^(L-1)*2500',
-        ingredients = {
-            {'automation-science-pack', 200},
-            {'py-science-pack-1', 100},
-            {'logistic-science-pack', 60},
-            {'military-science-pack', 30},
-            {'py-science-pack-2', 30},
-            {'chemical-science-pack', 20},
-            {'py-science-pack-3', 10},
-            {'production-science-pack', 6},
-            {'py-science-pack-4', 3},
-            {'utility-science-pack', 2},
-            {'space-science-pack', 1},
-        },
-        time = 1200,
+        count_formula = '2^(L-' .. (#science_packs - offset) .. ')*2500',
+        ingredients = ingredients,
+        time = 1800,
     },
     max_level = 'infinite',
     is_turd = true,
-    localised_description = {'', {'turd.font', {'turd.tech'}}, '\n', {'technology-description.turd-respec'}}
+    upgrade = true,
+    localised_description = {'', {'turd.font', {'turd.tech'}}, '\n', {'technology-description.turd-partial-respec'}}
 }

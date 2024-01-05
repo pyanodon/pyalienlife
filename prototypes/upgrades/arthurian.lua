@@ -16,7 +16,7 @@ if data and not yafc_turd_integration then
             name = 'abacus',
             category = 'crafting',
             enabled = false,
-            energy_required = 12,
+            energy_required = 6,
             ingredients = {
                 {type = 'item', name = 'iron-stick', amount = 2},
                 {type = 'item', name = 'plastic-bar', amount = 2},
@@ -27,6 +27,8 @@ if data and not yafc_turd_integration then
             },
         }
     }
+
+    FUN.productivity{'abacus'}
 
     for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['arthurian maturing 1']),
@@ -51,6 +53,9 @@ if data and not yafc_turd_integration then
         FUN.add_result_amount(recipe, 'arthurian-egg', i)
         local barrels = FUN.remove_result(recipe, 'empty-barrel')
         FUN.add_result(recipe, {'hot-air-barrel', barrels})
+        recipe.energy_required = recipe.energy_required / 2
+        recipe.main_product = 'warmer-stone-brick'
+        FUN.remove_ingredient(recipe, 'bedding')
         data:extend{recipe}
     end
 
@@ -67,7 +72,7 @@ if data and not yafc_turd_integration then
         },
         results = {
             {name = 'arthurian', amount = 4, type = 'item'},
-            {name = 'agar', amount = 2, type = 'item'},
+            {name = 'agar', amount = 5, type = 'item'},
             {name = 'blood-barrel', amount = 3, type = 'item'},
             {name = 'empty-barrel', amount = 3, type = 'item'},
         },
@@ -108,8 +113,8 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/abacus.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {productivity = 0.15, type = 'module-effects'},
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
+                {productivity = 0.25, type = 'module-effects'},
                 {recipe = 'abacus', type = 'unlock-recipe'},
                 {old = 'arthurian maturing 1', new = 'arthurian maturing 1-abacus', type = 'recipe-replacement'},
                 {old = 'arthurian maturing 2', new = 'arthurian maturing 2-abacus', type = 'recipe-replacement'},
@@ -122,7 +127,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/heated-stone.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {old = 'arthurian egg 1', new = 'arthurian egg 1-hot-stones', type = 'recipe-replacement'},
                 {old = 'arthurian egg 2', new = 'arthurian egg 2-hot-stones', type = 'recipe-replacement'},
                 {old = 'arthurian egg 3', new = 'arthurian egg 3-hot-stones', type = 'recipe-replacement'},
@@ -134,7 +139,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/cannibalism.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {recipe = 'arthurian-cannibalism', type = 'unlock-recipe'}
             }
         }

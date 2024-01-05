@@ -12,14 +12,20 @@ Digosaurus.minable_categories = {
 
 Digosaurus.valid_creatures = {
 	['digosaurus'] = 1,
+	['digosaurus-turd'] = 1,
 	['thikat'] = 2,
-	['work-o-dile'] = 3
+	['thikat-turd'] = 2,
+	['work-o-dile'] = 3,
+	['work-o-dile-turd'] = 3,
 }
 
 Digosaurus.mining_proxies = {
 	['digosaurus'] = 'digosaurus-mineable-proxy',
 	['thikat'] = 'thikats-mineable-proxy',
-	['work-o-dile'] = 'work-o-dile-mineable-proxy'
+	['work-o-dile'] = 'work-o-dile-mineable-proxy',
+	['digosaurus-turd'] = 'digosaurus-mineable-proxy',
+	['thikat-turd'] = 'thikats-mineable-proxy',
+	['work-o-dile-turd'] = 'work-o-dile-mineable-proxy',
 }
 
 Digosaurus.mining_range = 12.5

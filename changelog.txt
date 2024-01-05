@@ -1,4 +1,32 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.13
+Date: ???
+  Changes:
+    - fix zungrugor and numals not being disabled even when they had no animal modules
+    - fixed that fawogae mk4 and fawogae mk5 were both unlocked at the same science tier (py4)
+    - buffed the fawogae->coal recipe by requiring 1 fawogae input instead of 10
+    - added a new recipe for cumene+nickel+arthropod blood into organic solvent
+    - buffed bioprinting by removing primers from the pluripotent stem cells recipes
+    - fixed that bioprinting stage 2 unlocked both mk1 and mk2 of brain printing. mk1 recipe moved down to bioprinting stage 1
+    - moved native flora smart farming down to chemical science
+    - standardized moss+yaedols module speed bonuses to +100% +200% +300% +400%. no more weird floating point building crafting speeds
+    - buffed caravan & aerial caravan speed by 40% in order to compensate for previous update
+    - updated chinese translation (翻译：aotix，基于咸鱼拓展而来。)
+  TURD:
+    - added T.U.R.D unselect infinite tech to allow the indecisive to revert a single T.U.R.D selection
+    - added a new T.U.R.D: the composter turd. why is it unlocked at military science? don't ask too many questions
+    - buffed all three paths of bioprinter turd
+    - buffed all three paths of rennea turd
+    - buffed all three paths of arthurian turd (path 1: abacus crafting time halfed, prod allowed in abacus recipe, prod module boost increased 15% -> 25%) (path 2: now also removes bedding from egg recipes & speeds egg recipes by 2x) (path 3: agar amount increased from 2 -> 5)
+    - buffed atomizer turd path 2; cognition-osteochain requirement reduced from 5 -> 2
+    - buffed sap turd path 2 to give resveratrol instead of cellulose
+    - buffed paths 1&2 of moondrop turd. path 1 output multipler increased from 10% to 20%. path 2 oxygen output increased 30->40. path 2 recipe time decreased 15s -> 8s. path 2 lamp recycle chance increased 50% -> 75%
+    - buffed all three paths of moss turd (chlorinated water is effected by productivity, path 2 gives 10% stone back as gravel, path 3 refined syngas recipe is now useable)
+    - added creature chamber turd (avalible at py science pack 2) credit: soren
+    - reworked scrondrix turd path 1 & 2
+    - reworked kicalk path 1
+    - fixed that tuuphra path 2 would just softlock you. lol
+---------------------------------------------------------------------------------------------------
 Version: 2.1.12
 Date: 2023-11-22
   Changes:
@@ -7,7 +35,7 @@ Date: 2023-11-22
     - moved wax to empty comb recipe from arqad 2 to arqad 1 tech
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.11
-Date: 2023-11-11
+Date: 2023-11-21
   Changes:
     - fixed crash with 2.1.10 migration
     - fixed that the arqad used comb recycling recipe was not unlockable by research
@@ -18,8 +46,8 @@ Date: 2023-11-21
   Changes:
     - removed ralestia mk1 recipe. all ralesia recipes now require hydrogen
     - added decentralised PyPP cache file
-    - Removed tar, aromatics, glycerol, oleochemicals, depolymerized organics, ethonal, fish oil, liquid manure, black liquor, and tall oil from compostables list.
-    - fixed multiple mispellings
+    - Removed tar, aromatics, glycerol, oleochemicals, depolymerized organics, ethanol, fish oil, liquid manure, black liquor, and tall oil from compostables list.
+    - fixed multiple misspellings
     - fixed reproductive complex mk1 was not rotatable when other mks were rotatable (https://github.com/pyanodon/pybugreports/issues/330)
     - Prevented caravans & flying caravans from being boosted by ground tiles
     - Allowed vessel, vessel to ground, and floating biopyanoport to be placed on the same location as belts, pipes, or rail
@@ -48,7 +76,7 @@ Date: 2023-11-21
     - fixed the speed bonus of bhoddos modules to match the pattern of 1,2,3,4 (previously 1, 1.25, 1.5, 1.75)
     - reworked bhoddos turd path 1 to cause nuclear explosions every 2 hrs. high risk high rewards
     - reworked bhoddos turd path 2 to increase fuel rod energy usage with the benefit of plutonium oxide recycling
-    - reworked bhoddos turd path 3 to allow ZI of sporopollenin and fungal substrate
+    - reworked bhoddos turd path 3 to allow ZI(Zero Input) of sporopollenin and fungal substrate
   TURD:
     - fixed crash when opening TURD when pyAE is not installed
     - removed /view_turd_selections
@@ -140,7 +168,7 @@ Date: 2023-7-25
     - fixed that oculas were rendering on the map twice.
     - fixed that logistic stations would always flash a red "no power" icon. energy usage increased 1mW -> 10mW
     - fixed that the symbiosis technology had no prereqs
-    - fix mispelling of aggressive in zungror techs
+    - fix misspelling of aggressive in zungror techs
     - fixed that guts, meat, worker food ect did not show in production stats for caravans and digosaur
     - fixed that botanical nursery mk02,mk03,mk04 was unlocked by both mining machines & botany techs. now only botany
     - fixed that ulric corral was unlocked twice from ulric tech

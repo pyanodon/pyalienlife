@@ -11,14 +11,15 @@ local farm_buildings = require 'farm-building-list'
 ---@param kingdom_name 'animal' | 'plant' | 'fungi'
 function Farming.register_type(farm_name, kingdom_name)
 	log('remote registered farm \'' .. farm_name .. '\' (' .. kingdom_name .. ')')
-	farm_buildings[farm_name] = kingdom_name
+	global.farm_prototypes = global.farm_prototypes or farm_buildings
+	global.farm_prototypes[farm_name] = kingdom_name
 end
 
 ---unregister_type unregisters a farm for module restrictions
 ---@param farm_name string name of farm building without -mkxx suffix
 function Farming.unregister_type(farm_name)
 	log('remote unregistered farm \'' .. farm_name .. '\'')
-	farm_buildings[farm_name] = nil
+	global.farm_prototypes[farm_name] = nil
 end
 
 remote.remove_interface('pyfarm')
@@ -30,7 +31,7 @@ remote.add_interface('pyfarm', {
 -- animal, plant, or fungi?
 function Farming.get_kingdom(entity)
 	local name = entity.name:gsub('%-mk..+', '')
-	return farm_buildings[name]
+	return global.farm_prototypes[name]
 end
 
 function Farming.disable_machine(entity)
@@ -49,8 +50,10 @@ end
 Farming.events.on_init = function()
 	global.disabled_farm_buildings = global.disabled_farm_buildings or {}
 	global.enabled_farm_buildings = global.enabled_farm_buildings or {}
+	global.farm_prototypes = farm_buildings
 	global.next_farm_index = global.next_farm_index or 1
 end
+Farming.events.on_configuration_changed = Farming.events.on_init
 
 Farming.events.on_built = function(event)
 	local entity = event.created_entity or event.entity

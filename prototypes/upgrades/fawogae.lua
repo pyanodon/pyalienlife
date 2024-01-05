@@ -46,6 +46,7 @@ if data and not yafc_turd_integration then
     local coal_fawogae = table.deepcopy(data.raw.recipe['coal-fawogae'])
     coal_fawogae.name = 'coal-fawogae-buffed'
     coal_fawogae.energy_required = coal_fawogae.energy_required * 4
+    coal_fawogae.ingredients[1].amount = 10
     FUN.remove_result(coal_fawogae, 'raw-coal')
     FUN.add_result(coal_fawogae, {'active-carbon', 3})
     coal_fawogae.icons = nil
@@ -95,7 +96,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/n2-ferti.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {old = 'fawogae-1', new = 'fawogae-1-nitrogen', type = 'recipe-replacement'},
                 {old = 'fawogae with manure', new = 'fawogae with manure-nitrogen', type = 'recipe-replacement'},
                 {old = 'fawogae with improved substrate', new = 'fawogae with improved substrate-nitrogen', type = 'recipe-replacement'},
@@ -108,7 +109,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/acidosis.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {speed = 0.1, type = 'module-effects'},
                 {recipe = 'acid-gas-fawogae', type = 'unlock-recipe'},
                 {recipe = 'xeno-codex', type = 'unlock-recipe', also_unlocked_by_techs = true},
@@ -123,7 +124,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/dry.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {consumption = 3.5, type = 'module-effects'},
                 {old = 'coal-fawogae', new = 'coal-fawogae-buffed', type = 'recipe-replacement'},
                 {old = 'fawogae-plantation-mk01', new = 'fawogae-plantation-mk01-with-pressure-pump', type = 'recipe-replacement'},

@@ -46,10 +46,10 @@ if data and not yafc_turd_integration then
             {type = 'item', name = 'stack-filter-inserter', amount = 1},
         },
         results = {
-            {type = 'item', name = 'nano-cellulose', amount_min = 1, amount_max = 3},
+            {type = 'item', name = 'resveratrol', amount_min = 1, amount_max = 3},
             {type = 'item', name = 'stack-filter-inserter', amount = 1, probability = 0.999},
         },
-        main_product = 'nano-cellulose'
+        main_product = 'resveratrol'
     }}
 
     for i = 1, 4 do
@@ -113,7 +113,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/inoculator.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {recipe = 'ash-sap', type = 'unlock-recipe'},
                 {old = 'fts-reactor', new = 'fts-reactor-with-centrifuge', type = 'recipe-replacement'},
                 {old = 'fts-reactor-mk02', new = 'fts-reactor-mk02-with-centrifuge', type = 'recipe-replacement'},
@@ -126,7 +126,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/patch.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {recipe = 'nano-cellulose-sap', type = 'unlock-recipe'},
             }
         },
@@ -135,7 +135,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/bark.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {recipe = 'sap-tree-mulch-mk01', type = 'unlock-recipe'},
                 {recipe = 'sap-tree-mulch-mk02', type = 'unlock-recipe'},
                 {recipe = 'sap-tree-mulch-mk03', type = 'unlock-recipe'},

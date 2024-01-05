@@ -2,14 +2,26 @@ local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 
 if data and not yafc_turd_integration then
     for i, recipe in pairs({
+        table.deepcopy(data.raw.recipe['Scrondrix 1']),
+        table.deepcopy(data.raw.recipe['Scrondrix 2']),
+        table.deepcopy(data.raw.recipe['Scrondrix 3']),
+        table.deepcopy(data.raw.recipe['Scrondrix 4']),
+        table.deepcopy(data.raw.recipe['scrondrix-mk02']),
+        table.deepcopy(data.raw.recipe['scrondrix-mk03']),
+        table.deepcopy(data.raw.recipe['scrondrix-mk04']),
         table.deepcopy(data.raw.recipe['Scrondrix cub 1']),
         table.deepcopy(data.raw.recipe['Scrondrix cub 2']),
         table.deepcopy(data.raw.recipe['Scrondrix cub 3']),
         table.deepcopy(data.raw.recipe['Scrondrix cub 4']),
     }) do
+        if i > 4 and i < 8 then recipe.localised_name = {'recipe-name.' .. recipe.name} end
         recipe.name = recipe.name .. '-boron'
-        FUN.add_ingredient(recipe, {name = 'boron-trioxide', amount = i, type = 'item'})
-        FUN.add_result_amount(recipe, 'scrondrix-pup', i)
+        FUN.add_ingredient(recipe, {'boric-acid-barrel', FUN.remove_ingredient(recipe, 'water-barrel')})
+        if i > 7 then FUN.add_result_amount(recipe, 'scrondrix-pup', i) end
+        if i > 4 and i < 8 then
+            recipe.results[1].probability = recipe.results[1].probability * 1.5
+            recipe.energy_required = recipe.energy_required * 0.75
+        end
         data:extend{recipe}
     end
 
@@ -18,13 +30,26 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['Scrondrix 2']),
         table.deepcopy(data.raw.recipe['Scrondrix 3']),
         table.deepcopy(data.raw.recipe['Scrondrix 4']),
+        table.deepcopy(data.raw.recipe['scrondrix-mk02']),
+        table.deepcopy(data.raw.recipe['scrondrix-mk03']),
+        table.deepcopy(data.raw.recipe['scrondrix-mk04']),
         table.deepcopy(data.raw.recipe['Scrondrix cub 1']),
         table.deepcopy(data.raw.recipe['Scrondrix cub 2']),
         table.deepcopy(data.raw.recipe['Scrondrix cub 3']),
         table.deepcopy(data.raw.recipe['Scrondrix cub 4']),
     }) do
+        if i > 4 and i < 8 then recipe.localised_name = {'recipe-name.' .. recipe.name} end
         recipe.name = recipe.name .. '-vegan'
-        FUN.remove_ingredient(recipe, 'meat')
+        FUN.multiply_ingredient_amount(recipe, 'meat', 5)
+        FUN.remove_ingredient(recipe, 'fawogae')
+        FUN.remove_ingredient(recipe, 'yotoi-leaves')
+        FUN.remove_ingredient(recipe, 'raw-fiber')
+        FUN.remove_ingredient(recipe, 'navens')
+        FUN.remove_ingredient(recipe, 'wood-seeds')
+        if i > 4 and i < 8 then
+            recipe.results[1].probability = recipe.results[1].probability * 0.75
+            recipe.energy_required = recipe.energy_required * 1.5
+        end
         data:extend{recipe}
     end
 
@@ -77,12 +102,19 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/boronb.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {speed = 0.2, productivity = 0.05, type = 'module-effects'},
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
+                {speed = -0.5, productivity = 1, type = 'module-effects'},
                 {old = 'Scrondrix cub 1', new = 'Scrondrix cub 1-boron', type = 'recipe-replacement'},
                 {old = 'Scrondrix cub 2', new = 'Scrondrix cub 2-boron', type = 'recipe-replacement'},
                 {old = 'Scrondrix cub 3', new = 'Scrondrix cub 3-boron', type = 'recipe-replacement'},
                 {old = 'Scrondrix cub 4', new = 'Scrondrix cub 4-boron', type = 'recipe-replacement'},
+                {old = 'Scrondrix 1', new = 'Scrondrix 1-boron', type = 'recipe-replacement'},
+                {old = 'Scrondrix 2', new = 'Scrondrix 2-boron', type = 'recipe-replacement'},
+                {old = 'Scrondrix 3', new = 'Scrondrix 3-boron', type = 'recipe-replacement'},
+                {old = 'Scrondrix 4', new = 'Scrondrix 4-boron', type = 'recipe-replacement'},
+                {old = 'scrondrix-mk02', new = 'scrondrix-mk02-boron', type = 'recipe-replacement'},
+                {old = 'scrondrix-mk03', new = 'scrondrix-mk03-boron', type = 'recipe-replacement'},
+                {old = 'scrondrix-mk04', new = 'scrondrix-mk04-boron', type = 'recipe-replacement'},
             },
         },
         {
@@ -90,8 +122,8 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/hspa.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
-                {consumption = -0.7, type = 'module-effects'},
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
+                {speed = -0.2, consumption = 2, type = 'module-effects'},
                 {old = 'Scrondrix cub 1', new = 'Scrondrix cub 1-vegan', type = 'recipe-replacement'},
                 {old = 'Scrondrix cub 2', new = 'Scrondrix cub 2-vegan', type = 'recipe-replacement'},
                 {old = 'Scrondrix cub 3', new = 'Scrondrix cub 3-vegan', type = 'recipe-replacement'},
@@ -100,6 +132,9 @@ return {
                 {old = 'Scrondrix 2', new = 'Scrondrix 2-vegan', type = 'recipe-replacement'},
                 {old = 'Scrondrix 3', new = 'Scrondrix 3-vegan', type = 'recipe-replacement'},
                 {old = 'Scrondrix 4', new = 'Scrondrix 4-vegan', type = 'recipe-replacement'},
+                {old = 'scrondrix-mk02', new = 'scrondrix-mk02-vegan', type = 'recipe-replacement'},
+                {old = 'scrondrix-mk03', new = 'scrondrix-mk03-vegan', type = 'recipe-replacement'},
+                {old = 'scrondrix-mk04', new = 'scrondrix-mk04-vegan', type = 'recipe-replacement'},
             }
         },
         {
@@ -107,7 +142,7 @@ return {
             icon = '__pyalienlifegraphics3__/graphics/technology/neuron.png',
             icon_size = 128,
             order = 'c-a',
-            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'lock-recipe', 'recipe-replacement'
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {old = 'ex-bra-scro', new = 'scrondrix-brain-slaughterhouse-ex', type = 'recipe-replacement'},
                 {old = 'Caged scrondrix 9', new = 'scrondrix-experimental-treatment', type = 'recipe-replacement'},
             }

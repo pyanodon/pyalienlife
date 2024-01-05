@@ -4,17 +4,17 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/mega-farm.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"botany-mk04","fusion-mk01"},
+    prerequisites = {},
     effects = {},
     unit = {
         count = 300,
         ingredients = {
             {'automation-science-pack', 4},
             {'logistic-science-pack', 3},
-            {'military-science-pack', 3},
+            --{'military-science-pack', 3},
             {"chemical-science-pack", 1},
-            {"production-science-pack", 1},
-            {'utility-science-pack', 3},
+            --{"production-science-pack", 1},
+            --{'utility-science-pack', 3},
         },
         time = 45
     }
@@ -145,10 +145,10 @@ TECHNOLOGY {
         ingredients = {
             {'automation-science-pack', 4},
             {'logistic-science-pack', 3},
-            {'military-science-pack', 3},
+            --{'military-science-pack', 3},
             {"chemical-science-pack", 1},
-            {"production-science-pack", 1},
-            {'utility-science-pack', 3},
+            --{"production-science-pack", 1},
+            --{'utility-science-pack', 3},
         },
         time = 45
     }
