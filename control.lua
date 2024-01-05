@@ -233,6 +233,11 @@ script.on_event('open-gui', function(event)
     Caravan.events.used_capsule(event)
 end)
 
+
+script.on_event("my-custom-input", function(event)
+    Caravan.events.on_open_global_gui(event)
+end)
+
 script.on_event(defines.events.on_research_finished, Turd.events.on_research_finished)
 script.on_event(defines.events.on_research_reversed, Turd.events.on_research_reversed)
 script.on_event(defines.events.on_selected_entity_changed, Turd.events.on_selected_entity_changed)

@@ -209,6 +209,35 @@ function Caravan.build_gui(player, entity)
 	Caravan.update_gui(main_frame)
 end
 
+Caravan.events.on_open_global_gui = function(event)
+	local player = game.get_player(event.player_index)
+
+	if player.gui.screen.caravan_gui_global then
+		player.gui.screen.caravan_gui_global.destroy()
+		return
+	end
+	local frame = player.gui.screen.add{ type = 'frame', name = 'caravan_gui_global', caption = "caravan-global-gui.caption", direction = 'vertical'}
+	frame.auto_center = true
+	--player.opened = frame
+	--player.gui.screen.caravan_gui_global= frame
+
+	local table = frame.add {
+		type = "table",
+		name = "my_table",
+		column_count = 1
+	}
+
+	-- Add labels to the table
+	table.add { type = "label", caption = "Key" }
+	--table.add { type = "label", caption = "Value" }
+
+	-- Add data rows to the table
+	for key, value in pairs(global.caravans) do
+		table.add{type = 'label', name = 'click_caravan' .. tostring(key), style = 'clickable_squashable_label', tags = {id=key}, caption = tostring(key)}
+		--table.add { type = "label", caption = tostring(key) }
+	end
+
+end
 Caravan.events.on_open_gui = function(event)
 	local player = game.get_player(event.player_index)
 	-- If the player has a temporary item in their cursor, we don't let them open the GUI
