@@ -170,6 +170,16 @@ gui_events[defines.events.on_gui_click]['py_delete_schedule'] = function(event)
 	Caravan.update_gui(Caravan.get_caravan_gui(player))
 end
 
+gui_events[defines.events.on_gui_click]['py_blocking_caravan'] = function(event)
+	local element = event.element
+	local tags = element.tags
+	local caravan_data = global.caravans[tags.unit_number]
+	local action = caravan_data.schedule[tags.schedule_id].actions[tags.action_id]
+	action.async= not element.state
+	stop_actions(caravan_data)
+end
+
+
 gui_events[defines.events.on_gui_click]['py_shuffle_schedule_.'] = function(event)
 	local player = game.get_player(event.player_index)
 	local element = event.element
