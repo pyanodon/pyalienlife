@@ -42,14 +42,14 @@ local BIOPORT_CONNECTION = {
 		direction = 0,
 		position = {
 			0,
-			-2
+			2
 		}
 	},
 	{
 		direction = 2,
 		position = {
-			2,
-			0
+			0,
+			2
 		}
 	},
 	{
@@ -62,8 +62,8 @@ local BIOPORT_CONNECTION = {
 	{
 		direction = 6,
 		position = {
-			-2,
-			0
+			0,
+			2
 		}
 	}
 }
