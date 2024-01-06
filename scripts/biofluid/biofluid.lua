@@ -86,7 +86,7 @@ function Biofluid.update_bioport_animation(bioport_data)
 					animation_data.id = nil
 				end
 			else
-				local new_animation_name = 'bioport-animation-' .. creature_name .. '-' .. new_stage
+				local new_animation_name = 'bioport-animation-' .. creature_name .. '-' .. math.min(new_stage, 10)
 				if animation_data.id then
 					rendering.set_animation(animation_data.id, new_animation_name)
 				else
