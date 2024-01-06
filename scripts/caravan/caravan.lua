@@ -2,6 +2,7 @@ Caravan = {}
 Caravan.events = {}
 
 require 'caravan-gui'
+require 'caravan-global-gui'
 local prototypes = require 'caravan-prototypes'
 local Position = require('__stdlib__/stdlib/area/position')
 local Table = require('__stdlib__/stdlib/utils/table')
@@ -216,17 +217,6 @@ gui_events[defines.events.on_gui_click]['py_outpost_name'] = function(event)
 	end
 	refocus.visible = true
 	camera.zoom = 1
-end
-
-gui_events[defines.events.on_gui_click]['click_caravan_.'] = function(event)
-	local player = game.get_player(event.player_index)
-	local element = event.element
-	local tags = element.tags
-	local caravan_data = global.caravans[tags.unit_number]
-	if caravan_data then
-		Caravan.build_gui(player, caravan_data.entity)
-	end
-
 end
 
 gui_events[defines.events.on_gui_click]['py_refocus'] = function(event)

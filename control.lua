@@ -183,12 +183,21 @@ script.on_event(defines.events.on_gui_opened, function(event)
     Biofluid.events.on_gui_opened(event)
 end)
 
-script.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
+script.on_event(defines.events.on_gui_closed, function(event)
+    Caravan.events.close_gui(event)
+    Caravan.events.on_close_global_gui(event)
+    Digosaurus.events.close_gui(event)
+    Slaughterhouse.events.on_gui_closed(event)
+    Biofluid.events.on_gui_closed(event)
+end)
+
+script.on_event(defines.events.on_player_changed_surface, function(event)
     Caravan.events.close_gui(event)
     Digosaurus.events.close_gui(event)
     Slaughterhouse.events.on_gui_closed(event)
     Biofluid.events.on_gui_closed(event)
 end)
+
 
 script.on_event(defines.events.on_rocket_launched, Smart_Farm.events.on_rocket_launched)
 
@@ -233,8 +242,7 @@ script.on_event('open-gui', function(event)
     Caravan.events.used_capsule(event)
 end)
 
-
-script.on_event("my-custom-input", function(event)
+script.on_event("caravan-organizer", function(event)
     Caravan.events.on_open_global_gui(event)
 end)
 
