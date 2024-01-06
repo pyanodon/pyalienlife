@@ -49,6 +49,10 @@ local function on_search(search_key, gui, player)
 	end
 end
 
+local function has_turd_migration(force_index, sub_tech_name)
+	return game.tick < (global.turd_migrations[force_index][sub_tech_name] or 0)
+end
+
 local function update_confirm_button(element, player, researched_technologies)
 	local force_index = player.force_index
 	global.turd_bonuses[force_index] = global.turd_bonuses[force_index] or {}
@@ -63,7 +67,12 @@ local function update_confirm_button(element, player, researched_technologies)
 		element.style = 'confirm_button_without_tooltip'
 		element.caption = {'turd.select'}
 	elseif selected_upgrade == element.tags.sub_tech_name then
-		if (global.turd_reset_remaining[force_index] or 0) > 0 then
+		if has_turd_migration(force_index, selected_upgrade)then
+			local ticks_remaining = global.turd_migrations[force_index][selected_upgrade] - game.tick
+			local seconds_remaining = math.floor(ticks_remaining / 60)
+			element.style = 'confirm_button_without_tooltip'
+			element.caption = {'turd.unselect-migrate', seconds_remaining}
+		elseif (global.turd_reset_remaining[force_index] or 0) > 0 then
 			element.style = 'confirm_button_without_tooltip'
 			element.caption = {'turd.unselect'}
 		else
@@ -440,12 +449,15 @@ gui_events[defines.events.on_gui_click]['py_turd_confirm_button'] = function(eve
 		turd_bonuses[master_tech_name] = sub_tech_name
 		apply_turd_bonus(force, master_tech_name, tech_upgrades[master_tech_name], find_all_assembling_machines(force))
 	else
-		if (global.turd_reset_remaining[force_index] or 0) <= 0 then
+		global.turd_reset_remaining[force_index] = global.turd_reset_remaining[force_index] or 0
+		if global.turd_reset_remaining[force_index] <= 0 and not has_turd_migration(force_index, sub_tech_name) then
 			return
 		end
 		force.print{'turd.font', {'turd.unselected-alert', {'technology-name.'..master_tech_name}, {'technology-name.'..sub_tech_name}, player.name, player.color.r, player.color.g, player.color.b}}
 		turd_bonuses[master_tech_name] = NOT_SELECTED
-		global.turd_reset_remaining[force_index] = global.turd_reset_remaining[force_index] - 1
+		if not has_turd_migration(force_index, sub_tech_name) then
+			global.turd_reset_remaining[force_index] = global.turd_reset_remaining[force_index] - 1
+		end
 		unselect_recipes_for_subtech(tech_upgrades[master_tech_name].sub_techs[selection], force, find_all_assembling_machines(force))
 		destroy_all_hidden_beacons(force)
 		reapply_turd_bonuses(force)
