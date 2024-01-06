@@ -218,6 +218,17 @@ gui_events[defines.events.on_gui_click]['py_outpost_name'] = function(event)
 	camera.zoom = 1
 end
 
+gui_events[defines.events.on_gui_click]['click_caravan_.'] = function(event)
+	local player = game.get_player(event.player_index)
+	local element = event.element
+	local tags = element.tags
+	local caravan_data = global.caravans[tags.unit_number]
+	if caravan_data then
+		Caravan.build_gui(player, caravan_data.entity)
+	end
+
+end
+
 gui_events[defines.events.on_gui_click]['py_refocus'] = function(event)
 	local player = game.get_player(event.player_index)
 	local element = event.element

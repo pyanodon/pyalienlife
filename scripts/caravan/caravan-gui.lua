@@ -224,20 +224,24 @@ Caravan.events.on_open_global_gui = function(event)
 	local table = frame.add {
 		type = "table",
 		name = "my_table",
-		column_count = 1
+		column_count = 2
 	}
 
 	-- Add labels to the table
 	table.add { type = "label", caption = "Key" }
-	--table.add { type = "label", caption = "Value" }
+	table.add { type = "label", caption = "Value" }
+
 
 	-- Add data rows to the table
 	for key, value in pairs(global.caravans) do
-		table.add{type = 'label', name = 'click_caravan' .. tostring(key), style = 'clickable_squashable_label', tags = {id=key}, caption = tostring(key)}
-		--table.add { type = "label", caption = tostring(key) }
+		if Caravan.validity_check(value) then
+			table.add { type = 'label', name = 'click_caravan_.' .. tostring(key), style = 'clickable_squashable_label', tags = { unit_number = key, entity = value }, caption = tostring(key) }
+			game.print(serpent.block(value))
+			table.add { type = "label", caption = tostring(value.entity.name) }
+		end
+	end
 	end
 
-end
 Caravan.events.on_open_gui = function(event)
 	local player = game.get_player(event.player_index)
 	-- If the player has a temporary item in their cursor, we don't let them open the GUI
