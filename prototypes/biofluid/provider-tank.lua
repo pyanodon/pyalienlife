@@ -76,22 +76,7 @@ ENTITY {
     result_inventory_size = 0,
     source_inventory_size = 0,
     crafting_categories = {'biofluid'},
-    energy_source = {
-        connections = {
-          {
-            direction = 4,
-            position = {0, 0}
-          }
-        },
-        max_temperature = 0,
-        default_temperature = 0,
-        min_working_temperature = 0,
-        max_transfer = '1W',
-        specific_heat = '1W',
-        type = 'heat',
-        pipe_covers = require('__pyalienlife__/prototypes/biofluid/pipe-cover'),
-        heat_pipe_covers = require('__pyalienlife__/prototypes/biofluid/pipe-cover'),
-    },
+    energy_source = {type = 'void'},
     energy_usage = '1W',
     show_recipe_icon_on_map = false,
     circuit_wire_connection_points = {
