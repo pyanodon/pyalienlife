@@ -1,5 +1,6 @@
 local TO_GROUND = 'pipe-to-ground'
 local VESSEL = 'vessel'
+local BIOPORT = 'bioport'
 
 Biofluid = {}
 Biofluid.events = {}
@@ -722,5 +723,26 @@ function Biofluid.update_graphics(entity)
 			end
 		end
 		entity.graphics_variation = animations[animation_index] or 1
+	elseif entity.name == BIOPORT then
+		local bioport_data = global.biofluid_bioports[entity.unit_number]
+		if not bioport_data then return end
+		local animation_entity = bioport_data.animation_entity
+		if not animation_entity or not animation_entity.valid then
+			bioport_data.animation_entity = entity.surface.create_entity{
+				name = 'bioport-floor-animation',
+				position = entity.position,
+				force = entity.force_index,
+			}
+			animation_entity = bioport_data.animation_entity
+		end
+		local direction = entity.direction
+		if direction == defines.direction.south then
+			local connection = Biofluid.find_heat_connections(entity)[1]
+			if Biofluid.is_looking_at_us(entity, connection) then
+				animation_entity.graphics_variation = 5
+				return
+			end
+		end
+		animation_entity.graphics_variation = entity.direction / 2 + 1
 	end
 end

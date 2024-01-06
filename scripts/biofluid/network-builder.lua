@@ -39,10 +39,10 @@ local VESSEL_CONNECTION = {
 local BIOPORT = 'bioport'
 local BIOPORT_CONNECTION = {
 	{
-		direction = defines.direction.south,
+		direction = defines.direction.north,
 		position = {
 			0,
-			2
+			-2
 		}
 	},
 }
