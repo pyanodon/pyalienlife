@@ -11,8 +11,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'iron-ore', amount = 10},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion')
 
 RECIPE {
     type = 'recipe',
@@ -26,8 +26,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'iron-ore', amount = 10},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk02")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk02')
 
 RECIPE {
     type = 'recipe',
@@ -42,8 +42,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'copper-ore', amount = 35},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk02")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk02')
 
 RECIPE {
     type = 'recipe',
@@ -57,8 +57,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'copper-ore', amount = 20},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk02")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk02')
 
 RECIPE {
     type = 'recipe',
@@ -72,8 +72,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'copper-ore', amount = 20},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk02")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk02')
 
 RECIPE {
     type = 'recipe',
@@ -87,8 +87,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'copper-ore', amount = 10},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk03")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk03')
 
 RECIPE {
     type = 'recipe',
@@ -102,8 +102,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'copper-ore', amount = 15},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk02")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk02')
 
 RECIPE {
     type = 'recipe',
@@ -117,8 +117,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'iron-ore', amount = 20},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk02")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk02')
 
 RECIPE {
     type = 'recipe',
@@ -132,8 +132,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'iron-ore', amount = 6},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk02")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk02')
 
 RECIPE {
     type = 'recipe',
@@ -147,8 +147,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'iron-ore', amount = 5},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion')
 
 RECIPE {
     type = 'recipe',
@@ -162,8 +162,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'ore-tin', amount = 10},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk02")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk02')
 
 RECIPE {
     type = 'recipe',
@@ -177,8 +177,8 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'nitrogen', amount = 150},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk03")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk03')
 
 RECIPE {
     type = 'recipe',
@@ -192,8 +192,8 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'chlorine', amount = 100},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion')
 
 RECIPE {
     type = 'recipe',
@@ -207,8 +207,8 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'chlorine', amount = 50},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk03")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk03')
 
 RECIPE {
     type = 'recipe',
@@ -223,8 +223,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'ore-zinc', amount = 30},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk03")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk03')
 
 RECIPE {
     type = 'recipe',
@@ -238,8 +238,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'ore-zinc', amount = 5},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk02")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk02')
 
 RECIPE {
     type = 'recipe',
@@ -253,8 +253,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'ore-zinc', amount = 20},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk02")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk02')
 
 RECIPE {
     type = 'recipe',
@@ -268,8 +268,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'ore-titanium', amount = 10},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk02")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk02')
 
 RECIPE {
     type = 'recipe',
@@ -283,8 +283,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'ore-titanium', amount = 17},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk03")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk03')
 
 RECIPE {
     type = 'recipe',
@@ -298,8 +298,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'sulfur', amount = 12},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk03")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk03')
 
 RECIPE {
     type = 'recipe',
@@ -313,8 +313,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'sulfur', amount = 5},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk02")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk02')
 
 RECIPE {
     type = 'recipe',
@@ -328,8 +328,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'copper-ore', amount = 10},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk03")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk03')
 
 RECIPE {
     type = 'recipe',
@@ -343,8 +343,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'copper-ore', amount = 8},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk02")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk02')
 
 RECIPE {
     type = 'recipe',
@@ -358,8 +358,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'ore-zinc', amount = 12},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk04")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk04')
 
 RECIPE {
     type = 'recipe',
@@ -373,8 +373,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'ore-zinc', amount = 15},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk04")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk04')
 
 RECIPE {
     type = 'recipe',
@@ -388,8 +388,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'ore-aluminium', amount = 25},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk04")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk04')
 
 RECIPE {
     type = 'recipe',
@@ -403,8 +403,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'molybdenum-ore', amount = 30},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk03")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk03')
 
 RECIPE {
     type = 'recipe',
@@ -418,8 +418,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'molybdenum-ore', amount = 5},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk02")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk02')
 
 RECIPE {
     type = 'recipe',
@@ -433,8 +433,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'molybdenum-ore', amount = 10},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk04")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk04')
 
 RECIPE {
     type = 'recipe',
@@ -448,8 +448,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'ore-chromium', amount = 17},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk02")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk02')
 
 RECIPE {
     type = 'recipe',
@@ -463,8 +463,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'ore-chromium', amount = 10},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk03")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk03')
 
 RECIPE {
     type = 'recipe',
@@ -478,8 +478,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'ore-chromium', amount = 15},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk02")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk02')
 
 RECIPE {
     type = 'recipe',
@@ -493,8 +493,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'ore-chromium', amount = 25},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk02")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk02')
 
 RECIPE {
     type = 'recipe',
@@ -508,8 +508,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'ore-tin', amount = 15},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion')
 
 RECIPE {
     type = 'recipe',
@@ -523,8 +523,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'ore-tin', amount = 25},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk02")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk02')
 
 RECIPE {
     type = 'recipe',
@@ -538,8 +538,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'ore-tin', amount = 10},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk03")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk03')
 
 RECIPE {
     type = 'recipe',
@@ -553,8 +553,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'ore-tin', amount = 5},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk03")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk03')
 
 RECIPE {
     type = 'recipe',
@@ -568,8 +568,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'ore-tin', amount = 17},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk02")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk02')
 
 RECIPE {
     type = 'recipe',
@@ -583,8 +583,8 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'nitrogen', amount = 50},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk02")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk02')
 
 RECIPE {
     type = 'recipe',
@@ -598,8 +598,8 @@ RECIPE {
     results = {
         {type = 'item', name = 'uranium-ore', amount = 8},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk04")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk04')
 
 RECIPE {
     type = 'recipe',
@@ -613,5 +613,21 @@ RECIPE {
     results = {
         {type = 'item', name = 'raw-borax', amount = 8},
     },
-    --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk03")
+    --main_product = 'cocoon',
+}:add_unlock('molecular-decohesion-mk03')
+
+if mods.pyalternativeenergy then
+    RECIPE {
+        type = 'recipe',
+        name = 'chitin-to-geothermal-water',
+        category = 'atomizer',
+        enabled = false,
+        energy_required = 10,
+        ingredients = {
+            {type = 'item', name = 'chitin', amount = 2},
+        },
+        results = {
+            {type = 'fluid', name = 'geothermal-water', amount = 50},
+        },
+    }:add_unlock('molecular-decohesion')
+end

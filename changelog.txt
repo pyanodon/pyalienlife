@@ -5,7 +5,7 @@ Date: ???
     - codex recipes no longer allow productivity effects
     - fix zungrugor and numals not being disabled even when they had no animal modules
     - fixed that fawogae mk4 and fawogae mk5 were both unlocked at the same science tier (py4)
-    - buffed the fawogae->coal recipe by requiring 1 fawogae input instead of 10
+    - buffed the fawogae->coal recipe by requiring 2 fawogae inputs instead of 10
     - added a new recipe for cumene+nickel+arthropod blood into organic solvent
     - buffed bioprinting by removing primers from the pluripotent stem cells recipes
     - fixed that bioprinting stage 2 unlocked both mk1 and mk2 of brain printing. mk1 recipe moved down to bioprinting stage 1
@@ -15,6 +15,7 @@ Date: ???
     - updated chinese translation (翻译：aotix，基于咸鱼拓展而来。)
     - added non blocking mode to caravans
     - fixed a biofluid crash when used with a bigger stack sizes mod
+    - added a new atomizer recipe to convert chitin into geothermal water
   TURD:
     - added T.U.R.D unselect infinite tech to allow the indecisive to revert a single T.U.R.D selection
     - added the option to unselect T.U.R.D paths for free once the next 10 hours after an update if you've chosen a path that got changed
