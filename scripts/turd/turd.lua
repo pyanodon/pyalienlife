@@ -455,7 +455,9 @@ gui_events[defines.events.on_gui_click]['py_turd_confirm_button'] = function(eve
 		end
 		force.print{'turd.font', {'turd.unselected-alert', {'technology-name.'..master_tech_name}, {'technology-name.'..sub_tech_name}, player.name, player.color.r, player.color.g, player.color.b}}
 		turd_bonuses[master_tech_name] = NOT_SELECTED
-		if not has_turd_migration(force_index, sub_tech_name) then
+		if has_turd_migration(force_index, sub_tech_name) then
+			global.turd_migrations[force_index][sub_tech_name] = 0
+		else
 			global.turd_reset_remaining[force_index] = global.turd_reset_remaining[force_index] - 1
 		end
 		unselect_recipes_for_subtech(tech_upgrades[master_tech_name].sub_techs[selection], force, find_all_assembling_machines(force))

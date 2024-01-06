@@ -2,6 +2,7 @@
 Version: 2.1.13
 Date: ???
   Changes:
+    - codex recipes no longer allow productivity effects
     - fix zungrugor and numals not being disabled even when they had no animal modules
     - fixed that fawogae mk4 and fawogae mk5 were both unlocked at the same science tier (py4)
     - buffed the fawogae->coal recipe by requiring 1 fawogae input instead of 10
@@ -15,18 +16,19 @@ Date: ???
     - added non blocking mode to caravans
   TURD:
     - added T.U.R.D unselect infinite tech to allow the indecisive to revert a single T.U.R.D selection
-    - added a new T.U.R.D: the composter turd. why is it unlocked at military science? don't ask too many questions
-    - buffed all three paths of bioprinter turd
-    - buffed all three paths of rennea turd
-    - buffed all three paths of arthurian turd (path 1: abacus crafting time halfed, prod allowed in abacus recipe, prod module boost increased 15% -> 25%) (path 2: now also removes bedding from egg recipes & speeds egg recipes by 2x) (path 3: agar amount increased from 2 -> 5)
-    - buffed atomizer turd path 2; cognition-osteochain requirement reduced from 5 -> 2
-    - buffed sap turd path 2 to give resveratrol instead of cellulose
-    - buffed paths 1&2 of moondrop turd. path 1 output multipler increased from 10% to 20%. path 2 oxygen output increased 30->40. path 2 recipe time decreased 15s -> 8s. path 2 lamp recycle chance increased 50% -> 75%
-    - buffed all three paths of moss turd (chlorinated water is effected by productivity, path 2 gives 10% stone back as gravel, path 3 refined syngas recipe is now useable)
-    - added creature chamber turd (avalible at py science pack 2) credit: soren
-    - reworked scrondrix turd path 1 & 2
-    - reworked kicalk path 1
-    - fixed that tuuphra path 2 would just softlock you. lol
+    - added the option to unselect T.U.R.D paths for free once the next 10 hours after an update if you've chosen a path that got changed
+    - added a new T.U.R.D: the composter T.U.R.D. why is it unlocked at military science? don't ask too many questions
+    - buffed all three paths of bioprinter T.U.R.D
+    - buffed all three paths of rennea T.U.R.D
+    - buffed all three paths of arthurian T.U.R.D (path 1: abacus crafting time halfed, prod allowed in abacus recipe, prod module boost increased 15% -> 25%) (path 2: now also removes bedding from egg recipes & speeds egg recipes by 2x) (path 3: agar amount increased from 2 -> 5)
+    - buffed atomizer T.U.R.D path 2; cognition-osteochain requirement reduced from 5 -> 2
+    - buffed sap T.U.R.D path 2 to give resveratrol instead of cellulose
+    - buffed paths 1&2 of moondrop T.U.R.D. path 1 output multipler increased from 10% to 20%. path 2 oxygen output increased 30->40. path 2 recipe time decreased 15s -> 8s. path 2 lamp recycle chance increased 50% -> 75%
+    - buffed all three paths of moss T.U.R.D (chlorinated water is effected by productivity, path 2 gives 10% stone back as gravel, path 3 refined syngas recipe is now useable)
+    - added creature chamber T.U.R.D (avalible at py science pack 2) credit: soren
+    - reworked scrondrix T.U.R.D path 1 & 2
+    - reworked kicalk T.U.R.D path 1
+    - fixed that tuuphra T.U.R.D path 2 would just softlock you. lol
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.12
 Date: 2023-11-22
