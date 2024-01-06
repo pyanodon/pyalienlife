@@ -63,6 +63,158 @@ for name, _ in pairs(Biofluid.favorite_foods) do
     recipe:add_ingredient{name = name, amount = data.raw.item[name].stack_size, type = 'item'}
 end
 
+local direction_inversion = {
+    north = 'south',
+    east = 'west',
+    south = 'north',
+    west = 'east'
+}
+
+local idle_animation = {}
+for _, direction in pairs{'north', 'east', 'south', 'west'} do
+    idle_animation[direction_inversion[direction]] = {
+        layers = {
+            {
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-port-' .. direction .. '.png',
+                priority = 'high',
+                width = 640/5/2,
+                height = 768/6/2,
+                frame_count = 5*6,
+                line_length = 5,
+                shift = {0, 0},
+                scale = 0.335*2,
+                animation_speed = 0.3,
+                hr_version = {
+                    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-port-' .. direction .. '.png',
+                    priority = 'high',
+                    width = 640/5,
+                    height = 768/6,
+                    frame_count = 5*6,
+                    line_length = 5,
+                    shift = {0, 0},
+                    scale = 0.335,
+                    animation_speed = 0.3
+                }
+            },
+            {
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-port-' .. direction .. '-glow.png',
+                priority = 'high',
+                width = 640/5/2,
+                height = 768/6/2,
+                frame_count = 5*6,
+                line_length = 5,
+                shift = {0, 0},
+                scale = 0.335*2,
+                animation_speed = 0.3,
+                draw_as_glow = true,
+                hr_version = {
+                    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-port-' .. direction .. '-glow.png',
+                    priority = 'high',
+                    width = 640/5,
+                    height = 768/6,
+                    frame_count = 5*6,
+                    line_length = 5,
+                    shift = {0, 0},
+                    scale = 0.335,
+                    animation_speed = 0.3,
+                    draw_as_glow = true
+                }
+            },
+            {
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-port-' .. direction .. '-shadow.png',
+                priority = 'high',
+                width = 640/5/2,
+                height = 768/6/2,
+                frame_count = 5*6,
+                line_length = 5,
+                shift = {0, 0},
+                scale = 0.335*2,
+                animation_speed = 0.3,
+                draw_as_shadow = true,
+                hr_version = {
+                    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-port-' .. direction .. '-shadow.png',
+                    priority = 'high',
+                    width = 640/5,
+                    height = 768/6,
+                    frame_count = 5*6,
+                    line_length = 5,
+                    shift = {0, 0},
+                    scale = 0.335,
+                    animation_speed = 0.3,
+                    draw_as_shadow = true
+                }
+            }
+        }
+    }
+end
+
+local function append_shifted(direction, new_layers, shift)
+    local original = idle_animation[direction].layers
+    for _, layer in pairs(table.deepcopy(new_layers)) do
+        if not layer.draw_as_light then
+            layer.shift = layer.shift or {0, 0}
+            layer.shift = {layer.shift[1] + shift[1], layer.shift[2] + shift[2]}
+            layer.hr_version.shift = layer.shift
+            original[#original+1] = layer
+        end
+    end
+end
+
+idle_animation['north'].layers[#idle_animation['north'].layers+1] = {
+    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-straight-vertical.png',
+    priority = 'high',
+    width = 640/5/2,
+    height = 768/6/2,
+    frame_count = 5*6,
+    line_length = 5,
+    shift = util.by_pixel(0, 8),
+    scale = 0.335*2,
+    animation_speed = 0.3,
+    hr_version = {
+        filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-straight-vertical.png',
+        priority = 'high',
+        width = 640/5,
+        height = 768/6,
+        frame_count = 5*6,
+        line_length = 5,
+        shift = util.by_pixel(0, 8),
+        scale = 0.335,
+        animation_speed = 0.3
+    }
+}
+
+idle_animation['north'].layers[#idle_animation['north'].layers+1] = {
+    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-straight-vertical-glow.png',
+    priority = 'high',
+    width = 640/5/2,
+    height = 768/6/2,
+    frame_count = 5*6,
+    line_length = 5,
+    shift = util.by_pixel(0, 8),
+    scale = 0.335*2,
+    animation_speed = 0.3,
+    draw_as_glow = true,
+    hr_version = {
+        filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-straight-vertical-glow.png',
+        priority = 'high',
+        width = 640/5,
+        height = 768/6,
+        frame_count = 5*6,
+        line_length = 5,
+        shift = util.by_pixel(0, 8),
+        scale = 0.335,
+        animation_speed = 0.3,
+        draw_as_glow = true,
+    }
+}
+
+append_shifted('north', data.raw['simple-entity-with-owner']['vessel'].animations[3].layers, {0, 1})
+append_shifted('north', data.raw['simple-entity-with-owner']['vessel'].animations[1].layers, {0, 2})
+append_shifted('east', data.raw['simple-entity-with-owner']['vessel'].animations[2].layers, {-1, 0})
+append_shifted('east', data.raw['simple-entity-with-owner']['vessel'].animations[2].layers, {-2, 0})
+append_shifted('west', data.raw['simple-entity-with-owner']['vessel'].animations[2].layers, {1, 0})
+append_shifted('west', data.raw['simple-entity-with-owner']['vessel'].animations[2].layers, {2, 0})
+
 ENTITY {
     type = 'assembling-machine',
     name = 'bioport',
@@ -74,30 +226,19 @@ ENTITY {
     selection_priority = 49,
     fixed_recipe = 'bioport-hidden-recipe',
     max_health = 500,
+    always_draw_idle_animation = true,
+    idle_animation = idle_animation,
     allowed_effects = {'consumption', 'pollution'},
     module_specification = {module_slots = 1},
     corpse = 'big-remnants',
-    collision_box = {{-2.3, -2.3}, {2.3, 2.3}},
+    collision_box = {{-2.31, -2.3}, {2.31, 2.3}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     dying_explosion = 'medium-explosion',
     collision_mask = {vessel_collision_mask},
     crafting_speed = 1,
     energy_usage = '1W',
     crafting_categories = {'biofluid'},
-    energy_source = {
-        connections = {{
-            direction = 4,
-            position = {0, 2},
-        }},
-        max_temperature = 0,
-        default_temperature = 0,
-        min_working_temperature = 0,
-        max_transfer = '1W',
-        specific_heat = '1W',
-        type = 'heat',
-        pipe_covers = require('__pyalienlife__/prototypes/biofluid/pipe-cover'),
-        heat_pipe_covers = require('__pyalienlife__/prototypes/biofluid/pipe-cover'),
-    },
+    energy_source = {type = 'void'},
     show_recipe_icon = false,
     vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},
     integration_patch = {
@@ -107,13 +248,13 @@ ENTITY {
                 priority = 'extra-high',
                 width = 175,
                 height = 182,
-                shift = util.by_pixel(16.75, -38.75 - 32),
+                shift = util.by_pixel(16.75, -38.75 - 32 - 9),
                 hr_version = {
                     filename = '__pyalienlifegraphics2__/graphics/entity/bots/roboport/hr-raw.png',
                     priority = 'extra-high',
                     width = 351,
                     height = 365,
-                    shift = util.by_pixel(16.75, -38.75 - 32),
+                    shift = util.by_pixel(16.75, -38.75 - 32 - 9),
                     scale = 0.5,
                     frame_count = 1
                 },
@@ -124,14 +265,14 @@ ENTITY {
                 priority = 'extra-high',
                 width = 175,
                 height = 182,
-                shift = util.by_pixel(16.75, -38.75 - 32),
+                shift = util.by_pixel(16.75, -38.75 - 32 - 9),
                 draw_as_glow = true,
                 hr_version = {
                     filename = '__pyalienlifegraphics2__/graphics/entity/bots/roboport/hr-glow.png',
                     priority = 'extra-high',
                     width = 351,
                     height = 365,
-                    shift = util.by_pixel(16.75, -38.75 - 32),
+                    shift = util.by_pixel(16.75, -38.75 - 32 - 9),
                     draw_as_glow = true,
                     scale = 0.5,
                     frame_count = 1
@@ -144,14 +285,14 @@ ENTITY {
                 draw_as_shadow = true,
                 width = 176,
                 height = 116,
-                shift = {1.5, 1.5},
+                shift = {1.5, 1.5 - 9/32},
                 hr_version = {
                     filename = '__pyalienlifegraphics2__/graphics/entity/bots/roboport/hr-sh.png',
                     priority = 'extra-high',
                     draw_as_shadow = true,
                     width = 352,
                     height = 232,
-                    shift = {1.5, 1.5},
+                    shift = {1.5, 1.5 - 9/32},
                     scale = 0.5,
                     frame_count = 1
                 },
