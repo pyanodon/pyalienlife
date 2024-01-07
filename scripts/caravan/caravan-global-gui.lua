@@ -5,20 +5,24 @@ Caravan.events.on_open_global_gui = function(event)
     end
     local frame = player.gui.screen.add { type = 'frame', name = 'caravan_gui_global', caption = { 'caravan-global-gui.caption' }, direction = 'vertical' }
     frame.auto_center = true
-    local table = frame.add {
-        type = "table",
-        name = "my_table",
+    local scroll_pane = frame.add {
+        type = 'scroll-pane',
+        name = 'global-caravan-pane'
+    }
+    local table = scroll_pane.add {
+        type = 'table',
+        name = 'my_table',
         column_count = 2
     }
-    table.add { type = "label", caption = "Key" }
-    table.add { type = "label", caption = "Value" }
+    table.add { type = 'label', caption = 'Key' }
+    table.add { type = 'label', caption = 'Value' }
     for key, value in pairs(global.caravans) do
         if Caravan.validity_check(value) then
             table.add { type = 'label', name = 'click_caravan_.' .. tostring(key),
                         style = 'clickable_squashable_label',
                         tags = { unit_number = key, entity = value },
                         caption = tostring(key) }
-            table.add { type = "label", caption = tostring(value.entity.name) }
+            table.add { type = 'label', caption = tostring(value.entity.name) }
         end
     end
 end

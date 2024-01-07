@@ -3,6 +3,7 @@ Caravan.events = {}
 
 require 'caravan-gui'
 require 'caravan-global-gui'
+require 'caravan-outpost-gui'
 local prototypes = require 'caravan-prototypes'
 local Position = require('__stdlib__/stdlib/area/position')
 local Table = require('__stdlib__/stdlib/utils/table')
