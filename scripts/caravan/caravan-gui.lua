@@ -2,6 +2,7 @@ local prototypes = require 'caravan-prototypes'
 local Table = require('__stdlib__/stdlib/utils/table')
 local Position = require('__stdlib__/stdlib/area/position')
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
+require 'caravan-gui-shared'
 
 local function generate_button_status(caravan_data, schedule_id, action_id)
 	local style = 'train_schedule_action_button'
@@ -235,25 +236,9 @@ function Caravan.update_gui(gui, weak)
 	local caravan_data = global.caravans[gui.tags.unit_number]
 	if not Caravan.validity_check(caravan_data) then gui.destroy() return end
 	local content_flow = gui.content_frame.content_flow
-	local entity = caravan_data.entity
-
-	local status, img
-	if caravan_data.is_aerial then
-		status = {'entity-status.working'}
-		img = 'utility/status_working'
-	elseif caravan_data.fuel_bar == 0 and caravan_data.fuel_inventory.is_empty() then
-		status = {'entity-status.starved'}
-		img = 'utility/status_not_working'
-	elseif entity.health ~= entity.prototype.max_health then
-		status = {'entity-status.wounded'}
-		img = 'utility/status_yellow'
-	else
-		status = {'entity-status.healthy'}
-		img = 'utility/status_working'
-	end
-	content_flow.status_flow.status_text.caption = status
-	content_flow.status_flow.status_sprite.sprite = img
-
+	local state = Caravan.status_img(caravan_data)
+	content_flow.status_flow.status_text.caption = state.status
+	content_flow.status_flow.status_sprite.sprite = state.img
 	if caravan_data.fuel_inventory then
 		for i = 1, #caravan_data.fuel_inventory do
 			local stack = caravan_data.fuel_inventory[i]
