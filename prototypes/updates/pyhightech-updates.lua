@@ -1620,3 +1620,7 @@ RECIPE('fertilizer-2'):add_unlock('biofluid-mk01'):add_ingredient{type = 'item',
 
 FUN.productivity{'cellulose-01'}
 
+data.raw.recipe['blood-meal'].ingredients = {
+    {type = 'fluid', name = 'blood', amount = 100},
+    {type = 'item', name = 'fiberboard', amount = 1}
+}
