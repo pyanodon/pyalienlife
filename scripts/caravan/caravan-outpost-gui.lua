@@ -1,28 +1,23 @@
 require 'caravan-gui-shared'
+local Table = require('__stdlib__/stdlib/utils/table')
 
 local function has_schedule(caravan_data, entity)
     if not Caravan.validity_check(caravan_data) then
-        return false
+        return
     end
     if not caravan_data.schedule then
-        return false
+        return
     end
-    for _, schedule in pairs(caravan_data.schedule) do
-        if schedule.entity == entity then
-            return true
-        end
-    end
-    return false
+    return Table.any(caravan_data.schedule, function(schedule)
+        return schedule.entity == entity
+    end)
 end
 
 -- probably bad if you have 10 k caravans... but is that even remotely relevant?
 local function has_any_caravan(entity)
-    for key, value in pairs(global.caravans) do
-        if has_schedule(value, entity) then
-            return true
-        end
-    end
-    return false
+    return Table.any(global.caravans, function(caravan_data)
+        return has_schedule(caravan_data, entity)
+    end)
 end
 
 Caravan.events.on_gui_opened_outpost = function(event)
@@ -80,9 +75,9 @@ end
 
 Caravan.events.on_close_outpost_gui = function(event)
     local player = game.get_player(event.player_index)
-    if player.gui.relative.outpost_caravan_gui then
-        player.gui.relative.outpost_caravan_gui.destroy()
-        return true
+    if not player.gui.relative.outpost_caravan_gui then
+        return
     end
-    return false
+    player.gui.relative.outpost_caravan_gui.destroy()
+    return true
 end
