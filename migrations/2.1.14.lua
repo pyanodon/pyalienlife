@@ -1,0 +1,1 @@
+global.turd_migrations = global.turd_migrations or {}

@@ -50,7 +50,7 @@ local function on_search(search_key, gui, player)
 end
 
 local function has_turd_migration(force_index, sub_tech_name)
-	return game.tick < (global.turd_migrations[force_index][sub_tech_name] or 0)
+	return game.tick < ((global.turd_migrations[force_index] or {})[sub_tech_name] or 0)
 end
 
 local function update_confirm_button(element, player, researched_technologies)
@@ -490,6 +490,7 @@ Turd.events.on_init = function()
 	global.turd_views = global.turd_views or {}
 	global.turd_reset_remaining = global.turd_reset_remaining or {}
 	global.turd_machine_replacements = global.turd_machine_replacements or {}
+    global.turd_migrations = global.turd_migrations or {}
 end
 
 local function starts_with(str, start)
