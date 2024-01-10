@@ -364,17 +364,19 @@ local function find_new_home(biorobot_data, network_data)
 	local home
 	local min_robot_count = 999
 	for unit_number, bioport in pairs(network_data.bioports) do
-		local bioport_data = global.biofluid_bioports[bioport.unit_number]
-		if unit_number ~= old_home and bioport.valid and bioport_data then
-			local robot_count = bioport.get_inventory(INPUT_INVENTORY).get_item_count(biorobot_data.entity.name)
-			if robot_count < 6 then
-				home = bioport
-				biorobot_data.bioport = unit_number
-				break
-			elseif robot_count < min_robot_count then
-				min_robot_count = robot_count
-				home = bioport
-				biorobot_data.bioport = unit_number
+		if bioport.valid then
+			local bioport_data = global.biofluid_bioports[bioport.unit_number]
+			if unit_number ~= old_home and bioport.valid and bioport_data then
+				local robot_count = bioport.get_inventory(INPUT_INVENTORY).get_item_count(biorobot_data.entity.name)
+				if robot_count < 6 then
+					home = bioport
+					biorobot_data.bioport = unit_number
+					break
+				elseif robot_count < min_robot_count then
+					min_robot_count = robot_count
+					home = bioport
+					biorobot_data.bioport = unit_number
+				end
 			end
 		end
 	end

@@ -194,6 +194,7 @@ function Biofluid.built_pipe(entity, update_graphics)
 end
 
 function Biofluid.is_looking_at_us(entity, connection, network_positions)
+	if not entity.valid then return nil end
 	if not network_positions then
 		network_positions = Biofluid.network_positions(entity.surface_index)
 	end

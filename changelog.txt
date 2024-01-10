@@ -7,6 +7,7 @@ Date: ???
     - Nerfed scrondrix path 1. No longer grants bonus cubs
     - Buffed scrondrix path 2. Multiplies meat by 3x instead of 5x. No more -20% speed downgrade
     - Nerfed composter path 1. Dried biomass amount reduced 12 -> 4
+    - Fixed improper migrations to new biofluid system causing crashes (https://github.com/pyanodon/pybugreports/issues/367)
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.13
 Date: 2024-1-8

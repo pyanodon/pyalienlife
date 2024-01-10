@@ -1,0 +1,5 @@
+--for _, surface in pairs(game.surfaces) do
+    --for _, pipe in pairs(surface.find_entities_filtered{name = {'vessel', 'bioport'}}) do
+        --pipe.destroy()
+    --end
+--end
