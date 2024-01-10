@@ -17,7 +17,6 @@ if data and not yafc_turd_integration then
         if i > 4 and i < 8 then recipe.localised_name = {'recipe-name.' .. recipe.name} end
         recipe.name = recipe.name .. '-boron'
         FUN.add_ingredient(recipe, {'boric-acid-barrel', FUN.remove_ingredient(recipe, 'water-barrel')})
-        if i > 7 then FUN.add_result_amount(recipe, 'scrondrix-pup', i) end
         if i > 4 and i < 8 then
             recipe.results[1].probability = recipe.results[1].probability * 1.5
             recipe.energy_required = recipe.energy_required * 0.75
@@ -40,7 +39,7 @@ if data and not yafc_turd_integration then
     }) do
         if i > 4 and i < 8 then recipe.localised_name = {'recipe-name.' .. recipe.name} end
         recipe.name = recipe.name .. '-vegan'
-        FUN.multiply_ingredient_amount(recipe, 'meat', 5)
+        FUN.multiply_ingredient_amount(recipe, 'meat', 3)
         FUN.remove_ingredient(recipe, 'fawogae')
         FUN.remove_ingredient(recipe, 'yotoi-leaves')
         FUN.remove_ingredient(recipe, 'raw-fiber')
@@ -123,7 +122,6 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {speed = -0.2, consumption = 2, type = 'module-effects'},
                 {old = 'Scrondrix cub 1', new = 'Scrondrix cub 1-vegan', type = 'recipe-replacement'},
                 {old = 'Scrondrix cub 2', new = 'Scrondrix cub 2-vegan', type = 'recipe-replacement'},
                 {old = 'Scrondrix cub 3', new = 'Scrondrix cub 3-vegan', type = 'recipe-replacement'},

@@ -3,6 +3,10 @@ Version: 2.1.14
 Date: ???
   Changes:
     - Fixed that choosing a T.U.R.D. gave an error on new save files
+    - Fixed sulfur processing tech unlocking the gas processing unit twice (https://github.com/pyanodon/pybugreports/issues/366)
+    - Nerfed scrondrix path 1. No longer grants bonus cubs
+    - Buffed scrondrix path 2. Multiplies meat by 3x instead of 5x. No more -20% speed downgrade
+    - Nerfed composter path 1. Dried biomass amount reduced 12 -> 4
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.13
 Date: 2024-1-8
