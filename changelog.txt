@@ -3,7 +3,6 @@ Version: 2.1.14
 Date: ???
   Changes:
     - Fixed that choosing a T.U.R.D. gave an error on new save files
-    - Fixed sulfur processing tech unlocking the gas processing unit twice (https://github.com/pyanodon/pybugreports/issues/366)
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.13
 Date: 2024-1-8

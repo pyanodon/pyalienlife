@@ -93,7 +93,3 @@ RECIPE('xyhiphoe-hydrocyclone'):remove_unlock('advanced-mining-facilities'):add_
 RECIPE('arthropod-blood-to-organic-solvent'):remove_unlock('biotech-mk03'):add_unlock('biotech-mk02')
 data.raw.item['xyhiphoe-blood-barrel'] = nil
 data.raw.recipe['xyhiphoe-blood-barrel-pyvoid'] = nil
-
-RECIPE('gas-separator-mk01'):remove_unlock('sulfur-processing')
-RECIPE('gas-separator-mk01'):remove_unlock('sulfur-processing')
-RECIPE('gas-separator-mk01'):add_unlock('sulfur-processing')
