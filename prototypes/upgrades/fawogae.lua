@@ -126,7 +126,7 @@ return {
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {consumption = 3.5, type = 'module-effects'},
-                {old = 'coal-fawogae', new = 'coal-fawogae-buffed', type = 'recipe-replacement'},
+                {recipe = 'coal-fawogae-buffed', type = 'unlock-recipe'},
                 {old = 'fawogae-plantation-mk01', new = 'fawogae-plantation-mk01-with-pressure-pump', type = 'recipe-replacement'},
                 {old = 'fawogae-plantation-mk02', new = 'fawogae-plantation-mk02-with-pressure-pump', type = 'recipe-replacement'},
                 {old = 'fawogae-plantation-mk03', new = 'fawogae-plantation-mk03-with-pressure-pump', type = 'recipe-replacement'},
