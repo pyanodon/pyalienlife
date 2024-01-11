@@ -8,6 +8,12 @@ Caravan.events.on_open_global_gui = function(event)
     local main_frame = player.gui.screen.add { type = 'frame', name = 'caravan_gui_global', caption = { 'caravan-global-gui.caption' }, direction = 'vertical' }
     main_frame.style.width = 436
     main_frame.style.minimal_height = 710
+    main_frame.add {
+        type = "sprite-button",
+        name = "caravan_organizer_closeButton",
+        sprite = "utility/close_white",
+        style = "frame_action_button"
+    }
 
     local content_frame = main_frame.add { type = 'frame', direction = 'vertical',
                                            style = 'inside_shallow_frame_with_padding' }
