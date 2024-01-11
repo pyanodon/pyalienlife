@@ -236,9 +236,9 @@ function Caravan.update_gui(gui, weak)
 	local caravan_data = global.caravans[gui.tags.unit_number]
 	if not Caravan.validity_check(caravan_data) then gui.destroy() return end
 	local content_flow = gui.content_frame.content_flow
-	local state = Caravan.status_img(caravan_data)
-	content_flow.status_flow.status_text.caption = state.status
-	content_flow.status_flow.status_sprite.sprite = state.img
+	local state, img = Caravan.status_img(caravan_data)
+	content_flow.status_flow.status_text.caption = state
+	content_flow.status_flow.status_sprite.sprite = img
 	if caravan_data.fuel_inventory then
 		for i = 1, #caravan_data.fuel_inventory do
 			local stack = caravan_data.fuel_inventory[i]

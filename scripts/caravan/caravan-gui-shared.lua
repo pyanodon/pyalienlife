@@ -1,20 +1,16 @@
 function Caravan.status_img(caravan_data)
-    local status, img
     local entity = caravan_data.entity
     if caravan_data.is_aerial then
-        status = { 'entity-status.working' }
-        img = 'utility/status_working'
+        return { 'entity-status.working' }, 'utility/status_working'
     elseif caravan_data.fuel_bar == 0 and caravan_data.fuel_inventory.is_empty() then
-        status = { 'entity-status.starved' }
-        img = 'utility/status_not_working'
+        return { 'entity-status.starved' }, 'utility/status_not_working'
     elseif entity.health ~= entity.prototype.max_health then
-        status = { 'entity-status.wounded' }
-        img = 'utility/status_yellow'
+        return { 'entity-status.wounded' }, 'utility/status_yellow'
+    elseif not Caravan.is_automated(caravan_data) then
+        return { 'entity-status.idle' }, 'utility/status_yellow'
     else
-        status = { 'entity-status.healthy' }
-        img = 'utility/status_working'
+        return { 'entity-status.healthy' }, 'utility/status_working'
     end
-    return { status = status, img = img }
 end
 
 function Caravan.add_gui_row(caravan_data, key, table)
@@ -31,7 +27,7 @@ function Caravan.add_gui_row(caravan_data, key, table)
     status_sprite.style.size = { 16, 16 }
     local status_text = status_flow.add { type = 'label' }
     status_flow.add { type = 'empty-widget', style = 'py_empty_widget' }
-    local state = Caravan.status_img(caravan_data)
-    status_text.caption = state.status
-    status_sprite.sprite = state.img
+    local state, img = Caravan.status_img(caravan_data)
+    status_text.caption = state
+    status_sprite.sprite = img
 end

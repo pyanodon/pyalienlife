@@ -101,6 +101,10 @@ Caravan.events.used_capsule = function(event)
 	Caravan.build_gui(player, caravan_data.entity)
 end
 
+Caravan.is_automated = function(caravan_data)
+	return caravan_data.schedule_id and caravan_data.schedule_id >= 0
+end
+
 local function eat(caravan_data)
 	if caravan_data.fuel_bar == 0 then
 		local fuel = caravan_data.fuel_inventory
