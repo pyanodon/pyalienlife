@@ -47,13 +47,9 @@ gui_events[defines.events.on_gui_click]['click_caravan_.'] = function(event)
     local element = event.element
     local tags = element.tags
     local caravan_data = global.caravans[tags.unit_number]
-    game.print('1')
     if Caravan.validity_check(caravan_data) then
-        game.print('2')
         Caravan.build_gui(player, caravan_data.entity)
     end
-    game.print('3')
-
 end
 
 Caravan.events.on_close_global_gui = function(event)
