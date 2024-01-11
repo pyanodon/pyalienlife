@@ -1,3 +1,25 @@
+local function has_schedule(caravan_data, entity)
+    if not Caravan.validity_check(caravan_data) then
+        return
+    end
+    if not caravan_data.schedule then
+        return
+    end
+    return Table.any(caravan_data.schedule, function(schedule)
+        return schedule.entity == entity
+    end)
+end
+
+-- probably bad if you have 10 k caravans... but is that even remotely relevant?
+function Caravan.has_any_caravan(entity)
+    return Table.any(global.caravans, function(caravan_data)
+        return has_schedule(caravan_data, entity)
+    end)
+end
+
+
+
+
 function Caravan.status_img(caravan_data)
     local entity = caravan_data.entity
     if caravan_data.is_aerial then
