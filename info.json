@@ -4,9 +4,9 @@
   "factorio_version": "1.1",
   "title": "Pyanodons AlienLife",
   "author": "Pyanodon, Nexela, Kingarthur, notnotmelon, Mootykins, ShadowGlass, Archezekiel, Quintuple",
-  "contact": "",
+  "contact": "https://discord.gg/SBHM3h5Utj",
   "homepage": "https://forums.factorio.com/viewtopic.php?f=94&t=51490&sid=f5d85f769fccb0ac398bf4036f829064",
-  "description": "Add ways to make your base self sustain (mostly)",
+  "description": "Adds farming, ranching, and pharmaceutics into Factorio. It's extremely unethical but also extremely profitable. WARNING! This mod will greatly enhance and extend the rest of the pY mods. Expect a 1000+ hour long game!",
   "dependencies": [
     "~ pyalienlifegraphics >= 1.0.0",
     "~ pyalienlifegraphics2 >= 1.0.0",
