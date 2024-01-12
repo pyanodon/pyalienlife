@@ -23,6 +23,7 @@ FUN.autorecipes {
 					{name='mukmoux-fat', amount = 3},
 					{name='guts', amount = 5},
 					{name='brain', amount = 2},
+					{name='blood', amount = 60},
 					{name='cage-antelope', amount=1},
 					{name='strangelets', amount = 1},
 				},
