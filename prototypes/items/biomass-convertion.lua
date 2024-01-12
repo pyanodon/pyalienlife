@@ -454,7 +454,7 @@ local biomass_convertion =
     ['blood-meal'] = {item_amount = 1, biomass_amount = 2},
     ['crawdad'] = {item_amount = 1, biomass_amount = 100},
     ['dingrido'] = {item_amount = 1, biomass_amount = 200},
-    ['qaavi'] = {item_amount = 1, biomass_amount = 300},
+    ['phadaisus'] = {item_amount = 1, biomass_amount = 300},
     ['deadhead'] = {item_amount = 10, biomass_amount = 20},
     ['guano'] = {item_amount = 1, biomass_amount = 9},
     ['blood'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'},
