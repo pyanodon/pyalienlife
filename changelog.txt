@@ -4,6 +4,7 @@ Date: ?
   Changes:
     - Buffed fawogae path 3. No longer replaces the fawogae -> raw coal recipe and instead lets you have both.
     - Fixed that antelopes had no blood.
+    - Fixed a crash when loading certian old saves
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.14
 Date: 2024-1-10

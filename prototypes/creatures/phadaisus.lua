@@ -3,18 +3,31 @@ local util = require('util')
 RECIPE {
     type = 'recipe',
     name = 'phadaisus',
-    energy_required = 120,
+    energy_required = 60,
     category = 'creature-chamber',
     enabled = false,
     ingredients = {
+        {type = 'item', name = 'py-shed-basic', amount = 1},
+        {type = 'item', name = 'bioartificial-guts', amount = 1},
+        {type = 'item', name = 'biomimetic-skin', amount = 1},
+        {type = 'item', name = 'in-vitro-meat', amount = 1},
+        {type = 'item', name = 'laboratory-grown-brain', amount = 1},
+        {type = 'item', name = 'scafold-free-bones', amount = 1},
+        {type = 'item', name = 'tissue-engineered-fat', amount = 1},
+        {type = 'item', name = 'perfect-samples', amount = 10},
+        {type = 'item', name = 'power-armor-mk2', amount = 1},
         {type = 'item', name = 'enzyme-pks', amount = 1},
         {type = 'item', name = 'zymogens', amount = 5},
-        {type = 'item', name = 'phadai', amount = 1},
-        {type = 'item', name = 'bio-sample', amount = 100},
-        {type = 'item', name = 'earth-generic-sample', amount = 50},
-        {type = 'item', name = 'earth-tiger-sample', amount = 2},
-        {type = 'fluid', name = 'artificial-blood', amount = 300},
-        {type = 'fluid', name = 'water-saline', amount = 500}
+        {type = 'item', name = 'resilin', amount = 5},
+        {type = 'item', name = 'strorix-unknown-sample', amount = 5},
+        {type = 'item', name = 'purine-analogues', amount = 15},
+        {type = 'item', name = 'pheromones', amount = 100},
+        {type = 'item', name = 'phadai-mk04', amount = 1},
+        {type = 'item', name = mods.pyalternativeenergy and 'metastable-quasicrystal' or 'bio-sample', amount = 10},
+        {type = 'item', name = 'phadai-codex-mk04', amount = 5},
+        {type = 'item', name = 'earth-tiger-sample', amount = 4},
+        {type = 'fluid', name = 'artificial-blood', amount = 400},
+        {type = 'fluid', name = 'gta', amount = 500}
     },
     result = 'phadaisus'
 }:add_unlock('mounts-mk04')

@@ -3,14 +3,17 @@ local util = require('util')
 RECIPE {
     type = 'recipe',
     name = 'crawdad',
-    energy_required = 120,
+    energy_required = 60,
     category = 'creature-chamber',
     enabled = false,
     ingredients = {
+        {type = 'item', name = 'py-shed-basic', amount = 1},
+        {type = 'item', name = 'heavy-armor', amount = 1},
+        {type = 'item', name = 'vrauks', amount = 1},
         {type = 'item', name = 'alien-sample01', amount = 10},
         {type = 'item', name = 'cdna', amount = 10},
         {type = 'item', name = 'moss-gen', amount = 30},
-        {type = 'item', name = 'bio-sample', amount = 100},
+        {type = 'item', name = 'bio-sample', amount = 50},
         {type = 'item', name = 'earth-generic-sample', amount = 20},
         {type = 'fluid', name = 'blood', amount = 300},
         {type = 'fluid', name = 'water-saline', amount = 500}

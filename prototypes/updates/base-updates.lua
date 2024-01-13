@@ -115,3 +115,39 @@ data.raw['spidertron-remote']['spidertron-remote'].order = 'z-c'
 
 RECIPE('spidertron'):add_unlock('spidertron')
 RECIPE('spidertron-remote'):add_unlock('mounts-mk01')
+
+RECIPE('spidertron-remote').ingredients = {
+    {mods.pyalternativeenergy and 'electronics-mk01' or 'copper-plate', 5},
+    {'electronic-circuit', 5}
+}
+
+RECIPE {
+    name = 'spidertron',
+    type = 'recipe',
+    category = 'creature-chamber',
+    enabled = false,
+    energy_required = 60,
+    ingredients = {
+        {type = 'item', name = 'py-shed-basic', amount = 1},
+        {mods.pyalternativeenergy and 'zungror' or 'auog', 1},
+        {'power-armor', 1},
+        {mods.pyalternativeenergy and 'hydraulic-system-mk01' or 'copper-plate', 8},
+        {'energy-shield-mk2-equipment', 2},
+        {'processing-unit', 8},
+        {'alien-sample-03', 10},
+        {mods.pyalternativeenergy and 'mechanical-parts-03' or 'gastrocapacitor', 8},
+        {'earth-spider-sample', 8},
+        {type = 'fluid', name = 'molten-nexelit', amount = 800},
+        {type = 'fluid', name = 'artificial-blood', amount = 300},
+        {'small-parts-03', 80},
+        {'neuromorphic-chip', 4},
+        {'nanofibrils', 8},
+        {mods.pyalternativeenergy and 'dieletric-layer' or 'iron-plate', 8},
+        {'high-grade-lead', 8},
+        {'zungror-codex', 1}
+    },
+    results = {
+        {type = 'item', name = 'spidertron', amount = 1},
+    },
+    main_product = 'spidertron',
+}
