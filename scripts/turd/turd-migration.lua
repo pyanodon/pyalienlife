@@ -3,6 +3,7 @@ return function(master_tech_name, sub_tech_name)
     local reset_time_in_ticks = reset_time_in_hours * 3600 * 60
 
     global.turd_migrations = global.turd_migrations or {}
+    global.turd_bonuses = global.turd_bonuses or {}
 
     for _, force in pairs(game.forces) do
         global.turd_migrations[force.index] = global.turd_migrations[force.index] or {}
