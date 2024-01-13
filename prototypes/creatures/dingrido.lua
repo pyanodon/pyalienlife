@@ -17,7 +17,7 @@ RECIPE {
         {type = 'fluid', name = 'artificial-blood', amount = 200}
     },
     result = 'dingrido'
-}:add_unlock('domestication-mk04')
+}:add_unlock('mounts-mk02')
 
 ITEM {
     type = 'item-with-entity-data',

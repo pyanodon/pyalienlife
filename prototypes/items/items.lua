@@ -922,18 +922,6 @@ ITEM {
     order = "f",
     stack_size = 100
 }
---[[
-ITEM {
-    type = "item",
-    name = "guano",
-    icon = "__pyalienlifegraphics3__/graphics/icons/guano.png",
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-items",
-    order = "f",
-    stack_size = 100
-}
-]]--
 
 ITEM {
     type = "item",

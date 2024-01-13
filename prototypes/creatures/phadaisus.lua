@@ -17,7 +17,7 @@ RECIPE {
         {type = 'fluid', name = 'water-saline', amount = 500}
     },
     result = 'phadaisus'
-}:add_unlock('pharmagenomics')
+}:add_unlock('mounts-mk04')
 
 ITEM {
     type = 'item-with-entity-data',

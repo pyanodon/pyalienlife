@@ -112,3 +112,6 @@ spidertron.icon_tintable_masks = nil
 spidertron.icon_tintable_mask = '__pyalienlifegraphics__/graphics/icons/mount-mask.png'
 data.raw['spidertron-remote']['spidertron-remote'].subgroup = 'py-alienlife-special-creatures'
 data.raw['spidertron-remote']['spidertron-remote'].order = 'z-c'
+
+RECIPE('spidertron'):add_unlock('spidertron')
+RECIPE('spidertron-remote'):add_unlock('mounts-mk01')
