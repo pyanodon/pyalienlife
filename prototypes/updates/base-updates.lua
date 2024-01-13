@@ -136,7 +136,7 @@ RECIPE {
         {'processing-unit', 8},
         {'alien-sample-03', 10},
         {mods.pyalternativeenergy and 'mechanical-parts-03' or 'gastrocapacitor', 8},
-        {'earth-spider-sample', 8},
+        {mods.pyalternativeenergy and 'earth-spider-sample' or 'strorix-unknown-sample', 8},
         {type = 'fluid', name = 'molten-nexelit', amount = 800},
         {type = 'fluid', name = 'artificial-blood', amount = 300},
         {'small-parts-03', 80},
