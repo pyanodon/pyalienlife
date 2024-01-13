@@ -169,8 +169,6 @@ end
 ----------------------------------------------------------------------------------------------------
 
 require('prototypes/upgrades/tech-upgrades')
-TECHNOLOGY('turd-respec-1'):add_prereq('bioreactor-upgrade'):add_prereq('atomizer-upgrade')
-TECHNOLOGY('turd-respec-2'):add_prereq('schrodinger-antelope-upgrade')
 
 ----------------------------------------------------------------------------------------------------
 -- replace_ingredient
