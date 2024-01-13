@@ -6,6 +6,8 @@ require 'scripts.biofluid.biofluid-gui'
 local broken_graphics = {}
 local invalid_coords = {}
 
+global.network_positions = global.network_positions or {}
+
 for _, surface in pairs(game.surfaces) do
     local network_positions = global.network_positions[surface.index]
     if network_positions then
