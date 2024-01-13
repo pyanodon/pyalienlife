@@ -144,7 +144,7 @@ RECIPE {
         {'nanofibrils', 8},
         {mods.pyalternativeenergy and 'dieletric-layer' or 'iron-plate', 8},
         {'high-grade-lead', 8},
-        {'zungror-codex', 1}
+        {mods.pyalternativeenergy and 'zungror-codex' or 'electronic-circuit', 1}
     },
     results = {
         {type = 'item', name = 'spidertron', amount = 1},
