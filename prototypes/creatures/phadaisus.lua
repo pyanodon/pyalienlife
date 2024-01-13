@@ -18,7 +18,7 @@ RECIPE {
         {type = 'item', name = 'power-armor-mk2', amount = 1},
         {type = 'item', name = 'enzyme-pks', amount = 1},
         {type = 'item', name = 'zymogens', amount = 5},
-        {type = 'item', name = 'resilin', amount = 5},
+        {type = 'item', name = mods.pyhightech and 'resilin' or 'lignin', amount = 5},
         {type = 'item', name = 'strorix-unknown-sample', amount = 5},
         {type = 'item', name = 'purine-analogues', amount = 15},
         {type = 'item', name = 'pheromones', amount = 100},
