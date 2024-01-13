@@ -135,6 +135,12 @@ for building, order in pairs(farm_building_order) do
     end
 end
 
+for i, mount in pairs{'crawdad', 'dingrido', 'spidertron', 'phadaisus'} do
+    local item = data.raw['item-with-entity-data'][mount]
+    item.subgroup = 'py-alienlife-farm-buildings-mk0' .. i
+    item.order = 'c[animal]-c[mount]-[' .. i .. ']'
+end
+
 RECIPE('tar-quenching'):remove_unlock('separation'):add_unlock('tar-processing')
 RECIPE('concrete'):remove_unlock('separation'):add_unlock('concrete')
 RECIPE('hazard-concrete'):remove_unlock('separation'):add_unlock('concrete')

@@ -110,3 +110,5 @@ spidertron.icon_tintable = spidertron.icon
 spidertron.icon_tintables = nil
 spidertron.icon_tintable_masks = nil
 spidertron.icon_tintable_mask = '__pyalienlifegraphics__/graphics/icons/mount-mask.png'
+data.raw['spidertron-remote']['spidertron-remote'].subgroup = 'py-alienlife-special-creatures'
+data.raw['spidertron-remote']['spidertron-remote'].order = 'z-c'
