@@ -95,7 +95,7 @@ data:extend{{
 	dying_explosion = 'blood-explosion-huge',
 	alert_icon_shift = util.by_pixel(-4, -13),
 	immune_to_tree_impacts = true,
-	has_belt_immunity = true,
+	has_belt_immunity = false,
 	immune_to_rock_impacts = true,
 	energy_per_hit_point = 0.5,
 	resistances = {
@@ -296,4 +296,9 @@ data:extend{{
 	inventory_size = 80,
 	guns = {},
 	equipment_grid = 'mount-grid-10x4',
+	minimap_representation = {
+		filename = '__pyalienlifegraphics2__/graphics/icons/caravan-map-tag-mk01.png',
+		flags = {'icon'},
+		size = {64, 64}
+	},
 }}

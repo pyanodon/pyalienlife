@@ -5,6 +5,11 @@ zungror.icon_mipmaps = nil
 zungror.icon_tintable = zungror.icon
 zungror.icon_tintables = nil
 zungror.icon_tintable_masks = nil
+zungror.minimap_representation = {
+    filename = '__pyalienlifegraphics2__/graphics/icons/caravan-map-tag-mk02.png',
+    flags = {'icon'},
+    size = {64, 64}
+}
 zungror.icon_tintable_mask = '__pyalienlifegraphics__/graphics/icons/mount-mask.png'
 data.raw['spidertron-remote']['spidertron-remote'].subgroup = 'py-alienlife-special-creatures'
 data.raw['spidertron-remote']['spidertron-remote'].order = 'z-c'
@@ -43,7 +48,9 @@ RECIPE {
         {type = 'item', name = 'spidertron', amount = 1},
     },
     main_product = 'spidertron',
-}
+}:add_unlock('spidertron')
+
+RECIPE('spidertron-remote'):add_unlock('spidertron')
 
 local zungror = data.raw['spider-vehicle'].spidertron
 zungror.inventory_size = 160

@@ -216,9 +216,9 @@ data:extend{{
 	weight = 6000,
 	inventory_size = 200,
 	render_layer = 'air-object',
-	automatic_weapon_cycling = true,
+	automatic_weapon_cycling = false,
 	equipment_grid = 'mount-grid-10x10',
-	guns = {'dragon-breath', 'dragon-breath', 'dragon-breath', 'dragon-breath'},
+	guns = {'dragon-breath'},
 	torso_rotation_speed = 0.01,
 	chunk_exploration_radius = 4,
 	chain_shooting_cooldown_modifier = 0.4,
@@ -235,6 +235,11 @@ data:extend{{
 		military_target = 'spidertron-military-target',
 	},
 	trash_inventory_size = 10,
+	minimap_representation = {
+		filename = '__pyalienlifegraphics2__/graphics/icons/caravan-map-tag-mk04.png',
+		flags = {'icon'},
+		size = {64, 64}
+	},
 }}
 
 local vehicle_leg = table.deepcopy(data.raw['spider-leg']['spidertron-leg-1'])
@@ -267,9 +272,9 @@ RECIPE {
 	energy_required = 20,
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'light-oil', amount = 250},
-		{type = 'fluid', name = 'kerosene', amount = 1500},
-		{type = 'fluid', name = mods.pyalternativeenergy and 'aniline' or 'water', amount = 500},
+		{type = 'fluid', name = 'light-oil', amount = 100},
+		{type = 'fluid', name = 'kerosene', amount = 100},
+		{type = 'fluid', name = mods.pyalternativeenergy and 'aniline' or 'water', amount = 100},
 	},
 	category = 'chemistry',
 	results = {
@@ -304,6 +309,7 @@ ITEM {
 }
 
 local stream = table.deepcopy(data.raw['stream']['tank-flamethrower-fire-stream'])
+stream.particle_horizontal_speed = 1.5
 stream.name = 'dragon-breath'
 stream.action = {{
 	action_delivery = {
@@ -319,7 +325,7 @@ stream.action = {{
 		},
 		type = 'instant'
 	},
-	radius = 6,
+	radius = 6,	
 	type = 'area'
 }}
 data:extend{stream}
