@@ -144,20 +144,27 @@ function Caravan.build_gui(player, entity)
 	local main_frame
 	if prototype.opens_player_inventory then
 		player.opened = caravan_data.inventory
-		main_frame = player.gui.relative.add{
-			type = 'frame', name = 'caravan_gui', caption = entity.prototype.localised_name, direction = 'vertical',
+		local flow = player.gui.relative.add {
+			type = 'flow', name = 'caravan_flow',
 			anchor = {
 				gui = defines.relative_gui_type.script_inventory_gui,
 				position = defines.relative_gui_position.right
-			}
+			},
+
+		}
+		flow.style.horizontal_spacing = 0
+		main_frame = flow.add {
+			type = 'frame', name = 'caravan_gui', caption = entity.prototype.localised_name, direction = 'vertical',
 		}
 	else
+		-- I assume this is unused? when or how is this reachable?...
 		main_frame = player.gui.screen.add{type = 'frame', name = 'caravan_gui', caption = entity.prototype.localised_name, direction = 'vertical'}
 		main_frame.auto_center = true
 		player.opened = main_frame
 	end
 	main_frame.style.width = 436
 	main_frame.style.minimal_height = 710
+	main_frame.style.margin = 0
 	main_frame.tags = {unit_number = entity.unit_number}
 
 	local content_frame = main_frame.add{type = 'frame', name = 'content_frame', direction = 'vertical', style = 'inside_shallow_frame_with_padding'}
@@ -208,6 +215,7 @@ function Caravan.build_gui(player, entity)
 	schedule_pane.style.horizontally_stretchable = true
 	schedule_pane.style.vertically_stretchable = true
 	Caravan.update_gui(main_frame)
+	Caravan.build_gui_connected(player, entity)
 end
 
 Caravan.events.on_open_gui = function(event)
@@ -266,10 +274,20 @@ Caravan.events.close_gui = function(event)
 	if event.gui_type == defines.gui_type.script_inventory or event.gui_type == defines.gui_type.custom then
 		local gui = Caravan.get_caravan_gui(player)
 		if gui then gui.destroy() end
+		if player.gui.relative.caravan_flow then
+			player.gui.relative.caravan_flow.destroy()
+		end
+	end
+end
+
+local function get_caravan_gui_in_flow(player)
+	if player.gui.relative.caravan_flow then
+		return player.gui.relative.caravan_flow.caravan_gui
 	end
 end
 
 function Caravan.get_caravan_gui(player)
-	local gui = player.gui.relative.caravan_gui or player.gui.screen.caravan_gui
+	local gui = player.gui.relative.caravan_gui or get_caravan_gui_in_flow(player) or player.gui.screen.caravan_gui
 	if gui then return gui end
 end
+

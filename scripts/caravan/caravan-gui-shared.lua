@@ -1,4 +1,5 @@
-local function has_schedule(caravan_data, entity)
+local Table = require('__stdlib__/stdlib/utils/table')
+function has_schedule(caravan_data, entity)
     if not Caravan.validity_check(caravan_data) then
         return
     end
@@ -16,9 +17,6 @@ function Caravan.has_any_caravan(entity)
         return has_schedule(caravan_data, entity)
     end)
 end
-
-
-
 
 function Caravan.status_img(caravan_data)
     local entity = caravan_data.entity
