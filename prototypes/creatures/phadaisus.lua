@@ -36,106 +36,109 @@ ITEM {
     type = 'item-with-entity-data',
     name = 'phadaisus',
     icon = '__pyalienlifegraphics__/graphics/icons/phadaisus.png',
+    icon_tintable = '__pyalienlifegraphics__/graphics/icons/phadaisus.png',
     icon_size = 64,
     subgroup = 'py-alienlife-special-creatures',
     order = 'x',
     place_result = 'phadaisus',
-    stack_size = 10
+    stack_size = 10,
+	icon_tintable_mask = '__pyalienlifegraphics__/graphics/icons/mount-mask.png',
 }
 
-data:extend{
-	{
-		type = 'car',
-		name = 'phadaisus',
-		icon = '__pyalienlifegraphics__/graphics/icons/phadaisus.png',
-		icon_size = 64,
-		flags = {'placeable-neutral', 'player-creation', 'placeable-off-grid', 'not-flammable'},
-		minable = {mining_time = 0.5, result = 'phadaisus'},
-		mined_sound = {filename = '__core__/sound/deconstruct-medium.ogg'},
-		max_health = 5000,
-		corpse = 'big-biter-corpse',
-		dying_explosion = 'blood-explosion-huge',
-		alert_icon_shift = util.by_pixel(-4, -13),
-		immune_to_tree_impacts = true,
-		has_belt_immunity = true,
-		immune_to_rock_impacts = true,
-		energy_per_hit_point = 0.5,
-		resistances = {
-			{
-				type = 'fire',
-				decrease = 15,
-				percent = 60
-			},
-			{
-				type = 'physical',
-				decrease = 15,
-				percent = 60
-			},
-			{
-				type = 'impact',
-				decrease = 20,
-				percent = 100
-			},
-			{
-				type = 'explosion',
-				decrease = 20,
-				percent = 100
-			},
-			{
-				type = 'acid',
-				decrease = 0,
-				percent = 70
-			}
+data:extend{{
+	type = 'spider-vehicle',
+	name = 'phadaisus',
+	icon = '__pyalienlifegraphics__/graphics/icons/phadaisus.png',
+	icon_size = 64,
+	flags = {'placeable-neutral', 'player-creation', 'placeable-off-grid', 'not-flammable'},
+	minable = {mining_time = 0.5, result = 'phadaisus'},
+	mined_sound = {filename = '__core__/sound/deconstruct-medium.ogg'},
+	max_health = 5000,
+	healing_per_tick = 0.2,
+	corpse = 'big-biter-corpse',
+	dying_explosion = 'blood-explosion-huge',
+	alert_icon_shift = util.by_pixel(-4, -13),
+	immune_to_tree_impacts = true,
+	has_belt_immunity = true,
+	immune_to_rock_impacts = true,
+	energy_per_hit_point = 0.5,
+	resistances = {
+		{
+			type = 'fire',
+			decrease = 15,
+			percent = 60
 		},
-		selection_priority = 51,
-		collision_box = {{0, 0}, {0, 0}},
-		collision_mask = {},
-		selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
-		drawing_box = {{-1.8, -1.8}, {1.8, 1.8}},
+		{
+			type = 'physical',
+			decrease = 15,
+			percent = 60
+		},
+		{
+			type = 'impact',
+			decrease = 20,
+			percent = 100
+		},
+		{
+			type = 'explosion',
+			decrease = 20,
+			percent = 100
+		},
+		{
+			type = 'acid',
+			decrease = 0,
+			percent = 70
+		}
+	},
+	selection_priority = 51,
+	collision_box = {{0, 0}, {0, 0}},
+	collision_mask = {},
+	selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
+	drawing_box = {{-1.8, -1.8}, {1.8, 1.8}},
+	effectivity = 1,
+	braking_power = '5MW',
+	burner = {
+		fuel_category = 'phadai-food',
 		effectivity = 1,
-		braking_power = '2000kW',
-		burner = {
-			fuel_category = 'food',
-			effectivity = 1,
-			fuel_inventory_size = 1
-		},
-		consumption = '140kW',
-		--terrain_friction_modifier = 0.01,
-		friction = 0.001,
-		light = {
-			{
-				type = 'oriented',
-				minimum_darkness = 0.3,
-				picture = {
-					filename = '__core__/graphics/light-cone.png',
-					priority = 'extra-high',
-					flags = {'light'},
-					scale = 2,
-					width = 200,
-					height = 200
-				},
-				shift = {-0.1, -7},
-				size = 1,
-				intensity = 0.7,
-				color = {r = 0.9, g = 1.0, b = 1.0}
+		fuel_inventory_size = 4
+	},
+	movement_energy_consumption = '800kW',
+	--terrain_friction_modifier = 0.01,
+	friction = 0.001,
+	light = {
+		{
+			type = 'oriented',
+			minimum_darkness = 0.3,
+			picture = {
+				filename = '__core__/graphics/light-cone.png',
+				priority = 'extra-high',
+				flags = {'light'},
+				scale = 2,
+				width = 200,
+				height = 200
 			},
-			{
-				type = 'oriented',
-				minimum_darkness = 0.3,
-				picture = {
-					filename = '__core__/graphics/light-cone.png',
-					priority = 'extra-high',
-					flags = {'light'},
-					scale = 2,
-					width = 200,
-					height = 200
-				},
-				shift = {0.1, -7},
-				size = 1,
-				intensity = 0.7,
-				color = {r = 0.9, g = 1.0, b = 1.0}
-			}
+			shift = {-0.1, -7},
+			size = 1,
+			intensity = 0.7,
+			color = {r = 0.9, g = 1.0, b = 1.0}
 		},
+		{
+			type = 'oriented',
+			minimum_darkness = 0.3,
+			picture = {
+				filename = '__core__/graphics/light-cone.png',
+				priority = 'extra-high',
+				flags = {'light'},
+				scale = 2,
+				width = 200,
+				height = 200
+			},
+			shift = {0.1, -7},
+			size = 1,
+			intensity = 0.7,
+			color = {r = 0.9, g = 1.0, b = 1.0}
+		}
+	},
+	graphics_set = {
 		animation = {
 			priority = 'high',
 			width = 352,
@@ -145,7 +148,7 @@ data:extend{
 			lines_per_file = 5,
 			direction_count = 64,
 			shift = util.by_pixel(20, -0.0),
-			animation_speed = 0.8,
+			animation_speed = 0.5,
 			max_advance = 1,
 			filenames = {
 				'__pyalienlifegraphics3__/graphics/entity/phadaisus/a1.png',
@@ -188,57 +191,62 @@ data:extend{
 				'__pyalienlifegraphics3__/graphics/entity/phadaisus/a38.png',
 				'__pyalienlifegraphics3__/graphics/entity/phadaisus/a39.png'
 			}
+		}
+	},
+	sound_no_fuel = {
+		{
+			filename = '__pyalienlifegraphics3__/sounds/phadaisus-breath.ogg',
+			volume = 0.35
+		}
+	},
+	sound_minimum_speed = 0.05,
+	sound_scaling_ratio = 0.8,
+	vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},
+	working_sound = {
+		sound = {
+			filename = '__pyalienlifegraphics3__/sounds/phadaisus-breath.ogg',
+			volume = 0.25
 		},
-		turret_animation = {
-			layers = {
-				{
-					filename = '__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png',
-					priority = 'low',
-					--line_length = 8,
-					width = 32,
-					height = 32,
-					frame_count = 1,
-					direction_count = 1,
-					shift = util.by_pixel(-0.0, -0.0)
-					--animation_speed = 8,
-				}
-			}
-		},
-		turret_rotation_speed = 0.35 / 60,
-		turret_return_timeout = 300,
-		sound_no_fuel = {
+		match_speed_to_activity = false
+	},
+	open_sound = {filename = '__pyalienlifegraphics3__/sounds/phadaisus-in.ogg', volume = 0.7},
+	close_sound = {filename = '__pyalienlifegraphics3__/sounds/phadaisus-out.ogg', volume = 0.5},
+	rotation_speed = 0.015,
+	--tank_driving = true,
+	weight = 6000,
+	inventory_size = 200,
+	--guns = {'flamethrower'}
+	render_layer = 'air-object',
+	automatic_weapon_cycling = false,
+	equipment_grid = 'mount-grid-10x10',
+	guns = {},
+	torso_rotation_speed = 0.01,
+	chunk_exploration_radius = 4,
+	chain_shooting_cooldown_modifier = 0.4,
+	height = 0,
+	spider_engine = {
+		legs = {
 			{
-				filename = '__pyalienlifegraphics3__/sounds/phadaisus-breath.ogg',
-				volume = 0.35
-			}
-		},
-		sound_minimum_speed = 0.05,
-		sound_scaling_ratio = 0.8,
-		vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},
-		working_sound = {
-			sound = {
-				filename = '__pyalienlifegraphics3__/sounds/phadaisus-breath.ogg',
-				volume = 0.25
+				blocking_legs = {},
+				ground_position = {0, 0},
+				leg = 'py-fake-spidertron-leg',
+				mount_position = {0, 0},
 			},
-			--activate_sound =
-			--{
-			--  filename = '__base__/sound/fight/tank-engine-start.ogg',
-			--  volume = 0.6
-			--},
-			--deactivate_sound =
-			--{
-			--  filename = '__base__/sound/fight/tank-engine-stop.ogg',
-			--  volume = 0.6
-			--},
-			match_speed_to_activity = false
 		},
-		open_sound = {filename = '__pyalienlifegraphics3__/sounds/phadaisus-in.ogg', volume = 0.7},
-		close_sound = {filename = '__pyalienlifegraphics3__/sounds/phadaisus-out.ogg', volume = 0.5},
-		rotation_speed = 0.015,
-		--tank_driving = true,
-		weight = 600,
-		inventory_size = 250,
-		--guns = {'flamethrower'}
-		render_layer = 'air-object'
-	}
-}
+		military_target = 'spidertron-military-target',
+	},
+	trash_inventory_size = 10,
+}}
+
+local vehicle_leg = table.deepcopy(data.raw['spider-leg']['spidertron-leg-1'])
+vehicle_leg.name = 'py-fake-spidertron-leg'
+vehicle_leg.graphics_set = {}
+vehicle_leg.collision_mask = {}
+vehicle_leg.target_position_randomisation_distance = 0
+vehicle_leg.working_sound = nil
+vehicle_leg.minimal_step_size = 0.4
+vehicle_leg.part_length = 0.3
+vehicle_leg.movement_based_position_selection_distance = 0.7
+vehicle_leg.initial_movement_speed = 0.01
+vehicle_leg.movement_acceleration = 1.25
+data:extend{vehicle_leg}

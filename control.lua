@@ -67,6 +67,7 @@ require 'scripts/turd/turd'
 require 'scripts/vatbrain/vatbrain'
 require 'scripts/ulric/ulric'
 require 'scripts/biofluid/biofluid'
+require 'scripts/mounts/mounts'
 
 local function discoscience()
     if remote.interfaces['DiscoScience'] and remote.interfaces['DiscoScience']['setIngredientColor'] then
@@ -122,6 +123,7 @@ local function init()
     Vatbrain.events.on_init()
     Ulric.events.on_init()
     Biofluid.events.on_init()
+    Mounts.events.on_init()
 end
 
 script.on_init(function()
@@ -149,6 +151,7 @@ script.on_event(on_built, function(event)
     Turd.events.on_built(event)
     Vatbrain.events.on_built(event)
     Biofluid.events.on_built(event)
+    Mounts.events.on_built(event)
 end)
 
 script.on_event(defines.events.on_ai_command_completed, function(event)
@@ -166,6 +169,11 @@ script.on_event(on_destroyed, function(event)
     Turd.events.on_destroyed(event)
     Vatbrain.events.on_destroyed(event)
     Biofluid.events.on_destroyed(event)
+    Mounts.events.on_destroyed(event)
+end)
+
+script.on_event(defines.events.on_player_removed_equipment, function(event)
+    Mounts.events.on_player_removed_equipment(event)
 end)
 
 script.on_event(defines.events.on_gui_opened, function(event)
@@ -204,6 +212,7 @@ script.on_nth_tick(61, Digosaurus.events[61])
 script.on_nth_tick(121, Farming.events[121])
 script.on_nth_tick(143, Biofluid.events[143])
 script.on_nth_tick(221, Oculua.events[221])
+script.on_nth_tick(239, Mounts.events[239])
 script.on_nth_tick(397, Ulric.events[397])
 script.on_nth_tick(432000, Turd.events[432000])
 

@@ -28,11 +28,13 @@ ITEM {
     type = 'item-with-entity-data',
     name = 'dingrido',
     icon = '__pyalienlifegraphics__/graphics/icons/dingrido.png',
+    icon_tintable = '__pyalienlifegraphics__/graphics/icons/dingrido.png',
     icon_size = 64,
     subgroup = 'py-alienlife-special-creatures',
     order = 'x',
     place_result = 'dingrido',
-    stack_size = 10
+    stack_size = 10,
+	icon_tintable_mask = '__pyalienlifegraphics__/graphics/icons/mount-mask.png',
 }
 
 data:extend{{
@@ -43,7 +45,8 @@ data:extend{{
 	flags = {'placeable-neutral', 'player-creation', 'placeable-off-grid', 'not-flammable'},
 	minable = {mining_time = 0.5, result = 'dingrido'},
 	mined_sound = {filename = '__core__/sound/deconstruct-medium.ogg'},
-	max_health = 10000,
+	max_health = 2500,
+	healing_per_tick = 0.03,
 	corpse = 'medium-biter-corpse',
 	dying_explosion = 'blood-explosion-huge',
 	alert_icon_shift = util.by_pixel(-4, -13),
@@ -82,13 +85,13 @@ data:extend{{
 	selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
 	drawing_box = {{-1.8, -1.8}, {1.8, 1.8}},
 	effectivity = 0.98,
-	braking_power = '10000kW',
+	braking_power = '3MW',
 	burner = {
-		fuel_category = 'food',
+		fuel_category = 'dingrit-food',
 		effectivity = 1,
-		fuel_inventory_size = 1
+		fuel_inventory_size = 3
 	},
-	consumption = '250kW',
+	consumption = '800kW',
 	terrain_friction_modifier = 0.001,
 	friction = 0.0002,
 	light = {
@@ -261,23 +264,6 @@ data:extend{{
 			}
 		}
 	},
-	turret_animation = {
-		layers = {
-			{
-				filename = '__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png',
-				priority = 'low',
-				--line_length = 8,
-				width = 32,
-				height = 32,
-				frame_count = 1,
-				direction_count = 1,
-				shift = util.by_pixel(-0.0, -0.0)
-				--animation_speed = 8,
-			}
-		}
-	},
-	turret_rotation_speed = 0.35 / 60,
-	turret_return_timeout = 300,
 	sound_no_fuel = {
 		{
 			filename = '__base__/sound/fight/tank-no-fuel-1.ogg',
@@ -291,23 +277,14 @@ data:extend{{
 			filename = '__pyalienlifegraphics__/sounds/dingrit-breath.ogg',
 			volume = 0.7
 		},
-		--activate_sound =
-		--{
-		--  filename = '__base__/sound/fight/tank-engine-start.ogg',
-		--  volume = 0.6
-		--},
-		--deactivate_sound =
-		--{
-		--  filename = '__base__/sound/fight/tank-engine-stop.ogg',
-		--  volume = 0.6
-		--},
 		match_speed_to_activity = false
 	},
 	open_sound = {filename = '__pyalienlifegraphics3__/sounds/dingrito-in.ogg', volume = 0.9},
 	close_sound = {filename = '__pyalienlifegraphics3__/sounds/dingrito-out.ogg', volume = 0.9},
 	rotation_speed = 0.0095,
-	tank_driving = true,
-	weight = 7000,
-	inventory_size = 250,
-	guns = {}
+	weight = 8000,
+	inventory_size = 120,
+	guns = {},
+	automatic_weapon_cycling = false,
+	equipment_grid = 'mount-grid-10x6',
 }}

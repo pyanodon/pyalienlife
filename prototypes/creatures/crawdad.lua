@@ -1,5 +1,52 @@
 local util = require('util')
 
+local categories = table.deepcopy(data.raw['equipment-grid']['spidertron-equipment-grid']['equipment_categories'])
+categories[#categories + 1] = 'py-mount-generator'
+for i = 4, 10, 2 do
+	data:extend{{
+		name = 'mount-grid-10x' .. i,
+		type = 'equipment-grid',
+		width = 10,
+		height = i,
+		equipment_categories = categories
+	}}
+end
+
+data:extend{
+	{
+		name = 'py-mount-generator',
+		type = 'generator-equipment',
+		power = '1W',
+		categories = {'py-mount-generator'},
+		shape = {
+			type = 'full',
+			width = 4,
+			height = 4,
+		},
+		energy_source = {
+			usage_priority = 'secondary-input',
+			type = 'electric',
+		},
+		sprite = {
+			filename = '__pyalienlifegraphics__/graphics/heart.png',
+			size = {256, 256},
+		},
+	},
+	{
+		name = 'py-mount-generator',
+		type = 'equipment-category',
+	},
+	{
+		type = 'item',
+		name = 'py-mount-generator',
+		icon = '__core__/graphics/empty.png',
+		icon_size = 1,
+		stack_size = 1,
+		subgroup = 'py-alienlife-buildings-others',
+		flags = {'hidden', 'not-stackable', 'only-in-cursor'},
+	}
+}
+
 RECIPE {
     type = 'recipe',
     name = 'crawdad',
@@ -25,11 +72,13 @@ ITEM {
     type = 'item-with-entity-data',
     name = 'crawdad',
     icon = '__pyalienlifegraphics__/graphics/icons/crawdad.png',
+    icon_tintable = '__pyalienlifegraphics__/graphics/icons/crawdad.png',
     icon_size = 64,
     subgroup = 'py-alienlife-special-creatures',
     order = 'x',
     place_result = 'crawdad',
-    stack_size = 10
+    stack_size = 10,
+	icon_tintable_mask = '__pyalienlifegraphics__/graphics/icons/mount-mask.png',
 }
 
 data:extend{{
@@ -40,7 +89,8 @@ data:extend{{
 	flags = {'placeable-neutral', 'player-creation', 'placeable-off-grid', 'not-flammable'},
 	minable = {mining_time = 0.5, result = 'crawdad'},
 	mined_sound = {filename = '__core__/sound/deconstruct-medium.ogg'},
-	max_health = 10000,
+	max_health = 2000,
+	healing_per_tick = 0.02,
 	corpse = 'medium-biter-corpse',
 	dying_explosion = 'blood-explosion-huge',
 	alert_icon_shift = util.by_pixel(-4, -13),
@@ -79,13 +129,13 @@ data:extend{{
 	selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
 	drawing_box = {{-1.8, -1.8}, {1.8, 1.8}},
 	effectivity = 1,
-	braking_power = '200kW',
+	braking_power = '2MW',
 	burner = {
-		fuel_category = 'food',
+		fuel_category = 'fish',
 		effectivity = 1,
-		fuel_inventory_size = 1
+		fuel_inventory_size = 2
 	},
-	consumption = '150kW',
+	consumption = '800kW',
 	--terrain_friction_modifier = 0.01,
 	friction = 2e-3,
 	light = {
@@ -237,23 +287,13 @@ data:extend{{
 			filename = '__pyalienlifegraphics3__/sounds/crawdad-breath.ogg',
 			volume = 0.6
 		},
-		--activate_sound =
-		--{
-		--  filename = '__base__/sound/fight/tank-engine-start.ogg',
-		--  volume = 0.6
-		--},
-		--deactivate_sound =
-		--{
-		--  filename = '__base__/sound/fight/tank-engine-stop.ogg',
-		--  volume = 0.6
-		--},
 		match_speed_to_activity = false
 	},
 	open_sound = {filename = '__pyalienlifegraphics3__/sounds/crawdad-in.ogg', volume = 0.5},
 	close_sound = {filename = '__pyalienlifegraphics3__/sounds/crawdad-out.ogg', volume = 0.5},
 	rotation_speed = 0.015,
-	--tank_driving = true,
-	weight = 1000,
-	inventory_size = 120,
-	guns = {}
+	weight = 10000,
+	inventory_size = 80,
+	guns = {},
+	equipment_grid = 'mount-grid-10x4',
 }}
