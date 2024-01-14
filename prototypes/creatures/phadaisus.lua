@@ -1,47 +1,47 @@
 local util = require('util')
 
 RECIPE {
-    type = 'recipe',
-    name = 'phadaisus',
-    energy_required = 60,
-    category = 'creature-chamber',
-    enabled = false,
-    ingredients = {
-        {type = 'item', name = 'py-shed-basic', amount = 1},
-        {type = 'item', name = 'bioartificial-guts', amount = 1},
-        {type = 'item', name = 'biomimetic-skin', amount = 1},
-        {type = 'item', name = 'in-vitro-meat', amount = 1},
-        {type = 'item', name = 'laboratory-grown-brain', amount = 1},
-        {type = 'item', name = 'scafold-free-bones', amount = 1},
-        {type = 'item', name = 'tissue-engineered-fat', amount = 1},
-        {type = 'item', name = 'perfect-samples', amount = 10},
-        {type = 'item', name = 'power-armor-mk2', amount = 1},
-        {type = 'item', name = 'enzyme-pks', amount = 1},
-        {type = 'item', name = 'zymogens', amount = 5},
-        {type = 'item', name = mods.pyhightech and 'resilin' or 'lignin', amount = 5},
-        {type = 'item', name = 'strorix-unknown-sample', amount = 5},
-        {type = 'item', name = 'purine-analogues', amount = 15},
-        {type = 'item', name = 'pheromones', amount = 100},
-        {type = 'item', name = 'phadai-mk04', amount = 1},
-        {type = 'item', name = mods.pyalternativeenergy and 'metastable-quasicrystal' or 'bio-sample', amount = 10},
-        {type = 'item', name = 'phadai-codex-mk04', amount = 5},
-        {type = 'item', name = 'earth-tiger-sample', amount = 4},
-        {type = 'fluid', name = 'artificial-blood', amount = 400},
-        {type = 'fluid', name = 'gta', amount = 500}
-    },
-    result = 'phadaisus'
+	type = 'recipe',
+	name = 'phadaisus',
+	energy_required = 60,
+	category = 'creature-chamber',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'py-shed-basic', amount = 1},
+		{type = 'item', name = 'bioartificial-guts', amount = 1},
+		{type = 'item', name = 'biomimetic-skin', amount = 1},
+		{type = 'item', name = 'in-vitro-meat', amount = 1},
+		{type = 'item', name = 'laboratory-grown-brain', amount = 1},
+		{type = 'item', name = 'scafold-free-bones', amount = 1},
+		{type = 'item', name = 'tissue-engineered-fat', amount = 1},
+		{type = 'item', name = 'perfect-samples', amount = 10},
+		{type = 'item', name = 'power-armor-mk2', amount = 1},
+		{type = 'item', name = 'enzyme-pks', amount = 1},
+		{type = 'item', name = 'zymogens', amount = 5},
+		{type = 'item', name = mods.pyhightech and 'resilin' or 'lignin', amount = 5},
+		{type = 'item', name = 'strorix-unknown-sample', amount = 5},
+		{type = 'item', name = 'purine-analogues', amount = 15},
+		{type = 'item', name = 'pheromones', amount = 100},
+		{type = 'item', name = 'phadai-mk04', amount = 1},
+		{type = 'item', name = mods.pyalternativeenergy and 'metastable-quasicrystal' or 'bio-sample', amount = 10},
+		{type = 'item', name = 'phadai-codex-mk04', amount = 5},
+		{type = 'item', name = 'earth-tiger-sample', amount = 4},
+		{type = 'fluid', name = 'artificial-blood', amount = 400},
+		{type = 'fluid', name = 'gta', amount = 500}
+	},
+	result = 'phadaisus'
 }:add_unlock('mounts-mk04')
 
 ITEM {
-    type = 'item-with-entity-data',
-    name = 'phadaisus',
-    icon = '__pyalienlifegraphics__/graphics/icons/phadaisus.png',
-    icon_tintable = '__pyalienlifegraphics__/graphics/icons/phadaisus.png',
-    icon_size = 64,
-    subgroup = 'py-alienlife-special-creatures',
-    order = 'x',
-    place_result = 'phadaisus',
-    stack_size = 10,
+	type = 'item-with-entity-data',
+	name = 'phadaisus',
+	icon = '__pyalienlifegraphics__/graphics/icons/phadaisus.png',
+	icon_tintable = '__pyalienlifegraphics__/graphics/icons/phadaisus.png',
+	icon_size = 64,
+	subgroup = 'py-alienlife-special-creatures',
+	order = 'x',
+	place_result = 'phadaisus',
+	stack_size = 10,
 	icon_tintable_mask = '__pyalienlifegraphics__/graphics/icons/mount-mask.png',
 }
 
@@ -215,11 +215,10 @@ data:extend{{
 	--tank_driving = true,
 	weight = 6000,
 	inventory_size = 200,
-	--guns = {'flamethrower'}
 	render_layer = 'air-object',
-	automatic_weapon_cycling = false,
+	automatic_weapon_cycling = true,
 	equipment_grid = 'mount-grid-10x10',
-	guns = {},
+	guns = {'dragon-breath', 'dragon-breath', 'dragon-breath', 'dragon-breath'},
 	torso_rotation_speed = 0.01,
 	chunk_exploration_radius = 4,
 	chain_shooting_cooldown_modifier = 0.4,
@@ -250,3 +249,82 @@ vehicle_leg.movement_based_position_selection_distance = 0.7
 vehicle_leg.initial_movement_speed = 0.01
 vehicle_leg.movement_acceleration = 1.25
 data:extend{vehicle_leg}
+
+local flamethrower = table.deepcopy(data.raw['gun']['tank-flamethrower'])
+flamethrower.name = 'dragon-breath'
+flamethrower.icon = '__pyalienlifegraphics__/graphics/icons/dragon-breath.png'
+flamethrower.icon_size = 64
+flamethrower.icon_mipmaps = nil
+flamethrower.attack_parameters.ammo_category = 'dragon-breath'
+flamethrower.attack_parameters.gun_center_shift = {-0.17, -0.2}
+flamethrower.attack_parameters.range = 20
+flamethrower.subgroup = 'py-alienlife-items'
+data:extend{flamethrower}
+
+RECIPE {
+	name = 'dragon-breath-ammo',
+	type = 'recipe',
+	energy_required = 20,
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'light-oil', amount = 250},
+		{type = 'fluid', name = 'kerosene', amount = 1500},
+		{type = 'fluid', name = 'aniline', amount = 500},
+	},
+	category = 'chemistry',
+	results = {
+		{type = 'item', name = 'dragon-breath-ammo', amount = 1},
+	},
+	crafting_machine_tint = table.deepcopy(data.raw['recipe']['flamethrower-ammo'].crafting_machine_tint),
+}:add_unlock('mounts-mk04')
+
+ITEM {
+	name = 'dragon-breath-ammo',
+	type = 'ammo',
+	icon = '__pyalienlifegraphics__/graphics/icons/dragon-breath-ammo.png',
+	icon_size = 64,
+	ammo_type = {
+		action = {
+			action_delivery = {
+				stream = 'dragon-breath',
+				type = 'stream'
+			},
+			type = 'direct'
+		},
+		category = 'dragon-breath',
+		clamp_position = true,
+		consumption_modifier = 1,
+		source_type = 'vehicle',
+		target_type = 'position'
+	},
+	magazine_size = 1000000,
+	flags = {'not-stackable'},
+	stack_size = 1,
+	subgroup = 'py-alienlife-items',
+}
+
+local stream = table.deepcopy(data.raw['stream']['tank-flamethrower-fire-stream'])
+stream.name = 'dragon-breath'
+stream.action = {{
+	action_delivery = {
+		target_effects = {
+			{
+				apply_damage_to_trees = true,
+				damage = {
+					amount = 70,
+					type = 'fire'
+				},
+				type = 'damage'
+			}
+		},
+		type = 'instant'
+	},
+	radius = 6,
+	type = 'area'
+}}
+data:extend{stream}
+
+data:extend{{
+	type = 'ammo-category',
+	name = 'dragon-breath'
+}}

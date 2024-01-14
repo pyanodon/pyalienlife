@@ -2690,7 +2690,7 @@ ITEM {
 	order = 'h',
 	stack_size = 100,
 	fuel_category = 'phadai-food',
-	fuel_value = '60MJ',
+	fuel_value = '120MJ',
 	fuel_acceleration_multiplier = 1,
 	fuel_top_speed_multiplier = 3
 }
@@ -2705,7 +2705,7 @@ ITEM {
 	order = 'h',
 	stack_size = 100,
 	fuel_category = 'phadai-food',
-	fuel_value = '80MJ',
+	fuel_value = '160MJ',
 	fuel_acceleration_multiplier = 1,
 	fuel_top_speed_multiplier = 8
 }
