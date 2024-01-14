@@ -269,7 +269,7 @@ RECIPE {
 	ingredients = {
 		{type = 'fluid', name = 'light-oil', amount = 250},
 		{type = 'fluid', name = 'kerosene', amount = 1500},
-		{type = 'fluid', name = 'aniline', amount = 500},
+		{type = 'fluid', name = mods.pyalternativeenergy and 'aniline' or 'water', amount = 500},
 	},
 	category = 'chemistry',
 	results = {
