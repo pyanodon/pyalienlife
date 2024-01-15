@@ -1624,3 +1624,5 @@ data.raw.recipe['blood-meal'].ingredients = {
     {type = 'fluid', name = 'blood', amount = 100},
     {type = 'item', name = 'fiberboard', amount = 1}
 }
+
+RECIPE('utility-science-pack'):remove_ingredient('kevlar'):add_ingredient({type = 'item', name = 'snarer-heart', amount = 1})
