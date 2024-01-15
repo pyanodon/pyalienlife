@@ -111,7 +111,7 @@ local function build_tech_upgrade(tech_upgrade)
 
 
                 if mk1 and mk1.type ~= 'assembling-machine' then
-                    effect.pollution = nil
+                    effect.pollution = 0
                 elseif effect.pollution == 0 then
                     effect.pollution = 0.01 -- prevent use in mines, composter, ect
                 end
