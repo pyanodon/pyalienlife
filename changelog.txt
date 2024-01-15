@@ -8,6 +8,7 @@ Date: ?
     - Fixed a crash when loading certian old saves
     - To smooth the endgame difficuly spike: Snarer hearts removed from perfect samples (now imperfect samples, ha) replaced with dingrit spikes.
     - Snarer hearts added to utility science pack. Kevlar removed from utility science pack.
+    - Fixed that composter turd path 1 module bonus did not work.
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.14
 Date: 2024-1-10
