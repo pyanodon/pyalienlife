@@ -287,7 +287,7 @@ local function get_caravan_gui_in_flow(player)
 end
 
 function Caravan.get_caravan_gui(player)
-	local gui = player.gui.relative.caravan_gui or get_caravan_gui_in_flow(player) or player.gui.screen.caravan_gui
+	local gui = get_caravan_gui_in_flow(player) or player.gui.screen.caravan_gui
 	if gui then return gui end
 end
 
