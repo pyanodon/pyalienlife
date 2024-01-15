@@ -85,7 +85,7 @@ data:extend{{
 	selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
 	drawing_box = {{-1.8, -1.8}, {1.8, 1.8}},
 	effectivity = 0.98,
-	braking_power = '3MW',
+	braking_power = '30MW',
 	burner = {
 		fuel_category = 'dingrit-food',
 		effectivity = 1,
