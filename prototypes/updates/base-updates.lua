@@ -101,3 +101,5 @@ RECIPE('production-science-pack'):change_category('research')
 RECIPE('utility-science-pack'):change_category('research'):add_ingredient({type = 'item', name = 'perfect-samples', amount = 1})
 
 ENTITY('beacon', 'beacon'):set_fields{allowed_effects = {'consumption', 'speed'} }
+
+RECIPE('car'):add_ingredient('light-armor')

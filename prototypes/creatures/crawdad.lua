@@ -1,14 +1,12 @@
 local util = require('util')
 
-local categories = table.deepcopy(data.raw['equipment-grid']['spidertron-equipment-grid']['equipment_categories'])
-categories[#categories + 1] = 'py-mount-generator'
 for i = 4, 10, 2 do
 	data:extend{{
 		name = 'mount-grid-10x' .. i,
 		type = 'equipment-grid',
 		width = 10,
 		height = i,
-		equipment_categories = categories
+		equipment_categories = {'py-mount-generator'}
 	}}
 end
 
@@ -17,7 +15,6 @@ data:extend{
 		name = 'py-mount-generator',
 		type = 'generator-equipment',
 		power = '1W',
-		categories = {'py-mount-generator'},
 		shape = {
 			type = 'full',
 			width = 4,
@@ -39,8 +36,10 @@ data:extend{
 	{
 		type = 'item',
 		name = 'py-mount-generator',
-		icon = '__core__/graphics/empty.png',
-		icon_size = 1,
+		icon = '__pyalienlifegraphics__/graphics/heart.png',
+		icon_size = 256,
+		localised_name = {'equipment-name.py-mount-generator'},
+		localised_description = {'equipment-description.py-mount-generator'},
 		stack_size = 1,
 		subgroup = 'py-alienlife-buildings-others',
 		flags = {'hidden', 'not-stackable', 'only-in-cursor'},
@@ -137,7 +136,7 @@ data:extend{{
 	},
 	consumption = '800kW',
 	--terrain_friction_modifier = 0.01,
-	friction = 2e-3,
+	friction = 0.002,
 	light = {
 		{
 			type = 'oriented',
@@ -293,7 +292,7 @@ data:extend{{
 	close_sound = {filename = '__pyalienlifegraphics3__/sounds/crawdad-out.ogg', volume = 0.5},
 	rotation_speed = 0.015,
 	weight = 10000,
-	inventory_size = 80,
+	inventory_size = 90,
 	guns = {},
 	equipment_grid = 'mount-grid-10x4',
 	minimap_representation = {

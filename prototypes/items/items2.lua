@@ -520,7 +520,7 @@ ITEM {
 	fuel_category = 'gastrocapacitor',
 	fuel_value = '2GJ',
 	fuel_acceleration_multiplier = 1,
-	fuel_top_speed_multiplier = 1.8
+	fuel_top_speed_multiplier = 3
 }
 
 ITEM {

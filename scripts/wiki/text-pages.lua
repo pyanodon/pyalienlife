@@ -17,6 +17,12 @@ Wiki.events.on_init = function()
     })
 
     remote.call('pywiki', 'add_page', {
+        name = 'mounts',
+        section = 'alienlife',
+        text_only = true
+    })
+
+    remote.call('pywiki', 'add_page', {
         name = 'digosaurus',
         section = 'alienlife',
         text_only = true
