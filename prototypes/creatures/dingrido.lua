@@ -92,8 +92,8 @@ data:extend{{
 		fuel_inventory_size = 3
 	},
 	consumption = '800kW',
-	terrain_friction_modifier = 0.001,
-	friction = 0.0002,
+	terrain_friction_modifier = 1,
+	friction = 0.0003,
 	light = {
 		{
 			type = 'oriented',
