@@ -262,7 +262,7 @@ flamethrower.icon_size = 64
 flamethrower.icon_mipmaps = nil
 flamethrower.attack_parameters.ammo_category = 'dragon-breath'
 flamethrower.attack_parameters.gun_center_shift = {-0.17, -0.2}
-flamethrower.attack_parameters.range = 20
+flamethrower.attack_parameters.range = 35
 flamethrower.subgroup = 'py-alienlife-items'
 data:extend{flamethrower}
 
