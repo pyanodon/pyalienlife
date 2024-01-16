@@ -63,5 +63,3 @@ zungror.burner = {
 zungror.movement_energy_consumption = '8MW'
 zungror.equipment_grid = 'mount-grid-10x8'
 zungror.healing_per_tick = 0.08
-
-RECIPE('gastrocapacitor'):add_unlock('spidertron')

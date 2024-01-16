@@ -2847,7 +2847,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'gastrocapacitor', amount = 1},
     },
-}:add_unlock("domestication-mk03"):add_ingredient({type = 'item', name = 'nexelit-battery', amount = 1})
+}:add_unlock('domestication-mk03'):add_unlock('spidertron'):add_ingredient({type = 'item', name = 'nexelit-battery', amount = 1})
 
 RECIPE {
     type = 'recipe',
