@@ -10,6 +10,7 @@ Date: ?
     - Snarer hearts added to utility science pack. Kevlar removed from utility science pack.
     - Fixed that composter turd path 1 module bonus did not work. (https://github.com/pyanodon/pybugreports/issues/370)
     - Stack filter inserters have been deleted. Removed stack filter inserters from sap turd path 2 recipe.
+    - Fixed that chitin -> geothermal water produced at too low temperature for use in energy generation.
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.14
 Date: 2024-1-10

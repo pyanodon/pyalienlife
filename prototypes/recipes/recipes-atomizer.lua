@@ -627,7 +627,7 @@ if mods.pyalternativeenergy then
             {type = 'item', name = 'chitin', amount = 2},
         },
         results = {
-            {type = 'fluid', name = 'geothermal-water', amount = 50},
+            {type = 'fluid', name = 'geothermal-water', amount = 50, temperature = 3000},
         },
     }:add_unlock('molecular-decohesion')
 end
