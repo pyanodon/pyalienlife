@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.15
-Date: ?
+Date: 2024-1-19
   Changes:
     - Reworked mounts. See the pycodex for more information.
     - Buffed fawogae path 3. No longer replaces the fawogae -> raw coal recipe and instead lets you have both.
