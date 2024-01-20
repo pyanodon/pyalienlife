@@ -10,7 +10,7 @@ local function guess(event)
         return defines.relative_gui_type.transport_belt_gui
     end
     --game.print('Using fallback for ' .. name)
-    -- there are other types needed as well, but i am lazy
+    -- there are other types needed as well, but i am lazy (and who does that anyway...)
     return defines.relative_gui_type.container_gui
 end
 
@@ -24,17 +24,16 @@ local function instantiate_main_frame(gui, anchor)
             direction = 'vertical',
             anchor = anchor
         }
-    else
-        if not gui.relative.caravan_flow then
-            return
-        end
-        return gui.relative.caravan_flow.add {
-            type = 'frame',
-            name = 'connected_caravan_gui',
-            caption = { 'caravan-global-gui.caption' },
-            direction = 'vertical',
-        }
     end
+    if not gui.relative.caravan_flow then
+        return
+    end
+    return gui.relative.caravan_flow.add {
+        type = 'frame',
+        name = 'connected_caravan_gui',
+        caption = { 'caravan-global-gui.caption' },
+        direction = 'vertical',
+    }
 end
 
 --anchor is optional

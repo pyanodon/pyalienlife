@@ -1,7 +1,7 @@
 require 'caravan-gui-shared'
 local Table = require('__stdlib__/stdlib/utils/table')
 
-function add_titlebar(gui, caption, close_button_name)
+local function add_titlebar(gui, caption, close_button_name)
     local titlebar = gui.add{type = "flow"}
     titlebar.drag_target = gui
     titlebar.add{
@@ -60,7 +60,7 @@ Caravan.events.on_open_global_gui = function(event)
         type = 'scroll-pane',
     }
     if not Caravan.has_any_caravan_at_all() then
-        scroll_pane.add{type= 'label', caption='No caravans found'}
+        scroll_pane.add{type= 'label', caption={'caravan-global-gui.empty'}}
         return
     end
     local table = scroll_pane.add {
