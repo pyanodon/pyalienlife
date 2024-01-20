@@ -1,5 +1,182 @@
 local movement_triggers = require('__base__.prototypes.entity.movement-triggers')
 
+local idle = {
+    layers = {
+        {
+            filenames = {
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-1.png',
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-2.png',
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-3.png',
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-4.png'
+            },
+            slice = 10,
+            lines_per_file = 10,
+            line_length = 10,
+            width = 160,
+            height = 192,
+            frame_count = 50,
+            direction_count = 8,
+            animation_speed = 0.25,
+            shift = util.mul_shift(util.by_pixel(-0, -20)),
+            scale = 0.7
+        },
+        {
+            filenames = {
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-1-mask.png',
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-2-mask.png',
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-3-mask.png',
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-4-mask.png'
+            },
+            slice = 10,
+            lines_per_file = 10,
+            line_length = 10,
+            width = 160,
+            height = 192,
+            frame_count = 50,
+            direction_count = 8,
+            animation_speed = 0.25,
+            shift = util.mul_shift(util.by_pixel(-0, -20)),
+            scale = 0.7,
+            apply_runtime_tint = true,
+            tint = {a = 0.2}
+        },
+        {
+            filenames = {
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-sh-01.png',
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-sh-02.png',
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-sh-03.png',
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-sh-04.png'
+            },
+            slice = 10,
+            lines_per_file = 10,
+            line_length = 10,
+            width = 192,
+            height = 128,
+            frame_count = 50,
+            direction_count = 8,
+            animation_speed = 0.25,
+            shift = util.mul_shift(util.by_pixel(25, 10)),
+            scale = 0.7,
+            draw_as_shadow = true
+        }
+    }
+}
+
+local running = {
+    layers = {
+        {
+            filenames = {
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png',
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-02.png'
+            },
+            slice = 10,
+            lines_per_file = 10,
+            line_length = 10,
+            width = 224,
+            height = 224,
+            frame_count = 20,
+            direction_count = 8,
+            animation_speed = 0.3,
+            shift = util.mul_shift(util.by_pixel(-0, -20)),
+            scale = 0.7
+        },
+        {
+            filenames = {
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png',
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-02-mask.png'
+            },
+            slice = 10,
+            lines_per_file = 10,
+            line_length = 10,
+            width = 224,
+            height = 224,
+            frame_count = 20,
+            direction_count = 8,
+            animation_speed = 0.3,
+            shift = util.mul_shift(util.by_pixel(-0, -20)),
+            scale = 0.7,
+            apply_runtime_tint = true,
+            tint = {a = 0.5}
+        },
+        {
+            filenames = {
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png',
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-02-sh.png'
+            },
+            slice = 10,
+            lines_per_file = 10,
+            line_length = 10,
+            width = 224,
+            height = 160,
+            frame_count = 20,
+            direction_count = 8,
+            animation_speed = 0.3,
+            shift = util.mul_shift(util.by_pixel(15, -8)),
+            scale = 0.7,
+            draw_as_shadow = true
+        }
+    }
+}
+
+local attack = {
+    layers = {
+        {
+            filenames = {
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/attack-01.png',
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/attack-02.png',
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/attack-03.png',
+            },
+            slice = 10,
+            lines_per_file = 10,
+            line_length = 10,
+            width = 288,
+            height = 256,
+            frame_count = 30,
+            direction_count = 8,
+            animation_speed = 0.45,
+            shift = util.mul_shift(util.by_pixel(-0, -20)),
+            scale = 0.75,
+        },
+        {
+            filenames = {
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/attack-01-mask.png',
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/attack-02-mask.png',
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/attack-03-mask.png',
+            },
+            slice = 10,
+            lines_per_file = 10,
+            line_length = 10,
+            width = 288,
+            height = 256,
+            frame_count = 30,
+            direction_count = 8,
+            animation_speed = 0.45,
+            shift = util.mul_shift(util.by_pixel(-0, -20)),
+            scale = 0.75,
+            apply_runtime_tint = true,
+            tint = {a = 0.5}
+        },
+        {
+            filenames = {
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/attack-01-sh.png',
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/attack-02-sh.png',
+                '__pyalienlifegraphics3__/graphics/entity/ulric-man/attack-03-sh.png',
+            },
+            slice = 10,
+            lines_per_file = 10,
+            line_length = 10,
+            width = 320,
+            height = 224,
+            frame_count = 30,
+            direction_count = 8,
+            animation_speed = 0.45,
+            shift = util.mul_shift(util.by_pixel(22, 34)),
+            scale = 0.75,
+            draw_as_shadow = true,
+        },
+    }
+}
+
 data:extend(
     {
         {
@@ -103,127 +280,9 @@ data:extend(
             },
             animations = {
                 {
-                    idle = {
-                        layers = {
-                            {
-                                filenames = {
-                                    '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-1.png',
-                                    '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-2.png',
-                                    '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-3.png',
-                                    '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-4.png'
-                                },
-                                slice = 10,
-                                lines_per_file = 10,
-                                line_length = 10,
-                                width = 160,
-                                height = 192,
-                                frame_count = 50,
-                                direction_count = 8,
-                                animation_speed = 0.25,
-                                shift = util.mul_shift(util.by_pixel(-0, -20)),
-                                scale = 0.7
-                            },
-                            {
-                                filenames = {
-                                    '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-sh-01.png',
-                                    '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-sh-02.png',
-                                    '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-sh-03.png',
-                                    '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-sh-04.png'
-                                },
-                                slice = 10,
-                                lines_per_file = 10,
-                                line_length = 10,
-                                width = 192,
-                                height = 128,
-                                frame_count = 50,
-                                direction_count = 8,
-                                animation_speed = 0.25,
-                                shift = util.mul_shift(util.by_pixel(25, 10)),
-                                scale = 0.7,
-                                draw_as_shadow = true
-                            }
-                        }
-                    },
-                    idle_with_gun = {
-                        layers = {
-                            {
-                                filenames = {
-                                    '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-1.png',
-                                    '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-2.png',
-                                    '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-3.png',
-                                    '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-4.png'
-                                },
-                                slice = 10,
-                                lines_per_file = 10,
-                                line_length = 10,
-                                width = 160,
-                                height = 192,
-                                frame_count = 50,
-                                direction_count = 8,
-                                animation_speed = 0.25,
-                                shift = util.mul_shift(util.by_pixel(-0, -20)),
-                                scale = 0.7
-                            },
-                            {
-                                filenames = {
-                                    '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-sh-01.png',
-                                    '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-sh-02.png',
-                                    '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-sh-03.png',
-                                    '__pyalienlifegraphics3__/graphics/entity/ulric-man/idle-sh-04.png'
-                                },
-                                slice = 10,
-                                lines_per_file = 10,
-                                line_length = 10,
-                                width = 192,
-                                height = 128,
-                                frame_count = 50,
-                                direction_count = 8,
-                                animation_speed = 0.25,
-                                shift = util.mul_shift(util.by_pixel(25, 10)),
-                                scale = 0.7,
-                                draw_as_shadow = true
-                            }
-                        }
-                    },
-                    mining_with_tool = {
-                        layers = {
-                            {
-                                filenames = {
-                                    '__pyalienlifegraphics3__/graphics/entity/ulric-man/attack-01.png',
-                                    '__pyalienlifegraphics3__/graphics/entity/ulric-man/attack-02.png',
-                                    '__pyalienlifegraphics3__/graphics/entity/ulric-man/attack-03.png',
-                                },
-                                slice = 10,
-                                lines_per_file = 10,
-                                line_length = 10,
-                                width = 288,
-                                height = 256,
-                                frame_count = 30,
-                                direction_count = 8,
-                                animation_speed = 0.45,
-                                shift = util.mul_shift(util.by_pixel(-0, -20)),
-                                scale = 0.75,
-                            },
-                            {
-                                filenames = {
-                                    '__pyalienlifegraphics3__/graphics/entity/ulric-man/attack-01-sh.png',
-                                    '__pyalienlifegraphics3__/graphics/entity/ulric-man/attack-02-sh.png',
-                                    '__pyalienlifegraphics3__/graphics/entity/ulric-man/attack-03-sh.png',
-                                },
-                                slice = 10,
-                                lines_per_file = 10,
-                                line_length = 10,
-                                width = 320,
-                                height = 224,
-                                frame_count = 30,
-                                direction_count = 8,
-                                animation_speed = 0.45,
-                                shift = util.mul_shift(util.by_pixel(22, 34)),
-                                scale = 0.75,
-                                draw_as_shadow = true,
-                            },
-                        }
-                    },
+                    idle = idle,
+                    idle_with_gun = idle,
+                    mining_with_tool = attack,
                     running_with_gun = {
                         layers = {
                             {
@@ -259,6 +318,39 @@ data:extend(
                             },
                             {
                                 stripes = {
+                                    {width_in_frames = 10, height_in_frames = 2, filename = '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png', y = 0, x = 0},
+                                    {width_in_frames = 10, height_in_frames = 2, filename = '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png', y = 0, x = 0},
+                                    {width_in_frames = 10, height_in_frames = 2, filename = '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png', y = 0, x = 0},
+                                    {width_in_frames = 10, height_in_frames = 2, filename = '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png', y = 448, x = 0},
+                                    {width_in_frames = 10, height_in_frames = 2, filename = '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png', y = 448, x = 0},
+                                    {width_in_frames = 10, height_in_frames = 2, filename = '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png', y = 448, x = 0},
+                                    {width_in_frames = 10, height_in_frames = 2, filename = '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png', y = 448, x = 0},
+                                    {width_in_frames = 10, height_in_frames = 2, filename = '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png', y = 896, x = 0},
+                                    {width_in_frames = 10, height_in_frames = 2, filename = '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png', y = 896, x = 0},
+                                    {width_in_frames = 10, height_in_frames = 2, filename = '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png', y = 896, x = 0},
+                                    {width_in_frames = 10, height_in_frames = 2, filename = '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png', y = 896, x = 0},
+                                    {width_in_frames = 10, height_in_frames = 2, filename = '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png', y = 1344, x = 0},
+                                    {width_in_frames = 10, height_in_frames = 2, filename = '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png', y = 1344, x = 0},
+                                    {width_in_frames = 10, height_in_frames = 2, filename = '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png', y = 1344, x = 0},
+                                    {width_in_frames = 10, height_in_frames = 2, filename = '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png', y = 1344, x = 0},
+                                    {width_in_frames = 10, height_in_frames = 2, filename = '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png', y = 1792, x = 0},
+                                    {width_in_frames = 10, height_in_frames = 2, filename = '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png', y = 1792, x = 0},
+                                    {width_in_frames = 10, height_in_frames = 2, filename = '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png', y = 1792, x = 0},
+                                },
+                                slice = 10,
+                                line_length = 10,
+                                width = 224,
+                                height = 224,
+                                frame_count = 20,
+                                direction_count = 18,
+                                animation_speed = 0.3,
+                                shift = util.mul_shift(util.by_pixel(-0, -20)),
+                                scale = 0.7,
+                                apply_runtime_tint = true,
+                                tint = {a = 0.5}
+                            },
+                            {
+                                stripes = {
                                     {width_in_frames = 10, height_in_frames = 2, filename = '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png', y = 0, x = 0},
                                     {width_in_frames = 10, height_in_frames = 2, filename = '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png', y = 0, x = 0},
                                     {width_in_frames = 10, height_in_frames = 2, filename = '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png', y = 0, x = 0},
@@ -291,43 +383,7 @@ data:extend(
                             },
                         }
                     },
-                    running = {
-                        layers = {
-                            {
-                                filenames = {
-                                    '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png',
-                                    '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-02.png'
-                                },
-                                slice = 10,
-                                lines_per_file = 10,
-                                line_length = 10,
-                                width = 224,
-                                height = 224,
-                                frame_count = 20,
-                                direction_count = 8,
-                                animation_speed = 0.3,
-                                shift = util.mul_shift(util.by_pixel(-0, -20)),
-                                scale = 0.7
-                            },
-                            {
-                                filenames = {
-                                    '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png',
-                                    '__pyalienlifegraphics3__/graphics/entity/ulric-man/run-02-sh.png'
-                                },
-                                slice = 10,
-                                lines_per_file = 10,
-                                line_length = 10,
-                                width = 224,
-                                height = 160,
-                                frame_count = 20,
-                                direction_count = 8,
-                                animation_speed = 0.3,
-                                shift = util.mul_shift(util.by_pixel(15, -8)),
-                                scale = 0.7,
-                                draw_as_shadow = true
-                            }
-                        }
-                    }
+                    running = running
                 }
             },
             light = {
@@ -423,11 +479,24 @@ ENTITY {
     open_sound = {filename = '__base__/sound/character-corpse-open.ogg', volume = 0.5},
     close_sound = {filename = '__base__/sound/character-corpse-close.ogg', volume = 0.5},
     picture = {
-        filename = '__pyalienlifegraphics3__/graphics/entity/ulric-man/corpse.png',
-        width = 224,
-        height = 224,
-        shift = util.by_pixel(-7.0, -5.0),
-        frame_count = 2
+        layers = {
+            {
+                filename = '__pyalienlifegraphics3__/graphics/entity/ulric-man/corpse.png',
+                width = 224,
+                height = 224,
+                shift = util.by_pixel(-7.0, -5.0),
+                frame_count = 2
+            },
+            {
+                filename = '__pyalienlifegraphics3__/graphics/entity/ulric-man/corpse-mask.png',
+                width = 224,
+                height = 224,
+                shift = util.by_pixel(-7.0, -5.0),
+                frame_count = 2,
+                apply_runtime_tint = true,
+                tint = {a = 0.5}
+            },
+        }
     },
     localised_name = {'entity-name.character-corpse'}
 }
