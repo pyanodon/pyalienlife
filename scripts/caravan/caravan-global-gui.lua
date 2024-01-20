@@ -35,7 +35,7 @@ end
 local function instantiate_main_frame(player)
     local main_frame = player.gui.screen.add { type = 'frame', name = 'caravan_gui_global',  direction = 'vertical' }
     add_titlebar(main_frame,{ 'caravan-global-gui.caption' },'click_close_global_gui')
-    main_frame.style.width = 436
+    main_frame.style.width = 336
     main_frame.style.minimal_height = 710
     main_frame.auto_center = true
     player.opened=main_frame
@@ -44,7 +44,7 @@ end
 
 Caravan.events.on_open_global_gui = function(event)
     local player = game.get_player(event.player_index)
-    if Caravan.events.on_close_global_gui(event) then
+    if Caravan.close_global_gui(event) then
         return
     end
     local main_frame=instantiate_main_frame(player)
@@ -65,7 +65,7 @@ Caravan.events.on_open_global_gui = function(event)
     end
     local table = scroll_pane.add {
         type = 'table',
-        column_count = 3
+        column_count = 2
     }
     for key, caravan_data in pairs(global.caravans) do
         if Caravan.validity_check(caravan_data) then
@@ -84,7 +84,16 @@ gui_events[defines.events.on_gui_click]['click_caravan_.'] = function(event)
     end
 end
 
+-- do prechecks, because we are called with all close events
 Caravan.events.on_close_global_gui = function(event)
+    local player = game.get_player(event.player_index)
+    if not event.element or event.element ~= player.gui.screen.caravan_gui_global then
+        return false
+    end
+    return Caravan.close_global_gui(event)
+end
+
+Caravan.close_global_gui= function(event)
     local player = game.get_player(event.player_index)
     if player.gui.screen.caravan_gui_global then
         player.gui.screen.caravan_gui_global.destroy()
@@ -92,4 +101,5 @@ Caravan.events.on_close_global_gui = function(event)
     end
     return false
 end
+
 gui_events[defines.events.on_gui_click]['click_close_global_gui'] = Caravan.events.on_close_global_gui

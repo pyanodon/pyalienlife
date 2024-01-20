@@ -48,7 +48,7 @@ Caravan.build_gui_connected = function(player, entity, anchor)
     if not main_frame then
         return
     end
-    main_frame.style.width = 436
+    main_frame.style.width = 336
     main_frame.style.minimal_height = 710
     main_frame.tags = { unit_number = entity.unit_number }
 
@@ -64,7 +64,7 @@ Caravan.build_gui_connected = function(player, entity, anchor)
     }
     local table = scroll_pane.add {
         type = 'table',
-        column_count = 3
+        column_count = 2
     }
     for key, caravan_data in pairs(global.caravans) do
         if has_schedule(caravan_data, entity) then

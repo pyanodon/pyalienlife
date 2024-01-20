@@ -34,12 +34,14 @@ function Caravan.status_img(caravan_data)
 end
 
 function Caravan.add_gui_row(caravan_data, key, table)
-    table.add { type = 'label',
-                style = 'clickable_squashable_label',
-                name = 'click_caravan_.' .. tostring(key),
-                tags = { unit_number = key, entity = caravan_data },
-                caption = tostring(key) }
-    table.add { type = 'label', caption = tostring(caravan_data.entity.name) }
+    game.print('row')
+    local  button= table.add{type = 'button',
+            name = 'click_caravan_.' .. tostring(key),
+          --  style = 'train_schedule_add_station_button',
+            caption = {'caravan-shared.open',tostring(caravan_data.entity.name) },
+            tags = { unit_number = key, entity = caravan_data }}
+    button.style.maximal_height=24
+
     local status_flow = table.add { type = 'flow', direction = 'horizontal' }
     status_flow.style.vertical_align = 'center'
     local status_sprite = status_flow.add { type = 'sprite' }
