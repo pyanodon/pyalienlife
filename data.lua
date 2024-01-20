@@ -901,9 +901,9 @@ end
 
 data:extend({
     {
-        type = "custom-input",
-        name = "caravan-organizer",
-        key_sequence = "CONTROL + SHIFT + C",
+        type = 'custom-input',
+        name = 'caravan-organizer',
+        key_sequence = 'CONTROL + SHIFT + C',
     }
 })
 
