@@ -177,6 +177,7 @@ script.on_event(defines.events.on_player_removed_equipment, function(event)
 end)
 
 script.on_event(defines.events.on_gui_opened, function(event)
+    Caravan.events.on_close_global_gui(event)
     Caravan.events.on_gui_opened_connected(event)
     Oculua.events.on_gui_opened(event)
     Digosaurus.events.on_gui_opened(event)
