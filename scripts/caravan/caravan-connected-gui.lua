@@ -62,16 +62,11 @@ Caravan.build_gui_connected = function(player, entity, anchor)
     content_flow.style.vertical_align = 'center'
     local scroll_pane = content_flow.add {
         type = 'scroll-pane',
-        name = 'connected-caravan-pane'
     }
     local table = scroll_pane.add {
         type = 'table',
-        name = 'my_table',
         column_count = 3
     }
-    table.add { type = 'label', caption = 'Key' }
-    table.add { type = 'label', caption = 'Value' }
-    table.add { type = 'label', caption = 'Value' }
     for key, caravan_data in pairs(global.caravans) do
         if has_schedule(caravan_data, entity) then
             Caravan.add_gui_row(caravan_data, key, table)
