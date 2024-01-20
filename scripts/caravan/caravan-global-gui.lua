@@ -38,7 +38,8 @@ local function instantiate_main_frame(player)
     main_frame.style.width = 436
     main_frame.style.minimal_height = 710
     main_frame.auto_center = true
-    return main_frame;
+    player.opened=main_frame
+    return main_frame
 end
 
 Caravan.events.on_open_global_gui = function(event)
