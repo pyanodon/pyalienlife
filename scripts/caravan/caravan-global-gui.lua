@@ -1,5 +1,6 @@
 require 'caravan-gui-shared'
 local Table = require('__stdlib__/stdlib/utils/table')
+local close_button_name='click_close_global_gui'
 
 local function add_titlebar(gui, caption, close_button_name)
     local titlebar = gui.add{type = "flow"}
@@ -84,13 +85,19 @@ gui_events[defines.events.on_gui_click]['click_caravan_.'] = function(event)
     end
 end
 
--- do prechecks, because we are called with all close events
-Caravan.events.on_close_global_gui = function(event)
+local function is_our_event(event)
     local player = game.get_player(event.player_index)
-    if not event.element or event.element ~= player.gui.screen.caravan_gui_global then
-        return false
+    if not event.element then
+        return
     end
-    return Caravan.close_global_gui(event)
+    return event.element.name==close_button_name or  event.element == player.gui.screen.caravan_gui_global
+end
+
+
+Caravan.events.on_close_global_gui = function(event)
+    if is_our_event(event) then
+        Caravan.close_global_gui(event)
+    end
 end
 
 Caravan.close_global_gui= function(event)
