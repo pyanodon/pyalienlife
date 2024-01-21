@@ -34,7 +34,6 @@ function Caravan.status_img(caravan_data)
 end
 
 function Caravan.add_gui_row(caravan_data, key, table)
-    game.print('row')
     local  button= table.add{type = 'button',
             name = 'click_caravan_.' .. tostring(key),
           --  style = 'train_schedule_add_station_button',
