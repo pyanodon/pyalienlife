@@ -1,16 +1,15 @@
 require 'caravan-gui-shared'
 
-local function guess(event)
-    local name = event.entity.name
-    if name == 'aerial-outpost' or name == 'outpost' then
-        return defines.relative_gui_type.container_gui
-    end
-    if name == 'transport-belt' then
-        return defines.relative_gui_type.transport_belt_gui
-    end
-    --game.print('Using fallback for ' .. name)
-    -- there are other types needed as well, but i am lazy (and who does that anyway...)
-    return defines.relative_gui_type.container_gui
+local relative_gui_types = {
+    ['electric-pole'] = 'electric_network_gui',
+    ['character'] = 'other_player_gui',
+    ['unit'] = 'script_inventory_gui'
+}
+
+local function guess(entity)
+    local entity_type = entity.type
+    local relative_gui_type = relative_gui_types[entity_type] or entity_type:gsub('%-', '_') .. '_gui'
+    return defines.relative_gui_type[relative_gui_type] or defines.relative_gui_type.generic_on_off_entity_gui
 end
 
 --anchor is optional
@@ -39,7 +38,7 @@ Caravan.build_gui_connected = function(player, entity, anchor)
     if not Caravan.has_any_caravan(entity) then return end
     local main_frame = instantiate_main_frame(player.gui, anchor)
     if not main_frame then return end
-    main_frame.style.width = 336
+    main_frame.style.horizontally_stretchable = true
     main_frame.style.vertically_stretchable = true
     main_frame.tags = {unit_number = entity.unit_number}
 
@@ -69,7 +68,7 @@ Caravan.events.on_gui_opened_connected = function(event)
     if not entity then return end
     if player.gui.relative.connected_caravan_gui then return end
     local anchor = {
-        gui = guess(event),
+        gui = guess(entity),
         position = defines.relative_gui_position.right
     }
     Caravan.build_gui_connected(player, entity, anchor)
