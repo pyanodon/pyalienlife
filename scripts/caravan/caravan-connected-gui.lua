@@ -40,7 +40,7 @@ Caravan.build_gui_connected = function(player, entity, anchor)
     local main_frame = instantiate_main_frame(player.gui, anchor)
     if not main_frame then return end
     main_frame.style.width = 336
-    main_frame.style.minimal_height = 710
+    main_frame.style.vertically_stretchable = true
     main_frame.tags = {unit_number = entity.unit_number}
 
     local content_frame = main_frame.add{type = 'frame', direction = 'vertical', style = 'inside_shallow_frame_with_padding'}
