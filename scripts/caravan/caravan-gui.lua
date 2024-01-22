@@ -271,6 +271,14 @@ end
 
 Caravan.events.close_gui = function(event)
 	local player = game.get_player(event.player_index)
+	
+    if player.gui.relative.py_global_caravan_gui then
+    	player.gui.relative.py_global_caravan_gui.destroy()
+	end
+	if player.gui.screen.py_global_caravan_gui then
+        player.gui.screen.py_global_caravan_gui.destroy()
+    end
+
 	if event.gui_type == defines.gui_type.script_inventory or event.gui_type == defines.gui_type.custom then
 		local gui = Caravan.get_caravan_gui(player)
 		if gui then gui.destroy() end

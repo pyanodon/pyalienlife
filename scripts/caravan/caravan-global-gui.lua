@@ -1,7 +1,6 @@
 require 'caravan-gui-shared'
-local close_button_name = 'click_close_global_gui'
 
-local function add_titlebar(gui, caption, close_button_name)
+local function add_titlebar(gui, caption)
     local titlebar = gui.add{type = 'flow'}
     titlebar.drag_target = gui
     titlebar.add{
@@ -19,7 +18,7 @@ local function add_titlebar(gui, caption, close_button_name)
     filler.style.horizontally_stretchable = true
     titlebar.add{
         type = 'sprite-button',
-        name = close_button_name,
+        name = 'py_close_global_caravan_gui',
         style = 'frame_action_button',
         sprite = 'utility/close_white',
         hovered_sprite = 'utility/close_black',
@@ -36,7 +35,8 @@ function Caravan.has_any_caravan_at_all()
 end
 
 local function instantiate_main_frame(player)
-    local main_frame = player.gui.screen.add{type = 'frame', name = 'caravan_gui_global', direction = 'vertical'}
+    player.opened = nil
+    local main_frame = player.gui.screen.add{type = 'frame', name = 'py_global_caravan_gui', direction = 'vertical'}
     add_titlebar(main_frame, {'caravan-global-gui.caption'}, 'click_close_global_gui')
     main_frame.style.width = 336
     main_frame.style.minimal_height = 710
@@ -47,7 +47,8 @@ end
 
 Caravan.events.on_open_global_gui = function(event)
     local player = game.get_player(event.player_index)
-    if Caravan.close_global_gui(event) then
+    if player.gui.screen.py_global_caravan_gui then
+        player.gui.screen.py_global_caravan_gui.destroy()
         return
     end
     local main_frame = instantiate_main_frame(player)
@@ -78,7 +79,7 @@ Caravan.events.on_open_global_gui = function(event)
     end
 end
 
-gui_events[defines.events.on_gui_click]['click_caravan_.'] = function(event)
+gui_events[defines.events.on_gui_click]['py_click_caravan_.'] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
     local tags = element.tags
@@ -88,25 +89,6 @@ gui_events[defines.events.on_gui_click]['click_caravan_.'] = function(event)
     end
 end
 
-local function is_our_event(event)
-    local player = game.get_player(event.player_index)
-    if not event.element then return end
-    return event.element.name == close_button_name or event.element == player.gui.screen.caravan_gui_global
+gui_events[defines.events.on_gui_click]['py_close_global_caravan_gui'] = function(event)
+    event.element.parent.parent.destroy()
 end
-
-Caravan.events.on_close_global_gui = function(event)
-    if is_our_event(event) then
-        Caravan.close_global_gui(event)
-    end
-end
-
-Caravan.close_global_gui = function(event)
-    local player = game.get_player(event.player_index)
-    if player.gui.screen.caravan_gui_global then
-        player.gui.screen.caravan_gui_global.destroy()
-        return true
-    end
-    return false
-end
-
-gui_events[defines.events.on_gui_click]['click_close_global_gui'] = Caravan.events.on_close_global_gui
