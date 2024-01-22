@@ -1,5 +1,4 @@
 require 'caravan-gui-shared'
-local Table = require('__stdlib__/stdlib/utils/table')
 local close_button_name = 'click_close_global_gui'
 
 local function add_titlebar(gui, caption, close_button_name)
@@ -30,7 +29,10 @@ local function add_titlebar(gui, caption, close_button_name)
 end
 
 function Caravan.has_any_caravan_at_all()
-    return Table.any(global.caravans, Caravan.validity_check)
+	for _, caravan in pairs(global.caravans) do
+		if Caravan.validity_check(caravan) then return true end
+	end
+	return false
 end
 
 local function instantiate_main_frame(player)
