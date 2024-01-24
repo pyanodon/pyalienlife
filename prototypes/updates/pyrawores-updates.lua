@@ -30,7 +30,7 @@ if not mods["pyalternativeenergy"] then
 end
 
 --TECHNOLOGY("super-steel-mk01"):add_pack("py-science-pack-3")
-TECHNOLOGY("smelters-mk02"):add_pack("py-science-pack-3")
+--TECHNOLOGY("smelters-mk02"):add_pack("py-science-pack-3")
 
 --BUILDINDS--
 RECIPE('plankton-farm'):add_ingredient({type = "item", name = "glass", amount = 30})
