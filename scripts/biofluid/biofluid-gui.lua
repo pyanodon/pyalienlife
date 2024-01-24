@@ -176,6 +176,7 @@ function Biofluid.update_requester_gui(player, gui)
 end
 
 function Biofluid.build_requester_gui(entity, player)
+	if player.gui.screen.biofluid_requester_gui then player.gui.screen.biofluid_requester_gui.destroy() end
 	local unit_number = entity.unit_number
 	local main_frame = player.gui.screen.add{type = 'frame', name = 'biofluid_requester_gui', caption = entity.prototype.localised_name, direction = 'vertical'}
 	main_frame.auto_center = true
