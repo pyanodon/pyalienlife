@@ -51,7 +51,8 @@ if data and not yafc_turd_integration then
             energy_required = 4
         }
     }
-
+    
+    local productivity = {}
     local sponges = {'sea-sponge', 'sea-sponge-mk02', 'sea-sponge-mk03', 'sea-sponge-mk04'}
     for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['sea-sponge-sprouts']),
@@ -60,12 +61,14 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['sea-sponge-sprouts-4']),
     }) do
         recipe.name = recipe.name .. '-flagellum'
-        FUN.add_result(recipe, {name = sponges[i], probability = 0.15 + i * 0.2, type = 'item', amount = 1})
+        productivity[i] = recipe.name
+        FUN.add_result(recipe, {name = sponges[i], probability = 0.15 + i * 0.2, type = 'item', amount = 1, catalyst_amount = 1})
         FUN.add_ingredient(recipe, {name = 'limestone', type = 'item', amount = 2})
         recipe.energy_required = recipe.energy_required * 1.5
         recipe.main_product = sponges[i]
         data:extend{recipe}
     end
+    FUN.productivity(productivity)
 
     for _, recipe in pairs({
         table.deepcopy(data.raw.recipe['sea-sponge-1']),
