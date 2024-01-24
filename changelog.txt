@@ -5,6 +5,7 @@ Date: 2014-1-??
     - fixed that smelter mk02 had an unneeded requirement on py sci 3. shut up it counts as a bug fix
     - fixed a crash when entering the editor mode while the biopyanoport gui was open
     - fixed that the biopyanoport could leave broken graphics after being picked up in certian cases
+    - fixed that the sponge path 2 recipe replacements did not allow productivity even though the original recipes allowed it. (https://github.com/pyanodon/pybugreports/issues/372)
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.17
 Date: 2014-1-23
