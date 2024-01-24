@@ -649,9 +649,14 @@ Biofluid.events.on_destroyed = function(event)
 			if not heat_connection or not heat_connection.valid then return end
 			heat_connection.destroy()
 			global.biofluid_undergrounds[unit_number] = nil
+		elseif entity.name == BIOPORT then
+			local bioport_data = global.biofluid_bioports[unit_number]
+			if not bioport_data then return end
+			local graphic = bioport_data.animation_entity
+			if graphic and graphic.valid then graphic.destroy() end
+			global.biofluid_bioports[unit_number] = nil
 		else
 			global.biofluid_requesters[unit_number] = nil
-			global.biofluid_bioports[unit_number] = nil
 		end
 	elseif Biofluid.biorobots[name] then
 		local unit_number = entity.unit_number

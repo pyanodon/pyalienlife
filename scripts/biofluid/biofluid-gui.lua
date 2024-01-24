@@ -88,6 +88,7 @@ function Biofluid.update_bioport_gui(player, gui)
 end
 
 function Biofluid.build_bioport_gui(entity, player)
+	if player.gui.relative.bioport_gui then player.gui.relative.bioport_gui.destroy() end
 	local main_frame = player.gui.relative.add{
 		type = 'frame', name = 'bioport_gui', caption = entity.prototype.localised_name, direction = 'vertical', tags = {unit_number = entity.unit_number},
 		anchor = {
