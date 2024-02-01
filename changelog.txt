@@ -13,7 +13,7 @@ Date: 2024-2-1
     - moved limestone boring to chemical science as a peace offering to boldviking to stop breaking things
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.18
-Date: 2024-1-24
+Date: 2014-1-24
   Fixes:
     - fixed that smelter mk02 had an unneeded requirement on py sci 3. shut up it counts as a bug fix
     - fixed a crash when entering the editor mode while the biopyanoport gui was open
