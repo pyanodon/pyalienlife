@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.20
+Date: 2024-2-2
+  Fixes:
+    - Prevented biofluid bots from being effected (affected?) by belts. https://github.com/pyanodon/pybugreports/issues/392
+    - Fixed crash with mounts. https://github.com/pyanodon/pybugreports/issues/389
+    - Allowed you to convert old unshiny units created from creature chamber turd path 3.
+---------------------------------------------------------------------------------------------------
+Version: 2.1.19
+Date: 2024-2-1
+  Fixes:
+    - fixed a typo on the gene lab upgrade (thanks, Arch)
+    - moved limestone boring to chemical science as a peace offering to boldviking to stop breaking things
+---------------------------------------------------------------------------------------------------
 Version: 2.1.18
 Date: 2014-1-24
   Fixes:
@@ -8,18 +21,18 @@ Date: 2014-1-24
     - fixed that the sponge path 2 recipe replacements did not allow productivity even though the original recipes allowed it. (https://github.com/pyanodon/pybugreports/issues/372)
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.17
-Date: 2014-1-23
+Date: 2024-1-23
   Changes:
     - Updated tech tree for recent changes
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.16
-Date: 2014-1-23
+Date: 2024-1-23
   Changes:
     - Added a color mask for ulric man
     - Updated Russian locale (by Shadow_Man).
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.15
-Date: 2014-1-19
+Date: 2024-1-19
   Changes:
     - Reworked mounts. See the pycodex for more information.
     - Buffed fawogae path 3. No longer replaces the fawogae -> raw coal recipe and instead lets you have both.

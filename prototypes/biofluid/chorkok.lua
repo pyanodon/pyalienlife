@@ -101,6 +101,7 @@ data:extend{{
     flags = {'placeable-player', 'placeable-off-grid', 'not-repairable', 'breaths-air', 'building-direction-8-way'},
     minable = {mining_time = 0.2, result = 'chorkok'},
     max_health = 250,
+    has_belt_immunity = true,
     order = 'z',
     subgroup = 'py-alienlife-biofluid-network',
     healing_per_tick = 0.01,
