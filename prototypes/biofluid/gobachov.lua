@@ -91,6 +91,7 @@ data:extend{{
     minable = {mining_time = 0.2, result = 'gobachov'},
     max_health = 250,
     order = 'z',
+    has_belt_immunity = true,
     subgroup = 'py-alienlife-biofluid-network',
     healing_per_tick = 0.01,
     collision_box = {{0,0}, {0,0}},

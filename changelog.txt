@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.20
+Date: 2024-2-2
+  Fixes:
+    - Prevented biofluid bots from being effected (affected?) by belts. https://github.com/pyanodon/pybugreports/issues/392
+    - Fixed crash with mounts. https://github.com/pyanodon/pybugreports/issues/389
+    - Allowed you to convert old unshiny units created from creature chamber turd path 3.
+---------------------------------------------------------------------------------------------------
 Version: 2.1.19
 Date: 2024-2-1
   Fixes:

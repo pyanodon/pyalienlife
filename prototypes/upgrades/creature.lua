@@ -14,6 +14,9 @@ local path_3_effects = {}
 for _, unit_name in pairs(units) do
     path_3_effects[#path_3_effects + 1] = {type = 'recipe-replacement', old = unit_name, new = unit_name .. '-turd'}
 end
+for _, unit_name in pairs(units) do
+    path_3_effects[#path_3_effects + 1] = {type = 'unlock-recipe', recipe = unit_name .. '-convert-from-base'}
+end
 
 if data and not yafc_turd_integration then
     path_1_effects[#path_1_effects + 1] = path_1_module_effect
@@ -94,7 +97,17 @@ if data and not yafc_turd_integration then
         }
         item.icon = nil
 
-        data:extend{unit, recipe, item}
+        local convert_recipe = {
+            type = 'recipe',
+            name = unit_name .. '-convert-from-base',
+            enabled = false,
+            category = 'crafting',
+            energy_required = 0.5,
+            ingredients = {{type = 'item', name = unit_name, amount = 1}},
+            results = {{type = 'item', name = name, amount = 1}},
+        }
+
+        data:extend{unit, recipe, item, convert_recipe}
     end
 elseif script then
     path_1_effects = function()

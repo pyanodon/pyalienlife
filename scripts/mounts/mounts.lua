@@ -40,7 +40,7 @@ local mounts = {
 
 Mounts.events.on_built = function(event)
 	local entity = event.created_entity or event.entity
-	if not mounts[entity.name] then return end
+	if not entity.valid or not mounts[entity.name] then return end
 	entity.grid.put{
 		name = 'py-mount-generator',
 		position = {3, 0},
