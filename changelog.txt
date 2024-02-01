@@ -1,8 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.19
-Date: ???
+Date: 2024-2-1
   Fixes:
     - fixed a typo on the gene lab upgrade (thanks, Arch)
+    - moved limestone boring to chemical science as a peace offering to boldviking to stop breaking things
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.18
 Date: 2024-1-24

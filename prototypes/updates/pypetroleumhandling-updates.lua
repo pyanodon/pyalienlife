@@ -86,6 +86,8 @@ FUN.results_replacer("crude-from-manure", "ash", "soot")
 FUN.results_replacer("guar-separation", "organics", "biomass")
 FUN.results_replacer("bitumen-comb", "tar", "bitumen")
 
+RECIPE("mining-limestone"):remove_unlock("excavation-2"):add_unlock("excavation-1")
+
 ----EXCLUSIVE RECIPES----
 
 RECIPE {
