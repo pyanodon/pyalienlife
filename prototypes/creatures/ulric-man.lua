@@ -404,7 +404,7 @@ data:extend(
                         width = 200,
                         height = 200
                     },
-                    shift = {0, -11},
+                    shift = {0, -11*1.5-4},
                     size = 3,
                     intensity = 0.8,
                     color = {r = 1.0, g = 1.0, b = 1.0}
