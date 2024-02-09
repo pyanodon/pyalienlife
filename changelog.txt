@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.22
+Date: ???
+  Fixes:
+    - Added a migration to clean any remaining bugged bioport graphics
+---------------------------------------------------------------------------------------------------
+Version: 2.1.21
+Date: 2024-2-2
+  Fixes:
+    - Fixed ulric man light cone starting from the wrong location. (https://github.com/pyanodon/pybugreports/issues/385)
+---------------------------------------------------------------------------------------------------
 Version: 2.1.20
 Date: 2024-2-2
   Fixes:
