@@ -15,7 +15,7 @@ RECIPE {
         {type = 'item', name = 'moss-gen', amount = 15},
         {type = 'item', name = 'earth-bear-sample', amount = 1},
 		{type = 'fluid', name = 'water-saline', amount = 100},
-		{type = 'item', name = 'atomic-bomb', amount = 1},
+		{type = 'item', name = mods.pyalternativeenergy and 'atomic-bomb' or 'explosive-rocket', amount = 1},
     },
     result = 'nukavan'
 }:add_unlock('domestication-mk04')
