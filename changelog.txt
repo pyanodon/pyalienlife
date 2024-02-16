@@ -3,6 +3,7 @@ Version: 2.1.22
 Date: ???
   Fixes:
     - Added a migration to clean any remaining bugged bioport graphics
+    - Buffed simik scale -> uranium ore atomizer recipe by 5X
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.21
 Date: 2024-2-2
