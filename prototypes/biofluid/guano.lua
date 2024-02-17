@@ -3,7 +3,7 @@ data:extend{{
     name = 'guano',
     icon = '__pyalienlifegraphics3__/graphics/icons/guano.png',
     icon_size = 64,
-    flags = {},
+    flags = {'always-show'},
     subgroup = 'py-alienlife-items',
     order = 'a',
     stack_size = 100
