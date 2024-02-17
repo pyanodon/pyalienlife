@@ -6,6 +6,7 @@ Date: ???
     - Buffed simik scale -> uranium ore atomizer recipe by 5X
     - Fixed typos in arqad turd descriptions
     - Added nukes to nuclear carvan crafting recipe
+    - Fix the misspelling of separation in Cadaveric Seeds
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.21
 Date: 2024-2-2
