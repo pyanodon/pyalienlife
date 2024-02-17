@@ -8,6 +8,7 @@ Date: ???
     - Added nukes to nuclear carvan crafting recipe
     - Fixed typos in cadaveric seed separation tech name.
     - Fixed that guano can't be set as a filter. (https://github.com/pyanodon/pybugreports/issues/412)
+    - Fixed vrauk MK02+ duplication with turd path 2. (https://github.com/pyanodon/pybugreports/issues/406)
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.21
 Date: 2024-2-2
