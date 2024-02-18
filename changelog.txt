@@ -5,11 +5,12 @@ Date: ???
     - Added a migration to clean any remaining bugged bioport graphics
     - Buffed simik scale -> uranium ore atomizer recipe by 5X
     - Fixed typos in arqad turd descriptions
-    - Added nukes to nuclear carvan crafting recipe
+    - Added nukes to nuclear carvan crafting recipe. Removed explosive rockets. (only applies when pyAE is installed)
     - Fixed typos in cadaveric seed separation tech name.
     - Fixed that guano can't be set as a filter. (https://github.com/pyanodon/pybugreports/issues/412)
     - Fixed vrauk MK02+ duplication with turd path 2. (https://github.com/pyanodon/pybugreports/issues/406)
     - Fixed improper pipe connections for simik dens (https://github.com/pyanodon/pybugreports/issues/404)
+    - Added a warning when using the conversion recipes of creature chamber turd path 3 (https://github.com/pyanodon/pybugreports/issues/396)
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.21
 Date: 2024-2-2
