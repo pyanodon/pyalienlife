@@ -21,8 +21,8 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'ulric-mk02', amount = 1, probability = 0.005},
-        {type = 'item', name = 'empty-barrel', amount = 7},
-        {type = 'item', name = 'ulric', amount = 1, probability = 0.5},
+        {type = 'item', name = 'empty-barrel', amount = 7, catalyst_amount = 7},
+        {type = 'item', name = 'ulric', amount = 1, probability = 0.5, catalyst_amount = 1},
     },
     --main_product = "ulric-mk02",
     icons =
@@ -48,7 +48,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'ulric-mk02-dna-sample', amount = 1},
-        {type = 'item', name = 'used-ulric-mk02', amount = 1},
+        {type = 'item', name = 'used-ulric-mk02', amount = 1, catalyst_amount = 1},
     },
     --main_product = "ulric-mk02",
     icons =
@@ -76,7 +76,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'ulric-mk02-dna-sample', amount = 6},
-        {type = 'item', name = 'used-ulric-mk02', amount = 1},
+        {type = 'item', name = 'used-ulric-mk02', amount = 1, catalyst_amount = 1},
     },
     --main_product = "ulric-mk02",
     icons =
@@ -105,8 +105,8 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'ulric-cub-mk02', amount = 1},
-        {type = 'item', name = 'used-ulric-mk02', amount = 1},
-        {type = 'item', name = 'empty-barrel', amount = 7},
+        {type = 'item', name = 'used-ulric-mk02', amount = 1, catalyst_amount = 1},
+        {type = 'item', name = 'empty-barrel', amount = 7, catalyst_amount = 7},
     },
     --main_product = "ulric-mk02",
     icons =
@@ -134,7 +134,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'ulric-mk02', amount = 1},
-        {type = 'item', name = 'empty-barrel-milk', amount = 2},
+        {type = 'item', name = 'empty-barrel-milk', amount = 2, catalyst_amount = 2},
     },
     --main_product = "ulric-mk02",
     icons =
@@ -158,7 +158,7 @@ RECIPE {
         {type = 'item', name = 'ulric-food-01', amount = 4},
     },
     results = {
-        {type = 'item', name = 'ulric-mk02', amount = 1},
+        {type = 'item', name = 'ulric-mk02', amount = 1, catalyst_amount = 1},
     },
     icons =
         {
@@ -191,8 +191,8 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'ulric-mk03', amount = 1, probability = 0.004},
-        {type = 'item', name = 'empty-barrel', amount = 7},
-        {type = 'item', name = 'ulric-mk02', amount = 1, probability = 0.6},
+        {type = 'item', name = 'empty-barrel', amount = 7, catalyst_amount = 7},
+        {type = 'item', name = 'ulric-mk02', amount = 1, probability = 0.6, catalyst_amount = 1},
     },
     --main_product = "ulric-mk03",
     icons =
@@ -219,7 +219,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'ulric-mk03-dna-sample', amount = 1},
-        {type = 'item', name = 'used-ulric-mk03', amount = 1},
+        {type = 'item', name = 'used-ulric-mk03', amount = 1, catalyst_amount = 1},
     },
     --main_product = "ulric-mk03",
     icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png',
@@ -242,7 +242,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'ulric-mk03-dna-sample', amount = 6},
-        {type = 'item', name = 'used-ulric-mk03', amount = 1},
+        {type = 'item', name = 'used-ulric-mk03', amount = 1, catalyst_amount = 1},
     },
     --main_product = "ulric-mk03",
     icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk03.png',
@@ -266,8 +266,8 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'ulric-cub-mk03', amount = 1},
-        {type = 'item', name = 'used-ulric-mk03', amount = 1},
-        {type = 'item', name = 'empty-barrel', amount = 7},
+        {type = 'item', name = 'used-ulric-mk03', amount = 1, catalyst_amount = 1},
+        {type = 'item', name = 'empty-barrel', amount = 7, catalyst_amount = 7},
     },
     --main_product = "ulric-mk03",
     icons =
@@ -295,7 +295,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'ulric-mk03', amount = 1},
-        {type = 'item', name = 'empty-barrel-milk', amount = 2},
+        {type = 'item', name = 'empty-barrel-milk', amount = 2, catalyst_amount = 2},
     },
     --main_product = "ulric-mk03",
     icons =
@@ -320,7 +320,7 @@ RECIPE {
         {type = 'item', name = 'ulric-food-02', amount = 2},
     },
     results = {
-        {type = 'item', name = 'ulric-mk03', amount = 1},
+        {type = 'item', name = 'ulric-mk03', amount = 1, catalyst_amount = 1},
     },
 }:add_unlock("ulric-mk03")
 
@@ -343,8 +343,8 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'ulric-mk04', amount = 1, probability = 0.003},
-        {type = 'item', name = 'empty-barrel', amount = 7},
-        {type = 'item', name = 'ulric-mk03', amount = 1, probability = 0.7},
+        {type = 'item', name = 'empty-barrel', amount = 7, catalyst_amount = 7},
+        {type = 'item', name = 'ulric-mk03', amount = 1, probability = 0.7, catalyst_amount = 1},
     },
     --main_product = "ulric-mk04",
     icons =
@@ -370,7 +370,8 @@ RECIPE {
         {type = 'item', name = 'latex', amount = 2},
         },
     results = {
-        {type = 'item', name = 'ulric-mk04-dna-sample', amount = 1}
+        {type = 'item', name = 'ulric-mk04-dna-sample', amount = 1},
+        {type = 'item', name = 'used-ulric-mk04', amount = 1, catalyst_amount = 1},
     },
     --main_product = "ulric-mk04",
     icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
@@ -393,7 +394,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'ulric-mk04-dna-sample', amount = 6},
-        {type = 'item', name = 'used-ulric-mk04', amount = 1},
+        {type = 'item', name = 'used-ulric-mk04', amount = 1, catalyst_amount = 1},
     },
     --main_product = "ulric-mk04",
     icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk04.png',
@@ -417,8 +418,8 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'ulric-cub-mk04', amount = 1},
-        {type = 'item', name = 'used-ulric-mk04', amount = 1},
-        {type = 'item', name = 'empty-barrel', amount = 7},
+        {type = 'item', name = 'used-ulric-mk04', amount = 1, catalyst_amount = 1},
+        {type = 'item', name = 'empty-barrel', amount = 7, catalyst_amount = 7},
     },
     --main_product = "ulric-mk04",
     icons =
@@ -446,7 +447,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'ulric-mk04', amount = 1},
-        {type = 'item', name = 'empty-barrel-milk', amount = 2},
+        {type = 'item', name = 'empty-barrel-milk', amount = 2, catalyst_amount = 2},
     },
     --main_product = "ulric-mk04",
     icons =
@@ -471,6 +472,6 @@ RECIPE {
         {type = 'item', name = 'ulric-food-02', amount = 2},
     },
     results = {
-        {type = 'item', name = 'ulric-mk04', amount = 1},
+        {type = 'item', name = 'ulric-mk04', amount = 1, catalyst_amount = 1},
     },
 }:add_unlock("ulric-mk04")

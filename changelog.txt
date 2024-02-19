@@ -11,6 +11,8 @@ Date: ???
     - Fixed vrauk MK02+ duplication with turd path 2. (https://github.com/pyanodon/pybugreports/issues/406)
     - Fixed improper pipe connections for simik dens (https://github.com/pyanodon/pybugreports/issues/404)
     - Added a warning when using the conversion recipes of creature chamber turd path 3 (https://github.com/pyanodon/pybugreports/issues/396)
+    - Fixed certian catalyst outputs not set properly when combined with ulric saddle turd (https://github.com/pyanodon/pybugreports/issues/402)
+    - Fixed missing used ulric mk04 output from ulric gene sample mk04 collection
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.21
 Date: 2024-2-2
