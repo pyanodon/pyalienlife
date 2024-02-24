@@ -24,6 +24,7 @@ RECIPE {
         {type = 'item', name = 'zungror-mk02', amount = 1, probability = 0.005},
         {type = 'item', name = 'empty-barrel', amount = 15},
         {type = 'item', name = 'zungror', amount = 1, probability = 0.5},
+	{type = 'item', name = 'cage', amount = 1},
     },
     main_product = "zungror-mk02",
     icons =
@@ -58,6 +59,7 @@ RECIPE {
         {type = 'item', name = 'zungror-mk03', amount = 1, probability = 0.004},
         {type = 'item', name = 'empty-barrel', amount = 15},
         {type = 'item', name = 'zungror', amount = 1, probability = 0.6},
+	{type = 'item', name = 'cage', amount = 1},
     },
     main_product = "zungror-mk03",
     icons =
