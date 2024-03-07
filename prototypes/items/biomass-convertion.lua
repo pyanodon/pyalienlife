@@ -227,7 +227,7 @@ local biomass_convertion =
     ['guts-vonix'] = {item_amount = 1, biomass_amount = 30},
     ['meat-vonix'] = {item_amount = 1, biomass_amount = 30},
     ['skin-vonix'] = {item_amount = 1, biomass_amount = 30},
-    ['venon-gland'] = {item_amount = 1, biomass_amount = 2},
+    ['venom-gland'] = {item_amount = 1, biomass_amount = 2},
     ['vonix-cub'] = {item_amount = 1, biomass_amount = 15},
     ['vonix-eggs'] = {item_amount = 1, biomass_amount = 5},
     ['blood-caged-phagnot'] = {item_amount = 1, biomass_amount = 15},

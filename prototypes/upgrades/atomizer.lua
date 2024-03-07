@@ -8,7 +8,7 @@ if data and not yafc_turd_integration then
         enabled = false,
         energy_required = 90,
         ingredients = {
-            {type = 'item', name = 'venon-gland', amount = 10},
+            {type = 'item', name = 'venom-gland', amount = 10},
         },
         results = {
             {type = 'item', name = 'dynemicin', amount = 1},

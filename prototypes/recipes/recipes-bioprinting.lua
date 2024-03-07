@@ -1010,7 +1010,7 @@ RECIPE {
 --         {type = 'item', name = 'bio-scafold', amount = 6},
 --     },
 --     results = {
---         {type = 'item', name = 'venon-gland', amount = 2},
+--         {type = 'item', name = 'venom-gland', amount = 2},
 --     },
 --     --main_product = "psc",
 -- }:add_unlock("organ-printing-mk02")
@@ -1191,7 +1191,7 @@ RECIPE {
         {type = 'item', name = 'immunosupressants', amount = 1},
     },
     results = {
-        {type = 'item', name = 'venon-gland', amount = 4},
+        {type = 'item', name = 'venom-gland', amount = 4},
     },
     --main_product = "psc",
 }:add_unlock("organ-printing-mk03")

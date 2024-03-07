@@ -674,7 +674,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='meat', remove_item = true},
-					{name='venon-gland', remove_item = true},
+					{name='venom-gland', remove_item = true},
 					{name='skin', remove_item = true},
 					{name='mukmoux-fat', remove_item = true},
 					{name='guts', remove_item = true},
