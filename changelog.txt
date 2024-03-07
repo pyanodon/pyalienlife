@@ -15,6 +15,8 @@ Date: ???
     - Fixed missing used ulric mk04 output from ulric gene sample mk04 collection
     - Fixed misaligned pipe connections for korlex turd path 2 (https://github.com/pyanodon/pybugreports/issues/439)
     - Changed internal name of "venon-gland" to "venom-gland" (https://github.com/pyanodon/pybugreports/issues/436)
+    - Allowed zipir assisted embryology to use productivity
+    - Fixed that zipir cubs had no uses (https://github.com/pyanodon/pybugreports/issues/432)
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.21
 Date: 2024-2-2
