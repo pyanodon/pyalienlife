@@ -17,6 +17,7 @@ Date: ???
     - Changed internal name of "venon-gland" to "venom-gland" (https://github.com/pyanodon/pybugreports/issues/436)
     - Allowed zipir assisted embryology to use productivity
     - Fixed that zipir cubs had no uses (https://github.com/pyanodon/pybugreports/issues/432)
+    - Fixed misspelling of genes as "gens" (https://github.com/pyanodon/pybugreports/issues/431)
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.21
 Date: 2024-2-2
