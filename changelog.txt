@@ -13,6 +13,7 @@ Date: ???
     - Added a warning when using the conversion recipes of creature chamber turd path 3 (https://github.com/pyanodon/pybugreports/issues/396)
     - Fixed certian catalyst outputs not set properly when combined with ulric saddle turd (https://github.com/pyanodon/pybugreports/issues/402)
     - Fixed missing used ulric mk04 output from ulric gene sample mk04 collection
+    - Fixed misaligned pipe connections for korlex turd path 2 (https://github.com/pyanodon/pybugreports/issues/439)
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.21
 Date: 2024-2-2
