@@ -114,6 +114,7 @@ local recipes_list = {
 	'earth-venus-fly-sample',
 	'earth-wolf-sample',
 	'empty-planter-box',
+	'empty-neuromorphic-chip',
 	'enediyne',
 	'energy-drink',
 	'energy-drinkb',
@@ -304,7 +305,40 @@ local recipes_list = {
 	'zipir-food-02',
 	'zogna-bacteria-darkness',
 	'zogna-bacteria',
-	'zymogens'
+	'zymogens',
+
+	"deposited-core",
+	"biofilm-pyht",
+	"graphene-roll",
+	"processor-core",
+	"high-flux-core",
+	"diode-core",
+	"carbon-nanotube",
+	"nanochip",
+	"kondo-core",
+	"kondo-processor",
+	"nanocrystaline-core",
+	"nems",
+	"volumetric-capacitor",
+	"metallic-glass",
+	"nanochondria",
+	"magnetic-beads",
+	"cottongut-science-blue-seeds",
+	"cottongut-science-prod-seeds",
+	"antitumor",
+	"antitumor-2",
+	"1d-photonic-crystal",
+	"quantum-battery",
+	"mqdc",
+	"ingaas",
+	"quantum-well",
+	"plasmonic-core",
+	"core-shell",
+	"ns-material",
+	"photon-deposited-quartz",
+	"fdtd",
+	"milfe",
+	"mirror-mk04",
 }
 
 --adding to module limitation list
@@ -395,3 +429,15 @@ end
 data.raw['generator-equipment']['py-mount-generator'].categories = {'py-mount-generator'}
 
 -- END MOUNTS
+
+--[[ recipe name finder
+local recipe_names = {}
+
+for r, recipe in pairs(data.raw.recipe) do
+	if recipe.category == "nano" then
+		table.insert(recipe_names, recipe.name)
+	end
+end
+
+log(serpent.block(recipe_names))
+]]--
