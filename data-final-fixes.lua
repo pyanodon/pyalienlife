@@ -23,6 +23,7 @@ end
 local recipes_list = {
 	'adam42-gen-laser',
 	'adam42-gen',
+	'zipir-grow-01',
 	'agar',
 	'alien-enzymes',
 	'alien-sample-02',

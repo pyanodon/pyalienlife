@@ -789,7 +789,7 @@ FUN.autorecipes {
 					{name='mukmoux-fat', probability = 0.5, amount_min =1, amount_max =5},
 					{name='guts', probability = 0.4, amount_min =1, amount_max =6},
 					{name='arthropod-blood', amount =80},
-					{name='venon-gland', probability = 0.2, amount_min =1, amount_max =1},
+					{name='venom-gland', probability = 0.2, amount_min =1, amount_max =1},
 					{name='brain', probability = 0.3, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
@@ -807,7 +807,7 @@ FUN.autorecipes {
 			results =
 				{
 					{name='meat', remove_item = true},
-					{name='venon-gland', remove_item = true},
+					{name='venom-gland', remove_item = true},
 					{name='skin', remove_item = true},
 					{name='mukmoux-fat', remove_item = true},
 					{name='guts', remove_item = true},

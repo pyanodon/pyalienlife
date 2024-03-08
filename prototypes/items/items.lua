@@ -3554,7 +3554,7 @@ ITEM {
 
 ITEM {
 	type = 'item',
-	name = 'venon-gland',
+	name = 'venom-gland',
 	icon = '__pyalienlifegraphics__/graphics/icons/venon-gland.png',
 	icon_size = 64,
 	flags = {},

@@ -42,7 +42,7 @@ FUN.autorecipes {
 					{name='mukmoux-fat',  amount = BASE_FAT},
 					{name='guts',  amount = BASE_GUTS},
 					{name='arthropod-blood', amount = BASE_BLOOD},
-					{name='venon-gland',  amount = BASE_SPECIAL},
+					{name='venom-gland',  amount = BASE_SPECIAL},
 					{name='brain', amount = BASE_BRAIN},
 				},
 			crafting_speed = 30,
@@ -60,7 +60,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name = 'venon-gland', remove_item = true},
+					{name = 'venom-gland', remove_item = true},
 					{name = 'meat', remove_item = true},
 					{name = 'mukmoux-fat', remove_item = true},
 					{name = 'skin', remove_item = true},
@@ -82,7 +82,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name = 'venon-gland', amount = IMP_SPECIAL},
+					{name = 'venom-gland', amount = IMP_SPECIAL},
 					{name = 'brain', remove_item = true},
 					{name='guts', amount = IMP_GUTS},
 				},
@@ -100,7 +100,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name = 'venon-gland', remove_item = true},
+					{name = 'venom-gland', remove_item = true},
 					{name = 'guts', remove_item = true},
 					{name='arthropod-blood', amount = IMP_BLOOD},
 				},

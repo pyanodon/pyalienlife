@@ -21,7 +21,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'zipir1', amount = 1},
     },
-}:add_unlock("zipir")
+}:add_unlock('zipir')
 
 RECIPE {
     type = 'recipe',
@@ -38,7 +38,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'zipir-codex', amount = 2},
     },
-}:add_unlock("water-invertebrates-mk01")
+}:add_unlock('water-invertebrates-mk01')
 
 RECIPE {
     type = 'recipe',
@@ -54,7 +54,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'earth-crustacean-sample', amount = 1},
     },
-}:add_unlock("water-invertebrates-mk01")
+}:add_unlock('water-invertebrates-mk01')
 
 ----food----
 
@@ -66,7 +66,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = 'item', name = 'plastic-bar', amount = 5},
-        {type = 'item', name = "seaweed", amount = 20},
+        {type = 'item', name = 'seaweed', amount = 20},
         {type = 'item', name = 'ralesia-seeds', amount = 10},
         {type = 'item', name = 'fish', amount = 10},
         {type = 'item', name = 'bones', amount = 5},
@@ -78,7 +78,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'zipir-food-01', amount = 6},
     },
-}:add_unlock("zipir-mk03")
+}:add_unlock('zipir-mk03')
 
 RECIPE {
     type = 'recipe',
@@ -89,7 +89,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'plastic-bar', amount = 5},
         {type = 'item', name = 'navens', amount = 1},
-        {type = 'item', name = "seaweed", amount = 20},
+        {type = 'item', name = 'seaweed', amount = 20},
         {type = 'item', name = 'native-flora', amount = 10},
         {type = 'item', name = 'fish', amount = 8},
         {type = 'item', name = 'guar-gum', amount = 1},
@@ -103,9 +103,9 @@ RECIPE {
     results = {
         {type = 'item', name = 'zipir-food-02', amount = 6},
     },
-}:add_unlock("zipir-mk04")
+}:add_unlock('zipir-mk04')
 
----growing---
+---assisted embryology---
 
 RECIPE {
     type = 'recipe',
@@ -114,55 +114,31 @@ RECIPE {
     enabled = false,
     energy_required = 40,
     ingredients = {
-        {type = 'item', name = 'zipir-eggs', amount = 10},
+        {type = 'item', name = 'zipir-eggs', amount = 5},
         {type = 'item', name = 'rennea-seeds', amount = 4},
         {type = 'fluid', name = 'phytoplankton', amount = 200},
     },
     results = {
-        {type = 'item', name = 'zipir-pup', amount = 10},
+        {type = 'item', name = 'zipir-pup', amount = 5},
     },
-    main_product = "zipir-pup",
-    subgroup = 'py-alienlife-zipir',
-    order = 'a',
-}:add_unlock("assisted-embryology")
+    main_product = 'zipir-pup',
+}:add_unlock('assisted-embryology')
 
----maturing---
---[[
 RECIPE {
     type = 'recipe',
-    name = 'zipir-mature-01',
-    category = 'creature-chamber',
+    name = 'zipir-pup-maturation',
+    category = 'zipir',
     enabled = false,
     energy_required = 80,
     ingredients = {
         {type = 'item', name = 'zipir-pup', amount = 10},
-        {type = 'fluid', name = 'fetal-serum', amount = 50},
+        {type = 'fluid', name = 'gta', amount = 1},
+        {type = 'item', name = 'zipir-food-02', amount = 1},
+        {type = 'fluid', name = 'water-saline', amount = 300},
     },
     results = {
         {type = 'item', name = 'zipir1', amount = 10},
+        {type = 'fluid', name = 'waste-water', amount = 300},
     },
-    --main_product = "zipir",
-    subgroup = 'py-alienlife-zipir',
-    order = 'a',
-}:add_unlock("assisted-embryology")
-
-RECIPE {
-    type = 'recipe',
-    name = 'zipir-mature-02',
-    category = 'creature-chamber',
-    enabled = false,
-    energy_required = 65,
-    ingredients = {
-        {type = 'item', name = 'zipir-pup', amount = 10},
-        {type = 'item', name = 'resveratrol', amount = 3},
-        {type = 'item', name = 'gh', amount = 1},
-        {type = 'fluid', name = 'fetal-serum', amount = 50},
-    },
-    results = {
-        {type = 'item', name = 'zipir1', amount = 20},
-    },
-    --main_product = "caged-zipir",
-    subgroup = 'py-alienlife-zipir',
-    order = 'a',
-}:add_unlock("growth-hormone")
-]]--
+    main_product = 'zipir1',
+}:add_unlock('zipir-mk04')

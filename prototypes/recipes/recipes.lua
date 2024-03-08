@@ -877,7 +877,7 @@ RECIPE {
         {type = 'item', name = 'cobalt-nx', amount = 4},
         {type = 'item', name = 'retrovirus', amount = 1},
         {type = 'item', name = 'nexelit-matrix', amount = 3},
-        {type = 'item', name = 'venon-gland', amount = 4},
+        {type = 'item', name = 'venom-gland', amount = 4},
         {type = 'item', name = 'microcin-j25', amount = 1},
     },
     results = {
@@ -1968,7 +1968,7 @@ RECIPE {
         {type = 'item', name = 'magnetic-organ', amount = 1},
         {type = 'item', name = 'glandular-myocluster', amount = 1},
         {type = 'item', name = 'hormonal', amount = 1},
-        {type = 'item', name = 'venon-gland', amount = 1},
+        {type = 'item', name = 'venom-gland', amount = 1},
         {type = 'fluid', name = 'autoantigens', amount = 50},
     },
     results = {
