@@ -5,6 +5,7 @@ Date: ???
     - Added a migration to clean any remaining bugged bioport graphics
     - Fixed misaligned pipe connections for korlex turd path 2 (https://github.com/pyanodon/pybugreports/issues/439)
     - added nano machine recipes and empty neuromorphic chip to the prod module list
+    - fixed a crash on selecting a T.U.R.D. option
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.21
 Date: 2024-2-2
