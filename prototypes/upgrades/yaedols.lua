@@ -29,7 +29,8 @@ if data and not yafc_turd_integration then
         local nitrogen_barrels = math.ceil(FUN.remove_ingredient(recipe, 'nitrogen') / 50)
         if nitrogen_barrels > 0 then
             FUN.add_ingredient(recipe, {name = 'nitrogen-barrel', amount = nitrogen_barrels, type = 'item'})
-            FUN.add_result_amount(recipe, 'empty-barrel', nitrogen_barrels)
+            nitrogen_barrels = nitrogen_barrels + FUN.remove_result(recipe, 'empty-barrel')
+            FUN.add_result(recipe, {'empty-barrel', nitrogen_barrels})
         end
 
         data:extend{recipe}
