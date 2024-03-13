@@ -89,5 +89,9 @@ Smart_Farm.events.on_rocket_launched = function(event)
 		name = {'harvester', 'collector'}
 	}) do
 		harvester.update_connections()
+		if harvester.get_control_behavior() or next(harvester.circuit_connected_entities.red) or next(harvester.circuit_connected_entities.green) then
+			harvester.get_control_behavior().circuit_read_resources = false
+			harvester.get_control_behavior().circuit_read_resources = true
+		end
 	end
 end
