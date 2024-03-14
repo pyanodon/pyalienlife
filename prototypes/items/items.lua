@@ -1161,7 +1161,7 @@ data:extend {
 		},
 		energy_source = {
 			type = 'electric',
-			buffer_capacity = '180MJ',
+			buffer_capacity = '600MJ',
 			usage_priority = 'tertiary'
 		},
 		localised_name = {'item-name.biobattery'},

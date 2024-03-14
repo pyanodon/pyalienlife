@@ -1,8 +1,7 @@
 ---------------------------------------------------------------------------------------------------
-Version: 2.1.22
-Date: ???
+Version: 2.1.24
+Date: 2024-?-??
   Fixes:
-    - Added a migration to clean any remaining bugged bioport graphics
     - Buffed simik scale -> uranium ore atomizer recipe by 5X
     - Fixed typos in arqad turd descriptions
     - Added nukes to nuclear carvan crafting recipe. Removed explosive rockets. (only applies when pyAE is installed)
@@ -19,6 +18,21 @@ Date: ???
     - Fixed that zipir cubs had no uses (https://github.com/pyanodon/pybugreports/issues/432)
     - Fixed misspelling of genes as "gens" (https://github.com/pyanodon/pybugreports/issues/431)
     - Fixed yaedols turd path 2 did not return barrels
+---------------------------------------------------------------------------------------------------
+Version: 2.1.23
+Date: 2024-3-14
+  Fixes:
+    - Fixed that fish oil to tin recipe was being overwritten by fish to tin recipe
+---------------------------------------------------------------------------------------------------
+Version: 2.1.22
+Date: 2024-3-13
+  Fixes:
+    - Added a migration to clean any remaining bugged bioport graphics
+    - Fixed misaligned pipe connections for korlex turd path 2 (https://github.com/pyanodon/pybugreports/issues/439)
+    - added nano machine recipes and empty neuromorphic chip to the prod module list
+    - fixed a crash on selecting a T.U.R.D. option
+    - fixed that collector and harvester miners in smart farms wouldnt report correct data to circuit network after new ore was created
+    - adjusted armor battery charge levels
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.21
 Date: 2024-2-2

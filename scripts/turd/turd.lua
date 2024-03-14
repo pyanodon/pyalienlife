@@ -452,9 +452,6 @@ gui_events[defines.events.on_gui_click]['py_turd_confirm_button'] = function(eve
 		force.print{'turd.font', {'turd.selected-alert', {'technology-name.'..master_tech_name}, {'technology-name.'..sub_tech_name}, player.name, player.color.r, player.color.g, player.color.b}}
 		turd_bonuses[master_tech_name] = sub_tech_name
 		apply_turd_bonus(force, master_tech_name, tech_upgrades[master_tech_name], find_all_assembling_machines(force))
-		for _, player in pairs(force.players) do
-			player.unlock_achievement("polished-turd")
-		end
 	else
 		global.turd_reset_remaining[force_index] = global.turd_reset_remaining[force_index] or 0
 		if global.turd_reset_remaining[force_index] <= 0 and not has_turd_migration(force_index, sub_tech_name) then

@@ -152,7 +152,7 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'fish-to-tin',
+    name = 'fish-oil-to-tin',
     category = 'atomizer',
     enabled = false,
     energy_required = 10,
