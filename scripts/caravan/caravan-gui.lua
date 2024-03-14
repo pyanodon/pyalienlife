@@ -2,6 +2,7 @@ local prototypes = require 'caravan-prototypes'
 local Table = require('__stdlib__/stdlib/utils/table')
 local Position = require('__stdlib__/stdlib/area/position')
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
+require 'caravan-gui-shared'
 
 local function generate_button_status(caravan_data, schedule_id, action_id)
 	local style = 'train_schedule_action_button'
@@ -143,20 +144,27 @@ function Caravan.build_gui(player, entity)
 	local main_frame
 	if prototype.opens_player_inventory then
 		player.opened = caravan_data.inventory
-		main_frame = player.gui.relative.add{
-			type = 'frame', name = 'caravan_gui', caption = entity.prototype.localised_name, direction = 'vertical',
+		local flow = player.gui.relative.add {
+			type = 'flow', name = 'caravan_flow',
 			anchor = {
 				gui = defines.relative_gui_type.script_inventory_gui,
 				position = defines.relative_gui_position.right
-			}
+			},
+
+		}
+		flow.style.horizontal_spacing = 0
+		main_frame = flow.add {
+			type = 'frame', name = 'caravan_gui', caption = entity.prototype.localised_name, direction = 'vertical',
 		}
 	else
+		-- I assume this is unused? when or how is this reachable?...
 		main_frame = player.gui.screen.add{type = 'frame', name = 'caravan_gui', caption = entity.prototype.localised_name, direction = 'vertical'}
 		main_frame.auto_center = true
 		player.opened = main_frame
 	end
 	main_frame.style.width = 436
 	main_frame.style.minimal_height = 710
+	main_frame.style.margin = 0
 	main_frame.tags = {unit_number = entity.unit_number}
 
 	local content_frame = main_frame.add{type = 'frame', name = 'content_frame', direction = 'vertical', style = 'inside_shallow_frame_with_padding'}
@@ -207,6 +215,7 @@ function Caravan.build_gui(player, entity)
 	schedule_pane.style.horizontally_stretchable = true
 	schedule_pane.style.vertically_stretchable = true
 	Caravan.update_gui(main_frame)
+	Caravan.build_gui_connected(player, entity)
 end
 
 Caravan.events.on_open_gui = function(event)
@@ -235,25 +244,9 @@ function Caravan.update_gui(gui, weak)
 	local caravan_data = global.caravans[gui.tags.unit_number]
 	if not Caravan.validity_check(caravan_data) then gui.destroy() return end
 	local content_flow = gui.content_frame.content_flow
-	local entity = caravan_data.entity
-
-	local status, img
-	if caravan_data.is_aerial then
-		status = {'entity-status.working'}
-		img = 'utility/status_working'
-	elseif caravan_data.fuel_bar == 0 and caravan_data.fuel_inventory.is_empty() then
-		status = {'entity-status.starved'}
-		img = 'utility/status_not_working'
-	elseif entity.health ~= entity.prototype.max_health then
-		status = {'entity-status.wounded'}
-		img = 'utility/status_yellow'
-	else
-		status = {'entity-status.healthy'}
-		img = 'utility/status_working'
-	end
-	content_flow.status_flow.status_text.caption = status
+	local state, img = Caravan.status_img(caravan_data)
+	content_flow.status_flow.status_text.caption = state
 	content_flow.status_flow.status_sprite.sprite = img
-
 	if caravan_data.fuel_inventory then
 		for i = 1, #caravan_data.fuel_inventory do
 			local stack = caravan_data.fuel_inventory[i]
@@ -278,13 +271,31 @@ end
 
 Caravan.events.close_gui = function(event)
 	local player = game.get_player(event.player_index)
+	
+    if player.gui.relative.py_global_caravan_gui then
+    	player.gui.relative.py_global_caravan_gui.destroy()
+	end
+	if player.gui.screen.py_global_caravan_gui then
+        player.gui.screen.py_global_caravan_gui.destroy()
+    end
+
 	if event.gui_type == defines.gui_type.script_inventory or event.gui_type == defines.gui_type.custom then
 		local gui = Caravan.get_caravan_gui(player)
 		if gui then gui.destroy() end
+		if player.gui.relative.caravan_flow then
+			player.gui.relative.caravan_flow.destroy()
+		end
+	end
+end
+
+local function get_caravan_gui_in_flow(player)
+	if player.gui.relative.caravan_flow then
+		return player.gui.relative.caravan_flow.caravan_gui
 	end
 end
 
 function Caravan.get_caravan_gui(player)
-	local gui = player.gui.relative.caravan_gui or player.gui.screen.caravan_gui
+	local gui = get_caravan_gui_in_flow(player) or player.gui.screen.caravan_gui
 	if gui then return gui end
 end
+

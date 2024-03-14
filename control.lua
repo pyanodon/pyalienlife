@@ -177,6 +177,7 @@ script.on_event(defines.events.on_player_removed_equipment, function(event)
 end)
 
 script.on_event(defines.events.on_gui_opened, function(event)
+    Caravan.events.on_gui_opened_connected(event)
     Oculua.events.on_gui_opened(event)
     Digosaurus.events.on_gui_opened(event)
     Slaughterhouse.events.on_gui_opened(event)
@@ -231,6 +232,10 @@ end)
 script.on_event('open-gui', function(event)
     Caravan.events.on_open_gui(event)
     Caravan.events.used_capsule(event)
+end)
+
+script.on_event("caravan-organizer", function(event)
+    Caravan.events.on_open_global_gui(event)
 end)
 
 script.on_event(defines.events.on_research_finished, Turd.events.on_research_finished)
