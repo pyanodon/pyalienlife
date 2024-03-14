@@ -217,11 +217,8 @@ ENTITY {
             pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             base_area = 10,
             pipe_connections = {
-
                 {type = "input-output", position = {0.5, -5.5}},
-
                 {type = "input-output", position = {-0.5, 5.5}},
-
             },
             secondary_draw_orders = { north = -1 }
         },

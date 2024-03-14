@@ -55,7 +55,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'vrauks-mk02', amount = 1, probability = 0.95},
-        {type = 'item', name = 'vrauks-mk02', amount = 1},
+        {type = 'item', name = 'vrauks-mk02', amount = 1, catalyst_amount = 1},
         {type = 'item', name = 'empty-barrel', amount = 5},
     },
     main_product = "vrauks-mk02",
@@ -86,7 +86,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'cocoon-mk02', amount_min = 4, amount_max = 7},
-        {type = 'item', name = 'vrauks-mk02', amount = 2, probability = 0.99},
+        {type = 'item', name = 'vrauks-mk02', amount = 2, probability = 0.99, catalyst_amount = 2},
         {type = 'item', name = 'empty-barrel', amount = 5},
     },
     main_product = "cocoon-mk02",
@@ -154,7 +154,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'vrauks-mk03', amount = 1, probability = 0.95},
-        {type = 'item', name = 'vrauks-mk03', amount = 1},
+        {type = 'item', name = 'vrauks-mk03', amount = 1, catalyst_amount = 1},
         {type = 'item', name = 'empty-barrel', amount = 5},
     },
     main_product = "vrauks-mk03",
@@ -185,7 +185,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'cocoon-mk03', amount_min = 4, amount_max = 7},
-        {type = 'item', name = 'vrauks-mk03', amount = 2, probability = 0.99},
+        {type = 'item', name = 'vrauks-mk03', amount = 2, probability = 0.99, catalyst_amount = 2},
         {type = 'item', name = 'empty-barrel', amount = 5},
     },
     main_product = "cocoon-mk03",
@@ -253,7 +253,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'vrauks-mk04', amount = 1, probability = 0.95},
-        {type = 'item', name = 'vrauks-mk04', amount = 1},
+        {type = 'item', name = 'vrauks-mk04', amount = 1, catalyst_amount = 1},
         {type = 'item', name = 'empty-barrel', amount = 5},
     },
     main_product = "vrauks-mk04",
@@ -284,7 +284,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'cocoon-mk04', amount_min = 4, amount_max = 7},
-        {type = 'item', name = 'vrauks-mk04', amount = 2, probability = 0.99},
+        {type = 'item', name = 'vrauks-mk04', amount = 2, probability = 0.99, catalyst_amount = 2},
         {type = 'item', name = 'empty-barrel', amount = 5},
     },
     main_product = "cocoon-mk04",

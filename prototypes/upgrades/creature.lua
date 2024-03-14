@@ -107,6 +107,10 @@ if data and not yafc_turd_integration then
             results = {{type = 'item', name = name, amount = 1}},
         }
 
+        if unit_name == 'caravan' or unit_name == 'flyavan' or unit_name == 'nukavan' then
+            convert_recipe.localised_description = {'recipe-description.will-delete-metadata-warning'}
+        end
+
         data:extend{unit, recipe, item, convert_recipe}
     end
 elseif script then

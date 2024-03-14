@@ -1,0 +1,12 @@
+
+{
+    "item":
+    [
+      ["venon-gland", "venom-gland"]
+    ],
+    "recipe":
+    [
+        ["venon-gland-pyvoid", "venom-gland-pyvoid"],
+        ["biomass-venon-gland", "biomass-venom-gland"]
+    ]
+}

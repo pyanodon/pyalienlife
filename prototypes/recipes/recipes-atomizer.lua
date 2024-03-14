@@ -593,7 +593,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'item', name = 'simik-scales', amount = 10},
+        {type = 'item', name = 'simik-scales', amount = 2},
     },
     results = {
         {type = 'item', name = 'uranium-ore', amount = 8},
