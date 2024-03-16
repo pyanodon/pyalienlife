@@ -24,6 +24,7 @@ RECIPE {
         {type = 'item', name = 'arthurian-egg-mk02', amount = 1, probability = 0.005},
         {type = 'item', name = 'arthurian-egg', amount = 1, probability = 0.5},
         {type = 'item', name = 'empty-barrel', amount = 4},
+	{type = 'item', name = 'cage', amount = 1},
     },
     --main_product = "arthurian-mk02",
     icons =
