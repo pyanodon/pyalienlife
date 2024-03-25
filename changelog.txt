@@ -18,6 +18,7 @@ Date: 2024-?-??
     - Fixed that zipir cubs had no uses (https://github.com/pyanodon/pybugreports/issues/432)
     - Fixed misspelling of genes as "gens" (https://github.com/pyanodon/pybugreports/issues/431)
     - Fixed yaedols turd path 2 did not return barrels
+    - removed generic sample from bioreserve smart farm recipes
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.23
 Date: 2024-3-14
