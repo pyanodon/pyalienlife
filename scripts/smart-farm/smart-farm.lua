@@ -86,7 +86,7 @@ Smart_Farm.events.on_rocket_launched = function(event)
 
 	for _, harvester in pairs(surface.find_entities_filtered{
 		area = {{position.x - 11, (position.y - 15) - 11}, {position.x + 11, (position.y - 15) + 11}},
-		name = {'harvester', 'collector'}
+		name = {'harvester', 'collector', "collector-mk02", "collector-mk03", "collector-mk04"}
 	}) do
 		harvester.update_connections()
 		if harvester.get_control_behavior() or next(harvester.circuit_connected_entities.red) or next(harvester.circuit_connected_entities.green) then
