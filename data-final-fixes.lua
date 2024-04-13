@@ -340,6 +340,7 @@ local recipes_list = {
 	"fdtd",
 	"milfe",
 	"mirror-mk04",
+	'guano-explosives'
 }
 
 --adding to module limitation list

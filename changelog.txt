@@ -5,6 +5,7 @@ Date: 2024-4-13
     - Fixed that you could generate infinite landfill by spam placing and replacing the smart farm
     - Fixed that the collector check area introduced in 2.1.25 was not big enough (https://github.com/pyanodon/pybugreports/issues/461)
     - Smart farms now properly clean up any wood fences when they are destroyed.
+    - Guano explosives can now be buffed by productivity to match the vanilla recipe. (https://github.com/pyanodon/pybugreports/issues/458)
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.25
 Date: 2024-3-25
