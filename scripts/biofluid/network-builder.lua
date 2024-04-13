@@ -108,11 +108,15 @@ function Biofluid.find_heat_connections(entity)
 end
 
 function Biofluid.find_underground_neighbour(entity)
-	local neighbours = entity.neighbours[1]
-	if not neighbours or #neighbours ~= 1 then return end
-	local neighbor = neighbours[1]
-	if not Biofluid.connectable[neighbor.name] then return end
-	if neighbor.force_index ~= entity.force_index then return end
+	local neighbor
+	for _, neighbour in pairs(entity.neighbours[1]) do
+		if neighbour.type == TO_GROUND and Biofluid.connectable[neighbour.name] then
+			neighbor = neighbour
+			break
+		end
+	end
+	if not neighbor then return end
+
 	local network_positions = Biofluid.network_positions(entity.surface_index)
 	local position = neighbor.position
 	local x = math.floor(position.x)
@@ -221,10 +225,17 @@ end
 function Biofluid.join_networks(new_id, old_id, network_positions)
 	local new = global.biofluid_networks[new_id]
 	local old = global.biofluid_networks[old_id]
-	if new.force_index ~= old.force_index then
-		game.print('ERROR: Attempt to join two biofluid networks with diffrent forces. ' .. new_id .. ' ' .. old_id)
+
+	if not new or not old then
+		game.print('ERROR: Attempt to join two non-existant biofluid networks. ' .. new_id .. ' ' .. old_id .. '. Please report this bug on our github.')
 		return
 	end
+
+	if new.force_index ~= old.force_index then
+		game.print('ERROR: Attempt to join two biofluid networks with diffrent forces. ' .. new_id .. ' ' .. old_id .. '. Please report this bug on our github.')
+		return
+	end
+
 	for x, column in pairs(old.positions) do
 		for y, _ in pairs(column) do
 			network_positions[x][y].network_id = new_id
@@ -324,6 +335,7 @@ function Biofluid.destroyed_pipe(entity)
 	end
 
 	if not network then return end
+	
 	Biofluid.remove_from_network(network_id, entity, connections)
 
 	local nearby_pipes = Biofluid.find_nearby_pipes(entity, connections)
