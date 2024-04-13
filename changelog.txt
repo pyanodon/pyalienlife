@@ -10,6 +10,7 @@ Date: ?
     - Nerfed scrondrix turd path 3 from giving 24x brains to 16x. Also returns 1 less basic circuit.
     - NOTE: If you already picked kickalk or scrondrix turd, you will have a 5 hour grace period to change them to a diffrent option.
     - Fixed that subcritical-water-01 was not localised when pyAE is missing. (https://github.com/pyanodon/pybugreports/issues/445)
+    - Fixed that the alpha dingrits from dingrit turd path 1 could not be used as modules inside the reproductive complex. (https://github.com/pyanodon/pybugreports/issues/452)
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.25
 Date: 2024-3-25

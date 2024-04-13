@@ -55,11 +55,6 @@ for food, value in pairs(Digosaurus.favorite_foods) do
     }
 end
 
---RECIPE('digosaurus-helmod-recipe-guts'):add_unlock('nexelit-mk01')
---RECIPE('digosaurus-helmod-recipe-meat'):add_unlock('nexelit-mk01')
---RECIPE('digosaurus-helmod-recipe-workers-food'):add_unlock('nexelit-mk01')
---RECIPE('digosaurus-helmod-recipe-workers-food-02'):add_unlock('nexelit-mk03')
-
 ----------------------------------------------------------------------------------------------------
 -- crafting_categories
 ----------------------------------------------------------------------------------------------------

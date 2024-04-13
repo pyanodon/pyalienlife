@@ -52,7 +52,7 @@ ENTITY {
         module_info_icon_shift = util.by_pixel(160, 230),
         module_slots = 2,
     },
-    allowed_effects = {"speed",'consumption','pollution'},
+    allowed_effects = {"speed",'consumption','pollution','productivity'},
     crafting_categories = {'rc'},
     crafting_speed = .333, -- 2 modules + 1 building = target speed of 1
     energy_source = {
