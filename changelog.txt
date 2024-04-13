@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.26
-Date: 2024-4-13
+Date: ?
   Fixes:
     - Fixed that you could generate infinite landfill by spam placing and replacing the smart farm
     - Fixed that the collector check area introduced in 2.1.25 was not big enough (https://github.com/pyanodon/pybugreports/issues/461)
@@ -9,6 +9,7 @@ Date: 2024-4-13
     - Nerfed kickalk turd path 1. Amount of non-dryed kickalk reduced from floor(75%) -> ceil(35%)
     - Nerfed scrondrix turd path 3 from giving 24x brains to 16x. Also returns 1 less basic circuit.
     - NOTE: If you already picked kickalk or scrondrix turd, you will have a 5 hour grace period to change them to a diffrent option.
+    - Fixed that subcritical-water-01 was not localised when pyAE is missing. (https://github.com/pyanodon/pybugreports/issues/445)
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.25
 Date: 2024-3-25
