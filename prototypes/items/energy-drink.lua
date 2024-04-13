@@ -66,14 +66,7 @@ ITEM {
 
 local speedup_sticker = table.deepcopy(data.raw['sticker']['slowdown-sticker'])
 speedup_sticker.name = 'speedup-sticker'
-speedup_sticker.spread_fire_entity = 'fire-flame-on-tree'
-speedup_sticker.fire_spread_radius = 3
 speedup_sticker.duration_in_ticks = 60 * 60
-speedup_sticker.damage_interval = 70
-speedup_sticker.damage_per_tick = {
-	amount = 8,
-	type = 'fire'
-}
-speedup_sticker.target_movement_modifier_from = 1
-speedup_sticker.target_movement_modifier_to = 40
+speedup_sticker.target_movement_modifier_from = 20
+speedup_sticker.target_movement_modifier_to = 1
 data:extend{speedup_sticker}
