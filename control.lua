@@ -170,6 +170,7 @@ script.on_event(on_destroyed, function(event)
     Vatbrain.events.on_destroyed(event)
     Biofluid.events.on_destroyed(event)
     Mounts.events.on_destroyed(event)
+    Smart_Farm.events.on_destroyed(event)
 end)
 
 script.on_event(defines.events.on_player_removed_equipment, function(event)

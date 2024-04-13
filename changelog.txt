@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.26
+Date: 2024-4-13
+  Fixes:
+    - Fixed that you could generate infinite landfill by spam placing and replacing the smart farm
+    - Fixed that the collector check area introduced in 2.1.25 was not big enough (https://github.com/pyanodon/pybugreports/issues/461)
+    - Smart farms now properly clean up any wood fences when they are destroyed.
+---------------------------------------------------------------------------------------------------
 Version: 2.1.25
 Date: 2024-3-25
   Fixes:
