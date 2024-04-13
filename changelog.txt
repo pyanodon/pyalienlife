@@ -6,6 +6,9 @@ Date: 2024-4-13
     - Fixed that the collector check area introduced in 2.1.25 was not big enough (https://github.com/pyanodon/pybugreports/issues/461)
     - Smart farms now properly clean up any wood fences when they are destroyed.
     - Guano explosives can now be buffed by productivity to match the vanilla recipe. (https://github.com/pyanodon/pybugreports/issues/458)
+    - Nerfed kickalk turd path 1. Amount of non-dryed kickalk reduced from floor(75%) -> ceil(35%)
+    - Nerfed scrondrix turd path 3 from giving 24x brains to 16x. Also returns 1 less basic circuit.
+    - NOTE: If you already picked kickalk or scrondrix turd, you will have a 5 hour grace period to change them to a diffrent option.
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.25
 Date: 2024-3-25
