@@ -6,6 +6,7 @@ Date: 2024-4-??
     - Dead trees now give 1 logs instead of 0.5.
     - Trees now give sap with a 10% chance instead of a 5% chance.
     - Updated pyPP cachefiles.
+    - Fixed a crash with biofluid pipes (https://github.com/pyanodon/pybugreports/issues/409)
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.26
 Date: 2024-4-13
