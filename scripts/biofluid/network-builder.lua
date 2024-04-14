@@ -177,9 +177,6 @@ function Biofluid.built_pipe(entity)
 			entity.teleport(previous_position)
 			if previous_neighbor and previous_neighbor.entity ~= entity and previous_neighbor.entity.name == neighbor.entity.name then
 				local network_positions = Biofluid.network_positions(entity.surface_index)
-				game.print('Splitting network')
-				rendering.draw_circle{color = {r = 1, g = 0, b = 0}, radius = 0.5, width = 1, filled = false, target = neighbor.entity.position, surface = entity.surface, time_to_live = 60}
-				rendering.draw_circle{color = {r = 1, g = 0, b = 0}, radius = 0.5, width = 1, filled = false, target = previous_neighbor.entity.position, surface = entity.surface, time_to_live = 60}
 				Biofluid.split_network(previous_neighbor.network_id, network_positions)
 			end
 		end
