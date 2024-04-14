@@ -1,43 +1,87 @@
 Smart_Farm = {}
 Smart_Farm.events = {}
 
-local farms = {
-	farm1 = require('farm-ralesia'),
-	farm2 = require('farm-rennea'),
-	farm3 = require('farm-tuuphra'),
-	farm4 = require('farm-grod'),
-	farm5 = require('farm-yotoi'),
-	farm6 = require('farm-kicalk'),
-	farm7 = require('farm-arum'),
-	farm8 = require('farm-yotoi-fruit'),
-	farm9 = require('farm-bioreserve'),
-    farm10 = script.active_mods['pyalternativeenergy'] and require('__pyalternativeenergy__/scripts/crops/farm-mova')
+local farm_filenames = {
+	'farm-ralesia',
+	'farm-rennea',
+	'farm-tuuphra',
+	'farm-grod',
+	'farm-yotoi',
+	'farm-kicalk',
+	'farm-arum',
+	'farm-yotoi-fruit',
+	'farm-bioreserve',
+	script.active_mods['pyalternativeenergy'] and '__pyalternativeenergy__/scripts/crops/farm-mova'
 }
+
+local farms = {}
+for _, filename in pairs(farm_filenames) do
+	local farm = require(filename)
+	farms[farm.seed] = farm
+end
 
 Smart_Farm.events.on_built = function(event)
 	local entity = event.created_entity or event.entity
     if entity.name ~= 'mega-farm' then return end
+	local surface = entity.surface
 
-	local posx = -13
-	local posy = -13
 	local position = entity.position
-	repeat
-		if posx == -13 or posy == -13 or posx == 13 or posy == 13 then
-			entity.surface.create_entity{
+	position.y = position.y - 15
+	local positions = {}
+	for x = -13, 13 do
+		table.insert(positions, {position.x + x, position.y + 13})
+		table.insert(positions, {position.x + x, position.y - 13})
+	end
+	for y = -13, 13 do
+		table.insert(positions, {position.x + 13, position.y + y})
+		table.insert(positions, {position.x - 13, position.y + y})
+	end
+
+	for _, position in pairs(positions) do
+		if not surface.entity_prototype_collides('wood-fence', position, false) then
+			surface.create_entity{
 				name = 'wood-fence',
-				position = {position.x + posx, (position.y - 15) + posy},
+				position = position,
 				force = entity.force
 			}
 		end
-		--create landfill
-		entity.surface.set_tiles{{name = 'landfill', position = {position.x + posx, (position.y - 15) + posy}}}
+	end
 
-		posx = posx + 1
-		if posx == 14 then
-			posx = -13
-			posy = posy + 1
+	local landfill_tiles = {}
+	for x = -12, 12 do
+		for y = -12, 12 do
+			local position = {position.x + x, position.y + y}
+			if not surface.get_tile(position).collides_with('water-tile') then
+				table.insert(landfill_tiles, {name = 'landfill', position = position})
+			end
 		end
-	until posy == 14
+	end
+	surface.set_tiles(landfill_tiles)
+end
+
+Smart_Farm.events.on_destroyed = function(event)
+	local entity = event.entity
+	if entity.name ~= 'mega-farm' then return end
+	local surface = entity.surface
+
+	local position = entity.position
+	position.y = position.y - 15
+	local positions = {}
+	for x = -13, 13 do
+		table.insert(positions, {position.x + x, position.y + 13})
+		table.insert(positions, {position.x + x, position.y - 13})
+	end
+	for y = -13, 13 do
+		table.insert(positions, {position.x + 13, position.y + y})
+		table.insert(positions, {position.x - 13, position.y + y})
+	end
+
+	for _, position in pairs(positions) do
+		local fence = surface.find_entity('wood-fence', position)
+		if fence and fence.force_index == entity.force_index then
+			fence.destroy()
+		end
+	end
 end
 
 Smart_Farm.events.on_rocket_launched = function(event)
@@ -45,48 +89,46 @@ Smart_Farm.events.on_rocket_launched = function(event)
 	if silo.name ~= 'mega-farm' then return end
 	local surface = silo.surface
 	local position = silo.position
+	position.y = position.y - 15
 
-	local items = {}
-	for k, _ in pairs(event.rocket.get_inventory(defines.inventory.rocket).get_contents()) do
-		items['item1'] = k
-	end
-
-	for _, farm in pairs(farms) do
-		if items['item1'] == farm.seed then
-			local recipes = {}
-			local output = {}
-			for _, recipe in pairs(farm.recipes) do
-				recipes[recipe.recipe_name] = true
-				output[recipe.recipe_name] = recipe.crop_output
-			end
-			if recipes[silo.get_recipe().name] == true then
-				local posx = -11
-				local posy = -11
-				repeat
-					if not surface.find_entity(farm.crop, {position.x + posx, (position.y - 15) + posy}) then
-						surface.create_entity{
-							name = farm.crop,
-							position = {position.x + posx, (position.y - 15) + posy},
-							amount = output[silo.get_recipe().name]
-						}
-					else
-						local ore = surface.find_entity(farm.crop, {position.x + posx, (position.y - 15) + posy})
-						ore.amount = ore.amount + output[silo.get_recipe().name]
-					end
-					posx = posx + 1
-					if posx == 12 then
-						posx = -11
-						posy = posy + 1
-					end
-				until posy == 12
-			end
+	local replicator = next(event.rocket.get_inventory(defines.inventory.rocket).get_contents())
+	if not replicator then return end
+	local farm = farms[replicator]
+	if not farm then return end
+	
+	local output
+	local recipe_name = silo.get_recipe().name
+	for _, recipe in pairs(farm.recipes) do
+		if recipe.recipe_name == recipe_name then
+			output = recipe.crop_output
 			break
+		end
+	end
+	if not output then return end
+
+	for x = -11, 11 do
+		for y = -11, 11 do
+			local ore_location = {position.x + x, position.y + y}
+			if not surface.get_tile(ore_location).collides_with('resource-layer') then
+				local ore = surface.find_entity(farm.crop, ore_location)
+
+				if ore then
+					ore.amount = ore.amount + output
+				else
+					surface.create_entity{
+						name = farm.crop,
+						position = ore_location,
+						amount = output,
+						force = 'neutral'
+					}
+				end
+			end
 		end
 	end
 
 	for _, harvester in pairs(surface.find_entities_filtered{
-		area = {{position.x - 11, (position.y - 15) - 11}, {position.x + 11, (position.y - 15) + 11}},
-		name = {'harvester', 'collector'}
+		area = {{position.x - 12, position.y - 12}, {position.x + 12, position.y + 12}},
+		name = {'harvester', 'collector', 'collector-mk02', 'collector-mk03', 'collector-mk04'}
 	}) do
 		harvester.update_connections()
 		if harvester.get_control_behavior() or next(harvester.circuit_connected_entities.red) or next(harvester.circuit_connected_entities.green) then

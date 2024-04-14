@@ -12,7 +12,7 @@ if data and not yafc_turd_integration then
         local amount = recipe.results[1].amount
         recipe.results = {
             {type = 'item', name = 'kicalk-dry', amount = math.floor(amount / 2)},
-            {type = 'item', name = 'kicalk', amount = math.floor(amount * 0.75)},
+            {type = 'item', name = 'kicalk', amount = math.ceil(amount * 0.35)},
         }
         recipe.main_product = 'kicalk-dry'
         recipe.energy_required = math.ceil(recipe.energy_required * 0.8)

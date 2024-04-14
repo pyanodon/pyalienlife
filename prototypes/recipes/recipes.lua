@@ -1705,7 +1705,6 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'earth-generic-sample', amount = 5},
         {type = 'item', name = 'titanium-plate', amount = 100},
         --{type = 'item', name = 'metallic-glass', amount = 2},
         {type = 'item', name = 'biofilm', amount = 20},
