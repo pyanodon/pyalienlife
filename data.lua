@@ -898,13 +898,3 @@ for i, item in pairs(bio_list) do
         FUN.add_to_description(type, prototype, {'item-description.compost-amount', math.floor(item.biomass_amount / item.item_amount * 10) / 10})
     end
 end
-
-data:extend({
-    {
-        type = 'custom-input',
-        name = 'caravan-organizer',
-        key_sequence = 'CONTROL + SHIFT + C',
-    }
-})
-
-

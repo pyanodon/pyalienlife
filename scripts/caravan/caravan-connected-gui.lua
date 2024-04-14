@@ -42,22 +42,13 @@ Caravan.build_gui_connected = function(player, entity, anchor)
     main_frame.style.vertically_stretchable = true
     main_frame.tags = {unit_number = entity.unit_number}
 
-    local content_frame = main_frame.add{type = 'frame', direction = 'vertical', style = 'inside_shallow_frame_with_padding'}
-    content_frame.style.vertically_stretchable = true
-    local content_flow = content_frame.add{type = 'flow', direction = 'vertical'}
-    content_flow.style.vertical_spacing = 8
-    content_flow.style.margin = {-4, 0, -4, 0}
-    content_flow.style.vertical_align = 'center'
-    local scroll_pane = content_flow.add{
-        type = 'scroll-pane',
-    }
-    local table = scroll_pane.add{
-        type = 'table',
-        column_count = 2
-    }
+    local scroll_pane = main_frame.add{type = 'scroll-pane'}
+    scroll_pane.style.top_margin = -6
+    
     for key, caravan_data in pairs(global.caravans) do
         if has_schedule(caravan_data, entity) then
-            Caravan.add_gui_row(caravan_data, key, table)
+            scroll_pane.add{type = 'empty-widget'}.style.height = 3
+            Caravan.add_gui_row(caravan_data, key, scroll_pane)
         end
     end
 end

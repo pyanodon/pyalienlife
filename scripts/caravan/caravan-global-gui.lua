@@ -1,32 +1,5 @@
 require 'caravan-gui-shared'
 
-local function add_titlebar(gui, caption)
-    local titlebar = gui.add{type = 'flow'}
-    titlebar.drag_target = gui
-    titlebar.add{
-        type = 'label',
-        style = 'frame_title',
-        caption = caption,
-        ignored_by_interaction = true
-    }
-    local filler = titlebar.add{
-        type = 'empty-widget',
-        style = 'draggable_space',
-        ignored_by_interaction = true
-    }
-    filler.style.height = 24
-    filler.style.horizontally_stretchable = true
-    titlebar.add{
-        type = 'sprite-button',
-        name = 'py_close_global_caravan_gui',
-        style = 'frame_action_button',
-        sprite = 'utility/close_white',
-        hovered_sprite = 'utility/close_black',
-        clicked_sprite = 'utility/close_black',
-        tooltip = {'gui.close-instruction'}
-    }
-end
-
 function Caravan.has_any_caravan_at_all()
 	for _, caravan in pairs(global.caravans) do
 		if Caravan.validity_check(caravan) then return true end
@@ -34,41 +7,12 @@ function Caravan.has_any_caravan_at_all()
 	return false
 end
 
-local function instantiate_main_frame(player)
-    player.opened = nil
-    local main_frame = player.gui.screen.add{type = 'frame', name = 'py_global_caravan_gui', direction = 'vertical'}
-    add_titlebar(main_frame, {'caravan-global-gui.caption'}, 'click_close_global_gui')
-    main_frame.style.width = 336
-    main_frame.style.minimal_height = 710
-    main_frame.auto_center = true
-    player.opened = main_frame
-    return main_frame
-end
-
-Caravan.events.on_open_global_gui = function(event)
-    local player = game.get_player(event.player_index)
-    if player.gui.screen.py_global_caravan_gui then
-        player.gui.screen.py_global_caravan_gui.destroy()
-        return
-    end
-    local main_frame = instantiate_main_frame(player)
-    local content_frame = main_frame.add{
-        type = 'frame',
-        direction = 'vertical',
-        style = 'inside_shallow_frame_with_padding'
-    }
-    content_frame.style.vertically_stretchable = true
-    local content_flow = content_frame.add{type = 'flow', direction = 'vertical'}
-    content_flow.style.vertical_spacing = 8
-    content_flow.style.margin = {-4, 0, -4, 0}
-    content_flow.style.vertical_align = 'center'
-
-    local scroll_pane = content_flow.add{type = 'scroll-pane'}
+local function create_gui(gui, player)
     if not Caravan.has_any_caravan_at_all() then
-        scroll_pane.add{type = 'label', caption = {'caravan-global-gui.empty'}}
+        gui.add{type = 'label', caption = {'caravan-global-gui.empty'}}
         return
     end
-    local table = scroll_pane.add{
+    local table = gui.add{
         type = 'table',
         column_count = 2
     }
@@ -89,6 +33,6 @@ gui_events[defines.events.on_gui_click]['py_click_caravan_.'] = function(event)
     end
 end
 
-gui_events[defines.events.on_gui_click]['py_close_global_caravan_gui'] = function(event)
-    event.element.parent.parent.destroy()
-end
+remote.add_interface('pywiki_caravan_manager', {
+	create_gui = create_gui
+})
