@@ -107,10 +107,24 @@ function Biofluid.find_heat_connections(entity)
 	return connections
 end
 
+function Biofluid.are_two_undergrounds_connected(first, second)
+	if first.direction == defines.direction.north or first.direction == defines.direction.south then
+		if first.position.y > second.position.y then
+			first, second = second, first
+		end
+		return first.direction == defines.direction.north and second.direction == defines.direction.south
+	else
+		if first.position.x > second.position.x then
+			first, second = second, first
+		end
+		return first.direction == defines.direction.west and second.direction == defines.direction.east
+	end
+end
+
 function Biofluid.find_underground_neighbour(entity)
 	local neighbor
 	for _, neighbour in pairs(entity.neighbours[1]) do
-		if neighbour.type == TO_GROUND and Biofluid.connectable[neighbour.name] then
+		if neighbour.type == TO_GROUND and Biofluid.connectable[neighbour.name] and Biofluid.are_two_undergrounds_connected(entity, neighbour) then
 			neighbor = neighbour
 			break
 		end
@@ -152,7 +166,29 @@ function Biofluid.find_nearby_pipes(entity, connections)
 end
 
 -- CONSTRUCTIVE
-function Biofluid.built_pipe(entity, update_graphics)
+function Biofluid.built_pipe(entity)
+	if entity.type == TO_GROUND then
+		-- edge case: if a pipe-to-ground is built that seperates two existing pipe-to-grounds then we need to split the existing network
+		local neighbor = Biofluid.find_underground_neighbour(entity)
+		if neighbor then
+			local previous_position = entity.position
+			entity.teleport({previous_position.x - 5, previous_position.y - 5}) -- just get it out of the way so we can see what it was previously connected to
+			local previous_neighbor = Biofluid.find_underground_neighbour(neighbor.entity)
+			entity.teleport(previous_position)
+			if previous_neighbor and previous_neighbor.entity ~= entity and previous_neighbor.entity.name == neighbor.entity.name then
+				local network_positions = Biofluid.network_positions(entity.surface_index)
+				game.print('Splitting network')
+				rendering.draw_circle{color = {r = 1, g = 0, b = 0}, radius = 0.5, width = 1, filled = false, target = neighbor.entity.position, surface = entity.surface, time_to_live = 60}
+				rendering.draw_circle{color = {r = 1, g = 0, b = 0}, radius = 0.5, width = 1, filled = false, target = previous_neighbor.entity.position, surface = entity.surface, time_to_live = 60}
+				Biofluid.split_network(previous_neighbor.network_id, network_positions)
+			end
+		end
+	end
+
+	Biofluid.update_pipe(entity, true)
+end
+
+function Biofluid.update_pipe(entity, update_graphics)
 	local connections = Biofluid.find_heat_connections(entity)
 	if #connections == 0 then error() end
 	local network_positions = Biofluid.network_positions(entity.surface_index)
@@ -282,6 +318,11 @@ function Biofluid.add_to_network(network_id, entity, connections)
 	local network = global.biofluid_networks[network_id]
 	local network_positions = Biofluid.network_positions(entity.surface_index)
 
+	if not network or not network_positions then
+		game.print('ERROR: Attempt to add entity to non-existant biofluid network. ' .. network_id .. '. Please report this bug on our github.')
+		return
+	end
+
 	for _, connection in pairs(connections) do
 		local x, y = connection.x, connection.y
 		network_positions[x][y].network_id = network_id
@@ -345,6 +386,16 @@ function Biofluid.destroyed_pipe(entity)
 		Biofluid.split_network(network_id, network_positions)
 	end
 
+	if entity.type == TO_GROUND then -- edge case: we destroyed an underground pipe in the middle of two existing underground pipes
+		local neighbor = Biofluid.find_underground_neighbour(entity)
+		local position = entity.position
+		entity.teleport({position.x + 5, position.y + 5}) -- just get it out of the way so we can see what it will be connected to after the teleport
+		if neighbor then
+			Biofluid.update_pipe(neighbor.entity, false)
+		end
+		entity.teleport(position)
+	end
+
 	for _, pipe in pairs(nearby_pipes) do
 		Biofluid.update_graphics(pipe.entity)
 	end
@@ -367,7 +418,7 @@ function Biofluid.split_network(network_id, network_positions)
 		end
 	end
 
-	for _, entity in pairs(entities) do Biofluid.built_pipe(entity, false) end
+	for _, entity in pairs(entities) do Biofluid.update_pipe(entity, false) end
 end
 
 function Biofluid.delete_network(network_id)
@@ -409,5 +460,5 @@ function Biofluid.rotated_pipe(entity, previous_direction)
 	entity.direction = previous_direction
 	Biofluid.destroyed_pipe(entity)
 	entity.direction = new_direction
-	Biofluid.built_pipe(entity, true)
+	Biofluid.built_pipe(entity)
 end

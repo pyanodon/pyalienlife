@@ -8,7 +8,7 @@ Date: ?
     - Guano explosives can now be buffed by productivity to match the vanilla recipe. (https://github.com/pyanodon/pybugreports/issues/458)
     - Fixed that subcritical-water-01 was not localised when pyAE is missing. (https://github.com/pyanodon/pybugreports/issues/445)
     - Fixed that the alpha dingrits from dingrit turd path 1 could not be used as modules inside the reproductive complex. (https://github.com/pyanodon/pybugreports/issues/452)
-    - Fixed several bugs involved with biofluid vessel underground pipes (https://github.com/pyanodon/pybugreports/issues/437)
+    - Fixed several bugs involved with biofluid vessel underground pipes (https://github.com/pyanodon/pybugreports/issues/437) (https://github.com/pyanodon/pybugreports/issues/409)
   Energy drinks:
     - The energy drink now gives you a linearly decreasing speed instead of a linearly increasing speed. Should be much easier to control.
     - Removed damage per second from energy drinks.
