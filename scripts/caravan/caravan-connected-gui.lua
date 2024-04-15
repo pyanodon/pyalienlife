@@ -32,14 +32,20 @@ local function instantiate_main_frame(gui, anchor)
     }
 end
 
+function Caravan.has_any_caravan(entity)
+    for _, caravan_data in pairs(global.caravans) do
+        if has_schedule(caravan_data, entity) then return true end
+    end
+    return false
+end
+
 --anchor is optional
 Caravan.build_gui_connected = function(player, entity, anchor)
     if not entity then return end
     if not Caravan.has_any_caravan(entity) then return end
     local main_frame = instantiate_main_frame(player.gui, anchor)
     if not main_frame then return end
-    main_frame.style.horizontally_stretchable = true
-    main_frame.style.vertically_stretchable = true
+    main_frame.style.minimal_width = 300
     main_frame.tags = {unit_number = entity.unit_number}
 
     local scroll_pane = main_frame.add{type = 'scroll-pane'}

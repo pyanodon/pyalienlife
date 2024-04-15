@@ -137,12 +137,17 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 	gui.add{type = 'button', name = 'py_add_outpost', style = 'train_schedule_add_station_button', caption = {'caravan-gui.add-outpost'}}
 end
 
-function Caravan.build_gui(player, entity)
+function Caravan.build_gui(player, entity, from_remote_manager)
 	local caravan_data = global.caravans[entity.unit_number]
 	local prototype = prototypes[entity.name]
 	
 	local main_frame
-	if prototype.opens_player_inventory then
+	if from_remote_manager then
+		player.opened = nil
+		main_frame = player.gui.screen.add{type = 'frame', name = 'caravan_gui', caption = Caravan.name_fallback(caravan_data), direction = 'vertical'}
+		main_frame.auto_center = true
+		player.opened = main_frame
+	else
 		player.opened = caravan_data.inventory
 		local flow = player.gui.relative.add {
 			type = 'flow', name = 'caravan_flow',
@@ -154,13 +159,8 @@ function Caravan.build_gui(player, entity)
 		}
 		flow.style.horizontal_spacing = 0
 		main_frame = flow.add {
-			type = 'frame', name = 'caravan_gui', caption = entity.prototype.localised_name, direction = 'vertical',
+			type = 'frame', name = 'caravan_gui', caption = Caravan.name_fallback(caravan_data), direction = 'vertical',
 		}
-	else
-		-- I assume this is unused? when or how is this reachable?...
-		main_frame = player.gui.screen.add{type = 'frame', name = 'caravan_gui', caption = entity.prototype.localised_name, direction = 'vertical'}
-		main_frame.auto_center = true
-		player.opened = main_frame
 	end
 	main_frame.style.width = 436
 	main_frame.style.minimal_height = 710

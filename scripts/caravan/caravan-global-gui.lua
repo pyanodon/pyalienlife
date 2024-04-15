@@ -9,27 +9,22 @@ end
 
 local function create_gui(gui, player)
     if not Caravan.has_any_caravan_at_all() then
-        gui.add{type = 'label', caption = {'caravan-global-gui.empty'}}
+        gui = gui.add{type = 'flow', direction = 'vertical'}
+        gui.style.horizontal_align = 'center'
+        gui.style.horizontally_stretchable = true
+        gui.add{type = 'label', caption = ''}
+        gui.add{type = 'label', caption = {'caravan-global-gui.empty'}}.style.single_line = false
+        gui.add{type = 'label', caption = {'caravan-global-gui.empty-2'}}.style.single_line = false
         return
     end
     local table = gui.add{
         type = 'table',
-        column_count = 2
+        column_count = 4
     }
     for key, caravan_data in pairs(global.caravans) do
-        if Caravan.validity_check(caravan_data) then
+        if Caravan.validity_check(caravan_data) and caravan_data.entity.force_index == player.force_index then
             Caravan.add_gui_row(caravan_data, key, table)
         end
-    end
-end
-
-gui_events[defines.events.on_gui_click]['py_click_caravan_.'] = function(event)
-    local player = game.get_player(event.player_index)
-    local element = event.element
-    local tags = element.tags
-    local caravan_data = global.caravans[tags.unit_number]
-    if Caravan.validity_check(caravan_data) then
-        Caravan.build_gui(player, caravan_data.entity)
     end
 end
 
