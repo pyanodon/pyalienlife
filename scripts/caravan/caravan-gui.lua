@@ -172,7 +172,7 @@ function Caravan.build_gui(player, entity, from_remote_manager)
     local title = caption_flow.add{
         name = 'title',
         type = 'label',
-        caption = Caravan.name_fallback(caravan_data),
+        caption = Caravan.get_name(caravan_data),
         style = 'frame_title',
         ignored_by_interaction = true
     }

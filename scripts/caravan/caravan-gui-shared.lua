@@ -105,14 +105,6 @@ function Caravan.get_inventory_tooltip(caravan_data)
     return has_anything, {'', current_action, fuel_inventory_contents, inventory_contents}
 end
 
-function Caravan.name_fallback(caravan_data)
-    local name = caravan_data.name
-    if name and name ~= '' then return name end
-    local entity = caravan_data.entity
-    if entity and entity.valid then return entity.prototype.localised_name end
-    return ''
-end
-
 function Caravan.add_gui_row(caravan_data, key, table)
     local entity = caravan_data.entity
     local prototype = prototypes[entity.name]
@@ -128,7 +120,7 @@ function Caravan.add_gui_row(caravan_data, key, table)
     local title = caption_flow.add{
         name = 'title',
         type = 'label',
-        caption = Caravan.name_fallback(caravan_data),
+        caption = Caravan.get_name(caravan_data),
         style = 'frame_title',
         ignored_by_interaction = true
     }
@@ -247,7 +239,7 @@ local function title_edit_mode(caption_flow, caravan_data)
     local textfield = caption_flow.add{
         type = 'textfield',
         name = 'py_rename_caravan_textfield',
-        text = caravan_data.name or '',
+        text = Caravan.get_name(caravan_data),
         tags = {index = caravan_data.entity.unit_number},
         index = index
     }
@@ -273,7 +265,7 @@ local function title_display_mode(caption_flow, caravan_data)
     local title = caption_flow.add{
         type = 'label',
         name = 'title',
-        caption = Caravan.name_fallback(caravan_data),
+        caption = Caravan.get_name(caravan_data),
         style = 'frame_title',
         ignored_by_interaction = true,
         index = index
