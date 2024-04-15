@@ -117,15 +117,13 @@ function Caravan.add_gui_row(caravan_data, key, table)
     local entity = caravan_data.entity
     local prototype = prototypes[entity.name]
 
-    table = table.add{type = 'frame', style = 'inside_shallow_frame_with_padding'}
-    table.style.maximal_width = 300
+    table = table.add{type = 'frame', style = 'inside_shallow_frame_with_padding', direction = 'vertical'}
 
-    local right_flow = table.add{type = 'flow', direction = 'vertical'}
+    local button_flow = table.add{type = 'flow', direction = 'horizontal'}
+    button_flow.style.vertical_align = 'top'
+    button_flow.style.height = 30
 
-    local status_flow = right_flow.add{type = 'flow', direction = 'horizontal'}
-    status_flow.style.vertical_align = 'top'
-
-    local caption_flow = status_flow.add{type = 'flow', direction = 'horizontal'}
+    local caption_flow = button_flow.add{type = 'flow', direction = 'horizontal'}
 
     local title = caption_flow.add{
         name = 'title',
@@ -134,7 +132,7 @@ function Caravan.add_gui_row(caravan_data, key, table)
         style = 'frame_title',
         ignored_by_interaction = true
     }
-    title.style.maximal_width = 120
+    title.style.maximal_width = 150
 
     local rename_button = caption_flow.add{
         type = 'sprite-button',
@@ -143,22 +141,13 @@ function Caravan.add_gui_row(caravan_data, key, table)
         sprite = 'utility/rename_icon_small_white',
         hovered_sprite = 'utility/rename_icon_small_black',
         clicked_sprite = 'utility/rename_icon_small_black',
-        tags = {unit_number = key}
+        tags = {unit_number = key, maximal_width = 150}
     }
 
-    status_flow.add{type = 'empty-widget'}.style.horizontally_stretchable = true
-
-    local status_sprite = status_flow.add{type = 'sprite'}
-    status_sprite.resize_to_sprite = false
-    status_sprite.style.size = {16, 16}
-    local status_text = status_flow.add{type = 'label'}
-    local state, img = Caravan.status_img(caravan_data)
-    status_text.caption = state
-    status_sprite.sprite = img
-    status_text.style.right_margin = 4
+    button_flow.add{type = 'empty-widget'}.style.horizontally_stretchable = true
 
     local has_anything, tooltip = Caravan.get_inventory_tooltip(caravan_data)
-    local view_inventory_button = status_flow.add{
+    local view_inventory_button = button_flow.add{
         type = 'sprite-button',
         name = 'py_view_inventory_button',
         style = 'frame_action_button',
@@ -170,7 +159,7 @@ function Caravan.add_gui_row(caravan_data, key, table)
     }
     view_inventory_button.visible = has_anything
 
-    local open_caravan_button = status_flow.add{
+    local open_caravan_button = button_flow.add{
         type = 'sprite-button',
         name = 'py_click_caravan',
         style = 'frame_action_button',
@@ -181,7 +170,7 @@ function Caravan.add_gui_row(caravan_data, key, table)
         tags = {unit_number = caravan_data.unit_number}
     }
 
-    local open_map_button = status_flow.add{
+    local open_map_button = button_flow.add{
         type = 'sprite-button',
         name = 'py_open_map_button',
         style = 'frame_action_button',
@@ -198,12 +187,26 @@ function Caravan.add_gui_row(caravan_data, key, table)
         button.style.bottom_margin = -4
     end
 
-    local camera_frame = right_flow.add{type = 'frame', name = 'camera_frame', style = 'py_nice_frame'}
+    local camera_frame = table.add{type = 'frame', name = 'camera_frame', style = 'py_nice_frame'}
 	local camera = camera_frame.add{type = 'camera', name = 'camera', style = 'py_caravan_camera', position = entity.position, surface_index = entity.surface.index}
 	camera.entity = entity
 	camera.visible = true
 	camera.style.height = 155
-	camera.zoom = prototype.camera_zoom or 1
+	camera.zoom = (prototype.camera_zoom or 1) / 2
+
+    local status_flow = table.add{type = 'flow', direction = 'horizontal'}
+    status_flow.style.height = 0
+    status_flow.style.top_margin = -26
+    status_flow.style.bottom_margin = 6
+    status_flow.style.left_margin = 5
+    local status_sprite = status_flow.add{type = 'sprite'}
+    status_sprite.resize_to_sprite = false
+    status_sprite.style.size = {16, 16}
+    local status_text = status_flow.add{type = 'label'}
+    local state, img = Caravan.status_img(caravan_data)
+    status_text.caption = {'', '[font=default-bold]', state, '[/font]'}
+    status_sprite.sprite = img
+    status_text.style.right_margin = 4
 end
 
 gui_events[defines.events.on_gui_click]['py_click_caravan'] = function(event)
@@ -248,14 +251,18 @@ local function title_edit_mode(caption_flow, caravan_data)
         tags = {index = caravan_data.entity.unit_number},
         index = index
     }
-    textfield.style.horizontally_stretchable = true
     textfield.focus()
     textfield.select_all()
+    textfield.style.top_margin = -5
+    textfield.style.maximal_width = 150
     local button = caption_flow.py_rename_caravan_button
     button.style = 'item_and_count_select_confirm'
     button.sprite = 'utility/check_mark'
     button.hovered_sprite = 'utility/check_mark'
     button.clicked_sprite = 'utility/check_mark'
+    button.style.size = {26, 26}
+    button.style.top_margin = -2
+    button.style.bottom_margin = -4
 end
 
 local function title_display_mode(caption_flow, caravan_data)
@@ -271,12 +278,13 @@ local function title_display_mode(caption_flow, caravan_data)
         ignored_by_interaction = true,
         index = index
     }
-    title.style.maximal_width = 120
     local button = caption_flow.py_rename_caravan_button
     button.style = 'frame_action_button'
     button.sprite = 'utility/rename_icon_small_white'
     button.hovered_sprite = 'utility/rename_icon_small_black'
     button.clicked_sprite = 'utility/rename_icon_small_black'
+
+    title.style.maximal_width = button.tags.maximal_width or error('No maximal width')
 end
 
 gui_events[defines.events.on_gui_click]['py_rename_caravan_button'] = function(event)

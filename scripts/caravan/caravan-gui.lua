@@ -144,7 +144,7 @@ function Caravan.build_gui(player, entity, from_remote_manager)
 	local main_frame
 	if from_remote_manager then
 		player.opened = nil
-		main_frame = player.gui.screen.add{type = 'frame', name = 'caravan_gui', caption = Caravan.name_fallback(caravan_data), direction = 'vertical'}
+		main_frame = player.gui.screen.add{type = 'frame', name = 'caravan_gui', direction = 'vertical'}
 		main_frame.auto_center = true
 		player.opened = main_frame
 	else
@@ -159,13 +159,39 @@ function Caravan.build_gui(player, entity, from_remote_manager)
 		}
 		flow.style.horizontal_spacing = 0
 		main_frame = flow.add {
-			type = 'frame', name = 'caravan_gui', caption = Caravan.name_fallback(caravan_data), direction = 'vertical',
+			type = 'frame', name = 'caravan_gui', direction = 'vertical'
 		}
 	end
 	main_frame.style.width = 436
 	main_frame.style.minimal_height = 710
 	main_frame.style.margin = 0
 	main_frame.tags = {unit_number = entity.unit_number}
+
+	local caption_flow = main_frame.add{type = 'flow', direction = 'horizontal'}
+
+    local title = caption_flow.add{
+        name = 'title',
+        type = 'label',
+        caption = Caravan.name_fallback(caravan_data),
+        style = 'frame_title',
+        ignored_by_interaction = true
+    }
+    title.style.maximal_width = 300
+
+    local rename_button = caption_flow.add{
+        type = 'sprite-button',
+        name = 'py_rename_caravan_button',
+        style = 'frame_action_button',
+        sprite = 'utility/rename_icon_small_white',
+        hovered_sprite = 'utility/rename_icon_small_black',
+        clicked_sprite = 'utility/rename_icon_small_black',
+        tags = {unit_number = entity.unit_number, maximal_width = 300}
+    }
+
+	local caption_spacing = caption_flow.add{type = 'empty-widget', style = 'draggable_space_header', ignored_by_interaction = true}
+    caption_spacing.style.height = 24
+    caption_spacing.style.right_margin = 4
+    caption_spacing.style.horizontally_stretchable = true
 
 	local content_frame = main_frame.add{type = 'frame', name = 'content_frame', direction = 'vertical', style = 'inside_shallow_frame_with_padding'}
 	content_frame.style.vertically_stretchable = true
