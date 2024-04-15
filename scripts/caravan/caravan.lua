@@ -2,6 +2,8 @@ Caravan = {}
 Caravan.events = {}
 
 require 'caravan-gui'
+require 'caravan-global-gui'
+require 'caravan-connected-gui'
 local prototypes = require 'caravan-prototypes'
 local Position = require('__stdlib__/stdlib/area/position')
 local Table = require('__stdlib__/stdlib/utils/table')
@@ -97,6 +99,10 @@ Caravan.events.used_capsule = function(event)
 		}
 	else return end
 	Caravan.build_gui(player, caravan_data.entity)
+end
+
+Caravan.is_automated = function(caravan_data)
+	return caravan_data.schedule_id and caravan_data.schedule_id >= 0
 end
 
 local function eat(caravan_data)
