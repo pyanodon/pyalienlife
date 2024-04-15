@@ -146,8 +146,8 @@ function Biofluid.find_nearby_pipes(entity, connections)
 	local network_ids = {}
 
 	for _, connection in pairs(connections) do
-		local network_position = Biofluid.is_looking_at_us(entity, connection, network_positions)
-		if network_position then
+		local network_position = Biofluid.is_looking_at_us(entity, connection)
+		if network_position and network_position.network_id then
 			nearby_pipes[#nearby_pipes+1] = network_position
 			network_ids[network_position.network_id] = true
 		end
@@ -156,7 +156,7 @@ function Biofluid.find_nearby_pipes(entity, connections)
 
 	if entity.type == TO_GROUND then
 		local network_position = Biofluid.find_underground_neighbour(entity)
-		if network_position then
+		if network_position and network_position.network_id then
 			nearby_pipes[#nearby_pipes+1] = network_position
 			network_ids[network_position.network_id] = true
 		end
@@ -230,11 +230,9 @@ function Biofluid.update_pipe(entity, update_graphics)
 	return network_id
 end
 
-function Biofluid.is_looking_at_us(entity, connection, network_positions)
+function Biofluid.is_looking_at_us(entity, connection)
 	if not entity.valid then return nil end
-	if not network_positions then
-		network_positions = Biofluid.network_positions(entity.surface_index)
-	end
+	local network_positions = Biofluid.network_positions(entity.surface_index)
 	local facing_x, facing_y = connection.facing_x, connection.facing_y
 	local network_position = (network_positions[facing_x] or {})[facing_y]
 	local x, y = connection.x, connection.y

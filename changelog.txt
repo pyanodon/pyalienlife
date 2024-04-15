@@ -1,6 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.27
+Date: 2024-4-??
+  Fixes:
+    - Trees now give 1.5 logs when broken instead of 2.
+    - Dead trees now give 1 logs instead of 0.5.
+    - Trees now give sap with a 10% chance instead of a 5% chance.
+    - Updated pyPP cachefiles.
+    - Fixed a crash with biofluid pipes (https://github.com/pyanodon/pybugreports/issues/409)
+---------------------------------------------------------------------------------------------------
 Version: 2.1.26
-Date: ?
+Date: 2024-4-13
   Fixes:
     - Fixed that you could generate infinite landfill by spam placing and replacing the smart farm
     - Fixed that the collector check area introduced in 2.1.25 was not big enough (https://github.com/pyanodon/pybugreports/issues/461)
@@ -9,7 +18,8 @@ Date: ?
     - Fixed that subcritical-water-01 was not localised when pyAE is missing. (https://github.com/pyanodon/pybugreports/issues/445)
     - Fixed that the alpha dingrits from dingrit turd path 1 could not be used as modules inside the reproductive complex. (https://github.com/pyanodon/pybugreports/issues/452)
     - Fixed several bugs involved with biofluid vessel underground pipes (https://github.com/pyanodon/pybugreports/issues/437) (https://github.com/pyanodon/pybugreports/issues/409)
-    - Trees now gives 2 logs when broken instead of 1.
+    - Trees now give 2 logs when broken instead of 1.
+    - Fixed that cages were not properly returned for mukmoux, auog, ulric, zungror, & arthurian recipes.
   Energy drinks:
     - The energy drink now gives you a linearly decreasing speed instead of a linearly increasing speed. Should be much easier to control.
     - Removed damage per second from energy drinks.

@@ -1,40 +1,42 @@
-local mine_results_1 = {
-    type = 'item',
-    name = 'saps',
-    amount = 1,
-    probability = 0.05
-}
-
---log(serpent.block(data.raw.tree['temperate-tree'].minable.results))
 for _, tree in pairs(data.raw.tree) do
-    if tree.minable and tree.minable.results and tree.minable.results[1] and tree.minable.results[1].name == 'wood' then
-        tree.minable.results[1].name = 'log'
-        tree.minable.results[1].amount = tree.minable.results[1].amount / 4.0
-
-    elseif tree.minable ~= nil and tree.minable.result == 'wood' then
+    if tree.minable and tree.minable.result then
+        tree.minable.results = {{
+            type = 'item',
+            name = tree.minable.result,
+            amount = tree.minable.count
+        }}
         tree.minable.result = nil
-        tree.minable.results =
-            {
-                {
-                    type = 'item',
-                    name = 'log',
-                    amount = math.ceil(tree.minable.count / 2.0),
-                },
-            }
     end
 
-    if tree.minable ~= nil then
-        if tree.minable.result ~= nil then
-            --do nothing for now as i dont think the 'trees' are the kind we want giving sap
-        elseif tree.minable.results[1].amount >= 1 then -- no sap from dead trees
-            table.insert(tree.minable.results, mine_results_1)
-        else
-            tree.minable.results[1].probability = tree.minable.results[1].amount
-            tree.minable.results[1].amount = 1
+    if tree.minable and tree.minable.results then
+        for _, result in pairs(tree.minable.results) do
+            if result[1] and result[2] then
+                result.name = result[1]
+                result.amount = result[2]
+                result[1] = nil
+                result[2] = nil
+            end
+
+            if result.name == 'wood' then
+                result.name = 'log'
+                if string.match(tree.name, 'dry') or string.match(tree.name, 'dead') then -- dead trees should not give sap
+                    result.amount = 1
+                else
+                    result.amount = nil
+                    result.amount_min = 1
+                    result.amount_max = 2
+                    table.insert(tree.minable.results, {
+                        type = 'item',
+                        name = 'saps',
+                        amount = 1,
+                        probability = 0.1
+                    })
+                end
+                break
+            end
         end
     end
 end
---log(serpent.block(data.raw.tree['temperate-tree'].minable.results))
 
 RECIPE {
     type = 'recipe',
