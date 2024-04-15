@@ -1,16 +1,19 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.27
-Date: 2024-4-??
-  Fixes:
+Date: 2024-4-15
+  Changes:
     - Trees now give 1.5 logs when broken instead of 2.
     - Dead trees now give 1 logs instead of 0.5.
     - Trees now give sap with a 10% chance instead of a 5% chance.
     - Updated pyPP cachefiles.
     - Fixed a crash with biofluid pipes (https://github.com/pyanodon/pybugreports/issues/409)
+    - Fixed that vonix raising recipes were returning cages.
+    - Added the ability to rename caravans.
+    - Added a caravan manager GUI. See the pyCodex for more information. Huge thank-you to TheGoesen for the awesome PR. (https://github.com/pyanodon/pyalienlife/pull/222)
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.26
 Date: 2024-4-13
-  Fixes:
+  Changes:
     - Fixed that you could generate infinite landfill by spam placing and replacing the smart farm
     - Fixed that the collector check area introduced in 2.1.25 was not big enough (https://github.com/pyanodon/pybugreports/issues/461)
     - Smart farms now properly clean up any wood fences when they are destroyed.
@@ -32,12 +35,12 @@ Date: 2024-4-13
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.25
 Date: 2024-3-25
-  Fixes:
+  Changes:
     - Fixed that collector mk02-mk04 were not getting reset properly in the smart farm
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.24
 Date: 2024-3-24
-  Fixes:
+  Changes:
     - Buffed simik scale -> uranium ore atomizer recipe by 5X
     - Fixed typos in arqad turd descriptions
     - Added nukes to nuclear carvan crafting recipe. Removed explosive rockets. (only applies when pyAE is installed)
@@ -58,12 +61,12 @@ Date: 2024-3-24
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.23
 Date: 2024-3-14
-  Fixes:
+  Changes:
     - Fixed that fish oil to tin recipe was being overwritten by fish to tin recipe
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.22
 Date: 2024-3-13
-  Fixes:
+  Changes:
     - Added a migration to clean any remaining bugged bioport graphics
     - Fixed misaligned pipe connections for korlex turd path 2 (https://github.com/pyanodon/pybugreports/issues/439)
     - added nano machine recipes and empty neuromorphic chip to the prod module list
@@ -73,25 +76,25 @@ Date: 2024-3-13
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.21
 Date: 2024-2-2
-  Fixes:
+  Changes:
     - Fixed ulric man light cone starting from the wrong location. (https://github.com/pyanodon/pybugreports/issues/385)
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.20
 Date: 2024-2-2
-  Fixes:
+  Changes:
     - Prevented biofluid bots from being affected by belts. https://github.com/pyanodon/pybugreports/issues/392
     - Fixed crash with mounts. https://github.com/pyanodon/pybugreports/issues/389
     - Allowed you to convert old unshiny units created from creature chamber turd path 3.
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.19
 Date: 2024-2-1
-  Fixes:
+  Changes:
     - fixed a typo on the gene lab upgrade (thanks, Arch)
     - moved limestone boring to chemical science as a peace offering to boldviking to stop breaking things
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.18
 Date: 2014-1-24
-  Fixes:
+  Changes:
     - fixed that smelter mk02 had an unneeded requirement on py sci 3. shut up it counts as a bug fix
     - fixed a crash when entering the editor mode while the biopyanoport gui was open
     - fixed that the biopyanoport could leave broken graphics after being picked up in certian cases
@@ -298,7 +301,7 @@ Date: 2023-7-25
     - zoology tech now adds +20 logistic trash slots.
     - fixed extreme high fuel buffer size. reduce stack size of gastrocapacitor 50->10. aerial caravan fuel size 4->2. standard & nuclear caravan fuel size 2->1
     - reduce stack size of workers food mk1, mk2 from 50->10
-  Bugfixes:
+  BugChanges:
     - fixed an ocula crash with the trainsaver mod
     - fixed that the quality cottongut food was referencing moondrop in the item tooltip even though it had no moondrop in the crafting recipe
     - fixed that thikats and workodile where showing up in kill statistics
@@ -419,7 +422,7 @@ Date: 2023-1-31
     - Added compost biomass amount to some tooltips
     - Radius visualization for smart farms
     - My body is stone. My voice, fire. The earth trebmles to my very presence. I am a god in human flesh. Despair, ye mortals
-  Bugfixes:
+  BugChanges:
     - Slaughterhouse gui no longer crashes in multiplayer
     - Fixed that RC could craft without modules
     - Locale fix for zungror, dhilmos
