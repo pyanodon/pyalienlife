@@ -1,8 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.28
-Date: 2024-4-??
+Date: 2024-4-16
   Changes:
     - Fixed unknown key error in the new caravan GUI
+    - Fixed that having only 1 caravan would make the GUI way too long
+    - Improved the quick summary description button in the caravan GUI
+    - Caravans now show their inventory on their item tooltip
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.27
 Date: 2024-4-15

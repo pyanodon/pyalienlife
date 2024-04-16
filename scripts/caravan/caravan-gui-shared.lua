@@ -29,38 +29,62 @@ local function convert_to_tooltip_row(name, count)
 end
 
 function Caravan.get_inventory_tooltip(caravan_data)
-    local has_anything = false
+    local inventory = caravan_data.inventory
+    local inventory_contents = {'', '\n[img=utility/trash_white] ', {'caravan-gui.the-inventory-is-empty'}}
+    if inventory and inventory.valid then
+        local sorted_contents = {}
+        for name, count in pairs(inventory.get_contents()) do
+            sorted_contents[#sorted_contents + 1] = {name = name, count = count}
+        end
+        table.sort(sorted_contents, function(a, b) return a.count > b.count end)
+        
+        local i = 0
+        for _, item in pairs(sorted_contents) do
+            if i == 0 then inventory_contents = {''} end
+            local name, count = item.name, item.count
+            inventory_contents[#inventory_contents + 1] = convert_to_tooltip_row(name, count)
+            i = i + 1
+            if i == 10 then
+                if #sorted_contents > 10 then
+                    inventory_contents[#inventory_contents + 1] = {'', '\n[color=255,210,73]', {'caravan-gui.more-items', #sorted_contents - 10}, '[/color]'}
+                end
+                break
+            end
+        end
+    end
+    return {'', '[font=default-semibold]', inventory_contents, '[/font]'}
+end
+
+function Caravan.get_summary_tooltip(caravan_data)
     local entity = caravan_data.entity
 
     local schedule = caravan_data.schedule[caravan_data.schedule_id]
-    local current_action = ''
+    local current_action = {'caravan-gui.current-action', {'entity-status.idle'}}
     if schedule then
-        has_anything = true
         local action_id = caravan_data.action_id
         local action = schedule.actions[action_id]
-        current_action = {'', {'caravan-shared.current-action', action and action.localised_name or {'caravan-actions.traveling'}}, '\n'}
+        current_action = {'', {'caravan-gui.current-action', action and action.localised_name or {'caravan-actions.traveling'}}}
 
-        local destination = schedule.position
+        local destination
         local localised_destination_name
-        if destination then
+        local destination_entity = schedule.entity
+        if destination_entity and destination_entity.valid then
+            destination = destination_entity.position
+            localised_destination_name = {
+                'caravan-gui.entity-position',
+                destination_entity.prototype.localised_name,
+                math.floor(destination.x),
+                math.floor(destination.y)
+            }
+        elseif schedule.position then
+            destination = schedule.position
             localised_destination_name = {'caravan-gui.map-position', math.floor(destination.x), math.floor(destination.y)}
-        else
-            local destination_entity = schedule.entity
-            if destination_entity and destination_entity.valid then
-                destination = destination_entity.position
-                localised_destination_name = {
-                    'caravan-gui.entity-position',
-                    destination_entity.prototype.localised_name,
-                    math.floor(destination.x),
-                    math.floor(destination.y)
-                }
-            end
         end
         
         if localised_destination_name then
             local distance = math.sqrt((entity.position.x - destination.x) ^ 2 + (entity.position.y - destination.y) ^ 2)
             distance = math.floor(distance * 10) / 10
-            current_action[#current_action + 1] = {'caravan-shared.current-destination', distance, localised_destination_name}
+            current_action[#current_action + 1] = {'', '\n', {'caravan-gui.current-destination', distance, localised_destination_name}}
         end
     end
 
@@ -69,40 +93,13 @@ function Caravan.get_inventory_tooltip(caravan_data)
     if fuel_inventory and fuel_inventory.valid then
         local i = 0
         for name, count in pairs(fuel_inventory.get_contents()) do
-            has_anything = true
-            if i == 0 then fuel_inventory_contents[#fuel_inventory_contents + 1] = '\n' end
             fuel_inventory_contents[#fuel_inventory_contents + 1] = convert_to_tooltip_row(name, count)
             i = i + 1
             if i == 10 then break end
         end
     end
 
-    local inventory = caravan_data.inventory
-    local inventory_contents = {''}
-    if inventory and inventory.valid then
-        local sorted_contents = {}
-        for name, count in pairs(inventory.get_contents()) do
-            has_anything = true
-            sorted_contents[#sorted_contents + 1] = {name = name, count = count}
-        end
-        table.sort(sorted_contents, function(a, b) return a.count > b.count end)
-        
-        local i = 0
-        for _, item in pairs(sorted_contents) do
-            if i == 0 then inventory_contents[#inventory_contents + 1] = '\n' end
-            local name, count = item.name, item.count
-            inventory_contents[#inventory_contents + 1] = convert_to_tooltip_row(name, count)
-            i = i + 1
-            if i == 10 then
-                if #sorted_contents > 10 then
-                    inventory_contents[#inventory_contents + 1] = {'', '\n [font=default-semibold]...[/font]'}
-                end
-                break
-            end
-        end
-    end
-
-    return has_anything, {'', current_action, fuel_inventory_contents, inventory_contents}
+    return {'', '[font=default-semibold]', current_action, fuel_inventory_contents, '\n', Caravan.get_inventory_tooltip(caravan_data), '[/font]'}
 end
 
 function Caravan.add_gui_row(caravan_data, key, table)
@@ -138,7 +135,7 @@ function Caravan.add_gui_row(caravan_data, key, table)
 
     button_flow.add{type = 'empty-widget'}.style.horizontally_stretchable = true
 
-    local has_anything, tooltip = Caravan.get_inventory_tooltip(caravan_data)
+    local tooltip = Caravan.get_summary_tooltip(caravan_data)
     local view_inventory_button = button_flow.add{
         type = 'sprite-button',
         name = 'py_view_inventory_button',
@@ -149,7 +146,6 @@ function Caravan.add_gui_row(caravan_data, key, table)
         tooltip = tooltip,
         tags = {unit_number = caravan_data.unit_number}
     }
-    view_inventory_button.visible = has_anything
 
     local open_caravan_button = button_flow.add{
         type = 'sprite-button',
@@ -158,7 +154,7 @@ function Caravan.add_gui_row(caravan_data, key, table)
         sprite = 'utility/logistic_network_panel_white',
         hovered_sprite = 'utility/logistic_network_panel_black',
         clicked_sprite = 'utility/logistic_network_panel_black',
-        tooltip = {'caravan-shared.open', entity.prototype.localised_name},
+        tooltip = {'caravan-gui.open', entity.prototype.localised_name},
         tags = {unit_number = caravan_data.unit_number}
     }
 
@@ -169,7 +165,7 @@ function Caravan.add_gui_row(caravan_data, key, table)
         sprite = 'utility/search_white',
         hovered_sprite = 'utility/search_black',
         clicked_sprite = 'utility/search_black',
-        tooltip = {'caravan-shared.view-on-map'},
+        tooltip = {'caravan-gui.view-on-map'},
         tags = {unit_number = caravan_data.unit_number}
     }
 
@@ -215,9 +211,8 @@ gui_events[defines.events.on_gui_click]['py_view_inventory_button'] = function(e
     local element = event.element
     local tags = element.tags
     local caravan_data = global.caravans[tags.unit_number]
-    local has_anything, tooltip = Caravan.get_inventory_tooltip(caravan_data)
+    local tooltip = Caravan.get_summary_tooltip(caravan_data)
     element.tooltip = tooltip
-    element.visible = has_anything
 end
 
 gui_events[defines.events.on_gui_click]['py_open_map_button'] = function(event)

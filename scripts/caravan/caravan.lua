@@ -600,6 +600,7 @@ Caravan.events.on_destroyed = function(event)
 			buffer[1].custom_description = {
 				'',
 				{'caravan-gui.hello-my-name-is', Caravan.get_name(caravan_data)},
+				Caravan.get_inventory_tooltip(caravan_data),
 				'\n',
 				entity.prototype.localised_description
 			}
