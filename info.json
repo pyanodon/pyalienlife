@@ -14,8 +14,7 @@
     "pyrawores >= 1.3.0",
     "pypetroleumhandling >= 1.3.4",
     "(?) pyhightech >= 1.5.0",
-    "! pyveganism >= 0.0.1",
-    "! omnimatter_wood"
+    "! pyveganism >= 0.0.1"
   ],
   "package": {
     "ignore": [],

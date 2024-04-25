@@ -5,6 +5,7 @@ Date: 2024-4-25
     - Fixed oculas sometimes delivering too many items (https://github.com/pyanodon/pybugreports/issues/469)
     - Fixed that smart farms did not work when installed with the Alien Biomes mod. (https://github.com/pyanodon/pybugreports/issues/471)
     - Added a search bar to the caravan GUI in the pyCodex
+    - Removed the incompatibility with omnimatter wood. (https://mods.factorio.com/mod/pyalienlife/discussion/65e0119af246f66d7c5548b8)
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.28
 Date: 2024-4-16
