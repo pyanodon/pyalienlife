@@ -106,10 +106,11 @@ Smart_Farm.events.on_rocket_launched = function(event)
 	end
 	if not output then return end
 
+	local is_alien_biomes = script.active_mods['alien-biomes']
 	for x = -11, 11 do
 		for y = -11, 11 do
 			local ore_location = {position.x + x, position.y + y}
-			if not surface.get_tile(ore_location).collides_with('resource-layer') then
+			if is_alien_biomes or not surface.get_tile(ore_location).collides_with('resource-layer') then
 				local ore = surface.find_entity(farm.crop, ore_location)
 
 				if ore then
