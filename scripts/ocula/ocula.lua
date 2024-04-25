@@ -89,6 +89,15 @@ function Oculua.process_player(player)
 		if not FUN.check_for_basic_item(item) then goto continue end -- Cannot transfer blueprint books, item-with-tags, ect. Otherwise it would wipe data
 		local needed = request_slot.count - (incoming[item] or 0) - (inventory[item] or 0) - (logistic_network_incoming[item] or 0)
 		if cursor_stack and cursor_stack.valid_for_read and cursor_stack.name == item then needed = needed - cursor_stack.count end
+
+		local network = character.logistic_network
+		if network then
+			for _, construction_robot in pairs(network.construction_robots) do
+				needed = needed - construction_robot.get_item_count(item)
+				if construction_robot.name == item then needed = needed - 1 end
+			end
+		end
+
 		if needed <= 0 then goto continue end
 
 		local insertable_count = player.get_main_inventory().get_insertable_count(item)

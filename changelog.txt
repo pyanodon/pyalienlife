@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.29
+Date: ?
+  Changes:
+    - Fixed oculas sometimes delivering too many items (https://github.com/pyanodon/pybugreports/issues/469)
+---------------------------------------------------------------------------------------------------
 Version: 2.1.28
 Date: 2024-4-16
   Changes:
