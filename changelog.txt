@@ -1,9 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.29
-Date: ?
+Date: 2024-4-25
   Changes:
     - Fixed oculas sometimes delivering too many items (https://github.com/pyanodon/pybugreports/issues/469)
     - Fixed that smart farms did not work when installed with the Alien Biomes mod. (https://github.com/pyanodon/pybugreports/issues/471)
+    - Added a search bar to the caravan GUI in the pyCodex
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.28
 Date: 2024-4-16
