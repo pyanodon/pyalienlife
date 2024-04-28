@@ -51,7 +51,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'fawogae-mk02', amount = 2, },
-        {type = 'item', name = 'fawogae-mk02', amount = 1, probability = 0.25},
+        {type = 'item', name = 'fawogae-mk02', amount = 1, probability = 0.5},
     },
     main_product = "fawogae-mk02",
     icons =
@@ -115,7 +115,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'fawogae-mk03', amount = 2, },
-        {type = 'item', name = 'fawogae-mk03', amount = 1, probability = 0.25},
+        {type = 'item', name = 'fawogae-mk03', amount = 1, probability = 0.5},
     },
     main_product = "fawogae-mk03",
     icons =
@@ -179,7 +179,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'fawogae-mk04', amount = 2},
-        {type = 'item', name = 'fawogae-mk04', amount = 1, probability = 0.25},
+        {type = 'item', name = 'fawogae-mk04', amount = 1, probability = 0.5},
     },
     main_product = "fawogae-mk04",
     icons =

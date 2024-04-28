@@ -1,8 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.31
-Date: 2024-4-27
+Date: 2024-4-28
   Changes:
     - Removed references to nauvis in the locale. Part of preparation for the next pymod.
+    - Buffed the chance for breeding fawogae MK02+ modules from 25% to 50%.
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.30
 Date: 2024-4-26
