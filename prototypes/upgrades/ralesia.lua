@@ -73,7 +73,7 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-ralesia.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'ralesia-mk04'},
+        prerequisites = {'ralesia-mk02', 'helium-processing', 'thermal-mk01'},
         unit = {
             count = 500,
             ingredients = {
@@ -83,9 +83,6 @@ return {
                 {'military-science-pack', 1},
                 {'py-science-pack-2', 1},
                 {'chemical-science-pack', 1},
-                {'py-science-pack-3', 1},
-                {'production-science-pack', 1},
-                {'py-science-pack-4', 1},
             },
             time = 45
         }
@@ -120,7 +117,6 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {consumption = -0.8, type = 'module-effects'},
                 {old = 'ralesias-1', new = 'ralesias-1-hydrogen-burn', type = 'recipe-replacement'},
                 {old = 'ralesias-2', new = 'ralesias-2-hydrogen-burn', type = 'recipe-replacement'},
                 {old = 'ralesias-3', new = 'ralesias-3-hydrogen-burn', type = 'recipe-replacement'},
