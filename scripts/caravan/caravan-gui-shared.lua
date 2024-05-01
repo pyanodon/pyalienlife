@@ -203,7 +203,7 @@ gui_events[defines.events.on_gui_click]['py_click_caravan'] = function(event)
     local tags = element.tags
     local caravan_data = global.caravans[tags.unit_number]
     if Caravan.validity_check(caravan_data) then
-        Caravan.build_gui(player, caravan_data.entity, true)
+        Caravan.build_gui(player, caravan_data.entity)
     end
 end
 

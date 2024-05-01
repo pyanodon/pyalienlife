@@ -137,19 +137,14 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 	gui.add{type = 'button', name = 'py_add_outpost', style = 'train_schedule_add_station_button', caption = {'caravan-gui.add-outpost'}}
 end
 
-function Caravan.build_gui(player, entity, from_remote_manager)
+function Caravan.build_gui(player, entity)
 	local caravan_data = global.caravans[entity.unit_number]
 	local prototype = prototypes[entity.name]
 	
 	local main_frame
-	if from_remote_manager then
-		player.opened = nil
-		main_frame = player.gui.screen.add{type = 'frame', name = 'caravan_gui', direction = 'vertical'}
-		main_frame.auto_center = true
-		player.opened = main_frame
-	else
+	if player.can_reach_entity(entity) then
 		player.opened = caravan_data.inventory
-		local flow = player.gui.relative.add {
+		local flow = player.gui.relative.caravan_flow or player.gui.relative.add{
 			type = 'flow', name = 'caravan_flow',
 			anchor = {
 				gui = defines.relative_gui_type.script_inventory_gui,
@@ -158,14 +153,20 @@ function Caravan.build_gui(player, entity, from_remote_manager)
 
 		}
 		flow.style.horizontal_spacing = 0
-		main_frame = flow.add {
-			type = 'frame', name = 'caravan_gui', direction = 'vertical'
+		main_frame = flow.add{
+			type = 'frame', name = 'caravan_gui', direction = 'vertical', tags = {can_reach = true, unit_number = entity.unit_number}
 		}
+	else
+		player.opened = nil
+		main_frame = player.gui.screen.add{
+			type = 'frame', name = 'caravan_gui', direction = 'vertical', tags = {can_reach = false, unit_number = entity.unit_number}
+		}
+		main_frame.auto_center = true
+		player.opened = main_frame
 	end
 	main_frame.style.width = 436
 	main_frame.style.minimal_height = 710
 	main_frame.style.margin = 0
-	main_frame.tags = {unit_number = entity.unit_number}
 
 	local caption_flow = main_frame.add{type = 'flow', direction = 'horizontal'}
 
@@ -240,7 +241,7 @@ function Caravan.build_gui(player, entity, from_remote_manager)
 	schedule_pane.vertical_scroll_policy = 'auto-and-reserve-space'
 	schedule_pane.style.horizontally_stretchable = true
 	schedule_pane.style.vertically_stretchable = true
-	Caravan.update_gui(main_frame)
+	Caravan.update_gui(main_frame, false, player)
 	Caravan.build_gui_connected(player, entity)
 end
 
@@ -253,7 +254,7 @@ Caravan.events.on_open_gui = function(event)
 		return
 	end
 	local entity = player.selected
-	if not entity or not prototypes[entity.name] or not player.can_reach_entity(entity) then return end
+	if not entity or not prototypes[entity.name] then return end
 	local caravan_data = Caravan.instantiate_caravan(entity)
 	local existing = Caravan.get_caravan_gui(player)
 	if existing then
@@ -266,9 +267,19 @@ Caravan.events.on_open_gui = function(event)
 	Caravan.build_gui(player, entity)
 end
 
-function Caravan.update_gui(gui, weak)
+function Caravan.update_gui(gui, weak, player)
 	local caravan_data = global.caravans[gui.tags.unit_number]
 	if not Caravan.validity_check(caravan_data) then gui.destroy() return end
+
+	local entity = caravan_data.entity
+	local can_reach = gui.tags.can_reach
+	if player and can_reach ~= nil and player.can_reach_entity(entity) ~= can_reach then
+		player.opened = nil
+		gui.destroy()
+		Caravan.build_gui(player, entity)
+		return
+	end
+
 	local content_flow = gui.content_frame.content_flow
 	local state, img = Caravan.status_img(caravan_data)
 	content_flow.status_flow.status_text.caption = state

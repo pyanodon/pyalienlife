@@ -3,6 +3,9 @@ Version: 2.1.33
 Date: 2024-4-30
   Changes:
     - Fixed that nexelit ore had broken graphics in low-resolution mode.
+    - Added compatibility between caravans and the remote configuration mod.
+    - Allowed caravans GUI to be opened from anywhere including map view.
+    - Fixed a crash involving caravan GUI and editor mode.
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.32
 Date: 2024-4-30

@@ -159,7 +159,7 @@ gui_events[defines.events.on_gui_selection_state_changed]['py_add_action'] = fun
 		type = element.get_item(element.selected_index)[2],
 		localised_name = element.get_item(element.selected_index)
 	}
-	Caravan.update_gui(Caravan.get_caravan_gui(player))
+	Caravan.update_gui(Caravan.get_caravan_gui(player), false, player)
 end
 
 gui_events[defines.events.on_gui_click]['py_delete_schedule'] = function(event)
@@ -174,7 +174,7 @@ gui_events[defines.events.on_gui_click]['py_delete_schedule'] = function(event)
 	table.remove(schedule, id)
 
 	stop_actions(caravan_data)
-	Caravan.update_gui(Caravan.get_caravan_gui(player))
+	Caravan.update_gui(Caravan.get_caravan_gui(player), false, player)
 end
 
 gui_events[defines.events.on_gui_click]['py_blocking_caravan'] = function(event)
@@ -203,7 +203,7 @@ gui_events[defines.events.on_gui_click]['py_shuffle_schedule_.'] = function(even
 	schedule[id + offset] = a
 
 	stop_actions(caravan_data)
-	Caravan.update_gui(Caravan.get_caravan_gui(player))
+	Caravan.update_gui(Caravan.get_caravan_gui(player), false, player)
 end
 
 gui_events[defines.events.on_gui_click]['py_outpost_name'] = function(event)
@@ -302,7 +302,7 @@ gui_events[defines.events.on_gui_click]['py_schedule_play'] = function(event)
 		begin_schedule(caravan_data, tags.schedule_id)
 	end
 
-	Caravan.update_gui(Caravan.get_caravan_gui(player))
+	Caravan.update_gui(Caravan.get_caravan_gui(player), false, player)
 end
 
 gui_events[defines.events.on_gui_click]['py_action_play'] = function(event)
@@ -325,7 +325,7 @@ gui_events[defines.events.on_gui_click]['py_action_play'] = function(event)
 		begin_schedule(caravan_data, tags.schedule_id)
 	end
 
-	Caravan.update_gui(Caravan.get_caravan_gui(player))
+	Caravan.update_gui(Caravan.get_caravan_gui(player), false, player)
 end
 
 gui_events[defines.events.on_gui_click]['py_fuel_slot_.'] = function(event)
@@ -340,7 +340,7 @@ gui_events[defines.events.on_gui_click]['py_fuel_slot_.'] = function(event)
 
 	cursor_stack.swap_stack(fuel_stack)
 	if eat(caravan_data) then caravan_data.fuel_bar = caravan_data.fuel_bar + 1 end
-	Caravan.update_gui(Caravan.get_caravan_gui(player))
+	Caravan.update_gui(Caravan.get_caravan_gui(player), false, player)
 end
 
 gui_events[defines.events.on_gui_elem_changed]['py_item_count'] = function(event)
@@ -439,7 +439,10 @@ Caravan.events.ai_command_completed = function(event)
 	::update_gui::
 	for _, player in pairs(game.connected_players) do
 		local gui = Caravan.get_caravan_gui(player)
-		if gui and gui.tags.unit_number == unit_number then Caravan.update_gui(gui); return end
+		if gui and gui.tags.unit_number == unit_number then
+			Caravan.update_gui(gui, false, player)
+			return
+		end
 	end
 end
 
@@ -524,7 +527,9 @@ Caravan.events[60] = function(event)
 	if next(guis_to_update) then
 		for _, player in pairs(game.connected_players) do
 			local gui = Caravan.get_caravan_gui(player)
-			if gui and guis_to_update[gui.tags.unit_number] then Caravan.update_gui(gui) end
+			if gui and guis_to_update[gui.tags.unit_number] then
+				Caravan.update_gui(gui, false, player)
+			end
 		end
 	end
 
@@ -640,7 +645,9 @@ Caravan.events.on_entity_settings_pasted = function(event)
 	destination_data.schedule = Table.deep_copy(source_data.schedule)
 	for _, player in pairs(game.connected_players) do
 		local gui = Caravan.get_caravan_gui(player)
-		if gui and gui.tags.unit_number == destination.unit_number then Caravan.update_gui(gui) end
+		if gui and gui.tags.unit_number == destination.unit_number then
+			Caravan.update_gui(gui, false, player)
+		end
 	end
 end
 
