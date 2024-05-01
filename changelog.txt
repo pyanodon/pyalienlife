@@ -6,7 +6,7 @@ Date: 2024-4-30
     - Added compatibility between caravans and the remote configuration mod.
     - Allowed caravan GUI to be opened from anywhere including map view.
     - Fixed a crash involving caravan GUI and editor mode.
-    - Improved caravan UPS by optimizing the path resolution modifier.
+    - Improved aerial caravan UPS by optimizing the path resolution modifier.
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.32
 Date: 2024-4-30
