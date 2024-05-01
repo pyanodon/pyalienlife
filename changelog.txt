@@ -4,8 +4,9 @@ Date: 2024-4-30
   Changes:
     - Fixed that nexelit ore had broken graphics in low-resolution mode.
     - Added compatibility between caravans and the remote configuration mod.
-    - Allowed caravans GUI to be opened from anywhere including map view.
+    - Allowed caravan GUI to be opened from anywhere including map view.
     - Fixed a crash involving caravan GUI and editor mode.
+    - Improved caravan UPS by optimizing the path resolution modifier.
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.32
 Date: 2024-4-30

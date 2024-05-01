@@ -41,7 +41,7 @@ ITEM {
 data:extend
 {
   {
-	ai_settings = {do_separation = false},
+	ai_settings = {do_separation = false, path_resolution_modifier = -1},
     type = 'unit',
 	additional_pastable_entities = {'flyavan', 'flyavan-turd'},
     name = 'flyavan',

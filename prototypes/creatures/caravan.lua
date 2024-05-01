@@ -43,7 +43,7 @@ ITEM {
 
 data:extend{{
 	type = 'unit',
-	ai_settings = {do_separation = false},
+	ai_settings = {do_separation = false, path_resolution_modifier = -1},
 	additional_pastable_entities = {'caravan', 'caravan-turd'},
 	name = 'caravan',
 	can_open_gates = true,
