@@ -38,7 +38,7 @@ data:extend(
     type = 'unit',
     name = 'nukavan',
 	can_open_gates = true,
-	additional_pastable_entities = {'nukavan'},
+	additional_pastable_entities = {'nukavan', 'nukavan-turd'},
     icon = '__pyalienlifegraphics2__/graphics/icons/nuka-van.png',
     icon_size = 64,
 	ai_settings = {do_separation = false},

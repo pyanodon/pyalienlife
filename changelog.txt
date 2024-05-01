@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.32
+Date: 2024-4-30
+  Changes:
+    - Fixed that the shiny caravans from creature chamber turd were not copy-pasteable.
+    - Added the ability to copypaste between flying caravans and land caravans.
+---------------------------------------------------------------------------------------------------
 Version: 2.1.31
 Date: 2024-4-28
   Changes:
