@@ -446,8 +446,10 @@ ITEM {
 ITEM {
     type = "item",
     name = "cadaveric-arum-seeds-mk02",
-    icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum-seeds.png",
-    icon_size = 64,
+    icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum-seeds.png", icon_size = 64},
+		{icon = '__pyalienlifegraphics__/graphics/icons/over-mk02.png', icon_size = 64}
+	},
     flags = {},
     subgroup = "py-alienlife-cadaveric",
     order = "x",
@@ -457,8 +459,10 @@ ITEM {
 ITEM {
     type = "item",
     name = "cadaveric-arum-seeds-mk03",
-    icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum-seeds.png",
-    icon_size = 64,
+    icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum-seeds.png", icon_size = 64},
+		{icon = '__pyalienlifegraphics__/graphics/icons/over-mk03.png', icon_size = 64}
+	},
     flags = {},
     subgroup = "py-alienlife-cadaveric",
     order = "x",
@@ -468,8 +472,10 @@ ITEM {
 ITEM {
     type = "item",
     name = "cadaveric-arum-seeds-mk04",
-    icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum-seeds.png",
-    icon_size = 64,
+    icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum-seeds.png", icon_size = 64},
+		{icon = '__pyalienlifegraphics__/graphics/icons/over-mk04.png', icon_size = 64}
+	},
     flags = {},
     subgroup = "py-alienlife-cadaveric",
     order = "x",
