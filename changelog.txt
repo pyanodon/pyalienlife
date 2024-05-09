@@ -1,8 +1,13 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.34
-Date: 2024-??-??
+Date: 2024-9-5
   Changes:
-    - Fixed that rennea and arum seeds mk02-mk04 didnt show tier pips
+    - Fixed that rennea and arum seeds mk02-mk04 didnt show tier pips.
+    - Optimized the biofluid network UPS by >10X. Huge thanks to @Harvester on Discord for the test world.
+    - Increased the animation speed of vessel pipes from 0.3 to 0.5.
+    - Improved the entity description for biofluid provider chests.
+    - Nerfed the manure output from guano 16 -> 10. Buffed the crafting time from 20 sec -> 8 sec.
+    - Fixed a missing catalyst_amount=8 on the guano manure recipe.
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.33
 Date: 2024-4-30

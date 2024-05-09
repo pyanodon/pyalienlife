@@ -177,38 +177,68 @@ local function random_order(l)
 	return ipairs(order)
 end
 
+local function build_providers_by_contents(network_data, relavant_fluids)
+	local providers_by_contents = {}
+	network_data.providers_by_contents = providers_by_contents
+	local providers = network_data.providers
+
+	for k, provider in pairs(providers) do
+		if not provider.valid then
+			providers[k] = nil
+			goto continue
+		end
+		local contents = provider.fluidbox[1]
+		if not contents then goto continue end
+		local name = contents.name
+		if not relavant_fluids[name] then goto continue end
+		local already_allocated = network_data.allocated_fluids_from_providers[provider.unit_number] or 0
+		local can_give = contents.amount - already_allocated
+		if can_give < 500 then goto continue end
+
+		local list = providers_by_contents[name] or {}
+		providers_by_contents[name] = list
+		list[#list+1] = provider
+		
+		::continue::
+	end
+end
+
 Biofluid.events[143] = function()
 	Biofluid.render_error_icons()
 
 	local networks = global.biofluid_networks
 	if not next(networks) then return end
-	for _, unfulfilled_request in pairs(Biofluid.get_unfulfilled_requests()) do
-		local network_data = global.biofluid_networks[unfulfilled_request.network_id]
-		local providers = network_data.providers
-		if not network_data.sorted then
-			allocated_fluids_from_providers = network_data.allocated_fluids_from_providers
-			sort(providers, provider_sort_function)
-			network_data.sorted = true
+	local unfulfilled_requests, relavant_fluids = Biofluid.get_unfulfilled_requests()
+
+	for _, unfulfilled_request in pairs(unfulfilled_requests) do
+		local network_id = unfulfilled_request.network_id
+		local network_data = global.biofluid_networks[network_id]
+		local providers_by_contents = network_data.providers_by_contents
+
+		if not providers_by_contents then
+			build_providers_by_contents(network_data, relavant_fluids[network_id])
+			providers_by_contents = network_data.providers_by_contents
 		end
+
 		local name, amount = unfulfilled_request.name, unfulfilled_request.amount
 		local target_temperature = unfulfilled_request.target_temperature
 		local provider
-		for _, p in pairs(providers) do
-			if not p.valid then goto continue end
-			local contents = p.fluidbox[1]
-			if not contents then break end
-			if contents.name ~= name or target_temperature and contents.temperature ~= target_temperature then goto continue end
-			local has = contents.amount
-			if has < 100 then break end
-			local already_allocated = network_data.allocated_fluids_from_providers[p.unit_number] or 0
-			local can_give = has - already_allocated
-			if can_give >= 100 then
+
+		local providers = providers_by_contents[name]
+		if providers then
+			allocated_fluids_from_providers = network_data.allocated_fluids_from_providers
+			sort(providers, provider_sort_function)
+			for _, p in pairs(providers) do
+				local contents = p.fluidbox[1]
+				if target_temperature and contents.temperature ~= target_temperature then goto continue end
+				local can_give = contents.amount - (allocated_fluids_from_providers[p.unit_number] or 0)
 				provider = p
 				unfulfilled_request.amount = min(amount, can_give)
 				break
+				::continue::
 			end
-			::continue::
 		end
+
 		if provider then
 			local requester_data = global.biofluid_requesters[unfulfilled_request.entity.unit_number]
 			for _, bioport in random_order(network_data.bioports) do
@@ -225,7 +255,7 @@ Biofluid.events[143] = function()
 		end
 	end
 
-	for _, network_data in pairs(global.biofluid_networks) do network_data.sorted = nil end
+	for _, network_data in pairs(global.biofluid_networks) do network_data.providers_by_contents = nil end
 end
 
 local function set_target(biorobot_data, target)
@@ -519,6 +549,7 @@ local function requester_sort_function(a, b)
 end
 
 function Biofluid.get_unfulfilled_requests()
+	local relavant_fluids = {}
 	local result = {}
 	for unit_number, requester_data in pairs(global.biofluid_requesters) do
 		local requester = requester_data.entity
@@ -557,11 +588,19 @@ function Biofluid.get_unfulfilled_requests()
 		if requester_data.care_about_temperature then
 			result[#result].target_temperature = requester_data.target_temperature
 		end
+
+		local relavant_fluids_by_network = relavant_fluids[network_id]
+		if not relavant_fluids_by_network then
+			relavant_fluids_by_network = {}
+			relavant_fluids[network_id] = relavant_fluids_by_network
+		end
+		relavant_fluids_by_network[fluid_name] = true
+
 		::continue::
 	end
 
 	sort(result, requester_sort_function)
-	return result
+	return result, relavant_fluids
 end
 
 function Biofluid.why_isnt_my_bioport_working(bioport_data)
