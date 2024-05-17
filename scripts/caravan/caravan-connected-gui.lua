@@ -18,7 +18,7 @@ local function instantiate_main_frame(gui, anchor)
         return gui.relative.add{
             type = 'frame',
             name = 'py_global_caravan_gui',
-            caption = {'caravan-gui.caption'},
+            caption = {'caravan-global-gui.caption'},
             direction = 'vertical',
             anchor = anchor
         }
@@ -27,14 +27,23 @@ local function instantiate_main_frame(gui, anchor)
     return gui.relative.caravan_flow.add{
         type = 'frame',
         name = 'py_global_caravan_gui',
-        caption = {'caravan-gui.caption'},
+        caption = {'caravan-global-gui.caption'},
         direction = 'vertical',
     }
 end
 
 function Caravan.has_any_caravan(entity)
     for _, caravan_data in pairs(global.caravans) do
-        if has_schedule(caravan_data, entity) then return true end
+        if Caravan.has_entity_in_schedule(caravan_data, entity) then return true end
+    end
+    return false
+end
+
+function Caravan.has_entity_in_schedule(caravan_data, entity)
+    if not Caravan.validity_check(caravan_data) then return end
+    if not caravan_data.schedule then return end
+    for _, schedule in pairs(caravan_data.schedule) do
+        if schedule.entity == entity then return true end
     end
     return false
 end
@@ -52,7 +61,7 @@ Caravan.build_gui_connected = function(player, entity, anchor)
     scroll_pane.style.top_margin = -6
     
     for key, caravan_data in pairs(global.caravans) do
-        if has_schedule(caravan_data, entity) then
+        if Caravan.has_entity_in_schedule(caravan_data, entity) then
             scroll_pane.add{type = 'empty-widget'}.style.height = 3
             Caravan.add_gui_row(caravan_data, key, scroll_pane)
         end

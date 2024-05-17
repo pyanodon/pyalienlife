@@ -373,44 +373,6 @@ if mods['pyalternativeenergy'] then
     require 'prototypes/buildings/zungror-lair-mk04'
 end
 
---((SPACE BUILDINGS))--
---[[
-require 'prototypes/buildings/space/space-arthurian-pen-mk01'
-require 'prototypes/buildings/space/space-auog-paddock-mk01'
-require 'prototypes/buildings/space/space-bhoddos-culture-mk01'
-require 'prototypes/buildings/space/space-cadavericarum-mk01'
-require 'prototypes/buildings/space/space-cridren-enclosure-mk01'
-require 'prototypes/buildings/space/space-dingrits-mk01'
-require 'prototypes/buildings/space/space-ez-ranch-mk01'
-require 'prototypes/buildings/space/space-fish-farm-mk01'
-require 'prototypes/buildings/space/space-fwf-mk01'
-require 'prototypes/buildings/space/space-grod-swamp-mk01'
-require 'prototypes/buildings/space/space-kicalk-plantation-mk01'
-require 'prototypes/buildings/space/space-kmauts-enclosure-mk01'
-require 'prototypes/buildings/space/space-moss-farm-mk01'
-require 'prototypes/buildings/space/space-mukmoux-pasture-mk01'
-require 'prototypes/buildings/space/space-navens-culture-mk01'
-require 'prototypes/buildings/space/space-phadai-enclosure-mk01'
-require 'prototypes/buildings/space/space-phagnot-corral-mk01'
-require 'prototypes/buildings/space/space-prandium-lab-mk01'
-require 'prototypes/buildings/space/space-ralesia-plantation-mk01'
-require 'prototypes/buildings/space/space-rennea-plantation-mk01'
-require 'prototypes/buildings/space/space-sap-extractor-mk01'
-require 'prototypes/buildings/space/space-scrondrix-pen-mk01'
-require 'prototypes/buildings/space/space-seaweed-crop-mk01'
-require 'prototypes/buildings/space/space-sponge-culture-mk01'
-require 'prototypes/buildings/space/space-trits-reef-mk01'
-require 'prototypes/buildings/space/space-tuuphra-plantation-mk01'
-require 'prototypes/buildings/space/space-ulric-corral-mk01'
-require 'prototypes/buildings/space/space-vonix-den-mk01'
-require 'prototypes/buildings/space/space-vrauks-paddock-mk01'
-require 'prototypes/buildings/space/space-xenopen-mk01'
-require 'prototypes/buildings/space/space-xyhiphoe-pool-mk01'
-require 'prototypes/buildings/space/space-yaedols-culture-mk01'
-require 'prototypes/buildings/space/space-yotoi-aloe-orchard-mk01'
-require 'prototypes/buildings/space/space-zipir-reef-mk01'
-]]--
-
 require 'prototypes/buildings/py-drive'
 
 --(( FLUIDS ))--
@@ -501,7 +463,7 @@ require 'prototypes/creatures/ocula'
 require 'prototypes/creatures/ulric-man'
 
 Biofluid = {}
-require 'scripts/biofluid/biofluid-prototypes'
+require 'scripts.biofluid.biofluid-prototypes'
 require 'prototypes/biofluid/gobachov'
 require 'prototypes/biofluid/huzu'
 require 'prototypes/biofluid/chorkok'

@@ -1,5 +1,3 @@
-local sounds = require('__base__/prototypes/entity/sounds')
-
 RECIPE {
     type = 'recipe',
     name = 'gobachov',
@@ -81,7 +79,8 @@ local animation = {
     }
 }
 
-data:extend{{
+---@as data.UnitPrototype
+local unit = {
     ai_settings = {do_separation = false, path_resolution_modifier = -2},
     type = 'unit',
     name = 'gobachov',
@@ -124,4 +123,6 @@ data:extend{{
     },
     map_color = {0, 0.5, 0},
     selection_priority = 51
-}}
+}
+
+data:extend{unit}

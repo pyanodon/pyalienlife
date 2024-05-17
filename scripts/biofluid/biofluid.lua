@@ -5,9 +5,9 @@ local BIOPORT = 'bioport'
 Biofluid = {}
 Biofluid.events = {}
 
-require 'biofluid-prototypes'
-require 'network-builder'
-require 'biofluid-gui'
+require 'scripts.biofluid.biofluid-prototypes'
+require 'scripts.biofluid.network-builder'
+require 'scripts.biofluid.biofluid-gui'
 
 local PICKING_UP = 1
 local DROPPING_OFF = 2

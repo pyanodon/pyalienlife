@@ -23,7 +23,11 @@ for event, _ in pairs(gui_events) do
 	script.on_event(event, process_gui_event)
 end
 
+---@param favorite_foods table
+---@param locale string
+---@return table
 _G.generate_favorite_food_tooltip = function(favorite_foods, locale)
+    ---@type (string|table)[]
 	local favorites = {''}
 	for food, actions in pairs(favorite_foods) do
 		favorites[#favorites + 1] = {locale .. '.favorite-foods-sub', '[item=' .. food .. ']', game.item_prototypes[food].localised_name, actions}
@@ -34,6 +38,7 @@ _G.generate_favorite_food_tooltip = function(favorite_foods, locale)
 end
 
 _G.generate_allowed_module_tooltip = function(allowed_modules)
+    ---@type (string|table)[]
 	local favorites = {'', {'gui.module-description'}, '\n'}
 	for module, _ in pairs(allowed_modules) do
 		favorites[#favorites + 1] = {'', '[font=heading-2][item=' .. module .. '][/font]', ' ', game.item_prototypes[module].localised_name}
@@ -55,19 +60,20 @@ _G.draw_error_sprite = function(entity, sprite, time_to_live)
     }
 end
 
-require 'scripts/wiki/text-pages'
-require 'scripts/caravan/caravan'
-require 'scripts/digosaurus/digosaurus'
-require 'scripts/ocula/ocula'
-require 'scripts/farming/farming'
-require 'scripts/slaughterhouse/slaughterhouse'
-require 'scripts/smart-farm/smart-farm'
-require 'scripts/worm/worm'
-require 'scripts/turd/turd'
-require 'scripts/vatbrain/vatbrain'
-require 'scripts/ulric/ulric'
-require 'scripts/biofluid/biofluid'
-require 'scripts/mounts/mounts'
+require 'scripts.wiki.text-pages'
+require 'scripts.caravan.caravan'
+require 'scripts.digosaurus.digosaurus'
+require 'scripts.ocula.ocula'
+---@diagnostic disable-next-line: different-requires
+require 'scripts.farming.farming'
+require 'scripts.slaughterhouse.slaughterhouse'
+require 'scripts.smart-farm.smart-farm'
+require 'scripts.worm.worm'
+require 'scripts.turd.turd'
+require 'scripts.vatbrain.vatbrain'
+require 'scripts.ulric.ulric'
+require 'scripts.biofluid.biofluid'
+require 'scripts.mounts.mounts'
 
 local function discoscience()
     if remote.interfaces['DiscoScience'] and remote.interfaces['DiscoScience']['setIngredientColor'] then
