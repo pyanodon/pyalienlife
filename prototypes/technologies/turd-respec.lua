@@ -35,7 +35,7 @@ local offset = 5
 
 local ingredients = {}
 for i = offset, #science_packs - 1 do
-    pack = science_packs[i]
+    local pack = science_packs[i]
     ingredients[i] = {pack, 1}
     TECHNOLOGY {
         type = 'technology',

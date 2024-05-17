@@ -3,7 +3,7 @@ Farming.events = {}
 
 ---@type table<string, string>
 ---Contains key-value pairs of `{farm_name = farm_domain}`
----|See `scripts/farming/farm-build-list.lua` for an example
+-- See `scripts/farming/farm-build-list.lua` for an example
 local farm_buildings = require 'farm-building-list'
 
 ---register_type registers a farm for module restrictions

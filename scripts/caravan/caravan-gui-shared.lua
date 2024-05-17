@@ -1,14 +1,5 @@
 local prototypes = require 'caravan-prototypes'
 
-function has_schedule(caravan_data, entity)
-    if not Caravan.validity_check(caravan_data) then return end
-    if not caravan_data.schedule then return end
-    for _, schedule in pairs(caravan_data.schedule) do
-        if schedule.entity == entity then return true end
-    end
-    return false
-end
-
 function Caravan.status_img(caravan_data)
     local entity = caravan_data.entity
     if caravan_data.is_aerial then
@@ -29,11 +20,39 @@ local function convert_to_tooltip_row(name, count)
 end
 
 function Caravan.get_inventory_tooltip(caravan_data)
-    local has_anything = false
+    local inventory = caravan_data.inventory
+    ---@type (table | string)[]
+    local inventory_contents = {'', '\n[img=utility/trash_white] ', {'caravan-gui.the-inventory-is-empty'}}
+    if inventory and inventory.valid then
+        local sorted_contents = {}
+        for name, count in pairs(inventory.get_contents()) do
+            sorted_contents[#sorted_contents + 1] = {name = name, count = count}
+        end
+        table.sort(sorted_contents, function(a, b) return a.count > b.count end)
+        
+        local i = 0
+        for _, item in pairs(sorted_contents) do
+            if i == 0 then inventory_contents = {''} end
+            local name, count = item.name, item.count
+            inventory_contents[#inventory_contents + 1] = convert_to_tooltip_row(name, count)
+            i = i + 1
+            if i == 10 then
+                if #sorted_contents > 10 then
+                    inventory_contents[#inventory_contents + 1] = {'', '\n[color=255,210,73]', {'caravan-gui.more-items', #sorted_contents - 10}, '[/color]'}
+                end
+                break
+            end
+        end
+    end
+    return {'', '[font=default-semibold]', inventory_contents, '[/font]'}
+end
+
+function Caravan.get_summary_tooltip(caravan_data)
     local entity = caravan_data.entity
 
     local schedule = caravan_data.schedule[caravan_data.schedule_id]
-    local current_action = ''
+    ---@type (table | string)[]
+    local current_action = {'caravan-gui.current-action', {'entity-status.idle'}}
     if schedule then
         has_anything = true
         local action_id = caravan_data.action_id
@@ -65,6 +84,7 @@ function Caravan.get_inventory_tooltip(caravan_data)
     end
 
     local fuel_inventory = caravan_data.fuel_inventory
+    ---@type (table | string)[]
     local fuel_inventory_contents = {''}
     if fuel_inventory and fuel_inventory.valid then
         local i = 0
@@ -248,6 +268,8 @@ local function title_edit_mode(caption_flow, caravan_data)
     textfield.style.top_margin = -5
     textfield.style.maximal_width = 150
     local button = caption_flow.py_rename_caravan_button
+    ---@class SpriteButton.style
+    ---@diagnostic disable-next-line: assign-type-mismatch
     button.style = 'item_and_count_select_confirm'
     button.sprite = 'utility/check_mark'
     button.hovered_sprite = 'utility/check_mark'
