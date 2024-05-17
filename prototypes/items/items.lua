@@ -2474,8 +2474,10 @@ ITEM {
 ITEM {
 	type = 'item',
 	name = 'rennea-seeds-mk02',
-	icon = '__pyalienlifegraphics__/graphics/icons/rennea-seeds.png',
-	icon_size = 64,
+	icons = {
+		{icon = '__pyalienlifegraphics__/graphics/icons/rennea-seeds.png', icon_size = 64},
+		{icon = '__pyalienlifegraphics__/graphics/icons/over-mk02.png', icon_size = 64}
+	},
 	flags = {},
 	subgroup = 'py-alienlife-rennea',
 	order = 'h',
@@ -2485,8 +2487,10 @@ ITEM {
 ITEM {
 	type = 'item',
 	name = 'digested-rennea-seeds-mk02',
-	icon = '__pyalienlifegraphics__/graphics/icons/mip/rennea-manure-01.png',
-	icon_size = 64,
+	icons = {
+		{icon = '__pyalienlifegraphics__/graphics/icons/mip/rennea-manure-01.png', icon_size = 64},
+		{icon = '__pyalienlifegraphics__/graphics/icons/over-mk02.png', icon_size = 64}
+	},
 	flags = {},
 	subgroup = 'py-alienlife-rennea',
 	order = 'h',
@@ -2496,8 +2500,10 @@ ITEM {
 ITEM {
 	type = 'item',
 	name = 'abraded-rennea-seeds-mk02',
-	icon = '__pyalienlifegraphics__/graphics/icons/rennea-seeds.png',
-	icon_size = 64,
+	icons = {
+		{icon = '__pyalienlifegraphics__/graphics/icons/rennea-seeds.png', icon_size = 64},
+		{icon = '__pyalienlifegraphics__/graphics/icons/over-mk02.png', icon_size = 64}
+	},
 	flags = {},
 	subgroup = 'py-alienlife-rennea',
 	order = 'h',
@@ -2507,8 +2513,10 @@ ITEM {
 ITEM {
 	type = 'item',
 	name = 'rennea-seeds-mk03',
-	icon = '__pyalienlifegraphics__/graphics/icons/rennea-seeds.png',
-	icon_size = 64,
+	icons = {
+		{icon = '__pyalienlifegraphics__/graphics/icons/rennea-seeds.png', icon_size = 64},
+		{icon = '__pyalienlifegraphics__/graphics/icons/over-mk03.png', icon_size = 64}
+	},
 	flags = {},
 	subgroup = 'py-alienlife-rennea',
 	order = 'h',
@@ -2518,8 +2526,10 @@ ITEM {
 ITEM {
 	type = 'item',
 	name = 'digested-rennea-seeds-mk03',
-	icon = '__pyalienlifegraphics__/graphics/icons/mip/rennea-manure-01.png',
-	icon_size = 64,
+	icons = {
+		{icon = '__pyalienlifegraphics__/graphics/icons/mip/rennea-manure-01.png', icon_size = 64},
+		{icon = '__pyalienlifegraphics__/graphics/icons/over-mk03.png', icon_size = 64}
+	},
 	flags = {},
 	subgroup = 'py-alienlife-rennea',
 	order = 'h',
@@ -2529,8 +2539,10 @@ ITEM {
 ITEM {
 	type = 'item',
 	name = 'abraded-rennea-seeds-mk03',
-	icon = '__pyalienlifegraphics__/graphics/icons/rennea-seeds.png',
-	icon_size = 64,
+	icons = {
+		{icon = '__pyalienlifegraphics__/graphics/icons/rennea-seeds.png', icon_size = 64},
+		{icon = '__pyalienlifegraphics__/graphics/icons/over-mk03.png', icon_size = 64}
+	},
 	flags = {},
 	subgroup = 'py-alienlife-rennea',
 	order = 'h',
@@ -2540,8 +2552,10 @@ ITEM {
 ITEM {
 	type = 'item',
 	name = 'rennea-seeds-mk04',
-	icon = '__pyalienlifegraphics__/graphics/icons/rennea-seeds.png',
-	icon_size = 64,
+	icons = {
+		{icon = '__pyalienlifegraphics__/graphics/icons/rennea-seeds.png', icon_size = 64},
+		{icon = '__pyalienlifegraphics__/graphics/icons/over-mk04.png', icon_size = 64}
+	},
 	flags = {},
 	subgroup = 'py-alienlife-rennea',
 	order = 'h',
@@ -2551,8 +2565,10 @@ ITEM {
 ITEM {
 	type = 'item',
 	name = 'digested-rennea-seeds-mk04',
-	icon = '__pyalienlifegraphics__/graphics/icons/mip/rennea-manure-01.png',
-	icon_size = 64,
+	icons = {
+		{icon = '__pyalienlifegraphics__/graphics/icons/mip/rennea-manure-01.png', icon_size = 64},
+		{icon = '__pyalienlifegraphics__/graphics/icons/over-mk04.png', icon_size = 64}
+	},
 	flags = {},
 	subgroup = 'py-alienlife-rennea',
 	order = 'h',
@@ -2562,8 +2578,10 @@ ITEM {
 ITEM {
 	type = 'item',
 	name = 'abraded-rennea-seeds-mk04',
-	icon = '__pyalienlifegraphics__/graphics/icons/rennea-seeds.png',
-	icon_size = 64,
+	icons = {
+		{icon = '__pyalienlifegraphics__/graphics/icons/rennea-seeds.png', icon_size = 64},
+		{icon = '__pyalienlifegraphics__/graphics/icons/over-mk04.png', icon_size = 64}
+	},
 	flags = {},
 	subgroup = 'py-alienlife-rennea',
 	order = 'h',

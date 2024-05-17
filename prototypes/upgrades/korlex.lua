@@ -16,6 +16,22 @@ if data and not yafc_turd_integration then
         data:extend{recipe}
     end
 
+    data:extend{{
+        name = 'kimberlite-into-lime',
+        type = 'recipe',
+        category = 'crusher',
+        enabled = false,
+        energy_required = 10,
+        ingredients = {
+            {type = 'item', name = 'kimberlite-grade3', amount = 10},
+        },
+        results = {
+            {type = 'item', name = 'lime', amount = 5},
+            {type = 'item', name = 'diamond-reject', amount = 1, probability = 0.5},
+        },
+        main_product = 'lime',
+    }}
+
     for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['korlex-1']),
         table.deepcopy(data.raw.recipe['korlex-2']),
@@ -102,6 +118,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
+                {type = 'unlock-recipe', recipe = 'kimberlite-into-lime'},
                 {old = 'korlex-milk-1', new = 'korlex-milk-1-pressured', type = 'recipe-replacement'},
                 {old = 'korlex-milk-2', new = 'korlex-milk-2-pressured', type = 'recipe-replacement'},
                 {old = 'korlex-milk-3', new = 'korlex-milk-3-pressured', type = 'recipe-replacement'},

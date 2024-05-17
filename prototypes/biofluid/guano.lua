@@ -12,7 +12,7 @@ data:extend{{
 RECIPE {
     type = 'recipe',
     name = 'guano-manure',
-    energy_required = 20,
+    energy_required = 8,
     enabled = false,
     category = 'mixer',
     ingredients = {
@@ -21,7 +21,7 @@ RECIPE {
         {type = 'fluid', name = 'water', amount = 5}
     },
     results = {
-        {'manure', 16},
+        {type = 'item', name = 'manure', amount = 10, catalyst_amount = 8},
     }
 }:add_unlock{'biofluid-mk01'}
 

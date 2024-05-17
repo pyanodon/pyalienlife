@@ -23,7 +23,7 @@ ITEM {
     type = 'item-with-tags',
     name = 'nukavan',
 	can_open_gates = true,
-	additional_pastable_entities = {'nukavan'},
+	additional_pastable_entities = {'nukavan', 'nukavan-turd'},
     icon = '__pyalienlifegraphics2__/graphics/icons/nuka-van.png',
     icon_size = 64,
     subgroup = 'py-alienlife-special-creatures',

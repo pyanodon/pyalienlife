@@ -26,7 +26,6 @@ FUN.autorecipes {
 			results =
 				{
 					{name = 'vonix-eggs', amount = 6},
-					{name = 'cage', amount = 2},
 				},
 			crafting_speed = 45,
 			tech = 'vonix'
@@ -190,7 +189,6 @@ FUN.autorecipes {
 			results =
 				{
 					{name = 'vonix', amount_min = 1, amount_max = 4},
-					{name = 'cage', amount = 1},
 				},
 			crafting_speed = 250,
 			tech = 'vonix'
@@ -206,7 +204,6 @@ FUN.autorecipes {
 			results =
 				{
 					{name = 'vonix', amount_min = 3, amount_max = 8},
-					{name = 'cage', amount = 1},
 				},
 			crafting_speed = 200,
 			tech = 'vonix-mk02'

@@ -20,6 +20,7 @@ Wiki.events.on_init = function()
         name = 'caravan-manager',
         section = 'alienlife',
         remote = {'pywiki_caravan_manager', 'create_gui'},
+        searchable = {'pywiki_caravan_manager', 'on_search'}
     })
 
     remote.call('pywiki', 'add_page', {

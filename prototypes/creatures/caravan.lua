@@ -44,7 +44,7 @@ ITEM {
 data:extend{{
 	type = 'unit',
 	ai_settings = {do_separation = false},
-	additional_pastable_entities = {'caravan'},
+	additional_pastable_entities = {'caravan', 'caravan-turd'},
 	name = 'caravan',
 	can_open_gates = true,
 	map_color = {1, 1, 1},

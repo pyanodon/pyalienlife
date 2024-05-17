@@ -284,7 +284,7 @@ for _, direction in pairs{'north', 'east', 'south', 'west'} do
                 line_length = 5,
                 shift = {0, 0},
                 scale = 0.335*2,
-                animation_speed = 0.3,
+                animation_speed = 0.5,
                 hr_version = {
                     filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-port-' .. direction .. '.png',
                     priority = 'high',
@@ -294,7 +294,7 @@ for _, direction in pairs{'north', 'east', 'south', 'west'} do
                     line_length = 5,
                     shift = {0, 0},
                     scale = 0.335,
-                    animation_speed = 0.3
+                    animation_speed = 0.5
                 }
             },
             {
@@ -306,7 +306,7 @@ for _, direction in pairs{'north', 'east', 'south', 'west'} do
                 line_length = 5,
                 shift = {0, 0},
                 scale = 0.335*2,
-                animation_speed = 0.3,
+                animation_speed = 0.5,
                 draw_as_glow = true,
                 hr_version = {
                     filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-port-' .. direction .. '-glow.png',
@@ -317,7 +317,7 @@ for _, direction in pairs{'north', 'east', 'south', 'west'} do
                     line_length = 5,
                     shift = {0, 0},
                     scale = 0.335,
-                    animation_speed = 0.3,
+                    animation_speed = 0.5,
                     draw_as_glow = true
                 }
             },
@@ -330,7 +330,7 @@ for _, direction in pairs{'north', 'east', 'south', 'west'} do
                 line_length = 5,
                 shift = {0, 0},
                 scale = 0.335*2,
-                animation_speed = 0.3,
+                animation_speed = 0.5,
                 draw_as_shadow = true,
                 hr_version = {
                     filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-port-' .. direction .. '-shadow.png',
@@ -341,7 +341,7 @@ for _, direction in pairs{'north', 'east', 'south', 'west'} do
                     line_length = 5,
                     shift = {0, 0},
                     scale = 0.335,
-                    animation_speed = 0.3,
+                    animation_speed = 0.5,
                     draw_as_shadow = true
                 }
             }

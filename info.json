@@ -1,6 +1,6 @@
 {
   "name": "pyalienlife",
-  "version": "2.1.26",
+  "version": "2.1.34",
   "factorio_version": "1.1",
   "title": "Pyanodons AlienLife",
   "author": "Pyanodon, Nexela, Kingarthur, notnotmelon, Mootykins, ShadowGlass, Archezekiel, Quintuple",
@@ -14,8 +14,7 @@
     "pyrawores >= 1.3.0",
     "pypetroleumhandling >= 1.3.4",
     "(?) pyhightech >= 1.5.0",
-    "! pyveganism >= 0.0.1",
-    "! omnimatter_wood"
+    "! pyveganism >= 0.0.1"
   ],
   "package": {
     "ignore": [],
