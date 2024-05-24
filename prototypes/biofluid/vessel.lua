@@ -1,6 +1,8 @@
 local collision_mask_util = require '__core__/lualib/collision-mask-util'
 
-_G.vessel_collision_mask = collision_mask_util.get_first_unused_layer()
+if not mods.pystellarexpedition then
+    _G.vessel_collision_mask = collision_mask_util.get_first_unused_layer()
+end
 
 RECIPE {
     type = 'recipe',
@@ -257,7 +259,7 @@ data:extend{{
     corpse = 'small-remnants',
     collision_box = table.deepcopy(data.raw['pipe']['pipe'].collision_box),
     selection_box = table.deepcopy(data.raw['pipe']['pipe'].selection_box),
-    collision_mask = {vessel_collision_mask},
+    collision_mask = not mods.pystellarexpedition and {vessel_collision_mask},
     animations = animations,
     fast_replaceable_group = 'vessel',
     next_upgrade = nil,
@@ -465,7 +467,7 @@ underground_pipe.fluid_box = {
         }
     }
 }
-underground_pipe.collision_mask = {vessel_collision_mask}
+underground_pipe.collision_mask = not mods.pystellarexpedition and {vessel_collision_mask}
 local function blank()
 	return {
 		filename = '__core__/graphics/empty.png',

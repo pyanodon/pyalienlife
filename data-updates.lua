@@ -511,16 +511,17 @@ local vessel_placeable_entities = {
 }
 
 for _, prototype in pairs(collision_mask_util.collect_prototypes_with_layer('object-layer')) do
-    if not walkable_types[prototype.type] then
-        prototype.collision_mask = collision_mask_util.get_mask(prototype)
-        if not collision_mask_util.mask_contains_layer(prototype.collision_mask, 'floor-layer') and collision_mask_util.mask_contains_layer(prototype.collision_mask, 'player-layer') then
-            collision_mask_util.add_layer(prototype.collision_mask, caravan_collision_mask)
+    local mask = collision_mask_util.get_mask(prototype)
+    if collision_mask_util.mask_contains_layer(mask, 'water-tile') then
+        if not walkable_types[prototype.type] then
+            if not collision_mask_util.mask_contains_layer(mask, 'floor-layer') and collision_mask_util.mask_contains_layer(mask, 'player-layer') then
+                collision_mask_util.add_layer(mask, caravan_collision_mask)
+            end
         end
-    end
-    if not vessel_placeable_entities[prototype.type] then
-        prototype.collision_mask = collision_mask_util.get_mask(prototype)
-        if prototype.type == 'splitter' or (not collision_mask_util.mask_contains_layer(prototype.collision_mask, 'floor-layer') and collision_mask_util.mask_contains_layer(prototype.collision_mask, 'player-layer')) then
-            collision_mask_util.add_layer(prototype.collision_mask, vessel_collision_mask)
+        if not mods.pystellarexpedition and not vessel_placeable_entities[prototype.type] then
+            if prototype.type == 'splitter' or (not collision_mask_util.mask_contains_layer(mask, 'floor-layer') and collision_mask_util.mask_contains_layer(mask, 'player-layer')) then
+                collision_mask_util.add_layer(mask, vessel_collision_mask)
+            end
         end
     end
 end
@@ -529,13 +530,13 @@ for _, tile in pairs(data.raw.tile) do
     tile.collision_mask = collision_mask_util.get_mask(tile)
     if collision_mask_util.mask_contains_layer(tile.collision_mask, 'water-tile') then
         collision_mask_util.add_layer(tile.collision_mask, caravan_collision_mask)
-        collision_mask_util.add_layer(tile.collision_mask, vessel_collision_mask)
+        if not mods.pystellarexpedition then collision_mask_util.add_layer(tile.collision_mask, vessel_collision_mask) end
     end
 end
 
 if register_cache_file ~= nil then
-    register_cache_file({"pycoalprocessing","pyfusionenergy","pyindustry","pyrawores","pypetroleumhandling","pyalienlife"}, "__pyalienlife__/cached-configs/pyalienlife+pycoalprocessing+pyfusionenergy+pyindustry+pypetroleumhandling+pyrawores")
-    register_cache_file({"pycoalprocessing","pyfusionenergy","pyindustry","pyrawores","pyhightech","pypetroleumhandling","pyalienlife"}, "__pyalienlife__/cached-configs/pyalienlife+pycoalprocessing+pyfusionenergy+pyhightech+pyindustry+pypetroleumhandling+pyrawores")
+    register_cache_file({'pycoalprocessing','pyfusionenergy','pyindustry','pyrawores','pypetroleumhandling','pyalienlife'}, '__pyalienlife__/cached-configs/pyalienlife+pycoalprocessing+pyfusionenergy+pyindustry+pypetroleumhandling+pyrawores')
+    register_cache_file({'pycoalprocessing','pyfusionenergy','pyindustry','pyrawores','pyhightech','pypetroleumhandling','pyalienlife'}, '__pyalienlife__/cached-configs/pyalienlife+pycoalprocessing+pyfusionenergy+pyhightech+pyindustry+pypetroleumhandling+pyrawores')
 end
 
 -- make players flammable
@@ -547,6 +548,6 @@ for _, character in pairs(data.raw.character) do
                 table.insert(new_flags, flag)
             end
         end
-        character.flags = new_flags  
+        character.flags = new_flags
     end
 end
