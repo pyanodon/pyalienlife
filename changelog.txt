@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.35
+Date: ?
+  Changes:
+    - Fixed that productivity couldn't be used on cottongut science recipes mk01, mk02, and mk04
+    - Fixed that the cottongut turd path 1 upgraded recipes did not accept productivity. (https://github.com/pyanodon/pybugreports/issues/493)
+    - Allowed productivity on the titanium+propene plastic recipe.
+    - Fixed that mk2 and mk3 starch recipes did not accept productivity.
+    - Allowed productivity on tuuphra path 3.
+---------------------------------------------------------------------------------------------------
 Version: 2.1.34
 Date: 2024-9-5
   Changes:
