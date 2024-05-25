@@ -1,4 +1,4 @@
-local util = require('util')
+local util = require 'util'
 
 for i = 4, 10, 2 do
 	data:extend{{
@@ -260,13 +260,11 @@ data:extend{{
 			{
 				filename = '__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png',
 				priority = 'low',
-				--line_length = 8,
 				width = 32,
 				height = 32,
 				frame_count = 1,
 				direction_count = 1,
 				shift = util.by_pixel(-0.0, -0.0)
-				--animation_speed = 8,
 			}
 		}
 	},

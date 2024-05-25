@@ -1,20 +1,18 @@
-local FUN = require('__pycoalprocessing__/prototypes/functions/functions')
-
 local tech_upgrades = {
-    require('prototypes/upgrades/biofactory'),
-    require('prototypes/upgrades/compost'),
-    require('prototypes/upgrades/creature'),
-    require('prototypes/upgrades/incubator'),
-    require('prototypes/upgrades/slaughterhouse'),
-    require('prototypes/upgrades/arthurian'),
-    require('prototypes/upgrades/dhilmos'),
-    require('prototypes/upgrades/dingrits'),
-    require('prototypes/upgrades/korlex'),
-    require('prototypes/upgrades/fawogae'),
-    require('prototypes/upgrades/moss'),
-    require('prototypes/upgrades/scrondrix'),
-    require('prototypes/upgrades/vonix'),
-    require('prototypes/upgrades/yaedols'),
+    require 'prototypes/upgrades/biofactory',
+    require 'prototypes/upgrades/compost',
+    require 'prototypes/upgrades/creature',
+    require 'prototypes/upgrades/incubator',
+    require 'prototypes/upgrades/slaughterhouse',
+    require 'prototypes/upgrades/arthurian',
+    require 'prototypes/upgrades/dhilmos',
+    require 'prototypes/upgrades/dingrits',
+    require 'prototypes/upgrades/korlex',
+    require 'prototypes/upgrades/fawogae',
+    require 'prototypes/upgrades/moss',
+    require 'prototypes/upgrades/scrondrix',
+    require 'prototypes/upgrades/vonix',
+    require 'prototypes/upgrades/yaedols',
 }
 
 if (data and mods.pyhightech) or (script and script.active_mods.pyhightech) then -- is pyHT installed?
@@ -162,7 +160,7 @@ local function build_tech_upgrade(tech_upgrade)
                 if effective_speed then
                     local adjusted_speed = effect.speed * 100
                     if adjusted_speed >= 0 then adjusted_speed = '+' .. adjusted_speed end
-                    FUN.add_to_description('module', module, {'turd.adjusted-speed', adjusted_speed})
+                    py.add_to_description('module', module, {'turd.adjusted-speed', adjusted_speed})
                 end
 
                 if tech_upgrade.module_category and effect.speed and effect.speed ~= 0 then
@@ -185,10 +183,10 @@ local function build_tech_upgrade(tech_upgrade)
                     data:extend{module}
                 end
             elseif effect.type == 'unlock-recipe' and not effect.also_unlocked_by_techs and data.raw.recipe[effect.recipe] and not recipes_with_turd_description[effect.recipe] then
-                FUN.add_to_description('recipe', data.raw.recipe[effect.recipe], {'turd.font', {'turd.recipe'}})
+                py.add_to_description('recipe', data.raw.recipe[effect.recipe], {'turd.font', {'turd.recipe'}})
                 recipes_with_turd_description[effect.recipe] = true
             elseif effect.type == 'recipe-replacement' and data.raw.recipe[effect.new] then
-                FUN.add_to_description('recipe', data.raw.recipe[effect.new], {'turd.font', {'turd.recipe-replacement'}})
+                py.add_to_description('recipe', data.raw.recipe[effect.new], {'turd.font', {'turd.recipe-replacement'}})
             end
         end
     end

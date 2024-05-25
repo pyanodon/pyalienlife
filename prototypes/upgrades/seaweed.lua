@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     for recipe, ingredient in pairs({
         [table.deepcopy(data.raw.recipe['seaweed-crop-mk01'])] = {'decider-combinator', 10},

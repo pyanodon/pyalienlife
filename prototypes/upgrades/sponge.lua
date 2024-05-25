@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     data:extend{
         {
@@ -68,7 +66,7 @@ if data and not yafc_turd_integration then
         recipe.main_product = sponges[i]
         data:extend{recipe}
     end
-    FUN.productivity(productivity)
+    py.allow_productivity(productivity)
 
     for _, recipe in pairs({
         table.deepcopy(data.raw.recipe['sea-sponge-1']),

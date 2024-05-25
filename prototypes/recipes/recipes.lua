@@ -1,4 +1,4 @@
-require("__pycoalprocessing__/prototypes/functions/functions")
+require '__pycoalprocessing__/prototypes/functions/functions'
 
 --Example result replacer
 --results_replacer(recipe name*, old item*, new item*, new_amount**)

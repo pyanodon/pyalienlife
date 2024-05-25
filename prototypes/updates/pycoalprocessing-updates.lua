@@ -1,5 +1,3 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
 --TECHNOLOGY--
 -- TECHNOLOGY('coal-processing-3'):add_pack('py-science-pack-3')
 -- TECHNOLOGY('energy-3'):add_pack('py-science-pack-3')

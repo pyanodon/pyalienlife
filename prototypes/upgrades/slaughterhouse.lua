@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 local pyAE = (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalternativeenergy)
 local pySE = (data and mods.pystellarexpedition) or (script and script.active_mods.pystellarexpedition)
 

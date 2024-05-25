@@ -1,5 +1,3 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
 ------------------EGG MAKER------------------
 
 FUN.autorecipes {

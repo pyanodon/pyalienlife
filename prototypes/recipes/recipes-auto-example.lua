@@ -1,4 +1,4 @@
-require("__pycoalprocessing__/prototypes/functions/functions")
+require '__pycoalprocessing__/prototypes/functions/functions'
 
 		--((single mode example))--
 --[[

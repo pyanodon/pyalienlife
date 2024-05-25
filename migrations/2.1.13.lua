@@ -1,4 +1,4 @@
-local turd_migrate = require('__pyalienlife__/scripts/turd/turd-migration')
+local turd_migrate = require '__pyalienlife__/scripts/turd/turd-migration'
 
 turd_migrate('sap-upgrade', 'patch')
 turd_migrate('bioprinting-upgrade', 'high-viability')

@@ -1,4 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 local is_pyse = (data and mods['pystellarexpedition']) or (script and script.active_mods['pystellarexpedition'])
 
 local cags_effects

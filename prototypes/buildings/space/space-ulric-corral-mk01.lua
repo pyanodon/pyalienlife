@@ -46,7 +46,7 @@ ENTITY {
         module_slots = 8,
     },
     match_animation_speed_to_activity = false,
-    allowed_effects = {"speed","productivity",'consumption','pollution'},
+    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {"ulric"},
     crafting_speed = 0.125,
     energy_source = {
@@ -62,7 +62,6 @@ ENTITY {
                 width = 383,
                 height = 448,
                 frame_count = 1,
-                --line_length = 8,
                 shift = util.by_pixel(0, -32),
             },
             {
@@ -70,7 +69,6 @@ ENTITY {
                 width = 383,
                 height = 448,
                 frame_count = 1,
-                --line_length = 8,
                 shift = util.by_pixel(0, -32),
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },

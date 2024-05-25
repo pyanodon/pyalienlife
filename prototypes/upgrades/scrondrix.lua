@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['Scrondrix 1']),

@@ -1,33 +1,29 @@
-require('__stdlib__/stdlib/data/data').Util.create_data_globals()
-local table = require('__stdlib__/stdlib/utils/table')
-local FUN = require('__pycoalprocessing__/prototypes/functions/functions')
-
-require('prototypes/updates/autoplace-fish')
-require('prototypes/updates/base-updates')
+require 'prototypes/updates/autoplace-fish'
+require 'prototypes/updates/base-updates'
 local collision_mask_util = require '__core__/lualib/collision-mask-util'
 
 if mods['pycoalprocessing'] then
-    require('prototypes/updates/pycoalprocessing-updates')
+    require 'prototypes/updates/pycoalprocessing-updates'
     ITEM('automation-science-pack', 'tool'):set('icon', '__pyalienlifegraphics3__/graphics/icons/automation-science-pack.png')
 end
 
 if mods['pyfusionenergy'] then
-    require('prototypes/updates/pyfusionenergy-updates')
+    require 'prototypes/updates/pyfusionenergy-updates'
 end
 
 if mods['pyrawores'] then
-    require('prototypes/updates/pyrawores-updates')
+    require 'prototypes/updates/pyrawores-updates'
 end
 
 if mods['pyhightech'] then
-    require('prototypes/technologies/kicalk')
-    require('prototypes/technologies/schrodinger-antelope')
-    require('prototypes/buildings/antelope-enclosure-mk01')
-    require('prototypes/updates/pyhightech-updates')
+    require 'prototypes/technologies/kicalk'
+    require 'prototypes/technologies/schrodinger-antelope'
+    require 'prototypes/buildings/antelope-enclosure-mk01'
+    require 'prototypes/updates/pyhightech-updates'
 end
 
 if mods['pypetroleumhandling'] then
-    require('prototypes/updates/pypetroleumhandling-updates')
+    require 'prototypes/updates/pypetroleumhandling-updates'
 end
 
 TECHNOLOGY('ralesia'):add_pack('py-science-pack-1')
@@ -149,13 +145,13 @@ RECIPE('ball-mill-mk01'):remove_unlock('crusher'):add_unlock('crusher-2')
 ----------------------------------------------------------------------------------------------------
 
 if mods['pyalternativeenergy'] then
-    require('__pyalternativeenergy__/prototypes/updates/base-updates')
-    if mods['pycoalprocessing'] then require('__pyalternativeenergy__/prototypes/updates/pycoalprocessing-updates') end
-    if mods['pyalienlife'] then require('__pyalternativeenergy__/prototypes/updates/pyalienlife-updates') end
-    if mods['pyfusionenergy'] then require('__pyalternativeenergy__/prototypes/updates/pyfusionenergy-updates') end
-    if mods['pyhightech'] then require('__pyalternativeenergy__/prototypes/updates/pyhightech-updates') end
-    if mods['pyrawores'] then require('__pyalternativeenergy__/prototypes/updates/pyrawores-updates') end
-    if mods['pypetroleumhandling'] then require('__pyalternativeenergy__/prototypes/updates/pypetroleumhandling-updates') end
+    require '__pyalternativeenergy__/prototypes/updates/base-updates'
+    if mods['pycoalprocessing'] then require '__pyalternativeenergy__/prototypes/updates/pycoalprocessing-updates' end
+    if mods['pyalienlife'] then require '__pyalternativeenergy__/prototypes/updates/pyalienlife-updates' end
+    if mods['pyfusionenergy'] then require '__pyalternativeenergy__/prototypes/updates/pyfusionenergy-updates' end
+    if mods['pyhightech'] then require '__pyalternativeenergy__/prototypes/updates/pyhightech-updates' end
+    if mods['pyrawores'] then require '__pyalternativeenergy__/prototypes/updates/pyrawores-updates' end
+    if mods['pypetroleumhandling'] then require '__pyalternativeenergy__/prototypes/updates/pypetroleumhandling-updates' end
 end
 
 if mods.pystellarexpedition then
@@ -169,7 +165,7 @@ end
 -- TURD
 ----------------------------------------------------------------------------------------------------
 
-require('prototypes/upgrades/tech-upgrades')
+require 'prototypes/upgrades/tech-upgrades'
 
 ----------------------------------------------------------------------------------------------------
 -- replace_ingredient
@@ -217,7 +213,7 @@ for _, module in pairs(data.raw.module) do
     end
 
     if module.limitation then
-        module.dict_limitation = table.array_to_dictionary(module.limitation, true)
+        module.dict_limitation = table.invert(module.limitation)
     end
 end
 

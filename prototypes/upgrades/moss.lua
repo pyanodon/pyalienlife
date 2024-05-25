@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     data:extend{{
         type = 'recipe',
@@ -17,7 +15,7 @@ if data and not yafc_turd_integration then
         },
     }}
 
-    FUN.productivity{'chlorinated-water'}
+    py.allow_productivity{'chlorinated-water'}
 
     for _, recipe in pairs({
         table.deepcopy(data.raw.recipe['Moss 1']),

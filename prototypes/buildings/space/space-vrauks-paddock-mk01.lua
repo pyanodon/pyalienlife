@@ -46,7 +46,7 @@ ENTITY {
     module_specification = {
         module_slots = 10
     },
-    allowed_effects = {"speed","productivity",'consumption','pollution'},
+    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {"vrauks"},
     crafting_speed = 0.1,
     energy_source = {
@@ -61,9 +61,7 @@ ENTITY {
                 filename = "__pyalienlifegraphics3__/graphics/entity/vrauks-paddock/vrauks-paddock-mk01.png",
                 width = 448,
                 height = 448,
-                --line_length = 5,
                 frame_count = 1,
-                --animation_speed = 0.3,
                 shift = util.by_pixel(16, -16)
             },
         }

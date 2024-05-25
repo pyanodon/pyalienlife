@@ -1,6 +1,3 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
-
 -- ------------------PHADAI CARAPACE------------------
 
 -- FUN.autorecipes {

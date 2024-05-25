@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 function Digosaurus.update_gui(gui)
 	local dig_data = global.dig_sites[gui.tags.unit_number]
 	if not Digosaurus.validity_check(dig_data) then gui.destroy() return end
@@ -48,7 +46,7 @@ function Digosaurus.update_gui(gui)
 			element.sprite = 'utility/slot_icon_fuel'
 			element.number = nil
 		end
-		element.tooltip = generate_favorite_food_tooltip(Digosaurus.favorite_foods, 'digosaurus-gui')
+		element.tooltip = py.generate_favorite_food_tooltip(Digosaurus.favorite_foods, 'digosaurus-gui')
 	end
 end
 

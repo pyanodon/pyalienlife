@@ -1,4 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 local path_1_module_effect = {consumption = 3, speed = -0.1, productivity = 0, type = 'module-effects'}
 local path_1_effects = {}
 local category = 'creature-chamber'

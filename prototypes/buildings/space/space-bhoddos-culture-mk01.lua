@@ -48,7 +48,7 @@ ENTITY {
     module_specification = {
         module_slots = 1
     },
-    allowed_effects = {"speed","productivity",'consumption','pollution'},
+    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {"bhoddos"},
     crafting_speed = 0.02,
     energy_source = {
@@ -63,18 +63,14 @@ ENTITY {
                 filename = "__pyalienlifegraphics__/graphics/entity/bhoddos-culture/off.png",
                 width = 384,
                 height = 416,
-                --line_length = 5,
                 frame_count = 1,
-                --animation_speed = 0.4,
                 shift = util.by_pixel(16, -32)
             },
             {
                 filename = "__pyalienlifegraphics__/graphics/entity/bhoddos-culture/off-mask.png",
                 width = 384,
                 height = 416,
-                --line_length = 5,
                 frame_count = 1,
-                --animation_speed = 0.4,
                 shift = util.by_pixel(16, -32),
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },
@@ -145,31 +141,31 @@ ENTITY {
         --1
         {
             production_type = "input",
-            pipe_covers = DATA.Pipes.covers(false, true, true, true),
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_covers = py.pipe_covers(false, true, true, true),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             base_area = 10,
             base_level = -1,
             pipe_connections = {{type = "input", position = {1.0, -6.0}}}
         },
         {
             production_type = "input",
-            pipe_covers = DATA.Pipes.covers(false, true, true, true),
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_covers = py.pipe_covers(false, true, true, true),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             base_area = 10,
             base_level = -1,
             pipe_connections = {{type = "input", position = {-1.0, -6.0}}}
         },
         {
             production_type = "output",
-            pipe_covers = DATA.Pipes.covers(false, true, true, true),
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_covers = py.pipe_covers(false, true, true, true),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             base_level = 1,
             pipe_connections = {{type = "output", position = {1.0, 6.0}}}
         },
         {
             production_type = "output",
-            pipe_covers = DATA.Pipes.covers(false, true, true, true),
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_covers = py.pipe_covers(false, true, true, true),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             base_level = 1,
             pipe_connections = {{type = "output", position = {-1.0, 6.0}}}
         },

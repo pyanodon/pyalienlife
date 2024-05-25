@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     local recipe = table.deepcopy(data.raw.recipe['yotoi-seeds'])
     recipe.name = 'yotoi-seeds-cold'

@@ -3,7 +3,6 @@ Digosaurus.events = {}
 
 require 'digosaurus-prototypes'
 require 'digosaurus-gui'
-local Table = require('__stdlib__/stdlib/utils/table')
 
 Digosaurus.events.init = function(event)
     global.dig_sites = global.dig_sites or {}
@@ -110,15 +109,15 @@ Digosaurus.events[61] = function(event)
         local food_inventory_contents = dig_data.food_inventory.get_contents()
 
         if table_size(dig_data.scanned_ores) == 0 then
-            draw_error_sprite(entity, 'utility.warning_icon', time_to_live)
+            py.draw_error_sprite(entity, 'utility.warning_icon', time_to_live)
         elseif not Digosaurus.has_food(food_inventory_contents) then
-            draw_error_sprite(entity, 'utility.fuel_icon', time_to_live)
+            py.draw_error_sprite(entity, 'utility.fuel_icon', time_to_live)
         elseif entity.energy == 0 then
-            draw_error_sprite(entity, 'utility.electricity_icon_unplugged', time_to_live)
+            py.draw_error_sprite(entity, 'utility.electricity_icon_unplugged', time_to_live)
         elseif dig_data.digosaur_inventory.is_empty() then
-            draw_error_sprite(entity, 'no_module_animal', time_to_live)
+            py.draw_error_sprite(entity, 'no_module_animal', time_to_live)
         elseif entity.energy < entity.electric_buffer_size * 0.9 then
-            draw_error_sprite(entity, 'utility.electricity_icon', time_to_live)
+            py.draw_error_sprite(entity, 'utility.electricity_icon', time_to_live)
         else
             if dig_data.inventory.get_item_count() > 1000 then
                 goto continue -- only mine until 1000 ores
@@ -274,7 +273,7 @@ function Digosaurus.scan_ores(dig_data)
         {position.x + range + offset.x, position.y + range + offset.y}
     }
 
-    dig_data.scanned_ores = Table.filter(
+    dig_data.scanned_ores = table.filter(
         entity.surface.find_entities_filtered{area = area, type = 'resource'},
         function(ore) return Digosaurus.minable_categories[ore.prototype.resource_category] end
     )

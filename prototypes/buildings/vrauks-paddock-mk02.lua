@@ -1,4 +1,3 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 local MODULE_SLOTS = 20
 
 RECIPE {
@@ -48,9 +47,9 @@ ENTITY {
     module_specification = {
         module_slots = MODULE_SLOTS
     },
-    allowed_effects = {"speed","productivity",'consumption','pollution'},
+    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {"vrauks"},
-    crafting_speed = FUN.farm_speed_derived(MODULE_SLOTS, "vrauks-paddock-mk01"),
+    crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "vrauks-paddock-mk01"),
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
@@ -63,9 +62,7 @@ ENTITY {
                 filename = "__pyalienlifegraphics3__/graphics/entity/vrauks-paddock/vrauks-paddock-mk02.png",
                 width = 448,
                 height = 448,
-                --line_length = 5,
                 frame_count = 1,
-                --animation_speed = 0.3,
                 shift = util.by_pixel(16, -16)
             },
         }

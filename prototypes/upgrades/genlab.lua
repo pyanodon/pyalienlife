@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     local adam = table.deepcopy(data.raw.recipe['adam42-gen'])
     adam.name = 'adam42-gen-laser'

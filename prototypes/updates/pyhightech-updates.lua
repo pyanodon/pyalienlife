@@ -1,9 +1,7 @@
-local FUN = require('__pycoalprocessing__/prototypes/functions/functions')
-
 --(( Technology ))--
-require('prototypes/technologies/mega-farm-kicalk')
-require('prototypes/technologies/mega-farm-cadaveric-arum')
-require('prototypes/technologies/moondrop')
+require 'prototypes/technologies/mega-farm-kicalk'
+require 'prototypes/technologies/mega-farm-cadaveric-arum'
+require 'prototypes/technologies/moondrop'
 
 TECHNOLOGY('epoxy'):remove_pack('chemical-science-pack')
 TECHNOLOGY('fertilizer'):set_fields{enabled = false, hidden = true}
@@ -20,43 +18,43 @@ TECHNOLOGY('integrated-circuits-2'):add_pack('py-science-pack-3')
 TECHNOLOGY('advanced-electronics'):add_pack('py-science-pack-3')
 
 --(( BUILDINGS ))--
-require('prototypes/buildings/cadavericarum-mk01')
-require('prototypes/buildings/cadavericarum-mk02')
-require('prototypes/buildings/cadavericarum-mk03')
-require('prototypes/buildings/cadavericarum-mk04')
-require('prototypes/buildings/kicalk-plantation-mk01')
-require('prototypes/buildings/kicalk-plantation-mk02')
-require('prototypes/buildings/kicalk-plantation-mk03')
-require('prototypes/buildings/kicalk-plantation-mk04')
-require('__pyhightech__/prototypes/buildings/moondrop-greenhouse-mk02')
-require('__pyhightech__/prototypes/buildings/moondrop-greenhouse-mk03')
-require('__pyhightech__/prototypes/buildings/moondrop-greenhouse-mk04')
+require 'prototypes/buildings/cadavericarum-mk01'
+require 'prototypes/buildings/cadavericarum-mk02'
+require 'prototypes/buildings/cadavericarum-mk03'
+require 'prototypes/buildings/cadavericarum-mk04'
+require 'prototypes/buildings/kicalk-plantation-mk01'
+require 'prototypes/buildings/kicalk-plantation-mk02'
+require 'prototypes/buildings/kicalk-plantation-mk03'
+require 'prototypes/buildings/kicalk-plantation-mk04'
+require '__pyhightech__/prototypes/buildings/moondrop-greenhouse-mk02'
+require '__pyhightech__/prototypes/buildings/moondrop-greenhouse-mk03'
+require '__pyhightech__/prototypes/buildings/moondrop-greenhouse-mk04'
 
 --(( RECIPES ))--
 
 --antelope
-require('prototypes/recipes/antelope/recipes-antelope')
-require('prototypes/recipes/antelope/recipes-antelope-raising')
-require('prototypes/recipes/antelope/recipes-antelope-rendering')
---require('prototypes/recipes/antelope/recipes-antelope-modules')
+require 'prototypes/recipes/antelope/recipes-antelope'
+require 'prototypes/recipes/antelope/recipes-antelope-raising'
+require 'prototypes/recipes/antelope/recipes-antelope-rendering'
+--require 'prototypes/recipes/antelope/recipes-antelope-modules'
 
 --Cadaveric-arum
-require('prototypes/recipes/cadaveric-arum/recipes-cadaveric')
-require('prototypes/recipes/cadaveric-arum/recipes-auto-cadaveric')
-require('prototypes/recipes/cadaveric-arum/recipes-arum-megafarm')
-require('prototypes/recipes/cadaveric-arum/recipes-arum-modules')
+require 'prototypes/recipes/cadaveric-arum/recipes-cadaveric'
+require 'prototypes/recipes/cadaveric-arum/recipes-auto-cadaveric'
+require 'prototypes/recipes/cadaveric-arum/recipes-arum-megafarm'
+require 'prototypes/recipes/cadaveric-arum/recipes-arum-modules'
 
 --kilcalk
-require('prototypes/recipes/kicalk/recipes-kicalk-megafarm')
-require('prototypes/recipes/kicalk/recipes-kicalk')
-require('prototypes/recipes/kicalk/recipes-auto-kicalk')
-require('prototypes/recipes/kicalk/recipes-kicalk-modules')
+require 'prototypes/recipes/kicalk/recipes-kicalk-megafarm'
+require 'prototypes/recipes/kicalk/recipes-kicalk'
+require 'prototypes/recipes/kicalk/recipes-auto-kicalk'
+require 'prototypes/recipes/kicalk/recipes-kicalk-modules'
 
 --Moondrop
-require('prototypes/recipes/moondrop/recipes-moondrop')
-require('prototypes/recipes/moondrop/recipes-auto-moondrop')
-require('prototypes/recipes/moondrop/recipes-moondrop-modules')
---require('prototypes/recipes/moondrop/recipes-moondrop-copper') TODO: SETUP TURD FARM TECHS AGAIN
+require 'prototypes/recipes/moondrop/recipes-moondrop'
+require 'prototypes/recipes/moondrop/recipes-auto-moondrop'
+require 'prototypes/recipes/moondrop/recipes-moondrop-modules'
+--require 'prototypes/recipes/moondrop/recipes-moondrop-copper' TODO: SETUP TURD FARM TECHS AGAIN
 
 data.raw['recipe-category']['arum'].allowed_module_categories = { 'arum' }
 data.raw['recipe-category']['arum'].modules_required = true
@@ -86,8 +84,8 @@ if not mods['pyalternativeenergy'] then
 end
 
 --(( ORES ))--
-require('prototypes/ores/kicalk')
-require('prototypes/ores/arum')
+require 'prototypes/ores/kicalk'
+require 'prototypes/ores/arum'
 
 --(( MODIFICATIONS ))--
 --TECHNOLOGY--
@@ -269,22 +267,22 @@ RECIPE('cadaveric-arum-mk04'):remove_unlock('basic-electronics')
 local FULL_CRAFTING_SPEED = 1 -- crafting speed when full of mk01 modules
 ITEM('moondrop-greenhouse-mk01'):subgroup_order('py-alienlife-farm-buildings-mk01', 'b')
 data.raw['assembling-machine']['moondrop-greenhouse-mk01'].module_specification.module_slots = 16
-data.raw['assembling-machine']['moondrop-greenhouse-mk01'].crafting_speed = FUN.farm_speed(16, FULL_CRAFTING_SPEED)
+data.raw['assembling-machine']['moondrop-greenhouse-mk01'].crafting_speed = py.farm_speed(16, FULL_CRAFTING_SPEED)
 
 RECIPE('moondrop-greenhouse-mk02'):add_unlock('botany-mk02')
 ITEM('moondrop-greenhouse-mk02'):subgroup_order('py-alienlife-farm-buildings-mk02', 'b')
 data.raw['assembling-machine']['moondrop-greenhouse-mk02'].module_specification.module_slots = 32
-data.raw['assembling-machine']['moondrop-greenhouse-mk02'].crafting_speed = FUN.farm_speed_derived(32, 'moondrop-greenhouse-mk01')
+data.raw['assembling-machine']['moondrop-greenhouse-mk02'].crafting_speed = py.farm_speed_derived(32, 'moondrop-greenhouse-mk01')
 
 RECIPE('moondrop-greenhouse-mk03'):add_unlock('botany-mk03')
 ITEM('moondrop-greenhouse-mk03'):subgroup_order('py-alienlife-farm-buildings-mk03', 'b')
 data.raw['assembling-machine']['moondrop-greenhouse-mk03'].module_specification.module_slots = 48
-data.raw['assembling-machine']['moondrop-greenhouse-mk03'].crafting_speed = FUN.farm_speed_derived(48, 'moondrop-greenhouse-mk01')
+data.raw['assembling-machine']['moondrop-greenhouse-mk03'].crafting_speed = py.farm_speed_derived(48, 'moondrop-greenhouse-mk01')
 
 RECIPE('moondrop-greenhouse-mk04'):add_unlock('botany-mk04')
 ITEM('moondrop-greenhouse-mk04'):subgroup_order('py-alienlife-farm-buildings-mk04', 'b')
 data.raw['assembling-machine']['moondrop-greenhouse-mk04'].module_specification.module_slots = 64
-data.raw['assembling-machine']['moondrop-greenhouse-mk04'].crafting_speed = FUN.farm_speed_derived(64, 'moondrop-greenhouse-mk01')
+data.raw['assembling-machine']['moondrop-greenhouse-mk04'].crafting_speed = py.farm_speed_derived(64, 'moondrop-greenhouse-mk01')
 
 RECIPE('harvester'):add_ingredient({type = 'item', name = 'aerogel', amount = 20})--:replace_ingredient('plastic-bar', 'biopolymer')
 RECIPE('harmonic-absorber'):add_ingredient({type = 'item', name = 'negasium', amount = 1})
@@ -1618,7 +1616,7 @@ data.raw['item']['py-fertilizer'] = nil
 data.raw['recipe']['fertilizer-2'].results = {{'fertilizer', 15}}
 RECIPE('fertilizer-2'):add_unlock('biofluid-mk01'):add_ingredient{type = 'item', name = 'guano', amount = 3}
 
-FUN.productivity{'cellulose-01'}
+py.allow_productivity{'cellulose-01'}
 
 data.raw.recipe['blood-meal'].ingredients = {
     {type = 'fluid', name = 'blood', amount = 100},

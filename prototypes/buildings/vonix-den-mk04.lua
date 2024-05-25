@@ -1,4 +1,3 @@
-local FUN = require('__pycoalprocessing__/prototypes/functions/functions')
 local MODULE_SLOTS = 4
 
 ITEM {
@@ -32,7 +31,7 @@ ENTITY {
     },
     allowed_effects = {'speed','productivity','consumption','pollution'},
     crafting_categories = {'vonix'},
-    crafting_speed = FUN.farm_speed_derived(MODULE_SLOTS, 'vonix-den-mk01'),
+    crafting_speed = py.farm_speed_derived(MODULE_SLOTS, 'vonix-den-mk01'),
     energy_source = {
         type = 'electric',
         usage_priority = 'secondary-input',

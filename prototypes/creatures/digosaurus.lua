@@ -241,7 +241,7 @@ ENTITY {
   module_specification = {
     module_slots = 4
   },
-  allowed_effects = {"speed","productivity",'consumption','pollution'},
+  allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
 }
 
 ENTITY {

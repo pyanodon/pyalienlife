@@ -1,5 +1,3 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
 --growth hormone and other trash that needs new uses. hulk growths
 
 FUN.autorecipes {

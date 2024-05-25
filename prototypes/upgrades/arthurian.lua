@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     data:extend{
         {
@@ -28,7 +26,7 @@ if data and not yafc_turd_integration then
         }
     }
 
-    FUN.productivity{'abacus'}
+    py.allow_productivity{'abacus'}
 
     for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['arthurian maturing 1']),

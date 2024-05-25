@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     data.raw.fluid['sweet-syrup'].default_temperature = 0
     data.raw.recipe['sweet-syrup'].results[1].temperature = 10
@@ -17,8 +15,8 @@ if data and not yafc_turd_integration then
             emissions_per_minute = -1,
             fluid_box = {
                 base_area = 0.5,
-                pipe_covers = DATA.Pipes.covers(false, true, true, true),
-                pipe_picture = DATA.Pipes.pictures('assembling-machine-3', nil, {0.0, -0.88}, nil, nil),
+                pipe_covers = py.pipe_covers(false, true, true, true),
+                pipe_picture = py.pipe_pictures('assembling-machine-3', nil, {0.0, -0.88}, nil, nil),
                 pipe_connections = {
                     {position = {4, -6}},
                     {position = {-4, -6}},
@@ -38,8 +36,8 @@ if data and not yafc_turd_integration then
         entity.order = data.raw.item[name].order
         table.insert(entity.fluid_boxes, {
             production_type = 'output',
-            pipe_covers = DATA.Pipes.covers(false, true, true, true),
-            pipe_picture = DATA.Pipes.pictures('assembling-machine-3', nil, {0.0, -0.88}, nil, nil),
+            pipe_covers = py.pipe_covers(false, true, true, true),
+            pipe_picture = py.pipe_pictures('assembling-machine-3', nil, {0.0, -0.88}, nil, nil),
             base_area = 1,
             base_level = 1,
             pipe_connections = {{type = 'output', position = {0.0, 6.0}}},

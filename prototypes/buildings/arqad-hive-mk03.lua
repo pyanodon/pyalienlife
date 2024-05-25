@@ -1,4 +1,3 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 local MODULE_SLOTS = 17
 
 RECIPE {
@@ -51,9 +50,9 @@ ENTITY {
     module_specification = {
         module_slots = MODULE_SLOTS
     },
-    allowed_effects = {"speed","productivity",'consumption','pollution'},
+    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {"arqad"},
-    crafting_speed = FUN.farm_speed_derived(MODULE_SLOTS, "arqad-hive-mk01"),
+    crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "arqad-hive-mk01"),
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
@@ -67,21 +66,17 @@ ENTITY {
                 filename = "__pyalienlifegraphics3__/graphics/entity/arqad-hive/off.png",
                 width = 384,
                 height = 448,
-                --line_length = 9,
                 frame_count = 1,
                 shift = util.by_pixel(0, -32),
                 priority = "low",
-                --animation_speed = 0.75,
             },
             {
                 filename = "__pyalienlifegraphics3__/graphics/entity/arqad-hive/off-mask.png",
                 width = 384,
                 height = 448,
-                --line_length = 9,
                 frame_count = 1,
                 shift = util.by_pixel(0, -32),
                 priority = "low",
-                --animation_speed = 0.75,
 				tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
             },
             --DOME
@@ -92,7 +87,6 @@ ENTITY {
                 height = 480,
                 shift = util.by_pixel(0, -64),
                 priority = "low",
-                --animation_speed = 0.75,
             },
         }
     },
@@ -321,8 +315,6 @@ ENTITY {
                 frame_count = 1,
                 width = 384,
                 height = 480,
-                --line_length = 31,
-                --animation_speed = 0.4,
                 priority = "extra-high"
             }
         }

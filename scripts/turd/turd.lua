@@ -1,13 +1,12 @@
 Turd = {}
 Turd.events = {}
-local Table = require('__stdlib__/stdlib/utils/table')
 local tech_upgrades, farm_building_tiers = table.unpack(require 'prototypes/upgrades/tech-upgrades')
 require 'bhoddos'
 
 local NOT_SELECTED = 333 -- enum
 
 local views = {'all', 'researched', 'selected', 'unselected'}
-views = Table.map(views, function(v) return {'turd.visible-' .. v, v} end)
+views = table.map(views, function(v) return {'turd.visible-' .. v, v} end)
 
 local function check_viewable(element, player, researched_technologies)
 	local name = element.tags.name

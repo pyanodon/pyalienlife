@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 Oculua = {}
 Oculua.events = {}
 
@@ -56,7 +54,7 @@ end
 
 function Oculua.find_ipod(player, item)
 	local checked_logistic_networks = {}
-	for _, ipod_data in FUN.shuffled_pairs(global.ipods) do
+	for _, ipod_data in py.shuffled_pairs(global.ipods) do
 		local ipod = ipod_data.entity
 		if ipod.force ~= player.force or ipod.surface ~= player.surface then goto continue end
 		if ipod_data.active_oculua >= #ipod_data.inventory then goto continue end

@@ -1,5 +1,3 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
 ------------------larva MAKER------------------
 
 FUN.autorecipes {

@@ -1,5 +1,3 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
 --TECHNOLOGY--
 --TECHNOLOGY('advanced-mining-facilities'):add_pack('py-science-pack-3')
 -- TECHNOLOGY('diamond-mining'):add_pack('py-science-pack-3')

@@ -1,6 +1,4 @@
-	local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
-------------------RENDERING------------------
+	------------------RENDERING------------------
 
 local INPUT_AMOUNT = 1
 
