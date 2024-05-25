@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = 'xyhiphoe-improve',
 	category = 'xyhiphoe',
 	--module_limitations = 'xyhiphoe',

@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = 'dingrits-improved',
 	category = 'dingrits',
 	--module_limitations = 'dingrits',

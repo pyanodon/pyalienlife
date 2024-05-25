@@ -1,6 +1,6 @@
 ------------------EGG MAKER------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'dhilmos-egg',
 	category = 'rc',
 	allowed_module_categories = {'dhilmos'},
@@ -77,7 +77,7 @@ FUN.autorecipes {
 
 --hatching
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'dhilmos-hatching',
 	category = 'dhilmos',
 	module_limitations = 'dhilmos',
@@ -185,7 +185,7 @@ FUN.autorecipes {
 
 --raising
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'dhilmos',
 	category = 'dhilmos',
 	module_limitations = 'dhilmos',

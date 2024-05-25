@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = 'caged-antelope',
 	category = 'antelope',
 	module_limitations = 'antelope',

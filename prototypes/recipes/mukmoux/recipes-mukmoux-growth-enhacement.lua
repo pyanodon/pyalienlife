@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = 'mukmoux-improved',
 	category = 'mukmoux',
 	--module_limitations = 'mukmoux',

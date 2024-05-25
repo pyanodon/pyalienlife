@@ -59,7 +59,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['yotoi-fruit-4']),
     }) do
         recipe.name = recipe.name .. '-nutrient'
-        local amount = FUN.remove_ingredient(recipe, 'fertilizer')
+        local _, amount = FUN.remove_ingredient(recipe, 'fertilizer')
         FUN.add_result(recipe, {'fertilizer', amount})
         FUN.add_result_amount(recipe, 'yotoi', 1)
         FUN.add_result_amount(recipe, 'yotoi-fruit', 1)

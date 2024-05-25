@@ -1,6 +1,6 @@
 ------------------PUP MAKER------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'korlex-pup',
 	category = 'rc',
 	allowed_module_categories = {'korlex'},
@@ -184,7 +184,7 @@ FUN.autorecipes {
 ]]--
 
 --raising
-FUN.autorecipes {
+py.autorecipes {
     name = 'korlex',
 	category = 'korlex',
 	module_limitations = 'korlex',

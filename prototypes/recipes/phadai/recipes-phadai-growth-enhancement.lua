@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = 'caged-phadai',
 	category = 'phadai',
 	--module_limitations = 'phadai',

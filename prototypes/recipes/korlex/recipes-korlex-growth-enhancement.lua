@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = 'korlex-improved',
 	category = 'korlex',
 	--module_limitations = 'korlex',

@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = 'zipir-improved',
 	category = 'zipir',
 	module_limitations = 'zipir',

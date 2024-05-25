@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = 'dhilmos-inproved',
 	category = 'dhilmos',
 	--module_limitations = 'dhilmos',

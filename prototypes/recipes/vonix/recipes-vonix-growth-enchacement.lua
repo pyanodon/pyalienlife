@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = 'vonix-improved',
 	category = 'vonix',
 	--module_limitations = 'vonix',

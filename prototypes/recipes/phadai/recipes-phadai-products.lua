@@ -1,5 +1,5 @@
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'carapace',
 	category = 'phadai',
 	subgroup = 'py-alienlife-phadai',

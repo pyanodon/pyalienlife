@@ -1,4 +1,4 @@
-	FUN.autorecipes {
+	py.autorecipes {
     name = 'zungror-improved',
 	category = 'zungror',
 	--module_limitations = 'zungror',

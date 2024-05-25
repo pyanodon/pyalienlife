@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = 'trits-improved',
 	category = 'trits',
 	--module_limitations = 'trits',

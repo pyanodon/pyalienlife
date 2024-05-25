@@ -19,7 +19,7 @@ local IMP_BLOOD = 160
 local IMP_BRAIN = 8
 
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-arthurian',
 	category = 'slaughterhouse',
 	subgroup = 'py-alienlife-arthurian',

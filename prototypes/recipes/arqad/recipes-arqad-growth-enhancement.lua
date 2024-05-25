@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = 'arqad-improve',
 	category = 'arqad',
 	--module_limitations = 'arqad',

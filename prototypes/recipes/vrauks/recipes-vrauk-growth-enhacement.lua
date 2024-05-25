@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = 'vrauks-improved',
 	category = 'vrauks',
 	--module_limitations = 'vrauks',

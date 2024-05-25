@@ -1,6 +1,6 @@
 ------------------pup MAKER------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'phadai-pup',
 	category = 'rc',
 	allowed_module_categories = {'phadai'},
@@ -228,7 +228,7 @@ FUN.autorecipes {
 
 --raising
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'phadai',
 	category = 'phadai',
 	module_limitations = 'phadai',

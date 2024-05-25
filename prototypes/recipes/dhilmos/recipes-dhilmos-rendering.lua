@@ -14,7 +14,7 @@ local IMP_GUTS = 6
 local IMP_BLOOD = 120
 
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering',
 	category = 'slaughterhouse',
 	--module_limitations = 'dhilmos',

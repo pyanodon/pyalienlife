@@ -21,7 +21,7 @@ local IMP_BRAIN = 6
 local IMP_SPECIAL = 10
 
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering',
 	category = 'slaughterhouse',
 	--module_limitations = 'simik',

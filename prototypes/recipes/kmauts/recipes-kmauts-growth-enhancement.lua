@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = 'kmauts-improved',
 	category = 'kmauts',
 	--module_limitations = 'kmauts',

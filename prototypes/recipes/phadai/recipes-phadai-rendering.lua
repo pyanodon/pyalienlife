@@ -19,7 +19,7 @@ local IMP_BLOOD = 100
 local IMP_BRAIN = 6
 
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering',
 	category = 'slaughterhouse',
 	--module_limitations = 'phadai',

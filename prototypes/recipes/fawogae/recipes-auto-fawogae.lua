@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = 'fawogae',
 	category = 'fawogae',
 	subgroup = 'py-alienlife-fawogae',

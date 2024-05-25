@@ -1,6 +1,6 @@
 ------------------CUB MAKER------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'cottongut-cub',
 	category = 'rc',
 	allowed_module_categories = {'cottongut'},
@@ -76,7 +76,7 @@ FUN.autorecipes {
 
 --raising
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'caged-cottongut',
 	category = 'cottongut',
 	module_limitations = 'cottongut',

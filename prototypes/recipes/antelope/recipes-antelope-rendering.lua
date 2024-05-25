@@ -1,6 +1,6 @@
 ------------------RENDERING------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-antelope',
 	category = 'slaughterhouse',
 	--module_limitations = 'antelope',

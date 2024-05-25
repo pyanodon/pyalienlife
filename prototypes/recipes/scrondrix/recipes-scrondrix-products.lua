@@ -1,6 +1,6 @@
 --MANURE
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'manure',
 	category = 'scrondrix',
     main_product = 'manure',

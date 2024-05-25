@@ -1,6 +1,6 @@
 ------------------EGG MAKER------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'vonix-cub',
 	category = 'rc',
 	allowed_module_categories = {'vonix'},
@@ -165,7 +165,7 @@ RECIPE {
 
 --Raising
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'vonix-raising',
 	category = 'vonix',
 	module_limitations = 'vonix',

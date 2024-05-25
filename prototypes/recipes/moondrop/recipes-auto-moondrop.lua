@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = 'moondrops',
 	category = 'moon',
 	module_limitations = 'moondrop',

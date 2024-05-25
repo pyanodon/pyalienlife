@@ -15,7 +15,7 @@ local IMP_BLOOD = 600
 local IMP_BRAIN = 4
 
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-vrauks',
 	category = 'slaughterhouse',
 	subgroup = 'py-alienlife-vrauks',

@@ -19,7 +19,7 @@ local IMP_BLOOD = 90
 local IMP_BRAIN = 5
 
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-cottongut',
 	category = 'slaughterhouse',
 	subgroup = 'py-alienlife-cottongut',

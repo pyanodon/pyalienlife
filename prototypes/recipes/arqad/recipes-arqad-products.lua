@@ -1,5 +1,5 @@
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'filled-comb',
 	category = 'arqad',
 	subgroup = 'py-alienlife-arqad',

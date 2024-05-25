@@ -2,7 +2,7 @@ require '__pycoalprocessing__/prototypes/functions/functions'
 
 		--((single mode example))--
 --[[
-FUN.autorecipes { -- is a function call can be many per file is the same as RECIPE{} that is used in the rest of pymods
+py.autorecipes { -- is a function call can be many per file is the same as RECIPE{} that is used in the rest of pymods
     name = 'single-example', -- recipe name if in single recipe mode *@*
     category = 'recipe-category', -- used in input recipe and output if outcategory not provided to set category
 	singlerecipe = false, --=true: its a single recipe done 1 machine. takes ingredients and outputs the results. --=false: creates 2 recipes. 1 with the ingredients as inputs and outputs an item. 2nd recipe takes the item in and outputs the results.

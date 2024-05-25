@@ -13,7 +13,7 @@ local IMP_GUTS = 11
 local IMP_BLOOD = 300
 
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering',
 	category = 'slaughterhouse',
 	subgroup = 'py-alienlife-xyhiphoe',

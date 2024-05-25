@@ -17,7 +17,7 @@ local IMP_BRAIN = 4
 local IMP_SPECIAL = 5
 
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering',
 	category = "slaughterhouse",
 	--module_limitations = 'kmauts',

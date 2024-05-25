@@ -1,7 +1,7 @@
 
 --MANURE
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'manure',
 	category = 'mukmoux',
 	--module_limitations = 'mukmoux',

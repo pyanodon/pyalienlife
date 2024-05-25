@@ -1,6 +1,6 @@
 ------------------ARTHURIANS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-blood-arthurians-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'arthurian',
@@ -55,7 +55,7 @@ FUN.autorecipes {
 
 ------------------ARQAD------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-blood-arqad-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'arqad',
@@ -111,7 +111,7 @@ FUN.autorecipes {
 
 ------------------AUOGS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-blood-auog-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -166,7 +166,7 @@ FUN.autorecipes {
 
 ------------------COTTONGUT------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-blood-cottongut-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'cottongut',
@@ -220,7 +220,7 @@ FUN.autorecipes {
 
 ------------------DHILMOS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-blood-dhilmos-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -277,7 +277,7 @@ FUN.autorecipes {
 
 ------------------DINGRITS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-blood-dingrits-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -332,7 +332,7 @@ FUN.autorecipes {
 
 ------------------KMAUTS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-blood-kmauts-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -388,7 +388,7 @@ FUN.autorecipes {
 
 ------------------KORLEX------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-blood-korlex-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -444,7 +444,7 @@ FUN.autorecipes {
 
 ------------------MUKMOUX------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-blood-mukmoux-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -499,7 +499,7 @@ FUN.autorecipes {
 
 ------------------PHADAI------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-blood-phadai-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -554,7 +554,7 @@ FUN.autorecipes {
 
 ------------------PHAGNOT------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-blood-phagnot-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -609,7 +609,7 @@ FUN.autorecipes {
 
 ------------------SCRONDRIX------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-blood-scrondrix-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -664,7 +664,7 @@ FUN.autorecipes {
 
 ------------------SIMIK------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-blood-simik-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -719,7 +719,7 @@ FUN.autorecipes {
 
 ------------------TRITS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-blood-trits-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -773,7 +773,7 @@ FUN.autorecipes {
 
 ------------------ULRIC------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-blood-ulric-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -828,7 +828,7 @@ FUN.autorecipes {
 
 ------------------VONIX------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-blood-vonix-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -886,7 +886,7 @@ FUN.autorecipes {
 
 ------------------RENDERING XENOS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-blood-xenos-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'xeno',
@@ -940,7 +940,7 @@ FUN.autorecipes {
 
 ------------------XYHIPHOE------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-blood-xyhiphoe-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -991,7 +991,7 @@ FUN.autorecipes {
 
 ------------------ZIPIR------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-blood-zipir-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',

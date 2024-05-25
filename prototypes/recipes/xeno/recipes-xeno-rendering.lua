@@ -15,7 +15,7 @@ local IMP_BLOOD = 200
 local IMP_BRAIN = 4
 
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-xeno',
 	category = 'slaughterhouse',
 	--module_limitations = 'xeno',

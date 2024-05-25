@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = 'ralesias',
 	category = 'ralesia',
 	module_limitations = 'ralesia',

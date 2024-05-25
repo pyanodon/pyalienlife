@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = 'yotoi-fruit',
 	category = 'yotoi',
 	module_limitations = 'yotoi',

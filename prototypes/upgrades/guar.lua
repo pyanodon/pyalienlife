@@ -19,7 +19,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['guar-4']),
     }) do
         recipe.name = recipe.name .. '-aquaguar'
-        local water = FUN.remove_ingredient(recipe, 'water')
+        local _, water = FUN.remove_ingredient(recipe, 'water')
 		FUN.add_ingredient(recipe, {type = 'fluid', name = 'water-saline', amount = math.ceil(water/5), fluidbox_index = 1})
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         FUN.multiply_ingredient_amount(recipe, 'guar-seeds', 0.65)

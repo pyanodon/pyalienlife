@@ -1,6 +1,6 @@
 ------------------EGG MAKER------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'arqad-egg',
 	category = 'rc',
 	allowed_module_categories = {'arqad'},
@@ -87,7 +87,7 @@ FUN.autorecipes {
 
 --eggs to maggots
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'arqad-maggots',
 	category = 'vrauks',
 	module_limitations = 'arqad',
@@ -117,7 +117,7 @@ FUN.autorecipes {
 
 --maggots to cocoons
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'arqad-egg-nests',
 	category = 'arqad',
 	module_limitations = 'arqad',
@@ -196,7 +196,7 @@ FUN.autorecipes {
 
 --Raising maggots to arqads
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'caged-arqad',
 	category = 'arqad',
 	module_limitations = 'arqad',
@@ -282,7 +282,7 @@ FUN.autorecipes {
 	}
 }
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'arqad-queen',
 	category = 'arqad',
 	module_limitations = 'arqad',
@@ -311,7 +311,7 @@ FUN.autorecipes {
 }
 
 --[[
-FUN.autorecipes {
+py.autorecipes {
     name = 'special-arqad-guts',
 	category = "creature-chamber",
 	subgroup = 'py-alienlife-arqad',

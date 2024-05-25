@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = 'ulric-improved',
 	category = 'ulric',
 	--module_limitations = 'ulric',

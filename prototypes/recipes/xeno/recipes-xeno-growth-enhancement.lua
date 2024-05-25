@@ -1,6 +1,6 @@
 --Raising
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'xeno-improved',
 	category = 'xeno',
 	--module_limitations = 'xeno',

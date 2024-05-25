@@ -1,6 +1,6 @@
 ------------------CUB MAKER------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'phagnot-cub',
 	category = 'rc',
 	allowed_module_categories = {'phagnot'},
@@ -190,7 +190,7 @@ FUN.autorecipes {
 
 --raising
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'phagnot',
 	category = 'phagnot',
 	module_limitations = 'phagnot',

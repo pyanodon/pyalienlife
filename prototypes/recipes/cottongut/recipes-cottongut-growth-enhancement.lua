@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = 'cottongut-growth-enhancement',
 	category = 'cottongut',
 	subgroup = 'py-alienlife-cottongut',

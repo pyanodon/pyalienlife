@@ -1,6 +1,6 @@
 -- ------------------PHADAI CARAPACE------------------
 
--- FUN.autorecipes {
+-- py.autorecipes {
 --     name = 'rendering-carapace-phadai',
 -- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',
@@ -38,7 +38,7 @@
 
 -- ------------------DINGRITS PELT------------------
 
--- FUN.autorecipes {
+-- py.autorecipes {
 --     name = 'rendering-pelt-dingrits',
 -- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',
@@ -78,7 +78,7 @@
 
 -- ------------------DINGRITS SPIKES------------------
 
--- FUN.autorecipes {
+-- py.autorecipes {
 --     name = 'rendering-spikes-dingrits',
 -- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',
@@ -118,7 +118,7 @@
 
 -- ------------------SCRONDRIX PINEAL------------------
 
--- FUN.autorecipes {
+-- py.autorecipes {
 --     name = 'rendering-pineal-scrondrix',
 -- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',
@@ -156,7 +156,7 @@
 
 -- ------------------KMAUTS TENDONS------------------
 
--- FUN.autorecipes {
+-- py.autorecipes {
 --     name = 'rendering-tendon-kmauts',
 -- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',
@@ -194,7 +194,7 @@
 
 -- ------------------PHAGNOT BLADDER------------------
 
--- FUN.autorecipes {
+-- py.autorecipes {
 --     name = 'rendering-bladder-phagnot',
 -- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',
@@ -231,7 +231,7 @@
 
 -- ------------------VONIX VENON GLAND------------------
 
--- FUN.autorecipes {
+-- py.autorecipes {
 --     name = 'rendering-venon-vonix',
 -- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',
@@ -271,7 +271,7 @@
 
 -- ------------------TRITS PHOTOPHORES------------------
 
--- FUN.autorecipes {
+-- py.autorecipes {
 --     name = 'rendering-photophore-trits',
 -- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',
@@ -305,7 +305,7 @@
 
 -- ------------------XYHIPHOE SHELL------------------
 
--- FUN.autorecipes {
+-- py.autorecipes {
 --     name = 'rendering-shell-xyhiphoe',
 -- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',

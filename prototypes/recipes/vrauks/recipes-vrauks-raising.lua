@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = "vrauks",
     category = "vrauks",
     module_limitations = "vrauks",
@@ -72,7 +72,7 @@ FUN.autorecipes {
 
 ------------------CUB MAKER------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = "vrauks-cocoon",
     category = 'rc',
 	allowed_module_categories = {'vrauks'},

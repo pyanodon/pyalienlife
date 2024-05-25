@@ -1,6 +1,6 @@
 ------------------ARTHURIANS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-bone-arthurians',
 	category = 'slaughterhouse',
 	--module_limitations = 'arthurian',
@@ -37,7 +37,7 @@ FUN.autorecipes {
 
 ------------------AUOGS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-bone-auog',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -74,7 +74,7 @@ FUN.autorecipes {
 
 ------------------COTTONGUT------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-bone-cottongut',
 	category = 'slaughterhouse',
 	--module_limitations = 'cottongut',
@@ -110,7 +110,7 @@ FUN.autorecipes {
 
 ------------------DINGRITS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-bone-dingrits',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -147,7 +147,7 @@ FUN.autorecipes {
 
 ------------------KORLEX------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-bone-korlex',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -185,7 +185,7 @@ FUN.autorecipes {
 
 ------------------MUKMOUX------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-bone-mukmoux',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -222,7 +222,7 @@ FUN.autorecipes {
 
 ------------------PHADAI------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-bone-phadai',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -259,7 +259,7 @@ FUN.autorecipes {
 
 ------------------PHAGNOT------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-bone-phagnot',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -296,7 +296,7 @@ FUN.autorecipes {
 
 ------------------SCRONDRIX------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-bone-scrondrix',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -333,7 +333,7 @@ FUN.autorecipes {
 
 ------------------SIMIKS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-bone-simik',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -370,7 +370,7 @@ FUN.autorecipes {
 
 ------------------TRITS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-bone-trits',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -406,7 +406,7 @@ FUN.autorecipes {
 
 ------------------ULRIC------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-bone-ulric',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -443,7 +443,7 @@ FUN.autorecipes {
 
 ------------------XENOS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-bone-xeno',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',

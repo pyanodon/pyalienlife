@@ -1,6 +1,6 @@
 --pooping--
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'manure',
 	category = 'ulric',
 	module_limitations = 'ulric',

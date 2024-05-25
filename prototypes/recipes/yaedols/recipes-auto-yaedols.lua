@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = 'yaedols',
 	category = 'yaedols',
 	module_limitations = 'yaedols',

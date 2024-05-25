@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = 'cadaveric-arum',
 	category = 'arum',
 	module_limitations = 'arum',

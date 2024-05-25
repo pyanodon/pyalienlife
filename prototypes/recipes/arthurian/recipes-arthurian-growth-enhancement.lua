@@ -1,6 +1,6 @@
 --growth hormone and other trash that needs new uses. hulk growths
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'arthurian-growth-enhancement',
 	category = "arthurian",
 	subgroup = 'py-alienlife-arthurian',

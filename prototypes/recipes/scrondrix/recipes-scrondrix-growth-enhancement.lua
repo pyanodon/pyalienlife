@@ -1,6 +1,6 @@
 ------------------SPECIAL MAKER------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'scrondrix-improved',
 	category = 'scrondrix',
 	module_limitations = 'scrondrix',

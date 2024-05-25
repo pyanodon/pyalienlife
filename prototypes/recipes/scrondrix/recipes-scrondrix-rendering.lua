@@ -21,7 +21,7 @@ local IMP_BRAIN = 5
 local IMP_SPECIAL = 4
 
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering',
 	category = 'slaughterhouse',
 	--module_limitations = 'scrondrix',

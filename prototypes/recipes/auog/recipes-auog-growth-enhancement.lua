@@ -1,5 +1,5 @@
 	--NOT STANDARD AOUGS
-	FUN.autorecipes {
+	py.autorecipes {
 		name = 'auog-mods',
 		category = 'auog',
 		subgroup = 'py-alienlife-auog',

@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = 'simik-improved',
 	category = 'simik',
 	--module_limitations = 'simik',

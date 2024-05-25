@@ -14,7 +14,7 @@ local IMP_GUTS = 18
 local IMP_BLOOD = 130
 local IMP_SPECIAL = 80
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-arqad',
 	category = 'slaughterhouse',
 	subgroup = 'py-alienlife-arqad',

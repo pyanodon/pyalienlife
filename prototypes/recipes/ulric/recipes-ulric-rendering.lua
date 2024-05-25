@@ -19,7 +19,7 @@ local IMP_BLOOD = 200
 local IMP_BRAIN = 4
 
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-ulric',
 	category = 'slaughterhouse',
 	--module_limitations = 'ulric',

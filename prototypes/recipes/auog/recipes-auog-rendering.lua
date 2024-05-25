@@ -19,7 +19,7 @@ local IMP_BLOOD = 200
 local IMP_BRAIN = 4
 
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-auog',
 	category = 'slaughterhouse',
 	subgroup = 'py-alienlife-auog',

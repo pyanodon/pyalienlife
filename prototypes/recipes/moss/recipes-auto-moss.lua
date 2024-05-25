@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = 'moss',
 	category = 'moss',
 	module_limitations = 'moss',

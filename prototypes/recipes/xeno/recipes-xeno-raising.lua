@@ -1,6 +1,6 @@
 ------------------EGG MAKER------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'xeno-egg',
 	category = 'rc',
 	allowed_module_categories = {'xeno'},
@@ -154,7 +154,7 @@ FUN.autorecipes {
 
 --Raising
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'caged-xeno',
 	category = 'xeno',
 	module_limitations = 'xeno',

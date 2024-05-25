@@ -10,7 +10,7 @@ local BASE_BLOOD = 40
 local BASE_SPECIAL = 100
 
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering',
 	category = 'slaughterhouse',
 	--module_limitations = 'fish',

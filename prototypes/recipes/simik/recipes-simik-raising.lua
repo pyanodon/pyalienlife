@@ -1,6 +1,6 @@
 ------------------CUB MAKER------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'simik-cub',
 	category = 'rc',
 	allowed_module_categories = {'simik'},
@@ -186,7 +186,7 @@ FUN.autorecipes {
 
 --raising
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'caged-simik',
 	category = 'simik',
 	module_limitations = 'simik',
@@ -608,7 +608,7 @@ FUN.autorecipes {
 
 --poop
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'simik-poop',
 	category = 'simik',
 	module_limitations = 'simik',

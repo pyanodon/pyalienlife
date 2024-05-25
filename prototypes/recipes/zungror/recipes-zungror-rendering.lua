@@ -17,7 +17,7 @@ local IMP_BLOOD = 450
 local IMP_BRAIN = 5
 
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-zungror',
 	category = 'slaughterhouse',
 	--module_limitations = 'zungror',

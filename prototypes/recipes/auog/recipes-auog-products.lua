@@ -1,5 +1,5 @@
 --Aoug breeding
-FUN.autorecipes {
+py.autorecipes {
     name = 'auog-pooping',
 	category = 'auog',
 	module_limitations = 'auog',

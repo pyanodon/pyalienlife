@@ -1,6 +1,6 @@
 ------------------CUB MAKER------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'scrondrix-cub',
 	category = 'rc',
 	allowed_module_categories = {'scrondrix'},
@@ -165,7 +165,7 @@ FUN.autorecipes {
 
 --raising
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'scrondrix',
 	category = 'scrondrix',
 	module_limitations = 'scrondrix',

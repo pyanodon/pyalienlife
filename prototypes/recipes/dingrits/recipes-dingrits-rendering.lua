@@ -19,7 +19,7 @@ local IMP_BRAIN = 5
 local IMP_SPECIAL = 2
 
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering',
 	category = 'slaughterhouse',
 	--module_limitations = 'dingrits',

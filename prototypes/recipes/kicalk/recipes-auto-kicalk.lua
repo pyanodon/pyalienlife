@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = 'kicalk',
 	category = 'kicalk',
 	module_limitations = 'kicalk',

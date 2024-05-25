@@ -1,6 +1,6 @@
 ------------------EGG MAKER------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'zipir-eggs',
 	category = 'rc',
 	allowed_module_categories = {'zipir'},
@@ -181,7 +181,7 @@ FUN.autorecipes {
 
 --Raising
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'zipir-a',
 	category = 'zipir',
 	module_limitations = 'zipir1',

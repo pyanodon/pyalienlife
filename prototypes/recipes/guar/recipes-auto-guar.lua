@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = 'guar',
 	category = 'guar',
 	module_limitations = 'guar',

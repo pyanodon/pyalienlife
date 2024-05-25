@@ -1,6 +1,6 @@
 ------------------larva MAKER------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'xyhiphoe-cub',
 	category = 'rc',
 	allowed_module_categories = {'xyhiphoe'},
@@ -187,7 +187,7 @@ FUN.autorecipes {
 
 --Raising
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'xyhiphoe',
 	category = 'xyhiphoe',
 	module_limitations = 'xyhiphoe',

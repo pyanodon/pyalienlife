@@ -1,4 +1,4 @@
-FUN.autorecipes {
+py.autorecipes {
     name = 'grod',
 	category = 'grod',
 	module_limitations = 'grod',

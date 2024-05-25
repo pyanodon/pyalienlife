@@ -1,5 +1,5 @@
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'korlex-milk',
 	category = 'korlex',
 	module_limitations = 'korlex',
