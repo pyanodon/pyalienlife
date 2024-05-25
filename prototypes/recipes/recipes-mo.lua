@@ -436,7 +436,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'antitumor', amount = 250},
     },
-}:add_unlock("antitumor"):change_category('nano'):replace_ingredient("cytostatics", "superconductor-servomechanims")
+}:add_unlock("antitumor"):replace_ingredient("cytostatics", "superconductor-servomechanims").category = 'nano'
 
 RECIPE {
     type = 'recipe',
@@ -460,7 +460,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'antitumor', amount = 290},
     },
-}:add_unlock("antitumor"):change_category('nano'):replace_ingredient("cytostatics", "superconductor-servomechanims")
+}:add_unlock("antitumor"):replace_ingredient("cytostatics", "superconductor-servomechanims").category = 'nano'
 
 RECIPE {
     type = 'recipe',

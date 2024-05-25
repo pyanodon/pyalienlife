@@ -115,7 +115,7 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'raw-gas', amount = 50}
     }
-}:add_unlock('phagnot-mk02'):change_category('gas-refinery')
+}:add_unlock('phagnot-mk02').category = 'gas-refinery'
 
 RECIPE {
     type = 'recipe',

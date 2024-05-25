@@ -388,7 +388,7 @@ RECIPE('pydrive'):replace_ingredient('processing-unit', 'intelligent-unit'):add_
 ----RECIPES----
 RECIPE('fungal-substrate-02'):add_ingredient({type = 'item', name = 'urea', amount = 3})
 RECIPE('alien-sample-03'):replace_ingredient('plastic-bar', 'graphene-roll')
-RECIPE('log7-2'):change_category('fwf'):add_ingredient({type = 'item', name = 'wood-seedling', amount = 3}):subgroup_order('py-alienlife-plants', 'a'):add_unlock('wood-processing-3')
+RECIPE('log7-2'):add_ingredient({type = 'item', name = 'wood-seedling', amount = 3}):subgroup_order('py-alienlife-plants', 'a'):add_unlock('wood-processing-3').category = 'fwf'
 --RECIPE('urea'):replace_ingredient('fawogae', 'seaweed'):subgroup_order('py-alienlife-items', 'a')
 RECIPE('bonemeal2'):remove_unlock('advanced-electronics'):subgroup_order('py-alienlife-items', 'a')
 RECIPE('bonemeal3'):remove_unlock('advanced-electronics'):subgroup_order('py-alienlife-items', 'a')
@@ -396,7 +396,7 @@ RECIPE('bonemeal4'):remove_unlock('advanced-electronics'):subgroup_order('py-ali
 RECIPE('cobalt-extract'):replace_ingredient('sulfuric-acid', 'cyanic-acid')
 RECIPE('neuroprocessor'):replace_ingredient('electronic-circuit', 'pcb2'):add_ingredient({type = 'item', name = 'resistor1', amount = 5}):add_ingredient({type = 'item', name = 'capacitor1', amount = 5}):add_ingredient({type = 'item', name = 'inductor1', amount = 10})
 RECIPE('empty-neuromorphic-chip'):add_ingredient({type = 'item', name = 'bakelite', amount = 5}):add_ingredient({type = 'item', name = 'micro-fiber', amount = 4}):add_ingredient({type = 'item', name = 'capacitor2', amount = 5}):add_ingredient({type = 'item', name = 'melamine', amount = 10}):add_ingredient({type = 'item', name = 'paramagnetic-material', amount = 2}):add_ingredient({type = 'item', name = 'nylon-parts', amount = 10})--:add_ingredient({type = 'item', name = 'diamagnetic-material', amount = 4})
-RECIPE('formamide'):replace_ingredient('nitrogen', 'ammonia'):change_category('fbreactor')
+RECIPE('formamide'):replace_ingredient('nitrogen', 'ammonia').category = 'fbreactor'
 RECIPE('bacteria-2'):remove_unlock('biopolymer'):add_unlock('microbiology-mk04'):add_ingredient({type = 'item', name = 'petri-dish', amount = 3}):add_ingredient({type = 'item', name = 'nexelit-plate', amount = 2}):add_ingredient({type = 'item', name = 'flask', amount = 5}):add_ingredient({type = 'item', name = 'chitin', amount = 5})
 RECIPE('rendering'):remove_unlock('basic-electronics')
 RECIPE('crco-alloy'):remove_ingredient('tailings-dust'):add_ingredient({type = 'item', name = 'cobalt-nx', amount = 2})
@@ -409,15 +409,15 @@ RECIPE('dms'):subgroup_order('py-alienlife-cadaveric', 'a'):remove_unlock('basic
 RECIPE('cobalt-fluoride'):replace_ingredient('chromium', 'reo')
 RECIPE('micro-fiber'):remove_unlock('microfibers'):add_unlock('filtration')
 RECIPE('alien-sample-02'):add_ingredient({type = 'item', name = 'micro-fiber', amount = 5})
-RECIPE('resveratrol'):change_category('pulp')
+RECIPE('resveratrol').category = 'pulp'
 RECIPE('dhilmos-pool-mk01'):replace_ingredient('glass', 'phosphate-glass'):add_ingredient({type = 'item', name = 'aerogel', amount = 5})
 RECIPE('dhilmos-codex'):replace_ingredient('glass', 'phosphate-glass')
-RECIPE('fertilizer-1'):change_category('fbreactor')
-RECIPE('fertilizer-3'):change_category('fbreactor')
-RECIPE('fertilizer-4'):change_category('fbreactor')
-RECIPE('fertilizer-fish-1'):change_category('fbreactor')
-RECIPE('fertilizer-fish-2'):change_category('fbreactor')
-RECIPE('fertilizer-fish-3'):change_category('fbreactor')
+RECIPE('fertilizer-1').category = 'fbreactor'
+RECIPE('fertilizer-3').category = 'fbreactor'
+RECIPE('fertilizer-4').category = 'fbreactor'
+RECIPE('fertilizer-fish-1').category = 'fbreactor'
+RECIPE('fertilizer-fish-2').category = 'fbreactor'
+RECIPE('fertilizer-fish-3').category = 'fbreactor'
 RECIPE('fish-food-02'):remove_ingredient('blood'):add_ingredient({type = 'item', name = 'blood-meal', amount = 5})
 RECIPE('dingrits-codex'):replace_ingredient('glass', 'phosphate-glass')
 RECIPE('scrondrix-codex'):replace_ingredient('glass', 'phosphate-glass')
@@ -427,20 +427,20 @@ RECIPE('quantum-vortex-storage-system'):add_ingredient({type = 'item', name = 's
 RECIPE('nv-center'):add_ingredient({type = 'item', name = 'strangelets', amount = 2})
 RECIPE('space-science-pack'):add_ingredient({type = 'item', name = 'yellow-cake', amount = 2}):add_ingredient({type = 'item', name = 'intelligent-unit', amount = 6})
 RECIPE('yag-laser-module'):add_ingredient({type = 'item', name = 'nanofibrils', amount = 3}):add_ingredient({type = 'item', name = 'cobalt-fluoride', amount = 3})
-RECIPE('parametric-oscilator'):add_ingredient({type = 'item', name = 'nanofibrils', amount = 3}):change_category('research')
-RECIPE('superconductor-servomechanims'):change_category('research')
-RECIPE('superconductor'):add_ingredient({type = 'item', name = 'biobattery', amount = 2}):change_category('research')
+RECIPE('parametric-oscilator'):add_ingredient({type = 'item', name = 'nanofibrils', amount = 3}).category = 'research'
+RECIPE('superconductor-servomechanims').category = 'research'
+RECIPE('superconductor'):add_ingredient({type = 'item', name = 'biobattery', amount = 2}).category = 'research'
 RECIPE('sc-unit'):add_ingredient({type = 'item', name = 're-magnet', amount = 12})
-RECIPE('harmonic-absorber'):change_category('research')
-RECIPE('diamagnetic-material'):change_category('research')--:remove_unlock('earnshaw-theorem'):add_unlock('pharmagenomics')
-RECIPE('paramagnetic-material'):change_category('research')
-RECIPE('myoglobin'):change_category('genlab')
+RECIPE('harmonic-absorber').category = 'research'
+RECIPE('diamagnetic-material').category = 'research'--:remove_unlock('earnshaw-theorem'):add_unlock('pharmagenomics')
+RECIPE('paramagnetic-material').category = 'research'
+RECIPE('myoglobin').category = 'genlab'
 
 RECIPE('zipir-carcass'):remove_unlock('basic-electronics')
 RECIPE('capacitor-core'):add_ingredient({type = 'item', name = 'nano-cellulose', amount = 2})
 RECIPE('fawogae2'):remove_unlock('advanced-electronics')
 --RECIPE('fiber'):remove_unlock('basic-electronics')
---RECIPE('urea'):change_category('vrauks'):subgroup_order('py-alienlife-auog', 'a')
+--RECIPE('urea').category = 'vrauks'):subgroup_order('py-alienlife-auog', 'a'
 ITEM('urea'):subgroup_order('py-alienlife-auog', 'a')
 ITEM('mosfet'):subgroup_order('py-hightech-tier-2', 'f')
 RECIPE('waste-water-urea'):subgroup_order('py-alienlife-recipes', 'a'):remove_unlock('fluid-separation'):add_unlock('water-invertebrates-mk01')
@@ -1050,7 +1050,7 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'methane', amount = 50}
     }
-}:add_unlock('phagnot-mk02'):change_category('gas-refinery')
+}:add_unlock('phagnot-mk02').category = 'gas-refinery'
 
 RECIPE {
     type = 'recipe',
@@ -1064,7 +1064,7 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'ammonia', amount = 40}
     }
-}:add_unlock('phagnot-mk02'):change_category('gas-refinery')
+}:add_unlock('phagnot-mk02').category = 'gas-refinery'
 
 RECIPE {
     type = 'recipe',
@@ -1078,7 +1078,7 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'propene', amount = 35}
     }
-}:add_unlock('phagnot-mk02'):change_category('gas-refinery')
+}:add_unlock('phagnot-mk02').category = 'gas-refinery'
 
 RECIPE {
     type = 'recipe',
@@ -1092,7 +1092,7 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'ethylene', amount = 30}
     }
-}:add_unlock('phagnot-mk03'):change_category('gas-refinery')
+}:add_unlock('phagnot-mk03').category = 'gas-refinery'
 
 RECIPE {
     type = 'recipe',
@@ -1322,7 +1322,7 @@ RECIPE {
     main_product = 'sulfur',
     icon = '__base__/graphics/icons/sulfur.png',
     icon_size = 64,
-}:add_unlock('phytomining'):change_category('pulp')
+}:add_unlock('phytomining').category = 'pulp'
 
 
 RECIPE {
@@ -1430,7 +1430,7 @@ RECIPE {
         {type = 'item', name = 'cobalt-extract', amount = 2, probability = 0.5},
     },
     main_product = 'nisi',
-}:add_unlock('basic-electronics'):change_category('gas-separator')
+}:add_unlock('basic-electronics').category = 'gas-separator'
 
 RECIPE {
     type = 'recipe',

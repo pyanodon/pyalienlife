@@ -978,7 +978,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'metallic-glass', amount = 1}
     }
-}:add_unlock('bio-implants'):add_ingredient({type = "item", name = "paramagnetic-material", amount = 2}):replace_ingredient("nickel-plate", "powdered-phosphate-rock"):change_category('nano')
+}:add_unlock('bio-implants'):add_ingredient({type = "item", name = "paramagnetic-material", amount = 2}):replace_ingredient("nickel-plate", "powdered-phosphate-rock").category = 'nano'
 
 RECIPE {
     type = 'recipe',
@@ -1018,7 +1018,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'nanochondria', amount = 200}
     }
-}:add_unlock('nanochondria'):change_category('nano'):add_ingredient({type = "item", name = "resilin", amount = 1}):add_ingredient({type = "item", name = "collagen", amount = 5}):replace_ingredient("bacteria-1", "bacteria-2")
+}:add_unlock('nanochondria'):add_ingredient({type = "item", name = "resilin", amount = 1}):add_ingredient({type = "item", name = "collagen", amount = 5}):replace_ingredient("bacteria-1", "bacteria-2").category = 'nano'
 
 
 RECIPE {
@@ -1129,7 +1129,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'lignin', amount = 8},
     },
-}:add_unlock("cellulose-mk02"):change_category('cracker')
+}:add_unlock("cellulose-mk02").category = 'cracker'
 
 RECIPE {
     type = 'recipe',
@@ -1564,7 +1564,7 @@ RECIPE {
         {type = 'item', name = 'seeds-extract-01', amount = 5}
     },
     --main_product = "adrenal-cortex",
-}:add_unlock("energy-drink"):change_category('pulp')
+}:add_unlock("energy-drink").category = 'pulp'
 
 RECIPE {
     type = "recipe",
@@ -1615,7 +1615,7 @@ RECIPE {
         {type = 'item', name = 'biomass', amount = 8}
     },
     main_product = "a-molasse",
-}:add_unlock("sugar"):change_category('pulp')
+}:add_unlock("sugar").category = 'pulp'
 
 RECIPE {
     type = "recipe",
@@ -1784,7 +1784,7 @@ RECIPE {
         {type = 'item', name = 'bonemeal', amount = 5},
     },
     --main_product = "crude-oil",
-}:add_unlock("logistic-science-pack"):change_category('fbreactor')
+}:add_unlock("logistic-science-pack").category = 'fbreactor'
 
 RECIPE {
     type = 'recipe',
@@ -1801,7 +1801,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'magnetic-beads', amount = 5},
     },
-}:add_unlock("chitin"):change_category('nano')
+}:add_unlock("chitin").category = 'nano'
 
 RECIPE {
     type = 'recipe',
@@ -2158,7 +2158,7 @@ RECIPE {
         {type = 'fluid', name = 'flue-gas', amount = 150},
     },
     --main_product = "casein-pulp-01",
-}:add_unlock("compost"):change_category('gas-refinery')
+}:add_unlock("compost").category = 'gas-refinery'
 
 RECIPE {
     type = 'recipe',
@@ -2174,7 +2174,7 @@ RECIPE {
         {type = 'fluid', name = 'flue-gas', amount = 150},
     },
     --main_product = "casein-pulp-01",
-}:add_unlock("filtration"):change_category('gas-refinery')
+}:add_unlock("filtration").category = 'gas-refinery'
 
 --[[
 RECIPE {
@@ -2437,7 +2437,7 @@ RECIPE {
         {type = 'item', name = 'powdered-biomass', amount = 20},
     },
     --main_product = "chloral",
-}:add_unlock("bioprocessing"):change_category('pulp')
+}:add_unlock("bioprocessing").category = 'pulp'
 
 RECIPE {
     type = 'recipe',
@@ -2709,7 +2709,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'raw-fiber', amount = 3},
     },
-}:add_unlock("yotoi"):change_category('pulp')
+}:add_unlock("yotoi").category = 'pulp'
 
 RECIPE {
     type = 'recipe',

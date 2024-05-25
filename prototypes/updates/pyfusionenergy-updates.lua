@@ -39,11 +39,11 @@ RECIPE('chemical-plant-mk04'):add_ingredient({type = "item", name = "nbti-alloy"
 
 ----RECIPES----
 RECIPE('phytoplankton'):remove_unlock('vanadium-processing'):add_unlock('microbiology-mk01'):subgroup_order('py-alienlife-plants', 'b')
-RECIPE('log8'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a")
-RECIPE('log7'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a")
+RECIPE('log8'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a").category = 'fwf'
+RECIPE('log7'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a").category = 'fwf'
 RECIPE('zogna-bacteria'):add_ingredient({type = "fluid", name = "pressured-air", amount = 50})
 RECIPE('bacteria-1'):remove_unlock('ethanolamine'):add_unlock('kmauts'):subgroup_order('py-alienlife-genetics', 'b'):add_ingredient({type = "item", name = "petri-dish", amount = 3})
-RECIPE('serine'):remove_unlock('helium-processing'):add_unlock('kmauts'):subgroup_order('py-alienlife-kmauts', 'b'):change_category('bio-reactor'):remove_ingredient("kmauts-ration"):add_ingredient({type = "item", name = "tendon", amount = 5}):add_ingredient({type = "fluid", name = "zogna-bacteria", amount = 40})
+RECIPE('serine'):remove_unlock('helium-processing'):add_unlock('kmauts'):subgroup_order('py-alienlife-kmauts', 'b'):add_ingredient({type = "item", name = "tendon", amount = 5}):add_ingredient({type = "fluid", name = "zogna-bacteria", amount = 40}):remove_ingredient("kmauts-ration").category = 'bio-reactor'
 ITEM('serine'):subgroup_order('py-alienlife-kmauts', 'b')
 ITEM('kmauts-ration'):subgroup_order('py-alienlife-food', 'b')
 RECIPE('nenbit-matrix'):add_ingredient({type = "item", name = "nano-cellulose", amount = 3})
@@ -67,9 +67,9 @@ RECIPE('kmauts-ration'):subgroup_order('py-alienlife-food', 'b'):remove_unlock('
 RECIPE('control-unit')--[[:add_ingredient({type = 'item', name = 'biobattery', amount = 2})]]:replace_ingredient("advanced-circuit", "processing-unit")
 RECIPE('production-science-pack'):add_ingredient({type = "item", name = "alien-enzymes", amount = 1})
 RECIPE('super-alloy'):add_ingredient({type = "item", name = "cobalt-oxide", amount = 2})
-RECIPE('control-unit'):change_category('research')
-RECIPE('sc-unit'):change_category('research')
-RECIPE('sc-wire'):change_category('research')
+RECIPE('control-unit').category = 'research'
+RECIPE('sc-unit').category = 'research'
+RECIPE('sc-wire').category = 'research'
 
 
 RECIPE("nexelit-matrix"):remove_unlock('nenbit-matrix'):add_unlock('neuro-electronics-mk01')

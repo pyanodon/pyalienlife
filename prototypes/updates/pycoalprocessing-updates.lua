@@ -101,27 +101,27 @@ ITEM('organics'):subgroup_order("py-alienlife-items", "a")
 ITEM('mukmoux-fat'):subgroup_order("py-alienlife-items", "a")
 ITEM('fawogae-substrate'):subgroup_order("py-alienlife-items", "a")
 RECIPE('fawogae'):set_fields {enabled = false}
-RECIPE('log1'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a")
-RECIPE('log2'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a")
-RECIPE('log3'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a")
-RECIPE('log4'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a")
-RECIPE('log5'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a")
-RECIPE('log6'):change_category('fwf'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a")
+RECIPE('log1'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a").category = 'fwf'
+RECIPE('log2'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a").category = 'fwf'
+RECIPE('log3'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a").category = 'fwf'
+RECIPE('log4'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a").category = 'fwf'
+RECIPE('log5'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a").category = 'fwf'
+RECIPE('log6'):add_ingredient({type = "item", name = "wood-seedling", amount = 3}):subgroup_order("py-alienlife-plants", "a").category = 'fwf'
 RECIPE('log-wood'):subgroup_order("py-alienlife-recipes", "a")
 RECIPE('fawogae-substrate'):remove_ingredient("fawogae"):add_ingredient({type = "item", name = "petri-dish-bacteria", amount = 2}):add_ingredient({type = "item", name = "cellulose", amount = 3}):replace_ingredient("coke","moss"):subgroup_order("py-alienlife-recipes", "a")
 RECIPE('bio-sample01'):add_ingredient({type = "item", name = "petri-dish-bacteria", amount = 2}):add_ingredient({type = "item", name = "native-flora", amount = 12})
 RECIPE('fawogae-substrate'):add_unlock("basic-substrate"):set_enabled(false)
 
 RECIPE("wpu"):replace_ingredient("wood", {type = "item", name = "log", amount = "5"}):remove_unlock("wood-processing"):set_enabled(true)
-RECIPE("log-wood"):remove_unlock("wood-processing"):set_enabled(true):change_category("wpu-handcrafting"):set_fields{always_show_made_in = true}
+RECIPE("log-wood"):remove_unlock("wood-processing"):set_enabled(true):set_fields{always_show_made_in = true}.category = 'wpu-handcrafting'
 RECIPE("botanical-nursery"):replace_ingredient("wood", {type = "item", name = "planter-box", amount = "10"})
 
-RECIPE('ralesia-seeds'):subgroup_order("py-alienlife-ralesia", "a"):change_category('nursery'):replace_ingredient("ralesia","ralesias")
+RECIPE('ralesia-seeds'):subgroup_order("py-alienlife-ralesia", "a"):replace_ingredient("ralesia","ralesias").category = 'nursery'
 --RECIPE('chemical-science-pack'):add_ingredient({type = "item", name = "alien-sample-02", amount = 1})
 RECIPE('filtration-media'):add_ingredient({type = "item", name = "micro-fiber", amount = 2})
 RECIPE('flask'):remove_ingredient("wood"):add_ingredient({type = "item", name = "stopper", amount = 4}):remove_ingredient("molten-glass"):add_ingredient({type = "fluid", name = "molten-glass", amount = 100, fluidbox_index = 2})
 RECIPE('hotair-flask'):remove_ingredient("wood"):add_ingredient({type = "item", name = "stopper", amount = 4}):remove_ingredient("molten-glass"):add_ingredient({type = "fluid", name = "molten-glass", amount = 100, fluidbox_index = 2})
-RECIPE('aromatics-to-plastic'):change_category('biofactory'):remove_ingredient("aromatics"):add_ingredient({type = "fluid", name = "aromatics", amount = 50}):remove_ingredient("syngas"):add_ingredient({type = "fluid", name = "syngas", amount = 100})
+RECIPE('aromatics-to-plastic'):remove_ingredient("aromatics"):add_ingredient({type = "fluid", name = "aromatics", amount = 50}):remove_ingredient("syngas"):add_ingredient({type = "fluid", name = "syngas", amount = 100}).category = 'biofactory'
 RECIPE("oil-refinery"):remove_unlock('plastics')
 RECIPE("flask"):add_unlock("py-science-pack-mk01"):set_enabled(false)
 

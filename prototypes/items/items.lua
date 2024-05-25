@@ -800,7 +800,9 @@ ITEM {
 	subgroup = 'py-alienlife-items',
 	order = 'a',
 	stack_size = 100
-} {
+}
+
+ITEM {
 	type = 'tool',
 	name = 'py-science-pack-1',
 	icon = '__pycoalprocessinggraphics__/graphics/icons/py-science-pack-1.png',
@@ -811,7 +813,9 @@ ITEM {
 	durability = 1,
 	durability_description_key = 'description.science-pack-remaining-amount-key',
 	durability_description_value = 'description.science-pack-remaining-amount-value'
-} {
+}
+
+ITEM {
 	type = 'tool',
 	name = 'py-science-pack-2',
 	icon = '__pyalienlifegraphics__/graphics/icons/py-science-pack-1.png',
@@ -822,7 +826,9 @@ ITEM {
 	durability = 1,
 	durability_description_key = 'description.science-pack-remaining-amount-key',
 	durability_description_value = 'description.science-pack-remaining-amount-value'
-} {
+}
+
+ITEM {
 	type = 'tool',
 	name = 'py-science-pack-3',
 	icon = '__pyalienlifegraphics__/graphics/icons/py-science-pack-2.png',
@@ -833,7 +839,9 @@ ITEM {
 	durability = 1,
 	durability_description_key = 'description.science-pack-remaining-amount-key',
 	durability_description_value = 'description.science-pack-remaining-amount-value'
-} {
+}
+
+ITEM {
 	type = 'tool',
 	name = 'py-science-pack-4',
 	icon = '__pyalienlifegraphics__/graphics/icons/py-science-pack-3.png',
