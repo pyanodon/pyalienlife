@@ -7,19 +7,20 @@ if data and not yafc_turd_integration then
     }) do
         recipe.name = recipe.name .. '-hot-cold'
 
-        FUN.add_ingredient_amount(recipe, 'xyhiphoe-cub', 1)
+        recipe:add_ingredient_amount('xyhiphoe-cub', 1)
         if i == 4 then
-            FUN.add_result_amount(recipe, 'xyhiphoe', 1)
+            recipe:add_result_amount('xyhiphoe', 1)
         else
             recipe:add_result({'xyhiphoe', 1})
         end
 
-        local phyto_barrel_count = math.ceil(recipe:remove_ingredient('phytoplankton') / 50)
+        local _, phyto_barrel_count = recipe:remove_ingredient('phytoplankton')
+        phyto_barrel_count = math.ceil(phyto_barrel_count / 50)
         if phyto_barrel_count > 0 then
             recipe:add_ingredient({'phytoplankton-barrel', phyto_barrel_count})
             recipe:add_result({'empty-barrel', phyto_barrel_count})
         end
-
+        
         recipe:add_ingredient({name = 'liquid-nitrogen', amount = 5, type = 'fluid', fluidbox_index = 1})
         recipe:add_result({type = 'fluid', name = 'nitrogen', amount = 50})
 
@@ -58,7 +59,7 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. '-acetone'
         recipe:remove_result('waste-water')
         recipe:add_ingredient({type = 'fluid', name = 'waste-water', amount = 250, fluidbox_index = 2})
-        FUN.add_result_amount(recipe, 'xyhiphoe-cub', 2)
+        recipe:add_result_amount('xyhiphoe-cub', 2)
         recipe:remove_ingredient('pressured-water')
         recipe:add_result({type = 'fluid', name = 'acetone', amount = i*150})
         data:extend{recipe}

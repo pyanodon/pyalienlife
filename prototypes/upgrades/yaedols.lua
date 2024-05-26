@@ -24,7 +24,8 @@ if data and not yafc_turd_integration then
         recipe.main_product = 'cold-air'
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
 
-        local nitrogen_barrels = math.ceil(recipe:remove_ingredient('nitrogen') / 50)
+        local _, amount_removed = recipe:remove_ingredient('nitrogen')
+        local nitrogen_barrels = math.ceil(amount_removed / 50)
         if nitrogen_barrels > 0 then
             recipe:add_ingredient({name = 'nitrogen-barrel', amount = nitrogen_barrels, type = 'item'})
             local _, amount_removed = recipe:remove_result('empty-barrel')

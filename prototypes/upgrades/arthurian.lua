@@ -48,7 +48,7 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. '-hot-stones'
         recipe:add_ingredient({name = 'hot-stone-brick', amount = 2, type = 'item'})
         recipe:add_result({name = 'warmer-stone-brick', amount = 2, type = 'item'})
-        FUN.add_result_amount(recipe, 'arthurian-egg', i)
+        recipe:add_result_amount('arthurian-egg', i)
         local _, barrels = recipe:remove_result('empty-barrel')
         recipe:add_result({'hot-air-barrel', barrels})
         recipe.energy_required = recipe.energy_required / 2

@@ -46,7 +46,7 @@ if data and not yafc_turd_integration then
 
     local food = table.deepcopy(data.raw.recipe['kmauts-ration'])
     food:add_ingredient({type = 'item', name = 'chitin', amount = 3})
-    FUN.add_result_amount(food, 'kmauts-ration', 4)
+    food:add_result_amount('kmauts-ration', 4)
     food.name = 'kmauts-ration-chitin'
     data:extend{food}
 end

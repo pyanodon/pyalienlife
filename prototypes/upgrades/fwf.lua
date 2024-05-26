@@ -9,13 +9,13 @@ if data and not yafc_turd_integration then
 
     local fiber = table.deepcopy(data.raw.recipe['fiber'])
     fiber.name = 'fiber-dry-storage-2'
-    FUN.add_result_amount(fiber, 'fiber', 1)
+    fiber:add_result_amount('fiber', 1)
     fiber.energy_required = 6
     data:extend{fiber}
 
     local wood_fast = table.deepcopy(data.raw.recipe['log-wood'])
     wood_fast.name = 'log-wood-fast'
-    FUN.add_result_amount(wood_fast, 'wood', 1)
+    wood_fast:add_result_amount('wood', 1)
     wood_fast.energy_required = 1
     wood_fast.enabled = false
     data:extend{wood_fast}

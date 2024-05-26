@@ -52,7 +52,7 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. '-neural-cranio'
         recipe:multiply_ingredient_amount('caged-arthurian', 2)
         recipe:multiply_result_amount('cridren', 2)
-        FUN.add_result_amount(recipe, 'cridren', 1)
+        recipe:add_result_amount('cridren', 1)
         recipe.energy_required = recipe.energy_required * 2
         recipe:multiply_result_amount('cage', 2)
         data:extend{recipe}

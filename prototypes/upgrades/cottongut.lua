@@ -9,7 +9,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['denatured-seismite-2']),
     }) do
         recipe.name = recipe.name .. '-80-20'
-        FUN.add_result_amount(recipe, cottongut_sciences[i], 1)
+        recipe:add_result_amount(cottongut_sciences[i], 1)
         recipe.energy_required = recipe.energy_required * 5
         data:extend{recipe}
     end

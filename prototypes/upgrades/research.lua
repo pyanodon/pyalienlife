@@ -14,10 +14,10 @@ if data and not yafc_turd_integration then
     if mods.pyalternativeenergy then py_science_3:add_ingredient({name = 'passivation-layer', amount = 2, type = 'item'}) end
     py_science_4:add_ingredient({name = 'mova-pulp3', amount = 100, type = 'fluid'})
 
-    FUN.add_result_amount(py_science_1, 'py-science-pack-1', 2)
-    FUN.add_result_amount(py_science_2, 'py-science-pack-2', 6)
-    FUN.add_result_amount(py_science_3, 'py-science-pack-3', 1)
-    FUN.add_result_amount(py_science_4, 'py-science-pack-4', 1)
+    py_science_1:add_result_amount('py-science-pack-1', 2)
+    py_science_2:add_result_amount('py-science-pack-2', 6)
+    py_science_3:add_result_amount('py-science-pack-3', 1)
+    py_science_4:add_result_amount('py-science-pack-4', 1)
 
     data:extend{py_science_1, py_science_2, py_science_3, py_science_4}
 end

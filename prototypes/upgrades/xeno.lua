@@ -47,7 +47,7 @@ if data and not yafc_turd_integration then
         recipe:remove_ingredient('bones')
         recipe:remove_ingredient('fish')
         recipe:add_ingredient({'hydrofluoric-acid-barrel', 1})
-        FUN.add_result_amount(recipe, 'empty-barrel', 1)
+        recipe:add_result_amount('empty-barrel', 1)
         data:extend{recipe}
     end
 end

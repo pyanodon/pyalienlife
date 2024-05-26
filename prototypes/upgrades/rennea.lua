@@ -44,7 +44,7 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. '-hydrophile'
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         recipe:multiply_ingredient_amount('water', 200)
-        FUN.add_result_amount(recipe, 'rennea', 1)
+        recipe:add_result_amount('rennea', 1)
         recipe:remove_ingredient('coarse')
         recipe:remove_ingredient('soil')
         data:extend{recipe}

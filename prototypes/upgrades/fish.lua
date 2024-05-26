@@ -6,7 +6,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['breed-fish-4']),
     }) do
         recipe.name = recipe.name .. '-agressive-selection'
-        FUN.add_result_amount(recipe, 'fish', -i)
+        recipe:add_result_amount('fish', -i)
         recipe:add_result({'fish-food-01', i})
         data:extend{recipe}
     end

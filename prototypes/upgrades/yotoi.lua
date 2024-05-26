@@ -61,8 +61,8 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. '-nutrient'
         local _, amount = recipe:remove_ingredient('fertilizer')
         recipe:add_result({'fertilizer', amount})
-        FUN.add_result_amount(recipe, 'yotoi', 1)
-        FUN.add_result_amount(recipe, 'yotoi-fruit', 1)
+        recipe:add_result_amount('yotoi', 1)
+        recipe:add_result_amount('yotoi-fruit', 1)
         recipe.main_product = 'fertilizer'
         data:extend{recipe}
     end

@@ -22,7 +22,7 @@ if data and not yafc_turd_integration then
     }) do
         recipe.name = recipe.name .. '-dubstep'
         recipe:multiply_result_amount('carapace', 2)
-        FUN.add_result_amount(recipe, 'used-phadai', -1)
+        recipe:add_result_amount('used-phadai', -1)
         data:extend{recipe}
     end
 end

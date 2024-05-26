@@ -29,7 +29,7 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. '-fast'
         recipe.energy_required = math.ceil(recipe.energy_required * 0.7)
         recipe:multiply_ingredient_amount('yotoi-seeds', 2/3)
-        FUN.add_result_amount(recipe, 'phagnot-cub', 1)
+        recipe:add_result_amount('phagnot-cub', 1)
         data:extend{recipe}
     end
 

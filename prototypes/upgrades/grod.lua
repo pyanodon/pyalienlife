@@ -24,7 +24,7 @@ if data and not yafc_turd_integration then
         [table.deepcopy(data.raw.recipe['grod-sn-3'])] = 'sn-biomass',
     }) do
         recipe.name = recipe.name .. '-tailings'
-        FUN.add_ingredient_amount(recipe, 'dirty-water-heavy', 100)
+        recipe:add_ingredient_amount('dirty-water-heavy', 100)
         recipe:multiply_result_amount(result, 3)
         data:extend{recipe}
     end
