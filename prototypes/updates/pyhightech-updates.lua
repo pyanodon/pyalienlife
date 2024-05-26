@@ -494,17 +494,17 @@ RECIPE('stone-wool'):add_unlock('zipir')
 RECIPE('stone-wool2'):add_unlock('zipir')
 RECIPE('agzn-alloy'):remove_unlock('alloys-mk04'):add_unlock('alloys-mk03')
 
-FUN.results_replacer('dhilmos-sex-01', 'dirty-water-light', 'waste-water')
+RECIPE('dhilmos-sex-01'):replace_result('dirty-water-light', 'waste-water')
 
-FUN.results_replacer('fertilizer', 'py-fertilizer', 'fertilizer')
-FUN.results_replacer('log7-2', 'log', 'log',8)
+RECIPE('fertilizer'):replace_result('py-fertilizer', 'fertilizer')
+RECIPE('log7-2'):replace_result('log', 'log',8)
 
-FUN.results_replacer('rennea-mk02-seed-seperation', 'light-oil', 'tall-oil')
-FUN.results_replacer('rennea-mk03-seed-seperation', 'light-oil', 'tall-oil')
-FUN.results_replacer('rennea-mk04-seed-seperation', 'light-oil', 'tall-oil')
-FUN.results_replacer('rennea-mk02-seed-seperation', 'tar', 'black-liquor')
-FUN.results_replacer('rennea-mk03-seed-seperation', 'tar', 'black-liquor')
-FUN.results_replacer('rennea-mk04-seed-seperation', 'tar', 'black-liquor')
+RECIPE('rennea-mk02-seed-seperation'):replace_result('light-oil', 'tall-oil')
+RECIPE('rennea-mk03-seed-seperation'):replace_result('light-oil', 'tall-oil')
+RECIPE('rennea-mk04-seed-seperation'):replace_result('light-oil', 'tall-oil')
+RECIPE('rennea-mk02-seed-seperation'):replace_result('tar', 'black-liquor')
+RECIPE('rennea-mk03-seed-seperation'):replace_result('tar', 'black-liquor')
+RECIPE('rennea-mk04-seed-seperation'):replace_result('tar', 'black-liquor')
 
 
 RECIPE('methane'):add_unlock('coal-processing-1')
@@ -1575,10 +1575,10 @@ for _, recipe in pairs(arqad_filled) do
 	RECIPE(recipe):replace_ingredient('crude-oil-barrel','tall-oil-barrel')
 end
 
-FUN.results_replacer('biofilm-pyht', 'biofilm', 'biofilm', 75)
+RECIPE('biofilm-pyht'):replace_result('biofilm', 'biofilm', 75)
 
 data.raw.recipe.biofilm.energy_required = 10
-FUN.results_replacer('biofilm', 'biofilm', 'biofilm', 10)
+RECIPE('biofilm'):replace_result('biofilm', 'biofilm', 10)
 
 RECIPE {
     type = 'recipe',

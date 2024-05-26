@@ -5,7 +5,7 @@ function Digosaurus.update_gui(gui)
 	local entity = dig_data.entity
 
 	content_flow.status_flow.electricity.value = entity.energy / entity.electric_buffer_size
-	content_flow.status_flow.consumption.caption = {'', FUN.format_energy(entity.energy, 'W'), '/', FUN.format_energy(entity.electric_buffer_size, 'W')}
+	content_flow.status_flow.consumption.caption = {'', py.format_energy(entity.energy, 'W'), '/', py.format_energy(entity.electric_buffer_size, 'W')}
 
 	local status, img
 	if entity.to_be_deconstructed() then

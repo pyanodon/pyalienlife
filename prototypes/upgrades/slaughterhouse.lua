@@ -52,10 +52,8 @@ if data and not yafc_turd_integration then
 
     for _, path in pairs{'laser', 'music', 'lard'} do
         for _, recipe_name in pairs(rendering_recipes) do
-            local recipe = table.deepcopy(data.raw.recipe[recipe_name])
+            local recipe = RECIPE(recipe_name):copy(function(r) return r.name .. '-' .. path end)
             recipe.localised_name = recipe.localised_name or {'recipe-name.'..recipe_name}
-            FUN.standardize_results(recipe)
-            recipe.name = recipe.name .. '-' .. path
             for _, ingredient in pairs(things_to_add[path].ingredients) do
                 recipe:add_ingredient(ingredient)
             end

@@ -161,11 +161,11 @@ RECIPE("soot-separation"):remove_unlock("separation"):add_unlock("ash-separation
 RECIPE("tailings-classification"):remove_unlock("fluid-processing-machines-1"):add_unlock("separation")
 
 
-FUN.results_replacer("log2", "log", "log",4)
-FUN.results_replacer("log4", "log", "log",5)
-FUN.results_replacer("log3", "log", "log",6)
-FUN.results_replacer("log5", "log", "log",7)
-FUN.results_replacer("log6", "log", "log",8)
+RECIPE('log2'):replace_result("log", "log",4)
+RECIPE('log4'):replace_result("log", "log",5)
+RECIPE('log3'):replace_result("log", "log",6)
+RECIPE('log5'):replace_result("log", "log",7)
+RECIPE('log6'):replace_result("log", "log",8)
 
 data.raw["recipe-category"]["fawogae"].allowed_module_categories = { "fawogae" }
 data.raw["recipe-category"]["fawogae"].modules_required = true

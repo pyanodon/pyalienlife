@@ -22,7 +22,7 @@ if data and not yafc_turd_integration then
     local to_add = {}
     for _, recipe in pairs(data.raw.recipe) do
         if recipe.category == category then
-            FUN.standardize_results(recipe)
+            recipe:standardize()
             local dna_samples = {}
             for _, ingredient in pairs(recipe.ingredients or {}) do
                 local name = ingredient[1] or ingredient.name

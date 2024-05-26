@@ -77,8 +77,8 @@ RECIPE("nexelit-matrix"):remove_unlock('nenbit-matrix'):add_unlock('neuro-electr
 data.raw["recipe-category"]["xyhiphoe"].allowed_module_categories = { "xyhiphoe" }
 data.raw["recipe-category"]["xyhiphoe"].modules_required = true
 
-FUN.results_replacer("log7", "log", "log",9)
-FUN.results_replacer("log8", "log", "log",10)
+RECIPE('log7'):replace_result("log", "log",9)
+RECIPE('log8'):replace_result("log", "log",10)
 
 RECIPE('fill-xyhiphoe-blood-barrel'):remove_unlock('fluid-handling')
 RECIPE('empty-xyhiphoe-blood-barrel'):remove_unlock('fluid-handling')
