@@ -7,7 +7,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['moondrop-5']),
     }) do
         recipe.name = recipe.name .. '-cu'
-        FUN.add_ingredient(recipe, {name = 'copper-ore', amount = 10, type = 'item'})
+        recipe:add_ingredient({name = 'copper-ore', amount = 10, type = 'item'})
         FUN.multiply_result_amount(recipe, 'moondrop', 1.2)
         recipe.energy_required = math.ceil(recipe.energy_required * 0.8)
         data:extend{recipe}

@@ -57,16 +57,16 @@ if data and not yafc_turd_integration then
             FUN.standardize_results(recipe)
             recipe.name = recipe.name .. '-' .. path
             for _, ingredient in pairs(things_to_add[path].ingredients) do
-                FUN.add_ingredient(recipe, ingredient)
+                recipe:add_ingredient(ingredient)
             end
             for _, result in pairs(things_to_add[path].results) do
-                FUN.add_result(recipe, result)
+                recipe:add_result(result)
             end
             for _, product in pairs(products_to_buff[path]) do
                 if product == 'brain' then
                     for _, result in pairs(recipe.results) do
                         if (result[1] or result.name) == 'brain' then
-                            FUN.add_result(recipe, {name = 'brain', amount = 1, type = 'item', probability = 0.05})
+                            recipe:add_result({name = 'brain', amount = 1, type = 'item', probability = 0.05})
                             break
                         end
                     end

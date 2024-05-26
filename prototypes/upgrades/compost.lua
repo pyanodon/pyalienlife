@@ -173,18 +173,18 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['compost-plant-mk04']),
     }) do
         recipe.name = recipe.name .. '-with-pump'
-		FUN.add_ingredient(recipe, {type = 'item', name = 'offshore-pump', amount = 2*i})
+		recipe:add_ingredient({type = 'item', name = 'offshore-pump', amount = 2*i})
         data:extend{recipe}
     end
 
     local fine_powdered_biomass = table.deepcopy(data.raw.recipe['fine-powdered-biomass'])
     fine_powdered_biomass.name = 'fine-powdered-biomass-irragration'
-    FUN.add_ingredient(fine_powdered_biomass, {type = 'fluid', name = 'water', amount = 250})
+    fine_powdered_biomass:add_ingredient({type = 'fluid', name = 'water', amount = 250})
     fine_powdered_biomass.category = 'washer'
     fine_powdered_biomass.energy_required = 3
     fine_powdered_biomass.main_product = 'steam'
-    FUN.add_result(fine_powdered_biomass, {type = 'fluid', name = 'steam', amount = 250, temperature = 250})
-    FUN.add_result(fine_powdered_biomass, {type = 'item', name = 'dried-biomass', amount = 4})
+    fine_powdered_biomass:add_result({type = 'fluid', name = 'steam', amount = 250, temperature = 250})
+    fine_powdered_biomass:add_result({type = 'item', name = 'dried-biomass', amount = 4})
     data:extend{fine_powdered_biomass}
 end
 

@@ -8,8 +8,8 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['Phadai Dance Dance Revolution 4']),
     }) do
         recipe.name = recipe.name .. '-piezoelectric'
-        FUN.add_ingredient(recipe, {name = 'crystallographic-substrate', amount = 2 * i, type = 'item'})
-        FUN.add_result(recipe, {name = 'proton-donor', amount = 6 * i, type = 'item'})
+        recipe:add_ingredient({name = 'crystallographic-substrate', amount = 2 * i, type = 'item'})
+        recipe:add_result({name = 'proton-donor', amount = 6 * i, type = 'item'})
         recipe.main_product = 'proton-donor'
         data:extend{recipe}
     end

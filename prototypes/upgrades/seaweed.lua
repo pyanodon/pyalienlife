@@ -6,7 +6,7 @@ if data and not yafc_turd_integration then
         [table.deepcopy(data.raw.recipe['seaweed-crop-mk04'])] = {'arithmetic-combinator', 40},
     }) do
         recipe.name = recipe.name .. '-with-ai'
-        FUN.add_ingredient(recipe, ingredient)
+        recipe:add_ingredient(ingredient)
         data:extend{recipe}
     end
 
@@ -18,8 +18,8 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['seaweed-5']),
     }) do
         recipe.name = recipe.name .. '-dry'
-        FUN.remove_ingredient(recipe, 'water')
-        FUN.remove_ingredient(recipe, 'water-saline')
+        recipe:remove_ingredient('water')
+        recipe:remove_ingredient('water-saline')
         data:extend{recipe}
     end
 

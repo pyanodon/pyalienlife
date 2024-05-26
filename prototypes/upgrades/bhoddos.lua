@@ -8,14 +8,14 @@ if data and not yafc_turd_integration then
     }) do
         recipe.name = recipe.name .. '-meltdown'
         recipe.energy_required = math.ceil(recipe.energy_required * 0.3333)
-        FUN.remove_ingredient(recipe, 'fungal-substrate')
-        FUN.remove_ingredient(recipe, 'fungal-substrate-02')
-        FUN.remove_ingredient(recipe, 'fungal-substrate-03')
-        FUN.remove_ingredient(recipe, 'biomass')
-        FUN.remove_ingredient(recipe, 'moss')
-        FUN.remove_ingredient(recipe, 'manure')
-        FUN.remove_ingredient(recipe, 'bacteria-1-barrel')
-        FUN.remove_result(recipe, 'empty-barrel')
+        recipe:remove_ingredient('fungal-substrate')
+        recipe:remove_ingredient('fungal-substrate-02')
+        recipe:remove_ingredient('fungal-substrate-03')
+        recipe:remove_ingredient('biomass')
+        recipe:remove_ingredient('moss')
+        recipe:remove_ingredient('manure')
+        recipe:remove_ingredient('bacteria-1-barrel')
+        recipe:remove_result('empty-barrel')
         data:extend{recipe}
     end
 
@@ -26,8 +26,8 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['bhoddos-4']),
     }) do
         recipe.name = recipe.name .. '-exoenzymes'
-        FUN.add_ingredient(recipe, {type = 'item', name = 'soil', amount = i})
-        FUN.add_result(recipe, {type = 'item', name = 'plutonium-oxide', amount = i})
+        recipe:add_ingredient({type = 'item', name = 'soil', amount = i})
+        recipe:add_result({type = 'item', name = 'plutonium-oxide', amount = i})
         recipe.main_product = 'plutonium-oxide'
         data:extend{recipe}
     end
@@ -47,8 +47,8 @@ if data and not yafc_turd_integration then
 
     local sporopollenin = table.deepcopy(data.raw.recipe['sporopollenin'])
     sporopollenin.name = 'sporopollenin-gills'
-    FUN.remove_ingredient(sporopollenin, 'navens-spore')
-    FUN.remove_ingredient(sporopollenin, 'rennea')
+    sporopollenin:remove_ingredient('navens-spore')
+    sporopollenin:remove_ingredient('rennea')
     data:extend{sporopollenin}
 
     local biomass_sporopollenin = table.deepcopy(data.raw.recipe['biomass-sporopollenin'])

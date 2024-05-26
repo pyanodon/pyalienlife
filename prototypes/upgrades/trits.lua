@@ -6,7 +6,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['trits-cub-4']),
     }) do
         recipe.name = recipe.name .. '-mgo'
-        FUN.remove_ingredient(recipe, 'trits')
+        recipe:remove_ingredient('trits')
         data:extend{recipe}
     end
 
@@ -29,7 +29,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['trits-reef-mk04']),
     }) do
         recipe.name = recipe.name .. '-with-nexelit'
-        FUN.add_ingredient(recipe, {'high-grade-nexelit', i * 100})
+        recipe:add_ingredient({'high-grade-nexelit', i * 100})
         data:extend{recipe}
     end
 end

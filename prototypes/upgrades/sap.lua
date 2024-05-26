@@ -28,7 +28,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['fts-reactor-mk04']),
     }) do
         machine_recipe.name = machine_recipe.name .. '-with-centrifuge'
-        FUN.add_ingredient(machine_recipe, {name = 'centrifuge-mk0' .. i, amount = 1, type = 'item'})
+        machine_recipe:add_ingredient({name = 'centrifuge-mk0' .. i, amount = 1, type = 'item'})
         data:extend{machine_recipe}
     end
 

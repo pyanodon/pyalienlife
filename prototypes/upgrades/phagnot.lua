@@ -44,8 +44,8 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['phagnot-cub-4']),
     }) do
         recipe.name = recipe.name .. '-kicalk'
-        FUN.add_ingredient(recipe, {name = 'kicalk', amount = 1, type = 'item'})
-        FUN.remove_ingredient(recipe, 'raw-fiber')
+        recipe:add_ingredient({name = 'kicalk', amount = 1, type = 'item'})
+        recipe:remove_ingredient('raw-fiber')
         data:extend{recipe}
     end
 
@@ -54,7 +54,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['phagnot-food-02']),
     }) do
         recipe.name = recipe.name .. '-kicalk'
-        FUN.remove_ingredient(recipe, 'raw-fiber')
+        recipe:remove_ingredient('raw-fiber')
         data:extend{recipe}
     end
 end

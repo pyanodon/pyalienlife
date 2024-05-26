@@ -60,8 +60,8 @@ if data and not yafc_turd_integration then
     }) do
         recipe.name = recipe.name .. '-flagellum'
         productivity[i] = recipe.name
-        FUN.add_result(recipe, {name = sponges[i], probability = 0.15 + i * 0.2, type = 'item', amount = 1, catalyst_amount = 1})
-        FUN.add_ingredient(recipe, {name = 'limestone', type = 'item', amount = 2})
+        recipe:add_result({name = sponges[i], probability = 0.15 + i * 0.2, type = 'item', amount = 1, catalyst_amount = 1})
+        recipe:add_ingredient({name = 'limestone', type = 'item', amount = 2})
         recipe.energy_required = recipe.energy_required * 1.5
         recipe.main_product = sponges[i]
         data:extend{recipe}
@@ -73,7 +73,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['sea-sponge-2']),
     }) do
         recipe.name = recipe.name .. '-no-zonga'
-        FUN.remove_ingredient(recipe, 'zogna-bacteria')
+        recipe:remove_ingredient('zogna-bacteria')
         FUN.multiply_ingredient_amount(recipe, 'dirty-water-light', 3)
         FUN.multiply_ingredient_amount(recipe, 'phytoplankton', 3)
         data:extend{recipe}

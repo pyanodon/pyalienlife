@@ -23,8 +23,8 @@ if data and not yafc_turd_integration then
                 break
             end
         end
-        local amount = FUN.remove_result(recipe, 'empty-barrel')
-        FUN.add_result(recipe, {'soaked-gel-barrel', amount})
+        local amount = recipe:remove_result('empty-barrel')
+        recipe:add_result({'soaked-gel-barrel', amount})
         data:extend{recipe}
     end
 
@@ -37,7 +37,7 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. '-eye-out'
         for _, result in pairs(recipe.results) do
             if result.name == 'kmauts-cub' then
-                FUN.add_result(recipe, {type = 'item', name = 'animal-eye', amount = result.amount})
+                recipe:add_result({type = 'item', name = 'animal-eye', amount = result.amount})
                 break
             end
         end
@@ -45,7 +45,7 @@ if data and not yafc_turd_integration then
     end
 
     local food = table.deepcopy(data.raw.recipe['kmauts-ration'])
-    FUN.add_ingredient(food, {type = 'item', name = 'chitin', amount = 3})
+    food:add_ingredient({type = 'item', name = 'chitin', amount = 3})
     FUN.add_result_amount(food, 'kmauts-ration', 4)
     food.name = 'kmauts-ration-chitin'
     data:extend{food}

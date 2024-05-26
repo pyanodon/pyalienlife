@@ -12,9 +12,9 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['vrauks-cocoon-5']),
     }) do
         recipe.name = recipe.name .. '-no-water'
-        FUN.remove_ingredient(recipe, 'syrup-01-barrel')
-        FUN.remove_ingredient(recipe, 'water-barrel')
-        FUN.remove_result(recipe, 'empty-barrel')
+        recipe:remove_ingredient('syrup-01-barrel')
+        recipe:remove_ingredient('water-barrel')
+        recipe:remove_result('empty-barrel')
         data:extend{recipe}
     end
 
@@ -26,7 +26,7 @@ if data and not yafc_turd_integration then
     }) do
         recipe.main_product = recipe.name
         recipe.name = recipe.name .. '-with-lamp'
-        FUN.add_result(recipe, {'small-lamp', i*32})
+        recipe:add_result({'small-lamp', i*32})
         data:extend{recipe}
     end
 

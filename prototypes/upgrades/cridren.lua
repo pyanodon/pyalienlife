@@ -66,7 +66,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['cridren-enclosure-mk04']),
     }) do
         recipe.name = recipe.name .. '-with-mufflers'
-        FUN.add_ingredient(recipe, {mufflers[i], i * 35})
+        recipe:add_ingredient({mufflers[i], i * 35})
         data:extend{recipe}
     end
 end

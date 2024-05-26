@@ -34,8 +34,8 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['vonix-raising-3']),
     }) do
         recipe.name = recipe.name .. '-cancer'
-        local barrel_count = FUN.remove_result(recipe, 'empty-barrel')
-        FUN.add_result(recipe, {'mutant-enzymes-barrel', barrel_count})
+        local barrel_count = recipe:remove_result('empty-barrel')
+        recipe:add_result({'mutant-enzymes-barrel', barrel_count})
         recipe.icon = '__pyalienlifegraphics__/graphics/icons/mutant-enzymes.png'
         recipe.icon_size = 64
         data:extend{recipe}

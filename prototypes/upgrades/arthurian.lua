@@ -35,7 +35,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['arthurian maturing 4']),
     }) do
         recipe.name = recipe.name .. '-abacus'
-        FUN.add_ingredient(recipe, {name = 'abacus', amount = i, type = 'item'})
+        recipe:add_ingredient({name = 'abacus', amount = i, type = 'item'})
         data:extend{recipe}
     end
 
@@ -46,14 +46,14 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['arthurian egg 4']),
     }) do
         recipe.name = recipe.name .. '-hot-stones'
-        FUN.add_ingredient(recipe, {name = 'hot-stone-brick', amount = 2, type = 'item'})
-        FUN.add_result(recipe, {name = 'warmer-stone-brick', amount = 2, type = 'item'})
+        recipe:add_ingredient({name = 'hot-stone-brick', amount = 2, type = 'item'})
+        recipe:add_result({name = 'warmer-stone-brick', amount = 2, type = 'item'})
         FUN.add_result_amount(recipe, 'arthurian-egg', i)
-        local barrels = FUN.remove_result(recipe, 'empty-barrel')
-        FUN.add_result(recipe, {'hot-air-barrel', barrels})
+        local _, barrels = recipe:remove_result('empty-barrel')
+        recipe:add_result({'hot-air-barrel', barrels})
         recipe.energy_required = recipe.energy_required / 2
         recipe.main_product = 'warmer-stone-brick'
-        FUN.remove_ingredient(recipe, 'bedding')
+        recipe:remove_ingredient('bedding')
         data:extend{recipe}
     end
 

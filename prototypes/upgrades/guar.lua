@@ -6,8 +6,8 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['guar-4']),
     }) do
         recipe.name = recipe.name .. '-guarpulse'
-		FUN.add_ingredient(recipe, {'fungicide', 1})
-        FUN.add_result(recipe, {'zinc-nanocomplex', 2^(i-1)})
+		recipe:add_ingredient({'fungicide', 1})
+        recipe:add_result({'zinc-nanocomplex', 2^(i-1)})
         recipe.main_product = 'zinc-nanocomplex'
         data:extend{recipe}
     end
@@ -19,12 +19,12 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['guar-4']),
     }) do
         recipe.name = recipe.name .. '-aquaguar'
-        local _, water = FUN.remove_ingredient(recipe, 'water')
-		FUN.add_ingredient(recipe, {type = 'fluid', name = 'water-saline', amount = math.ceil(water/5), fluidbox_index = 1})
+        local _, water = recipe:remove_ingredient('water')
+		recipe:add_ingredient({type = 'fluid', name = 'water-saline', amount = math.ceil(water/5), fluidbox_index = 1})
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         FUN.multiply_ingredient_amount(recipe, 'guar-seeds', 0.65)
-        FUN.remove_ingredient(recipe, 'pesticide-mk01')
-        FUN.remove_ingredient(recipe, 'pesticide-mk02')
+        recipe:remove_ingredient('pesticide-mk01')
+        recipe:remove_ingredient('pesticide-mk02')
         data:extend{recipe}
     end
 
@@ -36,7 +36,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['guar-gum-plantation-mk04']),
     }) do
         recipe.name = recipe.name .. '-with-bots'
-		FUN.add_ingredient(recipe, {type = 'item', name = bots[i], amount = 4 * i})
+		recipe:add_ingredient({type = 'item', name = bots[i], amount = 4 * i})
         data:extend{recipe}
     end
 end

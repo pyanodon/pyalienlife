@@ -6,8 +6,8 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['grod-4']),
     }) do
         recipe.name = recipe.name .. '-pressured'
-        FUN.remove_ingredient(recipe, 'water')
-        FUN.add_ingredient(recipe, {name = 'pressured-water', amount = 1000, type = 'fluid', fluidbox_index = 1})
+        recipe:remove_ingredient('water')
+        recipe:add_ingredient({name = 'pressured-water', amount = 1000, type = 'fluid', fluidbox_index = 1})
         FUN.multiply_result_amount(recipe, 'grod', 1.25)
         data:extend{recipe}
     end
@@ -36,14 +36,14 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['grod-4']),
     }) do
         recipe.name = recipe.name .. '-dry'
-        FUN.remove_ingredient(recipe, 'water')
+        recipe:remove_ingredient('water')
         data:extend{recipe}
     end
 
     local seeds = table.deepcopy(data.raw.recipe['grod-seeds'])
     seeds.name = 'grod-seeds-heavy-water'
     seeds.main_product = 'grod-seeds'
-    FUN.add_result(seeds, {type = 'fluid', name = 'geothermal-water', amount = 60})
+    seeds:add_result({type = 'fluid', name = 'geothermal-water', amount = 60})
     data:extend{seeds}
 end
 

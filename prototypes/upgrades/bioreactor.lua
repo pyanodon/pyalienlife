@@ -6,7 +6,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['bio-reactor-mk04']),
     }) do
         recipe.name = recipe.name .. '-with-baffles'
-        FUN.add_ingredient(recipe, {name = 'baffles', amount = 10 * i, type = 'item'})
+        recipe:add_ingredient({name = 'baffles', amount = 10 * i, type = 'item'})
         data:extend{recipe}
     end
 

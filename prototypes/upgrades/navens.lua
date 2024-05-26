@@ -1,7 +1,7 @@
 if data and not yafc_turd_integration then
     local recipe = table.deepcopy(data.raw.recipe['navens-sample'])
     recipe.name = 'navens-sample-with-vonix-gen'
-    FUN.add_ingredient(recipe, {'vonix-codex', 5})
+    recipe:add_ingredient({'vonix-codex', 5})
     data:extend{recipe}
 
     data:extend{{
@@ -58,8 +58,8 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['navens-4']),
     }) do
         recipe.name = recipe.name .. '-abomination'
-        FUN.add_ingredient(recipe, {name = victims[i], amount = 1, type = 'item'})
-        FUN.remove_ingredient(recipe, 'guts')
+        recipe:add_ingredient({name = victims[i], amount = 1, type = 'item'})
+        recipe:remove_ingredient('guts')
         recipe.main_product = 'navens-abomination'
         recipe.results = {{'navens-abomination', profit[i]}}
         recipe.energy_required = recipe.energy_required * 1.5
@@ -75,7 +75,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['navens-spore-mk04']),
     }) do
         recipe.name = recipe.name .. '-sterilization'
-        FUN.add_ingredient(recipe, {type = 'fluid', name = 'phosphorus-tricloride', amount = 1})
+        recipe:add_ingredient({type = 'fluid', name = 'phosphorus-tricloride', amount = 1})
         data:extend{recipe}
     end
 end

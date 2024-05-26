@@ -14,7 +14,7 @@ if data and not yafc_turd_integration then
     }) do
         if i > 4 and i < 8 then recipe.localised_name = {'recipe-name.' .. recipe.name} end
         recipe.name = recipe.name .. '-boron'
-        FUN.add_ingredient(recipe, {'boric-acid-barrel', FUN.remove_ingredient(recipe, 'water-barrel')})
+        recipe:add_ingredient({'boric-acid-barrel', recipe:remove_ingredient('water-barrel')})
         if i > 4 and i < 8 then
             recipe.results[1].probability = recipe.results[1].probability * 1.5
             recipe.energy_required = recipe.energy_required * 0.75
@@ -38,11 +38,11 @@ if data and not yafc_turd_integration then
         if i > 4 and i < 8 then recipe.localised_name = {'recipe-name.' .. recipe.name} end
         recipe.name = recipe.name .. '-vegan'
         FUN.multiply_ingredient_amount(recipe, 'meat', 3)
-        FUN.remove_ingredient(recipe, 'fawogae')
-        FUN.remove_ingredient(recipe, 'yotoi-leaves')
-        FUN.remove_ingredient(recipe, 'raw-fiber')
-        FUN.remove_ingredient(recipe, 'navens')
-        FUN.remove_ingredient(recipe, 'wood-seeds')
+        recipe:remove_ingredient('fawogae')
+        recipe:remove_ingredient('yotoi-leaves')
+        recipe:remove_ingredient('raw-fiber')
+        recipe:remove_ingredient('navens')
+        recipe:remove_ingredient('wood-seeds')
         if i > 4 and i < 8 then
             recipe.results[1].probability = recipe.results[1].probability * 0.75
             recipe.energy_required = recipe.energy_required * 1.5
@@ -58,7 +58,7 @@ if data and not yafc_turd_integration then
 
     local experimental = table.deepcopy(data.raw.recipe['Caged scrondrix 9'])
     experimental.name = 'scrondrix-experimental-treatment'
-    FUN.add_ingredient(experimental, {name = 'arthurian-codex', amount = 1, type = 'item'})
+    experimental:add_ingredient({name = 'arthurian-codex', amount = 1, type = 'item'})
     experimental.results = {
         {name = 'bones', amount = 1, type = 'item', probability = 0.6},
         {name = 'cage', amount = 1, type = 'item', probability = 0.6},

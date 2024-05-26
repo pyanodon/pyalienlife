@@ -37,8 +37,8 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['korlex-4']),
     }) do
         recipe.name = recipe.name .. '-slowed'
-        FUN.add_ingredient(recipe, {'barrel-milk', i})
-        FUN.add_result(recipe, {'empty-barrel-milk', i})
+        recipe:add_ingredient({'barrel-milk', i})
+        recipe:add_result({'empty-barrel-milk', i})
         recipe.energy_required = math.ceil(recipe.energy_required * 1.3)
         data:extend{recipe}
     end
@@ -50,9 +50,9 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['korlex-milk-4']),
     }) do
         recipe.name = recipe.name .. '-pressured'
-        FUN.add_ingredient(recipe, {type = 'fluid', name = 'pressured-hydrogen', amount = 20})
+        recipe:add_ingredient({type = 'fluid', name = 'pressured-hydrogen', amount = 20})
         recipe.energy_required = math.ceil(recipe.energy_required * 0.7)
-        FUN.add_result(recipe, {type = 'item', name = 'kimberlite-grade3', amount_min = i*11, amount_max = i*16})
+        recipe:add_result({type = 'item', name = 'kimberlite-grade3', amount_min = i*11, amount_max = i*16})
         recipe.main_product = 'kimberlite-grade3'
         data:extend{recipe}
     end
@@ -64,7 +64,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['ez-ranch-mk04']),
     }) do
         recipe.name = recipe.name .. '-with-nexelit'
-        FUN.add_ingredient(recipe, {type = 'item', name = 'saturated-nexelit-cartridge', amount = 10 * i})
+        recipe:add_ingredient({type = 'item', name = 'saturated-nexelit-cartridge', amount = 10 * i})
         data:extend{recipe}
     end
 end

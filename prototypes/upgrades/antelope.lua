@@ -21,7 +21,7 @@ if data and not yafc_turd_integration then
     local strangelets = table.deepcopy(data.raw.recipe['full-render-antelope'])
     strangelets.name = 'full-render-antelope-existential'
     strangelets.main_product = 'strangelets'
-    FUN.add_result(strangelets, {type = 'item', name = 'strangelets', probability = 0.5, amount = 1})
+    strangelets:add_result({type = 'item', name = 'strangelets', probability = 0.5, amount = 1})
     data:extend{strangelets}
 
     data:extend{

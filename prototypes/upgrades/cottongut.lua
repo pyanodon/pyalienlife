@@ -40,7 +40,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['caged-cottongut-4']),
     }) do
         recipe.name = recipe.name .. '-cannibal'
-        FUN.add_ingredient(recipe, {name = 'cottongut-food-03', amount = 1, type = 'item'})
+        recipe:add_ingredient({name = 'cottongut-food-03', amount = 1, type = 'item'})
         FUN.multiply_result_amount(recipe, 'cottongut', 1.5)
         recipe.energy_required = math.ceil(recipe.energy_required * 0.85)
         data:extend{recipe}
@@ -54,7 +54,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['prandium-lab-mk04']),
     }) do
         recipe.name = recipe.name .. '-ultrasound'
-        FUN.add_ingredient(recipe, {name = metals[i], amount = 80, type = 'item'})
+        recipe:add_ingredient({name = metals[i], amount = 80, type = 'item'})
         data:extend{recipe}
     end
 end

@@ -4,7 +4,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['auog-food-02']),
     } do
         recipe.name = recipe.name .. '-sawdust'
-        FUN.add_ingredient(recipe, {'wood', 6 * i})
+        recipe:add_ingredient({'wood', 6 * i})
         FUN.multiply_result_amount(recipe, 'auog-food-0'..i, 2)
         data:extend{recipe}
     end
@@ -43,7 +43,7 @@ if data and not yafc_turd_integration then
         recipe.main_product = recipe.name
         recipe.name = recipe.name .. '-with-dirt'
         for _, result in pairs(dirt) do
-            FUN.add_result(recipe, result)
+            recipe:add_result(result)
         end
         data:extend{recipe}
     end

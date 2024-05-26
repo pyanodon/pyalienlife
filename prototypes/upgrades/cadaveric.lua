@@ -6,7 +6,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['cadaveric-arum-4']),
     }) do
         recipe.name = recipe.name .. '-soil'
-        FUN.add_ingredient(recipe, {name = 'soil', amount = 40 * i, type = 'item'})
+        recipe:add_ingredient({name = 'soil', amount = 40 * i, type = 'item'})
         FUN.multiply_result_amount(recipe, 'cadaveric-arum', 1.3)
         recipe.energy_required = math.ceil(recipe.energy_required * 1.15)
         data:extend{recipe}
@@ -19,7 +19,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['cadaveric-arum-mk04']),
     }) do
         recipe.name = recipe.name .. '-with-nanofibrils'
-        FUN.add_ingredient(recipe, {name = 'nanofibrils', amount = 10 * (2 ^ (i - 1)), type = 'item'})
+        recipe:add_ingredient({name = 'nanofibrils', amount = 10 * (2 ^ (i - 1)), type = 'item'})
         data:extend{recipe}
     end
 
@@ -31,7 +31,7 @@ if data and not yafc_turd_integration then
     }) do
         recipe.name = recipe.name .. '-msa'
         recipe.main_product = 'cadaveric-arum'
-        FUN.add_result(recipe, {name = 'msa', amount = 55 * i, type = 'fluid'})
+        recipe:add_result({name = 'msa', amount = 55 * i, type = 'fluid'})
         data:extend{recipe}
     end
 end

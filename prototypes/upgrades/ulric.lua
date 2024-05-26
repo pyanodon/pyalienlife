@@ -60,7 +60,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['ulric-cub-4']),
     }) do
         recipe.name = recipe.name .. '-saddle'
-        FUN.add_ingredient(recipe, {name = 'saddle', amount = 1, type = 'item'})
+        recipe:add_ingredient({name = 'saddle', amount = 1, type = 'item'})
         data:extend{recipe}
     end
 
@@ -71,8 +71,8 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['ulric-4']),
     }) do
         recipe.name = recipe.name .. '-manure'
-        FUN.add_result(recipe, {name = 'manure', amount = 2, type = 'item'})
-        if i ~= 1 then FUN.add_result(recipe, {name = 'bedding', amount_max = 1, type = 'item', amount_min = 0}) end
+        recipe:add_result({name = 'manure', amount = 2, type = 'item'})
+        if i ~= 1 then recipe:add_result({name = 'bedding', amount_max = 1, type = 'item', amount_min = 0}) end
         data:extend{recipe}
     end
 end

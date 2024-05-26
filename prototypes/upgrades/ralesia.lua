@@ -25,7 +25,7 @@ if data and not yafc_turd_integration then
     }
 
     local recipe = table.deepcopy(data.raw.recipe['ralesia-seeds'])
-    FUN.add_ingredient(recipe, {'paper-towel', 1})
+    recipe:add_ingredient({'paper-towel', 1})
     recipe.energy_required = 3
     FUN.multiply_result_amount(recipe, 'ralesia-seeds', 2)
     recipe.name = 'ralesia-seeds-paper-towel'
@@ -38,7 +38,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['ralesia-plantation-mk04']),
     }) do
         recipe.name = recipe.name .. '-with-ceramic'
-        FUN.add_ingredient(recipe, {name = 'mirror-mk0'..i, amount = 50 * i, type = 'item'})
+        recipe:add_ingredient({name = 'mirror-mk0'..i, amount = 50 * i, type = 'item'})
         data:extend{recipe}
     end
 
@@ -50,10 +50,10 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['ralesias-4']),
     }) do
         recipe.name = recipe.name .. '-hydrogen-burn'
-        FUN.remove_ingredient(recipe, 'water')
-        local _, old_hydrogen = FUN.remove_ingredient(recipe, 'hydrogen')
-        FUN.add_ingredient(recipe, {name = 'hydrogen', amount = old_hydrogen + 50, type = 'fluid', fluidbox_index = fluidbox_indexs[i]})
-        FUN.add_result(recipe, {name = 'helium', type = 'fluid', amount = i*2})
+        recipe:remove_ingredient('water')
+        local _, old_hydrogen = recipe:remove_ingredient('hydrogen')
+        recipe:add_ingredient({name = 'hydrogen', amount = old_hydrogen + 50, type = 'fluid', fluidbox_index = fluidbox_indexs[i]})
+        recipe:add_result({name = 'helium', type = 'fluid', amount = i*2})
         recipe.main_product = 'helium'
         data:extend{recipe}
     end

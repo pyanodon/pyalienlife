@@ -57,12 +57,12 @@ end
 
 data.raw.item.fawogae = nil
 
-for _, player in DATA:pairs('character') do
-    player.crafting_categories = player.String_Array(player.crafting_categories or {}) + 'wpu-handcrafting' + 'research-handcrafting'
-end
-
-for _, controller in DATA:pairs('god-controller') do
-    controller.crafting_categories = controller.String_Array(controller.crafting_categories or {}) + 'wpu-handcrafting' + 'research-handcrafting'
+for _, player_type in pairs{'character', 'god-controller'} do
+    for _, player in pairs(data.raw[player_type]) do
+        player.crafting_categories = player.crafting_categories or {}
+        table.insert(player.crafting_categories, 'wpu-handcrafting')
+        table.insert(player.crafting_categories, 'research-handcrafting')
+    end
 end
 
 ----------------------------------------------------------------------------------------------------
@@ -271,7 +271,7 @@ data.raw.item['milk-barrel'] = nil
 --data.raw.recipe['fill-milk-barrel'] = nil
 --data.raw.recipe['empty-milk-barrel'] = nil
 
---FUN.global_item_replacer('fawogae', 'fawogae-mk01')
+--py.global_item_replacer('fawogae', 'fawogae-mk01')
 
 --RECIPES UPDATES
 

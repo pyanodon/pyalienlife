@@ -7,8 +7,8 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['fawogae with growth hormone']),
     }) do
         recipe.name = recipe.name .. '-nitrogen'
-        FUN.remove_ingredient(recipe, 'water')
-        FUN.add_ingredient(recipe, {type = 'fluid', name = 'purest-nitrogen-gas', amount = 20 + 20 * i})
+        recipe:remove_ingredient('water')
+        recipe:add_ingredient({type = 'fluid', name = 'purest-nitrogen-gas', amount = 20 + 20 * i})
         FUN.multiply_result_amount(recipe, 'fawogae', 1.35)
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         data:extend{recipe}
@@ -37,7 +37,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['fawogae-mk04']),
     } do
         recipe.name = recipe.name .. '-with-xeno-codex'
-        FUN.add_ingredient(recipe, {'xeno-codex', 1})
+        recipe:add_ingredient({'xeno-codex', 1})
         data:extend{recipe}
     end
 
@@ -45,8 +45,8 @@ if data and not yafc_turd_integration then
     coal_fawogae.name = 'coal-fawogae-buffed'
     coal_fawogae.energy_required = coal_fawogae.energy_required * 4
     coal_fawogae.ingredients[1].amount = 10
-    FUN.remove_result(coal_fawogae, 'raw-coal')
-    FUN.add_result(coal_fawogae, {'active-carbon', 3})
+    coal_fawogae:remove_result('raw-coal')
+    coal_fawogae:add_result({'active-carbon', 3})
     coal_fawogae.icons = nil
     coal_fawogae.icon = nil
     coal_fawogae.main_product = 'active-carbon'
@@ -59,7 +59,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['fawogae-plantation-mk04']),
     }) do
         recipe.name = recipe.name .. '-with-pressure-pump'
-        FUN.add_ingredient(recipe, {name = 'vacuum-pump-mk0' .. i, amount = 1, type = 'item'})
+        recipe:add_ingredient({name = 'vacuum-pump-mk0' .. i, amount = 1, type = 'item'})
         data:extend{recipe}
     end
 end

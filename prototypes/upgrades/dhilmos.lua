@@ -6,8 +6,8 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['dhilmos-4']),
     }) do
         recipe.name = recipe.name .. '-cover'
-        FUN.remove_ingredient(recipe, 'phytoplankton')
-        FUN.add_ingredient(recipe, {name = 'bacteria-1', amount = 1, type = 'fluid'})
+        recipe:remove_ingredient('phytoplankton')
+        recipe:add_ingredient({name = 'bacteria-1', amount = 1, type = 'fluid'})
         data:extend{recipe}
     end
 
@@ -22,8 +22,8 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['dhilmos-egg-4']),
     }) do
         recipe.name = recipe.name .. '-skimmer'
-        FUN.remove_result(recipe, 'waste-water')
-        FUN.remove_ingredient(recipe, 'filtration-media')
+        recipe:remove_result('waste-water')
+        recipe:remove_ingredient('filtration-media')
         data:extend{recipe}
     end
 
@@ -34,9 +34,9 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['dhilmos-4']),
     }) do
         recipe.name = recipe.name .. '-double-intake'
-        FUN.remove_ingredient(recipe, 'water-saline')
-        FUN.add_ingredient(recipe, {'salt', 2})
-        FUN.add_ingredient(recipe, {type = 'fluid', name = 'water', amount = 400})
+        recipe:remove_ingredient('water-saline')
+        recipe:add_ingredient({'salt', 2})
+        recipe:add_ingredient({type = 'fluid', name = 'water', amount = 400})
         FUN.multiply_result_amount(recipe, 'waste-water', 4)
         data:extend{recipe}
     end

@@ -57,7 +57,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['kicalk-plantation-mk04']),
     }) do
         recipe.name = recipe.name .. '-with-mesh'
-        FUN.add_ingredient(recipe, {name = 'heating-system', amount = i, type = 'item'})
+        recipe:add_ingredient({name = 'heating-system', amount = i, type = 'item'})
         data:extend{recipe}
     end
 
@@ -69,9 +69,9 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['kicalk-5']),
     }) do
         recipe.name = recipe.name .. '-saline'
-        FUN.add_result(recipe, {type = 'item', name = 'kicalk-seeds', amount = i * 4})
-        FUN.remove_ingredient(recipe, 'water')
-        FUN.add_ingredient(recipe, {type = 'fluid', amount = 200, name = 'water-saline', fluidbox_index = 1})
+        recipe:add_result({type = 'item', name = 'kicalk-seeds', amount = i * 4})
+        recipe:remove_ingredient('water')
+        recipe:add_ingredient({type = 'fluid', amount = 200, name = 'water-saline', fluidbox_index = 1})
         recipe.main_product = 'kicalk'
         recipe.energy_required = math.ceil(recipe.energy_required * 0.8)
         data:extend{recipe}
@@ -108,12 +108,12 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. '-rotation'
         recipe.main_product = 'kicalk'
         for _, other in pairs(other_species[i]) do
-            FUN.add_ingredient(recipe, other[1])
-            FUN.add_result(recipe, other[2])
+            recipe:add_ingredient(other[1])
+            recipe:add_result(other[2])
             recipe.main_product = other[2][1]
         end
         if i == 5 then
-            FUN.add_ingredient(recipe, {'ulric-cub', 1})
+            recipe:add_ingredient({'ulric-cub', 1})
         end
         FUN.multiply_result_amount(recipe, 'kicalk', 1.35)
         data:extend{recipe}

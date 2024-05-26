@@ -8,9 +8,9 @@ if data and not yafc_turd_integration then
         recipe.energy_required = math.ceil(recipe.energy_required * 1.3)
         recipe.name = recipe.name .. '-dna-polymerase'
         if i == 1 or i == 3 then
-            FUN.add_result(recipe, {name = 'dna-polymerase', amount = i, type = 'item'})
+            recipe:add_result({name = 'dna-polymerase', amount = i, type = 'item'})
         else
-            FUN.add_result(recipe, {name = 'chimeric-proteins', amount = i, type = 'item'})
+            recipe:add_result({name = 'chimeric-proteins', amount = i, type = 'item'})
         end
         data:extend{recipe}
     end
@@ -44,9 +44,9 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['xeno-egg-4']),
     }) do
         recipe.name = recipe.name .. '-cheap'
-        FUN.remove_ingredient(recipe, 'bones')
-        FUN.remove_ingredient(recipe, 'fish')
-        FUN.add_ingredient(recipe, {'hydrofluoric-acid-barrel', 1})
+        recipe:remove_ingredient('bones')
+        recipe:remove_ingredient('fish')
+        recipe:add_ingredient({'hydrofluoric-acid-barrel', 1})
         FUN.add_result_amount(recipe, 'empty-barrel', 1)
         data:extend{recipe}
     end

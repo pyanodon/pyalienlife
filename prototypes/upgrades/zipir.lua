@@ -8,8 +8,8 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['zipir-a-6']),
     }) do
         recipe.name = recipe.name .. '-suicide'
-        FUN.add_result(recipe, {name = 'zipir-eggs', amount_min = 2, amount_max = 3, type = 'item'})
-        FUN.add_result(recipe, {name = 'guts', amount = 1, type = 'item'})
+        recipe:add_result({name = 'zipir-eggs', amount_min = 2, amount_max = 3, type = 'item'})
+        recipe:add_result({name = 'guts', amount = 1, type = 'item'})
         FUN.multiply_ingredient_amount(recipe, 'zipir-food-01', 0.5)
         FUN.multiply_ingredient_amount(recipe, 'zipir-food-02', 0.5)
         for _, result in pairs(recipe.results) do
@@ -34,8 +34,8 @@ if data and not yafc_turd_integration then
     }) do
         recipe.name = recipe.name .. '-trits-gen'
         recipe.energy_required = recipe.energy_required * 1.5
-        FUN.add_ingredient(recipe, {name = 'trits-codex', type = 'item', amount = 1})
-        FUN.add_result(recipe, {name = 'trits-codex', type = 'item', amount = 1, probability = 0.95})
+        recipe:add_ingredient({name = 'trits-codex', type = 'item', amount = 1})
+        recipe:add_result({name = 'trits-codex', type = 'item', amount = 1, probability = 0.95})
         for _, result in pairs(recipe.results) do
             if result.name == 'zipir-eggs' then
                 result.amount_max = result.amount_max * 2
@@ -52,7 +52,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['zipir-reef-mk04']),
     }) do
         machine_recipe.name = machine_recipe.name .. '-with-rc'
-        FUN.add_ingredient(machine_recipe, {name = 'rc-mk0'..i, amount = 1, type = 'item'})
+        machine_recipe:add_ingredient({name = 'rc-mk0'..i, amount = 1, type = 'item'})
         data:extend{machine_recipe}
     end
 end

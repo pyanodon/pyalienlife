@@ -1,8 +1,8 @@
 if data and not yafc_turd_integration then
     local recipe = table.deepcopy(data.raw.recipe['yotoi-seeds'])
     recipe.name = 'yotoi-seeds-cold'
-    FUN.add_ingredient(recipe, {type = 'fluid', name = 'cold-air', amount = 30})
-    FUN.add_ingredient(recipe, {type = 'item', name = 'yotoi-leaves', amount = 1})
+    recipe:add_ingredient({type = 'fluid', name = 'cold-air', amount = 30})
+    recipe:add_ingredient({type = 'item', name = 'yotoi-leaves', amount = 1})
     FUN.multiply_result_amount(recipe, 'yotoi-seeds', 3)
     recipe.energy_required = recipe.energy_required * 4
     data:extend{recipe}
@@ -14,8 +14,8 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['yotoi-4']),
     }) do
         recipe.name = recipe.name .. '-free-leaves'
-        FUN.add_ingredient(recipe, {'burner-inserter', 1})
-        FUN.add_result(recipe, {name = 'yotoi-leaves', amount = i*4, type = 'item'})
+        recipe:add_ingredient({'burner-inserter', 1})
+        recipe:add_result({name = 'yotoi-leaves', amount = i*4, type = 'item'})
         recipe.main_product = 'yotoi-leaves'
         data:extend{recipe}
     end
@@ -59,8 +59,8 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['yotoi-fruit-4']),
     }) do
         recipe.name = recipe.name .. '-nutrient'
-        local _, amount = FUN.remove_ingredient(recipe, 'fertilizer')
-        FUN.add_result(recipe, {'fertilizer', amount})
+        local _, amount = recipe:remove_ingredient('fertilizer')
+        recipe:add_result({'fertilizer', amount})
         FUN.add_result_amount(recipe, 'yotoi', 1)
         FUN.add_result_amount(recipe, 'yotoi-fruit', 1)
         recipe.main_product = 'fertilizer'
@@ -74,7 +74,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['yotoi-aloe-orchard-mk04']),
     }) do
         recipe.name = recipe.name .. '-with-nutrient'
-        FUN.add_ingredient(recipe, {'nutrient', 2^(i-1)})
+        recipe:add_ingredient({'nutrient', 2^(i-1)})
         data:extend{recipe}
     end
 end

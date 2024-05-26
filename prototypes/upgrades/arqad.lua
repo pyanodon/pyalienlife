@@ -30,7 +30,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['arqad-egg-5']),
     }) do
         recipe.name = recipe.name .. '-cold'
-        FUN.add_ingredient(recipe, {type = 'fluid', name = 'purest-nitrogen-gas', amount = 100})
+        recipe:add_ingredient({type = 'fluid', name = 'purest-nitrogen-gas', amount = 100})
         for _, result in pairs(recipe.results) do
             if result.name == 'arqad-queen' then
                 result.probability = 0.995
@@ -120,15 +120,15 @@ if data and not yafc_turd_integration then
             table.deepcopy(data.raw.recipe['arqad-hive-mk04']),
         }) do
             machine_recipe.name = machine_recipe.name .. '-with-cags'
-            FUN.add_ingredient(machine_recipe, {name = 'cags', amount = 10 * i, type = 'item'})
+            machine_recipe:add_ingredient({name = 'cags', amount = 10 * i, type = 'item'})
             data:extend{machine_recipe}
         end
     end
 
     local ez_queen = table.deepcopy(data.raw.recipe['arqad'])
     ez_queen.name = 'ez-queen'
-    FUN.remove_result(ez_queen, 'arqad')
-    FUN.add_result(ez_queen, {'arqad-queen', 1})
+    ez_queen:remove_result('arqad')
+    ez_queen:add_result({'arqad-queen', 1})
     ez_queen.energy_required = ez_queen.energy_required * 2
     ez_queen.main_product = 'arqad-queen'
     data:extend{ez_queen}

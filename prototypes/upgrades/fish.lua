@@ -7,7 +7,7 @@ if data and not yafc_turd_integration then
     }) do
         recipe.name = recipe.name .. '-agressive-selection'
         FUN.add_result_amount(recipe, 'fish', -i)
-        FUN.add_result(recipe, {'fish-food-01', i})
+        recipe:add_result({'fish-food-01', i})
         data:extend{recipe}
     end
 
@@ -34,8 +34,8 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['breed-fish-egg-4']),
     }) do
         recipe.name = recipe.name .. '-doused'
-        FUN.remove_result(recipe, 'waste-water')
-        FUN.add_result(recipe, {type = 'fluid', name = 'pressured-water', amount = 100})
+        recipe:remove_result('waste-water')
+        recipe:add_result({type = 'fluid', name = 'pressured-water', amount = 100})
         FUN.multiply_result_amount(recipe, 'fish-egg', 1.2)
         for _, ingredient in pairs(recipe.ingredients) do
             if ingredient.name == 'water-saline' then

@@ -30,7 +30,7 @@ if data and not yafc_turd_integration then
         [108] = table.deepcopy(data.raw.recipe['rennea-4']),
     } do
         recipe.name = recipe.name .. '-deadhead'
-        FUN.add_result(recipe, {'deadhead', amount})
+        recipe:add_result({'deadhead', amount})
         recipe.main_product = 'deadhead'
         data:extend{recipe}
     end
@@ -45,13 +45,13 @@ if data and not yafc_turd_integration then
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         FUN.multiply_ingredient_amount(recipe, 'water', 200)
         FUN.add_result_amount(recipe, 'rennea', 1)
-        FUN.remove_ingredient(recipe, 'coarse')
-        FUN.remove_ingredient(recipe, 'soil')
+        recipe:remove_ingredient('coarse')
+        recipe:remove_ingredient('soil')
         data:extend{recipe}
     end
 
     local anti_aphid = table.deepcopy(data.raw.recipe['rennea-seeds'])
-    FUN.add_ingredient(anti_aphid, {name = 'bee-venom', amount = 1.5, type = 'fluid'})
+    anti_aphid:add_ingredient({name = 'bee-venom', amount = 1.5, type = 'fluid'})
     FUN.multiply_result_amount(anti_aphid, 'rennea-seeds', 3)
     anti_aphid.energy_required = 3
     anti_aphid.name = 'rennea-seeds-venom'

@@ -6,7 +6,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['bio-scafold-4']),
     } do
         recipe.name = recipe.name .. '-with-lamp'
-        FUN.add_ingredient(recipe, {'small-lamp', 1})
+        recipe:add_ingredient({'small-lamp', 1})
         FUN.multiply_result_amount(recipe, 'bio-scafold', 2)
         data:extend{recipe}
     end
@@ -18,7 +18,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['bio-printer-mk04']),
     }) do
         recipe.name = recipe.name .. '-yag'
-        FUN.add_ingredient(recipe, {type = 'item', name = 'yag-laser-module', amount = 2*i})
+        recipe:add_ingredient({type = 'item', name = 'yag-laser-module', amount = 2*i})
         data:extend{recipe}
     end
 

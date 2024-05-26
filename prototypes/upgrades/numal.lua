@@ -31,7 +31,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['numal-raising-6']),
     }) do
         recipe.name = recipe.name .. '-deuterium'
-        FUN.add_ingredient(recipe, {name = 'deuterium', amount = i * 2, type = 'fluid'})
+        recipe:add_ingredient({name = 'deuterium', amount = i * 2, type = 'fluid'})
         data:extend{recipe}
     end
 
@@ -42,7 +42,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['numal-mk04']),
     }) do
         recipe.name = recipe.name .. '-neutron'
-        FUN.add_ingredient(recipe, {name = 'neutron', amount = 500 * i, type = 'fluid'})
+        recipe:add_ingredient({name = 'neutron', amount = 500 * i, type = 'fluid'})
         data:extend{recipe}
     end
 
@@ -69,7 +69,7 @@ if data and not yafc_turd_integration then
 	local recipe = table.deepcopy(data.raw.recipe['ex-gut-num'])
 	recipe.name = 'ex-gut-num-neodymium'
 	recipe.localised_name = {'recipe-name.ex-gut-num'}
-	FUN.add_ingredient(recipe, {'neodymium-nitrate', 4})
+	recipe:add_ingredient({'neodymium-nitrate', 4})
 	FUN.multiply_result_amount(recipe, 'numal-ink', 2)
 	data:extend{recipe}
 end

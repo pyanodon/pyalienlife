@@ -127,8 +127,8 @@ data.raw.item.satellite.rocket_launch_product =
         amount = 6
     }
 
-FUN.add_ingredient('satellite', {type = 'item', name = 'cottongut', amount = 150})
-FUN.add_ingredient('satellite', {type = 'item', name = 'antimatter', amount = 3})
+'satellite':add_ingredient({type = 'item', name = 'cottongut', amount = 150})
+'satellite':add_ingredient({type = 'item', name = 'antimatter', amount = 3})
 
 RECIPE('space-science-pack'):add_ingredient({type = 'item', name = 'destablilized-toxirus', amount = 1}):add_ingredient({type = 'item', name = 'strangelets', amount = 5})
 
@@ -478,16 +478,16 @@ RECIPE('raw-ralesia-extract'):remove_unlock('zno-nanoparticles'):add_unlock('ral
 RECIPE('ralesia-extract'):remove_unlock('zno-nanoparticles'):add_unlock('ralesia-mk03')
 
 RECIPE('simik-food-01'):add_ingredient({type = 'item', name = 'cadaveric-arum', amount = 2})
-FUN.add_ingredient('simik-food-01', {name = 'cadaveric-arum', amount = 2})
+'simik-food-01':add_ingredient({name = 'cadaveric-arum', amount = 2})
 
 RECIPE('simik-food-02'):add_ingredient({type = 'item', name = 'cadaveric-arum', amount = 2})
-FUN.add_ingredient('simik-food-02', {name = 'cadaveric-arum', amount = 2})
+'simik-food-02':add_ingredient({name = 'cadaveric-arum', amount = 2})
 
 RECIPE('simik-food-01a'):add_ingredient({type = 'item', name = 'cadaveric-arum', amount = 2}):replace_ingredient('gravel', 'phosphate-rock')
-FUN.add_ingredient('simik-food-01a', {name = 'cadaveric-arum', amount = 2})
+'simik-food-01a':add_ingredient({name = 'cadaveric-arum', amount = 2})
 
 RECIPE('simik-food-02a'):add_ingredient({type = 'item', name = 'cadaveric-arum', amount = 2}):replace_ingredient('gravel', 'phosphate-rock')
-FUN.add_ingredient('simik-food-02a', {name = 'cadaveric-arum', amount = 2})
+'simik-food-02a':add_ingredient({name = 'cadaveric-arum', amount = 2})
 
 RECIPE('centrifuge'):add_unlock('filtration')
 RECIPE('stone-wool'):add_unlock('zipir')

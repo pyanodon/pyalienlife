@@ -3,7 +3,7 @@ if data and not yafc_turd_integration then
     fiber.name = 'fiber-dry-storage'
     fiber.energy_required = fiber.energy_required * 3
     FUN.multiply_result_amount(fiber, 'raw-fiber', 2)
-    FUN.add_result(fiber, {'biomass', 1})
+    fiber:add_result({'biomass', 1})
     fiber.main_product = 'raw-fiber'
     data:extend{fiber}
 
@@ -22,7 +22,7 @@ if data and not yafc_turd_integration then
 
     local machine_recipe = table.deepcopy(data.raw.recipe['fwf-mk01'])
     machine_recipe.name = machine_recipe.name .. '-with-furnace'
-    FUN.add_ingredient(machine_recipe, {name = 'stone-furnace', amount = 1, type = 'item'})
+    machine_recipe:add_ingredient({name = 'stone-furnace', amount = 1, type = 'item'})
     data:extend{machine_recipe}
 
     for _, recipe in pairs({

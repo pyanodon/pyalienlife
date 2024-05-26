@@ -34,9 +34,9 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['mukmoux-calf-4']),
     }) do
         recipe.name = recipe.name .. '-microchip'
-        FUN.add_ingredient(recipe, {name = 'microchip', amount = 1, type = 'item'})
-        FUN.add_result(recipe, {name = 'microchip', amount = 1, type = 'item', probability = 0.5})
-        FUN.add_result(recipe, {name = 'fetal-serum', amount = 10, type = 'fluid'})
+        recipe:add_ingredient({name = 'microchip', amount = 1, type = 'item'})
+        recipe:add_result({name = 'microchip', amount = 1, type = 'item', probability = 0.5})
+        recipe:add_result({name = 'fetal-serum', amount = 10, type = 'fluid'})
         data:extend{recipe}
     end
 
@@ -49,7 +49,7 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. '-bip'
         for _, ingredient in pairs(recipe.ingredients) do
             if ingredient.name == 'mukmoux-food-01' or ingredient.name == 'mukmoux-food-02' then
-                FUN.add_result(recipe, {name = ingredient.name, amount = 1, type = 'item', probability = 0.5})
+                recipe:add_result({name = ingredient.name, amount = 1, type = 'item', probability = 0.5})
             end
         end
         FUN.add_ingredient_amount(recipe, 'mukmoux-food-01', 1)
@@ -67,7 +67,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['mukmoux-pasture-mk04']),
     }) do
         recipe.name = recipe.name .. '-with-electronics'
-        FUN.add_ingredient(recipe, {name = electronics[i], amount = 10 * i, type = 'item'})
+        recipe:add_ingredient({name = electronics[i], amount = 10 * i, type = 'item'})
         data:extend{recipe}
     end
 end

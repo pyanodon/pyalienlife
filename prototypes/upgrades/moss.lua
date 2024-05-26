@@ -25,7 +25,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['Moss 5']),
     }) do
         recipe.name = recipe.name .. '-chlorinated'
-        FUN.add_ingredient(recipe, {name = 'chlorinated-water', amount = 1, type = 'item'})
+        recipe:add_ingredient({name = 'chlorinated-water', amount = 1, type = 'item'})
         FUN.multiply_result_amount(recipe, 'moss', 1.3)
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         data:extend{recipe}
@@ -39,8 +39,8 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['Moss 5']),
     }) do
         recipe.name = recipe.name .. '-without-sludge'
-        FUN.remove_ingredient(recipe, 'dirty-water-light')
-        if i ~= 1 then FUN.add_result(recipe, {type = 'item', name = 'gravel', amount_min = 1, amount_max = 5}) end
+        recipe:remove_ingredient('dirty-water-light')
+        if i ~= 1 then recipe:add_result({type = 'item', name = 'gravel', amount_min = 1, amount_max = 5}) end
         recipe.main_product = 'moss'
         data:extend{recipe}
     end
@@ -85,7 +85,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['moss-farm-mk04']),
     }) do
         recipe.name = recipe.name .. '-with-bioreactor'
-        FUN.add_ingredient(recipe, {name = 'bio-reactor-mk0'..i, amount = 1, type = 'item'})
+        recipe:add_ingredient({name = 'bio-reactor-mk0'..i, amount = 1, type = 'item'})
         data:extend{recipe}
     end
 end

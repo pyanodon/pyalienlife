@@ -41,7 +41,7 @@ if data and not yafc_turd_integration then
                     if amount >= 5 then
                         FUN.multiply_ingredient_amount(replacement, name, 0.1)
                     else
-                        FUN.add_result(replacement, {type = 'item', name = name, amount = amount, probability = 0.8})
+                        replacement:add_result({type = 'item', name = name, amount = amount, probability = 0.8})
                     end
                 end
                 to_add[#to_add + 1] = replacement
@@ -64,7 +64,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['creature-chamber-mk04']),
     }) do
         recipe.name = recipe.name .. '-arthurian'
-        FUN.add_ingredient(recipe, {type = 'item', name = arthurians[i], amount = 1})
+        recipe:add_ingredient({type = 'item', name = arthurians[i], amount = 1})
         data:extend{recipe}
     end
 

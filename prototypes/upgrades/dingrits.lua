@@ -37,7 +37,7 @@ if data and not yafc_turd_integration then
     data:extend{recipe}
 
     recipe = table.deepcopy(data.raw.recipe['space-suit'])
-    FUN.remove_ingredient(recipe, 'science-coating')
+    recipe:remove_ingredient('science-coating')
     recipe.name = 'space-suit-mutation'
     data:extend{recipe}
 
@@ -53,8 +53,8 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['dingrits-4']),
     }) do
         recipe.name = recipe.name .. '-training'
-        FUN.add_result(recipe, {type = 'item', amount = 1, probability = 0.8, name = 'dingrits-food-01'})
-        if i > 2 then FUN.add_result(recipe, {type = 'item', amount = 1, probability = 0.8, name = 'dingrits-food-02'}) end
+        recipe:add_result({type = 'item', amount = 1, probability = 0.8, name = 'dingrits-food-01'})
+        if i > 2 then recipe:add_result({type = 'item', amount = 1, probability = 0.8, name = 'dingrits-food-02'}) end
         data:extend{recipe}
     end
 end

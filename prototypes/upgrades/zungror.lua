@@ -1,7 +1,7 @@
 if data and not yafc_turd_integration then
     local zungror = table.deepcopy(data.raw.recipe['zungror'])
     zungror.name = 'zungror-with-yaedols-codex'
-    FUN.add_ingredient(zungror, {name = 'yaedols-codex', amount = 6, type = 'item'})
+    zungror:add_ingredient({name = 'yaedols-codex', amount = 6, type = 'item'})
     data:extend{zungror}
 
     for i, recipe in pairs({
@@ -10,7 +10,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['zungror-cocoon-3']),
     }) do
         recipe.name = recipe.name .. '-rich-clay'
-        FUN.add_ingredient(recipe, {name = 'rich-clay', amount = 2, type = 'item'})
+        recipe:add_ingredient({name = 'rich-clay', amount = 2, type = 'item'})
         data:extend{recipe}
     end
 
@@ -31,7 +31,7 @@ if data and not yafc_turd_integration then
         [{'pu-238', 2}] = table.deepcopy(data.raw.recipe['zungror-raising-3']),
     }) do
         recipe.name = recipe.name .. '-with-funny-rock'
-        FUN.add_ingredient(recipe, isotope)
+        recipe:add_ingredient(isotope)
         data:extend{recipe}
     end
 end

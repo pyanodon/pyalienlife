@@ -8,7 +8,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['yaedols-spore-mk04']),
     }) do
         recipe.name = recipe.name .. '-coke-oven-gas'
-        FUN.add_ingredient(recipe, {minimum_temperature = 100, name = 'coke-oven-gas', type = 'fluid', amount = 1})
+        recipe:add_ingredient({minimum_temperature = 100, name = 'coke-oven-gas', type = 'fluid', amount = 1})
         data:extend{recipe}
     end
 
@@ -19,16 +19,17 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['yaedols-4']),
     }) do
         recipe.name = recipe.name .. '-hot-air'
-        FUN.add_ingredient(recipe, {name = 'hot-air', amount = 60, type = 'fluid', fluidbox_index = 2})
-        FUN.add_result(recipe, {name = 'cold-air', amount = 60, type = 'fluid'})
+        recipe:add_ingredient({name = 'hot-air', amount = 60, type = 'fluid', fluidbox_index = 2})
+        recipe:add_result({name = 'cold-air', amount = 60, type = 'fluid'})
         recipe.main_product = 'cold-air'
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
 
-        local nitrogen_barrels = math.ceil(FUN.remove_ingredient(recipe, 'nitrogen') / 50)
+        local nitrogen_barrels = math.ceil(recipe:remove_ingredient('nitrogen') / 50)
         if nitrogen_barrels > 0 then
-            FUN.add_ingredient(recipe, {name = 'nitrogen-barrel', amount = nitrogen_barrels, type = 'item'})
-            nitrogen_barrels = nitrogen_barrels + FUN.remove_result(recipe, 'empty-barrel')
-            FUN.add_result(recipe, {'empty-barrel', nitrogen_barrels})
+            recipe:add_ingredient({name = 'nitrogen-barrel', amount = nitrogen_barrels, type = 'item'})
+            local _, amount_removed = recipe:remove_result('empty-barrel')
+            nitrogen_barrels = nitrogen_barrels + amount_removed
+            recipe:add_result({'empty-barrel', nitrogen_barrels})
         end
 
         data:extend{recipe}
