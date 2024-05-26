@@ -269,10 +269,6 @@ data.raw.module['sap-tree-mk04'].limitation = {'sap-01', 'sap-mk02', 'sap-mk03',
 
 --remove steel barrel based milk
 data.raw.item['milk-barrel'] = nil
---data.raw.recipe['fill-milk-barrel'] = nil
---data.raw.recipe['empty-milk-barrel'] = nil
-
---py.global_item_replacer('fawogae', 'fawogae-mk01')
 
 --RECIPES UPDATES
 
@@ -313,14 +309,11 @@ RECIPE {
 
 --copy`s of combustion recipes with biomass
 for _,recipe in pairs(data.raw.recipe) do
-    --log('hit')
     if recipe.category == 'combustion' and string.match(recipe.name, 'biomass') == nil then
-        --log('hit')
         local recipe_copy = table.deepcopy(recipe)
         local name = recipe_copy.name
         if recipe_copy.ingredients ~= nil then
             for i, ing in pairs(recipe_copy.ingredients) do
-                --log('hit')
                 if ing.name == 'coke' then
                     ing.name = 'biomass'
                     local locale
@@ -332,8 +325,6 @@ for _,recipe in pairs(data.raw.recipe) do
                             type = ingred.type
                         end
                     end
-                    --log(serpent.block(recipe.ingredients))
-                    --log(locale)
                     for _, result in pairs(recipe.results) do
                         if result.name == 'combustion-mixture1' then
                             temp = result.temperature
@@ -349,27 +340,15 @@ for _,recipe in pairs(data.raw.recipe) do
                         results = recipe_copy.results,
                         icon = recipe_copy.icon,
                         icon_size = recipe_copy.icon_size,
-                        --main_product = 'combustion-mixture1',
                         subgroup = recipe_copy.subgroup,
                         order = recipe_copy.order,
                         localised_name = {'recipe-name.biomass-combustion', {type .. '-name.' ..locale}, temp}
                     }
-                    -- log(serpent.block(data.raw.recipe[name .. '-biomass']))
-                    --log('hit')
                     for _, tech in pairs(data.raw.technology) do
-                        --log('hit')
-                        --log(serpent.block(tech))
                         if tech.effects ~= nil then
                             for _, effect in pairs(tech.effects) do
-                                --log('hit')
-                                --log(serpent.block(effect))
-                                --log(serpent.block(effect.type))
-                                --log(serpent.block(effect.recipe))
-                                --log(serpent.block(name))
                                 if effect.type == 'unlock-recipe' and effect.recipe == name then
-                                    --log('hit')
                                     RECIPE(name .. '-biomass'):add_unlock(tech.name)
-                                    --log(serpent.block(data.raw.technology[tech.name]))
                                     break
                                 end
                             end
@@ -378,7 +357,6 @@ for _,recipe in pairs(data.raw.recipe) do
                 end
             end
         end
-        --log(serpent.block(data.raw.recipe[name .. '-biomass']))
     end
 end
 
