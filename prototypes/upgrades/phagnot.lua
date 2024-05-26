@@ -21,10 +21,10 @@ if data and not yafc_turd_integration then
     }
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['phagnot-cub-1']),
-        table.deepcopy(data.raw.recipe['phagnot-cub-2']),
-        table.deepcopy(data.raw.recipe['phagnot-cub-3']),
-        table.deepcopy(data.raw.recipe['phagnot-cub-4']),
+        RECIPE('phagnot-cub-1'):copy(),
+        RECIPE('phagnot-cub-2'):copy(),
+        RECIPE('phagnot-cub-3'):copy(),
+        RECIPE('phagnot-cub-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-fast'
         recipe.energy_required = math.ceil(recipe.energy_required * 0.7)
@@ -34,14 +34,14 @@ if data and not yafc_turd_integration then
     end
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['phagnot-1']),
-        table.deepcopy(data.raw.recipe['phagnot-2']),
-        table.deepcopy(data.raw.recipe['phagnot-3']),
-        table.deepcopy(data.raw.recipe['phagnot-4']),
-        table.deepcopy(data.raw.recipe['phagnot-cub-1']),
-        table.deepcopy(data.raw.recipe['phagnot-cub-2']),
-        table.deepcopy(data.raw.recipe['phagnot-cub-3']),
-        table.deepcopy(data.raw.recipe['phagnot-cub-4']),
+        RECIPE('phagnot-1'):copy(),
+        RECIPE('phagnot-2'):copy(),
+        RECIPE('phagnot-3'):copy(),
+        RECIPE('phagnot-4'):copy(),
+        RECIPE('phagnot-cub-1'):copy(),
+        RECIPE('phagnot-cub-2'):copy(),
+        RECIPE('phagnot-cub-3'):copy(),
+        RECIPE('phagnot-cub-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-kicalk'
         recipe:add_ingredient({name = 'kicalk', amount = 1, type = 'item'})
@@ -50,8 +50,8 @@ if data and not yafc_turd_integration then
     end
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['phagnot-food-01']),
-        table.deepcopy(data.raw.recipe['phagnot-food-02']),
+        RECIPE('phagnot-food-01'):copy(),
+        RECIPE('phagnot-food-02'):copy(),
     }) do
         recipe.name = recipe.name .. '-kicalk'
         recipe:remove_ingredient('raw-fiber')

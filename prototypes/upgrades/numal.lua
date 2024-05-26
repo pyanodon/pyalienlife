@@ -17,18 +17,18 @@ if data and not yafc_turd_integration then
         main_product = 'sb-final-conc'
     }}
 
-	local aeroorgan = table.deepcopy(data.raw.recipe['aeroorgan'])
+	local aeroorgan = RECIPE('aeroorgan'):copy()
 	aeroorgan.name = 'aeroorgan-buffed'
 	aeroorgan:multiply_result_amount('aeroorgan', 3)
 	data:extend{aeroorgan}
 
 	for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['numal-raising-1']),
-        table.deepcopy(data.raw.recipe['numal-raising-2']),
-        table.deepcopy(data.raw.recipe['numal-raising-3']),
-        table.deepcopy(data.raw.recipe['numal-raising-4']),
-        table.deepcopy(data.raw.recipe['numal-raising-5']),
-        table.deepcopy(data.raw.recipe['numal-raising-6']),
+        RECIPE('numal-raising-1'):copy(),
+        RECIPE('numal-raising-2'):copy(),
+        RECIPE('numal-raising-3'):copy(),
+        RECIPE('numal-raising-4'):copy(),
+        RECIPE('numal-raising-5'):copy(),
+        RECIPE('numal-raising-6'):copy(),
     }) do
         recipe.name = recipe.name .. '-deuterium'
         recipe:add_ingredient({name = 'deuterium', amount = i * 2, type = 'fluid'})
@@ -36,10 +36,10 @@ if data and not yafc_turd_integration then
     end
 
 	for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['numal']),
-        table.deepcopy(data.raw.recipe['numal-mk02']),
-        table.deepcopy(data.raw.recipe['numal-mk03']),
-        table.deepcopy(data.raw.recipe['numal-mk04']),
+        RECIPE('numal'):copy(),
+        RECIPE('numal-mk02'):copy(),
+        RECIPE('numal-mk03'):copy(),
+        RECIPE('numal-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-neutron'
         recipe:add_ingredient({name = 'neutron', amount = 500 * i, type = 'fluid'})
@@ -47,12 +47,12 @@ if data and not yafc_turd_integration then
     end
 
 	for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['numal-egg-1']),
-        table.deepcopy(data.raw.recipe['numal-egg-2']),
-        table.deepcopy(data.raw.recipe['numal-egg-3']),
-        table.deepcopy(data.raw.recipe['numal-egg-4']),
-        table.deepcopy(data.raw.recipe['numal-egg-5']),
-        table.deepcopy(data.raw.recipe['numal-egg-6']),
+        RECIPE('numal-egg-1'):copy(),
+        RECIPE('numal-egg-2'):copy(),
+        RECIPE('numal-egg-3'):copy(),
+        RECIPE('numal-egg-4'):copy(),
+        RECIPE('numal-egg-5'):copy(),
+        RECIPE('numal-egg-6'):copy(),
     }) do
         recipe.name = recipe.name .. '-neutron'
 		for _, result in pairs(recipe.results) do
@@ -66,7 +66,7 @@ if data and not yafc_turd_integration then
         data:extend{recipe}
     end
 
-	local recipe = table.deepcopy(data.raw.recipe['ex-gut-num'])
+	local recipe = RECIPE('ex-gut-num'):copy()
 	recipe.name = 'ex-gut-num-neodymium'
 	recipe.localised_name = {'recipe-name.ex-gut-num'}
 	recipe:add_ingredient({'neodymium-nitrate', 4})

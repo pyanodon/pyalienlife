@@ -167,17 +167,17 @@ if data and not yafc_turd_integration then
     }}
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['compost-plant-mk01']),
-        table.deepcopy(data.raw.recipe['compost-plant-mk02']),
-        table.deepcopy(data.raw.recipe['compost-plant-mk03']),
-        table.deepcopy(data.raw.recipe['compost-plant-mk04']),
+        RECIPE('compost-plant-mk01'):copy(),
+        RECIPE('compost-plant-mk02'):copy(),
+        RECIPE('compost-plant-mk03'):copy(),
+        RECIPE('compost-plant-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-with-pump'
 		recipe:add_ingredient({type = 'item', name = 'offshore-pump', amount = 2*i})
         data:extend{recipe}
     end
 
-    local fine_powdered_biomass = table.deepcopy(data.raw.recipe['fine-powdered-biomass'])
+    local fine_powdered_biomass = RECIPE('fine-powdered-biomass'):copy()
     fine_powdered_biomass.name = 'fine-powdered-biomass-irragration'
     fine_powdered_biomass:add_ingredient({type = 'fluid', name = 'water', amount = 250})
     fine_powdered_biomass.category = 'washer'

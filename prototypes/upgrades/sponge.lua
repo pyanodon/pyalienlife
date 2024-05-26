@@ -53,10 +53,10 @@ if data and not yafc_turd_integration then
     local productivity = {}
     local sponges = {'sea-sponge', 'sea-sponge-mk02', 'sea-sponge-mk03', 'sea-sponge-mk04'}
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['sea-sponge-sprouts']),
-        table.deepcopy(data.raw.recipe['sea-sponge-sprouts-2']),
-        table.deepcopy(data.raw.recipe['sea-sponge-sprouts-3']),
-        table.deepcopy(data.raw.recipe['sea-sponge-sprouts-4']),
+        RECIPE('sea-sponge-sprouts'):copy(),
+        RECIPE('sea-sponge-sprouts-2'):copy(),
+        RECIPE('sea-sponge-sprouts-3'):copy(),
+        RECIPE('sea-sponge-sprouts-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-flagellum'
         productivity[i] = recipe.name
@@ -69,8 +69,8 @@ if data and not yafc_turd_integration then
     py.allow_productivity(productivity)
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['sea-sponge-1']),
-        table.deepcopy(data.raw.recipe['sea-sponge-2']),
+        RECIPE('sea-sponge-1'):copy(),
+        RECIPE('sea-sponge-2'):copy(),
     }) do
         recipe.name = recipe.name .. '-no-zonga'
         recipe:remove_ingredient('zogna-bacteria')

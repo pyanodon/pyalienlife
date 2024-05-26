@@ -1,8 +1,8 @@
 if data and not yafc_turd_integration then
-    local py_science_1 = table.deepcopy(data.raw.recipe['py-science-pack-1'])
-    local py_science_2 = table.deepcopy(data.raw.recipe['py-science-pack-2'])
-    local py_science_3 = table.deepcopy(data.raw.recipe['py-science-pack-3'])
-    local py_science_4 = table.deepcopy(data.raw.recipe['py-science-pack-4'])
+    local py_science_1 = RECIPE('py-science-pack-1'):copy()
+    local py_science_2 = RECIPE('py-science-pack-2'):copy()
+    local py_science_3 = RECIPE('py-science-pack-3'):copy()
+    local py_science_4 = RECIPE('py-science-pack-4'):copy()
 
     py_science_1.name = py_science_1.name .. '-turd'
     py_science_2.name = py_science_2.name .. '-turd'

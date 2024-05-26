@@ -1,9 +1,9 @@
 if data and not yafc_turd_integration then
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['caged-xeno-1']),
-        table.deepcopy(data.raw.recipe['caged-xeno-2']),
-        table.deepcopy(data.raw.recipe['caged-xeno-3']),
-        table.deepcopy(data.raw.recipe['caged-xeno-4']),
+        RECIPE('caged-xeno-1'):copy(),
+        RECIPE('caged-xeno-2'):copy(),
+        RECIPE('caged-xeno-3'):copy(),
+        RECIPE('caged-xeno-4'):copy(),
     }) do
         recipe.energy_required = math.ceil(recipe.energy_required * 1.3)
         recipe.name = recipe.name .. '-dna-polymerase'
@@ -38,10 +38,10 @@ if data and not yafc_turd_integration then
     }}
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['xeno-egg-1']),
-        table.deepcopy(data.raw.recipe['xeno-egg-2']),
-        table.deepcopy(data.raw.recipe['xeno-egg-3']),
-        table.deepcopy(data.raw.recipe['xeno-egg-4']),
+        RECIPE('xeno-egg-1'):copy(),
+        RECIPE('xeno-egg-2'):copy(),
+        RECIPE('xeno-egg-3'):copy(),
+        RECIPE('xeno-egg-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-cheap'
         recipe:remove_ingredient('bones')

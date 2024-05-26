@@ -1,11 +1,11 @@
 if data and not yafc_turd_integration then
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['yaedols-spores']),
-        table.deepcopy(data.raw.recipe['yaedols-spores-2']),
-        table.deepcopy(data.raw.recipe['yaedols-spores-3']),
-        table.deepcopy(data.raw.recipe['yaedols-spore-mk02']),
-        table.deepcopy(data.raw.recipe['yaedols-spore-mk03']),
-        table.deepcopy(data.raw.recipe['yaedols-spore-mk04']),
+        RECIPE('yaedols-spores'):copy(),
+        RECIPE('yaedols-spores-2'):copy(),
+        RECIPE('yaedols-spores-3'):copy(),
+        RECIPE('yaedols-spore-mk02'):copy(),
+        RECIPE('yaedols-spore-mk03'):copy(),
+        RECIPE('yaedols-spore-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-coke-oven-gas'
         recipe:add_ingredient({minimum_temperature = 100, name = 'coke-oven-gas', type = 'fluid', amount = 1})
@@ -13,10 +13,10 @@ if data and not yafc_turd_integration then
     end
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['yaedols-1']),
-        table.deepcopy(data.raw.recipe['yaedols-2']),
-        table.deepcopy(data.raw.recipe['yaedols-3']),
-        table.deepcopy(data.raw.recipe['yaedols-4']),
+        RECIPE('yaedols-1'):copy(),
+        RECIPE('yaedols-2'):copy(),
+        RECIPE('yaedols-3'):copy(),
+        RECIPE('yaedols-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-hot-air'
         recipe:add_ingredient({name = 'hot-air', amount = 60, type = 'fluid', fluidbox_index = 2})
@@ -36,7 +36,7 @@ if data and not yafc_turd_integration then
         data:extend{recipe}
     end
 
-    local spore = table.deepcopy(data.raw.recipe['yaedols-spores'])
+    local spore = RECIPE('yaedols-spores'):copy()
     spore.energy_required = 2
     spore.results = {
         {type = 'item', probability = 0.9, name = 'yaedols-spores', amount = 4},

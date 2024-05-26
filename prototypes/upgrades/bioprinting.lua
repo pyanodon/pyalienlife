@@ -1,9 +1,9 @@
 if data and not yafc_turd_integration then
     for _, recipe in pairs{
-        table.deepcopy(data.raw.recipe['bio-scafold']),
-        table.deepcopy(data.raw.recipe['bio-scafold-2']),
-        table.deepcopy(data.raw.recipe['bio-scafold-3']),
-        table.deepcopy(data.raw.recipe['bio-scafold-4']),
+        RECIPE('bio-scafold'):copy(),
+        RECIPE('bio-scafold-2'):copy(),
+        RECIPE('bio-scafold-3'):copy(),
+        RECIPE('bio-scafold-4'):copy(),
     } do
         recipe.name = recipe.name .. '-with-lamp'
         recipe:add_ingredient({'small-lamp', 1})
@@ -12,10 +12,10 @@ if data and not yafc_turd_integration then
     end
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['bio-printer-mk01']),
-        table.deepcopy(data.raw.recipe['bio-printer-mk02']),
-        table.deepcopy(data.raw.recipe['bio-printer-mk03']),
-        table.deepcopy(data.raw.recipe['bio-printer-mk04']),
+        RECIPE('bio-printer-mk01'):copy(),
+        RECIPE('bio-printer-mk02'):copy(),
+        RECIPE('bio-printer-mk03'):copy(),
+        RECIPE('bio-printer-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-yag'
         recipe:add_ingredient({type = 'item', name = 'yag-laser-module', amount = 2*i})

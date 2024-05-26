@@ -23,11 +23,11 @@ if is_pyse then cags_effects = {
 
 if data and not yafc_turd_integration then
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['arqad-egg-1']),
-        table.deepcopy(data.raw.recipe['arqad-egg-2']),
-        table.deepcopy(data.raw.recipe['arqad-egg-3']),
-        table.deepcopy(data.raw.recipe['arqad-egg-4']),
-        table.deepcopy(data.raw.recipe['arqad-egg-5']),
+        RECIPE('arqad-egg-1'):copy(),
+        RECIPE('arqad-egg-2'):copy(),
+        RECIPE('arqad-egg-3'):copy(),
+        RECIPE('arqad-egg-4'):copy(),
+        RECIPE('arqad-egg-5'):copy(),
     }) do
         recipe.name = recipe.name .. '-cold'
         recipe:add_ingredient({type = 'fluid', name = 'purest-nitrogen-gas', amount = 100})
@@ -41,9 +41,9 @@ if data and not yafc_turd_integration then
     end
 
     for recipe, result_name in pairs({
-        [table.deepcopy(data.raw.recipe['wax'])] = 'wax',
-        [table.deepcopy(data.raw.recipe['wax-to-lube'])] = 'lubricant',
-        [table.deepcopy(data.raw.recipe['honey-comb'])] = 'arqad-honey',
+        [RECIPE('wax'):copy()] = 'wax',
+        [RECIPE('wax-to-lube'):copy()] = 'lubricant',
+        [RECIPE('honey-comb'):copy()] = 'arqad-honey',
     }) do
         recipe.name = recipe.name .. '-buffed'
         recipe:multiply_result_amount(result_name, 3)
@@ -114,10 +114,10 @@ if data and not yafc_turd_integration then
         end
     else
         for i, machine_recipe in pairs({
-            table.deepcopy(data.raw.recipe['arqad-hive-mk01']),
-            table.deepcopy(data.raw.recipe['arqad-hive-mk02']),
-            table.deepcopy(data.raw.recipe['arqad-hive-mk03']),
-            table.deepcopy(data.raw.recipe['arqad-hive-mk04']),
+            RECIPE('arqad-hive-mk01'):copy(),
+            RECIPE('arqad-hive-mk02'):copy(),
+            RECIPE('arqad-hive-mk03'):copy(),
+            RECIPE('arqad-hive-mk04'):copy(),
         }) do
             machine_recipe.name = machine_recipe.name .. '-with-cags'
             machine_recipe:add_ingredient({name = 'cags', amount = 10 * i, type = 'item'})
@@ -125,7 +125,7 @@ if data and not yafc_turd_integration then
         end
     end
 
-    local ez_queen = table.deepcopy(data.raw.recipe['arqad'])
+    local ez_queen = RECIPE('arqad'):copy()
     ez_queen.name = 'ez-queen'
     ez_queen:remove_result('arqad')
     ez_queen:add_result({'arqad-queen', 1})

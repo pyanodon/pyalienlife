@@ -29,12 +29,12 @@ if data and not yafc_turd_integration then
     }}
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['vonix-raising-1']),
-        table.deepcopy(data.raw.recipe['vonix-raising-2']),
-        table.deepcopy(data.raw.recipe['vonix-raising-3']),
+        RECIPE('vonix-raising-1'):copy(),
+        RECIPE('vonix-raising-2'):copy(),
+        RECIPE('vonix-raising-3'):copy(),
     }) do
         recipe.name = recipe.name .. '-cancer'
-        local barrel_count = recipe:remove_result('empty-barrel')
+        local _, barrel_count = recipe:remove_result('empty-barrel')
         recipe:add_result({'mutant-enzymes-barrel', barrel_count})
         recipe.icon = '__pyalienlifegraphics__/graphics/icons/mutant-enzymes.png'
         recipe.icon_size = 64
@@ -43,9 +43,9 @@ if data and not yafc_turd_integration then
 
     local previous = {{'soil', 20}, {'vonix-den-mk01', 1}, {'vonix-den-mk02', 1}}
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['vonix-den-mk01']),
-        table.deepcopy(data.raw.recipe['vonix-den-mk02']),
-        table.deepcopy(data.raw.recipe['vonix-den-mk03']),
+        RECIPE('vonix-den-mk01'):copy(),
+        RECIPE('vonix-den-mk02'):copy(),
+        RECIPE('vonix-den-mk03'):copy(),
     }) do
         recipe.name = recipe.name .. '-free'
         recipe.ingredients = {previous[i]}

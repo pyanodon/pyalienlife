@@ -58,10 +58,10 @@ if data and not yafc_turd_integration then
         'arthurian-mk04',
     }
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['creature-chamber-mk01']),
-        table.deepcopy(data.raw.recipe['creature-chamber-mk02']),
-        table.deepcopy(data.raw.recipe['creature-chamber-mk03']),
-        table.deepcopy(data.raw.recipe['creature-chamber-mk04']),
+        RECIPE('creature-chamber-mk01'):copy(),
+        RECIPE('creature-chamber-mk02'):copy(),
+        RECIPE('creature-chamber-mk03'):copy(),
+        RECIPE('creature-chamber-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-arthurian'
         recipe:add_ingredient({type = 'item', name = arthurians[i], amount = 1})
@@ -70,7 +70,7 @@ if data and not yafc_turd_integration then
 
     for _, unit_name in pairs(units) do
         local unit = table.deepcopy(data.raw.unit[unit_name])
-        local recipe = table.deepcopy(data.raw.recipe[unit_name])
+        local recipe = RECIPE(unit_name):copy()
         local item = table.deepcopy(data.raw.item[unit_name] or data.raw['item-with-tags'][unit_name] or data.raw.module[unit_name])
         if not item then error('no item for ' .. unit_name) end
         local name = unit_name .. '-turd'

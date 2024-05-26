@@ -15,6 +15,7 @@ local tech_upgrades = {
     require 'prototypes/upgrades/yaedols',
 }
 
+
 if (data and mods.pyhightech) or (script and script.active_mods.pyhightech) then -- is pyHT installed?
     for _, upgrade in pairs{
         'prototypes/upgrades/fwf',

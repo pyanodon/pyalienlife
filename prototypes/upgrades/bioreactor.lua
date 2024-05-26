@@ -1,9 +1,9 @@
 if data and not yafc_turd_integration then
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['bio-reactor-mk01']),
-        table.deepcopy(data.raw.recipe['bio-reactor-mk02']),
-        table.deepcopy(data.raw.recipe['bio-reactor-mk03']),
-        table.deepcopy(data.raw.recipe['bio-reactor-mk04']),
+        RECIPE('bio-reactor-mk01'):copy(),
+        RECIPE('bio-reactor-mk02'):copy(),
+        RECIPE('bio-reactor-mk03'):copy(),
+        RECIPE('bio-reactor-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-with-baffles'
         recipe:add_ingredient({name = 'baffles', amount = 10 * i, type = 'item'})

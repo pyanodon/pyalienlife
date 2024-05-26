@@ -1,7 +1,7 @@
 if data and not yafc_turd_integration then
     for i, recipe in pairs{
-        table.deepcopy(data.raw.recipe['auog-food-01']),
-        table.deepcopy(data.raw.recipe['auog-food-02']),
+        RECIPE('auog-food-01'):copy(),
+        RECIPE('auog-food-02'):copy(),
     } do
         recipe.name = recipe.name .. '-sawdust'
         recipe:add_ingredient({'wood', 6 * i})
@@ -35,10 +35,10 @@ if data and not yafc_turd_integration then
     end
 
     for recipe, dirt in pairs{
-        [table.deepcopy(data.raw.recipe['auog-paddock-mk01'])] = {{'soil', 13}, {'sand', 7}, {'stone', 5}},
-        [table.deepcopy(data.raw.recipe['auog-paddock-mk02'])] = {{'coarse', 8}, {'limestone', 12}, {'rich-clay', 5}},
-        [table.deepcopy(data.raw.recipe['auog-paddock-mk03'])] = {{'iron-oxide', 6}, {'coal-dust', 3}, {'gravel', 11}},
-        [table.deepcopy(data.raw.recipe['auog-paddock-mk04'])] = {{'oil-sand', 10}, {'rare-earth-ore', 2}, {'biomass', 5}},
+        [RECIPE('auog-paddock-mk01'):copy()] = {{'soil', 13}, {'sand', 7}, {'stone', 5}},
+        [RECIPE('auog-paddock-mk02'):copy()] = {{'coarse', 8}, {'limestone', 12}, {'rich-clay', 5}},
+        [RECIPE('auog-paddock-mk03'):copy()] = {{'iron-oxide', 6}, {'coal-dust', 3}, {'gravel', 11}},
+        [RECIPE('auog-paddock-mk04'):copy()] = {{'oil-sand', 10}, {'rare-earth-ore', 2}, {'biomass', 5}},
     } do
         recipe.main_product = recipe.name
         recipe.name = recipe.name .. '-with-dirt'

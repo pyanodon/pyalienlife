@@ -24,10 +24,10 @@ if data and not yafc_turd_integration then
     }
 
     for amount, recipe in pairs{
-        [15] = table.deepcopy(data.raw.recipe['rennea-1']),
-        [34] = table.deepcopy(data.raw.recipe['rennea-2']),
-        [66] = table.deepcopy(data.raw.recipe['rennea-3']),
-        [108] = table.deepcopy(data.raw.recipe['rennea-4']),
+        [15] = RECIPE('rennea-1'):copy(),
+        [34] = RECIPE('rennea-2'):copy(),
+        [66] = RECIPE('rennea-3'):copy(),
+        [108] = RECIPE('rennea-4'):copy(),
     } do
         recipe.name = recipe.name .. '-deadhead'
         recipe:add_result({'deadhead', amount})
@@ -36,10 +36,10 @@ if data and not yafc_turd_integration then
     end
 
     for _, recipe in pairs{
-        table.deepcopy(data.raw.recipe['rennea-1']),
-        table.deepcopy(data.raw.recipe['rennea-2']),
-        table.deepcopy(data.raw.recipe['rennea-3']),
-        table.deepcopy(data.raw.recipe['rennea-4']),
+        RECIPE('rennea-1'):copy(),
+        RECIPE('rennea-2'):copy(),
+        RECIPE('rennea-3'):copy(),
+        RECIPE('rennea-4'):copy(),
     } do
         recipe.name = recipe.name .. '-hydrophile'
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
@@ -50,7 +50,7 @@ if data and not yafc_turd_integration then
         data:extend{recipe}
     end
 
-    local anti_aphid = table.deepcopy(data.raw.recipe['rennea-seeds'])
+    local anti_aphid = RECIPE('rennea-seeds'):copy()
     anti_aphid:add_ingredient({name = 'bee-venom', amount = 1.5, type = 'fluid'})
     anti_aphid:multiply_result_amount('rennea-seeds', 3)
     anti_aphid.energy_required = 3

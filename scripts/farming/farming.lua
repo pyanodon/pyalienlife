@@ -1,7 +1,7 @@
 Farming = {}
 Farming.events = {}
 
----@type table<string, string>
+---@as table<string, string>
 ---Contains key-value pairs of `{farm_name = farm_domain}`
 -- See `scripts/farming/farm-build-list.lua` for an example
 local farm_buildings = require 'farm-building-list'

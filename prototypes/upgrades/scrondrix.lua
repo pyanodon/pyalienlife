@@ -1,20 +1,21 @@
 if data and not yafc_turd_integration then
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['Scrondrix 1']),
-        table.deepcopy(data.raw.recipe['Scrondrix 2']),
-        table.deepcopy(data.raw.recipe['Scrondrix 3']),
-        table.deepcopy(data.raw.recipe['Scrondrix 4']),
-        table.deepcopy(data.raw.recipe['scrondrix-mk02']),
-        table.deepcopy(data.raw.recipe['scrondrix-mk03']),
-        table.deepcopy(data.raw.recipe['scrondrix-mk04']),
-        table.deepcopy(data.raw.recipe['Scrondrix cub 1']),
-        table.deepcopy(data.raw.recipe['Scrondrix cub 2']),
-        table.deepcopy(data.raw.recipe['Scrondrix cub 3']),
-        table.deepcopy(data.raw.recipe['Scrondrix cub 4']),
+        RECIPE('Scrondrix 1'):copy(),
+        RECIPE('Scrondrix 2'):copy(),
+        RECIPE('Scrondrix 3'):copy(),
+        RECIPE('Scrondrix 4'):copy(),
+        RECIPE('scrondrix-mk02'):copy(),
+        RECIPE('scrondrix-mk03'):copy(),
+        RECIPE('scrondrix-mk04'):copy(),
+        RECIPE('Scrondrix cub 1'):copy(),
+        RECIPE('Scrondrix cub 2'):copy(),
+        RECIPE('Scrondrix cub 3'):copy(),
+        RECIPE('Scrondrix cub 4'):copy(),
     }) do
         if i > 4 and i < 8 then recipe.localised_name = {'recipe-name.' .. recipe.name} end
         recipe.name = recipe.name .. '-boron'
-        recipe:add_ingredient({'boric-acid-barrel', recipe:remove_ingredient('water-barrel')})
+        local _, removed = recipe:remove_ingredient('water-barrel')
+        recipe:add_ingredient({'boric-acid-barrel', removed})
         if i > 4 and i < 8 then
             recipe.results[1].probability = recipe.results[1].probability * 1.5
             recipe.energy_required = recipe.energy_required * 0.75
@@ -23,17 +24,17 @@ if data and not yafc_turd_integration then
     end
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['Scrondrix 1']),
-        table.deepcopy(data.raw.recipe['Scrondrix 2']),
-        table.deepcopy(data.raw.recipe['Scrondrix 3']),
-        table.deepcopy(data.raw.recipe['Scrondrix 4']),
-        table.deepcopy(data.raw.recipe['scrondrix-mk02']),
-        table.deepcopy(data.raw.recipe['scrondrix-mk03']),
-        table.deepcopy(data.raw.recipe['scrondrix-mk04']),
-        table.deepcopy(data.raw.recipe['Scrondrix cub 1']),
-        table.deepcopy(data.raw.recipe['Scrondrix cub 2']),
-        table.deepcopy(data.raw.recipe['Scrondrix cub 3']),
-        table.deepcopy(data.raw.recipe['Scrondrix cub 4']),
+        RECIPE('Scrondrix 1'):copy(),
+        RECIPE('Scrondrix 2'):copy(),
+        RECIPE('Scrondrix 3'):copy(),
+        RECIPE('Scrondrix 4'):copy(),
+        RECIPE('scrondrix-mk02'):copy(),
+        RECIPE('scrondrix-mk03'):copy(),
+        RECIPE('scrondrix-mk04'):copy(),
+        RECIPE('Scrondrix cub 1'):copy(),
+        RECIPE('Scrondrix cub 2'):copy(),
+        RECIPE('Scrondrix cub 3'):copy(),
+        RECIPE('Scrondrix cub 4'):copy(),
     }) do
         if i > 4 and i < 8 then recipe.localised_name = {'recipe-name.' .. recipe.name} end
         recipe.name = recipe.name .. '-vegan'
@@ -50,13 +51,13 @@ if data and not yafc_turd_integration then
         data:extend{recipe}
     end
 
-    local brains = table.deepcopy(data.raw.recipe['ex-bra-scro'])
+    local brains = RECIPE('ex-bra-scro'):copy()
     brains.name = 'scrondrix-brain-slaughterhouse-ex'
     brains.localised_name = {'recipe-name.ex-bra-scro'}
     brains:multiply_result_amount('brain', 16)
     brains:multiply_result_amount('pineal-gland', 0.25)
 
-    local experimental = table.deepcopy(data.raw.recipe['Caged scrondrix 9'])
+    local experimental = RECIPE('Caged scrondrix 9'):copy()
     experimental.name = 'scrondrix-experimental-treatment'
     experimental:add_ingredient({name = 'arthurian-codex', amount = 1, type = 'item'})
     experimental.results = {

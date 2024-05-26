@@ -1,9 +1,9 @@
 if data and not yafc_turd_integration then
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['cadaveric-arum-1']),
-        table.deepcopy(data.raw.recipe['cadaveric-arum-2']),
-        table.deepcopy(data.raw.recipe['cadaveric-arum-3']),
-        table.deepcopy(data.raw.recipe['cadaveric-arum-4']),
+        RECIPE('cadaveric-arum-1'):copy(),
+        RECIPE('cadaveric-arum-2'):copy(),
+        RECIPE('cadaveric-arum-3'):copy(),
+        RECIPE('cadaveric-arum-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-soil'
         recipe:add_ingredient({name = 'soil', amount = 40 * i, type = 'item'})
@@ -13,10 +13,10 @@ if data and not yafc_turd_integration then
     end
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['cadaveric-arum-mk01']),
-        table.deepcopy(data.raw.recipe['cadaveric-arum-mk02']),
-        table.deepcopy(data.raw.recipe['cadaveric-arum-mk03']),
-        table.deepcopy(data.raw.recipe['cadaveric-arum-mk04']),
+        RECIPE('cadaveric-arum-mk01'):copy(),
+        RECIPE('cadaveric-arum-mk02'):copy(),
+        RECIPE('cadaveric-arum-mk03'):copy(),
+        RECIPE('cadaveric-arum-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-with-nanofibrils'
         recipe:add_ingredient({name = 'nanofibrils', amount = 10 * (2 ^ (i - 1)), type = 'item'})
@@ -24,10 +24,10 @@ if data and not yafc_turd_integration then
     end
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['cadaveric-arum-1']),
-        table.deepcopy(data.raw.recipe['cadaveric-arum-2']),
-        table.deepcopy(data.raw.recipe['cadaveric-arum-3']),
-        table.deepcopy(data.raw.recipe['cadaveric-arum-4']),
+        RECIPE('cadaveric-arum-1'):copy(),
+        RECIPE('cadaveric-arum-2'):copy(),
+        RECIPE('cadaveric-arum-3'):copy(),
+        RECIPE('cadaveric-arum-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-msa'
         recipe.main_product = 'cadaveric-arum'

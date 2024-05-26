@@ -1,12 +1,12 @@
 if data and not yafc_turd_integration then
     local cottongut_sciences = {'solidified-sarcorus', 'paragen', 'negasium', 'nonconductive-phazogen', 'denatured-seismite', 'denatured-seismite'}
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['cottongut-science-red-seeds']),
-        table.deepcopy(data.raw.recipe['cottongut-science-green-seeds']),
-        table.deepcopy(data.raw.recipe['cottongut-science-blue-seeds']),
-        table.deepcopy(data.raw.recipe['cottongut-science-py-seeds']),
-        table.deepcopy(data.raw.recipe['cottongut-science-prod-seeds']),
-        table.deepcopy(data.raw.recipe['denatured-seismite-2']),
+        RECIPE('cottongut-science-red-seeds'):copy(),
+        RECIPE('cottongut-science-green-seeds'):copy(),
+        RECIPE('cottongut-science-blue-seeds'):copy(),
+        RECIPE('cottongut-science-py-seeds'):copy(),
+        RECIPE('cottongut-science-prod-seeds'):copy(),
+        RECIPE('denatured-seismite-2'):copy(),
     }) do
         recipe.name = recipe.name .. '-80-20'
         recipe:add_result_amount(cottongut_sciences[i], 1)
@@ -34,10 +34,10 @@ if data and not yafc_turd_integration then
     }}
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['caged-cottongut-1']),
-        table.deepcopy(data.raw.recipe['caged-cottongut-2']),
-        table.deepcopy(data.raw.recipe['caged-cottongut-3']),
-        table.deepcopy(data.raw.recipe['caged-cottongut-4']),
+        RECIPE('caged-cottongut-1'):copy(),
+        RECIPE('caged-cottongut-2'):copy(),
+        RECIPE('caged-cottongut-3'):copy(),
+        RECIPE('caged-cottongut-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-cannibal'
         recipe:add_ingredient({name = 'cottongut-food-03', amount = 1, type = 'item'})
@@ -48,10 +48,10 @@ if data and not yafc_turd_integration then
 
     local metals = {'high-grade-lead', 'reduced-chromium', 'reduced-silver', 'high-grade-quartz'}
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['prandium-lab-mk01']),
-        table.deepcopy(data.raw.recipe['prandium-lab-mk02']),
-        table.deepcopy(data.raw.recipe['prandium-lab-mk03']),
-        table.deepcopy(data.raw.recipe['prandium-lab-mk04']),
+        RECIPE('prandium-lab-mk01'):copy(),
+        RECIPE('prandium-lab-mk02'):copy(),
+        RECIPE('prandium-lab-mk03'):copy(),
+        RECIPE('prandium-lab-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-ultrasound'
         recipe:add_ingredient({name = metals[i], amount = 80, type = 'item'})

@@ -1,10 +1,10 @@
 if data and not yafc_turd_integration then
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['fawogae-1']),
-        table.deepcopy(data.raw.recipe['fawogae with manure']),
-        table.deepcopy(data.raw.recipe['fawogae with improved substrate']),
-        table.deepcopy(data.raw.recipe['fawogae with special substrate']),
-        table.deepcopy(data.raw.recipe['fawogae with growth hormone']),
+        RECIPE('fawogae-1'):copy(),
+        RECIPE('fawogae with manure'):copy(),
+        RECIPE('fawogae with improved substrate'):copy(),
+        RECIPE('fawogae with special substrate'):copy(),
+        RECIPE('fawogae with growth hormone'):copy(),
     }) do
         recipe.name = recipe.name .. '-nitrogen'
         recipe:remove_ingredient('water')
@@ -31,17 +31,17 @@ if data and not yafc_turd_integration then
     }}
 
     for _, recipe in pairs{
-        table.deepcopy(data.raw.recipe['fawogae-sample']),
-        table.deepcopy(data.raw.recipe['fawogae-mk02']),
-        table.deepcopy(data.raw.recipe['fawogae-mk03']),
-        table.deepcopy(data.raw.recipe['fawogae-mk04']),
+        RECIPE('fawogae-sample'):copy(),
+        RECIPE('fawogae-mk02'):copy(),
+        RECIPE('fawogae-mk03'):copy(),
+        RECIPE('fawogae-mk04'):copy(),
     } do
         recipe.name = recipe.name .. '-with-xeno-codex'
         recipe:add_ingredient({'xeno-codex', 1})
         data:extend{recipe}
     end
 
-    local coal_fawogae = table.deepcopy(data.raw.recipe['coal-fawogae'])
+    local coal_fawogae = RECIPE('coal-fawogae'):copy()
     coal_fawogae.name = 'coal-fawogae-buffed'
     coal_fawogae.energy_required = coal_fawogae.energy_required * 4
     coal_fawogae.ingredients[1].amount = 10
@@ -53,10 +53,10 @@ if data and not yafc_turd_integration then
     data:extend{coal_fawogae}
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['fawogae-plantation-mk01']),
-        table.deepcopy(data.raw.recipe['fawogae-plantation-mk02']),
-        table.deepcopy(data.raw.recipe['fawogae-plantation-mk03']),
-        table.deepcopy(data.raw.recipe['fawogae-plantation-mk04']),
+        RECIPE('fawogae-plantation-mk01'):copy(),
+        RECIPE('fawogae-plantation-mk02'):copy(),
+        RECIPE('fawogae-plantation-mk03'):copy(),
+        RECIPE('fawogae-plantation-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-with-pressure-pump'
         recipe:add_ingredient({name = 'vacuum-pump-mk0' .. i, amount = 1, type = 'item'})

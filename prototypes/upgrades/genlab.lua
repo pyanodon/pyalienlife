@@ -1,5 +1,5 @@
 if data and not yafc_turd_integration then
-    local adam = table.deepcopy(data.raw.recipe['adam42-gen'])
+    local adam = RECIPE('adam42-gen'):copy()
     adam.name = 'adam42-gen-laser'
     adam:add_ingredient({name = 'personal-laser-defense-equipment', amount = 1, type = 'item'})
     adam:add_result({name = 'personal-laser-defense-equipment', amount = 1, type = 'item', probability = 0.99, catalyst_amount = 1})
@@ -8,14 +8,14 @@ if data and not yafc_turd_integration then
     adam.energy_required = adam.energy_required * 4
     adam.main_product = 'adam42-gen'
 
-    local pks = table.deepcopy(data.raw.recipe['enzyme-pks'])
+    local pks = RECIPE('enzyme-pks'):copy()
     pks.name = 'enzyme-pks-nickel-carbonyl'
     pks:add_ingredient({name = 'nickel-carbonyl', amount = 200, type = 'fluid'})
     pks:multiply_result_amount('enzyme-pks', 2)
     pks.energy_required = pks.energy_required * 2
     pks.main_product = 'enzyme-pks'
 
-    local hmas = table.deepcopy(data.raw.recipe['hmas'])
+    local hmas = RECIPE('hmas'):copy()
     hmas.name = 'hmas-pvp'
     hmas:add_ingredient({name = 'pvp', amount = 2, type = 'item'})
     hmas:multiply_result_amount('hmas', 2.5)

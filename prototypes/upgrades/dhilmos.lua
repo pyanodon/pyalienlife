@@ -1,9 +1,9 @@
 if data and not yafc_turd_integration then
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['dhilmos-1']),
-        table.deepcopy(data.raw.recipe['dhilmos-2']),
-        table.deepcopy(data.raw.recipe['dhilmos-3']),
-        table.deepcopy(data.raw.recipe['dhilmos-4']),
+        RECIPE('dhilmos-1'):copy(),
+        RECIPE('dhilmos-2'):copy(),
+        RECIPE('dhilmos-3'):copy(),
+        RECIPE('dhilmos-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-cover'
         recipe:remove_ingredient('phytoplankton')
@@ -12,14 +12,14 @@ if data and not yafc_turd_integration then
     end
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['dhilmos-1']),
-        table.deepcopy(data.raw.recipe['dhilmos-2']),
-        table.deepcopy(data.raw.recipe['dhilmos-3']),
-        table.deepcopy(data.raw.recipe['dhilmos-4']),
-        table.deepcopy(data.raw.recipe['dhilmos-egg-1']),
-        table.deepcopy(data.raw.recipe['dhilmos-egg-2']),
-        table.deepcopy(data.raw.recipe['dhilmos-egg-3']),
-        table.deepcopy(data.raw.recipe['dhilmos-egg-4']),
+        RECIPE('dhilmos-1'):copy(),
+        RECIPE('dhilmos-2'):copy(),
+        RECIPE('dhilmos-3'):copy(),
+        RECIPE('dhilmos-4'):copy(),
+        RECIPE('dhilmos-egg-1'):copy(),
+        RECIPE('dhilmos-egg-2'):copy(),
+        RECIPE('dhilmos-egg-3'):copy(),
+        RECIPE('dhilmos-egg-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-skimmer'
         recipe:remove_result('waste-water')
@@ -28,10 +28,10 @@ if data and not yafc_turd_integration then
     end
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['dhilmos-1']),
-        table.deepcopy(data.raw.recipe['dhilmos-2']),
-        table.deepcopy(data.raw.recipe['dhilmos-3']),
-        table.deepcopy(data.raw.recipe['dhilmos-4']),
+        RECIPE('dhilmos-1'):copy(),
+        RECIPE('dhilmos-2'):copy(),
+        RECIPE('dhilmos-3'):copy(),
+        RECIPE('dhilmos-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-double-intake'
         recipe:remove_ingredient('water-saline')

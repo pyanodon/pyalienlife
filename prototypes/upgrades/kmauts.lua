@@ -1,9 +1,9 @@
 if data and not yafc_turd_integration then
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['kmauts-cub-1']),
-        table.deepcopy(data.raw.recipe['kmauts-cub-2']),
-        table.deepcopy(data.raw.recipe['kmauts-cub-3']),
-        table.deepcopy(data.raw.recipe['kmauts-cub-4']),
+        RECIPE('kmauts-cub-1'):copy(),
+        RECIPE('kmauts-cub-2'):copy(),
+        RECIPE('kmauts-cub-3'):copy(),
+        RECIPE('kmauts-cub-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-ratio'
         recipe:multiply_result_amount('kmauts-cub', 1.35)
@@ -11,10 +11,10 @@ if data and not yafc_turd_integration then
     end
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['kmauts-1']),
-        table.deepcopy(data.raw.recipe['kmauts-2']),
-        table.deepcopy(data.raw.recipe['kmauts-3']),
-        table.deepcopy(data.raw.recipe['kmauts-4']),
+        RECIPE('kmauts-1'):copy(),
+        RECIPE('kmauts-2'):copy(),
+        RECIPE('kmauts-3'):copy(),
+        RECIPE('kmauts-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-ratio'
         for _, result in pairs(recipe.results) do
@@ -23,16 +23,16 @@ if data and not yafc_turd_integration then
                 break
             end
         end
-        local amount = recipe:remove_result('empty-barrel')
+        local _, amount = recipe:remove_result('empty-barrel')
         recipe:add_result({'soaked-gel-barrel', amount})
         data:extend{recipe}
     end
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['kmauts-cub-1']),
-        table.deepcopy(data.raw.recipe['kmauts-cub-2']),
-        table.deepcopy(data.raw.recipe['kmauts-cub-3']),
-        table.deepcopy(data.raw.recipe['kmauts-cub-4']),
+        RECIPE('kmauts-cub-1'):copy(),
+        RECIPE('kmauts-cub-2'):copy(),
+        RECIPE('kmauts-cub-3'):copy(),
+        RECIPE('kmauts-cub-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-eye-out'
         for _, result in pairs(recipe.results) do
@@ -44,7 +44,7 @@ if data and not yafc_turd_integration then
         data:extend{recipe}
     end
 
-    local food = table.deepcopy(data.raw.recipe['kmauts-ration'])
+    local food = RECIPE('kmauts-ration'):copy()
     food:add_ingredient({type = 'item', name = 'chitin', amount = 3})
     food:add_result_amount('kmauts-ration', 4)
     food.name = 'kmauts-ration-chitin'

@@ -22,10 +22,10 @@ if data and not yafc_turd_integration then
     }}
 
     for i, machine_recipe in pairs({
-        table.deepcopy(data.raw.recipe['fts-reactor']),
-        table.deepcopy(data.raw.recipe['fts-reactor-mk02']),
-        table.deepcopy(data.raw.recipe['fts-reactor-mk03']),
-        table.deepcopy(data.raw.recipe['fts-reactor-mk04']),
+        RECIPE('fts-reactor'):copy(),
+        RECIPE('fts-reactor-mk02'):copy(),
+        RECIPE('fts-reactor-mk03'):copy(),
+        RECIPE('fts-reactor-mk04'):copy(),
     }) do
         machine_recipe.name = machine_recipe.name .. '-with-centrifuge'
         machine_recipe:add_ingredient({name = 'centrifuge-mk0' .. i, amount = 1, type = 'item'})

@@ -1,13 +1,13 @@
 if data and not yafc_turd_integration then
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['caged-antelope-1']),
-        table.deepcopy(data.raw.recipe['caged-antelope-2']),
-        table.deepcopy(data.raw.recipe['caged-antelope-3']),
-        table.deepcopy(data.raw.recipe['caged-antelope-4']),
-        table.deepcopy(data.raw.recipe['caged-antelope-5']),
-        table.deepcopy(data.raw.recipe['caged-antelope-6']),
-        table.deepcopy(data.raw.recipe['caged-antelope-7']),
-        table.deepcopy(data.raw.recipe['caged-antelope-8']),
+        RECIPE('caged-antelope-1'):copy(),
+        RECIPE('caged-antelope-2'):copy(),
+        RECIPE('caged-antelope-3'):copy(),
+        RECIPE('caged-antelope-4'):copy(),
+        RECIPE('caged-antelope-5'):copy(),
+        RECIPE('caged-antelope-6'):copy(),
+        RECIPE('caged-antelope-7'):copy(),
+        RECIPE('caged-antelope-8'):copy(),
     }) do
         recipe.name = recipe.name .. '-5th-dimension'
         for _, result in pairs(recipe.results) do
@@ -18,7 +18,7 @@ if data and not yafc_turd_integration then
         data:extend{recipe}
     end
 
-    local strangelets = table.deepcopy(data.raw.recipe['full-render-antelope'])
+    local strangelets = RECIPE('full-render-antelope'):copy()
     strangelets.name = 'full-render-antelope-existential'
     strangelets.main_product = 'strangelets'
     strangelets:add_result({type = 'item', name = 'strangelets', probability = 0.5, amount = 1})

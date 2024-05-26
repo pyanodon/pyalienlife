@@ -1,10 +1,10 @@
 if data and not yafc_turd_integration then
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['kicalk-1']),
-        table.deepcopy(data.raw.recipe['kicalk-2']),
-        table.deepcopy(data.raw.recipe['kicalk-3']),
-        table.deepcopy(data.raw.recipe['kicalk-4']),
-        table.deepcopy(data.raw.recipe['kicalk-5']),
+        RECIPE('kicalk-1'):copy(),
+        RECIPE('kicalk-2'):copy(),
+        RECIPE('kicalk-3'):copy(),
+        RECIPE('kicalk-4'):copy(),
+        RECIPE('kicalk-5'):copy(),
     }) do
         recipe.name = recipe.name .. '-dry'
         local amount = recipe.results[1].amount
@@ -51,10 +51,10 @@ if data and not yafc_turd_integration then
     }}
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['kicalk-plantation-mk01']),
-        table.deepcopy(data.raw.recipe['kicalk-plantation-mk02']),
-        table.deepcopy(data.raw.recipe['kicalk-plantation-mk03']),
-        table.deepcopy(data.raw.recipe['kicalk-plantation-mk04']),
+        RECIPE('kicalk-plantation-mk01'):copy(),
+        RECIPE('kicalk-plantation-mk02'):copy(),
+        RECIPE('kicalk-plantation-mk03'):copy(),
+        RECIPE('kicalk-plantation-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-with-mesh'
         recipe:add_ingredient({name = 'heating-system', amount = i, type = 'item'})
@@ -62,11 +62,11 @@ if data and not yafc_turd_integration then
     end
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['kicalk-1']),
-        table.deepcopy(data.raw.recipe['kicalk-2']),
-        table.deepcopy(data.raw.recipe['kicalk-3']),
-        table.deepcopy(data.raw.recipe['kicalk-4']),
-        table.deepcopy(data.raw.recipe['kicalk-5']),
+        RECIPE('kicalk-1'):copy(),
+        RECIPE('kicalk-2'):copy(),
+        RECIPE('kicalk-3'):copy(),
+        RECIPE('kicalk-4'):copy(),
+        RECIPE('kicalk-5'):copy(),
     }) do
         recipe.name = recipe.name .. '-saline'
         recipe:add_result({type = 'item', name = 'kicalk-seeds', amount = i * 4})
@@ -99,11 +99,11 @@ if data and not yafc_turd_integration then
     }
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['kicalk-1']),
-        table.deepcopy(data.raw.recipe['kicalk-2']),
-        table.deepcopy(data.raw.recipe['kicalk-3']),
-        table.deepcopy(data.raw.recipe['kicalk-4']),
-        table.deepcopy(data.raw.recipe['kicalk-5']),
+        RECIPE('kicalk-1'):copy(),
+        RECIPE('kicalk-2'):copy(),
+        RECIPE('kicalk-3'):copy(),
+        RECIPE('kicalk-4'):copy(),
+        RECIPE('kicalk-5'):copy(),
     }) do
         recipe.name = recipe.name .. '-rotation'
         recipe.main_product = 'kicalk'

@@ -2,10 +2,10 @@ if data and not yafc_turd_integration then
     data.raw.recipe['energy-drinkb'].category = 'chemistry'
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['Phadai Dance Dance Revolution 1']),
-        table.deepcopy(data.raw.recipe['Phadai Dance Dance Revolution 2']),
-        table.deepcopy(data.raw.recipe['Phadai Dance Dance Revolution 3']),
-        table.deepcopy(data.raw.recipe['Phadai Dance Dance Revolution 4']),
+        RECIPE('Phadai Dance Dance Revolution 1'):copy(),
+        RECIPE('Phadai Dance Dance Revolution 2'):copy(),
+        RECIPE('Phadai Dance Dance Revolution 3'):copy(),
+        RECIPE('Phadai Dance Dance Revolution 4'):copy(),
     }) do
         recipe.name = recipe.name .. '-piezoelectric'
         recipe:add_ingredient({name = 'crystallographic-substrate', amount = 2 * i, type = 'item'})
@@ -15,10 +15,10 @@ if data and not yafc_turd_integration then
     end
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['Phadai Dance Dance Revolution 1']),
-        table.deepcopy(data.raw.recipe['Phadai Dance Dance Revolution 2']),
-        table.deepcopy(data.raw.recipe['Phadai Dance Dance Revolution 3']),
-        table.deepcopy(data.raw.recipe['Phadai Dance Dance Revolution 4']),
+        RECIPE('Phadai Dance Dance Revolution 1'):copy(),
+        RECIPE('Phadai Dance Dance Revolution 2'):copy(),
+        RECIPE('Phadai Dance Dance Revolution 3'):copy(),
+        RECIPE('Phadai Dance Dance Revolution 4'):copy(),
     }) do
         recipe.name = recipe.name .. '-dubstep'
         recipe:multiply_result_amount('carapace', 2)

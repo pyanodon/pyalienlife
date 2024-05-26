@@ -18,11 +18,11 @@ if data and not yafc_turd_integration then
     py.allow_productivity{'chlorinated-water'}
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['Moss 1']),
-        table.deepcopy(data.raw.recipe['Moss 2']),
-        table.deepcopy(data.raw.recipe['Moss 3']),
-        table.deepcopy(data.raw.recipe['Moss 4']),
-        table.deepcopy(data.raw.recipe['Moss 5']),
+        RECIPE('Moss 1'):copy(),
+        RECIPE('Moss 2'):copy(),
+        RECIPE('Moss 3'):copy(),
+        RECIPE('Moss 4'):copy(),
+        RECIPE('Moss 5'):copy(),
     }) do
         recipe.name = recipe.name .. '-chlorinated'
         recipe:add_ingredient({name = 'chlorinated-water', amount = 1, type = 'item'})
@@ -32,11 +32,11 @@ if data and not yafc_turd_integration then
     end
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['Moss 1']),
-        table.deepcopy(data.raw.recipe['Moss 2']),
-        table.deepcopy(data.raw.recipe['Moss 3']),
-        table.deepcopy(data.raw.recipe['Moss 4']),
-        table.deepcopy(data.raw.recipe['Moss 5']),
+        RECIPE('Moss 1'):copy(),
+        RECIPE('Moss 2'):copy(),
+        RECIPE('Moss 3'):copy(),
+        RECIPE('Moss 4'):copy(),
+        RECIPE('Moss 5'):copy(),
     }) do
         recipe.name = recipe.name .. '-without-sludge'
         recipe:remove_ingredient('dirty-water-light')
@@ -79,10 +79,10 @@ if data and not yafc_turd_integration then
     }
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['moss-farm-mk01']),
-        table.deepcopy(data.raw.recipe['moss-farm-mk02']),
-        table.deepcopy(data.raw.recipe['moss-farm-mk03']),
-        table.deepcopy(data.raw.recipe['moss-farm-mk04']),
+        RECIPE('moss-farm-mk01'):copy(),
+        RECIPE('moss-farm-mk02'):copy(),
+        RECIPE('moss-farm-mk03'):copy(),
+        RECIPE('moss-farm-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-with-bioreactor'
         recipe:add_ingredient({name = 'bio-reactor-mk0'..i, amount = 1, type = 'item'})

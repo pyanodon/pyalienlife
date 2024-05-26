@@ -54,10 +54,10 @@ if data and not yafc_turd_integration then
     }
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['ulric-cub-1']),
-        table.deepcopy(data.raw.recipe['ulric-cub-2']),
-        table.deepcopy(data.raw.recipe['ulric-cub-3']),
-        table.deepcopy(data.raw.recipe['ulric-cub-4']),
+        RECIPE('ulric-cub-1'):copy(),
+        RECIPE('ulric-cub-2'):copy(),
+        RECIPE('ulric-cub-3'):copy(),
+        RECIPE('ulric-cub-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-saddle'
         recipe:add_ingredient({name = 'saddle', amount = 1, type = 'item'})
@@ -65,10 +65,10 @@ if data and not yafc_turd_integration then
     end
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['ulric-1']),
-        table.deepcopy(data.raw.recipe['ulric-2']),
-        table.deepcopy(data.raw.recipe['ulric-3']),
-        table.deepcopy(data.raw.recipe['ulric-4']),
+        RECIPE('ulric-1'):copy(),
+        RECIPE('ulric-2'):copy(),
+        RECIPE('ulric-3'):copy(),
+        RECIPE('ulric-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-manure'
         recipe:add_result({name = 'manure', amount = 2, type = 'item'})

@@ -1,9 +1,9 @@
 if data and not yafc_turd_integration then
     for recipe, ingredient in pairs({
-        [table.deepcopy(data.raw.recipe['seaweed-crop-mk01'])] = {'decider-combinator', 10},
-        [table.deepcopy(data.raw.recipe['seaweed-crop-mk02'])] = {'arithmetic-combinator', 20},
-        [table.deepcopy(data.raw.recipe['seaweed-crop-mk03'])] = {'decider-combinator', 30},
-        [table.deepcopy(data.raw.recipe['seaweed-crop-mk04'])] = {'arithmetic-combinator', 40},
+        [RECIPE('seaweed-crop-mk01'):copy()] = {'decider-combinator', 10},
+        [RECIPE('seaweed-crop-mk02'):copy()] = {'arithmetic-combinator', 20},
+        [RECIPE('seaweed-crop-mk03'):copy()] = {'decider-combinator', 30},
+        [RECIPE('seaweed-crop-mk04'):copy()] = {'arithmetic-combinator', 40},
     }) do
         recipe.name = recipe.name .. '-with-ai'
         recipe:add_ingredient(ingredient)
@@ -11,11 +11,11 @@ if data and not yafc_turd_integration then
     end
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['seaweed']),
-        table.deepcopy(data.raw.recipe['seaweed-2']),
-        table.deepcopy(data.raw.recipe['seaweed-3']),
-        table.deepcopy(data.raw.recipe['seaweed-4']),
-        table.deepcopy(data.raw.recipe['seaweed-5']),
+        RECIPE('seaweed'):copy(),
+        RECIPE('seaweed-2'):copy(),
+        RECIPE('seaweed-3'):copy(),
+        RECIPE('seaweed-4'):copy(),
+        RECIPE('seaweed-5'):copy(),
     }) do
         recipe.name = recipe.name .. '-dry'
         recipe:remove_ingredient('water')

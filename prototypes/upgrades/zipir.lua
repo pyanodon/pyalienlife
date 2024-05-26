@@ -1,11 +1,11 @@
 if data and not yafc_turd_integration then
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['zipir-a-1']),
-        table.deepcopy(data.raw.recipe['zipir-a-2']),
-        table.deepcopy(data.raw.recipe['zipir-a-3']),
-        table.deepcopy(data.raw.recipe['zipir-a-4']),
-        table.deepcopy(data.raw.recipe['zipir-a-5']),
-        table.deepcopy(data.raw.recipe['zipir-a-6']),
+        RECIPE('zipir-a-1'):copy(),
+        RECIPE('zipir-a-2'):copy(),
+        RECIPE('zipir-a-3'):copy(),
+        RECIPE('zipir-a-4'):copy(),
+        RECIPE('zipir-a-5'):copy(),
+        RECIPE('zipir-a-6'):copy(),
     }) do
         recipe.name = recipe.name .. '-suicide'
         recipe:add_result({name = 'zipir-eggs', amount_min = 2, amount_max = 3, type = 'item'})
@@ -26,11 +26,11 @@ if data and not yafc_turd_integration then
     end
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['zipir-eggs-1']),
-        table.deepcopy(data.raw.recipe['zipir-eggs-2']),
-        table.deepcopy(data.raw.recipe['zipir-eggs-3']),
-        table.deepcopy(data.raw.recipe['zipir-eggs-4']),
-        table.deepcopy(data.raw.recipe['zipir-eggs-5']),
+        RECIPE('zipir-eggs-1'):copy(),
+        RECIPE('zipir-eggs-2'):copy(),
+        RECIPE('zipir-eggs-3'):copy(),
+        RECIPE('zipir-eggs-4'):copy(),
+        RECIPE('zipir-eggs-5'):copy(),
     }) do
         recipe.name = recipe.name .. '-trits-gen'
         recipe.energy_required = recipe.energy_required * 1.5
@@ -46,10 +46,10 @@ if data and not yafc_turd_integration then
     end
 
     for i, machine_recipe in pairs({
-        table.deepcopy(data.raw.recipe['zipir-reef-mk01']),
-        table.deepcopy(data.raw.recipe['zipir-reef-mk02']),
-        table.deepcopy(data.raw.recipe['zipir-reef-mk03']),
-        table.deepcopy(data.raw.recipe['zipir-reef-mk04']),
+        RECIPE('zipir-reef-mk01'):copy(),
+        RECIPE('zipir-reef-mk02'):copy(),
+        RECIPE('zipir-reef-mk03'):copy(),
+        RECIPE('zipir-reef-mk04'):copy(),
     }) do
         machine_recipe.name = machine_recipe.name .. '-with-rc'
         machine_recipe:add_ingredient({name = 'rc-mk0'..i, amount = 1, type = 'item'})

@@ -1,10 +1,10 @@
 if data and not yafc_turd_integration then
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['moondrop-1']),
-        table.deepcopy(data.raw.recipe['moondrop-2']),
-        table.deepcopy(data.raw.recipe['moondrop-3']),
-        table.deepcopy(data.raw.recipe['moondrop-4']),
-        table.deepcopy(data.raw.recipe['moondrop-5']),
+        RECIPE('moondrop-1'):copy(),
+        RECIPE('moondrop-2'):copy(),
+        RECIPE('moondrop-3'):copy(),
+        RECIPE('moondrop-4'):copy(),
+        RECIPE('moondrop-5'):copy(),
     }) do
         recipe.name = recipe.name .. '-cu'
         recipe:add_ingredient({name = 'copper-ore', amount = 10, type = 'item'})

@@ -44,10 +44,10 @@ if data and not yafc_turd_integration then
     }}
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['cridren-1']),
-        table.deepcopy(data.raw.recipe['cridren-2']),
-        table.deepcopy(data.raw.recipe['cridren-3']),
-        table.deepcopy(data.raw.recipe['cridren-4']),
+        RECIPE('cridren-1'):copy(),
+        RECIPE('cridren-2'):copy(),
+        RECIPE('cridren-3'):copy(),
+        RECIPE('cridren-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-neural-cranio'
         recipe:multiply_ingredient_amount('caged-arthurian', 2)
@@ -60,10 +60,10 @@ if data and not yafc_turd_integration then
 
     local mufflers = {'polycrystalline-slab', 'alag-grid', 'wall-shield', 'reinforced-wall-shield'}
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['cridren-enclosure-mk01']),
-        table.deepcopy(data.raw.recipe['cridren-enclosure-mk02']),
-        table.deepcopy(data.raw.recipe['cridren-enclosure-mk03']),
-        table.deepcopy(data.raw.recipe['cridren-enclosure-mk04']),
+        RECIPE('cridren-enclosure-mk01'):copy(),
+        RECIPE('cridren-enclosure-mk02'):copy(),
+        RECIPE('cridren-enclosure-mk03'):copy(),
+        RECIPE('cridren-enclosure-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-with-mufflers'
         recipe:add_ingredient({mufflers[i], i * 35})

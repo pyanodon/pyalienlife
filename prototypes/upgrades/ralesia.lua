@@ -24,7 +24,7 @@ if data and not yafc_turd_integration then
         }
     }
 
-    local recipe = table.deepcopy(data.raw.recipe['ralesia-seeds'])
+    local recipe = RECIPE('ralesia-seeds'):copy()
     recipe:add_ingredient({'paper-towel', 1})
     recipe.energy_required = 3
     recipe:multiply_result_amount('ralesia-seeds', 2)
@@ -32,10 +32,10 @@ if data and not yafc_turd_integration then
     data:extend{recipe}
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['ralesia-plantation-mk01']),
-        table.deepcopy(data.raw.recipe['ralesia-plantation-mk02']),
-        table.deepcopy(data.raw.recipe['ralesia-plantation-mk03']),
-        table.deepcopy(data.raw.recipe['ralesia-plantation-mk04']),
+        RECIPE('ralesia-plantation-mk01'):copy(),
+        RECIPE('ralesia-plantation-mk02'):copy(),
+        RECIPE('ralesia-plantation-mk03'):copy(),
+        RECIPE('ralesia-plantation-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-with-ceramic'
         recipe:add_ingredient({name = 'mirror-mk0'..i, amount = 50 * i, type = 'item'})
@@ -44,10 +44,10 @@ if data and not yafc_turd_integration then
 
     local fluidbox_indexs = {2, 2, 2, 1, 1}
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['ralesias-1']),
-        table.deepcopy(data.raw.recipe['ralesias-2']),
-        table.deepcopy(data.raw.recipe['ralesias-3']),
-        table.deepcopy(data.raw.recipe['ralesias-4']),
+        RECIPE('ralesias-1'):copy(),
+        RECIPE('ralesias-2'):copy(),
+        RECIPE('ralesias-3'):copy(),
+        RECIPE('ralesias-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-hydrogen-burn'
         recipe:remove_ingredient('water')

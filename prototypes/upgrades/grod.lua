@@ -1,9 +1,9 @@
 if data and not yafc_turd_integration then
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['grod-1']),
-        table.deepcopy(data.raw.recipe['grod-2']),
-        table.deepcopy(data.raw.recipe['grod-3']),
-        table.deepcopy(data.raw.recipe['grod-4']),
+        RECIPE('grod-1'):copy(),
+        RECIPE('grod-2'):copy(),
+        RECIPE('grod-3'):copy(),
+        RECIPE('grod-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-pressured'
         recipe:remove_ingredient('water')
@@ -13,15 +13,15 @@ if data and not yafc_turd_integration then
     end
 
     for recipe, result in pairs({
-        [table.deepcopy(data.raw.recipe['grod-al'])] = 'al-biomass',
-        [table.deepcopy(data.raw.recipe['grod-al-2'])] = 'al-biomass',
-        [table.deepcopy(data.raw.recipe['grod-al-3'])] = 'al-biomass',
-        [table.deepcopy(data.raw.recipe['grod-pb'])] = 'pb-biomass',
-        [table.deepcopy(data.raw.recipe['grod-pb-2'])] = 'pb-biomass',
-        [table.deepcopy(data.raw.recipe['grod-pb-3'])] = 'pb-biomass',
-        [table.deepcopy(data.raw.recipe['grod-sn'])] = 'sn-biomass',
-        [table.deepcopy(data.raw.recipe['grod-sn-2'])] = 'sn-biomass',
-        [table.deepcopy(data.raw.recipe['grod-sn-3'])] = 'sn-biomass',
+        [RECIPE('grod-al'):copy()] = 'al-biomass',
+        [RECIPE('grod-al-2'):copy()] = 'al-biomass',
+        [RECIPE('grod-al-3'):copy()] = 'al-biomass',
+        [RECIPE('grod-pb'):copy()] = 'pb-biomass',
+        [RECIPE('grod-pb-2'):copy()] = 'pb-biomass',
+        [RECIPE('grod-pb-3'):copy()] = 'pb-biomass',
+        [RECIPE('grod-sn'):copy()] = 'sn-biomass',
+        [RECIPE('grod-sn-2'):copy()] = 'sn-biomass',
+        [RECIPE('grod-sn-3'):copy()] = 'sn-biomass',
     }) do
         recipe.name = recipe.name .. '-tailings'
         recipe:add_ingredient_amount('dirty-water-heavy', 100)
@@ -30,17 +30,17 @@ if data and not yafc_turd_integration then
     end
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['grod-1']),
-        table.deepcopy(data.raw.recipe['grod-2']),
-        table.deepcopy(data.raw.recipe['grod-3']),
-        table.deepcopy(data.raw.recipe['grod-4']),
+        RECIPE('grod-1'):copy(),
+        RECIPE('grod-2'):copy(),
+        RECIPE('grod-3'):copy(),
+        RECIPE('grod-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-dry'
         recipe:remove_ingredient('water')
         data:extend{recipe}
     end
 
-    local seeds = table.deepcopy(data.raw.recipe['grod-seeds'])
+    local seeds = RECIPE('grod-seeds'):copy()
     seeds.name = 'grod-seeds-heavy-water'
     seeds.main_product = 'grod-seeds'
     seeds:add_result({type = 'fluid', name = 'geothermal-water', amount = 60})

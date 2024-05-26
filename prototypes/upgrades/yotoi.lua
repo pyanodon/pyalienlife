@@ -1,5 +1,5 @@
 if data and not yafc_turd_integration then
-    local recipe = table.deepcopy(data.raw.recipe['yotoi-seeds'])
+    local recipe = RECIPE('yotoi-seeds'):copy()
     recipe.name = 'yotoi-seeds-cold'
     recipe:add_ingredient({type = 'fluid', name = 'cold-air', amount = 30})
     recipe:add_ingredient({type = 'item', name = 'yotoi-leaves', amount = 1})
@@ -8,10 +8,10 @@ if data and not yafc_turd_integration then
     data:extend{recipe}
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['yotoi-1']),
-        table.deepcopy(data.raw.recipe['yotoi-2']),
-        table.deepcopy(data.raw.recipe['yotoi-3']),
-        table.deepcopy(data.raw.recipe['yotoi-4']),
+        RECIPE('yotoi-1'):copy(),
+        RECIPE('yotoi-2'):copy(),
+        RECIPE('yotoi-3'):copy(),
+        RECIPE('yotoi-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-free-leaves'
         recipe:add_ingredient({'burner-inserter', 1})
@@ -51,12 +51,12 @@ if data and not yafc_turd_integration then
     }
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['yotoi-2']),
-        table.deepcopy(data.raw.recipe['yotoi-3']),
-        table.deepcopy(data.raw.recipe['yotoi-4']),
-        table.deepcopy(data.raw.recipe['yotoi-fruit-2']),
-        table.deepcopy(data.raw.recipe['yotoi-fruit-3']),
-        table.deepcopy(data.raw.recipe['yotoi-fruit-4']),
+        RECIPE('yotoi-2'):copy(),
+        RECIPE('yotoi-3'):copy(),
+        RECIPE('yotoi-4'):copy(),
+        RECIPE('yotoi-fruit-2'):copy(),
+        RECIPE('yotoi-fruit-3'):copy(),
+        RECIPE('yotoi-fruit-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-nutrient'
         local _, amount = recipe:remove_ingredient('fertilizer')
@@ -68,10 +68,10 @@ if data and not yafc_turd_integration then
     end
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['yotoi-aloe-orchard-mk01']),
-        table.deepcopy(data.raw.recipe['yotoi-aloe-orchard-mk02']),
-        table.deepcopy(data.raw.recipe['yotoi-aloe-orchard-mk03']),
-        table.deepcopy(data.raw.recipe['yotoi-aloe-orchard-mk04']),
+        RECIPE('yotoi-aloe-orchard-mk01'):copy(),
+        RECIPE('yotoi-aloe-orchard-mk02'):copy(),
+        RECIPE('yotoi-aloe-orchard-mk03'):copy(),
+        RECIPE('yotoi-aloe-orchard-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-with-nutrient'
         recipe:add_ingredient({'nutrient', 2^(i-1)})

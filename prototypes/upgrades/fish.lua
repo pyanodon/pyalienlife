@@ -1,9 +1,9 @@
 if data and not yafc_turd_integration then
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['breed-fish-1']),
-        table.deepcopy(data.raw.recipe['breed-fish-2']),
-        table.deepcopy(data.raw.recipe['breed-fish-3']),
-        table.deepcopy(data.raw.recipe['breed-fish-4']),
+        RECIPE('breed-fish-1'):copy(),
+        RECIPE('breed-fish-2'):copy(),
+        RECIPE('breed-fish-3'):copy(),
+        RECIPE('breed-fish-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-agressive-selection'
         recipe:add_result_amount('fish', -i)
@@ -28,10 +28,10 @@ if data and not yafc_turd_integration then
     }}
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['breed-fish-egg-1']),
-        table.deepcopy(data.raw.recipe['breed-fish-egg-2']),
-        table.deepcopy(data.raw.recipe['breed-fish-egg-3']),
-        table.deepcopy(data.raw.recipe['breed-fish-egg-4']),
+        RECIPE('breed-fish-egg-1'):copy(),
+        RECIPE('breed-fish-egg-2'):copy(),
+        RECIPE('breed-fish-egg-3'):copy(),
+        RECIPE('breed-fish-egg-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-doused'
         recipe:remove_result('waste-water')

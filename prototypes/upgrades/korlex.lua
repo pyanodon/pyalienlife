@@ -1,9 +1,9 @@
 if data and not yafc_turd_integration then
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['korlex-milk-1']),
-        table.deepcopy(data.raw.recipe['korlex-milk-2']),
-        table.deepcopy(data.raw.recipe['korlex-milk-3']),
-        table.deepcopy(data.raw.recipe['korlex-milk-4']),
+        RECIPE('korlex-milk-1'):copy(),
+        RECIPE('korlex-milk-2'):copy(),
+        RECIPE('korlex-milk-3'):copy(),
+        RECIPE('korlex-milk-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-doubled'
         recipe:multiply_ingredient_amount('water-barrel', 2)
@@ -31,10 +31,10 @@ if data and not yafc_turd_integration then
     }}
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['korlex-1']),
-        table.deepcopy(data.raw.recipe['korlex-2']),
-        table.deepcopy(data.raw.recipe['korlex-3']),
-        table.deepcopy(data.raw.recipe['korlex-4']),
+        RECIPE('korlex-1'):copy(),
+        RECIPE('korlex-2'):copy(),
+        RECIPE('korlex-3'):copy(),
+        RECIPE('korlex-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-slowed'
         recipe:add_ingredient({'barrel-milk', i})
@@ -44,10 +44,10 @@ if data and not yafc_turd_integration then
     end
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['korlex-milk-1']),
-        table.deepcopy(data.raw.recipe['korlex-milk-2']),
-        table.deepcopy(data.raw.recipe['korlex-milk-3']),
-        table.deepcopy(data.raw.recipe['korlex-milk-4']),
+        RECIPE('korlex-milk-1'):copy(),
+        RECIPE('korlex-milk-2'):copy(),
+        RECIPE('korlex-milk-3'):copy(),
+        RECIPE('korlex-milk-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-pressured'
         recipe:add_ingredient({type = 'fluid', name = 'pressured-hydrogen', amount = 20})
@@ -58,10 +58,10 @@ if data and not yafc_turd_integration then
     end
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['ez-ranch-mk01']),
-        table.deepcopy(data.raw.recipe['ez-ranch-mk02']),
-        table.deepcopy(data.raw.recipe['ez-ranch-mk03']),
-        table.deepcopy(data.raw.recipe['ez-ranch-mk04']),
+        RECIPE('ez-ranch-mk01'):copy(),
+        RECIPE('ez-ranch-mk02'):copy(),
+        RECIPE('ez-ranch-mk03'):copy(),
+        RECIPE('ez-ranch-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-with-nexelit'
         recipe:add_ingredient({type = 'item', name = 'saturated-nexelit-cartridge', amount = 10 * i})

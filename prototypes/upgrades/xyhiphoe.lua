@@ -1,9 +1,9 @@
 if data and not yafc_turd_integration then
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['xyhiphoe-1']),
-        table.deepcopy(data.raw.recipe['xyhiphoe-2']),
-        table.deepcopy(data.raw.recipe['xyhiphoe-3']),
-        table.deepcopy(data.raw.recipe['xyhiphoe-4']),
+        RECIPE('xyhiphoe-1'):copy(),
+        RECIPE('xyhiphoe-2'):copy(),
+        RECIPE('xyhiphoe-3'):copy(),
+        RECIPE('xyhiphoe-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-hot-cold'
 
@@ -51,10 +51,10 @@ if data and not yafc_turd_integration then
     }}
 
     for i, recipe in pairs{
-        table.deepcopy(data.raw.recipe['xyhiphoe-cub-1']),
-        table.deepcopy(data.raw.recipe['xyhiphoe-cub-2']),
-        table.deepcopy(data.raw.recipe['xyhiphoe-cub-3']),
-        table.deepcopy(data.raw.recipe['xyhiphoe-cub-4']),
+        RECIPE('xyhiphoe-cub-1'):copy(),
+        RECIPE('xyhiphoe-cub-2'):copy(),
+        RECIPE('xyhiphoe-cub-3'):copy(),
+        RECIPE('xyhiphoe-cub-4'):copy(),
     } do
         recipe.name = recipe.name .. '-acetone'
         recipe:remove_result('waste-water')

@@ -28,7 +28,7 @@ if data and not yafc_turd_integration then
         }
     }
 
-    local recipe = table.deepcopy(data.raw.recipe['snarer-heart'])
+    local recipe = RECIPE('snarer-heart'):copy()
     recipe.name = 'snarer-heart-mutation'
     recipe.results = {
         {type = 'item', probability = 0.99, name = 'snarer-heart', amount = 1},
@@ -36,7 +36,7 @@ if data and not yafc_turd_integration then
     }
     data:extend{recipe}
 
-    recipe = table.deepcopy(data.raw.recipe['space-suit'])
+    recipe = RECIPE('space-suit'):copy()
     recipe:remove_ingredient('science-coating')
     recipe.name = 'space-suit-mutation'
     data:extend{recipe}
@@ -46,10 +46,10 @@ if data and not yafc_turd_integration then
     data:extend{recipe}
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['dingrits-1']),
-        table.deepcopy(data.raw.recipe['dingrits-2']),
-        table.deepcopy(data.raw.recipe['dingrits-3']),
-        table.deepcopy(data.raw.recipe['dingrits-4']),
+        RECIPE('dingrits-1'):copy(),
+        RECIPE('dingrits-2'):copy(),
+        RECIPE('dingrits-3'):copy(),
+        RECIPE('dingrits-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-training'
         recipe:add_result({type = 'item', amount = 1, probability = 0.8, name = 'dingrits-food-01'})

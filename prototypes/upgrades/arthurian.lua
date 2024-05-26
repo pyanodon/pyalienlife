@@ -29,10 +29,10 @@ if data and not yafc_turd_integration then
     py.allow_productivity{'abacus'}
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['arthurian maturing 1']),
-        table.deepcopy(data.raw.recipe['arthurian maturing 2']),
-        table.deepcopy(data.raw.recipe['arthurian maturing 3']),
-        table.deepcopy(data.raw.recipe['arthurian maturing 4']),
+        RECIPE('arthurian maturing 1'):copy(),
+        RECIPE('arthurian maturing 2'):copy(),
+        RECIPE('arthurian maturing 3'):copy(),
+        RECIPE('arthurian maturing 4'):copy(),
     }) do
         recipe.name = recipe.name .. '-abacus'
         recipe:add_ingredient({name = 'abacus', amount = i, type = 'item'})
@@ -40,10 +40,10 @@ if data and not yafc_turd_integration then
     end
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['arthurian egg 1']),
-        table.deepcopy(data.raw.recipe['arthurian egg 2']),
-        table.deepcopy(data.raw.recipe['arthurian egg 3']),
-        table.deepcopy(data.raw.recipe['arthurian egg 4']),
+        RECIPE('arthurian egg 1'):copy(),
+        RECIPE('arthurian egg 2'):copy(),
+        RECIPE('arthurian egg 3'):copy(),
+        RECIPE('arthurian egg 4'):copy(),
     }) do
         recipe.name = recipe.name .. '-hot-stones'
         recipe:add_ingredient({name = 'hot-stone-brick', amount = 2, type = 'item'})

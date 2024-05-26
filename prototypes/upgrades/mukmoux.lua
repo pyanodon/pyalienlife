@@ -28,10 +28,10 @@ if data and not yafc_turd_integration then
     }}
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['mukmoux-calf-1']),
-        table.deepcopy(data.raw.recipe['mukmoux-calf-2']),
-        table.deepcopy(data.raw.recipe['mukmoux-calf-3']),
-        table.deepcopy(data.raw.recipe['mukmoux-calf-4']),
+        RECIPE('mukmoux-calf-1'):copy(),
+        RECIPE('mukmoux-calf-2'):copy(),
+        RECIPE('mukmoux-calf-3'):copy(),
+        RECIPE('mukmoux-calf-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-microchip'
         recipe:add_ingredient({name = 'microchip', amount = 1, type = 'item'})
@@ -41,10 +41,10 @@ if data and not yafc_turd_integration then
     end
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['mukmoux-1']),
-        table.deepcopy(data.raw.recipe['mukmoux-2']),
-        table.deepcopy(data.raw.recipe['mukmoux-3']),
-        table.deepcopy(data.raw.recipe['mukmoux-4']),
+        RECIPE('mukmoux-1'):copy(),
+        RECIPE('mukmoux-2'):copy(),
+        RECIPE('mukmoux-3'):copy(),
+        RECIPE('mukmoux-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-bip'
         for _, ingredient in pairs(recipe.ingredients) do
@@ -61,10 +61,10 @@ if data and not yafc_turd_integration then
 
     local electronics = {'controler-mk01', 'controler-mk02', 'controler-mk03', 'controler-mk04'}
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['mukmoux-pasture-mk01']),
-        table.deepcopy(data.raw.recipe['mukmoux-pasture-mk02']),
-        table.deepcopy(data.raw.recipe['mukmoux-pasture-mk03']),
-        table.deepcopy(data.raw.recipe['mukmoux-pasture-mk04']),
+        RECIPE('mukmoux-pasture-mk01'):copy(),
+        RECIPE('mukmoux-pasture-mk02'):copy(),
+        RECIPE('mukmoux-pasture-mk03'):copy(),
+        RECIPE('mukmoux-pasture-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-with-electronics'
         recipe:add_ingredient({name = electronics[i], amount = 10 * i, type = 'item'})

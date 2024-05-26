@@ -1,9 +1,9 @@
 if data and not yafc_turd_integration then
 	for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['guar-1']),
-        table.deepcopy(data.raw.recipe['guar-2']),
-        table.deepcopy(data.raw.recipe['guar-3']),
-        table.deepcopy(data.raw.recipe['guar-4']),
+        RECIPE('guar-1'):copy(),
+        RECIPE('guar-2'):copy(),
+        RECIPE('guar-3'):copy(),
+        RECIPE('guar-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-guarpulse'
 		recipe:add_ingredient({'fungicide', 1})
@@ -13,10 +13,10 @@ if data and not yafc_turd_integration then
     end
 
 	for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['guar-1']),
-        table.deepcopy(data.raw.recipe['guar-2']),
-        table.deepcopy(data.raw.recipe['guar-3']),
-        table.deepcopy(data.raw.recipe['guar-4']),
+        RECIPE('guar-1'):copy(),
+        RECIPE('guar-2'):copy(),
+        RECIPE('guar-3'):copy(),
+        RECIPE('guar-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-aquaguar'
         local _, water = recipe:remove_ingredient('water')
@@ -30,10 +30,10 @@ if data and not yafc_turd_integration then
 
 	local bots = {'py-logistic-robot-01', 'py-logistic-robot-02', 'l-pynobot-mk03', 'logistic-robot-ht'}
 	for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['guar-gum-plantation']),
-        table.deepcopy(data.raw.recipe['guar-gum-plantation-mk02']),
-        table.deepcopy(data.raw.recipe['guar-gum-plantation-mk03']),
-        table.deepcopy(data.raw.recipe['guar-gum-plantation-mk04']),
+        RECIPE('guar-gum-plantation'):copy(),
+        RECIPE('guar-gum-plantation-mk02'):copy(),
+        RECIPE('guar-gum-plantation-mk03'):copy(),
+        RECIPE('guar-gum-plantation-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-with-bots'
 		recipe:add_ingredient({type = 'item', name = bots[i], amount = 4 * i})
