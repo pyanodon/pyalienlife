@@ -62,6 +62,7 @@ for _, player_type in pairs{'character', 'god-controller'} do
         player.crafting_categories = player.crafting_categories or {}
         table.insert(player.crafting_categories, 'wpu-handcrafting')
         table.insert(player.crafting_categories, 'research-handcrafting')
+        player.crafting_categories = table.dedupe(player.crafting_categories)
     end
 end
 
