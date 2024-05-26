@@ -18,7 +18,7 @@ if data and not yafc_turd_integration then
     }) do
         recipe.name = recipe.name .. '-dc'
         recipe.energy_required = recipe.energy_required * 2
-        FUN.multiply_result_amount(recipe, 'trits', 1.5)
+        recipe:multiply_result_amount('trits', 1.5)
         data:extend{recipe}
     end
 

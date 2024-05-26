@@ -26,7 +26,7 @@ if data and not yafc_turd_integration then
     }) do
         recipe.name = recipe.name .. '-chlorinated'
         recipe:add_ingredient({name = 'chlorinated-water', amount = 1, type = 'item'})
-        FUN.multiply_result_amount(recipe, 'moss', 1.3)
+        recipe:multiply_result_amount('moss', 1.3)
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         data:extend{recipe}
     end

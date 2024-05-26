@@ -9,7 +9,7 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. '-nitrogen'
         recipe:remove_ingredient('water')
         recipe:add_ingredient({type = 'fluid', name = 'purest-nitrogen-gas', amount = 20 + 20 * i})
-        FUN.multiply_result_amount(recipe, 'fawogae', 1.35)
+        recipe:multiply_result_amount('fawogae', 1.35)
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         data:extend{recipe}
     end

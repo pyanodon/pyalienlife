@@ -10,8 +10,8 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. '-suicide'
         recipe:add_result({name = 'zipir-eggs', amount_min = 2, amount_max = 3, type = 'item'})
         recipe:add_result({name = 'guts', amount = 1, type = 'item'})
-        FUN.multiply_ingredient_amount(recipe, 'zipir-food-01', 0.5)
-        FUN.multiply_ingredient_amount(recipe, 'zipir-food-02', 0.5)
+        recipe:multiply_ingredient_amount('zipir-food-01', 0.5)
+        recipe:multiply_ingredient_amount('zipir-food-02', 0.5)
         for _, result in pairs(recipe.results) do
             if result.name == 'zipir1' then
                 if result.probability then

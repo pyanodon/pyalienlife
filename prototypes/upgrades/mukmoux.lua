@@ -54,7 +54,7 @@ if data and not yafc_turd_integration then
         end
         FUN.add_ingredient_amount(recipe, 'mukmoux-food-01', 1)
         FUN.add_ingredient_amount(recipe, 'mukmoux-food-02', 1)
-        FUN.multiply_result_amount(recipe, 'mukmoux', 1.5)
+        recipe:multiply_result_amount('mukmoux', 1.5)
         recipe.energy_required = recipe.energy_required * 1.5
         data:extend{recipe}
     end

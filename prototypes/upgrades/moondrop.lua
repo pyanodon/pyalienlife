@@ -8,7 +8,7 @@ if data and not yafc_turd_integration then
     }) do
         recipe.name = recipe.name .. '-cu'
         recipe:add_ingredient({name = 'copper-ore', amount = 10, type = 'item'})
-        FUN.multiply_result_amount(recipe, 'moondrop', 1.2)
+        recipe:multiply_result_amount('moondrop', 1.2)
         recipe.energy_required = math.ceil(recipe.energy_required * 0.8)
         data:extend{recipe}
     end

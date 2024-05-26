@@ -3,7 +3,7 @@ if data and not yafc_turd_integration then
     recipe.name = 'yotoi-seeds-cold'
     recipe:add_ingredient({type = 'fluid', name = 'cold-air', amount = 30})
     recipe:add_ingredient({type = 'item', name = 'yotoi-leaves', amount = 1})
-    FUN.multiply_result_amount(recipe, 'yotoi-seeds', 3)
+    recipe:multiply_result_amount('yotoi-seeds', 3)
     recipe.energy_required = recipe.energy_required * 4
     data:extend{recipe}
 

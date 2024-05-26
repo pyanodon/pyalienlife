@@ -6,10 +6,10 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['korlex-milk-4']),
     }) do
         recipe.name = recipe.name .. '-doubled'
-        FUN.multiply_ingredient_amount(recipe, 'water-barrel', 2)
-        FUN.multiply_ingredient_amount(recipe, 'empty-barrel-milk', 2)
-        FUN.multiply_result_amount(recipe, 'empty-barrel', 2)
-        FUN.multiply_result_amount(recipe, 'barrel-milk', 2)
+        recipe:multiply_ingredient_amount('water-barrel', 2)
+        recipe:multiply_ingredient_amount('empty-barrel-milk', 2)
+        recipe:multiply_result_amount('empty-barrel', 2)
+        recipe:multiply_result_amount('barrel-milk', 2)
         recipe.energy_required = recipe.energy_required * 2
         data:extend{recipe}
     end

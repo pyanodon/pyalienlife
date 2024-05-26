@@ -132,9 +132,6 @@ RECIPE('satellite'):add_ingredient({type = 'item', name = 'antimatter', amount =
 
 RECIPE('space-science-pack'):add_ingredient({type = 'item', name = 'destablilized-toxirus', amount = 1}):add_ingredient({type = 'item', name = 'strangelets', amount = 5})
 
-RECIPE('cottongut-science-utility'):add_ingredient({type = 'item', name = 'destablilized-toxirus', amount = 1}):add_ingredient({type = 'item', name = 'hormonal', amount = 1}):add_ingredient({type = 'item', name = 'dimensional-gastricorg', amount = 1}):add_ingredient({type = 'item', name = 'intelligent-unit', amount = 1})
---RECIPE('satellite'):add_unlock('quantum')
-
 RECIPE('automation-science-pack'):replace_ingredient('electronic-circuit', 'small-parts-01')
 
 RECIPE('offshore-pump'):replace_ingredient('electronic-circuit', 'inductor1')
@@ -158,21 +155,21 @@ RECIPE('moss-farm-mk01'):replace_ingredient('electronic-circuit', 'inductor1')
 RECIPE('seaweed-crop-mk01'):replace_ingredient('electronic-circuit', 'inductor1')
 RECIPE('sap-extractor-mk01'):replace_ingredient('electronic-circuit', 'inductor1'):replace_ingredient('inserter', 'burner-inserter')
 RECIPE('repair-pack'):replace_ingredient('electronic-circuit', 'inductor1')
-RECIPE('electric-mining-drill'):add_unlock('electric-mining-drill'):set_enabled(false)
+RECIPE('electric-mining-drill'):add_unlock('electric-mining-drill').enabled = false
 RECIPE('collector'):replace_ingredient('electronic-circuit', 'inductor1'):replace_ingredient('electric-mining-drill', 'burner-mining-drill')
 RECIPE('eaf-mk01'):replace_ingredient('electric-mining-drill', 'fluid-drill-mk01')
 RECIPE('impact-crusher-mk01'):replace_ingredient('electric-mining-drill', 'fluid-drill-mk01')
 RECIPE('hydroclassifier-mk01'):replace_ingredient('electric-mining-drill', 'fluid-drill-mk01')
 RECIPE('automated-screener-mk01'):replace_ingredient('electric-mining-drill', 'fluid-drill-mk01')
 RECIPE('salt-mine'):replace_ingredient('electric-mining-drill', 'fluid-drill-mk01')
-RECIPE('tin-plate-1'):add_unlock('mining-with-fluid'):set_enabled(false)
-RECIPE('tinned-cable'):add_unlock('mining-with-fluid'):set_enabled(false)
+RECIPE('tin-plate-1'):add_unlock('mining-with-fluid').enabled = false
+RECIPE('tinned-cable'):add_unlock('mining-with-fluid').enabled = false
 RECIPE('aluminium-plate-1'):remove_unlock('moss-mk01'):add_unlock('mining-with-fluid')
 RECIPE('bio-sample01'):add_ingredient({type = 'item', name = 'urea', amount = 5})
-RECIPE('inserter'):add_unlock('logistics'):set_enabled(false)
-RECIPE('underground-belt'):remove_unlock('logistics'):set_enabled(true)
+RECIPE('inserter'):add_unlock('logistics').enabled = false
+RECIPE('underground-belt'):remove_unlock('logistics').enabled = true
 RECIPE('long-handed-inserter'):remove_unlock('automation'):add_unlock('rubber'):add_ingredient{type = 'item', name = 'belt', amount = 1}
-RECIPE('radar'):add_unlock('radars-mk01'):set_enabled(false)
+RECIPE('radar'):add_unlock('radars-mk01').enabled = false
 RECIPE('electronics-factory-mk01'):replace_ingredient('fbreactor-mk01', 'distilator'):remove_unlock('vacuum-tube-electronics'):add_unlock('ceramic')
 RECIPE('inductor1'):remove_unlock('vacuum-tube-electronics'):add_unlock('ceramic')
 RECIPE('pulp-mill-mk01'):replace_ingredient('fbreactor-mk01', 'distilator')
@@ -250,8 +247,8 @@ ITEM {
     stack_size = 100
 }
 
-ITEM('dms'):subgroup_order('py-alienlife-gases', 'b')
-ITEM('acidgas'):subgroup_order('py-alienlife-gases', 'a')
+FLUID('dms'):subgroup_order('py-alienlife-gases', 'b')
+FLUID('acidgas'):subgroup_order('py-alienlife-gases', 'a')
 ----BUILDINDS----
 
 RECIPE('bio-reactor-mk01'):remove_ingredient('advanced-circuit'):remove_unlock('cottongut-science-mk01'):add_unlock('melamine')
@@ -494,8 +491,6 @@ RECIPE('stone-wool'):add_unlock('zipir')
 RECIPE('stone-wool2'):add_unlock('zipir')
 RECIPE('agzn-alloy'):remove_unlock('alloys-mk04'):add_unlock('alloys-mk03')
 
-RECIPE('dhilmos-sex-01'):replace_result('dirty-water-light', 'waste-water')
-
 RECIPE('fertilizer'):replace_result('py-fertilizer', 'fertilizer')
 RECIPE('log7-2'):replace_result('log', 'log',8)
 
@@ -506,9 +501,6 @@ RECIPE('rennea-mk02-seed-seperation'):replace_result('tar', 'black-liquor')
 RECIPE('rennea-mk03-seed-seperation'):replace_result('tar', 'black-liquor')
 RECIPE('rennea-mk04-seed-seperation'):replace_result('tar', 'black-liquor')
 
-
-RECIPE('methane'):add_unlock('coal-processing-1')
-RECIPE('methane'):add_ingredient('moondrop-seeds')
 RECIPE('methane-py-fertilizer'):add_unlock('moondrop-mk02')
 RECIPE('methane-py-fertilizer'):add_ingredient('moondrop-seeds')
 RECIPE('methane-co2'):add_ingredient('moondrop-seeds')
@@ -1572,7 +1564,7 @@ local arqad_filled =
 	}
 
 for _, recipe in pairs(arqad_filled) do
-	RECIPE(recipe):replace_ingredient('crude-oil-barrel','tall-oil-barrel')
+	if RECIPE[recipe] then RECIPE(recipe):replace_ingredient('crude-oil-barrel','tall-oil-barrel') end
 end
 
 RECIPE('biofilm-pyht'):replace_result('biofilm', 'biofilm', 75)

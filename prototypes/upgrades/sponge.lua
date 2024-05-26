@@ -74,8 +74,8 @@ if data and not yafc_turd_integration then
     }) do
         recipe.name = recipe.name .. '-no-zonga'
         recipe:remove_ingredient('zogna-bacteria')
-        FUN.multiply_ingredient_amount(recipe, 'dirty-water-light', 3)
-        FUN.multiply_ingredient_amount(recipe, 'phytoplankton', 3)
+        recipe:multiply_ingredient_amount('dirty-water-light', 3)
+        recipe:multiply_ingredient_amount('phytoplankton', 3)
         data:extend{recipe}
     end
 end

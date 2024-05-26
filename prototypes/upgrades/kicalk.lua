@@ -115,7 +115,7 @@ if data and not yafc_turd_integration then
         if i == 5 then
             recipe:add_ingredient({'ulric-cub', 1})
         end
-        FUN.multiply_result_amount(recipe, 'kicalk', 1.35)
+        recipe:multiply_result_amount('kicalk', 1.35)
         data:extend{recipe}
     end
 end

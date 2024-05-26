@@ -11,14 +11,14 @@ if data and not yafc_turd_integration then
     local pks = table.deepcopy(data.raw.recipe['enzyme-pks'])
     pks.name = 'enzyme-pks-nickel-carbonyl'
     pks:add_ingredient({name = 'nickel-carbonyl', amount = 200, type = 'fluid'})
-    FUN.multiply_result_amount(pks, 'enzyme-pks', 2)
+    pks:multiply_result_amount('enzyme-pks', 2)
     pks.energy_required = pks.energy_required * 2
     pks.main_product = 'enzyme-pks'
 
     local hmas = table.deepcopy(data.raw.recipe['hmas'])
     hmas.name = 'hmas-pvp'
     hmas:add_ingredient({name = 'pvp', amount = 2, type = 'item'})
-    FUN.multiply_result_amount(hmas, 'hmas', 2.5)
+    hmas:multiply_result_amount('hmas', 2.5)
     hmas.energy_required = hmas.energy_required * 3
 
     data:extend{adam, pks, hmas}

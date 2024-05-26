@@ -17,12 +17,12 @@ if data and not yafc_turd_integration then
     local duplicated_spinner = table.deepcopy(data.raw.recipe['vsk'])
     duplicated_spinner.name = 'vsk-duplicated'
     duplicated_spinner.energy_required = duplicated_spinner.energy_required * 3
-    FUN.multiply_result_amount(duplicated_spinner, 'vsk', 3)
+    duplicated_spinner:multiply_result_amount('vsk', 3)
     data:extend{duplicated_spinner}
 
     local buffed_fiber = table.deepcopy(data.raw.recipe['pre-fiber-1'])
     buffed_fiber.name = 'pre-fiber-1-buffed'
-    FUN.multiply_ingredient_amount(buffed_fiber, 'zungror-cocoon', 0.5)
+    buffed_fiber:multiply_ingredient_amount('zungror-cocoon', 0.5)
     data:extend{buffed_fiber}
 
     for isotope, recipe in pairs({

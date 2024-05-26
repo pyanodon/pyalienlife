@@ -27,7 +27,7 @@ if data and not yafc_turd_integration then
     local recipe = table.deepcopy(data.raw.recipe['ralesia-seeds'])
     recipe:add_ingredient({'paper-towel', 1})
     recipe.energy_required = 3
-    FUN.multiply_result_amount(recipe, 'ralesia-seeds', 2)
+    recipe:multiply_result_amount('ralesia-seeds', 2)
     recipe.name = 'ralesia-seeds-paper-towel'
     data:extend{recipe}
 

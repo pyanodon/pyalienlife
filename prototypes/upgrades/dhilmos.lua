@@ -37,7 +37,7 @@ if data and not yafc_turd_integration then
         recipe:remove_ingredient('water-saline')
         recipe:add_ingredient({'salt', 2})
         recipe:add_ingredient({type = 'fluid', name = 'water', amount = 400})
-        FUN.multiply_result_amount(recipe, 'waste-water', 4)
+        recipe:multiply_result_amount('waste-water', 4)
         data:extend{recipe}
     end
 end

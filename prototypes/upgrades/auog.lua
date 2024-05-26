@@ -5,7 +5,7 @@ if data and not yafc_turd_integration then
     } do
         recipe.name = recipe.name .. '-sawdust'
         recipe:add_ingredient({'wood', 6 * i})
-        FUN.multiply_result_amount(recipe, 'auog-food-0'..i, 2)
+        recipe:multiply_result_amount('auog-food-0'..i, 2)
         data:extend{recipe}
     end
 

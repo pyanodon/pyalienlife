@@ -41,7 +41,7 @@ if data and not yafc_turd_integration then
     }) do
         recipe.name = recipe.name .. '-cannibal'
         recipe:add_ingredient({name = 'cottongut-food-03', amount = 1, type = 'item'})
-        FUN.multiply_result_amount(recipe, 'cottongut', 1.5)
+        recipe:multiply_result_amount('cottongut', 1.5)
         recipe.energy_required = math.ceil(recipe.energy_required * 0.85)
         data:extend{recipe}
     end

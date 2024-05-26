@@ -43,7 +43,7 @@ if data and not yafc_turd_integration then
     } do
         recipe.name = recipe.name .. '-hydrophile'
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
-        FUN.multiply_ingredient_amount(recipe, 'water', 200)
+        recipe:multiply_ingredient_amount('water', 200)
         FUN.add_result_amount(recipe, 'rennea', 1)
         recipe:remove_ingredient('coarse')
         recipe:remove_ingredient('soil')
@@ -52,7 +52,7 @@ if data and not yafc_turd_integration then
 
     local anti_aphid = table.deepcopy(data.raw.recipe['rennea-seeds'])
     anti_aphid:add_ingredient({name = 'bee-venom', amount = 1.5, type = 'fluid'})
-    FUN.multiply_result_amount(anti_aphid, 'rennea-seeds', 3)
+    anti_aphid:multiply_result_amount('rennea-seeds', 3)
     anti_aphid.energy_required = 3
     anti_aphid.name = 'rennea-seeds-venom'
     data:extend{anti_aphid}

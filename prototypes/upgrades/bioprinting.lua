@@ -7,7 +7,7 @@ if data and not yafc_turd_integration then
     } do
         recipe.name = recipe.name .. '-with-lamp'
         recipe:add_ingredient({'small-lamp', 1})
-        FUN.multiply_result_amount(recipe, 'bio-scafold', 2)
+        recipe:multiply_result_amount('bio-scafold', 2)
         data:extend{recipe}
     end
 

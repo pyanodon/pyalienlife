@@ -41,7 +41,7 @@ if data and not yafc_turd_integration then
         spore.ingredients = {
             {'rich-dust', 1}
         }
-        FUN.multiply_result_amount(spore, 'bhoddos-spore', 10)
+        spore:multiply_result_amount('bhoddos-spore', 10)
         data:extend{spore}
     end
 
@@ -53,7 +53,7 @@ if data and not yafc_turd_integration then
 
     local biomass_sporopollenin = table.deepcopy(data.raw.recipe['biomass-sporopollenin'])
     biomass_sporopollenin.name = biomass_sporopollenin.name .. '-nerfed'
-    FUN.multiply_ingredient_amount(biomass_sporopollenin, 'sporopollenin', 3)
+    biomass_sporopollenin:multiply_ingredient_amount('sporopollenin', 3)
     biomass_sporopollenin.results = {
         {type = 'item', name = 'fungal-substrate', amount = 2}
     }

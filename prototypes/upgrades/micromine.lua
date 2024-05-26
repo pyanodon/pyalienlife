@@ -9,13 +9,13 @@ if data and not yafc_turd_integration then
     with_collagen.name = 'petri-dish-bacteria-with-collagen'
     with_enz.name = 'petri-dish-bacteria-with-enzyme'
 
-    FUN.multiply_ingredient_amount(with_agar, 'petri-dish', 2)
-    FUN.multiply_ingredient_amount(with_collagen, 'petri-dish', 10)
-    FUN.multiply_ingredient_amount(with_enz, 'petri-dish', 50)
+    with_agar:multiply_ingredient_amount('petri-dish', 2)
+    with_collagen:multiply_ingredient_amount('petri-dish', 10)
+    with_enz:multiply_ingredient_amount('petri-dish', 50)
 
-    FUN.multiply_result_amount(with_agar, 'petri-dish-bacteria', 3)
-    FUN.multiply_result_amount(with_collagen, 'petri-dish-bacteria', 15)
-    FUN.multiply_result_amount(with_enz, 'petri-dish-bacteria', 125)
+    with_agar:multiply_result_amount('petri-dish-bacteria', 3)
+    with_collagen:multiply_result_amount('petri-dish-bacteria', 15)
+    with_enz:multiply_result_amount('petri-dish-bacteria', 125)
 
     with_agar:add_ingredient({'agar', 1})
     with_collagen:add_ingredient({'collagen', 1})

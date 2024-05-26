@@ -37,7 +37,7 @@ if data and not yafc_turd_integration then
     }) do
         if i > 4 and i < 8 then recipe.localised_name = {'recipe-name.' .. recipe.name} end
         recipe.name = recipe.name .. '-vegan'
-        FUN.multiply_ingredient_amount(recipe, 'meat', 3)
+        recipe:multiply_ingredient_amount('meat', 3)
         recipe:remove_ingredient('fawogae')
         recipe:remove_ingredient('yotoi-leaves')
         recipe:remove_ingredient('raw-fiber')
@@ -53,8 +53,8 @@ if data and not yafc_turd_integration then
     local brains = table.deepcopy(data.raw.recipe['ex-bra-scro'])
     brains.name = 'scrondrix-brain-slaughterhouse-ex'
     brains.localised_name = {'recipe-name.ex-bra-scro'}
-    FUN.multiply_result_amount(brains, 'brain', 16)
-    FUN.multiply_result_amount(brains, 'pineal-gland', 0.25)
+    brains:multiply_result_amount('brain', 16)
+    brains:multiply_result_amount('pineal-gland', 0.25)
 
     local experimental = table.deepcopy(data.raw.recipe['Caged scrondrix 9'])
     experimental.name = 'scrondrix-experimental-treatment'

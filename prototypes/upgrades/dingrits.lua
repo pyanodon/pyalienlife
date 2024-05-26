@@ -41,9 +41,8 @@ if data and not yafc_turd_integration then
     recipe.name = 'space-suit-mutation'
     data:extend{recipe}
 
-    recipe = table.deepcopy(data.raw.recipe['space-dingrit'])
-    FUN.multiply_ingredient_amount(recipe, 'immunosupressants', 0.5)
-    recipe.name = 'space-dingrit-mutation'
+    recipe = RECIPE('space-dingrit'):copy('space-dingrit-mutation')
+    recipe:multiply_ingredient_amount('immunosupressants', 0.5)
     data:extend{recipe}
 
     for i, recipe in pairs({

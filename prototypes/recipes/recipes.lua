@@ -1,5 +1,3 @@
-require '__pycoalprocessing__/prototypes/functions/functions'
-
 --Example result replacer
 --RECIPE(recipe name*):replace_result(old item*, new item*, new_amount**)
 --to use copy the local at top to the given file and then add the following line with the required variables

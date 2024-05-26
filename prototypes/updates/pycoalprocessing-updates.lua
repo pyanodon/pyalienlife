@@ -58,11 +58,10 @@ RECIPE('fawogae-plantation-mk04'):add_unlock('mycology-mk05')
 data.raw['assembling-machine']['fawogae-plantation-mk04'].crafting_speed = 0.1
 data.raw['assembling-machine']['fawogae-plantation-mk04'].module_specification = {module_slots = 88}
 
-RECIPE("borax-mine"):remove_unlock('energy-1'):set_fields{enabled = true}
-RECIPE("washer"):remove_unlock('energy-1'):set_fields{enabled = true}
-
-RECIPE("py-gas-vent"):add_unlock("coal-processing-1"):set_enabled(false)
-RECIPE("tailings-pond"):add_unlock("coal-processing-1"):set_enabled(false)
+RECIPE("borax-mine"):remove_unlock('energy-1').enabled = true
+RECIPE("washer"):remove_unlock('energy-1').enabled = true
+RECIPE("py-gas-vent"):add_unlock("coal-processing-1").enabled = false
+RECIPE("tailings-pond"):add_unlock("coal-processing-1").enabled = false
 
 table.insert(data.raw["assembling-machine"]["wpu"].crafting_categories, "wpu-handcrafting")
 table.insert(data.raw["assembling-machine"]["wpu-mk02"].crafting_categories, "wpu-handcrafting")
@@ -110,10 +109,10 @@ RECIPE('log6'):add_ingredient({type = "item", name = "wood-seedling", amount = 3
 RECIPE('log-wood'):subgroup_order("py-alienlife-recipes", "a")
 RECIPE('fawogae-substrate'):remove_ingredient("fawogae"):add_ingredient({type = "item", name = "petri-dish-bacteria", amount = 2}):add_ingredient({type = "item", name = "cellulose", amount = 3}):replace_ingredient("coke","moss"):subgroup_order("py-alienlife-recipes", "a")
 RECIPE('bio-sample01'):add_ingredient({type = "item", name = "petri-dish-bacteria", amount = 2}):add_ingredient({type = "item", name = "native-flora", amount = 12})
-RECIPE('fawogae-substrate'):add_unlock("basic-substrate"):set_enabled(false)
+RECIPE('fawogae-substrate'):add_unlock("basic-substrate").enabled = false
 
-RECIPE("wpu"):replace_ingredient("wood", {type = "item", name = "log", amount = "5"}):remove_unlock("wood-processing"):set_enabled(true)
-RECIPE("log-wood"):remove_unlock("wood-processing"):set_enabled(true):set_fields{always_show_made_in = true}.category = 'wpu-handcrafting'
+RECIPE("wpu"):replace_ingredient("wood", {type = "item", name = "log", amount = "5"}):remove_unlock("wood-processing").enabled = true
+RECIPE("log-wood"):remove_unlock("wood-processing"):set_fields{always_show_made_in = true, enabled = true}.category = 'wpu-handcrafting'
 RECIPE("botanical-nursery"):replace_ingredient("wood", {type = "item", name = "planter-box", amount = "10"})
 
 RECIPE('ralesia-seeds'):subgroup_order("py-alienlife-ralesia", "a"):replace_ingredient("ralesia","ralesias").category = 'nursery'
@@ -123,7 +122,7 @@ RECIPE('flask'):remove_ingredient("wood"):add_ingredient({type = "item", name = 
 RECIPE('hotair-flask'):remove_ingredient("wood"):add_ingredient({type = "item", name = "stopper", amount = 4}):remove_ingredient("molten-glass"):add_ingredient({type = "fluid", name = "molten-glass", amount = 100, fluidbox_index = 2})
 RECIPE('aromatics-to-plastic'):remove_ingredient("aromatics"):add_ingredient({type = "fluid", name = "aromatics", amount = 50}):remove_ingredient("syngas"):add_ingredient({type = "fluid", name = "syngas", amount = 100}).category = 'biofactory'
 RECIPE("oil-refinery"):remove_unlock('plastics')
-RECIPE("flask"):add_unlock("py-science-pack-mk01"):set_enabled(false)
+RECIPE("flask"):add_unlock("py-science-pack-mk01").enabled = false
 
 RECIPE('mukmoux-fat'):remove_unlock('mukmoux')
 RECIPE('log-organics'):remove_unlock('wood-processing-2')
@@ -132,12 +131,12 @@ RECIPE('soil-separation'):remove_unlock('separation')
 RECIPE("ground-sample01"):remove_unlock("logistic-science-pack"):add_unlock("mycology-mk01")
 RECIPE("oleochemicals"):remove_unlock("mukmoux"):add_unlock("coal-processing-2")
 RECIPE("dedicated-oleochemicals"):remove_unlock("mukmoux"):add_unlock("coal-processing-2")
-RECIPE("iron-oxide-smelting"):add_unlock("coal-processing-1"):set_enabled(false)
-RECIPE("extract-limestone-01"):add_unlock("coal-processing-1"):set_enabled(false)
-RECIPE("hpf"):add_unlock("coal-processing-1"):set_enabled(false)
-RECIPE("washer"):add_unlock("soil-washing"):set_enabled(false)
-RECIPE("muddy-sludge"):add_unlock("soil-washing"):set_enabled(false)
-RECIPE("soil-washing"):add_unlock("soil-washing"):set_enabled(false)
+RECIPE("iron-oxide-smelting"):add_unlock("coal-processing-1").enabled = false
+RECIPE("extract-limestone-01"):add_unlock("coal-processing-1").enabled = false
+RECIPE("hpf"):add_unlock("coal-processing-1").enabled = false
+RECIPE("washer"):add_unlock("soil-washing").enabled = false
+RECIPE("muddy-sludge"):add_unlock("soil-washing").enabled = false
+RECIPE("soil-washing"):add_unlock("soil-washing").enabled = false
 
 RECIPE("tpa"):replace_ingredient("nichrome", "cobalt-extract"):add_ingredient{type = "item", name = "yotoi-fruit", amount = 1}:add_ingredient{type = "fluid", name = "manure-bacteria", amount = 20}
 RECIPE("optical-fiber"):add_ingredient{type = "item", name = "photophore", amount = 1}
@@ -149,11 +148,11 @@ RECIPE("soil-extractormk01"):remove_ingredient("tinned-cable")
 RECIPE('py-construction-robot-01'):add_ingredient({type = 'fluid', name = 'fish-oil', amount = 50})
 RECIPE('py-logistic-robot-01'):add_ingredient({type = 'fluid', name = 'fish-oil', amount = 50})
 
-RECIPE("distilator"):add_unlock("coal-processing-1"):set_enabled(false)
-RECIPE("coal-gas"):add_unlock("coal-processing-1"):set_enabled(false)
-RECIPE("coal-gas-from-wood"):add_unlock("coal-processing-1"):set_enabled(false)
-RECIPE("coal-gas-from-coke"):add_unlock("coal-processing-1"):set_enabled(false)
-RECIPE("distilled-raw-coal"):add_unlock("coal-processing-1"):set_enabled(false)
+RECIPE("distilator"):add_unlock("coal-processing-1").enabled = false
+RECIPE("coal-gas"):add_unlock("coal-processing-1").enabled = false
+RECIPE("coal-gas-from-wood"):add_unlock("coal-processing-1").enabled = false
+RECIPE("coal-gas-from-coke"):add_unlock("coal-processing-1").enabled = false
+RECIPE("distilled-raw-coal"):add_unlock("coal-processing-1").enabled = false
 
 RECIPE("solid-separator"):remove_unlock("separation"):add_unlock("ash-separation")
 RECIPE("ash-separation"):remove_unlock("separation"):add_unlock("ash-separation")

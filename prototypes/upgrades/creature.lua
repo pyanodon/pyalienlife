@@ -39,7 +39,7 @@ if data and not yafc_turd_integration then
                     local amount = sample.amount or sample[2] or 1
                     local name = sample.name or sample[1]
                     if amount >= 5 then
-                        FUN.multiply_ingredient_amount(replacement, name, 0.1)
+                        replacement:multiply_ingredient_amount(name, 0.1)
                     else
                         replacement:add_result({type = 'item', name = name, amount = amount, probability = 0.8})
                     end

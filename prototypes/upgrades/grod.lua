@@ -8,7 +8,7 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. '-pressured'
         recipe:remove_ingredient('water')
         recipe:add_ingredient({name = 'pressured-water', amount = 1000, type = 'fluid', fluidbox_index = 1})
-        FUN.multiply_result_amount(recipe, 'grod', 1.25)
+        recipe:multiply_result_amount('grod', 1.25)
         data:extend{recipe}
     end
 
@@ -25,7 +25,7 @@ if data and not yafc_turd_integration then
     }) do
         recipe.name = recipe.name .. '-tailings'
         FUN.add_ingredient_amount(recipe, 'dirty-water-heavy', 100)
-        FUN.multiply_result_amount(recipe, result, 3)
+        recipe:multiply_result_amount(result, 3)
         data:extend{recipe}
     end
 

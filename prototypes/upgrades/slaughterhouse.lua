@@ -69,7 +69,7 @@ if data and not yafc_turd_integration then
                         end
                     end
                 else
-                    FUN.multiply_result_amount(recipe, product, 2)
+                    recipe:multiply_result_amount(product, 2)
                 end
             end
             data:extend{recipe}

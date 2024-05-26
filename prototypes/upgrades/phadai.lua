@@ -21,7 +21,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['Phadai Dance Dance Revolution 4']),
     }) do
         recipe.name = recipe.name .. '-dubstep'
-        FUN.multiply_result_amount(recipe, 'carapace', 2)
+        recipe:multiply_result_amount('carapace', 2)
         FUN.add_result_amount(recipe, 'used-phadai', -1)
         data:extend{recipe}
     end

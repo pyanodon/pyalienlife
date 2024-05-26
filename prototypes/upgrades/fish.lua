@@ -36,7 +36,7 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. '-doused'
         recipe:remove_result('waste-water')
         recipe:add_result({type = 'fluid', name = 'pressured-water', amount = 100})
-        FUN.multiply_result_amount(recipe, 'fish-egg', 1.2)
+        recipe:multiply_result_amount('fish-egg', 1.2)
         for _, ingredient in pairs(recipe.ingredients) do
             if ingredient.name == 'water-saline' then
                 ingredient.name = 'water'

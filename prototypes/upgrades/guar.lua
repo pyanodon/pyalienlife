@@ -22,7 +22,7 @@ if data and not yafc_turd_integration then
         local _, water = recipe:remove_ingredient('water')
 		recipe:add_ingredient({type = 'fluid', name = 'water-saline', amount = math.ceil(water/5), fluidbox_index = 1})
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
-        FUN.multiply_ingredient_amount(recipe, 'guar-seeds', 0.65)
+        recipe:multiply_ingredient_amount('guar-seeds', 0.65)
         recipe:remove_ingredient('pesticide-mk01')
         recipe:remove_ingredient('pesticide-mk02')
         data:extend{recipe}

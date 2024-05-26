@@ -2,7 +2,7 @@ if data and not yafc_turd_integration then
     local manure = table.deepcopy(data.raw.recipe['manure-bacteria'])
     manure.name = 'manure-bacteria-fish'
     manure:add_ingredient({name = 'fish-hydrolysate', type = 'fluid', amount = 5})
-    FUN.multiply_result_amount(manure, 'manure-bacteria', 1.5)
+    manure:multiply_result_amount('manure-bacteria', 1.5)
 
     local darkness = table.deepcopy(data.raw.recipe['zogna-bacteria'])
     darkness:remove_ingredient('small-lamp')

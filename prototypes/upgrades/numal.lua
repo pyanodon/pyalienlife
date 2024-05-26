@@ -19,7 +19,7 @@ if data and not yafc_turd_integration then
 
 	local aeroorgan = table.deepcopy(data.raw.recipe['aeroorgan'])
 	aeroorgan.name = 'aeroorgan-buffed'
-	FUN.multiply_result_amount(aeroorgan, 'aeroorgan', 3)
+	aeroorgan:multiply_result_amount('aeroorgan', 3)
 	data:extend{aeroorgan}
 
 	for i, recipe in pairs({
@@ -70,7 +70,7 @@ if data and not yafc_turd_integration then
 	recipe.name = 'ex-gut-num-neodymium'
 	recipe.localised_name = {'recipe-name.ex-gut-num'}
 	recipe:add_ingredient({'neodymium-nitrate', 4})
-	FUN.multiply_result_amount(recipe, 'numal-ink', 2)
+	recipe:multiply_result_amount('numal-ink', 2)
 	data:extend{recipe}
 end
 

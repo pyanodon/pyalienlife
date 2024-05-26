@@ -6,7 +6,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['kmauts-cub-4']),
     }) do
         recipe.name = recipe.name .. '-ratio'
-        FUN.multiply_result_amount(recipe, 'kmauts-cub', 1.35)
+        recipe:multiply_result_amount('kmauts-cub', 1.35)
         data:extend{recipe}
     end
 
