@@ -110,7 +110,7 @@ if data and not yafc_turd_integration then
         for _, other in pairs(other_species[i]) do
             recipe:add_ingredient(other[1])
             recipe:add_result(other[2])
-            recipe.main_product = other[2][1]
+            recipe.main_product = other[2].name
         end
         if i == 5 then
             recipe:add_ingredient({'ulric-cub', 1})
