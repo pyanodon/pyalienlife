@@ -1,11 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.35
-Date: 2024-9-5
+Date: !!!
   Changes:
-    - Fixed the PKS turd recipe not accepting prod mods
+    - Fixed the PKS and cottongut turd recipes not accepting prod mods
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.34
-Date: 2024-9-5
+Date: 2024-5-9
   Changes:
     - Fixed that rennea and arum seeds mk02-mk04 didnt show tier pips.
     - Optimized the biofluid network UPS by >10X. Huge thanks to @Harvester on Discord for the test world.
