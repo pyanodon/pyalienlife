@@ -157,7 +157,6 @@ RECIPE {
       {type = 'fluid', name = 'tholins', amount = 50},
       {type = 'fluid', name = 'psc', amount = 50},
       {type = 'item', name = 'chimeric-proteins', amount = 5},
-      {type = 'item', name = 'rich-gas', amount = 5},
       },
   results = {
       {type = 'item', name = 'moss-mk04', amount = 4},
